@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Suspense } from "react";
 import "./globals.css";
 
 import Navbar from "@/components/layout/Navbar";
@@ -39,7 +40,9 @@ export default function RootLayout({
             {children}
           </main>
 
-          <QuoteCheckoutModal />
+          <Suspense fallback={null}>
+            <QuoteCheckoutModal />
+          </Suspense>
         </div>
       </body>
     </html>
