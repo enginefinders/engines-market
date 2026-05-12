@@ -10,6 +10,10 @@ type QuoteTriggerDetail = {
   source?: string;
 };
 
+type SearchParamsLike = {
+  get(name: string): string | null;
+};
+
 type QuoteFormState = {
   regNumber: string;
   engineCode: string;
@@ -111,7 +115,7 @@ function buildInitialState(detail: QuoteTriggerDetail) {
   };
 }
 
-function getQueryTriggerDetail(searchParams: URLSearchParams | ReadonlyURLSearchParams): QuoteTriggerDetail {
+function getQueryTriggerDetail(searchParams: SearchParamsLike): QuoteTriggerDetail {
   if (searchParams.get("quote") !== "open") {
     return {};
   }
