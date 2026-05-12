@@ -23,6 +23,11 @@
 # misc
 .DS_Store
 *.pem
+.chrome-headless/
+.tmp-*.png
+.tmp-*.log
+playwright-report/
+test-results/
 
 # debug
 npm-debug.log*
