@@ -35,6 +35,8 @@ export default function EngineCodeDirectorySection({ data, bgImage }: Props) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [showAllCodes, setShowAllCodes] = useState(false);
   const activeFamily = useMemo(() => data.families[activeIndex] ?? data.families[0], [activeIndex, data.families]);
+  const hasFamilies = data.families.length > 0;
+  const activeEntries = activeFamily?.entries ?? [];
 
   return (
     <Section className="relative overflow-hidden bg-white">
@@ -54,78 +56,82 @@ export default function EngineCodeDirectorySection({ data, bgImage }: Props) {
       <Container>
         <SectionHeader tag={data.tag} title={data.h2} subtitle={data.intro} />
 
-        <div className="mt-6 flex gap-2 overflow-x-auto pb-2">
-          {data.families.map((family, index) => {
-            const isActive = index === activeIndex;
+        {hasFamilies ? (
+          <>
+            <div className="mt-6 flex gap-2 overflow-x-auto pb-2">
+              {data.families.map((family, index) => {
+                const isActive = index === activeIndex;
 
-            return (
-              <button
-                key={family.name}
-                type="button"
-                onClick={() => setActiveIndex(index)}
-                className={`shrink-0 rounded-xl border px-3.5 py-3 text-left transition ${
-                  isActive
-                    ? "border-[#0e2f72] bg-[#0e2f72] text-white shadow-sm"
-                    : "border-slate-200 bg-slate-50 text-slate-700 hover:border-green-200 hover:bg-green-50"
-                }`}
-              >
-                <p className="text-[0.83rem] font-bold leading-tight">{family.name}</p>
-              </button>
-            );
-          })}
-        </div>
-
-        <div className="surface-card mt-4 overflow-hidden">
-          <div className="divide-y divide-slate-200">
-            {activeFamily.entries.slice(0, 3).map((entry) => (
-              <article
-                key={entry.title}
-                className="grid gap-4 px-4 py-4 lg:grid-cols-[168px_1fr_210px] lg:items-center lg:px-4"
-              >
-                <div className="overflow-hidden rounded-xl border border-slate-200 bg-slate-50 p-3">
-                  <div className="mx-auto flex aspect-[4/3] max-w-[128px] items-center justify-center overflow-hidden rounded-lg bg-white p-2">
-                    {entry.image ? (
-                      <img
-                        src={entry.image}
-                        alt={entry.title}
-                        className="h-full w-full object-contain"
-                        onError={(event) => {
-                          event.currentTarget.style.display = "none";
-                        }}
-                      />
-                    ) : (
-                      <div className="h-full w-full rounded-lg bg-slate-100" />
-                    )}
-                  </div>
-                </div>
-
-                <div>
-                  <h3>{entry.title}</h3>
-                  <div className="mt-2 flex flex-wrap gap-2">
-                    {getCodeTags(entry.title).map((tag) => (
-                      <span key={tag} className="section-chip">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  <p className="text-small mt-2 text-slate-600">{entry.description}</p>
-                </div>
-
-                <div className="lg:border-l lg:border-slate-200 lg:pl-5">
-                  <a
-                    href="#quote-form"
-                    data-quote-engine-code={extractCodeLabel(entry.title)}
-                    data-quote-context={entry.title}
-                    className="inline-flex items-center gap-2 text-sm font-bold text-green-700"
+                return (
+                  <button
+                    key={family.name}
+                    type="button"
+                    onClick={() => setActiveIndex(index)}
+                    className={`shrink-0 rounded-xl border px-3.5 py-3 text-left transition ${
+                      isActive
+                        ? "border-[#0e2f72] bg-[#0e2f72] text-white shadow-sm"
+                        : "border-slate-200 bg-slate-50 text-slate-700 hover:border-green-200 hover:bg-green-50"
+                    }`}
                   >
-                    {entry.cta}
-                    <ArrowIcon />
-                  </a>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
+                    <p className="text-[0.83rem] font-bold leading-tight">{family.name}</p>
+                  </button>
+                );
+              })}
+            </div>
+
+            <div className="surface-card mt-4 overflow-hidden">
+              <div className="divide-y divide-slate-200">
+                {activeEntries.slice(0, 3).map((entry) => (
+                  <article
+                    key={entry.title}
+                    className="grid gap-4 px-4 py-4 lg:grid-cols-[168px_1fr_210px] lg:items-center lg:px-4"
+                  >
+                    <div className="overflow-hidden rounded-xl border border-slate-200 bg-slate-50 p-3">
+                      <div className="mx-auto flex aspect-[4/3] max-w-[128px] items-center justify-center overflow-hidden rounded-lg bg-white p-2">
+                        {entry.image ? (
+                          <img
+                            src={entry.image}
+                            alt={entry.title}
+                            className="h-full w-full object-contain"
+                            onError={(event) => {
+                              event.currentTarget.style.display = "none";
+                            }}
+                          />
+                        ) : (
+                          <div className="h-full w-full rounded-lg bg-slate-100" />
+                        )}
+                      </div>
+                    </div>
+
+                    <div>
+                      <h3>{entry.title}</h3>
+                      <div className="mt-2 flex flex-wrap gap-2">
+                        {getCodeTags(entry.title).map((tag) => (
+                          <span key={tag} className="section-chip">
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                      <p className="text-small mt-2 text-slate-600">{entry.description}</p>
+                    </div>
+
+                    <div className="lg:border-l lg:border-slate-200 lg:pl-5">
+                      <a
+                        href="#quote-form"
+                        data-quote-engine-code={extractCodeLabel(entry.title)}
+                        data-quote-context={entry.title}
+                        className="inline-flex items-center gap-2 text-sm font-bold text-green-700"
+                      >
+                        {entry.cta}
+                        <ArrowIcon />
+                      </a>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </>
+        ) : null}
 
         <div className="surface-card mt-5 grid gap-4 px-4 py-4 lg:grid-cols-[1fr_auto] lg:items-center">
           <div>
@@ -136,8 +142,8 @@ export default function EngineCodeDirectorySection({ data, bgImage }: Props) {
 
           <a
             href="#quote-form"
-            data-quote-engine-code={activeFamily.entries[0] ? extractCodeLabel(activeFamily.entries[0].title) : ""}
-            data-quote-context={activeFamily.name}
+            data-quote-engine-code={activeEntries[0] ? extractCodeLabel(activeEntries[0].title) : ""}
+            data-quote-context={activeFamily?.name ?? data.h2}
             className="button-primary"
           >
             Get Quote for This Engine
