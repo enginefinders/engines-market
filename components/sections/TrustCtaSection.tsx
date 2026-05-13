@@ -5,6 +5,8 @@ import type { TrustCtaData } from "@/types/brand";
 
 type Props = {
   data: TrustCtaData;
+  brandName: string;
+  imageSrc: string;
 };
 
 function CheckIcon() {
@@ -73,7 +75,7 @@ function getTrustIcon(title: string) {
   return ShieldIcon;
 }
 
-export default function TrustCtaSection({ data }: Props) {
+export default function TrustCtaSection({ data, brandName, imageSrc }: Props) {
   return (
     <Section className="bg-white px-0 pt-3 sm:pt-4">
       <div className="w-full overflow-hidden bg-[#071936] shadow-[0_18px_46px_rgba(7,25,54,0.16)]">
@@ -83,19 +85,19 @@ export default function TrustCtaSection({ data }: Props) {
               <p className="text-label text-blue-200">{data.tag}</p>
 
               <h2 className="mt-2 max-w-[500px] text-[1.5rem] font-black leading-[1.02] !text-white sm:text-[1.8rem]">
-                Ready to compare Land Rover engine quotes and find the best price?
+                {data.h2}
               </h2>
 
               <p className="mt-2.5 max-w-[540px] text-[0.85rem] leading-5 text-slate-200">
-                {data.finalText}
+                {data.intro}
               </p>
 
               <div className="mt-3.5 grid gap-2 sm:grid-cols-3">
-                {data.points.map((point) => {
+                {data.points.map((point, index) => {
                   const Icon = getTrustIcon(point.title);
 
                   return (
-                    <div key={point.title} className="rounded-2xl border border-white/10 bg-white/[0.06] px-3 py-2.5">
+                    <div key={`${point.title}-${index}`} className="rounded-2xl border border-white/10 bg-white/[0.06] px-3 py-2.5">
                       <div className="flex items-center gap-2 text-green-300">
                         <Icon />
                         <p className="text-label text-green-300">Included</p>
@@ -107,10 +109,14 @@ export default function TrustCtaSection({ data }: Props) {
                 })}
               </div>
 
+              <p className="mt-3 max-w-[540px] text-[0.78rem] leading-5 text-blue-100/90">
+                {data.finalText}
+              </p>
+
               <div className="mt-4 grid gap-2.5 md:max-w-[500px] md:grid-cols-[1fr_auto]">
                 <Button
                   href="#quote-form"
-                  data-quote-context="Final Land Rover engine comparison"
+                  data-quote-context={`Final ${brandName} engine comparison`}
                   data-quote-source="trust-cta"
                   className="justify-center rounded-xl bg-[#2463eb] px-5 py-3 text-[0.82rem] hover:bg-[#1f54c7]"
                 >
@@ -149,8 +155,8 @@ export default function TrustCtaSection({ data }: Props) {
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_72%_42%,rgba(59,130,246,0.26),transparent_34%)]" />
 
               <Image
-                src="/images/brands/land-rover/x.webp"
-                alt="Land Rover vehicle"
+                src={imageSrc}
+                alt={`${brandName} vehicle`}
                 fill
                 className="object-cover object-center"
               />

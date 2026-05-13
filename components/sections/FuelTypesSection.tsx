@@ -99,7 +99,67 @@ export default function FuelTypesSection({ data, bgImage }: Props) {
               </div>
 
               <h3>{item.title}</h3>
+              {item.descriptor ? <p className="text-small mt-1.5 font-semibold text-slate-700">{item.descriptor}</p> : null}
               <p className="text-small mt-2 text-slate-600">{item.description}</p>
+
+              {(item.families?.length ||
+                item.foundIn?.length ||
+                item.knownFor?.length ||
+                item.typicalModels?.length ||
+                item.importantNotes?.length) && (
+                <div className="mt-3 space-y-2">
+                  {item.families?.length ? (
+                    <div className="rounded-xl bg-white px-3 py-2.5">
+                      <p className="text-tiny font-black uppercase tracking-[0.12em] text-slate-500">Common families</p>
+                      <ul className="mt-1.5 space-y-1 text-small font-semibold text-slate-700">
+                        {item.families.slice(0, 4).map((family) => (
+                          <li key={family}>• {family}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  ) : null}
+
+                  {item.foundIn?.length ? (
+                    <div className="rounded-xl bg-white px-3 py-2.5">
+                      <p className="text-tiny font-black uppercase tracking-[0.12em] text-slate-500">Found in</p>
+                      <ul className="mt-1.5 space-y-1 text-small font-semibold text-slate-700">
+                        {item.foundIn.slice(0, 5).map((entry) => (
+                          <li key={entry}>• {entry}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  ) : null}
+
+                  {item.knownFor?.length ? (
+                    <div className="rounded-xl bg-green-50 px-3 py-2.5">
+                      <p className="text-tiny font-black uppercase tracking-[0.12em] text-green-700">Known for</p>
+                      <ul className="mt-1.5 space-y-1 text-small font-semibold text-green-900">
+                        {item.knownFor.slice(0, 4).map((entry) => (
+                          <li key={entry}>• {entry}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  ) : null}
+
+                  {item.typicalModels?.length ? (
+                    <div className="rounded-xl bg-white px-3 py-2.5">
+                      <p className="text-tiny font-black uppercase tracking-[0.12em] text-slate-500">Typical models</p>
+                      <p className="mt-1 text-small font-semibold text-slate-700">{item.typicalModels.join(", ")}</p>
+                    </div>
+                  ) : null}
+
+                  {item.importantNotes?.length ? (
+                    <div className="rounded-xl bg-amber-50 px-3 py-2.5">
+                      <p className="text-tiny font-black uppercase tracking-[0.12em] text-amber-700">Important notes</p>
+                      <ul className="mt-1.5 space-y-1 text-small font-semibold text-amber-900">
+                        {item.importantNotes.slice(0, 4).map((entry) => (
+                          <li key={entry}>• {entry}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  ) : null}
+                </div>
+              )}
 
               <a href="#quote-form" data-quote-context={item.title} data-quote-source="fuel-types" className="text-label mt-4 inline-flex text-green-700">
                 {item.cta}

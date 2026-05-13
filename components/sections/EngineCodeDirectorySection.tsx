@@ -84,14 +84,18 @@ export default function EngineCodeDirectorySection({ data, bgImage }: Props) {
               >
                 <div className="overflow-hidden rounded-xl border border-slate-200 bg-slate-50 p-3">
                   <div className="mx-auto flex aspect-[4/3] max-w-[128px] items-center justify-center overflow-hidden rounded-lg bg-white p-2">
-                    <img
-                      src={entry.image || ""}
-                      alt={entry.title}
-                      className="h-full w-full object-contain"
-                      onError={(event) => {
-                        event.currentTarget.style.display = "none";
-                      }}
-                    />
+                    {entry.image ? (
+                      <img
+                        src={entry.image}
+                        alt={entry.title}
+                        className="h-full w-full object-contain"
+                        onError={(event) => {
+                          event.currentTarget.style.display = "none";
+                        }}
+                      />
+                    ) : (
+                      <div className="h-full w-full rounded-lg bg-slate-100" />
+                    )}
                   </div>
                 </div>
 
@@ -126,6 +130,7 @@ export default function EngineCodeDirectorySection({ data, bgImage }: Props) {
         <div className="surface-card mt-5 grid gap-4 px-4 py-4 lg:grid-cols-[1fr_auto] lg:items-center">
           <div>
             <p className="text-label text-green-700">Engine codes covered</p>
+            {data.directory.h3 ? <h3 className="mt-1 text-[1rem]">{data.directory.h3}</h3> : null}
             <p className="text-small mt-2 text-slate-600">{data.directory.intro}</p>
           </div>
 
@@ -140,12 +145,15 @@ export default function EngineCodeDirectorySection({ data, bgImage }: Props) {
         </div>
 
         <div className="mt-3">
+          {data.directory.label ? (
+            <p className="mb-2 text-[0.72rem] font-black uppercase tracking-[0.08em] text-slate-500">{data.directory.label}</p>
+          ) : null}
           <div className={`relative overflow-hidden ${showAllCodes ? "" : "max-h-[2.9rem]"}`}>
             <div
               className={`flex gap-2 ${showAllCodes ? "flex-wrap" : "codes-row-peek flex-nowrap whitespace-nowrap"}`}
             >
-              {data.directory.codes.map((item) => (
-                <span key={item.code} className="code-label-chip shrink-0">
+              {data.directory.codes.map((item, index) => (
+                <span key={`${item.code}-${item.fuel || "unknown"}-${index}`} className="code-label-chip shrink-0">
                   {item.code}
                 </span>
               ))}

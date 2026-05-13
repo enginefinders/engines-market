@@ -6,6 +6,7 @@ import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
 
 type Props = {
+  brandName: string;
   data: EngineSizesData;
   bgImage?: string;
 };
@@ -20,7 +21,7 @@ function SizeIcon() {
   );
 }
 
-export default function EngineSizesSection({ data, bgImage }: Props) {
+export default function EngineSizesSection({ brandName, data, bgImage }: Props) {
   const [activeIndex, setActiveIndex] = useState(0);
   const activeGroup = data.groups[activeIndex] ?? data.groups[0];
 
@@ -82,6 +83,41 @@ export default function EngineSizesSection({ data, bgImage }: Props) {
                   <div>
                     <h4 className="!text-[#061a33]">{item.title}</h4>
                     <p className="text-small mt-1.5 text-[#4b6278]">{item.description}</p>
+
+                    {(item.engineCodes?.length ||
+                      item.compatibleModels?.length ||
+                      item.productionYears ||
+                      item.commonFailurePoints?.length) && (
+                      <div className="mt-3 grid gap-2 sm:grid-cols-2">
+                        {item.engineCodes?.length ? (
+                          <div className="rounded-xl bg-slate-50 px-3 py-2.5">
+                            <p className="text-tiny font-black uppercase tracking-[0.12em] text-slate-500">Engine codes</p>
+                            <p className="mt-1 text-small font-semibold text-slate-700">{item.engineCodes.join(", ")}</p>
+                          </div>
+                        ) : null}
+
+                        {item.productionYears ? (
+                          <div className="rounded-xl bg-slate-50 px-3 py-2.5">
+                            <p className="text-tiny font-black uppercase tracking-[0.12em] text-slate-500">Production years</p>
+                            <p className="mt-1 text-small font-semibold text-slate-700">{item.productionYears}</p>
+                          </div>
+                        ) : null}
+
+                        {item.compatibleModels?.length ? (
+                          <div className="rounded-xl bg-slate-50 px-3 py-2.5 sm:col-span-2">
+                            <p className="text-tiny font-black uppercase tracking-[0.12em] text-slate-500">Compatible models</p>
+                            <p className="mt-1 text-small font-semibold text-slate-700">{item.compatibleModels.join(", ")}</p>
+                          </div>
+                        ) : null}
+
+                        {item.commonFailurePoints?.length ? (
+                          <div className="rounded-xl bg-green-50 px-3 py-2.5 sm:col-span-2">
+                            <p className="text-tiny font-black uppercase tracking-[0.12em] text-green-700">Common failure points</p>
+                            <p className="mt-1 text-small font-semibold text-green-900">{item.commonFailurePoints.join(", ")}</p>
+                          </div>
+                        ) : null}
+                      </div>
+                    )}
                   </div>
 
                   <div className="sm:pt-1">
@@ -106,7 +142,7 @@ export default function EngineSizesSection({ data, bgImage }: Props) {
         <div className="surface-card mt-4 grid gap-3 px-4 py-4 lg:grid-cols-[1.3fr_auto] lg:items-center">
           <div>
             <p className="text-sm font-semibold text-slate-800">
-              Not sure which engine size your Land Rover needs?
+              Not sure which engine size your {brandName} needs?
             </p>
             <p className="text-small mt-2 text-slate-600">{data.closing}</p>
           </div>

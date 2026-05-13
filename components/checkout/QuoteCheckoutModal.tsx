@@ -27,6 +27,10 @@ type QuoteFormState = {
   notes: string;
 };
 
+type Props = {
+  brandName: string;
+};
+
 const defaultFormState: QuoteFormState = {
   regNumber: "",
   engineCode: "",
@@ -128,7 +132,7 @@ function getQueryTriggerDetail(searchParams: SearchParamsLike): QuoteTriggerDeta
   };
 }
 
-export default function QuoteCheckoutModal() {
+export default function QuoteCheckoutModal({ brandName }: Props) {
   const searchParams = useSearchParams();
   const queryTrigger = useMemo(() => getQueryTriggerDetail(searchParams), [searchParams]);
   const [isOpen, setIsOpen] = useState(false);
@@ -220,9 +224,9 @@ export default function QuoteCheckoutModal() {
 
     return {
       label: "Quote request",
-      value: "Land Rover replacement enquiry",
+      value: `${brandName} replacement enquiry`,
     };
-  }, [activeFormState.engineCode, activeFormState.regNumber, activeFormState.selectedContext]);
+  }, [activeFormState.engineCode, activeFormState.regNumber, activeFormState.selectedContext, brandName]);
 
   if (!isVisible) {
     return null;
@@ -248,7 +252,7 @@ export default function QuoteCheckoutModal() {
               <div>
                 <p className="text-label text-green-700">Secure Quote Checkout</p>
                 <h2 className="mt-2 text-[1.8rem] font-black leading-[1.04] text-[#071936]">
-                  Complete your Land Rover engine enquiry
+                  Complete your {brandName} engine enquiry
                 </h2>
                 <p className="mt-3 max-w-2xl text-[0.9rem] leading-6 text-slate-600">
                   We use your details to match the exact engine, shortlist trusted UK specialists, and send back the
@@ -470,7 +474,7 @@ export default function QuoteCheckoutModal() {
                     <div>
                       <p className="text-sm font-bold text-[#071936]">No payment required</p>
                       <p className="text-small mt-1 text-slate-700">
-                        Your details are secure and only used to source genuine Land Rover engine quotes from trusted UK specialists.
+                        Your details are secure and only used to source genuine {brandName} engine quotes from trusted UK specialists.
                       </p>
                     </div>
                   </div>
@@ -526,7 +530,7 @@ export default function QuoteCheckoutModal() {
                   {
                     icon: EngineIcon,
                     title: "Exact engine match",
-                    text: "We verify the right Land Rover engine against your registration or engine code.",
+                    text: `We verify the right ${brandName} engine against your registration or engine code.`,
                   },
                   {
                     icon: ShieldIcon,

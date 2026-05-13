@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import HeroSection from "@/components/sections/HeroSection";
 import HowItWorksSection from "@/components/sections/HowItWorksSection";
 import LiveMarketPricesSection from "@/components/sections/LiveMarketPricesSection";
@@ -13,14 +14,10 @@ import EngineCodeDirectorySection from "@/components/sections/EngineCodeDirector
 import EngineYearsSection from "@/components/sections/EngineYearsSection";
 import FaqSection from "@/components/sections/FaqSection";
 import TrustCtaSection from "@/components/sections/TrustCtaSection";
-import landRoverData from "@/data/brands/land-rover.json";
-import { sanitizeBrandPageData } from "@/lib/sanitizeBrandData";
+import QuoteCheckoutModal from "@/components/checkout/QuoteCheckoutModal";
+import { getBrandPageData, getBrandSlugs } from "@/lib/brandData";
 import type { BrandPageData } from "@/types/brand";
 import { notFound } from "next/navigation";
-
-const brandPages: Record<string, BrandPageData> = {
-  "land-rover": sanitizeBrandPageData(landRoverData as BrandPageData),
-};
 
 type BrandPageProps = {
   params: Promise<{
@@ -28,8 +25,12 @@ type BrandPageProps = {
   }>;
 };
 
-function getBrandPageData(brand: string) {
-  return brandPages[brand];
+export async function generateStaticParams() {
+  const brandSlugs = await getBrandSlugs();
+
+  return brandSlugs.map((brand) => ({
+    brand,
+  }));
 }
 
 function buildStructuredData(pageData: BrandPageData) {
@@ -117,7 +118,7 @@ export async function generateMetadata({
   params,
 }: BrandPageProps): Promise<Metadata> {
   const { brand } = await params;
-  const pageData = getBrandPageData(brand);
+  const pageData = await getBrandPageData(brand);
 
   if (!pageData) {
     return {};
@@ -134,13 +135,15 @@ export async function generateMetadata({
 
 export default async function BrandPage({ params }: BrandPageProps) {
   const { brand } = await params;
-  const pageData = getBrandPageData(brand);
+  const pageData = await getBrandPageData(brand);
 
   if (!pageData) {
     notFound();
   }
 
   const structuredData = buildStructuredData(pageData);
+  const trustCtaImage =
+    pageData.sections.models.cards[0]?.image ?? pageData.assets.heroBg;
 
   return (
     <>
@@ -168,17 +171,25 @@ export default async function BrandPage({ params }: BrandPageProps) {
 
       <EngineTypesSection data={pageData.sections.engineTypes} bgImage={pageData.assets.engineTypesBg} />
 
-      <EngineSizesSection data={pageData.sections.engineSizes} bgImage={pageData.assets.engineSizesBg} />
+      <EngineSizesSection brandName={pageData.brand.name} data={pageData.sections.engineSizes} bgImage={pageData.assets.engineSizesBg} />
 
       <FuelTypesSection data={pageData.sections.fuelTypes} bgImage={pageData.assets.fuelTypesBg} />
 
       <EngineCodeDirectorySection data={pageData.sections.engineCodeDirectory} bgImage={pageData.assets.engineCodeDirectoryBg} />
 
-      <EngineYearsSection data={pageData.sections.engineYears} />
+      <EngineYearsSection brandName={pageData.brand.name} data={pageData.sections.engineYears} />
 
       <FaqSection data={pageData.sections.faq} />
 
-      <TrustCtaSection data={pageData.sections.trustCta} />
+      <TrustCtaSection
+        data={pageData.sections.trustCta}
+        brandName={pageData.brand.name}
+        imageSrc={trustCtaImage}
+      />
+
+      <Suspense fallback={null}>
+        <QuoteCheckoutModal brandName={pageData.brand.name} />
+      </Suspense>
     </>
   );
 }

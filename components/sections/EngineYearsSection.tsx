@@ -6,6 +6,7 @@ import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
 
 type Props = {
+  brandName: string;
   data: EngineYearsData;
 };
 
@@ -88,7 +89,7 @@ function compactYearCta(year: string, cta: string) {
   return `Get quotes for ${year} engines`;
 }
 
-export default function EngineYearsSection({ data }: Props) {
+export default function EngineYearsSection({ brandName, data }: Props) {
   const [registration, setRegistration] = useState("");
   const midpoint = Math.ceil(data.years.length / 2);
   const yearColumns = [data.years.slice(0, midpoint), data.years.slice(midpoint)];
@@ -159,12 +160,86 @@ export default function EngineYearsSection({ data }: Props) {
 
                     <div className="px-4 py-3.5">
                       <p className="text-[0.86rem] font-semibold leading-6 text-slate-700">{item.preview}</p>
+                      <p className="mt-2 text-[0.78rem] leading-5 text-slate-600">{item.description}</p>
+
+                      {(item.keyChanges?.length ||
+                        item.mainEngines?.length ||
+                        item.popularModels?.length ||
+                        item.knownFor?.length ||
+                        item.engineCodesCovered?.length ||
+                        item.ticker) && (
+                        <div className="mt-3 grid gap-2 sm:grid-cols-2">
+                          {item.keyChanges?.length ? (
+                            <div className="rounded-xl bg-slate-50 px-3 py-2.5">
+                              <p className="text-tiny font-black uppercase tracking-[0.12em] text-slate-500">Key changes</p>
+                              <ul className="mt-1.5 list-disc space-y-1 pl-4 text-small font-semibold text-slate-700">
+                                {item.keyChanges.slice(0, 4).map((point, index) => (
+                                  <li key={`${point}-${index}`}>{point}</li>
+                                ))}
+                              </ul>
+                            </div>
+                          ) : null}
+
+                          {item.mainEngines?.length ? (
+                            <div className="rounded-xl bg-slate-50 px-3 py-2.5">
+                              <p className="text-tiny font-black uppercase tracking-[0.12em] text-slate-500">Main engines</p>
+                              <ul className="mt-1.5 list-disc space-y-1 pl-4 text-small font-semibold text-slate-700">
+                                {item.mainEngines.slice(0, 4).map((point, index) => (
+                                  <li key={`${point}-${index}`}>{point}</li>
+                                ))}
+                              </ul>
+                            </div>
+                          ) : null}
+
+                          {item.popularModels?.length ? (
+                            <div className="rounded-xl bg-white ring-1 ring-slate-200 px-3 py-2.5">
+                              <p className="text-tiny font-black uppercase tracking-[0.12em] text-slate-500">Popular models</p>
+                              <ul className="mt-1.5 list-disc space-y-1 pl-4 text-small font-semibold text-slate-700">
+                                {item.popularModels.map((point, index) => (
+                                  <li key={`${point}-${index}`}>{point}</li>
+                                ))}
+                              </ul>
+                            </div>
+                          ) : null}
+
+                          {item.engineCodesCovered?.length ? (
+                            <div className="rounded-xl bg-white ring-1 ring-slate-200 px-3 py-2.5">
+                              <p className="text-tiny font-black uppercase tracking-[0.12em] text-slate-500">Engine codes covered</p>
+                              <div className="mt-1.5 flex flex-wrap gap-1.5">
+                                {item.engineCodesCovered.map((code, index) => (
+                                  <span key={`${code}-${index}`} className="summary-badge">
+                                    {code}
+                                  </span>
+                                ))}
+                              </div>
+                            </div>
+                          ) : null}
+
+                          {item.knownFor?.length ? (
+                            <div className="rounded-xl bg-green-50 px-3 py-2.5 sm:col-span-2">
+                              <p className="text-tiny font-black uppercase tracking-[0.12em] text-green-700">Known for</p>
+                              <ul className="mt-1.5 list-disc space-y-1 pl-4 text-small font-semibold text-green-900">
+                                {item.knownFor.slice(0, 4).map((point, index) => (
+                                  <li key={`${point}-${index}`}>{point}</li>
+                                ))}
+                              </ul>
+                            </div>
+                          ) : null}
+
+                          {item.ticker ? (
+                            <div className="rounded-xl bg-[#f2f7ff] px-3 py-2.5 sm:col-span-2">
+                              <p className="text-tiny font-black uppercase tracking-[0.12em] text-[#0a2952]">Common replacement enquiries</p>
+                              <p className="mt-1 text-small font-semibold text-[#35506b]">{item.ticker}</p>
+                            </div>
+                          ) : null}
+                        </div>
+                      )}
                     </div>
 
                     <div className="flex items-center px-4 pb-3.5 md:justify-end md:pb-0 md:pl-0">
                       <a
                         href="#quote-form"
-                        data-quote-context={`${item.year} Land Rover engines`}
+                        data-quote-context={`${item.year} ${brandName} engines`}
                         data-quote-source="engine-years"
                         className="inline-flex items-center gap-2 text-[0.84rem] font-bold leading-5 text-green-700"
                       >
@@ -186,7 +261,7 @@ export default function EngineYearsSection({ data }: Props) {
                 <CalendarIcon />
               </div>
               <div className="max-w-[330px]">
-                <p className="text-sm font-semibold text-white">Not sure which year your Land Rover was built?</p>
+                <p className="text-sm font-semibold text-white">Not sure which year your {brandName} was built?</p>
                 <p className="mt-1.5 text-[0.74rem] leading-5 text-slate-200">{data.closing}</p>
               </div>
             </div>
@@ -204,7 +279,7 @@ export default function EngineYearsSection({ data }: Props) {
                   placeholder="Enter your registration number"
                   className="min-w-0 border-b border-slate-200 px-4 py-2 text-[0.8rem] font-semibold text-[#0b2850] outline-none placeholder:text-slate-400 sm:border-b-0 sm:border-r"
                 />
-                <a href="#quote-form" data-quote-context="Land Rover engine year finder" data-quote-source="engine-years-summary" className="button-primary min-h-full rounded-none px-4 py-2 text-[0.76rem] shadow-none">
+                <a href="#quote-form" data-quote-context={`${brandName} engine year finder`} data-quote-source="engine-years-summary" className="button-primary min-h-full rounded-none px-4 py-2 text-[0.76rem] shadow-none">
                   Find My Engine
                 </a>
               </div>
@@ -215,7 +290,7 @@ export default function EngineYearsSection({ data }: Props) {
                 <ShieldIcon />
               </div>
               <p className="max-w-[220px] text-[0.74rem] leading-5 text-slate-200">
-                All engines supplied with a minimum 12-month warranty from UK Land Rover specialists.
+                All engines supplied with a minimum 12-month warranty from UK {brandName} specialists.
               </p>
             </div>
           </div>

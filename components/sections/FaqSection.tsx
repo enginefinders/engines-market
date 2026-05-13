@@ -33,6 +33,17 @@ export default function FaqSection({ data }: Props) {
               <div className="border-t border-slate-200 bg-white px-4 py-3.5">
                 <p className="text-small text-slate-700">{item.answer}</p>
 
+                {item.keyPoints?.length ? (
+                  <div className="mt-3 rounded-xl bg-slate-50 px-3.5 py-3">
+                    <p className="text-label text-slate-500">Key points</p>
+                    <ul className="mt-2 space-y-1.5 text-small font-semibold text-slate-700">
+                      {item.keyPoints.map((point) => (
+                        <li key={point}>• {point}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ) : null}
+
                 {item.warning && (
                   <div className="mt-3 rounded-xl border border-amber-200 bg-amber-50 px-3.5 py-3">
                     <div className="flex items-start gap-3 text-amber-900">

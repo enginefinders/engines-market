@@ -175,6 +175,13 @@ export type CommonProblemsData = {
     affectedModels: string;
     typicalFailureMileage: string;
     rootCause: string;
+    repairOptions?: {
+      tier: string;
+      dealerPrice: string;
+      specialistPrice: string;
+      whatItInvolves: string;
+      longevity: string;
+    }[];
     recommendation: string;
     cta: string;
   }[];
@@ -208,6 +215,10 @@ export type EngineSizesData = {
     items: {
       title: string;
       description: string;
+      engineCodes?: string[];
+      compatibleModels?: string[];
+      productionYears?: string;
+      commonFailurePoints?: string[];
       cta: string;
     }[];
   }[];
@@ -221,6 +232,12 @@ export type FuelTypesData = {
   items: {
     title: string;
     description: string;
+    descriptor?: string;
+    families?: string[];
+    foundIn?: string[];
+    knownFor?: string[];
+    typicalModels?: string[];
+    importantNotes?: string[];
     cta: string;
   }[];
   closing: string;
@@ -260,6 +277,12 @@ export type EngineYearsData = {
     year: string;
     preview: string;
     description: string;
+    keyChanges?: string[];
+    mainEngines?: string[];
+    popularModels?: string[];
+    knownFor?: string[];
+    engineCodesCovered?: string[];
+    ticker?: string;
     cta: string;
   }[];
   closing: string;
@@ -272,6 +295,7 @@ export type FaqSectionData = {
   items: {
     question: string;
     answer: string;
+    keyPoints?: string[];
     cta: string;
     warning?: string;
   }[];

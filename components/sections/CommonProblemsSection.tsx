@@ -54,14 +54,18 @@ export default function CommonProblemsSection({ data, bgImage }: Props) {
                     }`}
                   >
                     <div className="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-slate-200 bg-white p-1">
-                      <img
-                        src={problem.image || ""}
-                        alt={problem.group}
-                        className="h-full w-full object-contain"
-                        onError={(event) => {
-                          event.currentTarget.style.display = "none";
-                        }}
-                      />
+                      {problem.image ? (
+                        <img
+                          src={problem.image}
+                          alt={problem.group}
+                          className="h-full w-full object-contain"
+                          onError={(event) => {
+                            event.currentTarget.style.display = "none";
+                          }}
+                        />
+                      ) : (
+                        <div className="h-full w-full rounded-lg bg-slate-100" />
+                      )}
                     </div>
 
                     <div className="min-w-0">
@@ -75,23 +79,24 @@ export default function CommonProblemsSection({ data, bgImage }: Props) {
               })}
             </div>
 
-              <div className="border-t border-slate-200 bg-white px-4 py-3.5">
-              <p className="text-small font-semibold text-slate-700">{data.finalCta.disclaimer}</p>
-            </div>
           </aside>
 
           <div className="surface-card overflow-hidden">
             <div className="border-b border-slate-200 px-4 py-4 lg:px-5">
               <div className="flex flex-wrap items-start gap-4">
                 <div className="flex h-20 w-20 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-slate-200 bg-white p-1.5">
-                  <img
-                    src={current.image || ""}
-                    alt={current.group}
-                    className="h-full w-full object-contain"
-                    onError={(event) => {
-                      event.currentTarget.style.display = "none";
-                    }}
-                  />
+                  {current.image ? (
+                    <img
+                      src={current.image}
+                      alt={current.group}
+                      className="h-full w-full object-contain"
+                      onError={(event) => {
+                        event.currentTarget.style.display = "none";
+                      }}
+                    />
+                  ) : (
+                    <div className="h-full w-full rounded-xl bg-slate-100" />
+                  )}
                 </div>
 
                 <div className="min-w-0 flex-1">
@@ -122,20 +127,66 @@ export default function CommonProblemsSection({ data, bgImage }: Props) {
             </div>
 
             <div className="px-4 py-4 lg:px-5">
-              <div className="rounded-2xl border border-slate-200 bg-white">
-                <div className="grid gap-0 md:grid-cols-[1.1fr_0.9fr]">
-                  <div className="border-b border-slate-200 px-4 py-4 md:border-b-0 md:border-r">
-                    <p className="text-label text-green-700">Repair outlook</p>
-                    <p className="text-small mt-3 text-slate-600">
-                      This failure is one of the main reasons owners move from repair quotes to full engine replacement. The issue usually escalates once noise, oil starvation, heat damage, or contamination spreads across the unit.
-                    </p>
+              {current.repairOptions?.length ? (
+                <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white">
+                  <div className="border-b border-slate-200 px-4 py-3.5">
+                    <p className="text-sm font-bold text-[#071936]">Repair Options &amp; Estimated Costs (UK ranges)</p>
                   </div>
 
-                  <div className="px-4 py-4">
-                    <p className="text-label text-green-700">Recommended path</p>
-                    <p className="mt-3 text-small font-semibold text-slate-700">{current.recommendation}</p>
+                  <div className="overflow-x-auto">
+                    <table className="min-w-full border-collapse">
+                      <thead>
+                        <tr className="bg-[#071936] text-left text-white">
+                          <th className="px-4 py-3 text-[0.72rem] font-black uppercase tracking-[0.08em]">Repair tier</th>
+                          <th className="px-4 py-3 text-[0.72rem] font-black uppercase tracking-[0.08em]">Dealer price</th>
+                          <th className="px-4 py-3 text-[0.72rem] font-black uppercase tracking-[0.08em]">Specialist price</th>
+                          <th className="px-4 py-3 text-[0.72rem] font-black uppercase tracking-[0.08em]">What it involves</th>
+                          <th className="px-4 py-3 text-[0.72rem] font-black uppercase tracking-[0.08em]">Longevity / suitability</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {current.repairOptions.map((option) => (
+                          <tr key={option.tier} className="border-t border-slate-200 align-top">
+                            <td className="px-4 py-3 text-[0.82rem] font-bold text-[#071936]">{option.tier}</td>
+                            <td className="px-4 py-3 text-[0.82rem] font-semibold text-slate-700">{option.dealerPrice}</td>
+                            <td className="px-4 py-3 text-[0.82rem] font-semibold text-green-700">{option.specialistPrice}</td>
+                            <td className="px-4 py-3 text-[0.8rem] leading-6 text-slate-600">{option.whatItInvolves}</td>
+                            <td className="px-4 py-3 text-[0.8rem] leading-6 text-slate-600">{option.longevity}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
                   </div>
                 </div>
+              ) : (
+                <div className="rounded-2xl border border-slate-200 bg-white">
+                  <div className="grid gap-0 md:grid-cols-[1.1fr_0.9fr]">
+                    <div className="border-b border-slate-200 px-4 py-4 md:border-b-0 md:border-r">
+                      <p className="text-label text-green-700">Repair outlook</p>
+                      <p className="text-small mt-3 text-slate-600">
+                        This failure is one of the main reasons owners move from repair quotes to full engine replacement. The issue usually escalates once noise, oil starvation, heat damage, or contamination spreads across the unit.
+                      </p>
+                    </div>
+
+                    <div className="px-4 py-4">
+                      <p className="text-label text-green-700">Recommended path</p>
+                      <p className="mt-3 text-small font-semibold text-slate-700">{current.recommendation}</p>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              <div className="mt-4 rounded-2xl border border-slate-200 bg-white px-4 py-4">
+                <p className="text-label text-green-700">Our recommendation</p>
+                <p className="mt-3 text-small font-semibold text-slate-700">{current.recommendation}</p>
+                <a
+                  href="#quote-form"
+                  data-quote-context={`${current.group} - ${current.h4}`}
+                  data-quote-source="common-problem-detail"
+                  className="action-link mt-4"
+                >
+                  {current.cta}
+                </a>
               </div>
 
               <div className="mt-4 flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-green-100 bg-green-50 px-4 py-4">
@@ -146,16 +197,22 @@ export default function CommonProblemsSection({ data, bgImage }: Props) {
 
                 <a
                   href="#quote-form"
-                  data-quote-context={`${current.group} - ${current.h4}`}
+                  data-quote-context={data.finalCta.h4}
                   data-quote-source="common-problems"
                   className="inline-flex items-center gap-2 rounded-xl bg-green-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-green-800"
                 >
-                  {current.cta}
+                  {data.finalCta.buttonText.replace(/(?:->|→)\s*$/, "").trim()}
                   <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none">
                     <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
                   </svg>
                 </a>
               </div>
+
+              {data.finalCta.disclaimer ? (
+                <div className="mt-4 rounded-2xl border border-slate-200 bg-white px-4 py-3.5">
+                  <p className="text-small text-slate-600">{data.finalCta.disclaimer}</p>
+                </div>
+              ) : null}
             </div>
           </div>
         </div>
