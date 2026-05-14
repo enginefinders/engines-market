@@ -13,6 +13,7 @@ import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
 import SectionHeader from "@/components/ui/SectionHeader";
 import { getBrandPageData, getBrandSlugs } from "@/lib/brandData";
+import { buildStaticReviewsSection } from "@/lib/staticReviews";
 import type {
   BrandPageData,
   CommonProblemsData,
@@ -164,6 +165,7 @@ function buildRelatedModelsData(pageData: BrandPageData, currentModelSlug: strin
 }
 
 function buildStructuredData(pageData: BrandPageData, model: ModelCard) {
+  const reviewsData = buildStaticReviewsSection(pageData.brand.name);
   const siteUrl = "https://enginesmarket.co.uk";
   const canonical = `${siteUrl}/${pageData.brand.slug}/${model.slug}`;
   const name = `${pageData.brand.name} ${model.h3} Engine`;
@@ -213,8 +215,8 @@ function buildStructuredData(pageData: BrandPageData, model: ModelCard) {
         },
         aggregateRating: {
           "@type": "AggregateRating",
-          ratingValue: pageData.sections.reviews.rating.value,
-          ratingCount: pageData.sections.reviews.rating.count,
+          ratingValue: reviewsData.rating.value,
+          ratingCount: reviewsData.rating.count,
         },
       },
     ],
@@ -281,6 +283,7 @@ export default async function ModelPage({ params }: ModelPageProps) {
   const modelCommonProblemsData = buildModelCommonProblemsData(pageData, modelCard);
   const modelFaqData = buildModelFaqData(pageData, modelCard);
   const relatedModelsData = buildRelatedModelsData(pageData, modelCard.slug);
+  const reviewsData = buildStaticReviewsSection(pageData.brand.name);
 
   return (
     <>
@@ -289,7 +292,11 @@ export default async function ModelPage({ params }: ModelPageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
 
-      <HeroSection data={heroData} bgImage={pageData.assets.heroBg} />
+      <HeroSection
+        data={heroData}
+        bgImage={pageData.assets.heroBg}
+        modelCards={pageData.sections.models.cards}
+      />
 
       <Section className="bg-white">
         <Container>
@@ -330,7 +337,7 @@ export default async function ModelPage({ params }: ModelPageProps) {
         <LiveMarketPricesSection data={modelLiveMarketData} />
       ) : null}
 
-      <ReviewsSection data={pageData.sections.reviews} />
+      <ReviewsSection data={reviewsData} />
 
       {modelEngineCodesData ? (
         <EngineCodesSection
@@ -358,7 +365,11 @@ export default async function ModelPage({ params }: ModelPageProps) {
       <TrustCtaSection
         data={pageData.sections.trustCta}
         brandName={`${pageData.brand.name} ${modelCard.h3}`}
-        imageSrc={modelCard.image || pageData.assets.heroBg}
+        imageSrc={
+          pageData.brand.slug === "land-rover"
+            ? "/images/brands/land-rover/cta-image.webp"
+            : modelCard.image || pageData.assets.heroBg
+        }
       />
 
       <Suspense fallback={null}>

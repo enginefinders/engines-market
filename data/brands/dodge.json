@@ -37,7 +37,7 @@
         "subtitle": "Enter your registration number to get started.",
         "inputPlaceholder": "Registration Number",
         "buttonText": "Get Free Engine Quotes",
-        "note": ""
+        "note": "Secure enquiry — no spam, no pressure. Genuine quotes only from vetted UK Dodge specialists."
       }
     },
     "howItWorks": {
@@ -301,7 +301,7 @@
         {
           "name": "CRD Diesel Family",
           "era": "2008–2018",
-          "failureNote": "Get Quote → (per row, developer to implement as button pre-filling engine code) Common failure points (expandable note): CRD diesel engines are known for injector seal leaks, turbo actuator wear and EGR clogging. Our rebuilt units include upgraded injectors, reconditioned turbos and cleaned EGR systems to prevent repeat failures.",
+          "failureNote": "Get Quote → (per row, developer to implement as button pre-filling engine code) Common failure points: CRD diesel engines are known for injector seal leaks, turbo actuator wear and EGR clogging. Our rebuilt units include upgraded injectors, reconditioned turbos and cleaned EGR systems to prevent repeat failures.",
           "engines": [
             {
               "code": "ED3",
@@ -353,7 +353,7 @@
         {
           "name": "World Gas Engine Family",
           "era": "2007–2016",
-          "failureNote": "Get Quote → (per row) Common failure points (expandable note): World Gas engines commonly suffer from timing chain tensioner wear and oil consumption issues. Our rebuilt units include upgraded tensioners, new piston rings and valve stem seals for long-term reliability.",
+          "failureNote": "Get Quote → (per row) Common failure points: World Gas engines commonly suffer from timing chain tensioner wear and oil consumption issues. Our rebuilt units include upgraded tensioners, new piston rings and valve stem seals for long-term reliability.",
           "engines": [
             {
               "code": "EDV",
@@ -396,7 +396,7 @@
         {
           "name": "PowerTech V6/V8 Family",
           "era": "2002–2012",
-          "failureNote": "Get Quote → (per row) Common failure points (expandable note): PowerTech engines are known for timing chain guide failure and oil pump pickup screen clogging. Our rebuilt units include reinforced guides, upgraded oil pumps and full gasket renewal.",
+          "failureNote": "Get Quote → (per row) Common failure points: PowerTech engines are known for timing chain guide failure and oil pump pickup screen clogging. Our rebuilt units include reinforced guides, upgraded oil pumps and full gasket renewal.",
           "engines": [
             {
               "code": "EKG",
@@ -421,7 +421,7 @@
         {
           "name": "Pentastar V6 Family",
           "era": "2011–Present",
-          "failureNote": "Get Quote → (per row) Common failure points (expandable note): Early Pentastar engines (pre-2013) are known for cylinder head issues and oil cooler leaks. Our rebuilt units include updated cylinder heads, revised oil coolers and new timing components to eliminate known weaknesses.",
+          "failureNote": "Get Quote → (per row) Common failure points: Early Pentastar engines (pre-2013) are known for cylinder head issues and oil cooler leaks. Our rebuilt units include updated cylinder heads, revised oil coolers and new timing components to eliminate known weaknesses.",
           "engines": [
             {
               "code": "ERB",
@@ -464,7 +464,7 @@
         {
           "name": "HEMI V8 Family",
           "era": "2003–Present",
-          "failureNote": "Get Quote → (per row) Common failure points (expandable note): HEMI engines are known for VVT lifter failure and exhaust manifold bolt breakage. Our rebuilt units include upgraded lifters, reinforced manifolds and precision-balanced rotating assemblies for performance reliability.",
+          "failureNote": "Get Quote → (per row) Common failure points: HEMI engines are known for VVT lifter failure and exhaust manifold bolt breakage. Our rebuilt units include upgraded lifters, reinforced manifolds and precision-balanced rotating assemblies for performance reliability.",
           "engines": [
             {
               "code": "EZB",
@@ -516,7 +516,7 @@
         {
           "name": "EcoDiesel V6 Family",
           "era": "2014–Present",
-          "failureNote": "Get Quote → (per row) Common failure points (expandable note): EcoDiesel engines are known for EGR cooler failure and turbo actuator issues. Our rebuilt units include upgraded EGR coolers, reconditioned turbos and new injector nozzles to prevent recurrence.",
+          "failureNote": "Get Quote → (per row) Common failure points: EcoDiesel engines are known for EGR cooler failure and turbo actuator issues. Our rebuilt units include upgraded EGR coolers, reconditioned turbos and new injector nozzles to prevent recurrence.",
           "engines": [
             {
               "code": "ECO3",
@@ -532,7 +532,7 @@
         {
           "name": "Legacy Performance V10",
           "era": "2003–2017",
-          "failureNote": "Get Quote → (per row) Common failure points (expandable note): Viper V10 engines are known for oil consumption at high RPM and valve train wear. Our specialist rebuilds include upgraded piston rings, performance valve springs and precision cylinder honing for track-ready reliability",
+          "failureNote": "Get Quote → (per row) Common failure points: Viper V10 engines are known for oil consumption at high RPM and valve train wear. Our specialist rebuilds include upgraded piston rings, performance valve springs and precision cylinder honing for track-ready reliability",
           "engines": [
             {
               "code": "EWE",
@@ -570,24 +570,24 @@
           "rootCause": "The Mercedes-sourced OM642-derived 2.8L CRD suffers from turbocharger vane sticking and high-pressure injector wear, exacerbated by short-trip UK driving that prevents full DPF regeneration cycles .",
           "repairOptions": [
             {
-              "tier": "| Minor – Turbo Actuator & Sensor Replacement |",
+              "tier": "| Minor – Turbo Actuator & Sensor Replacement",
               "dealerPrice": "£1,800 – £2,600",
               "specialistPrice": "£950 – £1,450",
-              "whatItInvolves": "| Replace turbo boost sensor, clean/replace actuator, reset ECU adaptations; diagnostic time included | Viable only if caught before turbo shaft damage; adds 15–25k miles if maintenance is strict |",
+              "whatItInvolves": "| Replace turbo boost sensor, clean/replace actuator, reset ECU adaptations; diagnostic time included | Viable only if caught before turbo shaft damage; adds 15–25k miles if maintenance is strict",
               "longevity": ""
             },
             {
-              "tier": "| Intermediate – Injector Set Replacement + Turbo Service |",
+              "tier": "| Intermediate – Injector Set Replacement + Turbo Service",
               "dealerPrice": "£3,200 – £4,800",
               "specialistPrice": "£1,850 – £2,900",
-              "whatItInvolves": "| Remove and replace all four high-pressure injectors with calibrated units; turbo clean/service; fuel pressure test | Extends life 30–50k miles but does not address underlying oil-coking risk in the turbo; best for vehicles under £4k value |",
+              "whatItInvolves": "| Remove and replace all four high-pressure injectors with calibrated units; turbo clean/service; fuel pressure test | Extends life 30–50k miles but does not address underlying oil-coking risk in the turbo; best for vehicles under £4k value",
               "longevity": ""
             },
             {
-              "tier": "| Full Replacement – Reconditioned 2.8 CRD Engine Supplied & Fitted |",
+              "tier": "| Full Replacement – Reconditioned 2.8 CRD Engine Supplied & Fitted",
               "dealerPrice": "£6,500 – £8,900",
               "specialistPrice": "£3,200 – £4,600",
-              "whatItInvolves": "| Supply and fit of reconditioned ENR/EDJ engine with upgraded turbo oil feed line, new injectors, bench-tested; includes 12-month warranty | Most cost-effective long-term solution for Nitro/Journey owners; eliminates repeat failure risk and includes warranty protection |",
+              "whatItInvolves": "| Supply and fit of reconditioned ENR/EDJ engine with upgraded turbo oil feed line, new injectors, bench-tested; includes 12-month warranty | Most cost-effective long-term solution for Nitro/Journey owners; eliminates repeat failure risk and includes warranty protection",
               "longevity": ""
             }
           ],
@@ -603,17 +603,17 @@
           "rootCause": "The 3.7L PowerTech uses a single-row timing chain with plastic guides that become brittle with age; tensioner wear allows chain slap, leading to guide fragmentation and potential valve interference .",
           "repairOptions": [
             {
-              "tier": "| Minor – Timing Chain Tensioner & Guide Refresh |",
+              "tier": "| Minor – Timing Chain Tensioner & Guide Refresh",
               "dealerPrice": "£1,400 – £2,100",
               "specialistPrice": "£750 – £1,250",
-              "whatItInvolves": "| Replace primary tensioner and upper guides via valve cover access; oil change included | Only viable if caught before chain stretch causes cam timing error; adds ~20k miles if oil changes are strict |",
+              "whatItInvolves": "| Replace primary tensioner and upper guides via valve cover access; oil change included | Only viable if caught before chain stretch causes cam timing error; adds ~20k miles if oil changes are strict",
               "longevity": ""
             },
             {
-              "tier": "| Full Replacement – Reconditioned 3.7L V6 Supplied & Fitted |",
+              "tier": "| Full Replacement – Reconditioned 3.7L V6 Supplied & Fitted",
               "dealerPrice": "£5,200 – £7,400",
               "specialistPrice": "£2,600 – £3,900",
-              "whatItInvolves": "| Supply and fit of reconditioned EKG engine with upgraded metal-guide timing set, new oil pump, bench-tested; 12-month warranty included | The only reliable solution once chain noise or misfire codes appear; eliminates repeat failure and protects vehicle value |",
+              "whatItInvolves": "| Supply and fit of reconditioned EKG engine with upgraded metal-guide timing set, new oil pump, bench-tested; 12-month warranty included | The only reliable solution once chain noise or misfire codes appear; eliminates repeat failure and protects vehicle value",
               "longevity": ""
             }
           ],
@@ -629,17 +629,17 @@
           "rootCause": "Early Pentastar engines (pre-2016) suffered from cylinder head casting porosity and cam phaser wear; oil dilution from short trips accelerates bearing wear, while carbon buildup on intake valves affects direct-injection variants .",
           "repairOptions": [
             {
-              "tier": "| Intermediate – Cylinder Head Repair + Phaser Replacement |",
+              "tier": "| Intermediate – Cylinder Head Repair + Phaser Replacement",
               "dealerPrice": "£3,800 – £5,600",
               "specialistPrice": "£2,100 – £3,400",
-              "whatItInvolves": "| Remove and refurbish cylinder heads with updated valve seats; replace cam phasers and timing components; full gasket set | Viable for well-maintained engines with early warning signs (ticking, oil consumption); adds 40–60k miles if oil changes are frequent |",
+              "whatItInvolves": "| Remove and refurbish cylinder heads with updated valve seats; replace cam phasers and timing components; full gasket set | Viable for well-maintained engines with early warning signs (ticking, oil consumption); adds 40–60k miles if oil changes are frequent",
               "longevity": ""
             },
             {
-              "tier": "| Full Replacement – Reconditioned 3.6L Pentastar Supplied & Fitted |",
+              "tier": "| Full Replacement – Reconditioned 3.6L Pentastar Supplied & Fitted",
               "dealerPrice": "£6,200 – £8,900",
               "specialistPrice": "£2,800 – £4,200",
-              "whatItInvolves": "| Supply and fit of reconditioned ERB engine with updated cylinder heads, upgraded oil pump, bench-tested; includes 12-month warranty | Recommended for vehicles over £6k value or high-mileage use; eliminates repeat head/phaser failures and provides warranty security |",
+              "whatItInvolves": "| Supply and fit of reconditioned ERB engine with updated cylinder heads, upgraded oil pump, bench-tested; includes 12-month warranty | Recommended for vehicles over £6k value or high-mileage use; eliminates repeat head/phaser failures and provides warranty security",
               "longevity": ""
             }
           ],
@@ -655,17 +655,17 @@
           "rootCause": "The HEMI's Multiple Displacement System (MDS) lifters can collapse due to oil aeration or delayed oil changes; collapsed lifters score the camshaft lobes, causing metallic ticking, loss of power, and eventual valve train failure .",
           "repairOptions": [
             {
-              "tier": "| Intermediate – Lifter & Camshaft Replacement (Engine‑In) |",
+              "tier": "| Intermediate – Lifter & Camshaft Replacement (Engine‑In)",
               "dealerPrice": "£4,200 – £6,800",
               "specialistPrice": "£2,400 – £3,900",
-              "whatItInvolves": "| Remove intake manifold and valve covers; replace all 16 lifters and camshaft; MDS solenoids refreshed; full oil system flush | Only viable if caught before metal debris circulates; adds ~30k miles but does not address underlying oiling design |",
+              "whatItInvolves": "| Remove intake manifold and valve covers; replace all 16 lifters and camshaft; MDS solenoids refreshed; full oil system flush | Only viable if caught before metal debris circulates; adds ~30k miles but does not address underlying oiling design",
               "longevity": ""
             },
             {
-              "tier": "| Full Replacement – Reconditioned 5.7L HEMI Supplied & Fitted |",
+              "tier": "| Full Replacement – Reconditioned 5.7L HEMI Supplied & Fitted",
               "dealerPrice": "£7,800 – £11,200",
               "specialistPrice": "£4,200 – £5,800",
-              "whatItInvolves": "| Supply and fit of reconditioned EZH/EZL engine with upgraded MDS lifters, revised oil pump, bench-tested; includes 12-month warranty | Strongly recommended for Charger/Challenger enthusiasts and high-mileage Ram owners; eliminates repeat lifter failure and protects performance investment |",
+              "whatItInvolves": "| Supply and fit of reconditioned EZH/EZL engine with upgraded MDS lifters, revised oil pump, bench-tested; includes 12-month warranty | Strongly recommended for Charger/Challenger enthusiasts and high-mileage Ram owners; eliminates repeat lifter failure and protects performance investment",
               "longevity": ""
             }
           ],
@@ -681,17 +681,17 @@
           "rootCause": "The VM Motori-sourced 3.0L EcoDiesel suffers from oil cooler gasket failure, allowing coolant into the oil gallery; this dilutes oil film strength, accelerating connecting rod bearing wear and potentially causing catastrophic bottom-end failure .",
           "repairOptions": [
             {
-              "tier": "| Minor – Oil Cooler & Gasket Replacement |",
+              "tier": "| Minor – Oil Cooler & Gasket Replacement",
               "dealerPrice": "£2,100 – £3,400",
               "specialistPrice": "£1,100 – £1,850",
-              "whatItInvolves": "| Remove intake manifold; replace oil cooler assembly and gaskets; flush cooling and oil systems; pressure test | Only viable if caught before bearing wear begins (no knocking noise, normal oil pressure); adds ~25k miles with strict maintenance |",
+              "whatItInvolves": "| Remove intake manifold; replace oil cooler assembly and gaskets; flush cooling and oil systems; pressure test | Only viable if caught before bearing wear begins (no knocking noise, normal oil pressure); adds ~25k miles with strict maintenance",
               "longevity": ""
             },
             {
-              "tier": "| Full Replacement – Reconditioned 3.0L EcoDiesel Supplied & Fitted |",
+              "tier": "| Full Replacement – Reconditioned 3.0L EcoDiesel Supplied & Fitted",
               "dealerPrice": "£7,200 – £9,800",
               "specialistPrice": "£3,800 – £5,400",
-              "whatItInvolves": "| Supply and fit of reconditioned EXN engine with upgraded oil cooler design, revised bearing clearances, bench-tested; includes 12-month warranty | Recommended once any bearing noise or oil/coolant mixing is detected; eliminates repeat failure risk and restores towing reliability |",
+              "whatItInvolves": "| Supply and fit of reconditioned EXN engine with upgraded oil cooler design, revised bearing clearances, bench-tested; includes 12-month warranty | Recommended once any bearing noise or oil/coolant mixing is detected; eliminates repeat failure risk and restores towing reliability",
               "longevity": ""
             }
           ],
@@ -928,7 +928,74 @@
       "tag": "Complete Dodge Engines List",
       "h2": "Dodge Engines by Fuel Type",
       "intro": "Choose your Dodge engine by fuel type to compare realistic replacement prices, known brand‑wide issues, and UK specialist supply – from the most popular diesel workhorses to the latest electrified powertrains.",
-      "items": [],
+      "items": [
+        {
+          "title": "Dodge Diesel Engines",
+          "description": "Dodge diesel engines cover many of the brand's highest-mileage UK models. Replacement demand is usually driven by timing system wear, injector and turbo faults, plus EGR or DPF-related damage once repeat short-journey use starts affecting reliability.",
+          "descriptor": "High-mileage motorway and SUV applications",
+          "families": [
+            "CRD Diesel Family",
+            "EcoDiesel V6 Family"
+          ],
+          "foundIn": [
+            "Dodge Avenger Engines",
+            "Dodge Caliber Engines",
+            "Dodge Challenger Engines",
+            "Dodge Charger Engines"
+          ],
+          "knownFor": [
+            "High-pressure injector wear",
+            "turbocharger actuator failure",
+            "Turbocharger vane sticking",
+            "high-pressure injector wear"
+          ],
+          "typicalModels": [
+            "Dodge Avenger Engines",
+            "Dodge Caliber Engines",
+            "Dodge Challenger Engines",
+            "Dodge Charger Engines"
+          ],
+          "importantNotes": [
+            "Short-journey use increases DPF, EGR, and oil-dilution risk on many diesel engines.",
+            "A documented service history matters more on diesel replacements because injector, turbo, and timing faults often build gradually."
+          ],
+          "cta": "Compare Dodge diesel engine prices"
+        },
+        {
+          "title": "Dodge Petrol Engines",
+          "description": "Dodge petrol engines span everything from core daily-driver models to higher-output performance variants. Most replacement enquiries start with timing chain noise, oil consumption, cooling-system failure, or internal wear that makes a warranted replacement more sensible than repeated repairs.",
+          "descriptor": "Core passenger-car and performance applications",
+          "families": [
+            "World Gas Engine Family",
+            "PowerTech V6/V8 Family",
+            "Pentastar V6 Family",
+            "HEMI V8 Family"
+          ],
+          "foundIn": [
+            "Dodge Avenger Engines",
+            "Dodge Caliber Engines",
+            "Dodge Challenger Engines",
+            "Dodge Charger Engines"
+          ],
+          "knownFor": [
+            "Ignition coil failure",
+            "oil consumption due to piston ring wear",
+            "VVT solenoid failure",
+            "oil sludge buildup from extended service intervals"
+          ],
+          "typicalModels": [
+            "Dodge Avenger Engines",
+            "Dodge Caliber Engines",
+            "Dodge Challenger Engines",
+            "Dodge Charger Engines"
+          ],
+          "importantNotes": [
+            "Cold-start rattles, overheating history, and oil use are the biggest warning signs before a petrol engine replacement becomes necessary.",
+            "Direct-injection petrol engines often need specialist attention for carbon build-up alongside the main mechanical repair."
+          ],
+          "cta": "Compare Dodge petrol engine prices"
+        }
+      ],
       "closing": "Not sure which fuel type your Dodge has? Enter your registration number above to instantly identify your model, engine code, fuel system and compatible replacement options – all backed by a minimum 12‑month unlimited mileage warranty from UK Dodge specialists."
     },
     "engineCodeDirectory": {
@@ -1076,7 +1143,7 @@
             {
               "title": "EXD 3.6L V6 Petrol",
               "image": "/images/brands/dodge/engines/dodge-exd-engine.webp",
-              "description": "The updated Pentastar (Charger/Challenger, 2014–Present) benefits from early corrections but still fails due to water pump seal leaks and variable valve timing solenoid sticking. Coolant ingress and VVT hesitation compromise cam timing, leading to rough running and eventual head gasket stress. Rebuilt units feature upgraded water pump seals, revised VVT solenoids, and reinforced cylinder liners for extended service intervals. Closing line (Block A): Can’t find your engine code listed above? Use our full Dodge engine code directory below — every code from the last 30 years — or enter your registration number for an instant match to the correct replacement engine with warranty.",
+              "description": "The updated Pentastar (Charger/Challenger, 2014–Present) benefits from early corrections but still fails due to water pump seal leaks and variable valve timing solenoid sticking. Coolant ingress and VVT hesitation compromise cam timing, leading to rough running and eventual head gasket stress. Rebuilt units feature upgraded water pump seals, revised VVT solenoids, and reinforced cylinder liners for extended service intervals.",
               "cta": "Compare EXD 3.6L Dodge engine prices"
             }
           ]
@@ -1725,42 +1792,42 @@
     "faq": {
       "tag": "FAQ",
       "h2": "Dodge Engine Replacement – Frequently Asked Questions",
-      "intro": "Quick, honest answers to the most common questions Dodge owners ask before comparing engine replacement prices and finding a UK specialist.",
+      "intro": "** Quick, honest answers to the most common questions Dodge owners ask before comparing engine replacement prices and finding a UK specialist.",
       "items": [
         {
           "question": "How much does a Dodge engine replacement cost in the UK?",
           "answer": "A reconditioned Dodge engine typically costs £2,200–£5,800 depending on size, with 4‑cylinder units like the 2.4L ED3 at the lower end and 5.7L HEMI V8s at the premium. Supply‑and‑fit labour adds £600–£1,800, while main dealers often charge 40–70% more. For budget options, used Dodge engines range £800–£2,500 but carry shorter warranties. Always compare multiple quotes to find the best value for your specific engine code.",
-          "cta": "Compare Dodge engine prices now"
+          "cta": "Compare Dodge engine replacement prices now"
         },
         {
           "question": "What affects the cost of a Dodge engine replacement?",
           "answer": "Four key factors drive pricing: engine displacement (3.6L Pentastar vs 5.7L HEMI), condition (used vs reconditioned), vehicle complexity (Ram 1500 takes longer than Caliber), and supply‑only vs supply‑and‑fit service. Location matters too—London fitting costs can be 20–30% higher than regional specialists. Our comparison tool provides transparent, itemised quotes so you see exactly what you're paying for before booking.",
-          "cta": "Compare Dodge engine prices now"
+          "cta": "Get quotes from UK Dodge engine specialists"
         },
         {
           "question": "Is it worth replacing the engine in my Dodge?",
           "answer": "In most cases yes, especially if the chassis, gearbox and interior are solid. A rebuilt Dodge engine with upgraded components (like revised Pentastar cylinder heads or HEMI MDS lifters) often outlasts the original unit. The alternative—buying a replacement vehicle—typically costs far more than a £2,200–£5,800 reconditioned engine. If your Dodge holds value or has sentimental worth, replacement is almost always the smarter financial decision.",
-          "cta": "Get a Dodge engine quote now"
+          "cta": "Find reconditioned Dodge engines with comprehensive warranty cover"
         },
         {
           "question": "What's included in a Dodge engine supply and fit service?",
           "answer": "Supply‑and‑fit covers sourcing the correct engine code (e.g., ERB Pentastar, EZH HEMI), removing the old unit, installing the replacement with new gaskets and fluids, replacing ancillary filters, and a post‑fit test‑drive. Disposal of the old engine and a workmanship warranty are typically included. Labour for fitting ranges £600–£1,800 depending on model complexity—always confirm whether VAT and delivery are included in your quote.",
-          "cta": "Get a Dodge engine quote now"
+          "cta": "Compare Dodge engine supply and fit deals"
         },
         {
           "question": "How long does a Dodge engine replacement take?",
-          "answer": "For common models like Caliber, Nitro or Journey, a like‑for‑like swap typically takes 3–5 working days. More complex vehicles like Ram 1500 or Charger/Challenger with HEMI V8s may require 5–7 days due to additional ancillary removal. The biggest variable is engine availability—our network stocks commonly replaced codes (ED3, ENR, ERB, EZH) to minimise downtime. Ask suppliers about current lead times when requesting your quote.",
-          "cta": "Get a Dodge engine quote now"
+          "answer": "For common models like Caliber, Nitro or Journey, a like‑for‑like swap typically takes 3–5 working days. More complex vehicles like Ram 1500 or Charger/Challenger with HEMI V8s may require 5–7 days due to additional ancillary removal. The biggest variable is engine availability—our network stocks commonly replaced codes (ED3, ENR, ERB, EZH) to minimise downtime.",
+          "cta": "Use our free comparison tool to check specialist lead times"
         },
         {
           "question": "Do reconditioned Dodge engines come with warranty?",
           "answer": "Yes, every reconditioned Dodge engine supplied through EngineMarket carries a minimum 12‑month unlimited mileage warranty covering major internals: crankshaft, pistons, timing components and oil pump. Extended 24‑month coverage is often available on premium rebuilt and remanufactured units. Always confirm exact terms directly with your chosen supplier, as coverage for ancillaries (turbo, injectors) can vary. Warranty protection is a key advantage over used engines.",
-          "cta": "Find Dodge engines with warranty"
+          "cta": "Find reconditioned Dodge engines with comprehensive warranty cover"
         },
         {
           "question": "Should I choose a used or reconditioned Dodge engine?",
           "answer": "Used Dodge engines (£800–£2,500) are cheaper upfront and suitable for temporary fixes or vehicles you plan to sell soon. Reconditioned units (£2,200–£5,800) cost more but include new components, upgraded parts addressing known failures (e.g., Pentastar head revisions), and a 12‑month warranty—typically delivering another 100k+ miles of reliable service. For failure‑prone engines like the 2.8L CRD or 5.7L HEMI, reconditioned with upgrades is strongly recommended.",
-          "cta": "Compare used and reconditioned Dodge engine options"
+          "cta": "Use our free comparison tool to see whether a rebuilt or used Dodge engine makes financial sense"
         },
         {
           "question": "Where can I find Dodge engine specialists near me?",
@@ -1770,12 +1837,12 @@
         {
           "question": "What are the most common Dodge engine failures?",
           "answer": "The most frequent catastrophic failures driving replacement are: 2.8L CRD turbo vane sticking and injector wear (Nitro/Journey); 3.7L PowerTech timing chain guide fragmentation (Nitro/Dakota); pre‑2016 3.6L Pentastar cylinder head porosity (Ram/Charger); 5.7L HEMI MDS lifter collapse scoring camshafts; and 3.0L EcoDiesel oil cooler gasket failure causing bearing wear. Early detection rarely prevents these from becoming catastrophic, making full replacement the most common outcome for affected engines.",
-          "cta": "Get a Dodge engine quote now"
+          "cta": "Compare rebuilt Dodge engines with upgraded failure‑point components"
         },
         {
           "question": "How can I get the best price on a Dodge engine?",
           "answer": "Compare multiple quotes—prices for the same engine code (e.g., ERB Pentastar) can vary by £1,000+ across suppliers. Consider used engines for tight budgets or short‑term ownership, but opt for reconditioned units with upgraded components if you plan to keep your Dodge long‑term. Ask whether fitting, delivery and VAT are included, and check if supply‑only is an option if you have a trusted local garage. Small details significantly impact the final cost.",
-          "cta": "Compare Dodge engine prices now"
+          "cta": "Compare Dodge engine replacement prices now"
         }
       ]
     },

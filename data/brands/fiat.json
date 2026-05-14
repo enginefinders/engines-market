@@ -37,7 +37,7 @@
         "subtitle": "Enter your registration number to get started.",
         "inputPlaceholder": "Registration Number",
         "buttonText": "Get Free Engine Quotes",
-        "note": ""
+        "note": "Secure enquiry — no spam, no pressure. Genuine quotes only from vetted UK Fiat specialists."
       }
     },
     "howItWorks": {
@@ -469,7 +469,7 @@
         {
           "name": "FIRE Petrol Family",
           "era": "2005–2020",
-          "failureNote": "*(per row – developer to implement as button pre-filling engine code)* Common failure points (expandable note): FIRE engines are known for timing belt tensioner wear and EGR valve clogging on high mileage. Our rebuilt units include upgraded tensioners, new gaskets and cleaned EGR systems to prevent repeat failures.",
+          "failureNote": "*(per row – developer to implement as button pre-filling engine code)* Common failure points: FIRE engines are known for timing belt tensioner wear and EGR valve clogging on high mileage. Our rebuilt units include upgraded tensioners, new gaskets and cleaned EGR systems to prevent repeat failures.",
           "engines": [
             {
               "code": "169 A4.000",
@@ -530,7 +530,7 @@
         {
           "name": "Multijet Diesel Family – Small/Medium",
           "era": "2003–2025",
-          "failureNote": "*(per row – developer to implement as button pre-filling engine code)* Common failure points (expandable note): Multijet 1.3–1.6L engines are known for injector seal leaks and DPF clogging on short-trip driving. Our rebuilt units include new injector seals, cleaned DPF systems and updated ECU maps to improve reliability.",
+          "failureNote": "*(per row – developer to implement as button pre-filling engine code)* Common failure points: Multijet 1.3–1.6L engines are known for injector seal leaks and DPF clogging on short-trip driving. Our rebuilt units include new injector seals, cleaned DPF systems and updated ECU maps to improve reliability.",
           "engines": [
             {
               "code": "199 A2.000",
@@ -600,7 +600,7 @@
         {
           "name": "TwinAir & FireFly Turbo Petrol Family",
           "era": "2010–2025",
-          "failureNote": "*(per row – developer to implement as button pre-filling engine code)* Common failure points (expandable note): TwinAir and FireFly turbo engines are known for oil consumption and turbo wastegate sticking. Our rebuilt units include upgraded piston rings, new turbo actuators and revised oil pathways to address common wear points.",
+          "failureNote": "*(per row – developer to implement as button pre-filling engine code)* Common failure points: TwinAir and FireFly turbo engines are known for oil consumption and turbo wastegate sticking. Our rebuilt units include upgraded piston rings, new turbo actuators and revised oil pathways to address common wear points.",
           "engines": [
             {
               "code": "312 A2.000",
@@ -643,7 +643,7 @@
         {
           "name": "Multijet Diesel Family – Large/Van",
           "era": "2006–2025",
-          "failureNote": "*(per row – developer to implement as button pre-filling engine code)* Common failure points (expandable note): Ducato 2.3L/3.0L Multijet engines are known for turbo vane sticking and EGR cooler cracks under heavy load. Our rebuilt units include refurbished turbo assemblies, new EGR coolers and reinforced mounting points for commercial durability.",
+          "failureNote": "*(per row – developer to implement as button pre-filling engine code)* Common failure points: Ducato 2.3L/3.0L Multijet engines are known for turbo vane sticking and EGR cooler cracks under heavy load. Our rebuilt units include refurbished turbo assemblies, new EGR coolers and reinforced mounting points for commercial durability.",
           "engines": [
             {
               "code": "8140.43 / 8140.63",
@@ -695,7 +695,7 @@
         {
           "name": "Legacy JTD/JTDm Diesel Family",
           "era": "1997–2010",
-          "failureNote": "*(per row – developer to implement as button pre-filling engine code)* Common failure points (expandable note): Legacy 1.9L JTD engines are known for injector seat erosion and head gasket failure on high-mileage units. Our rebuilt units include machined cylinder heads, new injector seats and upgraded gasket sets for extended service life",
+          "failureNote": "*(per row – developer to implement as button pre-filling engine code)* Common failure points: Legacy 1.9L JTD engines are known for injector seat erosion and head gasket failure on high-mileage units. Our rebuilt units include machined cylinder heads, new injector seats and upgraded gasket sets for extended service life",
           "engines": [
             {
               "code": "188 A8.000",
@@ -733,24 +733,24 @@
           "rootCause": "The hydraulic timing chain tensioner can lose pressure over time, allowing the chain to stretch and jump teeth. This misaligns valve timing, leading to bent valves or piston damage — especially if oil changes were delayed.",
           "repairOptions": [
             {
-              "tier": "| Minor – Preventative Tensioner & Chain Kit Replacement |",
+              "tier": "| Minor – Preventative Tensioner & Chain Kit Replacement",
               "dealerPrice": "£800 – £1,500",
               "specialistPrice": "£400 – £800",
-              "whatItInvolves": "| Replace timing chain, tensioner, guides, and seals; reset timing; oil flush | Viable only if caught before chain jump; adds ~30–50k miles if oil maintained |",
+              "whatItInvolves": "| Replace timing chain, tensioner, guides, and seals; reset timing; oil flush | Viable only if caught before chain jump; adds ~30–50k miles if oil maintained",
               "longevity": ""
             },
             {
-              "tier": "| Intermediate – Cylinder Head Repair (Valve Replacement) |",
+              "tier": "| Intermediate – Cylinder Head Repair (Valve Replacement)",
               "dealerPrice": "£1,800 – £3,200",
               "specialistPrice": "£1,000 – £1,800",
-              "whatItInvolves": "| Remove head, replace bent valves, reseat, machine surface, reassemble | Restores function but doesn't address worn bottom end; risk of repeat failure if block damaged |",
+              "whatItInvolves": "| Remove head, replace bent valves, reseat, machine surface, reassemble | Restores function but doesn't address worn bottom end; risk of repeat failure if block damaged",
               "longevity": ""
             },
             {
-              "tier": "| Full Replacement – Rebuilt / Reconditioned FIRE Engine |",
+              "tier": "| Full Replacement – Rebuilt / Reconditioned FIRE Engine",
               "dealerPrice": "£2,500 – £4,000",
               "specialistPrice": "£1,200 – £2,200",
-              "whatItInvolves": "| Supply & fit fully rebuilt short block with upgraded tensioner, pistons, rings; bench tested; 12‑month warranty | Most cost‑effective long‑term solution; resolves root cause; ideal for cars worth £3k+ |",
+              "whatItInvolves": "| Supply & fit fully rebuilt short block with upgraded tensioner, pistons, rings; bench tested; 12‑month warranty | Most cost‑effective long‑term solution; resolves root cause; ideal for cars worth £3k+",
               "longevity": ""
             }
           ],
@@ -766,24 +766,24 @@
           "rootCause": "Short urban journeys cause the EGR valve and DPF to clog with soot. Restricted exhaust flow increases back‑pressure, overheating the turbocharger and accelerating bearing wear — often leading to oil leaks into the intake or complete turbo seizure.",
           "repairOptions": [
             {
-              "tier": "| Minor – EGR Cleaning / DPF Regeneration Service |",
+              "tier": "| Minor – EGR Cleaning / DPF Regeneration Service",
               "dealerPrice": "£300 – £600",
               "specialistPrice": "£150 – £350",
-              "whatItInvolves": "| Remove and clean EGR valve; forced DPF regen; diagnostic reset | Temporary fix; only suitable if turbo is still healthy and no warning lights persist |",
+              "whatItInvolves": "| Remove and clean EGR valve; forced DPF regen; diagnostic reset | Temporary fix; only suitable if turbo is still healthy and no warning lights persist",
               "longevity": ""
             },
             {
-              "tier": "| Intermediate – Turbo Replacement + EGR/DPF Service |",
+              "tier": "| Intermediate – Turbo Replacement + EGR/DPF Service",
               "dealerPrice": "£1,400 – £2,400",
               "specialistPrice": "£700 – £1,300",
-              "whatItInvolves": "| Fit new or reconditioned turbo; clean/replace EGR; DPF clean or replace; oil flush | Restores performance but doesn't address underlying soot buildup; requires driving habit change |",
+              "whatItInvolves": "| Fit new or reconditioned turbo; clean/replace EGR; DPF clean or replace; oil flush | Restores performance but doesn't address underlying soot buildup; requires driving habit change",
               "longevity": ""
             },
             {
-              "tier": "| Full Replacement – Reconditioned 1.3 Multijet Engine |",
+              "tier": "| Full Replacement – Reconditioned 1.3 Multijet Engine",
               "dealerPrice": "£3,000 – £4,500",
               "specialistPrice": "£1,500 – £2,800",
-              "whatItInvolves": "| Supply & fit rebuilt engine with upgraded turbo oil feed, revised EGR delete option (where legal), bench tested; 12‑month warranty | Best value for high‑mileage cars; eliminates recurring DPF/turbo cycle; includes warranty peace of mind |",
+              "whatItInvolves": "| Supply & fit rebuilt engine with upgraded turbo oil feed, revised EGR delete option (where legal), bench tested; 12‑month warranty | Best value for high‑mileage cars; eliminates recurring DPF/turbo cycle; includes warranty peace of mind",
               "longevity": ""
             }
           ],
@@ -799,24 +799,24 @@
           "rootCause": "High‑pressure common‑rail injectors can develop seal leaks, allowing diesel to dilute the engine oil. Thinned oil reduces lubrication at the crankshaft bearings, leading to scoring, knock, and eventual seizure — especially under load in vans or motorhomes.",
           "repairOptions": [
             {
-              "tier": "| Minor – Injector Seal Replacement + Oil Flush |",
+              "tier": "| Minor – Injector Seal Replacement + Oil Flush",
               "dealerPrice": "£600 – £1,100",
               "specialistPrice": "£350 – £650",
-              "whatItInvolves": "| Replace injector copper seals/washers; full oil and filter change; pressure test | Only viable if done at first sign of fuel smell in oil; prevents bearing damage if caught early |",
+              "whatItInvolves": "| Replace injector copper seals/washers; full oil and filter change; pressure test | Only viable if done at first sign of fuel smell in oil; prevents bearing damage if caught early",
               "longevity": ""
             },
             {
-              "tier": "| Intermediate – Bottom‑End Rebuild (Bearings + Oil Pump) |",
+              "tier": "| Intermediate – Bottom‑End Rebuild (Bearings + Oil Pump)",
               "dealerPrice": "£2,000 – £3,500",
               "specialistPrice": "£1,100 – £2,000",
-              "whatItInvolves": "| Strip sump, replace crank bearings, oil pump, seals; machine crank if needed; reassemble | Addresses bearing wear but leaves high‑pressure fuel system untouched; risk of repeat if injectors not renewed |",
+              "whatItInvolves": "| Strip sump, replace crank bearings, oil pump, seals; machine crank if needed; reassemble | Addresses bearing wear but leaves high‑pressure fuel system untouched; risk of repeat if injectors not renewed",
               "longevity": ""
             },
             {
-              "tier": "| Full Replacement – Rebuilt Multijet Long Block |",
+              "tier": "| Full Replacement – Rebuilt Multijet Long Block",
               "dealerPrice": "£3,200 – £5,000",
               "specialistPrice": "£1,800 – £3,200",
-              "whatItInvolves": "| Supply & fit fully rebuilt engine with upgraded bearings, revised injector seals, bench tested; 12‑month warranty | Most reliable solution for vans used commercially; eliminates both fuel dilution and bearing failure risks |",
+              "whatItInvolves": "| Supply & fit fully rebuilt engine with upgraded bearings, revised injector seals, bench tested; 12‑month warranty | Most reliable solution for vans used commercially; eliminates both fuel dilution and bearing failure risks",
               "longevity": ""
             }
           ],
@@ -832,24 +832,24 @@
           "rootCause": "The timing belt tensioner can wear prematurely, especially if belt changes were delayed. Combined with turbo oil‑feed coking from hard van use, this can cause belt jump or turbo seizure — both leading to catastrophic valve/piston contact.",
           "repairOptions": [
             {
-              "tier": "| Minor – Timing Belt Kit + Turbo Oil Feed Service |",
+              "tier": "| Minor – Timing Belt Kit + Turbo Oil Feed Service",
               "dealerPrice": "£900 – £1,600",
               "specialistPrice": "£500 – £900",
-              "whatItInvolves": "| Replace belt, tensioner, idlers; clean turbo oil feed/return lines; new gaskets | Preventative only; must be done before noise or power loss appears; extends life ~60k miles |",
+              "whatItInvolves": "| Replace belt, tensioner, idlers; clean turbo oil feed/return lines; new gaskets | Preventative only; must be done before noise or power loss appears; extends life ~60k miles",
               "longevity": ""
             },
             {
-              "tier": "| Intermediate – Cylinder Head Repair + Turbo Replacement |",
+              "tier": "| Intermediate – Cylinder Head Repair + Turbo Replacement",
               "dealerPrice": "£2,200 – £3,800",
               "specialistPrice": "£1,200 – £2,100",
-              "whatItInvolves": "| Remove head, replace bent valves, fit reconditioned turbo, reset timing; pressure test | Restores function but doesn't address potential block scoring; suitable only if compression test passes |",
+              "whatItInvolves": "| Remove head, replace bent valves, fit reconditioned turbo, reset timing; pressure test | Restores function but doesn't address potential block scoring; suitable only if compression test passes",
               "longevity": ""
             },
             {
-              "tier": "| Full Replacement – Reconditioned 2.3 Multijet Engine |",
+              "tier": "| Full Replacement – Reconditioned 2.3 Multijet Engine",
               "dealerPrice": "£3,500 – £5,500",
               "specialistPrice": "£2,000 – £3,500",
-              "whatItInvolves": "| Supply & fit fully rebuilt engine with upgraded timing components, revised turbo oiling, bench tested; 12‑month warranty | Best for fleet vans; minimises downtime; includes warranty and upgraded parts to prevent repeat failure |",
+              "whatItInvolves": "| Supply & fit fully rebuilt engine with upgraded timing components, revised turbo oiling, bench tested; 12‑month warranty | Best for fleet vans; minimises downtime; includes warranty and upgraded parts to prevent repeat failure",
               "longevity": ""
             }
           ],
@@ -1174,7 +1174,73 @@
       "tag": "Complete Fiat Engines List",
       "h2": "Fiat Engines by Fuel Type",
       "intro": "Choose your Fiat engine by fuel type to compare realistic replacement prices, known brand‑wide issues, and UK specialist supply – from the most popular diesel workhorses to the latest electrified powertrains.",
-      "items": [],
+      "items": [
+        {
+          "title": "Fiat Diesel Engines",
+          "description": "Fiat diesel engines cover many of the brand's highest-mileage UK models. Replacement demand is usually driven by timing system wear, injector and turbo faults, plus EGR or DPF-related damage once repeat short-journey use starts affecting reliability.",
+          "descriptor": "High-mileage motorway and SUV applications",
+          "families": [
+            "Multijet Diesel Family – Small/Medium",
+            "Multijet Diesel Family – Large/Van",
+            "Legacy JTD/JTDm Diesel Family"
+          ],
+          "foundIn": [
+            "Fiat 500 Engines",
+            "Fiat Argo Engines",
+            "Fiat Mille Engines",
+            "Fiat Mobi Engines"
+          ],
+          "knownFor": [
+            "EGR valve/DPF clogging leading to turbo bearing wear",
+            "injector seal leaks causing oil dilution",
+            "Injector copper seal leaks causing oil dilution",
+            "subsequent crankshaft bearing scoring"
+          ],
+          "typicalModels": [
+            "Fiat 500 Engines",
+            "Fiat Argo Engines",
+            "Fiat Mille Engines",
+            "Fiat Mobi Engines"
+          ],
+          "importantNotes": [
+            "Short-journey use increases DPF, EGR, and oil-dilution risk on many diesel engines.",
+            "A documented service history matters more on diesel replacements because injector, turbo, and timing faults often build gradually."
+          ],
+          "cta": "Compare Fiat diesel engine prices"
+        },
+        {
+          "title": "Fiat Petrol Engines",
+          "description": "Fiat petrol engines span everything from core daily-driver models to higher-output performance variants. Most replacement enquiries start with timing chain noise, oil consumption, cooling-system failure, or internal wear that makes a warranted replacement more sensible than repeated repairs.",
+          "descriptor": "Core passenger-car and performance applications",
+          "families": [
+            "FIRE Petrol Family",
+            "TwinAir & FireFly Turbo Petrol Family"
+          ],
+          "foundIn": [
+            "Fiat 500 Engines",
+            "Fiat Argo Engines",
+            "Fiat Mille Engines",
+            "Fiat Mobi Engines"
+          ],
+          "knownFor": [
+            "Hydraulic timing chain tensioner failure",
+            "excessive oil consumption on early units",
+            "Timing belt neglect causing valve damage",
+            "head gasket failure on high-mileage units"
+          ],
+          "typicalModels": [
+            "Fiat 500 Engines",
+            "Fiat Argo Engines",
+            "Fiat Mille Engines",
+            "Fiat Mobi Engines"
+          ],
+          "importantNotes": [
+            "Cold-start rattles, overheating history, and oil use are the biggest warning signs before a petrol engine replacement becomes necessary.",
+            "Direct-injection petrol engines often need specialist attention for carbon build-up alongside the main mechanical repair."
+          ],
+          "cta": "Compare Fiat petrol engine prices"
+        }
+      ],
       "closing": "Not sure which fuel type your Fiat has? Enter your registration number above to instantly identify your model, engine code, fuel system and compatible replacement options – all backed by a minimum 12‑month unlimited mileage warranty from UK Fiat specialists."
     },
     "engineCodeDirectory": {
@@ -1310,7 +1376,7 @@
             {
               "title": "192 A1.000 1.9L JTD Diesel",
               "image": "/images/brands/fiat/engines/fiat-192-engine.webp",
-              "description": "Found in the Punto, Marea, and early Doblo commercial range from 1999 to 2010, valued for mechanical simplicity. Catastrophic failure most commonly occurs when intake swirl flaps detach and enter the combustion chamber. Specialist replacements feature deleted or reinforced swirl flap assemblies, port-matched intake manifolds, and upgraded turbo oil return lines. These pragmatic rebuilt engines restore reliable operation while permanently removing the flap ingestion risk. Closing line (Block A): Can’t find your engine code listed above? Use our full Fiat engine code directory below — every code from the last 25 years — or enter your registration number for an instant match to the correct replacement engine with warranty.",
+              "description": "Found in the Punto, Marea, and early Doblo commercial range from 1999 to 2010, valued for mechanical simplicity. Catastrophic failure most commonly occurs when intake swirl flaps detach and enter the combustion chamber. Specialist replacements feature deleted or reinforced swirl flap assemblies, port-matched intake manifolds, and upgraded turbo oil return lines. These pragmatic rebuilt engines restore reliable operation while permanently removing the flap ingestion risk.",
               "cta": "Check 192 A1.000 Fiat engine availability"
             }
           ]
@@ -1319,7 +1385,7 @@
       "closing": "Can’t find your engine code listed above? Use our full Fiat engine code directory below — every code from the last 25 years — or enter your registration number for an instant match to the correct replacement engine with warranty.",
       "directory": {
         "h3": "Full Fiat Engine Code Directory (All Years)",
-        "label": "| fiat engine code directory | Block B accordion label + intro |",
+        "label": "| fiat engine code directory | Block B accordion label + intro",
         "intro": "A comprehensive alphabetical listing of every Fiat engine code from the last 25 years. Use the search above or enter your registration for an instant match to your specific engine. All codes link to a quote request.",
         "codes": [
           {
@@ -1763,56 +1829,56 @@
     "faq": {
       "tag": "FAQ",
       "h2": "Fiat Engine Replacement – Frequently Asked Questions",
-      "intro": "Quick, honest answers to the most common questions Fiat owners ask before comparing engine replacement prices and finding a UK specialist.",
+      "intro": "** Quick, honest answers to the most common questions Fiat owners ask before comparing engine replacement prices and finding a UK specialist.",
       "items": [
         {
           "question": "How much does a Fiat engine replacement cost in the UK?",
-          "answer": "A reconditioned Fiat engine typically costs £1,200–£2,500 for small FIRE petrol units (1.2L/1.4L) and £2,000–£4,500 for Multijet diesels like the 2.3L Ducato unit. Supply‑and‑fit labour adds £400–£900 depending on model complexity. Main dealers often charge 30–50% more for like‑for‑like replacements. Always compare multiple specialist quotes to secure the best value. *Keywords: Fiat engine replacement cost, cost of Fiat engine uk, how much is a Fiat engine*",
+          "answer": "A reconditioned Fiat engine typically costs £1,200–£2,500 for small FIRE petrol units (1.2L/1.4L) and £2,000–£4,500 for Multijet diesels like the 2.3L Ducato unit. Supply‑and‑fit labour adds £400–£900 depending on model complexity. Main dealers often charge 30–50% more for like‑for‑like replacements. Always compare multiple specialist quotes to secure the best value.",
           "cta": "Compare Fiat engine replacement prices now"
         },
         {
           "question": "What affects the cost of a Fiat engine replacement?",
-          "answer": "Four key factors drive pricing: engine displacement (1.2L FIRE vs 2.3L Multijet), condition (used vs reconditioned), vehicle complexity (500 vs Ducato), and service type (supply‑only vs supply‑and‑fit). Location matters too—London and South East labour rates can be 20–30% higher. Our comparison tool provides transparent, like‑for‑like quotes from UK specialists so you see exactly what you're paying for. *Keywords: Fiat engine fitting cost uk, Fiat engine supply and fit cost, engine swap cost Fiat, Fiat engine installation cost*",
+          "answer": "Four key factors drive pricing: engine displacement (1.2L FIRE vs 2.3L Multijet), condition (used vs reconditioned), vehicle complexity (500 vs Ducato), and service type (supply‑only vs supply‑and‑fit). Location matters too—London and South East labour rates can be 20–30% higher. Our comparison tool provides transparent, like‑for‑like quotes from UK specialists so you see exactly what you're paying for.",
           "cta": "Get quotes from UK Fiat engine specialists"
         },
         {
           "question": "Is it worth replacing the engine in my Fiat?",
-          "answer": "In most cases, yes—especially if the chassis, gearbox and interior are sound. A reconditioned Fiat engine with upgraded components (e.g., revised timing tensioner on FIRE units) often outlasts the original. For a Fiat 500 or Panda worth £3,000+, replacement is almost always more economical than buying another vehicle. Only consider scrapping if corrosion or major structural damage exists. *Keywords: is it worth replacing engine Fiat, should i rebuild or replace engine, engine rebuild vs replacement uk*",
+          "answer": "In most cases, yes—especially if the chassis, gearbox and interior are sound. A reconditioned Fiat engine with upgraded components (e.g., revised timing tensioner on FIRE units) often outlasts the original. For a Fiat 500 or Panda worth £3,000+, replacement is almost always more economical than buying another vehicle. Only consider scrapping if corrosion or major structural damage exists.",
           "cta": "Find reconditioned Fiat engines with comprehensive warranty cover"
         },
         {
           "question": "What's included in a Fiat engine supply and fit service?",
-          "answer": "Supply‑and‑fit covers sourcing the correct engine code, removing the old unit, installing the replacement with new gaskets/seals, refilling fluids and filters, road‑testing, and disposing of the old engine responsibly. Labour typically adds £400–£900 depending on model accessibility. Most specialists also include a workmanship warranty alongside the engine warranty. Always confirm whether VAT, delivery and collection are included in the quoted price. *Keywords: Fiat engine supply and fit, Fiat engine supply and fit cost*",
+          "answer": "Supply‑and‑fit covers sourcing the correct engine code, removing the old unit, installing the replacement with new gaskets/seals, refilling fluids and filters, road‑testing, and disposing of the old engine responsibly. Labour typically adds £400–£900 depending on model accessibility. Most specialists also include a workmanship warranty alongside the engine warranty. Always confirm whether VAT, delivery and collection are included in the quoted price.",
           "cta": "Compare Fiat engine supply and fit deals"
         },
         {
           "question": "How long does a Fiat engine replacement take?",
-          "answer": "Common models like the Fiat 500, Panda or Punto typically take 3–5 working days from collection to return. More complex vans (Ducato) or vehicles with integrated electronics may require 5–7 days. The biggest variable is engine availability—our network stocks commonly replaced codes like 169 A4.000 and F1AE0481D to minimise delays. Ask suppliers about lead times before confirming your order. *Keywords: how long engine replacement takes uk, engine replacement process uk*",
+          "answer": "Common models like the Fiat 500, Panda or Punto typically take 3–5 working days from collection to return. More complex vans (Ducato) or vehicles with integrated electronics may require 5–7 days. The biggest variable is engine availability—our network stocks commonly replaced codes like 169 A4.000 and F1AE0481D to minimise delays.",
           "cta": "Use our free comparison tool to check supplier lead times"
         },
         {
           "question": "Do reconditioned Fiat engines come with warranty?",
-          "answer": "Yes—every reconditioned Fiat engine supplied through EngineMarket carries a minimum 12‑month unlimited mileage warranty. Many rebuilt units (e.g., upgraded Multijet or FIRE engines) offer optional 24‑month coverage. Warranties typically cover major internals: crankshaft, pistons, timing components and oil pump. Always confirm exact terms, exclusions and claim procedures directly with your chosen supplier before purchase. *Keywords: Fiat engine warranty uk, is reconditioned engine reliable, do engines come with warranty uk*",
+          "answer": "Yes—every reconditioned Fiat engine supplied through EngineMarket carries a minimum 12‑month unlimited mileage warranty. Many rebuilt units (e.g., upgraded Multijet or FIRE engines) offer optional 24‑month coverage. Warranties typically cover major internals: crankshaft, pistons, timing components and oil pump. Always confirm exact terms, exclusions and claim procedures directly with your chosen supplier before purchase.",
           "cta": "Find Fiat engines with 12‑month warranty cover"
         },
         {
           "question": "Should I choose a used or reconditioned Fiat engine?",
-          "answer": "Used Fiat engines (£400–£1,200) suit tight budgets or short‑term ownership, but carry unknown mileage and limited warranty. Reconditioned units (£1,200–£4,500) include new bearings, seals and upgraded parts addressing known failures (e.g., FIRE timing tensioner), plus a 12‑month warranty and 100k+ mile potential. For failure‑prone engines like the 1.3L Multijet, reconditioned with upgrades is the smarter long‑term investment. *Keywords: compare used vs recon Fiat engine, best reconditioned Fiat engines*",
+          "answer": "Used Fiat engines (£400–£1,200) suit tight budgets or short‑term ownership, but carry unknown mileage and limited warranty. Reconditioned units (£1,200–£4,500) include new bearings, seals and upgraded parts addressing known failures (e.g., FIRE timing tensioner), plus a 12‑month warranty and 100k+ mile potential. For failure‑prone engines like the 1.3L Multijet, reconditioned with upgrades is the smarter long‑term investment.",
           "cta": "Compare used and reconditioned Fiat engine options"
         },
         {
           "question": "Where can I find Fiat engine specialists near me?",
-          "answer": "EngineMarket connects you with a UK‑wide network of Fiat‑specialist rebuilders, with notable clusters in the Midlands, North West and South East for commercial van work. Enter your registration and we match you with nearby suppliers who stock your specific engine code (e.g., 552 82 328 for 1.3L Multijet) and offer fitting. Nationwide delivery and collection are available regardless of location. *Keywords: Fiat engine specialists uk, Fiat engine specialist near me, Fiat engine dealers uk*",
+          "answer": "EngineMarket connects you with a UK‑wide network of Fiat‑specialist rebuilders, with notable clusters in the Midlands, North West and South East for commercial van work. Enter your registration and we match you with nearby suppliers who stock your specific engine code (e.g., 552 82 328 for 1.3L Multijet) and offer fitting. Nationwide delivery and collection are available regardless of location.",
           "cta": "Get quotes from Fiat specialists in your area"
         },
         {
           "question": "What are the most common Fiat engine failures?",
-          "answer": "The most frequent catastrophic failures driving replacement are: FIRE petrol timing chain tensioner wear (1.2L/1.4L, 500/Panda), Multijet EGR/DPF clogging causing turbo seizure (1.3L/1.6L), MultiAir hydraulic unit failure (1.4L petrol), injector seal leaks diluting oil (1.6L/2.0L Multijet), and Ducato 2.3L timing belt tensioner wear. Early detection rarely prevents these from becoming terminal, making full replacement the most common outcome. *Keywords: common Fiat engine problems, Fiat engine failure symptoms, why Fiat engines fail*",
+          "answer": "The most frequent catastrophic failures driving replacement are: FIRE petrol timing chain tensioner wear (1.2L/1.4L, 500/Panda), Multijet EGR/DPF clogging causing turbo seizure (1.3L/1.6L), MultiAir hydraulic unit failure (1.4L petrol), injector seal leaks diluting oil (1.6L/2.0L Multijet), and Ducato 2.3L timing belt tensioner wear. Early detection rarely prevents these from becoming terminal, making full replacement the most common outcome.",
           "cta": "Compare rebuilt Fiat engines addressing these failure points"
         },
         {
           "question": "How can I get the best price on a Fiat engine?",
-          "answer": "Compare at least three quotes—prices for the same engine code can vary by £1,000+ across suppliers. Consider used for tight budgets or imminent resale; choose reconditioned with upgrades for long‑term ownership. Ask about supply‑only if you have a trusted garage, and always confirm whether fitting, delivery, VAT and warranty are included in the quoted price. Small checks prevent unexpected costs later. *Keywords: best price Fiat engine, cheap Fiat engines uk, cheapest way to replace engine uk, how to save money on engine replacement*",
+          "answer": "Compare at least three quotes—prices for the same engine code can vary by £1,000+ across suppliers. Consider used for tight budgets or imminent resale; choose reconditioned with upgrades for long‑term ownership. Ask about supply‑only if you have a trusted garage, and always confirm whether fitting, delivery, VAT and warranty are included in the quoted price. Small checks prevent unexpected costs later.",
           "cta": "Use our free tool to compare Fiat engine deals"
         }
       ]

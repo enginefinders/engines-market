@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type ChangeEvent } from "react";
+import { useMemo, useRef, useState } from "react";
 import type { EngineYearsData } from "@/types/brand";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
@@ -10,310 +10,563 @@ type Props = {
   data: EngineYearsData;
 };
 
-function CalendarIcon() {
+function normalizeText(text: string) {
+  return text.replace(/[â€“â€”]/g, "-");
+}
+
+function CalendarIcon({ className = "h-5 w-5" }: { className?: string }) {
   return (
-    <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" aria-hidden="true">
-      <rect x="4" y="5" width="16" height="15" rx="3" stroke="currentColor" strokeWidth="2" />
-      <path d="M8 3v4M16 3v4M4 10h16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+    <svg viewBox="0 0 24 24" className={className} fill="none" aria-hidden="true">
+      <rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" strokeWidth="2" />
+      <line x1="16" y1="2" x2="16" y2="6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      <line x1="8" y1="2" x2="8" y2="6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      <line x1="3" y1="10" x2="21" y2="10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function StarIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-3 w-3" fill="none" aria-hidden="true">
+      <polygon
+        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function TrendIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-3 w-3" fill="none" aria-hidden="true">
+      <polyline
+        points="23 6 13.5 15.5 8.5 10.5 1 18"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <polyline
+        points="17 6 23 6 23 12"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function EngineIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-[14px] w-[14px]" fill="none" aria-hidden="true">
+      <rect x="2" y="7" width="20" height="14" rx="2" stroke="currentColor" strokeWidth="2" />
+      <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" stroke="currentColor" strokeWidth="2" />
+    </svg>
+  );
+}
+
+function CheckIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-[14px] w-[14px] flex-none" fill="none" aria-hidden="true">
+      <polyline
+        points="20 6 9 17 4 12"
+        stroke="currentColor"
+        strokeWidth="2.2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function ListIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-[14px] w-[14px]" fill="none" aria-hidden="true">
+      <line x1="8" y1="6" x2="21" y2="6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      <line x1="8" y1="12" x2="21" y2="12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      <line x1="8" y1="18" x2="21" y2="18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      <line x1="3" y1="6" x2="3.01" y2="6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      <line x1="3" y1="12" x2="3.01" y2="12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      <line x1="3" y1="18" x2="3.01" y2="18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function TagIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-[14px] w-[14px]" fill="none" aria-hidden="true">
+      <path
+        d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <line x1="7" y1="7" x2="7.01" y2="7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function SearchIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-[14px] w-[14px]" fill="none" aria-hidden="true">
+      <circle cx="11" cy="11" r="8" stroke="currentColor" strokeWidth="2" />
+      <line x1="21" y1="21" x2="16.65" y2="16.65" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function ArrowLeftIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" aria-hidden="true">
+      <polyline
+        points="15 18 9 12 15 6"
+        stroke="currentColor"
+        strokeWidth="2.2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function ArrowRightIcon({ className = "h-4 w-4" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} fill="none" aria-hidden="true">
+      <line x1="5" y1="12" x2="19" y2="12" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
+      <polyline
+        points="12 5 19 12 12 19"
+        stroke="currentColor"
+        strokeWidth="2.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 }
 
 function ShieldIcon() {
   return (
-    <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" aria-hidden="true">
-      <path d="M12 3 20 7v5c0 5-3 8-8 10-5-2-8-5-8-10V7l8-4Z" stroke="currentColor" strokeWidth="2" />
-      <path d="m8.5 12 2.2 2.2 4.8-5" stroke="currentColor" strokeWidth="2" />
+    <svg viewBox="0 0 24 24" className="h-[18px] w-[18px]" fill="none" aria-hidden="true">
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" strokeWidth="2" />
+      <polyline points="9 12 11 14 15 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 }
 
-function BoltIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" aria-hidden="true">
-      <path d="M13 2 4 14h7l-1 8 10-13h-7l1-7Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
-    </svg>
-  );
+function topBadges(item: EngineYearsData["years"][number]) {
+  const badges: { label: string; grey?: boolean; icon: "star" | "trend" }[] = [];
+
+  if (item.keyChanges?.length) {
+    badges.push({ label: "Major Engine Changes", icon: "star" });
+  }
+
+  if (item.knownFor?.length || item.mainEngines?.length) {
+    badges.push({ label: item.mainEngines?.length ? `${item.mainEngines.length} engine highlights` : "Model year highlights", grey: true, icon: "trend" });
+  }
+
+  if (!badges.length) {
+    badges.push({ label: "Year overview", icon: "star" });
+  }
+
+  return badges.slice(0, 2);
 }
 
-function TruckIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" aria-hidden="true">
-      <path d="M3 7h11v9H3V7Zm11 3h3l3 3v3h-6v-6Z" stroke="currentColor" strokeWidth="2" />
-      <circle cx="7" cy="17" r="1.5" fill="currentColor" />
-      <circle cx="17" cy="17" r="1.5" fill="currentColor" />
-    </svg>
-  );
+function splitTicker(ticker?: string) {
+  if (!ticker) return [];
+
+  const normalized = normalizeText(ticker);
+  const parts = normalized
+    .split(/[•;|]/)
+    .map((part) => part.trim())
+    .filter(Boolean);
+
+  return parts.length ? parts.slice(0, 4) : [normalized];
 }
 
-function PoundIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" aria-hidden="true">
-      <path d="M15 6a3 3 0 1 0-6 0v11m-2-5h8m-8 4h7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-    </svg>
-  );
-}
-
-function UkFlagIcon() {
-  return (
-    <svg viewBox="0 0 36 24" className="h-5 w-7 rounded-[3px]" aria-hidden="true">
-      <rect width="36" height="24" fill="#012169" />
-      <path d="M0 0 36 24M36 0 0 24" stroke="#fff" strokeWidth="5" />
-      <path d="M0 0 36 24M36 0 0 24" stroke="#C8102E" strokeWidth="3" />
-      <path d="M18 0v24M0 12h36" stroke="#fff" strokeWidth="8" />
-      <path d="M18 0v24M0 12h36" stroke="#C8102E" strokeWidth="4.5" />
-    </svg>
-  );
-}
-
-function ArrowIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" aria-hidden="true">
-      <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-    </svg>
-  );
-}
-
-function scrollToYear(value: string) {
-  if (!value) return;
-
-  const target = document.getElementById(`year-${value.replace(/[^0-9]/g, "-")}`);
-  target?.scrollIntoView({ behavior: "smooth", block: "center" });
+function yearCount(item: EngineYearsData["years"][number]) {
+  return item.mainEngines?.length || item.engineCodesCovered?.length || item.popularModels?.length || 1;
 }
 
 function compactYearCta(year: string, cta: string) {
-  if (cta.toLowerCase().includes("compare")) {
-    return `Compare ${year} engine prices`;
+  const normalized = normalizeText(cta);
+  if (/compare/i.test(normalized)) {
+    return `Compare ${year} ${normalized.replace(/compare/i, "").trim()}`.replace(/\s+/g, " ").trim();
   }
 
-  return `Get quotes for ${year} engines`;
+  return normalized;
+}
+
+function SectionLabel({
+  icon,
+  label,
+}: {
+  icon: React.ReactNode;
+  label: string;
+}) {
+  return (
+    <div className="mb-[10px] flex items-center gap-[7px] text-[10.5px] font-bold uppercase tracking-[0.6px] text-[#0d1b2e]">
+      <span className="text-[#15803d]">{icon}</span>
+      <span>{label}</span>
+    </div>
+  );
+}
+
+function BulletList({
+  items,
+  useCheck = false,
+}: {
+  items: string[];
+  useCheck?: boolean;
+}) {
+  return (
+    <div className="flex flex-col gap-[7px]">
+      {items.map((item, index) => (
+        <div key={`${item}-${index}`} className="flex items-start gap-2 text-[12.2px] leading-[1.6] text-[#374151]">
+          {useCheck ? <span className="mt-[1px] text-[#15803d]"><CheckIcon /></span> : <span className="mt-[5px] h-[7px] w-[7px] flex-none rounded-full bg-[#15803d]" />}
+          <span>{item}</span>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function YearPanel({
+  item,
+  brandName,
+  mobile = false,
+}: {
+  item: EngineYearsData["years"][number];
+  brandName: string;
+  mobile?: boolean;
+}) {
+  const enquiries = splitTicker(item.ticker);
+  const ctaText = compactYearCta(item.year, item.cta);
+
+  return (
+    <>
+      <div className="overflow-hidden rounded-[14px] border border-[#e5e7eb] bg-white shadow-[0_2px_16px_rgba(13,27,46,0.06)] md:rounded-[16px]">
+        <div className="flex items-start gap-[13px] border-b border-[#f1f5f9] px-4 py-4 md:px-6 md:py-5">
+          <div className="flex h-12 w-12 flex-none items-center justify-center rounded-[11px] bg-[#15803d] text-white md:h-[52px] md:w-[52px] md:rounded-[12px]">
+            <CalendarIcon className="h-6 w-6 md:h-[26px] md:w-[26px]" />
+          </div>
+          <div className="min-w-0 flex-1">
+            <div className="font-['Manrope'] text-[17px] font-extrabold leading-[1.25] text-[#0d1b2e] md:text-[20px]">
+              {item.year} - {item.preview}
+            </div>
+            <div className="mt-2 flex flex-wrap gap-[6px] md:gap-2">
+              {topBadges(item).map((badge) => (
+                <span
+                  key={badge.label}
+                  className={`inline-flex items-center gap-[5px] rounded-full text-[10.5px] font-semibold ${
+                    badge.grey
+                      ? "text-[#6b7280]"
+                      : "text-[#15803d]"
+                  }`}
+                >
+                  {badge.icon === "star" ? <StarIcon /> : <TrendIcon />}
+                  <span>{badge.label}</span>
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="border-b border-[#f1f5f9] px-4 py-[14px] text-[12.8px] leading-[1.75] text-[#374151] md:px-6 md:py-4 md:text-[13.5px]">
+          {item.description}
+        </div>
+
+        {mobile ? (
+          <>
+            {item.keyChanges?.length ? (
+              <div className="border-b border-[#f1f5f9] px-4 py-3">
+                <SectionLabel icon={<CalendarIcon className="h-[14px] w-[14px]" />} label="Key Changes" />
+                <BulletList items={item.keyChanges} />
+              </div>
+            ) : null}
+
+            {item.knownFor?.length ? (
+              <div className="border-b border-[#f1f5f9] px-4 py-3">
+                <SectionLabel icon={<CheckIcon />} label="Known For" />
+                <BulletList items={item.knownFor} useCheck />
+              </div>
+            ) : null}
+
+            {(item.mainEngines?.length || item.engineCodesCovered?.length) ? (
+              <div className="grid grid-cols-2 border-b border-[#f1f5f9]">
+                <div className="border-r border-[#f1f5f9] px-[14px] py-3">
+                  <SectionLabel icon={<EngineIcon />} label="Main Engines" />
+                  <BulletList items={item.mainEngines ?? []} />
+                </div>
+                <div className="px-[14px] py-3">
+                  <SectionLabel icon={<TagIcon />} label="Engine Codes Covered" />
+                  <div className="mt-1 flex flex-wrap gap-[6px]">
+                    {(item.engineCodesCovered ?? []).map((code, index) => (
+                      <span key={`${code}-${index}`} className="rounded-[7px] border border-[#bbf7d0] bg-[#f0fdf4] px-[10px] py-[5px] text-[11.5px] font-bold text-[#15803d]">
+                        {code}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ) : null}
+
+            {(item.popularModels?.length || enquiries.length) ? (
+              <div className="grid grid-cols-2">
+                <div className="border-r border-[#f1f5f9] px-[14px] py-3">
+                  <SectionLabel icon={<ListIcon />} label="Popular Models" />
+                  <div className="flex flex-col gap-0">
+                    {(item.popularModels ?? []).map((model, index) => (
+                      <div key={`${model}-${index}`} className="flex items-center justify-between border-b border-[#f8f9fa] py-[6px] text-[12px] text-[#374151] last:border-b-0">
+                        <span>{model}</span>
+                        <span className="text-[#15803d]">
+                          <ArrowRightIcon className="h-3 w-3" />
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div className="px-[14px] py-3">
+                  <SectionLabel icon={<SearchIcon />} label="Common Replacement Enquiries" />
+                  <BulletList items={enquiries} />
+                </div>
+              </div>
+            ) : null}
+          </>
+        ) : (
+          <>
+            <div className="grid border-b border-[#f1f5f9] md:grid-cols-4">
+              {item.keyChanges?.length ? (
+                <div className="border-r border-[#f1f5f9] px-5 py-[18px] last:border-r-0">
+                  <SectionLabel icon={<CalendarIcon className="h-[14px] w-[14px]" />} label="Key Changes" />
+                  <BulletList items={item.keyChanges} />
+                </div>
+              ) : <div className="border-r border-[#f1f5f9] px-5 py-[18px]" />}
+
+              {item.knownFor?.length ? (
+                <div className="border-r border-[#f1f5f9] px-5 py-[18px] last:border-r-0">
+                  <SectionLabel icon={<CheckIcon />} label="Known For" />
+                  <BulletList items={item.knownFor} useCheck />
+                </div>
+              ) : <div className="border-r border-[#f1f5f9] px-5 py-[18px]" />}
+
+              {item.mainEngines?.length ? (
+                <div className="border-r border-[#f1f5f9] px-5 py-[18px] last:border-r-0">
+                  <SectionLabel icon={<EngineIcon />} label="Main Engines" />
+                  <BulletList items={item.mainEngines} />
+                </div>
+              ) : <div className="border-r border-[#f1f5f9] px-5 py-[18px]" />}
+
+              {item.popularModels?.length ? (
+                <div className="px-5 py-[18px]">
+                  <SectionLabel icon={<ListIcon />} label="Popular Models" />
+                  <div className="flex flex-col gap-0">
+                    {item.popularModels.map((model, index) => (
+                      <div key={`${model}-${index}`} className="flex items-center justify-between border-b border-[#f1f5f9] py-2 text-[12.5px] text-[#374151] last:border-b-0">
+                        <span className="font-semibold text-[#0d1b2e]">{model}</span>
+                        <span className="text-[#15803d]">
+                          <ArrowRightIcon className="h-[13px] w-[13px]" />
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ) : <div className="px-5 py-[18px]" />}
+            </div>
+
+            {(item.engineCodesCovered?.length || enquiries.length) ? (
+              <div className="grid md:grid-cols-2">
+                <div className="border-r border-[#f1f5f9] px-5 py-[18px]">
+                  <SectionLabel icon={<TagIcon />} label="Engine Codes Covered" />
+                  <div className="mt-1 flex flex-wrap gap-[7px]">
+                    {(item.engineCodesCovered ?? []).map((code, index) => (
+                      <span key={`${code}-${index}`} className="rounded-[7px] border border-[#bbf7d0] bg-[#f0fdf4] px-[11px] py-[5px] text-[12px] font-bold text-[#15803d]">
+                        {code}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="px-5 py-[18px]">
+                  <SectionLabel icon={<SearchIcon />} label="Common Replacement Enquiries" />
+                  <div className="grid gap-[6px] md:grid-cols-2 md:gap-x-4">
+                    {enquiries.map((entry, index) => (
+                      <div key={`${entry}-${index}`} className="flex items-start gap-[6px] text-[12.2px] leading-[1.55] text-[#374151]">
+                        <span className="mt-[5px] h-[6px] w-[6px] flex-none rounded-full bg-[#15803d]" />
+                        <span>{entry}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ) : null}
+          </>
+        )}
+      </div>
+
+      <a
+        href="#quote-form"
+        data-quote-context={`${item.year} ${brandName} engines`}
+        data-quote-source="engine-years"
+        className="mt-[14px] flex items-center gap-[13px] rounded-[14px] bg-[#0d1b2e] px-[18px] py-[15px] transition hover:bg-[#1e3a5f] md:mt-0 md:rounded-none md:px-7 md:py-[18px]"
+      >
+        <div className="flex h-[42px] w-[42px] flex-none items-center justify-center rounded-[10px] bg-[#15803d] text-white md:h-[44px] md:w-[44px] md:rounded-[11px]">
+          <CalendarIcon className="h-[22px] w-[22px]" />
+        </div>
+        <div className="min-w-0 flex-1">
+          <div className="font-['Manrope'] text-[14.5px] font-extrabold leading-[1.25] text-white md:text-[15px]">
+            {mobile ? ctaText : `${ctaText} from UK specialists`}
+          </div>
+        </div>
+        <div className="flex h-9 w-9 flex-none items-center justify-center rounded-[8px] bg-[#15803d] text-white md:h-10 md:w-10 md:rounded-[9px]">
+          <ArrowRightIcon />
+        </div>
+      </a>
+    </>
+  );
 }
 
 export default function EngineYearsSection({ brandName, data }: Props) {
-  const [registration, setRegistration] = useState("");
-  const midpoint = Math.ceil(data.years.length / 2);
-  const yearColumns = [data.years.slice(0, midpoint), data.years.slice(midpoint)];
+  const [activeIndex, setActiveIndex] = useState(0);
+  const desktopStripRef = useRef<HTMLDivElement>(null);
+  const activeYear = useMemo(() => data.years[activeIndex] ?? data.years[0], [activeIndex, data.years]);
+
+  const shiftYears = (direction: number) => {
+    desktopStripRef.current?.scrollBy({ left: direction * 240, behavior: "smooth" });
+  };
 
   return (
-    <Section className="bg-[#fcfdff]">
-      <Container className="max-w-[1300px]">
-        <div className="grid gap-5 lg:grid-cols-[1.08fr_0.92fr] lg:items-end">
-          <div className="max-w-3xl">
-            <p className="text-label text-green-700">{data.tag}</p>
-            <h2 className="mt-2 text-[#0a2952]">{data.h2}</h2>
-            <p className="text-body mt-2.5 text-slate-600">{data.intro}</p>
-          </div>
+    <Section className="bg-[#f8f9fa]">
+      <Container className="max-w-[1200px]">
+        <div className="mb-[14px] inline-flex items-center gap-[7px] rounded-full border border-[#bbf7d0] bg-[#f0fdf4] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.07em] text-[#15803d] md:px-[13px] md:py-[5px] md:text-[11px] md:tracking-[0.7px]">
+          <CalendarIcon className="h-[13px] w-[13px]" />
+          <span>{data.tag}</span>
+        </div>
 
-          <div className="relative min-h-[180px] overflow-visible">
-            <div className="absolute inset-0 rounded-[26px] bg-[linear-gradient(135deg,rgba(238,249,241,0.7)_0%,rgba(255,255,255,0.92)_46%,rgba(226,244,235,0.92)_100%)]" />
-            <div className="absolute right-0 top-0 h-full w-[56%] rounded-[26px] bg-[linear-gradient(145deg,rgba(210,240,222,0.92)_0%,rgba(233,248,239,0.75)_52%,rgba(255,255,255,0.35)_100%)]" />
+        <h2 className="font-['Manrope'] text-[28px] font-extrabold leading-[1.12] tracking-[-0.6px] text-[#0d1b2e] md:text-[38px] md:tracking-[-0.8px]">
+          {data.h2}
+        </h2>
+        <p className="mb-[22px] mt-[14px] max-w-[880px] text-[12.8px] leading-[1.75] text-[#4b5563] md:mb-8 md:text-[14px]">
+          {data.intro}
+        </p>
 
-            <div className="relative flex min-h-[180px] items-center justify-end px-4 py-3 sm:px-5">
-              <div className="w-full max-w-[302px] rounded-[18px] bg-[#0b2850] px-5 py-4 text-white shadow-[0_14px_30px_rgba(7,25,54,0.2)]">
-                <p className="text-label text-green-300">{data.jumpLabel}</p>
+        <div className="hidden md:flex md:items-center md:gap-2 md:pb-1 md:pr-1">
+          <button
+            type="button"
+            onClick={() => shiftYears(-1)}
+            className="flex h-16 w-9 flex-none items-center justify-center rounded-[10px] border-[1.5px] border-[#e5e7eb] bg-white text-[#0d1b2e] transition hover:border-[#15803d] hover:text-[#15803d]"
+          >
+            <ArrowLeftIcon />
+          </button>
 
-                <div className="mt-3 rounded-[14px] border border-white/10 bg-[#102f5f] px-4 py-3">
-                  <label htmlFor="year-jump-select" className="sr-only">
-                    Select a year
-                  </label>
-                  <select
-                    id="year-jump-select"
-                    defaultValue=""
-                    onChange={(event: ChangeEvent<HTMLSelectElement>) => scrollToYear(event.target.value)}
-                    className="w-full bg-transparent text-[0.95rem] font-semibold text-white outline-none"
-                  >
-                    <option value="" disabled className="text-slate-900">
-                      Select a year...
-                    </option>
-                    {data.years.map((item) => (
-                      <option key={item.year} value={item.year} className="text-slate-900">
-                        {item.year}
-                      </option>
-                    ))}
-                  </select>
+          <div
+            ref={desktopStripRef}
+            className="flex flex-1 items-center gap-2 overflow-x-auto pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          >
+            {data.years.map((item, index) => (
+              <button
+                key={item.year}
+                type="button"
+                onClick={() => setActiveIndex(index)}
+                className={`flex w-[120px] flex-none flex-col items-center gap-[6px] rounded-[12px] border bg-white px-[10px] py-3 text-center transition ${
+                  activeIndex === index
+                    ? "border-2 border-[#15803d]"
+                    : "border-[1.5px] border-[#e5e7eb] hover:border-[#15803d]"
+                }`}
+              >
+                <div className={`text-[#6b7280] ${activeIndex === index ? "text-[#15803d]" : ""}`}>
+                  <CalendarIcon className="h-[22px] w-[22px]" />
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-5 grid gap-4 lg:grid-cols-2">
-          {yearColumns.map((column, columnIndex) => (
-            <div key={`column-${columnIndex}`} className="relative space-y-3 pl-4">
-              <div className="absolute bottom-2 left-0 top-2 w-px bg-[#d6ebe0]" />
-
-              {column.map((item) => (
-                <article
-                  id={`year-${item.year.replace(/[^0-9]/g, "-")}`}
-                  key={item.year}
-                  className="relative surface-card overflow-hidden"
-                >
-                  <span className="absolute left-[-1.05rem] top-1/2 h-3 w-3 -translate-y-1/2 rounded-full border-2 border-[#d6ebe0] bg-white" />
-
-                  <div className="grid gap-0 md:grid-cols-[108px_minmax(0,1fr)_154px]">
-                    <div className="flex min-h-full items-center justify-center bg-[#102e72] px-3 py-4 text-white">
-                      <div className="flex items-center gap-2">
-                        <CalendarIcon />
-                        <span className="text-[1.15rem] font-black leading-none">{item.year}</span>
-                      </div>
-                    </div>
-
-                    <div className="px-4 py-3.5">
-                      <p className="text-[0.86rem] font-semibold leading-6 text-slate-700">{item.preview}</p>
-                      <p className="mt-2 text-[0.78rem] leading-5 text-slate-600">{item.description}</p>
-
-                      {(item.keyChanges?.length ||
-                        item.mainEngines?.length ||
-                        item.popularModels?.length ||
-                        item.knownFor?.length ||
-                        item.engineCodesCovered?.length ||
-                        item.ticker) && (
-                        <div className="mt-3 grid gap-2 sm:grid-cols-2">
-                          {item.keyChanges?.length ? (
-                            <div className="rounded-xl bg-slate-50 px-3 py-2.5">
-                              <p className="text-tiny font-black uppercase tracking-[0.12em] text-slate-500">Key changes</p>
-                              <ul className="mt-1.5 list-disc space-y-1 pl-4 text-small font-semibold text-slate-700">
-                                {item.keyChanges.slice(0, 4).map((point, index) => (
-                                  <li key={`${point}-${index}`}>{point}</li>
-                                ))}
-                              </ul>
-                            </div>
-                          ) : null}
-
-                          {item.mainEngines?.length ? (
-                            <div className="rounded-xl bg-slate-50 px-3 py-2.5">
-                              <p className="text-tiny font-black uppercase tracking-[0.12em] text-slate-500">Main engines</p>
-                              <ul className="mt-1.5 list-disc space-y-1 pl-4 text-small font-semibold text-slate-700">
-                                {item.mainEngines.slice(0, 4).map((point, index) => (
-                                  <li key={`${point}-${index}`}>{point}</li>
-                                ))}
-                              </ul>
-                            </div>
-                          ) : null}
-
-                          {item.popularModels?.length ? (
-                            <div className="rounded-xl bg-white ring-1 ring-slate-200 px-3 py-2.5">
-                              <p className="text-tiny font-black uppercase tracking-[0.12em] text-slate-500">Popular models</p>
-                              <ul className="mt-1.5 list-disc space-y-1 pl-4 text-small font-semibold text-slate-700">
-                                {item.popularModels.map((point, index) => (
-                                  <li key={`${point}-${index}`}>{point}</li>
-                                ))}
-                              </ul>
-                            </div>
-                          ) : null}
-
-                          {item.engineCodesCovered?.length ? (
-                            <div className="rounded-xl bg-white ring-1 ring-slate-200 px-3 py-2.5">
-                              <p className="text-tiny font-black uppercase tracking-[0.12em] text-slate-500">Engine codes covered</p>
-                              <div className="mt-1.5 flex flex-wrap gap-1.5">
-                                {item.engineCodesCovered.map((code, index) => (
-                                  <span key={`${code}-${index}`} className="summary-badge">
-                                    {code}
-                                  </span>
-                                ))}
-                              </div>
-                            </div>
-                          ) : null}
-
-                          {item.knownFor?.length ? (
-                            <div className="rounded-xl bg-green-50 px-3 py-2.5 sm:col-span-2">
-                              <p className="text-tiny font-black uppercase tracking-[0.12em] text-green-700">Known for</p>
-                              <ul className="mt-1.5 list-disc space-y-1 pl-4 text-small font-semibold text-green-900">
-                                {item.knownFor.slice(0, 4).map((point, index) => (
-                                  <li key={`${point}-${index}`}>{point}</li>
-                                ))}
-                              </ul>
-                            </div>
-                          ) : null}
-
-                          {item.ticker ? (
-                            <div className="rounded-xl bg-[#f2f7ff] px-3 py-2.5 sm:col-span-2">
-                              <p className="text-tiny font-black uppercase tracking-[0.12em] text-[#0a2952]">Common replacement enquiries</p>
-                              <p className="mt-1 text-small font-semibold text-[#35506b]">{item.ticker}</p>
-                            </div>
-                          ) : null}
-                        </div>
-                      )}
-                    </div>
-
-                    <div className="flex items-center px-4 pb-3.5 md:justify-end md:pb-0 md:pl-0">
-                      <a
-                        href="#quote-form"
-                        data-quote-context={`${item.year} ${brandName} engines`}
-                        data-quote-source="engine-years"
-                        className="inline-flex items-center gap-2 text-[0.84rem] font-bold leading-5 text-green-700"
-                      >
-                        {compactYearCta(item.year, item.cta)}
-                        <ArrowIcon />
-                      </a>
-                    </div>
-                  </div>
-                </article>
-              ))}
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-5 overflow-hidden rounded-[22px] border border-[#0e3164] bg-[#071c47] text-white shadow-[0_16px_34px_rgba(7,25,54,0.16)]">
-          <div className="grid gap-3 px-4 py-3 lg:grid-cols-[1.02fr_1.08fr_0.85fr] lg:items-center">
-            <div className="flex items-start gap-3">
-              <div className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/10 text-green-300">
-                <CalendarIcon />
-              </div>
-              <div className="max-w-[330px]">
-                <p className="text-sm font-semibold text-white">Not sure which year your {brandName} was built?</p>
-                <p className="mt-1.5 text-[0.74rem] leading-5 text-slate-200">{data.closing}</p>
-              </div>
-            </div>
-
-            <div className="overflow-hidden rounded-[16px] border border-white/10 bg-white shadow-[0_12px_28px_rgba(7,25,54,0.12)]">
-              <div className="grid sm:grid-cols-[88px_minmax(0,1fr)_150px]">
-                <div className="flex items-center justify-center gap-2 border-b border-slate-200 px-3 py-2 text-[0.76rem] font-bold text-[#0b2850] sm:border-b-0 sm:border-r">
-                  <UkFlagIcon />
-                  <span>UK</span>
+                <div className={`font-['Manrope'] text-[14px] font-extrabold leading-[1.15] ${activeIndex === index ? "text-[#15803d]" : "text-[#0d1b2e]"}`}>
+                  {item.year}
                 </div>
-                <input
-                  type="text"
-                  value={registration}
-                  onChange={(event) => setRegistration(event.target.value.toUpperCase())}
-                  placeholder="Enter your registration number"
-                  className="min-w-0 border-b border-slate-200 px-4 py-2 text-[0.8rem] font-semibold text-[#0b2850] outline-none placeholder:text-slate-400 sm:border-b-0 sm:border-r"
-                />
-                <a href="#quote-form" data-quote-context={`${brandName} engine year finder`} data-quote-source="engine-years-summary" className="button-primary min-h-full rounded-none px-4 py-2 text-[0.76rem] shadow-none">
-                  Find My Engine
-                </a>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-3 lg:justify-end">
-              <div className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/10 text-green-300">
-                <ShieldIcon />
-              </div>
-              <p className="max-w-[220px] text-[0.74rem] leading-5 text-slate-200">
-                All engines supplied with a minimum 12-month warranty from UK {brandName} specialists.
-              </p>
-            </div>
+                <div className={`text-[11px] ${activeIndex === index ? "text-[#15803d]" : "text-[#9ca3af]"}`}>
+                  {yearCount(item)} engines
+                </div>
+                <div className={`h-[3px] w-10 rounded-[2px] ${activeIndex === index ? "bg-[#15803d]" : "bg-transparent"}`} />
+              </button>
+            ))}
           </div>
+
+          <button
+            type="button"
+            onClick={() => shiftYears(1)}
+            className="flex h-16 w-9 flex-none items-center justify-center rounded-[10px] border-[1.5px] border-[#e5e7eb] bg-white text-[#0d1b2e] transition hover:border-[#15803d] hover:text-[#15803d]"
+          >
+            <ArrowRightIcon />
+          </button>
         </div>
 
-        <div className="mt-4 grid gap-3 rounded-[22px] border border-slate-200 bg-white px-4 py-4 md:grid-cols-2 xl:grid-cols-5">
-          {[
-            { icon: BoltIcon, title: "Instant Quotes", subtitle: "From UK specialists" },
-            { icon: ShieldIcon, title: "No Obligation", subtitle: "100% free to use" },
-            { icon: TruckIcon, title: "Nationwide Delivery", subtitle: "Fast & secure" },
-            { icon: CalendarIcon, title: "Trusted UK Suppliers", subtitle: "Quality engines, guaranteed" },
-            { icon: PoundIcon, title: "Competitive Prices", subtitle: "Save hundreds" },
-          ].map((item) => (
-            <div key={item.title} className="flex items-start gap-3 rounded-2xl px-2 py-1.5">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-green-50 text-green-700">
-                <item.icon />
+        <div className="mb-[18px] flex items-center gap-[6px] overflow-x-auto rounded-[14px] bg-[#0d1b2e] p-[10px] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:hidden">
+          {data.years.map((item, index) => (
+            <button
+              key={item.year}
+              type="button"
+              onClick={() => setActiveIndex(index)}
+              className={`min-w-[90px] flex-none rounded-[10px] border px-[14px] py-[9px] text-left transition ${
+                activeIndex === index
+                  ? "border-[#15803d] bg-[#15803d]"
+                  : "border-[#334155] bg-transparent"
+              }`}
+            >
+              <div className="font-['Manrope'] text-[13px] font-extrabold leading-[1.15] text-white">{item.year}</div>
+              <div className={`mt-[2px] text-[10px] ${activeIndex === index ? "text-[#d1fae5]" : "text-[#94a3b8]"}`}>
+                {yearCount(item)} engines
               </div>
-              <div>
-                <p className="text-[0.82rem] font-black uppercase tracking-[0.04em] text-[#0a2952]">{item.title}</p>
-                <p className="text-small mt-1 text-slate-600">{item.subtitle}</p>
-              </div>
-            </div>
+            </button>
           ))}
+          <button
+            type="button"
+            onClick={() => desktopStripRef.current?.scrollTo({ left: desktopStripRef.current.scrollWidth, behavior: "smooth" })}
+            className="ml-auto flex h-9 w-9 flex-none items-center justify-center rounded-[10px] border border-[#334155] text-[#94a3b8]"
+          >
+            <ArrowRightIcon className="h-4 w-4 rotate-90" />
+          </button>
+        </div>
+
+        {activeYear ? (
+          <>
+            <div className="hidden md:block">
+              <YearPanel item={activeYear} brandName={brandName} />
+            </div>
+
+            <div className="md:hidden">
+              <YearPanel item={activeYear} brandName={brandName} mobile />
+            </div>
+          </>
+        ) : null}
+
+        <div className="mt-3 hidden items-start justify-between gap-[14px] rounded-[14px] border border-[#e5e7eb] bg-white px-[22px] py-4 md:flex">
+          <div className="flex items-start gap-[14px]">
+            <div className="flex h-[38px] w-[38px] flex-none items-center justify-center rounded-[10px] bg-[#f0fdf4] text-[#15803d]">
+              <ShieldIcon />
+            </div>
+            <p className="max-w-[760px] text-[13px] leading-[1.65] text-[#4b5563]">
+              <strong className="font-bold text-[#0d1b2e]">Not sure which year your {brandName} was built?</strong> {data.closing}
+            </p>
+          </div>
+          <a
+            href="#quote-form"
+            data-quote-context={`${brandName} engine year finder`}
+            data-quote-source="engine-years-summary"
+            className="flex flex-none items-center gap-2 rounded-[9px] bg-[#0d1b2e] px-[18px] py-[10px] font-['Manrope'] text-[13px] font-bold text-white transition hover:bg-[#1e3a5f]"
+          >
+            <span>Find My Engine</span>
+            <ArrowRightIcon className="h-[14px] w-[14px]" />
+          </a>
+        </div>
+
+        <div className="mt-3 flex items-start gap-3 rounded-[14px] border border-[#e5e7eb] bg-white px-4 py-[14px] md:hidden">
+          <div className="flex h-9 w-9 flex-none items-center justify-center rounded-[9px] bg-[#f0fdf4] text-[#15803d]">
+            <ShieldIcon />
+          </div>
+          <p className="text-[12.2px] leading-[1.65] text-[#4b5563]">
+            <strong className="font-semibold text-[#15803d]">Not sure which year your {brandName} was built?</strong> {data.closing}
+          </p>
         </div>
       </Container>
     </Section>

@@ -37,7 +37,7 @@
         "subtitle": "Enter your registration number to get started.",
         "inputPlaceholder": "Registration Number",
         "buttonText": "Get Free Engine Quotes",
-        "note": ""
+        "note": "Secure enquiry — no spam, no pressure. Genuine quotes only from vetted UK Peugeot specialists."
       }
     },
     "howItWorks": {
@@ -481,7 +481,7 @@
         {
           "name": "PureTech Petrol (EB Family) — 2012–Present",
           "era": "All years",
-          "failureNote": "for each row Common failure points (expandable note): The EB2 PureTech engine is known for wet belt degradation causing oil starvation and catastrophic failure. Our rebuilt units include upgraded timing belts and revised oil pump components to prevent recurrence.",
+          "failureNote": "for each row Common failure points: The EB2 PureTech engine is known for wet belt degradation causing oil starvation and catastrophic failure. Our rebuilt units include upgraded timing belts and revised oil pump components to prevent recurrence.",
           "engines": [
             {
               "code": "EB0",
@@ -506,7 +506,7 @@
         {
           "name": "Prince / THP Petrol (EP Family) — 2006–2019",
           "era": "All years",
-          "failureNote": "for each row Common failure points (expandable note): The EP6 (Prince/THP) engines suffer from timing chain stretch, high-pressure fuel pump failure, and carbon build-up on direct injection valves. Our rebuilt units include upgraded timing chain kits and full decarbonisation.",
+          "failureNote": "for each row Common failure points: The EP6 (Prince/THP) engines suffer from timing chain stretch, high-pressure fuel pump failure, and carbon build-up on direct injection valves. Our rebuilt units include upgraded timing chain kits and full decarbonisation.",
           "engines": [
             {
               "code": "EP6C",
@@ -549,7 +549,7 @@
         {
           "name": "HDi Diesel (DW10/DW12) — 1998–2019",
           "era": "All years",
-          "failureNote": "for each row Common failure points (expandable note): The HDi family is known for injector failure, DPF clogging, and turbocharger issues on higher-mileage units. Our rebuilt engines come with fully serviced injectors and new turbocharger where required.",
+          "failureNote": "for each row Common failure points: The HDi family is known for injector failure, DPF clogging, and turbocharger issues on higher-mileage units. Our rebuilt engines come with fully serviced injectors and new turbocharger where required.",
           "engines": [
             {
               "code": "DW10ATED4",
@@ -583,7 +583,7 @@
         {
           "name": "BlueHDi Diesel (DV5/DV6) — 2013–Present",
           "era": "All years",
-          "failureNote": "for each row Common failure points (expandable note): The BlueHDi family suffers from AdBlue system crystallisation, EGR valve blockage, and injector seal failures. Our rebuilt engines include revised AdBlue components and full DPF/EGR refurbishment.",
+          "failureNote": "for each row Common failure points: The BlueHDi family suffers from AdBlue system crystallisation, EGR valve blockage, and injector seal failures. Our rebuilt engines include revised AdBlue components and full DPF/EGR refurbishment.",
           "engines": [
             {
               "code": "DV6C / DV6FD",
@@ -626,7 +626,7 @@
         {
           "name": "Commercial / Van Engines (Boxer, Expert, Partner) — 2006–Present",
           "era": "All years",
-          "failureNote": "for each row Common failure points (expandable note): Commercial van engines often fail due to injector wear, turbo failure, and DPF saturation from high mileage stop-start duty. Our rebuilt units include balanced injectors and uprated turbocharger components.",
+          "failureNote": "for each row Common failure points: Commercial van engines often fail due to injector wear, turbo failure, and DPF saturation from high mileage stop-start duty. Our rebuilt units include balanced injectors and uprated turbocharger components.",
           "engines": [
             {
               "code": "4HU",
@@ -669,7 +669,7 @@
         {
           "name": "Classic / Retro Engines (TU, XU, 1.9D) — 1983–2005",
           "era": "All years",
-          "failureNote": "for each row Common failure points (expandable note): Classic TU/XU engines are robust but suffer from head gasket failure and camshaft wear at higher mileage. Our rebuilt units are blueprinted with upgraded gaskets and fully balanced bottom ends. Not sure which engine code your Peugeot uses? Enter your registration number and we'll match you to the exact engine and best quote — instantly. All engines supplied with a minimum 12-month warranty from UK Peugeot specialists.",
+          "failureNote": "for each row Common failure points: Classic TU/XU engines are robust but suffer from head gasket failure and camshaft wear at higher mileage. Our rebuilt units are blueprinted with upgraded gaskets and fully balanced bottom ends.",
           "engines": [
             {
               "code": "TU3JP / TU5JP4",
@@ -1394,7 +1394,75 @@
       "tag": "Complete Peugeot Engines List",
       "h2": "Peugeot Engines by Fuel Type",
       "intro": "Choose your Peugeot engine by fuel type to compare realistic replacement prices, known brand-wide issues, and UK specialist supply – from the most popular diesel workhorses to the latest electrified powertrains.",
-      "items": [],
+      "items": [
+        {
+          "title": "Peugeot Diesel Engines",
+          "description": "Peugeot diesel engines cover many of the brand's highest-mileage UK models. Replacement demand is usually driven by timing system wear, injector and turbo faults, plus EGR or DPF-related damage once repeat short-journey use starts affecting reliability.",
+          "descriptor": "High-mileage motorway and SUV applications",
+          "families": [
+            "HDi Diesel (DW10/DW12) — 1998–2019",
+            "BlueHDi Diesel (DV5/DV6) — 2013–Present",
+            "Commercial / Van Engines (Boxer, Expert, Partner) — 2006–Present",
+            "Classic / Retro Engines (TU, XU, 1.9D) — 1983–2005"
+          ],
+          "foundIn": [
+            "Peugeot 106 Engines",
+            "Peugeot 205 Engines",
+            "Peugeot 206 Engines",
+            "Peugeot 207 Engines"
+          ],
+          "knownFor": [
+            "Turbocharger coking",
+            "EGR valve blockage",
+            "injector seal leaks",
+            "7mm timing chain failure (recall MXL)"
+          ],
+          "typicalModels": [
+            "Peugeot 106 Engines",
+            "Peugeot 205 Engines",
+            "Peugeot 206 Engines",
+            "Peugeot 207 Engines"
+          ],
+          "importantNotes": [
+            "Short-journey use increases DPF, EGR, and oil-dilution risk on many diesel engines.",
+            "A documented service history matters more on diesel replacements because injector, turbo, and timing faults often build gradually."
+          ],
+          "cta": "Compare Peugeot diesel engine prices"
+        },
+        {
+          "title": "Peugeot Petrol Engines",
+          "description": "Peugeot petrol engines span everything from core daily-driver models to higher-output performance variants. Most replacement enquiries start with timing chain noise, oil consumption, cooling-system failure, or internal wear that makes a warranted replacement more sensible than repeated repairs.",
+          "descriptor": "Core passenger-car and performance applications",
+          "families": [
+            "PureTech Petrol (EB Family) — 2012–Present",
+            "Prince / THP Petrol (EP Family) — 2006–2019",
+            "Classic / Retro Engines (TU, XU, 1.9D) — 1983–2005"
+          ],
+          "foundIn": [
+            "Peugeot 106 Engines",
+            "Peugeot 205 Engines",
+            "Peugeot 206 Engines",
+            "Peugeot 207 Engines"
+          ],
+          "knownFor": [
+            "EB0: wet belt degradation",
+            "TU9: carburettor issues",
+            "head gasket failure",
+            "Head gasket failure"
+          ],
+          "typicalModels": [
+            "Peugeot 106 Engines",
+            "Peugeot 205 Engines",
+            "Peugeot 206 Engines",
+            "Peugeot 207 Engines"
+          ],
+          "importantNotes": [
+            "Cold-start rattles, overheating history, and oil use are the biggest warning signs before a petrol engine replacement becomes necessary.",
+            "Direct-injection petrol engines often need specialist attention for carbon build-up alongside the main mechanical repair."
+          ],
+          "cta": "Compare Peugeot petrol engine prices"
+        }
+      ],
       "closing": "Not sure which fuel type your Peugeot has? Enter your registration number above to instantly identify your model, engine code, fuel system and compatible replacement options – all backed by a minimum 12‑month unlimited mileage warranty from UK Peugeot specialists."
     },
     "engineCodeDirectory": {
@@ -1512,7 +1580,7 @@
             {
               "title": "XUD9 1.9L Diesel",
               "image": "/images/brands/peugeot/engines/peugeot-xud9-engine.webp",
-              "description": "Engine Fitted to the 205, 306, 405, Partner and Expert from 1988 to 2002 (70–92 HP). This indirect injection unit is generally robust, but head gasket failure (coolant loss) and injector pump seal leaks drive most replacement demand. Rebuilt units include a new head gasket, refurbished injector pump, and fully serviced injectors. Closing line (Block A): Can’t find your engine code listed above? Use our full Peugeot engine code directory below — every code from the last 40 years — or enter your registration number for an instant match to the correct replacement engine with warranty.",
+              "description": "Engine Fitted to the 205, 306, 405, Partner and Expert from 1988 to 2002 (70–92 HP). This indirect injection unit is generally robust, but head gasket failure (coolant loss) and injector pump seal leaks drive most replacement demand. Rebuilt units include a new head gasket, refurbished injector pump, and fully serviced injectors.",
               "cta": "Check XUD9 1.9L Peugeot diesel engine availability"
             }
           ]
@@ -1987,57 +2055,57 @@
     "faq": {
       "tag": "FAQ",
       "h2": "Peugeot Engine Replacement – Frequently Asked Questions",
-      "intro": "Quick, honest answers to the most common questions Peugeot owners ask before comparing engine replacement prices and finding a UK specialist.",
+      "intro": "** Quick, honest answers to the most common questions Peugeot owners ask before comparing engine replacement prices and finding a UK specialist.",
       "items": [
         {
           "question": "How much does a Peugeot engine replacement cost in the UK?",
-          "answer": "A rebuilt Peugeot engine typically costs between £2,200 and £4,500 depending on the engine family. A common 1.6 HDi (DV6) for a 308 or 3008 ranges from £2,400–£3,200 supply-only, while a 1.2 PureTech (EB2) for a 208 or 2008 is £2,600–£3,800. A 2.0 HDi (DW10) for a Boxer or Expert van runs £2,200–£3,400. Fitting adds £500–£900 at an independent specialist. Main dealers often charge 50–80% more for the same rebuilt unit. Compare Peugeot engine replacement prices now.",
-          "cta": "Compare Peugeot engine prices now"
+          "answer": "A rebuilt Peugeot engine typically costs between £2,200 and £4,500 depending on the engine family. A common 1.6 HDi (DV6) for a 308 or 3008 ranges from £2,400–£3,200 supply-only, while a 1.2 PureTech (EB2) for a 208 or 2008 is £2,600–£3,800. A 2.0 HDi (DW10) for a Boxer or Expert van runs £2,200–£3,400. Fitting adds £500–£900 at an independent specialist. Main dealers often charge 50–80% more for the same rebuilt unit.",
+          "cta": "Compare Peugeot engine replacement prices now."
         },
         {
           "question": "What affects the cost of a Peugeot engine replacement?",
-          "answer": "Four key factors determine your final cost: engine size and family (DV6/DV10 costs less than rare V6 DT20), condition (rebuilt with upgraded components costs more than used, but offers warranty), vehicle age and complexity (Boxer vans take longer than 208 hatchbacks), and supply-only versus supply-and-fit (add £500–£900). Location matters too — London and South East specialist rates are 20–30% higher than the North East or Scotland. Our tool shows you real quotes from across the UK, so you can compare transparently. Get quotes from UK Peugeot engine specialists.",
-          "cta": "Compare Peugeot engine prices now"
+          "answer": "Four key factors determine your final cost: engine size and family (DV6/DV10 costs less than rare V6 DT20), condition (rebuilt with upgraded components costs more than used, but offers warranty), vehicle age and complexity (Boxer vans take longer than 208 hatchbacks), and supply-only versus supply-and-fit (add £500–£900). Location matters too — London and South East specialist rates are 20–30% higher than the North East or Scotland. Our tool shows you real quotes from across the UK, so you can compare transparently.",
+          "cta": "Get quotes from UK Peugeot engine specialists."
         },
         {
           "question": "Is it worth replacing the engine in my Peugeot?",
-          "answer": "In most cases, yes — especially if the chassis, gearbox, and body are in good condition. A rebuilt Peugeot engine with upgraded components (improved wet belt materials on EB2, revised chain tensioner on EP6, larger 8mm chain on DV5) often outlasts the original engine. Compare that to buying a replacement vehicle: a Peugeot 3008 with a failed 1.5 BlueHDi might be worth £4,000–£7,000 repaired versus £2,000–£3,000 as a non-runner. If your Peugeot holds value and has no major body corrosion, engine replacement is almost always worth it. Use our free comparison tool to see whether a rebuilt or used Peugeot engine makes financial sense.",
-          "cta": "Get a Peugeot engine quote now"
+          "answer": "In most cases, yes — especially if the chassis, gearbox, and body are in good condition. A rebuilt Peugeot engine with upgraded components (improved wet belt materials on EB2, revised chain tensioner on EP6, larger 8mm chain on DV5) often outlasts the original engine. Compare that to buying a replacement vehicle: a Peugeot 3008 with a failed 1.5 BlueHDi might be worth £4,000–£7,000 repaired versus £2,000–£3,000 as a non-runner. If your Peugeot holds value and has no major body corrosion, engine replacement is almost always worth it.",
+          "cta": "Use our free comparison tool to see whether a rebuilt or used Peugeot engine makes financial sense."
         },
         {
           "question": "What's included in a Peugeot engine supply and fit service?",
-          "answer": "A full supply-and-fit service includes sourcing a rebuilt or reconditioned unit matched to your exact engine code, removal of the failed engine, full installation of the replacement, new oil, filters, coolant, and timing belt/chain where required, plus a minimum 12‑month unlimited mileage warranty. The specialist also disposes of your old engine legally and test-drives the vehicle to confirm correct operation. Typical fitting cost is £500–£900, though some specialists bundle it into a single all-in price. Always ask whether the quote includes VAT, delivery, and any ancillary parts (like engine mounts or gaskets). Compare Peugeot engine supply and fit deals.",
-          "cta": "Get a Peugeot engine quote now"
+          "answer": "A full supply-and-fit service includes sourcing a rebuilt or reconditioned unit matched to your exact engine code, removal of the failed engine, full installation of the replacement, new oil, filters, coolant, and timing belt/chain where required, plus a minimum 12‑month unlimited mileage warranty. The specialist also disposes of your old engine legally and test-drives the vehicle to confirm correct operation. Typical fitting cost is £500–£900, though some specialists bundle it into a single all-in price. Always ask whether the quote includes VAT, delivery, and any ancillary parts (like engine mounts or gaskets).",
+          "cta": "Compare Peugeot engine supply and fit deals."
         },
         {
           "question": "How long does a Peugeot engine replacement take?",
-          "answer": "For common Peugeot models like a 308 or 208 with a 1.6 HDi or 1.2 PureTech, a competent specialist will complete the swap in 3–5 working days. More complex models like a 3008 Hybrid4 or Boxer van with engine bay access challenges take 5–7 days. The biggest variable is engine availability — our network regularly stocks high-demand codes like DV6, DV5, EB2, and DW10, which keeps lead times to a minimum. For rare engines like the DT20 V6 or older XUD units, sourcing may add 5–10 days. Ask your chosen supplier for a confirmed lead time before booking. Get quotes from UK Peugeot engine specialists with confirmed lead times.",
-          "cta": "Get a Peugeot engine quote now"
+          "answer": "For common Peugeot models like a 308 or 208 with a 1.6 HDi or 1.2 PureTech, a competent specialist will complete the swap in 3–5 working days. More complex models like a 3008 Hybrid4 or Boxer van with engine bay access challenges take 5–7 days. The biggest variable is engine availability — our network regularly stocks high-demand codes like DV6, DV5, EB2, and DW10, which keeps lead times to a minimum. For rare engines like the DT20 V6 or older XUD units, sourcing may add 5–10 days. Ask your chosen supplier for a confirmed lead time before booking.",
+          "cta": "Get quotes from UK Peugeot engine specialists with confirmed lead times."
         },
         {
           "question": "Do reconditioned Peugeot engines come with warranty?",
-          "answer": "Yes — every engine supplied through EngineMarket carries a minimum 12‑month unlimited mileage warranty covering all major internal components: crankshaft, conrods, pistons, timing chain or belt, oil pump, bearings, gaskets, and seals. Many specialists offer extended 24‑month or 50,000‑mile coverage on premium rebuilt units, particularly for popular families like DV6 and EB2 where upgraded components are used. Warranty excludes ancillaries (turbo, injectors, fuel pump) unless explicitly listed, and damage from external issues like overheating after fitting. Always confirm exact terms — including labour coverage — directly with your supplier before purchase. Find reconditioned Peugeot engines with comprehensive warranty cover.",
-          "cta": "Find Peugeot engines with warranty"
+          "answer": "Yes — every engine supplied through EngineMarket carries a minimum 12‑month unlimited mileage warranty covering all major internal components: crankshaft, conrods, pistons, timing chain or belt, oil pump, bearings, gaskets, and seals. Many specialists offer extended 24‑month or 50,000‑mile coverage on premium rebuilt units, particularly for popular families like DV6 and EB2 where upgraded components are used. Warranty excludes ancillaries (turbo, injectors, fuel pump) unless explicitly listed, and damage from external issues like overheating after fitting. Always confirm exact terms — including labour coverage — directly with your supplier before purchase.",
+          "cta": "Find reconditioned Peugeot engines with comprehensive warranty cover."
         },
         {
           "question": "Should I choose a used or reconditioned Peugeot engine?",
-          "answer": "A used Peugeot engine is cheaper upfront — typically £600–£1,200 for a DV6 or EB2 — but carries two significant risks: unknown history (was it a wet belt failure donor?) and no warranty beyond 30–90 days. A reconditioned or rebuilt engine costs £2,200–£4,000 but includes new piston rings, bearings, seals, timing components, a full clean, and a 12‑month warranty. For failure‑prone engines like the 1.2 PureTech (wet belt) or 1.5 BlueHDi (original 7mm chain), a reconditioned unit with upgraded parts is strongly recommended. Used is only sensible as a short-term fix or if you plan to sell the car immediately. Compare used vs reconditioned Peugeot engine prices now.",
-          "cta": "Compare used and reconditioned Peugeot engine options"
+          "answer": "A used Peugeot engine is cheaper upfront — typically £600–£1,200 for a DV6 or EB2 — but carries two significant risks: unknown history (was it a wet belt failure donor?) and no warranty beyond 30–90 days. A reconditioned or rebuilt engine costs £2,200–£4,000 but includes new piston rings, bearings, seals, timing components, a full clean, and a 12‑month warranty. For failure‑prone engines like the 1.2 PureTech (wet belt) or 1.5 BlueHDi (original 7mm chain), a reconditioned unit with upgraded parts is strongly recommended. Used is only sensible as a short-term fix or if you plan to sell the car immediately.",
+          "cta": "Compare used vs reconditioned Peugeot engine prices now."
         },
         {
           "question": "Where can I find Peugeot engine specialists near me?",
-          "answer": "EngineMarket connects you with a UK-wide network of independent Peugeot engine specialists, ranging from dedicated French car rebuilders in the Midlands (e.g., Leicester, Coventry) to national van specialists covering Partner and Expert fleets. Simply enter your registration number, and our tool matches you with nearby suppliers who stock your specific engine code and offer fitted supply. If you prefer supply-only, we also connect you with rebuilders who ship nationwide — delivery typically £60–£120. No need for main dealer labour rates. Compare Peugeot engine specialists near you.",
-          "cta": "Get quotes from UK Peugeot engine specialists"
+          "answer": "EngineMarket connects you with a UK-wide network of independent Peugeot engine specialists, ranging from dedicated French car rebuilders in the Midlands (e.g., Leicester, Coventry) to national van specialists covering Partner and Expert fleets. Simply enter your registration number, and our tool matches you with nearby suppliers who stock your specific engine code and offer fitted supply. If you prefer supply-only, we also connect you with rebuilders who ship nationwide — delivery typically £60–£120. No need for main dealer labour rates.",
+          "cta": "Compare Peugeot engine specialists near you."
         },
         {
           "question": "What are the most common Peugeot engine failures?",
-          "answer": "The five most common Peugeot engine failures driving replacement demand are: (1) 1.2 PureTech (EB2) wet belt degradation — belt debris blocks oil pickup, causing complete oil starvation from 40,000 miles; (2) 1.5 BlueHDi (DV5) 7mm timing chain failure — chain snaps or jumps timing (recall MXL, 2017–2023); (3) 1.6 HDi (DV6) turbo oil feed coking — kills turbo then bottom-end bearings; (4) 1.6 THP (EP6) timing chain tensioner failure — chain rattle then jump, plus high-pressure fuel pump debris; (5) 1.5 BlueHDi AdBlue crystallisation — blocks injector and lines, triggering NOx countdown lockout. All five failures typically make replacement the most economical outcome. Compare replacement engine prices for all Peugeot engine families.",
-          "cta": "Get a Peugeot engine quote now"
+          "answer": "The five most common Peugeot engine failures driving replacement demand are: (1) 1.2 PureTech (EB2) wet belt degradation — belt debris blocks oil pickup, causing complete oil starvation from 40,000 miles; (2) 1.5 BlueHDi (DV5) 7mm timing chain failure — chain snaps or jumps timing (recall MXL, 2017–2023); (3) 1.6 HDi (DV6) turbo oil feed coking — kills turbo then bottom-end bearings; (4) 1.6 THP (EP6) timing chain tensioner failure — chain rattle then jump, plus high-pressure fuel pump debris; (5) 1.5 BlueHDi AdBlue crystallisation — blocks injector and lines, triggering NOx countdown lockout. All five failures typically make replacement the most economical outcome.",
+          "cta": "Compare replacement engine prices for all Peugeot engine families."
         },
         {
           "question": "How can I get the best price on a Peugeot engine?",
-          "answer": "Always compare at least three quotes — prices for the same DV6 or EB2 engine code can vary by £1,000+ between specialists. Consider used (£600–£1,200) for very tight budgets or short-term ownership, but accept the risk. For long-term ownership, a reconditioned unit with upgraded components (£2,200–£4,000) is better value. Ask suppliers for a supply-only price if you have a trusted local garage — this removes the specialist's fitting markup. Always check whether delivery, fitting, and VAT are included in any headline price. Use our free comparison tool to get the best price on your Peugeot engine.",
-          "cta": "Compare Peugeot engine prices now"
+          "answer": "Always compare at least three quotes — prices for the same DV6 or EB2 engine code can vary by £1,000+ between specialists. Consider used (£600–£1,200) for very tight budgets or short-term ownership, but accept the risk. For long-term ownership, a reconditioned unit with upgraded components (£2,200–£4,000) is better value. Ask suppliers for a supply-only price if you have a trusted local garage — this removes the specialist's fitting markup. Always check whether delivery, fitting, and VAT are included in any headline price.",
+          "cta": "Use our free comparison tool to get the best price on your Peugeot engine."
         }
       ]
     },

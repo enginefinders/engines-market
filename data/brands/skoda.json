@@ -37,7 +37,7 @@
         "subtitle": "Enter your registration number to get started.",
         "inputPlaceholder": "Registration Number",
         "buttonText": "Get Free Engine Quotes",
-        "note": ""
+        "note": "Secure enquiry — no spam, no pressure. Genuine quotes only from vetted UK Skoda specialists."
       }
     },
     "howItWorks": {
@@ -958,7 +958,73 @@
       "tag": "Complete Skoda Engines List",
       "h2": "Skoda Engines by Fuel Type",
       "intro": "Choose your Skoda engine by fuel type to compare realistic replacement prices, known brand‑wide issues, and UK specialist supply – from the most popular diesel workhorses to the latest electrified powertrains.",
-      "items": [],
+      "items": [
+        {
+          "title": "Skoda Diesel Engines",
+          "description": "Skoda diesel engines cover many of the brand's highest-mileage UK models. Replacement demand is usually driven by timing system wear, injector and turbo faults, plus EGR or DPF-related damage once repeat short-journey use starts affecting reliability.",
+          "descriptor": "High-mileage motorway and SUV applications",
+          "families": [
+            "EA288 Diesel Family",
+            "Legacy MPI & Older TDI"
+          ],
+          "foundIn": [
+            "Skoda Citigo Engines",
+            "Skoda Fabia Engines",
+            "Skoda Felicia Engines",
+            "Skoda Karoq Engines"
+          ],
+          "knownFor": [
+            "DPF blockage",
+            "EGR valve sticking injector wear",
+            "Injector seal leakage",
+            "turbo actuator failure"
+          ],
+          "typicalModels": [
+            "Skoda Citigo Engines",
+            "Skoda Fabia Engines",
+            "Skoda Felicia Engines",
+            "Skoda Karoq Engines"
+          ],
+          "importantNotes": [
+            "Short-journey use increases DPF, EGR, and oil-dilution risk on many diesel engines.",
+            "A documented service history matters more on diesel replacements because injector, turbo, and timing faults often build gradually."
+          ],
+          "cta": "Compare Skoda diesel engine prices"
+        },
+        {
+          "title": "Skoda Petrol Engines",
+          "description": "Skoda petrol engines span everything from core daily-driver models to higher-output performance variants. Most replacement enquiries start with timing chain noise, oil consumption, cooling-system failure, or internal wear that makes a warranted replacement more sensible than repeated repairs.",
+          "descriptor": "Core passenger-car and performance applications",
+          "families": [
+            "EA211 Petrol Family",
+            "EA888 Petrol Family",
+            "Legacy MPI & Older TDI"
+          ],
+          "foundIn": [
+            "Skoda Citigo Engines",
+            "Skoda Fabia Engines",
+            "Skoda Felicia Engines",
+            "Skoda Karoq Engines"
+          ],
+          "knownFor": [
+            "Wet belt degradation (early 1.0 MPI)",
+            "injector failure",
+            "turbo wastegate rattle",
+            "EA111 TSI – timing chain tensioner failure"
+          ],
+          "typicalModels": [
+            "Skoda Citigo Engines",
+            "Skoda Fabia Engines",
+            "Skoda Felicia Engines",
+            "Skoda Karoq Engines"
+          ],
+          "importantNotes": [
+            "Cold-start rattles, overheating history, and oil use are the biggest warning signs before a petrol engine replacement becomes necessary.",
+            "Direct-injection petrol engines often need specialist attention for carbon build-up alongside the main mechanical repair."
+          ],
+          "cta": "Compare Skoda petrol engine prices"
+        }
+      ],
       "closing": "Not sure which fuel type your Skoda has? Enter your registration number above to instantly identify your model, engine code, fuel system and compatible replacement options – all backed by a minimum 12‑month unlimited mileage warranty from UK Skoda specialists."
     },
     "engineCodeDirectory": {
@@ -1095,7 +1161,7 @@
             {
               "title": "AZQ 1.2 HTP Petrol",
               "image": "/images/brands/skoda/engines/skoda-azq-engine.webp",
-              "description": "The AZQ 1.2 HTP (6-valve) was fitted to the Fabia (5J, 2003–2010) and Roomster (2006–2010). A simple 3-cylinder, chain-driven unit. Valve seat recession (running on LPG or poor maintenance) and timing chain stretch are the main issues. Rebuilt AZQ units include a new timing chain kit, re-cut valve seats, and new valve stem seals. Closing line (Block A): Can't find your engine code listed above? Use our full Skoda engine code directory below — every code from 1996 to present — or enter your registration number for an instant match to the correct replacement engine with warranty.",
+              "description": "The AZQ 1.2 HTP (6-valve) was fitted to the Fabia (5J, 2003–2010) and Roomster (2006–2010). A simple 3-cylinder, chain-driven unit. Valve seat recession (running on LPG or poor maintenance) and timing chain stretch are the main issues. Rebuilt AZQ units include a new timing chain kit, re-cut valve seats, and new valve stem seals.",
               "cta": "Get quotes for AZQ 1.2 HTP engine replacement"
             }
           ]
@@ -1321,8 +1387,8 @@
           "description": "The second-generation Octavia (2004 launch, UK volume from 2005) brought VW Group's new EA113 2.0 TSI turbocharged petrol and the EA188 2.0 TDI CR common-rail diesel - an engineering step change that defined the Skoda range for the following decade.",
           "keyChanges": [
             "Octavia second generation (2004 global, 2005 UK dominant) - 1.6 MPI, 1.8 TSI, 2.0 TDI CR, 1.9 TDI PD",
-            "2.0 TDI CR (AZV, BKD) introduced - common-rail replaces PD unit injector in Octavia and Superb; 140 hp 🔴 Major Engine Family Introduction",
-            "2.0 TSI EA113 (AXX, BWA, BPY) introduced in Octavia vRS (200 hp) - turbocharged direct-injection four-cylinder 🔴 Major Engine Family Introduction",
+            "2.0 TDI CR (AZV, BKD) introduced - common-rail replaces PD unit injector in Octavia and Superb; 140 hp",
+            "2.0 TSI EA113 (AXX, BWA, BPY) introduced in Octavia vRS (200 hp) - turbocharged direct-injection four-cylinder",
             "Roomster launched (2006) with 1.4 TDI (BMS, BNV) and 1.6 MPI (BSF)",
             "Superb second generation previewed",
             "Euro 4 enforced from 2006"
@@ -1373,8 +1439,8 @@
           "keyChanges": [
             "Superb second generation (2008) - 1.8 TSI (EA888), 2.0 TDI CR, 3.6 V6 FSI - Skoda's largest and most sophisticated model",
             "Yeti launched (2009) - first Skoda SUV; 1.2 TSI, 1.8 TSI, 2.0 TDI CR",
-            "1.4 TSI twincharged (CAXA, BMY) - supercharger + turbocharger; 125/140 hp; Fabia vRS and Octavia 🔴 Major Engine Family Introduction",
-            "EA888 1.8 TSI (BZB, CDAA, CABA) introduced - replaces EA113 1.8T across volume models 🔴 Major Engine Family Introduction",
+            "1.4 TSI twincharged (CAXA, BMY) - supercharger + turbocharger; 125/140 hp; Fabia vRS and Octavia",
+            "EA888 1.8 TSI (BZB, CDAA, CABA) introduced - replaces EA113 1.8T across volume models",
             "EA189 2.0 TDI CR updated (CBAB, CFFB) - replaces BKD/AZV in Octavia, Superb, Yeti",
             "Euro 5 preparation begins"
           ],
@@ -1423,7 +1489,7 @@
           "preview": "Octavia Third Generation Preview, Dieselgate EA189 Era & Euro 5 Peak Major Engine Family Introduction",
           "description": "The EA111 1.2 TSI became Skoda's most widely fitted entry petrol engine, the EA188/EA189 2.0 TDI range reached peak UK market penetration across Octavia, Superb, and Yeti, and the Octavia third generation was previewed with full EA211/EA288 engine preparation.",
           "keyChanges": [
-            "EA111 1.2 TSI (CBZB, CBZA, CJZA) dominant in Fabia, Yeti, and Roomster - 86/105 hp turbocharged three/four-cylinder 🔴 Major Engine Family Introduction",
+            "EA111 1.2 TSI (CBZB, CBZA, CJZA) dominant in Fabia, Yeti, and Roomster - 86/105 hp turbocharged three/four-cylinder",
             "Rapid launched (2012) - new model; 1.2 TSI and 1.6 TDI CR",
             "Octavia third generation revealed (2012) - full launch 2013; EA211 and EA288 preview",
             "Dieselgate EA189 2.0 TDI continues - CBAB, CFFB, CJAA variants; 110/140/170 hp",
@@ -1474,8 +1540,8 @@
           "preview": "EA211 & EA288 Modular Engine Launch, Octavia Third Gen & Dieselgate Major Engine Family Introduction",
           "description": "The introduction of the EA211 petrol and EA288 diesel modular engine families across the Octavia third generation and Karoq/Kodiaq platform marked Skoda's most comprehensive engine architecture renewal in 20 years - coinciding with the Dieselgate scandal that reshaped the diesel market.",
           "keyChanges": [
-            "EA211 1.0 TSI three-cylinder (CHZB, DKRA) and 1.4 TSI (CZCA, CXSA) launched - modular family replacing EA111 across all Skoda small/medium models 🔴 Major Engine Family Introduction",
-            "EA288 2.0 TDI (CRBC, CRKB, DCYA) replaces EA189 - revised diesel with timing belt replacing chain; Euro 6 compliant 🔴 Major Engine Family Introduction",
+            "EA211 1.0 TSI three-cylinder (CHZB, DKRA) and 1.4 TSI (CZCA, CXSA) launched - modular family replacing EA111 across all Skoda small/medium models",
+            "EA288 2.0 TDI (CRBC, CRKB, DCYA) replaces EA189 - revised diesel with timing belt replacing chain; Euro 6 compliant",
             "Dieselgate defeat device scandal (September 2015) - EA189 1.6/2.0 TDI across all Skoda models affected; VW Group software fix roll-out begins 2016",
             "Octavia third generation fully dominant with EA211/EA288 range - 1.0 TSI, 1.4 TSI, 1.8 TSI, 2.0 TDI",
             "Kodiaq revealed (2016) - largest Skoda ever; 1.4 TSI, 2.0 TSI, 2.0 TDI EA288",
@@ -1526,7 +1592,7 @@
           "description": "The Karoq replaced the Yeti, the Kodiaq reached full UK sales volume, and the new 1.5 TSI Evo with cylinder deactivation replaced the 1.4 TSI - a significant mid-cycle engine update that improved efficiency while introducing new ownership considerations.",
           "keyChanges": [
             "Karoq launched (2017) - replaces Yeti; 1.0 TSI, 1.5 TSI Evo, 2.0 TDI EA288",
-            "1.5 TSI Evo (DADA, DPCA) replaces 1.4 TSI - cylinder deactivation (ACT) technology; improved fuel economy 🔴 Major Engine Family Introduction",
+            "1.5 TSI Evo (DADA, DPCA) replaces 1.4 TSI - cylinder deactivation (ACT) technology; improved fuel economy",
             "Kodiaq fully established in UK market with 2.0 TDI and 2.0 TSI options",
             "Scala and Kamiq launched (2019) - 1.0 TSI, 1.5 TSI, 1.6 TDI",
             "EA288 TDI updated to Euro 6d-TEMP - revised EGR, DPF, and AdBlue systems",
@@ -1574,9 +1640,9 @@
           "preview": "Octavia Fourth Generation, Enyaq iV & Octavia iV PHEV Technology Introduction",
           "description": "The fourth-generation Octavia brought mild hybrid (MHEV) 48V technology to Skoda petrol engines for the first time, the Octavia iV PHEV extended EV range to 55 miles WLTP, and the Enyaq iV marked Skoda's first dedicated BEV on the MEB platform.",
           "keyChanges": [
-            "Octavia fourth generation (2020) - 1.0 TSI, 1.5 TSI eTSI (48V MHEV), 2.0 TSI, 2.0 TDI; first Octavia with MHEV 🔴 Technology Introduction",
+            "Octavia fourth generation (2020) - 1.0 TSI, 1.5 TSI eTSI (48V MHEV), 2.0 TSI, 2.0 TDI; first Octavia with MHEV",
             "1.5 TSI eTSI (DPBA) - 48V belt-starter-generator added to 1.5 TSI; mild hybrid system new to Skoda",
-            "Octavia iV PHEV (2021) - 1.4 TSI PHEV + 85 kW electric motor + 13 kWh battery; up to 55 miles EV 🔴 Technology Introduction",
+            "Octavia iV PHEV (2021) - 1.4 TSI PHEV + 85 kW electric motor + 13 kWh battery; up to 55 miles EV",
             "Enyaq iV (2021) - first dedicated Skoda BEV; MEB platform; 58/82 kWh battery; RWD/AWD",
             "Fabia fourth generation (2021) - EA211 Evo 1.0 TSI and 1.5 TSI; no diesel option",
             "Euro 6d final compliance from January 2021 - OPF (Otto Particle Filter) on all new petrol models"
@@ -1674,7 +1740,7 @@
     "faq": {
       "tag": "FAQ",
       "h2": "Skoda Engine Replacement – Frequently Asked Questions",
-      "intro": "Quick, honest answers to the most common questions Skoda owners ask before comparing engine replacement prices and finding a UK specialist.",
+      "intro": "** Quick, honest answers to the most common questions Skoda owners ask before comparing engine replacement prices and finding a UK specialist.",
       "items": [
         {
           "question": "How much does a Skoda engine replacement cost in the UK?",

@@ -158,7 +158,7 @@ export default function TrustCtaSection({ data, brandName, imageSrc }: Props) {
                 src={imageSrc}
                 alt={`${brandName} vehicle`}
                 fill
-                className="object-cover object-center"
+                className="object-cover object-center opacity-[0.84]"
               />
 
               <div className="absolute bottom-3 right-3 rounded-2xl border border-white/10 bg-[#06172f]/88 px-3.5 py-2.5 text-right backdrop-blur-sm">

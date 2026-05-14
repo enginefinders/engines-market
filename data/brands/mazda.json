@@ -37,7 +37,7 @@
         "subtitle": "Enter your registration number to get started.",
         "inputPlaceholder": "Registration Number",
         "buttonText": "Get Free Engine Quotes",
-        "note": ""
+        "note": "Secure enquiry — no spam, no pressure. Genuine quotes only from vetted UK Mazda specialists."
       }
     },
     "howItWorks": {
@@ -613,7 +613,7 @@
         {
           "name": "MZR-CD Diesel",
           "era": "2002–2011",
-          "failureNote": "*Common failure points (expandable note): MZR-CD engines suffer catastrophic carbon buildup, DPF clogging, and fuel injector failure. Knocking noises are common . Our rebuilt engines include professionally cleaned intakes, new injectors, and refurbished DPF systems.",
+          "failureNote": "*Common failure points: MZR-CD engines suffer catastrophic carbon buildup, DPF clogging, and fuel injector failure. Knocking noises are common . Our rebuilt engines include professionally cleaned intakes, new injectors, and refurbished DPF systems.",
           "engines": [
             {
               "code": "R2AA",
@@ -647,7 +647,7 @@
         {
           "name": "Legacy & Classic Engines",
           "era": "All years",
-          "failureNote": "*` button should pre-fill the engine code in the quote request form. ## Keyword Coverage Table",
+          "failureNote": "Legacy and classic Mazda petrol engines remain popular in enthusiast and restoration circles. Most replacement demand comes from age-related oil leaks, bottom-end wear, cooling-system damage, and long-term storage issues rather than one single factory defect.",
           "engines": [
             {
               "code": "BP (BP4W, BP6D)",
@@ -712,24 +712,24 @@
           "rootCause": "Excessive exhaust gas recirculation (EGR) combined with the absence of port fuel injection allows soot and oil vapour to bake onto intake valves and manifolds, progressively choking airflow. The result is blocked DPFs, repeated regeneration failures, and the infamous P2002 DPF efficiency code.",
           "repairOptions": [
             {
-              "tier": "| Minor – Intake Manifold & EGR Decoke |",
+              "tier": "| Minor – Intake Manifold & EGR Decoke",
               "dealerPrice": "£550 – £850",
               "specialistPrice": "£300 – £500",
               "whatItInvolves": "| Chemical or media-blast decarbonisation of inlet manifold, EGR valve, and throttle body; forced DPF regen; software reset | 20,000–40,000 miles if driving habits remain unchanged.",
-              "longevity": "Suitable only before permanent DPF damage occurs. |"
+              "longevity": "Suitable only before permanent DPF damage occurs."
             },
             {
-              "tier": "| Intermediate – Full Intake System + DPF Clean |",
+              "tier": "| Intermediate – Full Intake System + DPF Clean",
               "dealerPrice": "£1,200 – £1,800",
               "specialistPrice": "£700 – £1,100",
-              "whatItInvolves": "| As above plus professional DPF off-car thermal clean, new DPF pressure sensors, and updated engine management calibration | 40,000–60,000 miles. Recommended for cars already showing P2002 codes but without turbo or injector damage. |",
+              "whatItInvolves": "| As above plus professional DPF off-car thermal clean, new DPF pressure sensors, and updated engine management calibration | 40,000–60,000 miles. Recommended for cars already showing P2002 codes but without turbo or injector damage.",
               "longevity": ""
             },
             {
-              "tier": "| Full Replacement – Rebuilt Skyactiv-D Engine |",
+              "tier": "| Full Replacement – Rebuilt Skyactiv-D Engine",
               "dealerPrice": "£5,500 – £7,500",
               "specialistPrice": "£3,200 – £4,500",
-              "whatItInvolves": "| Supply & fit of fully rebuilt SH/S8 engine with redesigned EGR cooler, uprated injector seals, and bench-tested cylinder head; 12-month warranty | 80,000+ miles with better carbon resistance than factory original. Necessary when valve damage or turbo failure has occurred. |",
+              "whatItInvolves": "| Supply & fit of fully rebuilt SH/S8 engine with redesigned EGR cooler, uprated injector seals, and bench-tested cylinder head; 12-month warranty | 80,000+ miles with better carbon resistance than factory original. Necessary when valve damage or turbo failure has occurred.",
               "longevity": ""
             }
           ],
@@ -745,17 +745,17 @@
           "rootCause": "The Siemens fuel injectors on early MZR-CD units develop internal leakage, causing excessive fuel dilution of engine oil. Combined with the high EGR rates of the era, intake carbon buildup becomes so severe that valves fail to seat, leading to compression loss and, ultimately, bore polishing.",
           "repairOptions": [
             {
-              "tier": "| Minor – Injector Replacement & Carbon Clean |",
+              "tier": "| Minor – Injector Replacement & Carbon Clean",
               "dealerPrice": "£1,100 – £1,600",
               "specialistPrice": "£650 – £950",
               "whatItInvolves": "| Replace all four injectors with refurbished or new OEM units; decarbonise intake manifold and EGR; oil and filter change | 40,000–60,000 miles.",
-              "longevity": "Suitable if compression is still within spec (no misfire on cold start). |"
+              "longevity": "Suitable if compression is still within spec (no misfire on cold start)."
             },
             {
-              "tier": "| Full Replacement – Rebuilt MZR-CD Engine |",
+              "tier": "| Full Replacement – Rebuilt MZR-CD Engine",
               "dealerPrice": "£4,500 – £6,200",
               "specialistPrice": "£2,500 – £3,600",
-              "whatItInvolves": "| Supply & fit of fully remanufactured R2AA or R2BA engine with uprated injector seals, cleaned intake ports, new timing chain kit, and 12-month warranty | 80,000+ miles. Necessary if bore compression has dropped below 18 bar or if the engine hydro-locks due to diesel dilution of oil. |",
+              "whatItInvolves": "| Supply & fit of fully remanufactured R2AA or R2BA engine with uprated injector seals, cleaned intake ports, new timing chain kit, and 12-month warranty | 80,000+ miles. Necessary if bore compression has dropped below 18 bar or if the engine hydro-locks due to diesel dilution of oil.",
               "longevity": ""
             }
           ],
@@ -771,17 +771,17 @@
           "rootCause": "The original timing chain tensioner relies on oil pressure and a relatively weak spring. Extended oil change intervals or low oil levels cause the tensioner to retract, allowing chain slap against the timing cover. Once the chain stretches beyond the tensioner’s travel range, it jumps timing, and valves meet pistons.",
           "repairOptions": [
             {
-              "tier": "| Minor – Preventative Tensioner & Chain Replacement |",
+              "tier": "| Minor – Preventative Tensioner & Chain Replacement",
               "dealerPrice": "£900 – £1,300",
               "specialistPrice": "£550 – £800",
               "whatItInvolves": "| Replace timing chain, guides, tensioner (updated design), and camshaft sprocket bolts; new front crank seal | 80,000–100,000 miles.",
-              "longevity": "Suitable at first sign of cold-start rattle before any misfire or cam correlation codes appear. |"
+              "longevity": "Suitable at first sign of cold-start rattle before any misfire or cam correlation codes appear."
             },
             {
-              "tier": "| Full Replacement – Rebuilt MZR Petrol Engine |",
+              "tier": "| Full Replacement – Rebuilt MZR Petrol Engine",
               "dealerPrice": "£4,000 – £5,500",
               "specialistPrice": "£2,200 – £3,200",
-              "whatItInvolves": "| Supply & fit of fully rebuilt LF17/L813/L3-VE engine with new timing assembly, uprated oil pump, and bench-tested cylinder head; 12-month warranty | 100,000+ miles. Required if chain has jumped and caused valve contact (confirmed by compression loss or bore-scope). |",
+              "whatItInvolves": "| Supply & fit of fully rebuilt LF17/L813/L3-VE engine with new timing assembly, uprated oil pump, and bench-tested cylinder head; 12-month warranty | 100,000+ miles. Required if chain has jumped and caused valve contact (confirmed by compression loss or bore-scope).",
               "longevity": ""
             }
           ],
@@ -797,24 +797,24 @@
           "rootCause": "As a direct-injection petrol engine, fuel never washes over the intake valves. Crankcase vapour and EGR soot bake onto valve stems and heads, progressively reducing airflow. Unlike BMW’s N43/N53, Mazda did not fit a secondary port injector, so manual decarbonisation is the only fix.",
           "repairOptions": [
             {
-              "tier": "| Minor – Walnut Blast Valve Decarbonisation |",
+              "tier": "| Minor – Walnut Blast Valve Decarbonisation",
               "dealerPrice": "£450 – £700",
               "specialistPrice": "£250 – £400",
               "whatItInvolves": "| Remove intake manifold; walnut-shell blast intake ports and valve heads; clean throttle body and EGR; software adaptation reset | 30,000–50,000 miles.",
-              "longevity": "Suitable as preventative maintenance or at first signs of cold misfire or reduced MPG. |"
+              "longevity": "Suitable as preventative maintenance or at first signs of cold misfire or reduced MPG."
             },
             {
-              "tier": "| Intermediate – Decoke Plus Injector Service |",
+              "tier": "| Intermediate – Decoke Plus Injector Service",
               "dealerPrice": "£800 – £1,200",
               "specialistPrice": "£500 – £750",
-              "whatItInvolves": "| Walnut blast decarbonisation plus professional ultrasonic cleaning of all four direct injectors; new injector seals and decoupler elements | 50,000–70,000 miles. Required if injector spray has been compromised (confirmed by fuel trim deviations). |",
+              "whatItInvolves": "| Walnut blast decarbonisation plus professional ultrasonic cleaning of all four direct injectors; new injector seals and decoupler elements | 50,000–70,000 miles. Required if injector spray has been compromised (confirmed by fuel trim deviations).",
               "longevity": ""
             },
             {
-              "tier": "| Full Replacement – Rebuilt Skyactiv-G Engine |",
+              "tier": "| Full Replacement – Rebuilt Skyactiv-G Engine",
               "dealerPrice": "£4,800 – £6,500",
               "specialistPrice": "£2,800 – £3,800",
-              "whatItInvolves": "| Supply & fit of fully rebuilt PE-VPS or P5 engine with professionally cleaned head, new valve stem seals, and bench-tested injectors; 12-month warranty | 80,000+ miles. Only necessary if carbon buildup has caused valve burning or ring sticking (excessive oil consumption). |",
+              "whatItInvolves": "| Supply & fit of fully rebuilt PE-VPS or P5 engine with professionally cleaned head, new valve stem seals, and bench-tested injectors; 12-month warranty | 80,000+ miles. Only necessary if carbon buildup has caused valve burning or ring sticking (excessive oil consumption).",
               "longevity": ""
             }
           ],
@@ -830,17 +830,17 @@
           "rootCause": "On NA/NB 1.6 and 1.8 engines, an underspecified crankshaft nose and keyway design allows the pulley boss to oscillate, gradually hammering the keyway wider until timing slips. On NC/ND MZR and Skyactiv-G engines, the same timing chain tensioner weakness as mainstream MZR engines causes cold-start rattle and eventual chain jump.",
           "repairOptions": [
             {
-              "tier": "| Intermediate – NC/ND Timing Chain Replacement |",
+              "tier": "| Intermediate – NC/ND Timing Chain Replacement",
               "dealerPrice": "£1,000 – £1,500",
               "specialistPrice": "£600 – £900",
-              "whatItInvolves": "| Replace timing chain, guides, tensioner (updated ND-spec part), camshaft sprockets, and front crank seal | 80,000–100,000 miles. Required at first sign of persistent chain rattle on NC/ND. |",
+              "whatItInvolves": "| Replace timing chain, guides, tensioner (updated ND-spec part), camshaft sprockets, and front crank seal | 80,000–100,000 miles. Required at first sign of persistent chain rattle on NC/ND.",
               "longevity": ""
             },
             {
-              "tier": "| Full Replacement – Rebuilt MX-5 Engine (Any Gen) |",
+              "tier": "| Full Replacement – Rebuilt MX-5 Engine (Any Gen)",
               "dealerPrice": "£4,200 – £6,000",
               "specialistPrice": "£2,500 – £3,800",
-              "whatItInvolves": "| Supply & fit of fully rebuilt BP, LF17, or PE-VPS engine with crankshaft keyway reinforcement (NA/NB) or updated timing assembly (NC/ND); 12-month warranty | 100,000+ miles. Only necessary for NA/NB with terminal keyway damage or NC/ND that has jumped time. |",
+              "whatItInvolves": "| Supply & fit of fully rebuilt BP, LF17, or PE-VPS engine with crankshaft keyway reinforcement (NA/NB) or updated timing assembly (NC/ND); 12-month warranty | 100,000+ miles. Only necessary for NA/NB with terminal keyway damage or NC/ND that has jumped time.",
               "longevity": ""
             }
           ],
@@ -1219,7 +1219,74 @@
       "tag": "Complete Mazda Engines List",
       "h2": "Mazda Engines by Fuel Type",
       "intro": "Choose your Mazda engine by fuel type to compare realistic replacement prices, known brand‑wide issues, and UK specialist supply – from the most popular diesel workhorses to the latest electrified powertrains.",
-      "items": [],
+      "items": [
+        {
+          "title": "Mazda Diesel Engines",
+          "description": "Mazda diesel engines cover many of the brand's highest-mileage UK models. Replacement demand is usually driven by timing system wear, injector and turbo faults, plus EGR or DPF-related damage once repeat short-journey use starts affecting reliability.",
+          "descriptor": "High-mileage motorway and SUV applications",
+          "families": [
+            "SKYACTIV-D Diesel",
+            "MZR-CD Diesel",
+            "Legacy & Classic Engines"
+          ],
+          "foundIn": [
+            "Mazda 121 Engines",
+            "Mazda 2 Engines",
+            "Mazda 3 Engines",
+            "Mazda 323 Engines"
+          ],
+          "knownFor": [
+            "Intake carbon buildup",
+            "DPF clogging (short journeys)",
+            "Turbo actuator failure",
+            "EGR clogging"
+          ],
+          "typicalModels": [
+            "Mazda 121 Engines",
+            "Mazda 2 Engines",
+            "Mazda 3 Engines",
+            "Mazda 323 Engines"
+          ],
+          "importantNotes": [
+            "Short-journey use increases DPF, EGR, and oil-dilution risk on many diesel engines.",
+            "A documented service history matters more on diesel replacements because injector, turbo, and timing faults often build gradually."
+          ],
+          "cta": "Compare Mazda diesel engine prices"
+        },
+        {
+          "title": "Mazda Petrol Engines",
+          "description": "Mazda petrol engines span everything from core daily-driver models to higher-output performance variants. Most replacement enquiries start with timing chain noise, oil consumption, cooling-system failure, or internal wear that makes a warranted replacement more sensible than repeated repairs.",
+          "descriptor": "Core passenger-car and performance applications",
+          "families": [
+            "SKYACTIV-G Petrol",
+            "MZR Petrol",
+            "Legacy & Classic Engines"
+          ],
+          "foundIn": [
+            "Mazda 121 Engines",
+            "Mazda 2 Engines",
+            "Mazda 3 Engines",
+            "Mazda 323 Engines"
+          ],
+          "knownFor": [
+            "Timing chain stretch (ZJ)",
+            "side-seal failure",
+            "hot-start issues (13B-MSP)",
+            "Timing chain stretch"
+          ],
+          "typicalModels": [
+            "Mazda 121 Engines",
+            "Mazda 2 Engines",
+            "Mazda 3 Engines",
+            "Mazda 323 Engines"
+          ],
+          "importantNotes": [
+            "Cold-start rattles, overheating history, and oil use are the biggest warning signs before a petrol engine replacement becomes necessary.",
+            "Direct-injection petrol engines often need specialist attention for carbon build-up alongside the main mechanical repair."
+          ],
+          "cta": "Compare Mazda petrol engine prices"
+        }
+      ],
       "closing": "Not sure which fuel type your Mazda has? Enter your registration number above to instantly identify your model, engine code, fuel system and compatible replacement options – all backed by a minimum 12‑month unlimited mileage warranty from UK Mazda specialists."
     },
     "engineCodeDirectory": {
@@ -1342,7 +1409,7 @@
             {
               "title": "B6 1.6L Petrol",
               "image": "/images/brands/mazda/engines/mazda-b6-engine.webp",
-              "description": "The 1.6L B6 engine powered the 1989-1997 Mazda MX-5 (NA) and 1990-1994 Mazda 323 (BG). Age-related seal degradation, timing belt wear, and head gasket failure are common. Our rebuilt units include new timing belt, water pump, head gasket, and all seals. Closing line (Block A): Can't find your engine code listed above? Use our full Mazda engine code directory below — every code from the last 35+ years — or enter your registration number for an instant match to the correct replacement engine with warranty.",
+              "description": "The 1.6L B6 engine powered the 1989-1997 Mazda MX-5 (NA) and 1990-1994 Mazda 323 (BG). Age-related seal degradation, timing belt wear, and head gasket failure are common. Our rebuilt units include new timing belt, water pump, head gasket, and all seals.",
               "cta": "Compare B6 1.6L Mazda petrol engine prices"
             }
           ]
@@ -1906,7 +1973,7 @@
     "faq": {
       "tag": "FAQ",
       "h2": "Mazda Engine Replacement – Frequently Asked Questions",
-      "intro": "Quick, honest answers to the most common questions Mazda owners ask before comparing engine replacement prices and finding a UK specialist.",
+      "intro": "** Quick, honest answers to the most common questions Mazda owners ask before comparing engine replacement prices and finding a UK specialist.",
       "items": [
         {
           "question": "How much does a Mazda engine replacement cost in the UK?",

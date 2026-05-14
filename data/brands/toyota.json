@@ -37,7 +37,7 @@
         "subtitle": "Enter your registration number to get started.",
         "inputPlaceholder": "Registration Number",
         "buttonText": "Get Free Engine Quotes",
-        "note": ""
+        "note": "Secure enquiry — no spam, no pressure. Genuine quotes only from vetted UK Toyota specialists."
       }
     },
     "howItWorks": {
@@ -595,12 +595,6 @@
               "cta": "Get Quote for G16E-GTS"
             }
           ]
-        },
-        {
-          "name": "Brand Tone & Selection Rationale",
-          "era": "All years",
-          "failureNote": "Volume/price-sensitive tone maintained throughout — using \"compare costs\", \"typical UK market ranges\", and \"professionally rebuilt engines with warranty\" language. Engine code selection prioritised the highest UK replacement volume codes from the KRF: - 1NR-FE (1.33L timing chain issues — very high volume) - 2ZR-FXE (hybrid — high volume) - 1KD-FTV (Hilux diesel — commercial high volume) - 1AD/2AD-FTV (D-4D head gasket failures — high volume) - 1ZZ-FE (oil consumption — still actively replaced) Failure data draws on verified owner reports — 1NR timing chain stretch, 1ZZ oil burning, AD family head gasket failure, KD injector/piston issues — all widely documented across UK Toyota owner forums and specialist rebuilders .",
-          "engines": []
         }
       ]
     },
@@ -618,17 +612,17 @@
           "rootCause": "Inadequate chain tensioner oil pressure and early plastic guide degradation cause chain elongation. First symptom is a cold-start rattle; ignored, the chain skips timing, bends valves, and destroys the cylinder head.",
           "repairOptions": [
             {
-              "tier": "| Minor – Timing Chain & Tensioner Replacement (catch early) |",
+              "tier": "| Minor – Timing Chain & Tensioner Replacement (catch early)",
               "dealerPrice": "£1,100 – £1,600",
               "specialistPrice": "£650 – £950",
               "whatItInvolves": "| Replace timing chain, tensioner, guides, and cam/crank sprockets. No head removal. | 60k+ miles if genuine parts.",
-              "longevity": "Only viable if no rattle on start & no fault codes. |"
+              "longevity": "Only viable if no rattle on start & no fault codes."
             },
             {
-              "tier": "| Full Replacement – Rebuilt Long Block (skipped timing or valve damage) |",
+              "tier": "| Full Replacement – Rebuilt Long Block (skipped timing or valve damage)",
               "dealerPrice": "£3,200 – £4,500",
               "specialistPrice": "£1,800 – £2,600",
-              "whatItInvolves": "| Supply & fit rebuilt 1NR/2NR engine with upgraded chain kit, rebuilt cylinder head, new gaskets, and oil pump. Bench tested. | 100k+ mile life. The standard repair for high-mileage or post-skip failures. |",
+              "whatItInvolves": "| Supply & fit rebuilt 1NR/2NR engine with upgraded chain kit, rebuilt cylinder head, new gaskets, and oil pump. Bench tested. | 100k+ mile life. The standard repair for high-mileage or post-skip failures.",
               "longevity": ""
             }
           ],
@@ -644,17 +638,17 @@
           "rootCause": "MG1 or MG2 motor resolver degradation or inverter DC/DC converter failure causes hybrid system warning, reduced power, and eventual shutdown. Low voltage hybrid battery can compound the issue.",
           "repairOptions": [
             {
-              "tier": "| Minor – MG Motor Resolver / Inverter Repair |",
+              "tier": "| Minor – MG Motor Resolver / Inverter Repair",
               "dealerPrice": "£1,200 – £1,900",
               "specialistPrice": "£550 – £950",
               "whatItInvolves": "| Replace resolver sensor or refurbish inverter circuit board. Recalibrate hybrid control unit. | 40k+ miles.",
-              "longevity": "Viable only if hybrid battery still holds charge (>60% SoH). |"
+              "longevity": "Viable only if hybrid battery still holds charge (>60% SoH)."
             },
             {
-              "tier": "| Full Replacement – Rebuilt Hybrid Transaxle + Inverter |",
+              "tier": "| Full Replacement – Rebuilt Hybrid Transaxle + Inverter",
               "dealerPrice": "£4,500 – £6,500",
               "specialistPrice": "£2,200 – £3,400",
-              "whatItInvolves": "| Supply & fit factory-rebuilt hybrid transaxle (MG1/MG2) and inverter with upgraded resolver seals. 12-month warranty. | Full hybrid system life. Required when both motors or inverter are internally shorted. |",
+              "whatItInvolves": "| Supply & fit factory-rebuilt hybrid transaxle (MG1/MG2) and inverter with upgraded resolver seals. 12-month warranty. | Full hybrid system life. Required when both motors or inverter are internally shorted.",
               "longevity": ""
             }
           ],
@@ -670,24 +664,24 @@
           "rootCause": "Short journeys prevent passive DPF regeneration, leading to ash clogging and backpressure. EGR cooler leaks soot into intake, causing carbon buildup, stuck EGR valves, and eventual turbo overspeed.",
           "repairOptions": [
             {
-              "tier": "| Minor – DPF Clean + EGR Replacement |",
+              "tier": "| Minor – DPF Clean + EGR Replacement",
               "dealerPrice": "£800 – £1,300",
               "specialistPrice": "£450 – £700",
               "whatItInvolves": "| Forced DPF regen, chemical clean, replace EGR valve and cooler. Intake manifold carbon scrape. | 30k+ miles if driving pattern improves.",
-              "longevity": "Only viable before turbo or injectors fail. |"
+              "longevity": "Only viable before turbo or injectors fail."
             },
             {
-              "tier": "| Major – Turbo + Injector Overhaul |",
+              "tier": "| Major – Turbo + Injector Overhaul",
               "dealerPrice": "£2,500 – £3,800",
               "specialistPrice": "£1,400 – £2,100",
               "whatItInvolves": "| Replace turbo core, refurbish injectors, DPF professional clean, new EGR assembly. | 60k+ miles.",
-              "longevity": "Suitable when backpressure has damaged downstream components. |"
+              "longevity": "Suitable when backpressure has damaged downstream components."
             },
             {
-              "tier": "| Full Replacement – Rebuilt D-4D Long Engine |",
+              "tier": "| Full Replacement – Rebuilt D-4D Long Engine",
               "dealerPrice": "£4,200 – £6,000",
               "specialistPrice": "£2,300 – £3,500",
-              "whatItInvolves": "| Supply & fit rebuilt 1AD/2AD/1GD engine with decarbonised intake, new EGR, cleaned DPF, and upgraded turbo oil feed. | 100k+ mile life. Required for scored bores or spun bearings. |",
+              "whatItInvolves": "| Supply & fit rebuilt 1AD/2AD/1GD engine with decarbonised intake, new EGR, cleaned DPF, and upgraded turbo oil feed. | 100k+ mile life. Required for scored bores or spun bearings.",
               "longevity": ""
             }
           ],
@@ -703,17 +697,17 @@
           "rootCause": "Direct injection only (no port injector on UK early models) allows carbon to bake onto intake valves. Reduced airflow causes cold-start misfires, hesitation, and eventual lean misfire codes.",
           "repairOptions": [
             {
-              "tier": "| Minor – Intake Valve Carbon Blast |",
+              "tier": "| Minor – Intake Valve Carbon Blast",
               "dealerPrice": "£700 – £1,000",
               "specialistPrice": "£380 – £550",
-              "whatItInvolves": "| Walnut media or chemical blast to remove carbon from intake valves and ports. No component replacement. | 30k-40k miles. Ideal for prevent or mild misfire. |",
+              "whatItInvolves": "| Walnut media or chemical blast to remove carbon from intake valves and ports. No component replacement. | 30k-40k miles. Ideal for prevent or mild misfire.",
               "longevity": ""
             },
             {
-              "tier": "| Full Replacement – Rebuilt Long Block (scored bores or damaged injectors) |",
+              "tier": "| Full Replacement – Rebuilt Long Block (scored bores or damaged injectors)",
               "dealerPrice": "£3,500 – £5,000",
               "specialistPrice": "£2,000 – £3,000",
-              "whatItInvolves": "| Supply & fit rebuilt M20A/A25A engine with decarbonised valves, new injector seals, and updated piston rings. | 100k+ mile life. Required if misfire has caused ring land damage. |",
+              "whatItInvolves": "| Supply & fit rebuilt M20A/A25A engine with decarbonised valves, new injector seals, and updated piston rings. | 100k+ mile life. Required if misfire has caused ring land damage.",
               "longevity": ""
             }
           ],
@@ -729,24 +723,24 @@
           "rootCause": "Plastic impeller on OEM water pump cracks or bearing seal fails. Coolant loss leads to localised overheating, head gasket failure, and in severe cases, warped cylinder head.",
           "repairOptions": [
             {
-              "tier": "| Minor – Water Pump + Thermostat Replacement |",
+              "tier": "| Minor – Water Pump + Thermostat Replacement",
               "dealerPrice": "£450 – £750",
               "specialistPrice": "£220 – £380",
-              "whatItInvolves": "| Replace water pump (uprated metal impeller version), thermostat, and coolant flush. | 60k+ miles. Perfect for early weep or noisy bearing. |",
+              "whatItInvolves": "| Replace water pump (uprated metal impeller version), thermostat, and coolant flush. | 60k+ miles. Perfect for early weep or noisy bearing.",
               "longevity": ""
             },
             {
-              "tier": "| Major – Head Gasket + Pressure Test (after overheating) |",
+              "tier": "| Major – Head Gasket + Pressure Test (after overheating)",
               "dealerPrice": "£1,500 – £2,500",
               "specialistPrice": "£850 – £1,400",
               "whatItInvolves": "| Replace head gasket, skim head, pressure test block, new water pump, belts, and coolant. | 60k+ miles.",
-              "longevity": "Only viable if block is not cracked. |"
+              "longevity": "Only viable if block is not cracked."
             },
             {
-              "tier": "| Full Replacement – Rebuilt Long Block (warped head or cracked block) |",
+              "tier": "| Full Replacement – Rebuilt Long Block (warped head or cracked block)",
               "dealerPrice": "£2,800 – £4,200",
               "specialistPrice": "£1,600 – £2,500",
-              "whatItInvolves": "| Supply & fit rebuilt engine with uprated metal water pump, new head gasket, and tested cooling system. | 100k+ mile life. Required after severe overheating event. |",
+              "whatItInvolves": "| Supply & fit rebuilt engine with uprated metal water pump, new head gasket, and tested cooling system. | 100k+ mile life. Required after severe overheating event.",
               "longevity": ""
             }
           ],
@@ -762,10 +756,10 @@
           "rootCause": "Oil sludge from EGR soot blocks the oil pickup strainer, causing oil starvation to big-end bearings. The first symptom is usually a sudden bottom-end knock — there is no minor warning stage.",
           "repairOptions": [
             {
-              "tier": "| Full Replacement – Rebuilt Long Block (no viable repair below this tier) |",
+              "tier": "| Full Replacement – Rebuilt Long Block (no viable repair below this tier)",
               "dealerPrice": "£4,500 – £6,500",
               "specialistPrice": "£2,400 – £3,600",
-              "whatItInvolves": "| Supply & fit rebuilt 2AD-FTV engine with cleaned oil galleries, new pump, uprated bearings, and decarbonised EGR system. Bench tested. | 80k+ mile life. The only option once crankshaft knock is audible. |",
+              "whatItInvolves": "| Supply & fit rebuilt 2AD-FTV engine with cleaned oil galleries, new pump, uprated bearings, and decarbonised EGR system. Bench tested. | 80k+ mile life. The only option once crankshaft knock is audible.",
               "longevity": ""
             }
           ],
@@ -1256,7 +1250,101 @@
       "tag": "Complete Toyota Engines List",
       "h2": "Toyota Engines by Fuel Type",
       "intro": "Choose your Toyota engine by fuel type to compare realistic replacement prices, known brand-wide issues, and UK specialist supply – from the most popular diesel workhorses to the latest electrified powertrains.",
-      "items": [],
+      "items": [
+        {
+          "title": "Toyota Diesel Engines",
+          "description": "Toyota diesel engines cover many of the brand's highest-mileage UK models. Replacement demand is usually driven by timing system wear, injector and turbo faults, plus EGR or DPF-related damage once repeat short-journey use starts affecting reliability.",
+          "descriptor": "High-mileage motorway and SUV applications",
+          "families": [
+            "2.0L – 2.5L Diesel",
+            "2.0L – 3.0L Diesel"
+          ],
+          "foundIn": [
+            "Toyota Alphard Engines",
+            "Toyota Auris Engines",
+            "Toyota Avensis Engines",
+            "Toyota Aygo Engines"
+          ],
+          "knownFor": [
+            "Injector seal leakage (diesel in oil)",
+            "turbo sticking",
+            "EGR clogging",
+            "N47 – timing chain stretch (pre-2014)"
+          ],
+          "typicalModels": [
+            "Toyota Alphard Engines",
+            "Toyota Auris Engines",
+            "Toyota Avensis Engines",
+            "Toyota Aygo Engines"
+          ],
+          "importantNotes": [
+            "Short-journey use increases DPF, EGR, and oil-dilution risk on many diesel engines.",
+            "A documented service history matters more on diesel replacements because injector, turbo, and timing faults often build gradually."
+          ],
+          "cta": "Compare Toyota diesel engine prices"
+        },
+        {
+          "title": "Toyota Petrol Engines",
+          "description": "Toyota petrol engines span everything from core daily-driver models to higher-output performance variants. Most replacement enquiries start with timing chain noise, oil consumption, cooling-system failure, or internal wear that makes a warranted replacement more sensible than repeated repairs.",
+          "descriptor": "Core passenger-car and performance applications",
+          "families": [
+            "Small Petrol & Hybrid Engines",
+            "1.8L / 2.0L Petrol & Hybrid",
+            "Modern Dynamic Force Petrol & Performance"
+          ],
+          "foundIn": [
+            "Toyota Alphard Engines",
+            "Toyota Auris Engines",
+            "Toyota Avensis Engines",
+            "Toyota Aygo Engines"
+          ],
+          "knownFor": [
+            "Coil pack failure",
+            "water pump leak",
+            "timing chain stretch (high mileage)",
+            "1NR-FE timing chain stretch"
+          ],
+          "typicalModels": [
+            "Toyota Alphard Engines",
+            "Toyota Auris Engines",
+            "Toyota Avensis Engines",
+            "Toyota Aygo Engines"
+          ],
+          "importantNotes": [
+            "Cold-start rattles, overheating history, and oil use are the biggest warning signs before a petrol engine replacement becomes necessary.",
+            "Direct-injection petrol engines often need specialist attention for carbon build-up alongside the main mechanical repair."
+          ],
+          "cta": "Compare Toyota petrol engine prices"
+        },
+        {
+          "title": "Toyota Hybrid Engines",
+          "description": "Toyota hybrid powertrains combine combustion engines with electric assistance across newer electrified models. Replacement demand is lower than traditional petrol or diesel units, but generator-engine faults, inverter issues, cooling-system failures, and calibration-sensitive repairs still require specialist support.",
+          "descriptor": "Electrified models with combustion backup",
+          "families": [
+            "Small Petrol & Hybrid Engines",
+            "1.8L / 2.0L Petrol & Hybrid",
+            "Modern Dynamic Force Petrol & Performance"
+          ],
+          "foundIn": [
+            "Toyota Alphard Engines",
+            "Toyota Auris Engines",
+            "Toyota Avensis Engines",
+            "Toyota Aygo Engines"
+          ],
+          "knownFor": [],
+          "typicalModels": [
+            "Toyota Alphard Engines",
+            "Toyota Auris Engines",
+            "Toyota Avensis Engines",
+            "Toyota Aygo Engines"
+          ],
+          "importantNotes": [
+            "Hybrid faults often need both mechanical and high-voltage diagnosis, so replacement decisions should be made by specialists familiar with the full system.",
+            "Battery cooling, inverter health, and software calibration are just as important as the combustion-engine condition on hybrid models."
+          ],
+          "cta": "Compare Toyota hybrid engine prices"
+        }
+      ],
       "closing": "Not sure which fuel type your Toyota has? Enter your registration number above to instantly identify your model, engine code, fuel system and compatible replacement options – all backed by a minimum 12‑month unlimited mileage warranty from UK Toyota specialists."
     },
     "engineCodeDirectory": {
@@ -1380,7 +1468,7 @@
             {
               "title": "G16E-GTS 1.6L Turbo Petrol",
               "image": "/images/brands/toyota/engines/toyota-g16e-gts-engine.webp",
-              "description": "(Performance) Engine The G16E-GTS is Toyota's high-performance three-cylinder, producing 261-300+ bhp in the GR Yaris (2020–present) and GR Corolla (2023–present). A technological marvel, but the engine is highly stressed — excessive crankcase pressure and oil aeration can occur on track-driven cars, and some early examples suffered from cylinder head casting imperfections. A performance-oriented rebuilt unit includes an upgraded PCV system, a cylinder head pressure test, and high-flow oil pump components. Closing line (Block A): Can't find your engine code listed above? Use our full Toyota engine code directory below — every code from the last 35 years — or enter your registration number for an instant match to the correct replacement engine with warranty.",
+              "description": "(Performance) Engine The G16E-GTS is Toyota's high-performance three-cylinder, producing 261-300+ bhp in the GR Yaris (2020–present) and GR Corolla (2023–present). A technological marvel, but the engine is highly stressed — excessive crankcase pressure and oil aeration can occur on track-driven cars, and some early examples suffered from cylinder head casting imperfections. A performance-oriented rebuilt unit includes an upgraded PCV system, a cylinder head pressure test, and high-flow oil pump components.",
               "cta": "Compare G16E-GTS Toyota performance engine prices"
             }
           ]
@@ -1914,7 +2002,7 @@
     "faq": {
       "tag": "FAQ",
       "h2": "Toyota Engine Replacement – Frequently Asked Questions",
-      "intro": "Quick, honest answers to the most common questions Toyota owners ask before comparing engine replacement prices and finding a UK specialist.",
+      "intro": "** Quick, honest answers to the most common questions Toyota owners ask before comparing engine replacement prices and finding a UK specialist.",
       "items": [
         {
           "question": "How much does a Toyota engine replacement cost in the UK?",

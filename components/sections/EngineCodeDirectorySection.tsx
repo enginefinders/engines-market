@@ -4,17 +4,81 @@ import { useMemo, useState } from "react";
 import type { EngineCodeDirectoryData } from "@/types/brand";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
-import SectionHeader from "@/components/ui/SectionHeader";
 
 type Props = {
   data: EngineCodeDirectoryData;
   bgImage?: string;
 };
 
-function ArrowIcon() {
+function parseFamilyName(name: string) {
+  const match = name.match(/^(.*?)(?:\s*\(([^)]+)\))?$/);
+  return {
+    label: (match?.[1] ?? name).trim(),
+    subtitle: match?.[2]?.trim() ?? "",
+  };
+}
+
+function ArrowIcon({ className = "h-4 w-4" }: { className?: string }) {
   return (
-    <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" aria-hidden="true">
-      <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+    <svg viewBox="0 0 24 24" className={className} fill="none" aria-hidden="true">
+      <path
+        d="M5 12h14M13 6l6 6-6 6"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function ChevronIcon({ open }: { open: boolean }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className={`h-4 w-4 transition-transform ${open ? "rotate-180 text-green-600" : "text-slate-500"}`}
+      fill="none"
+      aria-hidden="true"
+    >
+      <path
+        d="M6 9l6 6 6-6"
+        stroke="currentColor"
+        strokeWidth="2.4"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function InfoIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" aria-hidden="true">
+      <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="2" />
+      <path d="M12 10v6M12 7h.01" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function DieselIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" aria-hidden="true">
+      <rect x="3" y="7" width="18" height="13" rx="2" stroke="currentColor" strokeWidth="2" />
+      <path d="M15 7V5a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v2" stroke="currentColor" strokeWidth="2" />
+    </svg>
+  );
+}
+
+function PetrolIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" aria-hidden="true">
+      <path
+        d="M13 2 4 14h7l-1 8 10-12h-7l1-8Z"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 }
@@ -24,167 +88,303 @@ function extractCodeLabel(title: string) {
   return match?.[0] ?? title;
 }
 
-function getCodeTags(title: string) {
-  return extractCodeLabel(title)
-    .split("/")
-    .map((code) => code.trim())
-    .filter(Boolean);
-}
-
 export default function EngineCodeDirectorySection({ data, bgImage }: Props) {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [showAllCodes, setShowAllCodes] = useState(false);
-  const activeFamily = useMemo(() => data.families[activeIndex] ?? data.families[0], [activeIndex, data.families]);
-  const hasFamilies = data.families.length > 0;
-  const activeEntries = activeFamily?.entries ?? [];
+  const [activeFamilyIndex, setActiveFamilyIndex] = useState(0);
+  const [openIndices, setOpenIndices] = useState<number[]>(() => data.families.map(() => 0));
+  const [directoryOpen, setDirectoryOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const activeFamily = data.families[activeFamilyIndex] ?? data.families[0];
+  const activeOpenIndex = openIndices[activeFamilyIndex] ?? 0;
+  const familyMeta = parseFamilyName(activeFamily?.name ?? "");
+  const decorativeBgImage = bgImage ?? activeFamily?.entries[0]?.image ?? data.families[0]?.entries[0]?.image;
+
+  const filteredCodes = useMemo(() => {
+    const query = searchQuery.trim().toLowerCase();
+    if (!query) return data.directory.codes;
+
+    return data.directory.codes.filter((item) => {
+      const haystack = `${item.code} ${item.fuel}`.toLowerCase();
+      return haystack.includes(query);
+    });
+  }, [data.directory.codes, searchQuery]);
+
+  function handleOpenEntry(entryIndex: number) {
+    setOpenIndices((current) => current.map((value, index) => (index === activeFamilyIndex ? entryIndex : value)));
+  }
 
   return (
     <Section className="relative overflow-hidden bg-white">
-      {bgImage ? (
-        <div className="pointer-events-none absolute inset-0 overflow-hidden">
+      {decorativeBgImage ? (
+        <div className="pointer-events-none absolute inset-x-0 top-0 hidden overflow-hidden lg:block">
           <div
-            className="absolute right-0 top-0 h-[220px] w-[300px] opacity-[0.11] lg:h-[280px] lg:w-[390px]"
+            className="absolute right-0 top-0 h-[230px] w-[470px] opacity-[0.22]"
             style={{
-              backgroundImage: `linear-gradient(180deg, rgba(255,255,255,0.12), rgba(255,255,255,0.8)), url(${bgImage})`,
+              backgroundImage: `linear-gradient(270deg, rgba(255,255,255,0.12), rgba(255,255,255,0.9) 48%, rgba(255,255,255,0.98) 100%), url(${decorativeBgImage})`,
               backgroundSize: "contain",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "top right",
+              filter: "grayscale(1)",
             }}
           />
         </div>
       ) : null}
-      <Container>
-        <SectionHeader tag={data.tag} title={data.h2} subtitle={data.intro} />
 
-        {hasFamilies ? (
+      <Container>
+        <div className="relative z-[1] max-w-[620px]">
+          <div>
+            {data.tag ? <p className="text-label mb-0.5 text-green-700">{data.tag}</p> : null}
+            <h2>{data.h2}</h2>
+            {data.intro ? <p className="text-body mt-1.5 max-w-[560px] text-slate-700">{data.intro}</p> : null}
+          </div>
+        </div>
+
+        {data.families.length > 0 ? (
           <>
-            <div className="mt-6 flex gap-2 overflow-x-auto pb-2">
+            <div className="mt-3 flex gap-0 overflow-x-auto rounded-[10px] border border-slate-200 bg-white pb-0 lg:hidden">
               {data.families.map((family, index) => {
-                const isActive = index === activeIndex;
+                const isActive = index === activeFamilyIndex;
+                const parsed = parseFamilyName(family.name);
 
                 return (
                   <button
                     key={family.name}
                     type="button"
-                    onClick={() => setActiveIndex(index)}
-                    className={`shrink-0 rounded-xl border px-3.5 py-3 text-left transition ${
-                      isActive
-                        ? "border-[#0e2f72] bg-[#0e2f72] text-white shadow-sm"
-                        : "border-slate-200 bg-slate-50 text-slate-700 hover:border-green-200 hover:bg-green-50"
+                    onClick={() => setActiveFamilyIndex(index)}
+                    className={`min-w-[120px] shrink-0 border-r border-slate-200 px-4 py-3 text-center font-['Manrope'] text-[11.5px] font-extrabold transition last:border-r-0 lg:hidden ${
+                      isActive ? "bg-[#0d1b2e] text-white shadow-[inset_0_-3px_0_#16a34a]" : "bg-white text-[#0d1b2e]"
                     }`}
                   >
-                    <p className="text-[0.83rem] font-bold leading-tight">{family.name}</p>
+                    {parsed.label}
                   </button>
                 );
               })}
             </div>
 
-            <div className="surface-card mt-4 overflow-hidden">
-              <div className="divide-y divide-slate-200">
-                {activeEntries.slice(0, 3).map((entry) => (
-                  <article
-                    key={entry.title}
-                    className="grid gap-4 px-4 py-4 lg:grid-cols-[168px_1fr_210px] lg:items-center lg:px-4"
-                  >
-                    <div className="overflow-hidden rounded-xl border border-slate-200 bg-slate-50 p-3">
-                      <div className="mx-auto flex aspect-[4/3] max-w-[128px] items-center justify-center overflow-hidden rounded-lg bg-white p-2">
-                        {entry.image ? (
-                          <img
-                            src={entry.image}
-                            alt={entry.title}
-                            className="h-full w-full object-contain"
-                            onError={(event) => {
-                              event.currentTarget.style.display = "none";
-                            }}
-                          />
-                        ) : (
-                          <div className="h-full w-full rounded-lg bg-slate-100" />
-                        )}
-                      </div>
-                    </div>
+            <div className="mt-2.5 grid gap-2.5 lg:grid-cols-[168px_minmax(0,1fr)] lg:items-start">
+              <div className="hidden lg:block">
+                <div className="overflow-hidden rounded-[16px] border border-slate-200 bg-white shadow-[0_10px_30px_rgba(13,27,46,0.06)]">
+                  {data.families.map((family, index) => {
+                    const isActive = index === activeFamilyIndex;
+                    const parsed = parseFamilyName(family.name);
 
-                    <div>
-                      <h3>{entry.title}</h3>
-                      <div className="mt-2 flex flex-wrap gap-2">
-                        {getCodeTags(entry.title).map((tag) => (
-                          <span key={tag} className="section-chip">
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                      <p className="text-small mt-2 text-slate-600">{entry.description}</p>
-                    </div>
-
-                    <div className="lg:border-l lg:border-slate-200 lg:pl-5">
-                      <a
-                        href="#quote-form"
-                        data-quote-engine-code={extractCodeLabel(entry.title)}
-                        data-quote-context={entry.title}
-                        className="inline-flex items-center gap-2 text-sm font-bold text-green-700"
+                    return (
+                      <button
+                        key={family.name}
+                        type="button"
+                        onClick={() => setActiveFamilyIndex(index)}
+                        className={`flex w-full items-start gap-3 border-b border-slate-200 px-4 py-3 text-left last:border-b-0 ${
+                          isActive ? "bg-[#0d1b2e] text-white shadow-[inset_3px_0_0_#16a34a]" : "bg-white text-[#0d1b2e]"
+                        }`}
                       >
-                        {entry.cta}
-                        <ArrowIcon />
-                      </a>
-                    </div>
-                  </article>
-                ))}
+                        <span
+                          className={`mt-0.5 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-[10px] border ${
+                            isActive
+                              ? "border-white/15 bg-white/6 text-green-400"
+                              : "border-slate-200 bg-slate-50 text-slate-600"
+                          }`}
+                        >
+                          {index % 2 === 0 ? <DieselIcon /> : <PetrolIcon />}
+                        </span>
+                        <span className="min-w-0">
+                            <span className="block font-['Manrope'] text-[13px] font-extrabold leading-[1.2]">
+                              {parsed.label}
+                            </span>
+                          {parsed.subtitle ? (
+                            <span className={`mt-1 block text-[10.5px] font-semibold ${isActive ? "text-green-400" : "text-green-700"}`}>
+                              {parsed.subtitle}
+                            </span>
+                          ) : null}
+                        </span>
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+
+              <div className="overflow-hidden rounded-[16px] border border-slate-200 bg-white shadow-[0_10px_30px_rgba(13,27,46,0.06)]">
+                <div className="bg-[#0d1b2e] px-4 py-3 lg:hidden">
+                  <div
+                    role="heading"
+                    aria-level={3}
+                    className="font-['Manrope'] text-[15px] font-extrabold leading-[1.2] text-white"
+                  >
+                    {familyMeta.label}
+                  </div>
+                  {familyMeta.subtitle ? (
+                    <p className="mt-1 text-[11.5px] font-semibold text-green-400">{familyMeta.subtitle}</p>
+                  ) : null}
+                </div>
+
+                <div className="p-2.5 lg:p-0">
+                  {activeFamily.entries.map((entry, entryIndex) => {
+                    const isOpen = entryIndex === activeOpenIndex;
+
+                    return (
+                      <article
+                        key={entry.title}
+                        className={`overflow-hidden rounded-[12px] border ${
+                          isOpen ? "border-green-100 bg-[#fbfdfb]" : "border-slate-200 bg-white"
+                        } ${entryIndex > 0 ? "mt-1.5" : ""} lg:rounded-none lg:border-x-0 lg:border-t-0 lg:last:border-b-0`}
+                      >
+                        <button
+                          type="button"
+                          onClick={() => handleOpenEntry(entryIndex)}
+                          className={`flex w-full items-center justify-between gap-4 px-4 py-2.5 text-left ${
+                            isOpen ? "bg-[#f7fbf8]" : ""
+                          }`}
+                        >
+                          <span className={`font-['Manrope'] text-[14px] font-extrabold leading-[1.25] ${isOpen ? "text-green-700" : "text-[#0d1b2e]"}`}>
+                            {entry.title}
+                          </span>
+                          <ChevronIcon open={isOpen} />
+                        </button>
+
+                        {isOpen ? (
+                          <div className="px-4 pb-3">
+                            <p className="border-t border-slate-200 pt-2.5 text-[12.5px] leading-[1.68] text-slate-700">
+                              {entry.description}
+                            </p>
+                            <div className="mt-2.5 hidden rounded-[10px] border border-green-100 bg-[#f7fbf8] p-3 lg:block">
+                              <p className="text-[10px] font-black uppercase tracking-[0.08em] text-green-700">Common Issues</p>
+                              <ul className="mt-1.5 space-y-1 text-[11px] leading-[1.35] text-slate-600">
+                                {entry.description
+                                  .split(/[,.]/)
+                                  .map((part) => part.trim())
+                                  .filter(Boolean)
+                                  .slice(0, 4)
+                                  .map((issue) => (
+                                    <li key={issue} className="flex gap-2">
+                                      <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-green-500" />
+                                      <span>{issue}</span>
+                                    </li>
+                                  ))}
+                              </ul>
+                            </div>
+                            <a
+                              href="#quote-form"
+                              data-quote-engine-code={extractCodeLabel(entry.title)}
+                              data-quote-context={entry.title}
+                              className="mt-2.5 inline-flex items-center gap-2 text-[12.2px] font-bold leading-[1.35] text-green-600"
+                            >
+                              {entry.cta.replace(/\s*-+>\s*$/, "")}
+                              <ArrowIcon className="h-3.5 w-3.5" />
+                            </a>
+                          </div>
+                        ) : null}
+                      </article>
+                    );
+                  })}
+                </div>
               </div>
             </div>
           </>
         ) : null}
 
-        <div className="surface-card mt-5 grid gap-4 px-4 py-4 lg:grid-cols-[1fr_auto] lg:items-center">
-          <div>
-            <p className="text-label text-green-700">Engine codes covered</p>
-            {data.directory.h3 ? <h3 className="mt-1 text-[1rem]">{data.directory.h3}</h3> : null}
-            <p className="text-small mt-2 text-slate-600">{data.directory.intro}</p>
-          </div>
-
-          <a
-            href="#quote-form"
-            data-quote-engine-code={activeEntries[0] ? extractCodeLabel(activeEntries[0].title) : ""}
-            data-quote-context={activeFamily?.name ?? data.h2}
-            className="button-primary"
-          >
-            Get Quote for This Engine
-          </a>
-        </div>
-
-        <div className="mt-3">
-          {data.directory.label ? (
-            <p className="mb-2 text-[0.72rem] font-black uppercase tracking-[0.08em] text-slate-500">{data.directory.label}</p>
-          ) : null}
-          <div className={`relative overflow-hidden ${showAllCodes ? "" : "max-h-[2.9rem]"}`}>
-            <div
-              className={`flex gap-2 ${showAllCodes ? "flex-wrap" : "codes-row-peek flex-nowrap whitespace-nowrap"}`}
+        <div className="mt-2.5 hidden rounded-[12px] border border-green-200 bg-[#f6fff8] px-4 py-3 lg:block">
+          <div className="flex items-center gap-3">
+            <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-green-600 text-white">
+              <InfoIcon />
+            </span>
+            <div className="min-w-0 flex-1">
+              <p className="font-['Manrope'] text-[13px] font-extrabold leading-[1.2] text-[#0d1b2e]">Need Help Choosing?</p>
+              <p className="mt-0.5 text-[11px] leading-[1.45] text-slate-600">{data.closing}</p>
+            </div>
+            <a
+              href="#quote-form"
+              className="inline-flex shrink-0 items-center gap-2 rounded-[10px] border border-green-300 px-4 py-2 text-[10.5px] font-black uppercase tracking-[0.08em] text-green-700 transition hover:bg-white"
             >
-              {data.directory.codes.map((item, index) => (
-                <span key={`${item.code}-${item.fuel || "unknown"}-${index}`} className="code-label-chip shrink-0">
-                  {item.code}
-                </span>
-              ))}
-            </div>
-
-            {!showAllCodes ? (
-              <div className="pointer-events-none absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-white via-white/92 to-transparent" />
-            ) : null}
+              Get Help
+              <ArrowIcon className="h-3.5 w-3.5" />
+            </a>
           </div>
-
-          {data.directory.codes.length > 12 ? (
-            <div className="mt-3 flex justify-center">
-              <button
-                type="button"
-                onClick={() => setShowAllCodes((current) => !current)}
-                className="rounded-full bg-slate-100 px-4 py-2 text-[0.72rem] font-black uppercase tracking-[0.08em] text-[#0a2952] transition hover:bg-green-50 hover:text-green-700"
-              >
-                {showAllCodes ? "Show fewer codes" : "View all engine codes"}
-              </button>
-            </div>
-          ) : null}
         </div>
 
-        <div className="section-callout mt-5 px-4 py-3.5">
-          <p className="text-small text-center font-semibold text-green-900">{data.closing}</p>
+        <div className="mt-2.5 flex gap-3 rounded-[12px] border border-green-200 bg-[#f0fdf4] px-4 py-3 lg:hidden">
+          <span className="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-green-600 text-white">
+            <InfoIcon />
+          </span>
+          <p className="text-[12px] leading-[1.5] text-slate-700">{data.closing}</p>
+        </div>
+
+        <div className={`mt-2.5 overflow-hidden rounded-[12px] border border-slate-200 bg-white shadow-[0_10px_30px_rgba(13,27,46,0.05)] ${directoryOpen ? "ring-1 ring-green-100" : ""}`}>
+          <button
+            type="button"
+            onClick={() => setDirectoryOpen((current) => !current)}
+            className="flex w-full items-center justify-between gap-4 px-4 py-3.5 text-left"
+          >
+            <span className="min-w-0">
+              <span className="block font-['Manrope'] text-[14px] font-extrabold leading-[1.3] text-[#0d1b2e] lg:text-[15px]">
+                {data.directory.h3}
+              </span>
+              {data.directory.label ? (
+                <span className="mt-1 block text-[12px] leading-[1.45] text-slate-500">{data.directory.label}</span>
+              ) : null}
+            </span>
+            <ChevronIcon open={directoryOpen} />
+          </button>
+
+          {directoryOpen ? (
+            <div className="border-t border-slate-200">
+              <div className="px-3 pt-3 lg:px-4">
+                <label className="relative block">
+                  <span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">
+                    <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" aria-hidden="true">
+                      <path
+                        d="m21 21-4.35-4.35M17 10.5A6.5 6.5 0 1 1 4 10.5a6.5 6.5 0 0 1 13 0Z"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                      />
+                    </svg>
+                  </span>
+                  <input
+                    type="text"
+                    value={searchQuery}
+                    onChange={(event) => setSearchQuery(event.target.value)}
+                    placeholder="Filter engine codes..."
+                    className="h-10 w-full rounded-[9px] border border-slate-300 bg-slate-50 pl-10 pr-4 text-[13px] text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-green-300 focus:bg-white"
+                  />
+                </label>
+              </div>
+
+              <p className="border-b border-slate-200 px-4 py-2.5 text-[12.1px] leading-[1.55] text-slate-500">
+                {data.directory.intro}
+              </p>
+
+              <div className="grid grid-cols-2 gap-2 p-3 lg:grid-cols-4 lg:gap-2.5 lg:p-3">
+                {filteredCodes.map((item, index) => {
+                  const isPetrol = item.fuel.toLowerCase().includes("petrol");
+
+                  return (
+                    <a
+                      key={`${item.code}-${item.fuel}-${index}`}
+                      href="#quote-form"
+                      data-quote-engine-code={item.code}
+                      data-quote-context={item.code}
+                      className="flex items-start gap-2 rounded-[10px] border border-slate-200 bg-white px-3 py-2.5 transition hover:border-green-200 hover:bg-[#fbfdfb]"
+                    >
+                      <span
+                        className={`mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-[6px] ${
+                          isPetrol ? "bg-orange-50 text-amber-500" : "bg-blue-50 text-blue-400"
+                        }`}
+                      >
+                        {isPetrol ? <PetrolIcon /> : <DieselIcon />}
+                      </span>
+                      <span className="min-w-0">
+                        <span className="block font-['Manrope'] text-[13px] font-extrabold leading-[1.2] text-slate-700">{item.code}</span>
+                        <span className="mt-1 block text-[11px] text-slate-400">{item.fuel}</span>
+                      </span>
+                    </a>
+                  );
+                })}
+              </div>
+
+              {filteredCodes.length === 0 ? (
+                <p className="px-4 pb-4 text-[12.5px] text-slate-500">No engine codes match that filter yet.</p>
+              ) : null}
+            </div>
+          ) : null}
         </div>
       </Container>
     </Section>

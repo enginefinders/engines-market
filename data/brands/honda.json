@@ -37,7 +37,7 @@
         "subtitle": "Enter your registration number to get started.",
         "inputPlaceholder": "Registration Number",
         "buttonText": "Get Free Engine Quotes",
-        "note": ""
+        "note": "Secure enquiry — no spam, no pressure. Genuine quotes only from vetted UK Honda specialists."
       }
     },
     "howItWorks": {
@@ -645,7 +645,7 @@
         {
           "name": "L‑Series — Small Petrol",
           "era": "1.0L – 1.8L, 2001–Present",
-          "failureNote": "> Get Quote → for each engine code row Common failure points (expandable note): The L‑Series 1.5 VTEC Turbo (L15B7) is known for oil dilution in cold climates and head gasket failures . Our rebuilt units include updated piston rings, revised ECU mapping components, and upgraded head gaskets to prevent recurrence. Non‑turbo L‑Series engines are generally robust, with occasional timing chain stretch at higher mileage.",
+          "failureNote": "> Get Quote → for each engine code row Common failure points: The L‑Series 1.5 VTEC Turbo (L15B7) is known for oil dilution in cold climates and head gasket failures . Our rebuilt units include updated piston rings, revised ECU mapping components, and upgraded head gaskets to prevent recurrence. Non‑turbo L‑Series engines are generally robust, with occasional timing chain stretch at higher mileage.",
           "engines": [
             {
               "code": "P10A2",
@@ -697,7 +697,7 @@
         {
           "name": "K‑Series — Performance & VTEC",
           "era": "2.0L – 2.4L, 2001–Present",
-          "failureNote": "> Get Quote → for each engine code row Common failure points (expandable note): K‑Series engines are generally bulletproof, but VTC actuators can fail (causing cold‑start rattle), and timing chain tensioners wear. Rebuilt units include upgraded timing components and VTC actuators with revised oil control valves.",
+          "failureNote": "> Get Quote → for each engine code row Common failure points: K‑Series engines are generally bulletproof, but VTC actuators can fail (causing cold‑start rattle), and timing chain tensioners wear. Rebuilt units include upgraded timing components and VTC actuators with revised oil control valves.",
           "engines": [
             {
               "code": "K20A2 / K20A3",
@@ -731,7 +731,7 @@
         {
           "name": "N‑Series — i‑DTEC Diesel",
           "era": "1.6L – 2.2L, 2007–Present",
-          "failureNote": "> Get Quote → for each engine code row Common failure points (expandable note): N‑Series i‑DTEC engines are known for DPF clogging on short journeys, injector failure, and turbocharger issues. Rebuilt units include DPF clean/delete options, tested injectors, and refurbished turbochargers with upgraded seals.",
+          "failureNote": "> Get Quote → for each engine code row Common failure points: N‑Series i‑DTEC engines are known for DPF clogging on short journeys, injector failure, and turbocharger issues. Rebuilt units include DPF clean/delete options, tested injectors, and refurbished turbochargers with upgraded seals.",
           "engines": [
             {
               "code": "N16A",
@@ -765,7 +765,7 @@
         {
           "name": "J‑Series — V6 Petrol",
           "era": "3.0L – 3.7L, 1999–Present",
-          "failureNote": "> Get Quote → for each engine code row Common failure points (expandable note): J‑Series V6 engines — especially the J35Y — are under NHTSA investigation for connecting rod bearing failure due to manufacturing defects in crankshaft machining . Our rebuilt units include new crankshafts with properly ground crank pins and upgraded bearings throughout.",
+          "failureNote": "> Get Quote → for each engine code row Common failure points: J‑Series V6 engines — especially the J35Y — are under NHTSA investigation for connecting rod bearing failure due to manufacturing defects in crankshaft machining . Our rebuilt units include new crankshafts with properly ground crank pins and upgraded bearings throughout.",
           "engines": [
             {
               "code": "J30A / J32A",
@@ -799,7 +799,7 @@
         {
           "name": "B‑Series & D‑Series — Classic VTEC",
           "era": "1.5L – 1.8L, 1988–2001",
-          "failureNote": "> Get Quote → for each engine code row Common failure points (expandable note): Classic B/D‑Series engines are robust but parts availability is becoming limited. Common issues include distributor failure, oil leaks from VTEC solenoid gaskets, and worn timing belts. Rebuilt units include OEM‑spec or upgraded timing belt kits and new seals throughout",
+          "failureNote": "> Get Quote → for each engine code row Common failure points: Classic B/D‑Series engines are robust but parts availability is becoming limited. Common issues include distributor failure, oil leaks from VTEC solenoid gaskets, and worn timing belts. Rebuilt units include OEM‑spec or upgraded timing belt kits and new seals throughout",
           "engines": [
             {
               "code": "D15 / D16",
@@ -1292,7 +1292,99 @@
       "tag": "Complete Honda Engines List",
       "h2": "Honda Engines by Fuel Type",
       "intro": "Choose your Honda engine by fuel type to compare realistic replacement prices, known brand‑wide issues, and UK specialist supply – from high‑revving VTEC petrols to diesel workhorses and modern e:HEV hybrids.",
-      "items": [],
+      "items": [
+        {
+          "title": "Honda Diesel Engines",
+          "description": "Honda diesel engines cover many of the brand's highest-mileage UK models. Replacement demand is usually driven by timing system wear, injector and turbo faults, plus EGR or DPF-related damage once repeat short-journey use starts affecting reliability.",
+          "descriptor": "High-mileage motorway and SUV applications",
+          "families": [
+            "N‑Series — i‑DTEC Diesel"
+          ],
+          "foundIn": [
+            "Honda Accord Engines",
+            "Honda Acty Engines",
+            "Honda Airwave Engines",
+            "Honda Amaze Engines"
+          ],
+          "knownFor": [
+            "DPF clogging",
+            "turbo actuator motor failure",
+            "EGR valve sticking",
+            "Timing chain stretch"
+          ],
+          "typicalModels": [
+            "Honda Accord Engines",
+            "Honda Acty Engines",
+            "Honda Airwave Engines",
+            "Honda Amaze Engines"
+          ],
+          "importantNotes": [
+            "Short-journey use increases DPF, EGR, and oil-dilution risk on many diesel engines.",
+            "A documented service history matters more on diesel replacements because injector, turbo, and timing faults often build gradually."
+          ],
+          "cta": "Compare Honda diesel engine prices"
+        },
+        {
+          "title": "Honda Petrol Engines",
+          "description": "Honda petrol engines span everything from core daily-driver models to higher-output performance variants. Most replacement enquiries start with timing chain noise, oil consumption, cooling-system failure, or internal wear that makes a warranted replacement more sensible than repeated repairs.",
+          "descriptor": "Core passenger-car and performance applications",
+          "families": [
+            "L‑Series — Small Petrol",
+            "K‑Series — Performance & VTEC",
+            "J‑Series — V6 Petrol",
+            "B‑Series & D‑Series — Classic VTEC"
+          ],
+          "foundIn": [
+            "Honda Accord Engines",
+            "Honda Acty Engines",
+            "Honda Airwave Engines",
+            "Honda Amaze Engines"
+          ],
+          "knownFor": [
+            "Wet timing belt disintegration",
+            "oil pickup blockage",
+            "turbo bearing failure",
+            "Piston ring land cracking"
+          ],
+          "typicalModels": [
+            "Honda Accord Engines",
+            "Honda Acty Engines",
+            "Honda Airwave Engines",
+            "Honda Amaze Engines"
+          ],
+          "importantNotes": [
+            "Cold-start rattles, overheating history, and oil use are the biggest warning signs before a petrol engine replacement becomes necessary.",
+            "Direct-injection petrol engines often need specialist attention for carbon build-up alongside the main mechanical repair."
+          ],
+          "cta": "Compare Honda petrol engine prices"
+        },
+        {
+          "title": "Honda Hybrid Engines",
+          "description": "Honda hybrid powertrains combine combustion engines with electric assistance across newer electrified models. Replacement demand is lower than traditional petrol or diesel units, but generator-engine faults, inverter issues, cooling-system failures, and calibration-sensitive repairs still require specialist support.",
+          "descriptor": "Electrified models with combustion backup",
+          "families": [
+            "LDA3"
+          ],
+          "foundIn": [
+            "Honda Accord Engines",
+            "Honda Acty Engines",
+            "Honda Airwave Engines",
+            "Honda Amaze Engines"
+          ],
+          "knownFor": [],
+          "typicalModels": [
+            "Honda Accord Engines",
+            "Honda Acty Engines",
+            "Honda Airwave Engines",
+            "Honda Amaze Engines"
+          ],
+          "importantNotes": [
+            "Hybrid faults often need both mechanical and high-voltage diagnosis, so replacement decisions should be made by specialists familiar with the full system.",
+            "Battery cooling, inverter health, and software calibration are just as important as the combustion-engine condition on hybrid models."
+          ],
+          "cta": "Compare Honda hybrid engine prices"
+        }
+      ],
       "closing": "Not sure which fuel type your Honda has? Enter your registration number above to instantly identify your model, engine code, fuel system and compatible replacement options – all backed by a minimum 12‑month unlimited mileage warranty from UK Honda specialists."
     },
     "engineCodeDirectory": {
@@ -1404,7 +1496,7 @@
             {
               "title": "B16A / B16B / B18C 1.6L – 1.8L Petrol",
               "image": "/images/brands/honda/engines/honda-b16a-engine.webp",
-              "description": "Found in the Civic VTi (EK9, 1997–2000), Civic VTi (EG6, 1992–1995), Integra Type R (DC2, 1995–2001), and CRX (1989–1991). These high‑revving DOHC VTEC engines are reliable, but parts availability is becoming limited. Common issues include distributor failure, oil leaks from VTEC solenoid gaskets, and worn timing belts. Rebuilt B‑series units include new distributor components, a full gasket set, a new timing belt, and replacement valve stem seals. Closing line (Block A): Can’t find your engine code listed above? Use our full Honda engine code directory below — every code from the last 35 years — or enter your registration number for an instant match to the correct replacement engine with warranty.",
+              "description": "Found in the Civic VTi (EK9, 1997–2000), Civic VTi (EG6, 1992–1995), Integra Type R (DC2, 1995–2001), and CRX (1989–1991). These high‑revving DOHC VTEC engines are reliable, but parts availability is becoming limited. Common issues include distributor failure, oil leaks from VTEC solenoid gaskets, and worn timing belts. Rebuilt B‑series units include new distributor components, a full gasket set, a new timing belt, and replacement valve stem seals.",
               "cta": "Compare B16A Honda engine prices"
             }
           ]
@@ -1977,57 +2069,57 @@
     "faq": {
       "tag": "FAQ",
       "h2": "Honda Engine Replacement – Frequently Asked Questions",
-      "intro": "Quick, honest answers to the most common questions Honda owners ask before comparing engine replacement prices and finding a UK specialist.",
+      "intro": "** Quick, honest answers to the most common questions Honda owners ask before comparing engine replacement prices and finding a UK specialist.",
       "items": [
         {
           "question": "How much does a Honda engine replacement cost in the UK?",
-          "answer": "A reconditioned Honda engine typically costs between £1,800 and £4,200 depending on the engine family – a 1.3 L13A for a Jazz might cost £1,600–£2,200, while a K20C1 for a Civic Type R can exceed £4,000 for a fully rebuilt unit. Supply and fit adds £500–£1,000 to the price, with main dealer fitting often double that of a specialist. The total cost for a fitted, warrantied replacement engine generally lands between £2,200 and £5,200. For the most accurate pricing, compare quotes across our network of UK rebuilders.",
-          "cta": "Compare Honda engine replacement prices now"
+          "answer": "A reconditioned Honda engine typically costs between £1,800 and £4,200 depending on the engine family – a 1.3 L13A for a Jazz might cost £1,600–£2,200, while a K20C1 for a Civic Type R can exceed £4,000 for a fully rebuilt unit. Supply and fit adds £500–£1,000 to the price, with main dealer fitting often double that of a specialist. The total cost for a fitted, warrantied replacement engine generally lands between £2,200 and £5,200. For the most accurate pricing, compare quotes across our network of UK rebuilders. **",
+          "cta": "Compare Honda engine replacement prices now**"
         },
         {
           "question": "What affects the cost of a Honda engine replacement?",
-          "answer": "Four key factors drive the price: engine size and complexity (a K20 VTEC costs more than a D14), condition (rebuilt/remanufactured costs more than used, but offers a warranty), vehicle age and bay complexity (a modern e:HEV hybrid takes longer than a 2005 Civic), and whether you choose supply‑only or full supply and fit. Labour rates also vary by region – expect to pay 20–30% more for fitting in London and the South East compared to the North of England. Our platform shows you transparent, all‑in quotes from UK Honda specialists.",
-          "cta": "Get quotes from UK Honda engine specialists"
+          "answer": "Four key factors drive the price: engine size and complexity (a K20 VTEC costs more than a D14), condition (rebuilt/remanufactured costs more than used, but offers a warranty), vehicle age and bay complexity (a modern e:HEV hybrid takes longer than a 2005 Civic), and whether you choose supply‑only or full supply and fit. Labour rates also vary by region – expect to pay 20–30% more for fitting in London and the South East compared to the North of England. Our platform shows you transparent, all‑in quotes from UK Honda specialists. **",
+          "cta": "Get quotes from UK Honda engine specialists**"
         },
         {
           "question": "Is it worth replacing the engine in my Honda?",
-          "answer": "In most cases, yes – especially if the chassis, gearbox and bodywork are in good condition. A properly rebuilt Honda engine with upgraded components (such as improved piston rings on a 1.5 VTEC Turbo or a revised timing chain kit on a 2.2 i-DTEC) will often outlast the original. If your Honda is worth £2,000+ and the rest of the car is solid, replacement is almost always more cost‑effective than buying another used vehicle with an unknown history. For low‑value cars (under £1,500), a warranted used engine can be a sensible budget option.",
-          "cta": "Compare rebuilt vs used Honda engine prices"
+          "answer": "In most cases, yes – especially if the chassis, gearbox and bodywork are in good condition. A properly rebuilt Honda engine with upgraded components (such as improved piston rings on a 1.5 VTEC Turbo or a revised timing chain kit on a 2.2 i-DTEC) will often outlast the original. If your Honda is worth £2,000+ and the rest of the car is solid, replacement is almost always more cost‑effective than buying another used vehicle with an unknown history. For low‑value cars (under £1,500), a warranted used engine can be a sensible budget option. **",
+          "cta": "Compare rebuilt vs used Honda engine prices**"
         },
         {
           "question": "What's included in a Honda engine supply and fit service?",
-          "answer": "A complete supply and fit service includes sourcing the correct replacement engine, removing the old unit, installing the replacement with new fluids, filters, and often a new timing belt/chain, water pump, and ancillary gaskets. Most specialist quotes also include a workmanship warranty (typically 12 months), a short road test after installation, and environmentally compliant disposal of your old engine. Fitting alone usually costs £500–£1,000 depending on the model. Always confirm exactly what is included before booking.",
-          "cta": "Compare Honda engine supply and fit deals"
+          "answer": "A complete supply and fit service includes sourcing the correct replacement engine, removing the old unit, installing the replacement with new fluids, filters, and often a new timing belt/chain, water pump, and ancillary gaskets. Most specialist quotes also include a workmanship warranty (typically 12 months), a short road test after installation, and environmentally compliant disposal of your old engine. Fitting alone usually costs £500–£1,000 depending on the model. Always confirm exactly what is included before booking. **",
+          "cta": "Compare Honda engine supply and fit deals**"
         },
         {
           "question": "How long does a Honda engine replacement take?",
-          "answer": "For common Honda models like a Civic (1.8 R18A), Jazz (1.3 L13A) or CR‑V (2.2 i-DTEC), a like‑for‑like engine swap typically takes 3–5 working days from booking to handover. More complex models such as a 1.0 VTEC Turbo Civic (P10A2) or any e:HEV hybrid may take 5–7 days due to additional ancillaries and calibration work. The biggest variable is engine availability – our network of UK suppliers stocks the most commonly replaced Honda engine codes, so lead times are usually minimised. Ask your chosen supplier for their exact current turnaround when you receive your quotes.",
-          "cta": "Get quotes and check lead times for your Honda"
+          "answer": "For common Honda models like a Civic (1.8 R18A), Jazz (1.3 L13A) or CR‑V (2.2 i-DTEC), a like‑for‑like engine swap typically takes 3–5 working days from booking to handover. More complex models such as a 1.0 VTEC Turbo Civic (P10A2) or any e:HEV hybrid may take 5–7 days due to additional ancillaries and calibration work. The biggest variable is engine availability – our network of UK suppliers stocks the most commonly replaced Honda engine codes, so lead times are usually minimised. Ask your chosen supplier for their exact current turnaround when you receive your quotes. **",
+          "cta": "Get quotes and check lead times for your Honda**"
         },
         {
           "question": "Do reconditioned Honda engines come with warranty?",
-          "answer": "Yes, every reconditioned, rebuilt or remanufactured Honda engine supplied through EngineMarket carries a minimum 12‑month unlimited mileage warranty. Many suppliers offer extended 24‑month coverage on premium rebuilds (such as K20 and K24 performance engines). Standard warranty covers major internal components: crankshaft, connecting rods, pistons, piston rings, camshafts, cylinder head, timing chain/belt, oil pump and water pump. Consumables and external ancillaries (alternator, starter, turbo) are typically excluded unless explicitly stated – always confirm exact terms with your chosen specialist before proceeding.",
-          "cta": "Find reconditioned Honda engines with comprehensive warranty cover"
+          "answer": "Yes, every reconditioned, rebuilt or remanufactured Honda engine supplied through EngineMarket carries a minimum 12‑month unlimited mileage warranty. Many suppliers offer extended 24‑month coverage on premium rebuilds (such as K20 and K24 performance engines). Standard warranty covers major internal components: crankshaft, connecting rods, pistons, piston rings, camshafts, cylinder head, timing chain/belt, oil pump and water pump. Consumables and external ancillaries (alternator, starter, turbo) are typically excluded unless explicitly stated – always confirm exact terms with your chosen specialist before proceeding. **",
+          "cta": "Find reconditioned Honda engines with comprehensive warranty cover**"
         },
         {
           "question": "Should I choose a used or reconditioned Honda engine?",
-          "answer": "Used engines are cheaper upfront (typically £800–£2,200) and are a good temporary fix or a sensible choice if you plan to sell the car within 12 months. However, they come with no rebuild history and may carry the same original design weaknesses. Reconditioned engines cost more (typically £1,800–£4,200) but include new piston rings, bearings, seals, a timing chain/belt kit, and a 12+ month warranty – plus upgraded components where known weaknesses exist. For long‑term ownership or if your Honda has a failure‑prone engine (such as the 1.5 VTEC Turbo with oil dilution or the 1.0 wet belt turbo), a reconditioned unit is strongly recommended.",
-          "cta": "Compare used vs recon Honda engine prices"
+          "answer": "Used engines are cheaper upfront (typically £800–£2,200) and are a good temporary fix or a sensible choice if you plan to sell the car within 12 months. However, they come with no rebuild history and may carry the same original design weaknesses. Reconditioned engines cost more (typically £1,800–£4,200) but include new piston rings, bearings, seals, a timing chain/belt kit, and a 12+ month warranty – plus upgraded components where known weaknesses exist. For long‑term ownership or if your Honda has a failure‑prone engine (such as the 1.5 VTEC Turbo with oil dilution or the 1.0 wet belt turbo), a reconditioned unit is strongly recommended. **",
+          "cta": "Compare used vs recon Honda engine prices**"
         },
         {
           "question": "Where can I find Honda engine specialists near me?",
-          "answer": "EngineMarket connects you with a UK‑wide network of Honda engine specialists, from independent rebuilders in the Midlands (historically a hub for Japanese engine importers) to accredited garages in the South East, North West and Scotland. Enter your registration number and we'll match you with nearby suppliers who stock your specific engine code and offer fitting. If no local specialist is available for your particular engine, nationwide delivery and mobile mechanic fitting options are also available through our network.",
-          "cta": "Find Honda engine specialists near you"
+          "answer": "EngineMarket connects you with a UK‑wide network of Honda engine specialists, from independent rebuilders in the Midlands (historically a hub for Japanese engine importers) to accredited garages in the South East, North West and Scotland. Enter your registration number and we'll match you with nearby suppliers who stock your specific engine code and offer fitting. If no local specialist is available for your particular engine, nationwide delivery and mobile mechanic fitting options are also available through our network. **",
+          "cta": "Find Honda engine specialists near you**"
         },
         {
           "question": "What are the most common Honda engine failures?",
-          "answer": "The most common failures driving Honda engine replacement in the UK are: 1) L15B7 1.5 VTEC Turbo oil dilution (Civic, CR-V, Accord 2017–2022) – fuel in oil leading to chain stretch and turbo wear; 2) P10A2/A6 1.0 VTEC Turbo wet belt disintegration (Civic, Jazz, HR-V 2018–2023) – belt rubber blocks oil pickup; 3) N22A/B 2.2 i-DTEC timing chain stretch and injector leakage (Accord, CR-V, Civic 2003–2017); 4) K20/K24 VTC actuator rattle and chain stretch (Civic Type R, Accord, CR-V, 2001–present); and 5) L13A/L15A piston ring wear and oil consumption (Jazz, Civic 2002–2020). Early detection rarely prevents these from becoming catastrophic – replacement is the most common outcome.",
-          "cta": "Get quotes for your specific Honda engine failure"
+          "answer": "The most common failures driving Honda engine replacement in the UK are: 1) **L15B7 1.5 VTEC Turbo oil dilution** (Civic, CR-V, Accord 2017–2022) – fuel in oil leading to chain stretch and turbo wear; 2) **P10A2/A6 1.0 VTEC Turbo wet belt disintegration** (Civic, Jazz, HR-V 2018–2023) – belt rubber blocks oil pickup; 3) **N22A/B 2.2 i-DTEC timing chain stretch and injector leakage** (Accord, CR-V, Civic 2003–2017); 4) **K20/K24 VTC actuator rattle and chain stretch** (Civic Type R, Accord, CR-V, 2001–present); and 5) **L13A/L15A piston ring wear and oil consumption** (Jazz, Civic 2002–2020). Early detection rarely prevents these from becoming catastrophic – replacement is the most common outcome. **",
+          "cta": "Get quotes for your specific Honda engine failure**"
         },
         {
           "question": "How can I get the best price on a Honda engine?",
-          "answer": "Always compare at least three quotes – prices for the same engine code can vary by £1,000 or more between suppliers. Consider a used engine if you have a very tight budget (under £1,200) or are selling the car soon; choose a reconditioned or rebuilt engine for long‑term ownership. Ask for supply‑only if you have a trusted independent garage – this can save £300–£500 compared to a bundled supply and fit quote from a specialist further away. Check whether the quoted price includes delivery, fitting, VAT, and any warranty extension fees. Our free comparison tool does the hard work for you.",
-          "cta": "Use our free tool to compare Honda engine prices and save"
+          "answer": "Always compare at least three quotes – prices for the same engine code can vary by £1,000 or more between suppliers. Consider a used engine if you have a very tight budget (under £1,200) or are selling the car soon; choose a reconditioned or rebuilt engine for long‑term ownership. Ask for supply‑only if you have a trusted independent garage – this can save £300–£500 compared to a bundled supply and fit quote from a specialist further away. Check whether the quoted price includes delivery, fitting, VAT, and any warranty extension fees. Our free comparison tool does the hard work for you. ** **Closing note:** All answers above are based on UK marketplace data and Honda specialist feedback. Prices are indicative ranges – use our live quote comparison for exact, current pricing on your specific Honda model and engine code.",
+          "cta": "Use our free tool to compare Honda engine prices and save**"
         }
       ]
     },

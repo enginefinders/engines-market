@@ -1,128 +1,250 @@
 "use client";
 
-import type { HeroSectionData } from "@/types/brand";
-import Container from "@/components/ui/Container";
-import { Fragment, useState, type FormEvent } from "react";
+import type { HeroSectionData, ModelsSectionData } from "@/types/brand";
+import { useState, type FormEvent } from "react";
+
+type HeroModelCard = ModelsSectionData["cards"][number];
 
 type HeroSectionProps = {
   data: HeroSectionData;
   bgImage: string;
+  modelCards?: HeroModelCard[];
 };
-
-function TagIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none">
-      <path
-        d="M3.5 11.2V5.8c0-.8.7-1.5 1.5-1.5h5.4c.4 0 .8.2 1.1.5l8.1 8.1c.6.6.6 1.6 0 2.2l-4.7 4.7c-.6.6-1.6.6-2.2 0L4 12.3c-.3-.3-.5-.7-.5-1.1Z"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinejoin="round"
-      />
-      <circle cx="8" cy="8" r="1.3" fill="currentColor" />
-    </svg>
-  );
-}
-
-function DocumentSearchIcon() {
-  return (
-    <svg viewBox="0 0 64 64" className="h-9 w-9" fill="none">
-      <path d="M18 8h22l10 10v30H18V8Z" stroke="currentColor" strokeWidth="3" />
-      <path d="M40 8v12h12" stroke="currentColor" strokeWidth="3" />
-      <path d="M25 30h16M25 38h10" stroke="currentColor" strokeWidth="3" />
-      <circle cx="43" cy="45" r="8" stroke="currentColor" strokeWidth="3" />
-      <path d="m49 51 6 6" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
-    </svg>
-  );
-}
 
 function ToolIcon() {
   return (
-    <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none">
-      <path d="m14 6 4 4-8 8H6v-4l8-8Z" stroke="currentColor" strokeWidth="2" />
-      <path d="m16 4 4 4" stroke="currentColor" strokeWidth="2" />
+    <svg viewBox="0 0 24 24" className="h-[15px] w-[15px]" fill="none" aria-hidden="true">
+      <path
+        d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 }
 
 function ShieldIcon() {
   return (
-    <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none">
-      <path d="M12 3 20 7v5c0 5-3 8-8 10-5-2-8-5-8-10V7l8-4Z" stroke="currentColor" strokeWidth="2" />
-      <path d="m8.5 12 2.2 2.2 4.8-5" stroke="currentColor" strokeWidth="2" />
+    <svg viewBox="0 0 24 24" className="h-[15px] w-[15px]" fill="none" aria-hidden="true">
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" strokeWidth="2" />
+      <path d="m9 12 2 2 4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 }
 
 function DeliveryIcon() {
   return (
-    <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none">
-      <path d="M3 7h11v10H3V7Z" stroke="currentColor" strokeWidth="2" />
-      <path d="M14 11h4l3 3v3h-7v-6Z" stroke="currentColor" strokeWidth="2" />
-      <circle cx="7" cy="18" r="2" stroke="currentColor" strokeWidth="2" />
-      <circle cx="18" cy="18" r="2" stroke="currentColor" strokeWidth="2" />
-    </svg>
-  );
-}
-
-function BoltIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor">
-      <path d="M13 2 4 14h7l-1 8 10-13h-7l1-7Z" />
+    <svg viewBox="0 0 24 24" className="h-[15px] w-[15px]" fill="none" aria-hidden="true">
+      <rect x="1" y="3" width="15" height="13" rx="1" stroke="currentColor" strokeWidth="2" />
+      <path d="M16 8h4l3 5v4h-7V8z" stroke="currentColor" strokeWidth="2" />
+      <circle cx="5.5" cy="18.5" r="2.5" stroke="currentColor" strokeWidth="2" />
+      <circle cx="18.5" cy="18.5" r="2.5" stroke="currentColor" strokeWidth="2" />
     </svg>
   );
 }
 
 function UsersIcon() {
   return (
-    <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none">
-      <path d="M16 11a4 4 0 1 0-8 0" stroke="currentColor" strokeWidth="2" />
-      <path d="M4 21c1-5 15-5 16 0" stroke="currentColor" strokeWidth="2" />
-      <path d="M18 10a3 3 0 0 1 3 3M6 10a3 3 0 0 0-3 3" stroke="currentColor" strokeWidth="2" />
+    <svg viewBox="0 0 24 24" className="h-[15px] w-[15px]" fill="none" aria-hidden="true">
+      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" strokeWidth="2" />
+      <circle cx="9" cy="7" r="4" stroke="currentColor" strokeWidth="2" />
+      <path d="M23 21v-2a4 4 0 0 0-3-3.87" stroke="currentColor" strokeWidth="2" />
+      <path d="M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" strokeWidth="2" />
     </svg>
   );
 }
 
-function CheckBadgeIcon() {
+function LockIcon() {
   return (
-    <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none">
-      <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="2" />
-      <path d="m8.5 12 2.2 2.2 4.8-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+    <svg viewBox="0 0 24 24" className="h-[13px] w-[13px]" fill="none" aria-hidden="true">
+      <rect x="3" y="11" width="18" height="11" rx="2" ry="2" stroke="currentColor" strokeWidth="2" />
+      <path d="M7 11V7a5 5 0 0 1 10 0v4" stroke="currentColor" strokeWidth="2" />
+    </svg>
+  );
+}
+
+function PhoneIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-3 w-3" fill="none" aria-hidden="true">
+      <path
+        d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.37 19a19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-2.93-8.38A2 2 0 0 1 4.11 2.5h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 }
 
 function UkFlagIcon() {
   return (
-    <svg viewBox="0 0 36 24" className="h-6 w-9 rounded-sm" aria-hidden="true">
-      <rect width="36" height="24" fill="#012169" />
-      <path d="M0 0 36 24M36 0 0 24" stroke="#fff" strokeWidth="5" />
-      <path d="M0 0 36 24M36 0 0 24" stroke="#C8102E" strokeWidth="3" />
-      <path d="M18 0v24M0 12h36" stroke="#fff" strokeWidth="8" />
-      <path d="M18 0v24M0 12h36" stroke="#C8102E" strokeWidth="4.5" />
+    <svg viewBox="0 0 22 14" className="h-[14px] w-[22px] rounded-[2px]" aria-hidden="true">
+      <rect width="22" height="14" fill="#012169" />
+      <path d="M0 0 22 14M22 0 0 14" stroke="#fff" strokeWidth="3.5" />
+      <path d="M0 0 22 14M22 0 0 14" stroke="#C8102E" strokeWidth="2" />
+      <path d="M11 0v14M0 7h22" stroke="#fff" strokeWidth="4.5" />
+      <path d="M11 0v14M0 7h22" stroke="#C8102E" strokeWidth="2.8" />
     </svg>
   );
 }
 
-const badgeIcons = [ToolIcon, ShieldIcon, DeliveryIcon];
-
-function stripTrailingArrow(text: string) {
-  return text.replace(/\s*(?:->|\u2192)\s*$/, "");
+function CarIconOne() {
+  return (
+    <svg viewBox="0 0 60 26" className="h-[22px] w-[38px] md:h-[26px] md:w-[44px]" fill="none" aria-hidden="true">
+      <rect x="2" y="13" width="56" height="9" rx="2" stroke="currentColor" strokeWidth="1.3" />
+      <rect x="8" y="6" width="38" height="10" rx="2" stroke="currentColor" strokeWidth="1.3" />
+      <rect x="12" y="3" width="12" height="6" rx="1.5" stroke="currentColor" strokeWidth="1.3" />
+      <rect x="26" y="3" width="16" height="6" rx="1.5" stroke="currentColor" strokeWidth="1.3" />
+      <circle cx="14" cy="22" r="3.5" stroke="currentColor" strokeWidth="1.3" />
+      <circle cx="46" cy="22" r="3.5" stroke="currentColor" strokeWidth="1.3" />
+    </svg>
+  );
 }
 
-function DividerDot() {
-  return <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-green-600" aria-hidden="true" />;
+function CarIconTwo() {
+  return (
+    <svg viewBox="0 0 60 26" className="h-[22px] w-[38px] md:h-[26px] md:w-[44px]" fill="none" aria-hidden="true">
+      <rect x="2" y="13" width="56" height="9" rx="2" stroke="currentColor" strokeWidth="1.3" />
+      <path d="M7 13Q9 5 16 4h28q8 1 11 9" stroke="currentColor" strokeWidth="1.3" />
+      <rect x="10" y="5" width="12" height="8" rx="1.5" stroke="currentColor" strokeWidth="1.3" />
+      <rect x="24" y="5" width="14" height="8" rx="1.5" stroke="currentColor" strokeWidth="1.3" />
+      <rect x="40" y="5" width="10" height="8" rx="1.5" stroke="currentColor" strokeWidth="1.3" />
+      <circle cx="14" cy="22" r="3.5" stroke="currentColor" strokeWidth="1.3" />
+      <circle cx="46" cy="22" r="3.5" stroke="currentColor" strokeWidth="1.3" />
+    </svg>
+  );
+}
+
+function CarIconThree() {
+  return (
+    <svg viewBox="0 0 60 26" className="h-[22px] w-[38px] md:h-[26px] md:w-[44px]" fill="none" aria-hidden="true">
+      <rect x="2" y="13" width="56" height="9" rx="2" stroke="currentColor" strokeWidth="1.3" />
+      <path d="M6 13Q10 4 18 3h24q10 1 14 10" stroke="currentColor" strokeWidth="1.3" />
+      <rect x="10" y="4" width="13" height="9" rx="2" stroke="currentColor" strokeWidth="1.3" />
+      <rect x="25" y="4" width="16" height="9" rx="2" stroke="currentColor" strokeWidth="1.3" />
+      <rect x="43" y="4" width="10" height="9" rx="2" stroke="currentColor" strokeWidth="1.3" />
+      <circle cx="14.5" cy="22" r="3.5" stroke="currentColor" strokeWidth="1.3" />
+      <circle cx="45.5" cy="22" r="3.5" stroke="currentColor" strokeWidth="1.3" />
+    </svg>
+  );
+}
+
+function EngineWatermark() {
+  return (
+    <svg viewBox="0 0 400 320" className="h-auto w-[90%] fill-[#0d1b2e] opacity-[0.04]" aria-hidden="true">
+      <rect x="60" y="100" width="280" height="160" rx="8" />
+      <rect x="80" y="60" width="40" height="50" rx="4" />
+      <rect x="130" y="60" width="40" height="50" rx="4" />
+      <rect x="180" y="60" width="40" height="50" rx="4" />
+      <rect x="230" y="60" width="40" height="50" rx="4" />
+      <rect x="280" y="60" width="40" height="50" rx="4" />
+      <path d="M80 65Q100 40 120 65" />
+      <path d="M130 65Q150 40 170 65" />
+      <path d="M180 65Q200 40 220 65" />
+      <path d="M230 65Q250 40 270 65" />
+      <path d="M280 65Q300 40 320 65" />
+      <rect x="80" y="255" width="240" height="30" rx="6" />
+      <circle cx="40" cy="150" r="25" />
+      <circle cx="40" cy="150" r="14" />
+      <circle cx="40" cy="150" r="5" />
+      <circle cx="360" cy="150" r="25" />
+      <circle cx="360" cy="150" r="14" />
+      <circle cx="360" cy="150" r="5" />
+      <rect x="60" y="100" width="30" height="100" rx="4" />
+      <rect x="110" y="80" width="180" height="30" rx="6" />
+      <circle cx="75" cy="115" r="4" />
+      <circle cx="75" cy="140" r="4" />
+      <circle cx="75" cy="165" r="4" />
+      <circle cx="75" cy="190" r="4" />
+      <circle cx="325" cy="115" r="4" />
+      <circle cx="325" cy="140" r="4" />
+      <circle cx="325" cy="165" r="4" />
+      <circle cx="325" cy="190" r="4" />
+      <rect x="90" y="108" width="220" height="18" rx="4" opacity="0.6" />
+      <rect x="90" y="174" width="220" height="18" rx="4" opacity="0.6" />
+      <circle cx="310" cy="108" r="12" />
+      <rect x="95" y="100" width="5" height="40" rx="2" />
+    </svg>
+  );
+}
+
+const badgeIcons = [ToolIcon, ShieldIcon, DeliveryIcon, UsersIcon];
+const carIcons = [CarIconOne, CarIconTwo, CarIconThree];
+
+function splitHeadline(title: string) {
+  const normalizedTitle = title.replace(/[–—]/g, "-");
+  const match = normalizedTitle.match(/^(.*?)(?:\s+-\s+)(.+)$/);
+  if (!match) {
+    return { lead: title, accent: "" };
+  }
+
+  return {
+    lead: match[1].trim(),
+    accent: match[2].trim(),
+  };
 }
 
 function getTickerItems(ticker: string) {
   return ticker
-    .split("-")
+    .split(/\s+-\s+/)
     .map((item) => item.trim())
     .filter(Boolean);
 }
 
-export default function HeroSection({ data, bgImage }: HeroSectionProps) {
+function inferBrandName(data: HeroSectionData) {
+  const headingMatch = data.h1.match(/^(.*?)\s+Engine Replacement/i);
+  if (headingMatch) {
+    return headingMatch[1].trim();
+  }
+
+  const formMatch = data.form.heading.match(/^Find Your\s+(.*?)\s+Engine$/i);
+  if (formMatch) {
+    return formMatch[1].trim();
+  }
+
+  return "your";
+}
+
+function stripBrandFromModel(modelName: string, brandName: string) {
+  return modelName.replace(new RegExp(`^${brandName}\\s+`, "i"), "").trim();
+}
+
+function secureNote(data: HeroSectionData, brandName: string) {
+  if (data.form.note.trim()) {
+    return data.form.note;
+  }
+
+  return `Secure enquiry - no spam, no pressure. Genuine quotes only from vetted UK ${brandName} specialists.`;
+}
+
+function buttonText(data: HeroSectionData, brandName: string) {
+  if (data.form.buttonText.trim()) {
+    return data.form.buttonText;
+  }
+
+  return `Get Free ${brandName} Engine Quotes`;
+}
+
+function buildHeroCards(modelCards: HeroModelCard[]) {
+  const preferred = [
+    modelCards.find((card) => /defender/i.test(card.slug)),
+    modelCards.find((card) => /discovery/i.test(card.slug)),
+    modelCards.find((card) => /range-rover/i.test(card.slug)),
+  ].filter(Boolean) as HeroModelCard[];
+
+  return (preferred.length >= 3 ? preferred : modelCards).slice(0, 3);
+}
+
+export default function HeroSection({ data, bgImage: _bgImage, modelCards = [] }: HeroSectionProps) {
+  void _bgImage;
   const [registration, setRegistration] = useState("");
+  const heading = splitHeadline(data.h1);
   const tickerItems = getTickerItems(data.ticker);
+  const brandName = inferBrandName(data);
+  const displayModels = buildHeroCards(modelCards);
 
   function openQuoteCheckout(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -138,144 +260,186 @@ export default function HeroSection({ data, bgImage }: HeroSectionProps) {
   }
 
   return (
-    <section className="relative overflow-hidden bg-slate-50">
-      <div
-        className="absolute inset-0"
-        style={{
-          backgroundImage: `linear-gradient(90deg, rgba(248,250,252,0.9) 0%, rgba(248,250,252,0.78) 46%, rgba(248,250,252,0.55) 100%), url(${bgImage})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center right",
-        }}
-      />
+    <section className="overflow-x-hidden bg-[#f8f9fa]">
+      <div className="bg-[#0d1b2e] text-white lg:hidden">
+        <div className="flex items-center justify-between px-4 py-3">
+          <div className="font-['Manrope'] text-[17px] font-extrabold tracking-[-0.3px] text-white">
+            ENGINE<span className="text-[#16a34a]">MARKET</span>
+          </div>
 
-      <Container className="relative">
-        <div className="grid min-h-[430px] items-center gap-6 py-6 lg:grid-cols-[1.16fr_0.84fr] lg:py-7">
-          <div className="order-2 lg:order-1">
-            <div className="text-label mb-3 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/90 px-3 py-1.5 text-[#061a33] shadow-sm">
-              <span className="h-2 w-2 rounded-full bg-green-600" />
-              {data.tag}
-            </div>
-
-            <h1 className="text-hero-title max-w-[620px] text-[#061a33]">{data.h1}</h1>
-
-            <p className="text-body mt-4 max-w-xl font-medium text-[#10233f]">{data.subheading}</p>
-
+          <div className="flex items-center gap-2">
+            <a
+              href="tel:03330000044"
+              className="inline-flex items-center gap-1.5 rounded-md border border-white/20 bg-white/10 px-3 py-[7px] text-[11px] font-semibold text-white"
+            >
+              <PhoneIcon />
+              <span>Call</span>
+            </a>
             <a
               href="#quote-form"
-              className="mt-5 flex max-w-[470px] items-center gap-3 rounded-2xl border border-blue-100 bg-white/90 p-3.5 text-left shadow-sm transition hover:border-green-200 hover:shadow-md"
+              data-quote-source="hero-mobile"
+              className="rounded-md bg-[#15803d] px-3 py-[7px] font-['Manrope'] text-[11.5px] font-bold text-white"
             >
-              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-blue-50 text-blue-700">
-                <TagIcon />
-              </span>
-
-              <span className="flex-1">
-                <span className="text-label block text-[#061a33]">{stripTrailingArrow(data.ctaLinkText)}</span>
-                <span className="text-small mt-1 block text-blue-700">{data.supportingText}</span>
-              </span>
-
-              <svg viewBox="0 0 24 24" className="h-6 w-6 shrink-0 text-blue-700" fill="none">
-                <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-              </svg>
+              GET QUOTES
             </a>
           </div>
+        </div>
+      </div>
 
-          <div className="order-1 lg:order-2">
-            <div
-              id="quote-form"
-              className="mx-auto max-w-[340px] rounded-[18px] border border-slate-200 bg-white p-4 shadow-xl"
-            >
-              <div className="mb-2 flex justify-center text-[#061a33]">
-                <DocumentSearchIcon />
-              </div>
+      <div className="mx-auto grid max-w-[1200px] min-w-0 items-center gap-8 px-3 py-7 sm:px-6 md:px-8 md:py-8 lg:grid-cols-[70fr_30fr] lg:gap-7 lg:px-8 lg:py-[52px]">
+        <div className="flex min-w-0 flex-col">
+          <span className="mb-[14px] inline-flex w-fit items-center rounded-[20px] bg-[#0d1b2e] px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.08em] text-white md:mb-[18px] md:px-[14px] md:py-[6px] md:text-[10.5px]">
+            {data.tag}
+          </span>
 
-              <h2 className="text-form-title mx-auto max-w-[260px] text-center text-[#061a33]">
-                {data.form.heading}
-              </h2>
+          <h1 className="max-w-none min-w-0 font-['Manrope'] font-extrabold tracking-[-0.03em] text-[#152b4a]">
+            <span className="block max-w-none min-w-0 text-[clamp(23px,5.2vw,52px)] leading-[1.06] break-words lg:hidden">
+              {heading.lead}
+              {heading.accent ? " -" : ""}
+            </span>
+            <span className="hidden text-[clamp(23px,5.2vw,52px)] leading-[1.06] lg:block lg:whitespace-nowrap">
+              {heading.lead}
+              {heading.accent ? " -" : ""}
+            </span>
+            {heading.accent ? (
+              <span className="block text-[clamp(23px,5.2vw,52px)] leading-[1.06] text-[#15803d]">
+                {heading.accent}
+              </span>
+            ) : null}
+          </h1>
 
-              <p className="text-small mt-1.5 text-center text-slate-600">{data.form.subtitle}</p>
+          <p className="mt-[10px] max-w-none min-w-0 text-[13px] leading-[1.65] text-[#64748b] md:mt-[14px] md:max-w-[58ch] md:text-[clamp(14px,1.1vw,17px)]">
+            {data.subheading}
+          </p>
 
-              <div className="mx-auto mt-3 h-px w-12 bg-blue-500" />
+          <div className="mt-[18px] grid min-w-0 grid-cols-2 gap-2 md:mt-6 md:flex md:flex-wrap lg:flex-nowrap lg:overflow-x-auto lg:pb-1 [&::-webkit-scrollbar]:hidden">
+            {data.trustBadges.slice(0, 4).map((badge, index) => {
+              const Icon = badgeIcons[index] ?? ShieldIcon;
 
-              <form className="mt-4 space-y-2.5" onSubmit={openQuoteCheckout}>
-                <div className="flex overflow-hidden rounded-xl border border-slate-300 bg-white">
-                  <div className="flex w-14 shrink-0 items-center justify-center bg-[#061a33]">
-                    <UkFlagIcon />
-                  </div>
-
-                  <input
-                    type="text"
-                    placeholder={data.form.inputPlaceholder}
-                    value={registration}
-                    onChange={(event) => setRegistration(event.target.value.toUpperCase())}
-                    className="min-h-11 flex-1 px-4 text-center text-sm font-bold uppercase tracking-wider text-slate-700 outline-none placeholder:text-slate-400"
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="text-label flex w-full items-center justify-center gap-3 rounded-xl bg-green-600 px-5 py-3 text-white shadow-lg shadow-green-900/20 transition hover:bg-green-700"
+              return (
+                <div
+                  key={badge}
+                  className="flex items-center gap-2 rounded-lg bg-[#13253f] px-[13px] py-2 text-[11.5px] font-semibold text-white md:px-[14px] md:py-[9px] md:text-[12.5px]"
                 >
-                  {data.form.buttonText}
-                  <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none">
-                    <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                  </svg>
-                </button>
-              </form>
+                  <Icon />
+                  <span className="whitespace-nowrap">{badge}</span>
+                </div>
+              );
+            })}
+          </div>
 
-              <div className="mt-4 grid grid-cols-3 gap-2 border-y border-slate-100 py-3 text-center">
-                {data.trustBadges.map((badge, index) => {
-                  const Icon = badgeIcons[index] ?? ShieldIcon;
+          {displayModels.length ? (
+            <div className="mt-5 flex min-w-0 flex-col md:mt-7">
+              {displayModels.map((model, index) => {
+                const Icon = carIcons[index] ?? CarIconThree;
+                const shortTitle = stripBrandFromModel(model.h3, brandName);
+                const normalizedPrice = model.priceRange.replace(/^Starting\s+/i, "").replace(/^Available\s+/i, "");
 
-                  return (
-                    <div key={badge} className="flex flex-col items-center justify-center text-center">
-                      <div className="mx-auto mb-1 flex h-8 w-8 items-center justify-center rounded-full bg-blue-50 text-blue-700">
+                return (
+                  <div
+                    key={model.slug}
+                    className={`py-[10px] md:py-3 ${index < displayModels.length - 1 ? "border-b border-[#f3f4f6]" : ""}`}
+                  >
+                    <div className="flex min-w-0 items-center overflow-hidden whitespace-nowrap">
+                      <div className="mr-2 flex h-[22px] w-[38px] shrink-0 items-center text-[#0d1b2e]/50 md:mr-[10px] md:h-[26px] md:w-[44px]">
                         <Icon />
                       </div>
-                      <p className="text-tiny font-black uppercase text-[#061a33]">{badge}</p>
+                      <span className="min-w-0 truncate font-['Manrope'] text-[13.5px] font-bold text-[#0d1b2e] md:text-[clamp(14px,1vw,17px)]">
+                        {shortTitle}
+                      </span>
+                      <span className="min-w-0 truncate font-['Manrope'] text-[13.5px] font-bold text-[#15803d] md:text-[clamp(14px,1vw,17px)]">
+                        &nbsp;- {normalizedPrice}
+                      </span>
                     </div>
-                  );
-                })}
+                    <div className="mt-[3px] truncate pl-[46px] text-[11px] leading-[1.4] text-[#94a3b8] md:mt-1 md:pl-[54px] md:text-[clamp(11px,0.78vw,13px)]">
+                      {model.subtitle}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          ) : null}
+
+          <form
+            id="hero-reg-form"
+            className="mt-5 flex min-w-0 flex-col gap-[10px] md:mt-[26px] md:flex-row md:items-stretch"
+            onSubmit={openQuoteCheckout}
+          >
+            <label
+              htmlFor="reg-input"
+              className="absolute h-px w-px overflow-hidden whitespace-nowrap [clip:rect(0,0,0,0)]"
+            >
+              Enter your vehicle registration
+            </label>
+
+            <div className="flex h-[68px] w-full min-w-0 overflow-hidden rounded-lg border-[3px] border-[#1a1a1a] bg-[#ffdd00] md:h-[56px] md:w-[52%] md:min-w-[300px] md:flex-[0_0_auto]">
+              <div className="flex h-full w-[46px] shrink-0 flex-col items-center justify-center gap-[3px] border-r-2 border-[#1a1a1a] bg-[#003399] px-0.5 md:w-11">
+                <UkFlagIcon />
+                <span className="text-[12px] font-extrabold leading-none tracking-[0.05em] text-white">UK</span>
               </div>
 
-              <p className="text-small mt-2.5 flex items-start justify-center gap-1 text-center text-slate-600">
-                <svg viewBox="0 0 24 24" className="mt-0.5 h-4 w-4 shrink-0 text-green-600" fill="none">
-                  <path d="M7 11V8a5 5 0 0 1 10 0v3" stroke="currentColor" strokeWidth="2" />
-                  <rect x="5" y="11" width="14" height="10" rx="2" stroke="currentColor" strokeWidth="2" />
-                </svg>
-                <span>{data.form.note}</span>
-              </p>
+              <input
+                id="reg-input"
+                type="text"
+                placeholder="AB12 CDE"
+                maxLength={8}
+                autoCapitalize="characters"
+                autoComplete="off"
+                spellCheck={false}
+                value={registration}
+                onChange={(event) => setRegistration(event.target.value.toUpperCase())}
+                className="h-full min-w-0 flex-1 bg-transparent px-2 text-center text-[28px] font-bold uppercase tracking-[0.11em] text-[#111] outline-none placeholder:text-[rgba(30,30,30,0.35)] placeholder:text-[22px] placeholder:tracking-[0.05em] md:text-[24px] md:placeholder:text-[18px]"
+                style={{
+                  fontFamily: '"Charles Wright","Arial Black","Arial",sans-serif',
+                }}
+              />
             </div>
+
+            <button
+              type="submit"
+              aria-label={`Get free ${brandName} engine replacement quotes`}
+              className="flex h-[52px] w-full min-w-0 items-center justify-center gap-1 rounded-lg bg-[#15803d] px-5 font-['Manrope'] text-[15px] font-bold text-white shadow-[0_4px_16px_rgba(21,128,61,0.30)] transition hover:bg-[#16a34a] hover:shadow-[0_6px_22px_rgba(21,128,61,0.42)] md:h-[56px] md:flex-1"
+            >
+              <span>{buttonText(data, brandName)}</span>
+              <span className="hidden text-base md:inline-block">→</span>
+            </button>
+          </form>
+
+          <p className="mt-[10px] flex items-start gap-1.5 text-[12px] leading-[1.55] text-[#64748b] md:text-[12.5px]">
+            <span className="mt-px shrink-0 text-[#6b7280]">
+              <LockIcon />
+            </span>
+            <span>{secureNote(data, brandName)}</span>
+          </p>
+        </div>
+
+        <div className="relative hidden min-h-[340px] items-center justify-center lg:flex">
+          <div className="absolute inset-0 flex items-center justify-center">
+            <EngineWatermark />
           </div>
         </div>
+      </div>
 
-        <div className="text-label mb-4 flex items-center justify-start gap-4 overflow-x-auto rounded-xl border border-slate-200 bg-white/[0.8] px-4 py-2.5 text-[#061a33] shadow-sm lg:justify-center">
-          <span className="shrink-0 text-green-600">
-            <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none">
-              <path d="m8 5 7 7-7 7M15 5l7 7-7 7" stroke="currentColor" strokeWidth="2" />
-            </svg>
-          </span>
-
-          {tickerItems.map((item, index) => {
-            const Icon =
-              index === 0 ? BoltIcon : index === 1 ? ShieldIcon : index === 2 ? CheckBadgeIcon : UsersIcon;
-
-            return (
-              <Fragment key={item}>
-                <span className="flex shrink-0 items-center gap-2">
-                  <Icon /> {item}
+      <div className="flex h-[42px] w-full items-center overflow-hidden bg-[#0d1b2e]">
+        <div className="hero-ticker-track">
+          {[0, 1].map((copyIndex) => (
+            <span
+              key={copyIndex}
+              className="inline-flex items-center px-7 text-[11.5px] font-medium uppercase tracking-[0.05em] text-white md:px-9 md:text-[12px]"
+            >
+              {tickerItems.map((item, index) => (
+                <span key={`${copyIndex}-${item}`} className="inline-flex items-center">
+                  <span className="mr-[11px] text-[9px] text-[#15803d] md:mr-3 md:text-[10px]">●</span>
+                  <span>{item}</span>
+                  <span className="mx-[9px] text-[11px] text-[#4b5563] md:mx-[10px]">
+                    {index < tickerItems.length - 1 ? "·" : "·"}
+                  </span>
                 </span>
-                {index < tickerItems.length - 1 && <DividerDot />}
-              </Fragment>
-            );
-          })}
-
-          <span className="shrink-0 text-green-600">
-            <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none">
-              <path d="m16 5-7 7 7 7M9 5l-7 7 7 7" stroke="currentColor" strokeWidth="2" />
-            </svg>
-          </span>
+              ))}
+            </span>
+          ))}
         </div>
-      </Container>
+      </div>
     </section>
   );
 }

@@ -16,6 +16,7 @@ import FaqSection from "@/components/sections/FaqSection";
 import TrustCtaSection from "@/components/sections/TrustCtaSection";
 import QuoteCheckoutModal from "@/components/checkout/QuoteCheckoutModal";
 import { getBrandPageData, getBrandSlugs } from "@/lib/brandData";
+import { buildStaticReviewsSection } from "@/lib/staticReviews";
 import type { BrandPageData } from "@/types/brand";
 import { notFound } from "next/navigation";
 
@@ -34,6 +35,8 @@ export async function generateStaticParams() {
 }
 
 function buildStructuredData(pageData: BrandPageData) {
+  const reviewsData = buildStaticReviewsSection(pageData.brand.name);
+
   if (pageData.structuredData) {
     return pageData.structuredData;
   }
@@ -79,8 +82,8 @@ function buildStructuredData(pageData: BrandPageData) {
         },
         aggregateRating: {
           "@type": "AggregateRating",
-          ratingValue: pageData.sections.reviews.rating.value,
-          ratingCount: pageData.sections.reviews.rating.count,
+          ratingValue: reviewsData.rating.value,
+          ratingCount: reviewsData.rating.count,
         },
       },
       {
@@ -142,8 +145,11 @@ export default async function BrandPage({ params }: BrandPageProps) {
   }
 
   const structuredData = buildStructuredData(pageData);
+  const reviewsData = buildStaticReviewsSection(pageData.brand.name);
   const trustCtaImage =
-    pageData.sections.models.cards[0]?.image ?? pageData.assets.heroBg;
+    pageData.brand.slug === "land-rover"
+      ? "/images/brands/land-rover/cta-image.webp"
+      : pageData.sections.models.cards[0]?.image ?? pageData.assets.heroBg;
 
   return (
     <>
@@ -152,7 +158,11 @@ export default async function BrandPage({ params }: BrandPageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
 
-      <HeroSection data={pageData.sections.hero} bgImage={pageData.assets.heroBg} />
+      <HeroSection
+        data={pageData.sections.hero}
+        bgImage={pageData.assets.heroBg}
+        modelCards={pageData.sections.models.cards}
+      />
 
       <HowItWorksSection
         data={pageData.sections.howItWorks}
@@ -161,7 +171,7 @@ export default async function BrandPage({ params }: BrandPageProps) {
 
       <LiveMarketPricesSection data={pageData.sections.liveMarketPrices} />
 
-      <ReviewsSection data={pageData.sections.reviews} />
+      <ReviewsSection data={reviewsData} />
 
       <ModelsSection data={pageData.sections.models} brandSlug={pageData.brand.slug} />
 

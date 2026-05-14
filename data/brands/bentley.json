@@ -37,7 +37,7 @@
         "subtitle": "Enter your registration number to get started.",
         "inputPlaceholder": "Registration Number",
         "buttonText": "Get Free Engine Quotes",
-        "note": ""
+        "note": "Secure enquiry — no spam, no pressure. Genuine quotes only from vetted UK Bentley specialists."
       }
     },
     "howItWorks": {
@@ -342,7 +342,7 @@
         {
           "name": "W12 Engine Family",
           "era": "6.0L Twin-Turbo",
-          "failureNote": "Covers Mk1-Mk3 Continental GT & Flying Spur (2003-2024) for DDBA Common failure points (expandable note): The W12 engine is known for oil pump failure leading to low pressure, turbocharger seal leaks, and coil pack failures. Our rebuilt units include uprated oil pumps and new turbocharger cartridges to exceed OEM reliability.",
+          "failureNote": "Covers Mk1-Mk3 Continental GT & Flying Spur (2003-2024) for DDBA Common failure points: The W12 engine is known for oil pump failure leading to low pressure, turbocharger seal leaks, and coil pack failures. Our rebuilt units include uprated oil pumps and new turbocharger cartridges to exceed OEM reliability.",
           "engines": [
             {
               "code": "BCY / BWR",
@@ -394,7 +394,7 @@
         {
           "name": "4.0 V8 Engine Family",
           "era": "Twin-Turbo",
-          "failureNote": "Covers Continental, Flying Spur & Bentayga (2012-present) for DDBB Common failure points (expandable note): The 4.0 V8 engines are known for turbo coolant line leaks and timing chain tensioner wear. Our rebuilt units feature updated coolant pipe designs and new OEM-spec tensioners.",
+          "failureNote": "Covers Continental, Flying Spur & Bentayga (2012-present) for DDBB Common failure points: The 4.0 V8 engines are known for turbo coolant line leaks and timing chain tensioner wear. Our rebuilt units feature updated coolant pipe designs and new OEM-spec tensioners.",
           "engines": [
             {
               "code": "CVDA",
@@ -437,7 +437,7 @@
         {
           "name": "6.75 L-Series V8",
           "era": "Classic",
-          "failureNote": "Covers Arnage, Azure, Brooklands & Mulsanne (1996-present) for L410 Twin-Turbo Common failure points (expandable note): The L-Series V8 is famous for cylinder head gasket failures and cooling system corrosion. Our rebuilds include new composite head gaskets and complete cooling system overhauls.",
+          "failureNote": "Covers Arnage, Azure, Brooklands & Mulsanne (1996-present) for L410 Twin-Turbo Common failure points: The L-Series V8 is famous for cylinder head gasket failures and cooling system corrosion. Our rebuilds include new composite head gaskets and complete cooling system overhauls.",
           "engines": [
             {
               "code": "L410 (Naturally Aspirated)",
@@ -471,7 +471,7 @@
         {
           "name": "Additional & Performance Variants",
           "era": "All years",
-          "failureNote": "for CKHB Note: These high-output variants feature unique calibration and cooling requirements. All supplied units are dyno-tested and flashed with correct ECU maps. Not sure which engine code your Bentley uses? Enter your registration number and we'll match you to the exact engine and best quote — instantly. All engines supplied with a minimum 12-month warranty from UK Bentley specialists. ## Keyword Coverage Table",
+          "failureNote": "for CKHB Note: These high-output variants feature unique calibration and cooling requirements. All supplied units are dyno-tested and flashed with correct ECU maps.",
           "engines": [
             {
               "code": "CZAA",
@@ -788,7 +788,69 @@
       "tag": "Complete Bentley Engines List",
       "h2": "Bentley Engines by Fuel Type",
       "intro": "Choose your Bentley engine by fuel type to compare realistic replacement prices, known brand‑wide issues, and UK specialist supply – from the legendary W12 and V8 petrols to the rare diesel Bentayga and the new hybrid generation.",
-      "items": [],
+      "items": [
+        {
+          "title": "Bentley Petrol Engines",
+          "description": "Bentley petrol engines span everything from core daily-driver models to higher-output performance variants. Most replacement enquiries start with timing chain noise, oil consumption, cooling-system failure, or internal wear that makes a warranted replacement more sensible than repeated repairs.",
+          "descriptor": "Core passenger-car and performance applications",
+          "families": [
+            "W12 Engine Family",
+            "4.0 V8 Engine Family",
+            "6.75 L-Series V8",
+            "Additional & Performance Variants"
+          ],
+          "foundIn": [
+            "Bentley Continental GT Engines",
+            "Bentley Continental GTC Engines",
+            "Bentley Flying Spur Engines",
+            "Bentley Flying Spur Hybrid Engines"
+          ],
+          "knownFor": [
+            "Hybrid system integration issues",
+            "electric motor bearing failure",
+            "rare internal V6 problems",
+            "Supercharger clutch/bearing wear"
+          ],
+          "typicalModels": [
+            "Bentley Continental GT Engines",
+            "Bentley Continental GTC Engines",
+            "Bentley Flying Spur Engines",
+            "Bentley Flying Spur Hybrid Engines"
+          ],
+          "importantNotes": [
+            "Cold-start rattles, overheating history, and oil use are the biggest warning signs before a petrol engine replacement becomes necessary.",
+            "Direct-injection petrol engines often need specialist attention for carbon build-up alongside the main mechanical repair."
+          ],
+          "cta": "Compare Bentley petrol engine prices"
+        },
+        {
+          "title": "Bentley Hybrid Engines",
+          "description": "Bentley hybrid powertrains combine combustion engines with electric assistance across newer electrified models. Replacement demand is lower than traditional petrol or diesel units, but generator-engine faults, inverter issues, cooling-system failures, and calibration-sensitive repairs still require specialist support.",
+          "descriptor": "Electrified models with combustion backup",
+          "families": [
+            "CVAB",
+            "CZAC"
+          ],
+          "foundIn": [
+            "Bentley Continental GT Engines",
+            "Bentley Continental GTC Engines",
+            "Bentley Flying Spur Engines",
+            "Bentley Flying Spur Hybrid Engines"
+          ],
+          "knownFor": [],
+          "typicalModels": [
+            "Bentley Continental GT Engines",
+            "Bentley Continental GTC Engines",
+            "Bentley Flying Spur Engines",
+            "Bentley Flying Spur Hybrid Engines"
+          ],
+          "importantNotes": [
+            "Hybrid faults often need both mechanical and high-voltage diagnosis, so replacement decisions should be made by specialists familiar with the full system.",
+            "Battery cooling, inverter health, and software calibration are just as important as the combustion-engine condition on hybrid models."
+          ],
+          "cta": "Compare Bentley hybrid engine prices"
+        }
+      ],
       "closing": "Not sure which fuel type your Bentley has? Enter your registration number above to instantly identify your model, engine code, fuel system and compatible replacement options – all backed by a minimum 12‑month unlimited mileage warranty from UK Bentley specialists."
     },
     "engineCodeDirectory": {
@@ -878,7 +940,7 @@
             {
               "title": "L410HT (Twin Turbo) – 6.75L Petrol",
               "image": "/images/brands/bentley/engines/bentley-l410ht-engine.webp",
-              "description": "V8 The ultimate L‑series evolution, producing 505–530 bhp in twin-turbo configuration. Fitted to Arnage T (2002–2009), Brooklands (2008–2011), and Mulsanne (2010–2020). Known failures include external oil cooler seal leaks (located in the V of the engine) and wastegate bushing wear on the Garret turbo units . Rebuilt units include upgraded oil cooler seals, new wastegate actuators, and full turbocharger refurbishment. Closing line (Block A): Can't find your engine code listed above? Use our full Bentley engine code directory below — every code from the last 25 years — or enter your registration number for an instant match to the correct replacement engine with warranty.",
+              "description": "V8 The ultimate L‑series evolution, producing 505–530 bhp in twin-turbo configuration. Fitted to Arnage T (2002–2009), Brooklands (2008–2011), and Mulsanne (2010–2020). Known failures include external oil cooler seal leaks (located in the V of the engine) and wastegate bushing wear on the Garret turbo units . Rebuilt units include upgraded oil cooler seals, new wastegate actuators, and full turbocharger refurbishment.",
               "cta": "Get quotes for L410HT rebuilt Bentley engine"
             }
           ]
@@ -1373,57 +1435,57 @@
     "faq": {
       "tag": "FAQ",
       "h2": "Bentley Engine Replacement – Frequently Asked Questions",
-      "intro": "Quick, honest answers to the most common questions Bentley owners ask before comparing engine replacement prices and finding a UK specialist.",
+      "intro": "** Quick, honest answers to the most common questions Bentley owners ask before comparing engine replacement prices and finding a UK specialist.",
       "items": [
         {
           "question": "How much does a Bentley engine replacement cost in the UK?",
-          "answer": "A rebuilt Bentley engine typically costs between £6,000 and £15,000 supplied only, depending on the model and engine type. A 4.0-litre V8 (CMMC/CMMD) from a Continental GT or Flying Spur typically ranges £7,500–£10,500 for a reconditioned unit, while a 6.0 W12 (DBDA/DDBD/CKHB) ranges £9,500–£15,000. Adding supply and fit adds £1,200–£2,000 depending on the workshop. Main dealer prices for a new W12 can exceed £24,000 – our specialist network typically undercuts dealers by 40–60%. Use our free comparison tool to see real-time fitted prices for your specific Bentley model.",
-          "cta": "Compare Bentley engine prices now"
+          "answer": "A rebuilt Bentley engine typically costs between £6,000 and £15,000 supplied only, depending on the model and engine type. A 4.0-litre V8 (CMMC/CMMD) from a Continental GT or Flying Spur typically ranges £7,500–£10,500 for a reconditioned unit, while a 6.0 W12 (DBDA/DDBD/CKHB) ranges £9,500–£15,000. Adding supply and fit adds £1,200–£2,000 depending on the workshop. Main dealer prices for a new W12 can exceed £24,000 – our specialist network typically undercuts dealers by 40–60%.",
+          "cta": "Use our free comparison tool to see real-time fitted prices for your specific Bentley model"
         },
         {
           "question": "What affects the cost of a Bentley engine replacement?",
           "answer": "Four factors drive the price: engine type (W12 costs more than V8, which costs more than the rare diesel), condition (rebuilt with warranty vs used as-is), supply-only vs supply-and-fit, and your location – London and South East labour rates can be 20–30% higher than the national average. The age of your Bentley also matters: older 6.75 V8 engines (Arnage, Mulsanne) require specialist rebuilders, which can increase costs compared to high-volume 4.0 V8 units. Our marketplace gives you transparent, all-in quotes from UK specialists so you can compare like-for-like.",
-          "cta": "Compare Bentley engine prices now"
+          "cta": "Get quotes from UK Bentley engine specialists"
         },
         {
           "question": "Is it worth replacing the engine in my Bentley?",
-          "answer": "In most cases, yes. If the chassis, gearbox, and interior are in good shape, a rebuilt Bentley engine with upgraded components (improved timing chain tensioners on W12 units, enhanced oil feed screens on V8s) will often outlast the original. The alternative – selling your Bentley as a non-runner and buying a replacement – typically costs far more once you factor in market prices. For a Continental GT worth £20,000–£35,000, a £8,000–£12,000 specialist replacement keeps the car on the road for another 80,000+ miles. If your Bentley has significant body or electrical issues, replacement may not make sense. Compare prices from specialists to see whether rebuilding or replacing works for you.",
-          "cta": "Get a Bentley engine quote now"
+          "answer": "In most cases, yes. If the chassis, gearbox, and interior are in good shape, a rebuilt Bentley engine with upgraded components (improved timing chain tensioners on W12 units, enhanced oil feed screens on V8s) will often outlast the original. The alternative – selling your Bentley as a non-runner and buying a replacement – typically costs far more once you factor in market prices. For a Continental GT worth £20,000–£35,000, a £8,000–£12,000 specialist replacement keeps the car on the road for another 80,000+ miles. If your Bentley has significant body or electrical issues, replacement may not make sense.",
+          "cta": "Compare prices from specialists to see whether rebuilding or replacing works for you"
         },
         {
           "question": "What's included in a Bentley engine supply and fit service?",
-          "answer": "A full supply-and-fit service includes sourcing the correct engine code for your Bentley, removal of the failed unit, installation of the replacement engine, all new gaskets, seals, filters, fresh oil and coolant, and a road test to confirm proper operation. Most specialists also include a 12-month unlimited mileage workmanship warranty on the fitting, plus the engine’s own component warranty (typically 12-24 months). The old engine is usually yours to keep unless you arrange disposal separately. Typical fitting-only costs range £1,200–£2,000 for a V8 and £1,500–£2,500 for a W12 (engine-out required). Get itemised quotes through our comparison tool.",
-          "cta": "Get a Bentley engine quote now"
+          "answer": "A full supply-and-fit service includes sourcing the correct engine code for your Bentley, removal of the failed unit, installation of the replacement engine, all new gaskets, seals, filters, fresh oil and coolant, and a road test to confirm proper operation. Most specialists also include a 12-month unlimited mileage workmanship warranty on the fitting, plus the engine’s own component warranty (typically 12-24 months). The old engine is usually yours to keep unless you arrange disposal separately. Typical fitting-only costs range £1,200–£2,000 for a V8 and £1,500–£2,500 for a W12 (engine-out required).",
+          "cta": "Get itemised quotes through our comparison tool"
         },
         {
           "question": "How long does a Bentley engine replacement take?",
           "answer": "For a common engine like the 4.0 V8 in a Continental GT or Flying Spur, a specialist can typically complete the swap in 3–5 working days. A W12 replacement (engine-out procedure, more complex ancillaries) usually takes 5–7 working days. The biggest variable is engine availability – our network of UK suppliers stocks commonly replaced codes (CMMC, DDBD, CYCB) for next-day dispatch, but rarer units (6.75 V8 for Arnage, 4.4 BMW-sourced V8) may take 5–10 days to source. Always ask your shortlisted suppliers for their current lead time before booking.",
-          "cta": "Get a Bentley engine quote now"
+          "cta": "Ask about current Bentley engine replacement lead times"
         },
         {
           "question": "Do reconditioned Bentley engines come with warranty?",
           "answer": "Yes. Every reconditioned or rebuilt Bentley engine supplied through EngineMarket comes with a minimum 12-month unlimited mileage warranty. Many specialists offer 24-month coverage on W12 and 4.0 V8 units that have been fully remanufactured with upgraded components (timing chains, oil pumps, bearings). The warranty typically covers major internal components: crankshaft, pistons, connecting rods, timing chain, camshafts, oil pump, and cylinder head castings, provided the engine is fitted by a qualified professional. Exclusions usually cover ancillaries (turbochargers, injectors, coils) and damage from overheating or incorrect installation. Always confirm exact terms with your chosen supplier before purchase.",
-          "cta": "Find Bentley engines with warranty"
+          "cta": "Compare reconditioned Bentley engines with warranty"
         },
         {
           "question": "Should I choose a used or reconditioned Bentley engine?",
-          "answer": "A used Bentley engine is cheaper upfront – typically £3,500–£6,500 for a 4.0 V8, £5,000–£8,000 for a W12 – but comes with no meaningful warranty (often just 30–90 days) and unknown history. A reconditioned or rebuilt engine costs 40–60% more (£7,500–£15,000) but includes new rings, bearings, gaskets, timing components and a 12-24 month warranty. For a Bentley you plan to keep long-term, especially a W12 with known timing chain issues or a 4.0 V8 with turbo oil starvation vulnerability, a reconditioned unit with upgraded parts is almost always the better investment. For a quick resale or a tight budget, a warranted used engine from a breaker may work. Compare both options through our marketplace.",
-          "cta": "Compare used and reconditioned Bentley engine options"
+          "answer": "A used Bentley engine is cheaper upfront – typically £3,500–£6,500 for a 4.0 V8, £5,000–£8,000 for a W12 – but comes with no meaningful warranty (often just 30–90 days) and unknown history. A reconditioned or rebuilt engine costs 40–60% more (£7,500–£15,000) but includes new rings, bearings, gaskets, timing components and a 12-24 month warranty. For a Bentley you plan to keep long-term, especially a W12 with known timing chain issues or a 4.0 V8 with turbo oil starvation vulnerability, a reconditioned unit with upgraded parts is almost always the better investment. For a quick resale or a tight budget, a warranted used engine from a breaker may work.",
+          "cta": "Compare both options through our marketplace"
         },
         {
           "question": "Where can I find Bentley engine specialists near me?",
-          "answer": "EngineMarket connects you with a UK-wide network of independent Bentley engine specialists – from well-known rebuilders in the Midlands and South East to trusted fitters across the North West and Scotland. We don't favour any single region; instead, our registration lookup matches you with suppliers who have your specific engine code in stock or can source it quickly, regardless of your location. Nationwide delivery is available for supply-only orders, and many specialists offer collection and fitting services if you're within 50 miles. Use our tool to find specialists quoting for your exact Bentley model.",
-          "cta": "Get quotes from UK Bentley engine specialists"
+          "answer": "EngineMarket connects you with a UK-wide network of independent Bentley engine specialists – from well-known rebuilders in the Midlands and South East to trusted fitters across the North West and Scotland. We don't favour any single region; instead, our registration lookup matches you with suppliers who have your specific engine code in stock or can source it quickly, regardless of your location. Nationwide delivery is available for supply-only orders, and many specialists offer collection and fitting services if you're within 50 miles.",
+          "cta": "Use our tool to find specialists quoting for your exact Bentley model"
         },
         {
           "question": "What are the most common Bentley engine failures?",
           "answer": "The most common replacement-driving failures include: timing chain tensioner failure on pre-2010 6.0 W12 engines (DBDA/DDBD, affects Continental GT and Flying Spur), turbo oil starvation on the 4.0-litre hot-V V8 (CMMC/CMMD/CYCB/CYCA, affects Bentayga and modern Continental GT), cylinder bore scoring on high-mileage 6.75 V8 units (Arnage, Mulsanne), and crankshaft bearing failure on higher-mileage W12 engines across the range. These failures typically present with warning lights, unusual noises, or oil pressure warnings, and by the time they're diagnosed, the engine often requires full replacement rather than repair. Early detection rarely prevents these from turning catastrophic – which is why a warranted replacement engine is the most common solution.",
-          "cta": "Get a Bentley engine quote now"
+          "cta": "Compare Bentley replacement engines for common failures"
         },
         {
           "question": "How can I get the best price on a Bentley engine?",
-          "answer": "Always compare quotes from at least three UK specialists – prices for the same rebuilt engine code can vary by £1,000–£2,000 between suppliers. If you have a trusted independent garage, ask for supply-only pricing and arrange fitting separately; this can save £300–£500 compared to a specialist's supply-and-fit package. Consider a used engine from a breaker if your budget is under £5,000 and you're planning to sell the car within two years. Ask every supplier whether their quote includes VAT, delivery, fitting, and the old engine collection – hidden extras add 10–20% to the final bill. Use EngineMarket's comparison tool to see real-time pricing from vetted suppliers and secure the best deal with full warranty cover.",
-          "cta": "Compare Bentley engine prices now"
+          "answer": "Always compare quotes from at least three UK specialists – prices for the same rebuilt engine code can vary by £1,000–£2,000 between suppliers. If you have a trusted independent garage, ask for supply-only pricing and arrange fitting separately; this can save £300–£500 compared to a specialist's supply-and-fit package. Consider a used engine from a breaker if your budget is under £5,000 and you're planning to sell the car within two years. Ask every supplier whether their quote includes VAT, delivery, fitting, and the old engine collection – hidden extras add 10–20% to the final bill.",
+          "cta": "Use EngineMarket's comparison tool to see real-time pricing from vetted suppliers and secure the best deal with full warranty cover"
         }
       ]
     },

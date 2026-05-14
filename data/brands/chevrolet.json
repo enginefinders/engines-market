@@ -37,7 +37,7 @@
         "subtitle": "Enter your registration number to get started.",
         "inputPlaceholder": "Registration Number",
         "buttonText": "Get Free Engine Quotes",
-        "note": ""
+        "note": "Secure enquiry — no spam, no pressure. Genuine quotes only from vetted UK Chevrolet specialists."
       }
     },
     "howItWorks": {
@@ -341,7 +341,7 @@
         {
           "name": "VCDi Diesel Family",
           "era": "2006–2015",
-          "failureNote": "The VM Motori-derived VCDi turbo-diesel family powered the majority of Chevrolet's UK fleet across Captiva, Cruze, Orlando, and Malibu. Known for injector sensitivity and timing chain stretch on later variants . Get Quote → for any VCDi engine above. Common failure points (expandable note): VCDi engines are known for fuel injector sensitivity to UK diesel quality and timing chain stretch on Z22D1/Z20D1 variants. Our rebuilt units include reconditioned injectors, genuine timing kits, and upgraded chain tensioners.",
+          "failureNote": "The VM Motori-derived VCDi turbo-diesel family powered the majority of Chevrolet's UK fleet across Captiva, Cruze, Orlando, and Malibu. Known for injector sensitivity and timing chain stretch on later variants . Get Quote → for any VCDi engine above. Common failure points: VCDi engines are known for fuel injector sensitivity to UK diesel quality and timing chain stretch on Z22D1/Z20D1 variants. Our rebuilt units include reconditioned injectors, genuine timing kits, and upgraded chain tensioners.",
           "engines": [
             {
               "code": "Z20S (Z20DMH, LLW)",
@@ -384,7 +384,7 @@
         {
           "name": "Small Petrol Family",
           "era": "B10D1, B12D1, A12XER/A13DTC – 2008–2015",
-          "failureNote": "These economical 1.0–1.3 litre petrol and diesel engines powered Chevrolet Spark, Aveo, and Kalos models. Simple, robust units with affordable rebuild costs . Get Quote → for any Small Petrol engine above. Common failure points (expandable note): B-series engines are generally reliable but suffer coil pack failures and thermostat housing leaks. Our rebuilt units include new ignition components and upgraded cooling system seals.",
+          "failureNote": "These economical 1.0–1.3 litre petrol and diesel engines powered Chevrolet Spark, Aveo, and Kalos models. Simple, robust units with affordable rebuild costs . Get Quote → for any Small Petrol engine above. Common failure points: B-series engines are generally reliable but suffer coil pack failures and thermostat housing leaks. Our rebuilt units include new ignition components and upgraded cooling system seals.",
           "engines": [
             {
               "code": "B10D1",
@@ -427,7 +427,7 @@
         {
           "name": "LS V8 Performance Family",
           "era": "1997–present",
-          "failureNote": "The legendary GM LS V8 — found in imported Camaro, Corvette, and Silverado models in the UK. These engines are often retrofitted into other vehicles, reflected in the higher rebuild costs and specialist parts . Get Quote → for any LS V8 engine above. Common failure points (expandable note): LS engines are renowned for reliability, but high-mileage units suffer lifter tick, oil pump wear, and cracked exhaust manifolds. Our rebuilt LS engines receive upgraded lifters, high-volume oil pumps, and performance gaskets.",
+          "failureNote": "The legendary GM LS V8 — found in imported Camaro, Corvette, and Silverado models in the UK. These engines are often retrofitted into other vehicles, reflected in the higher rebuild costs and specialist parts . Get Quote → for any LS V8 engine above. Common failure points: LS engines are renowned for reliability, but high-mileage units suffer lifter tick, oil pump wear, and cracked exhaust manifolds. Our rebuilt LS engines receive upgraded lifters, high-volume oil pumps, and performance gaskets.",
           "engines": [
             {
               "code": "LS3",
@@ -470,7 +470,7 @@
         {
           "name": "Additional Petrol Engines",
           "era": "Captiva/Cruze — 2006–2015",
-          "failureNote": "Petrol options for Chevrolet's SUV and saloon range, often overlooked but still searched for replacement. Get Quote → for any Additional Petrol engine above. Common failure points (expandable note): GM petrol 2.4L engines suffer timing chain stretch and EGR issues. The 3.0/3.2L V6 units have known camshaft actuator problems. Our rebuilds include OEM timing chains and redesigned actuators",
+          "failureNote": "Petrol options for Chevrolet's SUV and saloon range, often overlooked but still searched for replacement. Get Quote → for any Additional Petrol engine above. Common failure points: GM petrol 2.4L engines suffer timing chain stretch and EGR issues. The 3.0/3.2L V6 units have known camshaft actuator problems. Our rebuilds include OEM timing chains and redesigned actuators",
           "engines": [
             {
               "code": "LE5 / LE9 / LEA",
@@ -830,7 +830,63 @@
       "tag": "Complete Chevrolet Engines List",
       "h2": "Chevrolet Engines by Fuel Type",
       "intro": "Choose your Chevrolet engine by fuel type to compare realistic replacement prices, known brand‑wide issues, and UK specialist supply — from the most popular diesel workhorses to the small-capacity petrol city car units.",
-      "items": [],
+      "items": [
+        {
+          "title": "Chevrolet Diesel Engines",
+          "description": "Chevrolet diesel engines cover many of the brand's highest-mileage UK models. Replacement demand is usually driven by timing system wear, injector and turbo faults, plus EGR or DPF-related damage once repeat short-journey use starts affecting reliability.",
+          "descriptor": "High-mileage motorway and SUV applications",
+          "families": [
+            "VCDi Diesel Family",
+            "Small Petrol Family"
+          ],
+          "foundIn": [
+            "Chevrolet Spark Engines",
+            "Chevrolet Aveo Engines",
+            "Chevrolet Orlando Engines",
+            "Chevrolet Cruze Engines"
+          ],
+          "knownFor": [],
+          "typicalModels": [
+            "Chevrolet Spark Engines",
+            "Chevrolet Aveo Engines",
+            "Chevrolet Orlando Engines",
+            "Chevrolet Cruze Engines"
+          ],
+          "importantNotes": [
+            "Short-journey use increases DPF, EGR, and oil-dilution risk on many diesel engines.",
+            "A documented service history matters more on diesel replacements because injector, turbo, and timing faults often build gradually."
+          ],
+          "cta": "Compare Chevrolet diesel engine prices"
+        },
+        {
+          "title": "Chevrolet Petrol Engines",
+          "description": "Chevrolet petrol engines span everything from core daily-driver models to higher-output performance variants. Most replacement enquiries start with timing chain noise, oil consumption, cooling-system failure, or internal wear that makes a warranted replacement more sensible than repeated repairs.",
+          "descriptor": "Core passenger-car and performance applications",
+          "families": [
+            "Small Petrol Family",
+            "LS V8 Performance Family",
+            "Additional Petrol Engines"
+          ],
+          "foundIn": [
+            "Chevrolet Spark Engines",
+            "Chevrolet Aveo Engines",
+            "Chevrolet Orlando Engines",
+            "Chevrolet Cruze Engines"
+          ],
+          "knownFor": [],
+          "typicalModels": [
+            "Chevrolet Spark Engines",
+            "Chevrolet Aveo Engines",
+            "Chevrolet Orlando Engines",
+            "Chevrolet Cruze Engines"
+          ],
+          "importantNotes": [
+            "Cold-start rattles, overheating history, and oil use are the biggest warning signs before a petrol engine replacement becomes necessary.",
+            "Direct-injection petrol engines often need specialist attention for carbon build-up alongside the main mechanical repair."
+          ],
+          "cta": "Compare Chevrolet petrol engine prices"
+        }
+      ],
       "closing": "Not sure which fuel type your Chevrolet has? Enter your registration number above to instantly identify your model, engine code, fuel system and compatible replacement options — all backed by a minimum 12‑month unlimited mileage warranty from UK Chevrolet specialists."
     },
     "engineCodeDirectory": {
@@ -937,7 +993,7 @@
             {
               "title": "LQ4 / LQ9 6.0L Petrol",
               "image": "/images/brands/chevrolet/engines/chevrolet-lq4-engine.webp",
-              "description": "The LQ4 and LQ9 are 6.0-litre Vortec V8s producing 300–345bhp. They appear in imported Chevrolet Silverado 1500, Suburban, and Tahoe vehicles. Active Fuel Management (AFM) lifter collapse on LS4/LMG variants is the most catastrophic failure, wiping the camshaft lobe and requiring full top-end rebuild. A quality rebuilt unit includes an AFM-delete kit (standard lifters and valley cover), a new camshaft, and a high-volume oil pump. Closing line (Block A): Can't find your engine code listed above? Use our full Chevrolet engine code directory below — every code from the last 35 years — or enter your registration number for an instant match to the correct replacement engine with warranty.",
+              "description": "The LQ4 and LQ9 are 6.0-litre Vortec V8s producing 300–345bhp. They appear in imported Chevrolet Silverado 1500, Suburban, and Tahoe vehicles. Active Fuel Management (AFM) lifter collapse on LS4/LMG variants is the most catastrophic failure, wiping the camshaft lobe and requiring full top-end rebuild. A quality rebuilt unit includes an AFM-delete kit (standard lifters and valley cover), a new camshaft, and a high-volume oil pump.",
               "cta": "Get quotes for 6.0L Chevrolet Vortec engines"
             }
           ]
@@ -1570,57 +1626,57 @@
     "faq": {
       "tag": "FAQ",
       "h2": "Chevrolet Engine Replacement – Frequently Asked Questions",
-      "intro": "Quick, honest answers to the most common questions Chevrolet owners ask before comparing engine replacement prices and finding a UK specialist.",
+      "intro": "** Quick, honest answers to the most common questions Chevrolet owners ask before comparing engine replacement prices and finding a UK specialist.",
       "items": [
         {
           "question": "How much does a Chevrolet engine replacement cost in the UK?",
-          "answer": "Expect to pay between £1,600 and £4,200 for a reconditioned Chevrolet engine supplied and fitted by a UK specialist, depending on the model and engine size. A used Chevrolet engine for a Spark or Aveo starts around £1,600–£2,200 fitted, while a 2.0 or 2.2 VCDi diesel for a Captiva or Cruze will typically cost £2,800–£4,200 with a warranty and upgraded components. Fitting alone (supply‑only) across most Chevrolet engines is usually £600–£1,000 at an independent garage. The best way to get an accurate price is to compare quotes for your specific engine code. *Compare Chevrolet engine replacement prices now*",
-          "cta": "Compare Chevrolet engine prices now"
+          "answer": "Expect to pay between £1,600 and £4,200 for a reconditioned Chevrolet engine supplied and fitted by a UK specialist, depending on the model and engine size. A used Chevrolet engine for a Spark or Aveo starts around £1,600–£2,200 fitted, while a 2.0 or 2.2 VCDi diesel for a Captiva or Cruze will typically cost £2,800–£4,200 with a warranty and upgraded components. Fitting alone (supply‑only) across most Chevrolet engines is usually £600–£1,000 at an independent garage. The best way to get an accurate price is to compare quotes for your specific engine code.",
+          "cta": "Compare Chevrolet engine replacement prices now"
         },
         {
           "question": "What affects the cost of a Chevrolet engine replacement?",
-          "answer": "Four main factors determine the final price: engine size and rarity (a 2.2 VCDi Z22D1 costs more than a common 1.2 B12D1), engine condition (reconditioned with upgraded parts costs more than a used pull‑out), vehicle age and complexity, and whether you choose supply‑only or supply & fit. Labour rates also vary by location — a specialist in the South East may charge 20–30% more than one in the North. Our comparison tool gives you transparent pricing across multiple UK suppliers so you can see exactly what affects your quote. *Get quotes from UK Chevrolet engine specialists*",
-          "cta": "Compare Chevrolet engine prices now"
-        },
-        {
-          "question": "Is it worth replacing the engine in my Chevrolet?",
-          "answer": "For most Chevrolet models — particularly the Captiva, Cruze, and Spark — replacing the engine is financially sensible if the chassis, gearbox, and bodywork are in good condition. A reconditioned VCDi diesel with upgraded timing chain components and a new fuel system will often outlast the original engine, giving you another 80,000+ miles for £2,800–£4,200. The alternative — scrapping a serviceable car and buying a replacement — will typically cost you £3,000–£6,000 for a comparable used Chevrolet. If your vehicle is otherwise sound, replacement is almost always worth it. *Use our free comparison tool to see whether a rebuilt or used Chevrolet engine makes financial sense*",
-          "cta": "Get a Chevrolet engine quote now"
-        },
-        {
-          "question": "What's included in a Chevrolet engine supply and fit service?",
-          "answer": "A full supply & fit package includes sourcing the correct engine for your Chevrolet model and code, removing the old unit, installing the replacement (used, reconditioned, or rebuilt), and replacing all consumables: engine oil, coolant, filters, and often a new cambelt or timing chain kit. The service typically includes a workmanship warranty (usually 12 months or 12,000 miles), proper disposal of your old engine, and a post‑installation test‑drive to confirm everything runs correctly. Fitting costs across Chevrolet engines generally add £600–£1,000 to the supply price. *Compare Chevrolet engine supply and fit deals*",
-          "cta": "Get a Chevrolet engine quote now"
-        },
-        {
-          "question": "How long does a Chevrolet engine replacement take?",
-          "answer": "For a common Chevrolet model like a Spark 1.2 or Cruze 1.6 petrol, a straightforward engine swap typically takes 3–5 working days from the time the supplier has the replacement unit on hand. More complex models — particularly the Captiva 2.0 and 2.2 VCDi diesels — may take 5–7 working days due to the additional labour around the turbo, DPF, and fuel system. The biggest variable is engine availability; our network of UK Chevrolet specialists stocks commonly replaced engine codes like Z20D1, Z22D1, and B12D1, which speeds up lead times considerably. *Find rebuilt Chevrolet engines with fast turnaround times*",
-          "cta": "Get a Chevrolet engine quote now"
-        },
-        {
-          "question": "Do reconditioned Chevrolet engines come with warranty?",
-          "answer": "Yes. Every reconditioned Chevrolet engine supplied through our marketplace comes with a minimum 12‑month unlimited mileage warranty as standard. Many suppliers also offer extended 24‑month coverage on rebuilt and remanufactured units, particularly for the VCDi diesel range where timing chain and fuel pump upgrades are included. The warranty typically covers major internal components: crankshaft, pistons, conrods, timing chain, oil pump, and cylinder head, with the supplier covering both parts and labour for any failure within the warranty period. Always confirm exact coverage and any exclusions directly with your chosen specialist before proceeding. *Compare reconditioned Chevrolet engines with comprehensive warranty cover*",
-          "cta": "Find Chevrolet engines with warranty"
-        },
-        {
-          "question": "Should I choose a used or reconditioned Chevrolet engine?",
-          "answer": "A used Chevrolet engine is the cheaper upfront option — typically £1,600–£2,800 supplied & fitted — and makes sense if you are selling the car soon or working with a very tight budget. However, a reconditioned engine (£2,800–£4,200) includes new piston rings, bearings, gaskets, upgraded timing components (critical for VCDi diesels), and a 12–24 month warranty. For Chevrolet engines with known failure patterns — particularly the 2.0 and 2.2 VCDi timing chain, the 1.0/1.2 B‑series cylinder head, and the 1.4 Turbo direct‑injection carbon issues — a reconditioned unit with upgraded parts is strongly recommended for long‑term ownership. *Compare used vs reconditioned Chevrolet engine prices side by side*",
-          "cta": "Compare used and reconditioned Chevrolet engine options"
-        },
-        {
-          "question": "Where can I find Chevrolet engine specialists near me?",
-          "answer": "EngineMarket connects you with a UK‑wide network of independent Chevrolet engine specialists and reconditioners who carry stock for all common models — Spark, Aveo, Cruze, Captiva, and Orlando. Simply enter your registration number or engine code, and our platform matches you with the nearest suppliers who have your specific engine in stock or can source it quickly. While there are no exclusive Chevrolet specialist hubs, our network covers every region including the South East, Midlands, North West, Scotland, and Wales. Nationwide delivery is also available if you prefer to supply your own garage for fitting. *Find Chevrolet engine specialists in your area now*",
+          "answer": "Four main factors determine the final price: engine size and rarity (a 2.2 VCDi Z22D1 costs more than a common 1.2 B12D1), engine condition (reconditioned with upgraded parts costs more than a used pull‑out), vehicle age and complexity, and whether you choose supply‑only or supply & fit. Labour rates also vary by location — a specialist in the South East may charge 20–30% more than one in the North. Our comparison tool gives you transparent pricing across multiple UK suppliers so you can see exactly what affects your quote.",
           "cta": "Get quotes from UK Chevrolet engine specialists"
         },
         {
+          "question": "Is it worth replacing the engine in my Chevrolet?",
+          "answer": "For most Chevrolet models — particularly the Captiva, Cruze, and Spark — replacing the engine is financially sensible if the chassis, gearbox, and bodywork are in good condition. A reconditioned VCDi diesel with upgraded timing chain components and a new fuel system will often outlast the original engine, giving you another 80,000+ miles for £2,800–£4,200. The alternative — scrapping a serviceable car and buying a replacement — will typically cost you £3,000–£6,000 for a comparable used Chevrolet. If your vehicle is otherwise sound, replacement is almost always worth it.",
+          "cta": "Use our free comparison tool to see whether a rebuilt or used Chevrolet engine makes financial sense"
+        },
+        {
+          "question": "What's included in a Chevrolet engine supply and fit service?",
+          "answer": "A full supply & fit package includes sourcing the correct engine for your Chevrolet model and code, removing the old unit, installing the replacement (used, reconditioned, or rebuilt), and replacing all consumables: engine oil, coolant, filters, and often a new cambelt or timing chain kit. The service typically includes a workmanship warranty (usually 12 months or 12,000 miles), proper disposal of your old engine, and a post‑installation test‑drive to confirm everything runs correctly. Fitting costs across Chevrolet engines generally add £600–£1,000 to the supply price.",
+          "cta": "Compare Chevrolet engine supply and fit deals"
+        },
+        {
+          "question": "How long does a Chevrolet engine replacement take?",
+          "answer": "For a common Chevrolet model like a Spark 1.2 or Cruze 1.6 petrol, a straightforward engine swap typically takes 3–5 working days from the time the supplier has the replacement unit on hand. More complex models — particularly the Captiva 2.0 and 2.2 VCDi diesels — may take 5–7 working days due to the additional labour around the turbo, DPF, and fuel system. The biggest variable is engine availability; our network of UK Chevrolet specialists stocks commonly replaced engine codes like Z20D1, Z22D1, and B12D1, which speeds up lead times considerably.",
+          "cta": "Find rebuilt Chevrolet engines with fast turnaround times"
+        },
+        {
+          "question": "Do reconditioned Chevrolet engines come with warranty?",
+          "answer": "Yes. Every reconditioned Chevrolet engine supplied through our marketplace comes with a minimum 12‑month unlimited mileage warranty as standard. Many suppliers also offer extended 24‑month coverage on rebuilt and remanufactured units, particularly for the VCDi diesel range where timing chain and fuel pump upgrades are included. The warranty typically covers major internal components: crankshaft, pistons, conrods, timing chain, oil pump, and cylinder head, with the supplier covering both parts and labour for any failure within the warranty period. Always confirm exact coverage and any exclusions directly with your chosen specialist before proceeding.",
+          "cta": "Compare reconditioned Chevrolet engines with comprehensive warranty cover"
+        },
+        {
+          "question": "Should I choose a used or reconditioned Chevrolet engine?",
+          "answer": "A used Chevrolet engine is the cheaper upfront option — typically £1,600–£2,800 supplied & fitted — and makes sense if you are selling the car soon or working with a very tight budget. However, a reconditioned engine (£2,800–£4,200) includes new piston rings, bearings, gaskets, upgraded timing components (critical for VCDi diesels), and a 12–24 month warranty. For Chevrolet engines with known failure patterns — particularly the 2.0 and 2.2 VCDi timing chain, the 1.0/1.2 B‑series cylinder head, and the 1.4 Turbo direct‑injection carbon issues — a reconditioned unit with upgraded parts is strongly recommended for long‑term ownership.",
+          "cta": "Compare used vs reconditioned Chevrolet engine prices side by side"
+        },
+        {
+          "question": "Where can I find Chevrolet engine specialists near me?",
+          "answer": "EngineMarket connects you with a UK‑wide network of independent Chevrolet engine specialists and reconditioners who carry stock for all common models — Spark, Aveo, Cruze, Captiva, and Orlando. Simply enter your registration number or engine code, and our platform matches you with the nearest suppliers who have your specific engine in stock or can source it quickly. While there are no exclusive Chevrolet specialist hubs, our network covers every region including the South East, Midlands, North West, Scotland, and Wales. Nationwide delivery is also available if you prefer to supply your own garage for fitting.",
+          "cta": "Find Chevrolet engine specialists in your area now"
+        },
+        {
           "question": "What are the most common Chevrolet engine failures?",
-          "answer": "The most common catastrophic failures driving Chevrolet engine replacement in the UK are: timing chain stretch on 2.0 and 2.2 VCDi diesels (Z20S, Z20D1, Z22D1) — chain jumps, bends valves; high‑pressure fuel pump debris contamination across the same VCDi family — destroys injectors and fuel rail; cylinder head cracking on 1.0 (B10D1) and 1.2 (B12D1) petrol engines in Spark and Aveo — coolant loss and compression failure; piston ring carbonisation on 1.4 Turbo (B14NET, A14NET) in Cruze — oil consumption and catalytic converter failure; and crankshaft bearing seizure on early 2.0 VCDi units — rapid failure with little warning. Most of these failures lead directly to replacement because repair costs quickly exceed the value of a reconditioned engine. *Get quotes for replacement engines for common Chevrolet failures*",
-          "cta": "Get a Chevrolet engine quote now"
+          "answer": "The most common catastrophic failures driving Chevrolet engine replacement in the UK are: timing chain stretch on 2.0 and 2.2 VCDi diesels (Z20S, Z20D1, Z22D1) — chain jumps, bends valves; high‑pressure fuel pump debris contamination across the same VCDi family — destroys injectors and fuel rail; cylinder head cracking on 1.0 (B10D1) and 1.2 (B12D1) petrol engines in Spark and Aveo — coolant loss and compression failure; piston ring carbonisation on 1.4 Turbo (B14NET, A14NET) in Cruze — oil consumption and catalytic converter failure; and crankshaft bearing seizure on early 2.0 VCDi units — rapid failure with little warning. Most of these failures lead directly to replacement because repair costs quickly exceed the value of a reconditioned engine.",
+          "cta": "Get quotes for replacement engines for common Chevrolet failures"
         },
         {
           "question": "How can I get the best price on a Chevrolet engine?",
-          "answer": "The single most effective way to get the best price is to compare multiple quotes — prices for the same engine code can vary by £1,000 or more between suppliers. If you have a tight budget, a used engine with a short warranty is the cheapest way back on the road. For long‑term ownership, invest in a reconditioned unit with upgraded components; it costs more upfront but will last 80,000+ miles. Always ask suppliers to break down exactly what is included: whether fitting, delivery, VAT, and the old unit disposal are covered. Finally, consider supply‑only if you already have a trusted garage that will fit the engine for less than our network rate. *Compare Chevrolet engine deals from multiple UK suppliers*",
-          "cta": "Compare Chevrolet engine prices now"
+          "answer": "The single most effective way to get the best price is to compare multiple quotes — prices for the same engine code can vary by £1,000 or more between suppliers. If you have a tight budget, a used engine with a short warranty is the cheapest way back on the road. For long‑term ownership, invest in a reconditioned unit with upgraded components; it costs more upfront but will last 80,000+ miles. Always ask suppliers to break down exactly what is included: whether fitting, delivery, VAT, and the old unit disposal are covered. Finally, consider supply‑only if you already have a trusted garage that will fit the engine for less than our network rate.",
+          "cta": "Compare Chevrolet engine deals from multiple UK suppliers"
         }
       ]
     },

@@ -37,7 +37,7 @@
         "subtitle": "Enter your registration number to get started.",
         "inputPlaceholder": "Registration Number",
         "buttonText": "Get Free Engine Quotes",
-        "note": ""
+        "note": "Secure enquiry — no spam, no pressure. Genuine quotes only from vetted UK Citroen specialists."
       }
     },
     "howItWorks": {
@@ -408,7 +408,7 @@
         {
           "name": "PureTech Petrol Engines",
           "era": "EB / PureTech Family, 2012–Present",
-          "failureNote": "for each row. Common failure points (expandable note): PureTech wet belt engines are known for timing belt degradation contaminating the oil pickup . Our rebuilt units include the latest updated belt version, sump clean, and oil pump strainer replacement.",
+          "failureNote": "for each row. Common failure points: PureTech wet belt engines are known for timing belt degradation contaminating the oil pickup . Our rebuilt units include the latest updated belt version, sump clean, and oil pump strainer replacement.",
           "engines": [
             {
               "code": "EB2 (HMZ)",
@@ -442,7 +442,7 @@
         {
           "name": "DV / HDi Diesel Engines",
           "era": "DV Family, 2000–2018",
-          "failureNote": "for each row. Common failure points (expandable note): DV6 engines commonly suffer EGR cooler cracking, DPF clogging, and timing belt failure . Our rebuilt units feature upgraded EGR components and include a full DPF inspection.",
+          "failureNote": "for each row. Common failure points: DV6 engines commonly suffer EGR cooler cracking, DPF clogging, and timing belt failure . Our rebuilt units feature upgraded EGR components and include a full DPF inspection.",
           "engines": [
             {
               "code": "DV6TED4 (9HZ)",
@@ -485,7 +485,7 @@
         {
           "name": "BlueHDi Diesel Engines",
           "era": "DV6FE / DW10FE Family, 2014–Present",
-          "failureNote": "for each row. Common failure points (expandable note): BlueHDi engines face AdBlue system faults (tank crystallisation, injector failure) costing £1,100-£1,500+ to replace . Our rebuilt engines include AdBlue system inspection and component cleaning where applicable.",
+          "failureNote": "for each row. Common failure points: BlueHDi engines face AdBlue system faults (tank crystallisation, injector failure) costing £1,100-£1,500+ to replace . Our rebuilt engines include AdBlue system inspection and component cleaning where applicable.",
           "engines": [
             {
               "code": "DV6FE (BHZ)",
@@ -528,7 +528,7 @@
         {
           "name": "THP / EP Petrol Engines",
           "era": "Prince Family, 2006–2019",
-          "failureNote": "for each row. Common failure points (expandable note): THP/EP engines suffer high-pressure fuel pump failure and timing chain tensioner wear . Our rebuilt units include updated HPFP components and revised timing chain tensioners.",
+          "failureNote": "for each row. Common failure points: THP/EP engines suffer high-pressure fuel pump failure and timing chain tensioner wear . Our rebuilt units include updated HPFP components and revised timing chain tensioners.",
           "engines": [
             {
               "code": "EP6DT (5FX)",
@@ -562,7 +562,7 @@
         {
           "name": "Legacy Engines",
           "era": "XU / DW / TU Family, 1995–2008",
-          "failureNote": "for each row. Common failure points (expandable note): Legacy XU/TU and DW engines suffer timing belt failure (TU3 petrol) and high-pressure fuel pump issues (DW10A) . Our rebuilt units include new OEM-spec belts and upgraded HPFP seals",
+          "failureNote": "for each row. Common failure points: Legacy XU/TU and DW engines suffer timing belt failure (TU3 petrol) and high-pressure fuel pump issues (DW10A) . Our rebuilt units include new OEM-spec belts and upgraded HPFP seals",
           "engines": [
             {
               "code": "DW10BTED4 (RHR)",
@@ -1206,7 +1206,74 @@
       "tag": "Complete Citroen Engines List",
       "h2": "Citroen Engines by Fuel Type",
       "intro": "Choose your Citroen engine by fuel type to compare realistic replacement prices, known brand‑wide issues, and UK specialist supply – from the most popular diesel workhorses to the latest electrified powertrains.",
-      "items": [],
+      "items": [
+        {
+          "title": "Citroen Diesel Engines",
+          "description": "Citroen diesel engines cover many of the brand's highest-mileage UK models. Replacement demand is usually driven by timing system wear, injector and turbo faults, plus EGR or DPF-related damage once repeat short-journey use starts affecting reliability.",
+          "descriptor": "High-mileage motorway and SUV applications",
+          "families": [
+            "DV / HDi Diesel Engines",
+            "BlueHDi Diesel Engines",
+            "Legacy Engines"
+          ],
+          "foundIn": [
+            "Citroen Berlingo Engines",
+            "Citroen C2 Engines",
+            "Citroen C3 Engines",
+            "Citroen C4 Engines"
+          ],
+          "knownFor": [
+            "Injector seal leaks causing oil contamination",
+            "turbocharger failure from oil starvation",
+            "AdBlue system crystallisation (NOx sensor failures)",
+            "EGR valve clogging on short journeys"
+          ],
+          "typicalModels": [
+            "Citroen Berlingo Engines",
+            "Citroen C2 Engines",
+            "Citroen C3 Engines",
+            "Citroen C4 Engines"
+          ],
+          "importantNotes": [
+            "Short-journey use increases DPF, EGR, and oil-dilution risk on many diesel engines.",
+            "A documented service history matters more on diesel replacements because injector, turbo, and timing faults often build gradually."
+          ],
+          "cta": "Compare Citroen diesel engine prices"
+        },
+        {
+          "title": "Citroen Petrol Engines",
+          "description": "Citroen petrol engines span everything from core daily-driver models to higher-output performance variants. Most replacement enquiries start with timing chain noise, oil consumption, cooling-system failure, or internal wear that makes a warranted replacement more sensible than repeated repairs.",
+          "descriptor": "Core passenger-car and performance applications",
+          "families": [
+            "PureTech Petrol Engines",
+            "THP / EP Petrol Engines",
+            "Legacy Engines"
+          ],
+          "foundIn": [
+            "Citroen Berlingo Engines",
+            "Citroen C2 Engines",
+            "Citroen C3 Engines",
+            "Citroen C4 Engines"
+          ],
+          "knownFor": [
+            "Coil pack failure (cylinder misfire)",
+            "valve clearance issues (cold start problems)",
+            "exhaust corrosion",
+            "Timing belt failure (interference engine)"
+          ],
+          "typicalModels": [
+            "Citroen Berlingo Engines",
+            "Citroen C2 Engines",
+            "Citroen C3 Engines",
+            "Citroen C4 Engines"
+          ],
+          "importantNotes": [
+            "Cold-start rattles, overheating history, and oil use are the biggest warning signs before a petrol engine replacement becomes necessary.",
+            "Direct-injection petrol engines often need specialist attention for carbon build-up alongside the main mechanical repair."
+          ],
+          "cta": "Compare Citroen petrol engine prices"
+        }
+      ],
       "closing": "Not sure which fuel type your Citroen has? Enter your registration number above to instantly identify your model, engine code, fuel system and compatible replacement options – all backed by a minimum 12‑month unlimited mileage warranty from UK Citroen specialists."
     },
     "engineCodeDirectory": {
@@ -1336,7 +1403,7 @@
             {
               "title": "TU3M (KFW) 1.4L Petrol",
               "image": "/images/brands/citroen/engines/citroen-tu3m-engine.webp",
-              "description": "Engine 75hp unit in Saxo, C2, Xsara (1997–2005). Timing belt failure is the primary catastrophic event. The engine is non-interference on some variants, but belt snap still causes towing costs and risk of valve damage. Rebuilt units include a new timing belt kit, water pump, and head gasket. Closing line (Block A): Can't find your engine code listed above? Use our full Citroen engine code directory below — every code from the last 30 years — or enter your registration number for an instant match to the correct replacement engine with warranty.",
+              "description": "Engine 75hp unit in Saxo, C2, Xsara (1997–2005). Timing belt failure is the primary catastrophic event. The engine is non-interference on some variants, but belt snap still causes towing costs and risk of valve damage. Rebuilt units include a new timing belt kit, water pump, and head gasket.",
               "cta": "Find rebuilt KFW 1.4 petrol engines for C2 and Saxo"
             }
           ]
@@ -1905,7 +1972,7 @@
     "faq": {
       "tag": "FAQ",
       "h2": "Citroen Engine Replacement – Frequently Asked Questions",
-      "intro": "Quick, honest answers to the most common questions Citroen owners ask before comparing engine replacement prices and finding a UK specialist.",
+      "intro": "**",
       "items": [
         {
           "question": "How much does a Citroen engine replacement cost in the UK?",
@@ -1929,7 +1996,7 @@
         },
         {
           "question": "How long does a Citroen engine replacement take?",
-          "answer": "For common models like a Berlingo 1.6 HDi or C3 1.2 PureTech, expect 3–5 working days from booking to completion. More complex vehicles — C5 2.7 V6 or C6 — take 5–7 days due to tighter engine bay access and additional system calibrations. The biggest variable is engine availability: our network stocks commonly replaced codes (DV6, DW10, EB2 PureTech) for next-day dispatch, but rarer units (DV12, DT17 V6) may require 3–5 days lead time. Most specialists offer a courtesy car or loaner for the duration. Ask your chosen supplier for a firm timeline before authorising work.",
+          "answer": "For common models like a Berlingo 1.6 HDi or C3 1.2 PureTech, expect 3–5 working days from booking to completion. More complex vehicles — C5 2.7 V6 or C6 — take 5–7 days due to tighter engine bay access and additional system calibrations. The biggest variable is engine availability: our network stocks commonly replaced codes (DV6, DW10, EB2 PureTech) for next-day dispatch, but rarer units (DV12, DT17 V6) may require 3–5 days lead time. Most specialists offer a courtesy car or loaner for the duration.",
           "cta": "Use our free comparison tool to see real lead times from Citroen specialists"
         },
         {
@@ -1954,8 +2021,8 @@
         },
         {
           "question": "How can I get the best price on a Citroen engine?",
-          "answer": "Always compare at least three quotes — prices on the same engine code (e.g., 1.6 HDi DV6) can vary by £1,000+ between suppliers. Consider a used engine (£800–£1,500) if on a tight budget or selling the car soon. Choose a reconditioned engine with upgraded components (£2,500–£5,000 fitted) if you plan to keep the Citroen for another 3–5 years. Ask for supply-only if you have a trusted local garage that will fit it for less than the specialist's fitting fee. Always confirm whether delivery, fitting, VAT, and ancillary parts (oil, filters, cambelt) are included in the quoted price. Use our tool to filter by warranty length, location, and customer rating to find the best value, not just the lowest headline number.",
-          "cta": "How to save money on Citroen engine replacement – compare deals now"
+          "answer": "Always compare at least three quotes — prices on the same engine code (e.g., 1.6 HDi DV6) can vary by £1,000+ between suppliers. Consider a used engine (£800–£1,500) if on a tight budget or selling the car soon. Choose a reconditioned engine with upgraded components (£2,500–£5,000 fitted) if you plan to keep the Citroen for another 3–5 years. Ask for supply-only if you have a trusted local garage that will fit it for less than the specialist's fitting fee. Always confirm whether delivery, fitting, VAT, and ancillary parts (oil, filters, cambelt) are included in the quoted price. Not sure which Citroen engine you need? Enter your registration number above to instantly identify your engine code, compatible replacement options, and verified UK specialists — all backed by a minimum 12‑month unlimited mileage warranty.",
+          "cta": "Closing line (not part of FAQ but included for completeness):"
         }
       ]
     },
