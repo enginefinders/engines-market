@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
+import DocumentModelPage from "@/components/pages/DocumentModelPage";
 import QuoteCheckoutModal from "@/components/checkout/QuoteCheckoutModal";
 import CommonProblemsSection from "@/components/sections/CommonProblemsSection";
 import EngineCodesSection from "@/components/sections/EngineCodesSection";
@@ -13,6 +14,8 @@ import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
 import SectionHeader from "@/components/ui/SectionHeader";
 import { getBrandPageData, getBrandSlugs } from "@/lib/brandData";
+import { getModelPageData, getModelPageStaticParams } from "@/lib/modelPageData";
+import { getModelRouteSlug, matchesModelRouteSlug } from "@/lib/modelRoutes";
 import { buildStaticReviewsSection } from "@/lib/staticReviews";
 import type {
   BrandPageData,
@@ -20,7 +23,7 @@ import type {
   EngineCodesData,
   LiveMarketPricesData,
 } from "@/types/brand";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 
 type ModelCard = BrandPageData["sections"]["models"]["cards"][number];
 
@@ -35,7 +38,11 @@ function findModel(
   pageData: BrandPageData,
   modelSlug: string,
 ) {
-  return pageData.sections.models.cards.find((card) => card.slug === modelSlug) ?? null;
+  return (
+    pageData.sections.models.cards.find((card) =>
+      matchesModelRouteSlug(card, modelSlug),
+    ) ?? null
+  );
 }
 
 function matchesModelText(text: string, model: ModelCard) {
@@ -167,7 +174,8 @@ function buildRelatedModelsData(pageData: BrandPageData, currentModelSlug: strin
 function buildStructuredData(pageData: BrandPageData, model: ModelCard) {
   const reviewsData = buildStaticReviewsSection(pageData.brand.name);
   const siteUrl = "https://enginesmarket.co.uk";
-  const canonical = `${siteUrl}/${pageData.brand.slug}/${model.slug}`;
+  const modelRouteSlug = getModelRouteSlug(model);
+  const canonical = `${siteUrl}/${pageData.brand.slug}/${modelRouteSlug}`;
   const name = `${pageData.brand.name} ${model.h3} Engine`;
   const description = `${model.subtitle} Compare rebuilt, reconditioned and used ${name} quotes from trusted UK specialists.`;
 
@@ -224,6 +232,7 @@ function buildStructuredData(pageData: BrandPageData, model: ModelCard) {
 }
 
 export async function generateStaticParams() {
+  const customParams = await getModelPageStaticParams();
   const brandSlugs = await getBrandSlugs();
   const pages = await Promise.all(
     brandSlugs.map(async (brand) => ({
@@ -232,13 +241,22 @@ export async function generateStaticParams() {
     })),
   );
 
-  return pages.flatMap(({ brand, pageData }) =>
+  const fallbackParams = pages.flatMap(({ brand, pageData }) =>
     pageData
       ? pageData.sections.models.cards.map((model) => ({
           brand,
-          model: model.slug,
+          model: getModelRouteSlug(model),
         }))
       : [],
+  );
+
+  return [...customParams, ...fallbackParams].filter(
+    (item, index, collection) =>
+      index ===
+      collection.findIndex(
+        (candidate) =>
+          candidate.brand === item.brand && candidate.model === item.model,
+      ),
   );
 }
 
@@ -246,6 +264,18 @@ export async function generateMetadata({
   params,
 }: ModelPageProps): Promise<Metadata> {
   const { brand, model } = await params;
+  const customPageData = await getModelPageData(brand, model);
+
+  if (customPageData) {
+    return {
+      title: customPageData.seo.title,
+      description: customPageData.seo.description,
+      alternates: {
+        canonical: customPageData.seo.canonical,
+      },
+    };
+  }
+
   const pageData = await getBrandPageData(brand);
   const modelCard = pageData ? findModel(pageData, model) : null;
 
@@ -257,13 +287,36 @@ export async function generateMetadata({
     title: `${pageData.brand.name} ${modelCard.h3} Engine Replacement - Compare UK Quotes`,
     description: `${modelCard.subtitle} Compare rebuilt, reconditioned and used ${pageData.brand.name} ${modelCard.h3} engines from trusted UK specialists. Typical quoted range: ${modelCard.priceRange}.`,
     alternates: {
-      canonical: `/${pageData.brand.slug}/${modelCard.slug}`,
+      canonical: `/${pageData.brand.slug}/${getModelRouteSlug(modelCard)}`,
     },
   };
 }
 
 export default async function ModelPage({ params }: ModelPageProps) {
   const { brand, model } = await params;
+  const customPageData = await getModelPageData(brand, model);
+
+  if (customPageData) {
+    if (model !== customPageData.model.slug) {
+      permanentRedirect(`/${customPageData.brand.slug}/${customPageData.model.slug}`);
+    }
+
+    const brandPageData = await getBrandPageData(customPageData.brand.slug);
+
+    if (!brandPageData) {
+      notFound();
+    }
+
+    return (
+      <DocumentModelPage
+        data={customPageData}
+        sharedHowItWorks={brandPageData.sections.howItWorks}
+        howItWorksBg={brandPageData.assets.howItWorksBg}
+        reviewsData={buildStaticReviewsSection(brandPageData.brand.name)}
+      />
+    );
+  }
+
   const pageData = await getBrandPageData(brand);
 
   if (!pageData) {
@@ -274,6 +327,12 @@ export default async function ModelPage({ params }: ModelPageProps) {
 
   if (!modelCard) {
     notFound();
+  }
+
+  const modelRouteSlug = getModelRouteSlug(modelCard);
+
+  if (model !== modelRouteSlug) {
+    permanentRedirect(`/${pageData.brand.slug}/${modelRouteSlug}`);
   }
 
   const heroData = buildModelHeroData(pageData, modelCard);
@@ -315,7 +374,7 @@ export default async function ModelPage({ params }: ModelPageProps) {
 
             <article className="surface-card-soft p-4">
               <p className="text-label text-green-700">Page path</p>
-              <p className="mt-2 text-lg font-black text-[#061a33]">/{pageData.brand.slug}/{modelCard.slug}</p>
+              <p className="mt-2 text-lg font-black text-[#061a33]">/{pageData.brand.slug}/{modelRouteSlug}</p>
               <p className="text-small mt-2 text-slate-600">Useful for sharing this model-specific engine page directly.</p>
             </article>
 
@@ -334,7 +393,10 @@ export default async function ModelPage({ params }: ModelPageProps) {
       </Section>
 
       {modelLiveMarketData ? (
-        <LiveMarketPricesSection data={modelLiveMarketData} />
+        <LiveMarketPricesSection
+          data={modelLiveMarketData}
+          imageSrc={pageData.assets.heroBg}
+        />
       ) : null}
 
       <ReviewsSection data={reviewsData} />

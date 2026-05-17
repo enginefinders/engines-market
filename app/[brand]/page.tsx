@@ -16,6 +16,7 @@ import FaqSection from "@/components/sections/FaqSection";
 import TrustCtaSection from "@/components/sections/TrustCtaSection";
 import QuoteCheckoutModal from "@/components/checkout/QuoteCheckoutModal";
 import { getBrandPageData, getBrandSlugs } from "@/lib/brandData";
+import { getModelRouteSlug } from "@/lib/modelRoutes";
 import { buildStaticReviewsSection } from "@/lib/staticReviews";
 import type { BrandPageData } from "@/types/brand";
 import { notFound } from "next/navigation";
@@ -104,14 +105,14 @@ function buildStructuredData(pageData: BrandPageData) {
         name: `${pageData.brand.name} Engine Models`,
         itemListElement: pageData.sections.models.cards.map((model, index) => ({
           "@type": "ListItem",
-          position: index + 1,
-          item: {
-            "@type": "Product",
-            name: model.h3,
-            url: `${siteUrl}/${pageData.brand.slug}/${model.slug}`,
-            description: model.subtitle,
-          },
-        })),
+            position: index + 1,
+            item: {
+              "@type": "Product",
+              name: model.h3,
+              url: `${siteUrl}/${pageData.brand.slug}/${getModelRouteSlug(model)}`,
+              description: model.subtitle,
+            },
+          })),
       },
     ],
   };
@@ -169,9 +170,13 @@ export default async function BrandPage({ params }: BrandPageProps) {
         bgImage={pageData.assets.howItWorksBg}
       />
 
-      <LiveMarketPricesSection data={pageData.sections.liveMarketPrices} />
+      <LiveMarketPricesSection
+        data={pageData.sections.liveMarketPrices}
+        modelCards={pageData.sections.models.cards}
+        imageSrc={pageData.assets.heroBg}
+      />
 
-      <ReviewsSection data={reviewsData} />
+      <ReviewsSection data={reviewsData} useDataHeading />
 
       <ModelsSection data={pageData.sections.models} brandSlug={pageData.brand.slug} />
 

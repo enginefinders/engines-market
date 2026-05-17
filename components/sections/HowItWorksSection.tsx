@@ -139,19 +139,39 @@ function getIcon(icon: string) {
 }
 
 function splitTagline(tagline: string) {
-  const normalized = tagline.replace(/[â€“â€”]/g, "–");
-  const parts = normalized.split("–");
+  const normalized = tagline.replace(/[–—]/g, "-");
+  const parts = normalized.split("-");
 
   if (parts.length > 1) {
     return {
       lead: parts[0].trim(),
-      emphasis: parts.slice(1).join("–").trim(),
+      emphasis: parts.slice(1).join("-").trim(),
     };
   }
 
   return {
     lead: normalized,
     emphasis: "",
+  };
+}
+
+function splitHeading(title: string) {
+  const match = title.match(/^(3\s+Simple\s+Steps)\s*(.*)$/i);
+  const accent = "Best Land Rover Replacement Engine";
+
+  if (!match) {
+    const [beforeAccent, afterAccent] = title.split(accent);
+    return { lead: beforeAccent?.trim() || title, sublead: accent, subleadPrefix: afterAccent ? beforeAccent.trim() : title, accentOnly: afterAccent ? accent : "" };
+  }
+
+  const remainder = match[2].trim();
+  const [beforeAccent, afterAccent] = remainder.split(accent);
+
+  return {
+    lead: match[1].trim(),
+    sublead: remainder,
+    subleadPrefix: afterAccent !== undefined ? beforeAccent.trim() : remainder,
+    accentOnly: afterAccent !== undefined ? accent : "",
   };
 }
 
@@ -168,26 +188,28 @@ function DesktopSideCard({
       onClick={onOpen}
       className="flex h-full w-full flex-col rounded-[12px] border border-[#e5e7eb] bg-white px-[14px] py-[14px] text-left shadow-[0_2px_12px_rgba(13,27,46,0.06)] transition hover:border-[#bbf7d0]"
     >
-      <div className="flex h-[58px] w-[58px] items-center justify-center rounded-[12px] bg-[#0d1b2e] text-[#22c55e]">
+      <div className="mx-auto flex h-[58px] w-[58px] items-center justify-center rounded-[12px] bg-[#0d1b2e] text-[#22c55e]">
         {getIcon(card.icon)}
       </div>
 
-      <span className="mt-[10px] inline-flex w-fit rounded-full border border-[#bbf7d0] bg-[#f0fdf4] px-2 py-[2px] text-[9px] font-bold uppercase tracking-[0.9px] text-[#15803d]">
+      <span className="mt-[10px] inline-flex w-fit text-[9px] font-bold uppercase tracking-[0.9px] text-[#15803d]">
         Step {card.number}
       </span>
 
-      <h3 className="mt-[10px] font-['Manrope'] text-[15px] font-bold leading-[1.25] text-[#0d1b2e]">
+      <div role="heading" aria-level={3} className="mt-[10px] font-['Manrope'] text-[15px] font-bold leading-[1.25] text-[#0d1b2e]">
         {card.front.h3}
-      </h3>
+      </div>
 
       <p className="mt-[8px] text-[12px] leading-[1.55] text-[#6b7280]">{card.front.text}</p>
 
-      <div className="mt-auto flex items-center justify-between pt-5 text-[10px] font-semibold text-[#6b7280]">
+      <div className="mt-auto flex items-center justify-end pt-5 text-[10px] font-semibold text-[#6b7280]">
         <span className="inline-flex items-center gap-[5px]">
           <RefreshIcon />
           <span>Click to expand</span>
         </span>
-        <ArrowChevron />
+        <span className="ml-2">
+          <ArrowChevron />
+        </span>
       </div>
     </button>
   );
@@ -211,7 +233,7 @@ function DesktopActiveCard({
           <div className="flex h-[48px] w-[48px] items-center justify-center rounded-[12px] border border-[rgba(34,197,94,0.25)] bg-[rgba(34,197,94,0.1)] text-[#22c55e]">
             {getIcon(card.icon)}
           </div>
-          <span className="inline-flex rounded-full border border-[rgba(34,197,94,0.25)] bg-[rgba(34,197,94,0.1)] px-2 py-[2px] text-[9px] font-bold uppercase tracking-[0.9px] text-[#22c55e]">
+          <span className="inline-flex text-[9px] font-bold uppercase tracking-[0.9px] text-[#22c55e]">
             Step {card.number}
           </span>
         </div>
@@ -219,9 +241,9 @@ function DesktopActiveCard({
           <span>Click to view details</span>
           <ExternalIcon />
         </span>
-        </div>
+      </div>
 
-      <div role="heading" aria-level={3} className="max-w-[520px] font-['Manrope'] text-[17px] font-bold leading-[1.25] text-white">
+      <div role="heading" aria-level={3} className="max-w-[520px] font-['Manrope'] text-[17px] font-bold leading-[1.25] !text-white">
         {card.back.heading}
       </div>
 
@@ -251,7 +273,7 @@ function MobileCard({
   onToggle: () => void;
 }) {
   return (
-    <div className={`overflow-hidden rounded-[12px] ${open ? "" : ""}`}>
+    <div className="overflow-hidden rounded-[12px]">
       {!open ? (
         <button
           type="button"
@@ -263,10 +285,12 @@ function MobileCard({
           </div>
 
           <div className="min-w-0 flex-1">
-            <span className="mb-[6px] inline-block rounded-full border border-[#bbf7d0] bg-[#f0fdf4] px-2 py-[2px] text-[9px] font-bold uppercase tracking-[0.9px] text-[#15803d]">
+            <span className="mb-[6px] inline-block text-[9px] font-bold uppercase tracking-[0.9px] text-[#15803d]">
               Step {card.number}
             </span>
-            <h3 className="font-['Manrope'] text-[14px] font-bold leading-[1.3] text-[#0d1b2e]">{card.front.h3}</h3>
+            <div role="heading" aria-level={3} className="font-['Manrope'] text-[14px] font-bold leading-[1.3] text-[#0d1b2e]">
+              {card.front.h3}
+            </div>
             <p className="mt-[5px] text-[11.5px] leading-[1.5] text-[#6b7280]">{card.front.text}</p>
             <span className="mt-2 inline-flex items-center gap-[5px] text-[10px] font-semibold text-[#15803d]">
               <RefreshIcon />
@@ -285,7 +309,7 @@ function MobileCard({
           className="w-full rounded-[12px] border border-[#1e3a5f] bg-[#0d1b2e] px-[18px] py-[18px] text-left"
         >
           <div className="mb-[14px] flex items-center justify-between gap-3">
-            <span className="inline-flex rounded-full border border-[rgba(34,197,94,0.25)] bg-[rgba(34,197,94,0.1)] px-2 py-[2px] text-[9px] font-bold uppercase tracking-[0.9px] text-[#22c55e]">
+            <span className="inline-flex text-[9px] font-bold uppercase tracking-[0.9px] text-[#22c55e]">
               Step {card.number}
             </span>
             <span className="inline-flex items-center gap-1 text-[9px] font-semibold text-[#475569]">
@@ -294,7 +318,9 @@ function MobileCard({
             </span>
           </div>
 
-          <h3 className="font-['Manrope'] text-[17px] font-bold leading-[1.25] text-white">{card.back.heading}</h3>
+          <div role="heading" aria-level={3} className="font-['Manrope'] text-[17px] font-bold leading-[1.25] !text-white">
+            {card.back.heading}
+          </div>
           <p className="mt-2 text-[12px] leading-[1.55] text-[#94a3b8]">{card.back.text}</p>
 
           <ul className="mt-[14px] space-y-[10px]">
@@ -317,10 +343,11 @@ export default function HowItWorksSection({ data, bgImage }: Props) {
   const defaultCardNumber = data.cards[1]?.number ?? data.cards[0]?.number ?? 1;
   const [activeCard, setActiveCard] = useState<number>(defaultCardNumber);
   const tagline = splitTagline(data.tagline);
+  const heading = splitHeading(data.h2);
 
   const active = useMemo(
     () => data.cards.find((card) => card.number === activeCard) ?? data.cards[0],
-    [activeCard, data.cards]
+    [activeCard, data.cards],
   );
 
   const trustItems = [
@@ -346,17 +373,25 @@ export default function HowItWorksSection({ data, bgImage }: Props) {
 
       <Container className="relative max-w-[1180px] px-0 sm:px-5 lg:px-4">
         <div className="px-4 pt-[28px] sm:px-0 lg:pt-0">
-          <div className="mb-[14px] inline-flex items-center gap-[6px] rounded-full border border-[#bbf7d0] bg-[#f0fdf4] px-3 py-[4px] text-[10px] font-bold uppercase tracking-[0.8px] text-[#15803d]">
+          <div className="section-pill mb-[14px]">
             <span>{data.tag}</span>
           </div>
 
-          <h2 className="max-w-[680px] font-['Manrope'] text-[25px] font-extrabold leading-[1.18] tracking-[-0.5px] text-[#0d1b2e] lg:text-[41px] lg:leading-[1.05] lg:tracking-[-1px]">
-            {data.h2}
-          </h2>
-
-          <p className="mt-[10px] max-w-[520px] text-[13px] leading-[1.55] text-[#6b7280]">
-            Fast, free and hassle-free. Get matched with trusted UK suppliers and save on your next engine.
-          </p>
+          <h2 className="max-w-[760px] font-['Manrope'] text-[27px] font-extrabold leading-[1.12] tracking-[-0.5px] text-[#0d1b2e] lg:text-[44px] lg:leading-[1.03] lg:tracking-[-1px]">
+              <span className="block">{heading.lead}</span>
+              {heading.sublead ? (
+                <span className="mt-1 block text-[21px] leading-[1.15] lg:text-[34px]">
+                  {heading.accentOnly ? (
+                    <>
+                      <span>{heading.subleadPrefix} </span>
+                      <span className="text-[#15803d]">{heading.accentOnly}</span>
+                    </>
+                  ) : (
+                    heading.sublead
+                  )}
+                </span>
+              ) : null}
+            </h2>
         </div>
 
         <div className="mt-[18px] px-4 sm:px-0 lg:hidden">
@@ -393,9 +428,9 @@ export default function HowItWorksSection({ data, bgImage }: Props) {
           <div className="text-[13px] leading-[1.45] text-[#0d1b2e]">
             <p className="font-semibold">
               {tagline.lead}
-              {tagline.emphasis ? <span className="font-bold text-[#15803d]"> – {tagline.emphasis}</span> : null}
+              {tagline.emphasis ? <span className="font-bold text-[#15803d]"> - {tagline.emphasis}</span> : null}
             </p>
-            <p className="mt-1 text-[12px] font-normal leading-[1.4] text-[#6b7280]">Most replacements completed within 3–5 days.</p>
+            <p className="mt-1 text-[12px] font-normal leading-[1.4] text-[#6b7280]">Most replacements completed within 3-5 days.</p>
           </div>
         </div>
 

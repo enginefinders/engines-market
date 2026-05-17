@@ -147,6 +147,7 @@ export type EngineCodesData = {
   tag: string;
   h2: string;
   h3: string;
+  closingLine?: string;
   filters: string[];
   groups: {
     name: string;

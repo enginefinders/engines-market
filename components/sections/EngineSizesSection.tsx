@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import type { EngineSizesData } from "@/types/brand";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
@@ -9,16 +9,38 @@ type Props = {
   brandName: string;
   data: EngineSizesData;
   bgImage?: string;
+  dynamicBrandLabel?: boolean;
 };
 
-function tagVariant(title: string) {
+type FuelKind = "diesel" | "petrol" | "hybrid";
+type GroupItem = EngineSizesData["groups"][number]["items"][number];
+
+function tagVariant(title: string): FuelKind {
   const normalized = title.toLowerCase();
   if (normalized.includes("hybrid") || normalized.includes("electric")) return "hybrid";
   if (normalized.includes("petrol")) return "petrol";
   return "diesel";
 }
 
-function FuelTabIcon({ kind }: { kind: "diesel" | "petrol" | "hybrid" }) {
+function normalizeText(text: string) {
+  return text.replace(/Â·/g, "·").replace(/Â£/g, "£").replace(/[Ã¢â‚¬â€œÃ¢â‚¬â€]/g, "-");
+}
+
+function splitHeading(text: string) {
+  const parts = text.split(/\s+-\s+/);
+  return {
+    primary: parts[0] ?? text,
+    accent: parts.length > 1 ? parts.slice(1).join(" ") : "",
+  };
+}
+
+function brandNameLabel(brandName: string, sizeTitle: string, kind: FuelKind) {
+  if (kind === "hybrid") return `${brandName} ${sizeTitle}`;
+  if (kind === "petrol") return `${brandName} ${sizeTitle} Petrol Engines`;
+  return `${brandName} ${sizeTitle} Diesel Engines`;
+}
+
+function FuelTabIcon({ kind }: { kind: FuelKind }) {
   if (kind === "petrol") {
     return (
       <svg viewBox="0 0 24 24" className="h-[14px] w-[14px]" fill="none" aria-hidden="true">
@@ -36,7 +58,13 @@ function FuelTabIcon({ kind }: { kind: "diesel" | "petrol" | "hybrid" }) {
   if (kind === "hybrid") {
     return (
       <svg viewBox="0 0 24 24" className="h-[14px] w-[14px]" fill="none" aria-hidden="true">
-        <path d="M5 17H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v9a2 2 0 0 1-2 2h-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        <path
+          d="M5 17H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v9a2 2 0 0 1-2 2h-5"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
         <polyline points="14 15 17 18 14 21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
         <line x1="17" y1="18" x2="9" y2="18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
       </svg>
@@ -45,43 +73,22 @@ function FuelTabIcon({ kind }: { kind: "diesel" | "petrol" | "hybrid" }) {
 
   return (
     <svg viewBox="0 0 24 24" className="h-[14px] w-[14px]" fill="none" aria-hidden="true">
-      <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" strokeWidth="2" />
-      <path d="M3 9h18M9 3v18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      <rect x="3" y="7" width="18" height="10" rx="2" stroke="currentColor" strokeWidth="2" />
+      <path d="M8 7V5h8v2M6 10h2M16 10h2M12 7v10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
     </svg>
   );
 }
 
-function EngineIcon({ hybrid = false }: { hybrid?: boolean }) {
-  if (hybrid) {
-    return (
-      <svg viewBox="0 0 24 24" className="h-[18px] w-[18px]" fill="none" aria-hidden="true">
-        <path d="M5 17H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v9a2 2 0 0 1-2 2h-5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-        <polyline points="14 15 17 18 14 21" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-        <line x1="17" y1="18" x2="9" y2="18" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-      </svg>
-    );
-  }
-
+function TagIcon() {
   return (
-    <svg viewBox="0 0 24 24" className="h-[18px] w-[18px]" fill="none" aria-hidden="true">
-      <rect x="2" y="7" width="20" height="14" rx="2" stroke="currentColor" strokeWidth="1.8" />
-      <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-    </svg>
-  );
-}
-
-function WarningIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-[14px] w-[14px]" fill="none" aria-hidden="true">
+    <svg viewBox="0 0 24 24" className="h-3 w-3" fill="none" aria-hidden="true">
       <path
-        d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
+        d="M4 12a8 8 0 1 0 16 0A8 8 0 0 0 4 12Zm8-5v5l3 2"
         stroke="currentColor"
-        strokeWidth="2.2"
+        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
-      <line x1="12" y1="9" x2="12" y2="13" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
-      <line x1="12" y1="17" x2="12.01" y2="17" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
     </svg>
   );
 }
@@ -95,6 +102,43 @@ function ShieldIcon() {
   );
 }
 
+function WarningIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-[14px] w-[14px]" fill="none" aria-hidden="true">
+      <path
+        d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <line x1="12" y1="9" x2="12" y2="13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      <line x1="12" y1="17" x2="12.01" y2="17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function SwapIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-[15px] w-[15px]" fill="none" aria-hidden="true">
+      <path d="M7 7h11m0 0-3-3m3 3-3 3M17 17H6m0 0 3-3m-3 3 3 3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function ChevronDownIcon({ open }: { open: boolean }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className={`h-[14px] w-[14px] transition ${open ? "rotate-180" : ""}`}
+      fill="none"
+      aria-hidden="true"
+    >
+      <polyline points="6,9 12,15 18,9" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
 function ArrowIcon() {
   return (
     <svg viewBox="0 0 24 24" className="h-[13px] w-[13px]" fill="none" aria-hidden="true">
@@ -104,128 +148,128 @@ function ArrowIcon() {
   );
 }
 
-function ChevronIcon({ open }: { open: boolean }) {
+function RowChevron({ open }: { open: boolean }) {
   return (
-    <span className={`text-[18px] leading-none text-[#d1d5db] transition ${open ? "rotate-180 text-[#15803d]" : ""}`}>
-      ⌄
-    </span>
+    <svg
+      viewBox="0 0 24 24"
+      className={`h-[16px] w-[16px] text-[#94a3b8] transition ${open ? "rotate-180 text-[#15803d]" : ""}`}
+      fill="none"
+      aria-hidden="true"
+    >
+      <polyline points="6,9 12,15 18,9" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
   );
 }
 
-type GroupItem = EngineSizesData["groups"][number]["items"][number];
+function fuelBadgeLabel(kind: FuelKind) {
+  if (kind === "hybrid") return "Hybrid & Electric";
+  if (kind === "petrol") return "Petrol";
+  return "Diesel";
+}
 
-function MobileAccordionCard({
+function fuelBadgeClass(kind: FuelKind) {
+  if (kind === "petrol") return "border-[#fed7aa] bg-[#fff8f0] text-[#c2410c]";
+  if (kind === "hybrid") return "border-[#bbf7d0] bg-[#f0fdf4] text-[#15803d]";
+  return "border-[#bbf7d0] bg-[#f0fdf4] text-[#15803d]";
+}
+
+function SizeAccordionCard({
+  brandName,
+  dynamicBrandLabel,
   item,
   kind,
   open,
   onToggle,
 }: {
+  brandName: string;
+  dynamicBrandLabel: boolean;
   item: GroupItem;
-  kind: "diesel" | "petrol" | "hybrid";
+  kind: FuelKind;
   open: boolean;
   onToggle: () => void;
 }) {
   return (
-    <div className={`overflow-hidden rounded-[12px] border border-[#e5e7eb] bg-white shadow-[0_2px_8px_rgba(13,27,46,0.05)] ${open ? "open" : ""}`}>
+    <div className="overflow-hidden rounded-[12px] border border-[#e5e7eb] bg-white shadow-[0_2px_8px_rgba(13,27,46,0.05)]">
       <button
         type="button"
         onClick={onToggle}
-        className="flex w-full items-center gap-3 px-[14px] py-[14px] text-left transition hover:bg-[#fafafa]"
+        className="flex w-full items-start gap-3 px-4 py-[13px] text-left transition hover:bg-[#fafafa]"
       >
-        <div className={`flex h-[38px] w-[38px] flex-none items-center justify-center rounded-[9px] ${kind === "hybrid" ? "bg-[#15803d] text-white" : "bg-[#0d1b2e] text-[#22c55e]"}`}>
-          <EngineIcon hybrid={kind === "hybrid"} />
-        </div>
-
+        <span className="mt-[2px] h-7 w-[4px] flex-none rounded-full bg-[#22c55e]" />
         <div className="min-w-0 flex-1">
-          <div className="font-['Manrope'] text-[14.5px] font-extrabold leading-[1.2] text-[#0d1b2e]">{item.title}</div>
-          <div className="mt-1 flex flex-wrap gap-[5px]">
-            <span className={`rounded-full border px-[8px] py-[2px] text-[9px] font-bold uppercase tracking-[0.5px] ${
-              kind === "diesel"
-                ? "border-[#bbf7d0] bg-[#f0fdf4] text-[#15803d]"
-                : kind === "petrol"
-                  ? "border-[#fed7aa] bg-[#fff8f0] text-[#c2410c]"
-                  : "border-[#bbf7d0] bg-[#f0fdf4] text-[#15803d]"
-            }`}>
-              {kind === "hybrid" ? "Hybrid & Electric" : kind === "petrol" ? "Petrol" : "Diesel"}
+          <div className="flex items-center gap-3">
+            <div className="font-['Manrope'] text-[14px] font-extrabold leading-[1.2] text-[#0d1b2e]">
+              {item.title}
+            </div>
+            <span className={`rounded-full border px-[8px] py-[2px] text-[9px] font-bold uppercase tracking-[0.5px] ${fuelBadgeClass(kind)}`}>
+              {fuelBadgeLabel(kind)}
             </span>
-            {item.engineCodes?.length ? (
-              <span className="rounded-full border border-[#e5e7eb] bg-[#f1f5f9] px-[8px] py-[2px] text-[9px] font-bold uppercase tracking-[0.5px] text-[#374151]">
-                {item.engineCodes.slice(0, 2).join(" · ")}
-              </span>
-            ) : null}
           </div>
+          {item.compatibleModels?.length ? (
+            <p className="mt-[2px] text-[10.5px] leading-[1.45] text-[#64748b]">
+              {item.compatibleModels.slice(0, 5).join(", ")}
+            </p>
+          ) : null}
         </div>
-
-        <ChevronIcon open={open} />
+        <RowChevron open={open} />
       </button>
 
       {open ? (
-        <div className="border-t border-[#f1f5f9]">
-          <p className="border-b border-[#f1f5f9] px-4 py-[14px] text-[12.5px] leading-[1.7] text-[#374151]">
-            {item.description}
-          </p>
+        <div className="border-t border-[#eef2f7] px-4 py-[14px]">
+          <div className="font-['Manrope'] text-[14px] font-extrabold leading-[1.25] text-[#0d1b2e]">
+            {dynamicBrandLabel
+              ? brandNameLabel(brandName, item.title, kind)
+              : kind === "hybrid"
+                ? `Land Rover ${item.title}`
+                : kind === "petrol"
+                  ? `Land Rover ${item.title} Petrol Engines`
+                  : `Land Rover ${item.title} Diesel Engines`}
+          </div>
+          <p className="mt-2 text-[12px] leading-[1.65] text-[#475569]">{normalizeText(item.description)}</p>
 
-          <table className="w-full border-collapse">
-            <tbody>
-              {item.engineCodes?.length ? (
-                <tr className="border-b border-[#f1f5f9]">
-                  <td className="w-[38%] px-4 py-[9px] text-[9.5px] font-bold uppercase tracking-[0.5px] text-[#9ca3af]">System / Motor Code(s)</td>
-                  <td className="px-4 py-[9px] text-[11.5px] font-medium leading-[1.45] text-[#374151]">
-                    <strong className="font-bold text-[#0d1b2e]">{item.engineCodes.join(", ")}</strong>
-                  </td>
-                </tr>
-              ) : null}
-              {item.compatibleModels?.length ? (
-                <tr className="border-b border-[#f1f5f9]">
-                  <td className="w-[38%] px-4 py-[9px] text-[9.5px] font-bold uppercase tracking-[0.5px] text-[#9ca3af]">Compatible Models (UK)</td>
-                  <td className="px-4 py-[9px] text-[11.5px] font-medium leading-[1.45] text-[#374151]">
-                    {item.compatibleModels.join(", ")}
-                  </td>
-                </tr>
-              ) : null}
-              {item.productionYears ? (
-                <tr className="border-b border-[#f1f5f9]">
-                  <td className="w-[38%] px-4 py-[9px] text-[9.5px] font-bold uppercase tracking-[0.5px] text-[#9ca3af]">Production Years</td>
-                  <td className="px-4 py-[9px] text-[11.5px] font-medium leading-[1.45] text-[#374151]">
-                    {item.productionYears}
-                  </td>
-                </tr>
-              ) : null}
-            </tbody>
-          </table>
+          <div className="mt-4 overflow-hidden rounded-[10px] border border-[#d8ebdd] bg-white">
+            <table className="w-full border-collapse">
+              <tbody>
+                {item.engineCodes?.length ? (
+                  <tr className="border-b border-[#e5f2e8]">
+                    <td className="w-[42%] px-3 py-[10px] text-[9px] font-bold uppercase tracking-[0.5px] text-[#64748b]">Engine Code(s)</td>
+                    <td className="px-3 py-[10px] text-[11px] leading-[1.5] text-[#334155]">{item.engineCodes.join(", ")}</td>
+                  </tr>
+                ) : null}
+                {item.compatibleModels?.length ? (
+                  <tr className="border-b border-[#e5f2e8]">
+                    <td className="w-[42%] px-3 py-[10px] text-[9px] font-bold uppercase tracking-[0.5px] text-[#64748b]">Compatible Models (UK)</td>
+                    <td className="px-3 py-[10px] text-[11px] leading-[1.5] text-[#334155]">{item.compatibleModels.join(", ")}</td>
+                  </tr>
+                ) : null}
+                {item.productionYears ? (
+                  <tr>
+                    <td className="w-[42%] px-3 py-[10px] text-[9px] font-bold uppercase tracking-[0.5px] text-[#64748b]">Production Years</td>
+                    <td className="px-3 py-[10px] text-[11px] leading-[1.5] text-[#334155]">{item.productionYears}</td>
+                  </tr>
+                ) : null}
+              </tbody>
+            </table>
+          </div>
 
           {item.commonFailurePoints?.length ? (
-            kind === "hybrid" ? (
-              <div className="mx-4 mb-[14px] mt-[14px] flex items-start gap-2 rounded-[8px] border border-[#fde68a] bg-[#fffbeb] px-3 py-[10px]">
-                <span className="mt-[1px] text-[#f59e0b]">
-                  <WarningIcon />
-                </span>
-                <p className="text-[11px] leading-[1.55] text-[#92400e]">
-                  <strong className="font-bold">Important Notes:</strong> {item.commonFailurePoints.join(", ")}
-                </p>
+            <div className="mt-4 rounded-[10px] border border-[#fed7aa] bg-[#fffaf3] px-3 py-3">
+              <div className="mb-[6px] flex items-center gap-2 text-[9px] font-bold uppercase tracking-[0.5px] text-[#c2410c]">
+                <WarningIcon />
+                <span>{kind === "hybrid" ? "Important Notes" : "Common Failure Points"}</span>
               </div>
-            ) : (
-              <table className="w-full border-collapse">
-                <tbody>
-                  <tr>
-                    <td className="w-[38%] px-4 py-[9px] text-[9.5px] font-bold uppercase tracking-[0.5px] text-[#9ca3af]">Common Failures</td>
-                    <td className="px-4 py-[9px] text-[11.5px] font-medium leading-[1.45] text-[#374151]">
-                      {item.commonFailurePoints.join(", ")}
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            )
+              <p className="text-[11px] leading-[1.55] text-[#92400e]">{item.commonFailurePoints.join(", ")}</p>
+            </div>
           ) : null}
 
           <a
             href="#quote-form"
             data-quote-context={item.title}
             data-quote-source="engine-sizes"
-            className="flex items-center gap-[6px] border-t border-[#f1f5f9] bg-[#fafafa] px-4 py-3 text-[12px] font-bold text-[#15803d] transition hover:bg-[#f0fdf4]"
+            className="mt-4 flex items-center justify-between rounded-[8px] border border-[#dbe6d8] bg-[#f8fff7] px-3 py-[10px] text-[11.5px] font-bold text-[#15803d] transition hover:bg-[#f0fdf4]"
           >
+            <span>{item.cta.replace(/\s*->\s*$/, "")}</span>
             <ArrowIcon />
-            <span>{item.cta}</span>
           </a>
         </div>
       ) : null}
@@ -233,140 +277,70 @@ function MobileAccordionCard({
   );
 }
 
-function DesktopRow({
-  item,
-  kind,
-  open,
-  onToggle,
-}: {
-  item: GroupItem;
-  kind: "diesel" | "petrol" | "hybrid";
-  open: boolean;
-  onToggle: () => void;
-}) {
-  const badgeClass =
-    kind === "diesel"
-      ? "border-[#bbf7d0] bg-[#f0fdf4] text-[#15803d]"
-      : kind === "petrol"
-        ? "border-[#fed7aa] bg-[#fff8f0] text-[#c2410c]"
-        : "border-[#bbf7d0] bg-[#f0fdf4] text-[#15803d]";
-
+function HelperNote({ text }: { text: string }) {
   return (
-    <div className="overflow-hidden rounded-[12px] border border-[#e5e7eb] bg-white shadow-[0_2px_8px_rgba(13,27,46,0.05)]">
-      <button
-        type="button"
-        onClick={onToggle}
-        className="flex w-full items-center gap-3 px-[14px] py-[12px] text-left transition hover:bg-[#fafafa]"
-      >
-        <span className="h-6 w-[4px] flex-none rounded-full bg-[#22c55e]" />
-        <div className="min-w-0 flex-1">
-          <div className="flex items-center gap-3">
-            <div className="font-['Manrope'] text-[20px] font-extrabold leading-none text-[#0d1b2e]">{item.title}</div>
-            <span className={`rounded-[6px] border px-[8px] py-[2px] text-[10px] font-bold uppercase tracking-[0.5px] ${badgeClass}`}>
-              {kind === "hybrid" ? "Hybrid & Electric" : kind === "petrol" ? "Petrol" : "Diesel"}
-            </span>
-            {item.compatibleModels?.length ? (
-              <span className="truncate text-[11px] text-[#64748b]">{item.compatibleModels.slice(0, 5).join(", ")}</span>
-            ) : null}
-          </div>
+    <div className="rounded-[12px] border border-[#e5e7eb] bg-white px-4 py-4 shadow-[0_2px_8px_rgba(13,27,46,0.04)]">
+      <div className="flex items-start gap-3">
+        <div className="flex h-10 w-10 flex-none items-center justify-center rounded-full bg-[#f0fdf4] text-[#15803d]">
+          <ShieldIcon />
         </div>
-        <ChevronIcon open={open} />
-      </button>
-
-      {open ? (
-        <div className="border-t border-[#f1f5f9] px-[14px] py-[12px]">
-          <div className="grid gap-4 lg:grid-cols-[1.15fr_0.92fr_0.75fr]">
-            <div>
-              <div className="mb-[6px] font-['Manrope'] text-[15px] font-extrabold text-[#0d1b2e]">
-                {brandNameLabel(item.title, kind)}
-              </div>
-              <p className="text-[12px] leading-[1.7] text-[#374151]">{item.description}</p>
-              <a
-                href="#quote-form"
-                data-quote-context={item.title}
-                data-quote-source="engine-sizes"
-                className="mt-[14px] inline-flex items-center rounded-[8px] border border-[#dbe6d8] bg-[#f8fff7] px-3 py-[9px] text-[12px] font-bold text-[#15803d] transition hover:bg-[#f0fdf4]"
-              >
-                <ArrowIcon />
-                <span className="ml-[6px]">{item.cta}</span>
-              </a>
-            </div>
-
-            <div className="overflow-hidden rounded-[10px] border border-[#bbf7d0]">
-              <table className="w-full border-collapse">
-                <tbody>
-                  {item.engineCodes?.length ? (
-                    <tr className="border-b border-[#d7f0d7]">
-                      <td className="w-[42%] px-3 py-[10px] text-[9px] font-bold uppercase tracking-[0.5px] text-[#374151]">Engine Code(s)</td>
-                      <td className="px-3 py-[10px] text-[11px] text-[#374151]">{item.engineCodes.join(", ")}</td>
-                    </tr>
-                  ) : null}
-                  {item.compatibleModels?.length ? (
-                    <tr className="border-b border-[#d7f0d7]">
-                      <td className="w-[42%] px-3 py-[10px] text-[9px] font-bold uppercase tracking-[0.5px] text-[#374151]">Compatible Models (UK)</td>
-                      <td className="px-3 py-[10px] text-[11px] text-[#374151]">{item.compatibleModels.join(", ")}</td>
-                    </tr>
-                  ) : null}
-                  {item.productionYears ? (
-                    <tr>
-                      <td className="w-[42%] px-3 py-[10px] text-[9px] font-bold uppercase tracking-[0.5px] text-[#374151]">Production Years</td>
-                      <td className="px-3 py-[10px] text-[11px] text-[#374151]">{item.productionYears}</td>
-                    </tr>
-                  ) : null}
-                </tbody>
-              </table>
-            </div>
-
-            {item.commonFailurePoints?.length ? (
-              <div className={`rounded-[10px] border px-3 py-[10px] ${
-                kind === "hybrid"
-                  ? "border-[#fde68a] bg-[#fffbeb]"
-                  : "border-[#f3dfd6] bg-[#fffaf7]"
-              }`}>
-                <div className={`mb-[8px] flex items-center gap-[6px] text-[9px] font-bold uppercase tracking-[0.5px] ${
-                  kind === "hybrid" ? "text-[#f59e0b]" : "text-[#c2410c]"
-                }`}>
-                  <WarningIcon />
-                  <span>{kind === "hybrid" ? "Important Notes" : "Common Failure Points"}</span>
-                </div>
-                <p className={`text-[11px] leading-[1.55] ${
-                  kind === "hybrid" ? "text-[#92400e]" : "text-[#6b7280]"
-                }`}>
-                  {item.commonFailurePoints.join(", ")}
-                </p>
-              </div>
-            ) : null}
-          </div>
-        </div>
-      ) : null}
+        <p className="text-[12px] leading-[1.7] text-[#64748b]">{normalizeText(text)}</p>
+      </div>
     </div>
   );
 }
 
-function brandNameLabel(sizeTitle: string, kind: "diesel" | "petrol" | "hybrid") {
-  if (kind === "hybrid") return `Land Rover ${sizeTitle}`;
-  if (kind === "petrol") return `Land Rover ${sizeTitle} Petrol Engines`;
-  return `Land Rover ${sizeTitle} Diesel Engines`;
-}
-
-export default function EngineSizesSection({ brandName: _brandName, data, bgImage }: Props) {
-  void _brandName;
+export default function EngineSizesSection({
+  brandName,
+  data,
+  bgImage,
+  dynamicBrandLabel = false,
+}: Props) {
+  const groups = data.groups;
+  const initialVisible = groups.length >= 2 ? [0, 1] : [0];
+  const [visibleGroupIndices, setVisibleGroupIndices] = useState<number[]>(initialVisible);
   const [activeGroupIndex, setActiveGroupIndex] = useState(0);
   const [openItemIndex, setOpenItemIndex] = useState(0);
+  const [desktopSwapOpen, setDesktopSwapOpen] = useState(false);
+  const [mobileSwapOpen, setMobileSwapOpen] = useState(false);
 
-  const activeGroup = data.groups[activeGroupIndex] ?? data.groups[0];
-  const fuelKind = tagVariant(activeGroup?.title ?? "diesel");
+  const heading = splitHeading(data.h2);
+  const activeGroup = groups[activeGroupIndex] ?? groups[0];
+  const activeKind = tagVariant(activeGroup?.title ?? "diesel");
 
-  useMemo(() => activeGroup, [activeGroup]);
+  const visibleGroups = visibleGroupIndices.map((index) => groups[index]).filter(Boolean);
+  const hiddenGroupIndices = groups
+    .map((_, index) => index)
+    .filter((index) => !visibleGroupIndices.includes(index));
+
+  const desktopSwapIn = (incomingIndex: number) => {
+    setVisibleGroupIndices((current) => {
+      if (current.includes(incomingIndex)) return current;
+      const replaceSlot = current.findIndex((index) => index !== activeGroupIndex);
+      const slot = replaceSlot >= 0 ? replaceSlot : Math.max(current.length - 1, 0);
+      const next = [...current];
+      next[slot] = incomingIndex;
+      return next;
+    });
+    setActiveGroupIndex(incomingIndex);
+    setOpenItemIndex(0);
+    setDesktopSwapOpen(false);
+  };
+
+  const mobileSelectGroup = (groupIndex: number) => {
+    setActiveGroupIndex(groupIndex);
+    setOpenItemIndex(0);
+    setMobileSwapOpen(false);
+  };
 
   return (
     <Section className="relative overflow-hidden bg-[#f8f9fa]">
       {bgImage ? (
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
           <div
-            className="absolute right-0 top-0 hidden h-[280px] w-[390px] opacity-[0.07] lg:block"
+            className="absolute right-0 top-0 hidden h-[270px] w-[390px] opacity-[0.08] lg:block"
             style={{
-              backgroundImage: `linear-gradient(180deg, rgba(248,249,250,0.15), rgba(248,249,250,0.82)), url(${bgImage})`,
+              backgroundImage: `linear-gradient(180deg, rgba(248,249,250,0.08), rgba(248,249,250,0.84)), url(${bgImage})`,
               backgroundSize: "contain",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "top right",
@@ -376,131 +350,151 @@ export default function EngineSizesSection({ brandName: _brandName, data, bgImag
       ) : null}
 
       <Container className="relative max-w-[1180px]">
-        <div className="mb-[14px] inline-flex items-center gap-[7px] rounded-full border border-[#bbf7d0] bg-[#f0fdf4] px-3 py-[4px] text-[10px] font-bold uppercase tracking-[0.8px] text-[#15803d]">
-          <WarningIcon />
+        <div className="section-pill mb-[14px]">
+          <TagIcon />
           <span>{data.tag}</span>
         </div>
 
-        <div className="lg:grid lg:grid-cols-[1fr_0.9fr] lg:items-start lg:gap-8">
-          <div>
-            <h2 className="max-w-[620px] font-['Manrope'] text-[24px] font-extrabold leading-[1.2] tracking-[-0.4px] text-[#0d1b2e] md:text-[28px] lg:text-[30px]">
-              {data.h2}
-            </h2>
-            <p className="mt-[10px] max-w-[540px] text-[13px] leading-[1.6] text-[#6b7280]">{data.intro}</p>
-          </div>
+        <h2 className="max-w-[720px] font-['Manrope'] text-[26px] font-extrabold leading-[1.16] tracking-[-0.5px] text-[#0d1b2e] md:text-[30px] lg:text-[34px]">
+          <span>{heading.primary}</span>
+          {heading.accent ? (
+            <>
+              <br />
+              <span className="text-[#15803d]">{heading.accent}</span>
+            </>
+          ) : null}
+        </h2>
+        <p className="mt-[10px] max-w-[560px] text-[13px] leading-[1.65] text-[#64748b]">{data.intro}</p>
 
-          <div className="mt-4 hidden rounded-[12px] border border-[#e5e7eb] bg-white px-5 py-4 shadow-[0_2px_8px_rgba(13,27,46,0.04)] lg:flex lg:items-start lg:gap-3">
-            <div className="flex h-[34px] w-[34px] flex-none items-center justify-center rounded-full bg-[#f0fdf4] text-[#22c55e]">
-              <ShieldIcon />
+        <div className="relative mt-5 lg:hidden">
+          <div className="rounded-[10px] bg-[#0d1b2e] p-[3px]">
+            <div className="flex items-center justify-between gap-2 rounded-[8px] bg-[#0d1b2e] px-3 py-[10px] text-white">
+              <div className="flex min-w-0 items-center gap-2">
+                <FuelTabIcon kind={activeKind} />
+                <span className="truncate text-[12px] font-bold">{activeGroup?.title}</span>
+              </div>
+              <button
+                type="button"
+                onClick={() => setMobileSwapOpen((current) => !current)}
+                className="inline-flex items-center gap-2 rounded-[6px] border border-white/10 bg-white/5 px-2 py-[6px] text-white"
+              >
+                <SwapIcon />
+                <ChevronDownIcon open={mobileSwapOpen} />
+              </button>
             </div>
-            <p className="text-[12px] leading-[1.7] text-[#64748b]">{data.closing}</p>
+          </div>
+
+          {mobileSwapOpen ? (
+            <div className="absolute right-0 top-[calc(100%+8px)] z-20 w-[240px] rounded-[12px] border border-[#e5e7eb] bg-white p-2 shadow-[0_12px_30px_rgba(13,27,46,0.14)]">
+              <div className="px-2 pb-2 text-[10px] font-bold uppercase tracking-[0.5px] text-[#94a3b8]">Swap panel</div>
+              <div className="flex flex-col gap-1">
+                {groups
+                  .map((group, index) => ({ group, index }))
+                  .filter(({ index }) => index !== activeGroupIndex)
+                  .map(({ group, index }) => (
+                    <button
+                      key={group.title}
+                      type="button"
+                      onClick={() => mobileSelectGroup(index)}
+                      className="flex items-center gap-2 rounded-[9px] px-3 py-[10px] text-left text-[11px] font-bold text-[#0d1b2e] transition hover:bg-[#f8fafc]"
+                    >
+                      <FuelTabIcon kind={tagVariant(group.title)} />
+                      <span>{group.title}</span>
+                    </button>
+                  ))}
+              </div>
+            </div>
+          ) : null}
+        </div>
+
+        <div className="relative mt-5 hidden lg:block">
+          <div className="rounded-[10px] bg-[#0d1b2e] p-[3px]">
+            <div className="flex items-stretch gap-[3px]">
+              {visibleGroups.map((group, slot) => {
+                const groupIndex = visibleGroupIndices[slot];
+                const kind = tagVariant(group.title);
+                const active = groupIndex === activeGroupIndex;
+
+                return (
+                  <button
+                    key={group.title}
+                    type="button"
+                    onClick={() => {
+                      setActiveGroupIndex(groupIndex);
+                      setOpenItemIndex(0);
+                    }}
+                    className={`flex min-w-0 flex-1 items-center justify-center gap-[8px] rounded-[7px] px-4 py-[11px] font-['Manrope'] text-[12px] font-bold transition ${
+                      active
+                        ? "bg-white text-[#15803d] shadow-[0_1px_4px_rgba(13,27,46,0.08)]"
+                        : "bg-transparent text-white/90 hover:text-white"
+                    }`}
+                  >
+                    <FuelTabIcon kind={kind} />
+                    <span className="truncate">{group.title}</span>
+                  </button>
+                );
+              })}
+
+              {hiddenGroupIndices.length ? (
+                <div className="relative">
+                  <button
+                    type="button"
+                    onClick={() => setDesktopSwapOpen((current) => !current)}
+                    className={`flex h-full items-center gap-2 rounded-[7px] px-4 py-[11px] text-[12px] font-bold transition ${
+                      hiddenGroupIndices.includes(activeGroupIndex)
+                        ? "bg-white text-[#15803d]"
+                        : "bg-transparent text-white/90 hover:text-white"
+                    }`}
+                  >
+                    <SwapIcon />
+                    <span>{hiddenGroupIndices.length} more</span>
+                    <ChevronDownIcon open={desktopSwapOpen} />
+                  </button>
+
+                  {desktopSwapOpen ? (
+                    <div className="absolute right-0 top-[calc(100%+8px)] z-20 w-[250px] rounded-[12px] border border-[#e5e7eb] bg-white p-2 shadow-[0_14px_34px_rgba(13,27,46,0.16)]">
+                      <div className="px-2 pb-2 text-[10px] font-bold uppercase tracking-[0.5px] text-[#94a3b8]">Swap panel</div>
+                      <div className="flex flex-col gap-1">
+                        {hiddenGroupIndices.map((index) => {
+                          const group = groups[index];
+                          return (
+                            <button
+                              key={group.title}
+                              type="button"
+                              onClick={() => desktopSwapIn(index)}
+                              className="flex items-center gap-2 rounded-[9px] px-3 py-[10px] text-left text-[11px] font-bold text-[#0d1b2e] transition hover:bg-[#f8fafc]"
+                            >
+                              <FuelTabIcon kind={tagVariant(group.title)} />
+                              <span>{group.title}</span>
+                            </button>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  ) : null}
+                </div>
+              ) : null}
+            </div>
           </div>
         </div>
 
-        <div className="mt-5 flex gap-[6px] overflow-x-auto pb-[2px] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:hidden">
-          {data.groups.map((group, index) => {
-            const kind = tagVariant(group.title);
-            const active = index === activeGroupIndex;
-
-            return (
-              <button
-                key={group.title}
-                type="button"
-                onClick={() => {
-                  setActiveGroupIndex(index);
-                  setOpenItemIndex(0);
-                }}
-                className={`inline-flex flex-none items-center gap-[6px] rounded-full border px-4 py-2 font-['Manrope'] text-[12px] font-bold transition ${
-                  active
-                    ? kind === "hybrid"
-                      ? "border-[#15803d] bg-[#15803d] text-white"
-                      : "border-[#0d1b2e] bg-[#0d1b2e] text-white"
-                    : "border-[#e5e7eb] bg-white text-[#6b7280] hover:border-[#0d1b2e] hover:text-[#0d1b2e]"
-                }`}
-              >
-                <FuelTabIcon kind={kind} />
-                <span>{group.title}</span>
-              </button>
-            );
-          })}
-        </div>
-
-        <div className="mt-5 hidden rounded-[8px] bg-[#0d1b2e] p-[3px] lg:flex lg:items-center lg:gap-[3px]">
-          {data.groups.map((group, index) => {
-            const kind = tagVariant(group.title);
-            const active = index === activeGroupIndex;
-
-            return (
-              <button
-                key={group.title}
-                type="button"
-                onClick={() => {
-                  setActiveGroupIndex(index);
-                  setOpenItemIndex(0);
-                }}
-                className={`flex flex-1 items-center justify-center gap-[6px] rounded-[6px] px-4 py-[10px] font-['Manrope'] text-[12px] font-bold transition ${
-                  active
-                    ? kind === "hybrid"
-                      ? "bg-[#15803d] text-white"
-                      : "bg-[#16a34a] text-white"
-                    : "bg-transparent text-white/80 hover:text-white"
-                }`}
-              >
-                <FuelTabIcon kind={kind} />
-                <span>{group.title}</span>
-              </button>
-            );
-          })}
-        </div>
-
-        <div className="mt-5 flex flex-col gap-[10px] lg:hidden">
-          {activeGroup.items.map((item, index) => (
-            <MobileAccordionCard
+        <div className="mt-4 flex flex-col gap-[10px]">
+          {activeGroup?.items.map((item, index) => (
+            <SizeAccordionCard
               key={item.title}
+              brandName={brandName}
+              dynamicBrandLabel={dynamicBrandLabel}
               item={item}
-              kind={fuelKind}
+              kind={activeKind}
               open={openItemIndex === index}
               onToggle={() => setOpenItemIndex((current) => (current === index ? -1 : index))}
             />
           ))}
         </div>
 
-        <div className="mt-3 hidden lg:block">
-          <div className="flex flex-col gap-[8px]">
-            {activeGroup.items.map((item, index) => (
-              <DesktopRow
-                key={item.title}
-                item={item}
-                kind={fuelKind}
-                open={openItemIndex === index}
-                onToggle={() => setOpenItemIndex((current) => (current === index ? -1 : index))}
-              />
-            ))}
-          </div>
+        <div className="mt-5">
+          <HelperNote text={data.closing} />
         </div>
-
-        <div className="mt-6 rounded-[12px] bg-[#0d1b2e] px-5 py-5 lg:hidden">
-          <p className="text-[13px] leading-[1.65] text-[#94a3b8]">
-            {data.closing}
-          </p>
-          <div className="mt-4 flex gap-2">
-            <input
-              type="text"
-              placeholder="e.g. AB12 CDE"
-              maxLength={8}
-              className="h-[46px] min-w-0 flex-1 rounded-[8px] border-[1.5px] border-[#e5e7eb] bg-white px-3 text-[14px] uppercase text-[#0d1b2e] outline-none placeholder:text-[#9ca3af] focus:border-[#15803d]"
-            />
-            <a
-              href="#quote-form"
-              data-quote-context={activeGroup.title}
-              data-quote-source="engine-sizes-summary"
-              className="inline-flex h-[46px] items-center rounded-[8px] bg-[#15803d] px-4 font-['Manrope'] text-[12px] font-bold text-white transition hover:bg-[#166534]"
-            >
-              Find My Engine
-            </a>
-          </div>
-        </div>
-
       </Container>
     </Section>
   );

@@ -7,6 +7,7 @@ import Section from "@/components/ui/Section";
 
 type Props = {
   data: ReviewsSectionData;
+  useDataHeading?: boolean;
 };
 
 const REVIEW_SOURCES = ["google", "facebook", "trustpilot", "google", "facebook", "trustpilot"] as const;
@@ -25,11 +26,12 @@ function TagIcon() {
   );
 }
 
-function ShieldCheckIcon() {
+function ReviewBadgeIcon() {
   return (
-    <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" aria-hidden="true">
-      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" stroke="currentColor" strokeWidth="2" />
-      <path d="m9 12 2 2 4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" aria-hidden="true">
+      <path d="M21 11.5a8.5 8.5 0 1 1-4.14-7.3" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="m9.5 12 1.8 1.8 4.7-4.8" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="m8.7 20.3-.5 2.7 3.8-2.1 3.8 2.1-.5-2.7" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 }
@@ -49,8 +51,8 @@ function ChevronButton({ direction, onClick }: { direction: "prev" | "next"; onC
     <button
       type="button"
       onClick={onClick}
-      className={`absolute top-1/2 z-[2] hidden h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-500 shadow-[0_1px_6px_rgba(13,27,46,0.08)] transition hover:border-green-300 hover:text-green-700 lg:flex ${
-        direction === "prev" ? "-left-4" : "-right-4"
+      className={`absolute top-1/2 z-[2] hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-500 shadow-[0_4px_14px_rgba(13,27,46,0.10)] transition hover:border-green-300 hover:text-green-700 lg:flex ${
+        direction === "prev" ? "-left-5" : "-right-5"
       }`}
       aria-label={direction === "prev" ? "Previous reviews" : "Next reviews"}
     >
@@ -89,9 +91,27 @@ function getVisibleIndices(total: number, current: number, count: number) {
   return Array.from({ length: Math.min(count, total) }, (_, offset) => (current + offset) % total);
 }
 
-export default function ReviewsSection({ data }: Props) {
+function splitHeading(title: string) {
+  const match = title.match(/^(Trusted by .*? Owners)\s+(Across the UK)$/i);
+
+  if (!match) {
+    return {
+      lineOne: title,
+      lineTwo: "",
+    };
+  }
+
+  return {
+    lineOne: match[1],
+    lineTwo: match[2],
+  };
+}
+
+export default function ReviewsSection({ data, useDataHeading = false }: Props) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const reviewCount = data.reviews.length;
+  const heading = splitHeading(data.h2);
+  const ratingLabel = `${data.rating.value} out of 5`;
 
   const desktopIndices = useMemo(
     () => getVisibleIndices(reviewCount, currentIndex, 3),
@@ -114,39 +134,31 @@ export default function ReviewsSection({ data }: Props) {
     <Section className="bg-white">
       <Container>
         <div className="mx-auto max-w-[980px]">
-          <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_380px] lg:items-start">
-            <div>
-              <p className="inline-flex items-center gap-2 rounded-full border border-green-200 bg-green-50 px-3 py-1 text-[10px] font-black uppercase tracking-[0.08em] text-green-700">
-                <TagIcon />
-                {data.tag}
-              </p>
+          <div>
+            <p className="section-pill">
+              <TagIcon />
+              {data.tag}
+            </p>
 
-              <h2 className="mt-3 max-w-[520px]">{data.h2}</h2>
-
-              <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-2">
-                <StarRow />
-                <span className="font-['Manrope'] text-[22px] font-extrabold leading-none text-[#0d1b2e]">
-                  {data.rating.value}/5
+            <div className="mt-3 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+              <h2 className="max-w-[620px]">
+                <span className="block">
+                  {useDataHeading ? heading.lineOne : <>Trusted by Land Rover <span className="text-[#15803d]">Owners</span></>}
                 </span>
-                <div className="text-[12px] leading-[1.4] text-slate-500">
-                  <strong className="block font-semibold text-[#0d1b2e]">
-                    Based on {data.rating.count.toLocaleString()}
-                  </strong>
-                  verified customers
+                <span className="block text-[#15803d]">{heading.lineTwo || "Across the UK"}</span>
+              </h2>
+
+              <div className="flex items-center gap-3 rounded-[12px] border border-slate-200 bg-white px-4 py-3 shadow-[0_2px_10px_rgba(13,27,46,0.05)] lg:mb-1">
+                <StarRow size="text-[18px]" />
+                <div className="text-[13px] leading-[1.35] text-slate-500">
+                  <div className="font-['Manrope'] text-[16px] font-extrabold leading-none text-[#0d1b2e]">
+                    {ratingLabel}
+                  </div>
                 </div>
               </div>
-
-              <p className="mt-3 max-w-[560px] text-[13px] leading-[1.6] text-slate-500">{data.rating.summary}</p>
             </div>
 
-            <div className="rounded-[10px] border border-slate-200 bg-slate-50 px-4 py-3.5">
-              <div className="flex items-start gap-3">
-                <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-[8px] border border-green-200 bg-green-50 text-green-700">
-                  <ShieldCheckIcon />
-                </span>
-                <p className="text-[12px] leading-[1.55] text-slate-500">{data.rating.basedOn}</p>
-              </div>
-            </div>
+            <p className="mt-3 max-w-[680px] text-[13px] leading-[1.6] text-slate-500">{data.rating.summary}</p>
           </div>
 
           <div className="relative mt-5">
@@ -222,21 +234,11 @@ export default function ReviewsSection({ data }: Props) {
 
           <div className="mt-5 rounded-[12px] border border-green-200 bg-green-50 px-4 py-4">
             <div className="flex items-start gap-3">
-              <div className="relative inline-flex h-11 w-11 shrink-0 items-center justify-center">
-                <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-green-600 text-white">
-                  <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" aria-hidden="true">
-                    <circle cx="12" cy="8" r="5" stroke="currentColor" strokeWidth="1.8" />
-                    <path d="M8.21 13.89 7 23l5-3 5 3-1.21-9.12" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </span>
-                <span className="absolute -bottom-1 -right-1 inline-flex h-[18px] w-[18px] items-center justify-center rounded-full border-2 border-green-50 bg-green-600 text-white">
-                  <svg viewBox="0 0 12 12" className="h-2.5 w-2.5" fill="none" aria-hidden="true">
-                    <path d="M2 6 5 9 10 3" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </span>
-              </div>
+              <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-green-600 text-white">
+                <ReviewBadgeIcon />
+              </span>
               <div>
-                <p className="font-['Manrope'] text-[14px] font-bold text-[#0d1b2e]">Had a great experience?</p>
+                <p className="font-['Manrope'] text-[14px] font-bold text-[#0d1b2e]">Highly Rated Experience - Leave a Review</p>
                 <p className="mt-1 text-[12.5px] leading-[1.55] text-slate-500">
                   <a href="#" className="font-semibold text-green-700 underline decoration-green-200 underline-offset-2">
                     {data.leaveReviewCta.linkText.replace(/\s*-+>\s*$/, "")} →

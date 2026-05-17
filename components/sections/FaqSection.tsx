@@ -1,11 +1,25 @@
 import type { FaqSectionData } from "@/types/brand";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
-import SectionHeader from "@/components/ui/SectionHeader";
-
 type Props = {
   data: FaqSectionData;
 };
+
+function splitHeading(text: string) {
+  const accent = "Frequently Asked Questions";
+  if (text.includes(accent)) {
+    return {
+      primary: text.replace(accent, "").replace(/\s+-\s*$/, "").trim(),
+      accent,
+    };
+  }
+
+  const parts = text.split(/\s+-\s+/);
+  return {
+    primary: parts[0] ?? text,
+    accent: parts.length > 1 ? parts.slice(1).join(" ") : "",
+  };
+}
 
 function WarningIcon() {
   return (
@@ -17,10 +31,24 @@ function WarningIcon() {
 }
 
 export default function FaqSection({ data }: Props) {
+  const heading = splitHeading(data.h2);
+
   return (
     <Section className="bg-white">
       <Container>
-        <SectionHeader tag={data.tag} title={data.h2} subtitle={data.intro} />
+        <div className="mx-auto max-w-[860px] text-center">
+          <p className="section-pill mb-1.5">{data.tag}</p>
+          <h2>
+            <span>{heading.primary}</span>
+            {heading.accent ? (
+              <>
+                <br />
+                <span className="text-[#15803d]">{heading.accent}</span>
+              </>
+            ) : null}
+          </h2>
+          <p className="text-body mt-2.5 text-slate-700">{data.intro}</p>
+        </div>
 
         <div className="faq-scroll-panel mx-auto mt-6 max-w-5xl space-y-2.5">
           {data.items.map((item, index) => (

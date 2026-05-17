@@ -188,10 +188,6 @@ function splitTicker(ticker?: string) {
   return parts.length ? parts.slice(0, 4) : [normalized];
 }
 
-function yearCount(item: EngineYearsData["years"][number]) {
-  return item.mainEngines?.length || item.engineCodesCovered?.length || item.popularModels?.length || 1;
-}
-
 function compactYearCta(year: string, cta: string) {
   const normalized = normalizeText(cta);
   if (/compare/i.test(normalized)) {
@@ -199,6 +195,22 @@ function compactYearCta(year: string, cta: string) {
   }
 
   return normalized;
+}
+
+function splitHeading(text: string) {
+  const accent = "What Was Fitted & When";
+  if (text.includes(accent)) {
+    return {
+      primary: text.replace(accent, "").replace(/\s+-\s*$/, "").trim(),
+      accent,
+    };
+  }
+
+  const parts = text.split(/\s+-\s+/);
+  return {
+    primary: parts[0] ?? text,
+    accent: parts.length > 1 ? parts.slice(1).join(" ") : "",
+  };
 }
 
 function SectionLabel({
@@ -434,6 +446,7 @@ export default function EngineYearsSection({ brandName, data }: Props) {
   const [activeIndex, setActiveIndex] = useState(0);
   const desktopStripRef = useRef<HTMLDivElement>(null);
   const activeYear = useMemo(() => data.years[activeIndex] ?? data.years[0], [activeIndex, data.years]);
+  const heading = splitHeading(data.h2);
 
   const shiftYears = (direction: number) => {
     desktopStripRef.current?.scrollBy({ left: direction * 240, behavior: "smooth" });
@@ -442,13 +455,19 @@ export default function EngineYearsSection({ brandName, data }: Props) {
   return (
     <Section className="bg-[#f8f9fa]">
       <Container className="max-w-[1200px]">
-        <div className="mb-[14px] inline-flex items-center gap-[7px] rounded-full border border-[#bbf7d0] bg-[#f0fdf4] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.07em] text-[#15803d] md:px-[13px] md:py-[5px] md:text-[11px] md:tracking-[0.7px]">
+        <div className="section-pill mb-[14px]">
           <CalendarIcon className="h-[13px] w-[13px]" />
           <span>{data.tag}</span>
         </div>
 
-        <h2 className="font-['Manrope'] text-[28px] font-extrabold leading-[1.12] tracking-[-0.6px] text-[#0d1b2e] md:text-[38px] md:tracking-[-0.8px]">
-          {data.h2}
+        <h2 className="text-[30px] font-extrabold leading-[1.12] tracking-[-0.6px] text-[#0d1b2e] md:text-[41px] md:tracking-[-0.8px]">
+          <span>{heading.primary}</span>
+          {heading.accent ? (
+            <>
+              <br />
+              <span className="text-[#15803d]">{heading.accent}</span>
+            </>
+          ) : null}
         </h2>
         <p className="mb-[22px] mt-[14px] max-w-[880px] text-[12.8px] leading-[1.75] text-[#4b5563] md:mb-8 md:text-[14px]">
           {data.intro}
@@ -472,22 +491,15 @@ export default function EngineYearsSection({ brandName, data }: Props) {
                 key={item.year}
                 type="button"
                 onClick={() => setActiveIndex(index)}
-                className={`flex w-[120px] flex-none flex-col items-center gap-[6px] rounded-[12px] border bg-white px-[10px] py-3 text-center transition ${
+                className={`flex h-[58px] w-[110px] flex-none items-center justify-center rounded-[10px] border bg-white px-[10px] text-center transition ${
                   activeIndex === index
                     ? "border-2 border-[#15803d]"
                     : "border-[1.5px] border-[#e5e7eb] hover:border-[#15803d]"
                 }`}
               >
-                <div className={`text-[#6b7280] ${activeIndex === index ? "text-[#15803d]" : ""}`}>
-                  <CalendarIcon className="h-[22px] w-[22px]" />
-                </div>
                 <div className={`font-['Manrope'] text-[14px] font-extrabold leading-[1.15] ${activeIndex === index ? "text-[#15803d]" : "text-[#0d1b2e]"}`}>
                   {item.year}
                 </div>
-                <div className={`text-[11px] ${activeIndex === index ? "text-[#15803d]" : "text-[#9ca3af]"}`}>
-                  {yearCount(item)} engines
-                </div>
-                <div className={`h-[3px] w-10 rounded-[2px] ${activeIndex === index ? "bg-[#15803d]" : "bg-transparent"}`} />
               </button>
             ))}
           </div>
@@ -514,9 +526,6 @@ export default function EngineYearsSection({ brandName, data }: Props) {
               }`}
             >
               <div className="font-['Manrope'] text-[13px] font-extrabold leading-[1.15] text-white">{item.year}</div>
-              <div className={`mt-[2px] text-[10px] ${activeIndex === index ? "text-[#d1fae5]" : "text-[#94a3b8]"}`}>
-                {yearCount(item)} engines
-              </div>
             </button>
           ))}
           <button

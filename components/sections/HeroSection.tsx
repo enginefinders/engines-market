@@ -1,9 +1,13 @@
 "use client";
 
-import type { HeroSectionData, ModelsSectionData } from "@/types/brand";
+import Image from "next/image";
 import { useState, type FormEvent } from "react";
+import type { HeroSectionData, ModelsSectionData } from "@/types/brand";
 
-type HeroModelCard = ModelsSectionData["cards"][number];
+type HeroModelCard = ModelsSectionData["cards"][number] & {
+  engineCodes?: string[];
+  heroLineTwo?: string;
+};
 
 type HeroSectionProps = {
   data: HeroSectionData;
@@ -194,6 +198,14 @@ function getTickerItems(ticker: string) {
     .filter(Boolean);
 }
 
+function buildTickerLoop(items: string[]) {
+  if (!items.length) {
+    return [];
+  }
+
+  return Array.from({ length: 4 }, () => items).flat();
+}
+
 function inferBrandName(data: HeroSectionData) {
   const headingMatch = data.h1.match(/^(.*?)\s+Engine Replacement/i);
   if (headingMatch) {
@@ -208,8 +220,19 @@ function inferBrandName(data: HeroSectionData) {
   return "your";
 }
 
+function badgeLabel(data: HeroSectionData, brandName: string) {
+  if (/engine marketplace/i.test(data.tag)) {
+    return `${brandName} Engine Marketplace`;
+  }
+
+  return data.tag;
+}
+
 function stripBrandFromModel(modelName: string, brandName: string) {
-  return modelName.replace(new RegExp(`^${brandName}\\s+`, "i"), "").trim();
+  return modelName
+    .replace(new RegExp(`^${brandName}\\s+`, "i"), "")
+    .replace(/^(BMW|Land Rover|Range Rover)\s+/i, "")
+    .trim();
 }
 
 function secureNote(data: HeroSectionData, brandName: string) {
@@ -238,13 +261,27 @@ function buildHeroCards(modelCards: HeroModelCard[]) {
   return (preferred.length >= 3 ? preferred : modelCards).slice(0, 3);
 }
 
-export default function HeroSection({ data, bgImage: _bgImage, modelCards = [] }: HeroSectionProps) {
-  void _bgImage;
+function buildHeroLineTwo(model: HeroModelCard) {
+  if (model.heroLineTwo?.trim()) {
+    return model.heroLineTwo.trim();
+  }
+
+  if (model.engineCodes?.length) {
+    return `-> Rebuilt units from ${model.priceRange} - Common codes: ${model.engineCodes.join(", ")}`;
+  }
+
+  return "";
+}
+
+export default function HeroSection({ data, bgImage, modelCards = [] }: HeroSectionProps) {
   const [registration, setRegistration] = useState("");
+  const [showHeroImage, setShowHeroImage] = useState(Boolean(bgImage));
   const heading = splitHeadline(data.h1);
   const tickerItems = getTickerItems(data.ticker);
+  const tickerLoop = buildTickerLoop(tickerItems);
   const brandName = inferBrandName(data);
   const displayModels = buildHeroCards(modelCards);
+  const heroBadge = badgeLabel(data, brandName);
 
   function openQuoteCheckout(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -286,23 +323,23 @@ export default function HeroSection({ data, bgImage: _bgImage, modelCards = [] }
         </div>
       </div>
 
-      <div className="mx-auto grid max-w-[1200px] min-w-0 items-center gap-8 px-3 py-7 sm:px-6 md:px-8 md:py-8 lg:grid-cols-[70fr_30fr] lg:gap-7 lg:px-8 lg:py-[52px]">
+      <div className="mx-auto grid max-w-[1200px] min-w-0 items-center gap-8 px-3 py-7 sm:px-6 md:px-8 md:py-8 lg:grid-cols-[62fr_38fr] lg:gap-7 lg:px-8 lg:py-[52px]">
         <div className="flex min-w-0 flex-col">
           <span className="mb-[14px] inline-flex w-fit items-center rounded-[20px] bg-[#0d1b2e] px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.08em] text-white md:mb-[18px] md:px-[14px] md:py-[6px] md:text-[10.5px]">
-            {data.tag}
+            {heroBadge}
           </span>
 
           <h1 className="max-w-none min-w-0 font-['Manrope'] font-extrabold tracking-[-0.03em] text-[#152b4a]">
-            <span className="block max-w-none min-w-0 text-[clamp(23px,5.2vw,52px)] leading-[1.06] break-words lg:hidden">
+              <span className="block max-w-none min-w-0 break-words text-[clamp(25px,5.4vw,56px)] leading-[1.06] lg:hidden">
               {heading.lead}
               {heading.accent ? " -" : ""}
             </span>
-            <span className="hidden text-[clamp(23px,5.2vw,52px)] leading-[1.06] lg:block lg:whitespace-nowrap">
+              <span className="hidden text-[clamp(25px,5.4vw,56px)] leading-[1.06] lg:block lg:whitespace-nowrap">
               {heading.lead}
               {heading.accent ? " -" : ""}
             </span>
             {heading.accent ? (
-              <span className="block text-[clamp(23px,5.2vw,52px)] leading-[1.06] text-[#15803d]">
+              <span className="block text-[clamp(25px,5.4vw,56px)] leading-[1.06] text-[#15803d]">
                 {heading.accent}
               </span>
             ) : null}
@@ -340,19 +377,39 @@ export default function HeroSection({ data, bgImage: _bgImage, modelCards = [] }
                     key={model.slug}
                     className={`py-[10px] md:py-3 ${index < displayModels.length - 1 ? "border-b border-[#f3f4f6]" : ""}`}
                   >
-                    <div className="flex min-w-0 items-center overflow-hidden whitespace-nowrap">
-                      <div className="mr-2 flex h-[22px] w-[38px] shrink-0 items-center text-[#0d1b2e]/50 md:mr-[10px] md:h-[26px] md:w-[44px]">
-                        <Icon />
+                    <div className="flex min-w-0 items-start overflow-hidden">
+                      <div className="mr-2 flex h-[34px] w-[58px] shrink-0 items-center justify-center overflow-hidden rounded-md bg-white md:mr-[10px] md:h-[40px] md:w-[72px]">
+                        {model.image ? (
+                          <Image
+                            src={model.image}
+                            alt={model.h3}
+                            width={72}
+                            height={40}
+                            sizes="72px"
+                            className="h-full w-full object-contain"
+                          />
+                        ) : (
+                          <div className="flex h-[22px] w-[38px] items-center text-[#0d1b2e]/50 md:h-[26px] md:w-[44px]">
+                            <Icon />
+                          </div>
+                        )}
                       </div>
-                      <span className="min-w-0 truncate font-['Manrope'] text-[13.5px] font-bold text-[#0d1b2e] md:text-[clamp(14px,1vw,17px)]">
-                        {shortTitle}
-                      </span>
-                      <span className="min-w-0 truncate font-['Manrope'] text-[13.5px] font-bold text-[#15803d] md:text-[clamp(14px,1vw,17px)]">
-                        &nbsp;- {normalizedPrice}
-                      </span>
-                    </div>
-                    <div className="mt-[3px] truncate pl-[46px] text-[11px] leading-[1.4] text-[#94a3b8] md:mt-1 md:pl-[54px] md:text-[clamp(11px,0.78vw,13px)]">
-                      {model.subtitle}
+                      <div className="min-w-0">
+                        <div className="flex min-w-0 items-center overflow-hidden whitespace-nowrap">
+                          <span className="min-w-0 truncate font-['Manrope'] text-[13.5px] font-bold text-[#0d1b2e] md:text-[clamp(14px,1vw,17px)]">
+                            {shortTitle}
+                          </span>
+                          <span className="min-w-0 truncate font-['Manrope'] text-[13.5px] font-bold text-[#15803d] md:text-[clamp(14px,1vw,17px)]">
+                            {" - "}
+                            {normalizedPrice}
+                          </span>
+                        </div>
+                        {buildHeroLineTwo(model) ? (
+                          <p className="mt-1 truncate text-[11px] leading-[1.45] text-[#64748b] md:text-[12px]">
+                            {buildHeroLineTwo(model)}
+                          </p>
+                        ) : null}
+                      </div>
                     </div>
                   </div>
                 );
@@ -401,7 +458,7 @@ export default function HeroSection({ data, bgImage: _bgImage, modelCards = [] }
               className="flex h-[52px] w-full min-w-0 items-center justify-center gap-1 rounded-lg bg-[#15803d] px-5 font-['Manrope'] text-[15px] font-bold text-white shadow-[0_4px_16px_rgba(21,128,61,0.30)] transition hover:bg-[#16a34a] hover:shadow-[0_6px_22px_rgba(21,128,61,0.42)] md:h-[56px] md:flex-1"
             >
               <span>{buttonText(data, brandName)}</span>
-              <span className="hidden text-base md:inline-block">→</span>
+              <span className="hidden text-base md:inline-block">-&gt;</span>
             </button>
           </form>
 
@@ -414,29 +471,40 @@ export default function HeroSection({ data, bgImage: _bgImage, modelCards = [] }
         </div>
 
         <div className="relative hidden min-h-[340px] items-center justify-center lg:flex">
-          <div className="absolute inset-0 flex items-center justify-center">
-            <EngineWatermark />
-          </div>
+          {bgImage && showHeroImage ? (
+            <div className="relative h-full min-h-[340px] w-full overflow-hidden rounded-[24px] bg-white shadow-[0_24px_60px_rgba(13,27,46,0.16)]">
+              <Image
+                src={bgImage}
+                alt={brandName}
+                fill
+                className="object-contain p-6"
+                sizes="(min-width: 1024px) 420px, 100vw"
+                onError={() => setShowHeroImage(false)}
+              />
+            </div>
+          ) : (
+            <div className="absolute inset-0 flex items-center justify-center">
+              <EngineWatermark />
+            </div>
+          )}
         </div>
       </div>
 
       <div className="flex h-[42px] w-full items-center overflow-hidden bg-[#0d1b2e]">
         <div className="hero-ticker-track">
           {[0, 1].map((copyIndex) => (
-            <span
-              key={copyIndex}
-              className="inline-flex items-center px-7 text-[11.5px] font-medium uppercase tracking-[0.05em] text-white md:px-9 md:text-[12px]"
-            >
-              {tickerItems.map((item, index) => (
-                <span key={`${copyIndex}-${item}`} className="inline-flex items-center">
-                  <span className="mr-[11px] text-[9px] text-[#15803d] md:mr-3 md:text-[10px]">●</span>
+            <div key={copyIndex} className="hero-ticker-segment">
+              {tickerLoop.map((item, itemIndex) => (
+                <span
+                  key={`${copyIndex}-${itemIndex}-${item}`}
+                  className="inline-flex items-center px-4 text-[11.5px] font-medium uppercase tracking-[0.05em] text-white md:px-5 md:text-[12px]"
+                >
+                  <span className="mr-[11px] inline-block h-[5px] w-[5px] rounded-full bg-[#15803d] md:mr-3 md:h-[6px] md:w-[6px]" />
                   <span>{item}</span>
-                  <span className="mx-[9px] text-[11px] text-[#4b5563] md:mx-[10px]">
-                    {index < tickerItems.length - 1 ? "·" : "·"}
-                  </span>
+                  <span className="mx-[10px] text-[11px] text-[#4b5563] md:mx-3">|</span>
                 </span>
               ))}
-            </span>
+            </div>
           ))}
         </div>
       </div>

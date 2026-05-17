@@ -14,7 +14,7 @@ export default function SectionHeader({
   return (
     <div className={align === "center" ? "mx-auto max-w-[860px] text-center" : "max-w-[860px]"}>
       {tag && (
-        <p className="text-label mb-1.5 text-green-700">
+        <p className="section-pill text-label mb-1.5">
           {tag}
         </p>
       )}

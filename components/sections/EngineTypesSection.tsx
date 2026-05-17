@@ -8,6 +8,7 @@ import Section from "@/components/ui/Section";
 type Props = {
   data: EngineTypesData;
   bgImage?: string;
+  dynamicBrandCta?: boolean;
 };
 
 function normalizeText(text: string) {
@@ -29,6 +30,28 @@ function typeVariant(title: string) {
   if (normalized.includes("used")) return "used";
   if (normalized.includes("rebuilt")) return "rebuilt";
   return "recon";
+}
+
+function priceParts(text: string) {
+  const normalized = normalizeText(text);
+  const [rawLabel, rawValue = normalized] = normalized.split(":");
+  const label = rawValue === normalized ? "Typical price range" : rawLabel.trim();
+  const value = rawValue.trim();
+  const match = value.match(/(£[^A-Za-z(]+?)(\s*(\(.+\)|on top of engine price))?$/i);
+
+  if (!match) {
+    return {
+      label,
+      main: value,
+      note: "",
+    };
+  }
+
+  return {
+    label,
+    main: match[1].trim(),
+    note: match[2]?.trim() ?? "",
+  };
 }
 
 function typeBadge(title: string) {
@@ -256,9 +279,17 @@ function MobileCard({
   );
 }
 
-export default function EngineTypesSection({ data, bgImage }: Props) {
+export default function EngineTypesSection({
+  data,
+  bgImage,
+  dynamicBrandCta = false,
+}: Props) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const desktopTypes = useMemo(() => data.types, [data.types]);
+  const headingSplit = data.h2.split(/\s+-\s+/);
+  const headingPrimary = headingSplit[0] ?? data.h2;
+  const headingAccent = headingSplit.length > 1 ? headingSplit.slice(1).join(" ") : "";
+  const brandLabel = inferBrandLabel(data.h2);
 
   return (
     <Section className="relative overflow-hidden bg-[#f8f9fa]">
@@ -277,15 +308,27 @@ export default function EngineTypesSection({ data, bgImage }: Props) {
       ) : null}
 
       <Container className="relative max-w-[1180px]">
-        <div className="mb-[14px] inline-flex items-center gap-[7px] rounded-full border border-[#bbf7d0] bg-[#f0fdf4] px-3 py-[4px] text-[10px] font-bold uppercase tracking-[0.8px] text-[#15803d]">
+        <div className="section-pill mb-[14px] lg:mx-auto">
           <TagIcon />
           <span>{data.tag}</span>
         </div>
 
-        <h2 className="max-w-[820px] font-['Manrope'] text-[24px] font-extrabold leading-[1.2] tracking-[-0.4px] text-[#0d1b2e] md:text-[28px] lg:text-[30px]">
-          {data.h2}
+        <h2 className="max-w-[920px] font-['Manrope'] text-[26px] font-extrabold leading-[1.14] tracking-[-0.7px] text-[#0d1b2e] md:text-[30px] lg:mx-auto lg:text-center lg:text-[36px]">
+          <span>{headingPrimary}</span>
+          {headingAccent ? (
+            <>
+              <br />
+              <span className="text-[#15803d]">{headingAccent}</span>
+            </>
+          ) : null}
         </h2>
-        <p className="mt-[10px] max-w-[720px] text-[13px] leading-[1.6] text-[#6b7280]">{data.intro}</p>
+        <div className="mt-[8px] hidden justify-center lg:flex">
+          <div className="h-[3px] w-12 rounded-full bg-[#22c55e]" />
+        </div>
+
+        <p className="mt-[12px] max-w-[760px] text-[13px] leading-[1.7] text-[#64748b] lg:mx-auto lg:text-center lg:text-[15px]">
+          {data.intro}
+        </p>
 
         <div className="mt-[22px] flex flex-col gap-[10px] lg:hidden">
           {data.types.map((type, index) => (
@@ -298,71 +341,68 @@ export default function EngineTypesSection({ data, bgImage }: Props) {
           ))}
         </div>
 
-        <div className="mt-[22px] hidden gap-4 lg:grid lg:grid-cols-3">
+        <div className="mt-[22px] hidden gap-3 lg:grid lg:grid-cols-2">
           {desktopTypes.map((type) => {
             const icon = getTypeIcon(type.title);
-            const badge = typeBadge(type.title);
+            const price = priceParts(type.priceRange);
             const featured = isFeaturedCard(type.title);
-            const variant = typeVariant(type.title);
-
-            const badgeClass =
-              featured
-                ? "bg-[#22c55e] text-white border-transparent"
-                : variant === "used"
-                  ? "bg-[#0d1b2e] text-white border-transparent"
-                  : "bg-[#0d1b2e] text-white border-transparent";
 
             return (
               <div
                 key={type.title}
-                className={`rounded-[12px] border px-4 py-4 shadow-[0_2px_12px_rgba(13,27,46,0.06)] ${
-                  featured
-                    ? "border-[#1e3a5f] bg-[#0d1b2e] text-white"
-                    : "border-[#e5e7eb] bg-white"
+                className={`overflow-hidden rounded-[16px] border shadow-[0_8px_24px_rgba(13,27,46,0.06)] ${
+                  featured ? "border-[#dbe5f4] bg-[#fcfdff]" : "border-[#e5e7eb] bg-white"
                 }`}
               >
-                <div className="mb-3 flex items-start justify-between gap-3">
-                  <span className={`inline-flex rounded-[6px] border px-[10px] py-[3px] text-[9px] font-bold uppercase tracking-[0.7px] ${badgeClass}`}>
-                    {badge}
-                  </span>
-                  <div className={`flex h-9 w-9 items-center justify-center rounded-[10px] ${featured ? "text-[#22c55e]" : "text-[#0d1b2e]"}`}>
+                <div className="flex gap-4 px-5 py-5">
+                  <div className="flex h-14 w-14 flex-none items-center justify-center rounded-full border border-[#d7e3f5] bg-[#f4f7fc] text-[#22325b] [&_svg]:h-6 [&_svg]:w-6">
                     {icon}
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <div
+                      role="heading"
+                      aria-level={3}
+                      className="font-['Manrope'] text-[15px] font-extrabold leading-[1.28] tracking-[-0.2px] text-[#0d1b2e] lg:text-[16px]"
+                    >
+                      {type.title}
+                    </div>
+                    <p className="mt-[7px] text-[12px] leading-[1.62] text-[#334155] lg:text-[12.5px]">
+                      {normalizeText(type.description)}
+                    </p>
                   </div>
                 </div>
 
-                <div
-                  role="heading"
-                  aria-level={3}
-                  className={`font-['Manrope'] text-[14px] font-extrabold leading-[1.3] ${
-                    featured ? "text-white" : "text-[#0d1b2e]"
-                  }`}
-                >
-                  {type.title}
-                </div>
-                <p className={`mt-[8px] text-[12px] leading-[1.55] ${featured ? "text-[#cbd5e1]" : "text-[#6b7280]"}`}>
-                  {teaserText(type.description)}
-                </p>
-                <div className={`mt-4 font-['Manrope'] text-[16px] font-extrabold tracking-[-0.3px] ${featured ? "text-[#22c55e]" : "text-[#15803d]"}`}>
-                  {type.priceRange}
-                </div>
+                <div className="flex items-center justify-between gap-4 border-t border-[#edf2f7] px-5 py-4">
+                  <div className="min-w-0">
+                    <div className="text-[10px] font-semibold leading-[1.35] text-[#94a3b8]">
+                      {price.label}
+                    </div>
+                    <div className="mt-[4px] font-['Manrope'] text-[15px] font-extrabold tracking-[-0.25px] text-[#22325b]">
+                      {price.main}
+                    </div>
+                    {price.note ? (
+                      <div className="mt-[2px] text-[10px] font-medium leading-[1.35] text-[#94a3b8]">
+                        {price.note}
+                      </div>
+                    ) : null}
+                  </div>
 
-                <a
-                  href="#quote-form"
-                  data-quote-context={type.title}
-                  data-quote-source="engine-types"
-                  className={`mt-4 inline-flex items-center gap-1 text-[12px] font-bold transition hover:gap-[7px] ${
-                    featured ? "text-[#22c55e]" : "text-[#15803d]"
-                  }`}
-                >
-                  <ArrowIcon className="h-[12px] w-[12px]" />
-                  <span>{type.cta}</span>
-                </a>
+                  <a
+                    href="#quote-form"
+                    data-quote-context={type.title}
+                    data-quote-source="engine-types"
+                    className="inline-flex flex-none items-center gap-[7px] text-[12.5px] font-bold leading-[1.5] text-[#16a34a] transition hover:gap-[10px]"
+                  >
+                    <span>{type.cta.replace(/\s*->\s*$/, "")}</span>
+                    <ArrowIcon className="h-[12px] w-[12px]" />
+                  </a>
+                </div>
               </div>
             );
           })}
         </div>
 
-        <div className="mt-4 rounded-[12px] border border-[#e5e7eb] bg-white px-4 py-4 shadow-[0_2px_8px_rgba(13,27,46,0.04)]">
+        <div className="mt-4 rounded-[14px] border border-[#dcfce7] bg-[#f6fff8] px-4 py-4 shadow-[0_2px_8px_rgba(13,27,46,0.04)] lg:flex lg:items-center lg:justify-between lg:gap-5 lg:px-5">
           <div className="flex items-start gap-3">
             <div className="flex h-9 w-9 flex-none items-center justify-center rounded-full bg-[#f0fdf4] text-[#15803d]">
               <ShieldIcon />
@@ -371,6 +411,17 @@ export default function EngineTypesSection({ data, bgImage }: Props) {
               {normalizeText(data.closing)}
             </p>
           </div>
+
+          <a
+            href="#quote-form"
+            data-quote-context="Engine types closing"
+            data-quote-source="engine-types"
+            className="mt-4 inline-flex items-center justify-center gap-2 rounded-[10px] bg-[#15803d] px-5 py-3 text-[12px] font-bold text-white transition hover:bg-[#166534] lg:mt-0 lg:min-w-[294px]"
+          >
+            <TruckIcon />
+            <span>{dynamicBrandCta ? `Compare ${brandLabel} Engine Prices Now` : "Compare Land Rover Engine Prices Now"}</span>
+            <ArrowIcon className="h-[12px] w-[12px]" />
+          </a>
         </div>
       </Container>
     </Section>
@@ -390,4 +441,9 @@ function TagIcon() {
       <line x1="7" y1="7" x2="7.01" y2="7" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
     </svg>
   );
+}
+
+function inferBrandLabel(title: string) {
+  const match = title.match(/^(.*?)\s+Engine Types/i);
+  return match?.[1]?.trim() || "Engine";
 }

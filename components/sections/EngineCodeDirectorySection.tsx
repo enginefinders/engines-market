@@ -88,6 +88,26 @@ function extractCodeLabel(title: string) {
   return match?.[0] ?? title;
 }
 
+function formatDirectoryCodeLabel(code: string, fuel: string) {
+  return `Land Rover ${code} - ${fuel} Engine`;
+}
+
+function splitHeading(text: string) {
+  const accent = "Most Replaced Engines (2008-2025)";
+  if (text.includes(accent)) {
+    return {
+      primary: text.replace(accent, "").replace(/\s+-\s*$/, "").trim(),
+      accent,
+    };
+  }
+
+  const parts = text.split(/\s+-\s+/);
+  return {
+    primary: parts[0] ?? text,
+    accent: parts.length > 1 ? parts.slice(1).join(" ") : "",
+  };
+}
+
 export default function EngineCodeDirectorySection({ data, bgImage }: Props) {
   const [activeFamilyIndex, setActiveFamilyIndex] = useState(0);
   const [openIndices, setOpenIndices] = useState<number[]>(() => data.families.map(() => 0));
@@ -98,13 +118,14 @@ export default function EngineCodeDirectorySection({ data, bgImage }: Props) {
   const activeOpenIndex = openIndices[activeFamilyIndex] ?? 0;
   const familyMeta = parseFamilyName(activeFamily?.name ?? "");
   const decorativeBgImage = bgImage ?? activeFamily?.entries[0]?.image ?? data.families[0]?.entries[0]?.image;
+  const heading = splitHeading(data.h2);
 
   const filteredCodes = useMemo(() => {
     const query = searchQuery.trim().toLowerCase();
     if (!query) return data.directory.codes;
 
     return data.directory.codes.filter((item) => {
-      const haystack = `${item.code} ${item.fuel}`.toLowerCase();
+      const haystack = `${item.code} ${item.fuel} ${formatDirectoryCodeLabel(item.code, item.fuel)}`.toLowerCase();
       return haystack.includes(query);
     });
   }, [data.directory.codes, searchQuery]);
@@ -133,8 +154,16 @@ export default function EngineCodeDirectorySection({ data, bgImage }: Props) {
       <Container>
         <div className="relative z-[1] max-w-[620px]">
           <div>
-            {data.tag ? <p className="text-label mb-0.5 text-green-700">{data.tag}</p> : null}
-            <h2>{data.h2}</h2>
+            {data.tag ? <p className="section-pill mb-1.5">{data.tag}</p> : null}
+            <h2>
+              <span>{heading.primary}</span>
+              {heading.accent ? (
+                <>
+                  <br />
+                  <span className="text-[#15803d]">{heading.accent}</span>
+                </>
+              ) : null}
+            </h2>
             {data.intro ? <p className="text-body mt-1.5 max-w-[560px] text-slate-700">{data.intro}</p> : null}
           </div>
         </div>
@@ -161,9 +190,9 @@ export default function EngineCodeDirectorySection({ data, bgImage }: Props) {
               })}
             </div>
 
-            <div className="mt-2.5 grid gap-2.5 lg:grid-cols-[168px_minmax(0,1fr)] lg:items-start">
+            <div className="mt-2.5 grid gap-2.5 lg:grid-cols-[210px_minmax(0,1fr)] lg:items-stretch">
               <div className="hidden lg:block">
-                <div className="overflow-hidden rounded-[16px] border border-slate-200 bg-white shadow-[0_10px_30px_rgba(13,27,46,0.06)]">
+                <div className="h-full overflow-hidden rounded-[16px] border border-slate-200 bg-white shadow-[0_10px_30px_rgba(13,27,46,0.06)]">
                   {data.families.map((family, index) => {
                     const isActive = index === activeFamilyIndex;
                     const parsed = parseFamilyName(family.name);
@@ -173,7 +202,7 @@ export default function EngineCodeDirectorySection({ data, bgImage }: Props) {
                         key={family.name}
                         type="button"
                         onClick={() => setActiveFamilyIndex(index)}
-                        className={`flex w-full items-start gap-3 border-b border-slate-200 px-4 py-3 text-left last:border-b-0 ${
+                        className={`flex w-full items-start gap-3 border-b border-slate-200 px-4 py-[12px] text-left last:border-b-0 ${
                           isActive ? "bg-[#0d1b2e] text-white shadow-[inset_3px_0_0_#16a34a]" : "bg-white text-[#0d1b2e]"
                         }`}
                       >
@@ -187,11 +216,11 @@ export default function EngineCodeDirectorySection({ data, bgImage }: Props) {
                           {index % 2 === 0 ? <DieselIcon /> : <PetrolIcon />}
                         </span>
                         <span className="min-w-0">
-                            <span className="block font-['Manrope'] text-[13px] font-extrabold leading-[1.2]">
+                            <span className="block font-['Manrope'] text-[13px] font-extrabold leading-[1.15]">
                               {parsed.label}
                             </span>
                           {parsed.subtitle ? (
-                            <span className={`mt-1 block text-[10.5px] font-semibold ${isActive ? "text-green-400" : "text-green-700"}`}>
+                            <span className={`mt-[5px] block text-[10.5px] font-semibold ${isActive ? "text-green-400" : "text-green-700"}`}>
                               {parsed.subtitle}
                             </span>
                           ) : null}
@@ -202,7 +231,7 @@ export default function EngineCodeDirectorySection({ data, bgImage }: Props) {
                 </div>
               </div>
 
-              <div className="overflow-hidden rounded-[16px] border border-slate-200 bg-white shadow-[0_10px_30px_rgba(13,27,46,0.06)]">
+              <div className="h-full overflow-hidden rounded-[16px] border border-slate-200 bg-white shadow-[0_10px_30px_rgba(13,27,46,0.06)]">
                 <div className="bg-[#0d1b2e] px-4 py-3 lg:hidden">
                   <div
                     role="heading"
@@ -281,25 +310,6 @@ export default function EngineCodeDirectorySection({ data, bgImage }: Props) {
           </>
         ) : null}
 
-        <div className="mt-2.5 hidden rounded-[12px] border border-green-200 bg-[#f6fff8] px-4 py-3 lg:block">
-          <div className="flex items-center gap-3">
-            <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-green-600 text-white">
-              <InfoIcon />
-            </span>
-            <div className="min-w-0 flex-1">
-              <p className="font-['Manrope'] text-[13px] font-extrabold leading-[1.2] text-[#0d1b2e]">Need Help Choosing?</p>
-              <p className="mt-0.5 text-[11px] leading-[1.45] text-slate-600">{data.closing}</p>
-            </div>
-            <a
-              href="#quote-form"
-              className="inline-flex shrink-0 items-center gap-2 rounded-[10px] border border-green-300 px-4 py-2 text-[10.5px] font-black uppercase tracking-[0.08em] text-green-700 transition hover:bg-white"
-            >
-              Get Help
-              <ArrowIcon className="h-3.5 w-3.5" />
-            </a>
-          </div>
-        </div>
-
         <div className="mt-2.5 flex gap-3 rounded-[12px] border border-green-200 bg-[#f0fdf4] px-4 py-3 lg:hidden">
           <span className="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-green-600 text-white">
             <InfoIcon />
@@ -307,52 +317,75 @@ export default function EngineCodeDirectorySection({ data, bgImage }: Props) {
           <p className="text-[12px] leading-[1.5] text-slate-700">{data.closing}</p>
         </div>
 
-        <div className={`mt-2.5 overflow-hidden rounded-[12px] border border-slate-200 bg-white shadow-[0_10px_30px_rgba(13,27,46,0.05)] ${directoryOpen ? "ring-1 ring-green-100" : ""}`}>
-          <button
-            type="button"
-            onClick={() => setDirectoryOpen((current) => !current)}
-            className="flex w-full items-center justify-between gap-4 px-4 py-3.5 text-left"
-          >
-            <span className="min-w-0">
-              <span className="block font-['Manrope'] text-[14px] font-extrabold leading-[1.3] text-[#0d1b2e] lg:text-[15px]">
-                {data.directory.h3}
+        <div className="mt-2.5 lg:grid lg:grid-cols-[1fr_1fr] lg:gap-4">
+          <div className="hidden rounded-[12px] border border-green-200 bg-[#f6fff8] px-4 py-3 lg:block">
+            <div className="flex h-full items-center gap-3">
+              <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-green-600 text-white">
+                <InfoIcon />
               </span>
-              {data.directory.label ? (
-                <span className="mt-1 block text-[12px] leading-[1.45] text-slate-500">{data.directory.label}</span>
-              ) : null}
-            </span>
-            <ChevronIcon open={directoryOpen} />
-          </button>
-
-          {directoryOpen ? (
-            <div className="border-t border-slate-200">
-              <div className="px-3 pt-3 lg:px-4">
-                <label className="relative block">
-                  <span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">
-                    <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" aria-hidden="true">
-                      <path
-                        d="m21 21-4.35-4.35M17 10.5A6.5 6.5 0 1 1 4 10.5a6.5 6.5 0 0 1 13 0Z"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                      />
-                    </svg>
-                  </span>
-                  <input
-                    type="text"
-                    value={searchQuery}
-                    onChange={(event) => setSearchQuery(event.target.value)}
-                    placeholder="Filter engine codes..."
-                    className="h-10 w-full rounded-[9px] border border-slate-300 bg-slate-50 pl-10 pr-4 text-[13px] text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-green-300 focus:bg-white"
-                  />
-                </label>
+              <div className="min-w-0 flex-1">
+                <p className="font-['Manrope'] text-[13px] font-extrabold leading-[1.2] text-[#0d1b2e]">Need Help Choosing?</p>
+                <p className="mt-0.5 text-[11px] leading-[1.45] text-slate-600">{data.closing}</p>
               </div>
+              <a
+                href="#quote-form"
+                className="inline-flex shrink-0 items-center gap-2 rounded-[10px] border border-green-300 px-4 py-2 text-[10.5px] font-black uppercase tracking-[0.08em] text-green-700 transition hover:bg-white"
+              >
+                Get Help
+                <ArrowIcon className="h-3.5 w-3.5" />
+              </a>
+            </div>
+          </div>
 
-              <p className="border-b border-slate-200 px-4 py-2.5 text-[12.1px] leading-[1.55] text-slate-500">
-                {data.directory.intro}
-              </p>
+          <div className={`overflow-hidden rounded-[12px] border border-slate-200 bg-white shadow-[0_10px_30px_rgba(13,27,46,0.05)] ${directoryOpen ? "ring-1 ring-green-100" : ""}`}>
+            <button
+              type="button"
+              onClick={() => setDirectoryOpen((current) => !current)}
+              className="flex w-full items-center justify-between gap-4 px-4 py-3.5 text-left"
+            >
+              <span className="min-w-0">
+                <span className="block font-['Manrope'] text-[14px] font-extrabold leading-[1.3] text-[#0d1b2e] lg:text-[15px]">
+                  {data.directory.h3}
+                </span>
+                {data.directory.label ? (
+                  <span className="mt-1 block text-[12px] leading-[1.45] text-slate-500">{data.directory.label}</span>
+                ) : null}
+              </span>
+              <ChevronIcon open={directoryOpen} />
+            </button>
+          </div>
+        </div>
 
-              <div className="grid grid-cols-2 gap-2 p-3 lg:grid-cols-4 lg:gap-2.5 lg:p-3">
+        {directoryOpen ? (
+          <div className="mt-4 overflow-hidden rounded-[12px] border border-slate-200 bg-white shadow-[0_10px_30px_rgba(13,27,46,0.05)] ring-1 ring-green-100">
+            <div className="px-3 pt-3 lg:px-4">
+              <label className="relative block">
+                <span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">
+                  <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" aria-hidden="true">
+                    <path
+                      d="m21 21-4.35-4.35M17 10.5A6.5 6.5 0 1 1 4 10.5a6.5 6.5 0 0 1 13 0Z"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                </span>
+                <input
+                  type="text"
+                  value={searchQuery}
+                  onChange={(event) => setSearchQuery(event.target.value)}
+                  placeholder="Filter engine codes..."
+                  className="h-10 w-full rounded-[9px] border border-slate-300 bg-slate-50 pl-10 pr-4 text-[13px] text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-green-300 focus:bg-white"
+                />
+              </label>
+            </div>
+
+            <p className="border-b border-slate-200 px-4 py-2.5 text-[12.1px] leading-[1.55] text-slate-500">
+              {data.directory.intro}
+            </p>
+
+            <div className="max-h-[320px] overflow-y-auto p-3 lg:max-h-[360px] lg:p-4">
+              <div className="grid grid-cols-2 gap-2 lg:grid-cols-4 lg:gap-2.5">
                 {filteredCodes.map((item, index) => {
                   const isPetrol = item.fuel.toLowerCase().includes("petrol");
 
@@ -363,29 +396,30 @@ export default function EngineCodeDirectorySection({ data, bgImage }: Props) {
                       data-quote-engine-code={item.code}
                       data-quote-context={item.code}
                       className="flex items-start gap-2 rounded-[10px] border border-slate-200 bg-white px-3 py-2.5 transition hover:border-green-200 hover:bg-[#fbfdfb]"
-                    >
-                      <span
-                        className={`mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-[6px] ${
-                          isPetrol ? "bg-orange-50 text-amber-500" : "bg-blue-50 text-blue-400"
-                        }`}
                       >
-                        {isPetrol ? <PetrolIcon /> : <DieselIcon />}
-                      </span>
-                      <span className="min-w-0">
-                        <span className="block font-['Manrope'] text-[13px] font-extrabold leading-[1.2] text-slate-700">{item.code}</span>
-                        <span className="mt-1 block text-[11px] text-slate-400">{item.fuel}</span>
-                      </span>
-                    </a>
-                  );
-                })}
+                        <span
+                          className={`mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-[6px] ${
+                            isPetrol ? "bg-orange-50 text-amber-500" : "bg-blue-50 text-blue-400"
+                          }`}
+                        >
+                          {isPetrol ? <PetrolIcon /> : <DieselIcon />}
+                        </span>
+                        <span className="min-w-0">
+                          <span className="block font-['Manrope'] text-[12.5px] font-extrabold leading-[1.35] text-slate-700">
+                            {formatDirectoryCodeLabel(item.code, item.fuel)}
+                          </span>
+                        </span>
+                      </a>
+                    );
+                  })}
               </div>
-
-              {filteredCodes.length === 0 ? (
-                <p className="px-4 pb-4 text-[12.5px] text-slate-500">No engine codes match that filter yet.</p>
-              ) : null}
             </div>
-          ) : null}
-        </div>
+
+            {filteredCodes.length === 0 ? (
+              <p className="px-4 pb-4 text-[12.5px] text-slate-500">No engine codes match that filter yet.</p>
+            ) : null}
+          </div>
+        ) : null}
       </Container>
     </Section>
   );

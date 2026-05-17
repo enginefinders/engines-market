@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import type { EngineCodesData } from "@/types/brand";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
@@ -8,6 +8,12 @@ import Section from "@/components/ui/Section";
 type Props = {
   data: EngineCodesData;
   bgImage?: string;
+};
+
+type TabMeta = {
+  index: number;
+  title: string;
+  subtitle: string;
 };
 
 function MoneyTagIcon() {
@@ -54,7 +60,7 @@ function ChevronDownIcon({ open }: { open: boolean }) {
   return (
     <svg
       viewBox="0 0 24 24"
-      className={`h-[14px] w-[14px] flex-none text-[#15803d] transition-transform ${open ? "rotate-180" : ""}`}
+      className={`h-[14px] w-[14px] flex-none transition-transform ${open ? "rotate-180" : ""}`}
       fill="none"
       aria-hidden="true"
     >
@@ -67,36 +73,6 @@ function ChevronDownIcon({ open }: { open: boolean }) {
       />
     </svg>
   );
-}
-
-function GroupIcon({ index }: { index: number }) {
-  const icons = [
-    <svg key="0" viewBox="0 0 24 24" className="h-[18px] w-[18px]" fill="none" aria-hidden="true">
-      <rect x="2" y="7" width="20" height="14" rx="2" stroke="currentColor" strokeWidth="1.8" />
-      <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" stroke="currentColor" strokeWidth="1.8" />
-      <line x1="12" y1="12" x2="12" y2="16" stroke="currentColor" strokeWidth="1.8" />
-      <line x1="10" y1="14" x2="14" y2="14" stroke="currentColor" strokeWidth="1.8" />
-    </svg>,
-    <svg key="1" viewBox="0 0 24 24" className="h-[18px] w-[18px]" fill="none" aria-hidden="true">
-      <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="1.8" />
-      <path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14" stroke="currentColor" strokeWidth="1.8" />
-    </svg>,
-    <svg key="2" viewBox="0 0 24 24" className="h-[18px] w-[18px]" fill="none" aria-hidden="true">
-      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
-    </svg>,
-    <svg key="3" viewBox="0 0 24 24" className="h-[18px] w-[18px]" fill="none" aria-hidden="true">
-      <rect x="1" y="3" width="15" height="13" rx="2" stroke="currentColor" strokeWidth="1.8" />
-      <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" stroke="currentColor" strokeWidth="1.8" />
-      <circle cx="5.5" cy="18.5" r="2.5" stroke="currentColor" strokeWidth="1.8" />
-      <circle cx="18.5" cy="18.5" r="2.5" stroke="currentColor" strokeWidth="1.8" />
-    </svg>,
-    <svg key="4" viewBox="0 0 24 24" className="h-[18px] w-[18px]" fill="none" aria-hidden="true">
-      <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" strokeWidth="1.8" />
-      <path d="M3 9h18M9 21V9" stroke="currentColor" strokeWidth="1.8" />
-    </svg>,
-  ];
-
-  return icons[index % icons.length];
 }
 
 function QuoteArrow() {
@@ -132,220 +108,321 @@ function normalizeLabel(text: string) {
   return text.replace(/[–—]/g, "-");
 }
 
-function groupLabel(name: string) {
-  return normalizeLabel(name).split(" ")[0] || name;
+function formatTabTitle(name: string) {
+  const normalized = normalizeLabel(name);
+
+  if (/ingenium/i.test(normalized)) return "Modern Ingenium Diesel";
+  if (/tdv6|sdv6/i.test(normalized)) return "TDV6 / SDV6 Diesel";
+  if (/v8/i.test(normalized)) return "V8 Petrol";
+  if (/defender/i.test(normalized)) return "Defender Diesel";
+  if (/other|special/i.test(normalized)) return "Additional & Specialist Engines";
+
+  return normalized.replace(/\s+Family.*$/i, "").trim();
 }
 
-export default function EngineCodesSection({ data, bgImage: _bgImage }: Props) {
-  void _bgImage;
+function formatTabSubtitle(name: string, era: string) {
+  if (/other|special/i.test(name)) return "Mixed";
+  return normalizeLabel(era);
+}
 
+function splitHeading(title: string) {
+  const accent = "Average Rebuilt Prices (UK Supply)";
+  const parts = title.split(accent);
+  return {
+    before: parts[0]?.trim() ?? title,
+    accent: parts.length > 1 ? accent : "",
+  };
+}
+
+export default function EngineCodesSection({ data, bgImage }: Props) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [openFailures, setOpenFailures] = useState<Record<number, boolean>>({});
+  const [overflowOpen, setOverflowOpen] = useState(false);
+  const [mobileOverflowOpen, setMobileOverflowOpen] = useState(false);
+  const overflowRef = useRef<HTMLDivElement | null>(null);
+  const mobileOverflowRef = useRef<HTMLDivElement | null>(null);
+
+  const tabs = useMemo<TabMeta[]>(
+    () =>
+      data.groups.map((group, index) => ({
+        index,
+        title: formatTabTitle(group.name),
+        subtitle: formatTabSubtitle(group.name, group.era),
+      })),
+    [data.groups],
+  );
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (!overflowRef.current?.contains(event.target as Node)) {
+        setOverflowOpen(false);
+      }
+      if (!mobileOverflowRef.current?.contains(event.target as Node)) {
+        setMobileOverflowOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   const activeGroup = useMemo(() => data.groups[activeIndex] ?? data.groups[0], [activeIndex, data.groups]);
-
   const isOpen = openFailures[activeIndex] ?? false;
+  const visibleTabs = tabs.slice(0, 3);
+  const overflowTabs = tabs.slice(3);
+  const heading = splitHeading(data.h2);
+  const footerText =
+    data.closingLine ??
+    "Enter your registration number above and we'll match it instantly to the correct replacement engine - all backed by a genuine 12-month warranty from vetted UK Land Rover specialists.";
 
   return (
-    <Section className="bg-[#f8f9fa]">
-      <Container className="max-w-[1200px]">
-        <div className="mb-[14px] inline-flex items-center gap-[7px] rounded-full border border-[#bbf7d0] bg-[#f0fdf4] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.08em] text-[#15803d] md:rounded-md md:px-3 md:py-[5px] md:text-[11px] md:tracking-[0.7px]">
+    <Section className="relative overflow-hidden bg-[#f8f9fa]">
+      {bgImage ? (
+        <div className="pointer-events-none absolute inset-x-0 top-0 hidden h-[220px] lg:block">
+          <div
+            className="absolute right-0 top-0 h-full w-[360px] opacity-[0.16]"
+            style={{
+              backgroundImage: `linear-gradient(270deg, rgba(248,249,250,0.08), rgba(248,249,250,0.9) 45%, rgba(248,249,250,1) 100%), url(${bgImage})`,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
+              backgroundPosition: "top right",
+            }}
+          />
+        </div>
+      ) : null}
+
+      <Container className="relative max-w-[1200px]">
+        <div className="section-pill mb-[14px] md:rounded-full">
           <MoneyTagIcon />
           <span>{data.tag}</span>
         </div>
 
         <div className="mb-5 md:mb-7">
-          <h2 className="font-['Manrope'] text-[24px] font-extrabold leading-[1.2] tracking-[-0.4px] text-[#0d1b2e] md:text-[34px] md:leading-[1.15] md:tracking-[-0.7px]">
-            {data.h2}
+          <h2 className="font-['Manrope'] text-[26px] font-extrabold leading-[1.2] tracking-[-0.4px] text-[#0d1b2e] md:text-[36px] md:leading-[1.15] md:tracking-[-0.7px]">
+            {heading.before}
+            {heading.accent ? <> <span className="text-[#15803d]">{heading.accent}</span></> : null}
           </h2>
           <p className="mt-[10px] max-w-[820px] text-[13px] leading-[1.6] text-[#6b7280] md:text-[13.5px] md:leading-[1.75]">
             {data.h3}
           </p>
         </div>
 
-        <div className="mb-4 overflow-x-auto pb-0.5 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:mb-6">
-          <div className="flex w-max gap-[6px] md:flex-wrap">
-            {data.groups.map((group, index) => {
-              const active = index === activeIndex;
-              const tabLabel = normalizeLabel(data.filters[index] ?? "").trim() || groupLabel(group.name);
-
-              return (
-                <button
-                  key={group.name}
-                  type="button"
-                  onClick={() => setActiveIndex(index)}
-                  className={`shrink-0 whitespace-nowrap border font-['Manrope'] font-bold transition ${
-                    active
-                      ? "border-[#0d1b2e] bg-[#0d1b2e] text-white md:border-[#15803d] md:bg-[#15803d]"
-                      : "border-[#e5e7eb] bg-white text-[#6b7280] hover:border-[#0d1b2e] hover:text-[#0d1b2e] md:border-[1.5px] md:hover:border-[#15803d]"
-                  } rounded-full px-[14px] py-[7px] text-[12px] md:rounded-lg md:px-4 md:py-[9px] md:text-[13px]`}
-                >
-                  {tabLabel}
-                  <span className={`ml-[3px] text-[10px] ${active ? "opacity-80" : "opacity-70 md:inline-flex md:h-5 md:min-w-5 md:items-center md:justify-center md:rounded-[5px] md:bg-[#f1f5f9] md:px-1 md:text-[11px] md:text-[#6b7280] md:opacity-100"}`}>
-                    {group.engines.length}
-                  </span>
-                </button>
-              );
-            })}
-          </div>
-        </div>
-
         {activeGroup ? (
           <>
-            <div className="hidden md:block">
-              <div className="rounded-t-[10px] bg-[#0d1b2e] px-5 py-[14px]">
-                <div className="flex items-center justify-between gap-4">
-                  <div className="flex items-center gap-3">
-                    <div className="flex h-[38px] w-[38px] flex-none items-center justify-center rounded-[9px] bg-[#15803d] text-white">
-                      <GroupIcon index={activeIndex} />
-                    </div>
-                    <div>
-                      <div className="font-['Manrope'] text-[16px] font-extrabold leading-[1.2] text-white">{activeGroup.name}</div>
-                      <div className="mt-0.5 text-[11px] text-[#4ade80]">{activeGroup.era}</div>
-                    </div>
+            <div className="mb-4 md:mb-5">
+              <div className="hidden w-full items-stretch gap-[6px] overflow-visible md:flex">
+                {visibleTabs.map((tab) => {
+                  const active = tab.index === activeIndex;
+
+                  return (
+                    <button
+                      key={tab.index}
+                      type="button"
+                      onClick={() => {
+                        setActiveIndex(tab.index);
+                        setOverflowOpen(false);
+                      }}
+                      className={`min-w-0 flex-1 rounded-[8px] px-4 py-3 text-center transition ${
+                        active ? "bg-[#15803d] text-white" : "bg-[#0d1b2e] text-white hover:bg-[#10294b]"
+                      }`}
+                    >
+                      <span className="block font-['Manrope'] text-[13px] font-bold leading-[1.2]">{tab.title}</span>
+                      <span className={`mt-1 block text-[10px] ${active ? "text-white/85" : "text-[#94a3b8]"}`}>
+                        {tab.subtitle}
+                      </span>
+                    </button>
+                  );
+                })}
+
+                {overflowTabs.length ? (
+                  <div className="relative" ref={overflowRef}>
+                    <button
+                      type="button"
+                      onClick={() => setOverflowOpen((current) => !current)}
+                      className={`flex h-full min-w-[116px] items-center justify-center gap-2 rounded-[8px] px-4 py-3 text-center transition ${
+                        overflowTabs.some((tab) => tab.index === activeIndex)
+                          ? "bg-[#15803d] text-white"
+                          : "bg-[#0d1b2e] text-white hover:bg-[#10294b]"
+                      }`}
+                    >
+                      <span className="font-['Manrope'] text-[13px] font-bold leading-[1.2]">
+                        +{overflowTabs.length} More
+                      </span>
+                      <ChevronDownIcon open={overflowOpen} />
+                    </button>
+
+                    {overflowOpen ? (
+                      <div className="absolute right-0 top-[calc(100%+8px)] z-20 min-w-[230px] rounded-[12px] border border-slate-200 bg-white p-2 shadow-[0_14px_30px_rgba(13,27,46,0.16)]">
+                        {overflowTabs.map((tab) => (
+                          <button
+                            key={tab.index}
+                            type="button"
+                            onClick={() => {
+                              setActiveIndex(tab.index);
+                              setOverflowOpen(false);
+                            }}
+                            className="flex w-full flex-col items-start rounded-[10px] px-3 py-2 text-left transition hover:bg-slate-50"
+                          >
+                            <span className="font-['Manrope'] text-[12px] font-bold leading-[1.2] text-[#0d1b2e]">{tab.title}</span>
+                            <span className="mt-1 text-[10px] text-slate-500">{tab.subtitle}</span>
+                          </button>
+                        ))}
+                      </div>
+                    ) : null}
                   </div>
-                  <div className="rounded-md bg-white/8 px-[10px] py-1 text-[11px] font-semibold text-[#94a3b8]">
-                    {activeGroup.engines.length} engines
-                  </div>
-                </div>
+                ) : null}
               </div>
 
-              <div className="overflow-hidden rounded-b-[10px] border border-t-0 border-[#e5e7eb]">
-                <div className="overflow-x-auto">
-                  <table className="w-full border-collapse">
-                    <thead>
-                      <tr className="bg-[#0d1b2e]">
-                        <th className="px-[14px] py-[10px] text-left text-[10.5px] font-bold uppercase tracking-[0.6px] text-[#94a3b8]">Engine Code</th>
-                        <th className="px-[14px] py-[10px] text-left text-[10.5px] font-bold uppercase tracking-[0.6px] text-[#94a3b8]">Specs</th>
-                        <th className="px-[14px] py-[10px] text-left text-[10.5px] font-bold uppercase tracking-[0.6px] text-[#94a3b8]">Compatible Models</th>
-                        <th className="px-[14px] py-[10px] text-right text-[10.5px] font-bold uppercase tracking-[0.6px] text-[#94a3b8]">
-                          Avg. Rebuilt Price
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {activeGroup.engines.map((engine) => (
-                        <tr key={engine.code} className="border-b border-[#f1f5f9] transition hover:bg-[#fafafa] last:border-b-0">
-                          <td className="px-[14px] py-[14px] align-top text-[13px]">
-                            <div className="flex flex-col gap-0.5">
-                              <span className="font-['Manrope'] text-[15px] font-extrabold text-[#0d1b2e]">{engine.code}</span>
-                              <div className="mt-1 flex flex-wrap gap-[5px]">
-                                <span className={`rounded-[4px] border px-[7px] py-[2px] text-[10px] font-semibold ${fuelClass(engine.fuel)}`}>{engine.fuel}</span>
-                              </div>
-                            </div>
-                          </td>
-                          <td className="px-[14px] py-[14px] align-top text-[13px]">
-                            <div className="mt-[5px] flex flex-wrap gap-[6px]">
-                              <span className="rounded-[4px] border border-[#e5e7eb] bg-[#f8f9fa] px-2 py-[2px] text-[11px] font-semibold text-[#374151]">
-                                {engine.size}
-                              </span>
-                              <span className="rounded-[4px] border border-[#e5e7eb] bg-[#f8f9fa] px-2 py-[2px] text-[11px] font-semibold text-[#374151]">
-                                {engine.power}
-                              </span>
-                            </div>
-                          </td>
-                          <td className="px-[14px] py-[14px] align-top">
-                            <div className="text-[12px] leading-[1.6] text-[#4b5563]">{engine.compatibleModels}</div>
-                          </td>
-                          <td className="px-[14px] py-[14px] align-top text-right">
-                            <div className="text-[10px] uppercase tracking-[0.5px] text-[#9ca3af]">Avg. Result</div>
-                            <div className="mt-1 font-['Manrope'] text-[15px] font-extrabold text-[#15803d]">{engine.avgRebuiltPrice}</div>
-                            <a
-                              href="#quote-form"
-                              data-quote-engine-code={engine.code}
-                              data-quote-context={engine.compatibleModels}
-                              className="mt-[6px] inline-flex items-center gap-[5px] rounded-[7px] bg-[#0d1b2e] px-[13px] py-[7px] font-['Manrope'] text-[11.5px] font-bold text-white transition hover:bg-[#15803d]"
-                            >
-                              {engine.cta}
-                              <QuoteArrow />
-                            </a>
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-
-            <div className="rounded-[14px] border border-[#e5e7eb] bg-white shadow-[0_2px_10px_rgba(13,27,46,0.06)] md:hidden">
-              <div className="flex items-center justify-between bg-[#0d1b2e] px-4 py-[13px]">
-                <div className="flex items-center gap-[10px]">
-                  <div className="flex h-[34px] w-[34px] flex-none items-center justify-center rounded-[8px] bg-[#15803d] text-white">
-                    <GroupIcon index={activeIndex} />
-                  </div>
-                  <div>
-                    <div className="font-['Manrope'] text-[14px] font-bold leading-[1.2] text-white">{activeGroup.name}</div>
-                    <div className="mt-0.5 text-[11px] text-[#64748b]">{activeGroup.era}</div>
-                  </div>
-                </div>
-                <div className="text-[11px] font-semibold text-[#94a3b8]">{activeGroup.engines.length} engines</div>
-              </div>
-
-              {activeGroup.engines.map((engine) => (
-                <div key={engine.code} className="border-b border-[#f1f5f9] px-4 py-[14px] last:border-b-0">
-                  <div className="mb-[6px] flex items-start justify-between gap-4">
-                    <div className="font-['Manrope'] text-[16px] font-extrabold tracking-[-0.3px] text-[#0d1b2e]">{engine.code}</div>
-                    <div className="text-right">
-                      <div className="mb-0.5 text-[9px] font-semibold uppercase tracking-[0.6px] text-[#9ca3af]">Avg. Rebuilt</div>
-                      <div className="text-[14px] font-bold tracking-[-0.2px] text-[#15803d]">{engine.avgRebuiltPrice}</div>
-                    </div>
-                  </div>
-
-                  <div className="mb-[7px] flex flex-wrap gap-[5px]">
-                    <span className={`rounded-[5px] border px-[7px] py-[2px] text-[10px] font-semibold ${fuelClass(engine.fuel)}`}>{engine.fuel}</span>
-                    <span className="rounded-[5px] bg-[#f1f5f9] px-[7px] py-[2px] text-[10px] font-semibold text-[#374151]">{engine.size}</span>
-                    <span className="rounded-[5px] border border-[#e5e7eb] bg-[#f8f9fa] px-[7px] py-[2px] text-[10px] font-semibold text-[#6b7280]">
-                      {engine.power}
-                    </span>
-                  </div>
-
-                  <div className="mb-[10px] text-[11.5px] leading-[1.45] text-[#6b7280]">{engine.compatibleModels}</div>
-
-                  <a
-                    href="#quote-form"
-                    data-quote-engine-code={engine.code}
-                    data-quote-context={engine.compatibleModels}
-                    className="inline-flex items-center justify-center rounded-[7px] bg-[#0d1b2e] px-[14px] py-[7px] font-['Manrope'] text-[11px] font-bold tracking-[0.3px] text-white transition hover:bg-[#15803d]"
+              <div className="md:hidden" ref={mobileOverflowRef}>
+                <div className="flex items-stretch gap-2">
+                  <button
+                    type="button"
+                    onClick={() => setMobileOverflowOpen((current) => !current)}
+                    className="min-w-0 flex-1 rounded-[8px] bg-[#15803d] px-4 py-3 text-center text-white"
                   >
-                    {engine.cta}
-                  </a>
-                </div>
-              ))}
+                    <span className="block font-['Manrope'] text-[12px] font-bold leading-[1.2]">{tabs[activeIndex]?.title}</span>
+                    <span className="mt-1 block text-[10px] text-white/85">{tabs[activeIndex]?.subtitle}</span>
+                  </button>
 
-              <button
-                type="button"
-                onClick={() => setOpenFailures((current) => ({ ...current, [activeIndex]: !isOpen }))}
-                className="flex w-full items-center justify-between border-t border-[#bbf7d0] bg-[#f0fdf4] px-4 py-3 text-left"
-              >
-                <div className="flex items-center gap-2 text-[12px] font-bold uppercase tracking-[0.3px] text-[#15803d]">
-                  <WarningIcon />
-                  <span>Common Failure Points</span>
-                </div>
-                <ChevronDownIcon open={isOpen} />
-              </button>
+                  <div className="relative">
+                    <button
+                      type="button"
+                      onClick={() => setMobileOverflowOpen((current) => !current)}
+                      className="flex h-full min-w-[96px] items-center justify-center gap-2 rounded-[8px] bg-[#0d1b2e] px-4 py-3 text-white"
+                    >
+                      <span className="font-['Manrope'] text-[12px] font-bold leading-[1.2]">
+                        {tabs.length - 1} more
+                      </span>
+                      <ChevronDownIcon open={mobileOverflowOpen} />
+                    </button>
 
-              {isOpen ? (
-                <div className="border-t border-[#d1fae5] bg-[#f0fdf4] px-4 pb-4 pt-3">
-                  <p className="text-[12px] leading-[1.65] text-[#374151]">{activeGroup.failureNote}</p>
+                    {mobileOverflowOpen ? (
+                      <div className="absolute right-0 top-[calc(100%+8px)] z-20 min-w-[220px] rounded-[12px] border border-slate-200 bg-white p-2 shadow-[0_14px_30px_rgba(13,27,46,0.16)]">
+                        {tabs
+                          .filter((tab) => tab.index !== activeIndex)
+                          .map((tab) => (
+                            <button
+                              key={tab.index}
+                              type="button"
+                              onClick={() => {
+                                setActiveIndex(tab.index);
+                                setMobileOverflowOpen(false);
+                              }}
+                              className="flex w-full flex-col items-start rounded-[10px] px-3 py-2 text-left transition hover:bg-slate-50"
+                            >
+                              <span className="font-['Manrope'] text-[12px] font-bold leading-[1.2] text-[#0d1b2e]">{tab.title}</span>
+                              <span className="mt-1 text-[10px] text-slate-500">{tab.subtitle}</span>
+                            </button>
+                          ))}
+                      </div>
+                    ) : null}
+                  </div>
                 </div>
-              ) : null}
+              </div>
             </div>
 
-            <div className="mt-3 hidden md:block">
+            <div className="overflow-hidden rounded-[10px] border border-[#e5e7eb] bg-white shadow-[0_2px_10px_rgba(13,27,46,0.06)]">
+              <div className="overflow-x-auto">
+                <table className="w-full border-collapse">
+                  <thead>
+                    <tr className="bg-[#0d1b2e]">
+                      <th className="px-[14px] py-[11px] text-left text-[10.5px] font-bold uppercase tracking-[0.6px] text-[#94a3b8]">Engine Code</th>
+                      <th className="px-[14px] py-[11px] text-left text-[10.5px] font-bold uppercase tracking-[0.6px] text-[#94a3b8]">Specs</th>
+                      <th className="px-[14px] py-[11px] text-left text-[10.5px] font-bold uppercase tracking-[0.6px] text-[#94a3b8]">Compatible Models</th>
+                      <th className="px-[14px] py-[11px] text-right text-[10.5px] font-bold uppercase tracking-[0.6px] text-[#94a3b8]">Avg. Rebuilt Price</th>
+                    </tr>
+                  </thead>
+                  <tbody className="hidden md:table-row-group">
+                    {activeGroup.engines.map((engine) => (
+                      <tr key={engine.code} className="border-b border-[#f1f5f9] transition hover:bg-[#fafafa] last:border-b-0">
+                        <td className="px-[14px] py-[14px] align-top text-[13px]">
+                          <div className="flex flex-col gap-0.5">
+                            <span className="font-['Manrope'] text-[15px] font-extrabold text-[#0d1b2e]">{engine.code}</span>
+                            <div className="mt-1 flex flex-wrap gap-[5px]">
+                              <span className={`rounded-[4px] border px-[7px] py-[2px] text-[10px] font-semibold ${fuelClass(engine.fuel)}`}>{engine.fuel}</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td className="px-[14px] py-[14px] align-top text-[13px]">
+                          <div className="flex flex-wrap gap-[6px]">
+                            <span className="rounded-[4px] border border-[#e5e7eb] bg-[#f8f9fa] px-2 py-[2px] text-[11px] font-semibold text-[#374151]">
+                              {engine.size}
+                            </span>
+                            <span className="rounded-[4px] border border-[#e5e7eb] bg-[#f8f9fa] px-2 py-[2px] text-[11px] font-semibold text-[#374151]">
+                              {engine.power}
+                            </span>
+                          </div>
+                        </td>
+                        <td className="px-[14px] py-[14px] align-top">
+                          <div className="text-[12px] leading-[1.6] text-[#4b5563]">{engine.compatibleModels}</div>
+                        </td>
+                        <td className="px-[14px] py-[14px] align-top text-right">
+                          <div className="font-['Manrope'] text-[15px] font-extrabold text-[#15803d]">{engine.avgRebuiltPrice}</div>
+                          <a
+                            href="#quote-form"
+                            data-quote-engine-code={engine.code}
+                            data-quote-context={engine.compatibleModels}
+                            className="mt-[8px] inline-flex items-center gap-[5px] rounded-[7px] bg-[#0d1b2e] px-[13px] py-[7px] font-['Manrope'] text-[11.5px] font-bold text-white transition hover:bg-[#10294b]"
+                          >
+                            {engine.cta}
+                            <QuoteArrow />
+                          </a>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+
+                <div className="md:hidden">
+                  {activeGroup.engines.map((engine) => (
+                    <div key={engine.code} className="border-b border-[#f1f5f9] px-4 py-[14px] last:border-b-0">
+                      <div className="mb-[6px] flex items-start justify-between gap-4">
+                        <div className="font-['Manrope'] text-[16px] font-extrabold tracking-[-0.3px] text-[#0d1b2e]">{engine.code}</div>
+                        <div className="text-right">
+                          <div className="text-[14px] font-bold tracking-[-0.2px] text-[#15803d]">{engine.avgRebuiltPrice}</div>
+                        </div>
+                      </div>
+
+                      <div className="mb-[7px] flex flex-wrap gap-[5px]">
+                        <span className={`rounded-[5px] border px-[7px] py-[2px] text-[10px] font-semibold ${fuelClass(engine.fuel)}`}>{engine.fuel}</span>
+                        <span className="rounded-[5px] bg-[#f1f5f9] px-[7px] py-[2px] text-[10px] font-semibold text-[#374151]">{engine.size}</span>
+                        <span className="rounded-[5px] border border-[#e5e7eb] bg-[#f8f9fa] px-[7px] py-[2px] text-[10px] font-semibold text-[#6b7280]">
+                          {engine.power}
+                        </span>
+                      </div>
+
+                      <div className="mb-[10px] text-[11.5px] leading-[1.45] text-[#6b7280]">{engine.compatibleModels}</div>
+
+                      <a
+                        href="#quote-form"
+                        data-quote-engine-code={engine.code}
+                        data-quote-context={engine.compatibleModels}
+                        className="inline-flex items-center justify-center rounded-[7px] bg-[#0d1b2e] px-[14px] py-[7px] font-['Manrope'] text-[11px] font-bold tracking-[0.3px] text-white transition hover:bg-[#10294b]"
+                      >
+                        {engine.cta}
+                      </a>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-3">
               <button
                 type="button"
                 onClick={() => setOpenFailures((current) => ({ ...current, [activeIndex]: !isOpen }))}
-                className="flex w-full items-center justify-between rounded-[8px] border border-[#e5e7eb] bg-white px-[14px] py-[10px] text-left transition hover:border-[#15803d] hover:bg-[#f0fdf4]"
+                className="flex w-full items-center justify-between rounded-[8px] border border-[#fdba74] bg-[#fff7ed] px-[14px] py-[11px] text-left transition hover:border-[#fb923c]"
               >
-                <div className="flex items-center gap-[7px] text-[12px] font-bold leading-[1.2] text-[#15803d]">
+                <div className="flex items-center gap-[7px] text-[12px] font-bold leading-[1.2] text-[#ea580c]">
                   <WarningIcon />
                   <span>Common Failure Points</span>
                 </div>
-                <ChevronDownIcon open={isOpen} />
+                <div className="text-[#ea580c]">
+                  <ChevronDownIcon open={isOpen} />
+                </div>
               </button>
               {isOpen ? (
-                <div className="rounded-b-[8px] border border-t-0 border-[#e5e7eb] bg-white px-[14px] py-3 text-[12.5px] leading-[1.75] text-[#374151]">
+                <div className="rounded-b-[8px] border border-t-0 border-[#fdba74] bg-[#fffaf5] px-[14px] py-3 text-[12.5px] leading-[1.75] text-[#7c2d12]">
                   {activeGroup.failureNote}
                 </div>
               ) : null}
@@ -357,12 +434,14 @@ export default function EngineCodesSection({ data, bgImage: _bgImage }: Props) {
                   <ShieldIcon />
                 </div>
                 <p className="text-[13px] leading-[1.65] text-[#374151]">
-                  <strong className="font-bold text-[#0d1b2e]">Can&apos;t find your engine code?</strong> Enter your registration number above and we&apos;ll
-                  match it instantly to the correct replacement engine -
-                  <a href="#quote-form" className="ml-1 font-semibold text-[#15803d] no-underline">
-                    all backed by a genuine 12-month warranty
-                  </a>{" "}
-                  from vetted UK Land Rover specialists.
+                  {data.closingLine ? (
+                    footerText
+                  ) : (
+                    <>
+                      <strong className="font-bold text-[#0d1b2e]">Can&apos;t find your engine code?</strong>{" "}
+                      {footerText}
+                    </>
+                  )}
                 </p>
               </div>
               <a

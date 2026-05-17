@@ -1,17 +1,22 @@
 import type { BrandPageData } from "@/types/brand";
 
-const mojibakeFixes: Array<[string | RegExp, string]> = [
+const mojibakeFixes: Array<[RegExp, string]> = [
   [/Â£/g, "£"],
-  [/â€“/g, "–"],
-  [/â€”/g, "—"],
+  [/Â·|â€¢/g, "-"],
+  [/â€“|â€”/g, "-"],
   [/â€˜|â€™/g, "'"],
   [/â€œ|â€/g, '"'],
   [/â€¦/g, "..."],
-  [/Ã—/g, "x"],
-  [/Ã¢â‚¬â€œ/g, "–"],
-  [/Ã¢â‚¬â€/g, "—"],
-  [/Ã¢â€ â€™/g, "->"],
+  [/â†’/g, "->"],
   [/Ã‚Â£/g, "£"],
+  [/Ã¢â‚¬â€œ|Ã¢â‚¬â€/g, "-"],
+  [/Ã¢â‚¬Ëœ|Ã¢â‚¬â„¢/g, "'"],
+  [/Ã¢â‚¬Å“|Ã¢â‚¬Â/g, '"'],
+  [/Ã¢â‚¬Â¦/g, "..."],
+  [/Ãƒâ€”/g, "x"],
+  [/ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“|ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â/g, "-"],
+  [/ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢/g, "->"],
+  [/Ãƒâ€šÃ‚Â£/g, "£"],
 ];
 
 function sanitizeString(value: string) {
@@ -39,6 +44,10 @@ function sanitizeDeep<T>(value: T): T {
   return value;
 }
 
-export function sanitizeBrandPageData(data: BrandPageData): BrandPageData {
+export function sanitizeMojibake<T>(data: T): T {
   return sanitizeDeep(data);
+}
+
+export function sanitizeBrandPageData(data: BrandPageData): BrandPageData {
+  return sanitizeMojibake(data);
 }

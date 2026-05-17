@@ -1,16 +1,25 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
-import type { LiveMarketPriceEntry, LiveMarketPricesData } from "@/types/brand";
+import type { LiveMarketPriceEntry, LiveMarketPricesData, ModelsSectionData } from "@/types/brand";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
 
 type Props = {
   data: LiveMarketPricesData;
+  modelCards?: ModelsSectionData["cards"];
+  imageSrc?: string;
 };
 
 type FeedRow = LiveMarketPriceEntry & {
   timestamp: Date;
+};
+
+type FilterTab = {
+  key: string;
+  label: string;
+  matchers: string[];
 };
 
 function RefreshIcon({ spinning = false }: { spinning?: boolean }) {
@@ -29,59 +38,17 @@ function RefreshIcon({ spinning = false }: { spinning?: boolean }) {
   );
 }
 
-function TrendIcon() {
+function ChevronDownIcon({ open }: { open: boolean }) {
   return (
-    <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" aria-hidden="true">
-      <path d="M4 16 9 11l4 3 7-8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M16 6h4v4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    <svg
+      viewBox="0 0 24 24"
+      className={`h-[12px] w-[12px] transition ${open ? "rotate-180" : ""}`}
+      fill="none"
+      aria-hidden="true"
+    >
+      <polyline points="6,9 12,15 18,9" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
-}
-
-function PoundIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" aria-hidden="true">
-      <path d="M15 6a3 3 0 1 0-6 0v11m-2-5h8m-8 4h7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-    </svg>
-  );
-}
-
-function QuoteIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" aria-hidden="true">
-      <path d="M5 5h14v14H5V5Zm4 4h6m-6 4h4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-    </svg>
-  );
-}
-
-function DataIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" aria-hidden="true">
-      <path d="M7 3h8l4 4v14H7V3Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M15 3v5h5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M10 12h5M10 16h4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-    </svg>
-  );
-}
-
-function ClockIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" aria-hidden="true">
-      <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="2" />
-      <path d="M12 7v5l3 2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-    </svg>
-  );
-}
-
-function getIntroIcon(label: string, index: number) {
-  const normalized = label.toLowerCase();
-
-  if (normalized.includes("real-time") || normalized.includes("real time")) return DataIcon;
-  if (normalized.includes("transparent")) return TrendIcon;
-  if (normalized.includes("cost") || normalized.includes("price")) return PoundIcon;
-  if (normalized.includes("quote")) return QuoteIcon;
-
-  return [DataIcon, TrendIcon, PoundIcon, QuoteIcon][index % 4];
 }
 
 function buildFeedRows(
@@ -113,16 +80,38 @@ function buildFeedRows(
   return rows;
 }
 
-function formatRelativeTime(timestamp: Date, clock: Date) {
-  const diffMinutes = Math.max(1, Math.floor((clock.getTime() - timestamp.getTime()) / 60_000));
+function cleanModelLabel(label: string) {
+  return label
+    .replace(/\s+Engine Replacement$/i, "")
+    .replace(/\s+Engines?$/i, "")
+    .replace(/^BMW\s+/i, "")
+    .replace(/^Land Rover\s+/i, "")
+    .replace(/^Range Rover\s+/i, "")
+    .trim();
+}
 
-  if (diffMinutes < 60) return `${diffMinutes} min ago`;
+function buildFilterTabs(modelCards?: ModelsSectionData["cards"]): FilterTab[] {
+  if (!modelCards?.length) return [];
 
-  const diffHours = Math.floor(diffMinutes / 60);
-  if (diffHours < 24) return `${diffHours} hour${diffHours === 1 ? "" : "s"} ago`;
+  const tabs = modelCards.map((card) => {
+    const label = cleanModelLabel(card.h3);
+    const slugWords = card.slug.replace(/-/g, " ").trim();
 
-  const diffDays = Math.floor(diffHours / 24);
-  return `${diffDays} day${diffDays === 1 ? "" : "s"} ago`;
+    return {
+      key: card.slug,
+      label,
+      matchers: [label.toLowerCase(), slugWords.toLowerCase()],
+    };
+  });
+
+  return [
+    {
+      key: "all",
+      label: "All",
+      matchers: [],
+    },
+    ...tabs,
+  ];
 }
 
 function formatUpdatedAt(clock: Date) {
@@ -134,10 +123,10 @@ function formatUpdatedAt(clock: Date) {
   }).format(clock);
 }
 
-export default function LiveMarketPricesSection({ data }: Props) {
-  const [refreshSeed, setRefreshSeed] = useState(0);
+export default function LiveMarketPricesSection({ data, modelCards, imageSrc }: Props) {
   const [clock, setClock] = useState(() => new Date());
-  const [isRefreshing, setIsRefreshing] = useState(false);
+  const [activeTab, setActiveTab] = useState("all");
+  const [drawerOpen, setDrawerOpen] = useState(false);
 
   useEffect(() => {
     const intervalId = window.setInterval(() => {
@@ -148,220 +137,182 @@ export default function LiveMarketPricesSection({ data }: Props) {
   }, []);
 
   const feedRows = useMemo(
-    () => buildFeedRows(data.feed.entries, data.feed.density, data.feed.visibleRows, refreshSeed, clock),
-    [clock, data.feed.density, data.feed.entries, data.feed.visibleRows, refreshSeed]
+    () => buildFeedRows(data.feed.entries, data.feed.density, data.feed.visibleRows, 0, clock),
+    [clock, data.feed.density, data.feed.entries, data.feed.visibleRows],
   );
 
-  const handleRefresh = () => {
-    setIsRefreshing(true);
-    setRefreshSeed((value) => value + 1);
-    window.setTimeout(() => setIsRefreshing(false), 650);
-  };
+  const filterTabs = useMemo(() => buildFilterTabs(modelCards), [modelCards]);
+  const activeFilter = filterTabs.find((tab) => tab.key === activeTab) ?? filterTabs[0] ?? null;
+
+  const visibleRows = useMemo(() => {
+    if (!activeFilter || activeFilter.key === "all") return feedRows;
+
+    return feedRows.filter((row) => {
+      const model = row.Model.toLowerCase();
+      return activeFilter.matchers.some((matcher) => model.includes(matcher));
+    });
+  }, [activeFilter, feedRows]);
+
+  const pinnedTabs = filterTabs.length ? filterTabs.slice(0, 5) : [];
+  const overflowTabs = filterTabs.slice(5);
+
+  const accent = "Engine Quotes & Price Guide";
+  const [headingPrefix, hasAccent] = data.h2.split(accent);
+  const sectionImage = imageSrc || "/images/brands/land-rover/brand/land-rover-how-it-works-bg.webp";
 
   return (
     <Section className="bg-[#f8f9fa]">
-      <Container className="max-w-[1180px]">
-        <div className="mb-[14px] inline-flex items-center gap-[7px] rounded-full border border-[#bbf7d0] bg-[#f0fdf4] px-3 py-[4px] text-[10px] font-bold uppercase tracking-[0.8px] text-[#15803d]">
+      <Container className="max-w-[1220px]">
+        <div className="section-pill mb-[14px]">
           <span className="h-[7px] w-[7px] animate-pulse rounded-full bg-[#15803d]" />
           <span>{data.tag}</span>
         </div>
 
-        <div className="grid gap-5 xl:grid-cols-[0.85fr_1.15fr] xl:items-start">
-          <div>
-            <h2 className="max-w-[520px] font-['Manrope'] text-[24px] font-extrabold leading-[1.2] tracking-[-0.4px] text-[#0d1b2e] md:text-[28px] md:tracking-[-0.7px]">
-              {data.h2}
-            </h2>
+        <h2 className="max-w-none font-['Manrope'] text-[26px] font-extrabold leading-[1.18] tracking-[-0.4px] text-[#0d1b2e] md:text-[30px] md:tracking-[-0.7px] lg:text-[43px] lg:leading-[1.06] lg:tracking-[-1px]">
+          {hasAccent !== undefined ? (
+            <>
+              {headingPrefix.trim()} <span className="text-[#15803d]">{accent}</span>
+            </>
+          ) : (
+            data.h2
+          )}
+        </h2>
 
-            <p className="mt-[10px] text-[13px] leading-[1.6] text-[#6b7280] md:max-w-[470px]">
-              {data.h3}
-            </p>
+        <p className="mt-[10px] max-w-[760px] text-[13px] leading-[1.6] text-[#6b7280] md:text-[14px]">
+          {data.h3}
+        </p>
 
-            <div className="mt-5 hidden gap-[10px] sm:grid sm:grid-cols-2 xl:grid">
-              {data.introBullets.map((item, index) => {
-                const Icon = getIntroIcon(item.label, index);
-
-                return (
-                  <div
-                    key={item.label}
-                    className="rounded-[12px] border border-[#e5e7eb] bg-white p-4 shadow-[0_2px_12px_rgba(13,27,46,0.05)]"
-                  >
-                    <div className="mb-3 flex h-11 w-11 items-center justify-center rounded-[10px] bg-[#f8fbff] text-[#0d1b2e]">
-                      <Icon />
-                    </div>
-                    <div className="font-['Manrope'] text-[14px] font-bold leading-[1.25] text-[#0d1b2e]">{item.label}</div>
-                    <p className="mt-3 text-[12px] leading-[1.6] text-[#6b7280]">{item.text}</p>
-                  </div>
-                );
-              })}
-            </div>
-
-            <div className="mt-4 hidden rounded-[12px] border border-[#e5e7eb] bg-white p-4 shadow-[0_2px_12px_rgba(13,27,46,0.05)] xl:block">
-              <div className="font-['Manrope'] text-[14px] font-bold leading-[1.25] text-[#0d1b2e]">{data.cta.heading}</div>
-              <p className="mt-2 text-[12px] leading-[1.6] text-[#6b7280]">{data.cta.text}</p>
-              <a
-                href="#quote-form"
-                data-quote-context={data.cta.heading}
-                data-quote-source="live-market-prices"
-                className="mt-3 inline-flex items-center rounded-[9px] bg-[#15803d] px-4 py-[10px] font-['Manrope'] text-[13px] font-bold text-white transition hover:bg-[#166534]"
-              >
-                {data.cta.buttonText}
-              </a>
-              <p className="mt-2 text-[11px] leading-[1.5] text-[#6b7280]">{data.cta.note}</p>
+        <div className="mt-6 grid gap-6 lg:grid-cols-[0.76fr_1.24fr] lg:items-start">
+          <div className="relative overflow-hidden rounded-[16px] border border-[#e5e7eb] bg-white shadow-[0_2px_12px_rgba(13,27,46,0.07)]">
+            <div className="relative aspect-[4/3.6] min-h-[340px] lg:min-h-[520px]">
+              <Image
+                src={sectionImage}
+                alt="Engine market comparison and model pricing"
+                fill
+                className="object-contain object-center p-3 lg:p-4"
+                sizes="(max-width: 1024px) 100vw, 38vw"
+              />
             </div>
           </div>
 
-          <div>
-            <div className="overflow-hidden rounded-[14px] border border-[#e5e7eb] bg-white shadow-[0_2px_12px_rgba(13,27,46,0.07)]">
-              <div className="sticky top-0 z-10 bg-[#0d1b2e] px-4 py-[14px] md:px-5 md:py-4">
-                <div className="mb-[6px] flex items-center justify-between gap-3">
-                  <div className="inline-flex items-center gap-[6px] rounded-full border border-[rgba(34,197,94,0.3)] bg-[rgba(34,197,94,0.12)] px-[10px] py-[3px] text-[9px] font-bold uppercase tracking-[0.8px] text-[#22c55e]">
-                    <span className="h-[6px] w-[6px] animate-pulse rounded-full bg-[#22c55e]" />
-                    <span>Live Feed</span>
+          <div className="space-y-3 lg:flex lg:h-full lg:flex-col">
+            {filterTabs.length ? (
+              <div className="rounded-[10px] bg-[#0d1b2e] p-[10px] shadow-[0_2px_12px_rgba(13,27,46,0.16)]">
+                <div className="flex items-center gap-[6px]">
+                  <div className="flex min-w-0 flex-1 items-center gap-[6px] overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+                    {pinnedTabs.map((tab) => {
+                      const active = activeTab === tab.key;
+
+                      return (
+                        <button
+                          key={tab.key}
+                          type="button"
+                          onClick={() => setActiveTab(tab.key)}
+                          className={`flex-none rounded-full border px-[12px] py-[7px] text-[11.5px] font-medium transition ${
+                            active
+                              ? "border-[#15803d] bg-[#15803d] text-white"
+                              : "border-white/15 bg-transparent text-white/80 hover:bg-white/10 hover:text-white"
+                          }`}
+                        >
+                          {tab.label}
+                        </button>
+                      );
+                    })}
                   </div>
 
-                  <button
-                    type="button"
-                    onClick={handleRefresh}
-                    className="inline-flex items-center gap-[5px] text-[11px] font-semibold text-[#22c55e] transition hover:opacity-75"
-                  >
-                    <RefreshIcon spinning={isRefreshing} />
-                    <span>{data.feed.refreshLabel}</span>
-                  </button>
-                </div>
+                  {overflowTabs.length ? (
+                    <div className="relative">
+                      <button
+                        type="button"
+                        onClick={() => setDrawerOpen((current) => !current)}
+                        className="flex h-[30px] w-[30px] flex-none items-center justify-center rounded-full border border-white/15 bg-white/10 text-white/80 transition hover:bg-white/20 hover:text-white"
+                      >
+                        <ChevronDownIcon open={drawerOpen} />
+                      </button>
 
-                <div role="heading" aria-level={3} className="font-['Manrope'] text-[15px] font-bold text-white">
-                  Recent enquiries
-                </div>
-                <div className="mt-[3px] text-[11px] tracking-[0.1px] text-[#64748b]">
-                  Showing {feedRows.length} of {data.feed.rowsCount} researched rows
-                </div>
-
-                <div className="mt-4 hidden border-t border-white/10 pt-3 md:grid md:grid-cols-[0.7fr_1.35fr_1fr_0.95fr_1.25fr] md:gap-3">
-                  <div className="text-[10px] font-bold uppercase tracking-[0.5px] text-[#94a3b8]">Year</div>
-                  <div className="text-[10px] font-bold uppercase tracking-[0.5px] text-[#94a3b8]">Model</div>
-                  <div className="text-[10px] font-bold uppercase tracking-[0.5px] text-[#94a3b8]">Engine Code<br />(Fuel Type)</div>
-                  <div className="text-[10px] font-bold uppercase tracking-[0.5px] text-[#94a3b8]">Avg. Quoted Price</div>
-                  <div className="text-[10px] font-bold uppercase tracking-[0.5px] text-[#94a3b8]">Reported Issue</div>
-                </div>
-              </div>
-
-              <div className="h-[420px] overflow-y-auto px-3 py-3 [scrollbar-color:#d1d5db_#f8f9fa] [scrollbar-width:thin] md:px-0 md:py-0">
-                <div className="flex flex-col gap-2 md:hidden">
-                  {feedRows.map((row, index) => (
-                    <div
-                      key={`${row.Year}-${row.Model}-${row["Engine Code"]}-${index}`}
-                      className="relative rounded-[10px] border border-[#f1f5f9] bg-white px-3 pb-[10px] pl-[14px] pt-3 transition hover:border-[#bbf7d0]"
-                    >
-                      <div className="absolute bottom-4 left-0 top-4 w-[3px] rounded-r-[2px] bg-[#e5e7eb]" />
-
-                      <div className="mb-[6px] flex items-start justify-between gap-2">
-                        <div className="font-['Manrope'] text-[13px] font-bold leading-[1.3] text-[#0d1b2e]">{row.Model}</div>
-                        <div className="flex-none whitespace-nowrap text-[10px] font-medium text-[#9ca3af]">
-                          {formatRelativeTime(row.timestamp, clock)}
+                      {drawerOpen ? (
+                        <div className="absolute right-0 top-[calc(100%+8px)] z-20 flex min-w-[180px] flex-col gap-1 rounded-[12px] border border-[#e5e7eb] bg-white p-2 shadow-[0_14px_34px_rgba(13,27,46,0.16)]">
+                          {overflowTabs.map((tab) => (
+                            <button
+                              key={tab.key}
+                              type="button"
+                              onClick={() => {
+                                setActiveTab(tab.key);
+                                setDrawerOpen(false);
+                              }}
+                              className="rounded-[9px] px-3 py-[10px] text-left text-[11px] font-bold text-[#0d1b2e] transition hover:bg-[#f8fafc]"
+                            >
+                              {tab.label}
+                            </button>
+                          ))}
                         </div>
-                      </div>
-
-                      <div className="mb-[7px] flex flex-wrap gap-[5px]">
-                        <span className="rounded-[5px] bg-[#f1f5f9] px-[7px] py-[2px] text-[10px] font-semibold text-[#374151]">{row.Year}</span>
-                        <span className="rounded-[5px] border border-[#bbf7d0] bg-[#f0fdf4] px-[7px] py-[2px] text-[10px] font-semibold text-[#15803d]">{row.Fuel}</span>
-                        <span className="rounded-[5px] border border-[#e5e7eb] bg-[#f8f9fa] px-[7px] py-[2px] font-mono text-[10px] font-semibold text-[#6b7280]">
-                          {row["Engine Code"]}
-                        </span>
-                      </div>
-
-                      <div className="mb-[5px] text-[13px] font-bold tracking-[-0.2px] text-[#15803d]">
-                        {row["Avg. Quoted Price"]}
-                      </div>
-
-                      <div className="text-[11.5px] leading-[1.45] text-[#6b7280]">
-                        <strong className="font-semibold text-[#374151]">{row["Reported Issue"].split(" - ")[0]}</strong>
-                        {row["Reported Issue"].includes(" - ") ? ` - ${row["Reported Issue"].split(" - ").slice(1).join(" - ")}` : ""}
-                      </div>
+                      ) : null}
                     </div>
-                  ))}
-                </div>
-
-                <div className="hidden md:block">
-                  {feedRows.map((row, index) => (
-                    <div
-                      key={`${row.Year}-${row.Model}-${row["Engine Code"]}-${index}`}
-                      className="grid grid-cols-[0.7fr_1.35fr_1fr_0.95fr_1.25fr] gap-3 border-b border-[#f1f5f9] px-5 py-4 text-[12px] text-[#374151] last:border-b-0"
-                    >
-                      <div className="font-semibold text-[#0d1b2e]">{row.Year}</div>
-                      <div>
-                        <div className="font-['Manrope'] text-[13px] font-bold leading-[1.35] text-[#0d1b2e]">{row.Model}</div>
-                      </div>
-                      <div>
-                        <div className="text-[12px] font-semibold text-[#0d1b2e]">{row["Engine Code"]}</div>
-                        <div className="text-[11px] text-[#6b7280]">({row.Fuel})</div>
-                      </div>
-                      <div className="font-['Manrope'] text-[13px] font-extrabold text-[#22c55e]">{row["Avg. Quoted Price"]}</div>
-                      <div className="text-[11.5px] leading-[1.45] text-[#374151]">{row["Reported Issue"]}</div>
-                    </div>
-                  ))}
+                  ) : null}
                 </div>
               </div>
+            ) : null}
 
-              <div className="flex items-center justify-between border-t border-[#f1f5f9] bg-[#fafafa] px-4 py-[10px] md:px-5">
-                <div className="flex items-center gap-[6px] text-[11px] font-medium text-[#9ca3af]">
-                  <ClockIcon />
+            <div className="overflow-hidden rounded-[14px] border border-[#dfe5ee] bg-white shadow-[0_2px_12px_rgba(13,27,46,0.07)] lg:flex lg:h-[520px] lg:flex-col">
+              <div className="border-b border-[#e4e7ee] bg-[#f9fafc] px-4 py-[10px] text-[11px] font-medium text-[#9aa3b5]">
+                Showing {visibleRows.length} {visibleRows.length === 1 ? "entry" : "entries"}
+                {activeFilter?.key && activeFilter.key !== "all" ? ` for ${activeFilter.label}` : " across all models"}
+              </div>
+
+              <div className="max-h-[520px] overflow-y-auto lg:flex-1 lg:max-h-none">
+                {visibleRows.length ? (
+                  <ul className="list-none">
+                    {visibleRows.map((row, index) => (
+                      <li
+                        key={`${row.Year}-${row.Model}-${row["Engine Code"]}-${index}`}
+                        className="border-b border-[#e4e7ee] px-[14px] py-[11px] transition hover:bg-[rgba(45,122,58,0.04)] last:border-b-0 md:px-[16px]"
+                      >
+                        <div className="mb-[4px] flex items-baseline justify-between gap-[8px]">
+                          <span className="min-w-0 flex-1 truncate text-[14px] font-semibold text-[#0d1f3c]">
+                            {row.Model}
+                          </span>
+                          <span className="flex-none whitespace-nowrap text-[11px] font-normal text-[#9aa3b5]">
+                            {row.Year}
+                          </span>
+                          <span className="flex-none whitespace-nowrap text-[15px] font-bold text-[#2d7a3a]">
+                            {row["Avg. Quoted Price"]}
+                          </span>
+                        </div>
+
+                        <div className="flex items-center justify-between gap-[8px]">
+                          <span className="min-w-0 flex-1 truncate text-[11.5px] text-[#5a6478]">
+                            {row["Reported Issue"]}
+                          </span>
+                          <div className="flex flex-none gap-[4px]">
+                            <span className="rounded-full bg-[#0d1f3c] px-[7px] py-[2px] text-[10.5px] font-medium text-white">
+                              {row["Engine Code"]}
+                            </span>
+                            <span className="rounded-full bg-[#0d1f3c] px-[7px] py-[2px] text-[10.5px] font-medium text-white">
+                              {row.Fuel}
+                            </span>
+                          </div>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <div className="px-4 py-10 text-center text-[13px] text-[#5a6478]">
+                    No entries match that model filter yet.
+                  </div>
+                )}
+              </div>
+
+              <div className="border-t border-[#e4e7ee] bg-[#f9fafc] px-4 py-[10px]">
+                <div className="flex items-center gap-[6px] text-[11px] font-medium text-[#9aa3b5]">
+                  <RefreshIcon />
                   <span>
                     Last updated: <span className="font-semibold text-[#6b7280]">{formatUpdatedAt(clock)}</span>
                   </span>
                 </div>
-                <div className="rounded-full border border-[#bbf7d0] bg-[#f0fdf4] px-2 py-[2px] text-[10px] font-semibold text-[#15803d]">
-                  UK Specialists
-                </div>
               </div>
-            </div>
-
-            <div className="mt-4 hidden gap-[10px] sm:grid-cols-2 xl:hidden">
-              {data.introBullets.map((item, index) => {
-                const Icon = getIntroIcon(item.label, index);
-
-                return (
-                  <div
-                    key={item.label}
-                    className="rounded-[12px] border border-[#e5e7eb] bg-white p-4 shadow-[0_2px_12px_rgba(13,27,46,0.05)] sm:block"
-                  >
-                    <div className="mb-3 flex h-11 w-11 items-center justify-center rounded-[10px] bg-[#f8fbff] text-[#0d1b2e]">
-                      <Icon />
-                    </div>
-                    <div className="font-['Manrope'] text-[14px] font-bold leading-[1.25] text-[#0d1b2e]">{item.label}</div>
-                    <p className="mt-3 text-[12px] leading-[1.6] text-[#6b7280]">{item.text}</p>
-                  </div>
-                );
-              })}
-            </div>
-
-            <div className="mt-4 hidden rounded-[12px] border border-[#e5e7eb] bg-white p-4 shadow-[0_2px_12px_rgba(13,27,46,0.05)] xl:hidden">
-              <div className="font-['Manrope'] text-[14px] font-bold leading-[1.25] text-[#0d1b2e]">{data.cta.heading}</div>
-              <p className="mt-2 text-[12px] leading-[1.6] text-[#6b7280]">{data.cta.text}</p>
-              <a
-                href="#quote-form"
-                data-quote-context={data.cta.heading}
-                data-quote-source="live-market-prices"
-                className="mt-3 inline-flex items-center rounded-[9px] bg-[#15803d] px-4 py-[10px] font-['Manrope'] text-[13px] font-bold text-white transition hover:bg-[#166534]"
-              >
-                {data.cta.buttonText}
-              </a>
-              <p className="mt-2 text-[11px] leading-[1.5] text-[#6b7280]">{data.cta.note}</p>
             </div>
           </div>
         </div>
-
-        {data.badges.length ? (
-          <div className="mt-5 flex flex-wrap gap-2">
-            {data.badges.map((badge) => (
-              <span
-                key={badge}
-                className="rounded-full border border-[#dbe6f3] bg-white px-3 py-[7px] text-[10.5px] font-bold uppercase tracking-[0.12em] text-[#0d1b2e]"
-              >
-                {badge}
-              </span>
-            ))}
-          </div>
-        ) : null}
       </Container>
     </Section>
   );
