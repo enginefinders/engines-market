@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import type { CommonProblemsData } from "@/types/brand";
+import { RecommendationCard } from "@/components/ui/CalloutCards";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
 
@@ -106,15 +107,6 @@ function MetaIcon({ type }: { type: "models" | "mileage" | "root" }) {
       />
       <line x1="12" y1="9" x2="12" y2="13" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
       <line x1="12" y1="17" x2="12.01" y2="17" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-    </svg>
-  );
-}
-
-function ArrowRightIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-[13px] w-[13px]" fill="none" aria-hidden="true">
-      <line x1="5" y1="12" x2="19" y2="12" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
-      <polyline points="12 5 19 12 12 19" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 }
@@ -226,9 +218,9 @@ function MobileProblemCard({
                       <div className="text-[10px] font-bold uppercase tracking-[0.05em] text-[#9ca3af]">Dealer</div>
                       <div className="mt-1 text-[12px] font-bold text-[#64748b]">{option.dealerPrice}</div>
                     </div>
-                    <div className="rounded-[8px] bg-[#f0fdf4] p-2">
-                      <div className="text-[10px] font-bold uppercase tracking-[0.05em] text-[#15803d]">Specialist</div>
-                      <div className="mt-1 text-[12px] font-extrabold text-[#15803d]">{option.specialistPrice}</div>
+                    <div className="rounded-[8px] bg-[#f8fbff] p-2">
+                      <div className="text-[10px] font-bold uppercase tracking-[0.05em] text-[#0d1b2e]">Specialist</div>
+                      <div className="mt-1 text-[12px] font-extrabold text-[#0d1b2e]">{option.specialistPrice}</div>
                     </div>
                   </div>
                   <p className="mt-3 text-[11.5px] leading-[1.55] text-[#374151]">{option.whatItInvolves}</p>
@@ -238,18 +230,17 @@ function MobileProblemCard({
             </div>
           ) : null}
 
-          <div className="mt-4 rounded-[12px] border border-[#bbf7d0] bg-[#f0fdf4] p-4">
-            <div className="mb-2 text-[10px] font-bold uppercase tracking-[0.08em] text-[#15803d]">Our Recommendation</div>
-            <p className="text-[12px] leading-[1.65] text-[#374151]">{problem.recommendation}</p>
-            <a
-              href="#quote-form"
-              data-quote-context={`${problem.group} - ${problem.h4}`}
-              data-quote-source="common-problem-detail"
-              className="mt-3 inline-flex items-center gap-[6px] text-[12px] font-semibold text-[#15803d]"
-            >
-              <ArrowRightIcon />
-              <span>{problem.cta}</span>
-            </a>
+          <div className="mt-4">
+            <RecommendationCard
+              title={`Best next step for ${problem.group.toLowerCase()}`}
+              body={problem.recommendation}
+              ctaText={problem.cta}
+              linkProps={{
+                href: "#quote-form",
+                "data-quote-context": `${problem.group} - ${problem.h4}`,
+                "data-quote-source": "common-problem-detail",
+              }}
+            />
           </div>
         </div>
       ) : null}
@@ -431,20 +422,17 @@ export default function CommonProblemsSection({ data, bgImage }: Props) {
                 </>
               ) : null}
 
-              <div className="mt-4 grid gap-3 rounded-[10px] border border-[#e5e7eb] bg-[#f8fbff] p-4 md:grid-cols-[1fr_240px] md:items-center">
-                <div>
-                  <div className="mb-2 text-[10px] font-bold uppercase tracking-[0.08em] text-[#15803d]">Our Recommendation</div>
-                  <p className="text-[11.5px] leading-[1.6] text-[#374151]">{current.recommendation}</p>
-                </div>
-                <a
-                  href="#quote-form"
-                  data-quote-context={`${current.group} - ${current.h4}`}
-                  data-quote-source="common-problem-detail"
-                  className="inline-flex items-center justify-center gap-[6px] text-[12px] font-bold text-[#15803d] md:justify-end"
-                >
-                  <span>{current.cta}</span>
-                  <ArrowRightIcon />
-                </a>
+              <div className="mt-4">
+                <RecommendationCard
+                  title={`Best next step for ${current.group.toLowerCase()}`}
+                  body={current.recommendation}
+                  ctaText={current.cta}
+                  linkProps={{
+                    href: "#quote-form",
+                    "data-quote-context": `${current.group} - ${current.h4}`,
+                    "data-quote-source": "common-problem-detail",
+                  }}
+                />
               </div>
             </div>
           ) : null}

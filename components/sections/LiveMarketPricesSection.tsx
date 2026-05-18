@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
 import type { LiveMarketPriceEntry, LiveMarketPricesData, ModelsSectionData } from "@/types/brand";
+import { CtaStrip } from "@/components/ui/CalloutCards";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
 
@@ -312,6 +313,21 @@ export default function LiveMarketPricesSection({ data, modelCards, imageSrc }: 
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="mt-5">
+          <CtaStrip
+            tone="light"
+            label="Live Quote Benchmark"
+            title={data.cta.heading}
+            description={data.cta.text}
+            buttonText={data.cta.buttonText.replace(/\s*->\s*$/, "")}
+            linkProps={{
+              href: "#quote-form",
+              "data-quote-context": data.cta.heading,
+              "data-quote-source": "live-market-prices",
+            }}
+          />
         </div>
       </Container>
     </Section>

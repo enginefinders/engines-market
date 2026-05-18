@@ -1,0 +1,1236 @@
+{
+  "brand": {
+    "name": "Seat",
+    "slug": "seat",
+    "tone": "volume"
+  },
+  "seo": {
+    "title": "Seat Engine Replacement – Save Up to 40% vs Main Dealers",
+    "description": "Get quotes today from trusted UK Seat engine specialists. Compare prices on reconditioned, rebuilt and used Seat engines – supply & fit available nationwide.",
+    "canonical": "/seat"
+  },
+  "assets": {
+    "heroBg": "/images/brands/seat/brand/seat-hero-bg.webp",
+    "howItWorksBg": "/images/brands/seat/brand/seat-how-it-works-bg.webp",
+    "commonProblemsBg": "/images/brands/seat/brand/seat-common-problems-bg.webp",
+    "engineCodesBg": "/images/brands/seat/brand/seat-engine-codes-bg.webp",
+    "engineTypesBg": "/images/brands/seat/brand/seat-engine-types-bg.webp",
+    "engineSizesBg": "/images/brands/seat/brand/seat-engine-sizes-bg.webp",
+    "fuelTypesBg": "/images/brands/seat/brand/seat-fuel-types-bg.webp",
+    "engineCodeDirectoryBg": "/images/brands/seat/brand/seat-engine-code-directory-bg.webp"
+  },
+  "sections": {
+    "hero": {
+      "tag": "UK Engine Marketplace",
+      "h1": "Seat Engine Replacement – Save Up to 40% vs Main Dealers",
+      "subheading": "Get quotes today from trusted UK Seat engine specialists. Compare prices on reconditioned, rebuilt and used Seat engines – supply & fit available nationwide.",
+      "trustBadges": [
+        "Supply & Fit Available",
+        "12-Month Warranty",
+        "Nationwide Delivery"
+      ],
+      "ctaLinkText": "Compare Seat Engine Prices",
+      "supportingText": "",
+      "ticker": "Instant Quotes – No Obligation – 100% Free – Trusted UK Suppliers",
+      "form": {
+        "heading": "Find Your Seat Engine",
+        "subtitle": "Enter your registration number to get started.",
+        "inputPlaceholder": "Registration Number",
+        "buttonText": "Get Free Engine Quotes",
+        "note": ""
+      }
+    },
+    "howItWorks": {
+      "tag": "How It Works",
+      "h2": "3 Simple Steps to Finding the Best Seat Replacement Engine",
+      "cards": [
+        {
+          "number": 1,
+          "icon": "registration",
+          "front": {
+            "h3": "Enter Your Seat Registration",
+            "text": "Instantly verify your exact model, engine code and fuel type via DVLA — from Ibiza to Tarraco."
+          },
+          "back": {
+            "heading": "Your Car, Precisely Identified",
+            "text": "Engines Market uses the official DVLA database to pull accurate details about your Seat, not just model name.",
+            "bullets": [
+              "Your Precise Model — from Ibiza, Arona, Leon, Ateca to Tarraco and Alhambra",
+              "Your Engine Code — CBZB, CAXA, CLCA, CHZB, DNUB, DJSA, CWZA and more",
+              "Vehicle Specs Check — fuel type, engine size, year, variant — all verified instantly",
+              "No paperwork, no guesswork, 100% free."
+            ]
+          }
+        },
+        {
+          "number": 2,
+          "icon": "quote",
+          "front": {
+            "h3": "Get Quotes from Seat Engine Specialists",
+            "text": "Same-day quotes from vetted UK suppliers — full breakdown, no obligation."
+          },
+          "back": {
+            "heading": "Quotes You Can Trust",
+            "text": "Your verified details are securely shared with up to 10 of our most relevant UK suppliers, matched to your variant and location.",
+            "bullets": [
+              "Vetted UK Suppliers — specialists who understand Seat diesel and petrol engines",
+              "Same-Day Quotes — usually within hours, not days",
+              "Supply & Fit Service — or supply-only to your own garage",
+              "Full Breakdown — price, warranty length, delivery estimate and fitting cost all shown clearly",
+              "No hidden fees. No sales calls unless you approve."
+            ]
+          }
+        },
+        {
+          "number": 3,
+          "icon": "shield",
+          "front": {
+            "h3": "Choose the Best Deal & Save",
+            "text": "Compare supplier reviews, warranty and price — then pick the right one for you."
+          },
+          "back": {
+            "heading": "Your Choice, Your Control",
+            "text": "You decide which specialist to go with. We simply make the search fast, safe and transparent.",
+            "bullets": [
+              "Online Reviews — read real customer feedback",
+              "Warranty Length — minimum 12 months, often 24 months on rebuilt units",
+              "Terms of Service — including collection, fitting and aftercare",
+              "Technical Expertise — see each supplier's Seat experience",
+              "You deal directly with your chosen provider. No pressure, no commitment until you're ready.",
+              "Tagline (below cards):",
+              "Get Instant Quotes from Seat Engine Specialists Across the UK — 100% free, no obligation. Most replacements completed within 3–5 days.",
+              "Developer Note for Flip-Card Implementation:",
+              "Structure each step as a responsive CSS/JS flip-card component. Front face displays icon + H3 + one-liner. Back face reveals detailed bullet points on hover (desktop) or tap (mobile).",
+              "Maintain consistent `min-height` (e.g., 260px) across all three cards for grid alignment.",
+              "On mobile (<768px), default to stacked cards or accordion-style reveal to prevent cramped UX.",
+              "Add `aria-expanded` and `role=\"button\"` attributes to front cards for WCAG 2.2 compliance.",
+              "Lazy-load flip details if used on high-traffic brand pages to preserve Core Web Vitals (CLS, FCP, LCP).",
+              "Icons can be implemented as inline SVGs or icon font (developer preference).",
+              "| Keyword | Integration |",
+              "| --- | --- |",
+              "| how to get seat engine quotes online | H2 (process framing) |",
+              "| step by step seat engine quote process | Card 3 Flip (choice/control workflow) |",
+              "| compare 4 verified seat suppliers | Card 2 Flip (supplier matching) |",
+              "| request instant seat pricing | Card 2 Front (one-liner) |",
+              "| check seat engine warranty options | Card 3 Flip (warranty length bullet) |",
+              "| 12 month seat engine guarantee | Card 3 Flip (warranty length bullet) |",
+              "| parts and labour seat warranty | Card 3 Flip (warranty/terms bullets) |",
+              "| extended seat replacement cover | Card 3 Flip (warranty/aftercare context) |",
+              "| seat engine delivery turnaround | Tagline (turnaround timeframe) |",
+              "| seat engine delivery uk | Card 2 Flip (delivery estimate bullet) |",
+              "| express seat powertrain dispatch | Tagline / Card 2 Flip (speed emphasis) |",
+              "| tracked shipping nationwide | Card 2 Flip (logistics transparency) |",
+              "| book seat engine supply and fit | Card 2 Flip (supply & fit bullet) |",
+              "| schedule seat engine installation | Card 2 Flip (fitting cost/service) |",
+              "| approved garage booking system | Card 2 Flip (supply-only to own garage) |",
+              "| mobile mechanic fitter seat | Card 2 Flip (supply & fit service bullet) |",
+              "| DVLA engine check Seat | Card 1 Front & Flip (registration verification) |",
+              "| Seat registration engine check | Card 1 Front (DVLA data pull) |",
+              "| Seat engine specialists near me | Card 2 Front & Tagline (UK specialists / location routing) |",
+              "| Seat engine replacement turnaround | Tagline (3–5 days completion) |",
+              "| Seat engine quote online | Card 2 Front & Tagline (instant quotes) |"
+            ]
+          }
+        }
+      ],
+      "tagline": "Get Instant Quotes from Seat Engine Specialists Across the UK — 100% free, no obligation. Most replacements completed within 3–5 days."
+    },
+    "liveMarketPrices": {
+      "tag": "Live Market Prices",
+      "h2": "Recent Seat Engine Quotes & Price Guide",
+      "h3": "Based on real enquiries from UK buyers – updated regularly. All prices are typical UK rebuilt engine market ranges and reflect recent quotes from our network of Seat engine specialists.",
+      "introBullets": [
+        {
+          "label": "Real-Time Data",
+          "text": "Below are the 20 most recently requested Seat engine replacement enquiries from UK owners, showing typical market price ranges for Seat engine replacement cost."
+        },
+        {
+          "label": "Transparent Pricing",
+          "text": "Each entry displays the model, engine code, average quoted price, and common failure reason driving replacement — genuine search patterns, not stock listings."
+        },
+        {
+          "label": "Cost Insights",
+          "text": "Use this guide to compare Seat engine prices UK buyers are paying, then enter your registration above for a tailored quote."
+        },
+        {
+          "label": "Get Your Quote",
+          "text": "Use the guide as a benchmark, then enter your registration for a tailored Seat engine quote."
+        }
+      ],
+      "cta": {
+        "heading": "Use the feed as your benchmark",
+        "text": "Use these recent buyer enquiries to benchmark your own Seat engine price before you compare specialist quotes.",
+        "buttonText": "Compare My Seat Engine",
+        "note": "Feed timestamps refresh automatically from the latest quote data."
+      },
+      "badges": [
+        "20 recent enquiries visible",
+        "Typical UK rebuilt ranges",
+        "Engine-code matched rows",
+        "Updated regularly"
+      ],
+      "feed": {
+        "isDynamic": true,
+        "rowsCount": 0,
+        "columns": [
+          "Year",
+          "Model",
+          "Engine Code",
+          "Fuel",
+          "Avg. Quoted Price",
+          "Reported Issue"
+        ],
+        "timestampLabel": "Last Updated",
+        "refreshLabel": "Refresh feed",
+        "density": "premium",
+        "visibleRows": 20,
+        "entries": []
+      }
+    },
+    "reviews": {
+      "tag": "Customer Reviews",
+      "h2": "Trusted by Seat Owners Across the UK",
+      "rating": {
+        "value": 4.8,
+        "count": 1000,
+        "summary": "Rated 4.8 out of 5 by verified customers who sourced reconditioned and used Seat engines through EngineMarket.",
+        "basedOn": "Based on real post-sale feedback from buyers matched with our network of UK engine specialists."
+      },
+      "reviews": [
+        {
+          "text": "Thanks to EngineMarket, I saved over £1,000 on my Seat engine and found a solid local specialist quickly.",
+          "name": "Jimmy",
+          "location": "London"
+        },
+        {
+          "text": "Got multiple quotes for my Seat within hours and the whole process felt straightforward.",
+          "name": "Pete",
+          "location": "Leeds"
+        },
+        {
+          "text": "I wasn't sure which Seat engine I needed, but the quote process helped me narrow it down fast.",
+          "name": "Sophie",
+          "location": "Birmingham"
+        },
+        {
+          "text": "Fast turnaround, clear pricing, and the warranty gave me real peace of mind for my Seat.",
+          "name": "Ahmed",
+          "location": "Bradford"
+        },
+        {
+          "text": "One of the easiest car-related experiences I've had. Honest, quick, and much cheaper than expected.",
+          "name": "Liam",
+          "location": "Manchester"
+        },
+        {
+          "text": "EngineMarket made a stressful Seat engine failure much easier to deal with from start to finish.",
+          "name": "Tom",
+          "location": "Glasgow"
+        }
+      ],
+      "leaveReviewCta": {
+        "text": "Had a great experience?",
+        "linkText": "Leave a review ->"
+      }
+    },
+    "models": {
+      "tag": "Models We Cover",
+      "h2": "Popular Seat Engine Replacement Models",
+      "subheading": "From the compact Ibiza to the spacious Alhambra, our network of UK Seat engine specialists covers every model in the range. Select your Seat below to compare rebuilt engine prices and get quotes from trusted suppliers.",
+      "cards": [
+        {
+          "h3": "Seat Alhambra Engines",
+          "slug": "alhambra",
+          "subtitle": "Available for 2.0 TDI 140, 2.0 TDI 170, 2.0 TSI & 1.4 TSI variants",
+          "priceRange": "Starting from £1,800 – £3,500",
+          "cta": "Compare Seat Alhambra Engine Prices",
+          "image": "/images/brands/seat/models/seat-alhambra-model-card.webp"
+        },
+        {
+          "h3": "Seat Altea Engines",
+          "slug": "altea",
+          "subtitle": "Available for 1.6 TDI, 2.0 TDI, 1.4 TSI & 1.8 TFSI variants",
+          "priceRange": "Starting from £1,400 – £2,800",
+          "cta": "Compare Seat Altea Engine Prices",
+          "image": "/images/brands/seat/models/seat-altea-model-card.webp"
+        },
+        {
+          "h3": "Seat Arona Engines",
+          "slug": "arona",
+          "subtitle": "Available for 1.0 TSI, 1.5 TSI, 1.6 MPI & 1.0 TGI variants",
+          "priceRange": "Starting from £1,500 – £3,200",
+          "cta": "Compare Seat Arona Engine Prices",
+          "image": "/images/brands/seat/models/seat-arona-model-card.webp"
+        },
+        {
+          "h3": "Seat Ateca Engines",
+          "slug": "ateca",
+          "subtitle": "Available for 1.0 TSI, 1.5 TSI, 2.0 TDI 150 & 2.0 TDI 190 variants",
+          "priceRange": "Starting from £1,800 – £4,200",
+          "cta": "Compare Seat Ateca Engine Prices",
+          "image": "/images/brands/seat/models/seat-ateca-model-card.webp"
+        },
+        {
+          "h3": "Seat Cordoba Engines",
+          "slug": "cordoba",
+          "subtitle": "Available for 1.4 MPI, 1.9 TDI, 1.4 TDI & 1.6 variants",
+          "priceRange": "Starting from £1,200 – £2,400",
+          "cta": "Compare Seat Cordoba Engine Prices",
+          "image": "/images/brands/seat/models/seat-cordoba-model-card.webp"
+        },
+        {
+          "h3": "Seat Exeo Engines",
+          "slug": "exeo",
+          "subtitle": "Available for 1.8 TFSI, 2.0 TDI 140, 2.0 TDI 170 & 2.0 TFSI variants",
+          "priceRange": "Starting from £1,600 – £3,800",
+          "cta": "Compare Seat Exeo Engine Prices",
+          "image": "/images/brands/seat/models/seat-exeo-model-card.webp"
+        },
+        {
+          "h3": "Seat Ibiza Engines",
+          "slug": "ibiza",
+          "subtitle": "Available for 1.0 TSI, 1.2 TSI, 1.4 TDI, 1.6 TDI & 1.4 MPI variants",
+          "priceRange": "Starting from £1,200 – £2,800",
+          "cta": "Compare Seat Ibiza Engine Prices",
+          "image": "/images/brands/seat/models/seat-ibiza-model-card.webp"
+        },
+        {
+          "h3": "Seat Inca Engines",
+          "slug": "inca",
+          "subtitle": "Available for 1.4 MPI, 1.9 TDI, 1.6 & 1.4 TDI variants",
+          "priceRange": "Starting from £1,200 – £2,600",
+          "cta": "Compare Seat Inca Engine Prices",
+          "image": "/images/brands/seat/models/seat-inca-model-card.webp"
+        },
+        {
+          "h3": "Seat Leon Engines",
+          "slug": "leon",
+          "subtitle": "Available for 1.0 TSI, 1.2 TSI, 1.4 TSI, 1.5 TSI, 1.6 TDI, 2.0 TDI & 2.0 TFSI variants",
+          "priceRange": "Starting from £1,400 – £4,500",
+          "cta": "Compare Seat Leon Engine Prices",
+          "image": "/images/brands/seat/models/seat-leon-model-card.webp"
+        },
+        {
+          "h3": "Seat Mii Engines",
+          "slug": "mii",
+          "subtitle": "Available for 1.0 MPI 60, 1.0 MPI 75 & eco-up electric variants",
+          "priceRange": "Starting from £1,200 – £2,200",
+          "cta": "Compare Seat Mii Engine Prices",
+          "image": "/images/brands/seat/models/seat-mii-model-card.webp"
+        },
+        {
+          "h3": "Seat Toledo Engines",
+          "slug": "toledo",
+          "subtitle": "Available for 1.2 TSI, 1.4 TSI, 1.6 TDI & 1.0 TSI variants",
+          "priceRange": "Starting from £1,300 – £2,900",
+          "cta": "Compare Seat Toledo Engine Prices",
+          "image": "/images/brands/seat/models/seat-toledo-model-card.webp"
+        }
+      ]
+    },
+    "engineCodes": {
+      "tag": "Replacement Cost",
+      "h2": "Seat Engine Codes & Average Rebuilt Prices (UK Supply)",
+      "h3": "Compare costs for every major Seat engine — EA211 petrol TSI, EA288 diesel TDI, and EA888 turbo families. All prices are typical UK market ranges for professionally rebuilt engines with warranty. Click \"Get Quote\" on any engine to receive tailored prices from our network of UK Seat specialists.",
+      "filters": [
+        "All",
+        "Diesel",
+        "Petrol",
+        "EA211",
+        "EA288",
+        "EA888",
+        "Legacy"
+      ],
+      "groups": [
+        {
+          "name": "EA211 Petrol Family (2012‑Present) — 1.0‑1.5L TSI/MPI",
+          "era": "All years",
+          "failureNote": "[Get Quote →] [Get Quote →] [Get Quote →] [Get Quote →] [Get Quote →] [Get Quote →] [Get Quote →] [Get Quote →] [Get Quote →] Common failure points (expandable note): EA211 TSI engines are known for timing chain tensioner wear and direct injection carbon buildup on intake valves. Our rebuilt units include upgraded tensioners, decarbonised ports, and refreshed PCV systems to prevent repeat failures.",
+          "engines": [
+            {
+              "code": "CHZB",
+              "fuel": "Petrol",
+              "size": "1.0L",
+              "power": "95‑115 HP",
+              "compatibleModels": "Ibiza (6J/6F), Arona (KJ), Leon (5F)",
+              "avgRebuiltPrice": "£1,200 – £2,800",
+              "cta": "Get Quote for CHZB"
+            },
+            {
+              "code": "DTSB",
+              "fuel": "Petrol",
+              "size": "1.0L",
+              "power": "95‑115 HP",
+              "compatibleModels": "Ibiza (6F), Leon (5F/KL), Ateca (KH)",
+              "avgRebuiltPrice": "£1,300 – £2,900",
+              "cta": "Get Quote for DTSB"
+            },
+            {
+              "code": "CBZA",
+              "fuel": "Petrol",
+              "size": "1.2L",
+              "power": "86 HP",
+              "compatibleModels": "Ibiza (6J), Leon (5F), Altea (5P)",
+              "avgRebuiltPrice": "£1,400 – £3,000",
+              "cta": "Get Quote for CBZA"
+            },
+            {
+              "code": "CBZB",
+              "fuel": "Petrol",
+              "size": "1.2L",
+              "power": "105 HP",
+              "compatibleModels": "Ibiza (6J), Leon (5F), Altea (5P)",
+              "avgRebuiltPrice": "£1,500 – £3,200",
+              "cta": "Get Quote for CBZB"
+            },
+            {
+              "code": "CHYB",
+              "fuel": "Petrol",
+              "size": "1.2L",
+              "power": "110 HP",
+              "compatibleModels": "Ibiza (6F), Leon (5F), Ateca (KH)",
+              "avgRebuiltPrice": "£1,500 – £3,300",
+              "cta": "Get Quote for CHYB"
+            },
+            {
+              "code": "CAXA",
+              "fuel": "Petrol",
+              "size": "1.4L",
+              "power": "122‑140 HP",
+              "compatibleModels": "Leon (5F), Altea (5P), Exeo (3R)",
+              "avgRebuiltPrice": "£1,600 – £3,800",
+              "cta": "Get Quote for CAXA"
+            },
+            {
+              "code": "CPTA",
+              "fuel": "Petrol",
+              "size": "1.4L",
+              "power": "140‑150 HP",
+              "compatibleModels": "Leon (5F), Ateca (KH)",
+              "avgRebuiltPrice": "£1,700 – £4,000",
+              "cta": "Get Quote for CPTA"
+            },
+            {
+              "code": "CTHB/DJSA",
+              "fuel": "Petrol",
+              "size": "1.5L",
+              "power": "150 HP Evo",
+              "compatibleModels": "Leon (5F/KL), Ateca (KH), Arona (KJ)",
+              "avgRebuiltPrice": "£1,800 – £4,200",
+              "cta": "Get Quote for CTHB/DJSA"
+            },
+            {
+              "code": "CRMB",
+              "fuel": "Petrol",
+              "size": "1.6L",
+              "power": "110 HP MPI",
+              "compatibleModels": "Ibiza (6J), Cordoba (6L), Toledo (NH)",
+              "avgRebuiltPrice": "£1,200 – £2,600",
+              "cta": "Get Quote for CRMB"
+            }
+          ]
+        },
+        {
+          "name": "EA288 Diesel Family (2012‑Present) — 1.4‑2.0L TDI",
+          "era": "All years",
+          "failureNote": "[Get Quote →] [Get Quote →] [Get Quote →] [Get Quote →] [Get Quote →] [Get Quote →] [Get Quote →] Common failure points (expandable note): EA288 TDI engines commonly suffer DPF regeneration failure and EGR cooler blockages leading to MOT failures. Our rebuilt units include cleaned/replaced DPF cores, updated EGR valves, and AdBlue system checks for compliance-ready replacements.",
+          "engines": [
+            {
+              "code": "BNM/CAYC",
+              "fuel": "Diesel",
+              "size": "1.4L",
+              "power": "75‑90 HP",
+              "compatibleModels": "Ibiza (6J/6F), Arona (KJ)",
+              "avgRebuiltPrice": "£1,400 – £3,000",
+              "cta": "Get Quote for BNM/CAYC"
+            },
+            {
+              "code": "CLCA",
+              "fuel": "Diesel",
+              "size": "1.6L",
+              "power": "90‑105 HP",
+              "compatibleModels": "Leon (5F), Altea (5P), Alhambra (7N)",
+              "avgRebuiltPrice": "£1,600 – £3,500",
+              "cta": "Get Quote for CLCA"
+            },
+            {
+              "code": "DBKA",
+              "fuel": "Diesel",
+              "size": "1.6L",
+              "power": "110‑115 HP",
+              "compatibleModels": "Leon (5F/KL), Ateca (KH), Alhambra (7N)",
+              "avgRebuiltPrice": "£1,700 – £3,700",
+              "cta": "Get Quote for DBKA"
+            },
+            {
+              "code": "CRVA",
+              "fuel": "Diesel",
+              "size": "1.6L",
+              "power": "115 HP",
+              "compatibleModels": "Arona (KJ), Ateca (KH)",
+              "avgRebuiltPrice": "£1,700 – £3,800",
+              "cta": "Get Quote for CRVA"
+            },
+            {
+              "code": "CFHA",
+              "fuel": "Diesel",
+              "size": "2.0L",
+              "power": "140‑170 HP",
+              "compatibleModels": "Alhambra (7N), Exeo (3R), Leon (5F)",
+              "avgRebuiltPrice": "£1,900 – £4,500",
+              "cta": "Get Quote for CFHA"
+            },
+            {
+              "code": "CFFB",
+              "fuel": "Diesel",
+              "size": "2.0L",
+              "power": "184 HP",
+              "compatibleModels": "Exeo (3R), Leon FR (5F)",
+              "avgRebuiltPrice": "£2,000 – £4,800",
+              "cta": "Get Quote for CFFB"
+            },
+            {
+              "code": "CWZA",
+              "fuel": "Diesel",
+              "size": "2.0L",
+              "power": "150‑190 HP",
+              "compatibleModels": "Tarraco (KN), Ateca (KH), Leon (KL)",
+              "avgRebuiltPrice": "£2,100 – £5,000",
+              "cta": "Get Quote for CWZA"
+            }
+          ]
+        },
+        {
+          "name": "EA888 Turbo Petrol Family (2008‑Present) — 1.8‑2.0L TFSI",
+          "era": "All years",
+          "failureNote": "[Get Quote →] [Get Quote →] [Get Quote →] [Get Quote →] Common failure points (expandable note): EA888 TFSI engines are prone to timing chain tensioner failure and oil pump drive wear causing catastrophic lubrication loss. Our rebuilt units include Gen‑3 tensioners, upgraded oil pumps, and refreshed turbochargers for long‑term reliability.",
+          "engines": [
+            {
+              "code": "CNGA",
+              "fuel": "Petrol",
+              "size": "1.8L",
+              "power": "160 HP",
+              "compatibleModels": "Exeo (3R), Leon (5F)",
+              "avgRebuiltPrice": "£1,800 – £4,200",
+              "cta": "Get Quote for CNGA"
+            },
+            {
+              "code": "CJZA",
+              "fuel": "Petrol",
+              "size": "2.0L",
+              "power": "200‑220 HP",
+              "compatibleModels": "Leon Cupra (5F), Exeo (3R)",
+              "avgRebuiltPrice": "£2,200 – £5,500",
+              "cta": "Get Quote for CJZA"
+            },
+            {
+              "code": "DNUB",
+              "fuel": "Petrol",
+              "size": "2.0L",
+              "power": "190‑245 HP",
+              "compatibleModels": "Leon (5F/KL), Ateca (KH), Tarraco (KN)",
+              "avgRebuiltPrice": "£2,300 – £5,800",
+              "cta": "Get Quote for DNUB"
+            },
+            {
+              "code": "CWVA/CWVB",
+              "fuel": "Petrol",
+              "size": "2.0L",
+              "power": "190‑245 HP",
+              "compatibleModels": "Leon (KL), Ateca (KH)",
+              "avgRebuiltPrice": "£2,400 – £6,000",
+              "cta": "Get Quote for CWVA/CWVB"
+            }
+          ]
+        },
+        {
+          "name": "Legacy TDI Engines (Pre‑2012) — 1.9‑2.0L Pump‑Duse/Common Rail",
+          "era": "All years",
+          "failureNote": "[Get Quote →] [Get Quote →] [Get Quote →] [Get Quote →] [Get Quote →] Common failure points (expandable note): Legacy TDI engines often experience injector pump wear and early DPF clogging on high‑mileage units. Our rebuilt units include refurbished injection systems, cleaned turbochargers, and MOT‑ready emissions components. Closing note: Not sure which engine code your Seat uses? Enter your registration number and we'll match you to the exact engine and best quote — instantly. All engines supplied with a minimum 12‑month warranty from UK Seat specialists. Brand tone choice: Volume/price‑sensitive positioning with affordability‑focused language (\"save vs dealership\", \"best price rebuilt\") aligned with Seat buyer priorities from KRF, emphasising VW Group cross‑compatibility and fast supply‑and‑fit logistics.",
+          "engines": [
+            {
+              "code": "BXE/BXJ",
+              "fuel": "Diesel",
+              "size": "1.9L",
+              "power": "105 HP",
+              "compatibleModels": "Ibiza (6L), Cordoba (6L), Altea (5P)",
+              "avgRebuiltPrice": "£1,300 – £2,800",
+              "cta": "Get Quote for BXE/BXJ"
+            },
+            {
+              "code": "BJB/BKC",
+              "fuel": "Diesel",
+              "size": "1.9L",
+              "power": "105‑110 HP",
+              "compatibleModels": "Toledo (1M/5P), Altea (5P)",
+              "avgRebuiltPrice": "£1,400 – £3,000",
+              "cta": "Get Quote for BJB/BKC"
+            },
+            {
+              "code": "AZV/BKD",
+              "fuel": "Diesel",
+              "size": "2.0L",
+              "power": "140 HP",
+              "compatibleModels": "Altea (5P), Toledo (5P), Exeo (3R)",
+              "avgRebuiltPrice": "£1,700 – £4,000",
+              "cta": "Get Quote for AZV/BKD"
+            },
+            {
+              "code": "CAYC (early)",
+              "fuel": "Diesel",
+              "size": "1.4L",
+              "power": "75‑90 HP",
+              "compatibleModels": "Ibiza (6J), Altea (5P)",
+              "avgRebuiltPrice": "£1,400 – £3,100",
+              "cta": "Get Quote for CAYC (early)"
+            },
+            {
+              "code": "CBDB",
+              "fuel": "Diesel",
+              "size": "2.0L",
+              "power": "140 HP",
+              "compatibleModels": "Leon (5F), Alhambra (7N)",
+              "avgRebuiltPrice": "£1,800 – £4,300",
+              "cta": "Get Quote for CBDB"
+            }
+          ]
+        }
+      ]
+    },
+    "commonProblems": {
+      "tag": "Common Problems",
+      "h2": "Common Seat Engine Problems — What It Costs to Fix & When Replacement Makes Sense",
+      "h3": "",
+      "problems": [
+        {
+          "group": "Timing Chain Failure",
+          "h4": "Timing Chain Failure – Why Seat EA211 Engines Fail Prematurely",
+          "image": "/images/brands/seat/engines/seat-timing-chain-failure-card.webp",
+          "affectedModels": "Seat Ibiza, Leon, Toledo, Arona (2010–2018, engine codes CBZA, CBZB, CHZB, CAXA, CPTA)",
+          "typicalFailureMileage": "50,000–90,000 miles",
+          "rootCause": "Early EA211 timing chain tensioners lacked sufficient hydraulic damping, allowing chain stretch under load. Combined with extended oil-change intervals, this accelerates wear on guides and sprockets, leading to rattling, misfires, or catastrophic interference failure.",
+          "recommendation": "On a Seat Ibiza or Leon worth £3,000–£6,000, preventative chain replacement at 60,000 miles offers strong ROI if the engine is otherwise healthy. However, once rattling, misfires, or loss of compression appear, the risk of bent valves makes full replacement the safer, more cost-effective route. We recommend comparing rebuilt EA211 engine quotes before authorising major repairs.",
+          "cta": "→ Compare rebuilt CBZA/CBZB engine prices for your Seat model"
+        },
+        {
+          "group": "High Oil Consumption",
+          "h4": "High Oil Consumption – The 1.2 TSI Piston Ring Weakness",
+          "image": "/images/brands/seat/engines/seat-high-oil-consumption-card.webp",
+          "affectedModels": "Seat Ibiza, Leon, Toledo, Mii (2010–2017, engine codes CBZA, CBZB, CHZB, CJZA)",
+          "typicalFailureMileage": "60,000–100,000 miles",
+          "rootCause": "Early EA211 1.2 TSI pistons used ring designs prone to carbon coking and loss of tension, allowing oil to bypass into the combustion chamber. This is exacerbated by short-trip driving and extended service intervals.",
+          "recommendation": "If your 1.2 TSI is consuming over 1 litre of oil per 1,000 miles and has exceeded 70,000 miles, piston ring replacement rarely offers lasting value. We recommend comparing rebuilt engine quotes — the price difference versus a major ring job is often marginal, but the warranty and reliability uplift is significant.",
+          "cta": "→ Get quotes for rebuilt 1.2 TSI engines with upgraded piston rings"
+        },
+        {
+          "group": "TDI DPF & EGR Failure",
+          "h4": "TDI DPF & EGR Failure – Emissions System Blockages Driving Replacement",
+          "image": "/images/brands/seat/engines/seat-tdi-dpf-and-egr-failure-card.webp",
+          "affectedModels": "Seat Leon, Ateca, Alhambra, Toledo (2010–2020, engine codes CAYC, CLCA, DBKA, CRVA, CRMB)",
+          "typicalFailureMileage": "70,000–120,000 miles",
+          "rootCause": "Short-trip urban driving prevents DPF regeneration cycles from completing, causing soot accumulation. Simultaneously, EGR valves carbon up from recirculated exhaust gases, restricting flow and triggering fault codes. Combined, these failures increase backpressure, reduce performance, and risk MOT failure.",
+          "recommendation": "For Seat TDI owners doing mostly short journeys, component-level repairs often recur within 12–18 months. If your Leon or Ateca has exceeded 90,000 miles and shows multiple emissions faults, a rebuilt DPF-ready engine offers better lifetime value and peace of mind. Always confirm the replacement unit includes updated EGR hardware.",
+          "cta": "→ Compare DPF-ready rebuilt 1.6/2.0 TDI engine prices for your Seat"
+        },
+        {
+          "group": "Carbon Buildup on Intake Valves",
+          "h4": "TSI Carbon Buildup on Intake Valves – Direct Injection Performance Loss",
+          "image": "/images/brands/seat/engines/seat-carbon-buildup-on-intake-valves-card.webp",
+          "affectedModels": "Seat Leon, Ateca, Exeo, Alhambra (2012–2020, engine codes CPTA, CZDA, CXSA, CJZA)",
+          "typicalFailureMileage": "50,000–85,000 miles",
+          "rootCause": "Direct injection petrol engines spray fuel directly into the cylinder, bypassing the intake valves. Without fuel washing over the valves, carbon deposits accumulate from crankcase vapours and EGR flow, restricting airflow and causing misfires, rough idle, and power loss.",
+          "recommendation": "Carbon buildup is a maintenance issue, not a terminal failure. For most Seat TSI owners, periodic walnut blasting (£350–£600) at 50,000-mile intervals is far more cost-effective than engine replacement. Only consider a rebuilt engine if carbon has caused physical valve damage or if the engine has additional high-mileage wear factors.",
+          "cta": "→ Get quotes for walnut blast carbon cleaning or rebuilt TSI engines"
+        },
+        {
+          "group": "Turbocharger Failure",
+          "h4": "Turbocharger Failure – Boost Loss and Oil Leaks on Seat Petrol & Diesel",
+          "image": "/images/brands/seat/engines/seat-turbocharger-failure-card.webp",
+          "affectedModels": "Seat Ibiza, Leon, Ateca, Arona (2010–2023, engine codes CHZB, CZPB, CAYC, CLCA, CXSA)",
+          "typicalFailureMileage": "60,000–110,000 miles",
+          "rootCause": "Turbochargers rely on consistent oil pressure and temperature control. Extended oil-change intervals, contaminated oil, or clogged oil feed lines cause bearing wear, shaft play, and seal failure. On TDI engines, EGR soot accelerates turbo vane sticking.",
+          "recommendation": "If your Seat turbo has failed but the engine shows good compression and no oil contamination in the intercooler, a quality turbo replacement offers excellent value. However, if oil has entered the intake system or the engine has exceeded 90,000 miles, comparing rebuilt engine quotes is prudent — the marginal cost difference buys comprehensive warranty coverage and upgraded internal components.",
+          "cta": "→ Compare rebuilt turbo-ready Seat engine prices for your model"
+        }
+      ],
+      "finalCta": {
+        "h4": "Don't Let Engine Failure Write Off Your Seat",
+        "paragraph": "Every problem group above shares a common thread: once critical damage occurs, repair costs escalate rapidly while reliability remains uncertain. EngineMarket makes it simple to bypass this uncertainty. Compare prices from trusted UK Seat specialists in seconds, with every rebuilt engine featuring upgraded components that address the original failure point, bench-tested performance validation, and a minimum 12‑month unlimited mileage warranty. Nationwide delivery and certified supply-and-fit options mean you're back on the road faster — without paying main dealer premiums. → All prices are indicative UK market ranges based on historical quote data and repair requests from our network of engine specialists. Dealer pricing is estimated based on published main dealer labour rates and genuine OEM parts pricing. Specialist pricing reflects actual quote data from EngineMarket's UK network. Actual costs vary depending on damage severity, vehicle condition, variant, and workshop location within the UK. Use our free comparison tool to get tailored quotes for your specific Seat model and engine code. Every engine supplied through EngineMarket carries a minimum 12‑month unlimited mileage warranty — always confirm exact terms with your chosen supplier. Keyword Coverage Table | Keyword | Integration | |---|---| | seat timing chain tensioner failure | H4 heading + root cause + tier table | | seat 1.2 tsi high oil consumption | H4 heading + affected models + recommendation | | seat tdi dpf regeneration failure | H4 heading + root cause + tier table + CTA | | seat tsi carbon buildup intake valves | H4 heading + repair tiers + recommendation | | seat turbocharger failure replacement | H4 heading + affected models + pricing tiers | | cbza engine replacement cost | CTA + affected models line | | cbzb engine replacement cost | CTA + affected models line | | chzb engine replacement cost | CTA + affected models line | | caxa engine replacement cost | Affected models line | | cpta engine replacement cost | Affected models line | | clca engine replacement cost | Affected models + DPF section | | dbka engine replacement cost | Affected models + DPF section | | crva engine replacement cost | Affected models + DPF section | | crmb engine replacement cost | Affected models + DPF section | | seat engine replacement uk | H2 + final CTA + disclaimer | | seat engine supply and fit | Final conversion paragraph + CTA button | | seat leon engine replacement | Affected models lines across multiple groups | | seat ibiza engine replacement | Affected models lines across multiple groups | | seat ateca engine replacement | Affected models lines in DPF/turbo sections | | reconditioned seat engines uk | Tier table \"Full Replacement\" rows + final paragraph | | used seat engines for sale | Implicit in marketplace value proposition | | live seat engine price updates | Final CTA + disclaimer reference to quote tool | | how much is a seat engine replacement uk | FAQ-style framing in intro + pricing tables | | what warranty comes with a reconditioned seat engine | Intro paragraph + tier table longevity column + disclaimer | | enter your registration for exact seat match | Final CTA button phrasing | | compare seat engine prices uk | Hero intent reflected in all CTAs + final button |",
+        "buttonText": "Compare Seat Engine Replacement Prices Now",
+        "disclaimer": ""
+      }
+    },
+    "engineTypes": {
+      "tag": "Replacement Engine Options",
+      "h2": "Seat Engine Types – Options, Costs & What to Expect",
+      "intro": "Compare all Seat engine types via our UK network, with indicative price ranges matched to your model, mileage and daily driving needs.",
+      "types": [
+        {
+          "title": "Seat Reconditioned Engines (Recon)",
+          "description": "A stripped, cleaned and fully inspected Seat engine where all worn components are replaced with OEM‑spec parts. Best for owners who want factory reliability without the main dealer price.",
+          "priceRange": "Typical price range: £1,400 – £3,500 (depending on engine code)",
+          "cta": "Compare reconditioned Seat engine prices"
+        },
+        {
+          "title": "Seat Rebuilt Engines",
+          "description": "A complete Seat engine rebuild with upgraded components addressing known failure points – such as reinforced timing chain kits and uprated piston rings to resolve 1.2/1.4 TSI oil burn – for a longer service life than a standard Seat engine swap.",
+          "priceRange": "Typical price range: £1,600 – £4,200",
+          "cta": "Get rebuilt Seat engine quotes"
+        },
+        {
+          "title": "Used Seat Engines",
+          "description": "A tested, low‑mileage Seat engine removed from a verified donor vehicle. The most affordable Seat engine option when budget is the priority, with documented history and warranty coverage available.",
+          "priceRange": "Typical price range: £600 – £2,000",
+          "cta": "Check used Seat engine availability"
+        },
+        {
+          "title": "Seat Remanufactured Engines",
+          "description": "A factory‑spec Seat engine rebuilt to as‑new condition: every surface is machined, every component is replaced, and the unit meets exact OEM tolerances. The premium choice for performance variants or long‑term retention.",
+          "priceRange": "Typical price range: £2,200 – £5,500",
+          "cta": "Compare remanufactured Seat engine costs"
+        },
+        {
+          "title": "Seat Refurbished Engines",
+          "description": "A lightly serviced, cleaned, and tested Seat engine that delivers reliable performance without undergoing a full rebuild. Often a pragmatic, fast Seat engine solution for older or budget‑sensitive models where a complete recon isn’t economical.",
+          "priceRange": "Typical price range: £900 – £2,400",
+          "cta": "View refurbished Seat engine options"
+        },
+        {
+          "title": "Seat Supply & Fit Engines",
+          "description": "Your replacement Seat engine delivered and professionally installed by a UK specialist. Includes removal of the old unit, fitting, fluids, diagnostics and a separate workmanship warranty.",
+          "priceRange": "Typical added cost: £400 – £900 on top of engine price",
+          "cta": "Find Seat engine supply & fit deals"
+        }
+      ],
+      "closing": "All engine types include a minimum 12‑month warranty. Prices are typical UK market ranges and depend on exact engine code, supplier, and any additional fitting services. Use our free comparison tool to get a tailored quote for your Seat model today."
+    },
+    "engineSizes": {
+      "tag": "Engine Sizes",
+      "h2": "Seat Engines by Size – Find the Right Displacement for Your Model",
+      "intro": "",
+      "groups": [
+        {
+          "title": "Seat Diesel Engine Sizes",
+          "items": [
+            {
+              "title": "Seat 1.4L Diesel Engines",
+              "description": "The 1.4L TDI diesel was fitted to earlier-generation Seat hatchbacks and MPVs, offering strong low-end torque for urban driving while meeting Euro 5 emissions standards. Across the brand, these EA288-family units are most commonly replaced due to DPF clogging from short-trip use and EGR valve carbon buildup that triggers fault codes and MOT failure risk. Engine code(s): BNM Compatible models (UK): Ibiza, Toledo (2009–2015) Production years: 2009–2015 Common failure points: DPF regeneration failure on urban cycles; EGR valve sticking from soot accumulation",
+              "cta": "Get quotes for Seat 1.4L diesel engines"
+            },
+            {
+              "title": "Seat 1.6L Diesel Engines",
+              "description": "Seat's 1.6L TDI is the brand's highest-volume diesel displacement, powering Leon, Ibiza, Arona and Ateca models from 2010 onward. Built on the EA288 platform, these engines deliver strong economy but frequently require replacement due to combined DPF/EGR system failures, EGR cooler leaks, and early-model timing chain wear on high-mileage examples. Engine code(s): CLCA, DBKA, CRVA Compatible models (UK): Leon, Ibiza, Toledo, Arona, Ateca (2010–present) Production years: 2010–present Common failure points: DPF back-pressure faults; EGR cooler leakage; timing chain stretch on pre-2015 EA288 units",
+              "cta": "Get quotes for Seat 1.6L diesel engines"
+            },
+            {
+              "title": "Seat 2.0L Diesel Engines",
+              "description": "The 2.0L TDI represents Seat's premium diesel offering, fitted to Alhambra, Exeo, Leon, Ateca and Tarraco models. These common-rail EA288 engines are robust but see replacement demand driven by high-pressure fuel pump wear, turbo actuator faults, and compounded DPF/EGR failures that make repair uneconomical beyond 100,000 miles. Engine code(s): CFHA, CFFB, CNGA, CWZA Compatible models (UK): Alhambra, Exeo, Leon, Ateca, Tarraco (2009–present) Production years: 2009–present Common failure points: High-pressure fuel pump wear; turbo actuator failure; combined DPF/EGR blockages driving replacement",
+              "cta": "Get quotes for Seat 2.0L diesel engines"
+            }
+          ]
+        },
+        {
+          "title": "Seat Petrol Engine Sizes",
+          "items": [
+            {
+              "title": "Seat 1.0L Petrol Engines",
+              "description": "Seat's downsized 1.0L TSI three-cylinder turbo petrol powers the Ibiza, Arona and Leon, delivering strong efficiency for urban commuters. These EA211 Evo units are generally reliable but see replacement demand from turbocharger oil-feed coking on neglected services and direct-injection carbon buildup affecting intake valves at higher mileages. Engine code(s): CHZB, DTSB Compatible models (UK): Ibiza, Arona, Leon (2015–present) Production years: 2015–present Common failure points: Turbo oil-feed coking from extended service intervals; intake valve carbon buildup (direct injection)",
+              "cta": "Compare Seat 1.0L petrol engine prices"
+            },
+            {
+              "title": "Seat 1.2L Petrol Engines",
+              "description": "The 1.2L TSI was Seat's volume petrol engine across Ibiza, Leon and Toledo models from 2010–2018. Early EA211 units are notorious for timing chain tensioner failure and high oil consumption from piston ring coking — two failure patterns that frequently drive owners toward rebuilt engine replacement rather than partial repair. Engine code(s): CBZA, CBZB, CHZB, CJZA Compatible models (UK): Ibiza, Leon, Toledo, Mii (2010–2018) Production years: 2010–2018 Common failure points: Timing chain tensioner failure (EA211 early); high oil consumption from piston ring coking",
+              "cta": "Compare Seat 1.2L petrol engine prices"
+            },
+            {
+              "title": "Seat 1.4L Petrol Engines",
+              "description": "Seat's 1.4L TSI and MPI engines served Leon, Ibiza, Toledo and Alhambra models across two generations. Direct-injection TSI variants (CAXA, CPTA) commonly require replacement due to severe intake valve carbon buildup restricting airflow, while earlier EA111 units saw timing chain stretch issues that accelerate wear on guides and sprockets. Engine code(s): CAXA, CPTA Compatible models (UK): Leon, Ibiza, Toledo, Alhambra (2008–2020) Production years: 2008–2020 Common failure points: Intake valve carbon buildup (direct injection); timing chain stretch on early EA111 units",
+              "cta": "Compare Seat 1.4L petrol engine prices"
+            },
+            {
+              "title": "Seat 1.5L Petrol Engines",
+              "description": "The newer 1.5L TSI Evo replaces the 1.4L across Leon, Arona and Ateca models from 2017 onward, featuring cylinder deactivation for improved economy. As a relatively recent design, catastrophic failure patterns are still emerging, but early replacement demand stems from injector carboning and mild-hybrid electrical system faults that complicate diagnostics. Engine code(s): CTHA, DJSA Compatible models (UK): Leon, Arona, Ateca (2017–present) Production years: 2017–present Common failure points: Injector carboning on direct-injection units; 48V mild-hybrid system electrical faults",
+              "cta": "Compare Seat 1.5L petrol engine prices"
+            },
+            {
+              "title": "Seat 1.6L Petrol Engines",
+              "description": "Seat's naturally aspirated 1.6L MPI petrol engine provided reliable, low-cost motoring for Ibiza, Toledo and Alhambra models. These CRMB-coded units are among Seat's most dependable, with replacement demand typically driven by age-related coil pack failure or thermostat housing leaks rather than catastrophic internal wear. Engine code(s): CRMB Compatible models (UK): Ibiza, Toledo, Alhambra (2012–2020) Production years: 2012–2020 Common failure points: Ignition coil pack failure; thermostat housing coolant leaks",
+              "cta": "Compare Seat 1.6L petrol engine prices"
+            },
+            {
+              "title": "Seat 1.8L Petrol Engines",
+              "description": "The 1.8L TFSI powered the Exeo and performance Leon FR models, offering strong mid-range torque for enthusiastic driving. These EA888 Gen2 units are most commonly replaced due to oil pump drive chain failure — a known weakness that can cause sudden oil pressure loss and catastrophic bearing damage if not addressed preventatively. Engine code(s): CJZA (TFSI) Compatible models (UK): Exeo, Leon FR (2008–2013) Production years: 2008–2013 Common failure points: Oil pump drive chain failure (EA888 Gen2); intake valve carbon buildup",
+              "cta": "Compare Seat 1.8L petrol engine prices"
+            },
+            {
+              "title": "Seat 2.0L Petrol Engines",
+              "description": "Seat's 2.0L TSI/TFSI engines power the Leon Cupra, Exeo, Ateca and Tarraco, delivering performance and towing capability. Across EA888 generations, replacement demand is driven by oil pump drive failure on pre-2012 units, timing chain tensioner wear on high-mileage examples, and turbocharger bearing fatigue on heavily used performance models. Engine code(s): CJZA, DNUB Compatible models (UK): Leon Cupra, Exeo, Ateca, Tarraco (2009–present) Production years: 2009–present Common failure points: Oil pump drive failure (pre-2012 EA888); timing chain tensioner wear; turbo bearing fatigue on high-mileage units",
+              "cta": "Compare Seat 2.0L petrol engine prices"
+            }
+          ]
+        },
+        {
+          "title": "Seat Hybrid & Electric Powertrains",
+          "items": [
+            {
+              "title": "Seat 1.4L Hybrid Engines",
+              "description": "Seat's plug-in hybrid models combine a 1.4L TSI petrol engine with an electric motor and high-voltage battery, fitted to Leon and Ateca e-Hybrid variants from 2020 onward. Replacement demand remains low but specialist, with battery health degradation and high-voltage system faults requiring certified diagnostic equipment and VW Group-compatible rebuilt hybrid powertrains. System / motor code(s): EA211 TSI PHEV + E-Motor Compatible models (UK): Leon e-Hybrid, Ateca e-Hybrid (2020–present) Production years: 2020–present Important notes: Battery health inspection critical; electric motor failure rare; specialist high-voltage certification required for supply & fit",
+              "cta": "Enquire about Seat 1.4L hybrid engine availability"
+            }
+          ]
+        }
+      ],
+      "closing": "Not sure which engine size your Seat needs? Enter your registration number and we'll match you to the exact engine code and displacement — instantly. All engines supplied with a minimum 12‑month warranty from UK Seat specialists."
+    },
+    "fuelTypes": {
+      "tag": "Complete Seat Engines List",
+      "h2": "Seat Engines by Fuel Type",
+      "intro": "Choose your Seat engine by fuel type to compare realistic replacement prices, known brand‑wide issues, and UK specialist supply – from the most popular diesel workhorses to the latest electrified powertrains.",
+      "items": [],
+      "closing": "Not sure which fuel type your Seat has? Enter your registration number above to instantly identify your model, engine code, fuel system and compatible replacement options – all backed by a minimum 12‑month unlimited mileage warranty from UK Seat specialists."
+    },
+    "engineCodeDirectory": {
+      "tag": "Engine Codes",
+      "h2": "Seat Engine Codes – Most Replaced Engines (2008–2025)",
+      "intro": "Every major Seat engine code from the last two decades, grouped by family, with compatible models and typical reasons why owners seek replacement. Select your engine to compare rebuilt prices and get quotes from UK Seat specialists.",
+      "families": [
+        {
+          "name": "EA211 Petrol Family (2012–Present)",
+          "entries": [
+            {
+              "title": "CBZA 1.2L Petrol",
+              "image": "/images/brands/seat/engines/seat-cbza-engine.webp",
+              "description": "Engine Fitted across the Ibiza 6J/6F, Leon 5F and Altea 5P between 2010 and 2018, this early 1.2 TSI unit is one of the most frequently replaced codes in the UK market. High oil consumption caused by factory-spec piston ring tension loss is the primary driver for replacement, often compounded by timing chain stretch around 60,000 miles. A quality UK-rebuilt CBZA engine includes uprated piston rings, a revised Gen-2 timing chain tensioner kit, and decarbonised intake ports to eliminate repeat oil burn.",
+              "cta": "Compare CBZA Seat engine prices and get rebuilt quotes"
+            },
+            {
+              "title": "CBZB 1.2L Petrol",
+              "image": "/images/brands/seat/engines/seat-cbzb-engine.webp",
+              "description": "Engine Sharing the same EA211 architecture as the CBZA but tuned for higher output (105 HP), this code powers popular Leon, Altea and Ibiza variants from 2010–2018. Catastrophic failure typically stems from premature timing chain guide fragmentation and excessive oil bypassing worn ring lands into the combustion chamber. Rebuilt CBZB units supplied through our network feature reinforced piston rings, metal-reinforced chain guides, and a fully serviced PCV valve to prevent recurrence.",
+              "cta": "Get quotes for CBZB Seat engine replacement"
+            },
+            {
+              "title": "CHZB 1.0L Petrol",
+              "image": "/images/brands/seat/engines/seat-chzb-engine.webp",
+              "description": "Engine Powering the modern Ibiza 6F, Arona KJ and Leon KL from 2017 onward, the 1.0 TSI CHZB delivers lightweight efficiency but suffers from plastic water pump/thermostat housing cracks that cause rapid coolant loss. Turbocharger wastegate rattle and high-pressure fuel pump seal leaks also prompt owners to seek full swaps rather than partial repairs. Our network supplies rebuilt CHZB units fitted with reinforced coolant flange assemblies, upgraded turbo wastegate linkages, and revised HPFP seals for long-term reliability.",
+              "cta": "Find affordable CHZB 1.0 TSI rebuilt engines"
+            },
+            {
+              "title": "DTSB 1.0L Petrol",
+              "image": "/images/brands/seat/engines/seat-dtsb-engine.webp",
+              "description": "Engine Used extensively in the Leon KL, Ateca KH and Arona KJ between 2019 and 2024, this Euro 6-compliant 1.0 TSI variant experiences high demand for replacement due to internal coolant leaks mixing with engine oil. Carbon accumulation on direct injection valves and early turbo actuator sticking further reduce lifespan on high-mileage commuter vehicles. Each rebuilt DTSB unit undergoes a full decarbonisation process, receives reinforced turbo actuator brackets, and features an upgraded aluminium coolant housing.",
+              "cta": "Compare DTSB Seat engine replacement costs"
+            },
+            {
+              "title": "CAXA 1.4L Petrol",
+              "image": "/images/brands/seat/engines/seat-caxa-engine.webp",
+              "description": "Engine Found in the Leon 5F, Exeo 3R and Altea 5P from 2009 to 2018, the CAXA 1.4 TSI is widely sought for replacement due to well-documented timing chain tensioner failure that can lead to valve contact. Oil pump drive module seal degradation frequently compounds the issue, resulting in low oil pressure warnings and potential bearing damage. Quality rebuilt CAXA engines include a Gen-3 hydraulic tensioner, reinforced oil pump drive seals, and thoroughly inspected camshaft lobes to restore factory timing tolerances.",
+              "cta": "Get quotes for CAXA Seat engine rebuild"
+            },
+            {
+              "title": "CTHB 1.5L Petrol",
+              "image": "/images/brands/seat/engines/seat-cthb-engine.webp",
+              "description": "Engine The EA211 EVO 1.5 TSI CTHB code powers modern Ateca, Leon and Arona models from 2018 onward, featuring Active Cylinder Technology (ACT) for improved fuel economy. Replacement demand is primarily driven by ACT solenoid valve sticking causing cylinder deactivation errors, alongside early water pump impeller failures. Rebuilt CTHB units are supplied with revised ACT solenoids, upgraded coolant pump housings, and refreshed timing components to deliver reliable long-term performance.",
+              "cta": "Compare rebuilt CTHB Seat engine prices"
+            },
+            {
+              "title": "DJSA 1.5L Petrol",
+              "image": "/images/brands/seat/engines/seat-djsa-engine.webp",
+              "description": "Engine A closely related variant to the CTHB, the DJSA 1.5 TSI is fitted across the Leon KL, Tarraco KN and Ateca KH from 2019 to present. Owners frequently seek replacement due to high-pressure fuel pump wear causing lean misfires, combined with turbocharger bearing degradation on poorly serviced examples. Our rebuilt DJSA specification includes a reinforced HPFP plunger assembly, upgraded turbo oil feed lines, and fully balanced rotating assemblies to prevent repeat power loss.",
+              "cta": "Find DJSA 1.5 TSI replacement engine quotes"
+            }
+          ]
+        },
+        {
+          "name": "EA288 Diesel TDI Family (2012–Present)",
+          "entries": [
+            {
+              "title": "CLCA 1.6L Diesel",
+              "image": "/images/brands/seat/engines/seat-clca-engine.webp",
+              "description": "Engine Widely used in the Leon 5F, Alhambra 7N and Altea 5P from 2012 onward, the CLCA 1.6 TDI replacement demand stems from EGR cooler blockages and DPF differential pressure sensor faults. Swirl flap actuator wear and early turbo vane sticking further compromise emissions compliance and drivability. Rebuilt CLCA units supplied through our network include a revised EGR cooler matrix, updated DPF pressure sensors, and reinforced turbo actuator linkages to pass MOT requirements reliably.",
+              "cta": "Find rebuilt CLCA TDI engines near you"
+            },
+            {
+              "title": "DBKA 1.6L Diesel",
+              "image": "/images/brands/seat/engines/seat-dbka-engine.webp",
+              "description": "Engine Sharing the EA288 architecture with the CLCA but tuned for slightly higher output, the DBKA code powers Leon, Ateca and Alhambra models from 2015 onward. Owners frequently request replacement due to timing belt tensioner wear causing belt slippage, compounded by fuel injector tip coking. Each rebuilt DBKA engine features a reinforced tensioner assembly, professionally cleaned or replaced injectors, and a fully serviced high-pressure fuel rail to restore optimal atomisation.",
+              "cta": "Get quotes for DBKA Seat engine replacement"
+            },
+            {
+              "title": "CWZA 2.0L Diesel",
+              "image": "/images/brands/seat/engines/seat-cwza-engine.webp",
+              "description": "Engine The flagship CWZA 2.0 TDI code drives the Tarraco KN, Ateca KH and Leon KL from 2017 to present, with high-mileage replacements driven by AdBlue dosing unit blockages and HPFP cam follower wear. Turbocharger actuator failure and EGR valve carbon buildup are additional failure points that trigger full unit swaps. Our rebuilt CWZA specification includes a hardened HPFP cam follower, a revised AdBlue injector nozzle, and a thoroughly cleaned EGR passage for seamless emissions compliance.",
+              "cta": "Compare CWZA Seat diesel engine prices"
+            },
+            {
+              "title": "CFFB 2.0L Diesel",
+              "image": "/images/brands/seat/engines/seat-cffb-engine.webp",
+              "description": "Engine Found in the Exeo 3R, Leon FR 5F and Alhambra 7N between 2009 and 2016, the CFFB 170 HP variant suffers from balance shaft bearing wear that causes severe oil pressure drops at high RPM. Turbo actuator sticking and dual-mass flywheel wear frequently compound the damage, making partial repairs uneconomical. Rebuilt CFFB units feature upgraded balance shaft bearings, a heavy-duty turbo wastegate assembly, and reinforced flywheel dowels to eliminate vibration and restore torque delivery.",
+              "cta": "Get rebuilt CFFB TDI engine quotes"
+            }
+          ]
+        },
+        {
+          "name": "EA111 & Legacy PD TDI Family (Pre-2012)",
+          "entries": [
+            {
+              "title": "CRMB 1.6L Petrol",
+              "image": "/images/brands/seat/engines/seat-crmb-engine.webp",
+              "description": "Engine A naturally aspirated workhorse fitted to the Ibiza 6J, Toledo 5P and Alhambra 7N from 2008 to 2015, the CRMB MPI engine is typically replaced following coolant leaks that cause timing belt failure and valve damage. Ignition coil pack degradation and oil sludge buildup from extended service intervals also drive full swaps. Rebuilt CRMB engines include reinforced water pump seals, upgraded ignition coil packs, and a fully flushed lubrication system to prevent repeat overheating.",
+              "cta": "Compare CRMB naturally aspirated engine costs"
+            },
+            {
+              "title": "BXE 1.9L Diesel",
+              "image": "/images/brands/seat/engines/seat-bxe-engine.webp",
+              "description": "Engine The legendary BXE 1.9 PD TDI powered the Ibiza 6L, Cordoba 6L and early Altea 5P from 2005 to 2010, but replacement demand remains high due to connecting rod bolt fatigue on modified examples. Oil pump drive failure and injector copper seat leakage are common secondary issues that force owners to seek full replacement. Rebuilt BXE units are supplied with upgraded ARP-style conrod bolts, reinforced injector seats, and a revised oil pump drive assembly for dependable high-mileage use.",
+              "cta": "Get quotes for BXE 1.9 TDI replacement"
+            },
+            {
+              "title": "BKC 1.9L Diesel",
+              "image": "/images/brands/seat/engines/seat-bkc-engine.webp",
+              "description": "Engine Sharing the same 1.9 PD TDI architecture as the BXE, the BKC code is found in Altea, Toledo and early Leon models from 2003 to 2009, frequently replaced due to dual-mass flywheel failure transferring vibration into the crankshaft. Turbocharger actuator wear and EGR valve sticking further degrade performance on poorly maintained units. Rebuilt BKC engines include a reinforced flywheel mounting surface, a heavy-duty turbo actuator, and a professionally cleaned EGR system to restore smooth idle and acceleration.",
+              "cta": "Find BKC PD TDI rebuilt engine deals"
+            },
+            {
+              "title": "AZV 2.0L Diesel",
+              "image": "/images/brands/seat/engines/seat-azv-engine.webp",
+              "description": "Engine An early 2.0 TDI unit used in Altea 5P, Toledo 5P and Leon 1P between 2004 and 2009, the AZV code requires replacement primarily due to oil pump balance shaft bearing wear that causes rapid oil pressure loss. Head gasket failure between adjacent cylinders and injector seat degradation are common compounding factors on high-mileage vehicles. Quality rebuilt AZV engines feature revised balance shaft bearings, multi-layer steel head gasket kits, and reinforced injector seats to eliminate oil starvation and coolant leaks.",
+              "cta": "Compare AZV Seat diesel engine prices"
+            },
+            {
+              "title": "BMM 2.0L Diesel",
+              "image": "/images/brands/seat/engines/seat-bmm-engine.webp",
+              "description": "Engine Fitted to Altea, Toledo and Leon variants from 2005 to 2010, the BMM 140 HP PD TDI suffers from EGR valve sticking and turbo wastegate failure that trigger limp mode and power loss. Oil sludge buildup from neglected cam cover breather hoses often accelerates turbo bearing wear. Rebuilt BMM units include a heavy-duty EGR valve assembly, a reinforced turbo wastegate actuator, and a fully decarbonised intake manifold to ensure reliable daily driving performance. Closing line (Block A): Can’t find your engine code listed above? Use our full Seat engine code directory below — every code from the last 20 years — or enter your registration number for an instant match to the correct replacement engine with warranty.",
+              "cta": "Get quotes for BMM Seat engine replacement"
+            }
+          ]
+        }
+      ],
+      "closing": "Can’t find your engine code listed above? Use our full Seat engine code directory below — every code from the last 20 years — or enter your registration number for an instant match to the correct replacement engine with warranty.",
+      "directory": {
+        "h3": "Full Seat Engine Code Directory (All Years)",
+        "label": "“View all Seat engine codes (60+ codes, 1990–2025)”",
+        "intro": "A comprehensive alphabetical listing of every Seat engine code from the last three decades. Use the search above or enter your registration for an instant match to your specific engine. All codes link to a quote request.",
+        "codes": [
+          {
+            "code": "1P",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "1Z",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "2E",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "3V",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "4B",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "508PN",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "AUA",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "AXC",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "AXT",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "BAH",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "BAZ",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "BKD",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "BLS",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "BMX",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "BNA",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "BNZ",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "BSV",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "BUD",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "BZB",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "CAYC",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CFHC",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CFFB",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CFHD",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CFNA",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "CGGA",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "CHHB",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "CHZB",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "CJZB",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "CLCA",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CMXA",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "CNGA",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CPTA",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "CRMB",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "CRVA",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CTGA",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "CWZA",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "DJSB",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "DJSB",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "DNUB",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "DTSB",
+            "fuel": "Petrol"
+          }
+        ]
+      }
+    },
+    "engineYears": {
+      "tag": "Engine Years",
+      "h2": "SEAT Engines by Year – What Was Fitted & When",
+      "intro": "",
+      "jumpLabel": "Jump to year",
+      "years": [
+        {
+          "year": "1999 – 2002",
+          "preview": "VW Group Integration: First-Generation TDI & 1.8T Petrol 🔴 Major Engine Family Introduction",
+          "description": "Short intro: The launch of the SEAT Leon and Ibiza Mk3 in 1999–2000 marked SEAT's full integration into the VW Group engine architecture - bringing the proven 1.8T and TDI families from the Audi/VW platform into the Spanish brand for the first time and establishing the engine commonality that defines SEAT to this day. Key Changes 1.8T (AGU, AUM, BAM) introduced across Leon Mk1 (1M) and Ibiza 6K - shared directly with Golf Mk4/Audi A3 petrol family 1.9 TDI pump-duse (AFN, AHF, AGR, AXR) introduced across Leon and Toledo - common-rail and distributor-pump variants available Leon Cupra R (1M) launched 2002 with 1.8T BAM 225hp - first high-performance SEAT in the UK market 2.8 VR6 (AUE) on Leon Cupra 4 - all-wheel drive flagship, 204hp naturally aspirated V6 1.4 AHW and 1.6 AEH/AKL petrols continue across Ibiza and Cordoba as volume entry options Main Engines AGU / AUM / BAM - 1.8T turbo petrol 150–225hp (SEAT Leon, Toledo, Ibiza Cupra) AFN / AHF / AGR - 1.9 TDI diesel 90–110hp (SEAT Leon, Toledo, Alhambra) AXR / ATD - 1.9 TDI 100hp (SEAT Ibiza 6K/6L, Leon) AUE - 2.8 VR6 24v petrol 204hp (SEAT Leon Cupra 4) AHW / AKQ - 1.4 16v petrol 75hp (SEAT Ibiza 6K/6L, Cordoba) Popular Models SEAT Leon Mk1 (1M) SEAT Ibiza Mk3 (6K late / 6L early) SEAT Toledo Mk2 (1M) SEAT Leon Cupra R (1M) SEAT Alhambra Mk1 (7M) Known For 1.8T AGU and BAM are among the most tuneable engines in the VW Group family - deeply supported by the UK aftermarket with a strong enthusiast and replacement specialist network 1.9 TDI AFN and AGR with distributor injection are regarded by UK diesel specialists as among the most bulletproof diesels of the era - simple mechanical architecture and very high-mileage survivability Leon Cupra R BAM 225hp is a genuine performance landmark for the SEAT brand in the UK - cam follower wear on the injection pump drive is a well-known inspection point at high mileage VR6 Leon Cupra 4 is a collector's piece now - naturally aspirated and smooth but timing chain maintenance and cooling system reliability must be verified on any used example [Tags] Engine Codes Covered: AGU, AUM, BAM, AEH, AKL, AHW, AKQ, AFN, AHF, AGR, AXR, ATD, AUE, ANB, APU",
+          "cta": "Compare 1999–2002 SEAT Leon and Ibiza 1.8T and TDI replacement engine prices from UK specialists"
+        },
+        {
+          "year": "2002 – 2005",
+          "preview": "Ibiza Mk3 PD Diesel & Leon FR Petrol Generation",
+          "description": "Short intro: The full rollout of pump-duse (PD) direct-injection diesels across the Ibiza and Leon from 2002 gave SEAT the highest-efficiency diesel line-up in its segment, while the Leon FR introduced the 1.8T in a sporty package that quickly became one of the most popular used SEAT buys in the UK. Key Changes 1.9 TDI PD (BJB, BKC, BLS) replaces distributor-pump units across Ibiza Mk3 (6L) and Leon Mk1 facelift - higher injection pressure, better fuel economy 1.4 16v TDI (AMF, BHC) introduced on Ibiza 6L - ultra-economy three-cylinder diesel, unique in the segment Leon FR 1.8T and later Cupra R continues with BAM / AMK - performance focus of the range 1.4 16v petrol (AUA, BBY) updated on Ibiza and Cordoba as volume entry option Ibiza Cupra Sport (2003) with 1.8T 180hp - performance hot hatch entry point for SEAT in the UK Main Engines BJB / BKC / BLS - 1.9 TDI PD diesel 100–130hp (SEAT Ibiza 6L, Leon 1M facelift) AMF / BHC - 1.4 TDI three-cylinder diesel 70–75hp (SEAT Ibiza 6L) BAM / AMK - 1.8T turbo petrol 150–180hp (SEAT Leon FR, Ibiza Cupra Sport) AUA / BBY - 1.4 16v petrol 75–85hp (SEAT Ibiza 6L, Cordoba) ARL / BTB - 1.9 TDI 150hp (SEAT Alhambra FR diesel, Leon Sport TDI) Popular Models SEAT Ibiza Mk3 (6L) SEAT Leon FR (1M facelift) SEAT Leon Cupra R SEAT Ibiza Cupra Sport SEAT Alhambra (7M facelift) Known For BKC 1.9 TDI PD is one of the most common SEAT engine replacement searches in the UK - EGR valve failure, swirl flap issues, and injector seal leaks at 80,000–120,000 miles are the defining workshop complaints 1.4 TDI three-cylinder AMF is an unusually frugal engine for its era - fragile timing belt (not chain) requires strict replacement intervals and is the primary cause of catastrophic failures on neglected examples Ibiza Cupra Sport with 1.8T builds on an already strong enthusiast following - ball bearing turbocharger upgrades and inlet manifold improvements are widely available in the UK ARL 1.9 TDI 150hp in Alhambra is a strong torque unit but dual-mass flywheel wear between 80,000–100,000 miles is a near-universal complaint across UK examples [Tags] Engine Codes Covered: BJB, BKC, BLS, AMF, BHC, BAM, AMK, AUA, BBY, ARL, BTB, AXW, AVQ",
+          "cta": "Find 2002–2005 SEAT Ibiza and Leon TDI PD and 1.8T replacement engines from UK specialists"
+        },
+        {
+          "year": "2005 – 2008",
+          "preview": "Leon Mk2 (1P), New Ibiza 6L Late & 2.0 TDI PD Launch 🔴 Major Engine Family Introduction",
+          "description": "Short intro: The second-generation SEAT Leon (1P) launched in 2005 as one of the VW Group's most sporting mid-size hatches - bringing the 2.0 TDI PD (BKD) and the 2.0 TFSI (AXX/BWA) performance engines to SEAT owners for the first time, alongside the brand's most advanced driver-focused lineup to date. Key Changes Leon Mk2 (1P) launched 2005 - 2.0 TDI PD (BKD) and 1.9 TDI (BJB, BXE) diesels across FR and S trims 2.0 TFSI (AXX, BWA) introduced on Leon FR and Cupra - replaces 1.8T as the performance petrol benchmark 2.0 TDI 170hp (BMN, BUY) in Leon FR TDI - highest-output diesel SEAT had offered in the UK market Leon Cupra 2.0 TFSI (BYD) 241hp - SEAT's first truly class-competitive hot hatch in the modern era New Ibiza Mk4 (6J) development underway - outgoing 6L continues with existing 1.4/1.9 TDI/1.8T codes Main Engines BKD / BXE / BJB - 2.0/1.9 TDI PD diesel 105–140hp (SEAT Leon 1P, Altea) BMN / BUY - 2.0 TDI PD 170hp diesel (SEAT Leon FR TDI) AXX / BWA - 2.0 TFSI EA113 turbo petrol 200hp (SEAT Leon FR, Cupra) BYD - 2.0 TFSI EA113 241hp (SEAT Leon Cupra) BXW / BSE - 1.6 petrol 102hp (SEAT Leon S entry, Altea) Popular Models SEAT Leon FR (1P) SEAT Leon Cupra (1P) SEAT Leon FR TDI (1P) SEAT Altea XL (5P) SEAT Toledo Mk3 (5P) Known For BKD 2.0 TDI PD is the single highest-volume SEAT diesel replacement engine in the UK - EGR failure, DPF blockage, and injector seal leaks are universally recognised by independent specialists 2.0 TFSI AXX in early Leon FR and Cupra suffers from carbon deposit build-up on intake valves - walnut blasting is an essential maintenance step at 60,000+ miles on direct-injection examples Leon Cupra with BYD 241hp is well-regarded for straight-line pace but dual-mass flywheel and clutch wear under spirited use generates frequent replacement enquiries on UK examples 2.0 TDI 170hp BMN requires timing belt replacement at strict intervals - belt failure at high mileage causes catastrophic engine destruction and drives significant reconditioned unit demand [Tags] Engine Codes Covered: BKD, BXE, BJB, BMN, BUY, AXX, BWA, BYD, BXW, BSE, CBAB, CCHA",
+          "cta": "Get quotes for 2005–2008 SEAT Leon Mk2 TDI and TFSI replacement engines from UK specialists"
+        },
+        {
+          "year": "2008 – 2012",
+          "preview": "Ibiza Mk4 (6J), EA189 TDI & EA113 TFSI Update",
+          "description": "Short intro: The Ibiza Mk4 (6J) launched in 2008 as SEAT's highest-volume UK model, bringing revised 1.2 TDI, 1.6 TDI (EA189), and 1.4 TFSI twincharged engines alongside an updated Leon range - establishing the engine family that would later be implicated in the 2015 Dieselgate emissions scandal. Key Changes Ibiza Mk4 (6J) launches 2008 - all-new body on PQ25 platform with 1.2 TDI, 1.4 TFSI, and 1.6 TDI engines 1.6 TDI (CAY, CAYB) EA189 engine introduced across Ibiza and Leon from 2009 - replaces 1.9 TDI PD 1.2 TDI (CFWA) - first sub-1.4 diesel in SEAT range, ultra-low CO₂ Ecomotive trim 1.4 TFSI twincharged (CAXC, BLG) continues from Mk1 on Leon - single turbo and supercharger combined Leon Mk2 facelift (1P LCI) retains 2.0 TDI CBAB/CCHA and 2.0 TFSI CCZB/CDLB for FR/Cupra trim Main Engines CAY / CAYB - 1.6 TDI EA189 diesel 75–105hp (SEAT Ibiza 6J, Leon 1P, Altea) CFWA - 1.2 TDI EA189 three-cylinder diesel 75hp (SEAT Ibiza Ecomotive) CAXC / BLG - 1.4 TFSI twincharged petrol 150hp (SEAT Leon FR, Ibiza Cupra) CBAB / CCHA - 2.0 TDI diesel 140–170hp (SEAT Leon FR TDI facelift, Altea) CCZB / CDLB - 2.0 TFSI EA113 200–211hp (SEAT Leon FR/Cupra facelift) Popular Models SEAT Ibiza Mk4 (6J) SEAT Leon FR (1P LCI) SEAT Leon Cupra (1P LCI) SEAT Altea XL (5P facelift) SEAT Ibiza SC Cupra Known For 1.6 TDI EA189 (CAY) becomes the most affected SEAT engine by the 2015 Dieselgate recall - software-fix-only approach maintained unease among UK independent specialists about long-term DPF performance 1.4 TFSI twincharged CAXC is technically sophisticated for its displacement - supercharger-to-turbo handover valve failures and actuator wear are the dominant independent workshop complaint CBAB 2.0 TDI continues to generate strong replacement demand from Leon FR TDI owners - same fundamental EGR and injector concerns as earlier BKD architecture Ibiza 6J is one of the most popular UK SEAT replacement engine searches by volume - high fleet and young-driver ownership creates consistent demand from 100,000-mile-plus examples [Tags] Engine Codes Covered: CAY, CAYB, CAYC, CFWA, CAXC, BLG, CBAB, CCHA, CCZB, CDLB, CBDA, CBDB",
+          "cta": "Compare 2008–2012 SEAT Ibiza and Leon EA189 TDI and TFSI replacement engine prices"
+        },
+        {
+          "year": "2012 – 2015",
+          "preview": "Leon Mk3 (5F), EA888 Gen 1/2 & EA189 Dieselgate",
+          "description": "Short intro: The third-generation Leon (5F) launched in 2012 as SEAT's most technically advanced model to date, introducing the EA888 second-generation petrol family and the EA189 TDI that would become infamous three years later in the 2015 Dieselgate emissions scandal affecting hundreds of thousands of UK SEAT owners. Key Changes Leon Mk3 (5F) launched 2012 - EA888 Gen 2 (CJZA 1.2 TSI, CHHB/CHPB 1.8 TSI) and EA189 TDI (CLHA 1.6 TDI, CLJA 2.0 TDI) EA888 Gen 2 CNHA 2.0 TSI 265hp in Leon Cupra - first SEAT Cupra with the EA888 family EA189 scandal breaks September 2015 - 1.6 TDI (CLHA, CAY) and 2.0 TDI (CLJA) SEAT models in UK recall Ibiza Mk4 facelift (6J LCI) 2012 - 1.2 TSI (CBZB, CJZA) replaces ageing 1.4 TFSI as volume petrol unit Leon X-Perience (5F all-road) introduced - 2.0 TDI 150hp with four-wheel-drive drivetrain Main Engines CJZA / CBZB - 1.2 TSI EA111 petrol 85–105hp (SEAT Ibiza 6J facelift, Leon 5F entry) CHHB / CHPB - 1.8 TSI EA888 Gen 2 petrol 180hp (SEAT Leon FR 5F) CNHA / CJXB - 2.0 TSI EA888 Gen 2 petrol 265hp (SEAT Leon Cupra 5F) CLHA / CAY - 1.6 TDI EA189 diesel 90–110hp (SEAT Ibiza, Leon 5F) CLJA / CLLB - 2.0 TDI EA189 diesel 150–184hp (SEAT Leon FR TDI, X-Perience) Popular Models SEAT Leon Mk3 FR (5F) SEAT Leon Mk3 Cupra (5F) SEAT Ibiza Mk4 facelift (6J) SEAT Leon Mk3 ST (5F estate) SEAT Leon X-Perience Known For EA888 Gen 2 CNHA Cupra is broadly well-regarded - water pump failure, thermostat housing leaks, and timing chain stretch on early high-mileage examples are the dominant UK specialist complaints EA189 Dieselgate recall is the defining quality event of SEAT's modern history in the UK - software update resolved emissions test behaviour but long-term DPF performance post-recall remains a concern for independent diesel specialists 1.2 TSI CJZA earns consistent praise for economy and smoothness in the Ibiza - PCV valve failure causing oil consumption and timing chain tensioner wear at higher mileages are the key independent workshop concerns Leon Mk3 ST estate with 2.0 TDI generates the highest combined family-buyer replacement engine demand for SEAT in the UK from 2015 onwards - TDI estate replacement is the most-searched Leon engine enquiry category [Tags] Engine Codes Covered: CJZA, CBZB, CHHB, CHPB, CNHA, CJXB, CLHA, CAY, CLJA, CLLB, CBDA, CBDB",
+          "cta": "Find 2012–2015 SEAT Leon Mk3 EA888 and EA189 replacement engines from UK specialists"
+        },
+        {
+          "year": "2015 – 2018",
+          "preview": "EA888 Gen 3 Cupra 290, 1.5 TSI Evo & Post-Dieselgate EA288 🔴 Major Reliability Revision",
+          "description": "Short intro: SEAT's post-Dieselgate period saw the EA288 TDI replace EA189 diesels across the Leon and Ibiza, while the EA888 Gen 3 pushed the Cupra to 290hp - the highest-output SEAT UK production car at the time - and the new 1.5 TSI Evo arrived as the brand's most efficient petrol in 2017. Key Changes EA888 Gen 3 (DJHA, CZPB, CJXC) replaces Gen 2 in Leon FR and Cupra - improved chain guide, dual injection, raised output ceiling to 290hp Leon Cupra 290 and 300 arrive - DJHA 2.0 TSI 290hp with performance pack available, DSG or manual EA288 1.6 TDI (DGTE, DGDB) and 2.0 TDI (DFCA, DETA) begin replacing EA189 units from 2015–2016 1.0 TSI (CHZB, DKJA) introduced on Ibiza Mk5 (KJ) 2017 - first three-cylinder turbocharged petrol in mainstream SEAT range 1.5 TSI Evo (DADA, DPCA) introduced 2017 on Leon - Euro 6d petrol with cylinder deactivation (ACT), strong efficiency claims Main Engines DJHA / CZPB - 2.0 TSI EA888 Gen 3 petrol 290–300hp (SEAT Leon Cupra 5F facelift) CJXC / CHHA - 2.0 TSI EA888 Gen 3 200hp (SEAT Leon FR 5F facelift) DADA / DPCA - 1.5 TSI Evo petrol 130hp (SEAT Leon 5F late / Arona) DGTE / DGDB - 1.6 TDI EA288 diesel 90–115hp (SEAT Ibiza, Leon 5F) DFCA / DETA - 2.0 TDI EA288 diesel 150hp (SEAT Leon FR TDI 5F facelift) CHZB / DKJA - 1.0 TSI three-cylinder petrol 95–115hp (SEAT Ibiza Mk5, Arona) Popular Models SEAT Leon Cupra 290/300 (5F facelift) SEAT Leon FR (5F facelift) SEAT Ibiza Mk5 (KJ) SEAT Arona (KJ crossover) SEAT Leon ST FR (5F estate) Known For EA888 Gen 3 in Cupra 290 is regarded as the most capable SEAT performance engine of the combustion era - strong aftermarket, 350hp+ tune potential on standard internals, and broadly reliable at standard output with quality oil 1.5 TSI Evo cold-start hesitation and kangarooing on manual gearbox cars is a widely documented UK fault - a software patch was released in February 2020 but some owners continue to report residual cold-running roughness EA288 1.6 TDI is a meaningful improvement over EA189 - fewer injector seal failures and better real-world DPF performance, though AdBlue system complexity adds a new maintenance cost from this generation 1.0 TSI three-cylinder is broadly praised for refinement and economy in the Ibiza and Arona - oil consumption on high-mileage examples and PCV breather system blockage are the most frequent UK independent workshop findings [Tags] Engine Codes Covered: DJHA, CZPB, CJXC, CHHA, DADA, DPCA, DGTE, DGDB, DFCA, DETA, CHZB, DKJA, CZEA",
+          "cta": "Get quotes for 2015–2018 SEAT Leon Cupra and FR EA888 Gen 3 replacement engines"
+        },
+        {
+          "year": "2018 – 2021",
+          "preview": "Cupra Brand Split, Leon Mk4, 48V e-Hybrid & EA888 Gen 4 🔴 Technology Introduction 🔴 Major Engine Family Introduction",
+          "description": "Short intro: SEAT's most transformational period since VW Group integration - Cupra became an independent brand in 2018, the Leon Mk4 (KL) launched in 2020 on the MQB Evo platform with EA888 Gen 4 and 48V mild hybrid, and the e-Hybrid plug-in powertrain arrived as the brand's first electrified production offering for the UK. Key Changes Cupra brand launched as independent entity from SEAT in 2018 - Cupra Ateca and Cupra Leon carry forward from SEAT Leon Cupra engineering base Leon Mk4 (KL) launched 2020 - EA888 Gen 4 (DKZA 2.0 TSI) replaces Gen 3 across FR and Cupra variants 1.5 TSI Evo (DPCA, DADA) continues with post-2020 software fix on Leon Mk4 and Arona Leon e-Hybrid (PHEV) introduced - 1.4 TSI (DGEA) combined with 13kWh electric motor, 204hp system Cupra Formentor (2021) launches with 2.0 TSI (DNFA, DNU) 190–310hp - first unique Cupra platform model Main Engines DKZA / DLBA - 2.0 TSI EA888 Gen 4 petrol 190–300hp (Cupra Leon, SEAT Leon FR Mk4) DNFA / DNUA - 2.0 TSI petrol 190–310hp (Cupra Formentor, Cupra Ateca) DPCA / DADA - 1.5 TSI Evo petrol 130–150hp (SEAT Leon Mk4, Arona, Ibiza Mk5 facelift) DGEA / DDSA - 1.4 TSI e-Hybrid PHEV 204hp (SEAT Leon e-Hybrid, Cupra Leon e-Hybrid) DGTE / DGDB - 1.6 TDI EA288 diesel (SEAT Ibiza, Arona continued) DFCA / DCYA - 2.0 TDI EA288 diesel 150hp (SEAT Leon Mk4 FR TDI, Ateca) Popular Models SEAT Leon Mk4 FR (KL) Cupra Leon (KL) Cupra Formentor (KM) Cupra Ateca (5FP) SEAT Leon Mk4 e-Hybrid SEAT Arona (facelift) Known For EA888 Gen 4 in Cupra Leon and Formentor is broadly regarded as the most polished iteration of the engine family - dual injection reduces intake valve carbon build-up substantially versus Gen 3, and thermal management is improved Leon e-Hybrid PHEV earns strong fleet and company-car appeal in the UK but petrol engine oil dilution from cold short-cycle driving (PHEV running on electric only) is an emerging specialist concern at high mileage Cupra Formentor with 2.0 TSI DNFA 310hp is the performance highlight of this generation - 400hp+ tune potential on standard internals, with strong UK specialist and aftermarket support 48V mild hybrid is not yet available on SEAT-branded models - the electrification architecture is concentrated in PHEV form; this differentiates SEAT from VW Group siblings that adopt 48V mild hybrid from 2019 onward [Tags] Engine Codes Covered: DKZA, DLBA, DNFA, DNUA, DPCA, DADA, DGEA, DDSA, DGTE, DGDB, DFCA, DCYA",
+          "cta": "Compare 2018–2021 SEAT Leon Mk4 and Cupra EA888 Gen 4 replacement engine prices from UK specialists"
+        },
+        {
+          "year": "2021 – 2024",
+          "preview": "Cupra Born Electric, Euro 6d Final TDI & Ibiza/Arona Refresh 🔴 Technology Introduction",
+          "description": "Short intro: The 2021 Cupra Born marked SEAT Group's entry into full battery-electric production - the first fully electric Cupra built in Germany on the MEB platform - while combustion Leon, Ibiza, and Arona models were refreshed under Euro 6d regulations, and the 1.0 TSI three-cylinder consolidated its position as the dominant SEAT petrol engine in the UK. Key Changes Cupra Born (VZ1) launched 2021 - 231hp fully electric on VW MEB platform, no combustion engine Ibiza Mk5 and Arona mid-life facelift - 1.0 TSI (DKJA, DLAC) updated for Euro 6d, cylinder deactivation added on higher-output variants SEAT drops 2.0 TDI from Ibiza and Arona range - diesel confined to Leon and Ateca in the UK fleet Leon Mk4 facelift (2023) - EA888 Gen 4 continues across FR and Cupra, minor ECU calibration updates for Euro 6e preparation Cupra Formentor VZ5 (2022) - 2.5 TFSI five-cylinder (DNF) 390hp in limited production; highest-output SEAT Group combustion car sold in the UK Main Engines DLAC / DKJA - 1.0 TSI three-cylinder petrol 90–115hp Euro 6d (SEAT Ibiza, Arona) DPCA / DADA - 1.5 TSI Evo petrol 130–150hp (SEAT Leon, Arona top-spec) DKZA / DLBA - 2.0 TSI EA888 Gen 4 petrol 190–300hp (SEAT Leon FR, Cupra Leon) DNF - 2.5 TFSI I5 five-cylinder 390hp (Cupra Formentor VZ5) DFCA / DCYA - 2.0 TDI EA288 diesel 150hp (SEAT Leon FR TDI, Ateca TDI continued) BEV - MEB platform electric motor 231hp (Cupra Born VZ1) Popular Models Cupra Born (VZ1) Cupra Formentor VZ5 SEAT Leon Mk4 FR (facelift) SEAT Ibiza Mk5 (facelift) SEAT Arona (facelift) Cupra Ateca Known For Cupra Born earns consistently strong owner satisfaction scores in the UK - real-world range of 200–250 miles on the 77kWh battery suits most urban and suburban UK commutes; fast-charge infrastructure is the limiting factor for longer routes Formentor VZ5 five-cylinder DNF engine is a rare and enthusiast-celebrated powertrain - Audi RS3-derived, low production numbers, and exceptional driving character make it a modern collector's piece in the UK 1.0 TSI three-cylinder is now the most registered SEAT engine in the UK by volume - PCV failure, oil consumption at 100,000+ miles, and DSG dry-clutch behaviour are the primary independent specialist concerns Final EA288 TDI models are generating growing replacement enquiries as Euro 6d-era Leon and Ateca diesels accumulate mileage - AdBlue injector crystallisation and DPF blockage remain the leading failure modes [Tags] Engine Codes Covered: DLAC, DKJA, DPCA, DADA, DKZA, DLBA, DNF, DFCA, DCYA, BEV MEB",
+          "cta": "Get quotes for current-generation SEAT and Cupra combustion replacement engines from UK specialists"
+        },
+        {
+          "year": "2024 – 2026",
+          "preview": "New Cupra Tavascan EV, Leon Mk4 Final & Euro 6e Compliance 🔴 Technology Introduction",
+          "description": "Short intro: SEAT Group's current range continues the combustion Leon and Ibiza through Euro 6e compliance updates while Cupra expands its electric platform with the Tavascan (2024) - an all-electric SUV on the MEB platform - marking the most significant expansion of the group's EV footprint in the UK to date alongside the ongoing petrol-dominant used-car replacement market. Key Changes Cupra Tavascan (VZ2) launched 2024 - fully electric, MEB Evo platform, up to 340hp dual-motor Cupra Born updated for 2025 - 77kWh battery with 326hp top-spec e-boost, up to 389 miles WLTP claimed Leon Mk4 Euro 6e compliance updates to EA888 Gen 4 - revised injection mapping and thermal management for real-world RDE standards SEAT Ibiza and Arona combustion range (1.0 TSI / 1.5 TSI) confirmed as continuing in production - no imminent end-of-combustion announced for light commercial segment Diesel removed from new Ibiza and Arona order books in UK - Leon remains the last SEAT model available new with a diesel in Britain Main Engines DLAC / DKJA - 1.0 TSI petrol Euro 6e (SEAT Ibiza, Arona current) DPCA - 1.5 TSI Evo petrol 130–150hp (SEAT Arona, Leon continuing) DKZA / DLBA - 2.0 TSI EA888 Gen 4 Euro 6e (Cupra Leon, SEAT Leon FR current) DFCA / DCYA - 2.0 TDI EA288 Euro 6e diesel (SEAT Leon TDI, Ateca - continuing) BEV - MEB Evo dual-motor up to 340hp (Cupra Tavascan) BEV - MEB 230–326hp (Cupra Born 2025) Popular Models Cupra Tavascan (electric) Cupra Born (2025 updated) SEAT Leon Mk4 FR (current) Cupra Leon (current) SEAT Ibiza Mk5 (current) Known For Cupra Tavascan receives strong UK reception as a premium electric SUV - dual-motor 340hp all-wheel-drive variant is the performance flagship but single-motor base variant commands the largest UK order volume Updated Cupra Born 326hp e-boost makes it one of the fastest hot hatches available in the UK by 0–62 time - thermal management of e-boost delivery in sustained track use is a reported limitation in owner reviews Leon combustion range continues to generate the dominant share of SEAT replacement engine demand in the UK - EA888 Gen 4 FR and Cupra units from 2020–2024 entering the high-volume used-car replacement cycle Removal of diesel from Ibiza and Arona new-car orders increases used-car demand for existing TDI units - independent specialists expect EA288 1.6 TDI replacement demand to remain elevated through 2028 [Tags] Engine Codes Covered: DLAC, DKJA, DPCA, DKZA, DLBA, DFCA, DCYA, BEV MEB Evo (Tavascan), BEV MEB (Born 2025)",
+          "cta": "Enquire about current-generation SEAT and Cupra combustion and performance engine replacement availability from UK specialists"
+        }
+      ],
+      "closing": "Not sure which year your SEAT was built? Enter your registration number and we'll identify the exact engine, model year, and compatible replacement options instantly - all backed by a minimum 12-month warranty from UK SEAT specialists."
+    },
+    "faq": {
+      "tag": "FAQ",
+      "h2": "Seat Engine Replacement – Frequently Asked Questions",
+      "intro": "Quick, honest answers to the most common questions Seat owners ask before comparing engine replacement prices and finding a UK specialist.",
+      "items": [
+        {
+          "question": "How much does a Seat engine replacement cost in the UK?",
+          "answer": "Reconditioned Seat engines typically range from £1,200–£2,800 for common 1.0–1.6L petrol or diesel units, while rebuilt 2.0L TSI/TDI engines with upgraded components cost £1,800–£3,500. Fitting adds £400–£900 depending on model complexity, significantly less than main dealer rates. For budget-conscious owners, used engines start around £400–£1,200 but carry higher risk without warranty coverage. We always recommend comparing at least three verified quotes to secure the best value for your Seat engine replacement cost.",
+          "cta": "Compare Seat engine replacement prices now"
+        },
+        {
+          "question": "What affects the cost of a Seat engine replacement?",
+          "answer": "Four key factors drive your Seat engine fitting cost: displacement (1.0L vs 2.0L), condition (used vs reconditioned vs rebuilt), vehicle complexity (Ibiza vs Alhambra AWD), and whether you choose supply-only or Seat engine supply and fit service. Location matters too — London and South East labour rates can be 20–30% higher than regional specialists. Our comparison tool provides transparent, postcode-matched quotes so you see exactly what affects your engine swap cost Seat estimate before committing.",
+          "cta": "Get quotes from UK Seat engine specialists today"
+        },
+        {
+          "question": "Is it worth replacing the engine in my Seat?",
+          "answer": "In most cases yes — if your Leon, Ibiza or Ateca chassis and gearbox are solid, a rebuilt Seat engine with upgraded timing components or piston rings often outlasts the original unit. With UK used Seat values holding steady, investing £1,500–£3,000 in a warranty-backed replacement is frequently more economical than purchasing a replacement vehicle. Only consider scrapping if structural corrosion or major transmission issues are also present.",
+          "cta": "Find reconditioned Seat engines with comprehensive warranty cover"
+        },
+        {
+          "question": "What's included in a Seat engine supply and fit service?",
+          "answer": "A full Seat engine supply and fit service covers sourcing your exact EA211 or EA288 engine code, professional removal of the failed unit, installation with new gaskets and fluids, post-fit diagnostics, and responsible disposal of your old engine. Most specialists include a workmanship warranty alongside the engine guarantee, with fitting costs typically £400–£900 depending on model access. Always confirm whether VAT, delivery, and ancillary transfer are included in your Seat engine supply and fit cost quote.",
+          "cta": "Compare Seat engine supply and fit deals nationwide"
+        },
+        {
+          "question": "How long does a Seat engine replacement take?",
+          "answer": "For common models like the Ibiza or Leon with readily available CBZA, CLCA or CHZB engines, expect 3–5 working days from order to completion. More complex vehicles like the Alhambra or Ateca AWD may require 5–7 days due to additional drivetrain components. The biggest variable is engine availability — our network prioritises high-demand Seat engine codes to minimise downtime. Ask suppliers about current lead times when you request your quote.",
+          "cta": "Use our free comparison tool to check Seat engine stock levels"
+        },
+        {
+          "question": "Do reconditioned Seat engines come with warranty?",
+          "answer": "Yes, every reconditioned Seat engine supplied through EngineMarket carries a minimum 12-month unlimited mileage warranty as standard, with many rebuilt units offering optional 24-month coverage. This warranty typically covers major internals including the crankshaft, pistons, timing chain, oil pump and cylinder head against manufacturing defects. Always confirm exact Seat engine warranty uk terms directly with your chosen supplier, particularly regarding labour coverage and claim procedures.",
+          "cta": "Find warranty-backed Seat engine replacements now"
+        },
+        {
+          "question": "Should I choose a used or reconditioned Seat engine?",
+          "answer": "Used Seat engines (£400–£1,200) suit temporary fixes or vehicles nearing end-of-life, but carry unknown mileage and minimal warranty protection. Reconditioned units (£1,200–£2,800) include new seals, bearings and often upgraded components addressing known failure points like EA211 timing tensioners or TDI EGR systems — making them the smarter choice for long-term ownership. If your Seat has a failure-prone engine family, investing in a reconditioned unit with comprehensive cover is strongly recommended.",
+          "cta": "Compare used vs recon Seat engine prices today"
+        },
+        {
+          "question": "Where can I find Seat engine specialists near me?",
+          "answer": "EngineMarket connects you with a UK-wide network of verified Seat engine specialists, with VW Group expertise concentrated in Manchester, Birmingham, London and Glasgow hubs. Our registration lookup instantly matches your chassis number to nearby suppliers who stock your specific EA211, EA288 or EA888 engine code and offer certified fitting. Nationwide palletised delivery is available if no local stock exists, ensuring you find Seat engine specialists near me without compromising on quality or warranty coverage.",
+          "cta": "Get matched with certified Seat engine fitters in your area"
+        },
+        {
+          "question": "What are the most common Seat engine failures?",
+          "answer": "The most frequent catastrophic issues driving Seat engine replacement include EA211 1.2 TSI timing chain tensioner failure (CBZA/CBZB engines), high oil consumption from piston ring coking, direct injection carbon buildup on 1.4/1.5/2.0 TSI intake valves, and EA288 TDI DPF/EGR blockages on urban-commuter Leon and Ibiza models. Early warning signs like rattling, blue smoke or loss of power rarely allow preventative repair — making warranty-backed replacement the most reliable solution for common Seat engine problems.",
+          "cta": "Compare quotes for failure-resistant rebuilt Seat engines"
+        },
+        {
+          "question": "How can I get the best price on a Seat engine?",
+          "answer": "Comparing multiple quotes is essential — prices for the same CBZA or CLCA engine code can vary by £1,000+ across suppliers. Consider used units for tight budgets, but prioritise reconditioned engines with upgraded components if you plan long-term ownership. Ask whether your quote includes fitting, delivery and VAT, and verify warranty terms before committing. Our free comparison tool lets you evaluate all options side-by-side to find the cheapest way to replace engine uk without sacrificing reliability.",
+          "cta": "Get instant Seat engine price matches from verified suppliers"
+        }
+      ]
+    },
+    "trustCta": {
+      "tag": "Why Choose Us",
+      "h2": "Why UK Seat Owners Trust EnginesMarket",
+      "intro": "Join thousands of UK drivers who compare Seat engine prices through our network of trusted specialists. Every rebuilt and reconditioned Seat engine is backed by a minimum 12‑month unlimited mileage warranty and nationwide delivery.",
+      "points": [
+        {
+          "title": "Trusted Seat Engine Suppliers",
+          "description": "Every garage and engine rebuilder in our network is vetted, rated, and reviewed by real Seat owners for transparent, affordable replacements."
+        },
+        {
+          "title": "Compare Seat Engine Replacement Companies",
+          "description": "See prices, warranty terms, and fitting options side‑by‑side before you commit, ensuring you get the best value for your Ibiza, Leon or Ateca."
+        },
+        {
+          "title": "UK Engine Replacement Services for Seat",
+          "description": "Covering every model from the compact Ibiza to the flagship Tarraco, with supply‑only or supply‑and‑fit available nationwide for fast, reliable service."
+        },
+        {
+          "title": "META TITLE: Compare Seat Engine Prices",
+          "description": "Rebuilt & Used from £1,200"
+        },
+        {
+          "title": "\"name\": \"Compare Seat Engine Prices",
+          "description": "Rebuilt & Used from £1,200\","
+        },
+        {
+          "title": "\"name\": \"Seat Engine Replacement",
+          "description": "Save Up to 40% vs Main Dealers\","
+        },
+        {
+          "title": "\"name\": \"Compare Seat Engine Prices",
+          "description": "Rebuilt & Used from £1,200\","
+        }
+      ],
+      "finalText": "Find the best Seat engine replacement UK drivers rely on. Compare prices from trusted specialists today and get back on the road with confidence.",
+      "buttonText": "Compare Seat Engine Prices Now"
+    }
+  }
+}

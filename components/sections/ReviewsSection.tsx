@@ -51,7 +51,7 @@ function ChevronButton({ direction, onClick }: { direction: "prev" | "next"; onC
     <button
       type="button"
       onClick={onClick}
-      className={`absolute top-1/2 z-[2] hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-500 shadow-[0_4px_14px_rgba(13,27,46,0.10)] transition hover:border-green-300 hover:text-green-700 lg:flex ${
+      className={`absolute top-1/2 z-[2] hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-500 shadow-[0_4px_14px_rgba(13,27,46,0.10)] transition hover:border-[#0d1b2e] hover:text-[#0d1b2e] lg:flex ${
         direction === "prev" ? "-left-5" : "-right-5"
       }`}
       aria-label={direction === "prev" ? "Previous reviews" : "Next reviews"}
@@ -232,15 +232,15 @@ export default function ReviewsSection({ data, useDataHeading = false }: Props) 
             </div>
           </div>
 
-          <div className="mt-5 rounded-[12px] border border-green-200 bg-green-50 px-4 py-4">
+          <div className="mt-5 rounded-[12px] border border-[#0d1b2e] bg-white px-4 py-4">
             <div className="flex items-start gap-3">
-              <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-green-600 text-white">
+              <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#0d1b2e] text-white">
                 <ReviewBadgeIcon />
               </span>
               <div>
                 <p className="font-['Manrope'] text-[14px] font-bold text-[#0d1b2e]">Highly Rated Experience - Leave a Review</p>
                 <p className="mt-1 text-[12.5px] leading-[1.55] text-slate-500">
-                  <a href="#" className="font-semibold text-green-700 underline decoration-green-200 underline-offset-2">
+                  <a href="#" className="font-semibold text-[#0d1b2e] underline decoration-slate-300 underline-offset-2">
                     {data.leaveReviewCta.linkText.replace(/\s*-+>\s*$/, "")} →
                   </a>{" "}
                   - {data.leaveReviewCta.text.replace(/^Had a great experience\?\s*/i, "")}

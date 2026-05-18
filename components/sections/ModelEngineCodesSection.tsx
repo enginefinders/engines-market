@@ -529,8 +529,8 @@ export default function ModelEngineCodesSection({ data, guide, modelName }: Prop
           width: 38px;
           height: 38px;
           border-radius: 12px;
-          background: #edf9f1;
-          color: #13823d;
+          background: #f5f8fc;
+          color: #0d1b2e;
           display: grid;
           place-items: center;
           flex: 0 0 auto;
@@ -1032,7 +1032,7 @@ export default function ModelEngineCodesSection({ data, guide, modelName }: Prop
 
         .model-engine-codes .closing-card {
           margin-top: 30px;
-          border: 1px solid rgba(19, 130, 61, 0.24);
+          border: 1px solid #0d1b2e;
           border-radius: 22px;
           background: #ffffff;
           display: grid;
@@ -1047,8 +1047,8 @@ export default function ModelEngineCodesSection({ data, guide, modelName }: Prop
           width: 58px;
           height: 58px;
           border-radius: 16px;
-          background: #edf9f1;
-          color: #13823d;
+          background: #f5f8fc;
+          color: #0d1b2e;
           display: grid;
           place-items: center;
         }
@@ -1075,12 +1075,12 @@ export default function ModelEngineCodesSection({ data, guide, modelName }: Prop
           min-height: 48px;
           padding: 0 20px;
           border-radius: 14px;
-          background: linear-gradient(180deg, #20a451 0%, #13823d 100%);
+          background: #0d1b2e;
           color: #ffffff;
           font-size: 15px;
           font-weight: 800;
           white-space: nowrap;
-          box-shadow: 0 10px 20px rgba(19, 130, 61, 0.18);
+          box-shadow: 0 10px 20px rgba(13, 27, 46, 0.18);
         }
 
         @media (max-width: 920px) {

@@ -1,0 +1,1190 @@
+{
+  "brand": {
+    "name": "Mini",
+    "slug": "mini",
+    "tone": "premium"
+  },
+  "seo": {
+    "title": "Mini Engine Replacement – Supply & Fit Available UK-Wide",
+    "description": "Get your Mini engine quote today from trusted Mini engine specialists. Compare live prices on reconditioned, rebuilt and used engines – supply & fit available for a seamless replacement.",
+    "canonical": "/mini"
+  },
+  "assets": {
+    "heroBg": "/images/brands/mini/brand/mini-hero-bg.webp",
+    "howItWorksBg": "/images/brands/mini/brand/mini-how-it-works-bg.webp",
+    "commonProblemsBg": "/images/brands/mini/brand/mini-common-problems-bg.webp",
+    "engineCodesBg": "/images/brands/mini/brand/mini-engine-codes-bg.webp",
+    "engineTypesBg": "/images/brands/mini/brand/mini-engine-types-bg.webp",
+    "engineSizesBg": "/images/brands/mini/brand/mini-engine-sizes-bg.webp",
+    "fuelTypesBg": "/images/brands/mini/brand/mini-fuel-types-bg.webp",
+    "engineCodeDirectoryBg": "/images/brands/mini/brand/mini-engine-code-directory-bg.webp"
+  },
+  "sections": {
+    "hero": {
+      "tag": "UK Engine Marketplace",
+      "h1": "Mini Engine Replacement – Supply & Fit Available UK-Wide",
+      "subheading": "Get your Mini engine quote today from trusted Mini engine specialists. Compare live prices on reconditioned, rebuilt and used engines – supply & fit available for a seamless replacement.",
+      "trustBadges": [
+        "Supply & Fit Available",
+        "12-Month Warranty",
+        "Nationwide Collection & Delivery"
+      ],
+      "ctaLinkText": "Compare Mini Engine Prices →",
+      "supportingText": "Get instant Mini engine quote today from the biggest Engine Marketplace in UK for transparent, no-obligation pricing.",
+      "ticker": "Instant Quotes – No Obligation – 100% Free – Trusted UK Suppliers",
+      "form": {
+        "heading": "Find Your Mini Engine",
+        "subtitle": "Enter your registration number to get started.",
+        "inputPlaceholder": "Registration Number",
+        "buttonText": "Get Free Engine Quotes",
+        "note": "Your details are secure. No spam, just genuine quotes from UK Mini specialists."
+      }
+    },
+    "howItWorks": {
+      "tag": "How It Works",
+      "h2": "3 Simple Steps to Finding the Best Mini Replacement Engine",
+      "cards": [
+        {
+          "number": 1,
+          "icon": "registration",
+          "front": {
+            "h3": "Enter Your Mini Registration",
+            "text": "Instantly verify your exact model, engine code and fuel type via DVLA — Mini One to Mini John Cooper Works."
+          },
+          "back": {
+            "heading": "Your Car, Precisely Identified",
+            "text": "Engines Market uses the official DVLA database to pull accurate details about your Mini, not just model name.",
+            "bullets": [
+              "Your Precise Model — from Mini One, Mini Cooper, Mini Cooper S, Mini Clubman to Mini Countryman, Mini Convertible, Mini JCW",
+              "Your Engine Code — N14, N18, N47, B38, B48, B47, N12 and more",
+              "Vehicle Specs Check — fuel type, engine size, year, variant — all verified instantly",
+              "No paperwork, no guesswork, 100% free."
+            ]
+          }
+        },
+        {
+          "number": 2,
+          "icon": "quote",
+          "front": {
+            "h3": "Get Quotes from Mini Engine Specialists",
+            "text": "Same-day quotes from vetted UK suppliers — full breakdown, no obligation."
+          },
+          "back": {
+            "heading": "Quotes You Can Trust",
+            "text": "Your verified details are securely shared with up to 10 of our most relevant UK suppliers, matched to your variant and location.",
+            "bullets": [
+              "Vetted UK Suppliers — specialists who understand Mini diesel and petrol engines",
+              "Same-Day Quotes — usually within hours, not days",
+              "Supply & Fit Service — or supply-only to your own garage",
+              "Full Breakdown — price, warranty length, delivery estimate and fitting cost all shown clearly",
+              "No hidden fees. No sales calls unless you approve."
+            ]
+          }
+        },
+        {
+          "number": 3,
+          "icon": "shield",
+          "front": {
+            "h3": "Choose the Best Deal & Save",
+            "text": "Compare supplier reviews, warranty and price — then pick the right one for you."
+          },
+          "back": {
+            "heading": "Your Choice, Your Control",
+            "text": "You decide which specialist to go with. We simply make the search fast, safe and transparent.",
+            "bullets": [
+              "Online Reviews — read real customer feedback",
+              "Warranty Length — minimum 12 months, often 24 months on rebuilt units",
+              "Terms of Service — including collection, fitting and aftercare",
+              "Technical Expertise — see each supplier's Mini experience",
+              "You deal directly with your chosen provider. No pressure, no commitment until you're ready."
+            ]
+          }
+        }
+      ],
+      "tagline": "Get Instant Quotes from Mini Engine Specialists Across the UK — 100% free, no obligation. Most replacements completed within 3–5 days."
+    },
+    "liveMarketPrices": {
+      "tag": "Live Market Prices",
+      "h2": "Recent Mini Engine Quotes & Price Guide",
+      "h3": "Based on real enquiries from UK buyers – updated regularly. All prices are typical UK rebuilt engine market ranges and reflect recent quotes from our network of Mini engine specialists.",
+      "introBullets": [
+        {
+          "label": "Real-Time Data",
+          "text": "Below are the 20 most recently requested Mini engine replacement enquiries from UK owners."
+        },
+        {
+          "label": "Transparent Pricing",
+          "text": "Each entry shows the model, engine code, typical market price range, and the most common failure reason driving replacement."
+        },
+        {
+          "label": "Cost Insights",
+          "text": "These are genuine search patterns — not stock listings."
+        },
+        {
+          "label": "Get Your Quote",
+          "text": "Use this guide to understand what Mini owners are paying for Mini engine replacement cost and what problems lead to engine replacement."
+        }
+      ],
+      "cta": {
+        "heading": "Use the feed as your benchmark",
+        "text": "Use these recent buyer enquiries to benchmark your own Mini engine price before you compare specialist quotes.",
+        "buttonText": "Compare My Mini Engine",
+        "note": "Feed timestamps refresh automatically from the latest quote data."
+      },
+      "badges": [
+        "20 recent enquiries visible",
+        "Typical UK rebuilt ranges",
+        "Engine-code matched rows",
+        "Updated regularly"
+      ],
+      "feed": {
+        "isDynamic": true,
+        "rowsCount": 0,
+        "columns": [
+          "Year",
+          "Model",
+          "Engine Code",
+          "Fuel",
+          "Avg. Quoted Price",
+          "Reported Issue"
+        ],
+        "timestampLabel": "Last Updated",
+        "refreshLabel": "Refresh feed",
+        "density": "premium",
+        "visibleRows": 20,
+        "entries": []
+      }
+    },
+    "reviews": {
+      "tag": "Customer Reviews",
+      "h2": "Trusted by Mini Owners Across the UK",
+      "rating": {
+        "value": 4.8,
+        "count": 1000,
+        "summary": "Rated 4.8 out of 5 by verified customers who sourced reconditioned and used Mini engines through EngineMarket.",
+        "basedOn": "Based on real post-sale feedback from buyers matched with our network of UK engine specialists."
+      },
+      "reviews": [
+        {
+          "text": "Thanks to EngineMarket, I saved over £1,000 on my Mini engine and found a solid local specialist quickly.",
+          "name": "Jimmy",
+          "location": "London"
+        },
+        {
+          "text": "Got multiple quotes for my Mini within hours and the whole process felt straightforward.",
+          "name": "Pete",
+          "location": "Leeds"
+        },
+        {
+          "text": "I wasn't sure which Mini engine I needed, but the quote process helped me narrow it down fast.",
+          "name": "Sophie",
+          "location": "Birmingham"
+        },
+        {
+          "text": "Fast turnaround, clear pricing, and the warranty gave me real peace of mind for my Mini.",
+          "name": "Ahmed",
+          "location": "Bradford"
+        },
+        {
+          "text": "One of the easiest car-related experiences I've had. Honest, quick, and much cheaper than expected.",
+          "name": "Liam",
+          "location": "Manchester"
+        },
+        {
+          "text": "EngineMarket made a stressful Mini engine failure much easier to deal with from start to finish.",
+          "name": "Tom",
+          "location": "Glasgow"
+        }
+      ],
+      "leaveReviewCta": {
+        "text": "Had a great experience?",
+        "linkText": "Leave a review ->"
+      }
+    },
+    "models": {
+      "tag": "Models We Cover",
+      "h2": "Popular Mini Engine Replacement Models",
+      "subheading": "From the Mini One to the John Cooper Works, our network of UK Mini engine specialists covers every model in the range. Select your Mini below to compare rebuilt engine prices and get quotes from trusted suppliers.",
+      "cards": [
+        {
+          "h3": "Mini Clubman Engines",
+          "slug": "clubman",
+          "subtitle": "Available for One, Cooper, Cooper S, Clubman D & John Cooper Works",
+          "priceRange": "£1,500 – £3,800",
+          "cta": "Compare Mini Clubman Engine Prices",
+          "image": "/images/brands/mini/models/mini-clubman-model-card.webp"
+        },
+        {
+          "h3": "Mini Clubvan Engines",
+          "slug": "clubvan",
+          "subtitle": "Available for One D, Cooper D, Cooper SD (commercial variants)",
+          "priceRange": "£1,600 – £3,500",
+          "cta": "Compare Mini Clubvan Engine Prices",
+          "image": "/images/brands/mini/models/mini-clubvan-model-card.webp"
+        },
+        {
+          "h3": "Mini Convertible Engines",
+          "slug": "convertible",
+          "subtitle": "Available for Cooper, Cooper S, Cooper D & John Cooper Works",
+          "priceRange": "£1,600 – £4,000",
+          "cta": "Compare Mini Convertible Engine Prices",
+          "image": "/images/brands/mini/models/mini-convertible-model-card.webp"
+        },
+        {
+          "h3": "Mini Cooper Engines",
+          "slug": "cooper",
+          "subtitle": "Available for 1.2L, 1.4L, 1.5L petrol, 1.5L diesel & Cooper S variants",
+          "priceRange": "£1,400 – £3,200",
+          "cta": "Compare Mini Cooper Engine Prices",
+          "image": "/images/brands/mini/models/mini-cooper-model-card.webp"
+        },
+        {
+          "h3": "Mini Country Man Engines",
+          "slug": "country-man",
+          "subtitle": "Available for One, Cooper, Cooper S, Cooper D & Cooper SE (PHEV)",
+          "priceRange": "£1,800 – £4,500",
+          "cta": "Compare Mini Country Man Engine Prices",
+          "image": "/images/brands/mini/models/mini-country-man-model-card.webp"
+        },
+        {
+          "h3": "Mini Coupe Engines",
+          "slug": "coupe",
+          "subtitle": "Available for Cooper, Cooper S, John Cooper Works (R58 platform)",
+          "priceRange": "£1,700 – £3,900",
+          "cta": "Compare Mini Coupe Engine Prices",
+          "image": "/images/brands/mini/models/mini-coupe-model-card.webp"
+        },
+        {
+          "h3": "Mini One Engines",
+          "slug": "one",
+          "subtitle": "Available for 1.2L, 1.4L petrol, 1.5L diesel & First Edition variants",
+          "priceRange": "£1,200 – £2,800",
+          "cta": "Compare Mini One Engine Prices",
+          "image": "/images/brands/mini/models/mini-one-model-card.webp"
+        },
+        {
+          "h3": "Mini Paceman Engines",
+          "slug": "paceman",
+          "subtitle": "Available for Cooper, Cooper S, Cooper D & John Cooper Works",
+          "priceRange": "£1,900 – £4,300",
+          "cta": "Compare Mini Paceman Engine Prices",
+          "image": "/images/brands/mini/models/mini-paceman-model-card.webp"
+        },
+        {
+          "h3": "Mini Roadster Engines",
+          "slug": "roadster",
+          "subtitle": "Available for Cooper, Cooper S & John Cooper Works (R59 platform)",
+          "priceRange": "£2,000 – £4,800",
+          "cta": "Compare Mini Roadster Engine Prices",
+          "image": "/images/brands/mini/models/mini-roadster-model-card.webp"
+        }
+      ]
+    },
+    "engineCodes": {
+      "tag": "Replacement Cost",
+      "h2": "Mini Engine Codes & Average Rebuilt Prices (UK Supply)",
+      "h3": "Compare costs for every major Mini engine — Prince petrol (N14/N18), N47/B47 diesel, and B38/B48 Gen 3 turbo families. All prices are typical UK market ranges for professionally rebuilt engines with warranty. Click \"Get Quote\" on any engine to receive tailored prices from our network of UK Mini specialists.",
+      "filters": [
+        "All",
+        "Diesel",
+        "Petrol",
+        "Prince",
+        "N47",
+        "B‑Series",
+        "Early",
+        "Additional"
+      ],
+      "groups": [
+        {
+          "name": "Prince Family Petrol Engines",
+          "era": "2006‑2015",
+          "failureNote": "[Get Quote →] [Get Quote →] [Get Quote →] [Get Quote →] [Get Quote →] [Get Quote →] Common failure points (expandable note): Prince family engines (N14/N18) are notorious for timing chain tensioner and guide failure, often causing catastrophic engine damage. Our rebuilt units include upgraded chain kits, revised tensioners, and high‑pressure fuel pump checks to prevent repeat failures.",
+          "engines": [
+            {
+              "code": "N12B16A",
+              "fuel": "Petrol",
+              "size": "1.6L",
+              "power": "115‑120 HP",
+              "compatibleModels": "Mini One (R56), Mini Cooper (R50/R53)",
+              "avgRebuiltPrice": "£1,400 – £2,600",
+              "cta": "Get Quote for N12B16A"
+            },
+            {
+              "code": "N14B16A",
+              "fuel": "Petrol",
+              "size": "1.6L Turbo",
+              "power": "170‑175 HP",
+              "compatibleModels": "Mini Cooper S (R56), Mini Clubman S (R55)",
+              "avgRebuiltPrice": "£2,200 – £4,200",
+              "cta": "Get Quote for N14B16A"
+            },
+            {
+              "code": "N16B16A",
+              "fuel": "Petrol",
+              "size": "1.6L",
+              "power": "120‑122 HP",
+              "compatibleModels": "Mini One (R56), Mini Cooper (F56 early)",
+              "avgRebuiltPrice": "£1,500 – £2,800",
+              "cta": "Get Quote for N16B16A"
+            },
+            {
+              "code": "N18B16A",
+              "fuel": "Petrol",
+              "size": "1.6L Turbo",
+              "power": "180‑184 HP",
+              "compatibleModels": "Mini Cooper S (R56 LCI), Mini Countryman S (R60)",
+              "avgRebuiltPrice": "£2,400 – £4,500",
+              "cta": "Get Quote for N18B16A"
+            },
+            {
+              "code": "N14B16B",
+              "fuel": "Petrol",
+              "size": "1.6L Turbo",
+              "power": "211 HP",
+              "compatibleModels": "Mini John Cooper Works (R56)",
+              "avgRebuiltPrice": "£3,200 – £5,800",
+              "cta": "Get Quote for N14B16B"
+            },
+            {
+              "code": "N18B16B",
+              "fuel": "Petrol",
+              "size": "1.6L Turbo",
+              "power": "218 HP",
+              "compatibleModels": "Mini John Cooper Works (R56 LCI), Paceman JCW (R61)",
+              "avgRebuiltPrice": "£3,400 – £6,200",
+              "cta": "Get Quote for N18B16B"
+            }
+          ]
+        },
+        {
+          "name": "N47 Diesel Family",
+          "era": "2010‑2018",
+          "failureNote": "[Get Quote →] [Get Quote →] [Get Quote →] Common failure points (expandable note): N47 diesel engines are widely known for timing chain wear and EGR/DPF clogging leading to oil starvation. Our rebuilt N47 units include reinforced chain assemblies, updated tensioners, and full injector testing to restore reliability.",
+          "engines": [
+            {
+              "code": "N47C16A",
+              "fuel": "Diesel",
+              "size": "1.6L",
+              "power": "90‑114 HP",
+              "compatibleModels": "Mini One D (R56), Mini Cooper D (R56)",
+              "avgRebuiltPrice": "£1,900 – £3,800",
+              "cta": "Get Quote for N47C16A"
+            },
+            {
+              "code": "N47D20A",
+              "fuel": "Diesel",
+              "size": "2.0L",
+              "power": "143 HP",
+              "compatibleModels": "Mini Cooper SD (R56), Mini Clubman D (R55)",
+              "avgRebuiltPrice": "£2,400 – £4,600",
+              "cta": "Get Quote for N47D20A"
+            },
+            {
+              "code": "N47D20C",
+              "fuel": "Diesel",
+              "size": "2.0L",
+              "power": "177 HP",
+              "compatibleModels": "Mini Cooper SD (R60 Countryman), Mini Paceman SD (R61)",
+              "avgRebuiltPrice": "£2,600 – £4,900",
+              "cta": "Get Quote for N47D20C"
+            }
+          ]
+        },
+        {
+          "name": "B‑Series Gen 3 Petrol",
+          "era": "2014‑Present",
+          "failureNote": "[Get Quote →] [Get Quote →] [Get Quote →] [Get Quote →] Common failure points (expandable note): B38/B48 Gen 3 engines are more reliable but can suffer from carbon buildup on intake valves and turbo wastegate sticking. Our rebuilt units include decarbonised heads, updated turbo actuators, and OEM‑spec gaskets for long‑term performance.",
+          "engines": [
+            {
+              "code": "B38A15A",
+              "fuel": "Petrol",
+              "size": "1.5L Turbo",
+              "power": "102‑136 HP",
+              "compatibleModels": "Mini One (F56), Mini Cooper (F55/F56)",
+              "avgRebuiltPrice": "£1,800 – £3,400",
+              "cta": "Get Quote for B38A15A"
+            },
+            {
+              "code": "B38B15A",
+              "fuel": "Petrol",
+              "size": "1.5L Turbo",
+              "power": "136 HP",
+              "compatibleModels": "Mini Cooper (F56), Mini Clubman (F54)",
+              "avgRebuiltPrice": "£2,000 – £3,800",
+              "cta": "Get Quote for B38B15A"
+            },
+            {
+              "code": "B48A20A",
+              "fuel": "Petrol",
+              "size": "2.0L Turbo",
+              "power": "192 HP",
+              "compatibleModels": "Mini Cooper S (F56), Mini Clubman S (F54)",
+              "avgRebuiltPrice": "£2,800 – £5,200",
+              "cta": "Get Quote for B48A20A"
+            },
+            {
+              "code": "B48A20F",
+              "fuel": "Petrol",
+              "size": "2.0L Turbo",
+              "power": "231 HP",
+              "compatibleModels": "Mini John Cooper Works (F56), Mini Countryman JCW (F60)",
+              "avgRebuiltPrice": "£3,600 – £6,800",
+              "cta": "Get Quote for B48A20F"
+            }
+          ]
+        },
+        {
+          "name": "B‑Series Diesel",
+          "era": "2014‑Present",
+          "failureNote": "[Get Quote →] [Get Quote →] [Get Quote →] Common failure points (expandable note): B47 diesel engines can experience EGR cooler leaks and turbo vane sticking under high mileage. Our rebuilt B47 units include refurbished turbos, cleaned EGR systems, and full compression testing to meet OEM specifications.",
+          "engines": [
+            {
+              "code": "B37C15A",
+              "fuel": "Diesel",
+              "size": "1.5L",
+              "power": "95‑116 HP",
+              "compatibleModels": "Mini One D (F56), Mini Cooper D (F55)",
+              "avgRebuiltPrice": "£2,000 – £3,900",
+              "cta": "Get Quote for B37C15A"
+            },
+            {
+              "code": "B47C20A",
+              "fuel": "Diesel",
+              "size": "2.0L",
+              "power": "150 HP",
+              "compatibleModels": "Mini Cooper SD (F56), Mini Clubman SD (F54)",
+              "avgRebuiltPrice": "£2,700 – £5,100",
+              "cta": "Get Quote for B47C20A"
+            },
+            {
+              "code": "B47D20A",
+              "fuel": "Diesel",
+              "size": "2.0L",
+              "power": "190 HP",
+              "compatibleModels": "Mini Countryman SD (F60), Mini Clubman All4 (F54)",
+              "avgRebuiltPrice": "£3,000 – £5,600",
+              "cta": "Get Quote for B47D20A"
+            }
+          ]
+        },
+        {
+          "name": "Early W‑Series / Chrysler‑Sourced",
+          "era": "2001‑2006",
+          "failureNote": "[Get Quote →] [Get Quote →] Common failure points (expandable note): W11 supercharged engines are prone to Eaton supercharger coupler wear and head gasket failure on high‑mileage examples. Our rebuilt W‑series units include refreshed supercharger components and multi‑layer steel head gaskets for durability.",
+          "engines": [
+            {
+              "code": "W10B16A",
+              "fuel": "Petrol",
+              "size": "1.6L",
+              "power": "90‑115 HP",
+              "compatibleModels": "Mini One (R50), Mini Cooper (R50)",
+              "avgRebuiltPrice": "£1,200 – £2,400",
+              "cta": "Get Quote for W10B16A"
+            },
+            {
+              "code": "W11B16A",
+              "fuel": "Petrol",
+              "size": "1.6L Supercharged",
+              "power": "163‑170 HP",
+              "compatibleModels": "Mini Cooper S (R53), Mini Convertible S (R52)",
+              "avgRebuiltPrice": "£2,000 – £4,000",
+              "cta": "Get Quote for W11B16A"
+            }
+          ]
+        },
+        {
+          "name": "Additional High‑Demand Codes",
+          "era": "2008‑2025",
+          "failureNote": "[Get Quote →] [Get Quote →] [Get Quote →] [Get Quote →] [Get Quote →] [Get Quote →] [Get Quote →] [Get Quote →] [Get Quote →] [Get Quote →] Common failure points (expandable note): These additional codes share failure patterns with their parent families (timing chain, turbo, EGR). Our network rebuilds each to the same upgraded standard with warranty‑backed components tailored to the specific code's known weaknesses. Closing note: Not sure which engine code your Mini uses? Enter your registration number and we'll match you to the exact engine and best quote — instantly. All engines supplied with a minimum 12‑month warranty from UK Mini specialists. Developer Notes: - Each \"Get Quote →\" should be a button that pre‑fills the engine code into the quote request form. - Implement expandable failure notes using `<details>/<summary>` or JS toggle for mobile‑friendly UX. - Table should be horizontally scrollable on mobile; maintain sticky header for Engine Code column. - Add `data-engine-code` attributes to each row for future deep‑linking to dedicated engine pages (e.g., `/mini-n14b16a-engine/`). - Lazy‑load table rows below the fold to preserve Core Web Vitals (LCP, CLS).",
+          "engines": [
+            {
+              "code": "N16B16B",
+              "fuel": "Petrol",
+              "size": "1.6L",
+              "power": "122 HP",
+              "compatibleModels": "Mini Cooper (R56 LCI), Mini Roadster (R59)",
+              "avgRebuiltPrice": "£1,600 – £3,000",
+              "cta": "Get Quote for N16B16B"
+            },
+            {
+              "code": "N47C16B",
+              "fuel": "Diesel",
+              "size": "1.6L",
+              "power": "114 HP",
+              "compatibleModels": "Mini Cooper D (R60 Countryman)",
+              "avgRebuiltPrice": "£2,100 – £4,000",
+              "cta": "Get Quote for N47C16B"
+            },
+            {
+              "code": "B38A15M",
+              "fuel": "Petrol",
+              "size": "1.5L Hybrid",
+              "power": "136+22 HP",
+              "compatibleModels": "Mini Cooper SE Countryman (F60 PHEV)",
+              "avgRebuiltPrice": "£2,400 – £4,800",
+              "cta": "Get Quote for B38A15M"
+            },
+            {
+              "code": "B48A20M",
+              "fuel": "Petrol",
+              "size": "2.0L Hybrid",
+              "power": "192+22 HP",
+              "compatibleModels": "Mini Cooper S SE Countryman (F60 PHEV)",
+              "avgRebuiltPrice": "£3,200 – £6,000",
+              "cta": "Get Quote for B48A20M"
+            },
+            {
+              "code": "N14B16C",
+              "fuel": "Petrol",
+              "size": "1.6L Turbo",
+              "power": "175 HP",
+              "compatibleModels": "Mini Cooper S (R57 Convertible)",
+              "avgRebuiltPrice": "£2,300 – £4,400",
+              "cta": "Get Quote for N14B16C"
+            },
+            {
+              "code": "N18B16C",
+              "fuel": "Petrol",
+              "size": "1.6L Turbo",
+              "power": "184 HP",
+              "compatibleModels": "Mini Cooper S (R57 LCI), Mini Coupe S (R58)",
+              "avgRebuiltPrice": "£2,500 – £4,700",
+              "cta": "Get Quote for N18B16C"
+            },
+            {
+              "code": "B37C15B",
+              "fuel": "Diesel",
+              "size": "1.5L",
+              "power": "116 HP",
+              "compatibleModels": "Mini Cooper D (F57 Convertible)",
+              "avgRebuiltPrice": "£2,200 – £4,100",
+              "cta": "Get Quote for B37C15B"
+            },
+            {
+              "code": "B47C20B",
+              "fuel": "Diesel",
+              "size": "2.0L",
+              "power": "150 HP",
+              "compatibleModels": "Mini Cooper SD (F57 Convertible)",
+              "avgRebuiltPrice": "£2,900 – £5,300",
+              "cta": "Get Quote for B47C20B"
+            },
+            {
+              "code": "W10B16M",
+              "fuel": "Petrol",
+              "size": "1.6L",
+              "power": "90 HP",
+              "compatibleModels": "Mini One (R52 Convertible)",
+              "avgRebuiltPrice": "£1,300 – £2,500",
+              "cta": "Get Quote for W10B16M"
+            },
+            {
+              "code": "N47D20B",
+              "fuel": "Diesel",
+              "size": "2.0L",
+              "power": "143 HP",
+              "compatibleModels": "Mini Cooper SD (R57 Convertible)",
+              "avgRebuiltPrice": "£2,500 – £4,800",
+              "cta": "Get Quote for N47D20B"
+            }
+          ]
+        }
+      ]
+    },
+    "commonProblems": {
+      "tag": "Common Problems",
+      "h2": "Common Mini Engine Problems — What It Costs to Fix & When Replacement Makes Sense",
+      "h3": "",
+      "problems": [
+        {
+          "group": "Timing Chain Failure",
+          "h4": "Timing Chain Failure – Why N14/N18 Mini Engines Fail Prematurely",
+          "image": "/images/brands/mini/engines/mini-timing-chain-failure-card.webp",
+          "affectedModels": "Mini Cooper S, JCW (2007–2014, N14B16A & N18B16A engines)",
+          "typicalFailureMileage": "40,000–80,000 miles",
+          "rootCause": "Plastic timing chain guides become brittle with heat cycles and oil contamination; once they fracture, the chain stretches, jumps timing, and can cause catastrophic valve-to-piston contact.",
+          "recommendation": "On an N14/N18 Mini Cooper S valued under £4,000, a preventative chain kit is only worth pursuing if the car has no rattles and low mileage. Once you hear chain rattle on cold start or have a fault code, the risk of valve damage is high — and at that point, a rebuilt engine with upgraded guides from EngineMarket's network offers better value, reliability, and peace of mind than gambling on a partial repair.",
+          "cta": "→ Compare rebuilt N14/N18 engine prices for your Mini Cooper S"
+        },
+        {
+          "group": "N47 Diesel Timing Chain & Bottom-End Failure",
+          "h4": "N47 Diesel Timing Chain & Bottom‑End Failure – The Cooper D Weak Point",
+          "image": "/images/brands/mini/engines/mini-n47-diesel-timing-chain-and-bottom-end-failure-card.webp",
+          "affectedModels": "Mini Cooper D, Countryman D, Clubman D (2007–2015, N47D16 & N47C16A engines)",
+          "typicalFailureMileage": "60,000–120,000 miles",
+          "rootCause": "Rear-mounted timing chain design makes tensioner access difficult; oil starvation or tensioner wear allows chain slack, leading to guide failure, chain snap, or bottom-end bearing damage.",
+          "recommendation": "The N47's rear-chain design makes preventative repair complex and costly. If your Mini Cooper D shows timing chain rattle, oil pressure warnings, or metallic knocking, do not delay — continued driving risks total engine seizure. A rebuilt N47 from EngineMarket's specialist network, fitted with upgraded tensioners and backed by a 12‑month warranty, is the most cost-effective path to reliable motoring.",
+          "cta": "→ Get quotes for rebuilt N47 diesel engines for your Mini Cooper D"
+        },
+        {
+          "group": "Oil Starvation & Turbo Failure",
+          "h4": "Oil Starvation & Turbo Failure – Turbocharged Mini Engine Vulnerability",
+          "image": "/images/brands/mini/engines/mini-oil-starvation-and-turbo-failure-card.webp",
+          "affectedModels": "Mini Cooper S, JCW, Cooper SD (2007–2020, N14/N18/B48 petrol & N47/B47 diesel turbo engines)",
+          "typicalFailureMileage": "50,000–100,000 miles",
+          "rootCause": "Oil pump wear, sludge buildup from infrequent oil changes, or turbo oil feed line blockage restricts lubrication to bearings and turbocharger, causing accelerated wear, knocking, or seizure.",
+          "recommendation": "If your Mini shows oil pressure warnings, knocking on acceleration, or excessive blue smoke, stop driving immediately and get a compression test. Minor oil system work is only a stopgap; once bearings are scored, a rebuilt engine with upgraded oiling components is the only route to long-term reliability — and EngineMarket's specialists can supply and fit one with warranty protection.",
+          "cta": "→ Compare rebuilt turbo Mini engine prices for your model"
+        },
+        {
+          "group": "High-Pressure Fuel Pump (HPFP) Failure",
+          "h4": "High‑Pressure Fuel Pump (HPFP) Failure – N14/N18 Direct Injection Weakness",
+          "image": "/images/brands/mini/engines/mini-high-pressure-fuel-pump-hpfp-failure-card.webp",
+          "affectedModels": "Mini Cooper S, JCW (2007–2014, N14B16A & N18B16A engines with direct injection)",
+          "typicalFailureMileage": "40,000–90,000 miles",
+          "rootCause": "Internal HPFP components wear under high pressure, causing fuel pressure loss, lean running, misfires, and potential piston damage from excessive combustion temperatures.",
+          "recommendation": "HPFP failure on N14/N18 engines often triggers a \"limp mode\" before catastrophic damage. If your Mini shows rough idle, loss of power, or fuel pressure codes, get a specialist diagnosis immediately. If compression is healthy, a new HPFP may suffice; if pistons or valves are damaged, a rebuilt engine from EngineMarket's network is the only reliable, warrantied solution.",
+          "cta": "→ Get quotes for rebuilt N14/N18 engines with upgraded fuel systems"
+        }
+      ],
+      "finalCta": {
+        "h4": "Don't Let Engine Failure Write Off Your Mini",
+        "paragraph": "All prices are indicative UK market ranges based on historical quote data and repair requests from our network of engine specialists. Dealer pricing is estimated based on published main dealer labour rates and genuine OEM parts pricing. Specialist pricing reflects actual quote data from EngineMarket's UK network. Actual costs vary depending on damage severity, vehicle condition, variant, and workshop location within the UK. Use our free comparison tool to get tailored quotes for your specific Mini model and engine code. Every engine supplied through EngineMarket carries a minimum 12‑month unlimited mileage warranty — always confirm exact terms with your chosen supplier. Keyword Coverage Table | Keyword | Integration | |---|---| | common mini engine problems | H2 heading | | mini timing chain problems | H4 heading (N14/N18 group) | | mini timing chain replacement cost | Tiered table pricing rows (N14/N18 & N47 groups) | | mini engine replacement cost | Tiered table \"Full Replacement\" rows across all groups | | mini engine repair or replace | \"Our recommendation\" blocks throughout | | mini engine failure | Root cause paragraphs; final conversion paragraph | | mini n47 diesel engine problems | H4 heading (N47 group); affected models line | | mini oil starvation engine failure | H4 heading (Oil Starvation group); root cause | | mini cooper s engine problems | Affected models lines (N14/N18, HPFP groups) | | mini countryman engine failure | Affected models line (N47 group) | | mini engine rebuild cost | Tiered table \"Full Replacement\" rows; final CTA | | is it worth replacing a mini engine | \"Our recommendation\" blocks; final conversion paragraph | | compare mini engine prices | Final CTA button; multiple CTAs throughout | | mini engine for sale uk | Final conversion paragraph (marketplace value prop) | | mini engine supply and fit | Tiered table \"Full Replacement\" rows; final disclaimer | | n14 mini engine replacement | CTAs; affected models/engine codes | | n18 mini engine replacement | CTAs; affected models/engine codes | | n47 mini engine replacement | CTAs; affected models/engine codes | | reconditioned mini engine | \"Full Replacement\" tier descriptions; warranty mentions | | mini engine replacement quote | CTAs throughout; final CTA button |",
+        "buttonText": "Compare Mini Engine Replacement Prices Now →",
+        "disclaimer": ""
+      }
+    },
+    "engineTypes": {
+      "tag": "Replacement Engine Options",
+      "h2": "Mini Engine Types – Options, Costs & What to Expect",
+      "intro": "Every Mini engine type available through our UK network, with typical price ranges and recommendations based on your vehicle's age, condition and your budget.",
+      "types": [
+        {
+          "title": "Mini Reconditioned Engines (Recon)",
+          "description": "A stripped, cleaned and fully inspected engine where all worn components are replaced with OEM‑spec parts. Best for Mini owners wanting factory‑level reliability on N14/N18 or N47 engines without the main‑dealer price tag.",
+          "priceRange": "Typical price range: £1,500 – £3,800 (depending on engine code)",
+          "cta": "Compare reconditioned Mini engine prices"
+        },
+        {
+          "title": "Mini Rebuilt Engines",
+          "description": "A complete rebuild with upgraded components addressing known Mini failure points – such as reinforced timing chain kits for N14/N18 petrol engines and uprated bearing shells for N47 diesel units – for a longer service life than a standard replacement.",
+          "priceRange": "Typical price range: £2,200 – £4,800",
+          "cta": "Get rebuilt Mini engine quotes"
+        },
+        {
+          "title": "Used Mini Engines",
+          "description": "A tested, low‑mileage take‑out unit from a donor vehicle. The most affordable option when budget is the priority, with verified history and warranty available – ideal for older R50/R53 Minis or short‑term ownership plans.",
+          "priceRange": "Typical price range: £800 – £2,400",
+          "cta": "Check used Mini engine availability"
+        },
+        {
+          "title": "Mini Remanufactured Engines",
+          "description": "A factory‑spec, as‑new engine: every surface is machined, every component is replaced, and the unit is built to meet exact OEM tolerances. The premium choice for John Cooper Works models or owners wanting zero‑mile reliability on high‑mileage Minis.",
+          "priceRange": "Typical price range: £3,000 – £6,500",
+          "cta": "Compare remanufactured Mini engine costs"
+        },
+        {
+          "title": "Mini Refurbished Engines",
+          "description": "A lightly serviced, cleaned, and tested engine that works reliably but hasn't had a complete rebuild. Often a pragmatic, fast solution for older or budget‑sensitive Minis where a full recondition isn't economical.",
+          "priceRange": "Typical price range: £1,200 – £2,900",
+          "cta": "View refurbished Mini engine options"
+        },
+        {
+          "title": "Mini Supply & Fit Engines",
+          "description": "Your replacement engine delivered and professionally installed by a UK Mini specialist. Includes removal of the old unit, fitting, fluids, and a workmanship warranty – the hassle‑free option for owners without garage access.",
+          "priceRange": "Typical added cost: £400 – £900 on top of engine price",
+          "cta": "Find Mini engine supply & fit deals"
+        }
+      ],
+      "closing": "All engine types include a minimum 12‑month warranty. Prices are typical UK market ranges and depend on exact engine code, supplier, and any additional fitting services. Use our free comparison tool to get a tailored quote for your Mini model today."
+    },
+    "engineSizes": {
+      "tag": "Engine Sizes",
+      "h2": "Mini Engines by Size – Find the Right Displacement for Your Model",
+      "intro": "",
+      "groups": [
+        {
+          "title": "Mini Diesel Engine Sizes",
+          "items": [
+            {
+              "title": "Mini 1.5L Diesel Engines",
+              "description": "The 1.5-litre diesel unit (B37 family) powers entry-level Mini One D and Cooper D models from 2014 onward, offering improved fuel economy over the earlier 1.6L diesel. While generally more reliable than its predecessor, replacement demand is driven by EGR valve clogging and DPF-related issues in urban-use vehicles. Engine code(s): B37C15A Compatible models (UK): Mini One D, Cooper D (F56/F55/F54/F60, 2014–2020) Production years: 2014–2020 Common failure points: EGR valve sticking, DPF regeneration failure in low-mileage use",
+              "cta": "Get quotes for Mini 1.5L diesel engines"
+            },
+            {
+              "title": "Mini 1.6L Diesel Engines",
+              "description": "The 1.6-litre N47C16A diesel was fitted to Cooper D and Countryman D models from 2007–2014 and shares the notorious rear-mounted timing chain design of the larger N47 family. Timing chain tensioner wear and guide failure are the primary causes of catastrophic engine damage, making this displacement one of the most common replacement requests in the Mini diesel range. Engine code(s): N47C16A Compatible models (UK): Mini Cooper D, Clubman D, Countryman D (R56/R55/R60, 2007–2014) Production years: 2007–2014 Common failure points: N47 timing chain tensioner failure, guide fracture, bottom-end bearing wear",
+              "cta": "Get quotes for Mini 1.6L diesel engines"
+            },
+            {
+              "title": "Mini 2.0L Diesel Engines",
+              "description": "The 2.0-litre diesel family (N47D20 and updated B47D20) powers higher-output Cooper SD and Countryman SD models from 2010 onward. While the B47 update addressed many N47 weaknesses, both generations see replacement demand due to timing chain issues (N47) and EGR cooler failures (B47), particularly in high-mileage or poorly maintained examples. Engine code(s): N47D20, B47D20A, B47D20B Compatible models (UK): Mini Cooper SD, Countryman SD, Clubman SD (R56/F56/F60, 2010–present) Production years: 2010–present Common failure points: N47 – timing chain stretch; B47 – EGR cooler leakage, turbo actuator faults",
+              "cta": "Get quotes for Mini 2.0L diesel engines"
+            }
+          ]
+        },
+        {
+          "title": "Mini Petrol Engine Sizes",
+          "items": [
+            {
+              "title": "Mini 1.4L Petrol Engines",
+              "description": "The naturally aspirated 1.4-litre W10B14 engine was fitted to early R50/R53 Mini One and base Cooper models (2001–2006). While mechanically simple and generally robust, replacement demand arises from high-mileage wear, oil consumption, and occasional VANOS variable valve timing issues in neglected examples. Engine code(s): W10B14 Compatible models (UK): Mini One, Mini Cooper (R50/R53, 2001–2006) Production years: 2001–2006 Common failure points: VANOS solenoid wear, oil seal leaks, high-mileage piston ring wear",
+              "cta": "Compare Mini 1.4L petrol engine prices"
+            },
+            {
+              "title": "Mini 1.5L Petrol Engines",
+              "description": "The 1.5-litre B38 three-cylinder turbo petrol engine replaced the older 1.6L family in 2014+ Mini One and Cooper models, offering improved efficiency and lower emissions. Replacement demand is driven by timing chain guide wear (early B38 units) and carbon buildup on direct-injection valves, particularly in short-trip urban driving. Engine code(s): B38A15A, B38A15M0 Compatible models (UK): Mini One, Cooper, Clubman, Countryman (F56/F55/F54/F60, 2014–present) Production years: 2014–present Common failure points: Timing chain guide wear (early units), intake valve carbon buildup, turbo wastegate rattle",
+              "cta": "Compare Mini 1.5L petrol engine prices"
+            },
+            {
+              "title": "Mini 1.6L Petrol Engines",
+              "description": "The 1.6-litre petrol family spans three generations: the robust naturally aspirated W10/W11 (2001–2006), the problematic turbocharged N14 (2006–2010), and the revised N18 (2010–2014). Replacement demand is overwhelmingly driven by N14/N18 timing chain and guide failure — a well-documented weakness that often causes catastrophic valve-to-piston damage if not addressed preventatively. Engine code(s): W10B16, W11B16, N12B16A, N14B16A, N18B16A Compatible models (UK): Mini One, Cooper, Cooper S, JCW (R56/R55/R57/R60, 2001–2014) Production years: 2001–2014 Common failure points: N14/N18 timing chain/guide failure; N14 high-pressure fuel pump failure; W10/W11 VANOS wear",
+              "cta": "Compare Mini 1.6L petrol engine prices"
+            },
+            {
+              "title": "Mini 2.0L Petrol Engines",
+              "description": "The 2.0-litre B48 turbo petrol engine powers Cooper S, JCW, and performance Countryman/Clubman models from 2014 onward. While significantly more reliable than the N14/N18 it replaced, replacement demand arises from turbocharger wastegate issues, coolant leaks at the housing, and occasional high-pressure fuel pump failures in high-mileage examples. Engine code(s): B48A20A, B48A20B, B48A20F Compatible models (UK): Mini Cooper S, JCW, Clubman S, Countryman S (F56/F54/F60, 2014–present) Production years: 2014–present Common failure points: Turbo wastegate rattle, coolant housing leaks, HPFP wear in high-mileage units",
+              "cta": "Compare Mini 2.0L petrol engine prices"
+            }
+          ]
+        },
+        {
+          "title": "Mini Hybrid & Electric Powertrains",
+          "items": [
+            {
+              "title": "Mini Electric Motors",
+              "description": "The fully electric Mini Cooper SE (2020–present) uses a single permanent-magnet synchronous motor mounted on the front axle, with no traditional engine displacement. Replacement demand is currently low due to the model's recent launch, but motor or inverter failures require specialist diagnosis and are typically covered under the 8-year battery warranty. System / motor code(s): EM0015 (motor), 5HA0 (inverter) Compatible models (UK): Mini Cooper SE (F56 BEV, 2020–present) Production years: 2020–present Important notes: Battery health inspection critical; motor failure rare; specialist high-voltage training required",
+              "cta": "Enquire about Mini electric motor repair"
+            },
+            {
+              "title": "Mini 1.5L Hybrid Engines",
+              "description": "The plug-in hybrid Countryman (2017–2023) combines the B38 1.5L petrol engine with a rear-axle electric motor for all-wheel drive capability. Replacement demand focuses on the petrol engine component (timing chain, carbon buildup) rather than the electric system, though hybrid-specific diagnostics are essential for accurate fault isolation. System / motor code(s): B38A15A (petrol), 5HA0 (electric motor) Compatible models (UK): Mini Countryman Cooper SE All4 (F60 PHEV, 2017–2023) Production years: 2017–2023 Important notes: Petrol engine shares B38 failure points; hybrid system requires specialist diagnostics Closing line: Not sure which engine size your Mini needs? Enter your registration number and we'll match you to the exact engine code and displacement — instantly. All engines supplied with a minimum 12‑month warranty from UK Mini specialists. Keyword Coverage Table | Keyword | Integration | |---|---| | mini engine sizes | H2 heading | | mini engine displacement | Intro sentence | | mini diesel engines list | H3 subheading (Diesel section) | | mini petrol engines list | H3 subheading (Petrol section) | | Mini 1.5L Diesel Engines | H4 heading (Diesel section) | | Mini 1.6L Diesel Engines | H4 heading (Diesel section) | | Mini 2.0L Diesel Engines | H4 heading (Diesel section) | | Mini 1.4L Petrol Engines | H4 heading (Petrol section) | | Mini 1.5L Petrol Engines | H4 heading (Petrol section) | | Mini 1.6L Petrol Engines | H4 heading (Petrol section) | | Mini 2.0L Petrol Engines | H4 heading (Petrol section) | | mini 1.6 petrol engine replacement | Descriptive paragraph (1.6L Petrol); CTA | | mini 1.6 diesel engine replacement | Descriptive paragraph (1.6L Diesel); CTA | | mini 2.0 diesel engine replacement | Descriptive paragraph (2.0L Diesel); CTA | | mini 1.5 petrol engine replacement | Descriptive paragraph (1.5L Petrol); CTA | | mini engine compatibility by reg | Closing line | | n14 timing chain failure | Bullet list (1.6L Petrol common failure points) | | n18 timing chain guide failure | Bullet list (1.6L Petrol common failure points) | | n47 timing chain stretch | Bullet list (1.6L & 2.0L Diesel common failure points) | | b38 timing chain guide wear | Bullet list (1.5L Petrol common failure points) | | b48 turbo wastegate | Bullet list (2.0L Petrol common failure points) | | mini electric motor repair | CTA (Electric section) | | mini hybrid engine availability | CTA (Hybrid section) | | mini engine specialists | Closing line | | mini engine warranty | Closing line | | compare mini engine prices | CTAs (Petrol section) | | get quotes for mini diesel engines | CTAs (Diesel section) |",
+              "cta": "Enquire about Mini 1.5L hybrid engine availability"
+            }
+          ]
+        }
+      ],
+      "closing": "Not sure which engine size your Mini needs? Enter your registration number and we'll match you to the exact engine code and displacement — instantly. All engines supplied with a minimum 12‑month warranty from UK Mini specialists."
+    },
+    "fuelTypes": {
+      "tag": "Complete Mini Engines List",
+      "h2": "Mini Engines by Fuel Type",
+      "intro": "Choose your Mini engine by fuel type to compare realistic replacement prices, known brand‑wide issues, and UK specialist supply – from the most popular diesel workhorses to the latest electrified powertrains.",
+      "items": [
+        {
+          "title": "Mini Diesel Engines",
+          "description": "Short descriptor: Mini diesel engines (2007–present) power Cooper D, Countryman D and Clubman D models, with the N47 and updated B47 families dominating replacement enquiries due to timing chain and EGR-related failures. Common Mini Diesel Engine Families: N47C16A – 1.6L diesel (Cooper D 2007–2014), notorious rear timing chain tensioner failures N47D20 – 2.0L diesel (Cooper SD 2010–2015), shared timing chain weaknesses with 1.6L variant B47D20 – updated 2.0L diesel (2015+), improved reliability but EGR cooler and turbo actuator issues persist B37C15A – 1.5L three-cylinder diesel (2014–2020), entry-level Cooper D/One D, DPF clogging on short trips Found In: Mini Cooper D (R56, F56, F55) – N47C16A (2007–2014), B37C15A (2014–2020) Mini Countryman D (R60, F60) – N47D20/B47D20 (2010–present) Mini Clubman D (R55, F54) – N47D20/B47D20 (2010–present) Mini One D (F56) – B37C15A (2014–2020) Known For (Brand‑wide): Strong motorway fuel economy across 1.6L and 2.0L diesel range N47 timing chain tensioner/guide failures remain the #1 cause of catastrophic engine damage (2007–2014) DPF regeneration issues on low-mileage, urban-use Mini diesels ~60% of Mini diesel replacement enquiries relate to N47 family failures Typical Diesel Models (UK): Cooper D 1.6 (R56) Cooper SD 2.0 (F56) Countryman D 2.0 (F60) Clubman D 2.0 (F54) One D 1.5 (F56)",
+          "cta": "Get quotes for Mini Diesel replacement engines"
+        },
+        {
+          "title": "Mini Petrol Engines",
+          "description": "Short descriptor: Mini petrol engines span naturally aspirated W10/W11 units (2001–2006) through problematic turbocharged N14/N18 families (2006–2014) to the more reliable B38/B48 generation (2014–present), with timing chain and oiling issues driving most replacement demand. Common Mini Petrol Engine Families: N14B16A – 1.6L turbo petrol (Cooper S/JCW 2006–2010), infamous timing chain guide failure and HPFP issues N18B16A – revised 1.6L turbo (2010–2014), improved but still prone to chain guide wear B38A15A – 1.5L three-cylinder turbo (2014+), carbon buildup on intake valves, early timing chain guide wear B48A20A/B – 2.0L turbo petrol (Cooper S/JCW 2014+), more robust but turbo wastegate and coolant housing leaks occur W10B16/W11B16 – 1.6L naturally aspirated (2001–2006), robust but high-mileage VANOS and oil consumption issues Found In: Mini One/Cooper (R50/R53) – W10/W11 naturally aspirated (2001–2006) Mini Cooper S/JCW (R56/R57/R60) – N14/N18 turbo (2006–2014) Mini Cooper/Cooper S (F56/F55/F54/F60) – B38 1.5L / B48 2.0L turbo (2014–present) Mini JCW (F56/F54/F60) – B48 high-output variant (2015–present) Known For (Brand‑wide): N14/N18 timing chain and guide failures are the single biggest cause of Mini petrol engine replacement Direct injection carbon buildup on B38/B48 engines requires periodic walnut blasting Oil consumption and VANOS solenoid wear on early W10/W11 naturally aspirated units Turbo wastegate rattle on B48 Cooper S/JCW models is common but rarely catastrophic Typical Petrol Models (UK): Cooper S 1.6 Turbo (R56) JCW 1.6 Turbo (R56) Cooper 1.5 Turbo (F56) Cooper S 2.0 Turbo (F56) JCW 2.0 Turbo (F56) One 1.4 Naturally Aspirated (R50)",
+          "cta": "Compare Mini Petrol engine prices"
+        },
+        {
+          "title": "Mini Hybrid / Electrified Engines",
+          "description": "#### Mini Plug‑in Hybrid (PHEV) Engines Short descriptor: Mini's only plug‑in hybrid offering is the Countryman Cooper SE All4 (2017–2023), pairing the B38 1.5L petrol engine with a rear‑axle electric motor for all‑wheel drive and ~25 miles electric‑only range. Common Mini PHEV Engine/Families: B38A15A + 5HA0 electric motor – Countryman Cooper SE All4 (F60 PHEV, 2017–2023) How Mini PHEV Systems Work (brand‑wide): B38 petrol engine drives front wheels; electric motor powers rear axle for on‑demand AWD Regenerative braking recharges the 8.8kWh lithium‑ion battery during deceleration Engine replacement requires hybrid‑system diagnostics to isolate petrol vs electric fault Found In: Mini Countryman Cooper SE All4 (F60 PHEV, 2017–2023) Important Notes (Brand‑wide): PHEV versions share the same B38 petrol block as non‑hybrid Minis – replacement engines are compatible Hybrid system faults (inverter, battery, motor) require specialist HV‑certified technicians Always request a hybrid health report alongside any engine quote for PHEV models",
+          "cta": "Enquire about Mini PHEV engine availability"
+        },
+        {
+          "title": "Mini Electric Powertrains",
+          "description": "Short descriptor: The fully electric Mini Cooper SE (2020–present) uses a single front‑mounted permanent‑magnet synchronous motor; motor failure is rare, but we connect you with UK high‑voltage specialists for battery or inverter repairs. Common Mini Electric Motors: EM0015 (135kW/184hp) – Mini Cooper SE (F56 BEV, 2020–present), 0‑62mph in 7.3s, ~145‑mile WLTP range How Mini Electric Powertrains Work: Single‑speed reduction gear drives front wheels; no traditional multi‑gear transmission 32.6kWh lithium‑ion battery pack mounted under floor for low centre of gravity Motor failure is extremely rare; battery module or inverter issues are more common replacement scenarios Found In: Mini Cooper SE (F56 BEV, 2020–present) Important Notes: No traditional 'engine' to replace – we connect you with HV battery and motor repair specialists Labour rates and diagnostic requirements differ significantly from combustion engine work All electric powertrain repairs require certified high‑voltage handling and isolation procedures",
+          "cta": "Enquire about Mini Electric motor repair or replacement"
+        }
+      ],
+      "closing": "Not sure which fuel type your Mini has? Enter your registration number above to instantly identify your model, engine code, fuel system and compatible replacement options – all backed by a minimum 12‑month unlimited mileage warranty from UK Mini specialists."
+    },
+    "engineCodeDirectory": {
+      "tag": "Engine Codes",
+      "h2": "Mini Engine Codes – Most Replaced Engines (2008–2025)",
+      "intro": "Every major Mini engine code from the last two decades, grouped by family, with compatible models and typical reasons why owners seek replacement. Select your engine to compare rebuilt prices and get quotes from UK Mini specialists.",
+      "families": [
+        {
+          "name": "Prince Family Petrol Engines (2006–2015)",
+          "entries": [
+            {
+              "title": "N14B16A 1.6L Turbo Petrol",
+              "image": "/images/brands/mini/engines/mini-n14b16a-engine.webp",
+              "description": "Used in Mini Cooper S and Clubman S (R56/R55, 2006–2010). The #1 failure is timing chain tensioner and plastic guide wear, often causing catastrophic piston-to-valve contact. Quality rebuilt N14 units include upgraded metal guides, revised tensioners, and high‑pressure fuel pump inspection to prevent repeat failures.",
+              "cta": "Get quotes for N14B16A Mini engine replacement"
+            },
+            {
+              "title": "N18B16A 1.6L Turbo Petrol",
+              "image": "/images/brands/mini/engines/mini-n18b16a-engine.webp",
+              "description": "Powers Mini Cooper S and Countryman S (R56 LCI/R60, 2010–2015). Shares N14 timing chain vulnerabilities but with revised components; chain stretch and oil consumption remain common failure drivers. Rebuilt N18 engines include reinforced chain kits, updated piston rings, and bench compression testing for reliability.",
+              "cta": "Compare N18B16A Mini engine prices"
+            },
+            {
+              "title": "N14B16B 1.6L Turbo Petrol (JCW)",
+              "image": "/images/brands/mini/engines/mini-n14b16b-engine.webp",
+              "description": "High‑output variant for Mini John Cooper Works (R56, 2008–2010). Extreme boost pressures accelerate timing chain wear and turbo bearing failure. Rebuilt JCW-spec N14 units include uprated turbo components, forged internals where specified, and dyno verification before dispatch.",
+              "cta": "Get quotes for N14B16B Mini JCW engine replacement"
+            },
+            {
+              "title": "N18B16B 1.6L Turbo Petrol (JCW)",
+              "image": "/images/brands/mini/engines/mini-n18b16b-engine.webp",
+              "description": "Updated JCW engine for Mini John Cooper Works (R56 LCI/R57, 2011–2015). Improved over N14B but still prone to timing chain and carbon buildup issues. Quality rebuilds include decarbonised intake ports, upgraded chain assemblies, and warranty-backed component replacement.",
+              "cta": "Compare N18B16B Mini engine quotes"
+            },
+            {
+              "title": "N12B16A 1.6L Naturally Aspirated Petrol",
+              "image": "/images/brands/mini/engines/mini-n12b16a-engine.webp",
+              "description": "Found in Mini One and entry Cooper models (R50/R53/R56, 2001–2010). Common failures include VANOS actuator wear, oil sludge buildup, and timing chain guide deterioration. Reconditioned N12 units include cleaned oil galleries, refreshed VANOS seals, and new timing components.",
+              "cta": "Get quotes for N12B16A Mini engine replacement"
+            },
+            {
+              "title": "N16B16A 1.6L Naturally Aspirated Petrol",
+              "image": "/images/brands/mini/engines/mini-n16b16a-engine.webp",
+              "description": "Later NA variant for Mini One and Cooper (R56 LCI, 2010–2014). More reliable than N12 but still susceptible to timing chain wear and oil consumption on high-mileage examples. Rebuilt N16 engines include upgraded chain guides, revised piston rings, and full pressure testing.",
+              "cta": "Compare N16B16A Mini engine prices"
+            }
+          ]
+        },
+        {
+          "name": "N47 Diesel Family (2010–2018)",
+          "entries": [
+            {
+              "title": "N47C16A 1.6L Diesel",
+              "image": "/images/brands/mini/engines/mini-n47c16a-engine.webp",
+              "description": "Powers Mini One D and Cooper D (R56/R60, 2010–2015). The rear‑mounted timing chain design makes these engines vulnerable to chain stretch and tensioner failure, often causing bottom‑end damage. Rebuilt N47C16A units include reinforced chain assemblies, updated tensioners, and full injector testing.",
+              "cta": "Get quotes for N47C16A Mini diesel engine replacement"
+            },
+            {
+              "title": "N47D20A 2.0L Diesel",
+              "image": "/images/brands/mini/engines/mini-n47d20a-engine.webp",
+              "description": "Used in Mini Cooper SD and Clubman SD (R56/R55, 2010–2015). Shares N47 timing chain weaknesses plus EGR/DPF clogging that can lead to oil starvation. Quality rebuilds include upgraded chain kits, cleaned EGR systems, and revised oil pump assemblies to prevent repeat failures.",
+              "cta": "Compare N47D20A Mini engine prices"
+            },
+            {
+              "title": "N47D20C 2.0L Diesel (High Output)",
+              "image": "/images/brands/mini/engines/mini-n47d20c-engine.webp",
+              "description": "Higher‑output variant for Mini Countryman SD and Paceman SD (R60/R61, 2012–2016). Increased stress accelerates turbo and chain wear. Rebuilt N47D20C units include refurbished turbos, reinforced bottom‑end components, and warranty‑backed performance verification.",
+              "cta": "Get quotes for N47D20C Mini SD engine replacement"
+            }
+          ]
+        },
+        {
+          "name": "B‑Series Gen 3 Petrol Engines (2014–Present)",
+          "entries": [
+            {
+              "title": "B38A15A 1.5L Turbo Petrol",
+              "image": "/images/brands/mini/engines/mini-b38a15a-engine.webp",
+              "description": "Modern three‑cylinder for Mini One and Cooper (F56/F55, 2014–present). Common issues include carbon buildup on intake valves and high‑pressure fuel pump wear. Rebuilt B38 units include decarbonised heads, updated HPFP components, and OEM‑spec gaskets for long‑term reliability.",
+              "cta": "Compare B38A15A Mini engine prices"
+            },
+            {
+              "title": "B38B15A 1.5L Turbo Petrol (Higher Output)",
+              "image": "/images/brands/mini/engines/mini-b38b15a-engine.webp",
+              "description": "Used in Mini Cooper (F56/F54, 2014–present). Shares B38A failure patterns with slightly higher stress on turbo and fuel system. Quality rebuilds include refreshed turbo actuators, cleaned injection systems, and bench testing to OEM specifications.",
+              "cta": "Get quotes for B38B15A Mini Cooper engine replacement"
+            },
+            {
+              "title": "B48A20A 2.0L Turbo Petrol",
+              "image": "/images/brands/mini/engines/mini-b48a20a-engine.webp",
+              "description": "Powers Mini Cooper S and Clubman S (F56/F54, 2014–present). More reliable than Prince family but can suffer carbon buildup and turbo wastegate sticking. Rebuilt B48 units include decarbonised intake systems, updated turbo components, and full compression verification.",
+              "cta": "Compare B48A20A Mini engine quotes"
+            },
+            {
+              "title": "B48A20F 2.0L Turbo Petrol (JCW)",
+              "image": "/images/brands/mini/engines/mini-b48a20f-engine.webp",
+              "description": "High‑performance variant for Mini John Cooper Works (F56/F60, 2015–present). Extreme outputs accelerate turbo and bearing wear. Rebuilt JCW-spec B48 engines include uprated turbo assemblies, reinforced internals where specified, and dyno verification before dispatch.",
+              "cta": "Get quotes for B48A20F Mini JCW engine replacement"
+            }
+          ]
+        },
+        {
+          "name": "B‑Series Diesel Engines (2014–Present)",
+          "entries": [
+            {
+              "title": "B37C15A 1.5L Diesel",
+              "image": "/images/brands/mini/engines/mini-b37c15a-engine.webp",
+              "description": "Modern three‑cylinder diesel for Mini One D and Cooper D (F56/F55, 2014–present). Common failures include EGR cooler leaks and turbo vane sticking. Rebuilt B37 units include refurbished EGR systems, cleaned turbo assemblies, and full pressure testing for reliability.",
+              "cta": "Compare B37C15A Mini diesel engine prices"
+            },
+            {
+              "title": "B47C20A 2.0L Diesel",
+              "image": "/images/brands/mini/engines/mini-b47c20a-engine.webp",
+              "description": "Used in Mini Cooper SD and Clubman SD (F56/F54, 2014–present). Shares B47 EGR cooler and turbo weaknesses. Quality rebuilds include upgraded EGR components, refreshed turbo actuators, and OEM‑spec bearing clearances for extended service life.",
+              "cta": "Get quotes for B47C20A Mini SD engine replacement"
+            },
+            {
+              "title": "B47D20A 2.0L Diesel (High Output)",
+              "image": "/images/brands/mini/engines/mini-b47d20a-engine.webp",
+              "description": "Higher‑output variant for Mini Countryman SD and All4 models (F60, 2017–present). Increased stress accelerates turbo and emission system wear. Rebuilt B47D20A units include reinforced turbo assemblies, cleaned DPF/EGR systems, and warranty‑backed performance verification.",
+              "cta": "Compare B47D20A Mini engine quotes"
+            },
+            {
+              "title": "W11B16A 1.6L Supercharged Petrol (Early R53)",
+              "image": "/images/brands/mini/engines/mini-w11b16a-engine.webp",
+              "description": "Supercharged engine for Mini Cooper S (R53, 2001–2006). Common failures include Eaton supercharger coupler wear and head gasket failure on high‑mileage examples. Rebuilt W11 units include refreshed supercharger components, multi‑layer steel head gaskets, and full compression testing.",
+              "cta": "Get quotes for W11B16A Mini Cooper S engine replacement"
+            },
+            {
+              "title": "W10B16A 1.6L Naturally Aspirated Petrol (Early R50)",
+              "image": "/images/brands/mini/engines/mini-w10b16a-engine.webp",
+              "description": "Base engine for Mini One and Cooper (R50, 2001–2006). Oil sludge buildup and VANOS system wear are frequent failure drivers. Reconditioned W10 engines include cleaned oil galleries, refreshed VANOS seals, and new timing components for reliable operation. Closing line (Block A): Can't find your engine code listed above? Use our full Mini engine code directory below — every code from the last 25 years — or enter your registration number for an instant match to the correct replacement engine with warranty.",
+              "cta": "Compare W10B16A Mini engine prices"
+            }
+          ]
+        }
+      ],
+      "closing": "Can't find your engine code listed above? Use our full Mini engine code directory below — every code from the last 25 years — or enter your registration number for an instant match to the correct replacement engine with warranty.",
+      "directory": {
+        "h3": "Full Mini Engine Code Directory (All Years)",
+        "label": "View all Mini engine codes (45+ codes, 2001–2025)",
+        "intro": "A comprehensive alphabetical listing of every Mini engine code from the last 25 years. Use the search above or enter your registration for an instant match to your specific engine. All codes link to a quote request.",
+        "codes": [
+          {
+            "code": "B37C15A",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "B37C15B",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "B38A15A",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "B38A15M",
+            "fuel": "Petrol Hybrid"
+          },
+          {
+            "code": "B38B15A",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "B47C20A",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "B47C20B",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "B47D20A",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "B48A20A",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "B48A20F",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "B48A20M",
+            "fuel": "Petrol Hybrid"
+          },
+          {
+            "code": "N12B16A",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "N14B16A",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "N14B16B",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "N14B16C",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "N16B16A",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "N16B16B",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "N18B16A",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "N18B16B",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "N18B16C",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "N47C16A",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "N47C16B",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "N47D20A",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "N47D20B",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "N47D20C",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "W10B12A",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "W10B14A",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "W10B16A",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "W10B16M",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "W11B16A",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "W11B16B",
+            "fuel": "Petrol"
+          }
+        ]
+      }
+    },
+    "engineYears": {
+      "tag": "Engine Years",
+      "h2": "MINI Engines by Year – What Was Fitted & When",
+      "intro": "",
+      "jumpLabel": "Jump to year",
+      "years": [
+        {
+          "year": "2001 – 2004",
+          "preview": "Generation 1 Launch: Tritec Petrol & Supercharged Cooper S 🔴 Major Engine Family Introduction",
+          "description": "Short intro: The BMW MINI relaunch in 2001 brought an entirely new engine architecture - the Tritec four-cylinder built in partnership with Chrysler - alongside a supercharged Cooper S variant that immediately defined the brand's performance character for the generation. Key Changes W10B16 (1.6L 16v Tritec) introduced in MINI One and Cooper R50 - 90hp and 115hp respectively, built in Curitiba, Brazil W11B16 (1.6L supercharged Tritec) in MINI Cooper S R53 - 163hp, Roots-type Eaton M45 supercharger No diesel option at launch - petrol-only range for the first two years Midland R65 five-speed gearbox fitted to One and Cooper until facelift July 2004 - widely regarded as a weak point of the generation MINI One D (1.4L diesel, 1ND Toyota-sourced) added 2003 - first diesel in the BMW MINI range Main Engines W10B16 A - 1.6L I4 Tritec petrol 90hp (MINI One R50) W10B16 A - 1.6L I4 Tritec petrol 115hp (MINI Cooper R50) W11B16 A - 1.6L I4 Tritec supercharged petrol 163hp (MINI Cooper S R53) 1ND / 1ND-TV - 1.4L I4 diesel 75hp (MINI One D R50) Popular Models MINI One (R50) MINI Cooper (R50) MINI Cooper S (R53) MINI One D (R50) MINI Convertible (R52 - from 2004) Known For W10/W11 Tritec is regarded as a fundamentally sound unit for well-maintained examples - but oil consumption and leaks from rocker cover, sump gasket, and rear main seal are the defining maintenance challenge of this generation Cooper S supercharger belt and tensioner assembly are a known wear item - specialists recommend inspection every service; supercharger bypass valve sticking is a recurring performance complaint Midland R65 gearbox is universally criticised by the MINI community - notchy, noisy, and prone to failure under spirited use; Getrag replacement from July 2004 resolves the issue on later cars Head gasket failure and timing chain tensioner wear are documented on high-mileage R50/R53 examples - oil level checks between services are considered essential by every specialist [Tags] Engine Codes Covered: W10B16 A, W11B16 A, 1ND, 1ND-TV",
+          "cta": "Compare 2001–2004 MINI R50 and R53 Tritec replacement engine prices from UK specialists"
+        },
+        {
+          "year": "2004 – 2006",
+          "preview": "Facelift Refinements & Pre-Changeover Stability",
+          "description": "Short intro: The mid-cycle facelift from 2004 addressed the most significant Gen 1 mechanical criticisms - notably the gearbox replacement - while engine codes remained unchanged, giving the Tritec family its most reliable final expression before the second-generation R56 took over. Key Changes Getrag six-speed gearbox replaces Midland R65 on One and Cooper from July 2004 - most significant mechanical improvement of the generation W10 and W11 engine codes unchanged - incremental ECU updates improve fuelling and idle stability on revised R50/R52/R53 MINI Convertible R52 in full production with W10 and W11 engines - highest-selling soft-top MINI of the generation Cooper S R53 continues with revised supercharger belt tensioner - updated OEM part addresses some high-mileage tensioner failures MINI One D continues with 1ND Toyota-derived diesel - unchanged specification Main Engines W10B16 A - 1.6L I4 Tritec petrol 90hp/115hp (MINI One/Cooper R50, R52 Convertible) W11B16 A - 1.6L I4 Tritec supercharged 163hp (MINI Cooper S R53, R52S Convertible) 1ND / 1ND-TV - 1.4L I4 diesel 75hp (MINI One D) Popular Models MINI Cooper (R50 facelift) MINI Cooper S (R53 facelift) MINI Convertible Cooper (R52) MINI Convertible Cooper S (R52S) MINI One D (R50) Known For Getrag gearbox transformation is immediately noticed by owners - post-July 2004 cars are significantly more pleasant to drive and are the preferred buy in the used market W11 supercharged engine oil-filled engine mount is a commonly overlooked failure point - visible oil contamination on the front chassis leg is the giveaway sign R52 Convertible with W10/W11 generates strong ongoing replacement demand as cabriolet ownership tends toward higher mileage on ageing cars in the UK used market Toyota-sourced 1ND diesel remains a simple, low-intervention unit - UK workshop specialists regard it as more reliable than the PSA-sourced diesels that follow in Gen 2 [Tags] Engine Codes Covered: W10B16 A, W11B16 A, 1ND, 1ND-TV",
+          "cta": "Find 2004–2006 MINI R50/R52/R53 facelift replacement engines with UK specialist warranty"
+        },
+        {
+          "year": "2006 – 2010",
+          "preview": "Generation 2 R56: N12/N14 Turbocharged Launch & 'Death Rattle' Era 🔴 Major Engine Family Introduction",
+          "description": "Short intro: The second-generation R56 MINI launched in 2006 with all-BMW-designed N-series engines - marking the end of the Tritec era and the start of the most technically challenging engine generation MINI has produced, with the turbocharged N14 quickly gaining notoriety for catastrophic timing chain tensioner failures. Key Changes N12B16 (1.6L naturally aspirated, 120hp) replaces W10 in MINI One/Cooper R56 - fully BMW-designed, Prince engine family N14B16 (1.6L turbocharged, 175hp) replaces W11 supercharger in MINI Cooper S R56 - direct injection turbo replaces Roots supercharger for the first time N14B16 timing chain tensioner design fundamentally weak - \"death rattle\" on cold start becomes the defining known issue of the R56 generation PSA-sourced 9HZ (DV6TED4) 1.6L diesel introduced in MINI One D and Cooper D - replaces Toyota 1ND unit N18B16 introduced from 2010 onward in JCW and Cooper S - revised N14 with updated tensioner, stronger internals Main Engines N12B16 A - 1.6L I4 naturally aspirated petrol 120hp (MINI One/Cooper R56, R57 Convertible) N14B16 A/C - 1.6L I4 turbo direct injection petrol 175–211hp (MINI Cooper S R56, JCW R56) N18B16 A - 1.6L I4 turbo petrol revised 211hp (MINI JCW R56, Cooper S R56 LCI from 2010) 9HZ (DV6TED4) - 1.6L I4 PSA diesel 110hp (MINI One D/Cooper D R56) N47C16 A - 1.6L I4 BMW diesel 112hp (MINI One D/Cooper D from late 2009) Popular Models MINI Cooper S (R56) MINI Cooper (R56) MINI One (R56) MINI JCW (R56) MINI Convertible Cooper S (R57) MINI Clubman Cooper S (R55) Known For N14 \"death rattle\" is the most searched MINI engine problem in the UK - timing chain tensioner failure between 40,000–80,000 miles causes chain skip and catastrophic engine destruction if not caught at first rattle BMW did not include an oil warning light on early R56 models - oil starvation went undetected and accelerated N14 timing chain failures; this is widely cited as an avoidable design decision N18 from 2010 is a meaningfully revised unit with an improved tensioner - specialists consistently recommend N18-sourced replacements over N14 originals when rebuilding pre-2010 Cooper S models PSA DV6TED4 diesel (9HZ) is a competent economy unit but EGR and DPF failures in short-journey urban use are the recurring UK workshop complaint from this period [Tags] Engine Codes Covered: N12B16 A, N14B16 A, N14B16 C, N18B16 A, 9HZ (DV6TED4), N47C16 A",
+          "cta": "Find 2006–2010 MINI R56 N14/N12 replacement engines - UK specialists with timing chain warranty"
+        },
+        {
+          "year": "2010 – 2013",
+          "preview": "R56 LCI Revised Engines, N18 Dominance & Countryman Launch 🔴 Major Reliability Revision",
+          "description": "Short intro: The R56 LCI facelift from late 2010 brought the N18 and updated N16 engines across the hatchback range - a genuine reliability improvement over the N14-era cars - while the Countryman R60 expanded the MINI family into the crossover segment, introducing the first all-wheel-drive MINI powertrain combinations. Key Changes N18B16 replaces N14B16 across Cooper S and JCW - revised tensioner, redesigned oil circuit, improved chain guide N16B16 introduced for Cooper R56 LCI - replaces N12, adds variable valve timing improvement MINI Countryman R60 launched 2010 - N12, N16, N18, and Cooper D diesels across front and ALL4 all-wheel-drive variants N47C16 BMW diesel continues across One D and Cooper D - cleaner Euro 5 calibration from 2011 MINI Roadster R59 and Coupe R58 extend N14/N18 range into niche performance body styles Main Engines N16B16 A - 1.6L I4 petrol VVT 122hp (MINI Cooper R56 LCI, Clubman, Countryman) N18B16 A - 1.6L I4 turbo petrol 211hp revised (MINI Cooper S R56 LCI, JCW, Countryman S) N47C16 A - 1.6L I4 BMW diesel 112hp (MINI One D/Cooper D, Countryman D) N12B16 A - 1.6L I4 petrol 120hp (continues on selected Countryman and Cabrio variants) Popular Models MINI Cooper S (R56 LCI) MINI JCW (R56/R57 LCI) MINI Countryman Cooper S ALL4 (R60) MINI Clubman Cooper S (R55 LCI) MINI Convertible Cooper S (R57 LCI) MINI Coupe JCW (R58) Known For N18 is regarded by UK MINI specialists as a substantially improved unit - timing chain failures drop sharply on properly serviced post-2010 cars compared to N14 predecessors N16 is broadly reliable but oil consumption at higher mileages and variable valve timing actuator wear are the most common workshop findings on 80,000+ mile examples Countryman ALL4 ALL-wheel drive introduces new drivetrain complexity - rear Haldex clutch maintenance is frequently neglected and causes drive loss at the rear; not an engine issue but closely linked to drivetrain replacement decisions JCW R56 LCI with N18 is widely considered the sweet spot of the R56 generation - the combination of revised mechanics and Cooper S performance delivers significantly more confidence than the pre-facelift N14 variants [Tags] Engine Codes Covered: N16B16 A, N18B16 A, N47C16 A, N12B16 A",
+          "cta": "Get quotes for 2010–2013 MINI R56 LCI N18 and N16 replacement engines from UK specialists"
+        },
+        {
+          "year": "2014 – 2017",
+          "preview": "Generation 3 F56: B38/B48 TwinPower Turbo & New Platform 🔴 Major Engine Family Introduction",
+          "description": "Short intro: The third-generation F56 MINI launched in 2014 with the all-new BMW B-series modular engine family - the three-cylinder B38 and four-cylinder B48 TwinPower Turbo units replacing the entire N-series range, delivering a step-change in refinement, fuel economy, and initial quality while introducing new crank bearing vulnerabilities on early builds. Key Changes B38A15 A (1.5L three-cylinder turbo) introduced in MINI One and Cooper F56 - replaces N12/N16 1.6L units entirely B48A20 A (2.0L four-cylinder turbo) introduced in MINI Cooper S and JCW F56 - replaces N18 1.6L; significant displacement and power increase B37C15 A (1.5L three-cylinder diesel) replaces N47 in Cooper D and One D Early B38 and B48 units (2014–2015 build) subject to crank bearing failures and oil solenoid recalls - a significant quality concern on launch-spec cars MINI introduces oil pressure warning system for the first time - addressing the critical omission of the R56 generation F56 built on BMW UKL platform (shared with BMW 2 Series Active Tourer) - manufacturing quality improves markedly Main Engines B38A15 A - 1.5L I3 TwinPower Turbo petrol 102hp (MINI One F56) B38A15 A - 1.5L I3 TwinPower Turbo petrol 136hp (MINI Cooper F56, F55, F57 Convertible) B48A20 A - 2.0L I4 TwinPower Turbo petrol 192hp (MINI Cooper S F56/F55/F57) B48A20 O1 - 2.0L I4 TwinPower Turbo petrol 231hp (MINI JCW F56/F55/F60) B37C15 A - 1.5L I3 diesel 95hp/116hp (MINI One D / Cooper D F56) N47C16 A - 1.6L I4 diesel (carry-over on selected F56 early cars) Popular Models MINI Cooper S (F56) MINI Cooper (F56) MINI JCW (F56) MINI One (F56) MINI 5-Door Hatch (F55) MINI Convertible (F57) Known For Crank bearing failure on early 2014–2015 B38/B48 units is the headline quality concern - some engines required full replacement rather than bearing swap; a serious issue on launch-spec cars From 2016 onward, post-recall B38/B48 units show markedly improved durability and JD Power quality rankings for MINI rise consistently through this period B48 in Cooper S and JCW is broadly praised for refinement and power delivery - injector faults and air leaks are the most common complaints but nowhere near the catastrophic failure rates of the N14 generation B37 diesel in Cooper D is a smooth, economical unit well-suited to UK motorway commuting - DPF and AdBlue system maintenance becomes the primary running cost concern from 70,000 miles [Tags] Engine Codes Covered: B38A15 A, B38A15 M0, B48A20 A, B48A20 O1, B37C15 A, N47C16 A",
+          "cta": "Compare 2014–2017 MINI F56 B38 and B48 TwinPower replacement engine prices from UK specialists"
+        },
+        {
+          "year": "2017 – 2020",
+          "preview": "F60 Countryman, Cooper SE PHEV & B48 TU Revision 🔴 Technology Introduction",
+          "description": "Short intro: Iveco's current range brings the second-generation Countryman F60, the brand's first PHEV in the Cooper S E ALL4, and the revised B48TU (Technical Update) engine - addressing the early crank bearing concerns and delivering the most polished combustion MINI lineup before electrification arrived in 2020. Key Changes B48A20 TU (Technical Update) introduced from 2018 - revised bearings, updated oil supply circuit directly addressing early crank failure concerns MINI Countryman Cooper S E ALL4 PHEV launched 2017 - B38 1.5L three-cylinder petrol paired with rear electric motor, first PHEV MINI F60 Countryman Cooper S and JCW use B48 (and B48TU from 2018) - largest MINI body with full performance engine lineup MINI Clubman F54 Cooper S and JCW continues B48 range into estate body style Euro 6d compliant updates applied to B37 diesel and B38/B48 petrols Main Engines B38A15 A / TU - 1.5L I3 TwinPower Turbo petrol 136hp (MINI Cooper F56/F55/F57/F60) B48A20 A / TU - 2.0L I4 TwinPower Turbo petrol 192hp (MINI Cooper S F56/F60/F54) B48A20 O1 / TU - 2.0L I4 TwinPower Turbo petrol 231hp (MINI JCW F56/F60/F54) B38A15 + electric rear motor - PHEV 224hp system (MINI Countryman Cooper S E ALL4 F60) B37C15 A - 1.5L I3 diesel 116hp (MINI Cooper D F56/F60) B47C20 A - 2.0L I4 diesel 190hp (MINI Cooper SD F60 Countryman) Popular Models MINI Countryman Cooper S (F60) MINI Countryman Cooper S E ALL4 (PHEV) MINI JCW (F56 facelift) MINI Clubman Cooper S (F54) MINI Cooper S (F56 facelift) MINI Convertible JCW (F57) Known For B48TU from 2018 is widely regarded as MINI's first truly reliable modern performance engine - UK specialists note a clear drop in crank bearing and oil solenoid complaints on 2018-onward builds PHEV Cooper S E ALL4 earns praise for refined all-weather driving but battery pack degradation and rear electric motor seal failures are emerging replacement concerns as 2017–2019 examples age B47 2.0 diesel in Countryman SD is a well-proven BMW unit - far more robust than the earlier PSA DV6 but twin-turbo configuration adds cost when the variable geometry actuator fails Euro 6d compliance on diesel variants brings AdBlue system complexity to the MINI range for the first time - urea injector and pump maintenance is new territory for independent MINI workshops [Tags] Engine Codes Covered: B38A15 A, B38A15 TU, B48A20 A, B48A20 TU, B48A20 O1, B48A20 O1 TU, B37C15 A, B47C20 A, PHEV B38+electric",
+          "cta": "Get quotes for 2017–2020 MINI F60 Countryman and F56 facelift B48TU replacement engines"
+        },
+        {
+          "year": "2020 – 2022",
+          "preview": "MINI Electric (Cooper SE), JCW GP & Final F-Series Combustion 🔴 Technology Introduction 🔴 Performance Landmark",
+          "description": "Short intro: The arrival of the MINI Electric (Cooper SE) in 2020 marked the brand's first full battery-electric production car, while the limited 306hp JCW GP defined the performance peak of the F56 platform - together representing the clearest signal that the F-series combustion era was entering its final chapter. Key Changes MINI Electric (Cooper SE) launched 2020 - 181hp electric motor, 145-mile WLTP range, built in Oxford alongside combustion Mini JCW GP F56 launched 2020 - 306hp B48 variant with uprated internals; limited run of 3,000 units globally B48A20 O1 updated on standard JCW and Cooper S - revised turbocharger mapping and cooling for improved in-service reliability MINI Countryman Cooper S E PHEV second year of UK sales - growing fleet uptake among company car drivers F56 combustion range confirmed to continue alongside Cooper SE until F66 generation replaces it Main Engines Electric motor - 181hp (MINI Electric / Cooper SE F56-based) B48A20 O1 GP - 2.0L I4 TwinPower Turbo 306hp (MINI JCW GP F56 limited) B48A20 O1 - 2.0L I4 TwinPower Turbo 231hp (MINI JCW F56/F60) B48A20 A/TU - 2.0L I4 TwinPower Turbo 192hp (MINI Cooper S F56/F55/F57/F60) B38A15 TU - 1.5L I3 petrol 136hp (MINI Cooper F56/F55 continuing) B37C15 A - 1.5L I3 diesel (MINI Cooper D continuing) Popular Models MINI Electric (Cooper SE) MINI JCW GP (F56) MINI JCW (F56/F60) MINI Cooper S (F56/F55) MINI Countryman Cooper S E ALL4 (PHEV) Known For JCW GP's 306hp B48 is an exceptional engineering highlight - well-regarded for track-day durability given the power level, though engine mount and gearbox failures are noted at extremely high usage rates MINI Electric earns strong owner satisfaction in urban UK use but real-world range anxiety on longer runs limits appeal outside cities - replacement battery pack cost is the primary concern as early cars age Standard B48TU Cooper S and JCW from this period shows the strongest reliability profile of any MINI performance engine since the Tritec generation - JD Power rankings confirm top-five brand quality B37 diesel Cooper D continues as the most fuel-efficient MINI option - DPF and AdBlue maintenance remain the dominant independent workshop cost for fleet operators [Tags] Engine Codes Covered: B48A20 O1 GP, B48A20 O1, B48A20 A, B48A20 TU, B38A15 TU, B37C15 A, BEV electric motor",
+          "cta": "Find 2020–2022 MINI JCW and Cooper S B48 replacement engines from UK performance specialists"
+        },
+        {
+          "year": "2023 – 2026",
+          "preview": "Generation 4 F66/J01: New Platform, Cooper C/S & Full Electric 🔴 Major Engine Family Introduction 🔴 Technology Introduction",
+          "description": "Short intro: The fourth-generation MINI launched in 2023 with the new F66 hatchback and J01 Countryman on BMW's FAAR and FAAR-EV platforms - offering the Cooper C (1.5L B38) and Cooper S (2.0L B48C) in combustion form alongside the fully electric MINI Cooper E and Cooper SE, representing the brand's most complete electrification strategy to date. Key Changes New MINI Cooper (F66) launched late 2023 - Cooper C gets revised B38 154hp, Cooper S gets B48C 201hp; both meet Euro 6e MINI Cooper E and Cooper SE F66 electric launched - 184hp and 218hp respectively, 250+ mile WLTP range MINI Countryman (J01) arrives with Cooper C, Cooper S, and Cooper SE PHEV (B48 petrol + electric motor, 326hp combined) Diesel variants dropped from new MINI hatchback range - no Cooper D offered on F66 generation B48C revision improves fuel delivery and thermal management over B48A - incremental rather than wholesale redesign Main Engines B38A15 C - 1.5L I3 TwinPower Turbo petrol 154hp (MINI Cooper C F66) B48C20 - 2.0L I4 TwinPower Turbo petrol 201hp (MINI Cooper S F66, Countryman S J01) B48C20 + electric - PHEV 326hp system (MINI Countryman SE ALL4 J01) BEV - 184hp / 218hp electric (MINI Cooper E / Cooper SE F66) B48A20 O1 - 2.0L I4 continuing in JCW F66 (231hp confirmed carry-over spec) Popular Models MINI Cooper C (F66) MINI Cooper S (F66) MINI Cooper E / SE (F66 electric) MINI Countryman Cooper S (J01) MINI Countryman SE ALL4 PHEV (J01) Known For F66 generation shows the strongest initial build quality in MINI's BMW era - UKL2/FAAR platform refinement and improved manufacturing controls deliver a notably more premium in-cabin experience Diesel removal from the hatchback range ends a 20-year segment in UK MINI history - Cooper D replacement engine demand for older F56/R56 cars is therefore expected to remain strong for the next several years B48C Cooper S is too new for long-term UK specialist data - early owner feedback suggests strong reliability but air leak and injector seal monitoring are prudent on first-service examples MINI Countryman J01 PHEV at 326hp is the most powerful Countryman ever sold - combustion element replacement demand is focused on B48C petrol unit when hybrid control system faults isolate the ICE [Tags] Engine Codes Covered: B38A15 C, B48C20, B48A20 O1, B48C20 PHEV, BEV Cooper E/SE",
+          "cta": "Enquire about current-generation MINI F66 B48C and B38 replacement engine availability from UK specialists"
+        }
+      ],
+      "closing": "Not sure which year your MINI was built? Enter your registration number and we'll identify the exact engine, model year, and compatible replacement options instantly - all backed by a minimum 12-month warranty from UK MINI specialists."
+    },
+    "faq": {
+      "tag": "FAQ",
+      "h2": "Mini Engine Replacement – Frequently Asked Questions",
+      "intro": "Quick, honest answers to the most common questions Mini owners ask before comparing engine replacement prices and finding a UK specialist.",
+      "items": [
+        {
+          "question": "How much does a Mini engine replacement cost in the UK?",
+          "answer": "A used Mini engine typically costs £800–£2,500, while a professionally reconditioned unit ranges from £1,800–£3,800. Rebuilt engines with upgraded components addressing known failures (e.g., N14/N18 timing guides) cost £2,200–£4,500. Fitting adds £400–£900 depending on model complexity. We always recommend comparing at least three quotes, as prices for the same engine code can vary by over £1,000 across UK specialists.",
+          "cta": "Compare Mini engine replacement prices now"
+        },
+        {
+          "question": "What affects the cost of a Mini engine replacement?",
+          "answer": "Four key factors drive cost: engine code (N47 diesel vs B48 petrol), condition (used/recon/rebuilt), vehicle complexity (Countryman AWD takes longer), and supply‑only vs supply‑and‑fit. Location matters too — London fitting rates are typically 20–30% higher than regional specialists. Our comparison tool provides transparent, itemised quotes so you see exactly what you're paying for before you commit.",
+          "cta": "Get quotes from UK Mini engine specialists"
+        },
+        {
+          "question": "Is it worth replacing the engine in my Mini?",
+          "answer": "In most cases, yes — especially if the chassis, gearbox, and bodywork are solid. A rebuilt Mini engine with upgraded internal components often outlasts the original unit, whereas buying a replacement vehicle incurs depreciation, finance, and registration costs. If your Mini holds reasonable value (£3,000+), engine replacement is almost always the more economical choice versus scrapping.",
+          "cta": "Use our free comparison tool to see whether a rebuilt or used Mini engine makes financial sense"
+        },
+        {
+          "question": "What's included in a Mini engine supply and fit service?",
+          "answer": "Supply‑and‑fit covers sourcing the correct engine code, removing the old unit, installing the replacement with new gaskets/fluids/filters, a workmanship warranty, safe disposal of the old engine, and a post‑fit test‑drive. Labour for fitting typically adds £400–£900 depending on model accessibility. Always confirm whether VAT, delivery, and any ancillary parts are included in the quoted price.",
+          "cta": "Compare Mini engine supply and fit deals"
+        },
+        {
+          "question": "How long does a Mini engine replacement take?",
+          "answer": "For common models like the F56 Cooper or R56 Cooper S, a like‑for‑like swap typically takes 3–5 working days. More complex variants (Countryman AWD, JCW) may require 5–7 days due to additional drivetrain components. The biggest variable is engine availability — our network stocks commonly replaced codes like N14, N18, N47, B38 and B48 to minimise delays.",
+          "cta": "Ask suppliers about lead times when you compare quotes"
+        },
+        {
+          "question": "Do reconditioned Mini engines come with warranty?",
+          "answer": "Yes — every reconditioned Mini engine supplied through EngineMarket carries a minimum 12‑month unlimited mileage warranty. Extended 24‑month coverage is often available on premium rebuilt or remanufactured units. Warranty typically covers major internals: crankshaft, pistons, timing components, and oil pump. Always confirm exact terms directly with your chosen supplier before ordering.",
+          "cta": "Find reconditioned Mini engines with comprehensive warranty cover"
+        },
+        {
+          "question": "Should I choose a used or reconditioned Mini engine?",
+          "answer": "Used engines are cheaper upfront (£800–£2,500) and suitable for temporary fixes or imminent resale. Reconditioned units (£1,800–£3,800) include new bearings, seals, and upgraded components addressing known failure points like N14 timing guides — and should deliver another 100k+ miles with warranty protection. For failure‑prone families (N14/N18/N47), we strongly recommend reconditioned with upgrades.",
+          "cta": "Compare used vs reconditioned Mini engine options now"
+        },
+        {
+          "question": "Where can I find Mini engine specialists near me?",
+          "answer": "EngineMarket connects you with a UK‑wide network of Mini‑specialist suppliers, with notable regional hubs in the Midlands, North West, and London. Enter your registration to instantly match with nearby specialists who stock your specific engine code and offer fitting services. Nationwide delivery and collection options are available if no local supplier has your exact unit in stock.",
+          "cta": "Find Mini engine specialists near you with our free tool"
+        },
+        {
+          "question": "What are the most common Mini engine failures?",
+          "answer": "The most frequent catastrophic failures are: N14/N18 timing chain guide fracture (Cooper S 2006–2014), N47 diesel timing chain tensioner failure (Cooper D 2007–2014), oil starvation leading to bearing wear on high‑mileage units, HPFP failure on N14 direct‑injection engines, and turbo wastegate issues on B48 petrol engines. Early warning signs rarely allow preventative repair — replacement is the most common outcome once damage occurs.",
+          "cta": "Get quotes for Mini engines addressing these known failure points"
+        },
+        {
+          "question": "How can I get the best price on a Mini engine?",
+          "answer": "Compare multiple quotes — prices for the same engine code can vary by £1,000+ across UK suppliers. Consider used engines for tight budgets or imminent resale, but opt for reconditioned units with upgraded components if you plan long‑term ownership. Ask about supply‑only pricing if you have a trusted garage, and always confirm whether fitting, delivery, and VAT are included in the quoted total.",
+          "cta": "Compare Mini engine prices now to secure the best deal"
+        }
+      ]
+    },
+    "trustCta": {
+      "tag": "Why Choose Us",
+      "h2": "Why UK Mini Owners Trust EngineMarket",
+      "intro": "Join thousands of UK drivers who compare Mini engine prices through our network of trusted specialists. Every rebuilt and reconditioned unit is backed by a minimum 12‑month unlimited mileage warranty and nationwide delivery.",
+      "points": [
+        {
+          "title": "Trusted Mini Engine Suppliers",
+          "description": "Every garage and engine rebuilder in our network is vetted, rated, and reviewed by real customers."
+        },
+        {
+          "title": "Compare Mini Engine Replacement Companies",
+          "description": "See prices, warranty terms, and fitting options side‑by‑side before you commit."
+        },
+        {
+          "title": "UK Engine Replacement Services for Mini",
+          "description": "Covering every model from Mini One to John Cooper Works, with supply‑only or supply‑and‑fit available nationwide."
+        }
+      ],
+      "finalText": "Find the best Mini engine replacement UK drivers rely on. Compare prices from trusted specialists today and get back on the road with confidence.",
+      "buttonText": "Compare Mini Engine Prices Now →"
+    }
+  }
+}

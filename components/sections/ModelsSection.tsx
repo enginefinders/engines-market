@@ -103,7 +103,7 @@ export default function ModelsSection({ data, brandSlug }: Props) {
             return (
               <article
                 key={model.slug}
-                className="overflow-hidden rounded-[14px] border border-slate-200 bg-white shadow-[0_2px_10px_rgba(13,27,46,0.06)] transition hover:border-green-200 hover:shadow-[0_8px_24px_rgba(13,27,46,0.1)]"
+                className="overflow-hidden rounded-[14px] border border-slate-200 bg-white shadow-[0_2px_10px_rgba(13,27,46,0.06)] transition hover:border-[#0d1b2e] hover:shadow-[0_8px_24px_rgba(13,27,46,0.1)]"
               >
                 <div className="flex items-center justify-between gap-3 px-4 py-4">
                   <div className="min-w-0">
@@ -123,7 +123,7 @@ export default function ModelsSection({ data, brandSlug }: Props) {
                     type="button"
                     onClick={() => setOpenCard((current) => (current === model.slug ? null : model.slug))}
                     aria-label={isOpen ? `Hide ${model.h3} details` : `Show ${model.h3} details`}
-                    className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-slate-200 text-[#15803d] transition hover:border-green-300 hover:bg-green-50"
+                    className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-slate-200 text-[#15803d] transition hover:border-[#0d1b2e] hover:bg-[#f8fbff]"
                   >
                     <ArrowIcon open={isOpen} />
                   </button>

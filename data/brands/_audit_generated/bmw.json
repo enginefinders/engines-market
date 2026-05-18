@@ -1,0 +1,1755 @@
+{
+  "brand": {
+    "name": "BMW",
+    "slug": "bmw",
+    "tone": "premium"
+  },
+  "seo": {
+    "title": "BMW Engine Replacement – Get Quotes from UK Specialists",
+    "description": "Get your free BMW engine quote today from trusted UK BMW engine specialists. Compare prices on reconditioned, rebuilt and used BMW engines – nationwide supply & fit available.",
+    "canonical": "/bmw"
+  },
+  "assets": {
+    "heroBg": "/images/brands/bmw/brand/bmw-hero-bg.webp",
+    "howItWorksBg": "/images/brands/bmw/brand/bmw-how-it-works-bg.webp",
+    "commonProblemsBg": "/images/brands/bmw/brand/bmw-common-problems-bg.webp",
+    "engineCodesBg": "/images/brands/bmw/brand/bmw-engine-codes-bg.webp",
+    "engineTypesBg": "/images/brands/bmw/brand/bmw-engine-types-bg.webp",
+    "engineSizesBg": "/images/brands/bmw/brand/bmw-engine-sizes-bg.webp",
+    "fuelTypesBg": "/images/brands/bmw/brand/bmw-fuel-types-bg.webp",
+    "engineCodeDirectoryBg": "/images/brands/bmw/brand/bmw-engine-code-directory-bg.webp"
+  },
+  "sections": {
+    "hero": {
+      "tag": "UK Engine Marketplace",
+      "h1": "BMW Engine Replacement – Get Quotes from UK Specialists",
+      "subheading": "Get your free BMW engine quote today from trusted UK BMW engine specialists. Compare prices on reconditioned, rebuilt and used BMW engines – nationwide supply & fit available.",
+      "trustBadges": [
+        "Supply & Fit Available",
+        "24-Month Warranty",
+        "Nationwide Delivery"
+      ],
+      "ctaLinkText": "Compare BMW Engine Prices",
+      "supportingText": "→",
+      "ticker": "Instant Quotes – No Obligation – 100% Free – Trusted UK Suppliers",
+      "form": {
+        "heading": "Find Your BMW Engine",
+        "subtitle": "Enter your registration number to get started.",
+        "inputPlaceholder": "Registration Number",
+        "buttonText": "Get Free Engine Quotes",
+        "note": ""
+      }
+    },
+    "howItWorks": {
+      "tag": "How It Works",
+      "h2": "3 Simple Steps to Finding the Best BMW Replacement Engine",
+      "cards": [
+        {
+          "number": 1,
+          "icon": "registration",
+          "front": {
+            "h3": "Enter Your BMW Registration",
+            "text": "Instantly verify your exact model, engine code and fuel type via DVLA — 1 Series to X5."
+          },
+          "back": {
+            "heading": "Your Car, Precisely Identified",
+            "text": "EngineMarket uses the official DVLA database to pull accurate details about your BMW, not just the model name.",
+            "bullets": [
+              "Your Precise Model — from 1 Series, 3 Series, 5 Series to X3, X5, X7 and M Series",
+              "Your Engine Code — N47, N57, B47, B58, M57, S55 and more",
+              "Vehicle Specs Check — fuel type, engine size, year, variant — all verified instantly",
+              "No paperwork, no guesswork, 100% free."
+            ]
+          }
+        },
+        {
+          "number": 2,
+          "icon": "quote",
+          "front": {
+            "h3": "Get Quotes from BMW Engine Specialists",
+            "text": "Same-day quotes from vetted UK suppliers — full breakdown, no obligation."
+          },
+          "back": {
+            "heading": "Quotes You Can Trust",
+            "text": "Your verified details are securely shared with up to 10 of our most relevant UK suppliers, matched to your variant and location.",
+            "bullets": [
+              "Vetted UK Suppliers — specialists who understand BMW diesel and petrol engines",
+              "Same-Day Quotes — usually within hours, not days",
+              "Supply & Fit Service — or supply-only to your own garage",
+              "Full Breakdown — price, warranty length, delivery estimate and fitting cost all shown clearly",
+              "No hidden fees. No sales calls unless you approve."
+            ]
+          }
+        },
+        {
+          "number": 3,
+          "icon": "shield",
+          "front": {
+            "h3": "Choose the Best Deal & Save",
+            "text": "Compare supplier reviews, warranty and price — then pick the right one for you."
+          },
+          "back": {
+            "heading": "Your Choice, Your Control",
+            "text": "You decide which specialist to go with. We simply make the search fast, safe, and transparent.",
+            "bullets": [
+              "Online Reviews — read real customer feedback",
+              "Warranty Length — minimum 12 months, often 24 months on rebuilt units",
+              "Terms of Service — including collection, fitting and aftercare",
+              "Technical Expertise — see each supplier's BMW experience, including official diagnostic tools (ISTA)",
+              "You deal directly with your chosen provider. No pressure, no commitment until you're ready."
+            ]
+          }
+        }
+      ],
+      "tagline": "Get Instant Quotes from BMW Engine Specialists Across the UK — 100% free, no obligation. Most replacements completed within 3–5 days."
+    },
+    "liveMarketPrices": {
+      "tag": "Live Market Prices",
+      "h2": "Recent BMW Engine Quotes & Price Guide",
+      "h3": "Based on real enquiries from UK buyers – updated regularly. All prices are typical UK rebuilt engine market ranges and reflect recent quotes from our network of BMW engine specialists.",
+      "introBullets": [
+        {
+          "label": "Real-Time Data",
+          "text": "Below are the 20 most recently requested BMW engine replacement enquiries from UK owners."
+        },
+        {
+          "label": "Transparent Pricing",
+          "text": "Each entry shows the model, engine code, typical market price range, and the most common failure reason driving replacement."
+        },
+        {
+          "label": "Cost Insights",
+          "text": "These are genuine search patterns — not stock listings."
+        },
+        {
+          "label": "Get Your Quote",
+          "text": "Use this guide to understand what BMW owners are paying for used and reconditioned engines, plus what problems lead to replacement."
+        }
+      ],
+      "cta": {
+        "heading": "Use the feed as your benchmark",
+        "text": "Use these recent buyer enquiries to benchmark your own BMW engine price before you compare specialist quotes.",
+        "buttonText": "Compare My BMW Engine",
+        "note": "Feed timestamps refresh automatically from the latest quote data."
+      },
+      "badges": [
+        "20 recent enquiries visible",
+        "Typical UK rebuilt ranges",
+        "Engine-code matched rows",
+        "Updated regularly"
+      ],
+      "feed": {
+        "isDynamic": true,
+        "rowsCount": 0,
+        "columns": [
+          "Year",
+          "Model",
+          "Engine Code",
+          "Fuel",
+          "Avg. Quoted Price",
+          "Reported Issue"
+        ],
+        "timestampLabel": "Last Updated",
+        "refreshLabel": "Refresh feed",
+        "density": "premium",
+        "visibleRows": 20,
+        "entries": []
+      }
+    },
+    "reviews": {
+      "tag": "Customer Reviews",
+      "h2": "Trusted by BMW Owners Across the UK",
+      "rating": {
+        "value": 4.8,
+        "count": 1000,
+        "summary": "Rated 4.8 out of 5 by verified customers who sourced reconditioned and used BMW engines through EngineMarket.",
+        "basedOn": "Based on real post-sale feedback from buyers matched with our network of UK engine specialists."
+      },
+      "reviews": [
+        {
+          "text": "Thanks to EngineMarket, I saved over £1,000 on my BMW engine and found a solid local specialist quickly.",
+          "name": "Jimmy",
+          "location": "London"
+        },
+        {
+          "text": "Got multiple quotes for my BMW within hours and the whole process felt straightforward.",
+          "name": "Pete",
+          "location": "Leeds"
+        },
+        {
+          "text": "I wasn't sure which BMW engine I needed, but the quote process helped me narrow it down fast.",
+          "name": "Sophie",
+          "location": "Birmingham"
+        },
+        {
+          "text": "Fast turnaround, clear pricing, and the warranty gave me real peace of mind for my BMW.",
+          "name": "Ahmed",
+          "location": "Bradford"
+        },
+        {
+          "text": "One of the easiest car-related experiences I've had. Honest, quick, and much cheaper than expected.",
+          "name": "Liam",
+          "location": "Manchester"
+        },
+        {
+          "text": "EngineMarket made a stressful BMW engine failure much easier to deal with from start to finish.",
+          "name": "Tom",
+          "location": "Glasgow"
+        }
+      ],
+      "leaveReviewCta": {
+        "text": "Had a great experience?",
+        "linkText": "Leave a review ->"
+      }
+    },
+    "models": {
+      "tag": "Models We Cover",
+      "h2": "Popular BMW Engine Replacement Models",
+      "subheading": "From the 1 Series to the X7 and M Series, our network of UK BMW engine specialists covers every model in the range. Select your BMW below to compare rebuilt engine prices and get quotes from trusted suppliers.",
+      "cards": [
+        {
+          "h3": "BMW 1 Series Engines",
+          "slug": "1-series",
+          "subtitle": "Available for 116d, 118d, 120d, 125d & M135i",
+          "priceRange": "Starting from £1,200 – £3,500",
+          "cta": "Compare BMW 1 Series Engine Prices",
+          "image": "/images/brands/bmw/models/bmw-1-series-model-card.webp"
+        },
+        {
+          "h3": "BMW 2 Series Engines",
+          "slug": "2-series",
+          "subtitle": "Available for 218d, 220d, 220i, M235i & M240i",
+          "priceRange": "Starting from £1,400 – £4,000",
+          "cta": "Compare BMW 2 Series Engine Prices",
+          "image": "/images/brands/bmw/models/bmw-2-series-model-card.webp"
+        },
+        {
+          "h3": "BMW 3 Series Engines",
+          "slug": "3-series",
+          "subtitle": "Available for 316d, 318d, 320d, 330d, 330i & M340i",
+          "priceRange": "Starting from £1,500 – £4,500",
+          "cta": "Compare BMW 3 Series Engine Prices",
+          "image": "/images/brands/bmw/models/bmw-3-series-model-card.webp"
+        },
+        {
+          "h3": "BMW 4 Series Engines",
+          "slug": "4-series",
+          "subtitle": "Available for 418d, 420d, 420i, 430d, 430i, M440i",
+          "priceRange": "Starting from £1,600 – £4,800",
+          "cta": "Compare BMW 4 Series Engine Prices",
+          "image": "/images/brands/bmw/models/bmw-4-series-model-card.webp"
+        },
+        {
+          "h3": "BMW 5 Series Engines",
+          "slug": "5-series",
+          "subtitle": "Available for 518d, 520d, 530d, 530e & M550i",
+          "priceRange": "Starting from £1,800 – £5,500",
+          "cta": "Compare BMW 5 Series Engine Prices",
+          "image": "/images/brands/bmw/models/bmw-5-series-model-card.webp"
+        },
+        {
+          "h3": "BMW 6 Series Engines",
+          "slug": "6-series",
+          "subtitle": "Available for 620d, 630d, 630i, 640d & 640i",
+          "priceRange": "Starting from £1,900 – £6,000",
+          "cta": "Compare BMW 6 Series Engine Prices",
+          "image": "/images/brands/bmw/models/bmw-6-series-model-card.webp"
+        },
+        {
+          "h3": "BMW 7 Series Engines",
+          "slug": "7-series",
+          "subtitle": "Available for 725d, 730d, 730Ld, 740e & M760Li",
+          "priceRange": "Starting from £2,500 – £8,000",
+          "cta": "Compare BMW 7 Series Engine Prices",
+          "image": "/images/brands/bmw/models/bmw-7-series-model-card.webp"
+        },
+        {
+          "h3": "BMW i Series Engines",
+          "slug": "i-series",
+          "subtitle": "Available for i3, i4 eDrive35, i4 eDrive40, i4 M50 & iX",
+          "priceRange": "Starting from £2,000 – £7,000 (electric motor replacement – specialist suppliers only)",
+          "cta": "Compare BMW i Series Engine Prices",
+          "image": "/images/brands/bmw/models/bmw-i-series-model-card.webp"
+        },
+        {
+          "h3": "BMW M2 Engines",
+          "slug": "m2",
+          "subtitle": "Available for M2 Coupe, M2 Competition & M2 CS",
+          "priceRange": "Starting from £4,000 – £10,000",
+          "cta": "Compare BMW M2 Engine Prices",
+          "image": "/images/brands/bmw/models/bmw-m2-model-card.webp"
+        },
+        {
+          "h3": "BMW M3 Engines",
+          "slug": "m3",
+          "subtitle": "Available for M3 E46, M3 E90, M3 F80, M3 G80 & M3 Touring",
+          "priceRange": "Starting from £4,500 – £12,000",
+          "cta": "Compare BMW M3 Engine Prices",
+          "image": "/images/brands/bmw/models/bmw-m3-model-card.webp"
+        },
+        {
+          "h3": "BMW M4 Engines",
+          "slug": "m4",
+          "subtitle": "Available for M4 Coupe, M4 Convertible, M4 G82 & M4 CSL",
+          "priceRange": "Starting from £4,500 – £11,000",
+          "cta": "Compare BMW M4 Engine Prices",
+          "image": "/images/brands/bmw/models/bmw-m4-model-card.webp"
+        },
+        {
+          "h3": "BMW M5 Engines",
+          "slug": "m5",
+          "subtitle": "Available for M5 E60, M5 F10, M5 F90 & M5 CS",
+          "priceRange": "Starting from £5,000 – £12,000",
+          "cta": "Compare BMW M5 Engine Prices",
+          "image": "/images/brands/bmw/models/bmw-m5-model-card.webp"
+        },
+        {
+          "h3": "BMW M6 Engines",
+          "slug": "m6",
+          "subtitle": "Available for M6 E63, M6 Gran Coupe & M6 Competition",
+          "priceRange": "Starting from £5,000 – £11,000",
+          "cta": "Compare BMW M6 Engine Prices",
+          "image": "/images/brands/bmw/models/bmw-m6-model-card.webp"
+        },
+        {
+          "h3": "BMW M8 Engines",
+          "slug": "m8",
+          "subtitle": "Available for M8 Coupe, M8 Convertible, M8 Gran Coupe & M8 Competition",
+          "priceRange": "Starting from £5,500 – £12,000",
+          "cta": "Compare BMW M8 Engine Prices",
+          "image": "/images/brands/bmw/models/bmw-m8-model-card.webp"
+        },
+        {
+          "h3": "BMW X1 Engines",
+          "slug": "x1",
+          "subtitle": "Available for sDrive18d, sDrive20d, xDrive20d & xDrive25e",
+          "priceRange": "Starting from £1,500 – £4,000",
+          "cta": "Compare BMW X1 Engine Prices",
+          "image": "/images/brands/bmw/models/bmw-x1-model-card.webp"
+        },
+        {
+          "h3": "BMW X3 Engines",
+          "slug": "x3",
+          "subtitle": "Available for sDrive18d, xDrive20d, xDrive30d, M40i & X3M",
+          "priceRange": "Starting from £1,800 – £5,000",
+          "cta": "Compare BMW X3 Engine Prices",
+          "image": "/images/brands/bmw/models/bmw-x3-model-card.webp"
+        },
+        {
+          "h3": "BMW X4 Engines",
+          "slug": "x4",
+          "subtitle": "Available for xDrive20d, xDrive30d, M40i & X4M",
+          "priceRange": "Starting from £1,900 – £5,200",
+          "cta": "Compare BMW X4 Engine Prices",
+          "image": "/images/brands/bmw/models/bmw-x4-model-card.webp"
+        },
+        {
+          "h3": "BMW X5 Engines",
+          "slug": "x5",
+          "subtitle": "Available for xDrive30d, xDrive40d, xDrive45e, M50d & X5M",
+          "priceRange": "Starting from £2,500 – £8,000",
+          "cta": "Compare BMW X5 Engine Prices",
+          "image": "/images/brands/bmw/models/bmw-x5-model-card.webp"
+        },
+        {
+          "h3": "BMW X6 Engines",
+          "slug": "x6",
+          "subtitle": "Available for xDrive30d, xDrive40d, M50d & X6M",
+          "priceRange": "Starting from £2,600 – £8,500",
+          "cta": "Compare BMW X6 Engine Prices",
+          "image": "/images/brands/bmw/models/bmw-x6-model-card.webp"
+        },
+        {
+          "h3": "BMW Z Series Engines",
+          "slug": "z-series",
+          "subtitle": "Available for Z3 1.9, Z4 sDrive20i, Z4 sDrive30i, Z4 M40i",
+          "priceRange": "Starting from £1,500 – £6,000",
+          "cta": "Compare BMW Z Series Engine Prices",
+          "image": "/images/brands/bmw/models/bmw-z-series-model-card.webp"
+        }
+      ]
+    },
+    "engineCodes": {
+      "tag": "Replacement Cost",
+      "h2": "BMW Engine Codes & Average Rebuilt Prices (UK Supply)",
+      "h3": "Compare costs for every major BMW engine — B47/N47 diesels, B58/B48 petrols, and M57/N57 six-cylinder units. All prices are typical UK market ranges for professionally rebuilt engines with warranty. Click \"Get Quote\" on any engine to receive tailored prices from our network of UK BMW specialists.",
+      "filters": [
+        "All",
+        "Diesel",
+        "Petrol"
+      ],
+      "groups": [
+        {
+          "name": "N47 Diesel Family",
+          "era": "2007–2015",
+          "failureNote": "The N47 is infamous for rear-mounted timing chain stretch and guide failure — catastrophic if chain snaps. Our rebuilt units include upgraded timing chain kits (BMW OEM tensioner 11317580087), rebuilt turbos with new seals, and fully decoked EGR systems.",
+          "engines": [
+            {
+              "code": "N47D20A",
+              "fuel": "Diesel",
+              "size": "2.0L",
+              "power": "143hp",
+              "compatibleModels": "1 Series (E87/E82), 3 Series (E90), X3 (E83)",
+              "avgRebuiltPrice": "£2,000 – £3,000",
+              "cta": "Get Quote for N47D20A"
+            },
+            {
+              "code": "N47D20C",
+              "fuel": "Diesel",
+              "size": "2.0L",
+              "power": "177hp & 184hp",
+              "compatibleModels": "1 Series (F20), 3 Series (F30), 5 Series (F10), X1 (E84)",
+              "avgRebuiltPrice": "£3,000 – £4,000",
+              "cta": "Get Quote for N47D20C"
+            }
+          ]
+        },
+        {
+          "name": "B47 Diesel Family",
+          "era": "2014–Present",
+          "failureNote": "Pre-2018 B47 units suffer timing chain tensioner wear (cold start rattle) and valve cover breather blockages causing turbo failure. Our rebuilt units feature revised tensioner designs and upgraded oil pump drives.",
+          "engines": [
+            {
+              "code": "B47D20A",
+              "fuel": "Diesel",
+              "size": "2.0L",
+              "power": "150hp–190hp",
+              "compatibleModels": "1 Series (F20 LCI), 3 Series (F30 LCI), X3 (G01)",
+              "avgRebuiltPrice": "£2,000 – £4,000",
+              "cta": "Get Quote for B47D20A"
+            },
+            {
+              "code": "B47D20B",
+              "fuel": "Diesel",
+              "size": "2.0L",
+              "power": "190hp–231hp",
+              "compatibleModels": "3 Series (G20), 5 Series (G30), X5 (G05)",
+              "avgRebuiltPrice": "£4,000 – £6,000",
+              "cta": "Get Quote for B47D20B"
+            }
+          ]
+        },
+        {
+          "name": "N57 / M57 Six-Cylinder Diesel",
+          "era": "2006–2019",
+          "failureNote": "N57/M57 engines commonly suffer EGR cooler leakage (risking hydro-lock) and turbo actuator failure after 80,000 miles. Our rebuilt units include new EGR coolers, rebuilt twin turbos with upgraded actuators, and new timing components.",
+          "engines": [
+            {
+              "code": "M57D30",
+              "fuel": "Diesel",
+              "size": "3.0L",
+              "power": "197hp–286hp",
+              "compatibleModels": "5 Series (E60/E61), X5 (E70), 3 Series (E90)",
+              "avgRebuiltPrice": "£6,000 – £8,000",
+              "cta": "Get Quote for M57D30"
+            },
+            {
+              "code": "N57D30A",
+              "fuel": "Diesel",
+              "size": "3.0L",
+              "power": "245hp–313hp",
+              "compatibleModels": "5 Series (F10), X5 (F15), 7 Series (F01)",
+              "avgRebuiltPrice": "£6,000 – £8,000",
+              "cta": "Get Quote for N57D30A"
+            },
+            {
+              "code": "N57D30B/T0",
+              "fuel": "Diesel",
+              "size": "3.0L",
+              "power": "313hp–381hp",
+              "compatibleModels": "X5 M50d, X6 M50d, 5 Series (G30)",
+              "avgRebuiltPrice": "£6,000 – £8,000",
+              "cta": "Get Quote for N57D30B/T0"
+            }
+          ]
+        },
+        {
+          "name": "B48 / B58 Petrol Family",
+          "era": "2015–Present",
+          "failureNote": "B48 engines occasionally experience high-pressure fuel pump (HPFP) failures around 60,000 miles (£650–£950 repair). B58 is BMW's most reliable modern six-cylinder — our rebuilt units are tested to OEM compression and leakdown standards.",
+          "engines": [
+            {
+              "code": "B48B20",
+              "fuel": "Petrol",
+              "size": "2.0L",
+              "power": "184hp–258hp",
+              "compatibleModels": "1 Series (F40), 3 Series (G20), X3 (G01), 330e hybrid",
+              "avgRebuiltPrice": "£2,000 – £4,000",
+              "cta": "Get Quote for B48B20"
+            },
+            {
+              "code": "B58B30",
+              "fuel": "Petrol",
+              "size": "3.0L",
+              "power": "320hp–382hp",
+              "compatibleModels": "3 Series (G20 M340i), 4 Series (G22), X5 (G05), Z4 (G29), Toyota Supra",
+              "avgRebuiltPrice": "£5,000 – £8,000",
+              "cta": "Get Quote for B58B30"
+            }
+          ]
+        },
+        {
+          "name": "Performance S-Series",
+          "era": "M Cars",
+          "failureNote": "S-series engines see high demand due to dealership replacement quotes exceeding £20k — our network supplies fully rebuilt units with upgraded bearings and cooling system components tested to track standards.",
+          "engines": [
+            {
+              "code": "S55B30",
+              "fuel": "Petrol",
+              "size": "3.0L",
+              "power": "431hp–450hp",
+              "compatibleModels": "M3 (F80), M4 (F82)",
+              "avgRebuiltPrice": "£6,000 – £10,000",
+              "cta": "Get Quote for S55B30"
+            },
+            {
+              "code": "S58B30",
+              "fuel": "Petrol",
+              "size": "3.0L",
+              "power": "480hp–510hp",
+              "compatibleModels": "X3M (F97), X4M (F98)",
+              "avgRebuiltPrice": "£7,000+",
+              "cta": "Get Quote for S58B30"
+            },
+            {
+              "code": "S63B44B",
+              "fuel": "Petrol",
+              "size": "4.4L",
+              "power": "600hp+",
+              "compatibleModels": "M5 (F90), M6 (F06), X5M (F85)",
+              "avgRebuiltPrice": "£7,000 – £12,000",
+              "cta": "Get Quote for S63B44B"
+            }
+          ]
+        },
+        {
+          "name": "N63 V8 Petrol",
+          "era": "2008–Present",
+          "failureNote": "N63 \"hot-vee\" V8 suffers from timing chain wear, valve seal failure, and oil consumption. Our rebuilt units include updated valve stem seals and complete timing chain assemblies",
+          "engines": [
+            {
+              "code": "N63B44",
+              "fuel": "Petrol",
+              "size": "4.4L",
+              "power": "400hp–445hp",
+              "compatibleModels": "5 Series (F10), 7 Series (F01), X5 (E70), X6 (E71)",
+              "avgRebuiltPrice": "£7,000 – £10,000",
+              "cta": "Get Quote for N63B44"
+            }
+          ]
+        }
+      ]
+    },
+    "commonProblems": {
+      "tag": "Common Problems",
+      "h2": "Common BMW Engine Problems — What It Costs to Fix & When Replacement Makes Sense",
+      "h3": "",
+      "problems": [
+        {
+          "group": "Timing Chain Failure",
+          "h4": "Timing Chain Failure – Why N47 & Early B-Series Diesel Engines Fail Prematurely",
+          "image": "/images/brands/bmw/engines/bmw-timing-chain-failure-card.webp",
+          "affectedModels": "BMW 1 Series (116d, 118d, 120d, 2007–2015, N47D16 & N47D20), 3 Series E90/F30 (318d, 320d, 2007–2015), 5 Series F10 (520d, 2010–2015), X1 E84, X3 E83.",
+          "typicalFailureMileage": "60,000–100,000 miles",
+          "rootCause": "The N47 engine's timing chain is located at the rear of the engine block, running through an oil passage. The original single-row chain stretches and the plastic tensioner guides degrade over time. When the chain snaps, pistons collide with valves — catastrophic engine destruction requiring full replacement. BMW acknowledged the issue in internal TIS bulletin SI B 11 03 10 but never issued a formal recall . Pre-2018 B47 and B48 units suffer similar chain tensioner wear, confirmed in BMW service bulletins SI B11 02 17 and SI B11 01 18 .",
+          "repairOptions": [
+            {
+              "tier": "| Preventative – Timing Chain Replacement |",
+              "dealerPrice": "£2,500 – £3,500",
+              "specialistPrice": "£1,300 – £2,000",
+              "whatItInvolves": "| Full timing chain kit (chain, tensioner, guides, sprockets), oil pump chain replacement, sump clean | Extends engine life 60,000–80,000 miles.",
+              "longevity": "Only viable BEFORE chain slips or rattles on cold start exceeds 3 seconds |"
+            },
+            {
+              "tier": "| Full Replacement – Rebuilt / Reconditioned N47 Engine |",
+              "dealerPrice": "£6,500 – £8,000",
+              "specialistPrice": "£2,600 – £3,700",
+              "whatItInvolves": "| Supply & fit of professionally rebuilt engine with upgraded timing components (metal tensioner, revised guides), rebuilt turbo, decoked EGR, full compression/leakdown testing | 90,000+ mile post-rebuild lifespan with proper maintenance. Recommended if chain already slipped or valves bent |",
+              "longevity": ""
+            }
+          ],
+          "recommendation": "If your N47 rattles only briefly on cold start (under 3 seconds) but compression and cam timing are still good, preventative chain replacement is the most cost‑effective route — specialist indie pricing saves you ~40% vs dealer. However, if the chain has skipped timing or the engine already shows low compression, skip the repair. A reconditioned engine from a specialist is only £600–£1,700 more than dealer chain replacement and includes a 12‑month warranty plus upgraded components that permanently address the original design flaw.",
+          "cta": "→ Compare rebuilt N47 engine prices for your 1 Series, 3 Series or 5 Series"
+        },
+        {
+          "group": "B58 Coolant System Failure",
+          "h4": "B48 / B58 Coolant System Failure – Why Modern Petrols Lose Coolant & Overheat",
+          "image": "/images/brands/bmw/engines/bmw-b58-coolant-system-failure-card.webp",
+          "affectedModels": "BMW 2 Series (220i, 230i, 2014–2020, B48B20), 3 Series G20 (320i, 330i, 2019–present), 4 Series G22 (420i, 430i), 5 Series G30 (520i, 530i), X3 G01, X4 G02, X5 G05 (B58B30), Z4 G29, Toyota Supra.",
+          "typicalFailureMileage": "40,000–80,000 miles",
+          "rootCause": "The B48 and B58 “modular” petrol engines use a plastic coolant expansion tank and hoses that become brittle with heat cycling. Cracks develop at the tank's seam and hose connectors, leading to gradual or sudden coolant loss. If ignored, overheating warps the cylinder head and blows the head gasket — a repair often exceeding £3,000 .",
+          "repairOptions": [
+            {
+              "tier": "| Minor – Hose or Expansion Tank Replacement |",
+              "dealerPrice": "£200 – £400",
+              "specialistPrice": "£80 – £200",
+              "whatItInvolves": "| Replacement of cracked expansion tank, split hose, or loose clamp. Refill and bleed cooling system | OEM-grade parts last 5+ years.",
+              "longevity": "Suitable if caught early with no overheating history |"
+            },
+            {
+              "tier": "| Moderate – Water Pump & Thermostat Replacement |",
+              "dealerPrice": "£500 – £800",
+              "specialistPrice": "£300 – £500",
+              "whatItInvolves": "| Replace electric water pump (B58 uses mechanical pump), thermostat, coolant flush and refill | Restores cooling system to factory specification. Recommended if pump fails or engine runs hot despite no visible leaks |",
+              "longevity": ""
+            },
+            {
+              "tier": "| Severe – Head Gasket Replacement |",
+              "dealerPrice": "£2,500 – £3,500",
+              "specialistPrice": "£1,800 – £2,500",
+              "whatItInvolves": "| Cylinder head removal, pressure testing, head gasket replacement, bolts, coolant system overhaul | Only viable if head not warped. If overheating caused head deformation, replacement is often cheaper |",
+              "longevity": ""
+            },
+            {
+              "tier": "| Full Replacement – Rebuilt B48/B58 Engine |",
+              "dealerPrice": "£7,000 – £9,000",
+              "specialistPrice": "£4,000 – £6,500",
+              "whatItInvolves": "| Supply & fit of reconditioned engine with new gaskets, timing components, and upgraded cooling system parts | Required if head warped, block cracked, or bearing damage occurred from overheating |",
+              "longevity": ""
+            }
+          ],
+          "recommendation": "Check your coolant level monthly — B48/B58 owners who catch a leak early fix it for under £200. If your engine has overheated to the point of steam or warning lights, have a compression test done immediately. On a car worth under £8,000, a full dealer head gasket repair (£2,500+) rarely makes sense — specialist replacement or a reconditioned engine is often the same money for a complete solution. For M240i, M340i, and M440i owners, the reconditioned B58 route preserves performance value better than a patch repair.",
+          "cta": "→ Get quotes for rebuilt B48 and B58 engines with upgraded cooling system components"
+        },
+        {
+          "group": "S55 Crank Hub Spinning",
+          "h4": "S55 Crank Hub Spinning – The M3 / M4 Performance Engine Weakness",
+          "image": "/images/brands/bmw/engines/bmw-s55-crank-hub-spinning-card.webp",
+          "affectedModels": "BMW M3 F80 (2014–2019, S55B30), M4 F82/F83 (2014–2020), M2 Competition (2019–2022).",
+          "typicalFailureMileage": "20,000–60,000 miles (more common on tuned or track-driven cars)",
+          "rootCause": "The S55's crankshaft hub is held in place only by friction from a single central bolt, not a physical key or spline. Under high torque or sudden load changes (aggressive downshifts, launch control), the hub can slip relative to the crankshaft — this “spun crank hub” throws off cam and crank timing. If severe, pistons hit valves, engine destroyed. Less than 1% of stock S55s fail, but modified cars see higher rates .",
+          "repairOptions": [
+            {
+              "tier": "| Repair – Re-time & Reassemble (No Hub Damage) |",
+              "dealerPrice": "£1,500 – £2,500",
+              "specialistPrice": "£800 – £1,500",
+              "whatItInvolves": "| Dealer resets timing, replaces hub bolt, reassembles. Does NOT install upgraded hub | 30,000–50,000 mile risk of recurrence.",
+              "longevity": "Only viable if hub slipped minimally without valve contact |"
+            },
+            {
+              "tier": "| Full Engine Replacement – Rebuilt S55 |",
+              "dealerPrice": "£18,000 – £22,000",
+              "specialistPrice": "£10,000 – £14,000",
+              "whatItInvolves": "| Supply & fit of fully rebuilt S55 with upgraded crank hub, new bearings, rings, gaskets | Required if valves bent or block damaged. Less than 1% of spun hubs reach this stage |",
+              "longevity": ""
+            }
+          ],
+          "recommendation": "If you own a stock S55 with no symptoms, you don't need preventative work — actual failure rates are under 1% . However, if you tune your car, track it regularly, or plan to keep it beyond warranty, the £3,200–£4,500 spline-lock hub upgrade is sensible insurance. If your hub has already slipped but timing is still intact, pay the £1,500 specialist labour for a re-time PLUS the upgraded hub — don't let a dealer just reinstall the factory setup. On a £30,000–50,000 M car, the preventative spend is worth peace of mind.",
+          "cta": "→ Compare rebuilt S55 engine prices and crank hub upgrade packages"
+        },
+        {
+          "group": "N63 V8 Valve Stem Seal Failure",
+          "h4": "N63 V8 Valve Stem Seal Failure – X5, 5 Series & 7 Series Oil Consumption",
+          "image": "/images/brands/bmw/engines/bmw-n63-v8-valve-stem-seal-failure-card.webp",
+          "affectedModels": "BMW X5 E70 (50i, 2010–2013, N63B44), X6 E71 (50i), 5 Series F10 (550i, 2011–2016), 7 Series F01 (750i, 2009–2015).",
+          "typicalFailureMileage": "60,000–100,000 miles",
+          "rootCause": "The N63 “hot-vee” V8 routes the exhaust and turbos inside the engine's V-angle, generating extreme heat around the valve stems. The original Viton rubber seals harden and shrink, allowing oil to leak down valve guides into combustion chambers. Blue smoke on cold start, followed by constant smoking and rapid oil consumption (1 litre per 600 miles not uncommon) .",
+          "repairOptions": [
+            {
+              "tier": "| Repair – Valve Stem Seal Replacement |",
+              "dealerPrice": "£3,000 – £4,500",
+              "specialistPrice": "£1,700 – £2,500",
+              "whatItInvolves": "| Remove cylinder heads, replace all 32 valve stem seals with upgraded Viton/Glyd rings (high-temp rated). New valve cover gaskets | 60,000–80,000 mile lifespan with proper oil changes.",
+              "longevity": "Viable if engine otherwise healthy and compression good |"
+            },
+            {
+              "tier": "| Full Replacement – Rebuilt N63 Engine |",
+              "dealerPrice": "£12,000 – £15,000",
+              "specialistPrice": "£7,000 – £10,000",
+              "whatItInvolves": "| Supply & fit of fully rebuilt engine with upgraded valve seals, new timing chains, rebuilt turbos, updated injectors | Permanent solution. Often cheaper than dealer seal replacement + any other simultaneous repairs |",
+              "longevity": ""
+            }
+          ],
+          "recommendation": "On an N63-powered X5 or 550i worth £7,000–12,000, the £1,700–2,500 specialist seal replacement is the smart play — it halves dealer pricing and restores the engine for years. Only go full replacement if compression tests show additional wear (rings, scored bores) or the turbos are failing. Owner forum data suggests many N63s with seal replacement done at 70,000 miles exceed 130,000 miles without recurrence . Use a BMW specialist who has done this job before — the “hot-vee” layout demands specific tooling and procedure.",
+          "cta": "→ Get quotes for N63 valve stem seal repair or rebuilt N63 engines"
+        }
+      ],
+      "finalCta": {
+        "h4": "Don't Let Engine Failure Write Off Your BMW",
+        "paragraph": "Whether you're facing an N47 timing chain crisis on your 320d, limp mode from a B48 coolant leak, or blue smoke from N63 valve seals on your X5, EngineMarket makes it simple to compare prices from trusted UK BMW specialists. Every engine in our network is rebuilt with upgraded components that specifically address the original failure point — plus a minimum 12‑month unlimited mileage warranty. You don't have to pay main dealer prices or risk an untested scrapyard engine. Compare prices from vetted specialists today and get back on the road.",
+        "buttonText": "Compare BMW Engine Replacement Prices Now",
+        "disclaimer": "All prices are indicative UK market ranges based on historical quote data and repair requests from our network of engine specialists . Dealer pricing is estimated based on published main dealer labour rates (£150–£250/hour) and genuine OEM parts pricing. Specialist pricing reflects actual quote data from EngineMarket's UK network alongside data from sources including ClickMechanic and industry repair surveys. Labour estimates assume 8–12 hours for chain replacement, 6–10 hours for valve seals, and vary for crank hub work. Actual costs vary depending on damage severity, vehicle condition, variant, and workshop location within the UK. Use our free comparison tool to get tailored quotes for your specific BMW model and engine code. Every engine supplied through EngineMarket carries a minimum 12‑month unlimited mileage warranty — always confirm exact terms with your chosen supplier."
+      }
+    },
+    "engineTypes": {
+      "tag": "Replacement Engine Options",
+      "h2": "BMW Engine Types – Options, Costs & What to Expect",
+      "intro": "Every BMW engine type available through our UK network, with typical price ranges and recommendations based on your vehicle’s age, condition and your budget.",
+      "types": [
+        {
+          "title": "BMW Reconditioned Engines (Recon)",
+          "description": "A stripped, cleaned and fully inspected engine where all worn components are replaced with OEM‑spec parts. Best for owners who want factory reliability without the factory price.",
+          "priceRange": "Typical price range: £2,200 – £4,500 (depending on engine code)",
+          "cta": "Compare reconditioned BMW engine prices"
+        },
+        {
+          "title": "BMW Rebuilt Engines",
+          "description": "A complete rebuild with upgraded components addressing known failure points – such as reinforced timing chain kits for N47/B47 diesels and uprated crank hubs for S55 performance engines – for a longer service life than a standard replacement.",
+          "priceRange": "Typical price range: £2,800 – £6,500",
+          "cta": "Get rebuilt BMW engine quotes"
+        },
+        {
+          "title": "Used BMW Engines",
+          "description": "A tested, low‑mileage take‑out unit from a donor vehicle. The most affordable option when budget is the priority, with verified history and warranty available.",
+          "priceRange": "Typical price range: £1,200 – £3,500",
+          "cta": "Check used BMW engine availability"
+        },
+        {
+          "title": "BMW Remanufactured Engines",
+          "description": "A factory‑spec, as‑new engine: every surface is machined, every component is replaced, and the unit is built to meet exact OEM tolerances. The premium choice for performance models or owners wanting a zero‑mile engine.",
+          "priceRange": "Typical price range: £3,500 – £8,000",
+          "cta": "Compare remanufactured BMW engine costs"
+        },
+        {
+          "title": "BMW Refurbished Engines",
+          "description": "A lightly serviced, cleaned, and tested engine that works reliably but hasn’t had a complete rebuild. Often a pragmatic, fast solution for older or budget‑sensitive models where a full recon isn’t economical.",
+          "priceRange": "Typical price range: £1,500 – £2,800",
+          "cta": "View refurbished BMW engine options"
+        },
+        {
+          "title": "BMW Supply & Fit Engines",
+          "description": "Your replacement engine delivered and professionally installed by a UK BMW specialist. Includes removal of the old unit, fitting, fluids, and a workmanship warranty.",
+          "priceRange": "Typical added cost: £400 – £800 on top of engine price",
+          "cta": "Find BMW engine supply & fit deals"
+        }
+      ],
+      "closing": "All engine types include a minimum 12‑month warranty. Prices are typical UK market ranges and depend on exact engine code, supplier, and any additional fitting services. Use our free comparison tool to get a tailored quote for your BMW model today."
+    },
+    "engineSizes": {
+      "tag": "Engine Sizes",
+      "h2": "BMW Engines by Size – Find the Right Displacement for Your Model",
+      "intro": "",
+      "groups": [
+        {
+          "title": "BMW Diesel Engine Sizes",
+          "items": [
+            {
+              "title": "BMW 1.5L Diesel Engines",
+              "description": "The 1.5-litre three-cylinder diesel appeared in the BMW 1 Series (F70) from 2024 onwards, producing 136–150hp. This B37-family engine represents BMW's modular small diesel platform, designed for efficiency and urban driving. Replacement demand remains low due to its recent introduction, but early reports focus on DPF regeneration issues in primarily short-trip use",
+              "cta": "Get quotes for BMW 1.5L diesel engines",
+              "engineCodes": [
+                "B37C15 (B37D15)"
+              ],
+              "compatibleModels": [
+                "1 Series (F70)",
+                "2 Series Active Tourer (U06)"
+              ],
+              "productionYears": "2024–present",
+              "commonFailurePoints": [
+                "DPF clogging in low-mileage usage – prevention requires regular longer runs"
+              ]
+            },
+            {
+              "title": "BMW 2.0L Diesel Engines",
+              "description": "BMW’s 2.0-litre four-cylinder diesel has powered more UK BMWs than any other engine. The M47 (1998–2007) was the first-generation common-rail diesel, followed by the N47 (2007–2015) — infamous for rear-mounted timing chain failure that can destroy the engine without warning. The B47 (2014–present) largely resolved chain issues but introduced EGR cooler failures and occasional injector problems. This engine family appears across the 1, 2, 3, 4, 5 Series, X1, X3, and Mini Cooper D",
+              "cta": "Get quotes for BMW 2.0L diesel engines",
+              "engineCodes": [
+                "B47D20",
+                "N47D20",
+                "M47D20"
+              ],
+              "compatibleModels": [
+                "1 Series",
+                "3 Series",
+                "5 Series",
+                "X1",
+                "X3",
+                "X5 (2004–present)"
+              ],
+              "productionYears": "1998–present",
+              "commonFailurePoints": [
+                "N47 – timing chain stretch/breakage (60",
+                "000–100",
+                "000 miles)",
+                "B47 – EGR cooler failure requiring replacement"
+              ]
+            },
+            {
+              "title": "BMW 3.0L Diesel Engines",
+              "description": "BMW’s 3.0-litre straight-six diesel is the gold standard for torque and refinement. The M57 (1998–2009) earned a reputation for bulletproof reliability, powering E39 530d and E60 530d. Its successor, the N57 (2008–2019), introduced twin-turbo variants (N57D30T0) producing up to 381hp in the X5 M50d, but suffered EGR cooler leaks (risking hydro-lock) and turbo actuator failure around 80,000 miles. The B57 (2015–present) returns to the M57's robust design with fewer major failure reports, though some 2015–2018 units experienced timing chain tensioner wear",
+              "cta": "Get quotes for BMW 3.0L diesel engines",
+              "engineCodes": [
+                "B57D30",
+                "N57D30",
+                "M57D30"
+              ],
+              "compatibleModels": [
+                "3 Series",
+                "5 Series",
+                "7 Series",
+                "X3",
+                "X5",
+                "X6",
+                "X7 (1998–present)"
+              ],
+              "productionYears": "1998–present",
+              "commonFailurePoints": [
+                "N57 – EGR cooler leaks and turbo actuator failure",
+                "B57 – early timing chain tensioner wear (pre-2018)"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "BMW Petrol Engine Sizes",
+          "items": [
+            {
+              "title": "BMW 1.2L Petrol Engines",
+              "description": "The 1.2-litre three-cylinder B38 powers entry-level BMW models and the Mini range. Producing 102–136hp, it's found in the 1 Series (F20/F40) and X1 (F48). Replacement is relatively rare as these engines are modern and generally reliable, though the most common failure is the high-pressure fuel pump (HPFP) around 60,000–80,000 miles",
+              "cta": "Compare BMW 1.2L petrol engine prices",
+              "engineCodes": [
+                "B38A12"
+              ],
+              "compatibleModels": [
+                "1 Series (F20/F40)",
+                "X1 (F48)",
+                "2 Series Active Tourer"
+              ],
+              "productionYears": "2013–present",
+              "commonFailurePoints": [
+                "HPFP failure (petrol) – replacement cost £650–£950"
+              ]
+            },
+            {
+              "title": "BMW 1.5L Petrol Engines",
+              "description": "The 1.5-litre three-cylinder B38 (also branded as the Mini Cooper engine) delivers 136–170hp. It appears in the 1 Series (F40), 2 Series Gran Coupe (F44), X1 (U11), and X2. This is the same modular engine as the 1.2L but with a longer stroke. Known issues are minimal, though the engine management system (DME) can suffer software-related cold-start roughness",
+              "cta": "Compare BMW 1.5L petrol engine prices",
+              "engineCodes": [
+                "B38A15"
+              ],
+              "compatibleModels": [
+                "1 Series (F40)",
+                "2 Series Gran Coupe",
+                "X1 (U11)",
+                "X2 (U10)"
+              ],
+              "productionYears": "2015–present",
+              "commonFailurePoints": [
+                "DME software glitches (cold-start roughness) – requires ECU update"
+              ]
+            },
+            {
+              "title": "BMW 1.6L Petrol Engines",
+              "description": "The 1.6-litre four-cylinder Prince engine (co-developed with PSA) appeared in the 1 Series (E81/E87) and Mini from 2006–2015. The N13 (2011–2015) turbocharged version produced 136–170hp. Replacement demand is moderate due to age – common failures include timing chain guide wear (N13), valve cover gasket leaks, and VANOS solenoid failure",
+              "cta": "Compare BMW 1.6L petrol engine prices",
+              "engineCodes": [
+                "N13B16",
+                "Prince (1.6 THP)"
+              ],
+              "compatibleModels": [
+                "1 Series (E81/E87/E88",
+                "F20 pre-LCI 2011–2015)"
+              ],
+              "productionYears": "2006–2015",
+              "commonFailurePoints": [
+                "Timing chain stretch (N13)",
+                "high-pressure fuel pump (HPFP) failure"
+              ]
+            },
+            {
+              "title": "BMW 1.8L Petrol Engines",
+              "description": "The 1.8-litre four-cylinder appeared across multiple generations. Early M40/M42/M43 engines powered E30 318i (1987–1995) and E36 318i (1991–1998). The N42/N46 (2001–2007) introduced Valvetronic — a common failure point when the valvetronic eccentric shaft motor fails (£1,200–£1,800 repair). By 2007, BMW phased out 1.8L petrol in favour of the 2.0L B48 in various states of tune",
+              "cta": "Compare BMW 1.8L petrol engine prices",
+              "engineCodes": [
+                "M40B18",
+                "M42B18",
+                "M43B18",
+                "N42B18",
+                "N46B18"
+              ],
+              "compatibleModels": [
+                "3 Series (E36/E46)",
+                "1 Series (E87)",
+                "X3 (E83)"
+              ],
+              "productionYears": "1987–2007",
+              "commonFailurePoints": [
+                "Valvetronic motor failure (N42/N46)",
+                "camshaft sensor failure"
+              ]
+            },
+            {
+              "title": "BMW 2.0L Petrol Engines",
+              "description": "BMW’s 2.0-litre four-cylinder petrol engine has evolved through five generations. The M50B20 (1990–1996, 150hp) was BMW's first modern DOHC four-cylinder, but VANOS seal failure is common. The N46B20 (2004–2007, 143hp) suffered valvetronic eccentric shaft motor failure. The N20 (2011–2017, 184–245hp) brought turbocharging — and timing chain guide vulnerability (the \"N20 death rattle\"). The current B48B20 (2015–present, 184–258hp) is the modular replacement, though early B48 units (2015–2018) can suffer coolant leaks from the expansion tank and HPFP failure at 60,000+ miles",
+              "cta": "Compare BMW 2.0L petrol engine prices",
+              "engineCodes": [
+                "B48B20",
+                "N20B20",
+                "N46B20",
+                "N42B20",
+                "M50B20"
+              ],
+              "compatibleModels": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5 Series",
+                "X1",
+                "X3",
+                "X4",
+                "Z4 (1990–present)"
+              ],
+              "productionYears": "1990–present",
+              "commonFailurePoints": [
+                "N20 – timing chain guide failure",
+                "B48 – coolant expansion tank cracking",
+                "HPFP failure"
+              ]
+            },
+            {
+              "title": "BMW 2.5L Petrol Engines",
+              "description": "The 2.5-litre straight-six was once BMW’s entry-level six-cylinder. The M50B25 (E34 525i, 1991–1995) and M54B25 (E46 325i, 2000–2005) are both robust, though cooling system failures (water pump, expansion tank) are common across all older straight-six engines — overheating leads to head gasket failure and, if ignored, full engine replacement",
+              "cta": "Compare BMW 2.5L petrol engine prices",
+              "engineCodes": [
+                "M50B25",
+                "M52B25",
+                "M54B25",
+                "N52B25"
+              ],
+              "compatibleModels": [
+                "3 Series (E36/E46/E90)",
+                "5 Series (E34/E39)",
+                "Z3",
+                "X3 (E83)"
+              ],
+              "productionYears": "1991–2007",
+              "commonFailurePoints": [
+                "Water pump impeller failure",
+                "expansion tank cracking",
+                "VANOS seal deterioration"
+              ]
+            },
+            {
+              "title": "BMW 3.0L Petrol Engines",
+              "description": "BMW’s naturally aspirated 3.0-litre straight-six — the M54B30 (E46 330i, 2000–2006), N52B30 (2004–2015), and N53B30 (direct injection, 2007–2013) — are considered some of BMW's most reliable engines when maintained. The N53's direct injectors (piezo type) are expensive to replace when they fail (£400–£600 each, six required). The turbocharged N54 (2006–2016, 335i) — BMW's first mass-produced turbo petrol — suffers wastegate rattle, HPFP failure, and carbon build-up on intake valves . The later N55 (2009–present) resolved many N54 issues but can still experience VANOS bolt failure (pre-2012) and oil filter housing gasket leaks. The B58 (2015–present) is widely regarded as BMW's most reliable modern six-cylinder, though 2015–2018 units had coolant leak issues from the expansion tank and occasional HPFP failures",
+              "cta": "Compare BMW 3.0L petrol engine prices",
+              "engineCodes": [
+                "B58B30",
+                "N55B30",
+                "N54B30",
+                "N53B30",
+                "N52B30",
+                "M54B30"
+              ],
+              "compatibleModels": [
+                "1 Series (E82 135i)",
+                "2 Series (M235i/M240i)",
+                "3 Series (330i/335i/340i)",
+                "4 Series",
+                "5 Series",
+                "Z4 (E89)",
+                "X3 (G01)",
+                "X5 (G05)",
+                "Toyota Supra"
+              ],
+              "productionYears": "2000–present",
+              "commonFailurePoints": [
+                "N54 – HPFP",
+                "wastegate rattle",
+                "carbon build-up",
+                "N55 – VANOS bolts",
+                "OFHG leaks",
+                "B58 – coolant system cracks (early units)"
+              ]
+            },
+            {
+              "title": "BMW 4.0L–4.4L V8 Petrol Engines",
+              "description": "BMW's V8 petrol engines range from the early M60 (1992–1995, 282hp) and M62 (1996–2003, 282–342hp) to the N62 (2001–2010, 325–362hp) with Valvetronic, and the N63 (2008–present, 400–523hp) \"hot-vee\" twin-turbo design. The M60 and early M62 suffer from Nikasil cylinder lining corrosion due to high-sulphur fuels (less common now). The N62 and N63 are notorious for valve stem seal failure (blue smoke on start-up, £1,700–£2,500 repair), with N63 also experiencing timing chain wear and injector failure. The current S68 (2022–present, M5/XM) and N63TU3 show improved reliability",
+              "cta": "Compare BMW 4.0–4.4L V8 petrol engine prices",
+              "engineCodes": [
+                "N63B44",
+                "N62B44",
+                "M62B44",
+                "S63B44",
+                "S68B44"
+              ],
+              "compatibleModels": [
+                "5 Series (E60 550i",
+                "F10 550i)",
+                "7 Series (E65 745i/750i",
+                "F01 750i)",
+                "X5 (E53 4.4i",
+                "E70 4.4i/X5M",
+                "F15 50i)",
+                "X6",
+                "X7 M50i",
+                "M5",
+                "M8"
+              ],
+              "productionYears": "1992–present",
+              "commonFailurePoints": [
+                "N62/N63 – valve stem seal failure",
+                "Nikasil cylinder wear (M60/M62",
+                "pre-1998)",
+                "timing chain stretch"
+              ]
+            },
+            {
+              "title": "BMW 4.4L–4.8L V8 Petrol Engines (Performance Variants)",
+              "description": "High-output variants of BMW's V8 include the 4.4L N63TU (550hp in X5 M50i), S63 (550–600hp in M5/M6/X5M/X6M), and the naturally aspirated 4.8L N62B48 (362hp in 550i). The S63 adds twin-scroll turbos and upgraded cooling, but shares the N63's susceptibility to valve stem seal failure (though at lower rates). Replacement costs for S63 units are high: a rebuilt S63 with upgraded seals is £7,000–£12,000 fitted",
+              "cta": "Compare BMW 4.4–4.8L V8 petrol engine prices",
+              "engineCodes": [
+                "N63B48",
+                "S63B44",
+                "N62B48"
+              ],
+              "compatibleModels": [
+                "M5 (F10/F90)",
+                "M6 (F12/F13)",
+                "X5M (E70/F85)",
+                "X6M (E71/F86)"
+              ],
+              "productionYears": "2005–present",
+              "commonFailurePoints": [
+                "Hot-vee heat management – valve seal failure",
+                "turbo coolant line leaks"
+              ]
+            },
+            {
+              "title": "BMW 5.0L V10 Petrol Engine (S85)",
+              "description": "The S85B50 is BMW's only production V10 — a 5.0-litre naturally aspirated engine producing 507hp in the E60 M5 and E63 M6. It revs to 8,250rpm and uses individual throttle bodies. Replacement demand exists due to the rod bearing failure epidemic — original bearings wear prematurely (often requiring replacement every 60,000–80,000 miles), and failure seizes the engine completely. A rebuilt S85 with upgraded bearings costs £10,000–£15,000",
+              "cta": "Compare BMW 5.0L V10 petrol engine prices",
+              "engineCodes": [
+                "S85B50"
+              ],
+              "compatibleModels": [
+                "M5 (E60/E61",
+                "2005–2010)",
+                "M6 (E63/E64",
+                "2006–2010)"
+              ],
+              "productionYears": "2005–2010",
+              "commonFailurePoints": [
+                "Rod bearing failure (pre-emptive replacement recommended every 60k miles)",
+                "SMG pump failure"
+              ]
+            },
+            {
+              "title": "BMW 6.0L–6.75L V12 Petrol Engines",
+              "description": "BMW's V12 engines powered the 7 Series and Rolls-Royce models. The M70 (1988–1994, 5.0L, 300hp) was BMW's first post-war V12, but it's complex and parts are becoming scarce. The later N73 (2003–2016, 6.0L, 438hp in 760i) and N74 (2009–2022, 6.0L–6.75L, 535–601hp) are more common in the UK. Replacement outside of warranty is financially challenging due to parts availability and labour (engine-out for many repairs). Most owners facing V12 failure in older 7 Series (£5,000–8,000 market value) choose to scrap rather than replace",
+              "cta": "Compare BMW V12 petrol engine prices",
+              "engineCodes": [
+                "M70B50",
+                "M73B54",
+                "N73B60",
+                "N74B60/B66/B68"
+              ],
+              "compatibleModels": [
+                "7 Series (E32 750i",
+                "E38 750i",
+                "E65 760i",
+                "F01 760Li)",
+                "Rolls-Royce Ghost"
+              ],
+              "productionYears": "1988–2022",
+              "commonFailurePoints": [
+                "Parts availability (M70)",
+                "ignition coil and injector failure",
+                "labour-intensive repairs"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "BMW Hybrid Powertrains",
+          "items": [
+            {
+              "title": "BMW 2.0L Plug-in Hybrid (PHEV)",
+              "description": "BMW's plug-in hybrid system pairs the 2.0-litre B48B20 petrol engine with an electric motor integrated into the ZF 8-speed automatic transmission. Total system output ranges from 215hp (330e) to 292hp (530e xDrive). The combined unit is known as the \"eDrive\" system. Replacement is specialist-only — the hybrid system requires high-voltage training and BMW ISTA diagnostics . Battery degradation (capacity loss after 8–10 years) is the most common failure, not the combustion engine itself",
+              "cta": "Enquire about BMW plug-in hybrid availability",
+              "engineCodes": [
+                "B48B20 + eDrive electric motor"
+              ],
+              "compatibleModels": [
+                "3 Series (G20 330e)",
+                "5 Series (G30 530e)",
+                "X3 (G01 xDrive30e)",
+                "X5 (G05 xDrive45e)",
+                "2 Series Active Tourer (225xe)"
+              ],
+              "productionYears": "2016–present"
+            }
+          ]
+        }
+      ],
+      "closing": "Not sure which engine size your BMW needs? Enter your registration number and we'll match you to the exact engine code and displacement — instantly. All engines supplied with a minimum 12‑month warranty from UK BMW specialists."
+    },
+    "fuelTypes": {
+      "tag": "Complete BMW Engines List",
+      "h2": "BMW Engines by Fuel Type",
+      "intro": "Choose your BMW engine by fuel type to compare realistic replacement prices, known brand‑wide issues, and UK specialist supply – from the most popular diesel workhorses to the latest electrified powertrains.",
+      "items": [],
+      "closing": "Not sure which fuel type your BMW has? Enter your registration number above to instantly identify your model, engine code, fuel system and compatible replacement options – all backed by a minimum 12‑month unlimited mileage warranty from UK BMW specialists."
+    },
+    "engineCodeDirectory": {
+      "tag": "Engine Codes",
+      "h2": "BMW Engine Codes – Most Replaced Engines (2008–2025)",
+      "intro": "Every major BMW engine code from the last two decades, grouped by family, with compatible models and typical reasons why owners seek replacement. Select your engine to compare rebuilt prices and get quotes from UK BMW specialists.",
+      "families": [
+        {
+          "name": "N-Series Diesel Family (2007–2015)",
+          "entries": [
+            {
+              "title": "N47D20 2.0L Diesel",
+              "image": "/images/brands/bmw/engines/bmw-n47d20-engine.webp",
+              "description": "Engine The N47D20 powered over a million UK BMWs including the 1 Series (E87/F20 116d/118d/120d), 3 Series (E90/F30 318d/320d), 5 Series (F10 520d), X1 (E84 sDrive18d), X3 (E83/F25 xDrive20d), and Z4 (E89 sDrive20d) from 2007 to 2015. The engine's fatal flaw is the rear-mounted timing chain – BMW placed the chain at the flywheel end, making replacement a 12+ hour engine-out job. The plastic chain guides disintegrate, the chain stretches, and when it snaps (typically 60,000–100,000 miles), pistons strike valves causing catastrophic engine destruction. A quality rebuilt N47 includes a complete timing chain kit with revised metal-backed guides, new oil pump chain, rebuilt turbo, decoked EGR, and full compression/leakdown testing.",
+              "cta": "Get quotes for N47 BMW engine replacement"
+            },
+            {
+              "title": "N57D30 3.0L Diesel",
+              "image": "/images/brands/bmw/engines/bmw-n57d30-engine.webp",
+              "description": "Engine The N57D30 is BMW's 3.0-litre straight-six diesel fitted to the 3 Series (E90/F30 330d/335d), 5 Series (E60/F10 530d/535d), 7 Series (F01 730d), X3 (F25 xDrive30d), X5 (E70/F15 xDrive30d/xDrive40d), X6, and the triple-turbo X5 M50d (N57D30T0, 381hp) from 2008 to 2019. Two failures dominate replacement demand: EGR cooler leakage (coolant enters cylinders, risks hydro-lock) and turbo actuator failure (wastegate seizes, boost loss). Rebuilt N57 engines include a new EGR cooler, rebuilt turbos with upgraded actuators, new timing components, and a full set of injectors.",
+              "cta": "Compare N57 BMW engine prices"
+            },
+            {
+              "title": "M57D30 3.0L Diesel",
+              "image": "/images/brands/bmw/engines/bmw-m57d30-engine.webp",
+              "description": "Engine The M57D30 – BMW's \"bulletproof\" straight-six diesel – powered the E46 330d, E39/E60 530d, E53 X5 3.0d, and E83 X3 3.0d from 1998 to 2009. Unlike its N57 successor, the M57 has no major catastrophic failure patterns. Replacement demand exists due to age (high mileage, worn injectors, tired turbos) rather than design flaws. A rebuilt M57 includes new injector seals, rebuilt turbo, timing chain kit, and full gasket set.",
+              "cta": "Get quotes for M57 BMW engine replacement"
+            }
+          ]
+        },
+        {
+          "name": "B-Series Diesel Family (2014–Present)",
+          "entries": [
+            {
+              "title": "B47D20 2.0L Diesel",
+              "image": "/images/brands/bmw/engines/bmw-b47d20-engine.webp",
+              "description": "Engine The B47D20 replaced the N47 from 2014 onward, appearing in the 1 Series (F20/F40 116d/118d/120d), 3 Series (F30/G20 318d/320d), 5 Series (G30 520d), X1 (F48 sDrive18d), X3 (G01 xDrive20d), X4 (G02), X5 (G05), and Mini Cooper D. BMW relocated the timing chain to the front and revised the tensioner – largely solving N47's catastrophic failures. However, pre-2018 B47 units suffer EGR cooler failure: coolant leaks into the exhaust, and if the cooler cracks internally, coolant can enter cylinders causing hydro-lock. Replacement B47 engines from our network include an upgraded EGR cooler, new timing chain, and revised injector seals.",
+              "cta": "Get quotes for B47 BMW engine replacement"
+            },
+            {
+              "title": "B57D30 3.0L Diesel",
+              "image": "/images/brands/bmw/engines/bmw-b57d30-engine.webp",
+              "description": "Engine The B57D30 is BMW's current-generation 3.0-litre straight-six diesel (2015–present), fitted to the 3 Series (G20 330d), 5 Series (G30 530d/540d), 7 Series (G11 730d), X3 (G01 xDrive30d), X5 (G05 xDrive30d/xDrive40d), X6, X7, and the quad-turbo X5 M50d (B57D30T0, 400hp). Early B57 engines (2015–2018) experienced timing chain tensioner wear resulting in cold-start rattle. Unlike the N57, EGR cooler failure is less common. Rebuilt B57 units include revised tensioners, new chains, and a full injector and turbo inspection.",
+              "cta": "Compare B57 BMW engine prices"
+            }
+          ]
+        },
+        {
+          "name": "N-Series Petrol Family (2006–2016)",
+          "entries": [
+            {
+              "title": "N54B30 3.0L Petrol",
+              "image": "/images/brands/bmw/engines/bmw-n54b30-engine.webp",
+              "description": "Twin-Turbo Engine The N54B30 – BMW's first mass-production turbo petrol engine – powered the 1 Series (E82 135i), 3 Series (E90/E92 335i), 5 Series (E60 535i), X6 (E71 xDrive35i), and Z4 (E89 sDrive35i) from 2006 to 2016. The N54 earned a reputation for three expensive failure modes: high-pressure fuel pump (HPFP) failure (£650–£950, leaves the car undriveable), wastegate rattle (requiring turbo replacement), and carbon build-up on intake valves (requiring walnut blasting every 50k–80k miles). A quality rebuilt N54 includes a new HPFP, rebuilt turbos with upgraded wastegates, decarbonised cylinder head, new injectors, and revised PCV system.",
+              "cta": "Get quotes for N54 BMW engine replacement"
+            },
+            {
+              "title": "N55B30 3.0L Petrol",
+              "image": "/images/brands/bmw/engines/bmw-n55b30-engine.webp",
+              "description": "Single-Turbo Engine The N55B30 replaced the N54 from 2009 onward, fitting the 1 Series (M135i F20), 2 Series (M235i F22), 3 Series (F30 335i), 4 Series (435i), 5 Series (F10 535i), X3 (F25 xDrive35i), X5 (F15 xDrive35i), X6, and M2 (N55B30T0). BMW addressed HPFP and wastegate issues, but two problems remain: VANOS bolt failure (pre-2012 engines – bolts shear, causing timing errors) and oil filter housing gasket (OFHG) leaks (oil leaks onto the serpentine belt, which can slip and get pulled into the crank seal – catastrophic engine failure). Rebuilt N55 engines include upgraded VANOS bolts, new OFHG, timing chain kit, and rebuilt turbo.",
+              "cta": "Compare N55 BMW engine prices"
+            },
+            {
+              "title": "N20B20 2.0L Petrol",
+              "image": "/images/brands/bmw/engines/bmw-n20b20-engine.webp",
+              "description": "Turbo Engine The N20B20 (2011–2017) powered the 1 Series (118i/120i), 3 Series (F30 320i/328i), 5 Series (F10 520i/528i), X1 (xDrive20i), X3 (F25 xDrive20i), X4, Z4 (sDrive20i), and countless Minis. The engine became infamous for timing chain guide failure – the plastic guides break, the chain loosens, and if not caught immediately, the chain slips or snaps causing valve-piston contact. Owners report a \"diesel-like rattle\" on cold start as the first warning. A rebuilt N20 includes a complete timing chain kit, new oil pump chain, revised guides, VANOS units, and a full top-end rebuild.",
+              "cta": "Get quotes for N20 BMW engine replacement"
+            }
+          ]
+        },
+        {
+          "name": "B-Series Petrol Family (2015–Present)",
+          "entries": [
+            {
+              "title": "B58B30 3.0L Petrol",
+              "image": "/images/brands/bmw/engines/bmw-b58b30-engine.webp",
+              "description": "Engine The B58B30 powers the 1 Series (M140i F20), 2 Series (M240i F22), 3 Series (G20 M340i), 4 Series (G22 M440i), 5 Series (G30 540i), X3 (G01 M40i), X4 (G02 M40i), X5 (G05 xDrive40i), X6, X7, Z4 (G29 M40i), and Toyota Supra from 2015 onward. Widely considered BMW's most reliable modern six-cylinder, replacement demand is low. The only recurring issue on early (2015–2018) B58 units is the cooling system: the plastic coolant expansion tank and hoses become brittle and crack, leading to coolant loss and potential overheating. Rebuilt B58 engines include upgraded coolant system components (aluminium tank where available), new timing chain, and full diagnostic testing.",
+              "cta": "Compare B58 BMW engine prices"
+            },
+            {
+              "title": "B48B20 2.0L Petrol",
+              "image": "/images/brands/bmw/engines/bmw-b48b20-engine.webp",
+              "description": "Engine The B48B20 – BMW's modular 2.0-litre four-cylinder turbo (2015–present) – fits the 1 Series (118i/120i), 2 Series (218i/220i), 3 Series (G20 320i/330i), 4 Series (420i/430i), 5 Series (520i/530i), X1, X2, X3 (xDrive20i/xDrive30e), X4, Z4 (sDrive20i), and Minis. The B48 is generally reliable, but early units (2015–2018) suffer: high-pressure fuel pump (HPFP) failure (£650–£950, common across all BMW direct-injection engines) and coolant leaks from the expansion tank. Rebuilt B48 engines include a new HPFP, upgraded coolant system components, timing chain kit, and injector seals.",
+              "cta": "Get quotes for B48 BMW engine replacement"
+            }
+          ]
+        },
+        {
+          "name": "S-Series Performance Engines (M Cars)",
+          "entries": [
+            {
+              "title": "S55B30 3.0L Petrol",
+              "image": "/images/brands/bmw/engines/bmw-s55b30-engine.webp",
+              "description": "Twin-Turbo Engine The S55B30 powers the F80 M3 and F82/F83 M4 (2014–2020). The engine itself is robust, but a design flaw makes it vulnerable: the crankshaft hub is held in place by friction only (no keyway or spline). On tuned cars or aggressive track use, the hub can spin relative to the crank – \"spun crank hub\" – throwing off cam timing, bending valves, and destroying the engine. Stock cars have a very low failure rate (<1%), but each failure is catastrophic. A rebuilt S55 includes a spline-lock crank hub upgrade (VTT or similar), new bearings, timing chain, and all gaskets. Dealership replacement cost is £18,000–£22,000; our specialist network quotes £10,000–£14,000 for a rebuilt unit.",
+              "cta": "Compare S55 BMW engine prices"
+            },
+            {
+              "title": "S63B44 4.4L V8 Petrol",
+              "image": "/images/brands/bmw/engines/bmw-s63b44-engine.webp",
+              "description": "Twin-Turbo Engine The S63B44 powers the F10/F90 M5, F06 M6, F85 X5M, and F86 X6M from 2010 onward. As a high-performance version of the N63 \"hot-vee\" V8, it shares the same weakness: heat degrades valve stem seals, causing blue smoke on cold start and rapid oil consumption. The S63 also experiences turbo coolant line leaks (the lines run through the engine's V-angle, exposed to extreme heat) and timing chain stretch. A rebuilt S63 includes upgraded valve stem seals (high-temperature Viton), new coolant lines, rebuilt turbos, timing chain kit, and high-flow injectors.",
+              "cta": "Get quotes for S63 BMW engine replacement"
+            }
+          ]
+        },
+        {
+          "name": "V8 & V12 Engines",
+          "entries": [
+            {
+              "title": "N63B44 4.4L V8 Petrol",
+              "image": "/images/brands/bmw/engines/bmw-n63b44-engine.webp",
+              "description": "Twin-Turbo Engine The N63B44 (2008–present) appears in the 5 Series (F10 550i), 7 Series (F01 750i), X5 (E70/F15 xDrive50i), and X6 (E71 xDrive50i). The \"hot-vee\" design places the exhaust and turbos inside the engine's V-angle, generating extreme heat around the valve guides. The original valve stem seals harden and shrink, allowing oil to leak into combustion chambers – blue smoke on start-up, eventually constant smoking and oil consumption of 1 litre per 600 miles. A rebuilt N63 includes upgraded high-temperature valve seals, new timing chains, rebuilt turbos, and new injectors. Specialist seal replacement costs £1,700–£2,500; full rebuilt engine supply and fit is £7,000–£10,000.",
+              "cta": "Compare N63 BMW engine prices"
+            },
+            {
+              "title": "S85B50 5.0L V10 Petrol",
+              "image": "/images/brands/bmw/engines/bmw-s85b50-engine.webp",
+              "description": "Engine The S85B50 – BMW's only production V10 – powered the E60 M5 and E63 M6 (2005–2010). The engine is a masterpiece (8,250 rpm redline, individual throttle bodies) but has one catastrophic weakness: rod bearing failure. The original bearings wear prematurely (often needing replacement every 60,000–80,000 miles), and when they fail, the crankshaft seizes, destroying the engine. A rebuilt S85 includes upgraded bearing shells (Clevite or ACL), new connecting rods, crankshaft polish, and all gaskets. Replacement cost from our network is £10,000–£15,000 – dealership prices exceed £25,000. Closing line (Block A): Can't find your engine code listed above? Use our full BMW engine code directory below – every code from the last 35 years – or enter your registration number for an instant match to the correct replacement engine with warranty.",
+              "cta": "Get quotes for S85 BMW engine replacement"
+            }
+          ]
+        }
+      ],
+      "closing": "Can't find your engine code listed above? Use our full BMW engine code directory below – every code from the last 35 years – or enter your registration number for an instant match to the correct replacement engine with warranty.",
+      "directory": {
+        "h3": "Full BMW Engine Code Directory (All Years)",
+        "label": "“View all BMW engine codes (70+ codes, 1988–2025)”",
+        "intro": "A comprehensive alphabetical listing of every BMW engine code from the last 35 years. Use the search above or enter your registration for an instant match to your specific engine. All codes link to a quote request.",
+        "codes": [
+          {
+            "code": "N47D20A",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "N47D20C",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "B47D20A",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "B47D20B",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "M57D30",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "N57D30A",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "N57D30B/T0",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "B48B20",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "B58B30",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "S55B30",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "S58B30",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "S63B44B",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "N63B44",
+            "fuel": "Petrol"
+          }
+        ]
+      }
+    },
+    "engineYears": {
+      "tag": "Engine Years",
+      "h2": "BMW Engines by Year – What Was Fitted & When",
+      "intro": "This section covers BMW's full UK engine timeline from 1998 to the present across every major model line - petrol, diesel, and electrified - so owners can identify exactly what was fitted to their vehicle by year and compare rebuilt BMW engine prices from UK specialists.",
+      "jumpLabel": "Jump to year",
+      "years": [
+        {
+          "year": "1998 – 2000",
+          "preview": "M-Series Engine Era: Six-Cylinder Dominance Major Engine Family Introduction",
+          "description": "The late-1990s BMW range was defined by the outgoing M-series inline-six family, marking the final chapter before the N-series overhaul began.",
+          "keyChanges": [
+            "M47 2.0 diesel introduced (1998) - BMW's first common-rail four-cylinder diesel",
+            "M57 2.5/3.0 diesel inline-six introduced (1998) - replacing M51 across larger models",
+            "M52 inline-six petrol continued across 3, 5, and Z3 - final year before M54 transition",
+            "M62 V8 dominant across 5 Series and 7 Series in 3.5 and 4.4-litre forms"
+          ],
+          "mainEngines": [
+            "M47 - 2.0 diesel (3 Series, 5 Series early)",
+            "M57 - 2.5–3.0 diesel (5 Series, 7 Series, X5)",
+            "M52 - 2.0–2.8 petrol inline-six (3 Series, 5 Series, Z3)",
+            "M62 - 3.5–4.4 V8 petrol (5 Series, 7 Series, X5)",
+            "M67 - 3.9–4.4 V8 diesel (7 Series 730d/740d)"
+          ],
+          "popularModels": [
+            "BMW 3 Series (E46)",
+            "BMW 5 Series (E39)",
+            "BMW 7 Series (E38)",
+            "BMW X5 (E53)",
+            "BMW Z3"
+          ],
+          "knownFor": [
+            "M57 straight-six diesel widely regarded as one of BMW's most bulletproof diesel architectures - regularly exceeds 200,000 miles with correct servicing",
+            "M47 early units solid but susceptible to swirl flap failures causing inlet manifold damage at higher mileages",
+            "M62 V8 petrol smooth and characterful but Nikasil cylinder bore corrosion a known risk on pre-1999 UK cars fuelled with high-sulphur petrol",
+            "Precision-engineered inline-six petrol character (M52) sets the benchmark for naturally aspirated BMW driving feel"
+          ],
+          "engineCodesCovered": [
+            "M47",
+            "M57",
+            "M52",
+            "M54",
+            "M62",
+            "M67",
+            "M51"
+          ],
+          "cta": "Find rebuilt 1998–2000 BMW engine prices from UK specialists"
+        },
+        {
+          "year": "2001 – 2005",
+          "preview": "N-Series Transition Begins & M54 Petrol Peak",
+          "description": "BMW's gradual N-series rollout began with new petrol units as the M54 became the definitive inline-six across the 3, 5, and Z4 model lines.",
+          "keyChanges": [
+            "M54 inline-six petrol replaces M52 across 3 Series, 5 Series, X3, Z4, and Z3 - 2.2, 2.5, and 3.0-litre variants",
+            "N42/N46 four-cylinder petrol introduced (2001–2004) - VANOS variable valve timing on both inlet and exhaust",
+            "N62 naturally aspirated V8 petrol introduced (2001) - replacing M62 across 5, 6, and 7 Series",
+            "Euro 3 emissions standard in force across the range"
+          ],
+          "mainEngines": [
+            "M54 - 2.2/2.5/3.0 petrol inline-six (3 Series E46, 5 Series E60, X3, Z4, Z3)",
+            "N42/N46 - 1.8/2.0 petrol inline-four (1 Series, 3 Series E46/E90)",
+            "N62 - 3.6/4.4/4.8 naturally aspirated V8 petrol (5 Series E60, 6 Series E63, 7 Series E65, X5)",
+            "M47TU - 2.0 diesel updated (3 Series E46, E90)",
+            "M57TU - 2.5/3.0 diesel updated (5 Series E60, X3, X5)"
+          ],
+          "popularModels": [
+            "BMW 3 Series (E46, E90)",
+            "BMW 5 Series (E60)",
+            "BMW X3 (E83)",
+            "BMW X5 (E53)",
+            "BMW Z4 (E85)"
+          ],
+          "knownFor": [
+            "M54 delivers the last great naturally aspirated BMW straight-six - smooth, free-revving, and reliable with regular oil changes",
+            "N62 V8 luxurious in character but notorious for Valvetronic eccentric shaft failures and costly valley gasket oil leaks from 80,000 miles",
+            "N42 double-VANOS units reliable at low mileage but prone to variable valve timing rattle and oil leaks from seals beyond 80,000 miles",
+            "M57TU inline-six diesel remains the specialist rebuilder's preferred unit - strong torque, durable architecture, responds well to reconditioning"
+          ],
+          "engineCodesCovered": [
+            "M54",
+            "N42",
+            "N46",
+            "N62",
+            "M47TU",
+            "M57TU",
+            "M57TU2"
+          ],
+          "cta": "Compare 2001–2005 BMW replacement engine quotes today"
+        },
+        {
+          "year": "2006 – 2008",
+          "preview": "N-Series Petrol Peak & N47 Diesel Launch Major Engine Family Introduction",
+          "description": "2006–2008 saw BMW's most significant engine overhaul in a decade: the high-performance N54 twin-turbo six arrived, the N52 naturally aspirated six became the volume petrol unit, and the N47 diesel replaced the M47 - a decision that would become one of BMW's most controversial.",
+          "keyChanges": [
+            "N47 2.0 diesel replaces M47 - common-rail four-cylinder with timing chain positioned at rear of engine block 🔴 Major Engine Family Introduction",
+            "N52 naturally aspirated inline-six replaces M54 across volume models (2005 intro, dominant from 2006)",
+            "N54 3.0 twin-turbo inline-six introduced (2006) - first turbocharged BMW six in decades, powering 335i and 535i",
+            "N53 direct-injection naturally aspirated six introduced for selected markets (2007)",
+            "Euro 4 emissions standard enforced across the range"
+          ],
+          "mainEngines": [
+            "N47 - 2.0 diesel (1 Series E87, 3 Series E90, 5 Series E60, X1, X3)",
+            "N52 - 2.5/3.0 naturally aspirated petrol inline-six (3 Series, 5 Series, X3, Z4)",
+            "N54 - 3.0 twin-turbo petrol inline-six (3 Series 335i, 5 Series 535i, 1 Series 135i)",
+            "N53 - 2.5/3.0 direct-injection naturally aspirated petrol (selected 3 Series, 5 Series)",
+            "M57TU2 - 3.0 diesel inline-six continued (5 Series, 7 Series, X5, X6)"
+          ],
+          "popularModels": [
+            "BMW 1 Series (E87)",
+            "BMW 3 Series (E90/E91/E92)",
+            "BMW 5 Series (E60)",
+            "BMW X3 (E83)",
+            "BMW X5 (E70)"
+          ],
+          "knownFor": [
+            "N47 diesel rear-mounted timing chain is the single most searched-for BMW engine problem in the UK - chain failure can be catastrophic and often requires full engine replacement, typically presenting between 60,000–120,000 miles",
+            "N54 twin-turbo inline-six is a landmark performance engine but prone to high-pressure fuel pump (HPFP) failure and injector leaks - nonetheless beloved by tuning community for exceptional power potential",
+            "N52 naturally aspirated six considered highly reliable and smooth but lacks the torque punch of turbocharged successors",
+            "N53 direct-injection unit suffers from injector carbon build-up issues on UK market fuels"
+          ],
+          "engineCodesCovered": [
+            "N47",
+            "N47D20",
+            "N52",
+            "N52B25",
+            "N52B30",
+            "N54",
+            "N54B30",
+            "N53",
+            "N53B30",
+            "M57TU2"
+          ],
+          "ticker": "Common Replacement Enquiries: BMW N47 timing chain failure replacement - BMW 2.0 diesel engine replacement 2007 - BMW 320d engine replacement - BMW 118d engine N47 - BMW N47 engine rebuild cost UK",
+          "cta": "Get quotes for 2006–2008 BMW replacement engines - N47 diesel specialists available"
+        },
+        {
+          "year": "2009 – 2011",
+          "preview": "N63 V8 Turbo, N55 & Euro 5 Transition Major Engine Family Introduction",
+          "description": "BMW introduced the landmark N63 twin-turbo V8 and the N55 single twin-scroll turbo six, while Euro 5 compliance reshaped diesel specifications across the board.",
+          "keyChanges": [
+            "N63 4.4 twin-turbo V8 introduced (2008 launch, dominant from 2009) - unique \"hot V\" exhaust routing architecture",
+            "N55 3.0 twin-scroll turbo inline-six replaces N54 on volume models (2009–2010)",
+            "Euro 5 compliance from 2011 - EGR and particulate filter upgrades across diesel range",
+            "N57 3.0 diesel inline-six replaces M57TU2 (2008 launch, dominant from 2009)",
+            "S63 high-output V8 introduced for M5 and M6"
+          ],
+          "mainEngines": [
+            "N55 - 3.0 single twin-scroll turbo petrol (3 Series, 5 Series, X5, X6, Z4)",
+            "N63 - 4.4 twin-turbo petrol V8 (5 Series 550i, 7 Series 750i, X5 50i, X6 50i)",
+            "S63 - 4.4 twin-turbo V8 M-spec (M5, M6)",
+            "N57 - 3.0 diesel inline-six (5 Series, 7 Series, X5, X6, 3 Series 335d)",
+            "N47 - 2.0 diesel continued (1 Series, 3 Series, X1, X3)"
+          ],
+          "popularModels": [
+            "BMW 5 Series (F10)",
+            "BMW 7 Series (F01)",
+            "BMW X5 (E70)",
+            "BMW X6 (E71)",
+            "BMW 3 Series (E90)"
+          ],
+          "knownFor": [
+            "N63 V8 \"hot V\" configuration (exhausts routed between cylinder banks) causes significant heat soak and leads to valve stem seal failure, oil consumption issues, and turbocharger wear - well-documented BMW reliability concern from 80,000 miles",
+            "N55 single twin-scroll turbo more reliable than N54 - lower HPFP failure rate but timing chain tensioner wear still seen beyond 100,000 miles",
+            "N57 diesel inline-six considered significantly more reliable than the N47 - timing chain is front-mounted and far less problematic",
+            "S63 M-spec V8 a performance landmark, producing 560 hp in M5 F10 spec - robust under regular servicing but expensive to maintain"
+          ],
+          "engineCodesCovered": [
+            "N55",
+            "N55B30",
+            "N63",
+            "N63B44",
+            "S63",
+            "S63B44",
+            "N57",
+            "N57D30",
+            "N47",
+            "N47D20"
+          ],
+          "ticker": "Common Replacement Enquiries: BMW N63 engine replacement cost UK - BMW 550i engine failure - BMW N55 timing chain replacement - BMW N57 diesel engine rebuild - BMW X5 50i engine replacement",
+          "cta": "Source 2009–2011 BMW replacement engines - V8 and diesel specialists"
+        },
+        {
+          "year": "2012 – 2014",
+          "preview": "Euro 5 Settled, N20 Turbo Four & B-Series Preview Major Engine Family Introduction",
+          "description": "The N20 turbocharged four-cylinder petrol replaced the beloved N52 naturally aspirated six in volume applications - a controversial transition - while the first modular B-series engines entered testing for launch.",
+          "keyChanges": [
+            "N20 2.0 turbocharged petrol four-cylinder replaces N52 six in 3 Series, 5 Series, and X3 - marks shift from inline-six to four-cylinder in volume petrol range",
+            "N13 1.6 turbocharged petrol introduced for entry-level 1 Series and MINI applications",
+            "Euro 5 fully enforced - DPF mandatory on all diesels, EGR on all petrol applications",
+            "B38 1.5 inline-three diesel/petrol modular prototype enters production testing (2013)",
+            "N47 diesel continues - second-generation chain update issued but rear-mount design retained"
+          ],
+          "mainEngines": [
+            "N20 - 2.0 turbocharged petrol inline-four (3 Series F30, 5 Series F10, X3, X5, Z4)",
+            "N26 - 2.0 turbocharged petrol (SULEV variant for specific markets, 2012–2016)",
+            "N13 - 1.6 turbocharged petrol (1 Series F20, MINI)",
+            "N47 - 2.0 diesel (1 Series, 3 Series, 5 Series, X1, X3)",
+            "N57 - 3.0 diesel (5 Series, 7 Series, X5, X6)",
+            "N63 - 4.4 V8 continued (5 Series, 7 Series, X5, X6)"
+          ],
+          "popularModels": [
+            "BMW 3 Series (F30)",
+            "BMW 5 Series (F10)",
+            "BMW X3 (F25)",
+            "BMW 1 Series (F20)",
+            "BMW X5 (F15)"
+          ],
+          "knownFor": [
+            "N20 delivers strong performance and economy but introduces timing chain tensioner wear concern - chain failures reported from 60,000 miles on early units, later revised",
+            "N47 replacement demand peaks during this period as 2007–2009 cars enter the 60,000–120,000-mile danger zone - largest single source of BMW engine replacement enquiries in the UK",
+            "N13 1.6 turbo four competent but suffers from timing chain and valve stem seal issues at higher mileages",
+            "N57 retains reputation as the most dependable BMW diesel of its generation - preferred unit for high-mileage operators"
+          ],
+          "engineCodesCovered": [
+            "N20",
+            "N20B20",
+            "N26",
+            "N13",
+            "N13B16",
+            "N47",
+            "N47D20",
+            "N57",
+            "N57D30",
+            "N63",
+            "N63B44"
+          ],
+          "ticker": "Common Replacement Enquiries: BMW N20 timing chain replacement - BMW 320i engine replacement 2012 - BMW N47 engine replacement 2013 - BMW 2.0 diesel engine replacement F30 - BMW N47 rebuilt engine UK",
+          "cta": "Get 2012–2014 BMW engine replacement quotes - N20 and N47 specialists listed"
+        },
+        {
+          "year": "2015 – 2017",
+          "preview": "B-Series Modular Engine Family Launch & PHEV Introduction Major Engine Family Introduction Technology Introduction",
+          "description": "2015–2016 marked BMW's most significant engine architecture shift in twenty years - the fully modular B-series family replaced N-series units across the range, while the first iPerformance plug-in hybrids reached UK showrooms.",
+          "keyChanges": [
+            "B48 2.0 turbocharged petrol inline-four replaces N20 (2015 launch) - modular design shared with B38 and B58 🔴 Major Engine Family Introduction",
+            "B58 3.0 turbocharged petrol inline-six replaces N55 (2015 launch) - single twin-scroll architecture, significantly revised for durability",
+            "B47 2.0 diesel inline-four replaces N47 (2014 launch, fully dominant from 2015–2016) - timing chain relocated to front of engine",
+            "B57 3.0 diesel inline-six replaces N57 (2015 launch) - quad-turbo variant available for X5/X6 M50d",
+            "BMW X5 40e iPerformance PHEV launched (October 2015) - first BMW PHEV in volume production 🔴 Technology Introduction",
+            "BMW 330e iPerformance (2016) and 740e iPerformance (2016) expand PHEV range"
+          ],
+          "mainEngines": [
+            "B48 - 2.0 turbocharged petrol inline-four (3 Series G20, 5 Series G30, X3, X4, X5, 1 Series, 2 Series)",
+            "B58 - 3.0 turbocharged petrol inline-six (5 Series 540i, 7 Series 740i, X5 40i, M240i, Z4)",
+            "B47 - 2.0 diesel inline-four (1 Series, 2 Series, 3 Series, 5 Series, X1, X3, X4)",
+            "B57 - 3.0 diesel inline-six (5 Series 530d/540d, 7 Series 730d, X5 30d/M50d, X6)",
+            "B38 - 1.5 inline-three petrol (1 Series 116i/118i, 2 Series Active Tourer, MINI)",
+            "B37 - 1.5 inline-three diesel (1 Series, 2 Series Active Tourer, MINI)"
+          ],
+          "popularModels": [
+            "BMW 3 Series (F30/G20)",
+            "BMW 5 Series (G30)",
+            "BMW X3 (F25/G01)",
+            "BMW X5 (F15/G05)",
+            "BMW 1 Series (F20)"
+          ],
+          "knownFor": [
+            "B47 diesel resolves N47's catastrophic rear-chain design - front-mounted chain greatly reduces risk of sudden failure; considered a substantial reliability improvement",
+            "B58 petrol inline-six widely regarded as one of the finest production six-cylinder engines in the world - exceptionally strong architecture, beloved by specialists and tuners",
+            "B48 competent and efficient but early units showed some oil consumption and timing chain tensioner wear - revised from 2017 production onwards",
+            "iPerformance PHEV introduction adds complexity around battery health and hybrid system maintenance - independent BMW specialists are still developing expertise on high-mileage PHEV units"
+          ],
+          "engineCodesCovered": [
+            "B48",
+            "B48B20",
+            "B58",
+            "B58B30",
+            "B47",
+            "B47D20",
+            "B57",
+            "B57D30",
+            "B38",
+            "B38B15",
+            "B37",
+            "B37D15"
+          ],
+          "ticker": "Common Replacement Enquiries: BMW B47 diesel engine replacement - BMW 2.0 diesel engine replacement 2016 - BMW B58 engine rebuild UK - BMW 320d engine replacement F30 G20 - BMW X3 diesel engine replacement 2015",
+          "cta": "Compare 2015–2017 BMW modular B-series engine prices from UK rebuilders"
+        },
+        {
+          "year": "2018 – 2020",
+          "preview": "Euro 6 Full Compliance, 48V MHEV & G-Series Models Technology Introduction",
+          "description": "Euro 6d emissions regulations forced significant updates across the B-series diesel family, while BMW introduced 48-volt mild hybrid technology across petrol and diesel variants on new G-series bodied models.",
+          "keyChanges": [
+            "Euro 6d-TEMP compliance from 2018 - revised EGR, AdBlue/SCR introduced on all BMW diesel models including 2.0 B47",
+            "48V mild hybrid system introduced on B57 diesel (730d, X5, X7 from 2019) 🔴 Technology Introduction",
+            "G-series body introductions (5 Series G30, 3 Series G20, X5 G05, X7 G07) begin across 2017–2019",
+            "N63TU2 revised V8 continues in 8 Series and M550i with improved reliability versus earlier N63",
+            "S58 twin-turbo inline-six introduced (2019) - new M3/M4 competition engine, replacing S55 🔴 Performance Landmark"
+          ],
+          "mainEngines": [
+            "B48B20 - 2.0 turbocharged petrol (all major volume models - 3 Series, 5 Series, X3, X4)",
+            "B58B30 - 3.0 turbocharged petrol (M340i, 540i, 740i, X5 40i, X7 40i, Z4 M40i)",
+            "B47D20 - 2.0 diesel with SCR/AdBlue (3 Series, 5 Series, X3, X4, X5)",
+            "B57D30 - 3.0 diesel (with 48V MHEV on 7 Series and X5/X7 from 2019)",
+            "N63TU2 - 4.4 twin-turbo V8 (M550i, 8 Series 840i, X5 M50i)",
+            "S58 - 3.0 twin-turbo M-spec six (M3 G80, M4 G82 - from 2020 launch)"
+          ],
+          "popularModels": [
+            "BMW 3 Series (G20)",
+            "BMW 5 Series (G30)",
+            "BMW X5 (G05)",
+            "BMW X7 (G07)",
+            "BMW 8 Series (G14/G15)"
+          ],
+          "knownFor": [
+            "AdBlue/SCR systems on B47 diesel add an additional failure point - AdBlue pump and injector replacement a growing area of UK specialist enquiry from 2022 onwards as these cars age",
+            "B57 with 48V MHEV delivers outstanding refinement and economy - the mild hybrid belt-starter-generator (BSG) can fail on higher-mileage units",
+            "S58 arrives as a landmark M-spec engine - extensively revised architecture versus S55, fewer cooling and bearing issues; well-received by specialists",
+            "Euro 6 AdBlue delete/emulator work is increasingly sought by independent specialists on older diesel models - a commercially significant growth area for UK engine marketplaces"
+          ],
+          "engineCodesCovered": [
+            "B48B20",
+            "B58B30",
+            "B47D20",
+            "B57D30",
+            "B57D30O0",
+            "N63TU2",
+            "N63B44TU2",
+            "S58",
+            "S58B30"
+          ],
+          "ticker": "Common Replacement Enquiries: BMW B47 AdBlue pump failure - BMW 2.0 diesel engine replacement 2019 - BMW X5 diesel engine replacement G05 - BMW B58 engine replacement 2018 - BMW 520d engine replacement G30",
+          "cta": "Get 2018–2020 BMW replacement engine prices - Euro 6 B47 and B57 diesel specialists"
+        },
+        {
+          "year": "2021 – 2023",
+          "preview": "xEV Expansion, Plug-In Hybrid Growth & Final Combustion Iterations Technology Introduction",
+          "description": "BMW accelerated electrification across nearly every model line - with PHEV variants of the 3, 5, 7, X1, X3, and X5 Series becoming mainstream - while the combustion B-series engines received their final major revisions.",
+          "keyChanges": [
+            "B48 PHEV applications expanded across virtually the entire range - 330e, 530e, X1 xDrive25e, X3 xDrive30e, X5 xDrive45e",
+            "iX3 (2021) launched with fully electric fifth-generation eDrive - BMW's first mass-market BEV SUV",
+            "B58TU (technical update) introduced on M340i and M440i - revised oil circuit and improved cooling",
+            "S58 powering M3 Competition xDrive (2021) and M4 Competition xDrive - performance landmark variants",
+            "Euro 6d full enforcement from January 2021 - OPF (Otto Particle Filter) mandatory on all petrol models"
+          ],
+          "mainEngines": [
+            "B48B20 (with OPF) - 2.0 turbocharged petrol (all volume 4-cylinder petrol models)",
+            "B58TU - 3.0 turbocharged petrol (M340i, M440i, 540i, X5 40i)",
+            "B47D20 (Euro 6d) - 2.0 diesel with AdBlue (3 Series, 5 Series, X3, X4, X5)",
+            "B57D30 (48V MHEV) - 3.0 diesel (7 Series, X5, X6, X7)",
+            "S58B30 - 3.0 twin-turbo M-spec (M3 G80, M4 G82, M3 Touring G81)",
+            "BMW eDrive (fifth gen) - electric motor + high-voltage battery (iX3, i4, iX)"
+          ],
+          "popularModels": [
+            "BMW 3 Series (G20)",
+            "BMW 5 Series (G30)",
+            "BMW X3 (G01)",
+            "BMW X5 (G05)",
+            "BMW iX3 (G08)"
+          ],
+          "knownFor": [
+            "PHEV hybrid battery health becomes an emerging UK specialist concern - 330e and 530e high-voltage battery degradation increasingly reported beyond 50,000 miles",
+            "B58TU retains outstanding reliability credentials - preferred engine by UK independent specialists for long-term ownership",
+            "Otto Particle Filter (OPF) on B48 petrol creates additional regeneration cycles and potential for oil dilution if driven predominantly short-distance - growing concern raised in owner forums from 2022",
+            "iX3 eDrive launch marks BMW's first genuine mainstream electric offering - not a replacement engine proposition but increasingly relevant to UK engine marketplace as combustion-to-EV transitions generate legacy combustion replacement demand"
+          ],
+          "engineCodesCovered": [
+            "B48B20O1",
+            "B58TU",
+            "B58B30O1",
+            "B47D20",
+            "B57D30",
+            "S58B30O0",
+            "BMW eDrive Gen5"
+          ],
+          "ticker": "Common Replacement Enquiries: BMW 330e battery replacement UK - BMW B47 engine replacement 2021 - BMW 530e hybrid engine issues - BMW X3 2.0 diesel engine replacement G01 - BMW M3 S58 engine rebuild",
+          "cta": "Compare 2021–2023 BMW petrol, diesel, and PHEV engine options from UK specialists"
+        },
+        {
+          "year": "2024 – Present",
+          "preview": "New G-Series Fully Established, Hydrogen & Final Combustion Development",
+          "description": "BMW's current UK range runs almost exclusively on B-series modular engines in their latest Euro 6d-Final state, with 48V mild hybrid now standard on most diesel applications and hydrogen fuel cell technology entering low-volume production.",
+          "keyChanges": [
+            "New 5 Series G60 launches with 48V mild hybrid on all engines - B48 and B57 both hybridised",
+            "BMW iX5 Hydrogen enters limited production (2023–2024) - fuel cell electric powertrain",
+            "New 7 Series G70 runs B58 petrol and B57 diesel alongside full BEV i7 variant",
+            "B57 diesel now exclusively available with 48V MHEV system across all applications",
+            "Euro 6e emissions standard (final stage) from 2024 - revised OBD and emissions monitoring"
+          ],
+          "mainEngines": [
+            "B48B20 (48V MHEV) - 2.0 turbocharged petrol (3 Series, 5 Series G60, X3, X4, X5)",
+            "B58B30 (48V MHEV) - 3.0 turbocharged petrol (5 Series 540i G60, 7 Series, X5 40i, X7)",
+            "B57D30 (48V MHEV) - 3.0 diesel (5 Series 530d G60, 7 Series 730d, X5/X6/X7 30d)",
+            "S58B30 - 3.0 twin-turbo M-spec (M3/M4/M4 CSL continuing)",
+            "BMW eDrive (sixth gen) - BEV powertrain (i4, i5, i7, iX, iX3)"
+          ],
+          "popularModels": [
+            "BMW 5 Series (G60)",
+            "BMW 7 Series (G70)",
+            "BMW X5 (G05 updated)",
+            "BMW X7 (G07)",
+            "BMW 3 Series (G20)"
+          ],
+          "knownFor": [
+            "B48 and B57 with 48V MHEV are the most refined iterations of the modular family - smoother stop-start, reduced fuel consumption, but BSG unit adds new potential failure mode",
+            "B58 in 48V hybrid form widely praised by specialists - strong torque, low NVH, excellent long-term durability reported by UK rebuilders",
+            "Increasing demand for legacy combustion engine replacements as the 2015–2019 B47 and B48 fleet enters the 80,000–120,000-mile window",
+            "Transition to predominantly electrified powertrains means combustion unit availability from UK specialists remains strong - demand expected to increase as EV lease returns enter independent servicing networks"
+          ],
+          "engineCodesCovered": [
+            "B48B20O1",
+            "B58B30O1",
+            "B57D30O0",
+            "S58B30O0",
+            "BMW eDrive Gen6"
+          ],
+          "cta": "Compare current BMW replacement engine prices - B48, B58, and B57 48V MHEV specialists available"
+        }
+      ],
+      "closing": "Not sure which year your BMW was built? Enter your registration number and we'll identify the exact engine, model year, and compatible replacement options instantly - all backed by a minimum 12-month warranty from UK BMW specialists."
+    },
+    "faq": {
+      "tag": "FAQ",
+      "h2": "BMW Engine Replacement – Frequently Asked Questions",
+      "intro": "Quick, honest answers to the most common questions BMW owners ask before comparing engine replacement prices and finding a UK specialist.",
+      "items": [
+        {
+          "question": "How much does a BMW engine replacement cost in the UK?",
+          "answer": "A rebuilt BMW engine typically costs between £2,000 and £5,500 for common 2.0‑litre diesel units like the N47 and B47, while performance engines such as the S55 (M3/M4) or N63 V8 range from £7,000 to £12,000 fitted. Reconditioned units with upgraded components (timing chain kits, revised EGR coolers) cost 20–30% more than a used take‑out engine but include up to 24 months warranty. Fitting adds £400–£800 depending on the model – front‑wheel‑drive cars like the 1 Series (F40) are slightly faster, while X5 engine swaps require more labour. The price you see online often excludes delivery and VAT, so always request a full breakdown.",
+          "cta": "Compare BMW engine replacement prices now"
+        },
+        {
+          "question": "What affects the cost of a BMW engine replacement?",
+          "answer": "Four factors drive the price: engine size and rarity (a B58 straight‑six costs more than a B47 four‑cylinder), condition (rebuilt with warranty vs used as‑is), your vehicle's age (older E90 3‑Series engines are cheaper and faster to source than G20 units), and whether you choose supply‑only (£400–£800 less) or full supply‑and‑fit. Location also matters – labour rates in London and the South East are typically 20–30% higher than the North or Scotland. Our marketplace shows you itemised quotes from multiple specialists so you can see exactly what you're paying for, including delivery, fitting, and warranty.",
+          "cta": "Get quotes from UK BMW engine specialists"
+        },
+        {
+          "question": "Is it worth replacing the engine in my BMW?",
+          "answer": "In most cases, yes – especially if the chassis, gearbox, and bodywork are in good condition. A professionally rebuilt N47 or N57 diesel fitted for £2,500–£4,000 will often outlast the original unit because our network uses upgraded timing chains, revised EGR coolers, and new turbochargers. The alternative – selling the car as a non‑runner (typically £500–£1,500) and buying another used BMW – carries its own risks (unknown service history, hidden failures). On a 320d worth £4,000–£8,000, replacement is almost always the smarter financial decision. On a high‑mileage 1 Series worth under £2,000, replacement rarely makes sense.",
+          "cta": "Find reconditioned BMW engines with comprehensive warranty cover"
+        },
+        {
+          "question": "What's included in a BMW engine supply and fit service?",
+          "answer": "A full supply‑and‑fit package includes sourcing a quality rebuilt or reconditioned engine matched to your exact engine code (e.g., N47D20C for a 2013 320d), removing the failed unit, transferring your ancillaries (injectors, turbo, manifolds), installing the replacement with new gaskets, oil, filters, and coolant, and a test drive to confirm everything works. The service also includes disposal of the old engine (often exchange basis) and a workmanship warranty (minimum 12 months). Fitting alone typically adds £400–£800 to the engine price – less for like‑for‑like swaps on common models like the 3 Series, more for X5/X6 or V8 models requiring subframe removal.",
+          "cta": "Compare BMW engine supply and fit deals"
+        },
+        {
+          "question": "How long does a BMW engine replacement take?",
+          "answer": "On common models like the 3 Series (F30 320d) or 1 Series (F20 118d), a like‑for‑like engine swap takes 3–5 working days once the specialist has the replacement unit. More complex models – X5 (E70/F15), 5 Series with V8, or M cars – can take 5–7 days because of additional disassembly and parts transfer time. The biggest variable is engine availability: our network stocks commonly replaced codes (N47, N57, N20, B48) for next‑day dispatch, but rarer codes (S85 V10, M57TU2) may take 5–10 days to source. Always ask your chosen supplier for their current lead time before committing.",
+          "cta": "Use our free comparison tool to see which specialists can fit your BMW fastest"
+        },
+        {
+          "question": "Do reconditioned BMW engines come with warranty?",
+          "answer": "Yes – every engine supplied through our network carries a minimum 12‑month unlimited mileage warranty as standard. Many specialists offer extended 24‑month coverage on rebuilt and remanufactured units at an additional cost (typically 10–15% of the engine price). The warranty covers major internal components: crankshaft, connecting rods, pistons, piston rings, cylinder head, valves, camshafts, timing chain, oil pump, and gaskets. Wear items (belts, hoses, spark plugs, filters) and external bolt‑ons (turbo, injectors, alternator) are usually covered for 3–6 months only – confirm exactly what's included with your supplier. A warranty is your best protection against unexpected failure.",
+          "cta": "Get quotes for BMW engines with warranty included"
+        },
+        {
+          "question": "Should I choose a used or reconditioned BMW engine?",
+          "answer": "A used (take‑out) engine is the cheapest option – typically £1,200–£2,500 for common N47 units – but it's an unknown quantity. It may have the same underlying failure (e.g., timing chain stretch) waiting to happen. A reconditioned engine (£2,200–£4,500 for a 2.0‑litre diesel) has been stripped, cleaned, inspected, and fitted with new components such as timing chains, gaskets, piston rings, and bearings. For failure‑prone BMW engines – N47 (timing chain), N57 (EGR cooler), N20 (timing chain guides) – we strongly recommend reconditioned with upgraded parts. A used engine makes sense only if you plan to sell the car within 12 months or the vehicle has little residual value.",
+          "cta": "Find reconditioned BMW engines with upgraded components"
+        },
+        {
+          "question": "Where can I find BMW engine specialists near me?",
+          "answer": "EngineMarket connects you with a UK‑wide network of vetted BMW engine specialists, from independent garages in the West Midlands (a historic hub for BMW diesel rebuilders) to dedicated performance shops in Surrey and Essex handling M‑car engine swaps. Our registration lookup instantly matches your specific engine code – N47, B58, S63, etc. – to nearby suppliers who have that unit in stock and offer fitting. No need to search \"BMW specialist near me\" across multiple sites. Nationwide delivery is also available if you prefer to use your own local garage for fitting.",
+          "cta": "Compare quotes from BMW engine specialists across the UK"
+        },
+        {
+          "question": "What are the most common BMW engine failures?",
+          "answer": "The most common catastrophic failures driving BMW engine replacement in the UK are: N47/N47D20 2.0‑litre diesel – timing chain stretch and guide failure (2007–2015, any 116d/118d/120d/316d/318d/320d). N57 3.0‑litre diesel – EGR cooler leaks causing hydro‑lock and turbo actuator failure (2008–2019, 330d/530d/X5 30d). N20 2.0‑litre petrol – timing chain guide failure (2011–2017, 520i/328i/X1/X3). N63 4.4‑litre V8 petrol – valve stem seal failure causing blue smoke and oil consumption (2008–2015, 550i/750i/X5 50i). S55 3.0‑litre twin‑turbo – crank hub spin on tuned/tracked M3/M4 cars. In all these cases, early detection rarely prevents the engine from needing full replacement – a rebuilt unit with upgraded components is the solution.",
+          "cta": "Get quotes for a replacement engine designed to fix your BMW's known failure"
+        },
+        {
+          "question": "How can I get the best price on a BMW engine?",
+          "answer": "Always compare at least three quotes – prices for the same N47 engine can vary by £1,000+ depending on the supplier's location, warranty length, and whether they have the unit in stock. Choose a used engine if your budget is under £2,000 and you only need the car to last 12–18 months. Choose a reconditioned engine with upgraded components (new timing chain, revised EGR cooler, rebuilt turbo) if you plan to keep the BMW for 3+ years – the upfront premium pays for itself in reliability. Ask potential suppliers whether their price includes delivery, fitting, VAT, and the old engine exchange – hidden extras can add 30% to the headline figure. Use our comparison tool to see all‑inclusive quotes side by side.",
+          "cta": "Compare used, rebuilt, and reconditioned BMW engine prices now"
+        }
+      ]
+    },
+    "trustCta": {
+      "tag": "Why Choose Us",
+      "h2": "Why UK BMW Owners Trust EngineMarket",
+      "intro": "Join thousands of UK drivers who compare BMW engine prices through our network of trusted specialists. Every rebuilt and reconditioned BMW engine is backed by a minimum 12‑month unlimited mileage warranty and nationwide delivery.",
+      "points": [
+        {
+          "title": "Trusted BMW Engine Suppliers",
+          "description": "Every garage and engine rebuilder in our network is vetted, rated, and reviewed by real customers who have replaced their BMW engines."
+        },
+        {
+          "title": "Compare BMW Engine Replacement Companies",
+          "description": "See prices, warranty terms (12–24 months), and fitting options (supply‑only or full supply‑and‑fit) side‑by‑side before you commit."
+        },
+        {
+          "title": "UK Engine Replacement Services for BMW",
+          "description": "Covering every model from the 116d to the X5 M50d, M3, and M5, with supply‑only or supply‑and‑fit available nationwide."
+        }
+      ],
+      "finalText": "Find the best BMW engine replacement UK drivers rely on. Compare prices from trusted specialists today and get back on the road with confidence.",
+      "buttonText": "Compare BMW Engine Prices Now"
+    }
+  }
+}

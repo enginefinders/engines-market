@@ -1,0 +1,2184 @@
+{
+  "brand": {
+    "name": "Volkswagen",
+    "slug": "volkswagen",
+    "tone": "volume"
+  },
+  "seo": {
+    "title": "Volkswagen Engine Replacement – Compare Prices & Save",
+    "description": "Get your Volkswagen engine quote from trusted UK Volkswagen engine specialists. Compare prices on reconditioned, rebuilt and used engines – full supply & fit available.",
+    "canonical": "/volkswagen"
+  },
+  "assets": {
+    "heroBg": "/images/brands/volkswagen/brand/volkswagen-hero-bg.webp",
+    "howItWorksBg": "/images/brands/volkswagen/brand/volkswagen-how-it-works-bg.webp",
+    "commonProblemsBg": "/images/brands/volkswagen/brand/volkswagen-common-problems-bg.webp",
+    "engineCodesBg": "/images/brands/volkswagen/brand/volkswagen-engine-codes-bg.webp",
+    "engineTypesBg": "/images/brands/volkswagen/brand/volkswagen-engine-types-bg.webp",
+    "engineSizesBg": "/images/brands/volkswagen/brand/volkswagen-engine-sizes-bg.webp",
+    "fuelTypesBg": "/images/brands/volkswagen/brand/volkswagen-fuel-types-bg.webp",
+    "engineCodeDirectoryBg": "/images/brands/volkswagen/brand/volkswagen-engine-code-directory-bg.webp"
+  },
+  "sections": {
+    "hero": {
+      "tag": "UK Engine Marketplace",
+      "h1": "Volkswagen Engine Replacement – Compare Prices & Save",
+      "subheading": "Get your Volkswagen engine quote from trusted UK Volkswagen engine specialists. Compare prices on reconditioned, rebuilt and used engines – full supply & fit available.",
+      "trustBadges": [
+        "Supply & Fit Available",
+        "12-Month Warranty",
+        "Nationwide Delivery"
+      ],
+      "ctaLinkText": "Compare Volkswagen Engine Prices",
+      "supportingText": "",
+      "ticker": "Instant Quotes – No Obligation – 100% Free – Trusted UK Suppliers",
+      "form": {
+        "heading": "Find Your Volkswagen Engine",
+        "subtitle": "Enter your registration number to get started.",
+        "inputPlaceholder": "Registration Number",
+        "buttonText": "Get Free Engine Quotes",
+        "note": ""
+      }
+    },
+    "howItWorks": {
+      "tag": "How It Works",
+      "h2": "3 Simple Steps to Finding the Best Volkswagen Replacement Engine",
+      "cards": [
+        {
+          "number": 1,
+          "icon": "registration",
+          "front": {
+            "h3": "Enter Your Volkswagen Registration",
+            "text": "Instantly verify your exact model, engine code and fuel type via DVLA — from Up! to Touareg."
+          },
+          "back": {
+            "heading": "Your Car, Precisely Identified",
+            "text": "Engines Market uses the official DVLA database to pull accurate details about your Volkswagen, not just model name.",
+            "bullets": [
+              "Your Precise Model — from Up!, Polo, Golf, Passat to Tiguan, Touareg, Transporter",
+              "Your Engine Code — EA888, EA189, EA288, BKD, CFCA, CRLB and more",
+              "Vehicle Specs Check — fuel type, engine size, year, variant — all verified instantly",
+              "No paperwork, no guesswork, 100% free."
+            ]
+          }
+        },
+        {
+          "number": 2,
+          "icon": "quote",
+          "front": {
+            "h3": "Get Quotes from Volkswagen Engine Specialists",
+            "text": "Same-day quotes from vetted UK suppliers — full breakdown, no obligation."
+          },
+          "back": {
+            "heading": "Quotes You Can Trust",
+            "text": "Your verified details are securely shared with up to 10 of our most relevant UK suppliers, matched to your variant and location.",
+            "bullets": [
+              "Vetted UK Suppliers — specialists who understand Volkswagen diesel and petrol engines",
+              "Same-Day Quotes — usually within hours, not days",
+              "Supply & Fit Service — or supply-only to your own garage",
+              "Full Breakdown — price, warranty length, delivery estimate and fitting cost all shown clearly",
+              "No hidden fees. No sales calls unless you approve."
+            ]
+          }
+        },
+        {
+          "number": 3,
+          "icon": "shield",
+          "front": {
+            "h3": "Choose the Best Deal & Save",
+            "text": "Compare supplier reviews, warranty and price — then pick the right one for you."
+          },
+          "back": {
+            "heading": "Your Choice, Your Control",
+            "text": "You decide which specialist to go with. We simply make the search fast, safe and transparent.",
+            "bullets": [
+              "Online Reviews — read real customer feedback",
+              "Warranty Length — minimum 12 months, often 24 months on rebuilt units",
+              "Terms of Service — including collection, fitting and aftercare",
+              "Technical Expertise — see each supplier's Volkswagen experience",
+              "You deal directly with your chosen provider. No pressure, no commitment until you're ready."
+            ]
+          }
+        }
+      ],
+      "tagline": "Get Instant Quotes from Volkswagen Engine Specialists Across the UK — 100% free, no obligation. Most replacements completed within 3–5 days."
+    },
+    "liveMarketPrices": {
+      "tag": "Live Market Prices",
+      "h2": "Recent Volkswagen Engine Quotes & Price Guide",
+      "h3": "Based on real enquiries from UK buyers – updated regularly. All prices are typical UK rebuilt engine market ranges and reflect recent quotes from our network of Volkswagen engine specialists.",
+      "introBullets": [
+        {
+          "label": "Real-Time Data",
+          "text": "Below are the 20 most recently requested Volkswagen engine replacement enquiries from UK owners."
+        },
+        {
+          "label": "Transparent Pricing",
+          "text": "Each entry shows the model, engine code, typical market price range, and the most common failure reason driving replacement."
+        },
+        {
+          "label": "Cost Insights",
+          "text": "These are genuine search patterns — not stock listings."
+        },
+        {
+          "label": "Get Your Quote",
+          "text": "Use this guide to understand what Volkswagen owners are paying for used, reconditioned and rebuilt engines, and what problems lead to replacement."
+        }
+      ],
+      "cta": {
+        "heading": "Use the feed as your benchmark",
+        "text": "Use these recent buyer enquiries to benchmark your own Volkswagen engine price before you compare specialist quotes.",
+        "buttonText": "Compare My Volkswagen Engine",
+        "note": "Feed timestamps refresh automatically from the latest quote data."
+      },
+      "badges": [
+        "20 recent enquiries visible",
+        "Typical UK rebuilt ranges",
+        "Engine-code matched rows",
+        "Updated regularly"
+      ],
+      "feed": {
+        "isDynamic": true,
+        "rowsCount": 0,
+        "columns": [
+          "Year",
+          "Model",
+          "Engine Code",
+          "Fuel",
+          "Avg. Quoted Price",
+          "Reported Issue"
+        ],
+        "timestampLabel": "Last Updated",
+        "refreshLabel": "Refresh feed",
+        "density": "premium",
+        "visibleRows": 20,
+        "entries": []
+      }
+    },
+    "reviews": {
+      "tag": "Customer Reviews",
+      "h2": "Trusted by Volkswagen Owners Across the UK",
+      "rating": {
+        "value": 4.8,
+        "count": 1000,
+        "summary": "Rated 4.8 out of 5 by verified customers who sourced reconditioned and used Volkswagen engines through EngineMarket.",
+        "basedOn": "Based on real post-sale feedback from buyers matched with our network of UK engine specialists."
+      },
+      "reviews": [
+        {
+          "text": "Thanks to EngineMarket, I saved over £1,000 on my Volkswagen engine and found a solid local specialist quickly.",
+          "name": "Jimmy",
+          "location": "London"
+        },
+        {
+          "text": "Got multiple quotes for my Volkswagen within hours and the whole process felt straightforward.",
+          "name": "Pete",
+          "location": "Leeds"
+        },
+        {
+          "text": "I wasn't sure which Volkswagen engine I needed, but the quote process helped me narrow it down fast.",
+          "name": "Sophie",
+          "location": "Birmingham"
+        },
+        {
+          "text": "Fast turnaround, clear pricing, and the warranty gave me real peace of mind for my Volkswagen.",
+          "name": "Ahmed",
+          "location": "Bradford"
+        },
+        {
+          "text": "One of the easiest car-related experiences I've had. Honest, quick, and much cheaper than expected.",
+          "name": "Liam",
+          "location": "Manchester"
+        },
+        {
+          "text": "EngineMarket made a stressful Volkswagen engine failure much easier to deal with from start to finish.",
+          "name": "Tom",
+          "location": "Glasgow"
+        }
+      ],
+      "leaveReviewCta": {
+        "text": "Had a great experience?",
+        "linkText": "Leave a review ->"
+      }
+    },
+    "models": {
+      "tag": "Models We Cover",
+      "h2": "Popular Volkswagen Engine Replacement Models",
+      "subheading": "From the Up! city car to the Touareg luxury SUV and Transporter van, our network of UK Volkswagen engine specialists covers every model in the range. Compare prices on used, reconditioned and rebuilt engines – supply & fit available. Select your Volkswagen below to get quotes from trusted suppliers.",
+      "cards": [
+        {
+          "h3": "Volkswagen Amarok Engines",
+          "slug": "amarok",
+          "subtitle": "Available for 2.0 BiTDI, 3.0 V6 TDI & 2.0 TDI",
+          "priceRange": "Starting from £2,500 – £6,500",
+          "cta": "Compare Volkswagen Amarok Engine Prices",
+          "image": "/images/brands/volkswagen/models/volkswagen-amarok-model-card.webp"
+        },
+        {
+          "h3": "Volkswagen Ameo Engines",
+          "slug": "ameo",
+          "subtitle": "Available for 1.5 TDI & 1.2 TSI",
+          "priceRange": "Starting from £1,200 – £3,000",
+          "cta": "Compare Volkswagen Ameo Engine Prices",
+          "image": "/images/brands/volkswagen/models/volkswagen-ameo-model-card.webp"
+        },
+        {
+          "h3": "Volkswagen Arteon Engines",
+          "slug": "arteon",
+          "subtitle": "Available for 2.0 TDI, 2.0 TSI & 1.5 TSI",
+          "priceRange": "Starting from £1,800 – £5,000",
+          "cta": "Compare Volkswagen Arteon Engine Prices",
+          "image": "/images/brands/volkswagen/models/volkswagen-arteon-model-card.webp"
+        },
+        {
+          "h3": "Volkswagen Beetle Engines",
+          "slug": "beetle",
+          "subtitle": "Available for 1.2 TSI, 1.4 TSI, 2.0 TSI & 2.0 TDI",
+          "priceRange": "Starting from £1,300 – £3,800",
+          "cta": "Compare Volkswagen Beetle Engine Prices",
+          "image": "/images/brands/volkswagen/models/volkswagen-beetle-model-card.webp"
+        },
+        {
+          "h3": "Volkswagen Bora Engines",
+          "slug": "bora",
+          "subtitle": "Available for 1.6 TDI, 1.9 TDI & 2.0 TDI",
+          "priceRange": "Starting from £1,200 – £3,200",
+          "cta": "Compare Volkswagen Bora Engine Prices",
+          "image": "/images/brands/volkswagen/models/volkswagen-bora-model-card.webp"
+        },
+        {
+          "h3": "Volkswagen Cady Engines",
+          "slug": "cady",
+          "subtitle": "Available for 1.6 TDI & 2.0 TDI",
+          "priceRange": "Starting from £1,300 – £3,500",
+          "cta": "Compare Volkswagen Cady Engine Prices",
+          "image": "/images/brands/volkswagen/models/volkswagen-cady-model-card.webp"
+        },
+        {
+          "h3": "Volkswagen CC Engines",
+          "slug": "cc",
+          "subtitle": "Available for 2.0 TDI, 2.0 TSI & 3.6 VR6",
+          "priceRange": "Starting from £1,500 – £4,500",
+          "cta": "Compare Volkswagen CC Engine Prices",
+          "image": "/images/brands/volkswagen/models/volkswagen-cc-model-card.webp"
+        },
+        {
+          "h3": "Volkswagen Citi Golf Engines",
+          "slug": "citi-golf",
+          "subtitle": "Available for 1.4i, 1.6i & 1.8i",
+          "priceRange": "Starting from £1,000 – £2,800",
+          "cta": "Compare Volkswagen Citi Golf Engine Prices",
+          "image": "/images/brands/volkswagen/models/volkswagen-citi-golf-model-card.webp"
+        },
+        {
+          "h3": "Volkswagen Crafter Engines",
+          "slug": "crafter",
+          "subtitle": "Available for 2.0 TDI, 2.5 TDI & 3.0 TDI",
+          "priceRange": "Starting from £2,200 – £6,000",
+          "cta": "Compare Volkswagen Crafter Engine Prices",
+          "image": "/images/brands/volkswagen/models/volkswagen-crafter-model-card.webp"
+        },
+        {
+          "h3": "Volkswagen Derby Engines",
+          "slug": "derby",
+          "subtitle": "Available for 1.0, 1.3 & 1.4 petrol",
+          "priceRange": "Starting from £800 – £2,200",
+          "cta": "Compare Volkswagen Derby Engine Prices",
+          "image": "/images/brands/volkswagen/models/volkswagen-derby-model-card.webp"
+        },
+        {
+          "h3": "Volkswagen Eos Engines",
+          "slug": "eos",
+          "subtitle": "Available for 1.4 TSI, 2.0 TSI, 2.0 TDI & 3.2 VR6",
+          "priceRange": "Starting from £1,400 – £4,200",
+          "cta": "Compare Volkswagen Eos Engine Prices",
+          "image": "/images/brands/volkswagen/models/volkswagen-eos-model-card.webp"
+        },
+        {
+          "h3": "Volkswagen Fox Engines",
+          "slug": "fox",
+          "subtitle": "Available for 1.2 & 1.4 petrol",
+          "priceRange": "Starting from £900 – £2,500",
+          "cta": "Compare Volkswagen Fox Engine Prices",
+          "image": "/images/brands/volkswagen/models/volkswagen-fox-model-card.webp"
+        },
+        {
+          "h3": "Volkswagen Gol Engines",
+          "slug": "gol",
+          "subtitle": "Available for 1.0, 1.6 & 1.8 petrol",
+          "priceRange": "Starting from £900 – £2,600",
+          "cta": "Compare Volkswagen Gol Engine Prices",
+          "image": "/images/brands/volkswagen/models/volkswagen-gol-model-card.webp"
+        },
+        {
+          "h3": "Volkswagen Golf Engines",
+          "slug": "golf",
+          "subtitle": "Available for 1.4 TSI, 1.5 TSI, 2.0 TSI (EA888), 1.6 TDI, 2.0 TDI (EA189/EA288), GTI & R",
+          "priceRange": "Starting from £1,200 – £5,500",
+          "cta": "Compare Volkswagen Golf Engine Prices",
+          "image": "/images/brands/volkswagen/models/volkswagen-golf-model-card.webp"
+        },
+        {
+          "h3": "Volkswagen Jetta Engines",
+          "slug": "jetta",
+          "subtitle": "Available for 1.4 TSI, 1.6 TDI, 2.0 TDI & 2.5 petrol",
+          "priceRange": "Starting from £1,200 – £3,800",
+          "cta": "Compare Volkswagen Jetta Engine Prices",
+          "image": "/images/brands/volkswagen/models/volkswagen-jetta-model-card.webp"
+        },
+        {
+          "h3": "Volkswagen Kaefer Engines",
+          "slug": "kaefer",
+          "subtitle": "Available for 1.2, 1.3 & 1.6 air-cooled",
+          "priceRange": "Starting from £1,000 – £3,500",
+          "cta": "Compare Volkswagen Kaefer Engine Prices",
+          "image": "/images/brands/volkswagen/models/volkswagen-kaefer-model-card.webp"
+        },
+        {
+          "h3": "Volkswagen Kombi Engines",
+          "slug": "kombi",
+          "subtitle": "Available for 1.6, 1.8 & 2.0 air-cooled",
+          "priceRange": "Starting from £1,200 – £3,800",
+          "cta": "Compare Volkswagen Kombi Engine Prices",
+          "image": "/images/brands/volkswagen/models/volkswagen-kombi-model-card.webp"
+        },
+        {
+          "h3": "Volkswagen Load Up Engines",
+          "slug": "load-up",
+          "subtitle": "Available for 1.0 petrol",
+          "priceRange": "Starting from £1,000 – £2,500",
+          "cta": "Compare Volkswagen Load Up Engine Prices",
+          "image": "/images/brands/volkswagen/models/volkswagen-load-up-model-card.webp"
+        },
+        {
+          "h3": "Volkswagen LT Engines",
+          "slug": "lt",
+          "subtitle": "Available for 2.5 TDI, 2.8 TDI & 2.0 TDI",
+          "priceRange": "Starting from £1,800 – £4,800",
+          "cta": "Compare Volkswagen LT Engine Prices",
+          "image": "/images/brands/volkswagen/models/volkswagen-lt-model-card.webp"
+        },
+        {
+          "h3": "Volkswagen Lupo Engines",
+          "slug": "lupo",
+          "subtitle": "Available for 1.0, 1.4 TDI & 1.6 GTI",
+          "priceRange": "Starting from £900 – £2,800",
+          "cta": "Compare Volkswagen Lupo Engine Prices",
+          "image": "/images/brands/volkswagen/models/volkswagen-lupo-model-card.webp"
+        },
+        {
+          "h3": "Volkswagen Microbus Engines",
+          "slug": "microbus",
+          "subtitle": "Available for 1.6, 1.8, 2.0 & 2.1 petrol",
+          "priceRange": "Starting from £1,200 – £4,000",
+          "cta": "Compare Volkswagen Microbus Engine Prices",
+          "image": "/images/brands/volkswagen/models/volkswagen-microbus-model-card.webp"
+        },
+        {
+          "h3": "Volkswagen Multivan Engines",
+          "slug": "multivan",
+          "subtitle": "Available for 2.0 TDI, 2.0 TSI & 2.5 TDI",
+          "priceRange": "Starting from £2,000 – £5,500",
+          "cta": "Compare Volkswagen Multivan Engine Prices",
+          "image": "/images/brands/volkswagen/models/volkswagen-multivan-model-card.webp"
+        },
+        {
+          "h3": "Volkswagen New Beetle Engines",
+          "slug": "new-beetle",
+          "subtitle": "Available for 1.4 TSI, 1.6 TDI, 2.0 TSI, 2.0 TDI & 2.5 petrol",
+          "priceRange": "Starting from £1,300 – £4,000",
+          "cta": "Compare Volkswagen New Beetle Engine Prices",
+          "image": "/images/brands/volkswagen/models/volkswagen-new-beetle-model-card.webp"
+        },
+        {
+          "h3": "Volkswagen Parati Engines",
+          "slug": "parati",
+          "subtitle": "Available for 1.6 & 1.8 petrol",
+          "priceRange": "Starting from £1,000 – £2,600",
+          "cta": "Compare Volkswagen Parati Engine Prices",
+          "image": "/images/brands/volkswagen/models/volkswagen-parati-model-card.webp"
+        },
+        {
+          "h3": "Volkswagen Passat Engines",
+          "slug": "passat",
+          "subtitle": "Available for 1.4 TSI, 1.5 TSI, 2.0 TSI, 1.6 TDI, 2.0 TDI (EA189/EA288/CRLB) & 2.0 BiTDI",
+          "priceRange": "Starting from £1,400 – £4,800",
+          "cta": "Compare Volkswagen Passat Engine Prices",
+          "image": "/images/brands/volkswagen/models/volkswagen-passat-model-card.webp"
+        },
+        {
+          "h3": "Volkswagen Phaeton Engines",
+          "slug": "phaeton",
+          "subtitle": "Available for 3.0 V6 TDI, 4.2 V8 & 6.0 W12",
+          "priceRange": "Starting from £2,500 – £8,000",
+          "cta": "Compare Volkswagen Phaeton Engine Prices",
+          "image": "/images/brands/volkswagen/models/volkswagen-phaeton-model-card.webp"
+        },
+        {
+          "h3": "Volkswagen Pick Up Engines",
+          "slug": "pick-up",
+          "subtitle": "Available for 1.6 & 1.8 petrol",
+          "priceRange": "Starting from £900 – £2,500",
+          "cta": "Compare Volkswagen Pick Up Engine Prices",
+          "image": "/images/brands/volkswagen/models/volkswagen-pick-up-model-card.webp"
+        },
+        {
+          "h3": "Volkswagen Pointer Engines",
+          "slug": "pointer",
+          "subtitle": "Available for 1.6 & 1.8 petrol",
+          "priceRange": "Starting from £900 – £2,500",
+          "cta": "Compare Volkswagen Pointer Engine Prices",
+          "image": "/images/brands/volkswagen/models/volkswagen-pointer-model-card.webp"
+        },
+        {
+          "h3": "Volkswagen Polo Engines",
+          "slug": "polo",
+          "subtitle": "Available for 1.0, 1.2 TSI, 1.4 TSI, 1.4 TDI, 1.6 TDI, Blue GT & GTI",
+          "priceRange": "Starting from £1,000 – £3,500",
+          "cta": "Compare Volkswagen Polo Engine Prices",
+          "image": "/images/brands/volkswagen/models/volkswagen-polo-model-card.webp"
+        },
+        {
+          "h3": "Volkswagen Quantum Engines",
+          "slug": "quantum",
+          "subtitle": "Available for 1.6, 1.8 & 2.0 petrol",
+          "priceRange": "Starting from £1,000 – £2,800",
+          "cta": "Compare Volkswagen Quantum Engine Prices",
+          "image": "/images/brands/volkswagen/models/volkswagen-quantum-model-card.webp"
+        },
+        {
+          "h3": "Volkswagen Routan Engines",
+          "slug": "routan",
+          "subtitle": "Available for 3.6 V6 & 2.0 TDI",
+          "priceRange": "Starting from £1,800 – £4,500",
+          "cta": "Compare Volkswagen Routan Engine Prices",
+          "image": "/images/brands/volkswagen/models/volkswagen-routan-model-card.webp"
+        },
+        {
+          "h3": "Volkswagen Santana Engines",
+          "slug": "santana",
+          "subtitle": "Available for 1.6 & 1.8 petrol",
+          "priceRange": "Starting from £1,000 – £2,800",
+          "cta": "Compare Volkswagen Santana Engine Prices",
+          "image": "/images/brands/volkswagen/models/volkswagen-santana-model-card.webp"
+        },
+        {
+          "h3": "Volkswagen Saveiro Engines",
+          "slug": "saveiro",
+          "subtitle": "Available for 1.6 petrol",
+          "priceRange": "Starting from £1,000 – £2,600",
+          "cta": "Compare Volkswagen Saveiro Engine Prices",
+          "image": "/images/brands/volkswagen/models/volkswagen-saveiro-model-card.webp"
+        },
+        {
+          "h3": "Volkswagen Scirocco Engines",
+          "slug": "scirocco",
+          "subtitle": "Available for 1.4 TSI, 2.0 TSI & 2.0 TDI",
+          "priceRange": "Starting from £1,300 – £4,500",
+          "cta": "Compare Volkswagen Scirocco Engine Prices",
+          "image": "/images/brands/volkswagen/models/volkswagen-scirocco-model-card.webp"
+        },
+        {
+          "h3": "Volkswagen Sharan Engines",
+          "slug": "sharan",
+          "subtitle": "Available for 1.4 TSI, 2.0 TSI, 1.6 TDI & 2.0 TDI",
+          "priceRange": "Starting from £1,500 – £4,500",
+          "cta": "Compare Volkswagen Sharan Engine Prices",
+          "image": "/images/brands/volkswagen/models/volkswagen-sharan-model-card.webp"
+        },
+        {
+          "h3": "Volkswagen Space Fox Engines",
+          "slug": "space-fox",
+          "subtitle": "Available for 1.2 & 1.4 petrol",
+          "priceRange": "Starting from £1,000 – £2,600",
+          "cta": "Compare Volkswagen Space Fox Engine Prices",
+          "image": "/images/brands/volkswagen/models/volkswagen-space-fox-model-card.webp"
+        },
+        {
+          "h3": "Volkswagen Tiguan Engines",
+          "slug": "tiguan",
+          "subtitle": "Available for 1.4 TSI, 1.5 TSI, 2.0 TSI, 1.6 TDI & 2.0 TDI (EA189/EA288)",
+          "priceRange": "Starting from £1,500 – £4,800",
+          "cta": "Compare Volkswagen Tiguan Engine Prices",
+          "image": "/images/brands/volkswagen/models/volkswagen-tiguan-model-card.webp"
+        },
+        {
+          "h3": "Volkswagen Touareg Engines",
+          "slug": "touareg",
+          "subtitle": "Available for 3.0 V6 TDI, 4.2 V8 TDI, 3.6 V6 & 2.0 TSI Hybrid",
+          "priceRange": "Starting from £2,200 – £7,500",
+          "cta": "Compare Volkswagen Touareg Engine Prices",
+          "image": "/images/brands/volkswagen/models/volkswagen-touareg-model-card.webp"
+        },
+        {
+          "h3": "Volkswagen Touran Engines",
+          "slug": "touran",
+          "subtitle": "Available for 1.4 TSI, 1.5 TSI, 1.6 TDI & 2.0 TDI",
+          "priceRange": "Starting from £1,400 – £4,200",
+          "cta": "Compare Volkswagen Touran Engine Prices",
+          "image": "/images/brands/volkswagen/models/volkswagen-touran-model-card.webp"
+        },
+        {
+          "h3": "Volkswagen Transporter Engines",
+          "slug": "transporter",
+          "subtitle": "Available for 1.9 TDI, 2.0 TDI, 2.0 BiTDI (CFCA) & 2.5 TDI",
+          "priceRange": "Starting from £1,800 – £5,500",
+          "cta": "Compare Volkswagen Transporter Engine Prices",
+          "image": "/images/brands/volkswagen/models/volkswagen-transporter-model-card.webp"
+        },
+        {
+          "h3": "Volkswagen Up Engines",
+          "slug": "up",
+          "subtitle": "Available for 1.0 petrol & 1.0 TGI (CNG)",
+          "priceRange": "Starting from £900 – £2,400",
+          "cta": "Compare Volkswagen Up Engine Prices",
+          "image": "/images/brands/volkswagen/models/volkswagen-up-model-card.webp"
+        },
+        {
+          "h3": "Volkswagen Van Engines",
+          "slug": "van",
+          "subtitle": "Available for 1.9 TDI & 2.0 TDI",
+          "priceRange": "Starting from £1,500 – £4,000",
+          "cta": "Compare Volkswagen Van Engine Prices",
+          "image": "/images/brands/volkswagen/models/volkswagen-van-model-card.webp"
+        },
+        {
+          "h3": "Volkswagen Vento Engines",
+          "slug": "vento",
+          "subtitle": "Available for 1.6 & 1.8 petrol, 1.9 TDI",
+          "priceRange": "Starting from £1,000 – £2,800",
+          "cta": "Compare Volkswagen Vento Engine Prices",
+          "image": "/images/brands/volkswagen/models/volkswagen-vento-model-card.webp"
+        },
+        {
+          "h3": "Volkswagen Voyage Engines",
+          "slug": "voyage",
+          "subtitle": "Available for 1.6 petrol",
+          "priceRange": "Starting from £1,000 – £2,600",
+          "cta": "Compare Volkswagen Voyage Engine Prices",
+          "image": "/images/brands/volkswagen/models/volkswagen-voyage-model-card.webp"
+        },
+        {
+          "h3": "Volkswagen XL1 Engines",
+          "slug": "xl1",
+          "subtitle": "Available for 0.8 TDI 2-cylinder hybrid",
+          "priceRange": "Starting from £2,500 – £6,000",
+          "cta": "Compare Volkswagen XL1 Engine Prices",
+          "image": "/images/brands/volkswagen/models/volkswagen-xl1-model-card.webp"
+        }
+      ]
+    },
+    "engineCodes": {
+      "tag": "Replacement Cost",
+      "h2": "Volkswagen Engine Codes & Average Rebuilt Prices (UK Supply)",
+      "h3": "Compare costs for every major Volkswagen engine — EA189 TDI, EA288 TDI, EA888 TSI and EA211 TSI. All prices are typical UK market ranges for professionally rebuilt engines with warranty. Click \"Get Quote\" on any engine to receive tailored prices from our network of UK Volkswagen specialists.",
+      "filters": [
+        "All",
+        "Diesel",
+        "Petrol",
+        "EA189",
+        "EA288",
+        "EA888",
+        "EA188",
+        "EA211",
+        "Air-Cooled"
+      ],
+      "groups": [
+        {
+          "name": "EA189 2.0 TDI",
+          "era": "Euro 5 – Common Rail, 2008–2015",
+          "failureNote": "The Dieselgate-era engine family. Known for DPF/EGR clogging and oil pump drive failure. Rebuilt units include revised oil pump drive components. *— Get Quote →* after each row above. Common failure points (expandable note): EA189 engines are known for oil pump drive hex key wear causing oil pressure loss, plus DPF and EGR valve clogging on higher-mileage units. Our rebuilt units include revised oil pump drive components and fully cleaned/refurbished DPF and EGR systems.",
+          "engines": [
+            {
+              "code": "BKD",
+              "fuel": "Diesel",
+              "size": "2.0",
+              "power": "140bhp",
+              "compatibleModels": "Golf Mk5, Passat B6 (2004-2008)",
+              "avgRebuiltPrice": "£1,500 – £2,800",
+              "cta": "Get Quote for BKD"
+            },
+            {
+              "code": "CFHC",
+              "fuel": "Diesel",
+              "size": "2.0",
+              "power": "140bhp",
+              "compatibleModels": "Caddy, Touran (2010-2015)",
+              "avgRebuiltPrice": "£1,400 – £2,500",
+              "cta": "Get Quote for CFHC"
+            },
+            {
+              "code": "CBAB",
+              "fuel": "Diesel",
+              "size": "2.0",
+              "power": "140bhp",
+              "compatibleModels": "Golf Mk6, Passat B7 (2009-2014)",
+              "avgRebuiltPrice": "£1,600 – £2,900",
+              "cta": "Get Quote for CBAB"
+            },
+            {
+              "code": "CFFB",
+              "fuel": "Diesel",
+              "size": "2.0",
+              "power": "140bhp",
+              "compatibleModels": "Tiguan, Passat CC (2008-2015)",
+              "avgRebuiltPrice": "£1,600 – £3,000",
+              "cta": "Get Quote for CFFB"
+            },
+            {
+              "code": "CFGB",
+              "fuel": "Diesel",
+              "size": "2.0",
+              "power": "170bhp",
+              "compatibleModels": "Golf Mk6 GTD, Passat B7 (2009-2014)",
+              "avgRebuiltPrice": "£1,800 – £3,300",
+              "cta": "Get Quote for CFGB"
+            }
+          ]
+        },
+        {
+          "name": "EA288 2.0 TDI",
+          "era": "Euro 6 – AdBlue, 2015–Present",
+          "failureNote": "The ULEZ-friendly diesel family. Common rail, AdBlue injected. Generally reliable; AdBlue system issues are the main failure driver. *— Get Quote →* after each row above. Common failure points (expandable note): EA288 engines are known for AdBlue pump failures (£650+ repair) and NOx sensor malfunctions that trigger dashboard warnings. Our rebuilt units include refurbished or new AdBlue system components where required.",
+          "engines": [
+            {
+              "code": "CRLB",
+              "fuel": "Diesel",
+              "size": "2.0",
+              "power": "150bhp",
+              "compatibleModels": "Passat B8 (2015-2019), Tiguan II",
+              "avgRebuiltPrice": "£1,700 – £3,200",
+              "cta": "Get Quote for CRLB"
+            },
+            {
+              "code": "CUNA",
+              "fuel": "Diesel",
+              "size": "2.0",
+              "power": "150bhp",
+              "compatibleModels": "Golf Mk7, Passat B8 (2015-2020)",
+              "avgRebuiltPrice": "£1,700 – £3,200",
+              "cta": "Get Quote for CUNA"
+            },
+            {
+              "code": "CUPA",
+              "fuel": "Diesel",
+              "size": "2.0",
+              "power": "184bhp",
+              "compatibleModels": "Golf Mk7 GTD, Passat B8 (2015-2020)",
+              "avgRebuiltPrice": "£1,900 – £3,600",
+              "cta": "Get Quote for CUPA"
+            },
+            {
+              "code": "CXEC",
+              "fuel": "Diesel",
+              "size": "2.0",
+              "power": "150bhp",
+              "compatibleModels": "Transporter T6, Caravelle (2016-2019)",
+              "avgRebuiltPrice": "£1,800 – £3,500",
+              "cta": "Get Quote for CXEC"
+            },
+            {
+              "code": "DFFA",
+              "fuel": "Diesel",
+              "size": "2.0",
+              "power": "150bhp",
+              "compatibleModels": "Tiguan Allspace, Arteon (2017-2023)",
+              "avgRebuiltPrice": "£1,800 – £3,400",
+              "cta": "Get Quote for DFFA"
+            }
+          ]
+        },
+        {
+          "name": "EA888 1.8/2.0 TSI",
+          "era": "Petrol – Direct Injection Only, 2008–Present",
+          "failureNote": "Volkswagen's primary petrol turbo family. Early Gen 1 & 2 suffer timing chain tensioner failure and carbon buildup; Gen 3 is improved but still needs periodic intake cleaning. *— Get Quote →* after each row above. Common failure points (expandable note): EA888 engines are known for timing chain tensioner failure (Gen 1/2) and intake valve carbon buildup from direct injection. Our rebuilt units include upgraded timing chain tensioners and professionally cleaned cylinder heads.",
+          "engines": [
+            {
+              "code": "CCZB",
+              "fuel": "Petrol",
+              "size": "2.0",
+              "power": "210bhp",
+              "compatibleModels": "Golf GTI Mk6, Scirocco (2009-2013)",
+              "avgRebuiltPrice": "£1,900 – £3,600",
+              "cta": "Get Quote for CCZB"
+            },
+            {
+              "code": "CDL",
+              "fuel": "Petrol",
+              "size": "2.0",
+              "power": "265bhp",
+              "compatibleModels": "Golf R Mk6 (2010-2013)",
+              "avgRebuiltPrice": "£2,500 – £4,500",
+              "cta": "Get Quote for CDL"
+            },
+            {
+              "code": "CJX",
+              "fuel": "Petrol",
+              "size": "1.8",
+              "power": "160bhp",
+              "compatibleModels": "Passat B7, Tiguan I (2011-2015)",
+              "avgRebuiltPrice": "£1,600 – £3,200",
+              "cta": "Get Quote for CJX"
+            },
+            {
+              "code": "CHHC",
+              "fuel": "Petrol",
+              "size": "2.0",
+              "power": "200bhp",
+              "compatibleModels": "Golf GTI Mk6 (2009-2012)",
+              "avgRebuiltPrice": "£1,800 – £3,500",
+              "cta": "Get Quote for CHHC"
+            },
+            {
+              "code": "DNUE",
+              "fuel": "Petrol",
+              "size": "2.0",
+              "power": "245bhp",
+              "compatibleModels": "Golf GTI Mk7.5, Tiguan (2017-2020)",
+              "avgRebuiltPrice": "£2,000 – £3,800",
+              "cta": "Get Quote for DNUE"
+            }
+          ]
+        },
+        {
+          "name": "EA188 / PD 2.0 TDI",
+          "era": "Pre-2008 – Unit Injector/Pumpe-Düse",
+          "failureNote": "The problematic early 2.0 TDI. Crankshaft, injector, and oil pump issues are common. Most owners choose replacement over repair. *— Get Quote →* after each row above. Common failure points (expandable note): EA188 engines are known for crankshaft failure, injector seal leaks, and oil pump drive failure due to inferior balance shaft materials. Our rebuilt units incorporate upgraded oil pump drive assemblies where available.",
+          "engines": [
+            {
+              "code": "AZV",
+              "fuel": "Diesel",
+              "size": "2.0",
+              "power": "136bhp",
+              "compatibleModels": "Golf Mk5, Passat B6 (2004-2006)",
+              "avgRebuiltPrice": "£1,200 – £2,500",
+              "cta": "Get Quote for AZV"
+            },
+            {
+              "code": "BMM",
+              "fuel": "Diesel",
+              "size": "2.0",
+              "power": "136-140bhp",
+              "compatibleModels": "Touran, Caddy, Eos (2006-2010)",
+              "avgRebuiltPrice": "£1,300 – £2,600",
+              "cta": "Get Quote for BMM"
+            },
+            {
+              "code": "BMN",
+              "fuel": "Diesel",
+              "size": "2.0",
+              "power": "168bhp",
+              "compatibleModels": "Golf Mk5 GT, Passat B6 (2005-2008)",
+              "avgRebuiltPrice": "£1,500 – £2,900",
+              "cta": "Get Quote for BMN"
+            },
+            {
+              "code": "BKP",
+              "fuel": "Diesel",
+              "size": "2.0",
+              "power": "140bhp",
+              "compatibleModels": "Passat B6 (2005-2008)",
+              "avgRebuiltPrice": "£1,300 – £2,700",
+              "cta": "Get Quote for BKP"
+            }
+          ]
+        },
+        {
+          "name": "EA211 1.0/1.4/1.5 TSI",
+          "era": "Small Petrol Turbo – 2012–Present",
+          "failureNote": "Modern small-capacity turbo petrol family. Belt-driven camshaft (not chain). Generally reliable; issues are rare. *— Get Quote →* after each row above. Common failure points (expandable note): EA211 engines are generally robust. Some owners report thermostat housing leaks and EVAP system issues. Our rebuilt units include new gaskets and thermostats as standard.",
+          "engines": [
+            {
+              "code": "DLAC",
+              "fuel": "Petrol",
+              "size": "1.0",
+              "power": "95bhp",
+              "compatibleModels": "Polo Mk6, T-Cross (2017-2023)",
+              "avgRebuiltPrice": "£1,100 – £2,200",
+              "cta": "Get Quote for DLAC"
+            },
+            {
+              "code": "CZCA",
+              "fuel": "Petrol",
+              "size": "1.4",
+              "power": "125bhp",
+              "compatibleModels": "Golf Mk7, Passat B8 (2013-2017)",
+              "avgRebuiltPrice": "£1,300 – £2,600",
+              "cta": "Get Quote for CZCA"
+            },
+            {
+              "code": "CXSB",
+              "fuel": "Petrol",
+              "size": "1.4",
+              "power": "150bhp",
+              "compatibleModels": "Golf Mk7, Tiguan (2016-2019)",
+              "avgRebuiltPrice": "£1,500 – £2,800",
+              "cta": "Get Quote for CXSB"
+            },
+            {
+              "code": "DADA",
+              "fuel": "Petrol",
+              "size": "1.5",
+              "power": "130bhp",
+              "compatibleModels": "Golf Mk7.5, T-Roc (2017-2023)",
+              "avgRebuiltPrice": "£1,400 – £2,800",
+              "cta": "Get Quote for DADA"
+            },
+            {
+              "code": "DPCA",
+              "fuel": "Petrol",
+              "size": "1.5",
+              "power": "150bhp",
+              "compatibleModels": "Golf Mk8, Octavia (2020-Present)",
+              "avgRebuiltPrice": "£1,600 – £3,000",
+              "cta": "Get Quote for DPCA"
+            }
+          ]
+        },
+        {
+          "name": "Air-Cooled / Classic Engines",
+          "era": "Type 1, Type 2, Type 25",
+          "failureNote": "Classic VW flat-four engines. Replacement demand remains strong for restoration projects. — Get Quote → for specialist classic engine rebuilders. *— Get Quote →* after each row above. Common failure points (expandable note): Classic air-cooled engines are known for oil leaks, cylinder head warping, and crankcase wear in high-mileage units. Our network includes classic Volkswagen specialists offering fully rebuilt engines with upgraded seals and bearings. Closing Note: Not sure which engine code your Volkswagen uses? Enter your registration number at the top of the page and we'll match you to the exact engine and best quote — instantly. All engines supplied with a minimum 12-month warranty from UK Volkswagen specialists.",
+          "engines": [
+            {
+              "code": "AS",
+              "fuel": "Petrol",
+              "size": "1.6",
+              "power": "50bhp",
+              "compatibleModels": "Beetle (1303/1600), T2 Bay (1973-1980)",
+              "avgRebuiltPrice": "£1,200 – £2,500",
+              "cta": "Get Quote for AS"
+            },
+            {
+              "code": "AJ",
+              "fuel": "Petrol",
+              "size": "1.6",
+              "power": "50bhp",
+              "compatibleModels": "Beetle, Karmann Ghia (1974-1980)",
+              "avgRebuiltPrice": "£1,200 – £2,500",
+              "cta": "Get Quote for AJ"
+            },
+            {
+              "code": "CJ",
+              "fuel": "Petrol",
+              "size": "2.0",
+              "power": "70bhp",
+              "compatibleModels": "T2 Bay (1975-1979)",
+              "avgRebuiltPrice": "£1,800 – £3,500",
+              "cta": "Get Quote for CJ"
+            },
+            {
+              "code": "DG",
+              "fuel": "Petrol",
+              "size": "1.9",
+              "power": "77bhp",
+              "compatibleModels": "T25/T3 (1982-1992)",
+              "avgRebuiltPrice": "£1,600 – £3,200",
+              "cta": "Get Quote for DG"
+            },
+            {
+              "code": "DJ",
+              "fuel": "Petrol",
+              "size": "2.1",
+              "power": "112bhp",
+              "compatibleModels": "T25/T3 Caravelle (1985-1992)",
+              "avgRebuiltPrice": "£2,000 – £3,800",
+              "cta": "Get Quote for DJ"
+            }
+          ]
+        }
+      ]
+    },
+    "commonProblems": {
+      "tag": "Common Problems",
+      "h2": "Common Volkswagen Engine Problems — What It Costs to Fix & When Replacement Makes Sense",
+      "h3": "",
+      "problems": [
+        {
+          "group": "Timing Chain Tensioner Failure",
+          "h4": "Timing Chain Tensioner Failure – Why EA888 Petrol Engines Fail Prematurely",
+          "image": "/images/brands/volkswagen/engines/volkswagen-timing-chain-tensioner-failure-card.webp",
+          "affectedModels": "Volkswagen Golf GTI Mk5/Mk6 (2004–2013, EA888 Gen1/2 – codes CCZB, CHHC, CDL), Scirocco (2009–2014), Passat CC (2009–2012), Tiguan I (2009–2015), Eos (2009–2014)",
+          "typicalFailureMileage": "50,000 – 90,000 miles",
+          "rootCause": "The original timing chain tensioner uses a weak ratchet mechanism that gradually loses hydraulic pressure, allowing the chain to slacken and skip teeth. When the chain jumps, valves contact pistons, requiring a full cylinder head rebuild or complete engine replacement. Later Gen3 EA888 engines (2015‑on) use a revised tensioner design but are not immune to long‑term chain stretch.",
+          "recommendation": "On a Volkswagen Golf GTI or Scirocco with a Gen1/Gen2 EA888 engine, if you hear chain rattle on cold start, replace the tensioner and chain immediately – it’s a £800–£1,300 specialist job versus a £4,000+ engine replacement. If the chain has already jumped and the engine still runs poorly, a rebuilt replacement engine is usually cheaper and more reliable than a cylinder head rebuild on a high‑mileage bottom end.",
+          "cta": "→ Compare rebuilt EA888 engine prices for your Golf GTI or Scirocco"
+        },
+        {
+          "group": "EA189 Diesel Oil Pump Drive Failure",
+          "h4": "EA189 Diesel Oil Pump Drive Failure – The 2.0 TDI Silent Killer",
+          "image": "/images/brands/volkswagen/engines/volkswagen-ea189-diesel-oil-pump-drive-failure-card.webp",
+          "affectedModels": "Volkswagen Golf Mk5/Mk6 (2004–2014, engines BKD, CBAB, CFFB, CFGB), Passat B6/B7 (2005–2014), Tiguan I (2008–2015), Touran (2006–2015), Caddy (2007–2015)",
+          "typicalFailureMileage": "80,000 – 130,000 miles",
+          "rootCause": "The oil pump is driven by a hexagon‑shaped key that wears round over time, especially on engines with longer service intervals. When the key strips, oil pressure drops to zero without warning, causing crankshaft and turbo bearing failure. By the time the oil pressure light appears, damage is usually already fatal.",
+          "recommendation": "If your EA189 TDI has covered over 80,000 miles and still runs well, fit a billet oil pump drive key preventatively – it costs under £800 at a specialist and protects against total loss. Once the oil pressure light comes on, do not drive the car. Replacing the entire engine with a rebuilt unit (with billet drive included) is almost always cheaper than a crankshaft replacement on a worn bottom end.",
+          "cta": "→ Get quotes for rebuilt EA189 2.0 TDI engines with uprated oil pump drive"
+        },
+        {
+          "group": "AdBlue & NOx Sensor Failure",
+          "h4": "AdBlue & NOx Sensor Failure – EA288 Diesel Electronics",
+          "image": "/images/brands/volkswagen/engines/volkswagen-adblue-and-nox-sensor-failure-card.webp",
+          "affectedModels": "Volkswagen Passat B8 (2015–2019, engines CRLB, CUNA), Golf Mk7 (2013–2020), Tiguan II (2016–2023), Transporter T6 (2016–2019, CXEC), Arteon (2017–2023)",
+          "typicalFailureMileage": "40,000 – 80,000 miles",
+          "rootCause": "The AdBlue injection pump and NOx sensors on EA288 engines are prone to crystallisation and electronic failure. A failed AdBlue pump locks the system, triggering a “No restart in X miles” countdown. NOx sensor failure illuminates the engine light and can force reduced power mode.",
+          "recommendation": "For a Passat or Golf with AdBlue countdown warnings but otherwise running well, replace the pump or sensor at a specialist – it’s significantly cheaper than a dealer. If you plan to keep the car long‑term and are not concerned about MOT emissions (e.g., for tracked or off‑road vehicles), an AdBlue delete remap can be a permanent solution, though it is not road‑legal. We do not recommend engine replacement for electronic SCR failures.",
+          "cta": "→ Compare EA288 diesel engine prices – or get a quote for AdBlue system repair"
+        },
+        {
+          "group": "EA888 Intake Valve Carbon Buildup",
+          "h4": "EA888 Intake Valve Carbon Buildup – Direct Injection Performance Loss",
+          "image": "/images/brands/volkswagen/engines/volkswagen-ea888-intake-valve-carbon-buildup-card.webp",
+          "affectedModels": "Volkswagen Golf GTI Mk6/Mk7 (2009–2020, EA888 Gen2/Gen3), Scirocco (2009–2017), Passat B7/B8 (2011–2020), Tiguan I/II (2010–2023)",
+          "typicalFailureMileage": "30,000 – 60,000 miles (noticeable); severe by 80,000 miles",
+          "rootCause": "Direct injection petrol engines do not spray fuel over the intake valves, so oil vapour from the crankcase ventilation system bakes onto the valves over time. Thick carbon deposits restrict airflow, causing cold start misfires, reduced power, and higher fuel consumption.",
+          "recommendation": "Carbon buildup is inevitable on all direct‑injection EA888 engines. A walnut blast at a specialist costs £400–£650 every 40,000–60,000 miles and restores full performance. Do not pay dealer prices for the same service. Chemical cleaning is cheaper but less thorough – fine for maintenance between blasts. This problem alone does not justify engine replacement.",
+          "cta": "→ Find a Volkswagen specialist for EA888 walnut blasting – or compare rebuilt engine prices if yours has other issues"
+        },
+        {
+          "group": "Crankshaft & Bearing Failure",
+          "h4": "Crankshaft & Bearing Failure – EA188 / PD 2.0 TDI Weak Bottom End",
+          "image": "/images/brands/volkswagen/engines/volkswagen-crankshaft-and-bearing-failure-card.webp",
+          "affectedModels": "Volkswagen Golf Mk5 (2004–2008, engines AZV, BMM, BMN), Passat B6 (2005–2008), Touran (2004–2010), Caddy (2004–2010)",
+          "typicalFailureMileage": "80,000 – 120,000 miles",
+          "rootCause": "The early 2.0 TDI PD (Pumpe‑Düse) engines use a forged crankshaft with inadequate bearing clearances and poor oil supply at idle. Combined with the same hex key oil pump drive as EA189, many suffer spun main bearings or complete crankshaft seizure. Once the crank has spun a bearing, the engine is scrap.",
+          "recommendation": "If your EA188 2.0 TDI has a deep knocking noise that worsens with revs, stop driving immediately. A rebuilt replacement engine costs £2,200–£3,500 supplied and fitted – often less than a crankshaft regrind on a 150,000‑mile block. If caught absolutely early (a faint knock only at idle), a specialist may fit new bearings in situ, but this is rare. For most owners, a rebuilt unit is the definitive fix.",
+          "cta": "→ Compare rebuilt EA188 2.0 TDI engine prices for your Golf or Passat"
+        }
+      ],
+      "finalCta": {
+        "h4": "Don't Let Engine Failure Write Off Your Volkswagen",
+        "paragraph": "→ All prices are indicative UK market ranges based on historical quote data and repair requests from our network of engine specialists. Dealer pricing is estimated based on published main dealer labour rates and genuine OEM parts pricing. Specialist pricing reflects actual quote data from EngineMarket's UK network. Actual costs vary depending on damage severity, vehicle condition, variant, and workshop location within the UK. AdBlue delete remaps are not road‑legal for MOT‑tested vehicles – discussed for off‑road/commercial context only. Use our free comparison tool to get tailored quotes for your specific Volkswagen model and engine code. Every engine supplied through EngineMarket carries a minimum 12‑month unlimited mileage warranty – always confirm exact terms with your chosen supplier. | Keyword | Integration | | :--- | :--- | | common volkswagen engine problems | H2 | | volkswagen engine problems | H2; H3 intro | | ea888 engine problems | H4 (timing chain failure); Group 1 rows | | ea888 timing chain replacement cost | Group 1 table – Minor tier specialist price | | volkswagen 2.0 tdi engine problems | H3 intro; Group 2 (EA189 oil pump) | | 2.0 tdi ea189 engine problems | Group 2 affected models + root cause | | ea288 engine problems | Group 3 (AdBlue failures) | | volkswagen timing chain replacement cost | Group 1 table – Dealer vs Specialist | | vw 2.0 tdi oil pump failure | Group 2 root cause | | volkswagen engine repair or replace | Group 2 “Our recommendation”; Group 4 | | volkswagen engine replacement cost | Group 2 Full Replacement price row; Final conversion | | volkswagen engine rebuild cost | Group 1 Full Replacement row; Group 4 | | is it worth replacing volkswagen engine | Group 2 “Our recommendation” | | should i rebuild or replace engine | Group 4 (crankshaft failure) | | vw golf engine replacement | Group 1 CTA; Group 2 CTA | | volkswagen passat engine replacement | Group 3 CTA | | volkswagen transporter engine replacement | Group 3 affected models (CXEC) | | volkswagen engine specialists uk | H3 intro; Final conversion | | volkswagen engine supply and fit | Group 2/3/4 Full Replacement rows | | volkswagen engine warranty | H3 intro; Final conversion; Disclaimer | | volkswagen engine carbon cleaning | Group 4 (walnut blast) | | adblue pump replacement cost volkswagen | Group 3 Intermediate row | | crlb engine replacement | Group 3 affected models (CRLB) | | bkd engine replacement | Group 2 affected models (BKD) | | cfca engine replacement | Group 3 affected models (CXEC – CFCA is similar BiTDI) |",
+        "buttonText": "Compare Volkswagen Engine Replacement Prices Now",
+        "disclaimer": ""
+      }
+    },
+    "engineTypes": {
+      "tag": "Replacement Engine Options",
+      "h2": "Volkswagen Engine Types – Options, Costs & What to Expect",
+      "intro": "Every Volkswagen engine type available through our UK network, with typical price ranges and recommendations based on your vehicle’s age, condition and your budget.",
+      "types": [
+        {
+          "title": "Volkswagen Reconditioned Engines (Recon)",
+          "description": "A stripped, cleaned and fully inspected engine where all worn components are replaced with OEM‑spec parts. Best for owners who want factory reliability without the factory price. For EA189 and EA288 diesel engines, reconditioning includes a revised oil pump drive to prevent future failure.",
+          "priceRange": "Typical price range: £1,600 – £3,800 (depending on engine code)",
+          "cta": "Compare reconditioned Volkswagen engine prices"
+        },
+        {
+          "title": "Volkswagen Rebuilt Engines",
+          "description": "A complete rebuild with upgraded components addressing known failure points – such as reinforced timing chain tensioners (EA888 TSI) and billet oil pump drive keys (2.0 TDI) – for a longer service life than a standard replacement.",
+          "priceRange": "Typical price range: £1,800 – £4,500",
+          "cta": "Get rebuilt Volkswagen engine quotes"
+        },
+        {
+          "title": "Used Volkswagen Engines",
+          "description": "A tested, low‑mileage take‑out unit from a donor vehicle. The most affordable option when budget is the priority, with verified history and warranty available.",
+          "priceRange": "Typical price range: £800 – £2,200",
+          "cta": "Check used Volkswagen engine availability"
+        },
+        {
+          "title": "Volkswagen Remanufactured Engines",
+          "description": "A factory‑spec, as‑new engine: every surface is machined, every component is replaced, and the unit is built to meet exact OEM tolerances. The premium choice for performance models like Golf R or Touareg V6 TDI, or owners wanting a zero‑mile engine.",
+          "priceRange": "Typical price range: £2,800 – £6,000",
+          "cta": "Compare remanufactured Volkswagen engine costs"
+        },
+        {
+          "title": "Volkswagen Refurbished Engines",
+          "description": "A lightly serviced, cleaned, and tested engine that works reliably but hasn’t had a complete rebuild. Often a pragmatic, fast solution for older or budget‑sensitive models like a high‑mileage Passat or Touran where a full recon isn’t economical.",
+          "priceRange": "Typical price range: £1,000 – £2,500",
+          "cta": "View refurbished Volkswagen engine options"
+        },
+        {
+          "title": "Volkswagen Supply & Fit Engines",
+          "description": "Your replacement engine delivered and professionally installed by a UK Volkswagen specialist. Includes removal of the old unit, fitting, fluids, and a workmanship warranty. Strongly recommended for EA888 chain replacements and Transporter engine swaps.",
+          "priceRange": "Typical added cost: £450 – £800 on top of engine price",
+          "cta": "Find Volkswagen engine supply & fit deals"
+        }
+      ],
+      "closing": "All engine types include a minimum 12‑month warranty. Prices are typical UK market ranges and depend on exact engine code, supplier, and any additional fitting services. Use our free comparison tool to get a tailored quote for your Volkswagen model today."
+    },
+    "engineSizes": {
+      "tag": "Engine Sizes",
+      "h2": "Volkswagen Engines by Size – Find the Right Displacement for Your Model",
+      "intro": "",
+      "groups": [
+        {
+          "title": "Volkswagen Diesel Engine Sizes",
+          "items": [
+            {
+              "title": "Volkswagen 1.2L Diesel Engines",
+              "description": "The smallest Volkswagen diesel, this 3-cylinder TDI unit was used mainly in the Polo and small-platform models. It offered excellent economy but suffers from turbocharger wear and DPF clogging on short journeys. Engine code(s): CFWA, CFWB, CFWC Compatible models (UK): Polo (6R), Ibiza (same platform), Fox (late models) Production years: 2010 – 2015 Common failure points: Turbocharger failure (wastegate sticking), DPF blockage, injector seal leaks",
+              "cta": "Get quotes for Volkswagen 1.2L diesel engines"
+            },
+            {
+              "title": "Volkswagen 1.4L Diesel Engines",
+              "description": "A 3-cylinder TDI used across small Volkswagens before the brand standardised on 1.6L units. Known for good fuel economy but limited power output. Engine code(s): BNM, BNV Compatible models (UK): Polo (9N3), Fox Production years: 2005 – 2009 Common failure points: Glow plug failure, EGR valve clogging, dual mass flywheel (DMF) wear",
+              "cta": "Get quotes for Volkswagen 1.4L diesel engines"
+            },
+            {
+              "title": "Volkswagen 1.6L Diesel Engines",
+              "description": "A hugely popular 4-cylinder TDI found in nearly every medium Volkswagen model. Covers both the older PD (Pumpe-Düse) and later common rail EA189 family. Replacement demand remains very high. Engine code(s): BLS, BXF, CAYC, CAYB, CAAC Compatible models (UK): Golf Mk5/Mk6, Passat B6, Touran, Caddy, Jetta Production years: 2005 – 2015 Common failure points: DPF and EGR clogging, oil pump drive hex key wear (EA189), injector failure",
+              "cta": "Get quotes for Volkswagen 1.6L diesel engines"
+            },
+            {
+              "title": "Volkswagen 1.9L Diesel Engines",
+              "description": "The legendary SDI and TDI PD unit. Renowned for longevity, but mounting emissions regulations and high mileage make replacement common on older classics like the Bora and Mk4 Golf. Engine code(s): ALH, AXR, ATD, ASZ, BLT, BSW Compatible models (UK): Golf Mk4, Bora, Passat B5, Polo (9N), Transporter T5 Production years: 1997 – 2009 Common failure points: Injector wiring harness failure, turbo vane sticking (VNT), camshaft wear",
+              "cta": "Get quotes for Volkswagen 1.9L diesel engines"
+            },
+            {
+              "title": "Volkswagen 2.0L Diesel Engines",
+              "description": "The backbone of Volkswagen’s diesel range for 20 years. Includes the problematic EA188 PD unit, the massive-volume EA189 common rail (Dieselgate), and the later EA288. Thousands replaced annually in the UK. Engine code(s): EA188: AZV, BMM, BMN, BKP; EA189: BKD, CBAB, CFFB, CFGB, CFHC; EA288: CRLB, CUNA, CUPA, CXEC, DFFA Compatible models (UK): Golf Mk5/Mk6/Mk7, Passat B6/B7/B8, Tiguan, Touran, Caddy, Transporter T5/T6, Amarok (early) Production years: 2003 – present Common failure points: Oil pump drive failure (EA188/EA189), DPF/AdBlue issues (EA288), crankshaft bearing wear (PD units)",
+              "cta": "Get quotes for Volkswagen 2.0L diesel engines"
+            },
+            {
+              "title": "Volkswagen 2.5L Diesel Engines",
+              "description": "A 5-cylinder TDI used in the Transporter T5 and early Touareg. Known for torque and character but discontinued in favour of 2.0 BiTDI units. Replacement units are sought after by van owners. Engine code(s): AXD, BPC, BNZ, BPE, BJJ Compatible models (UK): Transporter T5 (2003-2009), Touareg (first generation, early) Production years: 2003 – 2009 Common failure points: Injector failure (Bosch), camshaft wear, EGR cooler cracking",
+              "cta": "Get quotes for Volkswagen 2.5L diesel engines"
+            },
+            {
+              "title": "Volkswagen 3.0L Diesel Engines",
+              "description": "The V6 TDI, shared with Audi, used in the large SUVs. A relatively robust unit compared to smaller diesels, but expensive to rebuild. Engine code(s): CASA, CASC, CCMA, CNRB, CRCA (bi-turbo) Compatible models (UK): Touareg (7P, 7L), Phaeton (very rare in UK) Production years: 2004 – 2018 Common failure points: AdBlue pump failure (Euro 6), EGR cooler leaks, oil cooler seal failure",
+              "cta": "Get quotes for Volkswagen 3.0L diesel engines"
+            }
+          ]
+        },
+        {
+          "title": "Volkswagen Petrol Engine Sizes",
+          "items": [
+            {
+              "title": "Volkswagen 1.0L Petrol Engines",
+              "description": "The modern EA211 3-cylinder TSI found in the Up, Polo and small crossovers. Direct injection, turbocharged and efficient. Reliability is generally good; failures are often electrical. Engine code(s): CHYA, CHZB, CHZH, DLAC, DLCB Compatible models (UK): Up, Polo Mk6, T-Cross Production years: 2011 – present Common failure points: Thermostat housing leaks, EVAP system faults, carbon buildup (direct injection)",
+              "cta": "Compare Volkswagen 1.0L petrol engine prices"
+            },
+            {
+              "title": "Volkswagen 1.2L Petrol Engines",
+              "description": "A 3- or 4-cylinder unit bridging older MPi and newer TSI technology. The early 1.2 TSI had timing chain issues; later belts were more reliable. Engine code(s): BZG (MPi), CGPB (TSI), CBZB (TSI with chain), CJZB (TSI belt) Compatible models (UK): Polo (9N, 6R), Fox, Golf Mk6 (early) Production years: 2006 – 2015 Common failure points: Timing chain stretch (CBZB), ignition coil failure, intake manifold flap failure",
+              "cta": "Compare Volkswagen 1.2L petrol engine prices"
+            },
+            {
+              "title": "Volkswagen 1.4L Petrol Engines",
+              "description": "A complex family: early chain-driven 16v units, twin-charger TSI (GTI), later EA211 belt-driven TSI. Replacement demand is high on twin-charger units due to supercharger clutch failure. Engine code(s): BUD, BXW (MPi); CAXA, CAVD, CAVE, CTHE (TSI); CZCA, CZDA, CZEA (EA211) Compatible models (UK): Golf Mk5/Mk6/Mk7, Polo GTI (6R), Passat B7/B8, Tiguan I/II Production years: 2005 – present Common failure points: Twin-charger: supercharger clutch & timing chain; EA211: thermostat housing leaks",
+              "cta": "Compare Volkswagen 1.4L petrol engine prices"
+            },
+            {
+              "title": "Volkswagen 1.5L Petrol Engines",
+              "description": "The EA211 Evo TSI, designed to replace the 1.4 TSI. Features variable geometry turbo and cylinder deactivation. Early examples had vibration/judder issues. Engine code(s): DADA, DACA, DPCA, DPCZ Compatible models (UK): Golf Mk7.5/Mk8, T-Roc, Tiguan II (late), Passat B8 Production years: 2017 – present Common failure points: Cylinder deactivation solenoid issues, judder at low RPM (software fix available), water pump leaks",
+              "cta": "Compare Volkswagen 1.5L petrol engine prices"
+            },
+            {
+              "title": "Volkswagen 1.6L Petrol Engines",
+              "description": "An older 8v and 16v unit found in the Golf Mk4 and Bora era. Simple to work on, but high-mileage units suffer oil consumption. Replaced by 1.4/1.5 TSI in newer models. Engine code(s): AEH, AKL, BCB, BTS Compatible models (UK): Golf Mk4, Bora, New Beetle Production years: 1998 – 2005 Common failure points: Coil pack failure (individual units), oil sludge build-up, coolant flange leaks",
+              "cta": "Compare Volkswagen 1.6L petrol engine prices"
+            },
+            {
+              "title": "Volkswagen 1.8L Petrol Engines",
+              "description": "A core performance and family-car engine for decades. Includes the non-turbo 1.8 (Golf Mk4) and the famous 1.8T 20v (Audi/SEAT/Škoda family), plus later EA888 Gen1. Timing belt or chain dependent. Engine code(s): AGN (MPi), AUM, AUQ, BAM (1.8T), CDAA, CDAB, CDJA (EA888 Gen1) Compatible models (UK): Golf Mk4 GTI, Passat B5, Golf Plus, Jetta Production years: 1997 – 2012 Common failure points: 1.8T – coil packs & sludge; EA888 Gen1 – timing chain tensioner failure",
+              "cta": "Compare Volkswagen 1.8L petrol engine prices"
+            },
+            {
+              "title": "Volkswagen 2.0L Petrol Engines",
+              "description": "Volkswagen’s most dominant petrol engine of the 21st century. EA888 Gen1/2/3/4 powers everything from the Golf GTI to the Tiguan and Arteon. Replacement demand driven by timing chain and oil consumption issues on earlier generations. Engine code(s): CCZA, CCZB, CDL, CHHA, CHHC, CJX, CJXA, CPRA, DNUA, DNUE, DKZA (EA888 range) Compatible models (UK): Golf GTI Mk5/Mk6/Mk7/Mk8, Golf R Mk6/Mk7, Scirocco, Passat CC, Tiguan, Arteon Production years: 2005 – present Common failure points: Timing chain tensioner (Gen1/2), intake carbon buildup, water pump/thermostat housing leaks (Gen3)",
+              "cta": "Compare Volkswagen 2.0L petrol engine prices"
+            },
+            {
+              "title": "Volkswagen 2.5L Petrol Engines",
+              "description": "A 5-cylinder unit (Volvo-sourced design) used briefly in the US-market Jetta and Beetle. Very rare in the UK but present on imported models. Engine code(s): BGP, BGQ Compatible models (UK): Jetta (UK imports only), New Beetle (rare import) Production years: 2005 – 2008 (non-UK primarily) Common failure points: Limited UK data – vacuum pump oil leaks, ignition coil failure",
+              "cta": "Compare Volkswagen 2.5L petrol engine prices"
+            },
+            {
+              "title": "Volkswagen 3.2L & 3.6L Petrol Engines",
+              "description": "The VR6 range. Narrow-angle V6 that fits in Golf-sized bays. Used in the R32 (3.2) and Passat R36 (3.6). Enthusiast favourites with high replacement costs. Engine code(s): 3.2: BDB, BJS, BMJ, BUB; 3.6: BWS, CDVB Compatible models (UK): Golf R32 (Mk4/Mk5), Passat R36, Touareg (3.6), Eos/Passat CC (3.6) Production years: 2002 – 2015 Common failure points: Timing chain and guide wear (VR6-specific), secondary air injection faults, high oil consumption on higher-mileage units",
+              "cta": "Compare Volkswagen VR6 petrol engine prices"
+            }
+          ]
+        },
+        {
+          "title": "Volkswagen Hybrid & Electric Powertrains",
+          "items": [
+            {
+              "title": "Volkswagen Plug-In Hybrid (GTE & eHybrid) Engines",
+              "description": "Volkswagen’s PHEV system pairs a 1.4 TSI with an electric motor. Shared across VW Group (Golf GTE, Passat GTE). Battery degradation and electrical faults are the primary replacement drivers. System code(s): CUKB, DQ400e gearbox-integrated motor Compatible models (UK): Golf GTE (Mk7/Mk8), Passat GTE (B8), Tiguan eHybrid Production years: 2014 – present Important notes: High-voltage battery degradation; specialist repair only; engine replacement requires HV system disconnection by trained technicians",
+              "cta": "Enquire about Volkswagen hybrid engine availability"
+            },
+            {
+              "title": "Volkswagen Electric Motors (BEV)",
+              "description": "The MEB platform permanent-magnet synchronous motor used on ID models. Failures are rare, but controllers and bearings can fail. Motor code(s) APP 310 (APP310) – ID.3, ID.4, ID.5; APP 550 (ID.7) Compatible models (UK): ID.3, ID.4, ID.5, ID. Buzz, ID.7 Production years: 2019 – present Important notes: Motor controller (inverter) failure more common than motor itself; supply chain for replacement units is developing",
+              "cta": "Enquire about Volkswagen electric motor repair"
+            }
+          ]
+        }
+      ],
+      "closing": "Not sure which engine size your Volkswagen needs? Enter your registration number and we'll match you to the exact engine code and displacement — instantly. All engines supplied with a minimum 12-month warranty from UK Volkswagen specialists."
+    },
+    "fuelTypes": {
+      "tag": "Complete Volkswagen Engines List",
+      "h2": "Volkswagen Engines by Fuel Type",
+      "intro": "Choose your Volkswagen engine by fuel type to compare realistic replacement prices, known brand‑wide issues, and UK specialist supply – from the most popular diesel workhorses to the latest electrified powertrains.",
+      "items": [
+        {
+          "title": "“Volkswagen Diesel Engines” |",
+          "description": "| volkswagen diesel engine families | Common Volkswagen Diesel Engine Families bullet list | | volkswagen 2.0 tdi engine problems | Known For: EA189 oil pump, EA288 AdBlue | | volkswagen ea189 engine replacement | EA189 family bullet; Found In: Golf/Passat | | volkswagen ea288 engine | EA288 family bullet; Known For | | volkswagen 1.9 tdi engine | EA188/PD family – 1.9 TDI reference | | volkswagen petrol engines list |",
+          "cta": "Compare “Volkswagen Diesel Engines” | options"
+        },
+        {
+          "title": "“Volkswagen Petrol Engines” |",
+          "description": "| volkswagen ea888 engine | EA888 family bullet; Known For | | volkswagen ea888 timing chain replacement cost | Known For (EA888 Gen1/2 tensioner failure) | | volkswagen 1.4 tsi twincharger problems | Known For (CAVE/CTHE supercharger clutch) | | volkswagen ea211 engine | EA211 family bullet; Found In | | volkswagen vr6 engine | VR6 family bullet | | volkswagen golf gti engine replacement | Typical Petrol Models | | volkswagen plug-in hybrid engine |",
+          "cta": "Compare “Volkswagen Petrol Engines” | options"
+        },
+        {
+          "title": "“Volkswagen Plug‑in Hybrid (PHEV) Engines” |",
+          "description": "| volkswagen golf gte engine | Found In – Golf GTE | | volkswagen passat gte replacement engine | Found In – Passat GTE | | volkswagen electric motor |",
+          "cta": "Compare “Volkswagen Plug‑in Hybrid (PHEV) Engines” | options"
+        },
+        {
+          "title": "“Volkswagen Electric Powertrains (BEV)” |",
+          "description": "| volkswagen id3 motor replacement | Common Electric Motors – APP 310 | | volkswagen app310 motor | Common Electric Motors | | volkswagen engine fuel types | H2 | | volkswagen diesel models uk | Typical Diesel Models | | volkswagen petrol models uk | Typical Petrol Models | | uk volkswagen engine specialists | Closing line | | volkswagen engine warranty | Closing line | | compare volkswagen diesel engine prices | Diesel CTA | | compare volkswagen petrol engine prices | Petrol CTA |",
+          "cta": "Compare “Volkswagen Electric Powertrains (BEV)” | options"
+        }
+      ],
+      "closing": "Not sure which fuel type your Volkswagen has? Enter your registration number above to instantly identify your model, engine code, fuel system and compatible replacement options – all backed by a minimum 12‑month unlimited mileage warranty from UK Volkswagen specialists."
+    },
+    "engineCodeDirectory": {
+      "tag": "Engine Codes",
+      "h2": "Volkswagen Engine Codes – Most Replaced Engines (2008–2025)",
+      "intro": "Every major Volkswagen engine code from the last two decades, grouped by family, with compatible models and typical reasons why owners seek replacement. Select your engine to compare rebuilt prices and get quotes from UK Volkswagen specialists.",
+      "families": [
+        {
+          "name": "EA189 Common Rail TDI Family (2008–2015)",
+          "entries": [
+            {
+              "title": "BKD 2.0 TDI",
+              "image": "/images/brands/volkswagen/engines/volkswagen-bkd-engine.webp",
+              "description": "The BKD was Volkswagen’s first 2.0 16v common‑rail diesel, fitted to the Golf Mk5, Passat B6, and Audi A3 (8P) from 2003‑2008. The engine is otherwise robust, but the oil pump drive hex key wears round over time, leading to sudden oil pressure loss and crankshaft bearing failure. A quality rebuilt BKD includes a billet steel oil pump drive key and new bearings.",
+              "cta": "Get quotes for BKD Volkswagen engine replacement"
+            },
+            {
+              "title": "CBAB 2.0 TDI",
+              "image": "/images/brands/volkswagen/engines/volkswagen-cbab-engine.webp",
+              "description": "Found in the Golf Mk6, Passat B7, and Tiguan I from 2008‑2013, the CBAB is a refinement of the EA189 family. It shares the same oil pump hex key vulnerability as the BKD, plus DPF clogging on short‑journey cars. Rebuilt units come with a revised oil pump drive and a fully cleaned or replaced DPF.",
+              "cta": "Compare CBAB Volkswagen engine prices"
+            },
+            {
+              "title": "CFFB 2.0 TDI",
+              "image": "/images/brands/volkswagen/engines/volkswagen-cffb-engine.webp",
+              "description": "Fitted to the Passat B7, CC, and Tiguan I from 2009‑2014. CFFB engines are known for EGR cooler cracking (coolant loss) and the same oil pump drive failure as other EA189s. Rebuilt engines include an uprated billet oil pump drive and a refurbished EGR cooler.",
+              "cta": "Get quotes for CFFB Volkswagen engine replacement"
+            },
+            {
+              "title": "CFGB 2.0 TDI 170bhp",
+              "image": "/images/brands/volkswagen/engines/volkswagen-cfgb-engine.webp",
+              "description": "The higher‑output 170bhp version of the EA189, used in the Golf Mk6 GTD, Passat B7, and Scirocco (2009‑2014). In addition to the standard EA189 oil pump issue, CFGB engines suffer from turbocharger vane sticking and injector seal leaks. Rebuilt units include a billet oil pump drive, turbo refurbishment, and new injector seals.",
+              "cta": "Compare CFGB Volkswagen engine prices"
+            },
+            {
+              "title": "CAYC 1.6 TDI",
+              "image": "/images/brands/volkswagen/engines/volkswagen-cayc-engine.webp",
+              "description": "The 1.6‑litre EA189 diesel, fitted to the Golf Mk6, Polo Mk5, Passat B7, and Caddy from 2009‑2015. Extremely sensitive to DPF clogging (short journeys) and EGR valve failure. The 1.6 also shares the oil pump drive weakness of the 2.0‑litre units. Rebuilt CAYC engines include a billet drive, cleaned DPF, and a refurbished EGR valve.",
+              "cta": "Get quotes for CAYC Volkswagen engine replacement"
+            }
+          ]
+        },
+        {
+          "name": "EA288 Common Rail TDI Family (2015–Present)",
+          "entries": [
+            {
+              "title": "CRLB 2.0 TDI 150bhp",
+              "image": "/images/brands/volkswagen/engines/volkswagen-crlb-engine.webp",
+              "description": "The Euro‑6 EA288 diesel, fitted to the Passat B8 (2015‑2019), Tiguan II, and Škoda Superb. AdBlue (SCR) system failures dominate: AdBlue pump crystallisation and NOx sensor failure trigger countdown‑to‑no‑start warnings. Mechanical failures are rare. Rebuilt CRLB engines include a refurbished AdBlue system where required.",
+              "cta": "Compare CRLB Volkswagen engine prices"
+            },
+            {
+              "title": "CUNA 2.0 TDI 150bhp",
+              "image": "/images/brands/volkswagen/engines/volkswagen-cuna-engine.webp",
+              "description": "Used in the Golf Mk7, Passat B8, and Tiguan II from 2015‑2020. Same EA288 platform as CRLB. AdBlue injector crystallisation and EGR cooler leaks are the primary failure drivers. Rebuilt units include cleaned or replaced AdBlue components.",
+              "cta": "Get quotes for CUNA Volkswagen engine replacement"
+            },
+            {
+              "title": "CUPA 2.0 TDI 184bhp",
+              "image": "/images/brands/volkswagen/engines/volkswagen-cupa-engine.webp",
+              "description": "The higher‑output EA288, found in the Golf Mk7 GTD (2015‑2020) and Passat B8. Shares the same AdBlue/SCR weaknesses as the 150bhp units. Some owners report DPF backpressure sensor failure. Rebuilt CUPA engines include a DPF clean and AdBlue system health check.",
+              "cta": "Compare CUPA Volkswagen engine prices"
+            },
+            {
+              "title": "CXEC 2.0 TDI (Transporter T6)",
+              "image": "/images/brands/volkswagen/engines/volkswagen-cxec-engine.webp",
+              "description": "Fitted to the Transporter T6, Caravelle, and California from 2016‑2019. The EA288 van‑spec engine is tuned for low‑end torque. AdBlue pump failure is the most common replacement driver, along with EGR cooler leaks. Rebuilt CXEC engines include a refurbished AdBlue system and EGR cooler.",
+              "cta": "Get quotes for CXEC Volkswagen engine replacement"
+            }
+          ]
+        },
+        {
+          "name": "EA888 Petrol TSI Family (2008–Present)",
+          "entries": [
+            {
+              "title": "CCZB 2.0 TSI (EA888 Gen2)",
+              "image": "/images/brands/volkswagen/engines/volkswagen-cczb-engine.webp",
+              "description": "Found in the Golf GTI Mk6, Scirocco, and Passat CC from 2009‑2013. The Gen2 EA888 is notorious for timing chain tensioner failure – the tensioner ratchet fails, chain jumps, and valves hit pistons. Rebuilt CCZB engines include the revised Gen3‑style tensioner, new chains, and a decarbonised cylinder head.",
+              "cta": "Compare CCZB Volkswagen engine prices"
+            },
+            {
+              "title": "CDL 2.0 TSI (EA888 Gen2 – Golf R)",
+              "image": "/images/brands/volkswagen/engines/volkswagen-cdl-engine.webp",
+              "description": "The 265bhp Golf R Mk6 engine (2010‑2013). Same timing chain tensioner weakness as the standard CCZB, but with a larger turbo and stronger internals. Replacement demand is high due to tuning‑related failures and tensioner collapse. Rebuilt CDL engines include uprated chains, revised tensioner, and performance bearings.",
+              "cta": "Get quotes for CDL Volkswagen engine replacement"
+            },
+            {
+              "title": "CHHC 2.0 TSI (EA888 Gen2)",
+              "image": "/images/brands/volkswagen/engines/volkswagen-chhc-engine.webp",
+              "description": "Fitted to the Golf GTI Mk6, Scirocco, and Eos from 2009‑2012. Same timing chain tensioner failure as other Gen2 EA888s. Also known for intake manifold runner flap failure (P2015 code). Rebuilt CHHC units include revised tensioner, new manifold flaps, and head decarbonisation.",
+              "cta": "Compare CHHC Volkswagen engine prices"
+            },
+            {
+              "title": "DNUE 2.0 TSI (EA888 Gen3)",
+              "image": "/images/brands/volkswagen/engines/volkswagen-dnue-engine.webp",
+              "description": "The Gen3 EA888, fitted to the Golf GTI Mk7.5 (2017‑2020), Tiguan II, and Arteon. Chain tensioner failures are rare, but water pump / thermostat housing leaks are common, along with intake valve carbon buildup. Rebuilt DNUE engines include a new water pump assembly and professionally cleaned cylinder head.",
+              "cta": "Get quotes for DNUE Volkswagen engine replacement"
+            },
+            {
+              "title": "DKZA 2.0 TSI (EA888 Gen4)",
+              "image": "/images/brands/volkswagen/engines/volkswagen-dkza-engine.webp",
+              "description": "The latest EA888 generation, found in the Golf GTI Mk8, Golf R Mk8, and Tiguan R from 2020‑present. Early examples show oil consumption and PCV system failures. Rebuilt DKZA units include upgraded PCV valves and revised piston rings.",
+              "cta": "Compare DKZA Volkswagen engine prices"
+            }
+          ]
+        },
+        {
+          "name": "EA188 Pumpe‑Düse (PD) TDI Family (2003–2010)",
+          "entries": [
+            {
+              "title": "BKP 2.0 TDI PD",
+              "image": "/images/brands/volkswagen/engines/volkswagen-bkp-engine.webp",
+              "description": "Fitted to the Passat B6 and Audi A3 from 2005‑2008. The PD (unit injector) system is robust, but crankshaft bearing wear (due to poor oil supply) and injector seal leaks (diesel in oil) are common. Rebuilt BKP engines include new bearings, revised oil pump assembly, and new injector seals.",
+              "cta": "Get quotes for BKP Volkswagen engine replacement"
+            },
+            {
+              "title": "BMM 2.0 TDI PD",
+              "image": "/images/brands/volkswagen/engines/volkswagen-bmm-engine.webp",
+              "description": "Used in the Touran, Caddy, and Eos from 2006‑2010. Same PD weaknesses as BKP: injector seal leaks cause oil dilution and potential engine runaway. Dual mass flywheel (DMF) failure is also common. Rebuilt BMM engines include new injector seals, bearings, and a DMF recommendation.",
+              "cta": "Compare BMM Volkswagen engine prices"
+            },
+            {
+              "title": "AZV 2.0 TDI PD",
+              "image": "/images/brands/volkswagen/engines/volkswagen-azv-engine.webp",
+              "description": "One of the earliest 2.0 PD engines, fitted to the Golf Mk5 and Touran from 2003‑2006. Known for crankshaft failure (sudden snapping) and oil pump drive issues. Rebuilt AZV units include a billet oil pump drive and a crack‑tested crankshaft.",
+              "cta": "Get quotes for AZV Volkswagen engine replacement"
+            }
+          ]
+        },
+        {
+          "name": "Small Petrol & Legacy Engines",
+          "entries": [
+            {
+              "title": "CAVE / CTHE 1.4 TSI Twincharger",
+              "image": "/images/brands/volkswagen/engines/volkswagen-cave-engine.webp",
+              "description": "The infamous twin‑charged (supercharger + turbo) 1.4 TSI, fitted to the Polo GTI Mk5 (2010‑2014) and Golf Mk6. Failures include supercharger clutch sticking, timing chain stretch, and piston ring failure (oil burning). Rebuilt units include revised timing chains, supercharger clutch repair, and new piston rings.",
+              "cta": "Compare CAVE & CTHE Volkswagen engine prices"
+            },
+            {
+              "title": "CBZB 1.2 TSI",
+              "image": "/images/brands/volkswagen/engines/volkswagen-cbzb-engine.webp",
+              "description": "Found in the Polo Mk5, Golf Mk6, and Passat B7 from 2010‑2015. Early CBZB engines had timing chain stretch (chain jumps, engine interference). Rebuilt CBZB engines include the revised timing chain kit and tensioner.",
+              "cta": "Get quotes for CBZB Volkswagen engine replacement"
+            },
+            {
+              "title": "CHYA 1.0 MPI / TSI",
+              "image": "/images/brands/volkswagen/engines/volkswagen-chya-engine.webp",
+              "description": "The EA211 1.0 3‑cylinder, fitted to the Up, Polo Mk6, and T‑Cross from 2011‑present. Generally reliable, but thermostat housing leaks and ignition coil failures occur. Rebuilt CHYA units include a new water pump housing and fresh coils.",
+              "cta": "Compare CHYA Volkswagen engine prices"
+            },
+            {
+              "title": "BFS / BFS 1.6 FSI",
+              "image": "/images/brands/volkswagen/engines/volkswagen-bfs-engine.webp",
+              "description": "The early direct‑injection petrol (FSI), fitted to the Golf Mk5 and Passat B6 from 2003‑2008. Intake valve carbon buildup and fuel pump (high‑pressure) failure are common. Rebuilt FSI engines include a decarbonised head and a refurbished HPFP. Closing line (Block A): Can’t find your engine code listed above? Use our full Volkswagen engine code directory below — every code from the last 25 years — or enter your registration number for an instant match to the correct replacement engine with warranty.",
+              "cta": "Get quotes for BFS Volkswagen engine replacement"
+            }
+          ]
+        }
+      ],
+      "closing": "Can’t find your engine code listed above? Use our full Volkswagen engine code directory below — every code from the last 25 years — or enter your registration number for an instant match to the correct replacement engine with warranty.",
+      "directory": {
+        "h3": "Full Volkswagen Engine Code Directory (All Years)",
+        "label": "“View all Volkswagen engine codes (250+ codes, 1998–2025)”",
+        "intro": "A comprehensive alphabetical listing of every Volkswagen engine code from the last 25 years. Use the search above or enter your registration for an instant match to your specific engine. All codes link to a quote request.",
+        "codes": [
+          {
+            "code": "1.4 16V",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "1.6 MPI",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "2.0 SDI",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "AEY",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "ALE",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "ALH",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "APK",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "AQM",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "ARL",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "ASV",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "AWM",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "AXP",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "AXR",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "AYP",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "AZV",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "BAD",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "BCA",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "BDB",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "BFS",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "BGP",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "BGQ",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "BHF",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "BHM",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "BKD",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "BKP",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "BKN",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "BLF",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "BLS",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "BLT",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "BMM",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "BMN",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "BNM",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "BNV",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "BPC",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "BPE",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "BRB",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "BRM",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "BRT",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "BSW",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "BSW",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "BUB",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "BUD",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "BVF",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "BWS",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "BXF",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "BXW",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "CAAC",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CAYB",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CAYC",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CBBB",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CBAB",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CBDA",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CBBB",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CBZA",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "CBZB",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "CCCA",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CCHA",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "CCTA",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "CCZA",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "CCZB",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "CDFA",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CDG",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "CDLD",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CDUC",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CDUD",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CDVA",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "CEGA",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CELA",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CFCA",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CFFB",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CFGB",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CFHC",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CFPB",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CGLC",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CGRA",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CGRB",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CHHA",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "CHHC",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "CHYB",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "CHYA",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "CJAA",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CJCA",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CJSA",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "CJXB",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "CJX",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "CKDA",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CKMA",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CKUB",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "CLCA",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CLHA",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CLJA",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CLLB",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CLNA",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CLPA",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CME",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "CMGA",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CNRB",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CPDA",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CPC",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CPD",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CPE",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CPFA",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CPGA",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CPHA",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "CPRA",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "CPWA",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "CRCA",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CROC",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CRLB",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CRMA",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CRMB",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CRZA",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "CTHE",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "CUAA",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CUCB",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CUNA",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CUPA",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CUXB",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CUXC",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CXEB",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CXEC",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "CXFA",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "CXSA",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "CXSB",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "CZCA",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "CZDA",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "CZEA",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "CZPA",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "CZPB",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "CZTA",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "CZTB",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "CZZ",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "DADA",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "DADA",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "DAJA",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "DCCA",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "DCFA",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "DCFB",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "DCMA",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "DCTA",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "DCYA",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "DCYB",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "DETA",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "DFCA",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "DFFA",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "DGCA",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "DGCB",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "DGMA",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "DGMB",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "DGPA",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "DGTC",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "DHFA",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "DHGA",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "DHHA",
+            "fuel": "Diesel"
+          },
+          {
+            "code": "DKZA",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "DKZB",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "DKZC",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "DKZD",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "DKZE",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "DKZF",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "DLAC",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "DLBA",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "DLA",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "DNF",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "DNU",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "DNUE",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "DPCA",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "DRE",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "DSB",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "DSC",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "DSG",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "EAX",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "EA",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "R32",
+            "fuel": "Petrol"
+          },
+          {
+            "code": "R36",
+            "fuel": "Petrol"
+          }
+        ]
+      }
+    },
+    "engineYears": {
+      "tag": "Engine Years",
+      "h2": "Volkswagen Engines by Year – What Was Fitted & When",
+      "intro": "",
+      "jumpLabel": "Jump to year",
+      "years": [
+        {
+          "year": "1997 – 2002",
+          "preview": "1.9 TDI PD Debut, EA113 2.0 8v & VR6 Peak Era 🔴 Major Engine Family Introduction",
+          "description": "The late 1990s saw Volkswagen introduce two of the most enduring engines in the brand's UK history - the EA113 1.8 20v turbocharged petrol across Golf Mk4 and Passat B5, and the revolutionary Pumpe-Düse (PD) unit-injector diesel that would redefine diesel performance expectations for an entire decade. Key Changes Volkswagen Golf Mk4 (1997) launches with EA113 1.8 20v turbocharged petrol (AGU/ARZ/AUM/AWU/BAM), 2.0 8v (APK/AQY), and the 1.9 TDI in both SDI and TDI guise Pumpe-Düse (PD) unit-injector 1.9 TDI debuts from 1999–2000 - high-pressure fuel delivery via cam-driven individual injectors, replacing common-rail on volume Golf/Passat applications Passat B5 (1997) adopts same EA113 petrol family longitudinally; 2.3 V5 and 2.8 VR6 4Motion introduced as volume range-toppers Golf R32 (2002) introduces the 3.2 VR6 24v (BFH/BML) - 241hp narrowangle six-cylinder, flagship performance engine Euro 3 drives three-way catalyst fitment and revised EGR on all diesel models from 2000 Main Engines AGU / AUM / ARZ / BAM - 1.8 20v Turbo EA113 - 125/150/180hp petrol (Golf Mk4, Passat B5, Bora) APK / AQY / AZJ - 2.0 8v EA113 - naturally aspirated petrol (Golf Mk4 base, Bora) ALH / AGR / ASV - 1.9 TDI (non-PD) - 90/110hp diesel (Golf Mk4, Passat B5 early, Bora) ATD / AXR / BJB - 1.9 TDI PD - 100/101hp diesel (Golf Mk4, Polo, Lupo) AHH / ASZ / ATJ - 1.9 TDI PD - 110/130hp (Golf Mk4, Passat B5) BFH / BML - 3.2 VR6 - 241hp naturally aspirated (Golf R32) Popular Models Volkswagen Golf Mk4 Volkswagen Passat B5 / B5.5 Volkswagen Bora Volkswagen Polo Mk3 (6N2/9N) Volkswagen Golf R32 Known For 1.9 TDI PD universally regarded as one of the finest diesel engines ever produced - stout cast-iron block, mechanical durability to 300,000+ miles with correct servicing; camshaft lobe wear on high-mileage examples above 200,000 miles the main watch-point EA113 1.8 20v Turbo in Golf Mk4 praised for strong mid-range torque and linear power delivery - timing belt failure is catastrophic, so strict adherence to the 60,000-mile/5-year interval is essential Golf R32's 3.2 VR6 provides an extraordinary engine character - linear power delivery, narrow-angle soundtrack, collectible; oil consumption on older examples and coil pack wear are known 2.0 8v is mechanically bullet-proof but uninspiring - widely preferred by buyers wanting longevity with minimum maintenance cost [Tags] Engine Codes Covered: AGU, AUM, ARZ, BAM, APK, AQY, AZJ, ALH, AGR, ASV, ATD, AXR, BJB, AHH, ASZ, ATJ, AXD, BFH, BML, AZD, AQN",
+          "cta": "Get quotes for 1997–2002 Volkswagen Golf Mk4, Passat and Bora replacement engines from UK specialists"
+        },
+        {
+          "year": "2002 – 2006",
+          "preview": "Golf Mk5, FSI Direct Injection & 2.0 TDI EA188 🔴 Major Engine Family Introduction",
+          "description": "The launch of the Golf Mk5 in 2003 introduced FSI (Fuel Stratified Injection) direct-injection petrol to the mainstream VW range - a genuine engineering advance - while the new 2.0 TDI EA188 common-rail diesel replaced the PD across the Passat and Golf, and the Touareg delivered VW's first UK SUV with V6 TDI and V8 petrol options. Key Changes Golf Mk5 (2003 UK) launches with EA113 1.6 FSI (BAG/BLP) and 2.0 FSI direct-injection petrols - the brand's first mainstream direct-injection petrol in the UK 1.4 16v petrol (BUD/BCA) continues as Golf and Polo entry petrol; 1.6 8v (BSF/BGU) as the NA workhorse 2.0 TDI EA188 (PD variant - BKD/AZV/BMN) introduced on Golf Mk5 and Passat B6 - 140hp PD diesel; refined over previous 1.9 but bigger displacement Passat B6 (2005) adopts 2.0 TDI PD (BKD) and 2.0 FSI/TFSI as volume engines; 3.2 V6 FSI as top petrol Touareg (2002) arrives with 2.5 TDI R5 (BAC/BPE) and 3.2 V6 petrol - first VW UK SUV Euro 3 continuing; early Euro 4 transition from 2005 Main Engines BAG / BLP - 1.6 FSI - direct-injection petrol (Golf Mk5, Touran) BLR / BLY / BVY - 2.0 FSI - direct-injection petrol (Golf Mk5, Passat B6) AXW / BLX / BWA - 2.0 TFSI - turbocharged direct petrol 200hp (Golf GTI Mk5, Passat) BKD / AZV - 2.0 TDI PD - 140hp (Golf Mk5, Passat B6, Touran) BMN / CBAB - 2.0 TDI PD - 170hp (Golf GT TDI, Passat) BJB / BKC / BXE - 1.9 TDI PD - 105hp (Golf Mk5, Polo, Touran) AXB / AXD - 2.5 TDI R5 - five-cylinder diesel (Touareg) Popular Models Volkswagen Golf Mk5 / GTI Mk5 Volkswagen Passat B6 Volkswagen Touran (Mk1) Volkswagen Polo Mk4 (9N3) Volkswagen Touareg (Mk1) Known For Golf GTI Mk5 with 2.0 TFSI (BYD/AXX) earns enormous UK enthusiasm - strong, tuneable, communicative; early cam follower wear on HPFP drive lobe a documented issue from 60,000 miles 2.0 TDI PD BKD in Golf Mk5 is a robust unit - strong reputation, 200,000+ mile examples common; cam follower wear on unit injector lobes the principal concern if oil changes are missed 1.6 FSI direct-injection suffers intake valve carbon build-up from 50,000 miles due to absence of port injection; walnut blasting increasingly standard on used examples Passat B6 2.0 TDI widely regarded as one of VW's most competent touring diesel pairings - chassis, engine, and economy combine well; timing belt critical at 4-year/60,000-mile intervals [Tags] Engine Codes Covered: BAG, BLP, BLR, BLY, BVY, AXW, BLX, BWA, BKD, AZV, BMN, CBAB, BJB, BKC, BXE, AXB, AXD, BYD, AXX",
+          "cta": "Compare 2002–2006 Volkswagen Golf Mk5, Passat B6 and Touran replacement engine prices from UK suppliers"
+        },
+        {
+          "year": "2007 – 2012",
+          "preview": "EA888 TSI Launch, EA189 2.0 TDI Common Rail & Timing Chain Concerns 🔴 Major Engine Family Introduction 🔴 Major Reliability Revision",
+          "description": "The EA888 1.8/2.0 TSI family launched in 2007–2008 across Golf Mk6, Passat B7 and Tiguan represented VW's biggest petrol engine departure in a decade - a chain-driven, direct-injection turbocharged four-cylinder - while the new common-rail EA189 2.0 TDI replaced the PD diesel across the full range; both families carried reliability issues that the brand spent years correcting. Key Changes EA888 Gen 1 1.8 TSI (BYT/BZB/CDAA/CDAB) introduced 2007 - 160hp turbocharged direct-injection petrol, timing chain driven EA888 Gen 1 2.0 TSI (CCTA/CBFA) introduced 2008 - 200hp, shared chain architecture; timing chain tensioner hydraulic failure documented from early production EA189 2.0 TDI common-rail (CFGB/CBAB/CFHC) replaces PD diesel across Golf Mk6, Passat B7, Tiguan and Touran EA111 1.4 TSI with twin-charged technology (TSI + supercharger at low rpm, turbo at high rpm - CAXA/CMBA) introduced on Golf Mk6 Polo Mk5 (2009) arrives with EA111 1.2 TSI (CBZB/CBZC) and 1.4 TDI (BNM/BMS) Euro 5 compliance from 2010 - DPF standard on all TDI diesel models Main Engines CDAA / CDAB / BYT - 1.8 TSI EA888 Gen 1 - 160hp turbopetrol (Golf Mk6, Passat B7, Tiguan, CC) CCTA / CBFA / CCZB - 2.0 TSI EA888 Gen 1 - 200/210hp turbopetrol (Golf GTI Mk6, Scirocco, Passat) CBAB / CFGB / CFHC - 2.0 TDI EA189 - 110/140hp common-rail diesel (Golf Mk6, Passat B7, Tiguan, Touran) CLJA / CLCA / CLCB - 2.0 TDI EA189 - 170hp (Passat B7, CC TDI) CAXA / CMBA - 1.4 TSI EA111 twin-charged - 122/160hp (Golf Mk6, Scirocco, Touran) CBZB / CBZC - 1.2 TSI EA111 - 85/105hp (Polo Mk5, Golf Mk6 entry) CGPA / CHPA - 3.6 VR6 - 300hp (Phaeton, Touareg) Popular Models Volkswagen Golf Mk6 / GTI Mk6 Volkswagen Passat B7 / CC Volkswagen Tiguan (Mk1) Volkswagen Scirocco Volkswagen Polo Mk5 Known For EA888 Gen 1 2.0 TSI (CCTA/CBFA) timing chain tensioner failure is the most significant petrol engine reliability event in VW UK history - plastic tensioner collar failure allows chain to skip from as low as 30,000 miles; updated tensioner (06K-109-467) is the mandatory fix; pre-2013 build engines should be checked or replaced proactively 1.8 TSI Gen 1 shares the chain risk but to a lesser degree - oil consumption via piston rings also documented on high-mileage examples EA189 2.0 TDI common-rail a worthy successor to PD - quieter, more refined, Euro 5 capable, but would later become the epicentre of the Dieselgate emissions scandal 1.4 TSI twin-charged in Golf Mk6 is an engineering showpiece - combined supercharger and turbo seamless power delivery; plastic coolant pipes and water pump are the known weak points at 80,000+ miles [Tags] Engine Codes Covered: CDAA, CDAB, BYT, CCTA, CBFA, CCZB, CBAB, CFGB, CFHC, CLJA, CLCA, CAXA, CMBA, CBZB, CBZC, CGPA, CHPA",
+          "cta": "Get quotes for 2007–2012 Volkswagen Golf Mk6, Passat B7, Tiguan and Scirocco replacement engines - EA888 TSI and EA189 TDI specialists"
+        },
+        {
+          "year": "2012 – 2015",
+          "preview": "Golf Mk7, EA888 Gen 3 & Dieselgate EA189 Scandal Era 🔴 Major Reliability Revision",
+          "description": "The Golf Mk7's arrival in 2013 brought the EA888 Gen 3 with a substantially improved timing chain tensioner and the EA211 engine family replacing the EA111 across the entry range - but these same years saw EA189 TDI production at its peak, and September 2015 exposed the Dieselgate emissions defeat device scandal affecting 1.2 million VW Group vehicles in the UK alone. Key Changes Golf Mk7 (2013) launches with EA888 Gen 3 1.8 TSI (CJSA/CJSB) and 2.0 TSI (CHHB), and EA211 1.2/1.4 TSI (CJZA/CJZB/CZCA/CZDA) EA888 Gen 3 features substantially revised timing chain tensioner and dual-injection (combined port and direct) for lower carbon build-up - a significant reliability improvement over Gen 1/2 EA211 family (2013) replaces EA111 across Polo, Golf base and Passat - new architecture, lighter, Euro 6-ready EA189 2.0 TDI (CLCB/DFCA/CRBC) continues as volume diesel across Golf Mk7, Passat B8, Tiguan September 2015: VW EA189 Dieselgate scandal breaks - 1.2 million UK vehicles recalled for defeat device NOx software; 508,276 VW passenger cars affected Euro 6 compliance from September 2015 - all new VW diesel models must carry SCR AdBlue or GPF Main Engines CJSA / CJSB / CJZA - 1.8 TSI EA888 Gen 3 - 180hp (Golf Mk7, Passat B8, Tiguan Mk2 early) CHHB / CHHA - 2.0 TSI EA888 Gen 3 - 220/230hp (Golf GTI Mk7, Golf R, Passat) CZCA / CZDA - 1.4 TSI EA211 - 122/150hp (Golf Mk7, Polo, Touran Mk2) CJZA / CJZB - 1.2 TSI EA211 - 85/105hp (Golf Mk7 entry, Polo, Caddy) CLCB / DFCA - 2.0 TDI EA189 - 110/150/184hp (Golf Mk7, Passat B8, Tiguan, Touran) CUNA / CUPA - 1.6 TDI EA189 - 105hp (Golf Mk7, Polo Mk5) Popular Models Volkswagen Golf Mk7 / GTI Mk7 / Golf R Mk7 Volkswagen Passat B8 Volkswagen Tiguan (Mk1 late / Mk2 early) Volkswagen Polo Mk5 (late) Volkswagen Touran Mk2 Known For EA888 Gen 3 is a major step forward from Gen 1 - revised tensioner, combined direct/port injection substantially reduces intake valve carbon deposit rate; oil consumption via PCV/piston ring seal remains a watch-point on higher-mileage examples EA189 2.0 TDI post-recall (software update January 2016 onwards) is a driveable unit but some UK owners report subtle fuelling and DPF behaviour changes post-fix - always verify recall completion status when buying used Golf GTI Mk7 with EA888 Gen 3 2.0 TSI earns universal praise - definitive hot hatch balance, strong long-term ownership record compared to EA888 Gen 1 Golf R Mk7 300hp 2.0 TSI is the peak expression of this engine generation in the VW range - exploitable, track-capable, well-cooled; highly sought in the UK enthusiast market [Tags] Engine Codes Covered: CJSA, CJSB, CHHB, CHHA, CZCA, CZDA, CJZA, CJZB, CLCB, DFCA, CUNA, CUPA, DGE, DKZ",
+          "cta": "Find 2012–2015 Volkswagen Golf Mk7, Passat B8 and Tiguan replacement engines - EA888 Gen 3 and EA189 TDI units from UK specialists"
+        },
+        {
+          "year": "2015 – 2019",
+          "preview": "EA288 Euro 6 TDI, 1.5 TSI Evo & Golf Mk7.5 🔴 Major Engine Family Introduction 🔴 Technology Introduction",
+          "description": "The post-Dieselgate period saw Volkswagen introduce the EA288 2.0 TDI as its fully compliant Euro 6 successor diesel - clean-sheet SCR AdBlue architecture - while the 1.5 TSI Evo EA211 Evo arrived in 2017 with Miller-cycle combustion and cylinder deactivation, replacing the 1.4 TSI as the volume petrol across Golf, Tiguan and Passat. Key Changes EA288 2.0 TDI (DFHA/DFCA Euro 6) introduced - full SCR AdBlue architecture, new combustion geometry; Euro 6d-TEMP compliant from 2018 1.5 TSI Evo (DADA/DPCA) launches 2017 on Golf Mk7.5 - 4-cylinder, Miller cycle, cylinder deactivation ACT, 130/150hp; replaces 1.4 TSI as mainstream petrol 1.0 TSI Evo (EA211 three-cylinder, CHZC/DKRA) introduced on Polo Mk6 (2017) and T-Roc (2018) - replaces 1.2 TSI Golf Mk7.5 facelift (2017) acts as launchpad for EA211 Evo family across the range T-Roc (2018) and new-generation Tiguan (2016) adopt updated EA288 TDI and EA211 Evo petrols 48V mild-hybrid integration confirmed for 2019 models - GTE PHEV Golf continues with 1.4 TSI + e-motor Main Engines DADA / DPCA - 1.5 TSI Evo EA211 - 130/150hp turbopetrol, Miller cycle (Golf Mk7.5, Tiguan, Passat B8, T-Roc) CHZC / DKRA / DKRF - 1.0 TSI Evo EA211 - 95/115hp (Polo Mk6, T-Roc, Golf Mk7.5 entry) DFHA / DCYA - 2.0 TDI EA288 - 115/150/190hp Euro 6 diesel (Golf Mk7, Tiguan, Passat B8, Touareg) CUN / CRBC - 1.6 TDI EA288 - 90hp Euro 6 (Golf Mk7, Polo) CZPB / CZPA - 1.4 TSI GTE - PHEV petrol unit (Golf GTE) DFC / DFF - 3.0 TDI V6 - 231/282hp (Touareg Mk3) Popular Models Volkswagen Golf Mk7.5 / GTI Mk7.5 Volkswagen Tiguan (Mk2) Volkswagen T-Roc Volkswagen Passat B8 (updated) Volkswagen Polo Mk6 Known For 1.5 TSI Evo rated as one of the most efficient petrol engines VW has sold in the UK - Miller-cycle combustion and active cylinder management deliver genuine real-world improvement; oil consumption a minor watch-point at high mileage EA288 2.0 TDI is a significantly cleaner and more reliable diesel than EA189 - SCR AdBlue architecture effective; dosing unit blockage and EGR fouling the primary service items 1.0 TSI Evo three-cylinder earns positive reception in Polo and T-Roc - refined NVH for its displacement, economical, no major structural concerns flagged in early mileage data Golf GTE PHEV 1.4 TSI combustion unit sees modest replacement demand independently; hybrid battery health the more critical ownership concern at higher mileage [Tags] Engine Codes Covered: DADA, DPCA, CHZC, DKRA, DKRF, DFHA, DCYA, CUN, CRBC, CZPB, CZPA, DFC, DFF",
+          "cta": "Get quotes for 2015–2019 Volkswagen Golf, Tiguan and T-Roc replacement engines - EA288 TDI and EA211 Evo TSI specialists"
+        },
+        {
+          "year": "2019 – 2021",
+          "preview": "Golf Mk8, ID.3 BEV Launch & 48V MHEV Integration 🔴 Major Engine Family Introduction 🔴 Technology Introduction",
+          "description": "The Golf Mk8 (2020) and the ID.3 (2020) arrived in the same UK model year - one the most technically complex Golf in the model's history with embedded 48V mild-hybrid, PHEV and GTE options, and the other VW's first mass-market purpose-built BEV on the MEB electric platform, signalling the formal start of VW's electric era. Key Changes Golf Mk8 (2020 UK) launches with 1.0 TSI Evo, 1.5 TSI Evo 48V eTSI mild-hybrid, and 2.0 TDI - new evo2 calibrations for Euro 6d final 1.5 TSI eTSI 48V mild-hybrid (DADA/DPBA) integrates belt-starter-generator on Golf Mk8 - fuel savings of 10–15% in mixed use ID.3 (2020) launches on MEB platform - 45kWh, 58kWh and 77kWh battery options; APP310 rear e-motor 150–204kW ID.3 GTX (2023) previewed - dual motor AWD architecture Golf R Mk8 uses EA888 Gen 3b 2.0 TSI (DKZ/DGE) - 320hp, revised internal engine with stronger internals vs Gen 3 Golf GTE (Mk8) 1.4 TSI eHybrid PHEV - 245hp combined output; 60km EV range Main Engines DPBA / DKZA - 1.5 TSI eTSI 48V MHEV EA211 Evo - 130/150hp (Golf Mk8, Tiguan Mk2 late) DKRA / DLAA - 1.0 TSI Evo EA211 - 90/110hp (Golf Mk8 entry, Polo, T-Roc) DFHA / DTUA - 2.0 TDI EA288 Evo - 115/150hp (Golf Mk8, Tiguan, Passat B8 late) DKZ / DGE - 2.0 TSI EA888 Gen 3b - 300/320hp (Golf GTI Mk8, Golf R Mk8) APP310 - 150kW / 204kW rear e-motor (ID.3 Standard/Long Range) CZPB revised - 1.4 TSI eHybrid - PHEV (Golf GTE Mk8) Popular Models Volkswagen Golf Mk8 / GTI Mk8 / Golf R Mk8 Volkswagen ID.3 Volkswagen Tiguan (Mk2 late) Volkswagen Polo Mk6 (updated) Volkswagen T-Roc (updated) Known For ID.3 launch software quality issues attract criticism - over-the-air fixes addressed most infotainment faults but early build examples have stronger software update histories than later-production equivalents Golf Mk8 1.5 eTSI 48V mild-hybrid delivers measurable real-world efficiency improvement over non-hybrid equivalent - one of the more persuasive mild-hybrid implementations in the C-segment Golf R Mk8 EA888 Gen 3b 320hp unit is the strongest four-cylinder Golf R to date - reinforced block, revised fuelling; strong early reliability signals from UK specialist community 2.0 TDI EA288 Evo continues without complaint - post-Dieselgate architecture proving long-term robust; AdBlue dosing pump and high-mileage EGR fouling the routine service concerns [Tags] Engine Codes Covered: DPBA, DKZA, DKRA, DLAA, DFHA, DTUA, DKZ, DGE, APP310, CZPB revised",
+          "cta": "Get quotes for 2019–2021 Volkswagen Golf Mk8, ID.3 and Tiguan replacement engines and powertrains from UK specialists"
+        },
+        {
+          "year": "2021 – Present",
+          "preview": "ID.4/ID.5/ID.7, APP550 Electric Motor & Full Electrification Roadmap 🔴 Technology Introduction 🔴 Performance Landmark",
+          "description": "The ID.4 (2021), ID.5 (2022) and ID.7 (2023) expanded VW's MEB electric platform from hatchback to SUV and executive saloon, while the APP550 motor introduced from late 2023 delivered a step change in power and efficiency - and the Golf remains the UK's best-selling petrol/hybrid nameplate with 1.5 eTSI, GTE PHEV and Golf R combustion continuing in parallel. Key Changes ID.4 (2021 UK) launches with APP310 77kWh RWD and dual-motor AWD - up to 300hp AWD; first electric VW SUV ID.5 (2022) SUV coupé body on same MEB platform - APP310 and GTX dual-motor variants APP550 next-generation rear e-motor introduced (late 2023) on ID.4, ID.5 - 210kW/286hp, 550Nm, oil-cooled; replaces APP310 in updated models ID.7 (2023) introduces the APP550 in a larger saloon body - 77kWh, 286hp, 382-mile WLTP range Golf Mk8.5 facelift (2024) updates 1.5 eTSI and GTE powertrain calibrations; Golf R continues with EA888 Gen 3b Volkswagen confirms all new European passenger car models electrified-only by 2033; combustion production for Golf, Tiguan and Passat derivatives continues to 2030+ for UK fleet Main Engines APP310 - 150/204/220kW rear/front/dual e-motors (ID.3, ID.4, ID.5 early production) APP550 - 210kW / 220kW AWD rear e-motor (ID.4 2024+, ID.5 2024+, ID.7) DPBA / DKZA - 1.5 TSI eTSI 48V MHEV - 130/150hp (Golf Mk8.5, Tiguan Mk3) CZPB revised - 1.4 TSI eHybrid PHEV 245hp (Golf GTE Mk8.5) DKZ / DGE - 2.0 TSI EA888 Gen 3b - 320hp (Golf R Mk8.5) DFHA - 2.0 TDI EA288 Evo - 150hp (Tiguan Mk3, Passat Mk9) Popular Models Volkswagen ID.4 / ID.5 Volkswagen ID.7 Volkswagen ID.3 (updated) Volkswagen Golf Mk8.5 / GTI / Golf R Volkswagen Tiguan (Mk3) Known For APP550 motor is a step change in ID. family performance and efficiency - oil cooling allows sustained high-output performance without the thermal derating seen in air-cooled rivals; strong early fleet reliability signals ID.4 and ID.5 with APP550 now represent VW's strongest EV value proposition in the UK - competitive range, rapid charging capability, proven MEB platform Golf R EA888 Gen 3b continues to attract the strongest enthusiast replacement enquiry of any VW petrol engine - high tuning ceiling, large UK specialist network, strong used value 2.0 TDI EA288 in Tiguan Mk3 is entering its highest-volume replacement era as 2016–2020 Tiguan fleet examples accumulate high mileage - one of the fastest-growing replacement engine enquiry segments in the UK VW market [Tags] Engine Codes Covered: APP310, APP550, DPBA, DKZA, CZPB, DKZ, DGE, DFHA, DTUA",
+          "cta": "Get 2021-onwards Volkswagen ID.4, ID.5, ID.7 and Golf replacement powertrain quotes - APP550, EA888 Gen 3b and EA288 TDI units from UK specialists"
+        }
+      ],
+      "closing": "Not sure which year your Volkswagen was built? Enter your registration number and we'll identify the exact engine, model year, and compatible replacement options instantly - all backed by a minimum 12-month warranty from UK Volkswagen specialists."
+    },
+    "faq": {
+      "tag": "FAQ",
+      "h2": "Volkswagen Engine Replacement – Frequently Asked Questions",
+      "intro": "Quick, honest answers to the most common questions Volkswagen owners ask before comparing engine replacement prices and finding a UK specialist.",
+      "items": [
+        {
+          "question": "How much does a Volkswagen engine replacement cost in the UK?",
+          "answer": "A rebuilt Volkswagen engine typically costs between £1,500 and £4,500 for common models, depending on the engine code. A 1.9 TDI (ALH, BLS) often falls around £1,500–£2,800, while a 2.0 TDI EA189 (BKD, CBAB) runs £1,800–£3,300. A 2.0 TSI EA888 for a Golf GTI usually costs £2,200–£4,200, and a Transporter 2.0 BiTDI (CFCA) can reach £5,500. Fitting adds another £450–£800. Use our marketplace to compare quotes tailored to your exact Volkswagen model.",
+          "cta": "Compare Volkswagen engine prices now"
+        },
+        {
+          "question": "What affects the cost of a Volkswagen engine replacement?",
+          "answer": "Four key factors drive the price: (1) engine size and family – a 1.2 TSI (CBZB) is cheaper than a 3.0 V6 TDI; (2) engine condition – used is cheapest, rebuilt with upgraded components costs more but lasts longer; (3) vehicle complexity – a Transporter engine swap costs more labour than a Golf; (4) supply-only versus supply-and-fit. Location matters too – labour in London can be 20–30% higher. Our marketplace brings you transparent, fixed-price quotes from UK Volkswagen specialists so there are no surprises.",
+          "cta": "Compare Volkswagen engine prices now"
+        },
+        {
+          "question": "Is it worth replacing the engine in my Volkswagen?",
+          "answer": "In most cases, yes. If your Volkswagen’s chassis, gearbox, and bodywork are solid, a rebuilt engine often costs less than buying another used car of the same vintage – especially for Golf, Passat, and Transporter models that hold value well. A rebuilt engine with upgraded components (billet oil pump drive on EA189, revised chain tensioner on EA888) often outlasts the original. The only time replacement doesn’t make sense is if the car has catastrophic structural rust or a failed gearbox. Use our free tool to compare quotes and decide with real numbers.",
+          "cta": "Get a Volkswagen engine quote now"
+        },
+        {
+          "question": "What's included in a Volkswagen engine supply and fit service?",
+          "answer": "Supply-and-fit includes: sourcing the correct rebuilt or reconditioned engine for your exact Volkswagen model and engine code, removing the old unit, installing the replacement, all new fluids and filters, a workmanship warranty (typically 12 months), and disposal of the old engine. Most specialists also include a road test after installation. Fitting costs add £450–£800 depending on the model – Transporter and Touareg take more labour than Polo or Golf. Always ask whether the quote includes VAT and delivery of the replacement engine.",
+          "cta": "Get a Volkswagen engine quote now"
+        },
+        {
+          "question": "How long does a Volkswagen engine replacement take?",
+          "answer": "For common Volkswagen models like the Golf 2.0 TDI or Polo 1.2 TSI, a like-for-like engine swap typically takes 3–5 working days. More complex models – Transporter T5/T6 (engine-out through the cab), Touareg V6 TDI, or any 4Motion variant – can take 5–7 days. The biggest variable is sourcing the correct engine code. Our network of UK specialist suppliers stocks commonly replaced codes (BKD, CBAB, CRLB, CCZB, CAYC, CFCA), which dramatically reduces lead times. Ask your chosen supplier for their current turnaround when you get your quote.",
+          "cta": "Get a Volkswagen engine quote now"
+        },
+        {
+          "question": "Do reconditioned Volkswagen engines come with warranty?",
+          "answer": "Yes. Every reconditioned or rebuilt Volkswagen engine supplied through our network comes with a minimum 12‑month unlimited mileage warranty. Many suppliers offer extended 24‑month coverage on remanufactured units and EA888 Gen3/EA288 diesels. The warranty typically covers all major internal components: crankshaft, pistons, conrods, timing chain/belt, oil pump, cylinder head, and gaskets. Labour for fitting-related faults is often included, but always confirm exact terms with your chosen specialist before proceeding. We recommend asking for the warranty document in writing.",
+          "cta": "Find Volkswagen engines with warranty"
+        },
+        {
+          "question": "Should I choose a used or reconditioned Volkswagen engine?",
+          "answer": "Used engines are cheaper upfront – typically £800–£2,200 – and are a good temporary fix if you plan to sell the car soon. However, you inherit unknown mileage and the original failure points (e.g., old timing chains on EA888). Reconditioned engines cost more (£1,800–£4,500) but include upgraded components – billet oil pump drives on 2.0 TDI EA189, revised tensioners on EA888, new rings and bearings throughout. For a Volkswagen you plan to keep for another 3‑5 years, a reconditioned engine with a 12‑24 month warranty is almost always the better investment.",
+          "cta": "Compare used and reconditioned Volkswagen engine options"
+        },
+        {
+          "question": "Where can I find Volkswagen engine specialists near me?",
+          "answer": "EngineMarket connects you with a UK‑wide network of Volkswagen engine specialists who stock your exact engine code and offer supply-and-fit. Enter your registration number, and we match you with suppliers in your region – from Scotland to the South Coast. While Volkswagen specialists are concentrated across the Midlands, Yorkshire, and the South East, our network covers every corner of the UK, with nationwide delivery and fitting arranged locally. You don’t need to travel – your chosen specialist can often arrange recovery and fitting at a garage near you.",
+          "cta": "Get quotes from UK Volkswagen engine specialists"
+        },
+        {
+          "question": "What are the most common Volkswagen engine failures?",
+          "answer": "The most common replacement-driving failures across Volkswagen engines are: (1) EA888 Gen1/2 timing chain tensioner failure (Golf GTI Mk6, Scirocco – chain jumps, valves bend); (2) EA189 2.0 TDI oil pump hex key wear (BKD, CBAB – sudden oil pressure loss, ruins crankshaft); (3) EA288 2.0 TDI AdBlue pump / NOx sensor failure (Passat B8, Tiguan – countdown to no-start); (4) 1.4 TSI Twincharger supercharger clutch & timing chain (Polo GTI, Golf Mk6); (5) EA188 PD 2.0 TDI crankshaft bearing & injector seal failure (BKP, AZV). Once these failures occur, full engine replacement is almost always the most cost‑effective solution.",
+          "cta": "Get a Volkswagen engine quote now"
+        },
+        {
+          "question": "How can I get the best price on a Volkswagen engine?",
+          "answer": "Always compare multiple quotes – prices for the same engine code (e.g., BKD or CRLB) can vary by over £1,000 between suppliers. Consider used if you have a very tight budget, but reconditioned with upgraded components is better value for long‑term ownership. Ask for supply‑only if you have a trusted local garage – you save on the specialist’s fitting markup. Always check whether the quoted price includes delivery, fitting, VAT, and the old engine collection. Use our marketplace to see three or more quotes side‑by‑side, then choose the supplier that offers the best balance of price, warranty, and proximity.",
+          "cta": "Compare Volkswagen engine prices now"
+        }
+      ]
+    },
+    "trustCta": {
+      "tag": "Why Choose Us",
+      "h2": "Why UK Volkswagen Owners Trust EngineMarket",
+      "intro": "Join thousands of UK drivers who compare Volkswagen engine prices through our network of trusted specialists. Every rebuilt and reconditioned unit is backed by a minimum 12‑month unlimited mileage warranty and nationwide delivery.",
+      "points": [
+        {
+          "title": "Trusted Volkswagen Engine Suppliers",
+          "description": "Every garage and engine rebuilder in our network is vetted, rated, and reviewed by real customers."
+        },
+        {
+          "title": "Compare Volkswagen Engine Replacement Companies",
+          "description": "See prices, warranty terms, and fitting options side‑by‑side before you commit."
+        },
+        {
+          "title": "UK Engine Replacement Services for Volkswagen",
+          "description": "Covering every model from Up! to Touareg, with supply‑only or supply‑and‑fit available nationwide."
+        },
+        {
+          "title": "META TITLE: Volkswagen Engine Replacement",
+          "description": "Prices from £1,500 | UK Specialists"
+        },
+        {
+          "title": "\"name\": \"Volkswagen Engine Replacement",
+          "description": "Prices from £1,500 | UK Specialists\","
+        },
+        {
+          "title": "\"name\": \"Volkswagen Engine Replacement",
+          "description": "Compare Prices & Save\","
+        },
+        {
+          "title": "\"name\": \"Volkswagen Engine Replacement",
+          "description": "Prices from £1,500 | UK Specialists\","
+        },
+        {
+          "title": "\"text\": \"Four key factors drive the price: (1) engine size and family",
+          "description": "a 1.2 TSI (CBZB) is cheaper than a 3.0 V6 TDI; (2) engine condition – used is cheapest, rebuilt with upgraded components costs more but lasts longer; (3) vehicle complexity – a Transporter engine swap costs more labour than a Golf; (4) supply-only versus supply-and-fit. Location matters too – labour in London can be 20-30% higher. Our marketplace brings you transparent, fixed-price quotes from UK Volkswagen specialists so there are no surprises.\\n*Get quotes from UK Volkswagen engine specialists*\""
+        },
+        {
+          "title": "\"text\": \"In most cases, yes. If your Volkswagen’s chassis, gearbox, and bodywork are solid, a rebuilt engine often costs less than buying another used car of the same vintage",
+          "description": "especially for Golf, Passat, and Transporter models that hold value well. A rebuilt engine with upgraded components (billet oil pump drive on EA189, revised chain tensioner on EA888) often outlasts the original. The only time replacement doesn’t make sense is if the car has catastrophic structural rust or a failed gearbox. Use our free tool to compare quotes and decide with real numbers.\\n*Compare rebuilt vs used Volkswagen engine prices*\""
+        },
+        {
+          "title": "\"text\": \"Supply-and-fit includes: sourcing the correct rebuilt or reconditioned engine for your exact Volkswagen model and engine code, removing the old unit, installing the replacement, all new fluids and filters, a workmanship warranty (typically 12 months), and disposal of the old engine. Most specialists also include a road test after installation. Fitting costs add £450–£800 depending on the model",
+          "description": "Transporter and Touareg take more labour than Polo or Golf. Always ask whether the quote includes VAT and delivery of the replacement engine.\\n*Find Volkswagen engine supply and fit deals*\""
+        },
+        {
+          "title": "\"text\": \"For common Volkswagen models like the Golf 2.0 TDI or Polo 1.2 TSI, a like-for-like engine swap typically takes 3–5 working days. More complex models",
+          "description": "Transporter T5/T6 (engine-out through the cab), Touareg V6 TDI, or any 4Motion variant – can take 5–7 days. The biggest variable is sourcing the correct engine code. Our network of UK specialist suppliers stocks commonly replaced codes (BKD, CBAB, CRLB, CCZB, CAYC, CFCA), which dramatically reduces lead times. Ask your chosen supplier for their current turnaround when you get your quote.\\n*Compare Volkswagen engine replacement turnaround times*\""
+        },
+        {
+          "title": "\"text\": \"Used engines are cheaper upfront",
+          "description": "typically £800–£2,200 – and are a good temporary fix if you plan to sell the car soon. However, you inherit unknown mileage and the original failure points (e.g., old timing chains on EA888). Reconditioned engines cost more (£1,800–£4,500) but include upgraded components – billet oil pump drives on 2.0 TDI EA189, revised tensioners on EA888, new rings and bearings throughout. For a Volkswagen you plan to keep for another 3‑5 years, a reconditioned engine with a 12‑24 month warranty is almost always the better investment.\\n*Compare used vs reconditioned Volkswagen engine prices*\""
+        },
+        {
+          "title": "\"text\": \"EngineMarket connects you with a UK‑wide network of Volkswagen engine specialists who stock your exact engine code and offer supply-and-fit. Enter your registration number, and we match you with suppliers in your region",
+          "description": "from Scotland to the South Coast. While Volkswagen specialists are concentrated across the Midlands, Yorkshire, and the South East, our network covers every corner of the UK, with nationwide delivery and fitting arranged locally. You don’t need to travel – your chosen specialist can often arrange recovery and fitting at a garage near you.\\n*Find Volkswagen engine specialists near me*\""
+        },
+        {
+          "title": "\"text\": \"The most common replacement-driving failures across Volkswagen engines are: (1) EA888 Gen1/2 timing chain tensioner failure (Golf GTI Mk6, Scirocco",
+          "description": "chain jumps, valves bend); (2) EA189 2.0 TDI oil pump hex key wear (BKD, CBAB – sudden oil pressure loss, ruins crankshaft); (3) EA288 2.0 TDI AdBlue pump / NOx sensor failure (Passat B8, Tiguan – countdown to no-start); (4) 1.4 TSI Twincharger supercharger clutch & timing chain (Polo GTI, Golf Mk6); (5) EA188 PD 2.0 TDI crankshaft bearing & injector seal failure (BKP, AZV). Once these failures occur, full engine replacement is almost always the most cost‑effective solution.\\n*Get quotes for common Volkswagen engine failures*\""
+        },
+        {
+          "title": "\"text\": \"Always compare multiple quotes",
+          "description": "prices for the same engine code (e.g., BKD or CRLB) can vary by over £1,000 between suppliers. Consider used if you have a very tight budget, but reconditioned with upgraded components is better value for long‑term ownership. Ask for supply‑only if you have a trusted local garage – you save on the specialist’s fitting markup. Always check whether the quoted price includes delivery, fitting, VAT, and the old engine collection. Use our marketplace to see three or more quotes side‑by‑side, then choose the supplier that offers the best balance of price, warranty, and proximity.\\n*Use our free comparison tool to save money on Volkswagen engine replacement*\""
+        }
+      ],
+      "finalText": "Find the best Volkswagen engine replacement UK drivers rely on. Compare prices from trusted specialists today and get back on the road with confidence.",
+      "buttonText": "Compare Volkswagen Engine Prices Now"
+    }
+  }
+}

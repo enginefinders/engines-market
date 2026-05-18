@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { EngineTypesData } from "@/types/brand";
+import { CtaStrip } from "@/components/ui/CalloutCards";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
 
@@ -190,7 +191,7 @@ function MobileCard({
         ? "bg-[#fdf4ff] text-[#7c3aed] border-[#e9d5ff]"
         : variant === "used"
           ? "bg-[#f8f9fa] text-[#6b7280] border-[#e5e7eb]"
-          : "bg-[#f0fdf4] text-[#15803d] border-[#bbf7d0]";
+          : "bg-[#f8fbff] text-[#0d1b2e] border-[#0d1b2e]";
 
   useEffect(() => {
     const measure = () => {
@@ -242,7 +243,7 @@ function MobileCard({
             <button
               type="button"
               onClick={onToggle}
-              className="flex w-[52px] flex-none cursor-pointer flex-col items-center justify-center gap-2 border-l border-[#f1f5f9] bg-[#f8f9fa] transition hover:bg-[#f0fdf4]"
+              className="flex w-[52px] flex-none cursor-pointer flex-col items-center justify-center gap-2 border-l border-[#f1f5f9] bg-[#f8f9fa] transition hover:bg-[#f8fbff]"
             >
               <div className="flex h-8 w-8 items-center justify-center rounded-[8px] bg-[#0d1b2e] text-[#22c55e]">
                 {icon}
@@ -260,7 +261,7 @@ function MobileCard({
         >
           <div className="h-full rounded-[12px] border border-[#1e3a5f] bg-[#0d1b2e] px-[18px] py-[18px] shadow-[0_2px_8px_rgba(13,27,46,0.15)]">
             <div className="mb-3 flex items-center justify-between gap-3">
-              <span className="inline-flex rounded-full border border-[rgba(34,197,94,0.25)] bg-[rgba(34,197,94,0.12)] px-[9px] py-[2px] text-[9px] font-bold uppercase tracking-[0.7px] text-[#22c55e]">
+              <span className="inline-flex rounded-full border border-white/20 bg-white/8 px-[9px] py-[2px] text-[9px] font-bold uppercase tracking-[0.7px] text-white/82">
                 {badge}
               </span>
               <button type="button" onClick={onToggle} className="inline-flex items-center gap-1 text-[9px] font-bold text-[#475569]">
@@ -402,26 +403,20 @@ export default function EngineTypesSection({
           })}
         </div>
 
-        <div className="mt-4 rounded-[14px] border border-[#dcfce7] bg-[#f6fff8] px-4 py-4 shadow-[0_2px_8px_rgba(13,27,46,0.04)] lg:flex lg:items-center lg:justify-between lg:gap-5 lg:px-5">
-          <div className="flex items-start gap-3">
-            <div className="flex h-9 w-9 flex-none items-center justify-center rounded-full bg-[#f0fdf4] text-[#15803d]">
-              <ShieldIcon />
-            </div>
-            <p className="text-[12px] leading-[1.65] text-[#6b7280]">
-              {normalizeText(data.closing)}
-            </p>
-          </div>
-
-          <a
-            href="#quote-form"
-            data-quote-context="Engine types closing"
-            data-quote-source="engine-types"
-            className="mt-4 inline-flex items-center justify-center gap-2 rounded-[10px] bg-[#15803d] px-5 py-3 text-[12px] font-bold text-white transition hover:bg-[#166534] lg:mt-0 lg:min-w-[294px]"
-          >
-            <TruckIcon />
-            <span>{dynamicBrandCta ? `Compare ${brandLabel} Engine Prices Now` : "Compare Land Rover Engine Prices Now"}</span>
-            <ArrowIcon className="h-[12px] w-[12px]" />
-          </a>
+        <div className="mt-4">
+          <CtaStrip
+            tone="light"
+            label="Engine Replacement Help"
+            title={dynamicBrandCta ? `Compare ${brandLabel} engine prices with vetted UK suppliers` : "Compare Land Rover engine prices with vetted UK suppliers"}
+            description={normalizeText(data.closing)}
+            buttonText={dynamicBrandCta ? `Compare ${brandLabel} Prices` : "Compare Land Rover Prices"}
+            icon={<ShieldIcon />}
+            linkProps={{
+              href: "#quote-form",
+              "data-quote-context": "Engine types closing",
+              "data-quote-source": "engine-types",
+            }}
+          />
         </div>
       </Container>
     </Section>

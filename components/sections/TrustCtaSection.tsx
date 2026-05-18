@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Button from "@/components/ui/Button";
+import { CtaStrip } from "@/components/ui/CalloutCards";
 import Section from "@/components/ui/Section";
 import type { TrustCtaData } from "@/types/brand";
 
@@ -113,26 +113,29 @@ export default function TrustCtaSection({ data, brandName, imageSrc }: Props) {
                 {data.finalText}
               </p>
 
-              <div className="mt-4 grid gap-2.5 md:max-w-[500px] md:grid-cols-[1fr_auto]">
-                <Button
-                  href="#quote-form"
-                  data-quote-context={`Final ${brandName} engine comparison`}
-                  data-quote-source="trust-cta"
-                  className="justify-center rounded-xl bg-[#2463eb] px-5 py-3 text-[0.82rem] hover:bg-[#1f54c7]"
-                >
-                  <span className="inline-flex items-center gap-2">
-                    <QuoteIcon />
-                    {data.buttonText.replace("->", "").trim()}
-                  </span>
-                </Button>
-
-                <a
-                  href="tel:03330000044"
-                  className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/14 bg-white/[0.08] px-4 py-3 text-[0.8rem] font-bold text-white transition hover:bg-white/[0.12]"
-                >
-                  <PhoneIcon />
-                  Call Our Experts
-                </a>
+              <div className="mt-4">
+                <CtaStrip
+                  tone="dark"
+                  label="Trusted UK Engine Marketplace"
+                  title={`Compare ${brandName} engine prices with vetted UK specialists`}
+                  description={data.finalText}
+                  buttonText={data.buttonText.replace("->", "").trim()}
+                  icon={<QuoteIcon />}
+                  linkProps={{
+                    href: "#quote-form",
+                    "data-quote-context": `Final ${brandName} engine comparison`,
+                    "data-quote-source": "trust-cta",
+                  }}
+                  secondaryAction={
+                    <a
+                      href="tel:03330000044"
+                      className="inline-flex min-h-[46px] items-center justify-center gap-2 rounded-[10px] border border-white/14 bg-white/[0.08] px-4 text-[11px] font-bold text-white transition hover:bg-white/[0.12]"
+                    >
+                      <PhoneIcon />
+                      Call Our Experts
+                    </a>
+                  }
+                />
               </div>
 
               <div className="mt-3 flex flex-wrap gap-x-3 gap-y-1.5">

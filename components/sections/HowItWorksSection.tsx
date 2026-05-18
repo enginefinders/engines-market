@@ -186,7 +186,7 @@ function DesktopSideCard({
     <button
       type="button"
       onClick={onOpen}
-      className="flex h-full w-full flex-col rounded-[12px] border border-[#e5e7eb] bg-white px-[14px] py-[14px] text-left shadow-[0_2px_12px_rgba(13,27,46,0.06)] transition hover:border-[#bbf7d0]"
+      className="flex h-full w-full flex-col rounded-[12px] border border-[#e5e7eb] bg-white px-[14px] py-[14px] text-left shadow-[0_2px_12px_rgba(13,27,46,0.06)] transition hover:border-[#0d1b2e]"
     >
       <div className="mx-auto flex h-[58px] w-[58px] items-center justify-center rounded-[12px] bg-[#0d1b2e] text-[#22c55e]">
         {getIcon(card.icon)}
@@ -278,7 +278,7 @@ function MobileCard({
         <button
           type="button"
           onClick={onToggle}
-          className="flex w-full items-start gap-3 rounded-[12px] border border-[#e5e7eb] bg-white px-[14px] py-[14px] text-left transition hover:border-[#bbf7d0]"
+          className="flex w-full items-start gap-3 rounded-[12px] border border-[#e5e7eb] bg-white px-[14px] py-[14px] text-left transition hover:border-[#0d1b2e]"
         >
           <div className="flex h-[50px] w-[50px] flex-none items-center justify-center rounded-[10px] bg-[#0d1b2e] text-[#22c55e]">
             {getIcon(card.icon)}
@@ -421,7 +421,7 @@ export default function HowItWorksSection({ data, bgImage }: Props) {
           </div>
         </div>
 
-        <div className="mx-4 mt-4 rounded-[12px] border border-[#bbf7d0] bg-[#f0fdf4] px-4 py-4 lg:mx-0 lg:mt-[14px] lg:flex lg:items-center lg:gap-4">
+        <div className="mx-4 mt-4 rounded-[12px] border border-[#0d1b2e] bg-white px-4 py-4 lg:mx-0 lg:mt-[14px] lg:flex lg:items-center lg:gap-4">
           <div className="mb-3 flex h-[42px] w-[42px] items-center justify-center rounded-full bg-[#15803d] text-white lg:mb-0 lg:h-[46px] lg:w-[46px]">
             <MedalIcon />
           </div>

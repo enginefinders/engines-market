@@ -2,6 +2,7 @@
 
 import { useMemo, useRef, useState } from "react";
 import type { EngineYearsData } from "@/types/brand";
+import { CtaStrip } from "@/components/ui/CalloutCards";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
 
@@ -318,7 +319,7 @@ function YearPanel({
                   <SectionLabel icon={<TagIcon />} label="Engine Codes Covered" />
                   <div className="mt-1 flex flex-wrap gap-[6px]">
                     {(item.engineCodesCovered ?? []).map((code, index) => (
-                      <span key={`${code}-${index}`} className="rounded-[7px] border border-[#bbf7d0] bg-[#f0fdf4] px-[10px] py-[5px] text-[11.5px] font-bold text-[#15803d]">
+                      <span key={`${code}-${index}`} className="rounded-[7px] border border-[#0d1b2e] bg-[#f8fbff] px-[10px] py-[5px] text-[11.5px] font-bold text-[#0d1b2e]">
                         {code}
                       </span>
                     ))}
@@ -396,7 +397,7 @@ function YearPanel({
                   <SectionLabel icon={<TagIcon />} label="Engine Codes Covered" />
                   <div className="mt-1 flex flex-wrap gap-[7px]">
                     {(item.engineCodesCovered ?? []).map((code, index) => (
-                      <span key={`${code}-${index}`} className="rounded-[7px] border border-[#bbf7d0] bg-[#f0fdf4] px-[11px] py-[5px] text-[12px] font-bold text-[#15803d]">
+                      <span key={`${code}-${index}`} className="rounded-[7px] border border-[#0d1b2e] bg-[#f8fbff] px-[11px] py-[5px] text-[12px] font-bold text-[#0d1b2e]">
                         {code}
                       </span>
                     ))}
@@ -477,7 +478,7 @@ export default function EngineYearsSection({ brandName, data }: Props) {
           <button
             type="button"
             onClick={() => shiftYears(-1)}
-            className="flex h-16 w-9 flex-none items-center justify-center rounded-[10px] border-[1.5px] border-[#e5e7eb] bg-white text-[#0d1b2e] transition hover:border-[#15803d] hover:text-[#15803d]"
+            className="flex h-16 w-9 flex-none items-center justify-center rounded-[10px] border-[1.5px] border-[#e5e7eb] bg-white text-[#0d1b2e] transition hover:border-[#0d1b2e] hover:text-[#0d1b2e]"
           >
             <ArrowLeftIcon />
           </button>
@@ -493,8 +494,8 @@ export default function EngineYearsSection({ brandName, data }: Props) {
                 onClick={() => setActiveIndex(index)}
                 className={`flex h-[58px] w-[110px] flex-none items-center justify-center rounded-[10px] border bg-white px-[10px] text-center transition ${
                   activeIndex === index
-                    ? "border-2 border-[#15803d]"
-                    : "border-[1.5px] border-[#e5e7eb] hover:border-[#15803d]"
+                    ? "border-2 border-[#0d1b2e]"
+                    : "border-[1.5px] border-[#e5e7eb] hover:border-[#0d1b2e]"
                 }`}
               >
                 <div className={`font-['Manrope'] text-[14px] font-extrabold leading-[1.15] ${activeIndex === index ? "text-[#15803d]" : "text-[#0d1b2e]"}`}>
@@ -507,7 +508,7 @@ export default function EngineYearsSection({ brandName, data }: Props) {
           <button
             type="button"
             onClick={() => shiftYears(1)}
-            className="flex h-16 w-9 flex-none items-center justify-center rounded-[10px] border-[1.5px] border-[#e5e7eb] bg-white text-[#0d1b2e] transition hover:border-[#15803d] hover:text-[#15803d]"
+            className="flex h-16 w-9 flex-none items-center justify-center rounded-[10px] border-[1.5px] border-[#e5e7eb] bg-white text-[#0d1b2e] transition hover:border-[#0d1b2e] hover:text-[#0d1b2e]"
           >
             <ArrowRightIcon />
           </button>
@@ -549,33 +550,20 @@ export default function EngineYearsSection({ brandName, data }: Props) {
           </>
         ) : null}
 
-        <div className="mt-3 hidden items-start justify-between gap-[14px] rounded-[14px] border border-[#e5e7eb] bg-white px-[22px] py-4 md:flex">
-          <div className="flex items-start gap-[14px]">
-            <div className="flex h-[38px] w-[38px] flex-none items-center justify-center rounded-[10px] bg-[#f0fdf4] text-[#15803d]">
-              <ShieldIcon />
-            </div>
-            <p className="max-w-[760px] text-[13px] leading-[1.65] text-[#4b5563]">
-              <strong className="font-bold text-[#0d1b2e]">Not sure which year your {brandName} was built?</strong> {data.closing}
-            </p>
-          </div>
-          <a
-            href="#quote-form"
-            data-quote-context={`${brandName} engine year finder`}
-            data-quote-source="engine-years-summary"
-            className="flex flex-none items-center gap-2 rounded-[9px] bg-[#0d1b2e] px-[18px] py-[10px] font-['Manrope'] text-[13px] font-bold text-white transition hover:bg-[#1e3a5f]"
-          >
-            <span>Find My Engine</span>
-            <ArrowRightIcon className="h-[14px] w-[14px]" />
-          </a>
-        </div>
-
-        <div className="mt-3 flex items-start gap-3 rounded-[14px] border border-[#e5e7eb] bg-white px-4 py-[14px] md:hidden">
-          <div className="flex h-9 w-9 flex-none items-center justify-center rounded-[9px] bg-[#f0fdf4] text-[#15803d]">
-            <ShieldIcon />
-          </div>
-          <p className="text-[12.2px] leading-[1.65] text-[#4b5563]">
-            <strong className="font-semibold text-[#15803d]">Not sure which year your {brandName} was built?</strong> {data.closing}
-          </p>
+        <div className="mt-3">
+          <CtaStrip
+            tone="light"
+            label="Year Finder"
+            title={`Not sure which year your ${brandName} was built?`}
+            description={data.closing}
+            buttonText="Find My Engine"
+            icon={<ShieldIcon />}
+            linkProps={{
+              href: "#quote-form",
+              "data-quote-context": `${brandName} engine year finder`,
+              "data-quote-source": "engine-years-summary",
+            }}
+          />
         </div>
       </Container>
     </Section>

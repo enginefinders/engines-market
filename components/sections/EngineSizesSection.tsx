@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import type { EngineSizesData } from "@/types/brand";
+import { AdviceCard, WarningCard } from "@/components/ui/CalloutCards";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
 
@@ -93,31 +94,6 @@ function TagIcon() {
   );
 }
 
-function ShieldIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-[18px] w-[18px]" fill="none" aria-hidden="true">
-      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" strokeWidth="2" />
-      <polyline points="9 12 11 14 15 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
-
-function WarningIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-[14px] w-[14px]" fill="none" aria-hidden="true">
-      <path
-        d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <line x1="12" y1="9" x2="12" y2="13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-      <line x1="12" y1="17" x2="12.01" y2="17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-    </svg>
-  );
-}
-
 function SwapIcon() {
   return (
     <svg viewBox="0 0 24 24" className="h-[15px] w-[15px]" fill="none" aria-hidden="true">
@@ -169,8 +145,8 @@ function fuelBadgeLabel(kind: FuelKind) {
 
 function fuelBadgeClass(kind: FuelKind) {
   if (kind === "petrol") return "border-[#fed7aa] bg-[#fff8f0] text-[#c2410c]";
-  if (kind === "hybrid") return "border-[#bbf7d0] bg-[#f0fdf4] text-[#15803d]";
-  return "border-[#bbf7d0] bg-[#f0fdf4] text-[#15803d]";
+  if (kind === "hybrid") return "border-[#0d1b2e] bg-[#f8fbff] text-[#0d1b2e]";
+  return "border-[#0d1b2e] bg-[#f8fbff] text-[#0d1b2e]";
 }
 
 function SizeAccordionCard({
@@ -253,12 +229,12 @@ function SizeAccordionCard({
           </div>
 
           {item.commonFailurePoints?.length ? (
-            <div className="mt-4 rounded-[10px] border border-[#fed7aa] bg-[#fffaf3] px-3 py-3">
-              <div className="mb-[6px] flex items-center gap-2 text-[9px] font-bold uppercase tracking-[0.5px] text-[#c2410c]">
-                <WarningIcon />
-                <span>{kind === "hybrid" ? "Important Notes" : "Common Failure Points"}</span>
-              </div>
-              <p className="text-[11px] leading-[1.55] text-[#92400e]">{item.commonFailurePoints.join(", ")}</p>
+            <div className="mt-4">
+              <WarningCard
+                label={kind === "hybrid" ? "Important Notes" : "Common Failure Points"}
+                title={kind === "hybrid" ? "Review these fitment notes before ordering" : "Watch for these known weak points"}
+                body={item.commonFailurePoints.join(", ")}
+              />
             </div>
           ) : null}
 
@@ -266,7 +242,7 @@ function SizeAccordionCard({
             href="#quote-form"
             data-quote-context={item.title}
             data-quote-source="engine-sizes"
-            className="mt-4 flex items-center justify-between rounded-[8px] border border-[#dbe6d8] bg-[#f8fff7] px-3 py-[10px] text-[11.5px] font-bold text-[#15803d] transition hover:bg-[#f0fdf4]"
+            className="mt-4 flex items-center justify-between rounded-[8px] border border-[#0d1b2e] bg-white px-3 py-[10px] text-[11.5px] font-bold text-[#0d1b2e] transition hover:bg-[#f8fbff]"
           >
             <span>{item.cta.replace(/\s*->\s*$/, "")}</span>
             <ArrowIcon />
@@ -279,14 +255,18 @@ function SizeAccordionCard({
 
 function HelperNote({ text }: { text: string }) {
   return (
-    <div className="rounded-[12px] border border-[#e5e7eb] bg-white px-4 py-4 shadow-[0_2px_8px_rgba(13,27,46,0.04)]">
-      <div className="flex items-start gap-3">
-        <div className="flex h-10 w-10 flex-none items-center justify-center rounded-full bg-[#f0fdf4] text-[#15803d]">
-          <ShieldIcon />
-        </div>
-        <p className="text-[12px] leading-[1.7] text-[#64748b]">{normalizeText(text)}</p>
-      </div>
-    </div>
+    <AdviceCard
+      tone="dark"
+      label="Engine Size Advice"
+      title="Need help matching the exact engine size?"
+      body={normalizeText(text)}
+      ctaText="Find My Engine"
+      linkProps={{
+        href: "#quote-form",
+        "data-quote-context": "Engine sizes helper note",
+        "data-quote-source": "engine-sizes",
+      }}
+    />
   );
 }
 

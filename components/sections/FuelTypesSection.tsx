@@ -282,7 +282,7 @@ function FuelPanel({
           </div>
         ) : null}
 
-        <div className="mt-3 flex items-center justify-between gap-3 rounded-[10px] border border-[#dbe6d8] bg-[#f8fff7] px-4 py-3">
+        <div className="mt-3 flex items-center justify-between gap-3 rounded-[10px] border border-[#0d1b2e] bg-white px-4 py-3">
           <a
             href="#quote-form"
             data-quote-context={item.title}
@@ -531,7 +531,7 @@ export default function FuelTypesSection({ data, bgImage }: Props) {
               href="#quote-form"
               data-quote-context="Fuel type finder"
               data-quote-source="fuel-types-summary"
-              className="hidden flex-none items-center gap-2 rounded-[9px] border border-[#dbe6d8] bg-[#f8fff7] px-4 py-3 text-[11.5px] font-bold text-[#0d1b2e] lg:inline-flex"
+              className="hidden flex-none items-center gap-2 rounded-[9px] border border-[#0d1b2e] bg-white px-4 py-3 text-[11.5px] font-bold text-[#0d1b2e] lg:inline-flex"
             >
               <span>Find my engine</span>
               <ArrowIcon />

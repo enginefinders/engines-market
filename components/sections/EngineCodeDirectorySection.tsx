@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import type { EngineCodeDirectoryData } from "@/types/brand";
+import { AdviceCard } from "@/components/ui/CalloutCards";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
 
@@ -47,15 +48,6 @@ function ChevronIcon({ open }: { open: boolean }) {
         strokeLinecap="round"
         strokeLinejoin="round"
       />
-    </svg>
-  );
-}
-
-function InfoIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" aria-hidden="true">
-      <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="2" />
-      <path d="M12 10v6M12 7h.01" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
     </svg>
   );
 }
@@ -253,7 +245,7 @@ export default function EngineCodeDirectorySection({ data, bgImage }: Props) {
                       <article
                         key={entry.title}
                         className={`overflow-hidden rounded-[12px] border ${
-                          isOpen ? "border-green-100 bg-[#fbfdfb]" : "border-slate-200 bg-white"
+                          isOpen ? "border-[#0d1b2e] bg-white" : "border-slate-200 bg-white"
                         } ${entryIndex > 0 ? "mt-1.5" : ""} lg:rounded-none lg:border-x-0 lg:border-t-0 lg:last:border-b-0`}
                       >
                         <button
@@ -274,7 +266,7 @@ export default function EngineCodeDirectorySection({ data, bgImage }: Props) {
                             <p className="border-t border-slate-200 pt-2.5 text-[12.5px] leading-[1.68] text-slate-700">
                               {entry.description}
                             </p>
-                            <div className="mt-2.5 hidden rounded-[10px] border border-green-100 bg-[#f7fbf8] p-3 lg:block">
+                            <div className="mt-2.5 hidden rounded-[10px] border border-[#0d1b2e] bg-[#f8fbff] p-3 lg:block">
                               <p className="text-[10px] font-black uppercase tracking-[0.08em] text-green-700">Common Issues</p>
                               <ul className="mt-1.5 space-y-1 text-[11px] leading-[1.35] text-slate-600">
                                 {entry.description
@@ -310,34 +302,30 @@ export default function EngineCodeDirectorySection({ data, bgImage }: Props) {
           </>
         ) : null}
 
-        <div className="mt-2.5 flex gap-3 rounded-[12px] border border-green-200 bg-[#f0fdf4] px-4 py-3 lg:hidden">
-          <span className="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-green-600 text-white">
-            <InfoIcon />
-          </span>
-          <p className="text-[12px] leading-[1.5] text-slate-700">{data.closing}</p>
+        <div className="mt-2.5 lg:hidden">
+          <AdviceCard
+            tone="dark"
+            label="Need Help Choosing?"
+            title="We can match the right engine code for your vehicle"
+            body={data.closing}
+            ctaText="Get Help"
+            linkProps={{ href: "#quote-form" }}
+          />
         </div>
 
         <div className="mt-2.5 lg:grid lg:grid-cols-[1fr_1fr] lg:gap-4">
-          <div className="hidden rounded-[12px] border border-green-200 bg-[#f6fff8] px-4 py-3 lg:block">
-            <div className="flex h-full items-center gap-3">
-              <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-green-600 text-white">
-                <InfoIcon />
-              </span>
-              <div className="min-w-0 flex-1">
-                <p className="font-['Manrope'] text-[13px] font-extrabold leading-[1.2] text-[#0d1b2e]">Need Help Choosing?</p>
-                <p className="mt-0.5 text-[11px] leading-[1.45] text-slate-600">{data.closing}</p>
-              </div>
-              <a
-                href="#quote-form"
-                className="inline-flex shrink-0 items-center gap-2 rounded-[10px] border border-green-300 px-4 py-2 text-[10.5px] font-black uppercase tracking-[0.08em] text-green-700 transition hover:bg-white"
-              >
-                Get Help
-                <ArrowIcon className="h-3.5 w-3.5" />
-              </a>
-            </div>
+          <div className="hidden lg:block">
+            <AdviceCard
+              tone="light"
+              label="Need Help Choosing?"
+              title="We can match the right engine code for your vehicle"
+              body={data.closing}
+              ctaText="Get Help"
+              linkProps={{ href: "#quote-form" }}
+            />
           </div>
 
-          <div className={`overflow-hidden rounded-[12px] border border-slate-200 bg-white shadow-[0_10px_30px_rgba(13,27,46,0.05)] ${directoryOpen ? "ring-1 ring-green-100" : ""}`}>
+          <div className={`overflow-hidden rounded-[12px] border border-slate-200 bg-white shadow-[0_10px_30px_rgba(13,27,46,0.05)] ${directoryOpen ? "ring-1 ring-[#0d1b2e]" : ""}`}>
             <button
               type="button"
               onClick={() => setDirectoryOpen((current) => !current)}
@@ -357,7 +345,7 @@ export default function EngineCodeDirectorySection({ data, bgImage }: Props) {
         </div>
 
         {directoryOpen ? (
-          <div className="mt-4 overflow-hidden rounded-[12px] border border-slate-200 bg-white shadow-[0_10px_30px_rgba(13,27,46,0.05)] ring-1 ring-green-100">
+          <div className="mt-4 overflow-hidden rounded-[12px] border border-slate-200 bg-white shadow-[0_10px_30px_rgba(13,27,46,0.05)] ring-1 ring-[#0d1b2e]">
             <div className="px-3 pt-3 lg:px-4">
               <label className="relative block">
                 <span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">
@@ -375,7 +363,7 @@ export default function EngineCodeDirectorySection({ data, bgImage }: Props) {
                   value={searchQuery}
                   onChange={(event) => setSearchQuery(event.target.value)}
                   placeholder="Filter engine codes..."
-                  className="h-10 w-full rounded-[9px] border border-slate-300 bg-slate-50 pl-10 pr-4 text-[13px] text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-green-300 focus:bg-white"
+                  className="h-10 w-full rounded-[9px] border border-slate-300 bg-slate-50 pl-10 pr-4 text-[13px] text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-[#0d1b2e] focus:bg-white"
                 />
               </label>
             </div>
@@ -395,7 +383,7 @@ export default function EngineCodeDirectorySection({ data, bgImage }: Props) {
                       href="#quote-form"
                       data-quote-engine-code={item.code}
                       data-quote-context={item.code}
-                      className="flex items-start gap-2 rounded-[10px] border border-slate-200 bg-white px-3 py-2.5 transition hover:border-green-200 hover:bg-[#fbfdfb]"
+                      className="flex items-start gap-2 rounded-[10px] border border-slate-200 bg-white px-3 py-2.5 transition hover:border-[#0d1b2e] hover:bg-[#f8fbff]"
                       >
                         <span
                           className={`mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-[6px] ${

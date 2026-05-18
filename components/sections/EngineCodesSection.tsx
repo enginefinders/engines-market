@@ -101,7 +101,7 @@ function CtaArrow() {
 function fuelClass(fuel: string) {
   return /petrol/i.test(fuel)
     ? "border-[#fed7aa] bg-[#fff8f0] text-[#c2410c]"
-    : "border-[#bbf7d0] bg-[#f0fdf4] text-[#15803d]";
+    : "border-[#0d1b2e] bg-[#f8fbff] text-[#0d1b2e]";
 }
 
 function normalizeLabel(text: string) {
