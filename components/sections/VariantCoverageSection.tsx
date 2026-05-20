@@ -96,10 +96,6 @@ function formatSpecs(card: VariantCard) {
     .trim();
 }
 
-function formatYears(years?: string) {
-  return years?.trim() || "Check exact year coverage by registration";
-}
-
 function getPerformanceScore(power: string) {
   const values = power.match(/\d+/g)?.map(Number) ?? [];
   return values.length ? Math.max(...values) : 0;
@@ -128,6 +124,22 @@ function groupCards(cards: VariantCard[]) {
     .filter((group) => group.cards.length > 0);
 }
 
+function groupCardsFromData(data: ModelVariantCoverageSectionData) {
+  if (data.groups?.length) {
+    return data.groups
+      .map((group) => ({
+        key: group.title.toLowerCase().replace(/[^a-z0-9]+/g, "-"),
+        title: group.title,
+        cards: group.cardSlugs
+          .map((slug) => data.cards.find((card) => card.slug === slug))
+          .filter((card): card is VariantCard => Boolean(card)),
+      }))
+      .filter((group) => group.cards.length > 0);
+  }
+
+  return groupCards(data.cards);
+}
+
 export default function VariantCoverageSection({ data }: Props) {
   const defaultOpenCard = data.cards[0]?.slug ?? null;
   const modelLabel = getModelLabel(data.h2);
@@ -135,7 +147,9 @@ export default function VariantCoverageSection({ data }: Props) {
   const [seenCards, setSeenCards] = useState<Record<string, boolean>>(
     defaultOpenCard ? { [defaultOpenCard]: true } : {},
   );
-  const groupedCards = useMemo(() => groupCards(data.cards), [data.cards]);
+  const groupedCards = useMemo(() => groupCardsFromData(data), [data]);
+  const headingLines = data.headingLines?.length ? data.headingLines : [data.h2];
+  const ui = data.ui ?? {};
 
   function toggleCard(slug: string) {
     setOpenCard((current) => (current === slug ? null : slug));
@@ -152,7 +166,14 @@ export default function VariantCoverageSection({ data }: Props) {
           </div>
 
           <h2 className="mx-auto max-w-[760px] text-[30px] font-extrabold leading-[1.02] tracking-[-0.04em] text-[#0d1b2e] md:text-[40px]">
-            {data.h2}
+            {headingLines.map((line, index) => {
+              const isAccent = headingLines.length > 1 && index === headingLines.length - 1;
+              return (
+                <span key={`${line}-${index}`} className={`block ${isAccent ? "text-[#15803d]" : ""}`}>
+                  {line}
+                </span>
+              );
+            })}
           </h2>
           <p className="mx-auto mt-3 max-w-[720px] text-[14px] leading-[1.75] text-slate-600">
             {data.subheading}
@@ -212,14 +233,16 @@ export default function VariantCoverageSection({ data }: Props) {
                           )}
                         </div>
 
-                        <div className="mt-2">
-                          <div className="font-['Manrope'] text-[15px] font-extrabold leading-[1] text-[#0d1b2e]">
-                            {shortName}
+                        {!card.image ? (
+                          <div className="mt-2">
+                            <div className="font-['Manrope'] text-[15px] font-extrabold leading-[1] text-[#0d1b2e]">
+                              {shortName}
+                            </div>
                           </div>
-                        </div>
+                        ) : null}
 
                         <div className="mt-auto pt-4">
-                          <p className="text-[11px] font-medium text-[#6b7280]">from price</p>
+                          <p className="text-[11px] font-medium text-[#6b7280]">{ui.fromPriceLabel ?? "from price"}</p>
                           <p className="mt-1 font-['Manrope'] text-[15px] font-semibold leading-none text-[#6b7280]">
                             {card.priceRange}
                           </p>
@@ -235,7 +258,7 @@ export default function VariantCoverageSection({ data }: Props) {
                           <div className="space-y-[10px]">
                             <div className="flex items-center justify-between gap-3 rounded-[8px] border border-white/8 bg-white/[0.03] px-3 py-[9px]">
                               <span className="flex-none text-[10px] font-semibold uppercase tracking-[0.08em] text-white/60">
-                                Specs
+                                {ui.specsLabel ?? "Specs"}
                               </span>
                               <span className="min-w-0 flex-1 truncate text-right text-[11px] font-semibold leading-none text-white md:text-[11.5px]">
                                 {formatSpecs(card)}
@@ -244,7 +267,7 @@ export default function VariantCoverageSection({ data }: Props) {
 
                             <div className="flex items-center justify-between gap-3 rounded-[8px] border border-white/8 bg-white/[0.03] px-3 py-[9px]">
                               <span className="flex-none text-[10px] font-semibold uppercase tracking-[0.08em] text-white/60">
-                                Rebuilt
+                                {ui.rebuiltLabel ?? "Rebuilt"}
                               </span>
                               <span className="min-w-0 flex-1 truncate text-right font-['Manrope'] text-[14px] font-extrabold leading-none text-white md:text-[15px]">
                                 {card.priceRange}
@@ -253,10 +276,10 @@ export default function VariantCoverageSection({ data }: Props) {
 
                             <div className="flex items-center justify-between gap-3 rounded-[8px] border border-white/8 bg-white/[0.03] px-3 py-[9px]">
                               <span className="flex-none text-[10px] font-semibold uppercase tracking-[0.08em] text-white/60">
-                                Years
+                                {ui.yearsLabel ?? "Years"}
                               </span>
                               <span className="min-w-0 flex-1 truncate text-right text-[11px] font-semibold leading-none text-white md:text-[11.5px]">
-                                {formatYears(card.years)}
+                                {card.years?.trim() || ui.yearsFallback || "Check exact year coverage by registration"}
                               </span>
                             </div>
                           </div>
@@ -283,7 +306,7 @@ export default function VariantCoverageSection({ data }: Props) {
         <div className="mt-8 rounded-[18px] border border-slate-200 bg-[#f8fafc] p-4 md:p-5">
           <div className="flex items-center gap-2 text-[12px] font-bold uppercase tracking-[0.08em] text-[#15803d]">
             <BookIcon />
-            <span>Variant Directory</span>
+            <span>{data.directory.label ?? "Variant Directory"}</span>
           </div>
           <h3 className="mt-3 text-[24px] font-extrabold tracking-[-0.03em] text-[#0d1b2e]">{data.directory.h3}</h3>
           <p className="mt-2 max-w-[900px] text-[13px] leading-[1.7] text-slate-600">{data.directory.intro}</p>

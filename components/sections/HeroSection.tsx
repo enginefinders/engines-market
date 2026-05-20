@@ -6,7 +6,9 @@ import type { HeroSectionData, ModelsSectionData } from "@/types/brand";
 
 type HeroModelCard = ModelsSectionData["cards"][number] & {
   engineCodes?: string[];
+  lineOne?: string;
   heroLineTwo?: string;
+  imageAlt?: string;
 };
 
 type HeroSectionProps = {
@@ -220,14 +222,6 @@ function inferBrandName(data: HeroSectionData) {
   return "your";
 }
 
-function badgeLabel(data: HeroSectionData, brandName: string) {
-  if (/engine marketplace/i.test(data.tag)) {
-    return `${brandName} Engine Marketplace`;
-  }
-
-  return data.tag;
-}
-
 function stripBrandFromModel(modelName: string, brandName: string) {
   return modelName
     .replace(new RegExp(`^${brandName}\\s+`, "i"), "")
@@ -273,15 +267,60 @@ function buildHeroLineTwo(model: HeroModelCard) {
   return "";
 }
 
+function splitHighlightLineOne(text: string) {
+  const normalized = text.replace(/\s+/g, " ").trim();
+  const match = normalized.match(/^(.*?)(\s+[—-]\s+from\s+.+)$/i);
+  if (!match) {
+    return { lead: normalized, accent: "" };
+  }
+
+  return {
+    lead: match[1].trim(),
+    accent: match[2].trim(),
+  };
+}
+
+function resolveHeadingLines(data: HeroSectionData) {
+  if (data.headingLines?.length) {
+    return data.headingLines.filter((line) => line.trim());
+  }
+
+  const heading = splitHeadline(data.h1);
+  if (heading.accent) {
+    return [`${heading.lead} -`, heading.accent];
+  }
+
+  return [data.h1];
+}
+
+function resolveHeroCards(data: HeroSectionData, modelCards: HeroModelCard[]) {
+  if (data.highlights?.length) {
+    return data.highlights.map((card, index) => ({
+      h3: card.title,
+      slug: `highlight-${index + 1}`,
+      subtitle: "",
+      priceRange: card.price,
+      cta: "",
+      image: card.image ?? "",
+      lineOne: card.line1 ?? "",
+      heroLineTwo: card.detail ?? "",
+      imageAlt: card.imageAlt ?? card.title,
+    }));
+  }
+
+  return buildHeroCards(modelCards);
+}
+
 export default function HeroSection({ data, bgImage, modelCards = [] }: HeroSectionProps) {
   const [registration, setRegistration] = useState("");
   const [showHeroImage, setShowHeroImage] = useState(Boolean(bgImage));
-  const heading = splitHeadline(data.h1);
+  const headingLines = resolveHeadingLines(data);
   const tickerItems = getTickerItems(data.ticker);
   const tickerLoop = buildTickerLoop(tickerItems);
   const brandName = inferBrandName(data);
-  const displayModels = buildHeroCards(modelCards);
-  const heroBadge = badgeLabel(data, brandName);
+  const displayModels = resolveHeroCards(data, modelCards);
+  const mobileBar = data.mobileBar ?? {};
+  const registrationInput = data.registrationInput ?? {};
 
   function openQuoteCheckout(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -301,7 +340,7 @@ export default function HeroSection({ data, bgImage, modelCards = [] }: HeroSect
       <div className="bg-[#0d1b2e] text-white lg:hidden">
         <div className="flex items-center justify-between px-4 py-3">
           <div className="font-['Manrope'] text-[17px] font-extrabold tracking-[-0.3px] text-white">
-            ENGINE<span className="text-[#16a34a]">MARKET</span>
+            {mobileBar.brandText ?? "ENGINEMARKET"}
           </div>
 
           <div className="flex items-center gap-2">
@@ -310,14 +349,14 @@ export default function HeroSection({ data, bgImage, modelCards = [] }: HeroSect
               className="inline-flex items-center gap-1.5 rounded-md border border-white/20 bg-white/10 px-3 py-[7px] text-[11px] font-semibold text-white"
             >
               <PhoneIcon />
-              <span>Call</span>
+              <span>{mobileBar.callLabel ?? "Call"}</span>
             </a>
             <a
               href="#quote-form"
               data-quote-source="hero-mobile"
               className="rounded-md bg-[#15803d] px-3 py-[7px] font-['Manrope'] text-[11.5px] font-bold text-white"
             >
-              GET QUOTES
+              {mobileBar.quoteLabel ?? "GET QUOTES"}
             </a>
           </div>
         </div>
@@ -326,23 +365,21 @@ export default function HeroSection({ data, bgImage, modelCards = [] }: HeroSect
       <div className="mx-auto grid max-w-[1200px] min-w-0 items-center gap-8 px-3 py-7 sm:px-6 md:px-8 md:py-8 lg:grid-cols-[62fr_38fr] lg:gap-7 lg:px-8 lg:py-[52px]">
         <div className="flex min-w-0 flex-col">
           <span className="mb-[14px] inline-flex w-fit items-center rounded-[20px] bg-[#0d1b2e] px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.08em] text-white md:mb-[18px] md:px-[14px] md:py-[6px] md:text-[10.5px]">
-            {heroBadge}
+            {data.tag}
           </span>
 
           <h1 className="max-w-none min-w-0 font-['Manrope'] font-extrabold tracking-[-0.03em] text-[#152b4a]">
-              <span className="block max-w-none min-w-0 break-words text-[clamp(25px,5.4vw,56px)] leading-[1.06] lg:hidden">
-              {heading.lead}
-              {heading.accent ? " -" : ""}
-            </span>
-              <span className="hidden text-[clamp(25px,5.4vw,56px)] leading-[1.06] lg:block lg:whitespace-nowrap">
-              {heading.lead}
-              {heading.accent ? " -" : ""}
-            </span>
-            {heading.accent ? (
-              <span className="block text-[clamp(25px,5.4vw,56px)] leading-[1.06] text-[#15803d]">
-                {heading.accent}
-              </span>
-            ) : null}
+            {headingLines.map((line, index) => {
+              const isAccent = headingLines.length > 1 && index === headingLines.length - 1;
+              return (
+                <span
+                  key={`${line}-${index}`}
+                  className={`block max-w-none min-w-0 break-words text-[clamp(25px,5.4vw,56px)] leading-[1.06] ${isAccent ? "text-[#15803d]" : "text-[#152b4a] lg:whitespace-nowrap"}`}
+                >
+                  {line}
+                </span>
+              );
+            })}
           </h1>
 
           <p className="mt-[10px] max-w-none min-w-0 text-[13px] leading-[1.65] text-[#64748b] md:mt-[14px] md:max-w-[58ch] md:text-[clamp(14px,1.1vw,17px)]">
@@ -371,6 +408,12 @@ export default function HeroSection({ data, bgImage, modelCards = [] }: HeroSect
                 const Icon = carIcons[index] ?? CarIconThree;
                 const shortTitle = stripBrandFromModel(model.h3, brandName);
                 const normalizedPrice = model.priceRange.replace(/^Starting\s+/i, "").replace(/^Available\s+/i, "");
+                const lineOne = model.lineOne?.trim()
+                  ? splitHighlightLineOne(model.lineOne)
+                  : {
+                      lead: shortTitle,
+                      accent: normalizedPrice ? `- ${normalizedPrice}` : "",
+                    };
 
                 return (
                   <div
@@ -382,7 +425,7 @@ export default function HeroSection({ data, bgImage, modelCards = [] }: HeroSect
                         {model.image ? (
                           <Image
                             src={model.image}
-                            alt={model.h3}
+                            alt={model.imageAlt ?? model.h3}
                             width={72}
                             height={40}
                             sizes="72px"
@@ -397,15 +440,21 @@ export default function HeroSection({ data, bgImage, modelCards = [] }: HeroSect
                       <div className="min-w-0">
                         <div className="flex min-w-0 items-center overflow-hidden whitespace-nowrap">
                           <span className="min-w-0 truncate font-['Manrope'] text-[13.5px] font-bold text-[#0d1b2e] md:text-[clamp(14px,1vw,17px)]">
-                            {shortTitle}
+                            {lineOne.lead}
                           </span>
-                          <span className="min-w-0 truncate font-['Manrope'] text-[13.5px] font-bold text-[#15803d] md:text-[clamp(14px,1vw,17px)]">
-                            {" - "}
-                            {normalizedPrice}
-                          </span>
+                          {lineOne.accent ? (
+                            <span className="min-w-0 truncate font-['Manrope'] text-[13.5px] font-bold text-[#15803d] md:text-[clamp(14px,1vw,17px)]">
+                              {" "}
+                              {lineOne.accent}
+                            </span>
+                          ) : null}
                         </div>
-                        {buildHeroLineTwo(model) ? (
-                          <p className="mt-1 truncate text-[11px] leading-[1.45] text-[#64748b] md:text-[12px]">
+                        {model.lineOne?.trim() && model.heroLineTwo?.trim() ? (
+                          <p className="mt-1 text-[11px] leading-[1.45] text-[#64748b] md:text-[12px]">
+                            {model.heroLineTwo.trim()}
+                          </p>
+                        ) : buildHeroLineTwo(model) ? (
+                          <p className="mt-1 text-[11px] leading-[1.45] text-[#64748b] md:text-[12px]">
                             {buildHeroLineTwo(model)}
                           </p>
                         ) : null}
@@ -426,19 +475,23 @@ export default function HeroSection({ data, bgImage, modelCards = [] }: HeroSect
               htmlFor="reg-input"
               className="absolute h-px w-px overflow-hidden whitespace-nowrap [clip:rect(0,0,0,0)]"
             >
-              Enter your vehicle registration
+              {registrationInput.label ?? "Enter your vehicle registration"}
             </label>
 
             <div className="flex h-[68px] w-full min-w-0 overflow-hidden rounded-lg border-[3px] border-[#1a1a1a] bg-[#ffdd00] md:h-[56px] md:w-[52%] md:min-w-[300px] md:flex-[0_0_auto]">
               <div className="flex h-full w-[46px] shrink-0 flex-col items-center justify-center gap-[3px] border-r-2 border-[#1a1a1a] bg-[#003399] px-0.5 md:w-11">
                 <UkFlagIcon />
-                <span className="text-[12px] font-extrabold leading-none tracking-[0.05em] text-white">UK</span>
+                <span className="text-[12px] font-extrabold leading-none tracking-[0.05em] text-white">
+                  {registrationInput.countryCode ?? "UK"}
+                </span>
               </div>
 
               <input
                 id="reg-input"
                 type="text"
-                placeholder="AB12 CDE"
+                placeholder={
+                  registrationInput.platePlaceholder ?? data.form.inputPlaceholder ?? "AB12 CDE"
+                }
                 maxLength={8}
                 autoCapitalize="characters"
                 autoComplete="off"
@@ -475,7 +528,7 @@ export default function HeroSection({ data, bgImage, modelCards = [] }: HeroSect
             <div className="relative h-full min-h-[340px] w-full overflow-hidden rounded-[24px] bg-white shadow-[0_24px_60px_rgba(13,27,46,0.16)]">
               <Image
                 src={bgImage}
-                alt={brandName}
+                alt={data.imageAlt ?? brandName}
                 fill
                 className="object-contain p-6"
                 sizes="(min-width: 1024px) 420px, 100vw"

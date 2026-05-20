@@ -36,6 +36,9 @@ function splitHeading(text: string) {
 }
 
 function brandNameLabel(brandName: string, sizeTitle: string, kind: FuelKind) {
+  if (brandName === "__use_item_title__") {
+    return sizeTitle;
+  }
   if (kind === "hybrid") return `${brandName} ${sizeTitle}`;
   if (kind === "petrol") return `${brandName} ${sizeTitle} Petrol Engines`;
   return `${brandName} ${sizeTitle} Diesel Engines`;
@@ -156,6 +159,7 @@ function SizeAccordionCard({
   kind,
   open,
   onToggle,
+  ui,
 }: {
   brandName: string;
   dynamicBrandLabel: boolean;
@@ -163,6 +167,7 @@ function SizeAccordionCard({
   kind: FuelKind;
   open: boolean;
   onToggle: () => void;
+  ui: NonNullable<EngineSizesData["ui"]>;
 }) {
   return (
     <div className="overflow-hidden rounded-[12px] border border-[#e5e7eb] bg-white shadow-[0_2px_8px_rgba(13,27,46,0.05)]">
@@ -194,12 +199,8 @@ function SizeAccordionCard({
         <div className="border-t border-[#eef2f7] px-4 py-[14px]">
           <div className="font-['Manrope'] text-[14px] font-extrabold leading-[1.25] text-[#0d1b2e]">
             {dynamicBrandLabel
-              ? brandNameLabel(brandName, item.title, kind)
-              : kind === "hybrid"
-                ? `Land Rover ${item.title}`
-                : kind === "petrol"
-                  ? `Land Rover ${item.title} Petrol Engines`
-                  : `Land Rover ${item.title} Diesel Engines`}
+              ? brandNameLabel("__use_item_title__", item.title, kind)
+              : brandNameLabel(brandName, item.title, kind)}
           </div>
           <p className="mt-2 text-[12px] leading-[1.65] text-[#475569]">{normalizeText(item.description)}</p>
 
@@ -208,19 +209,19 @@ function SizeAccordionCard({
               <tbody>
                 {item.engineCodes?.length ? (
                   <tr className="border-b border-[#e5f2e8]">
-                    <td className="w-[42%] px-3 py-[10px] text-[9px] font-bold uppercase tracking-[0.5px] text-[#64748b]">Engine Code(s)</td>
+                    <td className="w-[42%] px-3 py-[10px] text-[9px] font-bold uppercase tracking-[0.5px] text-[#64748b]">{ui.engineCodesLabel ?? "Engine Code(s)"}</td>
                     <td className="px-3 py-[10px] text-[11px] leading-[1.5] text-[#334155]">{item.engineCodes.join(", ")}</td>
                   </tr>
                 ) : null}
                 {item.compatibleModels?.length ? (
                   <tr className="border-b border-[#e5f2e8]">
-                    <td className="w-[42%] px-3 py-[10px] text-[9px] font-bold uppercase tracking-[0.5px] text-[#64748b]">Compatible Models (UK)</td>
+                    <td className="w-[42%] px-3 py-[10px] text-[9px] font-bold uppercase tracking-[0.5px] text-[#64748b]">{ui.compatibleModelsLabel ?? "Compatible Models (UK)"}</td>
                     <td className="px-3 py-[10px] text-[11px] leading-[1.5] text-[#334155]">{item.compatibleModels.join(", ")}</td>
                   </tr>
                 ) : null}
                 {item.productionYears ? (
                   <tr>
-                    <td className="w-[42%] px-3 py-[10px] text-[9px] font-bold uppercase tracking-[0.5px] text-[#64748b]">Production Years</td>
+                    <td className="w-[42%] px-3 py-[10px] text-[9px] font-bold uppercase tracking-[0.5px] text-[#64748b]">{ui.productionYearsLabel ?? "Production Years"}</td>
                     <td className="px-3 py-[10px] text-[11px] leading-[1.5] text-[#334155]">{item.productionYears}</td>
                   </tr>
                 ) : null}
@@ -231,8 +232,8 @@ function SizeAccordionCard({
           {item.commonFailurePoints?.length ? (
             <div className="mt-4">
               <WarningCard
-                label={kind === "hybrid" ? "Important Notes" : "Common Failure Points"}
-                title={kind === "hybrid" ? "Review these fitment notes before ordering" : "Watch for these known weak points"}
+                label={ui.warningLabel ?? (kind === "hybrid" ? "Important Notes" : "Common Failure Points")}
+                title={ui.warningTitle ?? (kind === "hybrid" ? "Review these fitment notes before ordering" : "Watch for these known weak points")}
                 body={item.commonFailurePoints.join(", ")}
               />
             </div>
@@ -253,14 +254,20 @@ function SizeAccordionCard({
   );
 }
 
-function HelperNote({ text }: { text: string }) {
+function HelperNote({
+  text,
+  ui,
+}: {
+  text: string;
+  ui: NonNullable<EngineSizesData["ui"]>;
+}) {
   return (
     <AdviceCard
       tone="dark"
-      label="Engine Size Advice"
-      title="Need help matching the exact engine size?"
+      label={ui.helperLabel ?? "Engine Size Advice"}
+      title={ui.helperTitle ?? "Need help matching the exact engine size?"}
       body={normalizeText(text)}
-      ctaText="Find My Engine"
+      ctaText={ui.helperButtonText ?? "Find My Engine"}
       linkProps={{
         href: "#quote-form",
         "data-quote-context": "Engine sizes helper note",
@@ -276,6 +283,7 @@ export default function EngineSizesSection({
   bgImage,
   dynamicBrandLabel = false,
 }: Props) {
+  const ui = data.ui ?? {};
   const groups = data.groups;
   const initialVisible = groups.length >= 2 ? [0, 1] : [0];
   const [visibleGroupIndices, setVisibleGroupIndices] = useState<number[]>(initialVisible);
@@ -284,7 +292,8 @@ export default function EngineSizesSection({
   const [desktopSwapOpen, setDesktopSwapOpen] = useState(false);
   const [mobileSwapOpen, setMobileSwapOpen] = useState(false);
 
-  const heading = splitHeading(data.h2);
+  const split = splitHeading(data.h2);
+  const headingLines = data.headingLines?.length ? data.headingLines : [split.primary, split.accent].filter(Boolean);
   const activeGroup = groups[activeGroupIndex] ?? groups[0];
   const activeKind = tagVariant(activeGroup?.title ?? "diesel");
 
@@ -336,13 +345,11 @@ export default function EngineSizesSection({
         </div>
 
         <h2 className="max-w-[720px] font-['Manrope'] text-[26px] font-extrabold leading-[1.16] tracking-[-0.5px] text-[#0d1b2e] md:text-[30px] lg:text-[34px]">
-          <span>{heading.primary}</span>
-          {heading.accent ? (
-            <>
-              <br />
-              <span className="text-[#15803d]">{heading.accent}</span>
-            </>
-          ) : null}
+          {headingLines.map((line, index) => (
+            <span key={`${line}-${index}`} className={`block ${headingLines.length > 1 && index === headingLines.length - 1 ? "text-[#15803d]" : ""}`}>
+              {line}
+            </span>
+          ))}
         </h2>
         <p className="mt-[10px] max-w-[560px] text-[13px] leading-[1.65] text-[#64748b]">{data.intro}</p>
 
@@ -366,7 +373,7 @@ export default function EngineSizesSection({
 
           {mobileSwapOpen ? (
             <div className="absolute right-0 top-[calc(100%+8px)] z-20 w-[240px] rounded-[12px] border border-[#e5e7eb] bg-white p-2 shadow-[0_12px_30px_rgba(13,27,46,0.14)]">
-              <div className="px-2 pb-2 text-[10px] font-bold uppercase tracking-[0.5px] text-[#94a3b8]">Swap panel</div>
+              <div className="px-2 pb-2 text-[10px] font-bold uppercase tracking-[0.5px] text-[#94a3b8]">{ui.swapLabel ?? "Swap panel"}</div>
               <div className="flex flex-col gap-1">
                 {groups
                   .map((group, index) => ({ group, index }))
@@ -433,7 +440,7 @@ export default function EngineSizesSection({
 
                   {desktopSwapOpen ? (
                     <div className="absolute right-0 top-[calc(100%+8px)] z-20 w-[250px] rounded-[12px] border border-[#e5e7eb] bg-white p-2 shadow-[0_14px_34px_rgba(13,27,46,0.16)]">
-                      <div className="px-2 pb-2 text-[10px] font-bold uppercase tracking-[0.5px] text-[#94a3b8]">Swap panel</div>
+                      <div className="px-2 pb-2 text-[10px] font-bold uppercase tracking-[0.5px] text-[#94a3b8]">{ui.swapLabel ?? "Swap panel"}</div>
                       <div className="flex flex-col gap-1">
                         {hiddenGroupIndices.map((index) => {
                           const group = groups[index];
@@ -468,12 +475,13 @@ export default function EngineSizesSection({
               kind={activeKind}
               open={openItemIndex === index}
               onToggle={() => setOpenItemIndex((current) => (current === index ? -1 : index))}
+              ui={ui}
             />
           ))}
         </div>
 
         <div className="mt-5">
-          <HelperNote text={data.closing} />
+          <HelperNote text={data.closing} ui={ui} />
         </div>
       </Container>
     </Section>

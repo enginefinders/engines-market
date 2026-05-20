@@ -111,6 +111,9 @@ export default function ReviewsSection({ data, useDataHeading = false }: Props) 
   const [currentIndex, setCurrentIndex] = useState(0);
   const reviewCount = data.reviews.length;
   const heading = splitHeading(data.h2);
+  const headingLines = data.headingLines?.length ? data.headingLines : [heading.lineOne, heading.lineTwo].filter(Boolean);
+  const ui = data.ui ?? {};
+  const reviewSources = data.sources?.length ? data.sources : REVIEW_SOURCES;
   const ratingLabel = `${data.rating.value} out of 5`;
 
   const desktopIndices = useMemo(
@@ -142,10 +145,18 @@ export default function ReviewsSection({ data, useDataHeading = false }: Props) 
 
             <div className="mt-3 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
               <h2 className="max-w-[620px]">
-                <span className="block">
-                  {useDataHeading ? heading.lineOne : <>Trusted by Land Rover <span className="text-[#15803d]">Owners</span></>}
-                </span>
-                <span className="block text-[#15803d]">{heading.lineTwo || "Across the UK"}</span>
+                {useDataHeading ? (
+                  headingLines.map((line, index) => (
+                    <span key={`${line}-${index}`} className={`block ${headingLines.length > 1 && index === headingLines.length - 1 ? "text-[#15803d]" : ""}`}>
+                      {line}
+                    </span>
+                  ))
+                ) : (
+                  <>
+                    <span className="block">Trusted by Land Rover <span className="text-[#15803d]">Owners</span></span>
+                    <span className="block text-[#15803d]">Across the UK</span>
+                  </>
+                )}
               </h2>
 
               <div className="flex items-center gap-3 rounded-[12px] border border-slate-200 bg-white px-4 py-3 shadow-[0_2px_10px_rgba(13,27,46,0.05)] lg:mb-1">
@@ -168,7 +179,7 @@ export default function ReviewsSection({ data, useDataHeading = false }: Props) 
             <div className="hidden gap-3 lg:grid lg:grid-cols-3">
               {desktopIndices.map((reviewIndex) => {
                 const review = data.reviews[reviewIndex];
-                const source = REVIEW_SOURCES[reviewIndex % REVIEW_SOURCES.length];
+                const source = reviewSources[reviewIndex % reviewSources.length] as (typeof REVIEW_SOURCES)[number];
 
                 return (
                   <article
@@ -200,7 +211,7 @@ export default function ReviewsSection({ data, useDataHeading = false }: Props) 
 
             <div className="rounded-[14px] border border-slate-200 bg-white px-4 py-5 shadow-[0_2px_10px_rgba(13,27,46,0.06)] lg:hidden">
               <div className="flex items-center justify-between gap-3">
-                <ReviewSource source={REVIEW_SOURCES[currentIndex % REVIEW_SOURCES.length]} />
+                <ReviewSource source={reviewSources[currentIndex % reviewSources.length] as (typeof REVIEW_SOURCES)[number]} />
                 <StarRow size="text-[18px]" />
               </div>
 
@@ -223,7 +234,7 @@ export default function ReviewsSection({ data, useDataHeading = false }: Props) 
                   key={`${review.name}-${index}`}
                   type="button"
                   onClick={() => goTo(index)}
-                  aria-label={`Review ${index + 1}`}
+                  aria-label={`${ui.reviewAriaLabelPrefix ?? "Review"} ${index + 1}`}
                   className={`h-2 w-2 rounded-full transition ${
                     index === currentIndex ? "scale-[1.2] bg-green-600" : "bg-slate-200"
                   }`}
@@ -238,7 +249,9 @@ export default function ReviewsSection({ data, useDataHeading = false }: Props) 
                 <ReviewBadgeIcon />
               </span>
               <div>
-                <p className="font-['Manrope'] text-[14px] font-bold text-[#0d1b2e]">Highly Rated Experience - Leave a Review</p>
+                <p className="font-['Manrope'] text-[14px] font-bold text-[#0d1b2e]">
+                  {ui.leaveReviewTitle ?? "Highly Rated Experience - Leave a Review"}
+                </p>
                 <p className="mt-1 text-[12.5px] leading-[1.55] text-slate-500">
                   <a href="#" className="font-semibold text-[#0d1b2e] underline decoration-slate-300 underline-offset-2">
                     {data.leaveReviewCta.linkText.replace(/\s*-+>\s*$/, "")} →

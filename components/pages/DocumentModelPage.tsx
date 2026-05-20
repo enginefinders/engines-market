@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 import QuoteCheckoutModal from "@/components/checkout/QuoteCheckoutModal";
+import CommonProblemsSection from "@/components/sections/CommonProblemsSection";
 import EngineSizesSection from "@/components/sections/EngineSizesSection";
 import EngineTypesSection from "@/components/sections/EngineTypesSection";
 import EngineYearsSection from "@/components/sections/EngineYearsSection";
@@ -12,10 +13,6 @@ import ModelEngineCodesSection from "@/components/sections/ModelEngineCodesSecti
 import ReviewsSection from "@/components/sections/ReviewsSection";
 import TrustCtaSection from "@/components/sections/TrustCtaSection";
 import VariantCoverageSection from "@/components/sections/VariantCoverageSection";
-import type {
-  HowItWorksData,
-  ReviewsSectionData,
-} from "@/types/brand";
 import type { ModelPageData } from "@/types/model";
 
 function buildStructuredData(pageData: ModelPageData) {
@@ -113,22 +110,16 @@ function toHeroCards(data: ModelPageData) {
     cta: card.cta,
     image: card.image ?? "",
     engineCodes: card.engineCodes,
-    heroLineTwo: `→ Rebuilt units from ${card.priceRange} · Common codes: ${card.engineCodes.join(", ")}`,
+    heroLineTwo: `-> Rebuilt units from ${card.priceRange} - Common codes: ${card.engineCodes.join(", ")}`,
   }));
 }
 
 type DocumentModelPageProps = {
   data: ModelPageData;
-  sharedHowItWorks: HowItWorksData;
-  howItWorksBg: string;
-  reviewsData: ReviewsSectionData;
 };
 
 export default function DocumentModelPage({
   data,
-  sharedHowItWorks,
-  howItWorksBg,
-  reviewsData,
 }: DocumentModelPageProps) {
   const structuredData = buildStructuredData(data);
   const heroCards = toHeroCards(data);
@@ -146,7 +137,10 @@ export default function DocumentModelPage({
         modelCards={heroCards}
       />
 
-      <HowItWorksSection data={sharedHowItWorks} bgImage={howItWorksBg} />
+      <HowItWorksSection
+        data={data.sections.howItWorks}
+        bgImage={data.assets.howItWorksBg}
+      />
 
       <LiveMarketPricesSection
         data={data.sections.liveMarketPrices}
@@ -154,7 +148,7 @@ export default function DocumentModelPage({
         imageSrc={data.assets.heroBg}
       />
 
-      <ReviewsSection data={reviewsData} useDataHeading />
+      <ReviewsSection data={data.sections.reviews} useDataHeading />
 
       <VariantCoverageSection data={data.sections.variantCoverage} />
 
@@ -163,6 +157,10 @@ export default function DocumentModelPage({
         guide={data.sections.variantCoverage.engineGuide}
         modelName={data.model.name}
       />
+
+      {data.sections.commonProblems ? (
+        <CommonProblemsSection data={data.sections.commonProblems} />
+      ) : null}
 
       <EngineTypesSection data={data.sections.engineTypes} dynamicBrandCta />
 

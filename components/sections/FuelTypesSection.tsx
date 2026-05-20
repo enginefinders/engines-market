@@ -131,28 +131,6 @@ function getTabLabel(title: string) {
   return title;
 }
 
-function splitHeading(text: string) {
-  return {
-    lineOne: text,
-    lineTwo: "diesel, petrol, hybrid & electric",
-  };
-}
-
-function splitAccentHeading(text: string) {
-  const accent = "Fuel Type";
-  if (text.includes(accent)) {
-    return {
-      primary: text.replace(accent, "").replace(/\s+-\s*$/, "").trim(),
-      accent,
-    };
-  }
-
-  return {
-    primary: text,
-    accent: "",
-  };
-}
-
 function splitDashItem(entry: string) {
   const parts = normalizeText(entry).split(" - ");
   if (parts.length < 2) {
@@ -168,9 +146,11 @@ function splitDashItem(entry: string) {
 function FuelPanel({
   item,
   mobile = false,
+  ui,
 }: {
   item: FuelItem;
   mobile?: boolean;
+  ui: NonNullable<FuelTypesData["ui"]>;
 }) {
   const families = item.families ?? [];
   const foundIn = item.foundIn ?? [];
@@ -203,7 +183,7 @@ function FuelPanel({
         {families.length ? (
           <div className="mt-4 rounded-[12px] border border-[#e5e7eb] bg-white">
             <div className="border-b border-[#eef2f7] px-4 py-[10px] text-[10px] font-black uppercase tracking-[0.08em] text-[#16a34a]">
-              Common Engine Families
+              {ui.familiesLabel ?? "Common Engine Families"}
             </div>
             <div className="px-4 py-3">
               <div className="space-y-[10px]">
@@ -227,7 +207,7 @@ function FuelPanel({
         {foundIn.length ? (
           <div className="mt-3 rounded-[12px] border border-[#e5e7eb] bg-white">
             <div className="border-b border-[#eef2f7] px-4 py-[10px] text-[10px] font-black uppercase tracking-[0.08em] text-[#16a34a]">
-              Found In
+              {ui.foundInLabel ?? "Found In"}
             </div>
             <div className="px-4 py-3">
               <div className="space-y-[10px]">
@@ -249,10 +229,10 @@ function FuelPanel({
         ) : null}
 
         {knownFor.length ? (
-          <div className="mt-3 rounded-[12px] border border-[#e5e7eb] bg-white">
-            <div className="border-b border-[#eef2f7] px-4 py-[10px] text-[10px] font-black uppercase tracking-[0.08em] text-[#16a34a]">
-              Known For (Brand-wide)
-            </div>
+            <div className="mt-3 rounded-[12px] border border-[#e5e7eb] bg-white">
+              <div className="border-b border-[#eef2f7] px-4 py-[10px] text-[10px] font-black uppercase tracking-[0.08em] text-[#16a34a]">
+              {ui.knownForLabel ?? "Known For"}
+              </div>
             <div className="px-4 py-3">
               <div className="space-y-[10px]">
                 {knownFor.map((entry) => (
@@ -269,7 +249,7 @@ function FuelPanel({
         {typicalModels.length ? (
           <div className="mt-3 rounded-[12px] border border-[#e5e7eb] bg-white">
             <div className="border-b border-[#eef2f7] px-4 py-[10px] text-[10px] font-black uppercase tracking-[0.08em] text-[#16a34a]">
-              Typical Models (UK)
+              {ui.modelsLabel ?? "Typical Models (UK)"}
             </div>
             <div className={`grid gap-x-4 gap-y-[10px] px-4 py-3 ${mobile ? "grid-cols-1" : "grid-cols-2"}`}>
               {typicalModels.map((entry) => (
@@ -299,7 +279,7 @@ function FuelPanel({
         {importantNotes.length ? (
           <div className="mt-3 rounded-[12px] border border-[#e5e7eb] bg-white">
             <div className="border-b border-[#eef2f7] px-4 py-[10px] text-[10px] font-black uppercase tracking-[0.08em] text-[#16a34a]">
-              Important Notes
+              {ui.notesLabel ?? "Important Notes"}
             </div>
             <div className="px-4 py-3">
               <div className="space-y-[10px]">
@@ -328,8 +308,8 @@ export default function FuelTypesSection({ data, bgImage }: Props) {
   const [mobileSwapOpen, setMobileSwapOpen] = useState(false);
 
   const activeItem = items[activeItemIndex] ?? items[0] ?? null;
-  const heading = splitHeading(data.h2);
-  const titleSplit = splitAccentHeading(heading.lineOne);
+  const headingLines = data.headingLines?.length ? data.headingLines : [data.h2];
+  const ui = data.ui ?? {};
   const visibleItems = visibleItemIndices.map((index) => items[index]).filter(Boolean);
   const hiddenItemIndices = items
     .map((_, index) => index)
@@ -371,17 +351,17 @@ export default function FuelTypesSection({ data, bgImage }: Props) {
 
       <Container>
         <div className="relative z-[1]">
-          <p className="section-pill">Engine Fuel Type</p>
+          <p className="section-pill">{data.tag}</p>
 
           <div className="mt-3 flex items-start justify-between gap-4">
             <div className="max-w-[760px]">
               <h2 className="text-[26px] font-extrabold leading-[1.16] tracking-[-0.5px] text-[#0d1b2e] md:text-[30px] lg:text-[34px]">
-                <span>{titleSplit.primary}</span>
-                {titleSplit.accent ? <span className="text-[#15803d]"> {titleSplit.accent}</span> : null}
+                {headingLines.map((line, index) => (
+                  <span key={`${line}-${index}`} className={`block ${headingLines.length > 1 && index === headingLines.length - 1 ? "text-[#15803d]" : ""}`}>
+                    {line}
+                  </span>
+                ))}
               </h2>
-              <p className="mt-1 font-['Manrope'] text-[1.05rem] font-bold tracking-[-0.02em] text-green-700 sm:text-[1.18rem]">
-                {heading.lineTwo}
-              </p>
               <p className="mt-3 max-w-[760px] text-[12.5px] leading-[1.7] text-slate-600 lg:text-[13px]">
                 {normalizeText(data.intro)}
               </p>
@@ -400,7 +380,7 @@ export default function FuelTypesSection({ data, bgImage }: Props) {
 
                 {desktopSwapOpen ? (
                   <div className="absolute right-0 top-[calc(100%+8px)] z-20 w-[240px] rounded-[12px] border border-[#e5e7eb] bg-white p-2 shadow-[0_14px_34px_rgba(13,27,46,0.16)]">
-                    <div className="px-2 pb-2 text-[10px] font-bold uppercase tracking-[0.5px] text-[#94a3b8]">Swap panel</div>
+                    <div className="px-2 pb-2 text-[10px] font-bold uppercase tracking-[0.5px] text-[#94a3b8]">{ui.swapLabel ?? "Swap panel"}</div>
                     <div className="flex flex-col gap-1">
                       {hiddenItemIndices.map((index) => {
                         const item = items[index];
@@ -448,7 +428,7 @@ export default function FuelTypesSection({ data, bgImage }: Props) {
 
               {mobileSwapOpen ? (
                 <div className="absolute right-0 top-[calc(100%+8px)] z-20 w-[240px] rounded-[12px] border border-[#e5e7eb] bg-white p-2 shadow-[0_12px_30px_rgba(13,27,46,0.14)]">
-                  <div className="px-2 pb-2 text-[10px] font-bold uppercase tracking-[0.5px] text-[#94a3b8]">Swap panel</div>
+                  <div className="px-2 pb-2 text-[10px] font-bold uppercase tracking-[0.5px] text-[#94a3b8]">{ui.swapLabel ?? "Swap panel"}</div>
                   <div className="flex flex-col gap-1">
                     {items
                       .map((item, index) => ({ item, index }))
@@ -481,14 +461,14 @@ export default function FuelTypesSection({ data, bgImage }: Props) {
                     onClick={() => setActiveItemIndex(itemIndex)}
                     className={`h-full text-left transition ${isVisibleActive ? "" : "lg:opacity-[0.98]"}`}
                   >
-                    <FuelPanel item={item} mobile={false} />
+                    <FuelPanel item={item} mobile={false} ui={ui} />
                   </button>
                 );
               })}
             </div>
 
             <div className="mt-5 lg:hidden">
-              <FuelPanel item={activeItem} mobile />
+              <FuelPanel item={activeItem} mobile ui={ui} />
             </div>
           </>
         ) : (
@@ -503,13 +483,14 @@ export default function FuelTypesSection({ data, bgImage }: Props) {
                   aria-level={3}
                   className="font-['Manrope'] text-[16px] font-extrabold leading-[1.2] text-[#0d1b2e]"
                 >
-                  Fuel type guidance
+                  {ui.emptyStateTitle ?? "Fuel type guidance"}
+                  
                 </div>
                 <p className="mt-2 text-[12.5px] leading-[1.7] text-slate-600">
                   {normalizeText(data.intro)}
                 </p>
                 <p className="mt-3 text-[12px] leading-[1.65] text-slate-500">
-                  Detailed fuel-type content is being standardised across all brand pages. You can still use the registration form above to identify the correct engine and matching replacement options.
+                  {ui.emptyStateDescription ?? "Detailed fuel-type content is being standardised across all brand pages. You can still use the registration form above to identify the correct engine and matching replacement options."}
                 </p>
               </div>
             </div>
@@ -533,7 +514,7 @@ export default function FuelTypesSection({ data, bgImage }: Props) {
               data-quote-source="fuel-types-summary"
               className="hidden flex-none items-center gap-2 rounded-[9px] border border-[#0d1b2e] bg-white px-4 py-3 text-[11.5px] font-bold text-[#0d1b2e] lg:inline-flex"
             >
-              <span>Find my engine</span>
+                <span>{ui.closingButtonText ?? "Find my engine"}</span>
               <ArrowIcon />
             </a>
           </div>

@@ -76,6 +76,24 @@ function getTrustIcon(title: string) {
 }
 
 export default function TrustCtaSection({ data, brandName, imageSrc }: Props) {
+  const ui = data.ui ?? {};
+  const secondaryAction = data.secondaryAction ?? {};
+  const headingLines = data.h2 ? data.h2.split(/\s+-\s+/) : [];
+  const trustBullets = ui.trustBullets ?? [
+    "100% Free",
+    "No Obligation",
+    "Fast & secure process",
+    "UK-based support",
+  ];
+  const pointLabel = ui.pointLabel?.trim() ?? "Included";
+  const stripLabel = ui.stripLabel?.trim() ?? "Trusted UK Engine Marketplace";
+  const stripTitle = ui.stripTitle?.trim() || `Compare ${brandName} engine prices with vetted UK specialists`;
+  const stripDescription = ui.stripDescription?.trim() || data.finalText;
+  const secondaryActionText = secondaryAction.text?.trim();
+  const showPointLabel = ui.showPointLabel ?? true;
+  const showStripLabel = ui.showStripLabel ?? true;
+  const showSecondaryAction = ui.showSecondaryAction ?? true;
+
   return (
     <Section className="bg-white px-0 pt-3 sm:pt-4">
       <div className="w-full overflow-hidden bg-[#071936] shadow-[0_18px_46px_rgba(7,25,54,0.16)]">
@@ -85,7 +103,15 @@ export default function TrustCtaSection({ data, brandName, imageSrc }: Props) {
               <p className="text-label text-blue-200">{data.tag}</p>
 
               <h2 className="mt-2 max-w-[500px] text-[1.5rem] font-black leading-[1.02] !text-white sm:text-[1.8rem]">
-                {data.h2}
+                {headingLines.length > 1 ? (
+                  headingLines.map((line, index) => (
+                    <span key={`${line}-${index}`} className={`block ${index === headingLines.length - 1 ? "text-[#22c55e]" : ""}`}>
+                      {line}
+                    </span>
+                  ))
+                ) : (
+                  data.h2
+                )}
               </h2>
 
               <p className="mt-2.5 max-w-[540px] text-[0.85rem] leading-5 text-slate-200">
@@ -100,7 +126,7 @@ export default function TrustCtaSection({ data, brandName, imageSrc }: Props) {
                     <div key={`${point.title}-${index}`} className="rounded-2xl border border-white/10 bg-white/[0.06] px-3 py-2.5">
                       <div className="flex items-center gap-2 text-green-300">
                         <Icon />
-                        <p className="text-label text-green-300">Included</p>
+                        {showPointLabel && pointLabel ? <p className="text-label text-green-300">{pointLabel}</p> : null}
                       </div>
                       <p className="mt-1.5 text-[0.8rem] font-bold leading-5 text-white">{point.title}</p>
                       <p className="mt-1 text-[0.7rem] leading-5 text-slate-300">{point.description}</p>
@@ -116,9 +142,9 @@ export default function TrustCtaSection({ data, brandName, imageSrc }: Props) {
               <div className="mt-4">
                 <CtaStrip
                   tone="dark"
-                  label="Trusted UK Engine Marketplace"
-                  title={`Compare ${brandName} engine prices with vetted UK specialists`}
-                  description={data.finalText}
+                  label={showStripLabel && stripLabel ? stripLabel : undefined}
+                  title={stripTitle}
+                  description={stripDescription}
                   buttonText={data.buttonText.replace("->", "").trim()}
                   icon={<QuoteIcon />}
                   linkProps={{
@@ -127,24 +153,21 @@ export default function TrustCtaSection({ data, brandName, imageSrc }: Props) {
                     "data-quote-source": "trust-cta",
                   }}
                   secondaryAction={
-                    <a
-                      href="tel:03330000044"
-                      className="inline-flex min-h-[46px] items-center justify-center gap-2 rounded-[10px] border border-white/14 bg-white/[0.08] px-4 text-[11px] font-bold text-white transition hover:bg-white/[0.12]"
-                    >
-                      <PhoneIcon />
-                      Call Our Experts
-                    </a>
+                    showSecondaryAction && secondaryActionText ? (
+                      <a
+                        href={secondaryAction.href ?? "tel:03330000044"}
+                        className="inline-flex min-h-[46px] items-center justify-center gap-2 rounded-[10px] border border-white/14 bg-white/[0.08] px-4 text-[11px] font-bold text-white transition hover:bg-white/[0.12]"
+                      >
+                        <PhoneIcon />
+                        {secondaryActionText}
+                      </a>
+                    ) : undefined
                   }
                 />
               </div>
 
               <div className="mt-3 flex flex-wrap gap-x-3 gap-y-1.5">
-                {[
-                  "100% Free",
-                  "No Obligation",
-                  "Fast & secure process",
-                  "UK-based support",
-                ].map((item) => (
+                {trustBullets.map((item) => (
                   <span key={item} className="inline-flex items-center gap-1.5 text-[0.68rem] font-semibold text-slate-300">
                     <CheckIcon />
                     {item}
@@ -159,15 +182,15 @@ export default function TrustCtaSection({ data, brandName, imageSrc }: Props) {
 
               <Image
                 src={imageSrc}
-                alt={`${brandName} vehicle`}
+                alt={data.imageAlt ?? `${brandName} vehicle`}
                 fill
                 className="object-cover object-center opacity-[0.84]"
               />
 
               <div className="absolute bottom-3 right-3 rounded-2xl border border-white/10 bg-[#06172f]/88 px-3.5 py-2.5 text-right backdrop-blur-sm">
-                <p className="text-label text-green-300">Trusted supplier network</p>
-                <p className="mt-1 text-[0.8rem] font-bold text-white">Warranty-backed rebuilt & used options</p>
-                <p className="mt-1 text-[0.69rem] text-slate-300">Every quote checked for fitment, quality and lead time.</p>
+                <p className="text-label text-green-300">{ui.imageBadgeLabel ?? "Trusted supplier network"}</p>
+                <p className="mt-1 text-[0.8rem] font-bold text-white">{ui.imageBadgeTitle ?? "Warranty-backed rebuilt & used options"}</p>
+                <p className="mt-1 text-[0.69rem] text-slate-300">{ui.imageBadgeText ?? "Every quote checked for fitment, quality and lead time."}</p>
               </div>
             </div>
           </div>

@@ -156,31 +156,22 @@ function splitTagline(tagline: string) {
 }
 
 function splitHeading(title: string) {
-  const match = title.match(/^(3\s+Simple\s+Steps)\s*(.*)$/i);
-  const accent = "Best Land Rover Replacement Engine";
-
-  if (!match) {
-    const [beforeAccent, afterAccent] = title.split(accent);
-    return { lead: beforeAccent?.trim() || title, sublead: accent, subleadPrefix: afterAccent ? beforeAccent.trim() : title, accentOnly: afterAccent ? accent : "" };
-  }
-
-  const remainder = match[2].trim();
-  const [beforeAccent, afterAccent] = remainder.split(accent);
-
-  return {
-    lead: match[1].trim(),
-    sublead: remainder,
-    subleadPrefix: afterAccent !== undefined ? beforeAccent.trim() : remainder,
-    accentOnly: afterAccent !== undefined ? accent : "",
-  };
+  return title
+    .split(/\s+-\s+/)
+    .map((line) => line.trim())
+    .filter(Boolean);
 }
 
 function DesktopSideCard({
   card,
   onOpen,
+  stepLabel,
+  actionLabel,
 }: {
   card: HowItWorksData["cards"][number];
   onOpen: () => void;
+  stepLabel: string;
+  actionLabel: string;
 }) {
   return (
     <button
@@ -193,7 +184,7 @@ function DesktopSideCard({
       </div>
 
       <span className="mt-[10px] inline-flex w-fit text-[9px] font-bold uppercase tracking-[0.9px] text-[#15803d]">
-        Step {card.number}
+        {stepLabel} {card.number}
       </span>
 
       <div role="heading" aria-level={3} className="mt-[10px] font-['Manrope'] text-[15px] font-bold leading-[1.25] text-[#0d1b2e]">
@@ -205,7 +196,7 @@ function DesktopSideCard({
       <div className="mt-auto flex items-center justify-end pt-5 text-[10px] font-semibold text-[#6b7280]">
         <span className="inline-flex items-center gap-[5px]">
           <RefreshIcon />
-          <span>Click to expand</span>
+          <span>{actionLabel}</span>
         </span>
         <span className="ml-2">
           <ArrowChevron />
@@ -218,9 +209,13 @@ function DesktopSideCard({
 function DesktopActiveCard({
   card,
   onClose,
+  stepLabel,
+  actionLabel,
 }: {
   card: HowItWorksData["cards"][number];
   onClose: () => void;
+  stepLabel: string;
+  actionLabel: string;
 }) {
   return (
     <button
@@ -234,11 +229,11 @@ function DesktopActiveCard({
             {getIcon(card.icon)}
           </div>
           <span className="inline-flex text-[9px] font-bold uppercase tracking-[0.9px] text-[#22c55e]">
-            Step {card.number}
+            {stepLabel} {card.number}
           </span>
         </div>
         <span className="inline-flex items-center gap-[4px] text-[9px] font-semibold text-[#64748b]">
-          <span>Click to view details</span>
+          <span>{actionLabel}</span>
           <ExternalIcon />
         </span>
       </div>
@@ -267,10 +262,16 @@ function MobileCard({
   card,
   open,
   onToggle,
+  stepLabel,
+  openLabel,
+  closeLabel,
 }: {
   card: HowItWorksData["cards"][number];
   open: boolean;
   onToggle: () => void;
+  stepLabel: string;
+  openLabel: string;
+  closeLabel: string;
 }) {
   return (
     <div className="overflow-hidden rounded-[12px]">
@@ -286,7 +287,7 @@ function MobileCard({
 
           <div className="min-w-0 flex-1">
             <span className="mb-[6px] inline-block text-[9px] font-bold uppercase tracking-[0.9px] text-[#15803d]">
-              Step {card.number}
+              {stepLabel} {card.number}
             </span>
             <div role="heading" aria-level={3} className="font-['Manrope'] text-[14px] font-bold leading-[1.3] text-[#0d1b2e]">
               {card.front.h3}
@@ -294,7 +295,7 @@ function MobileCard({
             <p className="mt-[5px] text-[11.5px] leading-[1.5] text-[#6b7280]">{card.front.text}</p>
             <span className="mt-2 inline-flex items-center gap-[5px] text-[10px] font-semibold text-[#15803d]">
               <RefreshIcon />
-              <span>TAP TO FLIP</span>
+              <span>{openLabel}</span>
             </span>
           </div>
 
@@ -310,10 +311,10 @@ function MobileCard({
         >
           <div className="mb-[14px] flex items-center justify-between gap-3">
             <span className="inline-flex text-[9px] font-bold uppercase tracking-[0.9px] text-[#22c55e]">
-              Step {card.number}
+              {stepLabel} {card.number}
             </span>
             <span className="inline-flex items-center gap-1 text-[9px] font-semibold text-[#475569]">
-              <span>TAP TO FLIP BACK</span>
+              <span>{closeLabel}</span>
               <RefreshIcon />
             </span>
           </div>
@@ -343,19 +344,27 @@ export default function HowItWorksSection({ data, bgImage }: Props) {
   const defaultCardNumber = data.cards[1]?.number ?? data.cards[0]?.number ?? 1;
   const [activeCard, setActiveCard] = useState<number>(defaultCardNumber);
   const tagline = splitTagline(data.tagline);
-  const heading = splitHeading(data.h2);
+  const headingLines = data.headingLines?.length ? data.headingLines : splitHeading(data.h2);
+  const ui = data.ui ?? {};
+  const stepLabel = ui.stepLabel ?? "Step";
+  const footerNote = ui.footerNote ?? "Most replacements completed within 3-5 days.";
 
   const active = useMemo(
     () => data.cards.find((card) => card.number === activeCard) ?? data.cards[0],
     [activeCard, data.cards],
   );
 
-  const trustItems = [
-    { label: "12-Month Warranty", icon: <WarrantyIcon /> },
-    { label: "Supply & Fit Available", icon: <WrenchIcon /> },
-    { label: "Nationwide Delivery", icon: <TruckIcon /> },
-    { label: "Trusted UK Suppliers", icon: <UsersIcon /> },
+  const trustLabels = ui.mobileTrustItems ?? [
+    "12-Month Warranty",
+    "Supply & Fit Available",
+    "Nationwide Delivery",
+    "Trusted UK Suppliers",
   ];
+  const trustItems = trustLabels.map((label, index) => ({
+    label,
+    icon:
+      index === 0 ? <WarrantyIcon /> : index === 1 ? <WrenchIcon /> : index === 2 ? <TruckIcon /> : <UsersIcon />,
+  }));
 
   return (
     <Section className="relative overflow-hidden bg-[#f8f9fa]">
@@ -378,20 +387,18 @@ export default function HowItWorksSection({ data, bgImage }: Props) {
           </div>
 
           <h2 className="max-w-[760px] font-['Manrope'] text-[27px] font-extrabold leading-[1.12] tracking-[-0.5px] text-[#0d1b2e] lg:text-[44px] lg:leading-[1.03] lg:tracking-[-1px]">
-              <span className="block">{heading.lead}</span>
-              {heading.sublead ? (
-                <span className="mt-1 block text-[21px] leading-[1.15] lg:text-[34px]">
-                  {heading.accentOnly ? (
-                    <>
-                      <span>{heading.subleadPrefix} </span>
-                      <span className="text-[#15803d]">{heading.accentOnly}</span>
-                    </>
-                  ) : (
-                    heading.sublead
-                  )}
+            {headingLines.map((line, index) => {
+              const isAccent = headingLines.length > 1 && index === headingLines.length - 1;
+              return (
+                <span
+                  key={`${line}-${index}`}
+                  className={`block ${isAccent ? "text-[#15803d]" : ""} ${index > 0 ? "mt-1 text-[21px] leading-[1.15] lg:text-[34px]" : ""}`}
+                >
+                  {line}
                 </span>
-              ) : null}
-            </h2>
+              );
+            })}
+          </h2>
         </div>
 
         <div className="mt-[18px] px-4 sm:px-0 lg:hidden">
@@ -402,6 +409,9 @@ export default function HowItWorksSection({ data, bgImage }: Props) {
                 card={card}
                 open={activeCard === card.number}
                 onToggle={() => setActiveCard((current) => (current === card.number ? 0 : card.number))}
+                stepLabel={stepLabel}
+                openLabel={ui.mobileOpenLabel ?? "Tap to flip"}
+                closeLabel={ui.mobileCloseLabel ?? "Tap to flip back"}
               />
             ))}
           </div>
@@ -413,9 +423,21 @@ export default function HowItWorksSection({ data, bgImage }: Props) {
               const isActive = card.number === active?.number;
 
               return isActive ? (
-                <DesktopActiveCard key={card.number} card={card} onClose={() => setActiveCard(card.number)} />
+                <DesktopActiveCard
+                  key={card.number}
+                  card={card}
+                  onClose={() => setActiveCard(card.number)}
+                  stepLabel={stepLabel}
+                  actionLabel={ui.desktopOpenLabel ?? "Click to view details"}
+                />
               ) : (
-                <DesktopSideCard key={card.number} card={card} onOpen={() => setActiveCard(card.number)} />
+                <DesktopSideCard
+                  key={card.number}
+                  card={card}
+                  onOpen={() => setActiveCard(card.number)}
+                  stepLabel={stepLabel}
+                  actionLabel={ui.desktopClosedLabel ?? "Click to expand"}
+                />
               );
             })}
           </div>
@@ -430,7 +452,7 @@ export default function HowItWorksSection({ data, bgImage }: Props) {
               {tagline.lead}
               {tagline.emphasis ? <span className="font-bold text-[#15803d]"> - {tagline.emphasis}</span> : null}
             </p>
-            <p className="mt-1 text-[12px] font-normal leading-[1.4] text-[#6b7280]">Most replacements completed within 3-5 days.</p>
+            <p className="mt-1 text-[12px] font-normal leading-[1.4] text-[#6b7280]">{footerNote}</p>
           </div>
         </div>
 

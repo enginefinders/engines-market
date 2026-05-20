@@ -1,4 +1,5 @@
 import type {
+  CommonProblemsData,
   EngineCodesData,
   EngineSizesData,
   EngineTypesData,
@@ -6,14 +7,28 @@ import type {
   FaqSectionData,
   FuelTypesData,
   HeroSectionData,
+  HowItWorksData,
   LiveMarketPricesData,
+  ReviewsSectionData,
   TrustCtaData,
 } from "@/types/brand";
 
 export type ModelVariantCoverageSectionData = {
   tag: string;
   h2: string;
+  headingLines?: string[];
   subheading: string;
+  groups?: {
+    title: string;
+    cardSlugs: string[];
+  }[];
+  ui?: {
+    fromPriceLabel?: string;
+    specsLabel?: string;
+    rebuiltLabel?: string;
+    yearsLabel?: string;
+    yearsFallback?: string;
+  };
   cards: {
     h3: string;
     slug: string;
@@ -27,6 +42,7 @@ export type ModelVariantCoverageSectionData = {
     image?: string;
   }[];
   directory: {
+    label?: string;
     h3: string;
     intro: string;
     groups: {
@@ -48,6 +64,7 @@ export type ModelVariantCoverageSectionData = {
         size: string;
         power: string;
         years: string;
+        image?: string;
         compatibleVariants: string[];
         commonFailures: string[];
         avgRebuiltPrice: string;
@@ -76,6 +93,7 @@ export type ModelPageData = {
   };
   assets: {
     heroBg: string;
+    howItWorksBg: string;
     engineCodesBg?: string;
     engineTypesBg?: string;
     engineSizesBg?: string;
@@ -85,9 +103,12 @@ export type ModelPageData = {
   structuredData?: Record<string, unknown>;
   sections: {
     hero: HeroSectionData;
+    howItWorks: HowItWorksData;
     liveMarketPrices: LiveMarketPricesData;
+    reviews: ReviewsSectionData;
     variantCoverage: ModelVariantCoverageSectionData;
     engineCodes: EngineCodesData;
+    commonProblems?: CommonProblemsData;
     engineTypes: EngineTypesData;
     engineSizes: EngineSizesData;
     fuelTypes: FuelTypesData;

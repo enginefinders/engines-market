@@ -142,8 +142,12 @@ export default function LiveMarketPricesSection({ data, modelCards, imageSrc }: 
     [clock, data.feed.density, data.feed.entries, data.feed.visibleRows],
   );
 
-  const filterTabs = useMemo(() => buildFilterTabs(modelCards), [modelCards]);
+  const filterTabs = useMemo(
+    () => data.filterTabs?.length ? data.filterTabs : buildFilterTabs(modelCards),
+    [data.filterTabs, modelCards],
+  );
   const activeFilter = filterTabs.find((tab) => tab.key === activeTab) ?? filterTabs[0] ?? null;
+  const ui = data.ui ?? {};
 
   const visibleRows = useMemo(() => {
     if (!activeFilter || activeFilter.key === "all") return feedRows;
@@ -157,8 +161,7 @@ export default function LiveMarketPricesSection({ data, modelCards, imageSrc }: 
   const pinnedTabs = filterTabs.length ? filterTabs.slice(0, 5) : [];
   const overflowTabs = filterTabs.slice(5);
 
-  const accent = "Engine Quotes & Price Guide";
-  const [headingPrefix, hasAccent] = data.h2.split(accent);
+  const headingLines = data.headingLines?.length ? data.headingLines : [data.h2];
   const sectionImage = imageSrc || "/images/brands/land-rover/brand/land-rover-how-it-works-bg.webp";
 
   return (
@@ -170,13 +173,14 @@ export default function LiveMarketPricesSection({ data, modelCards, imageSrc }: 
         </div>
 
         <h2 className="max-w-none font-['Manrope'] text-[26px] font-extrabold leading-[1.18] tracking-[-0.4px] text-[#0d1b2e] md:text-[30px] md:tracking-[-0.7px] lg:text-[43px] lg:leading-[1.06] lg:tracking-[-1px]">
-          {hasAccent !== undefined ? (
-            <>
-              {headingPrefix.trim()} <span className="text-[#15803d]">{accent}</span>
-            </>
-          ) : (
-            data.h2
-          )}
+          {headingLines.map((line, index) => {
+            const isAccent = headingLines.length > 1 && index === headingLines.length - 1;
+            return (
+              <span key={`${line}-${index}`} className={`block ${isAccent ? "text-[#15803d]" : ""}`}>
+                {line}
+              </span>
+            );
+          })}
         </h2>
 
         <p className="mt-[10px] max-w-[760px] text-[13px] leading-[1.6] text-[#6b7280] md:text-[14px]">
@@ -188,7 +192,7 @@ export default function LiveMarketPricesSection({ data, modelCards, imageSrc }: 
             <div className="relative aspect-[4/3.6] min-h-[340px] lg:min-h-[520px]">
               <Image
                 src={sectionImage}
-                alt="Engine market comparison and model pricing"
+                alt={data.imageAlt ?? "Engine market comparison and model pricing"}
                 fill
                 className="object-contain object-center p-3 lg:p-4"
                 sizes="(max-width: 1024px) 100vw, 38vw"
@@ -256,8 +260,10 @@ export default function LiveMarketPricesSection({ data, modelCards, imageSrc }: 
 
             <div className="overflow-hidden rounded-[14px] border border-[#dfe5ee] bg-white shadow-[0_2px_12px_rgba(13,27,46,0.07)] lg:flex lg:h-[520px] lg:flex-col">
               <div className="border-b border-[#e4e7ee] bg-[#f9fafc] px-4 py-[10px] text-[11px] font-medium text-[#9aa3b5]">
-                Showing {visibleRows.length} {visibleRows.length === 1 ? "entry" : "entries"}
-                {activeFilter?.key && activeFilter.key !== "all" ? ` for ${activeFilter.label}` : " across all models"}
+                Showing {visibleRows.length} {visibleRows.length === 1 ? (ui.showingSingleLabel ?? "entry") : (ui.showingPluralLabel ?? "entries")}
+                {activeFilter?.key && activeFilter.key !== "all"
+                  ? ` for ${activeFilter.label}`
+                  : ` ${ui.acrossAllLabel ?? "across all models"}`}
               </div>
 
               <div className="max-h-[520px] overflow-y-auto lg:flex-1 lg:max-h-none">
@@ -298,7 +304,7 @@ export default function LiveMarketPricesSection({ data, modelCards, imageSrc }: 
                   </ul>
                 ) : (
                   <div className="px-4 py-10 text-center text-[13px] text-[#5a6478]">
-                    No entries match that model filter yet.
+                    {ui.noEntriesLabel ?? "No entries match that model filter yet."}
                   </div>
                 )}
               </div>
@@ -307,7 +313,7 @@ export default function LiveMarketPricesSection({ data, modelCards, imageSrc }: 
                 <div className="flex items-center gap-[6px] text-[11px] font-medium text-[#9aa3b5]">
                   <RefreshIcon />
                   <span>
-                    Last updated: <span className="font-semibold text-[#6b7280]">{formatUpdatedAt(clock)}</span>
+                    {ui.updatedLabel ?? "Last updated:"} <span className="font-semibold text-[#6b7280]">{formatUpdatedAt(clock)}</span>
                   </span>
                 </div>
               </div>
@@ -318,7 +324,7 @@ export default function LiveMarketPricesSection({ data, modelCards, imageSrc }: 
         <div className="mt-5">
           <CtaStrip
             tone="light"
-            label="Live Quote Benchmark"
+            label={ui.ctaLabel ?? "Live Quote Benchmark"}
             title={data.cta.heading}
             description={data.cta.text}
             buttonText={data.cta.buttonText.replace(/\s*->\s*$/, "")}

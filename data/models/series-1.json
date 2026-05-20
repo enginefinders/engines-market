@@ -10,77 +10,167 @@
     "legacySlug": "1-series"
   },
   "seo": {
-    "title": "BMW 1 Series Engine Replacement - Compare Prices & Get Quotes",
-    "description": "BMW 1 Series engine replacement cost guide. Compare rebuilt, reconditioned and used engine prices from £1,200 with UK-wide supply and fit specialists.",
+    "title": "BMW 1 Series Engine Replacement - Compare Prices",
+    "description": "BMW 1 Series engine replacement cost guide. Compare rebuilt, reconditioned & used engine prices from £1,150. 12-month warranty & UK supply & fit specialists.",
     "canonical": "/bmw/series-1"
   },
   "assets": {
-    "heroBg": "/images/brands/bmw/models/bmw-1-series-model-card.png",
+    "heroBg": "/images/brands/bmw/models/bmw-series-1-model-card.png",
+    "howItWorksBg": "/images/brands/bmw/brand/bmw-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/bmw/brand/bmw-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/bmw/brand/bmw-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/bmw/brand/bmw-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/bmw/brand/bmw-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/bmw/models/bmw-1-series-model-card.png"
+    "ctaImage": "/images/brands/bmw/models/bmw-series-1-model-card.png"
   },
   "sections": {
     "hero": {
       "tag": "BMW ENGINE MARKETPLACE",
-      "h1": "BMW 1 Series Engine Replacement - Compare Prices & Get Quotes",
-      "subheading": "Get quotes today from trusted UK BMW 1 Series engine specialists. Compare prices on reconditioned, rebuilt and used engines with supply and fit available.",
+      "h1": "BMW 1 Series Engine Replacement - Compare Prices & Save",
+      "subheading": "Get quotes today from trusted UK BMW 1 Series engine specialists. Compare prices on reconditioned, rebuilt and used engines, with supply & fit available across the network.",
       "trustBadges": [
         "Supply & Fit Available",
         "12-Month Warranty",
         "Nationwide Delivery",
         "100+ Suppliers"
       ],
-      "ctaLinkText": "Compare BMW 1 Series Engine Prices",
+      "ctaLinkText": "Get Free BMW 1 Series Engine Quotes →",
       "supportingText": "Get tailored BMW 1 Series engine quotes from vetted UK specialists.",
-      "ticker": "Instant Quotes - No Obligation - 100% Free - Reconditioned - Rebuilt - Used - Supply & Fit Available - UK-Wide Network",
+      "ticker": "● Instant Quotes · No Obligation · 100% Free · Reconditioned · Rebuilt · Used · Supply & Fit Available · UK-Wide Network",
       "form": {
         "heading": "Find Your BMW 1 Series Engine",
         "subtitle": "Enter your registration number to compare BMW 1 Series engine options.",
-        "inputPlaceholder": "Enter Reg (e.g. AB12 XYZ)",
-        "buttonText": "Get Free Engine Quotes",
-        "note": "Your details are secure. No spam, just genuine quotes from UK BMW 1 Series specialists."
+        "inputPlaceholder": "Enter Reg (e.g. AB12 CDE)",
+        "buttonText": "Get Free BMW 1 Series Engine Quotes →",
+        "note": "🔒 Secure enquiry - no spam, no pressure. Genuine quotes only from vetted UK BMW 1 Series specialists."
+      },
+      "imageAlt": "BMW 1 Series engine replacement UK - compare reconditioned and rebuilt engine prices",
+      "highlights": [
+        {
+          "title": "1 Series Diesel Engines",
+          "price": "from £1,250 to £3,600",
+          "line1": "1 Series Diesel Engines - from £1,250 to £3,600",
+          "line2": "-> Rebuilt units from £1,250 · Common codes: N47D20, B47D20, N47D16, B37C15",
+          "detail": "-> Rebuilt units from £1,250 · Common codes: N47D20, B47D20, N47D16, B37C15",
+          "image": "",
+          "imageAlt": "BMW 1 Series diesel engine replacement - N47D20 B47D20 rebuilt reconditioned UK"
+        },
+        {
+          "title": "1 Series Petrol Engines",
+          "price": "from £1,150 to £3,200",
+          "line1": "1 Series Petrol Engines - from £1,150 to £3,200",
+          "line2": "-> Rebuilt units from £1,150 · Common codes: N13B16, B38B15, B48B20, N20B20",
+          "detail": "-> Rebuilt units from £1,150 · Common codes: N13B16, B38B15, B48B20, N20B20",
+          "image": "",
+          "imageAlt": "BMW 1 Series petrol engine replacement - N13B16 B38B15 B48B20 rebuilt reconditioned UK"
+        },
+        {
+          "title": "1 Series Performance Engines",
+          "price": "from £2,500 to £6,800",
+          "line1": "1 Series Performance Engines - from £2,500 to £6,800",
+          "line2": "-> Rebuilt units from £2,500 · Common codes: N55B30, B58B30, B48B20 (M135i, M140i)",
+          "detail": "-> Rebuilt units from £2,500 · Common codes: N55B30, B58B30, B48B20 (M135i, M140i)",
+          "image": "",
+          "imageAlt": "BMW M135i M140i engine replacement - N55B30 B58B30 rebuilt reconditioned UK specialist"
+        }
+      ],
+      "headingLines": [
+        "BMW 1 Series Engine Replacement",
+        "Compare Prices & Save"
+      ],
+      "mobileBar": {
+        "brandText": "ENGINEMARKET",
+        "callLabel": "Call",
+        "quoteLabel": "GET QUOTES"
+      },
+      "registrationInput": {
+        "label": "Enter your vehicle registration",
+        "platePlaceholder": "AB12 CDE",
+        "countryCode": "UK",
+        "countryLabel": "United Kingdom"
+      }
+    },
+    "howItWorks": {
+      "tag": "How It Works",
+      "h2": "3 Simple Steps to Finding the Best BMW 1 Series Replacement Engine",
+      "cards": [
+        {
+          "number": 1,
+          "icon": "registration",
+          "front": {
+            "h3": "Enter Your BMW 1 Series Registration",
+            "text": "Instantly verify your exact model, engine code and fuel type via DVLA - 114i to M140i."
+          },
+          "back": {
+            "heading": "Your Car, Precisely Identified",
+            "text": "Engines Market uses the official DVLA database to pull accurate details about your 1 Series, not just model name.",
+            "bullets": [
+              "Your Precise Model - from 116d, 118d, 120d, 120i to M140i",
+              "Your Engine Code - N47, B47, B48, B58 and more",
+              "Vehicle Specs Check - fuel type, engine size, year, variant - all verified instantly",
+              "No paperwork, no guesswork, 100% free.",
+              "3: Live Market Prices"
+            ]
+          }
+        }
+      ],
+      "tagline": "",
+      "headingLines": [
+        "3 Simple Steps",
+        "to Finding the Best BMW 1 Series Replacement Engine"
+      ],
+      "ui": {
+        "stepLabel": "Step",
+        "desktopClosedLabel": "Click to expand",
+        "desktopOpenLabel": "Click to view details",
+        "mobileOpenLabel": "Tap to flip",
+        "mobileCloseLabel": "Tap to flip back",
+        "footerNote": "Most replacements completed within 3-5 days.",
+        "mobileTrustItems": [
+          "12-Month Warranty",
+          "Supply & Fit Available",
+          "Nationwide Delivery",
+          "Trusted UK Suppliers"
+        ]
       }
     },
     "liveMarketPrices": {
       "tag": "Live UK Engine Market Data",
       "h2": "What Are UK Drivers Paying for BMW 1 Series Engine Replacement?",
-      "h3": "The table below shows typical UK rebuilt engine costs across BMW 1 Series variants, covering documented failure causes, chassis generations, engine codes and fuel types based on current market data.",
+      "h3": "The table below outlines typical UK rebuilt engine supply costs across BMW 1 Series variants, detailing verified failure causes, chassis codes, engine specifications, and current market pricing data.",
       "introBullets": [
         {
           "label": "Live market context",
-          "text": "See realistic rebuilt-engine quote ranges across E87, F20/F21 and F40 BMW 1 Series models."
+          "text": "See realistic rebuilt-engine quote ranges across documented BMW 1 Series variants."
         },
         {
-          "label": "Useful benchmark",
-          "text": "Each row highlights the variant, engine code, fuel type and the issue that usually pushes owners into replacement."
+          "label": "Variant specific",
+          "text": "Each row highlights the exact variant, failure trigger, engine code and fuel type behind replacement demand."
         },
         {
           "label": "Specialist pricing",
-          "text": "These figures reflect the UK independent engine-replacement market rather than dealer pricing."
+          "text": "These figures reflect the independent UK engine supplier and rebuilder market rather than main dealer replacement costs."
         },
         {
-          "label": "Quote-ready",
-          "text": "Use the feed as a benchmark before comparing live quotes for your exact registration."
+          "label": "Quote benchmark",
+          "text": "Use the feed to benchmark your own enquiry before comparing live quotes for your registration."
         }
       ],
       "cta": {
         "heading": "Benchmark your own BMW 1 Series quote",
-        "text": "Use these recent enquiries to understand the market, then compare tailored quotes for your exact 1 Series engine.",
+        "text": "Use these recent enquiry ranges to understand the market, then compare tailored quotes for your exact BMW 1 Series engine code.",
         "buttonText": "Compare My BMW 1 Series Engine",
-        "note": "Prices vary by engine code, damage severity, supplier stock and whether you need supply-only or supply and fit."
+        "note": "Prices vary by engine code, variant, damage severity, mileage, supplier stock and whether you need supply-only or supply and fit."
       },
       "badges": [
-        "14 recent enquiries visible",
+        "15 recent enquiries visible",
         "Typical rebuilt market ranges",
         "Engine-code matched rows",
         "UK specialist network"
       ],
       "feed": {
         "isDynamic": false,
-        "rowsCount": 14,
+        "rowsCount": 15,
         "columns": [
           "Year",
           "Model",
@@ -92,595 +182,535 @@
         "timestampLabel": "Last Updated",
         "refreshLabel": "Refresh feed",
         "density": "premium",
-        "visibleRows": 14,
+        "visibleRows": 15,
         "entries": [
           {
-            "Year": "2004-2011",
+            "Year": "2007–2011",
             "Model": "BMW 1 Series (E87) 118d",
             "Engine Code": "N47D20",
             "Fuel": "Diesel 2.0L",
-            "Avg. Quoted Price": "£1,200 - £2,800",
-            "Reported Issue": "Timing chain wear"
+            "Avg. Quoted Price": "£1,350–£2,950",
+            "Reported Issue": "Timing chain tensioner fail"
           },
           {
-            "Year": "2004-2011",
+            "Year": "2007–2011",
             "Model": "BMW 1 Series (E87) 120d",
             "Engine Code": "N47D20",
             "Fuel": "Diesel 2.0L",
-            "Avg. Quoted Price": "£1,400 - £3,200",
-            "Reported Issue": "Swirl flap failure"
+            "Avg. Quoted Price": "£1,500–£3,200",
+            "Reported Issue": "Chain guide wear"
           },
           {
-            "Year": "2004-2011",
-            "Model": "BMW 1 Series (E87) 116i",
-            "Engine Code": "N43B20",
-            "Fuel": "Petrol 2.0L",
-            "Avg. Quoted Price": "£1,000 - £2,400",
-            "Reported Issue": "Valvetronic failure"
-          },
-          {
-            "Year": "2004-2011",
+            "Year": "2007–2011",
             "Model": "BMW 1 Series (E87) 118i",
             "Engine Code": "N43B20",
             "Fuel": "Petrol 2.0L",
-            "Avg. Quoted Price": "£1,100 - £2,600",
-            "Reported Issue": "Carbon buildup"
+            "Avg. Quoted Price": "£1,150–£2,650",
+            "Reported Issue": "Injector carbon build up"
           },
           {
-            "Year": "2011-2015",
+            "Year": "2005–2011",
+            "Model": "BMW 1 Series (E87) 130i",
+            "Engine Code": "N52B30",
+            "Fuel": "Petrol 3.0L",
+            "Avg. Quoted Price": "£2,300–£4,800",
+            "Reported Issue": "Water pump seal leak"
+          },
+          {
+            "Year": "2007–2011",
+            "Model": "BMW 1 Series (E87) 135i",
+            "Engine Code": "N54B30",
+            "Fuel": "Petrol 3.0L",
+            "Avg. Quoted Price": "£2,900–£5,600",
+            "Reported Issue": "High-pressure pump fail"
+          },
+          {
+            "Year": "2011–2015",
             "Model": "BMW 1 Series (F20) 116d",
+            "Engine Code": "N47D16",
+            "Fuel": "Diesel 1.6L",
+            "Avg. Quoted Price": "£1,300–£2,900",
+            "Reported Issue": "Tensioner rattle"
+          },
+          {
+            "Year": "2011–2015",
+            "Model": "BMW 1 Series (F20) 118d",
             "Engine Code": "N47D20",
             "Fuel": "Diesel 2.0L",
-            "Avg. Quoted Price": "£1,200 - £3,000",
-            "Reported Issue": "EGR valve failure"
+            "Avg. Quoted Price": "£1,450–£3,200",
+            "Reported Issue": "Guide rail fracture"
           },
           {
-            "Year": "2015-2019",
-            "Model": "BMW 1 Series (F20) 118d",
-            "Engine Code": "B47D20",
-            "Fuel": "Diesel 2.0L",
-            "Avg. Quoted Price": "£1,500 - £3,800",
-            "Reported Issue": "EGR cooler crack"
-          },
-          {
-            "Year": "2015-2019",
+            "Year": "2015–2019",
             "Model": "BMW 1 Series (F20) 120d",
             "Engine Code": "B47D20",
             "Fuel": "Diesel 2.0L",
-            "Avg. Quoted Price": "£1,600 - £4,000",
-            "Reported Issue": "Oil pump failure"
+            "Avg. Quoted Price": "£1,800–£3,800",
+            "Reported Issue": "EGR cooler crack"
           },
           {
-            "Year": "2011-2015",
-            "Model": "BMW 1 Series (F20) 118i",
+            "Year": "2011–2015",
+            "Model": "BMW 1 Series (F20) 116i",
             "Engine Code": "N13B16",
             "Fuel": "Petrol 1.6L",
-            "Avg. Quoted Price": "£1,200 - £3,200",
-            "Reported Issue": "HPFP failure"
+            "Avg. Quoted Price": "£1,150–£2,500",
+            "Reported Issue": "Chain guide failure"
           },
           {
-            "Year": "2015-2019",
+            "Year": "2015–2019",
+            "Model": "BMW 1 Series (F20) 118i",
+            "Engine Code": "B38B15",
+            "Fuel": "Petrol 1.5L",
+            "Avg. Quoted Price": "£1,350–£3,000",
+            "Reported Issue": "Valve cover leak"
+          },
+          {
+            "Year": "2015–2019",
             "Model": "BMW 1 Series (F20) 120i",
-            "Engine Code": "N20B20",
+            "Engine Code": "B48B20",
             "Fuel": "Petrol 2.0L",
-            "Avg. Quoted Price": "£1,800 - £3,500",
-            "Reported Issue": "Timing guide collapse"
+            "Avg. Quoted Price": "£1,600–£3,700",
+            "Reported Issue": "Coolant loss"
           },
           {
-            "Year": "2013-2019",
-            "Model": "BMW 1 Series (F20) 125i",
-            "Engine Code": "N20B20",
-            "Fuel": "Petrol 2.0L",
-            "Avg. Quoted Price": "£2,000 - £4,500",
-            "Reported Issue": "Turbo bearing failure"
-          },
-          {
-            "Year": "2012-2016",
+            "Year": "2012–2015",
             "Model": "BMW 1 Series (F20) M135i",
             "Engine Code": "N55B30",
             "Fuel": "Petrol 3.0L",
-            "Avg. Quoted Price": "£3,500 - £7,500",
+            "Avg. Quoted Price": "£3,500–£7,200",
             "Reported Issue": "Rod bearing wear"
           },
           {
-            "Year": "2016-2019",
+            "Year": "2016–2019",
             "Model": "BMW 1 Series (F20) M140i",
             "Engine Code": "B58B30",
             "Fuel": "Petrol 3.0L",
-            "Avg. Quoted Price": "£3,800 - £8,200",
-            "Reported Issue": "Coolant leak"
+            "Avg. Quoted Price": "£4,200–£8,500",
+            "Reported Issue": "Thermostat housing crack"
           },
           {
-            "Year": "2019-2024",
+            "Year": "2019–2024",
             "Model": "BMW 1 Series (F40) 118d",
             "Engine Code": "B47D20",
             "Fuel": "Diesel 2.0L",
-            "Avg. Quoted Price": "£2,000 - £4,200",
-            "Reported Issue": "Injector seal leak"
+            "Avg. Quoted Price": "£2,400–£4,500",
+            "Reported Issue": "Turbo shaft play"
           },
           {
-            "Year": "2019-2024",
-            "Model": "BMW 1 Series (F40) 118i",
-            "Engine Code": "B38B15",
-            "Fuel": "Petrol 1.5L",
-            "Avg. Quoted Price": "£1,800 - £3,800",
-            "Reported Issue": "HPFP failure"
+            "Year": "2019–2024",
+            "Model": "BMW 1 Series (F40) M135i xDrive",
+            "Engine Code": "B48B20",
+            "Fuel": "Petrol 2.0L",
+            "Avg. Quoted Price": "£4,800–£9,200",
+            "Reported Issue": "Oil cooler leak"
           }
         ]
+      },
+      "headingLines": [
+        "What Are UK Drivers Paying for BMW 1 Series Engine Replacement?"
+      ],
+      "imageAlt": "BMW 1 Series live market price reference",
+      "filterTabs": [
+        {
+          "key": "all",
+          "label": "All",
+          "matchers": []
+        },
+        {
+          "key": "1-series-116d-engine",
+          "label": "1 Series 116d",
+          "matchers": [
+            "1 series 116d",
+            "1 series 116d engine"
+          ]
+        },
+        {
+          "key": "1-series-118d-engine",
+          "label": "1 Series 118d",
+          "matchers": [
+            "1 series 118d",
+            "1 series 118d engine"
+          ]
+        },
+        {
+          "key": "1-series-120d-engine",
+          "label": "1 Series 120d",
+          "matchers": [
+            "1 series 120d",
+            "1 series 120d engine"
+          ]
+        },
+        {
+          "key": "1-series-125d-engine",
+          "label": "1 Series 125d",
+          "matchers": [
+            "1 series 125d",
+            "1 series 125d engine"
+          ]
+        },
+        {
+          "key": "1-series-114i-engine",
+          "label": "1 Series 114i",
+          "matchers": [
+            "1 series 114i",
+            "1 series 114i engine"
+          ]
+        },
+        {
+          "key": "1-series-116i-engine",
+          "label": "1 Series 116i",
+          "matchers": [
+            "1 series 116i",
+            "1 series 116i engine"
+          ]
+        },
+        {
+          "key": "1-series-118i-engine",
+          "label": "1 Series 118i",
+          "matchers": [
+            "1 series 118i",
+            "1 series 118i engine"
+          ]
+        },
+        {
+          "key": "1-series-120i-engine",
+          "label": "1 Series 120i",
+          "matchers": [
+            "1 series 120i",
+            "1 series 120i engine"
+          ]
+        },
+        {
+          "key": "1-series-125i-engine",
+          "label": "1 Series 125i",
+          "matchers": [
+            "1 series 125i",
+            "1 series 125i engine"
+          ]
+        },
+        {
+          "key": "1-series-m135i-engine",
+          "label": "1 Series M135i",
+          "matchers": [
+            "1 series m135i",
+            "1 series m135i engine"
+          ]
+        },
+        {
+          "key": "1-series-m140i-engine",
+          "label": "1 Series M140i",
+          "matchers": [
+            "1 series m140i",
+            "1 series m140i engine"
+          ]
+        },
+        {
+          "key": "1-series-118d-xdrive-engine",
+          "label": "1 Series 118d xDrive",
+          "matchers": [
+            "1 series 118d xdrive",
+            "1 series 118d xdrive engine"
+          ]
+        }
+      ],
+      "ui": {
+        "showingSingleLabel": "entry",
+        "showingPluralLabel": "entries",
+        "acrossAllLabel": "across all models",
+        "noEntriesLabel": "No entries match that model filter yet.",
+        "updatedLabel": "Last updated:",
+        "ctaLabel": "Live Quote Benchmark"
+      }
+    },
+    "reviews": {
+      "tag": "Customer Reviews",
+      "h2": "Trusted by BMW 1 Series Owners Across the UK",
+      "rating": {
+        "value": 4.8,
+        "count": 0,
+        "summary": "",
+        "basedOn": ""
+      },
+      "reviews": [],
+      "leaveReviewCta": {
+        "text": "",
+        "linkText": "Leave a review ->"
       }
     },
     "variantCoverage": {
       "tag": "Models We Cover",
       "h2": "BMW 1 Series Engine Replacement - All Variants Covered",
-      "subheading": "From the economical 114d to the high-performance M140i xDrive, our network of UK BMW 1 Series engine specialists covers every variant. Select your model to compare rebuilt, reconditioned and used engine prices with 12-month warranty and nationwide supply and fit.",
+      "subheading": "From the economical 114i to the high‑performance M140i xDrive, our network of UK BMW 1 Series engine specialists helps you compare rebuilt, reconditioned and used engine prices. Typical price range for a rebuilt unit with 12‑month warranty - supply & fit available nationwide.",
       "cards": [
         {
-          "h3": "BMW 114d Engine Replacement",
-          "slug": "114d-engine",
-          "subtitle": "N47D16 1.6L diesel - 95 hp",
-          "priceRange": "£1,500 - £2,800",
-          "cta": "Compare 114d Engine Prices",
-          "engineCodes": [
-            "N47D16"
-          ],
-          "fuel": "Diesel",
-          "power": "95 hp",
-          "years": "2012-2015",
-          "image": "/images/brands/bmw/models/bmw-1-series-f20-f21-model-card.png"
-        },
-        {
-          "h3": "BMW 116d Engine Replacement",
-          "slug": "116d-engine",
-          "subtitle": "N47D16 / B37C15 1.5L-1.6L diesel - 116 hp",
-          "priceRange": "£1,200 - £2,700",
-          "cta": "Compare 116d Engine Prices",
+          "h3": "BMW 1 Series 116d Engine Replacement",
+          "slug": "1-series-116d-engine",
+          "subtitle": "N47D16/B47D16 1.6L Diesel · 116hp · 2011-2024",
+          "priceRange": "£1,300-£2,900",
+          "cta": "→ Compare 116d Engine Prices",
           "engineCodes": [
             "N47D16",
-            "B37C15"
+            "B47D16"
           ],
           "fuel": "Diesel",
-          "power": "116 hp",
-          "image": "/images/brands/bmw/models/bmw-1-series-f20-f21-model-card.png"
+          "power": "116hp",
+          "years": "2011-2024",
+          "image": ""
         },
         {
-          "h3": "BMW 118d Engine Replacement",
-          "slug": "118d-engine",
-          "subtitle": "N47D20 / B47D20 2.0L diesel - 143-150 hp",
-          "priceRange": "£1,200 - £3,000",
-          "cta": "Compare 118d Engine Prices",
+          "h3": "BMW 1 Series 118d Engine Replacement",
+          "slug": "1-series-118d-engine",
+          "subtitle": "N47D20/B47D20 2.0L Diesel · 143-150hp · 2004-2024",
+          "priceRange": "£1,350-£3,500",
+          "cta": "→ Compare 118d Engine Prices",
           "engineCodes": [
             "N47D20",
             "B47D20"
           ],
           "fuel": "Diesel",
-          "power": "143-150 hp",
-          "image": "/images/brands/bmw/models/bmw-1-series-e81-e87-model-card.png"
+          "power": "143-150hp",
+          "years": "2004-2024",
+          "image": ""
         },
         {
-          "h3": "BMW 120d Engine Replacement",
-          "slug": "120d-engine",
-          "subtitle": "N47D20 / B47D20 2.0L diesel - 177-190 hp",
-          "priceRange": "£1,400 - £3,800",
-          "cta": "Compare 120d Engine Prices",
+          "h3": "BMW 1 Series 120d Engine Replacement",
+          "slug": "1-series-120d-engine",
+          "subtitle": "N47D20/B47D20 2.0L Diesel · 177-190hp · 2004-2024",
+          "priceRange": "£1,500-£3,800",
+          "cta": "→ Compare 120d Engine Prices",
           "engineCodes": [
             "N47D20",
             "B47D20"
           ],
           "fuel": "Diesel",
-          "power": "177-190 hp",
-          "image": "/images/brands/bmw/models/bmw-1-series-f20-f21-model-card.png"
+          "power": "177-190hp",
+          "years": "2004-2024",
+          "image": ""
         },
         {
-          "h3": "BMW 114i Engine Replacement",
-          "slug": "114i-engine",
-          "subtitle": "N13B16 1.6L petrol - 102 hp",
-          "priceRange": "£1,400 - £2,800",
-          "cta": "Compare 114i Engine Prices",
+          "h3": "BMW 1 Series 125d Engine Replacement",
+          "slug": "1-series-125d-engine",
+          "subtitle": "N47S 2.0L Twin-Turbo Diesel · 218-224hp · 2012-2019",
+          "priceRange": "£2,200-£4,500",
+          "cta": "→ Compare 125d Engine Prices",
           "engineCodes": [
-            "N13B16"
+            "N47S"
           ],
-          "fuel": "Petrol",
-          "power": "102 hp",
-          "years": "2012-2015",
-          "image": "/images/brands/bmw/models/bmw-1-series-f20-f21-model-card.png"
+          "fuel": "Diesel",
+          "power": "218-224hp",
+          "years": "2012-2019",
+          "image": ""
         },
         {
-          "h3": "BMW 116i Engine Replacement",
-          "slug": "116i-engine",
-          "subtitle": "N13B16 / B38B15 1.5L petrol - 109 hp",
-          "priceRange": "£1,200 - £2,600",
-          "cta": "Compare 116i Engine Prices",
+          "h3": "BMW 1 Series 114i Engine Replacement",
+          "slug": "1-series-114i-engine",
+          "subtitle": "N13B16/B38B15 1.6L/1.5L Petrol · 102hp · 2011-2024",
+          "priceRange": "£1,150-£2,500",
+          "cta": "→ Compare 114i Engine Prices",
           "engineCodes": [
             "N13B16",
             "B38B15"
           ],
           "fuel": "Petrol",
-          "power": "109 hp",
-          "image": "/images/brands/bmw/models/bmw-1-series-model-card.png"
+          "power": "102hp",
+          "years": "2011-2024",
+          "image": ""
         },
         {
-          "h3": "BMW 118i Engine Replacement",
-          "slug": "118i-engine",
-          "subtitle": "N13B16 / B38B15 1.5L petrol - 136-140 hp",
-          "priceRange": "£1,200 - £2,900",
-          "cta": "Compare 118i Engine Prices",
+          "h3": "BMW 1 Series 116i Engine Replacement",
+          "slug": "1-series-116i-engine",
+          "subtitle": "N43B20/N13B16/B38B15 1.6L/1.5L Petrol · 102-136hp · 2004-2024",
+          "priceRange": "£1,150-£2,650",
+          "cta": "→ Compare 116i Engine Prices",
           "engineCodes": [
+            "N43B20",
             "N13B16",
             "B38B15"
           ],
           "fuel": "Petrol",
-          "power": "136-140 hp",
-          "image": "/images/brands/bmw/models/bmw-1-series-model-card.png"
+          "power": "102-136hp",
+          "years": "2004-2024",
+          "image": ""
         },
         {
-          "h3": "BMW 120i Engine Replacement",
-          "slug": "120i-engine",
-          "subtitle": "N13B16 / B48B20 2.0L petrol - 170-184 hp",
-          "priceRange": "£1,500 - £3,900",
-          "cta": "Compare 120i Engine Prices",
+          "h3": "BMW 1 Series 118i Engine Replacement",
+          "slug": "1-series-118i-engine",
+          "subtitle": "N43B20/N13B16/B38B15 1.6L/1.5L Petrol · 136-140hp · 2004-2024",
+          "priceRange": "£1,200-£3,000",
+          "cta": "→ Compare 118i Engine Prices",
           "engineCodes": [
+            "N43B20",
             "N13B16",
-            "B48B20"
+            "B38B15"
           ],
           "fuel": "Petrol",
-          "power": "170-184 hp",
-          "image": "/images/brands/bmw/models/bmw-1-series-f20-f21-model-card.png"
+          "power": "136-140hp",
+          "years": "2004-2024",
+          "image": ""
         },
         {
-          "h3": "BMW 125d Engine Replacement",
-          "slug": "125d-engine",
-          "subtitle": "N47D20 / B47D20 2.0L twin-turbo diesel - 218-224 hp",
-          "priceRange": "£1,600 - £4,200",
-          "cta": "Compare 125d Engine Prices",
+          "h3": "BMW 1 Series 120i Engine Replacement",
+          "slug": "1-series-120i-engine",
+          "subtitle": "N46B20/N20B20/B48B20 2.0L Petrol · 170-184hp · 2004-2024",
+          "priceRange": "£1,600-£3,700",
+          "cta": "→ Compare 120i Engine Prices",
           "engineCodes": [
-            "N47D20",
-            "B47D20"
-          ],
-          "fuel": "Diesel",
-          "power": "218-224 hp",
-          "image": "/images/brands/bmw/models/bmw-1-series-f20-f21-model-card.png"
-        },
-        {
-          "h3": "BMW 125i Engine Replacement",
-          "slug": "125i-engine",
-          "subtitle": "N20B20 / B48B20 2.0L petrol - 218-224 hp",
-          "priceRange": "£1,800 - £4,100",
-          "cta": "Compare 125i Engine Prices",
-          "engineCodes": [
+            "N46B20",
             "N20B20",
             "B48B20"
           ],
           "fuel": "Petrol",
-          "power": "218-224 hp",
-          "image": "/images/brands/bmw/models/bmw-1-series-f20-f21-model-card.png"
+          "power": "170-184hp",
+          "years": "2004-2024",
+          "image": ""
         },
         {
-          "h3": "BMW M135i Engine Replacement",
-          "slug": "m135i-engine",
-          "subtitle": "N55B30 / B48B20 performance petrol - 302-326 hp",
-          "priceRange": "£3,500 - £7,500",
-          "cta": "Compare M135i Engine Prices",
+          "h3": "BMW 1 Series 125i Engine Replacement",
+          "slug": "1-series-125i-engine",
+          "subtitle": "N52B30/N20B20 2.5L/2.0L Petrol · 218-228hp · 2004-2019",
+          "priceRange": "£2,300-£4,800",
+          "cta": "→ Compare 125i Engine Prices",
           "engineCodes": [
-            "N55B30",
-            "B48B20"
+            "N52B30",
+            "N20B20"
           ],
           "fuel": "Petrol",
-          "power": "302-326 hp",
-          "image": "/images/brands/bmw/models/bmw-1-series-f40-model-card.png"
+          "power": "218-228hp",
+          "years": "2004-2019",
+          "image": ""
         },
         {
-          "h3": "BMW M140i Engine Replacement",
-          "slug": "m140i-engine",
-          "subtitle": "B58B30 3.0L petrol - 340 hp",
-          "priceRange": "£5,500 - £9,000",
-          "cta": "Compare M140i Engine Prices",
+          "h3": "BMW 1 Series M135i Engine Replacement",
+          "slug": "1-series-m135i-engine",
+          "subtitle": "N55B30 3.0L Turbo Petrol · 326hp · 2012-2019",
+          "priceRange": "£3,500-£7,200",
+          "cta": "→ Compare M135i Engine Prices",
+          "engineCodes": [
+            "N55B30"
+          ],
+          "fuel": "Petrol",
+          "power": "326hp",
+          "years": "2012-2019",
+          "image": ""
+        },
+        {
+          "h3": "BMW 1 Series M140i Engine Replacement",
+          "slug": "1-series-m140i-engine",
+          "subtitle": "B58B30 3.0L Turbo Petrol · 340hp · 2016-2019",
+          "priceRange": "£4,200-£8,500",
+          "cta": "→ Compare M140i Engine Prices",
           "engineCodes": [
             "B58B30"
           ],
           "fuel": "Petrol",
-          "power": "340 hp",
-          "image": "/images/brands/bmw/models/bmw-1-series-f40-model-card.png"
+          "power": "340hp",
+          "years": "2016-2019",
+          "image": ""
+        },
+        {
+          "h3": "BMW 1 Series 118d xDrive Engine Replacement",
+          "slug": "1-series-118d-xdrive-engine",
+          "subtitle": "N47D20/B47D20 2.0L Diesel · 143-150hp · 2012-2024",
+          "priceRange": "£1,800-£4,200",
+          "cta": "→ Compare 118d xDrive Engine Prices",
+          "engineCodes": [
+            "N47D20",
+            "B47D20"
+          ],
+          "fuel": "Diesel",
+          "power": "143-150hp",
+          "years": "2012-2024",
+          "image": ""
         }
       ],
       "directory": {
         "h3": "All BMW 1 Series Variants - Engine Replacement Coverage",
-        "intro": "A full alphabetical listing of every BMW 1 Series trim covered by our network. Variant pages can be added later while this page already gives you the live pricing and engine-code context.",
+        "intro": "A full alphabetical listing of every BMW 1 Series trim covered by our network. All entries link to a dedicated variant page, where prices are further broken down by engine code, model year, and condition type. Click a live link to compare quotes.",
         "groups": [
           {
             "title": "Diesel Variants",
             "items": [
-              "BMW 114d",
-              "BMW 116d",
-              "BMW 116d EfficientDynamics",
-              "BMW 116d M Sport",
-              "BMW 116d xDrive",
-              "BMW 118d",
-              "BMW 118d EfficientDynamics",
-              "BMW 118d M Sport",
-              "BMW 118d xDrive",
-              "BMW 120d",
-              "BMW 120d EfficientDynamics",
-              "BMW 120d M Sport",
-              "BMW 120d xDrive",
-              "BMW 120d MHEV",
-              "BMW 123d",
-              "BMW 123d xDrive",
-              "BMW 125d",
-              "BMW 125d M Sport",
-              "BMW 125d xDrive"
+              "114d · 116d · 116d EfficientDynamics · 118d · 118d EfficientDynamics · 118d M Sport · 118d SE · 118d Sport · 118d xDrive · 120d · 120d EfficientDynamics · 120d M Sport · 120d SE · 120d Sport · 120d xDrive · 125d · 125d M Sport · 125d xDrive"
             ]
           },
           {
             "title": "Petrol Variants",
             "items": [
-              "BMW 114i",
-              "BMW 116i",
-              "BMW 116i M Sport",
-              "BMW 116i xDrive",
-              "BMW 118i",
-              "BMW 118i EfficientDynamics",
-              "BMW 118i M Sport",
-              "BMW 118i xDrive",
-              "BMW 118i MHEV",
-              "BMW 120i",
-              "BMW 120i Active Flex",
-              "BMW 120i M Sport",
-              "BMW 120i xDrive",
-              "BMW 125i",
-              "BMW 125i Flex",
-              "BMW 125i M Sport",
-              "BMW 125i xDrive",
-              "BMW 128ti",
-              "BMW 128ti M Sport",
-              "BMW 130i",
-              "BMW 135i"
+              "114i · 116i · 116i EfficientDynamics · 116i M Sport · 116i SE · 116i Sport · 118i · 118i M Sport · 118i SE · 118i Sport · 120i · 120i M Sport · 120i SE · 120i Sport · 120i xDrive · 125i · 125i Coupe · 125i Convertible · 125i M Sport"
             ]
           },
           {
             "title": "Performance Variants",
             "items": [
-              "BMW M135i",
-              "BMW M135i xDrive",
-              "BMW M135i M Performance Edition",
-              "BMW M140i",
-              "BMW M140i xDrive"
-            ]
-          }
-        ]
-      },
-      "engineGuide": {
-        "tag": "Engine Codes",
-        "h2": "BMW 1 Series Engine Codes - Full Technical Specifications & Replacement Guide",
-        "h3": "Every engine code fitted to the BMW 1 Series across all generations, with technical specs, compatible trims, known failure points and typical rebuilt prices from UK specialists.",
-        "families": [
-          {
-            "name": "Diesel Engines",
-            "entries": [
-              {
-                "code": "M47TUD20",
-                "title": "M47 Series - 2.0 Litre Diesel",
-                "history": "Early E87 diesel featuring common-rail injection. It established BMW's efficient diesel reputation in the compact hatchback segment.",
-                "fuel": "Diesel",
-                "size": "2.0 Litre",
-                "power": "122-150 hp",
-                "years": "2004-2008",
-                "compatibleVariants": [
-                  "118d",
-                  "118d SE",
-                  "118d M Sport",
-                  "120d",
-                  "120d M Sport"
-                ],
-                "commonFailures": [
-                  "Timing chain tensioner wear around 70k-90k miles.",
-                  "Swirl flap failure causing intake-manifold vacuum loss.",
-                  "EGR valve clogging leading to reduced power and limp mode."
-                ],
-                "avgRebuiltPrice": "£1,100 - £1,800",
-                "cta": "Get quotes for M47TUD20 BMW 1 Series engine replacement"
-              },
-              {
-                "code": "N47D20",
-                "title": "N47 Series - 2.0 Litre Diesel",
-                "history": "Introduced the rear timing chain and helped define second-generation replacement demand because of its well-known chain failures.",
-                "fuel": "Diesel",
-                "size": "2.0 Litre",
-                "power": "116-184 hp",
-                "years": "2007-2015",
-                "compatibleVariants": [
-                  "116d",
-                  "116d EfficientDynamics",
-                  "118d",
-                  "118d M Sport",
-                  "120d",
-                  "120d xDrive",
-                  "123d",
-                  "123d EfficientDynamics"
-                ],
-                "commonFailures": [
-                  "Rear timing chain stretch or snap, often at 60k-80k miles.",
-                  "DPF pressure-sensor faults causing regeneration loops.",
-                  "Inlet manifold flap motor failure causing uneven air distribution."
-                ],
-                "avgRebuiltPrice": "£1,400 - £2,200",
-                "cta": "Get quotes for N47D20 BMW 1 Series engine replacement"
-              },
-              {
-                "code": "B47D20",
-                "title": "B47 Series - 2.0 Litre Diesel",
-                "history": "BMW moved the timing drive to the front, improved durability and delivered better Euro 6 efficiency across later 1 Series diesels.",
-                "fuel": "Diesel / MHEV",
-                "size": "2.0 Litre",
-                "power": "116-190 hp",
-                "years": "2015-Present",
-                "compatibleVariants": [
-                  "116d",
-                  "118d",
-                  "118d M Sport",
-                  "120d",
-                  "120d M Sport",
-                  "120d xDrive"
-                ],
-                "commonFailures": [
-                  "EGR cooler coolant leaks on earlier production batches.",
-                  "Turbo actuator sticking from carbon buildup.",
-                  "AdBlue injector crystallisation blocking supply lines."
-                ],
-                "avgRebuiltPrice": "£1,800 - £3,000",
-                "cta": "Get quotes for B47D20 BMW 1 Series engine replacement"
-              }
-            ]
-          },
-          {
-            "name": "Petrol Engines",
-            "entries": [
-              {
-                "code": "N46B20",
-                "title": "N46 Series - 2.0 Litre Petrol",
-                "history": "Naturally aspirated Valvetronic unit used in early petrol cars. Reliable overall, but age-related oil leaks and consumption are common now.",
-                "fuel": "Petrol",
-                "size": "2.0 Litre",
-                "power": "122-150 hp",
-                "years": "2004-2011",
-                "compatibleVariants": [
-                  "116i",
-                  "118i",
-                  "118i M Sport",
-                  "120i",
-                  "120i M Sport"
-                ],
-                "commonFailures": [
-                  "Valve stem seal degradation causing blue smoke on startup.",
-                  "Oil filter housing gasket leaks around 60k-80k miles.",
-                  "Timing chain guide deterioration causing rattling."
-                ],
-                "avgRebuiltPrice": "£1,100 - £1,700",
-                "cta": "Get quotes for N46B20 BMW 1 Series engine replacement"
-              },
-              {
-                "code": "N43B20",
-                "title": "N43 Series - 2.0 Litre Petrol",
-                "history": "BMW's early direct-injection petrol for the 1 Series. Better economy, but the fuel system complexity pushed up ownership and replacement costs.",
-                "fuel": "Petrol",
-                "size": "2.0 Litre",
-                "power": "143-170 hp",
-                "years": "2007-2011",
-                "compatibleVariants": [
-                  "116i",
-                  "118i",
-                  "118i M Sport",
-                  "120i",
-                  "120i M Sport",
-                  "120i EfficientDynamics"
-                ],
-                "commonFailures": [
-                  "High-pressure fuel pump failure causing hard starting.",
-                  "Piezo injector faults triggering misfires and limp mode.",
-                  "Early-production timing chain stretch."
-                ],
-                "avgRebuiltPrice": "£1,300 - £2,000",
-                "cta": "Get quotes for N43B20 BMW 1 Series engine replacement"
-              },
-              {
-                "code": "B38B15",
-                "title": "B38 Series - 1.5 Litre Petrol",
-                "history": "Three-cylinder modular turbo petrol focused on efficiency and light urban running while carrying the newer B-series architecture.",
-                "fuel": "Petrol / MHEV",
-                "size": "1.5 Litre",
-                "power": "109-140 hp",
-                "years": "2015-Present",
-                "compatibleVariants": [
-                  "114i",
-                  "116i",
-                  "116i M Sport",
-                  "118i",
-                  "118i M Sport"
-                ],
-                "commonFailures": [
-                  "Carbon buildup on intake valves.",
-                  "Water pump and thermostat housing cracks.",
-                  "Turbo oil-feed line leaks at higher mileage."
-                ],
-                "avgRebuiltPrice": "£1,500 - £2,400",
-                "cta": "Get quotes for B38B15 BMW 1 Series engine replacement"
-              },
-              {
-                "code": "B48B20",
-                "title": "B48 Series - 2.0 Litre Petrol",
-                "history": "TwinPower turbo unit replacing N20/N26. Better thermal management and a much stronger reputation in facelifted F20 and F40 cars.",
-                "fuel": "Petrol / MHEV",
-                "size": "2.0 Litre",
-                "power": "136-306 hp",
-                "years": "2015-Present",
-                "compatibleVariants": [
-                  "118i",
-                  "118i M Sport",
-                  "120i",
-                  "120i M Sport",
-                  "125i",
-                  "125i M Sport"
-                ],
-                "commonFailures": [
-                  "Plastic coolant-pipe fractures near the thermostat housing.",
-                  "Timing-chain guide wear on earlier F20/F21 applications.",
-                  "Turbo wastegate rattle and actuator wear."
-                ],
-                "avgRebuiltPrice": "£1,900 - £3,200",
-                "cta": "Get quotes for B48B20 BMW 1 Series engine replacement"
-              },
-              {
-                "code": "N54B30",
-                "title": "N54 Series - 3.0 Litre Petrol",
-                "history": "Twin-turbo straight-six delivering serious performance in the 135i. Strong when healthy, but cooling and fuel-system upkeep is essential.",
-                "fuel": "Petrol",
-                "size": "3.0 Litre",
-                "power": "302-335 hp",
-                "years": "2007-2010",
-                "compatibleVariants": [
-                  "135i",
-                  "135i M Sport",
-                  "135is"
-                ],
-                "commonFailures": [
-                  "High-pressure fuel pump failures.",
-                  "Turbo wastegate actuator wear.",
-                  "Electric water pump and thermostat failure around 60k-80k miles."
-                ],
-                "avgRebuiltPrice": "£2,500 - £3,800",
-                "cta": "Get quotes for N54B30 BMW 1 Series engine replacement"
-              },
-              {
-                "code": "B58B30",
-                "title": "B58 Series - 3.0 Litre Petrol",
-                "history": "Closed-deck straight-six replacing N55. Strong thermal control and one of BMW's best-regarded modern performance engines.",
-                "fuel": "Petrol / MHEV",
-                "size": "3.0 Litre",
-                "power": "302-340 hp",
-                "years": "2019-Present",
-                "compatibleVariants": [
-                  "M135i xDrive",
-                  "M135i xDrive M Sport",
-                  "M135i xDrive Launch Edition"
-                ],
-                "commonFailures": [
-                  "Plastic expansion-tank leaks under thermal cycling.",
-                  "Oil filter housing gasket degradation around 50k miles.",
-                  "Injector seal wear causing fuel-trim errors."
-                ],
-                "avgRebuiltPrice": "£3,200 - £4,800",
-                "cta": "Get quotes for B58B30 BMW 1 Series engine replacement"
-              }
+              "M135i · M135i xDrive · M140i · M140i xDrive"
             ]
           }
         ],
-        "closing": "Can't find your engine code? Enter your registration number above and we'll identify the exact BMW 1 Series unit, its technical spec and live replacement prices from UK specialists."
+        "label": "Variant Directory"
+      },
+      "closing": "Not sure which variant your BMW 1 Series is? Enter your registration number above - we'll identify the exact sub‑model, engine code and compatible replacement options instantly.",
+      "engineGuide": {
+        "tag": "Engine Codes",
+        "h2": "BMW Series Engine Codes — Full Technical Specifications & Replacement Guide",
+        "h3": "Every engine code fitted to the BMW Series across all generations, with technical specs, compatible variants and trims, known failure points, and average rebuilt prices from UK specialists. Select any engine code to compare quotes.",
+        "families": [
+          {
+            "name": "Diesel Engines",
+            "entries": []
+          },
+          {
+            "name": "Petrol Engines",
+            "entries": []
+          }
+        ],
+        "closing": "Can’t find your engine code? Enter your registration number above — we’ll instantly identify the exact unit, its technical specifications, and live replacement prices from UK BMW Series engine specialists. Every rebuilt engine comes with a minimum 12‑month unlimited mileage warranty."
+      },
+      "headingLines": [
+        "BMW 1 Series Engine Replacement",
+        "All Variants Covered"
+      ],
+      "groups": [
+        {
+          "title": "Core Diesel Range",
+          "cardSlugs": [
+            "1-series-116d-engine",
+            "1-series-118d-engine",
+            "1-series-120d-engine",
+            "1-series-125d-engine",
+            "1-series-118d-xdrive-engine"
+          ]
+        },
+        {
+          "title": "Core Petrol Range",
+          "cardSlugs": [
+            "1-series-114i-engine",
+            "1-series-116i-engine",
+            "1-series-118i-engine",
+            "1-series-120i-engine",
+            "1-series-125i-engine"
+          ]
+        },
+        {
+          "title": "Performance Range",
+          "cardSlugs": [
+            "1-series-m135i-engine",
+            "1-series-m140i-engine"
+          ]
+        }
+      ],
+      "ui": {
+        "fromPriceLabel": "from price",
+        "specsLabel": "Specs",
+        "rebuiltLabel": "Rebuilt",
+        "yearsLabel": "Years",
+        "yearsFallback": "Check exact year coverage by registration"
       }
     },
     "engineCodes": {
       "tag": "Engine Codes",
-      "h2": "BMW 1 Series Engine Codes & Average Rebuilt Prices (UK Supply)",
-      "h3": "Every engine code fitted to the BMW 1 Series across E87, F20/F21 and F40 generations. Use the tables below to compare realistic rebuilt-engine pricing and compatible variants.",
-      "closingLine": "Can't find your engine code? Enter your registration number above and we'll instantly identify the correct unit with live quotes from UK BMW 1 Series engine specialists. Most rebuilt engines include a minimum 12-month unlimited mileage warranty.",
+      "h2": "BMW Series Engine Codes — Full Technical Specifications & Replacement Guide",
+      "h3": "Every engine code fitted to the BMW Series across all generations, with technical specs, compatible variants and trims, known failure points, and average rebuilt prices from UK specialists. Select any engine code to compare quotes.",
+      "closingLine": "Can’t find your engine code? Enter your registration number above — we’ll instantly identify the exact unit, its technical specifications, and live replacement prices from UK BMW Series engine specialists. Every rebuilt engine comes with a minimum 12‑month unlimited mileage warranty.",
       "filters": [
         "Diesel Engines",
         "Petrol Engines"
@@ -688,256 +718,303 @@
       "groups": [
         {
           "name": "Diesel Engines",
-          "era": "E87 to F40 coverage",
-          "failureNote": "N47 engines are infamous for rear-mounted timing-chain stretch and tensioner failure, often between 60k and 100k miles. B37 and B47 engines moved the chain to the front but still suffer EGR cooler, DPF blockage and pre-2018 tensioner issues. Rebuilt units from our network include upgraded timing components where applicable.",
-          "engines": [
-            {
-              "code": "M47TU2D20",
-              "fuel": "Diesel",
-              "size": "2.0L",
-              "power": "122-163 hp",
-              "compatibleModels": "118d, 120d (E87, 2004-2007)",
-              "avgRebuiltPrice": "£1,400 - £2,600",
-              "cta": "Get quotes"
-            },
-            {
-              "code": "N47D16",
-              "fuel": "Diesel",
-              "size": "1.6L",
-              "power": "95-116 hp",
-              "compatibleModels": "114d, 116d (E87 LCI & F20, 2007-2015)",
-              "avgRebuiltPrice": "£1,200 - £2,200",
-              "cta": "Get quotes"
-            },
-            {
-              "code": "N47D20",
-              "fuel": "Diesel",
-              "size": "2.0L",
-              "power": "143-218 hp",
-              "compatibleModels": "118d, 120d, 123d, 125d (E87 LCI & F20, 2007-2015)",
-              "avgRebuiltPrice": "£1,200 - £3,800",
-              "cta": "Get quotes"
-            },
-            {
-              "code": "B37C15",
-              "fuel": "Diesel",
-              "size": "1.5L",
-              "power": "116 hp",
-              "compatibleModels": "116d (F20 LCI & F40, 2015-2024)",
-              "avgRebuiltPrice": "£1,200 - £2,400",
-              "cta": "Get quotes"
-            },
-            {
-              "code": "B47D20",
-              "fuel": "Diesel",
-              "size": "2.0L",
-              "power": "150-224 hp",
-              "compatibleModels": "118d, 120d, 125d, 120d MHEV (F20 LCI & F40, 2015-2024)",
-              "avgRebuiltPrice": "£1,400 - £4,200",
-              "cta": "Get quotes"
-            },
-            {
-              "code": "B47D20TU (MHEV)",
-              "fuel": "Diesel",
-              "size": "2.0L",
-              "power": "190 hp",
-              "compatibleModels": "120d MHEV (F40, 2019-2024)",
-              "avgRebuiltPrice": "£1,600 - £4,500",
-              "cta": "Get quotes"
-            }
-          ]
+          "era": "Extracted from detailed diesel engine families across BMW 1 Series variants.",
+          "failureNote": "Main replacement triggers are timing chain wear, EGR / cooling faults and turbo-control issues.",
+          "engines": []
         },
         {
           "name": "Petrol Engines",
-          "era": "E87 to F40 coverage",
-          "failureNote": "N13 and N20 engines are prone to timing-chain tensioner wear, high-pressure fuel-pump failure and, on N20 cars, oil-pump drive-module issues. N54 and N55 can suffer wastegate rattle, injector faults and rod-bearing trouble on tuned examples. B38, B48 and B58 are much stronger but still need good oil-change discipline.",
-          "engines": [
-            {
-              "code": "N43B16 / N43B20",
-              "fuel": "Petrol",
-              "size": "1.6L / 2.0L",
-              "power": "122-170 hp",
-              "compatibleModels": "116i, 118i, 120i (E87, 2007-2011)",
-              "avgRebuiltPrice": "£1,400 - £2,600",
-              "cta": "Get quotes"
-            },
-            {
-              "code": "N13B16",
-              "fuel": "Petrol",
-              "size": "1.6L",
-              "power": "102-177 hp",
-              "compatibleModels": "114i, 116i, 118i, 120i (F20, 2011-2015)",
-              "avgRebuiltPrice": "£1,200 - £3,200",
-              "cta": "Get quotes"
-            },
-            {
-              "code": "N20B20",
-              "fuel": "Petrol",
-              "size": "2.0L",
-              "power": "184-245 hp",
-              "compatibleModels": "120i, 125i (F20, 2011-2016)",
-              "avgRebuiltPrice": "£1,800 - £4,500",
-              "cta": "Get quotes"
-            },
-            {
-              "code": "N54B30",
-              "fuel": "Petrol",
-              "size": "3.0L",
-              "power": "306 hp",
-              "compatibleModels": "135i (E82/E88, 2008-2010)",
-              "avgRebuiltPrice": "£3,500 - £6,500",
-              "cta": "Get quotes"
-            },
-            {
-              "code": "N55B30",
-              "fuel": "Petrol",
-              "size": "3.0L",
-              "power": "320-340 hp",
-              "compatibleModels": "M135i (F20/F21, 2012-2016)",
-              "avgRebuiltPrice": "£5,500 - £9,000",
-              "cta": "Get quotes"
-            },
-            {
-              "code": "B38B15",
-              "fuel": "Petrol",
-              "size": "1.5L",
-              "power": "109-140 hp",
-              "compatibleModels": "116i, 118i (F20 LCI & F40, 2015-2024)",
-              "avgRebuiltPrice": "£1,200 - £2,600",
-              "cta": "Get quotes"
-            },
-            {
-              "code": "B48B20",
-              "fuel": "Petrol",
-              "size": "2.0L",
-              "power": "184-306 hp",
-              "compatibleModels": "120i, 125i, 128ti, M135i (F40, 2016-2024)",
-              "avgRebuiltPrice": "£1,800 - £5,500",
-              "cta": "Get quotes"
-            },
-            {
-              "code": "B58B30",
-              "fuel": "Petrol",
-              "size": "3.0L",
-              "power": "340 hp",
-              "compatibleModels": "M140i, M140i xDrive (F20/F21, 2016-2019)",
-              "avgRebuiltPrice": "£5,500 - £9,000",
-              "cta": "Get quotes"
-            }
-          ]
+          "era": "Extracted from detailed petrol and performance engine families across BMW 1 Series variants.",
+          "failureNote": "Main replacement demand comes from timing-chain, cooling-system and performance thermal-management faults.",
+          "engines": []
         }
-      ]
+      ],
+      "headingLines": [
+        "BMW Series Engine Codes — Full Technical Specifications & Replacement Guide"
+      ],
+      "closingAction": {
+        "title": "Can't find your engine code?",
+        "buttonText": "Enter Your Reg"
+      },
+      "ui": {
+        "summaryPriceLabel": "Avg. rebuilt price",
+        "exampleImageLabel": "Example engine visual",
+        "historyLabel": "Engine History",
+        "variantsLabel": "Compatible BMW 1 Series variants",
+        "specsTitle": "Technical Specifications",
+        "fuelLabel": "Fuel type",
+        "sizeLabel": "Engine size",
+        "powerLabel": "Power output",
+        "yearsLabel": "Years fitted",
+        "failuresTitle": "Common Failures",
+        "supplyLabel": "Supply only"
+      }
+    },
+    "commonProblems": {
+      "tag": "Common Problems",
+      "h2": "BMW 1 Series Engine Problems - What It Costs to Fix & When Replacement Makes Sense",
+      "h3": "The BMW 1 Series delivers premium refinement, but its N47 diesel, N55 performance, and early B-series petrol units carry well-documented mechanical weaknesses that dominate UK replacement demand. Every rebuilt engine supplied through our network features upgraded internal components designed to resolve these original engineering flaws, backed by a minimum 12‑month unlimited mileage warranty. The guide below breaks down realistic UK repair costs against full replacement, helping you decide whether a targeted repair or a complete engine swap offers the best long‑term value for your specific variant.",
+      "problems": [
+        {
+          "group": "BMW 1 Series Timing Chain Failure",
+          "h4": "BMW 1 Series Timing Chain Failure - Why N47 Diesel Engines Fail Prematurely",
+          "affectedModels": "BMW 1 Series 116d, 118d, 120d, 118d EfficientDynamics (2007-2015, N47D16 & N47D20)",
+          "typicalFailureMileage": "60,000 - 90,000 miles",
+          "rootCause": "The rear-mounted timing chain tensioner relies on inadequate oil pressure and plastic guide rails that degrade over time, leading to chain stretch, audible rattle, and eventual catastrophic skip.",
+          "repairOptions": [
+            {
+              "tier": "Minor - Preventative Timing Chain Replacement",
+              "dealerPrice": "Dealer: £1,800 - £2,800",
+              "specialistPrice": "Specialist: £1,100 - £1,800",
+              "whatItInvolves": "Tensioner, guides, chain, and water pump swapped before audible rattle occurs",
+              "longevity": "Extends engine life 60,000+ miles if caught before metal debris circulates"
+            },
+            {
+              "tier": "Intermediate - Bottom-End Inspection & Repair",
+              "dealerPrice": "Dealer: £3,000 - £4,500",
+              "specialistPrice": "Specialist: £1,800 - £2,800",
+              "whatItInvolves": "Engine removed, sump dropped, chain realignment, oil pump inspection, partial rebuild",
+              "longevity": "Viable only if cylinder walls and bearings remain unscathed after initial stretch"
+            },
+            {
+              "tier": "Full Replacement - Rebuilt / Reconditioned Engine",
+              "dealerPrice": "Dealer: £6,000 - £9,000",
+              "specialistPrice": "Specialist: £3,200 - £5,500",
+              "whatItInvolves": "Supply & fit of a complete rebuilt N47 unit with reinforced tensioners, tested bearings, and upgraded components",
+              "longevity": "Permanent solution; eliminates inherited wear and restores factory compression"
+            }
+          ],
+          "recommendation": "",
+          "cta": ""
+        },
+        {
+          "group": "BMW 1 Series Rod Bearing Failure",
+          "h4": "BMW 1 Series Rod Bearing Failure - Why N55 Performance Engines Lose Bottom-End Integrity",
+          "affectedModels": "BMW 1 Series M135i, M135i xDrive (2012-2015, N55B30)",
+          "typicalFailureMileage": "40,000 - 75,000 miles",
+          "rootCause": "High-revving thermal cycling and aggressive driving cause factory rod bearing clearances to degrade, leading to spun bearings, knocking, and rapid oil pressure loss.",
+          "repairOptions": [
+            {
+              "tier": "Intermediate - Rod Bearing Replacement",
+              "dealerPrice": "Dealer: £2,500 - £4,000",
+              "specialistPrice": "Specialist: £1,600 - £2,500",
+              "whatItInvolves": "Engine removed, crankshaft inspected, bearing shells replaced, oil passages flushed",
+              "longevity": "Restores bottom-end integrity if crankshaft scoring is minimal"
+            },
+            {
+              "tier": "Full Replacement - Rebuilt / Reconditioned Performance Engine",
+              "dealerPrice": "Dealer: £8,500 - £11,000",
+              "specialistPrice": "Specialist: £4,500 - £7,500",
+              "whatItInvolves": "Supply & fit of a fully machined N55 long block with precision-clearanced bearings, upgraded oil pump, and dyno validation",
+              "longevity": "Guaranteed structural integrity; ideal for modified or heavily used M Performance variants"
+            }
+          ],
+          "recommendation": "",
+          "cta": ""
+        },
+        {
+          "group": "BMW 1 Series HPFP and Injector Failure",
+          "h4": "BMW 1 Series HPFP and Injector Failure - Why N43 Direct Injection Petrols Misfire",
+          "affectedModels": "BMW 1 Series 116i, 118i, 120i, 123i (2007-2012, N43B16 & N43B20)",
+          "typicalFailureMileage": "50,000 - 85,000 miles",
+          "rootCause": "Piezo high-pressure injectors and the fuel rail suffer from carbon fouling and internal valve wear, causing inconsistent fuel delivery, lean misfires, and cylinder wall washdown.",
+          "repairOptions": [
+            {
+              "tier": "Minor - Injector Replacement & Coding",
+              "dealerPrice": "Dealer: £1,200 - £2,000",
+              "specialistPrice": "Specialist: £800 - £1,300",
+              "whatItInvolves": "Faulty injectors swapped, new seals fitted, software adapted, fuel pressure tested",
+              "longevity": "Resolves misfires if fuel pump and cylinder compression remain healthy"
+            },
+            {
+              "tier": "Intermediate - HPFP & Rail Overhaul",
+              "dealerPrice": "Dealer: £2,500 - £3,800",
+              "specialistPrice": "Specialist: £1,500 - £2,400",
+              "whatItInvolves": "High-pressure fuel pump and rail replaced, fuel lines flushed, pressure regulators tested",
+              "longevity": "Restores stable fuel delivery; often required when injectors fail prematurely"
+            },
+            {
+              "tier": "Full Replacement - Rebuilt / Reconditioned Engine",
+              "dealerPrice": "Dealer: £5,500 - £8,000",
+              "specialistPrice": "Specialist: £2,200 - £3,800",
+              "whatItInvolves": "Supply & fit of a complete N43 unit with reprofiled cams, tested compression, and upgraded fueling components",
+              "longevity": "Recommended when lean misfires have damaged piston rings or cylinder walls"
+            }
+          ],
+          "recommendation": "",
+          "cta": ""
+        },
+        {
+          "group": "BMW 1 Series Cooling System Failure",
+          "h4": "BMW 1 Series Cooling System Failure - Why B48 and B58 Engines Overheat",
+          "affectedModels": "BMW 1 Series 120i, 125i, M140i (2015-2024, B48B20 & B58B30)",
+          "typicalFailureMileage": "60,000 - 100,000 miles",
+          "rootCause": "Plastic thermostat housings and coolant expansion tanks become brittle under repeated thermal cycles, leading to slow coolant loss, airlocks, and eventual head gasket stress from localized overheating.",
+          "repairOptions": [
+            {
+              "tier": "Minor - Preventative Cooling Overhaul",
+              "dealerPrice": "Dealer: £900 - £1,600",
+              "specialistPrice": "Specialist: £500 - £900",
+              "whatItInvolves": "Thermostat housing, expansion tank, water pump, and hoses replaced with reinforced materials",
+              "longevity": "Prevents airlocks and maintains stable operating temperatures for 40,000+ miles"
+            },
+            {
+              "tier": "Intermediate - Head Gasket & Surface Repair",
+              "dealerPrice": "Dealer: £3,000 - £4,500",
+              "specialistPrice": "Specialist: £1,800 - £2,800",
+              "whatItInvolves": "Cylinder head removed, deck skimmed, new multi-layer gasket fitted, cooling system pressure tested",
+              "longevity": "Restores sealing integrity if warping is minimal and block remains undamaged"
+            },
+            {
+              "tier": "Full Replacement - Rebuilt / Reconditioned Engine",
+              "dealerPrice": "Dealer: £6,500 - £9,500",
+              "specialistPrice": "Specialist: £3,000 - £5,200",
+              "whatItInvolves": "Supply & fit of a tested B‑series unit with upgraded cooling components, verified head flatness, and full pressure validation",
+              "longevity": "Essential when prolonged overheating has warped the block or cracked the cylinder head"
+            }
+          ],
+          "recommendation": "",
+          "cta": ""
+        },
+        {
+          "group": "BMW 1 Series EGR and Turbo Failure",
+          "h4": "BMW 1 Series EGR and Turbo Failure - Why Modern B47 Diesel Engines Lose Boost",
+          "affectedModels": "BMW 1 Series 116d, 118d, 120d, 120d xDrive (2015-2024, B47D20)",
+          "typicalFailureMileage": "70,000 - 110,000 miles",
+          "rootCause": "Exhaust gas recirculation valves stick open from carbon accumulation, while turbo actuator linkages fatigue under high exhaust heat, causing boost leaks, limp mode, and unburnt fuel washdown.",
+          "repairOptions": [
+            {
+              "tier": "Intermediate - EGR Service & Turbo Rebuild",
+              "dealerPrice": "Dealer: £2,000 - £3,500",
+              "specialistPrice": "Specialist: £1,200 - £2,200",
+              "whatItInvolves": "EGR cooler/valve cleaned or remapped, turbo cartridge replaced, actuator linkage recalibrated",
+              "longevity": "Restores full boost and throttle response; suitable for standard daily driving"
+            },
+            {
+              "tier": "Full Replacement - Rebuilt / Reconditioned Engine",
+              "dealerPrice": "Dealer: £7,000 - £10,000",
+              "specialistPrice": "Specialist: £2,800 - £4,800",
+              "whatItInvolves": "Supply & fit of a complete B47 unit with reprofiled turbo, verified oil feed, and upgraded EGR delete mapping",
+              "longevity": "Mandatory when unburnt diesel has severely washed cylinder walls or damaged piston rings"
+            }
+          ],
+          "recommendation": "",
+          "cta": ""
+        }
+      ],
+      "finalCta": {
+        "h4": "Don't Let Engine Failure Write Off Your BMW 1 Series",
+        "paragraph": "",
+        "buttonText": "Compare BMW 1 Series Engine Replacement Prices Now →",
+        "disclaimer": ""
+      }
     },
     "engineTypes": {
       "tag": "Replacement Engine Options",
       "h2": "BMW 1 Series Engine Types - Options, Costs & What to Expect",
-      "intro": "Every BMW 1 Series engine type is available through our UK specialist network, with indicative price ranges tailored to your variant, engine code and budget.",
+      "intro": "Every engine type is available through our UK network with typical price ranges tailored to your exact variant, engine code and budget.",
       "types": [
         {
-          "title": "Reconditioned BMW 1 Series Engines (Recon)",
-          "description": "A stripped, cleaned and fully inspected unit where worn parts are replaced with OEM components. N47 and B47 cores typically receive new tensioners, seals and gaskets for dependable daily driving. Costs vary based on timing-chain upgrades and supplier warranty coverage.",
-          "priceRange": "£1,200 - £2,800",
-          "cta": "Compare reconditioned BMW 1 Series engine prices ->"
+          "title": "BMW 1 Series Reconditioned Engines (Recon)",
+          "description": "Specialist rebuild using tested blocks with new seals, gaskets and bearings to address common N47 timing chain wear across generations.",
+          "priceRange": "£1,400 - £3,800 (supply only)",
+          "cta": "COMPARE RECONDITIONED BMW 1 SERIES ENGINE PRICES ->"
         },
         {
-          "title": "Rebuilt BMW 1 Series Engines",
-          "description": "A full overhaul with reinforced components that directly address known failure points. Expect renewed piston rings and main bearings plus the strongest warranty support. Pricing rises on higher-output B48 and six-cylinder variants.",
-          "priceRange": "£1,800 - £3,400",
-          "cta": "Get rebuilt BMW 1 Series engine quotes ->"
+          "title": "BMW 1 Series Rebuilt Engines",
+          "description": "Complete teardown with all critical components replaced or machined to restore factory performance and eliminate known B48 faults.",
+          "priceRange": "£1,600 - £4,200 (supply only)",
+          "cta": "GET REBUILT BMW 1 SERIES ENGINE QUOTES ->"
         },
         {
           "title": "BMW 1 Series Used Engines",
-          "description": "A tested lower-mileage donor unit offering budget-friendly value. Compression and oil pressure should be verified, and MHEV variants usually take longer to source than older E87 and F20 engines.",
-          "priceRange": "£500 - £1,300",
-          "cta": "Check used BMW 1 Series engine availability ->"
+          "description": "Low mileage donor units sourced from verified salvage yards with full compression checks and leak down testing before dispatch.",
+          "priceRange": "£800 - £2,400 (supply only)",
+          "cta": "CHECK USED BMW 1 SERIES ENGINE AVAILABILITY ->"
         },
         {
           "title": "BMW 1 Series Remanufactured Engines",
-          "description": "Factory-spec as-new units where surfaces are machined and wear parts replaced to strict tolerances. Best suited to later F40 cars or owners who want near-new performance without dealer crate-engine pricing.",
-          "priceRange": "£2,600 - £4,500",
-          "cta": "Compare remanufactured BMW 1 Series engine costs ->"
+          "description": "Factory grade restoration featuring zero tolerance machining, new ECU mapping and full component replacement for zero mileage feel.",
+          "priceRange": "£3,200 - £6,500 (supply only)",
+          "cta": "COMPARE REMANUFACTURED BMW 1 SERIES ENGINE COSTS ->"
         },
         {
           "title": "BMW 1 Series Refurbished Engines",
-          "description": "A lightly serviced and tested unit passing core checks without a full strip-down. These can work for lower-value cars, but they are less suitable for modern hybrid drivetrains and heavily stressed performance models.",
-          "priceRange": "£900 - £2,100",
-          "cta": "View refurbished BMW 1 Series engine options ->"
+          "description": "Targeted repair of core failures replacing only damaged parts like cylinder heads, timing gears and turbochargers for rapid turnaround.",
+          "priceRange": "£1,100 - £2,900 (supply only)",
+          "cta": "VIEW REFURBISHED BMW 1 SERIES ENGINE OPTIONS ->"
         },
         {
           "title": "BMW 1 Series Supply & Fit Engines",
-          "description": "Your replacement engine delivered and professionally installed by a certified UK specialist workshop. Typical packages cover recovery, removal, fitting, fluid flushes and post-install diagnostics.",
-          "priceRange": "£550 - £950 added to engine price",
-          "cta": "Find BMW 1 Series engine supply & fit deals ->"
+          "description": "Complete service combining your chosen replacement unit with accredited specialist installation, fluid top ups and final road testing.",
+          "priceRange": "£650 - £1,450 added to engine price",
+          "cta": "FIND BMW 1 SERIES ENGINE SUPPLY & FIT DEALS ->"
         }
       ],
-      "closing": "All engine types except used engines include a minimum 12-month unlimited mileage warranty when sourced through EngineMarket. Prices depend on engine code, variant, mileage and supplier availability."
+      "closing": "All engine types include a minimum 12‑month unlimited mileage warranty when sourced through EngineMarket. Prices are typical UK market ranges based on historical quote data from our network and depend on exact engine code, variant, mileage and supplier. Use our free comparison tool above - enter your registration to get tailored quotes for your specific BMW 1 Series within hours.",
+      "headingLines": [
+        "BMW 1 Series Engine Types",
+        "Options, Costs & What to Expect"
+      ],
+      "ui": {
+        "priceLabel": "Typical price range",
+        "frontActionLabel": "What is it?",
+        "backActionLabel": "Flip back"
+      },
+      "closingCard": {
+        "label": "Engine Replacement Help",
+        "title": "Compare BMW 1 Series engine prices with vetted UK suppliers",
+        "buttonText": "Compare BMW 1 Series Prices"
+      }
     },
     "engineSizes": {
       "tag": "Engine Sizes",
       "h2": "BMW 1 Series Engines by Size - Find the Right Displacement for Your Variant",
-      "intro": "Every displacement fitted to the BMW 1 Series across all major generations, with the engine codes, variants and replacement notes that matter most when you are trying to match the correct unit.",
+      "intro": "",
       "groups": [
         {
           "title": "BMW 1 Series Diesel Engine Sizes",
           "items": [
             {
-              "title": "1.5L Diesel Engines",
-              "description": "The smallest diesel option in the range, introduced in 2015 as part of BMW's EfficiencyDynamics push and carried into the F40 generation.",
+              "title": "BMW 1 Series 1.6L Diesel Engines",
+              "description": "Introduced on the second-generation F20 as an entry-level efficiency option, this compact unit delivered strong urban economy and lower tax bands for fleet buyers. It pairs lightweight aluminium construction with common-rail injection to balance low emissions with adequate torque for daily commuting. → Get quotes for BMW 1 Series 1.6L diesel engines",
               "engineCodes": [
-                "B37C15",
-                "B37D15A"
+                "N47D16",
+                "B37C15"
               ],
               "compatibleModels": [
                 "114d",
-                "116d"
-              ],
-              "productionYears": "2015-2024",
-              "commonFailurePoints": [
-                "EGR-valve clogging.",
-                "Timing-chain tensioner wear at higher mileage.",
-                "Rebuilt units usually include upgraded service components."
-              ],
-              "cta": "Get quotes for 1.5L BMW 1 Series diesel engines ->"
-            },
-            {
-              "title": "1.6L Diesel Engines",
-              "description": "Entry F20 diesel built around the N47 family. It sits below the 2.0L N47 but shares the same rear-mounted timing-chain architecture.",
-              "engineCodes": [
-                "N47D16"
-              ],
-              "compatibleModels": [
-                "114d",
+                "116d",
                 "116d EfficientDynamics"
               ],
-              "productionYears": "2012-2015",
+              "productionYears": "F20 2011-2015, F20 LCI 2015-2019",
               "commonFailurePoints": [
-                "Timing-chain stretch and tensioner failure between 60k and 100k miles.",
-                "Updated chain kits are essential on rebuilt replacements."
+                "Timing chain tensioner wear",
+                "EGR valve carbon buildup on early N47 variants."
               ],
-              "cta": "Compare 1.6L BMW 1 Series diesel engine prices ->"
+              "cta": ""
             },
             {
-              "title": "2.0L Diesel Engines",
-              "description": "The backbone of the BMW 1 Series diesel range since launch in 2004. M47, N47 and B47 families powered the 118d, 120d, 123d and 125d across the core generations.",
+              "title": "BMW 1 Series 2.0L Diesel Engines",
+              "description": "Serving as the backbone of the 1 Series diesel lineup across all generations, this displacement balances strong mid-range torque with renowned long-distance refinement. It evolved from the iron-block M47 to the aluminium N47 and finally the emissions-optimised B47, maintaining its position as the preferred choice for high-mileage UK drivers. → Get quotes for BMW 1 Series 2.0L diesel engines",
               "engineCodes": [
-                "M47TU2D20",
+                "M47D20",
                 "N47D20",
                 "B47D20",
-                "B47C20B"
+                "N47S"
               ],
               "compatibleModels": [
                 "118d",
                 "120d",
-                "123d",
+                "120d xDrive",
                 "125d"
               ],
-              "productionYears": "2004-2024",
+              "productionYears": "E87 2004-2011, F20 2011-2019, F40 2019-2024",
               "commonFailurePoints": [
-                "M47 swirl-flap ingestion.",
-                "N47 timing-chain stretch and turbo oil-feed blockage.",
-                "B47 EGR cooler issues and earlier tensioner wear."
+                "Rear-mounted timing chain guide failure on N47 units",
+                "EGR cooler leaks on later B47 models."
               ],
-              "cta": "Get quotes for 2.0L BMW 1 Series diesel engines ->"
+              "cta": ""
             }
           ]
         },
@@ -945,640 +1022,607 @@
           "title": "BMW 1 Series Petrol Engine Sizes",
           "items": [
             {
-              "title": "1.5L Petrol Engines",
-              "description": "Three-cylinder B-series petrol replacing the N13 in facelifted F20 cars and continuing into the F40 generation. Good for lower-mileage urban use.",
+              "title": "BMW 1 Series 1.5L Petrol Engines",
+              "description": "Debuting in the facelifted F20 and standard on the F40 generation, this three-cylinder turbo replaced older naturally aspirated units to meet stricter emissions standards while delivering punchy low-end response. It utilises direct injection and twin-scroll turbocharging to provide spirited performance alongside impressive fuel economy. → Compare BMW 1 Series 1.5L petrol engine prices",
               "engineCodes": [
-                "B38B15",
-                "B38A15A"
+                "B38A15"
               ],
               "compatibleModels": [
                 "116i",
                 "118i"
               ],
-              "productionYears": "2015-2024",
+              "productionYears": "F20 LCI 2015-2019, F40 2019-2024",
               "commonFailurePoints": [
-                "High-pressure fuel-pump wear at higher mileage.",
-                "Turbo wastegate actuator issues.",
-                "Timing-chain stretch if oil changes are neglected."
+                "Engine mount deterioration",
+                "turbo oil return line restrictions at higher mileage."
               ],
-              "cta": "Compare 1.5L BMW 1 Series petrol engine prices ->"
+              "cta": ""
             },
             {
-              "title": "1.6L Petrol Engines",
-              "description": "The dominant petrol displacement across the first two generations, spanning naturally aspirated E87 engines and turbocharged N13 F20 units.",
+              "title": "BMW 1 Series 1.6L Petrol Engines",
+              "description": "Spanning the late E87 and early F20 generations, this displacement covered a wide spectrum from basic city runabouts to turbocharged hot hatches. Early naturally aspirated variants prioritised smooth power delivery, while later direct-injection and turbo models introduced sharper acceleration but added complexity to the fuel system. → Compare BMW 1 Series 1.6L petrol engine prices",
               "engineCodes": [
                 "N45B16",
                 "N43B16",
                 "N13B16"
               ],
               "compatibleModels": [
-                "114i",
                 "116i",
                 "118i",
                 "120i"
               ],
-              "productionYears": "2004-2016",
+              "productionYears": "E87 LCI 2007-2011, F20 2011-2015",
               "commonFailurePoints": [
-                "N13 timing-chain tensioner wear and HPFP failure.",
-                "N45 and N43 vacuum-pump and VANOS issues."
+                "High-pressure fuel pump failure",
+                "timing chain guide degradation on turbo N13 variants."
               ],
-              "cta": "Get quotes for 1.6L BMW 1 Series petrol engines ->"
+              "cta": ""
             },
             {
-              "title": "2.0L Petrol Engines",
-              "description": "Covers N46, N20 and B48 applications from early 118i and 120i cars through to 128ti and even the F40 M135i xDrive.",
+              "title": "BMW 1 Series 2.0L Petrol Engines",
+              "description": "Representing the core of the 1 Series petrol range, this four-cylinder displacement has been continuously refined from early twin-cam designs to modern modular turbo platforms. It delivers a proven blend of everyday usability and responsive performance, serving as the default choice for drivers seeking a balance of power and running costs. → Compare BMW 1 Series 2.0L petrol engine prices",
               "engineCodes": [
                 "N46B20",
-                "N43B20",
                 "N20B20",
-                "B48B20",
-                "B48A20A",
-                "B48A20E"
+                "B48B20"
               ],
               "compatibleModels": [
                 "118i",
                 "120i",
-                "125i",
-                "128ti",
-                "M135i xDrive"
+                "120i xDrive",
+                "125i"
               ],
-              "productionYears": "2004-2024",
+              "productionYears": "E87 2004-2011, F20 2011-2019, F40 2019-2024",
               "commonFailurePoints": [
-                "N20 timing-chain tensioner and oil-pump module failure.",
-                "N46 VANOS and Valvetronic wear.",
-                "Early B48 coolant-loss issues around the expansion tank and water pump."
+                "Oil filter housing gasket leaks",
+                "plastic coolant expansion tank fractures on B48 units."
               ],
-              "cta": "Compare 2.0L BMW 1 Series petrol engine prices ->"
+              "cta": ""
             },
             {
-              "title": "3.0L Petrol Engines",
-              "description": "The six-cylinder halo engines: N52, N54, N55 and B58. These are the most sought-after 1 Series replacements and also the most expensive to source properly.",
+              "title": "BMW 1 Series 2.5L Petrol Engines",
+              "description": "Offered primarily in the 125i across the E87 and early F20 generations, this straight-six naturally aspirated unit provided silky-smooth power delivery and a premium driving character that defined the model's early reputation. It relies on proven mechanical simplicity and high-revving architecture rather than forced induction. → Compare BMW 1 Series 2.5L petrol engine prices",
               "engineCodes": [
-                "N52B30",
+                "N52B25"
+              ],
+              "compatibleModels": [
+                "125i"
+              ],
+              "productionYears": "E87 2005-2011, F20 2012-2015",
+              "commonFailurePoints": [
+                "Magnesium valve cover warping leading to oil leaks",
+                "electric water pump failures."
+              ],
+              "cta": ""
+            },
+            {
+              "title": "BMW 1 Series 3.0L Petrol Engines",
+              "description": "Reserved exclusively for M Performance and flagship variants, this six-cylinder displacement combines twin-scroll turbocharging with advanced valvetrain management to deliver explosive acceleration and track-ready durability. It stands as the pinnacle of 1 Series engineering, prioritising high-output performance over everyday fuel economy. → Compare BMW 1 Series 3.0L petrol engine prices Not sure which engine size your BMW 1 Series needs? Enter your registration number above - we’ll identify the exact displacement, engine code and compatible replacement options instantly. All engines supplied through EngineMarket include a minimum 12‑month unlimited mileage warranty from UK BMW 1 Series specialists.",
+              "engineCodes": [
                 "N54B30",
                 "N55B30",
                 "B58B30"
               ],
               "compatibleModels": [
-                "125i",
-                "128i",
-                "130i",
                 "135i",
                 "M135i",
                 "M140i"
               ],
-              "productionYears": "2005-2019",
+              "productionYears": "E82/E88 2007-2013, F20/F21 2012-2019",
               "commonFailurePoints": [
-                "N54 HPFP and wastegate issues.",
-                "N55 rod-bearing and VANOS-solenoid wear on neglected cars.",
-                "B58 coolant-system leaks on earlier examples."
+                "High-pressure fuel pump failure on N54 units",
+                "thermostat housing plastic cracks on B58 engines."
               ],
-              "cta": "Get quotes for 3.0L BMW 1 Series petrol engines ->"
+              "cta": ""
             }
           ]
-        }
-      ],
-      "closing": "Not sure which engine size your BMW 1 Series needs? Enter your registration number and we'll identify the exact displacement, engine code and compatible replacement options instantly."
-    },
-    "fuelTypes": {
-      "tag": "Complete BMW 1 Series Engines List",
-      "h2": "BMW 1 Series Engines by Fuel Type",
-      "intro": "Choose your BMW 1 Series engine by fuel type to compare realistic replacement prices, known issues and compatible UK supply options - from early N47 diesels to later B48 and B58 petrol units.",
-      "items": [
+        },
         {
           "title": "BMW 1 Series Diesel Engines",
-          "description": "Dominating UK replacement enquiries across all generations, the 1 Series diesel lineup delivers strong torque and motorway economy, but the earlier N47 family needs careful chain-history checks.",
-          "descriptor": "Dominating UK replacement enquiries across all generations, the 1 Series diesel lineup delivers strong torque and motorway efficiency.",
-          "families": [
-            "N47D20 - 2.0L inline-four powering the 118d and 120d, with timing-chain risk.",
-            "B47D20 - updated 2.0L unit replacing N47 with better reliability.",
-            "N47D16 - 1.6L diesel for 114d and 116d models.",
-            "B47D15 / B37C15 - efficient 1.5L diesel for later entry cars."
-          ],
-          "foundIn": [
-            "E87 generation (2004-2013) - N47D16, N47D20",
-            "F20 generation (2011-2019) - N47D20, B47D20, B37C15",
-            "F40 generation (2019-present) - B47D20, B37C15"
-          ],
-          "knownFor": [
-            "Strong low-end torque for motorway commuting.",
-            "Early N47 timing-chain failures between 60k and 100k miles.",
-            "High replacement demand for 118d and 120d variants.",
-            "DPF and EGR clogging on repeated short-trip urban use."
-          ],
-          "typicalModels": [
-            "114d",
-            "116d",
-            "118d",
-            "120d",
-            "123d",
-            "125d"
-          ],
-          "cta": "Get quotes for BMW 1 Series diesel replacement engines ->"
+          "items": []
         },
         {
           "title": "BMW 1 Series Petrol Engines",
-          "description": "The petrol range balances everyday refinement with performance, with the newer B-series architecture offering a stronger reliability base than the earlier turbocharged N13 and N20 families.",
-          "descriptor": "The petrol range balances everyday refinement with performance, featuring newer modular B-series architecture in later generations.",
-          "families": [
-            "N13B16 - 1.6L turbo four-cylinder in early F20 cars, prone to timing-guide wear.",
-            "B38B15 - efficient 1.5L three-cylinder replacing N13 in later cars.",
-            "B48B20 - versatile 2.0L turbo across 120i, 125i, 128ti and F40 performance applications.",
-            "B58B30 - 3.0L straight-six powering the M140i and future-classic rear-drive hot hatch."
-          ],
-          "foundIn": [
-            "E87 generation (2004-2013) - N43B20, N46B20",
-            "F20 generation (2011-2019) - N13B16, B48B20, B58B30",
-            "F40 generation (2019-present) - B38B15, B48B20"
-          ],
-          "knownFor": [
-            "Smooth power delivery and quieter cabin refinement than diesel models.",
-            "B-series coolant leaks and water-pump wear after higher mileage.",
-            "Strong UK search volume for 118i and M135i engine swaps.",
-            "Oil-consumption spikes on earlier turbocharged N13 and N20 variants."
-          ],
-          "typicalModels": [
-            "114i",
-            "116i",
-            "118i",
-            "120i",
-            "M135i",
-            "M140i"
-          ],
-          "cta": "Compare BMW 1 Series petrol engine prices ->"
+          "items": []
         },
         {
           "title": "BMW 1 Series Mild Hybrid (MHEV) Engines",
-          "description": "BMW added 48V mild-hybrid support to later F40 petrol and diesel variants to improve stop-start and coasting efficiency without changing the core engine block architecture.",
-          "descriptor": "Later F40 petrol and diesel variants gained 48V mild-hybrid support for efficiency and smoother start-stop operation.",
-          "families": [
-            "B48B20M - MHEV version of the 2.0L petrol with an integrated starter-generator.",
-            "B47D20M - MHEV version of the 2.0L diesel using the same base architecture."
-          ],
-          "foundIn": [
-            "F40 LCI (2021-present) 118i, 120i, 118d and 120d"
-          ],
-          "importantNotes": [
-            "MHEV components share the same engine block as conventional equivalents.",
-            "A specialist diagnostic reset is mandatory after installation.",
-            "Replacement stock is slightly more limited than standard variants.",
-            "No plug-in hybrid or full-electric BMW 1 Series was sold in the UK market."
-          ],
-          "cta": "Enquire about BMW 1 Series mild-hybrid engine availability ->"
+          "items": []
+        },
+        {
+          "title": "2004 - 2007 - E87 Launch Generation",
+          "items": []
+        },
+        {
+          "title": "2007 - 2011 - E87 LCI: N47 Diesel & N43 Petrol Arrive | Major Engine Change",
+          "items": []
+        },
+        {
+          "title": "2011 - 2015 - F20/F21 Generation Debut | Major Platform Change",
+          "items": []
+        },
+        {
+          "title": "2015 - 2019 - F20 LCI & Modular B-Series Rollout | Major Engine Change",
+          "items": []
+        },
+        {
+          "title": "2019 - 2024 - F40 FWD Architecture & MHEV Integration | Major Platform Change",
+          "items": []
         }
       ],
-      "closing": "Not sure which fuel type your BMW 1 Series has? Enter your registration to identify the engine code, fuel system and compatible replacement options instantly."
+      "closing": "Not sure which engine size your BMW 1 Series needs? Enter your registration number above - we’ll identify the exact displacement, engine code and compatible replacement options instantly. All engines supplied through EngineMarket include a minimum 12‑month unlimited mileage warranty from UK BMW 1 Series specialists.",
+      "headingLines": [
+        "BMW 1 Series Engines by Size",
+        "Find the Right Displacement for Your Variant"
+      ],
+      "ui": {
+        "swapLabel": "Swap panel",
+        "engineCodesLabel": "Engine Code(s)",
+        "compatibleModelsLabel": "Compatible Models (UK)",
+        "productionYearsLabel": "Production Years",
+        "warningLabel": "Common Failure Points",
+        "warningTitle": "Watch for these known weak points",
+        "helperLabel": "Engine Size Advice",
+        "helperTitle": "Need help matching the exact engine size?",
+        "helperButtonText": "Find My Engine"
+      }
+    },
+    "fuelTypes": {
+      "tag": "Fuel Type",
+      "h2": "",
+      "intro": "",
+      "items": [],
+      "closing": "",
+      "headingLines": [],
+      "ui": {
+        "swapLabel": "Swap panel",
+        "familiesLabel": "Common Engine Families",
+        "foundInLabel": "Found In",
+        "knownForLabel": "Known For (Brand-wide)",
+        "modelsLabel": "Typical Models (UK)",
+        "notesLabel": "Important Notes",
+        "closingButtonText": "Find my engine",
+        "emptyStateTitle": "Fuel type guidance",
+        "emptyStateDescription": "Detailed fuel-type content is being standardised across all brand pages. You can still use the registration form above to identify the correct engine and matching replacement options."
+      }
     },
     "engineYears": {
       "tag": "Engine Years",
       "h2": "BMW 1 Series Engines by Year - What Was Fitted & When",
-      "intro": "Every BMW 1 Series production period brought new engines, revised units or phased-out powerplants. Use this timeline to match your car to the right engine family before you compare rebuilt-engine pricing.",
-      "jumpLabel": "Browse by production period",
+      "intro": "Covering every major engineering shift across the 1 Series timeline, this section helps owners pinpoint their exact production year, verify fitted engine codes, and compare rebuilt engine prices from UK specialists.",
+      "jumpLabel": "Jump to model year",
       "years": [
         {
-          "year": "2004-2005",
-          "preview": "E87 launch",
-          "description": "The original E87 5-door introduced rear-wheel drive to the compact hatchback segment with naturally aspirated petrol engines and the early M47 diesel.",
+          "year": "2004 - 2007",
+          "preview": "E87 Launch Generation",
+          "description": "The inaugural 1 Series established BMW’s premium hatchback presence, combining rear-wheel-drive dynamics with proven naturally aspirated and early turbo powertrains.",
           "keyChanges": [
-            "E87 5-door hatchback launched.",
-            "Rear-wheel-drive compact platform shared with E90-era underpinnings.",
-            "BMW returned to the hatchback market with the first modern 1 Series."
+            "UKL rear-wheel-drive platform debut for the compact hatchback segment",
+            "Introduction of M47 diesel and N45/N46 petrol engine families",
+            "5-door hatchback body style prioritised with coupe/cabrio derivatives following later",
+            "First application of run-flat tyres as standard across most trim levels"
           ],
           "mainEngines": [
-            "M47TU2D20",
-            "N45B16",
-            "N46B20"
+            "M47D20 - 2.0L diesel (116d / 118d / 120d)",
+            "N45B16 - 1.6L petrol (116i)",
+            "N46B20 - 2.0L petrol (118i / 120i)",
+            "N52B25 - 2.5L petrol (125i)",
+            "N52B30 - 3.0L petrol (130i)"
           ],
           "popularModels": [
-            "BMW 116i",
+            "BMW 116d",
             "BMW 118i",
-            "BMW 120i",
-            "BMW 118d",
-            "BMW 120d"
-          ],
-          "knownFor": [
-            "The M47 diesel is durable once swirl flaps are addressed.",
-            "Naturally aspirated petrols respond well to regular oil changes.",
-            "Early N46 cars can suffer VANOS and Valvetronic wear."
-          ],
-          "engineCodesCovered": [
-            "M47TU2D20",
-            "N45B16",
-            "N46B20"
-          ],
-          "ticker": "BMW 116i replacement • BMW 118d replacement • BMW 120d replacement",
-          "cta": "Get quotes for 2004-2005 BMW 1 Series replacement engines"
-        },
-        {
-          "year": "2005-2006",
-          "preview": "130i arrives",
-          "description": "The 130i introduced the N52 3.0-litre straight-six and gave the 1 Series a performance halo long before the later M cars arrived.",
-          "keyChanges": [
-            "130i launched with N52B30 at 265 hp.",
-            "M47 diesel remained the volume motorway option.",
-            "The 116i continued as the entry petrol model."
-          ],
-          "mainEngines": [
-            "N52B30",
-            "N46B20",
-            "N45B16",
-            "M47TU2D20"
-          ],
-          "popularModels": [
-            "BMW 130i",
-            "BMW 120i",
             "BMW 120d",
-            "BMW 118d"
-          ],
-          "knownFor": [
-            "N52 is one of BMW's most reliable modern six-cylinder engines.",
-            "130i is already viewed as a future classic.",
-            "M47 swirl-flap checks are essential on diesel cars."
-          ],
-          "engineCodesCovered": [
-            "N52B30",
-            "N46B20",
-            "N45B16",
-            "M47TU2D20"
-          ],
-          "cta": "Compare 2005-2006 BMW 1 Series engine prices"
-        },
-        {
-          "year": "2007",
-          "preview": "E87 LCI and major engine change",
-          "description": "The facelift introduced N47 diesel and N43 direct-injection petrol engines - one of the most important shifts in 1 Series engine history.",
-          "keyChanges": [
-            "E87 LCI launched.",
-            "N47 replaced M47 and introduced the rear-mounted timing chain.",
-            "N43 replaced older naturally aspirated petrol engines with direct injection.",
-            "3-door E81 hatchback joined the range."
-          ],
-          "mainEngines": [
-            "N47D20",
-            "N43B16",
-            "N43B20",
-            "N52B30"
-          ],
-          "popularModels": [
-            "BMW 118d",
-            "BMW 120d",
-            "BMW 116i",
-            "BMW 118i",
-            "BMW 120i",
+            "BMW 125i",
             "BMW 130i"
           ],
           "knownFor": [
-            "The start of the infamous N47 timing-chain story.",
-            "N43 improved economy but added injector and NOx-sensor complexity.",
-            "One of the most common BMW 1 Series engine-replacement years in the UK."
+            "Exceptional chassis balance and premium interior materials for a compact car",
+            "M47 diesel block renowned for robust bottom-end but prone to swirl flap ingestion",
+            "Early N46 engines suffer from valve stem seal degradation and high oil consumption",
+            "Naturally aspirated refinement before the industry shift to forced induction"
           ],
           "engineCodesCovered": [
+            "M47D20",
+            "N45B16",
+            "N46B20",
+            "N52B25",
+            "N52B30"
+          ],
+          "cta": "Get quotes for 2004-2007 BMW 1 Series replacement engines",
+          "badges": [
+            {
+              "label": "Major Engine Changes",
+              "tone": "accent"
+            },
+            {
+              "label": "5 engine highlights",
+              "tone": "muted"
+            }
+          ],
+          "enquiries": []
+        },
+        {
+          "year": "2007 - 2011",
+          "preview": "E87 LCI: N47 Diesel & N43 Petrol Arrive",
+          "description": "The 2007 facelift swapped the ageing M47 for the aluminium N47 diesel, inadvertently introducing the rear-mounted timing chain that would dominate UK replacement enquiries.",
+          "keyChanges": [
+            "N47 engine family replaces M47 across all diesel badging",
+            "N43 direct injection petrol introduced for improved economy and emissions",
+            "N54 twin-turbo debut in 135i marking first forced induction performance flagship",
+            "Exterior styling refresh with revised headlights, bumpers and interior iDrive updates"
+          ],
+          "mainEngines": [
+            "N47D16/D20 - 1.6L/2.0L diesel (116d / 118d / 120d / 123d)",
+            "N43B16/B20 - 1.6L/2.0L petrol (116i / 118i / 120i)",
+            "N52B30 - 3.0L naturally aspirated petrol (130i / 125i)",
+            "N54B30 - 3.0L twin-turbo petrol (135i)"
+          ],
+          "popularModels": [
+            "BMW 118d",
+            "BMW 120d",
+            "BMW 123d",
+            "BMW 135i",
+            "BMW 130i"
+          ],
+          "knownFor": [
+            "N47 rear timing chain tensioner weakness leading to catastrophic \"death rattle\" between 60k-90k miles",
+            "N43 piezo injector failures and NOx sensor faults triggering limp mode on early units",
+            "135i N54 HPFP recalls mark BMW's first major forced induction push in the compact segment",
+            "Strong used market presence driving high-volume replacement demand across fleet cars"
+          ],
+          "engineCodesCovered": [
+            "N47D16",
             "N47D20",
             "N43B16",
             "N43B20",
-            "N52B30"
-          ],
-          "ticker": "BMW 1 Series 118d engine replacement • BMW 1 Series 120d engine replacement • BMW 1 Series diesel engine replacement",
-          "cta": "Get quotes for 2007 BMW 1 Series engine replacement"
-        },
-        {
-          "year": "2008-2009",
-          "preview": "Coupe, convertible and twin-turbo petrol",
-          "description": "BMW expanded the platform with E82 coupe and E88 convertible models, while the 135i brought the twin-turbo N54 into the range.",
-          "keyChanges": [
-            "E82 coupe and E88 convertible launched.",
-            "135i introduced with N54B30 twin-turbo straight-six.",
-            "123d arrived with twin-turbo N47 diesel.",
-            "116d introduced as a detuned diesel entry point."
-          ],
-          "mainEngines": [
-            "N54B30",
-            "N47D20",
-            "N43B16",
-            "N52B30"
-          ],
-          "popularModels": [
-            "BMW 135i",
-            "BMW 123d",
-            "BMW 120d",
-            "BMW 118d",
-            "BMW 125i Convertible"
-          ],
-          "knownFor": [
-            "N54 is highly tuneable but needs careful fuel-system and turbo maintenance.",
-            "123d mixed strong performance with diesel economy.",
-            "This was the first 1 Series platform to crack 300 hp from the factory."
-          ],
-          "engineCodesCovered": [
-            "N54B30",
-            "N47D20",
-            "N43B16",
-            "N52B30"
-          ],
-          "cta": "Compare rebuilt 2008-2009 BMW 1 Series engine prices"
-        },
-        {
-          "year": "2010-2011",
-          "preview": "N55 arrives and F20 transition begins",
-          "description": "The 135i moved to the N55, the 1M Coupe briefly raised the performance ceiling, and the second-generation F20 launched with a fully turbocharged direction of travel.",
-          "keyChanges": [
-            "N55B30 replaced N54 in the 135i.",
-            "1 Series M Coupe launched with N54B30TO.",
-            "E87 hatchback production ended and the F20 launched.",
-            "All-turbo engine strategy took over for the new generation."
-          ],
-          "mainEngines": [
-            "N54B30TO",
-            "N55B30",
-            "N47D20",
             "N52B30",
-            "N13B16"
+            "N54B30"
           ],
-          "popularModels": [
-            "BMW 1M Coupe",
-            "BMW 135i",
-            "BMW 120d",
-            "BMW 118d"
+          "cta": "Compare rebuilt 2007-2011 BMW 1 Series engine prices",
+          "badges": [
+            {
+              "label": "Major Engine Change",
+              "tone": "accent"
+            }
           ],
-          "knownFor": [
-            "The 1M became one of BMW's most collectible modern cars.",
-            "F20 launch marked the end of naturally aspirated petrols in the 1 Series.",
-            "Diesel models still dominated UK demand."
-          ],
-          "engineCodesCovered": [
-            "N54B30TO",
-            "N55B30",
-            "N47D20",
-            "N52B30",
-            "N13B16"
-          ],
-          "cta": "Compare 2011 BMW 1 Series engine prices from UK specialists"
+          "ticker": "2009 N47 timing chain failure • 2010 118d engine replacement • N54 HPFP rebuild cost • 2008 120d swirl flap removal",
+          "enquiries": [
+            "2009 N47 timing chain failure",
+            "2010 118d engine replacement",
+            "N54 HPFP rebuild cost",
+            "2008 120d swirl flap removal"
+          ]
         },
         {
-          "year": "2012-2015",
-          "preview": "Turbocharging goes mainstream, then B-series arrives",
-          "description": "The F20/F21 era cemented N13, N20 and N55 petrol engines before BMW swapped much of the range over to B37, B38, B47 and B48 during the 2015 facelift.",
+          "year": "2011 - 2015",
+          "preview": "F20/F21 Generation Debut",
+          "description": "Transitioning to the F20 chassis brought sharper dynamics and the N13/N20 turbo petrols, but plastic timing chain guides created a new wave of early-interval failures.",
           "keyChanges": [
-            "F20 platform matured with all engines now turbocharged.",
-            "N13 became the volume petrol engine while N20 powered the 125i.",
-            "M135i launched with N55B30.",
-            "2015 LCI introduced B-series engines and moved the diesel timing chain to the front on B47 units."
+            "F20 (5-door) / F21 (3-door) platform launch replacing E87 architecture",
+            "Introduction of 114i entry-level petrol variant for urban fleet markets",
+            "M135i performance flagship debuts with N55 single-turbo engine",
+            "Expanded driver assistance packages and upgraded infotainment hardware"
           ],
           "mainEngines": [
-            "N13B16",
-            "N20B20",
-            "N55B30",
-            "N47D20",
-            "B37C15",
-            "B38B15",
-            "B47D20",
-            "B48B20"
+            "N13B16 - 1.6L turbo petrol (114i / 116i / 118i)",
+            "N20B20 - 2.0L turbo petrol (120i / 125i)",
+            "N47D20 - 2.0L turbo diesel (116d / 118d / 120d / 125d)",
+            "N55B30 - 3.0L turbo petrol (M135i)"
           ],
           "popularModels": [
-            "BMW 116i",
-            "BMW 118i",
-            "BMW 125i",
             "BMW 116d",
             "BMW 118d",
-            "BMW 120d",
+            "BMW 120i",
+            "BMW 125d",
             "BMW M135i"
           ],
           "knownFor": [
-            "N13 timing-chain and HPFP failures became the petrol-side headache.",
-            "B47 delivered a major reliability improvement over N47.",
-            "2015 started BMW's modular engine architecture across the range."
+            "N20 timing chain guide fractures requiring premature engine removal before 70k miles",
+            "N55 rod bearing concerns under track or high-load driving conditions",
+            "Improved cabin space, NVH reduction, and 8-speed ZF transmission introduction",
+            "High commercial replacement volume driven by 118d and 120d fleet mileage accumulation"
           ],
           "engineCodesCovered": [
             "N13B16",
             "N20B20",
-            "N55B30",
             "N47D20",
-            "B37C15",
-            "B38B15",
-            "B47D20",
-            "B48B20"
+            "N55B30"
           ],
-          "ticker": "BMW 1 Series 118i engine replacement • BMW 1 Series 116d engine replacement • BMW 1 Series M135i engine replacement",
-          "cta": "Get quotes for 2012-2015 BMW 1 Series replacement engines"
+          "cta": "Find replacement engines for 2011-2015 BMW 1 Series",
+          "badges": [
+            {
+              "label": "Major Platform Change",
+              "tone": "accent"
+            }
+          ],
+          "ticker": "F20 2012 118d engine replacement • N20B20 timing chain guide repair • M135i spun bearing rebuild • 2014 120i turbo replacement",
+          "enquiries": [
+            "F20 2012 118d engine replacement",
+            "N20B20 timing chain guide repair",
+            "M135i spun bearing rebuild",
+            "2014 120i turbo replacement"
+          ]
         },
         {
-          "year": "2016-2019",
-          "preview": "M140i era and the move to F40",
-          "description": "BMW introduced the B58-powered M140i, finished the rear-wheel-drive F20/F21 story, then launched the front-wheel-drive F40 with a 2.0-litre M135i xDrive.",
+          "year": "2015 - 2019",
+          "preview": "F20 LCI & Modular B-Series Rollout",
+          "description": "BMW addressed widespread N-series timing chain complaints by introducing the B38, B47, and B48 modular engines, significantly improving thermal management and bottom-end durability.",
           "keyChanges": [
-            "M140i replaced M135i with the B58B30.",
-            "B37, B38, B47 and B48 continued through the late F20 years.",
-            "F40 launched in 2019 on the UKL2 platform.",
-            "The M135i switched from six-cylinder rear drive to four-cylinder xDrive."
+            "B-series modular engine family fully replaces N-series across petrol and diesel ranges",
+            "F20 mid-cycle refresh with updated LED lighting, suspension tuning and interior trim",
+            "8-speed ZF automatic gearbox standardised across all non-manual trims",
+            "ConnectedDrive navigation and digital cluster options introduced"
           ],
           "mainEngines": [
-            "B58B30",
-            "B37C15",
-            "B38A15",
-            "B47D20",
-            "B48A20T1"
+            "B38B15 - 1.5L 3-cylinder petrol (116i / 118i)",
+            "B48B20 - 2.0L turbo petrol (120i / M135i / M140i)",
+            "B47D15/D20 - 1.5L/2.0L turbo diesel (114d / 116d / 118d / 120d)",
+            "B58B30 - 3.0L turbo petrol (M140i)"
           ],
           "popularModels": [
-            "BMW M140i",
-            "BMW M140i xDrive",
+            "BMW 118i",
+            "BMW 118d",
+            "BMW 120d",
+            "BMW 120i",
+            "BMW M140i"
+          ],
+          "knownFor": [
+            "B48 coolant expansion tank cracks becoming a standard 60k mile preventative service item",
+            "B47 diesel vastly improves upon N47 timing chain reliability while maintaining strong torque delivery",
+            "M140i B58 widely praised as BMW’s most robust modern inline-six with closed-deck strength",
+            "Reduced DPF regeneration issues on updated Euro 6 compliant diesel engines"
+          ],
+          "engineCodesCovered": [
+            "B38B15",
+            "B48B20",
+            "B47D15",
+            "B47D20",
+            "B58B30"
+          ],
+          "cta": "Get quotes for 2015-2019 BMW 1 Series replacement engines",
+          "badges": [
+            {
+              "label": "Major Engine Change",
+              "tone": "accent"
+            }
+          ],
+          "ticker": "2016 F20 LCI B47 diesel replacement • M140i B58 engine cost • 2017 118i 3-cylinder rebuild • B48 thermostat housing fix",
+          "enquiries": [
+            "2016 F20 LCI B47 diesel replacement",
+            "M140i B58 engine cost",
+            "2017 118i 3-cylinder rebuild",
+            "B48 thermostat housing fix"
+          ]
+        },
+        {
+          "year": "2019 - 2024",
+          "preview": "F40 FWD Architecture & MHEV Integration",
+          "description": "Moving to the UKL front-wheel-drive architecture maximised interior space and efficiency, integrating 48-volt mild-hybrid tech across petrol and diesel line-ups while retaining proven B-series cores.",
+          "keyChanges": [
+            "FWD/UKL platform transition replacing traditional rear-wheel-drive layout",
+            "48V mild-hybrid (MHEV) system integrated across most 116i/118i and 116d/118d variants",
+            "7-speed dual-clutch transmission standardised across automatic petrol trims",
+            "3-door coupe derivative discontinued; hatchback dimensions expanded for rear passenger comfort"
+          ],
+          "mainEngines": [
+            "B38A15 - 1.5L turbo MHEV petrol (116i / 118i)",
+            "B48B20 - 2.0L turbo petrol (120i / M135i xDrive)",
+            "B47D15/D20 - 1.5L/2.0L MHEV diesel (116d / 118d / 120d)"
+          ],
+          "popularModels": [
+            "BMW 118i M Sport",
             "BMW 120d xDrive",
             "BMW M135i xDrive",
-            "BMW 118i"
+            "BMW 116d EfficientDynamics"
           ],
           "knownFor": [
-            "B58 is one of BMW's best-regarded modern engines.",
-            "The M140i is a future classic as the last rear-wheel-drive six-cylinder 1 Series.",
-            "The 2019 F40 launch changed the platform philosophy completely."
-          ],
-          "engineCodesCovered": [
-            "B58B30",
-            "B37C15",
-            "B38A15",
-            "B47D20",
-            "B48A20T1"
-          ],
-          "ticker": "BMW M140i engine replacement • BMW 120d engine replacement • BMW 1 Series B58 engine",
-          "cta": "Compare 2016-2019 BMW 1 Series engine prices from UK suppliers"
-        },
-        {
-          "year": "2020-2025",
-          "preview": "Mild hybrid and petrol-only future",
-          "description": "Later F40 cars added 48V mild-hybrid support, the 128ti broadened the hot-hatch offering, and the new F70 simplified the UK lineup around petrol MHEV power.",
-          "keyChanges": [
-            "48V MHEV support expanded on later F40 petrol and diesel models.",
-            "128ti launched as a front-wheel-drive B48 hot hatch.",
-            "F70 arrived for 2024 with petrol-only UK specification.",
-            "MHEV became standard and the traditional 'i' badging strategy changed."
-          ],
-          "mainEngines": [
-            "B38A15",
-            "B48A20",
-            "B48A20E",
-            "B48A20T1",
-            "B47C20B",
-            "B38A15A"
-          ],
-          "popularModels": [
-            "BMW 128ti",
-            "BMW 120d MHEV",
-            "BMW 120i MHEV",
-            "BMW M135i xDrive",
-            "BMW 120 MHEV"
-          ],
-          "knownFor": [
-            "No plug-in hybrid or full-electric BMW 1 Series was offered in the UK.",
-            "F70 dropped diesels from the UK market entirely.",
-            "Replacement demand is still developing on the newest MHEV cars."
+            "48V belt-starter generator requires hybrid system health verification during engine removal",
+            "Refined stop-start integration reduces urban wear but adds electronic complexity to replacements",
+            "Higher initial build quality and reduced NVH compared to outgoing F20 generation",
+            "Steady replacement demand driven by warranty-exit vehicles requiring specialist B-series rebuilds"
           ],
           "engineCodesCovered": [
             "B38A15",
-            "B48A20",
-            "B48A20E",
-            "B48A20T1",
-            "B47C20B",
-            "B38A15A"
+            "B48B20",
+            "B47D15",
+            "B47D20"
           ],
-          "ticker": "BMW 128ti engine replacement • BMW 120d MHEV engine replacement • BMW M135i xDrive engine replacement",
-          "cta": "Get quotes for 2020-2025 BMW 1 Series replacement engines"
+          "cta": "Compare rebuilt 2019-2024 BMW 1 Series engine prices",
+          "badges": [
+            {
+              "label": "Major Platform Change",
+              "tone": "accent"
+            }
+          ],
+          "enquiries": []
         }
       ],
-      "closing": "Not sure which year your BMW 1 Series was built? Enter your registration and we'll identify the exact engine, model year and compatible replacement options instantly."
+      "closing": "Not sure which year your BMW 1 Series was built? Enter your registration number and we'll identify the exact engine, model year, and compatible replacement options instantly - all backed by a minimum 12‑month warranty from UK BMW 1 Series specialists.",
+      "headingLines": [
+        "BMW 1 Series Engines by Year",
+        "What Was Fitted & When"
+      ],
+      "ui": {
+        "keyChangesLabel": "Key Changes",
+        "knownForLabel": "Known For",
+        "mainEnginesLabel": "Main Engines",
+        "popularModelsLabel": "Popular Models",
+        "engineCodesLabel": "Engine Codes Covered",
+        "enquiriesLabel": "Common Replacement Enquiries"
+      },
+      "summaryCta": {
+        "label": "Year Finder",
+        "title": "Not sure which year your BMW 1 Series was built?",
+        "buttonText": "Find My Engine"
+      }
     },
     "faq": {
       "tag": "FAQ",
       "h2": "BMW 1 Series Engine Replacement - Frequently Asked Questions",
-      "intro": "Answers to the most common questions about BMW 1 Series engine costs, reliability, common failures and whether replacement makes financial sense.",
+      "intro": "",
       "items": [
         {
-          "question": "How much does a BMW 1 Series engine replacement cost in the UK?",
-          "answer": "A used BMW 1 Series engine replacement typically lands between £2,250 and £5,500 fitted, depending on generation and engine code. Reconditioned or rebuilt units cost more up front but usually deliver far better long-term value than a cheap used engine.",
+          "question": "How much does a BMW 1 Series engine replacement cost UK?",
+          "answer": "A rebuilt BMW 1 Series engine typically costs £1,200-£4,200 supply-only, depending on variant and engine code. Diesel N47/B47 units sit at the lower end, while performance B58 engines reach higher ranges. Supply & fit adds £650-£1,450 labour depending on workshop location and complexity.",
           "keyPoints": [
-            "M47 118d used-engine jobs can be the cheapest route.",
-            "A rebuilt N47 supply-and-fit package often lands around the mid-market range.",
-            "M140i B58 replacements sit at the top of the price band.",
-            "Independent specialists are usually far cheaper than main dealers."
+            "N47 diesel replacements average £1,350-£3,200 supply-only across UK specialists",
+            "B48 petrol engines typically range £1,600-£3,700 for rebuilt units",
+            "Supply & fit labour adds £650-£1,450 depending on garage rates and access",
+            "Performance M135i/M140i engines command £3,500-£8,500 due to specialist machining"
           ],
-          "cta": "Compare BMW 1 Series engine replacement prices now"
+          "cta": "Compare live BMW 1 Series engine replacement quotes from UK specialists"
         },
         {
-          "question": "Which BMW 1 Series engine is the most reliable?",
-          "answer": "For modern cars, the B47 2.0-litre diesel and B58 3.0-litre petrol are the stand-out reliability choices. They fixed key weaknesses from the N47 and N55 generations and respond well to regular oil servicing.",
+          "question": "Is the N47 engine in the BMW 1 Series really that bad?",
+          "answer": "The N47 diesel has a documented timing chain weakness, but many units exceed 150k miles with proper maintenance. Early E87/F20 models (2007-2015) are most affected, while post-2015 B47 engines resolved the core design flaw with revised tensioners and guides.",
           "keyPoints": [
-            "B47 diesel benefits from the front-mounted timing chain.",
-            "B58 has a strong closed-deck design and excellent owner reputation.",
-            "N52 six-cylinder cars are also very durable if well maintained.",
-            "Unsorted N47 diesels remain the higher-risk option."
+            "N47 timing chain failures typically occur between 60,000-90,000 miles without preventative replacement",
+            "Rear-mounted chain design makes early warning rattle difficult to detect before damage",
+            "Rebuilt N47 units with upgraded tensioners and guides offer reliable long-term solutions",
+            "B47 successor engines from 2015 onwards show significantly improved timing system durability"
           ],
-          "cta": "Get quotes for a rebuilt B47 or B58 engine with upgraded internals",
-          "warning": "Avoid buying an N47 without proof of timing-chain work if the car is already into higher mileage."
+          "cta": "Get quotes for upgraded rebuilt N47 BMW 1 Series engines with warranty"
         },
         {
-          "question": "What is the best BMW 1 Series engine to buy?",
-          "answer": "The B47 118d and 120d are the best all-round diesel options for UK motorway drivers, the B38 1.5-litre petrol is the everyday sweet spot for lower-mileage use, and the B58 M140i is the enthusiast's pick.",
+          "question": "What causes the BMW 1 Series timing chain to fail?",
+          "answer": "N47 diesel timing chain failure stems from plastic guide rail degradation and inadequate rear tensioner oil pressure, causing chain stretch and eventual skip. B47 engines improved guide materials but upper guide fractures still occur around 70k-100k miles on high-mileage examples.",
           "keyPoints": [
-            "B47 diesel suits higher annual mileage and remains Euro 6 friendly.",
-            "B38 petrol is simple, economical and well matched to city driving.",
-            "B58 M140i cars combine strong reliability with serious performance."
+            "Plastic timing chain guides become brittle and fracture under repeated thermal cycling",
+            "Rear-mounted tensioner relies on consistent oil pressure which drops as pumps wear",
+            "Chain stretch causes timing skip, valve contact, and catastrophic piston damage",
+            "Preventative replacement before 80k miles avoids emergency engine replacement costs"
           ],
-          "cta": "Compare rebuilt B47, B48 and B58 engine prices for your 1 Series"
+          "cta": "Compare preventative timing chain replacement vs rebuilt engine costs for your BMW 1 Series"
         },
         {
-          "question": "How many miles can a BMW 1 Series engine last?",
-          "answer": "Most BMW 1 Series engines will comfortably cover 150,000 to 200,000 miles with proper servicing, while the strongest six-cylinder cars can exceed that. The biggest longevity factor is frequent oil changes rather than headline mileage alone.",
+          "question": "Is it worth replacing the engine on a BMW 1 Series?",
+          "answer": "Replacing a BMW 1 Series engine is worthwhile if the chassis, transmission and interior remain in good condition. A rebuilt engine with warranty typically costs £1,200-£4,200, far less than purchasing a comparable replacement vehicle, extending your car's life by 80k+ miles.",
           "keyPoints": [
-            "N52 130i cars are long-distance standouts.",
-            "B58 cars also show strong high-mileage durability.",
-            "The M47 remains a dependable older diesel when maintained properly.",
-            "10,000-mile oil changes matter more than BMW's older long service intervals."
+            "Rebuilt engines with 12-month warranty offer better value than untested used units",
+            "High-mileage 118d/120d models often have solid chassis worth preserving economically",
+            "Performance M135i/M140i variants justify premium rebuild costs due to strong residual values",
+            "Supply & fit options remove installation complexity and preserve warranty validity"
           ],
-          "cta": "Find a rebuilt 1 Series engine with 12-month warranty for long-term peace of mind"
+          "cta": "Get a tailored BMW 1 Series engine replacement quote to compare vs car value"
         },
         {
-          "question": "Is the BMW 1 Series reliable? What should I look out for?",
-          "answer": "Yes, especially in the later B-series era, but reliability depends heavily on engine choice and service history. Timing-chain evidence, diesel EGR recall history and regular oil servicing are the biggest things to verify.",
+          "question": "Which BMW 1 Series engine is most reliable?",
+          "answer": "The B58 3.0L petrol in M140i models is widely regarded as BMW's most reliable modern engine, with robust closed-deck construction. For diesel, post-2015 B47 units resolved N47 timing chain issues, while early M47 diesels offer mechanical simplicity despite higher emissions.",
           "keyPoints": [
-            "F20/F21 cars have a strong reliability reputation overall.",
-            "N47 cold-start rattle is a major warning sign.",
-            "Post-2015 B-series engines are substantially more robust."
+            "B58 engines feature forged internals and improved cooling for exceptional long-term durability",
+            "B47 diesel engines from 2015+ show markedly better timing system reliability than N47",
+            "Early M47 diesels lack complex emissions hardware but suffer swirl flap ingestion risks",
+            "Avoid N13/N20 petrol engines without verifying timing chain guide replacement history"
           ],
-          "cta": "Get quotes for a rebuilt engine if your 1 Series has a known problem engine",
-          "warning": "Never buy an N47 diesel at higher mileage without documented chain replacement proof."
+          "cta": "Compare rebuilt B58 and B47 BMW 1 Series engine prices from UK specialists"
         },
         {
-          "question": "Should I buy a petrol or diesel BMW 1 Series?",
-          "answer": "Diesel makes more sense for regular motorway mileage, while petrol is usually the better fit for lower-mileage, short-trip and city use. For most buyers, the B47 diesel and B38 petrol are the safest places to start.",
+          "question": "How long do BMW 1 Series engines last?",
+          "answer": "With proper servicing, BMW 1 Series engines can exceed 150,000-200,000 miles. Diesel N47/B47 units often reach higher mileages but require timing chain attention around 80k miles. Petrol B48/B58 engines show strong longevity when coolant system components are proactively replaced before failure.",
           "keyPoints": [
-            "Diesel is strongest for long-distance economy.",
-            "Petrol avoids DPF and EGR complications on short journeys.",
-            "Earlier Euro 5 diesels are less attractive in stricter emissions zones."
+            "Regular oil changes with correct BMW Longlife specification prevent premature bearing wear",
+            "Timing chain preventative replacement around 80k miles extends N47 engine life significantly",
+            "Coolant expansion tank and thermostat housing should be replaced proactively on B-series engines",
+            "High-mileage examples benefit from compression testing before purchasing used replacement engines"
           ],
-          "cta": "Compare rebuilt petrol and diesel 1 Series engine prices side by side"
+          "cta": "Find long-life rebuilt BMW 1 Series engines with verified compression and warranty coverage"
         },
         {
-          "question": "What are the most common BMW 1 Series engine problems?",
-          "answer": "The headline failures cluster around the N47 diesel, N13 petrol and N20 petrol engines. Beyond those, diesel EGR and DPF issues plus higher-mileage turbo problems remain common replacement triggers.",
+          "question": "What's the difference between rebuilt, reconditioned and used BMW 1 Series engines?",
+          "answer": "Used BMW 1 Series engines are untested donor units sold as-is, while reconditioned engines receive partial refurbishment of worn components. Rebuilt engines undergo complete teardown, precision machining, and upgraded parts to address known failure points, offering the best balance of reliability and value.",
           "keyPoints": [
-            "N47 timing-chain failure is the best-known BMW 1 Series engine issue.",
-            "N13 and N20 cars often struggle with chain and fuel-system faults.",
-            "N55 performance cars can suffer rod-bearing issues when neglected.",
-            "Later B-series engines are significantly more dependable."
+            "Used engines cost £800-£2,400 but carry unknown history and no component upgrades",
+            "Reconditioned units replace seals and gaskets but may retain original worn bearings",
+            "Rebuilt engines include upgraded timing components and carry 12-month unlimited mileage warranties",
+            "Supply & fit options ensure professional installation and preserve warranty validity across all types"
           ],
-          "cta": "See detailed repair vs replacement cost breakdowns in the engine problems section above"
+          "cta": "Compare used, reconditioned and rebuilt BMW 1 Series engine prices with warranty details"
         },
         {
-          "question": "Is the N47 really as bad as people say? Should I avoid it?",
-          "answer": "The N47's reputation is deserved because the chain is mounted at the rear of the engine and failures can be catastrophic. That said, properly rebuilt N47 engines with upgraded chain kits can still be sensible replacements.",
+          "question": "Can I drive my BMW 1 Series with a timing chain rattle?",
+          "answer": "No, driving a BMW 1 Series with N47 timing chain rattle risks catastrophic engine failure. The rattle indicates advanced chain stretch and guide wear; continued operation can cause timing skip, valve contact, and irreversible piston damage requiring full engine replacement.",
           "keyPoints": [
-            "The chain position is the underlying design weakness.",
-            "Preventative chain work is cheaper than a failure-led replacement.",
-            "Upgraded rebuilt N47 engines are far safer than neglected originals.",
-            "A later B47 gives a similar ownership feel with less risk."
+            "Timing chain rattle typically signals 60k-90k mile wear requiring immediate specialist inspection",
+            "Continuing to drive risks chain jump, bent valves, and expensive secondary engine damage",
+            "Towing to a specialist is cheaper than replacing a seized engine caused by delay",
+            "Preventative chain replacement costs £1,100-£1,800 versus £3,200+ for full engine rebuild"
           ],
-          "cta": "Get quotes for N47 engine replacement or rebuild with upgraded timing-chain components",
-          "warning": "Driving a high-mileage N47 on its original chain is a significant gamble."
+          "cta": "Get urgent quotes for N47 timing chain replacement or rebuilt BMW 1 Series engines"
         },
         {
-          "question": "Can I remap my BMW 1 Series engine safely?",
-          "answer": "Yes, provided the engine is mechanically healthy and the tuning is done by a reputable specialist with dyno evidence and a written warranty. N47 and B47 diesels respond particularly well to a conservative Stage 1 setup.",
+          "question": "Does a BMW 1 Series engine replacement come with a warranty?",
+          "answer": "Yes, every rebuilt BMW 1 Series engine supplied through EngineMarket includes a minimum 12-month unlimited mileage warranty from UK specialists. Used engines typically carry shorter 30-90 day cover, while reconditioned units vary by supplier - always confirm exact warranty terms before purchase.",
           "keyPoints": [
-            "Stage 1 diesel gains can be strong without hardware changes.",
-            "The 114i's N13 can unlock meaningful extra power through a safe remap.",
-            "Never remap a car that already has unresolved engine symptoms."
+            "Rebuilt engine warranties cover internal components, gaskets, and machining defects for 12 months",
+            "Unlimited mileage warranty terms apply regardless of annual distance driven across the UK",
+            "Labour cover varies by supplier; confirm whether fitting costs are included in warranty claims",
+            "Registration-based engine matching ensures warranty validity for your specific BMW 1 Series variant"
           ],
-          "cta": "Compare rebuilt engine prices if your current unit isn't healthy enough to remap"
+          "cta": "Compare warranty terms across rebuilt BMW 1 Series engine suppliers before committing"
         },
         {
-          "question": "Is it worth replacing the engine in my BMW 1 Series?",
-          "answer": "In many cases, yes - especially if the rebuild cost stays under around half of the car's real-world value. The stronger-value and performance variants are usually worth saving, while the cheapest older cars need a harder financial look.",
+          "question": "How do I find my BMW 1 Series engine code?",
+          "answer": "Your BMW 1 Series engine code appears on the V5C logbook under \"engine number\", on the engine block stamping, or via DVLA lookup using your registration. Common codes include N47D20 (diesel), B47D20 (modern diesel), B48B20 (petrol), and B58B30 (M140i performance).",
           "keyPoints": [
-            "M140i, 130i and 135i models are usually worth rebuilding.",
-            "A rebuilt engine can outlast the factory original when upgraded properly.",
-            "Lower-value E87 petrol cars can become uneconomical quickly."
+            "V5C registration document lists engine number which correlates to factory engine code",
+            "Engine block stamping near the oil filter housing shows the full code designation",
+            "DVLA online vehicle enquiry confirms engine size and fuel type for variant matching",
+            "Entering your registration on EngineMarket instantly identifies compatible replacement engine options"
           ],
-          "cta": "Compare rebuilt engine prices and see if replacement makes financial sense for your 1 Series"
+          "cta": "Enter your BMW 1 Series registration to identify your exact engine code and replacement prices"
         }
-      ]
+      ],
+      "headingLines": [
+        "BMW 1 Series Engine Replacement",
+        "Frequently Asked Questions"
+      ],
+      "defaultOpenIndex": 0,
+      "ui": {
+        "questionLabelPrefix": "Question",
+        "keyPointsLabel": "Key points",
+        "warningTitle": "Check fitment and engine condition before ordering"
+      }
     },
     "trustCta": {
       "tag": "Why Choose Us",
       "h2": "Why UK BMW 1 Series Owners Trust EngineMarket",
-      "intro": "Join thousands of UK drivers who compare BMW 1 Series engine prices through our network of trusted specialists, with rebuilt and reconditioned units backed by a minimum 12-month unlimited mileage warranty and nationwide delivery.",
+      "intro": "",
       "points": [
         {
           "title": "Trusted BMW 1 Series Engine Suppliers",
-          "description": "Every garage and engine rebuilder in our network is vetted, rated and reviewed by real 1 Series owners."
+          "description": "Every garage and rebuilder in our network is vetted, rated, and reviewed by real BMW 1 Series owners."
         },
         {
           "title": "Compare BMW 1 Series Engine Replacement Companies",
-          "description": "See prices, warranty terms and supply-and-fit options side by side before you commit."
+          "description": "See prices, warranty terms, and supply & fit options side‑by‑side before you commit."
         },
         {
           "title": "UK Engine Replacement Services for BMW 1 Series",
-          "description": "Covering every major variant from 114d to M140i, with supply-only or full supply and fit available nationwide."
+          "description": "Covering every variant from 114i to M140i, with supply‑only or full supply & fit nationwide."
         }
       ],
-      "finalText": "Find the BMW 1 Series engine replacement service UK drivers rely on. Compare prices from trusted specialists today and get back on the road with confidence.",
-      "buttonText": "Compare BMW 1 Series Engine Prices Now ->"
+      "finalText": "Find the best BMW 1 Series engine replacement UK drivers rely on. Compare prices from trusted specialists today and get back on the road with confidence.",
+      "buttonText": "Compare BMW 1 Series Engine Prices Now →",
+      "secondaryAction": {
+        "text": "Call Our Experts",
+        "href": "tel:03330000044"
+      },
+      "imageAlt": "BMW 1 Series vehicle",
+      "ui": {
+        "pointLabel": "Included",
+        "stripLabel": "Trusted UK Engine Marketplace",
+        "stripTitle": "Compare BMW 1 Series engine prices with vetted UK specialists",
+        "trustBullets": [
+          "100% Free",
+          "No Obligation",
+          "Fast & secure process",
+          "UK-based support"
+        ],
+        "imageBadgeLabel": "Trusted supplier network",
+        "imageBadgeTitle": "Warranty-backed rebuilt & used options",
+        "imageBadgeText": "Every quote checked for fitment, quality and lead time."
+      }
     }
   }
 }

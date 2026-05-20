@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { EngineTypesData } from "@/types/brand";
 import { CtaStrip } from "@/components/ui/CalloutCards";
 import Container from "@/components/ui/Container";
@@ -165,18 +165,26 @@ function getTypeIcon(title: string) {
   return <EngineIcon />;
 }
 
-function MobileCard({
+function FlipCard({
   type,
   open,
   onToggle,
+  frontActionLabel,
+  backActionLabel,
+  priceLabel,
 }: {
   type: EngineTypesData["types"][number];
   open: boolean;
   onToggle: () => void;
+  frontActionLabel: string;
+  backActionLabel: string;
+  priceLabel: string;
 }) {
   const icon = getTypeIcon(type.title);
   const badge = typeBadge(type.title);
   const variant = typeVariant(type.title);
+  const price = priceParts(type.priceRange);
+  const featured = isFeaturedCard(type.title);
   const frontRef = useRef<HTMLDivElement>(null);
   const backRef = useRef<HTMLDivElement>(null);
   const [frontHeight, setFrontHeight] = useState(0);
@@ -210,30 +218,42 @@ function MobileCard({
   const cardHeight = open ? Math.max(backHeight, 160) : Math.max(frontHeight, 140);
 
   return (
-    <div className="overflow-hidden rounded-[12px] [perspective:1000px]" style={{ height: cardHeight || undefined }}>
+    <div
+      className="overflow-hidden rounded-[12px] lg:rounded-[16px]"
+      style={{ height: cardHeight || undefined, perspective: "1200px", WebkitPerspective: "1200px" }}
+    >
       <div
-        className={`relative h-full w-full transition-transform duration-[550ms] [transform-style:preserve-3d] ${
-          open ? "[transform:rotateY(180deg)]" : ""
-        }`}
+        className="relative h-full w-full transition-transform duration-[550ms]"
+        style={{
+          transformStyle: "preserve-3d",
+          WebkitTransformStyle: "preserve-3d",
+          transform: open ? "rotateY(180deg)" : "rotateY(0deg)",
+        }}
       >
         <div
           ref={frontRef}
-          className="absolute inset-0 [backface-visibility:hidden] [-webkit-backface-visibility:hidden]"
+          className="absolute inset-0"
+          style={{ backfaceVisibility: "hidden", WebkitBackfaceVisibility: "hidden" }}
         >
-          <div className="flex h-full rounded-[12px] border border-[#e5e7eb] bg-white shadow-[0_2px_8px_rgba(13,27,46,0.06)]">
-            <div className="flex-1 px-[16px] py-[14px]">
+          <div
+            className={`flex h-full rounded-[12px] border bg-white shadow-[0_2px_8px_rgba(13,27,46,0.06)] lg:rounded-[16px] lg:shadow-[0_8px_24px_rgba(13,27,46,0.06)] ${
+              featured ? "border-[#dbe5f4]" : "border-[#e5e7eb]"
+            }`}
+          >
+            <div className="flex-1 px-[16px] py-[14px] lg:px-5 lg:py-5">
               <span className={`mb-[7px] inline-block rounded-full border px-[9px] py-[2px] text-[9px] font-bold uppercase tracking-[0.7px] ${badgeClass}`}>
                 {badge}
               </span>
-              <div className="font-['Manrope'] text-[14px] font-extrabold leading-[1.25] text-[#0d1b2e]">{type.title}</div>
-              <p className="mt-1 text-[11.5px] leading-[1.45] text-[#6b7280]">{teaserText(type.description)}</p>
-              <div className="mb-[2px] mt-[10px] text-[9px] font-bold uppercase tracking-[0.5px] text-[#9ca3af]">Typical price range</div>
-              <div className="font-['Manrope'] text-[16px] font-extrabold tracking-[-0.3px] text-[#15803d]">{type.priceRange}</div>
+              <div className="font-['Manrope'] text-[14px] font-extrabold leading-[1.25] text-[#0d1b2e] lg:text-[16px]">{type.title}</div>
+              <p className="mt-1 text-[11.5px] leading-[1.45] text-[#6b7280] lg:text-[12.5px] lg:leading-[1.62]">{teaserText(type.description)}</p>
+              <div className="mb-[2px] mt-[10px] text-[9px] font-bold uppercase tracking-[0.5px] text-[#9ca3af]">{priceLabel || price.label}</div>
+              <div className="font-['Manrope'] text-[16px] font-extrabold tracking-[-0.3px] text-[#15803d] lg:text-[18px]">{price.main}</div>
+              {price.note ? <div className="mt-[2px] text-[10px] font-medium leading-[1.35] text-[#94a3b8]">{price.note}</div> : null}
               <a
                 href="#quote-form"
                 data-quote-context={type.title}
                 data-quote-source="engine-types"
-                className="mt-[10px] inline-flex items-center gap-1 text-[11px] font-bold text-[#15803d] transition hover:gap-[7px]"
+                className="mt-[10px] inline-flex items-center gap-1 text-[11px] font-bold text-[#15803d] transition hover:gap-[7px] lg:text-[12.5px]"
               >
                 <ArrowIcon />
                 <span>{type.cta}</span>
@@ -243,13 +263,13 @@ function MobileCard({
             <button
               type="button"
               onClick={onToggle}
-              className="flex w-[52px] flex-none cursor-pointer flex-col items-center justify-center gap-2 border-l border-[#f1f5f9] bg-[#f8f9fa] transition hover:bg-[#f8fbff]"
+              className="flex w-[52px] flex-none cursor-pointer flex-col items-center justify-center gap-2 border-l border-[#f1f5f9] bg-[#f8f9fa] transition hover:bg-[#f8fbff] lg:w-[64px]"
             >
               <div className="flex h-8 w-8 items-center justify-center rounded-[8px] bg-[#0d1b2e] text-[#22c55e]">
                 {icon}
               </div>
               <span className="text-[8px] font-bold uppercase tracking-[0.5px] text-[#9ca3af] [writing-mode:vertical-rl] [text-orientation:mixed] rotate-180">
-                What is it?
+                {frontActionLabel}
               </span>
             </button>
           </div>
@@ -257,16 +277,21 @@ function MobileCard({
 
         <div
           ref={backRef}
-          className="absolute inset-0 [backface-visibility:hidden] [-webkit-backface-visibility:hidden] [transform:rotateY(180deg)]"
+          className="absolute inset-0"
+          style={{
+            backfaceVisibility: "hidden",
+            WebkitBackfaceVisibility: "hidden",
+            transform: "rotateY(180deg)",
+          }}
         >
-          <div className="h-full rounded-[12px] border border-[#1e3a5f] bg-[#0d1b2e] px-[18px] py-[18px] shadow-[0_2px_8px_rgba(13,27,46,0.15)]">
+          <div className="h-full rounded-[12px] border border-[#1e3a5f] bg-[#0d1b2e] px-[18px] py-[18px] shadow-[0_2px_8px_rgba(13,27,46,0.15)] lg:rounded-[16px] lg:px-5 lg:py-5 lg:shadow-[0_8px_24px_rgba(13,27,46,0.18)]">
             <div className="mb-3 flex items-center justify-between gap-3">
               <span className="inline-flex rounded-full border border-white/20 bg-white/8 px-[9px] py-[2px] text-[9px] font-bold uppercase tracking-[0.7px] text-white/82">
                 {badge}
               </span>
               <button type="button" onClick={onToggle} className="inline-flex items-center gap-1 text-[9px] font-bold text-[#475569]">
                 <RefreshIcon />
-                <span>Flip back</span>
+                <span>{backActionLabel}</span>
               </button>
             </div>
 
@@ -286,11 +311,10 @@ export default function EngineTypesSection({
   dynamicBrandCta = false,
 }: Props) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
-  const desktopTypes = useMemo(() => data.types, [data.types]);
-  const headingSplit = data.h2.split(/\s+-\s+/);
-  const headingPrimary = headingSplit[0] ?? data.h2;
-  const headingAccent = headingSplit.length > 1 ? headingSplit.slice(1).join(" ") : "";
+  const headingLines = data.headingLines?.length ? data.headingLines : data.h2.split(/\s+-\s+/);
   const brandLabel = inferBrandLabel(data.h2);
+  const ui = data.ui ?? {};
+  const closingCard = data.closingCard ?? {};
 
   return (
     <Section className="relative overflow-hidden bg-[#f8f9fa]">
@@ -315,13 +339,11 @@ export default function EngineTypesSection({
         </div>
 
         <h2 className="max-w-[920px] font-['Manrope'] text-[26px] font-extrabold leading-[1.14] tracking-[-0.7px] text-[#0d1b2e] md:text-[30px] lg:mx-auto lg:text-center lg:text-[36px]">
-          <span>{headingPrimary}</span>
-          {headingAccent ? (
-            <>
-              <br />
-              <span className="text-[#15803d]">{headingAccent}</span>
-            </>
-          ) : null}
+          {headingLines.map((line, index) => (
+            <span key={`${line}-${index}`} className={`block ${headingLines.length > 1 && index === headingLines.length - 1 ? "text-[#15803d]" : ""}`}>
+              {line}
+            </span>
+          ))}
         </h2>
         <div className="mt-[8px] hidden justify-center lg:flex">
           <div className="h-[3px] w-12 rounded-full bg-[#22c55e]" />
@@ -331,85 +353,27 @@ export default function EngineTypesSection({
           {data.intro}
         </p>
 
-        <div className="mt-[22px] flex flex-col gap-[10px] lg:hidden">
+        <div className="mt-[22px] grid gap-[10px] lg:grid-cols-2 lg:gap-3">
           {data.types.map((type, index) => (
-            <MobileCard
-              key={type.title}
-              type={type}
-              open={openIndex === index}
-              onToggle={() => setOpenIndex((current) => (current === index ? null : index))}
-            />
-          ))}
-        </div>
-
-        <div className="mt-[22px] hidden gap-3 lg:grid lg:grid-cols-2">
-          {desktopTypes.map((type) => {
-            const icon = getTypeIcon(type.title);
-            const price = priceParts(type.priceRange);
-            const featured = isFeaturedCard(type.title);
-
-            return (
-              <div
+              <FlipCard
                 key={type.title}
-                className={`overflow-hidden rounded-[16px] border shadow-[0_8px_24px_rgba(13,27,46,0.06)] ${
-                  featured ? "border-[#dbe5f4] bg-[#fcfdff]" : "border-[#e5e7eb] bg-white"
-                }`}
-              >
-                <div className="flex gap-4 px-5 py-5">
-                  <div className="flex h-14 w-14 flex-none items-center justify-center rounded-full border border-[#d7e3f5] bg-[#f4f7fc] text-[#22325b] [&_svg]:h-6 [&_svg]:w-6">
-                    {icon}
-                  </div>
-                  <div className="min-w-0 flex-1">
-                    <div
-                      role="heading"
-                      aria-level={3}
-                      className="font-['Manrope'] text-[15px] font-extrabold leading-[1.28] tracking-[-0.2px] text-[#0d1b2e] lg:text-[16px]"
-                    >
-                      {type.title}
-                    </div>
-                    <p className="mt-[7px] text-[12px] leading-[1.62] text-[#334155] lg:text-[12.5px]">
-                      {normalizeText(type.description)}
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-center justify-between gap-4 border-t border-[#edf2f7] px-5 py-4">
-                  <div className="min-w-0">
-                    <div className="text-[10px] font-semibold leading-[1.35] text-[#94a3b8]">
-                      {price.label}
-                    </div>
-                    <div className="mt-[4px] font-['Manrope'] text-[15px] font-extrabold tracking-[-0.25px] text-[#22325b]">
-                      {price.main}
-                    </div>
-                    {price.note ? (
-                      <div className="mt-[2px] text-[10px] font-medium leading-[1.35] text-[#94a3b8]">
-                        {price.note}
-                      </div>
-                    ) : null}
-                  </div>
-
-                  <a
-                    href="#quote-form"
-                    data-quote-context={type.title}
-                    data-quote-source="engine-types"
-                    className="inline-flex flex-none items-center gap-[7px] text-[12.5px] font-bold leading-[1.5] text-[#16a34a] transition hover:gap-[10px]"
-                  >
-                    <span>{type.cta.replace(/\s*->\s*$/, "")}</span>
-                    <ArrowIcon className="h-[12px] w-[12px]" />
-                  </a>
-                </div>
-              </div>
-            );
-          })}
+                type={type}
+                open={openIndex === index}
+                onToggle={() => setOpenIndex((current) => (current === index ? null : index))}
+                frontActionLabel={ui.frontActionLabel ?? "What is it?"}
+                backActionLabel={ui.backActionLabel ?? "Flip back"}
+                priceLabel={ui.priceLabel ?? "Typical price range"}
+              />
+            ))}
         </div>
 
         <div className="mt-4">
           <CtaStrip
             tone="light"
-            label="Engine Replacement Help"
-            title={dynamicBrandCta ? `Compare ${brandLabel} engine prices with vetted UK suppliers` : "Compare Land Rover engine prices with vetted UK suppliers"}
+            label={closingCard.label ?? "Engine Replacement Help"}
+            title={closingCard.title ?? (dynamicBrandCta ? `Compare ${brandLabel} engine prices with vetted UK suppliers` : "Compare Land Rover engine prices with vetted UK suppliers")}
             description={normalizeText(data.closing)}
-            buttonText={dynamicBrandCta ? `Compare ${brandLabel} Prices` : "Compare Land Rover Prices"}
+            buttonText={closingCard.buttonText ?? (dynamicBrandCta ? `Compare ${brandLabel} Prices` : "Compare Land Rover Prices")}
             icon={<ShieldIcon />}
             linkProps={{
               href: "#quote-form",

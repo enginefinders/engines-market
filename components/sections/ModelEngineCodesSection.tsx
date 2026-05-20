@@ -98,12 +98,6 @@ function buildFailures(detail: GuideEntry | null, fallback: string) {
   return [fallback];
 }
 
-function getEngineImage(engine: EngineRow) {
-  return /diesel/i.test(engine.fuel)
-    ? "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
-    : "/images/brands/land-rover/engines/land-rover-508pn-engine.webp";
-}
-
 function chunkEngines(engines: EngineRow[]) {
   const rows: EngineRow[][] = [];
 
@@ -180,9 +174,11 @@ type Selection = {
 export default function ModelEngineCodesSection({ data, guide, modelName }: Props) {
   const [selection, setSelection] = useState<Selection>(null);
   const guideLookup = useMemo(() => buildGuideLookup(guide), [guide]);
-  const heading = guide.h2 || data.h2;
+  const headingLines = data.headingLines?.length ? data.headingLines : [guide.h2 || data.h2];
   const intro = guide.h3 || data.h3;
   const closingLine = guide.closing || data.closingLine || "";
+  const ui = data.ui ?? {};
+  const closingAction = data.closingAction ?? {};
 
   function toggleSelection(familyIndex: number, engineIndex: number) {
     setSelection((current) =>
@@ -199,7 +195,13 @@ export default function ModelEngineCodesSection({ data, guide, modelName }: Prop
           <div className="ecs-container">
             <header className="ecs-header">
               <div className="tag">{guide.tag || data.tag}</div>
-              <h2>{heading}</h2>
+              <h2>
+                {headingLines.map((line, index) => (
+                  <span key={`${line}-${index}`} style={{ display: "block", color: headingLines.length > 1 && index === headingLines.length - 1 ? "#15803d" : undefined }}>
+                    {line}
+                  </span>
+                ))}
+              </h2>
               <p>{intro}</p>
             </header>
 
@@ -228,64 +230,64 @@ export default function ModelEngineCodesSection({ data, guide, modelName }: Prop
                       );
                       const activeEngine =
                         selectedRowEngineIndex >= 0 ? row[selectedRowEngineIndex] : null;
-                      const orderedRow = activeEngine
-                        ? [
-                            activeEngine,
-                            ...row.filter((engine) => engine.code !== activeEngine.code),
-                          ]
-                        : row;
+                      const visibleRow = activeEngine ? [activeEngine] : row;
+                      const trailingRow = activeEngine
+                        ? row.filter((engine) => engine.code !== activeEngine.code)
+                        : [];
+
+                      const renderEngineCard = (engine: EngineRow) => {
+                        const originalIndex = group.engines.findIndex(
+                          (candidate) => candidate.code === engine.code,
+                        );
+                        const selected =
+                          selection?.familyIndex === familyIndex &&
+                          selection.engineIndex === originalIndex;
+                        const detail = getGuideDetail(engine.code, guideLookup);
+                        const years = deriveYears(engine.compatibleModels, detail?.years);
+
+                        return (
+                          <article
+                            key={engine.code}
+                            className={`engine-card${selected ? " is-active" : ""}`}
+                          >
+                            <button
+                              className={`engine-summary${selected ? " is-selected" : ""}`}
+                              type="button"
+                              aria-expanded={selected}
+                              onClick={() => toggleSelection(familyIndex, originalIndex)}
+                            >
+                              <span className="engine-thumb" aria-hidden="true">
+                                <EngineIcon />
+                              </span>
+
+                              <span className="engine-main">
+                                <span className="summary-line">
+                                  <strong>{engine.code}</strong>
+                                  <span className="summary-separator" aria-hidden="true">
+                                    &bull;
+                                  </span>
+                                  <small>{toSummary(engine)}</small>
+                                  <span className="summary-years">({years})</span>
+                                </span>
+                                <span className="engine-meta">{engine.power}</span>
+                              </span>
+
+                              <span className="price">
+                                <small>{ui.summaryPriceLabel ?? "Avg. rebuilt price"}</small>
+                                <strong>{toPriceText(engine.avgRebuiltPrice)}</strong>
+                              </span>
+
+                              <span className="chev" aria-hidden="true">
+                                <ChevronIcon />
+                              </span>
+                            </button>
+                          </article>
+                        );
+                      };
 
                       return (
                         <div key={`${group.name}-${rowIndex}`} className="engine-row">
-                          {orderedRow.map((engine) => {
-                            const originalIndex = group.engines.findIndex(
-                              (candidate) => candidate.code === engine.code,
-                            );
-                            const selected =
-                              selection?.familyIndex === familyIndex &&
-                              selection.engineIndex === originalIndex;
-                            const detail = getGuideDetail(engine.code, guideLookup);
-                            const years = deriveYears(engine.compatibleModels, detail?.years);
-
-                            return (
-                              <article
-                                key={engine.code}
-                                className={`engine-card${selected ? " is-active" : ""}`}
-                              >
-                                <button
-                                  className={`engine-summary${selected ? " is-selected" : ""}`}
-                                  type="button"
-                                  aria-expanded={selected}
-                                  onClick={() => toggleSelection(familyIndex, originalIndex)}
-                                >
-                                  <span className="engine-thumb" aria-hidden="true">
-                                    <EngineIcon />
-                                  </span>
-
-                                  <span className="engine-main">
-                                    <span className="summary-line">
-                                      <strong>{engine.code}</strong>
-                                      <span className="summary-separator" aria-hidden="true">
-                                        &bull;
-                                      </span>
-                                      <small>{toSummary(engine)}</small>
-                                      <span className="summary-years">({years})</span>
-                                    </span>
-                                    <span className="engine-meta">{engine.power}</span>
-                                  </span>
-
-                                  <span className="price">
-                                    <small>Avg. rebuilt price</small>
-                                    <strong>{toPriceText(engine.avgRebuiltPrice)}</strong>
-                                  </span>
-
-                                  <span className="chev" aria-hidden="true">
-                                    <ChevronIcon />
-                                  </span>
-                                </button>
-                              </article>
-                            );
-                          })}
+                          {visibleRow.map(renderEngineCard)}
 
                           <div className={`family-open-slot${activeEngine ? " is-visible" : ""}`}>
                             {activeEngine ? (
@@ -295,6 +297,8 @@ export default function ModelEngineCodesSection({ data, guide, modelName }: Prop
                                   activeEngine.compatibleModels,
                                   detail?.years,
                                 );
+                                const detailImage = detail?.image || activeEngine.image;
+                                const quoteText = detail?.cta || activeEngine.cta || `Get quotes for ${activeEngine.code}`;
 
                                 return (
                                   <div className="engine-details">
@@ -303,17 +307,19 @@ export default function ModelEngineCodesSection({ data, guide, modelName }: Prop
                                         <div className="image-frame">
                                           <div className="image-placeholder">
                                             <div className="engine-image">
-                                              <Image
-                                                src={getEngineImage(activeEngine)}
-                                                alt={`${activeEngine.code} engine`}
-                                                fill
-                                                className="object-contain"
-                                                sizes="150px"
-                                              />
+                                              {detailImage ? (
+                                                <Image
+                                                  src={detailImage}
+                                                  alt={`${activeEngine.code} engine`}
+                                                  fill
+                                                  className="object-contain"
+                                                  sizes="150px"
+                                                />
+                                              ) : null}
                                             </div>
                                             <div>
                                               <strong>{activeEngine.code}</strong>
-                                              <span>Example engine visual</span>
+                                              <span>{ui.exampleImageLabel ?? "Example engine visual"}</span>
                                             </div>
                                           </div>
                                         </div>
@@ -321,7 +327,7 @@ export default function ModelEngineCodesSection({ data, guide, modelName }: Prop
                                         <div className="hero-copy">
                                           <div className="hero-top">
                                             <div className="history-block">
-                                              <span className="history-label">Engine History</span>
+                                              <span className="history-label">{ui.historyLabel ?? "Engine History"}</span>
                                               <p>
                                                 {buildHistory(
                                                   activeEngine,
@@ -332,11 +338,11 @@ export default function ModelEngineCodesSection({ data, guide, modelName }: Prop
                                             </div>
 
                                             <div className="price-box">
-                                              <small>Avg. rebuilt price</small>
+                                              <small>{ui.summaryPriceLabel ?? "Avg. rebuilt price"}</small>
                                               <strong>
                                                 {toPriceText(activeEngine.avgRebuiltPrice)}
                                               </strong>
-                                              <span>Supply only</span>
+                                              <span>{ui.supplyLabel ?? "Supply only"}</span>
                                               <a
                                                 className="quote-link"
                                                 href="#quote-form"
@@ -344,8 +350,7 @@ export default function ModelEngineCodesSection({ data, guide, modelName }: Prop
                                                 data-quote-context={activeEngine.compatibleModels}
                                               >
                                                 <span className="quote-link-text">
-                                                  <span>Get quotes for {activeEngine.code}</span>
-                                                  <span>{modelName} engine replacement</span>
+                                                  <span>{quoteText}</span>
                                                 </span>
                                                 <ArrowIcon />
                                               </a>
@@ -353,7 +358,7 @@ export default function ModelEngineCodesSection({ data, guide, modelName }: Prop
                                           </div>
 
                                           <div className="variant-wrap">
-                                            <small>Compatible {modelName} variants</small>
+                                            <small>{ui.variantsLabel ?? `Compatible ${modelName} variants`}</small>
                                             <div className="variant-tags">
                                               {buildVariants(activeEngine, detail).map((variant) => (
                                                 <span key={variant}>{variant}</span>
@@ -369,23 +374,23 @@ export default function ModelEngineCodesSection({ data, guide, modelName }: Prop
                                             <span className="icon">
                                               <SpecsIcon />
                                             </span>
-                                            Technical Specifications
+                                            {ui.specsTitle ?? "Technical Specifications"}
                                           </h4>
                                           <ul className="spec-list">
                                             <li>
-                                              <span>Fuel type</span>
+                                              <span>{ui.fuelLabel ?? "Fuel type"}</span>
                                               <strong>{detail?.fuel || activeEngine.fuel}</strong>
                                             </li>
                                             <li>
-                                              <span>Engine size</span>
+                                              <span>{ui.sizeLabel ?? "Engine size"}</span>
                                               <strong>{detail?.size || activeEngine.size}</strong>
                                             </li>
                                             <li>
-                                              <span>Power output</span>
+                                              <span>{ui.powerLabel ?? "Power output"}</span>
                                               <strong>{detail?.power || activeEngine.power}</strong>
                                             </li>
                                             <li>
-                                              <span>Years fitted</span>
+                                              <span>{ui.yearsLabel ?? "Years fitted"}</span>
                                               <strong>{years}</strong>
                                             </li>
                                           </ul>
@@ -396,7 +401,7 @@ export default function ModelEngineCodesSection({ data, guide, modelName }: Prop
                                             <span className="icon">
                                               <WarningIcon />
                                             </span>
-                                            Common Failures
+                                            {ui.failuresTitle ?? "Common Failures"}
                                           </h4>
                                           <ul className="failure-list">
                                             {buildFailures(detail, group.failureNote).map((failure) => (
@@ -408,11 +413,11 @@ export default function ModelEngineCodesSection({ data, guide, modelName }: Prop
 
                                       <div className="mobile-action-row">
                                         <div className="mobile-price-summary">
-                                          <small>Avg. rebuilt price</small>
+                                          <small>{ui.summaryPriceLabel ?? "Avg. rebuilt price"}</small>
                                           <strong>
                                             {toPriceText(activeEngine.avgRebuiltPrice)}
                                           </strong>
-                                          <span>Supply only</span>
+                                          <span>{ui.supplyLabel ?? "Supply only"}</span>
                                         </div>
                                         <a
                                           className="quote-link"
@@ -421,8 +426,7 @@ export default function ModelEngineCodesSection({ data, guide, modelName }: Prop
                                           data-quote-context={activeEngine.compatibleModels}
                                         >
                                           <span className="quote-link-text">
-                                            <span>Get quotes for {activeEngine.code}</span>
-                                            <span>{modelName} engine replacement</span>
+                                            <span>{quoteText}</span>
                                           </span>
                                           <ArrowIcon />
                                         </a>
@@ -433,6 +437,8 @@ export default function ModelEngineCodesSection({ data, guide, modelName }: Prop
                               })()
                             ) : null}
                           </div>
+
+                          {trailingRow.map(renderEngineCard)}
                         </div>
                       );
                     })}
@@ -446,11 +452,11 @@ export default function ModelEngineCodesSection({ data, guide, modelName }: Prop
                 <CarIcon />
               </div>
               <div>
-                <h3>Can&apos;t find your engine code?</h3>
+                <h3>{closingAction.title ?? "Can't find your engine code?"}</h3>
                 <p>{closingLine}</p>
               </div>
               <a href="#quote-form" className="cta-btn">
-                Enter Your Reg
+                {closingAction.buttonText ?? "Enter Your Reg"}
                 <ArrowIcon />
               </a>
             </div>

@@ -41,11 +41,33 @@ export type BrandPageData = {
 export type HeroSectionData = {
   tag: string;
   h1: string;
+  headingLines?: string[];
   subheading: string;
   trustBadges: string[];
   ctaLinkText: string;
   supportingText: string;
   ticker: string;
+  imageAlt?: string;
+  highlights?: {
+    title: string;
+    price: string;
+    line1?: string;
+    line2?: string;
+    detail?: string;
+    image?: string;
+    imageAlt?: string;
+  }[];
+  mobileBar?: {
+    brandText?: string;
+    callLabel?: string;
+    quoteLabel?: string;
+  };
+  registrationInput?: {
+    label?: string;
+    platePlaceholder?: string;
+    countryCode?: string;
+    countryLabel?: string;
+  };
   form: {
     heading: string;
     subtitle: string;
@@ -58,6 +80,7 @@ export type HeroSectionData = {
 export type HowItWorksData = {
   tag: string;
   h2: string;
+  headingLines?: string[];
   cards: {
     number: number;
     icon: string;
@@ -72,11 +95,22 @@ export type HowItWorksData = {
     };
   }[];
   tagline: string;
+  ui?: {
+    stepLabel?: string;
+    desktopClosedLabel?: string;
+    desktopOpenLabel?: string;
+    mobileOpenLabel?: string;
+    mobileCloseLabel?: string;
+    footerNote?: string;
+    mobileTrustItems?: string[];
+  };
 };
 export type LiveMarketPricesData = {
   tag: string;
   h2: string;
+  headingLines?: string[];
   h3: string;
+  imageAlt?: string;
   introBullets: {
     label: string;
     text: string;
@@ -88,6 +122,19 @@ export type LiveMarketPricesData = {
     note: string;
   };
   badges: string[];
+  filterTabs?: {
+    key: string;
+    label: string;
+    matchers: string[];
+  }[];
+  ui?: {
+    showingSingleLabel?: string;
+    showingPluralLabel?: string;
+    acrossAllLabel?: string;
+    noEntriesLabel?: string;
+    updatedLabel?: string;
+    ctaLabel?: string;
+  };
   feed: {
     isDynamic: boolean;
     rowsCount: number;
@@ -112,12 +159,14 @@ export type LiveMarketPriceEntry = {
 export type ReviewsSectionData = {
   tag: string;
   h2: string;
+  headingLines?: string[];
   rating: {
     value: number;
     count: number;
     summary: string;
     basedOn: string;
   };
+  sources?: string[];
   reviews: {
     text: string;
     name: string;
@@ -126,6 +175,10 @@ export type ReviewsSectionData = {
   leaveReviewCta: {
     text: string;
     linkText: string;
+  };
+  ui?: {
+    leaveReviewTitle?: string;
+    reviewAriaLabelPrefix?: string;
   };
 };
 
@@ -146,8 +199,26 @@ export type ModelsSectionData = {
 export type EngineCodesData = {
   tag: string;
   h2: string;
+  headingLines?: string[];
   h3: string;
   closingLine?: string;
+  closingAction?: {
+    title?: string;
+    buttonText?: string;
+  };
+  ui?: {
+    summaryPriceLabel?: string;
+    exampleImageLabel?: string;
+    historyLabel?: string;
+    variantsLabel?: string;
+    specsTitle?: string;
+    fuelLabel?: string;
+    sizeLabel?: string;
+    powerLabel?: string;
+    yearsLabel?: string;
+    failuresTitle?: string;
+    supplyLabel?: string;
+  };
   filters: string[];
   groups: {
     name: string;
@@ -161,6 +232,7 @@ export type EngineCodesData = {
       compatibleModels: string;
       avgRebuiltPrice: string;
       cta: string;
+      image?: string;
     }[];
   }[];
 };
@@ -197,6 +269,7 @@ export type CommonProblemsData = {
 export type EngineTypesData = {
   tag: string;
   h2: string;
+  headingLines?: string[];
   intro: string;
   types: {
     title: string;
@@ -205,11 +278,22 @@ export type EngineTypesData = {
     cta: string;
   }[];
   closing: string;
+  closingCard?: {
+    label?: string;
+    title?: string;
+    buttonText?: string;
+  };
+  ui?: {
+    priceLabel?: string;
+    frontActionLabel?: string;
+    backActionLabel?: string;
+  };
 };
 
 export type EngineSizesData = {
   tag: string;
   h2: string;
+  headingLines?: string[];
   intro: string;
   groups: {
     title: string;
@@ -224,11 +308,23 @@ export type EngineSizesData = {
     }[];
   }[];
   closing: string;
+  ui?: {
+    swapLabel?: string;
+    engineCodesLabel?: string;
+    compatibleModelsLabel?: string;
+    productionYearsLabel?: string;
+    warningLabel?: string;
+    warningTitle?: string;
+    helperLabel?: string;
+    helperTitle?: string;
+    helperButtonText?: string;
+  };
 };
 
 export type FuelTypesData = {
   tag: string;
   h2: string;
+  headingLines?: string[];
   intro: string;
   items: {
     title: string;
@@ -242,6 +338,17 @@ export type FuelTypesData = {
     cta: string;
   }[];
   closing: string;
+  ui?: {
+    swapLabel?: string;
+    familiesLabel?: string;
+    foundInLabel?: string;
+    knownForLabel?: string;
+    modelsLabel?: string;
+    notesLabel?: string;
+    closingButtonText?: string;
+    emptyStateTitle?: string;
+    emptyStateDescription?: string;
+  };
 };
 
 export type EngineCodeDirectoryData = {
@@ -272,6 +379,7 @@ export type EngineCodeDirectoryData = {
 export type EngineYearsData = {
   tag: string;
   h2: string;
+  headingLines?: string[];
   intro: string;
   jumpLabel: string;
   years: {
@@ -284,15 +392,36 @@ export type EngineYearsData = {
     knownFor?: string[];
     engineCodesCovered?: string[];
     ticker?: string;
+    enquiries?: string[];
+    badges?: {
+      label: string;
+      tone?: "accent" | "muted";
+    }[];
+    ctaText?: string;
     cta: string;
   }[];
   closing: string;
+  summaryCta?: {
+    label?: string;
+    title?: string;
+    buttonText?: string;
+  };
+  ui?: {
+    keyChangesLabel?: string;
+    knownForLabel?: string;
+    mainEnginesLabel?: string;
+    popularModelsLabel?: string;
+    engineCodesLabel?: string;
+    enquiriesLabel?: string;
+  };
 };
 
 export type FaqSectionData = {
   tag: string;
   h2: string;
+  headingLines?: string[];
   intro: string;
+  defaultOpenIndex?: number;
   items: {
     question: string;
     answer: string;
@@ -300,6 +429,11 @@ export type FaqSectionData = {
     cta: string;
     warning?: string;
   }[];
+  ui?: {
+    questionLabelPrefix?: string;
+    keyPointsLabel?: string;
+    warningTitle?: string;
+  };
 };
 
 export type TrustCtaData = {
@@ -312,4 +446,22 @@ export type TrustCtaData = {
   }[];
   finalText: string;
   buttonText: string;
+  imageAlt?: string;
+  secondaryAction?: {
+    text?: string;
+    href?: string;
+  };
+  ui?: {
+    pointLabel?: string;
+    showPointLabel?: boolean;
+    stripLabel?: string;
+    showStripLabel?: boolean;
+    stripTitle?: string;
+    stripDescription?: string;
+    trustBullets?: string[];
+    imageBadgeLabel?: string;
+    imageBadgeTitle?: string;
+    imageBadgeText?: string;
+    showSecondaryAction?: boolean;
+  };
 };
