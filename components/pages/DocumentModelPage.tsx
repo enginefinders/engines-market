@@ -13,11 +13,11 @@ import ModelEngineCodesSection from "@/components/sections/ModelEngineCodesSecti
 import ReviewsSection from "@/components/sections/ReviewsSection";
 import TrustCtaSection from "@/components/sections/TrustCtaSection";
 import VariantCoverageSection from "@/components/sections/VariantCoverageSection";
+import { SITE_URL } from "@/lib/site";
 import type { ModelPageData } from "@/types/model";
 
 function buildStructuredData(pageData: ModelPageData) {
-  const siteUrl = "https://enginesmarket.co.uk";
-  const canonical = `${siteUrl}${pageData.seo.canonical}`;
+  const canonical = `${SITE_URL}${pageData.seo.canonical}`;
 
   if (pageData.structuredData) {
     return pageData.structuredData;
@@ -39,13 +39,13 @@ function buildStructuredData(pageData: ModelPageData) {
               "@type": "ListItem",
               position: 1,
               name: "Home",
-              item: siteUrl,
+              item: SITE_URL,
             },
             {
               "@type": "ListItem",
               position: 2,
               name: pageData.brand.name,
-              item: `${siteUrl}/${pageData.brand.slug}`,
+              item: `${SITE_URL}/${pageData.brand.slug}`,
             },
             {
               "@type": "ListItem",
@@ -68,7 +68,7 @@ function buildStructuredData(pageData: ModelPageData) {
         provider: {
           "@type": "Organization",
           name: "Engines Market",
-          url: siteUrl,
+          url: SITE_URL,
         },
       },
       {

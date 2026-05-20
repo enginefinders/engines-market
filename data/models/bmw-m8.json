@@ -135,7 +135,7 @@
       }
     },
     "liveMarketPrices": {
-      "tag": "Models We Cover",
+      "tag": "Live UK Engine Market Data",
       "h2": "What Are UK Drivers Paying for BMW M8 Engine Replacement?",
       "h3": "The table below shows typical UK rebuilt engine replacement costs across different BMW M8 variants, covering known failure causes, engine codes, fuel types, and engine sizes.",
       "introBullets": [
@@ -291,6 +291,94 @@
           "key": "all",
           "label": "All",
           "matchers": []
+        },
+        {
+          "key": "m8-competition-coupe-engine",
+          "label": "M8 Competition Coupe",
+          "matchers": [
+            "m8 competition coupe",
+            "m8 competition coupe engine"
+          ]
+        },
+        {
+          "key": "m8-competition-convertible-engine",
+          "label": "M8 Competition Convertible",
+          "matchers": [
+            "m8 competition convertible",
+            "m8 competition convertible engine"
+          ]
+        },
+        {
+          "key": "m8-competition-gran-coupe-engine",
+          "label": "M8 Competition Gran Coupe",
+          "matchers": [
+            "m8 competition gran coupe",
+            "m8 competition gran coupe engine"
+          ]
+        },
+        {
+          "key": "m8-coupe-engine",
+          "label": "M8 Coupe",
+          "matchers": [
+            "m8 coupe",
+            "m8 coupe engine"
+          ]
+        },
+        {
+          "key": "m8-convertible-engine",
+          "label": "M8 Convertible",
+          "matchers": [
+            "m8 convertible",
+            "m8 convertible engine"
+          ]
+        },
+        {
+          "key": "m8-gran-coupe-engine",
+          "label": "M8 Gran Coupe",
+          "matchers": [
+            "m8 gran coupe",
+            "m8 gran coupe engine"
+          ]
+        },
+        {
+          "key": "m8-first-edition-engine",
+          "label": "M8 First Edition",
+          "matchers": [
+            "m8 first edition",
+            "m8 first edition engine"
+          ]
+        },
+        {
+          "key": "m8-pre-lci-engine",
+          "label": "M8 Pre-LCI",
+          "matchers": [
+            "m8 pre-lci",
+            "m8 pre lci engine"
+          ]
+        },
+        {
+          "key": "m8-lci-engine",
+          "label": "M8 LCI",
+          "matchers": [
+            "m8 lci",
+            "m8 lci engine"
+          ]
+        },
+        {
+          "key": "m8-final-edition-engine",
+          "label": "M8 Final Edition",
+          "matchers": [
+            "m8 final edition",
+            "m8 final edition engine"
+          ]
+        },
+        {
+          "key": "-engine",
+          "label": "",
+          "matchers": [
+            "",
+            "engine"
+          ]
         }
       ],
       "ui": {
@@ -319,25 +407,293 @@
     },
     "variantCoverage": {
       "tag": "Models We Cover",
-      "h2": "",
-      "subheading": "",
-      "cards": [],
+      "h2": "BMW M8 Engine Replacement - All Variants Covered",
+      "subheading": "From the M8 Coupe to the high-performance M8 Competition Gran Coupe, our network of UK BMW M8 engine specialists helps you compare rebuilt, reconditioned and used engine prices. A typical rebuilt unit includes a 12-month warranty, with supply & fit available nationwide.",
+      "cards": [
+        {
+          "h3": "BMW M8 Competition Coupe Engine Replacement",
+          "slug": "m8-competition-coupe-engine",
+          "subtitle": "S63B44T4 4.4L Petrol · 617hp · 2019-2024",
+          "priceRange": "£15,500-£22,000",
+          "cta": "→ Compare M8 Competition Coupe Engine Prices",
+          "engineCodes": [
+            "S63B44T4"
+          ],
+          "fuel": "Petrol",
+          "power": "617hp",
+          "years": "2019-2024",
+          "image": ""
+        },
+        {
+          "h3": "BMW M8 Competition Convertible Engine Replacement",
+          "slug": "m8-competition-convertible-engine",
+          "subtitle": "S63B44T4 4.4L Petrol · 617hp · 2019-2024",
+          "priceRange": "£15,000-£23,000",
+          "cta": "→ Compare M8 Competition Convertible Engine Prices",
+          "engineCodes": [
+            "S63B44T4"
+          ],
+          "fuel": "Petrol",
+          "power": "617hp",
+          "years": "2019-2024",
+          "image": ""
+        },
+        {
+          "h3": "BMW M8 Competition Gran Coupe Engine Replacement",
+          "slug": "m8-competition-gran-coupe-engine",
+          "subtitle": "S63B44T4 4.4L Petrol · 617hp · 2020-2024",
+          "priceRange": "£14,995-£22,500",
+          "cta": "→ Compare M8 Competition Gran Coupe Engine Prices",
+          "engineCodes": [
+            "S63B44T4"
+          ],
+          "fuel": "Petrol",
+          "power": "617hp",
+          "years": "2020-2024",
+          "image": ""
+        },
+        {
+          "h3": "BMW M8 Coupe Engine Replacement",
+          "slug": "m8-coupe-engine",
+          "subtitle": "S63B44B 4.4L Petrol · 600hp · 2019-2024",
+          "priceRange": "£14,000-£19,000",
+          "cta": "→ Compare M8 Coupe Engine Prices",
+          "engineCodes": [
+            "S63B44B"
+          ],
+          "fuel": "Petrol",
+          "power": "600hp",
+          "years": "2019-2024",
+          "image": ""
+        },
+        {
+          "h3": "BMW M8 Convertible Engine Replacement",
+          "slug": "m8-convertible-engine",
+          "subtitle": "S63B44B 4.4L Petrol · 600hp · 2019-2024",
+          "priceRange": "£14,500-£19,500",
+          "cta": "→ Compare M8 Convertible Engine Prices",
+          "engineCodes": [
+            "S63B44B"
+          ],
+          "fuel": "Petrol",
+          "power": "600hp",
+          "years": "2019-2024",
+          "image": ""
+        },
+        {
+          "h3": "BMW M8 Gran Coupe Engine Replacement",
+          "slug": "m8-gran-coupe-engine",
+          "subtitle": "S63B44B 4.4L Petrol · 600hp · 2020-2024",
+          "priceRange": "£13,500-£18,000",
+          "cta": "→ Compare M8 Gran Coupe Engine Prices",
+          "engineCodes": [
+            "S63B44B"
+          ],
+          "fuel": "Petrol",
+          "power": "600hp",
+          "years": "2020-2024",
+          "image": ""
+        },
+        {
+          "h3": "BMW M8 First Edition Engine Replacement",
+          "slug": "m8-first-edition-engine",
+          "subtitle": "S63B44T4 4.4L Petrol · 617hp · 2019-2020",
+          "priceRange": "£16,000-£24,000",
+          "cta": "→ Compare M8 First Edition Engine Prices",
+          "engineCodes": [
+            "S63B44T4"
+          ],
+          "fuel": "Petrol",
+          "power": "617hp",
+          "years": "2019-2020",
+          "image": ""
+        },
+        {
+          "h3": "BMW M8 Pre-LCI Engine Replacement",
+          "slug": "m8-pre-lci-engine",
+          "subtitle": "S63B44B 4.4L Petrol · 600-617hp · 2019-2021",
+          "priceRange": "£13,000-£19,500",
+          "cta": "→ Compare M8 Pre-LCI Engine Prices",
+          "engineCodes": [
+            "S63B44B"
+          ],
+          "fuel": "Petrol",
+          "power": "600-617hp",
+          "years": "2019-2021",
+          "image": ""
+        },
+        {
+          "h3": "BMW M8 LCI Engine Replacement",
+          "slug": "m8-lci-engine",
+          "subtitle": "S63B44T4 4.4L Petrol · 617hp · 2022-2024",
+          "priceRange": "£15,000-£22,000",
+          "cta": "→ Compare M8 LCI Engine Prices",
+          "engineCodes": [
+            "S63B44T4"
+          ],
+          "fuel": "Petrol",
+          "power": "617hp",
+          "years": "2022-2024",
+          "image": ""
+        },
+        {
+          "h3": "BMW M8 Final Edition Engine Replacement",
+          "slug": "m8-final-edition-engine",
+          "subtitle": "S63B44T4 4.4L Petrol · 617hp · 2024-2025",
+          "priceRange": "£16,500-£25,000",
+          "cta": "→ Compare M8 Final Edition Engine Prices",
+          "engineCodes": [
+            "S63B44T4"
+          ],
+          "fuel": "Petrol",
+          "power": "617hp",
+          "years": "2024-2025",
+          "image": ""
+        },
+        {
+          "h3": "",
+          "slug": "-engine",
+          "subtitle": "All BMW M8 Variants - Engine Replacement Coverage",
+          "priceRange": "",
+          "cta": "",
+          "engineCodes": [
+            "All BMW M8 Variants - Engine Replacement Coverage"
+          ],
+          "fuel": "",
+          "power": "",
+          "years": "",
+          "image": ""
+        }
+      ],
       "directory": {
         "h3": "",
         "intro": "",
-        "groups": [],
+        "groups": [
+          {
+            "title": "Diesel Variants",
+            "items": [
+              "None available for this model."
+            ]
+          },
+          {
+            "title": "Petrol Variants",
+            "items": [
+              "M8 Competition · M8 Competition Coupe · M8 Competition Convertible · M8 Competition Gran Coupe · M8 Coupe · M8 Convertible · M8 Final Edition · M8 First Edition · M8 Gran Coupe · M8 LCI · M8 Pre-LCI"
+            ]
+          },
+          {
+            "title": "Performance Variants",
+            "items": [
+              "M8 Competition Coupe · M8 Competition Convertible · M8 Competition Gran Coupe · M8 First Edition · M8 Final Edition"
+            ]
+          }
+        ],
         "label": "Variant Directory"
       },
       "closing": "",
       "engineGuide": {
-        "tag": "Engine Codes",
-        "h2": "",
-        "h3": "",
-        "families": [],
+        "tag": "Models We Cover",
+        "h2": "BMW M8 Engine Replacement - All Variants Covered",
+        "h3": "BMW M8 Competition Coupe Engine Replacement",
+        "families": [
+          {
+            "name": "Petrol Engines",
+            "entries": [
+              {
+                "code": "S63B44T4",
+                "title": "4.4 Litre Petrol",
+                "history": "The fourth-generation S63B44T4 debuted in the F90 M5 before powering the M8 range. Competition models received 617hp, making this twin-turbo V8 one of BMW's most potent production engines .",
+                "fuel": "Petrol",
+                "size": "4.4 Litre",
+                "power": "600-625 hp",
+                "years": "2019-2025",
+                "compatibleVariants": [
+                  "M8 Competition Coupe",
+                  "M8 Competition Convertible",
+                  "M8 Competition Gran Coupe",
+                  "M8 First Edition",
+                  "M8 Final Edition",
+                  "M8 LCI Competition"
+                ],
+                "commonFailures": [
+                  "Rod bearing wear - documented in high-performance applications, particularly with neglected oil changes",
+                  "VANOS solenoid failure - can cause rough running and reduced power",
+                  "Ignition coil failure - high-stress turbo operation accelerates wear; symptoms include misfires"
+                ],
+                "avgRebuiltPrice": "£15,500 - £23,000",
+                "cta": "Get quotes for S63B44T4 BMW M8 engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              },
+              {
+                "code": "S63B44B",
+                "title": "4.4 Litre Petrol",
+                "history": "The facelift (LCI) version of the Competition engine (2022-2025) featuring refinements to cooling, turbo management, and durability. Addresses several early production issues while maintaining 617hp output .",
+                "fuel": "Petrol",
+                "size": "4.4 Litre",
+                "power": "617 hp",
+                "years": "2022-2025",
+                "compatibleVariants": [
+                  "M8 Coupe",
+                  "M8 Convertible",
+                  "M8 Gran Coupe",
+                  "M8 Pre-LCI",
+                  "M8 Competition Coupe (Pre-LCI)",
+                  "M8 Competition Convertible (Pre-LCI)",
+                  "M8 Competition Gran Coupe (Pre-LCI)",
+                  "M8 Competition Coupe (LCI)",
+                  "M8 Competition Convertible (LCI)",
+                  "M8 Competition Gran Coupe (LCI)",
+                  "M8 Final Edition"
+                ],
+                "commonFailures": [
+                  "Turbocharger failure - oil starvation or contamination can lead to premature turbo bearing seizure",
+                  "Valve stem seal wear - causes excessive oil consumption in higher-mileage units",
+                  "Cooling system weaknesses - water pumps and radiators can fail under high thermal load",
+                  "Rod bearing failure - earlier S63 variants show higher incidence of bottom-end wear",
+                  "High oil consumption - piston ring and turbo seal wear reported in early production units",
+                  "Timing chain guide wear - can cause chain rattle and eventual failure if not addressed",
+                  "Cooling system leaks - expansion tank and hose failures still reported despite updates",
+                  "Spark plug misfire - high-stress operation accelerates plug degradation (30,000-40,000 mile interval)",
+                  "HPFP failure - high-pressure fuel pump can fail, causing extended cranking and reduced power"
+                ],
+                "avgRebuiltPrice": "£15,000 - £22,500",
+                "cta": "Get quotes for S63B44T4 LCI BMW M8 engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              }
+            ]
+          }
+        ],
         "closing": ""
       },
       "headingLines": [],
-      "groups": [],
+      "groups": [
+        {
+          "title": "Competition Performance Range",
+          "cardSlugs": [
+            "m8-competition-coupe-engine",
+            "m8-competition-convertible-engine",
+            "m8-competition-gran-coupe-engine"
+          ]
+        },
+        {
+          "title": "Standard M8 Range",
+          "cardSlugs": [
+            "m8-coupe-engine",
+            "m8-convertible-engine",
+            "m8-gran-coupe-engine"
+          ]
+        },
+        {
+          "title": "Pre-LCI & Specialist Variants",
+          "cardSlugs": [
+            "m8-first-edition-engine",
+            "m8-pre-lci-engine",
+            "m8-lci-engine",
+            "m8-final-edition-engine",
+            "-engine"
+          ]
+        }
+      ],
       "ui": {
         "fromPriceLabel": "from price",
         "specsLabel": "Specs",
@@ -347,12 +703,42 @@
       }
     },
     "engineCodes": {
-      "tag": "Engine Codes",
-      "h2": "",
-      "h3": "",
+      "tag": "Models We Cover",
+      "h2": "BMW M8 Engine Replacement - All Variants Covered",
+      "h3": "BMW M8 Competition Coupe Engine Replacement",
       "closingLine": "",
-      "filters": [],
-      "groups": [],
+      "filters": [
+        "Petrol Engines"
+      ],
+      "groups": [
+        {
+          "name": "Petrol Engines",
+          "era": "Extracted from detailed petrol and performance engine families across BMW M8 variants.",
+          "failureNote": "Main replacement demand comes from timing-chain, cooling-system and performance thermal-management faults.",
+          "engines": [
+            {
+              "code": "S63B44T4",
+              "fuel": "Petrol",
+              "size": "4.4L",
+              "power": "600-625 hp",
+              "compatibleModels": "M8 Competition Coupe, M8 Competition Convertible, M8 Competition Gran Coupe, M8 First Edition, M8 Final Edition, M8 LCI Competition",
+              "avgRebuiltPrice": "£15,500 - £23,000",
+              "cta": "Get quotes for S63B44T4 BMW M8 engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            },
+            {
+              "code": "S63B44B",
+              "fuel": "Petrol",
+              "size": "4.4L",
+              "power": "617 hp",
+              "compatibleModels": "M8 Coupe, M8 Convertible, M8 Gran Coupe, M8 Pre-LCI, M8 Competition Coupe (Pre-LCI), M8 Competition Convertible (Pre-LCI), M8 Competition Gran Coupe (Pre-LCI), M8 Competition Coupe (LCI), M8 Competition Convertible (LCI), M8 Competition Gran Coupe (LCI), M8 Final Edition",
+              "avgRebuiltPrice": "£15,000 - £22,500",
+              "cta": "Get quotes for S63B44T4 LCI BMW M8 engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            }
+          ]
+        }
+      ],
       "headingLines": [],
       "closingAction": {
         "title": "Can't find your engine code?",
@@ -374,14 +760,255 @@
     },
     "commonProblems": {
       "tag": "Common Problems",
-      "h2": "",
-      "h3": "",
-      "problems": [],
+      "h2": "BMW M8 Engine Problems - What It Costs to Fix & When Replacement Makes Sense",
+      "h3": "The BMW M8’s S63 twin-turbo V8 delivers exceptional performance, but high thermal load and complex valvetrain components create predictable failure points as mileage climbs. The Competition variant (S63B44T4) and standard M8 (S63B44B) dominate replacement enquiries, with rod bearing wear, turbocharger failure, and timing chain guide degradation appearing most frequently between 50,000 and 90,000 miles. Every rebuilt engine supplied through EngineMarket includes upgraded internal components designed to address the original failure point - plus a minimum 12‑month unlimited mileage warranty. Below we break down the most common failures, real UK repair costs, and when replacement makes financial sense.",
+      "problems": [
+        {
+          "group": "",
+          "h4": "",
+          "affectedModels": "",
+          "typicalFailureMileage": "",
+          "rootCause": "",
+          "repairOptions": [
+            {
+              "tier": "Repair Tier",
+              "dealerPrice": "Dealer Price (Parts + Labour)",
+              "specialistPrice": "Specialist Price (Parts + Labour)",
+              "whatItInvolves": "What It Involves",
+              "longevity": "Longevity / Suitability"
+            },
+            {
+              "tier": "",
+              "dealerPrice": "",
+              "specialistPrice": "",
+              "whatItInvolves": "",
+              "longevity": ""
+            },
+            {
+              "tier": "Intermediate - Bearing Replacement Only",
+              "dealerPrice": "£6,500 - £9,000",
+              "specialistPrice": "£3,800 - £5,500",
+              "whatItInvolves": "Remove sump and oil pump, replace rod bearings with upgraded coated units, flush oil system",
+              "longevity": "Only viable if caught immediately after first knocking sound. Crank must be undamaged."
+            },
+            {
+              "tier": "Major - Crankshaft Regrind & Bearing Replacement",
+              "dealerPrice": "£11,000 - £15,000",
+              "specialistPrice": "£6,500 - £9,000",
+              "whatItInvolves": "Engine removal, crank regrind or replacement, new bearings, oil pump, full gasket set",
+              "longevity": "Suitable for early-stage bearing wear without catastrophic rod failure. Adds 60k+ miles."
+            },
+            {
+              "tier": "Full Replacement - Rebuilt S63 Engine",
+              "dealerPrice": "£22,000 - £30,000",
+              "specialistPrice": "£14,995 - £22,000",
+              "whatItInvolves": "Supply & fit fully rebuilt S63 engine with upgraded bearings, timing components, and bench testing",
+              "longevity": "Best long-term solution. Upgraded bearings prevent recurrence. 12-month warranty included."
+            }
+          ],
+          "recommendation": "",
+          "cta": ""
+        },
+        {
+          "group": "",
+          "h4": "",
+          "affectedModels": "",
+          "typicalFailureMileage": "",
+          "rootCause": "",
+          "repairOptions": [
+            {
+              "tier": "Repair Tier",
+              "dealerPrice": "Dealer Price (Parts + Labour)",
+              "specialistPrice": "Specialist Price (Parts + Labour)",
+              "whatItInvolves": "What It Involves",
+              "longevity": "Longevity / Suitability"
+            },
+            {
+              "tier": "",
+              "dealerPrice": "",
+              "specialistPrice": "",
+              "whatItInvolves": "",
+              "longevity": ""
+            },
+            {
+              "tier": "Minor - Turbo Actuator / Wastegate Repair",
+              "dealerPrice": "£2,200 - £3,500",
+              "specialistPrice": "£1,200 - £1,800",
+              "whatItInvolves": "Replace wastegate actuator or bushings only, no turbo removal",
+              "longevity": "Short-term fix. Only suitable for early wastegate rattle without oil loss or shaft play."
+            },
+            {
+              "tier": "Major - Single Turbo Replacement",
+              "dealerPrice": "£4,500 - £6,500",
+              "specialistPrice": "£2,800 - £4,200",
+              "whatItInvolves": "Remove affected turbo, replace with OEM-spec or upgraded unit, new oil feed lines",
+              "longevity": "Best for single turbo failure. Address root cause with improved oil drainage."
+            },
+            {
+              "tier": "Full Replacement - Both Turbos + Engine Health Check",
+              "dealerPrice": "£8,000 - £12,000",
+              "specialistPrice": "£5,500 - £8,000",
+              "whatItInvolves": "Replace both turbos, oil lines, and perform compression test on both banks",
+              "longevity": "Recommended when one turbo fails at higher mileage. Prevents second failure within 12 months."
+            }
+          ],
+          "recommendation": "",
+          "cta": ""
+        },
+        {
+          "group": "",
+          "h4": "",
+          "affectedModels": "",
+          "typicalFailureMileage": "",
+          "rootCause": "",
+          "repairOptions": [
+            {
+              "tier": "Repair Tier",
+              "dealerPrice": "Dealer Price (Parts + Labour)",
+              "specialistPrice": "Specialist Price (Parts + Labour)",
+              "whatItInvolves": "What It Involves",
+              "longevity": "Longevity / Suitability"
+            },
+            {
+              "tier": "",
+              "dealerPrice": "",
+              "specialistPrice": "",
+              "whatItInvolves": "",
+              "longevity": ""
+            },
+            {
+              "tier": "Minor - Preventative Timing Chain & Guide Replacement",
+              "dealerPrice": "£3,800 - £5,500",
+              "specialistPrice": "£2,200 - £3,200",
+              "whatItInvolves": "Replace timing chain, guides, tensioners, and sprockets before failure occurs",
+              "longevity": "Ideal preventative work between 50,000-70,000 miles. Avoids engine destruction."
+            },
+            {
+              "tier": "Major - Post-Failure Timing Repair",
+              "dealerPrice": "£7,000 - £10,000",
+              "specialistPrice": "£4,500 - £6,500",
+              "whatItInvolves": "Replace damaged guides, chain, tensioners; inspect valves and pistons for contact",
+              "longevity": "Viable only if engine was not running when failure occurred and no valve damage."
+            },
+            {
+              "tier": "Full Replacement - Rebuilt S63 Engine",
+              "dealerPrice": "£22,000 - £30,000",
+              "specialistPrice": "£14,995 - £22,000",
+              "whatItInvolves": "Complete engine replacement with rebuilt unit including upgraded timing components",
+              "longevity": "Required if chain jumped teeth causing bent valves, damaged pistons, or cylinder wall scoring."
+            }
+          ],
+          "recommendation": "",
+          "cta": ""
+        },
+        {
+          "group": "",
+          "h4": "",
+          "affectedModels": "",
+          "typicalFailureMileage": "",
+          "rootCause": "",
+          "repairOptions": [
+            {
+              "tier": "Repair Tier",
+              "dealerPrice": "Dealer Price (Parts + Labour)",
+              "specialistPrice": "Specialist Price (Parts + Labour)",
+              "whatItInvolves": "What It Involves",
+              "longevity": "Longevity / Suitability"
+            },
+            {
+              "tier": "",
+              "dealerPrice": "",
+              "specialistPrice": "",
+              "whatItInvolves": "",
+              "longevity": ""
+            },
+            {
+              "tier": "Minor - Valve Stem Seal Replacement Only",
+              "dealerPrice": "£4,000 - £6,000",
+              "specialistPrice": "£2,500 - £3,800",
+              "whatItInvolves": "Remove cylinder heads, replace all 32 valve stem seals with upgraded Viton seals",
+              "longevity": "Effective for consumption under 1L/1,000 miles without compression loss."
+            },
+            {
+              "tier": "Major - Piston Rings & Valve Seals",
+              "dealerPrice": "£9,000 - £13,000",
+              "specialistPrice": "£5,500 - £8,500",
+              "whatItInvolves": "Full top-end rebuild: new piston rings, valve stem seals, cylinder hone, head gaskets",
+              "longevity": "Required when compression is low or oil consumption exceeds 1.5L/1,000 miles."
+            },
+            {
+              "tier": "Full Replacement - Rebuilt S63 Engine",
+              "dealerPrice": "£22,000 - £30,000",
+              "specialistPrice": "£14,995 - £22,000",
+              "whatItInvolves": "Complete engine replacement with upgraded seals and rings designed for high thermal load",
+              "longevity": "Best value when car has high mileage (80k+) and both bottom and top end show wear."
+            }
+          ],
+          "recommendation": "",
+          "cta": ""
+        },
+        {
+          "group": "",
+          "h4": "",
+          "affectedModels": "",
+          "typicalFailureMileage": "",
+          "rootCause": "",
+          "repairOptions": [
+            {
+              "tier": "Repair Tier",
+              "dealerPrice": "Dealer Price (Parts + Labour)",
+              "specialistPrice": "Specialist Price (Parts + Labour)",
+              "whatItInvolves": "What It Involves",
+              "longevity": "Longevity / Suitability"
+            },
+            {
+              "tier": "",
+              "dealerPrice": "",
+              "specialistPrice": "",
+              "whatItInvolves": "",
+              "longevity": ""
+            },
+            {
+              "tier": "Minor - Component Replacement",
+              "dealerPrice": "£800 - £1,500",
+              "specialistPrice": "£450 - £800",
+              "whatItInvolves": "Replace failed component (expansion tank, hose, auxiliary pump or thermostat)",
+              "longevity": "Suitable for single component failure with no overheating damage."
+            },
+            {
+              "tier": "Major - Complete Cooling System Overhaul",
+              "dealerPrice": "£2,500 - £4,000",
+              "specialistPrice": "£1,500 - £2,500",
+              "whatItInvolves": "Replace expansion tank, both auxiliary water pumps, all hoses, thermostat, coolant flush",
+              "longevity": "Recommended at 60k preventative maintenance or after any overheating event."
+            },
+            {
+              "tier": "Full Replacement - Engine with Overheating Damage",
+              "dealerPrice": "£22,000 - £30,000",
+              "specialistPrice": "£14,995 - £22,000",
+              "whatItInvolves": "Full engine replacement required if overheating caused head gasket failure, warped heads, or bearing damage",
+              "longevity": "Required when warning lights ignored and engine has overheated severely."
+            }
+          ],
+          "recommendation": "",
+          "cta": ""
+        },
+        {
+          "group": "",
+          "h4": "",
+          "affectedModels": "",
+          "typicalFailureMileage": "",
+          "rootCause": "",
+          "repairOptions": [],
+          "recommendation": "",
+          "cta": ""
+        }
+      ],
       "finalCta": {
         "h4": "",
         "paragraph": "",
         "buttonText": "",
-        "disclaimer": ""
+        "disclaimer": "All prices are indicative UK market ranges based on historical quote data and repair requests from our network of engine specialists. Dealer pricing is estimated based on published main dealer labour rates and genuine OEM parts pricing. Specialist pricing reflects actual quote data from EngineMarket’s UK network. Actual costs vary depending on damage severity, vehicle condition, variant, and workshop location within the UK. Use our free comparison tool to get tailored quotes for your specific BMW M8 and engine code. Every engine supplied through EngineMarket carries a minimum 12‑month unlimited mileage warranty - always confirm exact terms with your chosen supplier."
       }
     },
     "engineTypes": {
@@ -464,9 +1091,130 @@
     },
     "faq": {
       "tag": "FAQ",
-      "h2": "",
+      "h2": "BMW M8 Engine Replacement - Frequently Asked Questions",
       "intro": "",
-      "items": [],
+      "items": [
+        {
+          "question": "Is the BMW M8 S63 engine reliable or should I be worried about big failures?",
+          "answer": "The S63B44T4 in the M8 is BMW's most refined hot-vee V8, but high performance demands proactive maintenance. Later revisions are significantly improved over early S63 engines.",
+          "keyPoints": [
+            "Rod bearing wear remains the most common catastrophic failure (55k-85k miles)",
+            "Turbocharger failures occur, particularly with neglected oil changes",
+            "LCI models (2022+) have improved cooling system durability",
+            "Regular 5k-6k mile oil changes dramatically extend engine life",
+            "The S63TU4 in the M8 is more reliable than earlier S63 iterations"
+          ],
+          "cta": "Get quotes for BMW M8 S63 engine replacement with upgraded bearings"
+        },
+        {
+          "question": "What does a BMW M8 engine replacement cost in the UK?",
+          "answer": "A rebuilt S63 engine for an M8 costs £14,995-£23,000 supply only. Fitting adds £1,800-£3,500. Dealer prices run £22,000-£30,000 for a complete replacement.",
+          "keyPoints": [
+            "Used engines: £8,500-£15,000 with 30k-60k miles",
+            "Reconditioned units: £14,000-£22,000 with factory tolerances",
+            "Competition models (S63B44T4) cost more than standard M8 units",
+            "Specialist supply & fit is approximately half the main dealer price",
+            "Core charges of £2,000-£3,000 apply on remanufactured engines"
+          ],
+          "cta": "Compare BMW M8 engine replacement prices from UK specialists"
+        },
+        {
+          "question": "How many miles will a BMW M8 engine last before needing replacement?",
+          "answer": "With meticulous maintenance, an M8's S63 engine can reach 120k-150k miles. However, rod bearing and cooling system failures typically appear between 50k and 90k miles without proactive care.",
+          "keyPoints": [
+            "Preventative bearing replacement at 60k miles extends life significantly",
+            "Cooling system overhaul at 60k miles prevents overheating damage",
+            "M8 Competition engines see higher thermal stress than standard units",
+            "Regular oil analysis can predict bearing wear before failure",
+            "Many M8 engines need major work by 80k-100k miles under normal ownership"
+          ],
+          "cta": "Find a low-mileage rebuilt BMW M8 engine with 12-month warranty"
+        },
+        {
+          "question": "What are the most common BMW M8 engine problems I should look for when buying used?",
+          "answer": "The four biggest red flags are cold start rattle (timing chain guides), deep knocking (rod bearings), blue startup smoke (valve seals), and coolant loss (cooling system leaks).",
+          "keyPoints": [
+            "Listen for 1-2 second rattle on cold start - indicates timing guide wear",
+            "Any bottom-end knock means imminent rod bearing failure",
+            "Blue smoke on startup after sitting overnight signals valve seal wear",
+            "Check coolant level history - M8s consume coolant when stressed",
+            "Request service records showing oil changes every 5k-6k miles minimum"
+          ],
+          "cta": "Get a pre-purchase inspection quote for a used BMW M8"
+        },
+        {
+          "question": "Should I replace or rebuild my BMW M8 engine?",
+          "answer": "Replace with a rebuilt unit if your engine has suffered rod bearing or timing failure. If caught early with top-end issues only, a rebuild may be viable. Most owners choose replacement for the upgraded components.",
+          "keyPoints": [
+            "Full replacement with upgraded bearings costs £14,995-£22,000 supply only",
+            "Top-end rebuild (valve seals, timing guides) costs £5,500-£8,500",
+            "Bottom-end failure almost always requires full replacement",
+            "Rebuilt engines include 12-month unlimited mileage warranty",
+            "Upgrade to coated bearings prevents the original failure point"
+          ],
+          "cta": "Compare BMW M8 engine rebuild vs replacement costs"
+        },
+        {
+          "question": "Does the BMW M8 Competition have the same engine as the standard M8?",
+          "answer": "Both use the 4.4L S63 twin-turbo V8, but the Competition gets the S63B44T4 with 617hp versus 600hp in the standard M8's S63B44B. The blocks are similar but tuning and some internals differ.",
+          "keyPoints": [
+            "Competition produces 617hp (625PS), standard M8 produces 600hp",
+            "The T4 in S63B44T4 denotes the fourth-generation Competition tune",
+            "Competition models dominate replacement enquiries due to higher sales volumes",
+            "Both share the same rod bearing and cooling system weaknesses",
+            "Engine swap between variants requires ECU reprogramming"
+          ],
+          "cta": "Compare BMW M8 Competition engine prices from UK specialists"
+        },
+        {
+          "question": "Does the BMW M8 have an oil consumption problem?",
+          "answer": "Some oil consumption is normal on the S63, especially with sporty driving. Excessive consumption (over 1L per 1,000 miles) indicates worn valve stem seals, piston rings, or turbo seals.",
+          "keyPoints": [
+            "BMW considers up to 1L per 1,000 miles within specification",
+            "Valve stem seals harden under extreme heat - common from 60k miles",
+            "Blue smoke on startup is the classic symptom of seal failure",
+            "Regular oil level checks between services are essential",
+            "Upgraded Viton seals in rebuilt engines solve the problem permanently"
+          ],
+          "cta": "Get quotes for BMW M8 valve stem seal replacement"
+        },
+        {
+          "question": "Which BMW M8 year is most reliable and which should I avoid?",
+          "answer": "2022+ LCI models are the most reliable M8s, benefiting from cooling system and software refinements. 2019-2020 early cars have the highest documented failure rates, particularly for cooling and turbo components.",
+          "keyPoints": [
+            "LCI (2022-2025) has improved coolant hose and expansion tank design",
+            "Pre-LCI (2019-2021) cars show more cooling system and wastegate issues",
+            "Final Edition (2024-2025) benefits from all cumulative improvements",
+            "Any M8 with full service history is preferable to a neglected newer car",
+            "Low mileage doesn't guarantee health - heat cycles matter more than miles"
+          ],
+          "cta": "Compare BMW M8 engine prices by year and variant"
+        },
+        {
+          "question": "Is the BMW M8 Gran Coupe engine different from the Coupe?",
+          "answer": "The engine and S63B44T4/S63B44B codes are identical across all M8 body styles (Coupe F92, Convertible F91, Gran Coupe F93). Performance figures are the same regardless of bodyshell.",
+          "keyPoints": [
+            "All variants use the same 4.4L twin-turbo S63 V8 engine family",
+            "No power difference between Coupe, Convertible, or Gran Coupe",
+            "Gran Coupe carries slightly more weight but shares powertrain completely",
+            "Replacement costs are identical across all three body styles",
+            "The Gran Coupe is the most common M8 on UK roads"
+          ],
+          "cta": "Get quotes for BMW M8 Gran Coupe engine replacement"
+        },
+        {
+          "question": "Can I tune or remap my BMW M8 engine safely?",
+          "answer": "The S63 has significant tuning potential, but any power increase accelerates wear on rod bearings, turbos, and cooling systems. Stick to stock unless you accept dramatically shorter engine life.",
+          "keyPoints": [
+            "Stock Competition already produces 617hp - tuning adds little real-world benefit",
+            "Remapped cars show much higher rod bearing failure rates",
+            "Most specialist rebuilders refuse warranty on tuned engines",
+            "Cooling system upgrades are essential for any power increase",
+            "A stock M8 with proper maintenance outlasts any tuned car"
+          ],
+          "cta": "Compare standard vs rebuilt BMW M8 engine prices - no tuning needed"
+        }
+      ],
       "headingLines": [],
       "defaultOpenIndex": 0,
       "ui": {
@@ -477,11 +1225,11 @@
     },
     "trustCta": {
       "tag": "Why Choose Us",
-      "h2": "",
-      "intro": "",
+      "h2": "Why UK BMW M8 Owners Trust EngineMarket",
+      "intro": "Join thousands of UK drivers who compare BMW M8 engine prices through our network of trusted specialists - every rebuilt and reconditioned unit backed by a minimum 12‑month unlimited mileage warranty and nationwide delivery.",
       "points": [],
-      "finalText": "",
-      "buttonText": "",
+      "finalText": "Find the best BMW M8 engine replacement UK drivers rely on. Compare prices from trusted specialists today and get back on the road with confidence.",
+      "buttonText": "Compare BMW M8 Engine Prices Now →",
       "secondaryAction": {
         "text": "Call Our Experts",
         "href": "tel:03330000044"

@@ -135,7 +135,7 @@
       }
     },
     "liveMarketPrices": {
-      "tag": "Models We Cover",
+      "tag": "Live UK Engine Market Data",
       "h2": "What Are UK Drivers Paying for BMW M3 Engine Replacement?",
       "h3": "The table below shows typical UK rebuilt engine replacement costs across different BMW M3 variants, covering known failure causes, engine codes, fuel types, and engine sizes.",
       "introBullets": [
@@ -307,6 +307,110 @@
           "key": "all",
           "label": "All",
           "matchers": []
+        },
+        {
+          "key": "m3-e30-engine",
+          "label": "M3 E30",
+          "matchers": [
+            "m3 e30",
+            "m3 e30 engine"
+          ]
+        },
+        {
+          "key": "m3-e36-engine",
+          "label": "M3 E36",
+          "matchers": [
+            "m3 e36",
+            "m3 e36 engine"
+          ]
+        },
+        {
+          "key": "m3-e36-evolution-engine",
+          "label": "M3 E36 Evolution",
+          "matchers": [
+            "m3 e36 evolution",
+            "m3 e36 evolution engine"
+          ]
+        },
+        {
+          "key": "m3-e46-engine",
+          "label": "M3 E46",
+          "matchers": [
+            "m3 e46",
+            "m3 e46 engine"
+          ]
+        },
+        {
+          "key": "m3-e90-saloon-engine",
+          "label": "M3 E90 Saloon",
+          "matchers": [
+            "m3 e90 saloon",
+            "m3 e90 saloon engine"
+          ]
+        },
+        {
+          "key": "m3-e92-coupe-engine",
+          "label": "M3 E92 Coupe",
+          "matchers": [
+            "m3 e92 coupe",
+            "m3 e92 coupe engine"
+          ]
+        },
+        {
+          "key": "m3-e93-convertible-engine",
+          "label": "M3 E93 Convertible",
+          "matchers": [
+            "m3 e93 convertible",
+            "m3 e93 convertible engine"
+          ]
+        },
+        {
+          "key": "m3-f80-engine",
+          "label": "M3 F80",
+          "matchers": [
+            "m3 f80",
+            "m3 f80 engine"
+          ]
+        },
+        {
+          "key": "m3-f80-competition-engine",
+          "label": "M3 F80 Competition",
+          "matchers": [
+            "m3 f80 competition",
+            "m3 f80 competition engine"
+          ]
+        },
+        {
+          "key": "m3-g80-engine",
+          "label": "M3 G80",
+          "matchers": [
+            "m3 g80",
+            "m3 g80 engine"
+          ]
+        },
+        {
+          "key": "m3-g80-competition-engine",
+          "label": "M3 G80 Competition",
+          "matchers": [
+            "m3 g80 competition",
+            "m3 g80 competition engine"
+          ]
+        },
+        {
+          "key": "m3-g80-competition-xdrive-engine",
+          "label": "M3 G80 Competition xDrive",
+          "matchers": [
+            "m3 g80 competition xdrive",
+            "m3 g80 competition xdrive engine"
+          ]
+        },
+        {
+          "key": "-engine",
+          "label": "",
+          "matchers": [
+            "",
+            "engine"
+          ]
         }
       ],
       "ui": {
@@ -335,25 +439,261 @@
     },
     "variantCoverage": {
       "tag": "Models We Cover",
-      "h2": "",
-      "subheading": "",
-      "cards": [],
+      "h2": "BMW M3 Engine Replacement - All Variants Covered",
+      "subheading": "From the classic E36 M3 to the high-performance G80 M3 Competition xDrive, our network of UK BMW M3 engine specialists helps you compare rebuilt, reconditioned and used engine prices. Typical price range for a rebuilt unit with 12-month warranty - supply & fit available nationwide.",
+      "cards": [
+        {
+          "h3": "BMW M3 E30 Engine Replacement",
+          "slug": "m3-e30-engine",
+          "subtitle": "S14B23 2.3L Petrol · 200hp · 1986-1991",
+          "priceRange": "£6,000-£12,000",
+          "cta": "→ Compare E30 M3 Engine Prices",
+          "engineCodes": [
+            "S14B23"
+          ],
+          "fuel": "Petrol",
+          "power": "200hp",
+          "years": "1986-1991",
+          "image": ""
+        },
+        {
+          "h3": "BMW M3 E36 Engine Replacement",
+          "slug": "m3-e36-engine",
+          "subtitle": "S50B30 3.0L Petrol · 286hp · 1992-1995",
+          "priceRange": "£3,000-£6,500",
+          "cta": "→ Compare E36 M3 Engine Prices",
+          "engineCodes": [
+            "S50B30"
+          ],
+          "fuel": "Petrol",
+          "power": "286hp",
+          "years": "1992-1995",
+          "image": ""
+        },
+        {
+          "h3": "BMW M3 E36 Evolution Engine Replacement",
+          "slug": "m3-e36-evolution-engine",
+          "subtitle": "S50B32 3.2L Petrol · 321hp · 1996-1999",
+          "priceRange": "£3,500-£7,500",
+          "cta": "→ Compare E36 M3 Evolution Engine Prices",
+          "engineCodes": [
+            "S50B32"
+          ],
+          "fuel": "Petrol",
+          "power": "321hp",
+          "years": "1996-1999",
+          "image": ""
+        },
+        {
+          "h3": "BMW M3 E46 Engine Replacement",
+          "slug": "m3-e46-engine",
+          "subtitle": "S54B32 3.2L Petrol · 343hp · 2000-2006",
+          "priceRange": "£3,500-£8,000",
+          "cta": "→ Compare E46 M3 Engine Prices",
+          "engineCodes": [
+            "S54B32"
+          ],
+          "fuel": "Petrol",
+          "power": "343hp",
+          "years": "2000-2006",
+          "image": ""
+        },
+        {
+          "h3": "BMW M3 E90 Saloon Engine Replacement",
+          "slug": "m3-e90-saloon-engine",
+          "subtitle": "S65B40 4.0L Petrol · 414hp · 2007-2011",
+          "priceRange": "£5,500-£11,000",
+          "cta": "→ Compare E90 M3 Engine Prices",
+          "engineCodes": [
+            "S65B40"
+          ],
+          "fuel": "Petrol",
+          "power": "414hp",
+          "years": "2007-2011",
+          "image": ""
+        },
+        {
+          "h3": "BMW M3 E92 Coupe Engine Replacement",
+          "slug": "m3-e92-coupe-engine",
+          "subtitle": "S65B40 4.0L Petrol · 414hp · 2007-2013",
+          "priceRange": "£5,500-£11,000",
+          "cta": "→ Compare E92 M3 Engine Prices",
+          "engineCodes": [
+            "S65B40"
+          ],
+          "fuel": "Petrol",
+          "power": "414hp",
+          "years": "2007-2013",
+          "image": ""
+        },
+        {
+          "h3": "BMW M3 E93 Convertible Engine Replacement",
+          "slug": "m3-e93-convertible-engine",
+          "subtitle": "S65B40 4.0L Petrol · 414hp · 2008-2013",
+          "priceRange": "£5,500-£11,000",
+          "cta": "→ Compare E93 M3 Engine Prices",
+          "engineCodes": [
+            "S65B40"
+          ],
+          "fuel": "Petrol",
+          "power": "414hp",
+          "years": "2008-2013",
+          "image": ""
+        },
+        {
+          "h3": "BMW M3 F80 Engine Replacement",
+          "slug": "m3-f80-engine",
+          "subtitle": "S55B30 3.0L Petrol Twin-Turbo · 425hp · 2014-2018",
+          "priceRange": "£5,000-£10,000",
+          "cta": "→ Compare F80 M3 Engine Prices",
+          "engineCodes": [
+            "S55B30"
+          ],
+          "fuel": "Petrol",
+          "power": "425hp",
+          "years": "2014-2018",
+          "image": ""
+        },
+        {
+          "h3": "BMW M3 F80 Competition Engine Replacement",
+          "slug": "m3-f80-competition-engine",
+          "subtitle": "S55B30 3.0L Petrol Twin-Turbo · 444hp · 2016-2018",
+          "priceRange": "£5,500-£11,000",
+          "cta": "→ Compare F80 M3 Competition Engine Prices",
+          "engineCodes": [
+            "S55B30"
+          ],
+          "fuel": "Petrol",
+          "power": "444hp",
+          "years": "2016-2018",
+          "image": ""
+        },
+        {
+          "h3": "BMW M3 G80 Engine Replacement",
+          "slug": "m3-g80-engine",
+          "subtitle": "S58B30 3.0L Petrol Twin-Turbo · 473hp · 2021-2026",
+          "priceRange": "£7,000-£14,000",
+          "cta": "→ Compare G80 M3 Engine Prices",
+          "engineCodes": [
+            "S58B30"
+          ],
+          "fuel": "Petrol",
+          "power": "473hp",
+          "years": "2021-2026",
+          "image": ""
+        },
+        {
+          "h3": "BMW M3 G80 Competition Engine Replacement",
+          "slug": "m3-g80-competition-engine",
+          "subtitle": "S58B30 3.0L Petrol Twin-Turbo · 503hp · 2021-2026",
+          "priceRange": "£7,500-£16,000",
+          "cta": "→ Compare G80 M3 Competition Engine Prices",
+          "engineCodes": [
+            "S58B30"
+          ],
+          "fuel": "Petrol",
+          "power": "503hp",
+          "years": "2021-2026",
+          "image": ""
+        },
+        {
+          "h3": "BMW M3 G80 Competition xDrive Engine Replacement",
+          "slug": "m3-g80-competition-xdrive-engine",
+          "subtitle": "S58B30 3.0L Petrol Twin-Turbo · 503hp · 2021-2026",
+          "priceRange": "£8,000-£17,000",
+          "cta": "→ Compare G80 M3 Competition xDrive Engine Prices",
+          "engineCodes": [
+            "S58B30"
+          ],
+          "fuel": "Petrol",
+          "power": "503hp",
+          "years": "2021-2026",
+          "image": ""
+        },
+        {
+          "h3": "",
+          "slug": "-engine",
+          "subtitle": "All BMW M3 Variants - Engine Replacement Coverage",
+          "priceRange": "",
+          "cta": "",
+          "engineCodes": [
+            "All BMW M3 Variants - Engine Replacement Coverage"
+          ],
+          "fuel": "",
+          "power": "",
+          "years": "",
+          "image": ""
+        }
+      ],
       "directory": {
         "h3": "",
         "intro": "",
-        "groups": [],
+        "groups": [
+          {
+            "title": "Diesel Variants",
+            "items": [
+              "None available for this model."
+            ]
+          },
+          {
+            "title": "Petrol Variants",
+            "items": [
+              "M3 · M3 CS · M3 CSL · M3 Competition · M3 Competition M xDrive · M3 Competition xDrive · M3 Convertible · M3 Coupe · M3 E30 · M3 E36 · M3 E36 Evolution · M3 E46 · M3 E90 · M3 E92 · M3 E93 · M3 F80 · M3 G80 · M3 G81 Touring · M3 GTS · M3 Individual · M3 M Performance · M3 Pure · M3 Saloon · M3 Touring"
+            ]
+          },
+          {
+            "title": "Performance Variants",
+            "items": [
+              "M3 CS (E46) · M3 CS (F80) · M3 CSL (E46) · M3 CRT (E90) · M3 DTM (E92) · M3 GTS (E92) · M3 Pure (F80) · M3 UK Limited Edition (E46)"
+            ]
+          }
+        ],
         "label": "Variant Directory"
       },
       "closing": "",
       "engineGuide": {
-        "tag": "Engine Codes",
-        "h2": "",
-        "h3": "",
-        "families": [],
-        "closing": ""
+        "tag": "Models We Cover",
+        "h2": "BMW M3 Engine Replacement - All Variants Covered",
+        "h3": "BMW M3 E30 Engine Replacement",
+        "families": [
+          {
+            "name": "Petrol Engines",
+            "entries": []
+          }
+        ],
+        "closing": "Not sure which variant your BMW M3 is? Enter your registration number above - we’ll identify the exact sub‑model, engine code and compatible replacement options instantly."
       },
       "headingLines": [],
-      "groups": [],
+      "groups": [
+        {
+          "title": "Classic Generation (E30, E36, E46)",
+          "cardSlugs": [
+            "m3-e30-engine",
+            "m3-e36-engine",
+            "m3-e36-evolution-engine",
+            "m3-e46-engine"
+          ]
+        },
+        {
+          "title": "V8 Generation (E90, E92, E93)",
+          "cardSlugs": [
+            "m3-e90-saloon-engine",
+            "m3-e92-coupe-engine",
+            "m3-e93-convertible-engine"
+          ]
+        },
+        {
+          "title": "Turbo Generation (F80, G80)",
+          "cardSlugs": [
+            "m3-f80-engine",
+            "m3-f80-competition-engine",
+            "m3-g80-engine",
+            "m3-g80-competition-engine",
+            "m3-g80-competition-xdrive-engine",
+            "-engine"
+          ]
+        }
+      ],
       "ui": {
         "fromPriceLabel": "from price",
         "specsLabel": "Specs",
@@ -363,12 +703,21 @@
       }
     },
     "engineCodes": {
-      "tag": "Engine Codes",
-      "h2": "",
-      "h3": "",
-      "closingLine": "",
-      "filters": [],
-      "groups": [],
+      "tag": "Models We Cover",
+      "h2": "BMW M3 Engine Replacement - All Variants Covered",
+      "h3": "BMW M3 E30 Engine Replacement",
+      "closingLine": "Not sure which variant your BMW M3 is? Enter your registration number above - we’ll identify the exact sub‑model, engine code and compatible replacement options instantly.",
+      "filters": [
+        "Petrol Engines"
+      ],
+      "groups": [
+        {
+          "name": "Petrol Engines",
+          "era": "Extracted from detailed petrol and performance engine families across BMW M3 variants.",
+          "failureNote": "Main replacement demand comes from timing-chain, cooling-system and performance thermal-management faults.",
+          "engines": []
+        }
+      ],
       "headingLines": [],
       "closingAction": {
         "title": "Can't find your engine code?",
@@ -390,13 +739,276 @@
     },
     "commonProblems": {
       "tag": "Common Problems",
-      "h2": "",
+      "h2": "BMW M3 Engine Problems - What It Costs to Fix & When Replacement Makes Sense",
       "h3": "",
-      "problems": [],
+      "problems": [
+        {
+          "group": "BMW M3 S65 V8 Rod Bearing Failure",
+          "h4": "BMW M3 S65 V8 Rod Bearing Failure - The E9x M3’s Achilles Heel",
+          "affectedModels": "BMW M3 E90 Saloon, E92 Coupé, E93 Convertible (2007-2013, S65B40 & S65B44)",
+          "typicalFailureMileage": "50,000 - 90,000 miles",
+          "rootCause": "Insufficient bearing clearance from the factory leads to oil film breakdown at high rpm. The result is metal-to-metal contact, bearing material shedding into the oil, and eventual seizure or rod failure.",
+          "repairOptions": [
+            {
+              "tier": "Repair Tier",
+              "dealerPrice": "Dealer Price (Parts + Labour)",
+              "specialistPrice": "Specialist Price (Parts + Labour)",
+              "whatItInvolves": "What It Involves",
+              "longevity": "Longevity / Suitability"
+            },
+            {
+              "tier": "",
+              "dealerPrice": "",
+              "specialistPrice": "",
+              "whatItInvolves": "",
+              "longevity": ""
+            },
+            {
+              "tier": "Preventative - Bearing Replacement (before knocking starts)",
+              "dealerPrice": "£2,800 - £4,500",
+              "specialistPrice": "£1,800 - £2,800",
+              "whatItInvolves": "Replacement of rod bearings with uprated aftermarket units (e.g., ACL or King), new bolts, oil flush",
+              "longevity": "Permanent fix when done preventatively. 80k+ mile lifespan on new bearings"
+            },
+            {
+              "tier": "Intermediate - Crank Polish & Bearings (early knock)",
+              "dealerPrice": "£5,000 - £7,500",
+              "specialistPrice": "£3,500 - £5,000",
+              "whatItInvolves": "Crank inspection and polishing, uprated bearing replacement, oil system flush",
+              "longevity": "Viable only if crank surface undamaged. Adds 40k-60k miles"
+            },
+            {
+              "tier": "Full Replacement - Rebuilt / Reconditioned S65",
+              "dealerPrice": "£12,000 - £18,000",
+              "specialistPrice": "£6,500 - £11,000",
+              "whatItInvolves": "Complete rebuilt engine with uprated bearings, new timing components, bench tested, 12‑month warranty",
+              "longevity": "100k+ mile lifespan. Only permanent solution if crank or block damaged"
+            }
+          ],
+          "recommendation": "If your S65 is silent and below 70k miles, invest in preventative bearing replacement through a specialist. This costs £1,800-£2,800 and saves a £6,500+ replacement. If you already hear knocking, stop driving immediately. A full rebuild or replacement is usually required once the crank is scored. On a car worth £12,000-£25,000, spending £6,500-£11,000 on a rebuilt S65 with uprated bearings makes financial sense compared to scrapping the vehicle.",
+          "cta": ""
+        },
+        {
+          "group": "BMW M3 S55 Crank Hub Failure",
+          "h4": "BMW M3 S55 Crank Hub Failure - The F80’s Fatal Flaw",
+          "affectedModels": "BMW M3 F80 (2014-2018, S55B30), F80 Competition, F80 CS",
+          "typicalFailureMileage": "20,000 - 60,000 miles (highly variable; some fail below 10k)",
+          "rootCause": "The factory crank hub is friction-fit only, without a positive keyway. Under high torque loads or sudden throttle changes, the hub can spin relative to the crankshaft, destroying valve timing and causing piston-to-valve contact.",
+          "repairOptions": [
+            {
+              "tier": "Repair Tier",
+              "dealerPrice": "Dealer Price (Parts + Labour)",
+              "specialistPrice": "Specialist Price (Parts + Labour)",
+              "whatItInvolves": "What It Involves",
+              "longevity": "Longevity / Suitability"
+            },
+            {
+              "tier": "",
+              "dealerPrice": "",
+              "specialistPrice": "",
+              "whatItInvolves": "",
+              "longevity": ""
+            },
+            {
+              "tier": "Preventative - Crank Hub Fix (before failure)",
+              "dealerPrice": "£2,500 - £3,500",
+              "specialistPrice": "£1,600 - £2,400",
+              "whatItInvolves": "Fitment of a keyed or pinned crank hub capture kit (e.g., VTT, Insane, 4Piston)",
+              "longevity": "Permanent prevention. One-time cost before failure"
+            },
+            {
+              "tier": "Full Replacement - Rebuilt S55 with Hub Fix",
+              "dealerPrice": "£11,000 - £15,000",
+              "specialistPrice": "£5,500 - £10,000",
+              "whatItInvolves": "Complete rebuilt engine with pre-installed crank hub fix, new valves if bent, new timing components",
+              "longevity": "100k+ mile lifespan with the hub weakness eliminated"
+            }
+          ],
+          "recommendation": "The S55 is a strong engine apart from the hub. If your F80 M3 is stock or tuned, a preventative crank hub fix for £1,600-£2,400 is excellent insurance. If the hub has already spun, do not restart the engine - the valves are almost certainly damaged. A rebuilt S55 with the hub fix pre-installed costs £5,500-£10,000, which is reasonable given the car’s £20,000-£35,000 market value.",
+          "cta": ""
+        },
+        {
+          "group": "BMW M3 S54 VANOS Failure",
+          "h4": "BMW M3 S54 VANOS Failure - The E46’s Weak Link",
+          "affectedModels": "BMW M3 E46 (2000-2006, S54B32), E46 M3 CSL",
+          "typicalFailureMileage": "60,000 - 120,000 miles",
+          "rootCause": "The VANOS oil pump disc hub shears or the unit’s seals degrade, causing loss of oil pressure to the variable valve timing system. This results in rattle, power loss, and eventual debris contamination of the oil system.",
+          "repairOptions": [
+            {
+              "tier": "Repair Tier",
+              "dealerPrice": "Dealer Price (Parts + Labour)",
+              "specialistPrice": "Specialist Price (Parts + Labour)",
+              "whatItInvolves": "What It Involves",
+              "longevity": "Longevity / Suitability"
+            },
+            {
+              "tier": "",
+              "dealerPrice": "",
+              "specialistPrice": "",
+              "whatItInvolves": "",
+              "longevity": ""
+            },
+            {
+              "tier": "Minor - VANOS Seal Replacement",
+              "dealerPrice": "£1,200 - £1,800",
+              "specialistPrice": "£700 - £1,200",
+              "whatItInvolves": "Replacement of VANOS seals with upgraded Viton units, solenoid cleaning",
+              "longevity": "Adds 60k-80k miles. For early rattle with no metal debris"
+            },
+            {
+              "tier": "Intermediate - VANOS Rebuild (failed hub)",
+              "dealerPrice": "£2,500 - £3,800",
+              "specialistPrice": "£1,500 - £2,500",
+              "whatItInvolves": "Complete VANOS unit overhaul with reinforced oil pump disc, new seals, hub replacement",
+              "longevity": "Permanent fix for the VANOS system. 100k+ mile lifespan"
+            },
+            {
+              "tier": "Full Replacement - Rebuilt S54",
+              "dealerPrice": "£8,000 - £12,000",
+              "specialistPrice": "£4,500 - £8,000",
+              "whatItInvolves": "Complete rebuilt engine with rebuilt VANOS, new rod bearings, timing chain, oil pump",
+              "longevity": "100k+ mile lifespan. Required if debris damaged bottom end"
+            }
+          ],
+          "recommendation": "Catch VANOS failure early. At the first rattle, a £700-£1,200 seal replacement is cost-effective. If the hub has failed and you hear marbles in a can, stop driving. Debris often reaches the rod bearings. A rebuilt S54 with VANOS and bearing upgrades costs £4,500-£8,000. On an E46 M3 worth £15,000-£30,000 (CSL values are much higher), this is a sensible long-term investment.",
+          "cta": ""
+        },
+        {
+          "group": "BMW M3 S65 Throttle Actuator Failure",
+          "h4": "BMW M3 S65 Throttle Actuator Failure - The V8’s Electrical Nightmare",
+          "affectedModels": "BMW M3 E90, E92, E93 (2007-2013, S65B40)",
+          "typicalFailureMileage": "50,000 - 100,000 miles",
+          "rootCause": "Small DC motors inside each throttle actuator bank overheat and fail due to degraded internal gears or worn potentiometers. The engine enters limp mode with reduced power and a failsafe warning.",
+          "repairOptions": [
+            {
+              "tier": "Repair Tier",
+              "dealerPrice": "Dealer Price (Parts + Labour)",
+              "specialistPrice": "Specialist Price (Parts + Labour)",
+              "whatItInvolves": "What It Involves",
+              "longevity": "Longevity / Suitability"
+            },
+            {
+              "tier": "",
+              "dealerPrice": "",
+              "specialistPrice": "",
+              "whatItInvolves": "",
+              "longevity": ""
+            },
+            {
+              "tier": "Minor - Actuator Replacement (one bank)",
+              "dealerPrice": "£1,100 - £1,800",
+              "specialistPrice": "£700 - £1,200",
+              "whatItInvolves": "Replacement of the failed throttle actuator unit (BMW genuine or rebuilt)",
+              "longevity": "50k-80k mile lifespan. Other bank will likely fail later"
+            },
+            {
+              "tier": "Intermediate - Both Actuators Replaced",
+              "dealerPrice": "£1,800 - £2,800",
+              "specialistPrice": "£1,200 - £1,900",
+              "whatItInvolves": "Replacement of both throttle actuator units simultaneously",
+              "longevity": "70k-100k mile lifespan. Cheaper long-term than doing one at a time"
+            },
+            {
+              "tier": "Full Replacement - Rebuilt S65 (with actuators)",
+              "dealerPrice": "£12,000 - £18,000",
+              "specialistPrice": "£6,500 - £11,000",
+              "whatItInvolves": "Complete rebuilt engine with new actuators and uprated rod bearings",
+              "longevity": "100k+ mile lifespan. Only justified if bearings also failed"
+            }
+          ],
+          "recommendation": "Actuator failure is annoying but not catastrophic - the engine does not self-destruct. Replace both units at the same time through a specialist for £1,200-£1,900; doing one bank just delays the inevitable. This is not a reason to replace the whole engine unless your S65 also has rod bearing failure. However, many owners use actuator failure as a trigger to address the bearings simultaneously, saving labour.",
+          "cta": ""
+        },
+        {
+          "group": "BMW M3 E46 Head Gasket Failure",
+          "h4": "BMW M3 E46 Head Gasket Failure - The S54’s Overheating Risk",
+          "affectedModels": "BMW M3 E46 (2000-2006, S54B32)",
+          "typicalFailureMileage": "80,000 - 140,000 miles",
+          "rootCause": "The S54 runs high compression and generates significant heat. Over time, the composite head gasket degrades, often between cylinders 3-4 or 4-5, allowing combustion gases into the coolant system.",
+          "repairOptions": [
+            {
+              "tier": "Repair Tier",
+              "dealerPrice": "Dealer Price (Parts + Labour)",
+              "specialistPrice": "Specialist Price (Parts + Labour)",
+              "whatItInvolves": "What It Involves",
+              "longevity": "Longevity / Suitability"
+            },
+            {
+              "tier": "",
+              "dealerPrice": "",
+              "specialistPrice": "",
+              "whatItInvolves": "",
+              "longevity": ""
+            },
+            {
+              "tier": "Intermediate - Head Gasket Replacement",
+              "dealerPrice": "£2,800 - £4,000",
+              "specialistPrice": "£1,800 - £2,800",
+              "whatItInvolves": "New MLS head gasket, cylinder head skim and pressure test, new bolts",
+              "longevity": "Adds 60k-80k miles. Viable if the block and head are undamaged"
+            },
+            {
+              "tier": "Full Replacement - Rebuilt S54",
+              "dealerPrice": "£8,000 - £12,000",
+              "specialistPrice": "£4,500 - £8,000",
+              "whatItInvolves": "Complete rebuilt engine with new head gasket, bearings, VANOS rebuild",
+              "longevity": "100k+ mile lifespan. Required if head is warped or block is cracked"
+            }
+          ],
+          "recommendation": "Head gasket failure is serious but repairable without full replacement if caught when the first symptom appears (coolant loss, misfire on startup, pressurised expansion tank). A specialist head gasket replacement costs £1,800-£2,800. However, if the engine has overheated to the point of warping the cylinder head or block, replacement is safer. Many owners combine head gasket work with VANOS and rod bearing refresh at the same time.",
+          "cta": ""
+        },
+        {
+          "group": "BMW M3 E36 VANOS Failure",
+          "h4": "BMW M3 E36 VANOS Failure - The S50’s Dual VANOS Trouble",
+          "affectedModels": "BMW M3 E36 Evolution (1996-1999, S50B32)",
+          "typicalFailureMileage": "70,000 - 120,000 miles",
+          "rootCause": "The dual VANOS system (intake and exhaust) uses hydraulic pressure controlled by solenoid valves. Internal seals harden and leak, causing poor idling, loss of low-end torque, and rattling noises.",
+          "repairOptions": [
+            {
+              "tier": "Repair Tier",
+              "dealerPrice": "Dealer Price (Parts + Labour)",
+              "specialistPrice": "Specialist Price (Parts + Labour)",
+              "whatItInvolves": "What It Involves",
+              "longevity": "Longevity / Suitability"
+            },
+            {
+              "tier": "",
+              "dealerPrice": "",
+              "specialistPrice": "",
+              "whatItInvolves": "",
+              "longevity": ""
+            },
+            {
+              "tier": "Minor - VANOS Seal Rebuild",
+              "dealerPrice": "£900 - £1,400",
+              "specialistPrice": "£550 - £900",
+              "whatItInvolves": "Replacement of VANOS internal seals with upgraded Viton units, solenoid cleaning",
+              "longevity": "Adds 50k-70k miles. For early symptoms without debris"
+            },
+            {
+              "tier": "Intermediate - Full VANOS Overhaul",
+              "dealerPrice": "£1,800 - £2,800",
+              "specialistPrice": "£1,200 - £1,800",
+              "whatItInvolves": "Complete VANOS unit rebuild including hubs, splined shafts, seals, and solenoids",
+              "longevity": "Permanent fix. 80k+ mile lifespan"
+            },
+            {
+              "tier": "Full Replacement - Rebuilt S50B32",
+              "dealerPrice": "£6,000 - £9,000",
+              "specialistPrice": "£3,500 - £7,500",
+              "whatItInvolves": "Complete rebuilt engine with rebuilt VANOS, new timing chain, rod bearings",
+              "longevity": "100k+ mile lifespan. Required if VANOS debris damaged the bottom end"
+            }
+          ],
+          "recommendation": "The S50B32 is a classic engine worth preserving. VANOS seal failure is almost inevitable; catch it early with a £550-£900 seal rebuild. If the car has been driven with failed VANOS for years, internal debris may have reached the oil pump and bearings. On an E36 Evo worth £12,000-£25,000, a rebuilt S50B32 at £3,500-£7,500 is a reasonable investment that preserves originality.",
+          "cta": ""
+        }
+      ],
       "finalCta": {
-        "h4": "",
-        "paragraph": "",
-        "buttonText": "",
+        "h4": "Don't Let Engine Failure Write Off Your BMW M3",
+        "paragraph": "From S65 rod bearing death rattle to S55 crank hub slip and S54 VANOS failure, every M3 generation has a known vulnerability. But these weaknesses are predictable and manageable. EngineMarket connects you with trusted UK BMW M3 specialists who supply rebuilt engines with upgraded components designed to eliminate the original failure point - not just put you back to factory spec. All units carry a minimum 12‑month unlimited mileage warranty with nationwide delivery and supply & fit options. Compare prices today and get back on the road without the main dealer premium.",
+        "buttonText": "Compare BMW M3 Engine Replacement Prices Now →",
         "disclaimer": ""
       }
     },
@@ -480,9 +1092,130 @@
     },
     "faq": {
       "tag": "FAQ",
-      "h2": "",
+      "h2": "BMW M3 Engine Replacement - Frequently Asked Questions",
       "intro": "",
-      "items": [],
+      "items": [
+        {
+          "question": "Is the BMW M3 S65 V8 rod bearing failure really that common, and can it be prevented?",
+          "answer": "Yes, S65 rod bearing failure is well-documented across E90/E92/E93 M3s. The issue stems from excessively tight bearing clearances from the factory, which restricts oil flow when cold. Preventative replacement is highly recommended.",
+          "keyPoints": [
+            "Failure typically occurs between 50,000-90,000 miles, often without warning",
+            "Cold starts and high revs before oil reaches temperature accelerate wear significantly",
+            "Uprated aftermarket bearings (ACL, King) with correct clearance eliminate the factory flaw",
+            "A spun bearing usually destroys the crankshaft, requiring full engine replacement",
+            "Specialist preventative replacement costs £1,800-£2,800 - far less than a £6,500+ rebuild"
+          ],
+          "cta": "Compare rebuilt S65 BMW M3 engine prices for your E9x M3"
+        },
+        {
+          "question": "What is the S55 crank hub issue on the F80 M3, and does every car need the fix?",
+          "answer": "The factory S55 crank hub is friction-fit only, not keyed. Under high torque or sudden load, the hub can spin relative to the crankshaft, destroying valve timing and bending valves. Not every car fails, but tuned cars are at much higher risk.",
+          "keyPoints": [
+            "Stock cars can fail too - documented failures below 20,000 miles on unmodified engines",
+            "The hub controls camshaft timing; a slip causes piston-to-valve contact, ruining the engine",
+            "Aftermarket keyed or pinned hub kits (VTT, Insane, Mosselman) permanently fix the weakness",
+            "Preventative installation costs £1,600-£2,400 from a UK specialist",
+            "If the hub has already spun, you need a complete rebuilt S55 with new valves"
+          ],
+          "cta": "Get quotes for BMW M3 F80 S55 rebuilt engine with crank hub fix"
+        },
+        {
+          "question": "How much does an E46 M3 S54 VANOS rebuild cost, and is it worth doing?",
+          "answer": "S54 VANOS failure is inevitable on higher-mileage E46 M3s. A seal-only rebuild costs £700-£1,200, while a full VANOS unit overhaul with reinforced parts runs £1,500-£2,500. It is absolutely worth doing preventatively.",
+          "keyPoints": [
+            "VANOS rattle and loss of low-end torque are the earliest warning signs",
+            "The factory oil pump disc hub can shear, sending debris through the engine",
+            "Upgraded Viton seals and reinforced hubs make the VANOS permanent",
+            "A failed VANOS that contaminates the oil system often destroys rod bearings too",
+            "Combined VANOS and rod bearing refresh is the smartest E46 M3 ownership move"
+          ],
+          "cta": "Compare rebuilt S54 BMW M3 engine prices with VANOS upgrades"
+        },
+        {
+          "question": "Which BMW M3 generation has the most reliable engine?",
+          "answer": "The G80 M3's S58 engine has proven exceptionally reliable - Auto Bild's 100,000km endurance test found almost no mechanical wear. The E36's S50 and E46's S54 are also robust when maintained, though both have known weak points.",
+          "keyPoints": [
+            "G80 M3 S58: Near-flawless 62,000-mile test, no cylinder wear or leaks",
+            "E36 M3 S50: Strong engine but VANOS and oil pump nut need attention",
+            "E46 M3 S54: Reliable if VANOS and rod bearings are addressed proactively",
+            "E90 M3 S65: The least reliable due to rod bearing and throttle actuator issues",
+            "S85 and S65 V8s share the same bearing clearance flaw from the factory"
+          ],
+          "cta": "Find a reconditioned BMW M3 engine for your preferred generation"
+        },
+        {
+          "question": "What is the correct engine oil for my BMW M3, and why does it matter for rod bearings?",
+          "answer": "BMW M3s require 10W-60 oil - a thick, high-performance lubricant designed specifically for M engines. Using the wrong oil or skipping changes dramatically accelerates rod bearing wear, especially in S54 and S65 engines.",
+          "keyPoints": [
+            "Genuine BMW M TwinPower Turbo 10W-60 is the factory-specified oil for S54, S65, and S85 engines",
+            "The thick oil protects bearings under high load and at extreme temperatures",
+            "Cold oil is viscous; always keep revs below 3,000rpm until the engine reaches operating temperature",
+            "Annual or 6,000-mile oil changes are strongly recommended for high-performance M engines",
+            "Specialist rebuilds always include an oil system flush to remove bearing debris"
+          ],
+          "cta": "Get quotes for BMW M3 engine replacement with uprated bearings"
+        },
+        {
+          "question": "Is it worth replacing the engine on a high-mileage BMW M3, or should I sell the car?",
+          "answer": "On an E46, E90, or F80 M3 worth £12,000-£35,000, a rebuilt engine with upgraded components is almost always worth it - especially when the alternative is selling a non-running car at a massive loss.",
+          "keyPoints": [
+            "A non-running M3 with engine failure sells for 30-50% of market value",
+            "A rebuilt S54 costs £4,500-£8,000; an S65 £6,500-£11,000; an S55 £5,500-£10,000",
+            "Rebuilt engines include failure-specific upgrades the factory never fitted",
+            "A documented specialist rebuild adds value to discerning buyers",
+            "On a G80 M3 worth £50,000+, an engine replacement is always justified"
+          ],
+          "cta": "Compare BMW M3 engine replacement prices from UK specialists"
+        },
+        {
+          "question": "How long does a rebuilt BMW M3 engine last, and what warranty do I get?",
+          "answer": "A correctly rebuilt M3 engine using upgraded components should last 100,000+ miles - often longer than the factory original. All engines supplied through EngineMarket carry a minimum 12-month unlimited mileage warranty.",
+          "keyPoints": [
+            "Specialist rebuilds include uprated rod bearings, VANOS fixes, or crank hub solutions",
+            "Mr Vanos, a UK leader, offers 2 years / 20,000 miles warranty on road-use engines",
+            "A rebuilt S65 with ACL bearings addresses the factory clearance flaw permanently",
+            "S55 engines with keyed crank hubs eliminate the spun hub risk entirely",
+            "Always confirm exact warranty terms with your chosen supplier before purchase"
+          ],
+          "cta": "Get a warranty-backed rebuilt BMW M3 engine quote today"
+        },
+        {
+          "question": "Can I fit a used BMW M3 engine from a breaker, or should I buy rebuilt?",
+          "answer": "A used engine is cheaper (£2,000-£5,500) but carries the same factory flaws that caused the original failure. A rebuilt engine costs more but eliminates those weaknesses. For S65 and S55 engines especially, rebuilt is strongly advised.",
+          "keyPoints": [
+            "Used S65 engines still have the same rod bearing clearance problem waiting to fail",
+            "Used S55 engines still have the same friction-fit crank hub weakness",
+            "A used engine has unknown service history and no warranty on internal wear",
+            "Rebuilt engines include upgraded components and bench testing before delivery",
+            "For E46 M3s, a used S54 is viable if VANOS and bearings were recently done"
+          ],
+          "cta": "Compare used vs rebuilt BMW M3 engine prices for your model"
+        },
+        {
+          "question": "What causes the BMW M3 S54 to overheat, and when does it need a head gasket?",
+          "answer": "The S54 runs high compression and generates significant heat. Head gasket failure typically occurs between cylinders 3-4 or 4-5, allowing combustion gases into the coolant system. Early detection prevents engine damage.",
+          "keyPoints": [
+            "Coolant loss, misfire on cold start, and pressurised expansion tank are early signs",
+            "A specialist head gasket replacement costs £1,800-£2,800",
+            "If the engine has overheated badly, the head may warp - requiring full replacement",
+            "Many owners combine head gasket work with VANOS and rod bearing refresh",
+            "Upgraded MLS head gaskets are available for performance builds"
+          ],
+          "cta": "Find BMW M3 S54 engine replacement options near you"
+        },
+        {
+          "question": "How do I know which BMW M3 engine code my car has, and why does it matter?",
+          "answer": "Your M3's engine code is stamped on the cylinder block and listed in your V5C logbook. It matters because S54 (E46), S65 (E9x), S55 (F80), and S58 (G80) engines have completely different failure patterns, parts, and replacement costs.",
+          "keyPoints": [
+            "E46 M3 = S54B32 (3.2L straight-six) - VANOS and rod bearing issues",
+            "E90/E92/E93 M3 = S65B40 (4.0L V8) - rod bearing and throttle actuator failures",
+            "F80 M3 = S55B30 (3.0L twin-turbo) - crank hub weakness",
+            "G80 M3 = S58B30 (3.0L twin-turbo) - generally reliable, early oil pump concerns",
+            "Enter your registration above to instantly identify your exact engine code"
+          ],
+          "cta": "Get quotes for your specific BMW M3 engine code replacement"
+        }
+      ],
       "headingLines": [],
       "defaultOpenIndex": 0,
       "ui": {
@@ -493,11 +1226,11 @@
     },
     "trustCta": {
       "tag": "Why Choose Us",
-      "h2": "",
-      "intro": "",
+      "h2": "Why UK BMW M3 Owners Trust EngineMarket",
+      "intro": "Join thousands of UK drivers who compare BMW M3 engine prices through our network of trusted specialists - every rebuilt and reconditioned unit backed by a minimum 12‑month unlimited mileage warranty and nationwide delivery.",
       "points": [],
-      "finalText": "",
-      "buttonText": "",
+      "finalText": "Find the best BMW M3 engine replacement UK drivers rely on. Compare prices from trusted specialists today and get back on the road with confidence.",
+      "buttonText": "Compare BMW M3 Engine Prices Now →",
       "secondaryAction": {
         "text": "Call Our Experts",
         "href": "tel:03330000044"

@@ -135,7 +135,7 @@
       }
     },
     "liveMarketPrices": {
-      "tag": "Models We Cover",
+      "tag": "Live UK Engine Market Data",
       "h2": "What Are UK Drivers Paying for BMW M6 Engine Replacement?",
       "h3": "The table below shows typical UK rebuilt engine costs across BMW M6 variants, covering documented failure causes, engine codes, fuel types, and engine sizes based on current market data.",
       "introBullets": [
@@ -307,6 +307,94 @@
           "key": "all",
           "label": "All",
           "matchers": []
+        },
+        {
+          "key": "m6-coupe-engine",
+          "label": "M6 Coupe",
+          "matchers": [
+            "m6 coupe",
+            "m6 coupe engine"
+          ]
+        },
+        {
+          "key": "m6-convertible-engine",
+          "label": "M6 Convertible",
+          "matchers": [
+            "m6 convertible",
+            "m6 convertible engine"
+          ]
+        },
+        {
+          "key": "m6-gran-coupe-engine",
+          "label": "M6 Gran Coupe",
+          "matchers": [
+            "m6 gran coupe",
+            "m6 gran coupe engine"
+          ]
+        },
+        {
+          "key": "m6-coupe-competition-engine",
+          "label": "M6 Coupe Competition",
+          "matchers": [
+            "m6 coupe competition",
+            "m6 coupe competition engine"
+          ]
+        },
+        {
+          "key": "m6-gran-coupe-competition-engine",
+          "label": "M6 Gran Coupe Competition",
+          "matchers": [
+            "m6 gran coupe competition",
+            "m6 gran coupe competition engine"
+          ]
+        },
+        {
+          "key": "m6-convertible-competition-engine",
+          "label": "M6 Convertible Competition",
+          "matchers": [
+            "m6 convertible competition",
+            "m6 convertible competition engine"
+          ]
+        },
+        {
+          "key": "m635csi-engine",
+          "label": "M635CSi",
+          "matchers": [
+            "m635csi",
+            "m635csi engine"
+          ]
+        },
+        {
+          "key": "m6-coupe-lci-engine",
+          "label": "M6 Coupe LCI",
+          "matchers": [
+            "m6 coupe lci",
+            "m6 coupe lci engine"
+          ]
+        },
+        {
+          "key": "m6-gran-coupe-lci-engine",
+          "label": "M6 Gran Coupe LCI",
+          "matchers": [
+            "m6 gran coupe lci",
+            "m6 gran coupe lci engine"
+          ]
+        },
+        {
+          "key": "m6-convertible-lci-engine",
+          "label": "M6 Convertible LCI",
+          "matchers": [
+            "m6 convertible lci",
+            "m6 convertible lci engine"
+          ]
+        },
+        {
+          "key": "-engine",
+          "label": "",
+          "matchers": [
+            "",
+            "engine"
+          ]
         }
       ],
       "ui": {
@@ -335,25 +423,261 @@
     },
     "variantCoverage": {
       "tag": "Models We Cover",
-      "h2": "",
-      "subheading": "",
-      "cards": [],
+      "h2": "BMW M6 Engine Replacement - All Variants Covered",
+      "subheading": "From the classic M635CSi to the high-performance Competition Package, our network of trusted UK BMW M6 engine specialists delivers rebuilt, reconditioned and used engine prices across every generation. A typical rebuilt M6 engine includes a 12-month warranty - supply & fit available nationwide.",
+      "cards": [
+        {
+          "h3": "BMW M6 Coupe Engine Replacement",
+          "slug": "m6-coupe-engine",
+          "subtitle": "S85B50 5.0L Petrol · 507hp · 2005-2010",
+          "priceRange": "£4,500-£8,500",
+          "cta": "→ Compare M6 Coupe Engine Prices",
+          "engineCodes": [
+            "S85B50"
+          ],
+          "fuel": "Petrol",
+          "power": "507hp",
+          "years": "2005-2010",
+          "image": ""
+        },
+        {
+          "h3": "BMW M6 Convertible Engine Replacement",
+          "slug": "m6-convertible-engine",
+          "subtitle": "S85B50 5.0L Petrol · 507hp · 2006-2010",
+          "priceRange": "£4,500-£9,000",
+          "cta": "→ Compare M6 Convertible Engine Prices",
+          "engineCodes": [
+            "S85B50"
+          ],
+          "fuel": "Petrol",
+          "power": "507hp",
+          "years": "2006-2010",
+          "image": ""
+        },
+        {
+          "h3": "BMW M6 Coupe Engine Replacement",
+          "slug": "m6-coupe-engine",
+          "subtitle": "S63B44A 4.4L Petrol · 560hp · 2012-2014",
+          "priceRange": "£5,500-£10,000",
+          "cta": "→ Compare M6 Coupe Engine Prices",
+          "engineCodes": [
+            "S63B44A"
+          ],
+          "fuel": "Petrol",
+          "power": "560hp",
+          "years": "2012-2014",
+          "image": ""
+        },
+        {
+          "h3": "BMW M6 Convertible Engine Replacement",
+          "slug": "m6-convertible-engine",
+          "subtitle": "S63B44A 4.4L Petrol · 560hp · 2012-2014",
+          "priceRange": "£5,500-£10,500",
+          "cta": "→ Compare M6 Convertible Engine Prices",
+          "engineCodes": [
+            "S63B44A"
+          ],
+          "fuel": "Petrol",
+          "power": "560hp",
+          "years": "2012-2014",
+          "image": ""
+        },
+        {
+          "h3": "BMW M6 Gran Coupe Engine Replacement",
+          "slug": "m6-gran-coupe-engine",
+          "subtitle": "S63B44B 4.4L Petrol · 560hp · 2013-2015",
+          "priceRange": "£5,500-£10,000",
+          "cta": "→ Compare M6 Gran Coupe Engine Prices",
+          "engineCodes": [
+            "S63B44B"
+          ],
+          "fuel": "Petrol",
+          "power": "560hp",
+          "years": "2013-2015",
+          "image": ""
+        },
+        {
+          "h3": "BMW M6 Coupe Competition Engine Replacement",
+          "slug": "m6-coupe-competition-engine",
+          "subtitle": "S63B44C 4.4L Petrol · 575hp · 2014-2015",
+          "priceRange": "£6,000-£11,500",
+          "cta": "→ Compare M6 Coupe Competition Engine Prices",
+          "engineCodes": [
+            "S63B44C"
+          ],
+          "fuel": "Petrol",
+          "power": "575hp",
+          "years": "2014-2015",
+          "image": ""
+        },
+        {
+          "h3": "BMW M6 Gran Coupe Competition Engine Replacement",
+          "slug": "m6-gran-coupe-competition-engine",
+          "subtitle": "S63T2 4.4L Petrol · 600hp · 2015-2018",
+          "priceRange": "£6,500-£12,500",
+          "cta": "→ Compare M6 Gran Coupe Competition Engine Prices",
+          "engineCodes": [
+            "S63T2"
+          ],
+          "fuel": "Petrol",
+          "power": "600hp",
+          "years": "2015-2018",
+          "image": ""
+        },
+        {
+          "h3": "BMW M6 Convertible Competition Engine Replacement",
+          "slug": "m6-convertible-competition-engine",
+          "subtitle": "S63T2 4.4L Petrol · 600hp · 2015-2018",
+          "priceRange": "£6,500-£12,500",
+          "cta": "→ Compare M6 Convertible Competition Engine Prices",
+          "engineCodes": [
+            "S63T2"
+          ],
+          "fuel": "Petrol",
+          "power": "600hp",
+          "years": "2015-2018",
+          "image": ""
+        },
+        {
+          "h3": "BMW M635CSi Engine Replacement",
+          "slug": "m635csi-engine",
+          "subtitle": "M88/3 3.5L Petrol · 286hp · 1983-1989",
+          "priceRange": "£3,500-£6,500",
+          "cta": "→ Compare M635CSi Engine Prices",
+          "engineCodes": [
+            "M88",
+            "3"
+          ],
+          "fuel": "Petrol",
+          "power": "286hp",
+          "years": "1983-1989",
+          "image": ""
+        },
+        {
+          "h3": "BMW M6 Coupe LCI Engine Replacement",
+          "slug": "m6-coupe-lci-engine",
+          "subtitle": "S63B44B 4.4L Petrol · 560hp · 2015-2018",
+          "priceRange": "£5,800-£11,000",
+          "cta": "→ Compare M6 Coupe LCI Engine Prices",
+          "engineCodes": [
+            "S63B44B"
+          ],
+          "fuel": "Petrol",
+          "power": "560hp",
+          "years": "2015-2018",
+          "image": ""
+        },
+        {
+          "h3": "BMW M6 Gran Coupe LCI Engine Replacement",
+          "slug": "m6-gran-coupe-lci-engine",
+          "subtitle": "S63T2 4.4L Petrol · 600hp · 2015-2018",
+          "priceRange": "£6,500-£12,500",
+          "cta": "→ Compare M6 Gran Coupe LCI Engine Prices",
+          "engineCodes": [
+            "S63T2"
+          ],
+          "fuel": "Petrol",
+          "power": "600hp",
+          "years": "2015-2018",
+          "image": ""
+        },
+        {
+          "h3": "BMW M6 Convertible LCI Engine Replacement",
+          "slug": "m6-convertible-lci-engine",
+          "subtitle": "S63B44B 4.4L Petrol · 560hp · 2015-2018",
+          "priceRange": "£5,800-£11,000",
+          "cta": "→ Compare M6 Convertible LCI Engine Prices",
+          "engineCodes": [
+            "S63B44B"
+          ],
+          "fuel": "Petrol",
+          "power": "560hp",
+          "years": "2015-2018",
+          "image": ""
+        },
+        {
+          "h3": "",
+          "slug": "-engine",
+          "subtitle": "All BMW M6 Variants - Engine Replacement Coverage",
+          "priceRange": "",
+          "cta": "",
+          "engineCodes": [
+            "All BMW M6 Variants - Engine Replacement Coverage"
+          ],
+          "fuel": "",
+          "power": "",
+          "years": "",
+          "image": ""
+        }
+      ],
       "directory": {
         "h3": "",
         "intro": "",
-        "groups": [],
+        "groups": [
+          {
+            "title": "Diesel Variants",
+            "items": [
+              "None available for this model."
+            ]
+          },
+          {
+            "title": "Petrol Variants",
+            "items": [
+              "M635CSi · M6 · M6 Competition · M6 Competition Edition · M6 Competition Package · M6 Convertible · M6 Convertible Competition · M6 Convertible Competition Package · M6 Convertible LCI · M6 Coupe · M6 Coupe Competition · M6 Coupe Competition Package · M6 Coupe LCI · M6 Gran Coupe · M6 Gran Coupe Competition · M6 Gran Coupe Competition Package · M6 Gran Coupe LCI"
+            ]
+          }
+        ],
         "label": "Variant Directory"
       },
       "closing": "",
       "engineGuide": {
-        "tag": "Engine Codes",
-        "h2": "",
-        "h3": "",
-        "families": [],
+        "tag": "Models We Cover",
+        "h2": "BMW M6 Engine Replacement - All Variants Covered",
+        "h3": "BMW M6 Coupe Engine Replacement",
+        "families": [
+          {
+            "name": "Petrol Engines",
+            "entries": []
+          }
+        ],
         "closing": ""
       },
       "headingLines": [],
-      "groups": [],
+      "groups": [
+        {
+          "title": "V10 Generation (E63/E64)",
+          "cardSlugs": [
+            "m6-coupe-engine",
+            "m6-convertible-engine"
+          ]
+        },
+        {
+          "title": "V8 Twin-Turbo Generation (F06/F12/F13)",
+          "cardSlugs": [
+            "m6-coupe-engine",
+            "m6-convertible-engine",
+            "m6-gran-coupe-engine"
+          ]
+        },
+        {
+          "title": "Competition Package & LCI",
+          "cardSlugs": [
+            "m6-coupe-competition-engine",
+            "m6-gran-coupe-competition-engine",
+            "m6-convertible-competition-engine"
+          ]
+        },
+        {
+          "title": "Classic & Specialist",
+          "cardSlugs": [
+            "m635csi-engine",
+            "m6-coupe-lci-engine",
+            "m6-gran-coupe-lci-engine",
+            "m6-convertible-lci-engine",
+            "-engine"
+          ]
+        }
+      ],
       "ui": {
         "fromPriceLabel": "from price",
         "specsLabel": "Specs",
@@ -363,12 +687,21 @@
       }
     },
     "engineCodes": {
-      "tag": "Engine Codes",
-      "h2": "",
-      "h3": "",
+      "tag": "Models We Cover",
+      "h2": "BMW M6 Engine Replacement - All Variants Covered",
+      "h3": "BMW M6 Coupe Engine Replacement",
       "closingLine": "",
-      "filters": [],
-      "groups": [],
+      "filters": [
+        "Petrol Engines"
+      ],
+      "groups": [
+        {
+          "name": "Petrol Engines",
+          "era": "Extracted from detailed petrol and performance engine families across BMW M6 variants.",
+          "failureNote": "Main replacement demand comes from timing-chain, cooling-system and performance thermal-management faults.",
+          "engines": []
+        }
+      ],
       "headingLines": [],
       "closingAction": {
         "title": "Can't find your engine code?",
@@ -390,14 +723,301 @@
     },
     "commonProblems": {
       "tag": "Common Problems",
-      "h2": "",
-      "h3": "",
-      "problems": [],
+      "h2": "BMW M6 Engine Problems - What It Costs to Fix & When Replacement Makes Sense",
+      "h3": "The BMW M6’s S85 V10 and S63 V8 twin-turbo engines deliver breathtaking performance, but both have well-documented weak points that drive replacement demand among UK owners. The S85 dominates earlier E63/E64 generation failure searches, while S63 issues-turbo failures, oil consumption, and cooling system problems-define F06/F12/F13 ownership. Every rebuilt engine supplied through EnginesMarket includes upgraded internal components designed to address the original failure point, plus a minimum 12-month unlimited mileage warranty. Below, we break down the most common M6 engine failures by cost, repair tier, and whether replacement makes more sense than repair.",
+      "problems": [
+        {
+          "group": "",
+          "h4": "",
+          "affectedModels": "",
+          "typicalFailureMileage": "",
+          "rootCause": "",
+          "repairOptions": [
+            {
+              "tier": "Repair Tier",
+              "dealerPrice": "Dealer Price (Parts + Labour)",
+              "specialistPrice": "Specialist Price (Parts + Labour)",
+              "whatItInvolves": "What It Involves",
+              "longevity": "Longevity / Suitability"
+            },
+            {
+              "tier": "",
+              "dealerPrice": "",
+              "specialistPrice": "",
+              "whatItInvolves": "",
+              "longevity": ""
+            },
+            {
+              "tier": "Preventative - Rod Bearing Replacement (before failure)",
+              "dealerPrice": "£2,000 - £3,200",
+              "specialistPrice": "£1,200 - £2,000",
+              "whatItInvolves": "Replace rod bearings, bolts, oil pump bolts, sump gasket, oil service",
+              "longevity": "60k-80k miles; suitable for any M6 without existing knock"
+            },
+            {
+              "tier": "Intermediate - Bearing Replacement + Crankshaft Polish",
+              "dealerPrice": "£3,500 - £5,000",
+              "specialistPrice": "£2,200 - £3,500",
+              "whatItInvolves": "As above plus crankshaft removal, inspection, and polishing",
+              "longevity": "30k-60k miles; viable if damage caught early without scoring"
+            },
+            {
+              "tier": "Full Replacement - Rebuilt / Reconditioned Engine",
+              "dealerPrice": "£14,000 - £18,000",
+              "specialistPrice": "£6,000 - £9,000 (supply & fit)",
+              "whatItInvolves": "Complete S85 replacement engine with upgraded bearings, bench tested, 12-month warranty",
+              "longevity": "60k+ mile lifespan; only viable option if crank is scored or rods damaged"
+            }
+          ],
+          "recommendation": "",
+          "cta": ""
+        },
+        {
+          "group": "",
+          "h4": "",
+          "affectedModels": "",
+          "typicalFailureMileage": "",
+          "rootCause": "",
+          "repairOptions": [
+            {
+              "tier": "Repair Tier",
+              "dealerPrice": "Dealer Price (Parts + Labour)",
+              "specialistPrice": "Specialist Price (Parts + Labour)",
+              "whatItInvolves": "What It Involves",
+              "longevity": "Longevity / Suitability"
+            },
+            {
+              "tier": "",
+              "dealerPrice": "",
+              "specialistPrice": "",
+              "whatItInvolves": "",
+              "longevity": ""
+            },
+            {
+              "tier": "Minor - Single Actuator Replacement",
+              "dealerPrice": "£700 - £1,200",
+              "specialistPrice": "£450 - £800",
+              "whatItInvolves": "Replace failed actuator (bank 1 or 2) with OEM or uprated unit",
+              "longevity": "30k-50k miles; but the other bank will likely fail soon after"
+            },
+            {
+              "tier": "Full Repair - Both Actuators Replaced (Recommended)",
+              "dealerPrice": "£1,200 - £1,900",
+              "specialistPrice": "£800 - £1,200",
+              "whatItInvolves": "Replace both throttle actuators with uprated units with upgraded gears and electronics",
+              "longevity": "80k+ miles; uprated units often carry lifetime warranty"
+            },
+            {
+              "tier": "Full Replacement - Engine Swap (if secondary damage occurs)",
+              "dealerPrice": "£14,000 - £18,000",
+              "specialistPrice": "£6,000 - £9,000",
+              "whatItInvolves": "Complete S85 engine replacement if prolonged limp mode driving caused internal damage",
+              "longevity": "Only if engine was driven hard in limp mode for extended period"
+            }
+          ],
+          "recommendation": "",
+          "cta": ""
+        },
+        {
+          "group": "",
+          "h4": "",
+          "affectedModels": "",
+          "typicalFailureMileage": "",
+          "rootCause": "",
+          "repairOptions": [
+            {
+              "tier": "Repair Tier",
+              "dealerPrice": "Dealer Price (Parts + Labour)",
+              "specialistPrice": "Specialist Price (Parts + Labour)",
+              "whatItInvolves": "What It Involves",
+              "longevity": "Longevity / Suitability"
+            },
+            {
+              "tier": "",
+              "dealerPrice": "",
+              "specialistPrice": "",
+              "whatItInvolves": "",
+              "longevity": ""
+            },
+            {
+              "tier": "Minor - Single Turbocharger Replacement",
+              "dealerPrice": "£2,500 - £4,000",
+              "specialistPrice": "£1,500 - £2,500",
+              "whatItInvolves": "Replace failed turbo, oil feed lines, gaskets",
+              "longevity": "40k-60k miles; but labour overlaps make doing both at once more economical"
+            },
+            {
+              "tier": "Full Repair - Both Turbos Replaced + Oil System Flush",
+              "dealerPrice": "£4,000 - £6,500",
+              "specialistPrice": "£2,500 - £4,000",
+              "whatItInvolves": "Replace both turbos, oil feed/return lines, oil cooler flush, fresh oil service",
+              "longevity": "60k-80k miles; the recommended approach for high-mileage S63s"
+            },
+            {
+              "tier": "Full Replacement - Rebuilt / Reconditioned Engine",
+              "dealerPrice": "£16,000 - £22,000",
+              "specialistPrice": "£7,000 - £11,000",
+              "whatItInvolves": "Complete S63 replacement engine with upgraded turbos and cooling components",
+              "longevity": "Only if turbo failure caused metal contamination throughout the engine"
+            }
+          ],
+          "recommendation": "",
+          "cta": ""
+        },
+        {
+          "group": "",
+          "h4": "",
+          "affectedModels": "",
+          "typicalFailureMileage": "",
+          "rootCause": "",
+          "repairOptions": [
+            {
+              "tier": "Repair Tier",
+              "dealerPrice": "Dealer Price (Parts + Labour)",
+              "specialistPrice": "Specialist Price (Parts + Labour)",
+              "whatItInvolves": "What It Involves",
+              "longevity": "Longevity / Suitability"
+            },
+            {
+              "tier": "",
+              "dealerPrice": "",
+              "specialistPrice": "",
+              "whatItInvolves": "",
+              "longevity": ""
+            },
+            {
+              "tier": "Minor - Valve Stem Seal Replacement",
+              "dealerPrice": "£2,000 - £3,500",
+              "specialistPrice": "£1,200 - £2,200",
+              "whatItInvolves": "Replace all 32 valve stem seals (can be done with heads on using specialised tooling)",
+              "longevity": "40k-60k miles; effective if rings are still healthy"
+            },
+            {
+              "tier": "Intermediate - Piston Rings & Valve Seals",
+              "dealerPrice": "£5,000 - £8,000",
+              "specialistPrice": "£3,500 - £5,500",
+              "whatItInvolves": "Full top-end rebuild with new rings, seals, timing components",
+              "longevity": "60k-80k miles; addresses both oil consumption sources"
+            },
+            {
+              "tier": "Full Replacement - Rebuilt / Reconditioned Engine",
+              "dealerPrice": "£16,000 - £22,000",
+              "specialistPrice": "£7,000 - £11,000",
+              "whatItInvolves": "Complete S63 replacement engine with revised rings and seals",
+              "longevity": "60k+ mile lifespan; often more cost-effective than major rebuild on high-mileage engines"
+            }
+          ],
+          "recommendation": "",
+          "cta": ""
+        },
+        {
+          "group": "",
+          "h4": "",
+          "affectedModels": "",
+          "typicalFailureMileage": "",
+          "rootCause": "",
+          "repairOptions": [
+            {
+              "tier": "Repair Tier",
+              "dealerPrice": "Dealer Price (Parts + Labour)",
+              "specialistPrice": "Specialist Price (Parts + Labour)",
+              "whatItInvolves": "What It Involves",
+              "longevity": "Longevity / Suitability"
+            },
+            {
+              "tier": "",
+              "dealerPrice": "",
+              "specialistPrice": "",
+              "whatItInvolves": "",
+              "longevity": ""
+            },
+            {
+              "tier": "Minor - Hose or Connector Replacement",
+              "dealerPrice": "£400 - £800",
+              "specialistPrice": "£250 - £500",
+              "whatItInvolves": "Replace failed hose/connector, bleed cooling system",
+              "longevity": "2-3 years; but other aged hoses will likely fail soon"
+            },
+            {
+              "tier": "Intermediate - Full Cooling System Overhaul",
+              "dealerPrice": "£1,500 - £2,500",
+              "specialistPrice": "£900 - £1,600",
+              "whatItInvolves": "Replace water pump, thermostat, all coolant hoses, expansion tank, coolant",
+              "longevity": "5+ years; recommended preventative maintenance at 70k miles"
+            },
+            {
+              "tier": "Full Replacement - Rebuilt Engine (if overheated)",
+              "dealerPrice": "£16,000 - £22,000",
+              "specialistPrice": "£7,000 - £11,000",
+              "whatItInvolves": "Complete S63 replacement engine following overheating damage",
+              "longevity": "Only if catastrophic overheating caused head gasket failure or bore damage"
+            }
+          ],
+          "recommendation": "",
+          "cta": ""
+        },
+        {
+          "group": "",
+          "h4": "",
+          "affectedModels": "",
+          "typicalFailureMileage": "",
+          "rootCause": "",
+          "repairOptions": [
+            {
+              "tier": "Repair Tier",
+              "dealerPrice": "Dealer Price (Parts + Labour)",
+              "specialistPrice": "Specialist Price (Parts + Labour)",
+              "whatItInvolves": "What It Involves",
+              "longevity": "Longevity / Suitability"
+            },
+            {
+              "tier": "",
+              "dealerPrice": "",
+              "specialistPrice": "",
+              "whatItInvolves": "",
+              "longevity": ""
+            },
+            {
+              "tier": "Minor - Solenoid Cleaning or Replacement",
+              "dealerPrice": "£500 - £900",
+              "specialistPrice": "£300 - £600",
+              "whatItInvolves": "Remove, clean or replace VANOS solenoids, fresh oil service",
+              "longevity": "30k-50k miles; addresses VANOS fault codes if caught early"
+            },
+            {
+              "tier": "Intermediate - Full VANOS Seal & Hub Repair",
+              "dealerPrice": "£1,500 - £2,800",
+              "specialistPrice": "£900 - £1,800",
+              "whatItInvolves": "Replace all VANOS seals, hubs (S85 bolt upgrade), solenoids, timing chain tensioner",
+              "longevity": "60k+ miles; essential preventative work on high-mileage S85"
+            },
+            {
+              "tier": "Full Replacement - Rebuilt Engine (if hub bolts fail)",
+              "dealerPrice": "£14,000 - £22,000",
+              "specialistPrice": "£6,000 - £11,000",
+              "whatItInvolves": "Complete engine replacement following valve/piston contact",
+              "longevity": "Only if VANOS hub failure caused internal collision damage"
+            }
+          ],
+          "recommendation": "",
+          "cta": ""
+        },
+        {
+          "group": "",
+          "h4": "",
+          "affectedModels": "",
+          "typicalFailureMileage": "",
+          "rootCause": "",
+          "repairOptions": [],
+          "recommendation": "",
+          "cta": "Compare BMW M6 Engine Replacement Prices Now →"
+        }
+      ],
       "finalCta": {
         "h4": "",
         "paragraph": "",
         "buttonText": "",
-        "disclaimer": ""
+        "disclaimer": "All prices are indicative UK market ranges based on historical quote data and repair requests from our network of engine specialists. Dealer pricing is estimated based on published main dealer labour rates and genuine OEM parts pricing. Specialist pricing reflects actual quote data from EnginesMarket’s UK network. Actual costs vary depending on damage severity, vehicle condition, variant, and workshop location within the UK. Use our free comparison tool to get tailored quotes for your specific BMW M6 and engine code. Every engine supplied through EnginesMarket carries a minimum 12-month unlimited mileage warranty-always confirm exact terms with your chosen supplier."
       }
     },
     "engineTypes": {

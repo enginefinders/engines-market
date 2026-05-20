@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import Navbar from "@/components/layout/Navbar";
+import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "Engines Market",
   description:
     "Compare prices for reconditioned, rebuilt and used engines from trusted UK engine specialists.",

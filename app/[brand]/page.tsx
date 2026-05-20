@@ -16,7 +16,9 @@ import FaqSection from "@/components/sections/FaqSection";
 import TrustCtaSection from "@/components/sections/TrustCtaSection";
 import QuoteCheckoutModal from "@/components/checkout/QuoteCheckoutModal";
 import { getBrandPageData, getBrandSlugs } from "@/lib/brandData";
+import { resolveBrandPageVisuals } from "@/lib/engineImageSelection";
 import { getModelRouteSlug } from "@/lib/modelRoutes";
+import { SITE_URL } from "@/lib/site";
 import { buildStaticReviewsSection } from "@/lib/staticReviews";
 import type { BrandPageData } from "@/types/brand";
 import { notFound } from "next/navigation";
@@ -42,8 +44,7 @@ function buildStructuredData(pageData: BrandPageData) {
     return pageData.structuredData;
   }
 
-  const siteUrl = "https://enginesmarket.co.uk";
-  const canonical = `${siteUrl}${pageData.seo.canonical}`;
+  const canonical = `${SITE_URL}${pageData.seo.canonical}`;
 
   return {
     "@context": "https://schema.org",
@@ -61,7 +62,7 @@ function buildStructuredData(pageData: BrandPageData) {
               "@type": "ListItem",
               position: 1,
               name: "Home",
-              item: siteUrl,
+              item: SITE_URL,
             },
             {
               "@type": "ListItem",
@@ -109,7 +110,7 @@ function buildStructuredData(pageData: BrandPageData) {
             item: {
               "@type": "Product",
               name: model.h3,
-              url: `${siteUrl}/${pageData.brand.slug}/${getModelRouteSlug(model)}`,
+              url: `${SITE_URL}/${pageData.brand.slug}/${getModelRouteSlug(model)}`,
               description: model.subtitle,
             },
           })),
@@ -147,6 +148,11 @@ export default async function BrandPage({ params }: BrandPageProps) {
 
   const structuredData = buildStructuredData(pageData);
   const reviewsData = buildStaticReviewsSection(pageData.brand.name);
+  const brandVisuals = resolveBrandPageVisuals(pageData);
+  const heroModelCards = pageData.sections.models.cards.map((card, index) => ({
+    ...card,
+    image: brandVisuals.heroCardEngines[index] ?? brandVisuals.heroCardEngines[index % brandVisuals.heroCardEngines.length] ?? card.image,
+  }));
   const trustCtaImage =
     pageData.brand.slug === "land-rover"
       ? "/images/brands/land-rover/cta-image.webp"
@@ -161,8 +167,8 @@ export default async function BrandPage({ params }: BrandPageProps) {
 
       <HeroSection
         data={pageData.sections.hero}
-        bgImage={pageData.assets.heroBg}
-        modelCards={pageData.sections.models.cards}
+        bgImage={brandVisuals.hero}
+        modelCards={heroModelCards}
       />
 
       <HowItWorksSection
@@ -173,7 +179,7 @@ export default async function BrandPage({ params }: BrandPageProps) {
       <LiveMarketPricesSection
         data={pageData.sections.liveMarketPrices}
         modelCards={pageData.sections.models.cards}
-        imageSrc={pageData.assets.heroBg}
+        imageSrc={brandVisuals.liveMarket}
       />
 
       <ReviewsSection data={reviewsData} useDataHeading />

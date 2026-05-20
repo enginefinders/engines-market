@@ -135,7 +135,7 @@
       }
     },
     "liveMarketPrices": {
-      "tag": "Models We Cover",
+      "tag": "Live UK Engine Market Data",
       "h2": "What Are UK Drivers Paying for BMW X1 Engine Replacement?",
       "h3": "The table below shows typical UK rebuilt engine costs across BMW X1 variants, covering documented failure causes, chassis generations, engine codes, and fuel types based on current market data.",
       "introBullets": [
@@ -307,6 +307,102 @@
           "key": "all",
           "label": "All",
           "matchers": []
+        },
+        {
+          "key": "x1-sdrive18d-engine",
+          "label": "X1 sDrive18d",
+          "matchers": [
+            "x1 sdrive18d",
+            "x1 sdrive18d engine"
+          ]
+        },
+        {
+          "key": "x1-sdrive20d-engine",
+          "label": "X1 sDrive20d",
+          "matchers": [
+            "x1 sdrive20d",
+            "x1 sdrive20d engine"
+          ]
+        },
+        {
+          "key": "x1-xdrive20d-engine",
+          "label": "X1 xDrive20d",
+          "matchers": [
+            "x1 xdrive20d",
+            "x1 xdrive20d engine"
+          ]
+        },
+        {
+          "key": "x1-xdrive25d-engine",
+          "label": "X1 xDrive25d",
+          "matchers": [
+            "x1 xdrive25d",
+            "x1 xdrive25d engine"
+          ]
+        },
+        {
+          "key": "x1-sdrive16i-engine",
+          "label": "X1 sDrive16i",
+          "matchers": [
+            "x1 sdrive16i",
+            "x1 sdrive16i engine"
+          ]
+        },
+        {
+          "key": "x1-sdrive18i-engine",
+          "label": "X1 sDrive18i",
+          "matchers": [
+            "x1 sdrive18i",
+            "x1 sdrive18i engine"
+          ]
+        },
+        {
+          "key": "x1-xdrive20i-engine",
+          "label": "X1 xDrive20i",
+          "matchers": [
+            "x1 xdrive20i",
+            "x1 xdrive20i engine"
+          ]
+        },
+        {
+          "key": "x1-xdrive25i-engine",
+          "label": "X1 xDrive25i",
+          "matchers": [
+            "x1 xdrive25i",
+            "x1 xdrive25i engine"
+          ]
+        },
+        {
+          "key": "x1-xdrive23d-engine",
+          "label": "X1 xDrive23d",
+          "matchers": [
+            "x1 xdrive23d",
+            "x1 xdrive23d engine"
+          ]
+        },
+        {
+          "key": "x1-xdrive25e-engine",
+          "label": "X1 xDrive25e",
+          "matchers": [
+            "x1 xdrive25e",
+            "x1 xdrive25e engine"
+          ]
+        },
+        {
+          "key": "x1-xdrive28i-engine",
+          "label": "X1 xDrive28i",
+          "matchers": [
+            "x1 xdrive28i",
+            "x1 xdrive28i engine"
+          ]
+        },
+        {
+          "key": "x1-sdrive20i-engine",
+          "label": "X1 sDrive20i",
+          "matchers": [
+            "x1 sdrive20i",
+            "x1 sdrive20i engine"
+          ]
         }
       ],
       "ui": {
@@ -335,25 +431,248 @@
     },
     "variantCoverage": {
       "tag": "Models We Cover",
-      "h2": "",
-      "subheading": "",
-      "cards": [],
+      "h2": "BMW X1 Engine Replacement - All Variants Covered",
+      "subheading": "From the economical sDrive18d to the high-performance xDrive25e plug-in hybrid, our network of UK BMW X1 engine specialists delivers rebuilt, reconditioned and used engine prices for every variant. A typical rebuilt BMW X1 engine includes a 12-month warranty - supply & fit available nationwide.",
+      "cards": [
+        {
+          "h3": "BMW X1 sDrive18d Engine Replacement",
+          "slug": "x1-sdrive18d-engine",
+          "subtitle": "N47D20 / B47D20 2.0L Diesel · 143-150hp · 2009-2022",
+          "priceRange": "£1,200-£2,800",
+          "cta": "→ Compare sDrive18d Engine Prices",
+          "engineCodes": [
+            "N47D20"
+          ],
+          "fuel": "Diesel",
+          "power": "143-150hp",
+          "years": "2009-2022",
+          "image": ""
+        },
+        {
+          "h3": "BMW X1 sDrive20d Engine Replacement",
+          "slug": "x1-sdrive20d-engine",
+          "subtitle": "N47D20 / B47D20 2.0L Diesel · 177-190hp · 2009-2022",
+          "priceRange": "£1,200-£3,200",
+          "cta": "→ Compare sDrive20d Engine Prices",
+          "engineCodes": [
+            "N47D20"
+          ],
+          "fuel": "Diesel",
+          "power": "177-190hp",
+          "years": "2009-2022",
+          "image": ""
+        },
+        {
+          "h3": "BMW X1 xDrive20d Engine Replacement",
+          "slug": "x1-xdrive20d-engine",
+          "subtitle": "N47D20 / B47D20 2.0L Diesel · 177-190hp · 2009-2022",
+          "priceRange": "£1,300-£3,500",
+          "cta": "→ Compare xDrive20d Engine Prices",
+          "engineCodes": [
+            "N47D20"
+          ],
+          "fuel": "Diesel",
+          "power": "177-190hp",
+          "years": "2009-2022",
+          "image": ""
+        },
+        {
+          "h3": "BMW X1 xDrive25d Engine Replacement",
+          "slug": "x1-xdrive25d-engine",
+          "subtitle": "B47D20 2.0L Diesel · 231hp · 2015-2022",
+          "priceRange": "£1,600-£3,800",
+          "cta": "→ Compare xDrive25d Engine Prices",
+          "engineCodes": [
+            "B47D20"
+          ],
+          "fuel": "Diesel",
+          "power": "231hp",
+          "years": "2015-2022",
+          "image": ""
+        },
+        {
+          "h3": "BMW X1 sDrive16i Engine Replacement",
+          "slug": "x1-sdrive16i-engine",
+          "subtitle": "N46B16 1.6L Petrol · 122hp · 2009-2015",
+          "priceRange": "£1,000-£2,400",
+          "cta": "→ Compare sDrive16i Engine Prices",
+          "engineCodes": [
+            "N46B16"
+          ],
+          "fuel": "Petrol",
+          "power": "122hp",
+          "years": "2009-2015",
+          "image": ""
+        },
+        {
+          "h3": "BMW X1 sDrive18i Engine Replacement",
+          "slug": "x1-sdrive18i-engine",
+          "subtitle": "B38B15 1.5L Petrol · 136hp · 2015-2022",
+          "priceRange": "£1,300-£3,000",
+          "cta": "→ Compare sDrive18i Engine Prices",
+          "engineCodes": [
+            "B38B15"
+          ],
+          "fuel": "Petrol",
+          "power": "136hp",
+          "years": "2015-2022",
+          "image": ""
+        },
+        {
+          "h3": "BMW X1 xDrive20i Engine Replacement",
+          "slug": "x1-xdrive20i-engine",
+          "subtitle": "N20B20 / B48B20 2.0L Petrol · 184-192hp · 2012-2022",
+          "priceRange": "£1,400-£3,400",
+          "cta": "→ Compare xDrive20i Engine Prices",
+          "engineCodes": [
+            "N20B20"
+          ],
+          "fuel": "Petrol",
+          "power": "184-192hp",
+          "years": "2012-2022",
+          "image": ""
+        },
+        {
+          "h3": "BMW X1 xDrive25i Engine Replacement",
+          "slug": "x1-xdrive25i-engine",
+          "subtitle": "N20B20 2.0L Petrol · 218hp · 2012-2015",
+          "priceRange": "£1,600-£3,600",
+          "cta": "→ Compare xDrive25i Engine Prices",
+          "engineCodes": [
+            "N20B20"
+          ],
+          "fuel": "Petrol",
+          "power": "218hp",
+          "years": "2012-2015",
+          "image": ""
+        },
+        {
+          "h3": "BMW X1 xDrive23d Engine Replacement",
+          "slug": "x1-xdrive23d-engine",
+          "subtitle": "B47D20 2.0L MHEV Diesel · 211hp · 2022-2025",
+          "priceRange": "£2,400-£4,500",
+          "cta": "→ Compare xDrive23d Engine Prices",
+          "engineCodes": [
+            "B47D20"
+          ],
+          "fuel": "Mhev",
+          "power": "211hp",
+          "years": "2022-2025",
+          "image": ""
+        },
+        {
+          "h3": "BMW X1 xDrive25e Engine Replacement",
+          "slug": "x1-xdrive25e-engine",
+          "subtitle": "B38B15 1.5L PHEV Petrol · 220hp combined · 2020-2025",
+          "priceRange": "£3,000-£6,000",
+          "cta": "→ Compare xDrive25e Engine Prices",
+          "engineCodes": [
+            "B38B15"
+          ],
+          "fuel": "Phev",
+          "power": "220hpcombined",
+          "years": "2020-2025",
+          "image": ""
+        },
+        {
+          "h3": "BMW X1 xDrive28i Engine Replacement",
+          "slug": "x1-xdrive28i-engine",
+          "subtitle": "N20B20 2.0L Petrol · 245hp · 2012-2015",
+          "priceRange": "£1,800-£4,000",
+          "cta": "→ Compare xDrive28i Engine Prices",
+          "engineCodes": [
+            "N20B20"
+          ],
+          "fuel": "Petrol",
+          "power": "245hp",
+          "years": "2012-2015",
+          "image": ""
+        },
+        {
+          "h3": "BMW X1 sDrive20i Engine Replacement",
+          "slug": "x1-sdrive20i-engine",
+          "subtitle": "B48B20 2.0L Petrol · 192hp · 2015-2022",
+          "priceRange": "£1,500-£3,600",
+          "cta": "→ Compare sDrive20i Engine Prices",
+          "engineCodes": [
+            "B48B20"
+          ],
+          "fuel": "Petrol",
+          "power": "192hp",
+          "years": "2015-2022",
+          "image": ""
+        }
+      ],
       "directory": {
-        "h3": "",
-        "intro": "",
-        "groups": [],
+        "h3": "All BMW X1 Variants - Engine Replacement Coverage",
+        "intro": "A full alphabetical listing of every BMW X1 trim covered by our network. All entries link to a dedicated variant page, where prices are further broken down by engine code, model year, and condition type. Click a live link to compare quotes.",
+        "groups": [
+          {
+            "title": "Diesel Variants",
+            "items": [
+              "EfficientDynamics Edition · M Sport · sDrive16d · sDrive18d · sDrive18d M Sport · sDrive20d · sDrive20d M Sport · xDrive18d · xDrive18d M Sport · xDrive20d · xDrive20d M Sport · xDrive23d · xDrive23d M Sport · xDrive25d · xDrive25d M Sport"
+            ]
+          },
+          {
+            "title": "Petrol Variants",
+            "items": [
+              "M Sport · sDrive16i · sDrive16i M Sport · sDrive18i · sDrive18i M Sport · sDrive20i · sDrive20i M Sport · xDrive18i · xDrive18i M Sport · xDrive20i · xDrive20i M Sport · xDrive25i · xDrive25i M Sport · xDrive28i · xDrive28i M Sport"
+            ]
+          }
+        ],
         "label": "Variant Directory"
       },
-      "closing": "",
+      "closing": "Not sure which variant your BMW X1 is? Enter your registration number above - we'll identify the exact sub‑model, engine code and compatible replacement options instantly.",
       "engineGuide": {
-        "tag": "Engine Codes",
-        "h2": "",
-        "h3": "",
-        "families": [],
-        "closing": ""
+        "tag": "Models We Cover",
+        "h2": "BMW X1 Engine Replacement - All Variants Covered",
+        "h3": "BMW X1 sDrive18d Engine Replacement",
+        "families": [
+          {
+            "name": "Diesel Engines",
+            "entries": []
+          },
+          {
+            "name": "Petrol Engines",
+            "entries": []
+          },
+          {
+            "name": "Hybrid / Electrified Engines",
+            "entries": []
+          }
+        ],
+        "closing": "Not sure which variant your BMW X1 is? Enter your registration number above - we'll identify the exact sub‑model, engine code and compatible replacement options instantly."
       },
       "headingLines": [],
-      "groups": [],
+      "groups": [
+        {
+          "title": "Core Diesel Range",
+          "cardSlugs": [
+            "x1-sdrive18d-engine",
+            "x1-sdrive20d-engine",
+            "x1-xdrive20d-engine",
+            "x1-xdrive25d-engine"
+          ]
+        },
+        {
+          "title": "Core Petrol Range",
+          "cardSlugs": [
+            "x1-sdrive16i-engine",
+            "x1-sdrive18i-engine",
+            "x1-xdrive20i-engine",
+            "x1-xdrive25i-engine"
+          ]
+        },
+        {
+          "title": "Performance, Hybrid & Specialist",
+          "cardSlugs": [
+            "x1-xdrive23d-engine",
+            "x1-xdrive25e-engine",
+            "x1-xdrive28i-engine",
+            "x1-sdrive20i-engine"
+          ]
+        }
+      ],
       "ui": {
         "fromPriceLabel": "from price",
         "specsLabel": "Specs",
@@ -363,12 +682,35 @@
       }
     },
     "engineCodes": {
-      "tag": "Engine Codes",
-      "h2": "",
-      "h3": "",
-      "closingLine": "",
-      "filters": [],
-      "groups": [],
+      "tag": "Models We Cover",
+      "h2": "BMW X1 Engine Replacement - All Variants Covered",
+      "h3": "BMW X1 sDrive18d Engine Replacement",
+      "closingLine": "Not sure which variant your BMW X1 is? Enter your registration number above - we'll identify the exact sub‑model, engine code and compatible replacement options instantly.",
+      "filters": [
+        "Diesel Engines",
+        "Petrol Engines",
+        "Hybrid / Electrified Engines"
+      ],
+      "groups": [
+        {
+          "name": "Diesel Engines",
+          "era": "Extracted from detailed diesel engine families across BMW X1 variants.",
+          "failureNote": "Main replacement triggers are timing chain wear, EGR / cooling faults and turbo-control issues.",
+          "engines": []
+        },
+        {
+          "name": "Petrol Engines",
+          "era": "Extracted from detailed petrol and performance engine families across BMW X1 variants.",
+          "failureNote": "Main replacement demand comes from timing-chain, cooling-system and performance thermal-management faults.",
+          "engines": []
+        },
+        {
+          "name": "Hybrid / Electrified Engines",
+          "era": "Extracted from electrified powertrains and hybrid engine families used in BMW X1 variants.",
+          "failureNote": "Main replacement demand comes from cooling, battery-support and high-voltage control faults.",
+          "engines": []
+        }
+      ],
       "headingLines": [],
       "closingAction": {
         "title": "Can't find your engine code?",
@@ -390,13 +732,177 @@
     },
     "commonProblems": {
       "tag": "Common Problems",
-      "h2": "",
+      "h2": "BMW X1 Engine Problems - What It Costs to Fix & When Replacement Makes Sense",
       "h3": "",
-      "problems": [],
+      "problems": [
+        {
+          "group": "BMW X1 N47 Timing Chain Failure",
+          "h4": "BMW X1 N47 Timing Chain Failure - Why First-Generation Diesel Engines Fail Catastrophically",
+          "affectedModels": "BMW X1 sDrive18d, sDrive20d, xDrive20d, xDrive23d, xDrive25d (2009-2015, N47D20)",
+          "typicalFailureMileage": "60,000 - 100,000 miles",
+          "rootCause": "The timing chain is positioned at the rear of the N47 engine block, inadequately lubricated. Chain guides become brittle and shatter, allowing the chain to skip teeth or snap completely.",
+          "repairOptions": [
+            {
+              "tier": "Repair Tier",
+              "dealerPrice": "Dealer Price (Parts + Labour)",
+              "specialistPrice": "Specialist Price (Parts + Labour)",
+              "whatItInvolves": "What It Involves",
+              "longevity": "Longevity / Suitability"
+            },
+            {
+              "tier": "",
+              "dealerPrice": "",
+              "specialistPrice": "",
+              "whatItInvolves": "",
+              "longevity": ""
+            },
+            {
+              "tier": "Minor - Preventative Timing Chain Replacement",
+              "dealerPrice": "£1,800 - £2,500",
+              "specialistPrice": "£1,000 - £1,600",
+              "whatItInvolves": "Replace timing chain, guides, tensioner, and sprockets - engine remains in car",
+              "longevity": "Prevents catastrophic failure if done before chain rattles. Adds 60k+ miles."
+            },
+            {
+              "tier": "Intermediate - Post-Failure Cylinder Head Rebuild",
+              "dealerPrice": "£3,500 - £5,000",
+              "specialistPrice": "£2,200 - £3,200",
+              "whatItInvolves": "Remove cylinder head, replace bent valves, rebuild head, fit new timing assembly",
+              "longevity": "Only viable if chain slipped without snapping. High labour, uncertain outcome."
+            },
+            {
+              "tier": "Full Replacement - Rebuilt N47 Engine (Supply & Fit)",
+              "dealerPrice": "£4,500 - £6,500",
+              "specialistPrice": "£2,800 - £4,000",
+              "whatItInvolves": "Supply of rebuilt unit with upgraded timing components, fitted, tested, 12-month warranty",
+              "longevity": "Best long-term solution. Upgraded chain guides prevent recurrence."
+            }
+          ],
+          "recommendation": "If your N47 X1 has over 60,000 miles and the chain rattles on cold start for 1-2 seconds, replace the timing chain preventatively at a specialist. That £1,000-£1,600 investment saves the engine. If the chain has already snapped, a full rebuilt engine is usually cheaper than main dealer cylinder head work - and gives you a warranty.",
+          "cta": "Compare rebuilt N47D20 engine prices for your BMW X1"
+        },
+        {
+          "group": "BMW X1 B47 EGR Cooler Failure",
+          "h4": "BMW X1 B47 EGR Cooler Failure - The Most Common F48 Diesel Fault",
+          "affectedModels": "BMW X1 sDrive18d, sDrive20d, xDrive20d, xDrive25d (2015-2022, B47D20)",
+          "typicalFailureMileage": "40,000 - 70,000 miles",
+          "rootCause": "The exhaust gas recirculation cooler develops internal cracks, allowing coolant to leak into the exhaust system or combustion chambers, potentially causing hydro-lock.",
+          "repairOptions": [
+            {
+              "tier": "Repair Tier",
+              "dealerPrice": "Dealer Price (Parts + Labour)",
+              "specialistPrice": "Specialist Price (Parts + Labour)",
+              "whatItInvolves": "What It Involves",
+              "longevity": "Longevity / Suitability"
+            },
+            {
+              "tier": "",
+              "dealerPrice": "",
+              "specialistPrice": "",
+              "whatItInvolves": "",
+              "longevity": ""
+            },
+            {
+              "tier": "Minor - EGR Cooler Replacement Only",
+              "dealerPrice": "£800 - £1,200",
+              "specialistPrice": "£450 - £700",
+              "whatItInvolves": "Replace EGR cooler, flush cooling system, reset adaptations",
+              "longevity": "Fixes the immediate fault if caught before coolant enters cylinders."
+            },
+            {
+              "tier": "Full Replacement - Rebuilt B47 Engine (Supply & Fit)",
+              "dealerPrice": "£5,000 - £7,000",
+              "specialistPrice": "£3,200 - £4,500",
+              "whatItInvolves": "Supply of rebuilt unit with revised EGR cooler, fitted, tested, 12-month warranty",
+              "longevity": "Required if hydrolock has bent connecting rods - specialist inspection critical."
+            }
+          ],
+          "recommendation": "BMW issued a recall on B47 EGR coolers - check if your X1 has outstanding work. If coolant has entered the engine and caused misfires or a no-start condition, do not drive it. Have a specialist borescope the cylinders. Bent rods mean replacement; otherwise a new cooler and oil change may save it.",
+          "cta": "Get quotes for B47D20 EGR cooler repair and replacement"
+        },
+        {
+          "group": "BMW X1 N20 Timing Chain Guide Failure",
+          "h4": "BMW X1 N20 Timing Chain Guide Failure - Petrol X1's Hidden Weakness",
+          "affectedModels": "BMW X1 xDrive20i, xDrive25i, xDrive28i (2012-2015, N20B20)",
+          "typicalFailureMileage": "50,000 - 90,000 miles",
+          "rootCause": "Similar to the N47 diesel, the N20 petrol engine places the timing chain at the rear with plastic guides that become brittle and shatter without warning.",
+          "repairOptions": [
+            {
+              "tier": "Repair Tier",
+              "dealerPrice": "Dealer Price (Parts + Labour)",
+              "specialistPrice": "Specialist Price (Parts + Labour)",
+              "whatItInvolves": "What It Involves",
+              "longevity": "Longevity / Suitability"
+            },
+            {
+              "tier": "",
+              "dealerPrice": "",
+              "specialistPrice": "",
+              "whatItInvolves": "",
+              "longevity": ""
+            },
+            {
+              "tier": "Minor - Preventative Timing Chain Replacement",
+              "dealerPrice": "£1,700 - £2,400",
+              "specialistPrice": "£950 - £1,500",
+              "whatItInvolves": "Replace chain, guides, tensioner, oil pump drive - engine remains in car",
+              "longevity": "Prevents catastrophic failure. No warning rattle often precedes sudden failure - act proactively."
+            },
+            {
+              "tier": "Full Replacement - Rebuilt N20 Engine (Supply & Fit)",
+              "dealerPrice": "£4,800 - £6,800",
+              "specialistPrice": "£3,000 - £4,200",
+              "whatItInvolves": "Supply of rebuilt unit with upgraded chain components, fitted, tested, 12-month warranty",
+              "longevity": "Chain failure bends valves - full replacement is typically only viable option post-failure."
+            }
+          ],
+          "recommendation": "On an N20-powered X1 over 50,000 miles, the £950-£1,500 preventative chain replacement is excellent value. The engine rarely gives audible warning before failure - if you own one, treat this as scheduled maintenance. Post-failure, dealer repair costs often exceed the car's value; a specialist rebuilt engine is the sensible path.",
+          "cta": "Compare rebuilt N20B20 engine prices for BMW X1 xDrive28i"
+        },
+        {
+          "group": "BMW X1 B47 & N47 Turbocharger Failure",
+          "h4": "BMW X1 B47 & N47 Turbocharger Failure - Oil Starvation and Carbon Kill Turbos",
+          "affectedModels": "BMW X1 sDrive20d, xDrive20d, xDrive25d (N47D20 2009-2015, B47D20 2015-2022)",
+          "typicalFailureMileage": "80,000 - 120,000 miles",
+          "rootCause": "Extended oil change intervals or poor-quality oil cause turbo bearing wear. On N47, the front catalytic converter can disintegrate and send debris into the turbo.",
+          "repairOptions": [
+            {
+              "tier": "Repair Tier",
+              "dealerPrice": "Dealer Price (Parts + Labour)",
+              "specialistPrice": "Specialist Price (Parts + Labour)",
+              "whatItInvolves": "What It Involves",
+              "longevity": "Longevity / Suitability"
+            },
+            {
+              "tier": "",
+              "dealerPrice": "",
+              "specialistPrice": "",
+              "whatItInvolves": "",
+              "longevity": ""
+            },
+            {
+              "tier": "Intermediate - Turbocharger Replacement Only",
+              "dealerPrice": "£1,500 - £2,400",
+              "specialistPrice": "£800 - £1,400",
+              "whatItInvolves": "Remove and replace turbo unit, new oil feed lines, fresh oil and filter",
+              "longevity": "Viable if caught before debris reaches intercooler and engine."
+            },
+            {
+              "tier": "Full Replacement - Rebuilt Engine with New Turbo (Supply & Fit)",
+              "dealerPrice": "£5,500 - £7,500",
+              "specialistPrice": "£3,500 - £4,800",
+              "whatItInvolves": "Supply rebuilt engine, new turbo, complete oil system flush, fitted, tested, 12-month warranty",
+              "longevity": "Required if turbo debris has scored bores or damaged bottom end bearings."
+            }
+          ],
+          "recommendation": "If you hear a siren noise or see blue smoke from the exhaust on boost, stop driving. A £800-£1,400 turbo replacement at a specialist saves the engine. If the turbo has disintegrated, demand a full oil system flush and borescope inspection - debris kills the replacement turbo quickly. On N47s, also replace the front cat.",
+          "cta": "Get quotes for BMW X1 turbo replacement and engine repair"
+        }
+      ],
       "finalCta": {
-        "h4": "",
-        "paragraph": "",
-        "buttonText": "",
+        "h4": "Don't Let Engine Failure Write Off Your BMW X1",
+        "paragraph": "The failures above account for over 80% of BMW X1 engine replacement enquiries we see - timing chains on N47 and N20, EGR coolers on B47, and turbo failures across both diesel families. EngineMarket makes it simple to compare prices from trusted UK BMW X1 specialists who use upgraded components specifically designed to prevent these failures from recurring. Every rebuilt engine includes a minimum 12-month unlimited mileage warranty, nationwide delivery, and supply & fit options. Compare prices today and get back on the road without the main dealer premium.",
+        "buttonText": "Compare BMW X1 Engine Replacement Prices Now →",
         "disclaimer": ""
       }
     },
@@ -468,7 +974,7 @@
           "items": [
             {
               "title": "BMW X1 1.5L Diesel Engines",
-              "description": "The 1.5-litre three-cylinder diesel arrived with the F48 second-generation X1 (2015-2022) as the ultra-efficient entry point to the range. Badged sDrive16d, this B37 unit prioritised economy over outright performance and was offered exclusively in front-wheel drive, making it ideal for urban and high-mileage fleet buyers. → Get quotes for BMW X1 1.5L diesel engines",
+              "description": "The 1.5-litre three-cylinder diesel arrived with the F48 second-generation X1 (2015-2022) as the ultra-efficient entry point to the range. Badged sDrive16d, this B37 unit prioritised economy over outright performance and was offered exclusively in front-wheel drive, making it ideal for urban and high-mileage fleet buyers.",
               "engineCodes": [
                 "B37C15"
               ],
@@ -481,11 +987,11 @@
                 "EGR valve clogging",
                 "DPF regeneration issues on short journeys"
               ],
-              "cta": ""
+              "cta": "Get quotes for BMW X1 1.5L diesel engines"
             },
             {
               "title": "BMW X1 2.0L Diesel Engines",
-              "description": "The 2.0-litre four-cylinder diesel is the backbone of the X1 diesel range, spanning all three generations. Early E84 models (2009-2015) used the N47D20 - notorious for timing chain failure - while F48 (2015-2022) and U11 (2022-present) generations adopted the improved B47D20. The 2.0-litre diesel powers everything from sDrive18d entry models to high-output xDrive25d performance diesels. → Get quotes for BMW X1 2.0L diesel engines",
+              "description": "The 2.0-litre four-cylinder diesel is the backbone of the X1 diesel range, spanning all three generations. Early E84 models (2009-2015) used the N47D20 - notorious for timing chain failure - while F48 (2015-2022) and U11 (2022-present) generations adopted the improved B47D20. The 2.0-litre diesel powers everything from sDrive18d entry models to high-output xDrive25d performance diesels.",
               "engineCodes": [
                 "N47D20",
                 "N47D20A",
@@ -508,7 +1014,7 @@
                 "EGR cooler failure",
                 "injector seal leaks (B47)"
               ],
-              "cta": ""
+              "cta": "Get quotes for BMW X1 2.0L diesel engines"
             }
           ]
         },
@@ -517,7 +1023,7 @@
           "items": [
             {
               "title": "BMW X1 1.5L Petrol Engines",
-              "description": "BMW introduced the 1.5-litre three-cylinder turbo petrol with the F48 X1 (2015-2022) as a genuinely efficient replacement for older naturally aspirated four-cylinder units. The B38 engine in sDrive18i guise delivers 136 hp with a characterful three-cylinder note and strong low-down torque, making it a popular choice for private buyers prioritising running costs over outright pace. → Compare BMW X1 1.5L petrol engine prices",
+              "description": "BMW introduced the 1.5-litre three-cylinder turbo petrol with the F48 X1 (2015-2022) as a genuinely efficient replacement for older naturally aspirated four-cylinder units. The B38 engine in sDrive18i guise delivers 136 hp with a characterful three-cylinder note and strong low-down torque, making it a popular choice for private buyers prioritising running costs over outright pace.",
               "engineCodes": [
                 "B38B15",
                 "B38A15M2"
@@ -532,11 +1038,11 @@
                 "Engine mount wear (vibration increase)",
                 "injector seal leaks"
               ],
-              "cta": ""
+              "cta": "Compare BMW X1 1.5L petrol engine prices"
             },
             {
               "title": "BMW X1 2.0L Petrol Engines",
-              "description": "The 2.0-litre four-cylinder turbo petrol powers the sportier end of the X1 petrol range. First-generation E84 models used the N20B20 (2012-2015), which shared the N47's rear-mounted timing chain vulnerability. The B48B20 that followed in F48 (2015-2022) and U11 (2022-present) generations resolved these issues while delivering refined performance in sDrive20i and xDrive20i trims. → Compare BMW X1 2.0L petrol engine prices",
+              "description": "The 2.0-litre four-cylinder turbo petrol powers the sportier end of the X1 petrol range. First-generation E84 models used the N20B20 (2012-2015), which shared the N47's rear-mounted timing chain vulnerability. The B48B20 that followed in F48 (2015-2022) and U11 (2022-present) generations resolved these issues while delivering refined performance in sDrive20i and xDrive20i trims.",
               "engineCodes": [
                 "N20B20",
                 "N20B20U0",
@@ -556,7 +1062,7 @@
                 "coolant leaks",
                 "crankshaft oil seal failure (B48)"
               ],
-              "cta": ""
+              "cta": "Compare BMW X1 2.0L petrol engine prices"
             }
           ]
         },
@@ -565,7 +1071,7 @@
           "items": [
             {
               "title": "BMW X1 1.5L Plug-in Hybrid Engines",
-              "description": "The xDrive25e joined the X1 range during the F48 lifecycle (2020-2022) and continued into the U11 generation (2022-present), combining the B38 three-cylinder petrol engine with an electric motor and high-voltage battery. This plug-in hybrid setup delivers a combined 220 hp and offers up to 30-40 miles of electric-only range, appealing to company car drivers and environmentally conscious buyers seeking the X1's practicality with lower BIK tax liability. → Enquire about BMW X1 1.5L hybrid engine availability",
+              "description": "The xDrive25e joined the X1 range during the F48 lifecycle (2020-2022) and continued into the U11 generation (2022-present), combining the B38 three-cylinder petrol engine with an electric motor and high-voltage battery. This plug-in hybrid setup delivers a combined 220 hp and offers up to 30-40 miles of electric-only range, appealing to company car drivers and environmentally conscious buyers seeking the X1's practicality with lower BIK tax liability.",
               "engineCodes": [
                 "B38B15 PHEV"
               ],
@@ -579,11 +1085,11 @@
                 "High-voltage battery degradation (higher mileage)",
                 "hybrid system software integration faults"
               ],
-              "cta": ""
+              "cta": "Enquire about BMW X1 1.5L hybrid engine availability"
             },
             {
               "title": "BMW X1 2.0L Mild Hybrid Diesel Engines",
-              "description": "The latest U11 generation X1 introduced 48V mild hybrid technology to the 2.0-litre B47 diesel, badged xDrive23d. A belt-integrated starter-generator (BSG) adds a small electric boost during acceleration and enables efficient coasting, improving real-world fuel economy while reducing turbo lag from low revs. → Enquire about BMW X1 2.0L mild hybrid engine availability",
+              "description": "The latest U11 generation X1 introduced 48V mild hybrid technology to the 2.0-litre B47 diesel, badged xDrive23d. A belt-integrated starter-generator (BSG) adds a small electric boost during acceleration and enables efficient coasting, improving real-world fuel economy while reducing turbo lag from low revs.",
               "engineCodes": [
                 "B47D20 MHEV"
               ],
@@ -596,7 +1102,7 @@
                 "48V battery system integration issues",
                 "DPF regeneration interruptions"
               ],
-              "cta": ""
+              "cta": "Enquire about BMW X1 2.0L mild hybrid engine availability"
             }
           ]
         },

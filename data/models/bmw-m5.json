@@ -135,7 +135,7 @@
       }
     },
     "liveMarketPrices": {
-      "tag": "Models We Cover",
+      "tag": "Live UK Engine Market Data",
       "h2": "What Are UK Drivers Paying for BMW M5 Engine Replacement?",
       "h3": "The table below shows typical UK rebuilt engine costs across BMW M5 variants, covering documented failure causes, chassis generations, engine codes, and fuel types based on current market data.",
       "introBullets": [
@@ -291,6 +291,102 @@
           "key": "all",
           "label": "All",
           "matchers": []
+        },
+        {
+          "key": "m5-e28-engine",
+          "label": "M5 E28",
+          "matchers": [
+            "m5 e28",
+            "m5 e28 engine"
+          ]
+        },
+        {
+          "key": "m5-e34-3-6-engine",
+          "label": "M5 E34 3.6",
+          "matchers": [
+            "m5 e34 3.6",
+            "m5 e34 3 6 engine"
+          ]
+        },
+        {
+          "key": "m5-e34-3-8-engine",
+          "label": "M5 E34 3.8",
+          "matchers": [
+            "m5 e34 3.8",
+            "m5 e34 3 8 engine"
+          ]
+        },
+        {
+          "key": "m5-e39-engine",
+          "label": "M5 E39",
+          "matchers": [
+            "m5 e39",
+            "m5 e39 engine"
+          ]
+        },
+        {
+          "key": "m5-e60-engine",
+          "label": "M5 E60",
+          "matchers": [
+            "m5 e60",
+            "m5 e60 engine"
+          ]
+        },
+        {
+          "key": "m5-e61-touring-engine",
+          "label": "M5 E61 Touring",
+          "matchers": [
+            "m5 e61 touring",
+            "m5 e61 touring engine"
+          ]
+        },
+        {
+          "key": "m5-f10-engine",
+          "label": "M5 F10",
+          "matchers": [
+            "m5 f10",
+            "m5 f10 engine"
+          ]
+        },
+        {
+          "key": "m5-f10-competition-engine",
+          "label": "M5 F10 Competition",
+          "matchers": [
+            "m5 f10 competition",
+            "m5 f10 competition engine"
+          ]
+        },
+        {
+          "key": "m5-f90-engine",
+          "label": "M5 F90",
+          "matchers": [
+            "m5 f90",
+            "m5 f90 engine"
+          ]
+        },
+        {
+          "key": "m5-f90-competition-engine",
+          "label": "M5 F90 Competition",
+          "matchers": [
+            "m5 f90 competition",
+            "m5 f90 competition engine"
+          ]
+        },
+        {
+          "key": "m5-f90-cs-engine",
+          "label": "M5 F90 CS",
+          "matchers": [
+            "m5 f90 cs",
+            "m5 f90 cs engine"
+          ]
+        },
+        {
+          "key": "m5-g90-engine",
+          "label": "M5 G90",
+          "matchers": [
+            "m5 g90",
+            "m5 g90 engine"
+          ]
         }
       ],
       "ui": {
@@ -319,25 +415,241 @@
     },
     "variantCoverage": {
       "tag": "Models We Cover",
-      "h2": "",
-      "subheading": "",
-      "cards": [],
+      "h2": "BMW M5 Engine Replacement - All Variants Covered",
+      "subheading": "From the classic E28 M5 to the high-performance F90 M5 CS, access a nationwide network of trusted UK BMW M5 engine specialists. Compare rebuilt, reconditioned and used engine prices - typical range for a rebuilt unit with 12-month warranty is £3,500 to £22,000, with supply & fit available nationwide.",
+      "cards": [
+        {
+          "h3": "BMW M5 E28 Engine Replacement",
+          "slug": "m5-e28-engine",
+          "subtitle": "M88/3 3.5L Petrol · 286hp · 1985-1988",
+          "priceRange": "£8,000-£15,000",
+          "cta": "→ Compare E28 M5 Engine Prices",
+          "engineCodes": [
+            "M88",
+            "3"
+          ],
+          "fuel": "Petrol",
+          "power": "286hp",
+          "years": "1985-1988",
+          "image": ""
+        },
+        {
+          "h3": "BMW M5 E34 3.6 Engine Replacement",
+          "slug": "m5-e34-3-6-engine",
+          "subtitle": "S38B36 3.6L Petrol · 315hp · 1988-1992",
+          "priceRange": "£7,000-£12,000",
+          "cta": "→ Compare E34 3.6 M5 Engine Prices",
+          "engineCodes": [
+            "S38B36"
+          ],
+          "fuel": "Petrol",
+          "power": "315hp",
+          "years": "1988-1992",
+          "image": ""
+        },
+        {
+          "h3": "BMW M5 E34 3.8 Engine Replacement",
+          "slug": "m5-e34-3-8-engine",
+          "subtitle": "S38B38 3.8L Petrol · 340hp · 1992-1995",
+          "priceRange": "£7,500-£14,000",
+          "cta": "→ Compare E34 3.8 M5 Engine Prices",
+          "engineCodes": [
+            "S38B38"
+          ],
+          "fuel": "Petrol",
+          "power": "340hp",
+          "years": "1992-1995",
+          "image": ""
+        },
+        {
+          "h3": "BMW M5 E39 Engine Replacement",
+          "slug": "m5-e39-engine",
+          "subtitle": "S62B50 4.9L Petrol · 400hp · 1998-2003",
+          "priceRange": "£6,000-£11,000",
+          "cta": "→ Compare E39 M5 Engine Prices",
+          "engineCodes": [
+            "S62B50"
+          ],
+          "fuel": "Petrol",
+          "power": "400hp",
+          "years": "1998-2003",
+          "image": ""
+        },
+        {
+          "h3": "BMW M5 E60 Engine Replacement",
+          "slug": "m5-e60-engine",
+          "subtitle": "S85B50 5.0L Petrol · 507hp · 2005-2010",
+          "priceRange": "£7,000-£14,000",
+          "cta": "→ Compare E60 M5 Engine Prices",
+          "engineCodes": [
+            "S85B50"
+          ],
+          "fuel": "Petrol",
+          "power": "507hp",
+          "years": "2005-2010",
+          "image": ""
+        },
+        {
+          "h3": "BMW M5 E61 Touring Engine Replacement",
+          "slug": "m5-e61-touring-engine",
+          "subtitle": "S85B50 5.0L Petrol · 507hp · 2007-2010",
+          "priceRange": "£7,500-£15,000",
+          "cta": "→ Compare E61 M5 Touring Engine Prices",
+          "engineCodes": [
+            "S85B50"
+          ],
+          "fuel": "Petrol",
+          "power": "507hp",
+          "years": "2007-2010",
+          "image": ""
+        },
+        {
+          "h3": "BMW M5 F10 Engine Replacement",
+          "slug": "m5-f10-engine",
+          "subtitle": "S63B44 4.4L Petrol · 560hp · 2011-2016",
+          "priceRange": "£6,000-£13,000",
+          "cta": "→ Compare F10 M5 Engine Prices",
+          "engineCodes": [
+            "S63B44"
+          ],
+          "fuel": "Petrol",
+          "power": "560hp",
+          "years": "2011-2016",
+          "image": ""
+        },
+        {
+          "h3": "BMW M5 F10 Competition Engine Replacement",
+          "slug": "m5-f10-competition-engine",
+          "subtitle": "S63B44T2 4.4L Petrol · 575hp · 2012-2016",
+          "priceRange": "£7,000-£15,000",
+          "cta": "→ Compare F10 M5 Competition Engine Prices",
+          "engineCodes": [
+            "S63B44T2"
+          ],
+          "fuel": "Petrol",
+          "power": "575hp",
+          "years": "2012-2016",
+          "image": ""
+        },
+        {
+          "h3": "BMW M5 F90 Engine Replacement",
+          "slug": "m5-f90-engine",
+          "subtitle": "S63B44T4 4.4L Petrol · 600hp · 2017-2020",
+          "priceRange": "£7,000-£16,000",
+          "cta": "→ Compare F90 M5 Engine Prices",
+          "engineCodes": [
+            "S63B44T4"
+          ],
+          "fuel": "Petrol",
+          "power": "600hp",
+          "years": "2017-2020",
+          "image": ""
+        },
+        {
+          "h3": "BMW M5 F90 Competition Engine Replacement",
+          "slug": "m5-f90-competition-engine",
+          "subtitle": "S63B44T4 4.4L Petrol · 625hp · 2018-2023",
+          "priceRange": "£8,000-£18,000",
+          "cta": "→ Compare F90 M5 Competition Engine Prices",
+          "engineCodes": [
+            "S63B44T4"
+          ],
+          "fuel": "Petrol",
+          "power": "625hp",
+          "years": "2018-2023",
+          "image": ""
+        },
+        {
+          "h3": "BMW M5 F90 CS Engine Replacement",
+          "slug": "m5-f90-cs-engine",
+          "subtitle": "S63B44T4 4.4L Petrol · 635hp · 2021-2023",
+          "priceRange": "£10,000-£22,000",
+          "cta": "→ Compare F90 M5 CS Engine Prices",
+          "engineCodes": [
+            "S63B44T4"
+          ],
+          "fuel": "Petrol",
+          "power": "635hp",
+          "years": "2021-2023",
+          "image": ""
+        },
+        {
+          "h3": "BMW M5 G90 Engine Replacement",
+          "slug": "m5-g90-engine",
+          "subtitle": "S63B44T4 PHEV 4.4L Petrol Hybrid · 727hp · 2024+",
+          "priceRange": "£12,000-£25,000",
+          "cta": "→ Compare G90 M5 Engine Prices",
+          "engineCodes": [
+            "S63B44T4"
+          ],
+          "fuel": "Phev",
+          "power": "727hp",
+          "years": "2024",
+          "image": ""
+        }
+      ],
       "directory": {
-        "h3": "",
-        "intro": "",
-        "groups": [],
+        "h3": "All BMW M5 Variants - Engine Replacement Coverage",
+        "intro": "A full alphabetical listing of every BMW M5 trim covered by our network. All entries link to a dedicated variant page, where prices are further broken down by engine code, model year, and condition type. Click a live link to compare quotes.",
+        "groups": [
+          {
+            "title": "Diesel Variants",
+            "items": [
+              "None available for this model."
+            ]
+          },
+          {
+            "title": "Petrol Variants",
+            "items": [
+              "M5 (E28) · M5 (E34) · M5 (E34 3.6) · M5 (E34 3.8) · M5 (E34 Touring) · M5 (E39) · M5 (E60) · M5 (E61 Touring) · M5 (F10) · M5 (F10 Competition) · M5 (F10 LCI) · M5 (F10 30 Jahre) · M5 (F90) · M5 (F90 Competition) · M5 (F90 CS) · M5 (F90 LCI) · M5 (G90) · M5 (G90 Touring) · M5 (G99 Touring)"
+            ]
+          }
+        ],
         "label": "Variant Directory"
       },
-      "closing": "",
+      "closing": "Not sure which variant your BMW M5 is? Enter your registration number above - we’ll identify the exact sub‑model, engine code and compatible replacement options instantly.",
       "engineGuide": {
-        "tag": "Engine Codes",
-        "h2": "",
-        "h3": "",
-        "families": [],
-        "closing": ""
+        "tag": "Models We Cover",
+        "h2": "BMW M5 Engine Replacement - All Variants Covered",
+        "h3": "BMW M5 E28 Engine Replacement",
+        "families": [
+          {
+            "name": "Petrol Engines",
+            "entries": []
+          }
+        ],
+        "closing": "Not sure which variant your BMW M5 is? Enter your registration number above - we’ll identify the exact sub‑model, engine code and compatible replacement options instantly."
       },
       "headingLines": [],
-      "groups": [],
+      "groups": [
+        {
+          "title": "Classic Generation (E28, E34, E39)",
+          "cardSlugs": [
+            "m5-e28-engine",
+            "m5-e34-3-6-engine",
+            "m5-e34-3-8-engine",
+            "m5-e39-engine"
+          ]
+        },
+        {
+          "title": "V10 & Early V8 Generation (E60, E61, F10)",
+          "cardSlugs": [
+            "m5-e60-engine",
+            "m5-e61-touring-engine",
+            "m5-f10-engine",
+            "m5-f10-competition-engine"
+          ]
+        },
+        {
+          "title": "Modern V8 & Hybrid Generation (F90, G90)",
+          "cardSlugs": [
+            "m5-f90-engine",
+            "m5-f90-competition-engine",
+            "m5-f90-cs-engine",
+            "m5-g90-engine"
+          ]
+        }
+      ],
       "ui": {
         "fromPriceLabel": "from price",
         "specsLabel": "Specs",
@@ -347,12 +659,21 @@
       }
     },
     "engineCodes": {
-      "tag": "Engine Codes",
-      "h2": "",
-      "h3": "",
-      "closingLine": "",
-      "filters": [],
-      "groups": [],
+      "tag": "Models We Cover",
+      "h2": "BMW M5 Engine Replacement - All Variants Covered",
+      "h3": "BMW M5 E28 Engine Replacement",
+      "closingLine": "Not sure which variant your BMW M5 is? Enter your registration number above - we’ll identify the exact sub‑model, engine code and compatible replacement options instantly.",
+      "filters": [
+        "Petrol Engines"
+      ],
+      "groups": [
+        {
+          "name": "Petrol Engines",
+          "era": "Extracted from detailed petrol and performance engine families across BMW M5 variants.",
+          "failureNote": "Main replacement demand comes from timing-chain, cooling-system and performance thermal-management faults.",
+          "engines": []
+        }
+      ],
       "headingLines": [],
       "closingAction": {
         "title": "Can't find your engine code?",
@@ -374,13 +695,248 @@
     },
     "commonProblems": {
       "tag": "Common Problems",
-      "h2": "",
-      "h3": "",
-      "problems": [],
+      "h2": "BMW M5 Engine Problems - What It Costs to Fix & When Replacement Makes Sense",
+      "h3": "The BMW M5’s reputation for high‑performance engineering comes with well‑documented engine vulnerabilities, particularly in the V10 S85 and twin‑turbo V8 S63 families. These two engine families dominate replacement demand, with rod bearing failures in the E60 generation and timing chain / oil pump issues in the F10 and F90 cars accounting for the majority of enquiries. Every rebuilt engine supplied through EngineMarket includes upgraded internal components designed to address the original failure point - plus a minimum 12‑month unlimited mileage warranty. Below we break down the most common failures, what repair (or replacement) actually costs through dealers versus specialists, and when it makes financial sense to act.",
+      "problems": [
+        {
+          "group": "BMW M5 S85 V10 Rod Bearing Failure",
+          "h4": "BMW M5 S85 V10 Rod Bearing Failure - Why E60 M5 Engines Fail Catastrophically",
+          "affectedModels": "BMW M5 E60, M5 E61 Touring (2005‑2010, S85B50)",
+          "typicalFailureMileage": "60,000 - 85,000 miles",
+          "rootCause": "Insufficient rod bearing clearance from the factory, leading to oil film breakdown under hard cornering or extended high‑RPM running. Bearings eventually spin, seize to the crankshaft, and cause bottom‑end destruction.",
+          "repairOptions": [
+            {
+              "tier": "Repair Tier",
+              "dealerPrice": "Dealer Price (Parts + Labour)",
+              "specialistPrice": "Specialist Price (Parts + Labour)",
+              "whatItInvolves": "What It Involves",
+              "longevity": "Longevity / Suitability"
+            },
+            {
+              "tier": "",
+              "dealerPrice": "",
+              "specialistPrice": "",
+              "whatItInvolves": "",
+              "longevity": ""
+            },
+            {
+              "tier": "Preventative - Rod Bearing Replacement",
+              "dealerPrice": "£2,800 - £4,000",
+              "specialistPrice": "£1,800 - £2,500",
+              "whatItInvolves": "Replace rod bearings with aftermarket uprated units (e.g., ACL or WPC‑treated), new bolts, oil pump, sump gasket",
+              "longevity": "Adds 60,000‑80,000 miles of safe life if done before any knocking noise or low oil pressure warning"
+            },
+            {
+              "tier": "Full Replacement - Rebuilt S85 Engine",
+              "dealerPrice": "£12,000 - £18,000",
+              "specialistPrice": "£7,000 - £12,000",
+              "whatItInvolves": "Supply & fit of fully rebuilt S85B50 with uprated rod bearings, new timing chain, VANOS overhaul, bench tested",
+              "longevity": "New engine life with upgraded components; 12‑month unlimited mileage warranty"
+            }
+          ],
+          "recommendation": "On an E60 M5 worth £15,000‑£25,000, preventative bearing replacement is the single best investment you can make. If you hear bottom‑end knock or see low oil pressure warnings, the engine is already terminal - replacement is the only safe option. Do not attempt a “half rebuild” on a spun bearing S85.",
+          "cta": "Compare rebuilt S85B50 engine prices for your BMW M5 E60"
+        },
+        {
+          "group": "BMW M5 S63 Timing Chain Failure",
+          "h4": "BMW M5 S63 Timing Chain Failure - F10 V8 Rattle That Leads to Engine Seizure",
+          "affectedModels": "BMW M5 F10 (2011‑2013, S63B44); M5 F10 Competition, F10 LCI, F10 30 Jahre (2012‑2016, S63B44T2)",
+          "typicalFailureMileage": "70,000 - 100,000 miles",
+          "rootCause": "Plastic timing chain guide rails become brittle with heat cycling, fracture, and allow chain slack. The chain can jump timing, skip teeth, or snap entirely - causing valve‑to‑piston contact and cylinder head destruction.",
+          "repairOptions": [
+            {
+              "tier": "Repair Tier",
+              "dealerPrice": "Dealer Price (Parts + Labour)",
+              "specialistPrice": "Specialist Price (Parts + Labour)",
+              "whatItInvolves": "What It Involves",
+              "longevity": "Longevity / Suitability"
+            },
+            {
+              "tier": "",
+              "dealerPrice": "",
+              "specialistPrice": "",
+              "whatItInvolves": "",
+              "longevity": ""
+            },
+            {
+              "tier": "Preventative - Timing Chain & Guide Replacement",
+              "dealerPrice": "£3,500 - £5,000",
+              "specialistPrice": "£2,200 - £3,200",
+              "whatItInvolves": "Replace timing chain, guides, tensioners, camshaft sprockets, and VANOS units (while accessible)",
+              "longevity": "Prevents catastrophic failure; adds 60,000‑80,000 miles of reliable service"
+            },
+            {
+              "tier": "Full Replacement - Rebuilt S63 Engine",
+              "dealerPrice": "£14,000 - £20,000",
+              "specialistPrice": "£7,500 - £13,000",
+              "whatItInvolves": "Supply & fit of fully rebuilt S63B44 or S63B44T2 with upgraded timing components, new turbochargers, bench tested",
+              "longevity": "New engine life with revised guides; 12‑month unlimited mileage warranty"
+            }
+          ],
+          "recommendation": "Listen for a diesel‑like rattle on cold start or a metallic chatter on acceleration - these are warning signs. Replace chains and guides immediately. If the engine has jumped timing or snapped a chain, replacement is cheaper than attempting a cylinder head rebuild on an S63.",
+          "cta": "Get quotes for S63B44 timing chain repair or replacement for your F10 M5"
+        },
+        {
+          "group": "BMW M5 S85 Throttle Actuator Failure",
+          "h4": "BMW M5 S85 Throttle Actuator Failure - E60 V10 Limp Mode That Mimics Engine Death",
+          "affectedModels": "BMW M5 E60, M5 E61 Touring (2005‑2010, S85B50)",
+          "typicalFailureMileage": "40,000 - 70,000 miles",
+          "rootCause": "DC electric motors inside the throttle actuators wear out their internal gearbox or electronics fail, causing the ECU to cut power to multiple cylinders. The car enters limp mode with “Drivetrain Malfunction” warning - often mistaken for total engine failure.",
+          "repairOptions": [
+            {
+              "tier": "Repair Tier",
+              "dealerPrice": "Dealer Price (Parts + Labour)",
+              "specialistPrice": "Specialist Price (Parts + Labour)",
+              "whatItInvolves": "What It Involves",
+              "longevity": "Longevity / Suitability"
+            },
+            {
+              "tier": "",
+              "dealerPrice": "",
+              "specialistPrice": "",
+              "whatItInvolves": "",
+              "longevity": ""
+            },
+            {
+              "tier": "Minor - Throttle Actuator Replacement (x2)",
+              "dealerPrice": "£1,800 - £2,800",
+              "specialistPrice": "£900 - £1,400",
+              "whatItInvolves": "Replace both throttle actuator units (banks 1 and 2) with rebuilt or OEM‑spec units; ECU reset",
+              "longevity": "Restores full power; rebuilt actuators with upgraded gears last 60,000+ miles"
+            },
+            {
+              "tier": "Full Replacement - Rebuilt S85 Engine",
+              "dealerPrice": "£12,000 - £18,000",
+              "specialistPrice": "£7,000 - £12,000",
+              "whatItInvolves": "Supply & fit of fully rebuilt S85B50 - only if ignored actuators allowed other failures (rod bearings, timing)",
+              "longevity": "Only required if the car was driven repeatedly in limp mode, causing secondary damage"
+            }
+          ],
+          "recommendation": "This is not an engine replacement problem - it’s a bolt‑on component failure. Replace both actuators proactively if you own an E60 M5, even before failure. If you’re already in limp mode, a full rebuilt engine is almost never needed unless you ignored it for thousands of miles.",
+          "cta": "Compare S85 throttle actuator repair vs engine replacement costs for your E60 M5"
+        },
+        {
+          "group": "BMW M5 S63 Oil Pump Drive Failure",
+          "h4": "BMW M5 S63 Oil Pump Drive Failure - F90 V8 Oil Pressure Loss Leads to Bottom‑End Knock",
+          "affectedModels": "BMW M5 F90, F90 Competition, F90 LCI, F90 CS (2018‑2023, S63B44T4)",
+          "typicalFailureMileage": "50,000 - 80,000 miles",
+          "rootCause": "The oil pump drive shaft or chain tensioner fails, causing sudden oil pressure loss. The first warning is often the red oil pressure light - by then, bottom‑end bearings are already damaged.",
+          "repairOptions": [
+            {
+              "tier": "Repair Tier",
+              "dealerPrice": "Dealer Price (Parts + Labour)",
+              "specialistPrice": "Specialist Price (Parts + Labour)",
+              "whatItInvolves": "What It Involves",
+              "longevity": "Longevity / Suitability"
+            },
+            {
+              "tier": "",
+              "dealerPrice": "",
+              "specialistPrice": "",
+              "whatItInvolves": "",
+              "longevity": ""
+            },
+            {
+              "tier": "Intermediate - Oil Pump & Drive Replacement",
+              "dealerPrice": "£3,000 - £4,500",
+              "specialistPrice": "£1,800 - £2,800",
+              "whatItInvolves": "Replace oil pump assembly, drive chain, tensioner, and inspect bearings",
+              "longevity": "Only viable if oil pressure light just appeared and engine hasn’t knocked; 50/50 success rate"
+            },
+            {
+              "tier": "Full Replacement - Rebuilt S63B44T4 Engine",
+              "dealerPrice": "£16,000 - £24,000",
+              "specialistPrice": "£9,000 - £16,000",
+              "whatItInvolves": "Supply & fit of fully rebuilt S63B44T4 with uprated oil pump drive, new bearings, turbocharger inspection",
+              "longevity": "100% solution; 12‑month unlimited mileage warranty"
+            }
+          ],
+          "recommendation": "If you see the red oil pressure warning light on an F90 M5, do not drive another metre. Tow the car. If you stop immediately, an oil pump and bearing replacement may save the engine. If you hear knocking, go straight to full engine replacement - attempting to rebuild a damaged bottom end on an S63 is false economy.",
+          "cta": "Compare rebuilt S63B44T4 engine prices for your F90 M5"
+        },
+        {
+          "group": "BMW M5 S62 VANOS Failure",
+          "h4": "BMW M5 S62 VANOS Failure - E39 V8 Rough Idle, Growling Noise & Power Loss",
+          "affectedModels": "BMW M5 E39 (1998‑2003, S62B50)",
+          "typicalFailureMileage": "60,000 - 100,000 miles",
+          "rootCause": "VANOS solenoid seals harden and leak oil pressure, causing the camshaft timing to drift. The engine develops a distinctive “growling” sound at idle, hesitation on acceleration, and eventually fault codes.",
+          "repairOptions": [
+            {
+              "tier": "Repair Tier",
+              "dealerPrice": "Dealer Price (Parts + Labour)",
+              "specialistPrice": "Specialist Price (Parts + Labour)",
+              "whatItInvolves": "What It Involves",
+              "longevity": "Longevity / Suitability"
+            },
+            {
+              "tier": "",
+              "dealerPrice": "",
+              "specialistPrice": "",
+              "whatItInvolves": "",
+              "longevity": ""
+            },
+            {
+              "tier": "Minor - VANOS Seal & Solenoid Replacement",
+              "dealerPrice": "£1,800 - £2,800",
+              "specialistPrice": "£1,000 - £1,600",
+              "whatItInvolves": "Replace VANOS solenoid seals (both banks), camshaft position sensors, and timing chain tensioner",
+              "longevity": "Restores full power and idle quality; lasts 50,000‑70,000 miles"
+            },
+            {
+              "tier": "Full Replacement - Rebuilt S62 Engine",
+              "dealerPrice": "£9,000 - £14,000",
+              "specialistPrice": "£5,500 - £9,000",
+              "whatItInvolves": "Supply & fit of fully rebuilt S62B50 with rebuilt VANOS units, timing chain, guides, rod bearings",
+              "longevity": "Only if VANOS failure caused skipped timing and valve damage"
+            }
+          ],
+          "recommendation": "This is a maintenance item, not a replacement trigger on a healthy E39 M5. Address VANOS seals early. If the engine still runs smoothly, the minor fix is excellent value. Only consider full replacement if the timing has jumped or you have bottom‑end knock from neglected rod bearings.",
+          "cta": "Get quotes for S62 VANOS repair or rebuilt E39 M5 engine prices"
+        },
+        {
+          "group": "BMW M5 S85 High Oil Consumption",
+          "h4": "BMW M5 S85 High Oil Consumption - V10 Burning a Litre Every 1,000 Miles",
+          "affectedModels": "BMW M5 E60, M5 E61 Touring (2005‑2010, S85B50)",
+          "typicalFailureMileage": "50,000 - 90,000 miles",
+          "rootCause": "Worn valve stem seals and carbon‑blocked piston rings, exacerbated by the S85’s 8,250rpm redline and 10W‑60 oil viscosity. Oil passes into combustion chambers, fouls spark plugs, and accelerates catalytic converter failure.",
+          "repairOptions": [
+            {
+              "tier": "Repair Tier",
+              "dealerPrice": "Dealer Price (Parts + Labour)",
+              "specialistPrice": "Specialist Price (Parts + Labour)",
+              "whatItInvolves": "What It Involves",
+              "longevity": "Longevity / Suitability"
+            },
+            {
+              "tier": "",
+              "dealerPrice": "",
+              "specialistPrice": "",
+              "whatItInvolves": "",
+              "longevity": ""
+            },
+            {
+              "tier": "Intermediate - Valve Stem Seal Replacement",
+              "dealerPrice": "£4,000 - £6,000",
+              "specialistPrice": "£2,500 - £3,800",
+              "whatItInvolves": "Replace all 40 valve stem seals (20 cylinders) without full engine removal; new head gaskets, timing tools",
+              "longevity": "Reduces oil consumption by 80‑90%; adds 40,000‑60,000 miles"
+            },
+            {
+              "tier": "Full Replacement - Rebuilt S85 Engine",
+              "dealerPrice": "£12,000 - £18,000",
+              "specialistPrice": "£7,000 - £12,000",
+              "whatItInvolves": "Supply & fit of fully rebuilt S85B50 with new rings, valve seals, rod bearings, bench tested",
+              "longevity": "100% oil consumption fix; 12‑month unlimited mileage warranty"
+            }
+          ],
+          "recommendation": "On a high‑mileage E60 M5 burning significant oil, valve stem seals offer a cost‑effective middle ground. But if the car also has rod bearing wear or timing chain rattle, invest in a full rebuilt engine. Partial repairs on an S85 with multiple issues rarely add up to long‑term value.",
+          "cta": "Compare S85 oil consumption fix vs full rebuilt engine prices for your E60 M5"
+        }
+      ],
       "finalCta": {
-        "h4": "",
+        "h4": "Don't Let Engine Failure Write Off Your BMW M5",
         "paragraph": "",
-        "buttonText": "",
+        "buttonText": "Compare BMW M5 Engine Replacement Prices Now →",
         "disclaimer": ""
       }
     },
@@ -464,9 +1020,130 @@
     },
     "faq": {
       "tag": "FAQ",
-      "h2": "",
+      "h2": "BMW M5 Engine Replacement - Frequently Asked Questions",
       "intro": "",
-      "items": [],
+      "items": [
+        {
+          "question": "How reliable is the BMW M5 S85 V10 engine and when should I replace the rod bearings?",
+          "answer": "The S85 V10 is notorious for rod bearing failure, with preventative replacement strongly recommended between 60,000-80,000 miles. A well-maintained example with bearings done can easily surpass 150,000 miles.",
+          "keyPoints": [
+            "Rod bearing failure typically occurs between 60,000-85,000 miles if not addressed",
+            "Updated BMW bearings (2011+) use harder materials but may damage crankshafts when they fail",
+            "Aftermarket bearings (WPC-treated or BE Bearings) offer better clearance and friction reduction",
+            "A 153,000-mile E60 M5 with replaced rod bearings still made 507hp on the dyno",
+            "Frequent oil analysis is recommended, though newer bearings don't show wear through copper/lead traces"
+          ],
+          "cta": "Get S85 rod bearing replacement quotes for your E60 M5"
+        },
+        {
+          "question": "What causes the BMW M5 S63 timing chain to fail and how much does replacement cost?",
+          "answer": "The S63 V8's plastic timing chain guides become brittle with heat and mileage, typically failing between 70,000-100,000 miles. Specialist replacement costs £2,200-£3,200 versus dealer prices of £3,500-£5,000.",
+          "keyPoints": [
+            "Timing chain rattle on cold start is the earliest warning sign",
+            "If the chain jumps or snaps, valves contact pistons - engine is terminal",
+            "The S63B44 (F10) and S63B44T2 (F10 Competition) are equally vulnerable",
+            "Preventive guide replacement adds 60,000-80,000 miles of reliable service",
+            "Full rebuilt S63 engine costs £7,500-£13,000 supply & fit from specialists"
+          ],
+          "cta": "Compare S63 timing chain repair vs replacement for your F10 M5"
+        },
+        {
+          "question": "Is the BMW M5 E39 S62 V8 reliable and what are its common problems?",
+          "answer": "The E39 M5's 4.9-litre S62 is considered one of BMW's most reliable M engines, but VANOS seal failure is almost guaranteed and causes a distinctive \"growling\" noise at idle that drives replacement decisions.",
+          "keyPoints": [
+            "VANOS solenoid seals harden and leak oil pressure - very common from 60,000 miles",
+            "Symptoms include rough idle, growling noise, hesitation on acceleration",
+            "Camshaft position sensors and MAF sensors also fail, triggering check engine lights",
+            "M-specific parts are expensive - water pumps cost £250, thermostats £70",
+            "A well-maintained S62 can exceed 150,000 miles with proper VANOS maintenance"
+          ],
+          "cta": "Get S62 VANOS repair or rebuilt engine quotes for your E39 M5"
+        },
+        {
+          "question": "Where is the engine number located on a BMW M5 and how do I find my engine code?",
+          "answer": "The engine number is typically stamped on the engine block near the thermostat housing or oil filter housing. For accurate identification, use your registration number above - we'll query DVLA and return your exact engine code instantly.",
+          "keyPoints": [
+            "E39 M5 engine number location requires removing the thermostat housing to access",
+            "On modern M5s (F10/F90), the engine code is on a label visible from above near the oil filter housing",
+            "Engine code format examples: S85B50 (E60), S63B44T4 (F90), S62B50 (E39)",
+            "Using your registration is far simpler than finding the physical stamp",
+            "DVLA database includes exact engine code for every UK-registered M5"
+          ],
+          "cta": "Enter your registration above to identify your BMW M5 engine code instantly"
+        },
+        {
+          "question": "What is the average lifespan of a BMW M5 engine and can it reach 200,000 miles?",
+          "answer": "The average BMW M5 lasts approximately 88,000 miles, with a 0% probability of reaching 200,000 miles according to reliability data. However, this data averages all M5 generations - an E39 with VANOS maintenance will outlast an E60 with neglected bearings.",
+          "keyPoints": [
+            "Average BMW M5 lifespan: 87,764 miles across all generations",
+            "Average miles driven per year: 7,341 for M5 owners",
+            "200,000-mile M5s are extremely rare - requires meticulous maintenance and proactive bearing replacement",
+            "E39 S62 and E34 S38 engines are the most likely to exceed 150,000 miles with proper care",
+            "E60 S85 V10s that survive past 100,000 miles typically had rod bearings replaced twice"
+          ],
+          "cta": "Compare rebuilt BMW M5 engine prices for high-mileage replacements"
+        },
+        {
+          "question": "What oil does a BMW M5 use and how often should I change it?",
+          "answer": "M5 engines from 2001-2013 require 10W-60 synthetic oil, specifically formulated for high-performance M engines. Change intervals should not exceed 8,000 miles or annually - many specialists recommend 5,000-6,000 miles for the S85 V10.",
+          "keyPoints": [
+            "Genuine BMW M TwinPower Turbo 10W60 is the factory-specified oil for 2001-2013 M5s",
+            "Some specialists prefer Red Line 15W50 for better sheer resistance and bearing protection",
+            "S85 V10 engines are particularly sensitive to oil quality and level - check monthly",
+            "The latest Shell-produced BMW 10W60 prioritises emissions over wear protection",
+            "Short oil change intervals (5,000-6,000 miles) are cheap insurance for rod bearing health"
+          ],
+          "cta": "Get quotes for BMW M5 oil change and engine health check"
+        },
+        {
+          "question": "How much does a BMW M5 engine replacement cost in the UK?",
+          "answer": "BMW M5 engine replacement costs vary dramatically by generation - from £6,000-£11,000 for an E39 S62 to £10,000-£22,000 for an F90 M5 CS. Specialist prices are typically 30-40% lower than main dealer rates.",
+          "keyPoints": [
+            "E39 M5 (S62): rebuilt supply only £6,000-£11,000",
+            "E60 M5 (S85 V10): rebuilt supply only £7,000-£14,000",
+            "F10 M5 (S63): rebuilt supply only £6,000-£13,000",
+            "F90 M5 (S63B44T4): rebuilt supply only £7,000-£22,000 depending on variant",
+            "Supply & fit adds £600-£1,200 depending on generation complexity"
+          ],
+          "cta": "Compare rebuilt BMW M5 engine prices for your specific generation"
+        },
+        {
+          "question": "Which BMW M5 generation has the most reliable engine and which should I avoid?",
+          "answer": "The E39 M5's S62 V8 is widely considered the most reliable M5 engine when VANOS seals are maintained. The E60 M5's S85 V10 is the least reliable - rod bearing failure is almost guaranteed without preventative replacement before 80,000 miles.",
+          "keyPoints": [
+            "E39 M5 (S62): Most reliable, but VANOS seals need replacement as maintenance",
+            "E34 M5 (S38): Very reliable straight-six, but timing chain tensioner wears",
+            "F90 M5 (S63B44T4): Modern reliability is good, but oil pump drive failures occur",
+            "E60 M5 (S85): Most problematic - factor in £1,800-£2,500 for bearings every 60k-80k miles",
+            "E28 M5 (M88/3): Classic reliability is good, but parts are increasingly rare and expensive"
+          ],
+          "cta": "Compare prices across all BMW M5 generations"
+        },
+        {
+          "question": "Can I swap a different engine into my BMW M5 if the original fails?",
+          "answer": "Engine swaps are technically possible but rarely cost-effective. The M5's electronics, gearbox, and subframes are tightly integrated with its specific engine code. A rebuilt original engine is almost always the smarter financial decision.",
+          "keyPoints": [
+            "ECU, DME, and immobiliser systems are coded to the original engine code",
+            "Gearbox compatibility (SMG, DCT, or M Steptronic) is engine-specific",
+            "Subframe and mounts differ across generations - not a bolt-in process",
+            "Specialist fabrication and custom ECU tuning adds thousands to the bill",
+            "Resale value drops significantly with a non-original engine"
+          ],
+          "cta": "Get quotes for a direct replacement BMW M5 engine - the smart choice"
+        },
+        {
+          "question": "Is it worth replacing the engine in an older BMW M5 like an E39 or E60?",
+          "answer": "Yes, if the chassis and body are in excellent condition. E39 M5s are appreciating assets, and E60 V10s are future classics. Spending £6,000-£14,000 on a rebuilt engine makes financial sense when the car's value exceeds £15,000-£20,000.",
+          "keyPoints": [
+            "E39 M5 values are rising - good examples now sell for £20,000-£35,000",
+            "E60 M5s have bottomed out and are entering classic status - values are climbing",
+            "A quality rebuilt engine with upgraded bearings adds £3,000-£5,000 to resale value",
+            "Cheaper to replace the engine than to buy another M5 of the same generation",
+            "Use a specialist rebuild with upgraded components - not a used engine with unknown history"
+          ],
+          "cta": "Compare rebuilt BMW M5 engine prices and protect your investment"
+        }
+      ],
       "headingLines": [],
       "defaultOpenIndex": 0,
       "ui": {
@@ -477,11 +1154,11 @@
     },
     "trustCta": {
       "tag": "Why Choose Us",
-      "h2": "",
-      "intro": "",
+      "h2": "Why UK BMW M5 Owners Trust EngineMarket",
+      "intro": "Join thousands of UK drivers who compare BMW M5 engine prices through our network of trusted specialists - every rebuilt and reconditioned unit backed by a minimum 12‑month unlimited mileage warranty and nationwide delivery.",
       "points": [],
-      "finalText": "",
-      "buttonText": "",
+      "finalText": "Find the best BMW M5 engine replacement UK drivers rely on. Compare prices from trusted specialists today and get back on the road with confidence.",
+      "buttonText": "Compare BMW M5 Engine Prices Now →",
       "secondaryAction": {
         "text": "Call Our Experts",
         "href": "tel:03330000044"

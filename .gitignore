@@ -23,11 +23,16 @@
 # misc
 .DS_Store
 *.pem
+*.pyc
 .chrome-headless/
 .tmp-*.png
 .tmp-*.log
 playwright-report/
 test-results/
+/scripts/__pycache__/
+/tmp/
+/tmp_*.json
+/tmp_*.txt
 
 # debug
 npm-debug.log*

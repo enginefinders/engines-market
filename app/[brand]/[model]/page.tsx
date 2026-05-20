@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import DocumentModelPage from "@/components/pages/DocumentModelPage";
 import { getModelPageData, getModelPageStaticParams } from "@/lib/modelPageData";
+import { INDEX_MODEL_PAGES } from "@/lib/site";
 import { notFound, permanentRedirect } from "next/navigation";
 
 type ModelPageProps = {
@@ -30,6 +31,18 @@ export async function generateMetadata({
     alternates: {
       canonical: pageData.seo.canonical,
     },
+    robots: INDEX_MODEL_PAGES
+      ? undefined
+      : {
+          index: false,
+          follow: false,
+          nocache: true,
+          googleBot: {
+            index: false,
+            follow: false,
+            noimageindex: true,
+          },
+        },
   };
 }
 

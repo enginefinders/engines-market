@@ -325,22 +325,6 @@
           ]
         },
         {
-          "key": "x4-xdrive20d-engine",
-          "label": "X4 xDrive20d",
-          "matchers": [
-            "x4 xdrive20d",
-            "x4 xdrive20d engine"
-          ]
-        },
-        {
-          "key": "x4-xdrive30d-engine",
-          "label": "X4 xDrive30d",
-          "matchers": [
-            "x4 xdrive30d",
-            "x4 xdrive30d engine"
-          ]
-        },
-        {
           "key": "x4-m40d-engine",
           "label": "X4 M40d",
           "matchers": [
@@ -424,7 +408,7 @@
     "variantCoverage": {
       "tag": "Models We Cover",
       "h2": "BMW X4 Engine Replacement - All Variants Covered",
-      "subheading": "From the xDrive20d to the high-performance M40i, our network of UK BMW X4 engine specialists covers every variant. Compare rebuilt, reconditioned and used engine prices across the full range – typical supply-only price for a rebuilt unit with 12-month warranty is £1,900-£8,500, with supply & fit available nationwide.",
+      "subheading": "From the xDrive20d to the high-performance M40i, our network of UK BMW X4 engine specialists covers every variant. Compare rebuilt, reconditioned and used engine prices across the full range - typical supply-only price for a rebuilt unit with 12-month warranty is £1,900-£8,500, with supply & fit available nationwide.",
       "cards": [
         {
           "h3": "BMW X4 xDrive20d Engine Replacement",
@@ -616,9 +600,9 @@
       },
       "closing": "Not sure which variant your BMW X4 is? Enter your registration number above - we'll identify the exact sub‑model, engine code and compatible replacement options instantly.",
       "engineGuide": {
-        "tag": "Engine Codes",
-        "h2": "BMW X4 Engine Codes — Full Technical Specifications & Replacement Guide",
-        "h3": "Every engine code fitted to the BMW X4 across all generations, with technical specs, compatible variants and trims, known failure points, and average rebuilt prices from UK specialists. Select any engine code to compare quotes.",
+        "tag": "Models We Cover",
+        "h2": "BMW X4 Engine Replacement - All Variants Covered",
+        "h3": "BMW X4 xDrive20d Engine Replacement",
         "families": [
           {
             "name": "Diesel Engines",
@@ -633,13 +617,45 @@
             "entries": []
           }
         ],
-        "closing": "Can't find your engine code? Enter your registration number above — we'll instantly identify the exact unit, its technical specifications, and live replacement prices from UK BMW X4 engine specialists. Every rebuilt engine comes with a minimum 12-month unlimited mileage warranty."
+        "closing": "Not sure which variant your BMW X4 is? Enter your registration number above - we'll identify the exact sub‑model, engine code and compatible replacement options instantly."
       },
       "headingLines": [
         "BMW X4 Engine Replacement",
         "All Variants Covered"
       ],
       "groups": [
+        {
+          "title": "Core Diesel Range (2014-2018 F26 Generation)",
+          "cardSlugs": [
+            "x4-xdrive20d-engine",
+            "x4-xdrive30d-engine",
+            "x4-xdrive20d-lci-engine"
+          ]
+        },
+        {
+          "title": "Core Diesel Range (2018-2024 G02 Generation)",
+          "cardSlugs": [
+            "x4-xdrive20d-engine",
+            "x4-xdrive30d-engine",
+            "x4-m40d-engine"
+          ]
+        },
+        {
+          "title": "Core Petrol & Performance Range",
+          "cardSlugs": [
+            "x4-xdrive30i-engine",
+            "x4-m40i-engine",
+            "x4-xdrive28i-engine"
+          ]
+        },
+        {
+          "title": "Entry & Specialist Variants",
+          "cardSlugs": [
+            "x4-xdrive35i-engine",
+            "x4-xdrive20i-engine",
+            "x4-xdrive25e-engine"
+          ]
+        },
         {
           "title": "Core Diesel Range",
           "cardSlugs": [
@@ -677,10 +693,10 @@
       }
     },
     "engineCodes": {
-      "tag": "Engine Codes",
-      "h2": "BMW X4 Engine Codes — Full Technical Specifications & Replacement Guide",
-      "h3": "Every engine code fitted to the BMW X4 across all generations, with technical specs, compatible variants and trims, known failure points, and average rebuilt prices from UK specialists. Select any engine code to compare quotes.",
-      "closingLine": "Can't find your engine code? Enter your registration number above — we'll instantly identify the exact unit, its technical specifications, and live replacement prices from UK BMW X4 engine specialists. Every rebuilt engine comes with a minimum 12-month unlimited mileage warranty.",
+      "tag": "Models We Cover",
+      "h2": "BMW X4 Engine Replacement - All Variants Covered",
+      "h3": "BMW X4 xDrive20d Engine Replacement",
+      "closingLine": "Not sure which variant your BMW X4 is? Enter your registration number above - we'll identify the exact sub‑model, engine code and compatible replacement options instantly.",
       "filters": [
         "Diesel Engines",
         "Petrol Engines",
@@ -1084,7 +1100,7 @@
           "items": [
             {
               "title": "BMW X4 2.0L Diesel Engines",
-              "description": "The 2.0-litre four-cylinder diesel powered the majority of UK X4 sales across both generations, dominating replacement demand. Early F26 models used the N47D20 (184hp), notorious for rear-mounted timing chain failures . From late 2014 onward, the improved B47D20 (188-190hp) introduced revised timing chain architecture and Euro 6 compliance, while G02 models added mild hybrid technology (MHT) from 2021, featuring a 48V starter-generator providing an 11hp boost during acceleration . → Get quotes for BMW X4 2.0L diesel engines",
+              "description": "The 2.0-litre four-cylinder diesel powered the majority of UK X4 sales across both generations, dominating replacement demand. Early F26 models used the N47D20 (184hp), notorious for rear-mounted timing chain failures . From late 2014 onward, the improved B47D20 (188-190hp) introduced revised timing chain architecture and Euro 6 compliance, while G02 models added mild hybrid technology (MHT) from 2021, featuring a 48V starter-generator providing an 11hp boost during acceleration .",
               "engineCodes": [
                 "N47D20",
                 "B47D20",
@@ -1105,11 +1121,11 @@
                 "N47 timing chain stretch (50k-120k miles); B47 EGR cooler deposits",
                 "DPF clogging in urban use"
               ],
-              "cta": ""
+              "cta": "Get quotes for BMW X4 2.0L diesel engines"
             },
             {
               "title": "BMW X4 3.0L Diesel Engines",
-              "description": "The 3.0-litre straight-six turbodiesel delivered refined performance for xDrive30d and M40d variants across both X4 generations. F26 models used the N57D30 (258hp), praised for reliability but prone to EGR cooler carbon buildup. The G02 generation introduced the B57D30 family, with the xDrive30d producing 265hp and the M40d featuring sequential twin-turbocharging for 340hp . → Get quotes for BMW X4 3.0L diesel engines",
+              "description": "The 3.0-litre straight-six turbodiesel delivered refined performance for xDrive30d and M40d variants across both X4 generations. F26 models used the N57D30 (258hp), praised for reliability but prone to EGR cooler carbon buildup. The G02 generation introduced the B57D30 family, with the xDrive30d producing 265hp and the M40d featuring sequential twin-turbocharging for 340hp .",
               "engineCodes": [
                 "N57D30",
                 "N57D30A",
@@ -1130,7 +1146,7 @@
                 "EGR valve",
                 "cooler carbon deposits; N57 timing chain stretch (labour-intensive due to flywheel positioning); B57 sequential turbo actuator faults"
               ],
-              "cta": ""
+              "cta": "Get quotes for BMW X4 3.0L diesel engines"
             }
           ]
         },
@@ -1139,7 +1155,7 @@
           "items": [
             {
               "title": "BMW X4 2.0L Petrol Engines",
-              "description": "The 2.0-litre turbocharged four-cylinder petrol engine served as the entry point for X4 petrol variants across both generations. F26 models used the N20B20 (181-241hp), known for rear-mounted timing chain stretch and valve cover gasket oil leaks. G02 models replaced it with the improved B48B20 (184-252hp), featuring better thermal management, reduced internal friction, and a twin-scroll turbocharger . → Compare BMW X4 2.0L petrol engine prices",
+              "description": "The 2.0-litre turbocharged four-cylinder petrol engine served as the entry point for X4 petrol variants across both generations. F26 models used the N20B20 (181-241hp), known for rear-mounted timing chain stretch and valve cover gasket oil leaks. G02 models replaced it with the improved B48B20 (184-252hp), featuring better thermal management, reduced internal friction, and a twin-scroll turbocharger .",
               "engineCodes": [
                 "N20B20",
                 "N20B20A",
@@ -1159,11 +1175,11 @@
               "commonFailurePoints": [
                 "N20 timing chain stretch; valve cover gasket oil leaks (N20); B48 coolant loss from expansion tank cap failure; PCV valve failure requiring complete valve cover replacement"
               ],
-              "cta": ""
+              "cta": "Compare BMW X4 2.0L petrol engine prices"
             },
             {
               "title": "BMW X4 3.0L Petrol Engines",
-              "description": "The 3.0-litre straight-six turbo petrol powered the M40i flagship across both X4 generations. F26 models (pre-2018) used the N55B30 (306-355hp), which succeeded the N54 with a single twin-scroll turbo and Valvetronic variable valve lift, but suffered from oil consumption due to piston ring carbon buildup. The G02 generation introduced the B58B30 (355-382hp), featuring a closed-deck block design, improved thermal management, and direct/port injection . → Compare BMW X4 3.0L petrol engine prices",
+              "description": "The 3.0-litre straight-six turbo petrol powered the M40i flagship across both X4 generations. F26 models (pre-2018) used the N55B30 (306-355hp), which succeeded the N54 with a single twin-scroll turbo and Valvetronic variable valve lift, but suffered from oil consumption due to piston ring carbon buildup. The G02 generation introduced the B58B30 (355-382hp), featuring a closed-deck block design, improved thermal management, and direct/port injection .",
               "engineCodes": [
                 "N55B30",
                 "B58B30",
@@ -1182,7 +1198,7 @@
                 "B58); B58 coolant loss from pressure cap",
                 "small cooling system leaks; integrated PCV failure on B58 requiring valve cover replacement"
               ],
-              "cta": ""
+              "cta": "Compare BMW X4 3.0L petrol engine prices"
             }
           ]
         },
@@ -1191,7 +1207,7 @@
           "items": [
             {
               "title": "BMW X4 2.0L MHEV Petrol Engines",
-              "description": "The mild hybrid electric vehicle (MHEV) system was introduced on G02 LCI models from 2021, pairing the B48B20 2.0-litre turbo petrol engine with a 48V starter-generator. The system recovers energy during braking to support electrical loads and provides an 11hp (8kW) boost during acceleration, improving throttle response and reducing turbo lag. The xDrive25e plug-in hybrid variant combines the B48 engine with an electric motor for a combined 292hp system output . → Enquire about BMW X4 2.0L MHEV engine availability",
+              "description": "The mild hybrid electric vehicle (MHEV) system was introduced on G02 LCI models from 2021, pairing the B48B20 2.0-litre turbo petrol engine with a 48V starter-generator. The system recovers energy during braking to support electrical loads and provides an 11hp (8kW) boost during acceleration, improving throttle response and reducing turbo lag. The xDrive25e plug-in hybrid variant combines the B48 engine with an electric motor for a combined 292hp system output .",
               "engineCodes": [
                 "B48B20",
                 "B48B20 (MHEV variant)"
@@ -1206,7 +1222,7 @@
                 "High-voltage battery degradation affecting electric range (PHEV); hybrid system cooling pump failures; B48 base engine issues (coolant loss",
                 "PCV valve)"
               ],
-              "cta": ""
+              "cta": "Enquire about BMW X4 2.0L MHEV engine availability"
             }
           ]
         },
