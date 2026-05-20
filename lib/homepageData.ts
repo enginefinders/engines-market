@@ -1,3 +1,16 @@
+export type HomeHeroData = {
+  tag: string;
+  headingLead: string;
+  headingAccent: string;
+  subheading: string;
+  trustBadges: string[];
+  formPlaceholder: string;
+  formButtonText: string;
+  gdprNote: string;
+  subCopy: string;
+  tickerItems: string[];
+};
+
 export type HomeHowItWorksStep = {
   number: number;
   icon: "registration" | "quote" | "shield";
@@ -33,6 +46,32 @@ export type HomeEngineTypeCard = {
   }[];
   closing: string;
   backCta: string;
+};
+
+export const homeHeroData: HomeHeroData = {
+  tag: "ENGINE REPLACEMENT MARKETPLACE",
+  headingLead: "Engine Replacement Cost UK",
+  headingAccent: "Compare Prices from Vetted Specialists",
+  subheading:
+    "Reconditioned, rebuilt and used replacement engines - with 12-24 month warranty and supply & fit available UK-wide.",
+  trustBadges: [
+    "Supply & Fit Available",
+    "12-24 Month Warranty",
+    "Nationwide UK Delivery",
+    "100+ Vetted Specialists",
+  ],
+  formPlaceholder: "Enter your reg - e.g. AB12 CDE",
+  formButtonText: "Get Free Engine Quotes",
+  gdprNote:
+    "Your details are secure. No spam - genuine quotes from vetted UK engine specialists only.",
+  subCopy:
+    "Covering 8,000+ engine codes across 40+ makes - from BMW and Land Rover to Ford and Vauxhall.",
+  tickerItems: [
+    "Instant engine replacement quote - 100% free, no obligation quotes",
+    "Engine replacement near me - UK-wide specialist network",
+    "Compare reconditioned, rebuilt & used engine prices",
+    "Supply & fit available - parts and labour from vetted specialists",
+  ],
 };
 
 export const homeHowItWorksSteps: HomeHowItWorksStep[] = [

@@ -123,7 +123,7 @@ export default function HomeEngineTypesSection({ cards }: Props) {
   const [activeCard, setActiveCard] = useState<string | null>(null);
 
   return (
-    <Section className="bg-white py-12 sm:py-14 lg:py-16">
+    <Section className="bg-white py-7 sm:py-8 lg:py-10">
       <Container className="max-w-[1180px]">
         <div className="max-w-[760px]">
           <div className="section-pill">
@@ -141,12 +141,12 @@ export default function HomeEngineTypesSection({ cards }: Props) {
           </p>
         </div>
 
-        <div className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {cards.map((card) => {
             const flipped = activeCard === card.id;
 
             return (
-              <div key={card.id} className="perspective-1000 min-h-[470px] sm:min-h-[490px] xl:min-h-[520px]">
+              <div key={card.id} className="perspective-1000 min-h-[286px] sm:min-h-[304px] xl:min-h-[316px]">
                 <button
                   type="button"
                   onClick={() => setActiveCard(flipped ? null : card.id)}
@@ -155,63 +155,65 @@ export default function HomeEngineTypesSection({ cards }: Props) {
                   aria-label={`${flipped ? "Hide details for" : "Show details for"} ${card.title}`}
                 >
                   <div
-                    className={`relative h-full min-h-[470px] rounded-[18px] transition duration-500 [transform-style:preserve-3d] sm:min-h-[490px] xl:min-h-[520px] ${
+                    className={`relative h-full min-h-[286px] rounded-[18px] transition duration-500 [transform-style:preserve-3d] sm:min-h-[304px] xl:min-h-[316px] ${
                       flipped ? "[transform:rotateY(180deg)]" : ""
                     }`}
                   >
-                    <div className="absolute inset-0 flex h-full flex-col rounded-[18px] border border-[#0d1b2e]/14 bg-white p-5 shadow-[0_18px_38px_rgba(13,27,46,0.06)] [backface-visibility:hidden] sm:p-6">
+                    <div className="absolute inset-0 flex h-full flex-col overflow-hidden rounded-[18px] border border-[#0d1b2e]/14 bg-white p-5 shadow-[0_18px_38px_rgba(13,27,46,0.06)] [backface-visibility:hidden] sm:p-6">
                       <span className="text-[11px] font-extrabold uppercase tracking-[0.18em] text-[#15803d]">
                         {card.label}
                       </span>
 
                       <div className="mt-4 flex items-start gap-4">
-                        <div className="flex h-[74px] w-[74px] flex-none items-center justify-center rounded-[14px] border border-[#0d1b2e]/18 bg-[#f8fbff] text-[#0d1b2e]">
+                        <div className="flex h-[70px] w-[70px] flex-none items-center justify-center rounded-[14px] border border-[#0d1b2e]/18 bg-[#f8fbff] text-[#0d1b2e]">
                           {getIcon(card.icon)}
                         </div>
 
                         <div className="min-w-0 flex-1">
-                          <h3 className="font-['Manrope'] text-[25px] font-bold leading-[1] text-[#0d1b2e]">
+                          <h3 className="font-['Manrope'] text-[22px] font-bold leading-[1.02] text-[#0d1b2e] sm:text-[24px]">
                             {card.title}
                           </h3>
 
-                          <p className="mt-3 text-[14px] font-bold leading-[1.5] text-[#0d1b2e]">
+                          <p className="mt-2.5 text-[14px] font-bold leading-[1.45] text-[#0d1b2e]">
                             {card.price}
                           </p>
                         </div>
                       </div>
 
-                      <p className="mt-4 text-[14px] leading-[1.65] text-[#5a6478]">
+                      <p className="mt-4 line-clamp-4 text-[14px] leading-[1.65] text-[#5a6478]">
                         {card.summary}
                       </p>
 
-                      <span className="mt-auto inline-flex items-center gap-2 pt-6 text-[14px] font-bold text-[#15803d]">
+                      <span className="mt-auto inline-flex items-center gap-2 pt-4 text-[14px] font-bold text-[#15803d]">
                         <span>{card.cta}</span>
                         <ArrowIcon />
                       </span>
                     </div>
 
-                    <div className="absolute inset-0 flex h-full flex-col rounded-[18px] border border-[#0d1b2e] bg-[#0d1b2e] p-5 text-white shadow-[0_24px_48px_rgba(7,25,54,0.18)] [backface-visibility:hidden] [transform:rotateY(180deg)] sm:p-6">
+                    <div className="absolute inset-0 flex h-full flex-col overflow-hidden rounded-[18px] border border-[#0d1b2e] bg-[#0d1b2e] p-5 text-white shadow-[0_24px_48px_rgba(7,25,54,0.18)] [backface-visibility:hidden] [transform:rotateY(180deg)] sm:p-6">
                       <h3 className="font-['Manrope'] text-[20px] font-bold leading-[1.2] text-white">
                         {card.backHeader}
                       </h3>
 
-                      <div className="mt-5 space-y-3">
-                        {card.details.map((detail) => (
-                          <div key={`${card.id}-${detail.label}`} className="flex items-start gap-3 text-[13px] leading-[1.55] text-[#e8eef7]">
-                            <span className="mt-[1px] flex h-5 w-5 flex-none items-center justify-center rounded-full bg-[#15803d] text-white">
-                              <TickStarIcon />
-                            </span>
-                            <div>
-                              <span className="font-semibold text-white">{detail.label}</span>
-                              <span className="text-[#c7d3e1]">{" "}{detail.value}</span>
+                      <div className="mt-5 min-h-0 flex-1 overflow-y-auto pr-2 [scrollbar-color:#86efac_transparent] [scrollbar-width:thin]">
+                        <div className="space-y-3">
+                          {card.details.map((detail) => (
+                            <div key={`${card.id}-${detail.label}`} className="flex items-start gap-3 text-[13px] leading-[1.55] text-[#e8eef7]">
+                              <span className="mt-[1px] flex h-5 w-5 flex-none items-center justify-center rounded-full bg-[#15803d] text-white">
+                                <TickStarIcon />
+                              </span>
+                              <div>
+                                <span className="font-semibold text-white">{detail.label}</span>
+                                <span className="text-[#c7d3e1]">{" "}{detail.value}</span>
+                              </div>
                             </div>
-                          </div>
-                        ))}
-                      </div>
+                          ))}
+                        </div>
 
-                      <p className="mt-5 text-[13px] leading-[1.65] text-[#c7d3e1]">
-                        {card.closing}
-                      </p>
+                        <p className="mt-5 text-[13px] leading-[1.65] text-[#c7d3e1]">
+                          {card.closing}
+                        </p>
+                      </div>
 
                       <span className="mt-auto inline-flex items-center gap-2 pt-5 text-[13px] font-bold text-[#86efac]">
                         <span>{card.backCta}</span>
@@ -225,7 +227,7 @@ export default function HomeEngineTypesSection({ cards }: Props) {
           })}
         </div>
 
-        <div className="mt-8 rounded-[18px] border border-white/10 bg-[#0d1b2e] px-4 py-5 sm:px-5 lg:px-8 lg:py-6">
+        <div className="mt-6 rounded-[18px] border border-white/10 bg-[#0d1b2e] px-4 py-5 sm:px-5 lg:px-8 lg:py-6">
           <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
             <div className="flex h-12 w-12 flex-none items-center justify-center rounded-full bg-[#15803d]/18 text-[#86efac]">
               <ShieldTickIcon />

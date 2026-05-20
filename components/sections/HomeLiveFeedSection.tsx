@@ -79,7 +79,7 @@ export default function HomeLiveFeedSection({ rows, pinnedBrands }: Props) {
       : `Showing ${visibleRows.length} ${visibleRows.length === 1 ? "entry" : "entries"} - ${activeBrand}`;
 
   return (
-    <Section className="bg-[#f7f8fa] pb-12 pt-10 sm:pb-14 lg:pb-16">
+    <Section className="bg-[#f7f8fa] py-7 sm:py-8 lg:py-10">
       <Container className="max-w-[1040px]">
         <div className="mx-auto max-w-[760px] text-center">
           <div className="section-pill mx-auto">
@@ -97,14 +97,17 @@ export default function HomeLiveFeedSection({ rows, pinnedBrands }: Props) {
           </p>
         </div>
 
-        <div className="mt-8">
-          <nav className="mb-4" aria-label="Filter live engine data by brand">
-            <div className="overflow-hidden rounded-[12px] bg-[#0d1f3c] shadow-[0_10px_24px_rgba(13,31,60,0.15)]">
+        <div className="mt-6">
+          <nav className="relative z-10 mb-4" aria-label="Filter live engine data by brand">
+            <div className="rounded-[12px] bg-[#0d1f3c] shadow-[0_10px_24px_rgba(13,31,60,0.15)]">
               <div className="flex items-center gap-1 px-2 py-2">
                 <div className="flex min-w-0 flex-1 items-center gap-1 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
                   <button
                     type="button"
-                    onClick={() => setActiveBrand("all")}
+                    onClick={() => {
+                      setActiveBrand("all");
+                      setDrawerOpen(false);
+                    }}
                     className={`flex-none rounded-full border px-3 py-2 text-[11.5px] font-medium transition ${
                       activeBrand === "all"
                         ? "border-[#15803d] bg-[#15803d] text-white"
@@ -118,7 +121,10 @@ export default function HomeLiveFeedSection({ rows, pinnedBrands }: Props) {
                     <button
                       key={brand}
                       type="button"
-                      onClick={() => setActiveBrand(brand)}
+                      onClick={() => {
+                        setActiveBrand(brand);
+                        setDrawerOpen(false);
+                      }}
                       className={`flex-none rounded-full border px-3 py-2 text-[11.5px] font-medium transition ${
                         activeBrand === brand
                           ? "border-[#15803d] bg-[#15803d] text-white"
@@ -143,7 +149,7 @@ export default function HomeLiveFeedSection({ rows, pinnedBrands }: Props) {
                     </button>
 
                     {drawerOpen ? (
-                      <div className="absolute right-0 top-[calc(100%+8px)] z-10 flex min-w-[196px] flex-col gap-1 rounded-[12px] border border-[#e4e7ee] bg-white p-2 shadow-[0_16px_36px_rgba(13,31,60,0.18)]">
+                      <div className="absolute right-0 top-[calc(100%+8px)] z-20 flex min-w-[196px] flex-col gap-1 rounded-[12px] border border-[#e4e7ee] bg-white p-2 shadow-[0_16px_36px_rgba(13,31,60,0.18)]">
                         {overflowBrands.map((brand) => (
                           <button
                             key={brand}
