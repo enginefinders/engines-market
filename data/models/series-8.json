@@ -1246,13 +1246,6 @@
           "rootCause": "The compact hot-V turbo layout traps intense heat around the timing chains and turbo bearings, accelerating tensioner wear and oil carbonisation that triggers rattling, boost loss, and eventual catastrophic timing jump.",
           "repairOptions": [
             {
-              "tier": "Repair Tier",
-              "dealerPrice": "Dealer Price (Parts + Labour)",
-              "specialistPrice": "Specialist Price (Parts + Labour)",
-              "whatItInvolves": "What It Involves",
-              "longevity": "Longevity / Suitability"
-            },
-            {
               "tier": "Minor - Preventative Chain & Tensioner Update",
               "dealerPrice": "£3,500 - £4,500",
               "specialistPrice": "£2,200 - £3,000",
@@ -1284,13 +1277,6 @@
           "typicalFailureMileage": "60,000 - 90,000 miles",
           "rootCause": "Frequent short journeys and extended service intervals cause soot accumulation in the DPF, while thermal cycling cracks the EGR cooler matrix, allowing coolant to leak into the combustion chamber.",
           "repairOptions": [
-            {
-              "tier": "Repair Tier",
-              "dealerPrice": "Dealer Price (Parts + Labour)",
-              "specialistPrice": "Specialist Price (Parts + Labour)",
-              "whatItInvolves": "What It Involves",
-              "longevity": "Longevity / Suitability"
-            },
             {
               "tier": "Minor - DPF Regeneration & Software Calibration",
               "dealerPrice": "£800 - £1,200",
@@ -1324,13 +1310,6 @@
           "rootCause": "Degradation of the high-pressure fuel pump diaphragm causes erratic fuel delivery, while sludge buildup from extended oil change intervals clogs the VANOS solenoids, disrupting variable valve timing and triggering misfire cascades.",
           "repairOptions": [
             {
-              "tier": "Repair Tier",
-              "dealerPrice": "Dealer Price (Parts + Labour)",
-              "specialistPrice": "Specialist Price (Parts + Labour)",
-              "whatItInvolves": "What It Involves",
-              "longevity": "Longevity / Suitability"
-            },
-            {
               "tier": "Intermediate - HPFP & VANOS Solenoid Replacement",
               "dealerPrice": "£2,500 - £3,500",
               "specialistPrice": "£1,600 - £2,200",
@@ -1355,13 +1334,6 @@
           "typicalFailureMileage": "80,000+ miles or age-related (20+ years old)",
           "rootCause": "Original plastic thermostat housings, dual water pump impellers, and radiator end tanks degrade from prolonged heat exposure, leading to sudden coolant loss, localized cylinder head warping, and blown head gaskets.",
           "repairOptions": [
-            {
-              "tier": "Repair Tier",
-              "dealerPrice": "Dealer Price (Parts + Labour)",
-              "specialistPrice": "Specialist Price (Parts + Labour)",
-              "whatItInvolves": "What It Involves",
-              "longevity": "Longevity / Suitability"
-            },
             {
               "tier": "Intermediate - Cooling System Overhaul & Head Gasket Service",
               "dealerPrice": "£4,200 - £5,800",
@@ -1396,38 +1368,86 @@
         {
           "title": "BMW 8 Series Reconditioned Engines (Recon)",
           "description": "Specialist units disassembled, cleaned and tested with worn components replaced to restore original performance standards for daily driving.",
+          "frontDescription": "Specialist units disassembled, cleaned and tested with worn components replaced to restore original performance standards for daily driving.",
+          "frontDisclaimer": "Prices vary by engine code and mileage history across our specialist network.",
+          "backDescription": "Specialist units undergo complete strip down and precision measurement before any worn B57 or N63 components are fully replaced.",
+          "backBullets": [
+            "Ideal for G15 owners seeking reliable daily performance without full rebuild costs.",
+            "Includes updated timing chains and valve stem seals for known failure points.",
+            "Supplied fully bench tested with a minimum twelve month warranty available nationwide."
+          ],
           "priceRange": "£2,400 - £5,800 (supply only)",
-          "cta": "Compare reconditioned BMW 8 Series engine prices ->"
+          "cta": "Compare reconditioned BMW 8 Series engine prices"
         },
         {
           "title": "BMW 8 Series Rebuilt Engines",
           "description": "Focused repair addressing specific known failures with upgraded internal parts to extend the operational lifespan of high mileage units.",
+          "frontDescription": "Focused repair addressing specific known failures with upgraded internal parts to extend the operational lifespan of high mileage units.",
+          "frontDisclaimer": "Final cost depends on damage severity and exact model variant selected.",
+          "backDescription": "Targeted machining replaces only damaged components within B47 or S63 blocks while preserving original factory geometry for optimal fitment.",
+          "backBullets": [
+            "Cost effective solution when cylinder walls remain undamaged and block is salvageable.",
+            "Often resolves persistent turbo rattling or fuel pump pressure drops permanently.",
+            "Bench tested under load before dispatch to guarantee smooth initial startup."
+          ],
           "priceRange": "£2,800 - £6,200 (supply only)",
-          "cta": "Get rebuilt BMW 8 Series engine quotes ->"
+          "cta": "Get rebuilt BMW 8 Series engine quotes"
         },
         {
           "title": "BMW 8 Series Used Engines",
           "description": "Sourced from low mileage donor vehicles with verified service history and basic compression checks completed prior to dispatch.",
+          "frontDescription": "Sourced from low mileage donor vehicles with verified service history and basic compression checks completed prior to dispatch.",
+          "frontDisclaimer": "Condition varies by donor car and limited warranty applies.",
+          "backDescription": "Direct removal from crashed modern G16 models provides an original factory fitment option for owners operating on extremely tight budgets.",
+          "backBullets": [
+            "Requires independent compression and leak down testing before final purchase.",
+            "Mileage verification essential to ensure value matches long term reliability goals.",
+            "Best suited for temporary fixes or projects where immediate budget constraints apply."
+          ],
           "priceRange": "£1,800 - £3,500 (supply only)",
-          "cta": "Check used BMW 8 Series engine availability ->"
+          "cta": "Check used BMW 8 Series engine availability"
         },
         {
           "title": "BMW 8 Series Remanufactured Engines",
           "description": "Factory standard reconstruction using new machining processes and genuine components to meet exact original manufacturer tolerances.",
+          "frontDescription": "Factory standard reconstruction using new machining processes and genuine components to meet exact original manufacturer tolerances.",
+          "frontDisclaimer": "Premium pricing reflects new part replacement and comprehensive quality control.",
+          "backDescription": "Complete teardown replaces all soft seals and bearings while machining block surfaces to zero tolerance for absolute precision across every variant.",
+          "backBullets": [
+            "Matches brand new unit specifications while costing significantly less than dealer options.",
+            "Ideal for high performance M850i models demanding consistent track ready durability.",
+            "Includes extended warranty coverage for owners planning long term vehicle retention."
+          ],
           "priceRange": "£4,500 - £8,900 (supply only)",
-          "cta": "Compare remanufactured BMW 8 Series engine costs ->"
+          "cta": "Compare remanufactured BMW 8 Series engine costs"
         },
         {
           "title": "BMW 8 Series Refurbished Engines",
           "description": "External cleaning and minor internal adjustments to improve running quality without comprehensive dismantling or machining work.",
+          "frontDescription": "External cleaning and minor internal adjustments to improve running quality without comprehensive dismantling or machining work.",
+          "frontDisclaimer": "Limited mechanical guarantees apply due to minimal internal inspection scope.",
+          "backDescription": "Surface level restoration addresses minor oil leaks and sensor faults while leaving the core internal architecture completely untouched by major work.",
+          "backBullets": [
+            "Provides rapid turnaround for minor mechanical faults that do not affect structural integrity.",
+            "Suitable for older E31 models requiring basic operational improvements before sale.",
+            "Does not resolve underlying timing chain wear or deep cylinder scoring issues permanently."
+          ],
           "priceRange": "£1,500 - £3,200 (supply only)",
-          "cta": "View refurbished BMW 8 Series engine options ->"
+          "cta": "View refurbished BMW 8 Series engine options"
         },
         {
           "title": "BMW 8 Series Supply & Fit Engines",
           "description": "Complete turnkey service pairing specialist engine sourcing with accredited garage installation and post fitting calibration for peace of mind.",
+          "frontDescription": "Complete turnkey service pairing specialist engine sourcing with accredited garage installation and post fitting calibration for peace of mind.",
+          "frontDisclaimer": "Labour rates depend on workshop location and required calibration complexity.",
+          "backDescription": "Eliminates all logistical stress by connecting you directly with accredited local technicians who handle delivery, physical fitting and software coding.",
+          "backBullets": [
+            "Covers comprehensive ECU coding and exhaust adaptations required for modern B58 models.",
+            "Includes full fluid top up, road testing and final handover documentation at completion.",
+            "Ensures warranty validity remains intact through certified workshop installation standards."
+          ],
           "priceRange": "£850 - £1,400 added to engine price",
-          "cta": "Find BMW 8 Series engine supply & fit deals ->"
+          "cta": "Find BMW 8 Series engine supply & fit deals"
         }
       ],
       "closing": "All engine types include a minimum 12‑month unlimited mileage warranty when sourced through EngineMarket. Prices are typical UK market ranges based on historical quote data from our network and depend on exact engine code, variant, mileage and supplier. Use our free comparison tool above - enter your registration to get tailored quotes for your specific BMW 8 Series within hours.",

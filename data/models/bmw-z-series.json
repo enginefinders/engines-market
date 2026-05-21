@@ -1206,13 +1206,6 @@
           "rootCause": "The plastic expansion tank, water pump impeller, and thermostat housing become brittle under repeated thermal cycling, while the crankcase ventilation valve diaphragm ruptures, causing lean running and excessive oil consumption.",
           "repairOptions": [
             {
-              "tier": "Repair Tier",
-              "dealerPrice": "Dealer Price (Parts + Labour)",
-              "specialistPrice": "Specialist Price (Parts + Labour)",
-              "whatItInvolves": "What It Involves",
-              "longevity": "Longevity / Suitability"
-            },
-            {
               "tier": "Minor - Preventative Cooling Overhaul",
               "dealerPrice": "£900 - £1,400",
               "specialistPrice": "£500 - £850",
@@ -1245,13 +1238,6 @@
           "rootCause": "The eccentric shaft sensor and Valvetronic intermediate lever wear under high thermal stress, creating a persistent metallic tick that progresses to uneven valve lift, reduced compression, and eventual misfires.",
           "repairOptions": [
             {
-              "tier": "Repair Tier",
-              "dealerPrice": "Dealer Price (Parts + Labour)",
-              "specialistPrice": "Specialist Price (Parts + Labour)",
-              "whatItInvolves": "What It Involves",
-              "longevity": "Longevity / Suitability"
-            },
-            {
               "tier": "Intermediate - Valvetronic Actuator Repair",
               "dealerPrice": "£1,800 - £2,600",
               "specialistPrice": "£950 - £1,500",
@@ -1276,13 +1262,6 @@
           "typicalFailureMileage": "50,000 - 70,000 miles",
           "rootCause": "Early production plastic timing chain tensioners and guide rails degrade rapidly under sustained turbo boost heat, causing excessive chain slack, metallic rattle on cold starts, and potential valve-to-piston interference if the chain jumps.",
           "repairOptions": [
-            {
-              "tier": "Repair Tier",
-              "dealerPrice": "Dealer Price (Parts + Labour)",
-              "specialistPrice": "Specialist Price (Parts + Labour)",
-              "whatItInvolves": "What It Involves",
-              "longevity": "Longevity / Suitability"
-            },
             {
               "tier": "Minor - Preventative Timing Chain Replacement",
               "dealerPrice": "£1,600 - £2,400",
@@ -1309,13 +1288,6 @@
           "rootCause": "The high-pressure fuel pump internal plungers wear out of tolerance, starving direct injectors under load and triggering lean misfires, while degraded injector seals can wash cylinder walls and accelerate ring wear.",
           "repairOptions": [
             {
-              "tier": "Repair Tier",
-              "dealerPrice": "Dealer Price (Parts + Labour)",
-              "specialistPrice": "Specialist Price (Parts + Labour)",
-              "whatItInvolves": "What It Involves",
-              "longevity": "Longevity / Suitability"
-            },
-            {
               "tier": "Major - HPFP & Injector Overhaul",
               "dealerPrice": "£2,800 - £4,200",
               "specialistPrice": "£1,500 - £2,400",
@@ -1341,13 +1313,6 @@
           "rootCause": "Factory rod bearing clearances are tightly toleranced for high-rev track use. Sustained high RPM operation without adequate oil pressure causes bearing material to shed, leading to crankshaft journal scoring and potential bottom-end seizure.",
           "repairOptions": [
             {
-              "tier": "Repair Tier",
-              "dealerPrice": "Dealer Price (Parts + Labour)",
-              "specialistPrice": "Specialist Price (Parts + Labour)",
-              "whatItInvolves": "What It Involves",
-              "longevity": "Longevity / Suitability"
-            },
-            {
               "tier": "Minor - Preventative Bearing & Oil Pump Upgrade",
               "dealerPrice": "£2,200 - £3,400",
               "specialistPrice": "£1,200 - £2,000",
@@ -1370,7 +1335,7 @@
         "h4": "Don't Let Engine Failure Write Off Your BMW Z Series",
         "paragraph": "Engine wear on the Z Series is predictable, but replacement costs don't have to be prohibitive when you bypass main dealer markups. EngineMarket connects you directly with vetted UK BMW Z Series engine specialists who provide fully rebuilt units with upgraded components, nationwide delivery, and a minimum 12‑month unlimited mileage warranty. Whether you are restoring a classic Z3, maintaining an E85 roadster, or preserving a Z4M, comparing specialist quotes ensures you get precision engineering at a fraction of dealership pricing. Secure your BMW Z Series engine replacement today and drive with confidence.",
         "buttonText": "Compare BMW Z Series Engine Replacement Prices Now →",
-        "disclaimer": ""
+        "disclaimer": "All prices are indicative UK market ranges based on historical quote data and repair requests from our network of engine specialists. Dealer pricing is estimated based on published main dealer labour rates and genuine OEM parts pricing. Specialist pricing reflects actual quote data from EngineMarket’s UK network. Actual costs vary depending on damage severity, vehicle condition, variant, and workshop location within the UK. Use our free comparison tool to get tailored quotes for your specific BMW Z Series and engine code. Every engine supplied through EngineMarket carries a minimum 12‑month unlimited mileage warranty - always confirm exact terms with your chosen supplier."
       }
     },
     "engineTypes": {
@@ -1381,38 +1346,86 @@
         {
           "title": "BMW Z Series Reconditioned Engines (Recon)",
           "description": "Specialist strip-down of M54 and N52 units replaces all worn gaskets, seals and bearings while retaining the original block and cylinder heads.",
+          "frontDescription": "Specialist strip-down of M54 and N52 units replaces all worn gaskets, seals and bearings while retaining the original block and cylinder heads.",
+          "frontDisclaimer": "Prices vary by Z3 or Z4 chassis year and exact engine code displacement.",
+          "backDescription": "Reconditioned BMW Z Series units undergo professional machining to restore factory tolerances without the full cost of a custom rebuild.",
+          "backBullets": [
+            "Includes updated timing components, valve stems and refreshed cooling system parts for reliable operation.",
+            "Ideal for roadsters requiring reliable daily driving without full race-spec internals.",
+            "Backed by comprehensive bench testing and standard warranty coverage across all suppliers."
+          ],
           "priceRange": "£1,800 - £3,200 (supply only)",
-          "cta": "Compare reconditioned BMW Z Series engine prices ->"
+          "cta": "Compare reconditioned BMW Z Series engine prices"
         },
         {
           "title": "BMW Z Series Rebuilt Engines",
           "description": "Complete teardown and inspection replaces every worn component with upgraded parts to eliminate known N20 or S54 weak points.",
+          "frontDescription": "Complete teardown and inspection replaces every worn component with upgraded parts to eliminate known N20 or S54 weak points.",
+          "frontDisclaimer": "Final costs depend on turbo specifications and bespoke machining requirements.",
+          "backDescription": "Rebuilt BMW Z Series powerplants are assembled from the block up, ensuring catastrophic timing or bearing failures are permanently resolved.",
+          "backBullets": [
+            "Features reinforced crankshaft bearings, upgraded oil pumps and precision-balanced rotating assemblies.",
+            "Delivers the highest reliability standard for high-mileage E85 and E89 convertible roadsters.",
+            "Supplied fully dressed with sensors, mounts and ready for direct installation by independent specialists."
+          ],
           "priceRange": "£2,500 - £4,800 (supply only)",
-          "cta": "Get rebuilt BMW Z Series engine quotes ->"
+          "cta": "Get rebuilt BMW Z Series engine quotes"
         },
         {
           "title": "BMW Z Series Used Engines",
           "description": "Low-mileage donor units sourced from verified UK breaker networks, offering a direct bolt-on solution for classic Z3 chassis.",
+          "frontDescription": "Low-mileage donor units sourced from verified UK breaker networks, offering a direct bolt-on solution for classic Z3 chassis.",
+          "frontDisclaimer": "Availability fluctuates daily based on incoming stock and verified compression test results.",
+          "backDescription": "Used BMW Z Series engines provide an affordable entry point for project restorations or temporary replacements while awaiting specialist work.",
+          "backBullets": [
+            "Each unit undergoes rigorous compression and leak-down testing prior to dispatch and delivery.",
+            "Best suited for budget-conscious owners seeking genuine factory components at a fraction of new costs.",
+            "Network specialists verify compatibility with your registration to ensure exact chassis matching."
+          ],
           "priceRange": "£950 - £2,400 (supply only)",
-          "cta": "Check used BMW Z Series engine availability ->"
+          "cta": "Check used BMW Z Series engine availability"
         },
         {
           "title": "BMW Z Series Remanufactured Engines",
           "description": "Factory-spec restoration processes return your straight-six to original equipment manufacturer standards with full documentation.",
+          "frontDescription": "Factory-spec restoration processes return your straight-six to original equipment manufacturer standards with full documentation.",
+          "frontDisclaimer": "Premium pricing reflects extensive machining, dyno validation and extended coverage terms.",
+          "backDescription": "Remanufactured BMW Z Series units exceed new production tolerances, making them the definitive choice for preserving valuable M roadster assets.",
+          "backBullets": [
+            "Incorporates zero-defect manufacturing protocols and certified metallurgical upgrades throughout.",
+            "Ideal for collectors maintaining original VIN alignment on highly sought-after limited edition variants.",
+            "Includes full diagnostic programming and calibration data tailored to your specific vehicle generation."
+          ],
           "priceRange": "£3,200 - £5,800 (supply only)",
-          "cta": "Compare remanufactured BMW Z Series engine costs ->"
+          "cta": "Compare remanufactured BMW Z Series engine costs"
         },
         {
           "title": "BMW Z Series Refurbished Engines",
           "description": "Targeted repairs focus on resolving specific fault codes, replacing damaged cylinder heads or upgrading failing turbochargers.",
+          "frontDescription": "Targeted repairs focus on resolving specific fault codes, replacing damaged cylinder heads or upgrading failing turbochargers.",
+          "frontDisclaimer": "Scope varies depending on diagnosed failure points and required ancillary component replacements.",
+          "backDescription": "Refurbished BMW Z Series assemblies address known failure clusters while retaining functional bottom-end components to reduce overall spend.",
+          "backBullets": [
+            "Technicians isolate worn valvetronic actuators, injectors and sensor clusters for targeted replacement.",
+            "Provides a cost-effective middle ground between raw used stock and comprehensive full-block reconstruction.",
+            "Recommended when compression remains stable but external systems or top-end components require attention."
+          ],
           "priceRange": "£1,400 - £2,900 (supply only)",
-          "cta": "View refurbished BMW Z Series engine options ->"
+          "cta": "View refurbished BMW Z Series engine options"
         },
         {
           "title": "BMW Z Series Supply & Fit Engines",
           "description": "Complete turnkey service pairs your selected replacement unit with certified installation by vetted independent British workshops.",
+          "frontDescription": "Complete turnkey service pairs your selected replacement unit with certified installation by vetted independent British workshops.",
+          "frontDisclaimer": "Labour rates adjust based on local garage pricing and any necessary ancillary fluid or part renewals.",
+          "backDescription": "Supply and fit BMW Z Series packages eliminate coordination stress by combining parts procurement with professional fitting under one roof.",
+          "backBullets": [
+            "Covers full removal of damaged assemblies, installation, calibration and comprehensive road testing procedures.",
+            "Workshop partners specialise in longitudinal rear-drive layouts and complex BMW electronic management systems.",
+            "Ensures warranty validity remains intact through professional sign-off and proper break-in protocol management."
+          ],
           "priceRange": "£650 - £1,200 added to engine price",
-          "cta": "Find BMW Z Series engine supply & fit deals ->"
+          "cta": "Find BMW Z Series engine supply & fit deals"
         }
       ],
       "closing": "All engine types include a minimum 12‑month unlimited mileage warranty when sourced through EngineMarket. Prices are typical UK market ranges based on historical quote data from our network and depend on exact engine code, variant, mileage and supplier. Use our free comparison tool above - enter your registration to get tailored quotes for your specific BMW Z Series within hours.",
@@ -1436,10 +1449,6 @@
       "h2": "BMW Z Series Engines by Size - Find the Right Displacement for Your Variant",
       "intro": "Every displacement fitted to the BMW Z Series is listed below with compatible engine codes, production years and common failure notes to help you identify the correct replacement unit.",
       "groups": [
-        {
-          "title": "BMW Z Series Diesel Engine Sizes",
-          "items": []
-        },
         {
           "title": "BMW Z Series Petrol Engine Sizes",
           "items": [
@@ -1645,17 +1654,6 @@
       "intro": "Choose your BMW Z Series engine by fuel type to compare realistic replacement prices, known issues, and compatible UK supply options - from the classic Z3 1.9i four-cylinder to the latest G29 Z4 M40i B58 turbo.",
       "items": [
         {
-          "title": "BMW Z Series Diesel Engines",
-          "description": "",
-          "descriptor": "",
-          "families": [],
-          "foundIn": [],
-          "knownFor": [],
-          "typicalModels": [],
-          "importantNotes": [],
-          "cta": ""
-        },
-        {
           "title": "BMW Z Series Petrol Engines",
           "description": "The BMW Z Series has exclusively used petrol powertrains in the UK, spanning naturally aspirated inline-six classics to modern turbocharged units, with replacement demand concentrated on M54, N52, N54 and S54 engine families.",
           "descriptor": "The BMW Z Series has exclusively used petrol powertrains in the UK, spanning naturally aspirated inline-six classics to modern turbocharged units, with replacement demand concentrated on M54, N52, N54 and S54 engine families.",
@@ -1694,17 +1692,6 @@
           ],
           "importantNotes": [],
           "cta": "Compare BMW Z Series Petrol engine prices"
-        },
-        {
-          "title": "BMW Z Series Hybrid / Electrified Engines",
-          "description": "",
-          "descriptor": "",
-          "families": [],
-          "foundIn": [],
-          "knownFor": [],
-          "typicalModels": [],
-          "importantNotes": [],
-          "cta": ""
         }
       ],
       "closing": "Not sure which fuel type your BMW Z Series has? Enter your registration number above to instantly identify your engine code, fuel system and compatible replacement options - all backed by a minimum 12‑month unlimited mileage warranty from UK BMW Z Series specialists.",

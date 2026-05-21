@@ -1524,7 +1524,7 @@ def parse_variant_coverage(lines: Sequence[str]) -> Dict[str, Any]:
 
     idx = 0
     while idx < len(lines):
-        line = normalize_line(lines[idx])
+        line = strip_markdown(lines[idx])
         row_match = re.match(r"^Row\s+\d+\s*[-:]\s*(.+)$", line, flags=re.IGNORECASE)
         if row_match:
             if current_group_title and current_group_slugs:
@@ -1837,7 +1837,7 @@ def parse_engine_code_families(lines: Sequence[str]) -> Dict[str, Any]:
     current_top_family = ""
     idx = 0
     engine_title_re = re.compile(
-        r"^(?P<code>[A-Z][A-Z0-9]*(?:\s*[/+&-]\s*[A-Z0-9]+)*)\s*[-–—]\s*(?P<title>(?:\d+(?:\.\d+)?\s*L(?:itre)?|Hybrid|Electric).+)$",
+        r"^(?P<code>[A-Z][A-Z0-9]*(?:(?:\s*[/+&-]\s*|\s+)[A-Z0-9]+)*)\s*[-–—]\s*(?P<title>(?:\d+(?:\.\d+)?\s*L(?:itre)?|Hybrid|Electric).+)$",
         re.IGNORECASE,
     )
 
@@ -1859,7 +1859,7 @@ def parse_engine_code_families(lines: Sequence[str]) -> Dict[str, Any]:
         idx += 1
 
         while idx < len(lines):
-            current = normalize_line(lines[idx])
+            current = strip_markdown(lines[idx])
             if current.startswith("### ") or re.match(r"^H4:\s*(.+)$", current, flags=re.IGNORECASE):
                 break
             if not current:
@@ -1876,7 +1876,7 @@ def parse_engine_code_families(lines: Sequence[str]) -> Dict[str, Any]:
             detail_lines: List[str] = []
             idx += 1
             while idx < len(lines):
-                peek = normalize_line(lines[idx])
+                peek = strip_markdown(lines[idx])
                 if peek.startswith("### ") or re.match(r"^H4:\s*(.+)$", peek, flags=re.IGNORECASE):
                     break
                 if engine_title_re.match(peek):
@@ -1965,11 +1965,12 @@ def parse_engine_code_families(lines: Sequence[str]) -> Dict[str, Any]:
             )
 
         label = current_top_family or family_name
-        existing = next((family for family in families if family["name"] == label), None)
-        if existing:
-            existing["entries"].extend(entries)
-        else:
-            families.append({"name": label, "entries": entries})
+        if entries:
+            existing = next((family for family in families if family["name"] == label), None)
+            if existing:
+                existing["entries"].extend(entries)
+            else:
+                families.append({"name": label, "entries": entries})
 
     return {
         "tag": tag,
@@ -2054,21 +2055,65 @@ def parse_common_problems(lines: Sequence[str]) -> Dict[str, Any]:
             continue
 
         heading = line.split(":", 1)[1].strip() if ":" in line else line
+        if not heading:
+            look_ahead = idx + 1
+            while look_ahead < len(lines):
+                candidate = normalize_line(lines[look_ahead])
+                if not candidate:
+                    look_ahead += 1
+                    continue
+                if normalize_key(candidate).startswith(("affected models", "typical failure mileage", "root cause", "repair options", "our recommendation", "cta", "paragraph", "disclaimer")):
+                    break
+                heading = candidate
+                idx = look_ahead
+                break
 
         if heading.lower().startswith("don't let engine failure"):
             final_cta["h4"] = heading
             idx += 1
+            disclaimer_lines: List[str] = []
             while idx < len(lines):
                 current = normalize_line(lines[idx])
                 lowered_current = normalize_key(current)
+                if lowered_current.startswith("h4:"):
+                    idx -= 1
+                    break
                 if lowered_current.startswith("paragraph"):
                     final_cta["paragraph"] = current.split(":", 1)[1].strip() if ":" in current else ""
+                elif current and not final_cta["paragraph"] and not lowered_current.startswith(("cta button", "disclaimer")):
+                    final_cta["paragraph"] = current
                 elif lowered_current.startswith("cta button"):
                     value = current.split(":", 1)[1].strip() if ":" in current else ""
+                    if not value:
+                        look_ahead = idx + 1
+                        while look_ahead < len(lines):
+                            candidate = normalize_line(lines[look_ahead])
+                            if not candidate:
+                                look_ahead += 1
+                                continue
+                            if normalize_key(candidate).startswith(("disclaimer", "h4:")):
+                                break
+                            value = candidate
+                            idx = look_ahead
+                            break
                     final_cta["buttonText"] = strip_arrow_text(value)
                 elif lowered_current.startswith("disclaimer"):
-                    final_cta["disclaimer"] = current.split(":", 1)[1].strip() if ":" in current else ""
-                    break
+                    inline = current.split(":", 1)[1].strip() if ":" in current else ""
+                    if inline:
+                        disclaimer_lines.append(inline)
+                    while idx + 1 < len(lines):
+                        peek = normalize_line(lines[idx + 1])
+                        peek_lower = normalize_key(peek)
+                        if not peek:
+                            idx += 1
+                            if disclaimer_lines:
+                                break
+                            continue
+                        if peek_lower.startswith(("h4:", "paragraph", "cta button", "affected models", "typical failure mileage", "root cause")):
+                            break
+                        disclaimer_lines.append(peek)
+                        idx += 1
+                    final_cta["disclaimer"] = " ".join(disclaimer_lines).strip()
                 idx += 1
             break
 
@@ -2098,7 +2143,14 @@ def parse_common_problems(lines: Sequence[str]) -> Dict[str, Any]:
                 problem["rootCause"] = current.split(":", 1)[1].strip() if ":" in current else ""
             elif current.startswith("|"):
                 cells = [normalize_line(cell) for cell in current.strip("|").split("|")]
-                if len(cells) >= 5:
+                headerish = (
+                    len(cells) >= 5
+                    and (
+                        normalize_key(cells[0]) == "repair tier"
+                        or all(not cell or set(cell) <= {"-"} for cell in cells)
+                    )
+                )
+                if len(cells) >= 5 and not headerish:
                     problem["repairOptions"].append(
                         {
                             "tier": cells[0],
@@ -2109,10 +2161,31 @@ def parse_common_problems(lines: Sequence[str]) -> Dict[str, Any]:
                         }
                     )
             elif lowered_current.startswith("our recommendation"):
-                problem["recommendation"] = current.split(":", 1)[1].strip() if ":" in current else ""
+                value = current.split(":", 1)[1].strip() if ":" in current else ""
+                if not value:
+                    recommendation_lines: List[str] = []
+                    look_ahead = idx + 1
+                    while look_ahead < len(lines):
+                        candidate = normalize_line(lines[look_ahead])
+                        candidate_lower = normalize_key(candidate)
+                        if not candidate:
+                            if recommendation_lines:
+                                break
+                            look_ahead += 1
+                            continue
+                        if candidate_lower.startswith(("cta", "h4:", "affected models", "typical failure mileage", "root cause")) or candidate.startswith("|") or is_arrow_line(candidate):
+                            break
+                        recommendation_lines.append(candidate)
+                        look_ahead += 1
+                    if recommendation_lines:
+                        value = " ".join(recommendation_lines).strip()
+                        idx = look_ahead - 1
+                problem["recommendation"] = value
             elif lowered_current.startswith("cta"):
                 value = current.split(":", 1)[1].strip() if ":" in current else ""
                 problem["cta"] = strip_arrow_text(value)
+            elif is_arrow_line(current):
+                problem["cta"] = strip_arrow_text(current)
             idx += 1
 
         problems.append(problem)
@@ -2132,7 +2205,7 @@ def parse_engine_types(lines: Sequence[str]) -> Dict[str, Any]:
     h2 = extract_label_value(lines, "H2", "Section H2") or ""
     intro = extract_label_value(lines, "Short introduction", "Short introduction (1 sentence)", "Intro", "Paragraph", "Subheading") or ""
     closing = extract_label_value(lines, "Closing line", "Closing") or ""
-    types: List[Dict[str, str]] = []
+    types: List[Dict[str, Any]] = []
 
     idx = 0
     while idx < len(lines):
@@ -2142,31 +2215,60 @@ def parse_engine_types(lines: Sequence[str]) -> Dict[str, Any]:
             continue
         title = line.split(":", 1)[1].strip() if ":" in line else line
         description = ""
+        front_description = ""
+        front_disclaimer = ""
+        back_description = ""
+        back_bullets: List[str] = []
         price_range = ""
         cta = ""
+        mode = "front"
         j = idx + 1
         while j < len(lines):
-            current = normalize_line(lines[j])
+            raw_current = lines[j]
+            current = normalize_line(raw_current)
             lowered = normalize_key(current)
-            if lowered == "front" or lowered == "flip":
-                j += 1
-                continue
             if normalize_key(current).startswith("option "):
                 break
+            if lowered.startswith("front"):
+                mode = "front"
+                j += 1
+                continue
+            if lowered.startswith("flip"):
+                mode = "flip"
+                j += 1
+                continue
             if lowered.startswith("description"):
                 description = current.split(":", 1)[1].strip() if ":" in current else description
+                front_description = description
             elif lowered.startswith("price range"):
                 price_range = current.split(":", 1)[1].strip() if ":" in current else price_range
                 price_range = price_range.replace("Average price range:", "").replace("Typical added cost:", "").strip()
+            elif lowered.startswith("disclaimer"):
+                front_disclaimer = current.split(":", 1)[1].strip() if ":" in current else front_disclaimer
             elif lowered.startswith("cta"):
                 cta = current.split(":", 1)[1].strip() if ":" in current else cta
-                cta = cta.lstrip("-> ").strip()
+                cta = strip_arrow_text(cta)
+                cta = re.sub(r"\s*(?:->|→|â†’)\s*$", "", cta).strip()
+            elif mode == "flip" and current:
+                if is_bullet_line(raw_current):
+                    bullet = strip_bullet_text(raw_current)
+                    if bullet:
+                        back_bullets.append(bullet)
+                elif not looks_like_label(current):
+                    if back_description:
+                        back_description = f"{back_description} {current}".strip()
+                    else:
+                        back_description = current
             j += 1
 
         types.append(
             {
                 "title": title,
                 "description": description,
+                "frontDescription": front_description or description,
+                "frontDisclaimer": front_disclaimer,
+                "backDescription": back_description,
+                "backBullets": back_bullets,
                 "priceRange": price_range,
                 "cta": cta,
             }
@@ -2259,6 +2361,8 @@ def parse_engine_sizes(lines: Sequence[str]) -> Dict[str, Any]:
             )
         idx += 1
 
+    groups = [group for group in groups if group.get("items")]
+
     return {
         "tag": tag,
         "h2": h2,
@@ -2330,19 +2434,30 @@ def parse_fuel_types(lines: Sequence[str]) -> Dict[str, Any]:
                     important_notes.append(item)
             idx += 1
 
-        items.append(
-            {
-                "title": title,
-                "description": description,
-                "descriptor": descriptor,
-                "families": families,
-                "foundIn": found_in,
-                "knownFor": known_for,
-                "typicalModels": typical_models,
-                "importantNotes": important_notes,
-                "cta": cta,
-            }
-        )
+        item = {
+            "title": title,
+            "description": description,
+            "descriptor": descriptor,
+            "families": families,
+            "foundIn": found_in,
+            "knownFor": known_for,
+            "typicalModels": typical_models,
+            "importantNotes": important_notes,
+            "cta": cta,
+        }
+        if any(
+            [
+                item["description"],
+                item["descriptor"],
+                item["cta"],
+                item["families"],
+                item["foundIn"],
+                item["knownFor"],
+                item["typicalModels"],
+                item["importantNotes"],
+            ]
+        ):
+            items.append(item)
         idx += 1
 
     return {

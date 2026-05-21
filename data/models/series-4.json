@@ -1251,20 +1251,6 @@
           "rootCause": "The rear-mounted timing chain design on early N47 and N20 engines places extreme tension on thin plastic guides and a weak hydraulic tensioner, causing the chain to stretch, rattle, and eventually skip teeth under cold-start conditions.",
           "repairOptions": [
             {
-              "tier": "Repair Tier",
-              "dealerPrice": "Dealer Price (Parts + Labour)",
-              "specialistPrice": "Specialist Price (Parts + Labour)",
-              "whatItInvolves": "What It Involves",
-              "longevity": "Longevity / Suitability"
-            },
-            {
-              "tier": "",
-              "dealerPrice": "",
-              "specialistPrice": "",
-              "whatItInvolves": "",
-              "longevity": ""
-            },
-            {
               "tier": "Minor - Preventative Chain Replacement",
               "dealerPrice": "£1,800 - £2,500",
               "specialistPrice": "£1,100 - £1,600",
@@ -1296,20 +1282,6 @@
           "typicalFailureMileage": "50,000 - 80,000 miles",
           "rootCause": "Repeated heat cycling causes the factory plastic thermostat housing and oil filter housing gaskets to become brittle, allowing oil to contaminate the accessory drive belt and coolant to escape into the sump or engine bay.",
           "repairOptions": [
-            {
-              "tier": "Repair Tier",
-              "dealerPrice": "Dealer Price (Parts + Labour)",
-              "specialistPrice": "Specialist Price (Parts + Labour)",
-              "whatItInvolves": "What It Involves",
-              "longevity": "Longevity / Suitability"
-            },
-            {
-              "tier": "",
-              "dealerPrice": "",
-              "specialistPrice": "",
-              "whatItInvolves": "",
-              "longevity": ""
-            },
             {
               "tier": "Minor - Seal & Housing Replacement",
               "dealerPrice": "£850 - £1,200",
@@ -1343,20 +1315,6 @@
           "rootCause": "High exhaust gas temperatures and factory plastic charge pipe clamps degrade over time, causing boost leaks, turbo shaft wear, and eventual bearing collapse under sustained high-RPM driving or heavy load.",
           "repairOptions": [
             {
-              "tier": "Repair Tier",
-              "dealerPrice": "Dealer Price (Parts + Labour)",
-              "specialistPrice": "Specialist Price (Parts + Labour)",
-              "whatItInvolves": "What It Involves",
-              "longevity": "Longevity / Suitability"
-            },
-            {
-              "tier": "",
-              "dealerPrice": "",
-              "specialistPrice": "",
-              "whatItInvolves": "",
-              "longevity": ""
-            },
-            {
               "tier": "Minor - Charge Pipe & Actuator Replacement",
               "dealerPrice": "£1,100 - £1,600",
               "specialistPrice": "£600 - £950",
@@ -1388,20 +1346,6 @@
           "typicalFailureMileage": "60,000 - 100,000 miles",
           "rootCause": "Exhaust gas recirculation valves accumulate carbon deposits that prevent proper closure, causing incorrect air-fuel ratios that rapidly clog the diesel particulate filter and trigger engine management limp mode.",
           "repairOptions": [
-            {
-              "tier": "Repair Tier",
-              "dealerPrice": "Dealer Price (Parts + Labour)",
-              "specialistPrice": "Specialist Price (Parts + Labour)",
-              "whatItInvolves": "What It Involves",
-              "longevity": "Longevity / Suitability"
-            },
-            {
-              "tier": "",
-              "dealerPrice": "",
-              "specialistPrice": "",
-              "whatItInvolves": "",
-              "longevity": ""
-            },
             {
               "tier": "Minor - EGR Clean & Software Reset",
               "dealerPrice": "£650 - £950",
@@ -1435,20 +1379,6 @@
           "rootCause": "The factory friction-fit crank hub lacks positive mechanical locking, allowing it to rotate independently under sudden high torque loads, causing catastrophic timing desynchronisation and valve-to-piston contact.",
           "repairOptions": [
             {
-              "tier": "Repair Tier",
-              "dealerPrice": "Dealer Price (Parts + Labour)",
-              "specialistPrice": "Specialist Price (Parts + Labour)",
-              "whatItInvolves": "What It Involves",
-              "longevity": "Longevity / Suitability"
-            },
-            {
-              "tier": "",
-              "dealerPrice": "",
-              "specialistPrice": "",
-              "whatItInvolves": "",
-              "longevity": ""
-            },
-            {
               "tier": "Minor - Crank Hub Retention Upgrade",
               "dealerPrice": "£1,800 - £2,600",
               "specialistPrice": "£1,200 - £1,800",
@@ -1478,7 +1408,7 @@
         "h4": "Don't Let Engine Failure Write Off Your BMW 4 Series",
         "paragraph": "From timing chain stretch on early N47 diesels to turbo fatigue on modern B48 petrols and crank hub issues on M Performance variants, BMW 4 Series engine faults are well-documented but rarely require main dealer replacement premiums. EngineMarket connects you directly with vetted UK specialists who diagnose your exact fault, supply upgraded rebuilt engines tailored to your variant, and deliver nationwide supply & fit service with transparent pricing. Every unit undergoes rigorous bench testing, features reinforced internal components to eliminate known weak points, and arrives with a minimum 12‑month unlimited mileage warranty.",
         "buttonText": "Compare BMW 4 Series Engine Replacement Prices Now →",
-        "disclaimer": ""
+        "disclaimer": "All prices are indicative UK market ranges based on historical quote data and repair requests from our network of engine specialists. Dealer pricing is estimated based on published main dealer labour rates and genuine OEM parts pricing. Specialist pricing reflects actual quote data from EngineMarket’s UK network. Actual costs vary depending on damage severity, vehicle condition, variant, and workshop location within the UK. Use our free comparison tool to get tailored quotes for your specific BMW 4 Series and engine code. Every engine supplied through EngineMarket carries a minimum 12‑month unlimited mileage warranty - always confirm exact terms with your chosen supplier."
       }
     },
     "engineTypes": {
@@ -1489,38 +1419,86 @@
         {
           "title": "BMW 4 Series Reconditioned Engines (Recon)",
           "description": "Expertly disassembled and cleaned units with worn components replaced to factory specifications for reliable performance.",
+          "frontDescription": "Expertly disassembled and cleaned units with worn components replaced to factory specifications for reliable performance.",
+          "frontDisclaimer": "Final cost depends on exact engine code, mileage and supplier terms across our verified network.",
+          "backDescription": "Every bmw 4 series engine undergoes comprehensive pressure testing and dyno verification to guarantee oem factory tolerances are fully restored.",
+          "backBullets": [
+            "Timing chains and tensioners upgraded on common diesel platforms to prevent early mechanical failure.",
+            "Cylinder heads machined to factory blueprints with new piston rings fitted for lasting durability.",
+            "Backed by twelve months coverage and fully compliant with current uk emissions standards."
+          ],
           "priceRange": "£1,450 - £3,100 (supply only)",
-          "cta": "Compare reconditioned BMW 4 Series engine prices ->"
+          "cta": "Compare reconditioned BMW 4 Series engine prices"
         },
         {
           "title": "BMW 4 Series Rebuilt Engines",
           "description": "Complete mechanical overhaul replacing all critical wear items to exceed original manufacturer durability standards and reliability.",
+          "frontDescription": "Complete mechanical overhaul replacing all critical wear items to exceed original manufacturer durability standards and reliability.",
+          "frontDisclaimer": "Pricing varies by variant complexity, turbo configuration and specialist workshop location.",
+          "backDescription": "Comprehensive teardown ensures every bmw 4 series engine component is inspected, measured and restored to peak operating condition for daily driving.",
+          "backBullets": [
+            "Cylinder heads fully reconditioned with new valve guides, seals and machined seating surfaces.",
+            "Oil pumps and high pressure injectors replaced to resolve common n20 and b58 supply issues.",
+            "Ideal for high mileage vehicles requiring a complete refresh without new car purchase costs."
+          ],
           "priceRange": "£1,800 - £3,500 (supply only)",
-          "cta": "Get rebuilt BMW 4 Series engine quotes ->"
+          "cta": "Get rebuilt BMW 4 Series engine quotes"
         },
         {
           "title": "BMW 4 Series Used Engines",
           "description": "Direct removal from crashed or scrapped vehicles with verified mileage history and thorough pre dispatch compression checks.",
+          "frontDescription": "Direct removal from crashed or scrapped vehicles with verified mileage history and thorough pre dispatch compression checks.",
+          "frontDisclaimer": "Condition and warranty length depend entirely on donor vehicle history and breaker stock.",
+          "backDescription": "Sourced from our vetted breaker network, these bmw 4 series engine units offer a budget solution for older chassis generations seeking quick repairs.",
+          "backBullets": [
+            "Compression tested before dispatch to verify cylinder integrity and acceptable oil pressure.",
+            "Best suited for pre 2016 models where original engines need quick temporary replacements.",
+            "Mileage verified via dvla records though internal wear remains unmeasured prior to installation."
+          ],
           "priceRange": "£750 - £1,650 (supply only)",
-          "cta": "Check used BMW 4 Series engine availability ->"
+          "cta": "Check used BMW 4 Series engine availability"
         },
         {
           "title": "BMW 4 Series Remanufactured Engines",
           "description": "Zero hour factory standard rebuilds featuring brand new internals and full dyno calibration for premium performance output.",
+          "frontDescription": "Zero hour factory standard rebuilds featuring brand new internals and full dyno calibration for premium performance output.",
+          "frontDisclaimer": "Premium pricing reflects new parts cost, extended testing and comprehensive warranty coverage.",
+          "backDescription": "Every bmw 4 series block is completely stripped, chemically cleaned and reassembled with factory fresh bearings and gaskets for zero hour output.",
+          "backBullets": [
+            "Crankshafts polished and balanced to micro millimetre tolerances matching s55 and b58 specifications.",
+            "Emissions software flashed to latest standards ensuring seamless mot compliance and dpf function.",
+            "Recommended for enthusiasts demanding track ready reliability and maximum long term durability."
+          ],
           "priceRange": "£2,800 - £4,800 (supply only)",
-          "cta": "Compare remanufactured BMW 4 Series engine costs ->"
+          "cta": "Compare remanufactured BMW 4 Series engine costs"
         },
         {
           "title": "BMW 4 Series Refurbished Engines",
           "description": "Targeted external repair addressing specific faults like gasket leaks or sensor failures while retaining original core internals.",
+          "frontDescription": "Targeted external repair addressing specific faults like gasket leaks or sensor failures while retaining original core internals.",
+          "frontDisclaimer": "Suitable only for isolated component failures where bottom end integrity remains structurally sound.",
+          "backDescription": "Focused intervention replaces faulty ancillaries and seals on your bmw 4 series engine without full mechanical teardown or excessive workshop downtime.",
+          "backBullets": [
+            "Valve cover, oil filter housing and turbo feed lines inspected and replaced with updated materials.",
+            "Addresses common coolant pipe fractures and egr carbon build up on modern diesel variants.",
+            "Provides a middle ground between simple part swaps and complete engine replacement for tight budgets."
+          ],
           "priceRange": "£1,200 - £2,400 (supply only)",
-          "cta": "View refurbished BMW 4 Series engine options ->"
+          "cta": "View refurbished BMW 4 Series engine options"
         },
         {
           "title": "BMW 4 Series Supply & Fit Engines",
           "description": "Professional installation service combining verified engine supply with certified specialist mechanic labour across the uk network.",
+          "frontDescription": "Professional installation service combining verified engine supply with certified specialist mechanic labour across the uk network.",
+          "frontDisclaimer": "Labour rates vary by region, vehicle complexity and whether xdrive or performance models are fitted.",
+          "backDescription": "Our uk partner network handles collection, installation and fluid flushing so your bmw 4 series engine is road ready immediately with verified checks.",
+          "backBullets": [
+            "Includes ancillary belt routing, timing alignment and post installation fault code clearance checks.",
+            "Transfer case and differential sync verified on all all wheel drive models to prevent premature wear.",
+            "Eliminates coordination risks between parts suppliers and local garages with a single accountable provider."
+          ],
           "priceRange": "£650 - £1,150 added to engine price",
-          "cta": "Find BMW 4 Series engine supply & fit deals ->"
+          "cta": "Find BMW 4 Series engine supply & fit deals"
         }
       ],
       "closing": "All engine types include a minimum 12‑month unlimited mileage warranty when sourced through EngineMarket. Prices are typical UK market ranges based on historical quote data from our network and depend on exact engine code, variant, mileage and supplier. Use our free comparison tool above - enter your registration to get tailored quotes for your specific BMW 4 Series within hours.",

@@ -777,11 +777,233 @@
         "families": [
           {
             "name": "Diesel Engines",
-            "entries": []
+            "entries": [
+              {
+                "code": "B47D20",
+                "title": "2.0L Diesel",
+                "history": "BMW's refined 2.0L diesel replacing N47, with updated EGR and timing chain-dominant in 218d/220d variants.",
+                "fuel": "Diesel",
+                "size": "2.0 Litre",
+                "power": "150-190 hp",
+                "years": "2014-2021",
+                "compatibleVariants": [
+                  "218d, 218d SE, 218d Sport, 218d M Sport, 218d xDrive, 220d, 220d SE, 220d Sport, 220d M Sport, 220d xDrive, 218d Active Tourer, 220d Active Tourer, 218d Gran Tourer, 220d Gran Tourer"
+                ],
+                "commonFailures": [
+                  "EGR cooler cracking (SI B12 03 18), typically 60k-90k miles",
+                  "Timing chain stretch on early pre-2016 units",
+                  "DPF regeneration issues with short-trip driving"
+                ],
+                "avgRebuiltPrice": "£1,950 - £3,200",
+                "cta": "Get quotes for B47D20 BMW 2 Series engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+              },
+              {
+                "code": "B47D20T1",
+                "title": "2.0L Diesel",
+                "history": "Twin-turbo B47 variant for 225d, delivering 224PS with sequential turbocharging for performance diesel buyers.",
+                "fuel": "Diesel",
+                "size": "2.0 Litre",
+                "power": "224 hp",
+                "years": "2015-2021",
+                "compatibleVariants": [
+                  "225d, 225d M Sport, 225d xDrive, 225d Active Tourer, 225d Gran Tourer"
+                ],
+                "commonFailures": [
+                  "Sequential turbo actuator wear, typically 70k-100k miles",
+                  "EGR cooler cracking (shared with B47D20)",
+                  "High-pressure fuel pump failure under heavy load"
+                ],
+                "avgRebuiltPrice": "£2,900 - £4,500",
+                "cta": "Get quotes for B47D20T1 BMW 2 Series engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+              },
+              {
+                "code": "B37C15",
+                "title": "1.5L Diesel",
+                "history": "Entry-level 3-cylinder diesel for 216d, prioritising fuel economy and low emissions for urban BMW 2 Series buyers.",
+                "fuel": "Diesel",
+                "size": "1.5 Litre",
+                "power": "116 hp",
+                "years": "2015-2021",
+                "compatibleVariants": [
+                  "216d, 216d SE, 216d Sport, 216d EfficientDynamics, 216d Active Tourer, 216d Gran Tourer"
+                ],
+                "commonFailures": [
+                  "EGR valve carbon buildup causing rough idle, typically 50k-80k miles",
+                  "Turbocharger wastegate sticking on high-mileage units",
+                  "Injector seal leaks leading to fuel odour"
+                ],
+                "avgRebuiltPrice": "£2,000 - £3,300",
+                "cta": "Get quotes for B37C15 BMW 2 Series engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+              },
+              {
+                "code": "N47D20",
+                "title": "2.0L Diesel",
+                "history": "Pre-2015 2.0L diesel with rear-mounted timing chain; notorious for chain tensioner failures driving urgent replacements.",
+                "fuel": "Diesel",
+                "size": "2.0 Litre",
+                "power": "150-190 hp",
+                "years": "2014-2017",
+                "compatibleVariants": [
+                  "218d, 218d SE, 218d Sport, 218d M Sport, 220d, 220d SE, 220d Sport, 220d M Sport, 218d Active Tourer, 220d Active Tourer"
+                ],
+                "commonFailures": [
+                  "Timing chain tensioner failure (CSB 03 2014), typically 60k-100k miles",
+                  "Chain guide wear causing rattling on cold start",
+                  "EGR valve sticking leading to reduced performance"
+                ],
+                "avgRebuiltPrice": "£1,800 - £3,000",
+                "cta": "Get quotes for N47D20 BMW 2 Series engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+              }
+            ]
           },
           {
             "name": "Petrol Engines",
-            "entries": []
+            "entries": [
+              {
+                "code": "B48B20",
+                "title": "2.0L Petrol",
+                "history": "Modular 2.0L turbo petrol replacing N20, featuring improved cooling and reliability-standard in 220i/228i variants.",
+                "fuel": "Petrol",
+                "size": "2.0 Litre",
+                "power": "184-231 hp",
+                "years": "2015-2021",
+                "compatibleVariants": [
+                  "220i, 220i SE, 220i Sport, 220i M Sport, 220i xDrive, 228i, 228i M Sport, 228i xDrive, 220i Active Tourer, 228i Active Tourer, 220i Gran Tourer, 228i Gran Tourer"
+                ],
+                "commonFailures": [
+                  "Coolant hose/thermostat housing leak (SI B11 23 19), typically 40k-70k miles",
+                  "High-pressure fuel pump failure causing rough idle",
+                  "Turbocharger wastegate rattle on high-mileage units"
+                ],
+                "avgRebuiltPrice": "£2,100 - £3,800",
+                "cta": "Get quotes for B48B20 BMW 2 Series engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              },
+              {
+                "code": "B48B20T1",
+                "title": "2.0L Petrol",
+                "history": "High-output B48 variant for 228i, delivering 231PS with revised turbo mapping for enhanced performance response.",
+                "fuel": "Petrol",
+                "size": "2.0 Litre",
+                "power": "231 hp",
+                "years": "2015-2021",
+                "compatibleVariants": [
+                  "228i, 228i M Sport, 228i xDrive, 228i Convertible, 228i Coupe"
+                ],
+                "commonFailures": [
+                  "Coolant hose routing leak (shared with B48B20), typically 40k-70k miles",
+                  "HPFP failure under high-load conditions",
+                  "Turbo actuator wear causing boost inconsistency"
+                ],
+                "avgRebuiltPrice": "£2,500 - £4,100",
+                "cta": "Get quotes for B48B20T1 BMW 2 Series engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              },
+              {
+                "code": "B38A15",
+                "title": "1.5L Petrol",
+                "history": "Entry-level 3-cylinder turbo petrol for 218i, balancing efficiency and refinement for cost-conscious BMW 2 Series buyers.",
+                "fuel": "Petrol",
+                "size": "1.5 Litre",
+                "power": "136 hp",
+                "years": "2014-2021",
+                "compatibleVariants": [
+                  "218i, 218i SE, 218i Sport, 218i M Sport, 218i Active Tourer, 218i Gran Tourer"
+                ],
+                "commonFailures": [
+                  "Coolant hose rupture at thermostat housing, typically 35k-65k miles",
+                  "Valvetronic motor failure causing rough idle",
+                  "Turbocharger oil feed line leakage on early units"
+                ],
+                "avgRebuiltPrice": "£1,850 - £3,100",
+                "cta": "Get quotes for B38A15 BMW 2 Series engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              },
+              {
+                "code": "N20B20",
+                "title": "2.0L Petrol",
+                "history": "Pre-2017 2.0L turbo petrol; timing chain guides prone to collapse-CSB 07 2015 bulletin drives urgent replacement demand.",
+                "fuel": "Petrol",
+                "size": "2.0 Litre",
+                "power": "184 hp",
+                "years": "2014-2017",
+                "compatibleVariants": [
+                  "220i, 220i SE, 220i Sport, 220i M Sport, 220i xDrive, 220i Coupe, 220i Convertible"
+                ],
+                "commonFailures": [
+                  "Timing chain guide collapse (CSB 07 2015), typically 50k-90k miles",
+                  "High-pressure fuel pump failure causing no-start conditions",
+                  "Turbocharger wastegate actuator wear leading to boost loss"
+                ],
+                "avgRebuiltPrice": "£1,900 - £3,400",
+                "cta": "Get quotes for N20B20 BMW 2 Series engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              },
+              {
+                "code": "N55B30",
+                "title": "3.0L Petrol",
+                "history": "3.0L single-turbo inline-six for M235i; 326PS with VANOS timing-motorsport engineering for performance-focused buyers.",
+                "fuel": "Petrol",
+                "size": "3.0 Litre",
+                "power": "326 hp",
+                "years": "2014-2018",
+                "compatibleVariants": [
+                  "M235i, M235i Coupe, M235i Convertible, M235i xDrive"
+                ],
+                "commonFailures": [
+                  "Turbo wastegate actuator rattle, typically 60k-100k miles",
+                  "VANOS solenoid failure causing rough idle and reduced power",
+                  "Water pump/thermostat failure leading to overheating"
+                ],
+                "avgRebuiltPrice": "£3,900 - £6,500",
+                "cta": "Get quotes for N55B30 BMW 2 Series engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              },
+              {
+                "code": "B58B30",
+                "title": "3.0L Petrol",
+                "history": "3.0L turbo inline-six for M240i; closed-deck block-flagship petrol with improved reliability for 2 Series performance.",
+                "fuel": "Petrol",
+                "size": "3.0 Litre",
+                "power": "340 hp",
+                "years": "2016-2021",
+                "compatibleVariants": [
+                  "M240i, M240i Coupe, M240i Convertible, M240i xDrive"
+                ],
+                "commonFailures": [
+                  "Water pump/thermostat housing leak, typically 70k-110k miles",
+                  "Turbocharger oil feed line seepage on high-mileage units",
+                  "Charge pipe cracking under high boost conditions"
+                ],
+                "avgRebuiltPrice": "£4,200 - £7,500",
+                "cta": "Get quotes for B58B30 BMW 2 Series engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              },
+              {
+                "code": "S55B30",
+                "title": "3.0L Petrol",
+                "history": "M Division 3.0L twin-turbo for M2 Competition, delivering 410PS with forged internals and track-focused calibration.",
+                "fuel": "Petrol",
+                "size": "3.0 Litre",
+                "power": "410 hp",
+                "years": "2016-2021",
+                "compatibleVariants": [
+                  "M2 Competition"
+                ],
+                "commonFailures": [
+                  "Crank hub spincast issue under aggressive track use (debated)",
+                  "Turbocharger bearing wear on high-mileage track-focused units",
+                  "Oil cooler gasket leakage at extended service intervals"
+                ],
+                "avgRebuiltPrice": "£6,500 - £10,500",
+                "cta": "Get quotes for S55B30 BMW 2 Series engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              }
+            ]
           }
         ],
         "closing": "Can't find your engine code? Enter your registration number above - we'll instantly identify the exact unit, its technical specifications, and live replacement prices from UK BMW 2 Series engine specialists. Every rebuilt engine comes with a minimum 12‑month unlimited mileage warranty."
@@ -812,13 +1034,125 @@
           "name": "Diesel Engines",
           "era": "Extracted from detailed diesel engine families across BMW 2 Series variants.",
           "failureNote": "Main replacement triggers are timing chain wear, EGR / cooling faults and turbo-control issues.",
-          "engines": []
+          "engines": [
+            {
+              "code": "B47D20",
+              "fuel": "Diesel",
+              "size": "2.0L",
+              "power": "150-190 hp",
+              "compatibleModels": "218d, 218d SE, 218d Sport, 218d M Sport, 218d xDrive, 220d, 220d SE, 220d Sport, 220d M Sport, 220d xDrive, 218d Active Tourer, 220d Active Tourer, 218d Gran Tourer, 220d Gran Tourer",
+              "avgRebuiltPrice": "£1,950 - £3,200",
+              "cta": "Get quotes for B47D20 BMW 2 Series engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+            },
+            {
+              "code": "B47D20T1",
+              "fuel": "Diesel",
+              "size": "2.0L",
+              "power": "224 hp",
+              "compatibleModels": "225d, 225d M Sport, 225d xDrive, 225d Active Tourer, 225d Gran Tourer",
+              "avgRebuiltPrice": "£2,900 - £4,500",
+              "cta": "Get quotes for B47D20T1 BMW 2 Series engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+            },
+            {
+              "code": "B37C15",
+              "fuel": "Diesel",
+              "size": "1.5L",
+              "power": "116 hp",
+              "compatibleModels": "216d, 216d SE, 216d Sport, 216d EfficientDynamics, 216d Active Tourer, 216d Gran Tourer",
+              "avgRebuiltPrice": "£2,000 - £3,300",
+              "cta": "Get quotes for B37C15 BMW 2 Series engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+            },
+            {
+              "code": "N47D20",
+              "fuel": "Diesel",
+              "size": "2.0L",
+              "power": "150-190 hp",
+              "compatibleModels": "218d, 218d SE, 218d Sport, 218d M Sport, 220d, 220d SE, 220d Sport, 220d M Sport, 218d Active Tourer, 220d Active Tourer",
+              "avgRebuiltPrice": "£1,800 - £3,000",
+              "cta": "Get quotes for N47D20 BMW 2 Series engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+            }
+          ]
         },
         {
           "name": "Petrol Engines",
           "era": "Extracted from detailed petrol and performance engine families across BMW 2 Series variants.",
           "failureNote": "Main replacement demand comes from timing-chain, cooling-system and performance thermal-management faults.",
-          "engines": []
+          "engines": [
+            {
+              "code": "B48B20",
+              "fuel": "Petrol",
+              "size": "2.0L",
+              "power": "184-231 hp",
+              "compatibleModels": "220i, 220i SE, 220i Sport, 220i M Sport, 220i xDrive, 228i, 228i M Sport, 228i xDrive, 220i Active Tourer, 228i Active Tourer, 220i Gran Tourer, 228i Gran Tourer",
+              "avgRebuiltPrice": "£2,100 - £3,800",
+              "cta": "Get quotes for B48B20 BMW 2 Series engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            },
+            {
+              "code": "B48B20T1",
+              "fuel": "Petrol",
+              "size": "2.0L",
+              "power": "231 hp",
+              "compatibleModels": "228i, 228i M Sport, 228i xDrive, 228i Convertible, 228i Coupe",
+              "avgRebuiltPrice": "£2,500 - £4,100",
+              "cta": "Get quotes for B48B20T1 BMW 2 Series engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            },
+            {
+              "code": "B38A15",
+              "fuel": "Petrol",
+              "size": "1.5L",
+              "power": "136 hp",
+              "compatibleModels": "218i, 218i SE, 218i Sport, 218i M Sport, 218i Active Tourer, 218i Gran Tourer",
+              "avgRebuiltPrice": "£1,850 - £3,100",
+              "cta": "Get quotes for B38A15 BMW 2 Series engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            },
+            {
+              "code": "N20B20",
+              "fuel": "Petrol",
+              "size": "2.0L",
+              "power": "184 hp",
+              "compatibleModels": "220i, 220i SE, 220i Sport, 220i M Sport, 220i xDrive, 220i Coupe, 220i Convertible",
+              "avgRebuiltPrice": "£1,900 - £3,400",
+              "cta": "Get quotes for N20B20 BMW 2 Series engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            },
+            {
+              "code": "N55B30",
+              "fuel": "Petrol",
+              "size": "3.0L",
+              "power": "326 hp",
+              "compatibleModels": "M235i, M235i Coupe, M235i Convertible, M235i xDrive",
+              "avgRebuiltPrice": "£3,900 - £6,500",
+              "cta": "Get quotes for N55B30 BMW 2 Series engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            },
+            {
+              "code": "B58B30",
+              "fuel": "Petrol",
+              "size": "3.0L",
+              "power": "340 hp",
+              "compatibleModels": "M240i, M240i Coupe, M240i Convertible, M240i xDrive",
+              "avgRebuiltPrice": "£4,200 - £7,500",
+              "cta": "Get quotes for B58B30 BMW 2 Series engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            },
+            {
+              "code": "S55B30",
+              "fuel": "Petrol",
+              "size": "3.0L",
+              "power": "410 hp",
+              "compatibleModels": "M2 Competition",
+              "avgRebuiltPrice": "£6,500 - £10,500",
+              "cta": "Get quotes for S55B30 BMW 2 Series engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            }
+          ]
         }
       ],
       "headingLines": [
@@ -856,20 +1190,6 @@
           "rootCause": "The rear-mounted timing chain on early N47 units relies on a tensioner and plastic guides that degrade under thermal cycling. Oil starvation or guide fragmentation leads to chain stretch, rattling on cold starts, and eventual catastrophic engine seizure if ignored.",
           "repairOptions": [
             {
-              "tier": "Repair Tier",
-              "dealerPrice": "Dealer Price (Parts + Labour)",
-              "specialistPrice": "Specialist Price (Parts + Labour)",
-              "whatItInvolves": "What It Involves",
-              "longevity": "Longevity / Suitability"
-            },
-            {
-              "tier": "",
-              "dealerPrice": "",
-              "specialistPrice": "",
-              "whatItInvolves": "",
-              "longevity": ""
-            },
-            {
               "tier": "Minor - Preventative Timing Chain Upgrade",
               "dealerPrice": "£900 - £1,350",
               "specialistPrice": "£650 - £950",
@@ -894,20 +1214,6 @@
           "typicalFailureMileage": "50,000 - 90,000 miles",
           "rootCause": "The integrated EGR cooler on B47 engines is prone to internal cracking under thermal stress, allowing coolant to leak into the intake or exhaust. BMW issued Service Bulletin SI B12 03 18 mandating an upgraded cooler, but continued short-trip driving often accelerates BMW 2 Series engine failure.",
           "repairOptions": [
-            {
-              "tier": "Repair Tier",
-              "dealerPrice": "Dealer Price (Parts + Labour)",
-              "specialistPrice": "Specialist Price (Parts + Labour)",
-              "whatItInvolves": "What It Involves",
-              "longevity": "Longevity / Suitability"
-            },
-            {
-              "tier": "",
-              "dealerPrice": "",
-              "specialistPrice": "",
-              "whatItInvolves": "",
-              "longevity": ""
-            },
             {
               "tier": "Intermediate - EGR Cooler & Intake Cleaning",
               "dealerPrice": "£1,200 - £1,750",
@@ -934,20 +1240,6 @@
           "rootCause": "The plastic timing chain guides on the N20B20 become brittle with age and heat exposure, leading to fragmentation. Broken plastic blocks oil pickup screens, starving the VANOS system and turbo bearings, which quickly escalates into severe BMW 2 Series engine knocking and complete failure.",
           "repairOptions": [
             {
-              "tier": "Repair Tier",
-              "dealerPrice": "Dealer Price (Parts + Labour)",
-              "specialistPrice": "Specialist Price (Parts + Labour)",
-              "whatItInvolves": "What It Involves",
-              "longevity": "Longevity / Suitability"
-            },
-            {
-              "tier": "",
-              "dealerPrice": "",
-              "specialistPrice": "",
-              "whatItInvolves": "",
-              "longevity": ""
-            },
-            {
               "tier": "Minor - Preventative Guide & Tensioner Replacement",
               "dealerPrice": "£1,050 - £1,500",
               "specialistPrice": "£700 - £1,000",
@@ -973,20 +1265,6 @@
           "rootCause": "The plastic thermostat housing and coolant crossover pipes on B48/B58 engines warp and crack due to repeated heat cycling, causing slow but steady coolant loss. Ignoring minor leaks leads to rapid overheating, warped cylinder heads, and turbocharger damage across the BMW 2 Series range.",
           "repairOptions": [
             {
-              "tier": "Repair Tier",
-              "dealerPrice": "Dealer Price (Parts + Labour)",
-              "specialistPrice": "Specialist Price (Parts + Labour)",
-              "whatItInvolves": "What It Involves",
-              "longevity": "Longevity / Suitability"
-            },
-            {
-              "tier": "",
-              "dealerPrice": "",
-              "specialistPrice": "",
-              "whatItInvolves": "",
-              "longevity": ""
-            },
-            {
               "tier": "Intermediate - Revised Coolant Routing & Thermostat Upgrade",
               "dealerPrice": "£850 - £1,400",
               "specialistPrice": "£600 - £950",
@@ -1009,7 +1287,7 @@
         "h4": "Don't Let Engine Failure Write Off Your BMW 2 Series",
         "paragraph": "Engine problems in the BMW 2 Series are rarely isolated to a single cheap part, and ignoring early symptoms quickly turns a manageable repair into a total engine loss. Whether you are dealing with timing chain degradation, EGR cracking, or cooling system weaknesses, EngineMarket connects you directly with vetted UK BMW 2 Series specialists who provide transparent, comparable pricing for both targeted repairs and complete BMW 2 Series engine replacement. Every rebuilt unit includes upgraded components that eliminate known weak points, comes with a minimum 12-month unlimited mileage warranty, and is delivered nationwide with full supply & fit options. Stop guessing with main dealer quotes - compare prices from certified specialists and secure a reliable, warranty-backed solution today.",
         "buttonText": "Compare BMW 2 Series Engine Replacement Prices Now →",
-        "disclaimer": ""
+        "disclaimer": "All prices are indicative UK market ranges based on historical quote data and repair requests from our network of engine specialists. Dealer pricing is estimated based on published main dealer labour rates and genuine OEM parts pricing. Specialist pricing reflects actual quote data from EngineMarket’s UK network. Actual costs vary depending on damage severity, vehicle condition, variant, and workshop location within the UK. Use our free comparison tool to get tailored quotes for your specific BMW 2 Series and engine code. Every engine supplied through EngineMarket carries a minimum 12-month unlimited mileage warranty - always confirm exact terms with your chosen supplier."
       }
     },
     "engineTypes": {
@@ -1020,38 +1298,86 @@
         {
           "title": "BMW 2 Series Reconditioned Engines (Recon)",
           "description": "Professionally restored bmw 2 series engines with worn components replaced to meet oem-spec tolerances and reliability standards.",
+          "frontDescription": "Professionally restored bmw 2 series engines with worn components replaced to meet oem-spec tolerances and reliability standards.",
+          "frontDisclaimer": "Suitability depends on exact engine code, chassis and variant specification.",
+          "backDescription": "Reconditioned bmw 2 series engines undergo strip, clean and rebuild with upgraded parts addressing known b47 egr or n47 timing chain weaknesses.",
+          "backBullets": [
+            "Includes upgraded egr cooler or timing components per bmw service bulletins.",
+            "Bench tested and moT emissions compliant for f22, f45 and g42 chassis models.",
+            "Typical turnaround three to five days from uk specialist rebuilders nationwide."
+          ],
           "priceRange": "£1,950 - £3,500 (supply only)",
-          "cta": "Compare reconditioned bmw 2 series engine prices ->"
+          "cta": "Compare reconditioned bmw 2 series engine prices"
         },
         {
           "title": "BMW 2 Series Rebuilt Engines",
           "description": "Complete bmw 2 series engine rebuild with critical failure points addressed using upgraded components and specialist machining processes.",
+          "frontDescription": "Complete bmw 2 series engine rebuild with critical failure points addressed using upgraded components and specialist machining processes.",
+          "frontDisclaimer": "Price varies by engine code, damage severity and required calibration work.",
+          "backDescription": "Rebuilt bmw 2 series engines replace worn internals with upgraded parts targeting b48 coolant leaks or n20 timing guide failures for lasting reliability.",
+          "backBullets": [
+            "Upgraded timing chains, guides and tensioners fitted where applicable to bmw specs.",
+            "Full compression and leak-down testing ensures performance matches factory standards.",
+            "Twelve month unlimited mileage warranty included with every rebuilt unit supplied."
+          ],
           "priceRange": "£2,100 - £4,200 (supply only)",
-          "cta": "Get rebuilt bmw 2 series engine quotes ->"
+          "cta": "Get rebuilt bmw 2 series engine quotes"
         },
         {
           "title": "BMW 2 Series Used Engines",
           "description": "Low mileage bmw 2 series donor engines sourced from uk breakers with verified history and compression test results before dispatch.",
+          "frontDescription": "Low mileage bmw 2 series donor engines sourced from uk breakers with verified history and compression test results before dispatch.",
+          "frontDisclaimer": "Mileage and condition vary; request full history report before confirming purchase.",
+          "backDescription": "Used bmw 2 series engines offer budget replacement options with verified mileage; ideal for older f22 or f45 variants where cost is the primary concern.",
+          "backBullets": [
+            "Verified mileage and compression test results provided with every donor engine.",
+            "Suitable for b47, n47, b48 and n20 codes where original block remains undamaged.",
+            "Fast uk mainland delivery available; warranty terms vary by breaker and condition."
+          ],
           "priceRange": "£1,600 - £3,200 (supply only)",
-          "cta": "Check used bmw 2 series engine availability ->"
+          "cta": "Check used bmw 2 series engine availability"
         },
         {
           "title": "BMW 2 Series Remanufactured Engines",
           "description": "Factory-spec bmw 2 series remanufactured engines rebuilt to original tolerances with new components and dyno testing before dispatch.",
+          "frontDescription": "Factory-spec bmw 2 series remanufactured engines rebuilt to original tolerances with new components and dyno testing before dispatch.",
+          "frontDisclaimer": "Premium option for m240i b58 or m235i n55 variants requiring maximum reliability.",
+          "backDescription": "Remanufactured bmw 2 series engines meet factory specifications with new pistons, bearings and seals; ideal for high-performance b58 or n55 applications.",
+          "backBullets": [
+            "New crankshaft bearings, pistons and seals fitted to original bmw engineering specs.",
+            "Dyno tested for power output and emissions compliance before uk mainland delivery.",
+            "Extended warranty options available for m performance and flagship variant owners."
+          ],
           "priceRange": "£2,800 - £5,500 (supply only)",
-          "cta": "Compare remanufactured bmw 2 series engine costs ->"
+          "cta": "Compare remanufactured bmw 2 series engine costs"
         },
         {
           "title": "BMW 2 Series Refurbished Engines",
           "description": "Cosmetically refreshed bmw 2 series engines with ancillary replacement and basic rebuild for budget-conscious owners seeking quick turnaround.",
+          "frontDescription": "Cosmetically refreshed bmw 2 series engines with ancillary replacement and basic rebuild for budget-conscious owners seeking quick turnaround.",
+          "frontDisclaimer": "Best for minor wear issues; not suitable for catastrophic failure or seized engines.",
+          "backDescription": "Refurbished bmw 2 series engines address surface wear and ancillary failures; suitable for b37 or b38 entry variants where internal damage is minimal.",
+          "backBullets": [
+            "Ancillary components like alternator, starter and mounts replaced as standard.",
+            "Fast turnaround for minor wear repairs on f45 active tourer or f46 gran tourer models.",
+            "Cost-effective solution when compression and oil pressure remain within factory specs."
+          ],
           "priceRange": "£1,800 - £3,000 (supply only)",
-          "cta": "View refurbished bmw 2 series engine options ->"
+          "cta": "View refurbished bmw 2 series engine options"
         },
         {
           "title": "BMW 2 Series Supply & Fit Engines",
           "description": "Complete bmw 2 series engine replacement with certified specialist installation, ecu coding and calibration included at uk mainland garages.",
+          "frontDescription": "Complete bmw 2 series engine replacement with certified specialist installation, ecu coding and calibration included at uk mainland garages.",
+          "frontDisclaimer": "Installation cost varies by garage location, chassis complexity and calibration needs.",
+          "backDescription": "Supply and fit bmw 2 series engines include professional installation by bmw-certified specialists with ecu adaptation and post-fit diagnostics completed.",
+          "backBullets": [
+            "Ecu coding and adaptation completed to ensure moT emissions compliance and drivability.",
+            "Nationwide network of certified bmw specialists covering f22, f45, g42 and u06 chassis.",
+            "Post-installation road test and diagnostic clearance included with every fitted engine."
+          ],
           "priceRange": "£450 - £850 added to engine price",
-          "cta": "Find bmw 2 series engine supply & fit deals ->"
+          "cta": "Find bmw 2 series engine supply & fit deals"
         }
       ],
       "closing": "All engine types include a minimum 12‑month unlimited mileage warranty when sourced through EngineMarket. Prices are typical UK market ranges based on historical quote data from our network and depend on exact engine code, variant, mileage and supplier. Use our free comparison tool above - enter your registration to get tailored quotes for your specific BMW 2 Series within hours.",

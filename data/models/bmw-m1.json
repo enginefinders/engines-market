@@ -832,13 +832,6 @@
           "rootCause": "The dry sump scavenge pump impellers wear prematurely under sustained high-RPM load, reducing oil return pressure and starving the crankshaft bearings.",
           "repairOptions": [
             {
-              "tier": "Repair Tier",
-              "dealerPrice": "Dealer Price (Parts + Labour)",
-              "specialistPrice": "Specialist Price (Parts + Labour)",
-              "whatItInvolves": "What It Involves",
-              "longevity": "Longevity / Suitability"
-            },
-            {
               "tier": "Intermediate - Scavenge Pump & Filter Refresh",
               "dealerPrice": "£3,500 - £5,200",
               "specialistPrice": "£2,200 - £3,400",
@@ -863,13 +856,6 @@
           "typicalFailureMileage": "40,000 - 70,000 miles",
           "rootCause": "Mechanical Kugelfischer PL04 injection pumps suffer internal plunger wear and linkage fatigue, causing erratic fuel delivery that runs cylinders lean or rich under load.",
           "repairOptions": [
-            {
-              "tier": "Repair Tier",
-              "dealerPrice": "Dealer Price (Parts + Labour)",
-              "specialistPrice": "Specialist Price (Parts + Labour)",
-              "whatItInvolves": "What It Involves",
-              "longevity": "Longevity / Suitability"
-            },
             {
               "tier": "Minor - Calibration & Flow Bench Service",
               "dealerPrice": "£1,800 - £2,600",
@@ -896,13 +882,6 @@
           "rootCause": "The hydraulic timing chain tensioner loses pressure over time due to seal degradation and oil varnish buildup, allowing chain slap that stretches guides and jumps teeth.",
           "repairOptions": [
             {
-              "tier": "Repair Tier",
-              "dealerPrice": "Dealer Price (Parts + Labour)",
-              "specialistPrice": "Specialist Price (Parts + Labour)",
-              "whatItInvolves": "What It Involves",
-              "longevity": "Longevity / Suitability"
-            },
-            {
               "tier": "Minor - Preventative Timing Chain & Tensioner Kit",
               "dealerPrice": "£4,200 - £6,500",
               "specialistPrice": "£2,800 - £4,100",
@@ -927,13 +906,6 @@
           "typicalFailureMileage": "45,000 - 80,000 miles",
           "rootCause": "Aggressive sustained high-RPM operation combined with inadequate warm-up cycles causes piston rings to score the cast-iron liners, leading to rapid compression loss and oil consumption.",
           "repairOptions": [
-            {
-              "tier": "Repair Tier",
-              "dealerPrice": "Dealer Price (Parts + Labour)",
-              "specialistPrice": "Specialist Price (Parts + Labour)",
-              "whatItInvolves": "What It Involves",
-              "longevity": "Longevity / Suitability"
-            },
             {
               "tier": "Intermediate - Top-End Refresh & Re-ring",
               "dealerPrice": "£7,500 - £10,500",
@@ -960,13 +932,6 @@
           "rootCause": "Gradual thinning of the bearing shell material due to thermal cycling and oil breakdown increases crankshaft clearance, causing pressure drops and potential journal scoring.",
           "repairOptions": [
             {
-              "tier": "Repair Tier",
-              "dealerPrice": "Dealer Price (Parts + Labour)",
-              "specialistPrice": "Specialist Price (Parts + Labour)",
-              "whatItInvolves": "What It Involves",
-              "longevity": "Longevity / Suitability"
-            },
-            {
               "tier": "Intermediate - Bottom-End Bearing Refresh",
               "dealerPrice": "£5,800 - £8,400",
               "specialistPrice": "£3,600 - £5,500",
@@ -987,9 +952,9 @@
       ],
       "finalCta": {
         "h4": "Don't Let Engine Failure Write Off Your BMW M1",
-        "paragraph": "",
+        "paragraph": "The M88 inline-six is an engineering icon, but its racing-derived architecture leaves little margin for error once wear patterns begin. Whether you’re facing dry sump degradation, Kugelfischer fuel system drift, or timing chain instability, delaying resolution on a collector asset like the BMW M1 rarely saves money. EngineMarket connects you directly with vetted UK heritage specialists who supply and fit rebuilt M88 units with upgraded internal components designed to eliminate these factory weaknesses. With nationwide delivery, provenance documentation, and a minimum 12-month unlimited mileage warranty on every unit, you secure your vehicle’s investment without the main dealer premium.",
         "buttonText": "Compare BMW M1 Engine Replacement Prices Now →",
-        "disclaimer": ""
+        "disclaimer": "All prices are indicative UK market ranges based on historical quote data and repair requests from our network of engine specialists. Dealer pricing is estimated based on published main dealer labour rates and genuine OEM parts pricing. Specialist pricing reflects actual quote data from EngineMarket’s UK network. Actual costs vary depending on damage severity, vehicle condition, variant, and workshop location within the UK. Use our free comparison tool to get tailored quotes for your specific BMW M1 and engine code. Every engine supplied through EngineMarket carries a minimum 12‑month unlimited mileage warranty - always confirm exact terms with your chosen supplier."
       }
     },
     "engineTypes": {
@@ -1000,38 +965,86 @@
         {
           "title": "BMW M1 Reconditioned Engines (Recon)",
           "description": "Specialist heritage rebuild of your BMW M1 M88 engine with upgraded internals and provenance documentation for collector peace of mind.",
+          "frontDescription": "Specialist heritage rebuild of your BMW M1 M88 engine with upgraded internals and provenance documentation for collector peace of mind.",
+          "frontDisclaimer": "Suitability depends on chassis prefix, production year and intended use case for your BMW M1.",
+          "backDescription": "Reconditioned BMW M1 M88 units restore factory tolerances with heritage-spec components, ideal for investment-grade restorations and concours preparation.",
+          "backBullets": [
+            "M88/1 and M88/3 codes receive dry sump pump upgrades addressing known lubrication wear patterns in track use.",
+            "Kugelfischer injection calibration included to preserve authentic mechanical fuel delivery character of your BMW M1.",
+            "Bench-tested pressure calibration and serial documentation provided for provenance verification and valuation protection."
+          ],
           "priceRange": "£18,500 - £45,000 (supply only)",
-          "cta": "Compare reconditioned BMW M1 engine prices ->"
+          "cta": "Compare reconditioned BMW M1 engine prices"
         },
         {
           "title": "BMW M1 Rebuilt Engines",
           "description": "Comprehensive BMW M1 M88 rebuild with new bearings, seals and upgraded timing components for reliable daily or track use preservation.",
+          "frontDescription": "Comprehensive BMW M1 M88 rebuild with new bearings, seals and upgraded timing components for reliable daily or track use preservation.",
+          "frontDisclaimer": "Specification confirmed after specialist inspection of your BMW M1 block and rotating assembly.",
+          "backDescription": "Rebuilt BMW M1 engines feature upgraded tri-metal bearings and reinforced chains, addressing common M88 failure points while retaining authentic character.",
+          "backBullets": [
+            "Timing chain tensioner and guide replacement eliminates valvetrain rattle common in high-mileage BMW M1 M88 engines.",
+            "Cylinder liner inspection and honing ensures compression integrity for investment-grade BMW M1 restoration projects.",
+            "Full dyno validation and heritage documentation included to support valuation and insurance classification for your BMW M1."
+          ],
           "priceRange": "£19,500 - £48,000 (supply only)",
-          "cta": "Get rebuilt BMW M1 engine quotes ->"
+          "cta": "Get rebuilt BMW M1 engine quotes"
         },
         {
           "title": "BMW M1 Used Engines",
           "description": "Original BMW M1 M88 engines sourced from verified collectors, offering authentic provenance for purist restoration at accessible investment levels.",
+          "frontDescription": "Original BMW M1 M88 engines sourced from verified collectors, offering authentic provenance for purist restoration at accessible investment levels.",
+          "frontDisclaimer": "Condition varies; compression test and borescope inspection recommended before purchase of your BMW M1.",
+          "backDescription": "Used BMW M1 M88 units offer original casting authenticity for numbers-matching restorations, though mileage and service history require careful verification.",
+          "backBullets": [
+            "Verify engine number format and casting codes against your BMW M1 chassis prefix to confirm period-correct compatibility.",
+            "Request compression test results and service documentation to assess remaining lifespan of your potential BMW M1 M88 engine.",
+            "Ideal for budget-conscious collectors prioritising originality over immediate reliability in their BMW M1 restoration project."
+          ],
           "priceRange": "£15,000 - £35,000 (supply only)",
-          "cta": "Check used BMW M1 engine availability ->"
+          "cta": "Check used BMW M1 engine availability"
         },
         {
           "title": "BMW M1 Remanufactured Engines",
           "description": "BMW Group Classic certified remanufactured BMW M1 M88 engines with factory-spec tolerances and full heritage documentation for institutional buyers.",
+          "frontDescription": "BMW Group Classic certified remanufactured BMW M1 M88 engines with factory-spec tolerances and full heritage documentation for institutional buyers.",
+          "frontDisclaimer": "Certification requires chassis verification and may involve extended lead times for your BMW M1 project.",
+          "backDescription": "Remanufactured BMW M1 engines meet original factory specifications with new or reconditioned components, ideal for museum acquisition and concours display.",
+          "backBullets": [
+            "Every component inspected to BMW Group Classic standards with casting date verification for period-correct BMW M1 authenticity.",
+            "Includes heritage build sheet, service history reconstruction and valuation certificate for insurance and auction documentation.",
+            "Preferred for institutional acquisitions, investment preservation and high-profile BMW M1 concours entries."
+          ],
           "priceRange": "£22,000 - £52,000 (supply only)",
-          "cta": "Compare remanufactured BMW M1 engine costs ->"
+          "cta": "Compare remanufactured BMW M1 engine costs"
         },
         {
           "title": "BMW M1 Refurbished Engines",
           "description": "Targeted component refresh for BMW M1 M88 engines addressing specific wear items while retaining original block and rotating assembly authenticity.",
+          "frontDescription": "Targeted component refresh for BMW M1 M88 engines addressing specific wear items while retaining original block and rotating assembly authenticity.",
+          "frontDisclaimer": "Best for BMW M1 with documented service history and no catastrophic internal damage requiring full rebuild.",
+          "backDescription": "Refurbished BMW M1 engines focus on critical wear items like seals, gaskets and ancillaries, extending service life without full disassembly costs.",
+          "backBullets": [
+            "Rear main seal, valve stem seals and gasket set replacement addresses common oil leakage points in aging BMW M1 M88 engines.",
+            "Water pump, thermostat and cooling hose refresh prevents overheating during track use of your BMW M1.",
+            "Cost-effective for BMW M1 owners prioritising reliability while preserving original engine character and provenance."
+          ],
           "priceRange": "£17,000 - £40,000 (supply only)",
-          "cta": "View refurbished BMW M1 engine options ->"
+          "cta": "View refurbished BMW M1 engine options"
         },
         {
           "title": "BMW M1 Supply & Fit Engines",
           "description": "Complete BMW M1 M88 engine replacement with certified heritage specialist fitting, calibration and road testing for turnkey restoration confidence.",
+          "frontDescription": "Complete BMW M1 M88 engine replacement with certified heritage specialist fitting, calibration and road testing for turnkey restoration confidence.",
+          "frontDisclaimer": "Cost varies by workshop location, ancillary scope and calibration requirements for your BMW M1 variant.",
+          "backDescription": "Supply and fit service connects your BMW M1 with BMW Group Classic certified technicians for professional installation, calibration and post-fit validation.",
+          "backBullets": [
+            "Engine removal, installation and calibration by heritage-specialist technicians familiar with BMW M1 M88 architecture.",
+            "Dyno validation and road test ensure proper Kugelfischer injection calibration and dry sump function for your BMW M1.",
+            "Ideal for collectors seeking turnkey restoration without managing multiple specialists for their BMW M1 asset."
+          ],
           "priceRange": "£2,500 - £6,500 added to engine price",
-          "cta": "Find BMW M1 engine supply & fit deals ->"
+          "cta": "Find BMW M1 engine supply & fit deals"
         }
       ],
       "closing": "All engine types include a minimum 12‑month unlimited mileage warranty when sourced through EngineMarket. Prices are typical UK market ranges based on historical quote data from our network and depend on exact engine code, variant, mileage and supplier. Use our free comparison tool above - enter your registration to get tailored quotes for your specific BMW M1 within hours.",
@@ -1055,10 +1068,6 @@
       "h2": "BMW M1 Engines by Size - Find the Right Displacement for Your Variant",
       "intro": "Every displacement fitted to the BMW M1 is listed below, with compatible M88 engine codes, production years and common failure notes to help you identify the correct replacement unit.",
       "groups": [
-        {
-          "title": "BMW M1 Diesel Engine Sizes",
-          "items": []
-        },
         {
           "title": "BMW M1 Petrol Engine Sizes",
           "items": [
@@ -1088,10 +1097,6 @@
               "cta": "Compare BMW M1 3.5L petrol engine prices"
             }
           ]
-        },
-        {
-          "title": "BMW M1 Hybrid / MHEV Engine Sizes",
-          "items": []
         }
       ],
       "closing": "Not sure which engine size your BMW M1 needs? Enter your registration number above - we'll identify the exact displacement, engine code and compatible replacement options instantly. All engines supplied through EngineMarket include a minimum 12‑month unlimited mileage warranty from UK BMW M1 specialists.",
@@ -1116,17 +1121,6 @@
       "h2": "BMW M1 Engines by Fuel Type",
       "intro": "Choose your BMW M1 engine by fuel type to compare realistic replacement prices, known issues, and compatible UK supply options - from the iconic 3.5L M88 petrol inline-six that powered every production M1 between 1978 and 1981.",
       "items": [
-        {
-          "title": "BMW M1 Diesel Engines",
-          "description": "",
-          "descriptor": "",
-          "families": [],
-          "foundIn": [],
-          "knownFor": [],
-          "typicalModels": [],
-          "importantNotes": [],
-          "cta": ""
-        },
         {
           "title": "BMW M1 Petrol Engines",
           "description": "The BMW M1 was exclusively powered by the naturally aspirated 3.5L M88 inline-six petrol engine, a motorsport-derived unit featuring mechanical Kugelfischer injection and dry sump lubrication across all 1978-1981 production variants.",
@@ -1157,17 +1151,6 @@
           ],
           "importantNotes": [],
           "cta": "Compare BMW M1 Petrol engine prices"
-        },
-        {
-          "title": "BMW M1 Hybrid / Electrified Engines",
-          "description": "",
-          "descriptor": "",
-          "families": [],
-          "foundIn": [],
-          "knownFor": [],
-          "typicalModels": [],
-          "importantNotes": [],
-          "cta": ""
         }
       ],
       "closing": "Not sure which fuel type your BMW M1 has? Enter your registration number above to instantly identify your engine code, fuel system and compatible replacement options - all backed by a minimum 12‑month unlimited mileage warranty from UK BMW M1 specialists.",

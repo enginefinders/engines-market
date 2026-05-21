@@ -891,6 +891,25 @@
                 "avgRebuiltPrice": "£7,000 - £22,000",
                 "cta": "Get quotes for S63B44T4 BMW M5 engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              },
+              {
+                "code": "S68B44 PHEV",
+                "title": "4.4L Petrol Hybrid",
+                "history": "The most powerful production M5 ever, combining the S68 V8 with a plug-in hybrid system. Total system output of 727hp marks the beginning of the electrified M era.",
+                "fuel": "PHEV",
+                "size": "4.4 Litre",
+                "power": "727 hp (combined system)",
+                "years": "2024-present",
+                "compatibleVariants": [
+                  "M5 (G90), M5 (G90 Touring), M5 (G99 Touring)"
+                ],
+                "commonFailures": [
+                  "High-voltage battery degradation (long-term prediction)",
+                  "Electric motor cooling system leaks"
+                ],
+                "avgRebuiltPrice": "£12,000 - £25,000",
+                "cta": "Get quotes for S68B44 PHEV BMW M5 engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               }
             ]
           }
@@ -1002,6 +1021,16 @@
               "avgRebuiltPrice": "£7,000 - £22,000",
               "cta": "Get quotes for S63B44T4 BMW M5 engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            },
+            {
+              "code": "S68B44 PHEV",
+              "fuel": "PHEV",
+              "size": "4.4L",
+              "power": "727 hp (combined system)",
+              "compatibleModels": "M5 (G90), M5 (G90 Touring), M5 (G99 Touring)",
+              "avgRebuiltPrice": "£12,000 - £25,000",
+              "cta": "Get quotes for S68B44 PHEV BMW M5 engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             }
           ]
         }
@@ -1041,20 +1070,6 @@
           "rootCause": "Insufficient rod bearing clearance from the factory, leading to oil film breakdown under hard cornering or extended high‑RPM running. Bearings eventually spin, seize to the crankshaft, and cause bottom‑end destruction.",
           "repairOptions": [
             {
-              "tier": "Repair Tier",
-              "dealerPrice": "Dealer Price (Parts + Labour)",
-              "specialistPrice": "Specialist Price (Parts + Labour)",
-              "whatItInvolves": "What It Involves",
-              "longevity": "Longevity / Suitability"
-            },
-            {
-              "tier": "",
-              "dealerPrice": "",
-              "specialistPrice": "",
-              "whatItInvolves": "",
-              "longevity": ""
-            },
-            {
               "tier": "Preventative - Rod Bearing Replacement",
               "dealerPrice": "£2,800 - £4,000",
               "specialistPrice": "£1,800 - £2,500",
@@ -1079,20 +1094,6 @@
           "typicalFailureMileage": "70,000 - 100,000 miles",
           "rootCause": "Plastic timing chain guide rails become brittle with heat cycling, fracture, and allow chain slack. The chain can jump timing, skip teeth, or snap entirely - causing valve‑to‑piston contact and cylinder head destruction.",
           "repairOptions": [
-            {
-              "tier": "Repair Tier",
-              "dealerPrice": "Dealer Price (Parts + Labour)",
-              "specialistPrice": "Specialist Price (Parts + Labour)",
-              "whatItInvolves": "What It Involves",
-              "longevity": "Longevity / Suitability"
-            },
-            {
-              "tier": "",
-              "dealerPrice": "",
-              "specialistPrice": "",
-              "whatItInvolves": "",
-              "longevity": ""
-            },
             {
               "tier": "Preventative - Timing Chain & Guide Replacement",
               "dealerPrice": "£3,500 - £5,000",
@@ -1119,20 +1120,6 @@
           "rootCause": "DC electric motors inside the throttle actuators wear out their internal gearbox or electronics fail, causing the ECU to cut power to multiple cylinders. The car enters limp mode with “Drivetrain Malfunction” warning - often mistaken for total engine failure.",
           "repairOptions": [
             {
-              "tier": "Repair Tier",
-              "dealerPrice": "Dealer Price (Parts + Labour)",
-              "specialistPrice": "Specialist Price (Parts + Labour)",
-              "whatItInvolves": "What It Involves",
-              "longevity": "Longevity / Suitability"
-            },
-            {
-              "tier": "",
-              "dealerPrice": "",
-              "specialistPrice": "",
-              "whatItInvolves": "",
-              "longevity": ""
-            },
-            {
               "tier": "Minor - Throttle Actuator Replacement (x2)",
               "dealerPrice": "£1,800 - £2,800",
               "specialistPrice": "£900 - £1,400",
@@ -1157,20 +1144,6 @@
           "typicalFailureMileage": "50,000 - 80,000 miles",
           "rootCause": "The oil pump drive shaft or chain tensioner fails, causing sudden oil pressure loss. The first warning is often the red oil pressure light - by then, bottom‑end bearings are already damaged.",
           "repairOptions": [
-            {
-              "tier": "Repair Tier",
-              "dealerPrice": "Dealer Price (Parts + Labour)",
-              "specialistPrice": "Specialist Price (Parts + Labour)",
-              "whatItInvolves": "What It Involves",
-              "longevity": "Longevity / Suitability"
-            },
-            {
-              "tier": "",
-              "dealerPrice": "",
-              "specialistPrice": "",
-              "whatItInvolves": "",
-              "longevity": ""
-            },
             {
               "tier": "Intermediate - Oil Pump & Drive Replacement",
               "dealerPrice": "£3,000 - £4,500",
@@ -1197,20 +1170,6 @@
           "rootCause": "VANOS solenoid seals harden and leak oil pressure, causing the camshaft timing to drift. The engine develops a distinctive “growling” sound at idle, hesitation on acceleration, and eventually fault codes.",
           "repairOptions": [
             {
-              "tier": "Repair Tier",
-              "dealerPrice": "Dealer Price (Parts + Labour)",
-              "specialistPrice": "Specialist Price (Parts + Labour)",
-              "whatItInvolves": "What It Involves",
-              "longevity": "Longevity / Suitability"
-            },
-            {
-              "tier": "",
-              "dealerPrice": "",
-              "specialistPrice": "",
-              "whatItInvolves": "",
-              "longevity": ""
-            },
-            {
               "tier": "Minor - VANOS Seal & Solenoid Replacement",
               "dealerPrice": "£1,800 - £2,800",
               "specialistPrice": "£1,000 - £1,600",
@@ -1236,20 +1195,6 @@
           "rootCause": "Worn valve stem seals and carbon‑blocked piston rings, exacerbated by the S85’s 8,250rpm redline and 10W‑60 oil viscosity. Oil passes into combustion chambers, fouls spark plugs, and accelerates catalytic converter failure.",
           "repairOptions": [
             {
-              "tier": "Repair Tier",
-              "dealerPrice": "Dealer Price (Parts + Labour)",
-              "specialistPrice": "Specialist Price (Parts + Labour)",
-              "whatItInvolves": "What It Involves",
-              "longevity": "Longevity / Suitability"
-            },
-            {
-              "tier": "",
-              "dealerPrice": "",
-              "specialistPrice": "",
-              "whatItInvolves": "",
-              "longevity": ""
-            },
-            {
               "tier": "Intermediate - Valve Stem Seal Replacement",
               "dealerPrice": "£4,000 - £6,000",
               "specialistPrice": "£2,500 - £3,800",
@@ -1270,9 +1215,9 @@
       ],
       "finalCta": {
         "h4": "Don't Let Engine Failure Write Off Your BMW M5",
-        "paragraph": "",
+        "paragraph": "Whether you own an E60 V10 with failing rod bearings, an F90 V8 with oil pump failure, or an E39 with VANOS issues, EngineMarket makes it simple to compare prices from trusted UK BMW M5 specialists. Every rebuilt engine supplied through our network includes upgraded components that address the original failure point - not a like‑for‑like replacement waiting to fail again. With a minimum 12‑month unlimited mileage warranty and nationwide delivery & fitting options, you can get back on the road without paying main dealer premiums.",
         "buttonText": "Compare BMW M5 Engine Replacement Prices Now →",
-        "disclaimer": ""
+        "disclaimer": "All prices are indicative UK market ranges based on historical quote data and repair requests from our network of engine specialists. Dealer pricing is estimated based on published main dealer labour rates and genuine OEM parts pricing. Specialist pricing reflects actual quote data from EngineMarket’s UK network. Actual costs vary depending on damage severity, vehicle condition, variant, and workshop location within the UK. Use our free comparison tool to get tailored quotes for your specific BMW M5 and engine code. Every engine supplied through EngineMarket carries a minimum 12‑month unlimited mileage warranty - always confirm exact terms with your chosen supplier."
       }
     },
     "engineTypes": {
@@ -1283,38 +1228,86 @@
         {
           "title": "Bmw M5 Reconditioned Engines (Recon)",
           "description": "Dismantled, inspected, worn components replaced to factory tolerance. Not simply cleaned - genuinely reconditioned.",
+          "frontDescription": "Dismantled, inspected, worn components replaced to factory tolerance. Not simply cleaned - genuinely reconditioned.",
+          "frontDisclaimer": "Ideal for S63 and S85 V8/V10 engines with known bearing or timing chain failure.",
+          "backDescription": "Factory-spec reconditioning of BMW M5 engines focuses on the S63 twin-turbo V8 and S85 V10 families.",
+          "backBullets": [
+            "Every engine is stripped, ultrasonically cleaned and measured against BMW tolerances",
+            "New piston rings, bearings, seals, timing chains and oil pumps fitted as standard",
+            "12-month unlimited mileage warranty included with all reconditioned units"
+          ],
           "priceRange": "£5,500 - £14,000 (supply only)",
-          "cta": "Compare reconditioned BMW M5 engine prices ->"
+          "cta": "Compare reconditioned BMW M5 engine prices"
         },
         {
           "title": "Bmw M5 Rebuilt Engines",
           "description": "Full strip-down, machining, replacement of all wear items. Higher standard than reconditioned.",
+          "frontDescription": "Full strip-down, machining, replacement of all wear items. Higher standard than reconditioned.",
+          "frontDisclaimer": "Recommended for high-performance S63B44T4 and S85B50 where original failures must be eliminated.",
+          "backDescription": "Rebuilt M5 engines go beyond reconditioning with new critical components and upgraded parts.",
+          "backBullets": [
+            "Crankshaft reground, cylinders rebored, cylinder head pressure-tested and skimmed",
+            "Uprated rod bearings fitted (S85) or upgraded timing chain guides (S63)",
+            "Every rebuilt unit bench-tested before delivery and comes with 12-month warranty"
+          ],
           "priceRange": "£6,000 - £18,000 (supply only)",
-          "cta": "Get rebuilt BMW M5 engine quotes ->"
+          "cta": "Get rebuilt BMW M5 engine quotes"
         },
         {
           "title": "Bmw M5 Used Engines",
           "description": "Low-mileage donor engines removed from accident-damaged M5s. Visual inspection only.",
+          "frontDescription": "Low-mileage donor engines removed from accident-damaged M5s. Visual inspection only.",
+          "frontDisclaimer": "Higher risk option - recommended only for budget-limited projects or temporary fixes.",
+          "backDescription": "Used BMW M5 engines offer the lowest entry cost but carry the highest uncertainty on condition.",
+          "backBullets": [
+            "Mileage typically 50,000-90,000 miles - S85 rod bearing condition unknown",
+            "No internal inspection or component replacement performed before sale",
+            "Best suited to E39 M62 or E34 S38 engines where parts remain available for rebuilds"
+          ],
           "priceRange": "£2,500 - £8,000 (supply only)",
-          "cta": "Check used BMW M5 engine availability ->"
+          "cta": "Check used BMW M5 engine availability"
         },
         {
           "title": "Bmw M5 Remanufactured Engines",
           "description": "Industrial-scale remanufacturing to 'as new' specification. Often includes core exchange.",
+          "frontDescription": "Industrial-scale remanufacturing to 'as new' specification. Often includes core exchange.",
+          "frontDisclaimer": "Premium option for F90 and G90 M5 owners wanting dealer-grade quality without main dealer price.",
+          "backDescription": "Remanufactured M5 engines are rebuilt to original factory blueprints with rigorous quality control.",
+          "backBullets": [
+            "All components replaced with OEM-spec or genuine BMW parts - no pattern parts",
+            "Includes upgraded S63 timing chain guides and S85 VANOS units to eliminate known failures",
+            "24-month warranty often available; supply & fit can be arranged nationwide"
+          ],
           "priceRange": "£7,000 - £20,000 (supply only)",
-          "cta": "Compare remanufactured BMW M5 engine costs ->"
+          "cta": "Compare remanufactured BMW M5 engine costs"
         },
         {
           "title": "Bmw M5 Refurbished Engines",
           "description": "Cosmetic and mechanical 'light rebuild' - gaskets, seals, cleaning, but not full rebuild.",
+          "frontDescription": "Cosmetic and mechanical 'light rebuild' - gaskets, seals, cleaning, but not full rebuild.",
+          "frontDisclaimer": "Entry-level option between 'used' and 'reconditioned'. Not suitable for catastrophic failure.",
+          "backDescription": "Refurbished M5 engines sit between used and reconditioned - cleaned externally with minor mechanical work.",
+          "backBullets": [
+            "External cleaning, new gaskets, cam belt or auxiliary belt replaced where accessible",
+            "No bottom-end inspection or bearing replacement on S85/S63 units",
+            "Suitable for low-stress applications but not recommended for high-performance M5s with known failure patterns"
+          ],
           "priceRange": "£3,500 - £9,000 (supply only)",
-          "cta": "View refurbished BMW M5 engine options ->"
+          "cta": "View refurbished BMW M5 engine options"
         },
         {
           "title": "Bmw M5 Supply & Fit Engines",
           "description": "Engine price plus professional fitting by UK M5 specialist. Single-invoice solution.",
+          "frontDescription": "Engine price plus professional fitting by UK M5 specialist. Single-invoice solution.",
+          "frontDisclaimer": "Fitting cost varies by variant - E60 V10 and F90 V8 require more labour than E39.",
+          "backDescription": "Supply and fit removes the hassle of finding your own garage and managing separate warranties. All engine types include a minimum 12‑month unlimited mileage warranty when sourced through EngineMarket. Prices are typical UK market ranges based on historical quote data from our network and depend on exact engine code, variant, mileage and supplier. Use our free comparison tool above - enter your registration to get tailored quotes for your specific BMW M5 within hours.",
+          "backBullets": [
+            "Labour included: removal of failed unit, fitting replacement, coolant/oil refill, road test",
+            "Single point of contact for engine warranty and fitting guarantee",
+            "Nationwide network of BMW M5 specialist garages - not general mechanics"
+          ],
           "priceRange": "£600 - £1,200 added to engine price",
-          "cta": "Find BMW M5 engine supply & fit deals ->"
+          "cta": "Find BMW M5 engine supply & fit deals"
         }
       ],
       "closing": "All engine types include a minimum 12‑month unlimited mileage warranty when sourced through EngineMarket. Prices are typical UK market ranges based on historical quote data from our network and depend on exact engine code, variant, mileage and supplier. Use our free comparison tool above - enter your registration to get tailored quotes for your specific BMW M5 within hours.",

@@ -1090,7 +1090,66 @@
           },
           {
             "name": "Hybrid / Electrified Engines",
-            "entries": []
+            "entries": [
+              {
+                "code": "B38B15 + Electric Motor",
+                "title": "1.5L Hybrid Petrol",
+                "history": "The X5 xDrive40e was BMW’s first plug-in hybrid X5, combining the B38 three-cylinder petrol engine with an electric motor for urban efficiency with SUV practicality.",
+                "fuel": "PHEV Petrol",
+                "size": "1.5 Litre (combustion unit)",
+                "power": "313 hp combined",
+                "years": "2015-2018 (F15)",
+                "compatibleVariants": [
+                  "xDrive40e (F15)"
+                ],
+                "commonFailures": [
+                  "High-voltage battery degradation - reduced electric range, replacement costly",
+                  "Electric motor bearing failure - whining noise from drive unit",
+                  "Charging system failure - unable to charge from mains"
+                ],
+                "avgRebuiltPrice": "£4,000 - £7,500",
+                "cta": "Get quotes for B38B15 hybrid BMW X5 engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              },
+              {
+                "code": "B58B30 + Electric Motor",
+                "title": "3.0L Hybrid Petrol",
+                "history": "The X5 xDrive45e upgraded to B58 six-cylinder power combined with a more powerful electric motor, offering longer electric range and significantly better performance than the 40e it replaced.",
+                "fuel": "PHEV Petrol",
+                "size": "3.0 Litre (combustion unit)",
+                "power": "394 hp combined",
+                "years": "2019-2024 (G05)",
+                "compatibleVariants": [
+                  "xDrive45e (G05)"
+                ],
+                "commonFailures": [
+                  "Hybrid system integration failure - fault codes, reduced power"
+                ],
+                "avgRebuiltPrice": "",
+                "cta": "",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              },
+              {
+                "code": "Electric coolant pump failure",
+                "title": "hybrid system overheating",
+                "history": "The facelift G05 X5 xDrive50e introduced a significantly more powerful hybrid system, boosting combined output to 489hp while maintaining the proven B58 combustion engine.",
+                "fuel": "PHEV Petrol",
+                "size": "3.0 Litre (combustion unit)",
+                "power": "489 hp combined",
+                "years": "2024-present (G05 LCI)",
+                "compatibleVariants": [
+                  "xDrive50e (G05 facelift)"
+                ],
+                "commonFailures": [
+                  "(Still emerging - based on B58 platform reliability)",
+                  "B58-standard issues (coolant expansion tank, oil filter housing gasket)",
+                  "High-voltage system integration - complex diagnostics"
+                ],
+                "avgRebuiltPrice": "£5,500 - £10,000",
+                "cta": "Get quotes for B58B30 50e hybrid BMW X5 engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              }
+            ]
           }
         ],
         "closing": ""
@@ -1276,7 +1335,38 @@
           "name": "Hybrid / Electrified Engines",
           "era": "Extracted from electrified powertrains and hybrid engine families used in BMW X5 variants.",
           "failureNote": "Main replacement demand comes from cooling, battery-support and high-voltage control faults.",
-          "engines": []
+          "engines": [
+            {
+              "code": "B38B15 + Electric Motor",
+              "fuel": "PHEV Petrol",
+              "size": "1.5L (combustion unit)",
+              "power": "313 hp combined",
+              "compatibleModels": "xDrive40e (F15)",
+              "avgRebuiltPrice": "£4,000 - £7,500",
+              "cta": "Get quotes for B38B15 hybrid BMW X5 engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            },
+            {
+              "code": "B58B30 + Electric Motor",
+              "fuel": "PHEV Petrol",
+              "size": "3.0L (combustion unit)",
+              "power": "394 hp combined",
+              "compatibleModels": "xDrive45e (G05)",
+              "avgRebuiltPrice": "",
+              "cta": "",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            },
+            {
+              "code": "Electric coolant pump failure",
+              "fuel": "PHEV Petrol",
+              "size": "3.0L (combustion unit)",
+              "power": "489 hp combined",
+              "compatibleModels": "xDrive50e (G05 facelift)",
+              "avgRebuiltPrice": "£5,500 - £10,000",
+              "cta": "Get quotes for B58B30 50e hybrid BMW X5 engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            }
+          ]
         }
       ],
       "headingLines": [
@@ -1314,20 +1404,6 @@
           "rootCause": "The N57 engine places the timing chain at the rear of the engine block. Chain tensioner failure allows slack to develop, causing chain guide breakage. If ignored, the chain can snap, allowing pistons to contact valves - catastrophic engine failure requiring full replacement.",
           "repairOptions": [
             {
-              "tier": "Repair Tier",
-              "dealerPrice": "Dealer Price (Parts + Labour)",
-              "specialistPrice": "Specialist Price (Parts + Labour)",
-              "whatItInvolves": "What It Involves",
-              "longevity": "Longevity / Suitability"
-            },
-            {
-              "tier": "",
-              "dealerPrice": "",
-              "specialistPrice": "",
-              "whatItInvolves": "",
-              "longevity": ""
-            },
-            {
               "tier": "Preventative - Timing Chain & Tensioner Replacement (catch early rattle)",
               "dealerPrice": "£2,200 - £3,000",
               "specialistPrice": "£1,400 - £2,200",
@@ -1352,20 +1428,6 @@
           "typicalFailureMileage": "80,000 - 120,000 miles",
           "rootCause": "Swirl flaps in the intake manifold are designed to improve low-end torque. On high-mileage M57 and early N57 engines, the flap retaining screws loosen, or flaps break completely. A broken flap can fall directly into the combustion chamber, destroying valves, pistons, and cylinder bores in seconds.",
           "repairOptions": [
-            {
-              "tier": "Repair Tier",
-              "dealerPrice": "Dealer Price (Parts + Labour)",
-              "specialistPrice": "Specialist Price (Parts + Labour)",
-              "whatItInvolves": "What It Involves",
-              "longevity": "Longevity / Suitability"
-            },
-            {
-              "tier": "",
-              "dealerPrice": "",
-              "specialistPrice": "",
-              "whatItInvolves": "",
-              "longevity": ""
-            },
             {
               "tier": "Preventative - Swirl Flap Delete / Blanking Kit",
               "dealerPrice": "£1,000 - £1,600",
@@ -1392,20 +1454,6 @@
           "rootCause": "The N63 hot-vee V8 design places turbochargers inside the engine V, subjecting valve stem seals to extreme heat cycles. Heat degrades the rubber seals, allowing oil to leak past the valves when the engine is off. On cold start, this pooled oil burns off as thick blue smoke - and over time, oil consumption becomes severe enough to foul catalytic converters.",
           "repairOptions": [
             {
-              "tier": "Repair Tier",
-              "dealerPrice": "Dealer Price (Parts + Labour)",
-              "specialistPrice": "Specialist Price (Parts + Labour)",
-              "whatItInvolves": "What It Involves",
-              "longevity": "Longevity / Suitability"
-            },
-            {
-              "tier": "",
-              "dealerPrice": "",
-              "specialistPrice": "",
-              "whatItInvolves": "",
-              "longevity": ""
-            },
-            {
               "tier": "Intermediate - Valve Seal Replacement (with engine in situ)",
               "dealerPrice": "£3,500 - £5,000",
               "specialistPrice": "£2,200 - £3,500",
@@ -1430,20 +1478,6 @@
           "typicalFailureMileage": "70,000 - 110,000 miles",
           "rootCause": "The exhaust gas recirculation (EGR) cooler circulates coolant to cool recirculated exhaust gases. Internal corrosion or thermal stress causes the cooler to crack, allowing coolant to enter the exhaust system. This causes white smoke, rapid coolant loss, and - if ignored - overheating that can crack the cylinder head or seize the engine.",
           "repairOptions": [
-            {
-              "tier": "Repair Tier",
-              "dealerPrice": "Dealer Price (Parts + Labour)",
-              "specialistPrice": "Specialist Price (Parts + Labour)",
-              "whatItInvolves": "What It Involves",
-              "longevity": "Longevity / Suitability"
-            },
-            {
-              "tier": "",
-              "dealerPrice": "",
-              "specialistPrice": "",
-              "whatItInvolves": "",
-              "longevity": ""
-            },
             {
               "tier": "Minor - EGR Cooler Replacement",
               "dealerPrice": "£1,200 - £1,800",
@@ -1470,20 +1504,6 @@
           "rootCause": "Copper injector seals degrade over time, allowing combustion gases to blow past. This causes \"black death\" - carbon buildup around injectors. More critically, failed seals allow unburnt diesel to contaminate the engine oil, thinning it and destroying bearings. Catastrophic engine failure follows without warning.",
           "repairOptions": [
             {
-              "tier": "Repair Tier",
-              "dealerPrice": "Dealer Price (Parts + Labour)",
-              "specialistPrice": "Specialist Price (Parts + Labour)",
-              "whatItInvolves": "What It Involves",
-              "longevity": "Longevity / Suitability"
-            },
-            {
-              "tier": "",
-              "dealerPrice": "",
-              "specialistPrice": "",
-              "whatItInvolves": "",
-              "longevity": ""
-            },
-            {
               "tier": "Intermediate - Injector Seal Replacement & Oil Change",
               "dealerPrice": "£800 - £1,400",
               "specialistPrice": "£450 - £800",
@@ -1509,20 +1529,6 @@
           "rootCause": "The B58 engine uses a plastic coolant expansion tank and integrated supply line that develops hairline cracks under thermal cycling. Coolant slowly leaks, triggering low coolant warnings. If ignored, the engine can overheat, potentially warping the aluminium cylinder head - though the B58 has robust protection systems that typically prevent catastrophic damage.",
           "repairOptions": [
             {
-              "tier": "Repair Tier",
-              "dealerPrice": "Dealer Price (Parts + Labour)",
-              "specialistPrice": "Specialist Price (Parts + Labour)",
-              "whatItInvolves": "What It Involves",
-              "longevity": "Longevity / Suitability"
-            },
-            {
-              "tier": "",
-              "dealerPrice": "",
-              "specialistPrice": "",
-              "whatItInvolves": "",
-              "longevity": ""
-            },
-            {
               "tier": "Minor - Expansion Tank Replacement",
               "dealerPrice": "£500 - £800",
               "specialistPrice": "£300 - £500",
@@ -1545,7 +1551,7 @@
         "h4": "Don't Let Engine Failure Write Off Your BMW X5",
         "paragraph": "A failed engine doesn't have to mean the end of the road for your X5. Whether you're facing N57 timing chain failure, N63 valve seal wear, or any other catastrophic issue, EnginesMarket connects you with trusted UK BMW X5 specialists who supply rebuilt engines with upgraded components specifically designed to address the original failure point. Every engine comes with a minimum 12-month unlimited mileage warranty, nationwide delivery, and supply & fit options across the UK. Compare prices today - and get back on the road without paying the main dealer premium.",
         "buttonText": "Compare BMW X5 Engine Replacement Prices Now →",
-        "disclaimer": ""
+        "disclaimer": "All prices are indicative UK market ranges based on historical quote data and repair requests from our network of engine specialists. Dealer pricing is estimated based on published main dealer labour rates and genuine OEM parts pricing. Specialist pricing reflects actual quote data from EnginesMarket's UK network. Actual costs vary depending on damage severity, vehicle condition, variant, and workshop location within the UK. Use our free comparison tool to get tailored quotes for your specific BMW X5 and engine code. Every engine supplied through EnginesMarket carries a minimum 12-month unlimited mileage warranty - always confirm exact terms with your chosen supplier."
       }
     },
     "engineTypes": {
@@ -1556,38 +1562,86 @@
         {
           "title": "Bmw X5 Reconditioned Engines (Recon)",
           "description": "Dismantled, inspected, and rebuilt to factory tolerances with new components where required. Oem-spec quality.",
+          "frontDescription": "Dismantled, inspected, and rebuilt to factory tolerances with new components where required. Oem-spec quality.",
+          "frontDisclaimer": "Premium option for long-term ownership.",
+          "backDescription": "Professionally reconditioned to original bmw tolerances using new piston rings, bearings, and seals.",
+          "backBullets": [
+            "Ideal for n57, b57, and n63 engines",
+            "Bench-tested before dispatch with full report",
+            "Backed by 12-24 month unlimited mileage warranty"
+          ],
           "priceRange": "£2,800 - £6,500 (supply only)",
-          "cta": "Compare reconditioned BMW X5 engine prices ->"
+          "cta": "Compare reconditioned BMW X5 engine prices"
         },
         {
           "title": "Bmw X5 Rebuilt Engines",
           "description": "Fully stripped, cleaned, and rebuilt with new gaskets, seals, and timing components. Balanced rotating assembly.",
+          "frontDescription": "Fully stripped, cleaned, and rebuilt with new gaskets, seals, and timing components. Balanced rotating assembly.",
+          "frontDisclaimer": "Best balance of cost and reliability.",
+          "backDescription": "Every rebuilt unit receives upgraded components addressing known failure points like timing chains and swirl flaps.",
+          "backBullets": [
+            "Rattle-tested and hot-run before shipping",
+            "New timing chain, guides, and tensioner fitted",
+            "Ideal for e70 and f15 diesel x5 owners"
+          ],
           "priceRange": "£2,200 - £5,800 (supply only)",
-          "cta": "Get rebuilt BMW X5 engine quotes ->"
+          "cta": "Get rebuilt BMW X5 engine quotes"
         },
         {
           "title": "Bmw X5 Used Engines",
           "description": "Low-mileage factory original engine removed from a donor vehicle. Grade-a tested with compression check.",
+          "frontDescription": "Low-mileage factory original engine removed from a donor vehicle. Grade-a tested with compression check.",
+          "frontDisclaimer": "Fast delivery but limited warranty.",
+          "backDescription": "Genuine bmw factory engine with no prior rebuild history. mileage verified and leak-down tested before removal.",
+          "backBullets": [
+            "30-90 day warranty depending on supplier",
+            "Perfect for older e53 x5 with m57 engine",
+            "Delivery within 2-5 working days nationwide"
+          ],
           "priceRange": "£1,200 - £3,800 (supply only)",
-          "cta": "Check used BMW X5 engine availability ->"
+          "cta": "Check used BMW X5 engine availability"
         },
         {
           "title": "Bmw X5 Remanufactured Engines",
           "description": "Core returned and rebuilt to better-than-new specification using upgraded aftermarket and genuine parts.",
+          "frontDescription": "Core returned and rebuilt to better-than-new specification using upgraded aftermarket and genuine parts.",
+          "frontDisclaimer": "Highest spec with extended warranty.",
+          "backDescription": "Remanufacturing exceeds reconditioning by replacing every wear component including oil pump, water pump, and injectors.",
+          "backBullets": [
+            "Includes new timing chain and upgraded tensioner",
+            "Suitable for high-mileage n57d30 and m57d30",
+            "24-month unlimited mileage parts and labour"
+          ],
           "priceRange": "£3,200 - £7,500 (supply only)",
-          "cta": "Compare remanufactured BMW X5 engine costs ->"
+          "cta": "Compare remanufactured BMW X5 engine costs"
         },
         {
           "title": "Bmw X5 Refurbished Engines",
           "description": "Cleaned, inspected, and repaired only where necessary. Not fully stripped or blueprinted to factory spec.",
+          "frontDescription": "Cleaned, inspected, and repaired only where necessary. Not fully stripped or blueprinted to factory spec.",
+          "frontDisclaimer": "Budget-friendly entry point.",
+          "backDescription": "Cost-effective option that addresses the specific failure without full rebuild. Visual inspection and targeted repair only.",
+          "backBullets": [
+            "Replacement of failed gaskets and seals only",
+            "No timing chain replacement unless failed",
+            "Best for tight budgets or short-term ownership"
+          ],
           "priceRange": "£1,500 - £4,200 (supply only)",
-          "cta": "View refurbished BMW X5 engine options ->"
+          "cta": "View refurbished BMW X5 engine options"
         },
         {
           "title": "Bmw X5 Supply & Fit Engines",
           "description": "Complete service including engine supply, delivery to workshop, and professional installation by specialists.",
+          "frontDescription": "Complete service including engine supply, delivery to workshop, and professional installation by specialists.",
+          "frontDisclaimer": "Labour varies by variant and location.",
+          "backDescription": "Specialist fitting removes your old unit, installs the replacement, and performs full system flush, coolant refill, and road test.",
+          "backBullets": [
+            "Labour covers 12-18 hours depending on x5 generation",
+            "Includes all gaskets, fluids, and filters",
+            "12-month warranty on both parts and fitting labour"
+          ],
           "priceRange": "£500 - £1,200 added to engine price",
-          "cta": "Find BMW X5 engine supply & fit deals ->"
+          "cta": "Find BMW X5 engine supply & fit deals"
         }
       ],
       "closing": "All engine types include a minimum 12-month unlimited mileage warranty when sourced through EngineMarket. Prices are typical UK market ranges based on historical quote data from our network and depend on exact engine code, variant, mileage and supplier. Use our free comparison tool above - enter your registration to get tailored quotes for your specific BMW X5 within hours.",

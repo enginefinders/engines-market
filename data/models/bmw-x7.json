@@ -1125,20 +1125,6 @@
           "rootCause": "Early-generation plastic timing chain tensioners and guides degrade under repeated heat cycles, allowing chain slack that accelerates wear and can lead to catastrophic valve-to-piston interference.",
           "repairOptions": [
             {
-              "tier": "Repair Tier",
-              "dealerPrice": "Dealer Price (Parts + Labour)",
-              "specialistPrice": "Specialist Price (Parts + Labour)",
-              "whatItInvolves": "What It Involves",
-              "longevity": "Longevity / Suitability"
-            },
-            {
-              "tier": "",
-              "dealerPrice": "",
-              "specialistPrice": "",
-              "whatItInvolves": "",
-              "longevity": ""
-            },
-            {
               "tier": "Minor - Preventative Timing Chain Kit Replacement",
               "dealerPrice": "£1,800 - £2,600",
               "specialistPrice": "£1,200 - £1,750",
@@ -1163,20 +1149,6 @@
           "typicalFailureMileage": "45,000 - 85,000 miles",
           "rootCause": "Microscopic carbon deposits and degraded oil quality clog the fine mesh filters inside the VANOS solenoids, disrupting hydraulic pressure required for variable valve timing and triggering rough idle or limp mode.",
           "repairOptions": [
-            {
-              "tier": "Repair Tier",
-              "dealerPrice": "Dealer Price (Parts + Labour)",
-              "specialistPrice": "Specialist Price (Parts + Labour)",
-              "whatItInvolves": "What It Involves",
-              "longevity": "Longevity / Suitability"
-            },
-            {
-              "tier": "",
-              "dealerPrice": "",
-              "specialistPrice": "",
-              "whatItInvolves": "",
-              "longevity": ""
-            },
             {
               "tier": "Intermediate - Solenoid & Valve Cover Replacement",
               "dealerPrice": "£850 - £1,500",
@@ -1203,20 +1175,6 @@
           "rootCause": "Extreme exhaust gas temperatures in the compact hot-vee and twin-turbo layouts cause wastegate actuator linkage play and bearing wear, resulting in boost pressure loss and persistent rattling noises on deceleration.",
           "repairOptions": [
             {
-              "tier": "Repair Tier",
-              "dealerPrice": "Dealer Price (Parts + Labour)",
-              "specialistPrice": "Specialist Price (Parts + Labour)",
-              "whatItInvolves": "What It Involves",
-              "longevity": "Longevity / Suitability"
-            },
-            {
-              "tier": "",
-              "dealerPrice": "",
-              "specialistPrice": "",
-              "whatItInvolves": "",
-              "longevity": ""
-            },
-            {
               "tier": "Intermediate - Turbo Rebuild & Actuator Calibration",
               "dealerPrice": "£2,800 - £3,900",
               "specialistPrice": "£1,900 - £2,600",
@@ -1241,20 +1199,6 @@
           "typicalFailureMileage": "65,000 - 105,000 miles",
           "rootCause": "Repeated thermal cycling causes hairline fractures in the internal EGR cooler cores, allowing coolant to leak into the exhaust stream while soot accumulation restricts DPF regeneration cycles.",
           "repairOptions": [
-            {
-              "tier": "Repair Tier",
-              "dealerPrice": "Dealer Price (Parts + Labour)",
-              "specialistPrice": "Specialist Price (Parts + Labour)",
-              "whatItInvolves": "What It Involves",
-              "longevity": "Longevity / Suitability"
-            },
-            {
-              "tier": "",
-              "dealerPrice": "",
-              "specialistPrice": "",
-              "whatItInvolves": "",
-              "longevity": ""
-            },
             {
               "tier": "Intermediate - EGR Cooler & DPF Cleaning/Replacement",
               "dealerPrice": "£2,200 - £3,400",
@@ -1281,20 +1225,6 @@
           "rootCause": "The compact hot-vee architecture generates sustained high cylinder wall temperatures that accelerate piston ring degradation, reducing compression sealing and forcing excessive oil into the combustion chamber.",
           "repairOptions": [
             {
-              "tier": "Repair Tier",
-              "dealerPrice": "Dealer Price (Parts + Labour)",
-              "specialistPrice": "Specialist Price (Parts + Labour)",
-              "whatItInvolves": "What It Involves",
-              "longevity": "Longevity / Suitability"
-            },
-            {
-              "tier": "",
-              "dealerPrice": "",
-              "specialistPrice": "",
-              "whatItInvolves": "",
-              "longevity": ""
-            },
-            {
               "tier": "Minor - PCV Valve Cover Replacement & Software Update",
               "dealerPrice": "£1,100 - £1,800",
               "specialistPrice": "£700 - £1,250",
@@ -1317,7 +1247,7 @@
         "h4": "Don't Let Engine Failure Write Off Your BMW X7",
         "paragraph": "From VANOS solenoid failures and timing chain stretch to turbo wastegate rattle and V8 oil consumption, the BMW X7 demands specialist attention the moment warning lights appear. Attempting prolonged patch repairs on these high-compression, twin-turbo platforms rarely resolves the underlying thermal and mechanical stress. EngineMarket connects you directly with trusted UK BMW X7 engine specialists who supply fully rebuilt units featuring upgraded internal components, rigorous bench testing, and nationwide delivery. Compare transparent quotes, secure a minimum 12‑month unlimited mileage warranty, and get your premium SUV back on the road without the main dealer premium.",
         "buttonText": "Compare BMW X7 Engine Replacement Prices Now →",
-        "disclaimer": ""
+        "disclaimer": "All prices are indicative UK market ranges based on historical quote data and repair requests from our network of engine specialists. Dealer pricing is estimated based on published main dealer labour rates and genuine OEM parts pricing. Specialist pricing reflects actual quote data from EngineMarket’s UK network. Actual costs vary depending on damage severity, vehicle condition, variant, and workshop location within the UK. Use our free comparison tool to get tailored quotes for your specific BMW X7 and engine code. Every engine supplied through EngineMarket carries a minimum 12‑month unlimited mileage warranty - always confirm exact terms with your chosen supplier."
       }
     },
     "engineTypes": {
@@ -1328,38 +1258,86 @@
         {
           "title": "BMW X7 Reconditioned Engines (Recon)",
           "description": "Professionally dismantled and cleaned units restored to exact manufacturer specifications for reliable daily driving performance across variants.",
+          "frontDescription": "Professionally dismantled and cleaned units restored to exact manufacturer specifications for reliable daily driving performance across variants.",
+          "frontDisclaimer": "Condition varies by supplier mileage and original wear history.",
+          "backDescription": "Specialist workshops strip, inspect and replace worn components to restore exact factory tolerances for the platform without the new unit premium.",
+          "backBullets": [
+            "Covers high-volume blocks with fully renewed gaskets and seals for long-term reliability.",
+            "Bench-tested compression and oil pressure verified against factory data before nationwide dispatch.",
+            "Ideal solution for owners seeking dependable performance when the core block remains structurally sound and undamaged."
+          ],
           "priceRange": "£2,800 - £4,800 (supply only)",
-          "cta": "Compare reconditioned BMW X7 engine prices ->"
+          "cta": "Compare reconditioned BMW X7 engine prices"
         },
         {
           "title": "BMW X7 Rebuilt Engines",
           "description": "Comprehensive teardown with selective replacement of failed internal parts using precision-machined components to address known weak points.",
+          "frontDescription": "Comprehensive teardown with selective replacement of failed internal parts using precision-machined components to address known weak points.",
+          "frontDisclaimer": "Scope of internal work depends on initial inspection findings.",
+          "backDescription": "Engineers focus on repairing documented failure areas like vanos systems and timing chains while retaining the original block for optimal fitment.",
+          "backBullets": [
+            "Targets known thermal management faults with upgraded cooling components for sustained high-stress operation.",
+            "Includes comprehensive dyno simulation to verify power delivery meets factory output targets.",
+            "Delivers near-new durability and extended service life at a fraction of main dealer replacement costs."
+          ],
           "priceRange": "£3,200 - £5,500 (supply only)",
-          "cta": "Get rebuilt BMW X7 engine quotes ->"
+          "cta": "Get rebuilt BMW X7 engine quotes"
         },
         {
           "title": "BMW X7 Used Engines",
           "description": "Direct removal from low mileage donor vehicles offering immediate compatibility and budget-conscious recovery for chassis.",
+          "frontDescription": "Direct removal from low mileage donor vehicles offering immediate compatibility and budget-conscious recovery for chassis.",
+          "frontDisclaimer": "Sold as seen with limited history verification and standard warranty.",
+          "backDescription": "Sourced from verified salvage networks these units provide cost-effective recovery when budget constraints outweigh long-term rebuild requirements.",
+          "backBullets": [
+            "Suitable for temporary mobility or short-term recovery across early facelift models.",
+            "Mandates independent compression and leak-down testing prior to workshop installation sign-off.",
+            "Represents the fastest turnaround pathway when verified donor units match your exact registration code."
+          ],
           "priceRange": "£1,800 - £3,500 (supply only)",
-          "cta": "Check used BMW X7 engine availability ->"
+          "cta": "Check used BMW X7 engine availability"
         },
         {
           "title": "BMW X7 Remanufactured Engines",
           "description": "Factory-grade restoration process meeting original equipment standards with complete overhaul of every internal and external component.",
+          "frontDescription": "Factory-grade restoration process meeting original equipment standards with complete overhaul of every internal and external component.",
+          "frontDisclaimer": "Highest tier pricing reflects comprehensive new-part specifications.",
+          "backDescription": "Specialists machine cylinder bores and replace crankshaft bearings to zero-tolerance limits ensuring flawless operation for high-stress duties.",
+          "backBullets": [
+            "Covers complete renewal of ancillary components including turbochargers and high-pressure fuel pumps.",
+            "Guarantees strict compliance with emission standards and proprietary software calibration protocols.",
+            "The definitive choice for owners prioritising long-term retention and preserving maximum future resale value."
+          ],
           "priceRange": "£4,500 - £7,500 (supply only)",
-          "cta": "Compare remanufactured BMW X7 engine costs ->"
+          "cta": "Compare remanufactured BMW X7 engine costs"
         },
         {
           "title": "BMW X7 Refurbished Engines",
           "description": "Targeted repair of specific fault areas without full strip-down offering a balanced midpoint between raw used units and full rebuilds.",
+          "frontDescription": "Targeted repair of specific fault areas without full strip-down offering a balanced midpoint between raw used units and full rebuilds.",
+          "frontDisclaimer": "Limited to specific known faults rather than comprehensive overhaul.",
+          "backDescription": "Technicians diagnose and rectify isolated failures such as injector leaks or valve cover faults leaving remaining healthy internal assemblies untouched.",
+          "backBullets": [
+            "Ideal for resolving single-point breakdowns without incurring the expense of unnecessary full internal strip-down work.",
+            "Retains original factory cylinder honing while specifically addressing documented weak ancillary components.",
+            "Delivers dependable mid-range operation for moderate mileage expectations at strictly controlled market pricing."
+          ],
           "priceRange": "£2,200 - £3,800 (supply only)",
-          "cta": "View refurbished BMW X7 engine options ->"
+          "cta": "View refurbished BMW X7 engine options"
         },
         {
           "title": "BMW X7 Supply & Fit Engines",
           "description": "Complete turnkey solution pairing certified replacement units with accredited specialist installation and post-fitting diagnostics.",
+          "frontDescription": "Complete turnkey solution pairing certified replacement units with accredited specialist installation and post-fitting diagnostics.",
+          "frontDisclaimer": "Labour varies by location and workshop overheads across the network.",
+          "backDescription": "Partnered specialist workshops handle complete extraction and programming ensuring seamless integration of complex mild-hybrid and cooling systems. All engine types include a minimum 12‑month unlimited mileage warranty when sourced through EngineMarket. Prices are typical UK market ranges based on historical quote data from our network and depend on exact engine code, variant, mileage and supplier. Use our free comparison tool above - enter your registration to get tailored quotes for your specific BMW X7 within hours.",
+          "backBullets": [
+            "Covers comprehensive software adaptation and diagnostic fault code clearance immediately following installation.",
+            "Extends warranty coverage across both the physical engine replacement unit and specialist workshop workmanship.",
+            "Eliminates logistical complications by coordinating collection, professional fitting and official registration updates."
+          ],
           "priceRange": "£800 - £1,500 added to engine price",
-          "cta": "Find BMW X7 engine supply & fit deals ->"
+          "cta": "Find BMW X7 engine supply & fit deals"
         }
       ],
       "closing": "",

@@ -784,19 +784,35 @@
               {
                 "code": "B47D20",
                 "title": "2.0L Diesel",
+                "history": "The B47 replaced the N47 with a revised timing chain design positioned at the front of the engine, largely resolving the catastrophic chain failure issues that plagued its predecessor.",
+                "fuel": "Diesel",
+                "size": "2.0 Litre",
+                "power": "150-231 hp",
+                "years": "2015-2025",
+                "compatibleVariants": [
+                  "sDrive18d, sDrive18d M Sport, sDrive20d, sDrive20d M Sport, xDrive20d, xDrive20d M Sport, xDrive23d, xDrive23d M Sport, xDrive25d, xDrive25d M Sport"
+                ],
+                "commonFailures": [
+                  "EGR cooler failure (recall issued, 40,000-70,000 miles)",
+                  "DPF regeneration issues in short-trip driving",
+                  "Injector seal leaks (80,000+ miles)"
+                ],
+                "avgRebuiltPrice": "£1,500 - £3,800",
+                "cta": "Get quotes for B47D20 BMW X1 engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+              },
+              {
+                "code": "B47D20 MHEV",
+                "title": "2.0L Mild Hybrid Diesel",
                 "history": "The B47 in mild hybrid form added a 48V starter-generator to the U11 X1, improving efficiency and reducing turbo lag in the latest generation.",
                 "fuel": "MHEV Diesel",
                 "size": "2.0 Litre",
                 "power": "211 hp",
                 "years": "2022-2025",
                 "compatibleVariants": [
-                  "sDrive18d, sDrive18d M Sport, sDrive20d, sDrive20d M Sport, xDrive20d, xDrive20d M Sport, xDrive23d, xDrive23d M Sport, xDrive25d, xDrive25d M Sport",
                   "xDrive23d, xDrive23d M Sport"
                 ],
                 "commonFailures": [
-                  "EGR cooler failure (recall issued, 40,000-70,000 miles)",
-                  "DPF regeneration issues in short-trip driving",
-                  "Injector seal leaks (80,000+ miles)",
                   "48V battery system integration faults",
                   "DPF regeneration interruptions (short journeys)",
                   "EGR valve carbon buildup"
@@ -914,7 +930,28 @@
           },
           {
             "name": "Hybrid / Electrified Engines",
-            "entries": []
+            "entries": [
+              {
+                "code": "B38B15 PHEV",
+                "title": "1.5L Plug-in Hybrid Petrol",
+                "history": "The xDrive25e combined the B38 three-cylinder petrol with an electric motor, delivering BMW's first plug-in hybrid X1 with impressive electric-only range and family-friendly practicality.",
+                "fuel": "PHEV Petrol",
+                "size": "1.5 Litre",
+                "power": "220 hp (combined)",
+                "years": "2020-2025",
+                "compatibleVariants": [
+                  "xDrive25e, xDrive25e M Sport, xDrive25e xLine"
+                ],
+                "commonFailures": [
+                  "High-voltage battery degradation (higher mileage units)",
+                  "Electric motor drive unit bearing wear",
+                  "Hybrid system integration software faults"
+                ],
+                "avgRebuiltPrice": "£3,000 - £6,000",
+                "cta": "Get quotes for B38B15 PHEV BMW X1 engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              }
+            ]
           }
         ],
         "closing": "Can't find your engine code? Enter your registration number above - we'll instantly identify the exact unit, its technical specifications, and live replacement prices from UK BMW X1 engine specialists. Every rebuilt engine comes with a minimum 12-month unlimited mileage warranty."
@@ -959,10 +996,20 @@
             },
             {
               "code": "B47D20",
+              "fuel": "Diesel",
+              "size": "2.0L",
+              "power": "150-231 hp",
+              "compatibleModels": "sDrive18d, sDrive18d M Sport, sDrive20d, sDrive20d M Sport, xDrive20d, xDrive20d M Sport, xDrive23d, xDrive23d M Sport, xDrive25d, xDrive25d M Sport",
+              "avgRebuiltPrice": "£1,500 - £3,800",
+              "cta": "Get quotes for B47D20 BMW X1 engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+            },
+            {
+              "code": "B47D20 MHEV",
               "fuel": "MHEV Diesel",
               "size": "2.0L",
               "power": "211 hp",
-              "compatibleModels": "sDrive18d, sDrive18d M Sport, sDrive20d, sDrive20d M Sport, xDrive20d, xDrive20d M Sport, xDrive23d, xDrive23d M Sport, xDrive25d, xDrive25d M Sport, xDrive23d, xDrive23d M Sport",
+              "compatibleModels": "xDrive23d, xDrive23d M Sport",
               "avgRebuiltPrice": "£2,400 - £4,500",
               "cta": "Get quotes for B47D20 MHEV BMW X1 engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
@@ -1030,7 +1077,18 @@
           "name": "Hybrid / Electrified Engines",
           "era": "Extracted from electrified powertrains and hybrid engine families used in BMW X1 variants.",
           "failureNote": "Main replacement demand comes from cooling, battery-support and high-voltage control faults.",
-          "engines": []
+          "engines": [
+            {
+              "code": "B38B15 PHEV",
+              "fuel": "PHEV Petrol",
+              "size": "1.5L",
+              "power": "220 hp (combined)",
+              "compatibleModels": "xDrive25e, xDrive25e M Sport, xDrive25e xLine",
+              "avgRebuiltPrice": "£3,000 - £6,000",
+              "cta": "Get quotes for B38B15 PHEV BMW X1 engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            }
+          ]
         }
       ],
       "headingLines": [
@@ -1068,20 +1126,6 @@
           "rootCause": "The timing chain is positioned at the rear of the N47 engine block, inadequately lubricated. Chain guides become brittle and shatter, allowing the chain to skip teeth or snap completely.",
           "repairOptions": [
             {
-              "tier": "Repair Tier",
-              "dealerPrice": "Dealer Price (Parts + Labour)",
-              "specialistPrice": "Specialist Price (Parts + Labour)",
-              "whatItInvolves": "What It Involves",
-              "longevity": "Longevity / Suitability"
-            },
-            {
-              "tier": "",
-              "dealerPrice": "",
-              "specialistPrice": "",
-              "whatItInvolves": "",
-              "longevity": ""
-            },
-            {
               "tier": "Minor - Preventative Timing Chain Replacement",
               "dealerPrice": "£1,800 - £2,500",
               "specialistPrice": "£1,000 - £1,600",
@@ -1114,20 +1158,6 @@
           "rootCause": "The exhaust gas recirculation cooler develops internal cracks, allowing coolant to leak into the exhaust system or combustion chambers, potentially causing hydro-lock.",
           "repairOptions": [
             {
-              "tier": "Repair Tier",
-              "dealerPrice": "Dealer Price (Parts + Labour)",
-              "specialistPrice": "Specialist Price (Parts + Labour)",
-              "whatItInvolves": "What It Involves",
-              "longevity": "Longevity / Suitability"
-            },
-            {
-              "tier": "",
-              "dealerPrice": "",
-              "specialistPrice": "",
-              "whatItInvolves": "",
-              "longevity": ""
-            },
-            {
               "tier": "Minor - EGR Cooler Replacement Only",
               "dealerPrice": "£800 - £1,200",
               "specialistPrice": "£450 - £700",
@@ -1152,20 +1182,6 @@
           "typicalFailureMileage": "50,000 - 90,000 miles",
           "rootCause": "Similar to the N47 diesel, the N20 petrol engine places the timing chain at the rear with plastic guides that become brittle and shatter without warning.",
           "repairOptions": [
-            {
-              "tier": "Repair Tier",
-              "dealerPrice": "Dealer Price (Parts + Labour)",
-              "specialistPrice": "Specialist Price (Parts + Labour)",
-              "whatItInvolves": "What It Involves",
-              "longevity": "Longevity / Suitability"
-            },
-            {
-              "tier": "",
-              "dealerPrice": "",
-              "specialistPrice": "",
-              "whatItInvolves": "",
-              "longevity": ""
-            },
             {
               "tier": "Minor - Preventative Timing Chain Replacement",
               "dealerPrice": "£1,700 - £2,400",
@@ -1192,20 +1208,6 @@
           "rootCause": "Extended oil change intervals or poor-quality oil cause turbo bearing wear. On N47, the front catalytic converter can disintegrate and send debris into the turbo.",
           "repairOptions": [
             {
-              "tier": "Repair Tier",
-              "dealerPrice": "Dealer Price (Parts + Labour)",
-              "specialistPrice": "Specialist Price (Parts + Labour)",
-              "whatItInvolves": "What It Involves",
-              "longevity": "Longevity / Suitability"
-            },
-            {
-              "tier": "",
-              "dealerPrice": "",
-              "specialistPrice": "",
-              "whatItInvolves": "",
-              "longevity": ""
-            },
-            {
               "tier": "Intermediate - Turbocharger Replacement Only",
               "dealerPrice": "£1,500 - £2,400",
               "specialistPrice": "£800 - £1,400",
@@ -1228,7 +1230,7 @@
         "h4": "Don't Let Engine Failure Write Off Your BMW X1",
         "paragraph": "The failures above account for over 80% of BMW X1 engine replacement enquiries we see - timing chains on N47 and N20, EGR coolers on B47, and turbo failures across both diesel families. EngineMarket makes it simple to compare prices from trusted UK BMW X1 specialists who use upgraded components specifically designed to prevent these failures from recurring. Every rebuilt engine includes a minimum 12-month unlimited mileage warranty, nationwide delivery, and supply & fit options. Compare prices today and get back on the road without the main dealer premium.",
         "buttonText": "Compare BMW X1 Engine Replacement Prices Now →",
-        "disclaimer": ""
+        "disclaimer": "All prices are indicative UK market ranges based on historical quote data and repair requests from our network of engine specialists. Dealer pricing is estimated based on published main dealer labour rates and genuine OEM parts pricing. Specialist pricing reflects actual quote data from EngineMarket's UK network. Actual costs vary depending on damage severity, vehicle condition, variant, and workshop location within the UK. Use our free comparison tool to get tailored quotes for your specific BMW X1 and engine code. Every engine supplied through EngineMarket carries a minimum 12-month unlimited mileage warranty - always confirm exact terms with your chosen supplier."
       }
     },
     "engineTypes": {
@@ -1239,38 +1241,86 @@
         {
           "title": "BMW X1 Reconditioned Engines (Recon)",
           "description": "Fully stripped, cleaned, inspected and rebuilt to factory tolerances with new gaskets, seals and wear parts.",
+          "frontDescription": "Fully stripped, cleaned, inspected and rebuilt to factory tolerances with new gaskets, seals and wear parts.",
+          "frontDisclaimer": "OEM-spec components, 12-24 month warranty included.",
+          "backDescription": "A reconditioned X1 engine undergoes complete disassembly, ultrasonic cleaning and precision measurement of all critical components. Worn parts are replaced to meet original BMW specifications.",
+          "backBullets": [
+            "Ideal for N47 and B47 diesel X1s",
+            "Timing chain and EGR cooler upgrades available",
+            "Bench tested before dispatch to your specialist"
+          ],
           "priceRange": "£1,850 - £4,200 (supply only)",
-          "cta": "Compare reconditioned BMW X1 engine prices ->"
+          "cta": "Compare reconditioned BMW X1 engine prices"
         },
         {
           "title": "BMW X1 Rebuilt Engines",
           "description": "Overhauled replacement unit focusing on failed or worn components identified during strip-down inspection.",
+          "frontDescription": "Overhauled replacement unit focusing on failed or worn components identified during strip-down inspection.",
+          "frontDisclaimer": "12-month warranty, targeted component replacement.",
+          "backDescription": "A rebuilt X1 engine addresses specific failure points rather than replacing every component. The block and head are retained, while pistons, rings, bearings and gaskets are renewed where required.",
+          "backBullets": [
+            "Cost-effective fix for timing chain failure",
+            "Common on N47D20 and B47D20 units",
+            "Faster turnaround than full reconditioning"
+          ],
           "priceRange": "£1,600 - £3,800 (supply only)",
-          "cta": "Get rebuilt BMW X1 engine quotes ->"
+          "cta": "Get rebuilt BMW X1 engine quotes"
         },
         {
           "title": "BMW X1 Used Engines",
           "description": "Low-mileage donor engine removed from a written-off X1, tested for compression and basic running condition.",
+          "frontDescription": "Low-mileage donor engine removed from a written-off X1, tested for compression and basic running condition.",
+          "frontDisclaimer": "Mileage verified, visual inspection completed.",
+          "backDescription": "A used engine offers the lowest entry price but carries higher risk. Our network only supplies units with documented mileage, compression test results and no prior major failure history.",
+          "backBullets": [
+            "Under 80k miles ideal for F48 X1",
+            "Same-day collection or next-day delivery",
+            "Best for budget-conscious DIY fitters"
+          ],
           "priceRange": "£800 - £2,200 (supply only)",
-          "cta": "Check used BMW X1 engine availability ->"
+          "cta": "Check used BMW X1 engine availability"
         },
         {
           "title": "BMW X1 Remanufactured Engines",
           "description": "Factory-spec remanufacturing to BMW's original tolerances with all critical components replaced as new.",
+          "frontDescription": "Factory-spec remanufacturing to BMW's original tolerances with all critical components replaced as new.",
+          "frontDisclaimer": "Full component replacement, extended warranty available.",
+          "backDescription": "Remanufacturing goes beyond reconditioning by replacing every wear item - pistons, rings, bearings, timing chains, oil pump and water pump - regardless of apparent condition.",
+          "backBullets": [
+            "As close to a new X1 engine as available",
+            "Addresses N47 and N20 design flaws permanently",
+            "24-month unlimited mileage warranty typical"
+          ],
           "priceRange": "£2,200 - £5,000 (supply only)",
-          "cta": "Compare remanufactured BMW X1 engine costs ->"
+          "cta": "Compare remanufactured BMW X1 engine costs"
         },
         {
           "title": "BMW X1 Refurbished Engines",
           "description": "Cleaned and serviced used engine with external components replaced for reliable daily driving.",
+          "frontDescription": "Cleaned and serviced used engine with external components replaced for reliable daily driving.",
+          "frontDisclaimer": "Basic service includes gaskets, seals and timing check.",
+          "backDescription": "A refurbished engine starts as a used core then receives new gaskets, seals, timing components and a full service before fitting - bridging the gap between used and rebuilt quality.",
+          "backBullets": [
+            "Good value for high-mileage X1 ownership",
+            "EGR and injector seals typically renewed",
+            "6-12 month warranty standard"
+          ],
           "priceRange": "£1,100 - £2,800 (supply only)",
-          "cta": "View refurbished BMW X1 engine options ->"
+          "cta": "View refurbished BMW X1 engine options"
         },
         {
           "title": "BMW X1 Supply & Fit Engines",
           "description": "Nationwide fitting service bundled with your chosen engine - collect and return included.",
+          "frontDescription": "Nationwide fitting service bundled with your chosen engine - collect and return included.",
+          "frontDisclaimer": "Mobile and garage fitting available UK-wide.",
+          "backDescription": "Supply and fit removes all logistics stress. Your chosen engine is delivered to an approved BMW specialist near you, fitted, tested and handed back with a warranty covering both parts and labour.",
+          "backBullets": [
+            "No recovery or transport arrangements needed",
+            "Fitting includes coolant, oil and filter change",
+            "Single invoice for engine and installation"
+          ],
           "priceRange": "£400 - £800 added to engine price",
-          "cta": "Find BMW X1 engine supply & fit deals ->"
+          "cta": "Find BMW X1 engine supply & fit deals"
         }
       ],
       "closing": "All engine types include a minimum 12-month unlimited mileage warranty when sourced through EngineMarket. Prices are typical UK market ranges based on historical quote data from our network and depend on exact engine code, variant, mileage and supplier. Use our free comparison tool above - enter your registration to get tailored quotes for your specific BMW X1 within hours.",

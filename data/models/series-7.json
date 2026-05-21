@@ -962,7 +962,28 @@
           },
           {
             "name": "Hybrid / Electrified Engines",
-            "entries": []
+            "entries": [
+              {
+                "code": "B48 Hybrid",
+                "title": "2.0L Petrol PHEV",
+                "history": "Combines turbo petrol with electric motor for 740e. High-voltage architecture introduces unique thermal and inverter failure points.",
+                "fuel": "PHEV (Petrol/Electric)",
+                "size": "2.0 Litre",
+                "power": "326-394 hp (combined)",
+                "years": "2016-2022",
+                "compatibleVariants": [
+                  "740e xDrive, 745e xDrive, 745Le xDrive, 745e xDrive M Sport"
+                ],
+                "commonFailures": [
+                  "High-voltage battery thermal management and cell degradation",
+                  "Power inverter cooling pump failure and warning lights",
+                  "Clutch actuator motor wear between electric and petrol modes"
+                ],
+                "avgRebuiltPrice": "£2,800 - £4,500",
+                "cta": "Get quotes for B48 Hybrid BMW 7 Series engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              }
+            ]
           }
         ],
         "closing": "Can’t find your engine code? Enter your registration number above - we’ll instantly identify the exact unit, its technical specifications, and live replacement prices from UK BMW 7 Series engine specialists. Every rebuilt engine comes with a minimum 12‑month unlimited mileage warranty."
@@ -1108,7 +1129,18 @@
           "name": "Hybrid / Electrified Engines",
           "era": "Extracted from electrified powertrains and hybrid engine families used in BMW 7 Series variants.",
           "failureNote": "Main replacement demand comes from cooling, battery-support and high-voltage control faults.",
-          "engines": []
+          "engines": [
+            {
+              "code": "B48 Hybrid",
+              "fuel": "PHEV (Petrol/Electric)",
+              "size": "2.0L",
+              "power": "326-394 hp (combined)",
+              "compatibleModels": "740e xDrive, 745e xDrive, 745Le xDrive, 745e xDrive M Sport",
+              "avgRebuiltPrice": "£2,800 - £4,500",
+              "cta": "Get quotes for B48 Hybrid BMW 7 Series engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            }
+          ]
         }
       ],
       "headingLines": [
@@ -1146,13 +1178,6 @@
           "rootCause": "Viton rubber seals harden under sustained high cylinder head temperatures, allowing crankcase oil to seep past valve guides into combustion chambers during overnight parking.",
           "repairOptions": [
             {
-              "tier": "Repair Tier",
-              "dealerPrice": "Dealer Price (Parts + Labour)",
-              "specialistPrice": "Specialist Price (Parts + Labour)",
-              "whatItInvolves": "What It Involves",
-              "longevity": "Longevity / Suitability"
-            },
-            {
               "tier": "Minor - Valve Cover Gasket & Seal Refresh",
               "dealerPrice": "£850 - £1,300",
               "specialistPrice": "£450 - £700",
@@ -1184,13 +1209,6 @@
           "typicalFailureMileage": "45,000 - 90,000 miles",
           "rootCause": "The V-valley layout traps exhaust heat directly against fuel rails and high-pressure injectors, causing petrol vapour lock and heat soak that prevents the starter from firing after short stops.",
           "repairOptions": [
-            {
-              "tier": "Repair Tier",
-              "dealerPrice": "Dealer Price (Parts + Labour)",
-              "specialistPrice": "Specialist Price (Parts + Labour)",
-              "whatItInvolves": "What It Involves",
-              "longevity": "Longevity / Suitability"
-            },
             {
               "tier": "Minor - Fuel Line Routing & Heat Shield Upgrade",
               "dealerPrice": "£1,100 - £1,600",
@@ -1224,13 +1242,6 @@
           "rootCause": "Extended 15,000-mile service intervals degrade oil viscosity prematurely, starving the plastic timing chain guides and hydraulic tensioner, causing chain stretch and metal debris circulation.",
           "repairOptions": [
             {
-              "tier": "Repair Tier",
-              "dealerPrice": "Dealer Price (Parts + Labour)",
-              "specialistPrice": "Specialist Price (Parts + Labour)",
-              "whatItInvolves": "What It Involves",
-              "longevity": "Longevity / Suitability"
-            },
-            {
               "tier": "Minor - Preventative Chain Kit Replacement",
               "dealerPrice": "£1,800 - £2,600",
               "specialistPrice": "£950 - £1,400",
@@ -1263,13 +1274,6 @@
           "rootCause": "Thermal stress causes internal EGR cooler casting fractures, allowing coolant to leak into the exhaust stream. This contaminates the DPF substrate, triggering regeneration failure and excessive backpressure that damages turbo bearings.",
           "repairOptions": [
             {
-              "tier": "Repair Tier",
-              "dealerPrice": "Dealer Price (Parts + Labour)",
-              "specialistPrice": "Specialist Price (Parts + Labour)",
-              "whatItInvolves": "What It Involves",
-              "longevity": "Longevity / Suitability"
-            },
-            {
               "tier": "Intermediate - EGR Cooler & DPF Assembly Replacement",
               "dealerPrice": "£3,200 - £4,800",
               "specialistPrice": "£1,500 - £2,300",
@@ -1290,9 +1294,9 @@
       ],
       "finalCta": {
         "h4": "Don't Let Engine Failure Write Off Your BMW 7 Series",
-        "paragraph": "",
+        "paragraph": "When a flagship V8 or diesel powertrain shows signs of catastrophic wear, main dealer diagnostics and genuine OEM parts quickly push repair costs beyond the vehicle's residual value. EngineMarket cuts through the main dealer premium by connecting you directly with vetted UK BMW 7 Series specialists who stock upgraded, fully bench-tested replacement units. Every engine we quote for includes precision-machined components designed to outperform factory specifications, nationwide courier or mobile supply & fit options, and a comprehensive 12-month unlimited mileage warranty as standard. Compare transparent, specialist-backed BMW 7 Series engine replacement prices today and keep your luxury saloon on the road without the dealership price tag.",
         "buttonText": "Compare BMW 7 Series Engine Replacement Prices Now →",
-        "disclaimer": ""
+        "disclaimer": "All prices are indicative UK market ranges based on historical quote data and repair requests from our network of engine specialists. Dealer pricing is estimated based on published main dealer labour rates and genuine OEM parts pricing. Specialist pricing reflects actual quote data from EngineMarket's UK network. Actual costs vary depending on damage severity, vehicle condition, variant, and workshop location within the UK. Use our free comparison tool to get tailored quotes for your specific BMW 7 Series and engine code. Every engine supplied through EngineMarket carries a minimum 12-month unlimited mileage warranty - always confirm exact terms with your chosen supplier."
       }
     },
     "engineTypes": {
@@ -1303,38 +1307,86 @@
         {
           "title": "BMW 7 Series Reconditioned Engines (Recon)",
           "description": "Professionally restored engines with worn components replaced to meet strict performance standards for your 7 Series.",
+          "frontDescription": "Professionally restored engines with worn components replaced to meet strict performance standards for your 7 Series.",
+          "frontDisclaimer": "Prices vary by engine code, variant and supplier network availability.",
+          "backDescription": "Reconditioned units undergo thorough inspection, machining and parts replacement to restore near-factory performance for your 7 Series.",
+          "backBullets": [
+            "Ideal for N62, N63 V8 owners seeking reliable, cost-effective replacement solutions",
+            "Bench-tested before dispatch with full warranty coverage included",
+            "Typical turnaround: 3-5 working days from UK specialist workshops"
+          ],
           "priceRange": "£2,500 - £6,500 (supply only)",
-          "cta": "Compare reconditioned BMW 7 Series engine prices ->"
+          "cta": "Compare reconditioned BMW 7 Series engine prices"
         },
         {
           "title": "BMW 7 Series Rebuilt Engines",
           "description": "Engines rebuilt with upgraded components addressing known failure points like valve seals and timing chains on 7 Series models.",
+          "frontDescription": "Engines rebuilt with upgraded components addressing known failure points like valve seals and timing chains on 7 Series models.",
+          "frontDisclaimer": "Final cost depends on exact engine code, damage severity and chosen supplier.",
+          "backDescription": "Rebuilt engines feature upgraded internals designed to overcome common 7 Series failure modes such as N63 hot restart or N57 timing issues.",
+          "backBullets": [
+            "Upgraded piston rings, seals and bearings address original design weaknesses",
+            "Suitable for high-mileage F01, G11 chassis requiring long-term reliability",
+            "All units dyno-tested and supplied with 12-month unlimited mileage warranty"
+          ],
           "priceRange": "£3,000 - £7,500 (supply only)",
-          "cta": "Get rebuilt BMW 7 Series engine quotes ->"
+          "cta": "Get rebuilt BMW 7 Series engine quotes"
         },
         {
           "title": "BMW 7 Series Used Engines",
           "description": "Low-mileage donor engines sourced from verified UK breakers, offering budget-friendly replacement for E65, F01 and G11 7 Series models.",
+          "frontDescription": "Low-mileage donor engines sourced from verified UK breakers, offering budget-friendly replacement for E65, F01 and G11 7 Series models.",
+          "frontDisclaimer": "Mileage, history and warranty terms vary by individual supplier and engine condition.",
+          "backDescription": "Used engines provide an affordable entry point for 7 Series owners, sourced from accident-damaged donors with verified mileage and compression tests.",
+          "backBullets": [
+            "Best suited for N57, B57 diesel variants with strong service history records",
+            "Always request compression test results and prior maintenance documentation",
+            "Ideal for owners planning short-term ownership or budget-conscious repairs"
+          ],
           "priceRange": "£1,500 - £4,500 (supply only)",
-          "cta": "Check used BMW 7 Series engine availability ->"
+          "cta": "Check used BMW 7 Series engine availability"
         },
         {
           "title": "BMW 7 Series Remanufactured Engines",
           "description": "Factory-spec remanufactured engines built to original bmw tolerances with new components throughout for maximum 7 Series longevity.",
+          "frontDescription": "Factory-spec remanufactured engines built to original bmw tolerances with new components throughout for maximum 7 Series longevity.",
+          "frontDisclaimer": "Premium pricing reflects new-component specification and extended warranty coverage options.",
+          "backDescription": "Remanufactured units are stripped to bare blocks and rebuilt with new pistons, bearings and seals to exceed original factory specifications for 7 Series.",
+          "backBullets": [
+            "Recommended for N73 V12 and high-performance N63TU applications requiring precision",
+            "Includes updated gaskets, sensors and ancillaries for complete peace of mind",
+            "Longest warranty terms available, often 24 months with unlimited mileage coverage"
+          ],
           "priceRange": "£4,000 - £9,000 (supply only)",
-          "cta": "Compare remanufactured BMW 7 Series engine costs ->"
+          "cta": "Compare remanufactured BMW 7 Series engine costs"
         },
         {
           "title": "BMW 7 Series Refurbished Engines",
           "description": "Engines refurbished with targeted repairs to address specific faults, offering a balanced solution between cost and reliability for 7 Series.",
+          "frontDescription": "Engines refurbished with targeted repairs to address specific faults, offering a balanced solution between cost and reliability for 7 Series.",
+          "frontDisclaimer": "Scope of refurbishment varies; confirm which components are replaced before committing to purchase.",
+          "backDescription": "Refurbished engines receive focused repairs addressing known issues like valve stem seals or turbo wear, restoring function without full rebuild costs.",
+          "backBullets": [
+            "Suitable for M57, N52 engines with isolated faults rather than catastrophic failure",
+            "Faster turnaround than full rebuilds, typically 2-4 working days from order",
+            "Verify exactly which components are replaced to ensure value for your 7 Series"
+          ],
           "priceRange": "£2,000 - £5,500 (supply only)",
-          "cta": "View refurbished BMW 7 Series engine options ->"
+          "cta": "View refurbished BMW 7 Series engine options"
         },
         {
           "title": "BMW 7 Series Supply & Fit Engines",
           "description": "Complete engine replacement service including delivery, fitting and commissioning by vetted UK BMW 7 Series specialist workshops nationwide.",
+          "frontDescription": "Complete engine replacement service including delivery, fitting and commissioning by vetted UK BMW 7 Series specialist workshops nationwide.",
+          "frontDisclaimer": "Labour costs vary by location, engine complexity and workshop hourly rates across the UK network.",
+          "backDescription": "Supply and fit services remove the hassle of sourcing separate fitters, with vetted specialists handling removal, installation and post-fit calibration for your 7 Series.",
+          "backBullets": [
+            "Ideal for N63, N73 V8 and V12 swaps requiring specialist tools and coding expertise",
+            "Includes ECU adaptation, road test and handover documentation as standard",
+            "Mobile fitting available in many regions for convenient, location-flexible service"
+          ],
           "priceRange": "£800 - £1,800 added to engine price",
-          "cta": "Find BMW 7 Series engine supply & fit deals ->"
+          "cta": "Find BMW 7 Series engine supply & fit deals"
         }
       ],
       "closing": "All engine types include a minimum 12‑month unlimited mileage warranty when sourced through EngineMarket. Prices are typical UK market ranges based on historical quote data from our network and depend on exact engine code, variant, mileage and supplier. Use our free comparison tool above - enter your registration to get tailored quotes for your specific BMW 7 Series within hours.",

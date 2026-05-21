@@ -1107,13 +1107,6 @@
           "rootCause": "The factory plastic coolant expansion tank becomes brittle under repeated thermal cycling, leading to micro-fractures. Combined with thermostat housing degradation, this causes rapid coolant loss and severe head gasket stress.",
           "repairOptions": [
             {
-              "tier": "Repair Tier",
-              "dealerPrice": "Dealer Price (Parts + Labour)",
-              "specialistPrice": "Specialist Price (Parts + Labour)",
-              "whatItInvolves": "What It Involves",
-              "longevity": "Longevity / Suitability"
-            },
-            {
               "tier": "Minor - Thermostat & Hose Replacement",
               "dealerPrice": "£450-£700",
               "specialistPrice": "£280-£450",
@@ -1146,13 +1139,6 @@
           "rootCause": "The rear-mounted timing chain tensioner on early B47 units can lose hydraulic pressure, causing chain slack. Extended BMW service intervals accelerate plastic guide wear, allowing the chain to stretch and jump timing.",
           "repairOptions": [
             {
-              "tier": "Repair Tier",
-              "dealerPrice": "Dealer Price (Parts + Labour)",
-              "specialistPrice": "Specialist Price (Parts + Labour)",
-              "whatItInvolves": "What It Involves",
-              "longevity": "Longevity / Suitability"
-            },
-            {
               "tier": "Minor - Preventative Chain & Guide Swap",
               "dealerPrice": "£1,100-£1,600",
               "specialistPrice": "£750-£1,100",
@@ -1177,13 +1163,6 @@
           "typicalFailureMileage": "70,000 - 120,000 miles",
           "rootCause": "Urban driving cycles prevent active DPF regeneration, causing soot buildup. EGR valve carbon accumulation restricts exhaust flow, raising combustion temperatures and stressing piezoelectric injector seals until fuel dilutes the oil.",
           "repairOptions": [
-            {
-              "tier": "Repair Tier",
-              "dealerPrice": "Dealer Price (Parts + Labour)",
-              "specialistPrice": "Specialist Price (Parts + Labour)",
-              "whatItInvolves": "What It Involves",
-              "longevity": "Longevity / Suitability"
-            },
             {
               "tier": "Minor - DPF Clean & EGR Service",
               "dealerPrice": "£600-£900",
@@ -1210,13 +1189,6 @@
           "rootCause": "Sustained high boost pressures and aggressive thermal loads accelerate piston ring and big-end bearing wear on the tuned M35i block, particularly under track use or delayed oil changes.",
           "repairOptions": [
             {
-              "tier": "Repair Tier",
-              "dealerPrice": "Dealer Price (Parts + Labour)",
-              "specialistPrice": "Specialist Price (Parts + Labour)",
-              "whatItInvolves": "What It Involves",
-              "longevity": "Longevity / Suitability"
-            },
-            {
               "tier": "Minor - Engine Mount & Boost System Check",
               "dealerPrice": "£400-£700",
               "specialistPrice": "£250-£450",
@@ -1237,9 +1209,9 @@
       ],
       "finalCta": {
         "h4": "Don't Let Engine Failure Write Off Your BMW X2",
-        "paragraph": "",
+        "paragraph": "The repair landscape for the BMW X2 is clear: early warnings can often be addressed with targeted component swaps, but once core damage occurs, main dealer rebuilds or replacements carry a significant premium. EngineMarket removes that premium by connecting you directly with vetted UK BMW X2 engine specialists who supply fully rebuilt units with upgraded failure-resistant components. Every quote includes nationwide delivery, precision coding compatibility for sDrive and xDrive variants, and a minimum 12‑month unlimited mileage warranty. Compare transparent prices today and keep your BMW X2 on the road without paying dealership markups.",
         "buttonText": "Compare BMW X2 Engine Replacement Prices Now →",
-        "disclaimer": ""
+        "disclaimer": "All prices are indicative UK market ranges based on historical quote data and repair requests from our network of engine specialists. Dealer pricing is estimated based on published main dealer labour rates and genuine OEM parts pricing. Specialist pricing reflects actual quote data from EngineMarket’s UK network. Actual costs vary depending on damage severity, vehicle condition, variant, and workshop location within the UK. Use our free comparison tool to get tailored quotes for your specific BMW X2 and engine code. Every engine supplied through EngineMarket carries a minimum 12‑month unlimited mileage warranty - always confirm exact terms with your chosen supplier."
       }
     },
     "engineTypes": {
@@ -1250,38 +1222,86 @@
         {
           "title": "BMW X2 Reconditioned Engines (Recon)",
           "description": "Fully stripped, cleaned and rebuilt with new wear parts including bearings, seals, gaskets and pistons for reliable bmw x2 performance.",
+          "frontDescription": "Fully stripped, cleaned and rebuilt with new wear parts including bearings, seals, gaskets and pistons for reliable bmw x2 performance.",
+          "frontDisclaimer": "Suitable for most variants; confirm engine code match before ordering.",
+          "backDescription": "Reconditioned bmw x2 engines undergo full disassembly, machining where needed, and replacement of all wear items to restore factory specifications.",
+          "backBullets": [
+            "New bearings, seals and gaskets fitted as standard during the professional rebuild process",
+            "Compatible with b47, b48 and b38 engine codes across sdrive and xdrive variants",
+            "Minimum 12-month unlimited mileage warranty included with every reconditioned unit"
+          ],
           "priceRange": "£1,600 - £3,800 (supply only)",
-          "cta": "Compare reconditioned BMW X2 engine prices ->"
+          "cta": "Compare reconditioned BMW X2 engine prices"
         },
         {
           "title": "BMW X2 Rebuilt Engines",
           "description": "Expert rebuild addressing known failure points like timing chains or coolant systems with upgraded components for longevity.",
+          "frontDescription": "Expert rebuild addressing known failure points like timing chains or coolant systems with upgraded components for longevity.",
+          "frontDisclaimer": "Ideal for high-mileage x2 engines with documented failure history or preventative replacement.",
+          "backDescription": "Rebuilt bmw x2 engines target specific failure modes with precision machining and upgraded parts to prevent repeat issues on b47 and b48 units.",
+          "backBullets": [
+            "Upgraded timing chain tensioners and guides fitted to address b47 chain anxiety concerns",
+            "Coolant system components renewed to prevent b48 expansion tank and thermostat failures",
+            "Bench tested and coded ready for direct fitment to your f39 chassis bmw x2 variant"
+          ],
           "priceRange": "£2,000 - £4,500 (supply only)",
-          "cta": "Get rebuilt BMW X2 engine quotes ->"
+          "cta": "Get rebuilt BMW X2 engine quotes"
         },
         {
           "title": "BMW X2 Used Engines",
           "description": "Low-mileage donor engines from verified uk breakers, ideal for budget-conscious replacements when code match is confirmed.",
+          "frontDescription": "Low-mileage donor engines from verified uk breakers, ideal for budget-conscious replacements when code match is confirmed.",
+          "frontDisclaimer": "Mileage and condition vary; request full history and compression test report before purchase.",
+          "backDescription": "Used bmw x2 engines offer the lowest upfront cost but require careful verification of mileage, service history and compatibility with your variant.",
+          "backBullets": [
+            "Source from uk breakers with verified mileage and no accident damage history reports",
+            "Best for sdrive18d, xdrive20d and sdrive20i variants where donor availability is strong",
+            "Shorter warranty period typical; confirm coverage terms with your chosen supplier before order"
+          ],
           "priceRange": "£800 - £2,200 (supply only)",
-          "cta": "Check used BMW X2 engine availability ->"
+          "cta": "Check used BMW X2 engine availability"
         },
         {
           "title": "BMW X2 Remanufactured Engines",
           "description": "Factory-spec remanufacturing with cnc machining, new internals and full dyno testing for maximum durability and peace of mind.",
+          "frontDescription": "Factory-spec remanufacturing with cnc machining, new internals and full dyno testing for maximum durability and peace of mind.",
+          "frontDisclaimer": "Premium option for m35i and high-value x2 variants where long-term reliability is the priority.",
+          "backDescription": "Remanufactured bmw x2 engines are built to original bmw tolerances using new or reconditioned components, dyno tested and ready for demanding use.",
+          "backBullets": [
+            "Cnc machined block and head restore factory clearances for b47, b48 and b38 engine families",
+            "New pistons, rings, bearings and seals fitted as standard with upgraded failure-resistant parts",
+            "Full dyno run and ecu coding verification ensure seamless integration with your x2 drivetrain"
+          ],
           "priceRange": "£2,800 - £5,500 (supply only)",
-          "cta": "Compare remanufactured BMW X2 engine costs ->"
+          "cta": "Compare remanufactured BMW X2 engine costs"
         },
         {
           "title": "BMW X2 Refurbished Engines",
           "description": "Targeted refurbishment addressing common failure points like injectors or turbos while retaining the core long block assembly.",
+          "frontDescription": "Targeted refurbishment addressing common failure points like injectors or turbos while retaining the core long block assembly.",
+          "frontDisclaimer": "Best for engines with isolated component failure rather than catastrophic internal damage or wear.",
+          "backDescription": "Refurbished bmw x2 engines focus on replacing known weak components like egr valves, turbos or hpfp units while keeping the sound core block.",
+          "backBullets": [
+            "Ideal for b47 diesel x2 models with egr or injector issues but healthy bottom end compression",
+            "Faster turnaround than full rebuilds; typically ready for collection or delivery within days",
+            "Cost-effective solution when diagnostics confirm the long block remains within bmw wear specifications"
+          ],
           "priceRange": "£1,400 - £3,200 (supply only)",
-          "cta": "View refurbished BMW X2 engine options ->"
+          "cta": "View refurbished BMW X2 engine options"
         },
         {
           "title": "BMW X2 Supply & Fit Engines",
           "description": "Complete engine replacement service including delivery, professional fitting, coding and road test by vetted uk bmw specialists.",
+          "frontDescription": "Complete engine replacement service including delivery, professional fitting, coding and road test by vetted uk bmw specialists.",
+          "frontDisclaimer": "Labour cost varies by location and variant complexity; xdrive models may incur higher fitting charges.",
+          "backDescription": "Supply and fit bmw x2 service removes the hassle of coordinating separate engine supply and installation with full warranty coverage.",
+          "backBullets": [
+            "Vetted specialists handle engine coding, adaptation and xdrive system calibration post-installation",
+            "Includes all fluids, gaskets, mounts and ancillaries required for a complete bmw x2 engine swap",
+            "Single-point warranty coverage on both engine and labour simplifies claims if issues arise post-fit"
+          ],
           "priceRange": "£400 - £900 added to engine price",
-          "cta": "Find BMW X2 engine supply & fit deals ->"
+          "cta": "Find BMW X2 engine supply & fit deals"
         }
       ],
       "closing": "All engine types include a minimum 12‑month unlimited mileage warranty when sourced through EngineMarket. Prices are typical UK market ranges based on historical quote data from our network and depend on exact engine code, variant, mileage and supplier. Use our free comparison tool above - enter your registration to get tailored quotes for your specific BMW X2 within hours.",
