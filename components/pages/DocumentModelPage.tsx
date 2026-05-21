@@ -13,94 +13,9 @@ import ModelEngineCodesSection from "@/components/sections/ModelEngineCodesSecti
 import ReviewsSection from "@/components/sections/ReviewsSection";
 import TrustCtaSection from "@/components/sections/TrustCtaSection";
 import VariantCoverageSection from "@/components/sections/VariantCoverageSection";
-import { SITE_URL } from "@/lib/site";
+import { applyModelPageVisualPlaceholders } from "@/lib/modelVisualSelection";
 import { buildStaticReviewsSection } from "@/lib/staticReviews";
 import type { ModelPageData } from "@/types/model";
-
-function buildStructuredData(pageData: ModelPageData) {
-  const canonical = `${SITE_URL}${pageData.seo.canonical}`;
-
-  if (pageData.structuredData) {
-    return pageData.structuredData;
-  }
-
-  return {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebPage",
-        "@id": `${canonical}#webpage`,
-        name: pageData.seo.title,
-        description: pageData.seo.description,
-        url: canonical,
-        breadcrumb: {
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            {
-              "@type": "ListItem",
-              position: 1,
-              name: "Home",
-              item: SITE_URL,
-            },
-            {
-              "@type": "ListItem",
-              position: 2,
-              name: pageData.brand.name,
-              item: `${SITE_URL}/${pageData.brand.slug}`,
-            },
-            {
-              "@type": "ListItem",
-              position: 3,
-              name: pageData.model.name,
-              item: canonical,
-            },
-          ],
-        },
-      },
-      {
-        "@type": "Service",
-        "@id": `${canonical}#service`,
-        name: pageData.seo.title,
-        description: pageData.seo.description,
-        areaServed: {
-          "@type": "Country",
-          name: "United Kingdom",
-        },
-        provider: {
-          "@type": "Organization",
-          name: "Engines Market",
-          url: SITE_URL,
-        },
-      },
-      {
-        "@type": "ItemList",
-        "@id": `${canonical}#variants`,
-        name: `${pageData.model.name} engine replacement variants`,
-        itemListElement: pageData.sections.variantCoverage.cards.map((card, index) => ({
-          "@type": "ListItem",
-          position: index + 1,
-          item: {
-            "@type": "Service",
-            name: card.h3,
-            description: `${card.subtitle}. Typical rebuilt price range: ${card.priceRange}.`,
-          },
-        })),
-      },
-      {
-        "@type": "FAQPage",
-        "@id": `${canonical}#faq`,
-        mainEntity: pageData.sections.faq.items.map((item) => ({
-          "@type": "Question",
-          name: item.question,
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: `${item.answer} ${item.cta}`.trim(),
-          },
-        })),
-      },
-    ],
-  };
-}
 
 function toHeroCards(data: ModelPageData) {
   return data.sections.variantCoverage.cards.map((card) => ({
@@ -122,80 +37,83 @@ type DocumentModelPageProps = {
 export default function DocumentModelPage({
   data,
 }: DocumentModelPageProps) {
-  const structuredData = buildStructuredData(data);
-  const heroCards = toHeroCards(data);
-  const reviewsData = buildStaticReviewsSection(data.model.name);
+  const visualData = applyModelPageVisualPlaceholders(data);
+  const structuredData = visualData.structuredData;
+  const heroCards = toHeroCards(visualData);
+  const reviewsData = buildStaticReviewsSection(visualData.model.name);
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      />
+      {structuredData ? (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      ) : null}
 
       <HeroSection
-        data={data.sections.hero}
-        bgImage={data.assets.heroBg}
+        data={visualData.sections.hero}
+        bgImage={visualData.assets.heroBg}
         modelCards={heroCards}
         strictData
       />
 
       <HowItWorksSection
-        data={data.sections.howItWorks}
-        bgImage={data.assets.howItWorksBg}
+        data={visualData.sections.howItWorks}
+        bgImage={visualData.assets.howItWorksBg}
       />
 
       <LiveMarketPricesSection
-        data={data.sections.liveMarketPrices}
+        data={visualData.sections.liveMarketPrices}
         modelCards={heroCards}
-        imageSrc={data.assets.heroBg}
+        imageSrc={visualData.assets.heroBg}
         displayMode="document"
       />
 
       <ReviewsSection data={reviewsData} useDataHeading />
 
-      <VariantCoverageSection data={data.sections.variantCoverage} />
+      <VariantCoverageSection data={visualData.sections.variantCoverage} />
 
       <ModelEngineCodesSection
-        data={data.sections.engineCodes}
-        guide={data.sections.variantCoverage.engineGuide}
-        modelName={data.model.name}
+        data={visualData.sections.engineCodes}
+        guide={visualData.sections.variantCoverage.engineGuide}
+        modelName={visualData.model.name}
         strictData
       />
 
-      {data.sections.commonProblems ? (
-        <CommonProblemsSection data={data.sections.commonProblems} />
+      {visualData.sections.commonProblems ? (
+        <CommonProblemsSection data={visualData.sections.commonProblems} />
       ) : null}
 
-      <EngineTypesSection data={data.sections.engineTypes} dynamicBrandCta displayMode="document" />
+      <EngineTypesSection data={visualData.sections.engineTypes} dynamicBrandCta displayMode="document" />
 
       <EngineSizesSection
-        brandName={data.model.name}
-        data={data.sections.engineSizes}
-        bgImage={data.assets.engineSizesBg}
+        brandName={visualData.model.name}
+        data={visualData.sections.engineSizes}
+        bgImage={visualData.assets.engineSizesBg}
         dynamicBrandLabel
         displayMode="document"
       />
 
       <FuelTypesSection
-        data={data.sections.fuelTypes}
-        bgImage={data.assets.fuelTypesBg}
+        data={visualData.sections.fuelTypes}
+        bgImage={visualData.assets.fuelTypesBg}
         strictData
       />
 
-      <EngineYearsSection brandName={data.model.name} data={data.sections.engineYears} strictData />
+      <EngineYearsSection brandName={visualData.model.name} data={visualData.sections.engineYears} strictData />
 
-      <FaqSection data={data.sections.faq} strictData />
+      <FaqSection data={visualData.sections.faq} strictData />
 
       <TrustCtaSection
-        data={data.sections.trustCta}
-        brandName={data.model.name}
-        imageSrc={data.assets.ctaImage ?? data.assets.heroBg}
+        data={visualData.sections.trustCta}
+        brandName={visualData.model.name}
+        imageSrc={visualData.assets.ctaImage ?? visualData.assets.heroBg}
         displayMode="document"
       />
 
       <Suspense fallback={null}>
-        <QuoteCheckoutModal brandName={data.model.name} />
+        <QuoteCheckoutModal brandName={visualData.model.name} />
       </Suspense>
     </>
   );
