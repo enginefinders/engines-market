@@ -13,6 +13,11 @@ type CtaStripProps = {
   icon?: ReactNode;
   linkProps?: LinkProps;
   secondaryAction?: ReactNode;
+  titleAs?: "div" | "h2" | "h3";
+  descriptionAs?: "p" | "h3" | "div";
+  titleClassName?: string;
+  descriptionClassName?: string;
+  buttonClassName?: string;
 };
 
 type RecommendationCardProps = {
@@ -134,6 +139,11 @@ export function CtaStrip({
   icon,
   linkProps,
   secondaryAction,
+  titleAs: TitleTag = "div",
+  descriptionAs: DescriptionTag = "p",
+  titleClassName,
+  descriptionClassName,
+  buttonClassName,
 }: CtaStripProps) {
   const light = tone === "light";
   const outerClass = light
@@ -158,8 +168,8 @@ export function CtaStrip({
             {label ? (
               <div className={`text-[10px] font-extrabold uppercase tracking-[0.12em] ${labelClass}`}>{label}</div>
             ) : null}
-            <div className={`mt-1 text-[13px] font-extrabold leading-[1.35] ${titleClass}`}>{title}</div>
-            <p className={`mt-1 text-[12px] leading-[1.6] ${bodyClass}`}>{description}</p>
+            <TitleTag className={`mt-1 text-[13px] font-extrabold leading-[1.35] ${titleClass} ${titleClassName ?? ""}`}>{title}</TitleTag>
+            <DescriptionTag className={`mt-1 text-[12px] leading-[1.6] ${bodyClass} ${descriptionClassName ?? ""}`}>{description}</DescriptionTag>
           </div>
         </div>
 
@@ -167,7 +177,7 @@ export function CtaStrip({
           <a
             href={linkProps?.href ?? "#quote-form"}
             {...linkProps}
-            className={`inline-flex min-h-[46px] items-center justify-center gap-2 rounded-[10px] px-5 text-[12px] font-bold transition ${buttonClass} ${linkProps?.className ?? ""}`}
+            className={`inline-flex min-h-[46px] items-center justify-center gap-2 rounded-[10px] px-5 text-[12px] font-bold transition ${buttonClass} ${buttonClassName ?? ""} ${linkProps?.className ?? ""}`}
           >
             <span>{buttonText}</span>
             <ArrowIcon className="h-[13px] w-[13px]" />

@@ -10,16 +10,15 @@ type Props = {
   data: EngineTypesData;
   bgImage?: string;
   dynamicBrandCta?: boolean;
+  displayMode?: "brand" | "document";
 };
 
 function normalizeText(text: string) {
   return text.replace(/[â€“â€”]/g, "-");
 }
 
-function teaserText(text: string) {
-  const normalized = normalizeText(text).trim();
-  if (normalized.length <= 90) return normalized;
-  return `${normalized.slice(0, 87).trimEnd()}...`;
+function fullText(text?: string) {
+  return normalizeText(text ?? "").trim();
 }
 
 function typeVariant(title: string) {
@@ -185,6 +184,11 @@ function FlipCard({
   const variant = typeVariant(type.title);
   const price = priceParts(type.priceRange);
   const featured = isFeaturedCard(type.title);
+  const frontDescription = fullText(type.frontDescription || type.description);
+  const frontDisclaimer = fullText(type.frontDisclaimer);
+  const backDescription = fullText(type.backDescription || type.description);
+  const backBullets = type.backBullets?.map((bullet) => fullText(bullet)).filter(Boolean) ?? [];
+  const backBulletsKey = backBullets.join("|");
   const frontRef = useRef<HTMLDivElement>(null);
   const backRef = useRef<HTMLDivElement>(null);
   const [frontHeight, setFrontHeight] = useState(0);
@@ -213,7 +217,15 @@ function FlipCard({
     return () => {
       window.removeEventListener("resize", measure);
     };
-  }, [type.description, type.priceRange, type.cta, type.title]);
+  }, [
+    backBulletsKey,
+    backDescription,
+    frontDescription,
+    frontDisclaimer,
+    type.cta,
+    type.priceRange,
+    type.title,
+  ]);
 
   const cardHeight = open ? Math.max(backHeight, 160) : Math.max(frontHeight, 140);
 
@@ -245,10 +257,15 @@ function FlipCard({
                 {badge}
               </span>
               <div className="font-['Manrope'] text-[14px] font-extrabold leading-[1.25] text-[#0d1b2e] lg:text-[16px]">{type.title}</div>
-              <p className="mt-1 text-[11.5px] leading-[1.45] text-[#6b7280] lg:text-[12.5px] lg:leading-[1.62]">{teaserText(type.description)}</p>
+              <p className="mt-1 text-[11.5px] leading-[1.45] text-[#6b7280] lg:text-[12.5px] lg:leading-[1.62]">{frontDescription}</p>
               <div className="mb-[2px] mt-[10px] text-[9px] font-bold uppercase tracking-[0.5px] text-[#9ca3af]">{priceLabel || price.label}</div>
               <div className="font-['Manrope'] text-[16px] font-extrabold tracking-[-0.3px] text-[#15803d] lg:text-[18px]">{price.main}</div>
               {price.note ? <div className="mt-[2px] text-[10px] font-medium leading-[1.35] text-[#94a3b8]">{price.note}</div> : null}
+              {frontDisclaimer ? (
+                <div className="mt-[6px] text-[10px] leading-[1.45] text-[#94a3b8] lg:text-[10.5px]">
+                  {frontDisclaimer}
+                </div>
+              ) : null}
               <a
                 href="#quote-form"
                 data-quote-context={type.title}
@@ -296,8 +313,19 @@ function FlipCard({
             </div>
 
             <p className="text-[13px] leading-[1.65] text-[#e2e8f0]">
-              {normalizeText(type.description)}
+              {backDescription}
             </p>
+
+            {backBullets.length ? (
+              <ul className="mt-3 space-y-2 text-[11.5px] leading-[1.6] text-[#cbd5e1]">
+                {backBullets.map((bullet) => (
+                  <li key={bullet} className="flex gap-2">
+                    <span className="mt-[3px] h-[6px] w-[6px] flex-none rounded-full bg-[#22c55e]" />
+                    <span>{bullet}</span>
+                  </li>
+                ))}
+              </ul>
+            ) : null}
           </div>
         </div>
       </div>
@@ -309,12 +337,14 @@ export default function EngineTypesSection({
   data,
   bgImage,
   dynamicBrandCta = false,
+  displayMode = "brand",
 }: Props) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const headingLines = data.headingLines?.length ? data.headingLines : data.h2.split(/\s+-\s+/);
   const brandLabel = inferBrandLabel(data.h2);
   const ui = data.ui ?? {};
   const closingCard = data.closingCard ?? {};
+  const isDocumentMode = displayMode === "document";
 
   return (
     <Section className="relative overflow-hidden bg-[#f8f9fa]">
@@ -360,28 +390,34 @@ export default function EngineTypesSection({
                 type={type}
                 open={openIndex === index}
                 onToggle={() => setOpenIndex((current) => (current === index ? null : index))}
-                frontActionLabel={ui.frontActionLabel ?? "What is it?"}
-                backActionLabel={ui.backActionLabel ?? "Flip back"}
-                priceLabel={ui.priceLabel ?? "Typical price range"}
+                frontActionLabel={isDocumentMode ? (ui.frontActionLabel || "") : (ui.frontActionLabel ?? "What is it?")}
+                backActionLabel={isDocumentMode ? (ui.backActionLabel || "") : (ui.backActionLabel ?? "Flip back")}
+                priceLabel={isDocumentMode ? (ui.priceLabel || "") : (ui.priceLabel ?? "Typical price range")}
               />
             ))}
         </div>
 
-        <div className="mt-4">
-          <CtaStrip
-            tone="light"
-            label={closingCard.label ?? "Engine Replacement Help"}
-            title={closingCard.title ?? (dynamicBrandCta ? `Compare ${brandLabel} engine prices with vetted UK suppliers` : "Compare Land Rover engine prices with vetted UK suppliers")}
-            description={normalizeText(data.closing)}
-            buttonText={closingCard.buttonText ?? (dynamicBrandCta ? `Compare ${brandLabel} Prices` : "Compare Land Rover Prices")}
-            icon={<ShieldIcon />}
-            linkProps={{
-              href: "#quote-form",
-              "data-quote-context": "Engine types closing",
-              "data-quote-source": "engine-types",
-            }}
-          />
-        </div>
+        {isDocumentMode ? (
+          <p className="mt-4 text-[12.5px] leading-[1.75] text-[#4b5563] lg:text-center lg:text-[13px]">
+            {normalizeText(data.closing)}
+          </p>
+        ) : (
+          <div className="mt-4">
+            <CtaStrip
+              tone="light"
+              label={closingCard.label ?? "Engine Replacement Help"}
+              title={closingCard.title ?? (dynamicBrandCta ? `Compare ${brandLabel} engine prices with vetted UK suppliers` : "Compare Land Rover engine prices with vetted UK suppliers")}
+              description={normalizeText(data.closing)}
+              buttonText={closingCard.buttonText ?? (dynamicBrandCta ? `Compare ${brandLabel} Prices` : "Compare Land Rover Prices")}
+              icon={<ShieldIcon />}
+              linkProps={{
+                href: "#quote-form",
+                "data-quote-context": "Engine types closing",
+                "data-quote-source": "engine-types",
+              }}
+            />
+          </div>
+        )}
       </Container>
     </Section>
   );

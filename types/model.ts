@@ -105,7 +105,7 @@ export type ModelPageData = {
     hero: HeroSectionData;
     howItWorks: HowItWorksData;
     liveMarketPrices: LiveMarketPricesData;
-    reviews: ReviewsSectionData;
+    reviews?: ReviewsSectionData;
     variantCoverage: ModelVariantCoverageSectionData;
     engineCodes: EngineCodesData;
     commonProblems?: CommonProblemsData;

@@ -9,6 +9,7 @@ import Section from "@/components/ui/Section";
 type Props = {
   brandName: string;
   data: EngineYearsData;
+  strictData?: boolean;
 };
 
 function normalizeText(text: string) {
@@ -245,14 +246,22 @@ function YearPanel({
   brandName,
   mobile = false,
   ui,
+  strictData = false,
 }: {
   item: EngineYearsData["years"][number];
   brandName: string;
   mobile?: boolean;
   ui: NonNullable<EngineYearsData["ui"]>;
+  strictData?: boolean;
 }) {
   const enquiries = item.enquiries ?? [];
-  const ctaText = item.ctaText || compactYearCta(item.year, item.cta);
+  const ctaText = strictData ? (item.ctaText || item.cta || "") : (item.ctaText || compactYearCta(item.year, item.cta));
+  const keyChangesLabel = strictData ? (ui.keyChangesLabel || "") : (ui.keyChangesLabel ?? "Key Changes");
+  const knownForLabel = strictData ? (ui.knownForLabel || "") : (ui.knownForLabel ?? "Known For");
+  const mainEnginesLabel = strictData ? (ui.mainEnginesLabel || "") : (ui.mainEnginesLabel ?? "Main Engines");
+  const engineCodesLabel = strictData ? (ui.engineCodesLabel || "") : (ui.engineCodesLabel ?? "Engine Codes Covered");
+  const popularModelsLabel = strictData ? (ui.popularModelsLabel || "") : (ui.popularModelsLabel ?? "Popular Models");
+  const enquiriesLabel = strictData ? (ui.enquiriesLabel || "") : (ui.enquiriesLabel ?? "Common Replacement Enquiries");
 
   return (
     <>
@@ -291,14 +300,14 @@ function YearPanel({
           <>
             {item.keyChanges?.length ? (
               <div className="border-b border-[#f1f5f9] px-4 py-3">
-                <SectionLabel icon={<CalendarIcon className="h-[14px] w-[14px]" />} label={ui.keyChangesLabel ?? "Key Changes"} />
+                <SectionLabel icon={<CalendarIcon className="h-[14px] w-[14px]" />} label={keyChangesLabel} />
                 <BulletList items={item.keyChanges} />
               </div>
             ) : null}
 
             {item.knownFor?.length ? (
               <div className="border-b border-[#f1f5f9] px-4 py-3">
-                <SectionLabel icon={<CheckIcon />} label={ui.knownForLabel ?? "Known For"} />
+                <SectionLabel icon={<CheckIcon />} label={knownForLabel} />
                 <BulletList items={item.knownFor} useCheck />
               </div>
             ) : null}
@@ -306,11 +315,11 @@ function YearPanel({
             {(item.mainEngines?.length || item.engineCodesCovered?.length) ? (
               <div className="grid grid-cols-2 border-b border-[#f1f5f9]">
                 <div className="border-r border-[#f1f5f9] px-[14px] py-3">
-                  <SectionLabel icon={<EngineIcon />} label={ui.mainEnginesLabel ?? "Main Engines"} />
+                  <SectionLabel icon={<EngineIcon />} label={mainEnginesLabel} />
                   <BulletList items={item.mainEngines ?? []} />
                 </div>
                 <div className="px-[14px] py-3">
-                  <SectionLabel icon={<TagIcon />} label={ui.engineCodesLabel ?? "Engine Codes Covered"} />
+                  <SectionLabel icon={<TagIcon />} label={engineCodesLabel} />
                   <div className="mt-1 flex flex-wrap gap-[6px]">
                     {(item.engineCodesCovered ?? []).map((code, index) => (
                       <span key={`${code}-${index}`} className="rounded-[7px] border border-[#0d1b2e] bg-[#f8fbff] px-[10px] py-[5px] text-[11.5px] font-bold text-[#0d1b2e]">
@@ -325,7 +334,7 @@ function YearPanel({
             {(item.popularModels?.length || enquiries.length) ? (
               <div className="grid grid-cols-2">
                 <div className="border-r border-[#f1f5f9] px-[14px] py-3">
-                  <SectionLabel icon={<ListIcon />} label={ui.popularModelsLabel ?? "Popular Models"} />
+                  <SectionLabel icon={<ListIcon />} label={popularModelsLabel} />
                   <div className="flex flex-col gap-0">
                     {(item.popularModels ?? []).map((model, index) => (
                       <div key={`${model}-${index}`} className="flex items-center justify-between border-b border-[#f8f9fa] py-[6px] text-[12px] text-[#374151] last:border-b-0">
@@ -338,7 +347,7 @@ function YearPanel({
                   </div>
                 </div>
                 <div className="px-[14px] py-3">
-                  <SectionLabel icon={<SearchIcon />} label={ui.enquiriesLabel ?? "Common Replacement Enquiries"} />
+                  <SectionLabel icon={<SearchIcon />} label={enquiriesLabel} />
                   <BulletList items={enquiries} />
                 </div>
               </div>
@@ -349,28 +358,28 @@ function YearPanel({
             <div className="grid border-b border-[#f1f5f9] md:grid-cols-4">
               {item.keyChanges?.length ? (
                 <div className="border-r border-[#f1f5f9] px-5 py-[18px] last:border-r-0">
-                  <SectionLabel icon={<CalendarIcon className="h-[14px] w-[14px]" />} label={ui.keyChangesLabel ?? "Key Changes"} />
+                  <SectionLabel icon={<CalendarIcon className="h-[14px] w-[14px]" />} label={keyChangesLabel} />
                   <BulletList items={item.keyChanges} />
                 </div>
               ) : <div className="border-r border-[#f1f5f9] px-5 py-[18px]" />}
 
               {item.knownFor?.length ? (
                 <div className="border-r border-[#f1f5f9] px-5 py-[18px] last:border-r-0">
-                  <SectionLabel icon={<CheckIcon />} label={ui.knownForLabel ?? "Known For"} />
+                  <SectionLabel icon={<CheckIcon />} label={knownForLabel} />
                   <BulletList items={item.knownFor} useCheck />
                 </div>
               ) : <div className="border-r border-[#f1f5f9] px-5 py-[18px]" />}
 
               {item.mainEngines?.length ? (
                 <div className="border-r border-[#f1f5f9] px-5 py-[18px] last:border-r-0">
-                  <SectionLabel icon={<EngineIcon />} label={ui.mainEnginesLabel ?? "Main Engines"} />
+                  <SectionLabel icon={<EngineIcon />} label={mainEnginesLabel} />
                   <BulletList items={item.mainEngines} />
                 </div>
               ) : <div className="border-r border-[#f1f5f9] px-5 py-[18px]" />}
 
               {item.popularModels?.length ? (
                 <div className="px-5 py-[18px]">
-                  <SectionLabel icon={<ListIcon />} label={ui.popularModelsLabel ?? "Popular Models"} />
+                  <SectionLabel icon={<ListIcon />} label={popularModelsLabel} />
                   <div className="flex flex-col gap-0">
                     {item.popularModels.map((model, index) => (
                       <div key={`${model}-${index}`} className="flex items-center justify-between border-b border-[#f1f5f9] py-2 text-[12.5px] text-[#374151] last:border-b-0">
@@ -388,7 +397,7 @@ function YearPanel({
             {(item.engineCodesCovered?.length || enquiries.length) ? (
               <div className="grid md:grid-cols-2">
                 <div className="border-r border-[#f1f5f9] px-5 py-[18px]">
-                  <SectionLabel icon={<TagIcon />} label={ui.engineCodesLabel ?? "Engine Codes Covered"} />
+                  <SectionLabel icon={<TagIcon />} label={engineCodesLabel} />
                   <div className="mt-1 flex flex-wrap gap-[7px]">
                     {(item.engineCodesCovered ?? []).map((code, index) => (
                       <span key={`${code}-${index}`} className="rounded-[7px] border border-[#0d1b2e] bg-[#f8fbff] px-[11px] py-[5px] text-[12px] font-bold text-[#0d1b2e]">
@@ -399,7 +408,7 @@ function YearPanel({
                 </div>
 
                 <div className="px-5 py-[18px]">
-                  <SectionLabel icon={<SearchIcon />} label={ui.enquiriesLabel ?? "Common Replacement Enquiries"} />
+                  <SectionLabel icon={<SearchIcon />} label={enquiriesLabel} />
                   <div className="grid gap-[6px] md:grid-cols-2 md:gap-x-4">
                     {enquiries.map((entry, index) => (
                       <div key={`${entry}-${index}`} className="flex items-start gap-[6px] text-[12.2px] leading-[1.55] text-[#374151]">
@@ -415,29 +424,31 @@ function YearPanel({
         )}
       </div>
 
-      <a
-        href="#quote-form"
-        data-quote-context={`${item.year} ${brandName} engines`}
-        data-quote-source="engine-years"
-        className="mt-[14px] flex items-center gap-[13px] rounded-[14px] bg-[#0d1b2e] px-[18px] py-[15px] transition hover:bg-[#1e3a5f] md:mt-0 md:rounded-none md:px-7 md:py-[18px]"
-      >
-        <div className="flex h-[42px] w-[42px] flex-none items-center justify-center rounded-[10px] bg-[#15803d] text-white md:h-[44px] md:w-[44px] md:rounded-[11px]">
-          <CalendarIcon className="h-[22px] w-[22px]" />
-        </div>
-          <div className="min-w-0 flex-1">
-            <div className="font-['Manrope'] text-[14.5px] font-extrabold leading-[1.25] text-white md:text-[15px]">
-              {ctaText}
-            </div>
+      {ctaText ? (
+        <a
+          href="#quote-form"
+          data-quote-context={`${item.year} ${brandName} engines`}
+          data-quote-source="engine-years"
+          className="mt-[14px] flex items-center gap-[13px] rounded-[14px] bg-[#0d1b2e] px-[18px] py-[15px] transition hover:bg-[#1e3a5f] md:mt-0 md:rounded-none md:px-7 md:py-[18px]"
+        >
+          <div className="flex h-[42px] w-[42px] flex-none items-center justify-center rounded-[10px] bg-[#15803d] text-white md:h-[44px] md:w-[44px] md:rounded-[11px]">
+            <CalendarIcon className="h-[22px] w-[22px]" />
           </div>
-        <div className="flex h-9 w-9 flex-none items-center justify-center rounded-[8px] bg-[#15803d] text-white md:h-10 md:w-10 md:rounded-[9px]">
-          <ArrowRightIcon />
-        </div>
-      </a>
+            <div className="min-w-0 flex-1">
+              <div className="font-['Manrope'] text-[14.5px] font-extrabold leading-[1.25] text-white md:text-[15px]">
+                {ctaText}
+              </div>
+            </div>
+          <div className="flex h-9 w-9 flex-none items-center justify-center rounded-[8px] bg-[#15803d] text-white md:h-10 md:w-10 md:rounded-[9px]">
+            <ArrowRightIcon />
+          </div>
+        </a>
+      ) : null}
     </>
   );
 }
 
-export default function EngineYearsSection({ brandName, data }: Props) {
+export default function EngineYearsSection({ brandName, data, strictData = false }: Props) {
   const [activeIndex, setActiveIndex] = useState(0);
   const desktopStripRef = useRef<HTMLDivElement>(null);
   const activeYear = useMemo(() => data.years[activeIndex] ?? data.years[0], [activeIndex, data.years]);
@@ -535,30 +546,52 @@ export default function EngineYearsSection({ brandName, data }: Props) {
         {activeYear ? (
           <>
             <div className="hidden md:block">
-              <YearPanel item={activeYear} brandName={brandName} ui={ui} />
+              <YearPanel item={activeYear} brandName={brandName} ui={ui} strictData={strictData} />
             </div>
 
             <div className="md:hidden">
-              <YearPanel item={activeYear} brandName={brandName} mobile ui={ui} />
+              <YearPanel item={activeYear} brandName={brandName} mobile ui={ui} strictData={strictData} />
             </div>
           </>
         ) : null}
 
-        <div className="mt-3">
-          <CtaStrip
-            tone="light"
-            label={summaryCta.label ?? "Year Finder"}
-            title={summaryCta.title ?? `Not sure which year your ${brandName} was built?`}
-            description={data.closing}
-            buttonText={summaryCta.buttonText ?? "Find My Engine"}
-            icon={<ShieldIcon />}
-            linkProps={{
-              href: "#quote-form",
-              "data-quote-context": `${brandName} engine year finder`,
-              "data-quote-source": "engine-years-summary",
-            }}
-          />
-        </div>
+        {strictData ? (
+          summaryCta.title && summaryCta.buttonText ? (
+            <div className="mt-3">
+              <CtaStrip
+                tone="light"
+                label={summaryCta.label}
+                title={summaryCta.title}
+                description={data.closing}
+                buttonText={summaryCta.buttonText}
+                icon={<ShieldIcon />}
+                linkProps={{
+                  href: "#quote-form",
+                  "data-quote-context": `${brandName} engine year finder`,
+                  "data-quote-source": "engine-years-summary",
+                }}
+              />
+            </div>
+          ) : data.closing ? (
+            <p className="mt-3 text-[12.5px] leading-[1.7] text-[#4b5563]">{data.closing}</p>
+          ) : null
+        ) : (
+          <div className="mt-3">
+            <CtaStrip
+              tone="light"
+              label={summaryCta.label ?? "Year Finder"}
+              title={summaryCta.title ?? `Not sure which year your ${brandName} was built?`}
+              description={data.closing}
+              buttonText={summaryCta.buttonText ?? "Find My Engine"}
+              icon={<ShieldIcon />}
+              linkProps={{
+                href: "#quote-form",
+                "data-quote-context": `${brandName} engine year finder`,
+                "data-quote-source": "engine-years-summary",
+              }}
+            />
+          </div>
+        )}
       </Container>
     </Section>
   );

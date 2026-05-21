@@ -296,6 +296,10 @@ def split_bullets(line: str, separators: Sequence[str]) -> List[str]:
     return [item.strip(" |") for item in text.split("|") if item.strip(" |")]
 
 
+def split_inline_items(line: str) -> List[str]:
+    return split_bullets(line, ["·", "Â·", "•", "â€¢", "|", ";"])
+
+
 def is_bullet_line(line: str) -> bool:
     stripped = repair_text(line).lstrip()
     return stripped.startswith(("-", "â€¢", "•"))
@@ -1617,6 +1621,213 @@ def parse_variant_coverage(lines: Sequence[str]) -> Dict[str, Any]:
     }
 
 
+def parse_variant_spec_line_refined(line: str) -> Dict[str, Any]:
+    text = normalize_line(line)
+    codes: List[str] = []
+    fuel = ""
+    power = ""
+    years = ""
+    price = ""
+    subtitle = text
+
+    if "Rebuilt:" in text:
+        left, right = text.split("Rebuilt:", 1)
+        text = left.strip()
+        price = normalize_price_text(right)
+
+    parts = split_inline_items(text)
+    if parts:
+        leading = parts[0]
+        if " " in leading:
+            maybe_codes, _ = leading.split(" ", 1)
+            if "/" in maybe_codes or re.search(r"[A-Z]\d", maybe_codes):
+                codes = [item.strip() for item in maybe_codes.split("/") if item.strip()]
+                subtitle = " · ".join([leading, *parts[1:]]).strip()
+
+        if not codes:
+            for candidate in re.split(r"\s*[\/,]\s*", leading):
+                candidate = candidate.strip()
+                if re.search(r"[A-Z]\d", candidate):
+                    codes.append(candidate)
+
+    for piece in parts:
+        if not fuel:
+            fuel_match = re.search(r"\b(Diesel|Petrol|Hybrid|MHEV|PHEV)\b", piece, flags=re.IGNORECASE)
+            if fuel_match:
+                fuel = fuel_match.group(1).title()
+        if not power:
+            power_match = NORMALIZED_POWER_RE.search(piece)
+            if power_match:
+                power = power_match.group("power").replace(" ", "")
+        if not years:
+            years_match = NORMALIZED_YEARS_RE.search(piece)
+            if years_match:
+                years = years_match.group("years")
+
+    subtitle = subtitle.replace(" • ", " · ").replace("â€¢", "·").rstrip(" ·").strip()
+    if price:
+        found = NORMALIZED_PRICE_RE.search(price)
+        if found:
+            price = found.group(0)
+
+    return {
+        "subtitle": subtitle,
+        "engineCodes": codes,
+        "fuel": fuel,
+        "power": power,
+        "years": years,
+        "priceRange": price,
+    }
+
+
+def parse_variant_coverage_refined(lines: Sequence[str]) -> Dict[str, Any]:
+    tag = extract_label_value(lines, "Tag") or "Models We Cover"
+    h2 = extract_label_value(lines, "H2") or ""
+    subheading = extract_label_value(lines, "Subheading") or ""
+    cards: List[Dict[str, Any]] = []
+    groups: List[Dict[str, Any]] = []
+    directory_h3 = ""
+    directory_intro = ""
+    directory_groups: List[Dict[str, Any]] = []
+    closing = ""
+    current_group_title = ""
+    current_group_slugs: List[str] = []
+    variant_directory_titles = {
+        "diesel variants",
+        "petrol variants",
+        "performance variants",
+        "hybrid variants",
+        "electrified variants",
+    }
+
+    idx = 0
+    while idx < len(lines):
+        line = normalize_line(lines[idx])
+        line_key = normalize_key(lines[idx])
+
+        row_match = re.match(r"^Row\s+\d+\s*[-:]\s*(.+)$", line, flags=re.IGNORECASE)
+        if row_match:
+            if current_group_title and current_group_slugs:
+                groups.append({"title": current_group_title, "cardSlugs": current_group_slugs[:]})
+            current_group_title = row_match.group(1).strip()
+            current_group_slugs = []
+            idx += 1
+            continue
+
+        h3_match = INLINE_H_RE.match(line)
+        if h3_match and h3_match.group("level") == "3":
+            title = normalize_line(h3_match.group("value"))
+            if "all " in title.lower() and "variant" in title.lower():
+                if current_group_title and current_group_slugs:
+                    groups.append({"title": current_group_title, "cardSlugs": current_group_slugs[:]})
+                    current_group_title = ""
+                    current_group_slugs = []
+                directory_h3 = title
+                idx += 1
+                continue
+
+            image = ""
+            lookahead = idx + 1
+            while lookahead < len(lines):
+                probe = normalize_line(lines[lookahead])
+                if not probe:
+                    lookahead += 1
+                    continue
+                if probe.startswith("[") and probe.endswith("]"):
+                    lookahead += 1
+                    continue
+
+                image_match = LABEL_LINE_RE.match(probe)
+                if image_match and normalize_key(image_match.group("label")) == "image":
+                    image_candidate = normalize_line(image_match.group("value"))
+                    if looks_like_image_path(image_candidate):
+                        image = image_candidate
+                    lookahead += 1
+                    continue
+
+                break
+
+            spec_idx = lookahead
+            while spec_idx < len(lines) and not normalize_line(lines[spec_idx]):
+                spec_idx += 1
+            cta_idx = spec_idx + 1
+            while cta_idx < len(lines) and not normalize_line(lines[cta_idx]):
+                cta_idx += 1
+
+            spec_line = normalize_line(lines[spec_idx]) if spec_idx < len(lines) else ""
+            cta_line = normalize_line(lines[cta_idx]) if cta_idx < len(lines) else ""
+            parsed = parse_variant_spec_line_refined(spec_line)
+            card_slug = slugify(title.replace(" Engine Replacement", "").replace("BMW ", "").strip()) + "-engine"
+            cards.append(
+                {
+                    "h3": title,
+                    "slug": card_slug,
+                    "subtitle": parsed["subtitle"],
+                    "priceRange": parsed["priceRange"],
+                    "cta": strip_arrow_text(cta_line) if cta_line else "",
+                    "engineCodes": parsed["engineCodes"],
+                    "fuel": parsed["fuel"],
+                    "power": parsed["power"],
+                    "years": parsed["years"],
+                    "image": image,
+                }
+            )
+            if current_group_title:
+                current_group_slugs.append(card_slug)
+            idx = max(cta_idx, spec_idx) + 1
+            continue
+
+        if line_key.startswith("introductory text"):
+            directory_intro = line.split(":", 1)[1].strip() if ":" in line else ""
+            idx += 1
+            continue
+
+        if line_key in variant_directory_titles:
+            title = line
+            items: List[str] = []
+            idx += 1
+            while idx < len(lines):
+                probe = normalize_line(lines[idx])
+                probe_key = normalize_key(lines[idx])
+                if not probe:
+                    idx += 1
+                    continue
+                if (
+                    probe_key in variant_directory_titles
+                    or probe_key.startswith("closing line")
+                    or probe_key.startswith("introductory text")
+                    or re.match(r"^row\s+\d+\s*[-:]\s*(.+)$", probe, flags=re.IGNORECASE)
+                    or INLINE_H_RE.match(probe)
+                ):
+                    break
+                items.extend(split_inline_items(probe))
+                idx += 1
+            directory_groups.append({"title": title, "items": items})
+            continue
+
+        if line_key.startswith("closing line"):
+            closing = line.split(":", 1)[1].strip() if ":" in line else ""
+
+        idx += 1
+
+    if current_group_title and current_group_slugs:
+        groups.append({"title": current_group_title, "cardSlugs": current_group_slugs[:]})
+
+    return {
+        "tag": tag,
+        "h2": h2,
+        "subheading": subheading,
+        "groups": groups,
+        "cards": cards,
+        "directory": {
+            "h3": directory_h3,
+            "intro": directory_intro,
+            "groups": directory_groups,
+        },
+        "closing": closing,
+    }
+
+
 def parse_engine_code_families(lines: Sequence[str]) -> Dict[str, Any]:
     tag = extract_label_value(lines, "Tag") or "Engine Codes"
     h2 = extract_label_value(lines, "H2") or ""
@@ -1626,7 +1837,7 @@ def parse_engine_code_families(lines: Sequence[str]) -> Dict[str, Any]:
     current_top_family = ""
     idx = 0
     engine_title_re = re.compile(
-        r"^(?P<code>[A-Z0-9]+(?:\s*\+\s*Electric)?)\s*[-–—]\s*(?P<title>.+Litre.+)$",
+        r"^(?P<code>[A-Z][A-Z0-9]*(?:\s*[/+&-]\s*[A-Z0-9]+)*)\s*[-–—]\s*(?P<title>(?:\d+(?:\.\d+)?\s*L(?:itre)?|Hybrid|Electric).+)$",
         re.IGNORECASE,
     )
 
@@ -1694,8 +1905,18 @@ def parse_engine_code_families(lines: Sequence[str]) -> Dict[str, Any]:
                 elif lowered.startswith("technical specifications"):
                     mode = "specs"
                 elif lowered.startswith("compatible "):
+                    inline_variants = detail.split(":", 1)[1].strip() if ":" in detail else ""
+                    if inline_variants:
+                        compatible_variants.extend(
+                            [item.strip() for item in split_inline_items(inline_variants) if item.strip()]
+                        )
                     mode = "variants"
                 elif lowered.startswith("common failures"):
+                    inline_failures = detail.split(":", 1)[1].strip() if ":" in detail else ""
+                    if inline_failures:
+                        common_failures.extend(
+                            [item.strip() for item in split_inline_items(inline_failures) if item.strip()]
+                        )
                     mode = "failures"
                 elif lowered.startswith("avg. rebuilt price"):
                     raw = detail.split(":", 1)[1].strip() if ":" in detail else detail
@@ -1719,9 +1940,13 @@ def parse_engine_code_families(lines: Sequence[str]) -> Dict[str, Any]:
                         elif lowered_key == "years fitted":
                             years = value
                 elif mode == "variants" and detail:
-                    compatible_variants.extend([item.strip() for item in detail.split(",") if item.strip()])
+                    compatible_variants.extend(
+                        [item.strip() for item in split_inline_items(detail) if item.strip()]
+                    )
                 elif mode == "failures" and detail:
-                    common_failures.append(strip_bullet_text(detail))
+                    failure_text = strip_bullet_text(detail)
+                    if failure_text:
+                        common_failures.append(failure_text)
 
             entries.append(
                 {
@@ -1986,10 +2211,21 @@ def parse_engine_sizes(lines: Sequence[str]) -> Dict[str, Any]:
             idx += 1
             while idx < len(lines):
                 current = normalize_line(lines[idx])
+                if SECTION_HEADER_RE.match(lines[idx]) or re.match(r"^\d+\s*[:(]", current):
+                    idx -= 1
+                    break
                 if current.startswith("#### ") or current.startswith("### "):
                     idx -= 1
                     break
                 lowered = normalize_key(current)
+                if lowered in {
+                    "tag",
+                    "tag engine years",
+                    "tag faq",
+                    "tag why choose us",
+                } or lowered.startswith("tag: engine years") or lowered.startswith("tag: faq") or lowered.startswith("tag: bmw 2 series engines fuel type") or lowered.startswith("tag: fuel type"):
+                    idx -= 1
+                    break
                 if lowered.startswith("engine code(s)") or lowered.startswith("engine codes"):
                     engine_codes = [item.strip() for item in re.split(r"[,/]", current.split(":", 1)[1]) if item.strip()]
                 elif lowered.startswith("compatible models"):
@@ -2327,21 +2563,22 @@ def merge_missing_how_it_works(
             merged_cards.append(card)
             continue
         merged = copy.deepcopy(card)
-        if override["front"].get("h3"):
-            merged["front"]["h3"] = override["front"]["h3"]
-        if override["front"].get("text"):
-            merged["front"]["text"] = override["front"]["text"]
-        if override["back"].get("heading"):
-            merged["back"]["heading"] = override["back"]["heading"]
-        if override["back"].get("text"):
-            merged["back"]["text"] = override["back"]["text"]
-        if override["back"].get("bullets"):
-            merged["back"]["bullets"] = override["back"]["bullets"]
+        if card.get("number") == 1:
+            if override["front"].get("h3"):
+                merged["front"]["h3"] = override["front"]["h3"]
+            if override["front"].get("text"):
+                merged["front"]["text"] = override["front"]["text"]
+            if override["back"].get("heading"):
+                merged["back"]["heading"] = override["back"]["heading"]
+            if override["back"].get("text"):
+                merged["back"]["text"] = override["back"]["text"]
+            if override["back"].get("bullets"):
+                merged["back"]["bullets"] = override["back"]["bullets"]
         merged_cards.append(merged)
 
     existing_numbers = {card["number"] for card in merged_cards}
     for card in extracted.get("cards", []):
-        if card["number"] not in existing_numbers:
+        if card["number"] == 1 and card["number"] not in existing_numbers:
             merged_cards.append(card)
 
     result["cards"] = merged_cards
@@ -2394,18 +2631,18 @@ def parse_document(
         assets=assets,
     )
 
-    hero_lines = extract_slice(lines, ["# section 1", "hero content", "tag pill"], ["# section 2", "how it works", "live uk engine market data"])
-    how_lines = extract_slice(lines, ["# section 2", "how it works", "card 1 front"], ["live uk engine market data", "tag: models we cover", "models we cover"])
-    live_lines = extract_slice(lines, ["live uk engine market data", "feed table"], ["tag: models we cover", "models we cover"])
-    variant_lines = extract_slice(lines, ["tag: models we cover", "models we cover"], ["tag: engine codes", "engine codes"])
-    engine_code_lines = extract_slice(lines, ["tag: engine codes", "engine codes"], ["tag: common problems", "common problems"])
-    common_problem_lines = extract_slice(lines, ["tag: common problems", "common problems"], ["tag: replacement engine options", "tag: engine types", "replacement engine options", "engine types"])
-    engine_type_lines = extract_slice(lines, ["tag: replacement engine options", "tag: engine types"], ["tag: engine sizes"])
-    engine_size_lines = extract_slice(lines, ["tag: engine sizes"], ["tag: fuel type"])
-    fuel_lines = extract_slice(lines, ["tag: fuel type"], ["tag: engine years"])
-    year_lines = extract_slice(lines, ["tag: engine years"], ["tag: faq"])
-    faq_lines = extract_slice(lines, ["tag: faq", "faq"], ["tag: why choose us", "why choose us"])
-    trust_lines = extract_slice(lines, ["tag: why choose us", "why choose us"], ["meta title", "meta description", "canonical url"])
+    hero_lines = extract_slice(lines, ["# section 1", "hero content", "tag pill"], ["# section 2", "how it works", "3: live market prices", "live uk engine market data"])
+    how_lines = extract_slice(lines, ["# section 2", "how it works", "card 1 front"], ["3: live market prices", "live uk engine market data", "4: popular sub-models", "tag: models we cover"])
+    live_lines = extract_slice(lines, ["3: live market prices", "live uk engine market data", "feed table"], ["4: popular sub-models", "tag: models we cover"])
+    variant_lines = extract_slice(lines, ["4: popular sub-models", "tag: models we cover"], ["5: engine codes", "tag: engine codes"])
+    engine_code_lines = extract_slice(lines, ["5: engine codes", "tag: engine codes"], ["6 (revised): engine problems", "6: engine problems", "tag: common problems"])
+    common_problem_lines = extract_slice(lines, ["6 (revised): engine problems", "6: engine problems", "tag: common problems"], ["7 (revised): engine types", "7: engine types", "tag: replacement engine options", "tag: engine types"])
+    engine_type_lines = extract_slice(lines, ["7 (revised): engine types", "7: engine types", "tag: replacement engine options", "tag: engine types"], ["8: engine sizes by fuel type", "8: engine sizes", "tag: engine sizes"])
+    engine_size_lines = extract_slice(lines, ["8: engine sizes by fuel type", "8: engine sizes", "tag: engine sizes"], ["9: engines by fuel type", "tag: fuel type", "tag: bmw 2 series engines fuel type"])
+    fuel_lines = extract_slice(lines, ["9: engines by fuel type", "tag: fuel type", "tag: bmw 2 series engines fuel type"], ["10: model years coverage", "tag: engine years"])
+    year_lines = extract_slice(lines, ["10: model years coverage", "tag: engine years"], ["11: faqs", "tag: faq"])
+    faq_lines = extract_slice(lines, ["11: faqs", "tag: faq", "faq"], ["tag: why choose us", "why choose us", "13: em model page - meta tags"])
+    trust_lines = extract_slice(lines, ["tag: why choose us", "why choose us"], ["13: em model page - meta tags", "meta title", "meta description", "canonical url"])
 
     meta = parse_meta(lines)
 
@@ -2413,7 +2650,7 @@ def parse_document(
     parsed_how = parse_how_it_works(how_lines, model_name)
     data["sections"]["howItWorks"] = merge_missing_how_it_works(parsed_how, brand_json)
     data["sections"]["liveMarketPrices"] = parse_live_market(live_lines, model_name)
-    data["sections"]["variantCoverage"] = parse_variant_coverage(variant_lines)
+    data["sections"]["variantCoverage"] = parse_variant_coverage_refined(variant_lines)
     guide = parse_engine_code_families(engine_code_lines)
     data["sections"]["variantCoverage"]["engineGuide"] = guide
     data["sections"]["variantCoverage"]["engineGuide"]["tag"] = guide["tag"]

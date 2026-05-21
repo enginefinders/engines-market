@@ -108,13 +108,50 @@
               "Your Precise Model - from M2, M2 Competition, M2 CS, M2 LCI to G87 M2",
               "Your Engine Code - S55B30A, N55B30T0, S58B30A and more",
               "Vehicle Specs Check - fuel type, engine size, year, variant - all verified instantly",
-              "No paperwork, no guesswork, 100% free.",
-              "3: Live Market Prices"
+              "No paperwork, no guesswork, 100% free."
+            ]
+          }
+        },
+        {
+          "number": 2,
+          "icon": "quote",
+          "front": {
+            "h3": "Get Quotes from BMW Engine Specialists",
+            "text": "Same-day quotes from vetted UK suppliers — full breakdown, no obligation."
+          },
+          "back": {
+            "heading": "Quotes You Can Trust",
+            "text": "Your verified details are securely shared with up to 10 of our most relevant UK suppliers, matched to your variant and location.",
+            "bullets": [
+              "Vetted UK Suppliers — specialists who understand BMW diesel and petrol engines",
+              "Same-Day Quotes — usually within hours, not days",
+              "Supply & Fit Service — or supply-only to your own garage",
+              "Full Breakdown — price, warranty length, delivery estimate and fitting cost all shown clearly",
+              "No hidden fees. No sales calls unless you approve."
+            ]
+          }
+        },
+        {
+          "number": 3,
+          "icon": "shield",
+          "front": {
+            "h3": "Choose the Best Deal & Save",
+            "text": "Compare supplier reviews, warranty and price — then pick the right one for you."
+          },
+          "back": {
+            "heading": "Your Choice, Your Control",
+            "text": "You decide which specialist to go with. We simply make the search fast, safe, and transparent.",
+            "bullets": [
+              "Online Reviews — read real customer feedback",
+              "Warranty Length — minimum 12 months, often 24 months on rebuilt units",
+              "Terms of Service — including collection, fitting and aftercare",
+              "Technical Expertise — see each supplier's BMW experience, including official diagnostic tools (ISTA)",
+              "You deal directly with your chosen provider. No pressure, no commitment until you're ready."
             ]
           }
         }
       ],
-      "tagline": "",
+      "tagline": "Get Instant Quotes from BMW Engine Specialists Across the UK — 100% free, no obligation. Most replacements completed within 3–5 days.",
       "headingLines": [
         "3 Simple Steps",
         "to Finding the Best BMW M2 Replacement Engine"
@@ -283,13 +320,44 @@
       "h2": "Trusted by BMW M2 Owners Across the UK",
       "rating": {
         "value": 4.8,
-        "count": 0,
-        "summary": "",
-        "basedOn": ""
+        "count": 1000,
+        "summary": "Rated 4.8 out of 5 by verified customers who sourced reconditioned and used BMW engines through EngineMarket.",
+        "basedOn": "Based on real post-sale feedback from buyers matched with our network of UK engine specialists."
       },
-      "reviews": [],
+      "reviews": [
+        {
+          "text": "Thanks to EngineMarket, I saved over £1,000 on my BMW engine and found a solid local specialist quickly.",
+          "name": "Jimmy",
+          "location": "London"
+        },
+        {
+          "text": "Got multiple quotes for my BMW within hours and the whole process felt straightforward.",
+          "name": "Pete",
+          "location": "Leeds"
+        },
+        {
+          "text": "I wasn't sure which BMW engine I needed, but the quote process helped me narrow it down fast.",
+          "name": "Sophie",
+          "location": "Birmingham"
+        },
+        {
+          "text": "Fast turnaround, clear pricing, and the warranty gave me real peace of mind for my BMW.",
+          "name": "Ahmed",
+          "location": "Bradford"
+        },
+        {
+          "text": "One of the easiest car-related experiences I've had. Honest, quick, and much cheaper than expected.",
+          "name": "Liam",
+          "location": "Manchester"
+        },
+        {
+          "text": "EngineMarket made a stressful BMW engine failure much easier to deal with from start to finish.",
+          "name": "Tom",
+          "location": "Glasgow"
+        }
+      ],
       "leaveReviewCta": {
-        "text": "",
+        "text": "Had a great experience?",
         "linkText": "Leave a review ->"
       }
     },
@@ -297,13 +365,29 @@
       "tag": "Models We Cover",
       "h2": "BMW M2 Engine Replacement - All Variants Covered",
       "subheading": "From the early F87 M2 to the high-performance Competition, CS and new G87 generation, our network of UK BMW M2 engine specialists helps you compare rebuilt, reconditioned and used engine prices. Typical price range for a rebuilt unit with 12-month warranty is £3,200-£10,500 - supply & fit available nationwide.",
+      "groups": [
+        {
+          "title": "F87 Generation (2016-2021)",
+          "cardSlugs": [
+            "m2-f87-engine",
+            "m2-competition-f87-engine",
+            "m2-cs-f87-engine"
+          ]
+        },
+        {
+          "title": "G87 Generation (2023-Present)",
+          "cardSlugs": [
+            "m2-g87-engine"
+          ]
+        }
+      ],
       "cards": [
         {
           "h3": "BMW M2 (F87) Engine Replacement",
           "slug": "m2-f87-engine",
           "subtitle": "N55B30T0 3.0L Petrol · 365hp · 2016-2018",
           "priceRange": "£3,200-£6,800",
-          "cta": "→ Compare M2 Engine Prices",
+          "cta": "Compare M2 Engine Prices",
           "engineCodes": [
             "N55B30T0"
           ],
@@ -317,7 +401,7 @@
           "slug": "m2-competition-f87-engine",
           "subtitle": "S55B30A 3.0L Petrol · 405hp · 2018-2021",
           "priceRange": "£4,500-£8,500",
-          "cta": "→ Compare M2 Competition Engine Prices",
+          "cta": "Compare M2 Competition Engine Prices",
           "engineCodes": [
             "S55B30A"
           ],
@@ -331,7 +415,7 @@
           "slug": "m2-cs-f87-engine",
           "subtitle": "S55B30T0 3.0L Petrol · 444hp · 2020-2021",
           "priceRange": "£5,500-£10,000",
-          "cta": "→ Compare M2 CS Engine Prices",
+          "cta": "Compare M2 CS Engine Prices",
           "engineCodes": [
             "S55B30T0"
           ],
@@ -345,7 +429,7 @@
           "slug": "m2-g87-engine",
           "subtitle": "S58B30T0 3.0L Petrol · 453hp · 2023-2026",
           "priceRange": "£5,500-£10,500",
-          "cta": "→ Compare G87 M2 Engine Prices",
+          "cta": "Compare G87 M2 Engine Prices",
           "engineCodes": [
             "S58B30T0"
           ],
@@ -368,7 +452,15 @@
           {
             "title": "Petrol Variants",
             "items": [
-              "M2 · M2 Competition · M2 CS · M2 LCI · G87 M2"
+              "M2",
+              "M2 Competition",
+              "M2 CS",
+              "M2 LCI",
+              "G87 M2",
+              "Performance Variants (M Models)",
+              "M2",
+              "M2 Competition",
+              "M2 CS"
             ]
           }
         ],
@@ -376,9 +468,9 @@
       },
       "closing": "Not sure which variant your BMW M2 is? Enter your registration number above - we’ll identify the exact sub-model, engine code and compatible replacement options instantly.",
       "engineGuide": {
-        "tag": "Models We Cover",
-        "h2": "BMW M2 Engine Replacement - All Variants Covered",
-        "h3": "BMW M2 (F87) Engine Replacement",
+        "tag": "Engine Codes",
+        "h2": "BMW M2 Engine Codes - Full Technical Specifications & Replacement Guide",
+        "h3": "Every engine code fitted to the BMW M2 across all generations, with technical specs, compatible variants and trims, known failure points, and average rebuilt prices from UK specialists. Select any engine code to compare quotes.",
         "families": [
           {
             "name": "Petrol Engines",
@@ -392,9 +484,7 @@
                 "power": "365-370 hp",
                 "years": "2016-2018",
                 "compatibleVariants": [
-                  "M2 Coupé (F87)",
-                  "M2 Pure",
-                  "M2 Performance Edition"
+                  "M2 Coupé (F87), M2 Pure, M2 Performance Edition"
                 ],
                 "commonFailures": [
                   "Charge pipe failure (brittle plastic cracks under boost pressure - common from 30,000 miles)",
@@ -487,24 +577,11 @@
             ]
           }
         ],
-        "closing": "Not sure which variant your BMW M2 is? Enter your registration number above - we’ll identify the exact sub-model, engine code and compatible replacement options instantly."
+        "closing": "Can't find your engine code? Enter your registration number above - we'll instantly identify the exact unit, its technical specifications, and live replacement prices from UK BMW M2 engine specialists. Every rebuilt engine comes with a minimum 12-month unlimited mileage warranty."
       },
-      "headingLines": [],
-      "groups": [
-        {
-          "title": "F87 Generation (2016-2021)",
-          "cardSlugs": [
-            "m2-f87-engine",
-            "m2-competition-f87-engine",
-            "m2-cs-f87-engine"
-          ]
-        },
-        {
-          "title": "G87 Generation (2023-Present)",
-          "cardSlugs": [
-            "m2-g87-engine"
-          ]
-        }
+      "headingLines": [
+        "BMW M2 Engine Replacement",
+        "All Variants Covered"
       ],
       "ui": {
         "fromPriceLabel": "from price",
@@ -515,10 +592,10 @@
       }
     },
     "engineCodes": {
-      "tag": "Models We Cover",
-      "h2": "BMW M2 Engine Replacement - All Variants Covered",
-      "h3": "BMW M2 (F87) Engine Replacement",
-      "closingLine": "Not sure which variant your BMW M2 is? Enter your registration number above - we’ll identify the exact sub-model, engine code and compatible replacement options instantly.",
+      "tag": "Engine Codes",
+      "h2": "BMW M2 Engine Codes - Full Technical Specifications & Replacement Guide",
+      "h3": "Every engine code fitted to the BMW M2 across all generations, with technical specs, compatible variants and trims, known failure points, and average rebuilt prices from UK specialists. Select any engine code to compare quotes.",
+      "closingLine": "Can't find your engine code? Enter your registration number above - we'll instantly identify the exact unit, its technical specifications, and live replacement prices from UK BMW M2 engine specialists. Every rebuilt engine comes with a minimum 12-month unlimited mileage warranty.",
       "filters": [
         "Petrol Engines"
       ],
@@ -581,7 +658,10 @@
           ]
         }
       ],
-      "headingLines": [],
+      "headingLines": [
+        "BMW M2 Engine Codes",
+        "Full Technical Specifications & Replacement Guide"
+      ],
       "closingAction": {
         "title": "Can't find your engine code?",
         "buttonText": "Enter Your Reg"
@@ -891,11 +971,51 @@
     },
     "engineTypes": {
       "tag": "Replacement Engine Options",
-      "h2": "",
-      "intro": "",
-      "types": [],
-      "closing": "",
-      "headingLines": [],
+      "h2": "BMW M2 Engine Types - Options, Costs & What to Expect",
+      "intro": "Every engine type listed below is available through our UK network, with typical price ranges varying by M2 variant, engine code and your specific budget.",
+      "types": [
+        {
+          "title": "BMW M2 Reconditioned Engines (Recon)",
+          "description": "Factory-spec engine dismantled, inspected, worn components replaced, tested to original tolerances.",
+          "priceRange": "£3,800 - £7,500 (supply only)",
+          "cta": "Compare reconditioned BMW M2 engine prices ->"
+        },
+        {
+          "title": "BMW M2 Rebuilt Engines",
+          "description": "Fully disassembled, cleaned, machined, and reassembled with new pistons, rings, bearings and seals.",
+          "priceRange": "£4,200 - £9,500 (supply only)",
+          "cta": "Get rebuilt BMW M2 engine quotes ->"
+        },
+        {
+          "title": "BMW M2 Used Engines",
+          "description": "Low-to-average mileage donor engine, visual inspected, compression tested, ready for fitment.",
+          "priceRange": "£2,500 - £5,500 (supply only)",
+          "cta": "Check used BMW M2 engine availability ->"
+        },
+        {
+          "title": "BMW M2 Remanufactured Engines",
+          "description": "Professionally rebuilt to 'better than new' standard with upgraded components and modern machining.",
+          "priceRange": "£5,000 - £11,000 (supply only)",
+          "cta": "Compare remanufactured BMW M2 engine costs ->"
+        },
+        {
+          "title": "BMW M2 Refurbished Engines",
+          "description": "Cleaned, resealed, and tested running take-out unit with new gaskets, belts and service items.",
+          "priceRange": "£3,200 - £6,200 (supply only)",
+          "cta": "View refurbished BMW M2 engine options ->"
+        },
+        {
+          "title": "BMW M2 Supply & Fit Engines",
+          "description": "Fully fitted installation by a UK specialist including old engine removal, new unit fitment and testing.",
+          "priceRange": "£600 - £1,200 added to engine price",
+          "cta": "Find BMW M2 engine supply & fit deals ->"
+        }
+      ],
+      "closing": "All engine types include a minimum 12-month unlimited mileage warranty when sourced through EngineMarket. Prices are typical UK market ranges based on historical quote data from our network and depend on exact engine code, variant, mileage and supplier. Use our free comparison tool above - enter your registration to get tailored quotes for your specific BMW M2 within hours.",
+      "headingLines": [
+        "BMW M2 Engine Types",
+        "Options, Costs & What to Expect"
+      ],
       "ui": {
         "priceLabel": "Typical price range",
         "frontActionLabel": "What is it?",
@@ -909,11 +1029,54 @@
     },
     "engineSizes": {
       "tag": "Engine Sizes",
-      "h2": "",
-      "intro": "",
-      "groups": [],
-      "closing": "",
-      "headingLines": [],
+      "h2": "BMW M2 Engines by Size - Find the Right Displacement for Your Variant",
+      "intro": "Every displacement fitted to the BMW M2 across all generations is listed below, with compatible engine codes, production years, power outputs and common failure notes.",
+      "groups": [
+        {
+          "title": "BMW M2 Diesel Engine Sizes",
+          "items": []
+        },
+        {
+          "title": "BMW M2 Petrol Engine Sizes",
+          "items": [
+            {
+              "title": "BMW M2 3.0L Petrol Engines",
+              "description": "The BMW M2 has always been powered exclusively by a 3.0-litre turbocharged inline-six petrol engine, spanning the N55, S55 and S58 families. The original F87-generation M2 (2016-2018) used the N55B30T0, while the M2 Competition (2018-2021) and M2 CS (2020-2021) received the high-output S55 derived from the M3/M4. The current G87-generation M2 (2023-present) is powered by the S58, which features a closed-deck block and resolves the crank hub vulnerability of its predecessor.",
+              "engineCodes": [
+                "N55B30T0",
+                "S55B30A",
+                "S55B30T0",
+                "S58B30T0",
+                "S58B30A"
+              ],
+              "compatibleModels": [
+                "M2 (F87",
+                "2016-2018); M2 Competition (F87",
+                "2018-2021); M2 CS (F87",
+                "2020-2021); M2 (G87",
+                "2023-present); M2 CS"
+              ],
+              "productionYears": "G87, 2025-present",
+              "commonFailurePoints": [
+                "S55 crank hub spin (Competition/CS)",
+                "N55 charge pipe cracking",
+                "oil consumption across all generations",
+                "VANOS solenoid wear"
+              ],
+              "cta": "Compare BMW M2 3.0L petrol engine prices"
+            }
+          ]
+        },
+        {
+          "title": "BMW M2 Hybrid / MHEV Engine Sizes",
+          "items": []
+        }
+      ],
+      "closing": "Not sure which engine size your BMW M2 needs? Enter your registration number above - we'll identify the exact displacement, engine code and compatible replacement options instantly. All engines supplied through EngineMarket include a minimum 12-month unlimited mileage warranty from UK BMW M2 specialists.",
+      "headingLines": [
+        "BMW M2 Engines by Size",
+        "Find the Right Displacement for Your Variant"
+      ],
       "ui": {
         "swapLabel": "Swap panel",
         "engineCodesLabel": "Engine Code(s)",
@@ -927,17 +1090,75 @@
       }
     },
     "fuelTypes": {
-      "tag": "Fuel Type",
-      "h2": "",
-      "intro": "",
-      "items": [],
-      "closing": "",
-      "headingLines": [],
+      "tag": "BMW M2 Engines Fuel Type",
+      "h2": "BMW M2 Engines by Fuel Type",
+      "intro": "Choose your BMW M2 engine by fuel type to compare realistic replacement prices, known issues, and compatible UK supply options - from the early F87 N55 to the latest G87 S58.",
+      "items": [
+        {
+          "title": "BMW M2 Petrol Engines",
+          "description": "Every BMW M2 sold in the UK has been powered by a 3.0-litre turbocharged petrol straight-six, spanning three generations of BMW M engines: N55, S55 and S58.",
+          "descriptor": "Every BMW M2 sold in the UK has been powered by a 3.0-litre turbocharged petrol straight-six, spanning three generations of BMW M engines: N55, S55 and S58.",
+          "families": [
+            "N55B30T0 - early F87 M2 (2016-2018), charge pipe weakness, single twin-scroll turbo",
+            "S55B30A - F87 M2 Competition (2018-2021), twin-turbo, crank hub vulnerability",
+            "S55B30T0 - F87 M2 CS (2020-2021), highest-output factory S55 tune",
+            "S58B30T0 - G87 M2 (2023-present), closed-deck block, crank hub issue resolved",
+            "S58B30A - G87 M2 CS (2025-present), higher output, limited data"
+          ],
+          "foundIn": [
+            "F87 M2 (2016-2018) - N55B30T0",
+            "F87 M2 Competition (2018-2021) - S55B30A",
+            "F87 M2 CS (2020-2021) - S55B30T0",
+            "G87 M2 (2023-present) - S58B30T0",
+            "G87 M2 CS (2025-present) - S58B30A"
+          ],
+          "knownFor": [
+            "S55 crank hub spin - the most discussed failure on Competition and CS models",
+            "N55 charge pipe cracking - cheap preventative fix with aluminium upgrade",
+            "Excellent tuning potential across all three engine families",
+            "Strong UK replacement demand on higher-mileage F87 Competition units"
+          ],
+          "typicalModels": [
+            "M2 (F87)",
+            "M2 Competition (F87)",
+            "M2 CS (F87)",
+            "M2 (G87)"
+          ],
+          "importantNotes": [],
+          "cta": "Compare BMW M2 Petrol engine prices"
+        },
+        {
+          "title": "BMW M2 Diesel Engines",
+          "description": "",
+          "descriptor": "",
+          "families": [],
+          "foundIn": [],
+          "knownFor": [],
+          "typicalModels": [],
+          "importantNotes": [],
+          "cta": ""
+        },
+        {
+          "title": "BMW M2 Hybrid / Electrified Engines",
+          "description": "",
+          "descriptor": "",
+          "families": [],
+          "foundIn": [],
+          "knownFor": [],
+          "typicalModels": [],
+          "importantNotes": [],
+          "cta": ""
+        }
+      ],
+      "closing": "Not sure which fuel type your BMW M2 has? Enter your registration number above to instantly identify your engine code, fuel system and compatible replacement options - all backed by a minimum 12-month unlimited mileage warranty from UK BMW M2 specialists.",
+      "headingLines": [
+        "BMW M2 Engines by Fuel Type"
+      ],
       "ui": {
         "swapLabel": "Swap panel",
         "familiesLabel": "Common Engine Families",
         "foundInLabel": "Found In",
-        "knownForLabel": "Known For (Brand-wide)",
+        "knownForLabel": "Known For",
         "modelsLabel": "Typical Models (UK)",
         "notesLabel": "Important Notes",
         "closingButtonText": "Find my engine",
@@ -947,12 +1168,283 @@
     },
     "engineYears": {
       "tag": "Engine Years",
-      "h2": "",
-      "intro": "",
+      "h2": "BMW M2 Engines by Year - What Was Fitted & When",
+      "intro": "This section covers every major engine change across the BMW M2's production timeline, organised so owners can quickly identify their engine and compare rebuilt engine prices from UK specialists.",
       "jumpLabel": "Jump to model year",
-      "years": [],
-      "closing": "",
-      "headingLines": [],
+      "years": [
+        {
+          "year": "2016-2018",
+          "preview": "F87 M2 Coupé (Original 'OG' M2)",
+          "description": "The original M2 launched the F87 generation with a modified N55 engine, earning instant acclaim for its balance of power and agility.",
+          "keyChanges": [
+            "First-generation M2 (F87) debuts at 2016 Detroit Auto Show",
+            "Powered by tuned N55B30T0 with M4-derived components",
+            "6-speed manual or 7-speed M-DCT dual-clutch transmission",
+            "M Performance Edition (150 units, US market only)"
+          ],
+          "mainEngines": [
+            "N55B30T0 - 3.0L Petrol (365-370 hp)"
+          ],
+          "popularModels": [
+            "BMW M2 Coupé (F87)",
+            "BMW M2 Performance Edition"
+          ],
+          "knownFor": [
+            "Charge pipe failure - plastic OEM pipes crack under boost",
+            "Forged internals make it highly tunable (400+ hp with remap)",
+            "Considered the most playful and analog M2",
+            "Lower replacement demand than later S55 cars"
+          ],
+          "engineCodesCovered": [
+            "N55B30T0"
+          ],
+          "cta": "Get quotes for 2016-2018 BMW M2 replacement engines",
+          "badges": [
+            {
+              "label": "Major Engine Changes",
+              "tone": "accent"
+            },
+            {
+              "label": "1 engine highlights",
+              "tone": "muted"
+            }
+          ],
+          "ticker": "BMW M2 N55 engine replacement • BMW M2 2016 engine cost • BMW M2 charge pipe failure",
+          "enquiries": [
+            "BMW M2 N55 engine replacement",
+            "BMW M2 2016 engine cost",
+            "BMW M2 charge pipe failure"
+          ]
+        },
+        {
+          "year": "2018",
+          "preview": "F87 M2 LCI (Life Cycle Impulse)",
+          "description": "The 2018 model year facelift brought LED lighting and dashboard updates, setting the stage for the Competition's arrival.",
+          "keyChanges": [
+            "LED headlights and taillights become standard",
+            "Redesigned dashboard and gauge cluster",
+            "iDrive system updated with touch functionality",
+            "Last year of N55 engine before S55 takeover"
+          ],
+          "mainEngines": [
+            "N55B30T0 - 3.0L Petrol (365-370 hp)"
+          ],
+          "popularModels": [
+            "BMW M2 LCI (F87)"
+          ],
+          "knownFor": [
+            "Facelift improves interior tech without changing driving character",
+            "Low depreciation due to being final N55 cars",
+            "Less common replacement demand than earlier N55 cars",
+            "Good entry point for used M2 buyers"
+          ],
+          "engineCodesCovered": [
+            "N55B30T0"
+          ],
+          "cta": "Compare 2018 BMW M2 LCI petrol engine prices",
+          "badges": [
+            {
+              "label": "Major Engine Changes",
+              "tone": "accent"
+            },
+            {
+              "label": "1 engine highlights",
+              "tone": "muted"
+            }
+          ],
+          "enquiries": []
+        },
+        {
+          "year": "2018-2021",
+          "preview": "F87 M2 Competition",
+          "description": "The M2 Competition replaced the standard coupé with the S55 engine from the M3/M4 - the most significant powertrain upgrade in M2 history.",
+          "keyChanges": [
+            "S55 twin-turbo engine replaces N55",
+            "Power increases from 365 to 405 hp",
+            "Carbon-fibre reinforced plastic strut brace standard",
+            "Enlarged kidney grilles and updated front bumper",
+            "Optional M Sport exhaust system"
+          ],
+          "mainEngines": [
+            "S55B30A - 3.0L Twin-Turbo Petrol (405-410 hp)"
+          ],
+          "popularModels": [
+            "BMW M2 Competition (F87)"
+          ],
+          "knownFor": [
+            "Crank hub spin - the #1 failure driving replacement demand",
+            "Closed-deck block design handles high boost reliably",
+            "Much heavier (75kg more) than standard M2",
+            "Highest UK replacement search volume of any M2"
+          ],
+          "engineCodesCovered": [
+            "S55B30A"
+          ],
+          "cta": "Get quotes for 2018-2021 BMW M2 Competition replacement engines",
+          "badges": [
+            {
+              "label": "Major Engine Change",
+              "tone": "accent"
+            }
+          ],
+          "ticker": "BMW M2 Competition S55 engine replacement • S55 crank hub fix cost • M2 Competition engine rebuild cost UK",
+          "enquiries": [
+            "BMW M2 Competition S55 engine replacement",
+            "S55 crank hub fix cost",
+            "M2 Competition engine rebuild cost UK"
+          ]
+        },
+        {
+          "year": "2020-2021",
+          "preview": "F87 M2 CS",
+          "description": "The limited-production M2 CS represents the ultimate F87, with 444 hp from the S55 and extensive use of carbon fibre.",
+          "keyChanges": [
+            "Power increased to 444 hp (M4 Competition ECU map)",
+            "Carbon fibre bonnet, roof, and various aerodynamic parts",
+            "Adaptive M suspension standard",
+            "Carbon ceramic brakes optional",
+            "Only 2,200 units produced globally"
+          ],
+          "mainEngines": [
+            "S55B30T0 - 3.0L Twin-Turbo Petrol (444 hp)"
+          ],
+          "popularModels": [
+            "BMW M2 CS (F87)"
+          ],
+          "knownFor": [
+            "Same crank hub vulnerability as Competition - but owners more likely to upgrade proactively",
+            "Significant weight reduction from carbon components",
+            "Strong collector demand and minimal depreciation",
+            "Replacement engines are rare and expensive"
+          ],
+          "engineCodesCovered": [
+            "S55B30T0"
+          ],
+          "cta": "Enquire about 2020-2021 BMW M2 CS engine availability",
+          "badges": [
+            {
+              "label": "Performance Change",
+              "tone": "accent"
+            }
+          ],
+          "enquiries": []
+        },
+        {
+          "year": "2023",
+          "preview": "G87 M2 (Launch)",
+          "description": "The second-generation G87 M2 arrived on the CLAR platform with the S58 engine, resolving the S55's crank hub issues.",
+          "keyChanges": [
+            "New G87 platform (shared with G80 M3 and G82 M4)",
+            "S58 engine replaces S55 - single-piece crank hub design",
+            "Power: 453 hp at launch",
+            "6-speed manual or 8-speed automatic (replacing DCT)",
+            "Production moved to San Luis Potosí, Mexico",
+            "Larger and heavier than F87 (1,699 kg)"
+          ],
+          "mainEngines": [
+            "S58B30T0 - 3.0L Twin-Turbo Petrol (453 hp)"
+          ],
+          "popularModels": [
+            "BMW M2 (G87)"
+          ],
+          "knownFor": [
+            "Crank hub issue finally resolved by BMW",
+            "Oil consumption reported on some early units",
+            "Limited long-term reliability data - too new for major failure patterns",
+            "Very low replacement demand (mostly warranty)"
+          ],
+          "engineCodesCovered": [
+            "S58B30T0"
+          ],
+          "cta": "Compare 2023-2024 BMW M2 petrol engine prices",
+          "badges": [
+            {
+              "label": "Major Platform Change",
+              "tone": "accent"
+            }
+          ],
+          "enquiries": []
+        },
+        {
+          "year": "2024",
+          "preview": "G87 M2 Facelift (LCI)",
+          "description": "The G87 receives its first update with a 20 hp power increase and subtle styling revisions.",
+          "keyChanges": [
+            "Power increased from 453 to 480 hp",
+            "Torque increased to 600 Nm (automatic models)",
+            "Minor exterior styling revisions",
+            "0-100 km/h improves to 4.0 seconds (automatic)"
+          ],
+          "mainEngines": [
+            "S58B30T0 - 3.0L Twin-Turbo Petrol (480 hp)"
+          ],
+          "popularModels": [
+            "BMW M2 (G87 LCI)"
+          ],
+          "knownFor": [
+            "Same underlying engine as 2023 model",
+            "Factory power increase without mechanical changes",
+            "Excellent reliability outlook",
+            "No systematic failure reports"
+          ],
+          "engineCodesCovered": [
+            "S58B30T0"
+          ],
+          "cta": "Get quotes for 2024+ BMW M2 replacement engines",
+          "badges": [
+            {
+              "label": "Major Engine Changes",
+              "tone": "accent"
+            },
+            {
+              "label": "1 engine highlights",
+              "tone": "muted"
+            }
+          ],
+          "enquiries": []
+        },
+        {
+          "year": "2025",
+          "preview": "Present - G87 M2 CS",
+          "description": "The ultimate G87 M2 CS delivers 530 hp, making it the most powerful production M2 ever built.",
+          "keyChanges": [
+            "Power increased to 530 hp (390 kW)",
+            "Torque increased to 650 Nm",
+            "0-100 km/h in 3.8 seconds",
+            "Extensive carbon fibre components for weight reduction",
+            "Automatic transmission only",
+            "Limited production run (specific numbers TBC)"
+          ],
+          "mainEngines": [
+            "S58B30A - 3.0L Twin-Turbo Petrol (530 hp)"
+          ],
+          "popularModels": [
+            "BMW M2 CS (G87)"
+          ],
+          "knownFor": [
+            "Most powerful M2 ever produced",
+            "Premium pricing (£100k+ estimated)",
+            "Replacement engines are exceptionally rare and expensive",
+            "Insufficient data for failure pattern analysis"
+          ],
+          "engineCodesCovered": [
+            "S58B30A"
+          ],
+          "cta": "Enquire about 2025+ BMW M2 CS engine availability",
+          "badges": [
+            {
+              "label": "Performance Change",
+              "tone": "accent"
+            }
+          ],
+          "enquiries": []
+        }
+      ],
+      "closing": "Not sure which year your BMW M2 was built? Enter your registration number and we'll identify the exact engine, model year, and compatible replacement options instantly - all backed by a minimum 12‑month warranty from UK BMW M2 specialists.",
+      "headingLines": [
+        "BMW M2 Engines by Year",
+        "What Was Fitted & When"
+      ],
       "ui": {
         "keyChangesLabel": "Key Changes",
         "knownForLabel": "Known For",
@@ -1093,7 +1585,10 @@
           "cta": "Find a trusted BMW M2 engine specialist near you"
         }
       ],
-      "headingLines": [],
+      "headingLines": [
+        "BMW M2 Engine Replacement",
+        "Frequently Asked Questions"
+      ],
       "defaultOpenIndex": 0,
       "ui": {
         "questionLabelPrefix": "Question",

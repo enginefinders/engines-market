@@ -11,6 +11,7 @@ type Props = {
   data: EngineCodesData;
   guide: ModelPageData["sections"]["variantCoverage"]["engineGuide"];
   modelName: string;
+  strictData?: boolean;
 };
 
 type GuideEntry = ModelPageData["sections"]["variantCoverage"]["engineGuide"]["families"][number]["entries"][number];
@@ -52,13 +53,13 @@ function getGuideDetail(code: string, lookup: Map<string, GuideEntry>) {
   return null;
 }
 
-function deriveYears(compatibleModels: string, fallback?: string) {
+function deriveYears(compatibleModels: string, fallback?: string, strictData = false) {
   if (fallback?.trim()) {
     return fallback.trim();
   }
 
   const match = compatibleModels.match(/\(([^)]+)\)/);
-  return match?.[1]?.trim() ?? "Check by registration";
+  return match?.[1]?.trim() ?? (strictData ? "" : "Check by registration");
 }
 
 function toPriceText(price: string) {
@@ -71,12 +72,31 @@ function toSummary(engine: EngineRow) {
     .trim();
 }
 
-function buildHistory(engine: EngineRow, detail: GuideEntry | null, modelName: string) {
+function extractEngineSeries(code: string) {
+  const primaryCode = code.split("/")[0]?.trim().toUpperCase() || code.toUpperCase();
+  const match = primaryCode.match(/^[A-Z]\d+/);
+
+  return match?.[0] ?? primaryCode;
+}
+
+function buildAccordionHeading(engine: EngineRow, years: string) {
+  return `${extractEngineSeries(engine.code)} Series (${years})`;
+}
+
+function buildEngineHeading(engine: EngineRow, detail: GuideEntry | null) {
+  if (detail?.title?.trim()) {
+    return detail.title.trim();
+  }
+
+  return `${engine.code} — ${toSummary(engine)}`;
+}
+
+function buildHistory(engine: EngineRow, detail: GuideEntry | null, modelName: string, strictData = false) {
   if (detail?.history?.trim()) {
     return detail.history.trim();
   }
 
-  return `${engine.code} appears across ${modelName} variants including ${engine.compatibleModels}. Compare fitment, specs and rebuilt pricing before choosing a replacement unit.`;
+  return strictData ? "" : `${engine.code} appears across ${modelName} variants including ${engine.compatibleModels}. Compare fitment, specs and rebuilt pricing before choosing a replacement unit.`;
 }
 
 function buildVariants(engine: EngineRow, detail: GuideEntry | null) {
@@ -171,12 +191,12 @@ type Selection = {
   engineIndex: number;
 } | null;
 
-export default function ModelEngineCodesSection({ data, guide, modelName }: Props) {
+export default function ModelEngineCodesSection({ data, guide, modelName, strictData = false }: Props) {
   const [selection, setSelection] = useState<Selection>(null);
   const guideLookup = useMemo(() => buildGuideLookup(guide), [guide]);
-  const headingLines = data.headingLines?.length ? data.headingLines : [guide.h2 || data.h2];
-  const intro = guide.h3 || data.h3;
-  const closingLine = guide.closing || data.closingLine || "";
+  const headingLines = data.headingLines?.length ? data.headingLines : [strictData ? data.h2 : (guide.h2 || data.h2)].filter(Boolean);
+  const intro = strictData ? data.h3 : (guide.h3 || data.h3);
+  const closingLine = strictData ? (data.closingLine || "") : (guide.closing || data.closingLine || "");
   const ui = data.ui ?? {};
   const closingAction = data.closingAction ?? {};
 
@@ -194,7 +214,7 @@ export default function ModelEngineCodesSection({ data, guide, modelName }: Prop
         <div className="engine-codes-section">
           <div className="ecs-container">
             <header className="ecs-header">
-              <div className="tag">{guide.tag || data.tag}</div>
+              {strictData ? (data.tag ? <div className="tag">{data.tag}</div> : null) : <div className="tag">{data.tag || guide.tag}</div>}
               <h2>
                 {headingLines.map((line, index) => (
                   <span key={`${line}-${index}`} style={{ display: "block", color: headingLines.length > 1 && index === headingLines.length - 1 ? "#15803d" : undefined }}>
@@ -243,7 +263,8 @@ export default function ModelEngineCodesSection({ data, guide, modelName }: Prop
                           selection?.familyIndex === familyIndex &&
                           selection.engineIndex === originalIndex;
                         const detail = getGuideDetail(engine.code, guideLookup);
-                        const years = deriveYears(engine.compatibleModels, detail?.years);
+                        const years = deriveYears(engine.compatibleModels, detail?.years, strictData);
+                        const accordionHeading = buildAccordionHeading(engine, years);
 
                         return (
                           <article
@@ -261,19 +282,23 @@ export default function ModelEngineCodesSection({ data, guide, modelName }: Prop
                               </span>
 
                               <span className="engine-main">
-                                <span className="summary-line">
-                                  <strong>{engine.code}</strong>
-                                  <span className="summary-separator" aria-hidden="true">
-                                    &bull;
+                                {selected ? (
+                                  <span className="summary-heading">{accordionHeading}</span>
+                                ) : (
+                                  <span className="summary-line">
+                                    <strong>{engine.code}</strong>
+                                    <span className="summary-separator" aria-hidden="true">
+                                      &bull;
+                                    </span>
+                                    <small>{toSummary(engine)}</small>
+                                    <span className="summary-years">({years})</span>
                                   </span>
-                                  <small>{toSummary(engine)}</small>
-                                  <span className="summary-years">({years})</span>
-                                </span>
+                                )}
                                 <span className="engine-meta">{engine.power}</span>
                               </span>
 
                               <span className="price">
-                                <small>{ui.summaryPriceLabel ?? "Avg. rebuilt price"}</small>
+                                {ui.summaryPriceLabel ? <small>{ui.summaryPriceLabel}</small> : null}
                                 <strong>{toPriceText(engine.avgRebuiltPrice)}</strong>
                               </span>
 
@@ -296,9 +321,17 @@ export default function ModelEngineCodesSection({ data, guide, modelName }: Prop
                                 const years = deriveYears(
                                   activeEngine.compatibleModels,
                                   detail?.years,
+                                  strictData,
                                 );
                                 const detailImage = detail?.image || activeEngine.image;
-                                const quoteText = detail?.cta || activeEngine.cta || `Get quotes for ${activeEngine.code}`;
+                                const quoteText = detail?.cta || activeEngine.cta || "";
+                                const engineHeading = buildEngineHeading(activeEngine, detail);
+                                const historyText = buildHistory(
+                                  activeEngine,
+                                  detail,
+                                  modelName,
+                                  strictData,
+                                );
 
                                 return (
                                   <div className="engine-details">
@@ -319,7 +352,7 @@ export default function ModelEngineCodesSection({ data, guide, modelName }: Prop
                                             </div>
                                             <div>
                                               <strong>{activeEngine.code}</strong>
-                                              <span>{ui.exampleImageLabel ?? "Example engine visual"}</span>
+                                              {ui.exampleImageLabel ? <span>{ui.exampleImageLabel}</span> : null}
                                             </div>
                                           </div>
                                         </div>
@@ -327,38 +360,35 @@ export default function ModelEngineCodesSection({ data, guide, modelName }: Prop
                                         <div className="hero-copy">
                                           <div className="hero-top">
                                             <div className="history-block">
-                                              <span className="history-label">{ui.historyLabel ?? "Engine History"}</span>
-                                              <p>
-                                                {buildHistory(
-                                                  activeEngine,
-                                                  detail,
-                                                  modelName,
-                                                )}
-                                              </p>
+                                              <div className="engine-detail-heading">{engineHeading}</div>
+                                              {ui.historyLabel ? <span className="history-label">{ui.historyLabel}</span> : null}
+                                              {historyText ? <p>{historyText}</p> : null}
                                             </div>
 
                                             <div className="price-box">
-                                              <small>{ui.summaryPriceLabel ?? "Avg. rebuilt price"}</small>
+                                              {ui.summaryPriceLabel ? <small>{ui.summaryPriceLabel}</small> : null}
                                               <strong>
                                                 {toPriceText(activeEngine.avgRebuiltPrice)}
                                               </strong>
-                                              <span>{ui.supplyLabel ?? "Supply only"}</span>
-                                              <a
-                                                className="quote-link"
-                                                href="#quote-form"
-                                                data-quote-engine-code={activeEngine.code}
-                                                data-quote-context={activeEngine.compatibleModels}
-                                              >
-                                                <span className="quote-link-text">
-                                                  <span>{quoteText}</span>
-                                                </span>
-                                                <ArrowIcon />
-                                              </a>
+                                              {ui.supplyLabel ? <span>{ui.supplyLabel}</span> : null}
+                                              {quoteText ? (
+                                                <a
+                                                  className="quote-link"
+                                                  href="#quote-form"
+                                                  data-quote-engine-code={activeEngine.code}
+                                                  data-quote-context={activeEngine.compatibleModels}
+                                                >
+                                                  <span className="quote-link-text">
+                                                    <span>{quoteText}</span>
+                                                  </span>
+                                                  <ArrowIcon />
+                                                </a>
+                                              ) : null}
                                             </div>
                                           </div>
 
                                           <div className="variant-wrap">
-                                            <small>{ui.variantsLabel ?? `Compatible ${modelName} variants`}</small>
+                                            {ui.variantsLabel ? <small>{ui.variantsLabel}</small> : null}
                                             <div className="variant-tags">
                                               {buildVariants(activeEngine, detail).map((variant) => (
                                                 <span key={variant}>{variant}</span>
@@ -370,39 +400,51 @@ export default function ModelEngineCodesSection({ data, guide, modelName }: Prop
 
                                       <div className="info-grid">
                                         <section className="info-box specs-box">
-                                          <h4>
-                                            <span className="icon">
-                                              <SpecsIcon />
-                                            </span>
-                                            {ui.specsTitle ?? "Technical Specifications"}
-                                          </h4>
+                                          {ui.specsTitle ? (
+                                            <h4>
+                                              <span className="icon">
+                                                <SpecsIcon />
+                                              </span>
+                                              {ui.specsTitle}
+                                            </h4>
+                                          ) : null}
                                           <ul className="spec-list">
+                                            {ui.fuelLabel ? (
                                             <li>
-                                              <span>{ui.fuelLabel ?? "Fuel type"}</span>
+                                              <span>{ui.fuelLabel}</span>
                                               <strong>{detail?.fuel || activeEngine.fuel}</strong>
                                             </li>
+                                            ) : null}
+                                            {ui.sizeLabel ? (
                                             <li>
-                                              <span>{ui.sizeLabel ?? "Engine size"}</span>
+                                              <span>{ui.sizeLabel}</span>
                                               <strong>{detail?.size || activeEngine.size}</strong>
                                             </li>
+                                            ) : null}
+                                            {ui.powerLabel ? (
                                             <li>
-                                              <span>{ui.powerLabel ?? "Power output"}</span>
+                                              <span>{ui.powerLabel}</span>
                                               <strong>{detail?.power || activeEngine.power}</strong>
                                             </li>
+                                            ) : null}
+                                            {ui.yearsLabel ? (
                                             <li>
-                                              <span>{ui.yearsLabel ?? "Years fitted"}</span>
+                                              <span>{ui.yearsLabel}</span>
                                               <strong>{years}</strong>
                                             </li>
+                                            ) : null}
                                           </ul>
                                         </section>
 
                                         <section className="info-box failures-box">
-                                          <h4>
-                                            <span className="icon">
-                                              <WarningIcon />
-                                            </span>
-                                            {ui.failuresTitle ?? "Common Failures"}
-                                          </h4>
+                                          {ui.failuresTitle ? (
+                                            <h4>
+                                              <span className="icon">
+                                                <WarningIcon />
+                                              </span>
+                                              {ui.failuresTitle}
+                                            </h4>
+                                          ) : null}
                                           <ul className="failure-list">
                                             {buildFailures(detail, group.failureNote).map((failure) => (
                                               <li key={failure}>{failure}</li>
@@ -413,23 +455,25 @@ export default function ModelEngineCodesSection({ data, guide, modelName }: Prop
 
                                       <div className="mobile-action-row">
                                         <div className="mobile-price-summary">
-                                          <small>{ui.summaryPriceLabel ?? "Avg. rebuilt price"}</small>
+                                          {ui.summaryPriceLabel ? <small>{ui.summaryPriceLabel}</small> : null}
                                           <strong>
                                             {toPriceText(activeEngine.avgRebuiltPrice)}
                                           </strong>
-                                          <span>{ui.supplyLabel ?? "Supply only"}</span>
+                                          {ui.supplyLabel ? <span>{ui.supplyLabel}</span> : null}
                                         </div>
-                                        <a
-                                          className="quote-link"
-                                          href="#quote-form"
-                                          data-quote-engine-code={activeEngine.code}
-                                          data-quote-context={activeEngine.compatibleModels}
-                                        >
-                                          <span className="quote-link-text">
-                                            <span>{quoteText}</span>
-                                          </span>
-                                          <ArrowIcon />
-                                        </a>
+                                        {quoteText ? (
+                                          <a
+                                            className="quote-link"
+                                            href="#quote-form"
+                                            data-quote-engine-code={activeEngine.code}
+                                            data-quote-context={activeEngine.compatibleModels}
+                                          >
+                                            <span className="quote-link-text">
+                                              <span>{quoteText}</span>
+                                            </span>
+                                            <ArrowIcon />
+                                          </a>
+                                        ) : null}
                                       </div>
                                     </div>
                                   </div>
@@ -447,19 +491,23 @@ export default function ModelEngineCodesSection({ data, guide, modelName }: Prop
               );
             })}
 
+            {closingLine || closingAction.title || closingAction.buttonText ? (
             <div className="closing-card">
               <div className="closing-icon">
                 <CarIcon />
               </div>
               <div>
-                <h3>{closingAction.title ?? "Can't find your engine code?"}</h3>
-                <p>{closingLine}</p>
+                {closingAction.title ? <h3>{closingAction.title}</h3> : null}
+                {closingLine ? <p>{closingLine}</p> : null}
               </div>
-              <a href="#quote-form" className="cta-btn">
-                {closingAction.buttonText ?? "Enter Your Reg"}
-                <ArrowIcon />
-              </a>
+              {closingAction.buttonText ? (
+                <a href="#quote-form" className="cta-btn">
+                  {closingAction.buttonText}
+                  <ArrowIcon />
+                </a>
+              ) : null}
             </div>
+            ) : null}
           </div>
         </div>
       </Container>
@@ -636,6 +684,16 @@ export default function ModelEngineCodesSection({ data, guide, modelName }: Prop
           display: block;
         }
 
+        .model-engine-codes .summary-heading {
+          display: block;
+          margin: 0;
+          color: #10203a;
+          font-size: 18px;
+          font-weight: 800;
+          line-height: 1.2;
+          letter-spacing: -0.03em;
+        }
+
         .model-engine-codes .summary-line strong {
           display: block;
           margin: 0 0 3px;
@@ -724,35 +782,6 @@ export default function ModelEngineCodesSection({ data, guide, modelName }: Prop
           display: none;
         }
 
-        .model-engine-codes .engine-summary.is-selected .summary-line {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          flex-wrap: wrap;
-        }
-
-        .model-engine-codes .engine-summary.is-selected .summary-line strong,
-        .model-engine-codes .engine-summary.is-selected .summary-line small,
-        .model-engine-codes .engine-summary.is-selected .summary-years {
-          display: inline;
-          margin: 0;
-          color: #10203a;
-        }
-
-        .model-engine-codes .engine-summary.is-selected .summary-line strong {
-          font-size: 20px;
-        }
-
-        .model-engine-codes .engine-summary.is-selected .summary-separator {
-          display: inline;
-        }
-
-        .model-engine-codes .engine-summary.is-selected .summary-line small {
-          font-size: 16px;
-          font-weight: 600;
-          line-height: 1.2;
-        }
-
         .model-engine-codes .family-open-slot {
           grid-column: 1 / -1;
           display: none;
@@ -837,6 +866,15 @@ export default function ModelEngineCodesSection({ data, guide, modelName }: Prop
           color: #e1ebf5;
           font-size: 11px;
           line-height: 1.4;
+        }
+
+        .model-engine-codes .engine-detail-heading {
+          margin: 0 0 6px;
+          color: #ffffff;
+          font-size: 15px;
+          font-weight: 800;
+          line-height: 1.25;
+          letter-spacing: -0.02em;
         }
 
         .model-engine-codes .history-label {
@@ -1150,6 +1188,10 @@ export default function ModelEngineCodesSection({ data, guide, modelName }: Prop
 
           .model-engine-codes .summary-line small {
             font-size: 11px;
+          }
+
+          .model-engine-codes .summary-heading {
+            font-size: 16px;
           }
 
           .model-engine-codes .price strong {

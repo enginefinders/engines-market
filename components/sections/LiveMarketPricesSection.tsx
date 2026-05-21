@@ -11,6 +11,7 @@ type Props = {
   data: LiveMarketPricesData;
   modelCards?: ModelsSectionData["cards"];
   imageSrc?: string;
+  displayMode?: "brand" | "document";
 };
 
 type FeedRow = LiveMarketPriceEntry & {
@@ -124,10 +125,16 @@ function formatUpdatedAt(clock: Date) {
   }).format(clock);
 }
 
-export default function LiveMarketPricesSection({ data, modelCards, imageSrc }: Props) {
+export default function LiveMarketPricesSection({
+  data,
+  modelCards,
+  imageSrc,
+  displayMode = "brand",
+}: Props) {
   const [clock, setClock] = useState(() => new Date());
   const [activeTab, setActiveTab] = useState("all");
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const isDocumentMode = displayMode === "document";
 
   useEffect(() => {
     const intervalId = window.setInterval(() => {
@@ -150,19 +157,20 @@ export default function LiveMarketPricesSection({ data, modelCards, imageSrc }: 
   const ui = data.ui ?? {};
 
   const visibleRows = useMemo(() => {
+    if (isDocumentMode) return feedRows;
     if (!activeFilter || activeFilter.key === "all") return feedRows;
 
     return feedRows.filter((row) => {
       const model = row.Model.toLowerCase();
       return activeFilter.matchers.some((matcher) => model.includes(matcher));
     });
-  }, [activeFilter, feedRows]);
+  }, [activeFilter, feedRows, isDocumentMode]);
 
   const pinnedTabs = filterTabs.length ? filterTabs.slice(0, 5) : [];
   const overflowTabs = filterTabs.slice(5);
 
   const headingLines = data.headingLines?.length ? data.headingLines : [data.h2];
-  const sectionImage = imageSrc || "/images/brands/land-rover/brand/land-rover-how-it-works-bg.webp";
+  const sectionImage = imageSrc || "";
 
   return (
     <Section className="bg-[#f8f9fa]">
@@ -190,18 +198,26 @@ export default function LiveMarketPricesSection({ data, modelCards, imageSrc }: 
         <div className="mt-6 grid gap-6 lg:grid-cols-[0.76fr_1.24fr] lg:items-start">
           <div className="relative overflow-hidden rounded-[16px] border border-[#e5e7eb] bg-white shadow-[0_2px_12px_rgba(13,27,46,0.07)]">
             <div className="relative aspect-[4/3.6] min-h-[340px] lg:min-h-[520px]">
-              <Image
-                src={sectionImage}
-                alt={data.imageAlt ?? "Engine market comparison and model pricing"}
-                fill
-                className="object-contain object-center p-3 lg:p-4"
-                sizes="(max-width: 1024px) 100vw, 38vw"
-              />
+              {sectionImage ? (
+                <Image
+                  src={sectionImage}
+                  alt={data.imageAlt ?? ""}
+                  fill
+                  className="object-contain object-center p-3 lg:p-4"
+                  sizes="(max-width: 1024px) 100vw, 38vw"
+                />
+              ) : null}
             </div>
           </div>
 
           <div className="space-y-3 lg:flex lg:h-full lg:flex-col">
-            {filterTabs.length ? (
+            {isDocumentMode ? (
+              <div className="rounded-[10px] bg-[#0d1b2e] px-4 py-[12px] shadow-[0_2px_12px_rgba(13,27,46,0.16)]">
+                <div className="text-[12px] font-bold uppercase tracking-[0.08em] text-white">
+                  Average Market Prices
+                </div>
+              </div>
+            ) : filterTabs.length ? (
               <div className="rounded-[10px] bg-[#0d1b2e] p-[10px] shadow-[0_2px_12px_rgba(13,27,46,0.16)]">
                 <div className="flex items-center gap-[6px]">
                   <div className="flex min-w-0 flex-1 items-center gap-[6px] overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
@@ -258,83 +274,102 @@ export default function LiveMarketPricesSection({ data, modelCards, imageSrc }: 
               </div>
             ) : null}
 
-            <div className="overflow-hidden rounded-[14px] border border-[#dfe5ee] bg-white shadow-[0_2px_12px_rgba(13,27,46,0.07)] lg:flex lg:h-[520px] lg:flex-col">
-              <div className="border-b border-[#e4e7ee] bg-[#f9fafc] px-4 py-[10px] text-[11px] font-medium text-[#9aa3b5]">
-                Showing {visibleRows.length} {visibleRows.length === 1 ? (ui.showingSingleLabel ?? "entry") : (ui.showingPluralLabel ?? "entries")}
-                {activeFilter?.key && activeFilter.key !== "all"
-                  ? ` for ${activeFilter.label}`
-                  : ` ${ui.acrossAllLabel ?? "across all models"}`}
-              </div>
+            <div className="space-y-2 lg:flex lg:h-full lg:flex-col lg:space-y-0">
+              <div className="overflow-hidden rounded-[14px] border border-[#dfe5ee] bg-white shadow-[0_2px_12px_rgba(13,27,46,0.07)] lg:flex lg:h-[520px] lg:flex-col">
+                {isDocumentMode ? null : (
+                  <div className="border-b border-[#e4e7ee] bg-[#f9fafc] px-4 py-[10px] text-[11px] font-medium text-[#9aa3b5]">
+                    Showing {visibleRows.length} {visibleRows.length === 1 ? (ui.showingSingleLabel ?? "entry") : (ui.showingPluralLabel ?? "entries")}
+                    {activeFilter?.key && activeFilter.key !== "all"
+                      ? ` for ${activeFilter.label}`
+                      : ` ${ui.acrossAllLabel ?? "across all models"}`}
+                  </div>
+                )}
 
-              <div className="max-h-[520px] overflow-y-auto lg:flex-1 lg:max-h-none">
-                {visibleRows.length ? (
-                  <ul className="list-none">
-                    {visibleRows.map((row, index) => (
-                      <li
-                        key={`${row.Year}-${row.Model}-${row["Engine Code"]}-${index}`}
-                        className="border-b border-[#e4e7ee] px-[14px] py-[11px] transition hover:bg-[rgba(45,122,58,0.04)] last:border-b-0 md:px-[16px]"
-                      >
-                        <div className="mb-[4px] flex items-baseline justify-between gap-[8px]">
-                          <span className="min-w-0 flex-1 truncate text-[14px] font-semibold text-[#0d1f3c]">
-                            {row.Model}
-                          </span>
-                          <span className="flex-none whitespace-nowrap text-[11px] font-normal text-[#9aa3b5]">
-                            {row.Year}
-                          </span>
-                          <span className="flex-none whitespace-nowrap text-[15px] font-bold text-[#2d7a3a]">
-                            {row["Avg. Quoted Price"]}
-                          </span>
-                        </div>
-
-                        <div className="flex items-center justify-between gap-[8px]">
-                          <span className="min-w-0 flex-1 truncate text-[11.5px] text-[#5a6478]">
-                            {row["Reported Issue"]}
-                          </span>
-                          <div className="flex flex-none gap-[4px]">
-                            <span className="rounded-full bg-[#0d1f3c] px-[7px] py-[2px] text-[10.5px] font-medium text-white">
-                              {row["Engine Code"]}
+                <div className="max-h-[520px] overflow-y-auto lg:flex-1 lg:max-h-none">
+                  {visibleRows.length ? (
+                    <ul className="list-none">
+                      {visibleRows.map((row, index) => (
+                        <li
+                          key={`${row.Year}-${row.Model}-${row["Engine Code"]}-${index}`}
+                          className="border-b border-[#e4e7ee] px-[14px] py-[11px] transition hover:bg-[rgba(45,122,58,0.04)] last:border-b-0 md:px-[16px]"
+                        >
+                          <div className="mb-[4px] flex items-baseline justify-between gap-[8px]">
+                            <span className="min-w-0 flex-1 truncate text-[14px] font-semibold text-[#0d1f3c]">
+                              {row.Model}
                             </span>
-                            <span className="rounded-full bg-[#0d1f3c] px-[7px] py-[2px] text-[10.5px] font-medium text-white">
-                              {row.Fuel}
+                            <span className="flex-none whitespace-nowrap text-[11px] font-normal text-[#9aa3b5]">
+                              {row.Year}
+                            </span>
+                            <span className="flex-none whitespace-nowrap text-[15px] font-bold text-[#2d7a3a]">
+                              {row["Avg. Quoted Price"]}
                             </span>
                           </div>
-                        </div>
-                      </li>
-                    ))}
-                  </ul>
-                ) : (
-                  <div className="px-4 py-10 text-center text-[13px] text-[#5a6478]">
-                    {ui.noEntriesLabel ?? "No entries match that model filter yet."}
+
+                          <div className="flex items-center justify-between gap-[8px]">
+                            <span className="min-w-0 flex-1 truncate text-[11.5px] text-[#5a6478]">
+                              {row["Reported Issue"]}
+                            </span>
+                            <div className="flex flex-none gap-[4px]">
+                              <span className="rounded-full bg-[#0d1f3c] px-[7px] py-[2px] text-[10.5px] font-medium text-white">
+                                {row["Engine Code"]}
+                              </span>
+                              <span className="rounded-full bg-[#0d1f3c] px-[7px] py-[2px] text-[10.5px] font-medium text-white">
+                                {row.Fuel}
+                              </span>
+                            </div>
+                          </div>
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <div className="px-4 py-10 text-center text-[13px] text-[#5a6478]">
+                      {isDocumentMode ? (ui.noEntriesLabel || "") : (ui.noEntriesLabel ?? "No entries match that model filter yet.")}
+                    </div>
+                  )}
+                </div>
+
+                {isDocumentMode ? null : (
+                  <div className="border-t border-[#e4e7ee] bg-[#f9fafc] px-4 py-[10px]">
+                    <div className="flex items-center gap-[6px] text-[11px] font-medium text-[#9aa3b5]">
+                      <RefreshIcon />
+                      <span>
+                        {ui.updatedLabel ?? "Last updated:"} <span className="font-semibold text-[#6b7280]">{formatUpdatedAt(clock)}</span>
+                      </span>
+                    </div>
                   </div>
                 )}
               </div>
 
-              <div className="border-t border-[#e4e7ee] bg-[#f9fafc] px-4 py-[10px]">
-                <div className="flex items-center gap-[6px] text-[11px] font-medium text-[#9aa3b5]">
-                  <RefreshIcon />
-                  <span>
-                    {ui.updatedLabel ?? "Last updated:"} <span className="font-semibold text-[#6b7280]">{formatUpdatedAt(clock)}</span>
-                  </span>
+              {isDocumentMode ? (
+                <div className="rounded-[10px] bg-[#0d1b2e] px-4 py-[10px] shadow-[0_2px_12px_rgba(13,27,46,0.16)]">
+                  <div className="flex items-center gap-[6px] text-[11px] font-medium text-white/80">
+                    <RefreshIcon />
+                    <span>
+                      {isDocumentMode ? (ui.updatedLabel || "") : (ui.updatedLabel ?? "Last updated:")} <span className="font-semibold text-white">{formatUpdatedAt(clock)}</span>
+                    </span>
+                  </div>
                 </div>
-              </div>
+              ) : null}
             </div>
           </div>
         </div>
 
-        <div className="mt-5">
-          <CtaStrip
-            tone="light"
-            label={ui.ctaLabel ?? "Live Quote Benchmark"}
-            title={data.cta.heading}
-            description={data.cta.text}
-            buttonText={data.cta.buttonText.replace(/\s*->\s*$/, "")}
-            linkProps={{
-              href: "#quote-form",
-              "data-quote-context": data.cta.heading,
-              "data-quote-source": "live-market-prices",
-            }}
-          />
-        </div>
+        {isDocumentMode ? null : (
+          <div className="mt-5">
+            <CtaStrip
+              tone="light"
+              label={ui.ctaLabel ?? "Live Quote Benchmark"}
+              title={data.cta.heading}
+              description={data.cta.text}
+              buttonText={data.cta.buttonText.replace(/\s*->\s*$/, "")}
+              linkProps={{
+                href: "#quote-form",
+                "data-quote-context": data.cta.heading,
+                "data-quote-source": "live-market-prices",
+              }}
+            />
+          </div>
+        )}
       </Container>
     </Section>
   );

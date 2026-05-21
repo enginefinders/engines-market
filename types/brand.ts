@@ -274,6 +274,10 @@ export type EngineTypesData = {
   types: {
     title: string;
     description: string;
+    frontDescription?: string;
+    frontDisclaimer?: string;
+    backDescription?: string;
+    backBullets?: string[];
     priceRange: string;
     cta: string;
   }[];

@@ -15,6 +15,7 @@ type HeroSectionProps = {
   data: HeroSectionData;
   bgImage: string;
   modelCards?: HeroModelCard[];
+  strictData?: boolean;
 };
 
 function ToolIcon() {
@@ -229,17 +230,25 @@ function stripBrandFromModel(modelName: string, brandName: string) {
     .trim();
 }
 
-function secureNote(data: HeroSectionData, brandName: string) {
+function secureNote(data: HeroSectionData, brandName: string, strictData = false) {
   if (data.form.note.trim()) {
     return data.form.note;
+  }
+
+  if (strictData) {
+    return "";
   }
 
   return `Secure enquiry - no spam, no pressure. Genuine quotes only from vetted UK ${brandName} specialists.`;
 }
 
-function buttonText(data: HeroSectionData, brandName: string) {
+function buttonText(data: HeroSectionData, brandName: string, strictData = false) {
   if (data.form.buttonText.trim()) {
     return data.form.buttonText;
+  }
+
+  if (strictData) {
+    return "";
   }
 
   return `Get Free ${brandName} Engine Quotes`;
@@ -311,7 +320,7 @@ function resolveHeroCards(data: HeroSectionData, modelCards: HeroModelCard[]) {
   return buildHeroCards(modelCards);
 }
 
-export default function HeroSection({ data, bgImage, modelCards = [] }: HeroSectionProps) {
+export default function HeroSection({ data, bgImage, modelCards = [], strictData = false }: HeroSectionProps) {
   const [registration, setRegistration] = useState("");
   const [showHeroImage, setShowHeroImage] = useState(Boolean(bgImage));
   const headingLines = resolveHeadingLines(data);
@@ -340,7 +349,7 @@ export default function HeroSection({ data, bgImage, modelCards = [] }: HeroSect
       <div className="bg-[#0d1b2e] text-white lg:hidden">
         <div className="flex items-center justify-between px-4 py-3">
           <div className="font-['Manrope'] text-[17px] font-extrabold tracking-[-0.3px] text-white">
-            {mobileBar.brandText ?? "ENGINEMARKET"}
+            {strictData ? mobileBar.brandText : (mobileBar.brandText ?? "ENGINEMARKET")}
           </div>
 
           <div className="flex items-center gap-2">
@@ -349,14 +358,14 @@ export default function HeroSection({ data, bgImage, modelCards = [] }: HeroSect
               className="inline-flex items-center gap-1.5 rounded-md border border-white/20 bg-white/10 px-3 py-[7px] text-[11px] font-semibold text-white"
             >
               <PhoneIcon />
-              <span>{mobileBar.callLabel ?? "Call"}</span>
+              <span>{strictData ? mobileBar.callLabel : (mobileBar.callLabel ?? "Call")}</span>
             </a>
             <a
               href="#quote-form"
               data-quote-source="hero-mobile"
               className="rounded-md bg-[#15803d] px-3 py-[7px] font-['Manrope'] text-[11.5px] font-bold text-white"
             >
-              {mobileBar.quoteLabel ?? "GET QUOTES"}
+              {strictData ? mobileBar.quoteLabel : (mobileBar.quoteLabel ?? "GET QUOTES")}
             </a>
           </div>
         </div>
@@ -453,7 +462,7 @@ export default function HeroSection({ data, bgImage, modelCards = [] }: HeroSect
                           <p className="mt-1 text-[11px] leading-[1.45] text-[#64748b] md:text-[12px]">
                             {model.heroLineTwo.trim()}
                           </p>
-                        ) : buildHeroLineTwo(model) ? (
+                        ) : !strictData && buildHeroLineTwo(model) ? (
                           <p className="mt-1 text-[11px] leading-[1.45] text-[#64748b] md:text-[12px]">
                             {buildHeroLineTwo(model)}
                           </p>
@@ -475,14 +484,14 @@ export default function HeroSection({ data, bgImage, modelCards = [] }: HeroSect
               htmlFor="reg-input"
               className="absolute h-px w-px overflow-hidden whitespace-nowrap [clip:rect(0,0,0,0)]"
             >
-              {registrationInput.label ?? "Enter your vehicle registration"}
+              {strictData ? registrationInput.label : (registrationInput.label ?? "Enter your vehicle registration")}
             </label>
 
             <div className="flex h-[68px] w-full min-w-0 overflow-hidden rounded-lg border-[3px] border-[#1a1a1a] bg-[#ffdd00] md:h-[56px] md:w-[52%] md:min-w-[300px] md:flex-[0_0_auto]">
               <div className="flex h-full w-[46px] shrink-0 flex-col items-center justify-center gap-[3px] border-r-2 border-[#1a1a1a] bg-[#003399] px-0.5 md:w-11">
                 <UkFlagIcon />
                 <span className="text-[12px] font-extrabold leading-none tracking-[0.05em] text-white">
-                  {registrationInput.countryCode ?? "UK"}
+                  {strictData ? registrationInput.countryCode : (registrationInput.countryCode ?? "UK")}
                 </span>
               </div>
 
@@ -490,7 +499,9 @@ export default function HeroSection({ data, bgImage, modelCards = [] }: HeroSect
                 id="reg-input"
                 type="text"
                 placeholder={
-                  registrationInput.platePlaceholder ?? data.form.inputPlaceholder ?? "AB12 CDE"
+                  strictData
+                    ? (registrationInput.platePlaceholder || data.form.inputPlaceholder || "")
+                    : (registrationInput.platePlaceholder ?? data.form.inputPlaceholder ?? "AB12 CDE")
                 }
                 maxLength={8}
                 autoCapitalize="characters"
@@ -510,17 +521,19 @@ export default function HeroSection({ data, bgImage, modelCards = [] }: HeroSect
               aria-label={`Get free ${brandName} engine replacement quotes`}
               className="flex h-[52px] w-full min-w-0 items-center justify-center gap-1 rounded-lg bg-[#15803d] px-5 font-['Manrope'] text-[15px] font-bold text-white shadow-[0_4px_16px_rgba(21,128,61,0.30)] transition hover:bg-[#16a34a] hover:shadow-[0_6px_22px_rgba(21,128,61,0.42)] md:h-[56px] md:flex-1"
             >
-              <span>{buttonText(data, brandName)}</span>
+              <span>{buttonText(data, brandName, strictData)}</span>
               <span className="hidden text-base md:inline-block">-&gt;</span>
             </button>
           </form>
 
-          <p className="mt-[10px] flex items-start gap-1.5 text-[12px] leading-[1.55] text-[#64748b] md:text-[12.5px]">
-            <span className="mt-px shrink-0 text-[#6b7280]">
-              <LockIcon />
-            </span>
-            <span>{secureNote(data, brandName)}</span>
-          </p>
+          {secureNote(data, brandName, strictData) ? (
+            <p className="mt-[10px] flex items-start gap-1.5 text-[12px] leading-[1.55] text-[#64748b] md:text-[12.5px]">
+              <span className="mt-px shrink-0 text-[#6b7280]">
+                <LockIcon />
+              </span>
+              <span>{secureNote(data, brandName, strictData)}</span>
+            </p>
+          ) : null}
         </div>
 
         <div className="relative hidden min-h-[340px] items-center justify-center lg:flex">

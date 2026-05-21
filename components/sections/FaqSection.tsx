@@ -4,6 +4,7 @@ import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
 type Props = {
   data: FaqSectionData;
+  strictData?: boolean;
 };
 
 function splitHeading(text: string) {
@@ -22,7 +23,7 @@ function splitHeading(text: string) {
   };
 }
 
-export default function FaqSection({ data }: Props) {
+export default function FaqSection({ data, strictData = false }: Props) {
   const heading = splitHeading(data.h2);
   const headingLines = data.headingLines?.length ? data.headingLines : [heading.primary, heading.accent].filter(Boolean);
   const ui = data.ui ?? {};
@@ -47,7 +48,11 @@ export default function FaqSection({ data }: Props) {
           {data.items.map((item, index) => (
             <details key={item.question} className="surface-card-soft overflow-hidden" open={index === defaultOpenIndex}>
               <summary className="cursor-pointer list-none px-4 py-3.5">
-                <p className="text-label text-green-700">{ui.questionLabelPrefix ?? "Question"} {index + 1}</p>
+                {strictData ? (
+                  ui.questionLabelPrefix ? <p className="text-label text-green-700">{ui.questionLabelPrefix} {index + 1}</p> : null
+                ) : (
+                  <p className="text-label text-green-700">{ui.questionLabelPrefix ?? "Question"} {index + 1}</p>
+                )}
                 <h3 className="mt-1 pr-6 text-[0.98rem]">{item.question}</h3>
               </summary>
 
@@ -56,7 +61,11 @@ export default function FaqSection({ data }: Props) {
 
                 {item.keyPoints?.length ? (
                   <div className="mt-3 rounded-xl bg-slate-50 px-3.5 py-3">
-                    <p className="text-label text-slate-500">{ui.keyPointsLabel ?? "Key points"}</p>
+                    {strictData ? (
+                      ui.keyPointsLabel ? <p className="text-label text-slate-500">{ui.keyPointsLabel}</p> : null
+                    ) : (
+                      <p className="text-label text-slate-500">{ui.keyPointsLabel ?? "Key points"}</p>
+                    )}
                     <ul className="mt-2 space-y-1.5 text-small font-semibold text-slate-700">
                       {item.keyPoints.map((point) => (
                         <li key={point}>• {point}</li>
@@ -65,11 +74,11 @@ export default function FaqSection({ data }: Props) {
                   </div>
                 ) : null}
 
-                {item.warning && (
+                {item.warning && (!strictData || ui.warningTitle) && (
                   <div className="mt-3">
                     <WarningCard
-                      label="Warning"
-                      title={ui.warningTitle ?? "Check fitment and engine condition before ordering"}
+                      label={strictData ? "" : "Warning"}
+                      title={strictData ? (ui.warningTitle || "") : (ui.warningTitle ?? "Check fitment and engine condition before ordering")}
                       body={item.warning}
                     />
                   </div>

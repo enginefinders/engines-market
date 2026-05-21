@@ -31,6 +31,44 @@ function splitHeading(text: string) {
   };
 }
 
+function splitProblemDetail(group: string, detail: string) {
+  const normalizedGroup = normalizeText(group).trim();
+  const normalizedDetail = normalizeText(detail).trim();
+
+  if (!normalizedDetail) {
+    return {
+      title: normalizedGroup,
+      supporting: "",
+    };
+  }
+
+  if (normalizedDetail.toLowerCase().startsWith(normalizedGroup.toLowerCase())) {
+    const supporting = normalizedDetail
+      .slice(normalizedGroup.length)
+      .replace(/^\s*-\s*/, "")
+      .trim();
+
+    return {
+      title: normalizedGroup,
+      supporting,
+    };
+  }
+
+  const [maybeTitle, ...rest] = normalizedDetail.split(/\s+-\s+/);
+
+  if (maybeTitle?.trim().toLowerCase() === normalizedGroup.toLowerCase() && rest.length) {
+    return {
+      title: normalizedGroup,
+      supporting: rest.join(" - ").trim(),
+    };
+  }
+
+  return {
+    title: normalizedGroup,
+    supporting: normalizedDetail,
+  };
+}
+
 function tierVariant(tier: string) {
   const label = normalizeText(tier).toLowerCase();
 
@@ -165,6 +203,8 @@ function MobileProblemCard({
   open: boolean;
   onToggle: () => void;
 }) {
+  const detail = splitProblemDetail(problem.group, problem.h4);
+
   return (
     <div className="mb-[10px] overflow-hidden rounded-[12px] border border-[#e5e7eb] bg-white shadow-[0_2px_8px_rgba(13,27,46,0.05)]">
       <button
@@ -176,8 +216,10 @@ function MobileProblemCard({
           <ProblemIcon index={index} />
         </div>
         <div className="min-w-0 flex-1">
-          <div className="font-['Manrope'] text-[13.5px] font-bold leading-[1.25] text-[#0d1b2e]">{problem.group}</div>
-          <div className="mt-0.5 text-[10.5px] text-[#9ca3af]">{problem.h4}</div>
+          <div className="font-['Manrope'] text-[13.5px] font-bold leading-[1.25] text-[#0d1b2e]">{detail.title}</div>
+          {detail.supporting ? (
+            <div className="mt-0.5 text-[10.5px] text-[#9ca3af]">{detail.supporting}</div>
+          ) : null}
         </div>
         <span className={`flex-none text-[18px] leading-none text-[#d1d5db] transition ${open ? "rotate-180 text-[#15803d]" : ""}`}>⌄</span>
       </button>
@@ -210,8 +252,8 @@ function MobileProblemCard({
 
           {problem.repairOptions?.length ? (
             <div className="mt-4 space-y-3">
-              {problem.repairOptions.map((option) => (
-                <div key={option.tier} className="rounded-[12px] border border-[#e5e7eb] bg-white p-3">
+              {problem.repairOptions.map((option, optionIndex) => (
+                <div key={`${option.tier || "repair-option"}-${optionIndex}`} className="rounded-[12px] border border-[#e5e7eb] bg-white p-3">
                   <div className="font-['Manrope'] text-[12px] font-bold text-[#0d1b2e]">{option.tier}</div>
                   <div className="mt-2 grid grid-cols-2 gap-2">
                     <div className="rounded-[8px] bg-[#f8f9fa] p-2">
@@ -253,6 +295,7 @@ export default function CommonProblemsSection({ data, bgImage }: Props) {
   const [openMobile, setOpenMobile] = useState(0);
   const current = useMemo(() => data.problems[active] ?? data.problems[0], [active, data.problems]);
   const heading = splitHeading(data.h2);
+  const currentDetail = current ? splitProblemDetail(current.group, current.h4) : null;
 
   const supportItems = [
     { label: "12-Month Warranty", icon: <WarrantyIcon /> },
@@ -302,7 +345,7 @@ export default function CommonProblemsSection({ data, bgImage }: Props) {
 
                 return (
                   <button
-                    key={problem.group}
+                    key={`${problem.group || "problem"}-${index}`}
                     type="button"
                     onClick={() => setActive(index)}
                     className={`flex w-full items-center gap-3 rounded-[10px] border px-3 py-3 text-left transition ${
@@ -343,9 +386,11 @@ export default function CommonProblemsSection({ data, bgImage }: Props) {
                 </div>
                 <div className="min-w-0">
                   <div className="font-['Manrope'] text-[16px] font-extrabold leading-[1.25] text-[#0d1b2e]">
-                    {active + 1}. {current.group}
+                    {active + 1}. {currentDetail?.title ?? current.group}
                   </div>
-                  <p className="mt-1 text-[12px] text-[#6b7280]">{current.h4}</p>
+                  {currentDetail?.supporting ? (
+                    <p className="mt-1 text-[12px] text-[#6b7280]">{currentDetail.supporting}</p>
+                  ) : null}
                 </div>
               </div>
 
@@ -391,11 +436,11 @@ export default function CommonProblemsSection({ data, bgImage }: Props) {
                           </tr>
                         </thead>
                         <tbody>
-                          {current.repairOptions.map((option) => {
+                          {current.repairOptions.map((option, optionIndex) => {
                             const variant = tierVariant(option.tier);
 
                             return (
-                              <tr key={option.tier} className="border-b border-[#f1f5f9] align-top last:border-b-0">
+                              <tr key={`${option.tier || "repair-option"}-${optionIndex}`} className="border-b border-[#f1f5f9] align-top last:border-b-0">
                                 <td className="px-[12px] py-[12px] text-[11.5px] text-[#374151]">
                                   <div className="font-['Manrope'] text-[12px] font-bold text-[#0d1b2e]">{option.tier}</div>
                                   <div className={`mt-2 inline-flex rounded-[999px] px-2 py-[3px] text-[9px] font-bold uppercase tracking-[0.05em] ${
@@ -434,6 +479,33 @@ export default function CommonProblemsSection({ data, bgImage }: Props) {
                   }}
                 />
               </div>
+
+              {(data.finalCta.h4 || data.finalCta.paragraph || data.finalCta.buttonText) ? (
+                <div className="mt-4 rounded-[14px] border border-[#dbe6f3] bg-[#f8fbff] p-4 md:p-5">
+                  {data.finalCta.h4 ? (
+                    <h4 className="font-['Manrope'] text-[18px] font-extrabold leading-[1.2] tracking-[-0.03em] text-[#0d1b2e]">
+                      {data.finalCta.h4}
+                    </h4>
+                  ) : null}
+
+                  {data.finalCta.paragraph ? (
+                    <p className="mt-3 max-w-[760px] text-[12px] leading-[1.75] text-[#4b5563]">
+                      {data.finalCta.paragraph}
+                    </p>
+                  ) : null}
+
+                  {data.finalCta.buttonText ? (
+                    <a
+                      href="#quote-form"
+                      data-quote-context={data.finalCta.h4 || current.group}
+                      data-quote-source="common-problems-final-cta"
+                      className="mt-4 inline-flex min-h-[44px] items-center justify-center rounded-[10px] bg-[#15803d] px-5 text-[12.5px] font-semibold text-white transition hover:bg-[#166534]"
+                    >
+                      {data.finalCta.buttonText}
+                    </a>
+                  ) : null}
+                </div>
+              ) : null}
             </div>
           ) : null}
         </div>
@@ -452,13 +524,40 @@ export default function CommonProblemsSection({ data, bgImage }: Props) {
 
           {data.problems.map((problem, index) => (
             <MobileProblemCard
-              key={problem.group}
+              key={`${problem.group || "problem"}-${index}`}
               problem={problem}
               index={index}
               open={openMobile === index}
               onToggle={() => setOpenMobile((currentIndex) => (currentIndex === index ? -1 : index))}
             />
           ))}
+
+          {(data.finalCta.h4 || data.finalCta.paragraph || data.finalCta.buttonText) ? (
+            <div className="mt-4 rounded-[14px] border border-[#dbe6f3] bg-[#f8fbff] p-4">
+              {data.finalCta.h4 ? (
+                <h4 className="font-['Manrope'] text-[18px] font-extrabold leading-[1.2] tracking-[-0.03em] text-[#0d1b2e]">
+                  {data.finalCta.h4}
+                </h4>
+              ) : null}
+
+              {data.finalCta.paragraph ? (
+                <p className="mt-3 text-[12px] leading-[1.75] text-[#4b5563]">
+                  {data.finalCta.paragraph}
+                </p>
+              ) : null}
+
+              {data.finalCta.buttonText ? (
+                <a
+                  href="#quote-form"
+                  data-quote-context={data.finalCta.h4 || "Common problems"}
+                  data-quote-source="common-problems-final-cta"
+                  className="mt-4 inline-flex min-h-[44px] items-center justify-center rounded-[10px] bg-[#15803d] px-5 text-[12.5px] font-semibold text-white transition hover:bg-[#166534]"
+                >
+                  {data.finalCta.buttonText}
+                </a>
+              ) : null}
+            </div>
+          ) : null}
         </div>
 
         {data.finalCta.disclaimer ? (

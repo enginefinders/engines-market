@@ -8,6 +8,7 @@ import Section from "@/components/ui/Section";
 type Props = {
   data: FuelTypesData;
   bgImage?: string;
+  strictData?: boolean;
 };
 
 type FuelItem = FuelTypesData["items"][number];
@@ -147,10 +148,12 @@ function FuelPanel({
   item,
   mobile = false,
   ui,
+  strictData = false,
 }: {
   item: FuelItem;
   mobile?: boolean;
   ui: NonNullable<FuelTypesData["ui"]>;
+  strictData?: boolean;
 }) {
   const families = item.families ?? [];
   const foundIn = item.foundIn ?? [];
@@ -182,9 +185,13 @@ function FuelPanel({
 
         {families.length ? (
           <div className="mt-4 rounded-[12px] border border-[#e5e7eb] bg-white">
-            <div className="border-b border-[#eef2f7] px-4 py-[10px] text-[10px] font-black uppercase tracking-[0.08em] text-[#16a34a]">
-              {ui.familiesLabel ?? "Common Engine Families"}
-            </div>
+            {strictData ? (
+              ui.familiesLabel ? <div className="border-b border-[#eef2f7] px-4 py-[10px] text-[10px] font-black uppercase tracking-[0.08em] text-[#16a34a]">{ui.familiesLabel}</div> : null
+            ) : (
+              <div className="border-b border-[#eef2f7] px-4 py-[10px] text-[10px] font-black uppercase tracking-[0.08em] text-[#16a34a]">
+                {ui.familiesLabel ?? "Common Engine Families"}
+              </div>
+            )}
             <div className="px-4 py-3">
               <div className="space-y-[10px]">
                 {families.map((entry) => {
@@ -206,9 +213,13 @@ function FuelPanel({
 
         {foundIn.length ? (
           <div className="mt-3 rounded-[12px] border border-[#e5e7eb] bg-white">
-            <div className="border-b border-[#eef2f7] px-4 py-[10px] text-[10px] font-black uppercase tracking-[0.08em] text-[#16a34a]">
-              {ui.foundInLabel ?? "Found In"}
-            </div>
+            {strictData ? (
+              ui.foundInLabel ? <div className="border-b border-[#eef2f7] px-4 py-[10px] text-[10px] font-black uppercase tracking-[0.08em] text-[#16a34a]">{ui.foundInLabel}</div> : null
+            ) : (
+              <div className="border-b border-[#eef2f7] px-4 py-[10px] text-[10px] font-black uppercase tracking-[0.08em] text-[#16a34a]">
+                {ui.foundInLabel ?? "Found In"}
+              </div>
+            )}
             <div className="px-4 py-3">
               <div className="space-y-[10px]">
                 {foundIn.map((entry) => {
@@ -230,9 +241,13 @@ function FuelPanel({
 
         {knownFor.length ? (
             <div className="mt-3 rounded-[12px] border border-[#e5e7eb] bg-white">
-              <div className="border-b border-[#eef2f7] px-4 py-[10px] text-[10px] font-black uppercase tracking-[0.08em] text-[#16a34a]">
-              {ui.knownForLabel ?? "Known For"}
-              </div>
+              {strictData ? (
+                ui.knownForLabel ? <div className="border-b border-[#eef2f7] px-4 py-[10px] text-[10px] font-black uppercase tracking-[0.08em] text-[#16a34a]">{ui.knownForLabel}</div> : null
+              ) : (
+                <div className="border-b border-[#eef2f7] px-4 py-[10px] text-[10px] font-black uppercase tracking-[0.08em] text-[#16a34a]">
+                {ui.knownForLabel ?? "Known For"}
+                </div>
+              )}
             <div className="px-4 py-3">
               <div className="space-y-[10px]">
                 {knownFor.map((entry) => (
@@ -248,9 +263,13 @@ function FuelPanel({
 
         {typicalModels.length ? (
           <div className="mt-3 rounded-[12px] border border-[#e5e7eb] bg-white">
-            <div className="border-b border-[#eef2f7] px-4 py-[10px] text-[10px] font-black uppercase tracking-[0.08em] text-[#16a34a]">
-              {ui.modelsLabel ?? "Typical Models (UK)"}
-            </div>
+            {strictData ? (
+              ui.modelsLabel ? <div className="border-b border-[#eef2f7] px-4 py-[10px] text-[10px] font-black uppercase tracking-[0.08em] text-[#16a34a]">{ui.modelsLabel}</div> : null
+            ) : (
+              <div className="border-b border-[#eef2f7] px-4 py-[10px] text-[10px] font-black uppercase tracking-[0.08em] text-[#16a34a]">
+                {ui.modelsLabel ?? "Typical Models (UK)"}
+              </div>
+            )}
             <div className={`grid gap-x-4 gap-y-[10px] px-4 py-3 ${mobile ? "grid-cols-1" : "grid-cols-2"}`}>
               {typicalModels.map((entry) => (
                 <div key={entry} className="flex gap-2 text-[11.5px] leading-[1.55] text-[#475569]">
@@ -262,25 +281,31 @@ function FuelPanel({
           </div>
         ) : null}
 
-        <div className="mt-3 flex items-center justify-between gap-3 rounded-[10px] border border-[#0d1b2e] bg-white px-4 py-3">
-          <a
-            href="#quote-form"
-            data-quote-context={item.title}
-            data-quote-source="fuel-types"
-            className="inline-flex min-w-0 items-center gap-2 text-[11.5px] font-bold leading-[1.45] text-[#0d1b2e]"
-          >
-            <span className="truncate">{normalizeText(item.cta).replace(/\s*->\s*$/, "")}</span>
-          </a>
-          <span className="inline-flex h-8 w-8 flex-none items-center justify-center rounded-[8px] bg-[#16a34a] text-white">
-            <ArrowIcon />
-          </span>
-        </div>
+        {item.cta ? (
+          <div className="mt-3 flex items-center justify-between gap-3 rounded-[10px] border border-[#0d1b2e] bg-white px-4 py-3">
+            <a
+              href="#quote-form"
+              data-quote-context={item.title}
+              data-quote-source="fuel-types"
+              className="inline-flex min-w-0 items-center gap-2 text-[11.5px] font-bold leading-[1.45] text-[#0d1b2e]"
+            >
+              <span className="truncate">{normalizeText(item.cta).replace(/\s*->\s*$/, "")}</span>
+            </a>
+            <span className="inline-flex h-8 w-8 flex-none items-center justify-center rounded-[8px] bg-[#16a34a] text-white">
+              <ArrowIcon />
+            </span>
+          </div>
+        ) : null}
 
         {importantNotes.length ? (
           <div className="mt-3 rounded-[12px] border border-[#e5e7eb] bg-white">
-            <div className="border-b border-[#eef2f7] px-4 py-[10px] text-[10px] font-black uppercase tracking-[0.08em] text-[#16a34a]">
-              {ui.notesLabel ?? "Important Notes"}
-            </div>
+            {strictData ? (
+              ui.notesLabel ? <div className="border-b border-[#eef2f7] px-4 py-[10px] text-[10px] font-black uppercase tracking-[0.08em] text-[#16a34a]">{ui.notesLabel}</div> : null
+            ) : (
+              <div className="border-b border-[#eef2f7] px-4 py-[10px] text-[10px] font-black uppercase tracking-[0.08em] text-[#16a34a]">
+                {ui.notesLabel ?? "Important Notes"}
+              </div>
+            )}
             <div className="px-4 py-3">
               <div className="space-y-[10px]">
                 {importantNotes.map((entry) => (
@@ -300,7 +325,7 @@ function FuelPanel({
   );
 }
 
-export default function FuelTypesSection({ data, bgImage }: Props) {
+export default function FuelTypesSection({ data, bgImage, strictData = false }: Props) {
   const items = data.items ?? [];
   const [visibleItemIndices, setVisibleItemIndices] = useState(items.length >= 2 ? [0, 1] : [0]);
   const [activeItemIndex, setActiveItemIndex] = useState(0);
@@ -380,7 +405,7 @@ export default function FuelTypesSection({ data, bgImage }: Props) {
 
                 {desktopSwapOpen ? (
                   <div className="absolute right-0 top-[calc(100%+8px)] z-20 w-[240px] rounded-[12px] border border-[#e5e7eb] bg-white p-2 shadow-[0_14px_34px_rgba(13,27,46,0.16)]">
-                    <div className="px-2 pb-2 text-[10px] font-bold uppercase tracking-[0.5px] text-[#94a3b8]">{ui.swapLabel ?? "Swap panel"}</div>
+                    {strictData ? (ui.swapLabel ? <div className="px-2 pb-2 text-[10px] font-bold uppercase tracking-[0.5px] text-[#94a3b8]">{ui.swapLabel}</div> : null) : <div className="px-2 pb-2 text-[10px] font-bold uppercase tracking-[0.5px] text-[#94a3b8]">{ui.swapLabel ?? "Swap panel"}</div>}
                     <div className="flex flex-col gap-1">
                       {hiddenItemIndices.map((index) => {
                         const item = items[index];
@@ -428,7 +453,7 @@ export default function FuelTypesSection({ data, bgImage }: Props) {
 
               {mobileSwapOpen ? (
                 <div className="absolute right-0 top-[calc(100%+8px)] z-20 w-[240px] rounded-[12px] border border-[#e5e7eb] bg-white p-2 shadow-[0_12px_30px_rgba(13,27,46,0.14)]">
-                  <div className="px-2 pb-2 text-[10px] font-bold uppercase tracking-[0.5px] text-[#94a3b8]">{ui.swapLabel ?? "Swap panel"}</div>
+                  {strictData ? (ui.swapLabel ? <div className="px-2 pb-2 text-[10px] font-bold uppercase tracking-[0.5px] text-[#94a3b8]">{ui.swapLabel}</div> : null) : <div className="px-2 pb-2 text-[10px] font-bold uppercase tracking-[0.5px] text-[#94a3b8]">{ui.swapLabel ?? "Swap panel"}</div>}
                   <div className="flex flex-col gap-1">
                     {items
                       .map((item, index) => ({ item, index }))
@@ -461,14 +486,14 @@ export default function FuelTypesSection({ data, bgImage }: Props) {
                     onClick={() => setActiveItemIndex(itemIndex)}
                     className={`h-full text-left transition ${isVisibleActive ? "" : "lg:opacity-[0.98]"}`}
                   >
-                    <FuelPanel item={item} mobile={false} ui={ui} />
+                    <FuelPanel item={item} mobile={false} ui={ui} strictData={strictData} />
                   </button>
                 );
               })}
             </div>
 
             <div className="mt-5 lg:hidden">
-              <FuelPanel item={activeItem} mobile ui={ui} />
+              <FuelPanel item={activeItem} mobile ui={ui} strictData={strictData} />
             </div>
           </>
         ) : (
@@ -483,14 +508,14 @@ export default function FuelTypesSection({ data, bgImage }: Props) {
                   aria-level={3}
                   className="font-['Manrope'] text-[16px] font-extrabold leading-[1.2] text-[#0d1b2e]"
                 >
-                  {ui.emptyStateTitle ?? "Fuel type guidance"}
+                  {strictData ? (ui.emptyStateTitle || "") : (ui.emptyStateTitle ?? "Fuel type guidance")}
                   
                 </div>
                 <p className="mt-2 text-[12.5px] leading-[1.7] text-slate-600">
                   {normalizeText(data.intro)}
                 </p>
                 <p className="mt-3 text-[12px] leading-[1.65] text-slate-500">
-                  {ui.emptyStateDescription ?? "Detailed fuel-type content is being standardised across all brand pages. You can still use the registration form above to identify the correct engine and matching replacement options."}
+                  {strictData ? (ui.emptyStateDescription || "") : (ui.emptyStateDescription ?? "Detailed fuel-type content is being standardised across all brand pages. You can still use the registration form above to identify the correct engine and matching replacement options.")}
                 </p>
               </div>
             </div>
@@ -508,15 +533,29 @@ export default function FuelTypesSection({ data, bgImage }: Props) {
               </p>
             </div>
 
-            <a
-              href="#quote-form"
-              data-quote-context="Fuel type finder"
-              data-quote-source="fuel-types-summary"
-              className="hidden flex-none items-center gap-2 rounded-[9px] border border-[#0d1b2e] bg-white px-4 py-3 text-[11.5px] font-bold text-[#0d1b2e] lg:inline-flex"
-            >
-                <span>{ui.closingButtonText ?? "Find my engine"}</span>
-              <ArrowIcon />
-            </a>
+            {strictData ? (
+              ui.closingButtonText ? (
+                <a
+                  href="#quote-form"
+                  data-quote-context="Fuel type finder"
+                  data-quote-source="fuel-types-summary"
+                  className="hidden flex-none items-center gap-2 rounded-[9px] border border-[#0d1b2e] bg-white px-4 py-3 text-[11.5px] font-bold text-[#0d1b2e] lg:inline-flex"
+                >
+                  <span>{ui.closingButtonText}</span>
+                  <ArrowIcon />
+                </a>
+              ) : null
+            ) : (
+              <a
+                href="#quote-form"
+                data-quote-context="Fuel type finder"
+                data-quote-source="fuel-types-summary"
+                className="hidden flex-none items-center gap-2 rounded-[9px] border border-[#0d1b2e] bg-white px-4 py-3 text-[11.5px] font-bold text-[#0d1b2e] lg:inline-flex"
+              >
+                  <span>{ui.closingButtonText ?? "Find my engine"}</span>
+                <ArrowIcon />
+              </a>
+            )}
           </div>
         </div>
       </Container>

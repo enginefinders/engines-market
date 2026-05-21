@@ -83,17 +83,16 @@ function formatVariantName(title: string) {
     .trim();
 }
 
-function getModelLabel(sectionTitle: string) {
-  const match = sectionTitle.match(/^(.*?)\s+Engine Replacement/i);
-  return match?.[1]?.trim() || "Model Range";
+function extractEngineType(card: VariantCard) {
+  const match = card.subtitle.match(/\d(?:\.\d)?L\s+[A-Za-z]+/);
+  return match?.[0] ?? `${card.fuel}`.trim();
 }
 
-function formatSpecs(card: VariantCard) {
-  return card.subtitle
-    .replace(/\s*\/\s*/g, "/")
-    .replace(/\s+-\s+/g, " - ")
-    .replace(/\s+/g, " ")
-    .trim();
+function formatCodeAndType(card: VariantCard) {
+  const codes = card.engineCodes.length ? card.engineCodes.join("/") : "";
+  const engineType = extractEngineType(card);
+
+  return [codes, engineType].filter(Boolean).join(" ");
 }
 
 function getPerformanceScore(power: string) {
@@ -142,7 +141,6 @@ function groupCardsFromData(data: ModelVariantCoverageSectionData) {
 
 export default function VariantCoverageSection({ data }: Props) {
   const defaultOpenCard = data.cards[0]?.slug ?? null;
-  const modelLabel = getModelLabel(data.h2);
   const [openCard, setOpenCard] = useState<string | null>(defaultOpenCard);
   const [seenCards, setSeenCards] = useState<Record<string, boolean>>(
     defaultOpenCard ? { [defaultOpenCard]: true } : {},
@@ -194,6 +192,7 @@ export default function VariantCoverageSection({ data }: Props) {
                   const isOpen = openCard === card.slug;
                   const shortName = formatVariantName(card.h3);
                   const animateChevron = !isOpen && !seenCards[card.slug];
+                  const codeAndType = formatCodeAndType(card);
 
                   return (
                     <article
@@ -208,47 +207,39 @@ export default function VariantCoverageSection({ data }: Props) {
                         type="button"
                         onClick={() => toggleCard(card.slug)}
                         aria-expanded={isOpen}
-                        className="flex min-h-[172px] w-full flex-col items-center px-4 py-4 text-center md:min-h-[182px]"
+                        className="flex min-h-[230px] w-full flex-col items-center px-4 py-4 text-center md:min-h-[248px]"
                       >
-                        <div className="flex min-h-[76px] w-full items-center justify-center">
+                        <div className="flex min-h-[78px] w-full items-center justify-center">
                           {card.image ? (
-                            <div className="relative h-[60px] w-full max-w-[168px]">
+                            <div className="relative h-[62px] w-full max-w-[152px]">
                               <Image
                                 src={card.image}
-                                alt={shortName}
+                                alt={card.h3}
                                 fill
                                 className="object-contain"
                                 sizes="150px"
                               />
                             </div>
                           ) : (
-                            <div>
-                              <div className="text-[10px] font-bold uppercase tracking-[0.14em] text-[#15803d]">
-                                {modelLabel}
-                              </div>
-                              <div className="mt-2 font-['Manrope'] text-[27px] font-extrabold leading-[0.92] text-[#0d1b2e] sm:text-[31px]">
-                                {shortName}
-                              </div>
+                            <div className="font-['Manrope'] text-[27px] font-extrabold leading-[0.92] text-[#0d1b2e] sm:text-[31px]">
+                              {shortName}
                             </div>
                           )}
                         </div>
 
-                        {!card.image ? (
-                          <div className="mt-2">
-                            <div className="font-['Manrope'] text-[15px] font-extrabold leading-[1] text-[#0d1b2e]">
-                              {shortName}
-                            </div>
+                        <div className="mt-4 w-full max-w-[250px]">
+                          <div className="font-['Manrope'] text-[15px] font-extrabold leading-[1.18] text-[#0d1b2e]">
+                            {card.h3}
                           </div>
-                        ) : null}
-
-                        <div className="mt-auto pt-4">
-                          <p className="text-[11px] font-medium text-[#6b7280]">{ui.fromPriceLabel ?? "from price"}</p>
-                          <p className="mt-1 font-['Manrope'] text-[15px] font-semibold leading-none text-[#6b7280]">
-                            {card.priceRange}
+                          <p className="mt-2 text-[11.5px] font-semibold leading-[1.4] text-[#4b5563]">
+                            {codeAndType}
+                          </p>
+                          <p className="mt-3 font-['Manrope'] text-[15px] font-semibold leading-none text-[#374151]">
+                            Rebuilt: {card.priceRange}
                           </p>
                         </div>
 
-                        <span className="mt-4 inline-flex text-[#15803d]">
+                        <span className="mt-auto inline-flex pt-4 text-[#15803d]">
                           <ChevronIcon open={isOpen} animated={animateChevron} />
                         </span>
                       </button>
@@ -261,16 +252,7 @@ export default function VariantCoverageSection({ data }: Props) {
                                 {ui.specsLabel ?? "Specs"}
                               </span>
                               <span className="min-w-0 flex-1 truncate text-right text-[11px] font-semibold leading-none text-white md:text-[11.5px]">
-                                {formatSpecs(card)}
-                              </span>
-                            </div>
-
-                            <div className="flex items-center justify-between gap-3 rounded-[8px] border border-white/8 bg-white/[0.03] px-3 py-[9px]">
-                              <span className="flex-none text-[10px] font-semibold uppercase tracking-[0.08em] text-white/60">
-                                {ui.rebuiltLabel ?? "Rebuilt"}
-                              </span>
-                              <span className="min-w-0 flex-1 truncate text-right font-['Manrope'] text-[14px] font-extrabold leading-none text-white md:text-[15px]">
-                                {card.priceRange}
+                                {card.power}
                               </span>
                             </div>
 
@@ -280,6 +262,15 @@ export default function VariantCoverageSection({ data }: Props) {
                               </span>
                               <span className="min-w-0 flex-1 truncate text-right text-[11px] font-semibold leading-none text-white md:text-[11.5px]">
                                 {card.years?.trim() || ui.yearsFallback || "Check exact year coverage by registration"}
+                              </span>
+                            </div>
+
+                            <div className="flex items-center justify-between gap-3 rounded-[8px] border border-white/8 bg-white/[0.03] px-3 py-[9px]">
+                              <span className="flex-none text-[10px] font-semibold uppercase tracking-[0.08em] text-white/60">
+                                {ui.rebuiltLabel ?? "Rebuilt"}
+                              </span>
+                              <span className="min-w-0 flex-1 truncate text-right font-['Manrope'] text-[14px] font-extrabold leading-none text-white md:text-[15px]">
+                            {card.priceRange}
                               </span>
                             </div>
                           </div>

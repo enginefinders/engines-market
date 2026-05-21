@@ -27,7 +27,7 @@ const STATIC_REVIEW_ENTRIES = [
     location: "London",
   },
   {
-    text: "EngineMarket made a stressful situation so much easier. I’d happily recommend them to anyone replacing an engine.",
+    text: "EngineMarket made a stressful situation so much easier. I'd happily recommend them to anyone replacing an engine.",
     name: "Tom",
     location: "Manchester",
   },

@@ -7,6 +7,7 @@ type Props = {
   data: TrustCtaData;
   brandName: string;
   imageSrc: string;
+  displayMode?: "brand" | "document";
 };
 
 function CheckIcon() {
@@ -75,23 +76,36 @@ function getTrustIcon(title: string) {
   return ShieldIcon;
 }
 
-export default function TrustCtaSection({ data, brandName, imageSrc }: Props) {
+export default function TrustCtaSection({
+  data,
+  brandName,
+  imageSrc,
+  displayMode = "brand",
+}: Props) {
   const ui = data.ui ?? {};
   const secondaryAction = data.secondaryAction ?? {};
   const headingLines = data.h2 ? data.h2.split(/\s+-\s+/) : [];
-  const trustBullets = ui.trustBullets ?? [
-    "100% Free",
-    "No Obligation",
-    "Fast & secure process",
-    "UK-based support",
-  ];
-  const pointLabel = ui.pointLabel?.trim() ?? "Included";
-  const stripLabel = ui.stripLabel?.trim() ?? "Trusted UK Engine Marketplace";
-  const stripTitle = ui.stripTitle?.trim() || `Compare ${brandName} engine prices with vetted UK specialists`;
-  const stripDescription = ui.stripDescription?.trim() || data.finalText;
+  const trustBullets = displayMode === "document"
+    ? (ui.trustBullets ?? [])
+    : (ui.trustBullets ?? [
+        "100% Free",
+        "No Obligation",
+        "Fast & secure process",
+        "UK-based support",
+      ]);
+  const pointLabel = displayMode === "document" ? (ui.pointLabel?.trim() ?? "") : (ui.pointLabel?.trim() ?? "Included");
+  const stripLabel = displayMode === "document" ? (ui.stripLabel?.trim() ?? "") : (ui.stripLabel?.trim() ?? "Trusted UK Engine Marketplace");
+  const stripTitle =
+    displayMode === "document"
+      ? ui.stripTitle?.trim() || `Find the best ${brandName} engine replacement near you`
+      : ui.stripTitle?.trim() || `Compare ${brandName} engine prices with vetted UK specialists`;
+  const stripDescription =
+    displayMode === "document"
+      ? ui.stripDescription?.trim() || `Compare engine prices for ${brandName} in the UK and get competitive quotes from garages near you.`
+      : ui.stripDescription?.trim() || data.finalText;
   const secondaryActionText = secondaryAction.text?.trim();
-  const showPointLabel = ui.showPointLabel ?? true;
-  const showStripLabel = ui.showStripLabel ?? true;
+  const showPointLabel = ui.showPointLabel ?? (displayMode === "brand");
+  const showStripLabel = ui.showStripLabel ?? (displayMode === "brand");
   const showSecondaryAction = ui.showSecondaryAction ?? true;
 
   return (
@@ -135,35 +149,68 @@ export default function TrustCtaSection({ data, brandName, imageSrc }: Props) {
                 })}
               </div>
 
-              <p className="mt-3 max-w-[540px] text-[0.78rem] leading-5 text-blue-100/90">
-                {data.finalText}
-              </p>
+              {displayMode === "brand" ? (
+                <p className="mt-3 max-w-[540px] text-[0.78rem] leading-5 text-blue-100/90">
+                  {data.finalText}
+                </p>
+              ) : null}
 
               <div className="mt-4">
-                <CtaStrip
-                  tone="dark"
-                  label={showStripLabel && stripLabel ? stripLabel : undefined}
-                  title={stripTitle}
-                  description={stripDescription}
-                  buttonText={data.buttonText.replace("->", "").trim()}
-                  icon={<QuoteIcon />}
-                  linkProps={{
-                    href: "#quote-form",
-                    "data-quote-context": `Final ${brandName} engine comparison`,
-                    "data-quote-source": "trust-cta",
-                  }}
-                  secondaryAction={
-                    showSecondaryAction && secondaryActionText ? (
-                      <a
-                        href={secondaryAction.href ?? "tel:03330000044"}
-                        className="inline-flex min-h-[46px] items-center justify-center gap-2 rounded-[10px] border border-white/14 bg-white/[0.08] px-4 text-[11px] font-bold text-white transition hover:bg-white/[0.12]"
-                      >
-                        <PhoneIcon />
-                        {secondaryActionText}
-                      </a>
-                    ) : undefined
-                  }
-                />
+                {displayMode === "document" ? (
+                  <CtaStrip
+                    tone="dark"
+                    title={stripTitle}
+                    description={stripDescription}
+                    buttonText={data.buttonText.replace("->", "").trim()}
+                    titleAs="h2"
+                    descriptionAs="h3"
+                    titleClassName="!mt-1 !font-['Urbanist'] !text-[13px] !font-extrabold !leading-[1.35] !tracking-normal !normal-case !text-white"
+                    descriptionClassName="!mt-1 !font-['Urbanist'] !text-[12px] !font-medium !leading-[1.6] !tracking-normal !normal-case !text-slate-200"
+                    buttonClassName="!min-h-[46px] !rounded-[10px] !px-5 !text-[12px] !font-bold"
+                    icon={<QuoteIcon />}
+                    linkProps={{
+                      href: "#quote-form",
+                      "data-quote-context": `Final ${brandName} engine comparison`,
+                      "data-quote-source": "trust-cta",
+                    }}
+                    secondaryAction={
+                      showSecondaryAction && secondaryActionText ? (
+                        <a
+                          href={secondaryAction.href ?? "tel:03330000044"}
+                          className="inline-flex min-h-[46px] items-center justify-center gap-2 rounded-[10px] border border-white/14 bg-white/[0.08] px-4 text-[11px] font-bold text-white transition hover:bg-white/[0.12]"
+                        >
+                          <PhoneIcon />
+                          {secondaryActionText}
+                        </a>
+                      ) : undefined
+                    }
+                  />
+                ) : (
+                  <CtaStrip
+                    tone="dark"
+                    label={showStripLabel && stripLabel ? stripLabel : undefined}
+                    title={stripTitle}
+                    description={stripDescription}
+                    buttonText={data.buttonText.replace("->", "").trim()}
+                    icon={<QuoteIcon />}
+                    linkProps={{
+                      href: "#quote-form",
+                      "data-quote-context": `Final ${brandName} engine comparison`,
+                      "data-quote-source": "trust-cta",
+                    }}
+                    secondaryAction={
+                      showSecondaryAction && secondaryActionText ? (
+                        <a
+                          href={secondaryAction.href ?? "tel:03330000044"}
+                          className="inline-flex min-h-[46px] items-center justify-center gap-2 rounded-[10px] border border-white/14 bg-white/[0.08] px-4 text-[11px] font-bold text-white transition hover:bg-white/[0.12]"
+                        >
+                          <PhoneIcon />
+                          {secondaryActionText}
+                        </a>
+                      ) : undefined
+                    }
+                  />
+                )}
               </div>
 
               <div className="mt-3 flex flex-wrap gap-x-3 gap-y-1.5">
@@ -188,9 +235,19 @@ export default function TrustCtaSection({ data, brandName, imageSrc }: Props) {
               />
 
               <div className="absolute bottom-3 right-3 rounded-2xl border border-white/10 bg-[#06172f]/88 px-3.5 py-2.5 text-right backdrop-blur-sm">
-                <p className="text-label text-green-300">{ui.imageBadgeLabel ?? "Trusted supplier network"}</p>
-                <p className="mt-1 text-[0.8rem] font-bold text-white">{ui.imageBadgeTitle ?? "Warranty-backed rebuilt & used options"}</p>
-                <p className="mt-1 text-[0.69rem] text-slate-300">{ui.imageBadgeText ?? "Every quote checked for fitment, quality and lead time."}</p>
+                {displayMode === "document" ? (
+                  <>
+                    {ui.imageBadgeLabel ? <p className="text-label text-green-300">{ui.imageBadgeLabel}</p> : null}
+                    {ui.imageBadgeTitle ? <p className="mt-1 text-[0.8rem] font-bold text-white">{ui.imageBadgeTitle}</p> : null}
+                    {ui.imageBadgeText ? <p className="mt-1 text-[0.69rem] text-slate-300">{ui.imageBadgeText}</p> : null}
+                  </>
+                ) : (
+                  <>
+                    <p className="text-label text-green-300">{ui.imageBadgeLabel ?? "Trusted supplier network"}</p>
+                    <p className="mt-1 text-[0.8rem] font-bold text-white">{ui.imageBadgeTitle ?? "Warranty-backed rebuilt & used options"}</p>
+                    <p className="mt-1 text-[0.69rem] text-slate-300">{ui.imageBadgeText ?? "Every quote checked for fitment, quality and lead time."}</p>
+                  </>
+                )}
               </div>
             </div>
           </div>

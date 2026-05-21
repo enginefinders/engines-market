@@ -11,6 +11,7 @@ type Props = {
   data: EngineSizesData;
   bgImage?: string;
   dynamicBrandLabel?: boolean;
+  displayMode?: "brand" | "document";
 };
 
 type FuelKind = "diesel" | "petrol" | "hybrid";
@@ -155,6 +156,7 @@ function fuelBadgeClass(kind: FuelKind) {
 function SizeAccordionCard({
   brandName,
   dynamicBrandLabel,
+  displayMode,
   item,
   kind,
   open,
@@ -163,6 +165,7 @@ function SizeAccordionCard({
 }: {
   brandName: string;
   dynamicBrandLabel: boolean;
+  displayMode: "brand" | "document";
   item: GroupItem;
   kind: FuelKind;
   open: boolean;
@@ -197,31 +200,35 @@ function SizeAccordionCard({
 
       {open ? (
         <div className="border-t border-[#eef2f7] px-4 py-[14px]">
-          <div className="font-['Manrope'] text-[14px] font-extrabold leading-[1.25] text-[#0d1b2e]">
-            {dynamicBrandLabel
-              ? brandNameLabel("__use_item_title__", item.title, kind)
-              : brandNameLabel(brandName, item.title, kind)}
-          </div>
-          <p className="mt-2 text-[12px] leading-[1.65] text-[#475569]">{normalizeText(item.description)}</p>
+          {displayMode === "brand" ? (
+            <div className="font-['Manrope'] text-[14px] font-extrabold leading-[1.25] text-[#0d1b2e]">
+              {dynamicBrandLabel
+                ? brandNameLabel("__use_item_title__", item.title, kind)
+                : brandNameLabel(brandName, item.title, kind)}
+            </div>
+          ) : null}
+          <p className={`${displayMode === "brand" ? "mt-2" : ""} text-[12px] leading-[1.65] text-[#475569]`}>
+            {normalizeText(item.description)}
+          </p>
 
           <div className="mt-4 overflow-hidden rounded-[10px] border border-[#d8ebdd] bg-white">
             <table className="w-full border-collapse">
               <tbody>
                 {item.engineCodes?.length ? (
                   <tr className="border-b border-[#e5f2e8]">
-                    <td className="w-[42%] px-3 py-[10px] text-[9px] font-bold uppercase tracking-[0.5px] text-[#64748b]">{ui.engineCodesLabel ?? "Engine Code(s)"}</td>
+                    <td className="w-[42%] px-3 py-[10px] text-[9px] font-bold uppercase tracking-[0.5px] text-[#64748b]">{displayMode === "document" ? (ui.engineCodesLabel || "") : (ui.engineCodesLabel ?? "Engine Code(s)")}</td>
                     <td className="px-3 py-[10px] text-[11px] leading-[1.5] text-[#334155]">{item.engineCodes.join(", ")}</td>
                   </tr>
                 ) : null}
                 {item.compatibleModels?.length ? (
                   <tr className="border-b border-[#e5f2e8]">
-                    <td className="w-[42%] px-3 py-[10px] text-[9px] font-bold uppercase tracking-[0.5px] text-[#64748b]">{ui.compatibleModelsLabel ?? "Compatible Models (UK)"}</td>
+                    <td className="w-[42%] px-3 py-[10px] text-[9px] font-bold uppercase tracking-[0.5px] text-[#64748b]">{displayMode === "document" ? (ui.compatibleModelsLabel || "") : (ui.compatibleModelsLabel ?? "Compatible Models (UK)")}</td>
                     <td className="px-3 py-[10px] text-[11px] leading-[1.5] text-[#334155]">{item.compatibleModels.join(", ")}</td>
                   </tr>
                 ) : null}
                 {item.productionYears ? (
                   <tr>
-                    <td className="w-[42%] px-3 py-[10px] text-[9px] font-bold uppercase tracking-[0.5px] text-[#64748b]">{ui.productionYearsLabel ?? "Production Years"}</td>
+                    <td className="w-[42%] px-3 py-[10px] text-[9px] font-bold uppercase tracking-[0.5px] text-[#64748b]">{displayMode === "document" ? (ui.productionYearsLabel || "") : (ui.productionYearsLabel ?? "Production Years")}</td>
                     <td className="px-3 py-[10px] text-[11px] leading-[1.5] text-[#334155]">{item.productionYears}</td>
                   </tr>
                 ) : null}
@@ -229,11 +236,11 @@ function SizeAccordionCard({
             </table>
           </div>
 
-          {item.commonFailurePoints?.length ? (
+          {item.commonFailurePoints?.length && (displayMode !== "document" || ui.warningTitle) ? (
             <div className="mt-4">
               <WarningCard
-                label={ui.warningLabel ?? (kind === "hybrid" ? "Important Notes" : "Common Failure Points")}
-                title={ui.warningTitle ?? (kind === "hybrid" ? "Review these fitment notes before ordering" : "Watch for these known weak points")}
+                label={displayMode === "document" ? (ui.warningLabel || "") : (ui.warningLabel ?? (kind === "hybrid" ? "Important Notes" : "Common Failure Points"))}
+                title={displayMode === "document" ? (ui.warningTitle || "") : (ui.warningTitle ?? (kind === "hybrid" ? "Review these fitment notes before ordering" : "Watch for these known weak points"))}
                 body={item.commonFailurePoints.join(", ")}
               />
             </div>
@@ -282,6 +289,7 @@ export default function EngineSizesSection({
   data,
   bgImage,
   dynamicBrandLabel = false,
+  displayMode = "brand",
 }: Props) {
   const ui = data.ui ?? {};
   const groups = data.groups;
@@ -471,6 +479,7 @@ export default function EngineSizesSection({
               key={item.title}
               brandName={brandName}
               dynamicBrandLabel={dynamicBrandLabel}
+              displayMode={displayMode}
               item={item}
               kind={activeKind}
               open={openItemIndex === index}
@@ -480,9 +489,15 @@ export default function EngineSizesSection({
           ))}
         </div>
 
-        <div className="mt-5">
-          <HelperNote text={data.closing} ui={ui} />
-        </div>
+        {displayMode === "document" ? (
+          <p className="mt-5 text-[12.5px] leading-[1.75] text-[#475569]">
+            {normalizeText(data.closing)}
+          </p>
+        ) : (
+          <div className="mt-5">
+            <HelperNote text={data.closing} ui={ui} />
+          </div>
+        )}
       </Container>
     </Section>
   );

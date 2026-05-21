@@ -14,6 +14,7 @@ import ReviewsSection from "@/components/sections/ReviewsSection";
 import TrustCtaSection from "@/components/sections/TrustCtaSection";
 import VariantCoverageSection from "@/components/sections/VariantCoverageSection";
 import { SITE_URL } from "@/lib/site";
+import { buildStaticReviewsSection } from "@/lib/staticReviews";
 import type { ModelPageData } from "@/types/model";
 
 function buildStructuredData(pageData: ModelPageData) {
@@ -123,6 +124,7 @@ export default function DocumentModelPage({
 }: DocumentModelPageProps) {
   const structuredData = buildStructuredData(data);
   const heroCards = toHeroCards(data);
+  const reviewsData = buildStaticReviewsSection(data.model.name);
 
   return (
     <>
@@ -135,6 +137,7 @@ export default function DocumentModelPage({
         data={data.sections.hero}
         bgImage={data.assets.heroBg}
         modelCards={heroCards}
+        strictData
       />
 
       <HowItWorksSection
@@ -146,9 +149,10 @@ export default function DocumentModelPage({
         data={data.sections.liveMarketPrices}
         modelCards={heroCards}
         imageSrc={data.assets.heroBg}
+        displayMode="document"
       />
 
-      <ReviewsSection data={data.sections.reviews} useDataHeading />
+      <ReviewsSection data={reviewsData} useDataHeading />
 
       <VariantCoverageSection data={data.sections.variantCoverage} />
 
@@ -156,34 +160,38 @@ export default function DocumentModelPage({
         data={data.sections.engineCodes}
         guide={data.sections.variantCoverage.engineGuide}
         modelName={data.model.name}
+        strictData
       />
 
       {data.sections.commonProblems ? (
         <CommonProblemsSection data={data.sections.commonProblems} />
       ) : null}
 
-      <EngineTypesSection data={data.sections.engineTypes} dynamicBrandCta />
+      <EngineTypesSection data={data.sections.engineTypes} dynamicBrandCta displayMode="document" />
 
       <EngineSizesSection
         brandName={data.model.name}
         data={data.sections.engineSizes}
         bgImage={data.assets.engineSizesBg}
         dynamicBrandLabel
+        displayMode="document"
       />
 
       <FuelTypesSection
         data={data.sections.fuelTypes}
         bgImage={data.assets.fuelTypesBg}
+        strictData
       />
 
-      <EngineYearsSection brandName={data.model.name} data={data.sections.engineYears} />
+      <EngineYearsSection brandName={data.model.name} data={data.sections.engineYears} strictData />
 
-      <FaqSection data={data.sections.faq} />
+      <FaqSection data={data.sections.faq} strictData />
 
       <TrustCtaSection
         data={data.sections.trustCta}
         brandName={data.model.name}
         imageSrc={data.assets.ctaImage ?? data.assets.heroBg}
+        displayMode="document"
       />
 
       <Suspense fallback={null}>
