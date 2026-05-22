@@ -1037,6 +1037,10 @@ def restore_doc_driven_sections(
             ("image",),
         )
 
+    extracted_engine_guide = extracted_sections.get("variantCoverage", {}).get("engineGuide")
+    if extracted_engine_guide and has_meaningful_value(extracted_engine_guide.get("families")):
+        merged_sections.setdefault("variantCoverage", {})["engineGuide"] = copy.deepcopy(extracted_engine_guide)
+
     extracted_feed_entries = extracted_sections.get("liveMarketPrices", {}).get("feed", {}).get("entries", [])
     if extracted_feed_entries:
         merged_sections.setdefault("liveMarketPrices", {}).setdefault("feed", {})["entries"] = copy.deepcopy(extracted_feed_entries)
@@ -1060,6 +1064,10 @@ def restore_doc_driven_sections(
     extracted_engine_years_section = extracted_sections.get("engineYears")
     if extracted_engine_years_section and has_meaningful_value(extracted_engine_years_section.get("years")):
         merged_sections["engineYears"] = copy.deepcopy(extracted_engine_years_section)
+
+    extracted_engine_codes = extracted_sections.get("engineCodes")
+    if extracted_engine_codes and has_meaningful_value(extracted_engine_codes.get("groups")):
+        merged_sections["engineCodes"] = copy.deepcopy(extracted_engine_codes)
 
     extracted_faq_items = extracted_sections.get("faq", {}).get("items", [])
     if extracted_faq_items:

@@ -414,7 +414,7 @@ export default function HomeFaqHubSection() {
                         data-quote-source="home-faq-answer-cta"
                         className="mt-3 inline-block text-[14px] font-semibold text-[#15803d] transition hover:underline"
                       >
-                        {item.ctaText} -
+                        {item.ctaText}
                       </a>
                     </div>
                   </div>

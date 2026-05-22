@@ -3,19 +3,27 @@ import type { BrandPageData } from "@/types/brand";
 type ModelCard = BrandPageData["sections"]["models"]["cards"][number];
 
 const numericSeriesSlugPattern = /^(\d+)-series$/i;
+const legacySeriesSlugPattern = /^series-(\d+)$/i;
 const seriesHeadingPattern = /\b(\d+)\s+Series\b/i;
 
 function getSeriesSlug(value: string) {
-  const slugMatch = value.match(numericSeriesSlugPattern);
+  const normalized = value.trim().toLowerCase();
+  const slugMatch = normalized.match(numericSeriesSlugPattern);
 
   if (slugMatch) {
-    return `series-${slugMatch[1]}`;
+    return `${slugMatch[1]}-series`;
+  }
+
+  const legacyMatch = normalized.match(legacySeriesSlugPattern);
+
+  if (legacyMatch) {
+    return `${legacyMatch[1]}-series`;
   }
 
   const headingMatch = value.match(seriesHeadingPattern);
 
   if (headingMatch) {
-    return `series-${headingMatch[1]}`;
+    return `${headingMatch[1]}-series`;
   }
 
   return null;
