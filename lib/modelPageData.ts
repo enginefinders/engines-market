@@ -6,6 +6,35 @@ import type { ModelPageData } from "@/types/model";
 const MODELS_DIR = path.join(process.cwd(), "data", "models");
 const UTF8_BOM = /^\uFEFF/;
 
+function normalizeSlugPart(value: string) {
+  return value.trim().toLowerCase();
+}
+
+function getCanonicalModelSlug(brandSlug: string, modelSlug: string) {
+  const normalizedBrand = normalizeSlugPart(brandSlug);
+  const normalizedModel = normalizeSlugPart(modelSlug);
+  const prefixedBrand = `${normalizedBrand}-`;
+
+  if (normalizedModel.startsWith(prefixedBrand)) {
+    return normalizedModel.slice(prefixedBrand.length);
+  }
+
+  return normalizedModel;
+}
+
+function getModelRouteCandidates(page: ModelPageData) {
+  const candidates = new Set<string>();
+
+  candidates.add(getCanonicalModelSlug(page.brand.slug, page.model.slug));
+  candidates.add(normalizeSlugPart(page.model.slug));
+
+  if (page.model.legacySlug) {
+    candidates.add(normalizeSlugPart(page.model.legacySlug));
+  }
+
+  return [...candidates].filter(Boolean);
+}
+
 function isModelPageData(value: unknown): value is ModelPageData {
   if (!value || typeof value !== "object") {
     return false;
@@ -72,12 +101,22 @@ async function getAllModelPageData() {
 }
 
 export async function getModelPageData(brand: string, model: string) {
-  const normalizedBrand = brand.toLowerCase();
-  const normalizedModel = model.toLowerCase();
-  const directMatch = await readModelPageDataFile(normalizedModel);
+  const normalizedBrand = normalizeSlugPart(brand);
+  const normalizedModel = normalizeSlugPart(model);
+  const directCandidates = [
+    normalizedModel,
+    `${normalizedBrand}-${normalizedModel}`,
+  ];
 
-  if (directMatch && directMatch.brand.slug.toLowerCase() === normalizedBrand) {
-    return directMatch;
+  for (const candidate of directCandidates) {
+    const directMatch = await readModelPageDataFile(candidate);
+    if (
+      directMatch &&
+      normalizeSlugPart(directMatch.brand.slug) === normalizedBrand &&
+      getModelRouteCandidates(directMatch).includes(normalizedModel)
+    ) {
+      return directMatch;
+    }
   }
 
   const pages = await getAllModelPageData();
@@ -85,9 +124,8 @@ export async function getModelPageData(brand: string, model: string) {
   return (
     pages.find(
       (page) =>
-        page.brand.slug.toLowerCase() === normalizedBrand &&
-        (page.model.slug.toLowerCase() === normalizedModel ||
-          page.model.legacySlug?.toLowerCase() === normalizedModel),
+        normalizeSlugPart(page.brand.slug) === normalizedBrand &&
+        getModelRouteCandidates(page).includes(normalizedModel),
     ) ?? null
   );
 }
@@ -98,23 +136,21 @@ export async function getModelPageStaticParams() {
   const seen = new Set<string>();
 
   return pages.flatMap((page) => {
-    const candidates = [page.model.slug, page.model.legacySlug].filter(
-      (slug): slug is string => Boolean(slug),
+    const normalizedModelSlug = getCanonicalModelSlug(
+      page.brand.slug,
+      page.model.slug,
     );
+    const key = `${normalizeSlugPart(page.brand.slug)}::${normalizedModelSlug}`;
 
-    return candidates.flatMap((modelSlug) => {
-      const key = `${page.brand.slug}::${modelSlug}`;
+    if (seen.has(key)) {
+      return [];
+    }
 
-      if (seen.has(key)) {
-        return [];
-      }
+    seen.add(key);
 
-      seen.add(key);
-
-      return {
-        brand: page.brand.slug,
-        model: modelSlug,
-      };
-    });
+    return {
+      brand: page.brand.slug,
+      model: normalizedModelSlug,
+    };
   });
 }

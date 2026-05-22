@@ -30,8 +30,11 @@ from extract_model_markdown import (
     configure_stdio,
     infer_context,
     infer_model_slug_from_name,
+    infer_storage_slug_from_name,
     inject_model_ui_defaults,
     load_json,
+    normalize_line,
+    normalize_model_name_for_brand,
     parse_document,
     read_lines,
     slugify,
@@ -44,9 +47,11 @@ DEFAULT_EXTENSIONS = {".txt", ".md", ".markdown"}
 
 def derive_model_name_from_file(path: Path, brand_name: str) -> str:
     stem = path.stem.strip()
-    if re.match(rf"^{re.escape(brand_name)}\s+", stem, flags=re.IGNORECASE):
-        return stem
-    return f"{brand_name} {stem}".strip()
+    if re.match(rf"^{re.escape(brand_name)}(?:[\s-]+|$)", stem, flags=re.IGNORECASE):
+        candidate = stem
+    else:
+        candidate = f"{brand_name} {stem}".strip()
+    return normalize_model_name_for_brand(candidate, brand_name)
 
 
 def resolve_brand_json_path(args: argparse.Namespace) -> Path | None:
@@ -63,7 +68,20 @@ def resolve_brand_json_path(args: argparse.Namespace) -> Path | None:
     return candidate if candidate.is_file() else None
 
 
-def collect_source_files(input_path: Path) -> list[Path]:
+def source_file_matches_brand(path: Path, brand_name: str | None) -> bool:
+    if not brand_name:
+        return True
+
+    stem = normalize_line(path.stem)
+    brand = normalize_line(brand_name)
+    if not stem or not brand:
+        return True
+
+    pattern = re.compile(r"^" + re.escape(brand).replace(r"\ ", r"[\s-]+") + r"(?:[\s-]+|$)", re.IGNORECASE)
+    return bool(pattern.match(stem))
+
+
+def collect_source_files(input_path: Path, brand_name: str | None = None) -> list[Path]:
     if input_path.is_file():
         return [input_path]
 
@@ -73,21 +91,23 @@ def collect_source_files(input_path: Path) -> list[Path]:
     return sorted(
         path
         for path in input_path.iterdir()
-        if path.is_file() and path.suffix.lower() in DEFAULT_EXTENSIONS
+        if path.is_file()
+        and path.suffix.lower() in DEFAULT_EXTENSIONS
+        and source_file_matches_brand(path, brand_name)
     )
 
 
 def build_output_path(
     source_path: Path,
     output_path: Path,
-    model_slug: str,
+    storage_slug: str,
     single_input: bool,
 ) -> Path:
     if single_input and output_path.suffix.lower() == ".json":
         return output_path
 
     output_path.mkdir(parents=True, exist_ok=True)
-    return output_path / f"{model_slug}.json"
+    return output_path / f"{storage_slug}.json"
 
 
 def extract_one(
@@ -103,7 +123,7 @@ def extract_one(
     if not per_file_args.model_name:
         per_file_args.model_name = derive_model_name_from_file(source_path, per_file_args.brand)
     if not per_file_args.model_slug and per_file_args.model_name:
-        per_file_args.model_slug = infer_model_slug_from_name(per_file_args.model_name)
+        per_file_args.model_slug = infer_model_slug_from_name(per_file_args.model_name, per_file_args.brand)
 
     brand_name, brand_slug, model_name, model_slug, legacy_slug = infer_context(
         lines,
@@ -184,7 +204,7 @@ def main() -> int:
 
     input_path = Path(args.input)
     output_path = Path(args.output)
-    source_files = collect_source_files(input_path)
+    source_files = collect_source_files(input_path, args.brand)
     if not source_files:
         raise SystemExit(f"No matching source files found in: {input_path}")
 
@@ -199,8 +219,8 @@ def main() -> int:
 
     for source_file in source_files:
         model_name = args.model_name or derive_model_name_from_file(source_file, args.brand)
-        model_slug = args.model_slug or infer_model_slug_from_name(model_name)
-        final_output_path = build_output_path(source_file, output_path, model_slug, single_input)
+        storage_slug = infer_storage_slug_from_name(model_name)
+        final_output_path = build_output_path(source_file, output_path, storage_slug, single_input)
 
         output_name, warnings = extract_one(
             source_path=source_file,

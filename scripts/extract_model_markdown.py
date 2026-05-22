@@ -135,6 +135,12 @@ def normalize_line(value: str) -> str:
     return strip_markdown(value)
 
 
+def strip_emphasis_preserve_brackets(value: str) -> str:
+    text = clean_text(value)
+    text = text.replace("**", "").replace("__", "").replace("`", "")
+    return text.strip(" -*•")
+
+
 def normalize_key(value: str) -> str:
     return normalize_line(value).lower()
 
@@ -347,12 +353,47 @@ def looks_like_image_path(value: str) -> bool:
     )
 
 
-def infer_model_slug_from_name(model_name: str) -> str:
+def infer_storage_slug_from_name(model_name: str) -> str:
     cleaned = normalize_line(model_name)
     bmw_series_match = re.match(r"^(?:BMW\s+)?(?P<number>\d+)\s+Series$", cleaned, flags=re.IGNORECASE)
     if bmw_series_match:
         return f"series-{bmw_series_match.group('number')}"
     return slugify(cleaned)
+
+
+def infer_model_slug_from_name(model_name: str, brand_name: str | None = None) -> str:
+    cleaned = normalize_line(model_name)
+    if brand_name:
+        cleaned = normalize_model_name_for_brand(cleaned, brand_name)
+
+    bmw_series_match = re.match(r"^(?:BMW\s+)?(?P<number>\d+)\s+Series$", cleaned, flags=re.IGNORECASE)
+    if bmw_series_match:
+        return f"series-{bmw_series_match.group('number')}"
+    return slugify(cleaned)
+
+
+def normalize_model_name_for_brand(model_name: str, brand_name: str) -> str:
+    cleaned_model = normalize_line(model_name)
+    cleaned_brand = normalize_line(brand_name)
+    if not cleaned_model or not cleaned_brand:
+        return cleaned_model
+
+    pattern = re.compile(
+        r"^"
+        + re.escape(cleaned_brand).replace(r"\ ", r"[\s-]+")
+        + r"[\s-]*",
+        flags=re.IGNORECASE,
+    )
+    remainder = cleaned_model
+    while True:
+        updated = pattern.sub("", remainder, count=1).strip(" -")
+        if updated == remainder:
+            break
+        remainder = updated
+    if not remainder:
+        return cleaned_brand
+
+    return f"{cleaned_brand} {remainder}".strip()
 
 
 def parse_canonical_to_paths(url: str) -> Tuple[Optional[str], Optional[str]]:
@@ -1524,7 +1565,7 @@ def parse_variant_coverage(lines: Sequence[str]) -> Dict[str, Any]:
 
     idx = 0
     while idx < len(lines):
-        line = strip_markdown(lines[idx])
+        line = strip_emphasis_preserve_brackets(lines[idx])
         row_match = re.match(r"^Row\s+\d+\s*[-:]\s*(.+)$", line, flags=re.IGNORECASE)
         if row_match:
             if current_group_title and current_group_slugs:
@@ -1837,12 +1878,14 @@ def parse_engine_code_families(lines: Sequence[str]) -> Dict[str, Any]:
     current_top_family = ""
     idx = 0
     engine_title_re = re.compile(
-        r"^(?P<code>[A-Z][A-Z0-9]*(?:(?:\s*[/+&-]\s*|\s+)[A-Z0-9]+)*)\s*[-–—]\s*(?P<title>(?:\d+(?:\.\d+)?\s*L(?:itre)?|Hybrid|Electric).+)$",
+        r"^(?:\[Engine Code\]\s*[-–—]\s*)?"
+        r"\[?(?P<code>[A-Z0-9][A-Z0-9.]*(?:(?:\s*[/+&-]\s*|\s+)[A-Z0-9][A-Z0-9.]*)*)\]?\s*(?:[-–—]\s*)?"
+        r"(?P<title>(?:\d+(?:\.\d+)?\s*L(?:itre)?|\d+(?:\.\d+)?\s*kWh|Hybrid|Electric).+)$",
         re.IGNORECASE,
     )
 
     while idx < len(lines):
-        line = normalize_line(lines[idx])
+        line = strip_markdown(lines[idx])
 
         if line.startswith("### "):
             current_top_family = line.replace("### ", "").strip()
@@ -1859,7 +1902,7 @@ def parse_engine_code_families(lines: Sequence[str]) -> Dict[str, Any]:
         idx += 1
 
         while idx < len(lines):
-            current = strip_markdown(lines[idx])
+            current = strip_emphasis_preserve_brackets(lines[idx])
             if current.startswith("### ") or re.match(r"^H4:\s*(.+)$", current, flags=re.IGNORECASE):
                 break
             if not current:
@@ -1876,7 +1919,7 @@ def parse_engine_code_families(lines: Sequence[str]) -> Dict[str, Any]:
             detail_lines: List[str] = []
             idx += 1
             while idx < len(lines):
-                peek = strip_markdown(lines[idx])
+                peek = strip_emphasis_preserve_brackets(lines[idx])
                 if peek.startswith("### ") or re.match(r"^H4:\s*(.+)$", peek, flags=re.IGNORECASE):
                     break
                 if engine_title_re.match(peek):
@@ -2570,14 +2613,16 @@ def parse_faq(lines: Sequence[str]) -> Dict[str, Any]:
     intro = extract_label_value(lines, "Intro", "Intro (1 line)", "Paragraph", "Subheading") or ""
     items: List[Dict[str, Any]] = []
     idx = 0
+    question_re = re.compile(r"^Q\d*:\s*(.+)$", flags=re.IGNORECASE)
 
     while idx < len(lines):
-        line = normalize_line(lines[idx])
-        if not line.startswith("Q: "):
+        line = strip_markdown(lines[idx])
+        question_match = question_re.match(line)
+        if not question_match:
             idx += 1
             continue
 
-        question = line.replace("Q: ", "").strip()
+        question = question_match.group(1).strip()
         answer = ""
         key_points: List[str] = []
         warning = ""
@@ -2586,9 +2631,9 @@ def parse_faq(lines: Sequence[str]) -> Dict[str, Any]:
         idx += 1
 
         while idx < len(lines):
-            current = normalize_line(lines[idx])
+            current = strip_markdown(lines[idx])
             lowered = normalize_key(current)
-            if current.startswith("Q: "):
+            if question_re.match(current):
                 idx -= 1
                 break
             if lowered.startswith("short summary"):
@@ -2830,9 +2875,10 @@ def infer_context(
 
     brand_name = args.brand_name or (brand_json or {}).get("brand", {}).get("name")
     brand_slug = args.brand_slug or (brand_json or {}).get("brand", {}).get("slug") or canonical_brand
-    model_name = args.model_name or inferred_model_name
-    model_slug = args.model_slug or infer_model_slug_from_name(model_name)
-    legacy_slug = args.legacy_slug or canonical_model
+    model_name = normalize_model_name_for_brand(args.model_name or inferred_model_name, brand_name or "")
+    model_slug = args.model_slug or infer_model_slug_from_name(model_name, brand_name)
+    storage_slug = infer_storage_slug_from_name(model_name)
+    legacy_slug = args.legacy_slug or canonical_model or (storage_slug if storage_slug != model_slug else None)
 
     if not brand_name:
         raise SystemExit("Could not infer brand name. Pass --brand-name or --brand-json.")
