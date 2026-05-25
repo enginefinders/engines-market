@@ -15,13 +15,13 @@
     "canonical": "/mercedes-benz/glc-class"
   },
   "assets": {
-    "heroBg": "/images/brands/mercedes-benz/models/mercedes-benz-mercedes-benz-glc-class-model-card.png",
+    "heroBg": "/images/brands/mercedes-benz/models/mercedes-benz-glc-class-model-card.png",
     "howItWorksBg": "/images/brands/mercedes-benz/brand/mercedes-benz-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/mercedes-benz/models/mercedes-benz-mercedes-benz-glc-class-model-card.png"
+    "ctaImage": "/images/brands/mercedes-benz/models/mercedes-benz-glc-class-model-card.png"
   },
   "sections": {
     "hero": {
@@ -731,6 +731,7 @@
               {
                 "code": "OM651",
                 "title": "2.1L Diesel",
+                "familyHeading": "OM651 Series (2015-2019)",
                 "history": "The 2.1-litre OM651 powered early GLC 220d and 250d models, offering strong torque and efficiency. It became known for EGR and injector issues as mileages climbed.",
                 "fuel": "Diesel",
                 "size": "2.1 Litre",
@@ -751,6 +752,7 @@
               {
                 "code": "OM654",
                 "title": "2.0L Diesel",
+                "familyHeading": "OM651 Series (2015-2019)",
                 "history": "The OM654 launched in the 2019 GLC facelift as a cleaner, more efficient modular diesel. It features stepped bowl combustion and reduced friction, but introduced new emissions-related failure points.",
                 "fuel": "Diesel (Euro 6d)",
                 "size": "2.0 Litre",
@@ -771,6 +773,7 @@
               {
                 "code": "OM642",
                 "title": "3.0L Diesel V6",
+                "familyHeading": "OM642 Series (2015-2019)",
                 "history": "The OM642 3.0-litre V6 diesel powered the GLC 350d, delivering refined V6 performance. While smooth and powerful, its complex design created expensive repair challenges for owners.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre V6",
@@ -796,6 +799,7 @@
               {
                 "code": "M274",
                 "title": "2.0L Petrol",
+                "familyHeading": "M274 Series (2015-2022)",
                 "history": "The M274 2.0-litre turbocharged four-cylinder powered the majority of petrol GLC models through 2019. A member of Mercedes' modular engine family, it balanced performance with efficiency but gained a reputation for timing component failures.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -816,6 +820,7 @@
               {
                 "code": "M264",
                 "title": "2.0L Petrol (Mild Hybrid / EQ Boost)",
+                "familyHeading": "M264 Series (2019-present)",
                 "history": "The M264 replaced the M274 in the 2019 facelift, introducing EQ Boost mild hybrid technology with an integrated starter-generator (BSG) and 48V electrical architecture. Complexity increased replacement costs significantly.",
                 "fuel": "Mild Hybrid Petrol (MHEV)",
                 "size": "2.0 Litre",
@@ -836,6 +841,7 @@
               {
                 "code": "M276",
                 "title": "3.0L Petrol V6 Biturbo",
+                "familyHeading": "M276 Series (2016-2019)",
                 "history": "The M276 3.0-litre V6 biturbo powered the GLC 43 AMG, delivering 367-390hp. This sporty unit offered V6 refinement and strong mid-range punch, becoming the performance entry point below the V8 flagship.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre V6 Biturbo",
@@ -856,6 +862,7 @@
               {
                 "code": "M177",
                 "title": "4.0L Petrol V8 Biturbo",
+                "familyHeading": "M177 Series (2017-2022)",
                 "history": "The hand-built M177 V8 biturbo powered the range-topping GLC 63 and 63 S AMG. Derived from the AMG GT's engine, it delivered 476-510hp through a sophisticated hot-vee design with twin-scroll turbos.",
                 "fuel": "Petrol",
                 "size": "4.0 Litre V8 Biturbo",
@@ -881,6 +888,7 @@
               {
                 "code": "M274 Hybrid",
                 "title": "2.0L Petrol Plug-in Hybrid",
+                "familyHeading": "PHEV Powertrains (2016-2025)",
                 "history": "The GLC 350e combined the M274 petrol engine with an electric motor and 13.5kWh battery, offering up to 30 miles of electric range. Complex drivetrain integration created specialist-only repair requirements.",
                 "fuel": "Plug-in Hybrid (PHEV)",
                 "size": "2.0 Litre + Electric Motor",
@@ -901,6 +909,7 @@
               {
                 "code": "M254",
                 "title": "2.0L Petrol Plug-in Hybrid (X254)",
+                "familyHeading": "PHEV Powertrains (2016-2025)",
                 "history": "The second-generation GLC 300e uses the M254 engine with an upgraded plug-in hybrid system, delivering over 300hp and significantly extended electric range. The PHEV system adds complexity over the standard mild-hybrid M254.",
                 "fuel": "Plug-in Hybrid (PHEV)",
                 "size": "2.0 Litre + Electric Motor",
@@ -953,6 +962,8 @@
           "engines": [
             {
               "code": "OM651",
+              "title": "2.1L Diesel",
+              "familyHeading": "OM651 Series (2015-2019)",
               "fuel": "Diesel",
               "size": "2.1L",
               "power": "170-204 hp",
@@ -963,6 +974,8 @@
             },
             {
               "code": "OM654",
+              "title": "2.0L Diesel",
+              "familyHeading": "OM651 Series (2015-2019)",
               "fuel": "Diesel (Euro 6d)",
               "size": "2.0L",
               "power": "194-265 hp",
@@ -973,6 +986,8 @@
             },
             {
               "code": "OM642",
+              "title": "3.0L Diesel V6",
+              "familyHeading": "OM642 Series (2015-2019)",
               "fuel": "Diesel",
               "size": "3.0L V6",
               "power": "258 hp",
@@ -990,6 +1005,8 @@
           "engines": [
             {
               "code": "M274",
+              "title": "2.0L Petrol",
+              "familyHeading": "M274 Series (2015-2022)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "184-245 hp",
@@ -1000,6 +1017,8 @@
             },
             {
               "code": "M264",
+              "title": "2.0L Petrol (Mild Hybrid / EQ Boost)",
+              "familyHeading": "M264 Series (2019-present)",
               "fuel": "Mild Hybrid Petrol (MHEV)",
               "size": "2.0L",
               "power": "197-258 hp",
@@ -1010,6 +1029,8 @@
             },
             {
               "code": "M276",
+              "title": "3.0L Petrol V6 Biturbo",
+              "familyHeading": "M276 Series (2016-2019)",
               "fuel": "Petrol",
               "size": "3.0L V6 Biturbo",
               "power": "367-390 hp",
@@ -1020,6 +1041,8 @@
             },
             {
               "code": "M177",
+              "title": "4.0L Petrol V8 Biturbo",
+              "familyHeading": "M177 Series (2017-2022)",
               "fuel": "Petrol",
               "size": "4.0L V8 Biturbo",
               "power": "476-510 hp",
@@ -1037,6 +1060,8 @@
           "engines": [
             {
               "code": "M274 Hybrid",
+              "title": "2.0L Petrol Plug-in Hybrid",
+              "familyHeading": "PHEV Powertrains (2016-2025)",
               "fuel": "Plug-in Hybrid (PHEV)",
               "size": "2.0L + Electric Motor",
               "power": "320 hp combined",
@@ -1047,6 +1072,8 @@
             },
             {
               "code": "M254",
+              "title": "2.0L Petrol Plug-in Hybrid (X254)",
+              "familyHeading": "PHEV Powertrains (2016-2025)",
               "fuel": "Plug-in Hybrid (PHEV)",
               "size": "2.0L + Electric Motor",
               "power": "313 hp combined",
@@ -1495,6 +1522,11 @@
           "title": "Mercedes Benz GLC Class Diesel Engines",
           "description": "Diesel powered the majority of GLC sales across the X253 (2015-2022) and X254 (2022-present) generations, with the OM651 and OM654 four-cylinders dominating replacement enquiries - particularly the OM654's EGR cooler failures.",
           "descriptor": "Diesel powered the majority of GLC sales across the X253 (2015-2022) and X254 (2022-present) generations, with the OM651 and OM654 four-cylinders dominating replacement enquiries - particularly the OM654's EGR cooler failures.",
+          "familiesLabel": "Common Mercedes Benz GLC Class Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "OM651 - 2.1L four-cylinder (2015-2019 GLC 220d, 250d), known for swirl flap and injector issues",
             "OM654 - 2.0L four-cylinder (2019-present GLC 220d, 300d), EGR cooler cracking is the most searched failure",
@@ -1523,6 +1555,11 @@
           "title": "Mercedes Benz GLC Class Petrol Engines",
           "description": "Petrol GLC models range from the economical 2.0-litre four-cylinder M274 and M264 units to the M276 V6 in the GLC 43 and the hand-built M177 V8 in the flagship GLC 63 - each with distinct replacement cost tiers.",
           "descriptor": "Petrol GLC models range from the economical 2.0-litre four-cylinder M274 and M264 units to the M276 V6 in the GLC 43 and the hand-built M177 V8 in the flagship GLC 63 - each with distinct replacement cost tiers.",
+          "familiesLabel": "Common Mercedes Benz GLC Class Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "M274 - 2.0L four-cylinder (2015-2019 GLC 200, 250, 300), timing chain tensioner wear is the #1 failure",
             "M264 - 2.0L mild hybrid (2019-present GLC 200, 300), 48V belt-driven starter-generator (BSG) adds complexity",
@@ -1554,6 +1591,11 @@
           "title": "Mercedes Benz GLC Class Plug-in Hybrid (PHEV) Engines",
           "description": "The GLC 350e (2016-2022) and second-generation GLC 300e/400e (2023-present) combine petrol engines with electric motors and batteries - complex systems requiring specialist PHEV knowledge for engine replacement.",
           "descriptor": "The GLC 350e (2016-2022) and second-generation GLC 300e/400e (2023-present) combine petrol engines with electric motors and batteries - complex systems requiring specialist PHEV knowledge for engine replacement.",
+          "familiesLabel": "Mercedes Benz GLC Class PHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "M274 Hybrid - 2.0L petrol plus electric motor (GLC 350e, 2016-2022)",
             "M254 PHEV - 2.0L petrol plus upgraded hybrid system (GLC 300e, 400e, 2023-present)",
@@ -1579,6 +1621,11 @@
           "title": "Mercedes Benz GLC Class Mild Hybrid (MHEV) Engines",
           "description": "The M264 and M254 petrol engines in facelift X253 and current X254 GLC models feature 48V EQ Boost mild hybrid technology - adding complexity to engine replacement but improving throttle response and efficiency.",
           "descriptor": "The M264 and M254 petrol engines in facelift X253 and current X254 GLC models feature 48V EQ Boost mild hybrid technology - adding complexity to engine replacement but improving throttle response and efficiency.",
+          "familiesLabel": "Mercedes Benz GLC Class MHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "M264 - 2.0L petrol with 48V belt-driven starter-generator (BSG) - GLC 200, 300 from 2019",
             "M254 - 2.0L petrol with integrated starter-generator (ISG) - current generation GLC",

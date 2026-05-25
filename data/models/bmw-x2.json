@@ -15,13 +15,13 @@
     "canonical": "/bmw/x2"
   },
   "assets": {
-    "heroBg": "/images/brands/bmw/models/bmw-bmw-x2-model-card.png",
+    "heroBg": "/images/brands/bmw/models/bmw-x2-model-card.png",
     "howItWorksBg": "/images/brands/bmw/brand/bmw-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/bmw/brand/bmw-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/bmw/brand/bmw-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/bmw/brand/bmw-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/bmw/brand/bmw-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/bmw/models/bmw-bmw-x2-model-card.png"
+    "ctaImage": "/images/brands/bmw/models/bmw-x2-model-card.png"
   },
   "sections": {
     "hero": {
@@ -758,6 +758,7 @@
               {
                 "code": "B47C20B",
                 "title": "2.0L Diesel",
+                "familyHeading": "B47 Series Diesel Engines (2018-2023)",
                 "history": "The B47C20B powered the UK's best-selling X2 20d xDrive, replacing the N47 with improved efficiency but retaining timing chain vigilance.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -778,6 +779,7 @@
               {
                 "code": "B47C20A",
                 "title": "2.0L Diesel",
+                "familyHeading": "B47 Series Diesel Engines (2018-2023)",
                 "history": "Lower-output B47 variant for entry-level 18d models, sharing architecture with the 20d but tuned for economy over performance.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -798,6 +800,7 @@
               {
                 "code": "B47D20B",
                 "title": "2.0L Diesel",
+                "familyHeading": "B47 Series Diesel Engines (2018-2023)",
                 "history": "Late-production B47 update with refined emissions hardware, fitted to final-year X2 diesel models meeting Euro 6d standards.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -823,6 +826,7 @@
               {
                 "code": "B48A20C",
                 "title": "2.0L Petrol",
+                "familyHeading": "B48 Series Petrol Engines (2018-2023)",
                 "history": "The mainstream B48 turbo petrol for X2 20i models, balancing performance and efficiency with modular BMW engine architecture.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -843,6 +847,7 @@
               {
                 "code": "B48A20E",
                 "title": "2.0L Petrol",
+                "familyHeading": "B48 Series Petrol Engines (2018-2023)",
                 "history": "High-output B48 variant exclusive to the M35i xDrive, delivering 306hp with reinforced internals for performance durability.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -863,6 +868,7 @@
               {
                 "code": "B48A20A",
                 "title": "2.0L Petrol",
+                "familyHeading": "B48 Series Petrol Engines (2018-2023)",
                 "history": "Lower-tune B48 for early 20i sDrive models, offering smooth power delivery with reduced stress on internal components.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -883,6 +889,7 @@
               {
                 "code": "B48A20B",
                 "title": "2.0L Petrol",
+                "familyHeading": "B48 Series Petrol Engines (2018-2023)",
                 "history": "Mid-range B48 tune for X2 25i variants, bridging the gap between standard 20i and M35i performance with enhanced mapping.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -903,6 +910,7 @@
               {
                 "code": "B38A15A",
                 "title": "1.5L Petrol",
+                "familyHeading": "B38 Series Petrol Engines (2018-2023)",
                 "history": "Compact three-cylinder B38 for entry-level X2 18i models, delivering adequate power with strong fuel economy for urban use.",
                 "fuel": "Petrol",
                 "size": "1.5 Litre",
@@ -923,6 +931,7 @@
               {
                 "code": "B38A15C",
                 "title": "1.5L Petrol",
+                "familyHeading": "B38 Series Petrol Engines (2018-2023)",
                 "history": "Updated B38 variant with refined balance shaft and improved thermal management for late-production 18i models.",
                 "fuel": "Petrol",
                 "size": "1.5 Litre",
@@ -974,6 +983,8 @@
           "engines": [
             {
               "code": "B47C20B",
+              "title": "2.0L Diesel",
+              "familyHeading": "B47 Series Diesel Engines (2018-2023)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "190 hp",
@@ -984,6 +995,8 @@
             },
             {
               "code": "B47C20A",
+              "title": "2.0L Diesel",
+              "familyHeading": "B47 Series Diesel Engines (2018-2023)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "150 hp",
@@ -994,6 +1007,8 @@
             },
             {
               "code": "B47D20B",
+              "title": "2.0L Diesel",
+              "familyHeading": "B47 Series Diesel Engines (2018-2023)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "190 hp",
@@ -1011,6 +1026,8 @@
           "engines": [
             {
               "code": "B48A20C",
+              "title": "2.0L Petrol",
+              "familyHeading": "B48 Series Petrol Engines (2018-2023)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "192 hp",
@@ -1021,6 +1038,8 @@
             },
             {
               "code": "B48A20E",
+              "title": "2.0L Petrol",
+              "familyHeading": "B48 Series Petrol Engines (2018-2023)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "306 hp",
@@ -1031,6 +1050,8 @@
             },
             {
               "code": "B48A20A",
+              "title": "2.0L Petrol",
+              "familyHeading": "B48 Series Petrol Engines (2018-2023)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "178-190 hp",
@@ -1041,6 +1062,8 @@
             },
             {
               "code": "B48A20B",
+              "title": "2.0L Petrol",
+              "familyHeading": "B48 Series Petrol Engines (2018-2023)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "231 hp",
@@ -1051,6 +1074,8 @@
             },
             {
               "code": "B38A15A",
+              "title": "1.5L Petrol",
+              "familyHeading": "B38 Series Petrol Engines (2018-2023)",
               "fuel": "Petrol",
               "size": "1.5L",
               "power": "140 hp",
@@ -1061,6 +1086,8 @@
             },
             {
               "code": "B38A15C",
+              "title": "1.5L Petrol",
+              "familyHeading": "B38 Series Petrol Engines (2018-2023)",
               "fuel": "Petrol",
               "size": "1.5L",
               "power": "140 hp",
@@ -1427,6 +1454,11 @@
           "title": "BMW X2 Diesel Engines",
           "description": "The B47 2.0‑litre diesel family dominated early UK BMW X2 sales, delivering strong torque and motorway economy across sDrive and xDrive variants from 2018‑2023.",
           "descriptor": "The B47 2.0‑litre diesel family dominated early UK BMW X2 sales, delivering strong torque and motorway economy across sDrive and xDrive variants from 2018‑2023.",
+          "familiesLabel": "Common BMW X2 Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "B47C20B - xDrive20d flagship diesel, highest UK replacement demand, timing chain vigilance required",
             "B47C20A - sDrive18d/xDrive18d lower‑output variant, strong fuel economy, EGR/DPF sensitivity on short journeys",
@@ -1453,6 +1485,11 @@
           "title": "BMW X2 Petrol Engines",
           "description": "BMW X2 petrol engines span the efficient B38 1.5‑litre three‑cylinder for entry models to the high‑output B48 2.0‑litre turbo powering the 306hp M35i performance flagship.",
           "descriptor": "BMW X2 petrol engines span the efficient B38 1.5‑litre three‑cylinder for entry models to the high‑output B48 2.0‑litre turbo powering the 306hp M35i performance flagship.",
+          "familiesLabel": "Common BMW X2 Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "B38A15A - 1.5L three‑cylinder for sDrive18i, compact and efficient, water pump housing vulnerability",
             "B48A20C - Mainstream 2.0L turbo for 20i/25i, modular design, coolant expansion tank cracking common",
@@ -1481,6 +1518,11 @@
           "title": "BMW X2 Hybrid / Electrified Engines",
           "description": "No factory‑fitted hybrid, plug‑in hybrid, or pure electric variants of the BMW X2 F39 were officially sold in the UK market between 2018‑2023.",
           "descriptor": "No factory‑fitted hybrid, plug‑in hybrid, or pure electric variants of the BMW X2 F39 were officially sold in the UK market between 2018‑2023.",
+          "familiesLabel": "Common BMW X2 Hybrid / Electrified Engine Families",
+          "foundInLabel": "",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [],
           "foundIn": [],
           "knownFor": [],

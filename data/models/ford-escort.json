@@ -15,13 +15,13 @@
     "canonical": "/ford/escort"
   },
   "assets": {
-    "heroBg": "/images/brands/ford/models/ford-ford-escort-model-card.png",
+    "heroBg": "/images/brands/ford/models/ford-escort-model-card.png",
     "howItWorksBg": "/images/brands/ford/brand/ford-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/ford/brand/ford-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/ford/brand/ford-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/ford/brand/ford-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/ford/brand/ford-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/ford/models/ford-ford-escort-model-card.png"
+    "ctaImage": "/images/brands/ford/models/ford-escort-model-card.png"
   },
   "sections": {
     "hero": {
@@ -720,8 +720,9 @@
             "name": "Diesel Engines",
             "entries": [
               {
-                "code": "RTE / RTF / RTH - 1.",
-                "title": "8L Diesel",
+                "code": "RTE / RTF / RTH",
+                "title": "1.8L Diesel",
+                "familyHeading": "Endura D Series Diesel Engines (1990-2000)",
                 "history": "The Endura D was Ford's indirect injection diesel, offered in naturally aspirated and turbo forms. Reliable but underpowered, it was favoured by high-mileage fleet owners.",
                 "fuel": "Diesel",
                 "size": "1.8 Litre",
@@ -739,8 +740,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "RFD / RFK - 1.",
-                "title": "8L Turbo Diesel (Endura TD)",
+                "code": "RFD / RFK",
+                "title": "1.8L Turbo Diesel (Endura TD)",
+                "familyHeading": "Endura D Series Diesel Engines (1990-2000)",
                 "history": "The turbocharged Endura TD offered improved drivability over the naturally aspirated unit, making the Escort a credible motorway cruiser for the first time.",
                 "fuel": "Diesel",
                 "size": "1.8 Litre",
@@ -759,8 +761,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "RVA - 1.",
-                "title": "8L Turbo Diesel (Endura D Turbo)",
+                "code": "RVA",
+                "title": "1.8L Turbo Diesel (Endura D Turbo)",
+                "familyHeading": "Endura D Series Diesel Engines (1990-2000)",
                 "history": "A later evolution of the Endura D turbo, offering modest power gains and improved emissions compliance for late-model Mk6 Escorts.",
                 "fuel": "Diesel",
                 "size": "1.8 Litre",
@@ -783,8 +786,9 @@
             "name": "Petrol Engines",
             "entries": [
               {
-                "code": "681F / 691F / 711M - 1.",
-                "title": "1L, 1.3L, 1.6L Petrol",
+                "code": "681F / 691F / 711M",
+                "title": "1.1L, 1.3L, 1.6L Petrol",
+                "familyHeading": "Kent Crossflow Engines (1968-1980)",
                 "history": "The legendary Kent crossflow powered early Escorts through the Mk1 and Mk2 generations. Simple, robust, and tunable, it remains the heart of the classic Escort scene today .",
                 "fuel": "Petrol",
                 "size": "1.1L / 1.3L / 1.6 Litre",
@@ -803,8 +807,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "NESA / NESB - 2.",
-                "title": "0L Petrol (Pinto SOHC)",
+                "code": "NESA / NESB",
+                "title": "2.0L Petrol (Pinto SOHC)",
+                "familyHeading": "Pinto Engines (1975-1980)",
                 "history": "The Pinto engine defined the performance Escort era. Fitted to the RS2000, its simple SOHC design and robust bottom end make it a favourite for restorations and upgrades .",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -823,8 +828,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "L1A - 1.",
-                "title": "1L Petrol (Valencia HCS)",
+                "code": "L1A",
+                "title": "1.1L Petrol (Valencia HCS)",
+                "familyHeading": "CVH Engines (1980-1992)",
                 "history": "The smallest CVH variant, also known as the Valencia. Fitted to base-spec Mk3 and early Mk4 Escorts, it prioritises economy over performance.",
                 "fuel": "Petrol",
                 "size": "1.1 Litre",
@@ -843,8 +849,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "L1A / L1B - 1.",
-                "title": "3L Petrol (CVH)",
+                "code": "L1A / L1B",
+                "title": "1.3L Petrol (CVH)",
+                "familyHeading": "CVH Engines (1980-1992)",
                 "history": "The 1.3 CVH balanced economy with acceptable performance for family buyers. It remained in production through multiple Mk3 and Mk4 generations.",
                 "fuel": "Petrol",
                 "size": "1.3 Litre",
@@ -863,28 +870,17 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "LCB / LCD - 1.",
-                "title": "4L Petrol (CVH)",
+                "code": "LCB / LCD",
+                "title": "1.4L Petrol (CVH)",
+                "familyHeading": "CVH Engines (1980-1992)",
                 "history": "The 1.4 CVH became the volume engine for late Mk3 and Mk4 Escorts. Simple and durable when maintained, it remains common in the budget classic market.",
                 "fuel": "Petrol",
                 "size": "1.4 Litre",
                 "power": "73-75 hp",
                 "years": "1986-1992",
-                "compatibleVariants": [],
-                "commonFailures": [],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "1.",
-                "title": "4 L, 1.4 LX, 1.4 CL, 1.4 Encore, 1.4 GL, Mk3 Escort, Mk4 Escort",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
+                "compatibleVariants": [
+                  "1.4 L, 1.4 LX, 1.4 CL, 1.4 Encore, 1.4 GL, Mk3 Escort, Mk4 Escort"
+                ],
                 "commonFailures": [
                   "Timing chain rattle (L4E/L4F series)",
                   "Overheating",
@@ -895,22 +891,30 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "L4E / L4F - 1.",
-                "title": "6L Petrol (CVH / CVH-E)",
+                "code": "L4E / L4F",
+                "title": "1.6L Petrol (CVH / CVH-E)",
+                "familyHeading": "CVH Engines (1980-1992)",
                 "history": "The 1.6 CVH powered both ordinary LX models and legendary performance variants like the XR3i and RS Turbo. It was Ford's workhorse petrol engine of the 1980s .",
                 "fuel": "Petrol",
                 "size": "1.6 Litre",
                 "power": "79-105 hp (naturally aspirated)",
                 "years": "1983-1995",
-                "compatibleVariants": [],
-                "commonFailures": [],
-                "avgRebuiltPrice": "",
-                "cta": "",
+                "compatibleVariants": [
+                  "1.6 L, 1.6 LX, 1.6 GL, 1.6 CL, XR3i, RS1600i, Cabaret, Orion, Mk3 Escort, Mk4 Escort"
+                ],
+                "commonFailures": [
+                  "Timing chain tensioner failure (replacement primary driver)",
+                  "VCT solenoid failure (where fitted)",
+                  "Head gasket failure"
+                ],
+                "avgRebuiltPrice": "£200 - £550",
+                "cta": "Get quotes for L4E / L4F Ford Escort engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "1.",
-                "title": "6 L, 1.6 LX, 1.6 GL, 1.6 CL, XR3i, RS1600i, Cabaret, Orion, Mk3 Escort, Mk4 Escort",
+                "code": "L4E (Turbo)",
+                "title": "1.6L Turbo Petrol (CVH Turbo)",
+                "familyHeading": "CVH Engines (1980-1992)",
                 "history": "The turbocharged CVH transformed the Escort into a hot hatch icon. Fitted to the RS Turbo, it delivered 132hp and defined late-80s Ford performance.",
                 "fuel": "Petrol",
                 "size": "1.6 Litre",
@@ -920,9 +924,6 @@
                   "RS Turbo, RS Turbo Series 1, RS Turbo Series 2"
                 ],
                 "commonFailures": [
-                  "Timing chain tensioner failure (replacement primary driver)",
-                  "VCT solenoid failure (where fitted)",
-                  "Head gasket failure",
                   "Turbocharger failure",
                   "Timing chain tensioner failure",
                   "Overheating under hard use"
@@ -932,28 +933,17 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "RDA / RDB - 1.",
-                "title": "8L Petrol (Zetec-E 16v)",
+                "code": "RDA / RDB",
+                "title": "1.8L Petrol (Zetec-E 16v)",
+                "familyHeading": "Zetec-E Engines (1990-2000)",
                 "history": "The Zetec-E brought modern 16-valve technology and fuel injection to the Escort. It offered refined power and remains a popular choice for swaps and upgrades.",
                 "fuel": "Petrol",
                 "size": "1.8 Litre",
                 "power": "105 hp",
                 "years": "1992-1995",
-                "compatibleVariants": [],
-                "commonFailures": [],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "1.",
-                "title": "8 LX, 1.8 GL, Escort Mk5, Escort Mk5b",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
+                "compatibleVariants": [
+                  "1.8 LX, 1.8 GL, Escort Mk5, Escort Mk5b"
+                ],
                 "commonFailures": [
                   "VCT solenoid failure (rough idle, power loss)",
                   "Oil leaks (cam cover seals)",
@@ -964,8 +954,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "RKC - 1.",
-                "title": "8L Petrol (Zetec-E 115)",
+                "code": "RKC",
+                "title": "1.8L Petrol (Zetec-E 115)",
+                "familyHeading": "Zetec-E Engines (1990-2000)",
                 "history": "The higher-output 115hp 1.8 Zetec powered sporty Escorts and late XR3i models, offering a modern driving experience without the turbo complexity.",
                 "fuel": "Petrol",
                 "size": "1.8 Litre",
@@ -984,8 +975,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "NGB - 2.",
-                "title": "0L Petrol (Zetec-E 16v)",
+                "code": "NGB",
+                "title": "2.0L Petrol (Zetec-E 16v)",
+                "familyHeading": "Zetec-E Engines (1990-2000)",
                 "history": "The 2.0 Zetec powered the Mk6 RS2000, reviving a legendary nameplate. It offered 150hp and a modern 16-valve experience, a significant step up from the Pinto era.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -1004,28 +996,17 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "L1E / L1K / L1L - 1.",
-                "title": "6L Petrol (Zetec-SE 16v)",
+                "code": "L1E / L1K / L1L",
+                "title": "1.6L Petrol (Zetec-SE 16v)",
+                "familyHeading": "Zetec-E Engines (1990-2000)",
                 "history": "The 1.6 Zetec-SE brought modern 16-valve efficiency to the late Mk5b and Mk6 Escort range, replacing the ageing CVH. It offered improved refinement and fuel economy.",
                 "fuel": "Petrol",
                 "size": "1.6 Litre",
                 "power": "88-105 hp",
                 "years": "1995-2000",
-                "compatibleVariants": [],
-                "commonFailures": [],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "1.",
-                "title": "6 LX, 1.6 Zetec, 1.6 Si, Escort Mk5b, Escort Mk6",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
+                "compatibleVariants": [
+                  "1.6 LX, 1.6 Zetec, 1.6 Si, Escort Mk5b, Escort Mk6"
+                ],
                 "commonFailures": [
                   "VCT solenoid failure",
                   "Coil pack failure",
@@ -1036,28 +1017,17 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "L1H - 1.",
-                "title": "6L Petrol (Zetec-E 16v)",
+                "code": "L1H",
+                "title": "1.6L Petrol (Zetec-E 16v)",
+                "familyHeading": "Zetec-E Engines (1990-2000)",
                 "history": "A widely used 1.6 Zetec variant across late Escort, Fiesta, and Mondeo models. Known for robust performance and straightforward servicing .",
                 "fuel": "Petrol",
                 "size": "1.6 Litre",
                 "power": "90 hp",
                 "years": "1995-1999",
-                "compatibleVariants": [],
-                "commonFailures": [],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "1.",
-                "title": "6 LX, Escort Mk6 (FA, GAL, AFL)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
+                "compatibleVariants": [
+                  "1.6 LX, Escort Mk6 (FA, GAL, AFL)"
+                ],
                 "commonFailures": [
                   "VCT solenoid issues",
                   "Coolant loss (water pump failure)",
@@ -1068,28 +1038,17 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "J4B / J6A - 1.",
-                "title": "3L Petrol (Endura-E / HCS)",
+                "code": "J4B / J6A",
+                "title": "1.3L Petrol (Endura-E / HCS)",
+                "familyHeading": "Zetec-E Engines (1990-2000)",
                 "history": "The 1.3 Endura/Valencia engine was the entry-level petrol unit for late Mk6 Escorts. Simple overhead valve design focused on low-cost ownership.",
                 "fuel": "Petrol",
                 "size": "1.3 Litre",
                 "power": "60 hp",
                 "years": "1995-1999",
-                "compatibleVariants": [],
-                "commonFailures": [],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "1.",
-                "title": "3 L, 1.3 Encore, Escort Mk6",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
+                "compatibleVariants": [
+                  "1.3 L, 1.3 Encore, Escort Mk6"
+                ],
                 "commonFailures": [
                   "Head gasket failure",
                   "Valve stem seal wear",
@@ -1100,28 +1059,17 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "F4B / FUH - 1.",
-                "title": "4L Petrol (CVH-PTE / CFi)",
+                "code": "F4B / FUH",
+                "title": "1.4L Petrol (CVH-PTE / CFi)",
+                "familyHeading": "Zetec-E Engines (1990-2000)",
                 "history": "The later evolution of the 1.4 CVH, featuring CFi (Central Fuel Injection) for improved emissions and driveability on late Mk6 models.",
                 "fuel": "Petrol",
                 "size": "1.4 Litre",
                 "power": "73-75 hp",
                 "years": "1995-1999",
-                "compatibleVariants": [],
-                "commonFailures": [],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "1.",
-                "title": "4 L, 1.4 LX, Escort Mk6",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
+                "compatibleVariants": [
+                  "1.4 L, 1.4 LX, Escort Mk6"
+                ],
                 "commonFailures": [
                   "Timing chain rattle",
                   "Injector issues (CFi system)",
@@ -1164,7 +1112,9 @@
           "failureNote": "Main replacement triggers are timing chain wear, EGR / cooling faults and turbo-control issues.",
           "engines": [
             {
-              "code": "RTE / RTF / RTH - 1.",
+              "code": "RTE / RTF / RTH",
+              "title": "1.8L Diesel",
+              "familyHeading": "Endura D Series Diesel Engines (1990-2000)",
               "fuel": "Diesel",
               "size": "1.8L",
               "power": "60-70 hp",
@@ -1174,7 +1124,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "RFD / RFK - 1.",
+              "code": "RFD / RFK",
+              "title": "1.8L Turbo Diesel (Endura TD)",
+              "familyHeading": "Endura D Series Diesel Engines (1990-2000)",
               "fuel": "Diesel",
               "size": "1.8L",
               "power": "90 hp",
@@ -1184,7 +1136,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "RVA - 1.",
+              "code": "RVA",
+              "title": "1.8L Turbo Diesel (Endura D Turbo)",
+              "familyHeading": "Endura D Series Diesel Engines (1990-2000)",
               "fuel": "Diesel",
               "size": "1.8L",
               "power": "70 hp",
@@ -1201,7 +1155,9 @@
           "failureNote": "Main replacement demand comes from timing-chain, cooling-system and performance thermal-management faults.",
           "engines": [
             {
-              "code": "681F / 691F / 711M - 1.",
+              "code": "681F / 691F / 711M",
+              "title": "1.1L, 1.3L, 1.6L Petrol",
+              "familyHeading": "Kent Crossflow Engines (1968-1980)",
               "fuel": "Petrol",
               "size": "1.1L / 1.3L / 1.6L",
               "power": "45-96 hp (depending on variant)",
@@ -1211,7 +1167,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "NESA / NESB - 2.",
+              "code": "NESA / NESB",
+              "title": "2.0L Petrol (Pinto SOHC)",
+              "familyHeading": "Pinto Engines (1975-1980)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "110 hp",
@@ -1221,7 +1179,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "L1A - 1.",
+              "code": "L1A",
+              "title": "1.1L Petrol (Valencia HCS)",
+              "familyHeading": "CVH Engines (1980-1992)",
               "fuel": "Petrol",
               "size": "1.1L",
               "power": "50-55 hp",
@@ -1231,7 +1191,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "L1A / L1B - 1.",
+              "code": "L1A / L1B",
+              "title": "1.3L Petrol (CVH)",
+              "familyHeading": "CVH Engines (1980-1992)",
               "fuel": "Petrol",
               "size": "1.3L",
               "power": "69 hp",
@@ -1241,37 +1203,33 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "LCB / LCD - 1.",
+              "code": "LCB / LCD",
+              "title": "1.4L Petrol (CVH)",
+              "familyHeading": "CVH Engines (1980-1992)",
               "fuel": "Petrol",
               "size": "1.4L",
               "power": "73-75 hp",
-              "compatibleModels": "",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "1.",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
+              "compatibleModels": "1.4 L, 1.4 LX, 1.4 CL, 1.4 Encore, 1.4 GL, Mk3 Escort, Mk4 Escort",
               "avgRebuiltPrice": "£180 - £450",
               "cta": "Get quotes for LCB / LCD Ford Escort engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "L4E / L4F - 1.",
+              "code": "L4E / L4F",
+              "title": "1.6L Petrol (CVH / CVH-E)",
+              "familyHeading": "CVH Engines (1980-1992)",
               "fuel": "Petrol",
               "size": "1.6L",
               "power": "79-105 hp (naturally aspirated)",
-              "compatibleModels": "",
-              "avgRebuiltPrice": "",
-              "cta": "",
+              "compatibleModels": "1.6 L, 1.6 LX, 1.6 GL, 1.6 CL, XR3i, RS1600i, Cabaret, Orion, Mk3 Escort, Mk4 Escort",
+              "avgRebuiltPrice": "£200 - £550",
+              "cta": "Get quotes for L4E / L4F Ford Escort engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "1.",
+              "code": "L4E (Turbo)",
+              "title": "1.6L Turbo Petrol (CVH Turbo)",
+              "familyHeading": "CVH Engines (1980-1992)",
               "fuel": "Petrol",
               "size": "1.6L",
               "power": "132 hp",
@@ -1281,27 +1239,21 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "RDA / RDB - 1.",
+              "code": "RDA / RDB",
+              "title": "1.8L Petrol (Zetec-E 16v)",
+              "familyHeading": "Zetec-E Engines (1990-2000)",
               "fuel": "Petrol",
               "size": "1.8L",
               "power": "105 hp",
-              "compatibleModels": "",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "1.",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
+              "compatibleModels": "1.8 LX, 1.8 GL, Escort Mk5, Escort Mk5b",
               "avgRebuiltPrice": "£400 - £950",
               "cta": "Get quotes for RDA / RDB Ford Escort engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "RKC - 1.",
+              "code": "RKC",
+              "title": "1.8L Petrol (Zetec-E 115)",
+              "familyHeading": "Zetec-E Engines (1990-2000)",
               "fuel": "Petrol",
               "size": "1.8L",
               "power": "115 hp",
@@ -1311,7 +1263,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "NGB - 2.",
+              "code": "NGB",
+              "title": "2.0L Petrol (Zetec-E 16v)",
+              "familyHeading": "Zetec-E Engines (1990-2000)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "150 hp",
@@ -1321,81 +1275,49 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "L1E / L1K / L1L - 1.",
+              "code": "L1E / L1K / L1L",
+              "title": "1.6L Petrol (Zetec-SE 16v)",
+              "familyHeading": "Zetec-E Engines (1990-2000)",
               "fuel": "Petrol",
               "size": "1.6L",
               "power": "88-105 hp",
-              "compatibleModels": "",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "1.",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
+              "compatibleModels": "1.6 LX, 1.6 Zetec, 1.6 Si, Escort Mk5b, Escort Mk6",
               "avgRebuiltPrice": "£350 - £800",
               "cta": "Get quotes for L1E / L1K / L1L Ford Escort engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "L1H - 1.",
+              "code": "L1H",
+              "title": "1.6L Petrol (Zetec-E 16v)",
+              "familyHeading": "Zetec-E Engines (1990-2000)",
               "fuel": "Petrol",
               "size": "1.6L",
               "power": "90 hp",
-              "compatibleModels": "",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "1.",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
+              "compatibleModels": "1.6 LX, Escort Mk6 (FA, GAL, AFL)",
               "avgRebuiltPrice": "£350 - £800",
               "cta": "Get quotes for L1H Ford Escort engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "J4B / J6A - 1.",
+              "code": "J4B / J6A",
+              "title": "1.3L Petrol (Endura-E / HCS)",
+              "familyHeading": "Zetec-E Engines (1990-2000)",
               "fuel": "Petrol",
               "size": "1.3L",
               "power": "60 hp",
-              "compatibleModels": "",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "1.",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
+              "compatibleModels": "1.3 L, 1.3 Encore, Escort Mk6",
               "avgRebuiltPrice": "£200 - £450",
               "cta": "Get quotes for J4B / J6A Ford Escort engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "F4B / FUH - 1.",
+              "code": "F4B / FUH",
+              "title": "1.4L Petrol (CVH-PTE / CFi)",
+              "familyHeading": "Zetec-E Engines (1990-2000)",
               "fuel": "Petrol",
               "size": "1.4L",
               "power": "73-75 hp",
-              "compatibleModels": "",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "1.",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
+              "compatibleModels": "1.4 L, 1.4 LX, Escort Mk6",
               "avgRebuiltPrice": "£200 - £500",
               "cta": "Get quotes for F4B / FUH Ford Escort engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1934,6 +1856,11 @@
           "title": "Ford Escort Diesel Engines",
           "description": "The Endura D series was the only diesel ever fitted to the Escort, arriving in Mk5 (1992) and continuing through the Mk6 until 2000 - a simple, underpowered but famously economical unit for high-mileage drivers.",
           "descriptor": "The Endura D series was the only diesel ever fitted to the Escort, arriving in Mk5 (1992) and continuing through the Mk6 until 2000 - a simple, underpowered but famously economical unit for high-mileage drivers.",
+          "familiesLabel": "Common Ford Escort Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "RTE / RTF / RTH - naturally aspirated 1.8 Endura D, 60hp, base LX and van variants",
             "RFD / RFK - turbocharged 1.8 Endura TD, 90hp, better motorway performance",
@@ -1963,6 +1890,11 @@
           "title": "Ford Escort Petrol Engines",
           "description": "The Escort's petrol engine range spans four decades and eight families - from the legendary Kent Crossflow (Mk1/Mk2) and Pinto RS2000 to the high-volume CVH (Mk3/Mk4) and modern Zetec-E (Mk5/Mk6).",
           "descriptor": "The Escort's petrol engine range spans four decades and eight families - from the legendary Kent Crossflow (Mk1/Mk2) and Pinto RS2000 to the high-volume CVH (Mk3/Mk4) and modern Zetec-E (Mk5/Mk6).",
+          "familiesLabel": "Common Ford Escort Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "Kent Crossflow (681F/691F/711M) - 1.1L, 1.3L, 1.6L, Mk1/Mk2, Mexico and 1600E",
             "Pinto (NESA/NESB) - 2.0L SOHC, Mk2 RS2000, 110hp, classic performance icon",

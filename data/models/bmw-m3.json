@@ -15,13 +15,13 @@
     "canonical": "/bmw/m3"
   },
   "assets": {
-    "heroBg": "/images/brands/bmw/models/bmw-bmw-m3-model-card.png",
+    "heroBg": "/images/brands/bmw/models/bmw-m3-model-card.png",
     "howItWorksBg": "/images/brands/bmw/brand/bmw-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/bmw/brand/bmw-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/bmw/brand/bmw-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/bmw/brand/bmw-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/bmw/brand/bmw-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/bmw/models/bmw-bmw-m3-model-card.png"
+    "ctaImage": "/images/brands/bmw/models/bmw-m3-model-card.png"
   },
   "sections": {
     "hero": {
@@ -790,6 +790,7 @@
               {
                 "code": "S14B23",
                 "title": "2.3L Petrol",
+                "familyHeading": "Four-Cylinder Pioneers (E30 M3) [1986-1991]",
                 "history": "The S14 was BMW M’s first production four-cylinder, essentially a detuned version of the Formula 1-sourced M12/13 engine. It was built specifically for Group A touring car homologation.",
                 "fuel": "Petrol",
                 "size": "2.3 Litre",
@@ -810,6 +811,7 @@
               {
                 "code": "S14B25",
                 "title": "2.5L Petrol",
+                "familyHeading": "Four-Cylinder Pioneers (E30 M3) [1986-1991]",
                 "history": "A rare factory stroker variant developed for the Sport Evolution (Evo 3). It featured a longer stroke crankshaft and was homologated to compete in the 2.5-litre touring car class.",
                 "fuel": "Petrol",
                 "size": "2.5 Litre",
@@ -830,6 +832,7 @@
               {
                 "code": "S50B30",
                 "title": "3.0L Petrol",
+                "familyHeading": "Straight-Six Naturally Aspirated Engines (E36 M3) [1992-1999]",
                 "history": "The first M3 straight-six, debuting VANOS variable valve timing for the intake cam. This engine shifted the M3’s character from the four-cylinder E30 to the torquier six-cylinder formula that defines the model today.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -850,6 +853,7 @@
               {
                 "code": "S50B32",
                 "title": "3.2L Petrol",
+                "familyHeading": "Straight-Six Naturally Aspirated Engines (E36 M3) [1992-1999]",
                 "history": "Dual VANOS (intake and exhaust) introduced, boosting power to 321 hp. One of the most charismatic inline-six engines BMW ever made, known for its individual throttle bodies and stratospheric 7,600 rpm redline .",
                 "fuel": "Petrol",
                 "size": "3.2 Litre",
@@ -870,6 +874,7 @@
               {
                 "code": "S54B32",
                 "title": "3.2L Petrol",
+                "familyHeading": "The Ultimate Straight-Six (E46 M3) [2000-2006]",
                 "history": "A high-revving masterpiece with individual throttle bodies and a 7,900 rpm redline. While plagued by early rod bearing issues, it won multiple International Engine of the Year awards and is the definitive M3 inline-six for many enthusiasts .",
                 "fuel": "Petrol",
                 "size": "3.2 Litre",
@@ -890,6 +895,7 @@
               {
                 "code": "S65B40",
                 "title": "4.0L V8 Petrol",
+                "familyHeading": "The V8 Era (E90/E92/E93 M3) [2007-2013]",
                 "history": "BMW’s only production V8 for the M3, derived directly from the M5’s V10. With a stratospheric 8,400 rpm redline and individual throttle bodies, it offers a unique naturally aspirated character not found in later turbocharged M3s .",
                 "fuel": "Petrol",
                 "size": "4.0 Litre",
@@ -910,6 +916,7 @@
               {
                 "code": "S65B44",
                 "title": "4.4L V8 Petrol",
+                "familyHeading": "The V8 Era (E90/E92/E93 M3) [2007-2013]",
                 "history": "A stroker engine built for the limited-run E92 M3 GTS. The bore was increased and the stroke lengthened to push output to 444 bhp, creating a homologation special for the track.",
                 "fuel": "Petrol",
                 "size": "4.4 Litre",
@@ -930,6 +937,7 @@
               {
                 "code": "S55B30",
                 "title": "3.0L Twin-Turbo Petrol",
+                "familyHeading": "Twin-Turbo Era (F80 M3 & F82/F83 M4) [2014-2020]",
                 "history": "The first turbocharged M3 engine, featuring a closed-deck crankcase, forged internals, and twin mono-scroll turbos. Using water-to-air intercooling, it decisively moved the M3 away from high-revving naturally aspirated heritage towards torque-driven forced induction .",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -950,6 +958,7 @@
               {
                 "code": "S58B30",
                 "title": "3.0L Twin-Turbo Petrol",
+                "familyHeading": "The S58 Generation (G80 M3 & G81 M3 Touring) [2021-Present]",
                 "history": "The latest evolution of BMW’s straight-six, featuring a 3D-printed cylinder head core, twin mono-scroll turbos with electric wastegates, and a flow-optimised intake. It powers the current M3 and M4 with output ranging from 473 hp to 550 hp (Competition xDrive).",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -1000,6 +1009,8 @@
           "engines": [
             {
               "code": "S14B23",
+              "title": "2.3L Petrol",
+              "familyHeading": "Four-Cylinder Pioneers (E30 M3) [1986-1991]",
               "fuel": "Petrol",
               "size": "2.3L",
               "power": "195-215 hp",
@@ -1010,6 +1021,8 @@
             },
             {
               "code": "S14B25",
+              "title": "2.5L Petrol",
+              "familyHeading": "Four-Cylinder Pioneers (E30 M3) [1986-1991]",
               "fuel": "Petrol",
               "size": "2.5L",
               "power": "235-238 hp",
@@ -1020,6 +1033,8 @@
             },
             {
               "code": "S50B30",
+              "title": "3.0L Petrol",
+              "familyHeading": "Straight-Six Naturally Aspirated Engines (E36 M3) [1992-1999]",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "282-286 hp",
@@ -1030,6 +1045,8 @@
             },
             {
               "code": "S50B32",
+              "title": "3.2L Petrol",
+              "familyHeading": "Straight-Six Naturally Aspirated Engines (E36 M3) [1992-1999]",
               "fuel": "Petrol",
               "size": "3.2L",
               "power": "321 hp",
@@ -1040,6 +1057,8 @@
             },
             {
               "code": "S54B32",
+              "title": "3.2L Petrol",
+              "familyHeading": "The Ultimate Straight-Six (E46 M3) [2000-2006]",
               "fuel": "Petrol",
               "size": "3.2L",
               "power": "338-355 hp",
@@ -1050,6 +1069,8 @@
             },
             {
               "code": "S65B40",
+              "title": "4.0L V8 Petrol",
+              "familyHeading": "The V8 Era (E90/E92/E93 M3) [2007-2013]",
               "fuel": "Petrol",
               "size": "4.0L",
               "power": "414-420 hp",
@@ -1060,6 +1081,8 @@
             },
             {
               "code": "S65B44",
+              "title": "4.4L V8 Petrol",
+              "familyHeading": "The V8 Era (E90/E92/E93 M3) [2007-2013]",
               "fuel": "Petrol",
               "size": "4.4L",
               "power": "444 hp",
@@ -1070,6 +1093,8 @@
             },
             {
               "code": "S55B30",
+              "title": "3.0L Twin-Turbo Petrol",
+              "familyHeading": "Twin-Turbo Era (F80 M3 & F82/F83 M4) [2014-2020]",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "425-450 hp (Standard), 444-460 hp (Competition)",
@@ -1080,6 +1105,8 @@
             },
             {
               "code": "S58B30",
+              "title": "3.0L Twin-Turbo Petrol",
+              "familyHeading": "The S58 Generation (G80 M3 & G81 M3 Touring) [2021-Present]",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "473-550 hp",
@@ -1542,6 +1569,11 @@
           "title": "BMW M3 Petrol Engines",
           "description": "Every BMW M3 ever sold in the UK has been petrol-powered, spanning four-cylinder homologation units, legendary straight-sixes, a unique V8, and modern twin-turbo sixes.",
           "descriptor": "Every BMW M3 ever sold in the UK has been petrol-powered, spanning four-cylinder homologation units, legendary straight-sixes, a unique V8, and modern twin-turbo sixes.",
+          "familiesLabel": "Common BMW M3 Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "S14 - Four-cylinder (E30 M3), high-revving Group A homologation engine",
             "S50 - Straight-six (E36 M3), single and dual VANOS, 286-321 hp",

@@ -15,13 +15,13 @@
     "canonical": "/ford/kuga"
   },
   "assets": {
-    "heroBg": "/images/brands/ford/models/ford-ford-kuga-model-card.png",
+    "heroBg": "/images/brands/ford/models/ford-kuga-model-card.png",
     "howItWorksBg": "/images/brands/ford/brand/ford-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/ford/brand/ford-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/ford/brand/ford-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/ford/brand/ford-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/ford/brand/ford-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/ford/models/ford-ford-kuga-model-card.png"
+    "ctaImage": "/images/brands/ford/models/ford-kuga-model-card.png"
   },
   "sections": {
     "hero": {
@@ -733,8 +733,9 @@
             "name": "Diesel Engines",
             "entries": [
               {
-                "code": "G6DG - 2.",
-                "title": "0L Diesel",
+                "code": "G6DG",
+                "title": "2.0L Diesel",
+                "familyHeading": "Duratorq / TDCi Diesel Engines (2008-2016)",
                 "history": "The G6DG is a 2.0L Duratorq TDCi unit fitted to early Mk1 Kuga models, offering 138bhp and known for its robust bottom end design.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -753,8 +754,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "UFMA - 2.",
-                "title": "0L Diesel",
+                "code": "UFMA",
+                "title": "2.0L Diesel",
+                "familyHeading": "Duratorq / TDCi Diesel Engines (2008-2016)",
                 "history": "A higher-output evolution of the Duratorq TDCi, the UFMA was introduced in Mk1 facelift models with improved emissions calibration for Euro 5 compliance.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -773,8 +775,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "T7MA - 2.",
-                "title": "0L Diesel",
+                "code": "T7MA",
+                "title": "2.0L Diesel",
+                "familyHeading": "Duratorq / TDCi Diesel Engines (2008-2016)",
                 "history": "Fitted to early Mk2 Kuga models (2013-2016), the T7MA represented Ford's next-generation Duratorq with reduced friction and improved thermal efficiency for lower emissions.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -793,8 +796,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "DW10 / DW12 - 2.",
-                "title": "0L Diesel",
+                "code": "DW10 / DW12",
+                "title": "2.0L Diesel",
+                "familyHeading": "Duratorq / TDCi Diesel Engines (2008-2016)",
                 "history": "The PSA-sourced DW10 and DW12 engines (also known as the Ford DW Series) brought common-rail refinement to the Kuga Mk2 range, shared with the Ford Focus and C-Max, ensuring parts availability and specialist knowledge across the UK.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -813,8 +817,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "XWDA - 1.",
-                "title": "5L Diesel",
+                "code": "XWDA",
+                "title": "1.5L Diesel",
+                "familyHeading": "Duratorq / TDCi Diesel Engines (2008-2016)",
                 "history": "The 1.5L TDCi XWDA was introduced in the Mk2 facelift (2015-2019) as a more economical entry point to the Kuga diesel range, offering lower running costs and ULEZ-compliant Euro 6 emissions.",
                 "fuel": "Diesel",
                 "size": "1.5 Litre",
@@ -833,8 +838,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "RFFA / DV10 / DV12 - 2.",
-                "title": "0L Diesel",
+                "code": "RFFA / DV10 / DV12",
+                "title": "2.0L Diesel",
+                "familyHeading": "Duratorq / TDCi Diesel Engines (2008-2016)",
                 "history": "These later 2.0L TDCi units (2016-2019) feature upgraded EGR coolers and revised turbocharger oil supply systems to address earlier reliability concerns. Shared with the Ford Focus Mk4 and Mondeo Mk5, parts and specialist knowledge remain widely available.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -858,8 +864,9 @@
             "name": "Petrol Engines",
             "entries": [
               {
-                "code": "HYDB / HYDA - 2.",
-                "title": "5L Petrol",
+                "code": "HYDB / HYDA",
+                "title": "2.5L Petrol",
+                "familyHeading": "Duratec Petrol Engines (2008-2013)",
                 "history": "The 2.5L Duratec ST (HYDB/HYDA) is a Volvo-sourced five-cylinder turbocharged unit fitted exclusively to the Mk1 Kuga. Known for its distinctive five-cylinder exhaust note and 197-200bhp output, it remains a favourite among Kuga enthusiasts.",
                 "fuel": "Petrol",
                 "size": "2.5 Litre",
@@ -878,8 +885,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "JTMA / JQDA - 1.",
-                "title": "6L EcoBoost",
+                "code": "JTMA / JQDA",
+                "title": "1.6L EcoBoost",
+                "familyHeading": "EcoBoost Petrol Engines (2013-Present)",
                 "history": "The 1.6L EcoBoost (JTMA/JQDA) was the first turbocharged petrol option in the Mk2 Kuga, delivering strong performance from a small displacement. Later replaced by the 1.5L EcoBoost in the 2015 facelift.",
                 "fuel": "Petrol",
                 "size": "1.6 Litre",
@@ -898,8 +906,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "M1JA / YYDA - 1.",
-                "title": "5L EcoBoost",
+                "code": "M1JA / YYDA",
+                "title": "1.5L EcoBoost",
+                "familyHeading": "EcoBoost Petrol Engines (2013-Present)",
                 "history": "The 1.5L EcoBoost replaced the 1.6L unit in the 2015 Kuga facelift, featuring improved low-end torque and lower CO2 emissions. However, it inherited the wet belt timing system that has become the defining failure point for this engine family across all Ford models.",
                 "fuel": "Petrol",
                 "size": "1.5 Litre",
@@ -918,8 +927,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "TYDA - 2.",
-                "title": "0L EcoBoost",
+                "code": "TYDA",
+                "title": "2.0L EcoBoost",
+                "familyHeading": "EcoBoost Petrol Engines (2013-Present)",
                 "history": "The 2.0L EcoBoost (TYDA) is the range-topping petrol engine in Mk2 and Mk3 Kuga models, offering 237-247bhp and strong torque delivery. Shared with the Ford Focus ST and Mondeo, this engine offers genuine performance potential for Kuga owners.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -943,8 +953,9 @@
             "name": "Hybrid / Electrified Engines",
             "entries": [
               {
-                "code": "BGDC / BGDD - 2.5L Atkinson Cycle",
-                "title": "Hybrid (HEV/PHEV)",
+                "code": "BGDC / BGDD",
+                "title": "2.5L Atkinson Cycle Hybrid (HEV/PHEV)",
+                "familyHeading": "Duratec Hybrid Engines (2020-Present)",
                 "history": "The 2.5L Duratec Atkinson cycle engine powers Ford's third-generation Kuga Hybrid and Plug-In Hybrid models. Optimised for thermal efficiency rather than peak power, this engine works in conjunction with an electric motor and CVT transmission. Introduced in 2020 to meet tightening emissions regulations and growing UK demand for electrified family SUVs.",
                 "fuel": "HEV/PHEV (Full Hybrid / Plug-In Hybrid)",
                 "size": "2.5 Litre",
@@ -959,6 +970,7 @@
               {
                 "code": "Titanium",
                 "title": "Hybrid, Titanium Plug-In Hybrid, ST-Line Plug-In Hybrid, Vignale Plug-In Hybrid, Active Plug-In Hybrid",
+                "familyHeading": "Duratec Hybrid Engines (2020-Present)",
                 "history": "",
                 "fuel": "",
                 "size": "",
@@ -1008,7 +1020,9 @@
           "failureNote": "Main replacement triggers are timing chain wear, EGR / cooling faults and turbo-control issues.",
           "engines": [
             {
-              "code": "G6DG - 2.",
+              "code": "G6DG",
+              "title": "2.0L Diesel",
+              "familyHeading": "Duratorq / TDCi Diesel Engines (2008-2016)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "136-138 hp",
@@ -1018,7 +1032,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "UFMA - 2.",
+              "code": "UFMA",
+              "title": "2.0L Diesel",
+              "familyHeading": "Duratorq / TDCi Diesel Engines (2008-2016)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "138-140 hp",
@@ -1028,7 +1044,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "T7MA - 2.",
+              "code": "T7MA",
+              "title": "2.0L Diesel",
+              "familyHeading": "Duratorq / TDCi Diesel Engines (2008-2016)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "138-148 hp",
@@ -1038,7 +1056,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "DW10 / DW12 - 2.",
+              "code": "DW10 / DW12",
+              "title": "2.0L Diesel",
+              "familyHeading": "Duratorq / TDCi Diesel Engines (2008-2016)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "148-178 hp (DW10: 148hp, DW12: 178hp)",
@@ -1048,7 +1068,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "XWDA - 1.",
+              "code": "XWDA",
+              "title": "1.5L Diesel",
+              "familyHeading": "Duratorq / TDCi Diesel Engines (2008-2016)",
               "fuel": "Diesel",
               "size": "1.5L",
               "power": "118 hp",
@@ -1058,7 +1080,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "RFFA / DV10 / DV12 - 2.",
+              "code": "RFFA / DV10 / DV12",
+              "title": "2.0L Diesel",
+              "familyHeading": "Duratorq / TDCi Diesel Engines (2008-2016)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "148-178 hp",
@@ -1075,7 +1099,9 @@
           "failureNote": "Main replacement demand comes from timing-chain, cooling-system and performance thermal-management faults.",
           "engines": [
             {
-              "code": "HYDB / HYDA - 2.",
+              "code": "HYDB / HYDA",
+              "title": "2.5L Petrol",
+              "familyHeading": "Duratec Petrol Engines (2008-2013)",
               "fuel": "Petrol",
               "size": "2.5L",
               "power": "197-200 hp",
@@ -1085,7 +1111,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "JTMA / JQDA - 1.",
+              "code": "JTMA / JQDA",
+              "title": "1.6L EcoBoost",
+              "familyHeading": "EcoBoost Petrol Engines (2013-Present)",
               "fuel": "Petrol",
               "size": "1.6L",
               "power": "148-178 hp",
@@ -1095,7 +1123,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "M1JA / YYDA - 1.",
+              "code": "M1JA / YYDA",
+              "title": "1.5L EcoBoost",
+              "familyHeading": "EcoBoost Petrol Engines (2013-Present)",
               "fuel": "Petrol",
               "size": "1.5L",
               "power": "148-178 hp",
@@ -1105,7 +1135,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "TYDA - 2.",
+              "code": "TYDA",
+              "title": "2.0L EcoBoost",
+              "familyHeading": "EcoBoost Petrol Engines (2013-Present)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "237-247 hp",
@@ -1122,7 +1154,9 @@
           "failureNote": "Main replacement demand comes from cooling, battery-support and high-voltage control faults.",
           "engines": [
             {
-              "code": "BGDC / BGDD - 2.5L Atkinson Cycle",
+              "code": "BGDC / BGDD",
+              "title": "2.5L Atkinson Cycle Hybrid (HEV/PHEV)",
+              "familyHeading": "Duratec Hybrid Engines (2020-Present)",
               "fuel": "HEV/PHEV (Full Hybrid / Plug-In Hybrid)",
               "size": "2.5L",
               "power": "180-222 hp (combined system output)",
@@ -1133,6 +1167,8 @@
             },
             {
               "code": "Titanium",
+              "title": "Hybrid, Titanium Plug-In Hybrid, ST-Line Plug-In Hybrid, Vignale Plug-In Hybrid, Active Plug-In Hybrid",
+              "familyHeading": "Duratec Hybrid Engines (2020-Present)",
               "fuel": "",
               "size": "",
               "power": "",
@@ -1648,6 +1684,11 @@
           "title": "Ford Kuga Diesel Engines",
           "description": "Diesel powered the majority of UK Kuga sales across all three generations, with 2.0-litre TDCi units dominating replacement enquiries - particularly EGR, DPF, and turbo-related failures on the Mk2 and Mk3.",
           "descriptor": "Diesel powered the majority of UK Kuga sales across all three generations, with 2.0-litre TDCi units dominating replacement enquiries - particularly EGR, DPF, and turbo-related failures on the Mk2 and Mk3.",
+          "familiesLabel": "Common Ford Kuga Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "G6DG / UFMA - early Mk1 2.0 TDCi (136-140hp), turbo oil feed failures",
             "T7MA - Mk2 2.0 TDCi (138-148hp), injector seal failure common",
@@ -1675,6 +1716,11 @@
           "title": "Ford Kuga Petrol Engines",
           "description": "Petrol Kugas grew from a niche Mk1 2.5-litre five-cylinder to mainstream 1.5 and 2.0 EcoBoost units in the Mk2 and Mk3 - with the 1.5 EcoBoost wet belt failure now the single highest replacement driver for the entire model range.",
           "descriptor": "Petrol Kugas grew from a niche Mk1 2.5-litre five-cylinder to mainstream 1.5 and 2.0 EcoBoost units in the Mk2 and Mk3 - with the 1.5 EcoBoost wet belt failure now the single highest replacement driver for the entire model range.",
+          "familiesLabel": "Common Ford Kuga Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "HYDB / HYDA - Mk1 2.5 Duratec turbo (197-200hp), Volvo-derived five-cylinder",
             "JTMA / JQMA - Mk2 1.6 EcoBoost (148-178hp), turbo oil seal and cooling issues",
@@ -1702,6 +1748,11 @@
           "title": "Ford Kuga Plug-In Hybrid (PHEV) & Full Hybrid (HEV) Engines",
           "description": "The Mk3 Kuga (2020-present) introduced Ford's electrified powertrains - a 2.5-litre Atkinson cycle petrol engine paired with an electric motor and CVT, available as both self-charging hybrid (HEV) and plug-in hybrid (PHEV).",
           "descriptor": "The Mk3 Kuga (2020-present) introduced Ford's electrified powertrains - a 2.5-litre Atkinson cycle petrol engine paired with an electric motor and CVT, available as both self-charging hybrid (HEV) and plug-in hybrid (PHEV).",
+          "familiesLabel": "Ford Kuga Hybrid Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "BGDC / BGDA - 2.5 Duratec Atkinson cycle (HEV and PHEV variants)",
             "Electric motor - integrated with eCVT transmission",

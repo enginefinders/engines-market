@@ -15,13 +15,13 @@
     "canonical": "/ford/mondeo"
   },
   "assets": {
-    "heroBg": "/images/brands/ford/models/ford-ford-mondeo-model-card.png",
+    "heroBg": "/images/brands/ford/models/ford-mondeo-model-card.png",
     "howItWorksBg": "/images/brands/ford/brand/ford-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/ford/brand/ford-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/ford/brand/ford-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/ford/brand/ford-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/ford/brand/ford-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/ford/models/ford-ford-mondeo-model-card.png"
+    "ctaImage": "/images/brands/ford/models/ford-mondeo-model-card.png"
   },
   "sections": {
     "hero": {
@@ -699,8 +699,9 @@
             "name": "Diesel Engines",
             "entries": [
               {
-                "code": "AZBA - 2.",
-                "title": "0L Diesel",
+                "code": "AZBA",
+                "title": "2.0L Diesel",
+                "familyHeading": "2.0L Duratorq TDCi Family (2007-2022)",
                 "history": "MK3 Mondeo's main 2.0 TDCi fleet engine; timing chain tensioner issues defined its replacement profile.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -719,8 +720,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "AOWA - 2.",
-                "title": "0L Diesel",
+                "code": "AOWA",
+                "title": "2.0L Diesel",
+                "familyHeading": "2.0L Duratorq TDCi Family (2007-2022)",
                 "history": "Higher-output 2.0 TDCi variant for Titanium and ST-Line; shared AZBA architecture with revised tuning.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -739,8 +741,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "TXWA - 2.",
-                "title": "0L Diesel",
+                "code": "TXWA",
+                "title": "2.0L Diesel",
+                "familyHeading": "2.0L Duratorq TDCi Family (2007-2022)",
                 "history": "Facelift MK3 2.0 TDCi code; improved emissions compliance while retaining proven Duratorq reliability.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -759,8 +762,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "UKWA - 2.",
-                "title": "0L Diesel",
+                "code": "UKWA",
+                "title": "2.0L Diesel",
+                "familyHeading": "2.0L Duratorq TDCi Family (2007-2022)",
                 "history": "Latest EcoBlue replacement for Duratorq; cleaner emissions and refined operation for MK4/MK5 Mondeo.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -779,8 +783,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "XWDA - 1.",
-                "title": "6L Diesel",
+                "code": "XWDA",
+                "title": "1.6L Diesel",
+                "familyHeading": "1.6L Duratorq TDCi Family (2007-2014)",
                 "history": "Entry-level Mondeo diesel; economical for fleet use but timing chain stretch became a known high-mileage issue.",
                 "fuel": "Diesel",
                 "size": "1.6 Litre",
@@ -799,8 +804,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "AODB - 1.",
-                "title": "8L Diesel",
+                "code": "AODB",
+                "title": "1.8L Diesel",
+                "familyHeading": "1.8L Duratorq TDCi Family (2007-2014)",
                 "history": "Mid-range Mondeo diesel offering balanced torque and economy; injector failures common on high-mileage examples.",
                 "fuel": "Diesel",
                 "size": "1.8 Litre",
@@ -819,8 +825,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "KNWA - 2.",
-                "title": "2L Diesel",
+                "code": "KNWA",
+                "title": "2.2L Diesel",
+                "familyHeading": "2.2L Duratorq TDCi Family (2007-2014)",
                 "history": "High-output Mondeo diesel for towing and performance; robust block but turbo and injector costs drive replacements.",
                 "fuel": "Diesel",
                 "size": "2.2 Litre",
@@ -844,8 +851,9 @@
             "name": "Petrol Engines",
             "entries": [
               {
-                "code": "R20A - 2.",
-                "title": "0L Petrol",
+                "code": "R20A",
+                "title": "2.0L Petrol",
+                "familyHeading": "2.0L Duratec HE Family (2007-2014)",
                 "history": "Naturally aspirated Mondeo petrol; simple and reliable but oil consumption issues on higher-mileage units.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -864,8 +872,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "M9DA - 1.",
-                "title": "6L Petrol",
+                "code": "M9DA",
+                "title": "1.6L Petrol",
+                "familyHeading": "1.6L EcoBoost Family (2014-2022)",
                 "history": "Downsized turbo petrol for MK4 Mondeo; efficient but carbon buildup on intake valves requires attention.",
                 "fuel": "Petrol",
                 "size": "1.6 Litre",
@@ -884,8 +893,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "UNBA - 2.",
-                "title": "0L Petrol",
+                "code": "UNBA",
+                "title": "2.0L Petrol",
+                "familyHeading": "2.0L EcoBoost Family (2014-2022)",
                 "history": "Performance-oriented Mondeo petrol; strong torque but direct injection carbon and turbo wear drive replacements.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -904,8 +914,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "HUBA - 2.",
-                "title": "5L Petrol",
+                "code": "HUBA",
+                "title": "2.5L Petrol",
+                "familyHeading": "2.5L Turbo Performance (2007-2014)",
                 "history": "Mondeo ST's turbocharged five-cylinder; enthusiast favourite but piston ring and turbo failures prompt specialist rebuilds.",
                 "fuel": "Petrol",
                 "size": "2.5 Litre",
@@ -929,8 +940,9 @@
             "name": "Hybrid / Electrified Engines",
             "entries": [
               {
-                "code": "HYB-2.0 - 2.",
-                "title": "0L Hybrid",
+                "code": "HYB-2.0",
+                "title": "2.0L Hybrid",
+                "familyHeading": "2.0L Atkinson Cycle Hybrid (2014-2022)",
                 "history": "Mondeo's first hybrid powertrain; combines Atkinson-cycle petrol with electric motor for urban efficiency.",
                 "fuel": "HEV (Full Hybrid)",
                 "size": "2.0 Litre",
@@ -982,7 +994,9 @@
           "failureNote": "Main replacement triggers are timing chain wear, EGR / cooling faults and turbo-control issues.",
           "engines": [
             {
-              "code": "AZBA - 2.",
+              "code": "AZBA",
+              "title": "2.0L Diesel",
+              "familyHeading": "2.0L Duratorq TDCi Family (2007-2022)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "140-163 hp",
@@ -992,7 +1006,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "AOWA - 2.",
+              "code": "AOWA",
+              "title": "2.0L Diesel",
+              "familyHeading": "2.0L Duratorq TDCi Family (2007-2022)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "163 hp",
@@ -1002,7 +1018,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "TXWA - 2.",
+              "code": "TXWA",
+              "title": "2.0L Diesel",
+              "familyHeading": "2.0L Duratorq TDCi Family (2007-2022)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "140-163 hp",
@@ -1012,7 +1030,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "UKWA - 2.",
+              "code": "UKWA",
+              "title": "2.0L Diesel",
+              "familyHeading": "2.0L Duratorq TDCi Family (2007-2022)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "150-190 hp",
@@ -1022,7 +1042,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "XWDA - 1.",
+              "code": "XWDA",
+              "title": "1.6L Diesel",
+              "familyHeading": "1.6L Duratorq TDCi Family (2007-2014)",
               "fuel": "Diesel",
               "size": "1.6L",
               "power": "115 hp",
@@ -1032,7 +1054,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "AODB - 1.",
+              "code": "AODB",
+              "title": "1.8L Diesel",
+              "familyHeading": "1.8L Duratorq TDCi Family (2007-2014)",
               "fuel": "Diesel",
               "size": "1.8L",
               "power": "125 hp",
@@ -1042,7 +1066,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "KNWA - 2.",
+              "code": "KNWA",
+              "title": "2.2L Diesel",
+              "familyHeading": "2.2L Duratorq TDCi Family (2007-2014)",
               "fuel": "Diesel",
               "size": "2.2L",
               "power": "175-200 hp",
@@ -1059,7 +1085,9 @@
           "failureNote": "Main replacement demand comes from timing-chain, cooling-system and performance thermal-management faults.",
           "engines": [
             {
-              "code": "R20A - 2.",
+              "code": "R20A",
+              "title": "2.0L Petrol",
+              "familyHeading": "2.0L Duratec HE Family (2007-2014)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "145 hp",
@@ -1069,7 +1097,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "M9DA - 1.",
+              "code": "M9DA",
+              "title": "1.6L Petrol",
+              "familyHeading": "1.6L EcoBoost Family (2014-2022)",
               "fuel": "Petrol",
               "size": "1.6L",
               "power": "160 hp",
@@ -1079,7 +1109,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "UNBA - 2.",
+              "code": "UNBA",
+              "title": "2.0L Petrol",
+              "familyHeading": "2.0L EcoBoost Family (2014-2022)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "203-240 hp",
@@ -1089,7 +1121,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "HUBA - 2.",
+              "code": "HUBA",
+              "title": "2.5L Petrol",
+              "familyHeading": "2.5L Turbo Performance (2007-2014)",
               "fuel": "Petrol",
               "size": "2.5L",
               "power": "220 hp",
@@ -1106,7 +1140,9 @@
           "failureNote": "Main replacement demand comes from cooling, battery-support and high-voltage control faults.",
           "engines": [
             {
-              "code": "HYB-2.0 - 2.",
+              "code": "HYB-2.0",
+              "title": "2.0L Hybrid",
+              "familyHeading": "2.0L Atkinson Cycle Hybrid (2014-2022)",
               "fuel": "HEV (Full Hybrid)",
               "size": "2.0L",
               "power": "187 hp (combined system)",
@@ -1571,6 +1607,11 @@
           "title": "Ford Mondeo Diesel Engines",
           "description": "Dominating four generations of UK sales, Duratorq and EcoBlue diesels remain the most requested replacements for fleet, taxi and high-mileage private Mondeo owners.",
           "descriptor": "Dominating four generations of UK sales, Duratorq and EcoBlue diesels remain the most requested replacements for fleet, taxi and high-mileage private Mondeo owners.",
+          "familiesLabel": "Common Ford Mondeo Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "AZBA/AOWA - dominant MK3 fleet diesel with timing chain tensioner risks",
             "UKWA/UKWB - latest MK4 EcoBlue unit offering improved emissions compliance",
@@ -1601,6 +1642,11 @@
           "title": "Ford Mondeo Petrol Engines",
           "description": "Spanning naturally aspirated Duratec to modern direct-injection EcoBoost turbo units, petrol Mondeos offer simpler maintenance profiles and lower initial acquisition costs.",
           "descriptor": "Spanning naturally aspirated Duratec to modern direct-injection EcoBoost turbo units, petrol Mondeos offer simpler maintenance profiles and lower initial acquisition costs.",
+          "familiesLabel": "Common Ford Mondeo Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "R20A/R20B - reliable 2.0L Duratec HE unit with minor oil consumption traits",
             "UNBA/UNBB - powerful 2.0L EcoBoost requiring regular intake carbon management",
@@ -1631,6 +1677,11 @@
           "title": "Ford Mondeo Hybrid (HEV) Engines",
           "description": "Introduced in the MK4 generation, the Atkinson-cycle hybrid pairs a refined petrol engine with an electric motor to deliver seamless urban efficiency and reduced fleet emissions.",
           "descriptor": "Introduced in the MK4 generation, the Atkinson-cycle hybrid pairs a refined petrol engine with an electric motor to deliver seamless urban efficiency and reduced fleet emissions.",
+          "familiesLabel": "Ford Mondeo Hybrid (HEV) Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "FFHA/HYB-2.0 - 2.0L Atkinson-cycle combined system powering Titanium and Vignale trims",
             "Parallel architecture seamlessly switches between electric and petrol propulsion",

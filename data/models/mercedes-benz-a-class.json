@@ -15,13 +15,13 @@
     "canonical": "/mercedes-benz/a-class"
   },
   "assets": {
-    "heroBg": "/images/brands/mercedes-benz/models/mercedes-benz-mercedes-benz-a-class-model-card.png",
+    "heroBg": "/images/brands/mercedes-benz/models/mercedes-benz-a-class-model-card.png",
     "howItWorksBg": "/images/brands/mercedes-benz/brand/mercedes-benz-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/mercedes-benz/models/mercedes-benz-mercedes-benz-a-class-model-card.png"
+    "ctaImage": "/images/brands/mercedes-benz/models/mercedes-benz-a-class-model-card.png"
   },
   "sections": {
     "hero": {
@@ -798,6 +798,7 @@
               {
                 "code": "OM668.940",
                 "title": "1.7L Diesel",
+                "familyHeading": "OM600 Series Diesel Engines (1997-2008)",
                 "history": "The OM668 was Mercedes' first common-rail diesel for the A-Class, introduced with the W168. It offered CDI efficiency in a compact transverse package .",
                 "fuel": "Diesel",
                 "size": "1.7 Litre",
@@ -818,6 +819,7 @@
               {
                 "code": "OM640",
                 "title": "2.0L Diesel",
+                "familyHeading": "OM600 Series Diesel Engines (1997-2008)",
                 "history": "The OM640 powered the second-generation W169 diesel range, offering improved refinement and lower emissions over the earlier OM668. It was available in multiple power outputs across CDI badged variants.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -838,6 +840,7 @@
               {
                 "code": "OM607",
                 "title": "1.5L Diesel",
+                "familyHeading": "OM607 / OM651 Series Diesel Engines (2012-2018)",
                 "history": "The OM607 is a Renault-sourced 1.5 dCi engine co-developed with the Renault-Nissan Alliance. It powers entry-level A-Class diesel models and uses a timing belt rather than Mercedes' typical chain .",
                 "fuel": "Diesel",
                 "size": "1.5 Litre",
@@ -858,6 +861,7 @@
               {
                 "code": "OM651",
                 "title": "1.8L / 2.1L Diesel",
+                "familyHeading": "OM607 / OM651 Series Diesel Engines (2012-2018)",
                 "history": "The OM651 is one of Mercedes' most produced diesel engines, known for robust performance and rear-mounted timing chain design. It was fitted to higher-output A-Class diesel variants across multiple generations .",
                 "fuel": "Diesel",
                 "size": "1.8-2.1 Litre",
@@ -878,6 +882,7 @@
               {
                 "code": "OM654",
                 "title": "2.0L Diesel",
+                "familyHeading": "OM654 Series Diesel Engines (2018-Present)",
                 "history": "The OM654 is a clean-sheet design built entirely from aluminium, reducing weight by 17% compared to the OM651. It features steel pistons in an aluminium block for optimised thermal management .",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -903,6 +908,7 @@
               {
                 "code": "M166",
                 "title": "1.4L / 1.6L / 2.1L Petrol",
+                "familyHeading": "M166 Series Petrol Engines (1997-2004)",
                 "history": "The M166 family powered the original W168 A-Class, offering compact transverse packaging that enabled the model's revolutionary \"sandwich\" floorpan design. The A210 Evolution received the largest variant .",
                 "fuel": "Petrol",
                 "size": "1.4-2.1 Litre",
@@ -923,6 +929,7 @@
               {
                 "code": "M266",
                 "title": "1.5L / 1.7L / 2.0L Petrol",
+                "familyHeading": "M266 Series Petrol Engines (2004-2012)",
                 "history": "The M266 improved upon the M166 with better fuel economy and lower emissions, powering the second-generation W169 A-Class across all petrol variants including the A200 Turbo .",
                 "fuel": "Petrol",
                 "size": "1.5-2.0 Litre",
@@ -943,6 +950,7 @@
               {
                 "code": "M270",
                 "title": "1.6L / 2.0L Turbo Petrol",
+                "familyHeading": "M270 / M274 Series Petrol Engines (2012-2018)",
                 "history": "The M270 introduced turbocharging across the A-Class petrol range, designed for Mercedes' MFA platform with front-mounted timing chain and direct injection. The A45 AMG received a high-output derivative badged M133 .",
                 "fuel": "Petrol",
                 "size": "1.6-2.0 Litre",
@@ -963,6 +971,7 @@
               {
                 "code": "M274",
                 "title": "2.0L Turbo Petrol",
+                "familyHeading": "M270 / M274 Series Petrol Engines (2012-2018)",
                 "history": "The M274 is a longitudinal variant of the M270 family, used in higher-output A-Class models. It shares much of its architecture with the M270 but features revised engine management .",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -983,6 +992,7 @@
               {
                 "code": "M282",
                 "title": "1.3L Turbo Petrol",
+                "familyHeading": "M282 / M260 Series Petrol Engines (2018-Present)",
                 "history": "The M282 is a co-developed engine with the Renault-Nissan Alliance (Renault HR13DDT), featuring Mercedes' Nanoslide cylinder coating and cylinder deactivation technology for improved efficiency .",
                 "fuel": "Petrol",
                 "size": "1.3 Litre",
@@ -1003,6 +1013,7 @@
               {
                 "code": "M260",
                 "title": "2.0L Turbo Petrol",
+                "familyHeading": "M282 / M260 Series Petrol Engines (2018-Present)",
                 "history": "The M260 replaced the M270 for the W177 generation, producing class-leading specific output. The M139 AMG variant (A45 S) remains one of the most powerful production four-cylinder engines .",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -1028,6 +1039,7 @@
               {
                 "code": "M282 + Electric Motor",
                 "title": "1.3L PHEV",
+                "familyHeading": "Plug-in Hybrid & Mild Hybrid Systems (2018-Present)",
                 "history": "The A250e combines the M282 petrol engine with an electric motor integrated into the 7-speed DCT gearbox, offering EV-only range and reduced company car tax. The high-voltage battery sits under the rear floor .",
                 "fuel": "PHEV Petrol",
                 "size": "1.3 Litre + Electric Motor",
@@ -1048,6 +1060,7 @@
               {
                 "code": "M264",
                 "title": "1.5L / 2.0L EQ Boost Mild Hybrid",
+                "familyHeading": "Plug-in Hybrid & Mild Hybrid Systems (2018-Present)",
                 "history": "The M264 features Mercedes' EQ Boost mild hybrid system with an integrated starter-generator (RSG) providing 48V assistance for coasting, boost, and energy recovery. It bridged the gap before the M260/M282 introduction .",
                 "fuel": "MHEV Petrol",
                 "size": "1.5-2.0 Litre",
@@ -1100,6 +1113,8 @@
           "engines": [
             {
               "code": "OM668.940",
+              "title": "1.7L Diesel",
+              "familyHeading": "OM600 Series Diesel Engines (1997-2008)",
               "fuel": "Diesel",
               "size": "1.7L",
               "power": "75-95 hp",
@@ -1110,6 +1125,8 @@
             },
             {
               "code": "OM640",
+              "title": "2.0L Diesel",
+              "familyHeading": "OM600 Series Diesel Engines (1997-2008)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "82-109 hp",
@@ -1120,6 +1137,8 @@
             },
             {
               "code": "OM607",
+              "title": "1.5L Diesel",
+              "familyHeading": "OM607 / OM651 Series Diesel Engines (2012-2018)",
               "fuel": "Diesel",
               "size": "1.5L",
               "power": "107-109 hp",
@@ -1130,6 +1149,8 @@
             },
             {
               "code": "OM651",
+              "title": "1.8L / 2.1L Diesel",
+              "familyHeading": "OM607 / OM651 Series Diesel Engines (2012-2018)",
               "fuel": "Diesel",
               "size": "1.8-2.1L",
               "power": "109-177 hp",
@@ -1140,6 +1161,8 @@
             },
             {
               "code": "OM654",
+              "title": "2.0L Diesel",
+              "familyHeading": "OM654 Series Diesel Engines (2018-Present)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "136-190 hp",
@@ -1157,6 +1180,8 @@
           "engines": [
             {
               "code": "M166",
+              "title": "1.4L / 1.6L / 2.1L Petrol",
+              "familyHeading": "M166 Series Petrol Engines (1997-2004)",
               "fuel": "Petrol",
               "size": "1.4-2.1L",
               "power": "82-140 hp",
@@ -1167,6 +1192,8 @@
             },
             {
               "code": "M266",
+              "title": "1.5L / 1.7L / 2.0L Petrol",
+              "familyHeading": "M266 Series Petrol Engines (2004-2012)",
               "fuel": "Petrol",
               "size": "1.5-2.0L",
               "power": "95-193 hp",
@@ -1177,6 +1204,8 @@
             },
             {
               "code": "M270",
+              "title": "1.6L / 2.0L Turbo Petrol",
+              "familyHeading": "M270 / M274 Series Petrol Engines (2012-2018)",
               "fuel": "Petrol",
               "size": "1.6-2.0L",
               "power": "122-211 hp (standard), 355-381 hp (AMG)",
@@ -1187,6 +1216,8 @@
             },
             {
               "code": "M274",
+              "title": "2.0L Turbo Petrol",
+              "familyHeading": "M270 / M274 Series Petrol Engines (2012-2018)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "184-211 hp",
@@ -1197,6 +1228,8 @@
             },
             {
               "code": "M282",
+              "title": "1.3L Turbo Petrol",
+              "familyHeading": "M282 / M260 Series Petrol Engines (2018-Present)",
               "fuel": "Petrol",
               "size": "1.3L",
               "power": "136-163 hp",
@@ -1207,6 +1240,8 @@
             },
             {
               "code": "M260",
+              "title": "2.0L Turbo Petrol",
+              "familyHeading": "M282 / M260 Series Petrol Engines (2018-Present)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "224-306 hp (standard), 416-421 hp (AMG)",
@@ -1224,6 +1259,8 @@
           "engines": [
             {
               "code": "M282 + Electric Motor",
+              "title": "1.3L PHEV",
+              "familyHeading": "Plug-in Hybrid & Mild Hybrid Systems (2018-Present)",
               "fuel": "PHEV Petrol",
               "size": "1.3L + Electric Motor",
               "power": "218 hp combined",
@@ -1234,6 +1271,8 @@
             },
             {
               "code": "M264",
+              "title": "1.5L / 2.0L EQ Boost Mild Hybrid",
+              "familyHeading": "Plug-in Hybrid & Mild Hybrid Systems (2018-Present)",
               "fuel": "MHEV Petrol",
               "size": "1.5-2.0L",
               "power": "163-197 hp (plus 14 hp EQ Boost)",
@@ -1813,6 +1852,11 @@
           "title": "Mercedes-Benz A Class Diesel Engines",
           "description": "Diesel power spanned four A-Class generations from 1997 to the present day, with OM600, OM640, OM607, OM651 and OM654 families driving replacement demand - particularly on W176 and W177 models.",
           "descriptor": "Diesel power spanned four A-Class generations from 1997 to the present day, with OM600, OM640, OM607, OM651 and OM654 families driving replacement demand - particularly on W176 and W177 models.",
+          "familiesLabel": "Common Mercedes-Benz A Class Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "OM668 - W168 A160 CDI (1.7L), first common-rail diesel in an A-Class",
             "OM640 - W169 A160/A180/A200 CDI (2.0L), timing chain tensioner weakness",
@@ -1840,6 +1884,11 @@
           "title": "Mercedes-Benz A Class Petrol Engines",
           "description": "Petrol engines have evolved from simple naturally aspirated units (M166, M266) through turbocharged M270/M274 families to the high-output M260 and AMG M133/M139 monsters - spanning W168 to W177 generations.",
           "descriptor": "Petrol engines have evolved from simple naturally aspirated units (M166, M266) through turbocharged M270/M274 families to the high-output M260 and AMG M133/M139 monsters - spanning W168 to W177 generations.",
+          "familiesLabel": "Common Mercedes-Benz A Class Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "M166 - W168 A140/A160/A190/A210 Evolution (1.4L-2.1L), head gasket failure risk",
             "M266 - W169 A150/A160/A170/A200/A200 Turbo (1.5L-2.0L), oil sludge vulnerability",
@@ -1870,6 +1919,11 @@
           "title": "Mercedes-Benz A Class Mild Hybrid (MHEV) Engines",
           "description": "The M264 EQ Boost engine introduced 48V mild hybrid technology to the W177 A-Class (2018-2021), adding electric assistance without external charging.",
           "descriptor": "The M264 EQ Boost engine introduced 48V mild hybrid technology to the W177 A-Class (2018-2021), adding electric assistance without external charging.",
+          "familiesLabel": "Mercedes-Benz A Class MHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "M264 (1.5L) - A200 EQ Boost, 48V integrated starter-generator",
             "M264 (2.0L) - A220 EQ Boost, belt-driven starter-generator",
@@ -1894,6 +1948,11 @@
           "title": "Mercedes-Benz A Class Plug-In Hybrid (PHEV) Engines",
           "description": "The A250e combined the M282 1.3-litre petrol engine with an electric motor integrated into the 7-speed DCT gearbox - available from 2019 on the W177.",
           "descriptor": "The A250e combined the M282 1.3-litre petrol engine with an electric motor integrated into the 7-speed DCT gearbox - available from 2019 on the W177.",
+          "familiesLabel": "Mercedes-Benz A Class PHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "M282 + Electric Motor - A250e, 102hp electric motor, 15.6kWh battery",
             "Electric-only range of up to 42 miles (WLTP) for urban commuting",

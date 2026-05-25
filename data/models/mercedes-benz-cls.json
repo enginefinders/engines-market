@@ -15,13 +15,13 @@
     "canonical": "/mercedes-benz/cls"
   },
   "assets": {
-    "heroBg": "/images/brands/mercedes-benz/models/mercedes-benz-mercedes-benz-cls-model-card.png",
+    "heroBg": "/images/brands/mercedes-benz/models/mercedes-benz-cls-model-card.png",
     "howItWorksBg": "/images/brands/mercedes-benz/brand/mercedes-benz-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/mercedes-benz/models/mercedes-benz-mercedes-benz-cls-model-card.png"
+    "ctaImage": "/images/brands/mercedes-benz/models/mercedes-benz-cls-model-card.png"
   },
   "sections": {
     "hero": {
@@ -751,6 +751,7 @@
               {
                 "code": "OM642.920",
                 "title": "3.0L Diesel",
+                "familyHeading": "OM642 V6 Diesel Family (2004-2018)",
                 "history": "The OM642 3.0-litre V6 diesel powered the vast majority of UK CLS models from 2006 to 2018, dominating fleet and high-mileage private ownership with strong torque delivery .",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -771,6 +772,7 @@
               {
                 "code": "OM642.940",
                 "title": "3.0L Diesel (BiTurbo)",
+                "familyHeading": "OM642 V6 Diesel Family (2004-2018)",
                 "history": "The twin-turbo version of the OM642 was reserved for the CLS 400 CDI, delivering 265PS and significantly sharper throttle response for performance-focused diesel buyers.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -791,6 +793,7 @@
               {
                 "code": "OM651.924",
                 "title": "2.1L Diesel",
+                "familyHeading": "OM651 Four-Cylinder Diesel Family (2011-2017)",
                 "history": "Mercedes’ 2.1-litre four-cylinder diesel brought efficiency and lower running costs to the CLS range from 2011, making the CLS 250 CDI an accessible entry point to the four-door coupe segment .",
                 "fuel": "Diesel",
                 "size": "2.1 Litre",
@@ -811,6 +814,7 @@
               {
                 "code": "OM654.920",
                 "title": "2.0L Diesel",
+                "familyHeading": "OM654 Four-Cylinder Diesel Family (2018-Present)",
                 "history": "The OM654 replaced the OM651 in the C257 generation CLS, featuring a full-aluminium construction, stepped combustion bowls, and Euro 6d emissions compliance for cleaner, more efficient operation.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -836,6 +840,7 @@
               {
                 "code": "M272.964",
                 "title": "3.5L Petrol",
+                "familyHeading": "M272 V6 Petrol Family (2004-2014)",
                 "history": "The M272 3.5-litre V6 powered first-generation CLS 350 models from 2005, offering a smooth, high-revving alternative to the diesel range. It remains a popular engine for classic CLS enthusiasts.",
                 "fuel": "Petrol",
                 "size": "3.5 Litre",
@@ -856,6 +861,7 @@
               {
                 "code": "M276.950 / M276.820",
                 "title": "3.5L Petrol",
+                "familyHeading": "M276 V6 Petrol Family (2011-2018)",
                 "history": "The M276 replaced the M272 from 2011 with direct injection, a lighter all-aluminium construction, and improved thermal efficiency. It powered both CLS 350 and CLS 400 models through the C218 generation .",
                 "fuel": "Petrol",
                 "size": "3.5 Litre",
@@ -876,6 +882,7 @@
               {
                 "code": "M278.920",
                 "title": "4.7L Petrol Biturbo",
+                "familyHeading": "M278 V8 Petrol Family (2011-2018)",
                 "history": "The M278 4.7-litre twin-turbo V8 delivered effortless performance for CLS 500 models, combining Mercedes’ third-generation direct injection with piezo injectors and a spray-guided combustion process.",
                 "fuel": "Petrol",
                 "size": "4.7 Litre",
@@ -896,6 +903,7 @@
               {
                 "code": "M156.983",
                 "title": "6.2L Petrol",
+                "familyHeading": "M156 V8 AMG Family (2006-2011)",
                 "history": "The M156 6.2-litre V8 was Mercedes-AMG’s first independently developed engine. It powered the CLS 63 AMG with a naturally aspirated 6.2-litre screamer that defined high-performance luxury for its generation .",
                 "fuel": "Petrol",
                 "size": "6.2 Litre",
@@ -916,6 +924,7 @@
               {
                 "code": "M157.981",
                 "title": "5.5L Petrol Biturbo",
+                "familyHeading": "M157 V8 AMG Biturbo Family (2011-2017)",
                 "history": "The M157 5.5-litre twin-turbo V8 replaced the naturally aspirated M156 for the C218 CLS 63 AMG, delivering substantially more torque and effortless mid-range power while maintaining AMG’s performance DNA.",
                 "fuel": "Petrol",
                 "size": "5.5 Litre",
@@ -941,6 +950,7 @@
               {
                 "code": "M256.930",
                 "title": "3.0L Mild Hybrid (EQ Boost)",
+                "familyHeading": "M256 Six-Cylinder MHEV Family (2018-Present)",
                 "history": "The M256 3.0-litre inline-six introduced mild hybrid technology to the CLS for the C257 generation, featuring an integrated starter-alternator (EQ Boost) and electric auxiliary compressor for instant throttle response and reduced emissions .",
                 "fuel": "MHEV (Petrol + 48V EQ Boost)",
                 "size": "3.0 Litre",
@@ -993,6 +1003,8 @@
           "engines": [
             {
               "code": "OM642.920",
+              "title": "3.0L Diesel",
+              "familyHeading": "OM642 V6 Diesel Family (2004-2018)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "224-261 hp",
@@ -1003,6 +1015,8 @@
             },
             {
               "code": "OM642.940",
+              "title": "3.0L Diesel (BiTurbo)",
+              "familyHeading": "OM642 V6 Diesel Family (2004-2018)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "261-265 hp",
@@ -1013,6 +1027,8 @@
             },
             {
               "code": "OM651.924",
+              "title": "2.1L Diesel",
+              "familyHeading": "OM651 Four-Cylinder Diesel Family (2011-2017)",
               "fuel": "Diesel",
               "size": "2.1L",
               "power": "201-204 hp",
@@ -1023,6 +1039,8 @@
             },
             {
               "code": "OM654.920",
+              "title": "2.0L Diesel",
+              "familyHeading": "OM654 Four-Cylinder Diesel Family (2018-Present)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "241-261 hp",
@@ -1040,6 +1058,8 @@
           "engines": [
             {
               "code": "M272.964",
+              "title": "3.5L Petrol",
+              "familyHeading": "M272 V6 Petrol Family (2004-2014)",
               "fuel": "Petrol",
               "size": "3.5L",
               "power": "268-302 hp",
@@ -1050,6 +1070,8 @@
             },
             {
               "code": "M276.950 / M276.820",
+              "title": "3.5L Petrol",
+              "familyHeading": "M276 V6 Petrol Family (2011-2018)",
               "fuel": "Petrol",
               "size": "3.5L",
               "power": "302-329 hp",
@@ -1060,6 +1082,8 @@
             },
             {
               "code": "M278.920",
+              "title": "4.7L Petrol Biturbo",
+              "familyHeading": "M278 V8 Petrol Family (2011-2018)",
               "fuel": "Petrol",
               "size": "4.7L",
               "power": "402-449 hp",
@@ -1070,6 +1094,8 @@
             },
             {
               "code": "M156.983",
+              "title": "6.2L Petrol",
+              "familyHeading": "M156 V8 AMG Family (2006-2011)",
               "fuel": "Petrol",
               "size": "6.2L",
               "power": "507-525 hp",
@@ -1080,6 +1106,8 @@
             },
             {
               "code": "M157.981",
+              "title": "5.5L Petrol Biturbo",
+              "familyHeading": "M157 V8 AMG Biturbo Family (2011-2017)",
               "fuel": "Petrol",
               "size": "5.5L",
               "power": "518-585 hp",
@@ -1097,6 +1125,8 @@
           "engines": [
             {
               "code": "M256.930",
+              "title": "3.0L Mild Hybrid (EQ Boost)",
+              "familyHeading": "M256 Six-Cylinder MHEV Family (2018-Present)",
               "fuel": "MHEV (Petrol + 48V EQ Boost)",
               "size": "3.0L",
               "power": "362-429 hp + 21hp EQ Boost electric motor",
@@ -1645,6 +1675,11 @@
           "title": "Mercedes Benz CLS Diesel Engines",
           "description": "",
           "descriptor": "",
+          "familiesLabel": "Common Mercedes Benz CLS Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "OM642.920 - 3.0L V6 (CLS 320 CDI / 350 CDI), oil cooler seal failure at 70k-120k miles",
             "OM642.940 - 3.0L twin-turbo V6 (CLS 400 CDI), turbo actuator failure common",
@@ -1671,6 +1706,11 @@
           "title": "Mercedes Benz CLS Petrol Engines",
           "description": "",
           "descriptor": "",
+          "familiesLabel": "Common Mercedes Benz CLS Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "M272.964 - 3.5L V6 (CLS 350 C219), timing chain tensioner and balance shaft failure",
             "M276.950 - 3.5L V6 (CLS 350 C218), direct injection carbon buildup",
@@ -1697,6 +1737,11 @@
           "title": "Mercedes Benz CLS Mild Hybrid (MHEV) Engines",
           "description": "",
           "descriptor": "",
+          "familiesLabel": "Mercedes Benz CLS MHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "M264.920 - 2.0L four-cylinder (CLS 350), 299hp + 14hp EQ Boost",
             "M256.930 - 3.0L inline-six (CLS 450 / CLS 53 AMG), 362-429hp + 21hp EQ Boost",

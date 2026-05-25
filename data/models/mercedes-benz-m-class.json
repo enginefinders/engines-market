@@ -15,13 +15,13 @@
     "canonical": "/mercedes-benz/m-class"
   },
   "assets": {
-    "heroBg": "/images/brands/mercedes-benz/models/mercedes-benz-mercedes-benz-m-class-model-card.png",
+    "heroBg": "/images/brands/mercedes-benz/models/mercedes-benz-m-class-model-card.png",
     "howItWorksBg": "/images/brands/mercedes-benz/brand/mercedes-benz-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/mercedes-benz/models/mercedes-benz-mercedes-benz-m-class-model-card.png"
+    "ctaImage": "/images/brands/mercedes-benz/models/mercedes-benz-m-class-model-card.png"
   },
   "sections": {
     "hero": {
@@ -763,6 +763,7 @@
               {
                 "code": "OM647",
                 "title": "2.7L Diesel",
+                "familyHeading": "OM647 & OM648 Inline Series (1999-2005)",
                 "history": "Pioneered the 2.7L CDI era for the W163, delivering robust torque but later known for injector seal degradation.",
                 "fuel": "Diesel",
                 "size": "2.7 Litre",
@@ -783,6 +784,7 @@
               {
                 "code": "OM648",
                 "title": "3.2L Diesel",
+                "familyHeading": "OM647 & OM648 Inline Series (1999-2005)",
                 "history": "Upgraded the W163 to a smoother 3.2L inline-six, offering refined highway cruising before the V6 diesel takeover.",
                 "fuel": "Diesel",
                 "size": "3.2 Litre",
@@ -803,6 +805,7 @@
               {
                 "code": "OM642",
                 "title": "3.0L Diesel",
+                "familyHeading": "OM642 V6 Series (2005-2015)",
                 "history": "Flagship 3.0L V6 diesel dominating W164 and W166 sales, renowned for efficiency but susceptible to oil cooler leaks.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -823,6 +826,7 @@
               {
                 "code": "OM628",
                 "title": "4.0L Diesel",
+                "familyHeading": "OM628 & OM629 V8 Series (2005-2011)",
                 "history": "Rare 4.0L V8 diesel for early W164 models, delivering massive torque but complex fuel systems raised upkeep costs.",
                 "fuel": "Diesel",
                 "size": "4.0 Litre",
@@ -843,6 +847,7 @@
               {
                 "code": "OM629",
                 "title": "4.0L Diesel",
+                "familyHeading": "OM628 & OM629 V8 Series (2005-2011)",
                 "history": "Twin-turbo V8 diesel for the ML 450 CDI, delivering exceptional mid-range pull and heavy-duty towing capability.",
                 "fuel": "Diesel",
                 "size": "4.0 Litre",
@@ -868,6 +873,7 @@
               {
                 "code": "M112",
                 "title": "3.2L Petrol",
+                "familyHeading": "M112 & M113 V-Engine Series (1998-2005)",
                 "history": "Reliable early V6 establishing M Class smooth power, widely praised for straightforward maintenance and longevity.",
                 "fuel": "Petrol",
                 "size": "3.2 Litre",
@@ -888,6 +894,7 @@
               {
                 "code": "M113",
                 "title": "5.0L Petrol",
+                "familyHeading": "M112 & M113 V-Engine Series (1998-2005)",
                 "history": "Robust V8 powering early ML 500 models, praised for effortless torque delivery and exceptional mechanical durability.",
                 "fuel": "Petrol",
                 "size": "5.0 Litre",
@@ -908,6 +915,7 @@
               {
                 "code": "M113K",
                 "title": "5.4L Petrol",
+                "familyHeading": "M112 & M113 V-Engine Series (1998-2005)",
                 "history": "Supercharged W163 masterpiece combining V8 robustness with forced induction for raw, headline-grabbing AMG performance.",
                 "fuel": "Petrol",
                 "size": "5.4 Litre",
@@ -928,6 +936,7 @@
               {
                 "code": "M272",
                 "title": "3.5L Petrol",
+                "familyHeading": "M272 & M273 V6/V8 Series (2005-2011)",
                 "history": "Advanced 3.5L V6 replacing older architectures, introducing variable timing but later requiring balance shaft updates.",
                 "fuel": "Petrol",
                 "size": "3.5 Litre",
@@ -948,6 +957,7 @@
               {
                 "code": "M273",
                 "title": "5.5L Petrol",
+                "familyHeading": "M272 & M273 V6/V8 Series (2005-2011)",
                 "history": "High-displacement V8 for the ML 500 delivering premium luxury, though early batches required timing chain revisions.",
                 "fuel": "Petrol",
                 "size": "5.5 Litre",
@@ -968,6 +978,7 @@
               {
                 "code": "M276",
                 "title": "3.5L Petrol",
+                "familyHeading": "M276 & M278 Direct Injection Series (2011-2015)",
                 "history": "Direct-injection successor delivering refined power, improved efficiency, and strict emissions compliance for the W166.",
                 "fuel": "Petrol",
                 "size": "3.5 Litre",
@@ -988,6 +999,7 @@
               {
                 "code": "M278",
                 "title": "4.6L Petrol",
+                "familyHeading": "M276 & M278 Direct Injection Series (2011-2015)",
                 "history": "Twin-turbo V8 engineered for effortless high-speed cruising and refined efficiency, powering late W166 ML models.",
                 "fuel": "Petrol",
                 "size": "4.6 Litre",
@@ -1008,6 +1020,7 @@
               {
                 "code": "M156",
                 "title": "6.2L Petrol",
+                "familyHeading": "M156 & M157 AMG V8 Series (2006-2015)",
                 "history": "Naturally aspirated AMG V8 celebrated for explosive throttle response, raw acoustic character and track-bred pedigree.",
                 "fuel": "Petrol",
                 "size": "6.2 Litre",
@@ -1028,6 +1041,7 @@
               {
                 "code": "M157",
                 "title": "5.5L Petrol",
+                "familyHeading": "M156 & M157 AMG V8 Series (2006-2015)",
                 "history": "Twin-turbo AMG evolution balancing extreme performance with compliance, powering the final ML 63 generation.",
                 "fuel": "Petrol",
                 "size": "5.5 Litre",
@@ -1079,6 +1093,8 @@
           "engines": [
             {
               "code": "OM647",
+              "title": "2.7L Diesel",
+              "familyHeading": "OM647 & OM648 Inline Series (1999-2005)",
               "fuel": "Diesel",
               "size": "2.7L",
               "power": "163 hp",
@@ -1089,6 +1105,8 @@
             },
             {
               "code": "OM648",
+              "title": "3.2L Diesel",
+              "familyHeading": "OM647 & OM648 Inline Series (1999-2005)",
               "fuel": "Diesel",
               "size": "3.2L",
               "power": "218-224 hp",
@@ -1099,6 +1117,8 @@
             },
             {
               "code": "OM642",
+              "title": "3.0L Diesel",
+              "familyHeading": "OM642 V6 Series (2005-2015)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "190-258 hp",
@@ -1109,6 +1129,8 @@
             },
             {
               "code": "OM628",
+              "title": "4.0L Diesel",
+              "familyHeading": "OM628 & OM629 V8 Series (2005-2011)",
               "fuel": "Diesel",
               "size": "4.0L",
               "power": "250-258 hp",
@@ -1119,6 +1141,8 @@
             },
             {
               "code": "OM629",
+              "title": "4.0L Diesel",
+              "familyHeading": "OM628 & OM629 V8 Series (2005-2011)",
               "fuel": "Diesel",
               "size": "4.0L",
               "power": "292-306 hp",
@@ -1136,6 +1160,8 @@
           "engines": [
             {
               "code": "M112",
+              "title": "3.2L Petrol",
+              "familyHeading": "M112 & M113 V-Engine Series (1998-2005)",
               "fuel": "Petrol",
               "size": "3.2L",
               "power": "215-224 hp",
@@ -1146,6 +1172,8 @@
             },
             {
               "code": "M113",
+              "title": "5.0L Petrol",
+              "familyHeading": "M112 & M113 V-Engine Series (1998-2005)",
               "fuel": "Petrol",
               "size": "5.0L",
               "power": "286-296 hp",
@@ -1156,6 +1184,8 @@
             },
             {
               "code": "M113K",
+              "title": "5.4L Petrol",
+              "familyHeading": "M112 & M113 V-Engine Series (1998-2005)",
               "fuel": "Petrol",
               "size": "5.4L",
               "power": "347 hp",
@@ -1166,6 +1196,8 @@
             },
             {
               "code": "M272",
+              "title": "3.5L Petrol",
+              "familyHeading": "M272 & M273 V6/V8 Series (2005-2011)",
               "fuel": "Petrol",
               "size": "3.5L",
               "power": "268-272 hp",
@@ -1176,6 +1208,8 @@
             },
             {
               "code": "M273",
+              "title": "5.5L Petrol",
+              "familyHeading": "M272 & M273 V6/V8 Series (2005-2011)",
               "fuel": "Petrol",
               "size": "5.5L",
               "power": "306-388 hp",
@@ -1186,6 +1220,8 @@
             },
             {
               "code": "M276",
+              "title": "3.5L Petrol",
+              "familyHeading": "M276 & M278 Direct Injection Series (2011-2015)",
               "fuel": "Petrol",
               "size": "3.5L",
               "power": "302 hp",
@@ -1196,6 +1232,8 @@
             },
             {
               "code": "M278",
+              "title": "4.6L Petrol",
+              "familyHeading": "M276 & M278 Direct Injection Series (2011-2015)",
               "fuel": "Petrol",
               "size": "4.6L",
               "power": "402 hp",
@@ -1206,6 +1244,8 @@
             },
             {
               "code": "M156",
+              "title": "6.2L Petrol",
+              "familyHeading": "M156 & M157 AMG V8 Series (2006-2015)",
               "fuel": "Petrol",
               "size": "6.2L",
               "power": "503-510 hp",
@@ -1216,6 +1256,8 @@
             },
             {
               "code": "M157",
+              "title": "5.5L Petrol",
+              "familyHeading": "M156 & M157 AMG V8 Series (2006-2015)",
               "fuel": "Petrol",
               "size": "5.5L",
               "power": "518-557 hp",
@@ -1718,6 +1760,11 @@
           "title": "Mercedes-Benz M Class Diesel Engines",
           "description": "Diesel CDI and BlueTEC units power the majority of UK M Class replacements, spanning the OM647 inline-five through to the dominant OM642 V6 across W163, W164 and W166 generations.",
           "descriptor": "Diesel CDI and BlueTEC units power the majority of UK M Class replacements, spanning the OM647 inline-five through to the dominant OM642 V6 across W163, W164 and W166 generations.",
+          "familiesLabel": "Common Mercedes-Benz M Class Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "OM642 - dominant 3.0L V6 (ML 350 CDI), oil cooler seal weakness per TSB LI01.40-P-059842",
             "OM647 - reliable 2.7L inline-five (ML 270 CDI W163), injector seal wear at high mileage",
@@ -1751,6 +1798,11 @@
           "title": "Mercedes-Benz M Class Petrol Engines",
           "description": "Petrol V6 and V8 units deliver refined performance across all M Class generations, from the robust M112/M113 classics to the direct-injection M276 and high-output AMG M156/M157 powerplants.",
           "descriptor": "Petrol V6 and V8 units deliver refined performance across all M Class generations, from the robust M112/M113 classics to the direct-injection M276 and high-output AMG M156/M157 powerplants.",
+          "familiesLabel": "Common Mercedes-Benz M Class Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "M272 - 3.5L V6 (ML 350 W164), balance shaft idler gear failure on early pre-2008 units",
             "M276 - 3.5L direct-injection V6 (ML 350 W166), improved efficiency with intake carbon buildup risk",
@@ -1783,6 +1835,11 @@
           "title": "Mercedes-Benz M Class Hybrid / Electrified Engines",
           "description": "The Mercedes-Benz M Class was not offered with hybrid, plug-in hybrid, mild-hybrid or electric powertrains in the UK market during its 1997-2019 production run.",
           "descriptor": "The Mercedes-Benz M Class was not offered with hybrid, plug-in hybrid, mild-hybrid or electric powertrains in the UK market during its 1997-2019 production run.",
+          "familiesLabel": "Mercedes-Benz M Class Electrified Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "None - no factory-fitted hybrid or electric variants were sold in the UK for this model",
             "All UK M Class models use conventional combustion engines with automatic transmission and 4MATIC AWD option",

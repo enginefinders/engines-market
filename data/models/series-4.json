@@ -15,13 +15,13 @@
     "canonical": "/bmw/4-series"
   },
   "assets": {
-    "heroBg": "/images/brands/bmw/models/bmw-series-4-model-card.png",
+    "heroBg": "/images/brands/bmw/models/bmw-4-series-model-card.png",
     "howItWorksBg": "/images/brands/bmw/brand/bmw-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/bmw/brand/bmw-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/bmw/brand/bmw-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/bmw/brand/bmw-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/bmw/brand/bmw-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/bmw/models/bmw-series-4-model-card.png"
+    "ctaImage": "/images/brands/bmw/models/bmw-4-series-model-card.png"
   },
   "sections": {
     "hero": {
@@ -775,6 +775,7 @@
               {
                 "code": "N47D20C",
                 "title": "2.0L Diesel",
+                "familyHeading": "N47 Diesel Family (2013-2016)",
                 "history": "Replaced M47 in 2007; rear-chain design and aluminium block defined a decade of replacement enquiries.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -795,6 +796,7 @@
               {
                 "code": "B47D20A",
                 "title": "2.0L Diesel",
+                "familyHeading": "B47 Diesel Family (2014-Present)",
                 "history": "Front-mounted chain solved N47 issues; became the reliable workhorse for fleet and private 4 Series.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -815,6 +817,7 @@
               {
                 "code": "B47D20B",
                 "title": "2.0L Diesel",
+                "familyHeading": "B47 Diesel Family (2014-Present)",
                 "history": "High-output B47 iteration with sequential turbocharging; delivers robust torque for 425d performance demands.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -835,6 +838,7 @@
               {
                 "code": "N57D30A",
                 "title": "3.0L Diesel",
+                "familyHeading": "N57 / B57 Inline-Six Diesel (2013-Present)",
                 "history": "Legendary inline-six diesel; twin-turbo 435d variant delivered effortless torque for long-distance touring.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -855,6 +859,7 @@
               {
                 "code": "B57D30A",
                 "title": "3.0L Diesel",
+                "familyHeading": "N57 / B57 Inline-Six Diesel (2013-Present)",
                 "history": "Euro 6 evolution of N57; reduced emissions while retaining the smooth, high-torque character of premium diesels.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -880,6 +885,7 @@
               {
                 "code": "N20B20B",
                 "title": "2.0L Petrol",
+                "familyHeading": "N20 / B38 / B48 Four-Cylinder Petrol (2013-Present)",
                 "history": "Early turbo petrol for 420i/428i; strong torque but gained notoriety for timing chain guide failure.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -900,6 +906,7 @@
               {
                 "code": "B38B15A",
                 "title": "1.5L Petrol",
+                "familyHeading": "N20 / B38 / B48 Four-Cylinder Petrol (2013-Present)",
                 "history": "Entry-level three-cylinder turbo; pairs efficiency with compact packaging for urban-focused 418i buyers.",
                 "fuel": "Petrol",
                 "size": "1.5 Litre",
@@ -920,6 +927,7 @@
               {
                 "code": "B48B20B",
                 "title": "2.0L Petrol",
+                "familyHeading": "N20 / B38 / B48 Four-Cylinder Petrol (2013-Present)",
                 "history": "Replaced N20 with improved cooling and closed-deck block; widely praised as BMW’s most reliable modern four-cylinder.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -940,6 +948,7 @@
               {
                 "code": "N55B30A",
                 "title": "3.0L Petrol",
+                "familyHeading": "N55 / B58 Inline-Six Petrol (2013-Present)",
                 "history": "Twin-scroll inline-six replacing the N54; offered seamless, linear power delivery for the 435i launch.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -960,6 +969,7 @@
               {
                 "code": "B58B30A",
                 "title": "3.0L Petrol",
+                "familyHeading": "N55 / B58 Inline-Six Petrol (2013-Present)",
                 "history": "Cast-iron liner inline-six praised for tuning potential and reliability in modern 440i and M440i models.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -980,6 +990,7 @@
               {
                 "code": "S55B30A",
                 "title": "3.0L Petrol",
+                "familyHeading": "S55 / S58 M Performance Inline-Six (2014-Present)",
                 "history": "M Division twin-turbo straight-six; built for the F82 M4 with forged internals and track-focused cooling.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -1000,6 +1011,7 @@
               {
                 "code": "S58B30A",
                 "title": "3.0L Petrol",
+                "familyHeading": "S55 / S58 M Performance Inline-Six (2014-Present)",
                 "history": "Next-generation M powertrain with closed-deck block; powers the current G82 M4 with extreme track output.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -1023,15 +1035,43 @@
             "name": "Hybrid / Electrified Engines",
             "entries": [
               {
-                "code": "Mild",
-                "title": "hybrid DC/DC converter error codes",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
+                "code": "B48B20A (PHEV)",
+                "title": "2.0L PHEV",
+                "familyHeading": "PHEV & MHEV Powertrains (2020-Present)",
+                "history": "First plug-in hybrid 4 Series; pairs efficient turbo petrol with rear e-motor for low-emission commuting.",
+                "fuel": "PHEV Petrol",
+                "size": "2.0 Litre",
+                "power": "292 hp (combined)",
+                "years": "2020-Present",
+                "compatibleVariants": [
+                  "430e, 430e M Sport, 430e xDrive, 430e Gran Coupe"
+                ],
+                "commonFailures": [
+                  "High-voltage battery cell degradation",
+                  "e-motor coolant pump fault",
+                  "Combustion engine carbon build-up from short EV trips"
+                ],
+                "avgRebuiltPrice": "£2,100 - £3,800",
+                "cta": "Get quotes for B48B20A BMW 4 Series PHEV engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              },
+              {
+                "code": "B58B30M2 (MHEV)",
+                "title": "3.0L MHEV",
+                "familyHeading": "PHEV & MHEV Powertrains (2020-Present)",
+                "history": "Integrated starter-generator adds torque and seamless stop-start; modern inline-six evolution for efficiency.",
+                "fuel": "MHEV Petrol",
+                "size": "3.0 Litre",
+                "power": "374-382 hp (ICE) + 11hp (e-assist)",
+                "years": "2020-Present",
+                "compatibleVariants": [
+                  "M440i, M440i xDrive, M440i Gran Coupe, M440i M Sport"
+                ],
+                "commonFailures": [
+                  "48V belt starter generator (BSG) fault",
+                  "Mild-hybrid DC/DC converter error codes",
+                  "Standard B58 coolant hose degradation"
+                ],
                 "avgRebuiltPrice": "£3,100 - £5,400",
                 "cta": "Get quotes for B58B30M2 BMW 4 Series MHEV engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1071,6 +1111,8 @@
           "engines": [
             {
               "code": "N47D20C",
+              "title": "2.0L Diesel",
+              "familyHeading": "N47 Diesel Family (2013-2016)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "163-190 hp",
@@ -1081,6 +1123,8 @@
             },
             {
               "code": "B47D20A",
+              "title": "2.0L Diesel",
+              "familyHeading": "B47 Diesel Family (2014-Present)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "150-190 hp",
@@ -1091,6 +1135,8 @@
             },
             {
               "code": "B47D20B",
+              "title": "2.0L Diesel",
+              "familyHeading": "B47 Diesel Family (2014-Present)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "224 hp",
@@ -1101,6 +1147,8 @@
             },
             {
               "code": "N57D30A",
+              "title": "3.0L Diesel",
+              "familyHeading": "N57 / B57 Inline-Six Diesel (2013-Present)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "258-313 hp",
@@ -1111,6 +1159,8 @@
             },
             {
               "code": "B57D30A",
+              "title": "3.0L Diesel",
+              "familyHeading": "N57 / B57 Inline-Six Diesel (2013-Present)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "265-340 hp",
@@ -1128,6 +1178,8 @@
           "engines": [
             {
               "code": "N20B20B",
+              "title": "2.0L Petrol",
+              "familyHeading": "N20 / B38 / B48 Four-Cylinder Petrol (2013-Present)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "184-245 hp",
@@ -1138,6 +1190,8 @@
             },
             {
               "code": "B38B15A",
+              "title": "1.5L Petrol",
+              "familyHeading": "N20 / B38 / B48 Four-Cylinder Petrol (2013-Present)",
               "fuel": "Petrol",
               "size": "1.5L",
               "power": "136 hp",
@@ -1148,6 +1202,8 @@
             },
             {
               "code": "B48B20B",
+              "title": "2.0L Petrol",
+              "familyHeading": "N20 / B38 / B48 Four-Cylinder Petrol (2013-Present)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "184-258 hp",
@@ -1158,6 +1214,8 @@
             },
             {
               "code": "N55B30A",
+              "title": "3.0L Petrol",
+              "familyHeading": "N55 / B58 Inline-Six Petrol (2013-Present)",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "306 hp",
@@ -1168,6 +1226,8 @@
             },
             {
               "code": "B58B30A",
+              "title": "3.0L Petrol",
+              "familyHeading": "N55 / B58 Inline-Six Petrol (2013-Present)",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "326-382 hp",
@@ -1178,6 +1238,8 @@
             },
             {
               "code": "S55B30A",
+              "title": "3.0L Petrol",
+              "familyHeading": "S55 / S58 M Performance Inline-Six (2014-Present)",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "431-503 hp",
@@ -1188,6 +1250,8 @@
             },
             {
               "code": "S58B30A",
+              "title": "3.0L Petrol",
+              "familyHeading": "S55 / S58 M Performance Inline-Six (2014-Present)",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "473-503 hp",
@@ -1204,11 +1268,25 @@
           "failureNote": "Main replacement demand comes from cooling, battery-support and high-voltage control faults.",
           "engines": [
             {
-              "code": "Mild",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
+              "code": "B48B20A (PHEV)",
+              "title": "2.0L PHEV",
+              "familyHeading": "PHEV & MHEV Powertrains (2020-Present)",
+              "fuel": "PHEV Petrol",
+              "size": "2.0L",
+              "power": "292 hp (combined)",
+              "compatibleModels": "430e, 430e M Sport, 430e xDrive, 430e Gran Coupe",
+              "avgRebuiltPrice": "£2,100 - £3,800",
+              "cta": "Get quotes for B48B20A BMW 4 Series PHEV engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            },
+            {
+              "code": "B58B30M2 (MHEV)",
+              "title": "3.0L MHEV",
+              "familyHeading": "PHEV & MHEV Powertrains (2020-Present)",
+              "fuel": "MHEV Petrol",
+              "size": "3.0L",
+              "power": "374-382 hp (ICE) + 11hp (e-assist)",
+              "compatibleModels": "M440i, M440i xDrive, M440i Gran Coupe, M440i M Sport",
               "avgRebuiltPrice": "£3,100 - £5,400",
               "cta": "Get quotes for B58B30M2 BMW 4 Series MHEV engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1718,6 +1796,11 @@
           "title": "BMW 4 Series Diesel Engines",
           "description": "Dominating the UK replacement market, 4 Series diesel engines span F-generation fleet workhorses to modern G-generation Euro 6 specialists.",
           "descriptor": "Dominating the UK replacement market, 4 Series diesel engines span F-generation fleet workhorses to modern G-generation Euro 6 specialists.",
+          "familiesLabel": "Common BMW 4 Series Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "N47D20 - High-volume 420d replacement unit, notorious rear timing chain wear.",
             "B47D20 - Modern 420d front-chain update resolving earlier timing vulnerabilities.",
@@ -1749,6 +1832,11 @@
           "title": "BMW 4 Series Petrol Engines",
           "description": "Spanning efficient four-cylinder turbo units to acclaimed inline-six performance blocks, 4 Series petrol engines balance daily usability with sporting character.",
           "descriptor": "Spanning efficient four-cylinder turbo units to acclaimed inline-six performance blocks, 4 Series petrol engines balance daily usability with sporting character.",
+          "familiesLabel": "Common BMW 4 Series Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "B38B15 - Compact 418i three-cylinder turbo delivering efficient urban performance.",
             "N20B20 - Early 420i/428i turbo four requiring upgraded timing tensioners.",
@@ -1781,6 +1869,11 @@
           "title": "BMW 4 Series Hybrid / Electrified Engines",
           "description": "Utilising a 48-volt belt starter generator to smooth stop-start operation and assist acceleration, MHEV systems enhance efficiency without compromising performance.",
           "descriptor": "Utilising a 48-volt belt starter generator to smooth stop-start operation and assist acceleration, MHEV systems enhance efficiency without compromising performance.",
+          "familiesLabel": "BMW 4 Series MHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "B48B20A - Combustion module powering 430e with integrated electric rear axle.",
             "High-voltage battery pack powers rear motor for short-range electric-only driving.",

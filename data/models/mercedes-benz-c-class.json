@@ -15,13 +15,13 @@
     "canonical": "/mercedes-benz/c-class"
   },
   "assets": {
-    "heroBg": "/images/brands/mercedes-benz/models/mercedes-benz-mercedes-benz-c-class-model-card.png",
+    "heroBg": "/images/brands/mercedes-benz/models/mercedes-benz-c-class-model-card.png",
     "howItWorksBg": "/images/brands/mercedes-benz/brand/mercedes-benz-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/mercedes-benz/models/mercedes-benz-mercedes-benz-c-class-model-card.png"
+    "ctaImage": "/images/brands/mercedes-benz/models/mercedes-benz-c-class-model-card.png"
   },
   "sections": {
     "hero": {
@@ -785,6 +785,7 @@
               {
                 "code": "OM611",
                 "title": "2.2L Diesel",
+                "familyHeading": "OM650 Series (2000-2014)",
                 "history": "Mercedes‘ first common-rail diesel for the C-Class, introduced on the W203. Renowned for longevity when maintained but plagued by injector seal failures.",
                 "fuel": "Diesel",
                 "size": "2.2 Litre",
@@ -805,6 +806,7 @@
               {
                 "code": "OM646",
                 "title": "2.2L Diesel",
+                "familyHeading": "OM650 Series (2000-2014)",
                 "history": "The OM646 Evo was a refinement of the OM611, addressing injector sealing and adding piezo injectors for cleaner combustion and better refinement across the W203 and early W204 ranges.",
                 "fuel": "Diesel",
                 "size": "2.2 Litre",
@@ -825,6 +827,7 @@
               {
                 "code": "OM651",
                 "title": "2.1L Diesel",
+                "familyHeading": "OM650 Series (2008-2021)",
                 "history": "The OM651 was the backbone of Mercedes diesel sales for over a decade, fitted to millions of C-Class, E-Class, and Sprinter vans. Powerful and efficient but notorious for timing chain failure due to the chain being mounted at the rear of the engine .",
                 "fuel": "Diesel",
                 "size": "2.1 Litre",
@@ -845,6 +848,7 @@
               {
                 "code": "OM642",
                 "title": "3.0L V6 Diesel",
+                "familyHeading": "OM650 Series (2008-2021)",
                 "history": "Mercedes‘ 3.0-litre V6 diesel found in the C350 CDI and various models across the range. Smooth and torquey but known for oil cooler leaks that can lead to serious engine damage if ignored .",
                 "fuel": "Diesel",
                 "size": "3.0 Litre V6",
@@ -865,6 +869,7 @@
               {
                 "code": "OM654",
                 "title": "2.0L Diesel",
+                "familyHeading": "OM654 Series (2018-Present)",
                 "history": "Mercedes‘ all-new modular diesel engine family introduced in the W205 facelift. Steel pistons, stepped combustion bowls, and a 48V electrical architecture make it cleaner and quieter than the OM651 it replaced, with far fewer catastrophic failures .",
                 "fuel": "MHEV Diesel",
                 "size": "2.0 Litre",
@@ -890,6 +895,7 @@
               {
                 "code": "M111",
                 "title": "2.0L Petrol",
+                "familyHeading": "M110 Series (1993-2000)",
                 "history": "The M111 four-cylinder was the workhorse petrol engine of the W202 C-Class, known as the C180 and C200. Supercharger (\"Kompressor\") versions arrived later in the W203.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -910,6 +916,7 @@
               {
                 "code": "M271",
                 "title": "1.6L / 1.8L Petrol",
+                "familyHeading": "M110 Series (1993-2000)",
                 "history": "The M271 brought supercharging (\"Kompressor\") and later CGI direct injection to the C-Class. Responsive but notorious for timing chain and camshaft adjuster issues, a major replacement driver in the used market .",
                 "fuel": "Petrol",
                 "size": "1.6 / 1.8 Litre",
@@ -930,6 +937,7 @@
               {
                 "code": "M270",
                 "title": "2.0L Petrol",
+                "familyHeading": "M270 / M274 Series (2013-2021)",
                 "history": "Mercedes‘ first turbocharged 2.0-litre four-cylinder petrol. The M270 (transverse) and M274 (longitudinal) shared architecture, bringing modern performance and efficiency to the C-Class range.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -950,6 +958,7 @@
               {
                 "code": "M274",
                 "title": "2.0L Petrol",
+                "familyHeading": "M270 / M274 Series (2013-2021)",
                 "history": "The longitudinal version of Mercedes‘ 2.0-litre turbo four. Used across the W205 C-Class range from C200 to C300. Subject to an NHTSA investigation over cracked pistons linked to wrist pin failure .",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -970,6 +979,7 @@
               {
                 "code": "M272 / M276",
                 "title": "2.5L / 3.0L / 3.5L V6 Petrol",
+                "familyHeading": "V6 Petrol Engines (2005-2018)",
                 "history": "Mercedes‘ V6 petrol family, with the M272 being an earlier 24-valve design and the M276 introducing direct injection and a 60-degree vee angle for smoother operation. Fitted to higher-spec C-Class models.",
                 "fuel": "Petrol",
                 "size": "2.5 / 3.0 / 3.5 Litre V6",
@@ -990,6 +1000,7 @@
               {
                 "code": "M254",
                 "title": "1.5L / 2.0L MHEV Petrol",
+                "familyHeading": "M254 Series (2021-Present)",
                 "history": "Mercedes‘ newest four-cylinder petrol featuring a 48V integrated starter-generator (ISG) and electric auxiliary compressor. Used in the W206 C-Class with mild hybrid technology for improved efficiency and response .",
                 "fuel": "MHEV Petrol",
                 "size": "1.5 / 2.0 Litre",
@@ -1015,6 +1026,7 @@
               {
                 "code": "M156",
                 "title": "6.2L V8 Petrol",
+                "familyHeading": "M113 / M156 Series (1998-2015)",
                 "history": "Mercedes-AMG‘s first independently developed V8 engine. Naturally aspirated, producing up to 520hp in the C63 AMG. Highly revered but with well-documented head bolt weakness in early production units .",
                 "fuel": "Petrol",
                 "size": "6.2 Litre V8",
@@ -1035,6 +1047,7 @@
               {
                 "code": "M177",
                 "title": "4.0L V8 Petrol",
+                "familyHeading": "M113 / M156 Series (1998-2015)",
                 "history": "AMG‘s 4.0-litre twin-turbo V8, replacing the M156 in the W205 C63 AMG. Two turbochargers nestled in the vee (\"hot inside V\") for reduced lag and improved packaging.",
                 "fuel": "Petrol",
                 "size": "4.0 Litre V8",
@@ -1086,6 +1099,8 @@
           "engines": [
             {
               "code": "OM611",
+              "title": "2.2L Diesel",
+              "familyHeading": "OM650 Series (2000-2014)",
               "fuel": "Diesel",
               "size": "2.2L",
               "power": "102-143 hp",
@@ -1096,6 +1111,8 @@
             },
             {
               "code": "OM646",
+              "title": "2.2L Diesel",
+              "familyHeading": "OM650 Series (2000-2014)",
               "fuel": "Diesel",
               "size": "2.2L",
               "power": "120-150 hp",
@@ -1106,6 +1123,8 @@
             },
             {
               "code": "OM651",
+              "title": "2.1L Diesel",
+              "familyHeading": "OM650 Series (2008-2021)",
               "fuel": "Diesel",
               "size": "2.1L",
               "power": "118-204 hp",
@@ -1116,6 +1135,8 @@
             },
             {
               "code": "OM642",
+              "title": "3.0L V6 Diesel",
+              "familyHeading": "OM650 Series (2008-2021)",
               "fuel": "Diesel",
               "size": "3.0L V6",
               "power": "224-265 hp",
@@ -1126,6 +1147,8 @@
             },
             {
               "code": "OM654",
+              "title": "2.0L Diesel",
+              "familyHeading": "OM654 Series (2018-Present)",
               "fuel": "MHEV Diesel",
               "size": "2.0L",
               "power": "150-194 hp",
@@ -1143,6 +1166,8 @@
           "engines": [
             {
               "code": "M111",
+              "title": "2.0L Petrol",
+              "familyHeading": "M110 Series (1993-2000)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "122-163 hp",
@@ -1153,6 +1178,8 @@
             },
             {
               "code": "M271",
+              "title": "1.6L / 1.8L Petrol",
+              "familyHeading": "M110 Series (1993-2000)",
               "fuel": "Petrol",
               "size": "1.6 / 1.8L",
               "power": "122-184 hp",
@@ -1163,6 +1190,8 @@
             },
             {
               "code": "M270",
+              "title": "2.0L Petrol",
+              "familyHeading": "M270 / M274 Series (2013-2021)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "181-208 hp",
@@ -1173,6 +1202,8 @@
             },
             {
               "code": "M274",
+              "title": "2.0L Petrol",
+              "familyHeading": "M270 / M274 Series (2013-2021)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "181-241 hp",
@@ -1183,6 +1214,8 @@
             },
             {
               "code": "M272 / M276",
+              "title": "2.5L / 3.0L / 3.5L V6 Petrol",
+              "familyHeading": "V6 Petrol Engines (2005-2018)",
               "fuel": "Petrol",
               "size": "2.5 / 3.0 / 3.5L V6",
               "power": "201-302 hp",
@@ -1193,6 +1226,8 @@
             },
             {
               "code": "M254",
+              "title": "1.5L / 2.0L MHEV Petrol",
+              "familyHeading": "M254 Series (2021-Present)",
               "fuel": "MHEV Petrol",
               "size": "1.5 / 2.0L",
               "power": "170-258 hp",
@@ -1203,6 +1238,8 @@
             },
             {
               "code": "M156",
+              "title": "6.2L V8 Petrol",
+              "familyHeading": "M113 / M156 Series (1998-2015)",
               "fuel": "Petrol",
               "size": "6.2L V8",
               "power": "451-520 hp",
@@ -1213,6 +1250,8 @@
             },
             {
               "code": "M177",
+              "title": "4.0L V8 Petrol",
+              "familyHeading": "M113 / M156 Series (1998-2015)",
               "fuel": "Petrol",
               "size": "4.0L V8",
               "power": "469-510 hp",
@@ -1884,6 +1923,11 @@
           "title": "Mercedes Benz C Class Diesel Engines",
           "description": "Diesel has dominated C-Class sales in the UK across three generations, with the OM651 2.1-litre becoming the most frequently replaced engine in the independent specialist network.",
           "descriptor": "Diesel has dominated C-Class sales in the UK across three generations, with the OM651 2.1-litre becoming the most frequently replaced engine in the independent specialist network.",
+          "familiesLabel": "Common Mercedes Benz C Class Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "OM611 - early common-rail 2.2-litre (W202/W203 C220 CDI), injector seal leaks",
             "OM646 - refined 2.2-litre (W203/W204 C200 CDI/C220 CDI), improved reliability but retains seal issues",
@@ -1919,6 +1963,11 @@
           "title": "Mercedes Benz C Class Petrol Engines",
           "description": "Petrol-powered C-Class models range from supercharged Kompressor four-cylinders to the legendary M156 V8 in the C63 AMG, with the M274 turbo 2.0-litre dominating W205 replacement enquiries.",
           "descriptor": "Petrol-powered C-Class models range from supercharged Kompressor four-cylinders to the legendary M156 V8 in the C63 AMG, with the M274 turbo 2.0-litre dominating W205 replacement enquiries.",
+          "familiesLabel": "Common Mercedes Benz C Class Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "M111 - 2.0-litre four-cylinder (W202 C180/C200), simple but ageing",
             "M271 - 1.6/1.8-litre supercharged and CGI (W203/W204), timing chain and cam adjuster failures",
@@ -1958,6 +2007,11 @@
           "title": "Mercedes Benz C Class Mild Hybrid (MHEV) Engines",
           "description": "The W206 generation introduced 48V mild hybrid technology across the petrol range, using an integrated starter-generator (ISG) for coasting, electric assistance, and smoother stop-start operation.",
           "descriptor": "The W206 generation introduced 48V mild hybrid technology across the petrol range, using an integrated starter-generator (ISG) for coasting, electric assistance, and smoother stop-start operation.",
+          "familiesLabel": "Mercedes Benz C Class MHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "M254 - 1.5-litre and 2.0-litre four-cylinder with 48V ISG (W206 C180/C200/C300)",
             "48V beltless integrated starter-generator replaces conventional alternator and starter",
@@ -1981,6 +2035,11 @@
           "title": "Mercedes Benz C Class Plug-in Hybrid (PHEV) Engines",
           "description": "The W205 C350e combined the M274 2.0-litre turbo petrol with a 60kW electric motor and 6.4kWh battery pack - Mercedes' first mainstream plug-in hybrid C-Class.",
           "descriptor": "The W205 C350e combined the M274 2.0-litre turbo petrol with a 60kW electric motor and 6.4kWh battery pack - Mercedes' first mainstream plug-in hybrid C-Class.",
+          "familiesLabel": "Mercedes Benz C Class PHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "M274 PHEV - 2.0-litre turbo with integrated electric motor (C350e)",
             "60kW electric motor mounted between engine and 7-speed automatic gearbox",

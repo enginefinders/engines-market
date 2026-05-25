@@ -15,13 +15,13 @@
     "canonical": "/audi/q2"
   },
   "assets": {
-    "heroBg": "/images/brands/audi/models/audi-audi-q2-model-card.png",
+    "heroBg": "/images/brands/audi/models/audi-q2-model-card.png",
     "howItWorksBg": "/images/brands/audi/brand/audi-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/audi/brand/audi-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/audi/brand/audi-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/audi/brand/audi-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/audi/brand/audi-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/audi/models/audi-audi-q2-model-card.png"
+    "ctaImage": "/images/brands/audi/models/audi-q2-model-card.png"
   },
   "sections": {
     "hero": {
@@ -694,6 +694,7 @@
               {
                 "code": "CYKB",
                 "title": "1.6L Diesel",
+                "familyHeading": "1.6 TDI & 2.0 TDI Engines (2016-2024)",
                 "history": "Entry-level diesel for early Q2 models. Reliable but injector failures common after 60,000 miles.",
                 "fuel": "Diesel",
                 "size": "1.6 Litre",
@@ -714,6 +715,7 @@
               {
                 "code": "DFGA",
                 "title": "2.0L Diesel",
+                "familyHeading": "1.6 TDI & 2.0 TDI Engines (2016-2024)",
                 "history": "The most common 2.0 TDI fitted to pre-facelift Q2 30 TDI models. Balanced economy and torque.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -734,6 +736,7 @@
               {
                 "code": "DJGA",
                 "title": "2.0L Diesel",
+                "familyHeading": "1.6 TDI & 2.0 TDI Engines (2016-2024)",
                 "history": "Higher-output 150hp version of the 2.0 TDI. Found in 35 TDI badged Q2s post-2018.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -754,6 +757,7 @@
               {
                 "code": "DDYA",
                 "title": "2.0L Diesel",
+                "familyHeading": "1.6 TDI & 2.0 TDI Engines (2016-2024)",
                 "history": "Ultra-efficient 2.0 TDI fitted to quattro-equipped Q2s. Lower volume but mechanically robust.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -779,6 +783,7 @@
               {
                 "code": "DADA",
                 "title": "1.0L Petrol",
+                "familyHeading": "1.0 TFSI, 1.4 TFSI & 1.5 TFSI Engines (2016-2024)",
                 "history": "Entry-level three-cylinder petrol. Economical for urban use but known for vibration issues at idle.",
                 "fuel": "Petrol",
                 "size": "1.0 Litre",
@@ -799,6 +804,7 @@
               {
                 "code": "CZEA",
                 "title": "1.4L Petrol",
+                "familyHeading": "1.0 TFSI, 1.4 TFSI & 1.5 TFSI Engines (2016-2024)",
                 "history": "The notorious COD (Cylinder on Demand) engine. Delivered 150hp but cylinder deactivation failures define its reputation.",
                 "fuel": "Petrol",
                 "size": "1.4 Litre",
@@ -819,6 +825,7 @@
               {
                 "code": "DARB",
                 "title": "1.5L Petrol",
+                "familyHeading": "1.0 TFSI, 1.4 TFSI & 1.5 TFSI Engines (2016-2024)",
                 "history": "Facelift replacement for the 1.4 TFSI. Mild hybrid technology added for 2020 models.",
                 "fuel": "Petrol (MHEV)",
                 "size": "1.5 Litre",
@@ -839,6 +846,7 @@
               {
                 "code": "CZPB",
                 "title": "2.0L Petrol",
+                "familyHeading": "2.0 TFSI Performance Petrol Engine (2017-2020)",
                 "history": "Top-spec petrol engine for the Q2. Quattro-equipped only. Low volume but high replacement cost.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -864,6 +872,7 @@
               {
                 "code": "DARB",
                 "title": "1.5L Petrol MHEV",
+                "familyHeading": "Mild Hybrid Petrol Engines (2020-2024)",
                 "history": "The only electrified Q2 sold in the UK. 48V mild hybrid system with belt alternator starter.",
                 "fuel": "MHEV (Petrol + 48V)",
                 "size": "1.5 Litre",
@@ -916,6 +925,8 @@
           "engines": [
             {
               "code": "CYKB",
+              "title": "1.6L Diesel",
+              "familyHeading": "1.6 TDI & 2.0 TDI Engines (2016-2024)",
               "fuel": "Diesel",
               "size": "1.6L",
               "power": "116 hp",
@@ -926,6 +937,8 @@
             },
             {
               "code": "DFGA",
+              "title": "2.0L Diesel",
+              "familyHeading": "1.6 TDI & 2.0 TDI Engines (2016-2024)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "116 hp",
@@ -936,6 +949,8 @@
             },
             {
               "code": "DJGA",
+              "title": "2.0L Diesel",
+              "familyHeading": "1.6 TDI & 2.0 TDI Engines (2016-2024)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "150 hp",
@@ -946,6 +961,8 @@
             },
             {
               "code": "DDYA",
+              "title": "2.0L Diesel",
+              "familyHeading": "1.6 TDI & 2.0 TDI Engines (2016-2024)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "150 hp",
@@ -963,6 +980,8 @@
           "engines": [
             {
               "code": "DADA",
+              "title": "1.0L Petrol",
+              "familyHeading": "1.0 TFSI, 1.4 TFSI & 1.5 TFSI Engines (2016-2024)",
               "fuel": "Petrol",
               "size": "1.0L",
               "power": "116 hp",
@@ -973,6 +992,8 @@
             },
             {
               "code": "CZEA",
+              "title": "1.4L Petrol",
+              "familyHeading": "1.0 TFSI, 1.4 TFSI & 1.5 TFSI Engines (2016-2024)",
               "fuel": "Petrol",
               "size": "1.4L",
               "power": "150 hp",
@@ -983,6 +1004,8 @@
             },
             {
               "code": "DARB",
+              "title": "1.5L Petrol",
+              "familyHeading": "1.0 TFSI, 1.4 TFSI & 1.5 TFSI Engines (2016-2024)",
               "fuel": "Petrol (MHEV)",
               "size": "1.5L",
               "power": "147 hp",
@@ -993,6 +1016,8 @@
             },
             {
               "code": "CZPB",
+              "title": "2.0L Petrol",
+              "familyHeading": "2.0 TFSI Performance Petrol Engine (2017-2020)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "190 hp",
@@ -1010,6 +1035,8 @@
           "engines": [
             {
               "code": "DARB",
+              "title": "1.5L Petrol MHEV",
+              "familyHeading": "Mild Hybrid Petrol Engines (2020-2024)",
               "fuel": "MHEV (Petrol + 48V)",
               "size": "1.5L",
               "power": "147 hp + 48V boost",
@@ -1514,6 +1541,11 @@
           "title": "Audi Q2 Diesel Engines",
           "description": "Diesel powered the majority of UK Q2 sales, from the 1.6 TDI entry point to the 2.0 TDI quattro, with replacement demand spiking around 60,000-80,000 miles as DPF and injector issues emerge.",
           "descriptor": "Diesel powered the majority of UK Q2 sales, from the 1.6 TDI entry point to the 2.0 TDI quattro, with replacement demand spiking around 60,000-80,000 miles as DPF and injector issues emerge.",
+          "familiesLabel": "Common Audi Q2 Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "CYKB - 1.6 TDI, entry-level 30 TDI, injector failure common",
             "DFGA - 2.0 TDI 116hp, most common 30 TDI pre-facelift unit",
@@ -1544,6 +1576,11 @@
           "title": "Audi Q2 Petrol Engines",
           "description": "Petrol Q2s range from the economical 1.0 TFSI three-cylinder to the notorious 1.4 TFSI COD and the facelift 1.5 TFSI mild hybrid, with the 1.4 TFSI dominating replacement searches due to cylinder deactivation failures.",
           "descriptor": "Petrol Q2s range from the economical 1.0 TFSI three-cylinder to the notorious 1.4 TFSI COD and the facelift 1.5 TFSI mild hybrid, with the 1.4 TFSI dominating replacement searches due to cylinder deactivation failures.",
+          "familiesLabel": "Common Audi Q2 Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "DADA - 1.0 TFSI three-cylinder, entry-level petrol, water pump weakness",
             "CZEA - 1.4 TFSI COD, most problematic Q2 engine, solenoid and oil consumption failures",
@@ -1575,6 +1612,11 @@
           "title": "Audi Q2 Mild Hybrid (MHEV) Engines",
           "description": "The facelift Q2 introduced 48V mild hybrid technology on 35 TFSI petrol models from 2020, using a belt alternator starter instead of a traditional starter motor.",
           "descriptor": "The facelift Q2 introduced 48V mild hybrid technology on 35 TFSI petrol models from 2020, using a belt alternator starter instead of a traditional starter motor.",
+          "familiesLabel": "Audi Q2 MHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "DARB - 1.5 TFSI with 48V belt alternator starter (BAS)",
             "48V starter-generator recovers braking energy to charge a lithium-ion battery",

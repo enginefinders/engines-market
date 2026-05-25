@@ -15,13 +15,13 @@
     "canonical": "/ford/ikon"
   },
   "assets": {
-    "heroBg": "/images/brands/ford/models/ford-ford-ikon-model-card.png",
+    "heroBg": "/images/brands/ford/models/ford-ikon-model-card.png",
     "howItWorksBg": "/images/brands/ford/brand/ford-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/ford/brand/ford-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/ford/brand/ford-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/ford/brand/ford-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/ford/brand/ford-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/ford/models/ford-ford-ikon-model-card.png"
+    "ctaImage": "/images/brands/ford/models/ford-ikon-model-card.png"
   },
   "sections": {
     "hero": {
@@ -681,8 +681,9 @@
             "name": "Petrol Engines",
             "entries": [
               {
-                "code": "1.3 ROCAM",
+                "code": "1.3 ROCAM]",
                 "title": "1.3L Petrol",
+                "familyHeading": "ROCAM Engine Family (2000-2011)",
                 "history": "The ROCAM (Roller Finger Camshaft) engine replaced the Endura in facelifted models, bringing SOHC simplicity and improved reliability for Indian and South African Ikon production.",
                 "fuel": "Petrol",
                 "size": "1.3 Litre",
@@ -701,8 +702,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "1.6 ROCAM",
+                "code": "1.6 ROCAM]",
                 "title": "1.6L Petrol",
+                "familyHeading": "ROCAM Engine Family (2000-2011)",
                 "history": "Higher-output ROCAM variant delivering 92 bhp, fitted to sport-oriented ZXi and Josh100 editions of the Ikon - a responsive but fuel-sensitive unit.",
                 "fuel": "Petrol",
                 "size": "1.6 Litre",
@@ -721,8 +723,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "Endura Pushrod 1.3",
+                "code": "Endura Pushrod 1.3]",
                 "title": "1.3L Petrol",
+                "familyHeading": "Endura Pushrod Engine Family (Pre‑2004)",
                 "history": "The venerable Kent-derived Endura pushrod engine powered early Ikon models before the ROCAM facelift. Simpler design but prone to timing chain issues.",
                 "fuel": "Petrol",
                 "size": "1.3 Litre",
@@ -741,8 +744,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "1.6 Duratec",
+                "code": "1.6 Duratec]",
                 "title": "1.6L Petrol",
+                "familyHeading": "Endura Pushrod Engine Family (Pre‑2004)",
                 "history": "Later NXT generation models received the Duratec 1.6 unit - a more modern 16-valve engine offering improved refinement over the ROCAM.",
                 "fuel": "Petrol",
                 "size": "1.6 Litre",
@@ -766,8 +770,9 @@
             "name": "Diesel Engines",
             "entries": [
               {
-                "code": "Endura-DE 1.8",
+                "code": "Endura-DE 1.8]",
                 "title": "1.8L Diesel",
+                "familyHeading": "Endura-D Diesel Engine (2001-2008)",
                 "history": "The Endura-DE was a cast-iron, SOHC indirect-injection diesel - durable but underpowered at 60 bhp. Fitted to Ikon diesel variants from 2003 to 2008.",
                 "fuel": "Diesel",
                 "size": "1.8 Litre",
@@ -783,6 +788,27 @@
                 ],
                 "avgRebuiltPrice": "£600 - £1,300",
                 "cta": "Get quotes for Endura-DE 1.8 Ford Ikon engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+              },
+              {
+                "code": "1.4 Duratorq (DLD-414)]",
+                "title": "1.4L Diesel",
+                "familyHeading": "Duratorq DLD-414 (Late Model Diesel, 2008-2011)",
+                "history": "The more modern common-rail Duratorq diesel replaced the Endura-D in later Ikon NXT models, offering better refinement and fuel economy.",
+                "fuel": "Diesel",
+                "size": "1.4 Litre",
+                "power": "68 hp",
+                "years": "2008-2011",
+                "compatibleVariants": [
+                  "1.4 TDCi (late NXT diesel models)"
+                ],
+                "commonFailures": [
+                  "Turbo actuator failure - loss of boost, reduced power",
+                  "EGR valve clogging - rough idle, poor acceleration",
+                  "DPF regeneration issues (where fitted)"
+                ],
+                "avgRebuiltPrice": "£750 - £1,500",
+                "cta": "Get quotes for 1.4 Duratorq Ford Ikon engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               }
             ]
@@ -818,7 +844,9 @@
           "failureNote": "Main replacement demand comes from timing-chain, cooling-system and performance thermal-management faults.",
           "engines": [
             {
-              "code": "1.3 ROCAM",
+              "code": "1.3 ROCAM]",
+              "title": "1.3L Petrol",
+              "familyHeading": "ROCAM Engine Family (2000-2011)",
               "fuel": "Petrol",
               "size": "1.3L",
               "power": "70-75 hp (A9JA code)",
@@ -828,7 +856,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "1.6 ROCAM",
+              "code": "1.6 ROCAM]",
+              "title": "1.6L Petrol",
+              "familyHeading": "ROCAM Engine Family (2000-2011)",
               "fuel": "Petrol",
               "size": "1.6L",
               "power": "92-100 hp",
@@ -838,7 +868,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "Endura Pushrod 1.3",
+              "code": "Endura Pushrod 1.3]",
+              "title": "1.3L Petrol",
+              "familyHeading": "Endura Pushrod Engine Family (Pre‑2004)",
               "fuel": "Petrol",
               "size": "1.3L",
               "power": "60 hp",
@@ -848,7 +880,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "1.6 Duratec",
+              "code": "1.6 Duratec]",
+              "title": "1.6L Petrol",
+              "familyHeading": "Endura Pushrod Engine Family (Pre‑2004)",
               "fuel": "Petrol",
               "size": "1.6L",
               "power": "98-100 hp",
@@ -865,13 +899,27 @@
           "failureNote": "Main replacement triggers are timing chain wear, EGR / cooling faults and turbo-control issues.",
           "engines": [
             {
-              "code": "Endura-DE 1.8",
+              "code": "Endura-DE 1.8]",
+              "title": "1.8L Diesel",
+              "familyHeading": "Endura-D Diesel Engine (2001-2008)",
               "fuel": "Diesel",
               "size": "1.8L",
               "power": "60 hp (naturally aspirated)",
               "compatibleModels": "1.8D ZXi, 1.8D EXi, 1.8D SXi NXT, 1.8D ZXi NXT",
               "avgRebuiltPrice": "£600 - £1,300",
               "cta": "Get quotes for Endura-DE 1.8 Ford Ikon engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+            },
+            {
+              "code": "1.4 Duratorq (DLD-414)]",
+              "title": "1.4L Diesel",
+              "familyHeading": "Duratorq DLD-414 (Late Model Diesel, 2008-2011)",
+              "fuel": "Diesel",
+              "size": "1.4L",
+              "power": "68 hp",
+              "compatibleModels": "1.4 TDCi (late NXT diesel models)",
+              "avgRebuiltPrice": "£750 - £1,500",
+              "cta": "Get quotes for 1.4 Duratorq Ford Ikon engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             }
           ]
@@ -1287,6 +1335,11 @@
           "title": "Ford Ikon Diesel Engines",
           "description": "Diesel Ikon variants appeared from 2003 to 2011, first with the simple but underpowered Endura-DE 1.8, then the more modern common-rail Duratorq 1.4 TDCi in late NXT models.",
           "descriptor": "Diesel Ikon variants appeared from 2003 to 2011, first with the simple but underpowered Endura-DE 1.8, then the more modern common-rail Duratorq 1.4 TDCi in late NXT models.",
+          "familiesLabel": "Common Ford Ikon Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "Endura-DE - 1.8L indirect-injection, cast-iron block, 60 bhp, fitted to early diesel ZXi/EXi",
             "Duratorq DLD-414 - 1.4L common-rail (2008-2011), 68 bhp, smoother and more economical"
@@ -1314,6 +1367,11 @@
           "title": "Ford Ikon Petrol Engines",
           "description": "Petrol engines powered the vast majority of Ford Ikon imports reaching the UK, split between the pre-2004 Endura pushrod 1.3 and the facelifted Rocam SOHC 1.3 and 1.6 petrol units (2004-2007).",
           "descriptor": "Petrol engines powered the vast majority of Ford Ikon imports reaching the UK, split between the pre-2004 Endura pushrod 1.3 and the facelifted Rocam SOHC 1.3 and 1.6 petrol units (2004-2007).",
+          "familiesLabel": "Common Ford Ikon Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "Endura pushrod - 1.3L, 60 bhp, simple Kent-derived design, fitted 1999-2003",
             "Rocam SOHC 1.3 - 70-75 bhp, roller finger camshafts, 2004-2007, shares parts with Fiesta Rocam",
@@ -1348,6 +1406,11 @@
           "title": "Ford Ikon Hybrid / Electrified Engines",
           "description": "No hybrid, mild-hybrid, plug-in hybrid or fully electric powertrains were ever factory-fitted to the Ford Ikon in any market.",
           "descriptor": "No hybrid, mild-hybrid, plug-in hybrid or fully electric powertrains were ever factory-fitted to the Ford Ikon in any market.",
+          "familiesLabel": "Common Ford Ikon Hybrid / Electrified Engine Families",
+          "foundInLabel": "",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [],
           "foundIn": [],
           "knownFor": [],

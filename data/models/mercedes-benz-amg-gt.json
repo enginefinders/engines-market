@@ -15,13 +15,13 @@
     "canonical": "/mercedes-benz/amg-gt"
   },
   "assets": {
-    "heroBg": "/images/brands/mercedes-benz/models/mercedes-benz-mercedes-benz-amg-gt-model-card.png",
+    "heroBg": "/images/brands/mercedes-benz/models/mercedes-benz-amg-gt-model-card.png",
     "howItWorksBg": "/images/brands/mercedes-benz/brand/mercedes-benz-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/mercedes-benz/models/mercedes-benz-mercedes-benz-amg-gt-model-card.png"
+    "ctaImage": "/images/brands/mercedes-benz/models/mercedes-benz-amg-gt-model-card.png"
   },
   "sections": {
     "hero": {
@@ -758,6 +758,7 @@
               {
                 "code": "M178",
                 "title": "4.0L Petrol (Base Tune)",
+                "familyHeading": "M178 V8 Biturbo Family (2014-2023)",
                 "history": "The M178 is AMG's first hand-built dry-sump V8, designed exclusively for the GT coupe and roadster range with a hot-vee layout for compact packaging.",
                 "fuel": "Petrol",
                 "size": "4.0 Litre",
@@ -778,6 +779,7 @@
               {
                 "code": "M178 LS1",
                 "title": "4.0L Petrol (Performance Tune)",
+                "familyHeading": "M178 V8 Biturbo Family (2014-2023)",
                 "history": "The LS1 variant introduced revised turbos and ECU calibration for the GT S, delivering 510hp while maintaining the M178's signature cross-plane crank growl.",
                 "fuel": "Petrol",
                 "size": "4.0 Litre",
@@ -798,6 +800,7 @@
               {
                 "code": "M178 LS2",
                 "title": "4.0L Petrol (High-Performance Tune)",
+                "familyHeading": "M178 V8 Biturbo Family (2014-2023)",
                 "history": "The LS2 powers the track-focused GT R and GT R Pro, featuring revised turbos, upgraded oiling, and unique engine mapping for 585hp.",
                 "fuel": "Petrol",
                 "size": "4.0 Litre",
@@ -818,6 +821,7 @@
               {
                 "code": "M178 LS3",
                 "title": "4.0L Petrol (Black Series Flat-Plane Crank)",
+                "familyHeading": "M178 V8 Biturbo Family (2014-2023)",
                 "history": "The ultimate M178 features a flat-plane crankshaft-a first for a series-production AMG V8-unleashing 730hp from the 4.0-litre unit in the limited-run Black Series.",
                 "fuel": "Petrol",
                 "size": "4.0 Litre",
@@ -838,6 +842,7 @@
               {
                 "code": "M177",
                 "title": "4.0L Petrol (Second Generation)",
+                "familyHeading": "M177 V8 Biturbo Family (2024-present)",
                 "history": "The second-generation C192 GT adopted the M177 engine with a wet-sump architecture, shared with the broader AMG V8 range but retaining AMG's \"One Man, One Engine\" assembly.",
                 "fuel": "Petrol",
                 "size": "4.0 Litre",
@@ -847,22 +852,10 @@
                   "GT 55, GT 55 4MATIC+"
                 ],
                 "commonFailures": [
-                  "ISG (Integrated Starter-Generator) overheating in mild-hybrid system"
+                  "ISG (Integrated Starter-Generator) overheating in mild-hybrid system",
+                  "Inherited EGR cooler cracking from M178 lineage",
+                  "High-pressure fuel pump failure (A0010704601) after 70,000 miles"
                 ],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "Inherited EGR cooler cracking from M17",
-                "title": "8 lineage",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
                 "avgRebuiltPrice": "£9,500 - £16,500",
                 "cta": "Get quotes for M177 Mercedes-Benz AMG GT engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -870,6 +863,7 @@
               {
                 "code": "M177 LS2",
                 "title": "4.0L Petrol (High-Output)",
+                "familyHeading": "M177 V8 Biturbo Family (2024-present)",
                 "history": "The LS2 designation on the second-generation M177 brings enhanced oiling and revised turbos to the GT 63, pushing output beyond 600hp in the range-topping variants.",
                 "fuel": "Petrol",
                 "size": "4.0 Litre",
@@ -890,6 +884,7 @@
               {
                 "code": "M256",
                 "title": "3.0L Petrol Mild Hybrid",
+                "familyHeading": "M256 Straight-Six Mild Hybrid (2018-present)",
                 "history": "The M256 is Mercedes' modular straight-six, featuring a 48V integrated starter-generator (ISG) and electric auxiliary components-no serpentine belt-delivering V8 power with four-cylinder consumption.",
                 "fuel": "MHEV Petrol",
                 "size": "3.0 Litre",
@@ -910,6 +905,7 @@
               {
                 "code": "M139",
                 "title": "2.0L Petrol Turbo",
+                "familyHeading": "M139 Four-Cylinder Turbo Family (2024-present)",
                 "history": "Dubbed the \"world's most powerful four-cylinder,\" the hand-built M139 delivers over 400hp from 2.0 litres-but AMG fans rejected replacing the V8 with a four-pot in the GT 43.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -930,6 +926,7 @@
               {
                 "code": "M157",
                 "title": "5.5L Petrol Turbo",
+                "familyHeading": "M157 V8 Biturbo (Early C190, 2014-2017)",
                 "history": "Before the M178, early C190 GT models briefly used the 5.5-litre M157 from the previous AMG generation-a thunderous V8 ultimately replaced by the smaller, more efficient M178.",
                 "fuel": "Petrol",
                 "size": "5.5 Litre",
@@ -980,6 +977,8 @@
           "engines": [
             {
               "code": "M178",
+              "title": "4.0L Petrol (Base Tune)",
+              "familyHeading": "M178 V8 Biturbo Family (2014-2023)",
               "fuel": "Petrol",
               "size": "4.0L",
               "power": "462-476 hp",
@@ -990,6 +989,8 @@
             },
             {
               "code": "M178 LS1",
+              "title": "4.0L Petrol (Performance Tune)",
+              "familyHeading": "M178 V8 Biturbo Family (2014-2023)",
               "fuel": "Petrol",
               "size": "4.0L",
               "power": "510-522 hp",
@@ -1000,6 +1001,8 @@
             },
             {
               "code": "M178 LS2",
+              "title": "4.0L Petrol (High-Performance Tune)",
+              "familyHeading": "M178 V8 Biturbo Family (2014-2023)",
               "fuel": "Petrol",
               "size": "4.0L",
               "power": "577-585 hp",
@@ -1010,6 +1013,8 @@
             },
             {
               "code": "M178 LS3",
+              "title": "4.0L Petrol (Black Series Flat-Plane Crank)",
+              "familyHeading": "M178 V8 Biturbo Family (2014-2023)",
               "fuel": "Petrol",
               "size": "4.0L",
               "power": "720-730 hp",
@@ -1020,26 +1025,20 @@
             },
             {
               "code": "M177",
+              "title": "4.0L Petrol (Second Generation)",
+              "familyHeading": "M177 V8 Biturbo Family (2024-present)",
               "fuel": "Petrol",
               "size": "4.0L",
               "power": "469-476 hp",
               "compatibleModels": "GT 55, GT 55 4MATIC+",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "Inherited EGR cooler cracking from M17",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
               "avgRebuiltPrice": "£9,500 - £16,500",
               "cta": "Get quotes for M177 Mercedes-Benz AMG GT engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
               "code": "M177 LS2",
+              "title": "4.0L Petrol (High-Output)",
+              "familyHeading": "M177 V8 Biturbo Family (2024-present)",
               "fuel": "Petrol",
               "size": "4.0L",
               "power": "577-639 hp",
@@ -1050,6 +1049,8 @@
             },
             {
               "code": "M256",
+              "title": "3.0L Petrol Mild Hybrid",
+              "familyHeading": "M256 Straight-Six Mild Hybrid (2018-present)",
               "fuel": "MHEV Petrol",
               "size": "3.0L",
               "power": "435 hp",
@@ -1060,6 +1061,8 @@
             },
             {
               "code": "M139",
+              "title": "2.0L Petrol Turbo",
+              "familyHeading": "M139 Four-Cylinder Turbo Family (2024-present)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "416-421 hp",
@@ -1070,6 +1073,8 @@
             },
             {
               "code": "M157",
+              "title": "5.5L Petrol Turbo",
+              "familyHeading": "M157 V8 Biturbo (Early C190, 2014-2017)",
               "fuel": "Petrol",
               "size": "5.5L",
               "power": "550-585 hp",
@@ -1505,6 +1510,11 @@
           "title": "Mercedes-Benz AMG GT Petrol Engines",
           "description": "The AMG GT is defined by its hand-built V8 petrol engines, though the second-generation C192 introduced a four-cylinder option and a straight-six mild hybrid.",
           "descriptor": "The AMG GT is defined by its hand-built V8 petrol engines, though the second-generation C192 introduced a four-cylinder option and a straight-six mild hybrid.",
+          "familiesLabel": "Common Mercedes-Benz AMG GT Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "M178 - The original AMG GT V8, dry-sump, hot-vee, cross-plane crank (GT, GT S, GT C)",
             "M178 LS2 - Track-focused unit for GT R and GT R Pro with upgraded oiling and turbos",
@@ -1532,6 +1542,11 @@
           "title": "Mercedes-Benz AMG GT Mild Hybrid (MHEV) Engines",
           "description": "The second-generation C192 and X290 4-Door Coupe use 48V mild hybrid systems integrated with petrol engines - not full hybrids, but electrified assistance.",
           "descriptor": "The second-generation C192 and X290 4-Door Coupe use 48V mild hybrid systems integrated with petrol engines - not full hybrids, but electrified assistance.",
+          "familiesLabel": "Mercedes-Benz AMG GT MHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "M256 - 3.0L straight-six with Integrated Starter-Generator (ISG) and electric auxiliaries",
             "M139 - 2.0L four-cylinder with belt-driven starter-generator (GT 43)",
@@ -1557,6 +1572,11 @@
           "title": "Mercedes-Benz AMG GT Plug-in Hybrid (PHEV) Engines",
           "description": "The GT 63 S E Performance is the only plug-in hybrid AMG GT, combining the M177 V8 with a rear-axle electric motor for a combined 816hp.",
           "descriptor": "The GT 63 S E Performance is the only plug-in hybrid AMG GT, combining the M177 V8 with a rear-axle electric motor for a combined 816hp.",
+          "familiesLabel": "Mercedes-Benz AMG GT PHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "M177 E20 - 4.0L V8 biturbo with integrated electric motor on rear axle",
             "6.1kWh battery powers a rear-mounted electric motor (150kW / 201hp)",

@@ -15,13 +15,13 @@
     "canonical": "/audi/q3"
   },
   "assets": {
-    "heroBg": "/images/brands/audi/models/audi-audi-q3-model-card.png",
+    "heroBg": "/images/brands/audi/models/audi-q3-model-card.png",
     "howItWorksBg": "/images/brands/audi/brand/audi-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/audi/brand/audi-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/audi/brand/audi-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/audi/brand/audi-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/audi/brand/audi-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/audi/models/audi-audi-q3-model-card.png"
+    "ctaImage": "/images/brands/audi/models/audi-q3-model-card.png"
   },
   "sections": {
     "hero": {
@@ -698,6 +698,7 @@
               {
                 "code": "CFFB",
                 "title": "2.0L Diesel",
+                "familyHeading": "2.0 TDI Engine Family (2011-Present)",
                 "history": "One of the first common-rail diesels fitted to the 8U Q3, replacing earlier unit injector designs. Known for refined delivery and strong mid-range torque.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -718,6 +719,7 @@
               {
                 "code": "CUNA",
                 "title": "2.0L Diesel",
+                "familyHeading": "2.0 TDI Engine Family (2011-Present)",
                 "history": "The most widely fitted diesel in early 8U Q3 models. Delivers the 150hp sweet spot that balanced economy and performance for UK fleet buyers.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -738,6 +740,7 @@
               {
                 "code": "CLJA",
                 "title": "2.0L Diesel",
+                "familyHeading": "2.0 TDI Engine Family (2011-Present)",
                 "history": "A higher-output variant aimed at Sport trim buyers who wanted more urgency without stepping up to the full 184hp DFHA.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -758,6 +761,7 @@
               {
                 "code": "CUVC",
                 "title": "2.0L Diesel",
+                "familyHeading": "2.0 TDI Engine Family (2011-Present)",
                 "history": "The quattro-compatible 2.0 TDI that delivered 150hp with permanent all-wheel drive. A favourite among UK owners needing year-round traction.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -778,6 +782,7 @@
               {
                 "code": "DFHA",
                 "title": "2.0L Diesel",
+                "familyHeading": "2.0 TDI Engine Family (2011-Present)",
                 "history": "The highest-output 2.0 TDI fitted to the 8U generation. Delivers 184hp and quattro grip, making the Q3 a genuine compact performance SUV.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -798,6 +803,7 @@
               {
                 "code": "DFTA",
                 "title": "2.0L Diesel",
+                "familyHeading": "2.0 TDI Engine Family (2011-Present)",
                 "history": "The entry-level 2.0 TDI for the second-generation F3 Q3. Built on the MQB Evo platform with Euro 6d emissions compliance.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -818,6 +824,7 @@
               {
                 "code": "DFUA",
                 "title": "2.0L Diesel",
+                "familyHeading": "2.0 TDI Engine Family (2011-Present)",
                 "history": "The high-output 190hp diesel for the F3 Q3, commonly paired with quattro. A direct successor to the DFHA with improved emissions hardware.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -838,6 +845,7 @@
               {
                 "code": "DFGA",
                 "title": "2.0L Diesel",
+                "familyHeading": "2.0 TDI Engine Family (2011-Present)",
                 "history": "A late F3-generation 2.0 TDI offering 150hp with optimised emissions calibration for the stricter RDE2 standards.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -858,6 +866,7 @@
               {
                 "code": "DTSB",
                 "title": "2.0L Diesel",
+                "familyHeading": "2.0 TDI Engine Family (2011-Present)",
                 "history": "A later-production 2.0 TDI badged as 35 TDI in the F3 Q3. Built with twin-dosing AdBlue for Euro 6d compliance.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -883,6 +892,7 @@
               {
                 "code": "CZDA",
                 "title": "1.4L Petrol",
+                "familyHeading": "EA211 1.4 TFSI Family (2013-2019)",
                 "history": "The first 1.4 TFSI in the Q3 with cylinder deactivation (ACT). Delivers 150hp with impressive economy, but early tensioner issues created replacement demand.",
                 "fuel": "Petrol",
                 "size": "1.4 Litre",
@@ -903,6 +913,7 @@
               {
                 "code": "CPTA",
                 "title": "1.4L Petrol",
+                "familyHeading": "EA211 1.4 TFSI Family (2013-2019)",
                 "history": "An updated 1.4 TFSI for late 8U production. Shares the same 150hp output as CZDA but with revised ECU calibration.",
                 "fuel": "Petrol",
                 "size": "1.4 Litre",
@@ -923,6 +934,7 @@
               {
                 "code": "CZD / CZEA",
                 "title": "1.4L Petrol",
+                "familyHeading": "EA211 1.4 TFSI Family (2013-2019)",
                 "history": "The 1.4 TFSI offered in some late 8U and early F3 markets. Produces 150hp with cylinder deactivation.",
                 "fuel": "Petrol",
                 "size": "1.4 Litre",
@@ -943,6 +955,7 @@
               {
                 "code": "CXBA",
                 "title": "2.0L Petrol",
+                "familyHeading": "EA888 2.0 TFSI Family (2018-Present)",
                 "history": "The third-generation EA888 2.0 TFSI fitted to the F3 Q3. Delivers 190hp with quattro. Significantly improved piston ring design reduced oil consumption issues from earlier EA888 iterations.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -963,6 +976,7 @@
               {
                 "code": "CXWB",
                 "title": "2.0L Petrol",
+                "familyHeading": "EA888 2.0 TFSI Family (2018-Present)",
                 "history": "A late-production 2.0 TFSI for the F3 Q3. Delivers 190hp with updated emissions calibration.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -988,6 +1002,7 @@
               {
                 "code": "DFYA",
                 "title": "1.5L Petrol MHEV",
+                "familyHeading": "Mild Hybrid Petrol (2019-Present)",
                 "history": "The first electrified Q3, using a 1.5-litre TFSI with a 48-volt mild hybrid system. Sold as the 35 TFSI, it improves urban fuel economy through coasting and start-stop optimisation.",
                 "fuel": "Petrol / Electric (Mild Hybrid)",
                 "size": "1.5 Litre",
@@ -1013,6 +1028,7 @@
               {
                 "code": "CULB / CZGA / DAZA",
                 "title": "2.5L Petrol",
+                "familyHeading": "2.5 TFSI Five-Cylinder Family (2013-Present)",
                 "history": "The legendary Audi five-cylinder engine fitted to RS Q3 models. Produces a distinctive warble and brutal performance. CULB found in early RS Q3, DAZA in later generations with up to 400hp.",
                 "fuel": "Petrol",
                 "size": "2.5 Litre",
@@ -1065,6 +1081,8 @@
           "engines": [
             {
               "code": "CFFB",
+              "title": "2.0L Diesel",
+              "familyHeading": "2.0 TDI Engine Family (2011-Present)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "140-150 hp",
@@ -1075,6 +1093,8 @@
             },
             {
               "code": "CUNA",
+              "title": "2.0L Diesel",
+              "familyHeading": "2.0 TDI Engine Family (2011-Present)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "150 hp",
@@ -1085,6 +1105,8 @@
             },
             {
               "code": "CLJA",
+              "title": "2.0L Diesel",
+              "familyHeading": "2.0 TDI Engine Family (2011-Present)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "170 hp",
@@ -1095,6 +1117,8 @@
             },
             {
               "code": "CUVC",
+              "title": "2.0L Diesel",
+              "familyHeading": "2.0 TDI Engine Family (2011-Present)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "150 hp",
@@ -1105,6 +1129,8 @@
             },
             {
               "code": "DFHA",
+              "title": "2.0L Diesel",
+              "familyHeading": "2.0 TDI Engine Family (2011-Present)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "184 hp",
@@ -1115,6 +1141,8 @@
             },
             {
               "code": "DFTA",
+              "title": "2.0L Diesel",
+              "familyHeading": "2.0 TDI Engine Family (2011-Present)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "150 hp",
@@ -1125,6 +1153,8 @@
             },
             {
               "code": "DFUA",
+              "title": "2.0L Diesel",
+              "familyHeading": "2.0 TDI Engine Family (2011-Present)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "190 hp",
@@ -1135,6 +1165,8 @@
             },
             {
               "code": "DFGA",
+              "title": "2.0L Diesel",
+              "familyHeading": "2.0 TDI Engine Family (2011-Present)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "150 hp",
@@ -1145,6 +1177,8 @@
             },
             {
               "code": "DTSB",
+              "title": "2.0L Diesel",
+              "familyHeading": "2.0 TDI Engine Family (2011-Present)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "150 hp",
@@ -1162,6 +1196,8 @@
           "engines": [
             {
               "code": "CZDA",
+              "title": "1.4L Petrol",
+              "familyHeading": "EA211 1.4 TFSI Family (2013-2019)",
               "fuel": "Petrol",
               "size": "1.4L",
               "power": "150 hp",
@@ -1172,6 +1208,8 @@
             },
             {
               "code": "CPTA",
+              "title": "1.4L Petrol",
+              "familyHeading": "EA211 1.4 TFSI Family (2013-2019)",
               "fuel": "Petrol",
               "size": "1.4L",
               "power": "150 hp",
@@ -1182,6 +1220,8 @@
             },
             {
               "code": "CZD / CZEA",
+              "title": "1.4L Petrol",
+              "familyHeading": "EA211 1.4 TFSI Family (2013-2019)",
               "fuel": "Petrol",
               "size": "1.4L",
               "power": "150 hp",
@@ -1192,6 +1232,8 @@
             },
             {
               "code": "CXBA",
+              "title": "2.0L Petrol",
+              "familyHeading": "EA888 2.0 TFSI Family (2018-Present)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "190 hp",
@@ -1202,6 +1244,8 @@
             },
             {
               "code": "CXWB",
+              "title": "2.0L Petrol",
+              "familyHeading": "EA888 2.0 TFSI Family (2018-Present)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "190 hp",
@@ -1212,6 +1256,8 @@
             },
             {
               "code": "CULB / CZGA / DAZA",
+              "title": "2.5L Petrol",
+              "familyHeading": "2.5 TFSI Five-Cylinder Family (2013-Present)",
               "fuel": "Petrol",
               "size": "2.5L",
               "power": "310-400 hp",
@@ -1229,6 +1275,8 @@
           "engines": [
             {
               "code": "DFYA",
+              "title": "1.5L Petrol MHEV",
+              "familyHeading": "Mild Hybrid Petrol (2019-Present)",
               "fuel": "Petrol / Electric (Mild Hybrid)",
               "size": "1.5L",
               "power": "150 hp",
@@ -1768,6 +1816,11 @@
           "title": "Audi Q3 Diesel Engines",
           "description": "The 2.0 TDI dominates Audi Q3 diesel replacement demand across both 8U (2011-2018) and F3 (2018-present) generations, with 140-190hp variants accounting for the majority of UK fleet and private owner enquiries.",
           "descriptor": "The 2.0 TDI dominates Audi Q3 diesel replacement demand across both 8U (2011-2018) and F3 (2018-present) generations, with 140-190hp variants accounting for the majority of UK fleet and private owner enquiries.",
+          "familiesLabel": "Common Audi Q3 Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "CFFB / CUNA - 2.0 TDI 140-150hp, backbone of early 8U diesel range (2011-2018)",
             "CLJA - 2.0 TDI 170hp, mid-production Sport and S line option (2013-2018)",
@@ -1801,6 +1854,11 @@
           "title": "Audi Q3 Petrol Engines",
           "description": "Petrol-powered Q3s span 1.4 TFSI (EA211) entry-level units to 2.5 TFSI five-cylinder RS Q3 performance flagships, with EA888 2.0 TFSI quattro variants dominating F3 generation replacement searches.",
           "descriptor": "Petrol-powered Q3s span 1.4 TFSI (EA211) entry-level units to 2.5 TFSI five-cylinder RS Q3 performance flagships, with EA888 2.0 TFSI quattro variants dominating F3 generation replacement searches.",
+          "familiesLabel": "Common Audi Q3 Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "CZDA / CPTA / CZD - 1.4 TFSI 150hp EA211, 8U generation entry petrol (2013-2018)",
             "CXBA / CXWB - 2.0 TFSI 190hp EA888 Gen 3, F3 generation petrol quattro (2018-2024)",
@@ -1832,6 +1890,11 @@
           "title": "Audi Q3 Mild Hybrid (MHEV) Engines",
           "description": "The 1.5 TFSI MHEV (DFYA) joined the F3-generation Q3 in 2019 as a 35 TFSI badged option, adding 48-volt belt starter-generator technology for coasting and stop-start optimisation.",
           "descriptor": "The 1.5 TFSI MHEV (DFYA) joined the F3-generation Q3 in 2019 as a 35 TFSI badged option, adding 48-volt belt starter-generator technology for coasting and stop-start optimisation.",
+          "familiesLabel": "Audi Q3 Mild Hybrid Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "DFYA - 1.5 TFSI 150hp with 48V BSG, EA211 Evo architecture (2019-2024)",
             "48-volt belt-driven starter-generator recovers braking energy to charge a small lithium-ion battery",

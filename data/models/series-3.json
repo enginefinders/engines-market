@@ -15,13 +15,13 @@
     "canonical": "/bmw/3-series"
   },
   "assets": {
-    "heroBg": "/images/brands/bmw/models/bmw-series-3-model-card.png",
+    "heroBg": "/images/brands/bmw/models/bmw-3-series-model-card.png",
     "howItWorksBg": "/images/brands/bmw/brand/bmw-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/bmw/brand/bmw-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/bmw/brand/bmw-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/bmw/brand/bmw-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/bmw/brand/bmw-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/bmw/models/bmw-series-3-model-card.png"
+    "ctaImage": "/images/brands/bmw/models/bmw-3-series-model-card.png"
   },
   "sections": {
     "hero": {
@@ -839,6 +839,7 @@
               {
                 "code": "N47D20",
                 "title": "2.0L Diesel",
+                "familyHeading": "N47 & B47 Series (2007-2023)",
                 "history": "Successor to the M47, featuring common-rail injection and a rear-mounted timing chain notorious for premature wear.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -859,6 +860,7 @@
               {
                 "code": "B47D20",
                 "title": "2.0L Diesel",
+                "familyHeading": "N47 & B47 Series (2007-2023)",
                 "history": "Refined evolution of the N47 with improved acoustic dampening, updated cooling architecture, and better fuel economy.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -879,6 +881,7 @@
               {
                 "code": "N57D30",
                 "title": "3.0L Diesel",
+                "familyHeading": "N57 & B57 Series (2008-2023)",
                 "history": "BMW’s highly regarded six-cylinder diesel, offering exceptional torque, smoothness, and long-distance touring capability.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -899,6 +902,7 @@
               {
                 "code": "B57D30",
                 "title": "3.0L Diesel",
+                "familyHeading": "N57 & B57 Series (2008-2023)",
                 "history": "Acclaimed inline-six replacing the N55 diesel variant, featuring a closed-deck block and modular design for exceptional reliability.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -924,6 +928,7 @@
               {
                 "code": "N43B20",
                 "title": "2.0L Petrol",
+                "familyHeading": "N43 & N46 Series (2004-2013)",
                 "history": "Early direct-injection four-cylinder prioritising fuel economy, later requiring updated ignition coils and fuel pumps.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -944,6 +949,7 @@
               {
                 "code": "N20B20",
                 "title": "2.0L Petrol",
+                "familyHeading": "N20 & B48 Series (2011-2023)",
                 "history": "F30-era turbo four replacing the N52/N53, delivering stronger low-end torque and improved fuel efficiency across the range.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -964,6 +970,7 @@
               {
                 "code": "B48B20",
                 "title": "2.0L Petrol",
+                "familyHeading": "N20 & B48 Series (2011-2023)",
                 "history": "Evolved N20 successor with closed-deck block and integrated exhaust manifold, delivering vastly improved reliability.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -984,6 +991,7 @@
               {
                 "code": "N54B30",
                 "title": "3.0L Petrol",
+                "familyHeading": "N54, N55 & B58 Series (2006-2023)",
                 "history": "Pioneering twin-turbo inline-six delivering class-leading performance, later becoming a benchmark for enthusiast tuning.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -1004,6 +1012,7 @@
               {
                 "code": "N55B30",
                 "title": "3.0L Petrol",
+                "familyHeading": "N54, N55 & B58 Series (2006-2023)",
                 "history": "Single-turbo successor retaining inline-six refinement, simplifying the induction layout for improved durability.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -1024,6 +1033,7 @@
               {
                 "code": "B58B30",
                 "title": "3.0L Petrol",
+                "familyHeading": "N54, N55 & B58 Series (2006-2023)",
                 "history": "Acclaimed inline-six replacing the N55, featuring a closed-deck block and modular design for exceptional reliability.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -1039,6 +1049,32 @@
                 ],
                 "avgRebuiltPrice": "£4,000 - £8,500",
                 "cta": "Get quotes for B58B30 BMW 3 Series engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              }
+            ]
+          },
+          {
+            "name": "Hybrid / Electrified Engines",
+            "entries": [
+              {
+                "code": "B48B20 (330e)",
+                "title": "2.0L Petrol Hybrid",
+                "familyHeading": "PHEV B48 Hybrid Powertrains (2016-2023)",
+                "history": "Combines the B48 combustion unit with an electric motor, delivering strong combined output and efficient urban EV range.",
+                "fuel": "PHEV (Petrol/Electric)",
+                "size": "2.0 Litre (Combustion unit)",
+                "power": "252 hp (Combined)",
+                "years": "2016-2023",
+                "compatibleVariants": [
+                  "330e, 330e M Sport, 330e SE, 330e Sport, 330e xDrive"
+                ],
+                "commonFailures": [
+                  "High-voltage battery degradation and cell imbalance over time",
+                  "Hybrid cooling pump failure triggering EV mode restrictions",
+                  "Combustion engine side shares B48 thermostat and gasket failure patterns"
+                ],
+                "avgRebuiltPrice": "£2,800 - £5,800",
+                "cta": "Get quotes for B48B20 BMW 3 Series engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               }
             ]
@@ -1065,7 +1101,8 @@
       "closingLine": "Can’t find your engine code? Enter your registration number above - we’ll instantly identify the exact unit, its technical specifications, and live replacement prices from UK BMW 3 Series engine specialists. Every rebuilt engine comes with a minimum 12‑month unlimited mileage warranty.",
       "filters": [
         "Diesel Engines",
-        "Petrol Engines"
+        "Petrol Engines",
+        "Hybrid / Electrified Engines"
       ],
       "groups": [
         {
@@ -1075,6 +1112,8 @@
           "engines": [
             {
               "code": "N47D20",
+              "title": "2.0L Diesel",
+              "familyHeading": "N47 & B47 Series (2007-2023)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "116-184 hp",
@@ -1085,6 +1124,8 @@
             },
             {
               "code": "B47D20",
+              "title": "2.0L Diesel",
+              "familyHeading": "N47 & B47 Series (2007-2023)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "150-190 hp",
@@ -1095,6 +1136,8 @@
             },
             {
               "code": "N57D30",
+              "title": "3.0L Diesel",
+              "familyHeading": "N57 & B57 Series (2008-2023)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "204-306 hp",
@@ -1105,6 +1148,8 @@
             },
             {
               "code": "B57D30",
+              "title": "3.0L Diesel",
+              "familyHeading": "N57 & B57 Series (2008-2023)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "265-340 hp",
@@ -1122,6 +1167,8 @@
           "engines": [
             {
               "code": "N43B20",
+              "title": "2.0L Petrol",
+              "familyHeading": "N43 & N46 Series (2004-2013)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "129-170 hp",
@@ -1132,6 +1179,8 @@
             },
             {
               "code": "N20B20",
+              "title": "2.0L Petrol",
+              "familyHeading": "N20 & B48 Series (2011-2023)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "184-245 hp",
@@ -1142,6 +1191,8 @@
             },
             {
               "code": "B48B20",
+              "title": "2.0L Petrol",
+              "familyHeading": "N20 & B48 Series (2011-2023)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "184-252 hp",
@@ -1152,6 +1203,8 @@
             },
             {
               "code": "N54B30",
+              "title": "3.0L Petrol",
+              "familyHeading": "N54, N55 & B58 Series (2006-2023)",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "306 hp",
@@ -1162,6 +1215,8 @@
             },
             {
               "code": "N55B30",
+              "title": "3.0L Petrol",
+              "familyHeading": "N54, N55 & B58 Series (2006-2023)",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "306-320 hp",
@@ -1172,12 +1227,33 @@
             },
             {
               "code": "B58B30",
+              "title": "3.0L Petrol",
+              "familyHeading": "N54, N55 & B58 Series (2006-2023)",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "326-382 hp",
               "compatibleModels": "340i, 340i M Sport, 340i xDrive, M340i, M340i xDrive",
               "avgRebuiltPrice": "£4,000 - £8,500",
               "cta": "Get quotes for B58B30 BMW 3 Series engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            }
+          ]
+        },
+        {
+          "name": "Hybrid / Electrified Engines",
+          "era": "Extracted from electrified powertrains and hybrid engine families used in BMW 3 Series variants.",
+          "failureNote": "Main replacement demand comes from cooling, battery-support and high-voltage control faults.",
+          "engines": [
+            {
+              "code": "B48B20 (330e)",
+              "title": "2.0L Petrol Hybrid",
+              "familyHeading": "PHEV B48 Hybrid Powertrains (2016-2023)",
+              "fuel": "PHEV (Petrol/Electric)",
+              "size": "2.0L (Combustion unit)",
+              "power": "252 hp (Combined)",
+              "compatibleModels": "330e, 330e M Sport, 330e SE, 330e Sport, 330e xDrive",
+              "avgRebuiltPrice": "£2,800 - £5,800",
+              "cta": "Get quotes for B48B20 BMW 3 Series engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             }
           ]
@@ -1678,6 +1754,11 @@
           "title": "BMW 3 Series Diesel Engines",
           "description": "Diesel power dominates the 3 Series lineup across all generations, driving the majority of UK replacement enquiries due to high-mileage fleet usage and specific component vulnerabilities.",
           "descriptor": "Diesel power dominates the 3 Series lineup across all generations, driving the majority of UK replacement enquiries due to high-mileage fleet usage and specific component vulnerabilities.",
+          "familiesLabel": "Common BMW 3 Series Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "M47D20 - E46 workhorse with robust block but prone to swirl flap wear",
             "N47D20 - 318d/320d unit notorious for rear timing chain tensioner failures",
@@ -1712,6 +1793,11 @@
           "title": "BMW 3 Series Petrol Engines",
           "description": "Petrol variants span naturally aspirated inline-fours and six-cylinders to modern twin-scroll turbo units, offering sharp throttle response and consistent UK replacement demand.",
           "descriptor": "Petrol variants span naturally aspirated inline-fours and six-cylinders to modern twin-scroll turbo units, offering sharp throttle response and consistent UK replacement demand.",
+          "familiesLabel": "Common BMW 3 Series Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "M54B25 - E46 naturally aspirated six with CCV oil separator leak risks",
             "N43B20 - Early direct-injection unit prone to HPFP and injector faults",
@@ -1747,6 +1833,11 @@
           "title": "BMW 3 Series Hybrid / Electrified Engines",
           "description": "Electrified 3 Series models combine efficient turbo petrol blocks with electric motors for reduced emissions, requiring specialist diagnostics during replacement.",
           "descriptor": "Electrified 3 Series models combine efficient turbo petrol blocks with electric motors for reduced emissions, requiring specialist diagnostics during replacement.",
+          "familiesLabel": "BMW 3 Series Hybrid Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "B48B20 (PHEV) - 330e/320e combustion unit paired with integrated electric motor",
             "B48B20 (MHEV) - G20 mild-hybrid variant with 48-volt belt alternator starter",

@@ -11,6 +11,7 @@ type Props = {
 };
 
 const REVIEW_SOURCES = ["google", "facebook", "trustpilot", "google", "facebook", "trustpilot"] as const;
+const LEAVE_REVIEW_HREF = "mailto:hello@enginesmarket.co.uk?subject=EnginesMarket%20review";
 
 function TagIcon() {
   return (
@@ -253,7 +254,7 @@ export default function ReviewsSection({ data, useDataHeading = false }: Props) 
                   {ui.leaveReviewTitle ?? "Highly Rated Experience - Leave a Review"}
                 </p>
                 <p className="mt-1 text-[12.5px] leading-[1.55] text-slate-500">
-                  <a href="#" className="font-semibold text-[#0d1b2e] underline decoration-slate-300 underline-offset-2">
+                  <a href={LEAVE_REVIEW_HREF} className="font-semibold text-[#0d1b2e] underline decoration-slate-300 underline-offset-2">
                     {data.leaveReviewCta.linkText.replace(/\s*-+>\s*$/, "")} →
                   </a>{" "}
                   - {data.leaveReviewCta.text.replace(/^Had a great experience\?\s*/i, "")}

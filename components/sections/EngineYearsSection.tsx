@@ -191,6 +191,29 @@ function compactYearCta(year: string, cta: string) {
   return normalized;
 }
 
+function normalizeYearLabel(year: string) {
+  const normalized = normalizeText(year).replace(/\s+/g, " ").trim();
+  const duplicatedYearMatch = normalized.match(/^(\d{4})\s*-\s*\1$/);
+
+  if (duplicatedYearMatch) {
+    return duplicatedYearMatch[1];
+  }
+
+  return normalized;
+}
+
+function normalizeYearPreview(year: string, preview: string) {
+  const normalizedPreview = normalizeText(preview).replace(/\s+/g, " ").trim();
+  const yearLabel = normalizeYearLabel(year);
+  const yearPrefix = `${yearLabel} - `;
+
+  if (normalizedPreview.toLowerCase().startsWith(yearPrefix.toLowerCase())) {
+    return normalizedPreview.slice(yearPrefix.length).trim();
+  }
+
+  return normalizedPreview;
+}
+
 function splitHeading(text: string) {
   const accent = "What Was Fitted & When";
   if (text.includes(accent)) {
@@ -256,6 +279,8 @@ function YearPanel({
 }) {
   const enquiries = item.enquiries ?? [];
   const ctaText = strictData ? (item.ctaText || item.cta || "") : (item.ctaText || compactYearCta(item.year, item.cta));
+  const yearLabel = normalizeYearLabel(item.year);
+  const previewLabel = normalizeYearPreview(item.year, item.preview);
   const keyChangesLabel = strictData ? (ui.keyChangesLabel || "") : (ui.keyChangesLabel ?? "Key Changes");
   const knownForLabel = strictData ? (ui.knownForLabel || "") : (ui.knownForLabel ?? "Known For");
   const mainEnginesLabel = strictData ? (ui.mainEnginesLabel || "") : (ui.mainEnginesLabel ?? "Main Engines");
@@ -272,7 +297,7 @@ function YearPanel({
           </div>
           <div className="min-w-0 flex-1">
             <div className="font-['Manrope'] text-[17px] font-extrabold leading-[1.25] text-[#0d1b2e] md:text-[20px]">
-              {item.year} - {item.preview}
+              {previewLabel ? `${yearLabel} - ${previewLabel}` : yearLabel}
             </div>
             <div className="mt-2 flex flex-wrap gap-[6px] md:gap-2">
               {topBadges(item).map((badge) => (
@@ -494,7 +519,7 @@ export default function EngineYearsSection({ brandName, data, strictData = false
           >
             {data.years.map((item, index) => (
               <button
-                key={item.year}
+                key={`${item.year}-${index}`}
                 type="button"
                 onClick={() => setActiveIndex(index)}
                 className={`flex h-[58px] w-[110px] flex-none items-center justify-center rounded-[10px] border bg-white px-[10px] text-center transition ${
@@ -504,7 +529,7 @@ export default function EngineYearsSection({ brandName, data, strictData = false
                 }`}
               >
                 <div className={`font-['Manrope'] text-[14px] font-extrabold leading-[1.15] ${activeIndex === index ? "text-[#15803d]" : "text-[#0d1b2e]"}`}>
-                  {item.year}
+                  {normalizeYearLabel(item.year)}
                 </div>
               </button>
             ))}
@@ -522,7 +547,7 @@ export default function EngineYearsSection({ brandName, data, strictData = false
         <div className="mb-[18px] flex items-center gap-[6px] overflow-x-auto rounded-[14px] bg-[#0d1b2e] p-[10px] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:hidden">
           {data.years.map((item, index) => (
             <button
-              key={item.year}
+              key={`${item.year}-${index}`}
               type="button"
               onClick={() => setActiveIndex(index)}
               className={`min-w-[90px] flex-none rounded-[10px] border px-[14px] py-[9px] text-left transition ${
@@ -531,7 +556,7 @@ export default function EngineYearsSection({ brandName, data, strictData = false
                   : "border-[#334155] bg-transparent"
               }`}
             >
-              <div className="font-['Manrope'] text-[13px] font-extrabold leading-[1.15] text-white">{item.year}</div>
+              <div className="font-['Manrope'] text-[13px] font-extrabold leading-[1.15] text-white">{normalizeYearLabel(item.year)}</div>
             </button>
           ))}
           <button

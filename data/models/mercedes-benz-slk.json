@@ -15,13 +15,13 @@
     "canonical": "/mercedes-benz/slk"
   },
   "assets": {
-    "heroBg": "/images/brands/mercedes-benz/models/mercedes-benz-mercedes-benz-slk-model-card.png",
+    "heroBg": "/images/brands/mercedes-benz/models/mercedes-benz-slk-model-card.png",
     "howItWorksBg": "/images/brands/mercedes-benz/brand/mercedes-benz-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/mercedes-benz/models/mercedes-benz-mercedes-benz-slk-model-card.png"
+    "ctaImage": "/images/brands/mercedes-benz/models/mercedes-benz-slk-model-card.png"
   },
   "sections": {
     "hero": {
@@ -718,6 +718,7 @@
               {
                 "code": "OM646",
                 "title": "2.1L/2.2L Diesel",
+                "familyHeading": "OM6xx Diesel Series (1999-2016)",
                 "history": "Introduced in the R170 220 CDI, replacing older diesels with refined common-rail injection and improved efficiency.",
                 "fuel": "Diesel",
                 "size": "2.1L / 2.2L",
@@ -738,6 +739,7 @@
               {
                 "code": "OM651",
                 "title": "2.1L Diesel",
+                "familyHeading": "OM6xx Diesel Series (1999-2016)",
                 "history": "Mercedes flagship four-cylinder diesel, adopted across the R172 SLK range for superior torque and Euro 5 compliance.",
                 "fuel": "Diesel",
                 "size": "2.1L",
@@ -758,6 +760,7 @@
               {
                 "code": "OM642",
                 "title": "3.0L Diesel",
+                "familyHeading": "OM6xx Diesel Series (1999-2016)",
                 "history": "Smooth 3.0L V6 diesel introduced for R172 SLK, delivering exceptional torque and refinement for grand touring.",
                 "fuel": "Diesel",
                 "size": "3.0L",
@@ -778,6 +781,7 @@
               {
                 "code": "OM611",
                 "title": "2.2L Diesel",
+                "familyHeading": "OM6xx Diesel Series (1999-2016)",
                 "history": "Early-generation CDI unit for the R170, pioneering Mercedes common-rail technology in the compact roadster platform.",
                 "fuel": "Diesel",
                 "size": "2.2L",
@@ -803,6 +807,7 @@
               {
                 "code": "M111",
                 "title": "2.0L/2.3L Petrol",
+                "familyHeading": "M11x Kompressor & V6 Series (1996-2008)",
                 "history": "Legendary roots engine featuring an Eaton supercharger and aluminium block, defining the early SLK sporty character.",
                 "fuel": "Petrol",
                 "size": "2.0L / 2.3L",
@@ -823,6 +828,7 @@
               {
                 "code": "M112",
                 "title": "3.2L Petrol",
+                "familyHeading": "M11x Kompressor & V6 Series (1996-2008)",
                 "history": "Mercedes reliable iron-block V6, bringing smooth power delivery and proven durability to the early SLK 320 model.",
                 "fuel": "Petrol",
                 "size": "3.2L",
@@ -843,6 +849,7 @@
               {
                 "code": "M271",
                 "title": "1.8L Petrol",
+                "familyHeading": "M27x Turbo & V6 Series (2004-2016)",
                 "history": "Compact supercharged turbo four-cylinder that powered the bulk of R171/R172 SLKs, prioritising agility and fuel economy.",
                 "fuel": "Petrol",
                 "size": "1.8L",
@@ -863,6 +870,7 @@
               {
                 "code": "M274",
                 "title": "2.0L Petrol",
+                "familyHeading": "M27x Turbo & V6 Series (2004-2016)",
                 "history": "Replaced the M271 in late R172 models, offering improved turbo response, reduced friction, and stricter emissions compliance.",
                 "fuel": "Petrol",
                 "size": "2.0L",
@@ -883,6 +891,7 @@
               {
                 "code": "M272",
                 "title": "3.0L/3.5L Petrol",
+                "familyHeading": "M27x Turbo & V6 Series (2004-2016)",
                 "history": "Smooth aluminium V6 replacing M112, featuring variable timing but infamous for critical balance shaft gear failure.",
                 "fuel": "Petrol",
                 "size": "3.0L / 3.5L",
@@ -903,6 +912,7 @@
               {
                 "code": "M113",
                 "title": "5.4L Petrol",
+                "familyHeading": "AMG High-Performance Series (2004-2016)",
                 "history": "Hand-built naturally aspirated V8 that transformed the SLK into a genuine AMG performance roadster.",
                 "fuel": "Petrol",
                 "size": "5.4L",
@@ -923,6 +933,7 @@
               {
                 "code": "M152",
                 "title": "5.5L Petrol",
+                "familyHeading": "AMG High-Performance Series (2004-2016)",
                 "history": "Advanced 5.5L NA V8 featuring dry sump lubrication, lightweight block, and rapid throttle response for track duty.",
                 "fuel": "Petrol",
                 "size": "5.5L",
@@ -943,6 +954,7 @@
               {
                 "code": "M133",
                 "title": "2.0L Petrol",
+                "familyHeading": "AMG High-Performance Series (2004-2016)",
                 "history": "World’s most powerful production 2.0L turbo at launch, delivering explosive acceleration in the limited SLK 45 AMG.",
                 "fuel": "Petrol",
                 "size": "2.0L",
@@ -994,6 +1006,8 @@
           "engines": [
             {
               "code": "OM646",
+              "title": "2.1L/2.2L Diesel",
+              "familyHeading": "OM6xx Diesel Series (1999-2016)",
               "fuel": "Diesel",
               "size": "2.1L / 2.2L",
               "power": "102-150 hp",
@@ -1004,6 +1018,8 @@
             },
             {
               "code": "OM651",
+              "title": "2.1L Diesel",
+              "familyHeading": "OM6xx Diesel Series (1999-2016)",
               "fuel": "Diesel",
               "size": "2.1L",
               "power": "143-204 hp",
@@ -1014,6 +1030,8 @@
             },
             {
               "code": "OM642",
+              "title": "3.0L Diesel",
+              "familyHeading": "OM6xx Diesel Series (1999-2016)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "265 hp",
@@ -1024,6 +1042,8 @@
             },
             {
               "code": "OM611",
+              "title": "2.2L Diesel",
+              "familyHeading": "OM6xx Diesel Series (1999-2016)",
               "fuel": "Diesel",
               "size": "2.2L",
               "power": "122 hp",
@@ -1041,6 +1061,8 @@
           "engines": [
             {
               "code": "M111",
+              "title": "2.0L/2.3L Petrol",
+              "familyHeading": "M11x Kompressor & V6 Series (1996-2008)",
               "fuel": "Petrol",
               "size": "2.0L / 2.3L",
               "power": "163-192 hp",
@@ -1051,6 +1073,8 @@
             },
             {
               "code": "M112",
+              "title": "3.2L Petrol",
+              "familyHeading": "M11x Kompressor & V6 Series (1996-2008)",
               "fuel": "Petrol",
               "size": "3.2L",
               "power": "218 hp",
@@ -1061,6 +1085,8 @@
             },
             {
               "code": "M271",
+              "title": "1.8L Petrol",
+              "familyHeading": "M27x Turbo & V6 Series (2004-2016)",
               "fuel": "Petrol",
               "size": "1.8L",
               "power": "184-204 hp",
@@ -1071,6 +1097,8 @@
             },
             {
               "code": "M274",
+              "title": "2.0L Petrol",
+              "familyHeading": "M27x Turbo & V6 Series (2004-2016)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "211 hp",
@@ -1081,6 +1109,8 @@
             },
             {
               "code": "M272",
+              "title": "3.0L/3.5L Petrol",
+              "familyHeading": "M27x Turbo & V6 Series (2004-2016)",
               "fuel": "Petrol",
               "size": "3.0L / 3.5L",
               "power": "231-306 hp",
@@ -1091,6 +1121,8 @@
             },
             {
               "code": "M113",
+              "title": "5.4L Petrol",
+              "familyHeading": "AMG High-Performance Series (2004-2016)",
               "fuel": "Petrol",
               "size": "5.4L",
               "power": "360 hp",
@@ -1101,6 +1133,8 @@
             },
             {
               "code": "M152",
+              "title": "5.5L Petrol",
+              "familyHeading": "AMG High-Performance Series (2004-2016)",
               "fuel": "Petrol",
               "size": "5.5L",
               "power": "422 hp",
@@ -1111,6 +1145,8 @@
             },
             {
               "code": "M133",
+              "title": "2.0L Petrol",
+              "familyHeading": "AMG High-Performance Series (2004-2016)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "381 hp",
@@ -1596,6 +1632,11 @@
           "title": "Mercedes Benz SLK Diesel Engines",
           "description": "Diesel SLK models span the R171 facelift and full R172 generation, offering efficient four‑cylinder and V6 options that dominate high‑mileage replacement enquiries.",
           "descriptor": "Diesel SLK models span the R171 facelift and full R172 generation, offering efficient four‑cylinder and V6 options that dominate high‑mileage replacement enquiries.",
+          "familiesLabel": "Common Mercedes Benz SLK Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "OM646 - Early 2.1L four‑cylinder, swirl flap and injector issues",
             "OM651 - Later 2.1L unit, timing chain tensioner weakness",
@@ -1625,6 +1666,11 @@
           "title": "Mercedes Benz SLK Petrol Engines",
           "description": "Petrol power defines the SLK range across all three UK generations, from supercharged four‑cylinders to hand‑built AMG V8s, with timing chain and balance shaft issues driving most replacement searches.",
           "descriptor": "Petrol power defines the SLK range across all three UK generations, from supercharged four‑cylinders to hand‑built AMG V8s, with timing chain and balance shaft issues driving most replacement searches.",
+          "familiesLabel": "Common Mercedes Benz SLK Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "M111 - Early 2.0L/2.3L supercharged, supercharger clutch wear",
             "M112 - 3.2L V6, reliable iron block, flywheel wear",

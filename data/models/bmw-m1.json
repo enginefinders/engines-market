@@ -15,13 +15,13 @@
     "canonical": "/bmw/m1"
   },
   "assets": {
-    "heroBg": "/images/brands/bmw/models/bmw-bmw-m1-model-card.png",
+    "heroBg": "/images/brands/bmw/models/bmw-m1-model-card.png",
     "howItWorksBg": "/images/brands/bmw/brand/bmw-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/bmw/brand/bmw-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/bmw/brand/bmw-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/bmw/brand/bmw-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/bmw/brand/bmw-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/bmw/models/bmw-bmw-m1-model-card.png"
+    "ctaImage": "/images/brands/bmw/models/bmw-m1-model-card.png"
   },
   "sections": {
     "hero": {
@@ -676,6 +676,7 @@
               {
                 "code": "M88/1",
                 "title": "3.5L Petrol",
+                "familyHeading": "M88 Series (1978-1981)",
                 "history": "Original 1978 street-spec M88, 277hp, defined the M1's legendary naturally aspirated character and collector provenance.",
                 "fuel": "Petrol",
                 "size": "3.5 Litre (3453cc)",
@@ -696,6 +697,7 @@
               {
                 "code": "M88/3",
                 "title": "3.5L Petrol",
+                "familyHeading": "M88 Series (1978-1981)",
                 "history": "Late-production refinement of the M88, updated components for improved reliability while retaining authentic 277hp output.",
                 "fuel": "Petrol",
                 "size": "3.5 Litre (3453cc)",
@@ -716,6 +718,7 @@
               {
                 "code": "M88/2",
                 "title": "3.5L Petrol",
+                "familyHeading": "M88 Series (1978-1981)",
                 "history": "Procar racing specification M88, 470-500hp, built for FIA homologation - the ultimate motorsport derivative of the M1 platform.",
                 "fuel": "Petrol",
                 "size": "3.5 Litre (3453cc)",
@@ -766,6 +769,8 @@
           "engines": [
             {
               "code": "M88/1",
+              "title": "3.5L Petrol",
+              "familyHeading": "M88 Series (1978-1981)",
               "fuel": "Petrol",
               "size": "3.5L (3453cc)",
               "power": "277 hp",
@@ -776,6 +781,8 @@
             },
             {
               "code": "M88/3",
+              "title": "3.5L Petrol",
+              "familyHeading": "M88 Series (1978-1981)",
               "fuel": "Petrol",
               "size": "3.5L (3453cc)",
               "power": "277 hp",
@@ -786,6 +793,8 @@
             },
             {
               "code": "M88/2",
+              "title": "3.5L Petrol",
+              "familyHeading": "M88 Series (1978-1981)",
               "fuel": "Petrol",
               "size": "3.5L (3453cc)",
               "power": "470-500 hp",
@@ -1125,6 +1134,11 @@
           "title": "BMW M1 Petrol Engines",
           "description": "The BMW M1 was exclusively powered by the naturally aspirated 3.5L M88 inline-six petrol engine, a motorsport-derived unit featuring mechanical Kugelfischer injection and dry sump lubrication across all 1978-1981 production variants.",
           "descriptor": "The BMW M1 was exclusively powered by the naturally aspirated 3.5L M88 inline-six petrol engine, a motorsport-derived unit featuring mechanical Kugelfischer injection and dry sump lubrication across all 1978-1981 production variants.",
+          "familiesLabel": "Common BMW M1 Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "M88/1 - Street specification 277hp engine for early production and road-legal BMW M1 variants",
             "M88/2 - Procar racing specification 470-500hp engine for FIA homologation BMW M1 models",

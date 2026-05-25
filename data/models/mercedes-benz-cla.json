@@ -15,13 +15,13 @@
     "canonical": "/mercedes-benz/cla"
   },
   "assets": {
-    "heroBg": "/images/brands/mercedes-benz/models/mercedes-benz-mercedes-benz-cla-model-card.png",
+    "heroBg": "/images/brands/mercedes-benz/models/mercedes-benz-cla-model-card.png",
     "howItWorksBg": "/images/brands/mercedes-benz/brand/mercedes-benz-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/mercedes-benz/models/mercedes-benz-mercedes-benz-cla-model-card.png"
+    "ctaImage": "/images/brands/mercedes-benz/models/mercedes-benz-cla-model-card.png"
   },
   "sections": {
     "hero": {
@@ -782,6 +782,7 @@
               {
                 "code": "OM651",
                 "title": "2.1 Litre Diesel",
+                "familyHeading": "OM651 Series - 2.1 Litre Turbo Diesel (2013-2019)",
                 "history": "The OM651 was Mercedes' high-volume four-cylinder diesel throughout the 2010s, powering the C117 CLA with proven torque and economy.",
                 "fuel": "Diesel",
                 "size": "2.1 Litre",
@@ -802,6 +803,7 @@
               {
                 "code": "N47D20C",
                 "title": "2.0 Litre Diesel",
+                "familyHeading": "N47D20C Series - 2.0 Litre Turbo Diesel (2015-2019)",
                 "history": "The N47D20C is a BMW-sourced engine fitted to CLA 220d models during the C117 facelift period - notorious in the UK for timing chain failures that often write off otherwise healthy cars.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -822,6 +824,7 @@
               {
                 "code": "OM654",
                 "title": "2.0 Litre Diesel",
+                "familyHeading": "OM654 Series - 2.0 Litre Turbo Diesel (2019-2025)",
                 "history": "The OM654 replaced the OM651 as Mercedes' modular four-cylinder diesel, debuting in the C118 CLA with stepped bowl combustion and reduced internal friction.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -842,6 +845,7 @@
               {
                 "code": "OM607",
                 "title": "1.5 Litre Diesel",
+                "familyHeading": "OM607 Series - 1.5 Litre Turbo Diesel (2013-2019)",
                 "history": "The OM607 is a Renault-sourced 1.5 dCi engine used in entry-level CLA 180d models, offering strong economy at the cost of refinement.",
                 "fuel": "Diesel",
                 "size": "1.5 Litre",
@@ -867,6 +871,7 @@
               {
                 "code": "M270",
                 "title": "2.0 Litre Petrol",
+                "familyHeading": "M270 Series - 1.6/2.0 Litre Turbo Petrol (2013-2019)",
                 "history": "The M270 was Mercedes' first transversely-mounted turbocharged four-cylinder petrol, featuring direct injection and CAMTRONIC variable valve lift across CLA 200 and CLA 250 models.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -887,6 +892,7 @@
               {
                 "code": "M260",
                 "title": "2.0 Litre Petrol",
+                "familyHeading": "M260 Series - 2.0 Litre Turbo Petrol (2019-2025)",
                 "history": "The M260 succeeded the M270 as Mercedes' 2.0 litre turbo petrol, debuting in the C118 CLA with revised injection architecture and higher output variants for CLA 35 AMG.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -907,6 +913,7 @@
               {
                 "code": "M282",
                 "title": "1.3 Litre Petrol",
+                "familyHeading": "M282 Series - 1.3 Litre Turbo Petrol (2019-2025)",
                 "history": "The M282 is a Renault-Nissan-Mercedes co-developed 1.3 litre four-cylinder petrol, featuring a cylinder deactivation system for fuel economy in CLA 180 and CLA 200 models.",
                 "fuel": "Petrol",
                 "size": "1.3 Litre",
@@ -927,6 +934,7 @@
               {
                 "code": "B48B20A",
                 "title": "2.0 Litre Petrol",
+                "familyHeading": "B48 Series - 2.0 Litre Turbo Petrol (2019-2025)",
                 "history": "The B48B20A is a BMW-sourced 2.0 litre petrol engine fitted to select CLA 200 models during the C118 production run, bringing BMW's modular engine architecture to Mercedes' line-up.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -952,6 +960,7 @@
               {
                 "code": "M133",
                 "title": "2.0 Litre Petrol",
+                "familyHeading": "M133 Series - 2.0 Litre Turbo Petrol (2015-2019)",
                 "history": "The M133 was the world's most powerful production four-cylinder petrol engine when launched, producing 381hp in CLA 45 AMG - a landmark for Mercedes-AMG downsizing.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -972,6 +981,7 @@
               {
                 "code": "M139",
                 "title": "2.0 Litre Petrol",
+                "familyHeading": "M139 Series - 2.0 Litre Turbo Petrol (2019-2025)",
                 "history": "The M139 is a hand-built AMG engine producing up to 421hp - the world's most powerful turbocharged four-cylinder production engine - with an electrically actuated wastegate and reverse-flow layout.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -997,6 +1007,7 @@
               {
                 "code": "M282",
                 "title": "1.3 Litre Petrol PHEV",
+                "familyHeading": "M282 + Electric Motor - 1.3 Litre Plug-in Hybrid (2020-2025)",
                 "history": "The CLA 250e pairs the M282 1.3 litre petrol engine with a 15.6 kWh battery and electric motor, offering Mercedes' first compact plug-in hybrid powertrain in the CLA range.",
                 "fuel": "Plug-in Hybrid (Petrol + Electric)",
                 "size": "1.3 Litre (combustion) + 75 kW electric motor",
@@ -1005,21 +1016,11 @@
                 "compatibleVariants": [
                   "CLA 250e, CLA 250e Shooting Brake"
                 ],
-                "commonFailures": [],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "High-voltage battery degradation reducing",
-                "title": "electric range (8-10 years typical lifespan)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
+                "commonFailures": [
+                  "High-voltage battery degradation reducing electric range (8-10 years typical lifespan)",
+                  "Electric coolant pump failure",
+                  "Charging control unit faults"
+                ],
                 "avgRebuiltPrice": "£4,000 - £7,000",
                 "cta": "Get quotes for M282 hybrid Mercedes Benz CLA engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1059,6 +1060,8 @@
           "engines": [
             {
               "code": "OM651",
+              "title": "2.1 Litre Diesel",
+              "familyHeading": "OM651 Series - 2.1 Litre Turbo Diesel (2013-2019)",
               "fuel": "Diesel",
               "size": "2.1L",
               "power": "136-177 hp",
@@ -1069,6 +1072,8 @@
             },
             {
               "code": "N47D20C",
+              "title": "2.0 Litre Diesel",
+              "familyHeading": "N47D20C Series - 2.0 Litre Turbo Diesel (2015-2019)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "177 hp",
@@ -1079,6 +1084,8 @@
             },
             {
               "code": "OM654",
+              "title": "2.0 Litre Diesel",
+              "familyHeading": "OM654 Series - 2.0 Litre Turbo Diesel (2019-2025)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "150-190 hp",
@@ -1089,6 +1096,8 @@
             },
             {
               "code": "OM607",
+              "title": "1.5 Litre Diesel",
+              "familyHeading": "OM607 Series - 1.5 Litre Turbo Diesel (2013-2019)",
               "fuel": "Diesel",
               "size": "1.5L",
               "power": "109 hp",
@@ -1106,6 +1115,8 @@
           "engines": [
             {
               "code": "M270",
+              "title": "2.0 Litre Petrol",
+              "familyHeading": "M270 Series - 1.6/2.0 Litre Turbo Petrol (2013-2019)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "156-211 hp",
@@ -1116,6 +1127,8 @@
             },
             {
               "code": "M260",
+              "title": "2.0 Litre Petrol",
+              "familyHeading": "M260 Series - 2.0 Litre Turbo Petrol (2019-2025)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "224-306 hp",
@@ -1126,6 +1139,8 @@
             },
             {
               "code": "M282",
+              "title": "1.3 Litre Petrol",
+              "familyHeading": "M282 Series - 1.3 Litre Turbo Petrol (2019-2025)",
               "fuel": "Petrol",
               "size": "1.3L",
               "power": "136-163 hp",
@@ -1136,6 +1151,8 @@
             },
             {
               "code": "B48B20A",
+              "title": "2.0 Litre Petrol",
+              "familyHeading": "B48 Series - 2.0 Litre Turbo Petrol (2019-2025)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "163 hp",
@@ -1146,6 +1163,8 @@
             },
             {
               "code": "M133",
+              "title": "2.0 Litre Petrol",
+              "familyHeading": "M133 Series - 2.0 Litre Turbo Petrol (2015-2019)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "360-381 hp",
@@ -1156,6 +1175,8 @@
             },
             {
               "code": "M139",
+              "title": "2.0 Litre Petrol",
+              "familyHeading": "M139 Series - 2.0 Litre Turbo Petrol (2019-2025)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "387-421 hp",
@@ -1173,20 +1194,12 @@
           "engines": [
             {
               "code": "M282",
+              "title": "1.3 Litre Petrol PHEV",
+              "familyHeading": "M282 + Electric Motor - 1.3 Litre Plug-in Hybrid (2020-2025)",
               "fuel": "Plug-in Hybrid (Petrol + Electric)",
               "size": "1.3L (combustion) + 75 kW electric motor",
               "power": "218 hp combined",
               "compatibleModels": "CLA 250e, CLA 250e Shooting Brake",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "High-voltage battery degradation reducing",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
               "avgRebuiltPrice": "£4,000 - £7,000",
               "cta": "Get quotes for M282 hybrid Mercedes Benz CLA engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1680,6 +1693,11 @@
           "title": "Mercedes Benz CLA Diesel Engines",
           "description": "Diesel powered the majority of first-generation C117 CLA sales in the UK, with the CLA 220d becoming the most searched-for replacement engine due to timing chain failures on the BMW-sourced N47D20C unit.",
           "descriptor": "Diesel powered the majority of first-generation C117 CLA sales in the UK, with the CLA 220d becoming the most searched-for replacement engine due to timing chain failures on the BMW-sourced N47D20C unit.",
+          "familiesLabel": "Common Mercedes Benz CLA Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "OM607 - Renault-sourced 1.5L (CLA 180d), entry-level economy focus",
             "OM651 - Mercedes 2.1L (CLA 200d, CLA 220 CDI), pre-facelift workhorse with head gasket weakness",
@@ -1704,6 +1722,11 @@
           "title": "Mercedes Benz CLA Petrol Engines",
           "description": "Petrol CLA engines span entry-level 1.3L units to the most powerful four-cylinder production engine in the world - the M139 in CLA 45 S, with replacement demand split between M270 HPFP failures and M260 oil consumption issues.",
           "descriptor": "Petrol CLA engines span entry-level 1.3L units to the most powerful four-cylinder production engine in the world - the M139 in CLA 45 S, with replacement demand split between M270 HPFP failures and M260 oil consumption issues.",
+          "familiesLabel": "Common Mercedes Benz CLA Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "M270 - 1.6L/2.0L (CLA 200, CLA 250 C117), high-pressure fuel pump weakness",
             "M282 - 1.3L Renault co-developed (CLA 180/200 C118), cylinder deactivation",
@@ -1730,6 +1753,11 @@
           "title": "Mercedes Benz CLA Plug-in Hybrid (PHEV) Engines",
           "description": "The CLA 250e joined the range in 2020 as Mercedes' first compact plug-in hybrid, pairing the M282 1.3L petrol engine with a 75 kW electric motor for up to 40 miles of electric-only driving.",
           "descriptor": "The CLA 250e joined the range in 2020 as Mercedes' first compact plug-in hybrid, pairing the M282 1.3L petrol engine with a 75 kW electric motor for up to 40 miles of electric-only driving.",
+          "familiesLabel": "Mercedes Benz CLA PHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "M282 DE14 AL + 75 kW electric motor - combined 218 hp, 15.6 kWh battery",
             "Petrol engine and electric motor work together or independently",

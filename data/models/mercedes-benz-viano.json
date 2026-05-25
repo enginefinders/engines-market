@@ -15,13 +15,13 @@
     "canonical": "/mercedes-benz/viano"
   },
   "assets": {
-    "heroBg": "/images/brands/mercedes-benz/models/mercedes-benz-mercedes-benz-viano-model-card.png",
+    "heroBg": "/images/brands/mercedes-benz/models/mercedes-benz-viano-model-card.png",
     "howItWorksBg": "/images/brands/mercedes-benz/brand/mercedes-benz-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/mercedes-benz/models/mercedes-benz-mercedes-benz-viano-model-card.png"
+    "ctaImage": "/images/brands/mercedes-benz/models/mercedes-benz-viano-model-card.png"
   },
   "sections": {
     "hero": {
@@ -736,6 +736,7 @@
               {
                 "code": "OM611",
                 "title": "2.2L Diesel",
+                "familyHeading": "OM600 Series Diesel Engines (1996-2010)",
                 "history": "The OM611DE22LA was Mercedes' first common-rail diesel in the Viano/W638 platform, replacing older indirect injection units with improved efficiency and driveability.",
                 "fuel": "Diesel",
                 "size": "2.2 Litre",
@@ -756,6 +757,7 @@
               {
                 "code": "OM612",
                 "title": "2.7L Diesel",
+                "familyHeading": "OM600 Series Diesel Engines (1996-2010)",
                 "history": "A rare but documented Viano diesel option in select W638 markets, the OM612 shares the injection pump design flaws of the OM611 family with slightly larger displacement.",
                 "fuel": "Diesel",
                 "size": "2.7 Litre",
@@ -776,6 +778,7 @@
               {
                 "code": "OM646",
                 "title": "2.2L Diesel",
+                "familyHeading": "OM640/OM646 Series Diesel Engines (2003-2010)",
                 "history": "The OM646 powers the majority of W639 Viano diesels (2003-2010), featuring common-rail injection with power outputs from 109hp to 150hp across the 109 CDI, 111 CDI, and 115 CDI variants.",
                 "fuel": "Diesel",
                 "size": "2.2 Litre",
@@ -797,6 +800,7 @@
               {
                 "code": "OM651",
                 "title": "2.2L Diesel",
+                "familyHeading": "OM650 Series Diesel Engines (2010-2014)",
                 "history": "Unveiled in 2008 and fitted to facelift W639 Viano models from 2010, the OM651 brought improved fuel economy and reduced emissions but introduced a new set of reliability concerns around chain stretch and fuel system durability.",
                 "fuel": "Diesel",
                 "size": "2.2 Litre",
@@ -819,6 +823,7 @@
               {
                 "code": "OM642",
                 "title": "3.0L V6 Diesel",
+                "familyHeading": "OM650 Series Diesel Engines (2010-2014)",
                 "history": "The OM642 3.0-litre V6 turbodiesel was Mercedes' premium diesel option for the facelift W639 Viano (2010-2014), offering 204hp and significantly more torque than four-cylinder variants.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -844,6 +849,7 @@
               {
                 "code": "M111",
                 "title": "2.0L / 2.3L Petrol",
+                "familyHeading": "M110 Series Petrol Engines (1996-2003)",
                 "history": "The M111 four-cylinder petrol engine powered base-spec W638 Viano models in markets where diesel was less dominant, though UK take-up was minimal compared to diesel variants.",
                 "fuel": "Petrol",
                 "size": "2.0-2.3 Litre",
@@ -864,6 +870,7 @@
               {
                 "code": "M112",
                 "title": "3.2L / 3.7L V6 Petrol",
+                "familyHeading": "M112 V6 Petrol Engines (2003-2010)",
                 "history": "The M112 V6 represented the premium petrol option in W639 Viano models, offering smooth power delivery at the cost of significant fuel consumption. The 3.7-litre variant is rare in UK specification.",
                 "fuel": "Petrol",
                 "size": "3.2-3.7 Litre",
@@ -884,6 +891,7 @@
               {
                 "code": "M272",
                 "title": "3.0L / 3.5L V6 Petrol",
+                "familyHeading": "M272 V6 Petrol Engines (2005-2014)",
                 "history": "The M272 represented Mercedes' next-generation V6 with four valves per cylinder, continuously adjustable variable valve timing, and balance shafts - but early production units (2004-2008) suffered a catastrophic design flaw.",
                 "fuel": "Petrol",
                 "size": "3.0-3.5 Litre",
@@ -936,6 +944,8 @@
           "engines": [
             {
               "code": "OM611",
+              "title": "2.2L Diesel",
+              "familyHeading": "OM600 Series Diesel Engines (1996-2010)",
               "fuel": "Diesel",
               "size": "2.2L",
               "power": "90-125 hp",
@@ -946,6 +956,8 @@
             },
             {
               "code": "OM612",
+              "title": "2.7L Diesel",
+              "familyHeading": "OM600 Series Diesel Engines (1996-2010)",
               "fuel": "Diesel",
               "size": "2.7L",
               "power": "156 hp",
@@ -956,6 +968,8 @@
             },
             {
               "code": "OM646",
+              "title": "2.2L Diesel",
+              "familyHeading": "OM640/OM646 Series Diesel Engines (2003-2010)",
               "fuel": "Diesel",
               "size": "2.2L",
               "power": "109-150 hp",
@@ -966,6 +980,8 @@
             },
             {
               "code": "OM651",
+              "title": "2.2L Diesel",
+              "familyHeading": "OM650 Series Diesel Engines (2010-2014)",
               "fuel": "Diesel",
               "size": "2.2L",
               "power": "136-163 hp",
@@ -976,6 +992,8 @@
             },
             {
               "code": "OM642",
+              "title": "3.0L V6 Diesel",
+              "familyHeading": "OM650 Series Diesel Engines (2010-2014)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "204-224 hp",
@@ -993,6 +1011,8 @@
           "engines": [
             {
               "code": "M111",
+              "title": "2.0L / 2.3L Petrol",
+              "familyHeading": "M110 Series Petrol Engines (1996-2003)",
               "fuel": "Petrol",
               "size": "2.0-2.3L",
               "power": "129-141 hp",
@@ -1003,6 +1023,8 @@
             },
             {
               "code": "M112",
+              "title": "3.2L / 3.7L V6 Petrol",
+              "familyHeading": "M112 V6 Petrol Engines (2003-2010)",
               "fuel": "Petrol",
               "size": "3.2-3.7L",
               "power": "190-235 hp",
@@ -1013,6 +1035,8 @@
             },
             {
               "code": "M272",
+              "title": "3.0L / 3.5L V6 Petrol",
+              "familyHeading": "M272 V6 Petrol Engines (2005-2014)",
               "fuel": "Petrol",
               "size": "3.0-3.5L",
               "power": "231-258 hp",
@@ -1481,6 +1505,11 @@
           "title": "Mercedes Benz Viano Diesel Engines",
           "description": "Diesel dominates UK Viano replacement enquiries, spanning three generations of 2.2-litre four-cylinder units (OM611, OM646, OM651) plus the rare 2.7 OM612 and 3.0 OM642 V6.",
           "descriptor": "Diesel dominates UK Viano replacement enquiries, spanning three generations of 2.2-litre four-cylinder units (OM611, OM646, OM651) plus the rare 2.7 OM612 and 3.0 OM642 V6.",
+          "familiesLabel": "Common Mercedes Benz Viano Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "OM611 - early W638 2.2 CDI (90-125hp), injector pump seal failure common",
             "OM646 - W639 pre-facelift 2.2 CDI (109-150hp), timing chain tensioner the main failure point",
@@ -1513,6 +1542,11 @@
           "title": "Mercedes Benz Viano Petrol Engines",
           "description": "Petrol Vianos are rare in the UK (under 10% of the market) but carry higher average order values due to V6 complexity and scarcity - spanning M111 four-cylinder and M112/M272 V6 units.",
           "descriptor": "Petrol Vianos are rare in the UK (under 10% of the market) but carry higher average order values due to V6 complexity and scarcity - spanning M111 four-cylinder and M112/M272 V6 units.",
+          "familiesLabel": "Common Mercedes Benz Viano Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "M111 - W638 2.0L four-cylinder (129hp), rare UK import only",
             "M112 - W639 3.2L and 3.7L V6 (190-235hp), smooth but thirsty",
@@ -1543,6 +1577,11 @@
           "title": "Mercedes Benz Viano 4MATIC (All-Wheel Drive) Variants",
           "description": "4MATIC was an option across both diesel and petrol Viano engines, adding a permanent all-wheel-drive system without changing the underlying engine specification.",
           "descriptor": "4MATIC was an option across both diesel and petrol Viano engines, adding a permanent all-wheel-drive system without changing the underlying engine specification.",
+          "familiesLabel": "Mercedes Benz Viano 4MATIC Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "OM646 - 2.2 CDI 4MATIC (109-150hp) - W639 pre-facelift",
             "OM651 - 2.2 CDI 4MATIC (136-163hp) - W639 facelift",

@@ -15,13 +15,13 @@
     "canonical": "/mercedes-benz/sprinter"
   },
   "assets": {
-    "heroBg": "/images/brands/mercedes-benz/models/mercedes-benz-mercedes-benz-sprinter-model-card.png",
+    "heroBg": "/images/brands/mercedes-benz/models/mercedes-benz-sprinter-model-card.png",
     "howItWorksBg": "/images/brands/mercedes-benz/brand/mercedes-benz-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/mercedes-benz/models/mercedes-benz-mercedes-benz-sprinter-model-card.png"
+    "ctaImage": "/images/brands/mercedes-benz/models/mercedes-benz-sprinter-model-card.png"
   },
   "sections": {
     "hero": {
@@ -769,6 +769,7 @@
               {
                 "code": "OM651.955",
                 "title": "2.1L Diesel",
+                "familyHeading": "OM651 Family (2006-2018)",
                 "history": "The W906 workhorse replacing older 2.7L units. Common-rail efficiency defined modern commercial van logistics.",
                 "fuel": "Diesel",
                 "size": "2.1 Litre",
@@ -789,6 +790,7 @@
               {
                 "code": "OM651.958",
                 "title": "2.1L Diesel",
+                "familyHeading": "OM651 Family (2006-2018)",
                 "history": "Facelift evolution with updated BlueTEC hardware. Higher boost mapping optimised for heavy commercial payloads.",
                 "fuel": "Diesel",
                 "size": "2.1 Litre",
@@ -809,6 +811,7 @@
               {
                 "code": "OM654.920",
                 "title": "2.0L Diesel",
+                "familyHeading": "OM654 Family (2018-Present)",
                 "history": "Downsized 2.0L aluminium block replacing the 2.1L. Euro 6 compliant with twin-turbo options for newer vans.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -829,6 +832,7 @@
               {
                 "code": "OM642.896",
                 "title": "3.0L Diesel V6",
+                "familyHeading": "OM642 V6 Family (2009-2018)",
                 "history": "Premium 3.0L V6 adapted for heavy-duty Sprinters. Smooth power delivery suited high-spec passenger conversions.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -849,6 +853,7 @@
               {
                 "code": "OM642.898",
                 "title": "3.0L Diesel V6",
+                "familyHeading": "OM642 V6 Family (2009-2018)",
                 "history": "Updated V6 calibration meeting Euro 5 standards. Maintains high torque output for heavy towing applications.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -874,6 +879,7 @@
               {
                 "code": "M271.951",
                 "title": "1.8L Petrol/CNG",
+                "familyHeading": "M271 Family (2009-2016)",
                 "history": "Dedicated Natural Gas Technology unit. Dual-fuel flexibility reduced operating costs for urban delivery fleets.",
                 "fuel": "Petrol / CNG",
                 "size": "1.8 Litre",
@@ -899,6 +905,7 @@
               {
                 "code": "EM008100",
                 "title": "Electric Drive Unit",
+                "familyHeading": "eSprinter Drive Unit (2019-Present)",
                 "history": "High-voltage traction motor for eSprinter. Zero-emission urban logistics capability with instant torque.",
                 "fuel": "Electric (BEV)",
                 "size": "N/A (Electric Drive)",
@@ -951,6 +958,8 @@
           "engines": [
             {
               "code": "OM651.955",
+              "title": "2.1L Diesel",
+              "familyHeading": "OM651 Family (2006-2018)",
               "fuel": "Diesel",
               "size": "2.1L",
               "power": "109-129 hp",
@@ -961,6 +970,8 @@
             },
             {
               "code": "OM651.958",
+              "title": "2.1L Diesel",
+              "familyHeading": "OM651 Family (2006-2018)",
               "fuel": "Diesel",
               "size": "2.1L",
               "power": "143-170 hp",
@@ -971,6 +982,8 @@
             },
             {
               "code": "OM654.920",
+              "title": "2.0L Diesel",
+              "familyHeading": "OM654 Family (2018-Present)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "143-170 hp",
@@ -981,6 +994,8 @@
             },
             {
               "code": "OM642.896",
+              "title": "3.0L Diesel V6",
+              "familyHeading": "OM642 V6 Family (2009-2018)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "184-190 hp",
@@ -991,6 +1006,8 @@
             },
             {
               "code": "OM642.898",
+              "title": "3.0L Diesel V6",
+              "familyHeading": "OM642 V6 Family (2009-2018)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "188-190 hp",
@@ -1008,6 +1025,8 @@
           "engines": [
             {
               "code": "M271.951",
+              "title": "1.8L Petrol/CNG",
+              "familyHeading": "M271 Family (2009-2016)",
               "fuel": "Petrol / CNG",
               "size": "1.8L",
               "power": "156 hp",
@@ -1025,6 +1044,8 @@
           "engines": [
             {
               "code": "EM008100",
+              "title": "Electric Drive Unit",
+              "familyHeading": "eSprinter Drive Unit (2019-Present)",
               "fuel": "Electric (BEV)",
               "size": "N/A (Electric Drive)",
               "power": "116 hp (85 kW)",
@@ -1472,6 +1493,11 @@
           "title": "Mercedes Benz Sprinter Diesel Engines",
           "description": "Dominating UK fleet registrations across W906 and VS30 generations, diesel units account for the vast majority of commercial replacement enquiries due to high-mileage operational demands.",
           "descriptor": "Dominating UK fleet registrations across W906 and VS30 generations, diesel units account for the vast majority of commercial replacement enquiries due to high-mileage operational demands.",
+          "familiesLabel": "Common Mercedes Benz Sprinter Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "OM651 - 2.1L W906 core unit, prone to timing chain tensioner seal leaks",
             "OM654 - 2.0L VS30 replacement, features low-pressure EGR cooler vulnerabilities",
@@ -1500,6 +1526,11 @@
           "title": "Mercedes Benz Sprinter Petrol Engines",
           "description": "Niche but highly specified for urban compliance and passenger shuttle conversions, petrol variants offer quieter operation and factory dual-fuel flexibility in NGT formats.",
           "descriptor": "Niche but highly specified for urban compliance and passenger shuttle conversions, petrol variants offer quieter operation and factory dual-fuel flexibility in NGT formats.",
+          "familiesLabel": "Common Mercedes Benz Sprinter Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "M271.951 - 1.8L supercharged NGT unit, vulnerable to dual timing chain stretch",
             "M272.979 - 3.5L V6 passenger variant, requires specialist balance shaft inspection"
@@ -1524,6 +1555,11 @@
           "title": "Mercedes Benz Sprinter Electric (BEV) Engines",
           "description": "Purpose-built for zero-emission urban logistics, the eSprinter platform replaces combustion mechanics with a high-voltage traction motor and modular battery architecture.",
           "descriptor": "Purpose-built for zero-emission urban logistics, the eSprinter platform replaces combustion mechanics with a high-voltage traction motor and modular battery architecture.",
+          "familiesLabel": "Mercedes Benz Sprinter Electric (BEV) Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "EM008100 - primary traction drive unit powering commercial van chassis configurations",
             "N/A (Battery) - modular lithium packs, rated for commercial cycle durability",

@@ -8,6 +8,7 @@ import Section from "@/components/ui/Section";
 type Props = {
   data: HowItWorksData;
   bgImage: string;
+  sectionId?: string;
 };
 
 function RegistrationIcon() {
@@ -340,7 +341,7 @@ function MobileCard({
   );
 }
 
-export default function HowItWorksSection({ data, bgImage }: Props) {
+export default function HowItWorksSection({ data, bgImage, sectionId }: Props) {
   const defaultCardNumber = data.cards[1]?.number ?? data.cards[0]?.number ?? 1;
   const [activeCard, setActiveCard] = useState<number>(defaultCardNumber);
   const tagline = splitTagline(data.tagline);
@@ -367,7 +368,7 @@ export default function HowItWorksSection({ data, bgImage }: Props) {
   }));
 
   return (
-    <Section className="relative overflow-hidden bg-[#f8f9fa]">
+    <Section id={sectionId} className="relative overflow-hidden bg-[#f8f9fa]">
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div
           className="absolute right-0 top-0 hidden h-[340px] w-[440px] opacity-[0.08] lg:block"

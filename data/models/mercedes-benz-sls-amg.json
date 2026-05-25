@@ -15,13 +15,13 @@
     "canonical": "/mercedes-benz/sls-amg"
   },
   "assets": {
-    "heroBg": "/images/brands/mercedes-benz/models/mercedes-benz-mercedes-benz-sls-amg-model-card.png",
+    "heroBg": "/images/brands/mercedes-benz/models/mercedes-benz-sls-amg-model-card.png",
     "howItWorksBg": "/images/brands/mercedes-benz/brand/mercedes-benz-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/mercedes-benz/models/mercedes-benz-mercedes-benz-sls-amg-model-card.png"
+    "ctaImage": "/images/brands/mercedes-benz/models/mercedes-benz-sls-amg-model-card.png"
   },
   "sections": {
     "hero": {
@@ -730,6 +730,7 @@
               {
                 "code": "M159.970",
                 "title": "6.2L Petrol",
+                "familyHeading": "M159 Hand-Built V8 Family (2010-2014)",
                 "history": "Hand-built AMG V8 for launch Coupe, one-man-one-engine signature, naturally aspirated 6.2L defining SLS performance.",
                 "fuel": "Petrol",
                 "size": "6.2 Litre",
@@ -750,6 +751,7 @@
               {
                 "code": "M159.971",
                 "title": "6.2L Petrol",
+                "familyHeading": "M159 Hand-Built V8 Family (2010-2014)",
                 "history": "Roadster variant M159 with reinforced chassis calibration, convertible-specific cooling and lubrication mapping.",
                 "fuel": "Petrol",
                 "size": "6.2 Litre",
@@ -770,6 +772,7 @@
               {
                 "code": "M159.972",
                 "title": "6.2L Petrol",
+                "familyHeading": "M159 Hand-Built V8 Family (2010-2014)",
                 "history": "GT performance tune with revised ECU mapping, dry sump lubrication enhancement for track-capable dynamics.",
                 "fuel": "Petrol",
                 "size": "6.2 Litre",
@@ -790,6 +793,7 @@
               {
                 "code": "M159.973",
                 "title": "6.2L Petrol",
+                "familyHeading": "M159 Hand-Built V8 Family (2010-2014)",
                 "history": "Final Edition calibration with collector-grade provenance documentation, last-production M159 refinement.",
                 "fuel": "Petrol",
                 "size": "6.2 Litre",
@@ -810,6 +814,7 @@
               {
                 "code": "M159.974",
                 "title": "6.2L Petrol",
+                "familyHeading": "M159 Hand-Built V8 Family (2010-2014)",
                 "history": "Black Series track-focused M159 with motorsport-derived components, highest-output naturally aspirated AMG V8.",
                 "fuel": "Petrol",
                 "size": "6.2 Litre",
@@ -835,6 +840,7 @@
               {
                 "code": "M159.97E",
                 "title": "Electric Drive Unit",
+                "familyHeading": "M159 E-Cell Electric Powertrain (2012)",
                 "history": "Limited-production E-Cell electric powertrain, zero-emission SLS variant with dual-motor all-wheel drive configuration.",
                 "fuel": "Electric (BEV)",
                 "size": "N/A (Electric Drive Unit)",
@@ -886,6 +892,8 @@
           "engines": [
             {
               "code": "M159.970",
+              "title": "6.2L Petrol",
+              "familyHeading": "M159 Hand-Built V8 Family (2010-2014)",
               "fuel": "Petrol",
               "size": "6.2L",
               "power": "563 hp",
@@ -896,6 +904,8 @@
             },
             {
               "code": "M159.971",
+              "title": "6.2L Petrol",
+              "familyHeading": "M159 Hand-Built V8 Family (2010-2014)",
               "fuel": "Petrol",
               "size": "6.2L",
               "power": "563 hp",
@@ -906,6 +916,8 @@
             },
             {
               "code": "M159.972",
+              "title": "6.2L Petrol",
+              "familyHeading": "M159 Hand-Built V8 Family (2010-2014)",
               "fuel": "Petrol",
               "size": "6.2L",
               "power": "583 hp",
@@ -916,6 +928,8 @@
             },
             {
               "code": "M159.973",
+              "title": "6.2L Petrol",
+              "familyHeading": "M159 Hand-Built V8 Family (2010-2014)",
               "fuel": "Petrol",
               "size": "6.2L",
               "power": "583 hp",
@@ -926,6 +940,8 @@
             },
             {
               "code": "M159.974",
+              "title": "6.2L Petrol",
+              "familyHeading": "M159 Hand-Built V8 Family (2010-2014)",
               "fuel": "Petrol",
               "size": "6.2L",
               "power": "591 hp",
@@ -943,6 +959,8 @@
           "engines": [
             {
               "code": "M159.97E",
+              "title": "Electric Drive Unit",
+              "familyHeading": "M159 E-Cell Electric Powertrain (2012)",
               "fuel": "Electric (BEV)",
               "size": "N/A (Electric Drive Unit)",
               "power": "260 kW / 349 hp equivalent",
@@ -1273,6 +1291,11 @@
           "title": "Mercedes Benz SLS AMG Petrol Engines",
           "description": "The hand‑built M159 6.2L naturally aspirated V8 is the sole combustion engine fitted to every UK SLS AMG variant, representing AMG's one‑man‑one‑engine philosophy across Coupe, Roadster, GT and Black Series models from 2010‑2014.",
           "descriptor": "The hand‑built M159 6.2L naturally aspirated V8 is the sole combustion engine fitted to every UK SLS AMG variant, representing AMG's one‑man‑one‑engine philosophy across Coupe, Roadster, GT and Black Series models from 2010‑2014.",
+          "familiesLabel": "Common Mercedes Benz SLS AMG Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "M159.970 - standard Coupe/RHD specification, 563hp, early production timing tensioner updates required",
             "M159.971 - Roadster convertible calibration, 563hp, oil cooler seal refresh common at higher mileage",
@@ -1304,6 +1327,11 @@
           "title": "Mercedes Benz SLS AMG Electric (BEV) Engines",
           "description": "The limited‑production SLS AMG E‑Cell features a dedicated M159.97E electric powertrain with dual‑motor all‑wheel drive, representing AMG's early high‑performance electrification programme for the 2012 model year only.",
           "descriptor": "The limited‑production SLS AMG E‑Cell features a dedicated M159.97E electric powertrain with dual‑motor all‑wheel drive, representing AMG's early high‑performance electrification programme for the 2012 model year only.",
+          "familiesLabel": "Mercedes Benz SLS AMG Electric Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "M159.97E - E‑Cell electric drive unit, 260kW output, dual‑motor AWD configuration, 2012 only",
             "Dual permanent‑magnet synchronous motors deliver instant torque to all four wheels without mechanical linkage",

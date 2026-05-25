@@ -145,6 +145,39 @@ def normalize_key(value: str) -> str:
     return normalize_line(value).lower()
 
 
+def normalize_section_label(value: str) -> str:
+    return strip_markdown(value).rstrip(":").strip()
+
+
+def derive_fuel_families_label(title: str) -> str:
+    normalized = normalize_line(title)
+    base = re.sub(r"\s+engines$", "", normalized, flags=re.IGNORECASE).strip()
+    return f"Common {base} Engine Families" if base else ""
+
+
+def restore_model_name_reference(text: str, brand_name: str, model_name: str) -> str:
+    if not text:
+        return text
+
+    normalized_brand = normalize_line(brand_name)
+    normalized_model = normalize_line(model_name)
+    if not normalized_brand or not normalized_model:
+        return text
+
+    lowered_model = normalized_model.lower()
+    lowered_text = text.lower()
+    if lowered_model in lowered_text:
+        return text
+
+    model_tail = normalized_model[len(normalized_brand):].strip() if lowered_model.startswith(normalized_brand.lower()) else ""
+    tail_parts = model_tail.split()
+    if len(tail_parts) < 2:
+        return text
+
+    placeholder = f"{normalized_brand} {tail_parts[-1]}"
+    return re.sub(re.escape(placeholder), normalized_model, text, flags=re.IGNORECASE)
+
+
 def slugify(value: str) -> str:
     value = normalize_line(value).lower()
     value = value.replace("&", " and ")
@@ -333,6 +366,40 @@ def normalize_price_text(text: str) -> str:
     return normalize_line(text).replace("Ł", "£")
 
 
+ENGINE_TITLE_START_RE = re.compile(
+    r"^(?:\d+(?:\.\d+)?\s*(?:L|Litre|kWh)\b|Hybrid\b|Electric\b|PHEV\b|MHEV\b).*$",
+    re.IGNORECASE,
+)
+
+
+def parse_engine_title_line(line: str) -> tuple[str, str] | None:
+    text = strip_emphasis_preserve_brackets(line)
+    text = re.sub(r"^\[Engine Code\]\s*[-â€“â€”]\s*", "", text, flags=re.IGNORECASE).strip()
+    text = text.strip("[]")
+    text = re.sub(r"^\[Engine Code\]\s*[^A-Z0-9]+\s*", "", text, flags=re.IGNORECASE).strip()
+
+    for separator in (" â€” ", " â€“ ", " - "):
+        if separator not in text:
+            continue
+
+        code, title = [part.strip() for part in text.split(separator, 1)]
+        if code and title and ENGINE_TITLE_START_RE.match(title):
+            return code, title
+
+    inline_match = re.match(
+        r"^(?P<code>[A-Z0-9.]+(?:\s*/\s*[A-Z0-9.]+)*)\s+(?P<title>(?:\d+(?:\.\d+)?\s*(?:L|Litre|kWh)\b|Hybrid\b|Electric\b|PHEV\b|MHEV\b).*)$",
+        text,
+        flags=re.IGNORECASE,
+    )
+    if inline_match:
+        code = inline_match.group("code").strip()
+        title = inline_match.group("title").strip()
+        if code and title and ENGINE_TITLE_START_RE.match(title):
+            return code, title
+
+    return None
+
+
 def title_from_h1(h1: str) -> str:
     cleaned = normalize_line(h1)
     cleaned = re.sub(r"\s*-\s*compare.+$", "", cleaned, flags=re.IGNORECASE)
@@ -363,13 +430,26 @@ def infer_storage_slug_from_name(model_name: str) -> str:
 
 def infer_model_slug_from_name(model_name: str, brand_name: str | None = None) -> str:
     cleaned = normalize_line(model_name)
+    route_target = cleaned
     if brand_name:
-        cleaned = normalize_model_name_for_brand(cleaned, brand_name)
+        canonical_name = normalize_model_name_for_brand(cleaned, brand_name)
+        brand_prefix = re.compile(
+            r"^"
+            + re.escape(normalize_line(brand_name)).replace(r"\ ", r"[\s-]+")
+            + r"[\s-]*",
+            flags=re.IGNORECASE,
+        )
+        stripped = brand_prefix.sub("", canonical_name, count=1).strip(" -")
+        route_target = stripped or canonical_name
+    else:
+        canonical_name = cleaned
 
-    bmw_series_match = re.match(r"^(?:BMW\s+)?(?P<number>\d+)\s+Series$", cleaned, flags=re.IGNORECASE)
+    bmw_series_match = re.match(r"^(?:BMW\s+)?(?P<number>\d+)\s+Series$", canonical_name, flags=re.IGNORECASE)
+    if not bmw_series_match:
+        bmw_series_match = re.match(r"^(?P<number>\d+)\s+Series$", route_target, flags=re.IGNORECASE)
     if bmw_series_match:
-        return f"series-{bmw_series_match.group('number')}"
-    return slugify(cleaned)
+        return f"{bmw_series_match.group('number')}-series"
+    return slugify(route_target)
 
 
 def normalize_model_name_for_brand(model_name: str, brand_name: str) -> str:
@@ -1917,20 +1997,19 @@ def parse_engine_code_families(lines: Sequence[str]) -> Dict[str, Any]:
                 idx += 1
                 continue
 
-            title_match = engine_title_re.match(current)
+            title_match = parse_engine_title_line(current)
             if not title_match:
                 idx += 1
                 continue
 
-            code = title_match.group("code").strip()
-            title = title_match.group("title").strip()
+            code, title = title_match
             detail_lines: List[str] = []
             idx += 1
             while idx < len(lines):
                 peek = strip_emphasis_preserve_brackets(lines[idx])
                 if peek.startswith("### ") or re.match(r"^H4:\s*(.+)$", peek, flags=re.IGNORECASE):
                     break
-                if engine_title_re.match(peek):
+                if parse_engine_title_line(peek):
                     break
                 detail_lines.append(peek)
                 idx += 1
@@ -2003,6 +2082,7 @@ def parse_engine_code_families(lines: Sequence[str]) -> Dict[str, Any]:
                 {
                     "code": code,
                     "title": title,
+                    "familyHeading": family_name,
                     "history": history,
                     "fuel": fuel,
                     "size": size,
@@ -2064,6 +2144,8 @@ def build_summary_engine_codes(guide: Dict[str, Any], model_name: str) -> Dict[s
             target["engines"].append(
                 {
                     "code": entry["code"],
+                    "title": entry.get("title", ""),
+                    "familyHeading": entry.get("familyHeading", ""),
                     "fuel": entry["fuel"],
                     "size": entry["size"].replace(" Litre", "L"),
                     "power": entry["power"],
@@ -2439,6 +2521,11 @@ def parse_fuel_types(lines: Sequence[str]) -> Dict[str, Any]:
 
         title = line.replace("### ", "").strip()
         descriptor = ""
+        families_label = ""
+        found_in_label = ""
+        known_for_label = ""
+        models_label = ""
+        notes_label = ""
         families: List[str] = []
         found_in: List[str] = []
         known_for: List[str] = []
@@ -2459,14 +2546,19 @@ def parse_fuel_types(lines: Sequence[str]) -> Dict[str, Any]:
                 descriptor = current.split(":", 1)[1].strip() if ":" in current else ""
                 description = descriptor
             elif (lowered.startswith("common ") and "families" in lowered) or "engine codes" in lowered:
+                families_label = normalize_section_label(current)
                 mode = "families"
             elif lowered.startswith("found in"):
+                found_in_label = normalize_section_label(current)
                 mode = "foundIn"
             elif lowered.startswith("known for"):
+                known_for_label = normalize_section_label(current)
                 mode = "knownFor"
             elif lowered.startswith("typical ") and "models" in lowered:
+                models_label = normalize_section_label(current)
                 mode = "typicalModels"
             elif lowered.startswith("important notes") or lowered.startswith("how bmw mild hybrid"):
+                notes_label = normalize_section_label(current)
                 mode = "importantNotes"
             elif is_arrow_line(current):
                 cta = strip_arrow_text(current)
@@ -2489,6 +2581,11 @@ def parse_fuel_types(lines: Sequence[str]) -> Dict[str, Any]:
             "title": title,
             "description": description,
             "descriptor": descriptor,
+            "familiesLabel": families_label or derive_fuel_families_label(title),
+            "foundInLabel": found_in_label,
+            "knownForLabel": known_for_label,
+            "modelsLabel": models_label,
+            "notesLabel": notes_label,
             "families": families,
             "foundIn": found_in,
             "knownFor": known_for,
@@ -2820,6 +2917,12 @@ def parse_document(
     data["sections"]["liveMarketPrices"] = parse_live_market(live_lines, model_name)
     data["sections"]["variantCoverage"] = parse_variant_coverage_refined(variant_lines)
     guide = parse_engine_code_families(engine_code_lines)
+    guide["h2"] = restore_model_name_reference(guide.get("h2", ""), brand_name, model_name)
+    guide["h3"] = restore_model_name_reference(guide.get("h3", ""), brand_name, model_name)
+    guide["closing"] = restore_model_name_reference(guide.get("closing", ""), brand_name, model_name)
+    for family in guide.get("families", []):
+        for entry in family.get("entries", []):
+            entry["cta"] = restore_model_name_reference(entry.get("cta", ""), brand_name, model_name)
     data["sections"]["variantCoverage"]["engineGuide"] = guide
     data["sections"]["variantCoverage"]["engineGuide"]["tag"] = guide["tag"]
     data["sections"]["engineCodes"] = build_summary_engine_codes(guide, model_name)
@@ -2886,7 +2989,14 @@ def infer_context(
     model_name = normalize_model_name_for_brand(args.model_name or inferred_model_name, brand_name or "")
     model_slug = args.model_slug or infer_model_slug_from_name(model_name, brand_name)
     storage_slug = infer_storage_slug_from_name(model_name)
-    legacy_slug = args.legacy_slug or canonical_model or (storage_slug if storage_slug != model_slug else None)
+    if args.legacy_slug:
+        legacy_slug = args.legacy_slug
+    elif canonical_model and canonical_model != model_slug:
+        legacy_slug = canonical_model
+    elif storage_slug != model_slug:
+        legacy_slug = storage_slug
+    else:
+        legacy_slug = None
 
     if not brand_name:
         raise SystemExit("Could not infer brand name. Pass --brand-name or --brand-json.")

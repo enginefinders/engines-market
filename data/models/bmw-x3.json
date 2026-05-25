@@ -15,13 +15,13 @@
     "canonical": "/bmw/x3"
   },
   "assets": {
-    "heroBg": "/images/brands/bmw/models/bmw-bmw-x3-model-card.png",
+    "heroBg": "/images/brands/bmw/models/bmw-x3-model-card.png",
     "howItWorksBg": "/images/brands/bmw/brand/bmw-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/bmw/brand/bmw-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/bmw/brand/bmw-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/bmw/brand/bmw-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/bmw/brand/bmw-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/bmw/models/bmw-bmw-x3-model-card.png"
+    "ctaImage": "/images/brands/bmw/models/bmw-x3-model-card.png"
   },
   "sections": {
     "hero": {
@@ -771,6 +771,7 @@
               {
                 "code": "N47D20",
                 "title": "2.0 Litre Diesel",
+                "familyHeading": "N47 Series Diesel Engines (2004-2015)",
                 "history": "Replaced the M47 in 2007, bringing aluminium construction and common-rail injection - but also the infamous rear-mounted timing chain that would define X3 replacement demand for a decade.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -791,6 +792,7 @@
               {
                 "code": "N47D20C",
                 "title": "2.0 Litre Diesel (Updated)",
+                "familyHeading": "N47 Series Diesel Engines (2004-2015)",
                 "history": "A revised version of the N47 introduced in late F25 production, featuring timing chain tensioner updates but retaining the same fundamental design.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -811,6 +813,7 @@
               {
                 "code": "B47D20",
                 "title": "2.0 Litre Diesel",
+                "familyHeading": "B47 Series Diesel Engines (2014-Present)",
                 "history": "Launched in 2014 as the N47’s successor, relocating the timing chain to the front of the engine for improved durability and serviceability. Generally regarded as a strong, dependable unit capable of high mileage.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -831,6 +834,7 @@
               {
                 "code": "M57D30",
                 "title": "3.0 Litre Diesel",
+                "familyHeading": "M57 Series Diesel Engines (2003-2010)",
                 "history": "The \"bulletproof\" straight-six diesel that built BMW’s diesel reputation in the UK. Known for smooth power delivery, strong torque, and exceptional longevity when properly maintained.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -851,6 +855,7 @@
               {
                 "code": "N57D30",
                 "title": "3.0 Litre Diesel",
+                "familyHeading": "N57 Series Diesel Engines (2010-2019)",
                 "history": "The twin-turbocharged successor to the M57, offering significantly more power while maintaining reasonable fuel economy. Found across F25 and early G01 X3 ranges.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -876,6 +881,7 @@
               {
                 "code": "M54B25",
                 "title": "2.5 Litre Petrol",
+                "familyHeading": "M54 Series Petrol Engines (2003-2006)",
                 "history": "The naturally aspirated straight-six that powered early E83 X3s. Part of BMW’s legendary M54 family, known for smooth power delivery and the classic six-cylinder soundtrack.",
                 "fuel": "Petrol",
                 "size": "2.5 Litre",
@@ -896,6 +902,7 @@
               {
                 "code": "N52B30",
                 "title": "3.0 Litre Petrol",
+                "familyHeading": "N52 Series Petrol Engines (2006-2010)",
                 "history": "The last naturally aspirated straight-six sold in the US market, featuring a lightweight magnesium/aluminium block and electric water pump. Defines the E83 X3 3.0si.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -916,6 +923,7 @@
               {
                 "code": "N20B20",
                 "title": "2.0 Litre Petrol",
+                "familyHeading": "N20 Series Petrol Engines (2010-2017)",
                 "history": "BMW’s first mass-produced four-cylinder turbocharged petrol engine, introduced to the F25 X3 as part of the EfficientDynamics push. Twin-scroll turbo provides responsive power delivery.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -936,6 +944,7 @@
               {
                 "code": "N55B30",
                 "title": "3.0 Litre Petrol",
+                "familyHeading": "N55 Series Petrol Engines (2010-2017)",
                 "history": "BMW’s first mass-produced turbocharged straight-six, featuring a single twin-scroll turbo rather than the twin-turbo setup of the N54. Renowned for responsive power and reliability.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -956,6 +965,7 @@
               {
                 "code": "B48B20",
                 "title": "2.0 Litre Petrol",
+                "familyHeading": "B48 Series Petrol Engines (2017-Present)",
                 "history": "Part of BMW’s modular B-series engine family, replacing the N20. Features improved thermal management, reduced friction, and greater tuning potential. Fitted to G01 X3 from launch.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -976,6 +986,7 @@
               {
                 "code": "B58B30",
                 "title": "3.0 Litre Petrol",
+                "familyHeading": "B58 Series Petrol Engines (2018-Present)",
                 "history": "The legendary straight-six successor to the N55, part of BMW’s modular B-series family. Featured in the X3 M40i, delivering 355bhp and exceptional refinement. Regularly praised as one of BMW’s best modern engines.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -1001,6 +1012,7 @@
               {
                 "code": "S58B30",
                 "title": "3.0 Litre Petrol",
+                "familyHeading": "S58 Series Performance Engines (2019-Present)",
                 "history": "BMW M GmbH’s most powerful straight-six ever produced, developed specifically for X3 M and X4 M. Features a closed-deck block, twin mono-scroll turbos, and 350 bar fuel injection.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -1052,6 +1064,8 @@
           "engines": [
             {
               "code": "N47D20",
+              "title": "2.0 Litre Diesel",
+              "familyHeading": "N47 Series Diesel Engines (2004-2015)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "143-184 hp",
@@ -1062,6 +1076,8 @@
             },
             {
               "code": "N47D20C",
+              "title": "2.0 Litre Diesel (Updated)",
+              "familyHeading": "N47 Series Diesel Engines (2004-2015)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "184 hp",
@@ -1072,6 +1088,8 @@
             },
             {
               "code": "B47D20",
+              "title": "2.0 Litre Diesel",
+              "familyHeading": "B47 Series Diesel Engines (2014-Present)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "150-190 hp",
@@ -1082,6 +1100,8 @@
             },
             {
               "code": "M57D30",
+              "title": "3.0 Litre Diesel",
+              "familyHeading": "M57 Series Diesel Engines (2003-2010)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "204-218 hp",
@@ -1092,6 +1112,8 @@
             },
             {
               "code": "N57D30",
+              "title": "3.0 Litre Diesel",
+              "familyHeading": "N57 Series Diesel Engines (2010-2019)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "258-313 hp",
@@ -1109,6 +1131,8 @@
           "engines": [
             {
               "code": "M54B25",
+              "title": "2.5 Litre Petrol",
+              "familyHeading": "M54 Series Petrol Engines (2003-2006)",
               "fuel": "Petrol",
               "size": "2.5L",
               "power": "192 hp",
@@ -1119,6 +1143,8 @@
             },
             {
               "code": "N52B30",
+              "title": "3.0 Litre Petrol",
+              "familyHeading": "N52 Series Petrol Engines (2006-2010)",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "272 hp",
@@ -1129,6 +1155,8 @@
             },
             {
               "code": "N20B20",
+              "title": "2.0 Litre Petrol",
+              "familyHeading": "N20 Series Petrol Engines (2010-2017)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "184-245 hp",
@@ -1139,6 +1167,8 @@
             },
             {
               "code": "N55B30",
+              "title": "3.0 Litre Petrol",
+              "familyHeading": "N55 Series Petrol Engines (2010-2017)",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "306 hp",
@@ -1149,6 +1179,8 @@
             },
             {
               "code": "B48B20",
+              "title": "2.0 Litre Petrol",
+              "familyHeading": "B48 Series Petrol Engines (2017-Present)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "184-252 hp",
@@ -1159,6 +1191,8 @@
             },
             {
               "code": "B58B30",
+              "title": "3.0 Litre Petrol",
+              "familyHeading": "B58 Series Petrol Engines (2018-Present)",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "355-382 hp",
@@ -1169,6 +1203,8 @@
             },
             {
               "code": "S58B30",
+              "title": "3.0 Litre Petrol",
+              "familyHeading": "S58 Series Performance Engines (2019-Present)",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "480-510 hp",
@@ -1693,6 +1729,11 @@
           "title": "BMW X3 Diesel Engines",
           "description": "The UK X3 market is dominated by diesel engines across all three generations, with the 2.0-litre N47 accounting for the highest replacement volume due to timing chain failures.",
           "descriptor": "The UK X3 market is dominated by diesel engines across all three generations, with the 2.0-litre N47 accounting for the highest replacement volume due to timing chain failures.",
+          "familiesLabel": "Common BMW X3 Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "N47D20 - The most replaced X3 engine; rear timing chain fails 60k-120k miles (E83, early F25)",
             "N47D20C - Revised version with updated tensioner but same fundamental vulnerability (late F25)",
@@ -1725,6 +1766,11 @@
           "title": "BMW X3 Petrol Engines",
           "description": "Petrol X3s are less common in the UK than diesels, but the B58-powered M40i has created strong replacement demand among performance SUV owners.",
           "descriptor": "Petrol X3s are less common in the UK than diesels, but the B58-powered M40i has created strong replacement demand among performance SUV owners.",
+          "familiesLabel": "Common BMW X3 Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "M54B25 - Naturally aspirated straight-six; smooth but aging (E83 2.5i)",
             "N52B30 - Last naturally aspirated straight-six; electric water pump fails (E83 3.0si)",
@@ -1760,6 +1806,11 @@
           "title": "BMW X3 Plug-In Hybrid (PHEV) Engines",
           "description": "The xDrive30e joined the G01 X3 range in 2019, combining a B48 petrol engine with an electric motor for lower benefit-in-kind tax and urban electric running.",
           "descriptor": "The xDrive30e joined the G01 X3 range in 2019, combining a B48 petrol engine with an electric motor for lower benefit-in-kind tax and urban electric running.",
+          "familiesLabel": "BMW X3 PHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "B48B20 (PHEV variant) - 2.0-litre turbo petrol paired with electric motor",
             "Electric motor provides up to 30 miles of zero-emission urban driving",
@@ -1783,6 +1834,11 @@
           "title": "BMW X3 Mild Hybrid (MHEV) Engines",
           "description": "Late G01 X3 diesel and petrol models received 48-volt mild hybrid assistance for improved efficiency and reduced turbo lag.",
           "descriptor": "Late G01 X3 diesel and petrol models received 48-volt mild hybrid assistance for improved efficiency and reduced turbo lag.",
+          "familiesLabel": "BMW X3 MHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "B47D20 (with MHEV) - 2.0-litre diesel with belt-driven starter-generator",
             "B58B30 (with MHEV) - 3.0-litre petrol with integrated starter-generator",

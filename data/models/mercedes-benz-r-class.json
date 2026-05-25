@@ -15,13 +15,13 @@
     "canonical": "/mercedes-benz/r-class"
   },
   "assets": {
-    "heroBg": "/images/brands/mercedes-benz/models/mercedes-benz-mercedes-benz-r-class-model-card.png",
+    "heroBg": "/images/brands/mercedes-benz/models/mercedes-benz-r-class-model-card.png",
     "howItWorksBg": "/images/brands/mercedes-benz/brand/mercedes-benz-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/mercedes-benz/models/mercedes-benz-mercedes-benz-r-class-model-card.png"
+    "ctaImage": "/images/brands/mercedes-benz/models/mercedes-benz-r-class-model-card.png"
   },
   "sections": {
     "hero": {
@@ -763,6 +763,7 @@
               {
                 "code": "OM642.950",
                 "title": "3.0L Diesel",
+                "familyHeading": "OM642 V6 Diesel Family (2006-2012)",
                 "history": "Core 3.0L V6 diesel for R320 CDI; aluminium block, common-rail injection; timing chain issues defined replacement demand.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -783,6 +784,7 @@
               {
                 "code": "OM642.870",
                 "title": "3.0L Diesel",
+                "familyHeading": "OM642 V6 Diesel Family (2006-2012)",
                 "history": "Entry-level 188bhp OM642 for R280 CDI; shared architecture with higher-output variants; oil cooler seal failures common.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -803,6 +805,7 @@
               {
                 "code": "OM642.872",
                 "title": "3.0L Diesel",
+                "familyHeading": "OM642 V6 Diesel Family (2006-2012)",
                 "history": "BlueEfficiency 190bhp OM642 for R300 CDI; improved emissions but retained swirl flap and EGR cooler vulnerability.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -823,6 +826,7 @@
               {
                 "code": "OM642 LS",
                 "title": "3.0L Diesel",
+                "familyHeading": "OM642 V6 Diesel Family (2006-2012)",
                 "history": "High-output 265bhp OM642 LS for R350 CDI; twin-turbo setup delivered performance but increased turbo actuator failure risk.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -843,6 +847,7 @@
               {
                 "code": "OM642 BlueTEC",
                 "title": "3.0L Diesel",
+                "familyHeading": "OM642 V6 Diesel Family (2006-2012)",
                 "history": "AdBlue-equipped OM642 for R350 BlueTEC; reduced emissions but introduced SCR system complexity and injector clogging issues.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -868,6 +873,7 @@
               {
                 "code": "M272.945",
                 "title": "3.0L Petrol",
+                "familyHeading": "M272 V6 Petrol Family (2006-2012)",
                 "history": "3.0L V6 petrol for R280/R300; aluminium construction, balance shaft design; pre-2007 sprocket wear a known terminal failure.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -888,6 +894,7 @@
               {
                 "code": "M272.967",
                 "title": "3.5L Petrol",
+                "familyHeading": "M272 V6 Petrol Family (2006-2012)",
                 "history": "Flagship 3.5L M272 for R350 petrol; 272bhp output; balance shaft sprocket wear on early units drove replacement enquiries.",
                 "fuel": "Petrol",
                 "size": "3.5 Litre",
@@ -908,6 +915,7 @@
               {
                 "code": "M113.970",
                 "title": "5.0L Petrol",
+                "familyHeading": "V8 Petrol Engines (2006-2012)",
                 "history": "Early R500 5.0L SOHC V8; robust iron-block design but timing chain guide wear on high-mileage examples prompted replacement.",
                 "fuel": "Petrol",
                 "size": "5.0 Litre",
@@ -928,6 +936,7 @@
               {
                 "code": "M273.963",
                 "title": "5.5L Petrol",
+                "familyHeading": "V8 Petrol Engines (2006-2012)",
                 "history": "Facelift R500 5.5L DOHC V8; 382bhp output; cam adjuster and timing chain tensioner issues on post-2007 engines.",
                 "fuel": "Petrol",
                 "size": "5.5 Litre",
@@ -948,6 +957,7 @@
               {
                 "code": "M156.980",
                 "title": "6.2L Petrol",
+                "familyHeading": "V8 Petrol Engines (2006-2012)",
                 "history": "Hand-built 6.2L AMG V8 for R63; 510bhp naturally aspirated; head bolt and bearing failures on track-used examples.",
                 "fuel": "Petrol",
                 "size": "6.2 Litre",
@@ -999,6 +1009,8 @@
           "engines": [
             {
               "code": "OM642.950",
+              "title": "3.0L Diesel",
+              "familyHeading": "OM642 V6 Diesel Family (2006-2012)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "224 hp",
@@ -1009,6 +1021,8 @@
             },
             {
               "code": "OM642.870",
+              "title": "3.0L Diesel",
+              "familyHeading": "OM642 V6 Diesel Family (2006-2012)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "188 hp",
@@ -1019,6 +1033,8 @@
             },
             {
               "code": "OM642.872",
+              "title": "3.0L Diesel",
+              "familyHeading": "OM642 V6 Diesel Family (2006-2012)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "190 hp",
@@ -1029,6 +1045,8 @@
             },
             {
               "code": "OM642 LS",
+              "title": "3.0L Diesel",
+              "familyHeading": "OM642 V6 Diesel Family (2006-2012)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "265 hp",
@@ -1039,6 +1057,8 @@
             },
             {
               "code": "OM642 BlueTEC",
+              "title": "3.0L Diesel",
+              "familyHeading": "OM642 V6 Diesel Family (2006-2012)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "211 hp",
@@ -1056,6 +1076,8 @@
           "engines": [
             {
               "code": "M272.945",
+              "title": "3.0L Petrol",
+              "familyHeading": "M272 V6 Petrol Family (2006-2012)",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "231 hp",
@@ -1066,6 +1088,8 @@
             },
             {
               "code": "M272.967",
+              "title": "3.5L Petrol",
+              "familyHeading": "M272 V6 Petrol Family (2006-2012)",
               "fuel": "Petrol",
               "size": "3.5L",
               "power": "272 hp",
@@ -1076,6 +1100,8 @@
             },
             {
               "code": "M113.970",
+              "title": "5.0L Petrol",
+              "familyHeading": "V8 Petrol Engines (2006-2012)",
               "fuel": "Petrol",
               "size": "5.0L",
               "power": "306 hp",
@@ -1086,6 +1112,8 @@
             },
             {
               "code": "M273.963",
+              "title": "5.5L Petrol",
+              "familyHeading": "V8 Petrol Engines (2006-2012)",
               "fuel": "Petrol",
               "size": "5.5L",
               "power": "382 hp",
@@ -1096,6 +1124,8 @@
             },
             {
               "code": "M156.980",
+              "title": "6.2L Petrol",
+              "familyHeading": "V8 Petrol Engines (2006-2012)",
               "fuel": "Petrol",
               "size": "6.2L",
               "power": "510 hp",
@@ -1524,6 +1554,11 @@
           "title": "Mercedes Benz R Class Diesel Engines",
           "description": "The 3.0-litre OM642 V6 diesel powered every UK R-Class diesel variant from launch to end of production, dominating replacement enquiries due to timing chain and oil cooler seal vulnerabilities.",
           "descriptor": "The 3.0-litre OM642 V6 diesel powered every UK R-Class diesel variant from launch to end of production, dominating replacement enquiries due to timing chain and oil cooler seal vulnerabilities.",
+          "familiesLabel": "Common Mercedes Benz R Class Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "OM642.950 - R 320 CDI core engine, highest UK replacement volume, timing chain stretch risk",
             "OM642.870 - R 280 CDI entry diesel, oil cooler seal leaks common on high-mileage examples",
@@ -1554,6 +1589,11 @@
           "title": "Mercedes Benz R Class Petrol Engines",
           "description": "Petrol R-Class variants span naturally aspirated V6 and V8 units from the M272, M113, M273 and hand-built AMG M156 families, with pre-2007 M272 balance shaft wear a critical replacement trigger.",
           "descriptor": "Petrol R-Class variants span naturally aspirated V6 and V8 units from the M272, M113, M273 and hand-built AMG M156 families, with pre-2007 M272 balance shaft wear a critical replacement trigger.",
+          "familiesLabel": "Common Mercedes Benz R Class Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "M272.945 - R 280/R 300 petrol 3.0L V6, pre-2007 balance shaft sprocket terminal failure risk",
             "M272.967 - R 350 petrol 3.5L V6, refined cruiser but cam adjuster solenoid leaks common",

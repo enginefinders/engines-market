@@ -15,13 +15,13 @@
     "canonical": "/ford/c-max"
   },
   "assets": {
-    "heroBg": "/images/brands/ford/models/ford-ford-c-max-model-card.png",
+    "heroBg": "/images/brands/ford/models/ford-c-max-model-card.png",
     "howItWorksBg": "/images/brands/ford/brand/ford-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/ford/brand/ford-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/ford/brand/ford-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/ford/brand/ford-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/ford/brand/ford-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/ford/models/ford-ford-c-max-model-card.png"
+    "ctaImage": "/images/brands/ford/models/ford-c-max-model-card.png"
   },
   "sections": {
     "hero": {
@@ -716,8 +716,9 @@
             "name": "Diesel Engines",
             "entries": [
               {
-                "code": "G8DA - 1.",
-                "title": "6L Diesel",
+                "code": "G8DA",
+                "title": "1.6L Diesel",
+                "familyHeading": "1.6 TDCi Duratorq Family (2007-2019)",
                 "history": "1.6 TDCi workhorse for C-Max Mk1/Mk2. Common-rail diesel with high mileage reliability but timing chain wear risks.",
                 "fuel": "Diesel",
                 "size": "1.6 Litre",
@@ -736,8 +737,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "G8DB - 1.",
-                "title": "6L Diesel",
+                "code": "G8DB",
+                "title": "1.6L Diesel",
+                "familyHeading": "1.6 TDCi Duratorq Family (2007-2019)",
                 "history": "Updated 1.6 TDCi variant for facelift C-Max. Refined emissions calibration but retained core durability concerns.",
                 "fuel": "Diesel",
                 "size": "1.6 Litre",
@@ -756,8 +758,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "T1DB - 1.",
-                "title": "6L Diesel",
+                "code": "T1DB",
+                "title": "1.6L Diesel",
+                "familyHeading": "1.6 TDCi Duratorq Family (2007-2019)",
                 "history": "Later-production 1.6 TDCi code for C-Max Mk2. Improved software mapping but shared hardware vulnerabilities.",
                 "fuel": "Diesel",
                 "size": "1.6 Litre",
@@ -776,8 +779,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "IQCD - 1.",
-                "title": "6L Diesel",
+                "code": "IQCD",
+                "title": "1.6L Diesel",
+                "familyHeading": "1.6 TDCi Duratorq Family (2007-2019)",
                 "history": "Final iteration 1.6 TDCi for late C-Max. Euro 6 compliance added complexity but maintained core reliability.",
                 "fuel": "Diesel",
                 "size": "1.6 Litre",
@@ -796,8 +800,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "TYDA - 2.",
-                "title": "0L Diesel",
+                "code": "TYDA",
+                "title": "2.0L Diesel",
+                "familyHeading": "2.0 TDCi Duratorq Family (2010-2019)",
                 "history": "Premium diesel option for C-Max Titanium/X. Strong torque output but turbo and timing chain complexity.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -816,8 +821,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "KKDA - 1.",
-                "title": "8L Diesel",
+                "code": "KKDA",
+                "title": "1.8L Diesel",
+                "familyHeading": "1.8 TDCi Duratorq Family (2007-2010)",
                 "history": "Early C-Max diesel option. Robust block but injector and turbo issues on higher-mileage examples.",
                 "fuel": "Diesel",
                 "size": "1.8 Litre",
@@ -836,8 +842,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "XXDA - 1.",
-                "title": "5L Diesel",
+                "code": "XXDA",
+                "title": "1.5L Diesel",
+                "familyHeading": "1.5 TDCi/EcoBlue Family (2015-2019)",
                 "history": "Replacement for 1.6 TDCi in late C-Max. Improved efficiency but new failure modes around injectors and seals.",
                 "fuel": "Diesel",
                 "size": "1.5 Litre",
@@ -861,8 +868,9 @@
             "name": "Petrol Engines",
             "entries": [
               {
-                "code": "M1DA - 1.",
-                "title": "0L Petrol",
+                "code": "M1DA",
+                "title": "1.0L Petrol",
+                "familyHeading": "1.0 EcoBoost Family (2012-2019)",
                 "history": "High-output 1.0 EcoBoost for C-Max. Lightweight turbo design but wet belt degradation risks if maintenance ignored.",
                 "fuel": "Petrol",
                 "size": "1.0 Litre",
@@ -881,8 +889,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "M2DA - 1.",
-                "title": "0L Petrol",
+                "code": "M2DA",
+                "title": "1.0L Petrol",
+                "familyHeading": "1.0 EcoBoost Family (2012-2019)",
                 "history": "Lower-output 1.0 EcoBoost variant for C-Max. Same wet belt architecture but reduced thermal stress from lower power.",
                 "fuel": "Petrol",
                 "size": "1.0 Litre",
@@ -901,8 +910,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "HWDA - 1.",
-                "title": "6L Petrol",
+                "code": "HWDA",
+                "title": "1.6L Petrol",
+                "familyHeading": "1.6 Ti-VCT Duratec Family (2007-2010)",
                 "history": "Naturally aspirated 1.6 petrol for early C-Max. Simple design with good reliability but prone to oil sludge if servicing delayed.",
                 "fuel": "Petrol",
                 "size": "1.6 Litre",
@@ -921,8 +931,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "XWDA - 1.",
-                "title": "6L Petrol",
+                "code": "XWDA",
+                "title": "1.6L Petrol",
+                "familyHeading": "1.6 Ti-VCT Duratec Family (2007-2010)",
                 "history": "Updated 1.6 Ti-VCT for facelift C-Max. Refined emissions but retained oil consumption tendencies on higher mileage.",
                 "fuel": "Petrol",
                 "size": "1.6 Litre",
@@ -941,8 +952,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "CSDA - 1.",
-                "title": "8L Petrol",
+                "code": "CSDA",
+                "title": "1.8L Petrol",
+                "familyHeading": "1.8 Duratec Family (2007-2010)",
                 "history": "Larger-capacity petrol option for early C-Max. Smooth power delivery but higher fuel consumption and timing chain concerns.",
                 "fuel": "Petrol",
                 "size": "1.8 Litre",
@@ -961,8 +973,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "QQDA - 1.",
-                "title": "8L Petrol",
+                "code": "QQDA",
+                "title": "1.8L Petrol",
+                "familyHeading": "1.8 Duratec Family (2007-2010)",
                 "history": "Alternative 1.8 Duratec code for early C-Max. Similar architecture to CSDA with minor calibration differences.",
                 "fuel": "Petrol",
                 "size": "1.8 Litre",
@@ -1013,7 +1026,9 @@
           "failureNote": "Main replacement triggers are timing chain wear, EGR / cooling faults and turbo-control issues.",
           "engines": [
             {
-              "code": "G8DA - 1.",
+              "code": "G8DA",
+              "title": "1.6L Diesel",
+              "familyHeading": "1.6 TDCi Duratorq Family (2007-2019)",
               "fuel": "Diesel",
               "size": "1.6L",
               "power": "95-115 hp",
@@ -1023,7 +1038,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "G8DB - 1.",
+              "code": "G8DB",
+              "title": "1.6L Diesel",
+              "familyHeading": "1.6 TDCi Duratorq Family (2007-2019)",
               "fuel": "Diesel",
               "size": "1.6L",
               "power": "115 hp",
@@ -1033,7 +1050,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "T1DB - 1.",
+              "code": "T1DB",
+              "title": "1.6L Diesel",
+              "familyHeading": "1.6 TDCi Duratorq Family (2007-2019)",
               "fuel": "Diesel",
               "size": "1.6L",
               "power": "95-115 hp",
@@ -1043,7 +1062,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "IQCD - 1.",
+              "code": "IQCD",
+              "title": "1.6L Diesel",
+              "familyHeading": "1.6 TDCi Duratorq Family (2007-2019)",
               "fuel": "Diesel",
               "size": "1.6L",
               "power": "115 hp",
@@ -1053,7 +1074,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "TYDA - 2.",
+              "code": "TYDA",
+              "title": "2.0L Diesel",
+              "familyHeading": "2.0 TDCi Duratorq Family (2010-2019)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "140-163 hp",
@@ -1063,7 +1086,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "KKDA - 1.",
+              "code": "KKDA",
+              "title": "1.8L Diesel",
+              "familyHeading": "1.8 TDCi Duratorq Family (2007-2010)",
               "fuel": "Diesel",
               "size": "1.8L",
               "power": "115 hp",
@@ -1073,7 +1098,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "XXDA - 1.",
+              "code": "XXDA",
+              "title": "1.5L Diesel",
+              "familyHeading": "1.5 TDCi/EcoBlue Family (2015-2019)",
               "fuel": "Diesel",
               "size": "1.5L",
               "power": "95-120 hp",
@@ -1090,7 +1117,9 @@
           "failureNote": "Main replacement demand comes from timing-chain, cooling-system and performance thermal-management faults.",
           "engines": [
             {
-              "code": "M1DA - 1.",
+              "code": "M1DA",
+              "title": "1.0L Petrol",
+              "familyHeading": "1.0 EcoBoost Family (2012-2019)",
               "fuel": "Petrol",
               "size": "1.0L",
               "power": "125 hp",
@@ -1100,7 +1129,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "M2DA - 1.",
+              "code": "M2DA",
+              "title": "1.0L Petrol",
+              "familyHeading": "1.0 EcoBoost Family (2012-2019)",
               "fuel": "Petrol",
               "size": "1.0L",
               "power": "100 hp",
@@ -1110,7 +1141,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "HWDA - 1.",
+              "code": "HWDA",
+              "title": "1.6L Petrol",
+              "familyHeading": "1.6 Ti-VCT Duratec Family (2007-2010)",
               "fuel": "Petrol",
               "size": "1.6L",
               "power": "120 hp",
@@ -1120,7 +1153,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "XWDA - 1.",
+              "code": "XWDA",
+              "title": "1.6L Petrol",
+              "familyHeading": "1.6 Ti-VCT Duratec Family (2007-2010)",
               "fuel": "Petrol",
               "size": "1.6L",
               "power": "120-125 hp",
@@ -1130,7 +1165,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "CSDA - 1.",
+              "code": "CSDA",
+              "title": "1.8L Petrol",
+              "familyHeading": "1.8 Duratec Family (2007-2010)",
               "fuel": "Petrol",
               "size": "1.8L",
               "power": "125 hp",
@@ -1140,7 +1177,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "QQDA - 1.",
+              "code": "QQDA",
+              "title": "1.8L Petrol",
+              "familyHeading": "1.8 Duratec Family (2007-2010)",
               "fuel": "Petrol",
               "size": "1.8L",
               "power": "125 hp",
@@ -1616,6 +1655,11 @@
           "title": "Ford C-Max Diesel Engines",
           "description": "Diesel power dominated the C-Max range across both generations (2007-2019), with TDCi and later EcoBlue units driving the majority of UK replacement enquiries due to high-mileage family use.",
           "descriptor": "Diesel power dominated the C-Max range across both generations (2007-2019), with TDCi and later EcoBlue units driving the majority of UK replacement enquiries due to high-mileage family use.",
+          "familiesLabel": "Common Ford C-Max Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "G8DA/G8DB - high-volume 1.6 TDCi (Zetec/Titanium), timing chain tensioner wear at 80k+ miles",
             "T1DB/IQCD - updated 1.6 TDCi codes (2010-2019), EGR cooler thermal stress issues",
@@ -1648,6 +1692,11 @@
           "title": "Ford C-Max Petrol Engines",
           "description": "Petrol C-Max options span naturally aspirated Ti-VCT units from early generations to the high-volume 1.0 EcoBoost, with wet belt degradation driving urgent replacement searches on later models.",
           "descriptor": "Petrol C-Max options span naturally aspirated Ti-VCT units from early generations to the high-volume 1.0 EcoBoost, with wet belt degradation driving urgent replacement searches on later models.",
+          "familiesLabel": "Common Ford C-Max Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "M1DA/M2DA - 1.0 EcoBoost three-cylinder (Zetec/Titanium), wet belt fibre degradation risk",
             "HWDA/XWDA - 1.6 Ti-VCT naturally aspirated (Mk1), oil sludge from extended service intervals",
@@ -1678,6 +1727,11 @@
           "title": "Ford C-Max Hybrid / Electrified Engines",
           "description": "The Ford C-Max was not offered with hybrid, plug-in hybrid, or electric powertrains in the UK market - all replacement enquiries relate to conventional diesel or petrol engines only.",
           "descriptor": "The Ford C-Max was not offered with hybrid, plug-in hybrid, or electric powertrains in the UK market - all replacement enquiries relate to conventional diesel or petrol engines only.",
+          "familiesLabel": "Common Ford C-Max Hybrid / Electrified Engine Families",
+          "foundInLabel": "",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [],
           "foundIn": [],
           "knownFor": [],

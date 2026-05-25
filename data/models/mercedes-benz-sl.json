@@ -15,13 +15,13 @@
     "canonical": "/mercedes-benz/sl"
   },
   "assets": {
-    "heroBg": "/images/brands/mercedes-benz/models/mercedes-benz-mercedes-benz-sl-model-card.png",
+    "heroBg": "/images/brands/mercedes-benz/models/mercedes-benz-sl-model-card.png",
     "howItWorksBg": "/images/brands/mercedes-benz/brand/mercedes-benz-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/mercedes-benz/models/mercedes-benz-mercedes-benz-sl-model-card.png"
+    "ctaImage": "/images/brands/mercedes-benz/models/mercedes-benz-sl-model-card.png"
   },
   "sections": {
     "hero": {
@@ -765,6 +765,7 @@
               {
                 "code": "M103",
                 "title": "3.0L Petrol",
+                "familyHeading": "Inline-6 Family (1989-1997)",
                 "history": "The M103 12-valve SOHC I6 powered early R129 300SL models - robust but prone to wiring and sensor issues as mileage climbs.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -785,6 +786,7 @@
               {
                 "code": "M104",
                 "title": "3.2L Petrol",
+                "familyHeading": "Inline-6 Family (1989-1997)",
                 "history": "The M104 DOHC 24-valve I6 brought refined performance to the SL320 - but its wiring harness remains a critical failure point for preservation.",
                 "fuel": "Petrol",
                 "size": "3.2 Litre",
@@ -805,6 +807,7 @@
               {
                 "code": "M112",
                 "title": "3.7L Petrol",
+                "familyHeading": "M112/M272 V6 Family (2001-2016)",
                 "history": "The M112 V6 debuted in the early R230 SL350 - smooth and reliable, but balance shaft issues emerged in later high-mileage examples.",
                 "fuel": "Petrol",
                 "size": "3.7 Litre",
@@ -825,6 +828,7 @@
               {
                 "code": "M272",
                 "title": "3.5L Petrol",
+                "familyHeading": "M112/M272 V6 Family (2001-2016)",
                 "history": "The M272 replaced the M112 in 2004 - offering more power and efficiency, but its balance shaft idler gear became a notorious failure point.",
                 "fuel": "Petrol",
                 "size": "3.5 Litre",
@@ -845,6 +849,7 @@
               {
                 "code": "M113",
                 "title": "5.0L Petrol",
+                "familyHeading": "M113/M273 V8 Family (2001-2018)",
                 "history": "The M113 V8 defined the R230 SL500 - robust architecture but oil pump chain tensioner failure remains the dominant replacement driver.",
                 "fuel": "Petrol",
                 "size": "5.0 Litre",
@@ -865,6 +870,7 @@
               {
                 "code": "M273",
                 "title": "5.5L Petrol",
+                "familyHeading": "M113/M273 V8 Family (2001-2018)",
                 "history": "The facelift M273 V8 brought direct injection and more power to the SL500 - but timing chain tensioner leaks remain a critical concern.",
                 "fuel": "Petrol",
                 "size": "5.5 Litre",
@@ -885,6 +891,7 @@
               {
                 "code": "M177",
                 "title": "4.0L Petrol",
+                "familyHeading": "M113/M273 V8 Family (2001-2018)",
                 "history": "The twin-turbo M177 V8 brought modern efficiency to late R231 SL500 models - complex but powerful, with specialist rebuild requirements.",
                 "fuel": "Petrol",
                 "size": "4.0 Litre",
@@ -905,6 +912,7 @@
               {
                 "code": "M119",
                 "title": "5.0L Petrol",
+                "familyHeading": "M119 V8 Family (1990-1997)",
                 "history": "The M119 DOHC V8 powered the iconic R129 500SL - mechanically robust but timing chain guide degradation drives urgent replacement searches.",
                 "fuel": "Petrol",
                 "size": "5.0 Litre",
@@ -925,6 +933,7 @@
               {
                 "code": "M113K",
                 "title": "5.4L Supercharged Petrol",
+                "familyHeading": "M113K Supercharged V8 (2003-2008)",
                 "history": "The supercharged M113K defined the SL55 AMG - brutal performance but supercharger coupler wear and oil consumption drive rebuild demand.",
                 "fuel": "Petrol",
                 "size": "5.4 Litre",
@@ -945,6 +954,7 @@
               {
                 "code": "M156",
                 "title": "6.2L Petrol",
+                "familyHeading": "M156/M157 AMG V8 Family (2008-2017)",
                 "history": "The naturally aspirated M156 V8 powered the SL63 AMG - legendary sound but head bolt corrosion remains a critical TSB-driven failure.",
                 "fuel": "Petrol",
                 "size": "6.2 Litre",
@@ -965,6 +975,7 @@
               {
                 "code": "M157",
                 "title": "5.5L Biturbo Petrol",
+                "familyHeading": "M156/M157 AMG V8 Family (2008-2017)",
                 "history": "The twin-turbo M157 replaced the M156 in the SL63 AMG - more torque and efficiency, but turbo and bearing wear drive specialist rebuilds.",
                 "fuel": "Petrol",
                 "size": "5.5 Litre",
@@ -985,6 +996,7 @@
               {
                 "code": "M120",
                 "title": "6.0L Petrol",
+                "familyHeading": "M120/M275 V12 Family (1992-2020)",
                 "history": "The M120 V12 powered the R129 600SL - smooth, complex, and now highly sought by collectors preserving appreciating classic SLs.",
                 "fuel": "Petrol",
                 "size": "6.0 Litre",
@@ -1003,8 +1015,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "M120 AMG",
-                "title": "7.3L - 7.3L Petrol",
+                "code": "M120 AMG 7.3L",
+                "title": "7.3L Petrol",
+                "familyHeading": "M120/M275 V12 Family (1992-2020)",
                 "history": "The hand-built M120 7.3L V12 powered the ultra-rare SL73 AMG - only 85 units made, now commanding collector-grade rebuild pricing.",
                 "fuel": "Petrol",
                 "size": "7.3 Litre",
@@ -1025,6 +1038,7 @@
               {
                 "code": "M275",
                 "title": "5.5L Biturbo Petrol",
+                "familyHeading": "M120/M275 V12 Family (1992-2020)",
                 "history": "The M275 V12 biturbo defined the R230 SL600 - immense torque but coil pack failure on 12 cylinders drives costly replacement decisions.",
                 "fuel": "Petrol",
                 "size": "5.5 Litre",
@@ -1045,6 +1059,7 @@
               {
                 "code": "M275 AMG",
                 "title": "6.0L Biturbo Petrol",
+                "familyHeading": "M120/M275 V12 Family (1992-2020)",
                 "history": "The AMG-tuned M275 V12 powered the SL65 AMG - 604bhp and 1,000Nm, but twin-turbo complexity demands specialist rebuild expertise.",
                 "fuel": "Petrol",
                 "size": "6.0 Litre",
@@ -1065,6 +1080,7 @@
               {
                 "code": "M279",
                 "title": "6.0L Biturbo Petrol",
+                "familyHeading": "M120/M275 V12 Family (1992-2020)",
                 "history": "The evolved M279 V12 biturbo powered late R231 SL65 models - refined but complex, with specialist rebuild requirements for collector vehicles.",
                 "fuel": "Petrol",
                 "size": "6.0 Litre",
@@ -1115,6 +1131,8 @@
           "engines": [
             {
               "code": "M103",
+              "title": "3.0L Petrol",
+              "familyHeading": "Inline-6 Family (1989-1997)",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "188-197 hp",
@@ -1125,6 +1143,8 @@
             },
             {
               "code": "M104",
+              "title": "3.2L Petrol",
+              "familyHeading": "Inline-6 Family (1989-1997)",
               "fuel": "Petrol",
               "size": "3.2L",
               "power": "228-231 hp",
@@ -1135,6 +1155,8 @@
             },
             {
               "code": "M112",
+              "title": "3.7L Petrol",
+              "familyHeading": "M112/M272 V6 Family (2001-2016)",
               "fuel": "Petrol",
               "size": "3.7L",
               "power": "245 hp",
@@ -1145,6 +1167,8 @@
             },
             {
               "code": "M272",
+              "title": "3.5L Petrol",
+              "familyHeading": "M112/M272 V6 Family (2001-2016)",
               "fuel": "Petrol",
               "size": "3.5L",
               "power": "268-272 hp",
@@ -1155,6 +1179,8 @@
             },
             {
               "code": "M113",
+              "title": "5.0L Petrol",
+              "familyHeading": "M113/M273 V8 Family (2001-2018)",
               "fuel": "Petrol",
               "size": "5.0L",
               "power": "302-306 hp",
@@ -1165,6 +1191,8 @@
             },
             {
               "code": "M273",
+              "title": "5.5L Petrol",
+              "familyHeading": "M113/M273 V8 Family (2001-2018)",
               "fuel": "Petrol",
               "size": "5.5L",
               "power": "383-388 hp",
@@ -1175,6 +1203,8 @@
             },
             {
               "code": "M177",
+              "title": "4.0L Petrol",
+              "familyHeading": "M113/M273 V8 Family (2001-2018)",
               "fuel": "Petrol",
               "size": "4.0L",
               "power": "455-469 hp",
@@ -1185,6 +1215,8 @@
             },
             {
               "code": "M119",
+              "title": "5.0L Petrol",
+              "familyHeading": "M119 V8 Family (1990-1997)",
               "fuel": "Petrol",
               "size": "5.0L",
               "power": "320 hp",
@@ -1195,6 +1227,8 @@
             },
             {
               "code": "M113K",
+              "title": "5.4L Supercharged Petrol",
+              "familyHeading": "M113K Supercharged V8 (2003-2008)",
               "fuel": "Petrol",
               "size": "5.4L",
               "power": "469-493 hp",
@@ -1205,6 +1239,8 @@
             },
             {
               "code": "M156",
+              "title": "6.2L Petrol",
+              "familyHeading": "M156/M157 AMG V8 Family (2008-2017)",
               "fuel": "Petrol",
               "size": "6.2L",
               "power": "518-525 hp",
@@ -1215,6 +1251,8 @@
             },
             {
               "code": "M157",
+              "title": "5.5L Biturbo Petrol",
+              "familyHeading": "M156/M157 AMG V8 Family (2008-2017)",
               "fuel": "Petrol",
               "size": "5.5L",
               "power": "536-577 hp",
@@ -1225,6 +1263,8 @@
             },
             {
               "code": "M120",
+              "title": "6.0L Petrol",
+              "familyHeading": "M120/M275 V12 Family (1992-2020)",
               "fuel": "Petrol",
               "size": "6.0L",
               "power": "389-394 hp",
@@ -1234,7 +1274,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "M120 AMG",
+              "code": "M120 AMG 7.3L",
+              "title": "7.3L Petrol",
+              "familyHeading": "M120/M275 V12 Family (1992-2020)",
               "fuel": "Petrol",
               "size": "7.3L",
               "power": "525 hp",
@@ -1245,6 +1287,8 @@
             },
             {
               "code": "M275",
+              "title": "5.5L Biturbo Petrol",
+              "familyHeading": "M120/M275 V12 Family (1992-2020)",
               "fuel": "Petrol",
               "size": "5.5L",
               "power": "496-510 hp",
@@ -1255,6 +1299,8 @@
             },
             {
               "code": "M275 AMG",
+              "title": "6.0L Biturbo Petrol",
+              "familyHeading": "M120/M275 V12 Family (1992-2020)",
               "fuel": "Petrol",
               "size": "6.0L",
               "power": "604-612 hp",
@@ -1265,6 +1311,8 @@
             },
             {
               "code": "M279",
+              "title": "6.0L Biturbo Petrol",
+              "familyHeading": "M120/M275 V12 Family (1992-2020)",
               "fuel": "Petrol",
               "size": "6.0L",
               "power": "621-630 hp",
@@ -1849,6 +1897,11 @@
           "title": "Mercedes Benz SL Petrol Engines",
           "description": "The Mercedes Benz SL was exclusively petrol-powered across R129 (1989-2001), R230 (2001-2011) and R231 (2012-2020) generations, spanning inline-six, V6, V8 and V12 configurations.",
           "descriptor": "The Mercedes Benz SL was exclusively petrol-powered across R129 (1989-2001), R230 (2001-2011) and R231 (2012-2020) generations, spanning inline-six, V6, V8 and V12 configurations.",
+          "familiesLabel": "Common Mercedes Benz SL Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "M103/M104 - Early R129 inline-six (300SL/SL320), biodegradable wiring harness vulnerability",
             "M119 - R129 500SL 5.0L V8, timing chain guide degradation at high mileage",
@@ -1883,6 +1936,11 @@
           "title": "Mercedes Benz SL Hybrid / Electrified Engines",
           "description": "No hybrid, mild-hybrid, plug-in hybrid or electric variants of the Mercedes Benz SL were officially sold in the UK market.",
           "descriptor": "No hybrid, mild-hybrid, plug-in hybrid or electric variants of the Mercedes Benz SL were officially sold in the UK market.",
+          "familiesLabel": "Mercedes Benz SL Petrol Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "M103, M104, M112, M113, M119, M120, M272, M273, M275, M156, M177, M279",
             "Conventional naturally aspirated or turbocharged petrol combustion architecture",

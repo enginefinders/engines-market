@@ -15,13 +15,13 @@
     "canonical": "/mercedes-benz/gls"
   },
   "assets": {
-    "heroBg": "/images/brands/mercedes-benz/models/mercedes-benz-mercedes-benz-gls-model-card.png",
+    "heroBg": "/images/brands/mercedes-benz/models/mercedes-benz-gls-model-card.png",
     "howItWorksBg": "/images/brands/mercedes-benz/brand/mercedes-benz-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/mercedes-benz/models/mercedes-benz-mercedes-benz-gls-model-card.png"
+    "ctaImage": "/images/brands/mercedes-benz/models/mercedes-benz-gls-model-card.png"
   },
   "sections": {
     "hero": {
@@ -767,6 +767,7 @@
               {
                 "code": "OM642",
                 "title": "3.0L Diesel",
+                "familyHeading": "OM642 & OM629 Series (2006-2019)",
                 "history": "The OM642 brought an aluminium V6 to the GL range, offering smooth towing but requiring strict oil maintenance.",
                 "fuel": "Diesel",
                 "size": "2.987 Litre",
@@ -787,6 +788,7 @@
               {
                 "code": "OM629",
                 "title": "4.0L Diesel",
+                "familyHeading": "OM642 & OM629 Series (2006-2019)",
                 "history": "A rare high-torque V8 diesel built for heavy towing, delivering exceptional low-end grunt for large SUVs.",
                 "fuel": "Diesel",
                 "size": "3.996 Litre",
@@ -795,28 +797,18 @@
                 "compatibleVariants": [
                   "GL 420 CDI, GL 420 CDI 4MATIC"
                 ],
-                "commonFailures": [],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
-              },
-              {
-                "code": "Piezo",
-                "title": "electric injector failure causing rough idle and excessive smoke",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
+                "commonFailures": [
+                  "Piezoelectric injector failure causing rough idle and excessive smoke",
+                  "High-pressure fuel pump wear under sustained heavy load"
+                ],
                 "avgRebuiltPrice": "£4,800 - £7,500",
                 "cta": "Get quotes for OM629 Mercedes-Benz GLS engine replacement",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
                 "code": "OM651",
                 "title": "2.1L Diesel",
+                "familyHeading": "OM651 & OM656 Series (2013-Present)",
                 "history": "A compact twin-turbo four-cylinder designed for efficiency, later adopted in entry-level GLS models for economy.",
                 "fuel": "Diesel",
                 "size": "2.143 Litre",
@@ -836,6 +828,7 @@
               {
                 "code": "OM656",
                 "title": "3.0L Diesel",
+                "familyHeading": "OM651 & OM656 Series (2013-Present)",
                 "history": "An advanced inline-six diesel featuring sequential turbocharging for seamless torque delivery and modern efficiency.",
                 "fuel": "Diesel",
                 "size": "2.925 Litre",
@@ -860,6 +853,7 @@
               {
                 "code": "M272",
                 "title": "3.5L Petrol",
+                "familyHeading": "M272 & M273 V-Series (2006-2012)",
                 "history": "An aluminium V6 featuring variable intake timing, widely used in early GL models before turbo units replaced it.",
                 "fuel": "Petrol",
                 "size": "3.498 Litre",
@@ -879,6 +873,7 @@
               {
                 "code": "M273",
                 "title": "4.6L/5.5L Petrol",
+                "familyHeading": "M272 & M273 V-Series (2006-2012)",
                 "history": "A robust naturally aspirated V8 engineered for smooth cruising, later updated with direct injection technology.",
                 "fuel": "Petrol",
                 "size": "4.663 / 5.461 Litre",
@@ -898,6 +893,7 @@
               {
                 "code": "M276",
                 "title": "3.0L Petrol",
+                "familyHeading": "M276 & M278 V-Series (2012-2019)",
                 "history": "A hot-V twin-turbo V6 replacing larger V8s, delivering improved efficiency without sacrificing mid-range torque.",
                 "fuel": "Petrol",
                 "size": "2.996 Litre",
@@ -917,6 +913,7 @@
               {
                 "code": "M278",
                 "title": "4.7L Petrol",
+                "familyHeading": "M276 & M278 V-Series (2012-2019)",
                 "history": "A twin-turbo V8 developed for premium towing, featuring direct injection and cylinder-specific knock control.",
                 "fuel": "Petrol",
                 "size": "4.663 Litre",
@@ -936,6 +933,7 @@
               {
                 "code": "M157",
                 "title": "5.5L Petrol",
+                "familyHeading": "M157 & M177 AMG Biturbo Series (2012-Present)",
                 "history": "The original AMG V8 delivering brutal acceleration, featuring cross-bank exhaust manifolds and reinforced internals.",
                 "fuel": "Petrol",
                 "size": "5.461 Litre",
@@ -955,6 +953,7 @@
               {
                 "code": "M177",
                 "title": "4.0L Petrol",
+                "familyHeading": "M157 & M177 AMG Biturbo Series (2012-Present)",
                 "history": "A hand-built twin-turbo V8 offering AMG’s highest SUV performance, with advanced thermal management systems.",
                 "fuel": "Petrol",
                 "size": "3.982 Litre",
@@ -979,6 +978,7 @@
               {
                 "code": "M256",
                 "title": "3.0L MHEV Petrol",
+                "familyHeading": "MHEV Petrol Architecture (2019-Present)",
                 "history": "Mercedes flagship straight-six integrating a 48-volt system for seamless torque fill and improved fuel economy.",
                 "fuel": "MHEV Petrol",
                 "size": "2.999 Litre",
@@ -998,6 +998,7 @@
               {
                 "code": "M176",
                 "title": "4.0L MHEV Petrol",
+                "familyHeading": "MHEV Petrol Architecture (2019-Present)",
                 "history": "A de-tuned AMG V8 featuring cylinder deactivation and mild-hybrid assist for effortless grand touring comfort.",
                 "fuel": "MHEV Petrol",
                 "size": "3.982 Litre",
@@ -1049,6 +1050,8 @@
           "engines": [
             {
               "code": "OM642",
+              "title": "3.0L Diesel",
+              "familyHeading": "OM642 & OM629 Series (2006-2019)",
               "fuel": "Diesel",
               "size": "2.987L",
               "power": "249-265 hp",
@@ -1059,26 +1062,20 @@
             },
             {
               "code": "OM629",
+              "title": "4.0L Diesel",
+              "familyHeading": "OM642 & OM629 Series (2006-2019)",
               "fuel": "Diesel",
               "size": "3.996L",
               "power": "306 hp",
               "compatibleModels": "GL 420 CDI, GL 420 CDI 4MATIC",
-              "avgRebuiltPrice": "",
-              "cta": "",
+              "avgRebuiltPrice": "£4,800 - £7,500",
+              "cta": "Get quotes for OM629 Mercedes-Benz GLS engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "Piezo",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
-              "avgRebuiltPrice": "£4,800 - £7,500",
-              "cta": "Get quotes for OM629 Mercedes-Benz GLS engine replacement",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
               "code": "OM651",
+              "title": "2.1L Diesel",
+              "familyHeading": "OM651 & OM656 Series (2013-Present)",
               "fuel": "Diesel",
               "size": "2.143L",
               "power": "204 hp",
@@ -1089,6 +1086,8 @@
             },
             {
               "code": "OM656",
+              "title": "3.0L Diesel",
+              "familyHeading": "OM651 & OM656 Series (2013-Present)",
               "fuel": "Diesel",
               "size": "2.925L",
               "power": "286-367 hp",
@@ -1106,6 +1105,8 @@
           "engines": [
             {
               "code": "M272",
+              "title": "3.5L Petrol",
+              "familyHeading": "M272 & M273 V-Series (2006-2012)",
               "fuel": "Petrol",
               "size": "3.498L",
               "power": "272 hp",
@@ -1116,6 +1117,8 @@
             },
             {
               "code": "M273",
+              "title": "4.6L/5.5L Petrol",
+              "familyHeading": "M272 & M273 V-Series (2006-2012)",
               "fuel": "Petrol",
               "size": "4.663 / 5.461L",
               "power": "340-388 hp",
@@ -1126,6 +1129,8 @@
             },
             {
               "code": "M276",
+              "title": "3.0L Petrol",
+              "familyHeading": "M276 & M278 V-Series (2012-2019)",
               "fuel": "Petrol",
               "size": "2.996L",
               "power": "333-362 hp",
@@ -1136,6 +1141,8 @@
             },
             {
               "code": "M278",
+              "title": "4.7L Petrol",
+              "familyHeading": "M276 & M278 V-Series (2012-2019)",
               "fuel": "Petrol",
               "size": "4.663L",
               "power": "429-449 hp",
@@ -1146,6 +1153,8 @@
             },
             {
               "code": "M157",
+              "title": "5.5L Petrol",
+              "familyHeading": "M157 & M177 AMG Biturbo Series (2012-Present)",
               "fuel": "Petrol",
               "size": "5.461L",
               "power": "550-585 hp",
@@ -1156,6 +1165,8 @@
             },
             {
               "code": "M177",
+              "title": "4.0L Petrol",
+              "familyHeading": "M157 & M177 AMG Biturbo Series (2012-Present)",
               "fuel": "Petrol",
               "size": "3.982L",
               "power": "557-612 hp",
@@ -1173,6 +1184,8 @@
           "engines": [
             {
               "code": "M256",
+              "title": "3.0L MHEV Petrol",
+              "familyHeading": "MHEV Petrol Architecture (2019-Present)",
               "fuel": "MHEV Petrol",
               "size": "2.999L",
               "power": "362-367 hp",
@@ -1183,6 +1196,8 @@
             },
             {
               "code": "M176",
+              "title": "4.0L MHEV Petrol",
+              "familyHeading": "MHEV Petrol Architecture (2019-Present)",
               "fuel": "MHEV Petrol",
               "size": "3.982L",
               "power": "489 hp",
@@ -1713,6 +1728,11 @@
           "title": "Mercedes-Benz GLS Diesel Engines",
           "description": "Diesel power dominates UK GLS replacements, spanning the robust OM642 V6, modern OM656 straight-six, and entry-level OM651 four-cylinder across all three generations.",
           "descriptor": "Diesel power dominates UK GLS replacements, spanning the robust OM642 V6, modern OM656 straight-six, and entry-level OM651 four-cylinder across all three generations.",
+          "familiesLabel": "Common Mercedes-Benz GLS Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "OM642 - 3.0L V6 workhorse (GLS 350d), oil cooler seal and timing chain wear",
             "OM656 - 3.0L straight-six (GLS 400d), sequential turbos, AdBlue system complexity",
@@ -1745,6 +1765,11 @@
           "title": "Mercedes-Benz GLS Petrol Engines",
           "description": "Petrol GLS engines prioritise smooth refinement and performance, from naturally aspirated V6/V8 units to twin-turbo AMG powertrains and modern electrified straight-six designs.",
           "descriptor": "Petrol GLS engines prioritise smooth refinement and performance, from naturally aspirated V6/V8 units to twin-turbo AMG powertrains and modern electrified straight-six designs.",
+          "familiesLabel": "Common Mercedes-Benz GLS Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "M276 - 3.0L twin-turbo V6 (GLS 400), VANOS solenoid wear, timing chain tensioner",
             "M278 - 4.7L twin-turbo V8 (GLS 500), strong torque, turbo oil feed line concerns",
@@ -1777,6 +1802,11 @@
           "title": "Mercedes-Benz GLS Mild Hybrid (MHEV) Engines",
           "description": "Modern X167 GLS models feature 48-volt mild-hybrid technology, combining petrol efficiency with electric torque assist for seamless performance and reduced emissions.",
           "descriptor": "Modern X167 GLS models feature 48-volt mild-hybrid technology, combining petrol efficiency with electric torque assist for seamless performance and reduced emissions.",
+          "familiesLabel": "Mercedes-Benz GLS MHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "M256 - 3.0L straight-six petrol (GLS 450), integrated starter-generator",
             "M176 - 4.0L V8 petrol (GLS 580), cylinder deactivation with electric assist",

@@ -15,13 +15,13 @@
     "canonical": "/ford/ecosport"
   },
   "assets": {
-    "heroBg": "/images/brands/ford/models/ford-ford-ecosport-model-card.png",
+    "heroBg": "/images/brands/ford/models/ford-ecosport-model-card.png",
     "howItWorksBg": "/images/brands/ford/brand/ford-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/ford/brand/ford-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/ford/brand/ford-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/ford/brand/ford-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/ford/brand/ford-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/ford/models/ford-ford-ecosport-model-card.png"
+    "ctaImage": "/images/brands/ford/models/ford-ecosport-model-card.png"
   },
   "sections": {
     "hero": {
@@ -734,8 +734,9 @@
             "name": "Petrol Engines",
             "entries": [
               {
-                "code": "M1JC / M1JJ / M1JU - 1.",
-                "title": "0L Petrol",
+                "code": "M1JC / M1JJ / M1JU",
+                "title": "1.0L Petrol",
+                "familyHeading": "1.0 EcoBoost Series (2013-2023)",
                 "history": "Ford's award-winning three-cylinder turbocharged EcoBoost that became the most popular engine in the EcoSport range, but plagued by wet belt design flaws.",
                 "fuel": "Petrol",
                 "size": "1.0 Litre (998cc)",
@@ -754,8 +755,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "YYJF - 1.",
-                "title": "0L Petrol",
+                "code": "YYJF",
+                "title": "1.0L Petrol",
+                "familyHeading": "1.0 EcoBoost Series (2013-2023)",
                 "history": "Higher-output 140PS version of the 1.0 EcoBoost, introduced in 2016 as a performance option for Titanium and ST-Line trims.",
                 "fuel": "Petrol",
                 "size": "1.0 Litre (998cc)",
@@ -774,8 +776,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "YJIF - 1.",
-                "title": "0L Petrol",
+                "code": "YJIF",
+                "title": "1.0L Petrol",
+                "familyHeading": "1.0 EcoBoost Chain-Driven Series (2019-2023)",
                 "history": "The revised post-2019 1.0 EcoBoost that replaced the problematic wet timing belt with a timing chain for camshafts, though the oil pump retained a wet belt.",
                 "fuel": "Petrol",
                 "size": "1.0 Litre (998cc)",
@@ -794,8 +797,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "UEJB / UEJE - 1.",
-                "title": "5L Petrol",
+                "code": "UEJB / UEJE",
+                "title": "1.5L Petrol",
+                "familyHeading": "1.5 Ti-VCT Petrol Engines (2013-2017)",
                 "history": "Naturally aspirated four-cylinder Duratec-derived engine offered as a lower-cost alternative to the turbocharged EcoBoost, known for better reliability.",
                 "fuel": "Petrol",
                 "size": "1.5 Litre (1498cc)",
@@ -814,8 +818,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "HXJD - 1.",
-                "title": "6L Petrol",
+                "code": "HXJD",
+                "title": "1.6L Petrol",
+                "familyHeading": "1.6 Ti-VCT Petrol Engines (2013-2017)",
                 "history": "Lower-output 90PS version of Ford's 1.6 Ti-VCT, primarily offered in entry-level trims for budget-conscious buyers.",
                 "fuel": "Petrol",
                 "size": "1.6 Litre (1596cc)",
@@ -834,8 +839,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "IQJB - 1.",
-                "title": "6L Petrol",
+                "code": "IQJB",
+                "title": "1.6L Petrol",
+                "familyHeading": "1.6 Ti-VCT Petrol Engines (2013-2017)",
                 "history": "Higher-output 122PS version of the 1.6 Ti-VCT, offering more power than the 1.5 Ti-VCT with comparable naturally aspirated reliability.",
                 "fuel": "Petrol",
                 "size": "1.6 Litre (1596cc)",
@@ -854,8 +860,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "C20HDEA - 2.",
-                "title": "0L Petrol",
+                "code": "C20HDEA",
+                "title": "2.0L Petrol",
+                "familyHeading": "2.0 Duratec Petrol (2013-2017)",
                 "history": "The only engine offered with all-wheel drive on the EcoSport, this naturally aspirated 2.0-litre Duratec was designed for 4x4 variants requiring extra low-end torque.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre (1999cc)",
@@ -879,8 +886,9 @@
             "name": "Diesel Engines",
             "entries": [
               {
-                "code": "UGJE - 1.",
-                "title": "5L Diesel",
+                "code": "UGJE",
+                "title": "1.5L Diesel",
+                "familyHeading": "1.5 TDCi Duratorq Series (2014-2017)",
                 "history": "Ford's 1.5-litre Duratorq turbodiesel introduced in 2014, offering strong fuel economy and torque for EcoSport buyers wanting diesel efficiency.",
                 "fuel": "Diesel",
                 "size": "1.5 Litre (1499cc)",
@@ -899,8 +907,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "XUJH - 1.",
-                "title": "5L Diesel",
+                "code": "XUJH",
+                "title": "1.5L Diesel",
+                "familyHeading": "1.5 TDCi Duratorq Series (2014-2017)",
                 "history": "Later refinement of the 1.5 Duratorq diesel, meeting stricter Euro emissions standards while maintaining the same power output.",
                 "fuel": "Diesel",
                 "size": "1.5 Litre (1499cc)",
@@ -919,8 +928,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "XVJD - 1.",
-                "title": "5L Diesel",
+                "code": "XVJD",
+                "title": "1.5L Diesel",
+                "familyHeading": "1.5 EcoBlue Series (2017-2020)",
                 "history": "Ford's next-generation EcoBlue diesel introduced in 2017, featuring selective catalytic reduction (SCR) with AdBlue for Euro 6 compliance and improved efficiency.",
                 "fuel": "Diesel",
                 "size": "1.5 Litre (1499cc)",
@@ -939,8 +949,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "ZTJA - 1.",
-                "title": "5L Diesel",
+                "code": "ZTJA",
+                "title": "1.5L Diesel",
+                "familyHeading": "1.5 EcoBlue Series (2017-2020)",
                 "history": "Euro 6-compliant EcoBlue variant fitted to facelift EcoSport models, sharing architecture with XVJD but with different ECU calibration.",
                 "fuel": "Diesel",
                 "size": "1.5 Litre (1499cc)",
@@ -956,6 +967,27 @@
                 ],
                 "avgRebuiltPrice": "£1,400 - £2,900",
                 "cta": "Get quotes for ZTJA Ford EcoSport engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+              },
+              {
+                "code": "F6JC(RA)",
+                "title": "1.4L Diesel",
+                "familyHeading": "1.4 TDCi (Early Models - International Markets)",
+                "history": "Early 1.4-litre TDCi engine fitted to first-generation EcoSport models (pre-UK mainstream launch), primarily in European and South American markets.",
+                "fuel": "Diesel",
+                "size": "1.4 Litre (1399cc)",
+                "power": "68 hp (50 kW)",
+                "years": "2003-2007",
+                "compatibleVariants": [
+                  "Early pre-UK market EcoSport 1.4 TDCi variants"
+                ],
+                "commonFailures": [
+                  "Injection pump failure",
+                  "Turbocharger oil seal leakage",
+                  "Timing belt tensioner failure"
+                ],
+                "avgRebuiltPrice": "£800 - £1,600",
+                "cta": "Get quotes for F6JC Ford EcoSport engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               }
             ]
@@ -991,7 +1023,9 @@
           "failureNote": "Main replacement demand comes from timing-chain, cooling-system and performance thermal-management faults.",
           "engines": [
             {
-              "code": "M1JC / M1JJ / M1JU - 1.",
+              "code": "M1JC / M1JJ / M1JU",
+              "title": "1.0L Petrol",
+              "familyHeading": "1.0 EcoBoost Series (2013-2023)",
               "fuel": "Petrol",
               "size": "1.0L (998cc)",
               "power": "125 hp (92 kW)",
@@ -1001,7 +1035,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "YYJF - 1.",
+              "code": "YYJF",
+              "title": "1.0L Petrol",
+              "familyHeading": "1.0 EcoBoost Series (2013-2023)",
               "fuel": "Petrol",
               "size": "1.0L (998cc)",
               "power": "140 hp (103 kW)",
@@ -1011,7 +1047,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "YJIF - 1.",
+              "code": "YJIF",
+              "title": "1.0L Petrol",
+              "familyHeading": "1.0 EcoBoost Chain-Driven Series (2019-2023)",
               "fuel": "Petrol",
               "size": "1.0L (998cc)",
               "power": "125-140 hp (92-103 kW)",
@@ -1021,7 +1059,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "UEJB / UEJE - 1.",
+              "code": "UEJB / UEJE",
+              "title": "1.5L Petrol",
+              "familyHeading": "1.5 Ti-VCT Petrol Engines (2013-2017)",
               "fuel": "Petrol",
               "size": "1.5L (1498cc)",
               "power": "110-112 hp (81-82 kW)",
@@ -1031,7 +1071,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "HXJD - 1.",
+              "code": "HXJD",
+              "title": "1.6L Petrol",
+              "familyHeading": "1.6 Ti-VCT Petrol Engines (2013-2017)",
               "fuel": "Petrol",
               "size": "1.6L (1596cc)",
               "power": "90 hp (66 kW)",
@@ -1041,7 +1083,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "IQJB - 1.",
+              "code": "IQJB",
+              "title": "1.6L Petrol",
+              "familyHeading": "1.6 Ti-VCT Petrol Engines (2013-2017)",
               "fuel": "Petrol",
               "size": "1.6L (1596cc)",
               "power": "122 hp (90 kW)",
@@ -1051,7 +1095,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "C20HDEA - 2.",
+              "code": "C20HDEA",
+              "title": "2.0L Petrol",
+              "familyHeading": "2.0 Duratec Petrol (2013-2017)",
               "fuel": "Petrol",
               "size": "2.0L (1999cc)",
               "power": "138-140 hp (101-103 kW)",
@@ -1068,7 +1114,9 @@
           "failureNote": "Main replacement triggers are timing chain wear, EGR / cooling faults and turbo-control issues.",
           "engines": [
             {
-              "code": "UGJE - 1.",
+              "code": "UGJE",
+              "title": "1.5L Diesel",
+              "familyHeading": "1.5 TDCi Duratorq Series (2014-2017)",
               "fuel": "Diesel",
               "size": "1.5L (1499cc)",
               "power": "90 hp (66 kW)",
@@ -1078,7 +1126,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "XUJH - 1.",
+              "code": "XUJH",
+              "title": "1.5L Diesel",
+              "familyHeading": "1.5 TDCi Duratorq Series (2014-2017)",
               "fuel": "Diesel",
               "size": "1.5L (1499cc)",
               "power": "90 hp (66 kW)",
@@ -1088,7 +1138,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "XVJD - 1.",
+              "code": "XVJD",
+              "title": "1.5L Diesel",
+              "familyHeading": "1.5 EcoBlue Series (2017-2020)",
               "fuel": "Diesel",
               "size": "1.5L (1499cc)",
               "power": "95 hp (70 kW)",
@@ -1098,13 +1150,27 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "ZTJA - 1.",
+              "code": "ZTJA",
+              "title": "1.5L Diesel",
+              "familyHeading": "1.5 EcoBlue Series (2017-2020)",
               "fuel": "Diesel",
               "size": "1.5L (1499cc)",
               "power": "95 hp (70 kW)",
               "compatibleModels": "Titanium, ST-Line, Active (2017-2023 1.5 EcoBlue variants)",
               "avgRebuiltPrice": "£1,400 - £2,900",
               "cta": "Get quotes for ZTJA Ford EcoSport engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+            },
+            {
+              "code": "F6JC(RA)",
+              "title": "1.4L Diesel",
+              "familyHeading": "1.4 TDCi (Early Models - International Markets)",
+              "fuel": "Diesel",
+              "size": "1.4L (1399cc)",
+              "power": "68 hp (50 kW)",
+              "compatibleModels": "Early pre-UK market EcoSport 1.4 TDCi variants",
+              "avgRebuiltPrice": "£800 - £1,600",
+              "cta": "Get quotes for F6JC Ford EcoSport engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             }
           ]
@@ -1562,6 +1628,11 @@
           "title": "Ford EcoSport Diesel Engines",
           "description": "Diesel power arrived with the 1.5 TDCi Duratorq in 2014, later replaced by the cleaner 1.5 EcoBlue after the 2017 facelift - but neither dominates replacement volumes like the petrol EcoBoost.",
           "descriptor": "Diesel power arrived with the 1.5 TDCi Duratorq in 2014, later replaced by the cleaner 1.5 EcoBlue after the 2017 facelift - but neither dominates replacement volumes like the petrol EcoBoost.",
+          "familiesLabel": "Common Ford EcoSport Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "UGJE - 1.5 TDCi 90PS, main diesel from 2014-2017, injector failure common",
             "XVJD - 1.5 EcoBlue 95PS, post-2017 facelift, AdBlue system issues",
@@ -1592,6 +1663,11 @@
           "title": "Ford EcoSport Petrol Engines",
           "description": "Petrol powers the vast majority of UK EcoSport replacements, with the 1.0 EcoBoost dominating both sales and failure enquiries - the wet belt crisis has made this the most searched engine in the range.",
           "descriptor": "Petrol powers the vast majority of UK EcoSport replacements, with the 1.0 EcoBoost dominating both sales and failure enquiries - the wet belt crisis has made this the most searched engine in the range.",
+          "familiesLabel": "Common Ford EcoSport Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "M1JC/M1JJ/M1JU - 1.0 EcoBoost 125PS, wet belt, highest replacement volume",
             "YYJF - 1.0 EcoBoost 140PS performance version, same wet belt weakness",
@@ -1625,6 +1701,11 @@
           "title": "Ford EcoSport Hybrid / Electrified Engines",
           "description": "Ford never offered a hybrid, plug-in hybrid, or fully electric version of the EcoSport in the UK market.",
           "descriptor": "Ford never offered a hybrid, plug-in hybrid, or fully electric version of the EcoSport in the UK market.",
+          "familiesLabel": "Common Ford EcoSport Hybrid / Electrified Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [],
           "foundIn": [
             "Not applicable"

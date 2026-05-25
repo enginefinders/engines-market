@@ -15,13 +15,13 @@
     "canonical": "/ford/tracer"
   },
   "assets": {
-    "heroBg": "/images/brands/ford/models/ford-ford-tracer-model-card.png",
+    "heroBg": "/images/brands/ford/models/ford-tracer-model-card.png",
     "howItWorksBg": "/images/brands/ford/brand/ford-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/ford/brand/ford-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/ford/brand/ford-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/ford/brand/ford-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/ford/brand/ford-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/ford/models/ford-ford-tracer-model-card.png"
+    "ctaImage": "/images/brands/ford/models/ford-tracer-model-card.png"
   },
   "sections": {
     "hero": {
@@ -694,8 +694,30 @@
             "name": "Petrol Engines",
             "entries": [
               {
-                "code": "ZM / ZE - 1.",
-                "title": "6L Petrol",
+                "code": "BP (BP-ZE)",
+                "title": "1.8L Petrol",
+                "familyHeading": "BP Series - 1.8L Performance Engine (1994-2001)",
+                "history": "Mazda-sourced DOHC 16-valve unit powering the GLXi flagship. Delivers 116 PS and remains the most desirable Tracer engine for performance and tunability.",
+                "fuel": "Petrol",
+                "size": "1.8 Litre (1840cc)",
+                "power": "116-130 PS (depending on market/tune)",
+                "years": "1994-2001",
+                "compatibleVariants": [
+                  "1.8 GLXi, 1.8 GLXi Special Edition, 1.8 Sedan, 1.8 Hatchback"
+                ],
+                "commonFailures": [
+                  "Head gasket failure due to overheating (cooling system neglect)",
+                  "Camshaft position sensor failure on facelift (1998-2001) models causing crank/no-start",
+                  "Age-related oil leaks from rocker cover and rear main seal"
+                ],
+                "avgRebuiltPrice": "£850 - £1,250",
+                "cta": "Get quotes for BP Ford Tracer engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              },
+              {
+                "code": "ZM / ZE",
+                "title": "1.6L Petrol",
+                "familyHeading": "ZM Series - 1.6L Mid-Range Engine (1994-2001)",
                 "history": "The most common Tracer engine in UK import markets. Shares architecture with Mazda B-series and Ford Laser, offering 90 PS with reasonable economy and parts availability.",
                 "fuel": "Petrol",
                 "size": "1.6 Litre (1598cc)",
@@ -714,8 +736,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "B3 / B5 / B3E / B5E - 1.",
-                "title": "3L Petrol",
+                "code": "B3 / B5 / B3E / B5E",
+                "title": "1.3L Petrol",
+                "familyHeading": "B3/B5 Series - 1.3L Entry Engine (1994-2001)",
                 "history": "SOHC 8-valve entry-level unit producing 73 PS. Simple, reliable, and economical, but underpowered for UK motorway use. Rarest engine in the UK import market.",
                 "fuel": "Petrol",
                 "size": "1.3 Litre (1324cc)",
@@ -765,7 +788,21 @@
           "failureNote": "Main replacement demand comes from timing-chain, cooling-system and performance thermal-management faults.",
           "engines": [
             {
-              "code": "ZM / ZE - 1.",
+              "code": "BP (BP-ZE)",
+              "title": "1.8L Petrol",
+              "familyHeading": "BP Series - 1.8L Performance Engine (1994-2001)",
+              "fuel": "Petrol",
+              "size": "1.8L (1840cc)",
+              "power": "116-130 PS (depending on market/tune)",
+              "compatibleModels": "1.8 GLXi, 1.8 GLXi Special Edition, 1.8 Sedan, 1.8 Hatchback",
+              "avgRebuiltPrice": "£850 - £1,250",
+              "cta": "Get quotes for BP Ford Tracer engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            },
+            {
+              "code": "ZM / ZE",
+              "title": "1.6L Petrol",
+              "familyHeading": "ZM Series - 1.6L Mid-Range Engine (1994-2001)",
               "fuel": "Petrol",
               "size": "1.6L (1598cc)",
               "power": "88-90 PS",
@@ -775,7 +812,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "B3 / B5 / B3E / B5E - 1.",
+              "code": "B3 / B5 / B3E / B5E",
+              "title": "1.3L Petrol",
+              "familyHeading": "B3/B5 Series - 1.3L Entry Engine (1994-2001)",
               "fuel": "Petrol",
               "size": "1.3L (1324cc)",
               "power": "73 PS",
@@ -1140,6 +1179,11 @@
           "title": "Ford Tracer Petrol Engines",
           "description": "The Ford Tracer was offered exclusively with petrol engines across its entire 1994-2001 production run, with three displacements ranging from economical 1.3L to performance-oriented 1.8L units.",
           "descriptor": "The Ford Tracer was offered exclusively with petrol engines across its entire 1994-2001 production run, with three displacements ranging from economical 1.3L to performance-oriented 1.8L units.",
+          "familiesLabel": "Common Ford Tracer Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "BP - 1.8L DOHC 16-valve, flagship GLXi engine, 116 PS, most desirable for performance",
             "ZM/ZE - 1.6L DOHC 16-valve, most common UK import engine, 88-90 PS, shared with Mazda 323",

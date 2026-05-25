@@ -15,13 +15,13 @@
     "canonical": "/bmw/z-series"
   },
   "assets": {
-    "heroBg": "/images/brands/bmw/models/bmw-bmw-z-series-model-card.png",
+    "heroBg": "/images/brands/bmw/models/bmw-z-series-model-card.png",
     "howItWorksBg": "/images/brands/bmw/brand/bmw-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/bmw/brand/bmw-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/bmw/brand/bmw-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/bmw/brand/bmw-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/bmw/brand/bmw-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/bmw/models/bmw-bmw-z-series-model-card.png"
+    "ctaImage": "/images/brands/bmw/models/bmw-z-series-model-card.png"
   },
   "sections": {
     "hero": {
@@ -782,6 +782,7 @@
               {
                 "code": "M44B19",
                 "title": "1.9L Petrol",
+                "familyHeading": "Four-Cylinder Range (1996-2016)",
                 "history": "Debuting in 1996, this 1.9L unit brought double-VANOS tech to the Z3, balancing efficiency with reliable daily performance.",
                 "fuel": "Petrol",
                 "size": "1.9 Litre",
@@ -801,6 +802,7 @@
               {
                 "code": "N46B20",
                 "title": "2.0L Petrol",
+                "familyHeading": "Four-Cylinder Range (1996-2016)",
                 "history": "Launched in 2003 as the entry Z4 unit, featuring Valvetronic for improved throttle response and better fuel efficiency.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -821,6 +823,7 @@
               {
                 "code": "N20B20",
                 "title": "2.0L Petrol",
+                "familyHeading": "Four-Cylinder Range (1996-2016)",
                 "history": "A 2.0L turbocharged unit launched in 2011, delivering high torque and improved economy, though early timing guides required updates.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -841,6 +844,7 @@
               {
                 "code": "M52B28",
                 "title": "2.8L Petrol",
+                "familyHeading": "Straight-Six Naturally Aspirated (1997-2016)",
                 "history": "A cast-iron six-cylinder introduced in 1997, known for robust mid-range torque and reliable naturally aspirated performance.",
                 "fuel": "Petrol",
                 "size": "2.8 Litre",
@@ -860,6 +864,7 @@
               {
                 "code": "M54B25",
                 "title": "2.5L Petrol",
+                "familyHeading": "Straight-Six Naturally Aspirated (1997-2016)",
                 "history": "A refined 2.5L evolution from 2000, featuring an aluminium block and dual-VANOS for superior smoothness and throttle response.",
                 "fuel": "Petrol",
                 "size": "2.5 Litre",
@@ -880,6 +885,7 @@
               {
                 "code": "M54B30",
                 "title": "3.0L Petrol",
+                "familyHeading": "Straight-Six Naturally Aspirated (1997-2016)",
                 "history": "Benchmark 3.0L straight-six launched in 2000, delivering smooth power, reliable operation and strong tuning for Z3 and Z4.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -900,6 +906,7 @@
               {
                 "code": "N52B30",
                 "title": "3.0L Petrol",
+                "familyHeading": "Straight-Six Naturally Aspirated (1997-2016)",
                 "history": "BMW’s final NA straight-six, debuting in 2006 with aluminium-magnesium construction and advanced Valvetronic efficiency for Z4.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -920,6 +927,7 @@
               {
                 "code": "N53B30",
                 "title": "3.0L Petrol",
+                "familyHeading": "Straight-Six Naturally Aspirated (1997-2016)",
                 "history": "Direct-injection N52 evolution from 2007, offering sharper throttle response and tighter emissions compliance for European markets.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -940,6 +948,7 @@
               {
                 "code": "N54B30",
                 "title": "3.0L Petrol",
+                "familyHeading": "Straight-Six Turbocharged (2009-Present)",
                 "history": "BMW’s debut twin-turbo six from 2009, delivering massive boost response and high performance, though demanding rigorous maintenance.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -960,6 +969,7 @@
               {
                 "code": "B58B30",
                 "title": "3.0L Petrol",
+                "familyHeading": "Straight-Six Turbocharged (2009-Present)",
                 "history": "Introduced in 2018, this closed-deck turbo six features advanced cooling, delivering exceptional reliability and strong torque.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -980,6 +990,7 @@
               {
                 "code": "S54B32",
                 "title": "3.2L Petrol",
+                "familyHeading": "High-Performance M & V8 Units (1998-2003)",
                 "history": "A track-focused masterpiece from 2001, featuring individual throttle bodies, an 8,000rpm redline and exceptional durability.",
                 "fuel": "Petrol",
                 "size": "3.2 Litre",
@@ -1000,6 +1011,7 @@
               {
                 "code": "S62B50",
                 "title": "5.0L Petrol",
+                "familyHeading": "High-Performance M & V8 Units (1998-2003)",
                 "history": "A cross-plane V8 derived from the E39 M5, powering the exclusive Z8 with 400hp, dual-VANOS and a legendary exhaust note.",
                 "fuel": "Petrol",
                 "size": "5.0 Litre",
@@ -1050,6 +1062,8 @@
           "engines": [
             {
               "code": "M44B19",
+              "title": "1.9L Petrol",
+              "familyHeading": "Four-Cylinder Range (1996-2016)",
               "fuel": "Petrol",
               "size": "1.9L",
               "power": "118 hp",
@@ -1060,6 +1074,8 @@
             },
             {
               "code": "N46B20",
+              "title": "2.0L Petrol",
+              "familyHeading": "Four-Cylinder Range (1996-2016)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "150 hp",
@@ -1070,6 +1086,8 @@
             },
             {
               "code": "N20B20",
+              "title": "2.0L Petrol",
+              "familyHeading": "Four-Cylinder Range (1996-2016)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "184 hp",
@@ -1080,6 +1098,8 @@
             },
             {
               "code": "M52B28",
+              "title": "2.8L Petrol",
+              "familyHeading": "Straight-Six Naturally Aspirated (1997-2016)",
               "fuel": "Petrol",
               "size": "2.8L",
               "power": "193 hp",
@@ -1090,6 +1110,8 @@
             },
             {
               "code": "M54B25",
+              "title": "2.5L Petrol",
+              "familyHeading": "Straight-Six Naturally Aspirated (1997-2016)",
               "fuel": "Petrol",
               "size": "2.5L",
               "power": "192 hp",
@@ -1100,6 +1122,8 @@
             },
             {
               "code": "M54B30",
+              "title": "3.0L Petrol",
+              "familyHeading": "Straight-Six Naturally Aspirated (1997-2016)",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "231 hp",
@@ -1110,6 +1134,8 @@
             },
             {
               "code": "N52B30",
+              "title": "3.0L Petrol",
+              "familyHeading": "Straight-Six Naturally Aspirated (1997-2016)",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "218-265 hp",
@@ -1120,6 +1146,8 @@
             },
             {
               "code": "N53B30",
+              "title": "3.0L Petrol",
+              "familyHeading": "Straight-Six Naturally Aspirated (1997-2016)",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "218 hp",
@@ -1130,6 +1158,8 @@
             },
             {
               "code": "N54B30",
+              "title": "3.0L Petrol",
+              "familyHeading": "Straight-Six Turbocharged (2009-Present)",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "306-335 hp",
@@ -1140,6 +1170,8 @@
             },
             {
               "code": "B58B30",
+              "title": "3.0L Petrol",
+              "familyHeading": "Straight-Six Turbocharged (2009-Present)",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "340-382 hp",
@@ -1150,6 +1182,8 @@
             },
             {
               "code": "S54B32",
+              "title": "3.2L Petrol",
+              "familyHeading": "High-Performance M & V8 Units (1998-2003)",
               "fuel": "Petrol",
               "size": "3.2L",
               "power": "325-343 hp",
@@ -1160,6 +1194,8 @@
             },
             {
               "code": "S62B50",
+              "title": "5.0L Petrol",
+              "familyHeading": "High-Performance M & V8 Units (1998-2003)",
               "fuel": "Petrol",
               "size": "5.0L",
               "power": "400 hp",
@@ -1657,6 +1693,11 @@
           "title": "BMW Z Series Petrol Engines",
           "description": "The BMW Z Series has exclusively used petrol powertrains in the UK, spanning naturally aspirated inline-six classics to modern turbocharged units, with replacement demand concentrated on M54, N52, N54 and S54 engine families.",
           "descriptor": "The BMW Z Series has exclusively used petrol powertrains in the UK, spanning naturally aspirated inline-six classics to modern turbocharged units, with replacement demand concentrated on M54, N52, N54 and S54 engine families.",
+          "familiesLabel": "Common BMW Z Series Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "M44B19 - Z3 1.9i entry four-cylinder, reliable but aging cooling components",
             "M52B28 - Z3 2.8 classic straight-six, single-VANOS, expansion tank failures",

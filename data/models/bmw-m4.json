@@ -15,13 +15,13 @@
     "canonical": "/bmw/m4"
   },
   "assets": {
-    "heroBg": "/images/brands/bmw/models/bmw-bmw-m4-model-card.png",
+    "heroBg": "/images/brands/bmw/models/bmw-m4-model-card.png",
     "howItWorksBg": "/images/brands/bmw/brand/bmw-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/bmw/brand/bmw-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/bmw/brand/bmw-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/bmw/brand/bmw-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/bmw/brand/bmw-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/bmw/models/bmw-bmw-m4-model-card.png"
+    "ctaImage": "/images/brands/bmw/models/bmw-m4-model-card.png"
   },
   "sections": {
     "hero": {
@@ -691,6 +691,7 @@
               {
                 "code": "S55B30",
                 "title": "3.0 Litre Petrol",
+                "familyHeading": "S55 Series - Twin-Turbo Straight-Six (2014-2020)",
                 "history": "The S55 debuted with the F82/F83 M4, marking the M division’s definitive move from high-revving naturally aspirated V8s to force-fed straight-six efficiency without sacrificing power.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre (2,979 cc)",
@@ -711,6 +712,7 @@
               {
                 "code": "S55B30T0",
                 "title": "3.0 Litre Petrol",
+                "familyHeading": "S55 Series - Twin-Turbo Straight-Six (2014-2020)",
                 "history": "The ultimate evolution of the S55, reserved for the limited-run M4 GTS. It introduced water injection technology to cool the intake charge and produce a factory-rated 493 hp.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre (2,979 cc)",
@@ -731,6 +733,7 @@
               {
                 "code": "S58B30",
                 "title": "3.0 Litre Petrol",
+                "familyHeading": "S58 Series - Next-Generation Twin-Turbo Straight-Six (2021-Present)",
                 "history": "The S58 replaced the S55 with a closed-deck block, forged internals, and a pair of mono-scroll turbos. It immediately set a new benchmark for BMW M straight-six performance.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre (2,993 cc)",
@@ -751,6 +754,7 @@
               {
                 "code": "S58B30O0",
                 "title": "3.0 Litre Petrol",
+                "familyHeading": "S58 Series - Next-Generation Twin-Turbo Straight-Six (2021-Present)",
                 "history": "A subtle calibration variant of the base S58, primarily distinguished by software tuning adjustments for specific market model years.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre (2,993 cc)",
@@ -770,6 +774,7 @@
               {
                 "code": "S58B30T0",
                 "title": "3.0 Litre Petrol",
+                "familyHeading": "S58 Series - Next-Generation Twin-Turbo Straight-Six (2021-Present)",
                 "history": "The flagship S58, tuned to 550 hp for the lightweight, track-focused M4 CSL. It features unique engine management mapping and enhanced cooling.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre (2,993 cc)",
@@ -820,6 +825,8 @@
           "engines": [
             {
               "code": "S55B30",
+              "title": "3.0 Litre Petrol",
+              "familyHeading": "S55 Series - Twin-Turbo Straight-Six (2014-2020)",
               "fuel": "Petrol",
               "size": "3.0L (2,979 cc)",
               "power": "425-431 hp (standard); 444 hp (Competition); 454 hp (CS)",
@@ -830,6 +837,8 @@
             },
             {
               "code": "S55B30T0",
+              "title": "3.0 Litre Petrol",
+              "familyHeading": "S55 Series - Twin-Turbo Straight-Six (2014-2020)",
               "fuel": "Petrol",
               "size": "3.0L (2,979 cc)",
               "power": "493-500 hp (GTS)",
@@ -840,6 +849,8 @@
             },
             {
               "code": "S58B30",
+              "title": "3.0 Litre Petrol",
+              "familyHeading": "S58 Series - Next-Generation Twin-Turbo Straight-Six (2021-Present)",
               "fuel": "Petrol",
               "size": "3.0L (2,993 cc)",
               "power": "473 hp (standard, 2021-2024); 510 hp (Competition)",
@@ -850,6 +861,8 @@
             },
             {
               "code": "S58B30O0",
+              "title": "3.0 Litre Petrol",
+              "familyHeading": "S58 Series - Next-Generation Twin-Turbo Straight-Six (2021-Present)",
               "fuel": "Petrol",
               "size": "3.0L (2,993 cc)",
               "power": "473 hp",
@@ -860,6 +873,8 @@
             },
             {
               "code": "S58B30T0",
+              "title": "3.0 Litre Petrol",
+              "familyHeading": "S58 Series - Next-Generation Twin-Turbo Straight-Six (2021-Present)",
               "fuel": "Petrol",
               "size": "3.0L (2,993 cc)",
               "power": "550 hp (CSL); 543 hp (CS)",
@@ -1252,6 +1267,11 @@
           "title": "BMW M4 Petrol Engines",
           "description": "The M4 has always been pure petrol, with the S55 twin-turbo straight-six powering the F82/F83 generation (2014-2020) and the S58 closed-deck unit driving the G82/G83 (2021-present).",
           "descriptor": "The M4 has always been pure petrol, with the S55 twin-turbo straight-six powering the F82/F83 generation (2014-2020) and the S58 closed-deck unit driving the G82/G83 (2021-present).",
+          "familiesLabel": "Common BMW M4 Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "S55B30 - Core M4 engine (425-444hp), crank hub failure drives replacement demand",
             "S55B30T0 - GTS/CS high-output version (493hp), water injection on GTS",
@@ -1285,6 +1305,11 @@
           "title": "BMW M4 Mild Hybrid (MHEV) Engines",
           "description": "Select late-model G82 M4 Competition xDrive variants received a 48V mild hybrid system, integrated into the 8-speed automatic transmission for torque fill and smoother stop-start.",
           "descriptor": "Select late-model G82 M4 Competition xDrive variants received a 48V mild hybrid system, integrated into the 8-speed automatic transmission for torque fill and smoother stop-start.",
+          "familiesLabel": "BMW M4 MHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "S58B30 (48V version) - 510hp with integrated starter-generator",
             "8kW (11hp) electric motor replaces the conventional alternator",

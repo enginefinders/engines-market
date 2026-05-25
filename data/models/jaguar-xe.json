@@ -15,13 +15,13 @@
     "canonical": "/jaguar/xe"
   },
   "assets": {
-    "heroBg": "/images/brands/jaguar/models/jaguar-jaguar-xe-model-card.png",
+    "heroBg": "/images/brands/jaguar/models/jaguar-xe-model-card.png",
     "howItWorksBg": "/images/brands/jaguar/brand/jaguar-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/jaguar/brand/jaguar-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/jaguar/brand/jaguar-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/jaguar/brand/jaguar-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/jaguar/brand/jaguar-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/jaguar/models/jaguar-jaguar-xe-model-card.png"
+    "ctaImage": "/images/brands/jaguar/models/jaguar-xe-model-card.png"
   },
   "sections": {
     "hero": {
@@ -755,39 +755,75 @@
               {
                 "code": "AJ200D",
                 "title": "2.0L Diesel",
-                "history": "Post-2019 updated Ingenium diesel with mild-hybrid system, featuring revised timing components but still prone to EGR issues.",
-                "fuel": "Diesel MHEV",
+                "familyHeading": "Ingenium 2.0L Diesel Family (2015-2024)",
+                "history": "Jaguar's in-house Ingenium diesel, launched 2015 with modular design but plagued by timing chain and EGR issues.",
+                "fuel": "Diesel",
                 "size": "2.0 Litre",
-                "power": "163-204 hp",
-                "years": "2019-2024",
+                "power": "163-240 hp",
+                "years": "2015-2024",
                 "compatibleVariants": [
-                  "D165, D180, D240, D180 R-Dynamic, D240 Portfolio, D180 Prestige, D240 AWD",
-                  "D165, D165 Portfolio, D165 Prestige",
-                  "D180 MHEV, D200 MHEV, D180 R-Dynamic MHEV, D200 AWD MHEV"
+                  "D165, D180, D240, D180 R-Dynamic, D240 Portfolio, D180 Prestige, D240 AWD"
                 ],
                 "commonFailures": [
                   "Timing chain tensioner failure (40-80k miles)",
                   "EGR cooler cracking leading to coolant loss",
-                  "Oil dilution from incomplete DPF regeneration",
+                  "Oil dilution from incomplete DPF regeneration"
+                ],
+                "avgRebuiltPrice": "£3,200 - £6,200",
+                "cta": "Get quotes for AJ200D Jaguar XE engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+              },
+              {
+                "code": "204DTA",
+                "title": "2.0L Diesel",
+                "familyHeading": "Ingenium 2.0L Diesel Family (2015-2024)",
+                "history": "Lower-output Ingenium diesel code for D165 models, sharing the same vulnerable timing system as higher-power variants.",
+                "fuel": "Diesel",
+                "size": "2.0 Litre",
+                "power": "163 hp",
+                "years": "2015-2019",
+                "compatibleVariants": [
+                  "D165, D165 Portfolio, D165 Prestige"
+                ],
+                "commonFailures": [
                   "Timing chain wear and guide degradation (50-90k miles)",
                   "EGR valve sticking causing limp mode",
-                  "Turbo actuator failure on high-mileage units",
-                  "EGR cooler leakage causing white smoke"
+                  "Turbo actuator failure on high-mileage units"
                 ],
                 "avgRebuiltPrice": "£2,800 - £4,200",
                 "cta": "Get quotes for 204DTA Jaguar XE engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "Mild",
-                "title": "hybrid belt tensioner premature wear",
+                "code": "204DTD",
+                "title": "2.0L Diesel MHEV",
+                "familyHeading": "Ingenium 2.0L Diesel Family (2015-2024)",
+                "history": "Post-2019 updated Ingenium diesel with mild-hybrid system, featuring revised timing components but still prone to EGR issues.",
+                "fuel": "Diesel MHEV",
+                "size": "2.0 Litre",
+                "power": "163-204 hp",
+                "years": "2019-2024",
+                "compatibleVariants": [],
+                "commonFailures": [],
+                "avgRebuiltPrice": "",
+                "cta": "",
+                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+              },
+              {
+                "code": "D180",
+                "title": "MHEV, D200 MHEV, D180 R-Dynamic MHEV, D200 AWD MHEV",
+                "familyHeading": "Ingenium 2.0L Diesel Family (2015-2024)",
                 "history": "",
                 "fuel": "",
                 "size": "",
                 "power": "",
                 "years": "",
                 "compatibleVariants": [],
-                "commonFailures": [],
+                "commonFailures": [
+                  "EGR cooler leakage causing white smoke",
+                  "Mild-hybrid belt tensioner premature wear",
+                  "Timing chain guide degradation on early MHEV units"
+                ],
                 "avgRebuiltPrice": "£3,500 - £5,800",
                 "cta": "Get quotes for 204DTD Jaguar XE engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -800,6 +836,7 @@
               {
                 "code": "AJ200P",
                 "title": "2.0L Petrol",
+                "familyHeading": "Ingenium 2.0L Petrol Family (2015-2024)",
                 "history": "First-generation Ingenium petrol with aluminium block and twin-scroll turbo, known for timing tensioner and HPFP vulnerabilities.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -820,6 +857,7 @@
               {
                 "code": "AJ20P4",
                 "title": "2.0L Petrol High-Output",
+                "familyHeading": "Ingenium 2.0L Petrol Family (2015-2024)",
                 "history": "Updated Ingenium petrol with revised valve train and improved thermal management, used in P250/P300 facelift models.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -845,6 +883,7 @@
               {
                 "code": "AJ126",
                 "title": "3.0L V6 Supercharged Petrol",
+                "familyHeading": "Supercharged V6 & V8 Family (2015-2019)",
                 "history": "Jaguar's supercharged AJ126 V6, carried over from XF/XJ, delivering 380hp to the XE S with distinctive whine and strong mid-range torque.",
                 "fuel": "Petrol Supercharged",
                 "size": "3.0 Litre V6",
@@ -865,19 +904,37 @@
               {
                 "code": "AJ133",
                 "title": "5.0L V8 Supercharged Petrol",
+                "familyHeading": "Supercharged V6 & V8 Family (2015-2019)",
+                "history": "Hand-built AJ133 V8 exclusive to the limited-run SV Project 8, producing 600hp with motorsport-derived components and extreme performance.",
+                "fuel": "Petrol Supercharged",
+                "size": "5.0 Litre V8",
+                "power": "600 hp",
+                "years": "2017-2018",
+                "compatibleVariants": [
+                  "XE SV Project 8"
+                ],
+                "commonFailures": [
+                  "Supercharger rotor fatigue under track conditions",
+                  "Piston ring land failure from extreme boost pressures",
+                  "Coolant pipe cracking in high-heat scenarios"
+                ],
+                "avgRebuiltPrice": "£9,500 - £14,500",
+                "cta": "Get quotes for AJ133 Jaguar XE engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              },
+              {
+                "code": "508PN",
+                "title": "5.0L V8 Supercharged Petrol",
+                "familyHeading": "Supercharged V6 & V8 Family (2015-2019)",
                 "history": "Alternative factory designation for the 5.0L supercharged V8, sharing architecture with AJ133 but used in different calibration contexts.",
                 "fuel": "Petrol Supercharged",
                 "size": "5.0 Litre V8",
                 "power": "550-600 hp",
                 "years": "2017-2018",
                 "compatibleVariants": [
-                  "XE SV Project 8",
                   "XE SV Project 8 (export/calibration variants)"
                 ],
                 "commonFailures": [
-                  "Supercharger rotor fatigue under track conditions",
-                  "Piston ring land failure from extreme boost pressures",
-                  "Coolant pipe cracking in high-heat scenarios",
                   "Supercharger coupler wear identical to AJ133",
                   "Timing component stress under sustained high load",
                   "High-stress bearing wear in performance use"
@@ -920,16 +977,44 @@
           "engines": [
             {
               "code": "AJ200D",
-              "fuel": "Diesel MHEV",
+              "title": "2.0L Diesel",
+              "familyHeading": "Ingenium 2.0L Diesel Family (2015-2024)",
+              "fuel": "Diesel",
               "size": "2.0L",
-              "power": "163-204 hp",
-              "compatibleModels": "D165, D180, D240, D180 R-Dynamic, D240 Portfolio, D180 Prestige, D240 AWD, D165, D165 Portfolio, D165 Prestige, D180 MHEV, D200 MHEV, D180 R-Dynamic MHEV, D200 AWD MHEV",
+              "power": "163-240 hp",
+              "compatibleModels": "D165, D180, D240, D180 R-Dynamic, D240 Portfolio, D180 Prestige, D240 AWD",
+              "avgRebuiltPrice": "£3,200 - £6,200",
+              "cta": "Get quotes for AJ200D Jaguar XE engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+            },
+            {
+              "code": "204DTA",
+              "title": "2.0L Diesel",
+              "familyHeading": "Ingenium 2.0L Diesel Family (2015-2024)",
+              "fuel": "Diesel",
+              "size": "2.0L",
+              "power": "163 hp",
+              "compatibleModels": "D165, D165 Portfolio, D165 Prestige",
               "avgRebuiltPrice": "£2,800 - £4,200",
               "cta": "Get quotes for 204DTA Jaguar XE engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "Mild",
+              "code": "204DTD",
+              "title": "2.0L Diesel MHEV",
+              "familyHeading": "Ingenium 2.0L Diesel Family (2015-2024)",
+              "fuel": "Diesel MHEV",
+              "size": "2.0L",
+              "power": "163-204 hp",
+              "compatibleModels": "",
+              "avgRebuiltPrice": "",
+              "cta": "",
+              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+            },
+            {
+              "code": "D180",
+              "title": "MHEV, D200 MHEV, D180 R-Dynamic MHEV, D200 AWD MHEV",
+              "familyHeading": "Ingenium 2.0L Diesel Family (2015-2024)",
               "fuel": "",
               "size": "",
               "power": "",
@@ -947,6 +1032,8 @@
           "engines": [
             {
               "code": "AJ200P",
+              "title": "2.0L Petrol",
+              "familyHeading": "Ingenium 2.0L Petrol Family (2015-2024)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "200-250 hp",
@@ -957,6 +1044,8 @@
             },
             {
               "code": "AJ20P4",
+              "title": "2.0L Petrol High-Output",
+              "familyHeading": "Ingenium 2.0L Petrol Family (2015-2024)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "250-300 hp",
@@ -967,6 +1056,8 @@
             },
             {
               "code": "AJ126",
+              "title": "3.0L V6 Supercharged Petrol",
+              "familyHeading": "Supercharged V6 & V8 Family (2015-2019)",
               "fuel": "Petrol Supercharged",
               "size": "3.0L V6",
               "power": "380 hp",
@@ -977,10 +1068,24 @@
             },
             {
               "code": "AJ133",
+              "title": "5.0L V8 Supercharged Petrol",
+              "familyHeading": "Supercharged V6 & V8 Family (2015-2019)",
+              "fuel": "Petrol Supercharged",
+              "size": "5.0L V8",
+              "power": "600 hp",
+              "compatibleModels": "XE SV Project 8",
+              "avgRebuiltPrice": "£9,500 - £14,500",
+              "cta": "Get quotes for AJ133 Jaguar XE engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            },
+            {
+              "code": "508PN",
+              "title": "5.0L V8 Supercharged Petrol",
+              "familyHeading": "Supercharged V6 & V8 Family (2015-2019)",
               "fuel": "Petrol Supercharged",
               "size": "5.0L V8",
               "power": "550-600 hp",
-              "compatibleModels": "XE SV Project 8, XE SV Project 8 (export/calibration variants)",
+              "compatibleModels": "XE SV Project 8 (export/calibration variants)",
               "avgRebuiltPrice": "£9,500 - £14,500",
               "cta": "Get quotes for 508PN Jaguar XE engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1287,6 +1392,11 @@
           "title": "Jaguar XE Diesel Engines",
           "description": "The 2.0L Ingenium diesel dominates the XE lineup, offering strong low-end torque and high motorway efficiency, though pre-2019 timing chain revisions drive the highest replacement demand.",
           "descriptor": "The 2.0L Ingenium diesel dominates the XE lineup, offering strong low-end torque and high motorway efficiency, though pre-2019 timing chain revisions drive the highest replacement demand.",
+          "familiesLabel": "Common Jaguar XE Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "AJ200D - High-output D180/D240 variant prone to timing tensioner wear",
             "204DTA - Base D165 diesel sharing core architecture and chain risks",
@@ -1314,6 +1424,11 @@
           "title": "Jaguar XE Petrol Engines",
           "description": "Jaguar XE petrol variants span efficient 2.0L turbocharged units to the supercharged 3.0L V6, offering responsive performance with growing replacement interest as diesel concerns rise.",
           "descriptor": "Jaguar XE petrol variants span efficient 2.0L turbocharged units to the supercharged 3.0L V6, offering responsive performance with growing replacement interest as diesel concerns rise.",
+          "familiesLabel": "Common Jaguar XE Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "AJ200P - Early P200 petrol known for HPFP and tensioner wear",
             "AJ20P4 - High-output P300 unit featuring upgraded thermal management systems",
@@ -1341,6 +1456,11 @@
           "title": "Jaguar XE Mild Hybrid (MHEV) Engines",
           "description": "Introduced with the 2020 facelift, Jaguar’s 48-volt mild-hybrid system pairs with existing 2.0L engines to enable smoother stop-start, enhanced torque fill, and reduced emissions.",
           "descriptor": "Introduced with the 2020 facelift, Jaguar’s 48-volt mild-hybrid system pairs with existing 2.0L engines to enable smoother stop-start, enhanced torque fill, and reduced emissions.",
+          "familiesLabel": "Jaguar XE MHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "204DTD - Diesel MHEV variant featuring belt-integrated starter-generator for D180/D200",
             "AJ20P4 - Petrol MHEV unit combining direct injection with mild-electric assist",

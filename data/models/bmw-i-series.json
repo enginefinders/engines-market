@@ -15,13 +15,13 @@
     "canonical": "/bmw/i-series"
   },
   "assets": {
-    "heroBg": "/images/brands/bmw/models/bmw-bmw-i-series-model-card.png",
+    "heroBg": "/images/brands/bmw/models/bmw-i-series-model-card.png",
     "howItWorksBg": "/images/brands/bmw/brand/bmw-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/bmw/brand/bmw-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/bmw/brand/bmw-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/bmw/brand/bmw-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/bmw/brand/bmw-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/bmw/models/bmw-bmw-i-series-model-card.png"
+    "ctaImage": "/images/brands/bmw/models/bmw-i-series-model-card.png"
   },
   "sections": {
     "hero": {
@@ -723,6 +723,7 @@
               {
                 "code": "B38A15R",
                 "title": "0.6L Petrol (Range Extender)",
+                "familyHeading": "B38A15R Family (2014-2022)",
                 "history": "Derived from BMW C650 scooter platform, this 647cc two-cylinder unit charges the i3’s battery and never drives wheels directly .",
                 "fuel": "Petrol",
                 "size": "0.6 Litre",
@@ -743,6 +744,7 @@
               {
                 "code": "B38A15R-2",
                 "title": "0.6L Petrol (Range Extender)",
+                "familyHeading": "B38A15R Family (2014-2022)",
                 "history": "Updated range extender for the 94Ah i3, maintaining the same 647cc architecture with revised ECU calibration for improved generator reliability.",
                 "fuel": "Petrol",
                 "size": "0.6 Litre",
@@ -763,6 +765,7 @@
               {
                 "code": "B38A15R-3",
                 "title": "0.6L Petrol (Range Extender)",
+                "familyHeading": "B38A15R Family (2014-2022)",
                 "history": "Final production version of the range extender, fitted to 120Ah i3 models with updated emissions calibration.",
                 "fuel": "Petrol",
                 "size": "0.6 Litre",
@@ -788,6 +791,7 @@
               {
                 "code": "B38A15T0",
                 "title": "1.5L Petrol Hybrid",
+                "familyHeading": "B38A15T0 Family (2014-2020)",
                 "history": "Turbocharged 1.5L three-cylinder petrol engine paired with eDrive electric motor, producing combined 362hp in the pioneering i8 plug-in hybrid sports car.",
                 "fuel": "Plug-in Hybrid (Petrol + Electric)",
                 "size": "1.5 Litre",
@@ -808,6 +812,7 @@
               {
                 "code": "B38A15T0-2",
                 "title": "1.5L Petrol Hybrid (Facelift)",
+                "familyHeading": "B38A15T0 Family (2014-2020)",
                 "history": "Revised version for the i8 facelift, increasing combined output to 374hp with improved hybrid system calibration.",
                 "fuel": "Plug-in Hybrid (Petrol + Electric)",
                 "size": "1.5 Litre",
@@ -833,6 +838,7 @@
               {
                 "code": "EM100",
                 "title": "Electric Drive Unit (60Ah)",
+                "familyHeading": "EM Series Electric Drive Units (2013-2025)",
                 "history": "First-generation BMW i electric motor producing 170hp, fitted to the launch edition i3 pure electric.",
                 "fuel": "Electric",
                 "size": "",
@@ -853,6 +859,7 @@
               {
                 "code": "EM100-2",
                 "title": "Electric Drive Unit (94Ah)",
+                "familyHeading": "EM Series Electric Drive Units (2013-2025)",
                 "history": "Enhanced drive unit for the 94Ah i3 with revised bearing specifications to address early wear concerns.",
                 "fuel": "Electric",
                 "size": "",
@@ -873,6 +880,7 @@
               {
                 "code": "EM200",
                 "title": "Electric Drive Unit (120Ah)",
+                "familyHeading": "EM Series Electric Drive Units (2013-2025)",
                 "history": "Final i3 drive unit with 120Ah high-capacity battery and reinforced rotor assembly.",
                 "fuel": "Electric",
                 "size": "",
@@ -893,6 +901,7 @@
               {
                 "code": "EM200-2",
                 "title": "Electric Drive Unit (i4 eDrive40)",
+                "familyHeading": "EM Series Electric Drive Units (2013-2025)",
                 "history": "Fifth-generation BMW eDrive unit powering the i4 eDrive40, delivering 340hp from a single rear-mounted motor.",
                 "fuel": "Electric",
                 "size": "",
@@ -913,6 +922,7 @@
               {
                 "code": "EM200-3",
                 "title": "Electric Drive Unit (i4 M50)",
+                "familyHeading": "EM Series Electric Drive Units (2013-2025)",
                 "history": "Dual-motor performance drive unit for the i4 M50, producing 544hp with xDrive all-wheel drive and M Performance calibration.",
                 "fuel": "Electric",
                 "size": "",
@@ -933,6 +943,7 @@
               {
                 "code": "EM200-4",
                 "title": "Electric Drive Unit (iX3)",
+                "familyHeading": "EM Series Electric Drive Units (2013-2025)",
                 "history": "SUV-tuned eDrive unit for the iX3, BMW’s first all-electric Sports Activity Vehicle.",
                 "fuel": "Electric",
                 "size": "",
@@ -953,6 +964,7 @@
               {
                 "code": "EM300",
                 "title": "Electric Drive Unit (iX xDrive40)",
+                "familyHeading": "EM Series Electric Drive Units (2013-2025)",
                 "history": "Dual-motor entry-level drive unit for the iX electric flagship SUV.",
                 "fuel": "Electric",
                 "size": "",
@@ -973,6 +985,7 @@
               {
                 "code": "EM300-2",
                 "title": "Electric Drive Unit (iX xDrive50)",
+                "familyHeading": "EM Series Electric Drive Units (2013-2025)",
                 "history": "High-capacity dual-motor drive unit for the iX xDrive50, producing 523hp from 105kWh battery.",
                 "fuel": "Electric",
                 "size": "",
@@ -1024,6 +1037,8 @@
           "engines": [
             {
               "code": "B38A15R",
+              "title": "0.6L Petrol (Range Extender)",
+              "familyHeading": "B38A15R Family (2014-2022)",
               "fuel": "Petrol",
               "size": "0.6L",
               "power": "34 hp",
@@ -1034,6 +1049,8 @@
             },
             {
               "code": "B38A15R-2",
+              "title": "0.6L Petrol (Range Extender)",
+              "familyHeading": "B38A15R Family (2014-2022)",
               "fuel": "Petrol",
               "size": "0.6L",
               "power": "34 hp",
@@ -1044,6 +1061,8 @@
             },
             {
               "code": "B38A15R-3",
+              "title": "0.6L Petrol (Range Extender)",
+              "familyHeading": "B38A15R Family (2014-2022)",
               "fuel": "Petrol",
               "size": "0.6L",
               "power": "34 hp",
@@ -1054,6 +1073,8 @@
             },
             {
               "code": "EM100",
+              "title": "Electric Drive Unit (60Ah)",
+              "familyHeading": "EM Series Electric Drive Units (2013-2025)",
               "fuel": "Electric",
               "size": "",
               "power": "170 hp",
@@ -1064,6 +1085,8 @@
             },
             {
               "code": "EM100-2",
+              "title": "Electric Drive Unit (94Ah)",
+              "familyHeading": "EM Series Electric Drive Units (2013-2025)",
               "fuel": "Electric",
               "size": "",
               "power": "170 hp",
@@ -1074,6 +1097,8 @@
             },
             {
               "code": "EM200",
+              "title": "Electric Drive Unit (120Ah)",
+              "familyHeading": "EM Series Electric Drive Units (2013-2025)",
               "fuel": "Electric",
               "size": "",
               "power": "170 hp",
@@ -1084,6 +1109,8 @@
             },
             {
               "code": "EM200-2",
+              "title": "Electric Drive Unit (i4 eDrive40)",
+              "familyHeading": "EM Series Electric Drive Units (2013-2025)",
               "fuel": "Electric",
               "size": "",
               "power": "340 hp",
@@ -1094,6 +1121,8 @@
             },
             {
               "code": "EM200-3",
+              "title": "Electric Drive Unit (i4 M50)",
+              "familyHeading": "EM Series Electric Drive Units (2013-2025)",
               "fuel": "Electric",
               "size": "",
               "power": "544 hp",
@@ -1104,6 +1133,8 @@
             },
             {
               "code": "EM200-4",
+              "title": "Electric Drive Unit (iX3)",
+              "familyHeading": "EM Series Electric Drive Units (2013-2025)",
               "fuel": "Electric",
               "size": "",
               "power": "286 hp",
@@ -1114,6 +1145,8 @@
             },
             {
               "code": "EM300",
+              "title": "Electric Drive Unit (iX xDrive40)",
+              "familyHeading": "EM Series Electric Drive Units (2013-2025)",
               "fuel": "Electric",
               "size": "",
               "power": "326 hp",
@@ -1124,6 +1157,8 @@
             },
             {
               "code": "EM300-2",
+              "title": "Electric Drive Unit (iX xDrive50)",
+              "familyHeading": "EM Series Electric Drive Units (2013-2025)",
               "fuel": "Electric",
               "size": "",
               "power": "523 hp",
@@ -1141,6 +1176,8 @@
           "engines": [
             {
               "code": "B38A15T0",
+              "title": "1.5L Petrol Hybrid",
+              "familyHeading": "B38A15T0 Family (2014-2020)",
               "fuel": "Plug-in Hybrid (Petrol + Electric)",
               "size": "1.5L",
               "power": "362 hp (combined)",
@@ -1151,6 +1188,8 @@
             },
             {
               "code": "B38A15T0-2",
+              "title": "1.5L Petrol Hybrid (Facelift)",
+              "familyHeading": "B38A15T0 Family (2014-2020)",
               "fuel": "Plug-in Hybrid (Petrol + Electric)",
               "size": "1.5L",
               "power": "374 hp (combined)",
@@ -1672,6 +1711,11 @@
           "title": "BMW i Series Petrol Engines",
           "description": "Petrol engines in the i Series appear exclusively as range extender units in the i3 and as the rear-mounted turbo three-cylinder in the i8 plug-in hybrid - no pure petrol i Series exists.",
           "descriptor": "Petrol engines in the i Series appear exclusively as range extender units in the i3 and as the rear-mounted turbo three-cylinder in the i8 plug-in hybrid - no pure petrol i Series exists.",
+          "familiesLabel": "Common BMW i Series Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "B38A15R - 647cc two-cylinder range extender generator (i3 REx 60Ah to 120Ah)",
             "B38A15T0 - 1.5L turbo three-cylinder hybrid engine (i8 Coupe, 2014-2018)",
@@ -1703,6 +1747,11 @@
           "title": "BMW i Series Electric (BEV) Drive Units",
           "description": "Pure electric drive units power most i Series models - from the pioneering i3 to the i4 sedan and iX flagship - all using BMW's eDrive technology.",
           "descriptor": "Pure electric drive units power most i Series models - from the pioneering i3 to the i4 sedan and iX flagship - all using BMW's eDrive technology.",
+          "familiesLabel": "Common BMW i Series Electric Motor Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Electric Models",
+          "notesLabel": "",
           "families": [
             "EM100 - first-generation 170hp unit (i3 60Ah, 2013-2016)",
             "EM100-2 - revised 94Ah unit with upgraded bearings (i3 94Ah, 2016-2018)",
@@ -1738,6 +1787,11 @@
           "title": "BMW i Series Plug-in Hybrid (PHEV) Engines",
           "description": "The i8 pairs BMW's B38 turbo petrol engine with an eDrive electric motor, delivering supercar performance with EV-only urban capability.",
           "descriptor": "The i8 pairs BMW's B38 turbo petrol engine with an eDrive electric motor, delivering supercar performance with EV-only urban capability.",
+          "familiesLabel": "Common BMW i Series Plug-in Hybrid Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "B38A15T0 - 1.5L turbo three-cylinder + 96kW front motor (i8 Coupe, 362hp combined)",
             "B38A15T0-2 - updated calibration with 374hp combined (i8 Facelift, i8 Roadster)",
@@ -1765,6 +1819,11 @@
           "title": "BMW i Series Range Extender (REx) Petrol Generators",
           "description": "The i3 REx uses a 647cc two-cylinder petrol engine purely as a generator - it never drives the wheels, only charges the battery when depleted.",
           "descriptor": "The i3 REx uses a 647cc two-cylinder petrol engine purely as a generator - it never drives the wheels, only charges the battery when depleted.",
+          "familiesLabel": "Common BMW i Series Range Extender Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "B38A15R - first-generation 34hp generator (i3 REx 60Ah, 2014-2016)",
             "B38A15R-2 - updated with revised calibration (i3 REx 94Ah, 2016-2018)",

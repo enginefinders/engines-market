@@ -15,13 +15,13 @@
     "canonical": "/mercedes-benz/clk"
   },
   "assets": {
-    "heroBg": "/images/brands/mercedes-benz/models/mercedes-benz-mercedes-benz-clk-model-card.png",
+    "heroBg": "/images/brands/mercedes-benz/models/mercedes-benz-clk-model-card.png",
     "howItWorksBg": "/images/brands/mercedes-benz/brand/mercedes-benz-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/mercedes-benz/models/mercedes-benz-mercedes-benz-clk-model-card.png"
+    "ctaImage": "/images/brands/mercedes-benz/models/mercedes-benz-clk-model-card.png"
   },
   "sections": {
     "hero": {
@@ -767,6 +767,7 @@
               {
                 "code": "OM642",
                 "title": "3.0L Diesel",
+                "familyHeading": "OM642 V6 Diesel (2005-2010)",
                 "history": "Mercedes-Benz 3.0-litre V6 turbodiesel introduced in 2005. Renowned for its smooth power delivery but plagued by oil cooler seal failures that require extensive labour to repair.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -786,6 +787,7 @@
               {
                 "code": "OM646",
                 "title": "2.1L Diesel",
+                "familyHeading": "OM646 Inline-4 Diesel (2005-2010)",
                 "history": "The 2.1-litre four-cylinder turbodiesel that powered entry-level CLK diesel variants. A robust engine when maintained, but injector seals are a known weak point in higher-mileage units.",
                 "fuel": "Diesel",
                 "size": "2.1 Litre",
@@ -805,6 +807,7 @@
               {
                 "code": "OM612",
                 "title": "2.7L Diesel",
+                "familyHeading": "OM612 Inline-5 Diesel (2002-2005)",
                 "history": "The five-cylinder turbodiesel that delivered exceptional torque and reliability in early C209 CLKs. A cult favourite among diesel enthusiasts despite its age.",
                 "fuel": "Diesel",
                 "size": "2.7 Litre",
@@ -829,6 +832,7 @@
               {
                 "code": "M272",
                 "title": "3.5L Petrol",
+                "familyHeading": "M272 V6 Petrol (2005-2009)",
                 "history": "The 3.5-litre V6 introduced in the CLK350 facelift. Delivers 272hp but is infamous for the balance shaft sprocket failure that defined an era of Mercedes V6 ownership .",
                 "fuel": "Petrol",
                 "size": "3.5 Litre",
@@ -849,6 +853,7 @@
               {
                 "code": "M272",
                 "title": "3.0L Petrol",
+                "familyHeading": "M272 V6 Petrol (2005-2009)",
                 "history": "The 3.0-litre version of the M272 V8 family, powering the CLK280. Shares the balance shaft vulnerability of its larger sibling but remains a popular replacement choice.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -869,6 +874,7 @@
               {
                 "code": "M112",
                 "title": "3.2L Petrol",
+                "familyHeading": "M112 V6 Petrol (1997-2005)",
                 "history": "The bulletproof 3.2-litre V6 that powered pre-facelift CLK320 models. One of Mercedes’ most reliable V6 engines, still sought after by buyers avoiding M272 balance shaft issues.",
                 "fuel": "Petrol",
                 "size": "3.2 Litre",
@@ -888,6 +894,7 @@
               {
                 "code": "M112",
                 "title": "2.6L Petrol",
+                "familyHeading": "M112 V6 Petrol (1997-2005)",
                 "history": "The 2.6-litre entry-level V6 for C209 CLK240 buyers wanting six-cylinder smoothness without the running costs of the 3.2-litre unit.",
                 "fuel": "Petrol",
                 "size": "2.6 Litre",
@@ -907,6 +914,7 @@
               {
                 "code": "M271",
                 "title": "1.8L Petrol",
+                "familyHeading": "M271 Inline-4 Kompressor (2002-2009)",
                 "history": "The 1.8-litre supercharged four-cylinder that made CLK200 Kompressor ownership accessible. Timing chain and camshaft adjuster issues are the main replacement drivers in high-mileage examples.",
                 "fuel": "Petrol",
                 "size": "1.8 Litre",
@@ -927,6 +935,7 @@
               {
                 "code": "M111",
                 "title": "2.3L Petrol",
+                "familyHeading": "M111 Inline-4 Kompressor (1997-2002)",
                 "history": "The supercharged 2.3-litre four-cylinder that powered the early CLK230 Kompressor. A robust engine with fewer electronic complications than later M271 units.",
                 "fuel": "Petrol",
                 "size": "2.3 Litre",
@@ -946,6 +955,7 @@
               {
                 "code": "M113",
                 "title": "5.4L Petrol",
+                "familyHeading": "M113 V8 Petrol (1998-2006)",
                 "history": "The 5.4-litre V8 that powered the CLK55 AMG - a naturally aspirated legend known for brutal torque and surprising reliability.",
                 "fuel": "Petrol",
                 "size": "5.4 Litre",
@@ -965,6 +975,7 @@
               {
                 "code": "M113",
                 "title": "5.0L Petrol",
+                "familyHeading": "M113 V8 Petrol (1998-2006)",
                 "history": "The 5.0-litre V8 that brought AMG-rivalling performance to standard CLK500 models without the maintenance premium of full AMG ownership.",
                 "fuel": "Petrol",
                 "size": "5.0 Litre",
@@ -984,6 +995,7 @@
               {
                 "code": "M113",
                 "title": "4.3L Petrol",
+                "familyHeading": "M113 V8 Petrol (1998-2006)",
                 "history": "The 4.3-litre V8 that powered the CLK430 in C208 generation, offering V8 prestige at a more accessible price point than the full-fat AMG.",
                 "fuel": "Petrol",
                 "size": "4.3 Litre",
@@ -1003,6 +1015,7 @@
               {
                 "code": "M156",
                 "title": "6.2L Petrol",
+                "familyHeading": "M156 V8 AMG (2006-2009)",
                 "history": "Mercedes-AMG’s first fully in-house developed V8. 6.2 litres of naturally aspirated fury producing 481hp. A modern classic that demands specialist attention.",
                 "fuel": "Petrol",
                 "size": "6.2 Litre",
@@ -1054,6 +1067,8 @@
           "engines": [
             {
               "code": "OM642",
+              "title": "3.0L Diesel",
+              "familyHeading": "OM642 V6 Diesel (2005-2010)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "224 hp",
@@ -1064,6 +1079,8 @@
             },
             {
               "code": "OM646",
+              "title": "2.1L Diesel",
+              "familyHeading": "OM646 Inline-4 Diesel (2005-2010)",
               "fuel": "Diesel",
               "size": "2.1L",
               "power": "150 hp",
@@ -1074,6 +1091,8 @@
             },
             {
               "code": "OM612",
+              "title": "2.7L Diesel",
+              "familyHeading": "OM612 Inline-5 Diesel (2002-2005)",
               "fuel": "Diesel",
               "size": "2.7L",
               "power": "170 hp",
@@ -1091,6 +1110,8 @@
           "engines": [
             {
               "code": "M272",
+              "title": "3.5L Petrol",
+              "familyHeading": "M272 V6 Petrol (2005-2009)",
               "fuel": "Petrol",
               "size": "3.5L",
               "power": "272 hp",
@@ -1101,6 +1122,8 @@
             },
             {
               "code": "M272",
+              "title": "3.0L Petrol",
+              "familyHeading": "M272 V6 Petrol (2005-2009)",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "231 hp",
@@ -1111,6 +1134,8 @@
             },
             {
               "code": "M112",
+              "title": "3.2L Petrol",
+              "familyHeading": "M112 V6 Petrol (1997-2005)",
               "fuel": "Petrol",
               "size": "3.2L",
               "power": "218 hp",
@@ -1121,6 +1146,8 @@
             },
             {
               "code": "M112",
+              "title": "2.6L Petrol",
+              "familyHeading": "M112 V6 Petrol (1997-2005)",
               "fuel": "Petrol",
               "size": "2.6L",
               "power": "170 hp",
@@ -1131,6 +1158,8 @@
             },
             {
               "code": "M271",
+              "title": "1.8L Petrol",
+              "familyHeading": "M271 Inline-4 Kompressor (2002-2009)",
               "fuel": "Petrol",
               "size": "1.8L",
               "power": "163 hp",
@@ -1141,6 +1170,8 @@
             },
             {
               "code": "M111",
+              "title": "2.3L Petrol",
+              "familyHeading": "M111 Inline-4 Kompressor (1997-2002)",
               "fuel": "Petrol",
               "size": "2.3L",
               "power": "193 hp",
@@ -1151,6 +1182,8 @@
             },
             {
               "code": "M113",
+              "title": "5.4L Petrol",
+              "familyHeading": "M113 V8 Petrol (1998-2006)",
               "fuel": "Petrol",
               "size": "5.4L",
               "power": "367 hp",
@@ -1161,6 +1194,8 @@
             },
             {
               "code": "M113",
+              "title": "5.0L Petrol",
+              "familyHeading": "M113 V8 Petrol (1998-2006)",
               "fuel": "Petrol",
               "size": "5.0L",
               "power": "306 hp",
@@ -1171,6 +1206,8 @@
             },
             {
               "code": "M113",
+              "title": "4.3L Petrol",
+              "familyHeading": "M113 V8 Petrol (1998-2006)",
               "fuel": "Petrol",
               "size": "4.3L",
               "power": "279 hp",
@@ -1181,6 +1218,8 @@
             },
             {
               "code": "M156",
+              "title": "6.2L Petrol",
+              "familyHeading": "M156 V8 AMG (2006-2009)",
               "fuel": "Petrol",
               "size": "6.2L",
               "power": "481 hp (CLK63 AMG), 500 hp (Black Series)",
@@ -1748,6 +1787,11 @@
           "title": "Mercedes Benz CLK Diesel Engines",
           "description": "Diesel power arrived with the C209 generation in 2002 and ran through to 2010, with the OM642 V6 in the CLK320 CDI becoming the most sought-after oil-burner for its effortless torque and motorway refinement.",
           "descriptor": "Diesel power arrived with the C209 generation in 2002 and ran through to 2010, with the OM642 V6 in the CLK320 CDI becoming the most sought-after oil-burner for its effortless torque and motorway refinement.",
+          "familiesLabel": "Common Mercedes Benz CLK Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "OM642 - 3.0 V6 turbodiesel, CLK320 CDI, known for oil cooler seal failures",
             "OM646 - 2.1 four-cylinder, CLK220 CDI, reliable but injector seals leak",
@@ -1774,6 +1818,11 @@
           "title": "Mercedes Benz CLK Petrol Engines",
           "description": "The CLK’s petrol range spans four-cylinder Kompressor units, smooth V6s from the M112 and M272 families, and thunderous V8s in CLK500 and AMG guises - covering everything from economy to 500bhp hero cars.",
           "descriptor": "The CLK’s petrol range spans four-cylinder Kompressor units, smooth V6s from the M112 and M272 families, and thunderous V8s in CLK500 and AMG guises - covering everything from economy to 500bhp hero cars.",
+          "familiesLabel": "Common Mercedes Benz CLK Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "M272 - 3.0 and 3.5 V6, CLK280/CLK350, infamous for balance shaft failure",
             "M112 - 2.6 and 3.2 V6, CLK240/CLK320, bulletproof pre-facelift units",
@@ -1813,6 +1862,11 @@
           "title": "Mercedes Benz CLK Hybrid / Electrified Engines",
           "description": "",
           "descriptor": "",
+          "familiesLabel": "Common Mercedes Benz CLK Hybrid / Electrified Engine Families",
+          "foundInLabel": "",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [],
           "foundIn": [],
           "knownFor": [],

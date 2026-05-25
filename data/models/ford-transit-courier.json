@@ -15,13 +15,13 @@
     "canonical": "/ford/transit-courier"
   },
   "assets": {
-    "heroBg": "/images/brands/ford/models/ford-ford-transit-courier-model-card.png",
+    "heroBg": "/images/brands/ford/models/ford-transit-courier-model-card.png",
     "howItWorksBg": "/images/brands/ford/brand/ford-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/ford/brand/ford-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/ford/brand/ford-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/ford/brand/ford-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/ford/brand/ford-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/ford/models/ford-ford-transit-courier-model-card.png"
+    "ctaImage": "/images/brands/ford/models/ford-transit-courier-model-card.png"
   },
   "sections": {
     "hero": {
@@ -714,8 +714,9 @@
             "name": "Diesel Engines",
             "entries": [
               {
-                "code": "UGJC / UGCA / UGCB / XUCC / XUCD - 1.",
-                "title": "5L Diesel",
+                "code": "UGJC / UGCA / UGCB / XUCC / XUCD",
+                "title": "1.5L Diesel",
+                "familyHeading": "1.5 TDCi Duratorq Diesel Engine Family (2014-2023)",
                 "history": "The entry-level 75hp diesel unit that powered the majority of UK fleet Transit Couriers from launch, offering genuine 70mpg economy for urban deliveries.",
                 "fuel": "Diesel",
                 "size": "1.5 Litre",
@@ -733,8 +734,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "XVCA / XVCB / XVCC - 1.",
-                "title": "5L Diesel",
+                "code": "XVCA / XVCB / XVCC",
+                "title": "1.5L Diesel",
+                "familyHeading": "1.5 TDCi Duratorq Diesel Engine Family (2014-2023)",
                 "history": "The higher-tuned 95hp version of the 1.5 TDCi, introduced in 2015 to give Courier owners greater motorway cruising ability without sacrificing the platform's renowned fuel economy.",
                 "fuel": "Diesel",
                 "size": "1.5 Litre",
@@ -753,8 +755,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "XXCA / XXCC - 1.",
-                "title": "5L Diesel",
+                "code": "XXCA / XXCC",
+                "title": "1.5L Diesel",
+                "familyHeading": "1.5 TDCi Duratorq Diesel Engine Family (2014-2023)",
                 "history": "The most powerful factory tune of the 1.5 TDCi, delivering 100hp for late-model Mk1 Courier vans requiring extra torque for heavier payloads.",
                 "fuel": "Diesel",
                 "size": "1.5 Litre",
@@ -772,8 +775,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "XWCA / XWCB - 1.",
-                "title": "5L Diesel",
+                "code": "XWCA / XWCB",
+                "title": "1.5L Diesel",
+                "familyHeading": "1.5 TDCi Duratorq Diesel Engine Family (2014-2023)",
                 "history": "A late-production 1.5 TDCi variant introduced around 2018, representing the final evolution of the Duratorq diesel in the Mk1 Courier before the Mk2 platform arrived.",
                 "fuel": "Diesel",
                 "size": "1.5 Litre",
@@ -791,8 +795,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "T3CA / T3CB - 1.",
-                "title": "6L Diesel",
+                "code": "T3CA / T3CB",
+                "title": "1.6L Diesel",
+                "familyHeading": "1.6 TDCi Duratorq Engine Family (2014-2017)",
                 "history": "The pre-Euro 6 1.6 TDCi carried over from earlier Ford van platforms, offering proven mechanical simplicity before AdBlue complications arrived on later diesel units.",
                 "fuel": "Diesel",
                 "size": "1.6 Litre",
@@ -815,8 +820,9 @@
             "name": "Petrol Engines",
             "entries": [
               {
-                "code": "SFCA / SFCB - 1.",
-                "title": "0L Petrol",
+                "code": "SFCA / SFCB",
+                "title": "1.0L Petrol",
+                "familyHeading": "1.0 EcoBoost Petrol Engine Family (2014-2023)",
                 "history": "The award-winning three-cylinder EcoBoost that brought petrol car-like refinement to the Courier range, popular with urban delivery fleets avoiding diesel emissions charges.",
                 "fuel": "Petrol",
                 "size": "1.0 Litre",
@@ -835,8 +841,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "SFCE / SFCF - 1.",
-                "title": "0L Petrol",
+                "code": "SFCE / SFCF",
+                "title": "1.0L Petrol",
+                "familyHeading": "1.0 EcoBoost Petrol Engine Family (2014-2023)",
                 "history": "The late-model 1.0 EcoBoost with revised oil pump and belt tensioner design, fitted to final Mk1 and early Mk2 Courier vans from 2018 onward.",
                 "fuel": "Petrol",
                 "size": "1.0 Litre",
@@ -859,8 +866,9 @@
             "name": "Hybrid / Electrified Engines",
             "entries": [
               {
-                "code": "SFCE / SFCF - 1.",
-                "title": "0L Petrol MHEV",
+                "code": "SFCE / SFCF",
+                "title": "1.0L Petrol MHEV",
+                "familyHeading": "1.0 EcoBoost Mild Hybrid (MHEV) (2023-present)",
                 "history": "The Mk2 Courier introduced 48V mild hybrid assistance to the 1.0 EcoBoost, improving low-end torque and reducing fuel consumption for urban stop-start duty cycles.",
                 "fuel": "Petrol MHEV",
                 "size": "1.0 Litre",
@@ -877,8 +885,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "XVCE / XVCF - 1.",
-                "title": "5L Diesel",
+                "code": "XVCE / XVCF",
+                "title": "1.5L Diesel",
+                "familyHeading": "1.5 EcoBlue Diesel (2023-present)",
                 "history": "The Mk2 Courier's updated EcoBlue diesel, designed to meet stricter Euro 6d emissions standards while maintaining the fuel economy that made the Courier a fleet favourite.",
                 "fuel": "Diesel",
                 "size": "1.5 Litre",
@@ -928,7 +937,9 @@
           "failureNote": "Main replacement triggers are timing chain wear, EGR / cooling faults and turbo-control issues.",
           "engines": [
             {
-              "code": "UGJC / UGCA / UGCB / XUCC / XUCD - 1.",
+              "code": "UGJC / UGCA / UGCB / XUCC / XUCD",
+              "title": "1.5L Diesel",
+              "familyHeading": "1.5 TDCi Duratorq Diesel Engine Family (2014-2023)",
               "fuel": "Diesel",
               "size": "1.5L",
               "power": "75 hp",
@@ -938,7 +949,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "XVCA / XVCB / XVCC - 1.",
+              "code": "XVCA / XVCB / XVCC",
+              "title": "1.5L Diesel",
+              "familyHeading": "1.5 TDCi Duratorq Diesel Engine Family (2014-2023)",
               "fuel": "Diesel",
               "size": "1.5L",
               "power": "95 hp",
@@ -948,7 +961,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "XXCA / XXCC - 1.",
+              "code": "XXCA / XXCC",
+              "title": "1.5L Diesel",
+              "familyHeading": "1.5 TDCi Duratorq Diesel Engine Family (2014-2023)",
               "fuel": "Diesel",
               "size": "1.5L",
               "power": "100 hp",
@@ -958,7 +973,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "XWCA / XWCB - 1.",
+              "code": "XWCA / XWCB",
+              "title": "1.5L Diesel",
+              "familyHeading": "1.5 TDCi Duratorq Diesel Engine Family (2014-2023)",
               "fuel": "Diesel",
               "size": "1.5L",
               "power": "75-100 hp",
@@ -968,7 +985,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "T3CA / T3CB - 1.",
+              "code": "T3CA / T3CB",
+              "title": "1.6L Diesel",
+              "familyHeading": "1.6 TDCi Duratorq Engine Family (2014-2017)",
               "fuel": "Diesel",
               "size": "1.6L",
               "power": "95 hp",
@@ -985,7 +1004,9 @@
           "failureNote": "Main replacement demand comes from timing-chain, cooling-system and performance thermal-management faults.",
           "engines": [
             {
-              "code": "SFCA / SFCB - 1.",
+              "code": "SFCA / SFCB",
+              "title": "1.0L Petrol",
+              "familyHeading": "1.0 EcoBoost Petrol Engine Family (2014-2023)",
               "fuel": "Petrol",
               "size": "1.0L",
               "power": "100 hp",
@@ -995,7 +1016,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "SFCE / SFCF - 1.",
+              "code": "SFCE / SFCF",
+              "title": "1.0L Petrol",
+              "familyHeading": "1.0 EcoBoost Petrol Engine Family (2014-2023)",
               "fuel": "Petrol",
               "size": "1.0L",
               "power": "100 hp",
@@ -1012,7 +1035,9 @@
           "failureNote": "Main replacement demand comes from cooling, battery-support and high-voltage control faults.",
           "engines": [
             {
-              "code": "SFCE / SFCF - 1.",
+              "code": "SFCE / SFCF",
+              "title": "1.0L Petrol MHEV",
+              "familyHeading": "1.0 EcoBoost Mild Hybrid (MHEV) (2023-present)",
               "fuel": "Petrol MHEV",
               "size": "1.0L",
               "power": "125 hp",
@@ -1022,7 +1047,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "XVCE / XVCF - 1.",
+              "code": "XVCE / XVCF",
+              "title": "1.5L Diesel",
+              "familyHeading": "1.5 EcoBlue Diesel (2023-present)",
               "fuel": "Diesel",
               "size": "1.5L",
               "power": "100 hp",
@@ -1484,6 +1511,11 @@
           "title": "Ford Transit Courier Diesel Engines",
           "description": "Diesel dominated Courier sales from 2014 to 2023, with the 1.5 TDCi wet belt engine accounting for the vast majority of replacement enquiries across the Mk1 generation.",
           "descriptor": "Diesel dominated Courier sales from 2014 to 2023, with the 1.5 TDCi wet belt engine accounting for the vast majority of replacement enquiries across the Mk1 generation.",
+          "familiesLabel": "Common Ford Transit Courier Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "UGJC/UGCA/UGCB - 75hp entry-level 1.5 TDCi, base and Leader trims",
             "XVCA/XVCB/XVCC - 95hp 1.5 TDCi, most common Trend and Limited unit",
@@ -1513,6 +1545,11 @@
           "title": "Ford Transit Courier Petrol Engines",
           "description": "The award-winning 1.0 EcoBoost three-cylinder petrol arrived with the Mk1 Courier in 2014 and continues into the Mk2 generation, now with mild hybrid assistance.",
           "descriptor": "The award-winning 1.0 EcoBoost three-cylinder petrol arrived with the Mk1 Courier in 2014 and continues into the Mk2 generation, now with mild hybrid assistance.",
+          "familiesLabel": "Common Ford Transit Courier Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "SFCA/SFCB - 100hp 1.0 EcoBoost, Mk1 Courier 2014-2018",
             "SFCE/SFCF - 100hp late 1.0 EcoBoost, Mk1 Courier 2018-2023",
@@ -1541,6 +1578,11 @@
           "title": "Ford Transit Courier Mild Hybrid (MHEV) Engines",
           "description": "The Mk2 Courier introduced 48V mild hybrid assistance to the 1.0 EcoBoost from 2023 onward, improving low-end torque and urban fuel economy.",
           "descriptor": "The Mk2 Courier introduced 48V mild hybrid assistance to the 1.0 EcoBoost from 2023 onward, improving low-end torque and urban fuel economy.",
+          "familiesLabel": "Ford Transit Courier MHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "SFCE/SFCF - 125hp 1.0 EcoBoost with belt-integrated starter generator (BiSG)",
             "48V starter-generator recovers energy during braking and coasting",

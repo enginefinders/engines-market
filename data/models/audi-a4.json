@@ -15,13 +15,13 @@
     "canonical": "/audi/a4"
   },
   "assets": {
-    "heroBg": "/images/brands/audi/models/audi-audi-a4-model-card.png",
+    "heroBg": "/images/brands/audi/models/audi-a4-model-card.png",
     "howItWorksBg": "/images/brands/audi/brand/audi-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/audi/brand/audi-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/audi/brand/audi-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/audi/brand/audi-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/audi/brand/audi-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/audi/models/audi-audi-a4-model-card.png"
+    "ctaImage": "/images/brands/audi/models/audi-a4-model-card.png"
   },
   "sections": {
     "hero": {
@@ -716,6 +716,7 @@
               {
                 "code": "CAGA",
                 "title": "2.0L Diesel",
+                "familyHeading": "2.0 TDI Common Rail Family (2008-2023)",
                 "history": "B8 140hp common-rail diesel; A4 fleet favourite with strong torque but EGR/DPF sensitivity at high mileage.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -736,6 +737,7 @@
               {
                 "code": "CFFB",
                 "title": "2.0L Diesel",
+                "familyHeading": "2.0 TDI Common Rail Family (2008-2023)",
                 "history": "Updated 140hp B8 TDI with refined injection calibration; improved cold-start behaviour but retained EGR/DPF vulnerabilities.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -756,6 +758,7 @@
               {
                 "code": "CNHA",
                 "title": "2.0L Diesel",
+                "familyHeading": "2.0 TDI Common Rail Family (2008-2023)",
                 "history": "B9 190hp ultra-clean TDI with Euro 6 compliance; higher output but complex emissions hardware increases failure risk.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -776,6 +779,7 @@
               {
                 "code": "DEUA",
                 "title": "2.0L Diesel",
+                "familyHeading": "2.0 TDI Common Rail Family (2008-2023)",
                 "history": "B9 ultra-efficiency 150hp TDI; balanced power and economy but susceptible to DPF issues in low-mileage ownership.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -796,6 +800,7 @@
               {
                 "code": "CAHA",
                 "title": "2.0L Diesel",
+                "familyHeading": "2.0 TDI Common Rail Family (2008-2023)",
                 "history": "Higher-output 170hp B8 TDI for Sport/S line trims; robust block but timing chain tensioner requires attention on early units.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -816,6 +821,7 @@
               {
                 "code": "CLAB",
                 "title": "3.0L Diesel",
+                "familyHeading": "3.0 TDI V6 Family (2008-2015)",
                 "history": "B8 245hp V6 TDI flagship; smooth power and quattro compatibility but complex emissions hardware increases rebuild cost.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -836,6 +842,7 @@
               {
                 "code": "CCWA",
                 "title": "3.0L Diesel",
+                "familyHeading": "3.0 TDI V6 Family (2008-2015)",
                 "history": "Updated B8 late-production V6 TDI with refined calibration; improved reliability but retains complex emissions system costs.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -861,6 +868,7 @@
               {
                 "code": "CAEB",
                 "title": "2.0L Petrol",
+                "familyHeading": "2.0 TFSI EA888 Family (2008-2023)",
                 "history": "Early EA888 Gen 2 211hp TFSI; strong performance but pre-2012 timing chain tensioner design drives urgent replacement demand.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -881,6 +889,7 @@
               {
                 "code": "CYRB",
                 "title": "2.0L Petrol",
+                "familyHeading": "2.0 TFSI EA888 Family (2008-2023)",
                 "history": "EA888 Gen 3 252hp TFSI with revised chain system; improved reliability but oil consumption and carbon buildup remain concerns.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -901,6 +910,7 @@
               {
                 "code": "DKZA",
                 "title": "2.0L Petrol",
+                "familyHeading": "2.0 TFSI EA888 Family (2008-2023)",
                 "history": "Late B9 EA888 Gen 3B 245hp TFSI; refined calibration with mild-hybrid readiness but retains direct-injection carbon concerns.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -921,6 +931,7 @@
               {
                 "code": "CZDA",
                 "title": "1.4L Petrol",
+                "familyHeading": "1.4 TFSI Efficiency Family (2016-2019)",
                 "history": "Entry-level 150hp TFSI with cylinder deactivation; efficient daily driver but turbo and coolant system require monitoring.",
                 "fuel": "Petrol",
                 "size": "1.4 Litre",
@@ -946,6 +957,7 @@
               {
                 "code": "EA888 PHEV",
                 "title": "2.0L Plug-in Hybrid",
+                "familyHeading": "Plug-in Hybrid & Mild Hybrid (2020-2023)",
                 "history": "45 TFSI e combines EA888 Gen 3 with electric motor; complex integration requires specialist calibration for seamless hybrid operation.",
                 "fuel": "Plug-in Hybrid (Petrol/Electric)",
                 "size": "2.0 Litre",
@@ -956,22 +968,9 @@
                 ],
                 "commonFailures": [
                   "High-voltage battery coolant pump failure (40-70k miles)",
-                  "Hybrid system inverter communication faults"
+                  "Hybrid system inverter communication faults",
+                  "Petrol engine oil dilution from frequent electric-mode use"
                 ],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "Petrol engine oil dilution from frequent",
-                "title": "electric-mode use",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
                 "avgRebuiltPrice": "£2,800 - £6,200",
                 "cta": "Get quotes for EA888 PHEV Audi A4 engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -979,6 +978,7 @@
               {
                 "code": "DEUA MHEV",
                 "title": "2.0L Mild Hybrid Diesel",
+                "familyHeading": "Plug-in Hybrid & Mild Hybrid (2020-2023)",
                 "history": "40 TDI MHEV adds 12V belt-starter generator to ultra-efficient diesel; modest electrification aids stop-start but adds electrical complexity.",
                 "fuel": "Mild Hybrid Diesel (MHEV)",
                 "size": "2.0 Litre",
@@ -1031,6 +1031,8 @@
           "engines": [
             {
               "code": "CAGA",
+              "title": "2.0L Diesel",
+              "familyHeading": "2.0 TDI Common Rail Family (2008-2023)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "140-143 hp",
@@ -1041,6 +1043,8 @@
             },
             {
               "code": "CFFB",
+              "title": "2.0L Diesel",
+              "familyHeading": "2.0 TDI Common Rail Family (2008-2023)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "140-143 hp",
@@ -1051,6 +1055,8 @@
             },
             {
               "code": "CNHA",
+              "title": "2.0L Diesel",
+              "familyHeading": "2.0 TDI Common Rail Family (2008-2023)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "190 hp",
@@ -1061,6 +1067,8 @@
             },
             {
               "code": "DEUA",
+              "title": "2.0L Diesel",
+              "familyHeading": "2.0 TDI Common Rail Family (2008-2023)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "150 hp",
@@ -1071,6 +1079,8 @@
             },
             {
               "code": "CAHA",
+              "title": "2.0L Diesel",
+              "familyHeading": "2.0 TDI Common Rail Family (2008-2023)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "170 hp",
@@ -1081,6 +1091,8 @@
             },
             {
               "code": "CLAB",
+              "title": "3.0L Diesel",
+              "familyHeading": "3.0 TDI V6 Family (2008-2015)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "245 hp",
@@ -1091,6 +1103,8 @@
             },
             {
               "code": "CCWA",
+              "title": "3.0L Diesel",
+              "familyHeading": "3.0 TDI V6 Family (2008-2015)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "245 hp",
@@ -1108,6 +1122,8 @@
           "engines": [
             {
               "code": "CAEB",
+              "title": "2.0L Petrol",
+              "familyHeading": "2.0 TFSI EA888 Family (2008-2023)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "211 hp",
@@ -1118,6 +1134,8 @@
             },
             {
               "code": "CYRB",
+              "title": "2.0L Petrol",
+              "familyHeading": "2.0 TFSI EA888 Family (2008-2023)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "252 hp",
@@ -1128,6 +1146,8 @@
             },
             {
               "code": "DKZA",
+              "title": "2.0L Petrol",
+              "familyHeading": "2.0 TFSI EA888 Family (2008-2023)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "245 hp",
@@ -1138,6 +1158,8 @@
             },
             {
               "code": "CZDA",
+              "title": "1.4L Petrol",
+              "familyHeading": "1.4 TFSI Efficiency Family (2016-2019)",
               "fuel": "Petrol",
               "size": "1.4L",
               "power": "150 hp",
@@ -1155,26 +1177,20 @@
           "engines": [
             {
               "code": "EA888 PHEV",
+              "title": "2.0L Plug-in Hybrid",
+              "familyHeading": "Plug-in Hybrid & Mild Hybrid (2020-2023)",
               "fuel": "Plug-in Hybrid (Petrol/Electric)",
               "size": "2.0L",
               "power": "299 hp combined",
               "compatibleModels": "45 TFSI e S line, 45 TFSI e Vorsprung, Avant 45 TFSI e quattro S line",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "Petrol engine oil dilution from frequent",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
               "avgRebuiltPrice": "£2,800 - £6,200",
               "cta": "Get quotes for EA888 PHEV Audi A4 engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
               "code": "DEUA MHEV",
+              "title": "2.0L Mild Hybrid Diesel",
+              "familyHeading": "Plug-in Hybrid & Mild Hybrid (2020-2023)",
               "fuel": "Mild Hybrid Diesel (MHEV)",
               "size": "2.0L",
               "power": "204 hp combined",
@@ -1608,6 +1624,11 @@
           "title": "Audi A4 Diesel Engines",
           "description": "The 2.0L and 3.0L TDI common‑rail diesels dominate Audi A4 replacement enquiries across B8 and B9 generations, prized for motorway efficiency but prone to EGR, DPF and emissions‑system failures at higher mileage.",
           "descriptor": "The 2.0L and 3.0L TDI common‑rail diesels dominate Audi A4 replacement enquiries across B8 and B9 generations, prized for motorway efficiency but prone to EGR, DPF and emissions‑system failures at higher mileage.",
+          "familiesLabel": "Common Audi A4 Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "CAGA/CFFB - 140hp 2.0 TDI (B8 SE/Sport), high‑volume fleet engines with EGR cooler vulnerability",
             "CAHA/CNHA - 170‑190hp 2.0 TDI (B8/B9 Sport/S line), refined output but DPF regeneration sensitivity",
@@ -1639,6 +1660,11 @@
           "title": "Audi A4 Petrol Engines",
           "description": "The 1.4L and 2.0L TFSI petrol engines power entry‑level to performance‑focused A4 variants, offering responsive acceleration but requiring attention to timing chain, oil consumption and direct‑injection carbon buildup.",
           "descriptor": "The 1.4L and 2.0L TFSI petrol engines power entry‑level to performance‑focused A4 variants, offering responsive acceleration but requiring attention to timing chain, oil consumption and direct‑injection carbon buildup.",
+          "familiesLabel": "Common Audi A4 Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "CZDA - 150hp 1.4 TFSI (B9 35 TFSI), efficiency‑focused entry unit with cylinder‑on‑demand technology",
             "CAEB - 211hp 2.0 TFSI (B8 early), EA888 Gen 2 with pre‑2012 timing chain tensioner vulnerability",
@@ -1669,6 +1695,11 @@
           "title": "Audi A4 Mild Hybrid (MHEV) Engines",
           "description": "B9‑facelift A4 variants introduced 12‑volt mild‑hybrid technology to improve stop‑start smoothness and marginal fuel economy, retaining conventional TDI/TFSI cores with added electrical complexity.",
           "descriptor": "B9‑facelift A4 variants introduced 12‑volt mild‑hybrid technology to improve stop‑start smoothness and marginal fuel economy, retaining conventional TDI/TFSI cores with added electrical complexity.",
+          "familiesLabel": "Audi A4 MHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "DEUA MHEV - 150hp 2.0 TDI with belt‑starter generator (40 TDI MHEV)",
             "DKZA MHEV - 245hp 2.0 TFSI with 12V system (40 TFSI MHEV)",
@@ -1693,6 +1724,11 @@
           "title": "Audi A4 Plug‑in Hybrid (PHEV) Engines",
           "description": "The 45 TFSI e combines a 2.0L TFSI petrol engine with a high‑voltage electric motor and battery pack, delivering low‑emission electric‑only commuting with petrol backup for longer journeys.",
           "descriptor": "The 45 TFSI e combines a 2.0L TFSI petrol engine with a high‑voltage electric motor and battery pack, delivering low‑emission electric‑only commuting with petrol backup for longer journeys.",
+          "familiesLabel": "Audi A4 PHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "EA888 PHEV - 2.0L TFSI integrated with electric drive unit (45 TFSI e quattro)",
             "Electric‑only range up to ~30 miles for urban zero‑emission driving",

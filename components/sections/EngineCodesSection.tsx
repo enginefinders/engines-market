@@ -176,7 +176,7 @@ export default function EngineCodesSection({ data, bgImage }: Props) {
     "Enter your registration number above and we'll match it instantly to the correct replacement engine - all backed by a genuine 12-month warranty from vetted UK Land Rover specialists.";
 
   return (
-    <Section className="relative overflow-hidden bg-[#f8f9fa]">
+    <Section id="brand-engine-codes" className="relative overflow-hidden bg-[#f8f9fa]">
       {bgImage ? (
         <div className="pointer-events-none absolute inset-x-0 top-0 hidden h-[220px] lg:block">
           <div

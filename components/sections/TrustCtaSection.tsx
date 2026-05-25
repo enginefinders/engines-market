@@ -95,18 +95,20 @@ export default function TrustCtaSection({
       ]);
   const pointLabel = displayMode === "document" ? (ui.pointLabel?.trim() ?? "") : (ui.pointLabel?.trim() ?? "Included");
   const stripLabel = displayMode === "document" ? (ui.stripLabel?.trim() ?? "") : (ui.stripLabel?.trim() ?? "Trusted UK Engine Marketplace");
+  const defaultDocumentStripTitle = `Find the best ${brandName} engine replacement near you`;
+  const defaultDocumentStripDescription = `Compare engine prices for ${brandName} in the UK and get competitive quotes from garages near you.`;
   const stripTitle =
     displayMode === "document"
-      ? ui.stripTitle?.trim() || `Find the best ${brandName} engine replacement near you`
+      ? defaultDocumentStripTitle
       : ui.stripTitle?.trim() || `Compare ${brandName} engine prices with vetted UK specialists`;
   const stripDescription =
     displayMode === "document"
-      ? ui.stripDescription?.trim() || `Compare engine prices for ${brandName} in the UK and get competitive quotes from garages near you.`
+      ? defaultDocumentStripDescription
       : ui.stripDescription?.trim() || data.finalText;
   const secondaryActionText = secondaryAction.text?.trim();
   const showPointLabel = ui.showPointLabel ?? (displayMode === "brand");
   const showStripLabel = ui.showStripLabel ?? (displayMode === "brand");
-  const showSecondaryAction = ui.showSecondaryAction ?? true;
+  const showSecondaryAction = ui.showSecondaryAction ?? (displayMode === "brand");
 
   return (
     <Section className="bg-white px-0 pt-3 sm:pt-4">

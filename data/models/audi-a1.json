@@ -15,13 +15,13 @@
     "canonical": "/audi/a1"
   },
   "assets": {
-    "heroBg": "/images/brands/audi/models/audi-audi-a1-model-card.png",
+    "heroBg": "/images/brands/audi/models/audi-a1-model-card.png",
     "howItWorksBg": "/images/brands/audi/brand/audi-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/audi/brand/audi-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/audi/brand/audi-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/audi/brand/audi-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/audi/brand/audi-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/audi/models/audi-audi-a1-model-card.png"
+    "ctaImage": "/images/brands/audi/models/audi-a1-model-card.png"
   },
   "sections": {
     "hero": {
@@ -717,6 +717,7 @@
               {
                 "code": "CAYB",
                 "title": "1.6L Diesel",
+                "familyHeading": "1.6 TDI Family (2010-2018)",
                 "history": "Entry-level 90PS diesel for economical A1 models; common-rail TDI with DPF, popular with fleet and urban drivers.",
                 "fuel": "Diesel",
                 "size": "1.6 Litre",
@@ -727,29 +728,17 @@
                 ],
                 "commonFailures": [
                   "DPF clogging on short-journey urban use (60-80k miles)",
-                  "EGR valve sticking causing rough idle (70k+ miles)"
+                  "EGR valve sticking causing rough idle (70k+ miles)",
+                  "Turbo actuator electrical fault (80k+ miles)"
                 ],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
-              },
-              {
-                "code": "Turbo actuator",
-                "title": "electrical fault (80k+ miles)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
                 "avgRebuiltPrice": "£850 - £1,900",
                 "cta": "Get quotes for CAYB Audi A1 engine replacement",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
                 "code": "CAYC",
                 "title": "1.6L Diesel",
+                "familyHeading": "1.6 TDI Family (2010-2018)",
                 "history": "High-demand 105PS diesel variant; balanced performance and economy, most-searched A1 diesel code for replacement.",
                 "fuel": "Diesel",
                 "size": "1.6 Litre",
@@ -770,6 +759,7 @@
               {
                 "code": "CXMA",
                 "title": "1.6L Diesel",
+                "familyHeading": "1.6 TDI Family (2010-2018)",
                 "history": "Updated 105PS TDI for late first-gen and early second-gen A1; Euro 6 compliant with refined emissions hardware.",
                 "fuel": "Diesel",
                 "size": "1.6 Litre",
@@ -790,6 +780,7 @@
               {
                 "code": "CFHD",
                 "title": "2.0L Diesel",
+                "familyHeading": "2.0 TDI Family (2012-2018)",
                 "history": "Range-topping 143PS diesel for S line and quattro A1 models; robust construction but higher replacement cost.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -815,6 +806,7 @@
               {
                 "code": "CBZA",
                 "title": "1.2L Petrol",
+                "familyHeading": "1.2 TFSI Family (2010-2015)",
                 "history": "Entry-level 86PS turbo petrol for early A1; compact and efficient but timing chain tensioner issues defined its reputation.",
                 "fuel": "Petrol",
                 "size": "1.2 Litre",
@@ -835,6 +827,7 @@
               {
                 "code": "CAXA",
                 "title": "1.4L Petrol",
+                "familyHeading": "1.4 TFSI Family (2010-2018)",
                 "history": "Mainstream 122PS TFSI for core A1 range; balanced performance and reliability, highest-volume petrol replacement code.",
                 "fuel": "Petrol",
                 "size": "1.4 Litre",
@@ -855,6 +848,7 @@
               {
                 "code": "CAVG",
                 "title": "1.4L Petrol",
+                "familyHeading": "1.4 TFSI Family (2010-2018)",
                 "history": "High-output 185PS twincharger TFSI for performance A1 variants; complex supercharger+turbo setup demands specialist rebuild.",
                 "fuel": "Petrol",
                 "size": "1.4 Litre",
@@ -875,6 +869,7 @@
               {
                 "code": "CTHG",
                 "title": "1.4L Petrol",
+                "familyHeading": "1.4 TFSI Family (2010-2018)",
                 "history": "Updated 185PS TFSI for late first-gen A1; refined emissions hardware while retaining twincharger performance characteristics.",
                 "fuel": "Petrol",
                 "size": "1.4 Litre",
@@ -895,6 +890,7 @@
               {
                 "code": "CPTA",
                 "title": "1.4L Petrol",
+                "familyHeading": "1.4 TFSI Family (2010-2018)",
                 "history": "Mid-range 140PS TFSI for 2013-2015 facelift A1; bridged gap between 122PS and 185PS variants with updated mapping.",
                 "fuel": "Petrol",
                 "size": "1.4 Litre",
@@ -915,6 +911,7 @@
               {
                 "code": "CZEA",
                 "title": "1.4L Petrol",
+                "familyHeading": "1.4 TFSI Family (2010-2018)",
                 "history": "150PS PureTech-era TFSI for late first-gen A1; improved efficiency with cylinder deactivation technology on select markets.",
                 "fuel": "Petrol",
                 "size": "1.4 Litre",
@@ -935,6 +932,7 @@
               {
                 "code": "CHZB",
                 "title": "1.0L Petrol",
+                "familyHeading": "1.0 TFSI Family (2015-Present)",
                 "history": "Downsized 95PS three-cylinder TFSI for entry-level second-gen A1; efficient but coolant system weaknesses noted by specialists.",
                 "fuel": "Petrol",
                 "size": "1.0 Litre",
@@ -955,6 +953,7 @@
               {
                 "code": "DKJA",
                 "title": "1.0L Petrol",
+                "familyHeading": "1.0 TFSI Family (2015-Present)",
                 "history": "Higher-output 116PS variant of 1.0 TFSI for Sport and S line trims; refined mapping and updated turbo hardware.",
                 "fuel": "Petrol",
                 "size": "1.0 Litre",
@@ -975,6 +974,7 @@
               {
                 "code": "DPCA",
                 "title": "1.5L Petrol",
+                "familyHeading": "1.5 TFSI Family (2019-Present)",
                 "history": "New-generation 150PS TFSI with Miller cycle and cylinder deactivation; improved efficiency but early coolant leak reports.",
                 "fuel": "Petrol",
                 "size": "1.5 Litre",
@@ -995,6 +995,7 @@
               {
                 "code": "DAJB",
                 "title": "1.8L Petrol",
+                "familyHeading": "1.8 TFSI Family (2015-2018)",
                 "history": "Limited-run 192PS TFSI for late first-gen Sportback; bridged gap to S1 with strong mid-range torque and refined turbo response.",
                 "fuel": "Petrol",
                 "size": "1.8 Litre",
@@ -1015,6 +1016,7 @@
               {
                 "code": "CWZA",
                 "title": "2.0L Petrol",
+                "familyHeading": "2.0 TFSI Performance Family (2015-2018)",
                 "history": "Exclusive 231PS turbocharged engine for S1 quattro; highest-performance A1 powertrain requiring specialist rebuild expertise.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -1066,26 +1068,20 @@
           "engines": [
             {
               "code": "CAYB",
+              "title": "1.6L Diesel",
+              "familyHeading": "1.6 TDI Family (2010-2018)",
               "fuel": "Diesel",
               "size": "1.6L",
               "power": "90 hp",
               "compatibleModels": "1.6 TDI 90 SE, 1.6 TDI 90 Sport, 1.6 TDI 90 S line, 1.6 TDI 90 Sportback SE, 1.6 TDI 90 Sportback Sport",
-              "avgRebuiltPrice": "",
-              "cta": "",
+              "avgRebuiltPrice": "£850 - £1,900",
+              "cta": "Get quotes for CAYB Audi A1 engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "Turbo actuator",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
-              "avgRebuiltPrice": "£850 - £1,900",
-              "cta": "Get quotes for CAYB Audi A1 engine replacement",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
               "code": "CAYC",
+              "title": "1.6L Diesel",
+              "familyHeading": "1.6 TDI Family (2010-2018)",
               "fuel": "Diesel",
               "size": "1.6L",
               "power": "105 hp",
@@ -1096,6 +1092,8 @@
             },
             {
               "code": "CXMA",
+              "title": "1.6L Diesel",
+              "familyHeading": "1.6 TDI Family (2010-2018)",
               "fuel": "Diesel",
               "size": "1.6L",
               "power": "105 hp",
@@ -1106,6 +1104,8 @@
             },
             {
               "code": "CFHD",
+              "title": "2.0L Diesel",
+              "familyHeading": "2.0 TDI Family (2012-2018)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "143 hp",
@@ -1123,6 +1123,8 @@
           "engines": [
             {
               "code": "CBZA",
+              "title": "1.2L Petrol",
+              "familyHeading": "1.2 TFSI Family (2010-2015)",
               "fuel": "Petrol",
               "size": "1.2L",
               "power": "86 hp",
@@ -1133,6 +1135,8 @@
             },
             {
               "code": "CAXA",
+              "title": "1.4L Petrol",
+              "familyHeading": "1.4 TFSI Family (2010-2018)",
               "fuel": "Petrol",
               "size": "1.4L",
               "power": "122 hp",
@@ -1143,6 +1147,8 @@
             },
             {
               "code": "CAVG",
+              "title": "1.4L Petrol",
+              "familyHeading": "1.4 TFSI Family (2010-2018)",
               "fuel": "Petrol",
               "size": "1.4L",
               "power": "185 hp",
@@ -1153,6 +1159,8 @@
             },
             {
               "code": "CTHG",
+              "title": "1.4L Petrol",
+              "familyHeading": "1.4 TFSI Family (2010-2018)",
               "fuel": "Petrol",
               "size": "1.4L",
               "power": "185 hp",
@@ -1163,6 +1171,8 @@
             },
             {
               "code": "CPTA",
+              "title": "1.4L Petrol",
+              "familyHeading": "1.4 TFSI Family (2010-2018)",
               "fuel": "Petrol",
               "size": "1.4L",
               "power": "140 hp",
@@ -1173,6 +1183,8 @@
             },
             {
               "code": "CZEA",
+              "title": "1.4L Petrol",
+              "familyHeading": "1.4 TFSI Family (2010-2018)",
               "fuel": "Petrol",
               "size": "1.4L",
               "power": "150 hp",
@@ -1183,6 +1195,8 @@
             },
             {
               "code": "CHZB",
+              "title": "1.0L Petrol",
+              "familyHeading": "1.0 TFSI Family (2015-Present)",
               "fuel": "Petrol",
               "size": "1.0L",
               "power": "95 hp",
@@ -1193,6 +1207,8 @@
             },
             {
               "code": "DKJA",
+              "title": "1.0L Petrol",
+              "familyHeading": "1.0 TFSI Family (2015-Present)",
               "fuel": "Petrol",
               "size": "1.0L",
               "power": "116 hp",
@@ -1203,6 +1219,8 @@
             },
             {
               "code": "DPCA",
+              "title": "1.5L Petrol",
+              "familyHeading": "1.5 TFSI Family (2019-Present)",
               "fuel": "Petrol",
               "size": "1.5L",
               "power": "150 hp",
@@ -1213,6 +1231,8 @@
             },
             {
               "code": "DAJB",
+              "title": "1.8L Petrol",
+              "familyHeading": "1.8 TFSI Family (2015-2018)",
               "fuel": "Petrol",
               "size": "1.8L",
               "power": "192 hp",
@@ -1223,6 +1243,8 @@
             },
             {
               "code": "CWZA",
+              "title": "2.0L Petrol",
+              "familyHeading": "2.0 TFSI Performance Family (2015-2018)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "231 hp",
@@ -1725,6 +1747,11 @@
           "title": "Audi A1 Diesel Engines",
           "description": "The Audi A1 diesel range spans 1.4L to 2.0L TDI units across both generations, with the 1.6L TDI dominating UK replacement enquiries due to high fleet usage and urban DPF-related failures.",
           "descriptor": "The Audi A1 diesel range spans 1.4L to 2.0L TDI units across both generations, with the 1.6L TDI dominating UK replacement enquiries due to high fleet usage and urban DPF-related failures.",
+          "familiesLabel": "Common Audi A1 Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "CAYB - 1.6L TDI 90PS, entry diesel for SE/Sport trims, DPF clogging on short journeys",
             "CAYC/CXMA - 1.6L TDI 105PS, highest-volume diesel replacement, EGR valve failure common",
@@ -1754,6 +1781,11 @@
           "title": "Audi A1 Petrol Engines",
           "description": "Petrol TFSI engines power the majority of UK Audi A1 models, from entry-level 1.0L three-cylinders to the flagship 2.0L S1, with timing chain and turbo reliability defining replacement demand.",
           "descriptor": "Petrol TFSI engines power the majority of UK Audi A1 models, from entry-level 1.0L three-cylinders to the flagship 2.0L S1, with timing chain and turbo reliability defining replacement demand.",
+          "familiesLabel": "Common Audi A1 Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "CBZA - 1.2L TFSI 86PS, entry petrol, timing chain tensioner failure at 50-70k miles",
             "CAXA - 1.4L TFSI 122PS, core petrol unit, highest search volume for replacement",
@@ -1787,6 +1819,11 @@
           "title": "Audi A1 Hybrid / Electrified Engines",
           "description": "The Audi A1 was not offered with hybrid, plug-in hybrid, or electric powertrains in the UK market - all variants use conventional petrol or diesel internal combustion engines only.",
           "descriptor": "The Audi A1 was not offered with hybrid, plug-in hybrid, or electric powertrains in the UK market - all variants use conventional petrol or diesel internal combustion engines only.",
+          "familiesLabel": "Common Audi A1 Hybrid / Electrified Engine Families",
+          "foundInLabel": "",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [],
           "foundIn": [],
           "knownFor": [],

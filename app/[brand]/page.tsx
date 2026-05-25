@@ -17,7 +17,7 @@ import TrustCtaSection from "@/components/sections/TrustCtaSection";
 import QuoteCheckoutModal from "@/components/checkout/QuoteCheckoutModal";
 import { getBrandPageData, getBrandSlugs } from "@/lib/brandData";
 import { resolveBrandPageVisuals } from "@/lib/engineImageSelection";
-import { getModelRouteSlug } from "@/lib/modelRoutes";
+import { getModelHref } from "@/lib/modelRoutes";
 import { SITE_URL } from "@/lib/site";
 import { buildStaticReviewsSection } from "@/lib/staticReviews";
 import type { BrandPageData } from "@/types/brand";
@@ -110,7 +110,7 @@ function buildStructuredData(pageData: BrandPageData) {
             item: {
               "@type": "Product",
               name: model.h3,
-              url: `${SITE_URL}/${pageData.brand.slug}/${getModelRouteSlug(model)}`,
+              url: `${SITE_URL}${getModelHref(pageData.brand.slug, model)}`,
               description: model.subtitle,
             },
           })),
@@ -169,11 +169,13 @@ export default async function BrandPage({ params }: BrandPageProps) {
         data={pageData.sections.hero}
         bgImage={brandVisuals.hero}
         modelCards={heroModelCards}
+        brandSlug={pageData.brand.slug}
       />
 
       <HowItWorksSection
         data={pageData.sections.howItWorks}
         bgImage={pageData.assets.howItWorksBg}
+        sectionId="how-it-works"
       />
 
       <LiveMarketPricesSection
@@ -190,7 +192,11 @@ export default async function BrandPage({ params }: BrandPageProps) {
 
       <CommonProblemsSection data={pageData.sections.commonProblems} bgImage={pageData.assets.commonProblemsBg} />
 
-      <EngineTypesSection data={pageData.sections.engineTypes} bgImage={pageData.assets.engineTypesBg} />
+      <EngineTypesSection
+        data={pageData.sections.engineTypes}
+        bgImage={pageData.assets.engineTypesBg}
+        sectionId="brand-engine-types"
+      />
 
       <EngineSizesSection brandName={pageData.brand.name} data={pageData.sections.engineSizes} bgImage={pageData.assets.engineSizesBg} />
 

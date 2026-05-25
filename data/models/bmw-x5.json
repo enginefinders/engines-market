@@ -15,13 +15,13 @@
     "canonical": "/bmw/x5"
   },
   "assets": {
-    "heroBg": "/images/brands/bmw/models/bmw-bmw-x5-model-card.png",
+    "heroBg": "/images/brands/bmw/models/bmw-x5-model-card.png",
     "howItWorksBg": "/images/brands/bmw/brand/bmw-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/bmw/brand/bmw-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/bmw/brand/bmw-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/bmw/brand/bmw-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/bmw/brand/bmw-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/bmw/models/bmw-bmw-x5-model-card.png"
+    "ctaImage": "/images/brands/bmw/models/bmw-x5-model-card.png"
   },
   "sections": {
     "hero": {
@@ -800,19 +800,37 @@
               {
                 "code": "M57D30",
                 "title": "3.0L Diesel",
+                "familyHeading": "M57 Series (1998-2013)",
+                "history": "The M57 launched BMW’s turbo-diesel revolution with cast-iron durability, powering the E53 X5 as the brand’s first SUV diesel. Routinely exceeds 250,000 miles with proper care.",
+                "fuel": "Diesel",
+                "size": "3.0 Litre",
+                "power": "184-286 hp",
+                "years": "2000-2008 (E53)",
+                "compatibleVariants": [
+                  "3.0d, 30d, xDrive30d (E53 pre-facelift and facelift)"
+                ],
+                "commonFailures": [
+                  "Swirl flap failure - flaps can break loose causing catastrophic engine damage (retrofit delete kits available)",
+                  "EGR cooler leaks - coolant loss, white smoke",
+                  "Injector seal failure - diesel contamination in oil"
+                ],
+                "avgRebuiltPrice": "£2,500 - £4,500",
+                "cta": "Get quotes for M57D30 BMW X5 engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+              },
+              {
+                "code": "M57D30TÜ",
+                "title": "3.0L Diesel",
+                "familyHeading": "M57 Series (1998-2013)",
                 "history": "The updated M57TU brought variable geometry turbocharging and improved emissions compliance while retaining the legendary cast-iron block that made the original so reliable.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
                 "power": "218-286 hp",
                 "years": "2003-2008 (E53 facelift)",
                 "compatibleVariants": [
-                  "3.0d, 30d, xDrive30d (E53 pre-facelift and facelift)",
                   "3.0d, 30d, xDrive30d (E53 facelift)"
                 ],
                 "commonFailures": [
-                  "Swirl flap failure - flaps can break loose causing catastrophic engine damage (retrofit delete kits available)",
-                  "EGR cooler leaks - coolant loss, white smoke",
-                  "Injector seal failure - diesel contamination in oil",
                   "Swirl flap failure (same as early M57)",
                   "Turbocharger wear - typically after 150,000+ miles",
                   "Glow plug failure - cold start issues"
@@ -824,6 +842,7 @@
               {
                 "code": "N57D30A",
                 "title": "3.0L Diesel",
+                "familyHeading": "N57 Series (2008-2020)",
                 "history": "The N57 replaced the M57 with lightweight aluminium construction and common-rail injection. However, the rear-mounted timing chain design introduced a critical weakness for high-mileage X5s.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -844,6 +863,7 @@
               {
                 "code": "N57D30B",
                 "title": "3.0L Diesel",
+                "familyHeading": "N57 Series (2008-2020)",
                 "history": "The updated N57TU addressed some early reliability concerns but retained the problematic rear timing chain location, continuing to drive replacement demand for E70 and F15 X5 diesels.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -864,6 +884,7 @@
               {
                 "code": "N57D30T1",
                 "title": "3.0L Diesel (Single Turbo)",
+                "familyHeading": "N57 Series (2008-2020)",
                 "history": "The N57T1 offered single-turbo performance for the X5 35d, delivering strong mid-range torque. This variant remains popular with E70 owners seeking the sweet spot between economy and power.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -884,6 +905,7 @@
               {
                 "code": "N57D30TOP",
                 "title": "3.0L Diesel (Triple Turbo)",
+                "familyHeading": "N57 Series (2008-2020)",
                 "history": "The N57TOP (triple-turbo) powered the X5 M50d as BMW’s most powerful six-cylinder diesel ever. Complex turbo system delivers immense torque but introduces additional failure points.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -904,6 +926,7 @@
               {
                 "code": "B57D30",
                 "title": "3.0L Diesel",
+                "familyHeading": "B57 Series (2015-present)",
                 "history": "The B57 engine represents BMW’s latest diesel generation, featuring mild hybrid technology (48V system), improved cooling, and a redesigned timing chain placement addressing N57 criticisms.",
                 "fuel": "MHEV Diesel",
                 "size": "3.0 Litre",
@@ -924,6 +947,7 @@
               {
                 "code": "B57D30T0",
                 "title": "3.0L Diesel (Twin Turbo)",
+                "familyHeading": "B57 Series (2015-present)",
                 "history": "The twin-turbo B57 powers the X5 40d with 340hp, combining efficiency with performance. The updated engine architecture resolves many N57-era timing chain concerns.",
                 "fuel": "MHEV Diesel",
                 "size": "3.0 Litre",
@@ -949,6 +973,7 @@
               {
                 "code": "M54B30",
                 "title": "3.0L Petrol",
+                "familyHeading": "M54 Series (2000-2006)",
                 "history": "The M54B30 powered the original E53 X5 3.0i as BMW’s first petrol SUV engine. Naturally aspirated inline-six known for smooth power delivery and strong reliability.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -969,6 +994,7 @@
               {
                 "code": "N62B44",
                 "title": "4.4L V8 Petrol",
+                "familyHeading": "N62 Series (2004-2010)",
                 "history": "The N62 introduced Valvetronic variable valve lift to the X5, delivering V8 performance with improved efficiency. However, the complex valvetrain introduced new reliability challenges.",
                 "fuel": "Petrol",
                 "size": "4.4 Litre",
@@ -989,6 +1015,7 @@
               {
                 "code": "N62B48",
                 "title": "4.8L V8 Petrol",
+                "familyHeading": "N62 Series (2004-2010)",
                 "history": "The 4.8-litre N62B48 was reserved for the E53 X5 4.8is performance flagship, offering the most powerful naturally aspirated V8 of its era in the X5 range.",
                 "fuel": "Petrol",
                 "size": "4.8 Litre",
@@ -1009,6 +1036,7 @@
               {
                 "code": "N63B44",
                 "title": "4.4L Twin-Turbo V8 Petrol",
+                "familyHeading": "N63 Series (2010-2020)",
                 "history": "BMW’s first hot-vee V8 (turbochargers inside the V) powered the X5 50i. The N63 delivered impressive power but gained a reputation for thermal management issues affecting reliability.",
                 "fuel": "Petrol",
                 "size": "4.4 Litre",
@@ -1029,6 +1057,7 @@
               {
                 "code": "N63B44T3",
                 "title": "4.4L Twin-Turbo V8 Petrol",
+                "familyHeading": "N63 Series (2010-2020)",
                 "history": "The N63TU (Technical Update) addressed many early N63 reliability issues with improved injectors, valve seals, and cooling. Fitted to later F15 and G05 M50i variants.",
                 "fuel": "Petrol",
                 "size": "4.4 Litre",
@@ -1049,6 +1078,7 @@
               {
                 "code": "B58B30",
                 "title": "3.0L Turbo Petrol",
+                "familyHeading": "B58 Series (2015-present)",
                 "history": "The B58 closed-deck inline-six is widely regarded as BMW’s most reliable modern petrol engine. It powers the G05 X5 40i with exceptional smoothness and durability .",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -1069,6 +1099,7 @@
               {
                 "code": "S63B44",
                 "title": "4.4L Twin-Turbo V8 Petrol",
+                "familyHeading": "S Series (M Performance)",
                 "history": "The S63 is BMW M’s high-performance V8, powering the X5 M with 555-575hp. Race-derived engine with bespoke components, but M-level power comes with M-level maintenance requirements.",
                 "fuel": "Petrol",
                 "size": "4.4 Litre",
@@ -1094,6 +1125,7 @@
               {
                 "code": "B38B15 + Electric Motor",
                 "title": "1.5L Hybrid Petrol",
+                "familyHeading": "PHEV Hybrid Systems (2015-present)",
                 "history": "The X5 xDrive40e was BMW’s first plug-in hybrid X5, combining the B38 three-cylinder petrol engine with an electric motor for urban efficiency with SUV practicality.",
                 "fuel": "PHEV Petrol",
                 "size": "1.5 Litre (combustion unit)",
@@ -1114,6 +1146,7 @@
               {
                 "code": "B58B30 + Electric Motor",
                 "title": "3.0L Hybrid Petrol",
+                "familyHeading": "PHEV Hybrid Systems (2015-present)",
                 "history": "The X5 xDrive45e upgraded to B58 six-cylinder power combined with a more powerful electric motor, offering longer electric range and significantly better performance than the 40e it replaced.",
                 "fuel": "PHEV Petrol",
                 "size": "3.0 Litre (combustion unit)",
@@ -1132,6 +1165,22 @@
               {
                 "code": "Electric coolant pump failure",
                 "title": "hybrid system overheating",
+                "familyHeading": "PHEV Hybrid Systems (2015-present)",
+                "history": "",
+                "fuel": "",
+                "size": "",
+                "power": "",
+                "years": "",
+                "compatibleVariants": [],
+                "commonFailures": [],
+                "avgRebuiltPrice": "£5,000 - £9,000",
+                "cta": "Get quotes for B58B30 hybrid BMW X5 engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              },
+              {
+                "code": "B58B30 + Electric Motor (Updated)",
+                "title": "3.0L Hybrid Petrol",
+                "familyHeading": "PHEV Hybrid Systems (2015-present)",
                 "history": "The facelift G05 X5 xDrive50e introduced a significantly more powerful hybrid system, boosting combined output to 489hp while maintaining the proven B58 combustion engine.",
                 "fuel": "PHEV Petrol",
                 "size": "3.0 Litre (combustion unit)",
@@ -1184,16 +1233,32 @@
           "engines": [
             {
               "code": "M57D30",
+              "title": "3.0L Diesel",
+              "familyHeading": "M57 Series (1998-2013)",
+              "fuel": "Diesel",
+              "size": "3.0L",
+              "power": "184-286 hp",
+              "compatibleModels": "3.0d, 30d, xDrive30d (E53 pre-facelift and facelift)",
+              "avgRebuiltPrice": "£2,500 - £4,500",
+              "cta": "Get quotes for M57D30 BMW X5 engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+            },
+            {
+              "code": "M57D30TÜ",
+              "title": "3.0L Diesel",
+              "familyHeading": "M57 Series (1998-2013)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "218-286 hp",
-              "compatibleModels": "3.0d, 30d, xDrive30d (E53 pre-facelift and facelift), 3.0d, 30d, xDrive30d (E53 facelift)",
+              "compatibleModels": "3.0d, 30d, xDrive30d (E53 facelift)",
               "avgRebuiltPrice": "£2,800 - £4,800",
               "cta": "Get quotes for M57D30TÜ BMW X5 engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
               "code": "N57D30A",
+              "title": "3.0L Diesel",
+              "familyHeading": "N57 Series (2008-2020)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "200-204 hp",
@@ -1204,6 +1269,8 @@
             },
             {
               "code": "N57D30B",
+              "title": "3.0L Diesel",
+              "familyHeading": "N57 Series (2008-2020)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "211-258 hp",
@@ -1214,6 +1281,8 @@
             },
             {
               "code": "N57D30T1",
+              "title": "3.0L Diesel (Single Turbo)",
+              "familyHeading": "N57 Series (2008-2020)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "286-313 hp",
@@ -1224,6 +1293,8 @@
             },
             {
               "code": "N57D30TOP",
+              "title": "3.0L Diesel (Triple Turbo)",
+              "familyHeading": "N57 Series (2008-2020)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "381 hp",
@@ -1234,6 +1305,8 @@
             },
             {
               "code": "B57D30",
+              "title": "3.0L Diesel",
+              "familyHeading": "B57 Series (2015-present)",
               "fuel": "MHEV Diesel",
               "size": "3.0L",
               "power": "262-286 hp",
@@ -1244,6 +1317,8 @@
             },
             {
               "code": "B57D30T0",
+              "title": "3.0L Diesel (Twin Turbo)",
+              "familyHeading": "B57 Series (2015-present)",
               "fuel": "MHEV Diesel",
               "size": "3.0L",
               "power": "340 hp",
@@ -1261,6 +1336,8 @@
           "engines": [
             {
               "code": "M54B30",
+              "title": "3.0L Petrol",
+              "familyHeading": "M54 Series (2000-2006)",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "231 hp",
@@ -1271,6 +1348,8 @@
             },
             {
               "code": "N62B44",
+              "title": "4.4L V8 Petrol",
+              "familyHeading": "N62 Series (2004-2010)",
               "fuel": "Petrol",
               "size": "4.4L",
               "power": "286-320 hp",
@@ -1281,6 +1360,8 @@
             },
             {
               "code": "N62B48",
+              "title": "4.8L V8 Petrol",
+              "familyHeading": "N62 Series (2004-2010)",
               "fuel": "Petrol",
               "size": "4.8L",
               "power": "355-360 hp",
@@ -1291,6 +1372,8 @@
             },
             {
               "code": "N63B44",
+              "title": "4.4L Twin-Turbo V8 Petrol",
+              "familyHeading": "N63 Series (2010-2020)",
               "fuel": "Petrol",
               "size": "4.4L",
               "power": "402-450 hp",
@@ -1301,6 +1384,8 @@
             },
             {
               "code": "N63B44T3",
+              "title": "4.4L Twin-Turbo V8 Petrol",
+              "familyHeading": "N63 Series (2010-2020)",
               "fuel": "Petrol",
               "size": "4.4L",
               "power": "523-530 hp",
@@ -1311,6 +1396,8 @@
             },
             {
               "code": "B58B30",
+              "title": "3.0L Turbo Petrol",
+              "familyHeading": "B58 Series (2015-present)",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "335-340 hp",
@@ -1321,6 +1408,8 @@
             },
             {
               "code": "S63B44",
+              "title": "4.4L Twin-Turbo V8 Petrol",
+              "familyHeading": "S Series (M Performance)",
               "fuel": "Petrol",
               "size": "4.4L",
               "power": "555-575 hp",
@@ -1338,6 +1427,8 @@
           "engines": [
             {
               "code": "B38B15 + Electric Motor",
+              "title": "1.5L Hybrid Petrol",
+              "familyHeading": "PHEV Hybrid Systems (2015-present)",
               "fuel": "PHEV Petrol",
               "size": "1.5L (combustion unit)",
               "power": "313 hp combined",
@@ -1348,6 +1439,8 @@
             },
             {
               "code": "B58B30 + Electric Motor",
+              "title": "3.0L Hybrid Petrol",
+              "familyHeading": "PHEV Hybrid Systems (2015-present)",
               "fuel": "PHEV Petrol",
               "size": "3.0L (combustion unit)",
               "power": "394 hp combined",
@@ -1358,6 +1451,20 @@
             },
             {
               "code": "Electric coolant pump failure",
+              "title": "hybrid system overheating",
+              "familyHeading": "PHEV Hybrid Systems (2015-present)",
+              "fuel": "",
+              "size": "",
+              "power": "",
+              "compatibleModels": "",
+              "avgRebuiltPrice": "£5,000 - £9,000",
+              "cta": "Get quotes for B58B30 hybrid BMW X5 engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            },
+            {
+              "code": "B58B30 + Electric Motor (Updated)",
+              "title": "3.0L Hybrid Petrol",
+              "familyHeading": "PHEV Hybrid Systems (2015-present)",
               "fuel": "PHEV Petrol",
               "size": "3.0L (combustion unit)",
               "power": "489 hp combined",
@@ -1854,6 +1961,11 @@
           "title": "BMW X5 Diesel Engines",
           "description": "Diesel has dominated UK X5 sales across four generations, from the original M57-powered E53 to the latest B57 mild hybrid units in the G05.",
           "descriptor": "Diesel has dominated UK X5 sales across four generations, from the original M57-powered E53 to the latest B57 mild hybrid units in the G05.",
+          "familiesLabel": "Common BMW X5 Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "M57D30 - cast-iron legend in E53 3.0d, known for longevity after swirl flap delete",
             "N57D30A/B - high-volume E70/F15 30d unit with problematic rear timing chain",
@@ -1886,6 +1998,11 @@
           "title": "BMW X5 Petrol Engines",
           "description": "Petrol X5s are less common in the UK, spanning naturally aspirated straight-six and V8 units through to modern turbocharged B58 and hot-vee N63 V8s.",
           "descriptor": "Petrol X5s are less common in the UK, spanning naturally aspirated straight-six and V8 units through to modern turbocharged B58 and hot-vee N63 V8s.",
+          "familiesLabel": "Common BMW X5 Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "M54B30 - naturally aspirated straight-six in E53 3.0i, reliable but cooling system weak",
             "N62B44/B48 - 4.4L and 4.8L V8s in E53 4.4i and 4.8is, valvetronic and timing guide issues",
@@ -1919,6 +2036,11 @@
           "title": "BMW X5 Plug-In Hybrid (PHEV) Engines",
           "description": "BMW offered two generations of plug-in hybrid X5 - the F15 40e and the more capable G05 45e/50e - combining petrol engines with electric motors for reduced urban emissions.",
           "descriptor": "BMW offered two generations of plug-in hybrid X5 - the F15 40e and the more capable G05 45e/50e - combining petrol engines with electric motors for reduced urban emissions.",
+          "familiesLabel": "BMW X5 PHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "B38B15 + electric motor - 1.5L three-cylinder in F15 40e, 313hp combined",
             "B58B30 + electric motor - 3.0L six-cylinder in G05 45e (394hp) and 50e (489hp)",
@@ -1945,6 +2067,11 @@
           "title": "BMW X5 Mild Hybrid (MHEV) Engines",
           "description": "Current-generation G05 diesel X5s (30d and 40d from 2018 onwards) feature 48-volt mild hybrid technology integrated with the B57 engine.",
           "descriptor": "Current-generation G05 diesel X5s (30d and 40d from 2018 onwards) feature 48-volt mild hybrid technology integrated with the B57 engine.",
+          "familiesLabel": "BMW X5 MHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "B57D30 - 3.0L diesel with belt-driven starter-generator",
             "B57D30T0 - twin-turbo diesel with same 48V system",

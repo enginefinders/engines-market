@@ -15,13 +15,13 @@
     "canonical": "/ford/b-max"
   },
   "assets": {
-    "heroBg": "/images/brands/ford/models/ford-ford-b-max-model-card.png",
+    "heroBg": "/images/brands/ford/models/ford-b-max-model-card.png",
     "howItWorksBg": "/images/brands/ford/brand/ford-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/ford/brand/ford-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/ford/brand/ford-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/ford/brand/ford-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/ford/brand/ford-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/ford/models/ford-ford-b-max-model-card.png"
+    "ctaImage": "/images/brands/ford/models/ford-b-max-model-card.png"
   },
   "sections": {
     "hero": {
@@ -699,8 +699,9 @@
             "name": "Petrol Engines",
             "entries": [
               {
-                "code": "SFJA - 1.",
-                "title": "0L Petrol",
+                "code": "SFJA",
+                "title": "1.0L Petrol",
+                "familyHeading": "EcoBoost Family (2012-2017)",
                 "history": "Entry-level 100 PS EcoBoost code for early B-Max models; wet belt design brought efficiency but also timing failure risks.",
                 "fuel": "Petrol",
                 "size": "1.0 Litre",
@@ -719,8 +720,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "SFJB - 1.",
-                "title": "0L Petrol",
+                "code": "SFJB",
+                "title": "1.0L Petrol",
+                "familyHeading": "EcoBoost Family (2012-2017)",
                 "history": "Variant of SFJA with minor calibration differences; shared wet belt architecture and failure profile across 2012-2015 B-Max production.",
                 "fuel": "Petrol",
                 "size": "1.0 Litre",
@@ -739,8 +741,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "SFJD - 1.",
-                "title": "0L Petrol",
+                "code": "SFJD",
+                "title": "1.0L Petrol",
+                "familyHeading": "EcoBoost Family (2012-2017)",
                 "history": "Later-production 100 PS EcoBoost code; incremental updates but retained oil-immersed timing belt requiring proactive maintenance.",
                 "fuel": "Petrol",
                 "size": "1.0 Litre",
@@ -759,8 +762,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "M1JA - 1.",
-                "title": "0L Petrol",
+                "code": "M1JA",
+                "title": "1.0L Petrol",
+                "familyHeading": "EcoBoost Family (2012-2017)",
                 "history": "Higher-output 120 PS EcoBoost code; most searched B-Max engine due to popularity in Zetec and Titanium trims with known wet belt vulnerability.",
                 "fuel": "Petrol",
                 "size": "1.0 Litre",
@@ -779,8 +783,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "M1JH - 1.",
-                "title": "0L Petrol",
+                "code": "M1JH",
+                "title": "1.0L Petrol",
+                "familyHeading": "EcoBoost Family (2012-2017)",
                 "history": "120 PS EcoBoost variant with minor calibration differences; shared failure patterns with M1JA across 2012-2015 B-Max production run.",
                 "fuel": "Petrol",
                 "size": "1.0 Litre",
@@ -799,8 +804,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "YYJC - 1.",
-                "title": "0L Petrol",
+                "code": "YYJC",
+                "title": "1.0L Petrol",
+                "familyHeading": "EcoBoost Family (2012-2017)",
                 "history": "High-output 140 PS EcoBoost code for late-model Individual trim; performance gain but retained wet belt design requiring careful maintenance.",
                 "fuel": "Petrol",
                 "size": "1.0 Litre",
@@ -819,8 +825,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "FYJA - 1.",
-                "title": "4L Petrol",
+                "code": "FYJA",
+                "title": "1.4L Petrol",
+                "familyHeading": "Duratec Family (2012-2017)",
                 "history": "Entry-level naturally aspirated Duratec; simpler design than EcoBoost but lower search volume due to better reliability and fewer catastrophic failures.",
                 "fuel": "Petrol",
                 "size": "1.4 Litre",
@@ -839,8 +846,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "XTJA - 1.",
-                "title": "6L Petrol",
+                "code": "XTJA",
+                "title": "1.6L Petrol",
+                "familyHeading": "Duratec Family (2012-2017)",
                 "history": "Mid-range Duratec offering 105 hp with optional Powershift automatic; reliable when maintained but timing chain wear drives replacement enquiries.",
                 "fuel": "Petrol",
                 "size": "1.6 Litre",
@@ -864,8 +872,9 @@
             "name": "Diesel Engines",
             "entries": [
               {
-                "code": "T3JB - 1.",
-                "title": "6L Diesel",
+                "code": "T3JB",
+                "title": "1.6L Diesel",
+                "familyHeading": "Duratorq TDCi Family (2012-2017)",
                 "history": "Early B-Max diesel code delivering 95 PS; robust block but DPF and injector issues on low-mileage urban use drive replacement demand.",
                 "fuel": "Diesel",
                 "size": "1.6 Litre",
@@ -884,8 +893,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "UGJC - 1.",
-                "title": "5L Diesel",
+                "code": "UGJC",
+                "title": "1.5L Diesel",
+                "familyHeading": "Duratorq TDCi Family (2012-2017)",
                 "history": "Replacement 1.5 TDCi code introduced 2013; improved emissions but retained DPF complexity with similar failure patterns to 1.6 unit.",
                 "fuel": "Diesel",
                 "size": "1.5 Litre",
@@ -936,7 +946,9 @@
           "failureNote": "Main replacement demand comes from timing-chain, cooling-system and performance thermal-management faults.",
           "engines": [
             {
-              "code": "SFJA - 1.",
+              "code": "SFJA",
+              "title": "1.0L Petrol",
+              "familyHeading": "EcoBoost Family (2012-2017)",
               "fuel": "Petrol",
               "size": "1.0L",
               "power": "100 hp",
@@ -946,7 +958,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "SFJB - 1.",
+              "code": "SFJB",
+              "title": "1.0L Petrol",
+              "familyHeading": "EcoBoost Family (2012-2017)",
               "fuel": "Petrol",
               "size": "1.0L",
               "power": "100 hp",
@@ -956,7 +970,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "SFJD - 1.",
+              "code": "SFJD",
+              "title": "1.0L Petrol",
+              "familyHeading": "EcoBoost Family (2012-2017)",
               "fuel": "Petrol",
               "size": "1.0L",
               "power": "100 hp",
@@ -966,7 +982,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "M1JA - 1.",
+              "code": "M1JA",
+              "title": "1.0L Petrol",
+              "familyHeading": "EcoBoost Family (2012-2017)",
               "fuel": "Petrol",
               "size": "1.0L",
               "power": "120 hp",
@@ -976,7 +994,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "M1JH - 1.",
+              "code": "M1JH",
+              "title": "1.0L Petrol",
+              "familyHeading": "EcoBoost Family (2012-2017)",
               "fuel": "Petrol",
               "size": "1.0L",
               "power": "120 hp",
@@ -986,7 +1006,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "YYJC - 1.",
+              "code": "YYJC",
+              "title": "1.0L Petrol",
+              "familyHeading": "EcoBoost Family (2012-2017)",
               "fuel": "Petrol",
               "size": "1.0L",
               "power": "140 hp",
@@ -996,7 +1018,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "FYJA - 1.",
+              "code": "FYJA",
+              "title": "1.4L Petrol",
+              "familyHeading": "Duratec Family (2012-2017)",
               "fuel": "Petrol",
               "size": "1.4L",
               "power": "90 hp",
@@ -1006,7 +1030,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "XTJA - 1.",
+              "code": "XTJA",
+              "title": "1.6L Petrol",
+              "familyHeading": "Duratec Family (2012-2017)",
               "fuel": "Petrol",
               "size": "1.6L",
               "power": "105 hp",
@@ -1023,7 +1049,9 @@
           "failureNote": "Main replacement triggers are timing chain wear, EGR / cooling faults and turbo-control issues.",
           "engines": [
             {
-              "code": "T3JB - 1.",
+              "code": "T3JB",
+              "title": "1.6L Diesel",
+              "familyHeading": "Duratorq TDCi Family (2012-2017)",
               "fuel": "Diesel",
               "size": "1.6L",
               "power": "95 hp",
@@ -1033,7 +1061,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "UGJC - 1.",
+              "code": "UGJC",
+              "title": "1.5L Diesel",
+              "familyHeading": "Duratorq TDCi Family (2012-2017)",
               "fuel": "Diesel",
               "size": "1.5L",
               "power": "95 hp",
@@ -1441,6 +1471,11 @@
           "title": "Ford B-Max Diesel Engines",
           "description": "The B-Max diesel range ran from 2012-2017 with 1.6L and later 1.5L TDCi units, favoured for motorway economy but prone to DPF and injector issues on urban use.",
           "descriptor": "The B-Max diesel range ran from 2012-2017 with 1.6L and later 1.5L TDCi units, favoured for motorway economy but prone to DPF and injector issues on urban use.",
+          "familiesLabel": "Common Ford B-Max Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "T3JB - 1.6L Duratorq fitted to early Studio Zetec Titanium 2012-2016 95 PS output",
             "UGJC - 1.5L Duratorq introduced 2013 for later Zetec Titanium Individual trims improved emissions"
@@ -1468,6 +1503,11 @@
           "title": "Ford B-Max Petrol Engines",
           "description": "Petrol B-Max models span 1.0L EcoBoost turbo 1.4L and 1.6L Duratec naturally aspirated units with the EcoBoost dominating UK registrations but requiring strict wet belt maintenance.",
           "descriptor": "Petrol B-Max models span 1.0L EcoBoost turbo 1.4L and 1.6L Duratec naturally aspirated units with the EcoBoost dominating UK registrations but requiring strict wet belt maintenance.",
+          "familiesLabel": "Common Ford B-Max Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "SFJA/M1JA/YYJC - 1.0L EcoBoost three-cylinder turbo 100/120/140 PS wet timing belt design",
             "FYJA - 1.4L Duratec naturally aspirated entry-level petrol simpler maintenance profile",

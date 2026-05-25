@@ -11,6 +11,7 @@ type Props = {
   bgImage?: string;
   dynamicBrandCta?: boolean;
   displayMode?: "brand" | "document";
+  sectionId?: string;
 };
 
 function normalizeText(text: string) {
@@ -338,6 +339,7 @@ export default function EngineTypesSection({
   bgImage,
   dynamicBrandCta = false,
   displayMode = "brand",
+  sectionId,
 }: Props) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const headingLines = data.headingLines?.length ? data.headingLines : data.h2.split(/\s+-\s+/);
@@ -347,7 +349,7 @@ export default function EngineTypesSection({
   const isDocumentMode = displayMode === "document";
 
   return (
-    <Section className="relative overflow-hidden bg-[#f8f9fa]">
+    <Section id={sectionId} className="relative overflow-hidden bg-[#f8f9fa]">
       {bgImage ? (
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
           <div

@@ -15,13 +15,13 @@
     "canonical": "/mercedes-benz/citan"
   },
   "assets": {
-    "heroBg": "/images/brands/mercedes-benz/models/mercedes-benz-mercedes-benz-citan-model-card.png",
+    "heroBg": "/images/brands/mercedes-benz/models/mercedes-benz-citan-model-card.png",
     "howItWorksBg": "/images/brands/mercedes-benz/brand/mercedes-benz-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/mercedes-benz/models/mercedes-benz-mercedes-benz-citan-model-card.png"
+    "ctaImage": "/images/brands/mercedes-benz/models/mercedes-benz-citan-model-card.png"
   },
   "sections": {
     "hero": {
@@ -741,21 +741,60 @@
             "name": "Diesel Engines",
             "entries": [
               {
-                "code": "OM607.95",
-                "title": "1 LA (K9K628) - 1.5L Diesel High Output",
+                "code": "OM607.951 (K9K)",
+                "title": "1.5L Diesel",
+                "familyHeading": "OM607 / K9K Diesel Engine Family (2012-2026)",
+                "history": "Renault-sourced 1.5 dCi unit co-developed with Mercedes, forming the backbone of Citan diesel range. Over 85% of Citan engine replacement searches target this code.",
+                "fuel": "Diesel",
+                "size": "1.5 Litre",
+                "power": "75-110 hp",
+                "years": "2012-2026",
+                "compatibleVariants": [
+                  "108 CDI, 109 CDI, 110 CDI, 111 CDI, Panel Van, Dualiner, Traveliner, Tourer (W415), W415 Commercial"
+                ],
+                "commonFailures": [
+                  "Timing chain stretch affecting high-mileage units from 60k miles",
+                  "EGR cooler cracking (documented TSB fault)",
+                  "Turbo actuator failure causing loss of power"
+                ],
+                "avgRebuiltPrice": "£1,200 - £3,200",
+                "cta": "Get quotes for OM607.951 Mercedes Benz Citan engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+              },
+              {
+                "code": "OM607.951 LA (K9K628)",
+                "title": "1.5L Diesel High Output",
+                "familyHeading": "OM607 / K9K Diesel Engine Family (2012-2026)",
+                "history": "Higher-output variant of the OM607 family, factory-fitted to 111 CDI models with revised turbo calibration and strengthened internals.",
+                "fuel": "Diesel",
+                "size": "1.5 Litre",
+                "power": "110 hp",
+                "years": "2012-2021",
+                "compatibleVariants": [
+                  "111 CDI, Traveliner 111 CDI, Tourer 111 CDI"
+                ],
+                "commonFailures": [
+                  "Timing chain stretch (same as standard output)",
+                  "EGR cooler cracking",
+                  "Injector seal degradation"
+                ],
+                "avgRebuiltPrice": "£1,600 - £3,400",
+                "cta": "Get quotes for OM607.951 LA Mercedes Benz Citan engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+              },
+              {
+                "code": "OM608.915 (K9K)",
+                "title": "1.5L Diesel Euro 6d",
+                "familyHeading": "OM607 / K9K Diesel Engine Family (2012-2026)",
                 "history": "Updated Euro 6d-compliant diesel for the second-generation W420 Citan (2021 onward), featuring AdBlue SCR system and revised injection mapping.",
                 "fuel": "Diesel",
                 "size": "1.5 Litre",
                 "power": "95-116 hp",
                 "years": "2021-2026",
                 "compatibleVariants": [
-                  "111 CDI, Traveliner 111 CDI, Tourer 111 CDI",
                   "110 CDI (W420), 112 CDI (W420), Tourer (W420)"
                 ],
                 "commonFailures": [
-                  "Timing chain stretch (same as standard output)",
-                  "EGR cooler cracking",
-                  "Injector seal degradation",
                   "AdBlue crystallisation blocking injector",
                   "EGR cooler cracking (updated design still affected)",
                   "DPF regeneration issues on short journeys"
@@ -772,19 +811,37 @@
               {
                 "code": "M200",
                 "title": "1.2L Petrol",
+                "familyHeading": "M200 & M282 Petrol Engine Family (2012-2026)",
+                "history": "Entry-level petrol unit for first-generation W415 Citan, offering lower running costs for urban commercial users. Naturally aspirated 8-valve design.",
+                "fuel": "Petrol",
+                "size": "1.2 Litre",
+                "power": "114 hp",
+                "years": "2012-2021",
+                "compatibleVariants": [
+                  "112 Petrol, Citan 1.2 Turbo"
+                ],
+                "commonFailures": [
+                  "Coil pack failure causing misfires",
+                  "Timing chain tensioner wear",
+                  "Oil consumption at higher mileage"
+                ],
+                "avgRebuiltPrice": "£1,500 - £2,800",
+                "cta": "Get quotes for M200 Mercedes Benz Citan engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              },
+              {
+                "code": "M282 DE 14 AL",
+                "title": "1.3L Turbo Petrol",
+                "familyHeading": "M200 & M282 Petrol Engine Family (2012-2026)",
                 "history": "Renault-Nissan-Mercedes co-developed turbocharged unit introduced with the second-generation W420 Citan. Features direct injection and particulate filter (GPF).",
                 "fuel": "Petrol",
                 "size": "1.3 Litre (1332cc)",
                 "power": "131 hp",
                 "years": "2021-2026",
                 "compatibleVariants": [
-                  "112 Petrol, Citan 1.2 Turbo",
                   "113 Petrol, Tourer 113 (W420)"
                 ],
                 "commonFailures": [
-                  "Coil pack failure causing misfires",
-                  "Timing chain tensioner wear",
-                  "Oil consumption at higher mileage",
                   "Cam phaser rattle",
                   "High-pressure fuel pump failure",
                   "Timing chain stretch (reduced incidence vs diesel)"
@@ -801,6 +858,7 @@
               {
                 "code": "eCitan Electric Motor",
                 "title": "Electric Drive Unit",
+                "familyHeading": "Electric Drive Unit (2021-Present)",
                 "history": "All-electric version of the Citan, sharing its powertrain with the Renault Kangoo E-Tech. Launched 2023 for inner-city delivery and passenger transport operations .",
                 "fuel": "Electric (BEV)",
                 "size": "N/A (45 kWh battery)",
@@ -852,11 +910,37 @@
           "failureNote": "Main replacement triggers are timing chain wear, EGR / cooling faults and turbo-control issues.",
           "engines": [
             {
-              "code": "OM607.95",
+              "code": "OM607.951 (K9K)",
+              "title": "1.5L Diesel",
+              "familyHeading": "OM607 / K9K Diesel Engine Family (2012-2026)",
+              "fuel": "Diesel",
+              "size": "1.5L",
+              "power": "75-110 hp",
+              "compatibleModels": "108 CDI, 109 CDI, 110 CDI, 111 CDI, Panel Van, Dualiner, Traveliner, Tourer (W415), W415 Commercial",
+              "avgRebuiltPrice": "£1,200 - £3,200",
+              "cta": "Get quotes for OM607.951 Mercedes Benz Citan engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+            },
+            {
+              "code": "OM607.951 LA (K9K628)",
+              "title": "1.5L Diesel High Output",
+              "familyHeading": "OM607 / K9K Diesel Engine Family (2012-2026)",
+              "fuel": "Diesel",
+              "size": "1.5L",
+              "power": "110 hp",
+              "compatibleModels": "111 CDI, Traveliner 111 CDI, Tourer 111 CDI",
+              "avgRebuiltPrice": "£1,600 - £3,400",
+              "cta": "Get quotes for OM607.951 LA Mercedes Benz Citan engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+            },
+            {
+              "code": "OM608.915 (K9K)",
+              "title": "1.5L Diesel Euro 6d",
+              "familyHeading": "OM607 / K9K Diesel Engine Family (2012-2026)",
               "fuel": "Diesel",
               "size": "1.5L",
               "power": "95-116 hp",
-              "compatibleModels": "111 CDI, Traveliner 111 CDI, Tourer 111 CDI, 110 CDI (W420), 112 CDI (W420), Tourer (W420)",
+              "compatibleModels": "110 CDI (W420), 112 CDI (W420), Tourer (W420)",
               "avgRebuiltPrice": "£2,000 - £4,000",
               "cta": "Get quotes for OM608.915 Mercedes Benz Citan engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
@@ -870,10 +954,24 @@
           "engines": [
             {
               "code": "M200",
+              "title": "1.2L Petrol",
+              "familyHeading": "M200 & M282 Petrol Engine Family (2012-2026)",
+              "fuel": "Petrol",
+              "size": "1.2L",
+              "power": "114 hp",
+              "compatibleModels": "112 Petrol, Citan 1.2 Turbo",
+              "avgRebuiltPrice": "£1,500 - £2,800",
+              "cta": "Get quotes for M200 Mercedes Benz Citan engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            },
+            {
+              "code": "M282 DE 14 AL",
+              "title": "1.3L Turbo Petrol",
+              "familyHeading": "M200 & M282 Petrol Engine Family (2012-2026)",
               "fuel": "Petrol",
               "size": "1.3L (1332cc)",
               "power": "131 hp",
-              "compatibleModels": "112 Petrol, Citan 1.2 Turbo, 113 Petrol, Tourer 113 (W420)",
+              "compatibleModels": "113 Petrol, Tourer 113 (W420)",
               "avgRebuiltPrice": "£2,300 - £3,900",
               "cta": "Get quotes for M282 DE 14 AL Mercedes Benz Citan engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -887,6 +985,8 @@
           "engines": [
             {
               "code": "eCitan Electric Motor",
+              "title": "Electric Drive Unit",
+              "familyHeading": "Electric Drive Unit (2021-Present)",
               "fuel": "Electric (BEV)",
               "size": "N/A (45 kWh battery)",
               "power": "90 kW (122 hp)",
@@ -1344,6 +1444,11 @@
           "title": "Mercedes Benz Citan Diesel Engines",
           "description": "The diesel range dominates UK Citan replacement enquiries, with the Renault-sourced 1.5-litre OM607 and OM608 families powering over 85% of all Citans sold between 2012 and 2026.",
           "descriptor": "The diesel range dominates UK Citan replacement enquiries, with the Renault-sourced 1.5-litre OM607 and OM608 families powering over 85% of all Citans sold between 2012 and 2026.",
+          "familiesLabel": "Common Mercedes Benz Citan Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "OM607.951 (K9K608) - 1.5L 75-110hp, W415 backbone, timing chain stretch common",
             "OM607.951 LA (K9K628) - 1.5L high-output 110hp, 111 CDI and Traveliner",
@@ -1375,6 +1480,11 @@
           "title": "Mercedes Benz Citan Petrol Engines",
           "description": "Petrol Citans are significantly rarer than diesel in the UK, limited to the 1.2-litre M200 in the first-generation W415 and the 1.3-litre M282 in the second-generation W420.",
           "descriptor": "Petrol Citans are significantly rarer than diesel in the UK, limited to the 1.2-litre M200 in the first-generation W415 and the 1.3-litre M282 in the second-generation W420.",
+          "familiesLabel": "Common Mercedes Benz Citan Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "M200 (Renault Energy TCe 115) - 1.2L 114hp, W415 112 Petrol (2012-2021)",
             "M282 DE 14 AL (Renault H5Ht) - 1.3L 102-131hp, W420 110/113 Petrol (2021-2026)"
@@ -1401,6 +1511,11 @@
           "title": "Mercedes Benz Citan Electric (BEV) - eCitan",
           "description": "Launched in 2023 on the W420 platform, the eCitan is the all-electric variant of the Citan, sharing its drivetrain with the Renault Kangoo E-Tech Electric.",
           "descriptor": "Launched in 2023 on the W420 platform, the eCitan is the all-electric variant of the Citan, sharing its drivetrain with the Renault Kangoo E-Tech Electric.",
+          "familiesLabel": "Common Mercedes Benz Citan Electric (BEV) - eCitan Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [],
           "foundIn": [
             "eCitan Panel Van (2023-present)",

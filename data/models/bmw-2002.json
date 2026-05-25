@@ -15,13 +15,13 @@
     "canonical": "/bmw/2002"
   },
   "assets": {
-    "heroBg": "/images/brands/bmw/models/bmw-bmw-2002-model-card.png",
+    "heroBg": "/images/brands/bmw/models/bmw-2002-model-card.png",
     "howItWorksBg": "/images/brands/bmw/brand/bmw-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/bmw/brand/bmw-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/bmw/brand/bmw-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/bmw/brand/bmw-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/bmw/brand/bmw-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/bmw/models/bmw-bmw-2002-model-card.png"
+    "ctaImage": "/images/brands/bmw/models/bmw-2002-model-card.png"
   },
   "sections": {
     "hero": {
@@ -762,6 +762,7 @@
               {
                 "code": "M10 B15",
                 "title": "1.5L Petrol",
+                "familyHeading": "M10 Engine Family (1968-1977)",
                 "history": "Economy variant optimised for running costs. Shares core M10 durability tuned for reliable, lower output.",
                 "fuel": "Petrol",
                 "size": "1.5 Litre",
@@ -782,6 +783,7 @@
               {
                 "code": "M10 B16",
                 "title": "1.6L Petrol",
+                "familyHeading": "M10 Engine Family (1968-1977)",
                 "history": "Entry M10 establishing the 2 Series lineage. Highly reliable and deeply sought for authentic classic restorations.",
                 "fuel": "Petrol",
                 "size": "1.6 Litre",
@@ -802,6 +804,7 @@
               {
                 "code": "M10 B18",
                 "title": "1.8L Petrol",
+                "familyHeading": "M10 Engine Family (1968-1977)",
                 "history": "Mid-range variant offering improved torque for heavier chassis while retaining M10 simplicity and reliability.",
                 "fuel": "Petrol",
                 "size": "1.8 Litre",
@@ -822,6 +825,7 @@
               {
                 "code": "M10 B20",
                 "title": "2.0L Petrol",
+                "familyHeading": "M10 Engine Family (1968-1977)",
                 "history": "Definitive 2002 powerplant. Its robust iron block set performance benchmarks and remains highly rebuildable today.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -842,6 +846,7 @@
               {
                 "code": "M10 B20 TI",
                 "title": "2.0L Petrol",
+                "familyHeading": "M10 Engine Family (1968-1977)",
                 "history": "Pioneering mechanical injection delivering sharper response and establishing the iconic 2002 sporting pedigree.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -862,6 +867,7 @@
               {
                 "code": "M10 B20 TII",
                 "title": "2.0L Petrol",
+                "familyHeading": "M10 Engine Family (1968-1977)",
                 "history": "Legendary fuel-injected workhorse. Its mechanical pump and high compression created a definitive 1970s performance icon.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -882,6 +888,7 @@
               {
                 "code": "M10 B20 TURBO",
                 "title": "2.0L Petrol",
+                "familyHeading": "M10 Engine Family (1968-1977)",
                 "history": "Europe’s first turbo production car. A landmark achievement that permanently transformed compact sports car performance.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -932,6 +939,8 @@
           "engines": [
             {
               "code": "M10 B15",
+              "title": "1.5L Petrol",
+              "familyHeading": "M10 Engine Family (1968-1977)",
               "fuel": "Petrol",
               "size": "1.5L",
               "power": "75-80 hp",
@@ -942,6 +951,8 @@
             },
             {
               "code": "M10 B16",
+              "title": "1.6L Petrol",
+              "familyHeading": "M10 Engine Family (1968-1977)",
               "fuel": "Petrol",
               "size": "1.6L",
               "power": "85-105 hp",
@@ -952,6 +963,8 @@
             },
             {
               "code": "M10 B18",
+              "title": "1.8L Petrol",
+              "familyHeading": "M10 Engine Family (1968-1977)",
               "fuel": "Petrol",
               "size": "1.8L",
               "power": "90-110 hp",
@@ -962,6 +975,8 @@
             },
             {
               "code": "M10 B20",
+              "title": "2.0L Petrol",
+              "familyHeading": "M10 Engine Family (1968-1977)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "100-120 hp",
@@ -972,6 +987,8 @@
             },
             {
               "code": "M10 B20 TI",
+              "title": "2.0L Petrol",
+              "familyHeading": "M10 Engine Family (1968-1977)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "120 hp",
@@ -982,6 +999,8 @@
             },
             {
               "code": "M10 B20 TII",
+              "title": "2.0L Petrol",
+              "familyHeading": "M10 Engine Family (1968-1977)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "130 hp",
@@ -992,6 +1011,8 @@
             },
             {
               "code": "M10 B20 TURBO",
+              "title": "2.0L Petrol",
+              "familyHeading": "M10 Engine Family (1968-1977)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "170 hp",
@@ -1386,6 +1407,11 @@
           "title": "BMW 2002 Petrol Engines",
           "description": "The BMW 2002 was exclusively powered by the robust M10 petrol engine family, spanning 1.5L to 2.0L displacements with carburettor, mechanical injection and turbocharged configurations.",
           "descriptor": "The BMW 2002 was exclusively powered by the robust M10 petrol engine family, spanning 1.5L to 2.0L displacements with carburettor, mechanical injection and turbocharged configurations.",
+          "familiesLabel": "Common BMW 2002 Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "M10 B15 - 1.5L economy unit for 1502 variants, simple and reliable",
             "M10 B16 - 1.6L entry engine powering the iconic 1602 model range",

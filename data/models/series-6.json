@@ -15,13 +15,13 @@
     "canonical": "/bmw/6-series"
   },
   "assets": {
-    "heroBg": "/images/brands/bmw/models/bmw-series-6-model-card.png",
+    "heroBg": "/images/brands/bmw/models/bmw-6-series-model-card.png",
     "howItWorksBg": "/images/brands/bmw/brand/bmw-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/bmw/brand/bmw-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/bmw/brand/bmw-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/bmw/brand/bmw-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/bmw/brand/bmw-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/bmw/models/bmw-series-6-model-card.png"
+    "ctaImage": "/images/brands/bmw/models/bmw-6-series-model-card.png"
   },
   "sections": {
     "hero": {
@@ -809,6 +809,7 @@
               {
                 "code": "N57D30",
                 "title": "3.0 Litre Diesel",
+                "familyHeading": "N57 Series (2011-2018)",
                 "history": "Twin‑turbo 3.0L inline‑six defining F‑gen 640d performance. Known for rear timing chain stretch at high mileage.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -829,6 +830,7 @@
               {
                 "code": "B57D30",
                 "title": "3.0 Litre Diesel",
+                "familyHeading": "B‑Series Diesel (2017-2023)",
                 "history": "Latest‑generation 3.0L twin‑turbo diesel, Euro 6d compliant with refined cooling and hybrid‑ready architecture.",
                 "fuel": "Diesel / MHEV",
                 "size": "3.0 Litre",
@@ -849,6 +851,7 @@
               {
                 "code": "B47D20",
                 "title": "2.0 Litre Diesel",
+                "familyHeading": "B‑Series Diesel (2017-2023)",
                 "history": "Efficient 2.0L twin‑turbo replacing older diesels. Optimised for G32 GT efficiency and ULEZ compliance.",
                 "fuel": "Diesel / MHEV",
                 "size": "2.0 Litre",
@@ -869,6 +872,7 @@
               {
                 "code": "M57D30",
                 "title": "3.0 Litre Diesel",
+                "familyHeading": "M57 Series (2004-2010)",
                 "history": "Robust 3.0L inline‑six powering early E63 models. Highly regarded for torque, though swirl flaps caused concern.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -894,6 +898,7 @@
               {
                 "code": "N55B30",
                 "title": "3.0 Litre Petrol",
+                "familyHeading": "N55 / B58 Turbo Inline‑Six (2011-2023)",
                 "history": "Single twin‑scroll turbo inline‑six replacing the N54. Smooth power delivery with improved F‑chassis reliability.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -914,6 +919,7 @@
               {
                 "code": "B58B30",
                 "title": "3.0 Litre Petrol",
+                "familyHeading": "N55 / B58 Turbo Inline‑Six (2011-2023)",
                 "history": "Modern 3.0L inline‑six praised for durability. Features integrated cooling and closed‑deck design for longevity.",
                 "fuel": "Petrol / MHEV",
                 "size": "3.0 Litre",
@@ -934,6 +940,7 @@
               {
                 "code": "N63B44",
                 "title": "4.4 Litre Petrol",
+                "familyHeading": "N63 / S63 V8 Series (2011-2018)",
                 "history": "Hot‑V twin‑turbo 4.4L V8 for F‑generation. High output but early units faced thermal management issues.",
                 "fuel": "Petrol",
                 "size": "4.4 Litre",
@@ -954,6 +961,7 @@
               {
                 "code": "S63B44",
                 "title": "4.4 Litre Petrol",
+                "familyHeading": "N63 / S63 V8 Series (2011-2018)",
                 "history": "M‑division twin‑turbo V8 for extreme performance. Reinforced internals and cross‑plane crank handle high stresses.",
                 "fuel": "Petrol",
                 "size": "4.4 Litre",
@@ -974,6 +982,7 @@
               {
                 "code": "N52B30",
                 "title": "3.0 Litre Petrol",
+                "familyHeading": "N52 / N62 / S85 Naturally Aspirated (2004-2010)",
                 "history": "Naturally aspirated 3.0L inline‑six for linear power. Magnesium‑aluminium block keeps weight low for agile handling.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -994,6 +1003,7 @@
               {
                 "code": "N62B48",
                 "title": "4.8 Litre Petrol",
+                "familyHeading": "N52 / N62 / S85 Naturally Aspirated (2004-2010)",
                 "history": "4.8L naturally aspirated V8 for effortless cruising. Later revision improved cooling and oil circulation reliability.",
                 "fuel": "Petrol",
                 "size": "4.8 Litre",
@@ -1014,6 +1024,7 @@
               {
                 "code": "S85B50",
                 "title": "5.0 Litre Petrol",
+                "familyHeading": "N52 / N62 / S85 Naturally Aspirated (2004-2010)",
                 "history": "5.0L V10 derived from F1 technology. High‑revving unit requiring specialist rebuilds for sustained performance.",
                 "fuel": "Petrol",
                 "size": "5.0 Litre",
@@ -1065,6 +1076,8 @@
           "engines": [
             {
               "code": "N57D30",
+              "title": "3.0 Litre Diesel",
+              "familyHeading": "N57 Series (2011-2018)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "306-313 hp",
@@ -1075,6 +1088,8 @@
             },
             {
               "code": "B57D30",
+              "title": "3.0 Litre Diesel",
+              "familyHeading": "B‑Series Diesel (2017-2023)",
               "fuel": "Diesel / MHEV",
               "size": "3.0L",
               "power": "265-300 hp",
@@ -1085,6 +1100,8 @@
             },
             {
               "code": "B47D20",
+              "title": "2.0 Litre Diesel",
+              "familyHeading": "B‑Series Diesel (2017-2023)",
               "fuel": "Diesel / MHEV",
               "size": "2.0L",
               "power": "190 hp",
@@ -1095,6 +1112,8 @@
             },
             {
               "code": "M57D30",
+              "title": "3.0 Litre Diesel",
+              "familyHeading": "M57 Series (2004-2010)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "272-286 hp",
@@ -1112,6 +1131,8 @@
           "engines": [
             {
               "code": "N55B30",
+              "title": "3.0 Litre Petrol",
+              "familyHeading": "N55 / B58 Turbo Inline‑Six (2011-2023)",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "320 hp",
@@ -1122,6 +1143,8 @@
             },
             {
               "code": "B58B30",
+              "title": "3.0 Litre Petrol",
+              "familyHeading": "N55 / B58 Turbo Inline‑Six (2011-2023)",
               "fuel": "Petrol / MHEV",
               "size": "3.0L",
               "power": "340 hp",
@@ -1132,6 +1155,8 @@
             },
             {
               "code": "N63B44",
+              "title": "4.4 Litre Petrol",
+              "familyHeading": "N63 / S63 V8 Series (2011-2018)",
               "fuel": "Petrol",
               "size": "4.4L",
               "power": "407-449 hp",
@@ -1142,6 +1167,8 @@
             },
             {
               "code": "S63B44",
+              "title": "4.4 Litre Petrol",
+              "familyHeading": "N63 / S63 V8 Series (2011-2018)",
               "fuel": "Petrol",
               "size": "4.4L",
               "power": "560-600 hp",
@@ -1152,6 +1179,8 @@
             },
             {
               "code": "N52B30",
+              "title": "3.0 Litre Petrol",
+              "familyHeading": "N52 / N62 / S85 Naturally Aspirated (2004-2010)",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "255-272 hp",
@@ -1162,6 +1191,8 @@
             },
             {
               "code": "N62B48",
+              "title": "4.8 Litre Petrol",
+              "familyHeading": "N52 / N62 / S85 Naturally Aspirated (2004-2010)",
               "fuel": "Petrol",
               "size": "4.8L",
               "power": "367 hp",
@@ -1172,6 +1203,8 @@
             },
             {
               "code": "S85B50",
+              "title": "5.0 Litre Petrol",
+              "familyHeading": "N52 / N62 / S85 Naturally Aspirated (2004-2010)",
               "fuel": "Petrol",
               "size": "5.0L",
               "power": "507 hp",
@@ -1648,6 +1681,11 @@
           "title": "BMW 6 Series Diesel Engines",
           "description": "Diesel power defined the 6 Series grand touring ethos across E63, F-generation and G32 Gran Turismo, with twin-turbo inline-six units delivering strong torque and motorway efficiency for long-distance UK drivers.",
           "descriptor": "Diesel power defined the 6 Series grand touring ethos across E63, F-generation and G32 Gran Turismo, with twin-turbo inline-six units delivering strong torque and motorway efficiency for long-distance UK drivers.",
+          "familiesLabel": "Common BMW 6 Series Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "M57D30 - E63 635d twin-turbo diesel, robust but swirl flap concerns pre-2007",
             "N57D30 - F06/F12/F13 640d workhorse, timing chain tensioner wear at higher mileage",
@@ -1679,6 +1717,11 @@
           "title": "BMW 6 Series Petrol Engines",
           "description": "Petrol variants span naturally aspirated inline-six and V8 units through to modern turbocharged B58 performance, offering smooth refinement and responsive power across all three UK generations.",
           "descriptor": "Petrol variants span naturally aspirated inline-six and V8 units through to modern turbocharged B58 performance, offering smooth refinement and responsive power across all three UK generations.",
+          "familiesLabel": "Common BMW 6 Series Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "N52B30 - E63 630i naturally aspirated inline-six, valvetronic and water pump wear points",
             "N55B30 - F-generation 640i single twin-scroll turbo, wastegate rattle and charge pipe cracks",
@@ -1714,6 +1757,11 @@
           "title": "BMW 6 Series Mild Hybrid (MHEV) Engines",
           "description": "Mild hybrid technology appears exclusively on G32 Gran Turismo diesel and petrol variants, using a 48‑volt belt‑alternator starter to recover braking energy and support smoother stop‑start operation.",
           "descriptor": "Mild hybrid technology appears exclusively on G32 Gran Turismo diesel and petrol variants, using a 48‑volt belt‑alternator starter to recover braking energy and support smoother stop‑start operation.",
+          "familiesLabel": "BMW 6 Series MHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "B47D20A - 620d Gran Turismo, 48V support for improved low-speed refinement",
             "B57D30A/C - 630d Gran Turismo, hybrid-assisted torque fill and emissions compliance",

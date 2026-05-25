@@ -15,13 +15,13 @@
     "canonical": "/mercedes-benz/clc-class"
   },
   "assets": {
-    "heroBg": "/images/brands/mercedes-benz/models/mercedes-benz-mercedes-benz-clc-class-model-card.png",
+    "heroBg": "/images/brands/mercedes-benz/models/mercedes-benz-clc-class-model-card.png",
     "howItWorksBg": "/images/brands/mercedes-benz/brand/mercedes-benz-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/mercedes-benz/models/mercedes-benz-mercedes-benz-clc-class-model-card.png"
+    "ctaImage": "/images/brands/mercedes-benz/models/mercedes-benz-clc-class-model-card.png"
   },
   "sections": {
     "hero": {
@@ -716,6 +716,7 @@
               {
                 "code": "OM646.981 / OM646.980",
                 "title": "2.1L Diesel",
+                "familyHeading": "OM646 Series (2003-2011)",
                 "history": "The OM646 evolved from the OM611, bringing common-rail injection and variable geometry turbocharging to the CLC range for refined, efficient diesel power .",
                 "fuel": "Diesel",
                 "size": "2.1 Litre",
@@ -736,6 +737,7 @@
               {
                 "code": "OM642.852",
                 "title": "3.0L Diesel",
+                "familyHeading": "OM642 V6 Diesel (2005-2011)",
                 "history": "Mercedes-Benz’s 72-degree V6 turbodiesel represented a leap in power density and refinement, delivering V8-like torque with four-cylinder economy when introduced .",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -761,6 +763,7 @@
               {
                 "code": "M271.910 / M271.946 / M271.950",
                 "title": "1.8L Supercharged Petrol",
+                "familyHeading": "M271 Series (2002-2011)",
                 "history": "The M271 four-cylinder combined supercharging, variable valve timing, and a balance shaft for six-cylinder smoothness in a smaller package. It powered Mercedes’ core entry-level models throughout the 2000s .",
                 "fuel": "Petrol",
                 "size": "1.8 Litre",
@@ -781,6 +784,7 @@
               {
                 "code": "M271.860",
                 "title": "1.8L Direct Injection Petrol (CGI)",
+                "familyHeading": "M271 Series (2002-2011)",
                 "history": "The CGI (Stratified-Charged Gasoline Injection) variant of the M271 introduced direct injection to Mercedes’ four-cylinder range, improving fuel economy and torque delivery.",
                 "fuel": "Petrol",
                 "size": "1.8 Litre",
@@ -801,6 +805,7 @@
               {
                 "code": "M272.921 / M272.960",
                 "title": "2.5L / 3.5L Petrol V6",
+                "familyHeading": "M272 V6 Series (2004-2011)",
                 "history": "The M272 V6 replaced the M112 with all-aluminium construction, continuous VVT on both camshafts, and advanced coolant management - delivering smooth, linear power across the rev range .",
                 "fuel": "Petrol",
                 "size": "2.5 Litre / 3.5 Litre",
@@ -852,6 +857,8 @@
           "engines": [
             {
               "code": "OM646.981 / OM646.980",
+              "title": "2.1L Diesel",
+              "familyHeading": "OM646 Series (2003-2011)",
               "fuel": "Diesel",
               "size": "2.1L",
               "power": "122-150 hp",
@@ -862,6 +869,8 @@
             },
             {
               "code": "OM642.852",
+              "title": "3.0L Diesel",
+              "familyHeading": "OM642 V6 Diesel (2005-2011)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "224 hp",
@@ -879,6 +888,8 @@
           "engines": [
             {
               "code": "M271.910 / M271.946 / M271.950",
+              "title": "1.8L Supercharged Petrol",
+              "familyHeading": "M271 Series (2002-2011)",
               "fuel": "Petrol",
               "size": "1.8L",
               "power": "129-184 hp",
@@ -889,6 +900,8 @@
             },
             {
               "code": "M271.860",
+              "title": "1.8L Direct Injection Petrol (CGI)",
+              "familyHeading": "M271 Series (2002-2011)",
               "fuel": "Petrol",
               "size": "1.8L",
               "power": "184 hp",
@@ -899,6 +912,8 @@
             },
             {
               "code": "M272.921 / M272.960",
+              "title": "2.5L / 3.5L Petrol V6",
+              "familyHeading": "M272 V6 Series (2004-2011)",
               "fuel": "Petrol",
               "size": "2.5L / 3.5L",
               "power": "204-272 hp",
@@ -1325,6 +1340,11 @@
           "title": "Mercedes Benz CLC Class Diesel Engines",
           "description": "The CLC Class diesel range relied exclusively on Mercedes' OM646 four-cylinder and OM642 V6 units, with the 2.1-litre four-cylinder dominating UK replacement enquiries due to swirl flap failures.",
           "descriptor": "The CLC Class diesel range relied exclusively on Mercedes' OM646 four-cylinder and OM642 V6 units, with the 2.1-litre four-cylinder dominating UK replacement enquiries due to swirl flap failures.",
+          "familiesLabel": "Common Mercedes Benz CLC Class Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "OM646.980/981 - 2.1L four-cylinder (CLC 200 CDI, CLC 220 CDI), swirl flap collapse is the #1 failure driver",
             "OM642.852 - 3.0L V6 (CLC 320 CDI), oil cooler seal leaks and turbo actuator failures dominate replacement demand"
@@ -1352,6 +1372,11 @@
           "title": "Mercedes Benz CLC Class Petrol Engines",
           "description": "The CLC Class petrol lineup spans supercharged M271 four-cylinders and naturally aspirated M272 V6 units, with timing chain failures on the 1.8L and balance shaft wear on the 2.5L/3.5L driving most replacement enquiries.",
           "descriptor": "The CLC Class petrol lineup spans supercharged M271 four-cylinders and naturally aspirated M272 V6 units, with timing chain failures on the 1.8L and balance shaft wear on the 2.5L/3.5L driving most replacement enquiries.",
+          "familiesLabel": "Common Mercedes Benz CLC Class Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "M271.910/946/950 - 1.8L supercharged four-cylinder (CLC 160, CLC 180 Kompressor, CLC 200 Kompressor), single-row timing chain stretch is the dominant failure",
             "M271.860 - 1.8L direct-injection CGI (CLC 200 CGI), carbon build-up on intake valves alongside timing chain issues",

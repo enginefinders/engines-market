@@ -15,13 +15,13 @@
     "canonical": "/mercedes-benz/b-class"
   },
   "assets": {
-    "heroBg": "/images/brands/mercedes-benz/models/mercedes-benz-mercedes-benz-b-class-model-card.png",
+    "heroBg": "/images/brands/mercedes-benz/models/mercedes-benz-b-class-model-card.png",
     "howItWorksBg": "/images/brands/mercedes-benz/brand/mercedes-benz-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/mercedes-benz/models/mercedes-benz-mercedes-benz-b-class-model-card.png"
+    "ctaImage": "/images/brands/mercedes-benz/models/mercedes-benz-b-class-model-card.png"
   },
   "sections": {
     "hero": {
@@ -770,6 +770,7 @@
               {
                 "code": "OM651.901",
                 "title": "2.0L / 2.2L Diesel",
+                "familyHeading": "OM651 Series Diesel Engines (2011-2018)",
                 "history": "The OM651 is one of Mercedes-Benz‘s most widely used four-cylinder diesel engines, powering high-mileage B Class models with proven durability but known bottom-end weaknesses.",
                 "fuel": "Diesel",
                 "size": "1.8L / 2.1L",
@@ -790,6 +791,7 @@
               {
                 "code": "OM651.930",
                 "title": "2.1L Diesel",
+                "familyHeading": "OM651 Series Diesel Engines (2011-2018)",
                 "history": "The higher-output variant of the OM651 family, fitted to performance-oriented diesel B Class models with 4MATIC optional, delivering 177 hp from the four-cylinder common-rail unit.",
                 "fuel": "Diesel",
                 "size": "2.1 Litre",
@@ -810,6 +812,7 @@
               {
                 "code": "OM654.920",
                 "title": "2.0L Diesel",
+                "familyHeading": "OM654 Series Diesel Engines (2019-Present)",
                 "history": "The clean, efficient OM654q engine introduced with the W247 B Class, tested to RDE-2 emissions standards and paired with 8G-DCT automatic transmission.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -830,6 +833,7 @@
               {
                 "code": "OM640.940",
                 "title": "2.0L Diesel",
+                "familyHeading": "OM640 / OM646 Series Diesel Engines (2005-2011)",
                 "history": "The original diesel engine fitted to first-generation W245 B Class models, providing efficient motoring for the compact MPV with proven mechanical simplicity.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -855,6 +859,7 @@
               {
                 "code": "M270.910",
                 "title": "1.6L Petrol",
+                "familyHeading": "M270 Series Petrol Engines (2011-2018)",
                 "history": "A turbocharged four-cylinder with direct injection and BlueDIRECT technology, featuring piezo injectors and multi-spark ignition for efficiency and response from just 1250rpm.",
                 "fuel": "Petrol",
                 "size": "1.6 Litre",
@@ -876,6 +881,7 @@
               {
                 "code": "M270.920",
                 "title": "2.0L Petrol",
+                "familyHeading": "M270 Series Petrol Engines (2011-2018)",
                 "history": "The higher-displacement version of the M270 family, delivering 211 hp for the range-topping B250 with the same turbocharged direct-injection architecture.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -896,6 +902,7 @@
               {
                 "code": "M266.960",
                 "title": "1.7L / 2.0L Petrol",
+                "familyHeading": "M266 Series Petrol Engines (2005-2011)",
                 "history": "The naturally aspirated four-cylinder petrol engine that powered first-generation W245 B Class models, offering simple mechanical design but known oil consumption issues.",
                 "fuel": "Petrol",
                 "size": "1.7 / 2.0 Litre",
@@ -916,6 +923,7 @@
               {
                 "code": "M282.914",
                 "title": "1.3L Turbo Petrol",
+                "familyHeading": "M282 Series Petrol Engines (2019-Present)",
                 "history": "A Renault-derived turbo petrol engine introduced with the W247 generation, replacing the M270 in entry-level models with improved efficiency and CO2 emissions from 125g/km.",
                 "fuel": "Petrol",
                 "size": "1.3 Litre",
@@ -941,6 +949,7 @@
               {
                 "code": "M282 + Electric",
                 "title": "1.3L Petrol / Electric",
+                "familyHeading": "M282 + Electric Motor - PHEV (2019-2022)",
                 "history": "The B250e plug-in hybrid combined the 1.3-litre M282 petrol engine with an electric motor for 218 hp, offering EV-only driving alongside petrol range.",
                 "fuel": "PHEV (Petrol + Electric)",
                 "size": "1.3 Litre + Electric Motor",
@@ -993,6 +1002,8 @@
           "engines": [
             {
               "code": "OM651.901",
+              "title": "2.0L / 2.2L Diesel",
+              "familyHeading": "OM651 Series Diesel Engines (2011-2018)",
               "fuel": "Diesel",
               "size": "1.8L / 2.1L",
               "power": "109-136 hp",
@@ -1003,6 +1014,8 @@
             },
             {
               "code": "OM651.930",
+              "title": "2.1L Diesel",
+              "familyHeading": "OM651 Series Diesel Engines (2011-2018)",
               "fuel": "Diesel",
               "size": "2.1L",
               "power": "177 hp",
@@ -1013,6 +1026,8 @@
             },
             {
               "code": "OM654.920",
+              "title": "2.0L Diesel",
+              "familyHeading": "OM654 Series Diesel Engines (2019-Present)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "148-188 hp",
@@ -1023,6 +1038,8 @@
             },
             {
               "code": "OM640.940",
+              "title": "2.0L Diesel",
+              "familyHeading": "OM640 / OM646 Series Diesel Engines (2005-2011)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "109-140 hp",
@@ -1040,6 +1057,8 @@
           "engines": [
             {
               "code": "M270.910",
+              "title": "1.6L Petrol",
+              "familyHeading": "M270 Series Petrol Engines (2011-2018)",
               "fuel": "Petrol",
               "size": "1.6L",
               "power": "102-156 hp",
@@ -1050,6 +1069,8 @@
             },
             {
               "code": "M270.920",
+              "title": "2.0L Petrol",
+              "familyHeading": "M270 Series Petrol Engines (2011-2018)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "211 hp",
@@ -1060,6 +1081,8 @@
             },
             {
               "code": "M266.960",
+              "title": "1.7L / 2.0L Petrol",
+              "familyHeading": "M266 Series Petrol Engines (2005-2011)",
               "fuel": "Petrol",
               "size": "1.7 / 2.0L",
               "power": "116-136 hp",
@@ -1070,6 +1093,8 @@
             },
             {
               "code": "M282.914",
+              "title": "1.3L Turbo Petrol",
+              "familyHeading": "M282 Series Petrol Engines (2019-Present)",
               "fuel": "Petrol",
               "size": "1.3L",
               "power": "134-163 hp",
@@ -1087,6 +1112,8 @@
           "engines": [
             {
               "code": "M282 + Electric",
+              "title": "1.3L Petrol / Electric",
+              "familyHeading": "M282 + Electric Motor - PHEV (2019-2022)",
               "fuel": "PHEV (Petrol + Electric)",
               "size": "1.3L + Electric Motor",
               "power": "218 hp (combined)",
@@ -1681,6 +1708,11 @@
           "title": "Mercedes-Benz B Class Diesel Engines",
           "description": "The backbone of UK B Class sales across three generations, with high-mileage longevity balanced against well-documented timing chain and emissions system concerns on OM651 and OM654 units.",
           "descriptor": "The backbone of UK B Class sales across three generations, with high-mileage longevity balanced against well-documented timing chain and emissions system concerns on OM651 and OM654 units.",
+          "familiesLabel": "Common Mercedes-Benz B Class Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "OM640.940 - original W245 unit (B180 CDI / B200 CDI), simple but injector-prone",
             "OM607.951 - 1.5-litre Renault-derived engine, subject to EU5 emissions updates",
@@ -1713,6 +1745,11 @@
           "title": "Mercedes-Benz B Class Petrol Engines",
           "description": "A diverse petrol lineup spanning naturally aspirated simplicity (M266) through turbocharged direct injection (M270) to the latest Renault co-developed M282 unit - each with distinct failure patterns.",
           "descriptor": "A diverse petrol lineup spanning naturally aspirated simplicity (M266) through turbocharged direct injection (M270) to the latest Renault co-developed M282 unit - each with distinct failure patterns.",
+          "familiesLabel": "Common Mercedes-Benz B Class Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "M266.960 - 1.5/1.7/2.0-litre naturally aspirated (W245), oil consumption common",
             "M270.910 - 1.6-litre turbo (W246), camshaft and timing chain failure",
@@ -1742,6 +1779,11 @@
           "title": "Mercedes-Benz B Class Plug-in Hybrid (PHEV) Engines",
           "description": "The B250e combined the 1.3-litre M282 petrol engine with an electric motor for urban EV capability and petrol range flexibility - offered only on the W247 generation between 2019 and 2022.",
           "descriptor": "The B250e combined the 1.3-litre M282 petrol engine with an electric motor for urban EV capability and petrol range flexibility - offered only on the W247 generation between 2019 and 2022.",
+          "familiesLabel": "Mercedes-Benz B Class PHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "M282.914 (1.3L turbo petrol) + permanent magnet synchronous electric motor",
             "Electric-only range of up to 40 miles (WLTP) from 15.6 kWh battery",
@@ -1765,6 +1807,11 @@
           "title": "Mercedes-Benz B Class Mild Hybrid (MHEV) Engines",
           "description": "Later W247 generation 1.3-litre petrol models received a 48V belt-driven starter-generator (RSG) system, offering electric boost and coasting functionality without plug-in capability.",
           "descriptor": "Later W247 generation 1.3-litre petrol models received a 48V belt-driven starter-generator (RSG) system, offering electric boost and coasting functionality without plug-in capability.",
+          "familiesLabel": "Mercedes-Benz B Class MHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "M282.914 (1.3L turbo petrol with 48V RSG)",
             "48V starter-generator provides 14hp electric boost under acceleration",

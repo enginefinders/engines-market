@@ -15,13 +15,13 @@
     "canonical": "/audi/tt"
   },
   "assets": {
-    "heroBg": "/images/brands/audi/models/audi-audi-tt-model-card.png",
+    "heroBg": "/images/brands/audi/models/audi-tt-model-card.png",
     "howItWorksBg": "/images/brands/audi/brand/audi-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/audi/brand/audi-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/audi/brand/audi-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/audi/brand/audi-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/audi/brand/audi-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/audi/models/audi-audi-tt-model-card.png"
+    "ctaImage": "/images/brands/audi/models/audi-tt-model-card.png"
   },
   "sections": {
     "hero": {
@@ -714,8 +714,9 @@
             "name": "Petrol Engines",
             "entries": [
               {
-                "code": "BWA",
+                "code": "BWA]",
                 "title": "2.0 Litre Petrol",
+                "familyHeading": "EA113 2.0 TFSI & 1.8T Series (2006-2009)",
                 "history": "The transverse EA113 2.0 TFSI defined the Mk2 TT's launch in 2006 - a belt-driven unit carrying over from the Mk5 Golf GTI with strong tuning potential.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -734,8 +735,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "CDLA / CDMA / CDLB",
+                "code": "CDLA / CDMA / CDLB]",
                 "title": "2.0 Litre Petrol",
+                "familyHeading": "EA113 2.0 TFSI & 1.8T Series (2006-2009)",
                 "history": "The TTS high-output EA113 evolved through three variants from 2008-2014, climbing from 265bhp (CDLA) to 272bhp (CDLB) with a stronger bottom end and K04 turbocharger.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -754,8 +756,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "CESA / CETA",
+                "code": "CESA / CETA]",
                 "title": "2.0 Litre Petrol",
+                "familyHeading": "EA888 Gen 1 & Gen 2 Series (2007-2014)",
                 "history": "The EA888 Gen 2 brought chain-driven camshafts and revised piston rings to the TT facelift. According to Audi, transverse variants (CESA/CETA) received updated pistons before production began.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -774,8 +777,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "CDAA",
+                "code": "CDAA]",
                 "title": "1.8 Litre Petrol",
+                "familyHeading": "EA888 Gen 1 & Gen 2 Series (2007-2014)",
                 "history": "The 1.8 TFSI EA888 Gen 2 offered a lower-cost entry point to Mk2 TT ownership from 2007-2011, sharing the chain-driven architecture of its 2.0-litre stablemate.",
                 "fuel": "Petrol",
                 "size": "1.8 Litre",
@@ -794,8 +798,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "BUB",
+                "code": "BUB]",
                 "title": "3.2 Litre Petrol",
+                "familyHeading": "EA390 VR6 Series (2003-2010)",
                 "history": "The narrow-angle VR6 delivered a naturally-aspirated V6 soundtrack unique to the TT range, shared with the Golf R32. Owners prize its reliability and distinctive exhaust note over forced-induction alternatives.",
                 "fuel": "Petrol",
                 "size": "3.2 Litre",
@@ -814,8 +819,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "CEPA / CEPB",
+                "code": "CEPA / CEPB]",
                 "title": "2.5 Litre Petrol",
+                "familyHeading": "EA855 Five-Cylinder Series (2009-2023)",
                 "history": "The legendary five-cylinder EA855 transformed the TT into a genuine RS-badged icon - its unique firing order and turbocharged character making it a cult classic among performance enthusiasts.",
                 "fuel": "Petrol",
                 "size": "2.5 Litre",
@@ -834,8 +840,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "CZGB / DAZA",
+                "code": "CZGB / DAZA]",
                 "title": "2.5 Litre Petrol",
+                "familyHeading": "EA855 Five-Cylinder Series (2009-2023)",
                 "history": "The 8S-generation TT RS received the evolved EA855 evo with 400bhp, aluminium block construction, and significant internal upgrades over the earlier 8J five-cylinder.",
                 "fuel": "Petrol",
                 "size": "2.5 Litre",
@@ -854,8 +861,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "CNTC",
+                "code": "CNTC]",
                 "title": "2.0 Litre Petrol",
+                "familyHeading": "8S Generation Petrol Series (2014-2023)",
                 "history": "The 8S TT launched with the EA888 Gen 3, bringing higher compression, integrated exhaust manifold, and improved thermal management to the third-generation sports coupe.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -874,8 +882,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "CJXF",
+                "code": "CJXF]",
                 "title": "2.0 Litre Petrol",
+                "familyHeading": "8S Generation Petrol Series (2014-2023)",
                 "history": "The 8S TTS utilised the high-output EA888 Gen 3 with an uprated turbocharger and strengthened internals, delivering 306bhp and quattro grip as standard.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -899,8 +908,9 @@
             "name": "Diesel Engines",
             "entries": [
               {
-                "code": "CBBB",
+                "code": "CBBB]",
                 "title": "2.0 Litre Diesel",
+                "familyHeading": "2.0 TDI Common Rail Series (2008-2014)",
                 "history": "The 2.0 TDI CR (Common Rail) brought diesel efficiency to the TT range for the first time, using a belt-driven camshaft and piezo injectors for improved refinement.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -919,8 +929,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "CFGB",
+                "code": "CFGB]",
                 "title": "2.0 Litre Diesel",
+                "familyHeading": "2.0 TDI Common Rail Series (2008-2014)",
                 "history": "The later CFGB 2.0 TDI CR updated the common-rail architecture with modest internal revisions and remained available until the TT diesel was discontinued.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -944,8 +955,9 @@
             "name": "8N Generation (Mk1) Engines",
             "entries": [
               {
-                "code": "BAM",
+                "code": "BAM]",
                 "title": "1.8 Litre Petrol",
+                "familyHeading": "1.8T 20v Series (1998-2006)",
                 "history": "The high-output 1.8T 20v BAM engine powered the TT 225 Quattro Sport, becoming an icon of early 2000s tuning culture with its robust bottom end and K04 turbocharger.",
                 "fuel": "Petrol",
                 "size": "1.8 Litre",
@@ -964,8 +976,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "AJQ",
+                "code": "AJQ]",
                 "title": "1.8 Litre Petrol",
+                "familyHeading": "1.8T 20v Series (1998-2006)",
                 "history": "The 180bhp 1.8T AJQ powered entry-level Mk1 TT models with a K03 turbocharger, sharing the 20v architecture of its more powerful BAM sibling.",
                 "fuel": "Petrol",
                 "size": "1.8 Litre",
@@ -1016,7 +1029,9 @@
           "failureNote": "Main replacement demand comes from timing-chain, cooling-system and performance thermal-management faults.",
           "engines": [
             {
-              "code": "BWA",
+              "code": "BWA]",
+              "title": "2.0 Litre Petrol",
+              "familyHeading": "EA113 2.0 TFSI & 1.8T Series (2006-2009)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "197-200 hp",
@@ -1026,7 +1041,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "CDLA / CDMA / CDLB",
+              "code": "CDLA / CDMA / CDLB]",
+              "title": "2.0 Litre Petrol",
+              "familyHeading": "EA113 2.0 TFSI & 1.8T Series (2006-2009)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "265-272 hp",
@@ -1036,7 +1053,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "CESA / CETA",
+              "code": "CESA / CETA]",
+              "title": "2.0 Litre Petrol",
+              "familyHeading": "EA888 Gen 1 & Gen 2 Series (2007-2014)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "211 hp",
@@ -1046,7 +1065,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "CDAA",
+              "code": "CDAA]",
+              "title": "1.8 Litre Petrol",
+              "familyHeading": "EA888 Gen 1 & Gen 2 Series (2007-2014)",
               "fuel": "Petrol",
               "size": "1.8L",
               "power": "158-160 hp",
@@ -1056,7 +1077,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "BUB",
+              "code": "BUB]",
+              "title": "3.2 Litre Petrol",
+              "familyHeading": "EA390 VR6 Series (2003-2010)",
               "fuel": "Petrol",
               "size": "3.2L",
               "power": "250 hp",
@@ -1066,7 +1089,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "CEPA / CEPB",
+              "code": "CEPA / CEPB]",
+              "title": "2.5 Litre Petrol",
+              "familyHeading": "EA855 Five-Cylinder Series (2009-2023)",
               "fuel": "Petrol",
               "size": "2.5L",
               "power": "335-355 hp",
@@ -1076,7 +1101,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "CZGB / DAZA",
+              "code": "CZGB / DAZA]",
+              "title": "2.5 Litre Petrol",
+              "familyHeading": "EA855 Five-Cylinder Series (2009-2023)",
               "fuel": "Petrol",
               "size": "2.5L",
               "power": "394-400 hp",
@@ -1086,7 +1113,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "CNTC",
+              "code": "CNTC]",
+              "title": "2.0 Litre Petrol",
+              "familyHeading": "8S Generation Petrol Series (2014-2023)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "197-227 hp",
@@ -1096,7 +1125,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "CJXF",
+              "code": "CJXF]",
+              "title": "2.0 Litre Petrol",
+              "familyHeading": "8S Generation Petrol Series (2014-2023)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "296-306 hp",
@@ -1106,7 +1137,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "BAM",
+              "code": "BAM]",
+              "title": "1.8 Litre Petrol",
+              "familyHeading": "1.8T 20v Series (1998-2006)",
               "fuel": "Petrol",
               "size": "1.8L",
               "power": "221-241 hp",
@@ -1116,7 +1149,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "AJQ",
+              "code": "AJQ]",
+              "title": "1.8 Litre Petrol",
+              "familyHeading": "1.8T 20v Series (1998-2006)",
               "fuel": "Petrol",
               "size": "1.8L",
               "power": "178-178 hp",
@@ -1133,7 +1168,9 @@
           "failureNote": "Main replacement triggers are timing chain wear, EGR / cooling faults and turbo-control issues.",
           "engines": [
             {
-              "code": "CBBB",
+              "code": "CBBB]",
+              "title": "2.0 Litre Diesel",
+              "familyHeading": "2.0 TDI Common Rail Series (2008-2014)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "168-168 hp",
@@ -1143,7 +1180,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "CFGB",
+              "code": "CFGB]",
+              "title": "2.0 Litre Diesel",
+              "familyHeading": "2.0 TDI Common Rail Series (2008-2014)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "168-168 hp",
@@ -1605,6 +1644,11 @@
           "title": "Audi TT Diesel Engines",
           "description": "The 2.0 TDI was offered only in the 8J generation (2008-2014), making diesel TTs rare but highly sought-after by high-mileage drivers seeking quattro grip with 50+ mpg economy.",
           "descriptor": "The 2.0 TDI was offered only in the 8J generation (2008-2014), making diesel TTs rare but highly sought-after by high-mileage drivers seeking quattro grip with 50+ mpg economy.",
+          "familiesLabel": "Common Audi TT Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "CBBB - early 2.0 TDI CR (2008-2011), 168bhp, common rail injection",
             "CFGB - facelift 2.0 TDI (2011-2014), updated ECU calibration"
@@ -1630,6 +1674,11 @@
           "title": "Audi TT Petrol Engines",
           "description": "Petrol engines dominate the TT range across all three generations (8N, 8J, 8S) - from the tuner-favourite 1.8T 20v and belt-driven EA113 2.0 TFSI to the chain-driven EA888 Gen 2/Gen 3 and the legendary five-cylinder EA855.",
           "descriptor": "Petrol engines dominate the TT range across all three generations (8N, 8J, 8S) - from the tuner-favourite 1.8T 20v and belt-driven EA113 2.0 TFSI to the chain-driven EA888 Gen 2/Gen 3 and the legendary five-cylinder EA855.",
+          "familiesLabel": "Common Audi TT Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "AJQ/AUQ/BAM - 1.8T 20v EA113 (8N, 178-221bhp), belt drive, legendary tuner platform",
             "BWA - 2.0 TFSI EA113 (8J, 197bhp), belt drive, cam follower critical",
@@ -1671,6 +1720,11 @@
           "title": "Audi TT Hybrid / Electrified Engines",
           "description": "No hybrid or electrified powertrains were ever fitted to the Audi TT across any generation (8N, 8J, or 8S). The TT remained exclusively petrol or diesel throughout its 25-year production run.",
           "descriptor": "No hybrid or electrified powertrains were ever fitted to the Audi TT across any generation (8N, 8J, or 8S). The TT remained exclusively petrol or diesel throughout its 25-year production run.",
+          "familiesLabel": "Common Audi TT Hybrid / Electrified Engine Families",
+          "foundInLabel": "",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [],
           "foundIn": [],
           "knownFor": [],

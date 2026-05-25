@@ -15,13 +15,13 @@
     "canonical": "/mercedes-benz/s-class"
   },
   "assets": {
-    "heroBg": "/images/brands/mercedes-benz/models/mercedes-benz-mercedes-benz-s-class-model-card.png",
+    "heroBg": "/images/brands/mercedes-benz/models/mercedes-benz-s-class-model-card.png",
     "howItWorksBg": "/images/brands/mercedes-benz/brand/mercedes-benz-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/mercedes-benz/models/mercedes-benz-mercedes-benz-s-class-model-card.png"
+    "ctaImage": "/images/brands/mercedes-benz/models/mercedes-benz-s-class-model-card.png"
   },
   "sections": {
     "hero": {
@@ -759,6 +759,7 @@
               {
                 "code": "OM656",
                 "title": "3.0L Diesel",
+                "familyHeading": "OM656 Inline-6 Diesel Family (2017-present)",
                 "history": "Introduced 2017, OM656 replaced OM642 with aluminium block, stepped-bore tech & improved efficiency for W222/W223 S-Class flagships.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -779,6 +780,7 @@
               {
                 "code": "OM642",
                 "title": "3.0L Diesel",
+                "familyHeading": "OM642 V6 Diesel Family (2005-2017)",
                 "history": "OM642 V6 powered early W221/W222 S-Class diesels; robust block but oil cooler seals and EGR systems require specialist attention.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -804,6 +806,7 @@
               {
                 "code": "M276",
                 "title": "3.5L Petrol",
+                "familyHeading": "M276 V6 Petrol Family (2013-2017)",
                 "history": "M276 brought direct injection and variable valve timing to W222 S350/S400; timing chain tensioner updates critical for long-term reliability.",
                 "fuel": "Petrol",
                 "size": "3.5 Litre",
@@ -824,6 +827,7 @@
               {
                 "code": "M278",
                 "title": "4.0L Petrol",
+                "familyHeading": "M278 V8 Biturbo Family (2013-2020)",
                 "history": "M278 twin-turbo V8 delivered flagship performance to S500/S560; timing chain guide upgrades essential for high-mileage reliability.",
                 "fuel": "Petrol",
                 "size": "4.0 Litre",
@@ -844,6 +848,7 @@
               {
                 "code": "M256",
                 "title": "3.0L MHEV Petrol",
+                "familyHeading": "M256 Inline-6 Mild Hybrid Family (2020-present)",
                 "history": "M256 introduced 48V EQ Boost mild-hybrid tech to W223 S-Class, combining inline-6 refinement with electrified efficiency and performance.",
                 "fuel": "MHEV Petrol",
                 "size": "3.0 Litre",
@@ -863,6 +868,7 @@
               {
                 "code": "Mild",
                 "title": "hybrid system software mismatch (start/stop issues, 50k+ miles)",
+                "familyHeading": "M256 Inline-6 Mild Hybrid Family (2020-present)",
                 "history": "",
                 "fuel": "",
                 "size": "",
@@ -877,6 +883,7 @@
               {
                 "code": "M177",
                 "title": "4.0L Petrol",
+                "familyHeading": "M177 AMG V8 Biturbo Family (2017-present)",
                 "history": "Hand-built M177 AMG V8 brings S63 flagship performance; precision balancing and AMG-certified rebuilds essential for reliability.",
                 "fuel": "Petrol",
                 "size": "4.0 Litre",
@@ -897,6 +904,7 @@
               {
                 "code": "M279",
                 "title": "6.0L Petrol",
+                "familyHeading": "M279 AMG V12 Biturbo Family (2013-2020)",
                 "history": "M279 twin-turbo V12 powered the ultra-luxury S65 AMG; hand-built precision demands specialist rebuilders for flagship reliability.",
                 "fuel": "Petrol",
                 "size": "6.0 Litre",
@@ -917,6 +925,7 @@
               {
                 "code": "M176",
                 "title": "4.0L Petrol",
+                "familyHeading": "M176 V8 Biturbo Family (2017-2020)",
                 "history": "M176 delivered refined V8 power to W222 S560; shared architecture with AMG units but tuned for luxury cruising over track performance.",
                 "fuel": "Petrol",
                 "size": "4.0 Litre",
@@ -942,14 +951,28 @@
               {
                 "code": "M276 Hybrid",
                 "title": "3.5L Hybrid Petrol",
+                "familyHeading": "M276 Hybrid Petrol Family (2013-2017)",
                 "history": "Early W222 S400 Hybrid paired M276 V6 with electric motor; coordination between combustion and electric systems requires specialist diagnostics.",
                 "fuel": "Hybrid Petrol",
                 "size": "3.5 Litre",
                 "power": "333 hp combined",
                 "years": "2013-2017",
-                "compatibleVariants": [
-                  "S400 Hybrid"
-                ],
+                "compatibleVariants": [],
+                "commonFailures": [],
+                "avgRebuiltPrice": "",
+                "cta": "",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              },
+              {
+                "code": "S400",
+                "title": "Hybrid",
+                "familyHeading": "M276 Hybrid Petrol Family (2013-2017)",
+                "history": "",
+                "fuel": "",
+                "size": "",
+                "power": "",
+                "years": "",
+                "compatibleVariants": [],
                 "commonFailures": [
                   "Hybrid inverter failure (no-start, warning lights, 60-90k miles)",
                   "Battery cooling pump failure (overheat protection, 70k+ miles)",
@@ -962,6 +985,7 @@
               {
                 "code": "M256 PHEV",
                 "title": "3.0L Plug-in Hybrid Petrol",
+                "familyHeading": "M256 PHEV Family (2021-present)",
                 "history": "W223 S580e combines M256 inline-6 with high-voltage PHEV system; specialist coordination essential for EQ Boost and electric motor integration.",
                 "fuel": "PHEV Petrol",
                 "size": "3.0 Litre",
@@ -1014,6 +1038,8 @@
           "engines": [
             {
               "code": "OM656",
+              "title": "3.0L Diesel",
+              "familyHeading": "OM656 Inline-6 Diesel Family (2017-present)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "286-340 hp",
@@ -1024,6 +1050,8 @@
             },
             {
               "code": "OM642",
+              "title": "3.0L Diesel",
+              "familyHeading": "OM642 V6 Diesel Family (2005-2017)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "235-258 hp",
@@ -1041,6 +1069,8 @@
           "engines": [
             {
               "code": "M276",
+              "title": "3.5L Petrol",
+              "familyHeading": "M276 V6 Petrol Family (2013-2017)",
               "fuel": "Petrol",
               "size": "3.5L",
               "power": "306 hp",
@@ -1051,6 +1081,8 @@
             },
             {
               "code": "M278",
+              "title": "4.0L Petrol",
+              "familyHeading": "M278 V8 Biturbo Family (2013-2020)",
               "fuel": "Petrol",
               "size": "4.0L",
               "power": "435-469 hp",
@@ -1061,6 +1093,8 @@
             },
             {
               "code": "M256",
+              "title": "3.0L MHEV Petrol",
+              "familyHeading": "M256 Inline-6 Mild Hybrid Family (2020-present)",
               "fuel": "MHEV Petrol",
               "size": "3.0L",
               "power": "367-496 hp",
@@ -1071,6 +1105,8 @@
             },
             {
               "code": "Mild",
+              "title": "hybrid system software mismatch (start/stop issues, 50k+ miles)",
+              "familyHeading": "M256 Inline-6 Mild Hybrid Family (2020-present)",
               "fuel": "",
               "size": "",
               "power": "",
@@ -1081,6 +1117,8 @@
             },
             {
               "code": "M177",
+              "title": "4.0L Petrol",
+              "familyHeading": "M177 AMG V8 Biturbo Family (2017-present)",
               "fuel": "Petrol",
               "size": "4.0L",
               "power": "612 hp",
@@ -1091,6 +1129,8 @@
             },
             {
               "code": "M279",
+              "title": "6.0L Petrol",
+              "familyHeading": "M279 AMG V12 Biturbo Family (2013-2020)",
               "fuel": "Petrol",
               "size": "6.0L",
               "power": "630 hp",
@@ -1101,6 +1141,8 @@
             },
             {
               "code": "M176",
+              "title": "4.0L Petrol",
+              "familyHeading": "M176 V8 Biturbo Family (2017-2020)",
               "fuel": "Petrol",
               "size": "4.0L",
               "power": "469 hp",
@@ -1118,16 +1160,32 @@
           "engines": [
             {
               "code": "M276 Hybrid",
+              "title": "3.5L Hybrid Petrol",
+              "familyHeading": "M276 Hybrid Petrol Family (2013-2017)",
               "fuel": "Hybrid Petrol",
               "size": "3.5L",
               "power": "333 hp combined",
-              "compatibleModels": "S400 Hybrid",
+              "compatibleModels": "",
+              "avgRebuiltPrice": "",
+              "cta": "",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            },
+            {
+              "code": "S400",
+              "title": "Hybrid",
+              "familyHeading": "M276 Hybrid Petrol Family (2013-2017)",
+              "fuel": "",
+              "size": "",
+              "power": "",
+              "compatibleModels": "",
               "avgRebuiltPrice": "£2,700 - £4,500",
               "cta": "Get quotes for M276 Hybrid Mercedes Benz S Class engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
               "code": "M256 PHEV",
+              "title": "3.0L Plug-in Hybrid Petrol",
+              "familyHeading": "M256 PHEV Family (2021-present)",
               "fuel": "PHEV Petrol",
               "size": "3.0L",
               "power": "496 hp combined",
@@ -1483,6 +1541,11 @@
           "title": "Mercedes Benz S Class Diesel Engines",
           "description": "Diesel power has defined the S Class fleet across W221, W222 and W223 generations, delivering flagship refinement with BlueTEC efficiency and strong torque for executive long-distance cruising.",
           "descriptor": "Diesel power has defined the S Class fleet across W221, W222 and W223 generations, delivering flagship refinement with BlueTEC efficiency and strong torque for executive long-distance cruising.",
+          "familiesLabel": "Common Mercedes Benz S Class Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "OM656 - inline-6 BlueTEC (S350d/S400d), EGR cooler cracking at 60-90k miles",
             "OM642 - V6 CDI legacy unit (S350 CDI), oil cooler seal degradation common"
@@ -1512,6 +1575,11 @@
           "title": "Mercedes Benz S Class Petrol Engines",
           "description": "Petrol S Class variants span naturally aspirated V6 smoothness to hand-built AMG V8 and V12 performance, with direct injection and twin-turbo technology defining modern flagship powertrains.",
           "descriptor": "Petrol S Class variants span naturally aspirated V6 smoothness to hand-built AMG V8 and V12 performance, with direct injection and twin-turbo technology defining modern flagship powertrains.",
+          "familiesLabel": "Common Mercedes Benz S Class Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "M276 - 3.5L V6 (S350/S400 Hybrid), timing chain tensioner wear on early units",
             "M278 - 4.0L V8 biturbo (S500/S560), timing chain guide rail degradation",
@@ -1545,6 +1613,11 @@
           "title": "Mercedes Benz S Class Mild Hybrid (MHEV) Engines",
           "description": "The M256 inline-six with 48-volt EQ Boost technology represents the future of S Class petrol efficiency, combining electrified assistance with traditional combustion refinement across W223 models.",
           "descriptor": "The M256 inline-six with 48-volt EQ Boost technology represents the future of S Class petrol efficiency, combining electrified assistance with traditional combustion refinement across W223 models.",
+          "familiesLabel": "Mercedes Benz S Class MHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "M256 E30 DEH LA - 3.0L inline-6 with integrated starter-generator (S450/S500/S580)",
             "48-volt belt-driven starter-generator recovers braking energy for electric torque assist",
@@ -1567,6 +1640,11 @@
           "title": "Mercedes Benz S Class Plug-in Hybrid (PHEV) Engines",
           "description": "The S580e combines the M256 inline-six with a high-voltage electric motor and 13.5kWh battery, delivering substantial electric-only range alongside flagship petrol performance for ultra-efficient luxury motoring.",
           "descriptor": "The S580e combines the M256 inline-six with a high-voltage electric motor and 13.5kWh battery, delivering substantial electric-only range alongside flagship petrol performance for ultra-efficient luxury motoring.",
+          "familiesLabel": "Mercedes Benz S Class PHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "M256 PHEV - 3.0L inline-6 with integrated electric motor and HV battery (S580e)",
             "Electric motor provides up to 13.5kWh battery capacity for ~30 miles zero-emission driving",

@@ -105,7 +105,7 @@ export default function HomeBrandGridSection({ brands, featuredSlugs }: Props) {
   }
 
   return (
-    <Section className="bg-white py-7 sm:py-8 lg:py-10">
+    <Section id="brands" className="bg-white py-7 sm:py-8 lg:py-10">
       <Container className="max-w-[1200px]">
         <div className="mx-auto max-w-[760px] text-center">
           <div className="section-pill mx-auto">

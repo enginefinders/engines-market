@@ -15,13 +15,13 @@
     "canonical": "/audi/allroad"
   },
   "assets": {
-    "heroBg": "/images/brands/audi/models/audi-audi-allroad-model-card.png",
+    "heroBg": "/images/brands/audi/models/audi-allroad-model-card.png",
     "howItWorksBg": "/images/brands/audi/brand/audi-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/audi/brand/audi-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/audi/brand/audi-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/audi/brand/audi-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/audi/brand/audi-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/audi/models/audi-audi-allroad-model-card.png"
+    "ctaImage": "/images/brands/audi/models/audi-allroad-model-card.png"
   },
   "sections": {
     "hero": {
@@ -700,6 +700,7 @@
               {
                 "code": "ASB",
                 "title": "3.0L Diesel",
+                "familyHeading": "3.0 TDI V6 Family (2006-2018)",
                 "history": "The ASB was the first V6 TDI fitted to the C6 A6 Allroad, delivering 230bhp with quattro as standard. It established the 3.0 TDI as the Allroad’s dominant powertrain.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -720,6 +721,7 @@
               {
                 "code": "BHK",
                 "title": "3.0L Diesel",
+                "familyHeading": "3.0 TDI V6 Family (2006-2018)",
                 "history": "The BHK succeeded the ASB in the C6 facelift, bringing higher power and slightly improved emissions while maintaining the bulletproof V6 TDI architecture.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -740,6 +742,7 @@
               {
                 "code": "CDUC / CDYB",
                 "title": "3.0L Diesel",
+                "familyHeading": "3.0 TDI V6 Family (2006-2018)",
                 "history": "The C7-generation TDI engines introduced ultra-clean emissions and improved efficiency. The CDUC (204hp) and CDYB (245hp) offered two power outputs for the same 3.0 V6 block.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -760,6 +763,7 @@
               {
                 "code": "CZVA / CRTE",
                 "title": "3.0L Diesel",
+                "familyHeading": "3.0 TDI V6 Family (2006-2018)",
                 "history": "The C7 facelift brought the 218hp CZVA and the highly sought-after 320hp BiTDI (CRTE) with sequential turbocharging. The CRTE remains the most searched Allroad diesel for replacement.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -780,6 +784,7 @@
               {
                 "code": "CAEA",
                 "title": "2.0L Diesel",
+                "familyHeading": "2.0 TDI Four-Cylinder Family (2008-2020)",
                 "history": "The CAEA was Audi’s first common-rail 2.0 TDI for the B8 A4 Allroad, replacing older unit injector engines. It prioritised refinement and fuel economy.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -800,6 +805,7 @@
               {
                 "code": "CAGA",
                 "title": "2.0L Diesel",
+                "familyHeading": "2.0 TDI Four-Cylinder Family (2008-2020)",
                 "history": "A higher-output version of the CAEA, the CAGA delivered 170hp, making the A4 Allroad significantly more capable for fully loaded touring.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -820,6 +826,7 @@
               {
                 "code": "CYKB / CYMC",
                 "title": "2.0L Diesel",
+                "familyHeading": "2.0 TDI Four-Cylinder Family (2008-2020)",
                 "history": "The B8.5 facelift brought these Euro 6-compliant 2.0 TDIs, available in 150hp (CYMC) and 190hp (CYKB) outputs. The 190hp version was the most powerful four-cylinder diesel in the A4 Allroad.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -840,6 +847,7 @@
               {
                 "code": "AKE / BAU",
                 "title": "2.5L Diesel",
+                "familyHeading": "2.5 TDI V6 Family (2000-2005)",
                 "history": "The 2.5 TDI V6 was the sole diesel option for the original C5 Allroad. With 180hp and a distinctive V6 rumble, it offered relaxed touring capability and remains popular in the enthusiast classic market.",
                 "fuel": "Diesel",
                 "size": "2.5 Litre",
@@ -865,6 +873,7 @@
               {
                 "code": "APB / AZA / BEL",
                 "title": "2.7L Petrol",
+                "familyHeading": "2.7T Twin-Turbo V6 (2000-2005)",
                 "history": "The 2.7T was the original C5 Allroad hero engine - a twin-turbo V6 producing 250hp. Enthusiasts still seek these engines for rebuilds with upgraded turbos, making it a premium specialist market.",
                 "fuel": "Petrol",
                 "size": "2.7 Litre",
@@ -885,6 +894,7 @@
               {
                 "code": "BAS / AYS",
                 "title": "4.2L Petrol",
+                "familyHeading": "4.2 V8 Family (2003-2011)",
                 "history": "The C6 A6 Allroad offered two petrol V6/V8 options: the 3.2 FSI (BVK, 255hp) and the 4.2 V8 (AUK, 335hp). Both are rare in the UK due to diesel dominance but have dedicated enthusiast followings.",
                 "fuel": "Petrol",
                 "size": "3.2 / 4.2 Litre",
@@ -909,6 +919,7 @@
               {
                 "code": "CDNC / CGQB",
                 "title": "2.0L Petrol",
+                "familyHeading": "2.0 TFSI Four-Cylinder Family (2008-2020)",
                 "history": "The 2.0 TFSI became the petrol backbone of the B8 A4 Allroad. With 211hp, it offered brisk performance and represented the only mainstream petrol option until the B9.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -929,6 +940,7 @@
               {
                 "code": "DETA",
                 "title": "2.0L Petrol",
+                "familyHeading": "2.0 TFSI Four-Cylinder Family (2008-2020)",
                 "history": "The B9 A4 Allroad’s 2.0 TFSI introduced 12V mild hybrid technology and variable valve lift. Output ranged from 190hp to 252hp depending on market, with quattro as standard.",
                 "fuel": "Petrol / MHEV",
                 "size": "2.0 Litre",
@@ -949,6 +961,7 @@
               {
                 "code": "CGXB / CRE",
                 "title": "3.0L Petrol",
+                "familyHeading": "Supercharged V6 Family (C7 A6 Allroad)",
                 "history": "The supercharged 3.0 TFSI was the performance petrol option for the C7 A6 Allroad. Delivering 310-333hp through a roots-type supercharger, it offered effortless torque without turbo lag.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -969,6 +982,7 @@
               {
                 "code": "CALA",
                 "title": "3.2L Petrol",
+                "familyHeading": "3.2 FSI V6 (B8 A4 Allroad)",
                 "history": "The 3.2 FSI was the range-topping petrol engine for the B8 A4 Allroad before the supercharged 3.0 TFSI arrived. With 265hp from a naturally aspirated V6, it offered a different character to the turbocharged 2.0 TFSI.",
                 "fuel": "Petrol",
                 "size": "3.2 Litre",
@@ -1020,6 +1034,8 @@
           "engines": [
             {
               "code": "ASB",
+              "title": "3.0L Diesel",
+              "familyHeading": "3.0 TDI V6 Family (2006-2018)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "230-233 hp",
@@ -1030,6 +1046,8 @@
             },
             {
               "code": "BHK",
+              "title": "3.0L Diesel",
+              "familyHeading": "3.0 TDI V6 Family (2006-2018)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "233 hp",
@@ -1040,6 +1058,8 @@
             },
             {
               "code": "CDUC / CDYB",
+              "title": "3.0L Diesel",
+              "familyHeading": "3.0 TDI V6 Family (2006-2018)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "204-245 hp",
@@ -1050,6 +1070,8 @@
             },
             {
               "code": "CZVA / CRTE",
+              "title": "3.0L Diesel",
+              "familyHeading": "3.0 TDI V6 Family (2006-2018)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "218-320 hp",
@@ -1060,6 +1082,8 @@
             },
             {
               "code": "CAEA",
+              "title": "2.0L Diesel",
+              "familyHeading": "2.0 TDI Four-Cylinder Family (2008-2020)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "143 hp",
@@ -1070,6 +1094,8 @@
             },
             {
               "code": "CAGA",
+              "title": "2.0L Diesel",
+              "familyHeading": "2.0 TDI Four-Cylinder Family (2008-2020)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "170 hp",
@@ -1080,6 +1106,8 @@
             },
             {
               "code": "CYKB / CYMC",
+              "title": "2.0L Diesel",
+              "familyHeading": "2.0 TDI Four-Cylinder Family (2008-2020)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "150-190 hp",
@@ -1090,6 +1118,8 @@
             },
             {
               "code": "AKE / BAU",
+              "title": "2.5L Diesel",
+              "familyHeading": "2.5 TDI V6 Family (2000-2005)",
               "fuel": "Diesel",
               "size": "2.5L",
               "power": "180 hp",
@@ -1107,6 +1137,8 @@
           "engines": [
             {
               "code": "APB / AZA / BEL",
+              "title": "2.7L Petrol",
+              "familyHeading": "2.7T Twin-Turbo V6 (2000-2005)",
               "fuel": "Petrol",
               "size": "2.7L",
               "power": "250 hp",
@@ -1117,6 +1149,8 @@
             },
             {
               "code": "BAS / AYS",
+              "title": "4.2L Petrol",
+              "familyHeading": "4.2 V8 Family (2003-2011)",
               "fuel": "Petrol",
               "size": "3.2 / 4.2L",
               "power": "255-335 hp",
@@ -1127,6 +1161,8 @@
             },
             {
               "code": "CDNC / CGQB",
+              "title": "2.0L Petrol",
+              "familyHeading": "2.0 TFSI Four-Cylinder Family (2008-2020)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "211 hp",
@@ -1137,6 +1173,8 @@
             },
             {
               "code": "DETA",
+              "title": "2.0L Petrol",
+              "familyHeading": "2.0 TFSI Four-Cylinder Family (2008-2020)",
               "fuel": "Petrol / MHEV",
               "size": "2.0L",
               "power": "190-252 hp",
@@ -1147,6 +1185,8 @@
             },
             {
               "code": "CGXB / CRE",
+              "title": "3.0L Petrol",
+              "familyHeading": "Supercharged V6 Family (C7 A6 Allroad)",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "310-333 hp",
@@ -1157,6 +1197,8 @@
             },
             {
               "code": "CALA",
+              "title": "3.2L Petrol",
+              "familyHeading": "3.2 FSI V6 (B8 A4 Allroad)",
               "fuel": "Petrol",
               "size": "3.2L",
               "power": "265 hp",
@@ -1671,6 +1713,11 @@
           "title": "Audi Allroad Diesel Engines",
           "description": "The 3.0 TDI V6 dominates Allroad diesel replacement demand, with the 2.0 TDI four-cylinder powering A4 models and the rare 2.5 V6 TDI found only in the original C5 generation.",
           "descriptor": "The 3.0 TDI V6 dominates Allroad diesel replacement demand, with the 2.0 TDI four-cylinder powering A4 models and the rare 2.5 V6 TDI found only in the original C5 generation.",
+          "familiesLabel": "Common Audi Allroad Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "ASB/BHK - 3.0 V6 TDI (C6 A6 Allroad, 230-233hp), injector failure common",
             "CDUC/CDYB - 3.0 V6 TDI (C7 A6 Allroad, 204-245hp), AdBlue system issues",
@@ -1708,6 +1755,11 @@
           "title": "Audi Allroad Petrol Engines",
           "description": "From the iconic 2.7T twin-turbo in the C5 to the supercharged 3.0 TFSI in the C7, Allroad petrol engines attract enthusiasts despite lower UK volumes than diesel.",
           "descriptor": "From the iconic 2.7T twin-turbo in the C5 to the supercharged 3.0 TFSI in the C7, Allroad petrol engines attract enthusiasts despite lower UK volumes than diesel.",
+          "familiesLabel": "Common Audi Allroad Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "APB/AZA/BEL - 2.7 twin-turbo V6 (C5 Allroad, 250hp), oil starvation kills turbos",
             "BAS/AYS - 4.2 V8 (C5 Allroad, 300hp), timing chain tensioner failure",
@@ -1746,6 +1798,11 @@
           "title": "Audi Allroad Mild Hybrid (MHEV) Engines",
           "description": "Late B9 A4 Allroad and C8 A6 Allroad models introduced 12V and 48V mild hybrid systems - electric assistance without plug-in capability.",
           "descriptor": "Late B9 A4 Allroad and C8 A6 Allroad models introduced 12V and 48V mild hybrid systems - electric assistance without plug-in capability.",
+          "familiesLabel": "Audi Allroad MHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "DETA - 2.0 TFSI with 12V belt alternator starter (B9 A4 Allroad, 2019-2022)",
             "Future C8 generation 3.0 TDI variants with 48V MHEV",

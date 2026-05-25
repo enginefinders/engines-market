@@ -69,7 +69,7 @@ export default function HomeHowItWorksSection({ steps }: Props) {
   const [activeStep, setActiveStep] = useState<number | null>(null);
 
   return (
-    <Section className="bg-[#f8fbff] py-7 sm:py-8 lg:py-10">
+    <Section id="how-it-works" className="bg-[#f8fbff] py-7 sm:py-8 lg:py-10">
       <Container className="max-w-[1180px]">
         <div className="mx-auto max-w-[860px] text-center">
           <div className="section-pill">

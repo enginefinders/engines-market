@@ -15,13 +15,13 @@
     "canonical": "/audi/q7"
   },
   "assets": {
-    "heroBg": "/images/brands/audi/models/audi-audi-q7-model-card.png",
+    "heroBg": "/images/brands/audi/models/audi-q7-model-card.png",
     "howItWorksBg": "/images/brands/audi/brand/audi-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/audi/brand/audi-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/audi/brand/audi-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/audi/brand/audi-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/audi/brand/audi-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/audi/models/audi-audi-q7-model-card.png"
+    "ctaImage": "/images/brands/audi/models/audi-q7-model-card.png"
   },
   "sections": {
     "hero": {
@@ -698,6 +698,7 @@
               {
                 "code": "CASA",
                 "title": "3.0L Diesel",
+                "familyHeading": "3.0 TDI V6 Engine Family (2006-2024)",
                 "history": "The original 3.0 TDI V6 that launched the Q7 in 2006. Piezoelectric injectors and variable turbine geometry set the standard for large luxury SUV diesel refinement.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -718,6 +719,7 @@
               {
                 "code": "CATA",
                 "title": "3.0L Diesel",
+                "familyHeading": "3.0 TDI V6 Engine Family (2006-2024)",
                 "history": "A revised Euro 5 version of the 3.0 TDI featuring improved injection timing and lower emissions. Fitted briefly during the 4L facelift transition.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -738,6 +740,7 @@
               {
                 "code": "CLZB",
                 "title": "3.0L Diesel",
+                "familyHeading": "3.0 TDI V6 Engine Family (2006-2024)",
                 "history": "The most common and highest-volume 3.0 TDI in UK Q7s. Euro 5 compliant with 245hp, this engine defined the 4L facelift era and remains heavily searched for replacement.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -758,6 +761,7 @@
               {
                 "code": "CRCA",
                 "title": "3.0L Diesel",
+                "familyHeading": "3.0 TDI V6 Engine Family (2006-2024)",
                 "history": "The first Euro 6 3.0 TDI for the 4M chassis, producing 272hp. Introduced AdBlue SCR technology and revised thermal management for lower emissions.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -778,6 +782,7 @@
               {
                 "code": "CRTD",
                 "title": "3.0L Diesel",
+                "familyHeading": "3.0 TDI V6 Engine Family (2006-2024)",
                 "history": "A lower-output Euro 6 3.0 TDI introduced alongside the CRCA, offering 218hp for fleet and economy-focused buyers during early 4M production.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -798,6 +803,7 @@
               {
                 "code": "CZZA",
                 "title": "3.0L Diesel",
+                "familyHeading": "3.0 TDI V6 Engine Family (2006-2024)",
                 "history": "A continuation of the 218hp tune for late 4M models, fitted to entry-level diesel Q7s before the 50 TDI naming convention took over.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -818,6 +824,7 @@
               {
                 "code": "DEWA",
                 "title": "3.0L Diesel",
+                "familyHeading": "3.0 TDI V6 Engine Family (2006-2024)",
                 "history": "The 286hp 50 TDI engine for the 4M facelift. Features twin sequential turbochargers and mild hybrid assistance for reduced lag and improved efficiency.",
                 "fuel": "Diesel (MHEV)",
                 "size": "3.0 Litre",
@@ -838,6 +845,7 @@
               {
                 "code": "BTR",
                 "title": "4.2L Diesel",
+                "familyHeading": "4.2 TDI V8 Engine Family (2007-2010)",
                 "history": "Audi’s 4.2-litre V8 TDI producing 340hp and 760Nm of torque. Delivered effortless towing capability and genuine performance SUV credentials before the SQ7 era.",
                 "fuel": "Diesel",
                 "size": "4.2 Litre",
@@ -858,6 +866,7 @@
               {
                 "code": "CCGA",
                 "title": "6.0L Diesel",
+                "familyHeading": "6.0 V12 TDI Engine Family (2008-2012)",
                 "history": "The legendary 6.0-litre V12 TDI producing 500hp and 1000Nm. The most powerful diesel SUV engine ever fitted to a production vehicle. Ultra-rare UK unicorn.",
                 "fuel": "Diesel",
                 "size": "6.0 Litre",
@@ -878,6 +887,7 @@
               {
                 "code": "DEWA",
                 "title": "4.0L Diesel (SQ7)",
+                "familyHeading": "4.0 TDI V8 Biturbo Family (2016-2024)",
                 "history": "The 4.0-litre V8 biturbo diesel with electric supercharger (EPC) delivering 435hp. Zero lag and 900Nm from just above idle. Fitted exclusively to SQ7 performance variants.",
                 "fuel": "Diesel",
                 "size": "4.0 Litre",
@@ -903,6 +913,7 @@
               {
                 "code": "BHK",
                 "title": "3.6L Petrol",
+                "familyHeading": "3.6 FSI V6 Engine Family (2006-2009)",
                 "history": "The entry-level petrol V6 for early 4L Q7s. FSI direct injection delivered 280hp but fuel economy limited UK uptake. Low volume, but highly specific replacement demand.",
                 "fuel": "Petrol",
                 "size": "3.6 Litre",
@@ -923,6 +934,7 @@
               {
                 "code": "CFSA",
                 "title": "3.0L Petrol",
+                "familyHeading": "3.0 TFSI Supercharged V6 Family (2010-2018)",
                 "history": "The supercharged 3.0 TFSI producing 333hp. Known for linear power delivery and reliability. Limited UK sales but loyal following among petrol SUV buyers.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -943,6 +955,7 @@
               {
                 "code": "CREC",
                 "title": "3.0L Petrol",
+                "familyHeading": "3.0 TFSI Supercharged V6 Family (2010-2018)",
                 "history": "An updated supercharged 3.0 TFSI for late 4L models with revised injection and thermal management. Very low UK registration numbers.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -963,6 +976,7 @@
               {
                 "code": "CZDA",
                 "title": "3.0L Petrol",
+                "familyHeading": "3.0 TFSI Turbocharged V6 Family (2018-2024)",
                 "history": "The turbocharged replacement for the supercharged 3.0 TFSI. Produces 340hp with improved efficiency. Fitted to 45 TFSI 4M facelift models.",
                 "fuel": "Petrol (MHEV)",
                 "size": "3.0 Litre",
@@ -983,6 +997,7 @@
               {
                 "code": "BAR",
                 "title": "4.2L Petrol",
+                "familyHeading": "4.2 FSI V8 Engine Family (2007-2009)",
                 "history": "The rare 4.2-litre V8 FSI producing 350hp. Extremely low UK sales volume. Replacement demand exists almost exclusively from collector and enthusiast owners.",
                 "fuel": "Petrol",
                 "size": "4.2 Litre",
@@ -1008,6 +1023,7 @@
               {
                 "code": "CZDA/EA825",
                 "title": "3.0L Petrol PHEV",
+                "familyHeading": "3.0 TFSI e Plug-in Hybrid Family (2019-2024)",
                 "history": "The 55 TFSI e plug-in hybrid combines a 340hp 3.0 TFSI petrol V6 with a 100kW electric motor for 381hp system output. Limited pure electric range but strong combined torque.",
                 "fuel": "Petrol PHEV",
                 "size": "3.0 Litre (combustion) + 17.3kWh battery",
@@ -1060,6 +1076,8 @@
           "engines": [
             {
               "code": "CASA",
+              "title": "3.0L Diesel",
+              "familyHeading": "3.0 TDI V6 Engine Family (2006-2024)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "233-240 hp",
@@ -1070,6 +1088,8 @@
             },
             {
               "code": "CATA",
+              "title": "3.0L Diesel",
+              "familyHeading": "3.0 TDI V6 Engine Family (2006-2024)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "240 hp",
@@ -1080,6 +1100,8 @@
             },
             {
               "code": "CLZB",
+              "title": "3.0L Diesel",
+              "familyHeading": "3.0 TDI V6 Engine Family (2006-2024)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "245 hp",
@@ -1090,6 +1112,8 @@
             },
             {
               "code": "CRCA",
+              "title": "3.0L Diesel",
+              "familyHeading": "3.0 TDI V6 Engine Family (2006-2024)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "272 hp",
@@ -1100,6 +1124,8 @@
             },
             {
               "code": "CRTD",
+              "title": "3.0L Diesel",
+              "familyHeading": "3.0 TDI V6 Engine Family (2006-2024)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "218 hp",
@@ -1110,6 +1136,8 @@
             },
             {
               "code": "CZZA",
+              "title": "3.0L Diesel",
+              "familyHeading": "3.0 TDI V6 Engine Family (2006-2024)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "218 hp",
@@ -1120,6 +1148,8 @@
             },
             {
               "code": "DEWA",
+              "title": "3.0L Diesel",
+              "familyHeading": "3.0 TDI V6 Engine Family (2006-2024)",
               "fuel": "Diesel (MHEV)",
               "size": "3.0L",
               "power": "286 hp",
@@ -1130,6 +1160,8 @@
             },
             {
               "code": "BTR",
+              "title": "4.2L Diesel",
+              "familyHeading": "4.2 TDI V8 Engine Family (2007-2010)",
               "fuel": "Diesel",
               "size": "4.2L",
               "power": "340 hp",
@@ -1140,6 +1172,8 @@
             },
             {
               "code": "CCGA",
+              "title": "6.0L Diesel",
+              "familyHeading": "6.0 V12 TDI Engine Family (2008-2012)",
               "fuel": "Diesel",
               "size": "6.0L",
               "power": "500 hp",
@@ -1150,6 +1184,8 @@
             },
             {
               "code": "DEWA",
+              "title": "4.0L Diesel (SQ7)",
+              "familyHeading": "4.0 TDI V8 Biturbo Family (2016-2024)",
               "fuel": "Diesel",
               "size": "4.0L",
               "power": "435 hp",
@@ -1167,6 +1203,8 @@
           "engines": [
             {
               "code": "BHK",
+              "title": "3.6L Petrol",
+              "familyHeading": "3.6 FSI V6 Engine Family (2006-2009)",
               "fuel": "Petrol",
               "size": "3.6L",
               "power": "280 hp",
@@ -1177,6 +1215,8 @@
             },
             {
               "code": "CFSA",
+              "title": "3.0L Petrol",
+              "familyHeading": "3.0 TFSI Supercharged V6 Family (2010-2018)",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "333 hp",
@@ -1187,6 +1227,8 @@
             },
             {
               "code": "CREC",
+              "title": "3.0L Petrol",
+              "familyHeading": "3.0 TFSI Supercharged V6 Family (2010-2018)",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "333 hp",
@@ -1197,6 +1239,8 @@
             },
             {
               "code": "CZDA",
+              "title": "3.0L Petrol",
+              "familyHeading": "3.0 TFSI Turbocharged V6 Family (2018-2024)",
               "fuel": "Petrol (MHEV)",
               "size": "3.0L",
               "power": "340 hp",
@@ -1207,6 +1251,8 @@
             },
             {
               "code": "BAR",
+              "title": "4.2L Petrol",
+              "familyHeading": "4.2 FSI V8 Engine Family (2007-2009)",
               "fuel": "Petrol",
               "size": "4.2L",
               "power": "350 hp",
@@ -1224,6 +1270,8 @@
           "engines": [
             {
               "code": "CZDA/EA825",
+              "title": "3.0L Petrol PHEV",
+              "familyHeading": "3.0 TFSI e Plug-in Hybrid Family (2019-2024)",
               "fuel": "Petrol PHEV",
               "size": "3.0L (combustion) + 17.3kWh battery",
               "power": "381 hp combined",
@@ -1767,6 +1815,11 @@
           "title": "Audi Q7 Diesel Engines",
           "description": "Diesel has dominated UK Q7 sales across both 4L (2006-2015) and 4M (2015-present) generations, with the 3.0 TDI V6 accounting for over 80% of replacement enquiries - particularly pre-2015 timing chain failure cars.",
           "descriptor": "Diesel has dominated UK Q7 sales across both 4L (2006-2015) and 4M (2015-present) generations, with the 3.0 TDI V6 accounting for over 80% of replacement enquiries - particularly pre-2015 timing chain failure cars.",
+          "familiesLabel": "Common Audi Q7 Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "CASA / CLZB - The 3.0 TDI V6 (240-245hp) that defines 4L replacement demand",
             "CRCA / CRTD / DEWA - Euro 6 3.0 TDI (218-286hp) with AdBlue system woes",
@@ -1799,6 +1852,11 @@
           "title": "Audi Q7 Petrol Engines",
           "description": "Petrol-powered Q7s are rare in the UK - typically under 10% of sales - but carry dedicated followings for those avoiding diesel complexity, spanning three V6 engines and one V8.",
           "descriptor": "Petrol-powered Q7s are rare in the UK - typically under 10% of sales - but carry dedicated followings for those avoiding diesel complexity, spanning three V6 engines and one V8.",
+          "familiesLabel": "Common Audi Q7 Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "BHK - 3.6 FSI V6 (280hp), entry-level petrol for early 4L (2006-2010)",
             "CFSA / CREC / CZDA - 3.0 TFSI V6 (333-340hp), supercharged then turbocharged",
@@ -1828,6 +1886,11 @@
           "title": "Audi Q7 Plug-in Hybrid (PHEV) Engines",
           "description": "The 55 TFSI e debuted on the 4M facelift (2019-2024), combining a turbocharged 3.0 TFSI V6 with a 100kW electric motor for 381hp and up to 28 miles of electric-only range.",
           "descriptor": "The 55 TFSI e debuted on the 4M facelift (2019-2024), combining a turbocharged 3.0 TFSI V6 with a 100kW electric motor for 381hp and up to 28 miles of electric-only range.",
+          "familiesLabel": "Audi Q7 PHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "CZDA / EA825 - 3.0 TFSI petrol V6 (340hp combustion portion)",
             "Electric drive unit - 100kW permanent magnet synchronous motor",
@@ -1852,6 +1915,11 @@
           "title": "Audi Q7 Mild Hybrid (MHEV) Engines",
           "description": "From 2019, the 50 TDI diesel and 45 TFSI petrol gained 48V mild hybrid assistance via a belt-driven starter-generator - not a full hybrid, but improves stop-start refinement.",
           "descriptor": "From 2019, the 50 TDI diesel and 45 TFSI petrol gained 48V mild hybrid assistance via a belt-driven starter-generator - not a full hybrid, but improves stop-start refinement.",
+          "familiesLabel": "Audi Q7 MHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "DEWA (50 TDI) - 3.0 V6 diesel with 48V BAS",
             "CZDA (45 TFSI) - 3.0 V6 petrol with 48V BAS",

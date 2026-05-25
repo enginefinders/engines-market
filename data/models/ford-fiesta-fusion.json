@@ -15,13 +15,13 @@
     "canonical": "/ford/fiesta-fusion"
   },
   "assets": {
-    "heroBg": "/images/brands/ford/models/ford-ford-fiesta-fusion-model-card.png",
+    "heroBg": "/images/brands/ford/models/ford-fiesta-fusion-model-card.png",
     "howItWorksBg": "/images/brands/ford/brand/ford-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/ford/brand/ford-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/ford/brand/ford-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/ford/brand/ford-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/ford/brand/ford-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/ford/models/ford-ford-fiesta-fusion-model-card.png"
+    "ctaImage": "/images/brands/ford/models/ford-fiesta-fusion-model-card.png"
   },
   "sections": {
     "hero": {
@@ -584,8 +584,9 @@
             "name": "Petrol Engines",
             "entries": [
               {
-                "code": "H4JC - 1.2",
-                "title": "5L Petrol",
+                "code": "H4JC",
+                "title": "1.25L Petrol",
+                "familyHeading": "Duratec Petrol Engines (2002-2012)",
                 "history": "Entry-level 1.25L Duratec unit for Style/Style+ trims; reliable SOHC design favoured by budget-conscious UK owners.",
                 "fuel": "Petrol",
                 "size": "1.25 Litre",
@@ -603,8 +604,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "FXJA - 1.",
-                "title": "4L Petrol",
+                "code": "FXJA",
+                "title": "1.4L Petrol",
+                "familyHeading": "Duratec Petrol Engines (2002-2012)",
                 "history": "Most-searched petrol code for UK Fiesta Fusion; versatile 1.4L Duratec balancing economy and affordability for daily drivers.",
                 "fuel": "Petrol",
                 "size": "1.4 Litre",
@@ -622,8 +624,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "HXJA - 1.",
-                "title": "6L Petrol",
+                "code": "HXJA",
+                "title": "1.6L Petrol",
+                "familyHeading": "Duratec Petrol Engines (2002-2012)",
                 "history": "Largest-capacity Duratec petrol for Fiesta Fusion Zetec; offered extra torque for drivers prioritising performance over economy.",
                 "fuel": "Petrol",
                 "size": "1.6 Litre",
@@ -646,8 +649,9 @@
             "name": "Diesel Engines",
             "entries": [
               {
-                "code": "F6JA - 1.",
-                "title": "4L Diesel",
+                "code": "F6JA",
+                "title": "1.4L Diesel",
+                "familyHeading": "Duratorq TDCi Diesel Engines (2002-2012)",
                 "history": "Dominant diesel code for high-mileage UK Fiesta Fusion owners; economical 1.4L TDCi delivering strong fuel efficiency.",
                 "fuel": "Diesel",
                 "size": "1.4 Litre",
@@ -665,8 +669,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "HHJA - 1.",
-                "title": "6L Diesel",
+                "code": "HHJA",
+                "title": "1.6L Diesel",
+                "familyHeading": "Duratorq TDCi Diesel Engines (2002-2012)",
                 "history": "Late-model 1.6L TDCi for final-spec Fiesta Fusion; higher output diesel for drivers needing extra torque and refinement.",
                 "fuel": "Diesel",
                 "size": "1.6 Litre",
@@ -716,7 +721,9 @@
           "failureNote": "Main replacement demand comes from timing-chain, cooling-system and performance thermal-management faults.",
           "engines": [
             {
-              "code": "H4JC - 1.2",
+              "code": "H4JC",
+              "title": "1.25L Petrol",
+              "familyHeading": "Duratec Petrol Engines (2002-2012)",
               "fuel": "Petrol",
               "size": "1.25L",
               "power": "75 hp",
@@ -726,7 +733,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "FXJA - 1.",
+              "code": "FXJA",
+              "title": "1.4L Petrol",
+              "familyHeading": "Duratec Petrol Engines (2002-2012)",
               "fuel": "Petrol",
               "size": "1.4L",
               "power": "80 hp",
@@ -736,7 +745,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "HXJA - 1.",
+              "code": "HXJA",
+              "title": "1.6L Petrol",
+              "familyHeading": "Duratec Petrol Engines (2002-2012)",
               "fuel": "Petrol",
               "size": "1.6L",
               "power": "100 hp",
@@ -753,7 +764,9 @@
           "failureNote": "Main replacement triggers are timing chain wear, EGR / cooling faults and turbo-control issues.",
           "engines": [
             {
-              "code": "F6JA - 1.",
+              "code": "F6JA",
+              "title": "1.4L Diesel",
+              "familyHeading": "Duratorq TDCi Diesel Engines (2002-2012)",
               "fuel": "Diesel",
               "size": "1.4L",
               "power": "68 hp",
@@ -763,7 +776,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "HHJA - 1.",
+              "code": "HHJA",
+              "title": "1.6L Diesel",
+              "familyHeading": "Duratorq TDCi Diesel Engines (2002-2012)",
               "fuel": "Diesel",
               "size": "1.6L",
               "power": "90 hp",
@@ -1155,6 +1170,11 @@
           "title": "Ford Fiesta Fusion Diesel Engines",
           "description": "Covering the full 2002-2012 production run, Ford's 1.4L and 1.6L Duratorq TDCi units dominate high-mileage replacement enquiries for their strong torque and highway fuel economy.",
           "descriptor": "Covering the full 2002-2012 production run, Ford's 1.4L and 1.6L Duratorq TDCi units dominate high-mileage replacement enquiries for their strong torque and highway fuel economy.",
+          "familiesLabel": "Common Ford Fiesta Fusion Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "F6JA/F6JB - 1.4L TDCi core unit across Style and Climate trims, high parts availability",
             "HHJA/G8DA - 1.6L TDCi late-spec Zetec unit, updated emissions mapping and DPF"
@@ -1182,6 +1202,11 @@
           "title": "Ford Fiesta Fusion Petrol Engines",
           "description": "Naturally aspirated SOHC Duratec petrol engines power the majority of UK registrations, favoured for low running costs, straightforward diagnostics and affordable replacement pricing.",
           "descriptor": "Naturally aspirated SOHC Duratec petrol engines power the majority of UK registrations, favoured for low running costs, straightforward diagnostics and affordable replacement pricing.",
+          "familiesLabel": "Common Ford Fiesta Fusion Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "H4JC/H4JD - 1.25L entry-level unit, reliable SOHC design for Style trims",
             "FXJA/FXJD - 1.4L dominant UK volume code, balanced performance and economy",

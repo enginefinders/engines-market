@@ -15,13 +15,13 @@
     "canonical": "/audi/a7"
   },
   "assets": {
-    "heroBg": "/images/brands/audi/models/audi-audi-a7-model-card.png",
+    "heroBg": "/images/brands/audi/models/audi-a7-model-card.png",
     "howItWorksBg": "/images/brands/audi/brand/audi-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/audi/brand/audi-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/audi/brand/audi-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/audi/brand/audi-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/audi/brand/audi-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/audi/models/audi-audi-a7-model-card.png"
+    "ctaImage": "/images/brands/audi/models/audi-a7-model-card.png"
   },
   "sections": {
     "hero": {
@@ -697,6 +697,7 @@
               {
                 "code": "CDUD",
                 "title": "3.0L Diesel",
+                "familyHeading": "3.0 TDI V6 Family (2010-2018)",
                 "history": "The dominant 245bhp 3.0 TDI code for early A7s; Euro 5 compliance, quattro standard, but affected by oil strainer recall.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -717,6 +718,7 @@
               {
                 "code": "CRTD",
                 "title": "3.0L Diesel",
+                "familyHeading": "3.0 TDI V6 Family (2010-2018)",
                 "history": "Euro 6 update to CDUD; refined emissions hardware but introduced AdBlue system complexity and NOx sensor vulnerabilities.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -737,6 +739,7 @@
               {
                 "code": "CLAA",
                 "title": "3.0L Diesel",
+                "familyHeading": "3.0 TDI V6 Family (2010-2018)",
                 "history": "Early-production 3.0 TDI code for 2011-2012 A7s; shared architecture with CDUD but distinct ECU mapping for first-gen chassis.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -757,6 +760,7 @@
               {
                 "code": "CRLB",
                 "title": "3.0L Diesel",
+                "familyHeading": "3.0 BiTDI V6 Performance Family (2014-2018)",
                 "history": "The twin-turbo 313bhp BiTDI code; complex sequential turbo setup delivers strong torque but higher failure cost and specialist rebuild requirement.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -777,6 +781,7 @@
               {
                 "code": "CZVB",
                 "title": "3.0L Diesel",
+                "familyHeading": "3.0 BiTDI V6 Performance Family (2014-2018)",
                 "history": "Late-model BiTDI code with 326bhp output; refined turbo control software but retains complex twin-turbo hardware vulnerability.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -797,6 +802,7 @@
               {
                 "code": "CLZB",
                 "title": "2.0L Diesel",
+                "familyHeading": "2.0 TDI Four-Cylinder Family (2015-2018)",
                 "history": "The Ultra-efficiency 190bhp four-cylinder diesel; lighter weight improves economy but lacks the refinement of the V6, with EGR-focused failure patterns.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -822,6 +828,7 @@
               {
                 "code": "CTSA",
                 "title": "3.0L Petrol",
+                "familyHeading": "3.0 TFSI Supercharged V6 Family (2010-2018)",
                 "history": "The first-generation supercharged 3.0 TFSI code; 300bhp output with roots-type supercharger, known for timing chain tensioner vulnerability on early units.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -842,6 +849,7 @@
               {
                 "code": "CREC",
                 "title": "3.0L Petrol",
+                "familyHeading": "3.0 TFSI Supercharged V6 Family (2010-2018)",
                 "history": "Refined high-output 333bhp TFSI code; updated supercharger and ECU mapping for S line models, but retains chain tensioner and carbon deposit concerns.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -862,6 +870,7 @@
               {
                 "code": "CWUC",
                 "title": "4.0L Petrol",
+                "familyHeading": "4.0 TFSI Twin-Turbo V8 Family (RS7 Only)",
                 "history": "The RS7-exclusive 560bhp twin-turbo V8; hot-vee turbo layout delivers brutal performance but complex packaging drives specialist rebuild costs.",
                 "fuel": "Petrol",
                 "size": "4.0 Litre",
@@ -882,6 +891,7 @@
               {
                 "code": "CJTC",
                 "title": "2.8L Petrol",
+                "familyHeading": "2.8 FSI Naturally Aspirated V6 (2010-2014)",
                 "history": "The entry-level naturally aspirated 204bhp V6; simpler design avoids turbo complexity but carbon buildup and oil consumption remain concerns.",
                 "fuel": "Petrol",
                 "size": "2.8 Litre",
@@ -907,6 +917,7 @@
               {
                 "code": "DZKA",
                 "title": "3.0L Petrol MHEV",
+                "familyHeading": "3.0 TFSI Mild Hybrid Family (2018+)",
                 "history": "The 4K-chassis mild-hybrid 3.0 V6; 48V belt-starter generator enables coasting and refined stop-start, but adds electrical complexity to replacement.",
                 "fuel": "MHEV (Petrol)",
                 "size": "3.0 Litre",
@@ -959,6 +970,8 @@
           "engines": [
             {
               "code": "CDUD",
+              "title": "3.0L Diesel",
+              "familyHeading": "3.0 TDI V6 Family (2010-2018)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "245 hp",
@@ -969,6 +982,8 @@
             },
             {
               "code": "CRTD",
+              "title": "3.0L Diesel",
+              "familyHeading": "3.0 TDI V6 Family (2010-2018)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "245 hp",
@@ -979,6 +994,8 @@
             },
             {
               "code": "CLAA",
+              "title": "3.0L Diesel",
+              "familyHeading": "3.0 TDI V6 Family (2010-2018)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "245 hp",
@@ -989,6 +1006,8 @@
             },
             {
               "code": "CRLB",
+              "title": "3.0L Diesel",
+              "familyHeading": "3.0 BiTDI V6 Performance Family (2014-2018)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "313 hp",
@@ -999,6 +1018,8 @@
             },
             {
               "code": "CZVB",
+              "title": "3.0L Diesel",
+              "familyHeading": "3.0 BiTDI V6 Performance Family (2014-2018)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "326 hp",
@@ -1009,6 +1030,8 @@
             },
             {
               "code": "CLZB",
+              "title": "2.0L Diesel",
+              "familyHeading": "2.0 TDI Four-Cylinder Family (2015-2018)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "190 hp",
@@ -1026,6 +1049,8 @@
           "engines": [
             {
               "code": "CTSA",
+              "title": "3.0L Petrol",
+              "familyHeading": "3.0 TFSI Supercharged V6 Family (2010-2018)",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "300-333 hp",
@@ -1036,6 +1061,8 @@
             },
             {
               "code": "CREC",
+              "title": "3.0L Petrol",
+              "familyHeading": "3.0 TFSI Supercharged V6 Family (2010-2018)",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "333 hp",
@@ -1046,6 +1073,8 @@
             },
             {
               "code": "CWUC",
+              "title": "4.0L Petrol",
+              "familyHeading": "4.0 TFSI Twin-Turbo V8 Family (RS7 Only)",
               "fuel": "Petrol",
               "size": "4.0L",
               "power": "560 hp",
@@ -1056,6 +1085,8 @@
             },
             {
               "code": "CJTC",
+              "title": "2.8L Petrol",
+              "familyHeading": "2.8 FSI Naturally Aspirated V6 (2010-2014)",
               "fuel": "Petrol",
               "size": "2.8L",
               "power": "204 hp",
@@ -1073,6 +1104,8 @@
           "engines": [
             {
               "code": "DZKA",
+              "title": "3.0L Petrol MHEV",
+              "familyHeading": "3.0 TFSI Mild Hybrid Family (2018+)",
               "fuel": "MHEV (Petrol)",
               "size": "3.0L",
               "power": "340 hp (combined system)",
@@ -1519,6 +1552,11 @@
           "title": "Audi A7 Diesel Engines",
           "description": "Diesel powerplants dominate the UK A7 market, spanning the 4G and 4K generations with V6 configurations that deliver high torque and motorway efficiency but require specialist servicing.",
           "descriptor": "Diesel powerplants dominate the UK A7 market, spanning the 4G and 4K generations with V6 configurations that deliver high torque and motorway efficiency but require specialist servicing.",
+          "familiesLabel": "Common Audi A7 Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "CDUD - 245bhp Euro 5 V6, dominant early 4G replacement unit",
             "CRTD - 245bhp Euro 6 V6, features complex AdBlue emissions systems",
@@ -1548,6 +1586,11 @@
           "title": "Audi A7 Petrol Engines",
           "description": "Petrol variants range from naturally aspirated entry models to supercharged V6s and twin-turbo V8 RS7 units, offering refined acceleration but demanding precise maintenance.",
           "descriptor": "Petrol variants range from naturally aspirated entry models to supercharged V6s and twin-turbo V8 RS7 units, offering refined acceleration but demanding precise maintenance.",
+          "familiesLabel": "Common Audi A7 Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "CTSA - 300bhp supercharged 3.0 TFSI, early 4G S line staple",
             "CREC - 333bhp high-output supercharged V6, later facelift refinement",
@@ -1576,6 +1619,11 @@
           "title": "Audi A7 Mild Hybrid (MHEV) Engines",
           "description": "The latest 4K chassis iterations integrate 48-volt mild-hybrid technology across both petrol and diesel V6s, enhancing start-stop smoothness and coasting efficiency.",
           "descriptor": "The latest 4K chassis iterations integrate 48-volt mild-hybrid technology across both petrol and diesel V6s, enhancing start-stop smoothness and coasting efficiency.",
+          "familiesLabel": "Audi A7 MHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "DZKA - 3.0 TFSI 45/55 variant with belt-driven starter-generator",
             "DKYA - 3.0 TDI 50/55 variant integrating electric assistance",

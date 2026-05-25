@@ -15,13 +15,13 @@
     "canonical": "/mercedes-benz/gle-class"
   },
   "assets": {
-    "heroBg": "/images/brands/mercedes-benz/models/mercedes-benz-mercedes-benz-gle-class-model-card.png",
+    "heroBg": "/images/brands/mercedes-benz/models/mercedes-benz-gle-class-model-card.png",
     "howItWorksBg": "/images/brands/mercedes-benz/brand/mercedes-benz-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/mercedes-benz/models/mercedes-benz-mercedes-benz-gle-class-model-card.png"
+    "ctaImage": "/images/brands/mercedes-benz/models/mercedes-benz-gle-class-model-card.png"
   },
   "sections": {
     "hero": {
@@ -763,6 +763,7 @@
               {
                 "code": "OM642",
                 "title": "3.0L Diesel",
+                "familyHeading": "OM642 V6 Diesel Family (2015-2019)",
                 "history": "Mercedes’ most prolific V6 diesel, fitted to the W166 GLE. Refined and torquey, but notorious for oil seal failures that generate high replacement demand.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -783,6 +784,7 @@
               {
                 "code": "OM656",
                 "title": "2.9L Diesel",
+                "familyHeading": "OM656 Inline-Six Diesel Family (2019-2025)",
                 "history": "Mercedes’ advanced inline-six diesel introduced with the W167 GLE. Twin-turbocharged with stepped bowl combustion, delivering exceptional refinement and power.",
                 "fuel": "Diesel",
                 "size": "2.9 Litre",
@@ -803,6 +805,7 @@
               {
                 "code": "OM654",
                 "title": "2.0L Diesel",
+                "familyHeading": "OM654 Four-Cylinder Diesel Family (2019-2025)",
                 "history": "Mercedes’ modular four-cylinder diesel launched as the efficient entry point for the W167 GLE. Features stepped bowl combustion and Nissan’s variable geometry turbocharger.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -823,6 +826,7 @@
               {
                 "code": "OM651",
                 "title": "2.1L Diesel",
+                "familyHeading": "OM651 Four-Cylinder Diesel Family (2015-2019)",
                 "history": "The workhorse diesel that powered entry-level W166 GLE models. High-volume unit but suffers from well-documented timing chain vulnerabilities at higher mileages.",
                 "fuel": "Diesel",
                 "size": "2.1 Litre",
@@ -848,6 +852,7 @@
               {
                 "code": "M276 DE30",
                 "title": "3.0L Petrol (Biturbo)",
+                "familyHeading": "M276 V6 Petrol Family (2015-2019)",
                 "history": "The 60-degree V6 that replaced the M272, using third-generation direct injection and piezo injectors. Fitted to mid-range W166 petrol GLE models.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -868,6 +873,7 @@
               {
                 "code": "M276 DE35",
                 "title": "3.5L Petrol (Naturally Aspirated)",
+                "familyHeading": "M276 V6 Petrol Family (2015-2019)",
                 "history": "The larger-capacity naturally aspirated V6 from the M276 family, fitted to base-spec W166 GLE petrol variants before turbocharging became standard.",
                 "fuel": "Petrol",
                 "size": "3.5 Litre",
@@ -876,21 +882,11 @@
                 "compatibleVariants": [
                   "GLE 350, GLE 350 4MATIC"
                 ],
-                "commonFailures": [],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "Balance shaft issues similar to",
-                "title": "3.0L variant",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
+                "commonFailures": [
+                  "Balance shaft issues similar to 3.0L variant",
+                  "Timing chain tensioner wear",
+                  "Valve train noise on cold start"
+                ],
                 "avgRebuiltPrice": "£2,800 - £3,800",
                 "cta": "Get quotes for M276 DE35 Mercedes Benz GLE Class engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -898,6 +894,7 @@
               {
                 "code": "M256",
                 "title": "3.0L MHEV Petrol",
+                "familyHeading": "M256 Inline-Six Petrol Family (2019-2025)",
                 "history": "Mercedes’ modular straight-six introduced with the W167 GLE featuring integrated 48V mild hybrid system (ISG) and electric auxiliary compressor. Represents a technological leap forward.",
                 "fuel": "MHEV Petrol",
                 "size": "3.0 Litre",
@@ -918,6 +915,7 @@
               {
                 "code": "M274",
                 "title": "2.0L PHEV Petrol (GLE 400e)",
+                "familyHeading": "M274 Four-Cylinder Petrol Family (2020-2025)",
                 "history": "Turbocharged four-cylinder petrol engine adapted for plug-in hybrid duty in the W167 GLE 400e, paired with a 31.2kWh battery and electric motor.",
                 "fuel": "PHEV Petrol",
                 "size": "2.0 Litre",
@@ -938,6 +936,7 @@
               {
                 "code": "M157",
                 "title": "5.5L V8 Petrol (W166 GLE 63)",
+                "familyHeading": "AMG V8 Petrol Families",
                 "history": "The original AMG V8 for the W166 GLE 63, producing dramatic power with twin turbochargers mounted in the V. Discontinued with the W167 generation.",
                 "fuel": "Petrol",
                 "size": "5.5 Litre",
@@ -958,6 +957,7 @@
               {
                 "code": "M177",
                 "title": "4.0L V8 Petrol (W167 GLE 63 / 63 S)",
+                "familyHeading": "AMG V8 Petrol Families",
                 "history": "The hot-vee V8 that powers the W167 GLE 63 and 63 S, with turbochargers mounted inside the V for reduced lag. Produces up to 612bhp in S guise.",
                 "fuel": "Petrol",
                 "size": "4.0 Litre",
@@ -978,6 +978,7 @@
               {
                 "code": "M176",
                 "title": "4.0L V8 Petrol (GLE 580)",
+                "familyHeading": "AMG V8 Petrol Families",
                 "history": "The non-AMG 4.0-litre V8 fitted to the GLE 580, offering near-AMG power without the full performance tuning. Cylinder deactivation for efficiency.",
                 "fuel": "MHEV Petrol",
                 "size": "4.0 Litre",
@@ -1003,6 +1004,7 @@
               {
                 "code": "OM654 PHEV",
                 "title": "2.0L PHEV Diesel (GLE 350de)",
+                "familyHeading": "PHEV Diesel Hybrid (2020-2025)",
                 "history": "The diesel plug-in hybrid variant of the W167 GLE, combining the OM654 diesel engine with a 100kW electric motor and 31.2kWh battery for up to 68 miles of electric range.",
                 "fuel": "PHEV Diesel",
                 "size": "2.0 Litre",
@@ -1055,6 +1057,8 @@
           "engines": [
             {
               "code": "OM642",
+              "title": "3.0L Diesel",
+              "familyHeading": "OM642 V6 Diesel Family (2015-2019)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "258 hp (350d)",
@@ -1065,6 +1069,8 @@
             },
             {
               "code": "OM656",
+              "title": "2.9L Diesel",
+              "familyHeading": "OM656 Inline-Six Diesel Family (2019-2025)",
               "fuel": "Diesel",
               "size": "2.9L",
               "power": "272-330 hp",
@@ -1075,6 +1081,8 @@
             },
             {
               "code": "OM654",
+              "title": "2.0L Diesel",
+              "familyHeading": "OM654 Four-Cylinder Diesel Family (2019-2025)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "245 hp (300d)",
@@ -1085,6 +1093,8 @@
             },
             {
               "code": "OM651",
+              "title": "2.1L Diesel",
+              "familyHeading": "OM651 Four-Cylinder Diesel Family (2015-2019)",
               "fuel": "Diesel",
               "size": "2.1L",
               "power": "204 hp (250d)",
@@ -1102,6 +1112,8 @@
           "engines": [
             {
               "code": "M276 DE30",
+              "title": "3.0L Petrol (Biturbo)",
+              "familyHeading": "M276 V6 Petrol Family (2015-2019)",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "333 hp (GLE 400)",
@@ -1112,26 +1124,20 @@
             },
             {
               "code": "M276 DE35",
+              "title": "3.5L Petrol (Naturally Aspirated)",
+              "familyHeading": "M276 V6 Petrol Family (2015-2019)",
               "fuel": "Petrol",
               "size": "3.5L",
               "power": "306 hp (GLE 350)",
               "compatibleModels": "GLE 350, GLE 350 4MATIC",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "Balance shaft issues similar to",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
               "avgRebuiltPrice": "£2,800 - £3,800",
               "cta": "Get quotes for M276 DE35 Mercedes Benz GLE Class engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
               "code": "M256",
+              "title": "3.0L MHEV Petrol",
+              "familyHeading": "M256 Inline-Six Petrol Family (2019-2025)",
               "fuel": "MHEV Petrol",
               "size": "3.0L",
               "power": "367-435 hp (GLE 450 / GLE 53 AMG)",
@@ -1142,6 +1148,8 @@
             },
             {
               "code": "M274",
+              "title": "2.0L PHEV Petrol (GLE 400e)",
+              "familyHeading": "M274 Four-Cylinder Petrol Family (2020-2025)",
               "fuel": "PHEV Petrol",
               "size": "2.0L",
               "power": "381 hp (combined system)",
@@ -1152,6 +1160,8 @@
             },
             {
               "code": "M157",
+              "title": "5.5L V8 Petrol (W166 GLE 63)",
+              "familyHeading": "AMG V8 Petrol Families",
               "fuel": "Petrol",
               "size": "5.5L",
               "power": "585 hp (GLE 63 S)",
@@ -1162,6 +1172,8 @@
             },
             {
               "code": "M177",
+              "title": "4.0L V8 Petrol (W167 GLE 63 / 63 S)",
+              "familyHeading": "AMG V8 Petrol Families",
               "fuel": "Petrol",
               "size": "4.0L",
               "power": "571-612 hp",
@@ -1172,6 +1184,8 @@
             },
             {
               "code": "M176",
+              "title": "4.0L V8 Petrol (GLE 580)",
+              "familyHeading": "AMG V8 Petrol Families",
               "fuel": "MHEV Petrol",
               "size": "4.0L",
               "power": "483 hp",
@@ -1189,6 +1203,8 @@
           "engines": [
             {
               "code": "OM654 PHEV",
+              "title": "2.0L PHEV Diesel (GLE 350de)",
+              "familyHeading": "PHEV Diesel Hybrid (2020-2025)",
               "fuel": "PHEV Diesel",
               "size": "2.0L",
               "power": "315 hp (combined system)",
@@ -1791,6 +1807,11 @@
           "title": "Mercedes Benz GLE Class Diesel Engines",
           "description": "Diesel engines dominate UK GLE replacement enquiries, spanning the OM651 four-cylinder in W166 250d models through to the OM642 V6 in the 350d and the advanced OM656 inline-six in W167 400d variants.",
           "descriptor": "Diesel engines dominate UK GLE replacement enquiries, spanning the OM651 four-cylinder in W166 250d models through to the OM642 V6 in the 350d and the advanced OM656 inline-six in W167 400d variants.",
+          "familiesLabel": "Common Mercedes Benz GLE Class Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "OM651 - 2.1-litre four-cylinder, entry-level W166 GLE 250d, known for timing chain stretch at higher mileage",
             "OM642 - 3.0-litre V6, backbone of W166 GLE 350d, notorious for turbo oil seal failure and smoking exhaust",
@@ -1820,6 +1841,11 @@
           "title": "Mercedes Benz GLE Class Petrol Engines",
           "description": "Petrol GLE models range from naturally aspirated V6 units in the W166 generation through to advanced mild-hybrid inline-six engines and fire-breathing AMG V8s in the current W167 range.",
           "descriptor": "Petrol GLE models range from naturally aspirated V6 units in the W166 generation through to advanced mild-hybrid inline-six engines and fire-breathing AMG V8s in the current W167 range.",
+          "familiesLabel": "Common Mercedes Benz GLE Class Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "M276 DE35 - 3.5-litre naturally aspirated V6, W166 GLE 350, balance shaft and timing chain guide wear",
             "M276 DE30 - 3.0-litre biturbo V6, W166 GLE 400, timing chain degradation from 80k miles",
@@ -1854,6 +1880,11 @@
           "title": "Mercedes Benz GLE Class Plug-In Hybrid (PHEV) Engines",
           "description": "Mercedes introduced PHEV variants to the W167 GLE range in 2020, offering diesel-electric (350de) and petrol-electric (400e) configurations with up to 68 miles of electric-only range.",
           "descriptor": "Mercedes introduced PHEV variants to the W167 GLE range in 2020, offering diesel-electric (350de) and petrol-electric (400e) configurations with up to 68 miles of electric-only range.",
+          "familiesLabel": "Mercedes Benz GLE Class PHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "OM654 - 2.0-litre diesel PHEV (GLE 350de), combined 315hp",
             "M274 - 2.0-litre petrol PHEV (GLE 400e), combined 381hp",

@@ -15,13 +15,13 @@
     "canonical": "/mercedes-benz/v-class"
   },
   "assets": {
-    "heroBg": "/images/brands/mercedes-benz/models/mercedes-benz-mercedes-benz-v-class-model-card.png",
+    "heroBg": "/images/brands/mercedes-benz/models/mercedes-benz-v-class-model-card.png",
     "howItWorksBg": "/images/brands/mercedes-benz/brand/mercedes-benz-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/mercedes-benz/models/mercedes-benz-mercedes-benz-v-class-model-card.png"
+    "ctaImage": "/images/brands/mercedes-benz/models/mercedes-benz-v-class-model-card.png"
   },
   "sections": {
     "hero": {
@@ -756,6 +756,7 @@
               {
                 "code": "OM651.911",
                 "title": "2.1L Diesel",
+                "familyHeading": "OM651 Series (2014-Present)",
                 "history": "Dominant W447 fleet unit, delivering refined common-rail diesel performance and Euro 6 compliance for UK commercial operators.",
                 "fuel": "Diesel",
                 "size": "2.1 Litre",
@@ -776,6 +777,7 @@
               {
                 "code": "OM651.941",
                 "title": "2.1L Diesel",
+                "familyHeading": "OM651 Series (2014-Present)",
                 "history": "Premium high-output variant powering the top-spec V300d, balancing fleet-grade durability with enhanced towing capability.",
                 "fuel": "Diesel",
                 "size": "2.1 Litre",
@@ -796,6 +798,7 @@
               {
                 "code": "OM651.901",
                 "title": "2.1L Diesel",
+                "familyHeading": "OM651 Series (2014-Present)",
                 "history": "Entry-level W447 diesel optimised for economy, widely specified for high-mileage shuttle and courier operations.",
                 "fuel": "Diesel",
                 "size": "2.1 Litre",
@@ -816,6 +819,7 @@
               {
                 "code": "OM651.921",
                 "title": "2.1L Diesel",
+                "familyHeading": "OM651 Series (2014-Present)",
                 "history": "Mid-range performance tune bridging economy and power, heavily favoured by private family buyers and premium transfer fleets.",
                 "fuel": "Diesel",
                 "size": "2.1 Litre",
@@ -836,6 +840,7 @@
               {
                 "code": "OM642.920",
                 "title": "3.0L Diesel",
+                "familyHeading": "OM642 Series (2006-2014)",
                 "history": "Flagship V6 diesel for premium Viano and V Class, offering smooth power delivery and strong torque for executive travel.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -856,6 +861,7 @@
               {
                 "code": "OM646.980",
                 "title": "2.2L Diesel",
+                "familyHeading": "OM646 Series (2003-2007)",
                 "history": "Transition unit bridging the W638 and W639 generations, known for robust mechanical internals before widespread electronics.",
                 "fuel": "Diesel",
                 "size": "2.2 Litre",
@@ -876,6 +882,7 @@
               {
                 "code": "OM611.978",
                 "title": "2.2L Diesel",
+                "familyHeading": "OM611 Series (1996-2003)",
                 "history": "Original W638 commercial diesel, prized for mechanical simplicity and exceptional longevity in heavy-duty shuttle service.",
                 "fuel": "Diesel",
                 "size": "2.2 Litre",
@@ -901,6 +908,7 @@
               {
                 "code": "M272.951",
                 "title": "3.5L Petrol",
+                "familyHeading": "M272 Series (2003-2014)",
                 "history": "Smooth V6 petrol option for early W639 Viano, delivering quiet refinement for private owners and chauffeur-driven fleets.",
                 "fuel": "Petrol",
                 "size": "3.5 Litre",
@@ -921,6 +929,7 @@
               {
                 "code": "M111.979",
                 "title": "2.3L Petrol",
+                "familyHeading": "M111 Series (1996-2003)",
                 "history": "Entry W638 petrol unit offering straightforward servicing and reliable daily transport for light commercial and private use.",
                 "fuel": "Petrol",
                 "size": "2.3 Litre",
@@ -972,6 +981,8 @@
           "engines": [
             {
               "code": "OM651.911",
+              "title": "2.1L Diesel",
+              "familyHeading": "OM651 Series (2014-Present)",
               "fuel": "Diesel",
               "size": "2.1L",
               "power": "136-163 hp",
@@ -982,6 +993,8 @@
             },
             {
               "code": "OM651.941",
+              "title": "2.1L Diesel",
+              "familyHeading": "OM651 Series (2014-Present)",
               "fuel": "Diesel",
               "size": "2.1L",
               "power": "240 hp",
@@ -992,6 +1005,8 @@
             },
             {
               "code": "OM651.901",
+              "title": "2.1L Diesel",
+              "familyHeading": "OM651 Series (2014-Present)",
               "fuel": "Diesel",
               "size": "2.1L",
               "power": "136 hp",
@@ -1002,6 +1017,8 @@
             },
             {
               "code": "OM651.921",
+              "title": "2.1L Diesel",
+              "familyHeading": "OM651 Series (2014-Present)",
               "fuel": "Diesel",
               "size": "2.1L",
               "power": "190-204 hp",
@@ -1012,6 +1029,8 @@
             },
             {
               "code": "OM642.920",
+              "title": "3.0L Diesel",
+              "familyHeading": "OM642 Series (2006-2014)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "224 hp",
@@ -1022,6 +1041,8 @@
             },
             {
               "code": "OM646.980",
+              "title": "2.2L Diesel",
+              "familyHeading": "OM646 Series (2003-2007)",
               "fuel": "Diesel",
               "size": "2.2L",
               "power": "150 hp",
@@ -1032,6 +1053,8 @@
             },
             {
               "code": "OM611.978",
+              "title": "2.2L Diesel",
+              "familyHeading": "OM611 Series (1996-2003)",
               "fuel": "Diesel",
               "size": "2.2L",
               "power": "143 hp",
@@ -1049,6 +1072,8 @@
           "engines": [
             {
               "code": "M272.951",
+              "title": "3.5L Petrol",
+              "familyHeading": "M272 Series (2003-2014)",
               "fuel": "Petrol",
               "size": "3.5L",
               "power": "258 hp",
@@ -1059,6 +1084,8 @@
             },
             {
               "code": "M111.979",
+              "title": "2.3L Petrol",
+              "familyHeading": "M111 Series (1996-2003)",
               "fuel": "Petrol",
               "size": "2.3L",
               "power": "143 hp",
@@ -1465,6 +1492,11 @@
           "title": "Mercedes Benz V Class Diesel Engines",
           "description": "Diesel power dominates the UK V Class fleet across all generations, with the OM651 2.1L four-cylinder and OM642 3.0L V6 driving the vast majority of commercial replacement enquiries.",
           "descriptor": "Diesel power dominates the UK V Class fleet across all generations, with the OM651 2.1L four-cylinder and OM642 3.0L V6 driving the vast majority of commercial replacement enquiries.",
+          "familiesLabel": "Common Mercedes Benz V Class Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "OM651.901/911/921/941 - dominant W447 2.1L units powering V200d to V300d, timing chain tensioner concerns on early builds",
             "OM642.901/920 - premium 3.0L V6 for V300 CDI and Viano, oil cooler seal leaks the key failure point",
@@ -1494,6 +1526,11 @@
           "title": "Mercedes Benz V Class Petrol Engines",
           "description": "Petrol V Class variants represent a niche UK specification, primarily favoured by private owners seeking quieter urban mobility without diesel emissions system complexity.",
           "descriptor": "Petrol V Class variants represent a niche UK specification, primarily favoured by private owners seeking quieter urban mobility without diesel emissions system complexity.",
+          "familiesLabel": "Common Mercedes Benz V Class Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "M274.920 - 2.0L turbo four-cylinder for W447 V260, direct injection with water-cooled turbo",
             "M272.951 - smooth 3.5L V6 for W639 Viano, balance shaft wear the documented weak point",
@@ -1522,6 +1559,11 @@
           "title": "Mercedes Benz V Class Hybrid / Electrified Engines",
           "description": "No official hybrid, plug-in hybrid or pure electric Mercedes Benz V Class variants were sold in the UK market; all replacement enquiries relate to conventional diesel or petrol combustion engines.",
           "descriptor": "No official hybrid, plug-in hybrid or pure electric Mercedes Benz V Class variants were sold in the UK market; all replacement enquiries relate to conventional diesel or petrol combustion engines.",
+          "familiesLabel": "Mercedes Benz V Class Electrified Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "None available - UK V Class range exclusively conventional diesel and petrol powertrains",
             "All UK V Class models use traditional internal combustion engines with manual or automatic transmissions",

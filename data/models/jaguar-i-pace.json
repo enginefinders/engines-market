@@ -15,13 +15,13 @@
     "canonical": "/jaguar/i-pace"
   },
   "assets": {
-    "heroBg": "/images/brands/jaguar/models/jaguar-jaguar-i-pace-model-card.png",
+    "heroBg": "/images/brands/jaguar/models/jaguar-i-pace-model-card.png",
     "howItWorksBg": "/images/brands/jaguar/brand/jaguar-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/jaguar/brand/jaguar-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/jaguar/brand/jaguar-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/jaguar/brand/jaguar-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/jaguar/brand/jaguar-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/jaguar/models/jaguar-jaguar-i-pace-model-card.png"
+    "ctaImage": "/images/brands/jaguar/models/jaguar-i-pace-model-card.png"
   },
   "sections": {
     "hero": {
@@ -712,8 +712,72 @@
             "name": "Hybrid / Electrified Engines",
             "entries": [
               {
+                "code": "J9D3-75762-AL",
+                "title": "90kWh Electric",
+                "familyHeading": "X590 Platform Electric Drive Units (2018-2026)",
+                "history": "Primary OEM front EDU code for X590 I-Pace; sealed motor-inverter assembly requiring specialist calibration.",
+                "fuel": "Electric (BEV)",
+                "size": "90kWh Battery System",
+                "power": "400hp (294kW) combined",
+                "years": "2018-2026",
+                "compatibleVariants": [
+                  "S, SE, HSE, R-Dynamic SE, R-Dynamic HSE, First Edition, Black Edition"
+                ],
+                "commonFailures": [
+                  "Inverter capacitor degradation (early units, 40-60k miles)",
+                  "Front bearing wear causing whine (TSB-EL-2021-001, 50-80k miles)",
+                  "Coolant seal leakage leading to thermal shutdown"
+                ],
+                "avgRebuiltPrice": "£2,400 - £4,800",
+                "cta": "Get quotes for J9D3-75762-AL Jaguar I-Pace engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              },
+              {
+                "code": "J9D3-75762-AF",
+                "title": "90kWh Electric",
+                "familyHeading": "X590 Platform Electric Drive Units (2018-2026)",
+                "history": "Early-production front EDU code; requires capacitor kit LR987654 upgrade per TSB-EL-2019-005 for reliability.",
+                "fuel": "Electric (BEV)",
+                "size": "90kWh Battery System",
+                "power": "400hp (294kW) combined",
+                "years": "2018-2020",
+                "compatibleVariants": [
+                  "S, SE, HSE, First Edition"
+                ],
+                "commonFailures": [
+                  "Inverter capacitor failure causing power loss (30-50k miles)",
+                  "Front motor bearing premature wear (TSB-EL-2021-001)",
+                  "Software calibration drift requiring Pathfinder reset"
+                ],
+                "avgRebuiltPrice": "£2,195 - £4,200",
+                "cta": "Get quotes for J9D3-75762-AF Jaguar I-Pace engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              },
+              {
+                "code": "J9D3-75762-AG",
+                "title": "90kWh Electric",
+                "familyHeading": "X590 Platform Electric Drive Units (2018-2026)",
+                "history": "Revised late-spec front EDU with upgraded hybrid bearings and improved thermal management for enhanced longevity.",
+                "fuel": "Electric (BEV)",
+                "size": "90kWh Battery System",
+                "power": "400hp (294kW) combined",
+                "years": "2021-2026",
+                "compatibleVariants": [
+                  "S, SE, HSE, R-Dynamic SE, R-Dynamic HSE, Black Edition, 2021+ Facelift models"
+                ],
+                "commonFailures": [
+                  "Rear motor encoder position sensor fault (60k+ miles)",
+                  "Power electronics module thermal stress (80k+ miles)",
+                  "Coolant pump degradation affecting thermal shutdown protection"
+                ],
+                "avgRebuiltPrice": "£2,800 - £5,200",
+                "cta": "Get quotes for J9D3-75762-AG Jaguar I-Pace engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              },
+              {
                 "code": "EMF-IPACE",
                 "title": "90kWh Electric",
+                "familyHeading": "X590 Platform Electric Drive Units (2018-2026)",
                 "history": "Front-position permanent magnet synchronous motor code; paired with rear EMR-IPACE for dual-motor AWD torque vectoring.",
                 "fuel": "Electric (BEV)",
                 "size": "90kWh Battery System",
@@ -734,6 +798,7 @@
               {
                 "code": "EMR-IPACE",
                 "title": "90kWh Electric",
+                "familyHeading": "X590 Platform Electric Drive Units (2018-2026)",
                 "history": "Technical specification code confirming permanent magnet synchronous motor type; used for performance verification and compatibility matching.",
                 "fuel": "Electric (BEV)",
                 "size": "90kWh Battery System",
@@ -795,7 +860,45 @@
           "failureNote": "Main replacement demand comes from cooling, battery-support and high-voltage control faults.",
           "engines": [
             {
+              "code": "J9D3-75762-AL",
+              "title": "90kWh Electric",
+              "familyHeading": "X590 Platform Electric Drive Units (2018-2026)",
+              "fuel": "Electric (BEV)",
+              "size": "90kWh Battery System",
+              "power": "400hp (294kW) combined",
+              "compatibleModels": "S, SE, HSE, R-Dynamic SE, R-Dynamic HSE, First Edition, Black Edition",
+              "avgRebuiltPrice": "£2,400 - £4,800",
+              "cta": "Get quotes for J9D3-75762-AL Jaguar I-Pace engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            },
+            {
+              "code": "J9D3-75762-AF",
+              "title": "90kWh Electric",
+              "familyHeading": "X590 Platform Electric Drive Units (2018-2026)",
+              "fuel": "Electric (BEV)",
+              "size": "90kWh Battery System",
+              "power": "400hp (294kW) combined",
+              "compatibleModels": "S, SE, HSE, First Edition",
+              "avgRebuiltPrice": "£2,195 - £4,200",
+              "cta": "Get quotes for J9D3-75762-AF Jaguar I-Pace engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            },
+            {
+              "code": "J9D3-75762-AG",
+              "title": "90kWh Electric",
+              "familyHeading": "X590 Platform Electric Drive Units (2018-2026)",
+              "fuel": "Electric (BEV)",
+              "size": "90kWh Battery System",
+              "power": "400hp (294kW) combined",
+              "compatibleModels": "S, SE, HSE, R-Dynamic SE, R-Dynamic HSE, Black Edition, 2021+ Facelift models",
+              "avgRebuiltPrice": "£2,800 - £5,200",
+              "cta": "Get quotes for J9D3-75762-AG Jaguar I-Pace engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            },
+            {
               "code": "EMF-IPACE",
+              "title": "90kWh Electric",
+              "familyHeading": "X590 Platform Electric Drive Units (2018-2026)",
               "fuel": "Electric (BEV)",
               "size": "90kWh Battery System",
               "power": "200hp (147kW) per motor",
@@ -806,6 +909,8 @@
             },
             {
               "code": "EMR-IPACE",
+              "title": "90kWh Electric",
+              "familyHeading": "X590 Platform Electric Drive Units (2018-2026)",
               "fuel": "Electric (BEV)",
               "size": "90kWh Battery System",
               "power": "400hp (294kW) combined system",
@@ -1116,6 +1221,11 @@
           "title": "Jaguar I-Pace Electric (BEV) Powertrains",
           "description": "The Jaguar I-Pace X590 platform is exclusively pure battery electric, using dual permanent magnet synchronous motors with a 90kWh battery delivering 400hp combined output across all UK trim levels from 2018-2026.",
           "descriptor": "The Jaguar I-Pace X590 platform is exclusively pure battery electric, using dual permanent magnet synchronous motors with a 90kWh battery delivering 400hp combined output across all UK trim levels from 2018-2026.",
+          "familiesLabel": "Common Jaguar I-Pace Electric (BEV) Powertrains Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [],
           "foundIn": [
             "S, SE, HSE, R-Dynamic SE, R-Dynamic HSE, First Edition, Black Edition (X590 chassis, 2018-2026)"

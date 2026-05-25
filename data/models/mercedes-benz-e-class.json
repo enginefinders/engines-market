@@ -15,13 +15,13 @@
     "canonical": "/mercedes-benz/e-class"
   },
   "assets": {
-    "heroBg": "/images/brands/mercedes-benz/models/mercedes-benz-mercedes-benz-e-class-model-card.png",
+    "heroBg": "/images/brands/mercedes-benz/models/mercedes-benz-e-class-model-card.png",
     "howItWorksBg": "/images/brands/mercedes-benz/brand/mercedes-benz-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/mercedes-benz/models/mercedes-benz-mercedes-benz-e-class-model-card.png"
+    "ctaImage": "/images/brands/mercedes-benz/models/mercedes-benz-e-class-model-card.png"
   },
   "sections": {
     "hero": {
@@ -807,6 +807,7 @@
               {
                 "code": "OM651.924",
                 "title": "2.1L Diesel",
+                "familyHeading": "OM651 Series - 2.1 Litre Diesel (2009-2016)",
                 "history": "The OM651 became the backbone of Mercedes diesel sales across the W212 E-Class, prized for fuel economy but notorious for timing chain issues in higher-mileage examples.",
                 "fuel": "Diesel",
                 "size": "2.1 Litre",
@@ -825,8 +826,30 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
+                "code": "OM642.850 / 642.858",
+                "title": "3.0L V6 Diesel",
+                "familyHeading": "OM642 Series - 3.0 Litre V6 Diesel (2005-present)",
+                "history": "The OM642 V6 turbodiesel delivered effortless torque across multiple E-Class generations, but its complex oil cooler design became the single most frequent source of costly repairs.",
+                "fuel": "Diesel",
+                "size": "3.0 Litre",
+                "power": "224-265 hp",
+                "years": "2005-2023",
+                "compatibleVariants": [
+                  "E320 CDI, E350 CDI, E350 BlueTEC, E350d, E350 BlueTEC 4MATIC"
+                ],
+                "commonFailures": [
+                  "Oil cooler seal failure causing oil leaks into the engine Vee, typically from 80,000 miles",
+                  "Loose turbocharger carrier bolts causing oil and coolant loss",
+                  "Swirl flap linkage failure in intake manifold"
+                ],
+                "avgRebuiltPrice": "£1,500 - £3,500",
+                "cta": "Get quotes for OM642 Mercedes Benz E Class engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+              },
+              {
                 "code": "OM654.916",
                 "title": "2.0L Diesel",
+                "familyHeading": "OM654 Series - 2.0 Litre Diesel (2016-present)",
                 "history": "Mercedes introduced the all-aluminium OM654 to replace the OM651, bringing stepped bowl combustion and reduced friction. Early units suffered teething problems with AdBlue systems.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -847,6 +870,7 @@
               {
                 "code": "OM648.961",
                 "title": "3.2L Diesel",
+                "familyHeading": "OM648 - 3.2 Litre Straight-Six Diesel (2002-2009)",
                 "history": "The OM648 straight-six was the last of Mercedes' inline-six diesels before the V6 era, prized for smoothness and durability. It remains a favourite among W211 enthusiasts.",
                 "fuel": "Diesel",
                 "size": "3.2 Litre",
@@ -872,6 +896,7 @@
               {
                 "code": "M274",
                 "title": "2.0L Petrol",
+                "familyHeading": "M274 Series - 2.0 Litre Turbo Petrol (2013-2023)",
                 "history": "The M274 turbocharged four-cylinder brought modern efficiency to the E-Class petrol range, but gained an unfortunate reputation for catastrophic piston and cylinder failures.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -892,6 +917,7 @@
               {
                 "code": "M276",
                 "title": "3.5L V6 Petrol",
+                "familyHeading": "M276 Series - 3.5 Litre V6 Petrol (2011-2016)",
                 "history": "The M276 naturally aspirated V6 delivered refined power for the E350 petrol, but its direct injection system introduced carbon build-up issues not seen in port-injected predecessors.",
                 "fuel": "Petrol",
                 "size": "3.5 Litre",
@@ -912,6 +938,7 @@
               {
                 "code": "M271",
                 "title": "1.8L Petrol",
+                "familyHeading": "M271 Series - 1.8 Litre Kompressor Petrol (2002-2009)",
                 "history": "The supercharged M271 brought forced induction to the E-Class entry-level petrol range, but a poorly designed camshaft drive system created chronic timing issues.",
                 "fuel": "Petrol",
                 "size": "1.8 Litre",
@@ -937,6 +964,7 @@
               {
                 "code": "M156",
                 "title": "6.2L V8 Petrol",
+                "familyHeading": "M156 - 6.2 Litre V8 (2006-2011)",
                 "history": "The M156 was Mercedes-AMG's first independently developed V8, producing a naturally aspirated 514hp. It remains a legend among enthusiasts, despite well-documented mechanical weaknesses.",
                 "fuel": "Petrol",
                 "size": "6.2 Litre",
@@ -957,6 +985,7 @@
               {
                 "code": "M177",
                 "title": "4.0L V8 Petrol",
+                "familyHeading": "M177 - 4.0 Litre V8 Biturbo (2016-2023)",
                 "history": "The M177 hot-vee twin-turbo V8 replaced the M156 in the E63 S, delivering massive power with cylinder deactivation for cruising efficiency.",
                 "fuel": "Petrol",
                 "size": "4.0 Litre",
@@ -977,6 +1006,7 @@
               {
                 "code": "M113",
                 "title": "5.0L V8 Petrol",
+                "familyHeading": "M113 - 5.0-5.5 Litre V8 (2002-2009)",
                 "history": "The M113 V8 was a robust, chain-driven unit that preceded the M156 in the E500, known for durability but ageing electronics.",
                 "fuel": "Petrol",
                 "size": "5.0-5.5 Litre",
@@ -1028,6 +1058,8 @@
           "engines": [
             {
               "code": "OM651.924",
+              "title": "2.1L Diesel",
+              "familyHeading": "OM651 Series - 2.1 Litre Diesel (2009-2016)",
               "fuel": "Diesel",
               "size": "2.1L",
               "power": "100-204 hp",
@@ -1037,7 +1069,21 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
+              "code": "OM642.850 / 642.858",
+              "title": "3.0L V6 Diesel",
+              "familyHeading": "OM642 Series - 3.0 Litre V6 Diesel (2005-present)",
+              "fuel": "Diesel",
+              "size": "3.0L",
+              "power": "224-265 hp",
+              "compatibleModels": "E320 CDI, E350 CDI, E350 BlueTEC, E350d, E350 BlueTEC 4MATIC",
+              "avgRebuiltPrice": "£1,500 - £3,500",
+              "cta": "Get quotes for OM642 Mercedes Benz E Class engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+            },
+            {
               "code": "OM654.916",
+              "title": "2.0L Diesel",
+              "familyHeading": "OM654 Series - 2.0 Litre Diesel (2016-present)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "150-194 hp",
@@ -1048,6 +1094,8 @@
             },
             {
               "code": "OM648.961",
+              "title": "3.2L Diesel",
+              "familyHeading": "OM648 - 3.2 Litre Straight-Six Diesel (2002-2009)",
               "fuel": "Diesel",
               "size": "3.2L",
               "power": "204-224 hp",
@@ -1065,6 +1113,8 @@
           "engines": [
             {
               "code": "M274",
+              "title": "2.0L Petrol",
+              "familyHeading": "M274 Series - 2.0 Litre Turbo Petrol (2013-2023)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "184-245 hp",
@@ -1075,6 +1125,8 @@
             },
             {
               "code": "M276",
+              "title": "3.5L V6 Petrol",
+              "familyHeading": "M276 Series - 3.5 Litre V6 Petrol (2011-2016)",
               "fuel": "Petrol",
               "size": "3.5L",
               "power": "306 hp",
@@ -1085,6 +1137,8 @@
             },
             {
               "code": "M271",
+              "title": "1.8L Petrol",
+              "familyHeading": "M271 Series - 1.8 Litre Kompressor Petrol (2002-2009)",
               "fuel": "Petrol",
               "size": "1.8L",
               "power": "163-184 hp",
@@ -1095,6 +1149,8 @@
             },
             {
               "code": "M156",
+              "title": "6.2L V8 Petrol",
+              "familyHeading": "M156 - 6.2 Litre V8 (2006-2011)",
               "fuel": "Petrol",
               "size": "6.2L",
               "power": "514 hp",
@@ -1105,6 +1161,8 @@
             },
             {
               "code": "M177",
+              "title": "4.0L V8 Petrol",
+              "familyHeading": "M177 - 4.0 Litre V8 Biturbo (2016-2023)",
               "fuel": "Petrol",
               "size": "4.0L",
               "power": "603-612 hp",
@@ -1115,6 +1173,8 @@
             },
             {
               "code": "M113",
+              "title": "5.0L V8 Petrol",
+              "familyHeading": "M113 - 5.0-5.5 Litre V8 (2002-2009)",
               "fuel": "Petrol",
               "size": "5.0-5.5L",
               "power": "302-388 hp",
@@ -1679,6 +1739,11 @@
           "title": "Mercedes Benz E Class Diesel Engines",
           "description": "Diesel dominated E Class sales across W211, W212 and W213 generations, with the OM651 2.1 and OM642 3.0 V6 accounting for over 70% of UK replacement enquiries due to timing chain and oil cooler failures.",
           "descriptor": "Diesel dominated E Class sales across W211, W212 and W213 generations, with the OM651 2.1 and OM642 3.0 V6 accounting for over 70% of UK replacement enquiries due to timing chain and oil cooler failures.",
+          "familiesLabel": "Common Mercedes Benz E Class Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "OM651 - 2.1 litre four-cylinder, timing chain stretch epidemic in E220 CDI/E250 CDI",
             "OM642 - 3.0 litre V6, oil cooler seal failure on E320 CDI/E350 BlueTEC/E350d",
@@ -1714,6 +1779,11 @@
           "title": "Mercedes Benz E Class Petrol Engines",
           "description": "Petrol E Class variants generate lower overall replacement volume than diesel but attract higher average order value, particularly for V6 M276 units and AMG models where owners demand specialist-grade rebuilds.",
           "descriptor": "Petrol E Class variants generate lower overall replacement volume than diesel but attract higher average order value, particularly for V6 M276 units and AMG models where owners demand specialist-grade rebuilds.",
+          "familiesLabel": "Common Mercedes Benz E Class Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "M274 - 2.0 litre turbo, piston cracking in W212/W213 E200/E250/E300",
             "M276 - 3.5 litre V6, carbon build-up on intake valves in W212 E350",
@@ -1749,6 +1819,11 @@
           "title": "Mercedes Benz E Class Plug-in Hybrid (PHEV) Engines",
           "description": "The W213 E300e combined the M274 2.0 petrol engine with an electric motor and battery pack, offering low company car tax rates and electric-only city driving.",
           "descriptor": "The W213 E300e combined the M274 2.0 petrol engine with an electric motor and battery pack, offering low company car tax rates and electric-only city driving.",
+          "familiesLabel": "Mercedes Benz E Class PHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "M274 (PHEV variant) - 2.0 litre turbo with electric drive module",
             "OM654 (PHEV variant) - E300de diesel plug-in hybrid (limited UK volume)",
@@ -1774,6 +1849,11 @@
           "title": "Mercedes Benz E Class Mild Hybrid (MHEV) Engines",
           "description": "Later W213 and W214 E Class models introduced 48-volt mild hybrid systems on petrol and diesel engines, providing torque assist and coasting functionality without electric-only driving.",
           "descriptor": "Later W213 and W214 E Class models introduced 48-volt mild hybrid systems on petrol and diesel engines, providing torque assist and coasting functionality without electric-only driving.",
+          "familiesLabel": "Mercedes Benz E Class MHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "M256 - 3.0 litre straight-six petrol with integrated starter-generator (ISG)",
             "OM654 (MHEV) - 2.0 litre diesel with belt-driven starter-generator (BSG)",

@@ -15,13 +15,13 @@
     "canonical": "/jaguar/xj"
   },
   "assets": {
-    "heroBg": "/images/brands/jaguar/models/jaguar-jaguar-xj-model-card.png",
+    "heroBg": "/images/brands/jaguar/models/jaguar-xj-model-card.png",
     "howItWorksBg": "/images/brands/jaguar/brand/jaguar-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/jaguar/brand/jaguar-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/jaguar/brand/jaguar-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/jaguar/brand/jaguar-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/jaguar/brand/jaguar-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/jaguar/models/jaguar-jaguar-xj-model-card.png"
+    "ctaImage": "/images/brands/jaguar/models/jaguar-xj-model-card.png"
   },
   "sections": {
     "hero": {
@@ -753,8 +753,51 @@
             "name": "Diesel Engines",
             "entries": [
               {
+                "code": "306DT",
+                "title": "3.0L Diesel",
+                "familyHeading": "3.0L V6 TDV6 / SDV6 Series (2009-2019)",
+                "history": "Replaced the 2.7L unit in 2009, delivering stronger torque and lower emissions across X350 facelifts and all X351 models.",
+                "fuel": "Diesel",
+                "size": "3.0 Litre",
+                "power": "237-275 hp",
+                "years": "2009-2016",
+                "compatibleVariants": [
+                  "Executive 3.0 TDV6, Portfolio 3.0 TDV6, Sovereign 3.0 TDV6, R-Sport 3.0 TDV6"
+                ],
+                "commonFailures": [
+                  "Timing chain tensioner wear causing cold-start rattle (80,000+ miles)",
+                  "EGR cooler cracking leading to coolant loss into cylinders",
+                  "Turbo actuator sticking reducing boost pressure (90,000+ miles)"
+                ],
+                "avgRebuiltPrice": "£1,800 - £3,400",
+                "cta": "Get quotes for 306DT Jaguar XJ engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+              },
+              {
+                "code": "30DDTX",
+                "title": "3.0L Diesel",
+                "familyHeading": "3.0L V6 TDV6 / SDV6 Series (2009-2019)",
+                "history": "Twin-turbo evolution of the AJD-V6, introducing sequential charging for flagship diesel and executive LWB models.",
+                "fuel": "Diesel",
+                "size": "3.0 Litre",
+                "power": "296-300 hp",
+                "years": "2009-2019",
+                "compatibleVariants": [
+                  "Portfolio 3.0 SDV6, Sovereign LWB 3.0 SDV6, Autobiography 3.0 SDV6"
+                ],
+                "commonFailures": [
+                  "High-pressure fuel pump seal degradation causing lean misfires",
+                  "Oil cooler internal leakage causing cross-contamination",
+                  "Dual turbocharger wastegate rattle (75,000+ miles)"
+                ],
+                "avgRebuiltPrice": "£2,100 - £3,800",
+                "cta": "Get quotes for 30DDTX Jaguar XJ engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+              },
+              {
                 "code": "AJ200D",
                 "title": "2.0L Diesel",
+                "familyHeading": "Ingenium 2.0L I4 Series (2015-2019)",
                 "history": "JLR’s first inline-four diesel in the XJ, engineered for ULEZ compliance and improved urban fuel economy in saloon form.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -771,6 +814,27 @@
                 "avgRebuiltPrice": "£1,500 - £2,900",
                 "cta": "Get quotes for AJ200D Jaguar XJ engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+              },
+              {
+                "code": "276DT",
+                "title": "2.7L Diesel",
+                "familyHeading": "Legacy V6 Diesel (2005-2009)",
+                "history": "PSA and Ford co-developed V6 introducing modern diesel efficiency, though early emissions hardware proved fragile.",
+                "fuel": "Diesel",
+                "size": "2.7 Litre",
+                "power": "204-207 hp",
+                "years": "2005-2009",
+                "compatibleVariants": [
+                  "Executive 2.7 TDV6, Sovereign 2.7 TDV6, Premium Luxury 2.7 TDV6"
+                ],
+                "commonFailures": [
+                  "Cylinder liner sealing washer failure causing coolant ingress",
+                  "Oil filter housing crack leading to sudden pressure loss",
+                  "Turbocharger oil feed pipe blockage (high mileage)"
+                ],
+                "avgRebuiltPrice": "£1,600 - £2,800",
+                "cta": "Get quotes for 276DT Jaguar XJ engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               }
             ]
           },
@@ -780,6 +844,7 @@
               {
                 "code": "AJ133",
                 "title": "5.0L Petrol",
+                "familyHeading": "5.0L V8 AJ-V8 Series (2009-2019)",
                 "history": "Flagship all-aluminium V8 replacing the Ford-sourced unit, featuring direct injection and variable valve timing.",
                 "fuel": "Petrol",
                 "size": "5.0 Litre",
@@ -800,6 +865,7 @@
               {
                 "code": "AJ133SC",
                 "title": "5.0L Petrol",
+                "familyHeading": "5.0L V8 AJ-V8 Series (2009-2019)",
                 "history": "Supercharged XJR flagship utilising an Eaton TVS supercharger and reinforced internals for high-output performance duty.",
                 "fuel": "Petrol",
                 "size": "5.0 Litre",
@@ -820,6 +886,7 @@
               {
                 "code": "AJ126",
                 "title": "3.0L Petrol",
+                "familyHeading": "3.0L V6 Supercharged (2012-2019)",
                 "history": "Supercharged V6 bridging efficiency gaps between four-cylinder and V8 units, sharing architecture with larger AJ engines.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -840,6 +907,7 @@
               {
                 "code": "AJ200P",
                 "title": "2.0L Petrol",
+                "familyHeading": "Ingenium 2.0L I4 Petrol (2015-2019)",
                 "history": "Turbocharged unit delivering ULEZ compliance and lower taxation to entry petrol trims while maintaining cabin refinement.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -860,6 +928,7 @@
               {
                 "code": "AJ41",
                 "title": "4.2L Petrol",
+                "familyHeading": "Legacy 4.2L V8 Series (2003-2009)",
                 "history": "Refined V8 evolution featuring composite intake manifolds and drive-by-wire throttle control for smoother power delivery.",
                 "fuel": "Petrol",
                 "size": "4.2 Litre",
@@ -880,6 +949,7 @@
               {
                 "code": "AJ41SC",
                 "title": "4.2L Petrol",
+                "familyHeading": "Legacy 4.2L V8 Series (2003-2009)",
                 "history": "Supercharged 4.2L V8 delivering instant torque for the XJR 420 and establishing Jaguar’s modern high-performance ethos.",
                 "fuel": "Petrol",
                 "size": "4.2 Litre",
@@ -905,6 +975,7 @@
               {
                 "code": "AJ300D",
                 "title": "3.0L Diesel",
+                "familyHeading": "Mild Hybrid I6 Diesel (2019)",
                 "history": "Late-generation 3.0L inline-six mild-hybrid integrating a belt-starter for torque fill and reduced coasting emissions.",
                 "fuel": "MHEV Diesel",
                 "size": "3.0 Litre",
@@ -956,13 +1027,51 @@
           "failureNote": "Main replacement triggers are timing chain wear, EGR / cooling faults and turbo-control issues.",
           "engines": [
             {
+              "code": "306DT",
+              "title": "3.0L Diesel",
+              "familyHeading": "3.0L V6 TDV6 / SDV6 Series (2009-2019)",
+              "fuel": "Diesel",
+              "size": "3.0L",
+              "power": "237-275 hp",
+              "compatibleModels": "Executive 3.0 TDV6, Portfolio 3.0 TDV6, Sovereign 3.0 TDV6, R-Sport 3.0 TDV6",
+              "avgRebuiltPrice": "£1,800 - £3,400",
+              "cta": "Get quotes for 306DT Jaguar XJ engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+            },
+            {
+              "code": "30DDTX",
+              "title": "3.0L Diesel",
+              "familyHeading": "3.0L V6 TDV6 / SDV6 Series (2009-2019)",
+              "fuel": "Diesel",
+              "size": "3.0L",
+              "power": "296-300 hp",
+              "compatibleModels": "Portfolio 3.0 SDV6, Sovereign LWB 3.0 SDV6, Autobiography 3.0 SDV6",
+              "avgRebuiltPrice": "£2,100 - £3,800",
+              "cta": "Get quotes for 30DDTX Jaguar XJ engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+            },
+            {
               "code": "AJ200D",
+              "title": "2.0L Diesel",
+              "familyHeading": "Ingenium 2.0L I4 Series (2015-2019)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "163-180 hp",
               "compatibleModels": "Executive 2.0D, R-Sport 2.0D, Portfolio 2.0D",
               "avgRebuiltPrice": "£1,500 - £2,900",
               "cta": "Get quotes for AJ200D Jaguar XJ engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+            },
+            {
+              "code": "276DT",
+              "title": "2.7L Diesel",
+              "familyHeading": "Legacy V6 Diesel (2005-2009)",
+              "fuel": "Diesel",
+              "size": "2.7L",
+              "power": "204-207 hp",
+              "compatibleModels": "Executive 2.7 TDV6, Sovereign 2.7 TDV6, Premium Luxury 2.7 TDV6",
+              "avgRebuiltPrice": "£1,600 - £2,800",
+              "cta": "Get quotes for 276DT Jaguar XJ engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             }
           ]
@@ -974,6 +1083,8 @@
           "engines": [
             {
               "code": "AJ133",
+              "title": "5.0L Petrol",
+              "familyHeading": "5.0L V8 AJ-V8 Series (2009-2019)",
               "fuel": "Petrol",
               "size": "5.0L",
               "power": "375-385 hp",
@@ -984,6 +1095,8 @@
             },
             {
               "code": "AJ133SC",
+              "title": "5.0L Petrol",
+              "familyHeading": "5.0L V8 AJ-V8 Series (2009-2019)",
               "fuel": "Petrol",
               "size": "5.0L",
               "power": "470-550 hp",
@@ -994,6 +1107,8 @@
             },
             {
               "code": "AJ126",
+              "title": "3.0L Petrol",
+              "familyHeading": "3.0L V6 Supercharged (2012-2019)",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "335-340 hp",
@@ -1004,6 +1119,8 @@
             },
             {
               "code": "AJ200P",
+              "title": "2.0L Petrol",
+              "familyHeading": "Ingenium 2.0L I4 Petrol (2015-2019)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "237-240 hp",
@@ -1014,6 +1131,8 @@
             },
             {
               "code": "AJ41",
+              "title": "4.2L Petrol",
+              "familyHeading": "Legacy 4.2L V8 Series (2003-2009)",
               "fuel": "Petrol",
               "size": "4.2L",
               "power": "296-300 hp",
@@ -1024,6 +1143,8 @@
             },
             {
               "code": "AJ41SC",
+              "title": "4.2L Petrol",
+              "familyHeading": "Legacy 4.2L V8 Series (2003-2009)",
               "fuel": "Petrol",
               "size": "4.2L",
               "power": "390-400 hp",
@@ -1041,6 +1162,8 @@
           "engines": [
             {
               "code": "AJ300D",
+              "title": "3.0L Diesel",
+              "familyHeading": "Mild Hybrid I6 Diesel (2019)",
               "fuel": "MHEV Diesel",
               "size": "3.0L",
               "power": "296-300 hp",
@@ -1564,6 +1687,11 @@
           "title": "Jaguar XJ Diesel Engines",
           "description": "Covering both the X350 and X351 generations, diesel units dominate UK replacement enquiries due to high mileage fleet use and emissions system wear.",
           "descriptor": "Covering both the X350 and X351 generations, diesel units dominate UK replacement enquiries due to high mileage fleet use and emissions system wear.",
+          "familiesLabel": "Common Jaguar XJ Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "276DT - early 2.7L V6 suffering from cylinder liner seal weakness",
             "306DT - single-turbo 3.0L TDV6 powering mainstream Portfolio and Sovereign variants",
@@ -1595,6 +1723,11 @@
           "title": "Jaguar XJ Petrol Engines",
           "description": "Ranging from naturally aspirated V8s to supercharged flagships, petrol variants deliver refined performance but require strict oil maintenance to protect timing components.",
           "descriptor": "Ranging from naturally aspirated V8s to supercharged flagships, petrol variants deliver refined performance but require strict oil maintenance to protect timing components.",
+          "familiesLabel": "Common Jaguar XJ Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "AJ41/AJ34 - naturally aspirated 4.2L V8 providing refined baseline performance",
             "AJ41SC - supercharged 4.2L V8 featuring Eaton blower for instant response",
@@ -1627,6 +1760,11 @@
           "title": "Jaguar XJ Mild Hybrid (MHEV) Engines",
           "description": "Introduced exclusively for the final X351 production run, mild-hybrid technology optimises low-speed emissions without sacrificing traditional diesel torque characteristics.",
           "descriptor": "Introduced exclusively for the final X351 production run, mild-hybrid technology optimises low-speed emissions without sacrificing traditional diesel torque characteristics.",
+          "familiesLabel": "Jaguar XJ Mild Hybrid (MHEV) Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "AJ300D - inline-six diesel integrated with forty-eight volt mild hybrid starter",
             "Belt-driven starter-generator captures kinetic energy during deceleration and braking",

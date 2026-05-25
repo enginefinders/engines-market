@@ -15,13 +15,13 @@
     "canonical": "/bmw/5-series"
   },
   "assets": {
-    "heroBg": "/images/brands/bmw/models/bmw-series-5-model-card.png",
+    "heroBg": "/images/brands/bmw/models/bmw-5-series-model-card.png",
     "howItWorksBg": "/images/brands/bmw/brand/bmw-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/bmw/brand/bmw-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/bmw/brand/bmw-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/bmw/brand/bmw-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/bmw/brand/bmw-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/bmw/models/bmw-series-5-model-card.png"
+    "ctaImage": "/images/brands/bmw/models/bmw-5-series-model-card.png"
   },
   "sections": {
     "hero": {
@@ -806,6 +806,7 @@
               {
                 "code": "M57D30",
                 "title": "3.0L Diesel",
+                "familyHeading": "M57 Series (2003-2010)",
                 "history": "Introduced common‑rail turbo‑diesel to the 5 Series, setting the executive torque benchmark for a decade.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -826,6 +827,7 @@
               {
                 "code": "N47D20",
                 "title": "2.0L Diesel",
+                "familyHeading": "N47 Series (2007-2014)",
                 "history": "Replaced the M47 with lighter aluminium construction, but became notorious for rear timing chain failures.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -846,6 +848,7 @@
               {
                 "code": "B47D20",
                 "title": "2.0L Diesel",
+                "familyHeading": "B47 Series (2014-2024)",
                 "history": "Refined the N47 architecture with improved thermal management and emissions compliance for modern diesels.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -866,6 +869,7 @@
               {
                 "code": "N57D30",
                 "title": "3.0L Diesel",
+                "familyHeading": "N57 Series (2010-2017)",
                 "history": "Brought advanced twin and triple‑turbo technology, delivering effortless torque without sacrificing refinement.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -886,6 +890,7 @@
               {
                 "code": "B57D30",
                 "title": "3.0L Diesel",
+                "familyHeading": "B57 Series (2017-2024)",
                 "history": "Latest evolution of BMW inline‑six diesel, featuring a steel piston design and 48V mild‑hybrid integration.",
                 "fuel": "MHEV Diesel",
                 "size": "3.0 Litre",
@@ -911,6 +916,7 @@
               {
                 "code": "N52B30",
                 "title": "3.0L Petrol",
+                "familyHeading": "N52 Series (2003-2010)",
                 "history": "BMW’s last naturally aspirated straight‑six, praised for its light alloy construction and smooth high‑rev delivery.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -931,6 +937,7 @@
               {
                 "code": "N20B20",
                 "title": "2.0L Petrol",
+                "familyHeading": "N20 Series (2011-2016)",
                 "history": "Marked BMW’s shift to turbocharged four‑cylinder petrols, delivering six‑cylinder performance with better efficiency.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -951,6 +958,7 @@
               {
                 "code": "N55B30",
                 "title": "3.0L Petrol",
+                "familyHeading": "N55 Series (2010-2016)",
                 "history": "Replaced the twin‑turbo N54 with a single twin‑scroll unit, cutting complexity while preserving sharp throttle response.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -971,6 +979,7 @@
               {
                 "code": "B48B20",
                 "title": "2.0L Petrol",
+                "familyHeading": "B48 Series (2017-2024)",
                 "history": "Modular successor to the N20, featuring integrated cooling and advanced valvetrain for smoother, cleaner power delivery.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -991,6 +1000,7 @@
               {
                 "code": "B58B30",
                 "title": "3.0L Petrol",
+                "familyHeading": "B58 Series (2017-2024)",
                 "history": "Widely regarded as a modern masterpiece, pairing a closed‑deck block with advanced cooling for exceptional reliability.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -1011,6 +1021,7 @@
               {
                 "code": "N63B44",
                 "title": "4.4L Petrol",
+                "familyHeading": "N63 Series (2010-2016)",
                 "history": "Pioneering hot‑vee V8 layout maximised packaging, but extreme under‑bonnet heat accelerated seal and turbo wear.",
                 "fuel": "Petrol",
                 "size": "4.4 Litre",
@@ -1031,6 +1042,7 @@
               {
                 "code": "S63B44",
                 "title": "4.4L Petrol",
+                "familyHeading": "S63 Series (2011-2024)",
                 "history": "The ultimate performance V8, cross‑bank turbocharged for instant throttle response and track‑capable power delivery.",
                 "fuel": "Petrol",
                 "size": "4.4 Litre",
@@ -1056,6 +1068,7 @@
               {
                 "code": "B48B20PHEV",
                 "title": "2.0L Petrol PHEV",
+                "familyHeading": "Plug‑in Hybrid (PHEV) Powertrains (2017-2024)",
                 "history": "Combines turbocharged petrol efficiency with an integrated electric motor for low‑emission executive driving.",
                 "fuel": "PHEV Petrol",
                 "size": "2.0 Litre",
@@ -1076,6 +1089,7 @@
               {
                 "code": "B58B30PHEV",
                 "title": "3.0L Petrol PHEV",
+                "familyHeading": "Plug‑in Hybrid (PHEV) Powertrains (2017-2024)",
                 "history": "High‑output inline‑six paired with a larger electric motor, delivering near‑V8 torque with zero‑emission city capability.",
                 "fuel": "PHEV Petrol",
                 "size": "3.0 Litre",
@@ -1128,6 +1142,8 @@
           "engines": [
             {
               "code": "M57D30",
+              "title": "3.0L Diesel",
+              "familyHeading": "M57 Series (2003-2010)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "197-231 hp",
@@ -1138,6 +1154,8 @@
             },
             {
               "code": "N47D20",
+              "title": "2.0L Diesel",
+              "familyHeading": "N47 Series (2007-2014)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "177-204 hp",
@@ -1148,6 +1166,8 @@
             },
             {
               "code": "B47D20",
+              "title": "2.0L Diesel",
+              "familyHeading": "B47 Series (2014-2024)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "150-231 hp",
@@ -1158,6 +1178,8 @@
             },
             {
               "code": "N57D30",
+              "title": "3.0L Diesel",
+              "familyHeading": "N57 Series (2010-2017)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "245-381 hp",
@@ -1168,6 +1190,8 @@
             },
             {
               "code": "B57D30",
+              "title": "3.0L Diesel",
+              "familyHeading": "B57 Series (2017-2024)",
               "fuel": "MHEV Diesel",
               "size": "3.0L",
               "power": "265-340 hp",
@@ -1185,6 +1209,8 @@
           "engines": [
             {
               "code": "N52B30",
+              "title": "3.0L Petrol",
+              "familyHeading": "N52 Series (2003-2010)",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "192-258 hp",
@@ -1195,6 +1221,8 @@
             },
             {
               "code": "N20B20",
+              "title": "2.0L Petrol",
+              "familyHeading": "N20 Series (2011-2016)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "184-245 hp",
@@ -1205,6 +1233,8 @@
             },
             {
               "code": "N55B30",
+              "title": "3.0L Petrol",
+              "familyHeading": "N55 Series (2010-2016)",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "300-306 hp",
@@ -1215,6 +1245,8 @@
             },
             {
               "code": "B48B20",
+              "title": "2.0L Petrol",
+              "familyHeading": "B48 Series (2017-2024)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "184-252 hp",
@@ -1225,6 +1257,8 @@
             },
             {
               "code": "B58B30",
+              "title": "3.0L Petrol",
+              "familyHeading": "B58 Series (2017-2024)",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "326-340 hp",
@@ -1235,6 +1269,8 @@
             },
             {
               "code": "N63B44",
+              "title": "4.4L Petrol",
+              "familyHeading": "N63 Series (2010-2016)",
               "fuel": "Petrol",
               "size": "4.4L",
               "power": "407-450 hp",
@@ -1245,6 +1281,8 @@
             },
             {
               "code": "S63B44",
+              "title": "4.4L Petrol",
+              "familyHeading": "S63 Series (2011-2024)",
               "fuel": "Petrol",
               "size": "4.4L",
               "power": "560-625 hp",
@@ -1262,6 +1300,8 @@
           "engines": [
             {
               "code": "B48B20PHEV",
+              "title": "2.0L Petrol PHEV",
+              "familyHeading": "Plug‑in Hybrid (PHEV) Powertrains (2017-2024)",
               "fuel": "PHEV Petrol",
               "size": "2.0L",
               "power": "252-292 hp (combined)",
@@ -1272,6 +1312,8 @@
             },
             {
               "code": "B58B30PHEV",
+              "title": "3.0L Petrol PHEV",
+              "familyHeading": "Plug‑in Hybrid (PHEV) Powertrains (2017-2024)",
               "fuel": "PHEV Petrol",
               "size": "3.0L",
               "power": "394 hp (combined)",
@@ -1806,6 +1848,11 @@
           "title": "BMW 5 Series Diesel Engines",
           "description": "The dominant powertrain across all UK generations, diesel variants drive the highest replacement volume due to fleet mileage and well-documented chain and EGR vulnerabilities.",
           "descriptor": "The dominant powertrain across all UK generations, diesel variants drive the highest replacement volume due to fleet mileage and well-documented chain and EGR vulnerabilities.",
+          "familiesLabel": "Common BMW 5 Series Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "M57D30 - legendary E60 inline-six, exceptional torque and high-mileage durability",
             "N47D20 - high-volume F10 520d unit, rear timing chain tensioner risk",
@@ -1836,6 +1883,11 @@
           "title": "BMW 5 Series Petrol Engines",
           "description": "Spanning naturally aspirated sixes to hot-vee turbo V8s, petrol variants attract specialist rebuild enquiries focused on high-performance longevity and thermal management.",
           "descriptor": "Spanning naturally aspirated sixes to hot-vee turbo V8s, petrol variants attract specialist rebuild enquiries focused on high-performance longevity and thermal management.",
+          "familiesLabel": "Common BMW 5 Series Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "N52B30 - final naturally aspirated inline-six, smooth delivery but Valvetronic wear",
             "N20B20 - early turbo four-cylinder, shares rear timing chain guide vulnerability",
@@ -1867,6 +1919,11 @@
           "title": "BMW 5 Series Hybrid / Electrified Engines",
           "description": "Combines turbocharged combustion with high-capacity battery packs to deliver silent urban commuting and executive long-distance touring.",
           "descriptor": "Combines turbocharged combustion with high-capacity battery packs to deliver silent urban commuting and executive long-distance touring.",
+          "familiesLabel": "BMW 5 Series PHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "B47D20 (48V) - updated G30 LCI diesel with integrated starter-generator",
             "B58B30 (48V) - refined G30 petrol delivering enhanced torque and efficiency",

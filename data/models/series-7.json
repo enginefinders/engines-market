@@ -15,13 +15,13 @@
     "canonical": "/bmw/7-series"
   },
   "assets": {
-    "heroBg": "/images/brands/bmw/models/bmw-series-7-model-card.png",
+    "heroBg": "/images/brands/bmw/models/bmw-7-series-model-card.png",
     "howItWorksBg": "/images/brands/bmw/brand/bmw-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/bmw/brand/bmw-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/bmw/brand/bmw-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/bmw/brand/bmw-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/bmw/brand/bmw-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/bmw/models/bmw-series-7-model-card.png"
+    "ctaImage": "/images/brands/bmw/models/bmw-7-series-model-card.png"
   },
   "sections": {
     "hero": {
@@ -756,6 +756,7 @@
               {
                 "code": "M57D30",
                 "title": "3.0L Diesel",
+                "familyHeading": "M-Series & N-Series Inline-Six Diesels (2002-2015)",
                 "history": "BMW’s robust iron-block diesel for early 730d/740d. Famous for immense torque but known swirl flap and injector seal issues.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -776,6 +777,7 @@
               {
                 "code": "N57D30",
                 "title": "3.0L Diesel",
+                "familyHeading": "M-Series & N-Series Inline-Six Diesels (2002-2015)",
                 "history": "Aluminium successor to M57. Delivered exceptional refinement but introduced rear timing chain and turbo vulnerabilities.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -796,6 +798,7 @@
               {
                 "code": "B57D30",
                 "title": "3.0L Diesel",
+                "familyHeading": "B-Series Modern Inline-Six Diesel (2015-2022)",
                 "history": "Current-generation modular diesel for G11 730d/740d. Highly efficient but susceptible to EGR cooler and oil pump issues.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -821,6 +824,7 @@
               {
                 "code": "N62B44",
                 "title": "4.4L Petrol",
+                "familyHeading": "N62 Naturally Aspirated V8 Series (2002-2010)",
                 "history": "Flagship E65 745i V8 introducing Valvetronic. Notorious for early oil burning and valve stem seal degradation at high mileages.",
                 "fuel": "Petrol",
                 "size": "4.4 Litre",
@@ -841,6 +845,7 @@
               {
                 "code": "N62B48",
                 "title": "4.8L Petrol",
+                "familyHeading": "N62 Naturally Aspirated V8 Series (2002-2010)",
                 "history": "4.8L variant for the 750i delivering stronger torque. Shares V8 sealing vulnerabilities but features updated crankcase ventilation.",
                 "fuel": "Petrol",
                 "size": "4.8 Litre",
@@ -861,6 +866,7 @@
               {
                 "code": "N63B44",
                 "title": "4.4L Petrol",
+                "familyHeading": "N63 Twin-Turbo V8 Series (2008-2015)",
                 "history": "Hot-V twin-turbo architecture for F01 750i. Compact design but suffered severe oil consumption and hot-start ignition failures.",
                 "fuel": "Petrol",
                 "size": "4.4 Litre",
@@ -881,6 +887,7 @@
               {
                 "code": "N52B30",
                 "title": "3.0L Petrol",
+                "familyHeading": "N52 & B58 Inline-Six Petrol Series (2002-2022)",
                 "history": "Naturally aspirated straight-six for E65 730i. Highly refined but known for cooling system leaks and Valvetronic actuator faults.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -901,6 +908,7 @@
               {
                 "code": "B58B30",
                 "title": "3.0L Petrol",
+                "familyHeading": "N52 & B58 Inline-Six Petrol Series (2002-2022)",
                 "history": "Turbocharged successor to N55. Features closed-deck block and thermal management for improved reliability and daily usability.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -921,6 +929,7 @@
               {
                 "code": "N73B60",
                 "title": "6.0L Petrol",
+                "familyHeading": "N73 & N74 V12 Series (2003-2022)",
                 "history": "Naturally aspirated V12 flagship for 760i/760Li. Complex direct injection delivers immense power but demands meticulous maintenance.",
                 "fuel": "Petrol",
                 "size": "6.0 Litre",
@@ -941,6 +950,7 @@
               {
                 "code": "N74B66",
                 "title": "6.6L Petrol",
+                "familyHeading": "N73 & N74 V12 Series (2003-2022)",
                 "history": "Twin-turbo V12 successor offering effortless torque. Retains complex ancillary sealing vulnerabilities and high replacement costs.",
                 "fuel": "Petrol",
                 "size": "6.6 Litre",
@@ -966,6 +976,7 @@
               {
                 "code": "B48 Hybrid",
                 "title": "2.0L Petrol PHEV",
+                "familyHeading": "B-Series Plug-in Hybrid Drivetrain (2016-2022)",
                 "history": "Combines turbo petrol with electric motor for 740e. High-voltage architecture introduces unique thermal and inverter failure points.",
                 "fuel": "PHEV (Petrol/Electric)",
                 "size": "2.0 Litre",
@@ -1018,6 +1029,8 @@
           "engines": [
             {
               "code": "M57D30",
+              "title": "3.0L Diesel",
+              "familyHeading": "M-Series & N-Series Inline-Six Diesels (2002-2015)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "218-245 hp",
@@ -1028,6 +1041,8 @@
             },
             {
               "code": "N57D30",
+              "title": "3.0L Diesel",
+              "familyHeading": "M-Series & N-Series Inline-Six Diesels (2002-2015)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "245-313 hp",
@@ -1038,6 +1053,8 @@
             },
             {
               "code": "B57D30",
+              "title": "3.0L Diesel",
+              "familyHeading": "B-Series Modern Inline-Six Diesel (2015-2022)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "265-320 hp",
@@ -1055,6 +1072,8 @@
           "engines": [
             {
               "code": "N62B44",
+              "title": "4.4L Petrol",
+              "familyHeading": "N62 Naturally Aspirated V8 Series (2002-2010)",
               "fuel": "Petrol",
               "size": "4.4L",
               "power": "329 hp",
@@ -1065,6 +1084,8 @@
             },
             {
               "code": "N62B48",
+              "title": "4.8L Petrol",
+              "familyHeading": "N62 Naturally Aspirated V8 Series (2002-2010)",
               "fuel": "Petrol",
               "size": "4.8L",
               "power": "367 hp",
@@ -1075,6 +1096,8 @@
             },
             {
               "code": "N63B44",
+              "title": "4.4L Petrol",
+              "familyHeading": "N63 Twin-Turbo V8 Series (2008-2015)",
               "fuel": "Petrol",
               "size": "4.4L",
               "power": "407-450 hp",
@@ -1085,6 +1108,8 @@
             },
             {
               "code": "N52B30",
+              "title": "3.0L Petrol",
+              "familyHeading": "N52 & B58 Inline-Six Petrol Series (2002-2022)",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "258 hp",
@@ -1095,6 +1120,8 @@
             },
             {
               "code": "B58B30",
+              "title": "3.0L Petrol",
+              "familyHeading": "N52 & B58 Inline-Six Petrol Series (2002-2022)",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "335-382 hp",
@@ -1105,6 +1132,8 @@
             },
             {
               "code": "N73B60",
+              "title": "6.0L Petrol",
+              "familyHeading": "N73 & N74 V12 Series (2003-2022)",
               "fuel": "Petrol",
               "size": "6.0L",
               "power": "445 hp",
@@ -1115,6 +1144,8 @@
             },
             {
               "code": "N74B66",
+              "title": "6.6L Petrol",
+              "familyHeading": "N73 & N74 V12 Series (2003-2022)",
               "fuel": "Petrol",
               "size": "6.6L",
               "power": "544-610 hp",
@@ -1132,6 +1163,8 @@
           "engines": [
             {
               "code": "B48 Hybrid",
+              "title": "2.0L Petrol PHEV",
+              "familyHeading": "B-Series Plug-in Hybrid Drivetrain (2016-2022)",
               "fuel": "PHEV (Petrol/Electric)",
               "size": "2.0L",
               "power": "326-394 hp (combined)",
@@ -1612,6 +1645,11 @@
           "title": "BMW 7 Series Diesel Engines",
           "description": "The 3.0-litre straight-six diesel has powered every 7 Series generation since the E65, dominating UK replacement enquiries due to high-mileage fleet use and exhaust system wear.",
           "descriptor": "The 3.0-litre straight-six diesel has powered every 7 Series generation since the E65, dominating UK replacement enquiries due to high-mileage fleet use and exhaust system wear.",
+          "familiesLabel": "Common BMW 7 Series Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "M57D30 - robust iron-block unit (730d E65), swirl flap and injector seal vulnerabilities",
             "N57D30 - aluminium successor (730d/740d F01), rear timing chain tensioner wear concerns",
@@ -1643,6 +1681,11 @@
           "title": "BMW 7 Series Petrol Engines",
           "description": "Petrol 7 Series models span naturally aspirated straight-six and V8 architectures through to modern twin-turbo V12 units, with N62 valve seal and N63 hot restart issues driving significant replacement demand.",
           "descriptor": "Petrol 7 Series models span naturally aspirated straight-six and V8 architectures through to modern twin-turbo V12 units, with N62 valve seal and N63 hot restart issues driving significant replacement demand.",
+          "familiesLabel": "Common BMW 7 Series Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "N62B44/N62B48 - early V8 (745i/750i E65), valve stem seal hardening and oil consumption",
             "N63B44 - twin-turbo V8 (750i F01/G11), notorious hot restart and piston ring wear",
@@ -1677,6 +1720,11 @@
           "title": "BMW 7 Series Plug-in Hybrid (PHEV) Engines",
           "description": "The 740e and 745e plug-in hybrid variants combine a turbocharged B48 petrol engine with an electric motor for reduced emissions while retaining flagship refinement.",
           "descriptor": "The 740e and 745e plug-in hybrid variants combine a turbocharged B48 petrol engine with an electric motor for reduced emissions while retaining flagship refinement.",
+          "familiesLabel": "BMW 7 Series PHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "B48B20H - 2.0L turbo petrol hybrid unit (740e/745e G11/G12), integrated electric motor coupling",
             "48-volt electrical architecture recovers braking energy for electric torque assistance",

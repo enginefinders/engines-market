@@ -15,13 +15,13 @@
     "canonical": "/bmw/x1"
   },
   "assets": {
-    "heroBg": "/images/brands/bmw/models/bmw-bmw-x1-model-card.png",
+    "heroBg": "/images/brands/bmw/models/bmw-x1-model-card.png",
     "howItWorksBg": "/images/brands/bmw/brand/bmw-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/bmw/brand/bmw-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/bmw/brand/bmw-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/bmw/brand/bmw-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/bmw/brand/bmw-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/bmw/models/bmw-bmw-x1-model-card.png"
+    "ctaImage": "/images/brands/bmw/models/bmw-x1-model-card.png"
   },
   "sections": {
     "hero": {
@@ -764,6 +764,7 @@
               {
                 "code": "N47D20",
                 "title": "2.0L Diesel",
+                "familyHeading": "N47 Series Diesel Engines (2009-2015)",
                 "history": "The N47D20 powered first-generation X1 sDrive18d and xDrive20d models, but its rear-mounted timing chain became the defining failure of this generation.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -784,6 +785,7 @@
               {
                 "code": "B47D20",
                 "title": "2.0L Diesel",
+                "familyHeading": "B47 Series Diesel Engines (2015-2025)",
                 "history": "The B47 replaced the N47 with a revised timing chain design positioned at the front of the engine, largely resolving the catastrophic chain failure issues that plagued its predecessor.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -804,6 +806,7 @@
               {
                 "code": "B47D20 MHEV",
                 "title": "2.0L Mild Hybrid Diesel",
+                "familyHeading": "B47 Series Diesel Engines (2015-2025)",
                 "history": "The B47 in mild hybrid form added a 48V starter-generator to the U11 X1, improving efficiency and reducing turbo lag in the latest generation.",
                 "fuel": "MHEV Diesel",
                 "size": "2.0 Litre",
@@ -824,6 +827,7 @@
               {
                 "code": "B37C15",
                 "title": "1.5L Diesel",
+                "familyHeading": "B47 Series Diesel Engines (2015-2025)",
                 "history": "The B37 three-cylinder diesel offered remarkable fuel economy for urban-focused X1 buyers, sharing its modular design with the B38 petrol and B47 diesel families.",
                 "fuel": "Diesel",
                 "size": "1.5 Litre",
@@ -849,6 +853,7 @@
               {
                 "code": "N46B20",
                 "title": "2.0L Petrol",
+                "familyHeading": "N46 Series Petrol Engines (2009-2015)",
                 "history": "The naturally aspirated N46 was the entry-level petrol engine for first-generation E84 X1, delivering modest power with reasonable reliability for its era.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -869,6 +874,7 @@
               {
                 "code": "N20B20",
                 "title": "2.0L Petrol Turbo",
+                "familyHeading": "N20 Series Petrol Engines (2012-2015)",
                 "history": "BMW's first four-cylinder turbocharged petrol engine brought forced induction to the X1 range, offering a compelling blend of power and efficiency.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -889,6 +895,7 @@
               {
                 "code": "B38B15",
                 "title": "1.5L Petrol",
+                "familyHeading": "B Series Petrol Engines (2015-2025)",
                 "history": "The B38 three-cylinder petrol engine debuted in the F48 X1, balancing small-displacement efficiency with surprising refinement for a three-cylinder unit.",
                 "fuel": "Petrol",
                 "size": "1.5 Litre",
@@ -909,6 +916,7 @@
               {
                 "code": "B48B20",
                 "title": "2.0L Petrol",
+                "familyHeading": "B Series Petrol Engines (2015-2025)",
                 "history": "The B48 replaced the N20 as BMW's four-cylinder turbo petrol, bringing modular architecture, improved thermal management, and significantly better reliability to the X1 range.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -934,6 +942,7 @@
               {
                 "code": "B38B15 PHEV",
                 "title": "1.5L Plug-in Hybrid Petrol",
+                "familyHeading": "B38 PHEV Series (2020-2025)",
                 "history": "The xDrive25e combined the B38 three-cylinder petrol with an electric motor, delivering BMW's first plug-in hybrid X1 with impressive electric-only range and family-friendly practicality.",
                 "fuel": "PHEV Petrol",
                 "size": "1.5 Litre",
@@ -986,6 +995,8 @@
           "engines": [
             {
               "code": "N47D20",
+              "title": "2.0L Diesel",
+              "familyHeading": "N47 Series Diesel Engines (2009-2015)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "143-204 hp",
@@ -996,6 +1007,8 @@
             },
             {
               "code": "B47D20",
+              "title": "2.0L Diesel",
+              "familyHeading": "B47 Series Diesel Engines (2015-2025)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "150-231 hp",
@@ -1006,6 +1019,8 @@
             },
             {
               "code": "B47D20 MHEV",
+              "title": "2.0L Mild Hybrid Diesel",
+              "familyHeading": "B47 Series Diesel Engines (2015-2025)",
               "fuel": "MHEV Diesel",
               "size": "2.0L",
               "power": "211 hp",
@@ -1016,6 +1031,8 @@
             },
             {
               "code": "B37C15",
+              "title": "1.5L Diesel",
+              "familyHeading": "B47 Series Diesel Engines (2015-2025)",
               "fuel": "Diesel",
               "size": "1.5L",
               "power": "95-116 hp",
@@ -1033,6 +1050,8 @@
           "engines": [
             {
               "code": "N46B20",
+              "title": "2.0L Petrol",
+              "familyHeading": "N46 Series Petrol Engines (2009-2015)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "143-150 hp",
@@ -1043,6 +1062,8 @@
             },
             {
               "code": "N20B20",
+              "title": "2.0L Petrol Turbo",
+              "familyHeading": "N20 Series Petrol Engines (2012-2015)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "184-245 hp",
@@ -1053,6 +1074,8 @@
             },
             {
               "code": "B38B15",
+              "title": "1.5L Petrol",
+              "familyHeading": "B Series Petrol Engines (2015-2025)",
               "fuel": "Petrol",
               "size": "1.5L",
               "power": "136 hp",
@@ -1063,6 +1086,8 @@
             },
             {
               "code": "B48B20",
+              "title": "2.0L Petrol",
+              "familyHeading": "B Series Petrol Engines (2015-2025)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "192-231 hp",
@@ -1080,6 +1105,8 @@
           "engines": [
             {
               "code": "B38B15 PHEV",
+              "title": "1.5L Plug-in Hybrid Petrol",
+              "familyHeading": "B38 PHEV Series (2020-2025)",
               "fuel": "PHEV Petrol",
               "size": "1.5L",
               "power": "220 hp (combined)",
@@ -1508,6 +1535,11 @@
           "title": "BMW X1 Diesel Engines",
           "description": "Diesel has powered the majority of UK X1 sales across all three generations, with the N47 driving high replacement demand on E84 cars and the improved B47 dominating F48 and U11 models.",
           "descriptor": "Diesel has powered the majority of UK X1 sales across all three generations, with the N47 driving high replacement demand on E84 cars and the improved B47 dominating F48 and U11 models.",
+          "familiesLabel": "Common BMW X1 Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "N47D20 - E84 sDrive18d/xDrive20d (2009-2015), timing chain failure drives most replacements",
             "B47D20 - F48 (2015-2022) and U11 (2022-present), EGR cooler failures common",
@@ -1540,6 +1572,11 @@
           "title": "BMW X1 Petrol Engines",
           "description": "Petrol X1s are less common in the UK than diesels but cover a wider performance spread - from economical three-cylinder sDrive18i to the punchy xDrive28i with the N20 turbo unit.",
           "descriptor": "Petrol X1s are less common in the UK than diesels but cover a wider performance spread - from economical three-cylinder sDrive18i to the punchy xDrive28i with the N20 turbo unit.",
+          "familiesLabel": "Common BMW X1 Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "N46B20 - E84 sDrive18i (2009-2015), naturally aspirated entry petrol",
             "N20B20 - E84 xDrive20i/xDrive25i/xDrive28i (2012-2015), timing chain guide vulnerability",
@@ -1572,6 +1609,11 @@
           "title": "BMW X1 Plug-in Hybrid (PHEV) Engines",
           "description": "The xDrive25e plug-in hybrid arrived on F48 (2020-2022) and continues into U11 (2022-present), combining a 1.5-litre B38 petrol engine with an electric motor and high-voltage battery.",
           "descriptor": "The xDrive25e plug-in hybrid arrived on F48 (2020-2022) and continues into U11 (2022-present), combining a 1.5-litre B38 petrol engine with an electric motor and high-voltage battery.",
+          "familiesLabel": "BMW X1 PHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "B38B15 PHEV - three-cylinder petrol with integrated electric motor (xDrive25e)",
             "High-voltage battery (12.0-14.2 kWh depending on generation)",
@@ -1597,6 +1639,11 @@
           "title": "BMW X1 Mild Hybrid (MHEV) Engines",
           "description": "The U11 generation introduced 48V mild hybrid technology to the 2.0-litre B47 diesel, badged xDrive23d, using a belt-integrated starter-generator (BSG) for efficiency gains.",
           "descriptor": "The U11 generation introduced 48V mild hybrid technology to the 2.0-litre B47 diesel, badged xDrive23d, using a belt-integrated starter-generator (BSG) for efficiency gains.",
+          "familiesLabel": "BMW X1 MHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "B47D20 MHEV - 2.0-litre diesel with 48V starter-generator (xDrive23d)",
             "48V lithium-ion battery (small, under bonnet or boot floor)",

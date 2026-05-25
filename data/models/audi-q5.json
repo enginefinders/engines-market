@@ -15,13 +15,13 @@
     "canonical": "/audi/q5"
   },
   "assets": {
-    "heroBg": "/images/brands/audi/models/audi-audi-q5-model-card.png",
+    "heroBg": "/images/brands/audi/models/audi-q5-model-card.png",
     "howItWorksBg": "/images/brands/audi/brand/audi-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/audi/brand/audi-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/audi/brand/audi-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/audi/brand/audi-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/audi/brand/audi-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/audi/models/audi-audi-q5-model-card.png"
+    "ctaImage": "/images/brands/audi/models/audi-q5-model-card.png"
   },
   "sections": {
     "hero": {
@@ -720,6 +720,7 @@
               {
                 "code": "CNHA",
                 "title": "2.0L Diesel",
+                "familyHeading": "2.0L TDI EA189/EA288 Family (2008-2023)",
                 "history": "Euro 6 2.0 TDI workhorse for Q5 fleet use; balanced power, efficiency and quattro compatibility defined mainstream demand.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -740,6 +741,7 @@
               {
                 "code": "CGLB",
                 "title": "2.0L Diesel",
+                "familyHeading": "2.0L TDI EA189/EA288 Family (2008-2023)",
                 "history": "Updated EA189 2.0 TDI with improved emissions; common in late 8R Q5s with strong towing capability.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -760,6 +762,7 @@
               {
                 "code": "CAHA",
                 "title": "2.0L Diesel",
+                "familyHeading": "2.0L TDI EA189/EA288 Family (2008-2023)",
                 "history": "Early 8R 2.0 TDI Euro 5 unit; proven reliability but timing chain attention needed on pre-2012 builds.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -780,6 +783,7 @@
               {
                 "code": "DEJA",
                 "title": "2.0L Diesel",
+                "familyHeading": "2.0L TDI EA189/EA288 Family (2008-2023)",
                 "history": "EA288 Evo 2.0 TDI for FY generation; mild-hybrid ready with refined emissions and quattro calibration.",
                 "fuel": "Diesel (MHEV compatible)",
                 "size": "2.0 Litre",
@@ -800,6 +804,7 @@
               {
                 "code": "DEJB",
                 "title": "2.0L Diesel",
+                "familyHeading": "2.0L TDI EA189/EA288 Family (2008-2023)",
                 "history": "Latest Euro 6d 2.0 TDI for FY Q5; optimised for real-world emissions and mild-hybrid integration.",
                 "fuel": "Diesel (MHEV)",
                 "size": "2.0 Litre",
@@ -809,29 +814,18 @@
                   "40 TDI S line, Vorsprung, Edition One, 40 TDI MHEV"
                 ],
                 "commonFailures": [
-                  "SCR catalyst efficiency codes under heavy load"
+                  "SCR catalyst efficiency codes under heavy load",
+                  "Mild-hybrid system handshake calibration faults",
+                  "Turbo wastegate actuator wear on towing specimens"
                 ],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
-              },
-              {
-                "code": "Mild",
-                "title": "hybrid system handshake calibration faults",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
                 "avgRebuiltPrice": "£2,000 - £3,200",
                 "cta": "Get quotes for DEJB Audi Q5 engine replacement",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
                 "code": "CJCD",
                 "title": "3.0L Diesel",
+                "familyHeading": "3.0L TDI V6 Family (2008-2023)",
                 "history": "High-output 3.0 TDI V6 for 8R Q5; favoured for towing and motorway cruising with quattro durability.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -852,6 +846,7 @@
               {
                 "code": "CDUC",
                 "title": "3.0L Diesel",
+                "familyHeading": "3.0L TDI V6 Family (2008-2023)",
                 "history": "Refined 3.0 TDI V6 with updated oil pump drive; core engine for SQ5 and high-spec 8R Q5 variants.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -872,6 +867,7 @@
               {
                 "code": "CCWA",
                 "title": "3.0L Diesel",
+                "familyHeading": "3.0L TDI V6 Family (2008-2023)",
                 "history": "Early Euro 5 3.0 TDI V6 for 8R Q5; robust block but requires A2-spec oil for quattro transfer case longevity.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -892,6 +888,7 @@
               {
                 "code": "CZVB",
                 "title": "3.0L Diesel",
+                "familyHeading": "3.0L TDI V6 Family (2008-2023)",
                 "history": "EA897 Evo 3.0 TDI V6 for FY Q5; 50 TDI badge with mild-hybrid tech and refined emissions calibration.",
                 "fuel": "Diesel (MHEV)",
                 "size": "3.0 Litre",
@@ -912,6 +909,7 @@
               {
                 "code": "CRCA",
                 "title": "3.0L Diesel",
+                "familyHeading": "3.0L TDI V6 Family (2008-2023)",
                 "history": "Euro 5 3.0 TDI V6 with updated injection strategy; common in late 8R Q5s with strong mid-range torque.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -932,6 +930,7 @@
               {
                 "code": "CJGD",
                 "title": "3.0L Diesel",
+                "familyHeading": "3.0L TDI V6 Family (2008-2023)",
                 "history": "Euro 6 3.0 TDI V6 for FY Q5; DPF-ready with refined SCR calibration for clean air zone compliance.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -957,6 +956,7 @@
               {
                 "code": "CDNB",
                 "title": "2.0L Petrol",
+                "familyHeading": "2.0L TFSI EA888 Family (2008-2023)",
                 "history": "EA888 Gen 2 2.0 TFSI for 8R Q5; strong performance but oil consumption and timing chain concerns drove replacement demand.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -977,6 +977,7 @@
               {
                 "code": "CAEB",
                 "title": "2.0L Petrol",
+                "familyHeading": "2.0L TFSI EA888 Family (2008-2023)",
                 "history": "High-output EA888 2.0 TFSI for 8R Q5; favoured for performance balance but requires carbon cleaning maintenance.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -997,6 +998,7 @@
               {
                 "code": "CYRB",
                 "title": "2.0L Petrol",
+                "familyHeading": "2.0L TFSI EA888 Family (2008-2023)",
                 "history": "EA888 Gen 3B 2.0 TFSI for FY Q5; refined combustion and mild-hybrid readiness with improved reliability.",
                 "fuel": "Petrol (MHEV compatible)",
                 "size": "2.0 Litre",
@@ -1007,22 +1009,9 @@
                 ],
                 "commonFailures": [
                   "Carbon buildup on intake valves (walnut blasting recommended)",
-                  "Water pump housing leakage on early FY builds"
+                  "Water pump housing leakage on early FY builds",
+                  "Mild-hybrid belt-starter generator electrical faults"
                 ],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "Mild-hybrid belt-starter generator",
-                "title": "electrical faults",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
                 "avgRebuiltPrice": "£2,000 - £3,400",
                 "cta": "Get quotes for CYRB Audi Q5 engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1030,6 +1019,7 @@
               {
                 "code": "DGTA",
                 "title": "2.0L Petrol",
+                "familyHeading": "2.0L TFSI EA888 Family (2008-2023)",
                 "history": "Plug-in hybrid EA888 for FY Q5 TFSI e; combines turbo petrol with electric drive for ULEZ compliance.",
                 "fuel": "Petrol PHEV",
                 "size": "2.0 Litre",
@@ -1050,6 +1040,7 @@
               {
                 "code": "CGQC",
                 "title": "3.0L Petrol",
+                "familyHeading": "3.0L TFSI V6 Family (2018-2023)",
                 "history": "Supercharged 3.0 TFSI V6 for SQ5; high-performance unit with specialist rebuild requirements and quattro calibration.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -1075,6 +1066,7 @@
               {
                 "code": "CLZB",
                 "title": "3.0L Diesel MHEV",
+                "familyHeading": "Mild Hybrid & Plug-in Hybrid Systems (2020-2023)",
                 "history": "EA897 Evo 3.0 TDI with 48V mild-hybrid for FY Q5; seamless start-stop and energy recovery for efficiency gains.",
                 "fuel": "Diesel MHEV",
                 "size": "3.0 Litre",
@@ -1084,29 +1076,18 @@
                   "50 TDI MHEV, Vorsprung, S line, Edition One"
                 ],
                 "commonFailures": [
-                  "48V belt-starter generator electrical faults"
+                  "48V belt-starter generator electrical faults",
+                  "Mild-hybrid system handshake calibration errors",
+                  "DC-DC converter issues affecting battery charging"
                 ],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
-              },
-              {
-                "code": "Mild",
-                "title": "hybrid system handshake calibration errors",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
                 "avgRebuiltPrice": "£2,300 - £3,900",
                 "cta": "Get quotes for CLZB Audi Q5 engine replacement",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
                 "code": "DLZA",
                 "title": "2.0L Diesel MHEV",
+                "familyHeading": "Mild Hybrid & Plug-in Hybrid Systems (2020-2023)",
                 "history": "Latest EA288 Evo 2.0 TDI with 48V tech for FY Q5; optimised for real-world emissions and urban efficiency.",
                 "fuel": "Diesel MHEV",
                 "size": "2.0 Litre",
@@ -1117,25 +1098,12 @@
                 ],
                 "commonFailures": [
                   "48V electrical system communication errors",
-                  "AdBlue dosing valve faults on short-journey use"
+                  "AdBlue dosing valve faults on short-journey use",
+                  "Mild-hybrid belt tensioner wear on high-mileage units"
                 ],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
-              },
-              {
-                "code": "Mild",
-                "title": "hybrid belt tensioner wear on high-mileage units",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
                 "avgRebuiltPrice": "£1,900 - £3,100",
                 "cta": "Get quotes for DLZA Audi Q5 engine replacement",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               }
             ]
           }
@@ -1172,6 +1140,8 @@
           "engines": [
             {
               "code": "CNHA",
+              "title": "2.0L Diesel",
+              "familyHeading": "2.0L TDI EA189/EA288 Family (2008-2023)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "150-190 hp",
@@ -1182,6 +1152,8 @@
             },
             {
               "code": "CGLB",
+              "title": "2.0L Diesel",
+              "familyHeading": "2.0L TDI EA189/EA288 Family (2008-2023)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "170-177 hp",
@@ -1192,6 +1164,8 @@
             },
             {
               "code": "CAHA",
+              "title": "2.0L Diesel",
+              "familyHeading": "2.0L TDI EA189/EA288 Family (2008-2023)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "143-170 hp",
@@ -1202,6 +1176,8 @@
             },
             {
               "code": "DEJA",
+              "title": "2.0L Diesel",
+              "familyHeading": "2.0L TDI EA189/EA288 Family (2008-2023)",
               "fuel": "Diesel (MHEV compatible)",
               "size": "2.0L",
               "power": "190-204 hp",
@@ -1212,26 +1188,20 @@
             },
             {
               "code": "DEJB",
+              "title": "2.0L Diesel",
+              "familyHeading": "2.0L TDI EA189/EA288 Family (2008-2023)",
               "fuel": "Diesel (MHEV)",
               "size": "2.0L",
               "power": "204 hp",
               "compatibleModels": "40 TDI S line, Vorsprung, Edition One, 40 TDI MHEV",
-              "avgRebuiltPrice": "",
-              "cta": "",
+              "avgRebuiltPrice": "£2,000 - £3,200",
+              "cta": "Get quotes for DEJB Audi Q5 engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "Mild",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
-              "avgRebuiltPrice": "£2,000 - £3,200",
-              "cta": "Get quotes for DEJB Audi Q5 engine replacement",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
               "code": "CJCD",
+              "title": "3.0L Diesel",
+              "familyHeading": "3.0L TDI V6 Family (2008-2023)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "240-258 hp",
@@ -1242,6 +1212,8 @@
             },
             {
               "code": "CDUC",
+              "title": "3.0L Diesel",
+              "familyHeading": "3.0L TDI V6 Family (2008-2023)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "240-313 hp",
@@ -1252,6 +1224,8 @@
             },
             {
               "code": "CCWA",
+              "title": "3.0L Diesel",
+              "familyHeading": "3.0L TDI V6 Family (2008-2023)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "240 hp",
@@ -1262,6 +1236,8 @@
             },
             {
               "code": "CZVB",
+              "title": "3.0L Diesel",
+              "familyHeading": "3.0L TDI V6 Family (2008-2023)",
               "fuel": "Diesel (MHEV)",
               "size": "3.0L",
               "power": "286 hp",
@@ -1272,6 +1248,8 @@
             },
             {
               "code": "CRCA",
+              "title": "3.0L Diesel",
+              "familyHeading": "3.0L TDI V6 Family (2008-2023)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "240-245 hp",
@@ -1282,6 +1260,8 @@
             },
             {
               "code": "CJGD",
+              "title": "3.0L Diesel",
+              "familyHeading": "3.0L TDI V6 Family (2008-2023)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "258-272 hp",
@@ -1299,6 +1279,8 @@
           "engines": [
             {
               "code": "CDNB",
+              "title": "2.0L Petrol",
+              "familyHeading": "2.0L TFSI EA888 Family (2008-2023)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "180-211 hp",
@@ -1309,6 +1291,8 @@
             },
             {
               "code": "CAEB",
+              "title": "2.0L Petrol",
+              "familyHeading": "2.0L TFSI EA888 Family (2008-2023)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "211 hp",
@@ -1319,26 +1303,20 @@
             },
             {
               "code": "CYRB",
+              "title": "2.0L Petrol",
+              "familyHeading": "2.0L TFSI EA888 Family (2008-2023)",
               "fuel": "Petrol (MHEV compatible)",
               "size": "2.0L",
               "power": "245-265 hp",
               "compatibleModels": "45 TFSI, S line, Black Edition, Vorsprung, 45 TFSI MHEV",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "Mild-hybrid belt-starter generator",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
               "avgRebuiltPrice": "£2,000 - £3,400",
               "cta": "Get quotes for CYRB Audi Q5 engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
               "code": "DGTA",
+              "title": "2.0L Petrol",
+              "familyHeading": "2.0L TFSI EA888 Family (2008-2023)",
               "fuel": "Petrol PHEV",
               "size": "2.0L",
               "power": "252 hp (combined 299 hp)",
@@ -1349,6 +1327,8 @@
             },
             {
               "code": "CGQC",
+              "title": "3.0L Petrol",
+              "familyHeading": "3.0L TFSI V6 Family (2018-2023)",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "349-354 hp",
@@ -1366,43 +1346,27 @@
           "engines": [
             {
               "code": "CLZB",
+              "title": "3.0L Diesel MHEV",
+              "familyHeading": "Mild Hybrid & Plug-in Hybrid Systems (2020-2023)",
               "fuel": "Diesel MHEV",
               "size": "3.0L",
               "power": "286 hp",
               "compatibleModels": "50 TDI MHEV, Vorsprung, S line, Edition One",
-              "avgRebuiltPrice": "",
-              "cta": "",
+              "avgRebuiltPrice": "£2,300 - £3,900",
+              "cta": "Get quotes for CLZB Audi Q5 engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "Mild",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
-              "avgRebuiltPrice": "£2,300 - £3,900",
-              "cta": "Get quotes for CLZB Audi Q5 engine replacement",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
               "code": "DLZA",
+              "title": "2.0L Diesel MHEV",
+              "familyHeading": "Mild Hybrid & Plug-in Hybrid Systems (2020-2023)",
               "fuel": "Diesel MHEV",
               "size": "2.0L",
               "power": "204 hp",
               "compatibleModels": "40 TDI MHEV, S line, Black Edition, Vorsprung",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
-            },
-            {
-              "code": "Mild",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
               "avgRebuiltPrice": "£1,900 - £3,100",
               "cta": "Get quotes for DLZA Audi Q5 engine replacement",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             }
           ]
         }
@@ -1925,6 +1889,11 @@
           "title": "Audi Q5 Diesel Engines",
           "description": "Dominant across 8R and FY generations, Audi Q5 diesel engines power the majority of UK fleet, towing and high-mileage family replacements.",
           "descriptor": "Dominant across 8R and FY generations, Audi Q5 diesel engines power the majority of UK fleet, towing and high-mileage family replacements.",
+          "familiesLabel": "Common Audi Q5 Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "CNHA/CGLB - 2.0 TDI fleet favourite with timing chain tensioner wear risks",
             "CJCD/CDUC - 3.0 TDI V6 performance unit with oil pump drive risks",
@@ -1955,6 +1924,11 @@
           "title": "Audi Q5 Petrol Engines",
           "description": "Spanning naturally aspirated early V6s to modern turbocharged four-cylinders, petrol variants balance responsive performance with urban drivability.",
           "descriptor": "Spanning naturally aspirated early V6s to modern turbocharged four-cylinders, petrol variants balance responsive performance with urban drivability.",
+          "familiesLabel": "Common Audi Q5 Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "CDNB/CAEB - 2.0 TFSI early 8R unit with piston ring wear",
             "CYRB/DGTA - FY 2.0 TFSI with improved piston rings and coolant seals",
@@ -1985,6 +1959,11 @@
           "title": "Audi Q5 Hybrid / Electrified Engines",
           "description": "Plug-in hybrid TFSI e powertrains combine turbo petrol efficiency with electric-only urban range for ULEZ-compliant commuting.",
           "descriptor": "Plug-in hybrid TFSI e powertrains combine turbo petrol efficiency with electric-only urban range for ULEZ-compliant commuting.",
+          "familiesLabel": "Common Audi Q5 PHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "CLZB/DLZA - FY 3.0/2.0 TDI paired with belt-starter generator for 40/50 TDI variants",
             "48-volt belt starter-generator recovers braking energy",

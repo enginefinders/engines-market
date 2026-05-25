@@ -123,7 +123,7 @@ export default function HomeEngineTypesSection({ cards }: Props) {
   const [activeCard, setActiveCard] = useState<string | null>(null);
 
   return (
-    <Section className="bg-white py-7 sm:py-8 lg:py-10">
+    <Section id="engine-types" className="bg-white py-7 sm:py-8 lg:py-10">
       <Container className="max-w-[1180px]">
         <div className="max-w-[760px]">
           <div className="section-pill">

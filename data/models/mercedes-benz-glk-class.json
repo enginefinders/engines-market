@@ -15,13 +15,13 @@
     "canonical": "/mercedes-benz/glk-class"
   },
   "assets": {
-    "heroBg": "/images/brands/mercedes-benz/models/mercedes-benz-mercedes-benz-glk-class-model-card.png",
+    "heroBg": "/images/brands/mercedes-benz/models/mercedes-benz-glk-class-model-card.png",
     "howItWorksBg": "/images/brands/mercedes-benz/brand/mercedes-benz-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/mercedes-benz/models/mercedes-benz-mercedes-benz-glk-class-model-card.png"
+    "ctaImage": "/images/brands/mercedes-benz/models/mercedes-benz-glk-class-model-card.png"
   },
   "sections": {
     "hero": {
@@ -743,6 +743,7 @@
               {
                 "code": "OM651.911",
                 "title": "2.1L Diesel",
+                "familyHeading": "OM651 Series (2008-2015)",
                 "history": "Top UK GLK diesel known for fleet efficiency but plagued by early timing chain tensioner failures.",
                 "fuel": "Diesel",
                 "size": "2.1 Litre",
@@ -763,6 +764,7 @@
               {
                 "code": "OM651.921",
                 "title": "2.1L Diesel",
+                "familyHeading": "OM651 Series (2008-2015)",
                 "history": "Twin-turbo upgrade for the 250 CDI, delivering strong mid-range torque for motorway cruising and towing.",
                 "fuel": "Diesel",
                 "size": "2.1 Litre",
@@ -783,6 +785,7 @@
               {
                 "code": "OM651.941",
                 "title": "2.1L Diesel",
+                "familyHeading": "OM651 Series (2008-2015)",
                 "history": "AdBlue-ready BlueTEC variant engineered to meet strict Euro 5 emissions without sacrificing low-end torque.",
                 "fuel": "Diesel",
                 "size": "2.1 Litre",
@@ -803,6 +806,7 @@
               {
                 "code": "OM651.901",
                 "title": "2.1L Diesel",
+                "familyHeading": "OM651 Series (2008-2015)",
                 "history": "Entry-level detuned OM651 prioritising fuel economy and lower CO2 emissions for urban and fleet operation.",
                 "fuel": "Diesel",
                 "size": "2.1 Litre",
@@ -823,6 +827,7 @@
               {
                 "code": "OM642.920",
                 "title": "3.0L Diesel",
+                "familyHeading": "OM642 V6 Series (2008-2015)",
                 "history": "Flagship GLK diesel delivering refined V6 torque and towing capability with proven bottom-end durability.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -843,6 +848,7 @@
               {
                 "code": "OM642.930",
                 "title": "3.0L Diesel",
+                "familyHeading": "OM642 V6 Series (2008-2015)",
                 "history": "Pre-facelift V6 diesel offering strong low-end grunt and proven reliability before AdBlue integration.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -868,6 +874,7 @@
               {
                 "code": "M271.860",
                 "title": "1.8L Petrol",
+                "familyHeading": "M271 Series (2008-2011)",
                 "history": "Supercharged four-cylinder unit delivering brisk acceleration while maintaining reasonable running costs.",
                 "fuel": "Petrol",
                 "size": "1.8 Litre",
@@ -888,6 +895,7 @@
               {
                 "code": "M272.948",
                 "title": "3.0L Petrol",
+                "familyHeading": "M272 V6 Series (2008-2011)",
                 "history": "Naturally aspirated V6 replacing older six-cylinders, offering smoother refinement and lower tax brackets.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -908,6 +916,7 @@
               {
                 "code": "M272.960",
                 "title": "3.5L Petrol",
+                "familyHeading": "M272 V6 Series (2008-2011)",
                 "history": "High-output naturally aspirated petrol delivering seamless power for refined, long-distance luxury cruising.",
                 "fuel": "Petrol",
                 "size": "3.5 Litre",
@@ -928,6 +937,7 @@
               {
                 "code": "M276.957",
                 "title": "3.5L Petrol",
+                "familyHeading": "M276 V6 Series (2012-2015)",
                 "history": "Direct-injection facelift V6 resolving balance shaft issues while improving fuel economy and emissions.",
                 "fuel": "Petrol",
                 "size": "3.5 Litre",
@@ -979,6 +989,8 @@
           "engines": [
             {
               "code": "OM651.911",
+              "title": "2.1L Diesel",
+              "familyHeading": "OM651 Series (2008-2015)",
               "fuel": "Diesel",
               "size": "2.1L",
               "power": "170 hp",
@@ -989,6 +1001,8 @@
             },
             {
               "code": "OM651.921",
+              "title": "2.1L Diesel",
+              "familyHeading": "OM651 Series (2008-2015)",
               "fuel": "Diesel",
               "size": "2.1L",
               "power": "204 hp",
@@ -999,6 +1013,8 @@
             },
             {
               "code": "OM651.941",
+              "title": "2.1L Diesel",
+              "familyHeading": "OM651 Series (2008-2015)",
               "fuel": "Diesel",
               "size": "2.1L",
               "power": "170-204 hp",
@@ -1009,6 +1025,8 @@
             },
             {
               "code": "OM651.901",
+              "title": "2.1L Diesel",
+              "familyHeading": "OM651 Series (2008-2015)",
               "fuel": "Diesel",
               "size": "2.1L",
               "power": "136 hp",
@@ -1019,6 +1037,8 @@
             },
             {
               "code": "OM642.920",
+              "title": "3.0L Diesel",
+              "familyHeading": "OM642 V6 Series (2008-2015)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "265 hp",
@@ -1029,6 +1049,8 @@
             },
             {
               "code": "OM642.930",
+              "title": "3.0L Diesel",
+              "familyHeading": "OM642 V6 Series (2008-2015)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "224 hp",
@@ -1046,6 +1068,8 @@
           "engines": [
             {
               "code": "M271.860",
+              "title": "1.8L Petrol",
+              "familyHeading": "M271 Series (2008-2011)",
               "fuel": "Petrol",
               "size": "1.8L",
               "power": "184 hp",
@@ -1056,6 +1080,8 @@
             },
             {
               "code": "M272.948",
+              "title": "3.0L Petrol",
+              "familyHeading": "M272 V6 Series (2008-2011)",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "231-245 hp",
@@ -1066,6 +1092,8 @@
             },
             {
               "code": "M272.960",
+              "title": "3.5L Petrol",
+              "familyHeading": "M272 V6 Series (2008-2011)",
               "fuel": "Petrol",
               "size": "3.5L",
               "power": "272 hp",
@@ -1076,6 +1104,8 @@
             },
             {
               "code": "M276.957",
+              "title": "3.5L Petrol",
+              "familyHeading": "M276 V6 Series (2012-2015)",
               "fuel": "Petrol",
               "size": "3.5L",
               "power": "306 hp",
@@ -1499,6 +1529,11 @@
           "title": "Mercedes-Benz GLK Class Diesel Engines",
           "description": "The dominant fuel choice across the X204 generation (2008-2015), CDI diesel engines power 70% of UK GLK models and drive the highest volume of replacement enquiries due to fleet usage and high-mileage ownership.",
           "descriptor": "The dominant fuel choice across the X204 generation (2008-2015), CDI diesel engines power 70% of UK GLK models and drive the highest volume of replacement enquiries due to fleet usage and high-mileage ownership.",
+          "familiesLabel": "Common Mercedes-Benz GLK Class Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "OM651.911 - 2.1L four-cylinder powering GLK 220 CDI, known for timing chain tensioner concerns on early pre-facelift units",
             "OM651.921 - 2.1L twin-turbo variant for GLK 250 CDI, delivering 204hp with upgraded turbo actuator reliability",
@@ -1529,6 +1564,11 @@
           "title": "Mercedes-Benz GLK Class Petrol Engines",
           "description": "Offering refined performance across the X204 range, petrol variants feature supercharged four-cylinder and naturally aspirated V6 options, with later facelift models benefiting from direct-injection M276 technology.",
           "descriptor": "Offering refined performance across the X204 range, petrol variants feature supercharged four-cylinder and naturally aspirated V6 options, with later facelift models benefiting from direct-injection M276 technology.",
+          "familiesLabel": "Common Mercedes-Benz GLK Class Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "M271.860 - 1.8L supercharged four-cylinder for GLK 200, compact power with timing chain tensioner sensitivity",
             "M272.948 - 3.0L V6 powering GLK 280/300, smooth refinement but balance shaft gear wear risk on early units",
@@ -1559,6 +1599,11 @@
           "title": "Mercedes-Benz GLK Class Hybrid / Electrified Engines",
           "description": "The Mercedes-Benz GLK Class X204 generation was not offered with hybrid, plug-in hybrid, mild hybrid, or electric powertrains in the UK market.",
           "descriptor": "The Mercedes-Benz GLK Class X204 generation was not offered with hybrid, plug-in hybrid, mild hybrid, or electric powertrains in the UK market.",
+          "familiesLabel": "Common Mercedes-Benz GLK Class Hybrid / Electrified Engine Families",
+          "foundInLabel": "",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [],
           "foundIn": [],
           "knownFor": [],

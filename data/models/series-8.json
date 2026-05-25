@@ -15,13 +15,13 @@
     "canonical": "/bmw/8-series"
   },
   "assets": {
-    "heroBg": "/images/brands/bmw/models/bmw-series-8-model-card.png",
+    "heroBg": "/images/brands/bmw/models/bmw-8-series-model-card.png",
     "howItWorksBg": "/images/brands/bmw/brand/bmw-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/bmw/brand/bmw-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/bmw/brand/bmw-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/bmw/brand/bmw-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/bmw/brand/bmw-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/bmw/models/bmw-series-8-model-card.png"
+    "ctaImage": "/images/brands/bmw/models/bmw-8-series-model-card.png"
   },
   "sections": {
     "hero": {
@@ -745,6 +745,7 @@
               {
                 "code": "B57D30A",
                 "title": "3.0L Diesel",
+                "familyHeading": "B57 Series (2018-2024)",
                 "history": "Flagship inline-six turbo-diesel for the modern 8 Series, balancing refined efficiency with robust torque delivery.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -765,6 +766,7 @@
               {
                 "code": "B57D30B",
                 "title": "3.0L Diesel",
+                "familyHeading": "B57 Series (2018-2024)",
                 "history": "Mid-cycle B57 update with refined software and improved emissions compliance for later LCI 8 Series models.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -785,6 +787,7 @@
               {
                 "code": "B57D30C",
                 "title": "3.0L Diesel",
+                "familyHeading": "B57 Series (2018-2024)",
                 "history": "Detuned B57 variant for entry 8 Series models, retaining premium torque and refined efficiency for grand touring.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -810,6 +813,7 @@
               {
                 "code": "B58B30A",
                 "title": "3.0L Petrol",
+                "familyHeading": "B-Series Inline-6 Petrol (2018-2024)",
                 "history": "Award-winning 3.0L turbo inline-six delivering seamless power and exceptional refinement in early G-chassis 8 Series.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -830,6 +834,7 @@
               {
                 "code": "B58B30B",
                 "title": "3.0L Petrol",
+                "familyHeading": "B-Series Inline-6 Petrol (2018-2024)",
                 "history": "Revised B58 generation with a strengthened block, closed-deck design and updated turbo mapping for LCI models.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -855,6 +860,7 @@
               {
                 "code": "N63TU2",
                 "title": "4.4L Petrol",
+                "familyHeading": "N/S-Series V8 Petrol (2019-2024)",
                 "history": "M850i flagship V8 featuring a hot-V turbo layout and direct injection for effortless power and refined performance.",
                 "fuel": "Petrol",
                 "size": "4.4 Litre",
@@ -875,6 +881,7 @@
               {
                 "code": "N63B44T3",
                 "title": "4.4L Petrol",
+                "familyHeading": "N/S-Series V8 Petrol (2019-2024)",
                 "history": "LCI evolution with reinforced internals, updated cooling channels and improved reliability for later 8 Series builds.",
                 "fuel": "Petrol",
                 "size": "4.4 Litre",
@@ -895,6 +902,7 @@
               {
                 "code": "S63TU",
                 "title": "4.4L Petrol",
+                "familyHeading": "N/S-Series V8 Petrol (2019-2024)",
                 "history": "Motorsport-derived twin-turbo V8 for the M8 Competition, engineered for extreme output and track-ready durability.",
                 "fuel": "Petrol",
                 "size": "4.4 Litre",
@@ -915,6 +923,7 @@
               {
                 "code": "S63B44T4",
                 "title": "4.4L Petrol",
+                "familyHeading": "N/S-Series V8 Petrol (2019-2024)",
                 "history": "Final S63 evolution with updated ECU mapping, improved oil cooling and stricter emissions calibration for late M8.",
                 "fuel": "Petrol",
                 "size": "4.4 Litre",
@@ -940,6 +949,7 @@
               {
                 "code": "M30B30",
                 "title": "3.0L Petrol",
+                "familyHeading": "Classic M-Series Petrol (1990-1999)",
                 "history": "BMW's legendary naturally aspirated inline-six, providing smooth, linear power that defined early 830i touring.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -960,6 +970,7 @@
               {
                 "code": "M60B40",
                 "title": "4.0L Petrol",
+                "familyHeading": "Classic M-Series Petrol (1990-1999)",
                 "history": "BMW's first all-aluminium V8, replacing the inline-six with 32-valve DOHC architecture for refined cruising.",
                 "fuel": "Petrol",
                 "size": "4.0 Litre",
@@ -980,6 +991,7 @@
               {
                 "code": "M70B50",
                 "title": "5.0L Petrol",
+                "familyHeading": "Classic M-Series Petrol (1990-1999)",
                 "history": "Pioneering 5.0L V12 launching the 8 Series, delivering effortless torque and unparalleled smoothness for cruising.",
                 "fuel": "Petrol",
                 "size": "5.0 Litre",
@@ -1000,6 +1012,7 @@
               {
                 "code": "M70B50TU",
                 "title": "5.0L Petrol",
+                "familyHeading": "Classic M-Series Petrol (1990-1999)",
                 "history": "Upgraded M70 featuring revised management, improved cooling routing and enhanced emissions for mid-production 8 Series.",
                 "fuel": "Petrol",
                 "size": "5.0 Litre",
@@ -1020,6 +1033,7 @@
               {
                 "code": "S70B56",
                 "title": "5.6L Petrol",
+                "familyHeading": "Classic M-Series Petrol (1990-1999)",
                 "history": "BMW Motorsport's high-output V12 derivative, featuring larger displacement and revised cams exclusively for the 850CSi.",
                 "fuel": "Petrol",
                 "size": "5.6 Litre",
@@ -1070,6 +1084,8 @@
           "engines": [
             {
               "code": "B57D30A",
+              "title": "3.0L Diesel",
+              "familyHeading": "B57 Series (2018-2024)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "315-320 hp",
@@ -1080,6 +1096,8 @@
             },
             {
               "code": "B57D30B",
+              "title": "3.0L Diesel",
+              "familyHeading": "B57 Series (2018-2024)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "315-320 hp",
@@ -1090,6 +1108,8 @@
             },
             {
               "code": "B57D30C",
+              "title": "3.0L Diesel",
+              "familyHeading": "B57 Series (2018-2024)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "265-286 hp",
@@ -1100,6 +1120,8 @@
             },
             {
               "code": "B58B30A",
+              "title": "3.0L Petrol",
+              "familyHeading": "B-Series Inline-6 Petrol (2018-2024)",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "333-340 hp",
@@ -1110,6 +1132,8 @@
             },
             {
               "code": "B58B30B",
+              "title": "3.0L Petrol",
+              "familyHeading": "B-Series Inline-6 Petrol (2018-2024)",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "333-340 hp",
@@ -1120,6 +1144,8 @@
             },
             {
               "code": "N63TU2",
+              "title": "4.4L Petrol",
+              "familyHeading": "N/S-Series V8 Petrol (2019-2024)",
               "fuel": "Petrol",
               "size": "4.4L",
               "power": "523-530 hp",
@@ -1130,6 +1156,8 @@
             },
             {
               "code": "N63B44T3",
+              "title": "4.4L Petrol",
+              "familyHeading": "N/S-Series V8 Petrol (2019-2024)",
               "fuel": "Petrol",
               "size": "4.4L",
               "power": "523-530 hp",
@@ -1140,6 +1168,8 @@
             },
             {
               "code": "S63TU",
+              "title": "4.4L Petrol",
+              "familyHeading": "N/S-Series V8 Petrol (2019-2024)",
               "fuel": "Petrol",
               "size": "4.4L",
               "power": "600-625 hp",
@@ -1150,6 +1180,8 @@
             },
             {
               "code": "S63B44T4",
+              "title": "4.4L Petrol",
+              "familyHeading": "N/S-Series V8 Petrol (2019-2024)",
               "fuel": "Petrol",
               "size": "4.4L",
               "power": "600-625 hp",
@@ -1160,6 +1192,8 @@
             },
             {
               "code": "M30B30",
+              "title": "3.0L Petrol",
+              "familyHeading": "Classic M-Series Petrol (1990-1999)",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "188-197 hp",
@@ -1170,6 +1204,8 @@
             },
             {
               "code": "M60B40",
+              "title": "4.0L Petrol",
+              "familyHeading": "Classic M-Series Petrol (1990-1999)",
               "fuel": "Petrol",
               "size": "4.0L",
               "power": "286 hp",
@@ -1180,6 +1216,8 @@
             },
             {
               "code": "M70B50",
+              "title": "5.0L Petrol",
+              "familyHeading": "Classic M-Series Petrol (1990-1999)",
               "fuel": "Petrol",
               "size": "5.0L",
               "power": "299-300 hp",
@@ -1190,6 +1228,8 @@
             },
             {
               "code": "M70B50TU",
+              "title": "5.0L Petrol",
+              "familyHeading": "Classic M-Series Petrol (1990-1999)",
               "fuel": "Petrol",
               "size": "5.0L",
               "power": "299-300 hp",
@@ -1200,6 +1240,8 @@
             },
             {
               "code": "S70B56",
+              "title": "5.6L Petrol",
+              "familyHeading": "Classic M-Series Petrol (1990-1999)",
               "fuel": "Petrol",
               "size": "5.6L",
               "power": "375-380 hp",
@@ -1620,6 +1662,11 @@
           "title": "BMW 8 Series Diesel Engines",
           "description": "Dominating the modern G-chassis range, these 3.0-litre inline-six turbo-diesels deliver exceptional torque and refined motorway cruising efficiency across the 830d and 840d line-up.",
           "descriptor": "Dominating the modern G-chassis range, these 3.0-litre inline-six turbo-diesels deliver exceptional torque and refined motorway cruising efficiency across the 830d and 840d line-up.",
+          "familiesLabel": "Common BMW 8 Series Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "B57D30A - Core 3.0L unit for early 840d xDrive, high torque output with advanced twin-scroll turbocharging",
             "B57D30B - LCI updated variant featuring refined emissions calibration and improved EGR thermal management",
@@ -1647,6 +1694,11 @@
           "title": "BMW 8 Series Petrol Engines",
           "description": "Spanning classic naturally aspirated V12s to modern twin-turbo V8s and precision inline-sixes, this fuel type covers the broadest performance spectrum of the 8 Series lineage.",
           "descriptor": "Spanning classic naturally aspirated V12s to modern twin-turbo V8s and precision inline-sixes, this fuel type covers the broadest performance spectrum of the 8 Series lineage.",
+          "familiesLabel": "Common BMW 8 Series Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "B58B30 - Modern 3.0L turbo inline-six renowned for B-series reliability and smooth 840i power delivery",
             "N63TU2/N63B44T3 - Hot-vee 4.4L V8 twin-turbo powering M850i variants, known for intense thermal loads",
@@ -1677,6 +1729,11 @@
           "title": "BMW 8 Series Mild Hybrid (MHEV) Engines",
           "description": "Integrated 48-volt starter-generator technology introduced during the 2022 LCI facelift to improve stop-start responsiveness and marginally reduce urban fuel consumption.",
           "descriptor": "Integrated 48-volt starter-generator technology introduced during the 2022 LCI facelift to improve stop-start responsiveness and marginally reduce urban fuel consumption.",
+          "familiesLabel": "BMW 8 Series Mild Hybrid (MHEV) Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "B58B30 (LCI) - Updated inline-six with integrated 48V belt-driven starter-generator for 840i variants",
             "B57D30 (LCI) - Revised diesel block paired with 48V system for enhanced torque fill and coasting efficiency"

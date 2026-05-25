@@ -144,6 +144,32 @@ function splitDashItem(entry: string) {
   };
 }
 
+function deriveFamiliesLabel(title: string) {
+  const normalized = normalizeText(title).trim();
+  const base = normalized.replace(/\s+Engines$/i, "").trim();
+  return base ? `Common ${base} Engine Families` : "";
+}
+
+function resolveSectionLabel({
+  itemLabel,
+  uiLabel,
+  strictData,
+  fallback,
+}: {
+  itemLabel?: string;
+  uiLabel?: string;
+  strictData: boolean;
+  fallback: string;
+}) {
+  const label = itemLabel?.trim() || uiLabel?.trim();
+
+  if (label) {
+    return label;
+  }
+
+  return strictData ? "" : fallback;
+}
+
 function FuelPanel({
   item,
   mobile = false,
@@ -160,6 +186,36 @@ function FuelPanel({
   const knownFor = item.knownFor ?? [];
   const typicalModels = item.typicalModels ?? [];
   const importantNotes = item.importantNotes ?? [];
+  const familiesLabel = resolveSectionLabel({
+    itemLabel: item.familiesLabel || deriveFamiliesLabel(item.title),
+    uiLabel: ui.familiesLabel,
+    strictData,
+    fallback: "Common Engine Families",
+  });
+  const foundInLabel = resolveSectionLabel({
+    itemLabel: item.foundInLabel,
+    uiLabel: ui.foundInLabel,
+    strictData,
+    fallback: "Found In",
+  });
+  const knownForLabel = resolveSectionLabel({
+    itemLabel: item.knownForLabel,
+    uiLabel: ui.knownForLabel,
+    strictData,
+    fallback: "Known For",
+  });
+  const modelsLabel = resolveSectionLabel({
+    itemLabel: item.modelsLabel,
+    uiLabel: ui.modelsLabel,
+    strictData,
+    fallback: "Typical Models (UK)",
+  });
+  const notesLabel = resolveSectionLabel({
+    itemLabel: item.notesLabel,
+    uiLabel: ui.notesLabel,
+    strictData,
+    fallback: "Important Notes",
+  });
 
   return (
     <div className="flex h-full flex-col rounded-[14px] border border-[#e5e7eb] bg-white shadow-[0_2px_10px_rgba(13,27,46,0.05)]">
@@ -185,13 +241,7 @@ function FuelPanel({
 
         {families.length ? (
           <div className="mt-4 rounded-[12px] border border-[#e5e7eb] bg-white">
-            {strictData ? (
-              ui.familiesLabel ? <div className="border-b border-[#eef2f7] px-4 py-[10px] text-[10px] font-black uppercase tracking-[0.08em] text-[#16a34a]">{ui.familiesLabel}</div> : null
-            ) : (
-              <div className="border-b border-[#eef2f7] px-4 py-[10px] text-[10px] font-black uppercase tracking-[0.08em] text-[#16a34a]">
-                {ui.familiesLabel ?? "Common Engine Families"}
-              </div>
-            )}
+            {familiesLabel ? <div className="border-b border-[#eef2f7] px-4 py-[10px] text-[10px] font-black uppercase tracking-[0.08em] text-[#16a34a]">{familiesLabel}</div> : null}
             <div className="px-4 py-3">
               <div className="space-y-[10px]">
                 {families.map((entry) => {
@@ -213,13 +263,7 @@ function FuelPanel({
 
         {foundIn.length ? (
           <div className="mt-3 rounded-[12px] border border-[#e5e7eb] bg-white">
-            {strictData ? (
-              ui.foundInLabel ? <div className="border-b border-[#eef2f7] px-4 py-[10px] text-[10px] font-black uppercase tracking-[0.08em] text-[#16a34a]">{ui.foundInLabel}</div> : null
-            ) : (
-              <div className="border-b border-[#eef2f7] px-4 py-[10px] text-[10px] font-black uppercase tracking-[0.08em] text-[#16a34a]">
-                {ui.foundInLabel ?? "Found In"}
-              </div>
-            )}
+            {foundInLabel ? <div className="border-b border-[#eef2f7] px-4 py-[10px] text-[10px] font-black uppercase tracking-[0.08em] text-[#16a34a]">{foundInLabel}</div> : null}
             <div className="px-4 py-3">
               <div className="space-y-[10px]">
                 {foundIn.map((entry) => {
@@ -241,13 +285,7 @@ function FuelPanel({
 
         {knownFor.length ? (
             <div className="mt-3 rounded-[12px] border border-[#e5e7eb] bg-white">
-              {strictData ? (
-                ui.knownForLabel ? <div className="border-b border-[#eef2f7] px-4 py-[10px] text-[10px] font-black uppercase tracking-[0.08em] text-[#16a34a]">{ui.knownForLabel}</div> : null
-              ) : (
-                <div className="border-b border-[#eef2f7] px-4 py-[10px] text-[10px] font-black uppercase tracking-[0.08em] text-[#16a34a]">
-                {ui.knownForLabel ?? "Known For"}
-                </div>
-              )}
+              {knownForLabel ? <div className="border-b border-[#eef2f7] px-4 py-[10px] text-[10px] font-black uppercase tracking-[0.08em] text-[#16a34a]">{knownForLabel}</div> : null}
             <div className="px-4 py-3">
               <div className="space-y-[10px]">
                 {knownFor.map((entry) => (
@@ -263,13 +301,7 @@ function FuelPanel({
 
         {typicalModels.length ? (
           <div className="mt-3 rounded-[12px] border border-[#e5e7eb] bg-white">
-            {strictData ? (
-              ui.modelsLabel ? <div className="border-b border-[#eef2f7] px-4 py-[10px] text-[10px] font-black uppercase tracking-[0.08em] text-[#16a34a]">{ui.modelsLabel}</div> : null
-            ) : (
-              <div className="border-b border-[#eef2f7] px-4 py-[10px] text-[10px] font-black uppercase tracking-[0.08em] text-[#16a34a]">
-                {ui.modelsLabel ?? "Typical Models (UK)"}
-              </div>
-            )}
+            {modelsLabel ? <div className="border-b border-[#eef2f7] px-4 py-[10px] text-[10px] font-black uppercase tracking-[0.08em] text-[#16a34a]">{modelsLabel}</div> : null}
             <div className={`grid gap-x-4 gap-y-[10px] px-4 py-3 ${mobile ? "grid-cols-1" : "grid-cols-2"}`}>
               {typicalModels.map((entry) => (
                 <div key={entry} className="flex gap-2 text-[11.5px] leading-[1.55] text-[#475569]">
@@ -299,13 +331,7 @@ function FuelPanel({
 
         {importantNotes.length ? (
           <div className="mt-3 rounded-[12px] border border-[#e5e7eb] bg-white">
-            {strictData ? (
-              ui.notesLabel ? <div className="border-b border-[#eef2f7] px-4 py-[10px] text-[10px] font-black uppercase tracking-[0.08em] text-[#16a34a]">{ui.notesLabel}</div> : null
-            ) : (
-              <div className="border-b border-[#eef2f7] px-4 py-[10px] text-[10px] font-black uppercase tracking-[0.08em] text-[#16a34a]">
-                {ui.notesLabel ?? "Important Notes"}
-              </div>
-            )}
+            {notesLabel ? <div className="border-b border-[#eef2f7] px-4 py-[10px] text-[10px] font-black uppercase tracking-[0.08em] text-[#16a34a]">{notesLabel}</div> : null}
             <div className="px-4 py-3">
               <div className="space-y-[10px]">
                 {importantNotes.map((entry) => (

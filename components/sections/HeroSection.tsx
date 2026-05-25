@@ -1,7 +1,9 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState, type FormEvent } from "react";
+import { getModelHref } from "@/lib/modelRoutes";
 import type { HeroSectionData, ModelsSectionData } from "@/types/brand";
 
 type HeroModelCard = ModelsSectionData["cards"][number] & {
@@ -15,6 +17,7 @@ type HeroSectionProps = {
   data: HeroSectionData;
   bgImage: string;
   modelCards?: HeroModelCard[];
+  brandSlug?: string;
   strictData?: boolean;
 };
 
@@ -320,7 +323,13 @@ function resolveHeroCards(data: HeroSectionData, modelCards: HeroModelCard[]) {
   return buildHeroCards(modelCards);
 }
 
-export default function HeroSection({ data, bgImage, modelCards = [], strictData = false }: HeroSectionProps) {
+export default function HeroSection({
+  data,
+  bgImage,
+  modelCards = [],
+  brandSlug,
+  strictData = false,
+}: HeroSectionProps) {
   const [registration, setRegistration] = useState("");
   const [showHeroImage, setShowHeroImage] = useState(Boolean(bgImage));
   const headingLines = resolveHeadingLines(data);
@@ -417,6 +426,7 @@ export default function HeroSection({ data, bgImage, modelCards = [], strictData
                 const Icon = carIcons[index] ?? CarIconThree;
                 const shortTitle = stripBrandFromModel(model.h3, brandName);
                 const normalizedPrice = model.priceRange.replace(/^Starting\s+/i, "").replace(/^Available\s+/i, "");
+                const modelHref = brandSlug ? getModelHref(brandSlug, model) : null;
                 const lineOne = model.lineOne?.trim()
                   ? splitHighlightLineOne(model.lineOne)
                   : {
@@ -448,9 +458,18 @@ export default function HeroSection({ data, bgImage, modelCards = [], strictData
                       </div>
                       <div className="min-w-0">
                         <div className="flex min-w-0 items-center overflow-hidden whitespace-nowrap">
-                          <span className="min-w-0 truncate font-['Manrope'] text-[13.5px] font-bold text-[#0d1b2e] md:text-[clamp(14px,1vw,17px)]">
-                            {lineOne.lead}
-                          </span>
+                          {modelHref ? (
+                            <Link
+                              href={modelHref}
+                              className="min-w-0 truncate font-['Manrope'] text-[13.5px] font-bold text-[#0d1b2e] transition hover:text-[#15803d] md:text-[clamp(14px,1vw,17px)]"
+                            >
+                              {lineOne.lead}
+                            </Link>
+                          ) : (
+                            <span className="min-w-0 truncate font-['Manrope'] text-[13.5px] font-bold text-[#0d1b2e] md:text-[clamp(14px,1vw,17px)]">
+                              {lineOne.lead}
+                            </span>
+                          )}
                           {lineOne.accent ? (
                             <span className="min-w-0 truncate font-['Manrope'] text-[13.5px] font-bold text-[#15803d] md:text-[clamp(14px,1vw,17px)]">
                               {" "}
@@ -466,6 +485,15 @@ export default function HeroSection({ data, bgImage, modelCards = [], strictData
                           <p className="mt-1 text-[11px] leading-[1.45] text-[#64748b] md:text-[12px]">
                             {buildHeroLineTwo(model)}
                           </p>
+                        ) : null}
+                        {modelHref ? (
+                          <Link
+                            href={modelHref}
+                            className="mt-1 inline-flex items-center gap-1 text-[11px] font-semibold text-[#15803d] transition hover:gap-1.5 md:text-[11.5px]"
+                          >
+                            <span>View model page</span>
+                            <span aria-hidden="true">-&gt;</span>
+                          </Link>
                         ) : null}
                       </div>
                     </div>

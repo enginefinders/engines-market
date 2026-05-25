@@ -15,13 +15,13 @@
     "canonical": "/audi/a3"
   },
   "assets": {
-    "heroBg": "/images/brands/audi/models/audi-audi-a3-model-card.png",
+    "heroBg": "/images/brands/audi/models/audi-a3-model-card.png",
     "howItWorksBg": "/images/brands/audi/brand/audi-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/audi/brand/audi-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/audi/brand/audi-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/audi/brand/audi-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/audi/brand/audi-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/audi/models/audi-audi-a3-model-card.png"
+    "ctaImage": "/images/brands/audi/models/audi-a3-model-card.png"
   },
   "sections": {
     "hero": {
@@ -725,6 +725,7 @@
               {
                 "code": "CUNA",
                 "title": "2.0L Diesel",
+                "familyHeading": "2.0 TDI EA288 Common Rail Family (2013-2025)",
                 "history": "EA288 common-rail diesel delivering 150hp; replaced PD units with improved emissions and efficiency across 8V/8Y.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -745,6 +746,7 @@
               {
                 "code": "CRLB",
                 "title": "2.0L Diesel",
+                "familyHeading": "2.0 TDI EA288 Common Rail Family (2013-2025)",
                 "history": "High-output 184hp EA288 variant for S line and Quattro models; enhanced turbo mapping for stronger mid-range pull.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -765,6 +767,7 @@
               {
                 "code": "DFGA",
                 "title": "2.0L Diesel",
+                "familyHeading": "2.0 TDI EA288 Common Rail Family (2013-2025)",
                 "history": "Latest EA288 evo code for 8Y 35 TDI; features updated emissions hardware and mild-hybrid compatibility.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -785,6 +788,7 @@
               {
                 "code": "CRKB",
                 "title": "1.6L Diesel",
+                "familyHeading": "1.6 TDI EA288 Family (2013-2020)",
                 "history": "Entry-level EA288 diesel balancing economy and refinement; widely specified on SE and Sport trims across 8V generation.",
                 "fuel": "Diesel",
                 "size": "1.6 Litre",
@@ -805,6 +809,7 @@
               {
                 "code": "CLHA",
                 "title": "1.6L Diesel",
+                "familyHeading": "1.6 TDI EA288 Family (2013-2020)",
                 "history": "Earlier 1.6 TDI code sharing architecture with CRKB; fitted to pre-facelift 8V models with slightly different mapping.",
                 "fuel": "Diesel",
                 "size": "1.6 Litre",
@@ -825,6 +830,7 @@
               {
                 "code": "CFHC",
                 "title": "2.0L Diesel",
+                "familyHeading": "2.0 TDI PD/CR Transition Family (2003-2012)",
                 "history": "First common-rail 2.0 TDI for A3; replaced PD units with quieter operation and lower emissions for late 8P models.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -845,6 +851,7 @@
               {
                 "code": "CFFB",
                 "title": "2.0L Diesel",
+                "familyHeading": "2.0 TDI PD/CR Transition Family (2003-2012)",
                 "history": "Lower-output 2.0 TDI variant for efficiency-focused trims; shared block with CFHC but detuned for economy.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -865,6 +872,7 @@
               {
                 "code": "BKC",
                 "title": "1.9L Diesel",
+                "familyHeading": "1.9 TDI PD Family (2003-2012)",
                 "history": "Legendary PD unit known for durability; the workhorse diesel powering entry and mid-spec 8P A3 models for nearly a decade.",
                 "fuel": "Diesel",
                 "size": "1.9 Litre",
@@ -885,6 +893,7 @@
               {
                 "code": "BLS",
                 "title": "1.9L Diesel",
+                "familyHeading": "1.9 TDI PD Family (2003-2012)",
                 "history": "Higher-output 1.9 TDI PD variant with revised mapping; offered stronger acceleration for Sport and S line trims.",
                 "fuel": "Diesel",
                 "size": "1.9 Litre",
@@ -910,6 +919,7 @@
               {
                 "code": "CAXC",
                 "title": "1.4L Petrol",
+                "familyHeading": "1.4 TFSI Small Turbo Family (2003-2025)",
                 "history": "First-gen 1.4 TFSI with turbo and direct injection; brought downsized efficiency to 8P A3 but suffered early timing chain issues.",
                 "fuel": "Petrol",
                 "size": "1.4 Litre",
@@ -930,6 +940,7 @@
               {
                 "code": "CMBA",
                 "title": "1.4L Petrol",
+                "familyHeading": "1.4 TFSI Small Turbo Family (2003-2025)",
                 "history": "Revised EA211 1.4 TFSI for 8V; added cylinder deactivation and improved reliability over the earlier CAXC design.",
                 "fuel": "Petrol",
                 "size": "1.4 Litre",
@@ -950,6 +961,7 @@
               {
                 "code": "CZCA",
                 "title": "1.4L Petrol",
+                "familyHeading": "1.4 TFSI Small Turbo Family (2003-2025)",
                 "history": "High-output 150hp EA211 variant for facelift 8V; featured revised turbo mapping and improved thermal management.",
                 "fuel": "Petrol",
                 "size": "1.4 Litre",
@@ -970,6 +982,7 @@
               {
                 "code": "DJJA",
                 "title": "1.4L Petrol",
+                "familyHeading": "1.4 TFSI Small Turbo Family (2003-2025)",
                 "history": "Latest 1.4 TFSI code for 8Y generation; features mild-hybrid compatibility and updated emissions hardware for Euro 6d.",
                 "fuel": "Petrol",
                 "size": "1.4 Litre",
@@ -979,22 +992,10 @@
                   "35 TFSI Sport, 35 TFSI S line, 35 TFSI Vorsprung"
                 ],
                 "commonFailures": [
-                  "Early reports of oil dilution in cold climates"
+                  "Early reports of oil dilution in cold climates",
+                  "Mild-hybrid belt starter generator faults",
+                  "Turbocharger oil feed restriction on high-mileage examples"
                 ],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "Mild",
-                "title": "hybrid belt starter generator faults",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
                 "avgRebuiltPrice": "£1,300 - £2,600",
                 "cta": "Get quotes for DJJA Audi A3 engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1002,6 +1003,7 @@
               {
                 "code": "CCZA",
                 "title": "1.8L Petrol",
+                "familyHeading": "1.8/2.0 TFSI EA888 Family (2003-2025)",
                 "history": "First-gen EA888 1.8 TFSI; delivered strong performance but gained notoriety for timing chain and oil consumption issues on early 8P.",
                 "fuel": "Petrol",
                 "size": "1.8 Litre",
@@ -1022,6 +1024,7 @@
               {
                 "code": "CDAA",
                 "title": "1.8L Petrol",
+                "familyHeading": "1.8/2.0 TFSI EA888 Family (2003-2025)",
                 "history": "Revised EA888 Gen 2 1.8 TFSI with updated chain tensioner and piston rings; improved reliability for late 8P and early 8V.",
                 "fuel": "Petrol",
                 "size": "1.8 Litre",
@@ -1042,6 +1045,7 @@
               {
                 "code": "CJSB",
                 "title": "2.0L Petrol",
+                "familyHeading": "1.8/2.0 TFSI EA888 Family (2003-2025)",
                 "history": "EA888 Gen 3 2.0 TFSI with dual injection and improved thermal management; balanced performance and efficiency for 8V.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -1062,6 +1066,7 @@
               {
                 "code": "DNUC",
                 "title": "2.0L Petrol",
+                "familyHeading": "1.8/2.0 TFSI EA888 Family (2003-2025)",
                 "history": "Latest EA888 evo4 2.0 TFSI for 8Y; features Miller cycle, improved efficiency and mild-hybrid readiness for modern A3.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -1070,21 +1075,11 @@
                 "compatibleVariants": [
                   "40 TFSI Sport, 40 TFSI S line, 40 TFSI Quattro, 40 TFSI Vorsprung"
                 ],
-                "commonFailures": [],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "Early mild",
-                "title": "hybrid system software glitches",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
+                "commonFailures": [
+                  "Early mild-hybrid system software glitches",
+                  "Coolant valve housing leak on pre-2022 builds",
+                  "Carbon buildup still present despite dual injection"
+                ],
                 "avgRebuiltPrice": "£1,600 - £3,400",
                 "cta": "Get quotes for DNUC Audi A3 engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1092,6 +1087,7 @@
               {
                 "code": "CHHB",
                 "title": "2.0L Petrol",
+                "familyHeading": "S3 Performance TFSI Family (2003-2025)",
                 "history": "High-output EA888 Gen 3 for S3 8V; 300hp with upgraded turbo, pistons and cooling for serious performance capability.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -1112,6 +1108,7 @@
               {
                 "code": "CZPB",
                 "title": "2.0L Petrol",
+                "familyHeading": "S3 Performance TFSI Family (2003-2025)",
                 "history": "Revised S3 engine with 310hp output and improved reliability; featured updated turbo and revised ECU mapping for 8V facelift.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -1132,6 +1129,7 @@
               {
                 "code": "DADA",
                 "title": "1.5L Petrol",
+                "familyHeading": "Modern 1.5 TFSI Family (2020+)",
                 "history": "Replacement for 1.4 TFSI featuring Miller cycle and cylinder deactivation; improved efficiency for 8Y A3 with mild-hybrid option.",
                 "fuel": "Petrol",
                 "size": "1.5 Litre",
@@ -1141,22 +1139,10 @@
                   "35 TFSI Sport, 35 TFSI S line, 35 TFSI Vorsprung"
                 ],
                 "commonFailures": [
-                  "Oil dilution concerns in cold-climate short-journey use"
+                  "Oil dilution concerns in cold-climate short-journey use",
+                  "Mild-hybrid belt starter generator early faults",
+                  "Carbon buildup on intake valves from direct injection"
                 ],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "Mild",
-                "title": "hybrid belt starter generator early faults",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
                 "avgRebuiltPrice": "£1,400 - £3,000",
                 "cta": "Get quotes for DADA Audi A3 engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1164,6 +1150,7 @@
               {
                 "code": "BAG",
                 "title": "1.6L Petrol",
+                "familyHeading": "Early FSI Family (2003-2012)",
                 "history": "Naturally aspirated 1.6 FSI with direct injection; offered smooth delivery but required regular carbon cleaning on intake valves.",
                 "fuel": "Petrol",
                 "size": "1.6 Litre",
@@ -1184,6 +1171,7 @@
               {
                 "code": "BWA",
                 "title": "2.0L Petrol",
+                "familyHeading": "Early FSI Family (2003-2012)",
                 "history": "Early 2.0 FSI with direct injection; strong performance but known for carbon buildup and high-pressure pump issues on 8P.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -1204,6 +1192,7 @@
               {
                 "code": "CEP",
                 "title": "3.2L Petrol",
+                "familyHeading": "VR6/V6 Family (2003-2009)",
                 "history": "Compact VR6 delivering smooth V6 character and Quattro capability; rare but sought-after for enthusiasts wanting naturally aspirated power.",
                 "fuel": "Petrol",
                 "size": "3.2 Litre",
@@ -1224,6 +1213,7 @@
               {
                 "code": "BDB",
                 "title": "3.2L Petrol",
+                "familyHeading": "VR6/V6 Family (2003-2009)",
                 "history": "Revised VR6 code with updated mapping and emissions hardware; shared architecture with CEP but fitted to late 8P models.",
                 "fuel": "Petrol",
                 "size": "3.2 Litre",
@@ -1249,6 +1239,7 @@
               {
                 "code": "DGEA",
                 "title": "1.5L Petrol MHEV",
+                "familyHeading": "TFSI e Plug-in Hybrid Family (2020+)",
                 "history": "Mild-hybrid variant of the 1.5 TFSI; adds belt-driven starter generator for improved stop-start and coasting efficiency on 8Y.",
                 "fuel": "MHEV (Mild Hybrid)",
                 "size": "1.5 Litre",
@@ -1301,6 +1292,8 @@
           "engines": [
             {
               "code": "CUNA",
+              "title": "2.0L Diesel",
+              "familyHeading": "2.0 TDI EA288 Common Rail Family (2013-2025)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "150hp",
@@ -1311,6 +1304,8 @@
             },
             {
               "code": "CRLB",
+              "title": "2.0L Diesel",
+              "familyHeading": "2.0 TDI EA288 Common Rail Family (2013-2025)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "184hp",
@@ -1321,6 +1316,8 @@
             },
             {
               "code": "DFGA",
+              "title": "2.0L Diesel",
+              "familyHeading": "2.0 TDI EA288 Common Rail Family (2013-2025)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "150hp",
@@ -1331,6 +1328,8 @@
             },
             {
               "code": "CRKB",
+              "title": "1.6L Diesel",
+              "familyHeading": "1.6 TDI EA288 Family (2013-2020)",
               "fuel": "Diesel",
               "size": "1.6L",
               "power": "110hp",
@@ -1341,6 +1340,8 @@
             },
             {
               "code": "CLHA",
+              "title": "1.6L Diesel",
+              "familyHeading": "1.6 TDI EA288 Family (2013-2020)",
               "fuel": "Diesel",
               "size": "1.6L",
               "power": "110hp",
@@ -1351,6 +1352,8 @@
             },
             {
               "code": "CFHC",
+              "title": "2.0L Diesel",
+              "familyHeading": "2.0 TDI PD/CR Transition Family (2003-2012)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "140hp",
@@ -1361,6 +1364,8 @@
             },
             {
               "code": "CFFB",
+              "title": "2.0L Diesel",
+              "familyHeading": "2.0 TDI PD/CR Transition Family (2003-2012)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "136hp",
@@ -1371,6 +1376,8 @@
             },
             {
               "code": "BKC",
+              "title": "1.9L Diesel",
+              "familyHeading": "1.9 TDI PD Family (2003-2012)",
               "fuel": "Diesel",
               "size": "1.9L",
               "power": "105hp",
@@ -1381,6 +1388,8 @@
             },
             {
               "code": "BLS",
+              "title": "1.9L Diesel",
+              "familyHeading": "1.9 TDI PD Family (2003-2012)",
               "fuel": "Diesel",
               "size": "1.9L",
               "power": "105hp",
@@ -1398,6 +1407,8 @@
           "engines": [
             {
               "code": "CAXC",
+              "title": "1.4L Petrol",
+              "familyHeading": "1.4 TFSI Small Turbo Family (2003-2025)",
               "fuel": "Petrol",
               "size": "1.4L",
               "power": "125hp",
@@ -1408,6 +1419,8 @@
             },
             {
               "code": "CMBA",
+              "title": "1.4L Petrol",
+              "familyHeading": "1.4 TFSI Small Turbo Family (2003-2025)",
               "fuel": "Petrol",
               "size": "1.4L",
               "power": "140hp",
@@ -1418,6 +1431,8 @@
             },
             {
               "code": "CZCA",
+              "title": "1.4L Petrol",
+              "familyHeading": "1.4 TFSI Small Turbo Family (2003-2025)",
               "fuel": "Petrol",
               "size": "1.4L",
               "power": "150hp",
@@ -1428,26 +1443,20 @@
             },
             {
               "code": "DJJA",
+              "title": "1.4L Petrol",
+              "familyHeading": "1.4 TFSI Small Turbo Family (2003-2025)",
               "fuel": "Petrol",
               "size": "1.4L",
               "power": "150hp",
               "compatibleModels": "35 TFSI Sport, 35 TFSI S line, 35 TFSI Vorsprung",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "Mild",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
               "avgRebuiltPrice": "£1,300 - £2,600",
               "cta": "Get quotes for DJJA Audi A3 engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
               "code": "CCZA",
+              "title": "1.8L Petrol",
+              "familyHeading": "1.8/2.0 TFSI EA888 Family (2003-2025)",
               "fuel": "Petrol",
               "size": "1.8L",
               "power": "160hp",
@@ -1458,6 +1467,8 @@
             },
             {
               "code": "CDAA",
+              "title": "1.8L Petrol",
+              "familyHeading": "1.8/2.0 TFSI EA888 Family (2003-2025)",
               "fuel": "Petrol",
               "size": "1.8L",
               "power": "160hp",
@@ -1468,6 +1479,8 @@
             },
             {
               "code": "CJSB",
+              "title": "2.0L Petrol",
+              "familyHeading": "1.8/2.0 TFSI EA888 Family (2003-2025)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "190hp",
@@ -1478,26 +1491,20 @@
             },
             {
               "code": "DNUC",
+              "title": "2.0L Petrol",
+              "familyHeading": "1.8/2.0 TFSI EA888 Family (2003-2025)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "190-204hp",
               "compatibleModels": "40 TFSI Sport, 40 TFSI S line, 40 TFSI Quattro, 40 TFSI Vorsprung",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "Early mild",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
               "avgRebuiltPrice": "£1,600 - £3,400",
               "cta": "Get quotes for DNUC Audi A3 engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
               "code": "CHHB",
+              "title": "2.0L Petrol",
+              "familyHeading": "S3 Performance TFSI Family (2003-2025)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "300hp",
@@ -1508,6 +1515,8 @@
             },
             {
               "code": "CZPB",
+              "title": "2.0L Petrol",
+              "familyHeading": "S3 Performance TFSI Family (2003-2025)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "310hp",
@@ -1518,26 +1527,20 @@
             },
             {
               "code": "DADA",
+              "title": "1.5L Petrol",
+              "familyHeading": "Modern 1.5 TFSI Family (2020+)",
               "fuel": "Petrol",
               "size": "1.5L",
               "power": "150hp",
               "compatibleModels": "35 TFSI Sport, 35 TFSI S line, 35 TFSI Vorsprung",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "Mild",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
               "avgRebuiltPrice": "£1,400 - £3,000",
               "cta": "Get quotes for DADA Audi A3 engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
               "code": "BAG",
+              "title": "1.6L Petrol",
+              "familyHeading": "Early FSI Family (2003-2012)",
               "fuel": "Petrol",
               "size": "1.6L",
               "power": "115hp",
@@ -1548,6 +1551,8 @@
             },
             {
               "code": "BWA",
+              "title": "2.0L Petrol",
+              "familyHeading": "Early FSI Family (2003-2012)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "150-200hp",
@@ -1558,6 +1563,8 @@
             },
             {
               "code": "CEP",
+              "title": "3.2L Petrol",
+              "familyHeading": "VR6/V6 Family (2003-2009)",
               "fuel": "Petrol",
               "size": "3.2L",
               "power": "250hp",
@@ -1568,6 +1575,8 @@
             },
             {
               "code": "BDB",
+              "title": "3.2L Petrol",
+              "familyHeading": "VR6/V6 Family (2003-2009)",
               "fuel": "Petrol",
               "size": "3.2L",
               "power": "250hp",
@@ -1585,6 +1594,8 @@
           "engines": [
             {
               "code": "DGEA",
+              "title": "1.5L Petrol MHEV",
+              "familyHeading": "TFSI e Plug-in Hybrid Family (2020+)",
               "fuel": "MHEV (Mild Hybrid)",
               "size": "1.5L",
               "power": "150hp + 12hp electric assist",
@@ -2218,6 +2229,11 @@
           "title": "Audi A3 Diesel Engines",
           "description": "Diesel power has been central to the A3 range across all three UK generations (8P, 8V, 8Y), with common-rail TDI units dominating high-mileage replacement enquiries.",
           "descriptor": "Diesel power has been central to the A3 range across all three UK generations (8P, 8V, 8Y), with common-rail TDI units dominating high-mileage replacement enquiries.",
+          "familiesLabel": "Common Audi A3 Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "CUNA - EA288 2.0 TDI 150hp, highest-volume replacement code for 8V/8Y models",
             "CRKB - 1.6 TDI EA288, entry-level diesel with EGR cooler vulnerability",
@@ -2248,6 +2264,11 @@
           "title": "Audi A3 Petrol Engines",
           "description": "Petrol A3 engines span naturally aspirated FSI, turbocharged TFSI families and performance five-cylinder units, with EA888 and EA211 codes dominating replacement searches.",
           "descriptor": "Petrol A3 engines span naturally aspirated FSI, turbocharged TFSI families and performance five-cylinder units, with EA888 and EA211 codes dominating replacement searches.",
+          "familiesLabel": "Common Audi A3 Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "CAXC - early 1.4 TFSI EA111, timing chain tensioner failure risk on 8P",
             "CMBA/CZCA - EA211 1.4 TFSI, improved reliability with cylinder deactivation",
@@ -2279,6 +2300,11 @@
           "title": "Audi A3 Mild Hybrid (MHEV) Engines",
           "description": "Latest 8Y generation A3 models feature 48-volt mild-hybrid technology paired with 1.5 TFSI and select 2.0 TDI engines for improved efficiency and stop-start refinement.",
           "descriptor": "Latest 8Y generation A3 models feature 48-volt mild-hybrid technology paired with 1.5 TFSI and select 2.0 TDI engines for improved efficiency and stop-start refinement.",
+          "familiesLabel": "Audi A3 MHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "DGEA - 1.5 TFSI MHEV, belt-driven starter-generator with 12hp electric assist",
             "DFGA MHEV - 2.0 TDI with 48V system for enhanced coasting capability",
@@ -2303,6 +2329,11 @@
           "title": "Audi A3 Plug-in Hybrid (PHEV) Engines",
           "description": "TFSI e plug-in hybrid variants combine a 1.4 TFSI engine with an electric motor and battery pack, offering low-emission commuting with petrol range flexibility for company car and private buyers.",
           "descriptor": "TFSI e plug-in hybrid variants combine a 1.4 TFSI engine with an electric motor and battery pack, offering low-emission commuting with petrol range flexibility for company car and private buyers.",
+          "familiesLabel": "Audi A3 PHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "DKZA - 1.4 TFSI PHEV, paired with electric motor for 204hp combined output",
             "DGEA PHEV variant - updated TFSI e with extended electric-only range",

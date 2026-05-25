@@ -15,13 +15,13 @@
     "canonical": "/ford/territory"
   },
   "assets": {
-    "heroBg": "/images/brands/ford/models/ford-ford-territory-model-card.png",
+    "heroBg": "/images/brands/ford/models/ford-territory-model-card.png",
     "howItWorksBg": "/images/brands/ford/brand/ford-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/ford/brand/ford-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/ford/brand/ford-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/ford/brand/ford-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/ford/brand/ford-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/ford/models/ford-ford-territory-model-card.png"
+    "ctaImage": "/images/brands/ford/models/ford-territory-model-card.png"
   },
   "sections": {
     "hero": {
@@ -692,8 +692,30 @@
             "name": "Diesel Engines",
             "entries": [
               {
-                "code": "CAGDA - 2.",
-                "title": "0L Diesel",
+                "code": "276DT (Duratorq)",
+                "title": "2.7L Diesel",
+                "familyHeading": "2.7L Duratorq V6 Diesel (2011-2016)",
+                "history": "The 276DT is a PSA/Lion V6 diesel shared with Land Rover Discovery 3 and 4. Ford Territory owners and Discovery owners cross-source these engines due to commonality.",
+                "fuel": "Diesel",
+                "size": "2.7 Litre",
+                "power": "140 kW (190 hp)",
+                "years": "2011-2016",
+                "compatibleVariants": [
+                  "SZ TX Diesel, SZ TS Diesel, SZ Titanium Diesel, SZ MkII TX, SZ MkII TS, SZ MkII Titanium"
+                ],
+                "commonFailures": [
+                  "Oil pump housing failure (early Territory engines are updated and less prone than Discovery units)",
+                  "Crankshaft failure (documented on high-mileage units)",
+                  "Timing belt requires replacement at 160,000km intervals"
+                ],
+                "avgRebuiltPrice": "£1,950 - £2,800",
+                "cta": "Get quotes for 276DT Ford Territory engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+              },
+              {
+                "code": "CAGDA",
+                "title": "2.0L Diesel",
+                "familyHeading": "2.0L Bi-Turbo Diesel (SZ Facelift 2014-2016)",
                 "history": "The 2.0L Bi-Turbo diesel was introduced as part of the Territory SZ facelift in 2014. This engine offered improved fuel economy while maintaining competitive torque figures for the large SUV segment.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -712,8 +734,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "CAGDA - 2.",
-                "title": "0L Bi-Turbo Diesel (Chinese Market)",
+                "code": "CAGDA",
+                "title": "2.0L Bi-Turbo Diesel (Chinese Market)",
+                "familyHeading": "Chinese Production Diesels (CX743 2018-2023)",
                 "history": "The second-generation Territory (CX743) was produced in China for select markets including Australia and the Middle East. It shared some diesel powertrain components with European Ford models.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -737,8 +760,9 @@
             "name": "Petrol Engines",
             "entries": [
               {
-                "code": "Barra 190 - 4.",
-                "title": "0L Petrol",
+                "code": "Barra 190",
+                "title": "4.0L Petrol",
+                "familyHeading": "Barra 4.0L Inline-6 Petrol (Australian Production 2004-2016)",
                 "history": "The legendary Australian-designed Barra 190 is a 4.0L DOHC 24-valve inline-6 known for exceptional reliability. It powers the majority of SX and SY Territory models and remains the most common engine in the Australian domestic market.",
                 "fuel": "Petrol",
                 "size": "4.0 Litre",
@@ -757,8 +781,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "Barra 182 - 4.",
-                "title": "0L Petrol",
+                "code": "Barra 182",
+                "title": "4.0L Petrol",
+                "familyHeading": "Barra 4.0L Inline-6 Petrol (Australian Production 2004-2016)",
                 "history": "Early SX Territory models featured the Barra 182, producing slightly less power than the later Barra 190. This engine shares the same robust architecture and reliability characteristics as its more powerful successor.",
                 "fuel": "Petrol",
                 "size": "4.0 Litre",
@@ -777,8 +802,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "CAFDD - 2.",
-                "title": "0L EcoBoost Petrol",
+                "code": "CAFDD",
+                "title": "2.0L EcoBoost Petrol",
+                "familyHeading": "2.0L EcoBoost Petrol (SZ Facelift 2014-2016)",
                 "history": "The 2.0L EcoBoost joined the Territory range with the 2014 SZ facelift. This turbocharged direct-injection petrol engine offered improved fuel economy over the Barra while maintaining competitive power output.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -797,45 +823,44 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "CAFDB - 1.",
-                "title": "5L EcoBoost Petrol",
+                "code": "CAFDB",
+                "title": "1.5L EcoBoost Petrol",
+                "familyHeading": "Chinese Production Petrols (CX743 2018-2025)",
+                "history": "The Chinese-built CX743 Territory introduced smaller-displacement EcoBoost engines to the nameplate. The 1.5L three-cylinder unit represents a significant departure from the original Australian model's engineering philosophy.",
+                "fuel": "Petrol",
+                "size": "1.5 Litre",
+                "power": "160 hp",
+                "years": "2018-2023",
+                "compatibleVariants": [
+                  "CX743 TX EcoBoost, CX743 TS EcoBoost, CX743 Titanium EcoBoost"
+                ],
+                "commonFailures": [
+                  "Low fuel pressure from HPFP",
+                  "Coolant loss from water pump seal",
+                  "Carbon buildup on intake valves"
+                ],
+                "avgRebuiltPrice": "£1,400 - £1,850",
+                "cta": "Get quotes for CAFDB Ford Territory engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              },
+              {
+                "code": "4G18F6E (EcoBoost)",
+                "title": "1.8L GTDi Petrol",
+                "familyHeading": "Chinese Production Petrols (CX743 2018-2025)",
                 "history": "The second-generation Territory received a 1.8L GTDi petrol engine in the 2025 facelift. This turbocharged direct-injection four-cylinder delivers 188hp and represents the modern direction for the nameplate.",
                 "fuel": "Petrol",
                 "size": "1.8 Litre",
                 "power": "188 hp",
                 "years": "2025-present",
                 "compatibleVariants": [
-                  "CX743 TX EcoBoost, CX743 TS EcoBoost, CX743 Titanium EcoBoost",
                   "Territory II facelift models"
                 ],
                 "commonFailures": [
-                  "Low fuel pressure from HPFP",
-                  "Coolant loss from water pump seal",
-                  "Carbon buildup on intake valves",
                   "Insufficient data (newer engine)",
                   "Early reports of direct-injection carbon buildup typical of EcoBoost engines"
                 ],
                 "avgRebuiltPrice": "Contact supplier for current pricing",
                 "cta": "Get quotes for 4G18F6E Ford Territory engine replacement",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              }
-            ]
-          },
-          {
-            "name": "Hybrid / Electrified Engines",
-            "entries": [
-              {
-                "code": "CX743 Territory EcoBoost",
-                "title": "Hybrid (select Asian markets only)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
-                "avgRebuiltPrice": "",
-                "cta": "Contact UK specialists for import-specific hybrid engine queries",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               }
             ]
@@ -862,8 +887,7 @@
       "closingLine": "Can't find your engine code? Enter your registration number above - we'll instantly identify the exact unit, its technical specifications, and live replacement prices from UK Ford Territory engine specialists. Every rebuilt engine comes with a minimum 12-month unlimited mileage warranty.",
       "filters": [
         "Diesel Engines",
-        "Petrol Engines",
-        "Hybrid / Electrified Engines"
+        "Petrol Engines"
       ],
       "groups": [
         {
@@ -872,7 +896,21 @@
           "failureNote": "Main replacement triggers are timing chain wear, EGR / cooling faults and turbo-control issues.",
           "engines": [
             {
-              "code": "CAGDA - 2.",
+              "code": "276DT (Duratorq)",
+              "title": "2.7L Diesel",
+              "familyHeading": "2.7L Duratorq V6 Diesel (2011-2016)",
+              "fuel": "Diesel",
+              "size": "2.7L",
+              "power": "140 kW (190 hp)",
+              "compatibleModels": "SZ TX Diesel, SZ TS Diesel, SZ Titanium Diesel, SZ MkII TX, SZ MkII TS, SZ MkII Titanium",
+              "avgRebuiltPrice": "£1,950 - £2,800",
+              "cta": "Get quotes for 276DT Ford Territory engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+            },
+            {
+              "code": "CAGDA",
+              "title": "2.0L Diesel",
+              "familyHeading": "2.0L Bi-Turbo Diesel (SZ Facelift 2014-2016)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "210 hp",
@@ -882,7 +920,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "CAGDA - 2.",
+              "code": "CAGDA",
+              "title": "2.0L Bi-Turbo Diesel (Chinese Market)",
+              "familyHeading": "Chinese Production Diesels (CX743 2018-2023)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "210 hp",
@@ -899,7 +939,9 @@
           "failureNote": "Main replacement demand comes from timing-chain, cooling-system and performance thermal-management faults.",
           "engines": [
             {
-              "code": "Barra 190 - 4.",
+              "code": "Barra 190",
+              "title": "4.0L Petrol",
+              "familyHeading": "Barra 4.0L Inline-6 Petrol (Australian Production 2004-2016)",
               "fuel": "Petrol",
               "size": "4.0L",
               "power": "182-195 kW (245-261 hp)",
@@ -909,7 +951,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "Barra 182 - 4.",
+              "code": "Barra 182",
+              "title": "4.0L Petrol",
+              "familyHeading": "Barra 4.0L Inline-6 Petrol (Australian Production 2004-2016)",
               "fuel": "Petrol",
               "size": "4.0L",
               "power": "182 kW (244 hp)",
@@ -919,7 +963,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "CAFDD - 2.",
+              "code": "CAFDD",
+              "title": "2.0L EcoBoost Petrol",
+              "familyHeading": "2.0L EcoBoost Petrol (SZ Facelift 2014-2016)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "240 hp",
@@ -929,30 +975,27 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "CAFDB - 1.",
+              "code": "CAFDB",
+              "title": "1.5L EcoBoost Petrol",
+              "familyHeading": "Chinese Production Petrols (CX743 2018-2025)",
+              "fuel": "Petrol",
+              "size": "1.5L",
+              "power": "160 hp",
+              "compatibleModels": "CX743 TX EcoBoost, CX743 TS EcoBoost, CX743 Titanium EcoBoost",
+              "avgRebuiltPrice": "£1,400 - £1,850",
+              "cta": "Get quotes for CAFDB Ford Territory engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            },
+            {
+              "code": "4G18F6E (EcoBoost)",
+              "title": "1.8L GTDi Petrol",
+              "familyHeading": "Chinese Production Petrols (CX743 2018-2025)",
               "fuel": "Petrol",
               "size": "1.8L",
               "power": "188 hp",
-              "compatibleModels": "CX743 TX EcoBoost, CX743 TS EcoBoost, CX743 Titanium EcoBoost, Territory II facelift models",
+              "compatibleModels": "Territory II facelift models",
               "avgRebuiltPrice": "Contact supplier for current pricing",
               "cta": "Get quotes for 4G18F6E Ford Territory engine replacement",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            }
-          ]
-        },
-        {
-          "name": "Hybrid / Electrified Engines",
-          "era": "Extracted from electrified powertrains and hybrid engine families used in Ford Territory variants.",
-          "failureNote": "Main replacement demand comes from cooling, battery-support and high-voltage control faults.",
-          "engines": [
-            {
-              "code": "CX743 Territory EcoBoost",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
-              "avgRebuiltPrice": "",
-              "cta": "Contact UK specialists for import-specific hybrid engine queries",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             }
           ]
@@ -1399,6 +1442,11 @@
           "title": "Ford Territory Diesel Engines",
           "description": "The SZ series (2011-2016) introduced the 2.7L V6 diesel, making Territory a sought-after donor for Land Rover Discovery 3 owners seeking reliable replacement engines.",
           "descriptor": "The SZ series (2011-2016) introduced the 2.7L V6 diesel, making Territory a sought-after donor for Land Rover Discovery 3 owners seeking reliable replacement engines.",
+          "familiesLabel": "Common Ford Territory Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "276DT (Duratorq V6) - 2.7L TDV6 shared with Land Rover Discovery 3/4, also fitted to Jaguar XF and PSA vehicles",
             "CAGDA - 2.0L Bi-Turbo diesel added with 2014 SZ facelift, offering 210hp and improved economy"
@@ -1427,6 +1475,11 @@
           "title": "Ford Territory Petrol Engines",
           "description": "The Australian-built Barra 4.0L inline-six powered the majority of Territory models sold between 2004 and 2014, earning legendary status for reliability and 400,000km+ lifespans.",
           "descriptor": "The Australian-built Barra 4.0L inline-six powered the majority of Territory models sold between 2004 and 2014, earning legendary status for reliability and 400,000km+ lifespans.",
+          "familiesLabel": "Common Ford Territory Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "Barra 182 - 4.0L DOHC 24-valve, 244hp, fitted to early SX (2004-2006)",
             "Barra 190 - 4.0L DOHC 24-valve, 250hp, fitted to SY (2006-2011) and early SZ (2011-2014)",
@@ -1459,6 +1512,11 @@
           "title": "Ford Territory Hybrid / Electrified Engines",
           "description": "No factory hybrid or electrified powertrains were officially fitted to any Ford Territory generation sold in UK or Australian markets.",
           "descriptor": "No factory hybrid or electrified powertrains were officially fitted to any Ford Territory generation sold in UK or Australian markets.",
+          "familiesLabel": "Ford Territory Hybrid Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "None - hybrid powertrains not available on Australian or UK market Territory models",
             "Not applicable - no factory hybrid Territory models were produced"

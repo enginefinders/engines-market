@@ -1,3 +1,5 @@
+import { homeFaqClusterGuides as rawHomeFaqClusterGuides, homeFaqOverrides as rawHomeFaqOverrides } from "@/lib/homeFaqContent";
+
 export type HomeFaqClusterId =
   | "costs"
   | "failures"
@@ -10,6 +12,18 @@ export type HomeFaqClusterId =
   | "value"
   | "authority";
 
+export type HomeFaqBrandId =
+  | "bmw"
+  | "land-rover"
+  | "jaguar"
+  | "mercedes"
+  | "audi"
+  | "volkswagen"
+  | "ford"
+  | "vauxhall"
+  | "hyundai"
+  | "toyota";
+
 export type HomeFaqCluster = {
   id: HomeFaqClusterId;
   number: string;
@@ -19,7 +33,7 @@ export type HomeFaqCluster = {
 };
 
 export type HomeFaqBrand = {
-  id: string;
+  id: HomeFaqBrandId;
   label: string;
   slug: string;
   logoSrc: string;
@@ -39,13 +53,30 @@ export type HomeFaqBrand = {
   authorityLine: string;
 };
 
+export type HomeFaqAnswerBlock =
+  | {
+      type: "paragraph";
+      lead?: string;
+      text: string;
+    }
+  | {
+      type: "bullets";
+      items: readonly string[];
+    };
+
+export type HomeFaqClusterGuide = {
+  eyebrow: string;
+  title: string;
+  paragraphs: readonly string[];
+  bullets?: readonly string[];
+};
+
 export type HomeFaqItem = {
   id: string;
   clusterId: HomeFaqClusterId;
-  brandId: string;
+  brandId: HomeFaqBrandId;
   question: string;
-  highlight: string;
-  body: string;
+  answer: readonly HomeFaqAnswerBlock[];
   ctaText: string;
   href: string;
 };
@@ -275,8 +306,30 @@ export const homeFaqBrands: HomeFaqBrand[] = [
   },
 ];
 
-function getCtaText(brand: HomeFaqBrand) {
-  return `Compare ${brand.label} engine replacement quotes from vetted UK specialists`;
+export const homeFaqGuides: Partial<Record<HomeFaqClusterId, HomeFaqClusterGuide>> = rawHomeFaqClusterGuides;
+
+function getCtaText(brand: HomeFaqBrand, clusterId: HomeFaqClusterId) {
+  if (clusterId === "costs") {
+    return `Compare ${brand.label} engine replacement quotes from vetted UK specialists →`;
+  }
+
+  if (clusterId === "failures") {
+    return `Compare ${brand.label} engine failure replacement quotes from vetted UK specialists →`;
+  }
+
+  if (clusterId === "process") {
+    return `Get ${brand.label} engine replacement quotes with turnaround estimates →`;
+  }
+
+  if (clusterId === "value") {
+    return `Get ${brand.label} engine replacement quotes vs vehicle value →`;
+  }
+
+  if (clusterId === "authority") {
+    return `Compare ${brand.label} engine replacement by engine family and code →`;
+  }
+
+  return `Compare ${brand.label} engine replacement quotes from vetted UK specialists →`;
 }
 
 function buildCostsFaq(brand: HomeFaqBrand, index: number) {
@@ -942,9 +995,45 @@ function buildFaqForCluster(clusterId: HomeFaqClusterId, brand: HomeFaqBrand, in
   return buildAuthorityFaq(brand, index);
 }
 
+function makeFallbackAnswer(highlight: string, body: string): readonly HomeFaqAnswerBlock[] {
+  return [
+    {
+      type: "paragraph",
+      lead: highlight,
+      text: body,
+    },
+  ];
+}
+
+type RawOverrideEntry = {
+  question: string;
+  answer: readonly HomeFaqAnswerBlock[];
+  ctaText?: string;
+};
+
+type RawOverrideMap = Partial<
+  Record<HomeFaqClusterId, Partial<Record<HomeFaqBrandId, readonly RawOverrideEntry[]>>>
+>;
+
+const homeFaqOverrides: RawOverrideMap = rawHomeFaqOverrides;
+
 export const homeFaqItems: HomeFaqItem[] = homeFaqBrands.flatMap((brand) =>
-  homeFaqClusters.flatMap((cluster) =>
-    Array.from({ length: cluster.count }, (_, index) => {
+  homeFaqClusters.flatMap((cluster) => {
+    const overrideEntries = homeFaqOverrides[cluster.id]?.[brand.id];
+
+    if (overrideEntries?.length) {
+      return overrideEntries.map((item, index) => ({
+        id: `${cluster.id}-${brand.id}-${index + 1}`,
+        clusterId: cluster.id,
+        brandId: brand.id,
+        question: item.question,
+        answer: item.answer,
+        ctaText: item.ctaText ?? getCtaText(brand, cluster.id),
+        href: "#home-hero-reg-form",
+      }));
+    }
+
+    return Array.from({ length: cluster.count }, (_, index) => {
       const item = buildFaqForCluster(cluster.id, brand, index);
 
       return {
@@ -952,11 +1041,10 @@ export const homeFaqItems: HomeFaqItem[] = homeFaqBrands.flatMap((brand) =>
         clusterId: cluster.id,
         brandId: brand.id,
         question: item.question,
-        highlight: item.highlight,
-        body: item.body,
-        ctaText: getCtaText(brand),
+        answer: makeFallbackAnswer(item.highlight, item.body),
+        ctaText: getCtaText(brand, cluster.id),
         href: "#home-hero-reg-form",
       };
-    }),
-  ),
+    });
+  }),
 );

@@ -15,13 +15,13 @@
     "canonical": "/bmw/x4"
   },
   "assets": {
-    "heroBg": "/images/brands/bmw/models/bmw-bmw-x4-model-card.png",
+    "heroBg": "/images/brands/bmw/models/bmw-x4-model-card.png",
     "howItWorksBg": "/images/brands/bmw/brand/bmw-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/bmw/brand/bmw-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/bmw/brand/bmw-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/bmw/brand/bmw-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/bmw/brand/bmw-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/bmw/models/bmw-bmw-x4-model-card.png"
+    "ctaImage": "/images/brands/bmw/models/bmw-x4-model-card.png"
   },
   "sections": {
     "hero": {
@@ -734,6 +734,7 @@
               {
                 "code": "N47D20",
                 "title": "2.0L Diesel",
+                "familyHeading": "N47 Series Diesel Engines (2014-2018)",
                 "history": "The N47D20 powered early F26 xDrive20d models, offering strong efficiency but gaining notoriety for its timing chain design flaw positioned at the rear of the engine.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -753,6 +754,7 @@
               {
                 "code": "B47D20",
                 "title": "2.0L Diesel",
+                "familyHeading": "B47 Series Diesel Engines (2014-Present)",
                 "history": "The B47D20 replaced the N47 from 2014 onward, bringing revised timing chain architecture, improved thermal management, and Euro 6 emissions compliance. Early B47 units entered X4 production in late 2014 alongside N47-powered models.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -773,6 +775,7 @@
               {
                 "code": "N57D30",
                 "title": "3.0L Diesel",
+                "familyHeading": "N57 Series Diesel Engines (2014-2018)",
                 "history": "A 3.0-litre straight-six turbodiesel offering exceptional torque and refinement. The N57 powered higher-spec F26 X4 models and is regarded as BMW's most reliable diesel family when properly maintained.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -793,6 +796,7 @@
               {
                 "code": "B57D30",
                 "title": "3.0L Diesel",
+                "familyHeading": "B57 Series Diesel Engines (2018-Present)",
                 "history": "BMW's next-generation modular diesel engine introduced with the G02 X4. Featuring sequential turbocharging (twin-scroll on M40d), improved thermal efficiency, and reduced internal friction compared to the N57.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -818,6 +822,7 @@
               {
                 "code": "N20B20",
                 "title": "2.0L Petrol",
+                "familyHeading": "N20 Series Petrol Engines (2014-2018)",
                 "history": "A 2.0-litre twin-scroll turbocharged four-cylinder introducing BMW's TwinPower Turbo technology to the four-cylinder petrol range. Replaced by the B48 in later models.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -838,6 +843,7 @@
               {
                 "code": "N55B30",
                 "title": "3.0L Petrol",
+                "familyHeading": "N55 Series Petrol Engines (2014-2018)",
                 "history": "A 3.0-litre turbocharged straight-six that succeeded the N54. The N55 introduced a single twin-scroll turbocharger and Valvetronic variable valve lift, offering improved response and reliability.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -858,6 +864,7 @@
               {
                 "code": "B48B20",
                 "title": "2.0L Petrol",
+                "familyHeading": "B-Series Petrol Engines (2018-Present)",
                 "history": "Part of BMW's modular B-series engine family (2015 onward). The B48 offers improved thermal management, a closed-deck block design, and reduced weight compared to the N20 it replaced. Fitted with TwinScroll turbocharger.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -878,6 +885,7 @@
               {
                 "code": "B58B30",
                 "title": "3.0L Petrol",
+                "familyHeading": "B-Series Petrol Engines (2018-Present)",
                 "history": "BMW's flagship B-series inline-six petrol engine, introduced with the G02 X4 M40i. Featuring an advanced closed-deck block, direct and port injection, and a twin-scroll turbocharger. Highly regarded for tuning potential.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -903,6 +911,7 @@
               {
                 "code": "B48B20",
                 "title": "2.0L MHEV Petrol",
+                "familyHeading": "B48 Hybrid Petrol Engines (2020-2024)",
                 "history": "The B48B20 was adapted for the xDrive25e plug-in hybrid, combining the turbocharged 2.0-litre petrol engine with an electric motor. The system delivers combined output of 292hp with WLTP electric-only range capability.",
                 "fuel": "MHEV Petrol (Plug-in Hybrid)",
                 "size": "2.0 Litre",
@@ -955,6 +964,8 @@
           "engines": [
             {
               "code": "N47D20",
+              "title": "2.0L Diesel",
+              "familyHeading": "N47 Series Diesel Engines (2014-2018)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "184 hp",
@@ -965,6 +976,8 @@
             },
             {
               "code": "B47D20",
+              "title": "2.0L Diesel",
+              "familyHeading": "B47 Series Diesel Engines (2014-Present)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "188-190 hp",
@@ -975,6 +988,8 @@
             },
             {
               "code": "N57D30",
+              "title": "3.0L Diesel",
+              "familyHeading": "N57 Series Diesel Engines (2014-2018)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "255-308 hp",
@@ -985,6 +1000,8 @@
             },
             {
               "code": "B57D30",
+              "title": "3.0L Diesel",
+              "familyHeading": "B57 Series Diesel Engines (2018-Present)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "265-340 hp",
@@ -1002,6 +1019,8 @@
           "engines": [
             {
               "code": "N20B20",
+              "title": "2.0L Petrol",
+              "familyHeading": "N20 Series Petrol Engines (2014-2018)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "181-241 hp",
@@ -1012,6 +1031,8 @@
             },
             {
               "code": "N55B30",
+              "title": "3.0L Petrol",
+              "familyHeading": "N55 Series Petrol Engines (2014-2018)",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "302-355 hp",
@@ -1022,6 +1043,8 @@
             },
             {
               "code": "B48B20",
+              "title": "2.0L Petrol",
+              "familyHeading": "B-Series Petrol Engines (2018-Present)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "181-248 hp",
@@ -1032,6 +1055,8 @@
             },
             {
               "code": "B58B30",
+              "title": "3.0L Petrol",
+              "familyHeading": "B-Series Petrol Engines (2018-Present)",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "355-382 hp",
@@ -1049,6 +1074,8 @@
           "engines": [
             {
               "code": "B48B20",
+              "title": "2.0L MHEV Petrol",
+              "familyHeading": "B48 Hybrid Petrol Engines (2020-2024)",
               "fuel": "MHEV Petrol (Plug-in Hybrid)",
               "size": "2.0L",
               "power": "292 hp (combined system)",
@@ -1556,6 +1583,11 @@
           "title": "BMW X4 Diesel Engines",
           "description": "The backbone of UK X4 sales across both generations (2014-2024), with the 2.0-litre four-cylinder dominating replacement demand and the 3.0-litre straight-six powering premium xDrive30d and M40d variants.",
           "descriptor": "The backbone of UK X4 sales across both generations (2014-2024), with the 2.0-litre four-cylinder dominating replacement demand and the 3.0-litre straight-six powering premium xDrive30d and M40d variants.",
+          "familiesLabel": "Common BMW X4 Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "N47D20 - Early F26 xDrive20d (184hp), notorious for rear-mounted timing chain failure",
             "B47D20 - Improved 2.0L unit (190hp) with revised chain design, Euro 6 compliance",
@@ -1583,6 +1615,11 @@
           "title": "BMW X4 Petrol Engines",
           "description": "Less common than diesel but growing in replacement enquiries, especially for the B58-powered M40i performance flagship and entry-level xDrive20i/xDrive30i variants across both generations.",
           "descriptor": "Less common than diesel but growing in replacement enquiries, especially for the B58-powered M40i performance flagship and entry-level xDrive20i/xDrive30i variants across both generations.",
+          "familiesLabel": "Common BMW X4 Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "N20B20 - F26 xDrive20i (181hp) and xDrive28i (241hp), rear timing chain stretch risk",
             "N55B30 - F26 xDrive35i and pre-2018 M40i (306-355hp), oil consumption from piston ring carbon",
@@ -1609,6 +1646,11 @@
           "title": "BMW X4 Mild Hybrid (MHEV) Engines",
           "description": "Introduced on G02 LCI models from 2021, pairing the 2.0-litre B47 diesel or B48 petrol with a 48V starter-generator for electric boost and coasting functionality.",
           "descriptor": "Introduced on G02 LCI models from 2021, pairing the 2.0-litre B47 diesel or B48 petrol with a 48V starter-generator for electric boost and coasting functionality.",
+          "familiesLabel": "BMW X4 MHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "B47D20 (48V) - 2.0L diesel with 11hp electric boost, xDrive20d MHT",
             "B48B20 (48V) - 2.0L petrol with 11hp electric boost (market-dependent)"
@@ -1633,6 +1675,11 @@
           "title": "BMW X4 Plug-in Hybrid (PHEV) Engines",
           "description": "The xDrive25e combined the B48 2.0-litre turbo petrol engine with an electric motor and 12kWh battery for a combined 292hp and electric-only urban driving capability.",
           "descriptor": "The xDrive25e combined the B48 2.0-litre turbo petrol engine with an electric motor and 12kWh battery for a combined 292hp and electric-only urban driving capability.",
+          "familiesLabel": "BMW X4 PHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "B48B20 + electric drive unit - 292hp combined system output",
             "Petrol engine drives front wheels via 8-speed automatic gearbox",

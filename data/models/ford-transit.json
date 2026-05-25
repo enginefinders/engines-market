@@ -15,13 +15,13 @@
     "canonical": "/ford/transit"
   },
   "assets": {
-    "heroBg": "/images/brands/ford/models/ford-ford-transit-model-card.png",
+    "heroBg": "/images/brands/ford/models/ford-transit-model-card.png",
     "howItWorksBg": "/images/brands/ford/brand/ford-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/ford/brand/ford-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/ford/brand/ford-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/ford/brand/ford-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/ford/brand/ford-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/ford/models/ford-ford-transit-model-card.png"
+    "ctaImage": "/images/brands/ford/models/ford-transit-model-card.png"
   },
   "sections": {
     "hero": {
@@ -719,8 +719,9 @@
             "name": "Diesel Engines",
             "entries": [
               {
-                "code": "P5AT - 2.",
-                "title": "2L Diesel",
+                "code": "P5AT",
+                "title": "2.2L Diesel",
+                "familyHeading": "2.2L Duratorq TDCi Family (Puma / Mk6) - 2006-2014",
                 "history": "The dominant Transit diesel of the Mk6 era, fitted to over 60% of UK-registered Transits. Fleet workhorse known for durability but prone to specific component failures.",
                 "fuel": "Diesel",
                 "size": "2.2 Litre",
@@ -739,8 +740,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "DRRA - 2.",
-                "title": "2L Diesel",
+                "code": "DRRA",
+                "title": "2.2L Diesel",
+                "familyHeading": "2.2L Duratorq TDCi Family (Puma / Mk6) - 2006-2014",
                 "history": "A variant of the Duratorq Puma engine family used across Transit and Ford Ranger platforms. Known for sharing components with Land Rover Defender applications.",
                 "fuel": "Diesel",
                 "size": "2.2 Litre",
@@ -758,8 +760,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "YFAT - 2.",
-                "title": "0L Diesel",
+                "code": "YFAT",
+                "title": "2.0L Diesel",
+                "familyHeading": "2.0L EcoBlue Family (Mk7 / Mk8 / V363) - 2016-Present",
                 "history": "The first-generation EcoBlue that replaced Duratorq from 2016. Brought reduced emissions, AdBlue injection, and improved fuel economy to the Transit range.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -778,8 +781,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "BKFA - 2.",
-                "title": "0L Diesel",
+                "code": "BKFA",
+                "title": "2.0L Diesel",
+                "familyHeading": "2.0L EcoBlue Family (Mk7 / Mk8 / V363) - 2016-Present",
                 "history": "A higher-output tune of the EcoBlue engine producing 128hp. Fitted extensively to Transit V363 vans and chassis cab variants from 2016 onward.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -797,8 +801,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "BLFA - 2.",
-                "title": "0L Diesel",
+                "code": "BLFA",
+                "title": "2.0L Diesel",
+                "familyHeading": "2.0L EcoBlue Family (Mk7 / Mk8 / V363) - 2016-Present",
                 "history": "The highest power factory tune of the first-generation EcoBlue at 167hp. Used in heavy-duty Transit applications requiring maximum towing capacity.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -816,8 +821,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "BKFC - 2.",
-                "title": "0L Diesel MHEV",
+                "code": "BKFC",
+                "title": "2.0L Diesel MHEV",
+                "familyHeading": "2.0L EcoBlue Family (Mk7 / Mk8 / V363) - 2016-Present",
                 "history": "A mild-hybrid EcoBlue variant introduced in 2019. Uses a belt-integrated starter generator for energy recovery and stop-start functionality, improving urban fuel economy.",
                 "fuel": "MHEV",
                 "size": "2.0 Litre",
@@ -834,6 +840,7 @@
               {
                 "code": "48V battery system issues",
                 "title": "hybrid components costly to replace",
+                "familyHeading": "2.0L EcoBlue Family (Mk7 / Mk8 / V363) - 2016-Present",
                 "history": "",
                 "fuel": "",
                 "size": "",
@@ -846,8 +853,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "BCFB - 2.",
-                "title": "0L Diesel",
+                "code": "BCFB",
+                "title": "2.0L Diesel",
+                "familyHeading": "2.0L EcoBlue Family (Mk7 / Mk8 / V363) - 2016-Present",
                 "history": "A later-generation high-power EcoBlue producing 182hp. Fitted to post-2019 Transit V363 models with updated emissions calibration for Euro 6.2 compliance.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -865,8 +873,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "D6HA - 2.",
-                "title": "4L Diesel",
+                "code": "D6HA",
+                "title": "2.4L Diesel",
+                "familyHeading": "2.4L Duratorq Family (Mk5 / Mk6) - 2000-2006",
                 "history": "The robust 2.4-litre diesel fitted to Mk5 and early Mk6 Transits. Known for mechanical simplicity compared to later common-rail units, but now a legacy engine for older van owners.",
                 "fuel": "Diesel",
                 "size": "2.4 Litre",
@@ -885,8 +894,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "XLT - 3.",
-                "title": "2L Diesel",
+                "code": "XLT",
+                "title": "3.2L Diesel",
+                "familyHeading": "3.2L Duratorq XLT Family (Mk7 / V363) - 2014-2019",
                 "history": "The largest Duratorq fitted to the Transit, offering 200hp for heavy-duty applications. Used primarily in 350 and 460 payload variants for maximum towing capacity.",
                 "fuel": "Diesel",
                 "size": "3.2 Litre",
@@ -904,8 +914,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "WFAT - 3.",
-                "title": "2L Diesel",
+                "code": "WFAT",
+                "title": "3.2L Diesel",
+                "familyHeading": "3.2L Duratorq XLT Family (Mk7 / V363) - 2014-2019",
                 "history": "A Euro 6-calibrated variant of the 3.2 Duratorq fitted to 2015-onwards models with updated emissions equipment and DPF.",
                 "fuel": "Diesel",
                 "size": "3.2 Litre",
@@ -928,8 +939,9 @@
             "name": "Petrol Engines",
             "entries": [
               {
-                "code": "NEFA - 2.",
-                "title": "0L Petrol",
+                "code": "NEFA",
+                "title": "2.0L Petrol",
+                "familyHeading": "2.0L EcoBoost Petrol - 2019-Present",
                 "history": "The rare petrol option in the Transit range, using the EcoBoost turbocharged platform. Low search volume but consistent demand from urban fleets and clean air zone operators.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -979,7 +991,9 @@
           "failureNote": "Main replacement triggers are timing chain wear, EGR / cooling faults and turbo-control issues.",
           "engines": [
             {
-              "code": "P5AT - 2.",
+              "code": "P5AT",
+              "title": "2.2L Diesel",
+              "familyHeading": "2.2L Duratorq TDCi Family (Puma / Mk6) - 2006-2014",
               "fuel": "Diesel",
               "size": "2.2L",
               "power": "85-140 hp",
@@ -989,7 +1003,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "DRRA - 2.",
+              "code": "DRRA",
+              "title": "2.2L Diesel",
+              "familyHeading": "2.2L Duratorq TDCi Family (Puma / Mk6) - 2006-2014",
               "fuel": "Diesel",
               "size": "2.2L",
               "power": "100-125 hp",
@@ -999,7 +1015,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "YFAT - 2.",
+              "code": "YFAT",
+              "title": "2.0L Diesel",
+              "familyHeading": "2.0L EcoBlue Family (Mk7 / Mk8 / V363) - 2016-Present",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "105-170 hp",
@@ -1009,7 +1027,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "BKFA - 2.",
+              "code": "BKFA",
+              "title": "2.0L Diesel",
+              "familyHeading": "2.0L EcoBlue Family (Mk7 / Mk8 / V363) - 2016-Present",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "128 hp",
@@ -1019,7 +1039,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "BLFA - 2.",
+              "code": "BLFA",
+              "title": "2.0L Diesel",
+              "familyHeading": "2.0L EcoBlue Family (Mk7 / Mk8 / V363) - 2016-Present",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "167 hp",
@@ -1029,7 +1051,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "BKFC - 2.",
+              "code": "BKFC",
+              "title": "2.0L Diesel MHEV",
+              "familyHeading": "2.0L EcoBlue Family (Mk7 / Mk8 / V363) - 2016-Present",
               "fuel": "MHEV",
               "size": "2.0L",
               "power": "128 hp",
@@ -1040,6 +1064,8 @@
             },
             {
               "code": "48V battery system issues",
+              "title": "hybrid components costly to replace",
+              "familyHeading": "2.0L EcoBlue Family (Mk7 / Mk8 / V363) - 2016-Present",
               "fuel": "",
               "size": "",
               "power": "",
@@ -1049,7 +1075,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "BCFB - 2.",
+              "code": "BCFB",
+              "title": "2.0L Diesel",
+              "familyHeading": "2.0L EcoBlue Family (Mk7 / Mk8 / V363) - 2016-Present",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "182 hp",
@@ -1059,7 +1087,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "D6HA - 2.",
+              "code": "D6HA",
+              "title": "2.4L Diesel",
+              "familyHeading": "2.4L Duratorq Family (Mk5 / Mk6) - 2000-2006",
               "fuel": "Diesel",
               "size": "2.4L",
               "power": "100-137 hp",
@@ -1069,7 +1099,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "XLT - 3.",
+              "code": "XLT",
+              "title": "3.2L Diesel",
+              "familyHeading": "3.2L Duratorq XLT Family (Mk7 / V363) - 2014-2019",
               "fuel": "Diesel",
               "size": "3.2L",
               "power": "200 hp",
@@ -1079,7 +1111,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "WFAT - 3.",
+              "code": "WFAT",
+              "title": "3.2L Diesel",
+              "familyHeading": "3.2L Duratorq XLT Family (Mk7 / V363) - 2014-2019",
               "fuel": "Diesel",
               "size": "3.2L",
               "power": "200 hp",
@@ -1096,7 +1130,9 @@
           "failureNote": "Main replacement demand comes from timing-chain, cooling-system and performance thermal-management faults.",
           "engines": [
             {
-              "code": "NEFA - 2.",
+              "code": "NEFA",
+              "title": "2.0L Petrol",
+              "familyHeading": "2.0L EcoBoost Petrol - 2019-Present",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "150-170 hp",
@@ -1591,6 +1627,11 @@
           "title": "Ford Transit Diesel Engines",
           "description": "Diesel has dominated Transit powertrains across Mk5, Mk6, Mk7 and Mk8 generations - with the 2.2L Duratorq and 2.0L EcoBlue families driving the highest UK replacement enquiry volumes of any commercial vehicle.",
           "descriptor": "Diesel has dominated Transit powertrains across Mk5, Mk6, Mk7 and Mk8 generations - with the 2.2L Duratorq and 2.0L EcoBlue families driving the highest UK replacement enquiry volumes of any commercial vehicle.",
+          "familiesLabel": "Common Ford Transit Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "P5AT - 2.2L Duratorq, Mk6 workhorse with injector and oil pump failures",
             "YFAT - 2.0L EcoBlue first generation, AdBlue-equipped from 2016",
@@ -1627,6 +1668,11 @@
           "title": "Ford Transit Petrol Engines",
           "description": "Petrol Transits are rare in the UK, with only the 2.0L EcoBoost offered in limited numbers from 2019 - primarily sought by urban fleets and clean air zone operators avoiding diesel restrictions.",
           "descriptor": "Petrol Transits are rare in the UK, with only the 2.0L EcoBoost offered in limited numbers from 2019 - primarily sought by urban fleets and clean air zone operators avoiding diesel restrictions.",
+          "familiesLabel": "Common Ford Transit Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "NEFA - 2.0L EcoBoost turbocharged petrol, 150-170hp"
           ],
@@ -1651,6 +1697,11 @@
           "title": "Ford Transit Mild Hybrid (MHEV) Engines",
           "description": "The 2.0L EcoBlue MHEV launched in 2019, adding a belt-integrated starter generator to the standard diesel for energy recovery and enhanced stop-start in urban driving.",
           "descriptor": "The 2.0L EcoBlue MHEV launched in 2019, adding a belt-integrated starter generator to the standard diesel for energy recovery and enhanced stop-start in urban driving.",
+          "familiesLabel": "Ford Transit MHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "BKFC - 2.0L EcoBlue MHEV, 128hp",
             "48-volt belt-integrated starter generator replaces standard alternator",

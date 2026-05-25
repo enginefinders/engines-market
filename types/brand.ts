@@ -226,6 +226,8 @@ export type EngineCodesData = {
     failureNote: string;
     engines: {
       code: string;
+      title?: string;
+      familyHeading?: string;
       fuel: string;
       size: string;
       power: string;
@@ -334,6 +336,11 @@ export type FuelTypesData = {
     title: string;
     description: string;
     descriptor?: string;
+    familiesLabel?: string;
+    foundInLabel?: string;
+    knownForLabel?: string;
+    modelsLabel?: string;
+    notesLabel?: string;
     families?: string[];
     foundIn?: string[];
     knownFor?: string[];

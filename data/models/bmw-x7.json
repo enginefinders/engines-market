@@ -15,13 +15,13 @@
     "canonical": "/bmw/x7"
   },
   "assets": {
-    "heroBg": "/images/brands/bmw/models/bmw-bmw-x7-model-card.png",
+    "heroBg": "/images/brands/bmw/models/bmw-x7-model-card.png",
     "howItWorksBg": "/images/brands/bmw/brand/bmw-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/bmw/brand/bmw-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/bmw/brand/bmw-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/bmw/brand/bmw-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/bmw/brand/bmw-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/bmw/models/bmw-bmw-x7-model-card.png"
+    "ctaImage": "/images/brands/bmw/models/bmw-x7-model-card.png"
   },
   "sections": {
     "hero": {
@@ -763,6 +763,7 @@
               {
                 "code": "B57D30",
                 "title": "3.0L Diesel",
+                "familyHeading": "B57 Diesel Series (2018-Present)",
                 "history": "Aluminium inline-six introduced in 2018, delivering refined torque and forming the backbone of UK X7 sales.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -783,6 +784,7 @@
               {
                 "code": "B57D30T0",
                 "title": "3.0L Diesel",
+                "familyHeading": "B57 Diesel Series (2018-Present)",
                 "history": "Twin-turbo B57 evolution delivering rapid acceleration and seamless highway cruising for the xDrive40d trim.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -803,6 +805,7 @@
               {
                 "code": "B57D30T1",
                 "title": "3.0L Diesel",
+                "familyHeading": "B57 Diesel Series (2018-Present)",
                 "history": "Quad-turbo engineering marvel offering V8-rivaling torque within a refined six-cylinder architecture.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -823,6 +826,7 @@
               {
                 "code": "B57D30T2",
                 "title": "3.0L Diesel",
+                "familyHeading": "B57 Diesel Series (2018-Present)",
                 "history": "LCI-era twin-turbo update integrating refined emissions hardware and improved thermal management.",
                 "fuel": "MHEV Diesel",
                 "size": "3.0 Litre",
@@ -848,6 +852,7 @@
               {
                 "code": "B58B30",
                 "title": "3.0L Petrol",
+                "familyHeading": "B58 Petrol Series (2019-Present)",
                 "history": "Award-winning modular inline-six celebrated for seamless power delivery and robust aftermarket tuning.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -868,6 +873,7 @@
               {
                 "code": "B58B30M1",
                 "title": "3.0L Petrol",
+                "familyHeading": "B58 Petrol Series (2019-Present)",
                 "history": "LCI-optimized inline-six featuring 48V mild-hybrid assist for enhanced efficiency and smoother torque.",
                 "fuel": "MHEV Petrol",
                 "size": "3.0 Litre",
@@ -888,6 +894,7 @@
               {
                 "code": "N63B44T3",
                 "title": "4.4L Petrol",
+                "familyHeading": "N63 & S68 V8 Series (2018-Present)",
                 "history": "Third-gen hot-vee V8 delivering relentless torque, engineered to resolve early N63 thermal issues.",
                 "fuel": "Petrol",
                 "size": "4.4 Litre",
@@ -908,6 +915,7 @@
               {
                 "code": "S68B44",
                 "title": "4.4L Petrol",
+                "familyHeading": "N63 & S68 V8 Series (2018-Present)",
                 "history": "M Performance V8 featuring closed-deck blocks and reinforced internals for sustained high-output durability.",
                 "fuel": "MHEV Petrol",
                 "size": "4.4 Litre",
@@ -933,6 +941,7 @@
               {
                 "code": "B58B30M2",
                 "title": "3.0L Petrol",
+                "familyHeading": "B58 PHEV Integration (2020-Present)",
                 "history": "PHEV variant combining the inline-six with electric drive for silent EV cruising and rapid acceleration.",
                 "fuel": "PHEV Petrol",
                 "size": "3.0 Litre",
@@ -985,6 +994,8 @@
           "engines": [
             {
               "code": "B57D30",
+              "title": "3.0L Diesel",
+              "familyHeading": "B57 Diesel Series (2018-Present)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "265-286 hp",
@@ -995,6 +1006,8 @@
             },
             {
               "code": "B57D30T0",
+              "title": "3.0L Diesel",
+              "familyHeading": "B57 Diesel Series (2018-Present)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "340 hp",
@@ -1005,6 +1018,8 @@
             },
             {
               "code": "B57D30T1",
+              "title": "3.0L Diesel",
+              "familyHeading": "B57 Diesel Series (2018-Present)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "400 hp",
@@ -1015,6 +1030,8 @@
             },
             {
               "code": "B57D30T2",
+              "title": "3.0L Diesel",
+              "familyHeading": "B57 Diesel Series (2018-Present)",
               "fuel": "MHEV Diesel",
               "size": "3.0L",
               "power": "340 hp",
@@ -1032,6 +1049,8 @@
           "engines": [
             {
               "code": "B58B30",
+              "title": "3.0L Petrol",
+              "familyHeading": "B58 Petrol Series (2019-Present)",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "335-340 hp",
@@ -1042,6 +1061,8 @@
             },
             {
               "code": "B58B30M1",
+              "title": "3.0L Petrol",
+              "familyHeading": "B58 Petrol Series (2019-Present)",
               "fuel": "MHEV Petrol",
               "size": "3.0L",
               "power": "335-380 hp",
@@ -1052,6 +1073,8 @@
             },
             {
               "code": "N63B44T3",
+              "title": "4.4L Petrol",
+              "familyHeading": "N63 & S68 V8 Series (2018-Present)",
               "fuel": "Petrol",
               "size": "4.4L",
               "power": "456-523 hp",
@@ -1062,6 +1085,8 @@
             },
             {
               "code": "S68B44",
+              "title": "4.4L Petrol",
+              "familyHeading": "N63 & S68 V8 Series (2018-Present)",
               "fuel": "MHEV Petrol",
               "size": "4.4L",
               "power": "523-630 hp",
@@ -1079,6 +1104,8 @@
           "engines": [
             {
               "code": "B58B30M2",
+              "title": "3.0L Petrol",
+              "familyHeading": "B58 PHEV Integration (2020-Present)",
               "fuel": "PHEV Petrol",
               "size": "3.0L",
               "power": "394 hp (combined)",
@@ -1490,6 +1517,11 @@
           "title": "BMW X7 Diesel Engines",
           "description": "The B57 inline-six diesel dominates UK X7 replacement enquiries, spanning the complete G07 generation with refined torque and exceptional motorway efficiency.",
           "descriptor": "The B57 inline-six diesel dominates UK X7 replacement enquiries, spanning the complete G07 generation with refined torque and exceptional motorway efficiency.",
+          "familiesLabel": "Common BMW X7 Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "B57D30 - baseline 3.0L single-turbo unit, known for strong low-end torque",
             "B57D30T0 - sequential twin-turbo variant, delivering rapid mid-range acceleration",
@@ -1520,6 +1552,11 @@
           "title": "BMW X7 Petrol Engines",
           "description": "BMW X7 petrol variants rely on the acclaimed B58 inline-six and hot-vee V8 architectures, prioritising seamless power delivery and refined high-speed cruising.",
           "descriptor": "BMW X7 petrol variants rely on the acclaimed B58 inline-six and hot-vee V8 architectures, prioritising seamless power delivery and refined high-speed cruising.",
+          "familiesLabel": "Common BMW X7 Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "B58B30 - modular 3.0L inline-six, celebrated for robust bottom-end strength",
             "B58B30M1/M2 - updated mild-hybrid inline-six, featuring refined cooling systems",
@@ -1550,6 +1587,11 @@
           "title": "BMW X7 Hybrid / Electrified Engines",
           "description": "The BMW X7 xDrive45e combines a refined combustion engine with a high-voltage electric motor, requiring certified handling for safe replacement.",
           "descriptor": "The BMW X7 xDrive45e combines a refined combustion engine with a high-voltage electric motor, requiring certified handling for safe replacement.",
+          "familiesLabel": "BMW X7 PHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "B57D30T2 - updated 3.0L diesel across LCI xDrive30d/40d variants",
             "B58B30M1 - revised 3.0L petrol across LCI xDrive40i variants",

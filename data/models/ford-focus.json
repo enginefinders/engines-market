@@ -15,13 +15,13 @@
     "canonical": "/ford/focus"
   },
   "assets": {
-    "heroBg": "/images/brands/ford/models/ford-ford-focus-model-card.png",
+    "heroBg": "/images/brands/ford/models/ford-focus-model-card.png",
     "howItWorksBg": "/images/brands/ford/brand/ford-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/ford/brand/ford-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/ford/brand/ford-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/ford/brand/ford-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/ford/brand/ford-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/ford/models/ford-ford-focus-model-card.png"
+    "ctaImage": "/images/brands/ford/models/ford-focus-model-card.png"
   },
   "sections": {
     "hero": {
@@ -746,8 +746,9 @@
             "name": "Diesel Engines",
             "entries": [
               {
-                "code": "G8DA - 1.",
-                "title": "6L Diesel",
+                "code": "G8DA",
+                "title": "1.6L Diesel",
+                "familyHeading": "Duratorq TDCi Family (2004-2012)",
                 "history": "Introduced 2005 as Focus Mk2 workhorse diesel; economical but EGR/DPF issues drove high replacement demand.",
                 "fuel": "Diesel",
                 "size": "1.6 Litre",
@@ -766,8 +767,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "G6DA - 2.",
-                "title": "0L Diesel",
+                "code": "G6DA",
+                "title": "2.0L Diesel",
+                "familyHeading": "Duratorq TDCi Family (2004-2012)",
                 "history": "Robust 2.0 TDCi unit for higher-spec Focus; timing chain wear on later models increased replacement enquiries.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -786,8 +788,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "FFDA - 1.",
-                "title": "8L Diesel",
+                "code": "FFDA",
+                "title": "1.8L Diesel",
+                "familyHeading": "Duratorq TDCi Family (2004-2012)",
                 "history": "Mid-range Duratorq for Mk2 Focus; reliable when serviced but injector failures common at high mileage.",
                 "fuel": "Diesel",
                 "size": "1.8 Litre",
@@ -806,8 +809,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "T1DB - 1.",
-                "title": "6L Diesel",
+                "code": "T1DB",
+                "title": "1.6L Diesel",
+                "familyHeading": "EcoBlue/TDCi Updated Family (2011-Present)",
                 "history": "Revised 1.6 TDCi for Mk3 Focus; improved emissions, timing chain issues on early units drove replacements.",
                 "fuel": "Diesel",
                 "size": "1.6 Litre",
@@ -826,8 +830,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "XWDA - 1.",
-                "title": "5L Diesel",
+                "code": "XWDA",
+                "title": "1.5L Diesel",
+                "familyHeading": "EcoBlue/TDCi Updated Family (2011-Present)",
                 "history": "Downsized 1.5 TDCi replaced 1.6 in Mk3.5; compact design but injector seal failures drove replacement demand.",
                 "fuel": "Diesel",
                 "size": "1.5 Litre",
@@ -846,8 +851,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "ZTDA - 1.",
-                "title": "5L EcoBlue Diesel",
+                "code": "ZTDA",
+                "title": "1.5L EcoBlue Diesel",
+                "familyHeading": "EcoBlue/TDCi Updated Family (2011-Present)",
                 "history": "Latest EcoBlue diesel for Mk4 Focus; cleaner emissions but early EGR/DPF issues created replacement enquiries.",
                 "fuel": "Diesel",
                 "size": "1.5 Litre",
@@ -871,8 +877,9 @@
             "name": "Petrol Engines",
             "entries": [
               {
-                "code": "HWDA - 1.",
-                "title": "6L Petrol",
+                "code": "HWDA",
+                "title": "1.6L Petrol",
+                "familyHeading": "Duratec Ti-VCT Family (2004-2011)",
                 "history": "Naturally aspirated 1.6 Ti-VCT for Mk2 Focus; simple design but oil sludge buildup on neglected units caused failures.",
                 "fuel": "Petrol",
                 "size": "1.6 Litre",
@@ -891,8 +898,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "M1DA - 1.",
-                "title": "0L EcoBoost Petrol",
+                "code": "M1DA",
+                "title": "1.0L EcoBoost Petrol",
+                "familyHeading": "EcoBoost Family (2012-Present)",
                 "history": "Award-winning 125hp EcoBoost for Mk3/Mk4; wet belt degradation crisis created massive UK replacement demand post-2018.",
                 "fuel": "Petrol",
                 "size": "1.0 Litre",
@@ -911,8 +919,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "M2DA - 1.",
-                "title": "0L EcoBoost Petrol",
+                "code": "M2DA",
+                "title": "1.0L EcoBoost Petrol",
+                "familyHeading": "EcoBoost Family (2012-Present)",
                 "history": "Lower-output 100hp EcoBoost variant; shares wet belt design with M1DA, same failure profile drives replacement searches.",
                 "fuel": "Petrol",
                 "size": "1.0 Litre",
@@ -931,8 +940,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "M8DA - 1.",
-                "title": "5L EcoBoost Petrol",
+                "code": "M8DA",
+                "title": "1.5L EcoBoost Petrol",
+                "familyHeading": "EcoBoost Family (2012-Present)",
                 "history": "Higher-output EcoBoost for Mk4 Focus; timing chain design avoids wet belt issues but turbo failures still drive enquiries.",
                 "fuel": "Petrol",
                 "size": "1.5 Litre",
@@ -951,8 +961,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "R9DA - 2.",
-                "title": "0L EcoBoost Petrol",
+                "code": "R9DA",
+                "title": "2.0L EcoBoost Petrol",
+                "familyHeading": "Performance Petrol Engines",
                 "history": "High-output ST engine for Mk4 Focus; robust design but high-mileage track use increases turbo and bearing failure risk.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -971,8 +982,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "B5254T - 2.",
-                "title": "5L Turbo Petrol",
+                "code": "B5254T",
+                "title": "2.5L Turbo Petrol",
+                "familyHeading": "Performance Petrol Engines",
                 "history": "Volvo-derived five-cylinder for Focus ST225/RS; distinctive sound but turbo and head gasket failures at high mileage.",
                 "fuel": "Petrol",
                 "size": "2.5 Litre",
@@ -996,8 +1008,9 @@
             "name": "Hybrid / Electrified Engines",
             "entries": [
               {
-                "code": "M1DA-MHEV - 1.",
-                "title": "0L EcoBoost Mild Hybrid",
+                "code": "M1DA-MHEV",
+                "title": "1.0L EcoBoost Mild Hybrid",
+                "familyHeading": "Mild Hybrid EcoBoost (2020-Present)",
                 "history": "48V MHEV added to EcoBoost for Mk4; timing chain replaces wet belt, improving reliability but raising replacement cost.",
                 "fuel": "MHEV Petrol",
                 "size": "1.0 Litre",
@@ -1049,7 +1062,9 @@
           "failureNote": "Main replacement triggers are timing chain wear, EGR / cooling faults and turbo-control issues.",
           "engines": [
             {
-              "code": "G8DA - 1.",
+              "code": "G8DA",
+              "title": "1.6L Diesel",
+              "familyHeading": "Duratorq TDCi Family (2004-2012)",
               "fuel": "Diesel",
               "size": "1.6L",
               "power": "90-110 hp",
@@ -1059,7 +1074,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "G6DA - 2.",
+              "code": "G6DA",
+              "title": "2.0L Diesel",
+              "familyHeading": "Duratorq TDCi Family (2004-2012)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "136-163 hp",
@@ -1069,7 +1086,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "FFDA - 1.",
+              "code": "FFDA",
+              "title": "1.8L Diesel",
+              "familyHeading": "Duratorq TDCi Family (2004-2012)",
               "fuel": "Diesel",
               "size": "1.8L",
               "power": "115 hp",
@@ -1079,7 +1098,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "T1DB - 1.",
+              "code": "T1DB",
+              "title": "1.6L Diesel",
+              "familyHeading": "EcoBlue/TDCi Updated Family (2011-Present)",
               "fuel": "Diesel",
               "size": "1.6L",
               "power": "95-115 hp",
@@ -1089,7 +1110,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "XWDA - 1.",
+              "code": "XWDA",
+              "title": "1.5L Diesel",
+              "familyHeading": "EcoBlue/TDCi Updated Family (2011-Present)",
               "fuel": "Diesel",
               "size": "1.5L",
               "power": "95-120 hp",
@@ -1099,7 +1122,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "ZTDA - 1.",
+              "code": "ZTDA",
+              "title": "1.5L EcoBlue Diesel",
+              "familyHeading": "EcoBlue/TDCi Updated Family (2011-Present)",
               "fuel": "Diesel",
               "size": "1.5L",
               "power": "95-120 hp",
@@ -1116,7 +1141,9 @@
           "failureNote": "Main replacement demand comes from timing-chain, cooling-system and performance thermal-management faults.",
           "engines": [
             {
-              "code": "HWDA - 1.",
+              "code": "HWDA",
+              "title": "1.6L Petrol",
+              "familyHeading": "Duratec Ti-VCT Family (2004-2011)",
               "fuel": "Petrol",
               "size": "1.6L",
               "power": "100-125 hp",
@@ -1126,7 +1153,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "M1DA - 1.",
+              "code": "M1DA",
+              "title": "1.0L EcoBoost Petrol",
+              "familyHeading": "EcoBoost Family (2012-Present)",
               "fuel": "Petrol",
               "size": "1.0L",
               "power": "125 hp",
@@ -1136,7 +1165,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "M2DA - 1.",
+              "code": "M2DA",
+              "title": "1.0L EcoBoost Petrol",
+              "familyHeading": "EcoBoost Family (2012-Present)",
               "fuel": "Petrol",
               "size": "1.0L",
               "power": "100 hp",
@@ -1146,7 +1177,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "M8DA - 1.",
+              "code": "M8DA",
+              "title": "1.5L EcoBoost Petrol",
+              "familyHeading": "EcoBoost Family (2012-Present)",
               "fuel": "Petrol",
               "size": "1.5L",
               "power": "150-182 hp",
@@ -1156,7 +1189,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "R9DA - 2.",
+              "code": "R9DA",
+              "title": "2.0L EcoBoost Petrol",
+              "familyHeading": "Performance Petrol Engines",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "280 hp",
@@ -1166,7 +1201,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "B5254T - 2.",
+              "code": "B5254T",
+              "title": "2.5L Turbo Petrol",
+              "familyHeading": "Performance Petrol Engines",
               "fuel": "Petrol",
               "size": "2.5L",
               "power": "225-350 hp",
@@ -1183,7 +1220,9 @@
           "failureNote": "Main replacement demand comes from cooling, battery-support and high-voltage control faults.",
           "engines": [
             {
-              "code": "M1DA-MHEV - 1.",
+              "code": "M1DA-MHEV",
+              "title": "1.0L EcoBoost Mild Hybrid",
+              "familyHeading": "Mild Hybrid EcoBoost (2020-Present)",
               "fuel": "MHEV Petrol",
               "size": "1.0L",
               "power": "125-155 hp (combined)",
@@ -1696,6 +1735,11 @@
           "title": "Ford Focus Diesel Engines",
           "description": "The diesel powertrain dominated high-mileage UK fleet sales across Mk2 and Mk3 generations, making it a primary focus for affordable replacement and DPF/EGR servicing enquiries.",
           "descriptor": "The diesel powertrain dominated high-mileage UK fleet sales across Mk2 and Mk3 generations, making it a primary focus for affordable replacement and DPF/EGR servicing enquiries.",
+          "familiesLabel": "Common Ford Focus Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "G8DA - 1.6L Duratorq TDCi (Mk2/Mk3), highly popular but prone to EGR clogging",
             "G6DA - 2.0L Duratorq TDCi (Mk2/Mk3), robust torque for heavy trims but timing chain wear",
@@ -1727,6 +1771,11 @@
           "title": "Ford Focus Petrol Engines",
           "description": "Petrol variants range from simple naturally aspirated units to complex turbocharged EcoBoost families, with the 1.0L wet belt crisis driving urgent nationwide replacement demand.",
           "descriptor": "Petrol variants range from simple naturally aspirated units to complex turbocharged EcoBoost families, with the 1.0L wet belt crisis driving urgent nationwide replacement demand.",
+          "familiesLabel": "Common Ford Focus Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "M1DA - 1.0L EcoBoost (125hp), award-winning efficiency but infamous wet belt degradation",
             "HWDA - 1.6L Ti-VCT (100hp), simple naturally aspirated design with proven reliability",
@@ -1758,6 +1807,11 @@
           "title": "Ford Focus Mild Hybrid (MHEV) Engines",
           "description": "The 48-volt mild hybrid system debuts in the Mk4 generation, pairing a familiar EcoBoost core with electric assistance to eliminate wet belt failures while improving efficiency.",
           "descriptor": "The 48-volt mild hybrid system debuts in the Mk4 generation, pairing a familiar EcoBoost core with electric assistance to eliminate wet belt failures while improving efficiency.",
+          "familiesLabel": "Ford Focus MHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "M1DA-MHEV - 1.0L EcoBoost 48V, replaces degraded wet belt with traditional chain drive",
             "ZTDA-MHEV - 1.5L EcoBlue hybrid diesel, integrated starter-generator for stop-start smoothness",

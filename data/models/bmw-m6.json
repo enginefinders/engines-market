@@ -15,13 +15,13 @@
     "canonical": "/bmw/m6"
   },
   "assets": {
-    "heroBg": "/images/brands/bmw/models/bmw-bmw-m6-model-card.png",
+    "heroBg": "/images/brands/bmw/models/bmw-m6-model-card.png",
     "howItWorksBg": "/images/brands/bmw/brand/bmw-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/bmw/brand/bmw-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/bmw/brand/bmw-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/bmw/brand/bmw-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/bmw/brand/bmw-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/bmw/models/bmw-bmw-m6-model-card.png"
+    "ctaImage": "/images/brands/bmw/models/bmw-m6-model-card.png"
   },
   "sections": {
     "hero": {
@@ -771,6 +771,7 @@
               {
                 "code": "M88/3",
                 "title": "3.5L Petrol",
+                "familyHeading": "M88/3 Series - M635CSi (1983-1989)",
                 "history": "The legendary M88/3 powered the original M635CSi, hand-built by BMW M with individual throttle bodies and a 286hp output - a milestone in pre-VANOS M-engine engineering.",
                 "fuel": "Petrol",
                 "size": "3.5 Litre",
@@ -790,6 +791,7 @@
               {
                 "code": "S85B50",
                 "title": "5.0L Petrol",
+                "familyHeading": "S85 Series - V10 (E63/E64 Generation, 2005-2010)",
                 "history": "The S85 is BMW’s only production V10, a naturally aspirated 5.0-litre masterpiece with individual throttle bodies and a stratospheric 8,250rpm redline - thrilling but famously maintenance-intensive.",
                 "fuel": "Petrol",
                 "size": "5.0 Litre",
@@ -810,6 +812,7 @@
               {
                 "code": "S85B50B",
                 "title": "5.0L Petrol (Facelift)",
+                "familyHeading": "S85 Series - V10 (E63/E64 Generation, 2005-2010)",
                 "history": "The revised S85B50B appeared in the 2008 E63/E64 facelift, incorporating minor refinements while retaining the 507hp output and the V10’s naturally aspirated character.",
                 "fuel": "Petrol",
                 "size": "5.0 Litre",
@@ -829,6 +832,7 @@
               {
                 "code": "S63B44A",
                 "title": "4.4L Petrol",
+                "familyHeading": "S63 Series - Twin-Turbo V8 (F06/F12/F13 Generation, 2012-2018)",
                 "history": "The S63B44A debuted in the F10 M5 and F12/F13 M6, bringing twin-scroll turbochargers and a cross-bank exhaust manifold to BMW’s high-performance V8 range, producing 560hp.",
                 "fuel": "Petrol",
                 "size": "4.4 Litre",
@@ -849,6 +853,7 @@
               {
                 "code": "S63B44B",
                 "title": "4.4L Petrol (LCI)",
+                "familyHeading": "S63 Series - Twin-Turbo V8 (F06/F12/F13 Generation, 2012-2018)",
                 "history": "The S63B44B arrived with the 2015 LCI update, maintaining the 560hp output but incorporating Valvetronic technology and numerous durability improvements that addressed many S63 early-reliability concerns.",
                 "fuel": "Petrol",
                 "size": "4.4 Litre",
@@ -869,18 +874,36 @@
               {
                 "code": "S63B44C",
                 "title": "4.4L Petrol (Competition Package)",
+                "familyHeading": "S63 Series - Twin-Turbo V8 (F06/F12/F13 Generation, 2012-2018)",
+                "history": "The S63B44C powered the 2014-2015 M6 Competition Package, lifting power to 575hp through revised engine mapping and improved cooling while retaining the S63’s twin-turbo architecture.",
+                "fuel": "Petrol",
+                "size": "4.4 Litre",
+                "power": "575 hp",
+                "years": "2014-2015",
+                "compatibleVariants": [
+                  "M6 Coupe Competition, M6 Gran Coupe Competition (early Competition)"
+                ],
+                "commonFailures": [
+                  "Turbocharger failure (typical of early S63 engines)",
+                  "Ignition coil failures"
+                ],
+                "avgRebuiltPrice": "£6,000 - £11,500",
+                "cta": "Get quotes for S63B44C BMW M6 engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              },
+              {
+                "code": "S63T2 (S63B44T2)",
+                "title": "4.4L Petrol (Competition Package LCI)",
+                "familyHeading": "S63 Series - Twin-Turbo V8 (F06/F12/F13 Generation, 2012-2018)",
                 "history": "The S63T2 represented the final evolution of the S63 in the M6, producing 600hp and incorporating Valvetronic, revised turbos, and improved thermal management for the 2015-2018 Competition Package models.",
                 "fuel": "Petrol",
                 "size": "4.4 Litre",
                 "power": "600 hp",
                 "years": "2015-2018",
                 "compatibleVariants": [
-                  "M6 Coupe Competition, M6 Gran Coupe Competition (early Competition)",
                   "M6 Coupe Competition Package (2015-2018), M6 Gran Coupe Competition Package, M6 Convertible Competition Package"
                 ],
                 "commonFailures": [
-                  "Turbocharger failure (typical of early S63 engines)",
-                  "Ignition coil failures",
                   "Oil consumption (reduced frequency compared to earlier S63 iterations, but documented)",
                   "Turbocharger wear (less common due to revisions, but high-mileage units can still exhibit failures)",
                   "Cooling system maintenance required due to high thermal load"
@@ -922,6 +945,8 @@
           "engines": [
             {
               "code": "M88/3",
+              "title": "3.5L Petrol",
+              "familyHeading": "M88/3 Series - M635CSi (1983-1989)",
               "fuel": "Petrol",
               "size": "3.5L",
               "power": "286 hp",
@@ -932,6 +957,8 @@
             },
             {
               "code": "S85B50",
+              "title": "5.0L Petrol",
+              "familyHeading": "S85 Series - V10 (E63/E64 Generation, 2005-2010)",
               "fuel": "Petrol",
               "size": "5.0L",
               "power": "507 hp",
@@ -942,6 +969,8 @@
             },
             {
               "code": "S85B50B",
+              "title": "5.0L Petrol (Facelift)",
+              "familyHeading": "S85 Series - V10 (E63/E64 Generation, 2005-2010)",
               "fuel": "Petrol",
               "size": "5.0L",
               "power": "507 hp",
@@ -952,6 +981,8 @@
             },
             {
               "code": "S63B44A",
+              "title": "4.4L Petrol",
+              "familyHeading": "S63 Series - Twin-Turbo V8 (F06/F12/F13 Generation, 2012-2018)",
               "fuel": "Petrol",
               "size": "4.4L",
               "power": "560 hp",
@@ -962,6 +993,8 @@
             },
             {
               "code": "S63B44B",
+              "title": "4.4L Petrol (LCI)",
+              "familyHeading": "S63 Series - Twin-Turbo V8 (F06/F12/F13 Generation, 2012-2018)",
               "fuel": "Petrol",
               "size": "4.4L",
               "power": "560 hp",
@@ -972,10 +1005,24 @@
             },
             {
               "code": "S63B44C",
+              "title": "4.4L Petrol (Competition Package)",
+              "familyHeading": "S63 Series - Twin-Turbo V8 (F06/F12/F13 Generation, 2012-2018)",
+              "fuel": "Petrol",
+              "size": "4.4L",
+              "power": "575 hp",
+              "compatibleModels": "M6 Coupe Competition, M6 Gran Coupe Competition (early Competition)",
+              "avgRebuiltPrice": "£6,000 - £11,500",
+              "cta": "Get quotes for S63B44C BMW M6 engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            },
+            {
+              "code": "S63T2 (S63B44T2)",
+              "title": "4.4L Petrol (Competition Package LCI)",
+              "familyHeading": "S63 Series - Twin-Turbo V8 (F06/F12/F13 Generation, 2012-2018)",
               "fuel": "Petrol",
               "size": "4.4L",
               "power": "600 hp",
-              "compatibleModels": "M6 Coupe Competition, M6 Gran Coupe Competition (early Competition), M6 Coupe Competition Package (2015-2018), M6 Gran Coupe Competition Package, M6 Convertible Competition Package",
+              "compatibleModels": "M6 Coupe Competition Package (2015-2018), M6 Gran Coupe Competition Package, M6 Convertible Competition Package",
               "avgRebuiltPrice": "£6,500 - £12,500",
               "cta": "Get quotes for S63T2 BMW M6 engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1407,6 +1454,11 @@
           "title": "BMW M6 Petrol Engines",
           "description": "The BMW M6 has been powered exclusively by high-performance petrol engines across three generations - from the legendary M88/3 straight-six to the S85 V10 and the twin-turbo S63 V8 that dominates replacement enquiries today.",
           "descriptor": "The BMW M6 has been powered exclusively by high-performance petrol engines across three generations - from the legendary M88/3 straight-six to the S85 V10 and the twin-turbo S63 V8 that dominates replacement enquiries today.",
+          "familiesLabel": "Common BMW M6 Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "M88/3 - original M635CSi straight-six, hand-built with individual throttles",
             "S85B50 - the only production V10 ever fitted to a BMW M car (507hp)",

@@ -1,8 +1,9 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useMemo, useState } from "react";
-import { getModelRouteSlug } from "@/lib/modelRoutes";
+import { getModelHref } from "@/lib/modelRoutes";
 import type { ModelsSectionData } from "@/types/brand";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
@@ -60,7 +61,7 @@ export default function ModelsSection({ data, brandSlug }: Props) {
   const visibleCards = useMemo(() => data.cards.slice(0, 5), [data.cards]);
 
   return (
-    <Section className="relative overflow-hidden bg-white">
+    <Section id="brand-models" className="relative overflow-hidden bg-white">
       <div className="pointer-events-none absolute inset-x-0 top-0 hidden lg:block">
         <div
           className="absolute right-0 top-0 h-[230px] w-[260px] opacity-[0.1]"
@@ -98,7 +99,7 @@ export default function ModelsSection({ data, brandSlug }: Props) {
         <div className="mt-7 grid gap-3 sm:grid-cols-2 xl:grid-cols-5">
           {visibleCards.map((model) => {
             const isOpen = openCard === model.slug;
-            const modelRouteSlug = getModelRouteSlug(model);
+            const modelHref = getModelHref(brandSlug, model);
 
             return (
               <article
@@ -143,15 +144,15 @@ export default function ModelsSection({ data, brandSlug }: Props) {
 
                     <p className="mt-3 text-[11px] leading-[1.55] text-slate-500">{model.subtitle}</p>
 
-                    <a
-                      href={`/${brandSlug}/${modelRouteSlug}`}
+                    <Link
+                      href={modelHref}
                       className="mt-3 inline-flex items-center gap-1.5 text-[11px] font-bold text-[#0d1b2e] transition hover:gap-2"
                     >
                       <span>{model.cta.replace(/\s*-+>\s*$/, "")}</span>
                       <span className="text-[#15803d]">
                         <ArrowIcon />
                       </span>
-                    </a>
+                    </Link>
                   </div>
                 ) : null}
               </article>

@@ -15,13 +15,13 @@
     "canonical": "/mercedes-benz/vaneo"
   },
   "assets": {
-    "heroBg": "/images/brands/mercedes-benz/models/mercedes-benz-mercedes-benz-vaneo-model-card.png",
+    "heroBg": "/images/brands/mercedes-benz/models/mercedes-benz-vaneo-model-card.png",
     "howItWorksBg": "/images/brands/mercedes-benz/brand/mercedes-benz-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/mercedes-benz/models/mercedes-benz-mercedes-benz-vaneo-model-card.png"
+    "ctaImage": "/images/brands/mercedes-benz/models/mercedes-benz-vaneo-model-card.png"
   },
   "sections": {
     "hero": {
@@ -753,6 +753,7 @@
               {
                 "code": "OM668 DE1.6 LA",
                 "title": "1.7L Diesel",
+                "familyHeading": "OM668 CDI Series (2001-2005)",
                 "history": "Compact W414 diesel with common-rail tech. Economical but prone to EGR clogging and injector wear at higher mileage.",
                 "fuel": "Diesel",
                 "size": "1.7 Litre",
@@ -778,6 +779,7 @@
               {
                 "code": "M166 E1.6",
                 "title": "1.6L Petrol",
+                "familyHeading": "M166 E-Series (2001-2005)",
                 "history": "Entry-level aluminium petrol for Vaneo. Economical, though timing tensioner wear and oil sludge drive replacement demand.",
                 "fuel": "Petrol",
                 "size": "1.6 Litre",
@@ -798,6 +800,7 @@
               {
                 "code": "M166 E1.9",
                 "title": "1.9L Petrol",
+                "familyHeading": "M166 E-Series (2001-2005)",
                 "history": "Top-spec petrol for MPV use. Shares aluminium architecture, where missed oil changes accelerate internal sludge formation.",
                 "fuel": "Petrol",
                 "size": "1.9 Litre",
@@ -849,6 +852,8 @@
           "engines": [
             {
               "code": "OM668 DE1.6 LA",
+              "title": "1.7L Diesel",
+              "familyHeading": "OM668 CDI Series (2001-2005)",
               "fuel": "Diesel",
               "size": "1.7L",
               "power": "75-90 hp",
@@ -866,6 +871,8 @@
           "engines": [
             {
               "code": "M166 E1.6",
+              "title": "1.6L Petrol",
+              "familyHeading": "M166 E-Series (2001-2005)",
               "fuel": "Petrol",
               "size": "1.6L",
               "power": "102 hp",
@@ -876,6 +883,8 @@
             },
             {
               "code": "M166 E1.9",
+              "title": "1.9L Petrol",
+              "familyHeading": "M166 E-Series (2001-2005)",
               "fuel": "Petrol",
               "size": "1.9L",
               "power": "125 hp",
@@ -1227,6 +1236,11 @@
           "title": "Mercedes Benz Vaneo Diesel Engines",
           "description": "The sole diesel option throughout the Vaneo's 2001-2005 UK production, the 1.7-litre OM668 CDI delivers strong low-end torque for commercial and family MPV duties while maintaining competitive fuel economy.",
           "descriptor": "The sole diesel option throughout the Vaneo's 2001-2005 UK production, the 1.7-litre OM668 CDI delivers strong low-end torque for commercial and family MPV duties while maintaining competitive fuel economy.",
+          "familiesLabel": "Common Mercedes Benz Vaneo Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "OM668 DE1.6 LA - 1.7L CDI powering all Vaneo diesel variants, EGR valve clogging is the dominant failure pattern",
             "OM668 75hp/90hp tunes - output variations for Trend/Ambiente vs commercial high-mileage applications"
@@ -1254,6 +1268,11 @@
           "title": "Mercedes Benz Vaneo Petrol Engines",
           "description": "Two aluminium-block petrol units served the Vaneo range - the entry-level 1.6L and higher-output 1.9L - both sharing transverse architecture with the W168 A-Class and prioritising smooth urban running.",
           "descriptor": "Two aluminium-block petrol units served the Vaneo range - the entry-level 1.6L and higher-output 1.9L - both sharing transverse architecture with the W168 A-Class and prioritising smooth urban running.",
+          "familiesLabel": "Common Mercedes Benz Vaneo Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "M166 E1.6 - 1.6L 102hp unit for Trend/Ambiente/Family trims, plastic tensioner wear drives replacement enquiries",
             "M166 E1.9 - 1.9L 125hp unit for Avantgarde/spec variants, oil sludge buildup is the primary failure concern"

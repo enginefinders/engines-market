@@ -15,13 +15,13 @@
     "canonical": "/ford/orion"
   },
   "assets": {
-    "heroBg": "/images/brands/ford/models/ford-ford-orion-model-card.png",
+    "heroBg": "/images/brands/ford/models/ford-orion-model-card.png",
     "howItWorksBg": "/images/brands/ford/brand/ford-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/ford/brand/ford-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/ford/brand/ford-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/ford/brand/ford-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/ford/brand/ford-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/ford/models/ford-ford-orion-model-card.png"
+    "ctaImage": "/images/brands/ford/models/ford-orion-model-card.png"
   },
   "sections": {
     "hero": {
@@ -691,8 +691,9 @@
             "name": "Diesel Engines",
             "entries": [
               {
-                "code": "LTA - 1.",
-                "title": "6L Diesel",
+                "code": "LTA",
+                "title": "1.6L Diesel",
+                "familyHeading": "Endura-D Family (1984-1993)",
                 "history": "Endura-D 1.6 diesel for L/GL. Robust but injector pump wear at high mileage.",
                 "fuel": "Diesel",
                 "size": "1.6 Litre",
@@ -711,8 +712,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "LTB - 1.",
-                "title": "6L Diesel",
+                "code": "LTB",
+                "title": "1.6L Diesel",
+                "familyHeading": "Endura-D Family (1984-1993)",
                 "history": "Endura-D 1.6 updated injection. Same reliability; sought by diesel Orion restorers.",
                 "fuel": "Diesel",
                 "size": "1.6 Litre",
@@ -730,8 +732,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "LT - 1.",
-                "title": "8L Diesel",
+                "code": "LT",
+                "title": "1.8L Diesel",
+                "familyHeading": "Endura-D Family (1984-1993)",
                 "history": "Endura-D 1.8 added torque for Mark III. Rare; injector and turbo seal failures common.",
                 "fuel": "Diesel",
                 "size": "1.8 Litre",
@@ -755,8 +758,9 @@
             "name": "Petrol Engines",
             "entries": [
               {
-                "code": "J6C - 1.",
-                "title": "3L Petrol",
+                "code": "J6C",
+                "title": "1.3L Petrol",
+                "familyHeading": "CVH Family (1983-1993)",
                 "history": "Early CVH 1.3 for base Mark I/II. Simple but head gasket prone if overheated.",
                 "fuel": "Petrol",
                 "size": "1.3 Litre",
@@ -775,8 +779,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "L6 - 1.",
-                "title": "6L Petrol",
+                "code": "L6",
+                "title": "1.6L Petrol",
+                "familyHeading": "CVH Family (1983-1993)",
                 "history": "CVH 1.6 powered most Orions. Carb/injection; reliable but head gasket prone if overheated.",
                 "fuel": "Petrol",
                 "size": "1.6 Litre",
@@ -795,8 +800,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "CVH - 1.",
-                "title": "4L Petrol",
+                "code": "CVH",
+                "title": "1.4L Petrol",
+                "familyHeading": "CVH Family (1983-1993)",
                 "history": "1.4 CVH for Mark III. Smoother than 1.3 OHV but cooling leaks and gasket issues common.",
                 "fuel": "Petrol",
                 "size": "1.4 Litre",
@@ -815,8 +821,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "HCS - 1.",
-                "title": "3L Petrol",
+                "code": "HCS",
+                "title": "1.3L Petrol",
+                "familyHeading": "OHV Valencia/HCS Family (1986-1993)",
                 "history": "OHV Valencia updated to HCS. Basic, torquey; valve noise and oil leaks common with age.",
                 "fuel": "Petrol",
                 "size": "1.3 Litre",
@@ -835,8 +842,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "RDA - 1.",
-                "title": "8L Petrol",
+                "code": "RDA",
+                "title": "1.8L Petrol",
+                "familyHeading": "Zetec Family (1992-1993)",
                 "history": "Zetec 1.8 brought DOHC performance to Mark III. 105-130bhp; timing belt critical.",
                 "fuel": "Petrol",
                 "size": "1.8 Litre",
@@ -887,7 +895,9 @@
           "failureNote": "Main replacement triggers are timing chain wear, EGR / cooling faults and turbo-control issues.",
           "engines": [
             {
-              "code": "LTA - 1.",
+              "code": "LTA",
+              "title": "1.6L Diesel",
+              "familyHeading": "Endura-D Family (1984-1993)",
               "fuel": "Diesel",
               "size": "1.6L",
               "power": "54 hp",
@@ -897,7 +907,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "LTB - 1.",
+              "code": "LTB",
+              "title": "1.6L Diesel",
+              "familyHeading": "Endura-D Family (1984-1993)",
               "fuel": "Diesel",
               "size": "1.6L",
               "power": "54 hp",
@@ -907,7 +919,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "LT - 1.",
+              "code": "LT",
+              "title": "1.8L Diesel",
+              "familyHeading": "Endura-D Family (1984-1993)",
               "fuel": "Diesel",
               "size": "1.8L",
               "power": "60 hp",
@@ -924,7 +938,9 @@
           "failureNote": "Main replacement demand comes from timing-chain, cooling-system and performance thermal-management faults.",
           "engines": [
             {
-              "code": "J6C - 1.",
+              "code": "J6C",
+              "title": "1.3L Petrol",
+              "familyHeading": "CVH Family (1983-1993)",
               "fuel": "Petrol",
               "size": "1.3L",
               "power": "70 hp",
@@ -934,7 +950,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "L6 - 1.",
+              "code": "L6",
+              "title": "1.6L Petrol",
+              "familyHeading": "CVH Family (1983-1993)",
               "fuel": "Petrol",
               "size": "1.6L",
               "power": "75-90 hp",
@@ -944,7 +962,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "CVH - 1.",
+              "code": "CVH",
+              "title": "1.4L Petrol",
+              "familyHeading": "CVH Family (1983-1993)",
               "fuel": "Petrol",
               "size": "1.4L",
               "power": "75 hp",
@@ -954,7 +974,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "HCS - 1.",
+              "code": "HCS",
+              "title": "1.3L Petrol",
+              "familyHeading": "OHV Valencia/HCS Family (1986-1993)",
               "fuel": "Petrol",
               "size": "1.3L",
               "power": "60-65 hp",
@@ -964,7 +986,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "RDA - 1.",
+              "code": "RDA",
+              "title": "1.8L Petrol",
+              "familyHeading": "Zetec Family (1992-1993)",
               "fuel": "Petrol",
               "size": "1.8L",
               "power": "105-130 hp",
@@ -1375,6 +1399,11 @@
           "title": "Ford Orion Diesel Engines",
           "description": "The Endura-D diesel family powered select L, GL and LX trims across Mark I-III Orion models, offering economical motoring but now commanding specialist replacement interest due to rarity.",
           "descriptor": "The Endura-D diesel family powered select L, GL and LX trims across Mark I-III Orion models, offering economical motoring but now commanding specialist replacement interest due to rarity.",
+          "familiesLabel": "Common Ford Orion Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "LTA/LTB - 1.6L Endura-D for early L/GL, rotary pump design prone to injector wear at high mileage",
             "LT - 1.8L Endura-D Mark III introduction, improved torque but turbo seal failures documented"
@@ -1402,6 +1431,11 @@
           "title": "Ford Orion Petrol Engines",
           "description": "Petrol power dominated the Orion range with CVH, OHV Valencia and Zetec families covering entry-level to performance Ghia Si variants across all three generations.",
           "descriptor": "Petrol power dominated the Orion range with CVH, OHV Valencia and Zetec families covering entry-level to performance Ghia Si variants across all three generations.",
+          "familiesLabel": "Common Ford Orion Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "CVH (J6C/L6) - 1.3L/1.6L dominant across Mark I-III, head gasket and Weber carburettor issues common",
             "HCS - 1.3L OHV Valencia for base L/GL models, valve guide wear and oil consumption at high mileage",

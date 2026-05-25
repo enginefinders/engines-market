@@ -15,13 +15,13 @@
     "canonical": "/jaguar/f-pace"
   },
   "assets": {
-    "heroBg": "/images/brands/jaguar/models/jaguar-jaguar-f-pace-model-card.png",
+    "heroBg": "/images/brands/jaguar/models/jaguar-f-pace-model-card.png",
     "howItWorksBg": "/images/brands/jaguar/brand/jaguar-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/jaguar/brand/jaguar-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/jaguar/brand/jaguar-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/jaguar/brand/jaguar-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/jaguar/brand/jaguar-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/jaguar/models/jaguar-jaguar-f-pace-model-card.png"
+    "ctaImage": "/images/brands/jaguar/models/jaguar-f-pace-model-card.png"
   },
   "sections": {
     "hero": {
@@ -719,8 +719,30 @@
             "name": "Diesel Engines",
             "entries": [
               {
+                "code": "204DTD",
+                "title": "2.0 Litre Diesel",
+                "familyHeading": "Ingenium 2.0 Litre Diesel Family (2016-2024)",
+                "history": "F-Pace debut Ingenium diesel replacing Ford units. Aluminium block introduced widespread chain tensioner wear.",
+                "fuel": "Diesel",
+                "size": "2.0 Litre",
+                "power": "163-180 hp",
+                "years": "2016-2024",
+                "compatibleVariants": [
+                  "D165, D165 First Edition, D165 Prestige, D165 R-Sport, D180, D180 Prestige, D180 R-Sport, D180 S, D180 Chequered Flag"
+                ],
+                "commonFailures": [
+                  "Timing chain tensioner plastic failure (typically 60,000-80,000 miles)",
+                  "EGR cooler matrix clogging and coolant leaks",
+                  "DPF regeneration faults causing oil dilution"
+                ],
+                "avgRebuiltPrice": "£1,800 - £3,400",
+                "cta": "Get quotes for 204DTD Jaguar F-Pace engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+              },
+              {
                 "code": "AJ20D4",
                 "title": "2.0 Litre Diesel",
+                "familyHeading": "Ingenium 2.0 Litre Diesel Family (2016-2024)",
                 "history": "Upgraded 2.0 twin-turbo diesel for higher torque outputs. Popular in D240 trims but prone to crank bolt faults.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -737,6 +759,27 @@
                 "avgRebuiltPrice": "£2,100 - £4,000",
                 "cta": "Get quotes for AJ20D4 Jaguar F-Pace engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+              },
+              {
+                "code": "306DT",
+                "title": "3.0 Litre Diesel",
+                "familyHeading": "Ingenium 3.0 Litre Inline-Six Diesel (2019-2024)",
+                "history": "Inline-six diesel exclusive to modern Jaguar SUVs. Smooth power delivery offset by complex EGR maintenance needs.",
+                "fuel": "Diesel",
+                "size": "3.0 Litre",
+                "power": "300 hp",
+                "years": "2019-2024",
+                "compatibleVariants": [
+                  "D300, D300 R-Dynamic S, D300 R-Dynamic SE, D300 HSE, D300 First Edition, D300 Checkered Flag"
+                ],
+                "commonFailures": [
+                  "Twin-turbo wastegate rattle and sticking mechanism",
+                  "Injector copper washer seal failure causing compression loss",
+                  "EGR valve carbon build-up triggering limp mode"
+                ],
+                "avgRebuiltPrice": "£2,600 - £4,600",
+                "cta": "Get quotes for 306DT Jaguar F-Pace engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               }
             ]
           },
@@ -744,8 +787,30 @@
             "name": "Petrol Engines",
             "entries": [
               {
+                "code": "204PT",
+                "title": "2.0 Litre Petrol",
+                "familyHeading": "Ingenium 2.0 Litre Petrol Family (2016-2024)",
+                "history": "F-Pace debut Ingenium petrol. Aluminium construction improved efficiency, though early coolant pump seals proved fragile.",
+                "fuel": "Petrol",
+                "size": "2.0 Litre",
+                "power": "250 hp",
+                "years": "2016-2020",
+                "compatibleVariants": [
+                  "P250, P250 Prestige, P250 R-Sport, P250 S, P250 HSE"
+                ],
+                "commonFailures": [
+                  "Water pump impeller and seal degradation causing overheating",
+                  "Camshaft phaser rattle on cold startup",
+                  "Timing chain guide wear due to early oil formulation issues"
+                ],
+                "avgRebuiltPrice": "£2,200 - £3,900",
+                "cta": "Get quotes for 204PT Jaguar F-Pace engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              },
+              {
                 "code": "PT204",
                 "title": "2.0 Litre Petrol",
+                "familyHeading": "Ingenium 2.0 Litre Petrol Family (2016-2024)",
                 "history": "Revised 2.0 turbo petrol with direct injection. Powers mainstream P250 models, known for HPFP sensitivity and turbo lag.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -766,6 +831,7 @@
               {
                 "code": "AJ126",
                 "title": "3.0 Litre Petrol",
+                "familyHeading": "3.0 Litre Supercharged V6 Petrol (2016-2020)",
                 "history": "Supercharged V6 adapted by Jaguar for P380 trims. Strong mid-range torque offset by frequent supercharger coupler failures.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -786,6 +852,7 @@
               {
                 "code": "AJ133",
                 "title": "5.0 Litre Petrol",
+                "familyHeading": "5.0 Litre Supercharged V8 Petrol (2018-2024)",
                 "history": "5.0 supercharged V8 powering SVR flagships. Extreme output strains oil systems, making specialist rebuilds essential.",
                 "fuel": "Petrol",
                 "size": "5.0 Litre",
@@ -806,6 +873,7 @@
               {
                 "code": "AJ300P",
                 "title": "3.0 Litre Petrol",
+                "familyHeading": "3.0 Litre Mild-Hybrid Inline-Six Petrol (2020-2024)",
                 "history": "Mild-hybrid I6 replacing older V6 units. Improved efficiency, though complex 48V starter-generator integration faults occur.",
                 "fuel": "MHEV Petrol",
                 "size": "3.0 Litre",
@@ -815,22 +883,10 @@
                   "P400, P400 R-Dynamic S, P400 R-Dynamic SE, P400 HSE, P400 First Edition"
                 ],
                 "commonFailures": [
-                  "Belt-integrated starter generator (BISG) clutch slippage"
+                  "Belt-integrated starter generator (BISG) clutch slippage",
+                  "Mild-hybrid 48V battery cooling pump failure",
+                  "Turbo wastegate actuator calibration drift"
                 ],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "Mild",
-                "title": "hybrid 48V battery cooling pump failure",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
                 "avgRebuiltPrice": "£3,800 - £6,200",
                 "cta": "Get quotes for AJ300P Jaguar F-Pace engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -843,6 +899,7 @@
               {
                 "code": "AJ150P",
                 "title": "1.5 Litre Petrol (PHEV)",
+                "familyHeading": "Plug-In Hybrid (PHEV) Petrol Unit (2021-2024)",
                 "history": "1.5 turbo petrol for P400e plug-in hybrid. Timing chain stretch and thermal faults dominate replacement requests.",
                 "fuel": "PHEV Petrol",
                 "size": "1.5 Litre",
@@ -894,13 +951,39 @@
           "failureNote": "Main replacement triggers are timing chain wear, EGR / cooling faults and turbo-control issues.",
           "engines": [
             {
+              "code": "204DTD",
+              "title": "2.0 Litre Diesel",
+              "familyHeading": "Ingenium 2.0 Litre Diesel Family (2016-2024)",
+              "fuel": "Diesel",
+              "size": "2.0L",
+              "power": "163-180 hp",
+              "compatibleModels": "D165, D165 First Edition, D165 Prestige, D165 R-Sport, D180, D180 Prestige, D180 R-Sport, D180 S, D180 Chequered Flag",
+              "avgRebuiltPrice": "£1,800 - £3,400",
+              "cta": "Get quotes for 204DTD Jaguar F-Pace engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+            },
+            {
               "code": "AJ20D4",
+              "title": "2.0 Litre Diesel",
+              "familyHeading": "Ingenium 2.0 Litre Diesel Family (2016-2024)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "240-275 hp",
               "compatibleModels": "D240, D240 R-Sport, D240 S, D240 HSE, D240 HSE Dynamic, D275, D275 HSE, D275 R-Dynamic, D275 First Edition",
               "avgRebuiltPrice": "£2,100 - £4,000",
               "cta": "Get quotes for AJ20D4 Jaguar F-Pace engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+            },
+            {
+              "code": "306DT",
+              "title": "3.0 Litre Diesel",
+              "familyHeading": "Ingenium 3.0 Litre Inline-Six Diesel (2019-2024)",
+              "fuel": "Diesel",
+              "size": "3.0L",
+              "power": "300 hp",
+              "compatibleModels": "D300, D300 R-Dynamic S, D300 R-Dynamic SE, D300 HSE, D300 First Edition, D300 Checkered Flag",
+              "avgRebuiltPrice": "£2,600 - £4,600",
+              "cta": "Get quotes for 306DT Jaguar F-Pace engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             }
           ]
@@ -911,7 +994,21 @@
           "failureNote": "Main replacement demand comes from timing-chain, cooling-system and performance thermal-management faults.",
           "engines": [
             {
+              "code": "204PT",
+              "title": "2.0 Litre Petrol",
+              "familyHeading": "Ingenium 2.0 Litre Petrol Family (2016-2024)",
+              "fuel": "Petrol",
+              "size": "2.0L",
+              "power": "250 hp",
+              "compatibleModels": "P250, P250 Prestige, P250 R-Sport, P250 S, P250 HSE",
+              "avgRebuiltPrice": "£2,200 - £3,900",
+              "cta": "Get quotes for 204PT Jaguar F-Pace engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            },
+            {
               "code": "PT204",
+              "title": "2.0 Litre Petrol",
+              "familyHeading": "Ingenium 2.0 Litre Petrol Family (2016-2024)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "250-300 hp",
@@ -922,6 +1019,8 @@
             },
             {
               "code": "AJ126",
+              "title": "3.0 Litre Petrol",
+              "familyHeading": "3.0 Litre Supercharged V6 Petrol (2016-2020)",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "340-380 hp",
@@ -932,6 +1031,8 @@
             },
             {
               "code": "AJ133",
+              "title": "5.0 Litre Petrol",
+              "familyHeading": "5.0 Litre Supercharged V8 Petrol (2018-2024)",
               "fuel": "Petrol",
               "size": "5.0L",
               "power": "550-575 hp",
@@ -942,20 +1043,12 @@
             },
             {
               "code": "AJ300P",
+              "title": "3.0 Litre Petrol",
+              "familyHeading": "3.0 Litre Mild-Hybrid Inline-Six Petrol (2020-2024)",
               "fuel": "MHEV Petrol",
               "size": "3.0L",
               "power": "400 hp",
               "compatibleModels": "P400, P400 R-Dynamic S, P400 R-Dynamic SE, P400 HSE, P400 First Edition",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "Mild",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
               "avgRebuiltPrice": "£3,800 - £6,200",
               "cta": "Get quotes for AJ300P Jaguar F-Pace engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -969,6 +1062,8 @@
           "engines": [
             {
               "code": "AJ150P",
+              "title": "1.5 Litre Petrol (PHEV)",
+              "familyHeading": "Plug-In Hybrid (PHEV) Petrol Unit (2021-2024)",
               "fuel": "PHEV Petrol",
               "size": "1.5L",
               "power": "300 hp (combined 404 hp with electric motor)",
@@ -1419,6 +1514,11 @@
           "title": "Jaguar F-Pace Diesel Engines",
           "description": "The dominant fuel type across the X761 generation, powering high-mileage fleet and personal models but requiring specialist rebuilds due to documented Ingenium vulnerabilities.",
           "descriptor": "The dominant fuel type across the X761 generation, powering high-mileage fleet and personal models but requiring specialist rebuilds due to documented Ingenium vulnerabilities.",
+          "familiesLabel": "Common Jaguar F-Pace Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "204DTD/AJ200D - Core D180/D240 units, timing chain and EGR risks",
             "AJ20D4 - D275 twin-turbo variant, crank pulley bolt fracture prone",
@@ -1447,6 +1547,11 @@
           "title": "Jaguar F-Pace Petrol Engines",
           "description": "Ranging from efficient 2.0L turbo fours to the hand-built 5.0L V8 SVR, petrol variants deliver premium performance but require precision engineering for long-term reliability.",
           "descriptor": "Ranging from efficient 2.0L turbo fours to the hand-built 5.0L V8 SVR, petrol variants deliver premium performance but require precision engineering for long-term reliability.",
+          "familiesLabel": "Common Jaguar F-Pace Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "204PT/PT204 - P250/P300 turbo fours, water pump and HPFP wear",
             "AJ126 - P340/P380 supercharged V6, Eaton coupler thermal stress",
@@ -1475,6 +1580,11 @@
           "title": "Jaguar F-Pace Hybrid / Electrified Engines",
           "description": "The P400e combines a modified 2.0L petrol block with a high-voltage battery pack and electric motor, enabling zero-emission urban commuting alongside long-distance flexibility.",
           "descriptor": "The P400e combines a modified 2.0L petrol block with a high-voltage battery pack and electric motor, enabling zero-emission urban commuting alongside long-distance flexibility.",
+          "familiesLabel": "Common Jaguar F-Pace PHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "",
+          "notesLabel": "",
           "families": [
             "AJ300P - P400 inline-six mild-hybrid, 48V starter-generator assistance",
             "306DT-MHEV - D300 diesel hybridisation, integrated belt-driven starter",

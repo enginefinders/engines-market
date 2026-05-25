@@ -15,13 +15,13 @@
     "canonical": "/mercedes-benz/vario"
   },
   "assets": {
-    "heroBg": "/images/brands/mercedes-benz/models/mercedes-benz-mercedes-benz-vario-model-card.png",
+    "heroBg": "/images/brands/mercedes-benz/models/mercedes-benz-vario-model-card.png",
     "howItWorksBg": "/images/brands/mercedes-benz/brand/mercedes-benz-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/mercedes-benz/models/mercedes-benz-mercedes-benz-vario-model-card.png"
+    "ctaImage": "/images/brands/mercedes-benz/models/mercedes-benz-vario-model-card.png"
   },
   "sections": {
     "hero": {
@@ -757,6 +757,7 @@
               {
                 "code": "OM616.942",
                 "title": "2.4L Diesel",
+                "familyHeading": "OM616 Family (1996-2004)",
                 "history": "Naturally aspirated 2.4L workhorse for early Vario. Reliable but prone to head gasket stress under heavy commercial loads.",
                 "fuel": "Diesel",
                 "size": "2.4 Litre",
@@ -776,6 +777,7 @@
               {
                 "code": "OM602.984",
                 "title": "2.9L Diesel",
+                "familyHeading": "OM602 Family (1996-2010)",
                 "history": "Durable 2.9L five-cylinder diesel introduced in 1996. Favored for smooth torque, but pre-2006 units suffer drive gear wear.",
                 "fuel": "Diesel",
                 "size": "2.9 Litre",
@@ -795,6 +797,7 @@
               {
                 "code": "OM602.985",
                 "title": "2.9L Diesel",
+                "familyHeading": "OM602 Family (1996-2010)",
                 "history": "Revised 2.9L five-cylinder with updated fuel delivery. Shares core architecture with 984 but offers slightly improved efficiency.",
                 "fuel": "Diesel",
                 "size": "2.9 Litre",
@@ -814,6 +817,7 @@
               {
                 "code": "OM904.908",
                 "title": "4.2L Diesel",
+                "familyHeading": "OM904 Family (1996-2013)",
                 "history": "4.2L common-rail turbo defined the Vario. High torque, though injection pumps frequently require professional recalibration.",
                 "fuel": "Diesel",
                 "size": "4.2 Litre",
@@ -834,6 +838,7 @@
               {
                 "code": "OM904.923",
                 "title": "4.3L Diesel",
+                "familyHeading": "OM904 Family (1996-2013)",
                 "history": "4.3L turbo variant delivering higher power for heavier payloads. Turbo bearing wear and boost leaks are common at high mileage.",
                 "fuel": "Diesel",
                 "size": "4.3 Litre",
@@ -854,6 +859,7 @@
               {
                 "code": "OM904.964",
                 "title": "4.2L Diesel",
+                "familyHeading": "OM904 Family (1996-2013)",
                 "history": "Top-spec 177bhp Euro 4/5 unit with AdBlue integration. Complex emissions hardware increases replacement frequency.",
                 "fuel": "Diesel",
                 "size": "4.2 Litre",
@@ -904,6 +910,8 @@
           "engines": [
             {
               "code": "OM616.942",
+              "title": "2.4L Diesel",
+              "familyHeading": "OM616 Family (1996-2004)",
               "fuel": "Diesel",
               "size": "2.4L",
               "power": "79-90 hp",
@@ -914,6 +922,8 @@
             },
             {
               "code": "OM602.984",
+              "title": "2.9L Diesel",
+              "familyHeading": "OM602 Family (1996-2010)",
               "fuel": "Diesel",
               "size": "2.9L",
               "power": "122 hp",
@@ -924,6 +934,8 @@
             },
             {
               "code": "OM602.985",
+              "title": "2.9L Diesel",
+              "familyHeading": "OM602 Family (1996-2010)",
               "fuel": "Diesel",
               "size": "2.9L",
               "power": "122 hp",
@@ -934,6 +946,8 @@
             },
             {
               "code": "OM904.908",
+              "title": "4.2L Diesel",
+              "familyHeading": "OM904 Family (1996-2013)",
               "fuel": "Diesel",
               "size": "4.2L",
               "power": "129-136 hp",
@@ -944,6 +958,8 @@
             },
             {
               "code": "OM904.923",
+              "title": "4.3L Diesel",
+              "familyHeading": "OM904 Family (1996-2013)",
               "fuel": "Diesel",
               "size": "4.3L",
               "power": "152-156 hp",
@@ -954,6 +970,8 @@
             },
             {
               "code": "OM904.964",
+              "title": "4.2L Diesel",
+              "familyHeading": "OM904 Family (1996-2013)",
               "fuel": "Diesel",
               "size": "4.2L",
               "power": "177 hp",
@@ -1352,6 +1370,11 @@
           "title": "Mercedes Benz Vario Diesel Engines",
           "description": "All UK Mercedes Benz Vario models (1996-2013) use diesel powertrains, with the OM904 turbo family dominating replacement enquiries across 814D, 815D, 816D and 818D commercial variants.",
           "descriptor": "All UK Mercedes Benz Vario models (1996-2013) use diesel powertrains, with the OM904 turbo family dominating replacement enquiries across 814D, 815D, 816D and 818D commercial variants.",
+          "familiesLabel": "Common Mercedes Benz Vario Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "OM904.908/OM904LA - 4.2L turbo diesel, most common across 814D/818D, injection pump-nozzle coding critical",
             "OM904.923 - 4.3L higher-output turbo, fitted to 615D/815D/616D/816D, turbo bearing wear at high mileage",

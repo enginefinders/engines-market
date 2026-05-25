@@ -15,13 +15,13 @@
     "canonical": "/bmw/m2"
   },
   "assets": {
-    "heroBg": "/images/brands/bmw/models/bmw-bmw-m2-model-card.png",
+    "heroBg": "/images/brands/bmw/models/bmw-m2-model-card.png",
     "howItWorksBg": "/images/brands/bmw/brand/bmw-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/bmw/brand/bmw-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/bmw/brand/bmw-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/bmw/brand/bmw-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/bmw/brand/bmw-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/bmw/models/bmw-bmw-m2-model-card.png"
+    "ctaImage": "/images/brands/bmw/models/bmw-m2-model-card.png"
   },
   "sections": {
     "hero": {
@@ -478,6 +478,7 @@
               {
                 "code": "N55B30T0",
                 "title": "3.0 Litre Petrol",
+                "familyHeading": "N55 Series (2016-2018)",
                 "history": "The first-generation M2's turbocharged straight-six, derived from the N55 in the M235i but featuring forged components, upgraded cooling, and a dedicated M-specific tune.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -498,6 +499,7 @@
               {
                 "code": "S55B30A",
                 "title": "3.0 Litre Petrol",
+                "familyHeading": "S55 Series (2018-2021)",
                 "history": "A high-performance derivative of the N55 developed by BMW M GmbH, featuring a closed-deck block, twin turbos, and a water-to-air charge cooling system. Fitted to the M2 Competition as a detuned version of the unit from the F80 M3 and F82 M4.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -518,6 +520,7 @@
               {
                 "code": "S55B30T0",
                 "title": "3.0 Litre Petrol",
+                "familyHeading": "S55 Series (2018-2021)",
                 "history": "The highest-output factory tune of the S55 used in the limited-production M2 CS, sharing its calibration with the M4 Competition package.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -538,6 +541,7 @@
               {
                 "code": "S58B30T0",
                 "title": "3.0 Litre Petrol",
+                "familyHeading": "S58 Series (2023-Present)",
                 "history": "BMW M's twin-turbocharged straight-six that powers the second-generation G87 M2. Features a closed-deck block, forged crankshaft, and 3D-printed cylinder head core. BMW resolved the crank hub vulnerability from the S55 with a single-piece hub design.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -558,6 +562,7 @@
               {
                 "code": "S58B30A",
                 "title": "3.0 Litre Petrol",
+                "familyHeading": "S58 Series (2023-Present)",
                 "history": "A higher-output evolution of the S58 platform anticipated for future G87 M2 CS and Competition variants, featuring revised turbocharger mapping and increased boost pressure.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -607,6 +612,8 @@
           "engines": [
             {
               "code": "N55B30T0",
+              "title": "3.0 Litre Petrol",
+              "familyHeading": "N55 Series (2016-2018)",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "365-370 hp",
@@ -617,6 +624,8 @@
             },
             {
               "code": "S55B30A",
+              "title": "3.0 Litre Petrol",
+              "familyHeading": "S55 Series (2018-2021)",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "405-410 hp",
@@ -627,6 +636,8 @@
             },
             {
               "code": "S55B30T0",
+              "title": "3.0 Litre Petrol",
+              "familyHeading": "S55 Series (2018-2021)",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "444-450 hp",
@@ -637,6 +648,8 @@
             },
             {
               "code": "S58B30T0",
+              "title": "3.0 Litre Petrol",
+              "familyHeading": "S58 Series (2023-Present)",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "453-460 hp",
@@ -647,6 +660,8 @@
             },
             {
               "code": "S58B30A",
+              "title": "3.0 Litre Petrol",
+              "familyHeading": "S58 Series (2023-Present)",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "470-500+ hp (factory dependent on variant)",
@@ -1054,6 +1069,11 @@
           "title": "BMW M2 Petrol Engines",
           "description": "Every BMW M2 sold in the UK has been powered by a 3.0-litre turbocharged petrol straight-six, spanning three generations of BMW M engines: N55, S55 and S58.",
           "descriptor": "Every BMW M2 sold in the UK has been powered by a 3.0-litre turbocharged petrol straight-six, spanning three generations of BMW M engines: N55, S55 and S58.",
+          "familiesLabel": "Common BMW M2 Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "N55B30T0 - early F87 M2 (2016-2018), charge pipe weakness, single twin-scroll turbo",
             "S55B30A - F87 M2 Competition (2018-2021), twin-turbo, crank hub vulnerability",

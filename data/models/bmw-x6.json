@@ -15,13 +15,13 @@
     "canonical": "/bmw/x6"
   },
   "assets": {
-    "heroBg": "/images/brands/bmw/models/bmw-bmw-x6-model-card.png",
+    "heroBg": "/images/brands/bmw/models/bmw-x6-model-card.png",
     "howItWorksBg": "/images/brands/bmw/brand/bmw-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/bmw/brand/bmw-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/bmw/brand/bmw-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/bmw/brand/bmw-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/bmw/brand/bmw-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/bmw/models/bmw-bmw-x6-model-card.png"
+    "ctaImage": "/images/brands/bmw/models/bmw-x6-model-card.png"
   },
   "sections": {
     "hero": {
@@ -759,6 +759,7 @@
               {
                 "code": "N57D30A",
                 "title": "3.0L Diesel",
+                "familyHeading": "N57 Series Diesel Engines (2008-2019)",
                 "history": "BMW’s first-generation 3.0L straight-six diesel for the E71 X6, introducing common-rail injection and sequential twin-turbocharging for the xDrive35d.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -779,6 +780,7 @@
               {
                 "code": "N57D30B",
                 "title": "3.0L Diesel",
+                "familyHeading": "N57 Series Diesel Engines (2008-2019)",
                 "history": "Updated twin-turbo diesel introduced for the 2010 facelift E71 and carried into F16, offering increased power and improved emissions compliance.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -799,6 +801,7 @@
               {
                 "code": "N57D30S",
                 "title": "3.0L Triple-Turbo Diesel",
+                "familyHeading": "N57 Series Diesel Engines (2008-2019)",
                 "history": "The quad-cam triple-turbo M Performance diesel powering the X6 M50d, delivering 381hp from 3.0 litres - a technology showcase for BMW diesel engineering.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -819,6 +822,7 @@
               {
                 "code": "B57D30B",
                 "title": "3.0L Diesel",
+                "familyHeading": "B57 Series Diesel Engines (2015-Present)",
                 "history": "The second-generation modular diesel replacing N57 in F16 X6, featuring steel pistons, revised timing chain design, and improved thermal management for Euro 6 compliance.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -839,6 +843,7 @@
               {
                 "code": "B57D30C",
                 "title": "3.0L Diesel (Mild Hybrid)",
+                "familyHeading": "B57 Series Diesel Engines (2015-Present)",
                 "history": "Latest generation B57 diesel introduced with G06 X6, featuring 48V mild hybrid technology for reduced emissions and smoother stop-start operation.",
                 "fuel": "MHEV Diesel",
                 "size": "3.0 Litre",
@@ -849,12 +854,26 @@
                 ],
                 "commonFailures": [
                   "EGR system carbonisation (120,000-150,000 km reported)",
-                  "DPF blockage with urban driving",
-                  "Mild hybrid battery degradation"
+                  "DPF blockage with urban driving"
                 ],
+                "avgRebuiltPrice": "",
+                "cta": "",
+                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+              },
+              {
+                "code": "Mild",
+                "title": "hybrid battery degradation",
+                "familyHeading": "B57 Series Diesel Engines (2015-Present)",
+                "history": "",
+                "fuel": "",
+                "size": "",
+                "power": "",
+                "years": "",
+                "compatibleVariants": [],
+                "commonFailures": [],
                 "avgRebuiltPrice": "£2,500 - £4,800",
                 "cta": "Get quotes for B57D30C BMW X6 engine replacement",
-                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               }
             ]
           },
@@ -864,6 +883,7 @@
               {
                 "code": "N54B30",
                 "title": "3.0L Petrol",
+                "familyHeading": "N54 / N55 Series Petrol Engines (2008-2019)",
                 "history": "BMW’s first mass-production turbocharged straight-six, bringing 306hp to the E71 X6 xDrive35i and establishing the modern forced-induction era for the model.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -884,6 +904,7 @@
               {
                 "code": "N55B30",
                 "title": "3.0L Petrol",
+                "familyHeading": "N54 / N55 Series Petrol Engines (2008-2019)",
                 "history": "Single twin-scroll turbo replacement for N54 featuring Valvetronic variable valve lift, improving reliability and reducing turbo lag in the F16 xDrive35i.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -904,6 +925,7 @@
               {
                 "code": "N63B44A",
                 "title": "4.4L Petrol",
+                "familyHeading": "N63 V8 Petrol Engines (2008-2019)",
                 "history": "BMW’s first V8 with hot-vee turbo arrangement, producing 407hp in the E71 xDrive50i. Pioneering design that defined BMW V8s for a decade but carried significant reliability challenges.",
                 "fuel": "Petrol",
                 "size": "4.4 Litre",
@@ -924,6 +946,7 @@
               {
                 "code": "N63B44B",
                 "title": "4.4L Petrol",
+                "familyHeading": "N63 V8 Petrol Engines (2008-2019)",
                 "history": "Technical update to the N63 with improved valve stem seals, timing chain guides, and injector design, fitted to F16 xDrive50i models from 2013.",
                 "fuel": "Petrol",
                 "size": "4.4 Litre",
@@ -944,6 +967,7 @@
               {
                 "code": "B58B30",
                 "title": "3.0L Petrol",
+                "familyHeading": "B58 / B48 Series Petrol Engines (2019-Present)",
                 "history": "The award-winning modular straight-six powering G06 xDrive40i, featuring closed-deck construction, integrated exhaust manifold, and 380hp in M Performance tune.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -964,6 +988,7 @@
               {
                 "code": "S63B44A",
                 "title": "4.4L Petrol",
+                "familyHeading": "S63 Performance V8 Engines (2010-Present)",
                 "history": "The first X6 M engine, producing 555hp from BMW’s M-division tuned V8 with upgraded turbos, cooling, and forged internals for the E71 X6 M.",
                 "fuel": "Petrol",
                 "size": "4.4 Litre",
@@ -984,6 +1009,7 @@
               {
                 "code": "S63B44B",
                 "title": "4.4L Petrol",
+                "familyHeading": "S63 Performance V8 Engines (2010-Present)",
                 "history": "Second-generation S63 for F16 X6 M with 575hp, cross-bank exhaust manifold, and improved valvetrain durability addressing earlier V8 concerns.",
                 "fuel": "Petrol",
                 "size": "4.4 Litre",
@@ -1004,6 +1030,7 @@
               {
                 "code": "S63B44C",
                 "title": "4.4L Petrol",
+                "familyHeading": "S63 Performance V8 Engines (2010-Present)",
                 "history": "Final evolution of the S63 for G06 X6 M and X6 M Competition, delivering up to 625hp with cross-bank exhaust manifold and 48V mild hybrid assist.",
                 "fuel": "MHEV Petrol",
                 "size": "4.4 Litre",
@@ -1014,9 +1041,23 @@
                 ],
                 "commonFailures": [
                   "Fuel injector failure (requires high-octane fuel)",
-                  "Oil pump failure (early G06 examples)",
-                  "Mild hybrid battery system faults"
+                  "Oil pump failure (early G06 examples)"
                 ],
+                "avgRebuiltPrice": "",
+                "cta": "",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              },
+              {
+                "code": "Mild",
+                "title": "hybrid battery system faults",
+                "familyHeading": "S63 Performance V8 Engines (2010-Present)",
+                "history": "",
+                "fuel": "",
+                "size": "",
+                "power": "",
+                "years": "",
+                "compatibleVariants": [],
+                "commonFailures": [],
                 "avgRebuiltPrice": "£7,000 - £13,000",
                 "cta": "Get quotes for S63B44C BMW X6 engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1029,6 +1070,7 @@
               {
                 "code": "B58B30 PHEV",
                 "title": "3.0L Petrol Hybrid",
+                "familyHeading": "Plug-in Hybrid Powertrains (2020-Present)",
                 "history": "Combined B58 petrol engine with electric motor and battery pack for the xDrive45e, offering 394hp combined output and pure electric range.",
                 "fuel": "Plug-in Hybrid",
                 "size": "3.0 Litre (with electric motor)",
@@ -1049,6 +1091,7 @@
               {
                 "code": "N63B44A HEV",
                 "title": "4.4L Petrol Hybrid",
+                "familyHeading": "Plug-in Hybrid Powertrains (2020-Present)",
                 "history": "The E71 ActiveHybrid X6 combined N63 V8 with a nickel-metal hydride battery and electric motor - BMW’s first full hybrid luxury SAV.",
                 "fuel": "Full Hybrid",
                 "size": "4.4 Litre (with electric motor)",
@@ -1101,6 +1144,8 @@
           "engines": [
             {
               "code": "N57D30A",
+              "title": "3.0L Diesel",
+              "familyHeading": "N57 Series Diesel Engines (2008-2019)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "235-286 hp",
@@ -1111,6 +1156,8 @@
             },
             {
               "code": "N57D30B",
+              "title": "3.0L Diesel",
+              "familyHeading": "N57 Series Diesel Engines (2008-2019)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "306-313 hp",
@@ -1121,6 +1168,8 @@
             },
             {
               "code": "N57D30S",
+              "title": "3.0L Triple-Turbo Diesel",
+              "familyHeading": "N57 Series Diesel Engines (2008-2019)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "381 hp",
@@ -1131,6 +1180,8 @@
             },
             {
               "code": "B57D30B",
+              "title": "3.0L Diesel",
+              "familyHeading": "B57 Series Diesel Engines (2015-Present)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "265-313 hp",
@@ -1141,13 +1192,27 @@
             },
             {
               "code": "B57D30C",
+              "title": "3.0L Diesel (Mild Hybrid)",
+              "familyHeading": "B57 Series Diesel Engines (2015-Present)",
               "fuel": "MHEV Diesel",
               "size": "3.0L",
               "power": "286-340 hp",
               "compatibleModels": "xDrive30d, xDrive30d M Sport, xDrive40d, xDrive40d M Sport",
+              "avgRebuiltPrice": "",
+              "cta": "",
+              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+            },
+            {
+              "code": "Mild",
+              "title": "hybrid battery degradation",
+              "familyHeading": "B57 Series Diesel Engines (2015-Present)",
+              "fuel": "",
+              "size": "",
+              "power": "",
+              "compatibleModels": "",
               "avgRebuiltPrice": "£2,500 - £4,800",
               "cta": "Get quotes for B57D30C BMW X6 engine replacement",
-              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             }
           ]
         },
@@ -1158,6 +1223,8 @@
           "engines": [
             {
               "code": "N54B30",
+              "title": "3.0L Petrol",
+              "familyHeading": "N54 / N55 Series Petrol Engines (2008-2019)",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "306 hp",
@@ -1168,6 +1235,8 @@
             },
             {
               "code": "N55B30",
+              "title": "3.0L Petrol",
+              "familyHeading": "N54 / N55 Series Petrol Engines (2008-2019)",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "306 hp",
@@ -1178,6 +1247,8 @@
             },
             {
               "code": "N63B44A",
+              "title": "4.4L Petrol",
+              "familyHeading": "N63 V8 Petrol Engines (2008-2019)",
               "fuel": "Petrol",
               "size": "4.4L",
               "power": "407 hp",
@@ -1188,6 +1259,8 @@
             },
             {
               "code": "N63B44B",
+              "title": "4.4L Petrol",
+              "familyHeading": "N63 V8 Petrol Engines (2008-2019)",
               "fuel": "Petrol",
               "size": "4.4L",
               "power": "445-450 hp",
@@ -1198,6 +1271,8 @@
             },
             {
               "code": "B58B30",
+              "title": "3.0L Petrol",
+              "familyHeading": "B58 / B48 Series Petrol Engines (2019-Present)",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "340-380 hp",
@@ -1208,6 +1283,8 @@
             },
             {
               "code": "S63B44A",
+              "title": "4.4L Petrol",
+              "familyHeading": "S63 Performance V8 Engines (2010-Present)",
               "fuel": "Petrol",
               "size": "4.4L",
               "power": "555 hp",
@@ -1218,6 +1295,8 @@
             },
             {
               "code": "S63B44B",
+              "title": "4.4L Petrol",
+              "familyHeading": "S63 Performance V8 Engines (2010-Present)",
               "fuel": "Petrol",
               "size": "4.4L",
               "power": "575 hp",
@@ -1228,10 +1307,24 @@
             },
             {
               "code": "S63B44C",
+              "title": "4.4L Petrol",
+              "familyHeading": "S63 Performance V8 Engines (2010-Present)",
               "fuel": "MHEV Petrol",
               "size": "4.4L",
               "power": "600-625 hp",
               "compatibleModels": "X6 M, X6 M Competition",
+              "avgRebuiltPrice": "",
+              "cta": "",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            },
+            {
+              "code": "Mild",
+              "title": "hybrid battery system faults",
+              "familyHeading": "S63 Performance V8 Engines (2010-Present)",
+              "fuel": "",
+              "size": "",
+              "power": "",
+              "compatibleModels": "",
               "avgRebuiltPrice": "£7,000 - £13,000",
               "cta": "Get quotes for S63B44C BMW X6 engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1245,6 +1338,8 @@
           "engines": [
             {
               "code": "B58B30 PHEV",
+              "title": "3.0L Petrol Hybrid",
+              "familyHeading": "Plug-in Hybrid Powertrains (2020-Present)",
               "fuel": "Plug-in Hybrid",
               "size": "3.0L (with electric motor)",
               "power": "394 hp (combined)",
@@ -1255,6 +1350,8 @@
             },
             {
               "code": "N63B44A HEV",
+              "title": "4.4L Petrol Hybrid",
+              "familyHeading": "Plug-in Hybrid Powertrains (2020-Present)",
               "fuel": "Full Hybrid",
               "size": "4.4L (with electric motor)",
               "power": "485 hp (combined)",
@@ -1763,6 +1860,11 @@
           "title": "BMW X6 Diesel Engines",
           "description": "Diesel power dominated the X6 across all three generations (E71 2008-2014, F16 2014-2019, G06 2020-present), accounting for over 80% of UK sales and the vast majority of engine replacement enquiries.",
           "descriptor": "Diesel power dominated the X6 across all three generations (E71 2008-2014, F16 2014-2019, G06 2020-present), accounting for over 80% of UK sales and the vast majority of engine replacement enquiries.",
+          "familiesLabel": "Common BMW X6 Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "N57D30A - E71 xDrive30d/xDrive35d, timing chain tensioner weakness",
             "N57D30B - E71 LCI and F16 xDrive30d/xDrive40d, EGR cooler failures",
@@ -1795,6 +1897,11 @@
           "title": "BMW X6 Petrol Engines",
           "description": "Petrol X6 models are rarer in the UK but cover the widest power range - from the 306hp N54 straight-six in the E71 xDrive35i to the 625hp S63 V8 in the G06 X6 M Competition.",
           "descriptor": "Petrol X6 models are rarer in the UK but cover the widest power range - from the 306hp N54 straight-six in the E71 xDrive35i to the 625hp S63 V8 in the G06 X6 M Competition.",
+          "familiesLabel": "Common BMW X6 Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "N54B30 - E71 xDrive35i, twin-turbo, high-pressure fuel pump failures",
             "N55B30 - F16 xDrive35i, single twin-scroll turbo, Valvetronic issues",
@@ -1831,6 +1938,11 @@
           "title": "BMW X6 Mild Hybrid (MHEV) Engines",
           "description": "The latest G06 X6 (2020-present) introduced 48V mild hybrid technology on both diesel and petrol powertrains, adding electric assist and coasting functionality.",
           "descriptor": "The latest G06 X6 (2020-present) introduced 48V mild hybrid technology on both diesel and petrol powertrains, adding electric assist and coasting functionality.",
+          "familiesLabel": "BMW X6 Mild Hybrid Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "B57D30C - 3.0L diesel with 48V starter-generator (xDrive30d/xDrive40d)",
             "N63B44E - 4.4L V8 with 48V system (M60i xDrive)",
@@ -1857,6 +1969,11 @@
           "title": "BMW X6 Plug-in Hybrid (PHEV) Engines",
           "description": "The G06 xDrive45e (2020-present) pairs the B58 3.0-litre petrol with a 113hp electric motor and 24kWh battery - offering up to 54 miles of electric-only range.",
           "descriptor": "The G06 xDrive45e (2020-present) pairs the B58 3.0-litre petrol with a 113hp electric motor and 24kWh battery - offering up to 54 miles of electric-only range.",
+          "familiesLabel": "BMW X6 Plug-in Hybrid Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "B58B30 PHEV - 3.0L petrol with integrated electric motor in ZF8 transmission",
             "Electric motor replaces torque converter in 8-speed automatic gearbox",

@@ -17,8 +17,30 @@ type Props = {
 type GuideEntry = ModelPageData["sections"]["variantCoverage"]["engineGuide"]["families"][number]["entries"][number];
 type EngineRow = EngineCodesData["groups"][number]["engines"][number];
 
+function normalizeWhitespace(value: string) {
+  return value.replace(/\s+/g, " ").trim();
+}
+
+function sanitizeDashText(value: string) {
+  return normalizeWhitespace(value.replace(/[–—]/g, "-"));
+}
+
+function repairEngineCodeValue(code: string) {
+  const cleaned = sanitizeDashText(code);
+  const parts = cleaned.split(/\s+-\s+/);
+
+  if (parts.length > 1) {
+    const suffix = parts.slice(1).join(" - ").trim();
+    if (/^\d+(?:\.\d+)?$/.test(suffix) || /^\d+\.$/.test(suffix)) {
+      return parts[0].trim();
+    }
+  }
+
+  return cleaned;
+}
+
 function normalizeCode(code: string) {
-  return code
+  return repairEngineCodeValue(code)
     .toLowerCase()
     .replace(/\(.*?\)/g, "")
     .split("/")
@@ -66,29 +88,68 @@ function toPriceText(price: string) {
   return price.replace(/^from\s+/i, "").trim();
 }
 
+function simplifyFuelForTitle(fuel: string) {
+  return normalizeWhitespace(fuel.replace(/\s*\(([^)]+)\)\s*/g, "").replace(/\s+\/\s+/g, " / "));
+}
+
+function formatSizeFuel(size: string, fuel: string) {
+  const normalizedSize = normalizeWhitespace(size.replace(/(\d+(?:\.\d+)?)L\b/gi, "$1 Litre"));
+  const normalizedFuel = simplifyFuelForTitle(fuel);
+
+  return [normalizedSize, normalizedFuel].filter(Boolean).join(" ").trim();
+}
+
+function repairEngineTitleValue(code: string, title: string, size: string, fuel: string) {
+  const cleanedTitle = sanitizeDashText(title);
+  const cleanedCode = sanitizeDashText(code);
+  const trailingFragmentMatch = cleanedCode.match(/\s+-\s+(\d+\.)$/);
+
+  if (trailingFragmentMatch) {
+    const repaired = normalizeWhitespace(`${trailingFragmentMatch[1]}${cleanedTitle}`).replace(/(\d)\.\s+(\d)/g, "$1.$2");
+    if (/^\d+(?:\.\d+)?\s+Litre\b/i.test(repaired)) {
+      return repaired;
+    }
+  }
+
+  if (/^\d+(?:\.\d+)?\s+Litre\b/i.test(cleanedTitle)) {
+    return cleanedTitle;
+  }
+
+  return formatSizeFuel(size, fuel) || cleanedTitle;
+}
+
 function toSummary(engine: EngineRow) {
-  return `${engine.size.replace(/(\d(?:\.\d)?)L\b/gi, "$1 Litre")} ${engine.fuel}`
+  return formatSizeFuel(engine.size, engine.fuel)
     .replace(/\s+/g, " ")
     .trim();
 }
 
 function extractEngineSeries(code: string) {
-  const primaryCode = code.split("/")[0]?.trim().toUpperCase() || code.toUpperCase();
+  const repairedCode = repairEngineCodeValue(code);
+  const primaryCode = repairedCode.split("/")[0]?.trim().toUpperCase() || repairedCode.toUpperCase();
   const match = primaryCode.match(/^[A-Z]\d+/);
 
   return match?.[0] ?? primaryCode;
 }
 
-function buildAccordionHeading(engine: EngineRow, years: string) {
+function buildAccordionHeading(engine: EngineRow, detail: GuideEntry | null, years: string) {
+  if (detail?.familyHeading?.trim()) {
+    return sanitizeDashText(detail.familyHeading.trim());
+  }
+
   return `${extractEngineSeries(engine.code)} Series (${years})`;
 }
 
 function buildEngineHeading(engine: EngineRow, detail: GuideEntry | null) {
-  if (detail?.title?.trim()) {
-    return detail.title.trim();
-  }
+  const code = repairEngineCodeValue(detail?.code || engine.code);
+  const title = repairEngineTitleValue(
+    detail?.code || engine.code,
+    detail?.title || engine.title || "",
+    detail?.size || engine.size,
+    detail?.fuel || engine.fuel,
+  );
 
-  return `${engine.code} — ${toSummary(engine)}`;
+  return title ? `${code} - ${title}` : code;
 }
 
 function buildHistory(engine: EngineRow, detail: GuideEntry | null, modelName: string, strictData = false) {
@@ -101,7 +162,10 @@ function buildHistory(engine: EngineRow, detail: GuideEntry | null, modelName: s
 
 function buildVariants(engine: EngineRow, detail: GuideEntry | null) {
   if (detail?.compatibleVariants?.length) {
-    return detail.compatibleVariants;
+    return detail.compatibleVariants
+      .flatMap((variant) => variant.split(","))
+      .map((variant) => variant.trim())
+      .filter(Boolean);
   }
 
   return engine.compatibleModels
@@ -116,6 +180,11 @@ function buildFailures(detail: GuideEntry | null, fallback: string) {
   }
 
   return [fallback];
+}
+
+function isRenderableEngineRow(engine: EngineRow) {
+  const repairedCode = repairEngineCodeValue(engine.code);
+  return /\d/.test(repairedCode) && /^[A-Z0-9]/i.test(repairedCode) && Boolean(engine.size || engine.fuel || engine.power || engine.avgRebuiltPrice);
 }
 
 function chunkEngines(engines: EngineRow[]) {
@@ -209,7 +278,7 @@ export default function ModelEngineCodesSection({ data, guide, modelName, strict
   }
 
   return (
-    <Section className="model-engine-codes bg-[linear-gradient(180deg,#ffffff_0%,#f6f8fb_100%)]">
+    <Section id="model-engine-codes" className="model-engine-codes bg-[linear-gradient(180deg,#ffffff_0%,#f6f8fb_100%)]">
       <Container className="max-w-[1240px]">
         <div className="engine-codes-section">
           <div className="ecs-container">
@@ -226,7 +295,13 @@ export default function ModelEngineCodesSection({ data, guide, modelName, strict
             </header>
 
             {data.groups.map((group, familyIndex) => {
-              const rows = chunkEngines(group.engines);
+              const validEngines = group.engines.filter(isRenderableEngineRow);
+
+              if (!validEngines.length) {
+                return null;
+              }
+
+              const rows = chunkEngines(validEngines);
 
               return (
                 <section key={group.name} className="engine-family">
@@ -256,7 +331,7 @@ export default function ModelEngineCodesSection({ data, guide, modelName, strict
                         : [];
 
                       const renderEngineCard = (engine: EngineRow) => {
-                        const originalIndex = group.engines.findIndex(
+                        const originalIndex = validEngines.findIndex(
                           (candidate) => candidate.code === engine.code,
                         );
                         const selected =
@@ -264,7 +339,14 @@ export default function ModelEngineCodesSection({ data, guide, modelName, strict
                           selection.engineIndex === originalIndex;
                         const detail = getGuideDetail(engine.code, guideLookup);
                         const years = deriveYears(engine.compatibleModels, detail?.years, strictData);
-                        const accordionHeading = buildAccordionHeading(engine, years);
+                        const accordionHeading = buildAccordionHeading(engine, detail, years);
+                        const summaryCode = repairEngineCodeValue(detail?.code || engine.code);
+                        const summaryTitle = repairEngineTitleValue(
+                          detail?.code || engine.code,
+                          detail?.title || engine.title || "",
+                          detail?.size || engine.size,
+                          detail?.fuel || engine.fuel,
+                        );
 
                         return (
                           <article
@@ -286,12 +368,8 @@ export default function ModelEngineCodesSection({ data, guide, modelName, strict
                                   <span className="summary-heading">{accordionHeading}</span>
                                 ) : (
                                   <span className="summary-line">
-                                    <strong>{engine.code}</strong>
-                                    <span className="summary-separator" aria-hidden="true">
-                                      &bull;
-                                    </span>
-                                    <small>{toSummary(engine)}</small>
-                                    <span className="summary-years">({years})</span>
+                                    <strong>{summaryCode}</strong>
+                                    <small>{summaryTitle || toSummary(engine)}</small>
                                   </span>
                                 )}
                                 <span className="engine-meta">{engine.power}</span>
@@ -343,7 +421,7 @@ export default function ModelEngineCodesSection({ data, guide, modelName, strict
                                               {detailImage ? (
                                                 <Image
                                                   src={detailImage}
-                                                  alt={`${activeEngine.code} engine`}
+                                                  alt={`${repairEngineCodeValue(detail?.code || activeEngine.code)} engine`}
                                                   fill
                                                   className="object-contain"
                                                   sizes="150px"
@@ -351,7 +429,7 @@ export default function ModelEngineCodesSection({ data, guide, modelName, strict
                                               ) : null}
                                             </div>
                                             <div>
-                                              <strong>{activeEngine.code}</strong>
+                                              <strong>{repairEngineCodeValue(detail?.code || activeEngine.code)}</strong>
                                               {ui.exampleImageLabel ? <span>{ui.exampleImageLabel}</span> : null}
                                             </div>
                                           </div>
@@ -375,7 +453,7 @@ export default function ModelEngineCodesSection({ data, guide, modelName, strict
                                                 <a
                                                   className="quote-link"
                                                   href="#quote-form"
-                                                  data-quote-engine-code={activeEngine.code}
+                                                  data-quote-engine-code={repairEngineCodeValue(detail?.code || activeEngine.code)}
                                                   data-quote-context={activeEngine.compatibleModels}
                                                 >
                                                   <span className="quote-link-text">
@@ -465,7 +543,7 @@ export default function ModelEngineCodesSection({ data, guide, modelName, strict
                                           <a
                                             className="quote-link"
                                             href="#quote-form"
-                                            data-quote-engine-code={activeEngine.code}
+                                            data-quote-engine-code={repairEngineCodeValue(detail?.code || activeEngine.code)}
                                             data-quote-context={activeEngine.compatibleModels}
                                           >
                                             <span className="quote-link-text">

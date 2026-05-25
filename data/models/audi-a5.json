@@ -15,13 +15,13 @@
     "canonical": "/audi/a5"
   },
   "assets": {
-    "heroBg": "/images/brands/audi/models/audi-audi-a5-model-card.png",
+    "heroBg": "/images/brands/audi/models/audi-a5-model-card.png",
     "howItWorksBg": "/images/brands/audi/brand/audi-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/audi/brand/audi-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/audi/brand/audi-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/audi/brand/audi-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/audi/brand/audi-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/audi/models/audi-audi-a5-model-card.png"
+    "ctaImage": "/images/brands/audi/models/audi-a5-model-card.png"
   },
   "sections": {
     "hero": {
@@ -725,6 +725,7 @@
               {
                 "code": "CGL",
                 "title": "2.0L Diesel",
+                "familyHeading": "2.0 TDI EA189/EA288 Family (2007-2020)",
                 "history": "Early B8 2.0 TDI, 170hp common-rail diesel. Established A5 efficiency, replaced pump-injector tech.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -745,6 +746,7 @@
               {
                 "code": "CGLC",
                 "title": "2.0L Diesel",
+                "familyHeading": "2.0 TDI EA189/EA288 Family (2007-2020)",
                 "history": "Upgraded 177hp CGL variant. Refined combustion, lower emissions. Dominant A5 diesel code in UK.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -765,6 +767,7 @@
               {
                 "code": "CJEB",
                 "title": "2.0L Diesel",
+                "familyHeading": "2.0 TDI EA189/EA288 Family (2007-2020)",
                 "history": "EA288 update for Euro 6 compliance. Maintained 2.0 TDI efficiency in B8 facelift A5 models.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -785,6 +788,7 @@
               {
                 "code": "CJTC",
                 "title": "2.0L Diesel",
+                "familyHeading": "2.0 TDI EA189/EA288 Family (2007-2020)",
                 "history": "Ultra efficiency variant with start-stop. Targeted fleet buyers with lower running costs.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -805,6 +809,7 @@
               {
                 "code": "CYMC",
                 "title": "2.0L Diesel",
+                "familyHeading": "2.0 TDI EA189/EA288 Family (2007-2020)",
                 "history": "B9 EA288 evo with enhanced thermal management. Improved refinement for 40 TDI models.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -825,6 +830,7 @@
               {
                 "code": "CAPA",
                 "title": "3.0L Diesel",
+                "familyHeading": "3.0 TDI V6 Family (2007-2020)",
                 "history": "First A5 V6 diesel, 240hp with quattro. Established A5 as premium grand tourer with strong torque.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -845,6 +851,7 @@
               {
                 "code": "CCWA",
                 "title": "3.0L Diesel",
+                "familyHeading": "3.0 TDI V6 Family (2007-2020)",
                 "history": "Revised mapping for improved economy. Retained 204-245hp. Popular with high-mileage A5 owners.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -865,6 +872,7 @@
               {
                 "code": "CLAB",
                 "title": "3.0L Diesel",
+                "familyHeading": "3.0 TDI V6 Family (2007-2020)",
                 "history": "Later B8 facelift V6 with refined combustion. Smoother power delivery, reduced NVH for executives.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -890,6 +898,7 @@
               {
                 "code": "CAEA",
                 "title": "2.0L Petrol",
+                "familyHeading": "2.0 TFSI EA888 Family (2007-2020)",
                 "history": "Early B8 2.0 TFSI, 180-211hp. Direct injection and turbo, but known for oil consumption pre-2012.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -910,6 +919,7 @@
               {
                 "code": "CDNC",
                 "title": "2.0L Petrol",
+                "familyHeading": "2.0 TFSI EA888 Family (2007-2020)",
                 "history": "Revised EA888 Gen 2 with improved pistons. Retained 211hp while addressing early oil burn concerns.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -930,6 +940,7 @@
               {
                 "code": "CNC",
                 "title": "2.0L Petrol",
+                "familyHeading": "2.0 TFSI EA888 Family (2007-2020)",
                 "history": "High-output 2.0 TFSI, 225hp. Popular with S line/quattro buyers wanting strong acceleration.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -950,6 +961,7 @@
               {
                 "code": "DLVB",
                 "title": "2.0L Petrol",
+                "familyHeading": "2.0 TFSI EA888 Family (2007-2020)",
                 "history": "B9 EA888 Gen 3 with dual injection. 245hp with improved efficiency, reduced carbon buildup.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -970,6 +982,7 @@
               {
                 "code": "CDHB",
                 "title": "1.8L Petrol",
+                "familyHeading": "1.8 TFSI & Larger Petrol Engines (2007-2020)",
                 "history": "Entry-level TFSI, 170hp. Balanced performance and economy for A5 buyers prioritising lower costs.",
                 "fuel": "Petrol",
                 "size": "1.8 Litre",
@@ -990,19 +1003,37 @@
               {
                 "code": "CAKA/CREC",
                 "title": "3.0L Supercharged Petrol",
+                "familyHeading": "1.8 TFSI & Larger Petrol Engines (2007-2020)",
+                "history": "Supercharged V6 for S5, 333-354hp. Combined Audi refinement with sports car performance.",
+                "fuel": "Petrol",
+                "size": "3.0 Litre",
+                "power": "333-354 hp",
+                "years": "2007-2016",
+                "compatibleVariants": [
+                  "S5 Coupe, S5 Sportback, S5 Cabriolet (all trims)"
+                ],
+                "commonFailures": [
+                  "Supercharger coupler wear (80-110k miles)",
+                  "Timing chain guide failure (90-120k miles)",
+                  "Oil cooler seal leaks"
+                ],
+                "avgRebuiltPrice": "£3,500 - £7,500",
+                "cta": "Get quotes for CAKA Audi A5 engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              },
+              {
+                "code": "4.2 FSI",
+                "title": "4.2L Petrol",
+                "familyHeading": "1.8 TFSI & Larger Petrol Engines (2007-2020)",
                 "history": "Naturally aspirated 450hp V8 for RS5. High-revving FSI masterpiece, rare specialist replacement market.",
                 "fuel": "Petrol",
                 "size": "4.2 Litre",
                 "power": "450 hp",
                 "years": "2010-2015",
                 "compatibleVariants": [
-                  "S5 Coupe, S5 Sportback, S5 Cabriolet (all trims)",
                   "RS5 Coupe, RS5 Cabriolet (all trims)"
                 ],
                 "commonFailures": [
-                  "Supercharger coupler wear (80-110k miles)",
-                  "Timing chain guide failure (90-120k miles)",
-                  "Oil cooler seal leaks",
                   "Timing chain tensioner failure (70-100k miles)",
                   "Carbon buildup on intake valves",
                   "Oil consumption at high mileage"
@@ -1019,6 +1050,7 @@
               {
                 "code": "TFSI e",
                 "title": "2.0L PHEV",
+                "familyHeading": "TFSI e Plug-in Hybrid Family (2020)",
                 "history": "B9 plug-in hybrid pairing 2.0 TFSI with electric motor. ~30-mile EV range for lower emissions.",
                 "fuel": "PHEV (Petrol/Electric)",
                 "size": "2.0 Litre",
@@ -1071,6 +1103,8 @@
           "engines": [
             {
               "code": "CGL",
+              "title": "2.0L Diesel",
+              "familyHeading": "2.0 TDI EA189/EA288 Family (2007-2020)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "170 hp",
@@ -1081,6 +1115,8 @@
             },
             {
               "code": "CGLC",
+              "title": "2.0L Diesel",
+              "familyHeading": "2.0 TDI EA189/EA288 Family (2007-2020)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "177 hp",
@@ -1091,6 +1127,8 @@
             },
             {
               "code": "CJEB",
+              "title": "2.0L Diesel",
+              "familyHeading": "2.0 TDI EA189/EA288 Family (2007-2020)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "150-190 hp",
@@ -1101,6 +1139,8 @@
             },
             {
               "code": "CJTC",
+              "title": "2.0L Diesel",
+              "familyHeading": "2.0 TDI EA189/EA288 Family (2007-2020)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "150-177 hp",
@@ -1111,6 +1151,8 @@
             },
             {
               "code": "CYMC",
+              "title": "2.0L Diesel",
+              "familyHeading": "2.0 TDI EA189/EA288 Family (2007-2020)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "190 hp",
@@ -1121,6 +1163,8 @@
             },
             {
               "code": "CAPA",
+              "title": "3.0L Diesel",
+              "familyHeading": "3.0 TDI V6 Family (2007-2020)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "240 hp",
@@ -1131,6 +1175,8 @@
             },
             {
               "code": "CCWA",
+              "title": "3.0L Diesel",
+              "familyHeading": "3.0 TDI V6 Family (2007-2020)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "204-245 hp",
@@ -1141,6 +1187,8 @@
             },
             {
               "code": "CLAB",
+              "title": "3.0L Diesel",
+              "familyHeading": "3.0 TDI V6 Family (2007-2020)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "204-245 hp",
@@ -1158,6 +1206,8 @@
           "engines": [
             {
               "code": "CAEA",
+              "title": "2.0L Petrol",
+              "familyHeading": "2.0 TFSI EA888 Family (2007-2020)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "180-211 hp",
@@ -1168,6 +1218,8 @@
             },
             {
               "code": "CDNC",
+              "title": "2.0L Petrol",
+              "familyHeading": "2.0 TFSI EA888 Family (2007-2020)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "211 hp",
@@ -1178,6 +1230,8 @@
             },
             {
               "code": "CNC",
+              "title": "2.0L Petrol",
+              "familyHeading": "2.0 TFSI EA888 Family (2007-2020)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "225 hp",
@@ -1188,6 +1242,8 @@
             },
             {
               "code": "DLVB",
+              "title": "2.0L Petrol",
+              "familyHeading": "2.0 TFSI EA888 Family (2007-2020)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "245 hp",
@@ -1198,6 +1254,8 @@
             },
             {
               "code": "CDHB",
+              "title": "1.8L Petrol",
+              "familyHeading": "1.8 TFSI & Larger Petrol Engines (2007-2020)",
               "fuel": "Petrol",
               "size": "1.8L",
               "power": "170 hp",
@@ -1208,10 +1266,24 @@
             },
             {
               "code": "CAKA/CREC",
+              "title": "3.0L Supercharged Petrol",
+              "familyHeading": "1.8 TFSI & Larger Petrol Engines (2007-2020)",
+              "fuel": "Petrol",
+              "size": "3.0L",
+              "power": "333-354 hp",
+              "compatibleModels": "S5 Coupe, S5 Sportback, S5 Cabriolet (all trims)",
+              "avgRebuiltPrice": "£3,500 - £7,500",
+              "cta": "Get quotes for CAKA Audi A5 engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            },
+            {
+              "code": "4.2 FSI",
+              "title": "4.2L Petrol",
+              "familyHeading": "1.8 TFSI & Larger Petrol Engines (2007-2020)",
               "fuel": "Petrol",
               "size": "4.2L",
               "power": "450 hp",
-              "compatibleModels": "S5 Coupe, S5 Sportback, S5 Cabriolet (all trims), RS5 Coupe, RS5 Cabriolet (all trims)",
+              "compatibleModels": "RS5 Coupe, RS5 Cabriolet (all trims)",
               "avgRebuiltPrice": "£5,500 - £9,500",
               "cta": "Get quotes for 4.2 FSI Audi A5 engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1225,6 +1297,8 @@
           "engines": [
             {
               "code": "TFSI e",
+              "title": "2.0L PHEV",
+              "familyHeading": "TFSI e Plug-in Hybrid Family (2020)",
               "fuel": "PHEV (Petrol/Electric)",
               "size": "2.0L",
               "power": "204-299 hp (combined)",
@@ -1696,6 +1770,11 @@
           "title": "Audi A5 Diesel Engines",
           "description": "Spanning both B8 and B9 generations, diesel variants dominate UK replacement enquiries due to high-mileage touring use and well-documented emissions system failures.",
           "descriptor": "Spanning both B8 and B9 generations, diesel variants dominate UK replacement enquiries due to high-mileage touring use and well-documented emissions system failures.",
+          "familiesLabel": "Common Audi A5 Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "CGL/CGLC - B8 2.0 TDI workhorse, prone to EGR clogging",
             "CJEB/CJTC/CYMC - B9 2.0 TDI ultra, updated EA288 architecture",
@@ -1726,6 +1805,11 @@
           "title": "Audi A5 Petrol Engines",
           "description": "Petrol variants offer refined performance and responsive acceleration, but early EA888 generations require careful timing chain and oil consumption assessment during replacement sourcing.",
           "descriptor": "Petrol variants offer refined performance and responsive acceleration, but early EA888 generations require careful timing chain and oil consumption assessment during replacement sourcing.",
+          "familiesLabel": "Common Audi A5 Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "CAEA/CDNC/CNC - B8 2.0 TFSI, known for oil consumption",
             "DLVB/DAXA - B9 2.0 TFSI, dual-injection reduces carbon buildup",
@@ -1756,6 +1840,11 @@
           "title": "Audi A5 Mild Hybrid (MHEV) Engines",
           "description": "Later B9 models integrate 48-volt assistance to reduce emissions and improve stop-start refinement, requiring specialist diagnostic protocols during combustion unit replacement.",
           "descriptor": "Later B9 models integrate 48-volt assistance to reduce emissions and improve stop-start refinement, requiring specialist diagnostic protocols during combustion unit replacement.",
+          "familiesLabel": "Audi A5 MHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "CYMC/DLWA - 40/45 TDI & TFSI belt-driven starter-generator system",
             "48-volt belt starter recovers braking energy to assist turbo spool",
@@ -1778,6 +1867,11 @@
           "title": "Audi A5 Plug-in Hybrid (PHEV) Engines",
           "description": "TFSI e variants pair a modified 2.0 TFSI with high-voltage electric propulsion, demanding coordinated workshop procedures for safe engine replacement and software adaptation.",
           "descriptor": "TFSI e variants pair a modified 2.0 TFSI with high-voltage electric propulsion, demanding coordinated workshop procedures for safe engine replacement and software adaptation.",
+          "familiesLabel": "Audi A5 PHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "DKWA/DLWC/CYRC - 40/45/50 TFSI e combined petrol-electric powertrain",
             "Electric motor delivers up to 28 miles zero-emission driving range",

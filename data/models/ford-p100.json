@@ -15,13 +15,13 @@
     "canonical": "/ford/p100"
   },
   "assets": {
-    "heroBg": "/images/brands/ford/models/ford-ford-p100-model-card.png",
+    "heroBg": "/images/brands/ford/models/ford-p100-model-card.png",
     "howItWorksBg": "/images/brands/ford/brand/ford-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/ford/brand/ford-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/ford/brand/ford-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/ford/brand/ford-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/ford/brand/ford-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/ford/models/ford-ford-p100-model-card.png"
+    "ctaImage": "/images/brands/ford/models/ford-p100-model-card.png"
   },
   "sections": {
     "hero": {
@@ -701,8 +701,9 @@
             "name": "Diesel Engines",
             "entries": [
               {
-                "code": "PERK4D - 2.",
-                "title": "3L Diesel",
+                "code": "PERK4D",
+                "title": "2.3L Diesel",
+                "familyHeading": "Perkins Prima Family (1983-1988)",
                 "history": "The PERK4D Perkins Prima powered most UK P100s; robust indirect injection design but injector pump wear defines its replacement legacy.",
                 "fuel": "Diesel",
                 "size": "2.3 Litre",
@@ -721,8 +722,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "PERK4D-25 - 2.",
-                "title": "5L Diesel",
+                "code": "PERK4D-25",
+                "title": "2.5L Diesel",
+                "familyHeading": "Perkins Prima Family (1983-1988)",
                 "history": "Heavy-duty evolution of the PERK4D, fitted to late P100s for higher payload; shares core architecture but with reinforced internals.",
                 "fuel": "Diesel",
                 "size": "2.5 Litre",
@@ -741,8 +743,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "PERK-INJ - 2.",
-                "title": "3L Diesel (Injector-Spec)",
+                "code": "PERK-INJ",
+                "title": "2.3L Diesel (Injector-Spec)",
+                "familyHeading": "Perkins Prima Family (1983-1988)",
                 "history": "Injector-optimised PERK4D variant for improved fuel delivery; sought by restorers but shares pump vulnerability with standard units.",
                 "fuel": "Diesel",
                 "size": "2.3 Litre",
@@ -766,8 +769,9 @@
             "name": "Petrol Engines",
             "entries": [
               {
-                "code": "1600OHV - 1.",
-                "title": "6L Petrol",
+                "code": "1600OHV",
+                "title": "1.6L Petrol",
+                "familyHeading": "Valencia OHV Family (1982-1987)",
                 "history": "The entry-level Valencia OHV offered simple, carburetted reliability for light commercial P100 use; timing chain wear is its defining replacement trigger.",
                 "fuel": "Petrol",
                 "size": "1.6 Litre",
@@ -786,8 +790,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "VALENCIA-16 - 1.",
-                "title": "6L Petrol (Updated)",
+                "code": "VALENCIA-16",
+                "title": "1.6L Petrol (Updated)",
+                "familyHeading": "Valencia OHV Family (1982-1987)",
                 "history": "Revised Valencia with improved carb calibration and reliability tweaks; favoured by daily-driver P100 owners seeking modern-fuel compatibility.",
                 "fuel": "Petrol",
                 "size": "1.6 Litre",
@@ -806,8 +811,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "2000OHV - 2.",
-                "title": "0L Petrol",
+                "code": "2000OHV",
+                "title": "2.0L Petrol",
+                "familyHeading": "Pinto OHV Family (1982-1988)",
                 "history": "The performance-oriented Pinto OHV delivered strong torque for loaded P100s; head gasket failure under commercial strain defines its replacement profile.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -826,8 +832,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "PINTO-20 - 2.",
-                "title": "0L Petrol (Updated)",
+                "code": "PINTO-20",
+                "title": "2.0L Petrol (Updated)",
+                "familyHeading": "Pinto OHV Family (1982-1988)",
                 "history": "Refined Pinto with revised cylinder head and carb; sought for restoration builds requiring original-spec performance with improved reliability.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -846,8 +853,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "CORTINA-16 - 1.",
-                "title": "6L Petrol (Cortina Platform)",
+                "code": "CORTINA-16",
+                "title": "1.6L Petrol (Cortina Platform)",
+                "familyHeading": "Pinto OHV Family (1982-1988)",
                 "history": "Early P100 engine code for Cortina-platform compatibility; shares Valencia architecture but with platform-specific mounting points.",
                 "fuel": "Petrol",
                 "size": "1.6 Litre",
@@ -866,8 +874,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "SIERRA-20 - 2.",
-                "title": "0L Petrol (Sierra Platform)",
+                "code": "SIERRA-20",
+                "title": "2.0L Petrol (Sierra Platform)",
+                "familyHeading": "Pinto OHV Family (1982-1988)",
                 "history": "Late-production P100 code for Sierra-platform compatibility; retains Pinto architecture with revised ancillaries for updated chassis.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -886,8 +895,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "RESTO-PERK - 2.",
-                "title": "3L Diesel (Restoration Spec)",
+                "code": "RESTO-PERK",
+                "title": "2.3L Diesel (Restoration Spec)",
+                "familyHeading": "Pinto OHV Family (1982-1988)",
                 "history": "Concours-spec Perkins rebuild code for heritage P100s; includes documentation for DVLA and insurance, with original-spec calibration.",
                 "fuel": "Diesel",
                 "size": "2.3 Litre",
@@ -906,8 +916,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "DAILY-PERK - 2.",
-                "title": "3L Diesel (Daily-Use Spec)",
+                "code": "DAILY-PERK",
+                "title": "2.3L Diesel (Daily-Use Spec)",
+                "familyHeading": "Pinto OHV Family (1982-1988)",
                 "history": "Reliability-optimised Perkins code for daily-driver P100s; includes modern-fuel compatible components and extended service intervals.",
                 "fuel": "Diesel",
                 "size": "2.3 Litre",
@@ -958,7 +969,9 @@
           "failureNote": "Main replacement triggers are timing chain wear, EGR / cooling faults and turbo-control issues.",
           "engines": [
             {
-              "code": "PERK4D - 2.",
+              "code": "PERK4D",
+              "title": "2.3L Diesel",
+              "familyHeading": "Perkins Prima Family (1983-1988)",
               "fuel": "Diesel",
               "size": "2.3L",
               "power": "54-67 hp",
@@ -968,7 +981,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "PERK4D-25 - 2.",
+              "code": "PERK4D-25",
+              "title": "2.5L Diesel",
+              "familyHeading": "Perkins Prima Family (1983-1988)",
               "fuel": "Diesel",
               "size": "2.5L",
               "power": "69-72 hp",
@@ -978,7 +993,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "PERK-INJ - 2.",
+              "code": "PERK-INJ",
+              "title": "2.3L Diesel (Injector-Spec)",
+              "familyHeading": "Perkins Prima Family (1983-1988)",
               "fuel": "Diesel",
               "size": "2.3L",
               "power": "54-67 hp",
@@ -995,7 +1012,9 @@
           "failureNote": "Main replacement demand comes from timing-chain, cooling-system and performance thermal-management faults.",
           "engines": [
             {
-              "code": "1600OHV - 1.",
+              "code": "1600OHV",
+              "title": "1.6L Petrol",
+              "familyHeading": "Valencia OHV Family (1982-1987)",
               "fuel": "Petrol",
               "size": "1.6L",
               "power": "72-75 hp",
@@ -1005,7 +1024,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "VALENCIA-16 - 1.",
+              "code": "VALENCIA-16",
+              "title": "1.6L Petrol (Updated)",
+              "familyHeading": "Valencia OHV Family (1982-1987)",
               "fuel": "Petrol",
               "size": "1.6L",
               "power": "72-75 hp",
@@ -1015,7 +1036,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "2000OHV - 2.",
+              "code": "2000OHV",
+              "title": "2.0L Petrol",
+              "familyHeading": "Pinto OHV Family (1982-1988)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "90-100 hp",
@@ -1025,7 +1048,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "PINTO-20 - 2.",
+              "code": "PINTO-20",
+              "title": "2.0L Petrol (Updated)",
+              "familyHeading": "Pinto OHV Family (1982-1988)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "90-100 hp",
@@ -1035,7 +1060,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "CORTINA-16 - 1.",
+              "code": "CORTINA-16",
+              "title": "1.6L Petrol (Cortina Platform)",
+              "familyHeading": "Pinto OHV Family (1982-1988)",
               "fuel": "Petrol",
               "size": "1.6L",
               "power": "72-75 hp",
@@ -1045,7 +1072,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "SIERRA-20 - 2.",
+              "code": "SIERRA-20",
+              "title": "2.0L Petrol (Sierra Platform)",
+              "familyHeading": "Pinto OHV Family (1982-1988)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "90-100 hp",
@@ -1055,7 +1084,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "RESTO-PERK - 2.",
+              "code": "RESTO-PERK",
+              "title": "2.3L Diesel (Restoration Spec)",
+              "familyHeading": "Pinto OHV Family (1982-1988)",
               "fuel": "Diesel",
               "size": "2.3L",
               "power": "54-67 hp",
@@ -1065,7 +1096,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "DAILY-PERK - 2.",
+              "code": "DAILY-PERK",
+              "title": "2.3L Diesel (Daily-Use Spec)",
+              "familyHeading": "Pinto OHV Family (1982-1988)",
               "fuel": "Diesel",
               "size": "2.3L",
               "power": "54-67 hp",
@@ -1458,6 +1491,11 @@
           "title": "Ford P100 Diesel Engines",
           "description": "The Perkins Prima diesel powered most UK Ford P100 pickups from 1983-1988, serving as the core commercial workhorse across Cortina and Sierra platform generations with strong torque for payload duties.",
           "descriptor": "The Perkins Prima diesel powered most UK Ford P100 pickups from 1983-1988, serving as the core commercial workhorse across Cortina and Sierra platform generations with strong torque for payload duties.",
+          "familiesLabel": "Common Ford P100 Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "PERK4D - 2.3L indirect injection, most common replacement engine for Commercial/LWB/SWB variants",
             "PERK4D-25 - 2.5L heavy-duty evolution, reinforced internals for higher payload Sierra-platform models",
@@ -1487,6 +1525,11 @@
           "title": "Ford P100 Petrol Engines",
           "description": "The Valencia and Pinto OHV petrol engines provided affordable, carburetted power for light commercial P100 use from 1982-1988, with the 2.0L Pinto delivering strong torque for performance-oriented classic owners.",
           "descriptor": "The Valencia and Pinto OHV petrol engines provided affordable, carburetted power for light commercial P100 use from 1982-1988, with the 2.0L Pinto delivering strong torque for performance-oriented classic owners.",
+          "familiesLabel": "Common Ford P100 Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "1600OHV - 1.6L Valencia entry petrol, simple carburetted design for budget-conscious restorers",
             "VALENCIA-16 - updated 1.6L with improved carb calibration and reliability tweaks",

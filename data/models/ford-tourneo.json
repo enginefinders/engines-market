@@ -15,13 +15,13 @@
     "canonical": "/ford/tourneo"
   },
   "assets": {
-    "heroBg": "/images/brands/ford/models/ford-ford-tourneo-model-card.png",
+    "heroBg": "/images/brands/ford/models/ford-tourneo-model-card.png",
     "howItWorksBg": "/images/brands/ford/brand/ford-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/ford/brand/ford-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/ford/brand/ford-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/ford/brand/ford-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/ford/brand/ford-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/ford/models/ford-ford-tourneo-model-card.png"
+    "ctaImage": "/images/brands/ford/models/ford-tourneo-model-card.png"
   },
   "sections": {
     "hero": {
@@ -686,8 +686,9 @@
             "name": "Diesel Engines",
             "entries": [
               {
-                "code": "DW10 - 2.",
-                "title": "0L Diesel",
+                "code": "DW10",
+                "title": "2.0L Diesel",
+                "familyHeading": "PSA DW Series / Ford Duratorq Diesel Engines (2006-2016)",
                 "history": "PSA DW10 engine co-developed with Ford, used in early Tourneo Custom models. Known for robust bottom end but problematic emissions components.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -706,8 +707,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "DW12 - 2.",
-                "title": "2L Diesel",
+                "code": "DW12",
+                "title": "2.2L Diesel",
+                "familyHeading": "PSA DW Series / Ford Duratorq Diesel Engines (2006-2016)",
                 "history": "Larger displacement PSA-derived unit offering higher torque output. Discontinued after 2016 as Ford shifted to in-house EcoBlue range.",
                 "fuel": "Diesel",
                 "size": "2.2 Litre",
@@ -726,8 +728,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "XXFA - 2.",
-                "title": "0L Diesel",
+                "code": "XXFA",
+                "title": "2.0L Diesel",
+                "familyHeading": "Ford EcoBlue Diesel Engines (2016-Present)",
                 "history": "Ford’s in-house EcoBlue family introduced to meet Euro 6 emissions standards. Replaced PSA-derived units with cleaner, more efficient design.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -746,8 +749,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "TXWA - 2.",
-                "title": "0L Diesel",
+                "code": "TXWA",
+                "title": "2.0L Diesel",
+                "familyHeading": "Ford EcoBlue Diesel Engines (2016-Present)",
                 "history": "Updated Euro 6d-compliant version of the EcoBlue. Features improved AdBlue injection and revised calibration for lower emissions.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -766,8 +770,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "BCFA - 2.",
-                "title": "0L Diesel (AWD)",
+                "code": "BCFA",
+                "title": "2.0L Diesel (AWD)",
+                "familyHeading": "Ford EcoBlue Diesel Engines (2016-Present)",
                 "history": "High-output EcoBlue variant paired with intelligent all-wheel-drive system. Tuned for passenger-carrying duties requiring extra traction.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -786,8 +791,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "DV5C - 1.",
-                "title": "5L Diesel",
+                "code": "DV5C",
+                "title": "1.5L Diesel",
+                "familyHeading": "DV / PSA Small Diesel Engines (2014-2022)",
                 "history": "Entry-level diesel for Tourneo Connect. PSA DV5 engine shared with Citroën and Peugeot partners. Balanced economy and adequate performance.",
                 "fuel": "Diesel",
                 "size": "1.5 Litre",
@@ -806,8 +812,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "BHDB - 1.",
-                "title": "5L Diesel",
+                "code": "BHDB",
+                "title": "1.5L Diesel",
+                "familyHeading": "DV / PSA Small Diesel Engines (2014-2022)",
                 "history": "Reliability-updated version of the DV5C with revised timing components. Produced for later Tourneo Connect models.",
                 "fuel": "Diesel",
                 "size": "1.5 Litre",
@@ -826,8 +833,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "HHDA - 1.",
-                "title": "6L Diesel",
+                "code": "HHDA",
+                "title": "1.6L Diesel",
+                "familyHeading": "DV / PSA Small Diesel Engines (2014-2022)",
                 "history": "Early generation small diesel fitted to first Tourneo Connect models. Simpler design than later common-rail units but prone to specific age-related issues.",
                 "fuel": "Diesel",
                 "size": "1.6 Litre",
@@ -851,8 +859,9 @@
             "name": "Petrol Engines",
             "entries": [
               {
-                "code": "M1JA - 1.",
-                "title": "0L Petrol",
+                "code": "M1JA",
+                "title": "1.0L Petrol",
+                "familyHeading": "Ford EcoBoost Petrol Engines (2012-Present)",
                 "history": "Award-winning three-cylinder turbocharged engine. Wet belt timing system runs inside the engine oil - pioneering design that later became a known failure point.",
                 "fuel": "Petrol",
                 "size": "1.0 Litre",
@@ -871,21 +880,39 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "M1JJ - 1.",
-                "title": "0L Petrol (Start-Stop)",
+                "code": "M1JJ",
+                "title": "1.0L Petrol (Start-Stop)",
+                "familyHeading": "Ford EcoBoost Petrol Engines (2012-Present)",
+                "history": "Micro-hybrid variant of the 1.0 EcoBoost with enhanced start-stop capability and revised belt materials. Fitted to later Tourneo Connect models.",
+                "fuel": "Petrol",
+                "size": "1.0 Litre",
+                "power": "125 hp",
+                "years": "2020-2022",
+                "compatibleVariants": [
+                  "Tourneo Connect, Tourneo Connect Titanium"
+                ],
+                "commonFailures": [
+                  "Wet belt delamination",
+                  "Oil contamination from belt debris",
+                  "Low oil pressure warnings"
+                ],
+                "avgRebuiltPrice": "£1,900 - £3,100",
+                "cta": "Get quotes for M1JJ Ford Tourneo engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              },
+              {
+                "code": "M1JA (1.5L)",
+                "title": "1.5L Petrol",
+                "familyHeading": "Ford EcoBoost Petrol Engines (2012-Present)",
                 "history": "Larger displacement EcoBoost for facelifted Tourneo Connect. Delivers stronger performance while retaining wet belt timing system.",
                 "fuel": "Petrol",
                 "size": "1.5 Litre",
                 "power": "150 hp",
                 "years": "2022-2025",
                 "compatibleVariants": [
-                  "Tourneo Connect, Tourneo Connect Titanium",
                   "Tourneo Connect, Tourneo Connect Titanium, Tourneo Connect Sport"
                 ],
                 "commonFailures": [
-                  "Wet belt delamination",
-                  "Oil contamination from belt debris",
-                  "Low oil pressure warnings",
                   "Wet belt degradation (same design as 1.0L variant)",
                   "Coolant loss from water pump",
                   "Turbocharger wastegate issues"
@@ -900,8 +927,9 @@
             "name": "Hybrid / Electrified Engines",
             "entries": [
               {
-                "code": "Duratec 2.5L - 2.",
-                "title": "5L Petrol Hybrid",
+                "code": "Duratec 2.5L",
+                "title": "2.5L Petrol Hybrid",
+                "familyHeading": "Ford Duratec PHEV Powertrain (2023-Present)",
                 "history": "Naturally aspirated Atkinson-cycle petrol engine paired with electric motor. Plug-in hybrid system offers up to 35 miles electric range for zero-emission passenger duty.",
                 "fuel": "PHEV (Petrol Hybrid)",
                 "size": "2.5 Litre",
@@ -953,7 +981,9 @@
           "failureNote": "Main replacement triggers are timing chain wear, EGR / cooling faults and turbo-control issues.",
           "engines": [
             {
-              "code": "DW10 - 2.",
+              "code": "DW10",
+              "title": "2.0L Diesel",
+              "familyHeading": "PSA DW Series / Ford Duratorq Diesel Engines (2006-2016)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "100-170 hp",
@@ -963,7 +993,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "DW12 - 2.",
+              "code": "DW12",
+              "title": "2.2L Diesel",
+              "familyHeading": "PSA DW Series / Ford Duratorq Diesel Engines (2006-2016)",
               "fuel": "Diesel",
               "size": "2.2L",
               "power": "125-155 hp",
@@ -973,7 +1005,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "XXFA - 2.",
+              "code": "XXFA",
+              "title": "2.0L Diesel",
+              "familyHeading": "Ford EcoBlue Diesel Engines (2016-Present)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "105-185 hp",
@@ -983,7 +1017,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "TXWA - 2.",
+              "code": "TXWA",
+              "title": "2.0L Diesel",
+              "familyHeading": "Ford EcoBlue Diesel Engines (2016-Present)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "130-185 hp",
@@ -993,7 +1029,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "BCFA - 2.",
+              "code": "BCFA",
+              "title": "2.0L Diesel (AWD)",
+              "familyHeading": "Ford EcoBlue Diesel Engines (2016-Present)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "170-185 hp",
@@ -1003,7 +1041,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "DV5C - 1.",
+              "code": "DV5C",
+              "title": "1.5L Diesel",
+              "familyHeading": "DV / PSA Small Diesel Engines (2014-2022)",
               "fuel": "Diesel",
               "size": "1.5L",
               "power": "95-120 hp",
@@ -1013,7 +1053,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "BHDB - 1.",
+              "code": "BHDB",
+              "title": "1.5L Diesel",
+              "familyHeading": "DV / PSA Small Diesel Engines (2014-2022)",
               "fuel": "Diesel",
               "size": "1.5L",
               "power": "95-120 hp",
@@ -1023,7 +1065,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "HHDA - 1.",
+              "code": "HHDA",
+              "title": "1.6L Diesel",
+              "familyHeading": "DV / PSA Small Diesel Engines (2014-2022)",
               "fuel": "Diesel",
               "size": "1.6L",
               "power": "90-95 hp",
@@ -1040,7 +1084,9 @@
           "failureNote": "Main replacement demand comes from timing-chain, cooling-system and performance thermal-management faults.",
           "engines": [
             {
-              "code": "M1JA - 1.",
+              "code": "M1JA",
+              "title": "1.0L Petrol",
+              "familyHeading": "Ford EcoBoost Petrol Engines (2012-Present)",
               "fuel": "Petrol",
               "size": "1.0L",
               "power": "100-140 hp",
@@ -1050,11 +1096,25 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "M1JJ - 1.",
+              "code": "M1JJ",
+              "title": "1.0L Petrol (Start-Stop)",
+              "familyHeading": "Ford EcoBoost Petrol Engines (2012-Present)",
+              "fuel": "Petrol",
+              "size": "1.0L",
+              "power": "125 hp",
+              "compatibleModels": "Tourneo Connect, Tourneo Connect Titanium",
+              "avgRebuiltPrice": "£1,900 - £3,100",
+              "cta": "Get quotes for M1JJ Ford Tourneo engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            },
+            {
+              "code": "M1JA (1.5L)",
+              "title": "1.5L Petrol",
+              "familyHeading": "Ford EcoBoost Petrol Engines (2012-Present)",
               "fuel": "Petrol",
               "size": "1.5L",
               "power": "150 hp",
-              "compatibleModels": "Tourneo Connect, Tourneo Connect Titanium, Tourneo Connect, Tourneo Connect Titanium, Tourneo Connect Sport",
+              "compatibleModels": "Tourneo Connect, Tourneo Connect Titanium, Tourneo Connect Sport",
               "avgRebuiltPrice": "£1,600 - £2,700",
               "cta": "Get quotes for M1JA 1.5L Ford Tourneo engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1067,7 +1127,9 @@
           "failureNote": "Main replacement demand comes from cooling, battery-support and high-voltage control faults.",
           "engines": [
             {
-              "code": "Duratec 2.5L - 2.",
+              "code": "Duratec 2.5L",
+              "title": "2.5L Petrol Hybrid",
+              "familyHeading": "Ford Duratec PHEV Powertrain (2023-Present)",
               "fuel": "PHEV (Petrol Hybrid)",
               "size": "2.5L",
               "power": "230 hp combined",
@@ -1544,6 +1606,11 @@
           "title": "Ford Tourneo Diesel Engines",
           "description": "Diesel dominates the Tourneo range across two generations of Custom and Connect, with the PSA-derived DW10/DW12 and later Ford in-house EcoBlue families generating the highest replacement demand in the UK passenger transport sector.",
           "descriptor": "Diesel dominates the Tourneo range across two generations of Custom and Connect, with the PSA-derived DW10/DW12 and later Ford in-house EcoBlue families generating the highest replacement demand in the UK passenger transport sector.",
+          "familiesLabel": "Common Ford Tourneo Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "DW10 - 2.0 TDCi, PSA-derived, EGR cooler failure king (Tourneo Custom 2012-2019)",
             "DW12 - 2.2 TDCi, high-torque option, turbocharger wear (Tourneo Custom 2012-2016)",
@@ -1578,6 +1645,11 @@
           "title": "Ford Tourneo Petrol Engines",
           "description": "Petrol power is limited to the Tourneo Connect range, dominated by the award-winning but wet belt-prone 1.0 EcoBoost three-cylinder, with a larger 1.5 EcoBoost appearing in later facelift models.",
           "descriptor": "Petrol power is limited to the Tourneo Connect range, dominated by the award-winning but wet belt-prone 1.0 EcoBoost three-cylinder, with a larger 1.5 EcoBoost appearing in later facelift models.",
+          "familiesLabel": "Common Ford Tourneo Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "M1JA - 1.0 EcoBoost three-cylinder, wet belt timing, high replacement demand (Tourneo Connect 2014-2022)",
             "M1JJ - 1.0 EcoBoost start-stop, micro-hybrid, revised belt materials (Tourneo Connect 2020-2022)",
@@ -1605,6 +1677,11 @@
           "title": "Ford Tourneo Hybrid / Electrified Engines",
           "description": "The Tourneo Custom gained a plug-in hybrid option in 2023, pairing a naturally aspirated Atkinson-cycle petrol engine with an electric motor for zero-emission urban passenger duty.",
           "descriptor": "The Tourneo Custom gained a plug-in hybrid option in 2023, pairing a naturally aspirated Atkinson-cycle petrol engine with an electric motor for zero-emission urban passenger duty.",
+          "familiesLabel": "Ford Tourneo PHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "Duratec 2.5L - Atkinson-cycle petrol, no turbo, no wet belt (Tourneo Custom PHEV 2023-2025)",
             "Electric motor provides up to 35 miles of zero-emission range",

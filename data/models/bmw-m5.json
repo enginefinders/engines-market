@@ -15,13 +15,13 @@
     "canonical": "/bmw/m5"
   },
   "assets": {
-    "heroBg": "/images/brands/bmw/models/bmw-bmw-m5-model-card.png",
+    "heroBg": "/images/brands/bmw/models/bmw-m5-model-card.png",
     "howItWorksBg": "/images/brands/bmw/brand/bmw-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/bmw/brand/bmw-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/bmw/brand/bmw-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/bmw/brand/bmw-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/bmw/brand/bmw-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/bmw/models/bmw-bmw-m5-model-card.png"
+    "ctaImage": "/images/brands/bmw/models/bmw-m5-model-card.png"
   },
   "sections": {
     "hero": {
@@ -737,6 +737,7 @@
               {
                 "code": "M88/3",
                 "title": "3.5L Petrol",
+                "familyHeading": "Classic Straight-Six & V8 Engines (1985-2003)",
                 "history": "The original M5 powerplant, derived from the M1 supercar. A twin-cam straight-six that set the template for high-performance saloons.",
                 "fuel": "Petrol",
                 "size": "3.5 Litre",
@@ -756,6 +757,7 @@
               {
                 "code": "S38B36",
                 "title": "3.6L Petrol",
+                "familyHeading": "Classic Straight-Six & V8 Engines (1985-2003)",
                 "history": "Evolution of the M88 with a longer stroke crankshaft and variable-length intake manifold. Built for the first-generation E34 M5.",
                 "fuel": "Petrol",
                 "size": "3.6 Litre",
@@ -775,6 +777,7 @@
               {
                 "code": "S38B38",
                 "title": "3.8L Petrol",
+                "familyHeading": "Classic Straight-Six & V8 Engines (1985-2003)",
                 "history": "The ultimate evolution of BMW's straight-six M engine. Displacement increased to 3.8 litres with dual-row timing chains for added durability.",
                 "fuel": "Petrol",
                 "size": "3.8 Litre",
@@ -794,6 +797,7 @@
               {
                 "code": "S62B50",
                 "title": "4.9L Petrol",
+                "familyHeading": "Classic Straight-Six & V8 Engines (1985-2003)",
                 "history": "The first V8 M5 engine, producing 400hp from a naturally aspirated 4.9-litre. Known for its \"growling\" induction noise and enthusiastic following among collectors.",
                 "fuel": "Petrol",
                 "size": "4.9 Litre",
@@ -814,6 +818,7 @@
               {
                 "code": "S85B50",
                 "title": "5.0L Petrol",
+                "familyHeading": "V10 Era (2005-2010)",
                 "history": "The only production V10 ever fitted to a saloon car. A 507hp naturally aspirated masterpiece with individual throttle bodies and a 8,250rpm redline - now a modern classic sought after by collectors.",
                 "fuel": "Petrol",
                 "size": "5.0 Litre",
@@ -835,6 +840,7 @@
               {
                 "code": "S63B44",
                 "title": "4.4L Petrol",
+                "familyHeading": "Twin-Turbo V8 Era (2011-Present)",
                 "history": "BMW's first turbocharged M5 engine, producing 560hp from a 4.4-litre V8 with twin turbos. Replaced the V10 and fundamentally changed the M5's character toward effortless torque.",
                 "fuel": "Petrol",
                 "size": "4.4 Litre",
@@ -855,6 +861,7 @@
               {
                 "code": "S63B44T2",
                 "title": "4.4L Petrol",
+                "familyHeading": "Twin-Turbo V8 Era (2011-Present)",
                 "history": "Updated \"Technical Update\" version of the S63. Revised turbos, cooling system, and ECU mapping - fitted to the F10 Competition Package cars producing 575hp.",
                 "fuel": "Petrol",
                 "size": "4.4 Litre",
@@ -875,6 +882,7 @@
               {
                 "code": "S63B44T4",
                 "title": "4.4L Petrol",
+                "familyHeading": "Twin-Turbo V8 Era (2011-Present)",
                 "history": "The most powerful S63 variant to date, fitted to the F90 M5. Produces 600hp in standard form and up to 635hp in the limited-run CS. Features cross-bank exhaust manifolds and upgraded turbos.",
                 "fuel": "Petrol",
                 "size": "4.4 Litre",
@@ -895,6 +903,7 @@
               {
                 "code": "S68B44 PHEV",
                 "title": "4.4L Petrol Hybrid",
+                "familyHeading": "Hybrid V8 Era (2024-Present)",
                 "history": "The most powerful production M5 ever, combining the S68 V8 with a plug-in hybrid system. Total system output of 727hp marks the beginning of the electrified M era.",
                 "fuel": "PHEV",
                 "size": "4.4 Litre",
@@ -944,6 +953,8 @@
           "engines": [
             {
               "code": "M88/3",
+              "title": "3.5L Petrol",
+              "familyHeading": "Classic Straight-Six & V8 Engines (1985-2003)",
               "fuel": "Petrol",
               "size": "3.5L",
               "power": "286 hp",
@@ -954,6 +965,8 @@
             },
             {
               "code": "S38B36",
+              "title": "3.6L Petrol",
+              "familyHeading": "Classic Straight-Six & V8 Engines (1985-2003)",
               "fuel": "Petrol",
               "size": "3.6L",
               "power": "315 hp",
@@ -964,6 +977,8 @@
             },
             {
               "code": "S38B38",
+              "title": "3.8L Petrol",
+              "familyHeading": "Classic Straight-Six & V8 Engines (1985-2003)",
               "fuel": "Petrol",
               "size": "3.8L",
               "power": "340 hp",
@@ -974,6 +989,8 @@
             },
             {
               "code": "S62B50",
+              "title": "4.9L Petrol",
+              "familyHeading": "Classic Straight-Six & V8 Engines (1985-2003)",
               "fuel": "Petrol",
               "size": "4.9L",
               "power": "400 hp",
@@ -984,6 +1001,8 @@
             },
             {
               "code": "S85B50",
+              "title": "5.0L Petrol",
+              "familyHeading": "V10 Era (2005-2010)",
               "fuel": "Petrol",
               "size": "5.0L",
               "power": "507 hp",
@@ -994,6 +1013,8 @@
             },
             {
               "code": "S63B44",
+              "title": "4.4L Petrol",
+              "familyHeading": "Twin-Turbo V8 Era (2011-Present)",
               "fuel": "Petrol",
               "size": "4.4L",
               "power": "560 hp",
@@ -1004,6 +1025,8 @@
             },
             {
               "code": "S63B44T2",
+              "title": "4.4L Petrol",
+              "familyHeading": "Twin-Turbo V8 Era (2011-Present)",
               "fuel": "Petrol",
               "size": "4.4L",
               "power": "575 hp",
@@ -1014,6 +1037,8 @@
             },
             {
               "code": "S63B44T4",
+              "title": "4.4L Petrol",
+              "familyHeading": "Twin-Turbo V8 Era (2011-Present)",
               "fuel": "Petrol",
               "size": "4.4L",
               "power": "600-635 hp",
@@ -1024,6 +1049,8 @@
             },
             {
               "code": "S68B44 PHEV",
+              "title": "4.4L Petrol Hybrid",
+              "familyHeading": "Hybrid V8 Era (2024-Present)",
               "fuel": "PHEV",
               "size": "4.4L",
               "power": "727 hp (combined system)",
@@ -1502,6 +1529,11 @@
           "title": "BMW M5 Petrol Engines",
           "description": "Every BMW M5 ever sold in the UK has been petrol-powered, spanning six generations of straight-six, V8 and V10 engines - from the original M88/3 to the latest S68 plug-in hybrid.",
           "descriptor": "Every BMW M5 ever sold in the UK has been petrol-powered, spanning six generations of straight-six, V8 and V10 engines - from the original M88/3 to the latest S68 plug-in hybrid.",
+          "familiesLabel": "Common BMW M5 Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "S85B50 - 5.0L V10 (E60/E61), catastrophic rod bearing failures drive replacement demand",
             "S63B44 - 4.4L twin-turbo V8 (F10), timing chain guide failure at 70k-100k miles",
@@ -1540,6 +1572,11 @@
           "title": "BMW M5 Plug-In Hybrid (PHEV) Engines",
           "description": "The G90 M5 introduced BMW's first electrified M5 powertrain - a plug-in hybrid combining the S68 4.4-litre twin-turbo V8 with an electric motor integrated into the gearbox.",
           "descriptor": "The G90 M5 introduced BMW's first electrified M5 powertrain - a plug-in hybrid combining the S68 4.4-litre twin-turbo V8 with an electric motor integrated into the gearbox.",
+          "familiesLabel": "BMW M5 PHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "S68B44 PHEV - 4.4L twin-turbo V8 with electric motor assist (G90/G99)",
             "Electric motor mounted inside the 8-speed automatic gearbox provides instant torque fill",

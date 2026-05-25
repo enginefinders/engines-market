@@ -15,13 +15,13 @@
     "canonical": "/jaguar/e-pace"
   },
   "assets": {
-    "heroBg": "/images/brands/jaguar/models/jaguar-jaguar-e-pace-model-card.png",
+    "heroBg": "/images/brands/jaguar/models/jaguar-e-pace-model-card.png",
     "howItWorksBg": "/images/brands/jaguar/brand/jaguar-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/jaguar/brand/jaguar-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/jaguar/brand/jaguar-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/jaguar/brand/jaguar-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/jaguar/brand/jaguar-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/jaguar/models/jaguar-jaguar-e-pace-model-card.png"
+    "ctaImage": "/images/brands/jaguar/models/jaguar-e-pace-model-card.png"
   },
   "sections": {
     "hero": {
@@ -738,16 +738,37 @@
             "name": "Diesel Engines",
             "entries": [
               {
+                "code": "204DTD",
+                "title": "2.0L Diesel",
+                "familyHeading": "Ingenium 2.0L Diesel (2017-2024)",
+                "history": "Introduced in 2017 as JLR's core Ingenium diesel, delivering strong low-end torque but later noted for timing chain wear.",
+                "fuel": "Diesel",
+                "size": "2.0 Litre",
+                "power": "163-180 hp",
+                "years": "2017-2020",
+                "compatibleVariants": [
+                  "D150 S, D150 SE, D150 R-Dynamic, D180 S, D180 SE, D180 R-Dynamic, D180 HSE"
+                ],
+                "commonFailures": [
+                  "Timing chain stretch and plastic guide failure (typically 60k-80k miles)",
+                  "EGR cooler cracking leading to coolant loss",
+                  "Injector seal carbon buildup"
+                ],
+                "avgRebuiltPrice": "£1,600 - £3,400",
+                "cta": "Get quotes for 204DTD Jaguar E-Pace engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+              },
+              {
                 "code": "AJ200D4",
                 "title": "2.0L Diesel",
-                "history": "Mid-cycle Ingenium diesel variant refined for Euro 6d compliance, offering smoother operation and reduced NVH levels.",
+                "familyHeading": "Ingenium 2.0L Diesel (2017-2024)",
+                "history": "Updated Ingenium block with revised emissions hardware and improved oil pump, powering the majority of D200 models.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
                 "power": "180-200 hp",
-                "years": "2021-2024",
+                "years": "2018-2024",
                 "compatibleVariants": [
-                  "D165 SE, D165 R-Dynamic, D200 S, D200 SE, D200 R-Dynamic, D200 HSE, D200 First Edition",
-                  "D180 SE, D180 R-Dynamic, D180 HSE, D200 R-Dynamic, D200 HSE, D200 Black Edition"
+                  "D165 SE, D165 R-Dynamic, D200 S, D200 SE, D200 R-Dynamic, D200 HSE, D200 First Edition"
                 ],
                 "commonFailures": [
                   "Turbocharger actuator sticking or motor failure",
@@ -759,8 +780,30 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "Mild",
-                "title": "hybrid belt starter generator bearing noise",
+                "code": "ING-20D-200",
+                "title": "2.0L Diesel",
+                "familyHeading": "Ingenium 2.0L Diesel (2017-2024)",
+                "history": "Mid-cycle Ingenium diesel variant refined for Euro 6d compliance, offering smoother operation and reduced NVH levels.",
+                "fuel": "Diesel",
+                "size": "2.0 Litre",
+                "power": "180-200 hp",
+                "years": "2021-2024",
+                "compatibleVariants": [
+                  "D180 SE, D180 R-Dynamic, D180 HSE, D200 R-Dynamic, D200 HSE, D200 Black Edition"
+                ],
+                "commonFailures": [
+                  "Mild-hybrid belt starter generator bearing noise",
+                  "AdBlue injector crystallisation",
+                  "Oil pressure sensor false readings"
+                ],
+                "avgRebuiltPrice": "£1,800 - £3,900",
+                "cta": "Get quotes for ING-20D-200 Jaguar E-Pace engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+              },
+              {
+                "code": "ING-20D-240",
+                "title": "2.0L Diesel",
+                "familyHeading": "Ingenium 2.0L Diesel (2017-2024)",
                 "history": "High-output pre-facelift diesel delivering peak torque for towing and performance, discontinued after the 2020 model year.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -786,27 +829,79 @@
               {
                 "code": "AJ200P4",
                 "title": "2.0L Petrol",
+                "familyHeading": "Ingenium 2.0L Petrol (2017-2024)",
+                "history": "Versatile four-cylinder turbo petrol forming the backbone of P200 and P250 ranges, balancing power with daily drivability.",
+                "fuel": "Petrol",
+                "size": "2.0 Litre",
+                "power": "200-250 hp",
+                "years": "2017-2024",
+                "compatibleVariants": [
+                  "P200 S, P200 SE, P200 R-Dynamic, P200 HSE, P250 R-Dynamic, P250 HSE, P250 First Edition"
+                ],
+                "commonFailures": [
+                  "Direct injection carbon buildup on intake valves",
+                  "Turbo wastegate rattle and linkage wear",
+                  "Thermostat housing crack causing coolant leaks"
+                ],
+                "avgRebuiltPrice": "£2,000 - £4,300",
+                "cta": "Get quotes for AJ200P4 Jaguar E-Pace engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              },
+              {
+                "code": "ING-20P-200",
+                "title": "2.0L Petrol",
+                "familyHeading": "Ingenium 2.0L Petrol (2017-2024)",
+                "history": "Entry-level turbo petrol code standardising the 200hp tune, widely adopted post-2020 facelift for improved fuel economy.",
+                "fuel": "Petrol",
+                "size": "2.0 Litre",
+                "power": "200 hp",
+                "years": "2020-2024",
+                "compatibleVariants": [
+                  "P200 SE, P200 R-Dynamic, P200 HSE, P200 Black"
+                ],
+                "commonFailures": [
+                  "High-pressure fuel pump premature wear",
+                  "Timing chain tensioner loss of preload",
+                  "Oil dilution in colder climates from rich cold-start maps"
+                ],
+                "avgRebuiltPrice": "£2,100 - £4,000",
+                "cta": "Get quotes for ING-20P-200 Jaguar E-Pace engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              },
+              {
+                "code": "ING-20P-250",
+                "title": "2.0L Petrol",
+                "familyHeading": "Ingenium 2.0L Petrol (2017-2024)",
+                "history": "Reinforced turbo petrol variant with twin-scroll charging, delivering sustained high-output performance across trim levels.",
+                "fuel": "Petrol",
+                "size": "2.0 Litre",
+                "power": "250 hp",
+                "years": "2017-2024",
+                "compatibleVariants": [
+                  "P250 R-Dynamic, P250 HSE, P250 First Edition, P250 Black"
+                ],
+                "commonFailures": [
+                  "Intercooler piping split under high boost pressure",
+                  "Valve cover gasket oil seepage",
+                  "Variable valve timing solenoid sticking"
+                ],
+                "avgRebuiltPrice": "£2,300 - £4,500",
+                "cta": "Get quotes for ING-20P-250 Jaguar E-Pace engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              },
+              {
+                "code": "ING-20P-300",
+                "title": "2.0L Petrol",
+                "familyHeading": "Ingenium 2.0L Petrol (2017-2024)",
                 "history": "Pre-facelift flagship petrol delivering 300hp, known for rapid acceleration and higher thermal stress under sustained load.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
                 "power": "300 hp",
                 "years": "2017-2020",
                 "compatibleVariants": [
-                  "P200 S, P200 SE, P200 R-Dynamic, P200 HSE, P250 R-Dynamic, P250 HSE, P250 First Edition",
-                  "P200 SE, P200 R-Dynamic, P200 HSE, P200 Black",
-                  "P250 R-Dynamic, P250 HSE, P250 First Edition, P250 Black",
                   "P300 HSE, P300 First Edition"
                 ],
                 "commonFailures": [
-                  "Direct injection carbon buildup on intake valves",
-                  "Turbo wastegate rattle and linkage wear",
-                  "Thermostat housing crack causing coolant leaks",
-                  "High-pressure fuel pump premature wear",
-                  "Timing chain tensioner loss of preload",
-                  "Oil dilution in colder climates from rich cold-start maps",
-                  "Intercooler piping split under high boost pressure",
-                  "Valve cover gasket oil seepage",
-                  "Variable valve timing solenoid sticking",
                   "Turbocharger bearing failure due to oil starvation",
                   "Crankcase ventilation valve diaphragm rupture",
                   "Spark plug electrode degradation causing misfires"
@@ -823,19 +918,37 @@
               {
                 "code": "AJ150P3",
                 "title": "1.5L Petrol",
+                "familyHeading": "Ingenium Petrol & PHEV Units (2020-2024)",
+                "history": "Compact three-cylinder mild-hybrid unit introduced to lower fleet emissions while maintaining responsive turbo performance.",
+                "fuel": "Petrol (MHEV)",
+                "size": "1.5 Litre",
+                "power": "160 hp",
+                "years": "2020-2024",
+                "compatibleVariants": [
+                  "P160 SE, P160 R-Dynamic, P160 HSE"
+                ],
+                "commonFailures": [
+                  "48V belt-alternator starter failure",
+                  "HPFP high-frequency vibration damage",
+                  "Engine mount deterioration from three-cylinder imbalance"
+                ],
+                "avgRebuiltPrice": "£2,400 - £4,500",
+                "cta": "Get quotes for AJ150P3 Jaguar E-Pace engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              },
+              {
+                "code": "ING-15PHEV",
+                "title": "1.5L PHEV",
+                "familyHeading": "Ingenium Petrol & PHEV Units (2020-2024)",
                 "history": "Plug-in hybrid powertrain combining a 1.5L turbo with an electric motor, engineered for urban EV range and touring power.",
                 "fuel": "Petrol (PHEV)",
                 "size": "1.5 Litre",
                 "power": "200 hp (ICE only) / 309 hp (combined)",
                 "years": "2020-2024",
                 "compatibleVariants": [
-                  "P160 SE, P160 R-Dynamic, P160 HSE",
                   "P300e S, P300e SE, P300e R-Dynamic, P300e HSE"
                 ],
                 "commonFailures": [
-                  "48V belt-alternator starter failure",
-                  "HPFP high-frequency vibration damage",
-                  "Engine mount deterioration from three-cylinder imbalance",
                   "High-voltage battery coolant circuit leaks",
                   "Inverter cooling pump motor burnout",
                   "ICE oil dilution from frequent short EV-mode commutes"
@@ -878,17 +991,45 @@
           "failureNote": "Main replacement triggers are timing chain wear, EGR / cooling faults and turbo-control issues.",
           "engines": [
             {
+              "code": "204DTD",
+              "title": "2.0L Diesel",
+              "familyHeading": "Ingenium 2.0L Diesel (2017-2024)",
+              "fuel": "Diesel",
+              "size": "2.0L",
+              "power": "163-180 hp",
+              "compatibleModels": "D150 S, D150 SE, D150 R-Dynamic, D180 S, D180 SE, D180 R-Dynamic, D180 HSE",
+              "avgRebuiltPrice": "£1,600 - £3,400",
+              "cta": "Get quotes for 204DTD Jaguar E-Pace engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+            },
+            {
               "code": "AJ200D4",
+              "title": "2.0L Diesel",
+              "familyHeading": "Ingenium 2.0L Diesel (2017-2024)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "180-200 hp",
-              "compatibleModels": "D165 SE, D165 R-Dynamic, D200 S, D200 SE, D200 R-Dynamic, D200 HSE, D200 First Edition, D180 SE, D180 R-Dynamic, D180 HSE, D200 R-Dynamic, D200 HSE, D200 Black Edition",
+              "compatibleModels": "D165 SE, D165 R-Dynamic, D200 S, D200 SE, D200 R-Dynamic, D200 HSE, D200 First Edition",
               "avgRebuiltPrice": "£1,700 - £3,800",
               "cta": "Get quotes for AJ200D4 Jaguar E-Pace engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "Mild",
+              "code": "ING-20D-200",
+              "title": "2.0L Diesel",
+              "familyHeading": "Ingenium 2.0L Diesel (2017-2024)",
+              "fuel": "Diesel",
+              "size": "2.0L",
+              "power": "180-200 hp",
+              "compatibleModels": "D180 SE, D180 R-Dynamic, D180 HSE, D200 R-Dynamic, D200 HSE, D200 Black Edition",
+              "avgRebuiltPrice": "£1,800 - £3,900",
+              "cta": "Get quotes for ING-20D-200 Jaguar E-Pace engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+            },
+            {
+              "code": "ING-20D-240",
+              "title": "2.0L Diesel",
+              "familyHeading": "Ingenium 2.0L Diesel (2017-2024)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "240 hp",
@@ -906,10 +1047,48 @@
           "engines": [
             {
               "code": "AJ200P4",
+              "title": "2.0L Petrol",
+              "familyHeading": "Ingenium 2.0L Petrol (2017-2024)",
+              "fuel": "Petrol",
+              "size": "2.0L",
+              "power": "200-250 hp",
+              "compatibleModels": "P200 S, P200 SE, P200 R-Dynamic, P200 HSE, P250 R-Dynamic, P250 HSE, P250 First Edition",
+              "avgRebuiltPrice": "£2,000 - £4,300",
+              "cta": "Get quotes for AJ200P4 Jaguar E-Pace engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            },
+            {
+              "code": "ING-20P-200",
+              "title": "2.0L Petrol",
+              "familyHeading": "Ingenium 2.0L Petrol (2017-2024)",
+              "fuel": "Petrol",
+              "size": "2.0L",
+              "power": "200 hp",
+              "compatibleModels": "P200 SE, P200 R-Dynamic, P200 HSE, P200 Black",
+              "avgRebuiltPrice": "£2,100 - £4,000",
+              "cta": "Get quotes for ING-20P-200 Jaguar E-Pace engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            },
+            {
+              "code": "ING-20P-250",
+              "title": "2.0L Petrol",
+              "familyHeading": "Ingenium 2.0L Petrol (2017-2024)",
+              "fuel": "Petrol",
+              "size": "2.0L",
+              "power": "250 hp",
+              "compatibleModels": "P250 R-Dynamic, P250 HSE, P250 First Edition, P250 Black",
+              "avgRebuiltPrice": "£2,300 - £4,500",
+              "cta": "Get quotes for ING-20P-250 Jaguar E-Pace engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            },
+            {
+              "code": "ING-20P-300",
+              "title": "2.0L Petrol",
+              "familyHeading": "Ingenium 2.0L Petrol (2017-2024)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "300 hp",
-              "compatibleModels": "P200 S, P200 SE, P200 R-Dynamic, P200 HSE, P250 R-Dynamic, P250 HSE, P250 First Edition, P200 SE, P200 R-Dynamic, P200 HSE, P200 Black, P250 R-Dynamic, P250 HSE, P250 First Edition, P250 Black, P300 HSE, P300 First Edition",
+              "compatibleModels": "P300 HSE, P300 First Edition",
               "avgRebuiltPrice": "£2,500 - £4,800",
               "cta": "Get quotes for ING-20P-300 Jaguar E-Pace engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -923,10 +1102,24 @@
           "engines": [
             {
               "code": "AJ150P3",
+              "title": "1.5L Petrol",
+              "familyHeading": "Ingenium Petrol & PHEV Units (2020-2024)",
+              "fuel": "Petrol (MHEV)",
+              "size": "1.5L",
+              "power": "160 hp",
+              "compatibleModels": "P160 SE, P160 R-Dynamic, P160 HSE",
+              "avgRebuiltPrice": "£2,400 - £4,500",
+              "cta": "Get quotes for AJ150P3 Jaguar E-Pace engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            },
+            {
+              "code": "ING-15PHEV",
+              "title": "1.5L PHEV",
+              "familyHeading": "Ingenium Petrol & PHEV Units (2020-2024)",
               "fuel": "Petrol (PHEV)",
               "size": "1.5L",
               "power": "200 hp (ICE only) / 309 hp (combined)",
-              "compatibleModels": "P160 SE, P160 R-Dynamic, P160 HSE, P300e S, P300e SE, P300e R-Dynamic, P300e HSE",
+              "compatibleModels": "P300e S, P300e SE, P300e R-Dynamic, P300e HSE",
               "avgRebuiltPrice": "£3,500 - £6,200",
               "cta": "Get quotes for ING-15PHEV Jaguar E-Pace engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1333,6 +1526,11 @@
           "title": "Jaguar E Pace Diesel Engines",
           "description": "The 2.0-litre Ingenium diesel powers the vast majority of UK E-Pace variants, spanning the entire X540 production run and dominating high-mileage replacement enquiries.",
           "descriptor": "The 2.0-litre Ingenium diesel powers the vast majority of UK E-Pace variants, spanning the entire X540 production run and dominating high-mileage replacement enquiries.",
+          "familiesLabel": "Common Jaguar E Pace Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "204DTD - D150/D165 pre-facelift unit, rear timing chain tensioner wear",
             "AJ200D4 - D180/D200 mainstream code, high commercial fleet mileage usage",
@@ -1363,6 +1561,11 @@
           "title": "Jaguar E Pace Petrol Engines",
           "description": "Ingenium petrol blocks deliver responsive turbo performance across the E-Pace range, transitioning from refined 4-cylinders to efficient three-cylinder MHEV setups.",
           "descriptor": "Ingenium petrol blocks deliver responsive turbo performance across the E-Pace range, transitioning from refined 4-cylinders to efficient three-cylinder MHEV setups.",
+          "familiesLabel": "Common Jaguar E Pace Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "AJ200P4 - P200/P250 foundational turbo, versatile daily driving powertrain",
             "ING-20P-300 - P300 twin-scroll high-output unit, pre-facelift performance flagship",
@@ -1391,6 +1594,11 @@
           "title": "Jaguar E Pace Hybrid / Electrified Engines",
           "description": "Facelift E-Pace models integrate a 48V belt-alternator starter system to improve stop-start smoothness and recover braking energy without plug-in complexity.",
           "descriptor": "Facelift E-Pace models integrate a 48V belt-alternator starter system to improve stop-start smoothness and recover braking energy without plug-in complexity.",
+          "familiesLabel": "Jaguar E Pace MHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "ING-15PHEV - P300e dedicated 1.5L petrol unit, rear electric motor integration",
             "Electric motor provides short-distance EV-only urban driving capability",

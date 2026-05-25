@@ -15,13 +15,13 @@
     "canonical": "/bmw/m8"
   },
   "assets": {
-    "heroBg": "/images/brands/bmw/models/bmw-bmw-m8-model-card.png",
+    "heroBg": "/images/brands/bmw/models/bmw-m8-model-card.png",
     "howItWorksBg": "/images/brands/bmw/brand/bmw-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/bmw/brand/bmw-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/bmw/brand/bmw-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/bmw/brand/bmw-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/bmw/brand/bmw-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/bmw/models/bmw-bmw-m8-model-card.png"
+    "ctaImage": "/images/brands/bmw/models/bmw-m8-model-card.png"
   },
   "sections": {
     "hero": {
@@ -713,6 +713,7 @@
               {
                 "code": "S63B44T4",
                 "title": "4.4 Litre Petrol",
+                "familyHeading": "S63 V8 Engine Family (2019-2025)",
                 "history": "The fourth-generation S63B44T4 debuted in the F90 M5 before powering the M8 range. Competition models received 617hp, making this twin-turbo V8 one of BMW's most potent production engines .",
                 "fuel": "Petrol",
                 "size": "4.4 Litre",
@@ -733,23 +734,58 @@
               {
                 "code": "S63B44B",
                 "title": "4.4 Litre Petrol",
+                "familyHeading": "S63 V8 Engine Family (2019-2025)",
+                "history": "The standard M8 engine code (non-Competition) producing 600hp. This variant of the S63 family delivers the same 4.4L twin-turbo V8 foundation with a slightly detuned state of tune for the base M8 models .",
+                "fuel": "Petrol",
+                "size": "4.4 Litre",
+                "power": "600 hp",
+                "years": "2019-2024",
+                "compatibleVariants": [
+                  "M8 Coupe, M8 Convertible, M8 Gran Coupe, M8 Pre-LCI"
+                ],
+                "commonFailures": [
+                  "Turbocharger failure - oil starvation or contamination can lead to premature turbo bearing seizure",
+                  "Valve stem seal wear - causes excessive oil consumption in higher-mileage units",
+                  "Cooling system weaknesses - water pumps and radiators can fail under high thermal load"
+                ],
+                "avgRebuiltPrice": "£13,500 - £19,500",
+                "cta": "Get quotes for S63B44B BMW M8 engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              },
+              {
+                "code": "S63B44T4 (Pre-LCI)",
+                "title": "4.4 Litre Petrol",
+                "familyHeading": "S63 V8 Engine Family (2019-2025)",
+                "history": "The early S63B44T4 variant fitted to pre-facelift M8 Competition models (2019-2021). These first-generation units established the M8's performance credentials before receiving minor updates for the LCI refresh .",
+                "fuel": "Petrol",
+                "size": "4.4 Litre",
+                "power": "617 hp",
+                "years": "2019-2021",
+                "compatibleVariants": [
+                  "M8 Competition Coupe (Pre-LCI), M8 Competition Convertible (Pre-LCI), M8 Competition Gran Coupe (Pre-LCI)"
+                ],
+                "commonFailures": [
+                  "Rod bearing failure - earlier S63 variants show higher incidence of bottom-end wear",
+                  "High oil consumption - piston ring and turbo seal wear reported in early production units",
+                  "Timing chain guide wear - can cause chain rattle and eventual failure if not addressed"
+                ],
+                "avgRebuiltPrice": "£14,000 - £21,000",
+                "cta": "Get quotes for S63B44T4 Pre-LCI BMW M8 engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              },
+              {
+                "code": "S63B44T4 (LCI)",
+                "title": "4.4 Litre Petrol",
+                "familyHeading": "S63 V8 Engine Family (2019-2025)",
                 "history": "The facelift (LCI) version of the Competition engine (2022-2025) featuring refinements to cooling, turbo management, and durability. Addresses several early production issues while maintaining 617hp output .",
                 "fuel": "Petrol",
                 "size": "4.4 Litre",
                 "power": "617 hp",
                 "years": "2022-2025",
                 "compatibleVariants": [
-                  "M8 Coupe, M8 Convertible, M8 Gran Coupe, M8 Pre-LCI",
-                  "M8 Competition Coupe (Pre-LCI), M8 Competition Convertible (Pre-LCI), M8 Competition Gran Coupe (Pre-LCI)",
                   "M8 Competition Coupe (LCI), M8 Competition Convertible (LCI), M8 Competition Gran Coupe (LCI), M8 Final Edition"
                 ],
                 "commonFailures": [
-                  "Turbocharger failure - oil starvation or contamination can lead to premature turbo bearing seizure",
-                  "Valve stem seal wear - causes excessive oil consumption in higher-mileage units",
-                  "Cooling system weaknesses - water pumps and radiators can fail under high thermal load",
-                  "Rod bearing failure - earlier S63 variants show higher incidence of bottom-end wear",
-                  "High oil consumption - piston ring and turbo seal wear reported in early production units",
-                  "Timing chain guide wear - can cause chain rattle and eventual failure if not addressed",
                   "Cooling system leaks - expansion tank and hose failures still reported despite updates",
                   "Spark plug misfire - high-stress operation accelerates plug degradation (30,000-40,000 mile interval)",
                   "HPFP failure - high-pressure fuel pump can fail, causing extended cranking and reduced power"
@@ -791,6 +827,8 @@
           "engines": [
             {
               "code": "S63B44T4",
+              "title": "4.4 Litre Petrol",
+              "familyHeading": "S63 V8 Engine Family (2019-2025)",
               "fuel": "Petrol",
               "size": "4.4L",
               "power": "600-625 hp",
@@ -801,10 +839,36 @@
             },
             {
               "code": "S63B44B",
+              "title": "4.4 Litre Petrol",
+              "familyHeading": "S63 V8 Engine Family (2019-2025)",
+              "fuel": "Petrol",
+              "size": "4.4L",
+              "power": "600 hp",
+              "compatibleModels": "M8 Coupe, M8 Convertible, M8 Gran Coupe, M8 Pre-LCI",
+              "avgRebuiltPrice": "£13,500 - £19,500",
+              "cta": "Get quotes for S63B44B BMW M8 engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            },
+            {
+              "code": "S63B44T4 (Pre-LCI)",
+              "title": "4.4 Litre Petrol",
+              "familyHeading": "S63 V8 Engine Family (2019-2025)",
               "fuel": "Petrol",
               "size": "4.4L",
               "power": "617 hp",
-              "compatibleModels": "M8 Coupe, M8 Convertible, M8 Gran Coupe, M8 Pre-LCI, M8 Competition Coupe (Pre-LCI), M8 Competition Convertible (Pre-LCI), M8 Competition Gran Coupe (Pre-LCI), M8 Competition Coupe (LCI), M8 Competition Convertible (LCI), M8 Competition Gran Coupe (LCI), M8 Final Edition",
+              "compatibleModels": "M8 Competition Coupe (Pre-LCI), M8 Competition Convertible (Pre-LCI), M8 Competition Gran Coupe (Pre-LCI)",
+              "avgRebuiltPrice": "£14,000 - £21,000",
+              "cta": "Get quotes for S63B44T4 Pre-LCI BMW M8 engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            },
+            {
+              "code": "S63B44T4 (LCI)",
+              "title": "4.4 Litre Petrol",
+              "familyHeading": "S63 V8 Engine Family (2019-2025)",
+              "fuel": "Petrol",
+              "size": "4.4L",
+              "power": "617 hp",
+              "compatibleModels": "M8 Competition Coupe (LCI), M8 Competition Convertible (LCI), M8 Competition Gran Coupe (LCI), M8 Final Edition",
               "avgRebuiltPrice": "£15,000 - £22,500",
               "cta": "Get quotes for S63B44T4 LCI BMW M8 engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1177,6 +1241,11 @@
           "title": "BMW M8 Petrol Engines",
           "description": "The M8 range uses a single petrol engine family - the S63 twin-turbo V8 - across all variants, body styles and production years from 2019 to 2025.",
           "descriptor": "The M8 range uses a single petrol engine family - the S63 twin-turbo V8 - across all variants, body styles and production years from 2019 to 2025.",
+          "familiesLabel": "Common BMW M8 Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "S63B44T4 - Competition variant (617hp), fitted to all M8 Competition, First Edition and Final Edition models",
             "S63B44B - standard output (600hp), fitted to base M8 Coupe, Convertible and Gran Coupe"

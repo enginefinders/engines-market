@@ -15,13 +15,13 @@
     "canonical": "/audi/a8"
   },
   "assets": {
-    "heroBg": "/images/brands/audi/models/audi-audi-a8-model-card.png",
+    "heroBg": "/images/brands/audi/models/audi-a8-model-card.png",
     "howItWorksBg": "/images/brands/audi/brand/audi-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/audi/brand/audi-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/audi/brand/audi-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/audi/brand/audi-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/audi/brand/audi-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/audi/models/audi-audi-a8-model-card.png"
+    "ctaImage": "/images/brands/audi/models/audi-a8-model-card.png"
   },
   "sections": {
     "hero": {
@@ -528,6 +528,7 @@
               {
                 "code": "CCWA",
                 "title": "3.0L Diesel",
+                "familyHeading": "3.0 TDI V6 Family (2003-2022)",
                 "history": "First-generation 3.0 TDI introduced with the D3 A8 in 2003. Established Audi’s diesel luxury credentials but gained notoriety for timing chain issues mounted at the rear of the engine.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -547,6 +548,7 @@
               {
                 "code": "CDYA",
                 "title": "3.0L Diesel",
+                "familyHeading": "3.0 TDI V6 Family (2003-2022)",
                 "history": "Updated Euro 5-compliant 3.0 TDI for the D4 A8 launch in 2010. Brought modest power increases while retaining the rear timing chain configuration that defined the generation’s replacement market.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -566,6 +568,7 @@
               {
                 "code": "CGQB",
                 "title": "3.0L Diesel",
+                "familyHeading": "3.0 TDI V6 Family (2003-2022)",
                 "history": "Late D4 generation 3.0 TDI with 286hp output. Represented the most powerful diesel variant before the D5 platform arrived, balancing performance with improved emissions compliance.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -585,6 +588,7 @@
               {
                 "code": "CDTA",
                 "title": "4.0L Diesel",
+                "familyHeading": "4.0 TDI V8 Family (2012-2020)",
                 "history": "Audi’s twin-turbo 4.0 V8 diesel introduced with the D4 facelift in 2012. Delivered 320hp and 650Nm torque, placing the A8 among the most refined diesel luxury saloons on the UK market.",
                 "fuel": "Diesel",
                 "size": "4.0 Litre",
@@ -604,6 +608,7 @@
               {
                 "code": "DAZA",
                 "title": "3.0L Diesel",
+                "familyHeading": "4.0 TDI V8 Family (2012-2020)",
                 "history": "D5 generation 3.0 TDI with 286hp, meeting Euro 6d emissions standards. Introduced mild hybrid technology, adding a belt alternator starter for coasting and improved efficiency.",
                 "fuel": "Diesel (MHEV)",
                 "size": "3.0 Litre",
@@ -623,6 +628,7 @@
               {
                 "code": "DDV",
                 "title": "3.0L Diesel",
+                "familyHeading": "4.0 TDI V8 Family (2012-2020)",
                 "history": "Updated D5 3.0 TDI producing 286hp with 600Nm torque. Featured in the 50 TDI badged variants, pairing diesel efficiency with quattro all-wheel drive as standard .",
                 "fuel": "Diesel (MHEV)",
                 "size": "3.0 Litre",
@@ -647,6 +653,7 @@
               {
                 "code": "CGWB",
                 "title": "3.0L Petrol",
+                "familyHeading": "3.0 TFSI V6 Supercharged Family (2010-2018)",
                 "history": "Supercharged 3.0 V6 FSI that debuted with the D4 A8 in 2010. Produced 290hp and introduced direct injection to the A8 petrol line-up, but brought carbon buildup on intake valves as a known trade-off.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -667,6 +674,7 @@
               {
                 "code": "CREC",
                 "title": "3.0L Petrol",
+                "familyHeading": "3.0 TFSI V6 Supercharged Family (2010-2018)",
                 "history": "Late D4 supercharged 3.0 TFSI producing 333hp with improved thermal management. Featured dual injection (port and direct) to reduce carbon buildup issues that plagued earlier direct-injection units.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -686,6 +694,7 @@
               {
                 "code": "BVN",
                 "title": "4.2L Petrol",
+                "familyHeading": "4.2 FSI V8 Family (2006-2010)",
                 "history": "4.2 litre V8 FSI fitted to the D3 A8 producing 372hp (272kW) and 650Nm torque. Represented the naturally-aspirated peak before forced induction became dominant in the luxury class .",
                 "fuel": "Petrol",
                 "size": "4.2 Litre",
@@ -706,6 +715,7 @@
               {
                 "code": "CTWA",
                 "title": "4.0L Petrol",
+                "familyHeading": "4.0 TFSI V8 Twin-Turbo Family (2012-2018)",
                 "history": "Twin-turbo 4.0 V8 debuting in the S8, producing 435hp. Featured cylinder-on-demand technology, shutting down four cylinders under light load, and an electric compressor to eliminate turbo lag.",
                 "fuel": "Petrol",
                 "size": "4.0 Litre",
@@ -725,6 +735,7 @@
               {
                 "code": "CTWB",
                 "title": "4.0L Petrol",
+                "familyHeading": "4.0 TFSI V8 Twin-Turbo Family (2012-2018)",
                 "history": "Higher-output version of the 4.0 twin-turbo V8 producing 460hp. Equipped in the later S8 models with improved cooling and revised ECU mapping for enhanced performance delivery.",
                 "fuel": "Petrol",
                 "size": "4.0 Litre",
@@ -744,26 +755,15 @@
               {
                 "code": "BHT",
                 "title": "6.0L Petrol",
+                "familyHeading": "W12 Petrol Family (2001-2010)",
                 "history": "The iconic 6.0 litre W12 producing 450hp, representing the pinnacle of D3 A8 luxury. Essentially two narrow-angle V6 engines sharing a common crankshaft, offering Bentley-adjacent refinement in an Audi flagship .",
                 "fuel": "Petrol",
                 "size": "6.0 Litre",
                 "power": "450 hp",
                 "years": "2004-2010",
-                "compatibleVariants": [],
-                "commonFailures": [],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "A",
-                "title": "8 L W12, A8 L W12 quattro",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
+                "compatibleVariants": [
+                  "A8 L W12, A8 L W12 quattro"
+                ],
                 "commonFailures": [
                   "Timing chain service complexity (engine-out procedure)",
                   "Ignition coil failures",
@@ -776,6 +776,7 @@
               {
                 "code": "AZC",
                 "title": "6.0L Petrol",
+                "familyHeading": "W12 Petrol Family (2001-2010)",
                 "history": "Early 6.0 W12 fitted to the D2 facelift A8, producing 420hp. Represented Audi’s first production W12 engine, developed with input from Bentley engineers.",
                 "fuel": "Petrol",
                 "size": "6.0 Litre",
@@ -800,6 +801,7 @@
               {
                 "code": "DGXA",
                 "title": "3.0L Petrol PHEV",
+                "familyHeading": "Plug-in Hybrid Powertrain (2021-present)",
                 "history": "Plug-in hybrid version of the D5 A8, combining the 3.0 TFSI V6 with an electric motor. Badged as the 60 TFSI e, offering electric-only range for urban zero-emission driving while retaining long-distance petrol capability.",
                 "fuel": "PHEV (Petrol + Electric)",
                 "size": "3.0 Litre",
@@ -818,6 +820,7 @@
               {
                 "code": "Complex",
                 "title": "hybrid control module failures",
+                "familyHeading": "Plug-in Hybrid Powertrain (2021-present)",
                 "history": "",
                 "fuel": "",
                 "size": "",
@@ -864,6 +867,8 @@
           "engines": [
             {
               "code": "CCWA",
+              "title": "3.0L Diesel",
+              "familyHeading": "3.0 TDI V6 Family (2003-2022)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "204-233 hp",
@@ -874,6 +879,8 @@
             },
             {
               "code": "CDYA",
+              "title": "3.0L Diesel",
+              "familyHeading": "3.0 TDI V6 Family (2003-2022)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "204-245 hp",
@@ -884,6 +891,8 @@
             },
             {
               "code": "CGQB",
+              "title": "3.0L Diesel",
+              "familyHeading": "3.0 TDI V6 Family (2003-2022)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "258-286 hp",
@@ -894,6 +903,8 @@
             },
             {
               "code": "CDTA",
+              "title": "4.0L Diesel",
+              "familyHeading": "4.0 TDI V8 Family (2012-2020)",
               "fuel": "Diesel",
               "size": "4.0L",
               "power": "320-350 hp",
@@ -904,6 +915,8 @@
             },
             {
               "code": "DAZA",
+              "title": "3.0L Diesel",
+              "familyHeading": "4.0 TDI V8 Family (2012-2020)",
               "fuel": "Diesel (MHEV)",
               "size": "3.0L",
               "power": "286 hp",
@@ -914,6 +927,8 @@
             },
             {
               "code": "DDV",
+              "title": "3.0L Diesel",
+              "familyHeading": "4.0 TDI V8 Family (2012-2020)",
               "fuel": "Diesel (MHEV)",
               "size": "3.0L",
               "power": "286 hp",
@@ -931,6 +946,8 @@
           "engines": [
             {
               "code": "CGWB",
+              "title": "3.0L Petrol",
+              "familyHeading": "3.0 TFSI V6 Supercharged Family (2010-2018)",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "290 hp",
@@ -941,6 +958,8 @@
             },
             {
               "code": "CREC",
+              "title": "3.0L Petrol",
+              "familyHeading": "3.0 TFSI V6 Supercharged Family (2010-2018)",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "333 hp",
@@ -951,6 +970,8 @@
             },
             {
               "code": "BVN",
+              "title": "4.2L Petrol",
+              "familyHeading": "4.2 FSI V8 Family (2006-2010)",
               "fuel": "Petrol",
               "size": "4.2L",
               "power": "372 hp",
@@ -961,6 +982,8 @@
             },
             {
               "code": "CTWA",
+              "title": "4.0L Petrol",
+              "familyHeading": "4.0 TFSI V8 Twin-Turbo Family (2012-2018)",
               "fuel": "Petrol",
               "size": "4.0L",
               "power": "435 hp",
@@ -971,6 +994,8 @@
             },
             {
               "code": "CTWB",
+              "title": "4.0L Petrol",
+              "familyHeading": "4.0 TFSI V8 Twin-Turbo Family (2012-2018)",
               "fuel": "Petrol",
               "size": "4.0L",
               "power": "460 hp",
@@ -981,26 +1006,20 @@
             },
             {
               "code": "BHT",
+              "title": "6.0L Petrol",
+              "familyHeading": "W12 Petrol Family (2001-2010)",
               "fuel": "Petrol",
               "size": "6.0L",
               "power": "450 hp",
-              "compatibleModels": "",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "A",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
+              "compatibleModels": "A8 L W12, A8 L W12 quattro",
               "avgRebuiltPrice": "£3,500 - £5,800",
               "cta": "Get quotes for BHT Audi A8 engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
               "code": "AZC",
+              "title": "6.0L Petrol",
+              "familyHeading": "W12 Petrol Family (2001-2010)",
               "fuel": "Petrol",
               "size": "6.0L",
               "power": "420 hp",
@@ -1018,6 +1037,8 @@
           "engines": [
             {
               "code": "DGXA",
+              "title": "3.0L Petrol PHEV",
+              "familyHeading": "Plug-in Hybrid Powertrain (2021-present)",
               "fuel": "PHEV (Petrol + Electric)",
               "size": "3.0L",
               "power": "462 hp (combined)",
@@ -1028,6 +1049,8 @@
             },
             {
               "code": "Complex",
+              "title": "hybrid control module failures",
+              "familyHeading": "Plug-in Hybrid Powertrain (2021-present)",
               "fuel": "",
               "size": "",
               "power": "",
@@ -1502,6 +1525,11 @@
           "title": "Audi A8 Diesel Engines",
           "description": "The 3.0 V6 TDI dominated A8 diesel production across three generations (D3, D4, D5), with the 4.0 V8 TDI offered as a premium torque-rich alternative.",
           "descriptor": "The 3.0 V6 TDI dominated A8 diesel production across three generations (D3, D4, D5), with the 4.0 V8 TDI offered as a premium torque-rich alternative.",
+          "familiesLabel": "Common Audi A8 Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "CCWA/CDYA - first and second-gen 3.0 TDI (204-245hp), timing chain tensioner vulnerability",
             "CGQB/CRCA - late D4 3.0 TDI (258-286hp), turbo and EGR cooler concerns",
@@ -1531,6 +1559,11 @@
           "title": "Audi A8 Petrol Engines",
           "description": "Supercharged 3.0 V6 TFSI units dominated the D4 petrol range, while the D3 offered a 4.2 V8 FSI and legendary W12, and the D5 introduced twin-turbo 4.0 V8 power.",
           "descriptor": "Supercharged 3.0 V6 TFSI units dominated the D4 petrol range, while the D3 offered a 4.2 V8 FSI and legendary W12, and the D5 introduced twin-turbo 4.0 V8 power.",
+          "familiesLabel": "Common Audi A8 Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "CGWB/CREC - supercharged 3.0 V6 TFSI (290-333hp), carbon buildup on valves",
             "BVN - 4.2 V8 FSI (372hp), oil consumption from piston ring wear",
@@ -1564,6 +1597,11 @@
           "title": "Audi A8 Plug-in Hybrid (PHEV) Engines",
           "description": "The D5 A8 gained a plug-in hybrid variant in 2021, combining the 3.0 V6 TFSI petrol engine with an electric motor for powerful yet efficient flagship motoring.",
           "descriptor": "The D5 A8 gained a plug-in hybrid variant in 2021, combining the 3.0 V6 TFSI petrol engine with an electric motor for powerful yet efficient flagship motoring.",
+          "familiesLabel": "Audi A8 PHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "DGXA - 3.0 TFSI plug-in hybrid (60 TFSI e), combined 462hp",
             "Petrol engine paired with electric motor and high-voltage battery (approx 17.9 kWh usable)",

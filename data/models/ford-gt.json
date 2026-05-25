@@ -15,13 +15,13 @@
     "canonical": "/ford/gt"
   },
   "assets": {
-    "heroBg": "/images/brands/ford/models/ford-ford-gt-model-card.png",
+    "heroBg": "/images/brands/ford/models/ford-gt-model-card.png",
     "howItWorksBg": "/images/brands/ford/brand/ford-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/ford/brand/ford-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/ford/brand/ford-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/ford/brand/ford-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/ford/brand/ford-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/ford/models/ford-ford-gt-model-card.png"
+    "ctaImage": "/images/brands/ford/models/ford-gt-model-card.png"
   },
   "sections": {
     "hero": {
@@ -616,8 +616,9 @@
             "name": "Petrol Engines",
             "entries": [
               {
-                "code": "GT-5.4SC - 5.",
-                "title": "4L Petrol",
+                "code": "GT-5.4SC",
+                "title": "5.4L Petrol",
+                "familyHeading": "Modular V8 Supercharged Family (2004-2006)",
                 "history": "GT-specific Modular V8, forged internals, dry sump, Eaton supercharger - heart of the 2004-2006 supercar.",
                 "fuel": "Petrol",
                 "size": "5.4 Litre",
@@ -636,8 +637,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "MOD-GT - 5.",
-                "title": "4L Petrol",
+                "code": "MOD-GT",
+                "title": "5.4L Petrol",
+                "familyHeading": "Modular V8 Supercharged Family (2004-2006)",
                 "history": "Heritage Edition Modular V8 - identical to GT-5.4SC with Gulf livery package, same 550hp supercharged output.",
                 "fuel": "Petrol",
                 "size": "5.4 Litre",
@@ -656,8 +658,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "GT-3.5TT - 3.",
-                "title": "5L Petrol",
+                "code": "GT-3.5TT",
+                "title": "3.5L Petrol",
+                "familyHeading": "EcoBoost Twin-Turbo V6 Family (2017-2022)",
                 "history": "Ford's most powerful EcoBoost - twin-turbo 3.5L V6 exclusive to MkII GT with active aero integration.",
                 "fuel": "Petrol",
                 "size": "3.5 Litre",
@@ -676,8 +679,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "ECO-GT - 3.",
-                "title": "5L Petrol",
+                "code": "ECO-GT",
+                "title": "3.5L Petrol",
+                "familyHeading": "EcoBoost Twin-Turbo V6 Family (2017-2022)",
                 "history": "Competition Series EcoBoost - track-focused calibration of the GT's 647hp twin-turbo V6 architecture.",
                 "fuel": "Petrol",
                 "size": "3.5 Litre",
@@ -696,8 +700,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "TT-350 - 3.",
-                "title": "5L Petrol",
+                "code": "TT-350",
+                "title": "3.5L Petrol",
+                "familyHeading": "EcoBoost Twin-Turbo V6 Family (2017-2022)",
                 "history": "Late-production EcoBoost variant - refined calibration, final evolution of the GT twin-turbo V6 platform.",
                 "fuel": "Petrol",
                 "size": "3.5 Litre",
@@ -716,8 +721,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "SC-UPG - 3.",
-                "title": "5L Petrol",
+                "code": "SC-UPG",
+                "title": "3.5L Petrol",
+                "familyHeading": "EcoBoost Twin-Turbo V6 Family (2017-2022)",
                 "history": "Final MkII production code - updated ECU mapping, most refined state of the GT EcoBoost platform.",
                 "fuel": "Petrol",
                 "size": "3.5 Litre",
@@ -767,7 +773,9 @@
           "failureNote": "Main replacement demand comes from timing-chain, cooling-system and performance thermal-management faults.",
           "engines": [
             {
-              "code": "GT-5.4SC - 5.",
+              "code": "GT-5.4SC",
+              "title": "5.4L Petrol",
+              "familyHeading": "Modular V8 Supercharged Family (2004-2006)",
               "fuel": "Petrol",
               "size": "5.4L",
               "power": "550 hp",
@@ -777,7 +785,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "MOD-GT - 5.",
+              "code": "MOD-GT",
+              "title": "5.4L Petrol",
+              "familyHeading": "Modular V8 Supercharged Family (2004-2006)",
               "fuel": "Petrol",
               "size": "5.4L",
               "power": "550 hp",
@@ -787,7 +797,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "GT-3.5TT - 3.",
+              "code": "GT-3.5TT",
+              "title": "3.5L Petrol",
+              "familyHeading": "EcoBoost Twin-Turbo V6 Family (2017-2022)",
               "fuel": "Petrol",
               "size": "3.5L",
               "power": "647 hp",
@@ -797,7 +809,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "ECO-GT - 3.",
+              "code": "ECO-GT",
+              "title": "3.5L Petrol",
+              "familyHeading": "EcoBoost Twin-Turbo V6 Family (2017-2022)",
               "fuel": "Petrol",
               "size": "3.5L",
               "power": "647 hp",
@@ -807,7 +821,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "TT-350 - 3.",
+              "code": "TT-350",
+              "title": "3.5L Petrol",
+              "familyHeading": "EcoBoost Twin-Turbo V6 Family (2017-2022)",
               "fuel": "Petrol",
               "size": "3.5L",
               "power": "647 hp",
@@ -817,7 +833,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "SC-UPG - 3.",
+              "code": "SC-UPG",
+              "title": "3.5L Petrol",
+              "familyHeading": "EcoBoost Twin-Turbo V6 Family (2017-2022)",
               "fuel": "Petrol",
               "size": "3.5L",
               "power": "647 hp",
@@ -1165,6 +1183,11 @@
           "title": "Ford GT Petrol Engines",
           "description": "The Ford GT is exclusively petrol-powered across both generations, featuring either the supercharged 5.4L Modular V8 (MkI, 2004-2006) or the twin-turbo 3.5L EcoBoost V6 (MkII, 2017-present), both requiring super unleaded fuel.",
           "descriptor": "The Ford GT is exclusively petrol-powered across both generations, featuring either the supercharged 5.4L Modular V8 (MkI, 2004-2006) or the twin-turbo 3.5L EcoBoost V6 (MkII, 2017-present), both requiring super unleaded fuel.",
+          "familiesLabel": "Common Ford GT Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "GT-5.4SC / MOD-GT - MkI supercharged 5.4L V8, dry sump, 550hp, intercooler pump vulnerability",
             "GT-3.5TT / ECO-GT / TT-350 - MkII twin-turbo 3.5L EcoBoost V6, 647hp, active aero integration"

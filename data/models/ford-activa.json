@@ -15,13 +15,13 @@
     "canonical": "/ford/activa"
   },
   "assets": {
-    "heroBg": "/images/brands/ford/models/ford-ford-activa-model-card.png",
+    "heroBg": "/images/brands/ford/models/ford-activa-model-card.png",
     "howItWorksBg": "/images/brands/ford/brand/ford-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/ford/brand/ford-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/ford/brand/ford-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/ford/brand/ford-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/ford/brand/ford-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/ford/models/ford-ford-activa-model-card.png"
+    "ctaImage": "/images/brands/ford/models/ford-activa-model-card.png"
   },
   "sections": {
     "hero": {
@@ -705,8 +705,9 @@
             "name": "Petrol Engines",
             "entries": [
               {
-                "code": "M1JA - 1.",
-                "title": "0L Petrol",
+                "code": "M1JA",
+                "title": "1.0L Petrol",
+                "familyHeading": "EcoBoost Family (2013-2024)",
                 "history": "Ford's smallest turbo petrol, dominant in Activa range but plagued by wet belt degradation issues.",
                 "fuel": "Petrol",
                 "size": "1.0 Litre",
@@ -725,8 +726,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "M1JC - 1.",
-                "title": "0L Petrol",
+                "code": "M1JC",
+                "title": "1.0L Petrol",
+                "familyHeading": "EcoBoost Family (2013-2024)",
                 "history": "Revised M1JA with updated tensioner, improved durability but still wet belt design.",
                 "fuel": "Petrol",
                 "size": "1.0 Litre",
@@ -744,8 +746,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "M1DA - 1.",
-                "title": "0L Petrol",
+                "code": "M1DA",
+                "title": "1.0L Petrol",
+                "familyHeading": "EcoBoost Family (2013-2024)",
                 "history": "Base-spec EcoBoost variant, cost-effective but shares wet belt vulnerability with higher outputs.",
                 "fuel": "Petrol",
                 "size": "1.0 Litre",
@@ -763,8 +766,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "M1JE - 1.",
-                "title": "0L Petrol",
+                "code": "M1JE",
+                "title": "1.0L Petrol",
+                "familyHeading": "EcoBoost Family (2013-2024)",
                 "history": "Post-2020 EcoBoost with improved belt material, addressing earlier wet belt concerns.",
                 "fuel": "Petrol",
                 "size": "1.0 Litre",
@@ -782,8 +786,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "M1JF - 1.",
-                "title": "0L Petrol",
+                "code": "M1JF",
+                "title": "1.0L Petrol",
+                "familyHeading": "EcoBoost Family (2013-2024)",
                 "history": "Latest EcoBoost iteration with warranty-compliant rebuild specifications for 2022+ models.",
                 "fuel": "Petrol",
                 "size": "1.0 Litre",
@@ -801,8 +806,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "M1CA - 1.",
-                "title": "0L Petrol",
+                "code": "M1CA",
+                "title": "1.0L Petrol",
+                "familyHeading": "EcoBoost Family (2013-2024)",
                 "history": "Early EcoBoost subject to wet belt recall; updated tensioner kits now standard in rebuilds.",
                 "fuel": "Petrol",
                 "size": "1.0 Litre",
@@ -820,8 +826,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "M1JJ - 1.",
-                "title": "0L Petrol MHEV",
+                "code": "M1JJ",
+                "title": "1.0L Petrol MHEV",
+                "familyHeading": "EcoBoost Family (2013-2024)",
                 "history": "Mild-hybrid EcoBoost with 48V system integration, offering improved efficiency and start-stop refinement.",
                 "fuel": "Petrol MHEV",
                 "size": "1.0 Litre",
@@ -839,8 +846,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "XWDA - 1.",
-                "title": "2L Petrol",
+                "code": "XWDA",
+                "title": "1.2L Petrol",
+                "familyHeading": "Ti-VCT Family (2013-2017)",
                 "history": "Naturally aspirated Duratec offering reliable, budget-friendly motoring without turbo complexity.",
                 "fuel": "Petrol",
                 "size": "1.2 Litre",
@@ -858,8 +866,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "XWDB - 1.",
-                "title": "2L Petrol",
+                "code": "XWDB",
+                "title": "1.2L Petrol",
+                "familyHeading": "Ti-VCT Family (2013-2017)",
                 "history": "Economy-tuned Ti-VCT variant optimised for urban commuting and low-emission zones.",
                 "fuel": "Petrol",
                 "size": "1.2 Litre",
@@ -877,8 +886,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "HXDA - 1.",
-                "title": "2L Petrol",
+                "code": "HXDA",
+                "title": "1.2L Petrol",
+                "familyHeading": "Ti-VCT Family (2013-2017)",
                 "history": "Small-displacement EcoBoost bridging efficiency and performance for urban-focused Activa buyers.",
                 "fuel": "Petrol",
                 "size": "1.2 Litre",
@@ -896,8 +906,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "IQDA - 1.",
-                "title": "6L Petrol",
+                "code": "IQDA",
+                "title": "1.6L Petrol",
+                "familyHeading": "Ti-VCT 1.6L Family (2013-2017)",
                 "history": "Proven naturally aspirated four-cylinder delivering smooth power and established reliability in the Activa.",
                 "fuel": "Petrol",
                 "size": "1.6 Litre",
@@ -915,8 +926,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "IQDB - 1.",
-                "title": "6L Petrol",
+                "code": "IQDB",
+                "title": "1.6L Petrol",
+                "familyHeading": "Ti-VCT 1.6L Family (2013-2017)",
                 "history": "Revised Ti-VCT with updated mapping for improved fuel economy and emissions compliance.",
                 "fuel": "Petrol",
                 "size": "1.6 Litre",
@@ -934,8 +946,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "M2DA - 1.",
-                "title": "5L Petrol",
+                "code": "M2DA",
+                "title": "1.5L Petrol",
+                "familyHeading": "EcoBoost Performance Family (2017-2021)",
                 "history": "High-output EcoBoost delivering sporty performance while maintaining turbo efficiency for enthusiast Activa buyers.",
                 "fuel": "Petrol",
                 "size": "1.5 Litre",
@@ -953,8 +966,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
-                "code": "M2DC - 1.",
-                "title": "5L Petrol",
+                "code": "M2DC",
+                "title": "1.5L Petrol",
+                "familyHeading": "EcoBoost Performance Family (2017-2021)",
                 "history": "Top-spec EcoBoost with sport mapping compatibility, reserved for premium Activa trims.",
                 "fuel": "Petrol",
                 "size": "1.5 Litre",
@@ -977,8 +991,9 @@
             "name": "Diesel Engines",
             "entries": [
               {
-                "code": "DV5C - 1.",
-                "title": "5L Diesel",
+                "code": "DV5C",
+                "title": "1.5L Diesel",
+                "familyHeading": "TDCi Duratorq Family (2013-2017)",
                 "history": "Compact Duratorq diesel balancing economy and refinement, though turbo reliability concerns emerged in UK conditions.",
                 "fuel": "Diesel",
                 "size": "1.5 Litre",
@@ -996,8 +1011,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "DV5D - 1.",
-                "title": "5L Diesel",
+                "code": "DV5D",
+                "title": "1.5L Diesel",
+                "familyHeading": "TDCi Duratorq Family (2013-2017)",
                 "history": "Updated TDCi with reliability enhancements addressing early turbo and EGR concerns.",
                 "fuel": "Diesel",
                 "size": "1.5 Litre",
@@ -1015,8 +1031,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "T1DA - 1.",
-                "title": "6L Diesel",
+                "code": "T1DA",
+                "title": "1.6L Diesel",
+                "familyHeading": "TDCi Duratorq Family (2013-2017)",
                 "history": "Established 1.6 Duratorq offering proven economy and widespread parts availability across the Activa range.",
                 "fuel": "Diesel",
                 "size": "1.6 Litre",
@@ -1034,8 +1051,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "T3DA - 1.",
-                "title": "6L Diesel",
+                "code": "T3DA",
+                "title": "1.6L Diesel",
+                "familyHeading": "TDCi Duratorq Family (2013-2017)",
                 "history": "High-output TDCi variant delivering enhanced torque for towing and motorway-focused Activa buyers.",
                 "fuel": "Diesel",
                 "size": "1.6 Litre",
@@ -1053,8 +1071,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "DV6C - 1.",
-                "title": "6L Diesel",
+                "code": "DV6C",
+                "title": "1.6L Diesel",
+                "familyHeading": "TDCi Duratorq Family (2013-2017)",
                 "history": "DPF-equipped Duratorq designed for Euro 5 compliance, common in urban Activa registrations.",
                 "fuel": "Diesel",
                 "size": "1.6 Litre",
@@ -1072,8 +1091,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "XW7J - 1.",
-                "title": "5L Diesel",
+                "code": "XW7J",
+                "title": "1.5L Diesel",
+                "familyHeading": "EcoBlue Family (2017-2024)",
                 "history": "Next-generation EcoBlue diesel meeting Euro 6 standards with improved efficiency and AdBlue integration.",
                 "fuel": "Diesel",
                 "size": "1.5 Litre",
@@ -1091,8 +1111,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "XW7K - 1.",
-                "title": "5L Diesel",
+                "code": "XW7K",
+                "title": "1.5L Diesel",
+                "familyHeading": "EcoBlue Family (2017-2024)",
                 "history": "Updated EcoBlue with RDE-compliant calibration for post-2021 Activa models.",
                 "fuel": "Diesel",
                 "size": "1.5 Litre",
@@ -1110,8 +1131,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "Y60J - 2.",
-                "title": "0L Diesel",
+                "code": "Y60J",
+                "title": "2.0L Diesel",
+                "familyHeading": "EcoBlue Family (2017-2024)",
                 "history": "Heavy-duty EcoBlue delivering high torque for towing and commercial-use Activa variants.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -1129,8 +1151,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "Y60K - 2.",
-                "title": "0L Diesel",
+                "code": "Y60K",
+                "title": "2.0L Diesel",
+                "familyHeading": "EcoBlue Family (2017-2024)",
                 "history": "Fleet-spec EcoBlue with Euro 6d-Temp compliance, optimised for high-mileage Activa usage.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -1148,8 +1171,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "ZSD-420 - 2.",
-                "title": "0L Diesel",
+                "code": "ZSD-420",
+                "title": "2.0L Diesel",
+                "familyHeading": "Legacy Duratorq Family (2013-2017)",
                 "history": "Pre-EcoBlue Duratorq offering robust torque and simple mechanics, now supported by specialist rebuilders.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -1167,8 +1191,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
-                "code": "ZSD-422 - 2.",
-                "title": "0L Diesel",
+                "code": "ZSD-422",
+                "title": "2.0L Diesel",
+                "familyHeading": "Legacy Duratorq Family (2013-2017)",
                 "history": "Final iteration of the classic Duratorq before EcoBlue transition, valued for mechanical simplicity.",
                 "fuel": "Diesel",
                 "size": "2.0 Litre",
@@ -1191,8 +1216,9 @@
             "name": "Hybrid / Electrified Engines",
             "entries": [
               {
-                "code": "M1JJ - 1.",
-                "title": "0L Petrol MHEV",
+                "code": "M1JJ",
+                "title": "1.0L Petrol MHEV",
+                "familyHeading": "Mild Hybrid EcoBoost (2019-2021)",
                 "history": "First Activa hybrid option, pairing EcoBoost efficiency with 48V assistance for improved urban economy.",
                 "fuel": "Petrol MHEV",
                 "size": "1.0 Litre",
@@ -1243,7 +1269,9 @@
           "failureNote": "Main replacement demand comes from timing-chain, cooling-system and performance thermal-management faults.",
           "engines": [
             {
-              "code": "M1JA - 1.",
+              "code": "M1JA",
+              "title": "1.0L Petrol",
+              "familyHeading": "EcoBoost Family (2013-2024)",
               "fuel": "Petrol",
               "size": "1.0L",
               "power": "100-125 hp",
@@ -1253,7 +1281,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "M1JC - 1.",
+              "code": "M1JC",
+              "title": "1.0L Petrol",
+              "familyHeading": "EcoBoost Family (2013-2024)",
               "fuel": "Petrol",
               "size": "1.0L",
               "power": "100-125 hp",
@@ -1263,7 +1293,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "M1DA - 1.",
+              "code": "M1DA",
+              "title": "1.0L Petrol",
+              "familyHeading": "EcoBoost Family (2013-2024)",
               "fuel": "Petrol",
               "size": "1.0L",
               "power": "100 hp",
@@ -1273,7 +1305,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "M1JE - 1.",
+              "code": "M1JE",
+              "title": "1.0L Petrol",
+              "familyHeading": "EcoBoost Family (2013-2024)",
               "fuel": "Petrol",
               "size": "1.0L",
               "power": "100-125 hp",
@@ -1283,7 +1317,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "M1JF - 1.",
+              "code": "M1JF",
+              "title": "1.0L Petrol",
+              "familyHeading": "EcoBoost Family (2013-2024)",
               "fuel": "Petrol",
               "size": "1.0L",
               "power": "100-125 hp",
@@ -1293,7 +1329,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "M1CA - 1.",
+              "code": "M1CA",
+              "title": "1.0L Petrol",
+              "familyHeading": "EcoBoost Family (2013-2024)",
               "fuel": "Petrol",
               "size": "1.0L",
               "power": "100 hp",
@@ -1303,7 +1341,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "M1JJ - 1.",
+              "code": "M1JJ",
+              "title": "1.0L Petrol MHEV",
+              "familyHeading": "EcoBoost Family (2013-2024)",
               "fuel": "Petrol MHEV",
               "size": "1.0L",
               "power": "125 hp",
@@ -1313,7 +1353,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "XWDA - 1.",
+              "code": "XWDA",
+              "title": "1.2L Petrol",
+              "familyHeading": "Ti-VCT Family (2013-2017)",
               "fuel": "Petrol",
               "size": "1.2L",
               "power": "85 hp",
@@ -1323,7 +1365,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "XWDB - 1.",
+              "code": "XWDB",
+              "title": "1.2L Petrol",
+              "familyHeading": "Ti-VCT Family (2013-2017)",
               "fuel": "Petrol",
               "size": "1.2L",
               "power": "82 hp",
@@ -1333,7 +1377,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "HXDA - 1.",
+              "code": "HXDA",
+              "title": "1.2L Petrol",
+              "familyHeading": "Ti-VCT Family (2013-2017)",
               "fuel": "Petrol",
               "size": "1.2L",
               "power": "100 hp",
@@ -1343,7 +1389,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "IQDA - 1.",
+              "code": "IQDA",
+              "title": "1.6L Petrol",
+              "familyHeading": "Ti-VCT 1.6L Family (2013-2017)",
               "fuel": "Petrol",
               "size": "1.6L",
               "power": "120 hp",
@@ -1353,7 +1401,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "IQDB - 1.",
+              "code": "IQDB",
+              "title": "1.6L Petrol",
+              "familyHeading": "Ti-VCT 1.6L Family (2013-2017)",
               "fuel": "Petrol",
               "size": "1.6L",
               "power": "118 hp",
@@ -1363,7 +1413,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "M2DA - 1.",
+              "code": "M2DA",
+              "title": "1.5L Petrol",
+              "familyHeading": "EcoBoost Performance Family (2017-2021)",
               "fuel": "Petrol",
               "size": "1.5L",
               "power": "182 hp",
@@ -1373,7 +1425,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
-              "code": "M2DC - 1.",
+              "code": "M2DC",
+              "title": "1.5L Petrol",
+              "familyHeading": "EcoBoost Performance Family (2017-2021)",
               "fuel": "Petrol",
               "size": "1.5L",
               "power": "182 hp",
@@ -1390,7 +1444,9 @@
           "failureNote": "Main replacement triggers are timing chain wear, EGR / cooling faults and turbo-control issues.",
           "engines": [
             {
-              "code": "DV5C - 1.",
+              "code": "DV5C",
+              "title": "1.5L Diesel",
+              "familyHeading": "TDCi Duratorq Family (2013-2017)",
               "fuel": "Diesel",
               "size": "1.5L",
               "power": "120 hp",
@@ -1400,7 +1456,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "DV5D - 1.",
+              "code": "DV5D",
+              "title": "1.5L Diesel",
+              "familyHeading": "TDCi Duratorq Family (2013-2017)",
               "fuel": "Diesel",
               "size": "1.5L",
               "power": "120 hp",
@@ -1410,7 +1468,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "T1DA - 1.",
+              "code": "T1DA",
+              "title": "1.6L Diesel",
+              "familyHeading": "TDCi Duratorq Family (2013-2017)",
               "fuel": "Diesel",
               "size": "1.6L",
               "power": "115 hp",
@@ -1420,7 +1480,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "T3DA - 1.",
+              "code": "T3DA",
+              "title": "1.6L Diesel",
+              "familyHeading": "TDCi Duratorq Family (2013-2017)",
               "fuel": "Diesel",
               "size": "1.6L",
               "power": "120 hp",
@@ -1430,7 +1492,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "DV6C - 1.",
+              "code": "DV6C",
+              "title": "1.6L Diesel",
+              "familyHeading": "TDCi Duratorq Family (2013-2017)",
               "fuel": "Diesel",
               "size": "1.6L",
               "power": "115 hp",
@@ -1440,7 +1504,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "XW7J - 1.",
+              "code": "XW7J",
+              "title": "1.5L Diesel",
+              "familyHeading": "EcoBlue Family (2017-2024)",
               "fuel": "Diesel",
               "size": "1.5L",
               "power": "120 hp",
@@ -1450,7 +1516,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "XW7K - 1.",
+              "code": "XW7K",
+              "title": "1.5L Diesel",
+              "familyHeading": "EcoBlue Family (2017-2024)",
               "fuel": "Diesel",
               "size": "1.5L",
               "power": "120 hp",
@@ -1460,7 +1528,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "Y60J - 2.",
+              "code": "Y60J",
+              "title": "2.0L Diesel",
+              "familyHeading": "EcoBlue Family (2017-2024)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "150 hp",
@@ -1470,7 +1540,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "Y60K - 2.",
+              "code": "Y60K",
+              "title": "2.0L Diesel",
+              "familyHeading": "EcoBlue Family (2017-2024)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "150 hp",
@@ -1480,7 +1552,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "ZSD-420 - 2.",
+              "code": "ZSD-420",
+              "title": "2.0L Diesel",
+              "familyHeading": "Legacy Duratorq Family (2013-2017)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "140 hp",
@@ -1490,7 +1564,9 @@
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
-              "code": "ZSD-422 - 2.",
+              "code": "ZSD-422",
+              "title": "2.0L Diesel",
+              "familyHeading": "Legacy Duratorq Family (2013-2017)",
               "fuel": "Diesel",
               "size": "2.0L",
               "power": "140 hp",
@@ -1507,7 +1583,9 @@
           "failureNote": "Main replacement demand comes from cooling, battery-support and high-voltage control faults.",
           "engines": [
             {
-              "code": "M1JJ - 1.",
+              "code": "M1JJ",
+              "title": "1.0L Petrol MHEV",
+              "familyHeading": "Mild Hybrid EcoBoost (2019-2021)",
               "fuel": "Petrol MHEV",
               "size": "1.0L",
               "power": "125 hp",
@@ -2002,6 +2080,11 @@
           "title": "Ford Activa Diesel Engines",
           "description": "Diesel Activa models span 2013-2024, featuring Duratorq TDCi and modern EcoBlue families that dominate UK replacement enquiries due to high-mileage usage and emissions system complexity.",
           "descriptor": "Diesel Activa models span 2013-2024, featuring Duratorq TDCi and modern EcoBlue families that dominate UK replacement enquiries due to high-mileage usage and emissions system complexity.",
+          "familiesLabel": "Common Ford Activa Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "DV5C - 1.5L TDCi core unit (Zetec/Titanium), turbo bearing wear risk",
             "T1DA - 1.6L Duratorq economy diesel, EGR clogging on short journeys",
@@ -2033,6 +2116,11 @@
           "title": "Ford Activa Petrol Engines",
           "description": "Petrol Activa variants from 2013-2024 feature naturally aspirated Ti-VCT and turbocharged EcoBoost families, with the 1.0L EcoBoost generating the highest replacement volume due to wet belt concerns.",
           "descriptor": "Petrol Activa variants from 2013-2024 feature naturally aspirated Ti-VCT and turbocharged EcoBoost families, with the 1.0L EcoBoost generating the highest replacement volume due to wet belt concerns.",
+          "familiesLabel": "Common Ford Activa Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "M1JA - 1.0L EcoBoost dominant unit, wet belt degradation risk",
             "XWDA - 1.2L Ti-VCT entry petrol, timing chain tensioner wear",
@@ -2064,6 +2152,11 @@
           "title": "Ford Activa Mild Hybrid (MHEV) Engines",
           "description": "Mild-hybrid Activa variants (2019-2021) pair 1.0L EcoBoost combustion with 48V electrical assistance for improved stop-start refinement and urban emissions compliance.",
           "descriptor": "Mild-hybrid Activa variants (2019-2021) pair 1.0L EcoBoost combustion with 48V electrical assistance for improved stop-start refinement and urban emissions compliance.",
+          "familiesLabel": "Ford Activa MHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "M1JJ - 1.0L EcoBoost Hybrid, Zetec/Titanium trim compatibility",
             "48-volt belt-integrated starter generator recovers braking energy",

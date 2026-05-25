@@ -15,13 +15,13 @@
     "canonical": "/jaguar/xf"
   },
   "assets": {
-    "heroBg": "/images/brands/jaguar/models/jaguar-jaguar-xf-model-card.png",
+    "heroBg": "/images/brands/jaguar/models/jaguar-xf-model-card.png",
     "howItWorksBg": "/images/brands/jaguar/brand/jaguar-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/jaguar/brand/jaguar-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/jaguar/brand/jaguar-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/jaguar/brand/jaguar-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/jaguar/brand/jaguar-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/jaguar/models/jaguar-jaguar-xf-model-card.png"
+    "ctaImage": "/images/brands/jaguar/models/jaguar-xf-model-card.png"
   },
   "sections": {
     "hero": {
@@ -753,8 +753,51 @@
             "name": "Diesel Engines",
             "entries": [
               {
+                "code": "AJ200D / 204DTA / 204DTD",
+                "title": "2.0L Diesel",
+                "familyHeading": "Ingenium AJ200 Diesel Family (2015-2024)",
+                "history": "Jaguar's Ingenium modular diesel introduced for the X260 generation. Designed for efficiency and low emissions, but timing chain failures became the defining replacement driver.",
+                "fuel": "Diesel",
+                "size": "2.0 Litre",
+                "power": "163-240 hp",
+                "years": "2015-2024",
+                "compatibleVariants": [
+                  "XF 2.0D, XF 2.0D Premium Luxury, XF 2.0D Portfolio, XF 2.0D R-Sport, XF 2.0D SE, XF 2.0D S Design, XF 2.0D Sport, XF 2.0D First Edition, XF 2.0D Landmark, XF 2.0D Black Pack, XF Sportbrake 2.0D"
+                ],
+                "commonFailures": [
+                  "Timing chain stretch and failure (commonly from 60,000-80,000 miles)",
+                  "EGR cooler cracking leading to coolant loss (40,000-70,000 miles)",
+                  "DPF clogging in high-mileage or short-journey cars"
+                ],
+                "avgRebuiltPrice": "£1,600 - £4,500",
+                "cta": "Get quotes for AJ200D Jaguar XF engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+              },
+              {
+                "code": "AJD-V6 / 306DT",
+                "title": "3.0L Diesel",
+                "familyHeading": "AJD-V6 Diesel Family (2008-2020)",
+                "history": "Ford-derived V6 diesel that powered the X250 XF and early X260 models. Renowned for torque delivery but plagued by bottom-end failures that often write off vehicles.",
+                "fuel": "Diesel",
+                "size": "3.0 Litre",
+                "power": "240-300 hp",
+                "years": "2008-2020",
+                "compatibleVariants": [
+                  "XF 3.0D, XF 3.0D Luxury, XF 3.0D Premium Luxury, XF 3.0D Portfolio, XF 3.0D S, XF 3.0D R-Sport, XF 3.0D SE, XF 3.0D S Design, XF 3.0D Sport, XF Sportbrake 3.0D"
+                ],
+                "commonFailures": [
+                  "Crankshaft failure and bottom-end seizure (often sudden, 80,000-120,000 miles)",
+                  "Injector seal leaks causing diesel smell and carbon buildup",
+                  "Turbocharger bearing failure"
+                ],
+                "avgRebuiltPrice": "£1,800 - £4,800",
+                "cta": "Get quotes for AJD-V6 Jaguar XF engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+              },
+              {
                 "code": "AJD-V6",
                 "title": "2.7L Diesel",
+                "familyHeading": "AJD-V6 Diesel Family (2008-2020)",
                 "history": "First-generation V6 diesel fitted to the earliest X250 XF models from 2008. Ford-Lion derived unit later replaced by the 3.0L variant for additional power.",
                 "fuel": "Diesel",
                 "size": "2.7 Litre",
@@ -771,6 +814,27 @@
                 "avgRebuiltPrice": "£1,200 - £2,400",
                 "cta": "Get quotes for AJD-V6 2.7 Jaguar XF engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+              },
+              {
+                "code": "Duratorq / ZSD-422",
+                "title": "2.2L Diesel",
+                "familyHeading": "Duratorq Family (2011-2015)",
+                "history": "Ford-sourced four-cylinder diesel fitted to later X250 models as an entry-level option. Known for robust bottom end but injector issues at higher mileage.",
+                "fuel": "Diesel",
+                "size": "2.2 Litre",
+                "power": "163-200 hp",
+                "years": "2011-2015",
+                "compatibleVariants": [
+                  "XF 2.2D, XF 2.2D Luxury, XF 2.2D Premium Luxury, XF 2.2D Portfolio, XF 2.2D SE"
+                ],
+                "commonFailures": [
+                  "Injector seal leakage and carbon tracking",
+                  "DPF clogging in urban-driven examples",
+                  "EGR valve failure"
+                ],
+                "avgRebuiltPrice": "£1,000 - £2,200",
+                "cta": "Get quotes for Duratorq 2.2 Jaguar XF engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               }
             ]
           },
@@ -780,6 +844,7 @@
               {
                 "code": "AJ200P / PT204",
                 "title": "2.0L Petrol",
+                "familyHeading": "Ingenium AJ200 Petrol Family (2015-2024)",
                 "history": "Ingenium turbocharged four-cylinder petrol introduced with the X260 generation. Replaced older Ford-derived units, offering better efficiency but introducing high-pressure fuel system failures.",
                 "fuel": "Petrol",
                 "size": "2.0 Litre",
@@ -798,8 +863,51 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
+                "code": "AJ-V8 5.0",
+                "title": "5.0L Petrol",
+                "familyHeading": "AJ-V8 Naturally Aspirated Family (2008-2015)",
+                "history": "Naturally aspirated 5.0-litre V8 fitted to X250 XF models before the supercharged XFR arrived. Smooth power delivery but heavy on fuel and prone to timing chain tensioner wear.",
+                "fuel": "Petrol",
+                "size": "5.0 Litre",
+                "power": "385 hp",
+                "years": "2009-2015",
+                "compatibleVariants": [
+                  "XF 5.0 V8, XF 5.0 V8 Premium Luxury, XF 5.0 V8 Portfolio, XF 5.0 V8 S"
+                ],
+                "commonFailures": [
+                  "Timing chain tensioner failure (70,000-100,000 miles)",
+                  "Water pump leakage",
+                  "Thermostat housing cracking"
+                ],
+                "avgRebuiltPrice": "£2,500 - £5,800",
+                "cta": "Get quotes for AJ-V8 5.0 Jaguar XF engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              },
+              {
+                "code": "AJ-V8 4.2",
+                "title": "4.2L Petrol",
+                "familyHeading": "AJ-V8 Naturally Aspirated Family (2008-2015)",
+                "history": "Early X250 V8 option before the 5.0-litre unit became standard. Smooth, refined, and relatively reliable compared to later supercharged variants.",
+                "fuel": "Petrol",
+                "size": "4.2 Litre",
+                "power": "300 hp",
+                "years": "2008-2010",
+                "compatibleVariants": [
+                  "XF 4.2 V8, XF 4.2 V8 Premium Luxury, XF 4.2 V8 SE"
+                ],
+                "commonFailures": [
+                  "Timing chain tensioner wear",
+                  "Valve seal deterioration on higher-mileage units",
+                  "Cooling system leaks"
+                ],
+                "avgRebuiltPrice": "£2,200 - £4,500",
+                "cta": "Get quotes for AJ-V8 4.2 Jaguar XF engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              },
+              {
                 "code": "AJ126",
                 "title": "3.0L Supercharged Petrol",
+                "familyHeading": "AJ126 Supercharged V6 Family (2013-2020)",
                 "history": "Supercharged V6 derived from the AJ133 V8, fitted to XF S models as a performance option below the full-fat XFR. Strong power delivery but complex.",
                 "fuel": "Petrol",
                 "size": "3.0 Litre",
@@ -820,6 +928,7 @@
               {
                 "code": "AJ133",
                 "title": "5.0L Supercharged Petrol",
+                "familyHeading": "AJ133 Supercharged V8 Family (2009-2015)",
                 "history": "The flagship XFR and XFR-S V8. 510-550hp of supercharged fury, but timing chain tensioners are a notorious weak point that can destroy the engine.",
                 "fuel": "Petrol",
                 "size": "5.0 Litre",
@@ -845,6 +954,7 @@
               {
                 "code": "AJ200D MHEV",
                 "title": "2.0L Mild Hybrid Diesel",
+                "familyHeading": "Ingenium MHEV Diesel Family (2019-2024)",
                 "history": "Mild hybrid version of the Ingenium diesel with belt-integrated starter generator. Lower emissions and smoother stop-start, retaining the same timing chain concerns as the standard unit.",
                 "fuel": "MHEV Diesel",
                 "size": "2.0 Litre",
@@ -896,13 +1006,51 @@
           "failureNote": "Main replacement triggers are timing chain wear, EGR / cooling faults and turbo-control issues.",
           "engines": [
             {
+              "code": "AJ200D / 204DTA / 204DTD",
+              "title": "2.0L Diesel",
+              "familyHeading": "Ingenium AJ200 Diesel Family (2015-2024)",
+              "fuel": "Diesel",
+              "size": "2.0L",
+              "power": "163-240 hp",
+              "compatibleModels": "XF 2.0D, XF 2.0D Premium Luxury, XF 2.0D Portfolio, XF 2.0D R-Sport, XF 2.0D SE, XF 2.0D S Design, XF 2.0D Sport, XF 2.0D First Edition, XF 2.0D Landmark, XF 2.0D Black Pack, XF Sportbrake 2.0D",
+              "avgRebuiltPrice": "£1,600 - £4,500",
+              "cta": "Get quotes for AJ200D Jaguar XF engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+            },
+            {
+              "code": "AJD-V6 / 306DT",
+              "title": "3.0L Diesel",
+              "familyHeading": "AJD-V6 Diesel Family (2008-2020)",
+              "fuel": "Diesel",
+              "size": "3.0L",
+              "power": "240-300 hp",
+              "compatibleModels": "XF 3.0D, XF 3.0D Luxury, XF 3.0D Premium Luxury, XF 3.0D Portfolio, XF 3.0D S, XF 3.0D R-Sport, XF 3.0D SE, XF 3.0D S Design, XF 3.0D Sport, XF Sportbrake 3.0D",
+              "avgRebuiltPrice": "£1,800 - £4,800",
+              "cta": "Get quotes for AJD-V6 Jaguar XF engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+            },
+            {
               "code": "AJD-V6",
+              "title": "2.7L Diesel",
+              "familyHeading": "AJD-V6 Diesel Family (2008-2020)",
               "fuel": "Diesel",
               "size": "2.7L",
               "power": "207 hp",
               "compatibleModels": "XF 2.7D, XF 2.7D Luxury, XF 2.7D Premium Luxury, XF 2.7D SE",
               "avgRebuiltPrice": "£1,200 - £2,400",
               "cta": "Get quotes for AJD-V6 2.7 Jaguar XF engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+            },
+            {
+              "code": "Duratorq / ZSD-422",
+              "title": "2.2L Diesel",
+              "familyHeading": "Duratorq Family (2011-2015)",
+              "fuel": "Diesel",
+              "size": "2.2L",
+              "power": "163-200 hp",
+              "compatibleModels": "XF 2.2D, XF 2.2D Luxury, XF 2.2D Premium Luxury, XF 2.2D Portfolio, XF 2.2D SE",
+              "avgRebuiltPrice": "£1,000 - £2,200",
+              "cta": "Get quotes for Duratorq 2.2 Jaguar XF engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             }
           ]
@@ -914,6 +1062,8 @@
           "engines": [
             {
               "code": "AJ200P / PT204",
+              "title": "2.0L Petrol",
+              "familyHeading": "Ingenium AJ200 Petrol Family (2015-2024)",
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "200-300 hp",
@@ -923,7 +1073,33 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
+              "code": "AJ-V8 5.0",
+              "title": "5.0L Petrol",
+              "familyHeading": "AJ-V8 Naturally Aspirated Family (2008-2015)",
+              "fuel": "Petrol",
+              "size": "5.0L",
+              "power": "385 hp",
+              "compatibleModels": "XF 5.0 V8, XF 5.0 V8 Premium Luxury, XF 5.0 V8 Portfolio, XF 5.0 V8 S",
+              "avgRebuiltPrice": "£2,500 - £5,800",
+              "cta": "Get quotes for AJ-V8 5.0 Jaguar XF engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            },
+            {
+              "code": "AJ-V8 4.2",
+              "title": "4.2L Petrol",
+              "familyHeading": "AJ-V8 Naturally Aspirated Family (2008-2015)",
+              "fuel": "Petrol",
+              "size": "4.2L",
+              "power": "300 hp",
+              "compatibleModels": "XF 4.2 V8, XF 4.2 V8 Premium Luxury, XF 4.2 V8 SE",
+              "avgRebuiltPrice": "£2,200 - £4,500",
+              "cta": "Get quotes for AJ-V8 4.2 Jaguar XF engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            },
+            {
               "code": "AJ126",
+              "title": "3.0L Supercharged Petrol",
+              "familyHeading": "AJ126 Supercharged V6 Family (2013-2020)",
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "340-380 hp",
@@ -934,6 +1110,8 @@
             },
             {
               "code": "AJ133",
+              "title": "5.0L Supercharged Petrol",
+              "familyHeading": "AJ133 Supercharged V8 Family (2009-2015)",
               "fuel": "Petrol",
               "size": "5.0L",
               "power": "510-550 hp",
@@ -951,6 +1129,8 @@
           "engines": [
             {
               "code": "AJ200D MHEV",
+              "title": "2.0L Mild Hybrid Diesel",
+              "familyHeading": "Ingenium MHEV Diesel Family (2019-2024)",
               "fuel": "MHEV Diesel",
               "size": "2.0L",
               "power": "163-204 hp",
@@ -1527,6 +1707,11 @@
           "title": "Jaguar XF Diesel Engines",
           "description": "Diesel powered the vast majority of XF sales in the UK across both X250 (2008-2015) and X260 (2015-2024) generations, and dominates replacement enquiry volume.",
           "descriptor": "Diesel powered the vast majority of XF sales in the UK across both X250 (2008-2015) and X260 (2015-2024) generations, and dominates replacement enquiry volume.",
+          "familiesLabel": "Common Jaguar XF Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "AJ200D / 204DTA / 204DTD - Ingenium 2.0L four-cylinder, timing chain stretch drives replacement",
             "AJD-V6 - Ford-derived 3.0L V6, known for sudden crankshaft failure at higher mileage",
@@ -1556,6 +1741,11 @@
           "title": "Jaguar XF Petrol Engines",
           "description": "Petrol XFs are less common than diesels in the UK but span naturally aspirated V8s, supercharged V6 and V8 performance flagships, plus Ingenium four-cylinders in later X260 models.",
           "descriptor": "Petrol XFs are less common than diesels in the UK but span naturally aspirated V8s, supercharged V6 and V8 performance flagships, plus Ingenium four-cylinders in later X260 models.",
+          "familiesLabel": "Common Jaguar XF Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "AJ200P / PT204 - Ingenium 2.0L turbo four-cylinder (X260), HPFP failures common",
             "AJ126 - 3.0L supercharged V6 (XF S), VVT solenoid and supercharger coupler wear",
@@ -1588,6 +1778,11 @@
           "title": "Jaguar XF Mild Hybrid (MHEV) Engines",
           "description": "From 2019, Jaguar introduced 48-volt mild hybrid technology to the Ingenium 2.0-litre diesel, improving stop-start refinement and reducing emissions.",
           "descriptor": "From 2019, Jaguar introduced 48-volt mild hybrid technology to the Ingenium 2.0-litre diesel, improving stop-start refinement and reducing emissions.",
+          "familiesLabel": "Jaguar XF MHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "AJ200D MHEV - 2.0L four-cylinder diesel with belt-integrated starter generator (BISG)",
             "48-volt BISG replaces the standard alternator, recovering energy during braking",

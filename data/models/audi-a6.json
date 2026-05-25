@@ -15,13 +15,13 @@
     "canonical": "/audi/a6"
   },
   "assets": {
-    "heroBg": "/images/brands/audi/models/audi-audi-a6-model-card.png",
+    "heroBg": "/images/brands/audi/models/audi-a6-model-card.png",
     "howItWorksBg": "/images/brands/audi/brand/audi-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/audi/brand/audi-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/audi/brand/audi-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/audi/brand/audi-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/audi/brand/audi-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/audi/models/audi-audi-a6-model-card.png"
+    "ctaImage": "/images/brands/audi/models/audi-a6-model-card.png"
   },
   "sections": {
     "hero": {
@@ -773,8 +773,30 @@
             "name": "Diesel Engines",
             "entries": [
               {
+                "code": "1Z/AHU",
+                "title": "1.9L Diesel",
+                "familyHeading": "1.9 TDI & 2.5 TDI Engines (C4/C5, 1994-2004)",
+                "history": "The original TDI that established Audi’s diesel reputation in the 1990s - simple, robust, and capable of enormous mileage.",
+                "fuel": "Diesel",
+                "size": "1.9 Litre",
+                "power": "90-110 hp",
+                "years": "1994-2000",
+                "compatibleVariants": [
+                  "C4, C4 Avant, C4 Saloon, C4 SE"
+                ],
+                "commonFailures": [
+                  "EGR valve carbon buildup causing power loss",
+                  "Injector pump wear at high mileage",
+                  "Turbocharger oil seal degradation"
+                ],
+                "avgRebuiltPrice": "£800 - £1,400",
+                "cta": "Get quotes for 1Z/AHU Audi A6 engine replacement",
+                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+              },
+              {
                 "code": "AFN/AVG",
                 "title": "1.9L Diesel",
+                "familyHeading": "1.9 TDI & 2.5 TDI Engines (C4/C5, 1994-2004)",
                 "history": "The higher-output evolution of the 1.9 TDI - 110bhp became the benchmark for executive diesel economy in the late 1990s.",
                 "fuel": "Diesel",
                 "size": "1.9 Litre",
@@ -795,6 +817,7 @@
               {
                 "code": "AEL",
                 "title": "2.5L Diesel",
+                "familyHeading": "1.9 TDI & 2.5 TDI Engines (C4/C5, 1994-2004)",
                 "history": "Audi’s first V6 diesel for the A6 - smoother than the 5-cylinder but with more complex timing systems.",
                 "fuel": "Diesel",
                 "size": "2.5 Litre",
@@ -848,7 +871,21 @@
           "failureNote": "Main replacement triggers are timing chain wear, EGR / cooling faults and turbo-control issues.",
           "engines": [
             {
+              "code": "1Z/AHU",
+              "title": "1.9L Diesel",
+              "familyHeading": "1.9 TDI & 2.5 TDI Engines (C4/C5, 1994-2004)",
+              "fuel": "Diesel",
+              "size": "1.9L",
+              "power": "90-110 hp",
+              "compatibleModels": "C4, C4 Avant, C4 Saloon, C4 SE",
+              "avgRebuiltPrice": "£800 - £1,400",
+              "cta": "Get quotes for 1Z/AHU Audi A6 engine replacement",
+              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+            },
+            {
               "code": "AFN/AVG",
+              "title": "1.9L Diesel",
+              "familyHeading": "1.9 TDI & 2.5 TDI Engines (C4/C5, 1994-2004)",
               "fuel": "Diesel",
               "size": "1.9L",
               "power": "110 hp",
@@ -859,6 +896,8 @@
             },
             {
               "code": "AEL",
+              "title": "2.5L Diesel",
+              "familyHeading": "1.9 TDI & 2.5 TDI Engines (C4/C5, 1994-2004)",
               "fuel": "Diesel",
               "size": "2.5L",
               "power": "150-155 hp",
@@ -1509,6 +1548,11 @@
           "title": "Audi A6 Diesel Engines",
           "description": "The backbone of UK A6 sales across four generations, diesel engines dominate replacement enquiries - from 1.9 TDI simplicity to complex 3.0 V6 units with AdBlue and 48V systems.",
           "descriptor": "The backbone of UK A6 sales across four generations, diesel engines dominate replacement enquiries - from 1.9 TDI simplicity to complex 3.0 V6 units with AdBlue and 48V systems.",
+          "familiesLabel": "Common Audi A6 Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "1Z/AHU/AFN/AVG - 1.9 TDI, bombproof mechanical injection for C4/C5",
             "BLB/BRE - 2.0 TDI, oil pump drive hex key failure on C6 (2004-2008)",
@@ -1546,6 +1590,11 @@
           "title": "Audi A6 Petrol Engines",
           "description": "Petrol A6 engines range from turbocharged four-cylinders to supercharged V6s and the legendary 4.2 V8 - with oil consumption dominating 2.0 TFSI replacement searches.",
           "descriptor": "Petrol A6 engines range from turbocharged four-cylinders to supercharged V6s and the legendary 4.2 V8 - with oil consumption dominating 2.0 TFSI replacement searches.",
+          "familiesLabel": "Common Audi A6 Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "AJL/BFB - 1.8T, early turbo four for C5 and C6",
             "CAEB/CDNB - 2.0 TFSI, severe oil consumption from piston ring clogging",
@@ -1583,6 +1632,11 @@
           "title": "Audi A6 Mild Hybrid (MHEV) Engines",
           "description": "The C8 generation introduced 48V mild hybrid technology across diesel and petrol ranges, adding belt-driven starter generators and secondary batteries.",
           "descriptor": "The C8 generation introduced 48V mild hybrid technology across diesel and petrol ranges, adding belt-driven starter generators and secondary batteries.",
+          "familiesLabel": "Audi A6 MHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "CLZB - 3.0 TDI with 48V belt starter generator",
             "DJPB - 4.0 TFSI V8 (RS6), 591hp with MHEV assistance",

@@ -15,13 +15,13 @@
     "canonical": "/mercedes-benz/g-class"
   },
   "assets": {
-    "heroBg": "/images/brands/mercedes-benz/models/mercedes-benz-mercedes-benz-g-class-model-card.png",
+    "heroBg": "/images/brands/mercedes-benz/models/mercedes-benz-g-class-model-card.png",
     "howItWorksBg": "/images/brands/mercedes-benz/brand/mercedes-benz-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/mercedes-benz/brand/mercedes-benz-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/mercedes-benz/models/mercedes-benz-mercedes-benz-g-class-model-card.png"
+    "ctaImage": "/images/brands/mercedes-benz/models/mercedes-benz-g-class-model-card.png"
   },
   "sections": {
     "hero": {
@@ -783,6 +783,7 @@
               {
                 "code": "OM642 DE30 LA",
                 "title": "3.0L Diesel",
+                "familyHeading": "OM642 V6 Diesel Family (2006-2023)",
                 "history": "The OM642 is the most common G Class diesel engine, powering over 70% of UK-market diesel G Class models from 2006 to 2023.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -803,6 +804,7 @@
               {
                 "code": "OM642 LS",
                 "title": "3.0L Diesel (Long Stroke Variant)",
+                "familyHeading": "OM642 V6 Diesel Family (2006-2023)",
                 "history": "A later evolution of the OM642 platform with revised turbocharger mounting, fitted primarily to post-2015 G Class models with enhanced emissions compliance.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -823,6 +825,7 @@
               {
                 "code": "OM656 D29",
                 "title": "3.0L Diesel",
+                "familyHeading": "OM656 Inline-6 Diesel Family (2019-present)",
                 "history": "Mercedes’ modular inline-6 diesel introduced with the W463A generation G Class, featuring CAMTRONIC variable valve lift and stepped bowl combustion technology.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -843,6 +846,7 @@
               {
                 "code": "OM603",
                 "title": "3.0L Diesel (Naturally Aspirated)",
+                "familyHeading": "OM603 / OM606 Classic Diesel Family (1990-2000)",
                 "history": "The legendary OM603 inline-6 diesel that defined G Class durability in the early W463 generation. Known globally for extreme longevity but requires precise injection system maintenance.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -863,6 +867,7 @@
               {
                 "code": "OM606",
                 "title": "3.0L Diesel (Turbocharged)",
+                "familyHeading": "OM603 / OM606 Classic Diesel Family (1990-2000)",
                 "history": "The high-performance turbodiesel that transformed the G Class driving experience. The OM606.964 produced 177 hp and remains highly sought after for restoration projects.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -883,6 +888,7 @@
               {
                 "code": "OM617",
                 "title": "3.0L Diesel",
+                "familyHeading": "OM617 Inline-5 Diesel Family (1979-1990)",
                 "history": "The original G Class diesel that built the model's reputation for indestructibility. Fitted to military and civilian W460/W461 variants across the globe.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
@@ -908,6 +914,7 @@
               {
                 "code": "M176 DE40 AL",
                 "title": "4.0L Petrol",
+                "familyHeading": "M176 / M177 / M178 V8 Turbo Family (2015-present)",
                 "history": "The hot-V turbo V8 that replaced the M278 in 2015. Features cylinder deactivation and twin-scroll turbochargers positioned inside the V-angle for reduced lag.",
                 "fuel": "Petrol",
                 "size": "4.0 Litre",
@@ -928,6 +935,7 @@
               {
                 "code": "M177 DE40 AL",
                 "title": "4.0L Petrol (AMG)",
+                "familyHeading": "M176 / M177 / M178 V8 Turbo Family (2015-present)",
                 "history": "The high-performance AMG version of the hot-V V8, fitted to G 63 models from 2018. Uses wet-sump lubrication and delivers up to 585 hp.",
                 "fuel": "Petrol",
                 "size": "4.0 Litre",
@@ -948,6 +956,7 @@
               {
                 "code": "M157 E55",
                 "title": "5.5L Petrol",
+                "familyHeading": "M157 V8 Turbo Family (2012-2018)",
                 "history": "The hand-built AMG V8 that powered the first-generation G 63. Each engine was signed by its AMG assembler, but known for specific turbo-related failures.",
                 "fuel": "Petrol",
                 "size": "5.5 Litre",
@@ -968,6 +977,7 @@
               {
                 "code": "M113 E50",
                 "title": "5.0L Petrol",
+                "familyHeading": "M113 V8 Family (1997-2011)",
                 "history": "The durable 5.0L V8 that defined G 500 ownership for over a decade. Simpler than later turbo units but susceptible to timing chain tensioner wear across all displacements.",
                 "fuel": "Petrol",
                 "size": "5.0 Litre",
@@ -988,6 +998,7 @@
               {
                 "code": "M113K",
                 "title": "5.4L Petrol (Kompressor)",
+                "familyHeading": "M113 V8 Family (1997-2011)",
                 "history": "The supercharged 5.4L V8 that powered G 55 AMG. The M113K added a Lysholm-type supercharger to the robust M113 block, creating instant torque delivery.",
                 "fuel": "Petrol",
                 "size": "5.4 Litre",
@@ -1008,6 +1019,7 @@
               {
                 "code": "M112 E32",
                 "title": "3.2L Petrol",
+                "familyHeading": "M112 V6 Petrol Family (1998-2005)",
                 "history": "The smooth 3.2L V6 that offered a more accessible petrol G Class entry point. Shared architecture with the M113 V8 but with two fewer cylinders.",
                 "fuel": "Petrol",
                 "size": "3.2 Litre",
@@ -1028,6 +1040,7 @@
               {
                 "code": "M117 E56",
                 "title": "5.6L Petrol",
+                "familyHeading": "M117 V8 Petrol Classic (1981-1992)",
                 "history": "The original G Class V8 that brought luxury performance to the model line. Shared architecture with contemporary S-Class (R107/SEC) platforms.",
                 "fuel": "Petrol",
                 "size": "5.6 Litre",
@@ -1079,6 +1092,8 @@
           "engines": [
             {
               "code": "OM642 DE30 LA",
+              "title": "3.0L Diesel",
+              "familyHeading": "OM642 V6 Diesel Family (2006-2023)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "224-245 hp",
@@ -1089,6 +1104,8 @@
             },
             {
               "code": "OM642 LS",
+              "title": "3.0L Diesel (Long Stroke Variant)",
+              "familyHeading": "OM642 V6 Diesel Family (2006-2023)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "245-258 hp",
@@ -1099,6 +1116,8 @@
             },
             {
               "code": "OM656 D29",
+              "title": "3.0L Diesel",
+              "familyHeading": "OM656 Inline-6 Diesel Family (2019-present)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "286-330 hp",
@@ -1109,6 +1128,8 @@
             },
             {
               "code": "OM603",
+              "title": "3.0L Diesel (Naturally Aspirated)",
+              "familyHeading": "OM603 / OM606 Classic Diesel Family (1990-2000)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "113 hp",
@@ -1119,6 +1140,8 @@
             },
             {
               "code": "OM606",
+              "title": "3.0L Diesel (Turbocharged)",
+              "familyHeading": "OM603 / OM606 Classic Diesel Family (1990-2000)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "177 hp",
@@ -1129,6 +1152,8 @@
             },
             {
               "code": "OM617",
+              "title": "3.0L Diesel",
+              "familyHeading": "OM617 Inline-5 Diesel Family (1979-1990)",
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "88 hp",
@@ -1146,6 +1171,8 @@
           "engines": [
             {
               "code": "M176 DE40 AL",
+              "title": "4.0L Petrol",
+              "familyHeading": "M176 / M177 / M178 V8 Turbo Family (2015-present)",
               "fuel": "Petrol",
               "size": "4.0L",
               "power": "422-550 hp",
@@ -1156,6 +1183,8 @@
             },
             {
               "code": "M177 DE40 AL",
+              "title": "4.0L Petrol (AMG)",
+              "familyHeading": "M176 / M177 / M178 V8 Turbo Family (2015-present)",
               "fuel": "Petrol",
               "size": "4.0L",
               "power": "571-585 hp",
@@ -1166,6 +1195,8 @@
             },
             {
               "code": "M157 E55",
+              "title": "5.5L Petrol",
+              "familyHeading": "M157 V8 Turbo Family (2012-2018)",
               "fuel": "Petrol",
               "size": "5.5L",
               "power": "544 hp",
@@ -1176,6 +1207,8 @@
             },
             {
               "code": "M113 E50",
+              "title": "5.0L Petrol",
+              "familyHeading": "M113 V8 Family (1997-2011)",
               "fuel": "Petrol",
               "size": "5.0L",
               "power": "296 hp",
@@ -1186,6 +1219,8 @@
             },
             {
               "code": "M113K",
+              "title": "5.4L Petrol (Kompressor)",
+              "familyHeading": "M113 V8 Family (1997-2011)",
               "fuel": "Petrol",
               "size": "5.4L",
               "power": "476 hp",
@@ -1196,6 +1231,8 @@
             },
             {
               "code": "M112 E32",
+              "title": "3.2L Petrol",
+              "familyHeading": "M112 V6 Petrol Family (1998-2005)",
               "fuel": "Petrol",
               "size": "3.2L",
               "power": "215 hp",
@@ -1206,6 +1243,8 @@
             },
             {
               "code": "M117 E56",
+              "title": "5.6L Petrol",
+              "familyHeading": "M117 V8 Petrol Classic (1981-1992)",
               "fuel": "Petrol",
               "size": "5.6L",
               "power": "224 hp",
@@ -1709,6 +1748,11 @@
           "title": "Mercedes Benz G Class Diesel Engines",
           "description": "The backbone of UK G Class sales since the W463 generation, diesel engines dominate replacement enquiries - particularly the OM642 V6 which powers approximately 70% of diesel models on British roads.",
           "descriptor": "The backbone of UK G Class sales since the W463 generation, diesel engines dominate replacement enquiries - particularly the OM642 V6 which powers approximately 70% of diesel models on British roads.",
+          "familiesLabel": "Common Mercedes Benz G Class Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
           "families": [
             "OM642 - 3.0L V6, the most searched replacement engine (G 320 CDI, G 350 CDI, G 350 d), oil cooler seal failure risk",
             "OM656 - 3.0L inline-6, current-generation diesel (G 400 d, G 450 d), CAMTRONIC actuator and AdBlue issues",
@@ -1737,6 +1781,11 @@
           "title": "Mercedes Benz G Class Petrol Engines",
           "description": "From the durable M113 V8 to the fire-breathing M177 biturbo, G Class petrol engines span three decades of Mercedes performance engineering - with AMG variants commanding premium replacement costs.",
           "descriptor": "From the durable M113 V8 to the fire-breathing M177 biturbo, G Class petrol engines span three decades of Mercedes performance engineering - with AMG variants commanding premium replacement costs.",
+          "familiesLabel": "Common Mercedes Benz G Class Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
           "families": [
             "M176 - 4.0L biturbo V8 (G 500 2015-present), cylinder deactivation, exhaust manifold cracking risk",
             "M177 - 4.0L biturbo V8 AMG (G 63 AMG 2018-present), hand-built, 585 hp, top timing chain wear",
@@ -1766,6 +1815,11 @@
           "title": "Mercedes Benz G Class Mild Hybrid (MHEV) Engines",
           "description": "The G 450 d introduced a 48-volt mild hybrid system to the diesel range in 2024, adding electric assistance without plug-in capability.",
           "descriptor": "The G 450 d introduced a 48-volt mild hybrid system to the diesel range in 2024, adding electric assistance without plug-in capability.",
+          "familiesLabel": "Mercedes Benz G Class MHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
           "families": [
             "OM656 - 3.0L inline-6 diesel with integrated starter-generator (ISG)",
             "48-volt belt-driven starter-generator recovers braking energy",

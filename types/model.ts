@@ -59,6 +59,7 @@ export type ModelVariantCoverageSectionData = {
       entries: {
         code: string;
         title: string;
+        familyHeading?: string;
         history: string;
         fuel: string;
         size: string;

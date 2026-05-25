@@ -1,12 +1,22 @@
-import type { BrandPageData } from "@/types/brand";
-
-type ModelCard = BrandPageData["sections"]["models"]["cards"][number];
+type ModelRouteLike = {
+  slug: string;
+  h3?: string;
+  name?: string;
+};
 
 const numericSeriesSlugPattern = /^(\d+)-series$/i;
 const legacySeriesSlugPattern = /^series-(\d+)$/i;
 const seriesHeadingPattern = /\b(\d+)\s+Series\b/i;
 
-function getSeriesSlug(value: string) {
+function normalizeSlugPart(value: string) {
+  return value.trim().toLowerCase();
+}
+
+function getSeriesSlug(value?: string) {
+  if (!value?.trim()) {
+    return null;
+  }
+
   const normalized = value.trim().toLowerCase();
   const slugMatch = normalized.match(numericSeriesSlugPattern);
 
@@ -29,17 +39,25 @@ function getSeriesSlug(value: string) {
   return null;
 }
 
-export function getModelRouteSlug(model: Pick<ModelCard, "slug" | "h3">) {
-  return getSeriesSlug(model.slug) ?? getSeriesSlug(model.h3) ?? model.slug;
+export function getBrandHref(brandSlug: string) {
+  return `/${normalizeSlugPart(brandSlug)}`;
+}
+
+export function getModelRouteSlug(model: ModelRouteLike) {
+  return getSeriesSlug(model.slug) ?? getSeriesSlug(model.h3) ?? getSeriesSlug(model.name) ?? normalizeSlugPart(model.slug);
+}
+
+export function getModelHref(brandSlug: string, model: ModelRouteLike) {
+  return `${getBrandHref(brandSlug)}/${getModelRouteSlug(model)}`;
 }
 
 export function matchesModelRouteSlug(
-  model: Pick<ModelCard, "slug" | "h3">,
+  model: ModelRouteLike,
   requestedSlug: string,
 ) {
-  const normalizedRequestedSlug = requestedSlug.toLowerCase();
+  const normalizedRequestedSlug = normalizeSlugPart(requestedSlug);
 
   return [getModelRouteSlug(model), model.slug].some(
-    (candidate) => candidate.toLowerCase() === normalizedRequestedSlug,
+    (candidate) => normalizeSlugPart(candidate) === normalizedRequestedSlug,
   );
 }
