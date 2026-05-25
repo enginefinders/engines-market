@@ -4,15 +4,6 @@ import { useDeferredValue, useMemo, useState, type KeyboardEvent, type ReactNode
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
 import {
-<<<<<<< HEAD
-  homeFaqBrands,
-  homeFaqClusters,
-  homeFaqGuides,
-  homeFaqHeader,
-  homeFaqItems,
-  type HomeFaqAnswerBlock,
-} from "@/lib/homeFaqData";
-=======
   buildQuestionSearchText,
   getBrandId,
   getClusterId,
@@ -20,7 +11,6 @@ import {
   homeFaqJsonClusters,
   type HomeFaqJsonAnswer,
 } from "@/lib/homeFaqJsonData";
->>>>>>> 9f78257b3a51455898a47f6357b85d9f9c5fce0b
 
 function SearchIcon() {
   return (
@@ -185,35 +175,6 @@ function highlightText(text: string, query: string) {
   );
 }
 
-<<<<<<< HEAD
-function getBlockSearchText(block: HomeFaqAnswerBlock) {
-  if (block.type === "paragraph") {
-    return `${block.lead ?? ""} ${block.text}`.trim();
-  }
-
-  return block.items.join(" ");
-}
-
-function renderAnswerBlock(block: HomeFaqAnswerBlock, query: string, index: number) {
-  if (block.type === "paragraph") {
-    return (
-      <p key={`paragraph-${index}`} className="text-[15px] leading-[1.75] text-[#374151]">
-        {block.lead ? <strong className="font-bold text-[#15803d]">{highlightText(block.lead, query)} </strong> : null}
-        <span>{highlightText(block.text, query)}</span>
-      </p>
-    );
-  }
-
-  return (
-    <ul key={`bullets-${index}`} className="space-y-2 text-[14px] leading-[1.7] text-[#475569]">
-      {block.items.map((item, itemIndex) => (
-        <li key={`bullet-${index}-${itemIndex}`} className="flex gap-2">
-          <span className="mt-[8px] h-1.5 w-1.5 flex-none rounded-full bg-[#15803d]" />
-          <span>{highlightText(item, query)}</span>
-        </li>
-      ))}
-    </ul>
-=======
 function renderTable(table: NonNullable<HomeFaqJsonAnswer["table"]>, query: string) {
   return (
     <div className="overflow-x-auto rounded-[14px] border border-[#d8e1eb] bg-white">
@@ -280,7 +241,6 @@ function renderAnswer(answer: HomeFaqJsonAnswer, query: string) {
         <p className="text-[14px] font-semibold text-[#15803d]">{highlightText(answer.cta, query)}</p>
       ) : null}
     </div>
->>>>>>> 9f78257b3a51455898a47f6357b85d9f9c5fce0b
   );
 }
 
@@ -300,25 +260,6 @@ export default function HomeFaqHubSection() {
   const deferredQuery = useDeferredValue(searchValue.trim().toLowerCase());
   const [manualOpenItemId, setManualOpenItemId] = useState<string | null>(null);
 
-<<<<<<< HEAD
-  const activeClusterData = useMemo(
-    () => homeFaqClusters.find((cluster) => cluster.id === activeCluster) ?? homeFaqClusters[0],
-    [activeCluster],
-  );
-  const activeBrandData = useMemo(
-    () => homeFaqBrands.find((brand) => brand.id === activeBrand) ?? homeFaqBrands[0],
-    [activeBrand],
-  );
-  const activeGuide = useMemo(() => homeFaqGuides[activeCluster], [activeCluster]);
-
-  const itemStates = useMemo(
-    () =>
-      homeFaqItems.map((item) => {
-        const searchTarget = `${item.question} ${item.answer.map(getBlockSearchText).join(" ")}`.toLowerCase();
-        const matchesSearch = deferredQuery ? searchTarget.includes(deferredQuery) : false;
-        const matchesView = item.clusterId === activeCluster && item.brandId === activeBrand;
-        const visible = deferredQuery ? matchesSearch : matchesView;
-=======
   const currentBrand = clusterBrands.find((brand) => getBrandId(brand.brand) === activeBrand) ?? clusterBrands[0];
   const faqItems = currentBrand?.faqs ?? [];
 
@@ -326,7 +267,6 @@ export default function HomeFaqHubSection() {
     if (!deferredQuery) {
       return faqItems;
     }
->>>>>>> 9f78257b3a51455898a47f6357b85d9f9c5fce0b
 
     return faqItems.filter((faq) => buildQuestionSearchText(faq.question, faq.answer).includes(deferredQuery));
   }, [faqItems, deferredQuery]);
@@ -481,48 +421,10 @@ export default function HomeFaqHubSection() {
               </a>
             </div>
 
-<<<<<<< HEAD
-            {!deferredQuery && activeGuide ? (
-              <div className="border-b border-[#e2e8f0] bg-[#f8fafc] px-5 py-5 sm:px-6 sm:py-6">
-                <p className="text-[11px] font-bold uppercase tracking-[0.12em] text-[#64748b]">
-                  {activeGuide.eyebrow}
-                </p>
-                <h3 className="mt-2 text-[18px] font-bold leading-[1.3] text-[#0d1b2e]">
-                  {activeGuide.title}
-                </h3>
-                <div className="mt-3 space-y-3">
-                  {activeGuide.paragraphs.map((paragraph, index) => (
-                    <p key={`guide-paragraph-${index}`} className="text-[14px] leading-[1.75] text-[#475569]">
-                      {paragraph}
-                    </p>
-                  ))}
-                </div>
-                {activeGuide.bullets?.length ? (
-                  <ul className="mt-4 space-y-2 text-[14px] leading-[1.7] text-[#475569]">
-                    {activeGuide.bullets.map((item, index) => (
-                      <li key={`guide-bullet-${index}`} className="flex gap-2">
-                        <span className="mt-[8px] h-1.5 w-1.5 flex-none rounded-full bg-[#15803d]" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                ) : null}
-              </div>
-            ) : null}
-
-            <div
-              className="faq-accordion max-h-[560px] overflow-y-auto [scrollbar-color:#cbd5e1_transparent] [scrollbar-width:thin] lg:max-h-[640px]"
-              role="region"
-              aria-live="polite"
-            >
-              {itemStates.map(({ item, visible }) => {
-                const isOpen = openItemId === item.id;
-=======
             <div className="faq-accordion max-h-[560px] overflow-y-auto [scrollbar-color:#cbd5e1_transparent] [scrollbar-width:thin] lg:max-h-[640px]" role="region" aria-live="polite">
               {filteredFaqs.map((faq, index) => {
                 const itemId = `faq-${getBrandId(currentBrand?.brand ?? "")}-${index}`;
                 const isOpen = openItemId === itemId;
->>>>>>> 9f78257b3a51455898a47f6357b85d9f9c5fce0b
 
                 return (
                   <div key={itemId} className="block">
@@ -548,13 +450,7 @@ export default function HomeFaqHubSection() {
                       hidden={!isOpen}
                       className="border-b border-[#e2e8f0] bg-[#f0fdf4] px-5 py-5 sm:px-6 sm:py-6"
                     >
-<<<<<<< HEAD
-                      <div className="space-y-3">
-                        {item.answer.map((block, index) => renderAnswerBlock(block, deferredQuery, index))}
-                      </div>
-=======
                       {renderAnswer(faq.answer, deferredQuery)}
->>>>>>> 9f78257b3a51455898a47f6357b85d9f9c5fce0b
 
                       <a
                         href="#home-hero-reg-form"
