@@ -19,6 +19,8 @@
     "canonical": "/bmw/1-series/114d-engine"
   },
   "assets": {
+    "mainImage": "/images/brands/bmw/models/bmw-1-series-main.webp",
+    "smallImage": "/images/brands/bmw/models/bmw-1-series-small.webp",
     "heroBg": "/images/brands/bmw/models/bmw-1-series-model-card.png",
     "howItWorksBg": "/images/brands/bmw/brand/bmw-how-it-works-bg.webp",
     "ctaImage": "/images/brands/bmw/models/bmw-1-series-model-card.png"
@@ -565,6 +567,7 @@
       "h2": "BMW 114d Engine Replacement - Frequently Asked Questions",
       "intro": "Everything BMW 114d owners usually ask before choosing a rebuilt, reconditioned or used replacement engine.",
       "defaultOpenIndex": 0,
+      "disclaimer": "All prices are indicative UK market ranges based on historical quote data from our network of engine specialists. Actual costs vary by variant, engine code, damage severity and workshop location. Use our free comparison tool to get tailored quotes. Every engine supplied through EngineMarket carries a minimum 12-month unlimited mileage warranty - always confirm terms with your chosen supplier.",
       "items": [
         {
           "question": "How long does a BMW 114d engine last with proper maintenance?",
@@ -575,6 +578,7 @@
             "Full service history and correct oil specification significantly extend engine life",
             "Rebuilt units from our network include upgraded components addressing known weak points"
           ],
+          "comparisonTable": null,
           "warning": null,
           "cta": "-> Check your BMW 114d's exact engine code and get preventative maintenance quotes"
         },
@@ -585,11 +589,32 @@
             "Used engines are lowest cost but carry unknown wear history and limited warranty",
             "Reconditioned units are cleaned and tested but may not address design weaknesses",
             "Rebuilt engines include upgraded tensioners, seals, and components prone to failure",
-            "All rebuilt units through our network include 12-month unlimited mileage warranty",
-            "Used (low-mileage donor) - £1,100-£1,700 - 30-90 days; no upgraded components",
-            "Reconditioned (tested/restored) - £1,700-£2,300 - 6-12 months; OEM-spec parts only",
-            "Rebuilt (upgraded failure points) - £1,700-£2,400 - 12 months unlimited; upgraded tensioners, seals, gaskets"
+            "All rebuilt units through our network include 12-month unlimited mileage warranty"
           ],
+          "comparisonTable": {
+            "headers": [
+              "Engine Condition",
+              "Typical Price Range (Supply Only)",
+              "Warranty & Component Coverage"
+            ],
+            "rows": [
+              [
+                "Used (low-mileage donor)",
+                "£1,100-£1,700",
+                "30-90 days; no upgraded components"
+              ],
+              [
+                "Reconditioned (tested/restored)",
+                "£1,700-£2,300",
+                "6-12 months; OEM-spec parts only"
+              ],
+              [
+                "Rebuilt (upgraded failure points)",
+                "£1,700-£2,400",
+                "12 months unlimited; upgraded tensioners, seals, gaskets"
+              ]
+            ]
+          },
           "warning": "Avoid used engines without compression test documentation - hidden wear can lead to repeat failure within months.",
           "cta": "-> Compare rebuilt BMW 114d engine prices with warranty protection today"
         },
@@ -602,6 +627,7 @@
             "Arrange vehicle collection to a specialist workshop - do not drive the car",
             "Our network suppliers can collect your non-running 114d for assessment"
           ],
+          "comparisonTable": null,
           "warning": "Driving with timing chain noise can cause irreversible engine damage within minutes.",
           "cta": "-> Get urgent quotes from BMW 114d timing chain specialists near you"
         },
@@ -614,6 +640,7 @@
             "Still requires oil changes with BMW Longlife-04 spec to prevent premature wear",
             "Rebuilt B37D15A units from our network include all latest component revisions"
           ],
+          "comparisonTable": null,
           "warning": null,
           "cta": "-> Compare rebuilt B37D15A engine prices for your BMW 114d"
         },
@@ -626,6 +653,7 @@
             "Oil capacity: ~4.25L for N47D16A, ~4.25L for B37D15A (check dipstick)",
             "Our specialist network uses only OEM-spec oils during rebuild and fitment"
           ],
+          "comparisonTable": null,
           "warning": null,
           "cta": "-> Get quotes from BMW 114d specialists using correct Longlife-04 oil"
         },
@@ -638,6 +666,7 @@
             "Rebuilt units include upgraded failure-point components and 12-month warranty",
             "Compare live quotes to find the best value specialist near you"
           ],
+          "comparisonTable": null,
           "warning": null,
           "cta": "-> Compare supply and fit quotes for your BMW 114d engine replacement"
         },
@@ -650,6 +679,7 @@
             "Rebuilt engines from our network meet OEM tolerances and emissions standards",
             "Full service history post-rebuild supports stronger resale positioning"
           ],
+          "comparisonTable": null,
           "warning": null,
           "cta": "-> Get quotes from DVLA-compliant BMW 114d engine specialists today"
         },
@@ -663,6 +693,7 @@
             "Minimum 12-month unlimited mileage warranty on every engine supplied",
             "Transparent quotes with no hidden fees or obligation to proceed"
           ],
+          "comparisonTable": null,
           "warning": null,
           "cta": "-> Get quotes from BMW 114d N47D16A specialists near you today"
         }
@@ -670,6 +701,8 @@
       "ui": {
         "questionLabelPrefix": "Question",
         "keyPointsLabel": "Key points",
+        "comparisonTableLabel": "Comparison table",
+        "disclaimerLabel": "Disclaimer",
         "warningTitle": "Important"
       }
     },

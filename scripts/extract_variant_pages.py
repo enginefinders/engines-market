@@ -627,13 +627,24 @@ def parse_faq(section_lines: list[str], variant_name: str) -> dict[str, Any]:
 
         comparison_rows = parse_table(block[1:], "COMPARISON TABLE", min_cells=3)
         key_points = extract_bullets(block[1:], "KEY POINTS")
-        key_points.extend(" - ".join(cell for cell in row if cell) for row in comparison_rows)
+        comparison_table = None
+        if comparison_rows:
+            headers = []
+            table_block = collect_block(block[1:], "COMPARISON TABLE")
+            table_lines = [line for line in table_block if line.strip().startswith("|")]
+            if table_lines:
+                headers = [normalize_text(cell) for cell in table_lines[0].strip().strip("|").split("|")]
+            comparison_table = {
+                "headers": headers,
+                "rows": comparison_rows,
+            }
 
         items.append(
             {
                 "question": question_match.group("value").strip(),
                 "answer": " ".join(collect_block(block[1:], "SHORT SUMMARY")),
                 "keyPoints": key_points,
+                "comparisonTable": comparison_table,
                 "warning": find_label(block[1:], "WARNING") or None,
                 "cta": find_first_arrow_line(block[1:]),
             }
@@ -644,10 +655,13 @@ def parse_faq(section_lines: list[str], variant_name: str) -> dict[str, Any]:
         "h2": find_label(section_lines, "H2"),
         "intro": f"Everything {variant_name} owners usually ask before choosing a rebuilt, reconditioned or used replacement engine.",
         "defaultOpenIndex": 0,
+        "disclaimer": " ".join(collect_block(section_lines, "DISCLAIMER")),
         "items": items,
         "ui": {
             "questionLabelPrefix": "Question",
             "keyPointsLabel": "Key points",
+            "comparisonTableLabel": "Comparison table",
+            "disclaimerLabel": "Disclaimer",
             "warningTitle": "Important",
         },
     }

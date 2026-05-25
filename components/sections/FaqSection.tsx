@@ -74,6 +74,53 @@ export default function FaqSection({ data, strictData = false }: Props) {
                   </div>
                 ) : null}
 
+                {item.comparisonTable?.headers?.length && item.comparisonTable.rows?.length ? (
+                  <div className="mt-3 overflow-hidden rounded-xl border border-slate-200 bg-white">
+                    {strictData ? (
+                      ui.comparisonTableLabel ? (
+                        <div className="border-b border-slate-200 bg-slate-50 px-3.5 py-2">
+                          <p className="text-label text-slate-500">{ui.comparisonTableLabel}</p>
+                        </div>
+                      ) : null
+                    ) : (
+                      <div className="border-b border-slate-200 bg-slate-50 px-3.5 py-2">
+                        <p className="text-label text-slate-500">{ui.comparisonTableLabel ?? "Comparison table"}</p>
+                      </div>
+                    )}
+
+                    <div className="overflow-x-auto">
+                      <table className="min-w-full border-collapse text-left">
+                        <thead>
+                          <tr className="border-b border-slate-200">
+                            {item.comparisonTable.headers.map((header) => (
+                              <th
+                                key={header}
+                                className="px-3.5 py-2.5 font-['Manrope'] text-[11px] font-extrabold uppercase tracking-[0.04em] text-[#0d1b2e]"
+                              >
+                                {header}
+                              </th>
+                            ))}
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {item.comparisonTable.rows.map((row, rowIndex) => (
+                            <tr key={`${item.question}-row-${rowIndex}`} className="border-b border-slate-100 last:border-b-0">
+                              {row.map((cell, cellIndex) => (
+                                <td
+                                  key={`${item.question}-row-${rowIndex}-cell-${cellIndex}`}
+                                  className="align-top px-3.5 py-2.5 text-[11.5px] leading-[1.5] text-slate-700"
+                                >
+                                  {cell}
+                                </td>
+                              ))}
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                ) : null}
+
                 {item.warning && (!strictData || ui.warningTitle) && (
                   <div className="mt-3">
                     <WarningCard
@@ -91,6 +138,17 @@ export default function FaqSection({ data, strictData = false }: Props) {
             </details>
           ))}
         </div>
+
+        {data.disclaimer ? (
+          <div className="mx-auto mt-3 max-w-5xl rounded-xl border border-slate-200 bg-slate-50 px-4 py-3">
+            {strictData ? (
+              ui.disclaimerLabel ? <p className="text-label text-slate-500">{ui.disclaimerLabel}</p> : null
+            ) : (
+              <p className="text-label text-slate-500">{ui.disclaimerLabel ?? "Disclaimer"}</p>
+            )}
+            <p className="mt-1.5 text-[11.5px] leading-[1.6] text-slate-600">{data.disclaimer}</p>
+          </div>
+        ) : null}
       </Container>
     </Section>
   );

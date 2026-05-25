@@ -433,16 +433,23 @@ export type FaqSectionData = {
   headingLines?: string[];
   intro: string;
   defaultOpenIndex?: number;
+  disclaimer?: string;
   items: {
     question: string;
     answer: string;
     keyPoints?: string[];
+    comparisonTable?: {
+      headers: string[];
+      rows: string[][];
+    };
     cta: string;
     warning?: string;
   }[];
   ui?: {
     questionLabelPrefix?: string;
     keyPointsLabel?: string;
+    comparisonTableLabel?: string;
+    disclaimerLabel?: string;
     warningTitle?: string;
   };
 };

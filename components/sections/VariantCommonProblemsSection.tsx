@@ -271,7 +271,7 @@ export default function VariantCommonProblemsSection({ data }: Props) {
 
               {data.finalCta.disclaimer ? (
                 <div className="rounded-[12px] border border-slate-200 bg-slate-50 px-3 py-2 text-[9.5px] leading-[1.5] text-slate-500">
-                  <span className="font-bold uppercase tracking-[0.08em] text-slate-700">Pricing note</span>
+                  <span className="font-bold uppercase tracking-[0.08em] text-slate-700">DISCLAIMER:</span>
                   <p className="mt-1">{data.finalCta.disclaimer}</p>
                 </div>
               ) : null}
