@@ -93,6 +93,8 @@ export type ModelPageData = {
     canonical: string;
   };
   assets: {
+    mainImage?: string;
+    smallImage?: string;
     heroBg: string;
     howItWorksBg: string;
     engineCodesBg?: string;

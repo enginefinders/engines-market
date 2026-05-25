@@ -41,6 +41,7 @@ export default function DocumentModelPage({
   const structuredData = visualData.structuredData;
   const heroCards = toHeroCards(visualData);
   const reviewsData = buildStaticReviewsSection(visualData.model.name);
+  const mainImage = visualData.assets.heroBg;
 
   return (
     <>
@@ -53,7 +54,7 @@ export default function DocumentModelPage({
 
       <HeroSection
         data={visualData.sections.hero}
-        bgImage={visualData.assets.heroBg}
+        bgImage={mainImage}
         modelCards={heroCards}
         strictData
       />
@@ -67,7 +68,7 @@ export default function DocumentModelPage({
       <LiveMarketPricesSection
         data={visualData.sections.liveMarketPrices}
         modelCards={heroCards}
-        imageSrc={visualData.assets.heroBg}
+        imageSrc={mainImage}
         displayMode="document"
       />
 

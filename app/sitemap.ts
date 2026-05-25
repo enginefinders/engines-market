@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getBrandSlugs } from "@/lib/brandData";
 import { getModelPageStaticParams } from "@/lib/modelPageData";
+import { getVariantPageStaticParams } from "@/lib/variantPageData";
 import { SITE_URL } from "@/lib/site";
 
 export const dynamic = "force-static";
@@ -8,6 +9,7 @@ export const dynamic = "force-static";
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const brandSlugs = await getBrandSlugs();
   const modelParams = await getModelPageStaticParams();
+  const variantParams = await getVariantPageStaticParams();
   const now = new Date();
 
   return [
@@ -28,6 +30,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: now,
       changeFrequency: "weekly" as const,
       priority: 0.7,
+    })),
+    ...variantParams.map(({ brand, model, variant }) => ({
+      url: `${SITE_URL}/${brand}/${model}/${variant}`,
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: 0.6,
     })),
   ];
 }

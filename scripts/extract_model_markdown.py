@@ -491,11 +491,15 @@ def default_assets(
     hero_image: Optional[str],
     cta_image: Optional[str],
 ) -> Dict[str, str]:
-    model_image = hero_image or f"/images/brands/{brand_slug}/models/{brand_slug}-{model_slug}-model-card.png"
-    cta = cta_image or model_image
+    main_image = f"/images/brands/{brand_slug}/models/{brand_slug}-{model_slug}-main.webp"
+    small_image = f"/images/brands/{brand_slug}/models/{brand_slug}-{model_slug}-small.webp"
+    model_image = hero_image or main_image
+    cta = cta_image or main_image
     brand_assets = (brand_json or {}).get("assets", {})
 
     return {
+        "mainImage": main_image,
+        "smallImage": small_image,
         "heroBg": model_image,
         "howItWorksBg": brand_assets.get(
             "howItWorksBg",

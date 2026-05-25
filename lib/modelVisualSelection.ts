@@ -1,5 +1,6 @@
 import { existsSync, readdirSync } from "node:fs";
 import path from "node:path";
+import { resolveModelImagePaths } from "@/lib/modelImageAssets";
 import type { ModelPageData } from "@/types/model";
 
 const PUBLIC_DIR = path.join(process.cwd(), "public");
@@ -62,11 +63,27 @@ function listBrandModelAssets(brandSlug: string) {
 }
 
 function resolveCarPlaceholder(pageData: ModelPageData) {
+  const resolvedImages = resolveModelImagePaths({
+    brandSlug: pageData.brand.slug,
+    modelSlug: pageData.model.slug,
+    legacySlug: pageData.model.legacySlug,
+    modelName: pageData.model.name,
+    configuredMainImage: pageData.assets.mainImage,
+    configuredSmallImage: pageData.assets.smallImage,
+    configuredHeroImage: pageData.assets.heroBg,
+    configuredCtaImage: pageData.assets.ctaImage,
+  });
   const brandAssets = listBrandModelAssets(pageData.brand.slug);
   const preferredCandidates = [
+    resolvedImages.resolvedMainImage,
+    resolvedImages.resolvedSmallImage,
+    pageData.assets.mainImage,
+    pageData.assets.smallImage,
     pageData.assets.heroBg,
     pageData.assets.ctaImage,
     ...modelSlugCandidates(pageData).flatMap((candidate) => [
+      `/images/brands/${pageData.brand.slug}/models/${pageData.brand.slug}-${candidate}-main.webp`,
+      `/images/brands/${pageData.brand.slug}/models/${pageData.brand.slug}-${candidate}-small.webp`,
       `/images/brands/${pageData.brand.slug}/models/${pageData.brand.slug}-${candidate}-model-card.png`,
     ]),
   ];
@@ -116,6 +133,16 @@ function selectEnginePlaceholder(seed: string, fuel: string, power: string) {
 
 export function applyModelPageVisualPlaceholders(pageData: ModelPageData): ModelPageData {
   const carPlaceholder = resolveCarPlaceholder(pageData);
+  const resolvedImages = resolveModelImagePaths({
+    brandSlug: pageData.brand.slug,
+    modelSlug: pageData.model.slug,
+    legacySlug: pageData.model.legacySlug,
+    modelName: pageData.model.name,
+    configuredMainImage: pageData.assets.mainImage,
+    configuredSmallImage: pageData.assets.smallImage,
+    configuredHeroImage: pageData.assets.heroBg,
+    configuredCtaImage: pageData.assets.ctaImage,
+  });
 
   const cards = pageData.sections.variantCoverage.cards.map((card) => ({
     ...card,
@@ -138,8 +165,10 @@ export function applyModelPageVisualPlaceholders(pageData: ModelPageData): Model
     ...pageData,
     assets: {
       ...pageData.assets,
-      heroBg: assetExists(pageData.assets.heroBg) ? pageData.assets.heroBg : carPlaceholder,
-      ctaImage: assetExists(pageData.assets.ctaImage) ? pageData.assets.ctaImage : carPlaceholder,
+      mainImage: resolvedImages.expectedMainImage,
+      smallImage: resolvedImages.expectedSmallImage,
+      heroBg: assetExists(resolvedImages.resolvedMainImage) ? resolvedImages.resolvedMainImage : carPlaceholder,
+      ctaImage: assetExists(resolvedImages.resolvedMainImage) ? resolvedImages.resolvedMainImage : carPlaceholder,
     },
     sections: {
       ...pageData.sections,

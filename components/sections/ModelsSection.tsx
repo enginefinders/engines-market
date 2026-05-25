@@ -134,7 +134,7 @@ export default function ModelsSection({ data, brandSlug }: Props) {
                   <div className="border-t border-slate-100 px-4 pb-4 pt-3">
                     <div className="relative aspect-[4/3] overflow-hidden rounded-[12px] bg-white">
                       <Image
-                        src={model.image || `/images/brands/${brandSlug}/models/${brandSlug}-${model.slug}-model-card.webp`}
+                        src={model.image || `/images/brands/${brandSlug}/models/${brandSlug}-${model.slug}-small.webp`}
                         alt={model.h3}
                         fill
                         className="object-contain p-3"

@@ -17,6 +17,7 @@ import TrustCtaSection from "@/components/sections/TrustCtaSection";
 import QuoteCheckoutModal from "@/components/checkout/QuoteCheckoutModal";
 import { getBrandPageData, getBrandSlugs } from "@/lib/brandData";
 import { resolveBrandPageVisuals } from "@/lib/engineImageSelection";
+import { resolveModelImagePaths } from "@/lib/modelImageAssets";
 import { getModelHref } from "@/lib/modelRoutes";
 import { SITE_URL } from "@/lib/site";
 import { buildStaticReviewsSection } from "@/lib/staticReviews";
@@ -149,6 +150,16 @@ export default async function BrandPage({ params }: BrandPageProps) {
   const structuredData = buildStructuredData(pageData);
   const reviewsData = buildStaticReviewsSection(pageData.brand.name);
   const brandVisuals = resolveBrandPageVisuals(pageData);
+  const modelCardsWithResolvedImages = pageData.sections.models.cards.map((card) => ({
+    ...card,
+    image: resolveModelImagePaths({
+      brandSlug: pageData.brand.slug,
+      modelSlug: card.slug,
+      modelName: card.h3,
+      configuredSmallImage: card.image,
+      configuredHeroImage: card.image,
+    }).resolvedSmallImage,
+  }));
   const heroModelCards = pageData.sections.models.cards.map((card, index) => ({
     ...card,
     image: brandVisuals.heroCardEngines[index] ?? brandVisuals.heroCardEngines[index % brandVisuals.heroCardEngines.length] ?? card.image,
@@ -186,7 +197,13 @@ export default async function BrandPage({ params }: BrandPageProps) {
 
       <ReviewsSection data={reviewsData} useDataHeading />
 
-      <ModelsSection data={pageData.sections.models} brandSlug={pageData.brand.slug} />
+      <ModelsSection
+        data={{
+          ...pageData.sections.models,
+          cards: modelCardsWithResolvedImages,
+        }}
+        brandSlug={pageData.brand.slug}
+      />
 
       <EngineCodesSection data={pageData.sections.engineCodes} bgImage={pageData.assets.engineCodesBg} />
 

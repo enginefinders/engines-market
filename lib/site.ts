@@ -9,3 +9,4 @@ export const SITE_URL = normalizeSiteUrl(
 );
 
 export const INDEX_MODEL_PAGES = process.env.INDEX_MODEL_PAGES === "true";
+export const INDEX_VARIANT_PAGES = process.env.INDEX_VARIANT_PAGES === "true";

@@ -7,8 +7,25 @@ type Props = {
   data: TrustCtaData;
   brandName: string;
   imageSrc: string;
-  displayMode?: "brand" | "document";
+  displayMode?: "brand" | "document" | "variant";
 };
+
+function splitFinalCtaText(text: string) {
+  const normalized = text.replace(/\s+/g, " ").trim();
+  if (!normalized) {
+    return { title: "", description: "" };
+  }
+
+  const firstSentenceMatch = normalized.match(/^(.+?[.!?])\s+(.+)$/);
+  if (!firstSentenceMatch) {
+    return { title: normalized, description: "" };
+  }
+
+  return {
+    title: firstSentenceMatch[1].trim(),
+    description: firstSentenceMatch[2].trim(),
+  };
+}
 
 function CheckIcon() {
   return (
@@ -85,7 +102,10 @@ export default function TrustCtaSection({
   const ui = data.ui ?? {};
   const secondaryAction = data.secondaryAction ?? {};
   const headingLines = data.h2 ? data.h2.split(/\s+-\s+/) : [];
-  const trustBullets = displayMode === "document"
+  const isDocumentMode = displayMode === "document";
+  const isVariantMode = displayMode === "variant";
+  const parsedFinalCta = splitFinalCtaText(data.finalText);
+  const trustBullets = isDocumentMode || isVariantMode
     ? (ui.trustBullets ?? [])
     : (ui.trustBullets ?? [
         "100% Free",
@@ -93,17 +113,21 @@ export default function TrustCtaSection({
         "Fast & secure process",
         "UK-based support",
       ]);
-  const pointLabel = displayMode === "document" ? (ui.pointLabel?.trim() ?? "") : (ui.pointLabel?.trim() ?? "Included");
-  const stripLabel = displayMode === "document" ? (ui.stripLabel?.trim() ?? "") : (ui.stripLabel?.trim() ?? "Trusted UK Engine Marketplace");
+  const pointLabel = isDocumentMode || isVariantMode ? (ui.pointLabel?.trim() ?? "") : (ui.pointLabel?.trim() ?? "Included");
+  const stripLabel = isDocumentMode || isVariantMode ? (ui.stripLabel?.trim() ?? "") : (ui.stripLabel?.trim() ?? "Trusted UK Engine Marketplace");
   const defaultDocumentStripTitle = `Find the best ${brandName} engine replacement near you`;
   const defaultDocumentStripDescription = `Compare engine prices for ${brandName} in the UK and get competitive quotes from garages near you.`;
   const stripTitle =
-    displayMode === "document"
+    isDocumentMode
       ? defaultDocumentStripTitle
+      : isVariantMode
+        ? ui.stripTitle?.trim() || parsedFinalCta.title || data.finalText
       : ui.stripTitle?.trim() || `Compare ${brandName} engine prices with vetted UK specialists`;
   const stripDescription =
-    displayMode === "document"
+    isDocumentMode
       ? defaultDocumentStripDescription
+      : isVariantMode
+        ? ui.stripDescription?.trim() || parsedFinalCta.description
       : ui.stripDescription?.trim() || data.finalText;
   const secondaryActionText = secondaryAction.text?.trim();
   const showPointLabel = ui.showPointLabel ?? (displayMode === "brand");
@@ -158,7 +182,7 @@ export default function TrustCtaSection({
               ) : null}
 
               <div className="mt-4">
-                {displayMode === "document" ? (
+                {isDocumentMode || isVariantMode ? (
                   <CtaStrip
                     tone="dark"
                     title={stripTitle}
@@ -237,7 +261,7 @@ export default function TrustCtaSection({
               />
 
               <div className="absolute bottom-3 right-3 rounded-2xl border border-white/10 bg-[#06172f]/88 px-3.5 py-2.5 text-right backdrop-blur-sm">
-                {displayMode === "document" ? (
+                {isDocumentMode || isVariantMode ? (
                   <>
                     {ui.imageBadgeLabel ? <p className="text-label text-green-300">{ui.imageBadgeLabel}</p> : null}
                     {ui.imageBadgeTitle ? <p className="mt-1 text-[0.8rem] font-bold text-white">{ui.imageBadgeTitle}</p> : null}
