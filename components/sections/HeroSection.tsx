@@ -486,15 +486,6 @@ export default function HeroSection({
                             {buildHeroLineTwo(model)}
                           </p>
                         ) : null}
-                        {modelHref ? (
-                          <Link
-                            href={modelHref}
-                            className="mt-1 inline-flex items-center gap-1 text-[11px] font-semibold text-[#15803d] transition hover:gap-1.5 md:text-[11.5px]"
-                          >
-                            <span>View model page</span>
-                            <span aria-hidden="true">-&gt;</span>
-                          </Link>
-                        ) : null}
                       </div>
                     </div>
                   </div>

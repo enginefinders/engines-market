@@ -99,6 +99,20 @@ function formatSizeFuel(size: string, fuel: string) {
   return [normalizedSize, normalizedFuel].filter(Boolean).join(" ").trim();
 }
 
+function isMeaningfulEngineTitle(value: string) {
+  const cleanedValue = sanitizeDashText(value);
+
+  if (!cleanedValue) {
+    return false;
+  }
+
+  if (/^\d+(?:\.\d+)?\.?$/i.test(cleanedValue)) {
+    return false;
+  }
+
+  return /[a-z]/i.test(cleanedValue);
+}
+
 function repairEngineTitleValue(code: string, title: string, size: string, fuel: string) {
   const cleanedTitle = sanitizeDashText(title);
   const cleanedCode = sanitizeDashText(code);
@@ -106,12 +120,12 @@ function repairEngineTitleValue(code: string, title: string, size: string, fuel:
 
   if (trailingFragmentMatch) {
     const repaired = normalizeWhitespace(`${trailingFragmentMatch[1]}${cleanedTitle}`).replace(/(\d)\.\s+(\d)/g, "$1.$2");
-    if (/^\d+(?:\.\d+)?\s+Litre\b/i.test(repaired)) {
+    if (isMeaningfulEngineTitle(repaired)) {
       return repaired;
     }
   }
 
-  if (/^\d+(?:\.\d+)?\s+Litre\b/i.test(cleanedTitle)) {
+  if (isMeaningfulEngineTitle(cleanedTitle)) {
     return cleanedTitle;
   }
 
