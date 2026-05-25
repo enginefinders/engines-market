@@ -260,6 +260,11 @@ export type CommonProblemsData = {
     recommendation: string;
     cta: string;
   }[];
+  emptyState?: {
+    title: string;
+    description: string;
+    placeholder?: string;
+  } | null;
   finalCta: {
     h4: string;
     paragraph: string;

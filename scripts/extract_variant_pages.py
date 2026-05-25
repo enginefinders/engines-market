@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+from functools import lru_cache
 import json
 import re
 import sys
@@ -10,10 +11,11 @@ from typing import Any
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
+BRANDS_DIR = REPO_ROOT / "data" / "brands"
 MODELS_DIR = REPO_ROOT / "data" / "models"
 VARIANTS_DIR = REPO_ROOT / "data" / "variants"
 
-SECTION_RE = re.compile(r"^#\s*SECTION\s+(?P<number>\d+)", re.IGNORECASE)
+SECTION_RE = re.compile(r"^#?\s*SECTION\s+(?P<number>\d+)(?:\s*[—-]|\s*$)", re.IGNORECASE)
 LABEL_RE = re.compile(r"^(?P<label>[A-Za-z0-9 ()/&'\-]+):\s*(?P<value>.*)$")
 QUESTION_RE = re.compile(r"^Q:\s*(?P<value>.+)$", re.IGNORECASE)
 H3_RE = re.compile(r"^H3:\s*(?P<value>.+)$", re.IGNORECASE)
@@ -90,6 +92,21 @@ def normalize_text(value: str) -> str:
     return text.strip()
 
 
+def is_separator_line(value: str) -> bool:
+    text = normalize_text(value)
+    return bool(text) and (
+        (len(text) >= 8 and bool(re.fullmatch(r"[=═\-\u2500-\u257f\s]+", text)))
+        or (text.startswith("â•") and len(text) >= 8)
+    )
+
+
+def is_noise_line(value: str) -> bool:
+    text = normalize_text(value)
+    if not text:
+        return False
+    return is_separator_line(text) or text.upper().startswith("PROMPT ") or text in {".", "…"}
+
+
 def strip_leading_marker(value: str) -> str:
     return normalize_text(re.sub(r"^(?:•|->|-|\[[^\]]+\])\s*", "", value))
 
@@ -155,6 +172,8 @@ def find_label(lines: list[str], label: str, default: str = "") -> str:
                 normalized = normalize_text(trailing_line)
                 if not normalized:
                     continue
+                if is_noise_line(normalized):
+                    continue
                 if match_label(normalized):
                     return default
                 return normalized
@@ -185,13 +204,19 @@ def collect_block(lines: list[str], start_label: str) -> list[str]:
                 if values:
                     break
                 continue
+            if is_noise_line(normalized):
+                continue
             values.append(normalized)
 
     return values
 
 
 def clean_bullet(value: str) -> str:
-    return strip_leading_marker(value)
+    line = strip_leading_marker(value)
+    has_marker = bool(re.match(r"^\s*(?:â€¢|•|->|-|\[[^\]]+\])\s*", repair_text(value)))
+    if not line or is_noise_line(line) or (match_label(line) and not has_marker):
+        return ""
+    return line
 
 
 def extract_bullets(lines: list[str], start_label: str) -> list[str]:
@@ -219,6 +244,20 @@ def parse_table(lines: list[str], start_label: str, min_cells: int) -> list[list
 
 def parse_repair_options(lines: list[str], start_label: str) -> list[dict[str, str]]:
     rows = parse_table(lines, start_label, min_cells=5)
+    if not rows:
+        block = collect_block(lines, start_label)
+        values = [normalize_text(line) for line in block if normalize_text(line)]
+        header_markers = {
+            "Repair Tier",
+            "Dealer Price (Parts + Labour)",
+            "Specialist Price (Parts + Labour)",
+            "What It Involves",
+            "Longevity / Suitability",
+        }
+        values = [value for value in values if value not in header_markers]
+        if len(values) >= 5:
+            rows = [values[index : index + 5] for index in range(0, len(values), 5) if len(values[index : index + 5]) == 5]
+
     return [
         {
             "tier": row[0],
@@ -319,14 +358,157 @@ def parse_metadata(section_lines: list[str]) -> dict[str, Any]:
     }
 
 
+@lru_cache(maxsize=1)
+def load_brand_catalog() -> list[dict[str, str | list[str]]]:
+    catalog: list[dict[str, str | list[str]]] = []
+    if not BRANDS_DIR.is_dir():
+        return catalog
+
+    for path in BRANDS_DIR.glob("*.json"):
+        if path.stem.startswith("_"):
+            continue
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+
+        brand = data.get("brand", {})
+        brand_name = normalize_text(brand.get("name", ""))
+        brand_slug = normalize_text(brand.get("slug", "")) or path.stem
+        aliases = {
+            brand_name,
+            normalize_text(brand_slug.replace("-", " ")),
+        }
+        if brand_name.endswith(" Benz"):
+            aliases.add(normalize_text(brand_name.replace(" Benz", "")))
+
+        clean_aliases = sorted({alias for alias in aliases if alias}, key=len, reverse=True)
+        if clean_aliases:
+            catalog.append(
+                {
+                    "name": brand_name or brand_slug.replace("-", " ").title(),
+                    "slug": brand_slug,
+                    "aliases": clean_aliases,
+                }
+            )
+
+    return sorted(catalog, key=lambda item: max(len(alias) for alias in item["aliases"]), reverse=True)
+
+
+@lru_cache(maxsize=1)
+def load_model_catalog() -> dict[str, list[dict[str, str | list[str]]]]:
+    catalog: dict[str, list[dict[str, str | list[str]]]] = {}
+    if not MODELS_DIR.is_dir():
+        return catalog
+
+    for path in MODELS_DIR.glob("*.json"):
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+
+        brand = data.get("brand", {})
+        model = data.get("model", {})
+        brand_name = normalize_text(brand.get("name", ""))
+        brand_slug = normalize_text(brand.get("slug", ""))
+        model_name = normalize_text(model.get("name", ""))
+        model_slug = normalize_text(model.get("slug", ""))
+        legacy_slug = normalize_text(model.get("legacySlug", ""))
+        if not brand_slug or not model_slug or not model_name:
+            continue
+
+        aliases = {
+            model_name,
+            normalize_text(model_slug.replace("-", " ")),
+            normalize_text(legacy_slug.replace("-", " ")) if legacy_slug else "",
+        }
+        if brand_name and model_name.lower().startswith(f"{brand_name.lower()} "):
+            aliases.add(normalize_text(model_name[len(brand_name) :]))
+
+        clean_aliases = sorted({alias for alias in aliases if alias}, key=len, reverse=True)
+        catalog.setdefault(brand_slug, []).append(
+            {
+                "name": model_name,
+                "slug": model_slug,
+                "aliases": clean_aliases,
+            }
+        )
+
+    for brand_slug, items in catalog.items():
+        catalog[brand_slug] = sorted(items, key=lambda item: max(len(alias) for alias in item["aliases"]), reverse=True)
+
+    return catalog
+
+
+def strip_start(text: str, prefix: str) -> str:
+    normalized_text = normalize_text(text)
+    normalized_prefix = normalize_text(prefix)
+    if not normalized_prefix:
+        return normalized_text
+    if normalized_text.lower() == normalized_prefix.lower():
+        return ""
+    if normalized_text.lower().startswith(f"{normalized_prefix.lower()} "):
+        return normalized_text[len(normalized_prefix) :].strip()
+    return normalized_text
+
+
+def infer_brand_match(source_name: str) -> tuple[str, str, str]:
+    normalized = normalize_text(source_name)
+    for brand in load_brand_catalog():
+        for alias in brand["aliases"]:
+            if normalized.lower() == alias.lower() or normalized.lower().startswith(f"{alias.lower()} "):
+                return (
+                    str(brand["slug"]),
+                    str(brand["name"]),
+                    strip_start(normalized, alias),
+                )
+    return "", "", normalized
+
+
+def infer_model_variant_from_remainder(remainder: str) -> tuple[str, str]:
+    normalized = normalize_text(remainder)
+    tokens = normalized.split()
+    if len(tokens) <= 1:
+        return normalized, normalized
+
+    variant_token_count = 1
+    last_token = tokens[-1]
+    previous_token = tokens[-2] if len(tokens) >= 2 else ""
+    if last_token.lower() in {"supercharged", "turbo", "diesel", "petrol", "hybrid", "mhev", "phev"} and previous_token:
+        variant_token_count = 2
+
+    model_tokens = tokens[:-variant_token_count]
+    variant_tokens = tokens[-variant_token_count:]
+    model_name = " ".join(model_tokens).strip() or normalized
+    variant_name = " ".join(variant_tokens).strip() or normalized
+    return model_name, variant_name
+
+
+def infer_route_parts_from_name(fallback_name: str) -> tuple[str, str, str]:
+    clean_name = normalize_text(fallback_name.replace(" Engine Replacement", "").replace(" variant", ""))
+    brand_slug, _brand_name, remainder = infer_brand_match(clean_name)
+    if not brand_slug:
+        return "", "", f"{slugify(clean_name)}-engine"
+
+    model_catalog = load_model_catalog().get(brand_slug, [])
+    for model in model_catalog:
+        for alias in model["aliases"]:
+            if remainder.lower() == alias.lower() or remainder.lower().startswith(f"{alias.lower()} "):
+                variant_name = strip_start(remainder, alias)
+                variant_slug = slugify(variant_name or clean_name)
+                return brand_slug, str(model["slug"]), f"{variant_slug}-engine"
+
+    inferred_model_name, inferred_variant_name = infer_model_variant_from_remainder(remainder)
+    return brand_slug, slugify(inferred_model_name), f"{slugify(inferred_variant_name)}-engine"
+
+
 def derive_route_parts(meta: dict[str, Any], fallback_name: str) -> tuple[str, str, str]:
     canonical = meta.get("canonical") or ""
     parts = [part for part in canonical.strip("/").split("/") if part]
     if len(parts) >= 3:
         return parts[0], parts[1], parts[2]
 
-    fallback_variant = fallback_name.replace(" Engine Replacement", "").replace(" variant", "")
-    return "", "", f"{slugify(fallback_variant)}-engine"
+    return infer_route_parts_from_name(fallback_name)
 
 
 def load_parent_model_page(brand_slug: str, model_slug: str) -> dict[str, Any] | None:
@@ -440,6 +622,16 @@ def parse_how_it_works(section_lines: list[str], variant_name: str) -> dict[str,
             current_store[current_key] = []
             continue
         if current_store is not None and current_key is not None:
+            if is_noise_line(line):
+                if current_store[current_key]:
+                    current_key = None
+                    current_store = None
+                continue
+            if match_label(line) and not H3_RE.match(line):
+                if current_store[current_key]:
+                    current_key = None
+                    current_store = None
+                continue
             if not line and current_store[current_key]:
                 current_key = None
                 current_store = None
@@ -569,6 +761,7 @@ def parse_common_problems(section_lines: list[str], variant_name: str) -> dict[s
     problems = []
     closing_title = ""
     closing_paragraph = ""
+    intro = " ".join(collect_block(section_lines, "INTRO PARAGRAPH"))
 
     for block in parse_engine_blocks(section_lines):
         heading_match = H3_RE.match(normalize_text(block[0]))
@@ -607,8 +800,15 @@ def parse_common_problems(section_lines: list[str], variant_name: str) -> dict[s
     return {
         "tag": "Common Problems",
         "h2": find_label(section_lines, "H2"),
-        "h3": " ".join(collect_block(section_lines, "INTRO PARAGRAPH")),
+        "h3": intro,
         "problems": problems,
+        "emptyState": {
+            "title": "No pattern-specific failure blocks are documented for this variant yet.",
+            "description": intro,
+            "placeholder": "Add structured common-problem entries here when future source documents provide them.",
+        }
+        if not problems and intro
+        else None,
         "finalCta": {
             "h4": closing_title or f"Don't let engine failure write off your {variant_name}",
             "paragraph": closing_paragraph,
@@ -720,6 +920,11 @@ def build_output_data(
     hero = parse_hero(section_map.get(1, []), fallback_variant_name, hero_bg)
     variant_name = find_variant_name(hero)
     normalize_hero_variant(hero, variant_name)
+    canonical = metadata["canonical"] or (
+        f"/{brand_slug}/{model_slug}/{variant_slug}" if brand_slug and model_slug and variant_slug else ""
+    )
+    seo_title = metadata["title"] or hero.get("h1", "")
+    seo_description = metadata["description"] or hero.get("subheading", "")
 
     return {
         "brand": {
@@ -737,9 +942,9 @@ def build_output_data(
             "storageSlug": f"{brand_slug}-{model_slug}-{variant_slug}",
         },
         "seo": {
-            "title": metadata["title"],
-            "description": metadata["description"],
-            "canonical": metadata["canonical"],
+            "title": seo_title,
+            "description": seo_description,
+            "canonical": canonical,
         },
         "assets": {
             "mainImage": (parent_model.get("assets", {}).get("mainImage") if parent_model else "") or expected_main_image,
@@ -761,17 +966,122 @@ def build_output_data(
     }
 
 
-def extract_file(source_path: Path, output_dir: Path) -> Path:
+def validate_variant_data(source_path: Path, section_map: dict[int, list[str]], data: dict[str, Any]) -> list[str]:
+    warnings: list[str] = []
+
+    for section_number in range(1, 8):
+        if not section_map.get(section_number):
+            warnings.append(f"Missing source section {section_number}")
+
+    hero = data.get("sections", {}).get("hero", {})
+    if not hero.get("tag"):
+        warnings.append("Missing hero tag")
+    if not hero.get("h1"):
+        warnings.append("Missing hero H1")
+    if not hero.get("subheading"):
+        warnings.append("Missing hero subheading")
+    if not hero.get("trustBadges"):
+        warnings.append("Missing hero trust badges")
+    if not hero.get("ctaLinkText"):
+        warnings.append("Missing hero CTA button text")
+    if not hero.get("ticker"):
+        warnings.append("Missing hero ticker")
+
+    how_it_works = data.get("sections", {}).get("howItWorks", {})
+    cards = how_it_works.get("cards", [])
+    if len(cards) < 3:
+        warnings.append("How It Works has fewer than 3 cards")
+    for index, card in enumerate(cards, start=1):
+        if not card.get("front", {}).get("h3"):
+            warnings.append(f"How It Works card {index} missing front heading")
+        if not card.get("front", {}).get("text"):
+            warnings.append(f"How It Works card {index} missing front text")
+        if not card.get("back", {}).get("heading"):
+            warnings.append(f"How It Works card {index} missing back heading")
+        if not card.get("back", {}).get("text"):
+            warnings.append(f"How It Works card {index} missing back text")
+        if not card.get("back", {}).get("bullets"):
+            warnings.append(f"How It Works card {index} missing back bullets")
+
+    history = data.get("sections", {}).get("historyTimeline", {})
+    if not history.get("h2"):
+        warnings.append("Missing history timeline H2")
+    if not history.get("intro"):
+        warnings.append("Missing history timeline intro")
+    if not history.get("milestones"):
+        warnings.append("Missing history timeline milestones")
+    if not history.get("specs"):
+        warnings.append("Missing history timeline specs")
+
+    guide = data.get("sections", {}).get("engineGuide", {})
+    if not guide.get("h2"):
+        warnings.append("Missing engine guide H2")
+    if not guide.get("items"):
+        warnings.append("Missing engine guide items")
+    else:
+        for index, item in enumerate(guide["items"], start=1):
+            if not item.get("code"):
+                warnings.append(f"Engine guide item {index} missing code")
+            if not item.get("title"):
+                warnings.append(f"Engine guide item {index} missing title")
+            if not item.get("specs"):
+                warnings.append(f"Engine guide item {index} missing specs")
+            if not item.get("costs"):
+                warnings.append(f"Engine guide item {index} missing costs")
+            if not item.get("commonFailure"):
+                warnings.append(f"Engine guide item {index} missing common failure")
+
+    common_problems = data.get("sections", {}).get("commonProblems", {})
+    if not common_problems.get("h2"):
+        warnings.append("Missing common problems H2")
+    if not common_problems.get("h3"):
+        warnings.append("Missing common problems intro")
+    if not common_problems.get("problems") and not common_problems.get("emptyState"):
+        warnings.append("Missing common problems items")
+    else:
+        for index, problem in enumerate(common_problems["problems"], start=1):
+            if not problem.get("h4"):
+                warnings.append(f"Common problem {index} missing heading")
+            if not problem.get("affectedModels"):
+                warnings.append(f"Common problem {index} missing affected models")
+            if not problem.get("rootCause"):
+                warnings.append(f"Common problem {index} missing root cause")
+            if not problem.get("repairOptions"):
+                warnings.append(f"Common problem {index} missing repair options")
+            if not problem.get("recommendation"):
+                warnings.append(f"Common problem {index} missing recommendation")
+
+    faq = data.get("sections", {}).get("faq", {})
+    if not faq.get("h2"):
+        warnings.append("Missing FAQ H2")
+    if not faq.get("items"):
+        warnings.append("Missing FAQ items")
+
+    trust_cta = data.get("sections", {}).get("trustCta", {})
+    if not trust_cta.get("h2"):
+        warnings.append("Missing trust CTA H2")
+    if not trust_cta.get("points"):
+        warnings.append("Missing trust CTA points")
+    if not trust_cta.get("finalText"):
+        warnings.append("Missing trust CTA final text")
+    if not trust_cta.get("buttonText"):
+        warnings.append("Missing trust CTA button text")
+
+    return warnings
+
+
+def extract_file(source_path: Path, output_dir: Path) -> tuple[Path, list[str]]:
     lines = read_lines(source_path)
     section_map = split_sections(lines)
     metadata = parse_metadata(section_map.get(8, []))
     brand_slug, model_slug, _variant_slug = derive_route_parts(metadata, source_path.stem)
     parent_model = load_parent_model_page(brand_slug, model_slug)
     data = build_output_data(source_path, section_map, parent_model)
+    warnings = validate_variant_data(source_path, section_map, data)
     output_dir.mkdir(parents=True, exist_ok=True)
     output_path = output_dir / f"{data['variant']['storageSlug']}.json"
     output_path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    return output_path
+    return output_path, warnings
 
 
 def collect_input_files(input_path: Path) -> list[Path]:
@@ -788,6 +1098,11 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Extract variant-page JSON from structured text docs.")
     parser.add_argument("--input", "-i", required=True, help="Variant source file or folder.")
     parser.add_argument("--output", "-o", default=str(VARIANTS_DIR), help="Output folder for variant JSON.")
+    parser.add_argument(
+        "--warnings-output",
+        default=str(VARIANTS_DIR / "_variant_extraction_warnings.json"),
+        help="Path for extraction warnings JSON report.",
+    )
     return parser.parse_args()
 
 
@@ -796,13 +1111,30 @@ def main() -> int:
     args = parse_args()
     input_path = Path(args.input)
     output_dir = Path(args.output)
+    warnings_output = Path(args.warnings_output)
     files = collect_input_files(input_path)
     if not files:
         raise SystemExit(f"No variant source files found in {input_path}")
 
+    warnings_report: list[dict[str, Any]] = []
     for source_file in files:
-        output_path = extract_file(source_file, output_dir)
-        print(f"OK {source_file.name} -> {output_path}")
+        output_path, warnings = extract_file(source_file, output_dir)
+        warnings_report.append(
+            {
+                "source": str(source_file),
+                "output": str(output_path),
+                "route": output_path.stem,
+                "warnings": warnings,
+            }
+        )
+        status = "WARN" if warnings else "OK"
+        print(f"{status} {source_file.name} -> {output_path}")
+        for warning in warnings:
+            print(f"  - {warning}")
+
+    warnings_output.parent.mkdir(parents=True, exist_ok=True)
+    warnings_output.write_text(json.dumps(warnings_report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(f"Warnings report written to {warnings_output}")
 
     return 0
 

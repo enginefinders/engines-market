@@ -159,11 +159,11 @@ export default function VariantCommonProblemsSection({ data }: Props) {
   const currentProblem = data.problems[activeIndex] ?? data.problems[0];
   const repairOptions = currentProblem?.repairOptions ?? [];
 
-  if (!currentProblem) {
+  if (!currentProblem && !data.emptyState) {
     return null;
   }
 
-  const detail = splitProblemHeading(currentProblem.h4);
+  const detail = currentProblem ? splitProblemHeading(currentProblem.h4) : null;
 
   return (
     <Section className="bg-[#f8f9fa] !py-3 sm:!py-4 lg:!py-5">
@@ -177,74 +177,97 @@ export default function VariantCommonProblemsSection({ data }: Props) {
           <p className="text-body mt-2 text-slate-600">{data.h3}</p>
         </div>
 
-        <div className="mt-3 grid gap-2 md:grid-cols-2 xl:grid-cols-4">
-          {data.problems.map((problem, index) => (
-            <SelectorCard
-              key={`${problem.group}-${index}`}
-              problem={problem}
-              active={index === activeIndex}
-              onClick={() => setActiveIndex(index)}
-            />
-          ))}
-        </div>
+        {data.problems.length ? (
+          <div className="mt-3 grid gap-2 md:grid-cols-2 xl:grid-cols-4">
+            {data.problems.map((problem, index) => (
+              <SelectorCard
+                key={`${problem.group}-${index}`}
+                problem={problem}
+                active={index === activeIndex}
+                onClick={() => setActiveIndex(index)}
+              />
+            ))}
+          </div>
+        ) : null}
 
         <div className="mt-2.5 rounded-[16px] border border-slate-200 bg-white p-3 shadow-[0_6px_18px_rgba(13,27,46,0.05)] lg:p-3.5">
-          <div className="flex flex-wrap items-start justify-between gap-2 border-b border-slate-100 pb-2">
-            <div className="max-w-[720px]">
-              <p className="text-[10px] font-bold uppercase tracking-[0.1em] text-[#15803d]">Failure Analysis</p>
-              <h3 className="mt-1 font-['Manrope'] text-[17px] font-extrabold tracking-[-0.03em] text-[#0d1b2e]">
-                {detail.title}
-              </h3>
-              {detail.supporting ? (
-                <p className="mt-0.5 text-[11px] leading-[1.5] text-slate-600">{detail.supporting}</p>
-              ) : null}
-            </div>
-
-            {currentProblem.cta ? (
-              <a
-                href="#quote-form"
-                data-quote-context={`${currentProblem.group} diagnosis`}
-                data-quote-source="variant-common-problems"
-                className="inline-flex min-h-[34px] items-center justify-center rounded-[10px] bg-[#15803d] px-3 text-[10.5px] font-bold text-white transition hover:bg-[#166534]"
-              >
-                {currentProblem.cta}
-              </a>
-            ) : null}
-          </div>
-
-          <div className="mt-2.5 grid gap-2 xl:grid-cols-[minmax(0,1.6fr)_minmax(280px,0.9fr)]">
+          <div className="grid gap-2 xl:grid-cols-[minmax(0,1.6fr)_minmax(280px,0.9fr)]">
             <div className="space-y-2.5">
-              <div className="grid gap-2 md:grid-cols-3">
-                <MetaCard label="Affected Models" value={currentProblem.affectedModels} />
-                <MetaCard label="Typical Failure Mileage" value={currentProblem.typicalFailureMileage} />
-                <MetaCard label="Root Cause" value={currentProblem.rootCause} />
-              </div>
+              {currentProblem && detail ? (
+                <>
+                  <div className="flex flex-wrap items-start justify-between gap-2 border-b border-slate-100 pb-2">
+                    <div className="max-w-[720px]">
+                      <p className="text-[10px] font-bold uppercase tracking-[0.1em] text-[#15803d]">Failure Analysis</p>
+                      <h3 className="mt-1 font-['Manrope'] text-[17px] font-extrabold tracking-[-0.03em] text-[#0d1b2e]">
+                        {detail.title}
+                      </h3>
+                      {detail.supporting ? (
+                        <p className="mt-0.5 text-[11px] leading-[1.5] text-slate-600">{detail.supporting}</p>
+                      ) : null}
+                    </div>
 
-              {repairOptions.length ? (
-                <div>
-                  <p className="text-[9.5px] font-bold uppercase tracking-[0.08em] text-slate-500">Repair Cost Guide</p>
-                  <h4 className="mt-0.5 font-['Manrope'] text-[15px] font-extrabold tracking-[-0.03em] text-[#0d1b2e]">
-                    UK repair routes at a glance
-                  </h4>
-
-                  <div className="mt-2 grid gap-2 xl:grid-cols-3">
-                    {repairOptions.map((option, index) => (
-                      <CostPathCard
-                        key={`${option.tier}-${index}`}
-                        option={option}
-                        highlight={index === repairOptions.length - 1}
-                      />
-                    ))}
+                    {currentProblem.cta ? (
+                      <a
+                        href="#quote-form"
+                        data-quote-context={`${currentProblem.group} diagnosis`}
+                        data-quote-source="variant-common-problems"
+                        className="inline-flex min-h-[34px] items-center justify-center rounded-[10px] bg-[#15803d] px-3 text-[10.5px] font-bold text-white transition hover:bg-[#166534]"
+                      >
+                        {currentProblem.cta}
+                      </a>
+                    ) : null}
                   </div>
+
+                  <div className="grid gap-2 md:grid-cols-3">
+                    <MetaCard label="Affected Models" value={currentProblem.affectedModels} />
+                    <MetaCard label="Typical Failure Mileage" value={currentProblem.typicalFailureMileage} />
+                    <MetaCard label="Root Cause" value={currentProblem.rootCause} />
+                  </div>
+
+                  {repairOptions.length ? (
+                    <div>
+                      <p className="text-[9.5px] font-bold uppercase tracking-[0.08em] text-slate-500">Repair Cost Guide</p>
+                      <h4 className="mt-0.5 font-['Manrope'] text-[15px] font-extrabold tracking-[-0.03em] text-[#0d1b2e]">
+                        UK repair routes at a glance
+                      </h4>
+
+                      <div className="mt-2 grid gap-2 xl:grid-cols-3">
+                        {repairOptions.map((option, index) => (
+                          <CostPathCard
+                            key={`${option.tier}-${index}`}
+                            option={option}
+                            highlight={index === repairOptions.length - 1}
+                          />
+                        ))}
+                      </div>
+                    </div>
+                  ) : null}
+                </>
+              ) : (
+                <div className="rounded-[14px] border border-[#dbeafe] bg-[#f8fbff] px-3 py-2.5">
+                  <p className="text-[9.5px] font-bold uppercase tracking-[0.08em] text-[#15803d]">Current Source Summary</p>
+                  <h3 className="mt-1 font-['Manrope'] text-[16px] font-extrabold tracking-[-0.03em] text-[#0d1b2e]">
+                    {data.emptyState?.title}
+                  </h3>
+                  {data.emptyState?.description ? (
+                    <p className="mt-1 text-[11px] leading-[1.6] text-slate-700">{data.emptyState.description}</p>
+                  ) : null}
+                  {data.emptyState?.placeholder ? (
+                    <div className="mt-2 rounded-[10px] border border-dashed border-slate-300 bg-white px-2.5 py-2 text-[10px] leading-[1.5] text-slate-500">
+                      {data.emptyState.placeholder}
+                    </div>
+                  ) : null}
                 </div>
-              ) : null}
+              )}
             </div>
 
             <div className="space-y-2">
-              <div className="rounded-[14px] border border-[#dbeafe] bg-[#f8fbff] px-3 py-2.5">
-                <p className="text-[9.5px] font-bold uppercase tracking-[0.08em] text-[#15803d]">Our Recommendation</p>
-                <p className="mt-1 text-[11px] leading-[1.55] text-slate-700">{currentProblem.recommendation}</p>
-              </div>
+              {currentProblem ? (
+                <div className="rounded-[14px] border border-[#dbeafe] bg-[#f8fbff] px-3 py-2.5">
+                  <p className="text-[9.5px] font-bold uppercase tracking-[0.08em] text-[#15803d]">Our Recommendation</p>
+                  <p className="mt-1 text-[11px] leading-[1.55] text-slate-700">{currentProblem.recommendation}</p>
+                </div>
+              ) : null}
 
               {(data.finalCta.h4 || data.finalCta.paragraph || data.finalCta.buttonText) ? (
                 <div className="rounded-[14px] border border-[#0d1b2e] bg-[#0d1b2e] px-3 py-2.5 text-white">
@@ -259,7 +282,7 @@ export default function VariantCommonProblemsSection({ data }: Props) {
                   {data.finalCta.buttonText ? (
                     <a
                       href="#quote-form"
-                      data-quote-context={data.finalCta.h4 || currentProblem.group}
+                      data-quote-context={data.finalCta.h4 || currentProblem?.group || data.h2}
                       data-quote-source="variant-common-problems-final-cta"
                       className="mt-2 inline-flex min-h-[34px] items-center justify-center rounded-[10px] bg-[#15803d] px-3 text-[10.5px] font-bold text-white transition hover:bg-[#166534]"
                     >
