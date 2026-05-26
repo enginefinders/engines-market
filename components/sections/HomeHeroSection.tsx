@@ -3,6 +3,9 @@
 import { useEffect, useMemo, useState, type FormEvent } from "react";
 import Container from "@/components/ui/Container";
 import type { HomeHeroData } from "@/lib/homepageData";
+import { PiEngine } from "react-icons/pi";
+import { GoShield } from "react-icons/go";
+import { GoVerified } from "react-icons/go";
 
 type Props = {
   data: HomeHeroData;
@@ -20,6 +23,19 @@ type TickerItem = {
   code: string;
   price: string;
 };
+
+type EngineCarouselItem = {
+  brand: string;
+  code: string;
+  spec: string;
+  price: string;
+};
+
+type SearchMode = "registration" | "manual";
+
+const manualMakeOptions = ["BMW", "Ford", "Land Rover", "Mercedes-Benz", "Toyota", "Volkswagen"];
+const manualModelOptions = ["3 Series", "Focus", "Discovery", "E-Class", "Corolla", "Golf"];
+const manualYearOptions = ["2024", "2023", "2022", "2021", "2020", "2019"];
 
 const rowGroups: HeroBrandRow[][] = [
   [
@@ -67,30 +83,63 @@ const tickerItems: TickerItem[] = [
   { brand: "Mazda", code: "SH-VPTS", price: "£1,800" },
 ];
 
-const bottomTickerMessages = [
-  "Instant engine replacement quote - 100% free, no obligation",
-  "Engine replacement near me - UK-wide specialist network",
-  "Compare reconditioned, rebuilt & used engine prices",
-  "Supply & fit available - parts and labour from vetted specialists",
+const engineCarouselItems: EngineCarouselItem[] = [
+  { brand: "BMW", code: "N47D20", spec: "2.0L Diesel", price: "£2,200" },
+  { brand: "Mercedes", code: "OM651", spec: "2.2L Diesel", price: "£2,800" },
+  { brand: "Land Rover", code: "306DT", spec: "3.0L Diesel", price: "£4,100" },
+  { brand: "Audi", code: "CAGA", spec: "2.0L TDI", price: "£2,000" },
+  { brand: "Volkswagen", code: "CAYC", spec: "2.0L TDI", price: "£1,900" },
+  { brand: "Ford", code: "HHDA", spec: "1.0L Petrol", price: "£1,500" },
+  { brand: "Nissan", code: "K9K", spec: "1.5L Diesel", price: "£1,600" },
+  { brand: "Toyota", code: "2AD-FTV", spec: "2.2L Diesel", price: "£1,800" },
 ];
 
-const logoMarkup: Record<string, string> = {
-  BMW: `<svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="9" stroke="#1c69d4" stroke-width="1.5"/><circle cx="10" cy="10" r="6" stroke="#1c69d4" stroke-width="1"/><path d="M10 4v6h6" stroke="#1c69d4" stroke-width="1" stroke-linecap="round"/><rect x="4" y="4" width="6" height="6" fill="#1c69d4" rx="0.5"/><rect x="10" y="10" width="6" height="6" fill="#1c69d4" rx="0.5"/><rect x="4" y="10" width="6" height="6" fill="white" rx="0.5"/><rect x="10" y="4" width="6" height="6" fill="white" rx="0.5"/></svg>`,
-  "Land Rover": `<svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="2" y="6" width="16" height="8" rx="2" fill="#004225"/><path d="M5 10h10M7 8v4M13 8v4" stroke="white" stroke-width="1.2" stroke-linecap="round"/></svg>`,
-  "Mercedes-Benz": `<svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="8.5" stroke="#222" stroke-width="1.2"/><path d="M10 1.5v8.5M10 10l7.1 4.5M10 10L2.9 14.5" stroke="#222" stroke-width="1.4" stroke-linecap="round"/></svg>`,
-  Ford: `<svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><ellipse cx="10" cy="10" rx="9" ry="5.5" stroke="#003475" stroke-width="1.5"/><text x="10" y="13.5" text-anchor="middle" fill="#003475" font-size="6" font-family="serif" font-style="italic" font-weight="700">Ford</text></svg>`,
-  Volkswagen: `<svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="8.5" stroke="#001e50" stroke-width="1.2"/><path d="M6.5 6l2 5 1.5-3 1.5 3 2-5" stroke="#001e50" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 10.5h10" stroke="#001e50" stroke-width="1" stroke-linecap="round"/></svg>`,
-  Jaguar: `<svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10c2-5 12-5 14 0-2 5-12 5-14 0z" stroke="#b8912a" stroke-width="1.2"/><circle cx="10" cy="10" r="2" fill="#b8912a"/><path d="M10 5v2M10 13v2M5 10H3M17 10h-2" stroke="#b8912a" stroke-width="1" stroke-linecap="round"/></svg>`,
-  Nissan: `<svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="1.5" y="8.5" width="17" height="3" rx="1.5" stroke="#c3002f" stroke-width="1.2"/><path d="M7 8.5V6.5a3 3 0 0 1 6 0v2" stroke="#c3002f" stroke-width="1.2"/></svg>`,
-  Renault: `<svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2L16 10l-6 8-6-8z" stroke="#efdf00" stroke-width="1.5"/><path d="M10 5l4 5-4 5-4-5z" fill="#efdf00"/></svg>`,
-  Toyota: `<svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><ellipse cx="10" cy="10" rx="8" ry="5" stroke="#eb0a1e" stroke-width="1.3"/><ellipse cx="10" cy="10" rx="4.5" ry="8" stroke="#eb0a1e" stroke-width="1.3"/><ellipse cx="10" cy="10" rx="8" ry="2.5" stroke="#eb0a1e" stroke-width="1.3"/></svg>`,
-  Mitsubishi: `<svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2l2.6 4.5H7.4z" fill="#e60012"/><path d="M5 13l2.6-4.5L10 13z" fill="#e60012"/><path d="M15 13l-2.6-4.5L10 13z" fill="#e60012"/></svg>`,
-  Peugeot: `<svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2c1.5 0 3 1.5 3 3.5 0 1.5-.8 2.8-2 3.2V18H9V8.7C7.8 8.3 7 7 7 5.5 7 3.5 8.5 2 10 2z" stroke="#003087" stroke-width="1.2"/><circle cx="10" cy="5.5" r="1.5" fill="#003087"/></svg>`,
-  Audi: `<svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="5" cy="10" r="3.5" stroke="#bb0a21" stroke-width="1.3"/><circle cx="9" cy="10" r="3.5" stroke="#bb0a21" stroke-width="1.3"/><circle cx="13" cy="10" r="3.5" stroke="#bb0a21" stroke-width="1.3"/><circle cx="17" cy="10" r="3.5" stroke="#bb0a21" stroke-width="1.3"/></svg>`,
-  Honda: `<svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M8 4v12M12 4v12M8 10h4" stroke="#cc0000" stroke-width="2" stroke-linecap="round"/></svg>`,
-  Kia: `<svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="1.5" y="6" width="17" height="8" rx="4" stroke="#05141f" stroke-width="1.2"/><path d="M5 10h1.5L8 7.5M8 12.5L6.5 10M10 7.5v5M12 7.5l1.5 2.5-1.5 2.5" stroke="#05141f" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
-  Mazda: `<svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 3c1.5 2 6 3.5 6 7s-3 7-6 7-6-3.5-6-7 4.5-5 6-7z" stroke="#910000" stroke-width="1.3"/><path d="M10 7c0 2-2 3-2 5s1 3 2 3 2-1 2-3-2-3-2-5z" fill="#910000"/></svg>`,
-};
+const bottomBarItems = [
+  { icon: "lightning", text: "Instant engine replacement quote — 100% free, no obligation" },
+  { icon: "location", text: "Engine replacement near me — UK-wide specialist network" },
+  { icon: "pound", text: "Compare reconditioned, rebuilt & used engine prices" },
+  { icon: "wrench", text: "Supply & fit available — parts and labour from vetted specialists" },
+  { icon: "shield", text: "12–24 month warranty on all replacement engines" },
+];
+
+// Map brand names to their logo image filenames
+function getBrandLogoPath(brand: string): string {
+  const brandMap: Record<string, string> = {
+    BMW: "bmw-logo-small.webp.webp",
+    "Land Rover": "land-rover-logo-small.webp.webp",
+    "Mercedes-Benz": "mercedes-logo-small.webp.webp",
+    Ford: "ford-logo-small.webp.webp",
+    Volkswagen: "volkswagon-logo-small.webp.webp",
+    Jaguar: "jaguar-logo-small.webp.webp",
+    Nissan: "nissan-logo-small.webp.webp",
+    Renault: "renault-logo-small.webp.webp",
+    Toyota: "toyota-logo-small.webp.webp",
+    Mitsubishi: "mitsubishi-logo-small.webp.webp",
+    Peugeot: "peugeot-logo-small.webp.webp",
+    Audi: "audi-logo-small.webp.webp",
+    Honda: "honda-logo-small.webp.webp",
+    Kia: "kia-logo-small.webp.webp",
+    Mazda: "mazda-logo-small.webp.webp",
+  };
+  return `/BrandsLogos/${brandMap[brand] || "default-logo.webp"}`;
+}
+
+// Map engine codes to their image filenames
+function getEngineImagePath(code: string): string {
+  const engineMap: Record<string, string> = {
+    "N47D20": "/96da5878-45b8-406b-8fc7-32f8a60d5c5c_removalai_preview.webp",
+    "OM651": "/194ff4f9-dd13-4c28-b2fc-4307d63ae0ce_removalai_preview.webp",
+    "306DT": "/16924a6b-58ec-44d8-9ed5-ccd89f220a22_removalai_preview.webp",
+    "CAGA": "/04544090-33c9-4640-8eb7-0aa9041ae6b7_removalai_preview.webp",
+    "CAYC": "/d1ba9486-2d7d-4d0a-8b67-a00842d083c6_removalai_preview.webp",
+    "HHDA": "/dded14b9-939e-4104-9e75-073a942a5c68_removalai_preview.webp",
+    "K9K": "/e0597dc3-6685-4beb-bf5f-8be1626b14a1_removalai_preview.webp",
+    "2AD-FTV": "/fac66331-c94d-48e9-983a-7997fd84a619_removalai_preview.webp",
+  };
+  return `/images/engines/${engineMap[code] || "engine-placeholder.webp"}`;
+}
+
+/* ─── Icon Components ─── */
 
 function ArrowIcon() {
   return (
@@ -102,14 +151,14 @@ function ArrowIcon() {
 
 function LockIcon() {
   return (
-    <svg viewBox="0 0 24 24" className="h-3 w-3" fill="none" aria-hidden="true">
+    <svg viewBox="0 0 24 24" className="h-3 w-3 flex-none" fill="none" aria-hidden="true">
       <rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" strokeWidth="2" />
       <path d="M7 11V7a5 5 0 0 1 10 0v4" stroke="currentColor" strokeWidth="2" />
     </svg>
   );
 }
 
-function EngineIcon() {
+function EngineTickerIcon() {
   return (
     <svg viewBox="0 0 24 24" className="h-[18px] w-[18px]" fill="none" aria-hidden="true">
       <rect x="3" y="8" width="18" height="10" rx="2" stroke="currentColor" strokeWidth="1.5" />
@@ -121,71 +170,516 @@ function EngineIcon() {
   );
 }
 
-function PlaceholderEngineIcon() {
+function CarIcon() {
   return (
-    <svg viewBox="0 0 64 64" className="h-12 w-12" fill="none" aria-hidden="true">
-      <rect x="8" y="20" width="48" height="28" rx="4" stroke="currentColor" strokeWidth="1.2" />
-      <rect x="20" y="14" width="24" height="8" rx="2" stroke="currentColor" strokeWidth="1.2" />
-      <circle cx="16" cy="44" r="4" fill="currentColor" stroke="none" />
-      <circle cx="48" cy="44" r="4" fill="currentColor" stroke="none" />
-      <path d="M8 34H2M56 34h6M32 20v-6" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
+    <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" aria-hidden="true">
+      <path
+        d="M5 11l1.8-5.4A2 2 0 0 1 8.7 4h6.6a2 2 0 0 1 1.9 1.6L19 11"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+      />
+      <rect x="3" y="11" width="18" height="7" rx="2" stroke="currentColor" strokeWidth="1.5" />
+      <circle cx="7.5" cy="18" r="2" stroke="currentColor" strokeWidth="1.5" />
+      <circle cx="16.5" cy="18" r="2" stroke="currentColor" strokeWidth="1.5" />
+      <path d="M5.5 18H3v-2M18.5 18H21v-2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
     </svg>
   );
 }
 
+function SwapIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" aria-hidden="true">
+      <path d="M7 16V4m0 0L3 8m4-4l4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M17 8v12m0 0l4-4m-4 4l-4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function EngineCodeIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-8 w-8" fill="none" aria-hidden="true">
+      <rect x="3" y="8" width="18" height="10" rx="2" stroke="#15803d" strokeWidth="1.5" />
+      <rect x="8" y="5" width="8" height="4" rx="1" stroke="#15803d" strokeWidth="1.5" />
+      <circle cx="6" cy="16" r="1.5" fill="#15803d" />
+      <circle cx="18" cy="16" r="1.5" fill="#15803d" />
+      <path d="M3 13H1M21 13h2" stroke="#15803d" strokeWidth="1.5" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function ShieldStarIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-8 w-8" fill="none" aria-hidden="true">
+      <path
+        d="M12 3L4 7v5c0 4.8 3.4 9.3 8 10.3C16.6 21.3 20 16.8 20 12V7L12 3z"
+        stroke="#15803d"
+        strokeWidth="1.5"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M12 8l.9 2.6H16l-2.5 1.9 1 2.5L12 13.5l-2.5 1.5 1-2.5L8 10.6h3.1L12 8z"
+        stroke="#15803d"
+        strokeWidth="1"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function CheckCircleIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-8 w-8" fill="none" aria-hidden="true">
+      <circle cx="12" cy="12" r="9" stroke="#15803d" strokeWidth="1.5" />
+      <path d="M8 12l3 3 5-5" stroke="#15803d" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function LightningIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-5 w-5 flex-none" fill="none" aria-hidden="true">
+      <path
+        d="M13 2L4.5 13.5H11L10 22l9.5-12H13V2z"
+        stroke="#15803d"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function LocationIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-5 w-5 flex-none" fill="none" aria-hidden="true">
+      <path d="M12 2C8.7 2 6 4.7 6 8c0 4.5 6 12 6 12s6-7.5 6-12c0-3.3-2.7-6-6-6z" stroke="#15803d" strokeWidth="1.5" />
+      <circle cx="12" cy="8" r="2" stroke="#15803d" strokeWidth="1.5" />
+    </svg>
+  );
+}
+
+function PoundIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-5 w-5 flex-none" fill="none" aria-hidden="true">
+      <path d="M8 18h8" stroke="#15803d" strokeWidth="1.5" strokeLinecap="round" />
+      <path d="M7 14h7" stroke="#15803d" strokeWidth="1.5" strokeLinecap="round" />
+      <path d="M9 14V9.5C9 7.6 10.6 6 12.5 6 14.4 6 16 7.6 16 9.5" stroke="#15803d" strokeWidth="1.5" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function WrenchIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-5 w-5 flex-none" fill="none" aria-hidden="true">
+      <path
+        d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
+        stroke="#15803d"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function ShieldCheckIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-5 w-5 flex-none" fill="none" aria-hidden="true">
+      <path
+        d="M12 3L4 7v5c0 4.8 3.4 9.3 8 10.3C16.6 21.3 20 16.8 20 12V7L12 3z"
+        stroke="#15803d"
+        strokeWidth="1.5"
+        strokeLinejoin="round"
+      />
+      <path d="M9 12l2 2 4-4" stroke="#15803d" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function ChevronLeft() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" aria-hidden="true">
+      <path d="m15 18-6-6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function ChevronRight() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" aria-hidden="true">
+      <path d="m9 18 6-6-6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function BottomBarIcon({ type }: { type: string }) {
+  switch (type) {
+    case "lightning":
+      return <LightningIcon />;
+    case "location":
+      return <LocationIcon />;
+    case "pound":
+      return <PoundIcon />;
+    case "wrench":
+      return <WrenchIcon />;
+    case "shield":
+      return <ShieldCheckIcon />;
+    default:
+      return null;
+  }
+}
+
+/* UK Flag SVG */
+function UKFlag() {
+  return (
+    <svg viewBox="0 0 20 14" className="h-[14px] w-[20px] flex-none rounded-[2px]" aria-hidden="true">
+      <rect width="20" height="14" fill="#012169" />
+      <path d="M0 0 L20 14 M20 0 L0 14" stroke="white" strokeWidth="3" />
+      <path d="M0 0 L20 14 M20 0 L0 14" stroke="#C8102E" strokeWidth="1.8" />
+      <path d="M10 0 V14 M0 7 H20" stroke="white" strokeWidth="4.5" />
+      <path d="M10 0 V14 M0 7 H20" stroke="#C8102E" strokeWidth="2.8" />
+    </svg>
+  );
+}
+
+/* Engine illustration for carousel cards */
+function EngineIllustration() {
+  return (
+    <svg viewBox="0 0 100 72" className="h-full w-full" fill="none" aria-hidden="true">
+      {/* Main engine block */}
+      <rect x="16" y="22" width="68" height="36" rx="4" fill="#d1d5db" stroke="#9ca3af" strokeWidth="1" />
+      {/* Cylinder head */}
+      <rect x="20" y="13" width="60" height="12" rx="3" fill="#e5e7eb" stroke="#9ca3af" strokeWidth="1" />
+      {/* Cylinders */}
+      <rect x="25" y="15" width="11" height="8" rx="2" fill="#9ca3af" />
+      <rect x="41" y="15" width="11" height="8" rx="2" fill="#9ca3af" />
+      <rect x="57" y="15" width="11" height="8" rx="2" fill="#9ca3af" />
+      <rect x="73" y="15" width="11" height="8" rx="2" fill="#9ca3af" />
+      {/* Valve cover detail */}
+      <rect x="22" y="25" width="56" height="8" rx="2" fill="#c4c9d1" stroke="#9ca3af" strokeWidth="0.8" />
+      {/* Intake manifold */}
+      <path d="M30 22 Q28 32 36 36" stroke="#9ca3af" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+      {/* Oil filler cap */}
+      <circle cx="66" cy="30" r="6" fill="#9ca3af" stroke="#6b7280" strokeWidth="1" />
+      <circle cx="66" cy="30" r="3" fill="#6b7280" />
+      {/* Alternator */}
+      <rect x="74" y="35" width="14" height="12" rx="3" fill="#b0b8c4" stroke="#6b7280" strokeWidth="0.8" />
+      <circle cx="81" cy="41" r="4" fill="#6b7280" />
+      <circle cx="81" cy="41" r="2" fill="#9ca3af" />
+      {/* Drive belt */}
+      <path d="M16 38 Q8 38 8 46 Q8 56 16 56" stroke="#374151" strokeWidth="2" fill="none" />
+      <circle cx="12" cy="47" r="6" stroke="#374151" strokeWidth="1.5" fill="#e5e7eb" />
+      {/* Sump / oil pan */}
+      <rect x="22" y="55" width="56" height="6" rx="2" fill="#c4c9d1" stroke="#9ca3af" strokeWidth="0.8" />
+      {/* Exhaust ports */}
+      <rect x="26" y="58" width="7" height="10" rx="1" fill="#9ca3af" />
+      <rect x="45" y="58" width="7" height="10" rx="1" fill="#9ca3af" />
+      <rect x="64" y="58" width="7" height="10" rx="1" fill="#9ca3af" />
+    </svg>
+  );
+}
+
+/* Logo Badge */
 function LogoBadge({ brand }: { brand: string }) {
   return (
-    <div className="flex h-8 w-8 flex-none items-center justify-center rounded-[8px] border border-[rgba(13,27,46,0.1)] bg-[#f9fafb]">
-      <span className="h-5 w-5" dangerouslySetInnerHTML={{ __html: logoMarkup[brand] ?? "" }} />
+    <div className="flex h-11 w-11 flex-none items-center justify-center overflow-hidden">
+      <img
+        src={getBrandLogoPath(brand)}
+        alt={`${brand} logo`}
+        className="h-11 w-11 object-contain"
+      />
     </div>
   );
 }
 
+/* Brand Row — matches screenshot layout exactly */
 function HeroRow({ row }: { row: HeroBrandRow }) {
   return (
-    <div className="flex h-[76px] items-center gap-3 border-b border-[rgba(13,27,46,0.1)] px-4 last:border-b-0">
-      <LogoBadge brand={row.brand} />
-      <div className="min-w-0 flex-1">
-        <div className="mb-[3px] flex items-center justify-between gap-2">
-          <span className="text-[14px] font-bold text-[#0d1b2e]">{row.brand}</span>
-          <span className="whitespace-nowrap text-[11px] font-semibold text-[#15803d]">{row.stat}</span>
-        </div>
-        <div className="mb-[2px] text-[13px] font-semibold text-[#0d1b2e]">
-          Avg. rebuilt quote: <span className="text-[#15803d]">{row.price}</span>{" "}
-          <span className="text-[11px] font-normal text-[#6b7280]">· supply only</span>
-        </div>
-        <div className="truncate text-[11px] text-[#6b7280]">Most requested: {row.codes}</div>
+    <div className="flex h-[86px] cursor-pointer items-center sm:gap-20 border-b border-[rgba(13,27,46,0.1)] px-4 last:border-b-0 transition-colors hover:bg-[#f9fafb]">
+
+      {/* LEFT: Logo + Brand name grouped together */}
+      <div className="flex w-[110px] flex-shrink-0 flex-col items-center gap-2 sm:flex-row sm:gap-4">
+        <LogoBadge brand={row.brand} />
+        <span className="text-md font-bold text-[#0d1b2e] sm:text-left">{row.brand}</span>
       </div>
+
+      {/* CENTER: 3-line stats block */}
+      <div className="min-w-0 flex-1">
+        {/* Line 1: green quote count */}
+        <div className="mb-[3px] text-[13px] font-bold text-[#15803d]">
+          {row.stat}
+        </div>
+        {/* Line 2: price range */}
+        <div className="mb-[2px] text-[13px] text-[#0d1b2e]">
+          Avg. rebuilt quote:{" "}
+          <span className="font-semibold">{row.price}</span>{" "}
+          <span className="text-[11px] text-[#6b7280]">· supply only</span>
+        </div>
+        {/* Line 3: most requested codes */}
+        <div className="truncate text-[11px] text-[#6b7280]">
+          Most requested:{" "}
+          <span className="font-medium text-[#374151]">{row.codes}</span>
+        </div>
+      </div>
+
+      {/* RIGHT: chevron arrow */}
       <span className="flex-none text-[#9ca3af]">
         <ArrowIcon />
       </span>
     </div>
   );
 }
+/* CTA Panel — reused on both mobile and desktop */
+function CTAPanel({
+  registration,
+  onRegistrationChange,
+  onSubmit,
+  gdprNote,
+}: {
+  registration: string;
+  onRegistrationChange: (val: string) => void;
+  onSubmit: (payload: {
+    searchMode: SearchMode;
+    regNumber?: string;
+    make?: string;
+    model?: string;
+    year?: string;
+    engineCode?: string;
+  }) => void;
+  gdprNote: string;
+}) {
+  const [searchMode, setSearchMode] = useState<SearchMode>("registration");
+  const [manualMake, setManualMake] = useState(manualMakeOptions[0]);
+  const [manualModel, setManualModel] = useState(manualModelOptions[0]);
+  const [manualYear, setManualYear] = useState(manualYearOptions[0]);
+  const [manualEngineCode, setManualEngineCode] = useState("");
 
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    if (searchMode === "registration") {
+      onSubmit({
+        searchMode,
+        regNumber: registration.trim(),
+      });
+      return;
+    }
+
+    onSubmit({
+      searchMode,
+      make: manualMake,
+      model: manualModel,
+      year: manualYear,
+      engineCode: manualEngineCode.trim().toUpperCase(),
+    });
+  }
+
+  return (
+    <div>
+      {/* Toggle buttons */}
+      <div className="mb-4 flex w-full gap-0 rounded-t-lg bg-[#f5f5f5] p-1">
+        <button
+          type="button"
+          onClick={() => setSearchMode("registration")}
+          aria-pressed={searchMode === "registration"}
+          className={`flex flex-1 items-center justify-center gap-1.5 rounded-md px-4 py-3 text-[13px] font-semibold transition-all ${searchMode === "registration"
+            ? "border border-[#15803d] bg-white text-[#15803d] shadow-sm"
+            : "border border-transparent bg-transparent text-[#9ca3af] hover:text-[#6b7280]"
+            }`}
+        >
+          <CarIcon />
+          Search by Registration
+        </button>
+        <button
+          type="button"
+          onClick={() => setSearchMode("manual")}
+          aria-pressed={searchMode === "manual"}
+          className={`flex flex-1 items-center justify-center gap-1.5 rounded-md px-4 py-3 text-[13px] font-semibold transition-all ${searchMode === "manual"
+            ? "border border-[#15803d] bg-white text-[#15803d] shadow-sm"
+            : "border border-transparent bg-transparent text-[#9ca3af] hover:text-[#6b7280]"
+            }`}
+        >
+          <SwapIcon />
+          Search Manually
+        </button>
+      </div>
+
+      <div className={`text-center ${searchMode === "manual" ? "px-6 py-4" : "p-6"}`}>
+        {searchMode === "registration" ? (
+          <>
+            <h3 className="mb-1 text-[18px] font-semibold text-[#0d1b2e] mx-auto">Get Your Free Engine Quotes</h3>
+            <p className="mb-4 text-[15px] text-gray-600 mx-auto">Instant comparison from UK-vetted engine specialists</p>
+          </>
+        ) : null}
+
+        <form onSubmit={handleSubmit} className={searchMode === "manual" ? "mb-2" : "mb-4"}>
+          {searchMode === "registration" ? (
+            <div className="flex items-center gap-3 rounded-[8px] border border-[rgba(13,27,46,0.12)] bg-[#f9fafb] px-3 py-[10px]">
+              <div className="flex flex-none items-center gap-[6px]">
+                <UKFlag />
+                <span className="text-[12px] font-extrabold text-[#0d1b2e]">GB</span>
+              </div>
+              <div className="h-4 w-px bg-[rgba(13,27,46,0.12)]" />
+              <input
+                type="text"
+                value={registration}
+                onChange={(e) => onRegistrationChange(e.target.value.toUpperCase())}
+                placeholder="Enter your reg — e.g. AB12 CDE"
+                maxLength={8}
+                autoCapitalize="characters"
+                autoComplete="off"
+                spellCheck={false}
+                className="min-w-0 flex-1 border-none bg-transparent text-[15px] font-bold tracking-[0.06em] text-[#0d1b2e] outline-none placeholder:text-[13px] placeholder:font-normal placeholder:tracking-normal placeholder:text-[#9ca3af]"
+              />
+            </div>
+          ) : (
+            <div className="grid gap-2 text-left">
+              <div className="grid grid-cols-1 gap-2">
+                <label className="grid gap-0.5 text-[12px] font-semibold text-[#0d1b2e]">
+                  Make
+                  <select
+                    value={manualMake}
+                    onChange={(e) => setManualMake(e.target.value)}
+                    className="h-11 w-full rounded-[8px] border border-[rgba(13,27,46,0.12)] bg-[#f9fafb] px-3 text-[14px] text-[#0d1b2e] outline-none"
+                  >
+                    {manualMakeOptions.map((make) => (
+                      <option key={make} value={make}>
+                        {make}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+                <label className="grid gap-0.5 text-[12px] font-semibold text-[#0d1b2e]">
+                  Model
+                  <select
+                    value={manualModel}
+                    onChange={(e) => setManualModel(e.target.value)}
+                    className="h-11 w-full rounded-[8px] border border-[rgba(13,27,46,0.12)] bg-[#f9fafb] px-3 text-[14px] text-[#0d1b2e] outline-none"
+                  >
+                    {manualModelOptions.map((model) => (
+                      <option key={model} value={model}>
+                        {model}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+                <label className="grid gap-0.5 text-[12px] font-semibold text-[#0d1b2e]">
+                  Year
+                  <select
+                    value={manualYear}
+                    onChange={(e) => setManualYear(e.target.value)}
+                    className="h-11 w-full rounded-[8px] border border-[rgba(13,27,46,0.12)] bg-[#f9fafb] px-3 text-[14px] text-[#0d1b2e] outline-none"
+                  >
+                    {manualYearOptions.map((year) => (
+                      <option key={year} value={year}>
+                        {year}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+              </div>
+              <label className="grid gap-0.5 text-left text-[12px] font-semibold text-[#0d1b2e]">
+                Engine Code
+                <input
+                  type="text"
+                  value={manualEngineCode}
+                  onChange={(e) => setManualEngineCode(e.target.value.toUpperCase())}
+                  placeholder="Enter engine code"
+                  autoComplete="off"
+                  spellCheck={false}
+                  className="h-11 w-full rounded-[8px] border border-[rgba(13,27,46,0.12)] bg-[#f9fafb] px-3 text-[14px] uppercase text-[#0d1b2e] outline-none placeholder:normal-case placeholder:text-[#9ca3af]"
+                />
+              </label>
+            </div>
+          )}
+          <button
+            type="submit"
+            className={`w-full rounded-[8px] bg-[#15803d] px-6 py-[13px] text-[15px] font-bold text-white shadow-[0_4px_18px_rgba(21,128,61,0.3)] transition hover:bg-[#166534] active:scale-[0.99] ${searchMode === "manual" ? "mt-2" : "mt-3"}`}
+          >
+            Get Free Engine Quotes →
+          </button>
+        </form>
+
+        {/* GDPR */}
+        {searchMode === "registration" ? (
+          <p className="mb-4 flex items-center justify-center gap-1.5 text-center text-[12px] text-gray-500">
+            <LockIcon />
+            <span>{gdprNote}</span>
+          </p>
+        ) : null}
+
+        {searchMode === "registration" ? (
+          <div className="grid grid-cols-3 gap-3 border-t border-[rgba(13,27,46,0.08)] pt-4 text-left sm:grid-cols-3 sm:gap-2 sm:text-center">
+            <div className="flex flex-col items-center gap-3 sm:flex-row sm:items-center sm:gap-[6px]">
+              <PiEngine className="h-8 w-8 flex-none text-[#15803d]" />
+              <div className="min-w-0 flex flex-col items-center">
+                <div className="text-[18px] font-extrabold leading-none text-[#0d1b2e]">8,000+</div>
+                <div className="text-[11px] leading-tight text-[#6b7280]">Engine Codes</div>
+              </div>
+            </div>
+            <div className="flex flex-col items-center gap-3 sm:flex-row sm:items-center sm:gap-[6px]">
+              <GoShield className="h-8 w-8 flex-none text-[#15803d]" />
+              <div className="min-w-0 flex flex-col items-center">
+                <div className="text-[18px] font-extrabold leading-none text-[#0d1b2e]">40+</div>
+                <div className="text-[11px] leading-tight text-[#6b7280]">Car Brands</div>
+              </div>
+            </div>
+            <div className="flex flex-col items-center gap-3 sm:flex-row sm:items-center sm:gap-[6px]">
+              <GoVerified className="h-8 w-8 flex-none text-[#15803d]" />
+              <div className="min-w-0 flex flex-col items-center">
+                <div className="text-[18px] font-extrabold leading-none text-[#0d1b2e]">100%</div>
+                <div className="text-[11px] leading-tight text-[#6b7280]">Free · No Obligation</div>
+              </div>
+            </div>
+          </div>
+        ) : null}
+      </div>
+    </div>
+  );
+}
+
+/* ─── Main Component ─── */
 export default function HomeHeroSection({ data }: Props) {
   const [registration, setRegistration] = useState("");
   const [groupIndex, setGroupIndex] = useState(0);
+  const [carouselOffset, setCarouselOffset] = useState(0);
+  const [desktopCarouselOffset, setDesktopCarouselOffset] = useState(0);
+
+  // How many carousel items are visible depends on viewport — use 3 for mobile logic
+  const MOBILE_VISIBLE = 3;
+  const DESKTOP_VISIBLE = 6;
+  const maxOffset = Math.max(0, engineCarouselItems.length - MOBILE_VISIBLE);
+  const desktopMaxOffset = Math.max(0, engineCarouselItems.length - DESKTOP_VISIBLE);
 
   useEffect(() => {
     const intervalId = window.setInterval(() => {
       setGroupIndex((current) => (current + 1) % rowGroups.length);
     }, 5000);
-
     return () => window.clearInterval(intervalId);
   }, []);
 
   const engineTickerLoop = useMemo(() => [...tickerItems, ...tickerItems], []);
-  const bottomTickerLoop = useMemo(() => [...bottomTickerMessages, ...bottomTickerMessages], []);
+  const bottomTickerLoop = useMemo(() => [...bottomBarItems, ...bottomBarItems], []);
 
-  function openQuoteCheckout(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-
+  function openQuoteCheckout(payload: {
+    searchMode: SearchMode;
+    regNumber?: string;
+    make?: string;
+    model?: string;
+    year?: string;
+    engineCode?: string;
+  }) {
     window.dispatchEvent(
       new CustomEvent("engine-market:open-quote", {
         detail: {
-          regNumber: registration.trim(),
-          source: "home-hero-registration",
+          regNumber: payload.regNumber ?? registration.trim(),
+          searchMode: payload.searchMode,
+          make: payload.make,
+          model: payload.model,
+          year: payload.year,
+          engineCode: payload.engineCode,
+          source: payload.searchMode === "manual" ? "home-hero-manual" : "home-hero-registration",
         },
       }),
     );
@@ -195,96 +689,109 @@ export default function HomeHeroSection({ data }: Props) {
 
   return (
     <>
-      <section className="overflow-hidden bg-white pt-10 lg:pt-12">
-        <Container className="max-w-[1200px] px-6 lg:px-10">
-          <div className="grid grid-cols-1 gap-0 lg:grid-cols-[minmax(0,1fr)_420px] lg:gap-12 lg:pb-10">
-            <div className="flex flex-col">
-              <span className="mb-4 inline-flex w-fit items-center gap-[6px] rounded-full bg-[#0d1b2e] px-[10px] py-[4px] text-[10px] font-bold uppercase tracking-[0.12em] text-white">
+      <style>{`
+        @keyframes slideLeftMobile {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        @keyframes slideLeftDesktop {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        .mobile-carousel-track {
+          animation: slideLeftMobile 30s linear infinite;
+        }
+        .desktop-carousel-track {
+          animation: slideLeftDesktop 40s linear infinite;
+        }
+        @media (max-width: 640px) {
+          .hero-background {
+            background-image:
+              linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,0.98) 24%, rgba(255,255,255,0.92) 48%, rgba(255,255,255,0.25) 100%), url('/bg.webp') !important;
+          }
+        }
+      `}</style>
+      {/* ─── HERO SECTION ─── */}
+      <section
+        className="hero-background overflow-hidden pt-8 lg:pt-12"
+        style={{
+          backgroundImage:
+            "linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0.98) 25%, rgba(255,255,255,0.92) 45%, rgba(255,255,255,0.25) 100%), url('/bg.webp')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+        <Container className="max-w-[1400px] px-2 sm:px-6 lg:px-10">
+          <div className="grid grid-cols-1 gap-0 lg:grid-cols-10 lg:gap-12 lg:pb-10">
+
+            {/* ── LEFT / MAIN COLUMN ── */}
+            <div className="flex flex-col lg:col-span-6">
+
+              {/* Badge */}
+              {/* <span className="mb-4 inline-flex w-fit items-center gap-[6px] rounded-full bg-[#0d1b2e] px-[10px] py-[4px] text-[10px] font-bold uppercase tracking-[0.12em] text-white">
                 <span className="h-[6px] w-[6px] rounded-full bg-[#15803d]" />
                 <span>{data.tag}</span>
-              </span>
+              </span> */}
 
+              {/* Heading */}
               <h1
-                className="mb-3 leading-[1.1] tracking-[-0.03em] text-[#0d1b2e]"
+                className="mb-2 text-center leading-[1.1] tracking-[-0.03em] text-[#0d1b2e] lg:text-left"
                 style={{ fontFamily: "Inter, sans-serif" }}
               >
                 <span className="block text-[clamp(28px,5vw,48px)] font-extrabold">{data.headingLead}</span>
                 <span className="mt-[2px] block text-[clamp(20px,3.5vw,36px)] font-semibold text-[#15803d]">
-                  — {data.headingAccent}
+                  {data.headingAccent}
                 </span>
               </h1>
 
+              {/* Green underline — desktop only */}
+              <span className="mb-5 hidden h-[3px] w-10 rounded-full bg-[#15803d] lg:block" />
+
+              {/* Subheading */}
               <p
-                className="mb-6 max-w-[42ch] text-[16px] leading-[1.6] text-[#6b7280]"
+                className="mb-6 text-center text-[16px] leading-[1.6] text-[#6b7280] lg:max-w-[62ch] lg:text-left"
                 style={{ fontFamily: "Inter, sans-serif" }}
               >
                 {data.subheading.replace(" - ", " — ")}
               </p>
 
+              {/* ── MOBILE: CTA Card (appears ABOVE brand rows) ── */}
+              <div className="mb-5 rounded-[12px] border border-[rgba(13,27,46,0.08)] bg-white p-0 shadow-[0_8px_32px_rgba(13,27,46,0.08)] lg:hidden">
+                <CTAPanel
+                  registration={registration}
+                  onRegistrationChange={setRegistration}
+                  onSubmit={openQuoteCheckout}
+                  gdprNote={data.gdprNote}
+                />
+              </div>
+
+              {/* ── MOBILE: "Compare quotes" heading ── */}
+              <h3
+                className="mb-3 text-[15px] font-bold text-[#0d1b2e] lg:hidden"
+                style={{ fontFamily: "Inter, sans-serif" }}
+              >
+                Compare quotes from vetted specialists
+              </h3>
+
+              {/* Brand rows */}
               <div className="overflow-hidden rounded-[12px] border border-[rgba(13,27,46,0.1)] bg-white shadow-[0_2px_12px_rgba(13,27,46,0.06)]">
                 {activeGroup.map((row) => (
                   <HeroRow key={`${groupIndex}-${row.brand}`} row={row} />
                 ))}
               </div>
 
+              {/* Disclaimer */}
               <p
-                className="px-1 pb-3 pt-[6px] text-[10px] italic leading-[1.4] text-[#9ca3af]"
+                className="px-1 pb-2 pt-[6px] text-[10px] italic leading-[1.4] text-[#9ca3af]"
                 style={{ fontFamily: "Inter, sans-serif" }}
               >
                 Prices are indicative rebuilt/reconditioned supply-only averages. Actual quotes vary by variant, year and supplier.
               </p>
 
-              <form
-                id="home-hero-reg-form"
-                className="mb-[10px] flex items-center gap-2 rounded-[12px] border-2 border-[rgba(13,27,46,0.1)] border-l-[4px] border-l-[#0d1b2e] bg-[#f9fafb] px-3 py-1 shadow-[0_2px_8px_rgba(13,27,46,0.06)]"
-                onSubmit={openQuoteCheckout}
-              >
-                <div className="flex flex-none items-center gap-[5px]">
-                  <span className="rounded-[4px] bg-[#0d1b2e] px-[5px] py-[2px] text-[11px] font-extrabold tracking-[0.05em] text-white">
-                    GB
-                  </span>
-                </div>
-
-                <label
-                  htmlFor="home-reg-input"
-                  className="absolute h-px w-px overflow-hidden whitespace-nowrap [clip:rect(0,0,0,0)]"
-                >
-                  Enter your vehicle registration
-                </label>
-
-                <input
-                  id="home-reg-input"
-                  type="text"
-                  value={registration}
-                  onChange={(event) => setRegistration(event.target.value.toUpperCase())}
-                  placeholder="Enter your reg — e.g. AB12 CDE"
-                  maxLength={8}
-                  autoCapitalize="characters"
-                  autoComplete="off"
-                  spellCheck={false}
-                  className="min-w-0 flex-1 border-none bg-transparent text-[17px] font-bold tracking-[0.08em] text-[#0d1b2e] outline-none placeholder:text-[14px] placeholder:font-medium placeholder:tracking-normal placeholder:text-[#9ca3af]"
-                  style={{ fontFamily: "Inter, sans-serif" }}
-                />
-
-                <button
-                  type="submit"
-                  className="flex-none rounded-[10px] bg-[#15803d] px-5 py-[13px] text-[15px] font-bold text-white shadow-[0_4px_16px_rgba(21,128,61,0.32)] transition hover:bg-[#166534]"
-                  style={{ fontFamily: "Inter, sans-serif" }}
-                >
-                  Get Free Engine Quotes →
-                </button>
-              </form>
-
+              {/* Desktop coverage stats */}
               <p
-                className="mb-3 flex items-center justify-center gap-[5px] text-center text-[12px] text-[#9ca3af]"
-                style={{ fontFamily: "Inter, sans-serif" }}
-              >
-                <LockIcon />
-                <span>{data.gdprNote.replace(" - ", " — ")}</span>
-              </p>
-
-              <p
-                className="mb-5 text-center text-[13px] leading-[1.5] text-[#6b7280]"
+                className="mb-5 hidden text-center text-[13px] leading-[1.5] text-[#6b7280] lg:block lg:text-left"
                 style={{ fontFamily: "Inter, sans-serif" }}
               >
                 Covering <strong className="font-bold text-[#0d1b2e]">8,000+</strong> engine codes across{" "}
@@ -294,48 +801,29 @@ export default function HomeHeroSection({ data }: Props) {
                 <strong className="font-bold text-[#0d1b2e]">Ford</strong> and{" "}
                 <strong className="font-bold text-[#0d1b2e]">Vauxhall</strong>.
               </p>
-
-              <div className="-mx-6 block h-16 overflow-hidden border-y border-[rgba(13,27,46,0.1)] bg-[#f9fafb] lg:hidden">
-                <div className="hero-ticker-track h-16">
-                  {engineTickerLoop.map((item, index) => (
-                    <div
-                      key={`${item.brand}-${item.code}-${index}`}
-                      className="flex h-16 min-w-[90px] flex-none flex-col items-center justify-center border-r border-[rgba(13,27,46,0.1)] px-4"
-                    >
-                      <div className="flex h-7 w-7 items-center justify-center rounded-[6px] bg-[#0d1b2e] text-white">
-                        <EngineIcon />
-                      </div>
-                      <span className="mt-[2px] whitespace-nowrap text-[9px] font-bold tracking-[0.04em] text-[#0d1b2e]">
-                        {item.brand} · {item.code}
-                      </span>
-                      <span className="whitespace-nowrap text-[9px] font-semibold text-[#15803d]">{item.price}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
             </div>
 
-            <div className="relative hidden lg:flex lg:flex-col">
-              <div className="relative flex h-[340px] flex-col items-center justify-center gap-3 overflow-hidden rounded-[16px] border border-[rgba(13,27,46,0.1)] bg-[linear-gradient(135deg,#f1f5f9_0%,#e2e8f0_100%)]">
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_60%_40%,rgba(21,128,61,0.08)_0%,transparent_70%)]" />
-                <div className="relative z-[1] flex h-20 w-20 items-center justify-center rounded-[16px] bg-[rgba(13,27,46,0.06)] text-[#0d1b2e]/40">
-                  <PlaceholderEngineIcon />
-                </div>
-                <span className="relative z-[1] text-[12px] font-medium uppercase tracking-[0.06em] text-[#6b7280]">
-                  Engine Image
-                </span>
-                <span className="relative z-[1] text-[11px] text-[#9ca3af]">Replace with OEM engine photo</span>
+            {/* ── RIGHT COLUMN — Desktop CTA ── */}
+            <div className="relative hidden lg:flex lg:flex-col lg:col-span-4">
+              <div className="rounded-[12px] border border-[rgba(13,27,46,0.08)] bg-white shadow-[0_8px_32px_rgba(13,27,46,0.08)]">
+                <CTAPanel
+                  registration={registration}
+                  onRegistrationChange={setRegistration}
+                  onSubmit={openQuoteCheckout}
+                  gdprNote={data.gdprNote}
+                />
               </div>
 
-              <div className="mt-3 h-14 overflow-hidden rounded-[10px] border border-[rgba(13,27,46,0.1)] bg-[#f9fafb]">
+              {/* Desktop engine ticker strip */}
+              {/* <div className="mt-4 h-14 overflow-hidden rounded-[10px] border border-[rgba(13,27,46,0.1)] bg-[#f9fafb]">
                 <div className="hero-ticker-track h-14">
                   {engineTickerLoop.map((item, index) => (
                     <div
-                      key={`desktop-${item.brand}-${item.code}-${index}`}
+                      key={`desktop-ticker-${item.brand}-${item.code}-${index}`}
                       className="flex h-14 min-w-[90px] flex-none flex-col items-center justify-center border-r border-[rgba(13,27,46,0.1)] px-4"
                     >
                       <div className="flex h-7 w-7 items-center justify-center rounded-[6px] bg-[#0d1b2e] text-white">
-                        <EngineIcon />
+                        <EngineTickerIcon />
                       </div>
                       <span className="mt-[2px] whitespace-nowrap text-[9px] font-bold tracking-[0.04em] text-[#0d1b2e]">
                         {item.brand} · {item.code}
@@ -344,28 +832,118 @@ export default function HomeHeroSection({ data }: Props) {
                     </div>
                   ))}
                 </div>
+              </div> */}
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* ─── ENGINE CAROUSEL ─── */}
+      <section className="border-t border-[rgba(13,27,46,0.08)] bg-gray-50 py-5">
+        <Container className="max-w-[1400px] px-2 sm:px-10">
+          <div className="flex items-center gap-3 lg:hidden">
+            <div className="overflow-hidden flex-1">
+              <div className="mobile-carousel-track flex">
+                {[...engineCarouselItems, ...engineCarouselItems].map((item, index) => (
+                  <div
+                    key={`mobile-carousel-${item.code}-${index}`}
+                    className="flex items-center gap-2 p-0 min-w-[33.333%] flex-shrink-0"
+                  >
+                    <div className="flex h-16 w-16 flex-shrink-0 items-center justify-center overflow-hidden rounded-[6px]">
+                      <img
+                        src={getEngineImagePath(item.code)}
+                        alt={`${item.brand} ${item.code} engine`}
+                        className="h-full w-full object-cover"
+                      />
+                    </div>
+                    <div className="min-w-0 flex-1 text-left">
+                      <div className="text-[10px] font-bold leading-tight text-[#0d1b2e]">
+                        {item.brand}
+                      </div>
+                      <div className="text-[9px] text-[#6b7280]">{item.code}</div>
+                      <div className="text-[10px] font-bold text-[#15803d]">{item.price}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="hidden items-center gap-3 lg:flex">
+            <div className="overflow-hidden flex-1">
+              <div className="desktop-carousel-track flex">
+                {[...engineCarouselItems, ...engineCarouselItems].map((item, index) => (
+                  <div
+                    key={`desktop-carousel-${item.code}-${index}`}
+                    className="flex items-center gap-2 p-2 min-w-[16.667%] flex-shrink-0"
+                  >
+                    <div className="flex h-16 w-16 flex-shrink-0 items-center justify-center overflow-hidden">
+                      <img
+                        src={getEngineImagePath(item.code)}
+                        alt={`${item.brand} ${item.code} engine`}
+                        className="h-full w-full object-cover"
+                      />
+                    </div>
+                    <div className="min-w-0 flex-1 text-left">
+                      <div className="whitespace-nowrap text-[13px] font-bold leading-tight text-[#0d1b2e]">
+                        {item.brand} {item.code}
+                      </div>
+                      <div className="whitespace-nowrap text-[11px] text-[#6b7280]">{item.spec}</div>
+                      <div className="text-[10px] font-bold text-[#15803d]">{item.price}</div>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
         </Container>
       </section>
 
-      <div className="flex h-11 items-center overflow-hidden bg-[#0d1b2e]">
-        <div className="flex h-11 flex-none items-center gap-[5px] border-r border-r-white/15 bg-[#15803d] px-3 text-[10px] font-extrabold uppercase tracking-[0.1em] text-white">
-          <span className="h-[6px] w-[6px] rounded-full bg-white" />
-          <span>Live</span>
+      {/* ─── MOBILE LIVE BAR ─── */}
+      {/* <div className="flex h-10 items-center justify-around border-t border-[rgba(13,27,46,0.1)] bg-[#f9fafb] px-3 lg:hidden">
+        <div className="flex items-center gap-[5px] text-[11px] font-bold text-[#15803d]">
+          <span className="h-[6px] w-[6px] rounded-full bg-[#15803d]" />
+          LIVE
+        </div>
+        <span className="h-4 w-px bg-[rgba(13,27,46,0.15)]" />
+        <span className="text-[11px] font-semibold text-[#0d1b2e]">8,000+ Engine Codes</span>
+        <span className="h-4 w-px bg-[rgba(13,27,46,0.15)]" />
+        <span className="text-[11px] font-semibold text-[#0d1b2e]">40+ Car Brands</span>
+        <span className="h-4 w-px bg-[rgba(13,27,46,0.15)]" />
+        <span className="text-[11px] font-semibold text-[#0d1b2e]">100% Free · No Obligation</span>
+      </div> */}
+
+      {/* ─── BOTTOM DARK BAR ─── */}
+      <div className="bg-[#0d1b2e]">
+        {/* Desktop: scrolling ticker */}
+        <div className="hidden h-14 items-center overflow-hidden lg:flex">
+          <Container className="max-w-[1400px] px-10">
+            <div className="hero-ticker-track h-14" style={{ animationDuration: "32s" }}>
+              {bottomTickerLoop.map((item, index) => (
+                <span
+                  key={`desktop-bottom-ticker-${index}`}
+                  className="flex h-14 flex-none items-center gap-[10px] border-r border-r-white/10 px-6 text-[12px] leading-[1.4] text-white/80"
+                  style={{ fontFamily: "Inter, sans-serif" }}
+                >
+                  <BottomBarIcon type={item.icon} />
+                  <span>{item.text}</span>
+                </span>
+              ))}
+            </div>
+          </Container>
         </div>
 
-        <div className="h-11 flex-1 overflow-hidden">
-          <div className="hero-ticker-track h-11">
-            {bottomTickerLoop.map((message, index) => (
+        {/* Mobile: scrolling ticker */}
+        <div className="flex h-12 items-center overflow-hidden lg:hidden">
+          <div className="hero-ticker-track h-12" style={{ animationDuration: "28s" }}>
+            {bottomTickerLoop.map((item, index) => (
               <span
-                key={`${message}-${index}`}
-                className="flex h-11 flex-none items-center gap-[6px] border-r border-r-white/10 px-6 text-[12px] text-white/85"
+                key={`bottom-ticker-${index}`}
+                className="flex h-12 flex-none items-center gap-[8px] border-r border-r-white/10 px-5 text-[12px] text-white/80"
                 style={{ fontFamily: "Inter, sans-serif" }}
               >
-                <span className="inline-block h-[6px] w-[6px] rounded-full bg-[#15803d]" />
-                <span>{message}</span>
+                <BottomBarIcon type={item.icon} />
+                <span>{item.text}</span>
               </span>
             ))}
           </div>
