@@ -70,7 +70,7 @@ export default function HomeHowItWorksSection({ steps }: Props) {
 
   return (
     <Section id="how-it-works" className="bg-[#f8fbff] py-7 sm:py-8 lg:py-10">
-      <Container className="max-w-[1180px]">
+      <Container className="max-w-[1400px]">
         <div className="mx-auto max-w-[860px] text-center">
           <div className="section-pill">
             <span>How It Works</span>
@@ -88,7 +88,7 @@ export default function HomeHowItWorksSection({ steps }: Props) {
             const flipped = activeStep === step.number;
 
             return (
-              <div key={step.number} className="perspective-1000 min-h-[340px] sm:min-h-[360px] xl:min-h-[370px]">
+              <div key={step.number} className="perspective-1000 min-h-[300px] sm:min-h-[360px] xl:min-h-[340px]">
                 <button
                   type="button"
                   onClick={() => setActiveStep(flipped ? null : step.number)}
@@ -97,44 +97,45 @@ export default function HomeHowItWorksSection({ steps }: Props) {
                   aria-label={`${flipped ? "Hide details for" : "Show details for"} step ${step.number}`}
                 >
                   <div
-                    className={`relative h-full min-h-[340px] rounded-[18px] transition duration-500 [transform-style:preserve-3d] sm:min-h-[360px] xl:min-h-[370px] ${
-                      flipped ? "[transform:rotateY(180deg)]" : ""
-                    }`}
+                    className={`relative h-full min-h-[300px] rounded-[18px] transition duration-500 [transform-style:preserve-3d] sm:min-h-[360px] xl:min-h-[340px] ${flipped ? "[transform:rotateY(180deg)]" : ""
+                      }`}
                   >
-                    <div className="absolute inset-0 flex h-full flex-col overflow-hidden rounded-[18px] border border-[#dbe4ef] bg-white p-6 shadow-[0_18px_40px_rgba(13,27,46,0.08)] [backface-visibility:hidden]">
-                      <div className="flex h-14 w-14 items-center justify-center rounded-[14px] bg-[#0d1b2e] text-white">
-                        {getIcon(step.icon)}
-                      </div>
+                    <div className="absolute inset-0 flex h-full flex-col overflow-hidden rounded-[18px] border border-[#dbe4ef] bg-white p-6 shadow-[0_18px_40px_rgba(13,27,46,0.08)] [backface-visibility:hidden] text-center">
 
-                      <span className="mt-5 text-[11px] font-extrabold uppercase tracking-[0.18em] text-[#15803d]">
+
+                      <span className="mt-0 text-left text-[12px] font-extrabold uppercase tracking-[0.18em] text-[#15803d]">
                         STEP {step.number} OF 3
                       </span>
+
+                      <div className="mx-auto mt-5 flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-[14px] bg-[#0d1b2e] text-white">
+                        {getIcon(step.icon)}
+                      </div>
 
                       <h3 className="mt-3 font-['Manrope'] text-[24px] font-bold leading-[1] text-[#0d1b2e]">
                         {step.frontTitle}
                       </h3>
 
-                      <p className="mt-4 max-w-[32ch] text-[15px] leading-[1.65] text-[#5a6478]">
+                      <p className="mx-auto mt-4 max-w-[32ch] text-[15px] leading-[1.65] text-[#5a6478]">
                         {step.frontBody}
                       </p>
 
-                      <span className="mt-auto inline-flex items-center gap-2 pt-6 text-[12px] font-bold text-[#15803d]">
+                      <span className="ml-auto mt-auto inline-flex items-center gap-2 pt-0 text-[14px] font-bold text-[#15803d]">
                         <span>See how it works</span>
                         <ArrowIcon />
                       </span>
                     </div>
 
                     <div className="absolute inset-0 flex h-full flex-col overflow-hidden rounded-[18px] border border-[#0d1b2e] bg-[#0d1b2e] p-6 text-white shadow-[0_24px_48px_rgba(7,25,54,0.2)] [backface-visibility:hidden] [transform:rotateY(180deg)]">
-                      <div className="flex items-start justify-between gap-4">
-                        <div className="flex h-14 w-14 items-center justify-center rounded-[14px] bg-white/10 text-white">
+                      <div className="flex flex-col items-center gap-4">
+                        <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-[14px] bg-white/10 text-white">
                           {getIcon(step.icon)}
                         </div>
-                        <span className="pt-1 text-[11px] font-extrabold uppercase tracking-[0.18em] text-[#86efac]">
+                        {/* <span className="pt-1 text-[11px] font-extrabold uppercase tracking-[0.18em] text-[#86efac]">
                           STEP {step.number} OF 3
-                        </span>
+                        </span> */}
                       </div>
 
-                      <h3 className="mt-5 font-['Manrope'] text-[24px] font-bold leading-[1] text-white">
+                      <h3 className="mt-5 text-center font-['Manrope'] text-[24px] font-bold leading-[1] text-white">
                         {step.backTitle}
                       </h3>
 
@@ -163,7 +164,7 @@ export default function HomeHowItWorksSection({ steps }: Props) {
         </div>
       </Container>
 
-      <div className="mt-7 border-y border-[#0d1b2e]/10 bg-[#f0fdf4]">
+      {/* <div className="mt-7 border-y border-[#0d1b2e]/10 bg-[#f0fdf4]">
         <Container className="max-w-[1180px]">
           <div className="flex flex-col items-center gap-4 py-5 text-center sm:flex-row sm:text-left">
             <div className="flex h-12 w-12 flex-none items-center justify-center rounded-full bg-[#15803d] text-white">
@@ -174,7 +175,7 @@ export default function HomeHowItWorksSection({ steps }: Props) {
             </p>
           </div>
         </Container>
-      </div>
+      </div> */}
     </Section>
   );
 }

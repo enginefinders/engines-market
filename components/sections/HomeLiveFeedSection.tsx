@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
@@ -7,7 +8,6 @@ import type { HomeLiveFeedRow } from "@/lib/homepageData";
 
 type Props = {
   rows: HomeLiveFeedRow[];
-  pinnedBrands: string[];
 };
 
 function ChevronDownIcon({ open }: { open: boolean }) {
@@ -51,10 +51,11 @@ function formatUpdatedAt(clock: Date) {
   }).format(clock);
 }
 
-export default function HomeLiveFeedSection({ rows, pinnedBrands }: Props) {
+export default function HomeLiveFeedSection({ rows }: Props) {
   const [activeBrand, setActiveBrand] = useState("all");
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [clock, setClock] = useState(() => new Date());
+  const sectionImageSrc = "/images/shared/hero-engines/temporary-diesel-engine.jpeg";
 
   useEffect(() => {
     const intervalId = window.setInterval(() => setClock(new Date()), 60_000);
@@ -66,7 +67,10 @@ export default function HomeLiveFeedSection({ rows, pinnedBrands }: Props) {
     [rows],
   );
 
-  const overflowBrands = brands.filter((brand) => !pinnedBrands.includes(brand));
+  const mobileBrandsCount = 4;
+  const desktopBrandsCount = 10;
+  const mobileOverflowBrands = brands.length > mobileBrandsCount ? brands.slice(mobileBrandsCount) : [];
+  const desktopOverflowBrands = brands.length > desktopBrandsCount ? brands.slice(desktopBrandsCount) : [];
 
   const visibleRows = useMemo(() => {
     if (activeBrand === "all") return rows;
@@ -80,8 +84,8 @@ export default function HomeLiveFeedSection({ rows, pinnedBrands }: Props) {
 
   return (
     <Section className="bg-[#f7f8fa] py-7 sm:py-8 lg:py-10">
-      <Container className="max-w-[1040px]">
-        <div className="mx-auto max-w-[760px] text-center">
+      <Container className="max-w-[1400px]">
+        <div className="mx-auto max-w-190 text-center">
           <div className="section-pill mx-auto">
             <span className="h-2 w-2 rounded-full bg-[#22c55e]" />
             <span>Live Market Data</span>
@@ -97,162 +101,247 @@ export default function HomeLiveFeedSection({ rows, pinnedBrands }: Props) {
           </p>
         </div>
 
-        <div className="mt-6">
-          <nav className="relative z-10 mb-4" aria-label="Filter live engine data by brand">
-            <div className="rounded-[12px] bg-[#0d1f3c] shadow-[0_10px_24px_rgba(13,31,60,0.15)]">
-              <div className="flex items-center gap-1 px-2 py-2">
-                <div className="flex min-w-0 flex-1 items-center gap-1 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setActiveBrand("all");
-                      setDrawerOpen(false);
-                    }}
-                    className={`flex-none rounded-full border px-3 py-2 text-[11.5px] font-medium transition ${
-                      activeBrand === "all"
-                        ? "border-[#15803d] bg-[#15803d] text-white"
-                        : "border-white/15 bg-transparent text-white/75 hover:bg-white/12 hover:text-white"
-                    }`}
-                  >
-                    All
-                  </button>
+        <div className="mt-6 grid gap-4 lg:grid-cols-[0.4fr_0.6fr] lg:items-stretch">
+          <div className="relative min-h-55 overflow-hidden rounded-[18px] border border-[#e4e7ee] bg-[#0d1f3c] shadow-[0_10px_28px_rgba(13,31,60,0.12)] lg:min-h-full">
+            <Image
+              src={sectionImageSrc}
+              alt="Replacement engine in a workshop"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 40vw"
+            />
+            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(13,31,60,0.1)_0%,rgba(13,31,60,0.42)_100%)]" />
+            <div className="absolute inset-x-0 bottom-0 p-5 text-white">
+              <div className="inline-flex items-center gap-2 rounded-full bg-white/12 px-3 py-1 text-[11px] font-medium backdrop-blur-sm">
+                <span className="h-2 w-2 rounded-full bg-[#22c55e]" />
+                Engine replacement demand
+              </div>
+              <p className="mt-3 max-w-[20rem] text-[15px] font-semibold leading-[1.35]">
+                See the latest UK pricing alongside a visual reference for the kind of engine work drivers are comparing.
+              </p>
+            </div>
+          </div>
 
-                  {pinnedBrands.map((brand) => (
+          <div>
+            <nav className="relative z-10 mb-4" aria-label="Filter live engine data by brand">
+              <div className="rounded-xl bg-[#0d1f3c] shadow-[0_10px_24px_rgba(13,31,60,0.15)]">
+                <div className="flex items-center gap-1 px-2 py-2">
+                  <div className="flex min-w-0 flex-1 items-center gap-1 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:hidden">
                     <button
-                      key={brand}
                       type="button"
                       onClick={() => {
-                        setActiveBrand(brand);
+                        setActiveBrand("all");
                         setDrawerOpen(false);
                       }}
-                      className={`flex-none rounded-full border px-3 py-2 text-[11.5px] font-medium transition ${
-                        activeBrand === brand
+                      className={`flex-none rounded-full border px-3 py-2 text-[11.5px] font-medium transition ${activeBrand === "all"
+                        ? "border-[#15803d] bg-[#15803d] text-white"
+                        : "border-white/15 bg-transparent text-white/75 hover:bg-white/12 hover:text-white"
+                        }`}
+                    >
+                      All
+                    </button>
+
+                    {brands.slice(0, mobileBrandsCount).map((brand) => (
+                      <button
+                        key={brand}
+                        type="button"
+                        onClick={() => {
+                          setActiveBrand(brand);
+                          setDrawerOpen(false);
+                        }}
+                        className={`flex-none rounded-full border px-3 py-2 text-[11.5px] font-medium transition ${activeBrand === brand
                           ? "border-[#15803d] bg-[#15803d] text-white"
                           : "border-white/15 bg-transparent text-white/75 hover:bg-white/12 hover:text-white"
-                      }`}
-                    >
-                      {brand}
-                    </button>
-                  ))}
-                </div>
+                          }`}
+                      >
+                        {brand}
+                      </button>
+                    ))}
+                  </div>
 
-                {overflowBrands.length ? (
-                  <div className="relative ml-2 flex-none">
+                  <div className="hidden min-w-0 flex-1 items-center gap-1 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:flex">
                     <button
                       type="button"
-                      onClick={() => setDrawerOpen((current) => !current)}
-                      className="flex h-8 w-8 items-center justify-center rounded-full border border-white/15 bg-white/10 text-white/75 transition hover:bg-white/20 hover:text-white"
-                      aria-expanded={drawerOpen}
-                      aria-label="Show more brands"
+                      onClick={() => {
+                        setActiveBrand("all");
+                        setDrawerOpen(false);
+                      }}
+                      className={`flex-none rounded-full border px-3 py-2 text-[11.5px] font-medium transition ${activeBrand === "all"
+                        ? "border-[#15803d] bg-[#15803d] text-white"
+                        : "border-white/15 bg-transparent text-white/75 hover:bg-white/12 hover:text-white"
+                        }`}
                     >
-                      <ChevronDownIcon open={drawerOpen} />
+                      All
                     </button>
 
-                    {drawerOpen ? (
-                      <div className="absolute right-0 top-[calc(100%+8px)] z-20 flex min-w-[196px] flex-col gap-1 rounded-[12px] border border-[#e4e7ee] bg-white p-2 shadow-[0_16px_36px_rgba(13,31,60,0.18)]">
-                        {overflowBrands.map((brand) => (
-                          <button
-                            key={brand}
-                            type="button"
-                            onClick={() => {
-                              setActiveBrand(brand);
-                              setDrawerOpen(false);
-                            }}
-                            className="rounded-[9px] px-3 py-[10px] text-left text-[11px] font-bold text-[#0d1f3c] transition hover:bg-[#f8fafc]"
-                          >
-                            {brand}
-                          </button>
-                        ))}
-                      </div>
-                    ) : null}
+                    {brands.slice(0, desktopBrandsCount).map((brand) => (
+                      <button
+                        key={brand}
+                        type="button"
+                        onClick={() => {
+                          setActiveBrand(brand);
+                          setDrawerOpen(false);
+                        }}
+                        className={`flex-none rounded-full border px-3 py-2 text-[11.5px] font-medium transition ${activeBrand === brand
+                          ? "border-[#15803d] bg-[#15803d] text-white"
+                          : "border-white/15 bg-transparent text-white/75 hover:bg-white/12 hover:text-white"
+                          }`}
+                      >
+                        {brand}
+                      </button>
+                    ))}
                   </div>
-                ) : null}
+
+                  {mobileOverflowBrands.length ? (
+                    <div className="relative ml-2 flex-none md:hidden">
+                      <button
+                        type="button"
+                        onClick={() => setDrawerOpen((current) => !current)}
+                        className="flex h-8 w-8 items-center justify-center rounded-full border border-white/15 bg-white/10 text-white/75 transition hover:bg-white/20 hover:text-white"
+                        aria-expanded={drawerOpen}
+                        aria-label="Show more brands"
+                      >
+                        <ChevronDownIcon open={drawerOpen} />
+                      </button>
+
+                      {drawerOpen ? (
+                        <div className="absolute right-0 top-[calc(100%+8px)] z-20 flex min-w-49 flex-col gap-1 rounded-xl border border-[#e4e7ee] bg-white p-2 shadow-[0_16px_36px_rgba(13,31,60,0.18)]">
+                          {mobileOverflowBrands.map((brand) => (
+                            <button
+                              key={brand}
+                              type="button"
+                              onClick={() => {
+                                setActiveBrand(brand);
+                                setDrawerOpen(false);
+                              }}
+                              className="rounded-[9px] px-3 py-2.5 text-left text-[11px] font-bold text-[#0d1f3c] transition hover:bg-[#f8fafc]"
+                            >
+                              {brand}
+                            </button>
+                          ))}
+                        </div>
+                      ) : null}
+                    </div>
+                  ) : null}
+
+                  {desktopOverflowBrands.length ? (
+                    <div className="relative ml-2 hidden flex-none md:flex">
+                      <button
+                        type="button"
+                        onClick={() => setDrawerOpen((current) => !current)}
+                        className="flex h-8 w-8 items-center justify-center rounded-full border border-white/15 bg-white/10 text-white/75 transition hover:bg-white/20 hover:text-white"
+                        aria-expanded={drawerOpen}
+                        aria-label="Show more brands"
+                      >
+                        <ChevronDownIcon open={drawerOpen} />
+                      </button>
+
+                      {drawerOpen ? (
+                        <div className="absolute right-0 top-[calc(100%+8px)] z-20 flex min-w-49 flex-col gap-1 rounded-xl border border-[#e4e7ee] bg-white p-2 shadow-[0_16px_36px_rgba(13,31,60,0.18)]">
+                          {desktopOverflowBrands.map((brand) => (
+                            <button
+                              key={brand}
+                              type="button"
+                              onClick={() => {
+                                setActiveBrand(brand);
+                                setDrawerOpen(false);
+                              }}
+                              className="rounded-[9px] px-3 py-2.5 text-left text-[11px] font-bold text-[#0d1f3c] transition hover:bg-[#f8fafc]"
+                            >
+                              {brand}
+                            </button>
+                          ))}
+                        </div>
+                      ) : null}
+                    </div>
+                  ) : null}
+                </div>
               </div>
-            </div>
-          </nav>
+            </nav>
 
-          <div className="overflow-hidden rounded-[16px] border border-[#e4e7ee] bg-white shadow-[0_10px_28px_rgba(13,31,60,0.08)]">
-            <div className="border-b border-[#e4e7ee] bg-[#f9fafc] px-4 py-3">
-              <span className="text-[11px] font-medium text-[#9aa3b5]">{countLabel}</span>
-            </div>
+            <div className="overflow-hidden rounded-2xl border border-[#e4e7ee] bg-white shadow-[0_10px_28px_rgba(13,31,60,0.08)]">
+              <div className="border-b border-[#e4e7ee] bg-[#f9fafc] px-4 py-3">
+                <span className="text-[11px] font-medium text-[#9aa3b5]">{countLabel}</span>
+              </div>
 
-            {visibleRows.length ? (
-              <div className="max-h-[480px] overflow-y-auto">
-                <ul className="list-none">
-                  {visibleRows.map((row, index) => (
-                    <li
-                      key={`${row.brand}-${row.model}-${index}`}
-                      className="border-b border-[#e4e7ee] px-4 py-3 transition hover:bg-[rgba(45,122,58,0.04)] last:border-b-0"
-                    >
-                      <div className="mb-1.5 flex items-baseline justify-between gap-2">
-                        <span className="min-w-0 flex-1 truncate text-[14px] font-semibold text-[#0d1f3c]">
-                          {row.model}
-                        </span>
-                        <span className="hidden whitespace-nowrap text-[11px] text-[#9aa3b5] sm:inline">
-                          {row.years}
-                        </span>
-                        <span className="whitespace-nowrap text-[15px] font-bold text-[#2d7a3a]">
-                          {row.price}
-                        </span>
-                      </div>
-
-                      <div className="flex items-center justify-between gap-2">
-                        <span className="min-w-0 flex-1 truncate text-[11.5px] text-[#5a6478]">
-                          {row.issue}
-                        </span>
-                        <div className="flex flex-none gap-1">
-                          <span className="rounded-full bg-[#0d1f3c] px-2 py-[3px] text-[10px] font-medium text-white">
-                            {row.engineCode}
+              {visibleRows.length ? (
+                <div className="max-h-120 overflow-y-auto">
+                  <ul className="list-none">
+                    {visibleRows.map((row, index) => (
+                      <li
+                        key={`${row.brand}-${row.model}-${index}`}
+                        className="border-b border-[#e4e7ee] px-4 py-3 transition hover:bg-[rgba(45,122,58,0.04)] last:border-b-0"
+                      >
+                        <div className="mb-1.5 flex items-baseline justify-between gap-2">
+                          <span className="min-w-0 flex-1 truncate text-[14px] font-semibold text-[#0d1f3c]">
+                            {row.model}
                           </span>
-                          <span className="rounded-full bg-[#0d1f3c] px-2 py-[3px] text-[10px] font-medium text-white">
-                            {row.fuel}
+                          <span className="hidden whitespace-nowrap text-[11px] text-[#9aa3b5] sm:inline">
+                            {row.years}
+                          </span>
+                          <span className="whitespace-nowrap text-[15px] font-bold text-[#2d7a3a]">
+                            {row.price}
                           </span>
                         </div>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : (
-              <div className="px-4 py-10 text-center text-[13px] text-[#5a6478]">
-                <strong className="block text-[#0d1f3c]">No entries for this brand.</strong>
-                <span>Try selecting a different filter above.</span>
-              </div>
-            )}
 
-            <div className="flex flex-col items-start justify-between gap-4 border-t border-[#e4e7ee] bg-[#f9fafc] px-4 py-4 sm:flex-row sm:items-center">
-              <p className="max-w-[38rem] text-[12px] leading-[1.6] text-[#5a6478]">
-                These are typical UK market price ranges. Get real quotes from vetted suppliers - free, no obligation.
-              </p>
+                        <div className="flex items-center justify-between gap-2">
+                          <span className="min-w-0 flex-1 truncate text-[11.5px] text-[#5a6478]">
+                            {row.issue}
+                          </span>
+                          <div className="flex flex-none gap-1">
+                            <span className="rounded-full bg-[#0d1f3c] px-2 py-0.75 text-[10px] font-medium text-white">
+                              {row.engineCode}
+                            </span>
+                            <span className="rounded-full bg-[#0d1f3c] px-2 py-0.75 text-[10px] font-medium text-white">
+                              {row.fuel}
+                            </span>
+                          </div>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ) : (
+                <div className="px-4 py-10 text-center text-[13px] text-[#5a6478]">
+                  <strong className="block text-[#0d1f3c]">No entries for this brand.</strong>
+                  <span>Try selecting a different filter above.</span>
+                </div>
+              )}
 
-              <a
-                href="#top"
-                className="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-full bg-[#2d7a3a] px-5 text-[13px] font-bold text-white transition hover:bg-[#3a9e4a]"
-              >
-                <MessageIcon />
-                <span>Get Free Quotes</span>
-              </a>
-            </div>
+              <div className="flex flex-col items-start justify-between gap-4 border-t border-[#e4e7ee] bg-[#f9fafc] px-4 py-4 sm:flex-row sm:items-center">
+                <p className="max-w-152 text-[12px] leading-[1.6] text-[#5a6478]">
+                  These are typical UK market price ranges. Get real quotes from vetted suppliers - free, no obligation.
+                </p>
 
-            <div className="flex flex-wrap gap-x-5 gap-y-2 border-t border-[#e4e7ee] bg-[rgba(13,31,60,0.03)] px-4 py-3">
-              <div className="flex items-center gap-2">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#2d7a3a]" />
-                <span className="text-[11px] text-[#9aa3b5]">Enquiries 2025:</span>
-                <span className="text-[11px] font-semibold text-[#5a6478]">11,856+</span>
+                <a
+                  href="#top"
+                  className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-[#2d7a3a] px-5 text-[13px] font-bold text-white transition hover:bg-[#3a9e4a]"
+                >
+                  <MessageIcon />
+                  <span className="whitespace-nowrap text-center leading-tight">Get Free Quotes</span>
+                </a>
               </div>
-              <div className="flex items-center gap-2">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#2d7a3a]" />
-                <span className="text-[11px] text-[#9aa3b5]">Saving vs dealer:</span>
-                <span className="text-[11px] font-semibold text-[#5a6478]">Up to 40%</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#2d7a3a]" />
-                <span className="text-[11px] text-[#9aa3b5]">Vetted suppliers:</span>
-                <span className="text-[11px] font-semibold text-[#5a6478]">450+</span>
-              </div>
-              <div className="ml-auto flex items-center gap-2 text-[11px] text-[#9aa3b5]">
-                <RefreshIcon />
-                <span>Last updated {formatUpdatedAt(clock)}</span>
+
+              <div className="flex flex-wrap gap-x-5 gap-y-2 border-t border-[#e4e7ee] bg-[rgba(13,31,60,0.03)] px-4 py-3">
+                <div className="flex items-center gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-[#2d7a3a]" />
+                  <span className="text-[11px] text-[#9aa3b5]">Enquiries 2025:</span>
+                  <span className="text-[11px] font-semibold text-[#5a6478]">11,856+</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-[#2d7a3a]" />
+                  <span className="text-[11px] text-[#9aa3b5]">Saving vs dealer:</span>
+                  <span className="text-[11px] font-semibold text-[#5a6478]">Up to 40%</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-[#2d7a3a]" />
+                  <span className="text-[11px] text-[#9aa3b5]">Vetted suppliers:</span>
+                  <span className="text-[11px] font-semibold text-[#5a6478]">450+</span>
+                </div>
+                <div className="ml-auto flex items-center gap-2 text-[11px] text-[#9aa3b5]">
+                  <RefreshIcon />
+                  <span>Last updated {formatUpdatedAt(clock)}</span>
+                </div>
               </div>
             </div>
           </div>

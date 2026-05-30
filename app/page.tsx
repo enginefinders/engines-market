@@ -16,7 +16,6 @@ import {
   homeEngineTypeCards,
   homeHeroData,
   homeHowItWorksSteps,
-  homeLiveFeedPinnedBrands,
   homeLiveFeedRows,
 } from "@/lib/homepageData";
 
@@ -26,7 +25,7 @@ export default function Home() {
       <div id="top" className="bg-white">
         <HomeHeroSection data={homeHeroData} />
         <HomeHowItWorksSection steps={homeHowItWorksSteps} />
-        <HomeLiveFeedSection rows={homeLiveFeedRows} pinnedBrands={homeLiveFeedPinnedBrands} />
+        <HomeLiveFeedSection rows={homeLiveFeedRows} />
         <HomeEngineTypesSection cards={homeEngineTypeCards} />
         <HomeBrandGridSection brands={homeBrandPriceDirectory} featuredSlugs={homeFeaturedBrandSlugs} />
         <HomeDecisionHubSection />
