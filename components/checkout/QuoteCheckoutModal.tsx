@@ -257,6 +257,10 @@ export default function QuoteCheckoutModal({ brandName }: Props) {
     };
   }, [activeFormState.engineCode, activeFormState.regNumber, activeFormState.selectedContext, brandName]);
 
+  const hasManualVehicleDetails = Boolean(
+    activeFormState.make.trim() || activeFormState.model.trim() || activeFormState.year.trim(),
+  );
+
   if (!isVisible) {
     return null;
   }
@@ -384,6 +388,15 @@ export default function QuoteCheckoutModal({ brandName }: Props) {
                 <div className="mt-6 flex flex-wrap items-center justify-center gap-2">
                   <span className="summary-badge">{activeReference.label}</span>
                   <span className="summary-badge">{activeReference.value}</span>
+                  {hasManualVehicleDetails && activeFormState.make.trim() ? (
+                    <span className="summary-badge">Make: {activeFormState.make.trim()}</span>
+                  ) : null}
+                  {hasManualVehicleDetails && activeFormState.model.trim() ? (
+                    <span className="summary-badge">Model: {activeFormState.model.trim()}</span>
+                  ) : null}
+                  {hasManualVehicleDetails && activeFormState.year.trim() ? (
+                    <span className="summary-badge">Year: {activeFormState.year.trim()}</span>
+                  ) : null}
                 </div>
                 <button
                   type="button"
@@ -409,6 +422,29 @@ export default function QuoteCheckoutModal({ brandName }: Props) {
                     <p className="mt-1 text-sm font-bold text-[#071936]">{activeFormState.selectedContext}</p>
                   </div>
                 )}
+
+                {hasManualVehicleDetails ? (
+                  <div className="grid gap-3 rounded-[22px] border border-slate-200 bg-slate-50/80 p-4 sm:grid-cols-3">
+                    <div>
+                      <p className="text-label text-slate-700">Make</p>
+                      <p className="mt-1 text-sm font-bold text-[#071936]">
+                        {activeFormState.make.trim() || "-"}
+                      </p>
+                    </div>
+                    <div>
+                      <p className="text-label text-slate-700">Model</p>
+                      <p className="mt-1 text-sm font-bold text-[#071936]">
+                        {activeFormState.model.trim() || "-"}
+                      </p>
+                    </div>
+                    <div>
+                      <p className="text-label text-slate-700">Year</p>
+                      <p className="mt-1 text-sm font-bold text-[#071936]">
+                        {activeFormState.year.trim() || "-"}
+                      </p>
+                    </div>
+                  </div>
+                ) : null}
 
                 <div className="grid gap-4 rounded-[22px] border border-slate-200 bg-slate-50/80 p-4 sm:grid-cols-2">
                   <label className="space-y-2">
@@ -607,6 +643,31 @@ export default function QuoteCheckoutModal({ brandName }: Props) {
                   <p className="text-label text-green-300">{activeReference.label}</p>
                   <p className="mt-1 text-[1rem] font-black text-white">{activeReference.value}</p>
                 </div>
+
+                {hasManualVehicleDetails ? (
+                  <>
+                    <div className="rounded-2xl border border-white/10 bg-white/[0.05] px-4 py-3.5">
+                      <p className="text-label text-green-300">Make</p>
+                      <p className="mt-1 text-[1rem] font-black text-white">
+                        {activeFormState.make.trim() || "-"}
+                      </p>
+                    </div>
+
+                    <div className="rounded-2xl border border-white/10 bg-white/[0.05] px-4 py-3.5">
+                      <p className="text-label text-green-300">Model</p>
+                      <p className="mt-1 text-[1rem] font-black text-white">
+                        {activeFormState.model.trim() || "-"}
+                      </p>
+                    </div>
+
+                    <div className="rounded-2xl border border-white/10 bg-white/[0.05] px-4 py-3.5">
+                      <p className="text-label text-green-300">Year</p>
+                      <p className="mt-1 text-[1rem] font-black text-white">
+                        {activeFormState.year.trim() || "-"}
+                      </p>
+                    </div>
+                  </>
+                ) : null}
 
                 {activeFormState.selectedContext && activeReference.label !== "Selected request" && (
                   <div className="rounded-2xl border border-white/10 bg-white/[0.05] px-4 py-3.5">
