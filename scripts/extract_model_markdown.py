@@ -80,7 +80,7 @@ MOJIBAKE_REPLACEMENTS = {
 LABEL_LINE_RE = re.compile(
     r"^(?:\*{0,2})?(?P<label>[A-Za-z0-9 /&()'’+.-]+):(?:\*{0,2})?\s*(?P<value>.*)$"
 )
-SECTION_HEADER_RE = re.compile(r"^#\s*SECTION\s+\d+", re.IGNORECASE)
+SECTION_HEADER_RE = re.compile(r"^(?:#\s*)?SECTION\s+\d+", re.IGNORECASE)
 INLINE_H_RE = re.compile(r"^\*{0,2}H(?P<level>[1-4])(?:\s*\([^)]*\))?:\*{0,2}\s*(?P<value>.*)$", re.IGNORECASE)
 YEAR_BLOCK_RE = re.compile(r"^###\s*(?P<year>.+?)\s*\|\s*(?P<preview>.+)$")
 PRICE_RE = re.compile(r"£[\d,]+(?:\s*-\s*£?[\d,]+)?(?:\+)?")
@@ -147,6 +147,10 @@ def normalize_key(value: str) -> str:
 
 def normalize_section_label(value: str) -> str:
     return strip_markdown(value).rstrip(":").strip()
+
+
+def normalize_matcher(value: str) -> str:
+    return clean_text(value).lstrip("# ").lower().strip()
 
 
 def derive_fuel_families_label(title: str) -> str:
@@ -241,18 +245,40 @@ def find_line(lines: Sequence[str], predicate) -> Optional[int]:
     return None
 
 
+def line_match_candidates(lines: Sequence[str], idx: int) -> List[str]:
+    raw = lines[idx]
+    candidates = [normalize_matcher(raw)]
+    match = LABEL_LINE_RE.match(raw.strip())
+    if not match:
+        return [candidate for candidate in candidates if candidate]
+
+    label = normalize_matcher(match.group("label"))
+    inline_value = normalize_matcher(match.group("value"))
+    if inline_value:
+        candidates.append(f"{label}: {inline_value}")
+        return [candidate for candidate in candidates if candidate]
+
+    next_idx = next_non_blank(lines, idx + 1)
+    if next_idx is not None and not looks_like_label(lines[next_idx]):
+        candidates.append(f"{label}: {normalize_matcher(lines[next_idx])}")
+    else:
+        candidates.append(f"{label}:")
+
+    return [candidate for candidate in candidates if candidate]
+
+
 def extract_slice(
     lines: Sequence[str],
     start_matchers: Sequence[str],
     end_matchers: Sequence[str],
 ) -> List[str]:
     start_idx = None
-    lowered_matchers = [matcher.lower() for matcher in start_matchers]
-    lowered_end_matchers = [matcher.lower() for matcher in end_matchers]
+    lowered_matchers = [normalize_matcher(matcher) for matcher in start_matchers]
+    lowered_end_matchers = [normalize_matcher(matcher) for matcher in end_matchers]
 
     for idx, line in enumerate(lines):
-        normalized = normalize_key(line)
-        if any(matcher in normalized for matcher in lowered_matchers):
+        candidates = line_match_candidates(lines, idx)
+        if any(any(matcher in candidate for matcher in lowered_matchers) for candidate in candidates):
             start_idx = idx
             break
 
@@ -261,8 +287,8 @@ def extract_slice(
 
     end_idx = len(lines)
     for idx in range(start_idx + 1, len(lines)):
-        normalized = normalize_key(lines[idx])
-        if any(matcher in normalized for matcher in lowered_end_matchers):
+        candidates = line_match_candidates(lines, idx)
+        if any(any(matcher in candidate for matcher in lowered_end_matchers) for candidate in candidates):
             end_idx = idx
             break
 
@@ -395,6 +421,17 @@ def parse_engine_title_line(line: str) -> tuple[str, str] | None:
         code = inline_match.group("code").strip()
         title = inline_match.group("title").strip()
         if code and title and ENGINE_TITLE_START_RE.match(title):
+            return code, title
+
+    broad_separator_match = re.match(
+        r"^\[?(?P<code>[A-Z0-9][A-Z0-9./+-]*(?:\s*[+/&-]\s*[A-Z0-9][A-Z0-9./+-]*)*)\]?\s*[-â€“â€”]\s*(?P<title>.+)$",
+        text,
+        flags=re.IGNORECASE,
+    )
+    if broad_separator_match:
+        code = broad_separator_match.group("code").strip("[] ").strip()
+        title = broad_separator_match.group("title").strip("[] ").strip()
+        if code and title:
             return code, title
 
     return None
@@ -1830,6 +1867,7 @@ def parse_variant_coverage_refined(lines: Sequence[str]) -> Dict[str, Any]:
         "petrol variants",
         "performance variants",
         "hybrid variants",
+        "electric variants",
         "electrified variants",
     }
 
@@ -1961,6 +1999,29 @@ def parse_variant_coverage_refined(lines: Sequence[str]) -> Dict[str, Any]:
     }
 
 
+def match_engine_family_heading(value: str) -> Optional[str]:
+    line = strip_emphasis_preserve_brackets(value)
+    if not line:
+        return None
+
+    h4_match = re.match(r"^H4:\s*(.+)$", line, flags=re.IGNORECASE)
+    if h4_match:
+        return h4_match.group(1).strip()
+
+    markdown_match = re.match(r"^####\s*(.+)$", line)
+    if not markdown_match:
+        return None
+
+    heading = markdown_match.group(1).strip()
+    if re.match(r"^H4:\s*", heading, flags=re.IGNORECASE):
+        heading = re.sub(r"^H4:\s*", "", heading, flags=re.IGNORECASE).strip()
+
+    if not heading or parse_engine_title_line(heading):
+        return None
+
+    return heading
+
+
 def parse_engine_code_families(lines: Sequence[str]) -> Dict[str, Any]:
     tag = extract_label_value(lines, "Tag") or "Engine Codes"
     h2 = extract_label_value(lines, "H2") or ""
@@ -1984,18 +2045,17 @@ def parse_engine_code_families(lines: Sequence[str]) -> Dict[str, Any]:
             idx += 1
             continue
 
-        h4_match = re.match(r"^H4:\s*(.+)$", line, flags=re.IGNORECASE)
-        if not h4_match:
+        family_name = match_engine_family_heading(lines[idx])
+        if not family_name:
             idx += 1
             continue
 
-        family_name = h4_match.group(1).strip()
         entries: List[Dict[str, Any]] = []
         idx += 1
 
         while idx < len(lines):
             current = strip_emphasis_preserve_brackets(lines[idx])
-            if current.startswith("### ") or re.match(r"^H4:\s*(.+)$", current, flags=re.IGNORECASE):
+            if current.startswith("### ") or match_engine_family_heading(lines[idx]):
                 break
             if not current:
                 idx += 1
@@ -2011,7 +2071,7 @@ def parse_engine_code_families(lines: Sequence[str]) -> Dict[str, Any]:
             idx += 1
             while idx < len(lines):
                 peek = strip_emphasis_preserve_brackets(lines[idx])
-                if peek.startswith("### ") or re.match(r"^H4:\s*(.+)$", peek, flags=re.IGNORECASE):
+                if peek.startswith("### ") or match_engine_family_heading(lines[idx]):
                     break
                 if parse_engine_title_line(peek):
                     break
@@ -2628,9 +2688,12 @@ def parse_engine_years(lines: Sequence[str]) -> Dict[str, Any]:
     closing = extract_label_value(lines, "Closing line", "Closing") or ""
     years: List[Dict[str, Any]] = []
     idx = 0
+    year_heading_re = re.compile(r"^\d{4}\s*[-â€“â€”]\s*(?:\d{4}|present|Present)")
 
     def split_year_heading(text: str) -> Tuple[str, str, List[Dict[str, str]]]:
-        cleaned = normalize_line(text).replace("### ", "", 1).strip()
+        cleaned = normalize_line(text)
+        if cleaned.startswith("### "):
+            cleaned = cleaned.replace("### ", "", 1).strip()
         parts = [part.strip() for part in cleaned.split("|") if part.strip()]
         left = parts[0] if parts else cleaned
         badge_labels = parts[1:]
@@ -2648,7 +2711,7 @@ def parse_engine_years(lines: Sequence[str]) -> Dict[str, Any]:
 
     while idx < len(lines):
         line = normalize_line(lines[idx])
-        if not line.startswith("### "):
+        if not (line.startswith("### ") or year_heading_re.match(line)):
             idx += 1
             continue
 
@@ -2672,7 +2735,7 @@ def parse_engine_years(lines: Sequence[str]) -> Dict[str, Any]:
         while idx < len(lines):
             current = normalize_line(lines[idx])
             lowered = normalize_key(current)
-            if current.startswith("### ") or lowered.startswith("closing line"):
+            if current.startswith("### ") or year_heading_re.match(current) or lowered.startswith("closing line"):
                 idx -= 1
                 break
             if lowered.startswith("short intro"):
@@ -2900,18 +2963,66 @@ def parse_document(
         assets=assets,
     )
 
-    hero_lines = extract_slice(lines, ["# section 1", "hero content", "tag pill"], ["# section 2", "how it works", "3: live market prices", "live uk engine market data"])
-    how_lines = extract_slice(lines, ["# section 2", "how it works", "card 1 front"], ["3: live market prices", "live uk engine market data", "4: popular sub-models", "tag: models we cover"])
-    live_lines = extract_slice(lines, ["3: live market prices", "live uk engine market data", "feed table"], ["4: popular sub-models", "tag: models we cover"])
-    variant_lines = extract_slice(lines, ["4: popular sub-models", "tag: models we cover"], ["5: engine codes", "tag: engine codes"])
-    engine_code_lines = extract_slice(lines, ["5: engine codes", "tag: engine codes"], ["6 (revised): engine problems", "6: engine problems", "tag: common problems"])
-    common_problem_lines = extract_slice(lines, ["6 (revised): engine problems", "6: engine problems", "tag: common problems"], ["7 (revised): engine types", "7: engine types", "tag: replacement engine options", "tag: engine types"])
-    engine_type_lines = extract_slice(lines, ["7 (revised): engine types", "7: engine types", "tag: replacement engine options", "tag: engine types"], ["8: engine sizes by fuel type", "8: engine sizes", "tag: engine sizes"])
-    engine_size_lines = extract_slice(lines, ["8: engine sizes by fuel type", "8: engine sizes", "tag: engine sizes"], ["9: engines by fuel type", "tag: fuel type", "tag: bmw 2 series engines fuel type"])
-    fuel_lines = extract_slice(lines, ["9: engines by fuel type", "tag: fuel type", "tag: bmw 2 series engines fuel type"], ["10: model years coverage", "tag: engine years"])
-    year_lines = extract_slice(lines, ["10: model years coverage", "tag: engine years"], ["11: faqs", "tag: faq"])
-    faq_lines = extract_slice(lines, ["11: faqs", "tag: faq", "faq"], ["tag: why choose us", "why choose us", "13: em model page - meta tags"])
-    trust_lines = extract_slice(lines, ["tag: why choose us", "why choose us"], ["13: em model page - meta tags", "meta title", "meta description", "canonical url"])
+    hero_lines = extract_slice(
+        lines,
+        ["# section 1 - hero", "# section 1", "hero content", "tag pill"],
+        ["# section 2 - how it works", "# section 2", "how it works", "# section 3 - live", "# section 3", "3: live market prices", "live uk engine market data"],
+    )
+    how_lines = extract_slice(
+        lines,
+        ["# section 2 - how it works", "# section 2", "how it works", "card 1 front"],
+        ["# section 3 - live feed", "# section 3 - live market prices", "# section 3", "3: live market prices", "live uk engine market data", "4: popular sub-models", "# section 4 - popular sub-models", "tag: models we cover"],
+    )
+    live_lines = extract_slice(
+        lines,
+        ["# section 3 - live feed", "# section 3 - live market prices", "# section 3", "3: live market prices", "live uk engine market data", "feed table"],
+        ["# section 4 - popular sub-models", "# section 4", "4: popular sub-models", "tag: models we cover"],
+    )
+    variant_lines = extract_slice(
+        lines,
+        ["# section 4 - popular sub-models", "# section 4", "4: popular sub-models", "tag: models we cover"],
+        ["# section 5 - engine codes", "# section 5/10 - engine codes", "# section 10 - engine codes", "5: engine codes", "10: engine codes", "tag: engine codes", "tag: ev component codes", "# section 6 - engine problems", "# section 6", "6: engine problems", "tag: common problems", "tag: common ev component problems"],
+    )
+    engine_code_lines = extract_slice(
+        lines,
+        ["# section 5 - engine codes", "# section 5/10 - engine codes", "# section 10 - engine codes", "5: engine codes", "10: engine codes", "tag: engine codes", "tag: ev component codes"],
+        ["# section 6 - engine problems", "# section 6", "6 (revised): engine problems", "6: engine problems", "tag: common problems", "tag: common ev component problems"],
+    )
+    common_problem_lines = extract_slice(
+        lines,
+        ["# section 6 - engine problems", "# section 6", "6 (revised): engine problems", "6: engine problems", "tag: common problems", "tag: common ev component problems"],
+        ["# section 7 - engine types", "# section 7", "7 (revised): engine types", "7: engine types", "tag: replacement engine options", "tag: replacement ev component options", "tag: engine types"],
+    )
+    engine_type_lines = extract_slice(
+        lines,
+        ["# section 7 - engine types", "# section 7", "7 (revised): engine types", "7: engine types", "tag: replacement engine options", "tag: engine types"],
+        ["# section 8 - engine sizes by fuel type", "# section 8 - engine sizes", "# section 8", "8: engine sizes by fuel type", "8: engine sizes", "tag: engine sizes"],
+    )
+    engine_size_lines = extract_slice(
+        lines,
+        ["# section 8 - engine sizes by fuel type", "# section 8 - engine sizes", "# section 8", "8: engine sizes by fuel type", "8: engine sizes", "tag: engine sizes"],
+        ["# section 9 - engines by fuel type", "# section 10 - engines by fuel type", "# section 9", "# section 10", "9: engines by fuel type", "10: engines by fuel type", "tag: fuel type", "tag: bmw 2 series engines fuel type", "fuel type", "ev components fuel type"],
+    )
+    fuel_lines = extract_slice(
+        lines,
+        ["# section 9 - engines by fuel type", "# section 10 - engines by fuel type", "# section 9", "# section 10", "9: engines by fuel type", "10: engines by fuel type", "tag: fuel type", "tag: bmw 2 series engines fuel type", "fuel type", "ev components fuel type"],
+        ["# section 10 - model years", "# section 10 - model years coverage", "# section 11 - model years", "# section 11 - model years coverage", "10: model years", "10: model years coverage", "11: model years", "11: model years coverage", "tag: engine years", "tag: ev component years", "component years"],
+    )
+    year_lines = extract_slice(
+        lines,
+        ["# section 10 - model years", "# section 10 - model years coverage", "# section 11 - model years", "# section 11 - model years coverage", "10: model years", "10: model years coverage", "11: model years", "11: model years coverage", "tag: engine years", "tag: ev component years", "component years"],
+        ["# section 11 - faq", "# section 12 - faq", "11: faqs", "12: faqs", "tag: faq"],
+    )
+    faq_lines = extract_slice(
+        lines,
+        ["# section 11 - faq", "# section 12 - faq", "11: faqs", "12: faqs", "tag: faq", "faq"],
+        ["# section 12 - trust", "# section 13 - trust", "tag: why choose us", "why choose us", "13: em model page - meta tags"],
+    )
+    trust_lines = extract_slice(
+        lines,
+        ["# section 12 - trust", "# section 13 - trust", "tag: why choose us", "why choose us"],
+        ["13: em model page - meta tags", "meta title", "meta description", "canonical url"],
+    )
 
     meta = parse_meta(lines)
 
