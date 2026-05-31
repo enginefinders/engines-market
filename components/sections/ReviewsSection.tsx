@@ -11,7 +11,7 @@ type Props = {
 };
 
 const REVIEW_SOURCES = ["google", "facebook", "trustpilot", "google", "facebook", "trustpilot"] as const;
-const LEAVE_REVIEW_HREF = "mailto:hello@enginesmarket.co.uk?subject=EnginesMarket%20review";
+const LEAVE_REVIEW_HREF = "mailto:ef2crm@gmail.com?subject=EnginesMarket%20review";
 
 function TagIcon() {
   return (

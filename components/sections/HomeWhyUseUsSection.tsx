@@ -214,7 +214,7 @@ export default function HomeWhyUseUsSection() {
         <p className="mt-4 text-left text-[14px] leading-[1.7] text-[#6b7280] md:text-center">
           Had a negative experience with a supplier you found through EnginesMarket?{" "}
           <a
-            href="mailto:hello@enginesmarket.co.uk?subject=Supplier%20complaint%20or%20review"
+            href="mailto:ef2crm@gmail.com?subject=Supplier%20complaint%20or%20review"
             className="font-semibold text-[#15803d] underline underline-offset-2"
           >
             Submit a supplier complaint or review -
@@ -223,7 +223,7 @@ export default function HomeWhyUseUsSection() {
 
         <div className="mt-5 flex justify-center">
           <a
-            href="mailto:hello@enginesmarket.co.uk?subject=How%20do%20you%20vet%20your%20supplier%20network%3F"
+            href="mailto:ef2crm@gmail.com?subject=How%20do%20you%20vet%20your%20supplier%20network%3F"
             className="inline-flex min-h-[48px] w-full items-center justify-center rounded-[8px] border border-[#0d1b2e] bg-white px-5 text-[14px] font-semibold text-[#0d1b2e] transition hover:bg-[#f8fbff] sm:w-auto sm:min-w-[310px]"
           >
             See how we vet our supplier network -

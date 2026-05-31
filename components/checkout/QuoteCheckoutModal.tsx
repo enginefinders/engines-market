@@ -1,12 +1,16 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, type FormEvent } from "react";
 
 type QuoteTriggerDetail = {
   regNumber?: string;
   engineCode?: string;
   context?: string;
+  searchMode?: "registration" | "manual";
+  make?: string;
+  model?: string;
+  year?: string;
   source?: string;
 };
 
@@ -18,6 +22,11 @@ type QuoteFormState = {
   regNumber: string;
   engineCode: string;
   selectedContext: string;
+  make: string;
+  model: string;
+  year: string;
+  searchMode: "registration" | "manual";
+  source: string;
   fullName: string;
   email: string;
   phone: string;
@@ -35,6 +44,11 @@ const defaultFormState: QuoteFormState = {
   regNumber: "",
   engineCode: "",
   selectedContext: "",
+  make: "",
+  model: "",
+  year: "",
+  searchMode: "registration",
+  source: "",
   fullName: "",
   email: "",
   phone: "",
@@ -110,12 +124,24 @@ function QuoteSuccessIcon() {
 }
 
 function buildInitialState(detail: QuoteTriggerDetail) {
+  const make = detail.make ?? "";
+  const model = detail.model ?? "";
+  const year = detail.year ?? "";
+  const selectedContext =
+    detail.context ??
+    [make, model, year].filter(Boolean).join(" ").trim();
+
   return {
     ...defaultFormState,
     regNumber: detail.regNumber ?? "",
     engineCode: detail.engineCode ?? "",
-    selectedContext: detail.context ?? "",
-    notes: detail.context ? `Context: ${detail.context}` : "",
+    selectedContext,
+    make,
+    model,
+    year,
+    searchMode: detail.searchMode ?? (detail.regNumber ? "registration" : "manual"),
+    source: detail.source ?? "",
+    notes: selectedContext ? `Context: ${selectedContext}` : "",
   };
 }
 
@@ -137,12 +163,15 @@ export default function QuoteCheckoutModal({ brandName }: Props) {
   const queryTrigger = useMemo(() => getQueryTriggerDetail(searchParams), [searchParams]);
   const [isOpen, setIsOpen] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
   const [formState, setFormState] = useState<QuoteFormState>(defaultFormState);
 
   useEffect(() => {
     function openQuote(detail: QuoteTriggerDetail = {}) {
       setFormState(buildInitialState(detail));
       setIsSubmitted(false);
+      setSubmitError("");
       setIsOpen(true);
     }
 
@@ -232,6 +261,74 @@ export default function QuoteCheckoutModal({ brandName }: Props) {
     return null;
   }
 
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setSubmitError("");
+    setIsSubmitting(true);
+
+    const formData = new FormData();
+    const resolvedBrand = activeFormState.make.trim() || brandName;
+    const resolvedModel = activeFormState.model.trim() || activeFormState.selectedContext.trim();
+    const descriptionLines = [
+      activeFormState.notes.trim(),
+      activeFormState.source ? `Source: ${activeFormState.source}` : "",
+      typeof window !== "undefined" ? `Page URL: ${window.location.href}` : "",
+      activeFormState.searchMode ? `Search mode: ${activeFormState.searchMode}` : "",
+    ].filter(Boolean);
+
+    formData.set("name", activeFormState.fullName.trim());
+    formData.set("email", activeFormState.email.trim());
+    formData.set("number", activeFormState.phone.trim());
+    formData.set("postcode", activeFormState.postcode.trim());
+    formData.set("vehicle_model", resolvedModel);
+    formData.set("vehicle_reg", activeFormState.year.trim());
+    formData.set("vehicle_series", activeFormState.selectedContext.trim());
+    formData.set("engine_code", activeFormState.engineCode.trim());
+    formData.set("vehicle_part", "engine");
+    formData.set("vehicle_vrm", activeFormState.regNumber.trim());
+    formData.set("vehicle_brand", resolvedBrand);
+    formData.set("vehicle_title", `${brandName} engine enquiry`);
+    formData.set("engin_capacity", "");
+    formData.set("fuelType", "");
+    formData.set("description", descriptionLines.join("\n"));
+    formData.set("source", activeFormState.source || "engine-market-quote-modal");
+
+    if (activeFormState.fitting === "Supply & fit" || activeFormState.fitting === "Open to both") {
+      formData.set("part_supplied", "on");
+    }
+    if (activeFormState.fitting === "Supply only" || activeFormState.fitting === "Open to both") {
+      formData.set("supply_only", "on");
+    }
+
+    if (activeFormState.engineType === "Used") {
+      formData.set("used_condition", "on");
+    } else if (activeFormState.engineType === "New") {
+      formData.set("new_condition", "on");
+    } else {
+      formData.set("reconditioned_condition", "on");
+    }
+
+    try {
+      const response = await fetch("/send-email", {
+        method: "POST",
+        body: formData,
+      });
+      const result = (await response.json().catch(() => null)) as
+        | { success?: boolean; message?: string }
+        | null;
+
+      if (!response.ok || !result?.success) {
+        throw new Error(result?.message || "Something went wrong. Please try again.");
+      }
+
+      setIsSubmitted(true);
+    } catch (error) {
+      setSubmitError(error instanceof Error ? error.message : "Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
+
   return (
     <div className="fixed inset-0 z-[90] flex items-center justify-center bg-[#071936]/65 px-3 py-4 backdrop-blur-sm sm:px-6">
       <div
@@ -304,10 +401,7 @@ export default function QuoteCheckoutModal({ brandName }: Props) {
             ) : (
               <form
                 className="mt-6 space-y-5"
-                onSubmit={(event) => {
-                  event.preventDefault();
-                  setIsSubmitted(true);
-                }}
+                onSubmit={handleSubmit}
               >
                 {activeFormState.selectedContext && (
                   <div className="rounded-[22px] border border-blue-100 bg-blue-50 px-4 py-3.5">
@@ -479,10 +573,20 @@ export default function QuoteCheckoutModal({ brandName }: Props) {
                     </div>
                   </div>
 
-                  <button type="submit" className="button-primary min-w-[220px]">
-                    Secure My Quotes
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="button-primary min-w-[220px] disabled:cursor-not-allowed disabled:opacity-70"
+                  >
+                    {isSubmitting ? "Sending enquiry..." : "Secure My Quotes"}
                   </button>
                 </div>
+
+                {submitError ? (
+                  <p className="rounded-[18px] border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
+                    {submitError}
+                  </p>
+                ) : null}
               </form>
             )}
           </div>
