@@ -15,15 +15,15 @@
     "canonical": "/volkswagen/routan"
   },
   "assets": {
-    "mainImage": "/images/brands/volkswagen/models/volkswagen-routan-main.webp",
-    "smallImage": "/images/brands/volkswagen/models/volkswagen-routan-small.webp",
-    "heroBg": "/images/brands/volkswagen/models/volkswagen-routan-main.webp",
+    "mainImage": "/images/brands/volkswagen/models/volkswagen-routan-model-card.png",
+    "smallImage": "/images/brands/volkswagen/models/volkswagen-routan-model-card.png",
+    "heroBg": "/images/brands/volkswagen/models/volkswagen-routan-model-card.png",
     "howItWorksBg": "/images/brands/volkswagen/brand/volkswagen-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/volkswagen/brand/volkswagen-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/volkswagen/brand/volkswagen-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/volkswagen/brand/volkswagen-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/volkswagen/brand/volkswagen-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/volkswagen/models/volkswagen-routan-main.webp"
+    "ctaImage": "/images/brands/volkswagen/models/volkswagen-routan-model-card.png"
   },
   "sections": {
     "hero": {
@@ -38,7 +38,7 @@
       ],
       "ctaLinkText": "Get Free Volkswagen Routan Engine Quotes →",
       "supportingText": "Get tailored Volkswagen Routan engine quotes from vetted UK specialists.",
-      "ticker": "● Instant Quotes · No Obligation · 100% Free · Reconditioned · Rebuilt · Used · Supply & Fit Available · UK-Wide Network ═══════════════════════════════════════",
+      "ticker": "● Instant Quotes · No Obligation · 100% Free · Reconditioned · Rebuilt · Used · Supply & Fit Available · UK-Wide Network",
       "form": {
         "heading": "Find Your Volkswagen Routan Engine",
         "subtitle": "Enter your registration number to compare Volkswagen Routan engine options.",
@@ -1019,11 +1019,76 @@
     },
     "fuelTypes": {
       "tag": "Fuel Type",
-      "h2": "",
+      "h2": "Volkswagen Routan Engines by Fuel Type",
       "intro": "",
-      "items": [],
-      "closing": "",
-      "headingLines": [],
+      "items": [
+        {
+          "title": "Volkswagen Routan Petrol Engines",
+          "description": "All Volkswagen Routan engines are petrol (gasoline) V6 units sourced from Chrysler; no diesel variants were ever produced for this North American-market minivan.",
+          "descriptor": "All Volkswagen Routan engines are petrol (gasoline) V6 units sourced from Chrysler; no diesel variants were ever produced for this North American-market minivan.",
+          "familiesLabel": "Common Volkswagen Routan Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
+          "families": [
+            "Pentastar 3.6L - 2011-2014 models, timing chain tensioner failure risk, upgraded units available",
+            "EGQ 4.0L - 2009-2010 SEL trim, SOHC design, timing belt replacement critical at 60k miles",
+            "EGH 3.8L - 2009-2010 base models, OHV simplicity but oil sludge prone in UK conditions"
+          ],
+          "foundIn": [
+            "First generation (2009-2010) - EGH 3.8L, EGQ 4.0L",
+            "Second generation (2011-2014) - Pentastar 3.6L only"
+          ],
+          "knownFor": [
+            "Strong V6 torque suitable for minivan duties",
+            "Timing chain tensioner issues on Pentastar (VW Bulletin SWE-12-07)",
+            "Oil sludge buildup accelerated by UK stop-start driving patterns",
+            "TIPM calibration unique to Routan affects EGR and emissions systems"
+          ],
+          "typicalModels": [
+            "SE (base trim, all engine options)",
+            "SEL (mid-trim, 4.0L or 3.6L)",
+            "SEL Premium (top-trim, 3.6L Pentastar)",
+            "Komfort (Canadian market equivalent)",
+            "Highline (Canadian top-trim)",
+            "Executive (rare limited edition)"
+          ],
+          "importantNotes": [],
+          "cta": "Compare Volkswagen Routan Petrol engine prices"
+        },
+        {
+          "title": "Volkswagen Routan Flex Fuel Engine Options",
+          "description": "Some 2011-2014 Routan Pentastar engines are Flex Fuel capable, running on petrol or E85 ethanol; verify import documentation for UK compatibility.",
+          "descriptor": "Some 2011-2014 Routan Pentastar engines are Flex Fuel capable, running on petrol or E85 ethanol; verify import documentation for UK compatibility.",
+          "familiesLabel": "Volkswagen Routan Flex Fuel Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
+          "families": [
+            "Pentastar 3.6L FFV - SEL Premium and Executive trims, E85 compatible",
+            "Fuel sensor detects ethanol content and adjusts injection timing automatically",
+            "No performance loss on E85; fuel economy reduced by ~15% versus petrol",
+            "UK E85 availability limited; most owners use standard petrol without modification"
+          ],
+          "foundIn": [
+            "SEL Premium, Executive (2011-2014, North American specification)"
+          ],
+          "knownFor": [],
+          "typicalModels": [],
+          "importantNotes": [
+            "Flex Fuel capability does not affect engine replacement compatibility",
+            "UK import documentation must confirm fuel system specification for DVLA registration",
+            "Standard petrol is fully compatible; no conversion required for UK use"
+          ],
+          "cta": "Enquire about Volkswagen Routan Flex Fuel engine availability"
+        }
+      ],
+      "closing": "Not sure which fuel type your Volkswagen Routan has? Enter your registration number above to instantly identify your engine code, fuel system and compatible replacement options - all backed by a minimum 12‑month unlimited mileage warranty from UK Volkswagen Routan specialists.",
+      "headingLines": [
+        "Volkswagen Routan Engines by Fuel Type"
+      ],
       "ui": {
         "swapLabel": "Swap panel",
         "familiesLabel": "Common Engine Families",

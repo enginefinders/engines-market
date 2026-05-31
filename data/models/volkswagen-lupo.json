@@ -15,15 +15,15 @@
     "canonical": "/volkswagen/lupo"
   },
   "assets": {
-    "mainImage": "/images/brands/volkswagen/models/volkswagen-lupo-main.webp",
-    "smallImage": "/images/brands/volkswagen/models/volkswagen-lupo-small.webp",
-    "heroBg": "/images/brands/volkswagen/models/volkswagen-lupo-main.webp",
+    "mainImage": "/images/brands/volkswagen/models/volkswagen-lupo-model-card.png",
+    "smallImage": "/images/brands/volkswagen/models/volkswagen-lupo-model-card.png",
+    "heroBg": "/images/brands/volkswagen/models/volkswagen-lupo-model-card.png",
     "howItWorksBg": "/images/brands/volkswagen/brand/volkswagen-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/volkswagen/brand/volkswagen-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/volkswagen/brand/volkswagen-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/volkswagen/brand/volkswagen-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/volkswagen/brand/volkswagen-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/volkswagen/models/volkswagen-lupo-main.webp"
+    "ctaImage": "/images/brands/volkswagen/models/volkswagen-lupo-model-card.png"
   },
   "sections": {
     "hero": {
@@ -38,7 +38,7 @@
       ],
       "ctaLinkText": "Get Free Volkswagen Lupo Engine Quotes →",
       "supportingText": "Get tailored Volkswagen Lupo engine quotes from vetted UK specialists.",
-      "ticker": "● Instant Quotes · No Obligation · 100% Free · Reconditioned · Rebuilt · Used · Supply & Fit Available · UK-Wide Network ═══════════════════════════════════════",
+      "ticker": "● Instant Quotes · No Obligation · 100% Free · Reconditioned · Rebuilt · Used · Supply & Fit Available · UK-Wide Network",
       "form": {
         "heading": "Find Your Volkswagen Lupo Engine",
         "subtitle": "Enter your registration number to compare Volkswagen Lupo engine options.",
@@ -110,8 +110,7 @@
               "Your Precise Model - from 1.0 E, 1.4 S, 1.4 TDI, 1.7 SDI to GTI 1.6 16V",
               "Your Engine Code - AMF, AVY, AEX, AHW and more",
               "Vehicle Specs Check - fuel type, engine size, year, variant - all verified instantly",
-              "No paperwork, no guesswork, 100% free.",
-              "═══════════════════════════════════════"
+              "No paperwork, no guesswork, 100% free."
             ]
           }
         },
@@ -379,14 +378,6 @@
             "volkswagen lupo gti silver/black edition",
             "volkswagen lupo gti silver black edition engine"
           ]
-        },
-        {
-          "key": "-engine",
-          "label": "",
-          "matchers": [
-            "",
-            "engine"
-          ]
         }
       ],
       "ui": {
@@ -642,18 +633,6 @@
           "power": "125hp",
           "years": "2003-2005",
           "image": ""
-        },
-        {
-          "h3": "",
-          "slug": "-engine",
-          "subtitle": "The Volkswagen Lupo's compact engines are generally robust, but high-mileage units commonly suffer from turbo actuator failure on 1.4 TDI (AMF) models and head gasket seepage on 1.0L petrol (AEX) engines after 120k miles. Every rebuilt engine supplied through EngineMarket includes upgraded internal components designed to address the original failure point - plus a minimum 12‑month unlimited mileage warranty.",
-          "priceRange": "",
-          "cta": "H4: 1.4 TDI Turbo Actuator Failure - Why AMF Engines Lose Power",
-          "engineCodes": [],
-          "fuel": "Petrol",
-          "power": "",
-          "years": "",
-          "image": ""
         }
       ],
       "directory": {
@@ -694,7 +673,7 @@
         ],
         "label": "Variant Directory"
       },
-      "closing": "",
+      "closing": "Not sure which variant your Volkswagen Lupo is? Enter your registration number above - we'll identify the exact sub-model, engine code and compatible replacement options instantly.",
       "engineGuide": {
         "tag": "Engine Codes",
         "h2": "Volkswagen Lupo Engine Codes - Full Technical Specifications & Replacement Guide",
@@ -1045,10 +1024,23 @@
                   "Lupo 1.4 Sport"
                 ],
                 "commonFailures": [
-                  "Timing belt critical (interference)",
-                  "Higher-strung components wear faster",
-                  "Coil pack failures under load"
+                  "Timing belt critical (interference)"
                 ],
+                "avgRebuiltPrice": "",
+                "cta": "",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              },
+              {
+                "code": "Higher",
+                "title": "strung components wear faster",
+                "familyHeading": "1.4L Petrol Family (1998-2005)",
+                "history": "",
+                "fuel": "",
+                "size": "",
+                "power": "",
+                "years": "",
+                "compatibleVariants": [],
+                "commonFailures": [],
                 "avgRebuiltPrice": "£850 - £1,200",
                 "cta": "Get quotes for BBY Volkswagen Lupo engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1181,10 +1173,23 @@
                   "GTI 1.6 16V, GTI Silver Edition, GTI Black Edition"
                 ],
                 "commonFailures": [
-                  "Cam lobe wear from poor oil maintenance",
-                  "High-pressure fuel pump wear",
-                  "Timing chain tensioner issues"
+                  "Cam lobe wear from poor oil maintenance"
                 ],
+                "avgRebuiltPrice": "",
+                "cta": "",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              },
+              {
+                "code": "High",
+                "title": "pressure fuel pump wear",
+                "familyHeading": "GTI Performance Family (2000-2005)",
+                "history": "",
+                "fuel": "",
+                "size": "",
+                "power": "",
+                "years": "",
+                "compatibleVariants": [],
+                "commonFailures": [],
                 "avgRebuiltPrice": "£1,100 - £1,600+",
                 "cta": "Get quotes for AVY Volkswagen Lupo engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1211,7 +1216,7 @@
             ]
           }
         ],
-        "closing": "Can't find your engine code? Enter your registration number above - we'll instantly identify the exact unit, its technical specifications, and live replacement prices from UK Volkswagen Lupo engine specialists. Every rebuilt engine comes with a minimum 12‑month unlimited mileage warranty. ═══════════════════════════════════════"
+        "closing": "Can't find your engine code? Enter your registration number above - we'll instantly identify the exact unit, its technical specifications, and live replacement prices from UK Volkswagen Lupo engine specialists. Every rebuilt engine comes with a minimum 12‑month unlimited mileage warranty."
       },
       "headingLines": [
         "Volkswagen Lupo Engine Replacement",
@@ -1229,7 +1234,7 @@
       "tag": "Engine Codes",
       "h2": "Volkswagen Lupo Engine Codes - Full Technical Specifications & Replacement Guide",
       "h3": "Every engine code fitted to the Volkswagen Lupo across all generations, with technical specs, compatible variants and trims, known failure points, and average rebuilt prices from UK specialists. Select any engine code to compare quotes.",
-      "closingLine": "Can't find your engine code? Enter your registration number above - we'll instantly identify the exact unit, its technical specifications, and live replacement prices from UK Volkswagen Lupo engine specialists. Every rebuilt engine comes with a minimum 12‑month unlimited mileage warranty. ═══════════════════════════════════════",
+      "closingLine": "Can't find your engine code? Enter your registration number above - we'll instantly identify the exact unit, its technical specifications, and live replacement prices from UK Volkswagen Lupo engine specialists. Every rebuilt engine comes with a minimum 12‑month unlimited mileage warranty.",
       "filters": [
         "Diesel Engines",
         "Petrol Engines"
@@ -1459,6 +1464,18 @@
               "size": "1.4L",
               "power": "100 hp",
               "compatibleModels": "Lupo 1.4 Sport",
+              "avgRebuiltPrice": "",
+              "cta": "",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            },
+            {
+              "code": "Higher",
+              "title": "strung components wear faster",
+              "familyHeading": "1.4L Petrol Family (1998-2005)",
+              "fuel": "",
+              "size": "",
+              "power": "",
+              "compatibleModels": "",
               "avgRebuiltPrice": "£850 - £1,200",
               "cta": "Get quotes for BBY Volkswagen Lupo engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1543,6 +1560,18 @@
               "size": "1.6L",
               "power": "125 hp",
               "compatibleModels": "GTI 1.6 16V, GTI Silver Edition, GTI Black Edition",
+              "avgRebuiltPrice": "",
+              "cta": "",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            },
+            {
+              "code": "High",
+              "title": "pressure fuel pump wear",
+              "familyHeading": "GTI Performance Family (2000-2005)",
+              "fuel": "",
+              "size": "",
+              "power": "",
+              "compatibleModels": "",
               "avgRebuiltPrice": "£1,100 - £1,600+",
               "cta": "Get quotes for AVY Volkswagen Lupo engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1701,7 +1730,7 @@
         "h4": "Don't Let Engine Failure Write Off Your Volkswagen Lupo",
         "paragraph": "Whether you're dealing with turbo actuator failure on a 1.4 TDI, head gasket issues on a 1.0L petrol, or cam wear on a GTI, EngineMarket makes it simple to compare prices from trusted UK Volkswagen Lupo specialists. Every rebuilt engine includes upgraded components addressing the original failure point, plus a minimum 12‑month unlimited mileage warranty and nationwide delivery. Compare quotes today and get back on the road without the main dealer premium.",
         "buttonText": "Compare Volkswagen Lupo Engine Replacement Prices Now →",
-        "disclaimer": "All prices are indicative UK market ranges based on historical quote data and repair requests from our network of engine specialists. Dealer pricing is estimated based on published main dealer labour rates and genuine OEM parts pricing. Specialist pricing reflects actual quote data from EngineMarket's UK network. Actual costs vary depending on damage severity, vehicle condition, variant, and workshop location within the UK. Use our free comparison tool to get tailored quotes for your specific Volkswagen Lupo and engine code. Every engine supplied through EngineMarket carries a minimum 12‑month unlimited mileage warranty - always confirm exact terms with your chosen supplier. ═══════════════════════════════════════"
+        "disclaimer": "All prices are indicative UK market ranges based on historical quote data and repair requests from our network of engine specialists. Dealer pricing is estimated based on published main dealer labour rates and genuine OEM parts pricing. Specialist pricing reflects actual quote data from EngineMarket's UK network. Actual costs vary depending on damage severity, vehicle condition, variant, and workshop location within the UK. Use our free comparison tool to get tailored quotes for your specific Volkswagen Lupo and engine code. Every engine supplied through EngineMarket carries a minimum 12‑month unlimited mileage warranty - always confirm exact terms with your chosen supplier."
       }
     },
     "engineTypes": {
@@ -1784,7 +1813,7 @@
           "description": "Complete engine replacement service including supply, fitting, fluids and road test from vetted UK specialists.",
           "frontDescription": "Complete engine replacement service including supply, fitting, fluids and road test from vetted UK specialists.",
           "frontDisclaimer": "Labour cost varies by workshop location.",
-          "backDescription": "Supply & fit removes DIY hassle. Ideal for owners without mechanic contacts. Confirm warranty covers both parts and labour nationwide. ═══════════════════════════════════════",
+          "backDescription": "Supply & fit removes DIY hassle. Ideal for owners without mechanic contacts. Confirm warranty covers both parts and labour nationwide.",
           "backBullets": [
             "Single-point responsibility",
             "Mobile fitting available in many areas",
@@ -1931,7 +1960,7 @@
             },
             {
               "title": "Volkswagen Lupo 1.6L Petrol Engines",
-              "description": "The high-output 1.6L 16V (AVY/AFK) was exclusive to the cult-classic Lupo GTI, delivering 125bhp and enthusiast-grade driving dynamics. Not sure which engine size your Volkswagen Lupo needs? Enter your registration number above - we'll identify the exact displacement, engine code and compatible replacement options instantly. All engines supplied through EngineMarket include a minimum 12‑month unlimited mileage warranty from UK Volkswagen Lupo specialists. ═══════════════════════════════════════",
+              "description": "The high-output 1.6L 16V (AVY/AFK) was exclusive to the cult-classic Lupo GTI, delivering 125bhp and enthusiast-grade driving dynamics. Not sure which engine size your Volkswagen Lupo needs? Enter your registration number above - we'll identify the exact displacement, engine code and compatible replacement options instantly. All engines supplied through EngineMarket include a minimum 12‑month unlimited mileage warranty from UK Volkswagen Lupo specialists.",
               "engineCodes": [
                 "AVY",
                 "AFK"
@@ -1950,7 +1979,7 @@
           ]
         }
       ],
-      "closing": "Not sure which engine size your Volkswagen Lupo needs? Enter your registration number above - we'll identify the exact displacement, engine code and compatible replacement options instantly. All engines supplied through EngineMarket include a minimum 12‑month unlimited mileage warranty from UK Volkswagen Lupo specialists. ═══════════════════════════════════════",
+      "closing": "Not sure which engine size your Volkswagen Lupo needs? Enter your registration number above - we'll identify the exact displacement, engine code and compatible replacement options instantly. All engines supplied through EngineMarket include a minimum 12‑month unlimited mileage warranty from UK Volkswagen Lupo specialists.",
       "headingLines": [
         "Volkswagen Lupo Engines by Size",
         "Find the Right Displacement for Your Variant"
@@ -2091,7 +2120,7 @@
           "cta": "Get quotes for AFK Volkswagen Lupo engine replacement"
         }
       ],
-      "closing": "Not sure which fuel type your Volkswagen Lupo has? Enter your registration number above to instantly identify your engine code, fuel system and compatible replacement options - all backed by a minimum 12‑month unlimited mileage warranty from UK Volkswagen Lupo specialists. ═══════════════════════════════════════",
+      "closing": "Not sure which fuel type your Volkswagen Lupo has? Enter your registration number above to instantly identify your engine code, fuel system and compatible replacement options - all backed by a minimum 12‑month unlimited mileage warranty from UK Volkswagen Lupo specialists.",
       "headingLines": [
         "Volkswagen Lupo Engines by Fuel Type"
       ],
@@ -2392,7 +2421,7 @@
           ]
         }
       ],
-      "closing": "Not sure which year your Volkswagen Lupo was built? Enter your registration number and we'll identify the exact engine, model year, and compatible replacement options instantly - all backed by a minimum 12‑month warranty from UK Volkswagen Lupo specialists. ═══════════════════════════════════════",
+      "closing": "Not sure which year your Volkswagen Lupo was built? Enter your registration number and we'll identify the exact engine, model year, and compatible replacement options instantly - all backed by a minimum 12‑month warranty from UK Volkswagen Lupo specialists.",
       "headingLines": [
         "Volkswagen Lupo Engines by Year",
         "What Was Fitted & When"

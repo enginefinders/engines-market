@@ -15,15 +15,15 @@
     "canonical": "/volkswagen/xl1"
   },
   "assets": {
-    "mainImage": "/images/brands/volkswagen/models/volkswagen-xl1-main.webp",
-    "smallImage": "/images/brands/volkswagen/models/volkswagen-xl1-small.webp",
-    "heroBg": "/images/brands/volkswagen/models/volkswagen-xl1-main.webp",
+    "mainImage": "/images/brands/volkswagen/models/volkswagen-xl1-model-card.png",
+    "smallImage": "/images/brands/volkswagen/models/volkswagen-xl1-model-card.png",
+    "heroBg": "/images/brands/volkswagen/models/volkswagen-xl1-model-card.png",
     "howItWorksBg": "/images/brands/volkswagen/brand/volkswagen-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/volkswagen/brand/volkswagen-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/volkswagen/brand/volkswagen-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/volkswagen/brand/volkswagen-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/volkswagen/brand/volkswagen-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/volkswagen/models/volkswagen-xl1-main.webp"
+    "ctaImage": "/images/brands/volkswagen/models/volkswagen-xl1-model-card.png"
   },
   "sections": {
     "hero": {
@@ -110,8 +110,7 @@
               "Your Precise Model - from XL1 Standard, XL1 UK Delivery, XL1 Collector Edition",
               "Your Engine Code - CSCA and more",
               "Vehicle Specs Check - fuel type, engine size, year, variant - all verified instantly",
-              "No paperwork, no guesswork, 100% free.",
-              "═══════════════════════════════════════"
+              "No paperwork, no guesswork, 100% free."
             ]
           }
         },
@@ -527,12 +526,26 @@
                 ],
                 "commonFailures": [
                   "DSG mechatronic control unit failure (60k-100k miles)",
-                  "5.5kWh lithium battery degradation (10+ years age-related)",
-                  "Two-cylinder balance shaft wear causing vibration at higher RPM"
+                  "5.5kWh lithium battery degradation (10+ years age-related)"
                 ],
+                "avgRebuiltPrice": "",
+                "cta": "",
+                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+              },
+              {
+                "code": "Two",
+                "title": "cylinder balance shaft wear causing vibration at higher RPM",
+                "familyHeading": "CSCA Series (2013-2015)",
+                "history": "",
+                "fuel": "",
+                "size": "",
+                "power": "",
+                "years": "",
+                "compatibleVariants": [],
+                "commonFailures": [],
                 "avgRebuiltPrice": "£8,000 - £12,000",
                 "cta": "Get quotes for CSCA Volkswagen XL1 engine replacement",
-                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               }
             ]
           },
@@ -551,11 +564,22 @@
                 "compatibleVariants": [
                   "XL1 Standard, XL1 UK Delivery, XL1 Collector Edition"
                 ],
-                "commonFailures": [
-                  "High-voltage battery management system faults",
-                  "Electric motor inverter cooling issues",
-                  "Hybrid system control module communication errors"
-                ],
+                "commonFailures": [],
+                "avgRebuiltPrice": "",
+                "cta": "",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              },
+              {
+                "code": "High",
+                "title": "voltage battery management system faults",
+                "familyHeading": "EM57 Electric Motor + Battery System (2013-2015)",
+                "history": "",
+                "fuel": "",
+                "size": "",
+                "power": "",
+                "years": "",
+                "compatibleVariants": [],
+                "commonFailures": [],
                 "avgRebuiltPrice": "£15,000 - £25,000",
                 "cta": "Get quotes for EM57+CSCA Volkswagen XL1 hybrid powertrain replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -600,9 +624,21 @@
               "size": "0.829L",
               "power": "47hp (diesel) + 27hp (electric) = 69hp combined",
               "compatibleModels": "XL1 Standard, XL1 UK Delivery, XL1 Collector Edition, XL1 Right-Hand Drive",
+              "avgRebuiltPrice": "",
+              "cta": "",
+              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+            },
+            {
+              "code": "Two",
+              "title": "cylinder balance shaft wear causing vibration at higher RPM",
+              "familyHeading": "CSCA Series (2013-2015)",
+              "fuel": "",
+              "size": "",
+              "power": "",
+              "compatibleModels": "",
               "avgRebuiltPrice": "£8,000 - £12,000",
               "cta": "Get quotes for CSCA Volkswagen XL1 engine replacement",
-              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             }
           ]
         },
@@ -619,6 +655,18 @@
               "size": "0.829L + Electric",
               "power": "69hp combined system output",
               "compatibleModels": "XL1 Standard, XL1 UK Delivery, XL1 Collector Edition",
+              "avgRebuiltPrice": "",
+              "cta": "",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            },
+            {
+              "code": "High",
+              "title": "voltage battery management system faults",
+              "familyHeading": "EM57 Electric Motor + Battery System (2013-2015)",
+              "fuel": "",
+              "size": "",
+              "power": "",
+              "compatibleModels": "",
               "avgRebuiltPrice": "£15,000 - £25,000",
               "cta": "Get quotes for EM57+CSCA Volkswagen XL1 hybrid powertrain replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -901,7 +949,7 @@
           "description": "Complete CSCA replacement with installation by qualified XL1 specialist only.",
           "frontDescription": "Complete CSCA replacement with installation by qualified XL1 specialist only.",
           "frontDisclaimer": "Only VW Technical Centre Milton Keynes qualified for full hybrid installation.",
-          "backDescription": "Supply & fit for the XL1's CSCA hybrid powertrain requires high-voltage certification, proprietary VW calibration tools, and mechatronic programming; independent fitting voids warranty and risks system damage. ═══════════════════════════════════════",
+          "backDescription": "Supply & fit for the XL1's CSCA hybrid powertrain requires high-voltage certification, proprietary VW calibration tools, and mechatronic programming; independent fitting voids warranty and risks system damage.",
           "backBullets": [
             "Installation includes full hybrid system commissioning and road test",
             "Mechatronic calibration and battery management system reset included",
@@ -961,7 +1009,7 @@
           "items": [
             {
               "title": "Volkswagen XL1 0.8L Hybrid Engines",
-              "description": "The XL1's plug-in hybrid system combines the CSCA 0.8L two-cylinder TDI with an EM57 electric motor and 5.5kWh lithium battery, enabling ~30 miles electric-only range and seamless transition to diesel power; this integrated powertrain is unique to the XL1 and requires specialist hybrid-calibrated replacement. Not sure which engine size your Volkswagen XL1 needs? Enter your registration number above - we'll identify the exact displacement, engine code and compatible replacement options instantly. All engines supplied through EngineMarket include a minimum 12‑month unlimited mileage warranty from UK Volkswagen XL1 specialists. ═══════════════════════════════════════",
+              "description": "The XL1's plug-in hybrid system combines the CSCA 0.8L two-cylinder TDI with an EM57 electric motor and 5.5kWh lithium battery, enabling ~30 miles electric-only range and seamless transition to diesel power; this integrated powertrain is unique to the XL1 and requires specialist hybrid-calibrated replacement. Not sure which engine size your Volkswagen XL1 needs? Enter your registration number above - we'll identify the exact displacement, engine code and compatible replacement options instantly. All engines supplied through EngineMarket include a minimum 12‑month unlimited mileage warranty from UK Volkswagen XL1 specialists.",
               "engineCodes": [
                 "CSCA+EM57"
               ],
@@ -998,74 +1046,10 @@
       }
     },
     "fuelTypes": {
-      "tag": "Engine Codes",
-      "h2": "Volkswagen XL1 Engine Codes - Full Technical Specifications & Replacement Guide",
-      "intro": "The Volkswagen XL1 represents one of automotive engineering's most specialised achievements - but its ultra-rare CSCA powertrain demands equally specialised care when issues arise. EngineMarket connects you with the UK's only qualified XL1 specialists, including VW Technical Centre Milton Keynes, to compare prices on rebuilt engines, mechatronic units, and hybrid battery replacements. Every option includes upgraded components addressing known failure points and a minimum 12-month unlimited mileage warranty, with nationwide delivery available.",
+      "tag": "Volkswagen XL1 Engines Fuel Type",
+      "h2": "Volkswagen XL1 Engines by Fuel Type",
+      "intro": "Choose your Volkswagen XL1 engine by fuel type to compare realistic replacement prices, known issues, and compatible UK supply options - from the standard CSCA diesel hybrid to the ultra-rare collector edition powertrains.",
       "items": [
-        {
-          "title": "Diesel Hybrid Engines",
-          "description": "",
-          "descriptor": "",
-          "familiesLabel": "Common Diesel Hybrid Engine Families",
-          "foundInLabel": "",
-          "knownForLabel": "",
-          "modelsLabel": "",
-          "notesLabel": "",
-          "families": [],
-          "foundIn": [],
-          "knownFor": [],
-          "typicalModels": [],
-          "importantNotes": [],
-          "cta": "Get quotes for CSCA Volkswagen XL1 engine replacement"
-        },
-        {
-          "title": "Hybrid/Electrified Components",
-          "description": "",
-          "descriptor": "",
-          "familiesLabel": "Intro: Every displacement fitted to the ultra-rare Volkswagen XL1 is listed below, with compatible CSCA engine codes, production years and known failure notes to help identify your exact replacement requirements.",
-          "foundInLabel": "",
-          "knownForLabel": "",
-          "modelsLabel": "",
-          "notesLabel": "",
-          "families": [],
-          "foundIn": [],
-          "knownFor": [],
-          "typicalModels": [],
-          "importantNotes": [],
-          "cta": "Get quotes for EM57+CSCA Volkswagen XL1 hybrid powertrain replacement"
-        },
-        {
-          "title": "Volkswagen XL1 Diesel Hybrid Engine Sizes",
-          "description": "",
-          "descriptor": "",
-          "familiesLabel": "Common Volkswagen XL1 Diesel Hybrid Engine Sizes Engine Families",
-          "foundInLabel": "",
-          "knownForLabel": "",
-          "modelsLabel": "",
-          "notesLabel": "",
-          "families": [],
-          "foundIn": [],
-          "knownFor": [],
-          "typicalModels": [],
-          "importantNotes": [],
-          "cta": "Get quotes for Volkswagen XL1 0.8L diesel engines"
-        },
-        {
-          "title": "Volkswagen XL1 Hybrid / Electrified Engine Sizes",
-          "description": "",
-          "descriptor": "",
-          "familiesLabel": "Common Volkswagen XL1 Hybrid / Electrified Engine Sizes Engine Families",
-          "foundInLabel": "",
-          "knownForLabel": "",
-          "modelsLabel": "",
-          "notesLabel": "",
-          "families": [],
-          "foundIn": [],
-          "knownFor": [],
-          "typicalModels": [],
-          "importantNotes": [],
-          "cta": "Enquire about Volkswagen XL1 0.8L hybrid engine availability"
-        },
         {
           "title": "Volkswagen XL1 Diesel Hybrid Engines",
           "description": "The XL1's sole production powertrain is a unique 0.8L two-cylinder TDI diesel paired with electric motor and 5.5kWh battery, achieving claimed 0.9L/100km consumption across all 200 production units.",
@@ -1130,10 +1114,9 @@
           "cta": "Enquire about Volkswagen XL1 PHEV engine availability"
         }
       ],
-      "closing": "Can't find your engine code? Enter your registration number above - we'll instantly identify the exact unit, its technical specifications, and live replacement prices from UK Volkswagen XL1 engine specialists. Every rebuilt engine comes with a minimum 12‑month unlimited mileage warranty.",
+      "closing": "Not sure which fuel type your Volkswagen XL1 has? Enter your registration number above to instantly identify your engine code, fuel system and compatible replacement options - all backed by a minimum 12‑month unlimited mileage warranty from UK Volkswagen XL1 specialists.",
       "headingLines": [
-        "Volkswagen XL1 Engine Codes",
-        "Full Technical Specifications & Replacement Guide"
+        "Volkswagen XL1 Engines by Fuel Type"
       ],
       "ui": {
         "swapLabel": "Swap panel",

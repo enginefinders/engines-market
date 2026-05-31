@@ -15,15 +15,15 @@
     "canonical": "/peugeot/406"
   },
   "assets": {
-    "mainImage": "/images/brands/peugeot/models/peugeot-406-main.webp",
-    "smallImage": "/images/brands/peugeot/models/peugeot-406-small.webp",
-    "heroBg": "/images/brands/peugeot/models/peugeot-406-main.webp",
+    "mainImage": "/images/brands/peugeot/models/peugeot-406-model-card.png",
+    "smallImage": "/images/brands/peugeot/models/peugeot-406-model-card.png",
+    "heroBg": "/images/brands/peugeot/models/peugeot-406-model-card.png",
     "howItWorksBg": "/images/brands/peugeot/brand/peugeot-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/peugeot/brand/peugeot-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/peugeot/brand/peugeot-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/peugeot/brand/peugeot-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/peugeot/brand/peugeot-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/peugeot/models/peugeot-406-main.webp"
+    "ctaImage": "/images/brands/peugeot/models/peugeot-406-model-card.png"
   },
   "sections": {
     "hero": {
@@ -1493,11 +1493,89 @@
     },
     "fuelTypes": {
       "tag": "Fuel Type",
-      "h2": "",
+      "h2": "Peugeot 406 Engines by Fuel Type",
       "intro": "",
-      "items": [],
-      "closing": "",
-      "headingLines": [],
+      "items": [
+        {
+          "title": "Peugeot 406 Diesel Engines",
+          "description": "Diesel powered the majority of UK 406 sales; the HDi range (1999-2004) dominates replacement enquiries with strong economy but turbo and injector attention needed on higher-mileage examples.",
+          "descriptor": "Diesel powered the majority of UK 406 sales; the HDi range (1999-2004) dominates replacement enquiries with strong economy but turbo and injector attention needed on higher-mileage examples.",
+          "familiesLabel": "Common Peugeot 406 Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
+          "families": [
+            "DW10TD - most common HDi (SE/SR/Estate), turbo oil seal leaks at 90k+ miles",
+            "DW10ATED - uprated turbo variant (SV/Estate), intercooler hose splits common",
+            "DW12TED4 - larger 2.2L HDi (Executive), injector seal failures on high mileage",
+            "DW8/XUD9B - early non-turbo 1.9D, robust but head gasket attention needed"
+          ],
+          "foundIn": [
+            "Pre-facelift saloon/estate (1995-2000) - XUD9B, DW8",
+            "Facelift saloon/estate (2000-2004) - DW10TD, DW10ATED, DW12TED4",
+            "Coupé (1997-2004) - DW10TD (limited diesel Coupé availability)"
+          ],
+          "knownFor": [
+            "Strong motorway fuel economy (45-55 mpg typical)",
+            "HDi turbo oil seal leaks between 90k-120k miles",
+            "High UK replacement demand on SE/SR/Estate HDi variants",
+            "EGR valve clogging on urban-use cars"
+          ],
+          "typicalModels": [
+            "SE 2.0 HDi",
+            "SR 2.0 HDi",
+            "Estate 2.0 HDi",
+            "Rapier 2.0 HDi",
+            "Courchevel 2.0 HDi",
+            "Executive 2.2 HDi"
+          ],
+          "importantNotes": [],
+          "cta": "Get quotes for Peugeot 406 Diesel replacement engines"
+        },
+        {
+          "title": "Peugeot 406 Petrol Engines",
+          "description": "Petrol variants span simple 1.8/2.0L XU7 units to refined 16v EW7 and flagship V6; XU7 head gasket failure drives most petrol replacement enquiries.",
+          "descriptor": "Petrol variants span simple 1.8/2.0L XU7 units to refined 16v EW7 and flagship V6; XU7 head gasket failure drives most petrol replacement enquiries.",
+          "familiesLabel": "Common Peugeot 406 Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
+          "families": [
+            "XU7JB - ubiquitous 2.0L SOHC (S/SR/SE), notorious head gasket weakness",
+            "XU7JP - entry 1.8L (S/SR base), coil pack and sensor faults common",
+            "EW7J4 - updated 2.0L 16v (SV/Sport), VVT solenoid and oil sludge concerns",
+            "ES9J4 - flagship 3.0L V6 (Executive/Coupé), oil consumption from seal wear"
+          ],
+          "foundIn": [
+            "Pre-facelift saloon/estate (1995-2000) - XU7JP, XU7JB",
+            "Facelift saloon/estate (2000-2004) - EW7J4, ES9J4",
+            "Coupé (1997-2004) - ES9J4 V6 exclusively"
+          ],
+          "knownFor": [
+            "XU7 head gasket failure between 80k-120k miles (critical)",
+            "Timing belt replacement essential at 72k miles on all XU7/EW7",
+            "ES9 V6 oil consumption from valve stem seal wear (100k+ miles)",
+            "EW7 variable valve timing solenoid faults on neglected service"
+          ],
+          "typicalModels": [
+            "S 1.8 / 2.0",
+            "SR 1.8 / 2.0",
+            "SE 2.0",
+            "SV 2.0 16v",
+            "Sport 2.0 16v",
+            "Executive 3.0 V6",
+            "Coupé 3.0 V6"
+          ],
+          "importantNotes": [],
+          "cta": "Compare Peugeot 406 Petrol engine prices"
+        }
+      ],
+      "closing": "Not sure which fuel type your Peugeot 406 has? Enter your registration number above to instantly identify your engine code, fuel system and compatible replacement options - all backed by a minimum 12-month unlimited mileage warranty from UK Peugeot 406 specialists.",
+      "headingLines": [
+        "Peugeot 406 Engines by Fuel Type"
+      ],
       "ui": {
         "swapLabel": "Swap panel",
         "familiesLabel": "Common Engine Families",

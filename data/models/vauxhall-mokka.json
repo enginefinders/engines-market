@@ -15,15 +15,15 @@
     "canonical": "/vauxhall/mokka"
   },
   "assets": {
-    "mainImage": "/images/brands/vauxhall/models/vauxhall-mokka-main.webp",
-    "smallImage": "/images/brands/vauxhall/models/vauxhall-mokka-small.webp",
-    "heroBg": "/images/brands/vauxhall/models/vauxhall-mokka-main.webp",
+    "mainImage": "/images/brands/vauxhall/models/vauxhall-mokka-model-card.png",
+    "smallImage": "/images/brands/vauxhall/models/vauxhall-mokka-model-card.png",
+    "heroBg": "/images/brands/vauxhall/models/vauxhall-mokka-model-card.png",
     "howItWorksBg": "/images/brands/vauxhall/brand/vauxhall-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/vauxhall/brand/vauxhall-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/vauxhall/brand/vauxhall-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/vauxhall/brand/vauxhall-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/vauxhall/brand/vauxhall-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/vauxhall/models/vauxhall-mokka-main.webp"
+    "ctaImage": "/images/brands/vauxhall/models/vauxhall-mokka-model-card.png"
   },
   "sections": {
     "hero": {
@@ -38,7 +38,7 @@
       ],
       "ctaLinkText": "Get Free Vauxhall Mokka Engine Quotes →",
       "supportingText": "Get tailored Vauxhall Mokka engine quotes from vetted UK specialists.",
-      "ticker": "● Instant Quotes · No Obligation · 100% Free · Reconditioned · Rebuilt · Used · Supply & Fit Available · UK-Wide Network ═══════════════════════════════════════",
+      "ticker": "● Instant Quotes · No Obligation · 100% Free · Reconditioned · Rebuilt · Used · Supply & Fit Available · UK-Wide Network",
       "form": {
         "heading": "Find Your Vauxhall Mokka Engine",
         "subtitle": "Enter your registration number to compare Vauxhall Mokka engine options.",
@@ -1536,11 +1536,113 @@
     },
     "fuelTypes": {
       "tag": "Fuel Type",
-      "h2": "",
+      "h2": "Vauxhall Mokka Engines by Fuel Type",
       "intro": "",
-      "items": [],
-      "closing": "",
-      "headingLines": [],
+      "items": [
+        {
+          "title": "Vauxhall Mokka Diesel Engines",
+          "description": "First-gen Mokka relied on 1.7L/1.6L CDTi diesels, while second-gen adopted PSA-sourced 1.5L BlueHDi units - all offering strong torque but requiring attention to EGR, DPF and AdBlue systems.",
+          "descriptor": "First-gen Mokka relied on 1.7L/1.6L CDTi diesels, while second-gen adopted PSA-sourced 1.5L BlueHDi units - all offering strong torque but requiring attention to EGR, DPF and AdBlue systems.",
+          "familiesLabel": "Common Vauxhall Mokka Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
+          "families": [
+            "A17DTR - mainstream 1.7L CDTi (SE/Elite), EGR cooler cracking common",
+            "B16DTH - efficient 1.6L CDTi (Tech Line), DPF regeneration sensitivity",
+            "B15DT - PSA 1.5L BlueHDi (2020+), AdBlue system fault prone"
+          ],
+          "foundIn": [
+            "First Generation (2012-2019) - A17DTR, A17DTJ, B16DTH",
+            "Second Generation (2020-2024) - B15DT"
+          ],
+          "knownFor": [
+            "Strong motorway fuel economy and towing capability",
+            "EGR cooler cracking on A17 series (60k-100k miles)",
+            "DPF regeneration issues on urban short-journey use",
+            "AdBlue system faults causing no-start on B15DT"
+          ],
+          "typicalModels": [
+            "SE CDTi",
+            "Elite CDTi",
+            "Tech Line CDTi",
+            "Sri CDTi",
+            "GS Line BlueHDi",
+            "Ultimate BlueHDi"
+          ],
+          "importantNotes": [],
+          "cta": "Get quotes for Vauxhall Mokka Diesel replacement engines"
+        },
+        {
+          "title": "Vauxhall Mokka Petrol Engines",
+          "description": "First-gen Mokka featured 1.4L/1.6L turbo and NA petrol engines, while second-gen adopted PSA PureTech units - all requiring attention to timing components and carbon management.",
+          "descriptor": "First-gen Mokka featured 1.4L/1.6L turbo and NA petrol engines, while second-gen adopted PSA PureTech units - all requiring attention to timing components and carbon management.",
+          "familiesLabel": "Common Vauxhall Mokka Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
+          "families": [
+            "A14NET - high-volume 1.4L turbo, timing chain tensioner wear dominant failure",
+            "A16LET - performance 1.6L turbo, wastegate actuator and carbon issues",
+            "B12XFL - PSA 1.2L PureTech, timing belt premature wear concern"
+          ],
+          "foundIn": [
+            "First Generation (2012-2019) - A14NET, A16XER, A16LET",
+            "Second Generation (2020-2024) - B12XFL, B15XFT"
+          ],
+          "knownFor": [
+            "Lively turbo performance and lower upfront cost versus diesel",
+            "Timing chain tensioner rattle on cold start (A14NET)",
+            "Timing belt degradation requiring proactive replacement (B12XFL)",
+            "Direct injection carbon buildup affecting performance"
+          ],
+          "typicalModels": [
+            "Design Petrol",
+            "SE Petrol",
+            "Sri Petrol",
+            "Elite Petrol",
+            "Exclusiv Turbo",
+            "GS Line PureTech",
+            "Ultimate PureTech"
+          ],
+          "importantNotes": [],
+          "cta": "Compare Vauxhall Mokka Petrol engine prices"
+        },
+        {
+          "title": "Vauxhall Mokka Mild Hybrid (MHEV) Engines",
+          "description": "Select second-generation Mokka trims feature 48V mild hybrid assistance paired with PureTech petrol or BlueHDi diesel engines for improved efficiency.",
+          "descriptor": "Select second-generation Mokka trims feature 48V mild hybrid assistance paired with PureTech petrol or BlueHDi diesel engines for improved efficiency.",
+          "familiesLabel": "Vauxhall Mokka MHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
+          "families": [
+            "B12XFL MHEV - 1.2L PureTech with 48V starter-generator",
+            "B15DT MHEV - 1.5L BlueHDi with 48V assistance",
+            "48‑volt starter‑generator recovers braking energy for electric assist",
+            "Electric torque assistance under acceleration improves responsiveness",
+            "Engine replacement requires hybrid system inspection and ECU sync verification"
+          ],
+          "foundIn": [
+            "GS Line MHEV, Ultimate MHEV (2021-2024)"
+          ],
+          "knownFor": [],
+          "typicalModels": [],
+          "importantNotes": [
+            "MHEV engine replacement requires specialist hybrid system diagnostics",
+            "Battery health check recommended during engine replacement",
+            "Availability more limited than standard engine variants"
+          ],
+          "cta": "Enquire about Vauxhall Mokka MHEV engine availability"
+        }
+      ],
+      "closing": "Not sure which fuel type your Vauxhall Mokka has? Enter your registration number above to instantly identify your engine code, fuel system and compatible replacement options - all backed by a 12‑month unlimited mileage warranty from UK Vauxhall Mokka specialists.",
+      "headingLines": [
+        "Vauxhall Mokka Engines by Fuel Type"
+      ],
       "ui": {
         "swapLabel": "Swap panel",
         "familiesLabel": "Common Engine Families",

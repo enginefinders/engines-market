@@ -15,15 +15,15 @@
     "canonical": "/volkswagen/load-up"
   },
   "assets": {
-    "mainImage": "/images/brands/volkswagen/models/volkswagen-load-up-main.webp",
-    "smallImage": "/images/brands/volkswagen/models/volkswagen-load-up-small.webp",
-    "heroBg": "/images/brands/volkswagen/models/volkswagen-load-up-main.webp",
+    "mainImage": "/images/brands/volkswagen/models/volkswagen-load-up-model-card.png",
+    "smallImage": "/images/brands/volkswagen/models/volkswagen-load-up-model-card.png",
+    "heroBg": "/images/brands/volkswagen/models/volkswagen-load-up-model-card.png",
     "howItWorksBg": "/images/brands/volkswagen/brand/volkswagen-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/volkswagen/brand/volkswagen-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/volkswagen/brand/volkswagen-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/volkswagen/brand/volkswagen-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/volkswagen/brand/volkswagen-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/volkswagen/models/volkswagen-load-up-main.webp"
+    "ctaImage": "/images/brands/volkswagen/models/volkswagen-load-up-model-card.png"
   },
   "sections": {
     "hero": {
@@ -38,7 +38,7 @@
       ],
       "ctaLinkText": "Get Free Volkswagen Load Up Engine Quotes →",
       "supportingText": "Get tailored Volkswagen Load Up engine quotes from vetted UK specialists.",
-      "ticker": "● Instant Quotes · No Obligation · 100% Free · Reconditioned · Rebuilt · Used · Supply & Fit Available · UK-Wide Network ═══════════════════════════════════════",
+      "ticker": "● Instant Quotes · No Obligation · 100% Free · Reconditioned · Rebuilt · Used · Supply & Fit Available · UK-Wide Network",
       "form": {
         "heading": "Find Your Volkswagen Load Up Engine",
         "subtitle": "Enter your registration number to compare Volkswagen Load Up engine options.",
@@ -110,8 +110,7 @@
               "Your Precise Model - from Load Up 1.0, Eco Load Up CNG, BlueMotion to e-Load Up, TSi 90hp",
               "Your Engine Code - CHYA, DAFA, CPGA, CHYB, CHZA, EABA and more",
               "Vehicle Specs Check - fuel type, engine size, year, variant - all verified instantly",
-              "No paperwork, no guesswork, 100% free.",
-              "═══════════════════════════════════════"
+              "No paperwork, no guesswork, 100% free."
             ]
           }
         },
@@ -488,8 +487,12 @@
               "Load Up 1.0 TSi 90hp ASG",
               "CNG Variants",
               "Eco Load Up 1.0 CNG 68hp",
-              "Eco Load Up 1.0 CNG 68hp ASG",
-              "Electric Variants",
+              "Eco Load Up 1.0 CNG 68hp ASG"
+            ]
+          },
+          {
+            "title": "Electric Variants",
+            "items": [
               "e-Load Up Electric 82hp"
             ]
           }
@@ -560,10 +563,23 @@
                   "Load Up BlueMotion 1.0 75hp, Load Up BlueMotion 1.0 75hp ASG"
                 ],
                 "commonFailures": [
-                  "Timing chain tensioner wear (80k+ miles)",
-                  "Stop-start actuator failure affecting restarts",
-                  "EGR valve carbon buildup on urban delivery use"
+                  "Timing chain tensioner wear (80k+ miles)"
                 ],
+                "avgRebuiltPrice": "",
+                "cta": "",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              },
+              {
+                "code": "Stop",
+                "title": "start actuator failure affecting restarts",
+                "familyHeading": "EA211 1.0L MPI Petrol Family (2012-2020)",
+                "history": "",
+                "fuel": "",
+                "size": "",
+                "power": "",
+                "years": "",
+                "compatibleVariants": [],
+                "commonFailures": [],
                 "avgRebuiltPrice": "£2,000 - £2,800",
                 "cta": "Get quotes for CHYB Volkswagen Load Up engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -581,10 +597,23 @@
                   "Load Up TSi 1.0 90hp, Load Up TSi 1.0 90hp ASG"
                 ],
                 "commonFailures": [
-                  "Turbocharger oil seal failure causing smoke/oil loss",
-                  "High-pressure fuel pump wear on high-mileage units",
-                  "Intercooler piping cracks causing boost loss"
+                  "Turbocharger oil seal failure causing smoke/oil loss"
                 ],
+                "avgRebuiltPrice": "",
+                "cta": "",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              },
+              {
+                "code": "High",
+                "title": "pressure fuel pump wear on high-mileage units",
+                "familyHeading": "EA211 1.0L MPI Petrol Family (2012-2020)",
+                "history": "",
+                "fuel": "",
+                "size": "",
+                "power": "",
+                "years": "",
+                "compatibleVariants": [],
+                "commonFailures": [],
                 "avgRebuiltPrice": "£2,200 - £3,000",
                 "cta": "Get quotes for CHZA Volkswagen Load Up engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -629,14 +658,41 @@
                 "size": "N/A (Electric Motor)",
                 "power": "82 hp equivalent",
                 "years": "2013-2020",
-                "compatibleVariants": [
-                  "e-Load Up Electric 82hp"
-                ],
+                "compatibleVariants": [],
+                "commonFailures": [],
+                "avgRebuiltPrice": "",
+                "cta": "",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              },
+              {
+                "code": "e",
+                "title": "Load Up Electric 82hp",
+                "familyHeading": "Electric Drive Unit Family (2013-2020)",
+                "history": "",
+                "fuel": "",
+                "size": "",
+                "power": "",
+                "years": "",
+                "compatibleVariants": [],
                 "commonFailures": [
                   "Motor control unit (inverter) failure causing no-start",
-                  "Drive motor bearing wear causing noise/vibration",
-                  "High-voltage connector corrosion on older units"
+                  "Drive motor bearing wear causing noise/vibration"
                 ],
+                "avgRebuiltPrice": "",
+                "cta": "",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              },
+              {
+                "code": "High",
+                "title": "voltage connector corrosion on older units",
+                "familyHeading": "Electric Drive Unit Family (2013-2020)",
+                "history": "",
+                "fuel": "",
+                "size": "",
+                "power": "",
+                "years": "",
+                "compatibleVariants": [],
+                "commonFailures": [],
                 "avgRebuiltPrice": "£3,500 - £5,500",
                 "cta": "Get quotes for EABA Volkswagen Load Up electric motor replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -704,6 +760,18 @@
               "size": "1.0L",
               "power": "75 hp",
               "compatibleModels": "Load Up BlueMotion 1.0 75hp, Load Up BlueMotion 1.0 75hp ASG",
+              "avgRebuiltPrice": "",
+              "cta": "",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            },
+            {
+              "code": "Stop",
+              "title": "start actuator failure affecting restarts",
+              "familyHeading": "EA211 1.0L MPI Petrol Family (2012-2020)",
+              "fuel": "",
+              "size": "",
+              "power": "",
+              "compatibleModels": "",
               "avgRebuiltPrice": "£2,000 - £2,800",
               "cta": "Get quotes for CHYB Volkswagen Load Up engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -716,6 +784,18 @@
               "size": "1.0L",
               "power": "90 hp",
               "compatibleModels": "Load Up TSi 1.0 90hp, Load Up TSi 1.0 90hp ASG",
+              "avgRebuiltPrice": "",
+              "cta": "",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            },
+            {
+              "code": "High",
+              "title": "pressure fuel pump wear on high-mileage units",
+              "familyHeading": "EA211 1.0L MPI Petrol Family (2012-2020)",
+              "fuel": "",
+              "size": "",
+              "power": "",
+              "compatibleModels": "",
               "avgRebuiltPrice": "£2,200 - £3,000",
               "cta": "Get quotes for CHZA Volkswagen Load Up engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -739,7 +819,31 @@
               "fuel": "Electric",
               "size": "N/A (Electric Motor)",
               "power": "82 hp equivalent",
-              "compatibleModels": "e-Load Up Electric 82hp",
+              "compatibleModels": "",
+              "avgRebuiltPrice": "",
+              "cta": "",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            },
+            {
+              "code": "e",
+              "title": "Load Up Electric 82hp",
+              "familyHeading": "Electric Drive Unit Family (2013-2020)",
+              "fuel": "",
+              "size": "",
+              "power": "",
+              "compatibleModels": "",
+              "avgRebuiltPrice": "",
+              "cta": "",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            },
+            {
+              "code": "High",
+              "title": "voltage connector corrosion on older units",
+              "familyHeading": "Electric Drive Unit Family (2013-2020)",
+              "fuel": "",
+              "size": "",
+              "power": "",
+              "compatibleModels": "",
               "avgRebuiltPrice": "£3,500 - £5,500",
               "cta": "Get quotes for EABA Volkswagen Load Up electric motor replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -987,7 +1091,7 @@
           "description": "Complete engine replacement service including fitting, fluids and road test at a UK Volkswagen Load Up specialist.",
           "frontDescription": "Complete engine replacement service including fitting, fluids and road test at a UK Volkswagen Load Up specialist.",
           "frontDisclaimer": "Fitting cost varies by location and garage; CNG/electric require certified technicians.",
-          "backDescription": "Supply & fit removes the hassle of sourcing a separate fitter. Network specialists handle everything from engine delivery to post-fit road test and warranty registration. ═══════════════════════════════════════",
+          "backDescription": "Supply & fit removes the hassle of sourcing a separate fitter. Network specialists handle everything from engine delivery to post-fit road test and warranty registration.",
           "backBullets": [
             "Includes removal, fitting, fluids, ECU adaptation and road test",
             "CNG and electric variants require certified high-voltage/CNG technicians",
@@ -1072,7 +1176,7 @@
           "items": [
             {
               "title": "Volkswagen Load Up Electric Drive Units",
-              "description": "The e-Load Up features an 82hp electric motor (code EABA) instead of a combustion engine, offering zero-emission urban delivery capability. Replacement involves the entire drive unit and power electronics - not a traditional engine swap - and requires high-voltage certified specialists for safe installation and calibration. Not sure which engine size your Volkswagen Load Up needs? Enter your registration number above - we'll identify the exact displacement, engine code and compatible replacement options instantly. All engines supplied through EngineMarket include a minimum 12‑month unlimited mileage warranty from UK Volkswagen Load Up specialists. ═══════════════════════════════════════",
+              "description": "The e-Load Up features an 82hp electric motor (code EABA) instead of a combustion engine, offering zero-emission urban delivery capability. Replacement involves the entire drive unit and power electronics - not a traditional engine swap - and requires high-voltage certified specialists for safe installation and calibration. Not sure which engine size your Volkswagen Load Up needs? Enter your registration number above - we'll identify the exact displacement, engine code and compatible replacement options instantly. All engines supplied through EngineMarket include a minimum 12‑month unlimited mileage warranty from UK Volkswagen Load Up specialists.",
               "engineCodes": [
                 "EABA"
               ],
@@ -1109,11 +1213,98 @@
     },
     "fuelTypes": {
       "tag": "Fuel Type",
-      "h2": "",
-      "intro": "",
-      "items": [],
-      "closing": "",
-      "headingLines": [],
+      "h2": "Volkswagen Load Up Engines by Fuel Type",
+      "intro": "Choose your Volkswagen Load Up engine by fuel type to compare realistic replacement prices, known issues, and compatible UK supply options - from base 1.0 petrol to EcoFuel CNG and electric e-Load Up.",
+      "items": [
+        {
+          "title": "Volkswagen Load Up Petrol Engines",
+          "description": "The 1.0L EA211 petrol engine family powered most Load Up vans from 2012-2020, offering proven reliability for commercial use but requiring attention to EGR, EVAP and timing components on high-mileage units.",
+          "descriptor": "The 1.0L EA211 petrol engine family powered most Load Up vans from 2012-2020, offering proven reliability for commercial use but requiring attention to EGR, EVAP and timing components on high-mileage units.",
+          "familiesLabel": "Common Volkswagen Load Up Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
+          "families": [
+            "CHYA/DAFA - 60hp base petrol, highest volume replacement demand, EGR/EVAP issues common",
+            "CHYB - 75hp BlueMotion, improved economy, timing chain wear on 80k+ mile vans",
+            "CHZA - 90hp TSi turbo, performance variant, turbocharger failure risk on commercial use"
+          ],
+          "foundIn": [
+            "Load Up 1.0 (2012-2020) - CHYA (2012-2019), DAFA (2018-2020)",
+            "Load Up BlueMotion 1.0 (2016-2020) - CHYB",
+            "Load Up TSi 1.0 (2016-2020) - CHZA"
+          ],
+          "knownFor": [
+            "Strong fuel economy for urban delivery routes",
+            "EGR valve carbon buildup causing power loss on short-journey use",
+            "Timing chain tensioner wear on vans over 80,000 miles",
+            "High UK replacement demand on 60hp and BlueMotion variants"
+          ],
+          "typicalModels": [
+            "Load Up 1.0 60hp",
+            "Load Up 1.0 60hp ASG",
+            "Load Up BlueMotion 1.0 75hp",
+            "Load Up TSi 1.0 90hp"
+          ],
+          "importantNotes": [],
+          "cta": "Get quotes for Volkswagen Load Up Petrol replacement engines"
+        },
+        {
+          "title": "Volkswagen Load Up CNG Engines",
+          "description": "The CPGА 1.0L CNG bi-fuel engine powered the Eco Load Up variant from 2014-2020, offering lower fuel costs but requiring certified CNG technicians for service and replacement.",
+          "descriptor": "The CPGА 1.0L CNG bi-fuel engine powered the Eco Load Up variant from 2014-2020, offering lower fuel costs but requiring certified CNG technicians for service and replacement.",
+          "familiesLabel": "Common Volkswagen Load Up CNG Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical CNG Models",
+          "notesLabel": "",
+          "families": [
+            "CPGA - 68hp bi-fuel CNG/petrol, specialist fitting required, higher replacement cost"
+          ],
+          "foundIn": [
+            "Eco Load Up 1.0 CNG (2014-2020) - CPGA"
+          ],
+          "knownFor": [
+            "Lower fuel costs when running on CNG vs petrol",
+            "CNG injector wear causing misfire on gas mode at 50k-90k miles",
+            "Gas pressure regulator calibration drift requiring specialist equipment",
+            "Limited supplier availability due to CNG certification requirements"
+          ],
+          "typicalModels": [
+            "Eco Load Up 1.0 CNG 68hp",
+            "Eco Load Up 1.0 CNG 68hp ASG"
+          ],
+          "importantNotes": [],
+          "cta": "Get quotes for Volkswagen Load Up CNG replacement engines"
+        },
+        {
+          "title": "Volkswagen Load Up Electric Drive Units",
+          "description": "The EABA electric motor powered the e-Load Up from 2013-2020, offering zero-emission urban delivery but requiring high-voltage certified specialists for drive unit replacement.",
+          "descriptor": "The EABA electric motor powered the e-Load Up from 2013-2020, offering zero-emission urban delivery but requiring high-voltage certified specialists for drive unit replacement.",
+          "familiesLabel": "Common Volkswagen Load Up Electric Drive Units Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
+          "families": [],
+          "foundIn": [
+            "e-Load Up Electric 82hp (2013-2020)"
+          ],
+          "knownFor": [],
+          "typicalModels": [],
+          "importantNotes": [
+            "No traditional engine to replace - entire drive unit may need replacement",
+            "High-voltage certification mandatory for safe installation",
+            "Limited supplier network; lead times may be longer than petrol variants"
+          ],
+          "cta": "Enquire about Volkswagen Load Up electric drive unit availability"
+        }
+      ],
+      "closing": "Not sure which fuel type your Volkswagen Load Up has? Enter your registration number above to instantly identify your engine code, fuel system and compatible replacement options - all backed by a minimum 12‑month unlimited mileage warranty from UK Volkswagen Load Up specialists.",
+      "headingLines": [
+        "Volkswagen Load Up Engines by Fuel Type"
+      ],
       "ui": {
         "swapLabel": "Swap panel",
         "familiesLabel": "Common Engine Families",

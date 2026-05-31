@@ -15,15 +15,15 @@
     "canonical": "/vauxhall/ampera"
   },
   "assets": {
-    "mainImage": "/images/brands/vauxhall/models/vauxhall-ampera-main.webp",
-    "smallImage": "/images/brands/vauxhall/models/vauxhall-ampera-small.webp",
-    "heroBg": "/images/brands/vauxhall/models/vauxhall-ampera-main.webp",
+    "mainImage": "/images/brands/vauxhall/models/vauxhall-ampera-model-card.png",
+    "smallImage": "/images/brands/vauxhall/models/vauxhall-ampera-model-card.png",
+    "heroBg": "/images/brands/vauxhall/models/vauxhall-ampera-model-card.png",
     "howItWorksBg": "/images/brands/vauxhall/brand/vauxhall-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/vauxhall/brand/vauxhall-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/vauxhall/brand/vauxhall-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/vauxhall/brand/vauxhall-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/vauxhall/brand/vauxhall-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/vauxhall/models/vauxhall-ampera-main.webp"
+    "ctaImage": "/images/brands/vauxhall/models/vauxhall-ampera-model-card.png"
   },
   "sections": {
     "hero": {
@@ -38,7 +38,7 @@
       ],
       "ctaLinkText": "Get Free Vauxhall Ampera Engine Quotes →",
       "supportingText": "Get tailored Vauxhall Ampera engine quotes from vetted UK specialists.",
-      "ticker": "● Instant Quotes · No Obligation · 100% Free · Reconditioned · Rebuilt · Used · Supply & Fit Available · UK-Wide Network ═══════════════════════════════════════",
+      "ticker": "● Instant Quotes · No Obligation · 100% Free · Reconditioned · Rebuilt · Used · Supply & Fit Available · UK-Wide Network",
       "form": {
         "heading": "Find Your Vauxhall Ampera Engine",
         "subtitle": "Enter your registration number to compare Vauxhall Ampera engine options.",
@@ -1042,11 +1042,75 @@
     },
     "fuelTypes": {
       "tag": "Fuel Type",
-      "h2": "",
+      "h2": "Vauxhall Ampera Engines by Fuel Type",
       "intro": "",
-      "items": [],
-      "closing": "",
-      "headingLines": [],
+      "items": [
+        {
+          "title": "Vauxhall Ampera Petrol Engines",
+          "description": "The Ampera's sole combustion engine is a 1.4L petrol range extender (A14XFL/LUU) that generates electricity to extend driving range, fitted across all UK variants 2012-2015.",
+          "descriptor": "The Ampera's sole combustion engine is a 1.4L petrol range extender (A14XFL/LUU) that generates electricity to extend driving range, fitted across all UK variants 2012-2015.",
+          "familiesLabel": "Common Vauxhall Ampera Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
+          "families": [
+            "A14XFL - early Electron models, timing chain tensioner wear common",
+            "LUU - later Positiv models, coolant pump failures reported",
+            "A14XFL-LUU - interchangeable code, same 1.4L range extender unit"
+          ],
+          "foundIn": [
+            "D2JC chassis (2012-2015) - A14XFL, LUU"
+          ],
+          "knownFor": [
+            "Compact 1.4L generator design for electric range extension",
+            "Timing chain tensioner wear between 60k-90k miles",
+            "High UK replacement demand on Electron and Positiv variants"
+          ],
+          "typicalModels": [
+            "Electron",
+            "Positiv",
+            "2012",
+            "2013",
+            "2014",
+            "2015"
+          ],
+          "importantNotes": [],
+          "cta": "Compare Vauxhall Ampera Petrol engine prices"
+        },
+        {
+          "title": "Vauxhall Ampera Hybrid / Electrified Engines",
+          "description": "The Ampera is a range-extended electric vehicle (EREV) where the 1.4L petrol engine acts solely as a generator, never directly driving the wheels.",
+          "descriptor": "The Ampera is a range-extended electric vehicle (EREV) where the 1.4L petrol engine acts solely as a generator, never directly driving the wheels.",
+          "familiesLabel": "Vauxhall Ampera EREV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
+          "families": [
+            "A14XFL - primary range extender code for UK-market Ampera",
+            "LUU - global market equivalent code, fully compatible",
+            "Petrol engine starts only when battery charge is depleted",
+            "Generates electricity to power the electric drive motor",
+            "No mechanical connection between engine and wheels"
+          ],
+          "foundIn": [
+            "Electron, Positiv (2012-2015)"
+          ],
+          "knownFor": [],
+          "typicalModels": [],
+          "importantNotes": [
+            "Replacement focuses on the petrol range extender only, not the electric motor",
+            "ECU calibration required after engine replacement for proper handshake",
+            "Specialist knowledge of GM Voltec platform recommended for fitting"
+          ],
+          "cta": "Enquire about Vauxhall Ampera EREV engine availability"
+        }
+      ],
+      "closing": "Not sure which fuel type your Vauxhall Ampera has? Enter your registration number above to instantly identify your engine code, fuel system and compatible replacement options - all backed by a 12‑month unlimited mileage warranty from UK Vauxhall Ampera specialists.",
+      "headingLines": [
+        "Vauxhall Ampera Engines by Fuel Type"
+      ],
       "ui": {
         "swapLabel": "Swap panel",
         "familiesLabel": "Common Engine Families",

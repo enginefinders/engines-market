@@ -15,15 +15,15 @@
     "canonical": "/vauxhall/insignia"
   },
   "assets": {
-    "mainImage": "/images/brands/vauxhall/models/vauxhall-insignia-main.webp",
-    "smallImage": "/images/brands/vauxhall/models/vauxhall-insignia-small.webp",
-    "heroBg": "/images/brands/vauxhall/models/vauxhall-insignia-main.webp",
+    "mainImage": "/images/brands/vauxhall/models/vauxhall-insignia-model-card.png",
+    "smallImage": "/images/brands/vauxhall/models/vauxhall-insignia-model-card.png",
+    "heroBg": "/images/brands/vauxhall/models/vauxhall-insignia-model-card.png",
     "howItWorksBg": "/images/brands/vauxhall/brand/vauxhall-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/vauxhall/brand/vauxhall-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/vauxhall/brand/vauxhall-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/vauxhall/brand/vauxhall-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/vauxhall/brand/vauxhall-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/vauxhall/models/vauxhall-insignia-main.webp"
+    "ctaImage": "/images/brands/vauxhall/models/vauxhall-insignia-model-card.png"
   },
   "sections": {
     "hero": {
@@ -38,7 +38,7 @@
       ],
       "ctaLinkText": "Get Free Vauxhall Insignia Engine Quotes →",
       "supportingText": "Get tailored Vauxhall Insignia engine quotes from vetted UK specialists.",
-      "ticker": "● Instant Quotes · No Obligation · 100% Free · Reconditioned · Rebuilt · Used · Supply & Fit Available · UK-Wide Network ═══════════════════════════════════════",
+      "ticker": "● Instant Quotes · No Obligation · 100% Free · Reconditioned · Rebuilt · Used · Supply & Fit Available · UK-Wide Network",
       "form": {
         "heading": "Find Your Vauxhall Insignia Engine",
         "subtitle": "Enter your registration number to compare Vauxhall Insignia engine options.",
@@ -1619,11 +1619,111 @@
     },
     "fuelTypes": {
       "tag": "Fuel Type",
-      "h2": "",
+      "h2": "Vauxhall Insignia Engines by Fuel Type",
       "intro": "",
-      "items": [],
-      "closing": "",
-      "headingLines": [],
+      "items": [
+        {
+          "title": "Vauxhall Insignia Diesel Engines",
+          "description": "Diesel engines dominated Insignia sales across Mk1 (2008-2017) and Mk2 (2017-2022) generations, with the 2.0 CDTi driving most UK replacement enquiries due to timing chain and emissions system issues.",
+          "descriptor": "Diesel engines dominated Insignia sales across Mk1 (2008-2017) and Mk2 (2017-2022) generations, with the 2.0 CDTi driving most UK replacement enquiries due to timing chain and emissions system issues.",
+          "familiesLabel": "Common Vauxhall Insignia Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
+          "families": [
+            "A20DTH/B20DTH - 2.0 CDTi, most common replacement engine (Design/SRi/Elite), timing chain risk",
+            "A16DTR/B16DTR - 1.6 CDTi, efficient entry-level option, EGR/DPF issues on short journeys",
+            "B20DFT - 2.0 BiTurbo CDTi, complex twin-turbo system for Elite/VXR, specialist rebuild required"
+          ],
+          "foundIn": [
+            "Mk1 Saloon/Estate (F07/F68/F35) (2008-2017) - A20DTH, A16DTR",
+            "Mk2 Grand Sport/Sports Tourer (F35) (2017-2022) - B20DTH, B16DTR, B20DFT"
+          ],
+          "knownFor": [
+            "Strong motorway fuel economy and torque for executive driving",
+            "Timing chain tensioner failures on 2.0 CDTi between 60k-100k miles",
+            "EGR valve and DPF regeneration issues on urban-use vehicles",
+            "High UK replacement demand on Design, SE and SRi diesel variants"
+          ],
+          "typicalModels": [
+            "1.6 CDTi Design",
+            "2.0 CDTi SE",
+            "2.0 CDTi SRi",
+            "2.0 CDTi Elite",
+            "2.0 BiTurbo CDTi Elite",
+            "Country Tourer 2.0 CDTi"
+          ],
+          "importantNotes": [],
+          "cta": "Get quotes for Vauxhall Insignia Diesel replacement engines"
+        },
+        {
+          "title": "Vauxhall Insignia Petrol Engines",
+          "description": "Petrol engines, particularly Turbo variants, powered performance-focused SRi and Elite trims across both generations, with oil consumption and turbo issues driving replacement enquiries on higher-mileage examples.",
+          "descriptor": "Petrol engines, particularly Turbo variants, powered performance-focused SRi and Elite trims across both generations, with oil consumption and turbo issues driving replacement enquiries on higher-mileage examples.",
+          "familiesLabel": "Common Vauxhall Insignia Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
+          "families": [
+            "A14NET/B14XFT - 1.4 Turbo petrol, popular in Design/SE, oil consumption concerns",
+            "A16LET/B16SHT - 1.6 Turbo petrol, SRi performance option, turbo actuator faults",
+            "A20NFT - 2.0 Turbo petrol, high-output for SRi/Elite, carbon buildup on valves"
+          ],
+          "foundIn": [
+            "Mk1 Saloon/Estate (F07/F68) (2008-2017) - A14NET, A16LET, A20NFT",
+            "Mk2 Grand Sport/Sports Tourer (F35) (2017-2022) - B14XFT, B16SHT"
+          ],
+          "knownFor": [
+            "Strong acceleration and responsive performance for enthusiastic driving",
+            "Oil consumption on 1.4/1.6 Turbo engines between 40k-80k miles",
+            "Carbon buildup on intake valves for direct-injection 2.0 Turbo units",
+            "Lower initial replacement costs than diesel, but turbo complexity adds cost"
+          ],
+          "typicalModels": [
+            "1.4 Turbo Design",
+            "1.4 Turbo SE",
+            "1.6 Turbo SRi",
+            "2.0 Turbo SRi",
+            "2.0 Turbo Elite",
+            "Grand Sport 1.6 Turbo"
+          ],
+          "importantNotes": [],
+          "cta": "Compare Vauxhall Insignia Petrol engine prices"
+        },
+        {
+          "title": "Vauxhall Insignia Mild Hybrid (MHEV) Engines",
+          "description": "Mild hybrid technology was introduced on late Mk2 diesel variants, combining a 1.6 CDTi engine with a 48V starter-generator for improved efficiency and reduced emissions.",
+          "descriptor": "Mild hybrid technology was introduced on late Mk2 diesel variants, combining a 1.6 CDTi engine with a 48V starter-generator for improved efficiency and reduced emissions.",
+          "familiesLabel": "Vauxhall Insignia MHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
+          "families": [
+            "B16DTR eAssist - 1.6 CDTi with 48V starter-generator, Select/Elite variants",
+            "48‑volt starter‑generator recovers braking energy to assist acceleration",
+            "Electric torque assistance reduces fuel consumption on urban cycles",
+            "Engine replacement requires hybrid system inspection and calibration"
+          ],
+          "foundIn": [
+            "Select, Elite (F35 Sports Tourer) (2020-2022)"
+          ],
+          "knownFor": [],
+          "typicalModels": [],
+          "importantNotes": [
+            "MHEV engine replacement requires specialist hybrid system diagnostics",
+            "Availability is more limited than standard diesel engines",
+            "Battery health check recommended during any engine replacement work"
+          ],
+          "cta": "Enquire about Vauxhall Insignia MHEV engine availability"
+        }
+      ],
+      "closing": "Not sure which fuel type your Vauxhall Insignia has? Enter your registration number above to instantly identify your engine code, fuel system and compatible replacement options - all backed by a minimum 12‑month unlimited mileage warranty from UK Vauxhall Insignia specialists.",
+      "headingLines": [
+        "Vauxhall Insignia Engines by Fuel Type"
+      ],
       "ui": {
         "swapLabel": "Swap panel",
         "familiesLabel": "Common Engine Families",

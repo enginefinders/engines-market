@@ -40,6 +40,7 @@ from __future__ import annotations
 
 import argparse
 import copy
+import difflib
 import json
 import re
 import sys
@@ -118,6 +119,8 @@ def repair_text(value: str) -> str:
 
 def clean_text(value: str) -> str:
     value = repair_text(value)
+    if re.match(r"^[\s_=\-─━═]{3,}$", value):
+        return ""
     value = value.replace("â€‘", "-").replace("â€“", "-").replace("â€”", "-").replace("–", "-").replace("—", "-")
     value = value.replace("\t", " ")
     value = re.sub(r"\s+", " ", value)
@@ -521,17 +524,75 @@ def parse_canonical_to_paths(url: str) -> Tuple[Optional[str], Optional[str]]:
     return match.group("brand"), match.group("model")
 
 
+def normalize_image_stem(stem: str) -> str:
+    cleaned = stem.lower()
+    for suffix in ("-model-card", "-main", "-small"):
+        if cleaned.endswith(suffix):
+            cleaned = cleaned[: -len(suffix)]
+    return cleaned.strip("-")
+
+
+def resolve_model_image_assets(
+    brand_slug: str,
+    model_name: str,
+    model_slug: str,
+    legacy_slug: Optional[str],
+) -> Tuple[str, str]:
+    model_dir = Path(__file__).resolve().parents[1] / "public" / "images" / "brands" / brand_slug / "models"
+    fallback = f"/images/brands/{brand_slug}/models/{brand_slug}-{model_slug}-model-card.png"
+
+    if not model_dir.exists():
+        return fallback, fallback
+
+    image_files = [path for path in model_dir.iterdir() if path.is_file()]
+    if not image_files:
+        return fallback, fallback
+
+    by_key = {normalize_image_stem(path.stem): path for path in image_files}
+    candidates: List[str] = []
+    for value in (
+        f"{brand_slug}-{model_slug}",
+        f"{brand_slug}-{legacy_slug}" if legacy_slug else "",
+        slugify(model_name),
+        slugify(re.sub(rf"^{re.escape(brand_slug)}\s+", "", model_name, flags=re.IGNORECASE)),
+    ):
+        normalized = normalize_image_stem(value)
+        if normalized and normalized not in candidates:
+            candidates.append(normalized)
+
+    for candidate in candidates:
+        if candidate in by_key:
+            web_path = by_key[candidate].as_posix().split("/public", 1)[-1]
+            return web_path, web_path
+
+    for candidate in candidates:
+        for key, path in by_key.items():
+            if key.startswith(candidate) or candidate.startswith(key):
+                web_path = path.as_posix().split("/public", 1)[-1]
+                return web_path, web_path
+
+    image_keys = list(by_key.keys())
+    for candidate in candidates:
+        match = difflib.get_close_matches(candidate, image_keys, n=1, cutoff=0.72)
+        if match:
+            web_path = by_key[match[0]].as_posix().split("/public", 1)[-1]
+            return web_path, web_path
+
+    return fallback, fallback
+
+
 def default_assets(
     brand_slug: str,
+    model_name: str,
     model_slug: str,
+    legacy_slug: Optional[str],
     brand_json: Optional[Dict[str, Any]],
     hero_image: Optional[str],
     cta_image: Optional[str],
 ) -> Dict[str, str]:
-    main_image = f"/images/brands/{brand_slug}/models/{brand_slug}-{model_slug}-main.webp"
-    small_image = f"/images/brands/{brand_slug}/models/{brand_slug}-{model_slug}-small.webp"
+    main_image, small_image = resolve_model_image_assets(brand_slug, model_name, model_slug, legacy_slug)
     model_image = hero_image or main_image
-    cta = cta_image or main_image
+    cta = cta_image or model_image
     brand_assets = (brand_json or {}).get("assets", {})
 
     return {
@@ -2953,7 +3014,7 @@ def parse_document(
     cta_image: Optional[str],
 ) -> Tuple[Dict[str, Any], List[str]]:
     warnings: List[str] = []
-    assets = default_assets(brand_slug, model_slug, brand_json, hero_image, cta_image)
+    assets = default_assets(brand_slug, model_name, model_slug, legacy_slug, brand_json, hero_image, cta_image)
     data = build_empty_model_json(
         brand_name=brand_name,
         brand_slug=brand_slug,
@@ -3001,11 +3062,11 @@ def parse_document(
     engine_size_lines = extract_slice(
         lines,
         ["# section 8 - engine sizes by fuel type", "# section 8 - engine sizes", "# section 8", "8: engine sizes by fuel type", "8: engine sizes", "tag: engine sizes"],
-        ["# section 9 - engines by fuel type", "# section 10 - engines by fuel type", "# section 9", "# section 10", "9: engines by fuel type", "10: engines by fuel type", "tag: fuel type", "tag: bmw 2 series engines fuel type", "fuel type", "ev components fuel type"],
+        ["# section 9 - engines by fuel type", "# section 10 - engines by fuel type", "9: engines by fuel type", "10: engines by fuel type", "tag: fuel type", "tag: bmw 2 series engines fuel type", "tag: ev component years fuel type", "tag: peugeot 508 engines fuel type", "engines by fuel type", "ev components by power type"],
     )
     fuel_lines = extract_slice(
         lines,
-        ["# section 9 - engines by fuel type", "# section 10 - engines by fuel type", "# section 9", "# section 10", "9: engines by fuel type", "10: engines by fuel type", "tag: fuel type", "tag: bmw 2 series engines fuel type", "fuel type", "ev components fuel type"],
+        ["# section 9 - engines by fuel type", "# section 10 - engines by fuel type", "9: engines by fuel type", "10: engines by fuel type", "tag: fuel type", "tag: bmw 2 series engines fuel type", "tag: peugeot 508 engines fuel type", "engines by fuel type", "ev components by power type"],
         ["# section 10 - model years", "# section 10 - model years coverage", "# section 11 - model years", "# section 11 - model years coverage", "10: model years", "10: model years coverage", "11: model years", "11: model years coverage", "tag: engine years", "tag: ev component years", "component years"],
     )
     year_lines = extract_slice(

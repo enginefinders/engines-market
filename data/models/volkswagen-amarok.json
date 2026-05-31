@@ -15,15 +15,15 @@
     "canonical": "/volkswagen/amarok"
   },
   "assets": {
-    "mainImage": "/images/brands/volkswagen/models/volkswagen-amarok-main.webp",
-    "smallImage": "/images/brands/volkswagen/models/volkswagen-amarok-small.webp",
-    "heroBg": "/images/brands/volkswagen/models/volkswagen-amarok-main.webp",
+    "mainImage": "/images/brands/volkswagen/models/volkswagen-amarok-model-card.png",
+    "smallImage": "/images/brands/volkswagen/models/volkswagen-amarok-model-card.png",
+    "heroBg": "/images/brands/volkswagen/models/volkswagen-amarok-model-card.png",
     "howItWorksBg": "/images/brands/volkswagen/brand/volkswagen-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/volkswagen/brand/volkswagen-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/volkswagen/brand/volkswagen-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/volkswagen/brand/volkswagen-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/volkswagen/brand/volkswagen-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/volkswagen/models/volkswagen-amarok-main.webp"
+    "ctaImage": "/images/brands/volkswagen/models/volkswagen-amarok-model-card.png"
   },
   "sections": {
     "hero": {
@@ -38,7 +38,7 @@
       ],
       "ctaLinkText": "Get Free Volkswagen Amarok Engine Quotes →",
       "supportingText": "Get tailored Volkswagen Amarok engine quotes from vetted UK specialists.",
-      "ticker": "● Instant Quotes · No Obligation · 100% Free · Reconditioned · Rebuilt · Used · Supply & Fit Available · UK-Wide Network ═══════════════════════════════════════",
+      "ticker": "● Instant Quotes · No Obligation · 100% Free · Reconditioned · Rebuilt · Used · Supply & Fit Available · UK-Wide Network",
       "form": {
         "heading": "Find Your Volkswagen Amarok Engine",
         "subtitle": "Enter your registration number to compare Volkswagen Amarok engine options.",
@@ -110,8 +110,7 @@
               "Your Precise Model - from Core, Life, Trendline, Highline to Canyon, PanAmericana, Dark Label",
               "Your Engine Code - CDCA, CNEA, CSHA, DDXB and more",
               "Vehicle Specs Check - fuel type, engine size, year, variant - all verified instantly",
-              "No paperwork, no guesswork, 100% free.",
-              "═══════════════════════════════════════"
+              "No paperwork, no guesswork, 100% free."
             ]
           }
         },
@@ -1122,7 +1121,7 @@
           "description": "Complete engine replacement service including fitting, fluids, coding and road test at a vetted UK workshop.",
           "frontDescription": "Complete engine replacement service including fitting, fluids, coding and road test at a vetted UK workshop.",
           "frontDisclaimer": "Labour cost varies by location and workshop.",
-          "backDescription": "Supply & fit for the Amarok removes logistical hassle. Our network of specialist fitters handle engine installation, ECU coding and post-fit validation. ═══════════════════════════════════════",
+          "backDescription": "Supply & fit for the Amarok removes logistical hassle. Our network of specialist fitters handle engine installation, ECU coding and post-fit validation.",
           "backBullets": [
             "Postcode-based workshop matching for convenience",
             "All-in pricing with no hidden fitting charges",
@@ -1222,11 +1221,49 @@
     },
     "fuelTypes": {
       "tag": "Fuel Type",
-      "h2": "",
-      "intro": "",
-      "items": [],
-      "closing": "",
-      "headingLines": [],
+      "h2": "Volkswagen Amarok Engines by Fuel Type",
+      "intro": "Choose your Volkswagen Amarok engine by fuel type to compare realistic replacement prices, known issues, and compatible UK supply options - from early 2.0 TDI to the latest 3.0 V6 TDI.",
+      "items": [
+        {
+          "title": "Volkswagen Amarok Diesel Engines",
+          "description": "Diesel dominates the UK Amarok range across both generations, with 2.0L four-cylinder and 3.0L V6 TDI units powering all official variants.",
+          "descriptor": "Diesel dominates the UK Amarok range across both generations, with 2.0L four-cylinder and 3.0L V6 TDI units powering all official variants.",
+          "familiesLabel": "Common Volkswagen Amarok Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
+          "families": [
+            "CDCA/CNFB - 2.0L entry/mid TDI, timing chain vigilance required on pre-2016",
+            "CNEA/CSHA - 2.0L BiTDI performance, high failure rate from tensioner design",
+            "DDXA/DDXB - 3.0L V6 TDI, EGR/turbo focus for 2016-2022 models",
+            "DXWB - 3.0L V6 TDI latest-gen, improved emissions compliance for 2022+"
+          ],
+          "foundIn": [
+            "2H platform (2010-2022) - CDCA, CNEA, CSHA, CNFB, DDXA, DDXB",
+            "NF platform (2022-present) - DXWB"
+          ],
+          "knownFor": [
+            "Strong low-end torque ideal for towing and off-road use",
+            "Timing chain tensioner failures on 2010-2016 2.0 BiTDI units",
+            "DPF/EGR maintenance critical for urban-use vehicles",
+            "V6 units offer refined performance but complex emissions hardware"
+          ],
+          "typicalModels": [
+            "Core 2.0 TDI",
+            "Life 2.0 TDI",
+            "Highline 3.0 V6 TDI",
+            "Canyon 2.0 BiTDI",
+            "PanAmericana 3.0 V6 TDI"
+          ],
+          "importantNotes": [],
+          "cta": "Get quotes for Volkswagen Amarok Diesel replacement engines"
+        }
+      ],
+      "closing": "Not sure which fuel type your Volkswagen Amarok has? Enter your registration number above to instantly identify your engine code, fuel system and compatible replacement options - all backed by a minimum 12‑month unlimited mileage warranty from UK Volkswagen Amarok specialists.",
+      "headingLines": [
+        "Volkswagen Amarok Engines by Fuel Type"
+      ],
       "ui": {
         "swapLabel": "Swap panel",
         "familiesLabel": "Common Engine Families",

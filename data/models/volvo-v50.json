@@ -15,15 +15,15 @@
     "canonical": "/volvo/v50"
   },
   "assets": {
-    "mainImage": "/images/brands/volvo/models/volvo-v50-main.webp",
-    "smallImage": "/images/brands/volvo/models/volvo-v50-small.webp",
-    "heroBg": "/images/brands/volvo/models/volvo-v50-main.webp",
+    "mainImage": "/images/brands/volvo/models/volvo-v50-model-card.png",
+    "smallImage": "/images/brands/volvo/models/volvo-v50-model-card.png",
+    "heroBg": "/images/brands/volvo/models/volvo-v50-model-card.png",
     "howItWorksBg": "/images/brands/volvo/brand/volvo-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/volvo/brand/volvo-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/volvo/brand/volvo-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/volvo/brand/volvo-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/volvo/brand/volvo-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/volvo/models/volvo-v50-main.webp"
+    "ctaImage": "/images/brands/volvo/models/volvo-v50-model-card.png"
   },
   "sections": {
     "hero": {
@@ -38,7 +38,7 @@
       ],
       "ctaLinkText": "Get Free Volvo V50 Engine Quotes →",
       "supportingText": "Get tailored Volvo V50 engine quotes from vetted UK specialists.",
-      "ticker": "● Instant Quotes · No Obligation · 100% Free · Reconditioned · Rebuilt · Used · Supply & Fit Available · UK-Wide Network ═══════════════════════════════════════",
+      "ticker": "● Instant Quotes · No Obligation · 100% Free · Reconditioned · Rebuilt · Used · Supply & Fit Available · UK-Wide Network",
       "form": {
         "heading": "Find Your Volvo V50 Engine",
         "subtitle": "Enter your registration number to compare Volvo V50 engine options.",
@@ -1755,11 +1755,108 @@
     },
     "fuelTypes": {
       "tag": "Fuel Type",
-      "h2": "",
-      "intro": "",
-      "items": [],
-      "closing": "",
-      "headingLines": [],
+      "h2": "Volvo V50 Engines by Fuel Type",
+      "intro": "Choose your Volvo V50 engine by fuel type to compare realistic replacement prices, known issues, and compatible UK supply options - from early 1.6D to the latest T5 turbo.",
+      "items": [
+        {
+          "title": "Volvo V50 Diesel Engines",
+          "description": "Diesel power dominated the V50 range from 2004-2012, with 1.6D, 2.0D and D5 units generating the highest replacement enquiry volume due to injector, DPF and turbo-related failures.",
+          "descriptor": "Diesel power dominated the V50 range from 2004-2012, with 1.6D, 2.0D and D5 units generating the highest replacement enquiry volume due to injector, DPF and turbo-related failures.",
+          "familiesLabel": "Common Volvo V50 Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
+          "families": [
+            "D4162T/D4164T - 1.6D entry diesel, high UK replacement demand due to injector/turbo issues",
+            "D4204T/D4204T5 - 2.0D mid-range, DPF/EGR failures common on high-mileage examples",
+            "D5244T series - D5 five-cylinder, timing chain tensioner wear on 80k+ mile units"
+          ],
+          "foundIn": [
+            "Pre-facelift V50 (2004-2007) - D4162T, D4204T, D5244T8",
+            "Facelift V50 (2008-2012) - D4164T, D4204T5, D5244T13/17"
+          ],
+          "knownFor": [
+            "Strong motorway fuel economy on 2.0D and D5 variants",
+            "D4162T injector failure between 60k-90k miles",
+            "DPF clogging on short-journey use across all diesel codes",
+            "High UK replacement demand on 1.6D and 2.0D variants"
+          ],
+          "typicalModels": [
+            "1.6D S/SE/Sport",
+            "2.0D SE/Sport/R-Design",
+            "D5 SE/AWD/R-Design"
+          ],
+          "importantNotes": [],
+          "cta": "Get quotes for Volvo V50 Diesel replacement engines"
+        },
+        {
+          "title": "Volvo V50 Petrol Engines",
+          "description": "Petrol V50s offered smoother refinement and lower complexity than diesel variants, with 1.6, 1.8, 2.0 and 2.4L units plus the flagship 2.5L T5 turbo generating steady replacement demand.",
+          "descriptor": "Petrol V50s offered smoother refinement and lower complexity than diesel variants, with 1.6, 1.8, 2.0 and 2.4L units plus the flagship 2.5L T5 turbo generating steady replacement demand.",
+          "familiesLabel": "Common Volvo V50 Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
+          "families": [
+            "B4164S3 - 1.6L entry petrol, ignition coil and oil consumption issues on high mileage",
+            "B4184S8/B4184S11 - 1.8L including Flexifuel, oil sludge risk if servicing delayed",
+            "B5254T3/T7 - 2.5L T5 turbo, bearing wear and PCV failures common on 70k+ mile units"
+          ],
+          "foundIn": [
+            "Pre-facelift V50 (2004-2007) - B4164S2, B4184S3, B5244S7, B5254T3",
+            "Facelift V50 (2008-2012) - B4164S3, B4184S8, B4204S3, B5254T7"
+          ],
+          "knownFor": [
+            "Smooth, refined power delivery on five-cylinder 2.4i and T5 units",
+            "Oil consumption on B4184S8 if service intervals extended beyond 12k miles",
+            "Turbo bearing wear on T5 B5254T codes between 70k-100k miles",
+            "Lower replacement complexity than diesel variants"
+          ],
+          "typicalModels": [
+            "1.6 S/SE",
+            "1.8 SE/Sport/R-Design",
+            "2.4i SE/R-Design",
+            "T5 SE/R-Design"
+          ],
+          "importantNotes": [],
+          "cta": "Compare Volvo V50 Petrol engine prices"
+        },
+        {
+          "title": "Volvo V50 Flexifuel Engines",
+          "description": "Flexifuel V50 variants offered E85 bioethanol compatibility alongside standard petrol, providing environmental flexibility with minimal performance compromise for eco-conscious owners.",
+          "descriptor": "Flexifuel V50 variants offered E85 bioethanol compatibility alongside standard petrol, providing environmental flexibility with minimal performance compromise for eco-conscious owners.",
+          "familiesLabel": "Volvo V50 Flexifuel Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
+          "families": [
+            "B4184S11 - 1.8L Flexifuel, shared with standard 1.8 but with ethanol-compatible fuel system",
+            "B4204S4 - 2.0L Flexifuel, less common but valued for stronger torque on E85",
+            "Ethanol sensor adjusts fuel mapping automatically for E85 or petrol use",
+            "Corrosion-resistant fuel system components handle ethanol's hygroscopic properties",
+            "Replacement engines must match Flexifuel specification for E85 compatibility"
+          ],
+          "foundIn": [
+            "1.8 Flexifuel SE (2005-2012)",
+            "2.0 Flexifuel SE (2007-2010)"
+          ],
+          "knownFor": [],
+          "typicalModels": [],
+          "importantNotes": [
+            "Flexifuel engines require ethanol-compatible injectors and fuel lines",
+            "Replacement availability is more limited than standard petrol codes",
+            "Confirm ethanol capability with supplier when ordering replacement unit"
+          ],
+          "cta": "Enquire about Volvo V50 Flexifuel engine availability"
+        }
+      ],
+      "closing": "Not sure which fuel type your Volvo V50 has? Enter your registration number above to instantly identify your engine code, fuel system and compatible replacement options - all backed by a minimum 12‑month unlimited mileage warranty from UK Volvo V50 specialists.",
+      "headingLines": [
+        "Volvo V50 Engines by Fuel Type"
+      ],
       "ui": {
         "swapLabel": "Swap panel",
         "familiesLabel": "Common Engine Families",

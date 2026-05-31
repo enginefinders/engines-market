@@ -15,15 +15,15 @@
     "canonical": "/vauxhall/corsa"
   },
   "assets": {
-    "mainImage": "/images/brands/vauxhall/models/vauxhall-corsa-main.webp",
-    "smallImage": "/images/brands/vauxhall/models/vauxhall-corsa-small.webp",
-    "heroBg": "/images/brands/vauxhall/models/vauxhall-corsa-main.webp",
+    "mainImage": "/images/brands/vauxhall/models/vauxhall-corsa-model-card.png",
+    "smallImage": "/images/brands/vauxhall/models/vauxhall-corsa-model-card.png",
+    "heroBg": "/images/brands/vauxhall/models/vauxhall-corsa-model-card.png",
     "howItWorksBg": "/images/brands/vauxhall/brand/vauxhall-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/vauxhall/brand/vauxhall-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/vauxhall/brand/vauxhall-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/vauxhall/brand/vauxhall-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/vauxhall/brand/vauxhall-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/vauxhall/models/vauxhall-corsa-main.webp"
+    "ctaImage": "/images/brands/vauxhall/models/vauxhall-corsa-model-card.png"
   },
   "sections": {
     "hero": {
@@ -38,7 +38,7 @@
       ],
       "ctaLinkText": "Get Free Vauxhall Corsa Engine Quotes →",
       "supportingText": "Get tailored Vauxhall Corsa engine quotes from vetted UK specialists.",
-      "ticker": "● Instant Quotes · No Obligation · 100% Free · Reconditioned · Rebuilt · Used · Supply & Fit Available · UK-Wide Network ═══════════════════════════════════════",
+      "ticker": "● Instant Quotes · No Obligation · 100% Free · Reconditioned · Rebuilt · Used · Supply & Fit Available · UK-Wide Network",
       "form": {
         "heading": "Find Your Vauxhall Corsa Engine",
         "subtitle": "Enter your registration number to compare Vauxhall Corsa engine options.",
@@ -1739,11 +1739,115 @@
     },
     "fuelTypes": {
       "tag": "Fuel Type",
-      "h2": "",
+      "h2": "Vauxhall Corsa Engines by Fuel Type",
       "intro": "",
-      "items": [],
-      "closing": "",
-      "headingLines": [],
+      "items": [
+        {
+          "title": "Vauxhall Corsa Diesel Engines",
+          "description": "Diesel Corsas (1.3L/1.7L CDTI) dominated high-mileage and fleet use across Corsa D/E, with EGR and DPF failures driving most replacement enquiries in the UK.",
+          "descriptor": "Diesel Corsas (1.3L/1.7L CDTI) dominated high-mileage and fleet use across Corsa D/E, with EGR and DPF failures driving most replacement enquiries in the UK.",
+          "familiesLabel": "Common Vauxhall Corsa Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
+          "families": [
+            "B13DTE - most common diesel code (Life/SRi CDTI), EGR/DPF failure risk",
+            "A13DTE - early Corsa D diesel, similar failure patterns to B13DTE",
+            "A17DT - larger diesel for motorway use, turbo actuator issues common"
+          ],
+          "foundIn": [
+            "Corsa D (2006-2014) - A13DTE 1.3L, A17DT 1.7L",
+            "Corsa E (2014-2019) - B13DTE 1.3L Euro 6, B17DT 1.7L Euro 6"
+          ],
+          "knownFor": [
+            "Excellent motorway fuel economy (60+ mpg achievable)",
+            "EGR valve clogging between 60k-90k miles on short-journey cars",
+            "DPF regeneration failures requiring professional cleaning",
+            "High UK replacement demand on Life CDTI and SRi CDTI variants"
+          ],
+          "typicalModels": [
+            "Life CDTI",
+            "SE CDTI",
+            "SRi CDTI",
+            "Elite CDTI",
+            "VXR CDTI"
+          ],
+          "importantNotes": [],
+          "cta": "Get quotes for Vauxhall Corsa Diesel replacement engines"
+        },
+        {
+          "title": "Vauxhall Corsa Petrol Engines",
+          "description": "Petrol Corsas (1.0L-1.6L) represent the majority of UK registrations, with timing chain and oil pump issues on 1.2L/1.4L NA units and carbon buildup on turbo direct-injection variants.",
+          "descriptor": "Petrol Corsas (1.0L-1.6L) represent the majority of UK registrations, with timing chain and oil pump issues on 1.2L/1.4L NA units and carbon buildup on turbo direct-injection variants.",
+          "familiesLabel": "Common Vauxhall Corsa Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
+          "families": [
+            "A14XER - most common Corsa engine overall, timing chain tensioner failure risk",
+            "A12XEL/B12XEL - entry-level 1.2L, oil pump pickup clogging concern",
+            "A14NET/B12NET - turbo variants, carbon buildup on inlet valves",
+            "A16LET - VXR performance unit, specialist rebuild requirements"
+          ],
+          "foundIn": [
+            "Corsa D (2006-2014) - A10XEP 1.0L, A12XEL/A12XER 1.2L, A14XER 1.4L, A16LET 1.6L turbo",
+            "Corsa E (2014-2019) - B12XEL 1.2L, A14NET 1.4L turbo",
+            "Corsa F (2019-2024) - B12NET 1.2L turbo, B14XFT 1.4L high-output turbo"
+          ],
+          "knownFor": [
+            "Strong fuel economy on NA 1.2L/1.4L units (45-55 mpg)",
+            "Timing chain tensioner wear on A14XER/A12XEL between 80k-120k miles",
+            "Carbon buildup on direct-injection turbo variants requiring walnut blasting",
+            "High replacement volume on Life, SRi and Elite petrol trims"
+          ],
+          "typicalModels": [
+            "i",
+            "Life",
+            "Energy",
+            "SE",
+            "SRi",
+            "Elite",
+            "GS Line",
+            "Ultimate",
+            "VXR"
+          ],
+          "importantNotes": [],
+          "cta": "Compare Vauxhall Corsa Petrol engine prices"
+        },
+        {
+          "title": "Vauxhall Corsa Hybrid / Electrified Engines",
+          "description": "The Corsa F introduced mild-hybrid (MHEV) technology on select 1.2L turbo petrol variants, though pure electric Corsa-e models use a separate motor/battery system not covered by engine replacement services.",
+          "descriptor": "The Corsa F introduced mild-hybrid (MHEV) technology on select 1.2L turbo petrol variants, though pure electric Corsa-e models use a separate motor/battery system not covered by engine replacement services.",
+          "familiesLabel": "Vauxhall Corsa MHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
+          "families": [
+            "B12NET MHEV - 1.2L turbo with 48V starter-generator (Ultimate, GS Line)",
+            "48‑volt starter‑generator recovers braking energy to assist acceleration",
+            "Enables stop-start functionality and slight fuel economy improvement",
+            "Engine replacement requires hybrid system inspection and calibration"
+          ],
+          "foundIn": [
+            "Corsa F Ultimate MHEV, GS Line MHEV (2020-2024)"
+          ],
+          "knownFor": [],
+          "typicalModels": [],
+          "importantNotes": [
+            "No plug‑in hybrid or full hybrid Corsa variants exist for UK market",
+            "MHEV engine replacement requires specialist with hybrid diagnostic equipment",
+            "Corsa-e pure electric models use separate drive unit; contact for motor/battery enquiries"
+          ],
+          "cta": "Enquire about Vauxhall Corsa MHEV engine availability"
+        }
+      ],
+      "closing": "Not sure which fuel type your Vauxhall Corsa has? Enter your registration number above to instantly identify your engine code, fuel system and compatible replacement options - all backed by a 12‑month unlimited mileage warranty from UK Vauxhall Corsa specialists.",
+      "headingLines": [
+        "Vauxhall Corsa Engines by Fuel Type"
+      ],
       "ui": {
         "swapLabel": "Swap panel",
         "familiesLabel": "Common Engine Families",

@@ -15,15 +15,15 @@
     "canonical": "/honda/capa"
   },
   "assets": {
-    "mainImage": "/images/brands/honda/models/honda-capa-main.webp",
-    "smallImage": "/images/brands/honda/models/honda-capa-small.webp",
-    "heroBg": "/images/brands/honda/models/honda-capa-main.webp",
+    "mainImage": "/images/brands/honda/models/honda-capa-model-card.png",
+    "smallImage": "/images/brands/honda/models/honda-capa-model-card.png",
+    "heroBg": "/images/brands/honda/models/honda-capa-model-card.png",
     "howItWorksBg": "/images/brands/honda/brand/honda-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/honda/brand/honda-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/honda/brand/honda-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/honda/brand/honda-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/honda/brand/honda-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/honda/models/honda-capa-main.webp"
+    "ctaImage": "/images/brands/honda/models/honda-capa-model-card.png"
   },
   "sections": {
     "hero": {
@@ -1169,42 +1169,10 @@
       }
     },
     "fuelTypes": {
-      "tag": "Live UK Engine Market Data",
-      "h2": "What Are UK Drivers Paying for Honda Capa Engine Replacement?",
-      "intro": "Typical UK rebuilt Capa engine costs by variant - compare failures, codes, fuel types, sizes and prices to benchmark market rates.",
+      "tag": "Fuel Type",
+      "h2": "Honda Capa Engines by Fuel Type",
+      "intro": "Choose your Honda Capa engine by fuel type to compare realistic replacement prices, known issues, and compatible UK supply options - from the economical 1.5L D15B to the torque‑rich 2.0L B20B 4WD unit.",
       "items": [
-        {
-          "title": "Petrol Engines",
-          "description": "",
-          "descriptor": "",
-          "familiesLabel": "Intro: Every engine displacement officially fitted to the Honda Capa is detailed below, including compatible engine codes, production years and known failure notes to ensure accurate replacement selection.",
-          "foundInLabel": "",
-          "knownForLabel": "",
-          "modelsLabel": "",
-          "notesLabel": "",
-          "families": [],
-          "foundIn": [],
-          "knownFor": [],
-          "typicalModels": [],
-          "importantNotes": [],
-          "cta": "Get quotes for B18C Honda Capa engine replacement"
-        },
-        {
-          "title": "Honda Capa Petrol Engine Sizes",
-          "description": "",
-          "descriptor": "",
-          "familiesLabel": "Common Honda Capa Petrol Engine Sizes Engine Families",
-          "foundInLabel": "",
-          "knownForLabel": "",
-          "modelsLabel": "",
-          "notesLabel": "",
-          "families": [],
-          "foundIn": [],
-          "knownFor": [],
-          "typicalModels": [],
-          "importantNotes": [],
-          "cta": "Compare Honda Capa 2.0L petrol engine prices"
-        },
         {
           "title": "Honda Capa Petrol Engines",
           "description": "All UK Honda Capa models were powered exclusively by Honda's reliable D‑series and B‑series petrol engines, sharing core architecture with the contemporary Civic EK and early HR‑V platforms.",
@@ -1263,9 +1231,9 @@
           "cta": ""
         }
       ],
-      "closing": "Not sure which variant your Honda Capa is? Enter your registration number above - we'll identify the exact sub‑model, engine code and compatible replacement options instantly.",
+      "closing": "Not sure which fuel type your Honda Capa has? Enter your registration number above to instantly identify your engine code, fuel system and compatible replacement options - all backed by a minimum 12‑month unlimited mileage warranty from UK Honda Capa specialists.",
       "headingLines": [
-        "What Are UK Drivers Paying for Honda Capa Engine Replacement?"
+        "Honda Capa Engines by Fuel Type"
       ],
       "ui": {
         "swapLabel": "Swap panel",

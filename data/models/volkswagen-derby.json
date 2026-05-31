@@ -15,15 +15,15 @@
     "canonical": "/volkswagen/derby"
   },
   "assets": {
-    "mainImage": "/images/brands/volkswagen/models/volkswagen-derby-main.webp",
-    "smallImage": "/images/brands/volkswagen/models/volkswagen-derby-small.webp",
-    "heroBg": "/images/brands/volkswagen/models/volkswagen-derby-main.webp",
+    "mainImage": "/images/brands/volkswagen/models/volkswagen-derby-model-card.png",
+    "smallImage": "/images/brands/volkswagen/models/volkswagen-derby-model-card.png",
+    "heroBg": "/images/brands/volkswagen/models/volkswagen-derby-model-card.png",
     "howItWorksBg": "/images/brands/volkswagen/brand/volkswagen-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/volkswagen/brand/volkswagen-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/volkswagen/brand/volkswagen-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/volkswagen/brand/volkswagen-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/volkswagen/brand/volkswagen-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/volkswagen/models/volkswagen-derby-main.webp"
+    "ctaImage": "/images/brands/volkswagen/models/volkswagen-derby-model-card.png"
   },
   "sections": {
     "hero": {
@@ -513,18 +513,6 @@
           "power": "",
           "years": "",
           "image": ""
-        },
-        {
-          "h3": "",
-          "slug": "-engine",
-          "subtitle": "The Volkswagen Derby's 1977-1984 engines are robust but age-related failures are common. The 1.1L ACH petrol and 1.9L AAZ diesel dominate replacement enquiries. Every rebuilt engine supplied through EngineMarket includes upgraded internal components designed to address the critical failure point - plus a minimum 12-month unlimited mileage warranty.",
-          "priceRange": "",
-          "cta": "H4: Head Gasket Failure - Why Volkswagen Derby 1.1L ACH Engines Overheat",
-          "engineCodes": [],
-          "fuel": "Petrol",
-          "power": "",
-          "years": "1977-1984",
-          "image": ""
         }
       ],
       "directory": {
@@ -551,7 +539,7 @@
         ],
         "label": "Variant Directory"
       },
-      "closing": "",
+      "closing": "Not sure which variant your Volkswagen Derby is? Enter your registration number above - we'll identify the exact sub-model, engine code and compatible replacement options instantly.",
       "engineGuide": {
         "tag": "Engine Codes",
         "h2": "Volkswagen Derby Engine Codes - Full Technical Specifications & Replacement Guide",
@@ -657,10 +645,23 @@
                   "GLS (Mk2)"
                 ],
                 "commonFailures": [
-                  "Timing chain tensioner wear (same as HH)",
-                  "Age-related seal and gasket leaks",
-                  "Carburettor wear affecting idle quality"
+                  "Timing chain tensioner wear (same as HH)"
                 ],
+                "avgRebuiltPrice": "",
+                "cta": "",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              },
+              {
+                "code": "Age",
+                "title": "related seal and gasket leaks",
+                "familyHeading": "1.3L Family (1977-1984)",
+                "history": "",
+                "fuel": "",
+                "size": "",
+                "power": "",
+                "years": "",
+                "compatibleVariants": [],
+                "commonFailures": [],
                 "avgRebuiltPrice": "£975 - £1,750",
                 "cta": "Get quotes for HK Volkswagen Derby engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -842,6 +843,18 @@
               "size": "1.3L",
               "power": "54 hp",
               "compatibleModels": "GLS (Mk2)",
+              "avgRebuiltPrice": "",
+              "cta": "",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            },
+            {
+              "code": "Age",
+              "title": "related seal and gasket leaks",
+              "familyHeading": "1.3L Family (1977-1984)",
+              "fuel": "",
+              "size": "",
+              "power": "",
+              "compatibleModels": "",
               "avgRebuiltPrice": "£975 - £1,750",
               "cta": "Get quotes for HK Volkswagen Derby engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"

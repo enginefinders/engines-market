@@ -15,15 +15,15 @@
     "canonical": "/volkswagen/crafter"
   },
   "assets": {
-    "mainImage": "/images/brands/volkswagen/models/volkswagen-crafter-main.webp",
-    "smallImage": "/images/brands/volkswagen/models/volkswagen-crafter-small.webp",
-    "heroBg": "/images/brands/volkswagen/models/volkswagen-crafter-main.webp",
+    "mainImage": "/images/brands/volkswagen/models/volkswagen-crafter-model-card.png",
+    "smallImage": "/images/brands/volkswagen/models/volkswagen-crafter-model-card.png",
+    "heroBg": "/images/brands/volkswagen/models/volkswagen-crafter-model-card.png",
     "howItWorksBg": "/images/brands/volkswagen/brand/volkswagen-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/volkswagen/brand/volkswagen-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/volkswagen/brand/volkswagen-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/volkswagen/brand/volkswagen-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/volkswagen/brand/volkswagen-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/volkswagen/models/volkswagen-crafter-main.webp"
+    "ctaImage": "/images/brands/volkswagen/models/volkswagen-crafter-model-card.png"
   },
   "sections": {
     "hero": {
@@ -38,7 +38,7 @@
       ],
       "ctaLinkText": "Get Free Volkswagen Crafter Engine Quotes →",
       "supportingText": "Get tailored Volkswagen Crafter engine quotes from vetted UK specialists.",
-      "ticker": "● Instant Quotes · No Obligation · 100% Free · Reconditioned · Rebuilt · Used · Supply & Fit Available · UK-Wide Network ═══════════════════════════════════════",
+      "ticker": "● Instant Quotes · No Obligation · 100% Free · Reconditioned · Rebuilt · Used · Supply & Fit Available · UK-Wide Network",
       "form": {
         "heading": "Find Your Volkswagen Crafter Engine",
         "subtitle": "Enter your registration number to compare Volkswagen Crafter engine options.",
@@ -110,8 +110,7 @@
               "Your Precise Model - from Crafter 30, Crafter 35, Crafter 50, panel van, chassis cab",
               "Your Engine Code - CKTB, CKTC, DAVA, DCXA and more",
               "Vehicle Specs Check - fuel type, engine size, year, variant - all verified instantly",
-              "No paperwork, no guesswork, 100% free.",
-              "═══════════════════════════════════════"
+              "No paperwork, no guesswork, 100% free."
             ]
           }
         },
@@ -888,12 +887,26 @@
                 ],
                 "commonFailures": [
                   "Turbo actuator electrical fault",
-                  "AdBlue dosing pump failure",
-                  "High-pressure fuel pump wear"
+                  "AdBlue dosing pump failure"
                 ],
+                "avgRebuiltPrice": "",
+                "cta": "",
+                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+              },
+              {
+                "code": "High",
+                "title": "pressure fuel pump wear",
+                "familyHeading": "2.0 TDI Common Rail Series (2013-Present)",
+                "history": "",
+                "fuel": "",
+                "size": "",
+                "power": "",
+                "years": "",
+                "compatibleVariants": [],
+                "commonFailures": [],
                 "avgRebuiltPrice": "£3,200 - £4,800",
                 "cta": "Get quotes for DAUB Volkswagen Crafter engine replacement",
-                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               }
             ]
           }
@@ -1018,9 +1031,21 @@
               "size": "2.0L",
               "power": "204 hp",
               "compatibleModels": "Crafter 50 High-Output, Crafter 50 4Motion, Crafter 50 Tipper, Crafter 50 Refrigerated",
+              "avgRebuiltPrice": "",
+              "cta": "",
+              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+            },
+            {
+              "code": "High",
+              "title": "pressure fuel pump wear",
+              "familyHeading": "2.0 TDI Common Rail Series (2013-Present)",
+              "fuel": "",
+              "size": "",
+              "power": "",
+              "compatibleModels": "",
               "avgRebuiltPrice": "£3,200 - £4,800",
               "cta": "Get quotes for DAUB Volkswagen Crafter engine replacement",
-              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             }
           ]
         }
@@ -1293,7 +1318,7 @@
           "description": "Complete engine replacement service including delivery, fitting, fluids and road test; minimises downtime for commercial operators.",
           "frontDescription": "Complete engine replacement service including delivery, fitting, fluids and road test; minimises downtime for commercial operators.",
           "frontDisclaimer": "Labour costs vary by location and vehicle configuration.",
-          "backDescription": "Supply & fit Volkswagen Crafter service connects you with vetted local specialists who handle delivery, installation and commissioning of your replacement engine. ═══════════════════════════════════════",
+          "backDescription": "Supply & fit Volkswagen Crafter service connects you with vetted local specialists who handle delivery, installation and commissioning of your replacement engine.",
           "backBullets": [
             "Single-point accountability for parts and labour",
             "Post-installation road test and handover included",
@@ -1414,61 +1439,10 @@
       }
     },
     "fuelTypes": {
-      "tag": "Engine Codes",
-      "h2": "Volkswagen Crafter Engine Codes - Full Technical Specifications & Replacement Guide",
-      "intro": "Timing chain, DPF, turbo, oil pump chain, and injector failures are the most common reasons Volkswagen Crafter owners seek engine replacement. EngineMarket makes it simple to compare prices from trusted UK Volkswagen Crafter specialists who supply rebuilt, reconditioned, and used engines with verified compatibility. Every engine includes upgraded components addressing the original failure point, plus a minimum 12-month unlimited mileage warranty and nationwide delivery. Compare quotes today and get your Crafter back on the road without the main dealer premium.",
+      "tag": "Volkswagen Crafter Engines Fuel Type",
+      "h2": "Volkswagen Crafter Engines by Fuel Type",
+      "intro": "Choose your Volkswagen Crafter engine by fuel type to compare realistic replacement prices, known issues, and compatible UK supply options - from early 2.5 TDI to the latest 2.0 TDI Euro 6d.",
       "items": [
-        {
-          "title": "Diesel Engines",
-          "description": "",
-          "descriptor": "",
-          "familiesLabel": "Intro: Every displacement fitted to the Volkswagen Crafter is listed below, with compatible engine codes, production years and common failure notes to help you identify the right replacement.",
-          "foundInLabel": "",
-          "knownForLabel": "",
-          "modelsLabel": "",
-          "notesLabel": "",
-          "families": [
-            "Bench-tested before dispatch for peace of mind",
-            "Typical turnaround 3-5 working days UK-wide",
-            "Minimum 12-month warranty included as standard",
-            "Enhanced durability for demanding commercial use",
-            "Supply & fit available via vetted UK specialist network",
-            "Unlimited mileage warranty option on selected units",
-            "Fastest turnaround for urgent replacement needs",
-            "Ideal for older Crafters where budget is primary concern",
-            "3-month warranty typical; confirm terms with supplier",
-            "Full OEM specification with updated components",
-            "Extended warranty options up to 24 months available",
-            "Documentation provided for MOT and fleet records",
-            "Focused repair reduces cost and turnaround time",
-            "Best for engines under 100k miles with single-point failure",
-            "Warranty covers refurbished components specifically",
-            "Single-point accountability for parts and labour",
-            "Post-installation road test and handover included",
-            "Nationwide network covers all UK mainland postcodes"
-          ],
-          "foundIn": [],
-          "knownFor": [],
-          "typicalModels": [],
-          "importantNotes": [],
-          "cta": "Get quotes for DAUB Volkswagen Crafter engine replacement"
-        },
-        {
-          "title": "Volkswagen Crafter Diesel Engine Sizes",
-          "description": "",
-          "descriptor": "",
-          "familiesLabel": "Common Volkswagen Crafter Diesel Engine Sizes Engine Families",
-          "foundInLabel": "",
-          "knownForLabel": "",
-          "modelsLabel": "",
-          "notesLabel": "",
-          "families": [],
-          "foundIn": [],
-          "knownFor": [],
-          "typicalModels": [],
-          "importantNotes": [],
-          "cta": "Get quotes for Volkswagen Crafter 3.0L diesel engines"
-        },
         {
           "title": "Volkswagen Crafter Diesel Engines",
           "description": "Diesel dominates the Crafter range with 2.0L and 2.5L TDI units powering all UK variants from 2006-present; replacement demand is highest for timing chain and emissions-related failures.",
@@ -1557,10 +1531,9 @@
           "cta": "Enquire about Volkswagen Crafter diesel engine availability"
         }
       ],
-      "closing": "Can't find your engine code? Enter your registration number above - we'll instantly identify the exact unit, its technical specifications, and live replacement prices from UK Volkswagen Crafter engine specialists. Every rebuilt engine comes with a minimum 12-month unlimited mileage warranty.",
+      "closing": "Not sure which fuel type your Volkswagen Crafter has? Enter your registration number above to instantly identify your engine code, fuel system and compatible replacement options - all backed by a minimum 12-month unlimited mileage warranty from UK Volkswagen Crafter specialists.",
       "headingLines": [
-        "Volkswagen Crafter Engine Codes",
-        "Full Technical Specifications & Replacement Guide"
+        "Volkswagen Crafter Engines by Fuel Type"
       ],
       "ui": {
         "swapLabel": "Swap panel",

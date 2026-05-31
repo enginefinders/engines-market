@@ -15,15 +15,15 @@
     "canonical": "/vauxhall/vivaro"
   },
   "assets": {
-    "mainImage": "/images/brands/vauxhall/models/vauxhall-vivaro-main.webp",
-    "smallImage": "/images/brands/vauxhall/models/vauxhall-vivaro-small.webp",
-    "heroBg": "/images/brands/vauxhall/models/vauxhall-vivaro-main.webp",
+    "mainImage": "/images/brands/vauxhall/models/vauxhall-vivaro-model-card.png",
+    "smallImage": "/images/brands/vauxhall/models/vauxhall-vivaro-model-card.png",
+    "heroBg": "/images/brands/vauxhall/models/vauxhall-vivaro-model-card.png",
     "howItWorksBg": "/images/brands/vauxhall/brand/vauxhall-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/vauxhall/brand/vauxhall-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/vauxhall/brand/vauxhall-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/vauxhall/brand/vauxhall-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/vauxhall/brand/vauxhall-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/vauxhall/models/vauxhall-vivaro-main.webp"
+    "ctaImage": "/images/brands/vauxhall/models/vauxhall-vivaro-model-card.png"
   },
   "sections": {
     "hero": {
@@ -1421,11 +1421,103 @@
     },
     "fuelTypes": {
       "tag": "Fuel Type",
-      "h2": "",
-      "intro": "",
-      "items": [],
-      "closing": "",
-      "headingLines": [],
+      "h2": "Vauxhall Vivaro Engines by Fuel Type",
+      "intro": "Choose your Vauxhall Vivaro engine by fuel type to compare realistic replacement prices, known issues, and compatible UK supply options - from early F9Q 1.9 dCi to the latest DW10 2.0 BlueHDi.",
+      "items": [
+        {
+          "title": "Vauxhall Vivaro Diesel Engines",
+          "description": "Diesel power has defined the Vivaro across all three generations, with Renault-sourced units (Mk1/Mk2) and PSA-sourced engines (Mk3) dominating UK commercial replacement enquiries.",
+          "descriptor": "Diesel power has defined the Vivaro across all three generations, with Renault-sourced units (Mk1/Mk2) and PSA-sourced engines (Mk3) dominating UK commercial replacement enquiries.",
+          "familiesLabel": "Common Vauxhall Vivaro Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
+          "families": [
+            "M9R - 2.0 dCi (Mk1/Mk2), timing chain tensioner risk on high-mileage commercial use",
+            "R9M - Updated 2.0 dCi (Mk2), EGR/DPF issues on urban fleet vehicles",
+            "DW10 - PSA 2.0 BlueHDi (Mk3), AdBlue calibration required for compliance",
+            "F9Q - Early 1.9 dCi (Mk1), belt-driven interference engine needing timing history"
+          ],
+          "foundIn": [
+            "Mk1 (2001-2014) - F9Q 1.9L, G9U 2.5L, M9R 2.0L",
+            "Mk2 (2014-2019) - R9M 2.0L",
+            "Mk3 (2019-present) - DV5 1.6L, DW10 2.0L, DW12 2.0L high-output"
+          ],
+          "knownFor": [
+            "Strong motorway fuel economy on 2.0L variants",
+            "Timing chain tensioner failures on M9R/R9M between 60k-100k miles",
+            "EGR/DPF/AdBlue system complexity driving replacement decisions on Mk2/Mk3",
+            "High UK replacement demand on Panel Van and Crew Van commercial variants"
+          ],
+          "typicalModels": [
+            "Panel Van 2700/2900/3100",
+            "Crew Van 2700/2900/3100",
+            "Combi 8/9-seat passenger variants",
+            "Platform Cab chassis variants",
+            "Chassis Cab conversion bases"
+          ],
+          "importantNotes": [],
+          "cta": "Get quotes for Vauxhall Vivaro Diesel replacement engines"
+        },
+        {
+          "title": "Vauxhall Vivaro Petrol Engines",
+          "description": "No petrol engines were offered in the UK-market Vauxhall Vivaro; all variants use diesel powertrains optimised for commercial payload and fuel economy.",
+          "descriptor": "No petrol engines were offered in the UK-market Vauxhall Vivaro; all variants use diesel powertrains optimised for commercial payload and fuel economy.",
+          "familiesLabel": "Common Vauxhall Vivaro Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
+          "families": [
+            "None available for this model"
+          ],
+          "foundIn": [
+            "No petrol variants sold in the UK market"
+          ],
+          "knownFor": [
+            "Diesel-only lineup simplifies replacement part sourcing",
+            "Commercial buyers prioritise diesel torque for payload and towing",
+            "No petrol-specific failure patterns to research for Vivaro replacement"
+          ],
+          "typicalModels": [
+            "None available for this model"
+          ],
+          "importantNotes": [],
+          "cta": "Compare Vauxhall Vivaro Diesel engine prices (only fuel type available)"
+        },
+        {
+          "title": "Vauxhall Vivaro Hybrid / Electrified Engines",
+          "description": "No hybrid, plug-in hybrid or electric variants of the Vauxhall Vivaro were sold in the UK market; all replacement enquiries relate to conventional diesel engines.",
+          "descriptor": "No hybrid, plug-in hybrid or electric variants of the Vauxhall Vivaro were sold in the UK market; all replacement enquiries relate to conventional diesel engines.",
+          "familiesLabel": "Vauxhall Vivaro [Type] Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
+          "families": [
+            "None available for this model",
+            "Not applicable to UK-market Vivaro",
+            "All variants use conventional diesel combustion engines",
+            "Replacement considerations focus on diesel emissions compliance only"
+          ],
+          "foundIn": [
+            "No electrified variants sold in the UK market"
+          ],
+          "knownFor": [],
+          "typicalModels": [],
+          "importantNotes": [
+            "Vivaro remains diesel-only for UK commercial buyers",
+            "Euro 6 compliance on Mk3 requires AdBlue system calibration on replacement",
+            "No battery or electric motor replacement considerations for this model"
+          ],
+          "cta": "Enquire about Vauxhall Vivaro Diesel engine availability"
+        }
+      ],
+      "closing": "Not sure which fuel type your Vauxhall Vivaro has? Enter your registration number above to instantly identify your engine code, fuel system and compatible replacement options - all backed by a 12‑month unlimited mileage warranty from UK Vauxhall Vivaro specialists.",
+      "headingLines": [
+        "Vauxhall Vivaro Engines by Fuel Type"
+      ],
       "ui": {
         "swapLabel": "Swap panel",
         "familiesLabel": "Common Engine Families",

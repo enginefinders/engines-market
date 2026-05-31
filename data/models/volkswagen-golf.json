@@ -15,15 +15,15 @@
     "canonical": "/volkswagen/golf"
   },
   "assets": {
-    "mainImage": "/images/brands/volkswagen/models/volkswagen-golf-main.webp",
-    "smallImage": "/images/brands/volkswagen/models/volkswagen-golf-small.webp",
-    "heroBg": "/images/brands/volkswagen/models/volkswagen-golf-main.webp",
+    "mainImage": "/images/brands/volkswagen/models/volkswagen-golf-model-card.png",
+    "smallImage": "/images/brands/volkswagen/models/volkswagen-golf-model-card.png",
+    "heroBg": "/images/brands/volkswagen/models/volkswagen-golf-model-card.png",
     "howItWorksBg": "/images/brands/volkswagen/brand/volkswagen-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/volkswagen/brand/volkswagen-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/volkswagen/brand/volkswagen-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/volkswagen/brand/volkswagen-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/volkswagen/brand/volkswagen-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/volkswagen/models/volkswagen-golf-main.webp"
+    "ctaImage": "/images/brands/volkswagen/models/volkswagen-golf-model-card.png"
   },
   "sections": {
     "hero": {
@@ -38,7 +38,7 @@
       ],
       "ctaLinkText": "Get Free Volkswagen Golf Engine Quotes →",
       "supportingText": "Get tailored Volkswagen Golf engine quotes from vetted UK specialists.",
-      "ticker": "● Instant Quotes · No Obligation · 100% Free · Reconditioned · Rebuilt · Used · Supply & Fit Available · UK-Wide Network ═══════════════════════════════════════",
+      "ticker": "● Instant Quotes · No Obligation · 100% Free · Reconditioned · Rebuilt · Used · Supply & Fit Available · UK-Wide Network",
       "form": {
         "heading": "Find Your Volkswagen Golf Engine",
         "subtitle": "Enter your registration number to compare Volkswagen Golf engine options.",
@@ -110,8 +110,7 @@
               "Your Precise Model - from Match, SE, GT, BlueMotion to GTD, GTI, GTE, R",
               "Your Engine Code - CAYC, CFHC, CXCA, CJX and more",
               "Vehicle Specs Check - fuel type, engine size, year, variant - all verified instantly",
-              "No paperwork, no guesswork, 100% free.",
-              "═══════════════════════════════════════"
+              "No paperwork, no guesswork, 100% free."
             ]
           }
         },
@@ -395,14 +394,6 @@
             "volkswagen golf r32",
             "volkswagen golf r32 engine"
           ]
-        },
-        {
-          "key": "-engine",
-          "label": "",
-          "matchers": [
-            "",
-            "engine"
-          ]
         }
       ],
       "ui": {
@@ -666,21 +657,6 @@
           "power": "250hp",
           "years": "2002-2008",
           "image": ""
-        },
-        {
-          "h3": "",
-          "slug": "-engine",
-          "subtitle": "The Volkswagen Golf's most common engine issues centre on the 1.6/2.0 TDI diesel injectors and DPF systems, and the EA888/E211 petrol timing chain failures. Every rebuilt engine supplied through EngineMarket includes upgraded internal components designed to address the original failure point - plus a minimum 12‑month unlimited mileage warranty. Use this decision tool to compare repair vs replacement costs for your specific Golf variant.",
-          "priceRange": "",
-          "cta": "H4: 1.6 TDI Injector Failure - Why CAYC/CRBC Engines Fail",
-          "engineCodes": [
-            "and the EA888",
-            "E211 petrol timing chain failures. Every rebuilt engine supplied through EngineMarket includes upgraded internal components designed to address the original failure point - plus a minimum 12‑month unlimited mileage warranty. Use this decision tool to compare repair vs replacement costs for your specific Golf variant."
-          ],
-          "fuel": "Diesel",
-          "power": "",
-          "years": "",
-          "image": ""
         }
       ],
       "directory": {
@@ -744,7 +720,7 @@
         ],
         "label": "Variant Directory"
       },
-      "closing": "Not sure which fuel type your Volkswagen Golf has? Enter your registration number above to instantly identify your engine code, fuel system and compatible replacement options - all backed by a minimum 12‑month unlimited mileage warranty from UK Volkswagen Golf specialists.",
+      "closing": "Not sure which engine code your Volkswagen Golf has? Enter your registration number above - we'll instantly identify the exact unit and show live replacement prices from UK Volkswagen Golf specialists. Every rebuilt engine includes upgraded components addressing known failure points and a 12-month unlimited mileage warranty.",
       "engineGuide": {
         "tag": "Engine Codes",
         "h2": "Volkswagen Golf Engine Codes - Full Technical Specifications & Replacement Guide",
@@ -849,14 +825,25 @@
                 "compatibleVariants": [
                   "GTD (Mk7/Mk7.5)"
                 ],
-                "commonFailures": [
-                  "Twin-turbo oil seal leaks causing blue smoke and oil consumption",
-                  "EGR cooler cracking under high thermal load",
-                  "DPF ash accumulation requiring professional cleaning"
-                ],
+                "commonFailures": [],
+                "avgRebuiltPrice": "",
+                "cta": "",
+                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+              },
+              {
+                "code": "Twin",
+                "title": "turbo oil seal leaks causing blue smoke and oil consumption",
+                "familyHeading": "EA288 Family (2009-Present)",
+                "history": "",
+                "fuel": "",
+                "size": "",
+                "power": "",
+                "years": "",
+                "compatibleVariants": [],
+                "commonFailures": [],
                 "avgRebuiltPrice": "£1,400 - £2,900",
                 "cta": "Get quotes for CRLB Volkswagen Golf GTD engine",
-                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
                 "code": "BKC",
@@ -872,12 +859,26 @@
                 ],
                 "commonFailures": [
                   "PD injector failure causing rough running and smoke",
-                  "Camshaft lobe wear on high-mileage units (>150k miles)",
-                  "Dual-mass flywheel rattle and clutch wear"
+                  "Camshaft lobe wear on high-mileage units (>150k miles)"
                 ],
+                "avgRebuiltPrice": "",
+                "cta": "",
+                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+              },
+              {
+                "code": "Dual",
+                "title": "mass flywheel rattle and clutch wear",
+                "familyHeading": "EA288 Family (2009-Present)",
+                "history": "",
+                "fuel": "",
+                "size": "",
+                "power": "",
+                "years": "",
+                "compatibleVariants": [],
+                "commonFailures": [],
                 "avgRebuiltPrice": "£850 - £1,800",
                 "cta": "Get quotes for BKC Volkswagen Golf 1.9 TDI engine",
-                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               }
             ]
           },
@@ -939,10 +940,23 @@
                   "GTI 190hp, GTI 220hp (Mk7)"
                 ],
                 "commonFailures": [
-                  "Timing chain tensioner wear (less severe than Gen 2 but monitor for rattle)",
-                  "High-pressure fuel pump cam follower wear",
-                  "Turbo oil feed line coking on hard-driven examples"
+                  "Timing chain tensioner wear (less severe than Gen 2 but monitor for rattle)"
                 ],
+                "avgRebuiltPrice": "",
+                "cta": "",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              },
+              {
+                "code": "High",
+                "title": "pressure fuel pump cam follower wear",
+                "familyHeading": "EA888 Family (2009-Present)",
+                "history": "",
+                "fuel": "",
+                "size": "",
+                "power": "",
+                "years": "",
+                "compatibleVariants": [],
+                "commonFailures": [],
                 "avgRebuiltPrice": "£1,800 - £3,500",
                 "cta": "Get quotes for CXCA Volkswagen Golf GTI engine",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1003,9 +1017,23 @@
                 ],
                 "commonFailures": [
                   "EA111 timing chain tensioner failure causing chain jump (70k-110k miles)",
-                  "Carbon buildup on intake valves affecting performance",
-                  "High-pressure fuel pump cam follower wear"
+                  "Carbon buildup on intake valves affecting performance"
                 ],
+                "avgRebuiltPrice": "",
+                "cta": "",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              },
+              {
+                "code": "High",
+                "title": "pressure fuel pump cam follower wear",
+                "familyHeading": "EA111 Family (2009-2013)",
+                "history": "",
+                "fuel": "",
+                "size": "",
+                "power": "",
+                "years": "",
+                "compatibleVariants": [],
+                "commonFailures": [],
                 "avgRebuiltPrice": "£1,100 - £2,400",
                 "cta": "Get quotes for CAXA Volkswagen Golf 1.4 TSI engine",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1027,11 +1055,22 @@
                 "compatibleVariants": [
                   "GTE (Mk7)"
                 ],
-                "commonFailures": [
-                  "High-voltage battery capacity degradation reducing electric range",
-                  "Electric motor bearing wear on high-mileage examples",
-                  "DSG mechatronic unit faults affecting hybrid mode engagement"
-                ],
+                "commonFailures": [],
+                "avgRebuiltPrice": "",
+                "cta": "",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              },
+              {
+                "code": "High",
+                "title": "voltage battery capacity degradation reducing electric range",
+                "familyHeading": "PHEV Family (2015-Present)",
+                "history": "",
+                "fuel": "",
+                "size": "",
+                "power": "",
+                "years": "",
+                "compatibleVariants": [],
+                "commonFailures": [],
                 "avgRebuiltPrice": "£2,800 - £4,500",
                 "cta": "Enquire about CXA Volkswagen Golf GTE hybrid engine availability",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1125,9 +1164,21 @@
               "size": "2.0L",
               "power": "184 hp",
               "compatibleModels": "GTD (Mk7/Mk7.5)",
+              "avgRebuiltPrice": "",
+              "cta": "",
+              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+            },
+            {
+              "code": "Twin",
+              "title": "turbo oil seal leaks causing blue smoke and oil consumption",
+              "familyHeading": "EA288 Family (2009-Present)",
+              "fuel": "",
+              "size": "",
+              "power": "",
+              "compatibleModels": "",
               "avgRebuiltPrice": "£1,400 - £2,900",
               "cta": "Get quotes for CRLB Volkswagen Golf GTD engine",
-              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
               "code": "BKC",
@@ -1137,9 +1188,21 @@
               "size": "1.9L",
               "power": "90-105 hp",
               "compatibleModels": "1.9 TDI S, 1.9 TDI Match, 1.9 TDI SE (Mk4/Mk5)",
+              "avgRebuiltPrice": "",
+              "cta": "",
+              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+            },
+            {
+              "code": "Dual",
+              "title": "mass flywheel rattle and clutch wear",
+              "familyHeading": "EA288 Family (2009-Present)",
+              "fuel": "",
+              "size": "",
+              "power": "",
+              "compatibleModels": "",
               "avgRebuiltPrice": "£850 - £1,800",
               "cta": "Get quotes for BKC Volkswagen Golf 1.9 TDI engine",
-              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             }
           ]
         },
@@ -1180,6 +1243,18 @@
               "size": "2.0L",
               "power": "190-220 hp",
               "compatibleModels": "GTI 190hp, GTI 220hp (Mk7)",
+              "avgRebuiltPrice": "",
+              "cta": "",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            },
+            {
+              "code": "High",
+              "title": "pressure fuel pump cam follower wear",
+              "familyHeading": "EA888 Family (2009-Present)",
+              "fuel": "",
+              "size": "",
+              "power": "",
+              "compatibleModels": "",
               "avgRebuiltPrice": "£1,800 - £3,500",
               "cta": "Get quotes for CXCA Volkswagen Golf GTI engine",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1216,6 +1291,18 @@
               "size": "1.4L",
               "power": "122 hp (naturally aspirated variant)",
               "compatibleModels": "1.4 TSI S, 1.4 TSI Match (Mk6)",
+              "avgRebuiltPrice": "",
+              "cta": "",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            },
+            {
+              "code": "High",
+              "title": "pressure fuel pump cam follower wear",
+              "familyHeading": "EA111 Family (2009-2013)",
+              "fuel": "",
+              "size": "",
+              "power": "",
+              "compatibleModels": "",
               "avgRebuiltPrice": "£1,100 - £2,400",
               "cta": "Get quotes for CAXA Volkswagen Golf 1.4 TSI engine",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1235,6 +1322,18 @@
               "size": "1.4L (combustion)",
               "power": "204 hp combined",
               "compatibleModels": "GTE (Mk7)",
+              "avgRebuiltPrice": "",
+              "cta": "",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            },
+            {
+              "code": "High",
+              "title": "voltage battery capacity degradation reducing electric range",
+              "familyHeading": "PHEV Family (2015-Present)",
+              "fuel": "",
+              "size": "",
+              "power": "",
+              "compatibleModels": "",
               "avgRebuiltPrice": "£2,800 - £4,500",
               "cta": "Enquire about CXA Volkswagen Golf GTE hybrid engine availability",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1466,7 +1565,7 @@
         "h4": "Don't Let Engine Failure Write Off Your Volkswagen Golf",
         "paragraph": "From injector blow-offs to timing chain failures, Volkswagen Golf engine problems are well-documented but rarely mean the end of the road. EngineMarket connects you with trusted UK specialists who supply rebuilt, reconditioned and used Golf engines - all with upgraded components addressing the original failure point and a minimum 12-month unlimited mileage warranty. Compare prices, check supply & fit availability, and get back on the road without the main dealer premium.",
         "buttonText": "Compare Volkswagen Golf Engine Replacement Prices Now →",
-        "disclaimer": "All prices are indicative UK market ranges based on historical quote data and repair requests from our network of engine specialists. Dealer pricing is estimated based on published main dealer labour rates and genuine OEM parts pricing. Specialist pricing reflects actual quote data from EngineMarket's UK network. Actual costs vary depending on damage severity, vehicle condition, variant, and workshop location within the UK. Use our free comparison tool to get tailored quotes for your specific Volkswagen Golf and engine code. Every engine supplied through EngineMarket carries a minimum 12-month unlimited mileage warranty - always confirm exact terms with your chosen supplier. ═══════════════════════════════════════"
+        "disclaimer": "All prices are indicative UK market ranges based on historical quote data and repair requests from our network of engine specialists. Dealer pricing is estimated based on published main dealer labour rates and genuine OEM parts pricing. Specialist pricing reflects actual quote data from EngineMarket's UK network. Actual costs vary depending on damage severity, vehicle condition, variant, and workshop location within the UK. Use our free comparison tool to get tailored quotes for your specific Volkswagen Golf and engine code. Every engine supplied through EngineMarket carries a minimum 12-month unlimited mileage warranty - always confirm exact terms with your chosen supplier."
       }
     },
     "engineTypes": {
@@ -1549,7 +1648,7 @@
           "description": "Complete engine replacement service including supply, delivery, fitting, fluids and post-installation testing.",
           "frontDescription": "Complete engine replacement service including supply, delivery, fitting, fluids and post-installation testing.",
           "frontDisclaimer": "Fit cost varies by workshop location, engine complexity and additional repairs needed.",
-          "backDescription": "Supply & fit for Golf engines simplifies the replacement process, with vetted specialists handling everything from removal to road test. ═══════════════════════════════════════",
+          "backDescription": "Supply & fit for Golf engines simplifies the replacement process, with vetted specialists handling everything from removal to road test.",
           "backBullets": [
             "Ideal for owners without garage access or specialist tools",
             "Includes ECU coding, adaptation and post-fit diagnostics",
@@ -1787,7 +1886,7 @@
           "items": [
             {
               "title": "Volkswagen Golf 1.4L Hybrid Engines",
-              "description": "The 1.4L TSI-based plug-in hybrid system powers the GTE and eHybrid variants, combining petrol efficiency with electric-only range. Replacement considerations include both combustion and electric motor components. ═══════════════════════════════════════",
+              "description": "The 1.4L TSI-based plug-in hybrid system powers the GTE and eHybrid variants, combining petrol efficiency with electric-only range. Replacement considerations include both combustion and electric motor components.",
               "engineCodes": [
                 "CXA",
                 "DPLA"

@@ -15,15 +15,15 @@
     "canonical": "/nissan/skyline"
   },
   "assets": {
-    "mainImage": "/images/brands/nissan/models/nissan-skyline-main.webp",
-    "smallImage": "/images/brands/nissan/models/nissan-skyline-small.webp",
-    "heroBg": "/images/brands/nissan/models/nissan-skyline-main.webp",
+    "mainImage": "/images/brands/nissan/models/nissan-skyline-model-card.png",
+    "smallImage": "/images/brands/nissan/models/nissan-skyline-model-card.png",
+    "heroBg": "/images/brands/nissan/models/nissan-skyline-model-card.png",
     "howItWorksBg": "/images/brands/nissan/brand/nissan-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/nissan/brand/nissan-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/nissan/brand/nissan-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/nissan/brand/nissan-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/nissan/brand/nissan-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/nissan/models/nissan-skyline-main.webp"
+    "ctaImage": "/images/brands/nissan/models/nissan-skyline-model-card.png"
   },
   "sections": {
     "hero": {
@@ -110,8 +110,7 @@
               "Your Precise Model - from GTS-t, GT-T, GT-R, 350GT to R35 GT-R",
               "Your Engine Code - RB20DET, RB25DET, RB26DETT, VQ35HR, VR38DETT and more",
               "Vehicle Specs Check - fuel type, engine size, year, variant - all verified instantly",
-              "No paperwork, no guesswork, 100% free.",
-              "═══════════════════════════════════════"
+              "No paperwork, no guesswork, 100% free."
             ]
           }
         },
@@ -1195,7 +1194,7 @@
           "description": "Full engine replacement service including removal, installation, calibration and road test by JDM specialists.",
           "frontDescription": "Full engine replacement service including removal, installation, calibration and road test by JDM specialists.",
           "frontDisclaimer": "Labour varies by variant; R35 GT-R at premium end.",
-          "backDescription": "Supply & fit service handles the complex Skyline engine swap process - ECU calibration, wiring harness integration, cooling system checks and post-installation tuning. ═══════════════════════════════════════",
+          "backDescription": "Supply & fit service handles the complex Skyline engine swap process - ECU calibration, wiring harness integration, cooling system checks and post-installation tuning.",
           "backBullets": [
             "Performed by RB/VQ platform specialists familiar with Skyline wiring",
             "Includes post-installation dyno verification where requested",
@@ -1303,7 +1302,7 @@
             },
             {
               "title": "Nissan Skyline 3.8L Petrol Engines",
-              "description": "The hand-built VR38DETT twin-turbo V6 powers the R35 GT-R, producing 480-600bhp and representing Nissan's modern performance flagship with advanced electronics and all-wheel drive. Not sure which engine size your Nissan Skyline needs? Enter your registration number above - we'll identify the exact displacement, engine code and compatible replacement options instantly. All engines supplied through EngineMarket include a minimum 12‑month unlimited mileage warranty from UK Nissan Skyline specialists. ═══════════════════════════════════════",
+              "description": "The hand-built VR38DETT twin-turbo V6 powers the R35 GT-R, producing 480-600bhp and representing Nissan's modern performance flagship with advanced electronics and all-wheel drive. Not sure which engine size your Nissan Skyline needs? Enter your registration number above - we'll identify the exact displacement, engine code and compatible replacement options instantly. All engines supplied through EngineMarket include a minimum 12‑month unlimited mileage warranty from UK Nissan Skyline specialists.",
               "engineCodes": [
                 "VR38DETT"
               ],
@@ -1339,42 +1338,10 @@
       }
     },
     "fuelTypes": {
-      "tag": "Live UK Engine Market Data",
-      "h2": "What Are UK Drivers Paying for Nissan Skyline Engine Replacement?",
-      "intro": "The table below shows typical UK rebuilt engine costs across Nissan Skyline variants - compare failure causes, engine codes, fuel types, and price ranges to benchmark what UK drivers are paying.",
+      "tag": "Nissan Skyline Engines Fuel Type",
+      "h2": "Nissan Skyline Engines by Fuel Type",
+      "intro": "",
       "items": [
-        {
-          "title": "Petrol Engines",
-          "description": "",
-          "descriptor": "",
-          "familiesLabel": "Intro (1 sentence): Every displacement fitted to the Nissan Skyline is listed below, with compatible engine codes, production years and common failure notes to help you identify the right replacement.",
-          "foundInLabel": "",
-          "knownForLabel": "",
-          "modelsLabel": "",
-          "notesLabel": "",
-          "families": [],
-          "foundIn": [],
-          "knownFor": [],
-          "typicalModels": [],
-          "importantNotes": [],
-          "cta": "Get quotes for VR38DETT Nissan Skyline engine replacement"
-        },
-        {
-          "title": "Nissan Skyline Petrol Engine Sizes",
-          "description": "",
-          "descriptor": "",
-          "familiesLabel": "Common Nissan Skyline Petrol Engine Sizes Engine Families",
-          "foundInLabel": "",
-          "knownForLabel": "",
-          "modelsLabel": "",
-          "notesLabel": "",
-          "families": [],
-          "foundIn": [],
-          "knownFor": [],
-          "typicalModels": [],
-          "importantNotes": [],
-          "cta": "Get quotes for Nissan Skyline 3.8L petrol engines"
-        },
         {
           "title": "Nissan Skyline Petrol Engines",
           "description": "All Nissan Skyline engines are petrol; the RB, VQ and VR families cover turbo straight-6 and V6 configurations across R32-R35 generations.",
@@ -1415,9 +1382,9 @@
           "cta": "Compare Nissan Skyline Petrol engine prices"
         }
       ],
-      "closing": "Not sure which variant your Nissan Skyline is? Enter your registration number above - we'll identify the exact sub-model, engine code and compatible replacement options instantly.",
+      "closing": "Not sure which fuel type your Nissan Skyline has? Enter your registration number above to instantly identify your engine code, fuel system and compatible replacement options - all backed by a minimum 12‑month unlimited mileage warranty from UK Nissan Skyline specialists.",
       "headingLines": [
-        "What Are UK Drivers Paying for Nissan Skyline Engine Replacement?"
+        "Nissan Skyline Engines by Fuel Type"
       ],
       "ui": {
         "swapLabel": "Swap panel",

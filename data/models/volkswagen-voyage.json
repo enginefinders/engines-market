@@ -15,15 +15,15 @@
     "canonical": "/volkswagen/voyage"
   },
   "assets": {
-    "mainImage": "/images/brands/volkswagen/models/volkswagen-voyage-main.webp",
-    "smallImage": "/images/brands/volkswagen/models/volkswagen-voyage-small.webp",
-    "heroBg": "/images/brands/volkswagen/models/volkswagen-voyage-main.webp",
+    "mainImage": "/images/brands/volkswagen/models/volkswagen-voyage-model-card.png",
+    "smallImage": "/images/brands/volkswagen/models/volkswagen-voyage-model-card.png",
+    "heroBg": "/images/brands/volkswagen/models/volkswagen-voyage-model-card.png",
     "howItWorksBg": "/images/brands/volkswagen/brand/volkswagen-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/volkswagen/brand/volkswagen-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/volkswagen/brand/volkswagen-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/volkswagen/brand/volkswagen-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/volkswagen/brand/volkswagen-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/volkswagen/models/volkswagen-voyage-main.webp"
+    "ctaImage": "/images/brands/volkswagen/models/volkswagen-voyage-model-card.png"
   },
   "sections": {
     "hero": {
@@ -110,8 +110,7 @@
               "Your Precise Model - from Trendline, Comfortline, Highline to Gol-platform variants",
               "Your Engine Code - AP, AU, BZG, CFZA and more",
               "Vehicle Specs Check - fuel type, engine size, year, variant - all verified instantly",
-              "No paperwork, no guesswork, 100% free.",
-              "═══════════════════════════════════════"
+              "No paperwork, no guesswork, 100% free."
             ]
           }
         },
@@ -652,10 +651,23 @@
                 "years": "",
                 "compatibleVariants": [],
                 "commonFailures": [
-                  "Timing belt failure on interference engine (catastrophic if snapped)",
-                  "Flex-fuel sensor adaptation issues on UK petrol",
-                  "Coolant leak at thermostat housing"
+                  "Timing belt failure on interference engine (catastrophic if snapped)"
                 ],
+                "avgRebuiltPrice": "",
+                "cta": "",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              },
+              {
+                "code": "Flex",
+                "title": "fuel sensor adaptation issues on UK petrol",
+                "familyHeading": "EA211 Family (2012-2021)",
+                "history": "",
+                "fuel": "",
+                "size": "",
+                "power": "",
+                "years": "",
+                "compatibleVariants": [],
+                "commonFailures": [],
                 "avgRebuiltPrice": "£695 - £1,895",
                 "cta": "Get quotes for CFZA Volkswagen Voyage engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -822,6 +834,18 @@
             {
               "code": "Highline",
               "title": "1.6L, Comfortline 1.6L, Flex-Fuel 1.6L",
+              "familyHeading": "EA211 Family (2012-2021)",
+              "fuel": "",
+              "size": "",
+              "power": "",
+              "compatibleModels": "",
+              "avgRebuiltPrice": "",
+              "cta": "",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            },
+            {
+              "code": "Flex",
+              "title": "fuel sensor adaptation issues on UK petrol",
               "familyHeading": "EA211 Family (2012-2021)",
               "fuel": "",
               "size": "",
@@ -1147,7 +1171,7 @@
           "description": "Complete engine replacement service for your Volkswagen Voyage; specialist fitting included at vetted UK grey import workshops.",
           "frontDescription": "Complete engine replacement service for your Volkswagen Voyage; specialist fitting included at vetted UK grey import workshops.",
           "frontDisclaimer": "Fit cost varies by location and workshop; get local quotes.",
-          "backDescription": "Supply & fit packages include engine delivery, removal of old unit, installation of replacement, and post-fit diagnostics at specialist workshops. ═══════════════════════════════════════",
+          "backDescription": "Supply & fit packages include engine delivery, removal of old unit, installation of replacement, and post-fit diagnostics at specialist workshops.",
           "backBullets": [
             "Vetted grey import specialists only",
             "Post-fit road test included",
@@ -1267,7 +1291,7 @@
             },
             {
               "title": "Volkswagen Voyage 1.6L Flex-Fuel Engines",
-              "description": "The 1.6L flex-fuel variant offered higher output for Highline trims; UK petrol conversion requires specialist ECU recalibration to prevent premature component wear. Not sure which engine size your Volkswagen Voyage needs? Enter your registration number above - we'll identify the exact displacement, engine code and compatible replacement options instantly. All engines supplied through EngineMarket include a minimum 12‑month unlimited mileage warranty from UK Volkswagen Voyage specialists. ═══════════════════════════════════════",
+              "description": "The 1.6L flex-fuel variant offered higher output for Highline trims; UK petrol conversion requires specialist ECU recalibration to prevent premature component wear. Not sure which engine size your Volkswagen Voyage needs? Enter your registration number above - we'll identify the exact displacement, engine code and compatible replacement options instantly. All engines supplied through EngineMarket include a minimum 12‑month unlimited mileage warranty from UK Volkswagen Voyage specialists.",
               "engineCodes": [
                 "CFZA-Flex",
                 "EAH"

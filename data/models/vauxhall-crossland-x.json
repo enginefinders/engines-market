@@ -15,15 +15,15 @@
     "canonical": "/vauxhall/crossland-x"
   },
   "assets": {
-    "mainImage": "/images/brands/vauxhall/models/vauxhall-crossland-x-main.webp",
-    "smallImage": "/images/brands/vauxhall/models/vauxhall-crossland-x-small.webp",
-    "heroBg": "/images/brands/vauxhall/models/vauxhall-crossland-x-main.webp",
+    "mainImage": "/images/brands/vauxhall/models/vauxhall-crossland-x-model-card.png",
+    "smallImage": "/images/brands/vauxhall/models/vauxhall-crossland-x-model-card.png",
+    "heroBg": "/images/brands/vauxhall/models/vauxhall-crossland-x-model-card.png",
     "howItWorksBg": "/images/brands/vauxhall/brand/vauxhall-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/vauxhall/brand/vauxhall-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/vauxhall/brand/vauxhall-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/vauxhall/brand/vauxhall-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/vauxhall/brand/vauxhall-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/vauxhall/models/vauxhall-crossland-x-main.webp"
+    "ctaImage": "/images/brands/vauxhall/models/vauxhall-crossland-x-model-card.png"
   },
   "sections": {
     "hero": {
@@ -1417,11 +1417,80 @@
     },
     "fuelTypes": {
       "tag": "Fuel Type",
-      "h2": "",
+      "h2": "Vauxhall Crossland X Engines by Fuel Type",
       "intro": "",
-      "items": [],
-      "closing": "",
-      "headingLines": [],
+      "items": [
+        {
+          "title": "Vauxhall Crossland X Diesel Engines",
+          "description": "Diesel Crossland X models use PSA's BlueHDi family, with the 1.5L DV5/YH series dominating from 2019 and the earlier 1.6L DV6 found on 2017-2019 models.",
+          "descriptor": "Diesel Crossland X models use PSA's BlueHDi family, with the 1.5L DV5/YH series dominating from 2019 and the earlier 1.6L DV6 found on 2017-2019 models.",
+          "familiesLabel": "Common Vauxhall Crossland X Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
+          "families": [
+            "DV5 - dominant 1.5L BlueHDi (SE/SRi/Elite), AdBlue system complexity",
+            "YH5/YH6 - 1.5L variants for SRi/Elite trims, higher output tuning",
+            "DV6FED - early 1.6L unit (2017-2019), robust but increasingly rare"
+          ],
+          "foundIn": [
+            "P17 Generation (2017-2024) - DV6FED (2017-2019), DV5/YH series (2019-2024)"
+          ],
+          "knownFor": [
+            "Strong motorway fuel economy and torque for towing",
+            "AdBlue system faults causing immobilisation between 60k-100k miles",
+            "DPF regeneration issues on short-journey driving patterns",
+            "High UK replacement demand on SE and SRi diesel variants"
+          ],
+          "typicalModels": [
+            "Crossland X 1.5 BlueHDi SE",
+            "Crossland X 1.5 BlueHDi SRi",
+            "Crossland X 1.5 BlueHDi Elite",
+            "Crossland X 1.6 BlueHDi SE (early)",
+            "Crossland X 1.5 BlueHDi Ultimate"
+          ],
+          "importantNotes": [],
+          "cta": "Get quotes for Vauxhall Crossland X Diesel replacement engines"
+        },
+        {
+          "title": "Vauxhall Crossland X Petrol Engines",
+          "description": "Petrol Crossland X models exclusively use PSA's 1.2L PureTech EB2 family, with turbocharged variants powering most trims and a naturally aspirated option on early entry models.",
+          "descriptor": "Petrol Crossland X models exclusively use PSA's 1.2L PureTech EB2 family, with turbocharged variants powering most trims and a naturally aspirated option on early entry models.",
+          "familiesLabel": "Common Vauxhall Crossland X Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
+          "families": [
+            "EB2ADTD - dominant 110hp turbo (SE/SRi/Elite), timing belt-in-oil risk",
+            "EB2DT - 130hp high-output turbo (SRi/GS Line), enhanced performance",
+            "EB2FA - early 82-110hp NA unit (Entry/SE), simpler but less common"
+          ],
+          "foundIn": [
+            "P17 Generation (2017-2024) - EB2FA (2017-2020), EB2ADTD/EB2DT (2017-2024)"
+          ],
+          "knownFor": [
+            "Excellent urban fuel economy and responsive throttle",
+            "Timing belt degradation in oil causing catastrophic failure (50k-80k miles)",
+            "Fuel dilution of engine oil from direct injection system",
+            "High replacement demand on PureTech units across all petrol trims"
+          ],
+          "typicalModels": [
+            "Crossland X 1.2 PureTech SE",
+            "Crossland X 1.2 PureTech SRi",
+            "Crossland X 1.2 PureTech Elite",
+            "Crossland X 1.2 PureTech GS Line",
+            "Crossland X 1.2 PureTech Red Edition"
+          ],
+          "importantNotes": [],
+          "cta": "Compare Vauxhall Crossland X Petrol engine prices"
+        }
+      ],
+      "closing": "Not sure which fuel type your Vauxhall Crossland X has? Enter your registration number above to instantly identify your engine code, fuel system and compatible replacement options - all backed by a 12‑month unlimited mileage warranty from UK Vauxhall Crossland X specialists.",
+      "headingLines": [
+        "Vauxhall Crossland X Engines by Fuel Type"
+      ],
       "ui": {
         "swapLabel": "Swap panel",
         "familiesLabel": "Common Engine Families",

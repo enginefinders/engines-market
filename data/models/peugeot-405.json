@@ -15,15 +15,15 @@
     "canonical": "/peugeot/405"
   },
   "assets": {
-    "mainImage": "/images/brands/peugeot/models/peugeot-405-main.webp",
-    "smallImage": "/images/brands/peugeot/models/peugeot-405-small.webp",
-    "heroBg": "/images/brands/peugeot/models/peugeot-405-main.webp",
+    "mainImage": "/images/brands/peugeot/models/peugeot-405-model-card.png",
+    "smallImage": "/images/brands/peugeot/models/peugeot-405-model-card.png",
+    "heroBg": "/images/brands/peugeot/models/peugeot-405-model-card.png",
     "howItWorksBg": "/images/brands/peugeot/brand/peugeot-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/peugeot/brand/peugeot-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/peugeot/brand/peugeot-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/peugeot/brand/peugeot-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/peugeot/brand/peugeot-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/peugeot/models/peugeot-405-main.webp"
+    "ctaImage": "/images/brands/peugeot/models/peugeot-405-model-card.png"
   },
   "sections": {
     "hero": {
@@ -110,8 +110,7 @@
               "Your Precise Model - from GL, SR, GR, STI, TD, SRDT to Mi16, GTI",
               "Your Engine Code - XUD9, XU9J4, XU5, XU7 and more",
               "Vehicle Specs Check - fuel type, engine size, year, variant - all verified instantly",
-              "No paperwork, no guesswork, 100% free.",
-              "═══════════════════════════════════════"
+              "No paperwork, no guesswork, 100% free."
             ]
           }
         },
@@ -1359,7 +1358,7 @@
           "description": "Full engine replacement service including removal, fitting, fluids and road test from vetted UK garages.",
           "frontDescription": "Full engine replacement service including removal, fitting, fluids and road test from vetted UK garages.",
           "frontDisclaimer": "Labour costs vary by location and garage; get itemised quotes before booking.",
-          "backDescription": "Supply & fit Peugeot 405 engine services include removal of the old unit, fitting the replacement, all fluids, belts, and a road test. Ideal if you lack tools or workshop space. ═══════════════════════════════════════",
+          "backDescription": "Supply & fit Peugeot 405 engine services include removal of the old unit, fitting the replacement, all fluids, belts, and a road test. Ideal if you lack tools or workshop space.",
           "backBullets": [
             "Best for: Owners without specialist tools or garage facilities",
             "Includes: Removal, fitting, fluids, belts, road test, warranty registration",
@@ -1503,7 +1502,7 @@
             },
             {
               "title": "Peugeot 405 2.0L Petrol Engines",
-              "description": "The 2.0L XU10 was a late addition for certain export markets and special editions. Shares XU architecture but with revised internals; head gasket and timing belt remain key maintenance items. Not sure which engine size your Peugeot 405 needs? Enter your registration number above - we'll identify the exact displacement, engine code and compatible replacement options instantly. All engines supplied through EngineMarket include a Peugeotmum 12‑month unlimited mileage warranty from UK Peugeot 405 specialists. ═══════════════════════════════════════",
+              "description": "The 2.0L XU10 was a late addition for certain export markets and special editions. Shares XU architecture but with revised internals; head gasket and timing belt remain key maintenance items. Not sure which engine size your Peugeot 405 needs? Enter your registration number above - we'll identify the exact displacement, engine code and compatible replacement options instantly. All engines supplied through EngineMarket include a Peugeotmum 12‑month unlimited mileage warranty from UK Peugeot 405 specialists.",
               "engineCodes": [
                 "XU10",
                 "XU10J4",
@@ -1542,11 +1541,82 @@
     },
     "fuelTypes": {
       "tag": "Fuel Type",
-      "h2": "",
+      "h2": "Peugeot 405 Engines by Fuel Type",
       "intro": "",
-      "items": [],
-      "closing": "",
-      "headingLines": [],
+      "items": [
+        {
+          "title": "Peugeot 405 Diesel Engines",
+          "description": "The XUD 1.9L diesel powered most UK 405s, offering strong economy and torque but requiring attention to injection pump maintenance and head gasket health.",
+          "descriptor": "The XUD 1.9L diesel powered most UK 405s, offering strong economy and torque but requiring attention to injection pump maintenance and head gasket health.",
+          "familiesLabel": "Common Peugeot 405 Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
+          "families": [
+            "XUD9 - most common replacement engine (GL/SRDT), injection pump wear risk",
+            "XUD9TE - turbo variant for SRDT, watch for turbo oil seal leaks",
+            "XUD9A - late-production update, similar reliability profile to XUD9"
+          ],
+          "foundIn": [
+            "MK1 Saloon/Estate (1987-1992) - XUD9 naturally aspirated",
+            "MK2 Saloon/Estate (1992-1997) - XUD9TE turbo, XUD9A updated NA"
+          ],
+          "knownFor": [
+            "Strong motorway fuel economy (45-55 mpg achievable)",
+            "Injection pump failure between 120k-200k miles if not maintained",
+            "High UK replacement demand on high-mileage GL and SRDT variants"
+          ],
+          "typicalModels": [
+            "GL 1.9 D",
+            "SRDT 1.9 TD",
+            "GLX 1.9 D",
+            "Estate 1.9 D/TD",
+            "4x4 Dangel 1.9 D"
+          ],
+          "importantNotes": [],
+          "cta": "Get quotes for Peugeot 405 Diesel replacement engines"
+        },
+        {
+          "title": "Peugeot 405 Petrol Engines",
+          "description": "The XU petrol family (1.4L-2.0L) powered GL, SR, STI and GTI variants, offering smooth performance but requiring strict timing belt and cooling system maintenance.",
+          "descriptor": "The XU petrol family (1.4L-2.0L) powered GL, SR, STI and GTI variants, offering smooth performance but requiring strict timing belt and cooling system maintenance.",
+          "familiesLabel": "Common Peugeot 405 Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
+          "families": [
+            "XU5/XU5M - 1.6L entry-level, head gasket vulnerability on high mileage",
+            "XU7 - 1.8L mainstream, same XU weaknesses but more torque",
+            "XU9/XU9J2 - 1.9L for STI/GTI, performance use accelerates wear",
+            "XU9J4 - Mi16 16v, complex valve train increases rebuild costs"
+          ],
+          "foundIn": [
+            "MK1 Saloon (1987-1992) - XU5, XU9, XU9J4 (Mi16)",
+            "MK2 Saloon/Estate (1992-1997) - XU5M, XU7, XU9J2 (GTI)"
+          ],
+          "knownFor": [
+            "Smooth, responsive petrol performance when maintained",
+            "Head gasket failure risk if cooling system neglected",
+            "Valve stem seal wear causing blue smoke on high-mileage examples"
+          ],
+          "typicalModels": [
+            "GL 1.4 / 1.6",
+            "GR 1.6",
+            "SR 1.8",
+            "STI 1.9",
+            "GTI 1.9",
+            "Mi16 1.9 16v"
+          ],
+          "importantNotes": [],
+          "cta": "Compare Peugeot 405 Petrol engine prices"
+        }
+      ],
+      "closing": "Not sure which fuel type your Peugeot 405 has? Enter your registration number above to instantly identify your engine code, fuel system and compatible replacement options - all backed by a Peugeotmum 12‑month unlimited mileage warranty from UK Peugeot 405 specialists.",
+      "headingLines": [
+        "Peugeot 405 Engines by Fuel Type"
+      ],
       "ui": {
         "swapLabel": "Swap panel",
         "familiesLabel": "Common Engine Families",

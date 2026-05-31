@@ -15,15 +15,15 @@
     "canonical": "/mini/one"
   },
   "assets": {
-    "mainImage": "/images/brands/mini/models/mini-one-main.webp",
-    "smallImage": "/images/brands/mini/models/mini-one-small.webp",
-    "heroBg": "/images/brands/mini/models/mini-one-main.webp",
+    "mainImage": "/images/brands/mini/models/mini-one-model-card.png",
+    "smallImage": "/images/brands/mini/models/mini-one-model-card.png",
+    "heroBg": "/images/brands/mini/models/mini-one-model-card.png",
     "howItWorksBg": "/images/brands/mini/brand/mini-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/mini/brand/mini-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/mini/brand/mini-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/mini/brand/mini-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/mini/brand/mini-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/mini/models/mini-one-main.webp"
+    "ctaImage": "/images/brands/mini/models/mini-one-model-card.png"
   },
   "sections": {
     "hero": {
@@ -1445,74 +1445,10 @@
       }
     },
     "fuelTypes": {
-      "tag": "Live UK Engine Market Data",
-      "h2": "What Are UK Drivers Paying for Mini One Engine Replacement?",
-      "intro": "The table below shows typical UK rebuilt engine costs across Mini One variants - compare failure causes, engine codes, fuel types, and price ranges to benchmark what UK drivers are paying.",
+      "tag": "Fuel Type",
+      "h2": "Mini One Engines by Fuel Type",
+      "intro": "Choose your Mini One engine by fuel type to compare realistic replacement prices, known issues, and compatible UK supply options - from early W10 naturally aspirated units to the latest B38 turbo petrol.",
       "items": [
-        {
-          "title": "Petrol Engines",
-          "description": "",
-          "descriptor": "",
-          "familiesLabel": "Common Petrol Engine Families",
-          "foundInLabel": "",
-          "knownForLabel": "",
-          "modelsLabel": "",
-          "notesLabel": "",
-          "families": [],
-          "foundIn": [],
-          "knownFor": [],
-          "typicalModels": [],
-          "importantNotes": [],
-          "cta": "Get quotes for W10B14A Mini One engine replacement"
-        },
-        {
-          "title": "Diesel Engines",
-          "description": "",
-          "descriptor": "",
-          "familiesLabel": "Intro: Every engine displacement officially fitted to the Mini One across all UK generations is detailed below, complete with factory engine codes, compatible variant years, and verified common failure notes.",
-          "foundInLabel": "",
-          "knownForLabel": "",
-          "modelsLabel": "",
-          "notesLabel": "",
-          "families": [],
-          "foundIn": [],
-          "knownFor": [],
-          "typicalModels": [],
-          "importantNotes": [],
-          "cta": "Compare prices for rebuilt B38A15A Mini One turbo engines"
-        },
-        {
-          "title": "Mini One Diesel Engine Sizes",
-          "description": "",
-          "descriptor": "",
-          "familiesLabel": "Common Mini One Diesel Engine Sizes Engine Families",
-          "foundInLabel": "",
-          "knownForLabel": "",
-          "modelsLabel": "",
-          "notesLabel": "",
-          "families": [],
-          "foundIn": [],
-          "knownFor": [],
-          "typicalModels": [],
-          "importantNotes": [],
-          "cta": "Get quotes for Mini One 1.6L diesel engines"
-        },
-        {
-          "title": "Mini One Petrol Engine Sizes",
-          "description": "",
-          "descriptor": "",
-          "familiesLabel": "Common Mini One Petrol Engine Sizes Engine Families",
-          "foundInLabel": "",
-          "knownForLabel": "",
-          "modelsLabel": "",
-          "notesLabel": "",
-          "families": [],
-          "foundIn": [],
-          "knownFor": [],
-          "typicalModels": [],
-          "importantNotes": [],
-          "cta": "Compare Mini One 1.6L petrol engine prices"
-        },
         {
           "title": "Mini One Diesel Engines",
           "description": "Covering the R56 and modern F56 generations, the Mini One diesel lineup prioritises high-mileage economy but carries well-documented EGR and timing chain wear patterns that drive replacement demand.",
@@ -1581,9 +1517,9 @@
           "cta": "Compare Mini One Petrol engine prices"
         }
       ],
-      "closing": "Not sure which variant your Mini One is? Enter your registration number above - we'll identify the exact sub‑model, engine code and compatible replacement options instantly.",
+      "closing": "Not sure which fuel type your Mini One has? Enter your registration number above to instantly identify your engine code, fuel system and compatible replacement options - all backed by a minimum 12‑month unlimited mileage warranty from UK Mini One specialists.",
       "headingLines": [
-        "What Are UK Drivers Paying for Mini One Engine Replacement?"
+        "Mini One Engines by Fuel Type"
       ],
       "ui": {
         "swapLabel": "Swap panel",

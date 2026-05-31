@@ -15,15 +15,15 @@
     "canonical": "/vauxhall/adam"
   },
   "assets": {
-    "mainImage": "/images/brands/vauxhall/models/vauxhall-adam-main.webp",
-    "smallImage": "/images/brands/vauxhall/models/vauxhall-adam-small.webp",
-    "heroBg": "/images/brands/vauxhall/models/vauxhall-adam-main.webp",
+    "mainImage": "/images/brands/vauxhall/models/vauxhall-adam-model-card.png",
+    "smallImage": "/images/brands/vauxhall/models/vauxhall-adam-model-card.png",
+    "heroBg": "/images/brands/vauxhall/models/vauxhall-adam-model-card.png",
     "howItWorksBg": "/images/brands/vauxhall/brand/vauxhall-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/vauxhall/brand/vauxhall-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/vauxhall/brand/vauxhall-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/vauxhall/brand/vauxhall-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/vauxhall/brand/vauxhall-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/vauxhall/models/vauxhall-adam-main.webp"
+    "ctaImage": "/images/brands/vauxhall/models/vauxhall-adam-model-card.png"
   },
   "sections": {
     "hero": {
@@ -38,7 +38,7 @@
       ],
       "ctaLinkText": "Get Free Vauxhall Adam Engine Quotes →",
       "supportingText": "Get tailored Vauxhall Adam engine quotes from vetted UK specialists.",
-      "ticker": "● Instant Quotes · No Obligation · 100% Free · Reconditioned · Rebuilt · Used · Supply & Fit Available · UK-Wide Network ═══════════════════════════════════════",
+      "ticker": "● Instant Quotes · No Obligation · 100% Free · Reconditioned · Rebuilt · Used · Supply & Fit Available · UK-Wide Network",
       "form": {
         "heading": "Find Your Vauxhall Adam Engine",
         "subtitle": "Enter your registration number to compare Vauxhall Adam engine options.",
@@ -1545,11 +1545,79 @@
     },
     "fuelTypes": {
       "tag": "Fuel Type",
-      "h2": "",
+      "h2": "Vauxhall Adam Engines by Fuel Type",
       "intro": "",
-      "items": [],
-      "closing": "",
-      "headingLines": [],
+      "items": [
+        {
+          "title": "Vauxhall Adam Petrol Engines",
+          "description": "All Vauxhall Adam models were petrol-only, with naturally aspirated and turbocharged options across 1.0L, 1.2L, 1.4L and 1.6L displacements.",
+          "descriptor": "All Vauxhall Adam models were petrol-only, with naturally aspirated and turbocharged options across 1.0L, 1.2L, 1.4L and 1.6L displacements.",
+          "familiesLabel": "Common Vauxhall Adam Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
+          "families": [
+            "A14XER - most common replacement engine (Jam/Glam/Slam), timing chain tensioner risk",
+            "A14NET - turbo performance unit (S/Slam), carbon buildup on direct injection",
+            "B10XER - small turbo (Rocks/Rocks Air), PCV valve and seal issues",
+            "B12XEL/B12NET - ECOTEC efficiency units, oil pickup and carbon concerns"
+          ],
+          "foundIn": [
+            "First generation (2012-2019) - all petrol variants"
+          ],
+          "knownFor": [
+            "Strong city-car fuel economy and low insurance groups",
+            "A14XER timing chain tensioner failures between 60k-100k miles",
+            "Direct injection turbo models prone to inlet valve carbon buildup",
+            "High UK replacement demand on Jam, Glam and S variants"
+          ],
+          "typicalModels": [
+            "Jam",
+            "Glam",
+            "Slam",
+            "S",
+            "Rocks",
+            "Rocks Air",
+            "Grand Slam"
+          ],
+          "importantNotes": [],
+          "cta": "Compare Vauxhall Adam Petrol engine prices"
+        },
+        {
+          "title": "Vauxhall Adam LPG Bi-Fuel Engines",
+          "description": "Select Adam variants were available with factory LPG bi-fuel systems, offering lower running costs alongside petrol capability.",
+          "descriptor": "Select Adam variants were available with factory LPG bi-fuel systems, offering lower running costs alongside petrol capability.",
+          "familiesLabel": "Vauxhall Adam LPG Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
+          "families": [
+            "A14XFL - 1.4L bi-fuel for Jam/Glam LPG variants",
+            "Z10XEP - 1.0L turbo LPG for Rocks Air (rare)",
+            "Factory-fitted LPG tank and injection system alongside standard petrol components",
+            "Driver-selectable fuel mode via dashboard switch; automatic fallback to petrol",
+            "ECU manages ignition timing and fuel mapping for both fuel types"
+          ],
+          "foundIn": [
+            "Jam LPG, Glam LPG (select markets, 2013-2017)",
+            "Rocks Air LPG (very limited, 2016-2019)"
+          ],
+          "knownFor": [],
+          "typicalModels": [],
+          "importantNotes": [
+            "LPG variants require specialist knowledge for engine replacement",
+            "Valve seat recession risk on LPG mode requires hardened seats",
+            "Availability of rebuilt LPG-capable engines is more limited than standard petrol"
+          ],
+          "cta": "Enquire about Vauxhall Adam LPG engine availability"
+        }
+      ],
+      "closing": "Not sure which fuel type your Vauxhall Adam has? Enter your registration number above to instantly identify your engine code, fuel system and compatible replacement options - all backed by a minimum 12‑month unlimited mileage warranty from UK Vauxhall Adam specialists.",
+      "headingLines": [
+        "Vauxhall Adam Engines by Fuel Type"
+      ],
       "ui": {
         "swapLabel": "Swap panel",
         "familiesLabel": "Common Engine Families",

@@ -15,15 +15,15 @@
     "canonical": "/volkswagen/pointer"
   },
   "assets": {
-    "mainImage": "/images/brands/volkswagen/models/volkswagen-pointer-main.webp",
-    "smallImage": "/images/brands/volkswagen/models/volkswagen-pointer-small.webp",
-    "heroBg": "/images/brands/volkswagen/models/volkswagen-pointer-main.webp",
+    "mainImage": "/images/brands/volkswagen/models/volkswagen-pointer-model-card.png",
+    "smallImage": "/images/brands/volkswagen/models/volkswagen-pointer-model-card.png",
+    "heroBg": "/images/brands/volkswagen/models/volkswagen-pointer-model-card.png",
     "howItWorksBg": "/images/brands/volkswagen/brand/volkswagen-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/volkswagen/brand/volkswagen-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/volkswagen/brand/volkswagen-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/volkswagen/brand/volkswagen-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/volkswagen/brand/volkswagen-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/volkswagen/models/volkswagen-pointer-main.webp"
+    "ctaImage": "/images/brands/volkswagen/models/volkswagen-pointer-model-card.png"
   },
   "sections": {
     "hero": {
@@ -38,7 +38,7 @@
       ],
       "ctaLinkText": "Get Free Volkswagen Pointer Engine Quotes →",
       "supportingText": "Get tailored Volkswagen Pointer engine quotes from vetted UK specialists.",
-      "ticker": "● Instant Quotes · No Obligation · 100% Free · Reconditioned · Rebuilt · Used · Supply & Fit Available · UK-Wide Network ═══════════════════════════════════════",
+      "ticker": "● Instant Quotes · No Obligation · 100% Free · Reconditioned · Rebuilt · Used · Supply & Fit Available · UK-Wide Network",
       "form": {
         "heading": "Find Your Volkswagen Pointer Engine",
         "subtitle": "Enter your registration number to compare Volkswagen Pointer engine options.",
@@ -1160,11 +1160,76 @@
     },
     "fuelTypes": {
       "tag": "Fuel Type",
-      "h2": "",
+      "h2": "Volkswagen Pointer Engines by Fuel Type",
       "intro": "",
-      "items": [],
-      "closing": "",
-      "headingLines": [],
+      "items": [
+        {
+          "title": "Volkswagen Pointer Petrol Engines",
+          "description": "Petrol engines dominated the Pointer range across both Autolatina (1994-1996) and VW-era (1995-2007) production, with 1.6L and 1.8L units most common among UK imports.",
+          "descriptor": "Petrol engines dominated the Pointer range across both Autolatina (1994-1996) and VW-era (1995-2007) production, with 1.6L and 1.8L units most common among UK imports.",
+          "familiesLabel": "Common Volkswagen Pointer Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
+          "families": [
+            "AEE/AFT - 1.6L petrol (100-105hp), head gasket and warped head risks on 6K chassis",
+            "ADZ/AP-1800 - 1.8L petrol (89-90hp), oil consumption and MAP sensor faults",
+            "AP-2000 - 2.0L GTI performance unit (115hp), rare Autolatina engine"
+          ],
+          "foundIn": [
+            "Autolatina Pointer (1994-1996) - AP-1600, AP-1800, AP-2000",
+            "VW-era Pointer 6K chassis (1995-2007) - AEE, AFT, ADZ"
+          ],
+          "knownFor": [
+            "Head gasket failure on 1.6L AEE/AFT engines between 60k-100k miles",
+            "Oil consumption on 1.8L ADZ units from defective piston rings",
+            "Magneti Marelli injection faults causing unstable idle on late 1.8L models",
+            "High UK replacement demand on imported 1.6L and 1.8L variants"
+          ],
+          "typicalModels": [
+            "CLi 1.6 / 1.8",
+            "City 1.6",
+            "S 1.8",
+            "Sport 1.8",
+            "GTI 2.0",
+            "Trend 1.6"
+          ],
+          "importantNotes": [],
+          "cta": "Compare Volkswagen Pointer Petrol engine prices"
+        },
+        {
+          "title": "Volkswagen Pointer Diesel Engines",
+          "description": "The 1.9L TDI diesel was a rare but sought-after option on UK-import Pointers, valued for economy but requiring specialist knowledge for replacement.",
+          "descriptor": "The 1.9L TDI diesel was a rare but sought-after option on UK-import Pointers, valued for economy but requiring specialist knowledge for replacement.",
+          "familiesLabel": "Common Volkswagen Pointer Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
+          "families": [
+            "1Z - 1.9L TDI diesel (90hp), VE pump injection, injector seal degradation issues"
+          ],
+          "foundIn": [
+            "VW-era Pointer 6K chassis (1997-2001) - 1Z TDI"
+          ],
+          "knownFor": [
+            "Excellent motorway fuel economy for import owners",
+            "Injector seal washer failure causing hard cold starts",
+            "VE pump wear requiring specialist diesel injection knowledge",
+            "Limited UK availability driving higher replacement costs"
+          ],
+          "typicalModels": [
+            "TDI 1.9"
+          ],
+          "importantNotes": [],
+          "cta": "Get quotes for Volkswagen Pointer Diesel replacement engines"
+        }
+      ],
+      "closing": "Not sure which fuel type your Volkswagen Pointer has? Enter your registration number above to instantly identify your engine code, fuel system and compatible replacement options - all backed by a minimum 12‑month unlimited mileage warranty from UK Volkswagen Pointer specialists.",
+      "headingLines": [
+        "Volkswagen Pointer Engines by Fuel Type"
+      ],
       "ui": {
         "swapLabel": "Swap panel",
         "familiesLabel": "Common Engine Families",

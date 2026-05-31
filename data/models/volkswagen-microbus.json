@@ -15,15 +15,15 @@
     "canonical": "/volkswagen/microbus"
   },
   "assets": {
-    "mainImage": "/images/brands/volkswagen/models/volkswagen-microbus-main.webp",
-    "smallImage": "/images/brands/volkswagen/models/volkswagen-microbus-small.webp",
-    "heroBg": "/images/brands/volkswagen/models/volkswagen-microbus-main.webp",
+    "mainImage": "/images/brands/volkswagen/models/volkswagen-microbus-model-card.png",
+    "smallImage": "/images/brands/volkswagen/models/volkswagen-microbus-model-card.png",
+    "heroBg": "/images/brands/volkswagen/models/volkswagen-microbus-model-card.png",
     "howItWorksBg": "/images/brands/volkswagen/brand/volkswagen-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/volkswagen/brand/volkswagen-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/volkswagen/brand/volkswagen-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/volkswagen/brand/volkswagen-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/volkswagen/brand/volkswagen-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/volkswagen/models/volkswagen-microbus-main.webp"
+    "ctaImage": "/images/brands/volkswagen/models/volkswagen-microbus-model-card.png"
   },
   "sections": {
     "hero": {
@@ -38,7 +38,7 @@
       ],
       "ctaLinkText": "Get Free Volkswagen Microbus Engine Quotes →",
       "supportingText": "Get tailored Volkswagen Microbus engine quotes from vetted UK specialists.",
-      "ticker": "● Instant Quotes · No Obligation · 100% Free · Reconditioned · Rebuilt · Used · Supply & Fit Available · UK-Wide Network ═══════════════════════════════════════",
+      "ticker": "● Instant Quotes · No Obligation · 100% Free · Reconditioned · Rebuilt · Used · Supply & Fit Available · UK-Wide Network",
       "form": {
         "heading": "Find Your Volkswagen Microbus Engine",
         "subtitle": "Enter your registration number to compare Volkswagen Microbus engine options.",
@@ -110,8 +110,7 @@
               "Your Precise Model - from Splitscreen 1200cc, Bay Window 1500cc, Bay Window 1800cc, T25 1900cc to T25 2100cc",
               "Your Engine Code - B, D, E, F, H, L, AD, AS, CU, CV, CT, DH, DJ, MV and more",
               "Vehicle Specs Check - fuel type, engine size, year, variant - all verified instantly",
-              "No paperwork, no guesswork, 100% free.",
-              "═══════════════════════════════════════"
+              "No paperwork, no guesswork, 100% free."
             ]
           }
         },
@@ -395,14 +394,6 @@
             "volkswagen microbus panel van commercial",
             "volkswagen microbus panel van commercial engine"
           ]
-        },
-        {
-          "key": "-engine",
-          "label": "",
-          "matchers": [
-            "",
-            "engine"
-          ]
         }
       ],
       "ui": {
@@ -661,18 +652,6 @@
           "power": "66-70hp",
           "years": "1972-1979",
           "image": ""
-        },
-        {
-          "h3": "",
-          "slug": "-engine",
-          "subtitle": "The classic Volkswagen Microbus air-cooled engines are beloved but require specialist care. The Type 1 (B/D/E/F/H/L), Type 4 (AD/AS/CU/CV) and Wasserboxer (CT/DH/DJ/MV) families each have known failure patterns. Every rebuilt engine supplied through EngineMarket includes upgraded internal components designed to address the typical failure point - plus a minimum 12‑month unlimited mileage warranty.",
-          "priceRange": "",
-          "cta": "H4: Rear Main Seal Oil Leak - Why Type 1 Air-Cooled Engines Lose Oil",
-          "engineCodes": [],
-          "fuel": "",
-          "power": "",
-          "years": "",
-          "image": ""
         }
       ],
       "directory": {
@@ -709,7 +688,7 @@
         ],
         "label": "Variant Directory"
       },
-      "closing": "",
+      "closing": "Not sure which variant your Volkswagen Microbus is? Enter your registration number above - we'll identify the exact sub‑model, engine code and compatible replacement options instantly.",
       "engineGuide": {
         "tag": "Engine Codes",
         "h2": "Volkswagen Microbus Engine Codes - Full Technical Specifications & Replacement Guide",
@@ -830,10 +809,22 @@
                 "compatibleVariants": [
                   "Splitscreen 1600cc Dual Port, Bay Window 1600cc, Westfalia 1600cc"
                 ],
-                "commonFailures": [
-                  "Dual-port carburettor synchronization issues",
-                  "Valve guide wear on units exceeding 80k miles"
-                ],
+                "commonFailures": [],
+                "avgRebuiltPrice": "",
+                "cta": "",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              },
+              {
+                "code": "Dual",
+                "title": "port carburettor synchronization issues",
+                "familyHeading": "Type 1 Air-Cooled Family (1950-1971)",
+                "history": "",
+                "fuel": "",
+                "size": "",
+                "power": "",
+                "years": "",
+                "compatibleVariants": [],
+                "commonFailures": [],
                 "avgRebuiltPrice": "£2,100 - £3,200",
                 "cta": "Get quotes for L Volkswagen Microbus engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1117,6 +1108,18 @@
               "size": "1.6L",
               "power": "50 hp",
               "compatibleModels": "Splitscreen 1600cc Dual Port, Bay Window 1600cc, Westfalia 1600cc",
+              "avgRebuiltPrice": "",
+              "cta": "",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            },
+            {
+              "code": "Dual",
+              "title": "port carburettor synchronization issues",
+              "familyHeading": "Type 1 Air-Cooled Family (1950-1971)",
+              "fuel": "",
+              "size": "",
+              "power": "",
+              "compatibleModels": "",
               "avgRebuiltPrice": "£2,100 - £3,200",
               "cta": "Get quotes for L Volkswagen Microbus engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1475,7 +1478,7 @@
           "description": "Complete engine replacement service including removal, fitting, tuning and road test by UK air-cooled specialist garages.",
           "frontDescription": "Complete engine replacement service including removal, fitting, tuning and road test by UK air-cooled specialist garages.",
           "frontDisclaimer": "Labour cost varies by location and engine complexity.",
-          "backDescription": "Supply & fit removes the hassle of sourcing a separate fitter. Our network includes specialists experienced with Type 1, Type 4 and Wasserboxer installations across the UK. ═══════════════════════════════════════",
+          "backDescription": "Supply & fit removes the hassle of sourcing a separate fitter. Our network includes specialists experienced with Type 1, Type 4 and Wasserboxer installations across the UK.",
           "backBullets": [
             "Mobile fitting available in many regions",
             "Post-installation tuning and road test included",
@@ -1668,7 +1671,7 @@
             },
             {
               "title": "Volkswagen Microbus 2.1L Petrol Engines",
-              "description": "The ultimate factory Microbus engine, the 2.1L Wasserboxer FI (code MV) powered late T25 models from 1989-1992. Its 95hp output and refined fuel injection deliver the best performance, but complexity demands specialist servicing. Not sure which engine size your Volkswagen Microbus needs? Enter your registration number above - we'll identify the exact displacement, engine code and compatible replacement options instantly. All engines supplied through EngineMarket include a minimum 12‑month unlimited mileage warranty from UK Volkswagen Microbus specialists. ═══════════════════════════════════════",
+              "description": "The ultimate factory Microbus engine, the 2.1L Wasserboxer FI (code MV) powered late T25 models from 1989-1992. Its 95hp output and refined fuel injection deliver the best performance, but complexity demands specialist servicing. Not sure which engine size your Volkswagen Microbus needs? Enter your registration number above - we'll identify the exact displacement, engine code and compatible replacement options instantly. All engines supplied through EngineMarket include a minimum 12‑month unlimited mileage warranty from UK Volkswagen Microbus specialists.",
               "engineCodes": [
                 "MV"
               ],

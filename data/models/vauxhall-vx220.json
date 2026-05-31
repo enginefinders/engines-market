@@ -15,15 +15,15 @@
     "canonical": "/vauxhall/vx220"
   },
   "assets": {
-    "mainImage": "/images/brands/vauxhall/models/vauxhall-vx220-main.webp",
-    "smallImage": "/images/brands/vauxhall/models/vauxhall-vx220-small.webp",
-    "heroBg": "/images/brands/vauxhall/models/vauxhall-vx220-main.webp",
+    "mainImage": "/images/brands/vauxhall/models/vauxhall-vx220-model-card.png",
+    "smallImage": "/images/brands/vauxhall/models/vauxhall-vx220-model-card.png",
+    "heroBg": "/images/brands/vauxhall/models/vauxhall-vx220-model-card.png",
     "howItWorksBg": "/images/brands/vauxhall/brand/vauxhall-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/vauxhall/brand/vauxhall-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/vauxhall/brand/vauxhall-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/vauxhall/brand/vauxhall-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/vauxhall/brand/vauxhall-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/vauxhall/models/vauxhall-vx220-main.webp"
+    "ctaImage": "/images/brands/vauxhall/models/vauxhall-vx220-model-card.png"
   },
   "sections": {
     "hero": {
@@ -38,7 +38,7 @@
       ],
       "ctaLinkText": "Get Free Vauxhall VX220 Engine Quotes →",
       "supportingText": "Get tailored Vauxhall VX220 engine quotes from vetted UK specialists.",
-      "ticker": "● Instant Quotes · No Obligation · 100% Free · Reconditioned · Rebuilt · Used · Supply & Fit Available · UK-Wide Network ═══════════════════════════════════════",
+      "ticker": "● Instant Quotes · No Obligation · 100% Free · Reconditioned · Rebuilt · Used · Supply & Fit Available · UK-Wide Network",
       "form": {
         "heading": "Find Your Vauxhall VX220 Engine",
         "subtitle": "Enter your registration number to compare Vauxhall VX220 engine options.",
@@ -1129,11 +1129,44 @@
     },
     "fuelTypes": {
       "tag": "Fuel Type",
-      "h2": "",
-      "intro": "",
-      "items": [],
-      "closing": "",
-      "headingLines": [],
+      "h2": "Vauxhall VX220 Engines by Fuel Type",
+      "intro": "Choose your Vauxhall VX220 engine by fuel type to compare realistic replacement prices, known issues, and compatible UK supply options - from the 2.2 naturally aspirated to the 2.0 Turbo performance unit.",
+      "items": [
+        {
+          "title": "Vauxhall VX220 Petrol Engines",
+          "description": "All VX220 engines are petrol-only, spanning the naturally aspirated 2.2L Z22SE (2000-2006) and turbocharged 2.0L Z20LET (2004-2006), both demanding specialist mid-engine expertise for replacement.",
+          "descriptor": "All VX220 engines are petrol-only, spanning the naturally aspirated 2.2L Z22SE (2000-2006) and turbocharged 2.0L Z20LET (2004-2006), both demanding specialist mid-engine expertise for replacement.",
+          "familiesLabel": "Timing chain tensioner issues affect both engine codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
+          "families": [
+            "Z22SE - 2.2L NA, 147hp, timing chain tensioner vulnerability (2000-2006)",
+            "Z20LET - 2.0L Turbo, 200hp, high-performance enthusiast favourite (2004-2006)",
+            "Appreciating collector values justify quality rebuilt investments"
+          ],
+          "foundIn": [
+            "VX220 Mk1 (2000-2004) - Z22SE only",
+            "VX220 Mk2 Facelift (2004-2006) - Z22SE and Z20LET"
+          ],
+          "knownFor": [
+            "Lightweight mid-engined layout demands specialist extraction knowledge"
+          ],
+          "typicalModels": [
+            "VX220 2.2",
+            "VX220 2.2 SE",
+            "VX220 2.0 Turbo",
+            "VX220 2.0 Turbo SE"
+          ],
+          "importantNotes": [],
+          "cta": "Compare Vauxhall VX220 Petrol engine prices"
+        }
+      ],
+      "closing": "Not sure which fuel type your Vauxhall VX220 has? Enter your registration number above to instantly identify your engine code, fuel system and compatible replacement options - all backed by a 12‑month unlimited mileage warranty from UK Vauxhall VX220 specialists.",
+      "headingLines": [
+        "Vauxhall VX220 Engines by Fuel Type"
+      ],
       "ui": {
         "swapLabel": "Swap panel",
         "familiesLabel": "Common Engine Families",

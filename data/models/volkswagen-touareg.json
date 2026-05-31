@@ -15,15 +15,15 @@
     "canonical": "/volkswagen/touareg"
   },
   "assets": {
-    "mainImage": "/images/brands/volkswagen/models/volkswagen-touareg-main.webp",
-    "smallImage": "/images/brands/volkswagen/models/volkswagen-touareg-small.webp",
-    "heroBg": "/images/brands/volkswagen/models/volkswagen-touareg-main.webp",
+    "mainImage": "/images/brands/volkswagen/models/volkswagen-touareg-model-card.png",
+    "smallImage": "/images/brands/volkswagen/models/volkswagen-touareg-model-card.png",
+    "heroBg": "/images/brands/volkswagen/models/volkswagen-touareg-model-card.png",
     "howItWorksBg": "/images/brands/volkswagen/brand/volkswagen-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/volkswagen/brand/volkswagen-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/volkswagen/brand/volkswagen-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/volkswagen/brand/volkswagen-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/volkswagen/brand/volkswagen-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/volkswagen/models/volkswagen-touareg-main.webp"
+    "ctaImage": "/images/brands/volkswagen/models/volkswagen-touareg-model-card.png"
   },
   "sections": {
     "hero": {
@@ -38,7 +38,7 @@
       ],
       "ctaLinkText": "Get Free Volkswagen Touareg Engine Quotes →",
       "supportingText": "Get tailored Volkswagen Touareg engine quotes from vetted UK specialists.",
-      "ticker": "● Instant Quotes · No Obligation · 100% Free · Reconditioned · Rebuilt · Used · Supply & Fit Available · UK-Wide Network ═══════════════════════════════════════",
+      "ticker": "● Instant Quotes · No Obligation · 100% Free · Reconditioned · Rebuilt · Used · Supply & Fit Available · UK-Wide Network",
       "form": {
         "heading": "Find Your Volkswagen Touareg Engine",
         "subtitle": "Enter your registration number to compare Volkswagen Touareg engine options.",
@@ -722,9 +722,22 @@
                 "size": "3.0 Litre",
                 "power": "262 hp",
                 "years": "2014-2018",
-                "compatibleVariants": [
-                  "R-Line, Executive, Altitude"
-                ],
+                "compatibleVariants": [],
+                "commonFailures": [],
+                "avgRebuiltPrice": "",
+                "cta": "",
+                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+              },
+              {
+                "code": "R",
+                "title": "Line, Executive, Altitude",
+                "familyHeading": "V6 TDI Series (2004-Present)",
+                "history": "",
+                "fuel": "",
+                "size": "",
+                "power": "",
+                "years": "",
+                "compatibleVariants": [],
                 "commonFailures": [
                   "Piezo injector failure (costly replacement)",
                   "Timing chain rattle pre-failure",
@@ -732,7 +745,7 @@
                 ],
                 "avgRebuiltPrice": "£4,100 - £8,500",
                 "cta": "Get quotes for CASC Volkswagen Touareg engine replacement",
-                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
                 "code": "CKVB",
@@ -743,9 +756,22 @@
                 "size": "3.0 Litre",
                 "power": "262 hp",
                 "years": "2016-2018",
-                "compatibleVariants": [
-                  "R-Line, Executive, Off-Road Package"
-                ],
+                "compatibleVariants": [],
+                "commonFailures": [],
+                "avgRebuiltPrice": "",
+                "cta": "",
+                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+              },
+              {
+                "code": "R",
+                "title": "Line, Executive, Off-Road Package",
+                "familyHeading": "V6 TDI Series (2004-Present)",
+                "history": "",
+                "fuel": "",
+                "size": "",
+                "power": "",
+                "years": "",
+                "compatibleVariants": [],
                 "commonFailures": [
                   "Turbo wastegate sticking",
                   "EGR valve carbon buildup",
@@ -753,7 +779,7 @@
                 ],
                 "avgRebuiltPrice": "£4,000 - £8,200",
                 "cta": "Get quotes for CKVB Volkswagen Touareg engine replacement",
-                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
                 "code": "DCXA",
@@ -785,17 +811,43 @@
                 "size": "3.0 Litre",
                 "power": "381 hp (combined)",
                 "years": "2020-present",
-                "compatibleVariants": [
-                  "R-Line Hybrid, Executive Hybrid, eHybrid"
-                ],
+                "compatibleVariants": [],
+                "commonFailures": [],
+                "avgRebuiltPrice": "",
+                "cta": "",
+                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+              },
+              {
+                "code": "R",
+                "title": "Line Hybrid, Executive Hybrid, eHybrid",
+                "familyHeading": "V6 TDI Series (2004-Present)",
+                "history": "",
+                "fuel": "",
+                "size": "",
+                "power": "",
+                "years": "",
+                "compatibleVariants": [],
                 "commonFailures": [
-                  "Hybrid battery thermal management",
-                  "High-voltage connector corrosion",
-                  "Turbocharger oil feed restriction"
+                  "Hybrid battery thermal management"
                 ],
+                "avgRebuiltPrice": "",
+                "cta": "",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              },
+              {
+                "code": "High",
+                "title": "voltage connector corrosion",
+                "familyHeading": "V6 TDI Series (2004-Present)",
+                "history": "",
+                "fuel": "",
+                "size": "",
+                "power": "",
+                "years": "",
+                "compatibleVariants": [],
+                "commonFailures": [],
                 "avgRebuiltPrice": "£5,800 - £11,500",
                 "cta": "Get quotes for DCYC Volkswagen Touareg engine replacement",
-                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
                 "code": "BUN",
@@ -869,17 +921,58 @@
                 "size": "4.2 Litre",
                 "power": "381 hp",
                 "years": "2014-2018",
-                "compatibleVariants": [
-                  "R-Line V8, Executive V8, Off-Road V8"
-                ],
+                "compatibleVariants": [],
+                "commonFailures": [],
+                "avgRebuiltPrice": "",
+                "cta": "",
+                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+              },
+              {
+                "code": "R",
+                "title": "Line V8, Executive V8, Off-Road V8",
+                "familyHeading": "V8 TDI Series (2003-2018)",
+                "history": "",
+                "fuel": "",
+                "size": "",
+                "power": "",
+                "years": "",
+                "compatibleVariants": [],
                 "commonFailures": [
-                  "Intercooler pipe splitting (boost pressure loss)",
-                  "High-pressure fuel pump wear",
-                  "Dual-mass flywheel chatter"
+                  "Intercooler pipe splitting (boost pressure loss)"
                 ],
+                "avgRebuiltPrice": "",
+                "cta": "",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              },
+              {
+                "code": "High",
+                "title": "pressure fuel pump wear",
+                "familyHeading": "V8 TDI Series (2003-2018)",
+                "history": "",
+                "fuel": "",
+                "size": "",
+                "power": "",
+                "years": "",
+                "compatibleVariants": [],
+                "commonFailures": [],
+                "avgRebuiltPrice": "",
+                "cta": "",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              },
+              {
+                "code": "Dual",
+                "title": "mass flywheel chatter",
+                "familyHeading": "V8 TDI Series (2003-2018)",
+                "history": "",
+                "fuel": "",
+                "size": "",
+                "power": "",
+                "years": "",
+                "compatibleVariants": [],
+                "commonFailures": [],
                 "avgRebuiltPrice": "£6,200 - £12,000",
                 "cta": "Get quotes for CJTB Volkswagen Touareg engine replacement",
-                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
                 "code": "AYH",
@@ -941,10 +1034,23 @@
                   "SE, Altitude, Executive"
                 ],
                 "commonFailures": [
-                  "Carbon buildup on intake valves",
-                  "High-pressure fuel pump failure",
-                  "Coolant leak at thermostat housing"
+                  "Carbon buildup on intake valves"
                 ],
+                "avgRebuiltPrice": "",
+                "cta": "",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              },
+              {
+                "code": "High",
+                "title": "pressure fuel pump failure",
+                "familyHeading": "V6 FSI Series (2002-2015)",
+                "history": "",
+                "fuel": "",
+                "size": "",
+                "power": "",
+                "years": "",
+                "compatibleVariants": [],
+                "commonFailures": [],
                 "avgRebuiltPrice": "£3,100 - £7,200",
                 "cta": "Get quotes for CGNA Volkswagen Touareg engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1012,10 +1118,22 @@
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "262 hp",
-              "compatibleModels": "R-Line, Executive, Altitude",
+              "compatibleModels": "",
+              "avgRebuiltPrice": "",
+              "cta": "",
+              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+            },
+            {
+              "code": "R",
+              "title": "Line, Executive, Altitude",
+              "familyHeading": "V6 TDI Series (2004-Present)",
+              "fuel": "",
+              "size": "",
+              "power": "",
+              "compatibleModels": "",
               "avgRebuiltPrice": "£4,100 - £8,500",
               "cta": "Get quotes for CASC Volkswagen Touareg engine replacement",
-              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
               "code": "CKVB",
@@ -1024,10 +1142,22 @@
               "fuel": "Diesel",
               "size": "3.0L",
               "power": "262 hp",
-              "compatibleModels": "R-Line, Executive, Off-Road Package",
+              "compatibleModels": "",
+              "avgRebuiltPrice": "",
+              "cta": "",
+              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+            },
+            {
+              "code": "R",
+              "title": "Line, Executive, Off-Road Package",
+              "familyHeading": "V6 TDI Series (2004-Present)",
+              "fuel": "",
+              "size": "",
+              "power": "",
+              "compatibleModels": "",
               "avgRebuiltPrice": "£4,000 - £8,200",
               "cta": "Get quotes for CKVB Volkswagen Touareg engine replacement",
-              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
               "code": "DCXA",
@@ -1048,10 +1178,34 @@
               "fuel": "Diesel Hybrid",
               "size": "3.0L",
               "power": "381 hp (combined)",
-              "compatibleModels": "R-Line Hybrid, Executive Hybrid, eHybrid",
+              "compatibleModels": "",
+              "avgRebuiltPrice": "",
+              "cta": "",
+              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+            },
+            {
+              "code": "R",
+              "title": "Line Hybrid, Executive Hybrid, eHybrid",
+              "familyHeading": "V6 TDI Series (2004-Present)",
+              "fuel": "",
+              "size": "",
+              "power": "",
+              "compatibleModels": "",
+              "avgRebuiltPrice": "",
+              "cta": "",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            },
+            {
+              "code": "High",
+              "title": "voltage connector corrosion",
+              "familyHeading": "V6 TDI Series (2004-Present)",
+              "fuel": "",
+              "size": "",
+              "power": "",
+              "compatibleModels": "",
               "avgRebuiltPrice": "£5,800 - £11,500",
               "cta": "Get quotes for DCYC Volkswagen Touareg engine replacement",
-              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
               "code": "BUN",
@@ -1096,10 +1250,46 @@
               "fuel": "Diesel",
               "size": "4.2L",
               "power": "381 hp",
-              "compatibleModels": "R-Line V8, Executive V8, Off-Road V8",
+              "compatibleModels": "",
+              "avgRebuiltPrice": "",
+              "cta": "",
+              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+            },
+            {
+              "code": "R",
+              "title": "Line V8, Executive V8, Off-Road V8",
+              "familyHeading": "V8 TDI Series (2003-2018)",
+              "fuel": "",
+              "size": "",
+              "power": "",
+              "compatibleModels": "",
+              "avgRebuiltPrice": "",
+              "cta": "",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            },
+            {
+              "code": "High",
+              "title": "pressure fuel pump wear",
+              "familyHeading": "V8 TDI Series (2003-2018)",
+              "fuel": "",
+              "size": "",
+              "power": "",
+              "compatibleModels": "",
+              "avgRebuiltPrice": "",
+              "cta": "",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            },
+            {
+              "code": "Dual",
+              "title": "mass flywheel chatter",
+              "familyHeading": "V8 TDI Series (2003-2018)",
+              "fuel": "",
+              "size": "",
+              "power": "",
+              "compatibleModels": "",
               "avgRebuiltPrice": "£6,200 - £12,000",
               "cta": "Get quotes for CJTB Volkswagen Touareg engine replacement",
-              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
               "code": "AYH",
@@ -1140,6 +1330,18 @@
               "size": "3.6L",
               "power": "280 hp",
               "compatibleModels": "SE, Altitude, Executive",
+              "avgRebuiltPrice": "",
+              "cta": "",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            },
+            {
+              "code": "High",
+              "title": "pressure fuel pump failure",
+              "familyHeading": "V6 FSI Series (2002-2015)",
+              "fuel": "",
+              "size": "",
+              "power": "",
+              "compatibleModels": "",
               "avgRebuiltPrice": "£3,100 - £7,200",
               "cta": "Get quotes for CGNA Volkswagen Touareg engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1612,90 +1814,10 @@
       }
     },
     "fuelTypes": {
-      "tag": "Engine Codes",
-      "h2": "Volkswagen Touareg Engine Codes - Full Technical Specifications & Replacement Guide",
-      "intro": "The Volkswagen Touareg's premium engineering demands specialist attention when engine problems arise. EngineMarket connects you with UK Volkswagen Touareg specialists who understand 4Motion integration, timing chain vulnerabilities, and emissions system complexity. Every rebuilt engine includes upgraded components addressing known failure points, plus a minimum 12‑month unlimited mileage warranty and nationwide delivery. Compare prices from trusted specialists today and preserve your luxury SUV investment without the main dealer premium.",
+      "tag": "Volkswagen Touareg Engines Fuel Type",
+      "h2": "Volkswagen Touareg Engines by Fuel Type",
+      "intro": "",
       "items": [
-        {
-          "title": "Diesel Engines",
-          "description": "",
-          "descriptor": "",
-          "familiesLabel": "Common Diesel Engine Families",
-          "foundInLabel": "",
-          "knownForLabel": "",
-          "modelsLabel": "",
-          "notesLabel": "",
-          "families": [],
-          "foundIn": [],
-          "knownFor": [],
-          "typicalModels": [],
-          "importantNotes": [],
-          "cta": "Get quotes for AYH Volkswagen Touareg engine replacement"
-        },
-        {
-          "title": "Petrol Engines",
-          "description": "",
-          "descriptor": "",
-          "familiesLabel": "Intro (1 sentence): Every displacement fitted to the Volkswagen Touareg is listed below, with compatible engine codes, production years and common failure notes to help you identify the right replacement.",
-          "foundInLabel": "",
-          "knownForLabel": "",
-          "modelsLabel": "",
-          "notesLabel": "",
-          "families": [],
-          "foundIn": [],
-          "knownFor": [],
-          "typicalModels": [],
-          "importantNotes": [],
-          "cta": "Get quotes for CGNA Volkswagen Touareg engine replacement"
-        },
-        {
-          "title": "Volkswagen Touareg Diesel Engine Sizes",
-          "description": "",
-          "descriptor": "",
-          "familiesLabel": "Common Volkswagen Touareg Diesel Engine Sizes Engine Families",
-          "foundInLabel": "",
-          "knownForLabel": "",
-          "modelsLabel": "",
-          "notesLabel": "",
-          "families": [],
-          "foundIn": [],
-          "knownFor": [],
-          "typicalModels": [],
-          "importantNotes": [],
-          "cta": "Get quotes for Volkswagen Touareg 5.0L diesel engines"
-        },
-        {
-          "title": "Volkswagen Touareg Petrol Engine Sizes",
-          "description": "",
-          "descriptor": "",
-          "familiesLabel": "Common Volkswagen Touareg Petrol Engine Sizes Engine Families",
-          "foundInLabel": "",
-          "knownForLabel": "",
-          "modelsLabel": "",
-          "notesLabel": "",
-          "families": [],
-          "foundIn": [],
-          "knownFor": [],
-          "typicalModels": [],
-          "importantNotes": [],
-          "cta": "Compare Volkswagen Touareg 3.6L petrol engine prices"
-        },
-        {
-          "title": "Volkswagen Touareg Hybrid / MHEV Engine Sizes",
-          "description": "",
-          "descriptor": "",
-          "familiesLabel": "Common Volkswagen Touareg Hybrid / MHEV Engine Sizes Engine Families",
-          "foundInLabel": "",
-          "knownForLabel": "",
-          "modelsLabel": "",
-          "notesLabel": "",
-          "families": [],
-          "foundIn": [],
-          "knownFor": [],
-          "typicalModels": [],
-          "importantNotes": [],
-          "cta": "Enquire about Volkswagen Touareg 3.0L hybrid engine availability"
-        },
         {
           "title": "Volkswagen Touareg Diesel Engines",
           "description": "Diesel V6 and V8 TDI engines dominate the Touareg range across all generations, prized for torque, towing capability and long-distance refinement, with the 3.0L V6 TDI driving most replacement enquiries.",
@@ -1794,10 +1916,9 @@
           "cta": "Enquire about Volkswagen Touareg Hybrid engine availability"
         }
       ],
-      "closing": "Can't find your engine code? Enter your registration number above - we'll instantly identify the exact unit, its technical specifications, and live replacement prices from UK Volkswagen Touareg engine specialists. Every rebuilt engine comes with a minimum 12‑month unlimited mileage warranty.",
+      "closing": "Not sure which fuel type your Volkswagen Touareg has? Enter your registration number above to instantly identify your engine code, fuel system and compatible replacement options - all backed by a minimum 12‑month unlimited mileage warranty from UK Volkswagen Touareg specialists.",
       "headingLines": [
-        "Volkswagen Touareg Engine Codes",
-        "Full Technical Specifications & Replacement Guide"
+        "Volkswagen Touareg Engines by Fuel Type"
       ],
       "ui": {
         "swapLabel": "Swap panel",
@@ -1861,10 +1982,26 @@
           "preview": "Gen 1 Mature: V6 TDI Dominance & V10 Flagship",
           "description": "The 3.0L V6 TDI became the Touareg's volume seller, while the ultra-rare 5.0L V10 TDI defined the flagship.",
           "keyChanges": [
-            "BUN code V6 TDI introduced with power increases (204→225hp)",
-            "2003-2010: V10 TDI (AYH) offered in Executive trim",
-            "Facelift updates to interior and emissions hardware"
+            "BUN code V6 TDI introduced with power increases (204→225hp)"
           ],
+          "mainEngines": [],
+          "popularModels": [],
+          "knownFor": [],
+          "engineCodesCovered": [],
+          "cta": "",
+          "badges": [
+            {
+              "label": "Major Engine Change",
+              "tone": "accent"
+            }
+          ],
+          "enquiries": []
+        },
+        {
+          "year": "2003",
+          "preview": "2010: V10 TDI (AYH) offered in Executive trim",
+          "description": "",
+          "keyChanges": [],
           "mainEngines": [
             "BUN - 3.0L diesel (S, SE, Altitude, Executive)",
             "AYH - 5.0L V10 diesel (Executive V10)",
@@ -1888,8 +2025,8 @@
           "cta": "Compare rebuilt V6 TDI engines for your 2004-2010 Volkswagen Touareg",
           "badges": [
             {
-              "label": "Major Engine Change",
-              "tone": "accent"
+              "label": "3 engine highlights",
+              "tone": "muted"
             }
           ],
           "ticker": "Volkswagen Touareg V6 TDI timing chain replacement • Volkswagen Touareg V10 engine seized cost • Gen 1 Touareg diesel engine code lookup",

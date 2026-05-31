@@ -15,15 +15,15 @@
     "canonical": "/peugeot/4008"
   },
   "assets": {
-    "mainImage": "/images/brands/peugeot/models/peugeot-4008-main.webp",
-    "smallImage": "/images/brands/peugeot/models/peugeot-4008-small.webp",
-    "heroBg": "/images/brands/peugeot/models/peugeot-4008-main.webp",
+    "mainImage": "/images/brands/peugeot/models/peugeot-4008-model-card.png",
+    "smallImage": "/images/brands/peugeot/models/peugeot-4008-model-card.png",
+    "heroBg": "/images/brands/peugeot/models/peugeot-4008-model-card.png",
     "howItWorksBg": "/images/brands/peugeot/brand/peugeot-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/peugeot/brand/peugeot-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/peugeot/brand/peugeot-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/peugeot/brand/peugeot-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/peugeot/brand/peugeot-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/peugeot/models/peugeot-4008-main.webp"
+    "ctaImage": "/images/brands/peugeot/models/peugeot-4008-model-card.png"
   },
   "sections": {
     "hero": {
@@ -38,7 +38,7 @@
       ],
       "ctaLinkText": "Get Free Peugeot 4008 Engine Quotes →",
       "supportingText": "Get tailored Peugeot 4008 engine quotes from vetted UK specialists.",
-      "ticker": "● Instant Quotes · No Obligation · 100% Free · Reconditioned · Rebuilt · Used · Supply & Fit Available · UK-Wide Network ═══════════════════════════════════════",
+      "ticker": "● Instant Quotes · No Obligation · 100% Free · Reconditioned · Rebuilt · Used · Supply & Fit Available · UK-Wide Network",
       "form": {
         "heading": "Find Your Peugeot 4008 Engine",
         "subtitle": "Enter your registration number to compare Peugeot 4008 engine options.",
@@ -1301,11 +1301,80 @@
     },
     "fuelTypes": {
       "tag": "Fuel Type",
-      "h2": "",
+      "h2": "Peugeot 4008 Engines by Fuel Type",
       "intro": "",
-      "items": [],
-      "closing": "",
-      "headingLines": [],
+      "items": [
+        {
+          "title": "Peugeot 4008 Diesel Engines",
+          "description": "The 1.6L HDi/BlueHDi diesel powered most UK 4008 models across both generations, offering strong economy but requiring awareness of EGR and DPF failure patterns.",
+          "descriptor": "The 1.6L HDi/BlueHDi diesel powered most UK 4008 models across both generations, offering strong economy but requiring awareness of EGR and DPF failure patterns.",
+          "familiesLabel": "Common Peugeot 4008 Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
+          "families": [
+            "DV6C - dominant pre-facelift diesel (Active/Allure), EGR cooler failure risk",
+            "DV6DTED - AWD variant diesel, DPF clogging in urban use",
+            "DV6FD - BlueHDi facelift diesel, AdBlue system faults possible"
+          ],
+          "foundIn": [
+            "Pre-facelift (2012-2017) - DV6C, DV6DTED",
+            "Facelift (2017-2021) - DV6FD BlueHDi"
+          ],
+          "knownFor": [
+            "Excellent motorway fuel economy (50+ mpg achievable)",
+            "EGR cooler cracks causing coolant loss at 80k+ miles",
+            "DPF regeneration failures on short-journey urban use",
+            "High UK replacement demand on Active and Allure trims"
+          ],
+          "typicalModels": [
+            "Active 1.6 HDi",
+            "Allure 1.6 HDi",
+            "Active 1.6 BlueHDi",
+            "AWD 1.6 HDi"
+          ],
+          "importantNotes": [],
+          "cta": "Get quotes for Peugeot 4008 Diesel replacement engines"
+        },
+        {
+          "title": "Peugeot 4008 Petrol Engines",
+          "description": "The 1.6L THP turbo petrol was the most common 4008 engine, delivering strong performance but requiring proactive maintenance of timing chain and turbo components.",
+          "descriptor": "The 1.6L THP turbo petrol was the most common 4008 engine, delivering strong performance but requiring proactive maintenance of timing chain and turbo components.",
+          "familiesLabel": "Common Peugeot 4008 Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
+          "families": [
+            "EP6CDT - standard THP 156hp, timing chain tensioner failure risk",
+            "EP6CDB - upgraded THP 200hp for 200 GT, HPFP wear possible",
+            "4B11 - Mitsubishi 2.0L naturally aspirated, robust but rare in UK"
+          ],
+          "foundIn": [
+            "Pre-facelift (2012-2017) - EP6CDT, 4B11",
+            "Facelift (2017-2021) - EP6CDB"
+          ],
+          "knownFor": [
+            "Strong acceleration and responsive turbo delivery",
+            "Timing chain rattling between 60k-90k miles if tensioner fails",
+            "Turbo wastegate actuator sticking causing limp mode",
+            "High search volume for EP6CDT replacement due to failure patterns"
+          ],
+          "typicalModels": [
+            "Active 1.6 THP",
+            "Allure 1.6 THP",
+            "200 GT 1.6 THP",
+            "Access 2.0 Petrol"
+          ],
+          "importantNotes": [],
+          "cta": "Compare Peugeot 4008 Petrol engine prices"
+        }
+      ],
+      "closing": "Not sure which fuel type your Peugeot 4008 has? Enter your registration number above to instantly identify your engine code, fuel system and compatible replacement options - all backed by a minimum 12‑month unlimited mileage warranty from UK Peugeot 4008 specialists.",
+      "headingLines": [
+        "Peugeot 4008 Engines by Fuel Type"
+      ],
       "ui": {
         "swapLabel": "Swap panel",
         "familiesLabel": "Common Engine Families",

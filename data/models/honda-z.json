@@ -15,15 +15,15 @@
     "canonical": "/honda/z"
   },
   "assets": {
-    "mainImage": "/images/brands/honda/models/honda-z-main.webp",
-    "smallImage": "/images/brands/honda/models/honda-z-small.webp",
-    "heroBg": "/images/brands/honda/models/honda-z-main.webp",
+    "mainImage": "/images/brands/honda/models/honda-z-model-card.png",
+    "smallImage": "/images/brands/honda/models/honda-z-model-card.png",
+    "heroBg": "/images/brands/honda/models/honda-z-model-card.png",
     "howItWorksBg": "/images/brands/honda/brand/honda-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/honda/brand/honda-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/honda/brand/honda-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/honda/brand/honda-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/honda/brand/honda-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/honda/models/honda-z-main.webp"
+    "ctaImage": "/images/brands/honda/models/honda-z-model-card.png"
   },
   "sections": {
     "hero": {
@@ -110,8 +110,7 @@
               "Your Precise Model - from Z600 coupe, Z kei car, ZS trim to Z50A, Z50J, Z50R",
               "Your Engine Code - E07Z, E07A, Z600-2C and more",
               "Vehicle Specs Check - fuel type, engine size, year, variant - all verified instantly",
-              "No paperwork, no guesswork, 100% free.",
-              "═══════════════════════════════════════"
+              "No paperwork, no guesswork, 100% free."
             ]
           }
         },
@@ -1126,7 +1125,7 @@
           "description": "Complete engine replacement service including labour; convenient solution for Z600 classics and Z kei car daily drivers.",
           "frontDescription": "Complete engine replacement service including labour; convenient solution for Z600 classics and Z kei car daily drivers.",
           "frontDisclaimer": "Labour costs vary by workshop location and variant complexity.",
-          "backDescription": "Supply & Fit Honda Z services combine engine supply with professional installation by specialists familiar with Z600, E07Z or Z50 architectures. ═══════════════════════════════════════",
+          "backDescription": "Supply & Fit Honda Z services combine engine supply with professional installation by specialists familiar with Z600, E07Z or Z50 architectures.",
           "backBullets": [
             "Saves time coordinating separate supply and fitting",
             "Specialist knowledge critical for rare Z600 air-cooled units",
@@ -1233,7 +1232,7 @@
             },
             {
               "title": "Honda Z 0.66L Petrol Engines",
-              "description": "The definitive E07Z and predecessor E07A powered 1998-2002 JDM import Z kei cars, featuring direct ignition, friction reduction and improved low-end torque over earlier designs. Not sure which engine size your Honda Z needs? Enter your registration number above - we'll identify the exact displacement, engine code and compatible replacement options instantly. All engines supplied through EngineMarket include a minimum 12‑month unlimited mileage warranty from UK Honda Z specialists. ═══════════════════════════════════════",
+              "description": "The definitive E07Z and predecessor E07A powered 1998-2002 JDM import Z kei cars, featuring direct ignition, friction reduction and improved low-end torque over earlier designs. Not sure which engine size your Honda Z needs? Enter your registration number above - we'll identify the exact displacement, engine code and compatible replacement options instantly. All engines supplied through EngineMarket include a minimum 12‑month unlimited mileage warranty from UK Honda Z specialists.",
               "engineCodes": [
                 "E07Z",
                 "E07A"
@@ -1272,44 +1271,10 @@
       }
     },
     "fuelTypes": {
-      "tag": "Live UK Engine Market Data",
-      "h2": "What Are UK Drivers Paying for Honda Z Engine Replacement?",
-      "intro": "The table below shows typical UK rebuilt engine costs across Honda Z variants - compare failure causes, engine codes, fuel types, and price ranges to benchmark what UK drivers are paying.",
+      "tag": "Honda Z Engines Fuel Type",
+      "h2": "Honda Z Engines by Fuel Type",
+      "intro": "",
       "items": [
-        {
-          "title": "Petrol Engines",
-          "description": "",
-          "descriptor": "",
-          "familiesLabel": "Intro (1 sentence): Every displacement fitted to the Honda Z across classic, kei car and monkey bike variants is listed below with compatible engine codes, years and common failure notes.",
-          "foundInLabel": "",
-          "knownForLabel": "",
-          "modelsLabel": "",
-          "notesLabel": "",
-          "families": [
-            ""
-          ],
-          "foundIn": [],
-          "knownFor": [],
-          "typicalModels": [],
-          "importantNotes": [],
-          "cta": "Get quotes for Z600-2C classic engine replacement"
-        },
-        {
-          "title": "Honda Z Petrol Engine Sizes",
-          "description": "",
-          "descriptor": "",
-          "familiesLabel": "Common Honda Z Petrol Engine Sizes Engine Families",
-          "foundInLabel": "",
-          "knownForLabel": "",
-          "modelsLabel": "",
-          "notesLabel": "",
-          "families": [],
-          "foundIn": [],
-          "knownFor": [],
-          "typicalModels": [],
-          "importantNotes": [],
-          "cta": "Compare Honda Z 0.66L petrol engine prices"
-        },
         {
           "title": "Honda Z Petrol Engines",
           "description": "Every Honda Z variant uses petrol engines - from the air-cooled Z600 classic twin to the water-cooled E07Z kei car triple and simple Z50 monkey bike single.",
@@ -1344,9 +1309,9 @@
           "cta": "Compare Honda Z Petrol engine prices"
         }
       ],
-      "closing": "Not sure which variant your Honda Z is? Enter your registration number above - we'll identify the exact sub-model, engine code and compatible replacement options instantly.",
+      "closing": "Not sure which fuel type your Honda Z has? Enter your registration number above to instantly identify your engine code, fuel system and compatible replacement options - all backed by a minimum 12‑month unlimited mileage warranty from UK Honda Z specialists.",
       "headingLines": [
-        "What Are UK Drivers Paying for Honda Z Engine Replacement?"
+        "Honda Z Engines by Fuel Type"
       ],
       "ui": {
         "swapLabel": "Swap panel",

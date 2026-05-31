@@ -15,15 +15,15 @@
     "canonical": "/peugeot/408"
   },
   "assets": {
-    "mainImage": "/images/brands/peugeot/models/peugeot-408-main.webp",
-    "smallImage": "/images/brands/peugeot/models/peugeot-408-small.webp",
-    "heroBg": "/images/brands/peugeot/models/peugeot-408-main.webp",
+    "mainImage": "/images/brands/peugeot/models/peugeot-408-model-card.png",
+    "smallImage": "/images/brands/peugeot/models/peugeot-408-model-card.png",
+    "heroBg": "/images/brands/peugeot/models/peugeot-408-model-card.png",
     "howItWorksBg": "/images/brands/peugeot/brand/peugeot-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/peugeot/brand/peugeot-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/peugeot/brand/peugeot-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/peugeot/brand/peugeot-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/peugeot/brand/peugeot-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/peugeot/models/peugeot-408-main.webp"
+    "ctaImage": "/images/brands/peugeot/models/peugeot-408-model-card.png"
   },
   "sections": {
     "hero": {
@@ -38,7 +38,7 @@
       ],
       "ctaLinkText": "Get Free Peugeot 408 Engine Quotes →",
       "supportingText": "Get tailored Peugeot 408 engine quotes from vetted UK specialists.",
-      "ticker": "● Instant Quotes · No Obligation · 100% Free · Reconditioned · Rebuilt · Used · Supply & Fit Available · UK-Wide Network ═══════════════════════════════════════",
+      "ticker": "● Instant Quotes · No Obligation · 100% Free · Reconditioned · Rebuilt · Used · Supply & Fit Available · UK-Wide Network",
       "form": {
         "heading": "Find Your Peugeot 408 Engine",
         "subtitle": "Enter your registration number to compare Peugeot 408 engine options.",
@@ -1529,11 +1529,77 @@
     },
     "fuelTypes": {
       "tag": "Fuel Type",
-      "h2": "",
+      "h2": "Peugeot 408 Engines by Fuel Type",
       "intro": "",
-      "items": [],
-      "closing": "",
-      "headingLines": [],
+      "items": [
+        {
+          "title": "Peugeot 408 Petrol Engines",
+          "description": "The PureTech 1.2L turbo petrol powers all non-hybrid Peugeot 408 variants from 2022, with wet belt design requiring specialist attention during replacement.",
+          "descriptor": "The PureTech 1.2L turbo petrol powers all non-hybrid Peugeot 408 variants from 2022, with wet belt design requiring specialist attention during replacement.",
+          "familiesLabel": "Common Peugeot 408 Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
+          "families": [
+            "EB2ADT - entry-level PureTech for Active Premium/Allure, wet belt failure risk",
+            "HNK - calibrated variant for Allure/GT, identical architecture to EB2ADT",
+            "EB2ADTD - updated belt specification for 2023+ models, reduced failure risk"
+          ],
+          "foundIn": [
+            "Fastback generation (2022-2025) - EB2ADT, HNK, EB2ADTD, EB2DTS"
+          ],
+          "knownFor": [
+            "Efficient 130hp performance with low CO2 emissions",
+            "Wet belt degradation between 60k-90k miles if maintenance delayed",
+            "High UK replacement demand on Allure and GT PureTech variants"
+          ],
+          "typicalModels": [
+            "Active Premium PureTech 130",
+            "Allure PureTech 130",
+            "Allure Premium PureTech 130",
+            "GT PureTech 130",
+            "GT Premium PureTech 130"
+          ],
+          "importantNotes": [],
+          "cta": "Compare Peugeot 408 Petrol engine prices"
+        },
+        {
+          "title": "Peugeot 408 Hybrid / Electrified Engines",
+          "description": "PHEV variants combine 1.6L turbo petrol with electric motor and e-EAT8 transmission for 180hp or 225hp output across Allure and GT trims.",
+          "descriptor": "PHEV variants combine 1.6L turbo petrol with electric motor and e-EAT8 transmission for 180hp or 225hp output across Allure and GT trims.",
+          "familiesLabel": "Peugeot 408 PHEV Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
+          "families": [
+            "EP6FDTM - 180hp configuration for Allure PHEV variants",
+            "EP6FDTX - 225hp performance setup for GT PHEV variants",
+            "Turbo petrol engine drives front wheels with electric motor assistance",
+            "e-EAT8 transmission manages power split and regenerative braking",
+            "Battery health check essential during any engine replacement procedure"
+          ],
+          "foundIn": [
+            "Allure PHEV 180 (2022-2025)",
+            "GT PHEV 225 (2022-2025)",
+            "Allure Premium PHEV (2023-2025)",
+            "GT Premium PHEV (2024-2025)"
+          ],
+          "knownFor": [],
+          "typicalModels": [],
+          "importantNotes": [
+            "PHEV engine replacement requires hybrid-certified specialist for system calibration",
+            "Battery health verification recommended during any powertrain service",
+            "Availability more limited than standard PureTech engines; allow extra lead time"
+          ],
+          "cta": "Enquire about Peugeot 408 PHEV engine availability"
+        }
+      ],
+      "closing": "Not sure which fuel type your Peugeot 408 has? Enter your registration number above to instantly identify your engine code, fuel system and compatible replacement options - all backed by a minimum 12-month unlimited mileage warranty from UK Peugeot 408 specialists.",
+      "headingLines": [
+        "Peugeot 408 Engines by Fuel Type"
+      ],
       "ui": {
         "swapLabel": "Swap panel",
         "familiesLabel": "Common Engine Families",

@@ -15,15 +15,15 @@
     "canonical": "/honda/sms"
   },
   "assets": {
-    "mainImage": "/images/brands/honda/models/honda-sms-main.webp",
-    "smallImage": "/images/brands/honda/models/honda-sms-small.webp",
-    "heroBg": "/images/brands/honda/models/honda-sms-main.webp",
+    "mainImage": "/images/brands/honda/models/honda-smx-model-card.png",
+    "smallImage": "/images/brands/honda/models/honda-smx-model-card.png",
+    "heroBg": "/images/brands/honda/models/honda-smx-model-card.png",
     "howItWorksBg": "/images/brands/honda/brand/honda-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/honda/brand/honda-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/honda/brand/honda-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/honda/brand/honda-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/honda/brand/honda-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/honda/models/honda-sms-main.webp"
+    "ctaImage": "/images/brands/honda/models/honda-smx-model-card.png"
   },
   "sections": {
     "hero": {
@@ -110,8 +110,7 @@
               "Your Precise Model - from Base, Type S, GT Edition to Final Edition",
               "Your Engine Code - F20C, F22C1, F20C6 and more",
               "Vehicle Specs Check - fuel type, engine size, year, variant - all verified instantly",
-              "No paperwork, no guesswork, 100% free.",
-              "═══════════════════════════════════════"
+              "No paperwork, no guesswork, 100% free."
             ]
           }
         },
@@ -926,7 +925,7 @@
           "description": "Complete engine replacement service including removal, fitment, fluids and initial run-in by UK Honda SMS specialists.",
           "frontDescription": "Complete engine replacement service including removal, fitment, fluids and initial run-in by UK Honda SMS specialists.",
           "frontDisclaimer": "Labour cost varies by location and vehicle condition.",
-          "backDescription": "Supply & fit services handle the entire Honda SMS engine replacement process, from removal to post-installation testing and ECU adaptation. ═══════════════════════════════════════",
+          "backDescription": "Supply & fit services handle the entire Honda SMS engine replacement process, from removal to post-installation testing and ECU adaptation.",
           "backBullets": [
             "Includes ECU reset, VTEC adaptation and road test",
             "Specialist knowledge of AP1/AP2 mounting and wiring",
@@ -983,7 +982,7 @@
             },
             {
               "title": "Honda SMS 2.2L Petrol Engines",
-              "description": "The 2.2L F22C arrived with the AP2 facelift (2004-2009), increasing displacement for broader mid-range torque while retaining the SMS's high-rev DNA. Slightly more forgiving on oiling demands but shares VTEC system sensitivities. Not sure which engine size your Honda SMS needs? Enter your registration number above - we'll identify the exact displacement, engine code and compatible replacement options instantly. All engines supplied through EngineMarket include a minimum 12‑month unlimited mileage warranty from UK Honda SMS specialists. ═══════════════════════════════════════",
+              "description": "The 2.2L F22C arrived with the AP2 facelift (2004-2009), increasing displacement for broader mid-range torque while retaining the SMS's high-rev DNA. Slightly more forgiving on oiling demands but shares VTEC system sensitivities. Not sure which engine size your Honda SMS needs? Enter your registration number above - we'll identify the exact displacement, engine code and compatible replacement options instantly. All engines supplied through EngineMarket include a minimum 12‑month unlimited mileage warranty from UK Honda SMS specialists.",
               "engineCodes": [
                 "F22C1",
                 "F22C2"
@@ -1022,42 +1021,10 @@
       }
     },
     "fuelTypes": {
-      "tag": "Live UK Engine Market Data",
-      "h2": "What Are UK Drivers Paying for Honda SMS Engine Replacement?",
-      "intro": "The table below shows typical UK rebuilt engine costs across Honda SMS variants - compare failure causes, engine codes, fuel types, and price ranges to benchmark what UK drivers are paying.",
+      "tag": "Honda SMS Engines Fuel Type",
+      "h2": "Honda SMS Engines by Fuel Type",
+      "intro": "Choose your Honda SMS engine by fuel type to compare realistic replacement prices, known issues, and compatible UK supply options - from early AP1 F20C to the final AP2 F22C units.",
       "items": [
-        {
-          "title": "Petrol Engines",
-          "description": "",
-          "descriptor": "",
-          "familiesLabel": "Intro: Every displacement fitted to the Honda SMS is listed below with compatible engine codes, production years and common failure notes to help you identify the correct replacement.",
-          "foundInLabel": "",
-          "knownForLabel": "",
-          "modelsLabel": "",
-          "notesLabel": "",
-          "families": [],
-          "foundIn": [],
-          "knownFor": [],
-          "typicalModels": [],
-          "importantNotes": [],
-          "cta": "Get quotes for F22C2 Honda SMS engine replacement"
-        },
-        {
-          "title": "Honda SMS Petrol Engine Sizes",
-          "description": "",
-          "descriptor": "",
-          "familiesLabel": "Common Honda SMS Petrol Engine Sizes Engine Families",
-          "foundInLabel": "",
-          "knownForLabel": "",
-          "modelsLabel": "",
-          "notesLabel": "",
-          "families": [],
-          "foundIn": [],
-          "knownFor": [],
-          "typicalModels": [],
-          "importantNotes": [],
-          "cta": "Compare Honda SMS 2.2L petrol engine prices"
-        },
         {
           "title": "Honda SMS Petrol Engines",
           "description": "All Honda SMS models were petrol-only, featuring high-revving naturally aspirated F20C (2.0L) and F22C (2.2L) engines with VTEC.",
@@ -1092,9 +1059,9 @@
           "cta": "Compare Honda SMS Petrol engine prices"
         }
       ],
-      "closing": "Not sure which variant your Honda SMS is? Enter your registration number above - we'll identify the exact sub-model, engine code and compatible replacement options instantly.",
+      "closing": "Not sure which fuel type your Honda SMS has? Enter your registration number above to instantly identify your engine code, fuel system and compatible replacement options - all backed by a minimum 12‑month unlimited mileage warranty from UK Honda SMS specialists.",
       "headingLines": [
-        "What Are UK Drivers Paying for Honda SMS Engine Replacement?"
+        "Honda SMS Engines by Fuel Type"
       ],
       "ui": {
         "swapLabel": "Swap panel",

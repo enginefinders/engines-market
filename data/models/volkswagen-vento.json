@@ -15,15 +15,15 @@
     "canonical": "/volkswagen/vento"
   },
   "assets": {
-    "mainImage": "/images/brands/volkswagen/models/volkswagen-vento-main.webp",
-    "smallImage": "/images/brands/volkswagen/models/volkswagen-vento-small.webp",
-    "heroBg": "/images/brands/volkswagen/models/volkswagen-vento-main.webp",
+    "mainImage": "/images/brands/volkswagen/models/volkswagen-vento-model-card.png",
+    "smallImage": "/images/brands/volkswagen/models/volkswagen-vento-model-card.png",
+    "heroBg": "/images/brands/volkswagen/models/volkswagen-vento-model-card.png",
     "howItWorksBg": "/images/brands/volkswagen/brand/volkswagen-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/volkswagen/brand/volkswagen-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/volkswagen/brand/volkswagen-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/volkswagen/brand/volkswagen-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/volkswagen/brand/volkswagen-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/volkswagen/models/volkswagen-vento-main.webp"
+    "ctaImage": "/images/brands/volkswagen/models/volkswagen-vento-model-card.png"
   },
   "sections": {
     "hero": {
@@ -38,7 +38,7 @@
       ],
       "ctaLinkText": "Get Free Volkswagen Vento Engine Quotes →",
       "supportingText": "Get tailored Volkswagen Vento engine quotes from vetted UK specialists.",
-      "ticker": "● Instant Quotes · No Obligation · 100% Free · Reconditioned · Rebuilt · Used · Supply & Fit Available · UK-Wide Network ═══════════════════════════════════════",
+      "ticker": "● Instant Quotes · No Obligation · 100% Free · Reconditioned · Rebuilt · Used · Supply & Fit Available · UK-Wide Network",
       "form": {
         "heading": "Find Your Volkswagen Vento Engine",
         "subtitle": "Enter your registration number to compare Volkswagen Vento engine options.",
@@ -1436,11 +1436,99 @@
     },
     "fuelTypes": {
       "tag": "Fuel Type",
-      "h2": "",
-      "intro": "",
-      "items": [],
-      "closing": "",
-      "headingLines": [],
+      "h2": "Volkswagen Vento Engines by Fuel Type",
+      "intro": "Choose your Volkswagen Vento engine by fuel type to compare realistic replacement prices, known issues, and compatible UK supply options - from early 1.6 petrol to the rare VR6.",
+      "items": [
+        {
+          "title": "Volkswagen Vento Diesel Engines",
+          "description": "Diesel engines dominated Vento sales in the UK, with the 1.9-litre family spanning SDI, TD and TDI variants offering strong fuel economy and torque for classic car preservation projects.",
+          "descriptor": "Diesel engines dominated Vento sales in the UK, with the 1.9-litre family spanning SDI, TD and TDI variants offering strong fuel economy and torque for classic car preservation projects.",
+          "familiesLabel": "Common Volkswagen Vento Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
+          "families": [
+            "1Z/AHU/AFN - 1.9 TDI direct injection, most common replacement demand due to injector wear",
+            "AEY/1Y - 1.9 SDI naturally aspirated, valued for simplicity and low-cost maintenance",
+            "AAZ - 1.9 TD turbo non-DI, bridging performance and reliability for mid-spec models"
+          ],
+          "foundIn": [
+            "Typ 1H Saloon (1992-1998) - All diesel variants"
+          ],
+          "knownFor": [
+            "Strong motorway fuel economy and torque for relaxed cruising",
+            "1.9 TDI injector failure between 120k-180k miles driving replacement searches",
+            "MAF sensor faults triggering flashing glow plug light and limp mode",
+            "Excellent Golf Mk3 platform compatibility expanding donor availability"
+          ],
+          "typicalModels": [
+            "Vento CL 1.9 SDI",
+            "Vento GL 1.9 TDI",
+            "Vento Match 1.9 TDI",
+            "Vento Highline 1.9 TDI"
+          ],
+          "importantNotes": [],
+          "cta": "Get quotes for Volkswagen Vento Diesel replacement engines"
+        },
+        {
+          "title": "Volkswagen Vento Petrol Engines",
+          "description": "Petrol engines powered the entry-level and performance ends of the Vento range, from simple 1.6 carburetted units to the iconic 2.8 VR6, with the 1.8 and 2.0 8-valve units forming the mainstream core.",
+          "descriptor": "Petrol engines powered the entry-level and performance ends of the Vento range, from simple 1.6 carburetted units to the iconic 2.8 VR6, with the 1.8 and 2.0 8-valve units forming the mainstream core.",
+          "familiesLabel": "Common Volkswagen Vento Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
+          "families": [
+            "ABU/AEA - 1.6 8-valve simple and reliable for base CL models",
+            "ABS/ADZ - 1.8 8-valve mainstream choice with widespread parts availability",
+            "ADY/AGG - 2.0 8-valve Simos injection offering smooth refined performance",
+            "AAA/AYL - 2.8 VR6 narrow-angle performance icon for collectors"
+          ],
+          "foundIn": [
+            "Typ 1H Saloon (1992-1998) - All petrol variants"
+          ],
+          "knownFor": [
+            "Simple mechanical design on 1.6/1.8 aiding DIY maintenance",
+            "Simos ignition coil failure on 2.0 ADY/AGG causing misfires under load",
+            "VR6 timing chain tensioner wear requiring specialist attention on AAA/AYL",
+            "Strong aftermarket support via Golf Mk3 compatibility for all petrol codes"
+          ],
+          "typicalModels": [
+            "Vento CL 1.6",
+            "Vento GL 1.8",
+            "Vento Match 2.0",
+            "Vento Highline VR6"
+          ],
+          "importantNotes": [],
+          "cta": "Compare Volkswagen Vento Petrol engine prices"
+        },
+        {
+          "title": "Volkswagen Vento Hybrid / Electrified Engines",
+          "description": "The Volkswagen Vento was produced before hybrid or electrified powertrains were offered in this segment; all engines are conventional petrol or diesel internal combustion units.",
+          "descriptor": "The Volkswagen Vento was produced before hybrid or electrified powertrains were offered in this segment; all engines are conventional petrol or diesel internal combustion units.",
+          "familiesLabel": "Common Volkswagen Vento Hybrid / Electrified Engine Families",
+          "foundInLabel": "",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
+          "families": [],
+          "foundIn": [],
+          "knownFor": [],
+          "typicalModels": [],
+          "importantNotes": [
+            "No hybrid, MHEV, PHEV or electric variants were offered for the Vento in any market",
+            "All replacement options are for conventional petrol or diesel engines only",
+            "Golf Mk3 compatibility expands donor availability for conventional engine swaps"
+          ],
+          "cta": "Enquire about Volkswagen Vento conventional engine availability"
+        }
+      ],
+      "closing": "Not sure which fuel type your Volkswagen Vento has? Enter your registration number above to instantly identify your engine code, fuel system and compatible replacement options - all backed by a minimum 12‑month unlimited mileage warranty from UK Volkswagen Vento specialists.",
+      "headingLines": [
+        "Volkswagen Vento Engines by Fuel Type"
+      ],
       "ui": {
         "swapLabel": "Swap panel",
         "familiesLabel": "Common Engine Families",

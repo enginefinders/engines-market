@@ -15,15 +15,15 @@
     "canonical": "/volkswagen/jetta"
   },
   "assets": {
-    "mainImage": "/images/brands/volkswagen/models/volkswagen-jetta-main.webp",
-    "smallImage": "/images/brands/volkswagen/models/volkswagen-jetta-small.webp",
-    "heroBg": "/images/brands/volkswagen/models/volkswagen-jetta-main.webp",
+    "mainImage": "/images/brands/volkswagen/models/volkswagen-jetta-model-card.png",
+    "smallImage": "/images/brands/volkswagen/models/volkswagen-jetta-model-card.png",
+    "heroBg": "/images/brands/volkswagen/models/volkswagen-jetta-model-card.png",
     "howItWorksBg": "/images/brands/volkswagen/brand/volkswagen-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/volkswagen/brand/volkswagen-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/volkswagen/brand/volkswagen-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/volkswagen/brand/volkswagen-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/volkswagen/brand/volkswagen-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/volkswagen/models/volkswagen-jetta-main.webp"
+    "ctaImage": "/images/brands/volkswagen/models/volkswagen-jetta-model-card.png"
   },
   "sections": {
     "hero": {
@@ -38,7 +38,7 @@
       ],
       "ctaLinkText": "Get Free Volkswagen Jetta Engine Quotes →",
       "supportingText": "Get tailored Volkswagen Jetta engine quotes from vetted UK specialists.",
-      "ticker": "● Instant Quotes · No Obligation · 100% Free · Reconditioned · Rebuilt · Used · Supply & Fit Available · UK-Wide Network ═══════════════════════════════════════",
+      "ticker": "● Instant Quotes · No Obligation · 100% Free · Reconditioned · Rebuilt · Used · Supply & Fit Available · UK-Wide Network",
       "form": {
         "heading": "Find Your Volkswagen Jetta Engine",
         "subtitle": "Enter your registration number to compare Volkswagen Jetta engine options.",
@@ -751,14 +751,25 @@
                 "compatibleVariants": [
                   "Sport, Highline, GT"
                 ],
-                "commonFailures": [
-                  "High-pressure fuel pump wear (70k-100k miles)",
-                  "Turbo wastegate rattle under load",
-                  "DPF regeneration issues in urban use"
-                ],
+                "commonFailures": [],
+                "avgRebuiltPrice": "",
+                "cta": "",
+                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+              },
+              {
+                "code": "High",
+                "title": "pressure fuel pump wear (70k-100k miles)",
+                "familyHeading": "EA189 TDI Family (2005-2015)",
+                "history": "",
+                "fuel": "",
+                "size": "",
+                "power": "",
+                "years": "",
+                "compatibleVariants": [],
+                "commonFailures": [],
                 "avgRebuiltPrice": "£895 - £2,150",
                 "cta": "Get quotes for CFGB Volkswagen Jetta engine replacement",
-                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               },
               {
                 "code": "CLCA",
@@ -816,12 +827,26 @@
                 ],
                 "commonFailures": [
                   "Unit injector failure causing hard starting (80k-120k miles)",
-                  "Turbo oil seal leak leading to blue smoke",
-                  "Dual-mass flywear wear on manual transmissions"
+                  "Turbo oil seal leak leading to blue smoke"
                 ],
+                "avgRebuiltPrice": "",
+                "cta": "",
+                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+              },
+              {
+                "code": "Dual",
+                "title": "mass flywear wear on manual transmissions",
+                "familyHeading": "EA189 TDI Family (2005-2015)",
+                "history": "",
+                "fuel": "",
+                "size": "",
+                "power": "",
+                "years": "",
+                "compatibleVariants": [],
+                "commonFailures": [],
                 "avgRebuiltPrice": "£495 - £1,250",
                 "cta": "Get quotes for BXE Volkswagen Jetta engine replacement",
-                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               }
             ]
           },
@@ -842,9 +867,23 @@
                 ],
                 "commonFailures": [
                   "Timing chain tensioner failure (40k-70k miles, pre-2013)",
-                  "Carbon buildup on intake valves causing misfire",
-                  "High-pressure fuel pump wear affecting cold starts"
+                  "Carbon buildup on intake valves causing misfire"
                 ],
+                "avgRebuiltPrice": "",
+                "cta": "",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              },
+              {
+                "code": "High",
+                "title": "pressure fuel pump wear affecting cold starts",
+                "familyHeading": "EA113/EA888 TSI Family (2006-2018)",
+                "history": "",
+                "fuel": "",
+                "size": "",
+                "power": "",
+                "years": "",
+                "compatibleVariants": [],
+                "commonFailures": [],
                 "avgRebuiltPrice": "£795 - £1,650",
                 "cta": "Get quotes for CAXA Volkswagen Jetta engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -903,11 +942,22 @@
                 "compatibleVariants": [
                   "GT, Sport"
                 ],
-                "commonFailures": [
-                  "High-pressure fuel pump failure (50k-80k miles)",
-                  "Timing chain tensioner wear requiring early replacement",
-                  "Piston ring wear causing oil consumption on some units"
-                ],
+                "commonFailures": [],
+                "avgRebuiltPrice": "",
+                "cta": "",
+                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              },
+              {
+                "code": "High",
+                "title": "pressure fuel pump failure (50k-80k miles)",
+                "familyHeading": "EA113/EA888 TSI Family (2006-2018)",
+                "history": "",
+                "fuel": "",
+                "size": "",
+                "power": "",
+                "years": "",
+                "compatibleVariants": [],
+                "commonFailures": [],
                 "avgRebuiltPrice": "£1,095 - £2,650",
                 "cta": "Get quotes for CCTA Volkswagen Jetta engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -976,9 +1026,21 @@
               "size": "2.0L",
               "power": "170 hp",
               "compatibleModels": "Sport, Highline, GT",
+              "avgRebuiltPrice": "",
+              "cta": "",
+              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+            },
+            {
+              "code": "High",
+              "title": "pressure fuel pump wear (70k-100k miles)",
+              "familyHeading": "EA189 TDI Family (2005-2015)",
+              "fuel": "",
+              "size": "",
+              "power": "",
+              "compatibleModels": "",
               "avgRebuiltPrice": "£895 - £2,150",
               "cta": "Get quotes for CFGB Volkswagen Jetta engine replacement",
-              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             },
             {
               "code": "CLCA",
@@ -1012,9 +1074,21 @@
               "size": "1.9L",
               "power": "105 hp",
               "compatibleModels": "S, SE, Sport",
+              "avgRebuiltPrice": "",
+              "cta": "",
+              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+            },
+            {
+              "code": "Dual",
+              "title": "mass flywear wear on manual transmissions",
+              "familyHeading": "EA189 TDI Family (2005-2015)",
+              "fuel": "",
+              "size": "",
+              "power": "",
+              "compatibleModels": "",
               "avgRebuiltPrice": "£495 - £1,250",
               "cta": "Get quotes for BXE Volkswagen Jetta engine replacement",
-              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             }
           ]
         },
@@ -1031,6 +1105,18 @@
               "size": "1.4L",
               "power": "122 hp",
               "compatibleModels": "S, SE, Sport",
+              "avgRebuiltPrice": "",
+              "cta": "",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            },
+            {
+              "code": "High",
+              "title": "pressure fuel pump wear affecting cold starts",
+              "familyHeading": "EA113/EA888 TSI Family (2006-2018)",
+              "fuel": "",
+              "size": "",
+              "power": "",
+              "compatibleModels": "",
               "avgRebuiltPrice": "£795 - £1,650",
               "cta": "Get quotes for CAXA Volkswagen Jetta engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1067,6 +1153,18 @@
               "size": "2.0L",
               "power": "200 hp",
               "compatibleModels": "GT, Sport",
+              "avgRebuiltPrice": "",
+              "cta": "",
+              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+            },
+            {
+              "code": "High",
+              "title": "pressure fuel pump failure (50k-80k miles)",
+              "familyHeading": "EA113/EA888 TSI Family (2006-2018)",
+              "fuel": "",
+              "size": "",
+              "power": "",
+              "compatibleModels": "",
               "avgRebuiltPrice": "£1,095 - £2,650",
               "cta": "Get quotes for CCTA Volkswagen Jetta engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1544,11 +1642,111 @@
     },
     "fuelTypes": {
       "tag": "Fuel Type",
-      "h2": "",
+      "h2": "Volkswagen Jetta Engines by Fuel Type",
       "intro": "",
-      "items": [],
-      "closing": "",
-      "headingLines": [],
+      "items": [
+        {
+          "title": "Volkswagen Jetta Diesel Engines",
+          "description": "Diesel powered 75-80% of UK Jetta replacement enquiries, with 1.6 TDI (CAYC) and 2.0 TDI (CFFB/CFGB) dominating fleet and private owner searches across Mk5 and Mk6 generations.",
+          "descriptor": "Diesel powered 75-80% of UK Jetta replacement enquiries, with 1.6 TDI (CAYC) and 2.0 TDI (CFFB/CFGB) dominating fleet and private owner searches across Mk5 and Mk6 generations.",
+          "familiesLabel": "Common Volkswagen Jetta Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
+          "families": [
+            "CAYC - most searched 1.6 TDI code (S/SE trims), DPF/EGR vulnerability",
+            "CFFB - dominant 2.0 TDI 140hp (SE/GT), EGR cooler leak risk",
+            "CFGB - high-output 2.0 TDI 170hp (Sport/Highline), turbo actuator issues",
+            "BXE - legacy 1.9 TDI (Mk5), unit injector failure at high mileage"
+          ],
+          "foundIn": [
+            "Mk5 (2005-2010) - BXE, BLS, CBAB, CBDC",
+            "Mk6 (2010-2018) - CAYC, CFFB, CFGB, CLCA, CJAA, CRBC"
+          ],
+          "knownFor": [
+            "Strong motorway fuel economy and high-mileage durability",
+            "DPF clogging on short-journey urban use (60k-100k miles)",
+            "EGR cooler leak causing coolant loss and overheating risk",
+            "High UK replacement demand on SE and GT fleet vehicles"
+          ],
+          "typicalModels": [
+            "S 1.6 TDI",
+            "SE 1.6 TDI / 2.0 TDI",
+            "Sport 2.0 TDI",
+            "Highline 2.0 TDI",
+            "EfficientDynamics 1.6 TDI"
+          ],
+          "importantNotes": [],
+          "cta": "Get quotes for Volkswagen Jetta Diesel replacement engines"
+        },
+        {
+          "title": "Volkswagen Jetta Petrol Engines",
+          "description": "Petrol Jetta replacements focus on 1.4 TSI and 2.0 TSI codes, with timing chain tensioner failure (pre-2013) and carbon buildup driving most replacement enquiries from Sport and GT owners.",
+          "descriptor": "Petrol Jetta replacements focus on 1.4 TSI and 2.0 TSI codes, with timing chain tensioner failure (pre-2013) and carbon buildup driving most replacement enquiries from Sport and GT owners.",
+          "familiesLabel": "Common Volkswagen Jetta Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
+          "families": [
+            "CAXA - dominant 1.4 TSI 122hp (S/SE), timing chain tensioner risk pre-2013",
+            "CTHD - twincharger 1.4 TSI 160hp (Sport), supercharger clutch vulnerability",
+            "CCZB - 2.0 TSI 200hp (GT), timing chain and HPFP maintenance critical",
+            "CCTA - early 2.0 TSI (pre-2012 GT), HPFP cam follower wear issue"
+          ],
+          "foundIn": [
+            "Mk5 (2005-2010) - CAXA, CCTA, CBFA, BZB",
+            "Mk6 (2010-2018) - CAXA, CTHD, CCZB, CHPA, CPTA"
+          ],
+          "knownFor": [
+            "Strong performance and refinement in Sport and GT trims",
+            "Timing chain tensioner failure on pre-2013 1.4/2.0 TSI (40k-70k miles)",
+            "Carbon buildup on direct injection intake valves causing misfire",
+            "High-pressure fuel pump wear affecting cold starts on early EA888"
+          ],
+          "typicalModels": [
+            "S 1.4 TSI",
+            "SE 1.4 TSI / 2.0 TSI",
+            "Sport 1.4 TSI Twincharger",
+            "GT 2.0 TSI",
+            "R-Line 1.4 TSI"
+          ],
+          "importantNotes": [],
+          "cta": "Compare Volkswagen Jetta Petrol engine prices"
+        },
+        {
+          "title": "Volkswagen Jetta Hybrid Engines",
+          "description": "The Jetta Hybrid (2012-2014) combined a 1.4 TSI with an electric motor for improved efficiency, but specialist knowledge is required for powertrain replacement enquiries.",
+          "descriptor": "The Jetta Hybrid (2012-2014) combined a 1.4 TSI with an electric motor for improved efficiency, but specialist knowledge is required for powertrain replacement enquiries.",
+          "familiesLabel": "Volkswagen Jetta Hybrid Engine Codes",
+          "foundInLabel": "Found In",
+          "knownForLabel": "",
+          "modelsLabel": "",
+          "notesLabel": "Important Notes",
+          "families": [
+            "CAVG - 1.4 TSI hybrid-specific code (Hybrid trim), integrated electric motor",
+            "1.4 TSI petrol engine paired with 20kW electric motor for combined 150hp output",
+            "Regenerative braking recharges lithium-ion battery; electric assist under acceleration",
+            "Engine replacement requires hybrid system inspection and battery compatibility check"
+          ],
+          "foundIn": [
+            "Hybrid (2012-2014)"
+          ],
+          "knownFor": [],
+          "typicalModels": [],
+          "importantNotes": [
+            "No plug-in hybrid version of Jetta was sold in the UK",
+            "Hybrid engine replacement requires specialist with high-voltage certification",
+            "Availability is more limited than standard petrol or diesel engines"
+          ],
+          "cta": "Enquire about Volkswagen Jetta Hybrid engine availability"
+        }
+      ],
+      "closing": "Not sure which fuel type your Volkswagen Jetta has? Enter your registration number above to instantly identify your engine code, fuel system and compatible replacement options - all backed by a minimum 12‑month unlimited mileage warranty from UK Volkswagen Jetta specialists.",
+      "headingLines": [
+        "Volkswagen Jetta Engines by Fuel Type"
+      ],
       "ui": {
         "swapLabel": "Swap panel",
         "familiesLabel": "Common Engine Families",

@@ -15,15 +15,15 @@
     "canonical": "/peugeot/301"
   },
   "assets": {
-    "mainImage": "/images/brands/peugeot/models/peugeot-301-main.webp",
-    "smallImage": "/images/brands/peugeot/models/peugeot-301-small.webp",
-    "heroBg": "/images/brands/peugeot/models/peugeot-301-main.webp",
+    "mainImage": "/images/brands/peugeot/models/peugeot-301-model-card.png",
+    "smallImage": "/images/brands/peugeot/models/peugeot-301-model-card.png",
+    "heroBg": "/images/brands/peugeot/models/peugeot-301-model-card.png",
     "howItWorksBg": "/images/brands/peugeot/brand/peugeot-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/peugeot/brand/peugeot-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/peugeot/brand/peugeot-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/peugeot/brand/peugeot-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/peugeot/brand/peugeot-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/peugeot/models/peugeot-301-main.webp"
+    "ctaImage": "/images/brands/peugeot/models/peugeot-301-model-card.png"
   },
   "sections": {
     "hero": {
@@ -38,7 +38,7 @@
       ],
       "ctaLinkText": "Get Free Peugeot 301 Engine Quotes →",
       "supportingText": "Get tailored Peugeot 301 engine quotes from vetted UK specialists.",
-      "ticker": "● Instant Quotes · No Obligation · 100% Free · Reconditioned · Rebuilt · Used · Supply & Fit Available · UK-Wide Network ═══════════════════════════════════════",
+      "ticker": "● Instant Quotes · No Obligation · 100% Free · Reconditioned · Rebuilt · Used · Supply & Fit Available · UK-Wide Network",
       "form": {
         "heading": "Find Your Peugeot 301 Engine",
         "subtitle": "Enter your registration number to compare Peugeot 301 engine options.",
@@ -1468,11 +1468,83 @@
     },
     "fuelTypes": {
       "tag": "Fuel Type",
-      "h2": "",
+      "h2": "Peugeot 301 Engines by Fuel Type",
       "intro": "",
-      "items": [],
-      "closing": "",
-      "headingLines": [],
+      "items": [
+        {
+          "title": "Peugeot 301 Diesel Engines",
+          "description": "Diesel engines dominated Peugeot 301 sales for high-mileage and fleet use, with the 1.6 HDi being the most common replacement enquiry due to EGR and turbo-related failures.",
+          "descriptor": "Diesel engines dominated Peugeot 301 sales for high-mileage and fleet use, with the 1.6 HDi being the most common replacement enquiry due to EGR and turbo-related failures.",
+          "familiesLabel": "Common Peugeot 301 Diesel Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Diesel Models",
+          "notesLabel": "",
+          "families": [
+            "9HF (DV6DTED) - most common 1.6 HDi code (Access/Active), EGR and turbo failure risk",
+            "9HJ (DV6DTEDM) - updated 1.6 HDi for facelift models, DPF regeneration issues",
+            "DV5RD - 1.5 BlueHDi replacement engine, timing chain tensioner concerns pre-2020",
+            "8HZ (DV4TD) - entry 1.4 HDi, injector seal and glow plug faults"
+          ],
+          "foundIn": [
+            "B7 Pre-facelift (2012-2017) - 1.4 HDi, 1.6 HDi (9HF)",
+            "B7 Facelift (2018-2021) - 1.5 BlueHDi, 1.6 HDi (9HJ), 1.6 BlueHDi"
+          ],
+          "knownFor": [
+            "Strong motorway fuel economy (55-65 mpg achievable)",
+            "EGR valve clogging on short-journey driving patterns",
+            "High UK replacement demand on 1.6 HDi Access/Active variants",
+            "DPF issues on facelift models used primarily for urban trips"
+          ],
+          "typicalModels": [
+            "1.4 HDi Access",
+            "1.6 HDi Active",
+            "1.6 HDi Allure",
+            "1.5 BlueHDi Style",
+            "1.6 BlueHDi VIP"
+          ],
+          "importantNotes": [],
+          "cta": "Get quotes for Peugeot 301 Diesel replacement engines"
+        },
+        {
+          "title": "Peugeot 301 Petrol Engines",
+          "description": "Petrol Peugeot 301 engines appeal to lower-mileage owners, with the 1.6 VTi generating the most replacement searches due to oil consumption issues on higher-mileage examples.",
+          "descriptor": "Petrol Peugeot 301 engines appeal to lower-mileage owners, with the 1.6 VTi generating the most replacement searches due to oil consumption issues on higher-mileage examples.",
+          "familiesLabel": "Common Peugeot 301 Petrol Engine Families",
+          "foundInLabel": "Found In",
+          "knownForLabel": "Known For",
+          "modelsLabel": "Typical Petrol Models",
+          "notesLabel": "",
+          "families": [
+            "NFP (EC5) - 1.6 VTi 115hp, oil consumption and timing chain tensioner failures",
+            "HMY/HMZ (EB2M/EB2F) - 1.2 VTi 72/82hp, timing chain stretch on early units",
+            "HMR (EB2FA) - 1.2 PureTech, wet timing belt contamination risk"
+          ],
+          "foundIn": [
+            "B7 Pre-facelift (2012-2017) - 1.2 VTi, 1.6 VTi",
+            "B7 Facelift (2018-2021) - 1.2 PureTech, 1.6 VTi"
+          ],
+          "knownFor": [
+            "Adequate performance for urban and mixed driving",
+            "1.6 VTi oil consumption on units over 80k miles",
+            "1.2 VTi timing chain concerns requiring preventative attention",
+            "Lower replacement costs than diesel variants on average"
+          ],
+          "typicalModels": [
+            "1.2 VTi Access",
+            "1.2 VTi Active",
+            "1.6 VTi Allure",
+            "1.2 PureTech Style",
+            "1.6 VTi VIP"
+          ],
+          "importantNotes": [],
+          "cta": "Compare Peugeot 301 Petrol engine prices"
+        }
+      ],
+      "closing": "Not sure which fuel type your Peugeot 301 has? Enter your registration number above to instantly identify your engine code, fuel system and compatible replacement options - all backed by a minimum 12-month unlimited mileage warranty from UK Peugeot 301 specialists.",
+      "headingLines": [
+        "Peugeot 301 Engines by Fuel Type"
+      ],
       "ui": {
         "swapLabel": "Swap panel",
         "familiesLabel": "Common Engine Families",
