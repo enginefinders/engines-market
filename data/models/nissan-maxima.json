@@ -420,11 +420,11 @@
         {
           "h3": "Nissan Maxima A34 3.5L SE Engine Replacement",
           "slug": "nissan-maxima-a34-3-5l-se-engine",
-          "subtitle": "VQ35DE 3.5L Petrol · 255-265hp · 2003-2008",
+          "subtitle": "VQ35DE 3.5L Petrol Â· 255-265hp Â· 2003-2008",
           "priceRange": "£1,600-£3,400",
           "cta": "Compare A34 SE Engine Prices",
           "engineCodes": [
-            "VQ35DE"
+            "VQ35DE 3.5L"
           ],
           "fuel": "Petrol",
           "power": "255-265hp",
@@ -434,11 +434,11 @@
         {
           "h3": "Nissan Maxima A34 3.5L SL Engine Replacement",
           "slug": "nissan-maxima-a34-3-5l-sl-engine",
-          "subtitle": "VQ35DE 3.5L Petrol · 255hp · 2003-2008",
+          "subtitle": "VQ35DE 3.5L Petrol Â· 255hp Â· 2003-2008",
           "priceRange": "£1,500-£3,200",
           "cta": "Compare A34 SL Engine Prices",
           "engineCodes": [
-            "VQ35DE"
+            "VQ35DE 3.5L"
           ],
           "fuel": "Petrol",
           "power": "255hp",
@@ -448,11 +448,11 @@
         {
           "h3": "Nissan Maxima A34 3.5L GX Engine Replacement",
           "slug": "nissan-maxima-a34-3-5l-gx-engine",
-          "subtitle": "VQ35DE 3.5L Petrol · 255hp · 2003-2006",
+          "subtitle": "VQ35DE 3.5L Petrol Â· 255hp Â· 2003-2006",
           "priceRange": "£1,450-£2,900",
           "cta": "Compare A34 GX Engine Prices",
           "engineCodes": [
-            "VQ35DE"
+            "VQ35DE 3.5L"
           ],
           "fuel": "Petrol",
           "power": "255hp",
@@ -462,11 +462,11 @@
         {
           "h3": "Nissan Maxima A33 3.0L SE Engine Replacement",
           "slug": "nissan-maxima-a33-3-0l-se-engine",
-          "subtitle": "VQ30DE 3.0L Petrol · 222hp · 1999-2003",
+          "subtitle": "VQ30DE 3.0L Petrol Â· 222hp Â· 1999-2003",
           "priceRange": "£1,200-£2,400",
           "cta": "Compare A33 SE Engine Prices",
           "engineCodes": [
-            "VQ30DE"
+            "VQ30DE 3.0L"
           ],
           "fuel": "Petrol",
           "power": "222hp",
@@ -476,11 +476,11 @@
         {
           "h3": "Nissan Maxima A33 3.0L SL Engine Replacement",
           "slug": "nissan-maxima-a33-3-0l-sl-engine",
-          "subtitle": "VQ30DE 3.0L Petrol · 222hp · 1999-2003",
+          "subtitle": "VQ30DE 3.0L Petrol Â· 222hp Â· 1999-2003",
           "priceRange": "£1,200-£2,400",
           "cta": "Compare A33 SL Engine Prices",
           "engineCodes": [
-            "VQ30DE"
+            "VQ30DE 3.0L"
           ],
           "fuel": "Petrol",
           "power": "222hp",
@@ -490,11 +490,11 @@
         {
           "h3": "Nissan Maxima A32 3.0L SL Engine Replacement",
           "slug": "nissan-maxima-a32-3-0l-sl-engine",
-          "subtitle": "VQ30DE 3.0L Petrol · 200hp · 1994-1999",
+          "subtitle": "VQ30DE 3.0L Petrol Â· 200hp Â· 1994-1999",
           "priceRange": "£1,100-£2,200",
           "cta": "Compare A32 SL Engine Prices",
           "engineCodes": [
-            "VQ30DE"
+            "VQ30DE 3.0L"
           ],
           "fuel": "Petrol",
           "power": "200hp",
@@ -504,11 +504,11 @@
         {
           "h3": "Nissan Maxima A32 2.0L GX Engine Replacement",
           "slug": "nissan-maxima-a32-2-0l-gx-engine",
-          "subtitle": "VQ20DE 2.0L Petrol · 140hp · 1994-1999",
+          "subtitle": "VQ20DE 2.0L Petrol Â· 140hp Â· 1994-1999",
           "priceRange": "£950-£1,800",
           "cta": "Compare A32 GX Engine Prices",
           "engineCodes": [
-            "VQ20DE"
+            "VQ20DE 2.0L"
           ],
           "fuel": "Petrol",
           "power": "140hp",
@@ -518,11 +518,11 @@
         {
           "h3": "Nissan Maxima A33 3.0L Turbo Engine Replacement",
           "slug": "nissan-maxima-a33-3-0l-turbo-engine",
-          "subtitle": "VQ30DET 3.0L Twin-Turbo Petrol · 280hp · 1999-2003",
+          "subtitle": "VQ30DET 3.0L Twin-Turbo Petrol Â· 280hp Â· 1999-2003",
           "priceRange": "£2,800-£5,500",
           "cta": "Compare A33 Turbo Engine Prices",
           "engineCodes": [
-            "VQ30DET"
+            "VQ30DET 3.0L Twin-Turbo"
           ],
           "fuel": "Petrol",
           "power": "280hp",
@@ -635,22 +635,9 @@
                 "size": "3.0 Litre",
                 "power": "190-200 hp",
                 "years": "1988-1994",
-                "compatibleVariants": [],
-                "commonFailures": [],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "Pre",
-                "title": "A32 executive saloon variants",
-                "familyHeading": "VQ Series Naturally Aspirated (1994-2008)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
+                "compatibleVariants": [
+                  "Pre-A32 executive saloon variants"
+                ],
                 "commonFailures": [
                   "Timing belt wear requiring preventative replacement",
                   "Oil seal degradation on high-mileage units"
@@ -754,19 +741,7 @@
               "fuel": "Petrol",
               "size": "3.0L",
               "power": "190-200 hp",
-              "compatibleModels": "",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "Pre",
-              "title": "A32 executive saloon variants",
-              "familyHeading": "VQ Series Naturally Aspirated (1994-2008)",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
+              "compatibleModels": "Pre-A32 executive saloon variants",
               "avgRebuiltPrice": "£1,200 - £2,600",
               "cta": "Get quotes for VE30DE Nissan Maxima engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -811,7 +786,7 @@
     "commonProblems": {
       "tag": "Common Problems",
       "h2": "Nissan Maxima Engine Problems - What It Costs to Fix & When Replacement Makes Sense",
-      "h3": "",
+      "h3": "The Nissan Maxima's VQ-series petrol engines are generally robust, but high-mileage executive use exposes known weaknesses in timing chain guides, oil control systems and ignition components. Every rebuilt engine supplied through EngineMarket includes upgraded internal components designed to address the original failure point - plus a minimum 12‑month unlimited mileage warranty. Use this decision tool to compare repair vs replacement costs for your specific Maxima variant.",
       "problems": [
         {
           "group": "VQ35DE Timing Chain Guide Failure",
@@ -1528,7 +1503,20 @@
       "tag": "Why Choose Us",
       "h2": "Why UK Nissan Maxima Owners Trust EngineMarket",
       "intro": "Join thousands of UK drivers who compare Nissan Maxima engine prices through our network of trusted specialists - every rebuilt and reconditioned unit backed by a minimum 12‑month unlimited mileage warranty and nationwide delivery.",
-      "points": [],
+      "points": [
+        {
+          "title": "Trusted Nissan Maxima Engine Suppliers",
+          "description": "Every garage and engine rebuilder in our network is vetted, rated, and reviewed by real Nissan Maxima owners."
+        },
+        {
+          "title": "Compare Nissan Maxima Engine Replacement Companies",
+          "description": "See prices, warranty terms, and supply & fit options side‑by‑side before you commit."
+        },
+        {
+          "title": "UK Engine Replacement Services for Nissan Maxima",
+          "description": "Covering every variant from budget A32 GX to performance A34 SE, with supply‑only or full supply & fit available nationwide."
+        }
+      ],
       "finalText": "Find the best Nissan Maxima engine replacement UK drivers rely on. Compare prices from trusted specialists today and get back on the road with confidence.",
       "buttonText": "Compare Nissan Maxima Engine Prices Now →",
       "secondaryAction": {

@@ -445,11 +445,11 @@
         {
           "h3": "Nissan AD DX Engine Replacement",
           "slug": "nissan-ad-dx-engine",
-          "subtitle": "QG15DE 1.5L Petrol · 98hp · 1999-2006",
+          "subtitle": "QG15DE 1.5L Petrol Â· 98hp Â· 1999-2006",
           "priceRange": "£850-£1,450",
           "cta": "Compare DX Engine Prices",
           "engineCodes": [
-            "QG15DE"
+            "QG15DE 1.5L"
           ],
           "fuel": "Petrol",
           "power": "98hp",
@@ -459,12 +459,12 @@
         {
           "h3": "Nissan AD VE Engine Replacement",
           "slug": "nissan-ad-ve-engine",
-          "subtitle": "QG15DE/HR15DE 1.5L Petrol · 105-109hp · 1999-2016",
+          "subtitle": "QG15DE/HR15DE 1.5L Petrol Â· 105-109hp Â· 1999-2016",
           "priceRange": "£900-£1,650",
           "cta": "Compare VE Engine Prices",
           "engineCodes": [
             "QG15DE",
-            "HR15DE"
+            "HR15DE 1.5L"
           ],
           "fuel": "Petrol",
           "power": "105-109hp",
@@ -474,11 +474,11 @@
         {
           "h3": "Nissan AD EXPERT LX Engine Replacement",
           "slug": "nissan-ad-expert-lx-engine",
-          "subtitle": "HR15DE 1.5L Petrol · 109hp · 2006-2016",
+          "subtitle": "HR15DE 1.5L Petrol Â· 109hp Â· 2006-2016",
           "priceRange": "£1,050-£1,950",
           "cta": "Compare EXPERT LX Engine Prices",
           "engineCodes": [
-            "HR15DE"
+            "HR15DE 1.5L"
           ],
           "fuel": "Petrol",
           "power": "109hp",
@@ -488,11 +488,11 @@
         {
           "h3": "Nissan AD DX Diesel Engine Replacement",
           "slug": "nissan-ad-dx-diesel-engine",
-          "subtitle": "CD20 2.0L Diesel · 76hp · 1999-2006",
+          "subtitle": "CD20 2.0L Diesel Â· 76hp Â· 1999-2006",
           "priceRange": "£950-£1,750",
           "cta": "Compare DX Diesel Engine Prices",
           "engineCodes": [
-            "CD20"
+            "CD20 2.0L"
           ],
           "fuel": "Diesel",
           "power": "76hp",
@@ -502,11 +502,11 @@
         {
           "h3": "Nissan AD VE Diesel Engine Replacement",
           "slug": "nissan-ad-ve-diesel-engine",
-          "subtitle": "YD22DDTi 2.2L Diesel · 100hp · 2002-2006",
+          "subtitle": "YD22DDTi 2.2L Diesel Â· 100hp Â· 2002-2006",
           "priceRange": "£1,100-£2,100",
           "cta": "Compare VE Diesel Engine Prices",
           "engineCodes": [
-            "YD22DDTi"
+            "YD22DDTi 2.2L"
           ],
           "fuel": "Diesel",
           "power": "100hp",
@@ -516,11 +516,11 @@
         {
           "h3": "Nissan AD EXPERT GX Diesel Engine Replacement",
           "slug": "nissan-ad-expert-gx-diesel-engine",
-          "subtitle": "YD25DDTi 2.5L Diesel · 136hp · 2006-2016",
+          "subtitle": "YD25DDTi 2.5L Diesel Â· 136hp Â· 2006-2016",
           "priceRange": "£1,350-£2,450",
           "cta": "Compare EXPERT GX Diesel Engine Prices",
           "engineCodes": [
-            "YD25DDTi"
+            "YD25DDTi 2.5L"
           ],
           "fuel": "Diesel",
           "power": "136hp",
@@ -530,11 +530,11 @@
         {
           "h3": "Nissan AD 4WD Engine Replacement",
           "slug": "nissan-ad-4wd-engine",
-          "subtitle": "HR16DE 1.6L Petrol · 110hp · 2010-2016",
+          "subtitle": "HR16DE 1.6L Petrol Â· 110hp Â· 2010-2016",
           "priceRange": "£1,200-£2,200",
           "cta": "Compare 4WD Engine Prices",
           "engineCodes": [
-            "HR16DE"
+            "HR16DE 1.6L"
           ],
           "fuel": "Petrol",
           "power": "110hp",
@@ -544,11 +544,11 @@
         {
           "h3": "Nissan AD Wingroad Engine Replacement",
           "slug": "nissan-ad-wingroad-engine",
-          "subtitle": "HR15DE 1.5L Petrol · 109hp · 2006-2016",
+          "subtitle": "HR15DE 1.5L Petrol Â· 109hp Â· 2006-2016",
           "priceRange": "£1,000-£1,850",
           "cta": "Compare Wingroad Engine Prices",
           "engineCodes": [
-            "HR15DE"
+            "HR15DE 1.5L"
           ],
           "fuel": "Petrol",
           "power": "109hp",
@@ -558,11 +558,11 @@
         {
           "h3": "Nissan AD Y10 Classic Engine Replacement",
           "slug": "nissan-ad-y10-classic-engine",
-          "subtitle": "GA15DE 1.5L Petrol · 90hp · 1990-1996",
+          "subtitle": "GA15DE 1.5L Petrol Â· 90hp Â· 1990-1996",
           "priceRange": "£750-£1,350",
           "cta": "Compare Y10 Engine Prices",
           "engineCodes": [
-            "GA15DE"
+            "GA15DE 1.5L"
           ],
           "fuel": "Petrol",
           "power": "90hp",
@@ -650,26 +650,12 @@
                 ],
                 "commonFailures": [
                   "EGR cooler clogging leading to overheating",
-                  "Timing chain tensioner wear at 100k+ miles"
+                  "Timing chain tensioner wear at 100k+ miles",
+                  "DPF-related issues on post-2006 models"
                 ],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
-              },
-              {
-                "code": "DPF",
-                "title": "related issues on post-2006 models",
-                "familyHeading": "CD/YD Series Diesel Engines (1990-2016)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
                 "avgRebuiltPrice": "£1,100 - £2,350",
                 "cta": "Get quotes for YD22DDTi Nissan AD engine replacement",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
                 "code": "YD25DDTi",
@@ -774,23 +760,9 @@
                 ],
                 "commonFailures": [
                   "Timing chain tensioner wear at 100k+ miles",
-                  "Oil consumption on high-mileage examples"
+                  "Oil consumption on high-mileage examples",
+                  "4WD-specific mount wear causing vibration"
                 ],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "4WD",
-                "title": "specific mount wear causing vibration",
-                "familyHeading": "QG/HR/CR Series Petrol Engines (1990-2016)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
                 "avgRebuiltPrice": "£1,200 - £2,400",
                 "cta": "Get quotes for HR16DE Nissan AD engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -847,21 +819,9 @@
               "size": "2.2L",
               "power": "100-110 hp",
               "compatibleModels": "VE, EXPERT GX, Van (Y11 late, Y12)",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
-            },
-            {
-              "code": "DPF",
-              "title": "related issues on post-2006 models",
-              "familyHeading": "CD/YD Series Diesel Engines (1990-2016)",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
               "avgRebuiltPrice": "£1,100 - £2,350",
               "cta": "Get quotes for YD22DDTi Nissan AD engine replacement",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
               "code": "YD25DDTi",
@@ -926,18 +886,6 @@
               "size": "1.6L",
               "power": "110 hp",
               "compatibleModels": "EXPERT GX 4WD (Y12 VZNY12 chassis)",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "4WD",
-              "title": "specific mount wear causing vibration",
-              "familyHeading": "QG/HR/CR Series Petrol Engines (1990-2016)",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
               "avgRebuiltPrice": "£1,200 - £2,400",
               "cta": "Get quotes for HR16DE Nissan AD engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -970,7 +918,7 @@
     "commonProblems": {
       "tag": "Common Problems",
       "h2": "Nissan AD Engine Problems - What It Costs to Fix & When Replacement Makes Sense",
-      "h3": "",
+      "h3": "The Nissan AD's QG15DE, HR15DE and YD22DDTi engines dominate UK replacement enquiries. Timing chain stretch, oil consumption and EGR failures are the most common causes. Every rebuilt engine supplied through EngineMarket includes upgraded internal components designed to address the original failure point - plus a minimum 12‑month unlimited mileage warranty.",
       "problems": [
         {
           "group": "Timing Chain Stretch",
@@ -1214,7 +1162,7 @@
     "engineSizes": {
       "tag": "Engine Sizes",
       "h2": "Nissan AD Engines by Size - Find the Right Displacement for Your Variant",
-      "intro": "",
+      "intro": "Every displacement fitted to the Nissan AD is listed below, with compatible engine codes, production years and common failure notes to help you identify the right replacement.",
       "groups": [
         {
           "title": "Nissan AD Diesel Engine Sizes",
@@ -1407,7 +1355,7 @@
     "fuelTypes": {
       "tag": "Fuel Type",
       "h2": "Nissan AD Engines by Fuel Type",
-      "intro": "",
+      "intro": "Choose your Nissan AD engine by fuel type to compare realistic replacement prices, known issues, and compatible UK supply options - from early GA15DE petrol to the latest YD25DDTi diesel.",
       "items": [
         {
           "title": "Nissan AD Diesel Engines",
@@ -1784,8 +1732,21 @@
     "trustCta": {
       "tag": "Why Choose Us",
       "h2": "Why UK Nissan AD Owners Trust EngineMarket",
-      "intro": "",
-      "points": [],
+      "intro": "Join thousands of UK drivers who compare Nissan AD engine prices through our network of trusted specialists - every rebuilt and reconditioned unit backed by a minimum 12‑month unlimited mileage warranty and nationwide delivery.",
+      "points": [
+        {
+          "title": "Trusted Nissan AD Engine Suppliers",
+          "description": "Every garage and engine rebuilder in our network is vetted, rated, and reviewed by real Nissan AD owners."
+        },
+        {
+          "title": "Compare Nissan AD Engine Replacement Companies",
+          "description": "See prices, warranty terms, and supply & fit options side‑by‑side before you commit."
+        },
+        {
+          "title": "UK Engine Replacement Services for Nissan AD",
+          "description": "Covering every variant from budget DX to performance EXPERT GX, with supply‑only or full supply & fit available nationwide."
+        }
+      ],
       "finalText": "Find the best Nissan AD engine replacement UK drivers rely on. Compare prices from trusted specialists today and get back on the road with confidence.",
       "buttonText": "Compare Nissan AD Engine Prices Now →",
       "secondaryAction": {

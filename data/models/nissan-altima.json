@@ -436,11 +436,11 @@
         {
           "h3": "Nissan Altima 2.5 S Engine Replacement",
           "slug": "nissan-altima-2-5-s-engine",
-          "subtitle": "QR25DE 2.5L Petrol · 175hp · 2002-2012",
+          "subtitle": "QR25DE 2.5L Petrol Â· 175hp Â· 2002-2012",
           "priceRange": "£1,900-£3,100",
           "cta": "Compare 2.5 S Engine Prices",
           "engineCodes": [
-            "QR25DE"
+            "QR25DE 2.5L"
           ],
           "fuel": "Petrol",
           "power": "175hp",
@@ -450,11 +450,11 @@
         {
           "h3": "Nissan Altima 2.5 SL Engine Replacement",
           "slug": "nissan-altima-2-5-sl-engine",
-          "subtitle": "QR25DE 2.5L Petrol · 175hp · 2002-2012",
+          "subtitle": "QR25DE 2.5L Petrol Â· 175hp Â· 2002-2012",
           "priceRange": "£1,950-£3,150",
           "cta": "Compare 2.5 SL Engine Prices",
           "engineCodes": [
-            "QR25DE"
+            "QR25DE 2.5L"
           ],
           "fuel": "Petrol",
           "power": "175hp",
@@ -464,11 +464,11 @@
         {
           "h3": "Nissan Altima 2.5 SR Engine Replacement",
           "slug": "nissan-altima-2-5-sr-engine",
-          "subtitle": "QR25DE 2.5L Petrol · 182hp · 2005-2012",
+          "subtitle": "QR25DE 2.5L Petrol Â· 182hp Â· 2005-2012",
           "priceRange": "£1,900-£3,200",
           "cta": "Compare 2.5 SR Engine Prices",
           "engineCodes": [
-            "QR25DE"
+            "QR25DE 2.5L"
           ],
           "fuel": "Petrol",
           "power": "182hp",
@@ -478,11 +478,11 @@
         {
           "h3": "Nissan Altima 3.5 SE Engine Replacement",
           "slug": "nissan-altima-3-5-se-engine",
-          "subtitle": "VQ35DE 3.5L Petrol · 240hp · 2002-2012",
+          "subtitle": "VQ35DE 3.5L Petrol Â· 240hp Â· 2002-2012",
           "priceRange": "£2,200-£3,800",
           "cta": "Compare 3.5 SE Engine Prices",
           "engineCodes": [
-            "VQ35DE"
+            "VQ35DE 3.5L"
           ],
           "fuel": "Petrol",
           "power": "240hp",
@@ -492,11 +492,11 @@
         {
           "h3": "Nissan Altima 3.5 SL Engine Replacement",
           "slug": "nissan-altima-3-5-sl-engine",
-          "subtitle": "VQ35DE 3.5L Petrol · 240hp · 2002-2012",
+          "subtitle": "VQ35DE 3.5L Petrol Â· 240hp Â· 2002-2012",
           "priceRange": "£2,250-£3,850",
           "cta": "Compare 3.5 SL Engine Prices",
           "engineCodes": [
-            "VQ35DE"
+            "VQ35DE 3.5L"
           ],
           "fuel": "Petrol",
           "power": "240hp",
@@ -506,11 +506,11 @@
         {
           "h3": "Nissan Altima 3.5 SE-R Engine Replacement",
           "slug": "nissan-altima-3-5-se-r-engine",
-          "subtitle": "VQ35DE 3.5L Petrol · 275hp · 2005-2006",
+          "subtitle": "VQ35DE 3.5L Petrol Â· 275hp Â· 2005-2006",
           "priceRange": "£2,400-£4,100",
           "cta": "Compare 3.5 SE-R Engine Prices",
           "engineCodes": [
-            "VQ35DE"
+            "VQ35DE 3.5L"
           ],
           "fuel": "Petrol",
           "power": "275hp",
@@ -520,11 +520,11 @@
         {
           "h3": "Nissan Altima 2.0 S Engine Replacement",
           "slug": "nissan-altima-2-0-s-engine",
-          "subtitle": "QR20DE 2.0L Petrol · 134hp · 2002-2006",
+          "subtitle": "QR20DE 2.0L Petrol Â· 134hp Â· 2002-2006",
           "priceRange": "£1,800-£2,600",
           "cta": "Compare 2.0 S Engine Prices",
           "engineCodes": [
-            "QR20DE"
+            "QR20DE 2.0L"
           ],
           "fuel": "Petrol",
           "power": "134hp",
@@ -534,11 +534,11 @@
         {
           "h3": "Nissan Altima Hybrid Engine Replacement",
           "slug": "nissan-altima-hybrid-engine",
-          "subtitle": "PR25DD 2.5L Hybrid · 158hp · 2007-2010",
+          "subtitle": "PR25DD 2.5L Hybrid Â· 158hp Â· 2007-2010",
           "priceRange": "£2,400-£3,600",
           "cta": "Compare Hybrid Engine Prices",
           "engineCodes": [
-            "PR25DD"
+            "PR25DD 2.5L"
           ],
           "fuel": "Hybrid",
           "power": "158hp",
@@ -659,22 +659,9 @@
                 "size": "2.5 Litre",
                 "power": "158 hp (combined)",
                 "years": "2007-2010",
-                "compatibleVariants": [],
-                "commonFailures": [],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "2.5",
-                "title": "Hybrid, 2.5 SL Hybrid",
-                "familyHeading": "Early & Hybrid Units (2002-2012)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
+                "compatibleVariants": [
+                  "2.5 Hybrid, 2.5 SL Hybrid"
+                ],
                 "commonFailures": [
                   "Hybrid battery cooling fan failure",
                   "ECU mapping and sensor cascade faults"
@@ -757,19 +744,7 @@
               "fuel": "Hybrid (Petrol)",
               "size": "2.5L",
               "power": "158 hp (combined)",
-              "compatibleModels": "",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "2.5",
-              "title": "Hybrid, 2.5 SL Hybrid",
-              "familyHeading": "Early & Hybrid Units (2002-2012)",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
+              "compatibleModels": "2.5 Hybrid, 2.5 SL Hybrid",
               "avgRebuiltPrice": "£2,400 - £3,600",
               "cta": "Get quotes for PR25DD Nissan Altima engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"

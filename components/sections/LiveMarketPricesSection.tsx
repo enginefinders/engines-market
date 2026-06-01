@@ -12,6 +12,7 @@ type Props = {
   modelCards?: ModelsSectionData["cards"];
   imageSrc?: string;
   displayMode?: "brand" | "document";
+  initialTimestamp?: string;
 };
 
 type FeedRow = LiveMarketPriceEntry & {
@@ -64,7 +65,7 @@ function buildFeedRows(
 
   const gaps = density === "premium" ? [6, 8, 11, 15, 19, 24] : [12, 16, 21, 28, 36];
   const startIndex =
-    ((clock.getHours() * 11) + (clock.getDate() * 7) + refreshSeed * visibleRows) % entries.length;
+    ((clock.getUTCHours() * 11) + (clock.getUTCDate() * 7) + refreshSeed * visibleRows) % entries.length;
 
   let elapsedMinutes = density === "premium" ? 3 : 9;
   const rows: FeedRow[] = [];
@@ -122,6 +123,7 @@ function formatUpdatedAt(clock: Date) {
     month: "short",
     hour: "2-digit",
     minute: "2-digit",
+    timeZone: "UTC",
   }).format(clock);
 }
 
@@ -130,8 +132,9 @@ export default function LiveMarketPricesSection({
   modelCards,
   imageSrc,
   displayMode = "brand",
+  initialTimestamp,
 }: Props) {
-  const [clock, setClock] = useState(() => new Date());
+  const [clock, setClock] = useState(() => new Date(initialTimestamp ?? "2025-01-01T12:00:00.000Z"));
   const [activeTab, setActiveTab] = useState("all");
   const [drawerOpen, setDrawerOpen] = useState(false);
   const isDocumentMode = displayMode === "document";

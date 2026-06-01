@@ -168,6 +168,7 @@ export default async function BrandPage({ params }: BrandPageProps) {
     pageData.brand.slug === "land-rover"
       ? "/images/brands/land-rover/cta-image.webp"
       : pageData.sections.models.cards[0]?.image ?? pageData.assets.heroBg;
+  const initialTimestamp = new Date().toISOString();
 
   return (
     <>
@@ -193,6 +194,7 @@ export default async function BrandPage({ params }: BrandPageProps) {
         data={pageData.sections.liveMarketPrices}
         modelCards={pageData.sections.models.cards}
         imageSrc={brandVisuals.liveMarket}
+        initialTimestamp={initialTimestamp}
       />
 
       <ReviewsSection data={reviewsData} useDataHeading />

@@ -174,9 +174,9 @@
       }
     },
     "liveMarketPrices": {
-      "tag": "Live UK Engine Market Data",
-      "h2": "",
-      "h3": "",
+      "tag": "Live UK EV Component Market Data",
+      "h2": "What Are UK Drivers Paying for Nissan Hypermini Component Replacement?",
+      "h3": "The table below shows typical UK rebuilt component costs across Nissan Hypermini variants - compare failure causes, motor/battery codes, power types, and price ranges to benchmark what UK rare EV owners are paying.",
       "introBullets": [
         {
           "label": "Live market context",
@@ -273,7 +273,9 @@
           }
         ]
       },
-      "headingLines": [],
+      "headingLines": [
+        "What Are UK Drivers Paying for Nissan Hypermini Component Replacement?"
+      ],
       "imageAlt": "Nissan Hypermini live market price reference",
       "filterTabs": [
         {
@@ -436,7 +438,7 @@
     "variantCoverage": {
       "tag": "Models We Cover",
       "h2": "Nissan Hypermini EV Component Replacement - All Variants Covered",
-      "subheading": "",
+      "subheading": "From the economical Demo Spec lead-acid variant to the high-performance Fleet Spec lithium-ion, our network of UK Nissan Hypermini EV specialists helps you compare rebuilt, refurbished and used motor and battery prices, with typical price range for a rebuilt unit with 12‑month warranty - supply & fit available nationwide.",
       "groups": [
         {
           "title": "Core Fleet Spec Range",
@@ -470,13 +472,13 @@
         {
           "h3": "Nissan Hypermini Fleet Spec EM57 Motor Replacement",
           "slug": "nissan-hypermini-fleet-spec-em57-motor-replacement-engine",
-          "subtitle": "EM57-type 20kW Electric · 27hp · 1999-2001",
+          "subtitle": "EM57-type 20kW Electric Â· 27hp Â· 1999-2001",
           "priceRange": "£2,800-£6,500",
           "cta": "Compare Fleet Spec EM57 Component Prices",
           "engineCodes": [
-            "EM57-type"
+            "EM57-type 20kW"
           ],
-          "fuel": "",
+          "fuel": "Electric",
           "power": "27hp",
           "years": "1999-2001",
           "image": ""
@@ -484,10 +486,12 @@
         {
           "h3": "Nissan Hypermini Fleet Spec LIP-XX Battery Replacement",
           "slug": "nissan-hypermini-fleet-spec-lip-xx-battery-replacement-engine",
-          "subtitle": "LIP-XX 288V Lithium-ion · 8kWh · 1999-2001 · Refurbished: £3,200-£8,900",
-          "priceRange": "",
+          "subtitle": "LIP-XX 288V Lithium-ion Â· 8kWh Â· 1999-2001",
+          "priceRange": "£3,200-£8,900",
           "cta": "Compare Fleet Spec LIP-XX Battery Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "LIP-XX 288V"
+          ],
           "fuel": "",
           "power": "",
           "years": "1999-2001",
@@ -496,11 +500,11 @@
         {
           "h3": "Nissan Hypermini Fleet Spec Inverter Replacement",
           "slug": "nissan-hypermini-fleet-spec-inverter-replacement-engine",
-          "subtitle": "INV-AC288 Power Electronics · 288V DC-AC · 1999-2001",
+          "subtitle": "INV-AC288 Power Electronics Â· 288V DC-AC Â· 1999-2001",
           "priceRange": "£1,400-£4,200",
           "cta": "Compare Fleet Spec Inverter Prices",
           "engineCodes": [
-            "INV-AC288"
+            "INV-AC288 Power"
           ],
           "fuel": "",
           "power": "",
@@ -510,10 +514,12 @@
         {
           "h3": "Nissan Hypermini Demo Spec LA-XX Battery Replacement",
           "slug": "nissan-hypermini-demo-spec-la-xx-battery-replacement-engine",
-          "subtitle": "LA-XX 288V Lead-acid · 6kWh · 1999-2000 · Refurbished: £1,800-£3,600",
-          "priceRange": "",
+          "subtitle": "LA-XX 288V Lead-acid Â· 6kWh Â· 1999-2000",
+          "priceRange": "£1,800-£3,600",
           "cta": "Compare Demo Spec LA-XX Battery Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "LA-XX 288V"
+          ],
           "fuel": "",
           "power": "",
           "years": "1999-2000",
@@ -522,13 +528,13 @@
         {
           "h3": "Nissan Hypermini Export Spec EM57 Motor Replacement",
           "slug": "nissan-hypermini-export-spec-em57-motor-replacement-engine",
-          "subtitle": "EM57-type 20kW Electric · 27hp · 2000-2001",
+          "subtitle": "EM57-type 20kW Electric Â· 27hp Â· 2000-2001",
           "priceRange": "£3,500-£6,500",
           "cta": "Compare Export Spec EM57 Component Prices",
           "engineCodes": [
-            "EM57-type"
+            "EM57-type 20kW"
           ],
-          "fuel": "",
+          "fuel": "Electric",
           "power": "27hp",
           "years": "2000-2001",
           "image": ""
@@ -548,13 +554,13 @@
         {
           "h3": "Nissan Hypermini 2-Seater RHD Motor Replacement",
           "slug": "nissan-hypermini-2-seater-rhd-motor-replacement-engine",
-          "subtitle": "EM57-type 20kW Electric · Right-hand drive · 1999-2001",
+          "subtitle": "EM57-type 20kW Electric Â· Right-hand drive Â· 1999-2001",
           "priceRange": "£3,200-£7,200",
           "cta": "Compare 2-Seater RHD Component Prices",
           "engineCodes": [
-            "EM57-type"
+            "EM57-type 20kW"
           ],
-          "fuel": "",
+          "fuel": "Electric",
           "power": "",
           "years": "1999-2001",
           "image": ""
@@ -562,11 +568,11 @@
         {
           "h3": "Nissan Hypermini Museum Spec Static Component Replacement",
           "slug": "nissan-hypermini-museum-spec-static-component-replacement-engine",
-          "subtitle": "EM57-type Display Unit · Non-operational · 1999-2001 · Refurbished: £1,200-£3,500",
-          "priceRange": "",
+          "subtitle": "EM57-type Display Unit Â· Non-operational Â· 1999-2001",
+          "priceRange": "£1,200-£3,500",
           "cta": "Compare Museum Spec Component Prices",
           "engineCodes": [
-            "EM57-type"
+            "EM57-type Display"
           ],
           "fuel": "",
           "power": "",
@@ -576,10 +582,12 @@
         {
           "h3": "Nissan Hypermini BMS Control Unit Replacement",
           "slug": "nissan-hypermini-bms-control-unit-replacement-engine",
-          "subtitle": "BMS-288V Battery Management · Software calibrated · 1999-2001 · Rebuilt: £850-£2,400",
+          "subtitle": "BMS-288V Battery Management Â· Software calibrated Â· 1999-2001",
           "priceRange": "£850-£2,400",
           "cta": "Compare BMS Control Unit Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "BMS-288V Battery"
+          ],
           "fuel": "",
           "power": "",
           "years": "1999-2001",
@@ -588,10 +596,12 @@
         {
           "h3": "Nissan Hypermini DC-DC Converter Replacement",
           "slug": "nissan-hypermini-dc-dc-converter-replacement-engine",
-          "subtitle": "DCDC-12V Auxiliary Power · 288V to 12V · 1999-2001 · Rebuilt: £650-£1,900",
+          "subtitle": "DCDC-12V Auxiliary Power Â· 288V to 12V Â· 1999-2001",
           "priceRange": "£650-£1,900",
           "cta": "Compare DC-DC Converter Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "DCDC-12V Auxiliary"
+          ],
           "fuel": "",
           "power": "",
           "years": "1999-2001",
@@ -600,11 +610,11 @@
         {
           "h3": "Nissan Hypermini Motor Position Sensor Replacement",
           "slug": "nissan-hypermini-motor-position-sensor-replacement-engine",
-          "subtitle": "Resolver-EM57 Position Feedback · Encoder calibrated · 1999-2001",
+          "subtitle": "Resolver-EM57 Position Feedback Â· Encoder calibrated Â· 1999-2001",
           "priceRange": "£420-£1,200",
           "cta": "Compare Position Sensor Prices",
           "engineCodes": [
-            "Resolver-EM57"
+            "Resolver-EM57 Position"
           ],
           "fuel": "",
           "power": "",
@@ -614,11 +624,11 @@
         {
           "h3": "Nissan Hypermini Thermal Management Pump Replacement",
           "slug": "nissan-hypermini-thermal-management-pump-replacement-engine",
-          "subtitle": "Coolant-Pump-EM57 Liquid Cooling · Dielectric fluid · 1999-2001",
+          "subtitle": "Coolant-Pump-EM57 Liquid Cooling Â· Dielectric fluid Â· 1999-2001",
           "priceRange": "£380-£950",
           "cta": "Compare Thermal Pump Prices",
           "engineCodes": [
-            "Coolant-Pump-EM57"
+            "Coolant-Pump-EM57 Liquid"
           ],
           "fuel": "",
           "power": "",
@@ -742,22 +752,11 @@
                 "compatibleVariants": [
                   "All variants (Fleet, Demo, Export, RHD, Museum)"
                 ],
-                "commonFailures": [],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "DC",
-                "title": "link capacitor degradation causing intermittent fault codes",
-                "familyHeading": "INV-AC288 Inverter Family (1999-2001)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
+                "commonFailures": [
+                  "DC-link capacitor degradation causing intermittent fault codes",
+                  "IGBT module thermal cycling failure at high mileage",
+                  "Cooling fan bearing wear leading to inverter overheating"
+                ],
                 "avgRebuiltPrice": "£1,400 - £4,200",
                 "cta": "Get quotes for INV-AC288 Nissan Hypermini inverter replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -858,18 +857,6 @@
               "size": "288V DC input, 3-phase AC output",
               "power": "20kW continuous, 288V/80A rating",
               "compatibleModels": "All variants (Fleet, Demo, Export, RHD, Museum)",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "DC",
-              "title": "link capacitor degradation causing intermittent fault codes",
-              "familyHeading": "INV-AC288 Inverter Family (1999-2001)",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
               "avgRebuiltPrice": "£1,400 - £4,200",
               "cta": "Get quotes for INV-AC288 Nissan Hypermini inverter replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -914,7 +901,7 @@
     "commonProblems": {
       "tag": "Common EV Component Problems",
       "h2": "Nissan Hypermini EV Component Problems - What It Costs to Fix & When Replacement Makes Sense",
-      "h3": "",
+      "h3": "The Nissan Hypermini's pioneering electric powertrain is generally robust, but battery cell degradation, motor bearing wear, and inverter capacitor failure dominate replacement enquiries for these ultra-rare 1999-2001 microcars. Every rebuilt component supplied through EngineMarket includes upgraded internal parts designed to address the original failure point - plus a minimum 12‑month unlimited mileage warranty. Use the cost comparisons below to decide between repair and replacement.",
       "problems": [
         {
           "group": "Battery Cell Degradation",
@@ -1088,7 +1075,7 @@
     "fuelTypes": {
       "tag": "Fuel Type",
       "h2": "Nissan Hypermini EV Components by Power Type",
-      "intro": "",
+      "intro": "Choose your Nissan Hypermini component by power type to compare realistic replacement prices, known issues, and compatible UK supply options - from early lead-acid Demo Spec to late lithium-ion Fleet Spec.",
       "items": [
         {
           "title": "Nissan Hypermini Electric Motor Components",
@@ -1496,8 +1483,21 @@
     "trustCta": {
       "tag": "Why Choose Us",
       "h2": "Why UK Nissan Hypermini Owners Trust EngineMarket",
-      "intro": "",
-      "points": [],
+      "intro": "Join thousands of UK drivers who compare Nissan Hypermini EV component prices through our network of trusted specialists - every rebuilt and refurbished unit backed by a minimum 12‑month unlimited mileage warranty and nationwide delivery.",
+      "points": [
+        {
+          "title": "Trusted Nissan Hypermini EV Specialists",
+          "description": "Every garage and EV rebuilder in our network is vetted, rated, and reviewed by real Nissan Hypermini owners and collectors."
+        },
+        {
+          "title": "Compare Nissan Hypermini Component Replacement Companies",
+          "description": "See prices, warranty terms, and specialist fit options side‑by‑side before you commit to rare EV restoration work."
+        },
+        {
+          "title": "UK EV Component Services for Nissan Hypermini",
+          "description": "Covering Fleet, Demo and Export variants, with supply‑only or full specialist fit available nationwide for pioneering electric microcars."
+        }
+      ],
       "finalText": "Find the best Nissan Hypermini EV component replacement UK collectors rely on. Compare prices from trusted EV specialists today and preserve your pioneering electric microcar with confidence.",
       "buttonText": "Compare Nissan Hypermini EV Component Prices Now →",
       "secondaryAction": {

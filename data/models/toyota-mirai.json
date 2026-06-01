@@ -396,11 +396,11 @@
         {
           "h3": "Toyota Mirai First Generation Fuel Cell Replacement",
           "slug": "toyota-mirai-first-generation-fuel-cell-replacement-engine",
-          "subtitle": "JPD10 FC Stack · 134kW · 2015-2020",
+          "subtitle": "JPD10 FC Stack Â· 134kW Â· 2015-2020",
           "priceRange": "£4,000-£12,000",
           "cta": "Compare First Generation FC Stack Prices",
           "engineCodes": [
-            "JPD10"
+            "JPD10 FC"
           ],
           "fuel": "",
           "power": "",
@@ -410,11 +410,11 @@
         {
           "h3": "Toyota Mirai Second Generation Fuel Cell Replacement",
           "slug": "toyota-mirai-second-generation-fuel-cell-replacement-engine",
-          "subtitle": "JPD20 FC Stack · 134kW · 2021-2024",
+          "subtitle": "JPD20 FC Stack Â· 134kW Â· 2021-2024",
           "priceRange": "£6,000-£15,000",
           "cta": "Compare Second Generation FC Stack Prices",
           "engineCodes": [
-            "JPD20"
+            "JPD20 FC"
           ],
           "fuel": "",
           "power": "",
@@ -427,7 +427,9 @@
           "subtitle": "Base Model FC Stack · 134kW · 2015-2024 · Rebuilt: £4,000-£15,000",
           "priceRange": "£4,000-£15,000",
           "cta": "Compare Design Trim FC System Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "Base Model FC Stack"
+          ],
           "fuel": "",
           "power": "",
           "years": "2015-2024",
@@ -439,7 +441,9 @@
           "subtitle": "Mid-Spec FC Stack · 134kW · 2015-2024 · Rebuilt: £4,500-£14,000",
           "priceRange": "£4,500-£14,000",
           "cta": "Compare Design Plus FC Stack Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "Mid-Spec"
+          ],
           "fuel": "",
           "power": "",
           "years": "2015-2024",
@@ -451,7 +455,9 @@
           "subtitle": "Top-Spec FC Stack · 134kW · 2015-2024 · Rebuilt: £5,000-£15,000",
           "priceRange": "£5,000-£15,000",
           "cta": "Compare Premium Pack FC System Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "Top-Spec"
+          ],
           "fuel": "",
           "power": "",
           "years": "2015-2024",
@@ -463,7 +469,9 @@
           "subtitle": "Type IV 700bar Tank · 5.6kg Capacity · 2015-2024 · Rebuilt: £2,000-£4,500",
           "priceRange": "£2,000-£4,500",
           "cta": "Compare Hydrogen Tank Replacement Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "Type IV 700bar Tank"
+          ],
           "fuel": "",
           "power": "",
           "years": "2015-2024",
@@ -482,79 +490,6 @@
         "h2": "Toyota Mirai Engine Codes - Full Technical Specifications & Replacement Guide",
         "h3": "Every fuel cell and hydrogen system component fitted to the Toyota Mirai across both generations, with technical specs, compatible variants and trims, known failure points, and average rebuilt prices from UK FCEV specialists. Select any component to compare quotes.",
         "families": [
-          {
-            "name": "Hydrogen Fuel Cell Stack Components",
-            "entries": [
-              {
-                "code": "JPD10-FC",
-                "title": "Fuel Cell Stack (Gen 1)",
-                "familyHeading": "FC Stack Assembly Family (2015-2024)",
-                "history": "First-generation Mirai FC stack, 134kW output, pioneered Toyota's production FCEV technology with membrane electrode assembly design.",
-                "fuel": "Hydrogen FCEV",
-                "size": "N/A (Fuel Cell System)",
-                "power": "134kW / 182hp",
-                "years": "2015-2020",
-                "compatibleVariants": [
-                  "Design, Design Plus, Design Premium Pack (First Generation)"
-                ],
-                "commonFailures": [
-                  "Membrane electrode assembly degradation around 50,000 km",
-                  "Stack controller ECU communication errors",
-                  "Cooling loop leaks causing overheating warnings"
-                ],
-                "avgRebuiltPrice": "£4,000 - £12,000",
-                "cta": "Get quotes for JPD10-FC Toyota Mirai fuel cell replacement",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "JPD20-FC",
-                "title": "Fuel Cell Stack (Gen 2)",
-                "familyHeading": "FC Stack Assembly Family (2015-2024)",
-                "history": "Second-generation refined FC stack with improved power density and durability, same 134kW output with enhanced thermal management.",
-                "fuel": "Hydrogen FCEV",
-                "size": "N/A (Fuel Cell System)",
-                "power": "134kW / 182hp",
-                "years": "2021-2024",
-                "compatibleVariants": [
-                  "Design, Design Plus, Design Premium Pack (Second Generation)"
-                ],
-                "commonFailures": [
-                  "DC/DC converter overvoltage triggering system shutdown",
-                  "Hydrogen recirculation pump wear",
-                  "Air compressor bearing noise at higher mileage"
-                ],
-                "avgRebuiltPrice": "£6,000 - £15,000",
-                "cta": "Get quotes for JPD20-FC Toyota Mirai fuel cell replacement",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              }
-            ]
-          },
-          {
-            "name": "Hydrogen Storage & Delivery Components",
-            "entries": [
-              {
-                "code": "H2-TANK-700",
-                "title": "Type IV Hydrogen Storage Tank",
-                "familyHeading": "Hydrogen Tank System Family (2015-2024)",
-                "history": "700bar carbon-fibre Type IV tank storing 5.6kg hydrogen, critical safety component requiring certified handling and replacement.",
-                "fuel": "Hydrogen FCEV",
-                "size": "N/A (Storage System)",
-                "power": "N/A",
-                "years": "2015-2024",
-                "compatibleVariants": [
-                  "All trims, both generations"
-                ],
-                "commonFailures": [
-                  "Tank seal leakage triggering hydrogen odour warnings",
-                  "Pressure regulator valve sticking",
-                  "Recirculation pump failure affecting efficiency"
-                ],
-                "avgRebuiltPrice": "£2,000 - £4,500",
-                "cta": "Get quotes for H2-TANK-700 Toyota Mirai hydrogen system",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              }
-            ]
-          },
           {
             "name": "Power Electronics Components",
             "entries": [
@@ -611,42 +546,6 @@
           "failureNote": "Main replacement demand comes from timing-chain, cooling-system and performance thermal-management faults.",
           "engines": [
             {
-              "code": "JPD10-FC",
-              "title": "Fuel Cell Stack (Gen 1)",
-              "familyHeading": "FC Stack Assembly Family (2015-2024)",
-              "fuel": "Hydrogen FCEV",
-              "size": "N/A (Fuel Cell System)",
-              "power": "134kW / 182hp",
-              "compatibleModels": "Design, Design Plus, Design Premium Pack (First Generation)",
-              "avgRebuiltPrice": "£4,000 - £12,000",
-              "cta": "Get quotes for JPD10-FC Toyota Mirai fuel cell replacement",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "JPD20-FC",
-              "title": "Fuel Cell Stack (Gen 2)",
-              "familyHeading": "FC Stack Assembly Family (2015-2024)",
-              "fuel": "Hydrogen FCEV",
-              "size": "N/A (Fuel Cell System)",
-              "power": "134kW / 182hp",
-              "compatibleModels": "Design, Design Plus, Design Premium Pack (Second Generation)",
-              "avgRebuiltPrice": "£6,000 - £15,000",
-              "cta": "Get quotes for JPD20-FC Toyota Mirai fuel cell replacement",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "H2-TANK-700",
-              "title": "Type IV Hydrogen Storage Tank",
-              "familyHeading": "Hydrogen Tank System Family (2015-2024)",
-              "fuel": "Hydrogen FCEV",
-              "size": "N/A (Storage System)",
-              "power": "N/A",
-              "compatibleModels": "All trims, both generations",
-              "avgRebuiltPrice": "£2,000 - £4,500",
-              "cta": "Get quotes for H2-TANK-700 Toyota Mirai hydrogen system",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
               "code": "DCDC-BOOST-01",
               "title": "DC/DC Boost Converter",
               "familyHeading": "DC/DC Converter & Power Control Family (2015-2024)",
@@ -686,7 +585,7 @@
     "commonProblems": {
       "tag": "Common Problems",
       "h2": "Toyota Mirai Engine Problems - What It Costs to Fix & When Replacement Makes Sense",
-      "h3": "",
+      "h3": "The Toyota Mirai's hydrogen fuel cell system is generally reliable but has documented failure points that drive replacement enquiries. The JPD10/JPD20 fuel cell stacks and DC/DC converters dominate UK repair demand. Every rebuilt fuel cell system supplied through EngineMarket includes upgraded internal components designed to address original failure points - plus a minimum 12‑month unlimited mileage warranty. Use this decision tool to compare repair vs replace costs.",
       "problems": [
         {
           "group": "Fuel Cell Stack Degradation",
@@ -943,7 +842,7 @@
     "engineSizes": {
       "tag": "Engine Sizes",
       "h2": "Toyota Mirai Engines by Size - Find the Right Displacement for Your Variant",
-      "intro": "",
+      "intro": "Every fuel cell power output and hydrogen system specification fitted to the Toyota Mirai is listed, with compatible component codes, generations and common failure notes.",
       "groups": [
         {
           "title": "Toyota Mirai Hydrogen FCEV Power Systems",
@@ -972,7 +871,7 @@
             },
             {
               "title": "Toyota Mirai 5.6kg Hydrogen Storage Capacity",
-              "description": "All Mirai variants use a 700bar Type IV carbon-fibre hydrogen tank storing 5.6kg of hydrogen, providing approximately 400-450 miles of real-world range. Tank integrity is critical for safety and performance; leaks or seal failures trigger mandatory system shutdowns and require certified replacement. Not sure which fuel cell system your Toyota Mirai needs? Enter your registration number above - we'll identify the exact generation, component codes and compatible replacement options instantly. All components supplied through EngineMarket include a minimum 12‑month unlimited mileage warranty from UK Toyota Mirai FCEV specialists.",
+              "description": "All Mirai variants use a 700bar Type IV carbon-fibre hydrogen tank storing 5.6kg of hydrogen, providing approximately 400-450 miles of real-world range. Tank integrity is critical for safety and performance; leaks or seal failures trigger mandatory system shutdowns and require certified replacement.",
               "engineCodes": [
                 "H2-TANK-700",
                 "H2-TANK-700B",
@@ -1014,7 +913,7 @@
     "fuelTypes": {
       "tag": "Toyota Mirai Engines Fuel Type",
       "h2": "Toyota Mirai Engines by Fuel Type",
-      "intro": "",
+      "intro": "Choose your Toyota Mirai fuel cell system by generation to compare realistic replacement prices, known issues, and compatible UK FCEV specialist supply options - from early First Generation to the latest Second Generation.",
       "items": [
         {
           "title": "Toyota Mirai Hydrogen Fuel Cell (FCEV) Systems",
@@ -1312,8 +1211,21 @@
     "trustCta": {
       "tag": "Why Choose Us",
       "h2": "Why UK Toyota Mirai Owners Trust EngineMarket",
-      "intro": "",
-      "points": [],
+      "intro": "Join thousands of UK drivers who compare Toyota Mirai fuel cell system prices through our network of trusted FCEV specialists - every rebuilt and reconditioned component backed by a minimum 12‑month unlimited mileage warranty and nationwide delivery.",
+      "points": [
+        {
+          "title": "Trusted Toyota Mirai FCEV Specialists",
+          "description": "Every garage and component rebuilder in our network is vetted, rated, and reviewed by real Toyota Mirai owners."
+        },
+        {
+          "title": "Compare Toyota Mirai Fuel Cell Replacement Companies",
+          "description": "See prices, warranty terms, and supply & fit options side‑by‑side before you commit."
+        },
+        {
+          "title": "UK FCEV Replacement Services for Toyota Mirai",
+          "description": "Covering both generations and all trim levels, with supply‑only or full supply & fit available nationwide."
+        }
+      ],
       "finalText": "Find the best Toyota Mirai fuel cell replacement UK drivers rely on. Compare prices from trusted FCEV specialists today and get back on the road with confidence.",
       "buttonText": "Compare Toyota Mirai Fuel Cell Prices Now →",
       "secondaryAction": {

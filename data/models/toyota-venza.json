@@ -378,14 +378,6 @@
             "toyota venza ggv15",
             "toyota venza ggv15 engine"
           ]
-        },
-        {
-          "key": "compare-typical-uk-supply-only-prices-for-toyota-venza-replacement-engines-across-all-engine-codes-2gr-fe-v6-1ar-fe-2-7l-and-a25a-fxs-hybrid-with-rebuilt-units-from-1-400-reconditioned-from-1-600-and-used-from-900-all-backed-by-a-minimum-12-month-warranty-from-vetted-uk-specialists-engine",
-          "label": "Compare typical UK supply-only prices for Toyota Venza replacement engines across all engine codes - 2GR-FE V6, 1AR-FE 2.7L, and A25A-FXS hybrid - with rebuilt units from £1,400, reconditioned from £1,600, and used from £900, all backed by a minimum 12-month warranty from vetted UK specialists.",
-          "matchers": [
-            "compare typical uk supply-only prices for toyota venza replacement engines across all engine codes - 2gr-fe v6, 1ar-fe 2.7l, and a25a-fxs hybrid - with rebuilt units from £1,400, reconditioned from £1,600, and used from £900, all backed by a minimum 12-month warranty from vetted uk specialists.",
-            "compare typical uk supply only prices for toyota venza replacement engines across all engine codes 2gr fe v6 1ar fe 2 7l and a25a fxs hybrid with rebuilt units from 1 400 reconditioned from 1 600 and used from 900 all backed by a minimum 12 month warranty from vetted uk specialists engine"
-          ]
         }
       ],
       "ui": {
@@ -446,7 +438,7 @@
     "variantCoverage": {
       "tag": "Models We Cover",
       "h2": "Toyota Venza Engine Replacement - All Variants Covered",
-      "subheading": "",
+      "subheading": "From the economical 2.7L FWD to the high-performance 3.5L V6 AWD and latest 2.5L Hybrid, our network of UK Toyota Venza engine specialists helps you compare rebuilt, reconditioned and used engine prices with typical rebuilt unit ranges from £1,400-£5,500 - supply & fit available nationwide with 12-month warranty.",
       "groups": [
         {
           "title": "Core Petrol Range",
@@ -480,10 +472,12 @@
         {
           "h3": "Toyota Venza 2.7L FWD Engine Replacement",
           "slug": "toyota-venza-2-7l-fwd-engine",
-          "subtitle": "1AR-FE 2.7L Petrol · 182hp · 2008-2017 · Rebuilt: £1,400-£3,200",
+          "subtitle": "1AR-FE 2.7L Petrol Â· 182hp Â· 2008-2017",
           "priceRange": "£1,400-£3,200",
           "cta": "Compare 2.7L FWD Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "1AR-FE"
+          ],
           "fuel": "Petrol",
           "power": "182hp",
           "years": "2008-2017",
@@ -492,10 +486,12 @@
         {
           "h3": "Toyota Venza 2.7L AWD Engine Replacement",
           "slug": "toyota-venza-2-7l-awd-engine",
-          "subtitle": "1AR-FE 2.7L Petrol · 182hp · 2008-2017 · Rebuilt: £1,500-£3,400",
+          "subtitle": "1AR-FE 2.7L Petrol Â· 182hp Â· 2008-2017",
           "priceRange": "£1,500-£3,400",
           "cta": "Compare 2.7L AWD Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "1AR-FE"
+          ],
           "fuel": "Petrol",
           "power": "182hp",
           "years": "2008-2017",
@@ -504,10 +500,12 @@
         {
           "h3": "Toyota Venza 3.5L V6 FWD Engine Replacement",
           "slug": "toyota-venza-3-5l-v6-fwd-engine",
-          "subtitle": "2GR-FE 3.5L Petrol · 268hp · 2008-2017 · Rebuilt: £1,800-£4,200",
+          "subtitle": "2GR-FE 3.5L Petrol Â· 268hp Â· 2008-2017",
           "priceRange": "£1,800-£4,200",
           "cta": "Compare 3.5L V6 FWD Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "2GR-FE"
+          ],
           "fuel": "Petrol",
           "power": "268hp",
           "years": "2008-2017",
@@ -516,10 +514,12 @@
         {
           "h3": "Toyota Venza 3.5L V6 AWD Engine Replacement",
           "slug": "toyota-venza-3-5l-v6-awd-engine",
-          "subtitle": "2GR-FE 3.5L Petrol · 268hp · 2008-2017 · Rebuilt: £2,000-£4,500",
+          "subtitle": "2GR-FE 3.5L Petrol Â· 268hp Â· 2008-2017",
           "priceRange": "£2,000-£4,500",
           "cta": "Compare 3.5L V6 AWD Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "2GR-FE"
+          ],
           "fuel": "Petrol",
           "power": "268hp",
           "years": "2008-2017",
@@ -528,12 +528,12 @@
         {
           "h3": "Toyota Venza 2008-2012 Pre-Facelift Engine Replacement",
           "slug": "toyota-venza-2008-2012-pre-facelift-engine",
-          "subtitle": "AGV10/GGV10 2.7L-3.5L · 182-268hp · 2008-2012",
+          "subtitle": "AGV10/GGV10 2.7L-3.5L Â· 182-268hp Â· 2008-2012",
           "priceRange": "£1,400-£4,200",
           "cta": "Compare Pre-Facelift Engine Prices",
           "engineCodes": [
             "AGV10",
-            "GGV10"
+            "GGV10 2.7L-3.5L"
           ],
           "fuel": "",
           "power": "182-268hp",
@@ -543,12 +543,12 @@
         {
           "h3": "Toyota Venza 2013-2017 Facelift Engine Replacement",
           "slug": "toyota-venza-2013-2017-facelift-engine",
-          "subtitle": "AGV15/GGV15 2.7L-3.5L · 182-268hp · 2013-2017",
+          "subtitle": "AGV15/GGV15 2.7L-3.5L Â· 182-268hp Â· 2013-2017",
           "priceRange": "£1,500-£4,500",
           "cta": "Compare Facelift Engine Prices",
           "engineCodes": [
             "AGV15",
-            "GGV15"
+            "GGV15 2.7L-3.5L"
           ],
           "fuel": "",
           "power": "182-268hp",
@@ -558,7 +558,7 @@
         {
           "h3": "Toyota Venza 2021+ Hybrid AWD Engine Replacement",
           "slug": "toyota-venza-2021-hybrid-awd-engine",
-          "subtitle": "A25A-FXS 2.5L Hybrid · 219hp combined · 2021-2024",
+          "subtitle": "A25A-FXS 2.5L Hybrid Â· 219hp combined Â· 2021-2024",
           "priceRange": "£2,800-£5,500",
           "cta": "Compare Hybrid Engine Prices",
           "engineCodes": [
@@ -572,7 +572,7 @@
         {
           "h3": "Toyota Venza 2GR-FE V6 Engine Replacement",
           "slug": "toyota-venza-2gr-fe-v6-engine",
-          "subtitle": "2GR-FE 3.5L V6 · 268hp · 2008-2017 · Rebuilt: £1,800-£4,500",
+          "subtitle": "2GR-FE 3.5L V6 Â· 268hp Â· 2008-2017",
           "priceRange": "£1,800-£4,500",
           "cta": "Compare 2GR-FE V6 Engine Prices",
           "engineCodes": [
@@ -586,10 +586,12 @@
         {
           "h3": "Toyota Venza AGV10 Engine Replacement",
           "slug": "toyota-venza-agv10-engine",
-          "subtitle": "1AR-FE 2.7L · 182hp · 2008-2012 · Rebuilt: £1,400-£3,200",
+          "subtitle": "1AR-FE 2.7L Â· 182hp Â· 2008-2012",
           "priceRange": "£1,400-£3,200",
           "cta": "Compare AGV10 Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "1AR-FE"
+          ],
           "fuel": "",
           "power": "182hp",
           "years": "2008-2012",
@@ -598,10 +600,12 @@
         {
           "h3": "Toyota Venza AGV15 Engine Replacement",
           "slug": "toyota-venza-agv15-engine",
-          "subtitle": "1AR-FE 2.7L · 182hp · 2013-2017 · Rebuilt: £1,500-£3,400",
+          "subtitle": "1AR-FE 2.7L Â· 182hp Â· 2013-2017",
           "priceRange": "£1,500-£3,400",
           "cta": "Compare AGV15 Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "1AR-FE"
+          ],
           "fuel": "",
           "power": "182hp",
           "years": "2013-2017",
@@ -610,7 +614,7 @@
         {
           "h3": "Toyota Venza GGV10 Engine Replacement",
           "slug": "toyota-venza-ggv10-engine",
-          "subtitle": "2GR-FE 3.5L V6 · 268hp · 2008-2012 · Rebuilt: £1,800-£4,200",
+          "subtitle": "2GR-FE 3.5L V6 Â· 268hp Â· 2008-2012",
           "priceRange": "£1,800-£4,200",
           "cta": "Compare GGV10 Engine Prices",
           "engineCodes": [
@@ -624,7 +628,7 @@
         {
           "h3": "Toyota Venza GGV15 Engine Replacement",
           "slug": "toyota-venza-ggv15-engine",
-          "subtitle": "2GR-FE 3.5L V6 · 268hp · 2013-2017 · Rebuilt: £2,000-£4,500",
+          "subtitle": "2GR-FE 3.5L V6 Â· 268hp Â· 2013-2017",
           "priceRange": "£2,000-£4,500",
           "cta": "Compare GGV15 Engine Prices",
           "engineCodes": [
@@ -633,18 +637,6 @@
           "fuel": "",
           "power": "268hp",
           "years": "2013-2017",
-          "image": ""
-        },
-        {
-          "h3": "Compare typical UK supply-only prices for Toyota Venza replacement engines across all engine codes - 2GR-FE V6, 1AR-FE 2.7L, and A25A-FXS hybrid - with rebuilt units from £1,400, reconditioned from £1,600, and used from £900, all backed by a minimum 12-month warranty from vetted UK specialists.",
-          "slug": "compare-typical-uk-supply-only-prices-for-toyota-venza-replacement-engines-across-all-engine-codes-2gr-fe-v6-1ar-fe-2-7l-and-a25a-fxs-hybrid-with-rebuilt-units-from-1-400-reconditioned-from-1-600-and-used-from-900-all-backed-by-a-minimum-12-month-warranty-from-vetted-uk-specialists-engine",
-          "subtitle": "FEED TABLE:",
-          "priceRange": "",
-          "cta": "Engine Code | Condition | Price Range (Supply Only) | Warranty | Typical Turnaround | Best For",
-          "engineCodes": [],
-          "fuel": "",
-          "power": "",
-          "years": "",
           "image": ""
         }
       ],
@@ -743,22 +735,9 @@
                 "size": "2.5 Litre",
                 "power": "219 hp combined",
                 "years": "2021-Present",
-                "compatibleVariants": [],
-                "commonFailures": [],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "2.5L",
-                "title": "Hybrid LE AWD, 2.5L Hybrid XLE AWD, 2.5L Hybrid Limited AWD",
-                "familyHeading": "Dynamic Force Hybrid Series (2021-Present)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
+                "compatibleVariants": [
+                  "2.5L Hybrid LE AWD, 2.5L Hybrid XLE AWD, 2.5L Hybrid Limited AWD"
+                ],
                 "commonFailures": [
                   "EGR cooler internal seal degradation causing coolant loss (early production)",
                   "Electrical bypass valve faults affecting hybrid system operation",
@@ -838,19 +817,7 @@
               "fuel": "Hybrid (Petrol + Electric)",
               "size": "2.5L",
               "power": "219 hp combined",
-              "compatibleModels": "",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "2.5L",
-              "title": "Hybrid LE AWD, 2.5L Hybrid XLE AWD, 2.5L Hybrid Limited AWD",
-              "familyHeading": "Dynamic Force Hybrid Series (2021-Present)",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
+              "compatibleModels": "2.5L Hybrid LE AWD, 2.5L Hybrid XLE AWD, 2.5L Hybrid Limited AWD",
               "avgRebuiltPrice": "£2,800 - £5,500",
               "cta": "Get quotes for A25A-FXS Toyota Venza engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -883,7 +850,7 @@
     "commonProblems": {
       "tag": "Common Problems",
       "h2": "Toyota Venza Engine Problems - What It Costs to Fix & When Replacement Makes Sense",
-      "h3": "",
+      "h3": "The Toyota Venza's 2GR-FE V6 and 1AR-FE 2.7L petrol engines dominate UK replacement enquiries, with the 2GR-FE's VVT-i actuator rattle (TSB T-SB-0094-09) and 1AR-FE's oil consumption being the most frequently reported issues. Every rebuilt engine supplied through EngineMarket includes upgraded internal components designed to address the original failure point - plus a minimum 12-month unlimited mileage warranty. Use this section to compare repair costs and decide whether replacement offers better long-term value for your Venza.",
       "problems": [
         {
           "group": "Toyota Venza 2GR-FE VVT-i Ticking Noise",
@@ -1123,7 +1090,7 @@
     "engineSizes": {
       "tag": "Engine Sizes",
       "h2": "Toyota Venza Engines by Size - Find the Right Displacement for Your Variant",
-      "intro": "",
+      "intro": "Every displacement fitted to the Toyota Venza across UK grey imports is listed below, with compatible engine codes, production years and common failure notes to help you identify the correct replacement.",
       "groups": [
         {
           "title": "Toyota Venza Petrol Engine Sizes",
@@ -1170,7 +1137,7 @@
           "items": [
             {
               "title": "Toyota Venza 2.5L Hybrid Engines",
-              "description": "The A25A-FXS 2.5L hybrid powertrain powers the second-generation Venza (2021-present), combining petrol and electric motors for improved efficiency, though hybrid system complexity requires specialist attention for repairs. Not sure which engine size your Toyota Venza needs? Enter your registration number above - we'll identify the exact displacement, engine code and compatible replacement options instantly. All engines supplied through EngineMarket include a minimum 12-month unlimited mileage warranty from UK Toyota Venza specialists.",
+              "description": "The A25A-FXS 2.5L hybrid powertrain powers the second-generation Venza (2021-present), combining petrol and electric motors for improved efficiency, though hybrid system complexity requires specialist attention for repairs.",
               "engineCodes": [
                 "A25A-FXS"
               ],
@@ -1206,7 +1173,7 @@
     "fuelTypes": {
       "tag": "Toyota Venza Engines Fuel Type",
       "h2": "Toyota Venza Engines by Fuel Type",
-      "intro": "",
+      "intro": "Choose your Toyota Venza engine by fuel type to compare realistic replacement prices, known issues, and compatible UK supply options - from the 2.7L petrol to the latest 2.5L hybrid.",
       "items": [
         {
           "title": "Toyota Venza Petrol Engines",
@@ -1244,7 +1211,7 @@
           "title": "Toyota Venza Hybrid Engines",
           "description": "The second-generation Toyota Venza (2021-present) is hybrid-only in the UK grey import market, using Toyota's proven A25A-FXS system for efficiency without plug-in complexity.",
           "descriptor": "The second-generation Toyota Venza (2021-present) is hybrid-only in the UK grey import market, using Toyota's proven A25A-FXS system for efficiency without plug-in complexity.",
-          "familiesLabel": "H2: Toyota Venza Engine Codes - Full Technical Specifications & Replacement Guide",
+          "familiesLabel": "Toyota Venza Hybrid Engine Codes",
           "foundInLabel": "Found In",
           "knownForLabel": "",
           "modelsLabel": "",
@@ -1266,38 +1233,6 @@
             "Availability more limited than first-generation petrol units; allow extra lead time"
           ],
           "cta": "Enquire about Toyota Venza Hybrid engine availability"
-        },
-        {
-          "title": "Petrol Engines",
-          "description": "",
-          "descriptor": "",
-          "familiesLabel": "Common Petrol Engine Families",
-          "foundInLabel": "",
-          "knownForLabel": "",
-          "modelsLabel": "",
-          "notesLabel": "",
-          "families": [],
-          "foundIn": [],
-          "knownFor": [],
-          "typicalModels": [],
-          "importantNotes": [],
-          "cta": "Get quotes for 2GR-FE Toyota Venza engine replacement"
-        },
-        {
-          "title": "Hybrid / Electrified Engines",
-          "description": "",
-          "descriptor": "",
-          "familiesLabel": "Common Hybrid / Electrified Engine Families",
-          "foundInLabel": "",
-          "knownForLabel": "",
-          "modelsLabel": "",
-          "notesLabel": "",
-          "families": [],
-          "foundIn": [],
-          "knownFor": [],
-          "typicalModels": [],
-          "importantNotes": [],
-          "cta": "Get quotes for A25A-FXS Toyota Venza engine replacement"
         }
       ],
       "closing": "Not sure which fuel type your Toyota Venza has? Enter your registration number above to instantly identify your engine code, fuel system and compatible replacement options - all backed by a minimum 12-month unlimited mileage warranty from UK Toyota Venza specialists.",
@@ -1601,8 +1536,21 @@
     "trustCta": {
       "tag": "Why Choose Us",
       "h2": "Why UK Toyota Venza Owners Trust EngineMarket",
-      "intro": "",
-      "points": [],
+      "intro": "Join thousands of UK drivers who compare Toyota Venza engine prices through our network of trusted specialists - every rebuilt and reconditioned unit backed by a minimum 12-month unlimited mileage warranty and nationwide delivery.",
+      "points": [
+        {
+          "title": "Trusted Toyota Venza Engine Suppliers",
+          "description": "Every garage and engine rebuilder in our network is vetted, rated, and reviewed by real Toyota Venza owners."
+        },
+        {
+          "title": "Compare Toyota Venza Engine Replacement Companies",
+          "description": "See prices, warranty terms, and supply & fit options side-by-side before you commit."
+        },
+        {
+          "title": "UK Engine Replacement Services for Toyota Venza",
+          "description": "Covering every variant from 2.7L petrol to 3.5L V6 and 2.5L hybrid, with supply-only or full supply & fit available nationwide."
+        }
+      ],
       "finalText": "Find the best Toyota Venza engine replacement UK drivers rely on. Compare prices from trusted specialists today and get back on the road with confidence.",
       "buttonText": "Compare Toyota Venza Engine Prices Now →",
       "secondaryAction": {

@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { getBrandSlugs } from "@/lib/brandData";
 import { getModelPageStaticParams } from "@/lib/modelPageData";
 import { getVariantPageStaticParams } from "@/lib/variantPageData";
-import { SITE_URL } from "@/lib/site";
+import { INDEX_MODEL_PAGES, INDEX_VARIANT_PAGES, SITE_URL } from "@/lib/site";
 
 export const dynamic = "force-static";
 
@@ -25,17 +25,21 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "weekly" as const,
       priority: 0.8,
     })),
-    ...modelParams.map(({ brand, model }) => ({
-      url: `${SITE_URL}/${brand}/${model}`,
-      lastModified: now,
-      changeFrequency: "weekly" as const,
-      priority: 0.7,
-    })),
-    ...variantParams.map(({ brand, model, variant }) => ({
-      url: `${SITE_URL}/${brand}/${model}/${variant}`,
-      lastModified: now,
-      changeFrequency: "weekly" as const,
-      priority: 0.6,
-    })),
+    ...(INDEX_MODEL_PAGES
+      ? modelParams.map(({ brand, model }) => ({
+          url: `${SITE_URL}/${brand}/${model}`,
+          lastModified: now,
+          changeFrequency: "weekly" as const,
+          priority: 0.7,
+        }))
+      : []),
+    ...(INDEX_VARIANT_PAGES
+      ? variantParams.map(({ brand, model, variant }) => ({
+          url: `${SITE_URL}/${brand}/${model}/${variant}`,
+          lastModified: now,
+          changeFrequency: "weekly" as const,
+          priority: 0.6,
+        }))
+      : []),
   ];
 }

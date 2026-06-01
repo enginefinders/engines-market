@@ -431,10 +431,12 @@
         {
           "h3": "Toyota Quick Delivery QD100 Engine Replacement",
           "slug": "toyota-quick-delivery-qd100-engine",
-          "subtitle": "5L 3.0L Diesel · 90-105hp · 1982-1986 · Rebuilt: £1,200-£2,400",
+          "subtitle": "5L 3.0L Diesel Â· 90-105hp Â· 1982-1986",
           "priceRange": "£1,200-£2,400",
           "cta": "Compare QD100 Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "5L"
+          ],
           "fuel": "Diesel",
           "power": "90-105hp",
           "years": "1982-1986",
@@ -443,7 +445,7 @@
         {
           "h3": "Toyota Quick Delivery QD200 Engine Replacement",
           "slug": "toyota-quick-delivery-qd200-engine",
-          "subtitle": "3B/4B 3.4-3.7L Diesel · 100-130hp · 1986-2016",
+          "subtitle": "3B/4B 3.4-3.7L Diesel Â· 100-130hp Â· 1986-2016",
           "priceRange": "£1,300-£3,200",
           "cta": "Compare QD200 Engine Prices",
           "engineCodes": [
@@ -458,7 +460,7 @@
         {
           "h3": "Toyota Quick Delivery Third Generation Engine Replacement",
           "slug": "toyota-quick-delivery-third-generation-engine",
-          "subtitle": "4B/N04C 3.7-4.0L Diesel · 130-150hp · 1999-2016",
+          "subtitle": "4B/N04C 3.7-4.0L Diesel Â· 130-150hp Â· 1999-2016",
           "priceRange": "£1,800-£4,500",
           "cta": "Compare Third Generation Engine Prices",
           "engineCodes": [
@@ -476,7 +478,9 @@
           "subtitle": "4B Exclusive 3.7L Diesel · 130hp · 2000-2016 · Rebuilt: £1,600-£3,400",
           "priceRange": "£1,600-£3,400",
           "cta": "Compare Yamato Transport Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "4B"
+          ],
           "fuel": "Diesel",
           "power": "130hp",
           "years": "2000-2016",
@@ -485,7 +489,7 @@
         {
           "h3": "Toyota Quick Delivery N04C Hino Turbo Engine Replacement",
           "slug": "toyota-quick-delivery-n04c-hino-turbo-engine",
-          "subtitle": "N04C 4.0L Common Rail Diesel · 150hp · 2006-2016",
+          "subtitle": "N04C 4.0L Common Rail Diesel · 150hp · 2006-2016 · Rebuilt: £2,200-£4,500",
           "priceRange": "£2,200-£4,500",
           "cta": "Compare N04C Engine Prices",
           "engineCodes": [
@@ -499,10 +503,12 @@
         {
           "h3": "Toyota Quick Delivery LPG Engine Replacement",
           "slug": "toyota-quick-delivery-lpg-engine",
-          "subtitle": "3RZ-FP 2.7L LPG · 140hp · 2000-2016 · Rebuilt: £1,500-£3,000",
+          "subtitle": "3RZ-FP 2.7L LPG Â· 140hp Â· 2000-2016",
           "priceRange": "£1,500-£3,000",
           "cta": "Compare LPG Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "3RZ-FP 2.7L LPG"
+          ],
           "fuel": "",
           "power": "140hp",
           "years": "2000-2016",
@@ -511,12 +517,11 @@
         {
           "h3": "Toyota Quick Delivery Urban Supporter Engine Replacement",
           "slug": "toyota-quick-delivery-urban-supporter-engine",
-          "subtitle": "4B/N04C Successor Engines · 130-150hp · 2016+",
+          "subtitle": "4B/N04C Successor Engines · 130-150hp · 2016+ · Rebuilt: £2,000-£4,200",
           "priceRange": "£2,000-£4,200",
           "cta": "Compare Urban Supporter Engine Prices",
           "engineCodes": [
-            "4B",
-            "N04C"
+            "4B"
           ],
           "fuel": "",
           "power": "130-150hp",
@@ -526,12 +531,11 @@
         {
           "h3": "Toyota Quick Delivery 4WD Engine Replacement",
           "slug": "toyota-quick-delivery-4wd-engine",
-          "subtitle": "5L/4B 4x4 Diesel · 90-130hp · 1982-2016",
+          "subtitle": "5L/4B 4x4 Diesel · 90-130hp · 1982-2016 · Rebuilt: £1,400-£3,400",
           "priceRange": "£1,400-£3,400",
           "cta": "Compare 4WD Engine Prices",
           "engineCodes": [
-            "5L",
-            "4B"
+            "5L"
           ],
           "fuel": "Diesel",
           "power": "90-130hp",
@@ -1129,7 +1133,7 @@
           "items": [
             {
               "title": "Toyota Quick Delivery 2.7L LPG Engines",
-              "description": "Factory LPG conversion of the 3RZ-FP petrol block provided fleet operators with lower fuel costs and reduced emissions for urban delivery routes, particularly popular with Yamato Transport's city networks. Not sure which engine size your Toyota Quick Delivery needs? Enter your registration number above - we'll identify the exact displacement, engine code and compatible replacement options instantly. All engines supplied through EngineMarket include a minimum 12-month unlimited mileage warranty from UK Toyota Quick Delivery specialists.",
+              "description": "Factory LPG conversion of the 3RZ-FP petrol block provided fleet operators with lower fuel costs and reduced emissions for urban delivery routes, particularly popular with Yamato Transport's city networks.",
               "engineCodes": [
                 "3RZ-FP"
               ],
@@ -1166,7 +1170,7 @@
       }
     },
     "fuelTypes": {
-      "tag": "Toyota Quick Delivery Engines Fuel Type",
+      "tag": "Fuel Type",
       "h2": "Toyota Quick Delivery Engines by Fuel Type",
       "intro": "Choose your Toyota Quick Delivery engine by fuel type to compare realistic replacement prices, known issues, and compatible UK supply options - from early QD100 5L diesel to the latest N04C Hino turbo.",
       "items": [

@@ -394,14 +394,6 @@
             "volkswagen santana 1.5 mpi (modern)",
             "volkswagen santana 1 5 mpi modern engine"
           ]
-        },
-        {
-          "key": "compare-realistic-uk-supply-only-pricing-for-every-volkswagen-santana-engine-code-with-typical-failure-notes-and-compatibility-guidance-engine",
-          "label": "Compare realistic UK supply-only pricing for every Volkswagen Santana engine code, with typical failure notes and compatibility guidance.",
-          "matchers": [
-            "compare realistic uk supply-only pricing for every volkswagen santana engine code, with typical failure notes and compatibility guidance.",
-            "compare realistic uk supply only pricing for every volkswagen santana engine code with typical failure notes and compatibility guidance engine"
-          ]
         }
       ],
       "ui": {
@@ -496,7 +488,7 @@
         {
           "h3": "Volkswagen Santana 1.6D Engine Replacement",
           "slug": "volkswagen-santana-1-6d-engine",
-          "subtitle": "CR/JK 1.6L Diesel · 54hp · 1981-1985",
+          "subtitle": "CR/JK 1.6L Diesel Â· 54hp Â· 1981-1985",
           "priceRange": "£600-£1,100",
           "cta": "Compare 1.6D Engine Prices",
           "engineCodes": [
@@ -511,10 +503,12 @@
         {
           "h3": "Volkswagen Santana 1.6TD Engine Replacement",
           "slug": "volkswagen-santana-1-6td-engine",
-          "subtitle": "CY 1.6L Diesel · 70hp · 1982-1985 · Rebuilt: £800-£1,400",
+          "subtitle": "CY 1.6L Diesel Â· 70hp Â· 1982-1985",
           "priceRange": "£800-£1,400",
           "cta": "Compare 1.6TD Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "CY"
+          ],
           "fuel": "Diesel",
           "power": "70hp",
           "years": "1982-1985",
@@ -523,7 +517,7 @@
         {
           "h3": "Volkswagen Santana 1.9 TDI Engine Replacement",
           "slug": "volkswagen-santana-1-9-tdi-engine",
-          "subtitle": "AAZ/ALH 1.9L Diesel · 90-110hp · 1989-2012",
+          "subtitle": "AAZ/ALH 1.9L Diesel Â· 90-110hp Â· 1989-2012",
           "priceRange": "£1,100-£2,200",
           "cta": "Compare 1.9 TDI Engine Prices",
           "engineCodes": [
@@ -538,7 +532,7 @@
         {
           "h3": "Volkswagen Santana 1.6 Petrol Engine Replacement",
           "slug": "volkswagen-santana-1-6-petrol-engine",
-          "subtitle": "WV/DT/YP 1.6L Petrol · 75-85hp · 1981-1985",
+          "subtitle": "WV/DT/YP 1.6L Petrol Â· 75-85hp Â· 1981-1985",
           "priceRange": "£800-£1,300",
           "cta": "Compare 1.6 Petrol Engine Prices",
           "engineCodes": [
@@ -554,10 +548,12 @@
         {
           "h3": "Volkswagen Santana 1.8 DZ Engine Replacement",
           "slug": "volkswagen-santana-1-8-dz-engine",
-          "subtitle": "DZ 1.8L Petrol · 90hp · 1984-1988 · Rebuilt: £1,200-£1,600",
+          "subtitle": "DZ 1.8L Petrol Â· 90hp Â· 1984-1988",
           "priceRange": "£1,200-£1,600",
           "cta": "Compare 1.8 DZ Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "DZ"
+          ],
           "fuel": "Petrol",
           "power": "90hp",
           "years": "1984-1988",
@@ -566,10 +562,12 @@
         {
           "h3": "Volkswagen Santana 1.8 CLA Engine Replacement",
           "slug": "volkswagen-santana-1-8-cla-engine",
-          "subtitle": "CLA 1.8L Petrol · 90hp · 1983-1988 · Rebuilt: £1,000-£1,400",
+          "subtitle": "CLA 1.8L Petrol Â· 90hp Â· 1983-1988",
           "priceRange": "£1,000-£1,400",
           "cta": "Compare 1.8 CLA Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "CLA"
+          ],
           "fuel": "Petrol",
           "power": "90hp",
           "years": "1983-1988",
@@ -578,10 +576,12 @@
         {
           "h3": "Volkswagen Santana 1.9 Five-Cylinder Engine Replacement",
           "slug": "volkswagen-santana-1-9-five-cylinder-engine",
-          "subtitle": "WN 1.9L Petrol · 115hp · 1981-1985 · Rebuilt: £1,500-£2,500",
+          "subtitle": "WN 1.9L Petrol Â· 115hp Â· 1981-1985",
           "priceRange": "£1,500-£2,500",
           "cta": "Compare 1.9 Five-Cylinder Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "WN"
+          ],
           "fuel": "Petrol",
           "power": "115hp",
           "years": "1981-1985",
@@ -590,10 +590,12 @@
         {
           "h3": "Volkswagen Santana 2.0 JS Engine Replacement",
           "slug": "volkswagen-santana-2-0-js-engine",
-          "subtitle": "JS 2.0L Petrol · 115hp · 1981-1985 · Rebuilt: £1,400-£2,300",
+          "subtitle": "JS 2.0L Petrol Â· 115hp Â· 1981-1985",
           "priceRange": "£1,400-£2,300",
           "cta": "Compare 2.0 JS Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "JS"
+          ],
           "fuel": "Petrol",
           "power": "115hp",
           "years": "1981-1985",
@@ -602,10 +604,12 @@
         {
           "h3": "Volkswagen Santana 2.0 CBA Engine Replacement",
           "slug": "volkswagen-santana-2-0-cba-engine",
-          "subtitle": "CBA 2.0L Petrol · 115hp · 1988-1991 · Rebuilt: £1,300-£2,100",
+          "subtitle": "CBA 2.0L Petrol Â· 115hp Â· 1988-1991",
           "priceRange": "£1,300-£2,100",
           "cta": "Compare 2.0 CBA Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "CBA"
+          ],
           "fuel": "Petrol",
           "power": "115hp",
           "years": "1988-1991",
@@ -614,10 +618,12 @@
         {
           "h3": "Volkswagen Santana 2.0 ABF Engine Replacement",
           "slug": "volkswagen-santana-2-0-abf-engine",
-          "subtitle": "ABF 2.0L Petrol · 150hp · 1991-1995 · Rebuilt: £1,500-£2,400",
+          "subtitle": "ABF 2.0L Petrol Â· 150hp Â· 1991-1995",
           "priceRange": "£1,500-£2,400",
           "cta": "Compare 2.0 ABF Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "ABF"
+          ],
           "fuel": "Petrol",
           "power": "150hp",
           "years": "1991-1995",
@@ -626,7 +632,7 @@
         {
           "h3": "Volkswagen Santana 1.4 MPI (Modern) Engine Replacement",
           "slug": "volkswagen-santana-1-4-mpi-modern-engine",
-          "subtitle": "EA211 1.4L Petrol · 90hp · 2013-2017",
+          "subtitle": "EA211 1.4L Petrol Â· 90hp Â· 2013-2017",
           "priceRange": "£900-£1,800",
           "cta": "Compare 1.4 MPI Engine Prices",
           "engineCodes": [
@@ -640,7 +646,7 @@
         {
           "h3": "Volkswagen Santana 1.5 MPI (Modern) Engine Replacement",
           "slug": "volkswagen-santana-1-5-mpi-modern-engine",
-          "subtitle": "EA211 1.5L Petrol · 110hp · 2018-2022",
+          "subtitle": "EA211 1.5L Petrol Â· 110hp Â· 2018-2022",
           "priceRange": "£1,000-£2,000",
           "cta": "Compare 1.5 MPI Engine Prices",
           "engineCodes": [
@@ -649,18 +655,6 @@
           "fuel": "Petrol",
           "power": "110hp",
           "years": "2018-2022",
-          "image": ""
-        },
-        {
-          "h3": "Compare realistic UK supply-only pricing for every Volkswagen Santana engine code, with typical failure notes and compatibility guidance.",
-          "slug": "compare-realistic-uk-supply-only-pricing-for-every-volkswagen-santana-engine-code-with-typical-failure-notes-and-compatibility-guidance-engine",
-          "subtitle": "| Engine Code | Displacement | Fuel | Typical Rebuilt Price | Typical Used Price | Common Failure Note | Compatible Variants |",
-          "priceRange": "",
-          "cta": "|-------------|-------------|------|---------------------|-------------------|-------------------|-------------------|",
-          "engineCodes": [],
-          "fuel": "",
-          "power": "",
-          "years": "",
           "image": ""
         }
       ],
@@ -729,40 +723,13 @@
                 "compatibleVariants": [
                   "CL 1.6D base model"
                 ],
-                "commonFailures": [],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
-              },
-              {
-                "code": "Age",
-                "title": "related injector wear",
-                "familyHeading": "Pre-Chamber Diesel Family (1981-1988)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "Pre",
-                "title": "chamber carbon buildup on short trips",
-                "familyHeading": "Pre-Chamber Diesel Family (1981-1988)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
+                "commonFailures": [
+                  "Age-related injector wear",
+                  "Pre-chamber carbon buildup on short trips"
+                ],
                 "avgRebuiltPrice": "£600 - £1,100",
                 "cta": "Get quotes for CR Volkswagen Santana engine replacement",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               },
               {
                 "code": "JK",
@@ -853,29 +820,16 @@
                 "size": "1.9 Litre",
                 "power": "66kW / 90 hp",
                 "years": "2000-2012",
-                "compatibleVariants": [],
-                "commonFailures": [],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
-              },
-              {
-                "code": "Chinese",
-                "title": "market Santana 1.9 TDI",
-                "familyHeading": "Pre-Chamber Diesel Family (1981-1988)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
+                "compatibleVariants": [
+                  "Chinese-market Santana 1.9 TDI"
+                ],
                 "commonFailures": [
                   "Common rail injector pressure regulation faults",
                   "EGR valve clogging on short-trip driving"
                 ],
                 "avgRebuiltPrice": "£1,100 - £2,200",
                 "cta": "Get quotes for ALH Volkswagen Santana engine replacement",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               }
             ]
           },
@@ -895,23 +849,9 @@
                   "CL 1.3 base model"
                 ],
                 "commonFailures": [
-                  "Solex carburettor flooding on modern unleaded fuel"
+                  "Solex carburettor flooding on modern unleaded fuel",
+                  "Age-related distributor cap/rotor wear"
                 ],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "Age",
-                "title": "related distributor cap/rotor wear",
-                "familyHeading": "1.3L-1.6L Petrol Family (1981-1995)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
                 "avgRebuiltPrice": "£800 - £1,300",
                 "cta": "Get quotes for FZ Volkswagen Santana engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -965,22 +905,9 @@
                 "size": "1.6 Litre",
                 "power": "74kW / 100 hp",
                 "years": "1991-1995",
-                "compatibleVariants": [],
-                "commonFailures": [],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "Chinese",
-                "title": "market Santana 1.6",
-                "familyHeading": "1.3L-1.6L Petrol Family (1981-1995)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
+                "compatibleVariants": [
+                  "Chinese-market Santana 1.6"
+                ],
                 "commonFailures": [
                   "Intake manifold gasket failure (OEM 037 129 725)",
                   "Idle air control valve sticking"
@@ -1002,23 +929,9 @@
                   "GL 1.8"
                 ],
                 "commonFailures": [
-                  "Distributor drive gear wear (OEM 021105237A) causing timing drift"
+                  "Distributor drive gear wear (OEM 021105237A) causing timing drift",
+                  "Cold-start misfires from ignition timing issues"
                 ],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "Cold",
-                "title": "start misfires from ignition timing issues",
-                "familyHeading": "1.8L Petrol Family (1983-1988)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
                 "avgRebuiltPrice": "£1,200 - £1,600",
                 "cta": "Get quotes for DZ Volkswagen Santana engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1056,23 +969,9 @@
                   "GL 2.0 Five-Cylinder"
                 ],
                 "commonFailures": [
-                  "Hydraulic lifter tick from oil gallery sludge"
+                  "Hydraulic lifter tick from oil gallery sludge",
+                  "Five-cylinder balance shaft wear"
                 ],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "Five",
-                "title": "cylinder balance shaft wear",
-                "familyHeading": "2.0L Petrol Family (1981-1995)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
                 "avgRebuiltPrice": "£1,400 - £2,300",
                 "cta": "Get quotes for JS Volkswagen Santana engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1130,23 +1029,9 @@
                   "GL 1.9 Five-Cylinder"
                 ],
                 "commonFailures": [
-                  "Parts scarcity due to low production volume"
+                  "Parts scarcity due to low production volume",
+                  "Five-cylinder balance shaft bearing wear"
                 ],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "Five",
-                "title": "cylinder balance shaft bearing wear",
-                "familyHeading": "Five-Cylinder Specialist Family (1981-1985)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
                 "avgRebuiltPrice": "£1,500 - £2,500",
                 "cta": "Get quotes for WN Volkswagen Santana engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1160,22 +1045,9 @@
                 "size": "1.4 Litre",
                 "power": "66kW / 90 hp",
                 "years": "2013-2017",
-                "compatibleVariants": [],
-                "commonFailures": [],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "Chinese",
-                "title": "market Santana 1.4 MPI",
-                "familyHeading": "Modern EA211 Family (2013-2022)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
+                "compatibleVariants": [
+                  "Chinese-market Santana 1.4 MPI"
+                ],
                 "commonFailures": [
                   "Timing chain tensioner wear causing rattle",
                   "EGR valve clogging on short-trip driving"
@@ -1193,22 +1065,9 @@
                 "size": "1.5 Litre",
                 "power": "81kW / 110 hp",
                 "years": "2018-2022",
-                "compatibleVariants": [],
-                "commonFailures": [],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "Chinese",
-                "title": "market Santana 1.5 MPI",
-                "familyHeading": "Modern EA211 Family (2013-2022)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
+                "compatibleVariants": [
+                  "Chinese-market Santana 1.5 MPI"
+                ],
                 "commonFailures": [
                   "EGR valve clogging on frequent short trips",
                   "Carbon buildup on intake valves (direct injection variants)"
@@ -1257,33 +1116,9 @@
               "size": "1.6L",
               "power": "40kW / 54 hp",
               "compatibleModels": "CL 1.6D base model",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
-            },
-            {
-              "code": "Age",
-              "title": "related injector wear",
-              "familyHeading": "Pre-Chamber Diesel Family (1981-1988)",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "Pre",
-              "title": "chamber carbon buildup on short trips",
-              "familyHeading": "Pre-Chamber Diesel Family (1981-1988)",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
               "avgRebuiltPrice": "£600 - £1,100",
               "cta": "Get quotes for CR Volkswagen Santana engine replacement",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             },
             {
               "code": "JK",
@@ -1340,22 +1175,10 @@
               "fuel": "Diesel",
               "size": "1.9L",
               "power": "66kW / 90 hp",
-              "compatibleModels": "",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
-            },
-            {
-              "code": "Chinese",
-              "title": "market Santana 1.9 TDI",
-              "familyHeading": "Pre-Chamber Diesel Family (1981-1988)",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
+              "compatibleModels": "Chinese-market Santana 1.9 TDI",
               "avgRebuiltPrice": "£1,100 - £2,200",
               "cta": "Get quotes for ALH Volkswagen Santana engine replacement",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             }
           ]
         },
@@ -1372,18 +1195,6 @@
               "size": "1.3L",
               "power": "44kW / 60 hp",
               "compatibleModels": "CL 1.3 base model",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "Age",
-              "title": "related distributor cap/rotor wear",
-              "familyHeading": "1.3L-1.6L Petrol Family (1981-1995)",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
               "avgRebuiltPrice": "£800 - £1,300",
               "cta": "Get quotes for FZ Volkswagen Santana engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1419,19 +1230,7 @@
               "fuel": "Petrol",
               "size": "1.6L",
               "power": "74kW / 100 hp",
-              "compatibleModels": "",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "Chinese",
-              "title": "market Santana 1.6",
-              "familyHeading": "1.3L-1.6L Petrol Family (1981-1995)",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
+              "compatibleModels": "Chinese-market Santana 1.6",
               "avgRebuiltPrice": "£900 - £1,500",
               "cta": "Get quotes for AFX Volkswagen Santana engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1444,18 +1243,6 @@
               "size": "1.8L",
               "power": "66kW / 90 hp",
               "compatibleModels": "GL 1.8",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "Cold",
-              "title": "start misfires from ignition timing issues",
-              "familyHeading": "1.8L Petrol Family (1983-1988)",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
               "avgRebuiltPrice": "£1,200 - £1,600",
               "cta": "Get quotes for DZ Volkswagen Santana engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1480,18 +1267,6 @@
               "size": "2.0L",
               "power": "85kW / 115 hp",
               "compatibleModels": "GL 2.0 Five-Cylinder",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "Five",
-              "title": "cylinder balance shaft wear",
-              "familyHeading": "2.0L Petrol Family (1981-1995)",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
               "avgRebuiltPrice": "£1,400 - £2,300",
               "cta": "Get quotes for JS Volkswagen Santana engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1528,18 +1303,6 @@
               "size": "1.9L",
               "power": "85kW / 115 hp",
               "compatibleModels": "GL 1.9 Five-Cylinder",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "Five",
-              "title": "cylinder balance shaft bearing wear",
-              "familyHeading": "Five-Cylinder Specialist Family (1981-1985)",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
               "avgRebuiltPrice": "£1,500 - £2,500",
               "cta": "Get quotes for WN Volkswagen Santana engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1551,19 +1314,7 @@
               "fuel": "Petrol",
               "size": "1.4L",
               "power": "66kW / 90 hp",
-              "compatibleModels": "",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "Chinese",
-              "title": "market Santana 1.4 MPI",
-              "familyHeading": "Modern EA211 Family (2013-2022)",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
+              "compatibleModels": "Chinese-market Santana 1.4 MPI",
               "avgRebuiltPrice": "£900 - £1,800",
               "cta": "Get quotes for EA211 1.4 Volkswagen Santana engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1575,19 +1326,7 @@
               "fuel": "Petrol",
               "size": "1.5L",
               "power": "81kW / 110 hp",
-              "compatibleModels": "",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "Chinese",
-              "title": "market Santana 1.5 MPI",
-              "familyHeading": "Modern EA211 Family (2013-2022)",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
+              "compatibleModels": "Chinese-market Santana 1.5 MPI",
               "avgRebuiltPrice": "£1,000 - £2,000",
               "cta": "Get quotes for EA211 1.5 Volkswagen Santana engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1992,7 +1731,7 @@
             },
             {
               "title": "Volkswagen Santana 2.0L Petrol Engines",
-              "description": "",
+              "description": "The 2.0L appeared in three forms: five-cylinder JS (1981-1985), CBA (1988-1991) with Santana-specific timing tensioner, and ABF (1991-1995) with EGR issues. All benefit from rebuilt units with failure-point upgrades.",
               "engineCodes": [
                 "JS",
                 "CBA",
@@ -2024,7 +1763,7 @@
             },
             {
               "title": "Volkswagen Santana 1.5L Petrol Engines (Modern)",
-              "description": "The latest Santana engines use the EA211 1.5L MPI, offering improved efficiency and reliability over the 1.4L. EGR clogging remains a consideration for short-trip driving patterns. Not sure which engine size your Volkswagen Santana needs? Enter your registration number above - we'll identify the exact displacement, engine code and compatible replacement options instantly. All engines supplied through EngineMarket include a minimum 12-month unlimited mileage warranty from UK Volkswagen Santana specialists.",
+              "description": "The latest Santana engines use the EA211 1.5L MPI, offering improved efficiency and reliability over the 1.4L. EGR clogging remains a consideration for short-trip driving patterns.",
               "engineCodes": [
                 "EA211 1.5 MPI"
               ],
@@ -2134,7 +1873,7 @@
           "title": "Volkswagen Santana Hybrid / Electrified Engines",
           "description": "No factory hybrid, plug-in hybrid or electric variants of the Volkswagen Santana were offered in UK or Chinese markets; all powertrains are conventional petrol or diesel.",
           "descriptor": "No factory hybrid, plug-in hybrid or electric variants of the Volkswagen Santana were offered in UK or Chinese markets; all powertrains are conventional petrol or diesel.",
-          "familiesLabel": "H2: Volkswagen Santana Engine Codes - Full Technical Specifications & Replacement Guide",
+          "familiesLabel": "Common Volkswagen Santana Hybrid / Electrified Engine Families",
           "foundInLabel": "",
           "knownForLabel": "",
           "modelsLabel": "",
@@ -2149,38 +1888,6 @@
             "Modern EA211 1.4/1.5 MPI units feature stop-start but are not hybrid systems"
           ],
           "cta": "Enquire about Volkswagen Santana conventional engine availability"
-        },
-        {
-          "title": "Diesel Engines",
-          "description": "",
-          "descriptor": "",
-          "familiesLabel": "Common Diesel Engine Families",
-          "foundInLabel": "",
-          "knownForLabel": "",
-          "modelsLabel": "",
-          "notesLabel": "",
-          "families": [],
-          "foundIn": [],
-          "knownFor": [],
-          "typicalModels": [],
-          "importantNotes": [],
-          "cta": "Get quotes for ALH Volkswagen Santana engine replacement"
-        },
-        {
-          "title": "Petrol Engines",
-          "description": "",
-          "descriptor": "",
-          "familiesLabel": "Common Petrol Engine Families",
-          "foundInLabel": "",
-          "knownForLabel": "",
-          "modelsLabel": "",
-          "notesLabel": "",
-          "families": [],
-          "foundIn": [],
-          "knownFor": [],
-          "typicalModels": [],
-          "importantNotes": [],
-          "cta": "Get quotes for EA211 1.5 Volkswagen Santana engine replacement"
         }
       ],
       "closing": "Not sure which fuel type your Volkswagen Santana has? Enter your registration number above to instantly identify your engine code, fuel system and compatible replacement options - all backed by a minimum 12-month unlimited mileage warranty from UK Volkswagen Santana specialists.",
@@ -2608,7 +2315,20 @@
       "tag": "Why Choose Us",
       "h2": "Why UK Volkswagen Santana Owners Trust EngineMarket",
       "intro": "Join thousands of UK drivers who compare Volkswagen Santana engine prices through our network of trusted specialists - every rebuilt and reconditioned unit backed by a minimum 12‑month unlimited mileage warranty and nationwide delivery.",
-      "points": [],
+      "points": [
+        {
+          "title": "Trusted Volkswagen Santana Engine Suppliers",
+          "description": "Every garage and engine rebuilder in our network is vetted, rated, and reviewed by real Volkswagen Santana owners."
+        },
+        {
+          "title": "Compare Volkswagen Santana Engine Replacement Companies",
+          "description": "See prices, warranty terms, and supply & fit options side‑by‑side before you commit."
+        },
+        {
+          "title": "UK Engine Replacement Services for Volkswagen Santana",
+          "description": "Covering every variant from classic CL to modern Chinese-market MPI, with supply‑only or full supply & fit available nationwide."
+        }
+      ],
       "finalText": "Find the best Volkswagen Santana engine replacement UK drivers rely on. Compare prices from trusted specialists today and get back on the road with confidence.",
       "buttonText": "Compare Volkswagen Santana Engine Prices Now →",
       "secondaryAction": {

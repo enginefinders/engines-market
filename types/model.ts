@@ -50,6 +50,7 @@ export type ModelVariantCoverageSectionData = {
       items: string[];
     }[];
   };
+  closing?: string;
   engineGuide: {
     tag: string;
     h2: string;

@@ -394,14 +394,6 @@
             "toyota ascent post-facelift",
             "toyota ascent post facelift engine"
           ]
-        },
-        {
-          "key": "compare-realistic-uk-supply-only-prices-for-every-toyota-ascent-engine-code-with-condition-options-warranty-coverage-and-specialist-availability-engine",
-          "label": "Compare realistic UK supply-only prices for every Toyota Ascent engine code, with condition options, warranty coverage and specialist availability.",
-          "matchers": [
-            "compare realistic uk supply-only prices for every toyota ascent engine code, with condition options, warranty coverage and specialist availability.",
-            "compare realistic uk supply only prices for every toyota ascent engine code with condition options warranty coverage and specialist availability engine"
-          ]
         }
       ],
       "ui": {
@@ -496,10 +488,12 @@
         {
           "h3": "Toyota Ascent 1.6L Engine Replacement",
           "slug": "toyota-ascent-1-6l-engine",
-          "subtitle": "1ZR-FE 1.6L Petrol · 122hp · 2006-2013 · Rebuilt: £750-£1,650",
+          "subtitle": "1ZR-FE 1.6L Petrol Â· 122hp Â· 2006-2013",
           "priceRange": "£750-£1,650",
           "cta": "Compare Ascent 1.6L Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "1ZR-FE"
+          ],
           "fuel": "Petrol",
           "power": "122hp",
           "years": "2006-2013",
@@ -508,10 +502,12 @@
         {
           "h3": "Toyota Ascent 1.8L Engine Replacement",
           "slug": "toyota-ascent-1-8l-engine",
-          "subtitle": "2ZR-FE 1.8L Petrol · 140hp · 2006-2013 · Rebuilt: £899-£2,450",
+          "subtitle": "2ZR-FE 1.8L Petrol Â· 140hp Â· 2006-2013",
           "priceRange": "£899-£2,450",
           "cta": "Compare Ascent 1.8L Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "2ZR-FE"
+          ],
           "fuel": "Petrol",
           "power": "140hp",
           "years": "2006-2013",
@@ -520,10 +516,12 @@
         {
           "h3": "Toyota Ascent 1.8L Valvematic Engine Replacement",
           "slug": "toyota-ascent-1-8l-valvematic-engine",
-          "subtitle": "2ZR-FAE 1.8L Petrol · 147hp · 2010-2018 · Rebuilt: £950-£2,650",
+          "subtitle": "2ZR-FAE 1.8L Petrol Â· 147hp Â· 2010-2018",
           "priceRange": "£950-£2,650",
           "cta": "Compare Ascent Valvematic Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "2ZR-FAE"
+          ],
           "fuel": "Petrol",
           "power": "147hp",
           "years": "2010-2018",
@@ -532,7 +530,7 @@
         {
           "h3": "Toyota Ascent 2.0L Dynamic Force Engine Replacement",
           "slug": "toyota-ascent-2-0l-dynamic-force-engine",
-          "subtitle": "M20A-FKS 2.0L Petrol · 170hp · 2019-2024",
+          "subtitle": "M20A-FKS 2.0L Petrol Â· 170hp Â· 2019-2024",
           "priceRange": "£1,850-£3,950",
           "cta": "Compare Ascent 2.0L Engine Prices",
           "engineCodes": [
@@ -546,10 +544,12 @@
         {
           "h3": "Toyota Ascent 1.8L Hybrid Engine Replacement",
           "slug": "toyota-ascent-1-8l-hybrid-engine",
-          "subtitle": "2ZR-FXE 1.8L Hybrid · 122hp combined · 2011-2018 · Rebuilt: £1,450-£3,200",
+          "subtitle": "2ZR-FXE 1.8L Hybrid Â· 122hp combined Â· 2011-2018",
           "priceRange": "£1,450-£3,200",
           "cta": "Compare Ascent Hybrid Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "2ZR-FXE"
+          ],
           "fuel": "Hybrid",
           "power": "122hpcombined",
           "years": "2011-2018",
@@ -558,7 +558,7 @@
         {
           "h3": "Toyota Ascent 2.0L Hybrid Engine Replacement",
           "slug": "toyota-ascent-2-0l-hybrid-engine",
-          "subtitle": "M20A-FXS 2.0L Hybrid · 184hp combined · 2019-2024",
+          "subtitle": "M20A-FXS 2.0L Hybrid Â· 184hp combined Â· 2019-2024",
           "priceRange": "£2,100-£4,200",
           "cta": "Compare Ascent 2.0L Hybrid Engine Prices",
           "engineCodes": [
@@ -572,7 +572,7 @@
         {
           "h3": "Toyota Ascent Sport Engine Replacement",
           "slug": "toyota-ascent-sport-engine",
-          "subtitle": "2ZR-FE/FAE 1.8L Petrol · 140-147hp · 2012-2018",
+          "subtitle": "2ZR-FE/FAE 1.8L Petrol Â· 140-147hp Â· 2012-2018",
           "priceRange": "£950-£2,650",
           "cta": "Compare Ascent Sport Engine Prices",
           "engineCodes": [
@@ -587,10 +587,12 @@
         {
           "h3": "Toyota Ascent Sport Hybrid Engine Replacement",
           "slug": "toyota-ascent-sport-hybrid-engine",
-          "subtitle": "2ZR-FXE 1.8L Hybrid · 122hp combined · 2014-2018 · Rebuilt: £1,650-£3,450",
+          "subtitle": "2ZR-FXE 1.8L Hybrid Â· 122hp combined Â· 2014-2018",
           "priceRange": "£1,650-£3,450",
           "cta": "Compare Ascent Sport Hybrid Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "2ZR-FXE"
+          ],
           "fuel": "Hybrid",
           "power": "122hpcombined",
           "years": "2014-2018",
@@ -599,12 +601,11 @@
         {
           "h3": "Toyota Ascent Australian Spec Engine Replacement",
           "slug": "toyota-ascent-australian-spec-engine",
-          "subtitle": "1ZR-FE/2ZR-FE Import · 122-140hp · 2006-2013",
+          "subtitle": "1ZR-FE/2ZR-FE Import Â· 122-140hp Â· 2006-2013",
           "priceRange": "£899-£2,450",
           "cta": "Compare Ascent Import Engine Prices",
           "engineCodes": [
-            "1ZR-FE",
-            "2ZR-FE"
+            "1ZR-FE"
           ],
           "fuel": "",
           "power": "122-140hp",
@@ -617,7 +618,9 @@
           "subtitle": "2ZR-FXE Hybrid Import · 122hp combined · 2011-2018 · Rebuilt: £1,450-£3,200",
           "priceRange": "£1,450-£3,200",
           "cta": "Compare Ascent Grey Import Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "2ZR-FXE"
+          ],
           "fuel": "Hybrid",
           "power": "122hpcombined",
           "years": "2011-2018",
@@ -626,12 +629,11 @@
         {
           "h3": "Toyota Ascent Pre-Facelift Engine Replacement",
           "slug": "toyota-ascent-pre-facelift-engine",
-          "subtitle": "1ZR-FE/2ZR-FE Early Model · 122-140hp · 2006-2012",
+          "subtitle": "1ZR-FE/2ZR-FE Early Model · 122-140hp · 2006-2012 · Rebuilt: £750-£2,450",
           "priceRange": "£750-£2,450",
           "cta": "Compare Ascent Pre-2013 Engine Prices",
           "engineCodes": [
-            "1ZR-FE",
-            "2ZR-FE"
+            "1ZR-FE"
           ],
           "fuel": "",
           "power": "122-140hp",
@@ -641,28 +643,15 @@
         {
           "h3": "Toyota Ascent Post-Facelift Engine Replacement",
           "slug": "toyota-ascent-post-facelift-engine",
-          "subtitle": "2ZR-FAE/M20A-FKS Late Model · 147-170hp · 2012-2024",
+          "subtitle": "2ZR-FAE/M20A-FKS Late Model · 147-170hp · 2012-2024 · Rebuilt: £950-£3,950",
           "priceRange": "£950-£3,950",
           "cta": "Compare Ascent Post-2012 Engine Prices",
           "engineCodes": [
-            "2ZR-FAE",
-            "M20A-FKS"
+            "2ZR-FAE"
           ],
           "fuel": "",
           "power": "147-170hp",
           "years": "2012-2024",
-          "image": ""
-        },
-        {
-          "h3": "Compare realistic UK supply-only prices for every Toyota Ascent engine code, with condition options, warranty coverage and specialist availability.",
-          "slug": "compare-realistic-uk-supply-only-prices-for-every-toyota-ascent-engine-code-with-condition-options-warranty-coverage-and-specialist-availability-engine",
-          "subtitle": "Engine Code Price Table",
-          "priceRange": "",
-          "cta": "| Engine Code | Fuel/Size | Rebuilt | Reconditioned | Used | Warranty | Availability |",
-          "engineCodes": [],
-          "fuel": "",
-          "power": "",
-          "years": "",
           "image": ""
         }
       ],
@@ -721,22 +710,9 @@
                 "size": "1.6 Litre",
                 "power": "122 hp",
                 "years": "2006-2013",
-                "compatibleVariants": [],
-                "commonFailures": [],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "Ascent",
-                "title": "1.6L, Ascent Base, Ascent Import",
-                "familyHeading": "ZR Series (2006-2018)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
+                "compatibleVariants": [
+                  "Ascent 1.6L, Ascent Base, Ascent Import"
+                ],
                 "commonFailures": [
                   "Valve stem seal wear causing cold-start smoke (80k+ miles)",
                   "Minor oil consumption on high-mileage units"
@@ -754,22 +730,9 @@
                 "size": "1.8 Litre",
                 "power": "140 hp",
                 "years": "2006-2018",
-                "compatibleVariants": [],
-                "commonFailures": [],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "Ascent",
-                "title": "1.8L, Ascent Sport, Ascent Import, Ascent Pre-Facelift",
-                "familyHeading": "ZR Series (2006-2018)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
+                "compatibleVariants": [
+                  "Ascent 1.8L, Ascent Sport, Ascent Import, Ascent Pre-Facelift"
+                ],
                 "commonFailures": [
                   "Piston ring wear causing excessive oil consumption (60k-100k miles)",
                   "Timing chain cover gasket leaks (70k+ miles)"
@@ -807,40 +770,13 @@
                 "size": "2.0 Litre",
                 "power": "170 hp",
                 "years": "2019-2024",
-                "compatibleVariants": [],
-                "commonFailures": [],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "Ascent",
-                "title": "2.0L, Ascent Sport 2.0L, Ascent Dynamic Force",
-                "familyHeading": "ZR Series (2006-2018)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [
-                  "Carbon buildup on intake valves requiring walnut blasting (60k+ miles)"
+                "compatibleVariants": [
+                  "Ascent 2.0L, Ascent Sport 2.0L, Ascent Dynamic Force"
                 ],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "High",
-                "title": "pressure fuel pump wear on direct injection units",
-                "familyHeading": "ZR Series (2006-2018)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
+                "commonFailures": [
+                  "Carbon buildup on intake valves requiring walnut blasting (60k+ miles)",
+                  "High-pressure fuel pump wear on direct injection units"
+                ],
                 "avgRebuiltPrice": "£1,850 - £3,950",
                 "cta": "Get quotes for M20A-FKS Toyota Ascent engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -859,22 +795,9 @@
                 "size": "1.8 Litre",
                 "power": "122 hp combined",
                 "years": "2011-2018",
-                "compatibleVariants": [],
-                "commonFailures": [],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "Ascent",
-                "title": "Hybrid, Ascent Sport Hybrid, Ascent Hybrid Import",
-                "familyHeading": "ZR Hybrid Series (2011-2018)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
+                "compatibleVariants": [
+                  "Ascent Hybrid, Ascent Sport Hybrid, Ascent Hybrid Import"
+                ],
                 "commonFailures": [
                   "Hybrid inverter coolant pump failure causing overheating (90k+ miles)",
                   "Battery module degradation reducing electric-only range (100k+ miles)"
@@ -892,22 +815,9 @@
                 "size": "2.0 Litre",
                 "power": "184 hp combined",
                 "years": "2019-2024",
-                "compatibleVariants": [],
-                "commonFailures": [],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "Ascent",
-                "title": "Hybrid (E210), Ascent Sport Hybrid (E210)",
-                "familyHeading": "M20 Hybrid Series (2019-2024)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
+                "compatibleVariants": [
+                  "Ascent Hybrid (E210), Ascent Sport Hybrid (E210)"
+                ],
                 "commonFailures": [
                   "Thermal management system faults affecting inverter cooling",
                   "Hybrid control unit software compatibility issues post-replacement"
@@ -955,19 +865,7 @@
               "fuel": "Petrol",
               "size": "1.6L",
               "power": "122 hp",
-              "compatibleModels": "",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "Ascent",
-              "title": "1.6L, Ascent Base, Ascent Import",
-              "familyHeading": "ZR Series (2006-2018)",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
+              "compatibleModels": "Ascent 1.6L, Ascent Base, Ascent Import",
               "avgRebuiltPrice": "£750 - £1,650",
               "cta": "Get quotes for 1ZR-FE Toyota Ascent engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -979,19 +877,7 @@
               "fuel": "Petrol",
               "size": "1.8L",
               "power": "140 hp",
-              "compatibleModels": "",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "Ascent",
-              "title": "1.8L, Ascent Sport, Ascent Import, Ascent Pre-Facelift",
-              "familyHeading": "ZR Series (2006-2018)",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
+              "compatibleModels": "Ascent 1.8L, Ascent Sport, Ascent Import, Ascent Pre-Facelift",
               "avgRebuiltPrice": "£899 - £2,450",
               "cta": "Get quotes for 2ZR-FE Toyota Ascent engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1015,31 +901,7 @@
               "fuel": "Petrol",
               "size": "2.0L",
               "power": "170 hp",
-              "compatibleModels": "",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "Ascent",
-              "title": "2.0L, Ascent Sport 2.0L, Ascent Dynamic Force",
-              "familyHeading": "ZR Series (2006-2018)",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "High",
-              "title": "pressure fuel pump wear on direct injection units",
-              "familyHeading": "ZR Series (2006-2018)",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
+              "compatibleModels": "Ascent 2.0L, Ascent Sport 2.0L, Ascent Dynamic Force",
               "avgRebuiltPrice": "£1,850 - £3,950",
               "cta": "Get quotes for M20A-FKS Toyota Ascent engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1058,19 +920,7 @@
               "fuel": "Hybrid (Petrol-Electric)",
               "size": "1.8L",
               "power": "122 hp combined",
-              "compatibleModels": "",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "Ascent",
-              "title": "Hybrid, Ascent Sport Hybrid, Ascent Hybrid Import",
-              "familyHeading": "ZR Hybrid Series (2011-2018)",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
+              "compatibleModels": "Ascent Hybrid, Ascent Sport Hybrid, Ascent Hybrid Import",
               "avgRebuiltPrice": "£1,450 - £3,200",
               "cta": "Get quotes for 2ZR-FXE Toyota Ascent hybrid engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1082,19 +932,7 @@
               "fuel": "Hybrid (Petrol-Electric)",
               "size": "2.0L",
               "power": "184 hp combined",
-              "compatibleModels": "",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "Ascent",
-              "title": "Hybrid (E210), Ascent Sport Hybrid (E210)",
-              "familyHeading": "M20 Hybrid Series (2019-2024)",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
+              "compatibleModels": "Ascent Hybrid (E210), Ascent Sport Hybrid (E210)",
               "avgRebuiltPrice": "£2,100 - £4,200",
               "cta": "Get quotes for M20A-FXS Toyota Ascent hybrid engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1543,7 +1381,7 @@
           "title": "Toyota Ascent Hybrid Engines",
           "description": "Hybrid Toyota Ascent variants command premium replacement pricing due to specialist inverter and battery compatibility requirements, but offer exceptional running costs for UK owners.",
           "descriptor": "Hybrid Toyota Ascent variants command premium replacement pricing due to specialist inverter and battery compatibility requirements, but offer exceptional running costs for UK owners.",
-          "familiesLabel": "H2: Toyota Ascent Engine Codes - Full Technical Specifications & Replacement Guide",
+          "familiesLabel": "Toyota Ascent Hybrid Engine Codes",
           "foundInLabel": "Found In",
           "knownForLabel": "",
           "modelsLabel": "",
@@ -1567,38 +1405,6 @@
             "Specialist hybrid technicians required for ECU coding and calibration"
           ],
           "cta": "Enquire about Toyota Ascent Hybrid engine availability"
-        },
-        {
-          "title": "Petrol Engines",
-          "description": "",
-          "descriptor": "",
-          "familiesLabel": "Common Petrol Engine Families",
-          "foundInLabel": "",
-          "knownForLabel": "",
-          "modelsLabel": "",
-          "notesLabel": "",
-          "families": [],
-          "foundIn": [],
-          "knownFor": [],
-          "typicalModels": [],
-          "importantNotes": [],
-          "cta": "Get quotes for M20A-FKS Toyota Ascent engine replacement"
-        },
-        {
-          "title": "Hybrid Engines",
-          "description": "",
-          "descriptor": "",
-          "familiesLabel": "Common Hybrid Engine Families",
-          "foundInLabel": "",
-          "knownForLabel": "",
-          "modelsLabel": "",
-          "notesLabel": "",
-          "families": [],
-          "foundIn": [],
-          "knownFor": [],
-          "typicalModels": [],
-          "importantNotes": [],
-          "cta": "Get quotes for M20A-FXS Toyota Ascent hybrid engine replacement"
         }
       ],
       "closing": "Not sure which fuel type your Toyota Ascent has? Enter your registration number above to instantly identify your engine code, fuel system and compatible replacement options - all backed by a 12‑month unlimited mileage warranty from UK Toyota Ascent specialists.",

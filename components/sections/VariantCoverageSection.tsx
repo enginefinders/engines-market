@@ -320,6 +320,12 @@ export default function VariantCoverageSection({ data }: Props) {
             ))}
           </div>
         </div>
+
+        {data.closing ? (
+          <p className="mx-auto mt-4 max-w-[980px] text-[13px] leading-[1.75] text-slate-600">
+            {data.closing}
+          </p>
+        ) : null}
       </Container>
     </Section>
   );

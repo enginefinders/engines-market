@@ -40,12 +40,14 @@ function repairEngineCodeValue(code: string) {
 }
 
 function normalizeCode(code: string) {
-  return repairEngineCodeValue(code)
+  const normalized = repairEngineCodeValue(code)
     .toLowerCase()
     .replace(/\(.*?\)/g, "")
     .split("/")
     .map((item) => item.trim())
     .filter(Boolean);
+
+  return Array.from(new Set([...normalized, ...normalized.map((item) => item.replace(/\s+/g, ""))]));
 }
 
 function buildGuideLookup(guide: Props["guide"]) {
@@ -198,7 +200,13 @@ function buildFailures(detail: GuideEntry | null, fallback: string) {
 
 function isRenderableEngineRow(engine: EngineRow) {
   const repairedCode = repairEngineCodeValue(engine.code);
-  return /\d/.test(repairedCode) && /^[A-Z0-9]/i.test(repairedCode) && Boolean(engine.size || engine.fuel || engine.power || engine.avgRebuiltPrice);
+  const normalizedCode = repairedCode.trim().toUpperCase();
+  const looksLikeCode =
+    /^[A-Z0-9][A-Z0-9./+-]*(?:\s+[A-Z0-9][A-Z0-9./+-]*)*(?:\s*\/\s*[A-Z0-9][A-Z0-9./+-]*(?:\s+[A-Z0-9][A-Z0-9./+-]*)*)*$/.test(normalizedCode) &&
+    /[A-Z]/.test(normalizedCode) &&
+    !/^\d+(?:\.\d+)?$/.test(normalizedCode);
+
+  return looksLikeCode && Boolean(engine.size || engine.fuel || engine.power || engine.avgRebuiltPrice);
 }
 
 function chunkEngines(engines: EngineRow[]) {

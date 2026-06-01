@@ -330,14 +330,6 @@
             "toyota pixis joy",
             "toyota pixis joy engine"
           ]
-        },
-        {
-          "key": "every-kf-series-engine-fitted-to-the-toyota-pixis-with-typical-uk-rebuilt-price-ranges-condition-options-and-failure-notes-select-any-engine-code-to-compare-live-quotes-from-jdm-import-specialists-engine",
-          "label": "Every KF-series engine fitted to the Toyota Pixis, with typical UK rebuilt price ranges, condition options and failure notes. Select any engine code to compare live quotes from JDM import specialists.",
-          "matchers": [
-            "every kf-series engine fitted to the toyota pixis, with typical uk rebuilt price ranges, condition options and failure notes. select any engine code to compare live quotes from jdm import specialists.",
-            "every kf series engine fitted to the toyota pixis with typical uk rebuilt price ranges condition options and failure notes select any engine code to compare live quotes from jdm import specialists engine"
-          ]
         }
       ],
       "ui": {
@@ -421,10 +413,12 @@
         {
           "h3": "Toyota Pixis Space X Engine Replacement",
           "slug": "toyota-pixis-space-x-engine",
-          "subtitle": "KF-VE 0.66L Petrol · 52hp · 2011-2016 · Rebuilt: £850-£1,900",
+          "subtitle": "KF-VE 0.66L Petrol Â· 52hp Â· 2011-2016",
           "priceRange": "£850-£1,900",
           "cta": "Compare Pixis Space X Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "KF-VE"
+          ],
           "fuel": "Petrol",
           "power": "52hp",
           "years": "2011-2016",
@@ -433,10 +427,12 @@
         {
           "h3": "Toyota Pixis Space L Engine Replacement",
           "slug": "toyota-pixis-space-l-engine",
-          "subtitle": "KF-VE 0.66L Petrol · 52hp · 2011-2016 · Rebuilt: £850-£1,900",
+          "subtitle": "KF-VE 0.66L Petrol Â· 52hp Â· 2011-2016",
           "priceRange": "£850-£1,900",
           "cta": "Compare Pixis Space L Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "KF-VE"
+          ],
           "fuel": "Petrol",
           "power": "52hp",
           "years": "2011-2016",
@@ -445,10 +441,12 @@
         {
           "h3": "Toyota Pixis Space Custom G Engine Replacement",
           "slug": "toyota-pixis-space-custom-g-engine",
-          "subtitle": "KF-VE 0.66L Petrol · 52hp · 2011-2016 · Rebuilt: £850-£1,900",
+          "subtitle": "KF-VE 0.66L Petrol Â· 52hp Â· 2011-2016",
           "priceRange": "£850-£1,900",
           "cta": "Compare Pixis Space Custom G Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "KF-VE"
+          ],
           "fuel": "Petrol",
           "power": "52hp",
           "years": "2011-2016",
@@ -460,7 +458,9 @@
           "subtitle": "KF-DET 0.66L Petrol Turbo · 64hp · 2011-2016 · Rebuilt: £1,200-£2,800",
           "priceRange": "£1,200-£2,800",
           "cta": "Compare Pixis Space Custom RS Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "KF-DET"
+          ],
           "fuel": "Petrol",
           "power": "64hp",
           "years": "2011-2016",
@@ -469,10 +469,12 @@
         {
           "h3": "Toyota Pixis Mega Engine Replacement",
           "slug": "toyota-pixis-mega-engine",
-          "subtitle": "KF-VE 0.66L Petrol · 52hp · 2017-2020 · Rebuilt: £900-£2,200",
+          "subtitle": "KF-VE 0.66L Petrol Â· 52hp Â· 2017-2020",
           "priceRange": "£900-£2,200",
           "cta": "Compare Pixis Mega Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "KF-VE"
+          ],
           "fuel": "Petrol",
           "power": "52hp",
           "years": "2017-2020",
@@ -481,25 +483,15 @@
         {
           "h3": "Toyota Pixis Joy Engine Replacement",
           "slug": "toyota-pixis-joy-engine",
-          "subtitle": "KF-VE 0.66L Petrol · 52hp · 2017-2020 · Rebuilt: £850-£2,000",
+          "subtitle": "KF-VE 0.66L Petrol Â· 52hp Â· 2017-2020",
           "priceRange": "£850-£2,000",
           "cta": "Compare Pixis Joy Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "KF-VE"
+          ],
           "fuel": "Petrol",
           "power": "52hp",
           "years": "2017-2020",
-          "image": ""
-        },
-        {
-          "h3": "Every KF-series engine fitted to the Toyota Pixis, with typical UK rebuilt price ranges, condition options and failure notes. Select any engine code to compare live quotes from JDM import specialists.",
-          "slug": "every-kf-series-engine-fitted-to-the-toyota-pixis-with-typical-uk-rebuilt-price-ranges-condition-options-and-failure-notes-select-any-engine-code-to-compare-live-quotes-from-jdm-import-specialists-engine",
-          "subtitle": "| Engine Code | Condition | Price Range | Failure Notes | CTA |",
-          "priceRange": "",
-          "cta": "|---|---|---|---|---|",
-          "engineCodes": [],
-          "fuel": "",
-          "power": "",
-          "years": "",
           "image": ""
         }
       ],
@@ -523,7 +515,7 @@
         ],
         "label": "Variant Directory"
       },
-      "closing": "All rebuilt and reconditioned Toyota Pixis engines supplied through EngineMarket include upgraded components addressing known KF-series failure points, plus a 12-month unlimited mileage warranty. Enter your registration above for tailored quotes.",
+      "closing": "Not sure which variant your Toyota Pixis is? Enter your registration number above - we'll identify the exact sub-model, KF engine code and compatible replacement options instantly.",
       "engineGuide": {
         "tag": "Engine Codes",
         "h2": "Toyota Pixis Engine Codes - Full Technical Specifications & Replacement Guide",
@@ -935,7 +927,7 @@
           "items": [
             {
               "title": "Toyota Pixis 0.66L Petrol Engines",
-              "description": "The sole engine option across all Toyota Pixis generations, the 658cc KF-series petrol unit powers every variant from the base Space X to the turbo Custom RS. This kei-car displacement complies with Japanese regulations while delivering adequate performance for urban and motorway use. Not sure which engine size your Toyota Pixis needs? Enter your registration number above - we'll identify the exact displacement, KF engine code and compatible replacement options instantly. All engines supplied through EngineMarket include a 12-month unlimited mileage warranty from UK Toyota Pixis specialists.",
+              "description": "The sole engine option across all Toyota Pixis generations, the 658cc KF-series petrol unit powers every variant from the base Space X to the turbo Custom RS. This kei-car displacement complies with Japanese regulations while delivering adequate performance for urban and motorway use.",
               "engineCodes": [
                 "KF-VE",
                 "KF-DET",
@@ -984,7 +976,7 @@
           "title": "Toyota Pixis Petrol Engines",
           "description": "The Toyota Pixis was offered exclusively with 658cc KF-series petrol engines across all UK-imported variants, from naturally aspirated KF-VE to turbocharged KF-DET units.",
           "descriptor": "The Toyota Pixis was offered exclusively with 658cc KF-series petrol engines across all UK-imported variants, from naturally aspirated KF-VE to turbocharged KF-DET units.",
-          "familiesLabel": "H2: Toyota Pixis Engine Codes - Full Technical Specifications & Replacement Guide",
+          "familiesLabel": "Common Toyota Pixis Petrol Engine Families",
           "foundInLabel": "Found In",
           "knownForLabel": "Known For",
           "modelsLabel": "Typical Petrol Models",
@@ -1013,22 +1005,6 @@
           ],
           "importantNotes": [],
           "cta": "Compare Toyota Pixis Petrol engine prices"
-        },
-        {
-          "title": "Petrol Engines",
-          "description": "",
-          "descriptor": "",
-          "familiesLabel": "Common Petrol Engine Families",
-          "foundInLabel": "",
-          "knownForLabel": "",
-          "modelsLabel": "",
-          "notesLabel": "",
-          "families": [],
-          "foundIn": [],
-          "knownFor": [],
-          "typicalModels": [],
-          "importantNotes": [],
-          "cta": "Get quotes for KF-VET Toyota Pixis engine replacement"
         }
       ],
       "closing": "Not sure which fuel type your Toyota Pixis has? Enter your registration number above to instantly identify your KF engine code, fuel system and compatible replacement options - all backed by a 12-month unlimited mileage warranty from UK Toyota Pixis specialists.",

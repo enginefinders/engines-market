@@ -396,12 +396,12 @@
         {
           "h3": "Honda Prelude 2.2 VTEC Engine Replacement",
           "slug": "honda-prelude-2-2-vtec-engine",
-          "subtitle": "H22A1/H22A4 2.2L Petrol · 190-220hp · 1992-2001",
+          "subtitle": "H22A1/H22A4 2.2L Petrol Â· 190-220hp Â· 1992-2001",
           "priceRange": "£1,195-£2,595",
           "cta": "Compare 2.2 VTEC Engine Prices",
           "engineCodes": [
             "H22A1",
-            "H22A4"
+            "H22A4 2.2L"
           ],
           "fuel": "Petrol",
           "power": "190-220hp",
@@ -411,11 +411,11 @@
         {
           "h3": "Honda Prelude 2.2 Non-VTEC Engine Replacement",
           "slug": "honda-prelude-2-2-non-vtec-engine",
-          "subtitle": "H23A1 2.2L Petrol · 135-160hp · 1992-2001",
+          "subtitle": "H23A1 2.2L Petrol Â· 135-160hp Â· 1992-2001",
           "priceRange": "£995-£2,195",
           "cta": "Compare 2.2 Non-VTEC Engine Prices",
           "engineCodes": [
-            "H23A1"
+            "H23A1 2.2L"
           ],
           "fuel": "Petrol",
           "power": "135-160hp",
@@ -425,11 +425,11 @@
         {
           "h3": "Honda Prelude Type SH Engine Replacement",
           "slug": "honda-prelude-type-sh-engine",
-          "subtitle": "H22A4 2.2L Petrol · 200hp · 1997-2001",
+          "subtitle": "H22A4 2.2L Petrol Â· 200hp Â· 1997-2001",
           "priceRange": "£1,395-£2,695",
           "cta": "Compare Type SH Engine Prices",
           "engineCodes": [
-            "H22A4"
+            "H22A4 2.2L"
           ],
           "fuel": "Petrol",
           "power": "200hp",
@@ -439,11 +439,11 @@
         {
           "h3": "Honda Prelude SiR JDM Engine Replacement",
           "slug": "honda-prelude-sir-jdm-engine",
-          "subtitle": "H22A1 2.2L Petrol · 220hp · 1992-1996",
+          "subtitle": "H22A1 2.2L Petrol Â· 220hp Â· 1992-1996",
           "priceRange": "£1,495-£2,795",
           "cta": "Compare SiR JDM Engine Prices",
           "engineCodes": [
-            "H22A1"
+            "H22A1 2.2L"
           ],
           "fuel": "Petrol",
           "power": "220hp",
@@ -453,11 +453,11 @@
         {
           "h3": "Honda Prelude 2.0 Si Engine Replacement",
           "slug": "honda-prelude-2-0-si-engine",
-          "subtitle": "B20A 2.0L Petrol · 140hp · 1987-1991",
+          "subtitle": "B20A 2.0L Petrol Â· 140hp Â· 1987-1991",
           "priceRange": "£895-£1,895",
           "cta": "Compare 2.0 Si Engine Prices",
           "engineCodes": [
-            "B20A"
+            "B20A 2.0L"
           ],
           "fuel": "Petrol",
           "power": "140hp",
@@ -467,11 +467,11 @@
         {
           "h3": "Honda Prelude 2.2i Engine Replacement",
           "slug": "honda-prelude-2-2i-engine",
-          "subtitle": "H23A1 2.2L Petrol · 160hp · 1992-2001",
+          "subtitle": "H23A1 2.2L Petrol Â· 160hp Â· 1992-2001",
           "priceRange": "£1,095-£2,295",
           "cta": "Compare 2.2i Engine Prices",
           "engineCodes": [
-            "H23A1"
+            "H23A1 2.2L"
           ],
           "fuel": "Petrol",
           "power": "160hp",
@@ -562,22 +562,11 @@
                 "compatibleVariants": [
                   "2.2 VTEC (UK spec), Type SH (Euro)"
                 ],
-                "commonFailures": [],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "EGR",
-                "title": "related carbon buildup affecting VTEC operation",
-                "familyHeading": "H-Series VTEC (1992-2001)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
+                "commonFailures": [
+                  "EGR-related carbon buildup affecting VTEC operation",
+                  "Oxygen sensor failures triggering check engine lights",
+                  "Timing component wear consistent with H22A4 patterns"
+                ],
                 "avgRebuiltPrice": "£1,295 - £2,495",
                 "cta": "Get quotes for H22A7 Honda Prelude engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -708,18 +697,6 @@
               "size": "2.2L",
               "power": "185-190 hp",
               "compatibleModels": "2.2 VTEC (UK spec), Type SH (Euro)",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "EGR",
-              "title": "related carbon buildup affecting VTEC operation",
-              "familyHeading": "H-Series VTEC (1992-2001)",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
               "avgRebuiltPrice": "£1,295 - £2,495",
               "cta": "Get quotes for H22A7 Honda Prelude engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -788,7 +765,7 @@
     "commonProblems": {
       "tag": "Common Problems",
       "h2": "Honda Prelude Engine Problems - What It Costs to Fix & When Replacement Makes Sense",
-      "h3": "",
+      "h3": "The Honda Prelude's H22 and H23 engines are robust but known for VTEC solenoid failures, timing belt tensioner wear, and oil consumption on high-mileage examples. Every rebuilt engine supplied through EngineMarket includes upgraded internal components designed to address the original failure point - plus a minimum 12‑month unlimited mileage warranty. Use this section to compare repair costs and decide whether a fix or full replacement offers better value for your Prelude.",
       "problems": [
         {
           "group": "VTEC Solenoid Failure",

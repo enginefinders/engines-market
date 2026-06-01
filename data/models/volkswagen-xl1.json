@@ -416,7 +416,9 @@
           "subtitle": "CSCA 0.8L Diesel Hybrid · 69hp combined · 2013-2015 · Rebuilt: £8,000-£12,000",
           "priceRange": "£8,000-£12,000",
           "cta": "Compare XL1 Standard Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "CSCA"
+          ],
           "fuel": "Diesel",
           "power": "69hpcombined",
           "years": "2013-2015",
@@ -428,7 +430,9 @@
           "subtitle": "CSCA 0.8L Diesel Hybrid · 69hp combined · 2013-2015 · Rebuilt: £10,000-£15,000",
           "priceRange": "£10,000-£15,000",
           "cta": "Compare XL1 UK Delivery Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "CSCA"
+          ],
           "fuel": "Diesel",
           "power": "69hpcombined",
           "years": "2013-2015",
@@ -440,7 +444,9 @@
           "subtitle": "CSCA 0.8L Diesel Hybrid · 69hp combined · 2013-2015 · Rebuilt: £12,000-£18,000",
           "priceRange": "£12,000-£18,000",
           "cta": "Compare XL1 Collector Edition Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "CSCA"
+          ],
           "fuel": "Diesel",
           "power": "69hpcombined",
           "years": "2013-2015",
@@ -454,7 +460,7 @@
           "cta": "Enquire about XL1 Sport Concept Information",
           "engineCodes": [
             "CSCA",
-            "Ducati"
+            "Ducati 1.2L V-Twin"
           ],
           "fuel": "",
           "power": "191hp",
@@ -467,7 +473,9 @@
           "subtitle": "CSCA-prototype 0.8L TDI · 69hp prototype · 2009-2011 · N/A",
           "priceRange": "",
           "cta": "Enquire about L1 Prototype Engine Information",
-          "engineCodes": [],
+          "engineCodes": [
+            "CSCA-prototype"
+          ],
           "fuel": "",
           "power": "69hp",
           "years": "2009-2011",
@@ -526,26 +534,12 @@
                 ],
                 "commonFailures": [
                   "DSG mechatronic control unit failure (60k-100k miles)",
-                  "5.5kWh lithium battery degradation (10+ years age-related)"
+                  "5.5kWh lithium battery degradation (10+ years age-related)",
+                  "Two-cylinder balance shaft wear causing vibration at higher RPM"
                 ],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
-              },
-              {
-                "code": "Two",
-                "title": "cylinder balance shaft wear causing vibration at higher RPM",
-                "familyHeading": "CSCA Series (2013-2015)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
                 "avgRebuiltPrice": "£8,000 - £12,000",
                 "cta": "Get quotes for CSCA Volkswagen XL1 engine replacement",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               }
             ]
           },
@@ -564,22 +558,11 @@
                 "compatibleVariants": [
                   "XL1 Standard, XL1 UK Delivery, XL1 Collector Edition"
                 ],
-                "commonFailures": [],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "High",
-                "title": "voltage battery management system faults",
-                "familyHeading": "EM57 Electric Motor + Battery System (2013-2015)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
+                "commonFailures": [
+                  "High-voltage battery management system faults",
+                  "Electric motor inverter cooling issues",
+                  "Hybrid system control module communication errors"
+                ],
                 "avgRebuiltPrice": "£15,000 - £25,000",
                 "cta": "Get quotes for EM57+CSCA Volkswagen XL1 hybrid powertrain replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -624,21 +607,9 @@
               "size": "0.829L",
               "power": "47hp (diesel) + 27hp (electric) = 69hp combined",
               "compatibleModels": "XL1 Standard, XL1 UK Delivery, XL1 Collector Edition, XL1 Right-Hand Drive",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
-            },
-            {
-              "code": "Two",
-              "title": "cylinder balance shaft wear causing vibration at higher RPM",
-              "familyHeading": "CSCA Series (2013-2015)",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
               "avgRebuiltPrice": "£8,000 - £12,000",
               "cta": "Get quotes for CSCA Volkswagen XL1 engine replacement",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             }
           ]
         },
@@ -655,18 +626,6 @@
               "size": "0.829L + Electric",
               "power": "69hp combined system output",
               "compatibleModels": "XL1 Standard, XL1 UK Delivery, XL1 Collector Edition",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "High",
-              "title": "voltage battery management system faults",
-              "familyHeading": "EM57 Electric Motor + Battery System (2013-2015)",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
               "avgRebuiltPrice": "£15,000 - £25,000",
               "cta": "Get quotes for EM57+CSCA Volkswagen XL1 hybrid powertrain replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -699,7 +658,7 @@
     "commonProblems": {
       "tag": "Common Problems",
       "h2": "Volkswagen XL1 Engine Problems - What It Costs to Fix & When Replacement Makes Sense",
-      "h3": "",
+      "h3": "The Volkswagen XL1's ultra-specialised CSCA 0.8L two-cylinder TDI hybrid powertrain is exceptionally rare and complex. DSG mechatronic failure and hybrid battery degradation dominate replacement enquiries for this 200-unit worldwide production model. Every rebuilt engine supplied through EngineMarket includes upgraded internal components designed to address the XL1's known failure points - plus a minimum 12‑month unlimited mileage warranty.",
       "problems": [
         {
           "group": "DSG Mechatronic Failure",
@@ -1009,7 +968,7 @@
           "items": [
             {
               "title": "Volkswagen XL1 0.8L Hybrid Engines",
-              "description": "The XL1's plug-in hybrid system combines the CSCA 0.8L two-cylinder TDI with an EM57 electric motor and 5.5kWh lithium battery, enabling ~30 miles electric-only range and seamless transition to diesel power; this integrated powertrain is unique to the XL1 and requires specialist hybrid-calibrated replacement. Not sure which engine size your Volkswagen XL1 needs? Enter your registration number above - we'll identify the exact displacement, engine code and compatible replacement options instantly. All engines supplied through EngineMarket include a minimum 12‑month unlimited mileage warranty from UK Volkswagen XL1 specialists.",
+              "description": "The XL1's plug-in hybrid system combines the CSCA 0.8L two-cylinder TDI with an EM57 electric motor and 5.5kWh lithium battery, enabling ~30 miles electric-only range and seamless transition to diesel power; this integrated powertrain is unique to the XL1 and requires specialist hybrid-calibrated replacement.",
               "engineCodes": [
                 "CSCA+EM57"
               ],
@@ -1456,7 +1415,20 @@
       "tag": "Why Choose Us",
       "h2": "Why UK Volkswagen XL1 Owners Trust EngineMarket",
       "intro": "Join thousands of UK drivers who compare Volkswagen XL1 engine prices through our network of trusted specialists - every rebuilt and reconditioned unit backed by a minimum 12‑month unlimited mileage warranty and nationwide delivery.",
-      "points": [],
+      "points": [
+        {
+          "title": "Trusted Volkswagen XL1 Engine Suppliers",
+          "description": "Every garage and engine rebuilder in our network is vetted, rated, and reviewed by real Volkswagen XL1 owners."
+        },
+        {
+          "title": "Compare Volkswagen XL1 Engine Replacement Companies",
+          "description": "See prices, warranty terms, and supply & fit options side‑by‑side before you commit."
+        },
+        {
+          "title": "UK Engine Replacement Services for Volkswagen XL1",
+          "description": "Covering every variant from standard to collector edition, with supply‑only or full supply & fit available nationwide."
+        }
+      ],
       "finalText": "Find the best Volkswagen XL1 engine replacement UK drivers rely on. Compare prices from trusted specialists today and get back on the road with confidence.",
       "buttonText": "Compare Volkswagen XL1 Engine Prices Now →",
       "secondaryAction": {

@@ -436,10 +436,12 @@
         {
           "h3": "Toyota C HR Icon Engine Replacement",
           "slug": "toyota-c-hr-icon-engine",
-          "subtitle": "2ZR-FXE 1.8L Hybrid · 122hp · 2016-2023 · Rebuilt: £1,500-£3,200",
+          "subtitle": "2ZR-FXE 1.8L Hybrid Â· 122hp Â· 2016-2023",
           "priceRange": "£1,500-£3,200",
           "cta": "Compare Icon Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "2ZR-FXE"
+          ],
           "fuel": "Hybrid",
           "power": "122hp",
           "years": "2016-2023",
@@ -451,7 +453,10 @@
           "subtitle": "2ZR-FXE / 8NR-FTS 1.8L Hybrid / 1.2T · 122hp / 116hp · 2016-2023 · Rebuilt: £1,500-£3,200",
           "priceRange": "£1,500-£3,200",
           "cta": "Compare Design Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "2ZR-FXE",
+            "8NR-FTS"
+          ],
           "fuel": "Hybrid",
           "power": "122hp",
           "years": "2016-2023",
@@ -460,10 +465,12 @@
         {
           "h3": "Toyota C HR Excel Engine Replacement",
           "slug": "toyota-c-hr-excel-engine",
-          "subtitle": "2ZR-FXE 1.8L Hybrid · 122hp · 2016-2023 · Rebuilt: £1,600-£3,400",
+          "subtitle": "2ZR-FXE 1.8L Hybrid Â· 122hp Â· 2016-2023",
           "priceRange": "£1,600-£3,400",
           "cta": "Compare Excel Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "2ZR-FXE"
+          ],
           "fuel": "Hybrid",
           "power": "122hp",
           "years": "2016-2023",
@@ -475,7 +482,9 @@
           "subtitle": "8NR-FTS 1.2L Turbo Petrol · 116hp · 2016-2023 · Rebuilt: £1,200-£3,000",
           "priceRange": "£1,200-£3,000",
           "cta": "Compare Dynamic Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "8NR-FTS"
+          ],
           "fuel": "Petrol",
           "power": "116hp",
           "years": "2016-2023",
@@ -484,11 +493,12 @@
         {
           "h3": "Toyota C HR GR Sport Engine Replacement",
           "slug": "toyota-c-hr-gr-sport-engine",
-          "subtitle": "2ZR-FXE / M20A-FXS Hybrid · 122hp / 197hp · 2019-2023+ · Rebuilt: £1,800-£4,500",
+          "subtitle": "2ZR-FXE / M20A-FXS Hybrid Â· 122hp / 197hp Â· 2019-2023+",
           "priceRange": "£1,800-£4,500",
           "cta": "Compare GR Sport Engine Prices",
           "engineCodes": [
-            "M20A-FXS Hybrid"
+            "2ZR-FXE",
+            "M20A-FXS"
           ],
           "fuel": "Hybrid",
           "power": "122hp",
@@ -498,10 +508,12 @@
         {
           "h3": "Toyota C HR Premiere Edition Engine Replacement",
           "slug": "toyota-c-hr-premiere-edition-engine",
-          "subtitle": "2ZR-FXE 1.8L Hybrid · 122hp · 2020-2022 · Rebuilt: £1,700-£3,500",
+          "subtitle": "2ZR-FXE 1.8L Hybrid Â· 122hp Â· 2020-2022",
           "priceRange": "£1,700-£3,500",
           "cta": "Compare Premiere Edition Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "2ZR-FXE"
+          ],
           "fuel": "Hybrid",
           "power": "122hp",
           "years": "2020-2022",
@@ -510,7 +522,7 @@
         {
           "h3": "Toyota C HR 2.0 Hybrid GR Sport Engine Replacement",
           "slug": "toyota-c-hr-2-0-hybrid-gr-sport-engine",
-          "subtitle": "M20A-FXS 2.0L Hybrid · 197hp · 2023+",
+          "subtitle": "M20A-FXS 2.0L Hybrid Â· 197hp Â· 2023+",
           "priceRange": "£2,000-£4,500",
           "cta": "Compare 2.0 Hybrid GR Sport Engine Prices",
           "engineCodes": [
@@ -527,7 +539,9 @@
           "subtitle": "2ZR-FXE 1.8L Hybrid AWD · 122hp + rear motor · 2019-2023 · Rebuilt: £1,800-£3,800",
           "priceRange": "£1,800-£3,800",
           "cta": "Compare AWD-i Hybrid Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "2ZR-FXE"
+          ],
           "fuel": "Hybrid",
           "power": "122hp",
           "years": "2019-2023",
@@ -577,22 +591,9 @@
                 "size": "1.8 Litre",
                 "power": "122 hp (combined system)",
                 "years": "2016-2023",
-                "compatibleVariants": [],
-                "commonFailures": [],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "Icon",
-                "title": "Hybrid, Design Hybrid, Excel Hybrid, Dynamic Hybrid, GR Sport Hybrid, Premiere Edition Hybrid, AWD-i Hybrid",
-                "familyHeading": "ZR-FXE Series (2016-2023)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
+                "compatibleVariants": [
+                  "Icon Hybrid, Design Hybrid, Excel Hybrid, Dynamic Hybrid, GR Sport Hybrid, Premiere Edition Hybrid, AWD-i Hybrid"
+                ],
                 "commonFailures": [
                   "Inverter cooling pump failure (P0A0D codes) - typical 60k-90k miles",
                   "Hybrid battery capacity degradation - typical 100k+ miles",
@@ -614,22 +615,10 @@
                 "compatibleVariants": [
                   "GR Sport 2.0 Hybrid, Excel 2.0 Hybrid, Design 2.0 Hybrid"
                 ],
-                "commonFailures": [],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "Early",
-                "title": "production hybrid ECU calibration issues (software update resolves)",
-                "familyHeading": "M20A-FXS Series (2023+)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
+                "commonFailures": [
+                  "Early-production hybrid ECU calibration issues (software update resolves)",
+                  "Enhanced cooling system sensor faults - low incidence to date"
+                ],
                 "avgRebuiltPrice": "£2,000 - £4,500",
                 "cta": "Get quotes for M20A-FXS Toyota C HR engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -699,19 +688,7 @@
               "fuel": "Full Hybrid (HEV)",
               "size": "1.8L",
               "power": "122 hp (combined system)",
-              "compatibleModels": "",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "Icon",
-              "title": "Hybrid, Design Hybrid, Excel Hybrid, Dynamic Hybrid, GR Sport Hybrid, Premiere Edition Hybrid, AWD-i Hybrid",
-              "familyHeading": "ZR-FXE Series (2016-2023)",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
+              "compatibleModels": "Icon Hybrid, Design Hybrid, Excel Hybrid, Dynamic Hybrid, GR Sport Hybrid, Premiere Edition Hybrid, AWD-i Hybrid",
               "avgRebuiltPrice": "£1,500 - £3,800",
               "cta": "Get quotes for 2ZR-FXE Toyota C HR engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -724,18 +701,6 @@
               "size": "2.0L",
               "power": "197 hp (combined system)",
               "compatibleModels": "GR Sport 2.0 Hybrid, Excel 2.0 Hybrid, Design 2.0 Hybrid",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "Early",
-              "title": "production hybrid ECU calibration issues (software update resolves)",
-              "familyHeading": "M20A-FXS Series (2023+)",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
               "avgRebuiltPrice": "£2,000 - £4,500",
               "cta": "Get quotes for M20A-FXS Toyota C HR engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -787,7 +752,7 @@
     "commonProblems": {
       "tag": "Common Problems",
       "h2": "Toyota C HR Engine Problems - What It Costs to Fix & When Replacement Makes Sense",
-      "h3": "",
+      "h3": "The Toyota C HR's hybrid and turbo petrol engines are generally reliable, but two issues dominate UK replacement enquiries: inverter cooling pump failure on 2ZR-FXE hybrids and carbon buildup on 8NR-FTS turbo petrols. Every rebuilt engine supplied through EngineMarket includes upgraded internal components designed to address the original failure point - plus a 12‑month unlimited mileage warranty. Use this decision tool to compare repair vs replacement costs for your specific C HR.",
       "problems": [
         {
           "group": "Toyota C HR Inverter Cooling Pump Failure",
@@ -1083,7 +1048,7 @@
           "items": [
             {
               "title": "Toyota C HR 1.2L Petrol Engines",
-              "description": "The 1.2L 8NR-FTS turbo petrol offered a non-hybrid alternative for first-generation C-HR buyers, featuring direct injection and turbocharging for responsive performance. Carbon buildup on intake valves is the most documented issue driving replacement enquiries for this engine. Not sure which engine size your Toyota C HR needs? Enter your registration number above - we'll identify the exact displacement, engine code and compatible replacement options instantly. All engines supplied through EngineMarket include a 12‑month unlimited mileage warranty from UK Toyota C HR specialists.",
+              "description": "The 1.2L 8NR-FTS turbo petrol offered a non-hybrid alternative for first-generation C-HR buyers, featuring direct injection and turbocharging for responsive performance. Carbon buildup on intake valves is the most documented issue driving replacement enquiries for this engine.",
               "engineCodes": [
                 "8NR-FTS"
               ],

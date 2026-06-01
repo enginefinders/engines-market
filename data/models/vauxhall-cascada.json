@@ -406,7 +406,7 @@
     "variantCoverage": {
       "tag": "Models We Cover",
       "h2": "Vauxhall Cascada Engine Replacement - All Variants Covered",
-      "subheading": "",
+      "subheading": "From the entry-level Design to the premium Elite, our network of UK Vauxhall Cascada engine specialists lets you compare rebuilt, reconditioned and used engine prices - typical price range for a rebuilt unit with 12‑month warranty - supply & fit available nationwide.",
       "groups": [
         {
           "title": "Core Diesel Range",
@@ -436,11 +436,11 @@
         {
           "h3": "Vauxhall Cascada Elite Engine Replacement",
           "slug": "vauxhall-cascada-elite-engine",
-          "subtitle": "A20DTH 2.0L Diesel · 165hp · 2013-2019",
+          "subtitle": "A20DTH 2.0L Diesel Â· 165hp Â· 2013-2019",
           "priceRange": "£1,850-£3,490",
           "cta": "Compare Elite Engine Prices",
           "engineCodes": [
-            "A20DTH"
+            "A20DTH 2.0L"
           ],
           "fuel": "Diesel",
           "power": "165hp",
@@ -450,11 +450,11 @@
         {
           "h3": "Vauxhall Cascada SE Engine Replacement",
           "slug": "vauxhall-cascada-se-engine",
-          "subtitle": "A20DTH 2.0L Diesel · 165hp · 2013-2019",
+          "subtitle": "A20DTH 2.0L Diesel Â· 165hp Â· 2013-2019",
           "priceRange": "£1,850-£3,390",
           "cta": "Compare SE Engine Prices",
           "engineCodes": [
-            "A20DTH"
+            "A20DTH 2.0L"
           ],
           "fuel": "Diesel",
           "power": "165hp",
@@ -464,11 +464,11 @@
         {
           "h3": "Vauxhall Cascada Sri Engine Replacement",
           "slug": "vauxhall-cascada-sri-engine",
-          "subtitle": "B16DTR 1.6L Diesel · 136hp · 2013-2019",
+          "subtitle": "B16DTR 1.6L Diesel Â· 136hp Â· 2013-2019",
           "priceRange": "£1,750-£3,150",
           "cta": "Compare Sri Engine Prices",
           "engineCodes": [
-            "B16DTR"
+            "B16DTR 1.6L"
           ],
           "fuel": "Diesel",
           "power": "136hp",
@@ -478,11 +478,11 @@
         {
           "h3": "Vauxhall Cascada SE Engine Replacement (Petrol)",
           "slug": "vauxhall-cascada-se-petrol-engine",
-          "subtitle": "A14NET 1.4L Petrol · 140hp · 2013-2019",
+          "subtitle": "A14NET 1.4L Petrol Â· 140hp Â· 2013-2019",
           "priceRange": "£1,650-£2,950",
           "cta": "Compare SE Petrol Engine Prices",
           "engineCodes": [
-            "A14NET"
+            "A14NET 1.4L"
           ],
           "fuel": "Petrol",
           "power": "140hp",
@@ -492,11 +492,11 @@
         {
           "h3": "Vauxhall Cascada Design Engine Replacement",
           "slug": "vauxhall-cascada-design-engine",
-          "subtitle": "A14NET 1.4L Petrol · 140hp · 2013-2019",
+          "subtitle": "A14NET 1.4L Petrol Â· 140hp Â· 2013-2019",
           "priceRange": "£1,650-£2,850",
           "cta": "Compare Design Engine Prices",
           "engineCodes": [
-            "A14NET"
+            "A14NET 1.4L"
           ],
           "fuel": "Petrol",
           "power": "140hp",
@@ -506,11 +506,11 @@
         {
           "h3": "Vauxhall Cascada Tech Line Engine Replacement",
           "slug": "vauxhall-cascada-tech-line-engine",
-          "subtitle": "A14NET 1.4L Petrol · 140hp · 2013-2019",
+          "subtitle": "A14NET 1.4L Petrol Â· 140hp Â· 2013-2019",
           "priceRange": "£1,750-£3,050",
           "cta": "Compare Tech Line Engine Prices",
           "engineCodes": [
-            "A14NET"
+            "A14NET 1.4L"
           ],
           "fuel": "Petrol",
           "power": "140hp",
@@ -520,11 +520,11 @@
         {
           "h3": "Vauxhall Cascada Sri Engine Replacement (1.6 Turbo)",
           "slug": "vauxhall-cascada-sri-1-6-turbo-engine",
-          "subtitle": "A16LET 1.6L Petrol · 170hp · 2013-2016",
+          "subtitle": "A16LET 1.6L Petrol Â· 170hp Â· 2013-2016",
           "priceRange": "£1,950-£3,350",
           "cta": "Compare Sri 1.6 Turbo Engine Prices",
           "engineCodes": [
-            "A16LET"
+            "A16LET 1.6L"
           ],
           "fuel": "Petrol",
           "power": "170hp",
@@ -534,11 +534,11 @@
         {
           "h3": "Vauxhall Cascada Elite Engine Replacement (Post-2016)",
           "slug": "vauxhall-cascada-elite-post-2016-engine",
-          "subtitle": "B20DTH 2.0L Diesel · 165hp · 2016-2019",
+          "subtitle": "B20DTH 2.0L Diesel Â· 165hp Â· 2016-2019",
           "priceRange": "£2,050-£3,690",
           "cta": "Compare Elite Post-2016 Engine Prices",
           "engineCodes": [
-            "B20DTH"
+            "B20DTH 2.0L"
           ],
           "fuel": "Diesel",
           "power": "165hp",
@@ -709,23 +709,10 @@
                   "Sri (pre-facelift)"
                 ],
                 "commonFailures": [
-                  "Turbo actuator failure causing boost pressure loss"
+                  "Turbo actuator failure causing boost pressure loss",
+                  "High-pressure fuel pump wear affecting cold starts",
+                  "Ignition coil failures triggering misfire codes"
                 ],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "High",
-                "title": "pressure fuel pump wear affecting cold starts",
-                "familyHeading": "1.6L Turbo Family (2013-2016)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
                 "avgRebuiltPrice": "£1,950 - £3,350",
                 "cta": "Get quotes for A16LET Vauxhall Cascada engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -837,18 +824,6 @@
               "size": "1.6L",
               "power": "170 hp",
               "compatibleModels": "Sri (pre-facelift)",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "High",
-              "title": "pressure fuel pump wear affecting cold starts",
-              "familyHeading": "1.6L Turbo Family (2013-2016)",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
               "avgRebuiltPrice": "£1,950 - £3,350",
               "cta": "Get quotes for A16LET Vauxhall Cascada engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -881,7 +856,7 @@
     "commonProblems": {
       "tag": "Common Problems",
       "h2": "Vauxhall Cascada Engine Problems - What It Costs to Fix & When Replacement Makes Sense",
-      "h3": "",
+      "h3": "The Vauxhall Cascada's 1.4L turbo petrol (A14NET) and 2.0L CDTi diesel (A20DTH) engines dominate UK replacement enquiries. Timing chain tensioner wear and EGR cooler cracking are the most reported failures. Every rebuilt engine supplied through EngineMarket includes upgraded internal components designed to address the original failure point - plus a 12‑month unlimited mileage warranty.",
       "problems": [
         {
           "group": "Vauxhall Cascada Timing Chain Rattle",
@@ -1100,7 +1075,7 @@
     "engineSizes": {
       "tag": "Engine Sizes",
       "h2": "Vauxhall Cascada Engines by Size - Find the Right Displacement for Your Variant",
-      "intro": "",
+      "intro": "Every displacement fitted to the Vauxhall Cascada is listed below with compatible engine codes, production years and common failure notes to help you identify the right replacement.",
       "groups": [
         {
           "title": "Vauxhall Cascada Diesel Engine Sizes",
@@ -1214,7 +1189,7 @@
     "fuelTypes": {
       "tag": "Vauxhall Cascada Engines Fuel Type",
       "h2": "Vauxhall Cascada Engines by Fuel Type",
-      "intro": "",
+      "intro": "Choose your Vauxhall Cascada engine by fuel type to compare realistic replacement prices, known issues, and compatible UK supply options - from the efficient 1.6L CDTi to the powerful 2.0L CDTi diesel.",
       "items": [
         {
           "title": "Vauxhall Cascada Diesel Engines",
@@ -1557,8 +1532,21 @@
     "trustCta": {
       "tag": "Why Choose Us",
       "h2": "Why UK Vauxhall Cascada Owners Trust EngineMarket",
-      "intro": "",
-      "points": [],
+      "intro": "Join thousands of UK drivers who compare Vauxhall Cascada engine prices through our network of trusted specialists - every rebuilt and reconditioned unit backed by a 12‑month unlimited mileage warranty and nationwide delivery.",
+      "points": [
+        {
+          "title": "Trusted Vauxhall Cascada Engine Suppliers",
+          "description": "Every garage and engine rebuilder in our network is vetted, rated, and reviewed by real Vauxhall Cascada owners."
+        },
+        {
+          "title": "Compare Vauxhall Cascada Engine Replacement Companies",
+          "description": "See prices, warranty terms, and supply & fit options side‑by‑side before you commit."
+        },
+        {
+          "title": "UK Engine Replacement Services for Vauxhall Cascada",
+          "description": "Covering every variant from Design to Elite, with supply‑only or full supply & fit available nationwide."
+        }
+      ],
       "finalText": "Find the best Vauxhall Cascada engine replacement UK drivers rely on. Compare prices from trusted specialists today and get back on the road with confidence.",
       "buttonText": "Compare Vauxhall Cascada Engine Prices Now →",
       "secondaryAction": {

@@ -435,11 +435,11 @@
         {
           "h3": "Nissan Gloria Y31 VH41DE Engine Replacement",
           "slug": "nissan-gloria-y31-vh41de-engine",
-          "subtitle": "VH41DE 4.1L V8 · 230hp · 1991-2001",
+          "subtitle": "VH41DE 4.1L V8 Â· 230hp Â· 1991-2001",
           "priceRange": "£1,800-£3,200",
           "cta": "Compare Y31 VH41DE Engine Prices",
           "engineCodes": [
-            "VH41DE"
+            "VH41DE 4.1L"
           ],
           "fuel": "",
           "power": "230hp",
@@ -449,11 +449,11 @@
         {
           "h3": "Nissan Gloria Y33 VH41DE-2 Engine Replacement",
           "slug": "nissan-gloria-y33-vh41de-2-engine",
-          "subtitle": "VH41DE-2 4.1L V8 · 240hp · 1999-2001",
+          "subtitle": "VH41DE-2 4.1L V8 Â· 240hp Â· 1999-2001",
           "priceRange": "£1,900-£3,500",
           "cta": "Compare Y33 VH41DE-2 Engine Prices",
           "engineCodes": [
-            "VH41DE-2"
+            "VH41DE-2 4.1L"
           ],
           "fuel": "",
           "power": "240hp",
@@ -463,11 +463,11 @@
         {
           "h3": "Nissan Gloria Y33 VH45DE Engine Replacement",
           "slug": "nissan-gloria-y33-vh45de-engine",
-          "subtitle": "VH45DE 4.5L V8 · 260hp · 1999-2004",
+          "subtitle": "VH45DE 4.5L V8 Â· 260hp Â· 1999-2004",
           "priceRange": "£2,400-£4,500",
           "cta": "Compare Y33 VH45DE Engine Prices",
           "engineCodes": [
-            "VH45DE"
+            "VH45DE 4.5L"
           ],
           "fuel": "",
           "power": "260hp",
@@ -477,11 +477,11 @@
         {
           "h3": "Nissan Gloria Y32 VQ30DE Engine Replacement",
           "slug": "nissan-gloria-y32-vq30de-engine",
-          "subtitle": "VQ30DE 3.0L V6 · 220hp · 1995-1999",
+          "subtitle": "VQ30DE 3.0L V6 Â· 220hp Â· 1995-1999",
           "priceRange": "£1,400-£2,600",
           "cta": "Compare Y32 VQ30DE Engine Prices",
           "engineCodes": [
-            "VQ30DE"
+            "VQ30DE 3.0L"
           ],
           "fuel": "",
           "power": "220hp",
@@ -491,11 +491,11 @@
         {
           "h3": "Nissan Gloria Gran Turismo VQ30DET Engine Replacement",
           "slug": "nissan-gloria-gran-turismo-vq30det-engine",
-          "subtitle": "VQ30DET 3.0L Twin-Turbo V6 · 280hp · 1995-2001",
+          "subtitle": "VQ30DET 3.0L Twin-Turbo V6 Â· 280hp Â· 1995-2001",
           "priceRange": "£2,200-£3,900",
           "cta": "Compare Gran Turismo VQ30DET Engine Prices",
           "engineCodes": [
-            "VQ30DET"
+            "VQ30DET 3.0L Twin-Turbo"
           ],
           "fuel": "",
           "power": "280hp",
@@ -505,11 +505,11 @@
         {
           "h3": "Nissan Gloria Y30 VG30DET Engine Replacement",
           "slug": "nissan-gloria-y30-vg30det-engine",
-          "subtitle": "VG30DET 3.0L Turbo V6 · 255hp · 1987-1995",
+          "subtitle": "VG30DET 3.0L Turbo V6 Â· 255hp Â· 1987-1995",
           "priceRange": "£1,600-£3,100",
           "cta": "Compare Y30 VG30DET Engine Prices",
           "engineCodes": [
-            "VG30DET"
+            "VG30DET 3.0L Turbo"
           ],
           "fuel": "",
           "power": "255hp",
@@ -519,11 +519,11 @@
         {
           "h3": "Nissan Gloria Y34 VQ35DE Engine Replacement",
           "slug": "nissan-gloria-y34-vq35de-engine",
-          "subtitle": "VQ35DE 3.5L V6 · 260hp · 2001-2004",
+          "subtitle": "VQ35DE 3.5L V6 Â· 260hp Â· 2001-2004",
           "priceRange": "£2,100-£4,200",
           "cta": "Compare Y34 VQ35DE Engine Prices",
           "engineCodes": [
-            "VQ35DE"
+            "VQ35DE 3.5L"
           ],
           "fuel": "",
           "power": "260hp",
@@ -595,22 +595,11 @@
                 "compatibleVariants": [
                   "Y33 Gran Turismo, Y34 Gran Turismo, Y34 Brougham VIP"
                 ],
-                "commonFailures": [],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "VVT",
-                "title": "i solenoid failure causing rough idle and timing faults",
-                "familyHeading": "VH Series V8 Engines (1991-2004)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
+                "commonFailures": [
+                  "VVT-i solenoid failure causing rough idle and timing faults",
+                  "Oil gallery blockage leading to reduced lubrication pressure",
+                  "Intake manifold gasket degradation"
+                ],
                 "avgRebuiltPrice": "£2,400 - £4,800",
                 "cta": "Get quotes for VH45DE Nissan Gloria engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -750,18 +739,6 @@
               "size": "4.5L",
               "power": "250-265 hp",
               "compatibleModels": "Y33 Gran Turismo, Y34 Gran Turismo, Y34 Brougham VIP",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "VVT",
-              "title": "i solenoid failure causing rough idle and timing faults",
-              "familyHeading": "VH Series V8 Engines (1991-2004)",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
               "avgRebuiltPrice": "£2,400 - £4,800",
               "cta": "Get quotes for VH45DE Nissan Gloria engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"

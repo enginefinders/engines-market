@@ -396,10 +396,12 @@
         {
           "h3": "Toyota Gaia S Spec Engine Replacement",
           "slug": "toyota-gaia-s-spec-engine",
-          "subtitle": "7A-FE 1.8L Petrol · 110hp · 1998-2000 · Rebuilt: £650-£1,400",
+          "subtitle": "7A-FE 1.8L Petrol Â· 110hp Â· 1998-2000",
           "priceRange": "£650-£1,400",
           "cta": "Compare S Spec Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "7A-FE"
+          ],
           "fuel": "Petrol",
           "power": "110hp",
           "years": "1998-2000",
@@ -408,10 +410,12 @@
         {
           "h3": "Toyota Gaia X Spec Engine Replacement",
           "slug": "toyota-gaia-x-spec-engine",
-          "subtitle": "3S-FE 2.0L Petrol · 130hp · 1998-2000 · Rebuilt: £750-£1,650",
+          "subtitle": "3S-FE 2.0L Petrol Â· 130hp Â· 1998-2000",
           "priceRange": "£750-£1,650",
           "cta": "Compare X Spec Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "3S-FE"
+          ],
           "fuel": "Petrol",
           "power": "130hp",
           "years": "1998-2000",
@@ -420,10 +424,12 @@
         {
           "h3": "Toyota Gaia G Spec Engine Replacement",
           "slug": "toyota-gaia-g-spec-engine",
-          "subtitle": "1CD-FTV 2.0L Diesel · 90hp · 1998-2004 · Rebuilt: £850-£2,100",
+          "subtitle": "1CD-FTV 2.0L Diesel Â· 90hp Â· 1998-2004",
           "priceRange": "£850-£2,100",
           "cta": "Compare G Spec Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "1CD-FTV"
+          ],
           "fuel": "Diesel",
           "power": "90hp",
           "years": "1998-2004",
@@ -432,10 +438,12 @@
         {
           "h3": "Toyota Gaia Z Spec Engine Replacement",
           "slug": "toyota-gaia-z-spec-engine",
-          "subtitle": "1CD-FTV 2.0L Diesel · 110hp · 2001-2004 · Rebuilt: £900-£2,200",
+          "subtitle": "1CD-FTV 2.0L Diesel Â· 110hp Â· 2001-2004",
           "priceRange": "£900-£2,200",
           "cta": "Compare Z Spec Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "1CD-FTV"
+          ],
           "fuel": "Diesel",
           "power": "110hp",
           "years": "2001-2004",
@@ -447,7 +455,9 @@
           "subtitle": "1AZ-FSE 2.0L Petrol D-4 · 150hp · 2001-2004 · Rebuilt: £950-£2,400",
           "priceRange": "£950-£2,400",
           "cta": "Compare Aero Tourer Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "1AZ-FSE"
+          ],
           "fuel": "Petrol",
           "power": "150hp",
           "years": "2001-2004",
@@ -459,7 +469,9 @@
           "subtitle": "1AZ-FSE 2.0L Petrol D-4 · 150hp · 2001-2004 · Rebuilt: £850-£2,200",
           "priceRange": "£850-£2,200",
           "cta": "Compare G Spec D-4 Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "1AZ-FSE"
+          ],
           "fuel": "Petrol",
           "power": "150hp",
           "years": "2001-2004",
@@ -560,38 +572,10 @@
                   "G Spec D-4, Aero Tourer, Z Spec"
                 ],
                 "commonFailures": [
-                  "Intake valve carbon buildup (D-4 system)"
+                  "Intake valve carbon buildup (D-4 system)",
+                  "High-pressure fuel pump failure",
+                  "VVT-i actuator wear"
                 ],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "High",
-                "title": "pressure fuel pump failure",
-                "familyHeading": "1AZ-FSE Series (2000-2004)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "VVT",
-                "title": "i actuator wear",
-                "familyHeading": "1AZ-FSE Series (2000-2004)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
                 "avgRebuiltPrice": "£850 - £2,200",
                 "cta": "Get quotes for 1AZ-FSE Toyota Gaia engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -688,30 +672,6 @@
               "size": "2.0L",
               "power": "150 hp",
               "compatibleModels": "G Spec D-4, Aero Tourer, Z Spec",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "High",
-              "title": "pressure fuel pump failure",
-              "familyHeading": "1AZ-FSE Series (2000-2004)",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "VVT",
-              "title": "i actuator wear",
-              "familyHeading": "1AZ-FSE Series (2000-2004)",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
               "avgRebuiltPrice": "£850 - £2,200",
               "cta": "Get quotes for 1AZ-FSE Toyota Gaia engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1046,7 +1006,7 @@
             },
             {
               "title": "Toyota Gaia 2.0L Petrol Engines",
-              "description": "The 2.0L petrol range includes the reliable 3S-FE MPI (1998-2000) and the advanced 1AZ-FSE D-4 direct injection (2000-2004); the latter offers more power but requires careful maintenance to avoid carbon buildup. Not sure which engine size your Toyota Gaia needs? Enter your registration number above - we'll identify the exact displacement, engine code and compatible replacement options instantly. All engines supplied through EngineMarket include a minimum 12‑month unlimited mileage warranty from UK Toyota Gaia specialists.",
+              "description": "The 2.0L petrol range includes the reliable 3S-FE MPI (1998-2000) and the advanced 1AZ-FSE D-4 direct injection (2000-2004); the latter offers more power but requires careful maintenance to avoid carbon buildup.",
               "engineCodes": [
                 "3S-FE",
                 "1AZ-FSE",

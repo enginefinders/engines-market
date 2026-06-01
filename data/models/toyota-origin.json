@@ -312,14 +312,6 @@
             "toyota origin jcg11 vvt-i",
             "toyota origin jcg11 vvt i engine"
           ]
-        },
-        {
-          "key": "compare-rebuilt-reconditioned-and-used-1jz-fse-engine-prices-from-uk-jdm-specialists-all-units-include-d-4-system-compatibility-verification-and-collector-documentation-engine",
-          "label": "Compare rebuilt, reconditioned and used 1JZ-FSE engine prices from UK JDM specialists - all units include D-4 system compatibility verification and collector documentation.",
-          "matchers": [
-            "compare rebuilt, reconditioned and used 1jz-fse engine prices from uk jdm specialists - all units include d-4 system compatibility verification and collector documentation.",
-            "compare rebuilt reconditioned and used 1jz fse engine prices from uk jdm specialists all units include d 4 system compatibility verification and collector documentation engine"
-          ]
         }
       ],
       "ui": {
@@ -386,10 +378,12 @@
         {
           "h3": "Toyota Origin JCG11 Standard Engine Replacement",
           "slug": "toyota-origin-jcg11-standard-engine",
-          "subtitle": "1JZ-FSE 2.5L Petrol · 200hp · 2000-2001 · Rebuilt: £1,850-£2,750",
+          "subtitle": "1JZ-FSE 2.5L Petrol Â· 200hp Â· 2000-2001",
           "priceRange": "£1,850-£2,750",
           "cta": "Compare JCG11 Standard Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "1JZ-FSE"
+          ],
           "fuel": "Petrol",
           "power": "200hp",
           "years": "2000-2001",
@@ -398,10 +392,12 @@
         {
           "h3": "Toyota Origin JCG11 D-4 System Engine Replacement",
           "slug": "toyota-origin-jcg11-d-4-system-engine",
-          "subtitle": "1JZ-FSE D-4 2.5L Petrol · 200hp · 2000-2001 · Rebuilt: £2,100-£3,100",
+          "subtitle": "1JZ-FSE D-4 2.5L Petrol Â· 200hp Â· 2000-2001",
           "priceRange": "£2,100-£3,100",
           "cta": "Compare JCG11 D-4 Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "1JZ-FSE D-4"
+          ],
           "fuel": "Petrol",
           "power": "200hp",
           "years": "2000-2001",
@@ -410,10 +406,12 @@
         {
           "h3": "Toyota Origin JCG11 Collector Spec Engine Replacement",
           "slug": "toyota-origin-jcg11-collector-spec-engine",
-          "subtitle": "1JZ-FSE 2.5L Petrol · 200hp · 2000-2001 · Rebuilt: £2,750-£4,200",
+          "subtitle": "1JZ-FSE 2.5L Petrol Â· 200hp Â· 2000-2001",
           "priceRange": "£2,750-£4,200",
           "cta": "Compare Collector Spec Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "1JZ-FSE"
+          ],
           "fuel": "Petrol",
           "power": "200hp",
           "years": "2000-2001",
@@ -422,10 +420,12 @@
         {
           "h3": "Toyota Origin XG10 Progrès Compatible Engine Replacement",
           "slug": "toyota-origin-xg10-progr-s-compatible-engine",
-          "subtitle": "1JZ-FSE 2.5L Petrol · 200hp · 2000-2001 · Rebuilt: £1,650-£2,450",
+          "subtitle": "1JZ-FSE 2.5L Petrol Â· 200hp Â· 2000-2001",
           "priceRange": "£1,650-£2,450",
           "cta": "Compare Progrès Compatible Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "1JZ-FSE"
+          ],
           "fuel": "Petrol",
           "power": "200hp",
           "years": "2000-2001",
@@ -434,10 +434,12 @@
         {
           "h3": "Toyota Origin XG10 Altezza Interchange Engine Replacement",
           "slug": "toyota-origin-xg10-altezza-interchange-engine",
-          "subtitle": "1JZ-FSE 2.5L Petrol · 200hp · 1998-2005 · Rebuilt: £1,750-£2,550",
+          "subtitle": "1JZ-FSE 2.5L Petrol Â· 200hp Â· 1998-2005",
           "priceRange": "£1,750-£2,550",
           "cta": "Compare Altezza Interchange Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "1JZ-FSE"
+          ],
           "fuel": "Petrol",
           "power": "200hp",
           "years": "1998-2005",
@@ -449,22 +451,12 @@
           "subtitle": "1JZ-FSE VVT-i 2.5L Petrol · 200hp · 2000-2001 · Rebuilt: £1,950-£2,850",
           "priceRange": "£1,950-£2,850",
           "cta": "Compare JCG11 VVT-i Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "1JZ-FSE VVT-i"
+          ],
           "fuel": "Petrol",
           "power": "200hp",
           "years": "2000-2001",
-          "image": ""
-        },
-        {
-          "h3": "Compare rebuilt, reconditioned and used 1JZ-FSE engine prices from UK JDM specialists - all units include D-4 system compatibility verification and collector documentation.",
-          "slug": "compare-rebuilt-reconditioned-and-used-1jz-fse-engine-prices-from-uk-jdm-specialists-all-units-include-d-4-system-compatibility-verification-and-collector-documentation-engine",
-          "subtitle": "| Engine Code | Condition | Price Range | Warranty | Supply & Fit | D-4 Status |",
-          "priceRange": "",
-          "cta": "|-------------|-----------|-------------|----------|--------------|------------|",
-          "engineCodes": [],
-          "fuel": "",
-          "power": "",
-          "years": "",
           "image": ""
         }
       ],
@@ -495,37 +487,11 @@
                 "compatibleVariants": [
                   "Toyota Origin JCG11 Standard, Toyota Origin JCG11 Collector Edition"
                 ],
-                "commonFailures": [],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "D",
-                "title": "4 intake valve carbon buildup (60k-120k miles)",
-                "familyHeading": "1JZ-FSE Series (2000-2001)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "VVT",
-                "title": "i oil control valve clogging (70k-130k miles)",
-                "familyHeading": "1JZ-FSE Series (2000-2001)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
+                "commonFailures": [
+                  "D-4 intake valve carbon buildup (60k-120k miles)",
+                  "VVT-i oil control valve clogging (70k-130k miles)",
+                  "Timing chain tensioner wear (90k-150k miles)"
+                ],
                 "avgRebuiltPrice": "£1,850 - £2,750",
                 "cta": "Get quotes for 1JZ-FSE Toyota Origin engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -569,30 +535,6 @@
               "size": "2.5L",
               "power": "200 hp",
               "compatibleModels": "Toyota Origin JCG11 Standard, Toyota Origin JCG11 Collector Edition",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "D",
-              "title": "4 intake valve carbon buildup (60k-120k miles)",
-              "familyHeading": "1JZ-FSE Series (2000-2001)",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "VVT",
-              "title": "i oil control valve clogging (70k-130k miles)",
-              "familyHeading": "1JZ-FSE Series (2000-2001)",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
               "avgRebuiltPrice": "£1,850 - £2,750",
               "cta": "Get quotes for 1JZ-FSE Toyota Origin engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -914,22 +856,6 @@
           ],
           "importantNotes": [],
           "cta": "Compare Toyota Origin Petrol engine prices"
-        },
-        {
-          "title": "Petrol Engines",
-          "description": "",
-          "descriptor": "",
-          "familiesLabel": "Common Petrol Engine Families",
-          "foundInLabel": "",
-          "knownForLabel": "",
-          "modelsLabel": "",
-          "notesLabel": "",
-          "families": [],
-          "foundIn": [],
-          "knownFor": [],
-          "typicalModels": [],
-          "importantNotes": [],
-          "cta": "Get quotes for 1JZ-FSE Toyota Origin engine replacement"
         }
       ],
       "closing": "Not sure which fuel type your Toyota Origin has? Enter your JCG11 chassis code above to instantly identify your 1JZ-FSE configuration, D-4 system status and compatible replacement options - all backed by a 6-month unlimited mileage collector warranty from UK JDM Toyota Origin specialists.",

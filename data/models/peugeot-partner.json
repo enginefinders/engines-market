@@ -394,14 +394,6 @@
             "peugeot partner e-partner electric",
             "peugeot partner e partner electric engine"
           ]
-        },
-        {
-          "key": "compare-realistic-uk-supply-only-price-ranges-for-every-engine-code-fitted-to-the-peugeot-partner-with-failure-notes-and-compatibility-guidance-engine",
-          "label": "Compare realistic UK supply-only price ranges for every engine code fitted to the Peugeot Partner, with failure notes and compatibility guidance.",
-          "matchers": [
-            "compare realistic uk supply-only price ranges for every engine code fitted to the peugeot partner, with failure notes and compatibility guidance.",
-            "compare realistic uk supply only price ranges for every engine code fitted to the peugeot partner with failure notes and compatibility guidance engine"
-          ]
         }
       ],
       "ui": {
@@ -496,11 +488,11 @@
         {
           "h3": "Peugeot Partner S Engine Replacement",
           "slug": "peugeot-partner-s-engine",
-          "subtitle": "DV6DTED 1.6L Diesel · 75hp · 2008-2018",
+          "subtitle": "DV6DTED 1.6L Diesel Â· 75hp Â· 2008-2018",
           "priceRange": "£1,400-£1,800",
           "cta": "Compare S Engine Prices",
           "engineCodes": [
-            "DV6DTED"
+            "DV6DTED 1.6L"
           ],
           "fuel": "Diesel",
           "power": "75hp",
@@ -510,10 +502,12 @@
         {
           "h3": "Peugeot Partner SE Engine Replacement",
           "slug": "peugeot-partner-se-engine",
-          "subtitle": "9HV 1.6L Diesel · 90hp · 2008-2018 · Rebuilt: £1,450-£1,900",
+          "subtitle": "9HV 1.6L Diesel Â· 90hp Â· 2008-2018",
           "priceRange": "£1,450-£1,900",
           "cta": "Compare SE Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "9HV 1.6L"
+          ],
           "fuel": "Diesel",
           "power": "90hp",
           "years": "2008-2018",
@@ -522,10 +516,12 @@
         {
           "h3": "Peugeot Partner Professional Engine Replacement",
           "slug": "peugeot-partner-professional-engine",
-          "subtitle": "9HX 1.6L Diesel · 110hp · 2010-2018 · Rebuilt: £1,500-£2,100",
+          "subtitle": "9HX 1.6L Diesel Â· 110hp Â· 2010-2018",
           "priceRange": "£1,500-£2,100",
           "cta": "Compare Professional Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "9HX 1.6L"
+          ],
           "fuel": "Diesel",
           "power": "110hp",
           "years": "2010-2018",
@@ -534,12 +530,12 @@
         {
           "h3": "Peugeot Partner Panel Van Engine Replacement",
           "slug": "peugeot-partner-panel-van-engine",
-          "subtitle": "DV6DTED/DV6FC 1.6L Diesel · 75-110hp · 2008-2024",
+          "subtitle": "DV6DTED/DV6FC 1.6L Diesel Â· 75-110hp Â· 2008-2024",
           "priceRange": "£1,400-£2,400",
           "cta": "Compare Panel Van Engine Prices",
           "engineCodes": [
             "DV6DTED",
-            "DV6FC"
+            "DV6FC 1.6L"
           ],
           "fuel": "Diesel",
           "power": "75-110hp",
@@ -549,12 +545,13 @@
         {
           "h3": "Peugeot Partner Tepee Engine Replacement",
           "slug": "peugeot-partner-tepee-engine",
-          "subtitle": "DV6DTED/EB2ADT 1.6L Diesel/1.2L Petrol · 75-110hp · 2008-2018",
+          "subtitle": "DV6DTED/EB2ADT 1.6L Diesel/1.2L Petrol Â· 75-110hp Â· 2008-2018",
           "priceRange": "£1,400-£2,200",
           "cta": "Compare Tepee Engine Prices",
           "engineCodes": [
             "DV6DTED",
-            "EB2ADT"
+            "EB2ADT 1.6L Diesel",
+            "1.2L"
           ],
           "fuel": "Diesel",
           "power": "75-110hp",
@@ -564,12 +561,12 @@
         {
           "h3": "Peugeot Partner Crew Van Engine Replacement",
           "slug": "peugeot-partner-crew-van-engine",
-          "subtitle": "9HV/9HX 1.6L Diesel · 90-110hp · 2010-2018",
+          "subtitle": "9HV/9HX 1.6L Diesel Â· 90-110hp Â· 2010-2018",
           "priceRange": "£1,500-£2,100",
           "cta": "Compare Crew Van Engine Prices",
           "engineCodes": [
             "9HV",
-            "9HX"
+            "9HX 1.6L"
           ],
           "fuel": "Diesel",
           "power": "90-110hp",
@@ -579,10 +576,12 @@
         {
           "h3": "Peugeot Partner 1.6 HDi 90 Engine Replacement",
           "slug": "peugeot-partner-1-6-hdi-90-engine",
-          "subtitle": "9HV 1.6L Diesel · 90hp · 2008-2018 · Rebuilt: £1,450-£1,900",
+          "subtitle": "9HV 1.6L Diesel Â· 90hp Â· 2008-2018",
           "priceRange": "£1,450-£1,900",
           "cta": "Compare 1.6 HDi 90 Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "9HV 1.6L"
+          ],
           "fuel": "Diesel",
           "power": "90hp",
           "years": "2008-2018",
@@ -591,10 +590,12 @@
         {
           "h3": "Peugeot Partner 1.6 HDi 110 Engine Replacement",
           "slug": "peugeot-partner-1-6-hdi-110-engine",
-          "subtitle": "9HX 1.6L Diesel · 110hp · 2010-2018 · Rebuilt: £1,500-£2,100",
+          "subtitle": "9HX 1.6L Diesel Â· 110hp Â· 2010-2018",
           "priceRange": "£1,500-£2,100",
           "cta": "Compare 1.6 HDi 110 Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "9HX 1.6L"
+          ],
           "fuel": "Diesel",
           "power": "110hp",
           "years": "2010-2018",
@@ -603,11 +604,11 @@
         {
           "h3": "Peugeot Partner 1.2 PureTech Engine Replacement",
           "slug": "peugeot-partner-1-2-puretech-engine",
-          "subtitle": "EB2ADT 1.2L Petrol · 110hp · 2018-2024",
+          "subtitle": "EB2ADT 1.2L Petrol Â· 110hp Â· 2018-2024",
           "priceRange": "£1,300-£2,600",
           "cta": "Compare 1.2 PureTech Engine Prices",
           "engineCodes": [
-            "EB2ADT"
+            "EB2ADT 1.2L"
           ],
           "fuel": "Petrol",
           "power": "110hp",
@@ -617,11 +618,11 @@
         {
           "h3": "Peugeot Partner 1.6 BlueHDi Engine Replacement",
           "slug": "peugeot-partner-1-6-bluehdi-engine",
-          "subtitle": "DV6FC 1.6L Diesel · 100hp · 2018-2024",
+          "subtitle": "DV6FC 1.6L Diesel Â· 100hp Â· 2018-2024",
           "priceRange": "£1,600-£2,800",
           "cta": "Compare 1.6 BlueHDi Engine Prices",
           "engineCodes": [
-            "DV6FC"
+            "DV6FC 1.6L"
           ],
           "fuel": "Diesel",
           "power": "100hp",
@@ -631,11 +632,11 @@
         {
           "h3": "Peugeot Partner 1.5 BlueHDi Engine Replacement",
           "slug": "peugeot-partner-1-5-bluehdi-engine",
-          "subtitle": "DV5RC 1.5L Diesel · 100-130hp · 2019-2024",
+          "subtitle": "DV5RC 1.5L Diesel Â· 100-130hp Â· 2019-2024",
           "priceRange": "£1,700-£3,000",
           "cta": "Compare 1.5 BlueHDi Engine Prices",
           "engineCodes": [
-            "DV5RC"
+            "DV5RC 1.5L"
           ],
           "fuel": "Diesel",
           "power": "100-130hp",
@@ -649,21 +650,9 @@
           "priceRange": "£2,200-£4,500",
           "cta": "Compare e-Partner Electric Motor Prices",
           "engineCodes": [],
-          "fuel": "",
+          "fuel": "Electric",
           "power": "",
           "years": "2020-2024",
-          "image": ""
-        },
-        {
-          "h3": "Compare realistic UK supply-only price ranges for every engine code fitted to the Peugeot Partner, with failure notes and compatibility guidance.",
-          "slug": "compare-realistic-uk-supply-only-price-ranges-for-every-engine-code-fitted-to-the-peugeot-partner-with-failure-notes-and-compatibility-guidance-engine",
-          "subtitle": "Diesel Engine Codes",
-          "priceRange": "",
-          "cta": "| Engine Code | Displacement | Power | Years | Rebuilt Range | Used Range | Common Failure Notes |",
-          "engineCodes": [],
-          "fuel": "Diesel",
-          "power": "",
-          "years": "",
           "image": ""
         }
       ],
@@ -864,22 +853,11 @@
                 "compatibleVariants": [
                   "Active, Allure, Tepee (Mk3)"
                 ],
-                "commonFailures": [],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "Belt-in",
-                "title": "oil degradation causing fragmentation and oil pickup blockage",
-                "familyHeading": "EB2 Series (2018-2024)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
+                "commonFailures": [
+                  "Belt-in-oil degradation causing fragmentation and oil pickup blockage",
+                  "Timing belt wear requiring specialist inspection at 60k mile intervals",
+                  "Oil dilution from direct injection on short-journey use"
+                ],
                 "avgRebuiltPrice": "£1,300 - £2,600",
                 "cta": "Get quotes for EB2ADT Peugeot Partner engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1045,18 +1023,6 @@
               "size": "1.2L",
               "power": "110 hp",
               "compatibleModels": "Active, Allure, Tepee (Mk3)",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "Belt-in",
-              "title": "oil degradation causing fragmentation and oil pickup blockage",
-              "familyHeading": "EB2 Series (2018-2024)",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
               "avgRebuiltPrice": "£1,300 - £2,600",
               "cta": "Get quotes for EB2ADT Peugeot Partner engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1618,7 +1584,7 @@
           "title": "Peugeot Partner Electric / e-Partner",
           "description": "The e-Partner electric van offers zero-emission urban commercial capability, with replacement focused on the electric drive unit and battery diagnostics rather than traditional engine rebuilds.",
           "descriptor": "The e-Partner electric van offers zero-emission urban commercial capability, with replacement focused on the electric drive unit and battery diagnostics rather than traditional engine rebuilds.",
-          "familiesLabel": "H2: Peugeot Partner Engine Codes - Full Technical Specifications & Replacement Guide",
+          "familiesLabel": "Common Peugeot Partner Electric / e-Partner Engine Families",
           "foundInLabel": "Found In",
           "knownForLabel": "",
           "modelsLabel": "",
@@ -1635,38 +1601,6 @@
             "Warranty coverage and residual value considerations critical for commercial fleet decisions"
           ],
           "cta": "Enquire about Peugeot Partner e-Partner electric motor repair availability"
-        },
-        {
-          "title": "Diesel Engines",
-          "description": "",
-          "descriptor": "",
-          "familiesLabel": "Common Diesel Engine Families",
-          "foundInLabel": "",
-          "knownForLabel": "",
-          "modelsLabel": "",
-          "notesLabel": "",
-          "families": [],
-          "foundIn": [],
-          "knownFor": [],
-          "typicalModels": [],
-          "importantNotes": [],
-          "cta": "Get quotes for WJY Peugeot Partner engine replacement"
-        },
-        {
-          "title": "Petrol Engines",
-          "description": "",
-          "descriptor": "",
-          "familiesLabel": "Common Petrol Engine Families",
-          "foundInLabel": "",
-          "knownForLabel": "",
-          "modelsLabel": "",
-          "notesLabel": "",
-          "families": [],
-          "foundIn": [],
-          "knownFor": [],
-          "typicalModels": [],
-          "importantNotes": [],
-          "cta": "Get quotes for HFX Peugeot Partner engine replacement"
         }
       ],
       "closing": "Not sure which fuel type your Peugeot Partner has? Enter your registration number above to instantly identify your engine code, fuel system and compatible replacement options - all backed by a minimum 12‑month unlimited mileage warranty from UK Peugeot Partner specialists.",

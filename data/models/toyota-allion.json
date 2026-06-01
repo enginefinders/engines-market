@@ -394,14 +394,6 @@
             "toyota allion premio compatible",
             "toyota allion premio compatible engine"
           ]
-        },
-        {
-          "key": "-engine",
-          "label": "",
-          "matchers": [
-            "",
-            "engine"
-          ]
         }
       ],
       "ui": {
@@ -462,7 +454,7 @@
     "variantCoverage": {
       "tag": "Models We Cover",
       "h2": "Toyota Allion Engine Replacement - All Variants Covered",
-      "subheading": "",
+      "subheading": "From the economical A15 1.5L to the flagship 2.7X, compare rebuilt, reconditioned and used engine prices from our network of UK Toyota Allion engine specialists - typical price range for a rebuilt unit with 12-month warranty, supply & fit available nationwide.",
       "groups": [
         {
           "title": "Core Petrol Range",
@@ -496,10 +488,12 @@
         {
           "h3": "Toyota Allion A15 Engine Replacement",
           "slug": "toyota-allion-a15-engine",
-          "subtitle": "1NZ-FE 1.5L Petrol · 109hp · 2001-2021 · Rebuilt: £1,350-£1,800",
+          "subtitle": "1NZ-FE 1.5L Petrol Â· 109hp Â· 2001-2021",
           "priceRange": "£1,350-£1,800",
           "cta": "Compare A15 Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "1NZ-FE"
+          ],
           "fuel": "Petrol",
           "power": "109hp",
           "years": "2001-2021",
@@ -508,10 +502,12 @@
         {
           "h3": "Toyota Allion A18 Engine Replacement",
           "slug": "toyota-allion-a18-engine",
-          "subtitle": "1ZZ-FE 1.8L Petrol · 125-143hp · 2001-2007 · Rebuilt: £1,500-£2,100",
+          "subtitle": "1ZZ-FE 1.8L Petrol Â· 125-143hp Â· 2001-2007",
           "priceRange": "£1,500-£2,100",
           "cta": "Compare A18 Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "1ZZ-FE"
+          ],
           "fuel": "Petrol",
           "power": "125-143hp",
           "years": "2001-2007",
@@ -520,10 +516,12 @@
         {
           "h3": "Toyota Allion 1.6X Engine Replacement",
           "slug": "toyota-allion-1-6x-engine",
-          "subtitle": "3ZZ-FE 1.6L Petrol · 110hp · 2001-2007 · Rebuilt: £1,400-£1,900",
+          "subtitle": "3ZZ-FE 1.6L Petrol Â· 110hp Â· 2001-2007",
           "priceRange": "£1,400-£1,900",
           "cta": "Compare 1.6X Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "3ZZ-FE"
+          ],
           "fuel": "Petrol",
           "power": "110hp",
           "years": "2001-2007",
@@ -532,10 +530,12 @@
         {
           "h3": "Toyota Allion 1.8X Engine Replacement",
           "slug": "toyota-allion-1-8x-engine",
-          "subtitle": "2ZR-FE 1.8L Petrol · 136-147hp · 2007-2021 · Rebuilt: £1,900-£2,650",
+          "subtitle": "2ZR-FE 1.8L Petrol Â· 136-147hp Â· 2007-2021",
           "priceRange": "£1,900-£2,650",
           "cta": "Compare 1.8X Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "2ZR-FE"
+          ],
           "fuel": "Petrol",
           "power": "136-147hp",
           "years": "2007-2021",
@@ -547,7 +547,9 @@
           "subtitle": "2ZR-FAE 1.8L Petrol Valvematic · 147hp · 2009-2021 · Rebuilt: £2,100-£2,800",
           "priceRange": "£2,100-£2,800",
           "cta": "Compare 1.8G Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "2ZR-FAE"
+          ],
           "fuel": "Petrol",
           "power": "147hp",
           "years": "2009-2021",
@@ -559,7 +561,9 @@
           "subtitle": "1AZ-FSE 2.0L Petrol D-4 · 152hp · 2001-2007 · Rebuilt: £1,700-£2,300",
           "priceRange": "£1,700-£2,300",
           "cta": "Compare 2.0G Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "1AZ-FSE"
+          ],
           "fuel": "Petrol",
           "power": "152hp",
           "years": "2001-2007",
@@ -571,7 +575,9 @@
           "subtitle": "2ZZ-GE 2.0L Petrol High-Rev · 189hp · 2001-2007 · Rebuilt: £2,000-£2,700",
           "priceRange": "£2,000-£2,700",
           "cta": "Compare 2.0S Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "2ZZ-GE"
+          ],
           "fuel": "Petrol",
           "power": "189hp",
           "years": "2001-2007",
@@ -580,10 +586,12 @@
         {
           "h3": "Toyota Allion 2.5X Engine Replacement",
           "slug": "toyota-allion-2-5x-engine",
-          "subtitle": "2AR-FE 2.5L Petrol · 180-200hp · 2007-2021 · Rebuilt: £2,200-£3,100",
+          "subtitle": "2AR-FE 2.5L Petrol Â· 180-200hp Â· 2007-2021",
           "priceRange": "£2,200-£3,100",
           "cta": "Compare 2.5X Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "2AR-FE"
+          ],
           "fuel": "Petrol",
           "power": "180-200hp",
           "years": "2007-2021",
@@ -592,10 +600,12 @@
         {
           "h3": "Toyota Allion 2.5G Engine Replacement",
           "slug": "toyota-allion-2-5g-engine",
-          "subtitle": "2AR-FE 2.5L Petrol · 180-200hp · 2007-2021 · Rebuilt: £2,300-£3,200",
+          "subtitle": "2AR-FE 2.5L Petrol Â· 180-200hp Â· 2007-2021",
           "priceRange": "£2,300-£3,200",
           "cta": "Compare 2.5G Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "2AR-FE"
+          ],
           "fuel": "Petrol",
           "power": "180-200hp",
           "years": "2007-2021",
@@ -604,10 +614,12 @@
         {
           "h3": "Toyota Allion 2.7X Engine Replacement",
           "slug": "toyota-allion-2-7x-engine",
-          "subtitle": "1AR-FE 2.7L Petrol · 188hp · 2007-2021 · Rebuilt: £2,400-£3,400",
+          "subtitle": "1AR-FE 2.7L Petrol Â· 188hp Â· 2007-2021",
           "priceRange": "£2,400-£3,400",
           "cta": "Compare 2.7X Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "1AR-FE"
+          ],
           "fuel": "Petrol",
           "power": "188hp",
           "years": "2007-2021",
@@ -619,7 +631,9 @@
           "subtitle": "1ZR-FE 1.6L Petrol Dual VVT-i · 132hp · 2007-2021 · Rebuilt: £1,600-£2,200",
           "priceRange": "£1,600-£2,200",
           "cta": "Compare 1.6G Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "1ZR-FE"
+          ],
           "fuel": "Petrol",
           "power": "132hp",
           "years": "2007-2021",
@@ -631,21 +645,6 @@
           "subtitle": "Shared NZT260/ZRT260 chassis engines · 1.5L-2.7L · Rebuilt: £1,350-£3,400",
           "priceRange": "£1,350-£3,400",
           "cta": "Compare Premio-Compatible Allion Engine Prices",
-          "engineCodes": [
-            "Shared NZT260",
-            "ZRT260 chassis engines"
-          ],
-          "fuel": "",
-          "power": "",
-          "years": "",
-          "image": ""
-        },
-        {
-          "h3": "",
-          "slug": "-engine",
-          "subtitle": "Compare typical UK rebuilt engine prices for every Toyota Allion engine code, with supply-only ranges, common failure notes and warranty information from vetted specialists.",
-          "priceRange": "",
-          "cta": "Featured Engine Codes - Highest Demand",
           "engineCodes": [],
           "fuel": "",
           "power": "",
@@ -699,23 +698,10 @@
                   "A15, A15 L Selection, A15 S Package, 1.5L base (NZT260)"
                 ],
                 "commonFailures": [
-                  "Oil consumption from piston ring wear (80k-120k miles)"
+                  "Oil consumption from piston ring wear (80k-120k miles)",
+                  "VVT-i solenoid clogging causing rough idle and fault codes",
+                  "Timing chain tensioner wear on later NZT260 units"
                 ],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "VVT",
-                "title": "i solenoid clogging causing rough idle and fault codes",
-                "familyHeading": "NZ Series (2001-2021)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
                 "avgRebuiltPrice": "£1,350 - £1,800",
                 "cta": "Get quotes for 1NZ-FE Toyota Allion engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -734,23 +720,9 @@
                 ],
                 "commonFailures": [
                   "Oil consumption from piston ring design flaw (TSB EG-001-05)",
-                  "Head gasket failure following overheating events"
+                  "Head gasket failure following overheating events",
+                  "VVT-i actuator wear causing timing-related fault codes"
                 ],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "VVT",
-                "title": "i actuator wear causing timing-related fault codes",
-                "familyHeading": "NZ Series (2001-2021)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
                 "avgRebuiltPrice": "£1,500 - £2,100",
                 "cta": "Get quotes for 1ZZ-FE Toyota Allion engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -768,23 +740,10 @@
                   "2.0S, 2.0S L Package (ZZT240)"
                 ],
                 "commonFailures": [
-                  "Timing chain tensioner failure causing rattling and timing variation"
+                  "Timing chain tensioner failure causing rattling and timing variation",
+                  "VVTL-i lift engagement mechanism wear above 100k miles",
+                  "Oil consumption if lift system seals degrade"
                 ],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "VVTL",
-                "title": "i lift engagement mechanism wear above 100k miles",
-                "familyHeading": "ZZ Series Performance (2001-2007)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
                 "avgRebuiltPrice": "£2,000 - £2,700",
                 "cta": "Get quotes for 2ZZ-GE Toyota Allion engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -802,23 +761,10 @@
                   "1.8X, 1.8X L Package, 1.8X S Package (ZRT260)"
                 ],
                 "commonFailures": [
-                  "Timing chain tensioner wear causing startup rattle"
+                  "Timing chain tensioner wear causing startup rattle",
+                  "VVT-i oil control valve clogging on high-mileage units",
+                  "Water pump bearing failure on pre-2012 units"
                 ],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "VVT",
-                "title": "i oil control valve clogging on high-mileage units",
-                "familyHeading": "ZR Series Modern Petrol (2007-2021)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
                 "avgRebuiltPrice": "£1,900 - £2,650",
                 "cta": "Get quotes for 2ZR-FE Toyota Allion engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -836,23 +782,10 @@
                   "1.8G, 1.8G L Package, 1.8G S Package (ZRT265)"
                 ],
                 "commonFailures": [
-                  "Valvematic lift motor servo failure causing power loss"
+                  "Valvematic lift motor servo failure causing power loss",
+                  "VVT-i calibration drift after battery disconnection",
+                  "Carbon buildup on intake valves despite port injection"
                 ],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "VVT",
-                "title": "i calibration drift after battery disconnection",
-                "familyHeading": "ZR Series Modern Petrol (2007-2021)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
                 "avgRebuiltPrice": "£2,100 - £2,800",
                 "cta": "Get quotes for 2ZR-FAE Toyota Allion engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -871,23 +804,9 @@
                 ],
                 "commonFailures": [
                   "Carbon buildup on intake valves and injectors causing rough idle",
-                  "EGR valve clogging leading to emissions test failures"
+                  "EGR valve clogging leading to emissions test failures",
+                  "High-pressure fuel pump wear on high-mileage units"
                 ],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "High",
-                "title": "pressure fuel pump wear on high-mileage units",
-                "familyHeading": "AZ Series Direct Injection (2001-2007)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
                 "avgRebuiltPrice": "£1,700 - £2,300",
                 "cta": "Get quotes for 1AZ-FSE Toyota Allion engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -905,23 +824,10 @@
                   "2.5X, 2.5G, 2.5X L Package, 2.5G L Package (ZRT260/ZRT265)"
                 ],
                 "commonFailures": [
-                  "Oil consumption from ring wear on units over 120k miles"
+                  "Oil consumption from ring wear on units over 120k miles",
+                  "VVT-i actuator wear causing timing-related fault codes",
+                  "Water pump bearing failure on early production units"
                 ],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "VVT",
-                "title": "i actuator wear causing timing-related fault codes",
-                "familyHeading": "AR Series Flagship Petrol (2007-2021)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
                 "avgRebuiltPrice": "£2,200 - £3,100",
                 "cta": "Get quotes for 2AR-FE Toyota Allion engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -939,23 +845,10 @@
                   "2.7X, 2.7X L Package (ZRT261)"
                 ],
                 "commonFailures": [
-                  "Water pump bearing failure causing coolant leaks"
+                  "Water pump bearing failure causing coolant leaks",
+                  "VVT-i solenoid clogging on high-mileage units",
+                  "Limited parts availability requiring specialist sourcing"
                 ],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "VVT",
-                "title": "i solenoid clogging on high-mileage units",
-                "familyHeading": "AR Series Flagship Petrol (2007-2021)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
                 "avgRebuiltPrice": "£2,400 - £3,400",
                 "cta": "Get quotes for 1AR-FE Toyota Allion engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -974,23 +867,9 @@
                 ],
                 "commonFailures": [
                   "Water pump bearing failure causing overheating risk",
-                  "Timing chain guide wear on high-mileage units"
+                  "Timing chain guide wear on high-mileage units",
+                  "VVT-i solenoid clogging affecting idle quality"
                 ],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "VVT",
-                "title": "i solenoid clogging affecting idle quality",
-                "familyHeading": "ZR Series Entry Petrol (2007-2021)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
                 "avgRebuiltPrice": "£1,600 - £2,200",
                 "cta": "Get quotes for 1ZR-FE Toyota Allion engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1008,23 +887,10 @@
                   "1.6X, 1.6X L Package (NZT240)"
                 ],
                 "commonFailures": [
-                  "EGR valve carbon buildup causing rough idle and emissions failures"
+                  "EGR valve carbon buildup causing rough idle and emissions failures",
+                  "VVT-i solenoid clogging on high-mileage units",
+                  "Oil consumption if PCV system is neglected"
                 ],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "VVT",
-                "title": "i solenoid clogging on high-mileage units",
-                "familyHeading": "ZR Series Entry Petrol (2007-2021)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
                 "avgRebuiltPrice": "£1,400 - £1,900",
                 "cta": "Get quotes for 3ZZ-FE Toyota Allion engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1042,23 +908,10 @@
                   "1.6G base spec variants (ZRT260)"
                 ],
                 "commonFailures": [
-                  "Timing chain tensioner wear causing startup noise"
+                  "Timing chain tensioner wear causing startup noise",
+                  "VVT-i oil control valve clogging on high-mileage units",
+                  "Water pump bearing failure on pre-2015 units"
                 ],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "VVT",
-                "title": "i oil control valve clogging on high-mileage units",
-                "familyHeading": "ZR Series Entry Petrol (2007-2021)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
                 "avgRebuiltPrice": "£1,550 - £2,100",
                 "cta": "Get quotes for 3ZR-FE Toyota Allion engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1076,23 +929,10 @@
                   "1.6G Valvematic spec (ZRT265, limited UK availability)"
                 ],
                 "commonFailures": [
-                  "Valvematic servo motor failure causing power loss"
+                  "Valvematic servo motor failure causing power loss",
+                  "VVT-i calibration drift after battery disconnection",
+                  "Limited specialist knowledge requiring careful supplier selection"
                 ],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "VVT",
-                "title": "i calibration drift after battery disconnection",
-                "familyHeading": "ZR Series Entry Petrol (2007-2021)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
                 "avgRebuiltPrice": "£1,750 - £2,400",
                 "cta": "Get quotes for 3ZR-FAE Toyota Allion engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1136,18 +976,6 @@
               "size": "1.5L",
               "power": "109-110 hp",
               "compatibleModels": "A15, A15 L Selection, A15 S Package, 1.5L base (NZT260)",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "VVT",
-              "title": "i solenoid clogging causing rough idle and fault codes",
-              "familyHeading": "NZ Series (2001-2021)",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
               "avgRebuiltPrice": "£1,350 - £1,800",
               "cta": "Get quotes for 1NZ-FE Toyota Allion engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1160,18 +988,6 @@
               "size": "1.8L",
               "power": "125-143 hp",
               "compatibleModels": "A18, A18 L Selection, A18 S Package, 1.8L base (ZZT240)",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "VVT",
-              "title": "i actuator wear causing timing-related fault codes",
-              "familyHeading": "NZ Series (2001-2021)",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
               "avgRebuiltPrice": "£1,500 - £2,100",
               "cta": "Get quotes for 1ZZ-FE Toyota Allion engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1184,18 +1000,6 @@
               "size": "2.0L",
               "power": "189 hp",
               "compatibleModels": "2.0S, 2.0S L Package (ZZT240)",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "VVTL",
-              "title": "i lift engagement mechanism wear above 100k miles",
-              "familyHeading": "ZZ Series Performance (2001-2007)",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
               "avgRebuiltPrice": "£2,000 - £2,700",
               "cta": "Get quotes for 2ZZ-GE Toyota Allion engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1208,18 +1012,6 @@
               "size": "1.8L",
               "power": "136-147 hp",
               "compatibleModels": "1.8X, 1.8X L Package, 1.8X S Package (ZRT260)",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "VVT",
-              "title": "i oil control valve clogging on high-mileage units",
-              "familyHeading": "ZR Series Modern Petrol (2007-2021)",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
               "avgRebuiltPrice": "£1,900 - £2,650",
               "cta": "Get quotes for 2ZR-FE Toyota Allion engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1232,18 +1024,6 @@
               "size": "1.8L",
               "power": "147 hp",
               "compatibleModels": "1.8G, 1.8G L Package, 1.8G S Package (ZRT265)",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "VVT",
-              "title": "i calibration drift after battery disconnection",
-              "familyHeading": "ZR Series Modern Petrol (2007-2021)",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
               "avgRebuiltPrice": "£2,100 - £2,800",
               "cta": "Get quotes for 2ZR-FAE Toyota Allion engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1256,18 +1036,6 @@
               "size": "2.0L",
               "power": "152 hp",
               "compatibleModels": "2.0G, 2.0X, 2.0G L Package (AZT240)",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "High",
-              "title": "pressure fuel pump wear on high-mileage units",
-              "familyHeading": "AZ Series Direct Injection (2001-2007)",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
               "avgRebuiltPrice": "£1,700 - £2,300",
               "cta": "Get quotes for 1AZ-FSE Toyota Allion engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1280,18 +1048,6 @@
               "size": "2.5L",
               "power": "180-200 hp",
               "compatibleModels": "2.5X, 2.5G, 2.5X L Package, 2.5G L Package (ZRT260/ZRT265)",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "VVT",
-              "title": "i actuator wear causing timing-related fault codes",
-              "familyHeading": "AR Series Flagship Petrol (2007-2021)",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
               "avgRebuiltPrice": "£2,200 - £3,100",
               "cta": "Get quotes for 2AR-FE Toyota Allion engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1304,18 +1060,6 @@
               "size": "2.7L",
               "power": "188 hp",
               "compatibleModels": "2.7X, 2.7X L Package (ZRT261)",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "VVT",
-              "title": "i solenoid clogging on high-mileage units",
-              "familyHeading": "AR Series Flagship Petrol (2007-2021)",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
               "avgRebuiltPrice": "£2,400 - £3,400",
               "cta": "Get quotes for 1AR-FE Toyota Allion engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1328,18 +1072,6 @@
               "size": "1.6L",
               "power": "132 hp",
               "compatibleModels": "1.6G, 1.6G L Package (ZRT260)",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "VVT",
-              "title": "i solenoid clogging affecting idle quality",
-              "familyHeading": "ZR Series Entry Petrol (2007-2021)",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
               "avgRebuiltPrice": "£1,600 - £2,200",
               "cta": "Get quotes for 1ZR-FE Toyota Allion engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1352,18 +1084,6 @@
               "size": "1.6L",
               "power": "110 hp",
               "compatibleModels": "1.6X, 1.6X L Package (NZT240)",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "VVT",
-              "title": "i solenoid clogging on high-mileage units",
-              "familyHeading": "ZR Series Entry Petrol (2007-2021)",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
               "avgRebuiltPrice": "£1,400 - £1,900",
               "cta": "Get quotes for 3ZZ-FE Toyota Allion engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1376,18 +1096,6 @@
               "size": "1.6L",
               "power": "132 hp",
               "compatibleModels": "1.6G base spec variants (ZRT260)",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "VVT",
-              "title": "i oil control valve clogging on high-mileage units",
-              "familyHeading": "ZR Series Entry Petrol (2007-2021)",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
               "avgRebuiltPrice": "£1,550 - £2,100",
               "cta": "Get quotes for 3ZR-FE Toyota Allion engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1400,18 +1108,6 @@
               "size": "1.6L",
               "power": "132 hp",
               "compatibleModels": "1.6G Valvematic spec (ZRT265, limited UK availability)",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "VVT",
-              "title": "i calibration drift after battery disconnection",
-              "familyHeading": "ZR Series Entry Petrol (2007-2021)",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
               "avgRebuiltPrice": "£1,750 - £2,400",
               "cta": "Get quotes for 3ZR-FAE Toyota Allion engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1444,7 +1140,7 @@
     "commonProblems": {
       "tag": "Common Problems",
       "h2": "Toyota Allion Engine Problems - What It Costs to Fix & When Replacement Makes Sense",
-      "h3": "",
+      "h3": "The Toyota Allion's petrol engines are generally reliable, but the 1ZZ-FE and 1NZ-FE units are known for oil consumption issues, while timing chain tensioners and VVT-i solenoids affect multiple generations. Every rebuilt engine supplied through EngineMarket includes upgraded internal components designed to address the original failure point - plus a 12‑month unlimited mileage warranty.",
       "problems": [
         {
           "group": "Oil Consumption",
@@ -1723,7 +1419,7 @@
     "engineSizes": {
       "tag": "Engine Sizes",
       "h2": "Toyota Allion Engines by Size - Find the Right Displacement for Your Variant",
-      "intro": "",
+      "intro": "Every displacement fitted to the Toyota Allion is listed below with compatible engine codes, production years and common failure notes to help you identify the right replacement.",
       "groups": [
         {
           "title": "Toyota Allion Petrol Engine Sizes",
@@ -1768,7 +1464,7 @@
             },
             {
               "title": "Toyota Allion 1.8L Petrol Engines",
-              "description": "",
+              "description": "The versatile 1.8L family spans three generations of technology: the failure-prone 1ZZ-FE, the robust 2ZR-FE, and the advanced Valvematic 2ZR-FAE offering improved efficiency.",
               "engineCodes": [
                 "1ZZ-FE",
                 "2ZR-FE",
@@ -1826,7 +1522,7 @@
             },
             {
               "title": "Toyota Allion 2.7L Petrol Engines",
-              "description": "The rare 2.7L 1AR-FE flagship engine offers effortless cruising for the top-spec ZRT261 Allion, with limited UK availability but strong specialist support for replacements. Not sure which engine size your Toyota Allion needs? Enter your registration number above - we'll identify the exact displacement, engine code and compatible replacement options instantly. All engines supplied through EngineMarket include a 12‑month unlimited mileage warranty from UK Toyota Allion specialists.",
+              "description": "The rare 2.7L 1AR-FE flagship engine offers effortless cruising for the top-spec ZRT261 Allion, with limited UK availability but strong specialist support for replacements.",
               "engineCodes": [
                 "1AR-FE"
               ],
@@ -1863,7 +1559,7 @@
     "fuelTypes": {
       "tag": "Toyota Allion Engines Fuel Type",
       "h2": "Toyota Allion Engines by Fuel Type",
-      "intro": "",
+      "intro": "Choose your Toyota Allion engine by fuel type to compare realistic replacement prices, known issues, and compatible UK supply options - from early A15 1.5L to the latest 2.7X flagship.",
       "items": [
         {
           "title": "Toyota Allion Petrol Engines",
@@ -1901,7 +1597,7 @@
           "title": "Toyota Allion Hybrid / Electrified Engines",
           "description": "While the Toyota Allion was primarily petrol-only in UK imports, some late-model ZRT260 variants shared platforms with hybrid Premio models using 2ZR-FXE units.",
           "descriptor": "While the Toyota Allion was primarily petrol-only in UK imports, some late-model ZRT260 variants shared platforms with hybrid Premio models using 2ZR-FXE units.",
-          "familiesLabel": "H2: Toyota Allion Engine Codes - Full Technical Specifications & Replacement Guide",
+          "familiesLabel": "Toyota Allion Hybrid Engine Codes",
           "foundInLabel": "Found In",
           "knownForLabel": "",
           "modelsLabel": "",
@@ -1923,22 +1619,6 @@
             "Availability more limited than standard petrol engines; lead times may apply"
           ],
           "cta": "Enquire about Toyota Allion Hybrid engine availability"
-        },
-        {
-          "title": "Petrol Engines",
-          "description": "",
-          "descriptor": "",
-          "familiesLabel": "Common Petrol Engine Families",
-          "foundInLabel": "",
-          "knownForLabel": "",
-          "modelsLabel": "",
-          "notesLabel": "",
-          "families": [],
-          "foundIn": [],
-          "knownFor": [],
-          "typicalModels": [],
-          "importantNotes": [],
-          "cta": "Get quotes for 3ZR-FAE Toyota Allion engine replacement"
         }
       ],
       "closing": "Not sure which fuel type your Toyota Allion has? Enter your registration number above to instantly identify your engine code, fuel system and compatible replacement options - all backed by a 12‑month unlimited mileage warranty from UK Toyota Allion specialists.",
@@ -2412,8 +2092,21 @@
     "trustCta": {
       "tag": "Why Choose Us",
       "h2": "Why UK Toyota Allion Owners Trust EngineMarket",
-      "intro": "",
-      "points": [],
+      "intro": "Join thousands of UK drivers who compare Toyota Allion engine prices through our network of trusted specialists - every rebuilt and reconditioned unit backed by a 12‑month unlimited mileage warranty and nationwide delivery.",
+      "points": [
+        {
+          "title": "Trusted Toyota Allion Engine Suppliers",
+          "description": "Every garage and engine rebuilder in our network is vetted, rated, and reviewed by real Toyota Allion owners."
+        },
+        {
+          "title": "Compare Toyota Allion Engine Replacement Companies",
+          "description": "See prices, warranty terms, and supply & fit options side‑by‑side before you commit."
+        },
+        {
+          "title": "UK Engine Replacement Services for Toyota Allion",
+          "description": "Covering every variant from A15 to 2.7X, with supply‑only or full supply & fit available nationwide."
+        }
+      ],
       "finalText": "Find the best Toyota Allion engine replacement UK drivers rely on. Compare prices from trusted specialists today and get back on the road with confidence.",
       "buttonText": "Compare Toyota Allion Engine Prices Now →",
       "secondaryAction": {

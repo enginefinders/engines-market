@@ -374,7 +374,7 @@
     "variantCoverage": {
       "tag": "Models We Cover",
       "h2": "Peugeot iOn Engine Replacement - All Variants Covered",
-      "subheading": "",
+      "subheading": "From the entry-level Active to the fully-specced Allure, our network of UK Peugeot iOn engine specialists helps you compare rebuilt, reconditioned and used electric motor prices, with typical price range for a rebuilt unit with 12‑month warranty - supply & fit available nationwide.",
       "groups": [
         {
           "title": "Core Electric Range",
@@ -390,13 +390,13 @@
         {
           "h3": "Peugeot iOn Active Electric Motor Replacement",
           "slug": "peugeot-ion-active-electric-motor-replacement-engine",
-          "subtitle": "Y4F1 35kW Electric · 48hp · 2010-2016",
+          "subtitle": "Y4F1 35kW Electric Â· 48hp Â· 2010-2016",
           "priceRange": "£800-£1,600",
           "cta": "Compare Active Electric Motor Prices",
           "engineCodes": [
-            "Y4F1"
+            "Y4F1 35kW"
           ],
-          "fuel": "",
+          "fuel": "Electric",
           "power": "48hp",
           "years": "2010-2016",
           "image": ""
@@ -404,13 +404,13 @@
         {
           "h3": "Peugeot iOn Access Electric Motor Replacement",
           "slug": "peugeot-ion-access-electric-motor-replacement-engine",
-          "subtitle": "Y4F1 35kW Electric · 48hp · 2010-2015",
+          "subtitle": "Y4F1 35kW Electric Â· 48hp Â· 2010-2015",
           "priceRange": "£750-£1,500",
           "cta": "Compare Access Electric Motor Prices",
           "engineCodes": [
-            "Y4F1"
+            "Y4F1 35kW"
           ],
-          "fuel": "",
+          "fuel": "Electric",
           "power": "48hp",
           "years": "2010-2015",
           "image": ""
@@ -418,13 +418,13 @@
         {
           "h3": "Peugeot iOn Allure Electric Motor Replacement",
           "slug": "peugeot-ion-allure-electric-motor-replacement-engine",
-          "subtitle": "Y4F1 35kW Electric · 48hp · 2011-2017",
+          "subtitle": "Y4F1 35kW Electric Â· 48hp Â· 2011-2017",
           "priceRange": "£900-£1,900",
           "cta": "Compare Allure Electric Motor Prices",
           "engineCodes": [
-            "Y4F1"
+            "Y4F1 35kW"
           ],
-          "fuel": "",
+          "fuel": "Electric",
           "power": "48hp",
           "years": "2011-2017",
           "image": ""
@@ -432,13 +432,13 @@
         {
           "h3": "Peugeot iOn Enrolment Electric Motor Replacement",
           "slug": "peugeot-ion-enrolment-electric-motor-replacement-engine",
-          "subtitle": "Y4F1 35kW Electric · 48hp · 2012-2016",
+          "subtitle": "Y4F1 35kW Electric Â· 48hp Â· 2012-2016",
           "priceRange": "£850-£1,700",
           "cta": "Compare Enrolment Electric Motor Prices",
           "engineCodes": [
-            "Y4F1"
+            "Y4F1 35kW"
           ],
-          "fuel": "",
+          "fuel": "Electric",
           "power": "48hp",
           "years": "2012-2016",
           "image": ""
@@ -486,23 +486,9 @@
                 ],
                 "commonFailures": [
                   "Motor Control Unit (MCU) failure - recall ZZZ affecting 2011-2012 models, loss of power or inability to charge",
-                  "Transmission Control Unit (TCU) failure - grinding noises, emergency mode, €1000+ repair cost"
+                  "Transmission Control Unit (TCU) failure - grinding noises, emergency mode, €1000+ repair cost",
+                  "High-voltage system errors triggered by 12V auxiliary battery failure"
                 ],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "High",
-                "title": "voltage system errors triggered by 12V auxiliary battery failure",
-                "familyHeading": "Y4F1 Series (2010-2017)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
                 "avgRebuiltPrice": "£800 - £2,000",
                 "cta": "Get quotes for Y4F1 Peugeot iOn electric motor replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -511,36 +497,19 @@
                 "code": "MCU-001",
                 "title": "Motor Control Unit",
                 "familyHeading": "Y4F1 Series (2010-2017)",
-                "history": "Primary inverter/controller module managing power delivery from battery to motor; known failure point on early iOn models.",
-                "fuel": "Electric (BEV)",
-                "size": "N/A (Control Unit)",
-                "power": "Controls 35 kW motor output",
-                "years": "2010-2013",
-                "compatibleVariants": [
-                  "Active (2010-2012), Access (2010-2012), Allure (2011-2013)"
-                ],
-                "commonFailures": [
-                  "Internal component failure causing loss of drive or charging capability",
-                  "Overheating due to cooling system blockage",
-                  "Software corruption requiring reprogramming or replacement"
-                ],
-                "avgRebuiltPrice": "£600 - £1,500",
-                "cta": "Get quotes for MCU-001 Peugeot iOn motor control unit replacement",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "TCU-001",
-                "title": "Transmission Control Unit",
-                "familyHeading": "Y4F1 Series (2010-2017)",
                 "history": "Manages the single-speed reduction gearbox; failures manifest as slipping, grinding or limp mode.",
                 "fuel": "Electric (BEV)",
                 "size": "N/A (Control Unit)",
                 "power": "Manages torque delivery to reduction gear",
                 "years": "2010-2017",
                 "compatibleVariants": [
+                  "Active (2010-2012), Access (2010-2012), Allure (2011-2013)",
                   "All variants across production run"
                 ],
                 "commonFailures": [
+                  "Internal component failure causing loss of drive or charging capability",
+                  "Overheating due to cooling system blockage",
+                  "Software corruption requiring reprogramming or replacement",
                   "Internal solenoid failure causing gear engagement issues",
                   "Electrical connector corrosion leading to intermittent faults",
                   "Software calibration drift requiring reset or replacement"
@@ -588,18 +557,6 @@
               "size": "N/A (Electric Motor)",
               "power": "48 hp (35 kW)",
               "compatibleModels": "Active, Access, Allure, Enrolment, Active LCI, Access LCI, Allure LCI",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "High",
-              "title": "voltage system errors triggered by 12V auxiliary battery failure",
-              "familyHeading": "Y4F1 Series (2010-2017)",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
               "avgRebuiltPrice": "£800 - £2,000",
               "cta": "Get quotes for Y4F1 Peugeot iOn electric motor replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -610,20 +567,8 @@
               "familyHeading": "Y4F1 Series (2010-2017)",
               "fuel": "Electric (BEV)",
               "size": "N/A (Control Unit)",
-              "power": "Controls 35 kW motor output",
-              "compatibleModels": "Active (2010-2012), Access (2010-2012), Allure (2011-2013)",
-              "avgRebuiltPrice": "£600 - £1,500",
-              "cta": "Get quotes for MCU-001 Peugeot iOn motor control unit replacement",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "TCU-001",
-              "title": "Transmission Control Unit",
-              "familyHeading": "Y4F1 Series (2010-2017)",
-              "fuel": "Electric (BEV)",
-              "size": "N/A (Control Unit)",
               "power": "Manages torque delivery to reduction gear",
-              "compatibleModels": "All variants across production run",
+              "compatibleModels": "Active (2010-2012), Access (2010-2012), Allure (2011-2013), All variants across production run",
               "avgRebuiltPrice": "£700 - £1,800",
               "cta": "Get quotes for TCU-001 Peugeot iOn transmission control unit replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -656,7 +601,7 @@
     "commonProblems": {
       "tag": "Common Problems",
       "h2": "Peugeot iOn Engine Problems - What It Costs to Fix & When Replacement Makes Sense",
-      "h3": "",
+      "h3": "The Peugeot iOn's electric powertrain is generally robust, but three issues dominate replacement enquiries: Motor Control Unit (MCU) failure on 2011-2012 models, Transmission Control Unit (TCU) faults causing grinding or limp mode, and high-voltage errors often triggered by the 12V auxiliary battery. Every rebuilt motor supplied through EngineMarket includes upgraded internal components designed to address the original failure point - plus a Peugeotmum 12‑month unlimited mileage warranty.",
       "problems": [
         {
           "group": "Motor Control Unit (MCU) Failure",
@@ -913,7 +858,7 @@
     "engineSizes": {
       "tag": "Engine Sizes",
       "h2": "Peugeot iOn Engines by Size - Find the Right Displacement for Your Variant",
-      "intro": "",
+      "intro": "Every electric motor specification fitted to the Peugeot iOn is listed, with compatible motor codes, production years and common failure notes for accurate replacement matching.",
       "groups": [
         {
           "title": "Peugeot iOn Electric Motor Sizes",
@@ -959,7 +904,7 @@
     "fuelTypes": {
       "tag": "Fuel Type",
       "h2": "Peugeot iOn Engines by Fuel Type",
-      "intro": "",
+      "intro": "Choose your Peugeot iOn powertrain by type to compare realistic replacement prices, known issues, and compatible UK supply options - from the standard Y4F1 motor to control unit replacements.",
       "items": [
         {
           "title": "Peugeot iOn Electric (BEV) Motors",
@@ -1300,8 +1245,21 @@
     "trustCta": {
       "tag": "Why Choose Us",
       "h2": "Why UK Peugeot iOn Owners Trust EngineMarket",
-      "intro": "",
-      "points": [],
+      "intro": "Join thousands of UK drivers who compare Peugeot iOn motor prices through our network of trusted specialists - every rebuilt and reconditioned unit backed by a Peugeotmum 12‑month unlimited mileage warranty and nationwide delivery.",
+      "points": [
+        {
+          "title": "Trusted Peugeot iOn Motor Suppliers",
+          "description": "Every garage and motor rebuilder in our network is vetted, rated, and reviewed by real Peugeot iOn owners."
+        },
+        {
+          "title": "Compare Peugeot iOn Motor Replacement Companies",
+          "description": "See prices, warranty terms, and supply & fit options side‑by‑side before you commit."
+        },
+        {
+          "title": "UK Electric Motor Replacement Services for Peugeot iOn",
+          "description": "Covering all variants from Active to Allure, with supply‑only or full supply & fit available nationwide."
+        }
+      ],
       "finalText": "Find the best Peugeot iOn motor replacement UK drivers rely on. Compare prices from trusted specialists today and get back on the road with confidence.",
       "buttonText": "Compare Peugeot iOn Motor Prices Now →",
       "secondaryAction": {

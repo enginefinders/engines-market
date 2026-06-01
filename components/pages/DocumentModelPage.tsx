@@ -42,6 +42,7 @@ export default function DocumentModelPage({
   const heroCards = toHeroCards(visualData);
   const reviewsData = buildStaticReviewsSection(visualData.model.name);
   const mainImage = visualData.assets.heroBg;
+  const initialTimestamp = new Date().toISOString();
 
   return (
     <>
@@ -70,6 +71,7 @@ export default function DocumentModelPage({
         modelCards={heroCards}
         imageSrc={mainImage}
         displayMode="document"
+        initialTimestamp={initialTimestamp}
       />
 
       <ReviewsSection data={reviewsData} useDataHeading />

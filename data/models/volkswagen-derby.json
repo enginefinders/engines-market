@@ -330,14 +330,6 @@
             "volkswagen derby 1.9d",
             "volkswagen derby 1 9d engine"
           ]
-        },
-        {
-          "key": "-engine",
-          "label": "",
-          "matchers": [
-            "",
-            "engine"
-          ]
         }
       ],
       "ui": {
@@ -421,7 +413,7 @@
         {
           "h3": "Volkswagen Derby L Engine Replacement",
           "slug": "volkswagen-derby-l-engine",
-          "subtitle": "HB/HC 1.1L Petrol · 50-60hp · 1977-1981",
+          "subtitle": "HB/HC 1.1L Petrol Â· 50-60hp Â· 1977-1981",
           "priceRange": "£895-£1,450",
           "cta": "Compare L Engine Prices",
           "engineCodes": [
@@ -436,7 +428,7 @@
         {
           "h3": "Volkswagen Derby CL Engine Replacement",
           "slug": "volkswagen-derby-cl-engine",
-          "subtitle": "HC/ACH 1.1L Petrol · 50-60hp · 1977-1984",
+          "subtitle": "HC/ACH 1.1L Petrol Â· 50-60hp Â· 1977-1984",
           "priceRange": "£895-£1,500",
           "cta": "Compare CL Engine Prices",
           "engineCodes": [
@@ -451,10 +443,12 @@
         {
           "h3": "Volkswagen Derby CLS Engine Replacement",
           "slug": "volkswagen-derby-cls-engine",
-          "subtitle": "HH 1.3L Petrol · 60hp · 1977-1981 · Rebuilt: £950-£1,650",
+          "subtitle": "HH 1.3L Petrol Â· 60hp Â· 1977-1981",
           "priceRange": "£950-£1,650",
           "cta": "Compare CLS Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "HH"
+          ],
           "fuel": "Petrol",
           "power": "60hp",
           "years": "1977-1981",
@@ -466,7 +460,9 @@
           "subtitle": "ACH 1.1L High Compression Petrol · 60hp · 1981-1983 · Rebuilt: £925-£1,600",
           "priceRange": "£925-£1,600",
           "cta": "Compare Formula E Engine Prices",
-          "engineCodes": [],
+          "engineCodes": [
+            "ACH"
+          ],
           "fuel": "Petrol",
           "power": "60hp",
           "years": "1981-1983",
@@ -475,7 +471,7 @@
         {
           "h3": "Volkswagen Derby GLS Engine Replacement",
           "slug": "volkswagen-derby-gls-engine",
-          "subtitle": "HK/HW 1.3L Petrol · 54-60hp · 1981-1984",
+          "subtitle": "HK/HW 1.3L Petrol Â· 54-60hp Â· 1981-1984",
           "priceRange": "£975-£1,750",
           "cta": "Compare GLS Engine Prices",
           "engineCodes": [
@@ -490,7 +486,7 @@
         {
           "h3": "Volkswagen Derby 1.9D Engine Replacement",
           "slug": "volkswagen-derby-1-9d-engine",
-          "subtitle": "AAZ/ADF 1.9L Diesel · 64hp · 1982-1984",
+          "subtitle": "AAZ/ADF 1.9L Diesel Â· 64hp Â· 1982-1984",
           "priceRange": "£1,100-£2,200",
           "cta": "Compare 1.9D Engine Prices",
           "engineCodes": [
@@ -500,18 +496,6 @@
           "fuel": "Diesel",
           "power": "64hp",
           "years": "1982-1984",
-          "image": ""
-        },
-        {
-          "h3": "",
-          "slug": "-engine",
-          "subtitle": "Compare rebuilt, reconditioned and used engine prices for every Volkswagen Derby engine code. All prices are UK supply-only ranges from vetted specialists. Enter your registration above for exact quotes.",
-          "priceRange": "",
-          "cta": "| Engine Code | Size/Fuel | Variants | Rebuilt Price | Used Price | Reconditioned Price |",
-          "engineCodes": [],
-          "fuel": "",
-          "power": "",
-          "years": "",
           "image": ""
         }
       ],
@@ -645,23 +629,10 @@
                   "GLS (Mk2)"
                 ],
                 "commonFailures": [
-                  "Timing chain tensioner wear (same as HH)"
+                  "Timing chain tensioner wear (same as HH)",
+                  "Age-related seal and gasket leaks",
+                  "Carburettor wear affecting idle quality"
                 ],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "Age",
-                "title": "related seal and gasket leaks",
-                "familyHeading": "1.3L Family (1977-1984)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
                 "avgRebuiltPrice": "£975 - £1,750",
                 "cta": "Get quotes for HK Volkswagen Derby engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -843,18 +814,6 @@
               "size": "1.3L",
               "power": "54 hp",
               "compatibleModels": "GLS (Mk2)",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "Age",
-              "title": "related seal and gasket leaks",
-              "familyHeading": "1.3L Family (1977-1984)",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
               "avgRebuiltPrice": "£975 - £1,750",
               "cta": "Get quotes for HK Volkswagen Derby engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1250,7 +1209,7 @@
           "items": [
             {
               "title": "Volkswagen Derby 1.9L Diesel Engines",
-              "description": "Aftermarket diesel conversions using the 1.9L AAZ/ADF engine were popular for economy; these units require upgraded cam followers (OEM 028109309B) to prevent premature lobe wear. Not sure which engine size your Volkswagen Derby needs? Enter your registration number above - we'll identify the exact displacement, engine code and compatible replacement options instantly. All engines supplied through EngineMarket include a minimum 12-month unlimited mileage warranty from UK Volkswagen Derby specialists.",
+              "description": "Aftermarket diesel conversions using the 1.9L AAZ/ADF engine were popular for economy; these units require upgraded cam followers (OEM 028109309B) to prevent premature lobe wear.",
               "engineCodes": [
                 "AAZ",
                 "ADF"
@@ -1329,7 +1288,7 @@
           "title": "Volkswagen Derby Diesel Engines",
           "description": "No factory diesel Derby was sold in Europe; 1.9L AAZ/ADF conversions using Polo/Golf donor engines are the only diesel option, requiring specialist fitting knowledge.",
           "descriptor": "No factory diesel Derby was sold in Europe; 1.9L AAZ/ADF conversions using Polo/Golf donor engines are the only diesel option, requiring specialist fitting knowledge.",
-          "familiesLabel": "Volkswagen Derby Engine Codes - Full Technical Specifications & Replacement Guide",
+          "familiesLabel": "Common Volkswagen Derby Diesel Engine Families",
           "foundInLabel": "Found In",
           "knownForLabel": "Known For",
           "modelsLabel": "Typical Diesel Models",
@@ -1356,38 +1315,6 @@
             "Verify conversion quality and documentation before purchasing a diesel Derby"
           ],
           "cta": "Enquire about Volkswagen Derby Diesel engine availability"
-        },
-        {
-          "title": "Petrol Engines",
-          "description": "",
-          "descriptor": "",
-          "familiesLabel": "Common Petrol Engine Families",
-          "foundInLabel": "",
-          "knownForLabel": "",
-          "modelsLabel": "",
-          "notesLabel": "",
-          "families": [],
-          "foundIn": [],
-          "knownFor": [],
-          "typicalModels": [],
-          "importantNotes": [],
-          "cta": "Get quotes for HA Volkswagen Derby engine replacement"
-        },
-        {
-          "title": "Diesel Engines",
-          "description": "",
-          "descriptor": "",
-          "familiesLabel": "Common Diesel Engine Families",
-          "foundInLabel": "",
-          "knownForLabel": "",
-          "modelsLabel": "",
-          "notesLabel": "",
-          "families": [],
-          "foundIn": [],
-          "knownFor": [],
-          "typicalModels": [],
-          "importantNotes": [],
-          "cta": "Get quotes for ADF Volkswagen Derby engine replacement"
         }
       ],
       "closing": "Not sure which fuel type your Volkswagen Derby has? Enter your registration number above to instantly identify your engine code, fuel system and compatible replacement options - all backed by a minimum 12-month unlimited mileage warranty from UK Volkswagen Derby specialists.",
@@ -1693,7 +1620,20 @@
       "tag": "Why Choose Us",
       "h2": "Why UK Volkswagen Derby Owners Trust EngineMarket",
       "intro": "Join thousands of UK drivers who compare Volkswagen Derby engine prices through our network of trusted specialists - every rebuilt and reconditioned unit backed by a minimum 12-month unlimited mileage warranty and nationwide delivery.",
-      "points": [],
+      "points": [
+        {
+          "title": "Trusted Volkswagen Derby Engine Suppliers",
+          "description": "Every garage and engine rebuilder in our network is vetted, rated, and reviewed by real Volkswagen Derby owners."
+        },
+        {
+          "title": "Compare Volkswagen Derby Engine Replacement Companies",
+          "description": "See prices, warranty terms, and supply & fit options side-by-side before you commit."
+        },
+        {
+          "title": "UK Engine Replacement Services for Volkswagen Derby",
+          "description": "Covering every variant from L to GLS and Formula E, with supply-only or full supply & fit available nationwide."
+        }
+      ],
       "finalText": "Find the best Volkswagen Derby engine replacement UK drivers rely on. Compare prices from trusted specialists today and get back on the road with confidence.",
       "buttonText": "Compare Volkswagen Derby Engine Prices Now →",
       "secondaryAction": {

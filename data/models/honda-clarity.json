@@ -402,11 +402,11 @@
         {
           "h3": "Honda Clarity Plug-in Hybrid Base Engine Replacement",
           "slug": "honda-clarity-plug-in-hybrid-base-engine",
-          "subtitle": "LEB3 1.5L Hybrid · 103hp petrol + 212hp system · 2017-2018",
+          "subtitle": "LEB3 1.5L Hybrid Â· 103hp petrol + 212hp system Â· 2017-2018",
           "priceRange": "£1,395-£2,400",
           "cta": "Compare Plug-in Hybrid Base Engine Prices",
           "engineCodes": [
-            "LEB3"
+            "LEB3 1.5L"
           ],
           "fuel": "Hybrid",
           "power": "103hp",
@@ -416,11 +416,11 @@
         {
           "h3": "Honda Clarity Plug-in Hybrid Touring Engine Replacement",
           "slug": "honda-clarity-plug-in-hybrid-touring-engine",
-          "subtitle": "LEB31 1.5L Hybrid · 103hp petrol + 212hp system · 2017-2018",
+          "subtitle": "LEB31 1.5L Hybrid Â· 103hp petrol + 212hp system Â· 2017-2018",
           "priceRange": "£1,495-£2,600",
           "cta": "Compare Plug-in Hybrid Touring Engine Prices",
           "engineCodes": [
-            "LEB31"
+            "LEB31 1.5L"
           ],
           "fuel": "Hybrid",
           "power": "103hp",
@@ -430,11 +430,11 @@
         {
           "h3": "Honda Clarity Plug-in Hybrid Base Engine Replacement",
           "slug": "honda-clarity-plug-in-hybrid-base-engine",
-          "subtitle": "LEB3A 1.5L Hybrid · 103hp petrol + 212hp system · 2019-2021",
+          "subtitle": "LEB3A 1.5L Hybrid Â· 103hp petrol + 212hp system Â· 2019-2021",
           "priceRange": "£1,495-£2,500",
           "cta": "Compare Plug-in Hybrid Base Engine Prices",
           "engineCodes": [
-            "LEB3A"
+            "LEB3A 1.5L"
           ],
           "fuel": "Hybrid",
           "power": "103hp",
@@ -444,11 +444,11 @@
         {
           "h3": "Honda Clarity Plug-in Hybrid Touring Engine Replacement",
           "slug": "honda-clarity-plug-in-hybrid-touring-engine",
-          "subtitle": "LEB3A 1.5L Hybrid · 103hp petrol + 212hp system · 2019-2021",
+          "subtitle": "LEB3A 1.5L Hybrid Â· 103hp petrol + 212hp system Â· 2019-2021",
           "priceRange": "£1,595-£2,800",
           "cta": "Compare Plug-in Hybrid Touring Engine Prices",
           "engineCodes": [
-            "LEB3A"
+            "LEB3A 1.5L"
           ],
           "fuel": "Hybrid",
           "power": "103hp",
@@ -458,13 +458,13 @@
         {
           "h3": "Honda Clarity PHEV FWD e-CVT Engine Replacement",
           "slug": "honda-clarity-phev-fwd-e-cvt-engine",
-          "subtitle": "LEB3/LEB31/LEB3A 1.5L Hybrid · 212hp combined system · 2017-2021",
+          "subtitle": "LEB3/LEB31/LEB3A 1.5L Hybrid Â· 212hp combined system Â· 2017-2021",
           "priceRange": "£1,395-£2,700",
           "cta": "Compare PHEV FWD e-CVT Engine Prices",
           "engineCodes": [
             "LEB3",
             "LEB31",
-            "LEB3A"
+            "LEB3A 1.5L"
           ],
           "fuel": "Hybrid",
           "power": "212hpcombined",
@@ -474,11 +474,11 @@
         {
           "h3": "Honda Clarity PHEV Grey Import Compliant Engine Replacement",
           "slug": "honda-clarity-phev-grey-import-compliant-engine",
-          "subtitle": "LEB3 1.5L Atkinson Hybrid · VIN verified · 2017-2021",
+          "subtitle": "LEB3 1.5L Atkinson Hybrid Â· VIN verified Â· 2017-2021",
           "priceRange": "£1,495-£2,600",
           "cta": "Compare Grey Import Compliant Engine Prices",
           "engineCodes": [
-            "LEB3"
+            "LEB3 1.5L Atkinson"
           ],
           "fuel": "Hybrid",
           "power": "",
@@ -545,22 +545,11 @@
                 "compatibleVariants": [
                   "Clarity Plug-in Hybrid Base, Clarity Plug-in Hybrid Base (2017-2018), Clarity Plug-in Hybrid Base (2019-2021), Clarity PHEV FWD e-CVT, Clarity Grey Import Compliant"
                 ],
-                "commonFailures": [],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "HV",
-                "title": "mode high-rev power loss - rubber-band feeling, typically 55k-75k miles",
-                "familyHeading": "LEB3 Series PHEV (2017-2021)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
+                "commonFailures": [
+                  "HV-mode high-rev power loss - rubber-band feeling, typically 55k-75k miles",
+                  "Charging system communication fault - onboard charger sync failure, 45k-65k miles",
+                  "12V accessory battery failure causing no-start/hybrid disable, 40k-60k miles"
+                ],
                 "avgRebuiltPrice": "£1,395 - £2,400",
                 "cta": "Get quotes for LEB3 Honda Clarity engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -579,23 +568,9 @@
                 ],
                 "commonFailures": [
                   "Charging port sync failure - intermittent no-charge fault, typically 50k-70k miles",
-                  "12V battery drain affecting hybrid system enable, 40k-60k miles"
+                  "12V battery drain affecting hybrid system enable, 40k-60k miles",
+                  "e-CVT shudder under load - motor-generator alignment issue, 60k-80k miles"
                 ],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "e",
-                "title": "CVT shudder under load - motor-generator alignment issue, 60k-80k miles",
-                "familyHeading": "LEB3 Series PHEV (2017-2021)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
                 "avgRebuiltPrice": "£1,495 - £2,600",
                 "cta": "Get quotes for LEB31 Honda Clarity engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -612,37 +587,11 @@
                 "compatibleVariants": [
                   "Clarity Plug-in Hybrid Base (2019-2021), Clarity Plug-in Hybrid Touring (2019-2021), Clarity PHEV Facelift FWD e-CVT, Clarity Grey Import Facelift Compliant"
                 ],
-                "commonFailures": [],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "e",
-                "title": "CVT shudder under load - motor-generator alignment, typically 65k-85k miles",
-                "familyHeading": "LEB3 Series PHEV (2017-2021)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "Charging system communication error",
-                "title": "hybrid control module sync, 55k-75k miles",
-                "familyHeading": "LEB3 Series PHEV (2017-2021)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
+                "commonFailures": [
+                  "e-CVT shudder under load - motor-generator alignment, typically 65k-85k miles",
+                  "Charging system communication error - hybrid control module sync, 55k-75k miles",
+                  "Battery degradation affecting engine load management, 70k-90k miles"
+                ],
                 "avgRebuiltPrice": "£1,495 - £2,800",
                 "cta": "Get quotes for LEB3A Honda Clarity engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -686,18 +635,6 @@
               "size": "1.5L",
               "power": "103hp (petrol) / 212hp (combined system)",
               "compatibleModels": "Clarity Plug-in Hybrid Base, Clarity Plug-in Hybrid Base (2017-2018), Clarity Plug-in Hybrid Base (2019-2021), Clarity PHEV FWD e-CVT, Clarity Grey Import Compliant",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "HV",
-              "title": "mode high-rev power loss - rubber-band feeling, typically 55k-75k miles",
-              "familyHeading": "LEB3 Series PHEV (2017-2021)",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
               "avgRebuiltPrice": "£1,395 - £2,400",
               "cta": "Get quotes for LEB3 Honda Clarity engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -710,18 +647,6 @@
               "size": "1.5L",
               "power": "103hp (petrol) / 212hp (combined system)",
               "compatibleModels": "Clarity Plug-in Hybrid Touring (2017-2018), Clarity PHEV Touring FWD e-CVT, Clarity Grey Import Touring Compliant",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "e",
-              "title": "CVT shudder under load - motor-generator alignment issue, 60k-80k miles",
-              "familyHeading": "LEB3 Series PHEV (2017-2021)",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
               "avgRebuiltPrice": "£1,495 - £2,600",
               "cta": "Get quotes for LEB31 Honda Clarity engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -734,30 +659,6 @@
               "size": "1.5L",
               "power": "103hp (petrol) / 212hp (combined system)",
               "compatibleModels": "Clarity Plug-in Hybrid Base (2019-2021), Clarity Plug-in Hybrid Touring (2019-2021), Clarity PHEV Facelift FWD e-CVT, Clarity Grey Import Facelift Compliant",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "e",
-              "title": "CVT shudder under load - motor-generator alignment, typically 65k-85k miles",
-              "familyHeading": "LEB3 Series PHEV (2017-2021)",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "Charging system communication error",
-              "title": "hybrid control module sync, 55k-75k miles",
-              "familyHeading": "LEB3 Series PHEV (2017-2021)",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
               "avgRebuiltPrice": "£1,495 - £2,800",
               "cta": "Get quotes for LEB3A Honda Clarity engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
