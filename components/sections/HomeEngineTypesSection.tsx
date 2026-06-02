@@ -1,6 +1,6 @@
 "use client";
 
-import { type ReactNode, useState } from "react";
+import { type ReactNode, useState, useEffect, useRef } from "react";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
 import type { HomeEngineTypeCard } from "@/lib/homepageData";
@@ -121,6 +121,19 @@ function getIcon(icon: HomeEngineTypeCard["icon"]) {
 
 export default function HomeEngineTypesSection({ cards }: Props) {
   const [activeCard, setActiveCard] = useState<string | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia?.("(max-width: 767px)");
+    const update = () => setIsMobile(!!mq?.matches);
+    update();
+    if (mq && mq.addEventListener) mq.addEventListener("change", update);
+    else if (mq && mq.addListener) mq.addListener(update);
+    return () => {
+      if (mq && mq.removeEventListener) mq.removeEventListener("change", update);
+      else if (mq && mq.removeListener) mq.removeListener(update);
+    };
+  }, []);
 
   return (
     <Section id="engine-types" className="bg-white py-7 sm:py-8 lg:py-10">
@@ -141,91 +154,85 @@ export default function HomeEngineTypesSection({ cards }: Props) {
           </p>
         </div>
 
-        <div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-          {cards.map((card) => {
-            const flipped = activeCard === card.id;
+        {isMobile ? (
+          <MobileStack cards={cards} />
+        ) : (
+          <div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+            {cards.map((card) => {
+              const flipped = activeCard === card.id;
 
-            return (
-              <div key={card.id} className="perspective-1000 min-h-[286px] sm:min-h-[304px] xl:min-h-[316px]">
-                <button
-                  type="button"
-                  onClick={() => setActiveCard(flipped ? null : card.id)}
-                  className="block h-full w-full text-left"
-                  aria-pressed={flipped}
-                  aria-label={`${flipped ? "Hide details for" : "Show details for"} ${card.title}`}
-                >
-                  <div
-                    className={`relative h-full min-h-[286px] rounded-[18px] transition duration-500 [transform-style:preserve-3d] sm:min-h-[304px] xl:min-h-[316px] ${
-                      flipped ? "[transform:rotateY(180deg)]" : ""
-                    }`}
+              return (
+                <div key={card.id} className="perspective-1000 min-h-[286px] sm:min-h-[304px] xl:min-h-[280px]">
+                  <button
+                    type="button"
+                    onClick={() => setActiveCard(flipped ? null : card.id)}
+                    className="block h-full w-full text-left"
+                    aria-pressed={flipped}
+                    aria-label={`${flipped ? "Hide details for" : "Show details for"} ${card.title}`}
                   >
-                    <div className="absolute inset-0 flex h-full flex-col overflow-hidden rounded-[18px] border border-[#0d1b2e]/14 bg-white p-5 shadow-[0_18px_38px_rgba(13,27,46,0.06)] [backface-visibility:hidden] sm:p-6">
-                      <span className="text-[11px] font-extrabold uppercase tracking-[0.18em] text-[#15803d]">
-                        {card.label}
-                      </span>
+                    <div
+                      className={`relative h-full min-h-[286px] rounded-[18px] transition duration-500 [transform-style:preserve-3d] sm:min-h-[304px] xl:min-h-[280px] ${flipped ? "[transform:rotateY(180deg)]" : ""
+                        }`}
+                    >
+                      <div className="absolute inset-0 flex h-full flex-col overflow-hidden rounded-[18px] border border-[#0d1b2e]/14 bg-white p-5 shadow-[0_18px_38px_rgba(13,27,46,0.06)] [backface-visibility:hidden] sm:p-6">
+                        <div className="mt-4 flex items-start gap-4 justify-center">
+                          <div className="min-w-0 flex-1 text-center">
+                            <h3
+                              className="font-['Manrope'] text-[22px] font-bold leading-[1.02] text-[#0d1b2e] sm:text-[24px]"
+                            >
+                              {card.title}
+                            </h3>
 
-                      <div className="mt-4 flex items-start gap-4">
-                        <div className="flex h-[70px] w-[70px] flex-none items-center justify-center rounded-[14px] border border-[#0d1b2e]/18 bg-[#f8fbff] text-[#0d1b2e]">
-                          {getIcon(card.icon)}
+                            <p className="mt-2.5 text-[14px] font-bold leading-[1.45] text-[#0d1b2e]">
+                              {card.price}
+                            </p>
+                          </div>
                         </div>
 
-                        <div className="min-w-0 flex-1">
-                          <h3 className="font-['Manrope'] text-[22px] font-bold leading-[1.02] text-[#0d1b2e] sm:text-[24px]">
-                            {card.title}
-                          </h3>
+                        <p className="mt-4 line-clamp-4 text-center text-[14px] leading-[1.65] text-[#5a6478]">
+                          {card.summary}
+                        </p>
 
-                          <p className="mt-2.5 text-[14px] font-bold leading-[1.45] text-[#0d1b2e]">
-                            {card.price}
+                        <span className="mt-auto inline-flex items-center justify-center gap-2 pt-4 text-[14px] font-bold text-[#15803d]">
+                          <span>{card.cta}</span>
+                          <ArrowIcon />
+                        </span>
+                      </div>
+
+                      <div className="absolute inset-0 flex h-full flex-col overflow-hidden rounded-[18px] border border-[#0d1b2e] bg-[#0d1b2e] p-5 text-white shadow-[0_24px_48px_rgba(7,25,54,0.18)] [backface-visibility:hidden] [transform:rotateY(180deg)] sm:p-4">
+                        <h3
+                          className="font-['Manrope'] text-[20px] font-bold leading-[1.2] text-white"
+                        >
+                          {card.backHeader}
+                        </h3>
+
+                        <div className="mt-5 min-h-0 flex-1 overflow-y-auto pr-2 [scrollbar-color:#86efac_transparent] [scrollbar-width:thin]">
+                          <div className="space-y-3">
+                            {card.details.map((detail) => (
+                              <div key={`${card.id}-${detail.label}`} className="flex items-start gap-3 text-[13px] leading-[1.55] text-[#e8eef7]">
+                                <span className="mt-[1px] flex h-5 w-5 flex-none items-center justify-center rounded-full bg-[#15803d] text-white">
+                                  <TickStarIcon />
+                                </span>
+                                <div>
+                                  <span className="font-semibold text-white">{detail.label}</span>
+                                  <span className="text-[#c7d3e1]">{" "}{detail.value}</span>
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+
+                          <p className="mt-5 text-[13px] leading-[1.65] text-[#c7d3e1]">
+                            {card.closing}
                           </p>
                         </div>
                       </div>
-
-                      <p className="mt-4 line-clamp-4 text-[14px] leading-[1.65] text-[#5a6478]">
-                        {card.summary}
-                      </p>
-
-                      <span className="mt-auto inline-flex items-center gap-2 pt-4 text-[14px] font-bold text-[#15803d]">
-                        <span>{card.cta}</span>
-                        <ArrowIcon />
-                      </span>
                     </div>
-
-                    <div className="absolute inset-0 flex h-full flex-col overflow-hidden rounded-[18px] border border-[#0d1b2e] bg-[#0d1b2e] p-5 text-white shadow-[0_24px_48px_rgba(7,25,54,0.18)] [backface-visibility:hidden] [transform:rotateY(180deg)] sm:p-6">
-                      <h3 className="font-['Manrope'] text-[20px] font-bold leading-[1.2] text-white">
-                        {card.backHeader}
-                      </h3>
-
-                      <div className="mt-5 min-h-0 flex-1 overflow-y-auto pr-2 [scrollbar-color:#86efac_transparent] [scrollbar-width:thin]">
-                        <div className="space-y-3">
-                          {card.details.map((detail) => (
-                            <div key={`${card.id}-${detail.label}`} className="flex items-start gap-3 text-[13px] leading-[1.55] text-[#e8eef7]">
-                              <span className="mt-[1px] flex h-5 w-5 flex-none items-center justify-center rounded-full bg-[#15803d] text-white">
-                                <TickStarIcon />
-                              </span>
-                              <div>
-                                <span className="font-semibold text-white">{detail.label}</span>
-                                <span className="text-[#c7d3e1]">{" "}{detail.value}</span>
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-
-                        <p className="mt-5 text-[13px] leading-[1.65] text-[#c7d3e1]">
-                          {card.closing}
-                        </p>
-                      </div>
-
-                      <span className="mt-auto inline-flex items-center gap-2 pt-5 text-[13px] font-bold text-[#86efac]">
-                        <span>{card.backCta}</span>
-                        <ArrowIcon />
-                      </span>
-                    </div>
-                  </div>
-                </button>
-              </div>
-            );
-          })}
-        </div>
+                  </button>
+                </div>
+              );
+            })}
+          </div>
+        )}
 
         <div className="mt-6 rounded-[18px] border border-white/10 bg-[#0d1b2e] px-4 py-5 sm:px-5 lg:px-8 lg:py-6">
           <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
@@ -239,5 +246,161 @@ export default function HomeEngineTypesSection({ cards }: Props) {
         </div>
       </Container>
     </Section>
+  );
+}
+
+// Mobile stacked interactive layout (simple port of engine-card-stack behavior)
+function MobileStack({ cards }: { cards: HomeEngineTypeCard[] }) {
+  const [activeIdx, setActiveIdx] = useState<number>(-1);
+  const [flippedIdx, setFlippedIdx] = useState<number>(-1);
+  const eiRefs = useRef<Array<HTMLDivElement | null>>([]);
+  const ceRefs = useRef<Array<HTMLDivElement | null>>([]);
+  const biRefs = useRef<Array<HTMLDivElement | null>>([]);
+
+  useEffect(() => {
+    // set heights when active changes
+    if (activeIdx === -1) {
+      ceRefs.current.forEach((ce) => { if (ce) ce.style.height = '0px'; });
+      return;
+    }
+    const ei = eiRefs.current[activeIdx];
+    const ce = ceRefs.current[activeIdx];
+    if (ei && ce) {
+      const h = ei.scrollHeight;
+      ce.style.height = h + 'px';
+    }
+  }, [activeIdx]);
+
+  // Open last card by default on mount
+  useEffect(() => {
+    if (!cards || cards.length === 0) return;
+    const last = cards.length - 1;
+    setActiveIdx(last);
+    // allow DOM paint then measure
+    const t = setTimeout(() => {
+      const ei = eiRefs.current[last];
+      const ce = ceRefs.current[last];
+      if (ei && ce) ce.style.height = ei.scrollHeight + 'px';
+    }, 50);
+    return () => clearTimeout(t);
+  }, [cards]);
+
+  function activateCard(i: number) {
+    if (activeIdx === i) {
+      setActiveIdx(-1);
+      setFlippedIdx(-1);
+      return;
+    }
+    // if another is flipped, unflip it
+    if (flippedIdx !== -1 && flippedIdx !== i) setFlippedIdx(-1);
+    setActiveIdx(i);
+  }
+
+  function flipCard(i: number) {
+    if (activeIdx !== i) return;
+    setFlippedIdx(i);
+    // ensure back min-height
+    setTimeout(() => {
+      const bi = biRefs.current[i];
+      const ff = ceRefs.current[i]?.parentElement?.querySelector('.face-front') as HTMLElement | null;
+      if (bi && ff) {
+        const frontH = ff.scrollHeight;
+        const backH = bi.scrollHeight + 44;
+        const minH = Math.max(frontH, Math.min(backH, 460));
+        const fb = ff.parentElement?.querySelector('.face-back') as HTMLElement | null;
+        if (fb) fb.style.minHeight = minH + 'px';
+      }
+    }, 100);
+  }
+
+  function unflipCard(i: number) { setFlippedIdx(-1); }
+
+  return (
+    <div className="mobile-stack-root">
+      <style>{`
+        .mobile-stack-root{padding:0 14px}
+        .c-card{position:relative;border-radius:18px;cursor:pointer;transition:transform .42s,margin-top .38s,box-shadow .3s;will-change:transform}
+        .c-card+.c-card{margin-top:-48px}
+        .c-card.active+.c-card{margin-top:14px}
+        .flip-inner{width:100%;transform-style:preserve-3d;transition:transform .55s;border-radius:18px}
+        .c-card.flipped .flip-inner{transform:rotateY(180deg)}
+        .face{border-radius:18px;overflow:hidden;backface-visibility:hidden}
+        .face-front{background:#fff;box-shadow:0 8px 30px rgba(0,0,50,0.08)}
+        .face-back{position:absolute;top:0;left:0;right:0;transform:rotateY(180deg);background:linear-gradient(155deg,#0d1b2e 0%,#0f2642 40%);color:#fff}
+        .peek-bar{display:flex;align-items:center;justify-content:space-between;padding:14px}
+        .peek-left{display:flex;flex-direction:column}
+        .peek-title{font-weight:700;font-size:18px}
+        .peek-price{color:#15803d;font-weight:700}
+        .peek-icon{width:30px;height:30px;border-radius:50%;background:#f0fdf4;border:1.5px solid #bbf7d0;display:flex;align-items:center;justify-content:center}
+        .card-expand{height:0;overflow:hidden;transition:height .45s}
+        .expand-inner{padding:0 16px 18px;border-top:1px solid #f3f4f6}
+        .exp-desc{color:#374151;margin:12px 0}
+        .exp-items{display:flex;flex-direction:column;gap:8px}
+        .exp-item{display:flex;gap:8px}
+        .exp-check{width:18px;height:18px;border-radius:50%;background:#f0fdf4;border:1.5px solid #bbf7d0;display:flex;align-items:center;justify-content:center}
+        .back-inner{padding:18px;min-height:160px;max-height:460px;overflow:auto}
+        .back-title{font-weight:700;font-size:20px;margin-bottom:8px}
+        .back-item{display:flex;gap:8px;margin-bottom:8px}
+        .back-check{width:18px;height:18px;border-radius:50%;background:rgba(22,163,74,0.2);border:1.5px solid rgba(22,163,74,0.5);display:flex;align-items:center;justify-content:center}
+      `}</style>
+
+      {cards.map((c, i) => {
+        const active = activeIdx === i;
+        const flipped = flippedIdx === i;
+        return (
+          <div key={c.id} className={`c-card ${active ? 'active' : ''} ${flipped ? 'flipped' : ''}`} style={{ zIndex: active ? 10 : 1 }}>
+            <div className="flip-inner">
+              <div className="face face-front">
+                <div className="peek-bar" onClick={() => activateCard(i)}>
+                  <div className="peek-left">
+                    <div className="peek-num">{i + 1} of {cards.length}</div>
+                    <div className="peek-title">{c.title}</div>
+                    
+                  </div>
+                  <div className="peek-price">{c.price}</div>
+                  <div className="peek-icon" aria-hidden>+</div>
+                </div>
+
+                <div className="card-expand" ref={el => (ceRefs.current[i] = el)}>
+                  <div className="expand-inner" ref={el => (eiRefs.current[i] = el)}>
+                    <div className="exp-desc">{c.summary}</div>
+                    <div className="exp-items">
+                      {c.details?.slice(0, 3).map((d) => (
+                        <div key={`${c.id}-${d.label}`} className="exp-item">
+                          <div className="exp-check">✓</div>
+                          <div className="exp-item-text"><strong>{d.label}:</strong> {d.value}</div>
+                        </div>
+                      ))}
+                    </div>
+                    <div style={{ marginTop: 12 }}>
+                      <button type="button" onClick={() => flipCard(i)} style={{ background: 'transparent', border: 0, color: '#15803d', fontWeight: 700 }}>Tap to see full details ↺</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="face face-back">
+                <div className="back-inner" ref={el => (biRefs.current[i] = el)}>
+                  <div className="back-eyebrow">Full Details</div>
+                  <div className="back-title">{c.title}</div>
+                  <div className="back-desc">{c.closing}</div>
+                  <div>
+                    {c.details?.map((d) => (
+                      <div key={`${c.id}-back-${d.label}`} className="back-item">
+                        <div className="back-check">✓</div>
+                        <div className="back-item-text"><strong>{d.label}:</strong> {d.value}</div>
+                      </div>
+                    ))}
+                  </div>
+                  <div style={{ marginTop: 12 }}>
+                    <button type="button" onClick={() => unflipCard(i)} style={{ background: 'transparent', border: 0, color: 'rgba(255,255,255,0.85)' }}>Back to overview</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+      })}
+    </div>
   );
 }

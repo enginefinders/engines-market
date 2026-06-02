@@ -1,8 +1,10 @@
 "use client";
 
 import { useEffect, useMemo, useState, type FormEvent } from "react";
+import { useRouter } from "next/navigation";
 import Container from "@/components/ui/Container";
 import type { HomeHeroData } from "@/lib/homepageData";
+import { carModelsBySeries, carSeries } from "@/data/brands_Models";
 import { PiEngine } from "react-icons/pi";
 import { GoShield } from "react-icons/go";
 import { GoVerified } from "react-icons/go";
@@ -33,9 +35,43 @@ type EngineCarouselItem = {
 
 type SearchMode = "registration" | "manual";
 
-const manualMakeOptions = ["BMW", "Ford", "Land Rover", "Mercedes-Benz", "Toyota", "Volkswagen"];
-const manualModelOptions = ["3 Series", "Focus", "Discovery", "E-Class", "Corolla", "Golf"];
-const manualYearOptions = ["2024", "2023", "2022", "2021", "2020", "2019"];
+type VehicleRegistrationData = {
+  registrationNumber: string;
+  year: string;
+  make: string;
+  model: string;
+  fuelType: string;
+  engineCapacity: string;
+  color: string;
+  wheelplan: string;
+};
+
+const manualMakeOptions = Object.keys(carSeries).sort();
+const manualYearOptions = Array.from({ length: 2026 - 1990 + 1 }, (_, index) => String(2026 - index));
+const carModelsBySeriesMap = carModelsBySeries as Record<string, string[]>;
+
+const normalize = (value: string) => value.toLowerCase().replace(/[^a-z0-9]/g, "");
+
+const modelsByMake: Record<string, string[] | Record<string, string[]>> = Object.entries(carSeries).reduce(
+  (accumulator, [brand, items]) => {
+    const normalizedBrand = normalize(brand);
+
+    if (Array.isArray(items) && items.length > 0 && carModelsBySeriesMap[items[0]]) {
+      const seriesMap: Record<string, string[]> = {};
+
+      items.forEach((seriesName) => {
+        seriesMap[seriesName] = carModelsBySeriesMap[seriesName] ?? [];
+      });
+
+      accumulator[normalizedBrand] = seriesMap;
+      return accumulator;
+    }
+
+    accumulator[normalizedBrand] = items;
+    return accumulator;
+  },
+  {} as Record<string, string[] | Record<string, string[]>>,
+);
 
 const rowGroups: HeroBrandRow[][] = [
   [
@@ -435,6 +471,8 @@ function CTAPanel({
   registration,
   onRegistrationChange,
   onSubmit,
+  isRegistrationLookupLoading,
+  registrationLookupError,
   gdprNote,
 }: {
   registration: string;
@@ -444,32 +482,79 @@ function CTAPanel({
     regNumber?: string;
     make?: string;
     model?: string;
+    series?: string;
     year?: string;
     engineCode?: string;
-  }) => void;
+  }) => void | Promise<void>;
+  isRegistrationLookupLoading: boolean;
+  registrationLookupError: string;
   gdprNote: string;
 }) {
   const [searchMode, setSearchMode] = useState<SearchMode>("registration");
-  const [manualMake, setManualMake] = useState(manualMakeOptions[0]);
-  const [manualModel, setManualModel] = useState(manualModelOptions[0]);
-  const [manualYear, setManualYear] = useState(manualYearOptions[0]);
+  const [manualMake, setManualMake] = useState<string>("");
+  const [manualModel, setManualModel] = useState<string>("");
+  const [manualSeries, setManualSeries] = useState<string>("");
+  const [manualYear, setManualYear] = useState<string>("");
   const [manualEngineCode, setManualEngineCode] = useState("");
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  const { seriesOptions, modelOptions } = useMemo(() => {
+    const entry = modelsByMake[normalize(manualMake)];
+
+    if (entry && !Array.isArray(entry)) {
+      return {
+        seriesOptions: Object.keys(entry),
+        modelOptions: [],
+      };
+    }
+
+    return {
+      seriesOptions: [],
+      modelOptions: (entry as string[]) ?? [],
+    };
+  }, [manualMake]);
+
+  useEffect(() => {
+    setManualModel("");
+    setManualSeries("");
+  }, [manualMake]);
+
+  useEffect(() => {
+    if (seriesOptions.length > 0) {
+      setManualSeries(seriesOptions[0]);
+    } else if (modelOptions.length > 0) {
+      setManualModel(modelOptions[0]);
+    }
+  }, [seriesOptions, modelOptions]);
+
+  const activeModelOptions = useMemo(() => {
+    if (seriesOptions.length === 0) {
+      return modelOptions;
+    }
+
+    const selectedSeriesModels = modelsByMake[normalize(manualMake)];
+    if (!selectedSeriesModels || Array.isArray(selectedSeriesModels) || manualSeries === "") {
+      return [];
+    }
+
+    return selectedSeriesModels[manualSeries] ?? [];
+  }, [manualMake, manualSeries, modelOptions, seriesOptions]);
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
     if (searchMode === "registration") {
-      onSubmit({
+      await onSubmit({
         searchMode,
         regNumber: registration.trim(),
       });
       return;
     }
 
-    onSubmit({
+    await onSubmit({
       searchMode,
       make: manualMake,
       model: manualModel,
+      series: manualSeries || undefined,
       year: manualYear,
       engineCode: manualEngineCode.trim().toUpperCase(),
     });
@@ -518,13 +603,13 @@ function CTAPanel({
             <div className="flex items-center gap-3 rounded-[8px] border border-[rgba(13,27,46,0.12)] bg-[#f9fafb] px-3 py-[10px]">
               <div className="flex flex-none items-center gap-[6px]">
                 <UKFlag />
-                <span className="text-[12px] font-extrabold text-[#0d1b2e]">GB</span>
+                <span className="text-[12px] font-extrabold text-[#0d1b2e]">UK</span>
               </div>
               <div className="h-4 w-px bg-[rgba(13,27,46,0.12)]" />
               <input
                 type="text"
                 value={registration}
-                onChange={(e) => onRegistrationChange(e.target.value.toUpperCase())}
+                onChange={(e) => onRegistrationChange(e.currentTarget.value.toUpperCase())}
                 placeholder="Enter your reg — e.g. AB12 CDE"
                 maxLength={8}
                 autoCapitalize="characters"
@@ -540,9 +625,15 @@ function CTAPanel({
                   Make
                   <select
                     value={manualMake}
-                    onChange={(e) => setManualMake(e.target.value)}
+                    onChange={(e) => {
+                      const value = e.currentTarget.value;
+                      setManualMake(value);
+                      setManualModel("");
+                      setManualSeries("");
+                    }}
                     className="h-11 w-full rounded-[8px] border border-[rgba(13,27,46,0.12)] bg-[#f9fafb] px-3 text-[14px] text-[#0d1b2e] outline-none"
                   >
+                    <option value="">Select Make</option>
                     {manualMakeOptions.map((make) => (
                       <option key={make} value={make}>
                         {make}
@@ -550,28 +641,54 @@ function CTAPanel({
                     ))}
                   </select>
                 </label>
+                {seriesOptions.length > 0 ? (
+                  <label className="grid gap-0.5 text-[12px] font-semibold text-[#0d1b2e]">
+                    Series
+                    <select
+                      value={manualSeries}
+                      onChange={(e) => {
+                        const value = e.currentTarget.value;
+                        setManualSeries(value);
+                        setManualModel("");
+                      }}
+                      className="h-11 w-full rounded-[8px] border border-[rgba(13,27,46,0.12)] bg-[#f9fafb] px-3 text-[14px] text-[#0d1b2e] outline-none"
+                    >
+                      {seriesOptions.map((s) => (
+                        <option key={s} value={s}>
+                          {s}
+                        </option>
+                      ))}
+                    </select>
+                  </label>
+                ) : null}
                 <label className="grid gap-0.5 text-[12px] font-semibold text-[#0d1b2e]">
                   Model
                   <select
                     value={manualModel}
-                    onChange={(e) => setManualModel(e.target.value)}
+                    onChange={(e) => setManualModel(e.currentTarget.value)}
                     className="h-11 w-full rounded-[8px] border border-[rgba(13,27,46,0.12)] bg-[#f9fafb] px-3 text-[14px] text-[#0d1b2e] outline-none"
                   >
-                    {manualModelOptions.map((model) => (
-                      <option key={model} value={model}>
-                        {model}
-                      </option>
-                    ))}
+                    {activeModelOptions.length ? (
+                      activeModelOptions.map((model) => (
+                        <option key={model} value={model}>
+                          {model}
+                        </option>
+                      ))
+                    ) : (
+                      <option value="">Select a model</option>
+                    )}
                   </select>
                 </label>
                 <label className="grid gap-0.5 text-[12px] font-semibold text-[#0d1b2e]">
                   Year
                   <select
                     value={manualYear}
-                    onChange={(e) => setManualYear(e.target.value)}
+                    onChange={(e) => setManualYear(e.currentTarget.value)}
+                    disabled={manualModel === ""}
                     className="h-11 w-full rounded-[8px] border border-[rgba(13,27,46,0.12)] bg-[#f9fafb] px-3 text-[14px] text-[#0d1b2e] outline-none"
                   >
-                    {manualYearOptions.map((year) => (
+                    <option value="">{manualModel === "" ? "Select Model First" : "Select Year"}</option>
+                    {manualModel !== "" && manualYearOptions.map((year) => (
                       <option key={year} value={year}>
                         {year}
                       </option>
@@ -584,7 +701,7 @@ function CTAPanel({
                 <input
                   type="text"
                   value={manualEngineCode}
-                  onChange={(e) => setManualEngineCode(e.target.value.toUpperCase())}
+                  onChange={(e) => setManualEngineCode(e.currentTarget.value.toUpperCase())}
                   placeholder="Enter engine code"
                   autoComplete="off"
                   spellCheck={false}
@@ -595,11 +712,18 @@ function CTAPanel({
           )}
           <button
             type="submit"
+            disabled={searchMode === "registration" && isRegistrationLookupLoading}
             className={`w-full rounded-[8px] bg-[#15803d] px-6 py-[13px] text-[15px] font-bold text-white shadow-[0_4px_18px_rgba(21,128,61,0.3)] transition hover:bg-[#166534] active:scale-[0.99] ${searchMode === "manual" ? "mt-2" : "mt-3"}`}
           >
-            Get Free Engine Quotes →
+            {searchMode === "registration" && isRegistrationLookupLoading ? "Checking Registration..." : "Get Free Engine Quotes →"}
           </button>
         </form>
+
+        {searchMode === "registration" && registrationLookupError ? (
+          <p className="-mt-1 mb-3 text-center text-[12px] font-semibold text-red-600">
+            {registrationLookupError}
+          </p>
+        ) : null}
 
         {/* GDPR */}
         {searchMode === "registration" ? (
@@ -641,7 +765,10 @@ function CTAPanel({
 
 /* ─── Main Component ─── */
 export default function HomeHeroSection({ data }: Props) {
+  const router = useRouter();
   const [registration, setRegistration] = useState("");
+  const [isRegistrationLookupLoading, setIsRegistrationLookupLoading] = useState(false);
+  const [registrationLookupError, setRegistrationLookupError] = useState("");
   const [groupIndex, setGroupIndex] = useState(0);
   const [carouselOffset, setCarouselOffset] = useState(0);
   const [desktopCarouselOffset, setDesktopCarouselOffset] = useState(0);
@@ -662,27 +789,69 @@ export default function HomeHeroSection({ data }: Props) {
   const engineTickerLoop = useMemo(() => [...tickerItems, ...tickerItems], []);
   const bottomTickerLoop = useMemo(() => [...bottomBarItems, ...bottomBarItems], []);
 
-  function openQuoteCheckout(payload: {
+  function appendVehicleParams(queryParams: URLSearchParams, vehicle: VehicleRegistrationData) {
+    if (vehicle.registrationNumber) queryParams.append("registrationNumber", vehicle.registrationNumber);
+    if (vehicle.year) queryParams.append("year", vehicle.year);
+    if (vehicle.make) queryParams.append("make", vehicle.make);
+    if (vehicle.model) queryParams.append("model", vehicle.model);
+    if (vehicle.fuelType) queryParams.append("fuelType", vehicle.fuelType);
+    if (vehicle.engineCapacity) queryParams.append("engineCapacity", vehicle.engineCapacity);
+    if (vehicle.color) queryParams.append("color", vehicle.color);
+    if (vehicle.wheelplan) queryParams.append("wheelplan", vehicle.wheelplan);
+  }
+
+  async function fetchVehicleRegistration(regNumber: string) {
+    const response = await fetch(`/api/vehicle-registration?registrationNumber=${encodeURIComponent(regNumber)}`);
+    const payload = (await response.json()) as { vehicle?: VehicleRegistrationData; error?: string };
+
+    if (!response.ok || !payload.vehicle) {
+      throw new Error(payload.error || "We could not find vehicle details for that registration.");
+    }
+
+    return payload.vehicle;
+  }
+
+  async function openQuoteCheckout(payload: {
     searchMode: SearchMode;
     regNumber?: string;
     make?: string;
     model?: string;
+    series?: string;
     year?: string;
     engineCode?: string;
   }) {
-    window.dispatchEvent(
-      new CustomEvent("engine-market:open-quote", {
-        detail: {
-          regNumber: payload.regNumber ?? registration.trim(),
-          searchMode: payload.searchMode,
-          make: payload.make,
-          model: payload.model,
-          year: payload.year,
-          engineCode: payload.engineCode,
-          source: payload.searchMode === "manual" ? "home-hero-manual" : "home-hero-registration",
-        },
-      }),
-    );
+    // For manual search, navigate to form page with query parameters
+    if (payload.searchMode === "manual") {
+      setRegistrationLookupError("");
+      const queryParams = new URLSearchParams();
+      if (payload.make) queryParams.append("make", payload.make);
+      if (payload.model) queryParams.append("model", payload.model);
+      if (payload.year) queryParams.append("year", payload.year);
+      if (payload.engineCode) queryParams.append("engineCode", payload.engineCode);
+
+      router.push(`/form?${queryParams.toString()}`);
+      return;
+    }
+
+    const regNumber = payload.regNumber?.trim() ?? "";
+    if (!regNumber) {
+      setRegistrationLookupError("Please enter your registration number.");
+      return;
+    }
+
+    setIsRegistrationLookupLoading(true);
+    setRegistrationLookupError("");
+
+    try {
+      const vehicle = await fetchVehicleRegistration(regNumber);
+      const queryParams = new URLSearchParams();
+      appendVehicleParams(queryParams, vehicle);
+      router.push(`/form?${queryParams.toString()}`);
+    } catch (error) {
+      setRegistrationLookupError(error instanceof Error ? error.message : "Vehicle lookup failed.");
+    } finally {
+      setIsRegistrationLookupLoading(false);
+    }
   }
 
   const activeGroup = rowGroups[groupIndex] ?? rowGroups[0];
@@ -762,6 +931,8 @@ export default function HomeHeroSection({ data }: Props) {
                   registration={registration}
                   onRegistrationChange={setRegistration}
                   onSubmit={openQuoteCheckout}
+                  isRegistrationLookupLoading={isRegistrationLookupLoading}
+                  registrationLookupError={registrationLookupError}
                   gdprNote={data.gdprNote}
                 />
               </div>
@@ -810,6 +981,8 @@ export default function HomeHeroSection({ data }: Props) {
                   registration={registration}
                   onRegistrationChange={setRegistration}
                   onSubmit={openQuoteCheckout}
+                  isRegistrationLookupLoading={isRegistrationLookupLoading}
+                  registrationLookupError={registrationLookupError}
                   gdprNote={data.gdprNote}
                 />
               </div>
