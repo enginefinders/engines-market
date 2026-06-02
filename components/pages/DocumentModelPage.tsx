@@ -69,7 +69,7 @@ export default function DocumentModelPage({
       <LiveMarketPricesSection
         data={visualData.sections.liveMarketPrices}
         modelCards={heroCards}
-        imageSrc={mainImage}
+        imageSrc={visualData.sections.liveMarketPrices.imageSrc ?? mainImage}
         displayMode="document"
         initialTimestamp={initialTimestamp}
       />

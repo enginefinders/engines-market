@@ -23,6 +23,10 @@ function assetExists(assetPath?: string | null) {
   return existsSync(toPublicFilePath(assetPath));
 }
 
+function uniquePaths(paths: Array<string | undefined | null>) {
+  return [...new Set(paths.map((pathValue) => pathValue?.trim()).filter(Boolean))] as string[];
+}
+
 function slugify(value: string) {
   return value
     .toLowerCase()
@@ -49,6 +53,10 @@ function modelSlugCandidates(pageData: ModelPageData) {
   }
 
   return [...candidates].filter(Boolean);
+}
+
+function buildLiveFeedImagePath(brandSlug: string, imageSlug: string) {
+  return `/images/brands/${brandSlug}/models/live-feed-${brandSlug}-${imageSlug}.webp`;
 }
 
 function listBrandModelAssets(brandSlug: string) {
@@ -96,6 +104,24 @@ function resolveCarPlaceholder(pageData: ModelPageData) {
   return brandAssets[0] ?? "";
 }
 
+function resolveLiveMarketPlaceholder(pageData: ModelPageData, carPlaceholder: string) {
+  const imageCandidates = modelSlugCandidates(pageData).flatMap((candidate) => [
+    pageData.sections.liveMarketPrices.imageSrc,
+    buildLiveFeedImagePath(pageData.brand.slug, candidate),
+  ]);
+
+  const preferred = uniquePaths([
+    ...imageCandidates,
+    carPlaceholder,
+    pageData.assets.mainImage,
+    pageData.assets.smallImage,
+    pageData.assets.heroBg,
+    pageData.assets.ctaImage,
+  ]).find(assetExists);
+
+  return preferred ?? carPlaceholder;
+}
+
 function isAcceptableEngineImage(assetPath: string | undefined, brandSlug: string) {
   if (!assetPath || !assetExists(assetPath)) {
     return false;
@@ -133,6 +159,7 @@ function selectEnginePlaceholder(seed: string, fuel: string, power: string) {
 
 export function applyModelPageVisualPlaceholders(pageData: ModelPageData): ModelPageData {
   const carPlaceholder = resolveCarPlaceholder(pageData);
+  const liveMarketPlaceholder = resolveLiveMarketPlaceholder(pageData, carPlaceholder);
   const resolvedImages = resolveModelImagePaths({
     brandSlug: pageData.brand.slug,
     modelSlug: pageData.model.slug,
@@ -172,6 +199,10 @@ export function applyModelPageVisualPlaceholders(pageData: ModelPageData): Model
     },
     sections: {
       ...pageData.sections,
+      liveMarketPrices: {
+        ...pageData.sections.liveMarketPrices,
+        imageSrc: liveMarketPlaceholder,
+      },
       variantCoverage: {
         ...pageData.sections.variantCoverage,
         cards,

@@ -10,6 +10,8 @@ const SHARED_ENGINE_IMAGES = [
   "/images/shared/hero-engines/temporary-performance-engine.jpeg",
 ] as const;
 
+const BRAND_IMAGE_EXTENSIONS = [".webp", ".png", ".jpg", ".jpeg"] as const;
+
 function toPublicFilePath(assetPath: string) {
   return path.join(PUBLIC_DIR, assetPath.replace(/^\//, ""));
 }
@@ -24,6 +26,14 @@ function assetExists(assetPath?: string | null) {
 
 function uniquePaths(paths: Array<string | undefined>) {
   return [...new Set(paths.map((pathValue) => pathValue?.trim()).filter(Boolean))] as string[];
+}
+
+function resolveBrandAsset(brandSlug: string, baseName: string) {
+  const candidates = BRAND_IMAGE_EXTENSIONS.map(
+    (extension) => `/images/brands/${brandSlug}/brand/${baseName}${extension}`,
+  );
+
+  return candidates.find(assetExists);
 }
 
 function selectSharedFallbacks(brandSlug: string) {
@@ -56,7 +66,13 @@ function collectBrandEngineCandidates(pageData: BrandPageData) {
 }
 
 function collectBrandCarCandidates(pageData: BrandPageData) {
+  const brandSlug = pageData.brand.slug;
+
   return uniquePaths([
+    pageData.sections.liveMarketPrices.imageSrc,
+    resolveBrandAsset(brandSlug, `live-feed-${brandSlug}`),
+    resolveBrandAsset(brandSlug, `${brandSlug}-live-market-bg`),
+    resolveBrandAsset(brandSlug, `${brandSlug}-hero-bg`),
     ...pageData.sections.models.cards.map((card) => card.image),
     pageData.assets.heroBg,
   ]).filter(assetExists);
@@ -73,7 +89,16 @@ export function resolveBrandPageVisuals(pageData: BrandPageData) {
   const heroMainCar =
     carCandidates[0] ?? pageData.sections.models.cards[0]?.image ?? pageData.assets.heroBg;
   const liveMarketCar =
-    carCandidates[1] ?? carCandidates[0] ?? pageData.sections.models.cards[0]?.image ?? pageData.assets.heroBg;
+    uniquePaths([
+      pageData.sections.liveMarketPrices.imageSrc,
+      resolveBrandAsset(pageData.brand.slug, `live-feed-${pageData.brand.slug}`),
+      resolveBrandAsset(pageData.brand.slug, `${pageData.brand.slug}-live-market-bg`),
+      carCandidates[1],
+      carCandidates[0],
+      pageData.sections.models.cards[0]?.image,
+      pageData.assets.heroBg,
+    ]).find(assetExists)
+    ?? heroMainCar;
 
   return {
     hero: heroMainCar,

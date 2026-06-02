@@ -193,7 +193,7 @@ export default async function BrandPage({ params }: BrandPageProps) {
       <LiveMarketPricesSection
         data={pageData.sections.liveMarketPrices}
         modelCards={pageData.sections.models.cards}
-        imageSrc={brandVisuals.liveMarket}
+        imageSrc={pageData.sections.liveMarketPrices.imageSrc ?? brandVisuals.liveMarket}
         initialTimestamp={initialTimestamp}
       />
 

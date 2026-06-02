@@ -110,6 +110,7 @@ export type LiveMarketPricesData = {
   h2: string;
   headingLines?: string[];
   h3: string;
+  imageSrc?: string;
   imageAlt?: string;
   introBullets: {
     label: string;
