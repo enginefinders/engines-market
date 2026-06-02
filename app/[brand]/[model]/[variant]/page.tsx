@@ -34,11 +34,11 @@ export async function generateMetadata({ params }: VariantPageProps): Promise<Me
       ? undefined
       : {
           index: false,
-          follow: false,
+          follow: true,
           nocache: true,
           googleBot: {
             index: false,
-            follow: false,
+            follow: true,
             noimageindex: true,
           },
         },
