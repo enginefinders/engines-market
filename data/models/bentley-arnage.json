@@ -173,6 +173,75 @@
         ]
       }
     },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "Bentley Arnage Engines - Codes, Common Failures & Replacement Costs",
+      "description": "The cards below cover the engines fitted to the Bentley Arnage in the UK - including known failure causes, production years across variants, typical replacement costs, and key technical specs. All prices reflect typical UK market ranges for rebuilt units.",
+      "cards": [
+        {
+          "code": "RS56SX",
+          "imagePlaceholder": "",
+          "altText": "Bentley Arnage RS56SX engine - petrol 6.75L replacement UK",
+          "productionHistory": [
+            "Arnage R (2002-2009)",
+            "Arnage T (2002-2009)",
+            "Arnage RL (2002-2006)",
+            "Arnage Azure (2006-2009)",
+            "Arnage Brooklands (2007-2010)"
+          ],
+          "knownFailures": [
+            "Camshaft tappet wear - flat tappets degrade on 2002-2006 units, causing ticking noise and loss of power.",
+            "Head gasket failure - common at 60-80k miles, leading to coolant loss and white exhaust smoke.",
+            "Turbo oil feed leaks - Garrett turbo seals wear, causing oil consumption and boost pressure loss."
+          ],
+          "specs": "Petrol · 6.75L · 450-500hp · Twin-Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £8,900-£12,500 (supply only)"
+        },
+        {
+          "code": "L675",
+          "imagePlaceholder": "",
+          "altText": "Bentley Arnage L675 engine - petrol 6.75L replacement UK",
+          "productionHistory": [
+            "Arnage Red Label (1999-2001)",
+            "Arnage Red Label LWB (1999-2001)",
+            "Arnage Le Mans Series (2001)"
+          ],
+          "knownFailures": [
+            "Head gasket failure - MLS gaskets wear at 60-80k miles, causing overheating and coolant mixing.",
+            "Distributor gear wear - timing drift occurs on high-mileage units if not serviced regularly.",
+            "Oil pressure drop - high-volume pump upgrade recommended for engines over 70k miles."
+          ],
+          "specs": "Petrol · 6.75L · 400hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £7,900-£10,200 (supply only)"
+        },
+        {
+          "code": "M62B44",
+          "imagePlaceholder": "",
+          "altText": "Bentley Arnage M62B44 engine - petrol 4.4L replacement UK",
+          "productionHistory": [
+            "Arnage Green Label (1998-2000)"
+          ],
+          "knownFailures": [
+            "VANOS unit wear - variable timing solenoids fail, causing rough idle and reduced performance.",
+            "Turbo wastegate rattle - Garrett turbos develop play, affecting boost control and engine response.",
+            "Electronic throttle adaptation - drive-by-wire system requires recalibration after component replacement."
+          ],
+          "specs": "Petrol · 4.4L · 350-354hp · Twin-Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £7,900-£9,800 (supply only) Estimated from comparable M62B44 units - actual quotes may vary."
+        }
+      ],
+      "headingLines": [
+        "Bentley Arnage Engines",
+        "Codes, Common Failures & Replacement Costs"
+      ],
+      "imageAlt": "Bentley Arnage engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
     "liveMarketPrices": {
       "tag": "Live UK Engine Market Data",
       "h2": "",
@@ -304,8 +373,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/bentley/models/live-feed-bentley-arnage.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",

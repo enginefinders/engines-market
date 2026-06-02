@@ -173,6 +173,77 @@
         ]
       }
     },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "Aston Martin DBS Engines - Codes, Common Failures & Replacement Costs",
+      "description": "The cards below cover the main engines fitted to the Aston Martin DBS across classic, modern and Superleggera generations, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data.",
+      "cards": [
+        {
+          "code": "AM08",
+          "imagePlaceholder": "",
+          "altText": "Aston Martin DBS AM08 engine - petrol 5.9L replacement UK",
+          "productionHistory": [
+            "DBS V12 (2007-2012)",
+            "DBS Volante (2009-2012)",
+            "DBS Carbon Edition (2010-2012)",
+            "DBS UB-2010 (2010)",
+            "DBS Dragon 88 (2012)"
+          ],
+          "knownFailures": [
+            "Coil pack failure - ignition coils degrade causing misfires and potential catalyst ingestion at 40k-70k miles.",
+            "Catalyst ingestion - failed coils send unburnt fuel to cats, causing ceramic breakdown and engine destruction.",
+            "Timing chain tensioner wear - chain noise and potential jump on high-mileage units without preventative maintenance."
+          ],
+          "specs": "Petrol · 5.9L · 510-517hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £8,500-£28,000 (supply only)"
+        },
+        {
+          "code": "V540",
+          "imagePlaceholder": "",
+          "altText": "Aston Martin DBS V540 engine - petrol 5.3L replacement UK",
+          "productionHistory": [
+            "DBS V8 (1969-1972)",
+            "DBS Vantage /SVC (1970-1972)",
+            "DBS Vantage /VC (1967-1969)"
+          ],
+          "knownFailures": [
+            "Cylinder head cracking - aluminium heads prone to stress cracks around valve seats on high-mileage classic units.",
+            "Carburettor tuning issues - Weber 45 DCOE carbs require expert setup; poor tuning causes rough running and fuel wash.",
+            "Oil seal degradation - period rubber seals harden and leak after decades; full reseal recommended during rebuild."
+          ],
+          "specs": "Petrol · 5.3L · 280-325hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £15,000-£45,000 (supply only) Estimated from comparable V540 units - actual quotes may vary."
+        },
+        {
+          "code": "AE31",
+          "imagePlaceholder": "",
+          "altText": "Aston Martin DBS AE31 engine - petrol 5.2L replacement UK",
+          "productionHistory": [
+            "DBS Superleggera (2018-2022)",
+            "DBS Superleggera Volante (2019-2022)",
+            "DBS Superleggera AMR (2021-2022)"
+          ],
+          "knownFailures": [
+            "Twin turbocharger wear - turbo seals and bearings can fail on high-mileage examples, causing oil consumption and loss of boost.",
+            "Direct injection carbon buildup - intake valves accumulate deposits affecting performance on short-journey driven cars.",
+            "Cooling system sensitivity - intercooler and radiator efficiency critical; overheating risks on track or hot-climate use."
+          ],
+          "specs": "Petrol · 5.2L · 715-725hp · Twin Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £18,000-£42,000 (supply only) Estimated from comparable AE31 units - actual quotes may vary."
+        }
+      ],
+      "headingLines": [
+        "Aston Martin DBS Engines",
+        "Codes, Common Failures & Replacement Costs"
+      ],
+      "imageAlt": "Aston Martin DBS engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
     "liveMarketPrices": {
       "tag": "Live UK Engine Market Data",
       "h2": "",
@@ -336,8 +407,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/aston-martin/models/live-feed-aston-martin-dbs.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",

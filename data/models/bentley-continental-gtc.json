@@ -173,6 +173,74 @@
         ]
       }
     },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "Bentley Continental GTC Engines - Codes, Common Failures & Replacement Costs",
+      "description": "The cards below cover the main engines fitted to the Bentley Continental GTC in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data. All prices reflect typical UK market ranges for supply-only rebuilt units.",
+      "cards": [
+        {
+          "code": "MDHE",
+          "imagePlaceholder": "",
+          "altText": "Bentley Continental GTC MDHE engine - petrol 6.0L replacement UK",
+          "productionHistory": [
+            "Continental GTC W12 (2012-2018)",
+            "Continental GTC Speed W12 (2012-2018)",
+            "Continental GTC V8 models with W12 option (2012-2018)"
+          ],
+          "knownFailures": [
+            "Timing chain tensioner wear - documented on high-mileage W12 units, causing rattle on cold start.",
+            "Turbocharger seal degradation - oil leaks into intake common after 60k miles on twin-turbo W12.",
+            "Electrical terminal connection issues - recall-related no-start problems on 2011-2014 models."
+          ],
+          "specs": "Petrol · 6.0L · 560-630hp · Twin-Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £18,000-£32,000 (supply only)"
+        },
+        {
+          "code": "CYCA",
+          "imagePlaceholder": "",
+          "altText": "Bentley Continental GTC CYCA engine - petrol 4.0L replacement UK",
+          "productionHistory": [
+            "Continental GTC V8 (2012-2018)",
+            "Continental GTC Azure V8 (2015-2018)",
+            "Continental GTC V8 S (2015-2018, higher-output variant)"
+          ],
+          "knownFailures": [
+            "Fuel pump electrical failure - documented on 2011-2014 V8 units, causing intermittent no-start.",
+            "Excessive oil consumption - worn piston rings or valve seals on higher-mileage 4.0L twin-turbo.",
+            "Carbon buildup on intake valves - direct injection engines require walnut blasting after 50k miles."
+          ],
+          "specs": "Petrol · 4.0L · 500-529hp · Twin-Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £15,000-£28,000 (supply only)"
+        },
+        {
+          "code": "CKHA",
+          "imagePlaceholder": "",
+          "altText": "Bentley Continental GTC CKHA engine - petrol 6.0L replacement UK",
+          "productionHistory": [
+            "Continental GTC Supersports (2009-2011)",
+            "Continental GTC Speed (2008-2011, select markets)"
+          ],
+          "knownFailures": [
+            "High-performance turbo stress - uprated turbos on Supersports units show earlier wear under hard use.",
+            "Cooling system strain - additional thermal load from 630PS output accelerates water pump failure.",
+            "Misfire diagnosis complexity - multiple random misfire codes reported, difficult to isolate without specialist equipment."
+          ],
+          "specs": "Petrol · 6.0L · 630hp · Twin-Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £22,000-£35,000 (supply only) Estimated from comparable high-performance W12 units - actual quotes may vary."
+        }
+      ],
+      "headingLines": [
+        "Bentley Continental GTC Engines",
+        "Codes, Common Failures & Replacement Costs"
+      ],
+      "imageAlt": "Bentley Continental GTC engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
     "liveMarketPrices": {
       "tag": "Live UK Engine Market Data",
       "h2": "",
@@ -336,8 +404,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/bentley/models/live-feed-bentley-continental-gtc.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",

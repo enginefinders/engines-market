@@ -173,10 +173,80 @@
         ]
       }
     },
-    "liveMarketPrices": {
+    "engineIntelligence": {
       "tag": "Engine Intelligence",
       "h2": "Dodge Ram 1500 Engines - Codes, Common Failures & Replacement Costs",
-      "h3": "The cards below cover the main engines fitted to the Dodge Ram 1500 in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data.",
+      "description": "The cards below cover the main engines fitted to the Dodge Ram 1500 in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data.",
+      "cards": [
+        {
+          "code": "EZH/ESF",
+          "imagePlaceholder": "",
+          "altText": "Dodge Ram 1500 EZH ESF engine - petrol 5.7L replacement UK",
+          "productionHistory": [
+            "Big Horn 5.7L Hemi - 2009-2018 (EZH), 2013-2023 (ESF)",
+            "Laramie 5.7L Hemi - 2009-2018 (EZH), 2013-2023 (ESF)",
+            "Rebel 5.7L Hemi eTorque - 2019-2023 (ETH)",
+            "Limited 5.7L Hemi - 2013-2023"
+          ],
+          "knownFailures": [
+            "Hemi tick/lifter collapse - hydraulic lifters fail 60k-100k miles, causing tapping noise and misfires.",
+            "Camshaft lobe wear - worn cam lobes reduce valve lift, leading to power loss and rough running.",
+            "VVT solenoid failure - oil pressure issues cause variable timing faults and check engine lights."
+          ],
+          "specs": "Petrol · 5.7L · 395hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £2,800-£6,500 (supply only)"
+        },
+        {
+          "code": "ERG",
+          "imagePlaceholder": "",
+          "altText": "Dodge Ram 1500 ERG engine - petrol 3.6L replacement UK",
+          "productionHistory": [
+            "Tradesman 3.6L Pentastar - 2009-2023",
+            "Big Horn 3.6L Pentastar - 2009-2023",
+            "Laramie 3.6L Pentastar - 2009-2018"
+          ],
+          "knownFailures": [
+            "Oil pump update required - early units suffer low oil pressure; updated pump recommended during rebuild.",
+            "Timing chain tensioner wear - chain rattles on cold start after 80k miles if not serviced.",
+            "Cylinder head cracking - rare but documented on high-mileage units with overheating history."
+          ],
+          "specs": "Petrol · 3.6L · 305hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £2,200-£4,900 (supply only)"
+        },
+        {
+          "code": "EXN",
+          "imagePlaceholder": "",
+          "altText": "Dodge Ram 1500 EXN engine - diesel 3.0L replacement UK",
+          "productionHistory": [
+            "Big Horn 3.0L EcoDiesel - 2014-2023",
+            "Laramie 3.0L EcoDiesel - 2014-2023",
+            "Rebel 3.0L EcoDiesel - 2014-2023"
+          ],
+          "knownFailures": [
+            "DEF/SCR system faults - emissions components fail, triggering limp mode and warning lights.",
+            "EGR cooler cracking - coolant leaks into exhaust, causing white smoke and overheating.",
+            "Turbocharger actuator failure - variable geometry vanes stick, reducing boost and power."
+          ],
+          "specs": "Diesel · 3.0L · 260hp · Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £3,200-£7,200 (supply only) Estimated from comparable EXN units - actual quotes may vary."
+        }
+      ],
+      "headingLines": [
+        "Dodge Ram 1500 Engines",
+        "Codes, Common Failures & Replacement Costs"
+      ],
+      "imageAlt": "Dodge Ram 1500 engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
+    "liveMarketPrices": {
+      "tag": "Live UK Engine Market Data",
+      "h2": "",
+      "h3": "",
       "introBullets": [
         {
           "label": "Live market context",
@@ -224,10 +294,7 @@
         "visibleRows": 0,
         "entries": []
       },
-      "headingLines": [
-        "Dodge Ram 1500 Engines",
-        "Codes, Common Failures & Replacement Costs"
-      ],
+      "headingLines": [],
       "imageAlt": "Dodge Ram 1500 live market price reference",
       "filterTabs": [
         {
@@ -339,8 +406,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/dodge/models/live-feed-dodge-ram-1500.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",
@@ -500,7 +566,7 @@
           "priceRange": "£8,500-£15,000",
           "cta": "Compare TRX Engine Prices",
           "engineCodes": [
-            "Hellca"
+            "Hellcat 6.2L Supercharged Petrol"
           ],
           "fuel": "Petrol",
           "power": "702hp",
@@ -587,7 +653,7 @@
           "priceRange": "£3,000-£7,500",
           "cta": "Compare Low Mileage Engine Prices",
           "engineCodes": [
-            "Under"
+            "Under 60k Miles"
           ],
           "fuel": "",
           "power": "",

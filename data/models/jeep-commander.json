@@ -175,6 +175,75 @@
         ]
       }
     },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "Jeep Commander Engines - Codes, Common Failures & Replacement Costs",
+      "description": "The cards below cover the main engines fitted to the Jeep Commander in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data.",
+      "cards": [
+        {
+          "code": "OM642",
+          "imagePlaceholder": "",
+          "altText": "Jeep Commander OM642 engine - diesel 3.0L replacement UK",
+          "productionHistory": [
+            "3.0 CRD V6 Diesel - 2006-2010",
+            "Sport, Limited trims (XH export version) - 2006-2010",
+            "UK-market Predator and Limited diesel variants - 2006-2010"
+          ],
+          "knownFailures": [
+            "EGR valve clogging - carbon buildup restricts flow causing rough idle and limp mode after 70k miles.",
+            "Turbocharger oil feed failure - restricted oil supply leads to turbo seizure on high-mileage units.",
+            "Injector wear - high-pressure diesel injectors degrade causing poor fuel economy and misfires."
+          ],
+          "specs": "Diesel · 3.0L · 218hp · Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £1,660-£3,950 (supply only)"
+        },
+        {
+          "code": "EKG",
+          "imagePlaceholder": "",
+          "altText": "Jeep Commander EKG engine - petrol 3.7L replacement UK",
+          "productionHistory": [
+            "3.7L PowerTech V6 Petrol - 2006-2010",
+            "Sport trim (base model) - 2006-2010",
+            "65th Anniversary and Rocky Mountain editions - 2006-2009"
+          ],
+          "knownFailures": [
+            "Exhaust manifold bolt failure - bolts shear causing exhaust leak and ticking noise on cold start.",
+            "Timing chain tensioner wear - plastic guides degrade leading to chain rattle after 90k miles.",
+            "Oil pump pickup screen clogging - sludge buildup reduces oil pressure at higher mileage."
+          ],
+          "specs": "Petrol · 3.7L · 210hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £1,805-£3,400 (supply only)"
+        },
+        {
+          "code": "EVL",
+          "imagePlaceholder": "",
+          "altText": "Jeep Commander EVL engine - petrol 5.7L replacement UK",
+          "productionHistory": [
+            "5.7L Hemi V8 Petrol - 2006-2010",
+            "Limited and Overland trims - 2006-2009",
+            "Updated 360hp variant - 2009-2010"
+          ],
+          "knownFailures": [
+            "Hemi lifter collapse - MDS system lifters fail causing tappet noise and loss of cylinder deactivation.",
+            "Camshaft wear - premature lobe wear on MDS-equipped engines leading to rough running.",
+            "Oil consumption - piston ring wear increases oil burn on high-mileage Hemi units."
+          ],
+          "specs": "Petrol · 5.7L · 330-360hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £3,200-£6,800 (supply only) Estimated from comparable Hemi V8 units - actual quotes may vary."
+        }
+      ],
+      "headingLines": [
+        "Jeep Commander Engines",
+        "Codes, Common Failures & Replacement Costs"
+      ],
+      "imageAlt": "Jeep Commander engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
     "liveMarketPrices": {
       "tag": "Live UK Engine Market Data",
       "h2": "",
@@ -338,8 +407,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/jeep/models/live-feed-jeep-commander.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",

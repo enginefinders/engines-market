@@ -175,10 +175,80 @@
         ]
       }
     },
-    "liveMarketPrices": {
+    "engineIntelligence": {
       "tag": "Engine Intelligence",
       "h2": "Jeep Grand Engines - Codes, Common Failures & Replacement Costs",
-      "h3": "The cards below cover the main engines fitted to the Jeep Grand in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data.",
+      "description": "The cards below cover the main engines fitted to the Jeep Grand in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data.",
+      "cards": [
+        {
+          "code": "EHD",
+          "imagePlaceholder": "",
+          "altText": "Jeep Grand EHD engine - diesel 3.0L replacement UK",
+          "productionHistory": [
+            "Jeep Grand WK2 3.0 CRD Laredo - 2011-2021",
+            "Jeep Grand WK2 3.0 CRD Limited - 2011-2021",
+            "Jeep Grand WK2 3.0 CRD Overland - 2011-2021",
+            "Jeep Grand WL 3.0 CRD - 2021-present"
+          ],
+          "knownFailures": [
+            "Timing chain stretch - documented failure between 80k-120k miles on high-mileage units.",
+            "Oil cooler seal leaks - coolant contamination leading to seized engines if ignored.",
+            "Turbocharger wear - variable geometry vanes stick on units over 100k miles."
+          ],
+          "specs": "Diesel · 3.0L · 241-265hp · Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £1,500-£4,500 (supply only)"
+        },
+        {
+          "code": "ERB",
+          "imagePlaceholder": "",
+          "altText": "Jeep Grand ERB engine - petrol 3.6L replacement UK",
+          "productionHistory": [
+            "Jeep Grand WK2 3.6 Pentastar Laredo - 2011-2021",
+            "Jeep Grand WK2 3.6 Pentastar Limited - 2011-2021",
+            "Jeep Grand WL 3.6 Pentastar - 2021-present"
+          ],
+          "knownFailures": [
+            "Rocker arm failure - documented issue causing camshaft damage and ticking noise.",
+            "Oil cooler leaks - external coolant/oil mixing leading to overheating.",
+            "Timing chain tensioner wear - rattling on cold start after 90k miles."
+          ],
+          "specs": "Petrol · 3.6L · 290-295hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £1,800-£4,200 (supply only)"
+        },
+        {
+          "code": "ESD",
+          "imagePlaceholder": "",
+          "altText": "Jeep Grand ESD engine - petrol 5.7L replacement UK",
+          "productionHistory": [
+            "Jeep Grand WK 5.7 HEMI Laredo - 2005-2010",
+            "Jeep Grand WK2 5.7 HEMI Limited - 2011-2021",
+            "Jeep Grand WK2 5.7 HEMI Overland - 2011-2021"
+          ],
+          "knownFailures": [
+            "Hemi tick lifter failure - roller lifters collapse causing camshaft damage.",
+            "Exhaust manifold bolt breakage - common on high-mileage units.",
+            "Oil consumption increase - piston ring wear documented after 120k miles."
+          ],
+          "specs": "Petrol · 5.7L · 360-395hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £3,500-£7,500 (supply only)"
+        }
+      ],
+      "headingLines": [
+        "Jeep Grand Engines",
+        "Codes, Common Failures & Replacement Costs"
+      ],
+      "imageAlt": "Jeep Grand engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
+    "liveMarketPrices": {
+      "tag": "Live UK Engine Market Data",
+      "h2": "",
+      "h3": "",
       "introBullets": [
         {
           "label": "Live market context",
@@ -226,10 +296,7 @@
         "visibleRows": 0,
         "entries": []
       },
-      "headingLines": [
-        "Jeep Grand Engines",
-        "Codes, Common Failures & Replacement Costs"
-      ],
+      "headingLines": [],
       "imageAlt": "Jeep Grand live market price reference",
       "filterTabs": [
         {
@@ -341,8 +408,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/jeep/models/live-feed-jeep-grand.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",

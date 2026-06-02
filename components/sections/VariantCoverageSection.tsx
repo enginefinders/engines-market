@@ -12,6 +12,18 @@ type Props = {
 
 type VariantCard = ModelVariantCoverageSectionData["cards"][number];
 
+function isRenderableVariantCard(card: VariantCard) {
+  const hasHeading = card.h3.trim().length > 0;
+  const hasSlug = card.slug.trim().length > 0 && card.slug.trim() !== "-engine";
+  const hasSpecs =
+    card.priceRange.trim().length > 0 ||
+    card.power.trim().length > 0 ||
+    (card.years?.trim().length ?? 0) > 0 ||
+    card.engineCodes.length > 0;
+
+  return hasHeading && hasSlug && hasSpecs;
+}
+
 function GridIcon() {
   return (
     <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" aria-hidden="true">
@@ -123,31 +135,93 @@ function groupCards(cards: VariantCard[]) {
     .filter((group) => group.cards.length > 0);
 }
 
-function groupCardsFromData(data: ModelVariantCoverageSectionData) {
+function groupCardsFromData(data: ModelVariantCoverageSectionData, cards: VariantCard[]) {
   if (data.groups?.length) {
     return data.groups
       .map((group) => ({
         key: group.title.toLowerCase().replace(/[^a-z0-9]+/g, "-"),
         title: group.title,
         cards: group.cardSlugs
-          .map((slug) => data.cards.find((card) => card.slug === slug))
+          .map((slug) => cards.find((card) => card.slug === slug))
           .filter((card): card is VariantCard => Boolean(card)),
       }))
       .filter((group) => group.cards.length > 0);
   }
 
-  return groupCards(data.cards);
+  return groupCards(cards);
+}
+
+function isRenderableDirectoryItem(item: string) {
+  const normalizedItem = item.trim();
+
+  if (!normalizedItem) {
+    return false;
+  }
+
+  if (/^not sure which variant/i.test(normalizedItem)) {
+    return false;
+  }
+
+  if (normalizedItem.length > 40 && /[.?!]$/.test(normalizedItem)) {
+    return false;
+  }
+
+  if (/variants$/i.test(normalizedItem) && normalizedItem.split(/\s+/).length > 2) {
+    return false;
+  }
+
+  return true;
+}
+
+function getRenderableDirectoryGroups(data: ModelVariantCoverageSectionData) {
+  return data.directory.groups
+    .map((group) => {
+      const seenItems = new Set<string>();
+      const items = group.items.filter((item) => {
+        if (!isRenderableDirectoryItem(item)) {
+          return false;
+        }
+
+        const normalizedKey = item.trim().toLowerCase();
+        if (seenItems.has(normalizedKey)) {
+          return false;
+        }
+
+        seenItems.add(normalizedKey);
+        return true;
+      });
+
+      return {
+        ...group,
+        items,
+      };
+    })
+    .filter((group) => group.items.length > 0);
 }
 
 export default function VariantCoverageSection({ data }: Props) {
-  const defaultOpenCard = data.cards[0]?.slug ?? null;
+  const renderableCards = useMemo(
+    () => data.cards.filter(isRenderableVariantCard),
+    [data.cards],
+  );
+  const renderableDirectoryGroups = useMemo(
+    () => getRenderableDirectoryGroups(data),
+    [data],
+  );
+  const defaultOpenCard = renderableCards[0]?.slug ?? null;
   const [openCard, setOpenCard] = useState<string | null>(defaultOpenCard);
   const [seenCards, setSeenCards] = useState<Record<string, boolean>>(
     defaultOpenCard ? { [defaultOpenCard]: true } : {},
   );
-  const groupedCards = useMemo(() => groupCardsFromData(data), [data]);
+  const groupedCards = useMemo(() => groupCardsFromData(data, renderableCards), [data, renderableCards]);
   const headingLines = data.headingLines?.length ? data.headingLines : [data.h2];
   const ui = data.ui ?? {};
+  const directoryHeading = data.directory.h3.trim();
+  const directoryIntro = data.directory.intro.trim();
+
+  if (!groupedCards.length) {
+    return null;
+  }
 
   function toggleCard(slug: string) {
     setOpenCard((current) => (current === slug ? null : slug));
@@ -299,17 +373,23 @@ export default function VariantCoverageSection({ data }: Props) {
             <BookIcon />
             <span>{data.directory.label ?? "Variant Directory"}</span>
           </div>
-          <h3 className="mt-3 text-[24px] font-extrabold tracking-[-0.03em] text-[#0d1b2e]">{data.directory.h3}</h3>
-          <p className="mt-2 max-w-[900px] text-[13px] leading-[1.7] text-slate-600">{data.directory.intro}</p>
+          {directoryHeading ? (
+            <h3 className="mt-3 text-[24px] font-extrabold tracking-[-0.03em] text-[#0d1b2e]">
+              {directoryHeading}
+            </h3>
+          ) : null}
+          {directoryIntro ? (
+            <p className="mt-2 max-w-[900px] text-[13px] leading-[1.7] text-slate-600">{directoryIntro}</p>
+          ) : null}
 
           <div className="mt-5 grid gap-3 lg:grid-cols-3">
-            {data.directory.groups.map((group) => (
+            {renderableDirectoryGroups.map((group) => (
               <article key={group.title} className="rounded-[14px] border border-slate-200 bg-white p-4">
                 <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-[#15803d]">{group.title}</p>
                 <div className="mt-3 flex flex-wrap gap-[7px]">
-                  {group.items.map((item) => (
+                  {group.items.map((item, index) => (
                     <span
-                      key={item}
+                      key={`${group.title}-${item}-${index}`}
                       className="rounded-full border border-slate-200 bg-slate-50 px-[10px] py-[5px] text-[11px] font-semibold text-slate-700"
                     >
                       {item}

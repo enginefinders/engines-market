@@ -173,6 +173,73 @@
         ]
       }
     },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "Lexus IS 200d Engines - Codes, Common Failures & Replacement Costs",
+      "description": "The cards below cover the engines fitted to the Lexus IS 200d in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data.",
+      "cards": [
+        {
+          "code": "2AD-FTV",
+          "imagePlaceholder": "",
+          "altText": "Lexus IS 200d 2AD-FTV engine - diesel 2.2L replacement UK",
+          "productionHistory": [
+            "IS 200d SE - 2010-2013",
+            "IS 200d Advance - 2010-2013",
+            "IS 200d Luxury - 2010-2013",
+            "IS 200d F Sport - 2010-2013",
+            "IS 200d Executive - 2010-2013"
+          ],
+          "knownFailures": [
+            "EGR cooler failure - coolant leaks into exhaust causing white smoke and overheating from 60k miles.",
+            "DPF clogging - soot buildup on short journeys triggers regeneration failure and power loss.",
+            "Timing chain tensioner wear - OEM 13510-11020 can fail causing rattles and potential catastrophic damage."
+          ],
+          "specs": "Diesel · 2.2L · 148-177hp · Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £2,400-£3,500 (supply only)"
+        },
+        {
+          "code": "2AD-FHV",
+          "imagePlaceholder": "",
+          "altText": "Lexus IS 200d 2AD-FHV engine - diesel 2.2L replacement UK",
+          "productionHistory": [
+            "IS 220d SE (compatible with IS 200d) - 2010-2013",
+            "IS 220d Advance (compatible with IS 200d) - 2010-2013"
+          ],
+          "knownFailures": [
+            "5th injector failure - cold start difficulties and rough idle reported on higher-mileage units.",
+            "Water pump seal wear - coolant leaks around pump housing after 80k miles if not serviced."
+          ],
+          "specs": "Diesel · 2.2L · 148-177hp · Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £2,200-£3,200 (supply only) Estimated from comparable 2AD-FTV units - actual quotes may vary."
+        },
+        {
+          "code": "2AD-FTV",
+          "imagePlaceholder": "",
+          "altText": "Lexus IS 200d 2AD-FTV engine - diesel 2.2L replacement UK",
+          "productionHistory": [
+            "IS 200d Late Production (2012-2013) - updated EGR cooler 22320-11010",
+            "IS 200d F Sport (2011-2013) - revised turbocharger calibration"
+          ],
+          "knownFailures": [
+            "High-pressure fuel pump wear - pressure loss and injector calibration faults on units over 100k miles.",
+            "Oil consumption increase - piston ring wear leading to top-ups between services on high-mileage examples."
+          ],
+          "specs": "Diesel · 2.2L · 148-177hp · Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £2,600-£3,800 (supply only)"
+        }
+      ],
+      "headingLines": [
+        "Lexus IS 200d Engines",
+        "Codes, Common Failures & Replacement Costs"
+      ],
+      "imageAlt": "Lexus IS 200d engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
     "liveMarketPrices": {
       "tag": "Live UK Engine Market Data",
       "h2": "",
@@ -336,8 +403,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/lexus/models/live-feed-lexus-is-200d.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",

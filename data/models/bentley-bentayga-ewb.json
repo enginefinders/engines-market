@@ -173,6 +173,77 @@
         ]
       }
     },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "Bentley Bentayga Ewb Engines - Codes, Common Failures & Replacement Costs",
+      "description": "The cards below cover the 4.0L V8 engine fitted to the Bentley Bentayga Ewb in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data.",
+      "cards": [
+        {
+          "code": "DCU",
+          "imagePlaceholder": "",
+          "altText": "Bentley Bentayga Ewb DCU engine - petrol 4.0L replacement UK",
+          "productionHistory": [
+            "Bentayga EWB Azure - 2022-present",
+            "Bentayga EWB First Edition - 2022-present",
+            "Bentayga EWB Mulliner - 2022-present",
+            "Bentayga EWB Atelier Edition - 2023-present",
+            "Bentayga EWB Odyssey Edition - 2024-present"
+          ],
+          "knownFailures": [
+            "Fuel pump wiring recall - NHTSA 23V592000 affects 2017-2023 models including some EWB vehicles.",
+            "EA825 coolant leak - water pump or thermostat housing failures can cause overheating on higher-mileage units.",
+            "Turbo actuator wear - twin-turbo setup may experience actuator sticking after 60k+ miles."
+          ],
+          "specs": "Petrol · 4.0L · 542-550hp · Twin-Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £16,500-£28,000 (supply only)"
+        },
+        {
+          "code": "EA825",
+          "imagePlaceholder": "",
+          "altText": "Bentley Bentayga Ewb EA825 engine - petrol 4.0L replacement UK",
+          "productionHistory": [
+            "Bentayga EWB Azure - 2022-present",
+            "Bentayga EWB First Edition - 2022-present",
+            "Bentayga EWB Mulliner - 2022-present"
+          ],
+          "knownFailures": [
+            "Timing chain tensioner wear - rare but documented on high-mileage EA825 units; major labour-intensive job.",
+            "Oil consumption increase - worn piston rings or valve seals may cause elevated oil usage after 70k miles.",
+            "Engine management light - persistent EML may indicate sensor or internal component failure requiring diagnosis."
+          ],
+          "specs": "Petrol · 4.0L · 542-550hp · Twin-Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £16,500-£28,000 (supply only)"
+        },
+        {
+          "code": "DCU-B",
+          "imagePlaceholder": "",
+          "altText": "Bentley Bentayga Ewb DCU-B engine - petrol 4.0L replacement UK",
+          "productionHistory": [
+            "Bentayga EWB Mulliner - 2024-present",
+            "Bentayga EWB Azure - 2024-present",
+            "Bentayga EWB Odyssey Edition - 2024-present"
+          ],
+          "knownFailures": [
+            "Minor emissions revisions - DCU-B includes updated ECU mapping; compatibility checks essential for replacement.",
+            "Fuel system wiring - recall-related issues may affect early DCU-B units; verify recall status before purchase.",
+            "Turbocharger balancing - twin-turbo setup requires precise balancing; specialist fitting recommended."
+          ],
+          "specs": "Petrol · 4.0L · 542-550hp · Twin-Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £18,000-£32,000 (supply only) Estimated from comparable DCU units - actual quotes may vary."
+        }
+      ],
+      "headingLines": [
+        "Bentley Bentayga Ewb Engines",
+        "Codes, Common Failures & Replacement Costs"
+      ],
+      "imageAlt": "Bentley Bentayga Ewb engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
     "liveMarketPrices": {
       "tag": "Live UK Engine Market Data",
       "h2": "",
@@ -336,8 +407,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/bentley/models/live-feed-bentley-bentayga-ewb.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",

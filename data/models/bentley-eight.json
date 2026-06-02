@@ -173,6 +173,73 @@
         ]
       }
     },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "Bentley Eight Engines - Codes, Common Failures & Replacement Costs",
+      "description": "The cards below cover the 6.75L L-series V8 engines fitted to the Bentley Eight in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data.",
+      "cards": [
+        {
+          "code": "L410I",
+          "imagePlaceholder": "",
+          "altText": "Bentley Eight L410I engine - petrol 6.75L replacement UK",
+          "productionHistory": [
+            "Bentley Eight Standard (SC1 chassis) - 1984-1992",
+            "Bentley Eight High-Compression (SE variants) - 1987-1992",
+            "Bentley Eight with Bosch K-Jetronic fuel injection - 1986-1992"
+          ],
+          "knownFailures": [
+            "Hydraulic lifter collapse - tappet noise and valve train wear after 70k miles on high-mileage units.",
+            "Wet liner seal degradation - coolant-oil mixing symptoms requiring liner reseal or block overhaul.",
+            "Plastic coolant pipe brittleness - valley pipe cracks causing overheating and internal corrosion."
+          ],
+          "specs": "Petrol · 6.75L · 200-230hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £8,500-£12,500 (supply only) Estimated from comparable L410I units - actual quotes may vary due to classic car scarcity."
+        },
+        {
+          "code": "L410",
+          "imagePlaceholder": "",
+          "altText": "Bentley Eight L410 engine - petrol 6.75L replacement UK",
+          "productionHistory": [
+            "Bentley Eight pre-1986 twin SU carburettor models - 1984-1986",
+            "Bentley Eight early production naturally aspirated V8 - 1984-1992"
+          ],
+          "knownFailures": [
+            "Ageing crankshaft oil seal leaks - front and rear main seal degradation causing persistent oil seepage.",
+            "Timing chain tensioner fatigue - cold-start rattle and chain guide wear on 30+ year-old units.",
+            "SU carburettor diaphragm failure - poor running and fuel delivery issues on pre-injection models."
+          ],
+          "specs": "Petrol · 6.75L · 190-210hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £8,500-£11,800 (supply only) Estimated from comparable L410 units - actual quotes may vary due to classic car scarcity."
+        },
+        {
+          "code": "L410D",
+          "imagePlaceholder": "",
+          "altText": "Bentley Eight L410D engine - petrol 6.75L replacement UK",
+          "productionHistory": [
+            "Bentley Eight Turbo performance variant - 1985-1995",
+            "Bentley Eight Turbo with Garrett T3 single-turbo system - 1985-1992"
+          ],
+          "knownFailures": [
+            "Turbo oil feed line blockage - insufficient lubrication causing turbo bearing failure and boost loss.",
+            "Intercooler pipe degradation - charge air leaks reducing performance and increasing intake temperatures.",
+            "Boost pressure sensor faults - erratic turbo response and ECU limp-mode activation on high-mileage units."
+          ],
+          "specs": "Petrol · 6.75L · 230-260hp · Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £13,500-£18,500 (supply only) Estimated from comparable L410D Turbo units - actual quotes may vary due to performance variant scarcity."
+        }
+      ],
+      "headingLines": [
+        "Bentley Eight Engines",
+        "Codes, Common Failures & Replacement Costs"
+      ],
+      "imageAlt": "Bentley Eight engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
     "liveMarketPrices": {
       "tag": "Live UK Engine Market Data",
       "h2": "",
@@ -336,8 +403,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/bentley/models/live-feed-bentley-eight.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",

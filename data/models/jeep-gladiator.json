@@ -175,6 +175,74 @@
         ]
       }
     },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "Jeep Gladiator Engines - Codes, Common Failures & Replacement Costs",
+      "description": "The cards below cover the main engines fitted to the Jeep Gladiator in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data.",
+      "cards": [
+        {
+          "code": "ERC",
+          "imagePlaceholder": "",
+          "altText": "Jeep Gladiator ERC engine - petrol 3.6L replacement UK",
+          "productionHistory": [
+            "Sport, Sport S, Willys, Overland (JT, 2019-2024)",
+            "Rubicon, Mojave (JT, 2019-2024)",
+            "High Altitude, Freedom Edition (JT, 2020-2023)"
+          ],
+          "knownFailures": [
+            "Timing chain tensioner wear - TSB 2021-045, common after 60k miles on early JT units.",
+            "Oil filter housing leak - plastic housing cracks, leading to oil loss and potential engine damage.",
+            "VVT phaser rattle - variable valve timing components wear, causing rough idle and power loss."
+          ],
+          "specs": "Petrol · 3.6L · 285hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £3,850-£6,200 (supply only)"
+        },
+        {
+          "code": "ERF",
+          "imagePlaceholder": "",
+          "altText": "Jeep Gladiator ERF engine - petrol 3.6L replacement UK",
+          "productionHistory": [
+            "Rubicon, Rubicon X (JT LCI, 2021-2024)",
+            "Overland, High Altitude (JT LCI, 2021-2024)",
+            "Mojave (JT LCI, 2021-2024)"
+          ],
+          "knownFailures": [
+            "Camshaft/rocker arm wear - documented on high-mileage units, often follows timing chain issues.",
+            "Software calibration updates required - ECU reflash needed post-replacement for optimal performance.",
+            "Oil pressure sensor faults - electrical component failure triggering warning lights."
+          ],
+          "specs": "Petrol · 3.6L · 285hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £4,100-£6,500 (supply only)"
+        },
+        {
+          "code": "EXJ",
+          "imagePlaceholder": "",
+          "altText": "Jeep Gladiator EXJ engine - diesel 3.0L replacement UK",
+          "productionHistory": [
+            "Sport, Overland, Rubicon Diesel (JT, 2020-2024)",
+            "Commercial-spec Gladiator variants (JT, 2020-2023)"
+          ],
+          "knownFailures": [
+            "EGR cooler failure - TSB 2020-034, causes coolant loss and potential overheating.",
+            "DPF regeneration issues - frequent short journeys lead to clogging and derate mode.",
+            "HPFP (high-pressure fuel pump) wear - common on higher-mileage EcoDiesel units."
+          ],
+          "specs": "Diesel · 3.0L · 260hp · Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £4,200-£7,100 (supply only) Estimated from comparable EXJ units - actual quotes may vary."
+        }
+      ],
+      "headingLines": [
+        "Jeep Gladiator Engines",
+        "Codes, Common Failures & Replacement Costs"
+      ],
+      "imageAlt": "Jeep Gladiator engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
     "liveMarketPrices": {
       "tag": "Live UK Engine Market Data",
       "h2": "",
@@ -338,8 +406,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/jeep/models/live-feed-jeep-gladiator.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",

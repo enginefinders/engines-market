@@ -173,10 +173,82 @@
         ]
       }
     },
-    "liveMarketPrices": {
+    "engineIntelligence": {
       "tag": "Engine Intelligence",
       "h2": "Dodge Challenger Engines - Codes, Common Failures & Replacement Costs",
-      "h3": "The cards below cover the main engines fitted to the Dodge Challenger in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data.",
+      "description": "The cards below cover the main engines fitted to the Dodge Challenger in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data.",
+      "cards": [
+        {
+          "code": "EZH",
+          "imagePlaceholder": "",
+          "altText": "Dodge Challenger EZH engine - petrol 5.7L replacement UK",
+          "productionHistory": [
+            "R/T (2008-2023)",
+            "R/T Shaker (2013-2023)",
+            "T/A (2017-2023)",
+            "GT (2017-2023, AWD)"
+          ],
+          "knownFailures": [
+            "Valve seat dropping - exhaust valve seats can drop into cylinder, causing catastrophic failure from 60k miles.",
+            "MDS lifter failure - cylinder deactivation lifters collapse, damaging camshaft and requiring full engine rebuild.",
+            "Oil consumption increase - worn piston rings lead to excessive oil burn, common on high-mileage units."
+          ],
+          "specs": "Petrol · 5.7L · 370-375hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £3,500-£6,500 (supply only)"
+        },
+        {
+          "code": "ERB",
+          "imagePlaceholder": "",
+          "altText": "Dodge Challenger ERB engine - petrol 3.6L replacement UK",
+          "productionHistory": [
+            "SXT (2011-2023)",
+            "GT (2011-2023, AWD)",
+            "SXT Plus (2015-2023)",
+            "SXT Blacktop (2013-2023)"
+          ],
+          "knownFailures": [
+            "Timing chain tensioner failure - plastic tensioners wear prematurely, causing chain slap and potential valve damage.",
+            "Cylinder head cracking - known issue on pre-2016 units, leading to coolant loss and overheating.",
+            "Oil cooler housing leaks - gasket failure causes oil/coolant mixing, requiring head-off repair."
+          ],
+          "specs": "Petrol · 3.6L · 305-309hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £2,200-£4,200 (supply only)"
+        },
+        {
+          "code": "ESG",
+          "imagePlaceholder": "",
+          "altText": "Dodge Challenger ESG engine - petrol 6.4L replacement UK",
+          "productionHistory": [
+            "R/T Scat Pack (2015-2023)",
+            "392 HEMI (2011-2023)",
+            "T/A 392 (2017-2023)",
+            "Widebody 392 (2020-2023)"
+          ],
+          "knownFailures": [
+            "Valve seat dropping - more prevalent on high-performance 392 applications under hard driving.",
+            "Piston ring land failure - aggressive tuning or poor fuel can cause ring land collapse on track-driven cars.",
+            "Oil pump pickup screen clogging - debris from wear can restrict oil flow, leading to bearing failure."
+          ],
+          "specs": "Petrol · 6.4L · 485hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £5,500-£9,500 (supply only) Estimated from comparable 392 HEMI units - actual quotes may vary."
+        }
+      ],
+      "headingLines": [
+        "Dodge Challenger Engines",
+        "Codes, Common Failures & Replacement Costs"
+      ],
+      "imageAlt": "Dodge Challenger engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
+    "liveMarketPrices": {
+      "tag": "Live UK Engine Market Data",
+      "h2": "",
+      "h3": "",
       "introBullets": [
         {
           "label": "Live market context",
@@ -224,10 +296,7 @@
         "visibleRows": 0,
         "entries": []
       },
-      "headingLines": [
-        "Dodge Challenger Engines",
-        "Codes, Common Failures & Replacement Costs"
-      ],
+      "headingLines": [],
       "imageAlt": "Dodge Challenger live market price reference",
       "filterTabs": [
         {
@@ -339,8 +408,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/dodge/models/live-feed-dodge-challenger.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",

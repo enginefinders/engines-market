@@ -77,6 +77,28 @@ export type ModelVariantCoverageSectionData = {
   };
 };
 
+export type ModelEngineIntelligenceData = {
+  tag: string;
+  h2: string;
+  description: string;
+  imageAlt?: string;
+  cards: {
+    code: string;
+    imagePlaceholder?: string;
+    altText?: string;
+    productionHistory: string[];
+    knownFailures: string[];
+    specs: string;
+    replacementCost: string;
+  }[];
+  ui?: {
+    productionHistoryLabel?: string;
+    knownFailuresLabel?: string;
+    specsLabel?: string;
+    replacementCostLabel?: string;
+  };
+};
+
 export type ModelPageData = {
   brand: {
     name: string;
@@ -108,6 +130,7 @@ export type ModelPageData = {
   sections: {
     hero: HeroSectionData;
     howItWorks: HowItWorksData;
+    engineIntelligence?: ModelEngineIntelligenceData;
     liveMarketPrices: LiveMarketPricesData;
     reviews?: ReviewsSectionData;
     variantCoverage: ModelVariantCoverageSectionData;

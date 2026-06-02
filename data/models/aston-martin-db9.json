@@ -173,6 +173,75 @@
         ]
       }
     },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "Aston Martin DB9 Engines - Codes, Common Failures & Replacement Costs",
+      "description": "The cards below cover the V12 engines fitted to the Aston Martin DB9 in the UK - including documented failure causes like ticking noise and coil pack issues, production years across Coupe and Volante variants, and typical rebuilt engine costs based on current UK market data.",
+      "cards": [
+        {
+          "code": "AM11",
+          "imagePlaceholder": "",
+          "altText": "Aston Martin DB9 AM11 engine - petrol 5.9L replacement UK",
+          "productionHistory": [
+            "2dr Coupe 6.0 V12 (470bhp) - 2004-2008",
+            "Volante 6.0 V12 (470bhp) - 2004-2008",
+            "Sport Pack variants - 2006-2008"
+          ],
+          "knownFailures": [
+            "Ticking noise from hydraulic lash adjusters - documented across early Cosworth-built AM11 blocks, often requiring full rebuild.",
+            "Coil pack failure on cylinders 3, 9, 10 - common misfire pattern on pre-facelift units causing rough running.",
+            "Oval cylinder bore wear - specific to early Cosworth AM11 blocks, identified by specialist rebuilders as critical failure point."
+          ],
+          "specs": "Petrol · 5.9L · 470hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £17,000-£24,000 (supply only)"
+        },
+        {
+          "code": "AM11A",
+          "imagePlaceholder": "",
+          "altText": "Aston Martin DB9 AM11A engine - petrol 6.0L replacement UK",
+          "productionHistory": [
+            "2dr Coupe 6.0 V12 (510bhp facelift) - 2008-2012",
+            "Volante 6.0 V12 (510bhp facelift) - 2008-2012",
+            "Carbon Black Edition - 2009-2012"
+          ],
+          "knownFailures": [
+            "Lash adjuster ticking persists on facelift units - though improved, still documented in owner forums as common complaint.",
+            "Ignition coil degradation - similar cylinder-specific misfire patterns to pre-facelift, particularly on higher-mileage examples.",
+            "Oil consumption increase - reported on facelift AM11A units beyond 60k miles, often linked to valve stem seal wear."
+          ],
+          "specs": "Petrol · 6.0L · 510hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £19,500-£27,000 (supply only)"
+        },
+        {
+          "code": "AM11 (Cosworth-built)",
+          "imagePlaceholder": "",
+          "altText": "Aston Martin DB9 Cosworth V12 engine - petrol 5.9L replacement UK specialist",
+          "productionHistory": [
+            "Early production Coupe 6.0 V12 - 2004-2006",
+            "Early production Volante 6.0 V12 - 2004-2006",
+            "Pre-facelift Sport Pack variants - 2004-2008"
+          ],
+          "knownFailures": [
+            "Small-end bearing failure - documented on early Cosworth AM11 blocks, can lead to catastrophic bottom-end damage if ignored.",
+            "Cylinder liner ovalisation - unique to Cosworth-built blocks, requires specialist machining or full replacement.",
+            "Timing chain tensioner wear - less common but documented on high-mileage early units, can cause rattling on cold start."
+          ],
+          "specs": "Petrol · 5.9L · 470hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £22,000-£27,000 (supply only) Estimated from comparable AM11 units - actual quotes may vary due to Cosworth-specific rebuild requirements."
+        }
+      ],
+      "headingLines": [
+        "Aston Martin DB9 Engines",
+        "Codes, Common Failures & Replacement Costs"
+      ],
+      "imageAlt": "Aston Martin DB9 engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
     "liveMarketPrices": {
       "tag": "Live UK Engine Market Data",
       "h2": "",
@@ -336,8 +405,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/aston-martin/models/live-feed-aston-martin-db9.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",

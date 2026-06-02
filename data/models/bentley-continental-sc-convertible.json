@@ -173,10 +173,79 @@
         ]
       }
     },
-    "liveMarketPrices": {
+    "engineIntelligence": {
       "tag": "Engine Intelligence",
       "h2": "Bentley Continental SC Convertible Engines - Codes, Common Failures & Replacement Costs",
-      "h3": "The cards below cover the main engines fitted to the Bentley Continental SC Convertible in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data.",
+      "description": "The cards below cover the main engines fitted to the Bentley Continental SC Convertible in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data.",
+      "cards": [
+        {
+          "code": "BR6",
+          "imagePlaceholder": "",
+          "altText": "Bentley Continental SC Convertible BR6 engine - petrol 6.0L W12 replacement UK",
+          "productionHistory": [
+            "Continental GTC W12 (2006-2011)",
+            "Continental GTC Speed W12 (2009-2011)",
+            "Continental Supersports Convertible (2010-2011)"
+          ],
+          "knownFailures": [
+            "Timing chain tensioner wear - rear-mounted tensioners fail 60k-90k miles causing rattles and potential chain skip.",
+            "Turbo actuator failure - Gen II W12 actuators seize, triggering limp mode and reduced boost pressure.",
+            "Valley pan gasket coolant leaks - thermal cycling degrades gaskets, causing external coolant seepage."
+          ],
+          "specs": "Petrol · 6.0L W12 · 552-621hp · Twin-Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £9,200-£12,500 (supply only)"
+        },
+        {
+          "code": "AWD",
+          "imagePlaceholder": "",
+          "altText": "Bentley Continental SC Convertible AWD engine - petrol 4.0L V8 replacement UK",
+          "productionHistory": [
+            "Continental GTC V8 (2012-2018)",
+            "Continental GTC V8 S (2014-2018)",
+            "Continental GTC Speed V8 (2015-2018)"
+          ],
+          "knownFailures": [
+            "Carbon buildup intake valves - direct injection causes decoking required 40k-60k miles for optimal performance.",
+            "Timing chain tensioner TSB fix - SWE-19-07 bulletin addresses premature tensioner wear on pre-2016 units.",
+            "Cylinder deactivation lifter wear - Gen III V8 lifters fail under stop-start urban driving patterns."
+          ],
+          "specs": "Petrol · 4.0L V8 · 492-521hp · Twin-Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £6,800-£8,500 (supply only)"
+        },
+        {
+          "code": "CRB",
+          "imagePlaceholder": "",
+          "altText": "Bentley Continental SC Convertible CRB engine - petrol 6.0L W12 hybrid-ready replacement UK",
+          "productionHistory": [
+            "Continental GTC W12 (2018-2025)",
+            "Continental GTC Mulliner W12 (2020-2025)",
+            "Continental GTC Speed W12 (2019-2022)"
+          ],
+          "knownFailures": [
+            "PCV valve coking - stop-start driving accelerates breather system carbon deposits affecting crankcase ventilation.",
+            "High-pressure fuel pump wear - Gen III HPFP shows increased wear 70k+ miles under UK urban conditions.",
+            "48V mild-hybrid belt tensioner - starter-generator system requires specialist tensioner inspection during replacement."
+          ],
+          "specs": "Petrol · 6.0L W12 · 626-650hp · Twin-Turbocharged MHEV",
+          "replacementCost": "Typical UK rebuilt engine: £11,200-£14,800 (supply only) Estimated from comparable Gen III W12 units - actual quotes may vary due to hybrid-electronic integration complexity."
+        }
+      ],
+      "headingLines": [
+        "Bentley Continental SC Convertible Engines",
+        "Codes, Common Failures & Replacement Costs"
+      ],
+      "imageAlt": "Bentley Continental SC Convertible engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
+    "liveMarketPrices": {
+      "tag": "Live UK Engine Market Data",
+      "h2": "",
+      "h3": "",
       "introBullets": [
         {
           "label": "Live market context",
@@ -224,10 +293,7 @@
         "visibleRows": 0,
         "entries": []
       },
-      "headingLines": [
-        "Bentley Continental SC Convertible Engines",
-        "Codes, Common Failures & Replacement Costs"
-      ],
+      "headingLines": [],
       "imageAlt": "Bentley Continental SC Convertible live market price reference",
       "filterTabs": [
         {
@@ -339,8 +405,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/bentley/models/live-feed-bentley-continental-sc-convertible.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",

@@ -173,6 +173,74 @@
         ]
       }
     },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "Bentley Mulsanne Engines - Codes, Common Failures & Replacement Costs",
+      "description": "The cards below cover the main engines fitted to the Bentley Mulsanne in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data.",
+      "cards": [
+        {
+          "code": "L410",
+          "imagePlaceholder": "",
+          "altText": "Bentley Mulsanne L410 engine - petrol 6.75L replacement UK",
+          "productionHistory": [
+            "Mulsanne (1980-1987) - naturally aspirated 6.75L V8",
+            "Mulsanne S (1988-1991) - naturally aspirated with updated internals",
+            "Mulsanne Turbo (1982-1986) - early turbocharged application"
+          ],
+          "knownFailures": [
+            "Hydrolock damage - water ingress destroys connecting rods on 1987 Mulsanne S models.",
+            "Bosch CIS injection wear - fuel distributor degradation causes rough running after 60k miles.",
+            "Gear-driven camshaft wear - timing gear backlash increases on high-mileage L410 units."
+          ],
+          "specs": "Petrol · 6.75L · 230-300hp · Naturally Aspirated/Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £5,000-£8,000 (supply only)"
+        },
+        {
+          "code": "L410I",
+          "imagePlaceholder": "",
+          "altText": "Bentley Mulsanne L410I engine - petrol 6.75L replacement UK",
+          "productionHistory": [
+            "Mulsanne S (1988-1991) - fuel-injected variant with Bosch K-Jetronic",
+            "Mulsanne Turbo R (1985-1986) - turbocharged injection application"
+          ],
+          "knownFailures": [
+            "Bosch K-Jetronic failure - fuel distributor diaphragm rupture causes lean running and misfires.",
+            "Cold start valve wear - hard starting when cold on L410I units over 70k miles.",
+            "Injector seal degradation - fuel leaks at injector bases on ageing CIS systems."
+          ],
+          "specs": "Petrol · 6.75L · 230-300hp · Naturally Aspirated/Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £5,500-£8,500 (supply only)"
+        },
+        {
+          "code": "6.75TT",
+          "imagePlaceholder": "",
+          "altText": "Bentley Mulsanne 6.75TT engine - petrol 6.75L replacement UK",
+          "productionHistory": [
+            "Mulsanne (2010-2020) - twin-turbo modern luxury flagship",
+            "Mulsanne Speed (2014-2020) - high-output 537hp performance variant",
+            "Mulsanne 6.75 Edition by Mulliner (2020) - final production run"
+          ],
+          "knownFailures": [
+            "Turbocharger seal failure - oil consumption increases on twin-turbo units over 50k miles.",
+            "High-pressure fuel pump wear - hard starting and power loss on modern Mulsanne engines.",
+            "Timing chain tensioner wear - rattling noise on cold start for 2010-2014 units."
+          ],
+          "specs": "Petrol · 6.75L · 505-537hp · Twin-Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £8,000-£15,000 (supply only) Estimated from comparable 6.75L twin-turbo units - actual quotes may vary."
+        }
+      ],
+      "headingLines": [
+        "Bentley Mulsanne Engines",
+        "Codes, Common Failures & Replacement Costs"
+      ],
+      "imageAlt": "Bentley Mulsanne engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
     "liveMarketPrices": {
       "tag": "Live UK Engine Market Data",
       "h2": "",
@@ -288,8 +356,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/bentley/models/live-feed-bentley-mulsanne.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",

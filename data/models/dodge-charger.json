@@ -173,6 +173,72 @@
         ]
       }
     },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "Dodge Charger Engines - Codes, Common Failures & Replacement Costs",
+      "description": "The cards below cover the main engines fitted to the Dodge Charger in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data.",
+      "cards": [
+        {
+          "code": "EZH (5.7L HEMI Eagle)",
+          "imagePlaceholder": "",
+          "altText": "Dodge Charger EZH engine - petrol 5.7L replacement UK",
+          "productionHistory": [
+            "R/T, SXT Plus (LX/LD, 2011-2023)",
+            "Pursuit Police Package (2011-2020)"
+          ],
+          "knownFailures": [
+            "HEMI lifter tick - MDS lifter collapse causes camshaft damage, typically 60k-100k miles.",
+            "Exhaust manifold bolt failure - broken bolts create exhaust leaks and rattles on high-mileage units.",
+            "Oil consumption increase - worn piston rings or valve seals after 80k miles."
+          ],
+          "specs": "Petrol · 5.7L · 363-370hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £3,200-£7,500 (supply only)"
+        },
+        {
+          "code": "BGE (6.4L HEMI Apache)",
+          "imagePlaceholder": "",
+          "altText": "Dodge Charger BGE engine - petrol 6.4L replacement UK",
+          "productionHistory": [
+            "Scat Pack, SRT 392 (LD, 2012-2023)",
+            "SRT Hellcat base block (supercharged variant)"
+          ],
+          "knownFailures": [
+            "Piston ring land failure - high-compression tuning can cause ring damage under heavy load.",
+            "Oil pump pressure loss - worn pump gears reduce lubrication at idle, risking bearing wear.",
+            "Valve train wear - aggressive cam profiles accelerate rocker arm and pushrod fatigue."
+          ],
+          "specs": "Petrol · 6.4L · 475-485hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £5,800-£12,500 (supply only) Estimated from comparable 6.4L HEMI units - actual quotes may vary."
+        },
+        {
+          "code": "ERB (3.6L Pentastar)",
+          "imagePlaceholder": "",
+          "altText": "Dodge Charger ERB engine - petrol 3.6L replacement UK",
+          "productionHistory": [
+            "SE, SXT (LX/LD, 2011-2023)",
+            "Base model fleet and rental applications"
+          ],
+          "knownFailures": [
+            "Rocker arm tick - left cylinder head casting issues cause valve train noise, often 40k-70k miles.",
+            "Oil filter housing leak - plastic canister cracks or over-torquing leads to oil loss.",
+            "Timing chain tensioner wear - stretched chains cause rattling and potential valve interference."
+          ],
+          "specs": "Petrol · 3.6L · 292-300hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £2,400-£5,200 (supply only)"
+        }
+      ],
+      "headingLines": [
+        "Dodge Charger Engines",
+        "Codes, Common Failures & Replacement Costs"
+      ],
+      "imageAlt": "Dodge Charger engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
     "liveMarketPrices": {
       "tag": "Live UK Engine Market Data",
       "h2": "",
@@ -336,8 +402,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/dodge/models/live-feed-dodge-charger.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",
@@ -468,7 +533,7 @@
           "priceRange": "£9,500-£18,000",
           "cta": "Compare Hellcat Supercharged Engine Prices",
           "engineCodes": [
-            "Hellca"
+            "Hellcat 6.2L Petrol"
           ],
           "fuel": "Petrol",
           "power": "707-797hp",
@@ -566,7 +631,7 @@
           "priceRange": "£11,000-£22,000",
           "cta": "Compare Redeye Supercharged Engine Prices",
           "engineCodes": [
-            "Redeye"
+            "Redeye HO"
           ],
           "fuel": "Petrol",
           "power": "797hp",

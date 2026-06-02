@@ -173,10 +173,77 @@
         ]
       }
     },
-    "liveMarketPrices": {
+    "engineIntelligence": {
       "tag": "Engine Intelligence",
       "h2": "Aston Martin Valkyrie Engines - Codes, Common Failures & Replacement Costs",
-      "h3": "The cards below cover the Cosworth 6.5L naturally aspirated V12 hybrid powertrain fitted to the Aston Martin Valkyrie in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK specialist marketplace data.",
+      "description": "The cards below cover the Cosworth 6.5L naturally aspirated V12 hybrid powertrain fitted to the Aston Martin Valkyrie in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK specialist marketplace data.",
+      "cards": [
+        {
+          "code": "Cosworth V12-001",
+          "imagePlaceholder": "",
+          "altText": "Aston Martin Valkyrie Cosworth V12-001 engine - hybrid 6.5L replacement UK",
+          "productionHistory": [
+            "Valkyrie Coupe Launch Edition - 2022-2023",
+            "Valkyrie Coupe Standard Production - 2023-2024",
+            "Valkyrie Heritage Edition - 2023-2024"
+          ],
+          "knownFailures": [
+            "Pneumatic valve spring fatigue - F1-derived valvetrain components wear at extreme 13,000 RPM operation.",
+            "Hybrid KERS calibration drift - Rimac electric motor integration requires periodic software recalibration.",
+            "Dry-sump oil pressure fluctuation - high-G cornering can temporarily reduce lubrication pressure."
+          ],
+          "specs": "Hybrid Petrol · 6.5L · 1,160hp combined · Naturally Aspirated V12 + KERS",
+          "replacementCost": "Typical UK rebuilt engine: £85,000-£250,000 (supply only) Estimated from comparable Cosworth F1-derived units - actual quotes may vary significantly due to extreme scarcity."
+        },
+        {
+          "code": "Cosworth V12-AMR-001",
+          "imagePlaceholder": "",
+          "altText": "Aston Martin Valkyrie Cosworth V12-AMR-001 engine - hybrid 6.5L replacement UK",
+          "productionHistory": [
+            "Valkyrie AMR Pro Track Variant - 2023-2025",
+            "Valkyrie AMR Pro Track Pack - 2024-2025"
+          ],
+          "knownFailures": [
+            "Racing fuel injector clogging - 102 RON competition fuel can deposit residues at extreme flow rates.",
+            "Thermal management overheating - track-focused calibration increases heat load on cooling systems.",
+            "Individual throttle body sync loss - ITB induction requires precise calibration after high-stress use."
+          ],
+          "specs": "Hybrid Petrol · 6.5L · 1,160hp+ combined · Naturally Aspirated V12 + KERS",
+          "replacementCost": "Typical UK rebuilt engine: £120,000-£350,000 (supply only) Competition-spec units command ultra-premium pricing; estimated from specialist track-engine rebuilders."
+        },
+        {
+          "code": "Cosworth V12-SP-001",
+          "imagePlaceholder": "",
+          "altText": "Aston Martin Valkyrie Cosworth V12-SP-001 engine - hybrid 6.5L replacement UK",
+          "productionHistory": [
+            "Valkyrie Spider Convertible - 2023-2025",
+            "Valkyrie Spider by Q Commission - 2024-2025"
+          ],
+          "knownFailures": [
+            "Exhaust acoustic valve failure - signature F1-derived sound system components can fail under thermal cycling.",
+            "Crankshaft bearing wear - aluminium-alloy crank experiences accelerated wear at sustained high RPM.",
+            "ECU software fault - F1-derived engine management requires specialist calibration tools for diagnostics."
+          ],
+          "specs": "Hybrid Petrol · 6.5L · 1,160hp combined · Naturally Aspirated V12 + KERS",
+          "replacementCost": "Typical UK rebuilt engine: £95,000-£275,000 (supply only) Open-top variant-specific calibration adds complexity; pricing estimated from Cosworth-certified rebuilders."
+        }
+      ],
+      "headingLines": [
+        "Aston Martin Valkyrie Engines",
+        "Codes, Common Failures & Replacement Costs"
+      ],
+      "imageAlt": "Aston Martin Valkyrie engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
+    "liveMarketPrices": {
+      "tag": "Live UK Engine Market Data",
+      "h2": "",
+      "h3": "",
       "introBullets": [
         {
           "label": "Live market context",
@@ -224,10 +291,7 @@
         "visibleRows": 0,
         "entries": []
       },
-      "headingLines": [
-        "Aston Martin Valkyrie Engines",
-        "Codes, Common Failures & Replacement Costs"
-      ],
+      "headingLines": [],
       "imageAlt": "Aston Martin Valkyrie live market price reference",
       "filterTabs": [
         {
@@ -299,8 +363,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/aston-martin/models/live-feed-aston-martin-valkyrie.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",

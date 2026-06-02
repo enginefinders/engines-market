@@ -173,6 +173,71 @@
         ]
       }
     },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "Lexus LX 450d Engines - Codes, Common Failures & Replacement Costs",
+      "description": "The cards below cover the 1VD-FTV engine fitted to the Lexus LX 450d in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data for this niche grey-import model.",
+      "cards": [
+        {
+          "code": "1VD-FTV",
+          "imagePlaceholder": "",
+          "altText": "Lexus LX 450d 1VD-FTV engine - diesel 4.5L replacement UK",
+          "productionHistory": [
+            "LX 450d Luxury (VDJ201) - 2015-2021",
+            "LX 450d Sport (VDJ201) - 2015-2021",
+            "LX 450d Grey Import (VDJ201) - 2015-2021"
+          ],
+          "knownFailures": [
+            "Injection pump failure - OEM pump 0446108027 degrades from 80k miles, causing hard starting and power loss.",
+            "Turbocharger seal wear - twin-turbo units develop boost leaks and white smoke after high-mileage use.",
+            "Dusting engine damage - inadequate air filtration in off-road use leads to catastrophic cylinder wear."
+          ],
+          "specs": "Diesel · 4.5L · 272-286hp · Twin-Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £4,000-£9,500 (supply only) Estimated from comparable 1VD-FTV units - actual quotes may vary due to grey-import scarcity."
+        },
+        {
+          "code": "1VD-FTV",
+          "imagePlaceholder": "",
+          "altText": "Lexus LX 450d 1VD-FTV engine - diesel 4.5L replacement UK",
+          "productionHistory": [
+            "LX 450d Pre-Facelift (2015-2017) - VDJ201 chassis",
+            "LX 450d Facelift (2018-2021) - VDJ201 chassis update"
+          ],
+          "knownFailures": [
+            "DPF clogging - frequent short journeys cause particulate trap blockage and limp mode on UK-spec units.",
+            "Oil consumption increase - piston ring wear on 150k+ mile engines leads to blue exhaust smoke."
+          ],
+          "specs": "Diesel · 4.5L · 272-286hp · Twin-Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £4,000-£9,500 (supply only) Estimated from comparable 1VD-FTV units - actual quotes may vary due to grey-import scarcity."
+        },
+        {
+          "code": "1VD-FTV",
+          "imagePlaceholder": "",
+          "altText": "Lexus LX 450d 1VD-FTV engine - diesel 4.5L replacement UK",
+          "productionHistory": [
+            "LX 450d Euro 5 Compliant (2015-2021) - ULEZ-ready variants",
+            "LX 450d Australian Spec Import (2016-2020) - RHD confirmed fitment"
+          ],
+          "knownFailures": [
+            "Timing chain tensioner wear - rattling noise on cold start indicates tensioner degradation at higher mileage.",
+            "EGR valve carbon buildup - restricted exhaust gas recirculation causes rough idle and reduced fuel economy."
+          ],
+          "specs": "Diesel · 4.5L · 272-286hp · Twin-Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £4,000-£9,500 (supply only) Estimated from comparable 1VD-FTV units - actual quotes may vary due to grey-import scarcity."
+        }
+      ],
+      "headingLines": [
+        "Lexus LX 450d Engines",
+        "Codes, Common Failures & Replacement Costs"
+      ],
+      "imageAlt": "Lexus LX 450d engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
     "liveMarketPrices": {
       "tag": "Live UK Engine Market Data",
       "h2": "",
@@ -336,8 +401,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/lexus/models/live-feed-lexus-lx-450d.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",

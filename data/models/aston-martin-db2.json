@@ -173,6 +173,75 @@
         ]
       }
     },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "Aston Martin DB2 Engines - Codes, Common Failures & Replacement Costs",
+      "description": "The cards below cover the LB6 engine family fitted to the Aston Martin DB2 in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK specialist marketplace data.",
+      "cards": [
+        {
+          "code": "LB6/49",
+          "imagePlaceholder": "",
+          "altText": "Aston Martin DB2 LB6/49 engine - petrol 2.6L replacement UK",
+          "productionHistory": [
+            "DB2 Sports Saloon (LML/50 series) - 1950-1953",
+            "DB2 Drophead Coupe (early production) - 1950-1952",
+            "DB2 Vantage (125bhp specification) - 1951-1953"
+          ],
+          "knownFailures": [
+            "Wet cylinder liner seal failure - coolant ingress into sump causing oil contamination and bearing damage.",
+            "Oil leak at sump gasket - period cork gaskets degrade, requiring specialist resealing with modern materials.",
+            "Timing chain tensioner wear - original spring tensioners lose pressure, risking chain slap and guide damage."
+          ],
+          "specs": "Petrol · 2.6L · 105-125hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £8,000-£18,000 (supply only)"
+        },
+        {
+          "code": "LB6B/50",
+          "imagePlaceholder": "",
+          "altText": "Aston Martin DB2 LB6B/50 engine - petrol 2.6L replacement UK",
+          "productionHistory": [
+            "DB2 Sports Saloon (late production, LML/50 series) - 1952-1953",
+            "DB2 Vantage (high-compression 125bhp) - 1951-1953",
+            "DB2 Drophead Coupe (late specification) - 1952-1953"
+          ],
+          "knownFailures": [
+            "Cylinder head gasket failure - high-compression Vantage units prone to head lift under sustained load.",
+            "Valve guide wear - exhaust guides wear faster on high-output applications, causing oil consumption.",
+            "Oil pump wear - original gear pumps lose pressure after high mileage, risking bottom-end lubrication."
+          ],
+          "specs": "Petrol · 2.6L · 125hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £12,000-£22,000 (supply only)"
+        },
+        {
+          "code": "VB6J",
+          "imagePlaceholder": "",
+          "altText": "Aston Martin DB2 VB6J engine - petrol 3.0L replacement UK",
+          "productionHistory": [
+            "DB2/4 Sports Saloon (3.0L upgrade) - 1953-1955",
+            "DB2/4 Drophead Coupe (3.0L specification) - 1954-1957",
+            "DB2/4 MkII Vantage (140bhp high-compression) - 1955-1957"
+          ],
+          "knownFailures": [
+            "Wet liner cavitation erosion - 3.0L units susceptible to liner pitting without proper coolant treatment.",
+            "Carburettor synchronization issues - triple SU setup requires specialist tuning to prevent poor running.",
+            "Crankshaft main bearing wear - high-output Vantage applications accelerate bearing fatigue."
+          ],
+          "specs": "Petrol · 3.0L · 140-165hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £15,000-£25,000 (supply only) Estimated from comparable LB6-family units - actual quotes may vary due to DB2/4 rarity."
+        }
+      ],
+      "headingLines": [
+        "Aston Martin DB2 Engines",
+        "Codes, Common Failures & Replacement Costs"
+      ],
+      "imageAlt": "Aston Martin DB2 engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
     "liveMarketPrices": {
       "tag": "Live UK Engine Market Data",
       "h2": "",
@@ -336,8 +405,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/aston-martin/models/live-feed-aston-martin-db2.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",

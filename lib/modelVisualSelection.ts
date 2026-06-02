@@ -192,8 +192,8 @@ export function applyModelPageVisualPlaceholders(pageData: ModelPageData): Model
     ...pageData,
     assets: {
       ...pageData.assets,
-      mainImage: resolvedImages.expectedMainImage,
-      smallImage: resolvedImages.expectedSmallImage,
+      mainImage: resolvedImages.resolvedMainImage,
+      smallImage: resolvedImages.resolvedSmallImage,
       heroBg: assetExists(resolvedImages.resolvedMainImage) ? resolvedImages.resolvedMainImage : carPlaceholder,
       ctaImage: assetExists(resolvedImages.resolvedMainImage) ? resolvedImages.resolvedMainImage : carPlaceholder,
     },

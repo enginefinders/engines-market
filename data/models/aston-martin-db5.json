@@ -173,6 +173,72 @@
         ]
       }
     },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "Aston Martin DB5 Engines - Codes, Common Failures & Replacement Costs",
+      "description": "The cards below cover the main engines fitted to the Aston Martin DB5 in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data.",
+      "cards": [
+        {
+          "code": "400/1461",
+          "imagePlaceholder": "",
+          "altText": "Aston Martin DB5 400/1461 engine - petrol 4.0L replacement UK",
+          "productionHistory": [
+            "DB5 Saloon (Standard SU carburettor specification) - 1963-1965",
+            "DB5 Saloon (Optional Weber upgrade) - 1964-1965"
+          ],
+          "knownFailures": [
+            "Valve cover gasket oil leaks - common on high-mileage units, typically appearing after 30k miles.",
+            "Timing chain tensioner wear - chain stretch and guide degradation documented between 40k-60k miles.",
+            "SU carburettor synchronisation issues - rough idle and performance loss from incorrect needle settings."
+          ],
+          "specs": "Petrol · 4.0L · 282hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £18,000-£35,000 (supply only)"
+        },
+        {
+          "code": "400/2025/V",
+          "imagePlaceholder": "",
+          "altText": "Aston Martin DB5 400/2025/V engine - petrol 4.0L replacement UK",
+          "productionHistory": [
+            "DB5 Vantage Saloon (Factory Weber specification) - 1964-1965",
+            "DB5 Vantage Convertible (Rare factory Weber specification) - 1964-1965"
+          ],
+          "knownFailures": [
+            "Weber 45 DCOE carburettor tuning complexity - specialist synchronisation required, poor setup causes black smoke.",
+            "Higher-lift camshaft valvetrain wear - increased stress on tappets and guides compared to standard specification.",
+            "Cooling system overheating under load - original radiator capacity marginal for Vantage power output."
+          ],
+          "specs": "Petrol · 4.0L · 314hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £25,000-£60,000 (supply only)"
+        },
+        {
+          "code": "400/1306",
+          "imagePlaceholder": "",
+          "altText": "Aston Martin DB5 400/1306 engine - petrol 4.2L replacement UK",
+          "productionHistory": [
+            "DB5 Convertible (4.2-litre conversion) - 1963-1965",
+            "DB5 Saloon (4.2-litre conversion) - 1963-1965"
+          ],
+          "knownFailures": [
+            "Cylinder block corrosion between bores - common on original castings, requires specialist inspection or replacement block.",
+            "Piston ring wear on overbored cylinders - 4.2 conversions require precise machining to prevent oil consumption.",
+            "Cylinder head gasket failure - increased compression from conversion stresses original gasket design."
+          ],
+          "specs": "Petrol · 4.2L · 310-325hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £22,000-£45,000 (supply only) Estimated from comparable 400-series units - actual quotes may vary."
+        }
+      ],
+      "headingLines": [
+        "Aston Martin DB5 Engines",
+        "Codes, Common Failures & Replacement Costs"
+      ],
+      "imageAlt": "Aston Martin DB5 engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
     "liveMarketPrices": {
       "tag": "Live UK Engine Market Data",
       "h2": "",
@@ -336,8 +402,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/aston-martin/models/live-feed-aston-martin-db5.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",

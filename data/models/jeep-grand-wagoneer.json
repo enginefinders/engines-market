@@ -175,10 +175,78 @@
         ]
       }
     },
-    "liveMarketPrices": {
+    "engineIntelligence": {
       "tag": "Engine Intelligence",
       "h2": "Jeep Grand Wagoneer Engines - Codes, Common Failures & Replacement Costs",
-      "h3": "The cards below cover the main engines fitted to the Jeep Grand Wagoneer in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data for import vehicles.",
+      "description": "The cards below cover the main engines fitted to the Jeep Grand Wagoneer in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data for import vehicles.",
+      "cards": [
+        {
+          "code": "EZH",
+          "imagePlaceholder": "",
+          "altText": "Jeep Grand Wagoneer EZH engine - petrol 5.7L replacement UK",
+          "productionHistory": [
+            "Jeep Grand Wagoneer Series I 5.7L HEMI eTorque - 2022-2024",
+            "Jeep Grand Wagoneer Series II 5.7L HEMI eTorque - 2022-2024",
+            "Jeep Grand Wagoneer L extended wheelbase 5.7L HEMI - 2022-2024"
+          ],
+          "knownFailures": [
+            "eTorque 48V electrical system faults - belted alternator starter failures reported from 40k miles on US imports.",
+            "Exhaust manifold bolt wear - causes characteristic HEMI tick noise, often requires upgraded hardware on UK climate.",
+            "ECU immobiliser pairing issues - replacement engines require specialist calibration for UK registration compliance."
+          ],
+          "specs": "Petrol · 5.7L · 392hp · Turbocharged (eTorque MHEV)",
+          "replacementCost": "Typical UK rebuilt engine: £4,500-£8,500 (supply only) Estimated from comparable EZH import units - actual quotes may vary due to US-spec calibration requirements."
+        },
+        {
+          "code": "GME",
+          "imagePlaceholder": "",
+          "altText": "Jeep Grand Wagoneer GME engine - petrol 3.0L replacement UK",
+          "productionHistory": [
+            "Jeep Grand Wagoneer Series III Hurricane Standard Output - 2022-2024",
+            "Jeep Grand Wagoneer Limited Altitude 3.0L Hurricane - 2022-2024",
+            "Jeep Grand Wagoneer L Hurricane twin-turbo - 2022-2024"
+          ],
+          "knownFailures": [
+            "Twin-turbo wastegate actuator wear - boost pressure loss reported on high-mileage UK import examples.",
+            "Intercooler condensation in UK climate - thermal management adaptation recommended post-replacement.",
+            "Wiring harness compatibility checks - US-spec looms may require verification for UK electrical integration."
+          ],
+          "specs": "Petrol · 3.0L · 420hp · Twin-Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £5,500-£10,500 (supply only) Estimated from comparable GME import units - twin-turbo specialist calibration may affect final pricing."
+        },
+        {
+          "code": "GME-HO",
+          "imagePlaceholder": "",
+          "altText": "Jeep Grand Wagoneer GME-HO engine - petrol 3.0L replacement UK",
+          "productionHistory": [
+            "Jeep Grand Wagoneer Summit Reserve Hurricane High Output - 2023-2024",
+            "Jeep Grand Wagoneer Obsidian Edition 540hp twin-turbo - 2024"
+          ],
+          "knownFailures": [
+            "High-output turbo bearing wear - increased stress on UK stop-start driving patterns requires specialist monitoring.",
+            "HO-specific ECU calibration requirements - software updates essential post-replacement for UK emissions compliance.",
+            "Regenerative braking system integration - eTorque hybrid calibration must be verified by IMI-certified technicians."
+          ],
+          "specs": "Petrol · 3.0L · 510-540hp · Twin-Turbocharged (High Output)",
+          "replacementCost": "Typical UK rebuilt engine: £7,500-£14,000 (supply only) Premium high-output units - scarcity and specialist calibration requirements affect pricing for Summit Reserve variants."
+        }
+      ],
+      "headingLines": [
+        "Jeep Grand Wagoneer Engines",
+        "Codes, Common Failures & Replacement Costs"
+      ],
+      "imageAlt": "Jeep Grand Wagoneer engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
+    "liveMarketPrices": {
+      "tag": "Live UK Engine Market Data",
+      "h2": "",
+      "h3": "",
       "introBullets": [
         {
           "label": "Live market context",
@@ -226,10 +294,7 @@
         "visibleRows": 0,
         "entries": []
       },
-      "headingLines": [
-        "Jeep Grand Wagoneer Engines",
-        "Codes, Common Failures & Replacement Costs"
-      ],
+      "headingLines": [],
       "imageAlt": "Jeep Grand Wagoneer live market price reference",
       "filterTabs": [
         {
@@ -341,8 +406,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/jeep/models/live-feed-jeep-grand-wagoneer.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",

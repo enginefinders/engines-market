@@ -173,10 +173,85 @@
         ]
       }
     },
-    "liveMarketPrices": {
+    "engineIntelligence": {
       "tag": "Engine Intelligence",
       "h2": "Aston Martin One-77 Engines - Codes, Common Failures & Replacement Costs",
-      "h3": "The cards below cover the Cosworth-developed AM11 7.3L V12 engine fitted to all Aston Martin One-77 models in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK hypercar specialist market data.",
+      "description": "The cards below cover the Cosworth-developed AM11 7.3L V12 engine fitted to all Aston Martin One-77 models in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK hypercar specialist market data.",
+      "cards": [
+        {
+          "code": "AM11",
+          "imagePlaceholder": "",
+          "altText": "Aston Martin One-77 AM11 engine - petrol 7.3L replacement UK",
+          "productionHistory": [
+            "One-77 Standard Specification (2009-2012)",
+            "One-77 Q-Series Silver Blonde (2010-2012)",
+            "One-77 Q-Series Frost Blue (2010-2012)",
+            "One-77 Q-Series Carbon Black (2010-2012)",
+            "One-77 Q-Series Dark Bronze (2010-2012)",
+            "One-77 Q-Series Gold Copper & Tungsten Silver (2011-2012)"
+          ],
+          "knownFailures": [
+            "Dry-sump oil surge under sustained cornering - can cause momentary oil starvation on track-focused driving.",
+            "Timing component wear on high-mileage units - preventative inspection recommended beyond 15,000 miles.",
+            "Electronic throttle body calibration drift - affects drive-by-wire response, requires specialist recalibration."
+          ],
+          "specs": "Petrol · 7.3L · 750hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £45,000-£85,000 (supply only) Estimated from comparable Cosworth-developed hypercar V12 units - actual quotes may vary due to extreme rarity."
+        },
+        {
+          "code": "AM11-Q",
+          "imagePlaceholder": "",
+          "altText": "Aston Martin One-77 AM11 Q-Series engine - petrol 7.3L replacement UK",
+          "productionHistory": [
+            "One-77 Q-Series Silver Blonde (2010-2012)",
+            "One-77 Q-Series Frost Blue (2010-2012)",
+            "One-77 Q-Series Carbon Black (2010-2012)",
+            "One-77 Q-Series Dark Bronze (2010-2012)",
+            "One-77 Q-Series Gold Copper (2011-2012)",
+            "One-77 Q-Series Tungsten Silver (2011-2012)"
+          ],
+          "knownFailures": [
+            "Q-Series unique calibration sensitivity - requires Cosworth-certified ECU mapping during rebuild.",
+            "Oil cooling system demand under track use - enhanced thermal management recommended for performance driving.",
+            "Provenance documentation critical - collector-grade rebuilds require full casting number and serial verification."
+          ],
+          "specs": "Petrol · 7.3L · 750hp · Naturally Aspirated · Q-Spec Calibration",
+          "replacementCost": "Typical UK rebuilt engine: £65,000-£95,000 (supply only) Q-Series premium reflects unique calibration, provenance documentation and collector-grade rebuild standards."
+        },
+        {
+          "code": "AM11-7312",
+          "imagePlaceholder": "",
+          "altText": "Aston Martin One-77 Cosworth V12 engine - 7312cc naturally aspirated replacement UK",
+          "productionHistory": [
+            "All One-77 variants (2009-2012) - 77 units total production",
+            "Left-hand drive export specification models",
+            "Carbon monocoque chassis compatible fitment"
+          ],
+          "knownFailures": [
+            "Cylinder head gasket integrity on high-revving use - comprehensive top-end inspection essential during rebuild.",
+            "Crankshaft bearing wear on track-focused examples - bottom-end rebuild recommended for appreciating asset preservation.",
+            "Valve guide wear on high-mileage collectors' cars - compression restoration critical for performance retention."
+          ],
+          "specs": "Petrol · 7312cc · 750hp · Naturally Aspirated · Dry-Sump Lubrication",
+          "replacementCost": "Typical UK rebuilt engine: £45,000-£85,000 (supply only) Pricing reflects Cosworth partnership heritage, bench-testing protocols and hypercar specialist accreditation requirements."
+        }
+      ],
+      "headingLines": [
+        "Aston Martin One-77 Engines",
+        "Codes, Common Failures & Replacement Costs"
+      ],
+      "imageAlt": "Aston Martin One-77 engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
+    "liveMarketPrices": {
+      "tag": "Live UK Engine Market Data",
+      "h2": "",
+      "h3": "",
       "introBullets": [
         {
           "label": "Live market context",
@@ -224,10 +299,7 @@
         "visibleRows": 0,
         "entries": []
       },
-      "headingLines": [
-        "Aston Martin One-77 Engines",
-        "Codes, Common Failures & Replacement Costs"
-      ],
+      "headingLines": [],
       "imageAlt": "Aston Martin One-77 live market price reference",
       "filterTabs": [
         {
@@ -339,8 +411,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/aston-martin/models/live-feed-aston-martin-one-77.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",

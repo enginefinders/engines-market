@@ -173,10 +173,78 @@
         ]
       }
     },
-    "liveMarketPrices": {
+    "engineIntelligence": {
       "tag": "Engine Intelligence",
       "h2": "Lexus LS 430 Engines - Codes, Common Failures & Replacement Costs",
-      "h3": "The cards below cover the 3UZ-FE engine fitted to the Lexus LS 430 in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data.",
+      "description": "The cards below cover the 3UZ-FE engine fitted to the Lexus LS 430 in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data.",
+      "cards": [
+        {
+          "code": "3UZ-FE",
+          "imagePlaceholder": "",
+          "altText": "Lexus LS 430 3UZ-FE engine - petrol 4.3L replacement UK",
+          "productionHistory": [
+            "LS 430 SE (2000-2003) - Pre-facelift mechanical throttle",
+            "LS 430 Sport (2000-2003) - Pre-facelift variant",
+            "LS 430 Premier Edition (2004-2006) - Facelift electronic throttle",
+            "LS 430 Final Edition (2006) - Last production year"
+          ],
+          "knownFailures": [
+            "Timing belt failure - catastrophic interference engine damage if belt snaps, replace every 60k miles.",
+            "Head bolt thread stripping - aluminium block threads strip, helicoil repair common on high-mileage units.",
+            "VVTi actuator rattle - cam gear noise on startup indicates failing actuators, can lead to timing issues."
+          ],
+          "specs": "Petrol · 4.3L · 290-300hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £2,800-£4,200 (supply only)"
+        },
+        {
+          "code": "3UZ-FE",
+          "imagePlaceholder": "",
+          "altText": "Lexus LS 430 3UZ-FE engine - petrol 4.3L replacement UK",
+          "productionHistory": [
+            "LS 430 Pre-facelift (2000-2003) - Early production models",
+            "LS 430 Facelift (2004-2006) - Updated electronics and throttle"
+          ],
+          "knownFailures": [
+            "Rear main seal oil leak - labour-intensive repair, often cheaper to replace engine than fix seal.",
+            "Camshaft seal oil leaks - common on higher-mileage 3UZ-FE units, causes oil consumption.",
+            "Cooling fan ECU failure - overheating risk if fan control module fails, check before purchase."
+          ],
+          "specs": "Petrol · 4.3L · 290-300hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £2,800-£4,200 (supply only)"
+        },
+        {
+          "code": "3UZ-FE",
+          "imagePlaceholder": "",
+          "altText": "Lexus LS 430 3UZ-FE engine - petrol 4.3L replacement UK",
+          "productionHistory": [
+            "LS 430 UK Market (2000-2006) - All UK-specification models",
+            "Toyota Celsior JDM Import (2000-2006) - Japanese domestic market equivalent"
+          ],
+          "knownFailures": [
+            "Oil consumption from worn valve stem seals - blue smoke on startup, common after 100k miles.",
+            "Rod knock from bearing wear - knocking sound indicates bottom-end failure, stop driving immediately.",
+            "Head gasket failure - aluminium heads warp if overheated, replacement often cheaper than repair."
+          ],
+          "specs": "Petrol · 4.3L · 290-300hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £2,800-£4,200 (supply only)"
+        }
+      ],
+      "headingLines": [
+        "Lexus LS 430 Engines",
+        "Codes, Common Failures & Replacement Costs"
+      ],
+      "imageAlt": "Lexus LS 430 engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
+    "liveMarketPrices": {
+      "tag": "Live UK Engine Market Data",
+      "h2": "",
+      "h3": "",
       "introBullets": [
         {
           "label": "Live market context",
@@ -224,10 +292,7 @@
         "visibleRows": 0,
         "entries": []
       },
-      "headingLines": [
-        "Lexus LS 430 Engines",
-        "Codes, Common Failures & Replacement Costs"
-      ],
+      "headingLines": [],
       "imageAlt": "Lexus LS 430 live market price reference",
       "filterTabs": [
         {
@@ -275,8 +340,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/lexus/models/live-feed-lexus-ls-430.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",

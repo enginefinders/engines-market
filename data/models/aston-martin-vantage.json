@@ -173,6 +173,77 @@
         ]
       }
     },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "Aston Martin Vantage Engines - Codes, Common Failures & Replacement Costs",
+      "description": "The cards below cover the main engines fitted to the Aston Martin Vantage in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data.",
+      "cards": [
+        {
+          "code": "AJ37",
+          "imagePlaceholder": "",
+          "altText": "Aston Martin Vantage AJ37 engine - petrol 4.7L replacement UK",
+          "productionHistory": [
+            "V8 Vantage Coupe (2009-2017)",
+            "V8 Vantage Roadster (2009-2017)",
+            "V8 Vantage S (2011-2017)",
+            "V8 Vantage N420/N430 (2012-2017)"
+          ],
+          "knownFailures": [
+            "Timing chain tensioner rattle - premature wear causes chain noise and potential failure from 60k miles.",
+            "High oil consumption - piston ring wear leads to excessive oil burn on high-mileage units.",
+            "VVT actuator failure - variable valve timing components degrade, affecting performance and idle."
+          ],
+          "specs": "Petrol · 4.7L · 420-430hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £4,500-£12,500 (supply only)"
+        },
+        {
+          "code": "AM28",
+          "imagePlaceholder": "",
+          "altText": "Aston Martin Vantage AM28 engine - petrol 5.9L replacement UK",
+          "productionHistory": [
+            "V12 Vantage Coupe (2009-2018)",
+            "V12 Vantage Roadster (2012-2018)",
+            "V12 Vantage S (2016-2018)",
+            "V12 Vantage GT12 (2015-2016)"
+          ],
+          "knownFailures": [
+            "Cooling system failure - radiator and water pump issues cause overheating on high-mileage V12 units.",
+            "Oil leak from cam covers - precision sealing degradation leads to external oil seepage.",
+            "Dry-sump lubrication wear - scavenge pump components require specialist inspection."
+          ],
+          "specs": "Petrol · 5.9L · 510-565hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £8,500-£22,000 (supply only)"
+        },
+        {
+          "code": "M177",
+          "imagePlaceholder": "",
+          "altText": "Aston Martin Vantage M177 engine - petrol 4.0L replacement UK",
+          "productionHistory": [
+            "New Vantage Coupe (2018-present)",
+            "New Vantage Roadster (2020-present)",
+            "Vantage F1 Edition (2021-present)"
+          ],
+          "knownFailures": [
+            "Turbocharger failure - twin-turbo units can develop boost leaks or bearing wear from 40k miles.",
+            "Intercooler heat soak - charge cooling efficiency drops under sustained high-load driving.",
+            "ECU calibration drift - software updates required to maintain optimal performance mapping."
+          ],
+          "specs": "Petrol · 4.0L · 503-528hp · Twin-Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £6,500-£18,500 (supply only)"
+        }
+      ],
+      "headingLines": [
+        "Aston Martin Vantage Engines",
+        "Codes, Common Failures & Replacement Costs"
+      ],
+      "imageAlt": "Aston Martin Vantage engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
     "liveMarketPrices": {
       "tag": "Live UK Engine Market Data",
       "h2": "",
@@ -336,8 +407,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/aston-martin/models/live-feed-aston-martin-vantage.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",

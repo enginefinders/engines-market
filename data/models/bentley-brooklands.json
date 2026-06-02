@@ -173,10 +173,72 @@
         ]
       }
     },
-    "liveMarketPrices": {
+    "engineIntelligence": {
       "tag": "Engine Intelligence",
       "h2": "Bentley Brooklands Engines - Codes, Common Failures & Replacement Costs",
-      "h3": "The cards below cover the main engines fitted to the Bentley Brooklands in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data.",
+      "description": "The cards below cover the main engines fitted to the Bentley Brooklands in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data.",
+      "cards": [
+        {
+          "code": "L410HT",
+          "imagePlaceholder": "",
+          "altText": "Bentley Brooklands L410HT engine - petrol 6.75L replacement UK",
+          "productionHistory": [
+            "Bentley Brooklands Coupe (2008-2011) - twin-turbo grand tourer specification"
+          ],
+          "knownFailures": [
+            "Twin-turbo system failure - boost pressure loss and oil seal degradation on high-mileage units.",
+            "Timing chain tensioner wear - documented on L410 series engines with irregular servicing history."
+          ],
+          "specs": "Petrol · 6.75L · 530hp · Twin-Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £8,500-£14,800 (supply only)"
+        },
+        {
+          "code": "L410LPT",
+          "imagePlaceholder": "",
+          "altText": "Bentley Brooklands L410LPT engine - petrol 6.75L replacement UK",
+          "productionHistory": [
+            "Bentley Brooklands Saloon LPT (1996-1998) - light-pressure turbo 300bhp variant",
+            "Bentley Brooklands R (1998) - sports-tuned LPT specification"
+          ],
+          "knownFailures": [
+            "Erratic idle and solenoid failure - known issue on 1996-1998 LPT models causing hunting idle.",
+            "Coolant loss from cylinder head gasket - pressure test recommended on high-mileage units."
+          ],
+          "specs": "Petrol · 6.75L · 300hp · Light-Pressure Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £5,200-£11,000 (supply only)"
+        },
+        {
+          "code": "L410",
+          "imagePlaceholder": "",
+          "altText": "Bentley Brooklands L410 engine - petrol 6.75L replacement UK",
+          "productionHistory": [
+            "Bentley Brooklands Saloon (1992-1995) - naturally aspirated 6.75-litre V8",
+            "Bentley Brooklands Saloon (1992-1998) - base non-turbo specification"
+          ],
+          "knownFailures": [
+            "Oil consumption increase after 70k miles - valve stem seals and piston ring wear on high-mileage examples.",
+            "Erratic running from idle control solenoid - common on pre-1996 models with original components."
+          ],
+          "specs": "Petrol · 6.75L · 200-220hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £5,200-£9,500 (supply only)"
+        }
+      ],
+      "headingLines": [
+        "Bentley Brooklands Engines",
+        "Codes, Common Failures & Replacement Costs"
+      ],
+      "imageAlt": "Bentley Brooklands engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
+    "liveMarketPrices": {
+      "tag": "Live UK Engine Market Data",
+      "h2": "",
+      "h3": "",
       "introBullets": [
         {
           "label": "Live market context",
@@ -224,10 +286,7 @@
         "visibleRows": 0,
         "entries": []
       },
-      "headingLines": [
-        "Bentley Brooklands Engines",
-        "Codes, Common Failures & Replacement Costs"
-      ],
+      "headingLines": [],
       "imageAlt": "Bentley Brooklands live market price reference",
       "filterTabs": [
         {
@@ -339,8 +398,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/bentley/models/live-feed-bentley-brooklands.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",

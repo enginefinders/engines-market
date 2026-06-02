@@ -173,6 +173,75 @@
         ]
       }
     },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "Bentley Continental Engines - Codes, Common Failures & Replacement Costs",
+      "description": "The cards below cover the main engines fitted to the Bentley Continental in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data.",
+      "cards": [
+        {
+          "code": "BEB / CKHA / MDHE (W12 Family)",
+          "imagePlaceholder": "",
+          "altText": "Bentley Continental W12 engine - petrol 6.0L replacement UK",
+          "productionHistory": [
+            "Continental GT/GTC (2003-2010) - BEB 552bhp",
+            "Continental GT Speed/Supersports (2007-2011) - CKHA 630bhp",
+            "Continental GT/GTC Facelift (2011-2018) - MDHE 567-700bhp"
+          ],
+          "knownFailures": [
+            "Turbocharger failure - twin-turbo units prone to oil seal degradation beyond 60k miles.",
+            "Timing chain tensioner wear - plastic guides fail, causing rattle and potential chain skip.",
+            "Oil leaks from rear main seal - labour-intensive repair due to subframe removal requirement."
+          ],
+          "specs": "Petrol · 6.0L · 552-700hp · Twin-Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £14,000-£22,000 (supply only)"
+        },
+        {
+          "code": "CYCA / EA825 (4.0L V8 Family)",
+          "imagePlaceholder": "",
+          "altText": "Bentley Continental V8 engine - petrol 4.0L replacement UK",
+          "productionHistory": [
+            "Continental GT/GTC V8 (2012-2018) - CYCA 404kW",
+            "Continental GT/GTC Gen 3 (2018-2024) - EA825 404-460kW",
+            "GT3-R Limited Edition (2014) - EA825 tuned 580bhp"
+          ],
+          "knownFailures": [
+            "Fuel pump bolt recall - early EA825 units subject to manufacturer recall for bolt replacement.",
+            "Coolant pipe leaks - plastic connectors degrade, risking overheating if unchecked.",
+            "Carbon buildup on intake valves - direct injection design requires periodic walnut blasting."
+          ],
+          "specs": "Petrol · 4.0L · 404-460kW (542-618hp) · Twin-Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £11,500-£18,500 (supply only)"
+        },
+        {
+          "code": "CKHA / MDHE High-Output Variants",
+          "imagePlaceholder": "",
+          "altText": "Bentley Continental Supersports W12 engine - petrol 6.0L replacement UK specialist",
+          "productionHistory": [
+            "Continental Supersports (2009-2011) - CKHA 630bhp",
+            "Continental GT Speed (2012-2018) - MDHE 626bhp",
+            "Continental Supersports (2017) - MDHE 700bhp final W12"
+          ],
+          "knownFailures": [
+            "High-stress turbo failure - performance tuning accelerates turbocharger wear beyond standard units.",
+            "Intercooler piping cracks - heat cycling on high-output units causes rubber hose degradation.",
+            "Increased oil consumption - performance calibration demands more frequent top-ups on high-mileage examples."
+          ],
+          "specs": "Petrol · 6.0L · 630-700hp · Twin-Turbocharged Specialist",
+          "replacementCost": "Typical UK rebuilt engine: £18,000-£28,000 (supply only) Estimated from comparable high-output W12 units - actual quotes may vary."
+        }
+      ],
+      "headingLines": [
+        "Bentley Continental Engines",
+        "Codes, Common Failures & Replacement Costs"
+      ],
+      "imageAlt": "Bentley Continental engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
     "liveMarketPrices": {
       "tag": "Live UK Engine Market Data",
       "h2": "",
@@ -336,8 +405,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/bentley/models/live-feed-bentley-continental.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",

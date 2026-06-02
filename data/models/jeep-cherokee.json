@@ -175,10 +175,75 @@
         ]
       }
     },
-    "liveMarketPrices": {
+    "engineIntelligence": {
       "tag": "Engine Intelligence",
       "h2": "Jeep Cherokee Engines - Codes, Common Failures & Replacement Costs",
-      "h3": "The cards below cover the main engines fitted to the Jeep Cherokee in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data.",
+      "description": "The cards below cover the main engines fitted to the Jeep Cherokee in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data.",
+      "cards": [
+        {
+          "code": "AR / AVM / ECN (2.8 CRD)",
+          "imagePlaceholder": "",
+          "altText": "Jeep Cherokee AR engine - diesel 2.8L replacement UK",
+          "productionHistory": [
+            "Jeep Cherokee KJ (2002-2007) - 2.8 CRD variants",
+            "Jeep Cherokee KK (2008-2013) - 2.8 CRD variants"
+          ],
+          "knownFailures": [
+            "Water pump failure - coolant leaks cause overheating and head warping from 70k miles.",
+            "Timing chain tensioner wear - chain rattle precedes catastrophic interference failure.",
+            "Turbocharger actuator failure - loss of power and limp mode on high-mileage units."
+          ],
+          "specs": "Diesel · 2.8L · 163-177hp · Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £1,800-£4,200 (supply only)"
+        },
+        {
+          "code": "55282643 / 68140606AB (2.2 Multijet)",
+          "imagePlaceholder": "",
+          "altText": "Jeep Cherokee 55282643 engine - diesel 2.2L replacement UK",
+          "productionHistory": [
+            "Jeep Cherokee KL (2014-2022) - 2.2 Multijet diesel variants"
+          ],
+          "knownFailures": [
+            "Black Death injector seals - diesel carbon buildup causes injector seizure and hard starting.",
+            "Turbocharger vane sticking - whistling noise and power loss common after 80k miles.",
+            "EGR cooler cracking - coolant mixing with exhaust gases leads to overheating."
+          ],
+          "specs": "Diesel · 2.2L · 140-195hp · Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £2,200-£4,800 (supply only)"
+        },
+        {
+          "code": "ERH / 53010442 (4.0 PowerTech)",
+          "imagePlaceholder": "",
+          "altText": "Jeep Cherokee ERH engine - petrol 4.0L replacement UK",
+          "productionHistory": [
+            "Jeep Cherokee XJ (1984-2001) - 4.0 litre straight-six variants",
+            "Jeep Cherokee KJ (2002-2007) - 4.0 PowerTech variants"
+          ],
+          "knownFailures": [
+            "Head gasket failure - overheating causes gasket breach and coolant/oil mixing.",
+            "Rocker arm wear - valvetrain noise and reduced performance on high-mileage units.",
+            "Crankshaft position sensor failure - intermittent stalling and no-start conditions."
+          ],
+          "specs": "Petrol · 4.0L · 190-210hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £1,500-£3,900 (supply only)"
+        }
+      ],
+      "headingLines": [
+        "Jeep Cherokee Engines",
+        "Codes, Common Failures & Replacement Costs"
+      ],
+      "imageAlt": "Jeep Cherokee engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
+    "liveMarketPrices": {
+      "tag": "Live UK Engine Market Data",
+      "h2": "",
+      "h3": "",
       "introBullets": [
         {
           "label": "Live market context",
@@ -226,10 +291,7 @@
         "visibleRows": 0,
         "entries": []
       },
-      "headingLines": [
-        "Jeep Cherokee Engines",
-        "Codes, Common Failures & Replacement Costs"
-      ],
+      "headingLines": [],
       "imageAlt": "Jeep Cherokee live market price reference",
       "filterTabs": [
         {
@@ -341,8 +403,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/jeep/models/live-feed-jeep-cherokee.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",

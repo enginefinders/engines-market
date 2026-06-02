@@ -173,10 +173,78 @@
         ]
       }
     },
-    "liveMarketPrices": {
+    "engineIntelligence": {
       "tag": "Engine Intelligence",
       "h2": "Aston Martin DBX Engines - Codes, Common Failures & Replacement Costs",
-      "h3": "The cards below cover the M177 4.0L V8 twin-turbo petrol engine fitted to the Aston Martin DBX in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data.",
+      "description": "The cards below cover the M177 4.0L V8 twin-turbo petrol engine fitted to the Aston Martin DBX in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data.",
+      "cards": [
+        {
+          "code": "M177 DE40 AL",
+          "imagePlaceholder": "",
+          "altText": "Aston Martin DBX M177 DE40 AL engine - petrol 4.0L replacement UK",
+          "productionHistory": [
+            "DBX Standard 550hp - 2020-2021",
+            "DBX Standard 550hp (early production) - 2020",
+            "DBX Standard 550hp (late production) - 2021-2022"
+          ],
+          "knownFailures": [
+            "Turbocharger boost loss - wastegate actuator or compressor wheel wear causing limp mode from 40k miles.",
+            "Timing chain tensioner wear - M177 platform issue causing rattle on cold start, potential chain skip.",
+            "High-pressure fuel pump failure - HPFP pressure loss leading to misfires and rough running."
+          ],
+          "specs": "Petrol · 4.0L · 550hp · Twin-Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £8,500-£14,500 (supply only)"
+        },
+        {
+          "code": "M177 DE40 AL DBX707",
+          "imagePlaceholder": "",
+          "altText": "Aston Martin DBX M177 DE40 AL DBX707 engine - petrol 4.0L replacement UK",
+          "productionHistory": [
+            "DBX707 707hp - 2022-2024",
+            "DBX707 707hp (launch spec) - 2022",
+            "DBX707 707hp (revised cooling) - 2023-2024"
+          ],
+          "knownFailures": [
+            "Uprated turbocharger stress - higher boost pressures increase compressor wheel fatigue risk.",
+            "Coolant system leaks - revised thermostat housing cracks on high-mileage performance use.",
+            "ECU calibration mismatch - incorrect software version causing performance loss after replacement."
+          ],
+          "specs": "Petrol · 4.0L · 707hp · Twin-Turbocharged (Uprated)",
+          "replacementCost": "Typical UK rebuilt engine: £12,000-£18,500 (supply only)"
+        },
+        {
+          "code": "M177 DE40 AL DBX S",
+          "imagePlaceholder": "",
+          "altText": "Aston Martin DBX M177 DE40 AL DBX S engine - petrol 4.0L replacement UK",
+          "productionHistory": [
+            "DBX S 2024+ - 2024-present",
+            "DBX S latest-spec calibration - 2024+"
+          ],
+          "knownFailures": [
+            "Revised suspension calibration sync - engine management must match updated chassis software.",
+            "Intercooler piping stress - higher thermal loads on performance-oriented driving cycles.",
+            "Oil consumption monitoring - direct injection carbon buildup requires walnut blasting service."
+          ],
+          "specs": "Petrol · 4.0L · 550hp+ · Twin-Turbocharged (Latest Calibration)",
+          "replacementCost": "Typical UK rebuilt engine: £10,500-£16,500 (supply only)"
+        }
+      ],
+      "headingLines": [
+        "Aston Martin DBX Engines",
+        "Codes, Common Failures & Replacement Costs"
+      ],
+      "imageAlt": "Aston Martin DBX engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
+    "liveMarketPrices": {
+      "tag": "Live UK Engine Market Data",
+      "h2": "",
+      "h3": "",
       "introBullets": [
         {
           "label": "Live market context",
@@ -224,10 +292,7 @@
         "visibleRows": 0,
         "entries": []
       },
-      "headingLines": [
-        "Aston Martin DBX Engines",
-        "Codes, Common Failures & Replacement Costs"
-      ],
+      "headingLines": [],
       "imageAlt": "Aston Martin DBX live market price reference",
       "filterTabs": [
         {
@@ -339,8 +404,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/aston-martin/models/live-feed-aston-martin-dbx.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",

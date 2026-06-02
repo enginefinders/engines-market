@@ -173,6 +173,75 @@
         ]
       }
     },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "Dodge Durango Engines - Codes, Common Failures & Replacement Costs",
+      "description": "The cards below cover the main engines fitted to the Dodge Durango in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data.",
+      "cards": [
+        {
+          "code": "ERB",
+          "imagePlaceholder": "",
+          "altText": "Dodge Durango ERB engine - petrol 3.6L replacement UK",
+          "productionHistory": [
+            "SXT, GT, Citadel - 2011-2024",
+            "AWD and RWD variants - 2011-2024",
+            "Pre-facelift WK2 and facelift WD chassis - 2011-2024"
+          ],
+          "knownFailures": [
+            "Timing chain stretch - tensioner wear causes rattling noise from 60k-100k miles.",
+            "Water pump failure - internal leak leads to coolant loss and overheating risk.",
+            "Cam phaser rattle - VVT actuator wear on cold start, common after 80k miles."
+          ],
+          "specs": "Petrol · 3.6L · 293-295hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £3,500-£5,500 (supply only)"
+        },
+        {
+          "code": "EZH",
+          "imagePlaceholder": "",
+          "altText": "Dodge Durango EZH engine - petrol 5.7L replacement UK",
+          "productionHistory": [
+            "R/T, Citadel, GT Plus - 2011-2024",
+            "AWD and RWD variants - 2011-2024",
+            "MDS cylinder deactivation equipped models - 2011-2024"
+          ],
+          "knownFailures": [
+            "Lifter tick - collapsed hydraulic lifters cause ticking noise, often 70k+ miles.",
+            "Valve seat recession - intake valve seat dropout causes compression loss and misfire.",
+            "MDS solenoid failure - cylinder deactivation faults trigger rough idle and warning lights."
+          ],
+          "specs": "Petrol · 5.7L · 360-395hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £4,200-£5,800 (supply only)"
+        },
+        {
+          "code": "EXF",
+          "imagePlaceholder": "",
+          "altText": "Dodge Durango EXF engine - diesel 3.0L replacement UK",
+          "productionHistory": [
+            "EcoDiesel variants - 2014-2020 (limited UK availability)",
+            "AWD only configuration - 2014-2020",
+            "WK2 chassis pre-facelift models - 2014-2020"
+          ],
+          "knownFailures": [
+            "EGR cooler crack - thermal fatigue causes coolant leak into intake, risk of combustion.",
+            "Injector carbon buildup - diesel injector coking leads to misfire and rough running.",
+            "DPF regeneration issues - blocked filter from short-journey driving causes power loss."
+          ],
+          "specs": "Diesel · 3.0L · 240-260hp · Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £4,800-£6,500 (supply only) Estimated from comparable EXF units - actual quotes may vary."
+        }
+      ],
+      "headingLines": [
+        "Dodge Durango Engines",
+        "Codes, Common Failures & Replacement Costs"
+      ],
+      "imageAlt": "Dodge Durango engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
     "liveMarketPrices": {
       "tag": "Live UK Engine Market Data",
       "h2": "",
@@ -336,8 +405,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/dodge/models/live-feed-dodge-durango.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",
@@ -557,7 +625,9 @@
           "engineCodes": [
             "ERB",
             "EZH",
-            "EXF"
+            "EXF",
+            "5.7L",
+            "3.0L"
           ],
           "fuel": "",
           "power": "240-710hp",
@@ -588,7 +658,7 @@
           "engineCodes": [
             "ERB",
             "EZH",
-            "ESG 3.6L"
+            "ESG"
           ],
           "fuel": "Petrol",
           "power": "293-475hp",

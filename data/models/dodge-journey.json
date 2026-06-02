@@ -173,6 +173,75 @@
         ]
       }
     },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "Dodge Journey Engines - Codes, Common Failures & Replacement Costs",
+      "description": "The cards below cover the main engines fitted to the Dodge Journey in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data.",
+      "cards": [
+        {
+          "code": "BWD",
+          "imagePlaceholder": "",
+          "altText": "Dodge Journey BWD engine - diesel 2.0L replacement UK",
+          "productionHistory": [
+            "2.0 CRD SE - 2009-2016",
+            "2.0 CRD SXT - 2009-2016",
+            "2.0 CRD Crossroad - 2013-2016"
+          ],
+          "knownFailures": [
+            "Injector wear - piezo injectors fail from 80k miles causing rough idle and hard starting.",
+            "EGR valve clogging - carbon buildup triggers limp mode and reduced power on high-mileage units.",
+            "Turbo seal failure - oil leaks and boost loss common after 120k miles on CRD units."
+          ],
+          "specs": "Diesel · 2.0L · 140-170hp · Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £1,600-£3,200 (supply only)"
+        },
+        {
+          "code": "ED3",
+          "imagePlaceholder": "",
+          "altText": "Dodge Journey ED3 engine - petrol 2.4L replacement UK",
+          "productionHistory": [
+            "2.4 SE - 2008-2016",
+            "2.4 SXT - 2008-2016",
+            "2.4 Crossroad - 2013-2016"
+          ],
+          "knownFailures": [
+            "Oil consumption - piston ring wear causes excessive oil burning from 70k miles on World Engine units.",
+            "Timing chain tensioner - plastic guides wear causing cold-start rattle and potential chain skip.",
+            "Balance shaft bearing - premature wear leads to knocking noise and eventual engine failure."
+          ],
+          "specs": "Petrol · 2.4L · 170-175hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £1,800-£3,500 (supply only)"
+        },
+        {
+          "code": "ERB",
+          "imagePlaceholder": "",
+          "altText": "Dodge Journey ERB engine - petrol 3.6L replacement UK",
+          "productionHistory": [
+            "3.6 V6 SXT - 2012-2016",
+            "3.6 V6 Crossroad - 2013-2016",
+            "3.6 V6 Limited - 2012-2016"
+          ],
+          "knownFailures": [
+            "Rocker arm failure - worn rocker arms cause ticking noise and potential valve damage on Pentastar V6.",
+            "Oil cooler leak - gasket failure leads to coolant/oil mixing requiring full engine overhaul.",
+            "Variable valve timing solenoid - clogging causes rough idle and reduced power on high-mileage units."
+          ],
+          "specs": "Petrol · 3.6L · 280-283hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £3,500-£3,800 (supply only)"
+        }
+      ],
+      "headingLines": [
+        "Dodge Journey Engines",
+        "Codes, Common Failures & Replacement Costs"
+      ],
+      "imageAlt": "Dodge Journey engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
     "liveMarketPrices": {
       "tag": "Live UK Engine Market Data",
       "h2": "",
@@ -336,8 +405,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/dodge/models/live-feed-dodge-journey.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",
@@ -582,7 +650,7 @@
           "cta": "Compare AWD Engine Prices",
           "engineCodes": [
             "BWD",
-            "ED3"
+            "ED3 2.0L-2.4L"
           ],
           "fuel": "",
           "power": "140-175hp",

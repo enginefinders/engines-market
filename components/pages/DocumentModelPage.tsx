@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import QuoteCheckoutModal from "@/components/checkout/QuoteCheckoutModal";
 import CommonProblemsSection from "@/components/sections/CommonProblemsSection";
 import EngineSizesSection from "@/components/sections/EngineSizesSection";
+import EngineIntelligenceSection from "@/components/sections/EngineIntelligenceSection";
 import EngineTypesSection from "@/components/sections/EngineTypesSection";
 import EngineYearsSection from "@/components/sections/EngineYearsSection";
 import FaqSection from "@/components/sections/FaqSection";
@@ -13,6 +14,7 @@ import ModelEngineCodesSection from "@/components/sections/ModelEngineCodesSecti
 import ReviewsSection from "@/components/sections/ReviewsSection";
 import TrustCtaSection from "@/components/sections/TrustCtaSection";
 import VariantCoverageSection from "@/components/sections/VariantCoverageSection";
+import { TIER3_BRAND_SLUGS } from "@/lib/tier3Brands";
 import { applyModelPageVisualPlaceholders } from "@/lib/modelVisualSelection";
 import { buildStaticReviewsSection } from "@/lib/staticReviews";
 import type { ModelPageData } from "@/types/model";
@@ -41,8 +43,11 @@ export default function DocumentModelPage({
   const structuredData = visualData.structuredData;
   const heroCards = toHeroCards(visualData);
   const reviewsData = buildStaticReviewsSection(visualData.model.name);
-  const mainImage = visualData.assets.heroBg;
+  const resolvedModelImage = visualData.assets.mainImage || visualData.assets.heroBg;
   const initialTimestamp = new Date().toISOString();
+  const showEngineIntelligence =
+    TIER3_BRAND_SLUGS.has(visualData.brand.slug) &&
+    Boolean(visualData.sections.engineIntelligence?.cards.length);
 
   return (
     <>
@@ -55,7 +60,7 @@ export default function DocumentModelPage({
 
       <HeroSection
         data={visualData.sections.hero}
-        bgImage={mainImage}
+        bgImage={resolvedModelImage}
         modelCards={heroCards}
         strictData
       />
@@ -66,13 +71,20 @@ export default function DocumentModelPage({
         sectionId="how-it-works"
       />
 
-      <LiveMarketPricesSection
-        data={visualData.sections.liveMarketPrices}
-        modelCards={heroCards}
-        imageSrc={visualData.sections.liveMarketPrices.imageSrc ?? mainImage}
-        displayMode="document"
-        initialTimestamp={initialTimestamp}
-      />
+      {showEngineIntelligence && visualData.sections.engineIntelligence ? (
+        <EngineIntelligenceSection
+          data={visualData.sections.engineIntelligence}
+          imageSrc={resolvedModelImage}
+        />
+      ) : (
+        <LiveMarketPricesSection
+          data={visualData.sections.liveMarketPrices}
+          modelCards={heroCards}
+          imageSrc={visualData.sections.liveMarketPrices.imageSrc ?? resolvedModelImage}
+          displayMode="document"
+          initialTimestamp={initialTimestamp}
+        />
+      )}
 
       <ReviewsSection data={reviewsData} useDataHeading />
 
@@ -117,7 +129,7 @@ export default function DocumentModelPage({
       <TrustCtaSection
         data={visualData.sections.trustCta}
         brandName={visualData.model.name}
-        imageSrc={visualData.assets.ctaImage ?? visualData.assets.heroBg}
+        imageSrc={visualData.assets.ctaImage ?? resolvedModelImage}
         displayMode="document"
       />
 

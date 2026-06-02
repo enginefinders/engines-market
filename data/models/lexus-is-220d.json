@@ -173,6 +173,72 @@
         ]
       }
     },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "Lexus IS 220d Engines - Codes, Common Failures & Replacement Costs",
+      "description": "The cards below cover the engines fitted to the Lexus IS 220d in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data.",
+      "cards": [
+        {
+          "code": "2AD-FHV",
+          "imagePlaceholder": "",
+          "altText": "Lexus IS 220d 2AD-FHV engine - diesel 2.2L replacement UK",
+          "productionHistory": [
+            "IS 220d SE - 2006-2011",
+            "IS 220d SE-L - 2006-2011",
+            "IS 220d Sport - 2006-2011",
+            "IS 220d F-Sport (facelift) - 2010-2011"
+          ],
+          "knownFailures": [
+            "Timing chain tensioner failure - rear-mounted chain wears prematurely, causing rattles and potential engine damage.",
+            "Head gasket failure - coolant leaks into cylinders common on high-mileage 2AD-FHV units.",
+            "EGR valve clogging - carbon buildup triggers limp mode and power loss on short-journey cars."
+          ],
+          "specs": "Diesel · 2.2L · 175-177hp · Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £1,095-£1,850 (supply only)"
+        },
+        {
+          "code": "2AD-FTV",
+          "imagePlaceholder": "",
+          "altText": "Lexus IS 220d 2AD-FTV engine - diesel 2.2L replacement UK",
+          "productionHistory": [
+            "IS 220d SE (late production) - 2009-2011",
+            "IS 220d SE-L (facelift) - 2010-2011"
+          ],
+          "knownFailures": [
+            "Injector seal degradation - diesel leaks into sump dilutes oil, accelerating bearing wear.",
+            "DPF regeneration failure - frequent short trips cause blockage, triggering engine management warnings."
+          ],
+          "specs": "Diesel · 2.2L · 175-177hp · Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £1,150-£1,900 (supply only) Estimated from comparable 2AD-FHV units - actual quotes may vary."
+        },
+        {
+          "code": "2AD-FHV",
+          "imagePlaceholder": "",
+          "altText": "Lexus IS 220d 2AD-FHV engine - diesel 2.2L replacement UK",
+          "productionHistory": [
+            "IS 220d SE (early production) - 2006-2009",
+            "IS 220d Sport (pre-facelift) - 2006-2009"
+          ],
+          "knownFailures": [
+            "High-pressure fuel pump wear - causes hard starting and reduced power on cold starts.",
+            "Oil pump chain stretch - leads to low oil pressure warnings at higher mileage."
+          ],
+          "specs": "Diesel · 2.2L · 175-177hp · Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £1,095-£1,750 (supply only)"
+        }
+      ],
+      "headingLines": [
+        "Lexus IS 220d Engines",
+        "Codes, Common Failures & Replacement Costs"
+      ],
+      "imageAlt": "Lexus IS 220d engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
     "liveMarketPrices": {
       "tag": "Live UK Engine Market Data",
       "h2": "",
@@ -336,8 +402,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/lexus/models/live-feed-lexus-is-220d.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",

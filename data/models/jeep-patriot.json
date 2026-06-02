@@ -175,6 +175,74 @@
         ]
       }
     },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "Jeep Patriot Engines - Codes, Common Failures & Replacement Costs",
+      "description": "The cards below cover the main engines fitted to the Jeep Patriot in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data.",
+      "cards": [
+        {
+          "code": "OM642",
+          "imagePlaceholder": "",
+          "altText": "Jeep Patriot OM642 engine - diesel 2.2L replacement UK",
+          "productionHistory": [
+            "Jeep Patriot Longitude 2.2 CRD - 2010-2017",
+            "Jeep Patriot Limited 2.2 CRD - 2010-2017",
+            "Jeep Patriot Sport 2.2 CRD - 2010-2017"
+          ],
+          "knownFailures": [
+            "Oil consumption - piston ring wear causes excessive oil use from 80k miles.",
+            "DPF clogging - particulate filter blocks on short-trip driving patterns.",
+            "EGR valve failure - carbon buildup reduces performance and economy."
+          ],
+          "specs": "Diesel · 2.2L · 136-163hp · Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £1,495-£3,200 (supply only)"
+        },
+        {
+          "code": "ED3",
+          "imagePlaceholder": "",
+          "altText": "Jeep Patriot ED3 engine - petrol 2.4L replacement UK",
+          "productionHistory": [
+            "Jeep Patriot Sport 2.4L - 2007-2017",
+            "Jeep Patriot Limited 2.4L - 2007-2017",
+            "Jeep Patriot Longitude 2.4L - 2007-2017"
+          ],
+          "knownFailures": [
+            "Timing chain stretch - chain rattles and can skip teeth at 60k-100k miles.",
+            "Excessive oil consumption - piston ring wear burns oil on high-mileage units.",
+            "VVT solenoid failure - causes rough idle and check engine light."
+          ],
+          "specs": "Petrol · 2.4L · 170-172hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £1,295-£2,800 (supply only)"
+        },
+        {
+          "code": "BWG",
+          "imagePlaceholder": "",
+          "altText": "Jeep Patriot BWG engine - diesel 2.0L replacement UK",
+          "productionHistory": [
+            "Jeep Patriot Sport 2.0 TDI - 2007-2010",
+            "Jeep Patriot Limited 2.0 TDI - 2007-2010"
+          ],
+          "knownFailures": [
+            "Injector wear - high-pressure injectors degrade causing misfires and smoke.",
+            "Turbocharger failure - variable vanes stick on high-mileage units.",
+            "DPF issues - early TDI units prone to clogging on urban driving."
+          ],
+          "specs": "Diesel · 2.0L · 140hp · Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £1,395-£2,900 (supply only)"
+        }
+      ],
+      "headingLines": [
+        "Jeep Patriot Engines",
+        "Codes, Common Failures & Replacement Costs"
+      ],
+      "imageAlt": "Jeep Patriot engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
     "liveMarketPrices": {
       "tag": "Live UK Engine Market Data",
       "h2": "",
@@ -338,8 +406,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/jeep/models/live-feed-jeep-patriot.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",

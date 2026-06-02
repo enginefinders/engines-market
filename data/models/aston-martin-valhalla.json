@@ -173,6 +173,69 @@
         ]
       }
     },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "Aston Martin Valhalla Engines - Codes, Common Failures & Replacement Costs",
+      "description": "The cards below cover the powertrain components fitted to the Aston Martin Valhalla in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data for this limited-production PHEV hypercar.",
+      "cards": [
+        {
+          "code": "M178",
+          "imagePlaceholder": "",
+          "altText": "Aston Martin Valhalla M178 engine - petrol 4.0L replacement UK",
+          "productionHistory": [
+            "Valhalla Production Model (2025-2026)",
+            "Valhalla Track Specification (2025-2026)",
+            "Valhalla Road Specification (2025-2026)"
+          ],
+          "knownFailures": [
+            "Turbocharger bearing wear - twin-turbo setup may show boost loss after high-mileage track use.",
+            "High-pressure fuel pump degradation - direct injection system requires precise maintenance intervals."
+          ],
+          "specs": "Petrol · 4.0L · 740-760hp · Twin-Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £45,000-£95,000 (supply only) Estimated from comparable M178 AMG units - actual quotes may vary due to Valhalla-specific integration."
+        },
+        {
+          "code": "HMU-VAL",
+          "imagePlaceholder": "",
+          "altText": "Aston Martin Valhalla HMU-VAL engine - hybrid PHEV replacement UK",
+          "productionHistory": [
+            "Valhalla Production Model (2025-2026)",
+            "Valhalla Left-Hand Drive Export (2025-2026)"
+          ],
+          "knownFailures": [
+            "Hybrid control module software faults - warning lights may trigger requiring dealer-level recalibration.",
+            "Thermal management pump failure - battery cooling circuit critical for PHEV longevity."
+          ],
+          "specs": "Hybrid PHEV · 6.1kWh Battery · 319-339hp Electric Assist · Liquid-Cooled",
+          "replacementCost": "Typical UK rebuilt hybrid unit: £28,000-£65,000 (supply only) Estimated from comparable PHEV hypercar systems - specialist availability limited."
+        },
+        {
+          "code": "EM-REV",
+          "imagePlaceholder": "",
+          "altText": "Aston Martin Valhalla EM-REV engine - electric reverse motor replacement UK",
+          "productionHistory": [
+            "Valhalla Production Model (2025-2026) - Exclusive reverse drive unit"
+          ],
+          "knownFailures": [
+            "Electric reverse motor bearing wear - sole reverse mechanism; failure disables reverse function entirely.",
+            "Inverter communication error - unique Valhalla component with no cross-model compatibility."
+          ],
+          "specs": "Electric · Reverse-Only Duty · 15-25hp Equivalent · Valhalla-Exclusive",
+          "replacementCost": "Typical UK rebuilt unit: £12,000-£35,000 (supply only) Valhalla-exclusive component - pricing estimated from specialist hypercar electric motor rebuilders."
+        }
+      ],
+      "headingLines": [
+        "Aston Martin Valhalla Engines",
+        "Codes, Common Failures & Replacement Costs"
+      ],
+      "imageAlt": "Aston Martin Valhalla engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
     "liveMarketPrices": {
       "tag": "Live UK Engine Market Data",
       "h2": "",
@@ -336,8 +399,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/aston-martin/models/live-feed-aston-martin-valhalla.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",

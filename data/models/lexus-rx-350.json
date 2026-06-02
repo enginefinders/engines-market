@@ -173,10 +173,78 @@
         ]
       }
     },
-    "liveMarketPrices": {
+    "engineIntelligence": {
       "tag": "Engine Intelligence",
       "h2": "Lexus RX 350 Engines - Codes, Common Failures & Replacement Costs",
-      "h3": "The cards below cover the main engines fitted to the Lexus RX 350 in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data.",
+      "description": "The cards below cover the main engines fitted to the Lexus RX 350 in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data.",
+      "cards": [
+        {
+          "code": "2GR-FE",
+          "imagePlaceholder": "",
+          "altText": "Lexus RX 350 2GR-FE engine - petrol 3.5L replacement UK",
+          "productionHistory": [
+            "RX 350 SE, Premium, Luxury - 2007-2015",
+            "RX 350 F Sport, Takumi - 2009-2015",
+            "RX 350 AWD variants - 2007-2015"
+          ],
+          "knownFailures": [
+            "Timing chain cover oil leak - front seal degradation causes external oil seepage from 60k miles.",
+            "VVT-i actuator rattle on cold start - cam gear wear creates metallic noise at idle.",
+            "Water pump seepage - coolant leak risk from pump gasket failure on higher-mileage units."
+          ],
+          "specs": "Petrol · 3.5L · 276hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £1,800-£4,500 (supply only)"
+        },
+        {
+          "code": "2GR-FXE",
+          "imagePlaceholder": "",
+          "altText": "Lexus RX 350h 2GR-FXE engine - hybrid 3.5L replacement UK",
+          "productionHistory": [
+            "RX 450h SE, Premium - 2010-2015",
+            "RX 450h Luxury, F Sport - 2012-2015",
+            "RX 450h Takumi - 2013-2015"
+          ],
+          "knownFailures": [
+            "Inverter coolant pump failure - hybrid system overheating risk if pump seizes.",
+            "EGR valve carbon buildup - rough idle and reduced efficiency on high-mileage hybrids.",
+            "Hybrid battery cooling fan wear - reduced battery life if airflow is restricted."
+          ],
+          "specs": "Hybrid · 3.5L · 295hp (combined) · Naturally Aspirated + Electric",
+          "replacementCost": "Typical UK rebuilt engine: £2,200-£5,200 (supply only) Estimated from comparable 2GR-FXE units - actual quotes may vary."
+        },
+        {
+          "code": "2GR-FKS",
+          "imagePlaceholder": "",
+          "altText": "Lexus RX 350 2GR-FKS engine - petrol 3.5L replacement UK",
+          "productionHistory": [
+            "RX 350 (post-2015 facelift) - 2015-2020",
+            "RX 350 F Sport, Takumi - 2016-2020"
+          ],
+          "knownFailures": [
+            "Direct injection carbon buildup on intake valves - requires periodic walnut blasting.",
+            "High-pressure fuel pump wear - potential loss of power on aggressive driving.",
+            "VVT-iW system complexity - additional maintenance considerations vs standard 2GR-FE."
+          ],
+          "specs": "Petrol · 3.5L · 295hp · Naturally Aspirated (Atkinson cycle)",
+          "replacementCost": "Typical UK rebuilt engine: £2,500-£5,800 (supply only)"
+        }
+      ],
+      "headingLines": [
+        "Lexus RX 350 Engines",
+        "Codes, Common Failures & Replacement Costs"
+      ],
+      "imageAlt": "Lexus RX 350 engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
+    "liveMarketPrices": {
+      "tag": "Live UK Engine Market Data",
+      "h2": "",
+      "h3": "",
       "introBullets": [
         {
           "label": "Live market context",
@@ -224,10 +292,7 @@
         "visibleRows": 0,
         "entries": []
       },
-      "headingLines": [
-        "Lexus RX 350 Engines",
-        "Codes, Common Failures & Replacement Costs"
-      ],
+      "headingLines": [],
       "imageAlt": "Lexus RX 350 live market price reference",
       "filterTabs": [
         {
@@ -339,8 +404,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/lexus/models/live-feed-lexus-rx-350.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",

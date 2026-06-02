@@ -173,6 +173,75 @@
         ]
       }
     },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "Aston Martin DB7 Engines - Codes, Common Failures & Replacement Costs",
+      "description": "The cards below cover the main engines fitted to the Aston Martin DB7 in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data.",
+      "cards": [
+        {
+          "code": "AM V12",
+          "imagePlaceholder": "",
+          "altText": "Aston Martin DB7 AM V12 engine - petrol 5.9L replacement UK",
+          "productionHistory": [
+            "DB7 V12 Vantage Coupe - 1999-2003",
+            "DB7 V12 Vantage Volante - 1999-2003",
+            "DB7 Vantage 6.0 - 2000-2003",
+            "DB7 GT / GTA - 2002-2003"
+          ],
+          "knownFailures": [
+            "Cam chain tensioner failure - causes top-end rattle and potential catastrophic valve damage from 60k miles.",
+            "Coil pack failure - misfires on cylinders 6/12 common due to heat exposure in V12 bay.",
+            "Rear main seal leak - oil seepage requiring engine-out service on high-mileage units."
+          ],
+          "specs": "Petrol · 5.9L · 420-435hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £8,500-£14,500 (supply only)"
+        },
+        {
+          "code": "AM2",
+          "imagePlaceholder": "",
+          "altText": "Aston Martin DB7 AM2 engine - petrol 3.2L replacement UK",
+          "productionHistory": [
+            "DB7 3.2 Coupe (manual) - 1994-1999",
+            "DB7 3.2 Volante (manual) - 1996-1999",
+            "DB7 3.2 Automatic variants - 1995-1999"
+          ],
+          "knownFailures": [
+            "Head gasket failure - overheating can push liners, common on neglected cooling systems.",
+            "Supercharger bearing wear - whining noise from Eaton M62 unit after 70k miles.",
+            "Timing chain guide wear - rattling on cold start, requires specialist inspection."
+          ],
+          "specs": "Petrol · 3.2L · 335-340hp · Supercharged",
+          "replacementCost": "Typical UK rebuilt engine: £4,200-£7,800 (supply only)"
+        },
+        {
+          "code": "AM4",
+          "imagePlaceholder": "",
+          "altText": "Aston Martin DB7 AM4 engine - petrol 3.2L replacement UK",
+          "productionHistory": [
+            "DB7 3.2 Vantage (late I6) - 1999-2000",
+            "DB7 3.2 Vantage Volante (late I6) - 1999-2000"
+          ],
+          "knownFailures": [
+            "Oil consumption increase - valve stem seal wear on higher-mileage supercharged units.",
+            "Intercooler pipe cracking - boost pressure leaks affecting performance and economy.",
+            "ECU sensor faults - lambda sensor and MAF issues triggering management light."
+          ],
+          "specs": "Petrol · 3.2L · 335-340hp · Supercharged",
+          "replacementCost": "Typical UK rebuilt engine: £4,800-£8,200 (supply only)"
+        }
+      ],
+      "headingLines": [
+        "Aston Martin DB7 Engines",
+        "Codes, Common Failures & Replacement Costs"
+      ],
+      "imageAlt": "Aston Martin DB7 engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
     "liveMarketPrices": {
       "tag": "Live UK Engine Market Data",
       "h2": "",
@@ -336,8 +405,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/aston-martin/models/live-feed-aston-martin-db7.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",

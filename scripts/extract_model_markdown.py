@@ -1149,6 +1149,12 @@ def build_empty_model_json(
                 "cards": [],
                 "tagline": "",
             },
+            "engineIntelligence": {
+                "tag": "Engine Intelligence",
+                "h2": "",
+                "description": "",
+                "cards": [],
+            },
             "liveMarketPrices": {
                 "tag": "Live UK Engine Market Data",
                 "h2": "",
@@ -1784,6 +1790,20 @@ def inject_model_ui_defaults(data: Dict[str, Any]) -> Dict[str, Any]:
         },
     )
 
+    intelligence = data["sections"].get("engineIntelligence")
+    if intelligence is not None:
+        intelligence.setdefault("headingLines", split_display_heading(intelligence.get("h2", "")))
+        intelligence.setdefault("imageAlt", f"{model_name} engine intelligence reference")
+        intelligence.setdefault(
+            "ui",
+            {
+                "productionHistoryLabel": "Production History",
+                "knownFailuresLabel": "Known Failures",
+                "specsLabel": "Specs",
+                "replacementCostLabel": "Replacement Cost",
+            },
+        )
+
     live = data["sections"]["liveMarketPrices"]
     live.setdefault("headingLines", split_display_heading(live.get("h2", "")))
     live.setdefault("imageAlt", f"{model_name} live market price reference")
@@ -2111,6 +2131,153 @@ def parse_feed_row(line: str) -> Optional[Dict[str, str]]:
         "Fuel": fuel,
         "Avg. Quoted Price": price,
         "Reported Issue": issue,
+    }
+
+
+def parse_engine_intelligence(lines: Sequence[str], model_name: str) -> Optional[Dict[str, Any]]:
+    def read_card_fields(block: Sequence[str]) -> Dict[str, List[str]]:
+        wanted = {
+            "image placeholder",
+            "alt text",
+            "engine code",
+            "production history",
+            "known failures",
+            "specs",
+            "replacement cost",
+        }
+        fields: Dict[str, List[str]] = {}
+        idx = 0
+        while idx < len(block):
+            match = structured_label_match(block[idx])
+            if not match:
+                idx += 1
+                continue
+            label = normalize_label_name(match.group("label"))
+            if label not in wanted:
+                idx += 1
+                continue
+
+            values: List[str] = []
+            inline = clean_text(match.group("value"))
+            if inline:
+                values.append(inline)
+
+            idx += 1
+            while idx < len(block):
+                candidate = block[idx]
+                if is_blank(candidate):
+                    if values:
+                        break
+                    idx += 1
+                    continue
+                if SECTION_HEADER_RE.match(normalize_line(candidate)):
+                    break
+                candidate_match = structured_label_match(candidate)
+                if candidate_match and normalize_label_name(candidate_match.group("label")) in wanted:
+                    break
+                values.append(clean_text(candidate))
+                idx += 1
+
+            fields[label] = values
+        return fields
+
+    def join_field(fields: Dict[str, List[str]], name: str, *, preserve_brackets: bool = False) -> str:
+        values = fields.get(name, [])
+        if not values:
+            return ""
+        if preserve_brackets:
+            return " ".join(value for value in values if value).strip()
+        return " ".join(normalize_line(value) for value in values if normalize_line(value)).strip()
+
+    tag = extract_label_value(lines, "TAG", "TAG PILL") or "Engine Intelligence"
+    h2 = extract_label_value(lines, "H2") or ""
+    description = (
+        extract_label_value(lines, "PARAGRAPH", "INTRO", "INTRODUCTORY TEXT", "DESCRIPTION") or ""
+    )
+    cards: List[Dict[str, Any]] = []
+
+    idx = 0
+    while idx < len(lines):
+        line = normalize_line(lines[idx])
+        if not line:
+            idx += 1
+            continue
+
+        if re.fullmatch(r"card\s+\d+\s*:?", line, flags=re.IGNORECASE):
+            block: List[str] = []
+            idx += 1
+            while idx < len(lines):
+                candidate = normalize_line(lines[idx])
+                if re.fullmatch(r"card\s+\d+\s*:?", candidate, flags=re.IGNORECASE):
+                    break
+                if SECTION_HEADER_RE.match(candidate):
+                    break
+                if normalize_key(candidate) == "tag: models we cover":
+                    break
+                block.append(lines[idx])
+                idx += 1
+
+            production_history = [
+                item
+                for item in (
+                    strip_bullet_text(entry)
+                    for entry in extract_block_after_label(block, "PRODUCTION HISTORY")
+                )
+                if item
+            ]
+            known_failures = [
+                item
+                for item in (
+                    strip_bullet_text(entry)
+                    for entry in extract_block_after_label(block, "KNOWN FAILURES")
+                )
+                if item
+            ]
+            fields = read_card_fields(block)
+            if not production_history:
+                production_history = [
+                    strip_bullet_text(entry)
+                    for entry in fields.get("production history", [])
+                    if strip_bullet_text(entry)
+                ]
+            if not known_failures:
+                known_failures = [
+                    strip_bullet_text(entry)
+                    for entry in fields.get("known failures", [])
+                    if strip_bullet_text(entry)
+                ]
+
+            card = {
+                "code": join_field(fields, "engine code"),
+                "imagePlaceholder": join_field(fields, "image placeholder", preserve_brackets=True),
+                "altText": join_field(fields, "alt text"),
+                "productionHistory": production_history,
+                "knownFailures": known_failures,
+                "specs": join_field(fields, "specs"),
+                "replacementCost": join_field(fields, "replacement cost"),
+            }
+            if any(
+                [
+                    card["code"],
+                    card["productionHistory"],
+                    card["knownFailures"],
+                    card["specs"],
+                    card["replacementCost"],
+                ]
+            ):
+                cards.append(card)
+            continue
+
+        idx += 1
+
+    if not cards:
+        return None
+
+    return {
+        "tag": tag,
+        "h2": h2 or f"{model_name} Engines - Codes, Common Failures & Replacement Costs",
+        "description": description,
+        "cards": cards,
     }
 
 
@@ -4233,11 +4400,16 @@ def parse_document(
     how_lines = extract_slice(
         lines,
         ["# section 2 - how it works", "# section 2", "how it works", "card 1 front"],
-        ["# section 3 - live feed", "# section 3 - live market prices", "# section 3", "3: live market prices", "live uk engine market data", "live uk ev component market data", "4: popular sub-models", "# section 4 - popular sub-models", "tag: models we cover"],
+        ["# section 3 - engine intelligence cards", "# section 3 - live feed", "# section 3 - live market prices", "# section 3", "3: live market prices", "tag: engine intelligence", "live uk engine market data", "live uk ev component market data", "4: popular sub-models", "# section 4 - popular sub-models", "tag: models we cover"],
+    )
+    engine_intelligence_lines = extract_slice(
+        lines,
+        ["# section 3 - engine intelligence cards", "tag: engine intelligence"],
+        ["# section 4 - popular sub-models", "# section 4", "4: popular sub-models", "tag: models we cover"],
     )
     live_lines = extract_slice(
         lines,
-        ["# section 3 - live feed", "# section 3 - live market prices", "# section 3", "3: live market prices", "live uk engine market data", "live uk ev component market data", "feed table"],
+        ["# section 3 - live feed", "# section 3 - live market prices", "3: live market prices", "live uk engine market data", "live uk ev component market data", "feed table"],
         ["# section 4 - popular sub-models", "# section 4", "4: popular sub-models", "tag: models we cover"],
     )
     variant_lines = extract_slice(
@@ -4292,6 +4464,9 @@ def parse_document(
     data["sections"]["hero"] = parse_hero_with_anchor_rows(hero_lines or lines, model_name)
     parsed_how = parse_how_it_works(how_lines, model_name)
     data["sections"]["howItWorks"] = merge_missing_how_it_works(parsed_how, brand_json)
+    parsed_engine_intelligence = parse_engine_intelligence(engine_intelligence_lines, model_name)
+    if parsed_engine_intelligence:
+        data["sections"]["engineIntelligence"] = parsed_engine_intelligence
     data["sections"]["liveMarketPrices"] = parse_live_market(live_lines, model_name)
     data["sections"]["variantCoverage"] = parse_variant_coverage_refined(variant_lines)
     guide = parse_engine_code_families(engine_code_lines)

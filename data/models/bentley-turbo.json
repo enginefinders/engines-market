@@ -173,6 +173,75 @@
         ]
       }
     },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "Bentley Turbo Engines - Codes, Common Failures & Replacement Costs",
+      "description": "The cards below cover the main engines fitted to the Bentley Turbo in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data.",
+      "cards": [
+        {
+          "code": "L410IT",
+          "imagePlaceholder": "",
+          "altText": "Bentley Turbo L410IT engine - petrol 6.75L replacement UK",
+          "productionHistory": [
+            "Bentley Turbo R (1985-1997) - carburettor and fuel-injected variants",
+            "Bentley Turbo RL long wheelbase (1989-1997)",
+            "Bentley New Turbo R (1995) - Zytek EMS3 management",
+            "Bentley Turbo RT (1997-1999) - intercooled evolution"
+          ],
+          "knownFailures": [
+            "Distributor drive belt failure - leaves engine running on four cylinders, requires immediate replacement.",
+            "Turbocharger wear - Garrett units develop shaft play and oil consumption at high mileage.",
+            "Ignition system faults - Zytek EMS3 intermittent spark issues on late-model units."
+          ],
+          "specs": "Petrol · 6.75L · 296-405hp · Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £9,500-£18,000 (supply only)"
+        },
+        {
+          "code": "L410ITI",
+          "imagePlaceholder": "",
+          "altText": "Bentley Turbo L410ITI engine - petrol 6.75L replacement UK",
+          "productionHistory": [
+            "Bentley Turbo RT (1997-1999) - 400bhp intercooled specification",
+            "Bentley Turbo RT Mulliner (1998) - 426bhp remapped variant",
+            "Bentley Turbo S (1995) - Blackpool 408bhp specification"
+          ],
+          "knownFailures": [
+            "Intercooler piping degradation - rubber hoses crack and cause boost leaks on high-mileage units.",
+            "ECU management faults - Bosch Motronic and Zytek units suffer capacitor failure with age.",
+            "Worn tappets - hydraulic lifters develop noise and require replacement on high-mileage engines."
+          ],
+          "specs": "Petrol · 6.75L · 389-426hp · Turbocharged Intercooled",
+          "replacementCost": "Typical UK rebuilt engine: £12,000-£22,000 (supply only)"
+        },
+        {
+          "code": "Blackpool",
+          "imagePlaceholder": "",
+          "altText": "Bentley Turbo Blackpool engine - petrol 6.75L replacement UK",
+          "productionHistory": [
+            "Bentley Turbo S (1995) - 60 units produced, 408bhp Bosch Motronic",
+            "Bentley Continental S (1995) - 12 units, same Blackpool specification"
+          ],
+          "knownFailures": [
+            "Extreme rarity parts sourcing - correct Blackpool-spec components require specialist supplier networks.",
+            "High-performance wear patterns - increased boost and power accelerate turbo and bearing wear.",
+            "Collector-value authentication - incorrect donor engines compromise vehicle provenance and value."
+          ],
+          "specs": "Petrol · 6.75L · 408hp · Turbocharged Intercooled",
+          "replacementCost": "Typical UK rebuilt engine: £18,000-£35,000 (supply only) Estimated from comparable L410ITI units - actual quotes may vary due to Blackpool specification rarity."
+        }
+      ],
+      "headingLines": [
+        "Bentley Turbo Engines",
+        "Codes, Common Failures & Replacement Costs"
+      ],
+      "imageAlt": "Bentley Turbo engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
     "liveMarketPrices": {
       "tag": "Live UK Engine Market Data",
       "h2": "",
@@ -336,8 +405,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/bentley/models/live-feed-bentley-turbo.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",

@@ -175,6 +175,72 @@
         ]
       }
     },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "Jeep Compass Engines - Codes, Common Failures & Replacement Costs",
+      "description": "The cards below cover the main engines fitted to the Jeep Compass in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data. All prices reflect typical UK market ranges for supply-only rebuilt units.",
+      "cards": [
+        {
+          "code": "55284064",
+          "imagePlaceholder": "",
+          "altText": "Jeep Compass 55284064 engine - diesel 2.0L replacement UK",
+          "productionHistory": [
+            "Compass 2.0 MultiJet II 140ps (MP/552, 2017-2025)",
+            "Compass Longitude 2.0 AWD 140ps (2017-2022)",
+            "Compass Limited 2.0 AWD 140ps (2017-2022)"
+          ],
+          "knownFailures": [
+            "Timing chain tensioner wear - documented failure between 60k-100k miles causing rattling noise.",
+            "EGR valve clogging - common on short-journey diesel use, leads to reduced power and DPF issues."
+          ],
+          "specs": "Diesel · 2.0L · 138-140hp · Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £1,495-£2,450 (supply only)"
+        },
+        {
+          "code": "55263069",
+          "imagePlaceholder": "",
+          "altText": "Jeep Compass 55263069 engine - petrol 1.4L replacement UK",
+          "productionHistory": [
+            "Compass 1.4 MultiAir 140ps (MP/552, 2017-2025)",
+            "Compass Night Eagle 1.4 FWD 140ps (2017-2021)",
+            "Compass Limited 1.4 FWD 140ps (2017-2020)"
+          ],
+          "knownFailures": [
+            "MultiAir hydraulic unit failure - documented between 40k-70k miles, causes misfires and loss of power.",
+            "Timing chain stretch - metallic rattling on cold start, requires specialist diagnosis."
+          ],
+          "specs": "Petrol · 1.4L · 138-140hp · Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £1,350-£2,250 (supply only)"
+        },
+        {
+          "code": "46346020",
+          "imagePlaceholder": "",
+          "altText": "Jeep Compass 46346020 engine - diesel 1.6L replacement UK",
+          "productionHistory": [
+            "Compass 1.6 MultiJet II 120ps (MP/552, 2019-2025)",
+            "Compass Longitude 1.6 FWD 120ps (2019-2023)",
+            "Compass Sport 1.6 FWD 120ps (2019-2022)"
+          ],
+          "knownFailures": [
+            "DPF regeneration failure - common on urban driving patterns, leads to limp mode.",
+            "Turbo actuator sticking - documented on higher-mileage units, causes boost loss."
+          ],
+          "specs": "Diesel · 1.6L · 118-120hp · Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £1,295-£2,150 (supply only)"
+        }
+      ],
+      "headingLines": [
+        "Jeep Compass Engines",
+        "Codes, Common Failures & Replacement Costs"
+      ],
+      "imageAlt": "Jeep Compass engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
     "liveMarketPrices": {
       "tag": "Live UK Engine Market Data",
       "h2": "",
@@ -338,8 +404,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/jeep/models/live-feed-jeep-compass.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",

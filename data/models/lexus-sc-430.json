@@ -173,6 +173,70 @@
         ]
       }
     },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "Lexus SC 430 Engines - Codes, Common Failures & Replacement Costs",
+      "description": "The cards below cover the 3UZ-FE V8 engine fitted to the Lexus SC 430 in the UK, including documented failure causes like timing belt and VVT-i issues, production years 2001-2010, and typical rebuilt engine costs based on current UK market data.",
+      "cards": [
+        {
+          "code": "3UZ-FE",
+          "imagePlaceholder": "",
+          "altText": "Lexus SC 430 3UZ-FE engine - petrol 4.3L replacement UK",
+          "productionHistory": [
+            "SC 430 (UZZ40) - 2001-2005 (drive-by-cable throttle)",
+            "SC 430 Facelift (UZZ40) - 2005-2010 (drive-by-wire throttle)"
+          ],
+          "knownFailures": [
+            "Timing belt failure - catastrophic valve damage if belt snaps after 100k km or 6 years.",
+            "VVT-i actuator rattle - cam gear wear causes cold-start rattling on high-mileage units.",
+            "Coil pack failure - individual cylinder misfires common after 80k miles."
+          ],
+          "specs": "Petrol · 4.3L · 290-305hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £4,200-£4,800 (supply only)"
+        },
+        {
+          "code": "3UZ-FE",
+          "imagePlaceholder": "",
+          "altText": "Lexus SC 430 3UZ-FE long block engine - petrol 4.3L replacement UK",
+          "productionHistory": [
+            "SC 430 (UZZ40) - 2001-2005 (drive-by-cable throttle)",
+            "SC 430 Facelift (UZZ40) - 2005-2010 (drive-by-wire throttle)"
+          ],
+          "knownFailures": [
+            "Water pump failure - often overlooked during timing belt service, leads to overheating.",
+            "Oil seal degradation - front/rear main seals leak on units over 100k miles."
+          ],
+          "specs": "Petrol · 4.3L · 290-305hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £4,200-£4,800 (supply only)"
+        },
+        {
+          "code": "3UZ-FE",
+          "imagePlaceholder": "",
+          "altText": "Lexus SC 430 3UZ-FE remanufactured engine - petrol 4.3L replacement UK",
+          "productionHistory": [
+            "SC 430 (UZZ40) - 2001-2005 (drive-by-cable throttle)",
+            "SC 430 Facelift (UZZ40) - 2005-2010 (drive-by-wire throttle)"
+          ],
+          "knownFailures": [
+            "Exhaust manifold crack - creates ticking noise and emissions issues on older units.",
+            "Throttle body carbon buildup - causes hesitation on pre-2005 cable-operated units."
+          ],
+          "specs": "Petrol · 4.3L · 290-305hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £4,200-£4,800 (supply only)"
+        }
+      ],
+      "headingLines": [
+        "Lexus SC 430 Engines",
+        "Codes, Common Failures & Replacement Costs"
+      ],
+      "imageAlt": "Lexus SC 430 engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
     "liveMarketPrices": {
       "tag": "Live UK Engine Market Data",
       "h2": "",
@@ -320,8 +384,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/lexus/models/live-feed-lexus-sc-430.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",

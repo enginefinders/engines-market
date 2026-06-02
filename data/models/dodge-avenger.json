@@ -173,6 +173,71 @@
         ]
       }
     },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "Dodge Avenger Engines - Codes, Common Failures & Replacement Costs",
+      "description": "The cards below cover the engines fitted to the Dodge Avenger in the UK - including known failure causes, production years across variants, typical replacement costs, and key technical specs. All prices reflect typical UK market ranges for rebuilt units.",
+      "cards": [
+        {
+          "code": "BYL",
+          "imagePlaceholder": "",
+          "altText": "Dodge Avenger BYL engine - diesel 2.0L replacement UK",
+          "productionHistory": [
+            "Avenger SE 2.0 CRD - 2007-2010",
+            "Avenger SXT 2.0 CRD - 2007-2010"
+          ],
+          "knownFailures": [
+            "EGR valve clogging - carbon buildup restricts flow causing rough idle and power loss on higher-mileage units.",
+            "Turbo actuator failure - vacuum-operated wastegate sticks leading to reduced boost and limp mode."
+          ],
+          "specs": "Diesel · 2.0L · 140hp · Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £1,800-£3,200 (supply only)"
+        },
+        {
+          "code": "EDG",
+          "imagePlaceholder": "",
+          "altText": "Dodge Avenger EDG engine - petrol 2.4L replacement UK",
+          "productionHistory": [
+            "Avenger SE 2.4L - 2007-2014",
+            "Avenger SXT 2.4L - 2007-2014",
+            "Avenger Express 2.4L - 2010-2011"
+          ],
+          "knownFailures": [
+            "Throttle body failure - electronic throttle control motor fails causing stalling and ETC warning light.",
+            "Ignition coil wear - coil packs degrade after 70k miles triggering misfire codes and rough running."
+          ],
+          "specs": "Petrol · 2.4L · 173-175hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £1,500-£2,800 (supply only)"
+        },
+        {
+          "code": "ERB",
+          "imagePlaceholder": "",
+          "altText": "Dodge Avenger ERB engine - petrol 3.6L replacement UK",
+          "productionHistory": [
+            "Avenger Heat 3.6L Pentastar - 2011",
+            "Avenger R/T 3.6L Pentastar - 2012-2014",
+            "Avenger SXT Plus 3.6L Pentastar - 2012"
+          ],
+          "knownFailures": [
+            "Water pump leak - internal seal failure causes coolant loss and overheating on higher-mileage units.",
+            "Cam phaser rattle - VVT actuator wear creates timing noise at startup requiring specialist attention."
+          ],
+          "specs": "Petrol · 3.6L · 283hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £3,000-£4,800 (supply only) Estimated from comparable Pentastar units - actual quotes may vary."
+        }
+      ],
+      "headingLines": [
+        "Dodge Avenger Engines",
+        "Codes, Common Failures & Replacement Costs"
+      ],
+      "imageAlt": "Dodge Avenger engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
     "liveMarketPrices": {
       "tag": "Live UK Engine Market Data",
       "h2": "",
@@ -336,8 +401,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/dodge/models/live-feed-dodge-avenger.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",
@@ -468,7 +532,7 @@
           "priceRange": "£3,000-£4,800",
           "cta": "Compare Heat Engine Prices",
           "engineCodes": [
-            "ERB 3.6L"
+            "ERB"
           ],
           "fuel": "",
           "power": "283hp",
@@ -566,7 +630,8 @@
           "priceRange": "£1,500-£4,800",
           "cta": "Compare Auto Engine Prices",
           "engineCodes": [
-            "EDG"
+            "EDG",
+            "6-speed"
           ],
           "fuel": "",
           "power": "173-283hp",
@@ -580,7 +645,8 @@
           "priceRange": "£1,400-£3,200",
           "cta": "Compare Manual Engine Prices",
           "engineCodes": [
-            "BYL"
+            "BYL",
+            "6-speed"
           ],
           "fuel": "",
           "power": "140-156hp",

@@ -175,6 +175,72 @@
         ]
       }
     },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "Jeep Comanche Engines - Codes, Common Failures & Replacement Costs",
+      "description": "The cards below cover the main engines fitted to the Jeep Comanche in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data.",
+      "cards": [
+        {
+          "code": "ERH",
+          "imagePlaceholder": "",
+          "altText": "Jeep Comanche ERH engine - petrol 4.0L replacement UK",
+          "productionHistory": [
+            "4.0L High Output (HO) - 1991-1992",
+            "4.0L HO Renix crossover models - approx. 1990-1991"
+          ],
+          "knownFailures": [
+            "Lifter collapse - valvetrain noise and misfires common after 80k miles on high-mileage units.",
+            "Cylinder head cracking - 0331 casting prone to cracks between valves 3 and 4 under heat stress.",
+            "Rear main seal leak - oil seepage from bellhousing area, often requires engine removal to address."
+          ],
+          "specs": "Petrol · 4.0L · 173-193hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £1,450-£3,200 (supply only) Estimated from comparable 4.0L AMC units - actual quotes may vary."
+        },
+        {
+          "code": "EPE",
+          "imagePlaceholder": "",
+          "altText": "Jeep Comanche EPE engine - petrol 2.5L replacement UK",
+          "productionHistory": [
+            "2.5L TBI Four-Cylinder - 1986-1990",
+            "Base model Comanche variants - 1986-1992"
+          ],
+          "knownFailures": [
+            "Crankshaft position sensor failure - no-start condition, intermittent stalling, common on Renix-era units.",
+            "Throttle body injection issues - rough idle, hesitation, fuel delivery problems after 70k miles.",
+            "Timing chain stretch - rattling noise on cold start, potential valve timing drift on neglected engines."
+          ],
+          "specs": "Petrol · 2.5L · 105-121hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £950-£2,100 (supply only) Estimated from comparable AMC 2.5L units - actual quotes may vary."
+        },
+        {
+          "code": "J8S-814",
+          "imagePlaceholder": "",
+          "altText": "Jeep Comanche J8S-814 engine - diesel 2.1L replacement UK",
+          "productionHistory": [
+            "2.1L Renault Turbo Diesel - 1986-1992 (European market imports only)",
+            "UK-imported LHD Comanche diesel variants - approx. 1987-1992"
+          ],
+          "knownFailures": [
+            "Injection pump wear - hard starting, loss of power, black smoke under load on high-mileage units.",
+            "Turbocharger failure - oil leaks, boost loss, whining noise common after 100k miles.",
+            "Head gasket failure - coolant/oil mixing, overheating, white exhaust smoke on neglected examples."
+          ],
+          "specs": "Diesel · 2.1L · 85-95hp · Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £1,850-£4,500 (supply only) Estimated from comparable Renault J8S units - actual quotes may vary due to rarity."
+        }
+      ],
+      "headingLines": [
+        "Jeep Comanche Engines",
+        "Codes, Common Failures & Replacement Costs"
+      ],
+      "imageAlt": "Jeep Comanche engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
     "liveMarketPrices": {
       "tag": "Live UK Engine Market Data",
       "h2": "",
@@ -338,8 +404,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/jeep/models/live-feed-jeep-comanche.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",

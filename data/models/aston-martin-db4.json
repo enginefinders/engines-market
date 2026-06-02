@@ -173,6 +173,76 @@
         ]
       }
     },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "Aston Martin DB4 Engines - Codes, Common Failures & Replacement Costs",
+      "description": "The cards below cover the Tadek Marek 3.7L inline-six engines fitted to the Aston Martin DB4 in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data.",
+      "cards": [
+        {
+          "code": "370/",
+          "imagePlaceholder": "",
+          "altText": "Aston Martin DB4 370/ engine - petrol 3.7L replacement UK",
+          "productionHistory": [
+            "DB4 Series I (1958-1961)",
+            "DB4 Series II (1961-1962)",
+            "DB4 Series III (1962-1963)",
+            "DB4 Series IV (1963)",
+            "DB4 Series V (1963)"
+          ],
+          "knownFailures": [
+            "Timing chain stretch - Marek design tensioner wear causes rattle and potential failure from 60k miles.",
+            "Alloy block liner corrosion - wet liner electrolytic damage unique to aluminium construction.",
+            "Oil pressure loss - bearing wear on high-mileage units without regular servicing."
+          ],
+          "specs": "Petrol · 3.7L · 240hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £15,000-£25,000 (supply only)"
+        },
+        {
+          "code": "/SS",
+          "imagePlaceholder": "",
+          "altText": "Aston Martin DB4 /SS engine - petrol 3.7L replacement UK",
+          "productionHistory": [
+            "DB4 Vantage Series II (1961-1962)",
+            "DB4 Vantage Series III (1962-1963)",
+            "DB4 Vantage Series IV (1963)"
+          ],
+          "knownFailures": [
+            "Triple SU carburettor synchronization - fuel delivery imbalance causes performance loss.",
+            "Timing chain stretch - high-output tuning accelerates tensioner wear on /SS units.",
+            "Overheating under load - increased compression demands robust cooling system maintenance."
+          ],
+          "specs": "Petrol · 3.7L · 266hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £25,000-£40,000 (supply only)"
+        },
+        {
+          "code": "400/",
+          "imagePlaceholder": "",
+          "altText": "Aston Martin DB4 400/ engine - petrol 3.7L replacement UK",
+          "productionHistory": [
+            "DB4 GT (1959-1963)",
+            "DB4 GT Zagato (1960-1963)"
+          ],
+          "knownFailures": [
+            "Twin-plug ignition wear - dual distributor maintenance critical for competition-spec reliability.",
+            "High-compression piston ring wear - 9.7:1 ratio demands premium fuel and careful break-in.",
+            "Alloy block liner corrosion - structural vulnerability shared across all DB4 aluminium engines."
+          ],
+          "specs": "Petrol · 3.7L · 302hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £40,000-£75,000 (supply only) Estimated from comparable 400/ units - actual quotes may vary."
+        }
+      ],
+      "headingLines": [
+        "Aston Martin DB4 Engines",
+        "Codes, Common Failures & Replacement Costs"
+      ],
+      "imageAlt": "Aston Martin DB4 engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
     "liveMarketPrices": {
       "tag": "Live UK Engine Market Data",
       "h2": "",
@@ -336,8 +406,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/aston-martin/models/live-feed-aston-martin-db4.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",

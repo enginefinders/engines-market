@@ -173,6 +173,69 @@
         ]
       }
     },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "Dodge Grand Caravan Engines - Codes, Common Failures & Replacement Costs",
+      "description": "The cards below cover the main engines fitted to the Dodge Grand Caravan in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data for US-import models.",
+      "cards": [
+        {
+          "code": "ERB",
+          "imagePlaceholder": "",
+          "altText": "Dodge Grand Caravan ERB engine - petrol 3.6L replacement UK",
+          "productionHistory": [
+            "SXT, RT, Crew, SE (RT Platform, 2011-2016)",
+            "Final-generation Grand Caravan models with Pentastar V6"
+          ],
+          "knownFailures": [
+            "Rocker arm failure - causes ticking noise and potential cylinder head damage from 60k miles.",
+            "Cylinder head cracks - documented on 2011-2014 ERB units leading to misfires and oil consumption."
+          ],
+          "specs": "Petrol · 3.6L · 283hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £1,850-£4,200 (supply only)"
+        },
+        {
+          "code": "EGH",
+          "imagePlaceholder": "",
+          "altText": "Dodge Grand Caravan EGH engine - petrol 3.8L replacement UK",
+          "productionHistory": [
+            "SE, SXT, Sport (2004-2010)",
+            "Pre-Pentastar Grand Caravan models"
+          ],
+          "knownFailures": [
+            "Head gasket failure - common on higher-mileage units causing overheating and white exhaust smoke.",
+            "Stalling at idle - documented issue linked to sensor or PCM faults on 2007-2010 examples."
+          ],
+          "specs": "Petrol · 3.8L · 193-209hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £1,450-£3,600 (supply only)"
+        },
+        {
+          "code": "EGV",
+          "imagePlaceholder": "",
+          "altText": "Dodge Grand Caravan EGV engine - petrol 3.3L replacement UK",
+          "productionHistory": [
+            "Base, SE (2006-2008)",
+            "Entry-level Grand Caravan variants"
+          ],
+          "knownFailures": [
+            "Timing chain tensioner wear - causes rattle on start-up and potential chain skip if neglected.",
+            "Oil pressure loss - documented on high-mileage units leading to bearing wear."
+          ],
+          "specs": "Petrol · 3.3L · 173-182hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £1,200-£2,800 (supply only)"
+        }
+      ],
+      "headingLines": [
+        "Dodge Grand Caravan Engines",
+        "Codes, Common Failures & Replacement Costs"
+      ],
+      "imageAlt": "Dodge Grand Caravan engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
     "liveMarketPrices": {
       "tag": "Live UK Engine Market Data",
       "h2": "",
@@ -336,8 +399,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/dodge/models/live-feed-dodge-grand-caravan.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",
@@ -469,7 +531,7 @@
           "priceRange": "£1,950-£4,400",
           "cta": "Compare RT Engine Prices",
           "engineCodes": [
-            "ERB 3.6L"
+            "ERB"
           ],
           "fuel": "",
           "power": "283hp",
@@ -526,7 +588,7 @@
           "priceRange": "£1,850-£4,200",
           "cta": "Compare Crew Engine Prices",
           "engineCodes": [
-            "ERB 3.6L"
+            "ERB"
           ],
           "fuel": "",
           "power": "283hp",

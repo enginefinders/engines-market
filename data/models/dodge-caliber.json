@@ -173,10 +173,76 @@
         ]
       }
     },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "Dodge Caliber Engines - Codes, Common Failures & Replacement Costs",
+      "description": "The cards below cover the main engines fitted to the Dodge Caliber in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data.",
+      "cards": [
+        {
+          "code": "BWD",
+          "imagePlaceholder": "",
+          "altText": "Dodge Caliber BWD engine - diesel 2.0L replacement UK",
+          "productionHistory": [
+            "2.0 CRD SE, SXT, SX - 2006-2012",
+            "2.0 CRD Sport, R/T - 2007-2010",
+            "2.0 CRD Crossroad AWD - 2009-2012"
+          ],
+          "knownFailures": [
+            "Piezo injector failure - high-pressure injectors degrade from 70k miles, causing hard starts and misfires.",
+            "EGR valve clogging - carbon buildup triggers limp mode, especially on short-journey vehicles.",
+            "Turbo seal wear - oil leaks and boost loss common after 120k miles on high-mileage units."
+          ],
+          "specs": "Diesel · 2.0L · 140hp · Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £2,400-£3,200 (supply only)"
+        },
+        {
+          "code": "EBA",
+          "imagePlaceholder": "",
+          "altText": "Dodge Caliber EBA engine - petrol 1.8L replacement UK",
+          "productionHistory": [
+            "1.8 SE, SXT - 2006-2012",
+            "1.8 SX, Sport - 2007-2010"
+          ],
+          "knownFailures": [
+            "Excessive oil consumption - piston ring design flaw causes burning oil from 60k miles on World Engine units.",
+            "Timing chain tensioner wear - cold-start rattle precedes chain stretch; ignore at risk of valve damage.",
+            "Camshaft position sensor failure - intermittent no-start or stalling, common after 80k miles."
+          ],
+          "specs": "Petrol · 1.8L · 107-120hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £2,400-£3,100 (supply only)"
+        },
+        {
+          "code": "ECE",
+          "imagePlaceholder": "",
+          "altText": "Dodge Caliber ECE engine - petrol 2.4L turbo replacement UK specialist",
+          "productionHistory": [
+            "SRT4 2.4L Turbo - 2008-2009 (UK limited import)"
+          ],
+          "knownFailures": [
+            "Turbocharger bearing failure - high-boost operation accelerates wear; listen for shaft whine above 3,000rpm.",
+            "Forged piston ring land cracking - extreme tuning or poor fuel quality can cause compression loss.",
+            "Intercooler piping split - boost leaks cause power loss; inspect rubber couplers every 40k miles."
+          ],
+          "specs": "Petrol · 2.4L · 285hp · Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £4,500-£5,200 (supply only) · Specialist performance rebuild required"
+        }
+      ],
+      "headingLines": [
+        "Dodge Caliber Engines",
+        "Codes, Common Failures & Replacement Costs"
+      ],
+      "imageAlt": "Dodge Caliber engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
     "liveMarketPrices": {
-      "tag": "Live Market Prices",
-      "h2": "Dodge Caliber Engine Prices Today - Real UK Market Data",
-      "h3": "Live pricing updates from our network of UK Dodge Caliber engine specialists. All prices reflect current supply-only rebuilt/reconditioned engine costs - supply & fit labour quoted separately.",
+      "tag": "Live UK Engine Market Data",
+      "h2": "",
+      "h3": "",
       "introBullets": [
         {
           "label": "Live market context",
@@ -224,10 +290,7 @@
         "visibleRows": 0,
         "entries": []
       },
-      "headingLines": [
-        "Dodge Caliber Engine Prices Today",
-        "Real UK Market Data"
-      ],
+      "headingLines": [],
       "imageAlt": "Dodge Caliber live market price reference",
       "filterTabs": [
         {
@@ -339,8 +402,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/dodge/models/live-feed-dodge-caliber.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",
@@ -474,7 +536,7 @@
           "cta": "Compare Crossroad Engine Prices",
           "engineCodes": [
             "BWD",
-            "ENR 2.0"
+            "ENR"
           ],
           "fuel": "Diesel",
           "power": "140-163hp",
@@ -489,7 +551,7 @@
           "cta": "Compare SXT Petrol Engine Prices",
           "engineCodes": [
             "EBA",
-            "ECB 1.8"
+            "ECB"
           ],
           "fuel": "Petrol",
           "power": "107-156hp",
@@ -518,7 +580,7 @@
           "cta": "Compare Sport Engine Prices",
           "engineCodes": [
             "ECB",
-            "ED3 2.0"
+            "ED3"
           ],
           "fuel": "Petrol",
           "power": "156-172hp",
@@ -561,7 +623,7 @@
           "cta": "Compare Limited Engine Prices",
           "engineCodes": [
             "ED3",
-            "2.2 CRD"
+            "ENR"
           ],
           "fuel": "Petrol",
           "power": "163-172hp",

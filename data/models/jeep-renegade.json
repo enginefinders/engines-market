@@ -175,6 +175,71 @@
         ]
       }
     },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "Jeep Renegade Engines - Codes, Common Failures & Replacement Costs",
+      "description": "The cards below cover the main engines fitted to the Jeep Renegade in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data.",
+      "cards": [
+        {
+          "code": "GSE-T4",
+          "imagePlaceholder": "",
+          "altText": "Jeep Renegade GSE-T4 engine - petrol 1.4L replacement UK",
+          "productionHistory": [
+            "Renegade Sport/Longitude/Limited 1.4 MultiAir - 2015-2022",
+            "Renegade Trailhawk 1.4 MultiAir - 2015-2022"
+          ],
+          "knownFailures": [
+            "Timing chain tensioner failure - premature wear causes rattling noise and potential engine damage from 60k miles.",
+            "Turbocharger failure - codes P0236/P0299 common on high-mileage units with oil starvation issues."
+          ],
+          "specs": "Petrol · 1.4L · 140-170hp · Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £1,800-£2,900 (supply only)"
+        },
+        {
+          "code": "FCA200",
+          "imagePlaceholder": "",
+          "altText": "Jeep Renegade FCA200 engine - diesel 2.0L replacement UK",
+          "productionHistory": [
+            "Renegade Longitude 2.0 MultiJet II - 2015-2022",
+            "Renegade Trailhawk 2.0 MultiJet II - 2015-2022",
+            "Renegade Limited 2.0 MultiJet II - 2016-2022"
+          ],
+          "knownFailures": [
+            "EGR cooler cracking - updated cooler with revised baffling required to prevent coolant leaks and overheating.",
+            "Turbo actuator fault - electronic wastegate actuator failure causes reduced power and limp mode."
+          ],
+          "specs": "Diesel · 2.0L · 140-170hp · Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £2,100-£3,400 (supply only)"
+        },
+        {
+          "code": "FCA160",
+          "imagePlaceholder": "",
+          "altText": "Jeep Renegade FCA160 engine - diesel 1.6L replacement UK",
+          "productionHistory": [
+            "Renegade Sport 1.6 MultiJet II - 2018-2022",
+            "Renegade Longitude 1.6 MultiJet II - 2018-2022",
+            "Renegade Limited 1.6 MultiJet II - 2018-2022"
+          ],
+          "knownFailures": [
+            "DPF regeneration issues - frequent short journeys cause filter blockage and warning lights on 1.6 units.",
+            "MultiAir valve control failure - hydraulic unit wear leads to rough idle and misfires on higher-mileage examples."
+          ],
+          "specs": "Diesel · 1.6L · 120hp · Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £1,900-£3,100 (supply only)"
+        }
+      ],
+      "headingLines": [
+        "Jeep Renegade Engines",
+        "Codes, Common Failures & Replacement Costs"
+      ],
+      "imageAlt": "Jeep Renegade engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
     "liveMarketPrices": {
       "tag": "Live UK Engine Market Data",
       "h2": "",
@@ -306,8 +371,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/jeep/models/live-feed-jeep-renegade.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",

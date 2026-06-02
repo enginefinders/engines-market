@@ -173,6 +173,74 @@
         ]
       }
     },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "Dodge Nitro Engines - Codes, Common Failures & Replacement Costs",
+      "description": "The cards below cover the main engines fitted to the Dodge Nitro in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data.",
+      "cards": [
+        {
+          "code": "EKG",
+          "imagePlaceholder": "",
+          "altText": "Dodge Nitro EKG engine - petrol 3.7L replacement UK",
+          "productionHistory": [
+            "Dodge Nitro SE 3.7 V6 - 2007-2012",
+            "Dodge Nitro SXT 3.7 V6 - 2007-2012",
+            "Dodge Nitro Heat Edition 3.7 V6 - 2011-2012"
+          ],
+          "knownFailures": [
+            "Cylinder 6 misfire - warped cylinder heads cause persistent misfires on high-mileage 3.7L units.",
+            "Valve seat recession - exhaust valve seats drop, leading to compression loss and rough running.",
+            "Oil consumption increase - worn piston rings or valve guides cause excessive oil use after 80k miles."
+          ],
+          "specs": "Petrol · 3.7L · 210hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £1,200-£2,800 (supply only)"
+        },
+        {
+          "code": "ENS / ENR",
+          "imagePlaceholder": "",
+          "altText": "Dodge Nitro ENS engine - diesel 2.8L replacement UK",
+          "productionHistory": [
+            "Dodge Nitro SE 2.8 CRD - 2007-2012",
+            "Dodge Nitro SXT 2.8 CRD - 2007-2012",
+            "Dodge Nitro 2.8 CRD 4WD - 2007-2012"
+          ],
+          "knownFailures": [
+            "Turbocharger failure - VM Motori turbo units fail between 70k-100k miles, causing power loss.",
+            "Injector coding faults - piezo injectors require recalibration; failure causes rough idle and no-start.",
+            "Crankshaft position sensor - intermittent no-start conditions linked to sensor failure on ENS/ENR engines."
+          ],
+          "specs": "Diesel · 2.8L · 130-177hp · Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £1,400-£3,200 (supply only)"
+        },
+        {
+          "code": "EGS",
+          "imagePlaceholder": "",
+          "altText": "Dodge Nitro EGS engine - petrol 4.0L replacement UK specialist",
+          "productionHistory": [
+            "Dodge Nitro R/T 4.0 V6 - 2007-2011",
+            "Dodge Nitro Detonator Edition 4.0 V6 - 2011"
+          ],
+          "knownFailures": [
+            "Timing chain tensioner wear - chain stretch causes rattling noise on cold start after 90k miles.",
+            "Oil pump pickup screen clogging - sludge buildup restricts oil flow, risking bearing failure.",
+            "Intake manifold runner failure - plastic actuators break, causing reduced power and CEL codes."
+          ],
+          "specs": "Petrol · 4.0L · 260hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £2,500-£5,500 (supply only) Estimated from comparable 4.0L Chrysler units - actual quotes may vary."
+        }
+      ],
+      "headingLines": [
+        "Dodge Nitro Engines",
+        "Codes, Common Failures & Replacement Costs"
+      ],
+      "imageAlt": "Dodge Nitro engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
     "liveMarketPrices": {
       "tag": "Live UK Engine Market Data",
       "h2": "",
@@ -336,8 +404,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/dodge/models/live-feed-dodge-nitro.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",

@@ -173,6 +173,73 @@
         ]
       }
     },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "Aston Martin Rapide Engines - Codes, Common Failures & Replacement Costs",
+      "description": "The cards below cover the 6.0-litre naturally aspirated V12 engines fitted to the Aston Martin Rapide in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data.",
+      "cards": [
+        {
+          "code": "AM11",
+          "imagePlaceholder": "",
+          "altText": "Aston Martin Rapide AM11 engine - petrol 6.0L replacement UK",
+          "productionHistory": [
+            "Rapide S (2013-2017) - 550bhp output",
+            "Rapide S Q (2015-2017) - 550bhp with Q specification",
+            "Early Rapide S facelift (2013) - initial AM11 calibration"
+          ],
+          "knownFailures": [
+            "Timing chain guide wear - plastic guides degrade from 60k miles, causing rattle and potential chain jump.",
+            "Coil pack failure - individual ignition coils fail causing misfires, expensive due to V12 labour intensity.",
+            "Oil leaks from cam covers - gasket deterioration leads to external seepage requiring specialist access."
+          ],
+          "specs": "Petrol · 6.0L · 550hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £12,000-£19,500 (supply only)"
+        },
+        {
+          "code": "AM V12 (early)",
+          "imagePlaceholder": "",
+          "altText": "Aston Martin Rapide AM V12 engine - petrol 6.0L replacement UK",
+          "productionHistory": [
+            "Rapide (2010-2012) - 470bhp output",
+            "Pre-facelift Rapide (2010-2012) - original V12 calibration"
+          ],
+          "knownFailures": [
+            "Timing chain tensioner wear - early units prone to tensioner fatigue leading to chain slack.",
+            "Rear main seal leaks - oil seepage at gearbox interface common on higher-mileage examples.",
+            "Coolant expansion tank cracks - plastic tanks develop hairline fractures causing overheating risk."
+          ],
+          "specs": "Petrol · 6.0L · 470hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £8,500-£14,500 (supply only)"
+        },
+        {
+          "code": "AMR-V12",
+          "imagePlaceholder": "",
+          "altText": "Aston Martin Rapide AMR V12 engine - petrol 6.0L replacement UK",
+          "productionHistory": [
+            "Rapide AMR (2018-2020) - 595bhp output, final edition",
+            "Rapide AMR Ultimate (2020) - limited run with matching numbers emphasis"
+          ],
+          "knownFailures": [
+            "High-performance valve train wear - increased stress from 595bhp output accelerates component fatigue.",
+            "Oil consumption under hard use - piston ring wear more pronounced in track-focused driving patterns.",
+            "ECU calibration sensitivity - requires specialist matching to preserve AMR-specific mapping."
+          ],
+          "specs": "Petrol · 6.0L · 595hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £18,000-£28,000 (supply only) Estimated from comparable AM11 units with AMR performance calibration - actual quotes may vary."
+        }
+      ],
+      "headingLines": [
+        "Aston Martin Rapide Engines",
+        "Codes, Common Failures & Replacement Costs"
+      ],
+      "imageAlt": "Aston Martin Rapide engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
     "liveMarketPrices": {
       "tag": "Live UK Engine Market Data",
       "h2": "",
@@ -304,8 +371,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/aston-martin/models/live-feed-aston-martin-rapide.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",

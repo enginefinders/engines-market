@@ -175,10 +175,74 @@
         ]
       }
     },
-    "liveMarketPrices": {
+    "engineIntelligence": {
       "tag": "Engine Intelligence",
       "h2": "Jeep Avenger Engines - Codes, Common Failures & Replacement Costs",
-      "h3": "The cards below cover the main engines fitted to the Jeep Avenger in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data.",
+      "description": "The cards below cover the main engines fitted to the Jeep Avenger in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data.",
+      "cards": [
+        {
+          "code": "EB2ADTD",
+          "imagePlaceholder": "",
+          "altText": "Jeep Avenger EB2ADTD engine - petrol 1.2L replacement UK",
+          "productionHistory": [
+            "1.2 PureTech 100hp Longitude - 2023-present",
+            "1.2 PureTech 100hp Altitude - 2023-present",
+            "1.2 PureTech 100hp Summit - 2023-present"
+          ],
+          "knownFailures": [
+            "Timing belt degradation - wet belt can shed material into oil system from 40k miles.",
+            "Oil dilution - fuel mixing with oil on short journeys causes sludge buildup."
+          ],
+          "specs": "Petrol · 1.2L · 100hp · Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £1,400-£3,200 (supply only)"
+        },
+        {
+          "code": "HN05",
+          "imagePlaceholder": "",
+          "altText": "Jeep Avenger HN05 engine - hybrid 1.2L replacement UK",
+          "productionHistory": [
+            "1.2 e-Hybrid 110hp Altitude - 2023-present",
+            "1.2 e-Hybrid 110hp Summit - 2023-present"
+          ],
+          "knownFailures": [
+            "48V battery drain - hybrid system can cause no-start if battery management fails.",
+            "ECU calibration required - software mismatch after engine swap triggers limp mode."
+          ],
+          "specs": "Petrol Hybrid · 1.2L · 110hp · Turbocharged MHEV",
+          "replacementCost": "Typical UK rebuilt engine: £1,800-£3,800 (supply only) Estimated from comparable HN05 units - actual quotes may vary."
+        },
+        {
+          "code": "ZKW",
+          "imagePlaceholder": "",
+          "altText": "Jeep Avenger ZKW motor - electric drive unit replacement UK",
+          "productionHistory": [
+            "Electric 156hp Longitude - 2023-present",
+            "Electric 156hp Altitude - 2023-present"
+          ],
+          "knownFailures": [
+            "Inverter compatibility - drive unit faults often stem from power electronics, not motor.",
+            "High-voltage safety certification - replacement requires IMI-qualified technician."
+          ],
+          "specs": "Electric · N/A · 156hp · Permanent Magnet Synchronous",
+          "replacementCost": "Typical UK rebuilt motor: £4,500-£8,500 (supply only) Estimated from comparable ZKW units - actual quotes may vary."
+        }
+      ],
+      "headingLines": [
+        "Jeep Avenger Engines",
+        "Codes, Common Failures & Replacement Costs"
+      ],
+      "imageAlt": "Jeep Avenger engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
+    "liveMarketPrices": {
+      "tag": "Live UK Engine Market Data",
+      "h2": "",
+      "h3": "",
       "introBullets": [
         {
           "label": "Live market context",
@@ -226,10 +290,7 @@
         "visibleRows": 0,
         "entries": []
       },
-      "headingLines": [
-        "Jeep Avenger Engines",
-        "Codes, Common Failures & Replacement Costs"
-      ],
+      "headingLines": [],
       "imageAlt": "Jeep Avenger live market price reference",
       "filterTabs": [
         {
@@ -317,8 +378,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/jeep/models/live-feed-jeep-avenger.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",

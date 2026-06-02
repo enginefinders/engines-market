@@ -173,10 +173,80 @@
         ]
       }
     },
-    "liveMarketPrices": {
+    "engineIntelligence": {
       "tag": "Engine Intelligence",
       "h2": "Aston Martin DB11 Engines - Codes, Common Failures & Replacement Costs",
-      "h3": "The cards below cover the main engines fitted to the Aston Martin DB11 in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data.",
+      "description": "The cards below cover the main engines fitted to the Aston Martin DB11 in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data.",
+      "cards": [
+        {
+          "code": "M177",
+          "imagePlaceholder": "",
+          "altText": "Aston Martin DB11 M177 engine - petrol 4.0L replacement UK",
+          "productionHistory": [
+            "DB11 V8 Coupe - 2017-2023",
+            "DB11 V8 Volante - 2018-2023",
+            "DB11 Shadow Edition V8 - 2020-2021",
+            "DB11 AMR V8 - 2018-2023"
+          ],
+          "knownFailures": [
+            "Oil pump drive gear wear - can cause oil pressure drop and engine damage from 60k miles.",
+            "Turbo wastegate rattle - actuator wear leads to boost inconsistency and check engine lights.",
+            "Carbon buildup intake valves - direct injection causes rough idle without walnut blasting service."
+          ],
+          "specs": "Petrol · 4.0L · 503-528hp · Twin-Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £5,200-£13,500 (supply only)"
+        },
+        {
+          "code": "AM11",
+          "imagePlaceholder": "",
+          "altText": "Aston Martin DB11 AM11 engine - petrol 5.2L replacement UK",
+          "productionHistory": [
+            "DB11 V12 Coupe - 2016-2023",
+            "DB11 V12 Volante - 2018-2023",
+            "DB11 AMR V12 - 2018-2023",
+            "DB11 Launch Edition - 2016-2017"
+          ],
+          "knownFailures": [
+            "Timing chain tensioner failure - cold-start rattle precedes catastrophic chain jump on pre-2019 units.",
+            "Coolant leak at thermostat housing - plastic components crack causing overheating warnings.",
+            "Ignition coil misfire - high-RPM misfires common after 50k miles on original coils."
+          ],
+          "specs": "Petrol · 5.2L · 600-630hp · Twin-Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £9,800-£19,500 (supply only)"
+        },
+        {
+          "code": "M177-AMR",
+          "imagePlaceholder": "",
+          "altText": "Aston Martin DB11 M177-AMR engine - petrol 4.0L performance replacement UK",
+          "productionHistory": [
+            "DB11 AMR V8 - 2018-2023",
+            "DB11 Shadow Edition - 2020-2021"
+          ],
+          "knownFailures": [
+            "High-flow injector calibration drift - causes cold-start hesitation on performance-tuned units.",
+            "Reinforced conrod bearing wear - track-focused use accelerates bottom-end wear on AMR calibrations.",
+            "Active exhaust valve sticking - sport mode calibration issues cause rattles and fault codes."
+          ],
+          "specs": "Petrol · 4.0L · 528-535hp · Twin-Turbocharged · Performance Calibrated",
+          "replacementCost": "Typical UK rebuilt engine: £12,500-£19,800 (supply only) Estimated from comparable M177-AMR units - actual quotes may vary."
+        }
+      ],
+      "headingLines": [
+        "Aston Martin DB11 Engines",
+        "Codes, Common Failures & Replacement Costs"
+      ],
+      "imageAlt": "Aston Martin DB11 engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
+    "liveMarketPrices": {
+      "tag": "Live UK Engine Market Data",
+      "h2": "",
+      "h3": "",
       "introBullets": [
         {
           "label": "Live market context",
@@ -224,10 +294,7 @@
         "visibleRows": 0,
         "entries": []
       },
-      "headingLines": [
-        "Aston Martin DB11 Engines",
-        "Codes, Common Failures & Replacement Costs"
-      ],
+      "headingLines": [],
       "imageAlt": "Aston Martin DB11 live market price reference",
       "filterTabs": [
         {
@@ -339,8 +406,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/aston-martin/models/live-feed-aston-martin-db11.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",

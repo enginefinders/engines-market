@@ -173,6 +173,74 @@
         ]
       }
     },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "Bentley Bentayga Engines - Codes, Common Failures & Replacement Costs",
+      "description": "The cards below cover the main engines fitted to the Bentley Bentayga in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data.",
+      "cards": [
+        {
+          "code": "CWUB",
+          "imagePlaceholder": "",
+          "altText": "Bentley Bentayga CWUB engine - petrol 4.0L replacement UK",
+          "productionHistory": [
+            "Bentley Bentayga V8 (2018-2024)",
+            "Bentley Bentayga S V8 (2021-2024)",
+            "Bentley Bentayga Azure V8 (2022-2024)"
+          ],
+          "knownFailures": [
+            "Turbo oil strainer blockage - carbon deposits restrict oil flow to twin-scroll turbos in hot-V layout.",
+            "Cylinder deactivation actuator wear - hydraulic solenoids fail causing rough running in CoD mode.",
+            "PCV diaphragm failure - oil consumption increases after 60k miles on higher-mileage units."
+          ],
+          "specs": "Petrol · 4.0L · 542-550hp · Twin-Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £24,000-£35,000 (supply only)"
+        },
+        {
+          "code": "CTWA",
+          "imagePlaceholder": "",
+          "altText": "Bentley Bentayga CTWA engine - petrol 6.0L replacement UK",
+          "productionHistory": [
+            "Bentley Bentayga W12 (2016-2020)",
+            "Bentley Bentayga First Edition W12 (2016-2017)",
+            "Bentley Bentayga Speed W12 (2020-2024)"
+          ],
+          "knownFailures": [
+            "Coolant valve plastic pipe brittleness - valley coolant pipes crack under sustained high temperatures.",
+            "Twin-turbo wastegate actuator drift - boost control calibration shifts causing reduced power.",
+            "Carbon intake valve buildup - direct injection causes deposits requiring walnut blasting service."
+          ],
+          "specs": "Petrol · 6.0L · 600-626hp · Twin-Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £32,000-£48,000 (supply only)"
+        },
+        {
+          "code": "CRTD",
+          "imagePlaceholder": "",
+          "altText": "Bentley Bentayga CRTD engine - hybrid 3.0L replacement UK",
+          "productionHistory": [
+            "Bentley Bentayga Hybrid PHEV (2019-2024)",
+            "Bentley Bentayga Hybrid Azure PHEV (2022-2024)"
+          ],
+          "knownFailures": [
+            "Hybrid coolant pump failure - battery thermal management pump leaks causing overheating warnings.",
+            "High-voltage system isolation fault - e-motor resolver errors triggering limp mode protection.",
+            "EA839 thermal management valve sticking - reduced electric range and efficiency losses."
+          ],
+          "specs": "Petrol/Electric · 3.0L · 449hp System · Turbocharged + E-Motor",
+          "replacementCost": "Typical UK rebuilt engine: £28,000-£42,000 (supply only) Estimated from comparable EA839 units - actual quotes may vary."
+        }
+      ],
+      "headingLines": [
+        "Bentley Bentayga Engines",
+        "Codes, Common Failures & Replacement Costs"
+      ],
+      "imageAlt": "Bentley Bentayga engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
     "liveMarketPrices": {
       "tag": "Live UK Engine Market Data",
       "h2": "",
@@ -336,8 +404,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/bentley/models/live-feed-bentley-bentayga.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",

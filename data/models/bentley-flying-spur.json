@@ -173,10 +173,72 @@
         ]
       }
     },
-    "liveMarketPrices": {
+    "engineIntelligence": {
       "tag": "Engine Intelligence",
       "h2": "Bentley Flying Spur Engines - Codes, Common Failures & Replacement Costs",
-      "h3": "The cards below cover the main engines fitted to the Bentley Flying Spur in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data.",
+      "description": "The cards below cover the main engines fitted to the Bentley Flying Spur in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data.",
+      "cards": [
+        {
+          "code": "CTGA",
+          "imagePlaceholder": "",
+          "altText": "Bentley Flying Spur CTGA engine - petrol 4.0L replacement UK",
+          "productionHistory": [
+            "V8 (2012-2019) - Standard Flying Spur V8 models",
+            "V8 (2019-present) - Third generation Flying Spur V8 variants"
+          ],
+          "knownFailures": [
+            "Timing chain guide wear - EA888-derived design, common at 70-90k miles requiring specialist rebuild.",
+            "Turbo actuator failure - Boost control errors from worn actuators, needs ODIS calibration post-replacement."
+          ],
+          "specs": "Petrol · 4.0L · 500-542hp · Twin-Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £11,200-£14,800 (supply only)"
+        },
+        {
+          "code": "CCHB",
+          "imagePlaceholder": "",
+          "altText": "Bentley Flying Spur CCHB engine - petrol 6.0L replacement UK",
+          "productionHistory": [
+            "W12 (2013-2019) - Second generation Flying Spur W12 models",
+            "W12 (2019-present) - Third generation Flying Spur W12 variants (early production)"
+          ],
+          "knownFailures": [
+            "Plastic coolant pipe failure - Cracks at 80-100k miles causing catastrophic overheating; aluminium upgrade standard in rebuilds.",
+            "Timing chain tensioner wear - Hydraulic tensioner degradation on pre-2016 units per Bentley TSB 2011-04."
+          ],
+          "specs": "Petrol · 6.0L · 616-626hp · Twin-Turbocharged W12",
+          "replacementCost": "Typical UK rebuilt engine: £18,500-£22,400 (supply only)"
+        },
+        {
+          "code": "BHT",
+          "imagePlaceholder": "",
+          "altText": "Bentley Flying Spur BHT engine - petrol 6.0L replacement UK",
+          "productionHistory": [
+            "W12 Speed (2008-2019) - High-output 650bhp Flying Spur Speed variants"
+          ],
+          "knownFailures": [
+            "Turbo oil seal wear - Garrett turbo cartridge seal degradation at 70k+ miles causing oil consumption and leaks.",
+            "High-stress component fatigue - Forged internals recommended for performance rebuilds due to elevated output demands."
+          ],
+          "specs": "Petrol · 6.0L · 650hp · Twin-Turbocharged W12 Performance",
+          "replacementCost": "Typical UK rebuilt engine: £24,900-£30,000 (supply only) Estimated from comparable BHT units - actual quotes may vary due to limited core availability."
+        }
+      ],
+      "headingLines": [
+        "Bentley Flying Spur Engines",
+        "Codes, Common Failures & Replacement Costs"
+      ],
+      "imageAlt": "Bentley Flying Spur engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
+    "liveMarketPrices": {
+      "tag": "Live UK Engine Market Data",
+      "h2": "",
+      "h3": "",
       "introBullets": [
         {
           "label": "Live market context",
@@ -224,10 +286,7 @@
         "visibleRows": 0,
         "entries": []
       },
-      "headingLines": [
-        "Bentley Flying Spur Engines",
-        "Codes, Common Failures & Replacement Costs"
-      ],
+      "headingLines": [],
       "imageAlt": "Bentley Flying Spur live market price reference",
       "filterTabs": [
         {
@@ -315,8 +374,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/bentley/models/live-feed-bentley-flying-spur.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",

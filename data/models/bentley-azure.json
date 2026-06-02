@@ -173,6 +173,73 @@
         ]
       }
     },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "Bentley Azure Engines - Codes, Common Failures & Replacement Costs",
+      "description": "The cards below cover the main engines fitted to the Bentley Azure in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data.",
+      "cards": [
+        {
+          "code": "M62TUB44",
+          "imagePlaceholder": "",
+          "altText": "Bentley Azure M62TUB44 engine - petrol 6.75L replacement UK",
+          "productionHistory": [
+            "Bentley Azure Standard (1995-2003)",
+            "Bentley Azure Long Wheelbase (1999-2003)",
+            "Bentley Azure Mulliner (2000-2003)"
+          ],
+          "knownFailures": [
+            "Turbocharger failure - common on 2001 models, causing boost loss and black exhaust smoke.",
+            "Coolant leak timing cover - front timing cover gasket degradation leads to coolant loss.",
+            "Timing chain tensioner wear - can cause rattling noise and potential chain jump at high mileage."
+          ],
+          "specs": "Petrol · 6.75L · 400-420hp · Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £3,600-£3,900 (supply only)"
+        },
+        {
+          "code": "N62B44",
+          "imagePlaceholder": "",
+          "altText": "Bentley Azure N62B44 engine - petrol 6.75L replacement UK",
+          "productionHistory": [
+            "Bentley Azure Second Generation (2006-2009)",
+            "Bentley Azure Mulliner Final Edition (2009)"
+          ],
+          "knownFailures": [
+            "VANOS system failure - variable valve timing solenoids can stick, causing rough idle and power loss.",
+            "Oil pressure sensor failure - faulty sensors trigger warning lights despite normal oil pressure.",
+            "Rich running condition - fuel mixture issues cause black smoke and increased fuel consumption."
+          ],
+          "specs": "Petrol · 6.75L · 450hp · Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £4,000-£4,200 (supply only)"
+        },
+        {
+          "code": "L410",
+          "imagePlaceholder": "",
+          "altText": "Bentley Azure L410 engine - petrol 6.75L replacement UK",
+          "productionHistory": [
+            "Bentley Azure Early Production (1995-1998)",
+            "Bentley Azure Pre-facelift variants (1995-2000)"
+          ],
+          "knownFailures": [
+            "OHV pushrod wear - overhead valve train components require periodic adjustment and replacement.",
+            "Oil leak common areas - rear main seal and sump gasket degradation on higher-mileage units.",
+            "Engine management light - sensor failures trigger EML without catastrophic mechanical fault."
+          ],
+          "specs": "Petrol · 6.75L · 385-400hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £3,400-£3,800 (supply only)"
+        }
+      ],
+      "headingLines": [
+        "Bentley Azure Engines",
+        "Codes, Common Failures & Replacement Costs"
+      ],
+      "imageAlt": "Bentley Azure engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
     "liveMarketPrices": {
       "tag": "Live UK Engine Market Data",
       "h2": "",
@@ -312,8 +379,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/bentley/models/live-feed-bentley-azure.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",

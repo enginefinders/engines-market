@@ -173,6 +173,73 @@
         ]
       }
     },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "Aston Martin Virage Engines - Codes, Common Failures & Replacement Costs",
+      "description": "The cards below cover the AM25 V12 engine fitted to the Aston Martin Virage in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data for this ultra-rare grand tourer.",
+      "cards": [
+        {
+          "code": "AM25",
+          "imagePlaceholder": "",
+          "altText": "Aston Martin Virage AM25 engine - petrol 5.9L replacement UK",
+          "productionHistory": [
+            "Aston Martin Virage Coupe - 2011-2012",
+            "Aston Martin Virage Volante - 2011-2012",
+            "Aston Martin Virage Carbon Edition - 2012",
+            "Aston Martin Virage Launch Specification - 2011"
+          ],
+          "knownFailures": [
+            "Timing chain tensioner wear - VH-platform V12s prone to tensioner failure between 40k-70k miles, causing catastrophic engine damage.",
+            "Ignition coil pack failure - individual coil degradation leads to misfires, rough idle and EML illumination on high-mileage units.",
+            "Cam cover gasket oil leaks - common seepage points requiring engine-out labour for proper rectification on VH architecture."
+          ],
+          "specs": "Petrol · 5.9L · 490hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £15,000-£25,000 (supply only) Estimated from comparable AM25 specialist rebuild units - actual quotes may vary due to extreme rarity."
+        },
+        {
+          "code": "AM25/1",
+          "imagePlaceholder": "",
+          "altText": "Aston Martin Virage AM25/1 engine - petrol 5.9L replacement UK",
+          "productionHistory": [
+            "Aston Martin Virage Coupe (late production) - 2012",
+            "Aston Martin Virage Volante (late production) - 2012"
+          ],
+          "knownFailures": [
+            "Water pump bearing wear - coolant circulation failure can cause overheating and head gasket compromise on VH-platform V12s.",
+            "Valve stem seal degradation - oil consumption increases beyond 50k miles, leading to blue smoke and catalytic converter risk."
+          ],
+          "specs": "Petrol · 5.9L · 490hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £16,500-£26,500 (supply only) Estimated from comparable AM25 specialist rebuild units - actual quotes may vary due to extreme rarity."
+        },
+        {
+          "code": "AM25-5935",
+          "imagePlaceholder": "",
+          "altText": "Aston Martin Virage AM25-5935 engine - petrol 5.9L replacement UK",
+          "productionHistory": [
+            "Aston Martin Virage Coupe - 2011-2012",
+            "Aston Martin Virage Volante - 2011-2012",
+            "All UK-market Virage variants with standard calibration"
+          ],
+          "knownFailures": [
+            "Rear main seal oil leakage - high-labour rectification requiring engine removal on bonded-aluminium VH chassis vehicles.",
+            "Carbon buildup on intake valves - direct-injection adjacent components can suffer deposit accumulation affecting idle quality."
+          ],
+          "specs": "Petrol · 5.9L · 490hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £15,500-£25,500 (supply only) Estimated from comparable AM25 specialist rebuild units - actual quotes may vary due to extreme rarity."
+        }
+      ],
+      "headingLines": [
+        "Aston Martin Virage Engines",
+        "Codes, Common Failures & Replacement Costs"
+      ],
+      "imageAlt": "Aston Martin Virage engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
     "liveMarketPrices": {
       "tag": "Live UK Engine Market Data",
       "h2": "",
@@ -336,8 +403,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/aston-martin/models/live-feed-aston-martin-virage.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",

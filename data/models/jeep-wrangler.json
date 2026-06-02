@@ -175,6 +175,75 @@
         ]
       }
     },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "Jeep Wrangler Engines - Codes, Common Failures & Replacement Costs",
+      "description": "The cards below cover the main engines fitted to the Jeep Wrangler in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data.",
+      "cards": [
+        {
+          "code": "ENS / EKG",
+          "imagePlaceholder": "",
+          "altText": "Jeep Wrangler ENS EKG engine - diesel 2.8L replacement UK",
+          "productionHistory": [
+            "Jeep Wrangler JK 2.8 CRD - 2007-2018",
+            "Jeep Wrangler JK Unlimited 2.8 CRD - 2007-2018",
+            "Jeep Wrangler Sahara 2.8 CRD - 2011-2018"
+          ],
+          "knownFailures": [
+            "Injector seal failure - \"Black Death\" soot buildup around injectors causes catastrophic damage if ignored.",
+            "Water pump failure - plastic impeller degrades, leading to sudden overheating and head gasket failure.",
+            "Timing chain tensioner wear - early EKG units prone to chain stretch before 80k miles."
+          ],
+          "specs": "Diesel · 2.8L · 174-200hp · Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £1,295-£4,200 (supply only)"
+        },
+        {
+          "code": "ERB / ERC",
+          "imagePlaceholder": "",
+          "altText": "Jeep Wrangler ERB ERC engine - petrol 3.6L replacement UK",
+          "productionHistory": [
+            "Jeep Wrangler JK 3.6 Pentastar - 2011-2018",
+            "Jeep Wrangler JL 3.6 Pentastar - 2018-present",
+            "Jeep Wrangler Rubicon 3.6 - 2011-present"
+          ],
+          "knownFailures": [
+            "Rocker arm failure - ticking noise from worn rockers damages camshaft, common from 60k miles.",
+            "Cylinder head crack - 2011-2013 models affected by casting defect causing coolant/oil mixing.",
+            "Oil cooler leak - plastic housing cracks, dumping oil into engine valley and causing misfires."
+          ],
+          "specs": "Petrol · 3.6L · 285hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £1,495-£4,500 (supply only)"
+        },
+        {
+          "code": "AMC 242",
+          "imagePlaceholder": "",
+          "altText": "Jeep Wrangler AMC 242 engine - petrol 4.0L replacement UK",
+          "productionHistory": [
+            "Jeep Wrangler TJ 4.0 - 1997-2006",
+            "Jeep Wrangler Rubicon 4.0 - 2003-2006",
+            "Jeep Wrangler Sahara 4.0 - 1997-2006"
+          ],
+          "knownFailures": [
+            "Cylinder head crack (0331 casting) - heads from 1999-2001 prone to cracking between valves 3 & 4.",
+            "Exhaust manifold bolt failure - rusted bolts shear, causing exhaust leaks and reduced performance.",
+            "Oil pump drive gear wear - high-mileage units may lose oil pressure without warning."
+          ],
+          "specs": "Petrol · 4.0L · 190hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £1,800-£3,900 (supply only)"
+        }
+      ],
+      "headingLines": [
+        "Jeep Wrangler Engines",
+        "Codes, Common Failures & Replacement Costs"
+      ],
+      "imageAlt": "Jeep Wrangler engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
     "liveMarketPrices": {
       "tag": "Live UK Engine Market Data",
       "h2": "",
@@ -338,8 +407,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/jeep/models/live-feed-jeep-wrangler.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",

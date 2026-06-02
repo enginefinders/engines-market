@@ -173,10 +173,78 @@
         ]
       }
     },
-    "liveMarketPrices": {
+    "engineIntelligence": {
       "tag": "Engine Intelligence",
       "h2": "Bentley Flying Spur Hybrid Engines - Codes, Common Failures & Replacement Costs",
-      "h3": "The cards below cover the main engines fitted to the Bentley Flying Spur Hybrid in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data.",
+      "description": "The cards below cover the main engines fitted to the Bentley Flying Spur Hybrid in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data.",
+      "cards": [
+        {
+          "code": "CVUB",
+          "imagePlaceholder": "",
+          "altText": "Bentley Flying Spur Hybrid CVUB engine - petrol 4.0L replacement UK",
+          "productionHistory": [
+            "Flying Spur Hybrid V8 - 2023-2026",
+            "Flying Spur Hybrid Azure V8 - 2023-2026",
+            "Flying Spur Hybrid Speed V8 - 2023-2026",
+            "Flying Spur Hybrid Mulliner V8 - 2024-2026"
+          ],
+          "knownFailures": [
+            "12V battery drain during HV charging - documented in TSB 2068627/5, causes flat battery warnings.",
+            "DTC P0B2500/P0B2600 - high-voltage battery management control unit faults trigger yellow warning light.",
+            "Hybrid system integration faults - complex PHEV architecture requires specialist diagnostic equipment."
+          ],
+          "specs": "Petrol PHEV · 4.0L · 536hp combined · Twin-Turbo Hybrid",
+          "replacementCost": "Typical UK rebuilt engine: £14,500-£22,000 (supply only)"
+        },
+        {
+          "code": "V6-PHEV",
+          "imagePlaceholder": "",
+          "altText": "Bentley Flying Spur Hybrid V6-PHEV engine - petrol 3.0L replacement UK",
+          "productionHistory": [
+            "Flying Spur Hybrid V6 - 2022-2024",
+            "Flying Spur Hybrid City Specification - 2022-2024"
+          ],
+          "knownFailures": [
+            "Early PHEV calibration issues - software updates required for optimal hybrid transition.",
+            "High-voltage battery warning lights - red HV battery light indicates specialist diagnosis needed.",
+            "Electric motor integration faults - e-motor failure requires complete powertrain removal."
+          ],
+          "specs": "Petrol PHEV · 3.0L · 536hp combined · Turbo Hybrid",
+          "replacementCost": "Typical UK rebuilt engine: £13,500-£20,000 (supply only) Estimated from comparable V6-PHEV units - actual quotes may vary."
+        },
+        {
+          "code": "CVUB-S",
+          "imagePlaceholder": "",
+          "altText": "Bentley Flying Spur Hybrid CVUB-S engine - petrol 4.0L replacement UK specialist",
+          "productionHistory": [
+            "Flying Spur Hybrid Speed - 2023-2026",
+            "Flying Spur Hybrid S Specification - 2024-2026"
+          ],
+          "knownFailures": [
+            "Performance-tuned hybrid stress - higher output increases thermal load on battery management.",
+            "CVUB timing chain stretch - early V8 hybrid units may require chain replacement.",
+            "Oil consumption monitoring - excessive use may indicate ring or valve seal wear on high-mileage units."
+          ],
+          "specs": "Petrol PHEV · 4.0L · 782hp combined · Twin-Turbo Performance Hybrid",
+          "replacementCost": "Typical UK rebuilt engine: £18,500-£28,000 (supply only)"
+        }
+      ],
+      "headingLines": [
+        "Bentley Flying Spur Hybrid Engines",
+        "Codes, Common Failures & Replacement Costs"
+      ],
+      "imageAlt": "Bentley Flying Spur Hybrid engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
+    "liveMarketPrices": {
+      "tag": "Live UK Engine Market Data",
+      "h2": "",
+      "h3": "",
       "introBullets": [
         {
           "label": "Live market context",
@@ -224,10 +292,7 @@
         "visibleRows": 0,
         "entries": []
       },
-      "headingLines": [
-        "Bentley Flying Spur Hybrid Engines",
-        "Codes, Common Failures & Replacement Costs"
-      ],
+      "headingLines": [],
       "imageAlt": "Bentley Flying Spur Hybrid live market price reference",
       "filterTabs": [
         {
@@ -339,8 +404,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/bentley/models/live-feed-bentley-flying-spur-hybrid.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",

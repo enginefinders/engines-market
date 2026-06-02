@@ -175,6 +175,70 @@
         ]
       }
     },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "Jeep Wagoneer Engines - Codes, Common Failures & Replacement Costs",
+      "description": "The cards below cover the main engines fitted to the Jeep Wagoneer in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data.",
+      "cards": [
+        {
+          "code": "EZH",
+          "imagePlaceholder": "",
+          "altText": "Jeep Wagoneer EZH engine - petrol 5.7L replacement UK",
+          "productionHistory": [
+            "Wagoneer Series I 5.7L Hemi eTorque - 2022-2024",
+            "Wagoneer Series II 5.7L Hemi eTorque - 2022-2024",
+            "Wagoneer Series III 5.7L Hemi eTorque - 2022-2024",
+            "Wagoneer L 5.7L Hemi eTorque - 2023-2024"
+          ],
+          "knownFailures": [
+            "Lifter collapse - TSB 2022-089 documents camshaft wear and lifter failure from 40k miles.",
+            "eTorque BSG fault - belt-driven starter-generator electrical issues causing derate mode."
+          ],
+          "specs": "Petrol · 5.7L · 392hp · Naturally Aspirated with eTorque MHEV",
+          "replacementCost": "Typical UK rebuilt engine: £5,250-£7,250 (supply only)"
+        },
+        {
+          "code": "GME-T6",
+          "imagePlaceholder": "",
+          "altText": "Jeep Wagoneer GME-T6 engine - petrol 3.0L replacement UK",
+          "productionHistory": [
+            "Wagoneer Series III 3.0L Hurricane - 2024-present",
+            "Grand Wagoneer 3.0L Hurricane High Output - 2024-present"
+          ],
+          "knownFailures": [
+            "Turbo actuator failure - early-production wastegate rattle and boost control issues.",
+            "Software calibration - ECU mapping updates required for optimal performance."
+          ],
+          "specs": "Petrol · 3.0L · 420-540hp · Twin-Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £6,500-£8,750 (supply only) Estimated from comparable GME-T6 units - actual quotes may vary."
+        },
+        {
+          "code": "ERC",
+          "imagePlaceholder": "",
+          "altText": "Jeep Wagoneer ERC engine - petrol 3.6L replacement UK",
+          "productionHistory": [
+            "Wagoneer base trim 3.6L Pentastar - 2022-2023"
+          ],
+          "knownFailures": [
+            "Timing chain tensioner wear - rattle on cold start from 60k miles.",
+            "Oil filter housing leak - gasket degradation causing external oil seepage."
+          ],
+          "specs": "Petrol · 3.6L · 293hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £4,800-£6,200 (supply only)"
+        }
+      ],
+      "headingLines": [
+        "Jeep Wagoneer Engines",
+        "Codes, Common Failures & Replacement Costs"
+      ],
+      "imageAlt": "Jeep Wagoneer engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
     "liveMarketPrices": {
       "tag": "Live UK Engine Market Data",
       "h2": "",
@@ -338,8 +402,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/jeep/models/live-feed-jeep-wagoneer.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",

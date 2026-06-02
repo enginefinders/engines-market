@@ -173,6 +173,75 @@
         ]
       }
     },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "Bentley Continental GT Engines - Codes, Common Failures & Replacement Costs",
+      "description": "The cards below cover the main engines fitted to the Bentley Continental GT in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data. All prices reflect supply-only ranges from specialist rebuilders.",
+      "cards": [
+        {
+          "code": "BR6",
+          "imagePlaceholder": "",
+          "altText": "Bentley Continental GT BR6 engine - petrol 6.0L replacement UK",
+          "productionHistory": [
+            "Continental GT W12 (2003-2011)",
+            "Continental GT Speed W12 (2007-2011)",
+            "Continental GT Supersports W12 (2009-2011)"
+          ],
+          "knownFailures": [
+            "Head gasket degradation - thermal cycling causes MLS gasket failure on high-mileage units.",
+            "Valley pan coolant leak - gasket wear leads to sweet-smelling steam from vents.",
+            "Timing chain tensioner wear - rear-mounted unit requires specialist tooling for replacement."
+          ],
+          "specs": "Petrol · 6.0L · 560-630hp · Twin-Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £8,500-£11,000 (supply only)"
+        },
+        {
+          "code": "AWD",
+          "imagePlaceholder": "",
+          "altText": "Bentley Continental GT AWD engine - petrol 4.0L replacement UK",
+          "productionHistory": [
+            "Continental GT V8 (2012-2018)",
+            "Continental GT V8 S (2014-2018)",
+            "Continental GTC V8 (2012-2018)"
+          ],
+          "knownFailures": [
+            "Timing chain tensioner failure - TSB SWE-19-07 addresses premature wear on pre-2015 units.",
+            "Carbon buildup intake valves - direct injection exacerbates coking on short UK journeys.",
+            "Turbo actuator wear - electronic wastegate actuators can fail causing limp mode."
+          ],
+          "specs": "Petrol · 4.0L · 500-528hp · Twin-Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £6,200-£8,000 (supply only)"
+        },
+        {
+          "code": "CRB",
+          "imagePlaceholder": "",
+          "altText": "Bentley Continental GT CRB engine - petrol 6.0L replacement UK",
+          "productionHistory": [
+            "Continental GT W12 (2018-2025)",
+            "Continental GTC W12 (2019-2025)",
+            "Continental GT Mulliner W12 (2020-2025)"
+          ],
+          "knownFailures": [
+            "PCV valve coking - stop-start urban driving accelerates breather system blockage.",
+            "High-pressure fuel pump wear - Gen III W12 pumps require recalibration after replacement.",
+            "Starter-generator belt tensioner - 48V mild-hybrid system components need specialist inspection."
+          ],
+          "specs": "Petrol · 6.0L · 626-650hp · Twin-Turbocharged · Mild-Hybrid Compatible",
+          "replacementCost": "Typical UK rebuilt engine: £9,200-£11,000 (supply only) Estimated from comparable CRB units - actual quotes may vary."
+        }
+      ],
+      "headingLines": [
+        "Bentley Continental GT Engines",
+        "Codes, Common Failures & Replacement Costs"
+      ],
+      "imageAlt": "Bentley Continental GT engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
     "liveMarketPrices": {
       "tag": "Live UK Engine Market Data",
       "h2": "",
@@ -336,8 +405,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/bentley/models/live-feed-bentley-continental-gt.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",

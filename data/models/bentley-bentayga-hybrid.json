@@ -173,6 +173,72 @@
         ]
       }
     },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "Bentley Bentayga Hybrid Engines - Codes, Common Failures & Replacement Costs",
+      "description": "The cards below cover the plug-in hybrid powertrain fitted to the Bentley Bentayga Hybrid in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data.",
+      "cards": [
+        {
+          "code": "EA839",
+          "imagePlaceholder": "",
+          "altText": "Bentley Bentayga Hybrid EA839 engine - petrol plug-in hybrid 3.0L replacement UK",
+          "productionHistory": [
+            "Bentayga Hybrid (standard) - 2019-present",
+            "Bentayga S Hybrid - 2021-present",
+            "Bentayga Azure Hybrid - 2022-present",
+            "Bentayga EWB Hybrid - 2022-present"
+          ],
+          "knownFailures": [
+            "Timing chain tensioner wear - documented on EA839 family, can lead to catastrophic failure if ignored.",
+            "High-pressure fuel pump degradation - common on direct-injection TFSI units after 60k miles.",
+            "Coolant leak at thermostat housing - EA839 plastic housing prone to cracking on higher-mileage units."
+          ],
+          "specs": "Petrol PHEV · 3.0L · 335-340hp · Turbocharged",
+          "replacementCost": "Typical UK rebuilt engine: £6,500-£10,000 (supply only)"
+        },
+        {
+          "code": "EAL",
+          "imagePlaceholder": "",
+          "altText": "Bentley Bentayga Hybrid EAL electric motor - 94kW PHEV replacement UK",
+          "productionHistory": [
+            "Bentayga Hybrid (all variants) - 2019-present"
+          ],
+          "knownFailures": [
+            "Electric motor bearing wear - integrated transmission motor can develop noise after 70k+ miles.",
+            "Hybrid control unit software faults - may cause reduced power or charging errors on early-production units.",
+            "Inverter cooling circuit leaks - plastic coolant pipes can degrade, triggering hybrid system warnings."
+          ],
+          "specs": "Electric Motor · 94kW/128PS · Integrated · AC Induction",
+          "replacementCost": "Typical UK rebuilt unit: £8,000-£14,000 (supply only) Estimated from comparable PHEV motor units - actual quotes may vary."
+        },
+        {
+          "code": "DCB+EAL (System)",
+          "imagePlaceholder": "",
+          "altText": "Bentley Bentayga Hybrid 17.3kWh battery pack - PHEV lithium-ion replacement UK",
+          "productionHistory": [
+            "Bentayga Hybrid (all variants) - 2019-present"
+          ],
+          "knownFailures": [
+            "Battery cell degradation - 17.3kWh pack may lose capacity after 80k+ miles or repeated fast charging.",
+            "Battery thermal management faults - coolant pump or sensor failures can trigger hybrid system shutdown.",
+            "Charging port/module failures - common on early-production Bentayga Hybrids, may require module replacement."
+          ],
+          "specs": "Lithium-Ion PHEV · 17.3kWh · 31-mile EV range · Liquid-cooled",
+          "replacementCost": "Typical UK replacement pack: £12,000-£18,000 (supply only) Estimated from comparable PHEV battery units - actual quotes may vary."
+        }
+      ],
+      "headingLines": [
+        "Bentley Bentayga Hybrid Engines",
+        "Codes, Common Failures & Replacement Costs"
+      ],
+      "imageAlt": "Bentley Bentayga Hybrid engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
     "liveMarketPrices": {
       "tag": "Live UK Engine Market Data",
       "h2": "",
@@ -288,8 +354,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/bentley/models/live-feed-bentley-bentayga-hybrid.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",

@@ -173,10 +173,75 @@
         ]
       }
     },
-    "liveMarketPrices": {
+    "engineIntelligence": {
       "tag": "Engine Intelligence",
       "h2": "Lexus IS Engines - Codes, Common Failures & Replacement Costs",
-      "h3": "The cards below cover the main engines fitted to the Lexus IS in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data. All prices reflect typical UK market ranges for supply-only rebuilt units.",
+      "description": "The cards below cover the main engines fitted to the Lexus IS in the UK, including documented failure causes, variant production years, and typical rebuilt engine costs based on current UK market data. All prices reflect typical UK market ranges for supply-only rebuilt units.",
+      "cards": [
+        {
+          "code": "4GR-FSE",
+          "imagePlaceholder": "",
+          "altText": "Lexus IS 4GR-FSE engine - petrol 2.5L replacement UK",
+          "productionHistory": [
+            "IS250 (GSE20) - 2005-2013",
+            "IS250 AWD (GSE25) - 2005-2013",
+            "IS250 C convertible (GSE20) - 2008-2013"
+          ],
+          "knownFailures": [
+            "Timing chain tensioner wear - causes rattling noise from 60k-100k miles on pre-2010 units.",
+            "VVT-i actuator failure - leads to rough idle and check engine light, common after 80k miles."
+          ],
+          "specs": "Petrol · 2.5L · 204-208hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £1,195-£2,800 (supply only)"
+        },
+        {
+          "code": "2GR-FSE",
+          "imagePlaceholder": "",
+          "altText": "Lexus IS 2GR-FSE engine - petrol 3.5L replacement UK",
+          "productionHistory": [
+            "IS350 (GSE21) - 2006-2013",
+            "IS350 AWD (GSE26) - 2006-2013",
+            "IS350 F Sport (GSE21) - 2010-2013"
+          ],
+          "knownFailures": [
+            "Oil consumption via piston rings - increased burn after 70k miles, requires rebuild for permanent fix.",
+            "High-pressure fuel pump wear - can cause hard starting and power loss on higher-mileage examples."
+          ],
+          "specs": "Petrol · 3.5L · 306-311hp · Naturally Aspirated",
+          "replacementCost": "Typical UK rebuilt engine: £2,400-£4,200 (supply only)"
+        },
+        {
+          "code": "2AR-FSE",
+          "imagePlaceholder": "",
+          "altText": "Lexus IS 2AR-FSE engine - hybrid 2.5L replacement UK",
+          "productionHistory": [
+            "IS300h (GSE30) - 2013-2020",
+            "IS300h F Sport (GSE30) - 2014-2020"
+          ],
+          "knownFailures": [
+            "Hybrid inverter coolant pump failure - can trigger hybrid system warning, typically after 90k miles.",
+            "EGR valve carbon buildup - causes rough running on high-mileage city-driven examples."
+          ],
+          "specs": "Hybrid · 2.5L · 223hp combined · Naturally Aspirated + Electric Motor",
+          "replacementCost": "Typical UK rebuilt engine: £2,100-£3,900 (supply only) Estimated from comparable 2AR-FSE units - actual quotes may vary."
+        }
+      ],
+      "headingLines": [
+        "Lexus IS Engines",
+        "Codes, Common Failures & Replacement Costs"
+      ],
+      "imageAlt": "Lexus IS engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
+    "liveMarketPrices": {
+      "tag": "Live UK Engine Market Data",
+      "h2": "",
+      "h3": "",
       "introBullets": [
         {
           "label": "Live market context",
@@ -224,10 +289,7 @@
         "visibleRows": 0,
         "entries": []
       },
-      "headingLines": [
-        "Lexus IS Engines",
-        "Codes, Common Failures & Replacement Costs"
-      ],
+      "headingLines": [],
       "imageAlt": "Lexus IS live market price reference",
       "filterTabs": [
         {
@@ -339,8 +401,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/lexus/models/live-feed-lexus-is.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",
