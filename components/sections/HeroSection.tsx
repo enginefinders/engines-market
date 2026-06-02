@@ -527,7 +527,7 @@ export default function HeroSection({
                 autoComplete="off"
                 spellCheck={false}
                 value={registration}
-                onChange={(event) => setRegistration(event.target.value.toUpperCase())}
+                onChange={(event) => setRegistration(event.currentTarget.value.toUpperCase())}
                 className="h-full min-w-0 flex-1 bg-transparent px-2 text-center text-[28px] font-bold uppercase tracking-[0.11em] text-[#111] outline-none placeholder:text-[rgba(30,30,30,0.35)] placeholder:text-[22px] placeholder:tracking-[0.05em] md:text-[24px] md:placeholder:text-[18px]"
                 style={{
                   fontFamily: '"Charles Wright","Arial Black","Arial",sans-serif',

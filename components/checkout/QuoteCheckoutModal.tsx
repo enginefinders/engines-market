@@ -451,14 +451,15 @@ export default function QuoteCheckoutModal({ brandName }: Props) {
                     <span className="text-label text-slate-700">Registration number</span>
                     <input
                       type="text"
-                      value={activeFormState.regNumber}
-                      onChange={(event) => {
-                        setIsOpen(true);
-                        setFormState((current) => ({
-                          ...current,
-                          regNumber: event.target.value.toUpperCase(),
-                        }));
-                      }}
+	                      value={activeFormState.regNumber}
+	                      onChange={(event) => {
+	                        const regNumber = event.currentTarget.value.toUpperCase();
+	                        setIsOpen(true);
+	                        setFormState((current) => ({
+	                          ...current,
+	                          regNumber,
+	                        }));
+	                      }}
                       placeholder="AB12 CDE"
                       className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm font-semibold text-slate-800 outline-none transition focus:border-green-400"
                     />
@@ -468,14 +469,15 @@ export default function QuoteCheckoutModal({ brandName }: Props) {
                     <span className="text-label text-slate-700">Engine code</span>
                     <input
                       type="text"
-                      value={activeFormState.engineCode}
-                      onChange={(event) => {
-                        setIsOpen(true);
-                        setFormState((current) => ({
-                          ...current,
-                          engineCode: event.target.value.toUpperCase(),
-                        }));
-                      }}
+	                      value={activeFormState.engineCode}
+	                      onChange={(event) => {
+	                        const engineCode = event.currentTarget.value.toUpperCase();
+	                        setIsOpen(true);
+	                        setFormState((current) => ({
+	                          ...current,
+	                          engineCode,
+	                        }));
+	                      }}
                       placeholder="204DTD / AJ200D"
                       className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm font-semibold text-slate-800 outline-none transition focus:border-green-400"
                     />
@@ -488,11 +490,12 @@ export default function QuoteCheckoutModal({ brandName }: Props) {
                     <input
                       type="text"
                       required
-                      value={activeFormState.fullName}
-                      onChange={(event) => {
-                        setIsOpen(true);
-                        setFormState((current) => ({ ...current, fullName: event.target.value }));
-                      }}
+	                      value={activeFormState.fullName}
+	                      onChange={(event) => {
+	                        const fullName = event.currentTarget.value;
+	                        setIsOpen(true);
+	                        setFormState((current) => ({ ...current, fullName }));
+	                      }}
                       placeholder="Your full name"
                       className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-800 outline-none transition focus:border-green-400"
                     />
@@ -503,11 +506,12 @@ export default function QuoteCheckoutModal({ brandName }: Props) {
                     <input
                       type="email"
                       required
-                      value={activeFormState.email}
-                      onChange={(event) => {
-                        setIsOpen(true);
-                        setFormState((current) => ({ ...current, email: event.target.value }));
-                      }}
+	                      value={activeFormState.email}
+	                      onChange={(event) => {
+	                        const email = event.currentTarget.value;
+	                        setIsOpen(true);
+	                        setFormState((current) => ({ ...current, email }));
+	                      }}
                       placeholder="name@email.com"
                       className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-800 outline-none transition focus:border-green-400"
                     />
@@ -518,11 +522,12 @@ export default function QuoteCheckoutModal({ brandName }: Props) {
                     <input
                       type="tel"
                       required
-                      value={activeFormState.phone}
-                      onChange={(event) => {
-                        setIsOpen(true);
-                        setFormState((current) => ({ ...current, phone: event.target.value }));
-                      }}
+	                      value={activeFormState.phone}
+	                      onChange={(event) => {
+	                        const phone = event.currentTarget.value;
+	                        setIsOpen(true);
+	                        setFormState((current) => ({ ...current, phone }));
+	                      }}
                       placeholder="07..."
                       className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-800 outline-none transition focus:border-green-400"
                     />
@@ -533,14 +538,15 @@ export default function QuoteCheckoutModal({ brandName }: Props) {
                     <input
                       type="text"
                       required
-                      value={activeFormState.postcode}
-                      onChange={(event) => {
-                        setIsOpen(true);
-                        setFormState((current) => ({
-                          ...current,
-                          postcode: event.target.value.toUpperCase(),
-                        }));
-                      }}
+	                      value={activeFormState.postcode}
+	                      onChange={(event) => {
+	                        const postcode = event.currentTarget.value.toUpperCase();
+	                        setIsOpen(true);
+	                        setFormState((current) => ({
+	                          ...current,
+	                          postcode,
+	                        }));
+	                      }}
                       placeholder="SW1A 1AA"
                       className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-800 outline-none transition focus:border-green-400"
                     />
@@ -551,11 +557,12 @@ export default function QuoteCheckoutModal({ brandName }: Props) {
                   <label className="space-y-2">
                     <span className="text-label text-slate-700">Preferred engine type</span>
                     <select
-                      value={activeFormState.engineType}
-                      onChange={(event) => {
-                        setIsOpen(true);
-                        setFormState((current) => ({ ...current, engineType: event.target.value }));
-                      }}
+	                      value={activeFormState.engineType}
+	                      onChange={(event) => {
+	                        const engineType = event.currentTarget.value;
+	                        setIsOpen(true);
+	                        setFormState((current) => ({ ...current, engineType }));
+	                      }}
                       className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm font-semibold text-slate-800 outline-none transition focus:border-green-400"
                     >
                       <option>Rebuilt</option>
@@ -568,11 +575,12 @@ export default function QuoteCheckoutModal({ brandName }: Props) {
                   <label className="space-y-2">
                     <span className="text-label text-slate-700">Fitting option</span>
                     <select
-                      value={activeFormState.fitting}
-                      onChange={(event) => {
-                        setIsOpen(true);
-                        setFormState((current) => ({ ...current, fitting: event.target.value }));
-                      }}
+	                      value={activeFormState.fitting}
+	                      onChange={(event) => {
+	                        const fitting = event.currentTarget.value;
+	                        setIsOpen(true);
+	                        setFormState((current) => ({ ...current, fitting }));
+	                      }}
                       className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm font-semibold text-slate-800 outline-none transition focus:border-green-400"
                     >
                       <option>Supply & fit</option>
@@ -586,11 +594,12 @@ export default function QuoteCheckoutModal({ brandName }: Props) {
                   <span className="text-label text-slate-700">Additional details</span>
                   <textarea
                     rows={4}
-                    value={activeFormState.notes}
-                    onChange={(event) => {
-                      setIsOpen(true);
-                      setFormState((current) => ({ ...current, notes: event.target.value }));
-                    }}
+	                    value={activeFormState.notes}
+	                    onChange={(event) => {
+	                      const notes = event.currentTarget.value;
+	                      setIsOpen(true);
+	                      setFormState((current) => ({ ...current, notes }));
+	                    }}
                     placeholder="Tell us about the issue, preferred turnaround, or any known engine symptoms."
                     className="w-full rounded-[22px] border border-slate-200 bg-white px-4 py-3 text-sm text-slate-800 outline-none transition focus:border-green-400"
                   />

@@ -361,7 +361,7 @@ export default function EngineCodeDirectorySection({ data, bgImage }: Props) {
                 <input
                   type="text"
                   value={searchQuery}
-                  onChange={(event) => setSearchQuery(event.target.value)}
+                  onChange={(event) => setSearchQuery(event.currentTarget.value)}
                   placeholder="Filter engine codes..."
                   className="h-10 w-full rounded-[9px] border border-slate-300 bg-slate-50 pl-10 pr-4 text-[13px] text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-[#0d1b2e] focus:bg-white"
                 />

@@ -317,7 +317,7 @@ export default function HomeFaqHubSection() {
                             id="faq-search-input"
                             type="search"
                             value={searchValue}
-                            onChange={(event) => setSearchValue(event.target.value)}
+	                            onChange={(event) => setSearchValue(event.currentTarget.value)}
                             placeholder="Search FAQs - e.g. BMW timing chain cost"
                             aria-label="Search FAQs"
                             className="h-[52px] w-full rounded-full border-[1.5px] border-[#d8e1eb] bg-white pl-12 pr-5 text-[15px] text-[#0d1b2e] outline-none transition focus:border-[#15803d] focus:shadow-[0_0_0_3px_rgba(21,128,61,0.15)]"

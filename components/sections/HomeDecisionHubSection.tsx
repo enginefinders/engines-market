@@ -557,7 +557,7 @@ export default function HomeDecisionHubSection() {
                           max={vehicleValueSteps.length - 1}
                           step={1}
                           value={nearestValueIndex}
-                          onChange={(event) => setVehicleValue(vehicleValueSteps[Number(event.target.value)] ?? 5000)}
+	                          onChange={(event) => setVehicleValue(vehicleValueSteps[Number(event.currentTarget.value)] ?? 5000)}
                           className="mt-5 h-1 w-full cursor-pointer accent-[#15803d]"
                         />
 
@@ -579,7 +579,7 @@ export default function HomeDecisionHubSection() {
                               step={100}
                               value={vehicleValue}
                               onChange={(event) => {
-                                const nextValue = Number(event.target.value);
+	                                const nextValue = Number(event.currentTarget.value);
                                 if (!Number.isFinite(nextValue)) return;
                                 setVehicleValue(Math.max(500, Math.min(20000, nextValue)));
                               }}

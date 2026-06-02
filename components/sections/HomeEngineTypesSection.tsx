@@ -361,8 +361,12 @@ function MobileStack({ cards }: { cards: HomeEngineTypeCard[] }) {
                   <div className="peek-icon" aria-hidden>+</div>
                 </div>
 
-                <div className="card-expand" ref={el => (ceRefs.current[i] = el)}>
-                  <div className="expand-inner" ref={el => (eiRefs.current[i] = el)}>
+                <div className="card-expand" ref={(el) => {
+  ceRefs.current[i] = el;
+}}>
+                  <div className="expand-inner" ref={(el) => {
+  ceRefs.current[i] = el;
+}}>
                     <div className="exp-desc">{c.summary}</div>
                     <div className="exp-items">
                       {c.details?.slice(0, 3).map((d) => (
@@ -380,7 +384,9 @@ function MobileStack({ cards }: { cards: HomeEngineTypeCard[] }) {
               </div>
 
               <div className="face face-back">
-                <div className="back-inner" ref={el => (biRefs.current[i] = el)}>
+                <div className="back-inner" ref={(el) => {
+  ceRefs.current[i] = el;
+}}>
                   <div className="back-eyebrow">Full Details</div>
                   <div className="back-title">{c.title}</div>
                   <div className="back-desc">{c.closing}</div>
