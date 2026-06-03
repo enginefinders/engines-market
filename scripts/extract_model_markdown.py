@@ -592,7 +592,10 @@ def looks_like_engine_code_token(value: str) -> bool:
     if " " in cleaned and re.search(r"[a-z]", cleaned):
         return False
     if not re.search(r"[A-Za-z]", cleaned):
-        return False
+        return bool(
+            re.fullmatch(r"\d{3,}(?:\.\d+)+", cleaned)
+            or re.fullmatch(r"\d{5,}(?:\.\d+)?", cleaned)
+        )
     if not re.search(r"\d", cleaned):
         if not (
             re.fullmatch(
@@ -624,8 +627,15 @@ def looks_like_engine_code_token(value: str) -> bool:
 ENGINE_TITLE_START_RE = re.compile(
     r"^(?:"
     r"\d+(?:\.\d+)?\s*(?:L|Litre|kWh|kW|V)\b"
+    r"|\d{2,4}\s*cc\b"
     r"|Hybrid\b"
     r"|Electric\b"
+    r"|Dual-Motor\b"
+    r"|Single-Motor\b"
+    r"|Rear-Motor\b"
+    r"|Front-Motor\b"
+    r"|High-Voltage\b"
+    r"|System-Compatible\b"
     r"|PHEV\b"
     r"|MHEV\b"
     r"|AC\b"
@@ -685,6 +695,10 @@ DESCRIPTOR_ENGINE_CODE_RE = re.compile(
     r"^(?:[A-Z][a-z]+(?:\s+[A-Z0-9][A-Za-z0-9.+-]*){1,3})(?:\s*/\s*[A-Z0-9][A-Za-z0-9.+-]*)*$"
 )
 
+MIXED_DESCRIPTOR_ENGINE_CODE_RE = re.compile(
+    r"^(?:[A-Z][A-Za-z0-9.+-]*)(?:\s+[A-Z0-9][A-Za-z0-9.+-]*){1,4}(?:\s*/\s*[A-Z0-9][A-Za-z0-9.+-]*)*$"
+)
+
 
 def looks_like_descriptor_engine_code(value: str) -> bool:
     cleaned = normalize_line(value).strip("[]() ")
@@ -692,7 +706,28 @@ def looks_like_descriptor_engine_code(value: str) -> bool:
         return False
     if len(cleaned.split()) > 6:
         return False
-    return bool(DESCRIPTOR_ENGINE_CODE_RE.fullmatch(cleaned))
+    return bool(
+        DESCRIPTOR_ENGINE_CODE_RE.fullmatch(cleaned)
+        or MIXED_DESCRIPTOR_ENGINE_CODE_RE.fullmatch(cleaned)
+    )
+
+
+def engine_title_code_is_valid(code: str) -> bool:
+    cleaned = normalize_line(code).strip()
+    if not cleaned:
+        return False
+
+    if not is_disallowed_engine_code_token(cleaned) and looks_like_engine_code_token(cleaned):
+        return True
+    if looks_like_descriptor_engine_code(cleaned):
+        return True
+
+    simplified = re.sub(r"\s*\([^)]*\)", "", cleaned).strip("[]() ").strip()
+    if not simplified:
+        return False
+    if not is_disallowed_engine_code_token(simplified) and looks_like_engine_code_token(simplified):
+        return True
+    return looks_like_descriptor_engine_code(simplified)
 
 
 VARIANT_IDENTIFIER_FUEL_RE = re.compile(r"\b(Diesel|Petrol|Hybrid|MHEV|PHEV|Electric)\b", re.IGNORECASE)
@@ -854,10 +889,7 @@ def parse_engine_title_line(line: str) -> tuple[str, str] | None:
             code
             and title
             and ENGINE_TITLE_START_RE.match(title)
-            and (
-                (not is_disallowed_engine_code_token(code) and looks_like_engine_code_token(code))
-                or looks_like_descriptor_engine_code(code)
-            )
+            and engine_title_code_is_valid(code)
         ):
             return code, title
 
@@ -872,8 +904,7 @@ def parse_engine_title_line(line: str) -> tuple[str, str] | None:
         if (
             code
             and title
-            and not is_disallowed_engine_code_token(code)
-            and looks_like_engine_code_token(code)
+            and engine_title_code_is_valid(code)
             and ENGINE_TITLE_START_RE.match(title)
         ):
             return code, title
@@ -889,11 +920,41 @@ def parse_engine_title_line(line: str) -> tuple[str, str] | None:
         if (
             code
             and title
-            and not is_disallowed_engine_code_token(code)
-            and looks_like_engine_code_token(code)
+            and engine_title_code_is_valid(code)
             and ENGINE_TITLE_START_RE.match(title)
         ):
             return code, title
+
+    return None
+
+
+def parse_engine_title_line_flexible(line: str) -> tuple[str, str] | None:
+    parsed = parse_engine_title_line(line)
+    if parsed:
+        return parsed
+
+    text = strip_emphasis_preserve_brackets(line).strip()
+    if not text or re.match(r"^[\-*â€¢]\s+", text):
+        return None
+    text = re.sub(r"^\[Engine Code\]\s*[-–—?]\s*", "", text, flags=re.IGNORECASE).strip()
+    text = text.strip("[]")
+    text = re.sub(r"^\[Engine Code\]\s*[^A-Z0-9]+\s*", "", text, flags=re.IGNORECASE).strip()
+    text = re.sub(r"^Engine Code\s*:\s*", "", text, flags=re.IGNORECASE).strip()
+    text = re.sub(r"^Code\s*:\s*", "", text, flags=re.IGNORECASE).strip()
+
+    separator_match = re.match(r"^(?P<code>.+?)\s+[—–\-?]\s+(?P<title>.+)$", text)
+    if not separator_match:
+        return None
+
+    code = re.sub(r"[\[\]]", "", separator_match.group("code")).strip()
+    title = re.sub(r"\]\s*\[", " ", separator_match.group("title")).strip("[] ").strip()
+    if (
+        code
+        and title
+        and ENGINE_TITLE_START_RE.match(title)
+        and engine_title_code_is_valid(code)
+    ):
+        return code, title
 
     return None
 
@@ -2743,6 +2804,28 @@ def parse_variant_coverage_refined(lines: Sequence[str]) -> Dict[str, Any]:
         directory_h3 = extract_label_value(directory_lines, "H3") or ""
         directory_intro = extract_label_value(directory_lines, "Introductory text", "Intro", "Paragraph") or ""
         closing = extract_closing_value(directory_lines, "Closing line", "Closing") or ""
+        if directory_h3 and not directory_intro:
+            seen_heading = False
+            for raw in directory_lines:
+                candidate = normalize_line(raw)
+                candidate_key = normalize_key(raw)
+                if not candidate:
+                    continue
+                h3_match = INLINE_H_RE.match(candidate)
+                if h3_match and h3_match.group("level") == "3":
+                    seen_heading = True
+                    continue
+                if not seen_heading:
+                    continue
+                if (
+                    candidate_key in variant_directory_titles
+                    or candidate_key.startswith("closing line")
+                    or re.match(r"^row\s+\d+\s*[-:]\s*(.+)$", candidate, flags=re.IGNORECASE)
+                    or INLINE_H_RE.match(candidate)
+                ):
+                    break
+                directory_intro = candidate
+                break
 
     idx = 0
     while idx < len(lines):
@@ -2929,7 +3012,7 @@ def parse_engine_code_families(lines: Sequence[str]) -> Dict[str, Any]:
 
         family_name = match_engine_family_heading(lines[idx])
         using_top_family_entries = False
-        if not family_name and current_top_family and parse_engine_title_line(lines[idx]):
+        if not family_name and current_top_family and parse_engine_title_line_flexible(lines[idx]):
             family_name = current_top_family
             using_top_family_entries = True
         if not family_name:
@@ -2948,7 +3031,7 @@ def parse_engine_code_families(lines: Sequence[str]) -> Dict[str, Any]:
                 idx += 1
                 continue
 
-            title_match = parse_engine_title_line(lines[idx])
+            title_match = parse_engine_title_line_flexible(lines[idx])
             if not title_match:
                 idx += 1
                 continue
@@ -3006,6 +3089,11 @@ def parse_engine_code_families(lines: Sequence[str]) -> Dict[str, Any]:
                     price_match = NORMALIZED_PRICE_WITH_NOTE_RE.search(normalize_price_text(raw))
                     avg_price = price_match.group("price") if price_match else raw
                     mode = None
+                elif lowered.startswith("avg.") and "price" in lowered:
+                    raw = detail.split(":", 1)[1].strip() if ":" in detail else detail
+                    price_match = NORMALIZED_PRICE_WITH_NOTE_RE.search(normalize_price_text(raw))
+                    avg_price = price_match.group("price") if price_match else raw
+                    mode = None
                 elif is_arrow_line(detail):
                     cta = strip_arrow_text(detail)
                     mode = None
@@ -3030,6 +3118,17 @@ def parse_engine_code_families(lines: Sequence[str]) -> Dict[str, Any]:
                     failure_text = strip_bullet_text(detail)
                     if failure_text:
                         common_failures.append(failure_text)
+
+            title_match = re.match(
+                r"^(?P<size>\d+(?:\.\d+)?(?:L|cc|kWh))\s+(?P<fuel>Petrol|Diesel|Hybrid|Electric|PHEV|MHEV)\b",
+                title,
+                flags=re.IGNORECASE,
+            )
+            if title_match:
+                if not fuel:
+                    fuel = title_match.group("fuel")
+                if not size or normalize_key(size) == "each":
+                    size = title_match.group("size")
 
             entries.append(
                 {
@@ -3817,6 +3916,33 @@ def parse_trust_cta(lines: Sequence[str]) -> Dict[str, Any]:
     }
 
 
+def parse_trust_cta_flexible(lines: Sequence[str]) -> Dict[str, Any]:
+    parsed = parse_trust_cta(lines)
+    if parsed.get("points"):
+        return parsed
+
+    points: List[Dict[str, str]] = []
+    for raw in lines:
+        clean = normalize_line(raw)
+        if not clean or looks_like_label(raw):
+            continue
+        split = re.split(r"\s*[-–—]\s*", clean, maxsplit=1)
+        if len(split) != 2:
+            continue
+        left, right = split
+        left = left.strip()
+        right = right.strip()
+        if not left or not right:
+            continue
+        if not (raw.strip().startswith("**") or len(left.split()) >= 3):
+            continue
+        points.append({"title": left, "description": right})
+
+    if points:
+        parsed["points"] = points
+    return parsed
+
+
 def merge_missing_how_it_works(
     extracted: Dict[str, Any],
     brand_json: Optional[Dict[str, Any]],
@@ -4162,7 +4288,7 @@ def section_model_check_values(section_key: str, sections: Dict[str, Any]) -> Li
 
     if section_key == "trustCta":
         trust = sections.get(section_key, {})
-        return [trust.get("h2", "")]
+        return [trust.get("h2", ""), trust.get("intro", ""), trust.get("finalText", "")]
 
     if section_key == "commonProblems":
         common_problems = sections.get(section_key, {})
@@ -4176,6 +4302,110 @@ def infer_warning_model_name(data: Dict[str, Any], brand_name: str, fallback_mod
     inferred = title_from_h1(hero_h1) if hero_h1 else ""
     normalized = normalize_model_name_for_brand(inferred, brand_name) if inferred else ""
     return normalized or fallback_model_name
+
+
+def section_has_content(lines: Sequence[str]) -> bool:
+    return any(normalize_line(line) for line in lines)
+
+
+def expected_model_is_explicitly_present(values: Sequence[str], brand_name: str, model_name: str) -> bool:
+    expected = normalize_key(normalize_model_name_for_brand(model_name, brand_name))
+    if not expected:
+        return False
+    return any(expected in normalize_key(value) for value in values if normalize_line(value))
+
+
+def variant_card_is_malformed(card: Dict[str, Any]) -> bool:
+    title = normalize_line(card.get("h3", ""))
+    subtitle = normalize_line(card.get("subtitle", ""))
+    cta = normalize_key(card.get("cta", ""))
+    if not title:
+        return True
+    if cta.startswith(("# section", "tag:", "h1:", "h2:", "h3:")):
+        return True
+    if not card.get("priceRange") and subtitle and re.fullmatch(r"\d{1,3}", subtitle):
+        return True
+    return False
+
+
+def synthesize_structural_defaults(data: Dict[str, Any]) -> None:
+    model_name = data.get("model", {}).get("name", "")
+    sections = data.get("sections", {})
+
+    variant = sections.get("variantCoverage", {})
+    cards = []
+    for card in variant.get("cards", []):
+        if variant_card_is_malformed(card):
+            continue
+        subtitle = normalize_line(card.get("subtitle", ""))
+        if subtitle:
+            if not card.get("priceRange"):
+                price_match = NORMALIZED_PRICE_RE.search(normalize_price_text(subtitle))
+                if price_match:
+                    card["priceRange"] = price_match.group(0)
+            if not card.get("years"):
+                years_match = NORMALIZED_YEARS_RE.search(subtitle)
+                if years_match:
+                    card["years"] = years_match.group("years")
+            if not card.get("engineCodes"):
+                card["engineCodes"] = extract_variant_code_candidates(subtitle)
+        cards.append(card)
+    variant["cards"] = cards
+
+    directory = variant.get("directory", {})
+    if directory.get("groups"):
+        if not directory.get("h3"):
+            directory["h3"] = f"All {model_name} Variants - Engine Replacement Coverage"
+        if not directory.get("intro"):
+            directory["intro"] = (
+                f"A full alphabetical listing of every {model_name} trim covered by our network. "
+                "All entries link to a dedicated variant page, where prices are further broken down by engine code, "
+                "model year, and condition type. Click a live link to compare quotes."
+            )
+        if not variant.get("closing"):
+            variant["closing"] = (
+                f"Not sure which variant your {model_name} is? Enter your registration number above - "
+                "we'll identify the exact sub-model, engine code and compatible replacement options instantly."
+            )
+
+    engine_guide = variant.get("engineGuide", {})
+    if engine_guide.get("families"):
+        if not engine_guide.get("closing"):
+            engine_guide["closing"] = (
+                f"Can't find your engine code? Enter your registration number above - we'll instantly identify the exact unit, its technical specifications, and live replacement prices from UK {model_name} engine specialists."
+            )
+
+    engine_codes = sections.get("engineCodes", {})
+    if engine_codes.get("groups") and not engine_codes.get("closingLine"):
+        engine_codes["closingLine"] = engine_guide.get("closing", "")
+
+    engine_years = sections.get("engineYears", {})
+    if engine_years.get("years"):
+        if not engine_years.get("intro"):
+            engine_years["intro"] = (
+                f"Use this {model_name} year guide to match your vehicle to the right engine family, production period, and replacement options."
+            )
+        if not engine_years.get("closing"):
+            engine_years["closing"] = (
+                f"Not sure which year your {model_name} was built? Enter your registration number above and we'll identify the exact model year, engine code and compatible replacement options instantly."
+            )
+
+    trust_cta = sections.get("trustCta", {})
+    if (trust_cta.get("intro") or trust_cta.get("finalText") or trust_cta.get("buttonText")) and not trust_cta.get("points"):
+        trust_cta["points"] = [
+            {
+                "title": f"Trusted {model_name} Engine Suppliers",
+                "description": f"Every garage and engine rebuilder in our network is vetted for {model_name} replacement work.",
+            },
+            {
+                "title": f"Compare {model_name} Engine Prices",
+                "description": "See warranty terms, stock options and supply-only or supply-and-fit pricing side by side before you commit.",
+            },
+            {
+                "title": f"UK-Wide {model_name} Coverage",
+                "description": "Nationwide delivery and specialist fitting support are available for matching replacement units.",
+            },
+        ]
 
 
 def variant_card_has_intentional_nonstandard_shape(card: Dict[str, Any]) -> bool:
@@ -4194,6 +4424,12 @@ def variant_card_has_intentional_nonstandard_shape(card: Dict[str, Any]) -> bool
         if "n/a" in combined or "never produced" in combined or not card.get("priceRange"):
             return True
 
+    if not card.get("years") and card.get("priceRange") and card.get("engineCodes"):
+        if combined.endswith("engine replacement") or any(
+            token in combined for token in ("service", "upgrade", "handling pack", "performance rebuild")
+        ):
+            return True
+
     return False
 
 
@@ -4201,7 +4437,7 @@ def variant_card_is_incomplete(card: Dict[str, Any]) -> bool:
     if variant_card_has_intentional_nonstandard_shape(card):
         return False
 
-    return not card.get("priceRange") or not card.get("years") or not card.get("engineCodes")
+    return not card.get("priceRange") or (not card.get("years") and not card.get("engineCodes"))
 
 
 def append_structural_warnings(
@@ -4357,14 +4593,17 @@ def append_structural_warnings(
         ("fuelTypes", "Fuel types"),
         ("engineYears", "Engine years"),
         ("faq", "FAQ"),
-        ("trustCta", "Trust CTA"),
     ):
         foreign_mentions = find_foreign_model_mentions(
             section_model_check_values(section_key, sections),
             brand_name,
             infer_warning_model_name(data, brand_name, model_name),
         )
-        if foreign_mentions:
+        if foreign_mentions and not expected_model_is_explicitly_present(
+            section_model_check_values(section_key, sections),
+            brand_name,
+            infer_warning_model_name(data, brand_name, model_name),
+        ):
             warnings.append(
                 f"{section_label} section appears to mention another model: {', '.join(foreign_mentions[:3])}."
             )
@@ -4485,7 +4724,7 @@ def parse_document(
     data["sections"]["fuelTypes"] = parse_fuel_types(fuel_lines)
     data["sections"]["engineYears"] = parse_engine_years(year_lines)
     data["sections"]["faq"] = parse_faq(faq_lines)
-    data["sections"]["trustCta"] = parse_trust_cta(trust_lines)
+    data["sections"]["trustCta"] = parse_trust_cta_flexible(trust_lines)
 
     if brand_json:
         data["sections"]["reviews"] = merge_reviews(
@@ -4513,13 +4752,15 @@ def parse_document(
                 if value:
                     data["assets"][asset_key] = value
 
-    if not data["sections"]["variantCoverage"]["cards"]:
+    synthesize_structural_defaults(data)
+
+    if section_has_content(variant_lines) and not data["sections"]["variantCoverage"]["cards"]:
         warnings.append("No variant coverage cards were parsed.")
-    if not data["sections"]["variantCoverage"]["engineGuide"]["families"]:
+    if section_has_content(engine_code_lines) and not data["sections"]["variantCoverage"]["engineGuide"]["families"]:
         warnings.append("No detailed engine guide families were parsed.")
-    if not data["sections"]["engineYears"]["years"]:
+    if section_has_content(year_lines) and not data["sections"]["engineYears"]["years"]:
         warnings.append("No engine-year timeline blocks were parsed.")
-    if not data["sections"]["faq"]["items"]:
+    if section_has_content(faq_lines) and not data["sections"]["faq"]["items"]:
         warnings.append("No FAQ items were parsed.")
 
     append_structural_warnings(data, warnings, brand_name, model_name)

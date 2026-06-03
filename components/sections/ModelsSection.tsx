@@ -58,7 +58,13 @@ function ArrowIcon({ open = false }: { open?: boolean }) {
 export default function ModelsSection({ data, brandSlug }: Props) {
   const heading = splitHeading(data.h2);
   const [openCard, setOpenCard] = useState<string | null>(null);
-  const visibleCards = useMemo(() => data.cards.slice(0, 5), [data.cards]);
+  const [showAllModels, setShowAllModels] = useState(false);
+  const initialVisibleCount = 5;
+  const visibleCards = useMemo(
+    () => (showAllModels ? data.cards : data.cards.slice(0, initialVisibleCount)),
+    [data.cards, showAllModels],
+  );
+  const hiddenModelsCount = Math.max(data.cards.length - initialVisibleCount, 0);
 
   return (
     <Section id="brand-models" className="relative overflow-hidden bg-white">
@@ -159,6 +165,23 @@ export default function ModelsSection({ data, brandSlug }: Props) {
             );
           })}
         </div>
+
+        {hiddenModelsCount > 0 ? (
+          <div className="mt-5 flex items-center justify-center">
+            <button
+              type="button"
+              onClick={() => setShowAllModels((current) => !current)}
+              className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-[12px] font-bold text-[#0d1b2e] transition hover:border-[#0d1b2e] hover:bg-slate-50"
+            >
+              <span>
+                {showAllModels
+                  ? "Show Fewer Models"
+                  : `View More Models (${hiddenModelsCount})`}
+              </span>
+              <ArrowIcon open={showAllModels} />
+            </button>
+          </div>
+        ) : null}
       </Container>
     </Section>
   );

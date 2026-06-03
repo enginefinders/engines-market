@@ -18,6 +18,7 @@ import QuoteCheckoutModal from "@/components/checkout/QuoteCheckoutModal";
 import { getBrandPageData, getBrandSlugs } from "@/lib/brandData";
 import { resolveBrandPageVisuals } from "@/lib/engineImageSelection";
 import { resolveModelImagePaths } from "@/lib/modelImageAssets";
+import { getBrandModelCards } from "@/lib/modelPageData";
 import { getModelHref } from "@/lib/modelRoutes";
 import { SITE_URL } from "@/lib/site";
 import { buildStaticReviewsSection } from "@/lib/staticReviews";
@@ -38,7 +39,10 @@ export async function generateStaticParams() {
   }));
 }
 
-function buildStructuredData(pageData: BrandPageData) {
+function buildStructuredData(
+  pageData: BrandPageData,
+  modelCards: BrandPageData["sections"]["models"]["cards"],
+) {
   const reviewsData = buildStaticReviewsSection(pageData.brand.name);
 
   if (pageData.structuredData) {
@@ -105,7 +109,7 @@ function buildStructuredData(pageData: BrandPageData) {
         "@type": "ItemList",
         "@id": `${canonical}#models`,
         name: `${pageData.brand.name} Engine Models`,
-        itemListElement: pageData.sections.models.cards.map((model, index) => ({
+        itemListElement: modelCards.map((model, index) => ({
           "@type": "ListItem",
             position: index + 1,
             item: {
@@ -147,10 +151,14 @@ export default async function BrandPage({ params }: BrandPageProps) {
     notFound();
   }
 
-  const structuredData = buildStructuredData(pageData);
+  const allBrandModelCards = await getBrandModelCards(
+    pageData.brand.slug,
+    pageData.sections.models.cards,
+  );
+  const structuredData = buildStructuredData(pageData, allBrandModelCards);
   const reviewsData = buildStaticReviewsSection(pageData.brand.name);
   const brandVisuals = resolveBrandPageVisuals(pageData);
-  const modelCardsWithResolvedImages = pageData.sections.models.cards.map((card) => ({
+  const modelCardsWithResolvedImages = allBrandModelCards.map((card) => ({
     ...card,
     image: resolveModelImagePaths({
       brandSlug: pageData.brand.slug,
