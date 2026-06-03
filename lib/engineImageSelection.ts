@@ -1,8 +1,4 @@
-import { existsSync } from "node:fs";
-import path from "node:path";
 import type { BrandPageData } from "@/types/brand";
-
-const PUBLIC_DIR = path.join(process.cwd(), "public");
 
 const SHARED_ENGINE_IMAGES = [
   "/images/shared/hero-engines/temporary-diesel-engine.jpeg",
@@ -12,16 +8,10 @@ const SHARED_ENGINE_IMAGES = [
 
 const BRAND_IMAGE_EXTENSIONS = [".webp", ".png", ".jpg", ".jpeg"] as const;
 
-function toPublicFilePath(assetPath: string) {
-  return path.join(PUBLIC_DIR, assetPath.replace(/^\//, ""));
-}
+
 
 function assetExists(assetPath?: string | null) {
-  if (!assetPath) {
-    return false;
-  }
-
-  return existsSync(toPublicFilePath(assetPath));
+  return Boolean(assetPath?.trim());
 }
 
 function uniquePaths(paths: Array<string | undefined>) {
