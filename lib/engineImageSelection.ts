@@ -1,4 +1,8 @@
+import path from "node:path";
+import imageManifest from "./image-manifest.json";
 import type { BrandPageData } from "@/types/brand";
+
+const manifest = imageManifest as Record<string, number>;
 
 const SHARED_ENGINE_IMAGES = [
   "/images/shared/hero-engines/temporary-diesel-engine.jpeg",
@@ -8,10 +12,12 @@ const SHARED_ENGINE_IMAGES = [
 
 const BRAND_IMAGE_EXTENSIONS = [".webp", ".png", ".jpg", ".jpeg"] as const;
 
-
-
 function assetExists(assetPath?: string | null) {
-  return Boolean(assetPath?.trim());
+  if (!assetPath) {
+    return false;
+  }
+
+  return Boolean(manifest[assetPath]);
 }
 
 function uniquePaths(paths: Array<string | undefined>) {

@@ -1,18 +1,14 @@
-import { existsSync } from "node:fs";
 import path from "node:path";
+import imageManifest from "./image-manifest.json";
 
-const PUBLIC_DIR = path.join(process.cwd(), "public");
-
-function toPublicFilePath(assetPath: string) {
-  return path.join(PUBLIC_DIR, assetPath.replace(/^\//, ""));
-}
+const manifest = imageManifest as Record<string, number>;
 
 function assetExists(assetPath?: string | null) {
   if (!assetPath) {
     return false;
   }
 
-  return existsSync(toPublicFilePath(assetPath));
+  return Boolean(manifest[assetPath]);
 }
 
 function unique(values: Array<string | undefined | null>) {

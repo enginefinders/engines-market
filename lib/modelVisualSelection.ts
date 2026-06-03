@@ -1,9 +1,9 @@
-import { existsSync, readdirSync } from "node:fs";
 import path from "node:path";
+import imageManifest from "./image-manifest.json";
 import { resolveModelImagePaths } from "@/lib/modelImageAssets";
 import type { ModelPageData } from "@/types/model";
 
-const PUBLIC_DIR = path.join(process.cwd(), "public");
+const manifest = imageManifest as Record<string, number>;
 
 const SHARED_ENGINE_IMAGES = [
   "/images/shared/hero-engines/temporary-diesel-engine.jpeg",
@@ -11,16 +11,12 @@ const SHARED_ENGINE_IMAGES = [
   "/images/shared/hero-engines/temporary-performance-engine.jpeg",
 ] as const;
 
-function toPublicFilePath(assetPath: string) {
-  return path.join(PUBLIC_DIR, assetPath.replace(/^\//, ""));
-}
-
 function assetExists(assetPath?: string | null) {
   if (!assetPath) {
     return false;
   }
 
-  return existsSync(toPublicFilePath(assetPath));
+  return Boolean(manifest[assetPath]);
 }
 
 function uniquePaths(paths: Array<string | undefined | null>) {
@@ -60,14 +56,9 @@ function buildLiveFeedImagePath(brandSlug: string, imageSlug: string) {
 }
 
 function listBrandModelAssets(brandSlug: string) {
-  const brandModelsDir = path.join(PUBLIC_DIR, "images", "brands", brandSlug, "models");
-  if (!existsSync(brandModelsDir)) {
-    return [];
-  }
-
-  return readdirSync(brandModelsDir)
-    .filter((fileName) => /\.(png|jpe?g|webp)$/i.test(fileName))
-    .map((fileName) => `/images/brands/${brandSlug}/models/${fileName}`);
+  const prefix = `/images/brands/${brandSlug}/models/`;
+  return Object.keys(manifest)
+    .filter((key) => key.startsWith(prefix) && /\.(png|jpe?g|webp)$/i.test(key));
 }
 
 function resolveCarPlaceholder(pageData: ModelPageData) {
