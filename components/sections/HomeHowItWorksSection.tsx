@@ -59,7 +59,7 @@ function TickIcon() {
   );
 }
 
-function getIcon(icon: HomeHowItWorksStep["icon"]) {
+function getIcon(icon?: "registration" | "quote" | "shield" | string) {
   if (icon === "registration") return <RegistrationIcon />;
   if (icon === "quote") return <QuoteIcon />;
   return <ShieldIcon />;
@@ -69,7 +69,7 @@ export default function HomeHowItWorksSection({ steps }: Props) {
   const [activeStep, setActiveStep] = useState<number | null>(null);
 
   return (
-    <Section id="how-it-works" className="bg-[#f8fbff] py-7 sm:py-8 lg:py-10">
+    <Section id="how-it-works" className="bg-[#f7f8fb] py-7 sm:py-8 lg:py-10">
       <Container className="max-w-[1400px]">
         <div className="mx-auto  text-center">
           <div className="section-pill ">
