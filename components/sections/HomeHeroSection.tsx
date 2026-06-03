@@ -432,26 +432,32 @@ function LogoBadge({ brand }: { brand: string }) {
 /* Brand Row — matches screenshot layout exactly */
 function HeroRow({ row }: { row: HeroBrandRow }) {
   return (
-    <div className="flex h-[86px] cursor-pointer items-center sm:gap-20 border-b border-[rgba(13,27,46,0.1)] px-4 last:border-b-0 transition-colors hover:bg-[#f9fafb]">
+    // Changed px-4 to px-2 sm:px-4 to reduce overall left/right space on mobile
+    <div className="flex h-[80px] cursor-pointer items-center sm:gap-20 border-b border-[rgba(13,27,46,0.1)] px-2 sm:px-4 last:border-b-0 transition-colors hover:bg-[#f9fafb]">
 
       {/* LEFT: Logo + Brand name grouped together */}
-      <div className="flex w-[110px] flex-shrink-0 flex-col items-center gap-2 sm:flex-row sm:gap-4">
+      {/* Changed w-[110px] to w-[50px] sm:w-[110px] to reduce space around the logo on mobile */}
+      <div className="flex w-[50px] min-[380px]:w-[70px] sm:w-[110px] flex-shrink-0 flex-col items-center gap-2 sm:flex-row sm:gap-4">
         <LogoBadge brand={row.brand} />
-        <span className="text-md font-bold text-[#0d1b2e] sm:text-left">{row.brand}</span>
+        <span className="hidden sm:inline text-md font-bold text-[#0d1b2e] sm:text-left">{row.brand}</span>
       </div>
 
       {/* CENTER: 3-line stats block */}
       <div className="min-w-0 flex-1">
         {/* Line 1: green quote count */}
         <div className="mb-[3px] text-[13px] font-bold text-[#15803d]">
+          {/* Added brand name here for mobile only, in dark blue */}
+          <span className="sm:hidden mr-1.5 text-[#0d1b2e]">{row.brand}</span>
           {row.stat}
         </div>
+        
         {/* Line 2: price range */}
         <div className="mb-[2px] text-[13px] text-[#0d1b2e]">
-          Avg. rebuilt quote:{" "}
+          Avg. <span className="font-semibold">Rebuilt</span> Quote:{" "}
           <span className="font-semibold">{row.price}</span>{" "}
           <span className="text-[11px] text-[#6b7280]">· supply only</span>
         </div>
+        
         {/* Line 3: most requested codes */}
         <div className="truncate text-[11px] text-[#6b7280]">
           Most requested:{" "}
@@ -568,8 +574,8 @@ function CTAPanel({
           type="button"
           onClick={() => setSearchMode("registration")}
           aria-pressed={searchMode === "registration"}
-          className={`flex flex-1 items-center justify-center gap-1.5 rounded-md px-4 py-3 text-[13px] font-semibold transition-all ${searchMode === "registration"
-            ? "border border-[#15803d] bg-white text-[#15803d] shadow-sm"
+          className={`flex flex-1 items-center justify-center gap-1.5 rounded-md px-2 sm:px-4 py-3 text-[12px] sm:text-[13px] font-semibold transition-all ${searchMode === "registration"
+            ? "border border-[#0000A3] bg-white text-[#15803d] shadow-sm"
             : "border border-transparent bg-transparent text-[#9ca3af] hover:text-[#6b7280]"
             }`}
         >
@@ -580,8 +586,8 @@ function CTAPanel({
           type="button"
           onClick={() => setSearchMode("manual")}
           aria-pressed={searchMode === "manual"}
-          className={`flex flex-1 items-center justify-center gap-1.5 rounded-md px-4 py-3 text-[13px] font-semibold transition-all ${searchMode === "manual"
-            ? "border border-[#15803d] bg-white text-[#15803d] shadow-sm"
+          className={`flex flex-1 items-center justify-center gap-1.5 rounded-md px-2 sm:px-4 py-3 text-[12px] sm:text-[13px] font-semibold transition-all ${searchMode === "manual"
+            ? "border border-[#0000A3] bg-white text-[#15803d] shadow-sm"
             : "border border-transparent bg-transparent text-[#9ca3af] hover:text-[#6b7280]"
             }`}
         >
@@ -590,7 +596,7 @@ function CTAPanel({
         </button>
       </div>
 
-      <div className={`text-center ${searchMode === "manual" ? "px-6 py-4" : "p-6"}`}>
+      <div className={`text-center ${searchMode === "manual" ? "p-2 sm:px-6 py-4" : "p-2 sm:p-6"}`}>
         {searchMode === "registration" ? (
           <>
             <h3 className="mb-1 text-[18px] font-semibold text-[#0d1b2e] mx-auto">Get Your Free Engine Quotes</h3>
@@ -727,35 +733,54 @@ function CTAPanel({
 
         {/* GDPR */}
         {searchMode === "registration" ? (
-          <p className="mb-4 flex items-center justify-center gap-1.5 text-center text-[12px] text-gray-500">
-            <LockIcon />
+          <p className="mb-4 flex items-center justify-center gap-1.5 text-center text-[12px] sm:text-[14px] text-gray-500">
+            {/* <LockIcon /> */}
             <span>{gdprNote}</span>
           </p>
         ) : null}
 
         {searchMode === "registration" ? (
-          <div className="grid grid-cols-3 gap-3 border-t border-[rgba(13,27,46,0.08)] pt-4 text-left sm:grid-cols-3 sm:gap-2 sm:text-center">
-            <div className="flex flex-col items-center gap-3 sm:flex-row sm:items-center sm:gap-[6px]">
-              <PiEngine className="h-8 w-8 flex-none text-[#15803d]" />
-              <div className="min-w-0 flex flex-col items-center">
+                    <div className="grid grid-cols-3 gap-3 border-t border-[rgba(13,27,46,0.08)] pt-4 text-left sm:grid-cols-3 sm:gap-2 sm:text-center">
+            
+            {/* 1. Engine Codes */}
+            <div className="flex flex-col items-center gap-1 sm:flex-row sm:items-center sm:gap-[6px]">
+              <img 
+                src="/Home/enginelogo.webp" 
+                alt="Engine Codes" 
+                className="h-8 w-8 flex-none object-contain" 
+              />
+              <div className="min-w-0 flex flex-col items-center gap-1 sm:gap-0">
                 <div className="text-[18px] font-extrabold leading-none text-[#0d1b2e]">8,000+</div>
                 <div className="text-[11px] leading-tight text-[#6b7280]">Engine Codes</div>
               </div>
             </div>
-            <div className="flex flex-col items-center gap-3 sm:flex-row sm:items-center sm:gap-[6px]">
-              <GoShield className="h-8 w-8 flex-none text-[#15803d]" />
-              <div className="min-w-0 flex flex-col items-center">
+
+            {/* 2. Car Brands */}
+            <div className="flex flex-col items-center gap-1 sm:flex-row sm:items-center sm:gap-[6px]">
+              <img 
+                src="/Home/carlogo.webp" 
+                alt="Car Brands" 
+                className="h-8 w-8 flex-none object-contain" 
+              />
+              <div className="min-w-0 flex flex-col items-center gap-1 sm:gap-0">
                 <div className="text-[18px] font-extrabold leading-none text-[#0d1b2e]">40+</div>
                 <div className="text-[11px] leading-tight text-[#6b7280]">Car Brands</div>
               </div>
             </div>
-            <div className="flex flex-col items-center gap-3 sm:flex-row sm:items-center sm:gap-[6px]">
-              <GoVerified className="h-8 w-8 flex-none text-[#15803d]" />
-              <div className="min-w-0 flex flex-col items-center">
+
+            {/* 3. Free / No Obligation */}
+            <div className="flex flex-col items-center gap-1 sm:flex-row sm:items-center sm:gap-[6px]">
+              <img 
+                src="/Home/verifiedlogo.webp" 
+                alt="Free No Obligation" 
+                className="h-8 w-8 flex-none object-contain" 
+              />
+              <div className="min-w-0 flex flex-col items-center gap-1 sm:gap-0">
                 <div className="text-[18px] font-extrabold leading-none text-[#0d1b2e]">100%</div>
-                <div className="text-[11px] leading-tight text-[#6b7280]">Free · No Obligation</div>
+                <div className="text-[11px] leading-tight text-[#6b7280] text-center">Free · No Obligation</div>
               </div>
             </div>
+
           </div>
         ) : null}
       </div>
@@ -873,10 +898,10 @@ export default function HomeHeroSection({ data }: Props) {
         .desktop-carousel-track {
           animation: slideLeftDesktop 40s linear infinite;
         }
-        @media (max-width: 640px) {
+                @media (max-width: 767px) {
           .hero-background {
-            background-image:
-              linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,0.98) 24%, rgba(255,255,255,0.92) 48%, rgba(255,255,255,0.25) 100%), url('/bg.webp') !important;
+            background-image: none !important;
+            background-color: #ffffff !important; /* Fallback to solid white */
           }
         }
       `}</style>
@@ -908,7 +933,7 @@ export default function HomeHeroSection({ data }: Props) {
                 className="mb-2 text-center leading-[1.1] tracking-[-0.03em] text-[#0d1b2e] lg:text-left"
                 style={{ fontFamily: "Inter, sans-serif" }}
               >
-                <span className="block text-[clamp(28px,5vw,48px)] font-extrabold">{data.headingLead}</span>
+                <span className="block text-[26px] sm:text-[clamp(28px,5vw,48px)] font-extrabold">{data.headingLead}</span>
                 <span className="mt-[2px] block text-[clamp(20px,3.5vw,36px)] font-semibold text-[#15803d]">
                   {data.headingAccent}
                 </span>
@@ -926,7 +951,7 @@ export default function HomeHeroSection({ data }: Props) {
               </p>
 
               {/* ── MOBILE: CTA Card (appears ABOVE brand rows) ── */}
-              <div className="mb-5 rounded-[12px] border border-[rgba(13,27,46,0.08)] bg-white p-0 shadow-[0_8px_32px_rgba(13,27,46,0.08)] lg:hidden">
+              <div className="mb-5 rounded-[12px] border border-[rgba(13,27,46,0.08)] bg-white p-0 shadow-[0_8px_30px_rgba(13,27,46,0.2)] lg:hidden">
                 <CTAPanel
                   registration={registration}
                   onRegistrationChange={setRegistration}
@@ -938,15 +963,16 @@ export default function HomeHeroSection({ data }: Props) {
               </div>
 
               {/* ── MOBILE: "Compare quotes" heading ── */}
-              <h3
-                className="mb-3 text-[15px] font-bold text-[#0d1b2e] lg:hidden"
+              
+
+              {/* Brand rows */}
+              <div className="overflow-hidden rounded-[12px] border border-[rgba(13,27,46,0.1)] bg-white shadow-[0_8px_30px_rgba(13,27,46,0.2)]">
+                <h3
+                className="mb-3 text-[15px] font-bold text-[#0d1b2e] lg:hidden text-center pt-5"
                 style={{ fontFamily: "Inter, sans-serif" }}
               >
                 Compare quotes from vetted specialists
               </h3>
-
-              {/* Brand rows */}
-              <div className="overflow-hidden rounded-[12px] border border-[rgba(13,27,46,0.1)] bg-white shadow-[0_2px_12px_rgba(13,27,46,0.06)]">
                 {activeGroup.map((row) => (
                   <HeroRow key={`${groupIndex}-${row.brand}`} row={row} />
                 ))}
@@ -1012,36 +1038,40 @@ export default function HomeHeroSection({ data }: Props) {
       </section>
 
       {/* ─── ENGINE CAROUSEL ─── */}
+           {/* ─── ENGINE CAROUSEL ─── */}
       <section className="border-t border-[rgba(13,27,46,0.08)] bg-gray-50 py-5">
-        <Container className="max-w-[1400px] px-2 sm:px-10">
-          <div className="flex items-center gap-3 lg:hidden">
-            <div className="overflow-hidden flex-1">
-              <div className="mobile-carousel-track flex">
-                {[...engineCarouselItems, ...engineCarouselItems].map((item, index) => (
-                  <div
-                    key={`mobile-carousel-${item.code}-${index}`}
-                    className="flex items-center gap-2 p-0 min-w-[33.333%] flex-shrink-0"
-                  >
-                    <div className="flex h-16 w-16 flex-shrink-0 items-center justify-center overflow-hidden rounded-[6px]">
-                      <img
-                        src={getEngineImagePath(item.code)}
-                        alt={`${item.brand} ${item.code} engine`}
-                        className="h-full w-full object-cover"
-                      />
-                    </div>
-                    <div className="min-w-0 flex-1 text-left">
-                      <div className="text-[10px] font-bold leading-tight text-[#0d1b2e]">
-                        {item.brand}
-                      </div>
-                      <div className="text-[9px] text-[#6b7280]">{item.code}</div>
-                      <div className="text-[10px] font-bold text-[#15803d]">{item.price}</div>
-                    </div>
+        
+        {/* MOBILE SLIDER - Placed OUTSIDE Container to guarantee 0 left/right padding */}
+        <div className="flex items-center gap-3 lg:hidden">
+          <div className="overflow-hidden flex-1">
+            <div className="mobile-carousel-track flex">
+              {[...engineCarouselItems, ...engineCarouselItems].map((item, index) => (
+                <div
+                  key={`mobile-carousel-${item.code}-${index}`}
+                  className="flex items-center gap-2 p-0 min-w-[33.333%] flex-shrink-0"
+                >
+                  <div className="flex h-16 w-16 flex-shrink-0 items-center justify-center overflow-hidden rounded-[6px]">
+                    <img
+                      src={getEngineImagePath(item.code)}
+                      alt={`${item.brand} ${item.code} engine`}
+                      className="h-full w-full object-cover"
+                    />
                   </div>
-                ))}
-              </div>
+                  <div className="min-w-0 flex-1 text-left">
+                    <div className="text-[10px] font-bold leading-tight text-[#0d1b2e]">
+                      {item.brand}
+                    </div>
+                    <div className="text-[9px] text-[#6b7280]">{item.code}</div>
+                    <div className="text-[10px] font-bold text-[#15803d]">{item.price}</div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
+        </div>
 
+        {/* DESKTOP SLIDER - Kept INSIDE Container for proper centering and padding */}
+        <Container className="max-w-[1400px] px-2 sm:px-10">
           <div className="hidden items-center gap-3 lg:flex">
             <div className="overflow-hidden flex-1">
               <div className="desktop-carousel-track flex">
@@ -1108,7 +1138,7 @@ export default function HomeHeroSection({ data }: Props) {
 
         {/* Mobile: scrolling ticker */}
         <div className="flex h-12 items-center overflow-hidden lg:hidden">
-          <div className="hero-ticker-track h-12" style={{ animationDuration: "28s" }}>
+          <div className="hero-ticker-track h-12" style={{ animationDuration: "45s" }}>
             {bottomTickerLoop.map((item, index) => (
               <span
                 key={`bottom-ticker-${index}`}
