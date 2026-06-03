@@ -71,12 +71,12 @@ export default function HomeHowItWorksSection({ steps }: Props) {
   return (
     <Section id="how-it-works" className="bg-[#f8fbff] py-7 sm:py-8 lg:py-10">
       <Container className="max-w-[1400px]">
-        <div className="mx-auto max-w-[860px] text-center">
-          <div className="section-pill">
+        <div className="mx-auto  text-center">
+          <div className="section-pill ">
             <span>How It Works</span>
           </div>
 
-          <h2 className="mt-4 text-center font-['Manrope'] text-[28px] font-bold leading-[1.12] text-[#0d1b2e] sm:text-[30px] lg:text-[32px]">
+          <h2 className="mt-4 text-center font-['Manrope'] text-[28px]  font-bold leading-[1.12] text-[#0d1b2e] sm:text-[30px] lg:text-[32px]">
             <span>How EnginesMarket Works - </span>
             <span className="text-[#15803d]">3 Steps</span>
             <span> to Your Replacement Engine Quote</span>
@@ -88,7 +88,7 @@ export default function HomeHowItWorksSection({ steps }: Props) {
             const flipped = activeStep === step.number;
 
             return (
-              <div key={step.number} className="perspective-1000 min-h-[300px] sm:min-h-[360px] xl:min-h-[340px]">
+              <div key={step.number} className="perspective-1000 min-h-[260px] sm:min-h-[280px] xl:min-h-[290px]">
                 <button
                   type="button"
                   onClick={() => setActiveStep(flipped ? null : step.number)}
@@ -97,25 +97,29 @@ export default function HomeHowItWorksSection({ steps }: Props) {
                   aria-label={`${flipped ? "Hide details for" : "Show details for"} step ${step.number}`}
                 >
                   <div
-                    className={`relative h-full min-h-[300px] rounded-[18px] transition duration-500 [transform-style:preserve-3d] sm:min-h-[360px] xl:min-h-[340px] ${flipped ? "[transform:rotateY(180deg)]" : ""
+                    className={`relative h-full min-h-[260px] rounded-[18px] transition duration-500 [transform-style:preserve-3d] lg:min-h-[280px] xl:min-h-[290px] ${flipped ? "[transform:rotateY(180deg)]" : ""
                       }`}
                   >
-                    <div className="absolute inset-0 flex h-full flex-col overflow-hidden rounded-[18px] border border-[#dbe4ef] bg-white p-6 shadow-[0_18px_40px_rgba(13,27,46,0.08)] [backface-visibility:hidden] text-center">
+                    <div className="absolute inset-0 flex h-full flex-col overflow-hidden rounded-[18px] border border-[#dbe4ef] bg-white p-2 sm:p-4 shadow-[0_18px_40px_rgba(13,27,46,0.08)] [backface-visibility:hidden] text-center">
 
 
-                      <span className="mt-0 text-left text-[12px] font-extrabold uppercase tracking-[0.18em] text-[#15803d]">
-                        STEP {step.number} OF 3
+                      <span className="mt-0 font-['Manrope'] text-right text-2xl font-extrabold uppercase tracking-[0.18em] text-gray-400">
+                        0{step.number}
                       </span>
 
-                      <div className="mx-auto mt-5 flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-[14px] bg-[#0d1b2e] text-white">
-                        {getIcon(step.icon)}
+                      <div className={`mx-auto flex items-center justify-center rounded-[14px]  p-2 ${step.imageClassName || "h-12 w-12 sm:h-14 sm:w-14"}`}>
+                        <img
+                          src={step.image}
+                          alt={`Step ${step.number} icon`}
+                          className="h-full w-full object-contain"
+                        />
                       </div>
 
                       <h3 className="mt-3 font-['Manrope'] text-[24px] font-bold leading-[1] text-[#0d1b2e]">
                         {step.frontTitle}
                       </h3>
 
-                      <p className="mx-auto mt-4 max-w-[32ch] text-[15px] leading-[1.65] text-[#5a6478]">
+                      <p className="mx-auto mt-4 text-[12px] sm:text-[14px] leading-[1.65] text-[#5a6478]">
                         {step.frontBody}
                       </p>
 
@@ -125,11 +129,11 @@ export default function HomeHowItWorksSection({ steps }: Props) {
                       </span>
                     </div>
 
-                    <div className="absolute inset-0 flex h-full flex-col overflow-hidden rounded-[18px] border border-[#0d1b2e] bg-[#0d1b2e] p-6 text-white shadow-[0_24px_48px_rgba(7,25,54,0.2)] [backface-visibility:hidden] [transform:rotateY(180deg)]">
+                    <div className="absolute inset-0 flex h-full flex-col overflow-hidden rounded-[18px] border border-[#0d1b2e] bg-[#0d1b2e] p-2 sm:p-4 text-white shadow-[0_24px_48px_rgba(7,25,54,0.2)] [backface-visibility:hidden] [transform:rotateY(180deg)]">
                       <div className="flex flex-col items-center gap-4">
-                        <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-[14px] bg-white/10 text-white">
+                        {/* <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-[14px] bg-white/10 text-white">
                           {getIcon(step.icon)}
-                        </div>
+                        </div> */}
                         {/* <span className="pt-1 text-[11px] font-extrabold uppercase tracking-[0.18em] text-[#86efac]">
                           STEP {step.number} OF 3
                         </span> */}

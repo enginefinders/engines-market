@@ -13,7 +13,8 @@ export type HomeHeroData = {
 
 export type HomeHowItWorksStep = {
   number: number;
-  icon: "registration" | "quote" | "shield";
+  image: string;
+  imageClassName?: string;
   frontTitle: string;
   frontBody: string;
   backTitle: string;
@@ -77,7 +78,8 @@ export const homeHeroData: HomeHeroData = {
 export const homeHowItWorksSteps: HomeHowItWorksStep[] = [
   {
     number: 1,
-    icon: "registration",
+    image: "/Home/reg-here.webp",
+    imageClassName: "w-70 h-22", 
     frontTitle: "Enter Your Registration",
     frontBody:
       "Your reg identifies your exact engine, model, fuel type and variant via DVLA - in seconds. Free.",
@@ -93,7 +95,8 @@ export const homeHowItWorksSteps: HomeHowItWorksStep[] = [
   },
   {
     number: 2,
-    icon: "quote",
+    image: "/Home/save-money.webp",
+    imageClassName: "w-22 h-22", 
     frontTitle: "Compare Prices from UK Specialists",
     frontBody:
       "Your verified details go to matched UK suppliers. Same-day quotes with full price, warranty and fitting breakdown - no obligation.",
@@ -109,7 +112,8 @@ export const homeHowItWorksSteps: HomeHowItWorksStep[] = [
   },
   {
     number: 3,
-    icon: "shield",
+    image: "/Home/quote-button 1.png",
+    imageClassName: "w-22 h-22", 
     frontTitle: "Choose the Best Deal & Save",
     frontBody:
       "Compare supplier ratings, warranty terms and price. Pick the right specialist - then deal directly with them.",
