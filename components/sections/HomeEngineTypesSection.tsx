@@ -234,7 +234,7 @@ export default function HomeEngineTypesSection({ cards }: Props) {
           </div>
         )}
 
-        <div className="mt-6 rounded-[18px] border border-white/10 bg-[#0d1b2e] px-4 py-5 sm:px-5 lg:px-8 lg:py-6">
+        {/* <div className="mt-6 rounded-[18px] border border-white/10 bg-[#0d1b2e] px-4 py-5 sm:px-5 lg:px-8 lg:py-6">
           <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
             <div className="flex h-12 w-12 flex-none items-center justify-center rounded-full bg-[#15803d]/18 text-[#86efac]">
               <ShieldTickIcon />
@@ -243,32 +243,35 @@ export default function HomeEngineTypesSection({ cards }: Props) {
               All engine types include a <span className="font-bold text-[#86efac]">minimum 12-month unlimited mileage warranty</span> when sourced through EnginesMarket. Prices are typical UK market ranges based on real enquiry data. Actual quotes depend on engine code, variant, condition and supplier. Enter your registration above for tailored prices within hours.
             </p>
           </div>
-        </div>
+        </div> */}
       </Container>
     </Section>
   );
 }
 
-// Mobile stacked interactive layout (simple port of engine-card-stack behavior)
+// Mobile stacked interactive layout
 function MobileStack({ cards }: { cards: HomeEngineTypeCard[] }) {
   const [activeIdx, setActiveIdx] = useState<number>(-1);
   const [flippedIdx, setFlippedIdx] = useState<number>(-1);
-  const eiRefs = useRef<Array<HTMLDivElement | null>>([]);
-  const ceRefs = useRef<Array<HTMLDivElement | null>>([]);
-  const biRefs = useRef<Array<HTMLDivElement | null>>([]);
+  const cardExpandRefs = useRef<Array<HTMLDivElement | null>>([]);
+  const expandInnerRefs = useRef<Array<HTMLDivElement | null>>([]);
 
+  // Set heights when active card changes
   useEffect(() => {
-    // set heights when active changes
-    if (activeIdx === -1) {
-      ceRefs.current.forEach((ce) => { if (ce) ce.style.height = '0px'; });
-      return;
-    }
-    const ei = eiRefs.current[activeIdx];
-    const ce = ceRefs.current[activeIdx];
-    if (ei && ce) {
-      const h = ei.scrollHeight;
-      ce.style.height = h + 'px';
-    }
+    cardExpandRefs.current.forEach((ce, idx) => {
+      if (ce) {
+        if (idx === activeIdx) {
+          const ei = expandInnerRefs.current[idx];
+          if (ei) {
+            requestAnimationFrame(() => {
+              ce.style.height = ei.scrollHeight + 'px';
+            });
+          }
+        } else {
+          ce.style.height = '0px'; 
+        }
+      }
+    });
   }, [activeIdx]);
 
   // Open last card by default on mount
@@ -276,13 +279,6 @@ function MobileStack({ cards }: { cards: HomeEngineTypeCard[] }) {
     if (!cards || cards.length === 0) return;
     const last = cards.length - 1;
     setActiveIdx(last);
-    // allow DOM paint then measure
-    const t = setTimeout(() => {
-      const ei = eiRefs.current[last];
-      const ce = ceRefs.current[last];
-      if (ei && ce) ce.style.height = ei.scrollHeight + 'px';
-    }, 50);
-    return () => clearTimeout(t);
   }, [cards]);
 
   function activateCard(i: number) {
@@ -291,115 +287,467 @@ function MobileStack({ cards }: { cards: HomeEngineTypeCard[] }) {
       setFlippedIdx(-1);
       return;
     }
-    // if another is flipped, unflip it
-    if (flippedIdx !== -1 && flippedIdx !== i) setFlippedIdx(-1);
+    
+    if (flippedIdx !== -1 && flippedIdx !== i) {
+      setFlippedIdx(-1);
+    }
+    
     setActiveIdx(i);
   }
 
   function flipCard(i: number) {
     if (activeIdx !== i) return;
     setFlippedIdx(i);
-    // ensure back min-height
-    setTimeout(() => {
-      const bi = biRefs.current[i];
-      const ff = ceRefs.current[i]?.parentElement?.querySelector('.face-front') as HTMLElement | null;
-      if (bi && ff) {
-        const frontH = ff.scrollHeight;
-        const backH = bi.scrollHeight + 44;
-        const minH = Math.max(frontH, Math.min(backH, 460));
-        const fb = ff.parentElement?.querySelector('.face-back') as HTMLElement | null;
-        if (fb) fb.style.minHeight = minH + 'px';
-      }
-    }, 100);
   }
 
-  function unflipCard(i: number) { setFlippedIdx(-1); }
+  function unflipCard(i: number) {
+    setFlippedIdx(-1);
+  }
 
   return (
     <div className="mobile-stack-root">
       <style>{`
-        .mobile-stack-root{padding:0 14px}
-        .c-card{position:relative;border-radius:18px;cursor:pointer;transition:transform .42s,margin-top .38s,box-shadow .3s;will-change:transform}
-        .c-card+.c-card{margin-top:-48px}
-        .c-card.active+.c-card{margin-top:14px}
-        .flip-inner{width:100%;transform-style:preserve-3d;transition:transform .55s;border-radius:18px}
-        .c-card.flipped .flip-inner{transform:rotateY(180deg)}
-        .face{border-radius:18px;overflow:hidden;backface-visibility:hidden}
-        .face-front{background:#fff;box-shadow:0 8px 30px rgba(0,0,50,0.08)}
-        .face-back{position:absolute;top:0;left:0;right:0;transform:rotateY(180deg);background:linear-gradient(155deg,#0d1b2e 0%,#0f2642 40%);color:#fff}
-        .peek-bar{display:flex;align-items:center;justify-content:space-between;padding:14px}
-        .peek-left{display:flex;flex-direction:column}
-        .peek-title{font-weight:700;font-size:18px}
-        .peek-price{color:#15803d;font-weight:700}
-        .peek-icon{width:30px;height:30px;border-radius:50%;background:#f0fdf4;border:1.5px solid #bbf7d0;display:flex;align-items:center;justify-content:center}
-        .card-expand{height:0;overflow:hidden;transition:height .45s}
-        .expand-inner{padding:0 16px 18px;border-top:1px solid #f3f4f6}
-        .exp-desc{color:#374151;margin:12px 0}
-        .exp-items{display:flex;flex-direction:column;gap:8px}
-        .exp-item{display:flex;gap:8px}
-        .exp-check{width:18px;height:18px;border-radius:50%;background:#f0fdf4;border:1.5px solid #bbf7d0;display:flex;align-items:center;justify-content:center}
-        .back-inner{padding:18px;min-height:160px;max-height:460px;overflow:auto}
-        .back-title{font-weight:700;font-size:20px;margin-bottom:8px}
-        .back-item{display:flex;gap:8px;margin-bottom:8px}
-        .back-check{width:18px;height:18px;border-radius:50%;background:rgba(22,163,74,0.2);border:1.5px solid rgba(22,163,74,0.5);display:flex;align-items:center;justify-content:center}
+        .mobile-stack-root {
+          padding: 0 4px;
+        }
+        
+        /* CARD BASE */
+        .c-card {
+          position: relative;
+          border-radius: 22px;
+          cursor: pointer;
+          transition: transform 0.42s cubic-bezier(0.34,1.22,0.64,1), 
+                      margin-top 0.38s cubic-bezier(0.4,0,0.2,1), 
+                      box-shadow 0.3s ease;
+          will-change: transform;
+          perspective: 1000px;
+        }
+        
+        /* REDUCED OVERLAP TO ENSURE PEEK-BAR IS FULLY VISIBLE */
+        .c-card + .c-card {
+          margin-top: -30px; 
+        }
+        
+        .c-card.active + .c-card {
+          margin-top: 14px;
+        }
+        
+        .c-card.active ~ .c-card + .c-card {
+          margin-top: -30px; 
+        }
+        
+        /* FLIP CONTAINER */
+        .flip-inner {
+          width: 100%;
+          transform-style: preserve-3d;
+          transition: transform 0.55s cubic-bezier(0.16,1,0.3,1);
+          border-radius: 22px;
+        }
+        
+        .c-card.flipped .flip-inner {
+          transform: rotateY(180deg);
+        }
+        
+        /* FACES */
+        .face {
+          border-radius: 22px;
+          overflow: hidden;
+          backface-visibility: hidden;
+        }
+        
+        .face-front {
+          background: #ffffff;
+          box-shadow: 0 8px 30px rgba(0,0,50,0.1);
+          border: 1px solid #e5e7eb;
+        }
+        
+        .face-back {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0; /* ADDED: Ensures back face matches front face height exactly */
+          transform: rotateY(180deg);
+          background: linear-gradient(155deg, #0d1b2e 0%, #0f2642 40%, #0d1b2e 100%);
+          box-shadow: 0 12px 40px rgba(0,0,50,0.3);
+          display: flex;
+          flex-direction: column;
+        }
+        
+        /* PEEK BAR */
+        .peek-bar {
+          display: flex;
+          align-items: flex-start; 
+          justify-content: space-between;
+          padding: 18px 20px;
+          min-height: 82px;
+        }
+        
+        .peek-left {
+          display: flex;
+          flex-direction: column;
+          gap: 2px;
+        }
+        
+        .peek-num {
+          font-size: 9.5px;
+          font-weight: 700;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          color: #9ca3af;
+        }
+        
+        .peek-title {
+          font-family: 'Bebas Neue', sans-serif;
+          font-size: 18px;
+          letter-spacing: 0.02em;
+          color: #000032;
+          line-height: 1;
+        }
+        
+        .peek-price {
+          font-family: 'Urbanist', sans-serif;
+          font-size: 13px;
+          font-weight: 700;
+          color: #15803d;
+          white-space: nowrap;
+        }
+        
+        .peek-icon {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          background: #f0fdf4;
+          border: 1.5px solid #bbf7d0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+          transition: transform 0.3s;
+          font-size: 14px;
+          color: #15803d;
+          margin-top: 2px;
+        }
+        
+        .c-card.active .peek-icon {
+          transform: rotate(45deg);
+        }
+        
+        /* EXPANDED FRONT */
+        .card-expand {
+          height: 0;
+          overflow: hidden;
+          transition: height 0.45s cubic-bezier(0.4,0,0.2,1);
+        }
+        
+        .c-card.active .card-expand {
+          height: var(--expand-h, auto);
+        }
+        
+        .expand-inner {
+          padding: 0 20px 22px;
+          border-top: 1px solid #f3f4f6;
+        }
+        
+        .exp-desc {
+          font-size: 13px;
+          color: #374151;
+          line-height: 1.65;
+          margin-bottom: 16px;
+        }
+        
+        .exp-items {
+          display: flex;
+          flex-direction: column;
+          gap: 9px;
+          margin-bottom: 16px;
+        }
+        
+        .exp-item {
+          display: flex;
+          align-items: flex-start;
+          gap: 9px;
+        }
+        
+        .exp-check {
+          width: 18px;
+          height: 18px;
+          border-radius: 50%;
+          background: #f0fdf4;
+          border: 1.5px solid #bbf7d0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+          margin-top: 1px;
+          font-size: 9px;
+          color: #15803d;
+        }
+        
+        .exp-item-text {
+          font-size: 12.5px;
+          color: #374151;
+          line-height: 1.5;
+        }
+        
+        .exp-item-text strong {
+          color: #111827;
+          font-weight: 700;
+        }
+        
+        .flip-hint {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          gap: 5px;
+          font-size: 11.5px;
+          color: #9ca3af;
+          font-weight: 600;
+          cursor: pointer;
+          padding: 2px 0;
+          transition: color 0.2s;
+        }
+        
+        .flip-hint:hover {
+          color: #15803d;
+        }
+        
+        .flip-hint-arrow {
+          font-size: 13px;
+          color: #15803d;
+        }
+        
+        /* BACK FACE */
+        .back-inner {
+          flex: 1;
+          min-height: 0; /* Crucial for allowing overflow scroll in flex children */
+          padding: 12px 20px;
+          overflow-y: auto;
+          overflow-x: hidden;
+          scrollbar-width: none;
+          -ms-overflow-style: none;
+        }
+        
+        .back-inner::-webkit-scrollbar {
+          display: none;
+        }
+        
+        .back-title {
+          font-family: 'Bebas Neue', sans-serif;
+          font-size: 20px;
+          color: #fff;
+          line-height: 0.05;
+          letter-spacing: 0.02em;
+          margin-bottom: 14px;
+        }
+        
+        .back-desc {
+          font-size: 13px;
+          color: rgba(255,255,255,0.8);
+          line-height: 1.65;
+          margin-bottom: 16px;
+        }
+        
+        .back-items {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          margin-bottom: 16px;
+        }
+        
+        .back-item {
+          display: flex;
+          align-items: flex-start;
+          gap: 9px;
+        }
+        
+        .back-check {
+          width: 18px;
+          height: 18px;
+          border-radius: 50%;
+          background: rgba(22,163,74,0.2);
+          border: 1.5px solid rgba(22,163,74,0.5);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+          margin-top: 1px;
+          font-size: 9px;
+          color: #16a34a;
+        }
+        
+        .back-item-text {
+          font-size: 12.5px;
+          color: rgba(255,255,255,0.75);
+          line-height: 1.5;
+        }
+        
+        .back-item-text strong {
+          color: #fff;
+          font-weight: 700;
+        }
+        
+        .back-flip-back {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 5px;
+          margin-top: 14px;
+          font-size: 11.5px;
+          color: rgba(255,255,255,0.45);
+          font-weight: 600;
+          cursor: pointer;
+          transition: color 0.2s;
+          padding-bottom: 4px;
+        }
+        
+        .back-flip-back:hover {
+          color: rgba(255,255,255,0.8);
+        }
+        
+        /* ACTIVE CARD LIFT */
+        .c-card.active {
+          transform: translateY(-6px);
+          z-index: 10;
+        }
+        
+        .c-card {
+          z-index: 1;
+        }
       `}</style>
 
       {cards.map((c, i) => {
         const active = activeIdx === i;
         const flipped = flippedIdx === i;
+        
         return (
-          <div key={c.id} className={`c-card ${active ? 'active' : ''} ${flipped ? 'flipped' : ''}`} style={{ zIndex: active ? 10 : 1 }}>
+          <div 
+            key={c.id} 
+            className={`c-card ${active ? 'active' : ''} ${flipped ? 'flipped' : ''}`}
+            style={{ zIndex: active ? 10 : 1 }}
+          >
             <div className="flip-inner">
+              {/* FRONT FACE */}
               <div className="face face-front">
-                <div className="peek-bar" onClick={() => activateCard(i)}>
+                <div 
+                  className="peek-bar" 
+                  onClick={() => activateCard(i)}
+                >
                   <div className="peek-left">
-                    <div className="peek-num">{i + 1} of {cards.length}</div>
+                    <div className="peek-num">0{i + 1} of {cards.length}</div>
                     <div className="peek-title">{c.title}</div>
-                    
                   </div>
-                  <div className="peek-price">{c.price}</div>
-                  <div className="peek-icon" aria-hidden>+</div>
+                  
+                  <div className="peek-icon" aria-hidden="true">
+                    <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+                      <line x1="6.5" y1="1" x2="6.5" y2="12" stroke="#15803d" strokeWidth="1.8" strokeLinecap="round"/>
+                      <line x1="1" y1="6.5" x2="12" y2="6.5" stroke="#15803d" strokeWidth="1.8" strokeLinecap="round"/>
+                    </svg>
+                  </div>
                 </div>
-
-                <div className="card-expand" ref={(el) => {
-  ceRefs.current[i] = el;
-}}>
-                  <div className="expand-inner" ref={(el) => {
-  ceRefs.current[i] = el;
-}}>
+                
+                <div 
+                  className="card-expand"
+                  ref={(el) => { cardExpandRefs.current[i] = el; }}
+                >
+                  <div 
+                    className="expand-inner"
+                    ref={(el) => { expandInnerRefs.current[i] = el; }}
+                  >
+                    <div className="peek-price">{c.price}</div>
                     <div className="exp-desc">{c.summary}</div>
                     <div className="exp-items">
                       {c.details?.slice(0, 3).map((d) => (
                         <div key={`${c.id}-${d.label}`} className="exp-item">
-                          <div className="exp-check">✓</div>
-                          <div className="exp-item-text"><strong>{d.label}:</strong> {d.value}</div>
+                          <div className="exp-check">
+                            <svg width="9" height="9" viewBox="0 0 9 9" fill="none">
+                              <polyline points="1.5,4.5 3.5,6.8 7.5,2" stroke="#15803d" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+                            </svg>
+                          </div>
+                          <div className="exp-item-text">
+                            <strong>{d.label}:</strong> {d.value}
+                          </div>
                         </div>
                       ))}
                     </div>
                     <div style={{ marginTop: 12 }}>
-                      <button type="button" onClick={() => flipCard(i)} style={{ background: 'transparent', border: 0, color: '#15803d', fontWeight: 700 }}>Tap to see full details ↺</button>
+                      <button 
+                        type="button" 
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          flipCard(i);
+                        }}
+                        style={{ 
+                          background: 'transparent', 
+                          border: 0, 
+                          color: '#15803d', 
+                          fontWeight: 700,
+                          fontSize: '11.5px',
+                          display: 'flex',
+                          alignItems: 'center',
+                          gap: '5px'
+                        }}
+                      >
+                        Tap to see full details
+                        <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+                          <path d="M11.5 6.5A5 5 0 0 1 2 8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                          <path d="M1.5 6.5A5 5 0 0 1 11 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                          <polyline points="10,2.5 11,5 8.5,5.8" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      </button>
                     </div>
                   </div>
                 </div>
               </div>
 
+              {/* BACK FACE */}
               <div className="face face-back">
-                <div className="back-inner" ref={(el) => {
-  ceRefs.current[i] = el;
-}}>
-                  <div className="back-eyebrow">Full Details</div>
+                <div className="back-inner">
+                  <div className="back-eyebrow">Full Details — {c.title}</div>
                   <div className="back-title">{c.title}</div>
+                  <div className="back-divider" style={{ height: '1px', background: 'rgba(255,255,255,0.12)', marginBottom: '14px' }}></div>
                   <div className="back-desc">{c.closing}</div>
-                  <div>
+                  <div className="back-items">
                     {c.details?.map((d) => (
                       <div key={`${c.id}-back-${d.label}`} className="back-item">
-                        <div className="back-check">✓</div>
-                        <div className="back-item-text"><strong>{d.label}:</strong> {d.value}</div>
+                        <div className="back-check">
+                          <svg width="9" height="9" viewBox="0 0 9 9" fill="none">
+                            <polyline points="1.5,4.5 3.5,6.8 7.5,2" stroke="#16a34a" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+                          </svg>
+                        </div>
+                        <div className="back-item-text">
+                          <strong>{d.label}:</strong> {d.value}
+                        </div>
                       </div>
                     ))}
                   </div>
                   <div style={{ marginTop: 12 }}>
-                    <button type="button" onClick={() => unflipCard(i)} style={{ background: 'transparent', border: 0, color: 'rgba(255,255,255,0.85)' }}>Back to overview</button>
+                    <button 
+                      type="button" 
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        unflipCard(i);
+                      }}
+                      style={{ 
+                        background: 'transparent', 
+                        border: 0, 
+                        color: '#FFFFFF',
+                        fontWeight: 600,
+                        fontSize: '11.5px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        gap: '5px',
+                        marginTop: '14px'
+                      }}
+                    >
+                      <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+                        <path d="M11.5 6.5A5 5 0 0 1 2 8" stroke="rgba(255,255,255,0.45)" strokeWidth="1.5" strokeLinecap="round"/>
+                        <path d="M1.5 6.5A5 5 0 0 1 11 5" stroke="rgba(255,255,255,0.45)" strokeWidth="1.5" strokeLinecap="round"/>
+                        <polyline points="10,2.5 11,5 8.5,5.8" stroke="rgba(255,255,255,0.45)" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                      Back to overview
+                    </button>
                   </div>
                 </div>
               </div>

@@ -437,9 +437,9 @@ function HeroRow({ row }: { row: HeroBrandRow }) {
 
       {/* LEFT: Logo + Brand name grouped together */}
       {/* Changed w-[110px] to w-[50px] sm:w-[110px] to reduce space around the logo on mobile */}
-      <div className="flex w-[50px] min-[380px]:w-[70px] sm:w-[110px] flex-shrink-0 flex-col items-center gap-2 sm:flex-row sm:gap-4">
+      <div className="flex w-[50px] min-[380px]:w-[60px] sm:w-[30px] flex-shrink-0 flex-col items-center gap-2 sm:flex-row sm:gap-4">
         <LogoBadge brand={row.brand} />
-        <span className="hidden sm:inline text-md font-bold text-[#0d1b2e] sm:text-left">{row.brand}</span>
+        {/* <span className="hidden sm:inline text-md font-bold text-[#0d1b2e] sm:text-left">{row.brand}</span> */}
       </div>
 
       {/* CENTER: 3-line stats block */}
@@ -447,7 +447,7 @@ function HeroRow({ row }: { row: HeroBrandRow }) {
         {/* Line 1: green quote count */}
         <div className="mb-[3px] text-[13px] font-bold text-[#15803d]">
           {/* Added brand name here for mobile only, in dark blue */}
-          <span className="sm:hidden mr-1.5 text-[#0d1b2e]">{row.brand}</span>
+          <span className=" mr-1.5 text-[#0d1b2e]">{row.brand}</span>
           {row.stat}
         </div>
         
@@ -909,12 +909,12 @@ export default function HomeHeroSection({ data }: Props) {
       <section
         className="hero-background overflow-hidden pt-8 lg:pt-12"
         style={{
-          backgroundImage:
-            "linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0.98) 25%, rgba(255,255,255,0.92) 45%, rgba(255,255,255,0.25) 100%), url('/bg.webp')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-        }}
+  backgroundImage:
+    "linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 25%, rgba(255,255,255,0.95) 45%, rgba(255,255,255,0.85) 100%), url('/bg.webp')",
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  backgroundRepeat: 'no-repeat',
+}}
       >
         <Container className="max-w-[1400px] px-2 sm:px-6 lg:px-10">
           <div className="grid grid-cols-1 gap-0 lg:grid-cols-10 lg:gap-12 lg:pb-10">
@@ -966,7 +966,7 @@ export default function HomeHeroSection({ data }: Props) {
               
 
               {/* Brand rows */}
-              <div className="overflow-hidden rounded-[12px] border border-[rgba(13,27,46,0.1)] bg-white shadow-[0_8px_30px_rgba(13,27,46,0.2)]">
+              <div className="overflow-hidden rounded-[12px] border max-w-lg border-[rgba(13,27,46,0.1)] bg-white shadow-[0_8px_30px_rgba(13,27,46,0.2)]">
                 <h3
                 className="mb-3 text-[15px] font-bold text-[#0d1b2e] lg:hidden text-center pt-5"
                 style={{ fontFamily: "Inter, sans-serif" }}

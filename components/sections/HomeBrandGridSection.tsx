@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
 import type { HomeBrandPriceEntry } from "@/lib/homeBrandGridData";
@@ -43,18 +43,58 @@ function ArrowIcon() {
 }
 
 const brandLogoSources: Record<string, string> = {
-  audi: "/images/home/brand-logos/audi.png",
-  bmw: "/images/home/brand-logos/bmw.png",
-  ford: "/images/home/brand-logos/ford.png",
-  hyundai: "/images/home/brand-logos/hyundai.png",
-  jaguar: "/images/home/brand-logos/jaguar.png",
-  "land-rover": "/images/home/brand-logos/land-rover.png",
-  "mercedes-benz": "/images/home/brand-logos/mercedes-benz.png",
-  mini: "/images/home/brand-logos/mini.png",
-  "range-rover": "/images/home/brand-logos/range-rover.png",
-  toyota: "/images/home/brand-logos/toyota.png",
-  vauxhall: "/images/home/brand-logos/vauxhall.png",
-  volkswagen: "/images/home/brand-logos/volkswagen.png",
+  "alfa-romeo": "/BrandsLogos/alpha-romeo-logo-small.webp.webp",
+  "aston-martin": "/BrandsLogos/aston-martin-logo-small.webp.webp",
+  audi: "/BrandsLogos/audi-logo-small.webp.webp",
+  bentley: "/BrandsLogos/bentley-logo-small.webp.webp",
+  bmw: "/BrandsLogos/bmw-logo-small.webp.webp",
+  cadillac: "/BrandsLogos/cadillac-logo-small.webp.webp",
+  chevrolet: "/BrandsLogos/chevrolet-logo-small.webp.webp",
+  chrysler: "/BrandsLogos/chrysler-logo-small.webp.webp",
+  citroen: "/BrandsLogos/citroen-logo-small.webp.webp",
+  dacia: "/BrandsLogos/dacia-logo-small.webp",
+  daewoo: "/BrandsLogos/daewoo-logo-small.webp.webp",
+  daihatsu: "/BrandsLogos/daihatsu-logo-small.webp.webp",
+  dodge: "/BrandsLogos/dodge-logo-small.webp.webp",
+  ferrari: "/BrandsLogos/ferrari-logo-small.webp.webp",
+  fiat: "/BrandsLogos/fiat-logo-small.webp.webp",
+  ford: "/BrandsLogos/ford-logo-small.webp.webp",
+  genesis: "/BrandsLogos/gensis-logo-small.webp",
+  gm: "/BrandsLogos/gm-logo-small.webp",
+  honda: "/BrandsLogos/honda-logo-small.webp.webp",
+  hyundai: "/BrandsLogos/hyundai-logo-small.webp.webp",
+  isuzu: "/BrandsLogos/isuzu-logo-small.webp.webp",
+  iveco: "/BrandsLogos/iveco-logo-small.webp.webp",
+  jaguar: "/BrandsLogos/jaguar-logo-small.webp.webp",
+  jeep: "/BrandsLogos/jeep-logo-small.webp.webp",
+  kia: "/BrandsLogos/kia-logo-small.webp.webp",
+  lancia: "/BrandsLogos/lancia-logo-small.webp",
+  "land-rover": "/BrandsLogos/land-rover-logo-small.webp.webp",
+  lexus: "/BrandsLogos/lexus-logo-small.webp.webp",
+  lotus: "/BrandsLogos/lotus-logo-small.webp",
+  mclaren: "/BrandsLogos/mclaren-logo-small.webp",
+  mg: "/BrandsLogos/mg-logo-small.webp.webp",
+  "mercedes-benz": "/BrandsLogos/mercedes-logo-small.webp.webp",
+  mini: "/BrandsLogos/mini-logo-small.webp.webp",
+  mitsubishi: "/BrandsLogos/mitsubishi-logo-small.webp.webp",
+  nissan: "/BrandsLogos/nissan-logo-small.webp.webp",
+  peugeot: "/BrandsLogos/peugeot-logo-small.webp.webp",
+  polestar: "/BrandsLogos/polestar-logo-small.webp",
+  porsche: "/BrandsLogos/porsche-logo-small.webp.webp",
+  "range-rover": "/BrandsLogos/range-rover-logo-small.webp.webp",
+  renault: "/BrandsLogos/renault-logo-small.webp.webp",
+  "rolls-royce": "/BrandsLogos/rolls-royce-logo-small.webp.webp",
+  saab: "/BrandsLogos/saab-logo-small.webp.webp",
+  seat: "/BrandsLogos/seat-logo-small.webp.webp",
+  skoda: "/BrandsLogos/skoda-logo-small.webp.webp",
+  smart: "/BrandsLogos/smart-logo-small.webp.webp",
+  ssangyong: "/BrandsLogos/ssangyong-logo-small.webp",
+  subaru: "/BrandsLogos/subaru-logo-small.webp.webp",
+  suzuki: "/BrandsLogos/suzuki-logo-small.webp.webp",
+  toyota: "/BrandsLogos/toyota-logo-small.webp.webp",
+  vauxhall: "/BrandsLogos/vauxhall-logo-small.webp.webp",
+  volkswagen: "/BrandsLogos/volkswagon-logo-small.webp.webp",
+  volvo: "/BrandsLogos/volvo-logo-small.webp.webp",
 };
 
 function GenericLogo({ label }: { label: string }) {
@@ -78,7 +118,7 @@ function BrandLogo({ logo, label }: { logo: string; label: string }) {
         width={120}
         height={60}
         sizes="120px"
-        className="h-auto max-h-[60px] w-auto max-w-[120px] object-contain grayscale"
+        className="h-auto max-h-[60px] w-auto max-w-[120px] object-contain"
       />
     );
   }
@@ -89,15 +129,39 @@ function BrandLogo({ logo, label }: { logo: string; label: string }) {
 export default function HomeBrandGridSection({ brands, featuredSlugs }: Props) {
   const [openBrand, setOpenBrand] = useState<string | null>("bmw");
   const [hasSeen, setHasSeen] = useState<string[]>(["bmw"]);
-  const [listOpen, setListOpen] = useState(false);
 
-  const featuredBrands = useMemo(
-    () =>
-      featuredSlugs
-        .map((slug) => brands.find((brand) => brand.slug === slug))
-        .filter((brand): brand is HomeBrandPriceEntry => Boolean(brand)),
-    [brands, featuredSlugs],
-  );
+  const [expanded, setExpanded] = useState(false);
+  const [columns, setColumns] = useState<number>(2);
+
+  useEffect(() => {
+    const getColumns = () => {
+      if (typeof window === 'undefined') return 2;
+      const width = window.innerWidth;
+      if (width >= 1280) return 6; // xl
+      if (width >= 768) return 3;  // md
+      return 2; // default / sm
+    };
+    const handleResize = () => setColumns(getColumns());
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const initialRows = columns <= 2 ? 3 : 2;
+  const initialVisibleCount = columns === 6 ? 12 : columns * initialRows;
+
+  const sortedBrands = useMemo(() => {
+    const featured = brands.filter(b => featuredSlugs.includes(b.slug));
+    const others = brands.filter(b => !featuredSlugs.includes(b.slug));
+    return [...featured, ...others];
+  }, [brands, featuredSlugs]);
+
+  const visibleBrands = expanded
+    ? sortedBrands
+    : sortedBrands.slice(0, Math.min(sortedBrands.length, initialVisibleCount));
+
+  // Calculate total rows to determine which cards are in the last row
+  const totalRows = Math.ceil(visibleBrands.length / columns);
 
   function toggleBrand(slug: string) {
     setOpenBrand((current) => (current === slug ? null : slug));
@@ -105,7 +169,7 @@ export default function HomeBrandGridSection({ brands, featuredSlugs }: Props) {
   }
 
   return (
-    <Section id="brands" className="bg-white py-7 sm:py-8 lg:py-10">
+    <Section id="brands" className="bg-[#f7f8fb] py-7 sm:py-8 lg:py-10">
       <Container className="max-w-[1200px]">
         <div className="mx-auto max-w-[760px] text-center">
           <div className="section-pill mx-auto">
@@ -123,13 +187,17 @@ export default function HomeBrandGridSection({ brands, featuredSlugs }: Props) {
         </div>
 
         <div className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-6">
-          {featuredBrands.map((brand, index) => {
+          {visibleBrands.map((brand, index) => {
+            // Determine which row this card is in
+            const rowIndex = Math.floor(index / columns);
+            // Last row check (only apply upward dropdown if there's more than 1 row)
+            const isLastRow = rowIndex === totalRows - 1 && totalRows > 1;
             const isOpen = openBrand === brand.slug;
             const shouldAnimate = !hasSeen.includes(brand.slug);
 
             return (
-              <article key={brand.slug} className={index > 5 ? "hidden md:block" : ""}>
-                <div className="overflow-hidden rounded-[10px] border border-[#e5e7eb] bg-white shadow-[0_2px_8px_rgba(13,27,46,0.06)]">
+              <article key={brand.slug} className="relative">
+                <div className="rounded-[10px] border border-[#e5e7eb] bg-white shadow-[0_2px_8px_rgba(13,27,46,0.06)] relative">
                   <button
                     type="button"
                     onClick={() => toggleBrand(brand.slug)}
@@ -137,7 +205,7 @@ export default function HomeBrandGridSection({ brands, featuredSlugs }: Props) {
                     aria-label={isOpen ? `Collapse ${brand.displayName}` : `Expand ${brand.displayName}`}
                     className="flex min-h-[120px] w-full flex-col items-center px-4 py-5 text-center"
                   >
-                    <div className="flex h-[60px] items-center justify-center grayscale">
+                    <div className="flex h-[60px] items-center justify-center">
                       <BrandLogo logo={brand.logo} label={brand.displayName} />
                     </div>
                     <p className="mt-2 text-[12px] text-[#6b7280]">from {brand.fromPrice}</p>
@@ -147,17 +215,20 @@ export default function HomeBrandGridSection({ brands, featuredSlugs }: Props) {
                   </button>
 
                   {isOpen ? (
-                    <div className="bg-[#0d1b2e] px-4 py-4">
+                    <div
+                      className={`absolute left-0 right-0 z-50 bg-[#0d1b2e] p-2 rounded-[10px] shadow-2xl ${isLastRow ? "bottom-full mb-2" : "top-full mt-2"
+                        }`}
+                    >
                       <div className="space-y-2 text-left">
-                        <div className="flex items-baseline justify-between gap-3 text-[13px]">
+                        <div className="flex items-baseline justify-between gap-3 text-[12px]">
                           <span className="text-white/60">From price:</span>
                           <span className="font-semibold text-white">{brand.fromPrice} <span className="text-[11px] font-normal text-white/70">(supply only)</span></span>
                         </div>
-                        <div className="flex items-baseline justify-between gap-3 text-[13px]">
+                        <div className="flex items-baseline justify-between gap-3 text-[12px]">
                           <span className="text-white/60">Avg rebuilt:</span>
                           <span className="font-semibold text-white">{brand.avgRebuilt}</span>
                         </div>
-                        <div className="flex items-baseline justify-between gap-3 text-[13px]">
+                        <div className="flex items-baseline justify-between gap-3 text-[12px]">
                           <span className="text-white/60">Supply & fit:</span>
                           <span className="font-semibold text-white">Available UK-wide</span>
                         </div>
@@ -165,12 +236,9 @@ export default function HomeBrandGridSection({ brands, featuredSlugs }: Props) {
 
                       <Link
                         href={`/${brand.slug}`}
-                        className="mt-4 flex min-h-[48px] w-full items-center justify-center gap-2 rounded-[8px] bg-[#15803d] px-3 py-3 text-center text-[13px] font-semibold leading-[1.3] text-white transition hover:bg-[#116533]"
+                        className="mt-4 flex min-h-[48px] w-full items-center justify-center gap-2 rounded-[8px] bg-[#15803d] p-2 text-center text-[13px] font-semibold leading-[1.3] text-white transition hover:bg-[#116533]"
                       >
                         <span className="whitespace-normal">{brand.ctaText}</span>
-                        <span className="shrink-0">
-                          <ArrowIcon />
-                        </span>
                       </Link>
                     </div>
                   ) : null}
@@ -180,33 +248,16 @@ export default function HomeBrandGridSection({ brands, featuredSlugs }: Props) {
           })}
         </div>
 
-        <button
-          type="button"
-          onClick={() => setListOpen((current) => !current)}
-          className="mt-5 flex h-12 w-full items-center justify-center gap-2 rounded-[8px] border border-[#0d1b2e] bg-white px-4 text-[14px] font-semibold text-[#0d1b2e] transition hover:bg-[#f8fbff]"
-          aria-expanded={listOpen}
-        >
-          <PlusIcon open={listOpen} />
-          <span>View all 40+ makes - full alphabetical list</span>
-        </button>
-
-        {listOpen ? (
-          <div className="mt-5 rounded-[12px] border border-[#e5e7eb] bg-[#fbfdff] p-4 sm:p-5">
-            <div className="grid grid-cols-2 gap-x-6 gap-y-3 xl:grid-cols-4">
-              {brands.map((brand) => (
-                <Link
-                  key={brand.slug}
-                  href={`/${brand.slug}`}
-                  className="rounded-[8px] px-2 py-2 transition hover:bg-white"
-                >
-                  <div className="text-[14px] font-bold text-[#0d1b2e]">{brand.displayName}</div>
-                  <div className="mt-1 text-[12px] text-[#6b7280]">from {brand.fromPrice}</div>
-                  <div className="mt-0.5 text-[12px] text-[#6b7280]">{brand.avgRebuilt}</div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        ) : null}
+        {sortedBrands.length > initialVisibleCount && (
+          <button
+            type="button"
+            onClick={() => setExpanded((current) => !current)}
+            className="mt-5 flex h-12 w-auto mx-auto items-center justify-center gap-2 rounded-[8px] bg-[#15803d] px-4 text-[14px] font-semibold text-white transition hover:bg-[#116533] duration-300"
+            aria-expanded={expanded}
+          >
+            <span>{expanded ? 'See Less' : `See More Brands`}</span>
+          </button>
+        )}
 
         <p className="mx-auto mt-4 max-w-[60ch] text-center text-[12px] leading-[1.7] text-[#6b7280]">
           Prices shown are typical UK market ranges based on historical enquiry data. Actual quotes depend on engine code, variant, mileage and supplier. Enter your registration above for a tailored quote within hours.

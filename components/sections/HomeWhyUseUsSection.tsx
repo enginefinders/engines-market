@@ -152,7 +152,7 @@ function getStatIcon(index: number) {
 
 export default function HomeWhyUseUsSection() {
   return (
-    <Section className="bg-white py-7 sm:py-8 lg:py-10">
+    <Section className="bg-[#f7f8fb] py-7 sm:py-8 lg:py-10">
       <Container className="max-w-[1200px]">
         <div id="home-why-use-us">
         <div className="mx-auto max-w-[860px] text-center">
@@ -171,7 +171,7 @@ export default function HomeWhyUseUsSection() {
           </p>
         </div>
 
-        <div className="mt-6 grid grid-cols-2 gap-4 lg:grid-cols-4">
+        <div className="mt-6 grid grid-cols-1 gap-4 lg:grid-cols-4">
           {cards.map((card) => (
             <article
               key={card.id}
