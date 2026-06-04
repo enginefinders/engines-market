@@ -12,6 +12,62 @@ import {
     type HomeFaqJsonAnswer,
 } from "@/lib/homeFaqJsonData";
 
+// 👇 Brand logos mapping (Placed outside the component)
+const brandLogoSources: Record<string, string> = {
+  "alfa-romeo": "/BrandsLogos/alpha-romeo-logo-small.webp.webp",
+  "aston-martin": "/BrandsLogos/aston-martin-logo-small.webp.webp",
+  audi: "/BrandsLogos/audi-logo-small.webp.webp",
+  bentley: "/BrandsLogos/bentley-logo-small.webp.webp",
+  bmw: "/BrandsLogos/bmw-logo-small.webp.webp",
+  cadillac: "/BrandsLogos/cadillac-logo-small.webp.webp",
+  chevrolet: "/BrandsLogos/chevrolet-logo-small.webp.webp",
+  chrysler: "/BrandsLogos/chrysler-logo-small.webp.webp",
+  citroen: "/BrandsLogos/citroen-logo-small.webp.webp",
+  dacia: "/BrandsLogos/dacia-logo-small.webp",
+  daewoo: "/BrandsLogos/daewoo-logo-small.webp.webp",
+  daihatsu: "/BrandsLogos/daihatsu-logo-small.webp.webp",
+  dodge: "/BrandsLogos/dodge-logo-small.webp.webp",
+  ferrari: "/BrandsLogos/ferrari-logo-small.webp.webp",
+  fiat: "/BrandsLogos/fiat-logo-small.webp.webp",
+  ford: "/BrandsLogos/ford-logo-small.webp.webp",
+  genesis: "/BrandsLogos/gensis-logo-small.webp",
+  gm: "/BrandsLogos/gm-logo-small.webp",
+  honda: "/BrandsLogos/honda-logo-small.webp.webp",
+  hyundai: "/BrandsLogos/hyundai-logo-small.webp.webp",
+  isuzu: "/BrandsLogos/isuzu-logo-small.webp.webp",
+  iveco: "/BrandsLogos/iveco-logo-small.webp.webp",
+  jaguar: "/BrandsLogos/jaguar-logo-small.webp.webp",
+  jeep: "/BrandsLogos/jeep-logo-small.webp.webp",
+  kia: "/BrandsLogos/kia-logo-small.webp.webp",
+  lancia: "/BrandsLogos/lancia-logo-small.webp",
+  "land-rover": "/BrandsLogos/land-rover-logo-small.webp.webp",
+  lexus: "/BrandsLogos/lexus-logo-small.webp.webp",
+  lotus: "/BrandsLogos/lotus-logo-small.webp",
+  mclaren: "/BrandsLogos/mclaren-logo-small.webp",
+  mg: "/BrandsLogos/mg-logo-small.webp.webp",
+  "mercedes-benz": "/BrandsLogos/mercedes-logo-small.webp.webp",
+  mini: "/BrandsLogos/mini-logo-small.webp.webp",
+  mitsubishi: "/BrandsLogos/mitsubishi-logo-small.webp.webp",
+  nissan: "/BrandsLogos/nissan-logo-small.webp.webp",
+  peugeot: "/BrandsLogos/peugeot-logo-small.webp.webp",
+  polestar: "/BrandsLogos/polestar-logo-small.webp",
+  porsche: "/BrandsLogos/porsche-logo-small.webp.webp",
+  "range-rover": "/BrandsLogos/range-rover-logo-small.webp.webp",
+  renault: "/BrandsLogos/renault-logo-small.webp.webp",
+  "rolls-royce": "/BrandsLogos/rolls-royce-logo-small.webp.webp",
+  saab: "/BrandsLogos/saab-logo-small.webp.webp",
+  seat: "/BrandsLogos/seat-logo-small.webp.webp",
+  skoda: "/BrandsLogos/skoda-logo-small.webp.webp",
+  smart: "/BrandsLogos/smart-logo-small.webp.webp",
+  ssangyong: "/BrandsLogos/ssangyong-logo-small.webp",
+  subaru: "/BrandsLogos/subaru-logo-small.webp.webp",
+  suzuki: "/BrandsLogos/suzuki-logo-small.webp.webp",
+  toyota: "/BrandsLogos/toyota-logo-small.webp.webp",
+  vauxhall: "/BrandsLogos/vauxhall-logo-small.webp.webp",
+  volkswagen: "/BrandsLogos/volkswagon-logo-small.webp.webp",
+  volvo: "/BrandsLogos/volvo-logo-small.webp.webp",
+};
+
 function SearchIcon() {
     return (
         <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" aria-hidden="true">
@@ -272,10 +328,11 @@ export default function HomeFaqHubSection() {
     }, [faqItems, deferredQuery]);
 
     const visibleCount = filteredFaqs.length;
-    const firstVisibleId = filteredFaqs[0] ? `faq-${getBrandId(currentBrand?.brand ?? "")}-${0}` : null;
+    
+    // Changed fallback from firstVisibleId to null to close FAQs by default
     const openItemId = manualOpenItemId && filteredFaqs.some((_, index) => manualOpenItemId === `faq-${getBrandId(currentBrand?.brand ?? "")}-${index}`)
         ? manualOpenItemId
-        : firstVisibleId;
+        : null;
 
     function onClusterKeyDown(index: number, event: KeyboardEvent<HTMLButtonElement>) {
         if (event.key === "ArrowDown") {
@@ -317,7 +374,7 @@ export default function HomeFaqHubSection() {
                             id="faq-search-input"
                             type="search"
                             value={searchValue}
-	                            onChange={(event) => setSearchValue(event.currentTarget.value)}
+                            onChange={(event) => setSearchValue(event.currentTarget.value)}
                             placeholder="Search FAQs - e.g. BMW timing chain cost"
                             aria-label="Search FAQs"
                             className="h-[52px] w-full rounded-full border-[1.5px] border-[#d8e1eb] bg-white pl-12 pr-5 text-[15px] text-[#0d1b2e] outline-none transition focus:border-[#15803d] focus:shadow-[0_0_0_3px_rgba(21,128,61,0.15)]"
@@ -325,9 +382,10 @@ export default function HomeFaqHubSection() {
                     </div>
                 </div>
 
-                <div className="grid items-start gap-6 md:grid-cols-[280px_minmax(0,1fr)]">
+                {/* Merged Container */}
+                <div className="flex flex-col md:flex-row overflow-hidden rounded-[24px] border border-[#dfe6ef] bg-white shadow-[0_10px_30px_rgba(13,27,46,0.07)]">
                     <nav
-                        className="grid grid-cols-2 gap-2 rounded-[24px] bg-[#0d1b2e] p-3 shadow-[0_18px_36px_rgba(13,27,46,0.14)] md:sticky md:top-8 md:grid-cols-1 md:gap-0 md:overflow-hidden md:p-0"
+                        className="grid grid-cols-2 gap-2 bg-[#0d1b2e] p-3 md:grid-cols-1 md:gap-0 md:p-0 md:w-[280px] md:flex-shrink-0 md:border-r md:border-[#e2e8f0]"
                         aria-label="FAQ topic clusters"
                         role="tablist"
                     >
@@ -348,10 +406,11 @@ export default function HomeFaqHubSection() {
                                         setManualOpenItemId(null);
                                     }}
                                     onKeyDown={(event) => onClusterKeyDown(index, event)}
-                                    className={`relative flex min-h-[84px] flex-col items-start gap-2 rounded-[16px] border border-[#1e3a5f] px-3 py-3 text-left transition md:min-h-[56px] md:flex-row md:items-center md:gap-3 md:rounded-none md:border-x-0 md:border-t-0 md:px-4 md:py-4 ${isActive
+                                    className={`relative flex min-h-[84px] flex-col items-start gap-2 rounded-[16px] border border-[#1e3a5f] px-3 py-3 text-left transition md:min-h-[56px] md:flex-row md:items-center md:gap-3 md:rounded-none md:border-x-0 md:border-t-0 md:border-b md:border-[#1e3a5f] md:last:border-b-0 md:px-4 md:py-4 ${
+                                        isActive
                                             ? "bg-[rgba(21,128,61,0.12)] text-white"
                                             : "bg-transparent text-[#94a3b8] hover:bg-white/5 hover:text-white"
-                                        }`}
+                                    }`}
                                 >
                                     {isActive ? <span className="absolute left-0 top-0 hidden h-full w-[3px] rounded-r-sm bg-[#22c55e] md:block" /> : null}
                                     <div className="flex items-center gap-2">
@@ -364,19 +423,19 @@ export default function HomeFaqHubSection() {
                                         <span className="hidden md:inline">{index + 1}. </span>
                                         {cluster.label}
                                     </span>
-                                    <span className={`rounded-full px-2 py-1 text-[11px] font-semibold ${isActive ? "bg-[#15803d] text-white" : "bg-[#1e3a5f] text-[#94a3b8]"}`}>
-                                        {cluster.count}
-                                    </span>
                                 </button>
                             );
                         })}
                     </nav>
 
-                    <div id="faq-content" className="overflow-hidden rounded-[24px] border border-[#dfe6ef] bg-white shadow-[0_10px_30px_rgba(13,27,46,0.07)]">
+                    <div id="faq-content" className="flex-1 min-w-0 flex flex-col">
                         <div className="border-b border-[#e2e8f0] bg-[#f8fafc] px-4 py-3">
                             <div className="flex gap-2 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden" role="tablist" aria-label="Select car brand">
+                                {/* 👇 UPDATED BRAND TABS WITH LOGOS */}
                                 {clusterBrands.map((brand) => {
-                                    const isActive = getBrandId(brand.brand) === activeBrand;
+                                    const brandId = getBrandId(brand.brand);
+                                    const isActive = brandId === activeBrand;
+                                    const logoSrc = brandLogoSources[brandId];
 
                                     return (
                                         <button
@@ -385,15 +444,25 @@ export default function HomeFaqHubSection() {
                                             role="tab"
                                             aria-selected={isActive}
                                             onClick={() => {
-                                                setActiveBrand(getBrandId(brand.brand));
+                                                setActiveBrand(brandId);
                                                 setManualOpenItemId(null);
                                             }}
-                                            className={`flex min-w-[110px] flex-none flex-col items-center justify-center gap-1 rounded-[14px] border px-3 py-2 text-center transition ${isActive
+                                            className={`flex min-w-[110px] flex-none flex-col items-center justify-center gap-1.5 rounded-[14px] border px-3 py-2.5 text-center transition ${
+                                                isActive
                                                     ? "border-[#d9e4db] bg-white text-[#0d1b2e] shadow-[0_8px_20px_rgba(13,27,46,0.06)]"
                                                     : "border-transparent bg-transparent text-[#6b7280] hover:bg-white"
-                                                }`}
+                                            }`}
                                         >
-                                            <span className={`text-[12px] font-semibold ${isActive ? "text-[#0d1b2e]" : "text-[#6b7280]"}`}>
+                                            {logoSrc ? (
+                                                <img 
+                                                    src={logoSrc} 
+                                                    alt={`${brand.brand} logo`} 
+                                                    className="h-7 w-7 object-contain" 
+                                                />
+                                            ) : (
+                                                <div className="h-7 w-7 rounded-full bg-gray-100" /> 
+                                            )}
+                                            <span className={`text-[11px] font-semibold leading-tight ${isActive ? "text-[#0d1b2e]" : "text-[#6b7280]"}`}>
                                                 {brand.brand}
                                             </span>
                                         </button>
@@ -402,7 +471,7 @@ export default function HomeFaqHubSection() {
                             </div>
                         </div>
 
-                        <div className="flex flex-col gap-3 border-b border-[#eef2f7] px-4 py-3 sm:flex-row sm:items-center sm:justify-between">
+                        {/* <div className="flex flex-col gap-3 border-b border-[#eef2f7] px-4 py-3 sm:flex-row sm:items-center sm:justify-between">
                             <p className="text-[12px] font-medium text-[#64748b]">
                                 {deferredQuery
                                     ? `Showing ${visibleCount} result${visibleCount === 1 ? "" : "s"} for "${searchValue.trim()}"`
@@ -417,9 +486,9 @@ export default function HomeFaqHubSection() {
                             >
                                 Get Engine Quotes
                             </a>
-                        </div>
+                        </div> */}
 
-                        <div className="faq-accordion max-h-[560px] overflow-y-auto [scrollbar-color:#cbd5e1_transparent] [scrollbar-width:thin] lg:max-h-[640px]" role="region" aria-live="polite">
+                        <div className="faq-accordion h-[560px] overflow-y-auto [scrollbar-color:#cbd5e1_transparent] [scrollbar-width:thin] lg:h-[440px]" role="region" aria-live="polite">
                             {filteredFaqs.map((faq, index) => {
                                 const itemId = `faq-${getBrandId(currentBrand?.brand ?? "")}-${index}`;
                                 const isOpen = openItemId === itemId;
@@ -428,10 +497,11 @@ export default function HomeFaqHubSection() {
                                     <div key={itemId} className="block">
                                         <button
                                             type="button"
-                                            className={`flex min-h-[56px] w-full items-center justify-between gap-4 border-b px-5 py-5 text-left transition sm:px-6 ${isOpen
-                                                    ? "border-b-2 border-[#22c55e] text-[#15803d]"
+                                            className={`flex min-h-[56px] w-full items-center justify-between gap-4 border-b px-5 py-5 text-left transition sm:px-6 ${
+                                                isOpen
+                                                    ? "border-b-2 border-[#0000A3] text-[#15803d]"
                                                     : "border-[#f1f5f9] text-[#0d1b2e] hover:bg-[#f8fafc]"
-                                                }`}
+                                            }`}
                                             aria-expanded={isOpen}
                                             aria-controls={`${itemId}-answer`}
                                             onClick={() => setManualOpenItemId((current) => (current === itemId ? null : itemId))}
@@ -445,7 +515,7 @@ export default function HomeFaqHubSection() {
                                         <div
                                             id={`${itemId}-answer`}
                                             hidden={!isOpen}
-                                            className="border-b border-[#e2e8f0] bg-[#f0fdf4] px-5 py-5 sm:px-6 sm:py-6"
+                                            className="border-b border-[#e2e8f0] bg-gray-50 px-5 py-5 sm:px-6 sm:py-6"
                                         >
                                             {renderAnswer(faq.answer, deferredQuery)}
 
@@ -467,7 +537,11 @@ export default function HomeFaqHubSection() {
                             </div>
                         </div>
 
-                        <div className="grid gap-3 border-t border-[#eef2f7] bg-[#fcfdff] px-4 py-4 sm:grid-cols-3 sm:px-6">
+                        
+                    </div>
+                    
+                </div>
+                <div className="grid gap-3  px-4 py-4 sm:grid-cols-3 sm:px-6">
                             <div className="flex items-start gap-3">
                                 <TrustIcon>
                                     <ShieldTickIcon />
@@ -499,7 +573,7 @@ export default function HomeFaqHubSection() {
                             </div>
                         </div>
 
-                        <div className="border-t border-[#eef2f7] bg-white px-4 py-5 sm:px-6 sm:py-6">
+                        <div className="border-t border-[#eef2f7]  px-4 py-5 sm:px-6 sm:py-6">
                             <div className="rounded-[16px] border border-[#dfe6ef] bg-[#f8fbff] p-4 sm:p-5">
                                 <div className="flex flex-col gap-4 border-l-4 border-[#0d1b2e] pl-4 sm:flex-row sm:items-center sm:justify-between">
                                     <div className="max-w-[54ch]">
@@ -521,8 +595,6 @@ export default function HomeFaqHubSection() {
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
             </Container>
         </Section>
     );

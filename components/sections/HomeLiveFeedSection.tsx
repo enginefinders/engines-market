@@ -130,7 +130,7 @@ export default function HomeLiveFeedSection({ rows }: Props) {
           </div>
 
           {/* Right Table Container: Fixed height on desktop, flex column layout */}
-<div className="rounded-2xl border border-white/10 bg-gradient-to-br from-[#0b1a2e] via-[#0f2035] to-[#0a1628] shadow-[0_10px_28px_rgba(0,0,0,0.4)] -mx-4 sm:mx-0 flex flex-col h-[600px] lg:h-[700px]">
+<div className="rounded-2xl border border-white/10 bg-gradient-to-br from-[#0b1a2e] via-[#0f2035] to-[#0a1628] shadow-[0_10px_28px_rgba(0,0,0,0.4)] w-full overflow-hidden flex flex-col h-[600px] lg:h-[700px]">
   
   {/* Header/Nav: Prevents shrinking */}
   <nav className="relative z-10 mb-4 flex-shrink-0" aria-label="Filter live engine data by brand">
@@ -274,7 +274,7 @@ export default function HomeLiveFeedSection({ rows }: Props) {
   </nav>
 
   {/* Scrollable Area Wrapper: Takes up remaining space */}
-  <div className="flex-1 flex flex-col overflow-hidden">
+  <div className="flex-1 flex flex-col overflow-hidden overflow-x-hidden w-full">
     {visibleRows.length ? (
       /* ADDED `pr-4` HERE to create space between the content and the scrollbar */
       <div className="flex-1 overflow-y-auto pr-4 [scrollbar-width:thin] [scrollbar-color:#ffffff_transparent] [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-white [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:hover:bg-white/80">
