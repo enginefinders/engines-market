@@ -170,6 +170,7 @@ export default function HomeBrandGridSection({ brands, featuredSlugs }: Props) {
 
   return (
     <Section id="brands" className="bg-[#f7f8fb] py-7 sm:py-8 lg:py-10">
+      {/* FIX: Added missing closing quote on className */}
       <Container className="max-w-[1200px]">
         <div className="mx-auto max-w-[760px] text-center">
           <div className="section-pill mx-auto">
@@ -197,7 +198,16 @@ export default function HomeBrandGridSection({ brands, featuredSlugs }: Props) {
 
             return (
               <article key={brand.slug} className="relative">
-                <div className="rounded-[10px] border border-[#e5e7eb] bg-white shadow-[0_2px_8px_rgba(13,27,46,0.06)] relative">
+                {/* Card Container */}
+                <div
+                  className={`relative border border-[#e5e7eb] bg-white shadow-[0_2px_8px_rgba(13,27,46,0.06)] ${
+                    isOpen
+                      ? isLastRow
+                        ? "rounded-b-[10px] rounded-t-none border-t-0"
+                        : "rounded-t-[10px] rounded-b-none border-b-0"
+                      : "rounded-[10px]"
+                  }`}
+                >
                   <button
                     type="button"
                     onClick={() => toggleBrand(brand.slug)}
@@ -214,21 +224,25 @@ export default function HomeBrandGridSection({ brands, featuredSlugs }: Props) {
                     </div>
                   </button>
 
+                  {/* Dropdown */}
                   {isOpen ? (
                     <div
-                      className={`absolute left-0 right-0 z-50 bg-[#0d1b2e] p-2 rounded-[10px] shadow-2xl ${isLastRow ? "bottom-full mb-2" : "top-full mt-2"
-                        }`}
+                      className={`absolute left-[-1px] right-[-1px] z-50 bg-[#0d1b2e] p-2 py-4 border border-[#e5e7eb] ${
+                        isLastRow
+                          ? "bottom-full rounded-t-[10px] border-b-0"
+                          : "top-full rounded-b-[10px] border-t-0"
+                      }`}
                     >
                       <div className="space-y-2 text-left">
-                        <div className="flex items-baseline justify-between gap-3 text-[12px]">
+                        <div className="flex items-baseline gap-2 text-[11px]">
                           <span className="text-white/60">From price:</span>
                           <span className="font-semibold text-white">{brand.fromPrice} <span className="text-[11px] font-normal text-white/70">(supply only)</span></span>
                         </div>
-                        <div className="flex items-baseline justify-between gap-3 text-[12px]">
+                        <div className="flex items-baseline gap-2 text-[11px]">
                           <span className="text-white/60">Avg rebuilt:</span>
                           <span className="font-semibold text-white">{brand.avgRebuilt}</span>
                         </div>
-                        <div className="flex items-baseline justify-between gap-3 text-[12px]">
+                        <div className="flex items-baseline gap-2 text-[11px]">
                           <span className="text-white/60">Supply & fit:</span>
                           <span className="font-semibold text-white">Available UK-wide</span>
                         </div>
@@ -258,10 +272,31 @@ export default function HomeBrandGridSection({ brands, featuredSlugs }: Props) {
             <span>{expanded ? 'See Less' : `See More Brands`}</span>
           </button>
         )}
+<div className="border-t border-[#eef2f7]  px-4 py-5 sm:px-6 sm:py-6">
+                            <div className="rounded-[16px] border border-[#dfe6ef] bg-[#f8fbff] p-4 sm:p-5">
+                                <div className="flex flex-col gap-4 border-l-4 border-[#0d1b2e] pl-4 sm:flex-row sm:items-center sm:justify-between">
+                                    <div className="max-w-6xl">
+                                        <p className="text-[11px] font-bold uppercase tracking-[0.12em] text-[#64748b]">Still Need A Real Price?</p>
+                                        <p className="mt-2 text-[14px] leading-[1.7] text-[#475569] sm:text-[15px]">
+                                            Prices shown are typical UK market ranges based on historical enquiry data. Actual quotes depend on engine code, variant, mileage and supplier. Enter your registration above for a tailored quote within hours.
+                                        </p>
+                                    </div>
 
-        <p className="mx-auto mt-4 max-w-[60ch] text-center text-[12px] leading-[1.7] text-[#6b7280]">
+                                    {/* <a
+                                        href="#home-hero-reg-form"
+                                        data-quote-context="FAQ footer CTA"
+                                        data-quote-source="home-faq-footer-cta"
+                                        className="inline-flex min-h-[48px] w-full items-center justify-center gap-2 rounded-[10px] bg-[#0d1b2e] px-5 text-[14px] font-semibold text-white transition hover:bg-[#11284a] sm:w-auto sm:min-w-[250px]"
+                                    >
+                                        <span>Get Free Engine Quotes</span>
+                                        <ArrowIcon />
+                                    </a> */}
+                                </div>
+                            </div>
+                        </div>
+        {/* <p className="mx-auto mt-4 max-w-[60ch] text-center text-[12px] leading-[1.7] text-[#6b7280]">
           Prices shown are typical UK market ranges based on historical enquiry data. Actual quotes depend on engine code, variant, mileage and supplier. Enter your registration above for a tailored quote within hours.
-        </p>
+        </p> */}
       </Container>
     </Section>
   );

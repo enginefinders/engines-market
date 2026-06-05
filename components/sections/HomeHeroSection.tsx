@@ -433,11 +433,11 @@ function LogoBadge({ brand }: { brand: string }) {
 function HeroRow({ row }: { row: HeroBrandRow }) {
   return (
     // Changed px-4 to px-2 sm:px-4 to reduce overall left/right space on mobile
-    <div className="flex h-[80px] cursor-pointer items-center sm:gap-20 border-b border-[rgba(13,27,46,0.1)] px-2 sm:px-4 last:border-b-0 transition-colors hover:bg-[#f9fafb]">
+    <div className="flex h-[80px] cursor-pointer items-center sm:gap-15 border-b border-[rgba(13,27,46,0.1)] px-2 sm:px-4 last:border-b-0 transition-colors hover:bg-[#f9fafb]">
 
       {/* LEFT: Logo + Brand name grouped together */}
       {/* Changed w-[110px] to w-[50px] sm:w-[110px] to reduce space around the logo on mobile */}
-      <div className="flex w-[50px] min-[380px]:w-[60px] sm:w-[30px] flex-shrink-0 flex-col items-center gap-2 sm:flex-row sm:gap-4">
+      <div className="flex w-[50px] min-[380px]:w-[60px] sm:w-[10px] flex-shrink-0 flex-col items-center gap-2 sm:flex-row sm:gap-4">
         <LogoBadge brand={row.brand} />
         {/* <span className="hidden sm:inline text-md font-bold text-[#0d1b2e] sm:text-left">{row.brand}</span> */}
       </div>
@@ -455,14 +455,18 @@ function HeroRow({ row }: { row: HeroBrandRow }) {
         <div className="mb-[2px] text-[13px] text-[#0d1b2e]">
           Avg. <span className="font-semibold">Rebuilt</span> Quote:{" "}
           <span className="font-semibold">{row.price}</span>{" "}
-          <span className="text-[11px] text-[#6b7280]">· supply only</span>
+          <span className="text-[11px] text-[#6b7280]">· supply only, </span>
+          <span className="truncate text-[11px] text-[#6b7280]">
+          Most requested:{" "}
+          <span className="font-medium text-[#374151]">{row.codes}</span>
+        </span>
         </div>
         
         {/* Line 3: most requested codes */}
-        <div className="truncate text-[11px] text-[#6b7280]">
+        {/* <div className="truncate text-[11px] text-[#6b7280]">
           Most requested:{" "}
           <span className="font-medium text-[#374151]">{row.codes}</span>
-        </div>
+        </div> */}
       </div>
 
       {/* RIGHT: chevron arrow */}
@@ -966,7 +970,7 @@ export default function HomeHeroSection({ data }: Props) {
               
 
               {/* Brand rows */}
-              <div className="overflow-hidden rounded-[12px] border max-w-lg border-[rgba(13,27,46,0.1)] bg-white shadow-[0_8px_30px_rgba(13,27,46,0.2)]">
+              <div className="overflow-hidden rounded-[12px] border max-w-2xl border-[rgba(13,27,46,0.1)] bg-white shadow-[0_8px_30px_rgba(13,27,46,0.2)]">
                 <h3
                 className="mb-3 text-[15px] font-bold text-[#0d1b2e] lg:hidden text-center pt-5"
                 style={{ fontFamily: "Inter, sans-serif" }}
@@ -1001,7 +1005,7 @@ export default function HomeHeroSection({ data }: Props) {
             </div>
 
             {/* ── RIGHT COLUMN — Desktop CTA ── */}
-            <div className="relative hidden lg:flex lg:flex-col lg:col-span-4">
+            <div className="relative hidden lg:flex lg:flex-col lg:col-span-4 mt-2">
               <div className="rounded-[12px] border border-[rgba(13,27,46,0.08)] bg-white shadow-[0_8px_32px_rgba(13,27,46,0.08)]">
                 <CTAPanel
                   registration={registration}

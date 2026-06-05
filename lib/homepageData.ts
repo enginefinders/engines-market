@@ -36,6 +36,7 @@ export type HomeEngineTypeCard = {
   id: string;
   label: string;
   title: string;
+  pricetag: string;
   price: string;
   summary: string;
   cta: string;
@@ -134,7 +135,8 @@ export const homeEngineTypeCards: HomeEngineTypeCard[] = [
     id: "used",
     label: "USED ENGINES",
     title: "Used Replacement Engines",
-    price: "Avg rebuilt engine: £800 - £2,800 (supply only)",
+    pricetag: "£800 - £2,800",
+    price: "£800 - £2,800 (supply only)",
     summary:
       "The most affordable route - take-out units sourced from donor vehicles, compression-tested and mileage-verified.",
     cta: "Get used engine quotes",
@@ -155,6 +157,7 @@ export const homeEngineTypeCards: HomeEngineTypeCard[] = [
     id: "reconditioned",
     label: "RECONDITIONED ENGINES",
     title: "Reconditioned Engines",
+    pricetag: "£1,200 - £3,800",
     price: "Avg rebuilt engine: £1,200 - £3,800 (supply only)",
     summary:
       "Stripped, cleaned and rebuilt with OEM-spec gaskets, seals and bearings - the most popular choice in the UK market.",
@@ -176,6 +179,7 @@ export const homeEngineTypeCards: HomeEngineTypeCard[] = [
     id: "rebuilt",
     label: "REBUILT ENGINES",
     title: "Rebuilt Engines",
+    pricetag: "£2,500 - £5,500",
     price: "Avg rebuilt engine: £2,500 - £5,500 (supply only)",
     summary:
       "Fully disassembled, every wearing surface inspected, machined or replaced - recommended after catastrophic failure.",
@@ -198,6 +202,7 @@ export const homeEngineTypeCards: HomeEngineTypeCard[] = [
     id: "remanufactured",
     label: "REMANUFACTURED ENGINES",
     title: "Remanufactured Engines",
+    pricetag: "£3,000 - £6,500",
     price: "Avg rebuilt engine: £3,000 - £6,500 (supply only)",
     summary:
       "Every surface machined to OEM tolerances, every component replaced - the closest available to a factory-new unit.",
@@ -220,6 +225,7 @@ export const homeEngineTypeCards: HomeEngineTypeCard[] = [
     id: "supply-fit",
     label: "SUPPLY & FIT",
     title: "Engine Supply & Fit",
+    pricetag: "£500 - £1,500",
     price: "Fitting: £500 - £1,500 added to engine cost (varies by make, model and location)",
     summary:
       "Engine delivered and professionally installed by a vetted UK specialist - including removal, fitting, fluids and workmanship warranty.",
@@ -241,6 +247,7 @@ export const homeEngineTypeCards: HomeEngineTypeCard[] = [
     id: "refurbished",
     label: "REFURBISHED ENGINES",
     title: "Refurbished Engines",
+    pricetag: "£900 - £2,400",
     price: "Avg rebuilt engine: £900 - £2,400 (supply only)",
     summary:
       "Cleaned, bench-tested and passed on core checks - compression, leak-down and oil pressure - without a full strip-down rebuild.",

@@ -68,6 +68,20 @@ const brandLogoSources: Record<string, string> = {
   volvo: "/BrandsLogos/volvo-logo-small.webp.webp",
 };
 
+// 👇 Short titles for mobile view (5 cards in a row)
+const mobileClusterTitles: Record<string, string> = {
+  pound: "Cost",
+  warning: "Failure",
+  layers: "Types",
+  scales: "Rebuild",
+  shield: "Experts",
+  chip: "Codes",
+  clock: "Lifespan",
+  process: "Process",
+  chart: "Value",
+  star: "General"
+};
+
 function SearchIcon() {
     return (
         <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" aria-hidden="true">
@@ -383,14 +397,17 @@ export default function HomeFaqHubSection() {
                 </div>
 
                 {/* Merged Container */}
-                <div className="flex flex-col md:flex-row overflow-hidden rounded-[24px] border border-[#dfe6ef] bg-white shadow-[0_10px_30px_rgba(13,27,46,0.07)]">
+                <div className="flex flex-col md:flex-row overflow-hidden rounded-[12px] sm:rounded-[24px] border border-[#dfe6ef] bg-white shadow-[0_10px_30px_rgba(13,27,46,0.07)]">
                     <nav
-                        className="grid grid-cols-2 gap-2 bg-[#0d1b2e] p-3 md:grid-cols-1 md:gap-0 md:p-0 md:w-[280px] md:flex-shrink-0 md:border-r md:border-[#e2e8f0]"
+                        className="grid grid-cols-5 gap-1 bg-[#0d1b2e] p-1 sm:p-3 md:grid-cols-1 md:gap-0 md:p-0 md:w-[280px] md:flex-shrink-0 md:border-r md:border-[#e2e8f0]"
                         aria-label="FAQ topic clusters"
                         role="tablist"
                     >
                         {clusters.map((cluster, index) => {
                             const isActive = cluster.id === activeCluster;
+                            
+                            // Determine icon type to map to short mobile title
+                            const iconType = cluster.raw.cluster.includes("COST") ? "pound" : cluster.raw.cluster.includes("FAILURE") ? "warning" : cluster.raw.cluster.includes("TYPE") ? "layers" : cluster.raw.cluster.includes("REBUILD") ? "scales" : cluster.raw.cluster.includes("SPECIALIST") ? "shield" : cluster.raw.cluster.includes("CODE") ? "chip" : cluster.raw.cluster.includes("LIFESPAN") ? "clock" : cluster.raw.cluster.includes("PROCESS") ? "process" : cluster.raw.cluster.includes("VALUE") ? "chart" : "star";
 
                             return (
                                 <button
@@ -406,22 +423,23 @@ export default function HomeFaqHubSection() {
                                         setManualOpenItemId(null);
                                     }}
                                     onKeyDown={(event) => onClusterKeyDown(index, event)}
-                                    className={`relative flex min-h-[84px] flex-col items-start gap-2 rounded-[16px] border border-[#1e3a5f] px-3 py-3 text-left transition md:min-h-[56px] md:flex-row md:items-center md:gap-3 md:rounded-none md:border-x-0 md:border-t-0 md:border-b md:border-[#1e3a5f] md:last:border-b-0 md:px-4 md:py-4 ${
+                                    className={`relative flex flex-col items-center justify-center gap-1.5 rounded-[12px] border px-2 py-3 text-center transition md:min-h-[56px] md:flex-row md:items-center md:gap-3 md:rounded-none md:border-x-0 md:border-t-0 md:border-b md:border-[#1e3a5f] md:last:border-b-0 md:px-4 md:py-4 md:text-left ${
                                         isActive
-                                            ? "bg-[rgba(21,128,61,0.12)] text-white"
-                                            : "bg-transparent text-[#94a3b8] hover:bg-white/5 hover:text-white"
+                                            ? "border-[#22c55e] bg-[rgba(21,128,61,0.12)] text-white md:border-l-4 md:border-l-[#22c55e] md:border-r-0 md:border-t-0 md:border-b-0"
+                                            : "border-[#1e3a5f] bg-transparent text-[#94a3b8] hover:bg-white/5 hover:text-white"
                                     }`}
                                 >
-                                    {isActive ? <span className="absolute left-0 top-0 hidden h-full w-[3px] rounded-r-sm bg-[#22c55e] md:block" /> : null}
-                                    <div className="flex items-center gap-2">
-                                        <ClusterIcon type={cluster.raw.cluster.includes("COST") ? "pound" : cluster.raw.cluster.includes("FAILURE") ? "warning" : cluster.raw.cluster.includes("TYPE") ? "layers" : cluster.raw.cluster.includes("REBUILD") ? "scales" : cluster.raw.cluster.includes("SPECIALIST") ? "shield" : cluster.raw.cluster.includes("CODE") ? "chip" : cluster.raw.cluster.includes("LIFESPAN") ? "clock" : cluster.raw.cluster.includes("PROCESS") ? "process" : cluster.raw.cluster.includes("VALUE") ? "chart" : "star"} />
-                                        <span className="text-[11px] font-bold uppercase tracking-[0.12em] text-white/70 md:hidden">
+                                    <div className="flex flex-col items-center gap-1 md:flex-row md:gap-3">
+                                        <ClusterIcon type={iconType} />
+                                        {/* <span className="text-[10px] font-bold uppercase tracking-[0.08em] text-white/70 md:hidden">
                                             {index + 1}
-                                        </span>
+                                        </span> */}
                                     </div>
-                                    <span className="flex-1 text-[12px] font-medium leading-[1.35] md:text-[13px]">
-                                        <span className="hidden md:inline">{index + 1}. </span>
-                                        {cluster.label}
+                                    <span className="text-[10px] font-medium leading-[1.2] md:text-[13px]">
+                                        {/* Desktop: Original title with index */}
+                                        <span className="hidden md:inline">{index + 1}. {cluster.label}</span>
+                                        {/* Mobile: Short title from object */}
+                                        <span className="md:hidden">{index + 1} {mobileClusterTitles[iconType]}</span>
                                     </span>
                                 </button>
                             );
@@ -470,23 +488,6 @@ export default function HomeFaqHubSection() {
                                 })}
                             </div>
                         </div>
-
-                        {/* <div className="flex flex-col gap-3 border-b border-[#eef2f7] px-4 py-3 sm:flex-row sm:items-center sm:justify-between">
-                            <p className="text-[12px] font-medium text-[#64748b]">
-                                {deferredQuery
-                                    ? `Showing ${visibleCount} result${visibleCount === 1 ? "" : "s"} for "${searchValue.trim()}"`
-                                    : `You are viewing ${currentCluster?.label ?? ""} - ${currentBrand?.brand ?? ""}`}
-                            </p>
-
-                            <a
-                                href="#home-hero-reg-form"
-                                data-quote-context={`FAQ - ${currentBrand?.brand ?? ""} - ${currentCluster?.label ?? ""}`}
-                                data-quote-source="home-faq-header-cta"
-                                className="inline-flex min-h-[40px] items-center justify-center rounded-[10px] bg-[#15803d] px-4 text-[13px] font-semibold text-white transition hover:bg-[#116533]"
-                            >
-                                Get Engine Quotes
-                            </a>
-                        </div> */}
 
                         <div className="faq-accordion h-[560px] overflow-y-auto [scrollbar-color:#cbd5e1_transparent] [scrollbar-width:thin] lg:h-[440px]" role="region" aria-live="polite">
                             {filteredFaqs.map((faq, index) => {

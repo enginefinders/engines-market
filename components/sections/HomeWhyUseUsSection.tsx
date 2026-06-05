@@ -137,6 +137,15 @@ function RemoveIcon() {
   );
 }
 
+function ArrowIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" aria-hidden="true">
+      <path d="M5 12h14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      <path d="m13 6 6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
 function getCardIcon(icon: Card["icon"]) {
   if (icon === "clipboard") return <ClipboardIcon />;
   if (icon === "monitoring") return <MonitoringIcon />;
@@ -155,7 +164,7 @@ export default function HomeWhyUseUsSection() {
     <Section className="bg-[#f7f8fb] py-7 sm:py-8 lg:py-10">
       <Container className="max-w-[1200px]">
         <div id="home-why-use-us">
-        <div className="mx-auto max-w-[860px] text-center">
+        <div className="mx-auto max-w-[900px] text-center">
           <div className="section-pill mx-auto">
             <span>Why Use EnginesMarket</span>
           </div>
@@ -166,7 +175,7 @@ export default function HomeWhyUseUsSection() {
             <span> - And Why It Matters</span>
           </h2>
 
-          <p className="mx-auto mt-4 max-w-[60ch] text-[16px] leading-[1.7] text-[#6b7280]">
+          <p className="mx-auto mt-4 \\ text-[16px] leading-[1.7] text-[#6b7280]">
             EnginesMarket connects you with vetted UK engine specialists - we are not a supplier, garage, or engine builder. Every specialist in our network has passed our verification criteria, and we actively monitor and remove suppliers who do not meet the standard.
           </p>
         </div>
@@ -226,18 +235,39 @@ export default function HomeWhyUseUsSection() {
           </a>
         </p>
 
-        <div className="mt-5 flex justify-center">
+        {/* <div className="mt-5 flex justify-center">
           <a
             href="mailto:ef2crm@gmail.com?subject=How%20do%20you%20vet%20your%20supplier%20network%3F"
             className="inline-flex min-h-[48px] w-full items-center justify-center rounded-[8px] border border-[#0d1b2e] bg-white px-5 text-[14px] font-semibold text-[#0d1b2e] transition hover:bg-[#f8fbff] sm:w-auto sm:min-w-[310px]"
           >
             See how we vet our supplier network -
           </a>
-        </div>
+        </div> */}
+<div className="border-t border-[#eef2f7]  px-4 py-5 sm:px-6 sm:py-6">
+                            <div className="rounded-[16px] border border-[#dfe6ef] bg-[#f8fbff] p-4 sm:p-5">
+                                <div className="flex flex-col gap-4 border-l-4 border-[#0d1b2e] pl-4 sm:flex-row sm:items-center sm:justify-between">
+                                    <div className="max-w-6xl">
+                                        <p className="text-[11px] font-bold uppercase tracking-[0.12em] text-[#64748b]">Who We Are?</p>
+                                        <p className="mt-2 text-[14px] leading-[1.7] text-[#475569] sm:text-[15px]">
+                                           EnginesMarket is an engine replacement marketplace and comparison platform - not a supplier, garage, engine builder, or parts retailer. We do not supply, build, or fit engines. We connect vehicle owners with independent UK engine specialists who have met our network&apos;s vetting criteria. Quotes received through EnginesMarket are provided directly by those specialists. EnginesMarket is not party to any contract between you and a supplier.
+                                        </p>
+                                    </div>
 
-        <div className="mx-auto mt-6 max-w-[72ch] border-t border-[#e5e7eb] pt-5 text-center text-[14px] leading-[1.7] text-[#6b7280] sm:text-[12px]">
+                                    {/* <a
+                                        href="#home-hero-reg-form"
+                                        data-quote-context="FAQ footer CTA"
+                                        data-quote-source="home-faq-footer-cta"
+                                        className="inline-flex min-h-[48px] w-full items-center justify-center gap-2 rounded-[10px] bg-[#0d1b2e] px-5 text-[14px] font-semibold text-white transition hover:bg-[#11284a] sm:w-auto sm:min-w-[250px]"
+                                    >
+                                        <span>Get Free Engine Quotes</span>
+                                        <ArrowIcon />
+                                    </a> */}
+                                </div>
+                            </div>
+                        </div>
+        {/* <div className="mx-auto mt-6 max-w-[72ch] border-t border-[#e5e7eb] pt-5 text-center text-[14px] leading-[1.7] text-[#6b7280] sm:text-[12px]">
           EnginesMarket is an engine replacement marketplace and comparison platform - not a supplier, garage, engine builder, or parts retailer. We do not supply, build, or fit engines. We connect vehicle owners with independent UK engine specialists who have met our network&apos;s vetting criteria. Quotes received through EnginesMarket are provided directly by those specialists. EnginesMarket is not party to any contract between you and a supplier.
-        </div>
+        </div> */}
         </div>
       </Container>
     </Section>

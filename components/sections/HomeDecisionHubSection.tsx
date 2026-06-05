@@ -405,7 +405,7 @@ export default function HomeDecisionHubSection() {
   return (
     <Section className="bg-[#0d1b2e] py-8 sm:py-9 lg:py-11">
       <Container className="max-w-[1040px]">
-        <div className="mx-auto max-w-[760px] text-center">
+        <div className="mx-auto max-w-[960px] text-center">
           <div className="section-pill mx-auto border border-white/10 bg-white/10">
             <span className="text-white">Engine Failure Cost Calculator</span>
           </div>
@@ -416,13 +416,13 @@ export default function HomeDecisionHubSection() {
             <span> Find Out in 60 Seconds.</span>
           </h2>
 
-          <p className="mx-auto mt-4 max-w-[60ch] text-[15px] leading-[1.7] text-[#94a3b8] sm:text-[16px]">
-            Enter your failure type and vehicle details below. We&apos;ll show you the typical replacement cost, how it compares to your car&apos;s value, and whether replacement makes financial sense.
+          <p className="mx-auto mt-4 text-[15px] leading-[1.7] text-[#94a3b8] sm:text-[16px]">
+            Enter your failure type and vehicle details below. We&apos;ll show you the typical replacement cost, how it compares to your car&apos;s value, and whether replacement makes financial sense. The most common question we receive: &quot;My engine has failed - is it worth replacing, or should I scrap the car?&quot; The answer depends on your failure type, vehicle value, and which type of replacement engine you choose - and the difference between a GBP 2,200 reconditioned engine via EnginesMarket and a GBP 14,000 main dealer quote is often the deciding factor.
           </p>
 
-          <p className="mx-auto mt-4 max-w-[68ch] text-[14px] leading-[1.7] text-white/65">
+          {/* <p className="mx-auto mt-4 max-w-[68ch] text-[14px] leading-[1.7] text-white/65">
             The most common question we receive: &quot;My engine has failed - is it worth replacing, or should I scrap the car?&quot; The answer depends on your failure type, vehicle value, and which type of replacement engine you choose - and the difference between a GBP 2,200 reconditioned engine via EnginesMarket and a GBP 14,000 main dealer quote is often the deciding factor.
-          </p>
+          </p> */}
         </div>
 
         <div className="mt-6 grid gap-5 lg:grid-cols-[minmax(0,1fr)_260px] lg:items-start">

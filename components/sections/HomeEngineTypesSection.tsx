@@ -233,17 +233,6 @@ export default function HomeEngineTypesSection({ cards }: Props) {
             })}
           </div>
         )}
-
-        {/* <div className="mt-6 rounded-[18px] border border-white/10 bg-[#0d1b2e] px-4 py-5 sm:px-5 lg:px-8 lg:py-6">
-          <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
-            <div className="flex h-12 w-12 flex-none items-center justify-center rounded-full bg-[#15803d]/18 text-[#86efac]">
-              <ShieldTickIcon />
-            </div>
-            <p className="text-[14px] leading-[1.75] text-white sm:text-[15px]">
-              All engine types include a <span className="font-bold text-[#86efac]">minimum 12-month unlimited mileage warranty</span> when sourced through EnginesMarket. Prices are typical UK market ranges based on real enquiry data. Actual quotes depend on engine code, variant, condition and supplier. Enter your registration above for tailored prices within hours.
-            </p>
-          </div>
-        </div> */}
       </Container>
     </Section>
   );
@@ -366,7 +355,7 @@ function MobileStack({ cards }: { cards: HomeEngineTypeCard[] }) {
           top: 0;
           left: 0;
           right: 0;
-          bottom: 0; /* ADDED: Ensures back face matches front face height exactly */
+          bottom: 0; 
           transform: rotateY(180deg);
           background: linear-gradient(155deg, #0d1b2e 0%, #0f2642 40%, #0d1b2e 100%);
           box-shadow: 0 12px 40px rgba(0,0,50,0.3);
@@ -520,16 +509,10 @@ function MobileStack({ cards }: { cards: HomeEngineTypeCard[] }) {
         /* BACK FACE */
         .back-inner {
           flex: 1;
-          min-height: 0; /* Crucial for allowing overflow scroll in flex children */
+          min-height: 0; 
           padding: 12px 20px;
-          overflow-y: auto;
-          overflow-x: hidden;
-          scrollbar-width: none;
-          -ms-overflow-style: none;
-        }
-        
-        .back-inner::-webkit-scrollbar {
-          display: none;
+          display: flex;
+          flex-direction: column;
         }
         
         .back-title {
@@ -548,11 +531,30 @@ function MobileStack({ cards }: { cards: HomeEngineTypeCard[] }) {
           margin-bottom: 16px;
         }
         
+        /* SCROLLABLE ITEMS LIST */
         .back-items {
+          flex: 1;
+          min-height: 0;
+          overflow-y: auto;
           display: flex;
           flex-direction: column;
           gap: 10px;
           margin-bottom: 16px;
+          scrollbar-width: thin;
+          scrollbar-color: #86efac transparent;
+        }
+        
+        .back-items::-webkit-scrollbar {
+          width: 6px;
+        }
+        
+        .back-items::-webkit-scrollbar-track {
+          background: transparent;
+        }
+        
+        .back-items::-webkit-scrollbar-thumb {
+          background-color: #86efac;
+          border-radius: 3px;
         }
         
         .back-item {
@@ -634,16 +636,10 @@ function MobileStack({ cards }: { cards: HomeEngineTypeCard[] }) {
                   onClick={() => activateCard(i)}
                 >
                   <div className="peek-left">
-                    <div className="peek-num">0{i + 1} of {cards.length}</div>
                     <div className="peek-title">{c.title}</div>
                   </div>
                   
-                  <div className="peek-icon" aria-hidden="true">
-                    <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
-                      <line x1="6.5" y1="1" x2="6.5" y2="12" stroke="#15803d" strokeWidth="1.8" strokeLinecap="round"/>
-                      <line x1="1" y1="6.5" x2="12" y2="6.5" stroke="#15803d" strokeWidth="1.8" strokeLinecap="round"/>
-                    </svg>
-                  </div>
+                  <div className="peek-price">{c.pricetag}</div>
                 </div>
                 
                 <div 
@@ -703,10 +699,11 @@ function MobileStack({ cards }: { cards: HomeEngineTypeCard[] }) {
               {/* BACK FACE */}
               <div className="face face-back">
                 <div className="back-inner">
-                  <div className="back-eyebrow">Full Details — {c.title}</div>
-                  <div className="back-title">{c.title}</div>
+                  <div className="back-title" style={{ marginTop: '16px' }}>{c.title}</div>
                   <div className="back-divider" style={{ height: '1px', background: 'rgba(255,255,255,0.12)', marginBottom: '14px' }}></div>
                   <div className="back-desc">{c.closing}</div>
+                  
+                  {/* SCROLLABLE SECTION */}
                   <div className="back-items">
                     {c.details?.map((d) => (
                       <div key={`${c.id}-back-${d.label}`} className="back-item">
@@ -721,7 +718,9 @@ function MobileStack({ cards }: { cards: HomeEngineTypeCard[] }) {
                       </div>
                     ))}
                   </div>
-                  <div style={{ marginTop: 12 }}>
+
+                  {/* FIXED BUTTON AT BOTTOM */}
+                  <div style={{ marginTop: 12, flexShrink: 0 }}>
                     <button 
                       type="button" 
                       onClick={(e) => {
@@ -738,6 +737,7 @@ function MobileStack({ cards }: { cards: HomeEngineTypeCard[] }) {
                         alignItems: 'center',
                         justifyContent: 'center',
                         gap: '5px',
+                        width: '100%',
                         marginTop: '14px'
                       }}
                     >
