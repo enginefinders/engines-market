@@ -177,10 +177,15 @@ export default function HomeWhyUseUsSection() {
               key={card.id}
               className="flex h-full flex-col rounded-[10px] border border-[#e5e7eb] bg-white p-4 shadow-[0_2px_10px_rgba(13,27,46,0.05)]"
             >
-              <div className="text-[#0d1b2e]">{getCardIcon(card.icon)}</div>
-              <h3 className="mt-5 font-['Manrope'] text-[18px] font-semibold leading-[1.2] text-[#0d1b2e]">
-                {card.title}
-              </h3>
+                            {/* Wrap icon and title in a flex container to align them side-by-side */}
+              <div className="flex items-center gap-2">
+                <div className="text-[#0d1b2e] flex-shrink-0">{getCardIcon(card.icon)}</div>
+                <h3 className="font-['Manrope'] text-[18px] font-semibold leading-[1.2] text-[#0d1b2e]"
+                style={{ fontSize: '24px' }}
+                >
+                  {card.title}
+                </h3>
+              </div>
 
               <ul className="mt-4 space-y-4">
                 {card.bullets.map((bullet) => (

@@ -429,7 +429,7 @@ export default function HomeFaqHubSection() {
                     </nav>
 
                     <div id="faq-content" className="flex-1 min-w-0 flex flex-col">
-                        <div className="border-b border-[#e2e8f0] bg-[#f8fafc] px-4 py-3">
+                        <div className="border-b border-[#e2e8f0] bg-[#f8fafc] px-0 py-0">
                             <div className="flex gap-2 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden" role="tablist" aria-label="Select car brand">
                                 {/* 👇 UPDATED BRAND TABS WITH LOGOS */}
                                 {clusterBrands.map((brand) => {
@@ -447,9 +447,9 @@ export default function HomeFaqHubSection() {
                                                 setActiveBrand(brandId);
                                                 setManualOpenItemId(null);
                                             }}
-                                            className={`flex min-w-[110px] flex-none flex-col items-center justify-center gap-1.5 rounded-[14px] border px-3 py-2.5 text-center transition ${
+                                            className={`flex min-w-[110px] flex-none flex-col items-center justify-center gap-1.5 border px-3 py-2.5 text-center transition ${
                                                 isActive
-                                                    ? "border-[#d9e4db] bg-white text-[#0d1b2e] shadow-[0_8px_20px_rgba(13,27,46,0.06)]"
+                                                    ? "border-[#15803d] bg-[#15803d] text-[#0d1b2e] shadow-[0_8px_20px_rgba(13,27,46,0.06)]"
                                                     : "border-transparent bg-transparent text-[#6b7280] hover:bg-white"
                                             }`}
                                         >
@@ -462,7 +462,7 @@ export default function HomeFaqHubSection() {
                                             ) : (
                                                 <div className="h-7 w-7 rounded-full bg-gray-100" /> 
                                             )}
-                                            <span className={`text-[11px] font-semibold leading-tight ${isActive ? "text-[#0d1b2e]" : "text-[#6b7280]"}`}>
+                                            <span className={`text-[11px] font-semibold leading-tight ${isActive ? "text-white" : "text-[#6b7280]"}`}>
                                                 {brand.brand}
                                             </span>
                                         </button>
