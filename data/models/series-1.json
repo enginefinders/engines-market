@@ -15,6 +15,8 @@
     "canonical": "/bmw/1-series"
   },
   "assets": {
+    "mainImage": "/images/brands/bmw/models/bmw-1-series-model-card.png",
+    "smallImage": "/images/brands/bmw/models/bmw-1-series-model-card.png",
     "heroBg": "/images/brands/bmw/models/bmw-1-series-model-card.png",
     "howItWorksBg": "/images/brands/bmw/brand/bmw-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/bmw/brand/bmw-engine-codes-bg.webp",
@@ -169,6 +171,20 @@
           "Nationwide Delivery",
           "Trusted UK Suppliers"
         ]
+      }
+    },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "",
+      "description": "",
+      "cards": [],
+      "headingLines": [],
+      "imageAlt": "BMW 1 Series engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
       }
     },
     "liveMarketPrices": {
@@ -457,8 +473,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/bmw/models/live-feed-bmw-1-series.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",
@@ -543,7 +558,7 @@
         {
           "h3": "BMW 1 Series 116d Engine Replacement",
           "slug": "1-series-116d-engine",
-          "subtitle": "N47D16/B47D16 1.6L Diesel · 116hp · 2011-2024",
+          "subtitle": "N47D16/B47D16 1.6L Diesel Â· 116hp Â· 2011-2024",
           "priceRange": "£1,300-£2,900",
           "cta": "Compare 116d Engine Prices",
           "engineCodes": [
@@ -558,7 +573,7 @@
         {
           "h3": "BMW 1 Series 118d Engine Replacement",
           "slug": "1-series-118d-engine",
-          "subtitle": "N47D20/B47D20 2.0L Diesel · 143-150hp · 2004-2024",
+          "subtitle": "N47D20/B47D20 2.0L Diesel Â· 143-150hp Â· 2004-2024",
           "priceRange": "£1,350-£3,500",
           "cta": "Compare 118d Engine Prices",
           "engineCodes": [
@@ -573,7 +588,7 @@
         {
           "h3": "BMW 1 Series 120d Engine Replacement",
           "slug": "1-series-120d-engine",
-          "subtitle": "N47D20/B47D20 2.0L Diesel · 177-190hp · 2004-2024",
+          "subtitle": "N47D20/B47D20 2.0L Diesel Â· 177-190hp Â· 2004-2024",
           "priceRange": "£1,500-£3,800",
           "cta": "Compare 120d Engine Prices",
           "engineCodes": [
@@ -588,7 +603,7 @@
         {
           "h3": "BMW 1 Series 125d Engine Replacement",
           "slug": "1-series-125d-engine",
-          "subtitle": "N47S 2.0L Twin-Turbo Diesel · 218-224hp · 2012-2019",
+          "subtitle": "N47S 2.0L Twin-Turbo Diesel · 218-224hp · 2012-2019 · Rebuilt: £2,200-£4,500",
           "priceRange": "£2,200-£4,500",
           "cta": "Compare 125d Engine Prices",
           "engineCodes": [
@@ -602,7 +617,7 @@
         {
           "h3": "BMW 1 Series 114i Engine Replacement",
           "slug": "1-series-114i-engine",
-          "subtitle": "N13B16/B38B15 1.6L/1.5L Petrol · 102hp · 2011-2024",
+          "subtitle": "N13B16/B38B15 1.6L/1.5L Petrol Â· 102hp Â· 2011-2024",
           "priceRange": "£1,150-£2,500",
           "cta": "Compare 114i Engine Prices",
           "engineCodes": [
@@ -617,7 +632,7 @@
         {
           "h3": "BMW 1 Series 116i Engine Replacement",
           "slug": "1-series-116i-engine",
-          "subtitle": "N43B20/N13B16/B38B15 1.6L/1.5L Petrol · 102-136hp · 2004-2024",
+          "subtitle": "N43B20/N13B16/B38B15 1.6L/1.5L Petrol Â· 102-136hp Â· 2004-2024",
           "priceRange": "£1,150-£2,650",
           "cta": "Compare 116i Engine Prices",
           "engineCodes": [
@@ -633,7 +648,7 @@
         {
           "h3": "BMW 1 Series 118i Engine Replacement",
           "slug": "1-series-118i-engine",
-          "subtitle": "N43B20/N13B16/B38B15 1.6L/1.5L Petrol · 136-140hp · 2004-2024",
+          "subtitle": "N43B20/N13B16/B38B15 1.6L/1.5L Petrol Â· 136-140hp Â· 2004-2024",
           "priceRange": "£1,200-£3,000",
           "cta": "Compare 118i Engine Prices",
           "engineCodes": [
@@ -649,7 +664,7 @@
         {
           "h3": "BMW 1 Series 120i Engine Replacement",
           "slug": "1-series-120i-engine",
-          "subtitle": "N46B20/N20B20/B48B20 2.0L Petrol · 170-184hp · 2004-2024",
+          "subtitle": "N46B20/N20B20/B48B20 2.0L Petrol Â· 170-184hp Â· 2004-2024",
           "priceRange": "£1,600-£3,700",
           "cta": "Compare 120i Engine Prices",
           "engineCodes": [
@@ -665,7 +680,7 @@
         {
           "h3": "BMW 1 Series 125i Engine Replacement",
           "slug": "1-series-125i-engine",
-          "subtitle": "N52B30/N20B20 2.5L/2.0L Petrol · 218-228hp · 2004-2019",
+          "subtitle": "N52B30/N20B20 2.5L/2.0L Petrol Â· 218-228hp Â· 2004-2019",
           "priceRange": "£2,300-£4,800",
           "cta": "Compare 125i Engine Prices",
           "engineCodes": [
@@ -680,7 +695,7 @@
         {
           "h3": "BMW 1 Series M135i Engine Replacement",
           "slug": "1-series-m135i-engine",
-          "subtitle": "N55B30 3.0L Turbo Petrol · 326hp · 2012-2019",
+          "subtitle": "N55B30 3.0L Turbo Petrol · 326hp · 2012-2019 · Rebuilt: £3,500-£7,200",
           "priceRange": "£3,500-£7,200",
           "cta": "Compare M135i Engine Prices",
           "engineCodes": [
@@ -694,7 +709,7 @@
         {
           "h3": "BMW 1 Series M140i Engine Replacement",
           "slug": "1-series-m140i-engine",
-          "subtitle": "B58B30 3.0L Turbo Petrol · 340hp · 2016-2019",
+          "subtitle": "B58B30 3.0L Turbo Petrol · 340hp · 2016-2019 · Rebuilt: £4,200-£8,500",
           "priceRange": "£4,200-£8,500",
           "cta": "Compare M140i Engine Prices",
           "engineCodes": [
@@ -708,7 +723,7 @@
         {
           "h3": "BMW 1 Series 118d xDrive Engine Replacement",
           "slug": "1-series-118d-xdrive-engine",
-          "subtitle": "N47D20/B47D20 2.0L Diesel · 143-150hp · 2012-2024",
+          "subtitle": "N47D20/B47D20 2.0L Diesel Â· 143-150hp Â· 2012-2024",
           "priceRange": "£1,800-£4,200",
           "cta": "Compare 118d xDrive Engine Prices",
           "engineCodes": [
@@ -1625,7 +1640,7 @@
     "engineSizes": {
       "tag": "Engine Sizes",
       "h2": "BMW 1 Series Engines by Size - Find the Right Displacement for Your Variant",
-      "intro": "",
+      "intro": "Every official engine displacement fitted to the UK BMW 1 Series is detailed below, complete with matching engine codes, model generations and documented failure notes for quick identification.",
       "groups": [
         {
           "title": "BMW 1 Series Diesel Engine Sizes",
@@ -1752,7 +1767,7 @@
             },
             {
               "title": "BMW 1 Series 3.0L Petrol Engines",
-              "description": "Reserved exclusively for M Performance and flagship variants, this six-cylinder displacement combines twin-scroll turbocharging with advanced valvetrain management to deliver explosive acceleration and track-ready durability. It stands as the pinnacle of 1 Series engineering, prioritising high-output performance over everyday fuel economy. Not sure which engine size your BMW 1 Series needs? Enter your registration number above - we’ll identify the exact displacement, engine code and compatible replacement options instantly. All engines supplied through EngineMarket include a minimum 12‑month unlimited mileage warranty from UK BMW 1 Series specialists.",
+              "description": "Reserved exclusively for M Performance and flagship variants, this six-cylinder displacement combines twin-scroll turbocharging with advanced valvetrain management to deliver explosive acceleration and track-ready durability. It stands as the pinnacle of 1 Series engineering, prioritising high-output performance over everyday fuel economy.",
               "engineCodes": [
                 "N54B30",
                 "N55B30",
@@ -1793,7 +1808,7 @@
     "fuelTypes": {
       "tag": "BMW 1 Series Engines Fuel Type",
       "h2": "BMW 1 Series Engines by Fuel Type",
-      "intro": "",
+      "intro": "Choose your BMW 1 Series engine by fuel type to compare realistic replacement prices, known issues, and compatible UK supply options - from early E87 naturally aspirated units to the latest F40 mild hybrid variants.",
       "items": [
         {
           "title": "BMW 1 Series Diesel Engines",
@@ -2311,7 +2326,7 @@
     "trustCta": {
       "tag": "Why Choose Us",
       "h2": "Why UK BMW 1 Series Owners Trust EngineMarket",
-      "intro": "",
+      "intro": "Join thousands of UK drivers who compare BMW 1 Series engine prices through our network of trusted specialists - every rebuilt unit backed by a minimum 12‑month unlimited mileage warranty and nationwide delivery.",
       "points": [
         {
           "title": "Trusted BMW 1 Series Engine Suppliers",

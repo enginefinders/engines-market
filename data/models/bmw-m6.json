@@ -15,6 +15,8 @@
     "canonical": "/bmw/m6"
   },
   "assets": {
+    "mainImage": "/images/brands/bmw/models/bmw-m6-model-card.png",
+    "smallImage": "/images/brands/bmw/models/bmw-m6-model-card.png",
     "heroBg": "/images/brands/bmw/models/bmw-m6-model-card.png",
     "howItWorksBg": "/images/brands/bmw/brand/bmw-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/bmw/brand/bmw-engine-codes-bg.webp",
@@ -169,6 +171,20 @@
           "Nationwide Delivery",
           "Trusted UK Suppliers"
         ]
+      }
+    },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "",
+      "description": "",
+      "cards": [],
+      "headingLines": [],
+      "imageAlt": "BMW M6 engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
       }
     },
     "liveMarketPrices": {
@@ -424,14 +440,6 @@
             "m6 convertible lci",
             "m6 convertible lci engine"
           ]
-        },
-        {
-          "key": "-engine",
-          "label": "",
-          "matchers": [
-            "",
-            "engine"
-          ]
         }
       ],
       "ui": {
@@ -441,8 +449,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/bmw/models/live-feed-bmw-m6.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",
@@ -533,7 +540,7 @@
         {
           "h3": "BMW M6 Coupe Engine Replacement",
           "slug": "m6-coupe-engine",
-          "subtitle": "S85B50 5.0L Petrol · 507hp · 2005-2010",
+          "subtitle": "S85B50 5.0L Petrol Â· 507hp Â· 2005-2010",
           "priceRange": "£4,500-£8,500",
           "cta": "Compare M6 Coupe Engine Prices",
           "engineCodes": [
@@ -547,7 +554,7 @@
         {
           "h3": "BMW M6 Convertible Engine Replacement",
           "slug": "m6-convertible-engine",
-          "subtitle": "S85B50 5.0L Petrol · 507hp · 2006-2010",
+          "subtitle": "S85B50 5.0L Petrol Â· 507hp Â· 2006-2010",
           "priceRange": "£4,500-£9,000",
           "cta": "Compare M6 Convertible Engine Prices",
           "engineCodes": [
@@ -561,7 +568,7 @@
         {
           "h3": "BMW M6 Coupe Engine Replacement",
           "slug": "m6-coupe-engine",
-          "subtitle": "S63B44A 4.4L Petrol · 560hp · 2012-2014",
+          "subtitle": "S63B44A 4.4L Petrol Â· 560hp Â· 2012-2014",
           "priceRange": "£5,500-£10,000",
           "cta": "Compare M6 Coupe Engine Prices",
           "engineCodes": [
@@ -575,7 +582,7 @@
         {
           "h3": "BMW M6 Convertible Engine Replacement",
           "slug": "m6-convertible-engine",
-          "subtitle": "S63B44A 4.4L Petrol · 560hp · 2012-2014",
+          "subtitle": "S63B44A 4.4L Petrol Â· 560hp Â· 2012-2014",
           "priceRange": "£5,500-£10,500",
           "cta": "Compare M6 Convertible Engine Prices",
           "engineCodes": [
@@ -589,7 +596,7 @@
         {
           "h3": "BMW M6 Gran Coupe Engine Replacement",
           "slug": "m6-gran-coupe-engine",
-          "subtitle": "S63B44B 4.4L Petrol · 560hp · 2013-2015",
+          "subtitle": "S63B44B 4.4L Petrol Â· 560hp Â· 2013-2015",
           "priceRange": "£5,500-£10,000",
           "cta": "Compare M6 Gran Coupe Engine Prices",
           "engineCodes": [
@@ -603,7 +610,7 @@
         {
           "h3": "BMW M6 Coupe Competition Engine Replacement",
           "slug": "m6-coupe-competition-engine",
-          "subtitle": "S63B44C 4.4L Petrol · 575hp · 2014-2015",
+          "subtitle": "S63B44C 4.4L Petrol Â· 575hp Â· 2014-2015",
           "priceRange": "£6,000-£11,500",
           "cta": "Compare M6 Coupe Competition Engine Prices",
           "engineCodes": [
@@ -617,7 +624,7 @@
         {
           "h3": "BMW M6 Gran Coupe Competition Engine Replacement",
           "slug": "m6-gran-coupe-competition-engine",
-          "subtitle": "S63T2 4.4L Petrol · 600hp · 2015-2018",
+          "subtitle": "S63T2 4.4L Petrol Â· 600hp Â· 2015-2018",
           "priceRange": "£6,500-£12,500",
           "cta": "Compare M6 Gran Coupe Competition Engine Prices",
           "engineCodes": [
@@ -631,7 +638,7 @@
         {
           "h3": "BMW M6 Convertible Competition Engine Replacement",
           "slug": "m6-convertible-competition-engine",
-          "subtitle": "S63T2 4.4L Petrol · 600hp · 2015-2018",
+          "subtitle": "S63T2 4.4L Petrol Â· 600hp Â· 2015-2018",
           "priceRange": "£6,500-£12,500",
           "cta": "Compare M6 Convertible Competition Engine Prices",
           "engineCodes": [
@@ -645,12 +652,11 @@
         {
           "h3": "BMW M635CSi Engine Replacement",
           "slug": "m635csi-engine",
-          "subtitle": "M88/3 3.5L Petrol · 286hp · 1983-1989",
+          "subtitle": "M88/3 3.5L Petrol Â· 286hp Â· 1983-1989",
           "priceRange": "£3,500-£6,500",
           "cta": "Compare M635CSi Engine Prices",
           "engineCodes": [
-            "M88",
-            "3"
+            "M88"
           ],
           "fuel": "Petrol",
           "power": "286hp",
@@ -660,7 +666,7 @@
         {
           "h3": "BMW M6 Coupe LCI Engine Replacement",
           "slug": "m6-coupe-lci-engine",
-          "subtitle": "S63B44B 4.4L Petrol · 560hp · 2015-2018",
+          "subtitle": "S63B44B 4.4L Petrol Â· 560hp Â· 2015-2018",
           "priceRange": "£5,800-£11,000",
           "cta": "Compare M6 Coupe LCI Engine Prices",
           "engineCodes": [
@@ -674,7 +680,7 @@
         {
           "h3": "BMW M6 Gran Coupe LCI Engine Replacement",
           "slug": "m6-gran-coupe-lci-engine",
-          "subtitle": "S63T2 4.4L Petrol · 600hp · 2015-2018",
+          "subtitle": "S63T2 4.4L Petrol Â· 600hp Â· 2015-2018",
           "priceRange": "£6,500-£12,500",
           "cta": "Compare M6 Gran Coupe LCI Engine Prices",
           "engineCodes": [
@@ -688,7 +694,7 @@
         {
           "h3": "BMW M6 Convertible LCI Engine Replacement",
           "slug": "m6-convertible-lci-engine",
-          "subtitle": "S63B44B 4.4L Petrol · 560hp · 2015-2018",
+          "subtitle": "S63B44B 4.4L Petrol Â· 560hp Â· 2015-2018",
           "priceRange": "£5,800-£11,000",
           "cta": "Compare M6 Convertible LCI Engine Prices",
           "engineCodes": [
@@ -698,25 +704,11 @@
           "power": "560hp",
           "years": "2015-2018",
           "image": ""
-        },
-        {
-          "h3": "",
-          "slug": "-engine",
-          "subtitle": "All BMW M6 Variants - Engine Replacement Coverage",
-          "priceRange": "",
-          "cta": "Introductory text:",
-          "engineCodes": [
-            "All BMW M6 Variants - Engine Replacement Coverage"
-          ],
-          "fuel": "",
-          "power": "",
-          "years": "",
-          "image": ""
         }
       ],
       "directory": {
-        "h3": "",
-        "intro": "",
+        "h3": "All BMW M6 Variants - Engine Replacement Coverage",
+        "intro": "A full alphabetical listing of every BMW M6 trim covered by our network. All entries link to a dedicated variant page, where prices are further broken down by engine code, model year, and condition type. Click a live link to compare quotes.",
         "groups": [
           {
             "title": "Diesel Variants",
@@ -760,7 +752,7 @@
         ],
         "label": "Variant Directory"
       },
-      "closing": "",
+      "closing": "Not sure which variant your BMW M6 is? Enter your registration number above - we'll identify the exact sub-model, engine code and compatible replacement options instantly.",
       "engineGuide": {
         "tag": "Engine Codes",
         "h2": "BMW M6 Engine Codes - Full Technical Specifications & Replacement Guide",
@@ -916,7 +908,7 @@
             ]
           }
         ],
-        "closing": ""
+        "closing": "Can't find your engine code? Enter your registration number above - we'll instantly identify the exact unit, its technical specifications, and live replacement prices from UK BMW M6 engine specialists. Every rebuilt engine comes with a minimum 12‑month unlimited mileage warranty."
       },
       "headingLines": [
         "BMW M6 Engine Replacement",
@@ -934,7 +926,7 @@
       "tag": "Engine Codes",
       "h2": "BMW M6 Engine Codes - Full Technical Specifications & Replacement Guide",
       "h3": "Every engine code fitted to the BMW M6 across all generations, with technical specs, compatible variants and trims, known failure points, and average rebuilt prices from UK specialists. Select any engine code to compare quotes.",
-      "closingLine": "",
+      "closingLine": "Can't find your engine code? Enter your registration number above - we'll instantly identify the exact unit, its technical specifications, and live replacement prices from UK BMW M6 engine specialists. Every rebuilt engine comes with a minimum 12‑month unlimited mileage warranty.",
       "filters": [
         "Petrol Engines"
       ],
@@ -1729,11 +1721,26 @@
           "description": "The 2015 LCI brought the revised S63B44B with Valvetronic and later the 600hp S63T2 - the most powerful and durable iteration of the M6 engine range.",
           "keyChanges": [
             "LCI facelift across Coupe, Convertible and Gran Coupe",
-            "S63B44B introduced with Valvetronic variable valve lift",
-            "2015-2018 models received S63T2 (600hp) for Competition Package",
-            "Improved cooling and revised turbocharger design",
-            "Final M6 production year was 2018 with no direct successor"
+            "S63B44B introduced with Valvetronic variable valve lift"
           ],
+          "mainEngines": [],
+          "popularModels": [],
+          "knownFor": [],
+          "engineCodesCovered": [],
+          "cta": "",
+          "badges": [
+            {
+              "label": "Major Engine Changes",
+              "tone": "accent"
+            }
+          ],
+          "enquiries": []
+        },
+        {
+          "year": "2015",
+          "preview": "2018 models received S63T2 (600hp) for Competition Package",
+          "description": "",
+          "keyChanges": [],
           "mainEngines": [
             "S63B44B - 4.4L Petrol (M6 Coupe LCI, M6 Convertible LCI, M6 Gran Coupe LCI)",
             "S63T2 - 4.4L Petrol (M6 Competition Package LCI)"
@@ -1757,10 +1764,6 @@
           ],
           "cta": "Get quotes for 2015-2018 BMW M6 LCI replacement engines",
           "badges": [
-            {
-              "label": "Major Engine Changes",
-              "tone": "accent"
-            },
             {
               "label": "2 engine highlights",
               "tone": "muted"
@@ -1925,7 +1928,20 @@
       "tag": "Why Choose Us",
       "h2": "Why UK BMW M6 Owners Trust EngineMarket",
       "intro": "Join thousands of UK drivers who compare BMW M6 engine prices through our network of trusted specialists - every rebuilt and reconditioned unit backed by a minimum 12‑month unlimited mileage warranty and nationwide delivery.",
-      "points": [],
+      "points": [
+        {
+          "title": "Trusted BMW M6 Engine Suppliers",
+          "description": "Every garage and engine rebuilder in our network is vetted, rated, and reviewed by real BMW M6 owners."
+        },
+        {
+          "title": "Compare BMW M6 Engine Replacement Companies",
+          "description": "See prices, warranty terms, and supply & fit options side‑by‑side before you commit."
+        },
+        {
+          "title": "UK Engine Replacement Services for BMW M6",
+          "description": "Covering every variant from the E63/E64 V10 to the F06/F12/F13 V8 twin-turbo, with supply-only or full supply & fit available nationwide."
+        }
+      ],
       "finalText": "Find the best BMW M6 engine replacement UK drivers rely on. Compare prices from trusted specialists today and get back on the road with confidence.",
       "buttonText": "Compare BMW M6 Engine Prices Now →",
       "secondaryAction": {

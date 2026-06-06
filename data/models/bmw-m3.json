@@ -15,6 +15,8 @@
     "canonical": "/bmw/m3"
   },
   "assets": {
+    "mainImage": "/images/brands/bmw/models/bmw-m3-model-card.png",
+    "smallImage": "/images/brands/bmw/models/bmw-m3-model-card.png",
     "heroBg": "/images/brands/bmw/models/bmw-m3-model-card.png",
     "howItWorksBg": "/images/brands/bmw/brand/bmw-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/bmw/brand/bmw-engine-codes-bg.webp",
@@ -169,6 +171,20 @@
           "Nationwide Delivery",
           "Trusted UK Suppliers"
         ]
+      }
+    },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "",
+      "description": "",
+      "cards": [],
+      "headingLines": [],
+      "imageAlt": "BMW M3 engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
       }
     },
     "liveMarketPrices": {
@@ -440,14 +456,6 @@
             "m3 g80 competition xdrive",
             "m3 g80 competition xdrive engine"
           ]
-        },
-        {
-          "key": "-engine",
-          "label": "",
-          "matchers": [
-            "",
-            "engine"
-          ]
         }
       ],
       "ui": {
@@ -457,8 +465,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/bmw/models/live-feed-bmw-m3.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",
@@ -544,7 +551,7 @@
         {
           "h3": "BMW M3 E30 Engine Replacement",
           "slug": "m3-e30-engine",
-          "subtitle": "S14B23 2.3L Petrol · 200hp · 1986-1991",
+          "subtitle": "S14B23 2.3L Petrol Â· 200hp Â· 1986-1991",
           "priceRange": "£6,000-£12,000",
           "cta": "Compare E30 M3 Engine Prices",
           "engineCodes": [
@@ -558,7 +565,7 @@
         {
           "h3": "BMW M3 E36 Engine Replacement",
           "slug": "m3-e36-engine",
-          "subtitle": "S50B30 3.0L Petrol · 286hp · 1992-1995",
+          "subtitle": "S50B30 3.0L Petrol Â· 286hp Â· 1992-1995",
           "priceRange": "£3,000-£6,500",
           "cta": "Compare E36 M3 Engine Prices",
           "engineCodes": [
@@ -572,7 +579,7 @@
         {
           "h3": "BMW M3 E36 Evolution Engine Replacement",
           "slug": "m3-e36-evolution-engine",
-          "subtitle": "S50B32 3.2L Petrol · 321hp · 1996-1999",
+          "subtitle": "S50B32 3.2L Petrol Â· 321hp Â· 1996-1999",
           "priceRange": "£3,500-£7,500",
           "cta": "Compare E36 M3 Evolution Engine Prices",
           "engineCodes": [
@@ -586,7 +593,7 @@
         {
           "h3": "BMW M3 E46 Engine Replacement",
           "slug": "m3-e46-engine",
-          "subtitle": "S54B32 3.2L Petrol · 343hp · 2000-2006",
+          "subtitle": "S54B32 3.2L Petrol Â· 343hp Â· 2000-2006",
           "priceRange": "£3,500-£8,000",
           "cta": "Compare E46 M3 Engine Prices",
           "engineCodes": [
@@ -600,7 +607,7 @@
         {
           "h3": "BMW M3 E90 Saloon Engine Replacement",
           "slug": "m3-e90-saloon-engine",
-          "subtitle": "S65B40 4.0L Petrol · 414hp · 2007-2011",
+          "subtitle": "S65B40 4.0L Petrol Â· 414hp Â· 2007-2011",
           "priceRange": "£5,500-£11,000",
           "cta": "Compare E90 M3 Engine Prices",
           "engineCodes": [
@@ -614,7 +621,7 @@
         {
           "h3": "BMW M3 E92 Coupe Engine Replacement",
           "slug": "m3-e92-coupe-engine",
-          "subtitle": "S65B40 4.0L Petrol · 414hp · 2007-2013",
+          "subtitle": "S65B40 4.0L Petrol Â· 414hp Â· 2007-2013",
           "priceRange": "£5,500-£11,000",
           "cta": "Compare E92 M3 Engine Prices",
           "engineCodes": [
@@ -628,7 +635,7 @@
         {
           "h3": "BMW M3 E93 Convertible Engine Replacement",
           "slug": "m3-e93-convertible-engine",
-          "subtitle": "S65B40 4.0L Petrol · 414hp · 2008-2013",
+          "subtitle": "S65B40 4.0L Petrol Â· 414hp Â· 2008-2013",
           "priceRange": "£5,500-£11,000",
           "cta": "Compare E93 M3 Engine Prices",
           "engineCodes": [
@@ -642,7 +649,7 @@
         {
           "h3": "BMW M3 F80 Engine Replacement",
           "slug": "m3-f80-engine",
-          "subtitle": "S55B30 3.0L Petrol Twin-Turbo · 425hp · 2014-2018",
+          "subtitle": "S55B30 3.0L Petrol Twin-Turbo · 425hp · 2014-2018 · Rebuilt: £5,000-£10,000",
           "priceRange": "£5,000-£10,000",
           "cta": "Compare F80 M3 Engine Prices",
           "engineCodes": [
@@ -656,7 +663,7 @@
         {
           "h3": "BMW M3 F80 Competition Engine Replacement",
           "slug": "m3-f80-competition-engine",
-          "subtitle": "S55B30 3.0L Petrol Twin-Turbo · 444hp · 2016-2018",
+          "subtitle": "S55B30 3.0L Petrol Twin-Turbo · 444hp · 2016-2018 · Rebuilt: £5,500-£11,000",
           "priceRange": "£5,500-£11,000",
           "cta": "Compare F80 M3 Competition Engine Prices",
           "engineCodes": [
@@ -670,7 +677,7 @@
         {
           "h3": "BMW M3 G80 Engine Replacement",
           "slug": "m3-g80-engine",
-          "subtitle": "S58B30 3.0L Petrol Twin-Turbo · 473hp · 2021-2026",
+          "subtitle": "S58B30 3.0L Petrol Twin-Turbo · 473hp · 2021-2026 · Rebuilt: £7,000-£14,000",
           "priceRange": "£7,000-£14,000",
           "cta": "Compare G80 M3 Engine Prices",
           "engineCodes": [
@@ -684,7 +691,7 @@
         {
           "h3": "BMW M3 G80 Competition Engine Replacement",
           "slug": "m3-g80-competition-engine",
-          "subtitle": "S58B30 3.0L Petrol Twin-Turbo · 503hp · 2021-2026",
+          "subtitle": "S58B30 3.0L Petrol Twin-Turbo · 503hp · 2021-2026 · Rebuilt: £7,500-£16,000",
           "priceRange": "£7,500-£16,000",
           "cta": "Compare G80 M3 Competition Engine Prices",
           "engineCodes": [
@@ -698,7 +705,7 @@
         {
           "h3": "BMW M3 G80 Competition xDrive Engine Replacement",
           "slug": "m3-g80-competition-xdrive-engine",
-          "subtitle": "S58B30 3.0L Petrol Twin-Turbo · 503hp · 2021-2026",
+          "subtitle": "S58B30 3.0L Petrol Twin-Turbo · 503hp · 2021-2026 · Rebuilt: £8,000-£17,000",
           "priceRange": "£8,000-£17,000",
           "cta": "Compare G80 M3 Competition xDrive Engine Prices",
           "engineCodes": [
@@ -708,25 +715,11 @@
           "power": "503hp",
           "years": "2021-2026",
           "image": ""
-        },
-        {
-          "h3": "",
-          "slug": "-engine",
-          "subtitle": "All BMW M3 Variants - Engine Replacement Coverage",
-          "priceRange": "",
-          "cta": "Introductory text:",
-          "engineCodes": [
-            "All BMW M3 Variants - Engine Replacement Coverage"
-          ],
-          "fuel": "",
-          "power": "",
-          "years": "",
-          "image": ""
         }
       ],
       "directory": {
-        "h3": "",
-        "intro": "",
+        "h3": "All BMW M3 Variants - Engine Replacement Coverage",
+        "intro": "A full alphabetical listing of every BMW M3 trim covered by our network. All entries link to a dedicated variant page, where prices are further broken down by engine code, model year, and condition type. Click a live link to compare quotes.",
         "groups": [
           {
             "title": "Diesel Variants",
@@ -779,7 +772,7 @@
         ],
         "label": "Variant Directory"
       },
-      "closing": "",
+      "closing": "Not sure which variant your BMW M3 is? Enter your registration number above - we’ll identify the exact sub‑model, engine code and compatible replacement options instantly.",
       "engineGuide": {
         "tag": "Engine Codes",
         "h2": "BMW M3 Engine Codes - Full Technical Specifications & Replacement Guide",
@@ -1144,7 +1137,7 @@
     "commonProblems": {
       "tag": "Common Problems",
       "h2": "BMW M3 Engine Problems - What It Costs to Fix & When Replacement Makes Sense",
-      "h3": "",
+      "h3": "The BMW M3’s performance heritage comes with well-documented engine vulnerabilities that vary dramatically by generation. The S54 (E46) suffers VANOS and rod bearing failures, the S65 V8 (E90/E92/E93) is infamous for rod bearing and throttle actuator issues, and the S55 (F80) has a notorious crank hub weakness. Every rebuilt engine supplied through EngineMarket includes upgraded internal components designed to address the original failure point - plus a minimum 12‑month unlimited mileage warranty. Below, we break down the most common failures, what repair is possible, and when replacement is the only sensible option.",
       "problems": [
         {
           "group": "BMW M3 S65 V8 Rod Bearing Failure",
@@ -2106,7 +2099,20 @@
       "tag": "Why Choose Us",
       "h2": "Why UK BMW M3 Owners Trust EngineMarket",
       "intro": "Join thousands of UK drivers who compare BMW M3 engine prices through our network of trusted specialists - every rebuilt and reconditioned unit backed by a minimum 12‑month unlimited mileage warranty and nationwide delivery.",
-      "points": [],
+      "points": [
+        {
+          "title": "Trusted BMW M3 Engine Suppliers",
+          "description": "Every garage and engine rebuilder in our network is vetted, rated, and reviewed by real BMW M3 owners."
+        },
+        {
+          "title": "Compare BMW M3 Engine Replacement Companies",
+          "description": "See prices, warranty terms, and supply & fit options side‑by‑side before you commit."
+        },
+        {
+          "title": "UK Engine Replacement Services for BMW M3",
+          "description": "Covering every variant from classic E30 to latest G80, with supply‑only or full supply & fit available nationwide."
+        }
+      ],
       "finalText": "Find the best BMW M3 engine replacement UK drivers rely on. Compare prices from trusted specialists today and get back on the road with confidence.",
       "buttonText": "Compare BMW M3 Engine Prices Now →",
       "secondaryAction": {

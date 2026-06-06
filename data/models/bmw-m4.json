@@ -15,6 +15,8 @@
     "canonical": "/bmw/m4"
   },
   "assets": {
+    "mainImage": "/images/brands/bmw/models/bmw-m4-model-card.png",
+    "smallImage": "/images/brands/bmw/models/bmw-m4-model-card.png",
     "heroBg": "/images/brands/bmw/models/bmw-m4-model-card.png",
     "howItWorksBg": "/images/brands/bmw/brand/bmw-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/bmw/brand/bmw-engine-codes-bg.webp",
@@ -169,6 +171,20 @@
           "Nationwide Delivery",
           "Trusted UK Suppliers"
         ]
+      }
+    },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "",
+      "description": "",
+      "cards": [],
+      "headingLines": [],
+      "imageAlt": "BMW M4 engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
       }
     },
     "liveMarketPrices": {
@@ -400,14 +416,6 @@
             "m4 gts",
             "m4 gts engine"
           ]
-        },
-        {
-          "key": "-engine",
-          "label": "",
-          "matchers": [
-            "",
-            "engine"
-          ]
         }
       ],
       "ui": {
@@ -417,8 +425,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/bmw/models/live-feed-bmw-m4.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",
@@ -501,7 +508,7 @@
         {
           "h3": "BMW M4 Coupe Engine Replacement",
           "slug": "m4-coupe-engine",
-          "subtitle": "S55B30 3.0L Petrol · 425-444hp · 2014-2020",
+          "subtitle": "S55B30 3.0L Petrol Â· 425-444hp Â· 2014-2020",
           "priceRange": "£6,000-£9,500",
           "cta": "Compare Coupe Engine Prices",
           "engineCodes": [
@@ -515,7 +522,7 @@
         {
           "h3": "BMW M4 Convertible Engine Replacement",
           "slug": "m4-convertible-engine",
-          "subtitle": "S55B30 3.0L Petrol · 425-444hp · 2014-2020",
+          "subtitle": "S55B30 3.0L Petrol Â· 425-444hp Â· 2014-2020",
           "priceRange": "£6,500-£9,500",
           "cta": "Compare Convertible Engine Prices",
           "engineCodes": [
@@ -529,11 +536,12 @@
         {
           "h3": "BMW M4 Competition Engine Replacement",
           "slug": "m4-competition-engine",
-          "subtitle": "S55B30 / S58B30 3.0L Petrol · 444-510hp · 2016-2025",
+          "subtitle": "S55B30 / S58B30 3.0L Petrol Â· 444-510hp Â· 2016-2025",
           "priceRange": "£7,000-£16,500",
           "cta": "Compare Competition Engine Prices",
           "engineCodes": [
-            "S55B30"
+            "S55B30",
+            "S58B30"
           ],
           "fuel": "Petrol",
           "power": "444-510hp",
@@ -543,7 +551,7 @@
         {
           "h3": "BMW M4 Competition xDrive Engine Replacement",
           "slug": "m4-competition-xdrive-engine",
-          "subtitle": "S58B30 3.0L Petrol · 510hp · 2021-2025",
+          "subtitle": "S58B30 3.0L Petrol Â· 510hp Â· 2021-2025",
           "priceRange": "£15,000-£25,000",
           "cta": "Compare Competition xDrive Engine Prices",
           "engineCodes": [
@@ -557,11 +565,12 @@
         {
           "h3": "BMW M4 CS Engine Replacement",
           "slug": "m4-cs-engine",
-          "subtitle": "S55B30 / S58B30 3.0L Petrol · 454-550hp · 2017-2025",
+          "subtitle": "S55B30 / S58B30 3.0L Petrol Â· 454-550hp Â· 2017-2025",
           "priceRange": "£9,500-£27,000",
           "cta": "Compare CS Engine Prices",
           "engineCodes": [
-            "S55B30"
+            "S55B30",
+            "S58B30"
           ],
           "fuel": "Petrol",
           "power": "454-550hp",
@@ -571,7 +580,7 @@
         {
           "h3": "BMW M4 CSL Engine Replacement",
           "slug": "m4-csl-engine",
-          "subtitle": "S58B30T0 3.0L Petrol · 550hp · 2022-2025",
+          "subtitle": "S58B30T0 3.0L Petrol Â· 550hp Â· 2022-2025",
           "priceRange": "£19,000-£29,000",
           "cta": "Compare CSL Engine Prices",
           "engineCodes": [
@@ -585,7 +594,7 @@
         {
           "h3": "BMW M4 LCI Engine Replacement",
           "slug": "m4-lci-engine",
-          "subtitle": "S55B30 3.0L Petrol · 425-444hp · 2017-2020",
+          "subtitle": "S55B30 3.0L Petrol Â· 425-444hp Â· 2017-2020",
           "priceRange": "£6,500-£10,000",
           "cta": "Compare LCI Engine Prices",
           "engineCodes": [
@@ -599,11 +608,12 @@
         {
           "h3": "BMW M4 Manual Engine Replacement",
           "slug": "m4-manual-engine",
-          "subtitle": "S55B30 / S58B30 3.0L Petrol · 425-480hp · 2014-2025",
+          "subtitle": "S55B30 / S58B30 3.0L Petrol Â· 425-480hp Â· 2014-2025",
           "priceRange": "£6,000-£24,000",
           "cta": "Compare Manual Engine Prices",
           "engineCodes": [
-            "S55B30"
+            "S55B30",
+            "S58B30"
           ],
           "fuel": "Petrol",
           "power": "425-480hp",
@@ -613,7 +623,7 @@
         {
           "h3": "BMW M4 GTS Engine Replacement",
           "slug": "m4-gts-engine",
-          "subtitle": "S55B30 3.0L Petrol · 493hp · 2016",
+          "subtitle": "S55B30 3.0L Petrol Â· 493hp Â· 2016",
           "priceRange": "£12,000-£18,000",
           "cta": "Compare GTS Engine Prices",
           "engineCodes": [
@@ -623,25 +633,11 @@
           "power": "493hp",
           "years": "2016",
           "image": ""
-        },
-        {
-          "h3": "",
-          "slug": "-engine",
-          "subtitle": "All BMW M4 Variants - Engine Replacement Coverage",
-          "priceRange": "",
-          "cta": "Introductory text:",
-          "engineCodes": [
-            "All BMW M4 Variants - Engine Replacement Coverage"
-          ],
-          "fuel": "",
-          "power": "",
-          "years": "",
-          "image": ""
         }
       ],
       "directory": {
-        "h3": "",
-        "intro": "",
+        "h3": "All BMW M4 Variants - Engine Replacement Coverage",
+        "intro": "A full alphabetical listing of every BMW M4 trim covered by our network. All entries link to a dedicated variant page, where prices are further broken down by engine code, model year, and condition type. Click a live link to compare quotes.",
         "groups": [
           {
             "title": "Diesel Variants",
@@ -680,7 +676,7 @@
         ],
         "label": "Variant Directory"
       },
-      "closing": "",
+      "closing": "Not sure which variant your BMW M4 is? Enter your registration number above - we’ll identify the exact sub‑model, engine code and compatible replacement options instantly.",
       "engineGuide": {
         "tag": "Engine Codes",
         "h2": "BMW M4 Engine Codes - Full Technical Specifications & Replacement Guide",
@@ -1814,7 +1810,20 @@
       "tag": "Why Choose Us",
       "h2": "Why UK BMW M4 Owners Trust EngineMarket",
       "intro": "Join thousands of UK drivers who compare BMW M4 engine prices through our network of trusted specialists - every rebuilt and reconditioned unit backed by a minimum 12-month unlimited mileage warranty and nationwide delivery.",
-      "points": [],
+      "points": [
+        {
+          "title": "Trusted BMW M4 Engine Suppliers",
+          "description": "Every garage and engine rebuilder in our network is vetted, rated, and reviewed by real BMW M4 owners."
+        },
+        {
+          "title": "Compare BMW M4 Engine Replacement Companies",
+          "description": "See prices, warranty terms, and supply & fit options side-by-side before you commit."
+        },
+        {
+          "title": "UK Engine Replacement Services for BMW M4",
+          "description": "Covering every variant from Coupe to CSL, with supply-only or full supply & fit available nationwide."
+        }
+      ],
       "finalText": "Find the best BMW M4 engine replacement UK drivers rely on. Compare prices from trusted specialists today and get back on the road with confidence.",
       "buttonText": "Compare BMW M4 Engine Prices Now →",
       "secondaryAction": {

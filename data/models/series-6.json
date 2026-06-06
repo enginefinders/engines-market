@@ -15,6 +15,8 @@
     "canonical": "/bmw/6-series"
   },
   "assets": {
+    "mainImage": "/images/brands/bmw/models/bmw-6-series-model-card.png",
+    "smallImage": "/images/brands/bmw/models/bmw-6-series-model-card.png",
     "heroBg": "/images/brands/bmw/models/bmw-6-series-model-card.png",
     "howItWorksBg": "/images/brands/bmw/brand/bmw-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/bmw/brand/bmw-engine-codes-bg.webp",
@@ -169,6 +171,20 @@
           "Nationwide Delivery",
           "Trusted UK Suppliers"
         ]
+      }
+    },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "",
+      "description": "",
+      "cards": [],
+      "headingLines": [],
+      "imageAlt": "BMW 6 Series engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
       }
     },
     "liveMarketPrices": {
@@ -457,8 +473,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/bmw/models/live-feed-bmw-6-series.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",
@@ -509,7 +524,7 @@
     "variantCoverage": {
       "tag": "Models We Cover",
       "h2": "BMW 6 Series Engine Replacement - All Variants Covered",
-      "subheading": "",
+      "subheading": "From the economical 620d Gran Turismo to the high‑performance M6 Competition, our network of UK BMW 6 Series engine specialists lets you compare rebuilt, reconditioned and used engine prices. Typical price range for a rebuilt unit with 12‑month warranty - supply & fit available nationwide.",
       "groups": [
         {
           "title": "Core Diesel Range",
@@ -543,7 +558,7 @@
         {
           "h3": "BMW 6 Series 640d Engine Replacement",
           "slug": "6-series-640d-engine",
-          "subtitle": "N57D30 3.0L Diesel · 313hp · 2011-2018",
+          "subtitle": "N57D30 3.0L Diesel Â· 313hp Â· 2011-2018",
           "priceRange": "£2,300-£3,430",
           "cta": "Compare 640d Engine Prices",
           "engineCodes": [
@@ -557,7 +572,7 @@
         {
           "h3": "BMW 6 Series 635d Engine Replacement",
           "slug": "6-series-635d-engine",
-          "subtitle": "M57D30 3.0L Diesel · 286hp · 2004-2010",
+          "subtitle": "M57D30 3.0L Diesel Â· 286hp Â· 2004-2010",
           "priceRange": "£2,450-£3,200",
           "cta": "Compare 635d Engine Prices",
           "engineCodes": [
@@ -571,7 +586,7 @@
         {
           "h3": "BMW 6 Series 620d Gran Turismo Engine Replacement",
           "slug": "6-series-620d-gran-turismo-engine",
-          "subtitle": "B47D20 2.0L Diesel · 190hp · 2017-2023",
+          "subtitle": "B47D20 2.0L Diesel Â· 190hp Â· 2017-2023",
           "priceRange": "£2,300-£3,500",
           "cta": "Compare 620d Gran Turismo Engine Prices",
           "engineCodes": [
@@ -585,7 +600,7 @@
         {
           "h3": "BMW 6 Series 630d Gran Turismo Engine Replacement",
           "slug": "6-series-630d-gran-turismo-engine",
-          "subtitle": "B57D30 3.0L Diesel · 265hp · 2017-2023",
+          "subtitle": "B57D30 3.0L Diesel Â· 265hp Â· 2017-2023",
           "priceRange": "£3,430-£5,000",
           "cta": "Compare 630d Gran Turismo Engine Prices",
           "engineCodes": [
@@ -599,7 +614,7 @@
         {
           "h3": "BMW 6 Series 640i Engine Replacement",
           "slug": "6-series-640i-engine",
-          "subtitle": "N55B30 3.0L Petrol · 320hp · 2011-2018",
+          "subtitle": "N55B30 3.0L Petrol Â· 320hp Â· 2011-2018",
           "priceRange": "£4,820-£6,200",
           "cta": "Compare 640i Engine Prices",
           "engineCodes": [
@@ -613,7 +628,7 @@
         {
           "h3": "BMW 6 Series 630i Engine Replacement",
           "slug": "6-series-630i-engine",
-          "subtitle": "N52B30 3.0L Petrol · 272hp · 2004-2010",
+          "subtitle": "N52B30 3.0L Petrol Â· 272hp Â· 2004-2010",
           "priceRange": "£2,300-£2,900",
           "cta": "Compare 630i Engine Prices",
           "engineCodes": [
@@ -627,7 +642,7 @@
         {
           "h3": "BMW 6 Series 650i Engine Replacement",
           "slug": "6-series-650i-engine",
-          "subtitle": "N63B44 4.4L Petrol · 407hp · 2011-2018",
+          "subtitle": "N63B44 4.4L Petrol Â· 407hp Â· 2011-2018",
           "priceRange": "£3,930-£5,500",
           "cta": "Compare 650i Engine Prices",
           "engineCodes": [
@@ -641,7 +656,7 @@
         {
           "h3": "BMW 6 Series 640i Gran Turismo Engine Replacement",
           "slug": "6-series-640i-gran-turismo-engine",
-          "subtitle": "B58B30 3.0L Petrol · 340hp · 2017-2023",
+          "subtitle": "B58B30 3.0L Petrol Â· 340hp Â· 2017-2023",
           "priceRange": "£6,200-£8,500",
           "cta": "Compare 640i Gran Turismo Engine Prices",
           "engineCodes": [
@@ -655,11 +670,11 @@
         {
           "h3": "BMW 6 Series M6 Engine Replacement",
           "slug": "6-series-m6-engine",
-          "subtitle": "S63B44 4.4L Twin-Turbo V8 · 560-600hp · 2012-2018",
+          "subtitle": "S63B44 4.4L Twin-Turbo V8 · 560-600hp · 2012-2018 · Rebuilt: £10,870-£14,500",
           "priceRange": "£10,870-£14,500",
           "cta": "Compare M6 Engine Prices",
           "engineCodes": [
-            "S63B44"
+            "S63B44 4.4L Twin-Turbo V8"
           ],
           "fuel": "",
           "power": "560-600hp",
@@ -669,11 +684,11 @@
         {
           "h3": "BMW 6 Series M6 (E63) Engine Replacement",
           "slug": "6-series-m6-e63-engine",
-          "subtitle": "S85B50 5.0L V10 · 507hp · 2005-2010",
+          "subtitle": "S85B50 5.0L V10 Â· 507hp Â· 2005-2010",
           "priceRange": "£4,650-£7,500",
           "cta": "Compare M6 E63 Engine Prices",
           "engineCodes": [
-            "S85B50"
+            "S85B50 5.0L V10"
           ],
           "fuel": "",
           "power": "507hp",
@@ -683,7 +698,7 @@
         {
           "h3": "BMW 6 Series 640d xDrive Engine Replacement",
           "slug": "6-series-640d-xdrive-engine",
-          "subtitle": "N57D30 3.0L Diesel · 313hp · 2014-2018",
+          "subtitle": "N57D30 3.0L Diesel Â· 313hp Â· 2014-2018",
           "priceRange": "£2,500-£3,600",
           "cta": "Compare 640d xDrive Engine Prices",
           "engineCodes": [
@@ -697,11 +712,11 @@
         {
           "h3": "BMW 6 Series 650i xDrive Engine Replacement",
           "slug": "6-series-650i-xdrive-engine",
-          "subtitle": "N63B44 4.4L Twin-Turbo V8 · 407hp · 2014-2018",
+          "subtitle": "N63B44 4.4L Twin-Turbo V8 · 407hp · 2014-2018 · Rebuilt: £4,100-£5,800",
           "priceRange": "£4,100-£5,800",
           "cta": "Compare 650i xDrive Engine Prices",
           "engineCodes": [
-            "N63B44"
+            "N63B44 4.4L Twin-Turbo V8"
           ],
           "fuel": "",
           "power": "407hp",
@@ -1474,7 +1489,7 @@
           "cta": "Find BMW 6 Series engine supply & fit deals"
         }
       ],
-      "closing": "",
+      "closing": "All engine types include a minimum 12‑month unlimited mileage warranty when sourced through EngineMarket. Prices are typical UK market ranges based on historical quote data from our network and depend on exact engine code, variant, mileage and supplier. Use our free comparison tool above - enter your registration to get tailored quotes for your specific BMW 6 Series within hours.",
       "headingLines": [
         "BMW 6 Series Engine Types",
         "Options, Costs & What to Expect"
@@ -1637,7 +1652,7 @@
             },
             {
               "title": "BMW 6 Series 5.0L Petrol Engines",
-              "description": "Exclusively developed for the first‑generation M6, this high‑revving V10 unit was derived directly from Formula One technology to deliver exceptional track‑level performance and distinctive acoustic character for the road. Featuring individual throttle bodies, double‑VANOS optimisation and a dry‑sump lubrication layout, it demands meticulous maintenance to preserve its extreme operating tolerances. Not sure which engine size your BMW 6 Series needs? Enter your registration number above - we’ll identify the exact displacement, engine code and compatible replacement options instantly. All engines supplied through EngineMarket include a minimum 12‑month unlimited mileage warranty from UK BMW 6 Series specialists.",
+              "description": "Exclusively developed for the first‑generation M6, this high‑revving V10 unit was derived directly from Formula One technology to deliver exceptional track‑level performance and distinctive acoustic character for the road. Featuring individual throttle bodies, double‑VANOS optimisation and a dry‑sump lubrication layout, it demands meticulous maintenance to preserve its extreme operating tolerances.",
               "engineCodes": [
                 "S85B50",
                 "S85B50A"
@@ -1676,7 +1691,7 @@
     "fuelTypes": {
       "tag": "BMW 6 Series Engines Fuel Type",
       "h2": "BMW 6 Series Engines by Fuel Type",
-      "intro": "",
+      "intro": "Choose your BMW 6 Series engine by fuel type to compare realistic replacement prices, known issues, and compatible UK supply options - from early E63 N57 diesel to the latest G32 B58 petrol with mild hybrid support.",
       "items": [
         {
           "title": "BMW 6 Series Diesel Engines",
@@ -2255,7 +2270,7 @@
     "trustCta": {
       "tag": "Why Choose Us",
       "h2": "Why UK BMW 6 Series Owners Trust EngineMarket",
-      "intro": "",
+      "intro": "Join thousands of UK drivers comparing BMW 6 Series engine prices through our network of trusted specialists - every rebuilt unit backed by a minimum 12‑month unlimited mileage warranty and nationwide delivery.",
       "points": [
         {
           "title": "Trusted BMW 6 Series Engine Suppliers",

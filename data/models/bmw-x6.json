@@ -15,6 +15,8 @@
     "canonical": "/bmw/x6"
   },
   "assets": {
+    "mainImage": "/images/brands/bmw/models/bmw-x6-model-card.png",
+    "smallImage": "/images/brands/bmw/models/bmw-x6-model-card.png",
     "heroBg": "/images/brands/bmw/models/bmw-x6-model-card.png",
     "howItWorksBg": "/images/brands/bmw/brand/bmw-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/bmw/brand/bmw-engine-codes-bg.webp",
@@ -169,6 +171,20 @@
           "Nationwide Delivery",
           "Trusted UK Suppliers"
         ]
+      }
+    },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "",
+      "description": "",
+      "cards": [],
+      "headingLines": [],
+      "imageAlt": "BMW X6 engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
       }
     },
     "liveMarketPrices": {
@@ -449,8 +465,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/bmw/models/live-feed-bmw-x6.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",
@@ -535,11 +550,13 @@
         {
           "h3": "BMW X6 xDrive30d Engine Replacement",
           "slug": "x6-xdrive30d-engine",
-          "subtitle": "N57D30A / N57D30B / B57D30C 3.0L Diesel · 245-286hp · 2008-2025",
+          "subtitle": "N57D30A / N57D30B / B57D30C 3.0L Diesel Â· 245-286hp Â· 2008-2025",
           "priceRange": "£1,500-£4,500",
           "cta": "Compare xDrive30d Engine Prices",
           "engineCodes": [
-            "N57D30A"
+            "N57D30A",
+            "N57D30B",
+            "B57D30C"
           ],
           "fuel": "Diesel",
           "power": "245-286hp",
@@ -549,7 +566,7 @@
         {
           "h3": "BMW X6 xDrive35d Engine Replacement",
           "slug": "x6-xdrive35d-engine",
-          "subtitle": "N57D30A 3.0L Diesel · 286hp · 2008-2014",
+          "subtitle": "N57D30A 3.0L Diesel Â· 286hp Â· 2008-2014",
           "priceRange": "£1,600-£3,800",
           "cta": "Compare xDrive35d Engine Prices",
           "engineCodes": [
@@ -563,11 +580,12 @@
         {
           "h3": "BMW X6 xDrive40d Engine Replacement",
           "slug": "x6-xdrive40d-engine",
-          "subtitle": "N57D30B / B57D30B 3.0L Diesel · 306-340hp · 2010-2019",
+          "subtitle": "N57D30B / B57D30B 3.0L Diesel Â· 306-340hp Â· 2010-2019",
           "priceRange": "£1,800-£4,200",
           "cta": "Compare xDrive40d Engine Prices",
           "engineCodes": [
-            "N57D30B"
+            "N57D30B",
+            "B57D30B"
           ],
           "fuel": "Diesel",
           "power": "306-340hp",
@@ -577,7 +595,7 @@
         {
           "h3": "BMW X6 M50d Engine Replacement",
           "slug": "x6-m50d-engine",
-          "subtitle": "N57D30S 3.0L Triple-Turbo Diesel · 381hp · 2014-2019",
+          "subtitle": "N57D30S 3.0L Triple-Turbo Diesel · 381hp · 2014-2019 · Rebuilt: £2,500-£5,500",
           "priceRange": "£2,500-£5,500",
           "cta": "Compare M50d Engine Prices",
           "engineCodes": [
@@ -591,11 +609,12 @@
         {
           "h3": "BMW X6 xDrive35i Engine Replacement",
           "slug": "x6-xdrive35i-engine",
-          "subtitle": "N54B30 / N55B30 3.0L Petrol · 306hp · 2008-2019",
+          "subtitle": "N54B30 / N55B30 3.0L Petrol Â· 306hp Â· 2008-2019",
           "priceRange": "£1,800-£4,200",
           "cta": "Compare xDrive35i Engine Prices",
           "engineCodes": [
-            "N54B30"
+            "N54B30",
+            "N55B30"
           ],
           "fuel": "Petrol",
           "power": "306hp",
@@ -605,7 +624,7 @@
         {
           "h3": "BMW X6 xDrive40i Engine Replacement",
           "slug": "x6-xdrive40i-engine",
-          "subtitle": "B58B30 3.0L Petrol · 340-380hp · 2019-2025",
+          "subtitle": "B58B30 3.0L Petrol Â· 340-380hp Â· 2019-2025",
           "priceRange": "£2,500-£5,000",
           "cta": "Compare xDrive40i Engine Prices",
           "engineCodes": [
@@ -619,11 +638,12 @@
         {
           "h3": "BMW X6 xDrive50i Engine Replacement",
           "slug": "x6-xdrive50i-engine",
-          "subtitle": "N63B44A / N63B44B 4.4L Petrol · 407-450hp · 2008-2019",
+          "subtitle": "N63B44A / N63B44B 4.4L Petrol Â· 407-450hp Â· 2008-2019",
           "priceRange": "£3,500-£7,500",
           "cta": "Compare xDrive50i Engine Prices",
           "engineCodes": [
-            "N63B44A"
+            "N63B44A",
+            "N63B44B"
           ],
           "fuel": "Petrol",
           "power": "407-450hp",
@@ -633,11 +653,12 @@
         {
           "h3": "BMW X6 M50i Engine Replacement",
           "slug": "x6-m50i-engine",
-          "subtitle": "N63B44C / N63B44E 4.4L Petrol · 530hp · 2020-2025",
+          "subtitle": "N63B44C / N63B44E 4.4L Petrol Â· 530hp Â· 2020-2025",
           "priceRange": "£4,500-£9,000",
           "cta": "Compare M50i Engine Prices",
           "engineCodes": [
-            "N63B44C"
+            "N63B44C",
+            "N63B44E"
           ],
           "fuel": "Petrol",
           "power": "530hp",
@@ -647,11 +668,13 @@
         {
           "h3": "BMW X6 M Engine Replacement",
           "slug": "x6-m-engine",
-          "subtitle": "S63B44A / S63B44B / S63B44C 4.4L Petrol · 555-625hp · 2014-2025",
+          "subtitle": "S63B44A / S63B44B / S63B44C 4.4L Petrol Â· 555-625hp Â· 2014-2025",
           "priceRange": "£6,000-£12,000",
           "cta": "Compare X6 M Engine Prices",
           "engineCodes": [
-            "S63B44A"
+            "S63B44A",
+            "S63B44B",
+            "S63B44C"
           ],
           "fuel": "Petrol",
           "power": "555-625hp",
@@ -661,7 +684,7 @@
         {
           "h3": "BMW X6 M Competition Engine Replacement",
           "slug": "x6-m-competition-engine",
-          "subtitle": "S63B44C 4.4L Petrol · 625hp · 2020-2025",
+          "subtitle": "S63B44C 4.4L Petrol Â· 625hp Â· 2020-2025",
           "priceRange": "£7,000-£13,000",
           "cta": "Compare X6 M Competition Engine Prices",
           "engineCodes": [
@@ -675,7 +698,7 @@
         {
           "h3": "BMW X6 xDrive45e Engine Replacement",
           "slug": "x6-xdrive45e-engine",
-          "subtitle": "B58B30 3.0L Plug-in Hybrid · 394hp · 2020-2025",
+          "subtitle": "B58B30 3.0L Plug-in Hybrid · 394hp · 2020-2025 · Rebuilt: £5,000-£9,500",
           "priceRange": "£5,000-£9,500",
           "cta": "Compare xDrive45e Engine Prices",
           "engineCodes": [
@@ -689,7 +712,7 @@
         {
           "h3": "BMW X6 ActiveHybrid Engine Replacement",
           "slug": "x6-activehybrid-engine",
-          "subtitle": "N63B44A 4.4L Petrol Hybrid · 485hp · 2010-2014",
+          "subtitle": "N63B44A 4.4L Petrol Hybrid · 485hp · 2010-2014 · Rebuilt: £4,000-£8,000",
           "priceRange": "£4,000-£8,000",
           "cta": "Compare ActiveHybrid Engine Prices",
           "engineCodes": [
@@ -855,26 +878,12 @@
                 ],
                 "commonFailures": [
                   "EGR system carbonisation (120,000-150,000 km reported)",
-                  "DPF blockage with urban driving"
+                  "DPF blockage with urban driving",
+                  "Mild hybrid battery degradation"
                 ],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
-              },
-              {
-                "code": "Mild",
-                "title": "hybrid battery degradation",
-                "familyHeading": "B57 Series Diesel Engines (2015-Present)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
                 "avgRebuiltPrice": "£2,500 - £4,800",
                 "cta": "Get quotes for B57D30C BMW X6 engine replacement",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
               }
             ]
           },
@@ -1042,23 +1051,9 @@
                 ],
                 "commonFailures": [
                   "Fuel injector failure (requires high-octane fuel)",
-                  "Oil pump failure (early G06 examples)"
+                  "Oil pump failure (early G06 examples)",
+                  "Mild hybrid battery system faults"
                 ],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "Mild",
-                "title": "hybrid battery system faults",
-                "familyHeading": "S63 Performance V8 Engines (2010-Present)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
                 "avgRebuiltPrice": "£7,000 - £13,000",
                 "cta": "Get quotes for S63B44C BMW X6 engine replacement",
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1199,21 +1194,9 @@
               "size": "3.0L",
               "power": "286-340 hp",
               "compatibleModels": "xDrive30d, xDrive30d M Sport, xDrive40d, xDrive40d M Sport",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
-            },
-            {
-              "code": "Mild",
-              "title": "hybrid battery degradation",
-              "familyHeading": "B57 Series Diesel Engines (2015-Present)",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
               "avgRebuiltPrice": "£2,500 - £4,800",
               "cta": "Get quotes for B57D30C BMW X6 engine replacement",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
+              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
             }
           ]
         },
@@ -1314,18 +1297,6 @@
               "size": "4.4L",
               "power": "600-625 hp",
               "compatibleModels": "X6 M, X6 M Competition",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "Mild",
-              "title": "hybrid battery system faults",
-              "familyHeading": "S63 Performance V8 Engines (2010-Present)",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
               "avgRebuiltPrice": "£7,000 - £13,000",
               "cta": "Get quotes for S63B44C BMW X6 engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
@@ -1389,7 +1360,7 @@
     "commonProblems": {
       "tag": "Common Problems",
       "h2": "BMW X6 Engine Problems - What It Costs to Fix & When Replacement Makes Sense",
-      "h3": "",
+      "h3": "The BMW X6 spans three generations (E71, F16, G06) with engine families that have very different reliability profiles. The N57 diesel range (2008-2019) dominates replacement demand, with timing chain and EGR cooler failures accounting for the majority of enquiries, while N63 V8 petrol units face chronic oil consumption issues. Every rebuilt engine supplied through EnginesMarket includes upgraded internal components designed to address the original failure point - plus a minimum 12-month unlimited mileage warranty. Below, we break down the most common X6 engine failures by cost tier, helping you decide whether repair or replacement makes financial sense.",
       "problems": [
         {
           "group": "BMW X6 N57 Timing Chain Failure",
@@ -1700,7 +1671,7 @@
     "engineSizes": {
       "tag": "Engine Sizes",
       "h2": "BMW X6 Engines by Size - Find the Right Displacement for Your Variant",
-      "intro": "",
+      "intro": "Every displacement fitted to the BMW X6 across all generations (E71, F16, G06) is listed below with compatible engine codes, variant names, power outputs and common failure notes.",
       "groups": [
         {
           "title": "BMW X6 Diesel Engine Sizes",
@@ -1815,7 +1786,7 @@
             },
             {
               "title": "BMW X6 4.4L Mild Hybrid Engines",
-              "description": "The latest G06 X6 M60i (2023-present) and G06 X6 M Competition receive 48V mild hybrid assistance integrated into the ZF eight-speed transmission. The system provides 12hp boost under acceleration, smoother stop-start operation, and coasting functionality at motorway speeds. While not a full hybrid, this technology reduces turbo lag and improves fuel economy by approximately 8% compared to non-hybrid N63 units. Not sure which engine size your BMW X6 needs? Enter your registration number above - we'll identify the exact displacement, engine code and compatible replacement options instantly. All engines supplied through EngineMarket include a minimum 12-month unlimited mileage warranty from UK BMW X6 specialists.",
+              "description": "The latest G06 X6 M60i (2023-present) and G06 X6 M Competition receive 48V mild hybrid assistance integrated into the ZF eight-speed transmission. The system provides 12hp boost under acceleration, smoother stop-start operation, and coasting functionality at motorway speeds. While not a full hybrid, this technology reduces turbo lag and improves fuel economy by approximately 8% compared to non-hybrid N63 units.",
               "engineCodes": [
                 "N63B44E (M60i)",
                 "S63B44C (X6 M Competition with MHEV)"
@@ -1855,7 +1826,7 @@
     "fuelTypes": {
       "tag": "BMW X6 Engines Fuel Type",
       "h2": "BMW X6 Engines by Fuel Type",
-      "intro": "",
+      "intro": "Choose your BMW X6 engine by fuel type to compare realistic replacement prices, known issues, and compatible UK supply options - from early E71 diesels to the latest G06 mild hybrid V8s.",
       "items": [
         {
           "title": "BMW X6 Diesel Engines",
@@ -2486,8 +2457,21 @@
     "trustCta": {
       "tag": "Why Choose Us",
       "h2": "Why UK BMW X6 Owners Trust EngineMarket",
-      "intro": "",
-      "points": [],
+      "intro": "Join thousands of UK drivers who compare BMW X6 engine prices through our network of trusted specialists - every rebuilt and reconditioned unit backed by a minimum 12‑month unlimited mileage warranty and nationwide delivery.",
+      "points": [
+        {
+          "title": "Trusted BMW X6 Engine Suppliers",
+          "description": "Every garage and engine rebuilder in our network is vetted, rated, and reviewed by real BMW X6 owners."
+        },
+        {
+          "title": "Compare BMW X6 Engine Replacement Companies",
+          "description": "See prices, warranty terms, and supply & fit options side‑by‑side before you commit."
+        },
+        {
+          "title": "UK Engine Replacement Services for BMW X6",
+          "description": "Covering every variant from the xDrive30d diesel to the X6 M Competition, with supply‑only or full supply & fit available nationwide."
+        }
+      ],
       "finalText": "Find the best BMW X6 engine replacement UK drivers rely on. Compare prices from trusted specialists today and get back on the road with confidence.",
       "buttonText": "Compare BMW X6 Engine Prices Now →",
       "secondaryAction": {

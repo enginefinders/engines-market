@@ -15,6 +15,8 @@
     "canonical": "/bmw/m2"
   },
   "assets": {
+    "mainImage": "/images/brands/bmw/models/bmw-m2-model-card.png",
+    "smallImage": "/images/brands/bmw/models/bmw-m2-model-card.png",
     "heroBg": "/images/brands/bmw/models/bmw-m2-model-card.png",
     "howItWorksBg": "/images/brands/bmw/brand/bmw-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/bmw/brand/bmw-engine-codes-bg.webp",
@@ -171,6 +173,20 @@
         ]
       }
     },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "",
+      "description": "",
+      "cards": [],
+      "headingLines": [],
+      "imageAlt": "BMW M2 engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
+      }
+    },
     "liveMarketPrices": {
       "tag": "Live UK Engine Market Data",
       "h2": "What Are UK Drivers Paying for BMW M2 Engine Replacement?",
@@ -313,8 +329,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/bmw/models/live-feed-bmw-m2.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",
@@ -386,7 +401,7 @@
         {
           "h3": "BMW M2 (F87) Engine Replacement",
           "slug": "m2-f87-engine",
-          "subtitle": "N55B30T0 3.0L Petrol · 365hp · 2016-2018",
+          "subtitle": "N55B30T0 3.0L Petrol Â· 365hp Â· 2016-2018",
           "priceRange": "£3,200-£6,800",
           "cta": "Compare M2 Engine Prices",
           "engineCodes": [
@@ -400,7 +415,7 @@
         {
           "h3": "BMW M2 Competition (F87) Engine Replacement",
           "slug": "m2-competition-f87-engine",
-          "subtitle": "S55B30A 3.0L Petrol · 405hp · 2018-2021",
+          "subtitle": "S55B30A 3.0L Petrol Â· 405hp Â· 2018-2021",
           "priceRange": "£4,500-£8,500",
           "cta": "Compare M2 Competition Engine Prices",
           "engineCodes": [
@@ -414,7 +429,7 @@
         {
           "h3": "BMW M2 CS (F87) Engine Replacement",
           "slug": "m2-cs-f87-engine",
-          "subtitle": "S55B30T0 3.0L Petrol · 444hp · 2020-2021",
+          "subtitle": "S55B30T0 3.0L Petrol Â· 444hp Â· 2020-2021",
           "priceRange": "£5,500-£10,000",
           "cta": "Compare M2 CS Engine Prices",
           "engineCodes": [
@@ -428,7 +443,7 @@
         {
           "h3": "BMW M2 (G87) Engine Replacement",
           "slug": "m2-g87-engine",
-          "subtitle": "S58B30T0 3.0L Petrol · 453hp · 2023-2026",
+          "subtitle": "S58B30T0 3.0L Petrol Â· 453hp Â· 2023-2026",
           "priceRange": "£5,500-£10,500",
           "cta": "Compare G87 M2 Engine Prices",
           "engineCodes": [
@@ -1555,7 +1570,20 @@
       "tag": "Why Choose Us",
       "h2": "Why UK BMW M2 Owners Trust EngineMarket",
       "intro": "Join thousands of UK drivers who compare BMW M2 engine prices through our network of trusted specialists - every rebuilt and reconditioned unit backed by a minimum 12-month unlimited mileage warranty and nationwide delivery.",
-      "points": [],
+      "points": [
+        {
+          "title": "Trusted BMW M2 Engine Suppliers",
+          "description": "Every garage and engine rebuilder in our network is vetted, rated, and reviewed by real BMW M2 owners."
+        },
+        {
+          "title": "Compare BMW M2 Engine Replacement Companies",
+          "description": "See prices, warranty terms, and supply & fit options side-by-side before you commit."
+        },
+        {
+          "title": "UK Engine Replacement Services for BMW M2",
+          "description": "Covering every variant from the N55-powered original to the S55 Competition, CS and new G87 M2, with supply-only or full supply & fit available nationwide."
+        }
+      ],
       "finalText": "Find the best BMW M2 engine replacement UK drivers rely on. Compare prices from trusted specialists today and get back on the road with confidence.",
       "buttonText": "Compare BMW M2 Engine Prices Now →",
       "secondaryAction": {

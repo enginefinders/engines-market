@@ -15,6 +15,8 @@
     "canonical": "/bmw/m5"
   },
   "assets": {
+    "mainImage": "/images/brands/bmw/models/bmw-m5-model-card.png",
+    "smallImage": "/images/brands/bmw/models/bmw-m5-model-card.png",
     "heroBg": "/images/brands/bmw/models/bmw-m5-model-card.png",
     "howItWorksBg": "/images/brands/bmw/brand/bmw-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/bmw/brand/bmw-engine-codes-bg.webp",
@@ -169,6 +171,20 @@
           "Nationwide Delivery",
           "Trusted UK Suppliers"
         ]
+      }
+    },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "",
+      "description": "",
+      "cards": [],
+      "headingLines": [],
+      "imageAlt": "BMW M5 engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
       }
     },
     "liveMarketPrices": {
@@ -433,8 +449,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/bmw/models/live-feed-bmw-m5.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",
@@ -519,12 +534,11 @@
         {
           "h3": "BMW M5 E28 Engine Replacement",
           "slug": "m5-e28-engine",
-          "subtitle": "M88/3 3.5L Petrol · 286hp · 1985-1988",
+          "subtitle": "M88/3 3.5L Petrol Â· 286hp Â· 1985-1988",
           "priceRange": "£8,000-£15,000",
           "cta": "Compare E28 M5 Engine Prices",
           "engineCodes": [
-            "M88",
-            "3"
+            "M88"
           ],
           "fuel": "Petrol",
           "power": "286hp",
@@ -534,7 +548,7 @@
         {
           "h3": "BMW M5 E34 3.6 Engine Replacement",
           "slug": "m5-e34-3-6-engine",
-          "subtitle": "S38B36 3.6L Petrol · 315hp · 1988-1992",
+          "subtitle": "S38B36 3.6L Petrol Â· 315hp Â· 1988-1992",
           "priceRange": "£7,000-£12,000",
           "cta": "Compare E34 3.6 M5 Engine Prices",
           "engineCodes": [
@@ -548,7 +562,7 @@
         {
           "h3": "BMW M5 E34 3.8 Engine Replacement",
           "slug": "m5-e34-3-8-engine",
-          "subtitle": "S38B38 3.8L Petrol · 340hp · 1992-1995",
+          "subtitle": "S38B38 3.8L Petrol Â· 340hp Â· 1992-1995",
           "priceRange": "£7,500-£14,000",
           "cta": "Compare E34 3.8 M5 Engine Prices",
           "engineCodes": [
@@ -562,7 +576,7 @@
         {
           "h3": "BMW M5 E39 Engine Replacement",
           "slug": "m5-e39-engine",
-          "subtitle": "S62B50 4.9L Petrol · 400hp · 1998-2003",
+          "subtitle": "S62B50 4.9L Petrol Â· 400hp Â· 1998-2003",
           "priceRange": "£6,000-£11,000",
           "cta": "Compare E39 M5 Engine Prices",
           "engineCodes": [
@@ -576,7 +590,7 @@
         {
           "h3": "BMW M5 E60 Engine Replacement",
           "slug": "m5-e60-engine",
-          "subtitle": "S85B50 5.0L Petrol · 507hp · 2005-2010",
+          "subtitle": "S85B50 5.0L Petrol Â· 507hp Â· 2005-2010",
           "priceRange": "£7,000-£14,000",
           "cta": "Compare E60 M5 Engine Prices",
           "engineCodes": [
@@ -590,7 +604,7 @@
         {
           "h3": "BMW M5 E61 Touring Engine Replacement",
           "slug": "m5-e61-touring-engine",
-          "subtitle": "S85B50 5.0L Petrol · 507hp · 2007-2010",
+          "subtitle": "S85B50 5.0L Petrol Â· 507hp Â· 2007-2010",
           "priceRange": "£7,500-£15,000",
           "cta": "Compare E61 M5 Touring Engine Prices",
           "engineCodes": [
@@ -604,7 +618,7 @@
         {
           "h3": "BMW M5 F10 Engine Replacement",
           "slug": "m5-f10-engine",
-          "subtitle": "S63B44 4.4L Petrol · 560hp · 2011-2016",
+          "subtitle": "S63B44 4.4L Petrol Â· 560hp Â· 2011-2016",
           "priceRange": "£6,000-£13,000",
           "cta": "Compare F10 M5 Engine Prices",
           "engineCodes": [
@@ -618,7 +632,7 @@
         {
           "h3": "BMW M5 F10 Competition Engine Replacement",
           "slug": "m5-f10-competition-engine",
-          "subtitle": "S63B44T2 4.4L Petrol · 575hp · 2012-2016",
+          "subtitle": "S63B44T2 4.4L Petrol Â· 575hp Â· 2012-2016",
           "priceRange": "£7,000-£15,000",
           "cta": "Compare F10 M5 Competition Engine Prices",
           "engineCodes": [
@@ -632,7 +646,7 @@
         {
           "h3": "BMW M5 F90 Engine Replacement",
           "slug": "m5-f90-engine",
-          "subtitle": "S63B44T4 4.4L Petrol · 600hp · 2017-2020",
+          "subtitle": "S63B44T4 4.4L Petrol Â· 600hp Â· 2017-2020",
           "priceRange": "£7,000-£16,000",
           "cta": "Compare F90 M5 Engine Prices",
           "engineCodes": [
@@ -646,7 +660,7 @@
         {
           "h3": "BMW M5 F90 Competition Engine Replacement",
           "slug": "m5-f90-competition-engine",
-          "subtitle": "S63B44T4 4.4L Petrol · 625hp · 2018-2023",
+          "subtitle": "S63B44T4 4.4L Petrol Â· 625hp Â· 2018-2023",
           "priceRange": "£8,000-£18,000",
           "cta": "Compare F90 M5 Competition Engine Prices",
           "engineCodes": [
@@ -660,7 +674,7 @@
         {
           "h3": "BMW M5 F90 CS Engine Replacement",
           "slug": "m5-f90-cs-engine",
-          "subtitle": "S63B44T4 4.4L Petrol · 635hp · 2021-2023",
+          "subtitle": "S63B44T4 4.4L Petrol Â· 635hp Â· 2021-2023",
           "priceRange": "£10,000-£22,000",
           "cta": "Compare F90 M5 CS Engine Prices",
           "engineCodes": [
@@ -674,7 +688,7 @@
         {
           "h3": "BMW M5 G90 Engine Replacement",
           "slug": "m5-g90-engine",
-          "subtitle": "S63B44T4 PHEV 4.4L Petrol Hybrid · 727hp · 2024+",
+          "subtitle": "S63B44T4 PHEV 4.4L Petrol Hybrid · 727hp · 2024+ · Rebuilt: £12,000-£25,000",
           "priceRange": "£12,000-£25,000",
           "cta": "Compare G90 M5 Engine Prices",
           "engineCodes": [
@@ -1484,7 +1498,7 @@
           "items": [
             {
               "title": "BMW M5 4.4L Plug-In Hybrid Engines",
-              "description": "The G90 M5 introduced a plug-in hybrid powertrain combining the S68 4.4-litre twin-turbo V8 with an electric motor integrated into the eight-speed automatic gearbox. Total system output reaches 727hp with an electric-only range of approximately 40 miles, marking the first electrified M5. The hybrid system adds complexity and weight but delivers staggering performance while allowing zero-emission urban driving. Not sure which engine size your BMW M5 needs? Enter your registration number above - we’ll identify the exact displacement, engine code and compatible replacement options instantly. All engines supplied through EngineMarket include a minimum 12‑month unlimited mileage warranty from UK BMW M5 specialists.",
+              "description": "The G90 M5 introduced a plug-in hybrid powertrain combining the S68 4.4-litre twin-turbo V8 with an electric motor integrated into the eight-speed automatic gearbox. Total system output reaches 727hp with an electric-only range of approximately 40 miles, marking the first electrified M5. The hybrid system adds complexity and weight but delivers staggering performance while allowing zero-emission urban driving.",
               "engineCodes": [
                 "S68B44 PHEV"
               ],
@@ -2167,7 +2181,20 @@
       "tag": "Why Choose Us",
       "h2": "Why UK BMW M5 Owners Trust EngineMarket",
       "intro": "Join thousands of UK drivers who compare BMW M5 engine prices through our network of trusted specialists - every rebuilt and reconditioned unit backed by a minimum 12‑month unlimited mileage warranty and nationwide delivery.",
-      "points": [],
+      "points": [
+        {
+          "title": "Trusted BMW M5 Engine Suppliers",
+          "description": "Every garage and engine rebuilder in our network is vetted, rated, and reviewed by real BMW M5 owners."
+        },
+        {
+          "title": "Compare BMW M5 Engine Replacement Companies",
+          "description": "See prices, warranty terms, and supply & fit options side‑by‑side before you commit."
+        },
+        {
+          "title": "UK Engine Replacement Services for BMW M5",
+          "description": "Covering every variant from classic E28 to modern G90, with supply‑only or full supply & fit available nationwide."
+        }
+      ],
       "finalText": "Find the best BMW M5 engine replacement UK drivers rely on. Compare prices from trusted specialists today and get back on the road with confidence.",
       "buttonText": "Compare BMW M5 Engine Prices Now →",
       "secondaryAction": {

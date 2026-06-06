@@ -15,6 +15,8 @@
     "canonical": "/bmw/x5"
   },
   "assets": {
+    "mainImage": "/images/brands/bmw/models/bmw-x5-model-card.png",
+    "smallImage": "/images/brands/bmw/models/bmw-x5-model-card.png",
     "heroBg": "/images/brands/bmw/models/bmw-x5-model-card.png",
     "howItWorksBg": "/images/brands/bmw/brand/bmw-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/bmw/brand/bmw-engine-codes-bg.webp",
@@ -169,6 +171,20 @@
           "Nationwide Delivery",
           "Trusted UK Suppliers"
         ]
+      }
+    },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "",
+      "description": "",
+      "cards": [],
+      "headingLines": [],
+      "imageAlt": "BMW X5 engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
       }
     },
     "liveMarketPrices": {
@@ -473,8 +489,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/bmw/models/live-feed-bmw-x5.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",
@@ -564,11 +579,13 @@
         {
           "h3": "BMW X5 30d Engine Replacement",
           "slug": "x5-30d-engine",
-          "subtitle": "M57D30 / N57D30 / B57D30 · 3.0L Diesel · 231-286hp · 2000-2025",
+          "subtitle": "M57D30 / N57D30 / B57D30 Â· 3.0L Diesel Â· 231-286hp Â· 2000-2025",
           "priceRange": "£2,200-£5,500",
           "cta": "Compare 30d Engine Prices",
           "engineCodes": [
-            "M57D30"
+            "M57D30",
+            "N57D30",
+            "B57D30"
           ],
           "fuel": "Diesel",
           "power": "231-286hp",
@@ -578,11 +595,12 @@
         {
           "h3": "BMW X5 35d Engine Replacement",
           "slug": "x5-35d-engine",
-          "subtitle": "M57D30T1 / N57D30T1 · 3.0L Diesel · 286-313hp · 2008-2018",
+          "subtitle": "M57D30T1 / N57D30T1 Â· 3.0L Diesel Â· 286-313hp Â· 2008-2018",
           "priceRange": "£2,800-£5,800",
           "cta": "Compare 35d Engine Prices",
           "engineCodes": [
-            "M57D30T1"
+            "M57D30T1",
+            "N57D30T1"
           ],
           "fuel": "Diesel",
           "power": "286-313hp",
@@ -592,11 +610,12 @@
         {
           "h3": "BMW X5 40d Engine Replacement",
           "slug": "x5-40d-engine",
-          "subtitle": "N57D30T2 / B57D30T0 · 3.0L Diesel · 306-340hp · 2010-2025",
+          "subtitle": "N57D30T2 / B57D30T0 Â· 3.0L Diesel Â· 306-340hp Â· 2010-2025",
           "priceRange": "£3,200-£6,500",
           "cta": "Compare 40d Engine Prices",
           "engineCodes": [
-            "N57D30T2"
+            "N57D30T2",
+            "B57D30T0"
           ],
           "fuel": "Diesel",
           "power": "306-340hp",
@@ -606,11 +625,12 @@
         {
           "h3": "BMW X5 40i Engine Replacement",
           "slug": "x5-40i-engine",
-          "subtitle": "N55B30 / B58B30 · 3.0L Petrol · 320-340hp · 2011-2025",
+          "subtitle": "N55B30 / B58B30 Â· 3.0L Petrol Â· 320-340hp Â· 2011-2025",
           "priceRange": "£3,000-£6,800",
           "cta": "Compare 40i Engine Prices",
           "engineCodes": [
-            "N55B30"
+            "N55B30",
+            "B58B30"
           ],
           "fuel": "Petrol",
           "power": "320-340hp",
@@ -620,11 +640,13 @@
         {
           "h3": "BMW X5 50i Engine Replacement",
           "slug": "x5-50i-engine",
-          "subtitle": "N63B44 / N63B44O1 / N63B44M3 · 4.4L Petrol · 402-523hp · 2010-2020",
+          "subtitle": "N63B44 / N63B44O1 / N63B44M3 Â· 4.4L Petrol Â· 402-523hp Â· 2010-2020",
           "priceRange": "£4,500-£9,000",
           "cta": "Compare 50i Engine Prices",
           "engineCodes": [
-            "N63B44"
+            "N63B44",
+            "N63B44O1",
+            "N63B44M3"
           ],
           "fuel": "Petrol",
           "power": "402-523hp",
@@ -690,13 +712,13 @@
         {
           "h3": "BMW X5 40e Engine Replacement",
           "slug": "x5-40e-engine",
-          "subtitle": "B38B15 + Electric Motor · 1.5L Hybrid Petrol · 313hp · 2015-2018",
+          "subtitle": "B38B15 + Electric Motor Â· 1.5L Hybrid Petrol Â· 313hp Â· 2015-2018",
           "priceRange": "£4,000-£7,500",
           "cta": "Compare 40e Engine Prices",
           "engineCodes": [
             "B38B15"
           ],
-          "fuel": "Hybrid",
+          "fuel": "Electric",
           "power": "313hp",
           "years": "2015-2018",
           "image": ""
@@ -704,13 +726,13 @@
         {
           "h3": "BMW X5 45e Engine Replacement",
           "slug": "x5-45e-engine",
-          "subtitle": "B58B30 + Electric Motor · 3.0L Hybrid Petrol · 394hp · 2019-2024",
+          "subtitle": "B58B30 + Electric Motor Â· 3.0L Hybrid Petrol Â· 394hp Â· 2019-2024",
           "priceRange": "£5,000-£9,000",
           "cta": "Compare 45e Engine Prices",
           "engineCodes": [
             "B58B30"
           ],
-          "fuel": "Hybrid",
+          "fuel": "Electric",
           "power": "394hp",
           "years": "2019-2024",
           "image": ""
@@ -718,13 +740,13 @@
         {
           "h3": "BMW X5 50e Engine Replacement",
           "slug": "x5-50e-engine",
-          "subtitle": "B58B30 + Electric Motor · 3.0L Hybrid Petrol · 489hp · 2024-2025",
+          "subtitle": "B58B30 + Electric Motor Â· 3.0L Hybrid Petrol Â· 489hp Â· 2024-2025",
           "priceRange": "£5,500-£10,000",
           "cta": "Compare 50e Engine Prices",
           "engineCodes": [
             "B58B30"
           ],
-          "fuel": "Hybrid",
+          "fuel": "Electric",
           "power": "489hp",
           "years": "2024-2025",
           "image": ""
@@ -789,7 +811,7 @@
         ],
         "label": "Variant Directory"
       },
-      "closing": "",
+      "closing": "Not sure which variant your BMW X5 is? Enter your registration number above - we’ll identify the exact sub‑model, engine code and compatible replacement options instantly.",
       "engineGuide": {
         "tag": "Engine Codes",
         "h2": "BMW X5 Engine Codes - Full Technical Specifications & Replacement Guide",
@@ -802,36 +824,19 @@
                 "code": "M57D30",
                 "title": "3.0L Diesel",
                 "familyHeading": "M57 Series (1998-2013)",
-                "history": "The M57 launched BMW’s turbo-diesel revolution with cast-iron durability, powering the E53 X5 as the brand’s first SUV diesel. Routinely exceeds 250,000 miles with proper care.",
-                "fuel": "Diesel",
-                "size": "3.0 Litre",
-                "power": "184-286 hp",
-                "years": "2000-2008 (E53)",
-                "compatibleVariants": [
-                  "3.0d, 30d, xDrive30d (E53 pre-facelift and facelift)"
-                ],
-                "commonFailures": [
-                  "Swirl flap failure - flaps can break loose causing catastrophic engine damage (retrofit delete kits available)",
-                  "EGR cooler leaks - coolant loss, white smoke",
-                  "Injector seal failure - diesel contamination in oil"
-                ],
-                "avgRebuiltPrice": "£2,500 - £4,500",
-                "cta": "Get quotes for M57D30 BMW X5 engine replacement",
-                "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
-              },
-              {
-                "code": "M57D30TÜ",
-                "title": "3.0L Diesel",
-                "familyHeading": "M57 Series (1998-2013)",
                 "history": "The updated M57TU brought variable geometry turbocharging and improved emissions compliance while retaining the legendary cast-iron block that made the original so reliable.",
                 "fuel": "Diesel",
                 "size": "3.0 Litre",
                 "power": "218-286 hp",
                 "years": "2003-2008 (E53 facelift)",
                 "compatibleVariants": [
+                  "3.0d, 30d, xDrive30d (E53 pre-facelift and facelift)",
                   "3.0d, 30d, xDrive30d (E53 facelift)"
                 ],
                 "commonFailures": [
+                  "Swirl flap failure - flaps can break loose causing catastrophic engine damage (retrofit delete kits available)",
+                  "EGR cooler leaks - coolant loss, white smoke",
+                  "Injector seal failure - diesel contamination in oil",
                   "Swirl flap failure (same as early M57)",
                   "Turbocharger wear - typically after 150,000+ miles",
                   "Glow plug failure - cold start issues"
@@ -1119,90 +1124,9 @@
                 "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
               }
             ]
-          },
-          {
-            "name": "Hybrid / Electrified Engines",
-            "entries": [
-              {
-                "code": "B38B15 + Electric Motor",
-                "title": "1.5L Hybrid Petrol",
-                "familyHeading": "PHEV Hybrid Systems (2015-present)",
-                "history": "The X5 xDrive40e was BMW’s first plug-in hybrid X5, combining the B38 three-cylinder petrol engine with an electric motor for urban efficiency with SUV practicality.",
-                "fuel": "PHEV Petrol",
-                "size": "1.5 Litre (combustion unit)",
-                "power": "313 hp combined",
-                "years": "2015-2018 (F15)",
-                "compatibleVariants": [
-                  "xDrive40e (F15)"
-                ],
-                "commonFailures": [
-                  "High-voltage battery degradation - reduced electric range, replacement costly",
-                  "Electric motor bearing failure - whining noise from drive unit",
-                  "Charging system failure - unable to charge from mains"
-                ],
-                "avgRebuiltPrice": "£4,000 - £7,500",
-                "cta": "Get quotes for B38B15 hybrid BMW X5 engine replacement",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "B58B30 + Electric Motor",
-                "title": "3.0L Hybrid Petrol",
-                "familyHeading": "PHEV Hybrid Systems (2015-present)",
-                "history": "The X5 xDrive45e upgraded to B58 six-cylinder power combined with a more powerful electric motor, offering longer electric range and significantly better performance than the 40e it replaced.",
-                "fuel": "PHEV Petrol",
-                "size": "3.0 Litre (combustion unit)",
-                "power": "394 hp combined",
-                "years": "2019-2024 (G05)",
-                "compatibleVariants": [
-                  "xDrive45e (G05)"
-                ],
-                "commonFailures": [
-                  "Hybrid system integration failure - fault codes, reduced power"
-                ],
-                "avgRebuiltPrice": "",
-                "cta": "",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "Electric coolant pump failure",
-                "title": "hybrid system overheating",
-                "familyHeading": "PHEV Hybrid Systems (2015-present)",
-                "history": "",
-                "fuel": "",
-                "size": "",
-                "power": "",
-                "years": "",
-                "compatibleVariants": [],
-                "commonFailures": [],
-                "avgRebuiltPrice": "£5,000 - £9,000",
-                "cta": "Get quotes for B58B30 hybrid BMW X5 engine replacement",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              },
-              {
-                "code": "B58B30 + Electric Motor (Updated)",
-                "title": "3.0L Hybrid Petrol",
-                "familyHeading": "PHEV Hybrid Systems (2015-present)",
-                "history": "The facelift G05 X5 xDrive50e introduced a significantly more powerful hybrid system, boosting combined output to 489hp while maintaining the proven B58 combustion engine.",
-                "fuel": "PHEV Petrol",
-                "size": "3.0 Litre (combustion unit)",
-                "power": "489 hp combined",
-                "years": "2024-present (G05 LCI)",
-                "compatibleVariants": [
-                  "xDrive50e (G05 facelift)"
-                ],
-                "commonFailures": [
-                  "(Still emerging - based on B58 platform reliability)",
-                  "B58-standard issues (coolant expansion tank, oil filter housing gasket)",
-                  "High-voltage system integration - complex diagnostics"
-                ],
-                "avgRebuiltPrice": "£5,500 - £10,000",
-                "cta": "Get quotes for B58B30 50e hybrid BMW X5 engine replacement",
-                "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-              }
-            ]
           }
         ],
-        "closing": ""
+        "closing": "Can’t find your engine code? Enter your registration number above - we’ll instantly identify the exact unit, its technical specifications, and live replacement prices from UK BMW X5 engine specialists. Every rebuilt engine comes with a minimum 12-month unlimited mileage warranty."
       },
       "headingLines": [
         "BMW X5 Engine Replacement",
@@ -1220,11 +1144,10 @@
       "tag": "Engine Codes",
       "h2": "BMW X5 Engine Codes - Full Technical Specifications & Replacement Guide",
       "h3": "Every engine code fitted to the BMW X5 across all generations, with technical specs, compatible variants and trims, known failure points, and average rebuilt prices from UK specialists. Select any engine code to compare quotes.",
-      "closingLine": "",
+      "closingLine": "Can’t find your engine code? Enter your registration number above - we’ll instantly identify the exact unit, its technical specifications, and live replacement prices from UK BMW X5 engine specialists. Every rebuilt engine comes with a minimum 12-month unlimited mileage warranty.",
       "filters": [
         "Diesel Engines",
-        "Petrol Engines",
-        "Hybrid / Electrified Engines"
+        "Petrol Engines"
       ],
       "groups": [
         {
@@ -1238,20 +1161,8 @@
               "familyHeading": "M57 Series (1998-2013)",
               "fuel": "Diesel",
               "size": "3.0L",
-              "power": "184-286 hp",
-              "compatibleModels": "3.0d, 30d, xDrive30d (E53 pre-facelift and facelift)",
-              "avgRebuiltPrice": "£2,500 - £4,500",
-              "cta": "Get quotes for M57D30 BMW X5 engine replacement",
-              "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
-            },
-            {
-              "code": "M57D30TÜ",
-              "title": "3.0L Diesel",
-              "familyHeading": "M57 Series (1998-2013)",
-              "fuel": "Diesel",
-              "size": "3.0L",
               "power": "218-286 hp",
-              "compatibleModels": "3.0d, 30d, xDrive30d (E53 facelift)",
+              "compatibleModels": "3.0d, 30d, xDrive30d (E53 pre-facelift and facelift), 3.0d, 30d, xDrive30d (E53 facelift)",
               "avgRebuiltPrice": "£2,800 - £4,800",
               "cta": "Get quotes for M57D30TÜ BMW X5 engine replacement",
               "image": "/images/brands/land-rover/engines/land-rover-aj20d6-engine.webp"
@@ -1420,61 +1331,6 @@
               "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
             }
           ]
-        },
-        {
-          "name": "Hybrid / Electrified Engines",
-          "era": "Extracted from electrified powertrains and hybrid engine families used in BMW X5 variants.",
-          "failureNote": "Main replacement demand comes from cooling, battery-support and high-voltage control faults.",
-          "engines": [
-            {
-              "code": "B38B15 + Electric Motor",
-              "title": "1.5L Hybrid Petrol",
-              "familyHeading": "PHEV Hybrid Systems (2015-present)",
-              "fuel": "PHEV Petrol",
-              "size": "1.5L (combustion unit)",
-              "power": "313 hp combined",
-              "compatibleModels": "xDrive40e (F15)",
-              "avgRebuiltPrice": "£4,000 - £7,500",
-              "cta": "Get quotes for B38B15 hybrid BMW X5 engine replacement",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "B58B30 + Electric Motor",
-              "title": "3.0L Hybrid Petrol",
-              "familyHeading": "PHEV Hybrid Systems (2015-present)",
-              "fuel": "PHEV Petrol",
-              "size": "3.0L (combustion unit)",
-              "power": "394 hp combined",
-              "compatibleModels": "xDrive45e (G05)",
-              "avgRebuiltPrice": "",
-              "cta": "",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "Electric coolant pump failure",
-              "title": "hybrid system overheating",
-              "familyHeading": "PHEV Hybrid Systems (2015-present)",
-              "fuel": "",
-              "size": "",
-              "power": "",
-              "compatibleModels": "",
-              "avgRebuiltPrice": "£5,000 - £9,000",
-              "cta": "Get quotes for B58B30 hybrid BMW X5 engine replacement",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            },
-            {
-              "code": "B58B30 + Electric Motor (Updated)",
-              "title": "3.0L Hybrid Petrol",
-              "familyHeading": "PHEV Hybrid Systems (2015-present)",
-              "fuel": "PHEV Petrol",
-              "size": "3.0L (combustion unit)",
-              "power": "489 hp combined",
-              "compatibleModels": "xDrive50e (G05 facelift)",
-              "avgRebuiltPrice": "£5,500 - £10,000",
-              "cta": "Get quotes for B58B30 50e hybrid BMW X5 engine replacement",
-              "image": "/images/brands/land-rover/engines/land-rover-508pn-engine.webp"
-            }
-          ]
         }
       ],
       "headingLines": [
@@ -1502,7 +1358,7 @@
     "commonProblems": {
       "tag": "Common Problems",
       "h2": "BMW X5 Engine Problems - What It Costs to Fix & When Replacement Makes Sense",
-      "h3": "",
+      "h3": "The BMW X5 spans five generations, with diesel variants dominating UK roads and replacement demand. The N57 diesel engine family (E70 and F15 generations) drives the highest volume of failure-related searches, particularly timing chain issues that can lead to complete engine seizure. Every rebuilt engine supplied through EnginesMarket includes upgraded internal components designed to address the original failure point - plus a minimum 12-month unlimited mileage warranty. Below we break down the most common X5 engine failures, what you'll pay at a dealer versus a specialist, and when replacement is the only sensible answer.",
       "problems": [
         {
           "group": "BMW X5 N57 Timing Chain Failure",
@@ -2698,7 +2554,20 @@
       "tag": "Why Choose Us",
       "h2": "Why UK BMW X5 Owners Trust EngineMarket",
       "intro": "Join thousands of UK drivers who compare BMW X5 engine prices through our network of trusted specialists - every rebuilt and reconditioned unit backed by a minimum 12-month unlimited mileage warranty and nationwide delivery.",
-      "points": [],
+      "points": [
+        {
+          "title": "Trusted BMW X5 Engine Suppliers",
+          "description": "Every garage and engine rebuilder in our network is vetted, rated, and reviewed by real BMW X5 owners."
+        },
+        {
+          "title": "Compare BMW X5 Engine Replacement Companies",
+          "description": "See prices, warranty terms, and supply & fit options side-by-side before you commit."
+        },
+        {
+          "title": "UK Engine Replacement Services for BMW X5",
+          "description": "Covering every variant from 30d to X5 M, with supply-only or full supply & fit available nationwide."
+        }
+      ],
       "finalText": "Find the best BMW X5 engine replacement UK drivers rely on. Compare prices from trusted specialists today and get back on the road with confidence.",
       "buttonText": "Compare BMW X5 Engine Prices Now →",
       "secondaryAction": {

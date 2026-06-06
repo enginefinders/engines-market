@@ -3943,6 +3943,69 @@ def parse_trust_cta_flexible(lines: Sequence[str]) -> Dict[str, Any]:
     return parsed
 
 
+def parse_trust_cta(lines: Sequence[str]) -> Dict[str, Any]:
+    tag = extract_label_value(lines, "Tag") or "Why Choose Us"
+    h2 = extract_label_value(lines, "H2", "Section H2") or ""
+    intro = extract_label_value(lines, "Intro", "Paragraph", "Subheading", "H3") or ""
+    final_text = extract_label_value(lines, "Final CTA sentence", "Final CTA", "Final text") or ""
+    button_text = extract_label_value(lines, "CTA Button text", "CTA Button", "Button text") or ""
+    trust_points = extract_block_after_label(lines, "Trust Points", "Points")
+    points: List[Dict[str, str]] = []
+
+    for line in trust_points:
+        clean = normalize_line(line)
+        split = re.split(r"\s[-â€“â€”]\s", clean, maxsplit=1)
+        if len(split) != 2:
+            continue
+        left, right = split
+        left = left.strip()
+        right = right.strip()
+        if not left or not right:
+            continue
+        points.append({"title": left, "description": right})
+
+    return {
+        "tag": tag,
+        "h2": h2,
+        "intro": intro,
+        "points": points,
+        "finalText": final_text,
+        "buttonText": button_text,
+    }
+
+
+def parse_trust_cta_flexible(lines: Sequence[str]) -> Dict[str, Any]:
+    parsed = parse_trust_cta(lines)
+    if parsed.get("points"):
+        return parsed
+
+    points: List[Dict[str, str]] = []
+    for raw in lines:
+        clean = normalize_line(raw)
+        if not clean or looks_like_label(raw):
+            continue
+
+        stripped = raw.strip()
+        if not stripped.startswith(("**", "__", "- ", "* ", "+ ", "•")):
+            continue
+
+        split = re.split(r"\s*[-â€“â€”]\s*", clean, maxsplit=1)
+        if len(split) != 2:
+            continue
+
+        left, right = split
+        left = left.strip()
+        right = right.strip()
+        if not left or not right:
+            continue
+
+        points.append({"title": left, "description": right})
+
+    if points:
+        parsed["points"] = points
+    return parsed
+
+
 def merge_missing_how_it_works(
     extracted: Dict[str, Any],
     brand_json: Optional[Dict[str, Any]],
@@ -4390,24 +4453,6 @@ def synthesize_structural_defaults(data: Dict[str, Any]) -> None:
                 f"Not sure which year your {model_name} was built? Enter your registration number above and we'll identify the exact model year, engine code and compatible replacement options instantly."
             )
 
-    trust_cta = sections.get("trustCta", {})
-    if (trust_cta.get("intro") or trust_cta.get("finalText") or trust_cta.get("buttonText")) and not trust_cta.get("points"):
-        trust_cta["points"] = [
-            {
-                "title": f"Trusted {model_name} Engine Suppliers",
-                "description": f"Every garage and engine rebuilder in our network is vetted for {model_name} replacement work.",
-            },
-            {
-                "title": f"Compare {model_name} Engine Prices",
-                "description": "See warranty terms, stock options and supply-only or supply-and-fit pricing side by side before you commit.",
-            },
-            {
-                "title": f"UK-Wide {model_name} Coverage",
-                "description": "Nationwide delivery and specialist fitting support are available for matching replacement units.",
-            },
-        ]
-
-
 def variant_card_has_intentional_nonstandard_shape(card: Dict[str, Any]) -> bool:
     combined = normalize_key(f"{card.get('h3', '')} {card.get('subtitle', '')} {card.get('cta', '')}")
     if not combined:
@@ -4756,8 +4801,13 @@ def parse_document(
 
     if section_has_content(variant_lines) and not data["sections"]["variantCoverage"]["cards"]:
         warnings.append("No variant coverage cards were parsed.")
-    if section_has_content(engine_code_lines) and not data["sections"]["variantCoverage"]["engineGuide"]["families"]:
-        warnings.append("No detailed engine guide families were parsed.")
+    if section_has_content(engine_code_lines):
+        detailed_guide_families = data["sections"]["variantCoverage"]["engineGuide"]["families"]
+        engine_code_items = data["sections"].get("engineCodes", {}).get("items", [])
+        fuel_type_items = data["sections"].get("fuelTypes", {}).get("items", [])
+        has_fuel_families = any(item.get("families") for item in fuel_type_items)
+        if not detailed_guide_families and not engine_code_items and not has_fuel_families:
+            warnings.append("No detailed engine guide families were parsed.")
     if section_has_content(year_lines) and not data["sections"]["engineYears"]["years"]:
         warnings.append("No engine-year timeline blocks were parsed.")
     if section_has_content(faq_lines) and not data["sections"]["faq"]["items"]:

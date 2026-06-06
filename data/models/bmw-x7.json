@@ -15,13 +15,15 @@
     "canonical": "/bmw/x7"
   },
   "assets": {
-    "heroBg": "/images/brands/bmw/models/bmw-x7-model-card.png",
+    "mainImage": "/images/brands/bmw/models/bmw-x6-model-card.png",
+    "smallImage": "/images/brands/bmw/models/bmw-x6-model-card.png",
+    "heroBg": "/images/brands/bmw/models/bmw-x6-model-card.png",
     "howItWorksBg": "/images/brands/bmw/brand/bmw-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/bmw/brand/bmw-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/bmw/brand/bmw-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/bmw/brand/bmw-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/bmw/brand/bmw-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/bmw/models/bmw-x7-model-card.png"
+    "ctaImage": "/images/brands/bmw/models/bmw-x6-model-card.png"
   },
   "sections": {
     "hero": {
@@ -169,6 +171,20 @@
           "Nationwide Delivery",
           "Trusted UK Suppliers"
         ]
+      }
+    },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "",
+      "description": "",
+      "cards": [],
+      "headingLines": [],
+      "imageAlt": "BMW X7 engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
       }
     },
     "liveMarketPrices": {
@@ -449,8 +465,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/bmw/models/live-feed-bmw-x7.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",
@@ -535,7 +550,7 @@
         {
           "h3": "BMW X7 xDrive30d Engine Replacement",
           "slug": "x7-xdrive30d-engine",
-          "subtitle": "B57D30 3.0L Diesel · 265hp · 2018-2024",
+          "subtitle": "B57D30 3.0L Diesel Â· 265hp Â· 2018-2024",
           "priceRange": "£2,800-£4,500",
           "cta": "Compare xDrive30d Engine Prices",
           "engineCodes": [
@@ -549,7 +564,7 @@
         {
           "h3": "BMW X7 xDrive40d Engine Replacement",
           "slug": "x7-xdrive40d-engine",
-          "subtitle": "B57D30T0 3.0L Diesel · 340hp · 2018-2022",
+          "subtitle": "B57D30T0 3.0L Diesel Â· 340hp Â· 2018-2022",
           "priceRange": "£3,200-£5,100",
           "cta": "Compare xDrive40d Engine Prices",
           "engineCodes": [
@@ -563,7 +578,7 @@
         {
           "h3": "BMW X7 M50d Engine Replacement",
           "slug": "x7-m50d-engine",
-          "subtitle": "B57D30 3.0L Diesel · 400hp · 2018-2022",
+          "subtitle": "B57D30 3.0L Diesel Â· 400hp Â· 2018-2022",
           "priceRange": "£3,800-£5,800",
           "cta": "Compare M50d Engine Prices",
           "engineCodes": [
@@ -577,7 +592,7 @@
         {
           "h3": "BMW X7 xDrive30d M Sport Engine Replacement",
           "slug": "x7-xdrive30d-m-sport-engine",
-          "subtitle": "B57D30 3.0L Diesel · 265hp · 2018-2024",
+          "subtitle": "B57D30 3.0L Diesel Â· 265hp Â· 2018-2024",
           "priceRange": "£2,900-£4,600",
           "cta": "Compare xDrive30d M Sport Engine Prices",
           "engineCodes": [
@@ -591,7 +606,7 @@
         {
           "h3": "BMW X7 xDrive40i Engine Replacement",
           "slug": "x7-xdrive40i-engine",
-          "subtitle": "B58B30 3.0L Petrol · 340hp · 2019-2024",
+          "subtitle": "B58B30 3.0L Petrol Â· 340hp Â· 2019-2024",
           "priceRange": "£3,500-£5,500",
           "cta": "Compare xDrive40i Engine Prices",
           "engineCodes": [
@@ -605,7 +620,7 @@
         {
           "h3": "BMW X7 xDrive50i Engine Replacement",
           "slug": "x7-xdrive50i-engine",
-          "subtitle": "N63B44T3 4.4L Petrol · 530hp · 2018-2022",
+          "subtitle": "N63B44T3 4.4L Petrol Â· 530hp Â· 2018-2022",
           "priceRange": "£5,800-£9,200",
           "cta": "Compare xDrive50i Engine Prices",
           "engineCodes": [
@@ -619,7 +634,7 @@
         {
           "h3": "BMW X7 xDrive40i M Sport Engine Replacement",
           "slug": "x7-xdrive40i-m-sport-engine",
-          "subtitle": "B58B30 3.0L Petrol · 340hp · 2019-2024",
+          "subtitle": "B58B30 3.0L Petrol Â· 340hp Â· 2019-2024",
           "priceRange": "£3,600-£5,600",
           "cta": "Compare xDrive40i M Sport Engine Prices",
           "engineCodes": [
@@ -633,7 +648,7 @@
         {
           "h3": "BMW X7 xDrive45e Engine Replacement",
           "slug": "x7-xdrive45e-engine",
-          "subtitle": "B58B30 3.0L Hybrid Petrol · 394hp · 2020-2024",
+          "subtitle": "B58B30 3.0L Hybrid Petrol · 394hp · 2020-2024 · Rebuilt: £3,800-£5,600",
           "priceRange": "£3,800-£5,600",
           "cta": "Compare xDrive45e Engine Prices",
           "engineCodes": [
@@ -647,7 +662,7 @@
         {
           "h3": "BMW X7 M60i Engine Replacement",
           "slug": "x7-m60i-engine",
-          "subtitle": "S68B44 4.4L Petrol · 523hp · 2022-2024",
+          "subtitle": "S68B44 4.4L Petrol Â· 523hp Â· 2022-2024",
           "priceRange": "£7,500-£12,000",
           "cta": "Compare M60i Engine Prices",
           "engineCodes": [
@@ -661,7 +676,7 @@
         {
           "h3": "BMW X7 Alpina XB7 Engine Replacement",
           "slug": "x7-alpina-xb7-engine",
-          "subtitle": "S68B44 4.4L Petrol · 630hp · 2020-2024",
+          "subtitle": "S68B44 4.4L Petrol Â· 630hp Â· 2020-2024",
           "priceRange": "£8,500-£13,500",
           "cta": "Compare Alpina XB7 Engine Prices",
           "engineCodes": [
@@ -675,7 +690,7 @@
         {
           "h3": "BMW X7 xDrive30d LCI Engine Replacement",
           "slug": "x7-xdrive30d-lci-engine",
-          "subtitle": "B57D30 3.0L MHEV Diesel · 286hp · 2023-2024",
+          "subtitle": "B57D30 3.0L MHEV Diesel Â· 286hp Â· 2023-2024",
           "priceRange": "£3,100-£4,700",
           "cta": "Compare xDrive30d LCI Engine Prices",
           "engineCodes": [
@@ -689,7 +704,7 @@
         {
           "h3": "BMW X7 xDrive40i LCI Engine Replacement",
           "slug": "x7-xdrive40i-lci-engine",
-          "subtitle": "B58B30M2 3.0L MHEV Petrol · 380hp · 2023-2024",
+          "subtitle": "B58B30M2 3.0L MHEV Petrol Â· 380hp Â· 2023-2024",
           "priceRange": "£3,900-£5,800",
           "cta": "Compare xDrive40i LCI Engine Prices",
           "engineCodes": [
@@ -1368,7 +1383,7 @@
           "cta": "Find BMW X7 engine supply & fit deals"
         }
       ],
-      "closing": "",
+      "closing": "All engine types include a minimum 12‑month unlimited mileage warranty when sourced through EngineMarket. Prices are typical UK market ranges based on historical quote data from our network and depend on exact engine code, variant, mileage and supplier. Use our free comparison tool above - enter your registration to get tailored quotes for your specific BMW X7 within hours.",
       "headingLines": [
         "BMW X7 Engine Types",
         "Options, Costs & What to Expect"
@@ -1908,7 +1923,7 @@
     "trustCta": {
       "tag": "Why Choose Us",
       "h2": "Why UK BMW X7 Owners Trust EngineMarket",
-      "intro": "",
+      "intro": "Join thousands of UK drivers who compare BMW X7 engine prices through our network of trusted specialists - every rebuilt and reconditioned unit backed by a minimum 12‑month unlimited mileage warranty and nationwide delivery.",
       "points": [
         {
           "title": "Trusted BMW X7 Engine Suppliers",

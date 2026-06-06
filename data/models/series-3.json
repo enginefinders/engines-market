@@ -15,6 +15,8 @@
     "canonical": "/bmw/3-series"
   },
   "assets": {
+    "mainImage": "/images/brands/bmw/models/bmw-3-series-model-card.png",
+    "smallImage": "/images/brands/bmw/models/bmw-3-series-model-card.png",
     "heroBg": "/images/brands/bmw/models/bmw-3-series-model-card.png",
     "howItWorksBg": "/images/brands/bmw/brand/bmw-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/bmw/brand/bmw-engine-codes-bg.webp",
@@ -169,6 +171,20 @@
           "Nationwide Delivery",
           "Trusted UK Suppliers"
         ]
+      }
+    },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "",
+      "description": "",
+      "cards": [],
+      "headingLines": [],
+      "imageAlt": "BMW 3 Series engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
       }
     },
     "liveMarketPrices": {
@@ -449,8 +465,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/bmw/models/live-feed-bmw-3-series.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",
@@ -535,7 +550,7 @@
         {
           "h3": "BMW 3 Series 318d Engine Replacement",
           "slug": "3-series-318d-engine",
-          "subtitle": "N47D20/B47D20 2.0L Diesel · 143-150hp · 2005-2019",
+          "subtitle": "N47D20/B47D20 2.0L Diesel Â· 143-150hp Â· 2005-2019",
           "priceRange": "£1,200-£3,200",
           "cta": "Compare 318d Engine Prices",
           "engineCodes": [
@@ -550,7 +565,7 @@
         {
           "h3": "BMW 3 Series 320d Engine Replacement",
           "slug": "3-series-320d-engine",
-          "subtitle": "N47D20/B47D20 2.0L Diesel · 163-190hp · 2005-2019",
+          "subtitle": "N47D20/B47D20 2.0L Diesel Â· 163-190hp Â· 2005-2019",
           "priceRange": "£1,400-£4,200",
           "cta": "Compare 320d Engine Prices",
           "engineCodes": [
@@ -565,7 +580,7 @@
         {
           "h3": "BMW 3 Series 330d Engine Replacement",
           "slug": "3-series-330d-engine",
-          "subtitle": "N57D30/B57D30 3.0L Diesel · 245-286hp · 2005-2019",
+          "subtitle": "N57D30/B57D30 3.0L Diesel Â· 245-286hp Â· 2005-2019",
           "priceRange": "£2,200-£5,500",
           "cta": "Compare 330d Engine Prices",
           "engineCodes": [
@@ -580,7 +595,7 @@
         {
           "h3": "BMW 3 Series 325d Engine Replacement",
           "slug": "3-series-325d-engine",
-          "subtitle": "N57D30 3.0L Diesel · 204-218hp · 2010-2019",
+          "subtitle": "N57D30 3.0L Diesel Â· 204-218hp Â· 2010-2019",
           "priceRange": "£2,000-£4,800",
           "cta": "Compare 325d Engine Prices",
           "engineCodes": [
@@ -594,7 +609,7 @@
         {
           "h3": "BMW 3 Series 318i Engine Replacement",
           "slug": "3-series-318i-engine",
-          "subtitle": "N43B20/N46B20 2.0L Petrol · 129-143hp · 2005-2013",
+          "subtitle": "N43B20/N46B20 2.0L Petrol Â· 129-143hp Â· 2005-2013",
           "priceRange": "£1,100-£2,800",
           "cta": "Compare 318i Engine Prices",
           "engineCodes": [
@@ -609,7 +624,7 @@
         {
           "h3": "BMW 3 Series 320i Engine Replacement",
           "slug": "3-series-320i-engine",
-          "subtitle": "N20B20/B48B20 2.0L Petrol · 184hp · 2005-2019",
+          "subtitle": "N20B20/B48B20 2.0L Petrol Â· 184hp Â· 2005-2019",
           "priceRange": "£1,400-£3,800",
           "cta": "Compare 320i Engine Prices",
           "engineCodes": [
@@ -624,7 +639,7 @@
         {
           "h3": "BMW 3 Series 328i Engine Replacement",
           "slug": "3-series-328i-engine",
-          "subtitle": "N20B20 2.0L Petrol · 245hp · 2012-2016",
+          "subtitle": "N20B20 2.0L Petrol Â· 245hp Â· 2012-2016",
           "priceRange": "£1,500-£4,000",
           "cta": "Compare 328i Engine Prices",
           "engineCodes": [
@@ -638,7 +653,7 @@
         {
           "h3": "BMW 3 Series 330i Engine Replacement",
           "slug": "3-series-330i-engine",
-          "subtitle": "B48B20 2.0L Petrol · 252hp · 2015-2019",
+          "subtitle": "B48B20 2.0L Petrol Â· 252hp Â· 2015-2019",
           "priceRange": "£1,800-£4,200",
           "cta": "Compare 330i Engine Prices",
           "engineCodes": [
@@ -652,7 +667,7 @@
         {
           "h3": "BMW 3 Series 335i Engine Replacement",
           "slug": "3-series-335i-engine",
-          "subtitle": "N54B30/N55B30 3.0L Petrol · 306hp · 2006-2013",
+          "subtitle": "N54B30/N55B30 3.0L Petrol Â· 306hp Â· 2006-2013",
           "priceRange": "£3,200-£6,500",
           "cta": "Compare 335i Engine Prices",
           "engineCodes": [
@@ -667,7 +682,7 @@
         {
           "h3": "BMW 3 Series 340i Engine Replacement",
           "slug": "3-series-340i-engine",
-          "subtitle": "B58B30 3.0L Petrol · 326hp · 2015-2019",
+          "subtitle": "B58B30 3.0L Petrol Â· 326hp Â· 2015-2019",
           "priceRange": "£3,500-£7,500",
           "cta": "Compare 340i Engine Prices",
           "engineCodes": [
@@ -681,7 +696,7 @@
         {
           "h3": "BMW 3 Series 330e Engine Replacement",
           "slug": "3-series-330e-engine",
-          "subtitle": "B48B20 Hybrid 2.0L Petrol-Electric · 252hp combined · 2016-2019",
+          "subtitle": "B48B20 Hybrid 2.0L Petrol-Electric · 252hp combined · 2016-2019 · Rebuilt: £2,500-£5,200",
           "priceRange": "£2,500-£5,200",
           "cta": "Compare 330e Engine Prices",
           "engineCodes": [
@@ -695,7 +710,7 @@
         {
           "h3": "BMW 3 Series M3 Engine Replacement",
           "slug": "3-series-m3-engine",
-          "subtitle": "S54B30/S55B30/S58B30 3.0-4.0L Petrol · 333-510hp · 2001-2024",
+          "subtitle": "S54B30/S55B30/S58B30 3.0-4.0L Petrol Â· 333-510hp Â· 2001-2024",
           "priceRange": "£5,000-£12,000",
           "cta": "Compare M3 Engine Prices",
           "engineCodes": [
@@ -1749,7 +1764,7 @@
     "fuelTypes": {
       "tag": "BMW 3 Series Engines Fuel Type",
       "h2": "BMW 3 Series Engines by Fuel Type",
-      "intro": "",
+      "intro": "Choose your BMW 3 Series engine by fuel type to compare realistic replacement prices, known issues, and compatible UK supply options - from early E46 diesel units to the latest G20 hybrid powertrains.",
       "items": [
         {
           "title": "BMW 3 Series Diesel Engines",

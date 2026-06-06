@@ -15,6 +15,8 @@
     "canonical": "/bmw/2002"
   },
   "assets": {
+    "mainImage": "/images/brands/bmw/models/bmw-2002-model-card.png",
+    "smallImage": "/images/brands/bmw/models/bmw-2002-model-card.png",
     "heroBg": "/images/brands/bmw/models/bmw-2002-model-card.png",
     "howItWorksBg": "/images/brands/bmw/brand/bmw-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/bmw/brand/bmw-engine-codes-bg.webp",
@@ -169,6 +171,20 @@
           "Nationwide Delivery",
           "Trusted UK Suppliers"
         ]
+      }
+    },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "",
+      "description": "",
+      "cards": [],
+      "headingLines": [],
+      "imageAlt": "BMW 2002 engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
       }
     },
     "liveMarketPrices": {
@@ -457,8 +473,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/bmw/models/live-feed-bmw-2002.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",
@@ -543,11 +558,11 @@
         {
           "h3": "BMW 2002 2002 Engine Replacement",
           "slug": "2002-2002-engine",
-          "subtitle": "M10 B20 2.0L Petrol · 100-130hp · 1968-1976",
+          "subtitle": "M10 B20 2.0L Petrol Â· 100-130hp Â· 1968-1976",
           "priceRange": "£2,800-£4,500",
           "cta": "Compare 2002 Engine Prices",
           "engineCodes": [
-            "M10"
+            "M10 B20"
           ],
           "fuel": "Petrol",
           "power": "100-130hp",
@@ -557,11 +572,11 @@
         {
           "h3": "BMW 2002 1602 Engine Replacement",
           "slug": "2002-1602-engine",
-          "subtitle": "M10 B16 1.6L Petrol · 85-105hp · 1968-1975",
+          "subtitle": "M10 B16 1.6L Petrol Â· 85-105hp Â· 1968-1975",
           "priceRange": "£2,500-£4,200",
           "cta": "Compare 1602 Engine Prices",
           "engineCodes": [
-            "M10"
+            "M10 B16"
           ],
           "fuel": "Petrol",
           "power": "85-105hp",
@@ -571,11 +586,11 @@
         {
           "h3": "BMW 2002 1802 Engine Replacement",
           "slug": "2002-1802-engine",
-          "subtitle": "M10 B18 1.8L Petrol · 90-110hp · 1971-1975",
+          "subtitle": "M10 B18 1.8L Petrol Â· 90-110hp Â· 1971-1975",
           "priceRange": "£2,600-£4,400",
           "cta": "Compare 1802 Engine Prices",
           "engineCodes": [
-            "M10"
+            "M10 B18"
           ],
           "fuel": "Petrol",
           "power": "90-110hp",
@@ -585,11 +600,11 @@
         {
           "h3": "BMW 2002 1502 Engine Replacement",
           "slug": "2002-1502-engine",
-          "subtitle": "M10 B15 1.5L Petrol · 75-80hp · 1975-1977",
+          "subtitle": "M10 B15 1.5L Petrol Â· 75-80hp Â· 1975-1977",
           "priceRange": "£2,400-£4,000",
           "cta": "Compare 1502 Engine Prices",
           "engineCodes": [
-            "M10"
+            "M10 B15"
           ],
           "fuel": "Petrol",
           "power": "75-80hp",
@@ -599,11 +614,11 @@
         {
           "h3": "BMW 2002 2002 tii Engine Replacement",
           "slug": "2002-2002-tii-engine",
-          "subtitle": "M10 B20 TII 2.0L Petrol · 130hp · 1971-1975",
+          "subtitle": "M10 B20 TII 2.0L Petrol Â· 130hp Â· 1971-1975",
           "priceRange": "£4,200-£7,500",
           "cta": "Compare 2002 tii Engine Prices",
           "engineCodes": [
-            "M10"
+            "M10 B20 TII"
           ],
           "fuel": "Petrol",
           "power": "130hp",
@@ -613,11 +628,11 @@
         {
           "h3": "BMW 2002 2002 TI Engine Replacement",
           "slug": "2002-2002-ti-engine",
-          "subtitle": "M10 B20 TI 2.0L Petrol · 120hp · 1969-1971",
+          "subtitle": "M10 B20 TI 2.0L Petrol Â· 120hp Â· 1969-1971",
           "priceRange": "£3,200-£5,500",
           "cta": "Compare 2002 TI Engine Prices",
           "engineCodes": [
-            "M10"
+            "M10 B20 TI"
           ],
           "fuel": "Petrol",
           "power": "120hp",
@@ -627,11 +642,11 @@
         {
           "h3": "BMW 2002 2002 Turbo Engine Replacement",
           "slug": "2002-2002-turbo-engine",
-          "subtitle": "M10 B20 TURBO 2.0L Petrol · 170hp · 1973-1974",
+          "subtitle": "M10 B20 TURBO 2.0L Petrol Â· 170hp Â· 1973-1974",
           "priceRange": "£6,500-£12,000",
           "cta": "Compare 2002 Turbo Engine Prices",
           "engineCodes": [
-            "M10"
+            "M10 B20 TURBO"
           ],
           "fuel": "Petrol",
           "power": "170hp",
@@ -641,11 +656,11 @@
         {
           "h3": "BMW 2002 2002 High Compression Engine Replacement",
           "slug": "2002-2002-high-compression-engine",
-          "subtitle": "M10 B20 HC 2.0L Petrol · 125-140hp · 1968-1976",
+          "subtitle": "M10 B20 HC 2.0L Petrol Â· 125-140hp Â· 1968-1976",
           "priceRange": "£3,500-£6,000",
           "cta": "Compare 2002 High Compression Engine Prices",
           "engineCodes": [
-            "M10"
+            "M10 B20 HC"
           ],
           "fuel": "Petrol",
           "power": "125-140hp",
@@ -655,11 +670,11 @@
         {
           "h3": "BMW 2002 2002 Alpina Engine Replacement",
           "slug": "2002-2002-alpina-engine",
-          "subtitle": "M10 B20 Alpina 2.0L Petrol · 140-190hp · 1970-1975",
+          "subtitle": "M10 B20 Alpina 2.0L Petrol · 140-190hp · 1970-1975 · Rebuilt: £8,000-£15,000",
           "priceRange": "£8,000-£15,000",
           "cta": "Compare 2002 Alpina Engine Prices",
           "engineCodes": [
-            "M10"
+            "M10 B20 Alpina"
           ],
           "fuel": "Petrol",
           "power": "140-190hp",
@@ -669,11 +684,11 @@
         {
           "h3": "BMW 2002 2002 Convertible Engine Replacement",
           "slug": "2002-2002-convertible-engine",
-          "subtitle": "M10 B20 2.0L Petrol · 100-130hp · 1968-1976",
+          "subtitle": "M10 B20 2.0L Petrol Â· 100-130hp Â· 1968-1976",
           "priceRange": "£3,000-£5,000",
           "cta": "Compare 2002 Convertible Engine Prices",
           "engineCodes": [
-            "M10"
+            "M10 B20"
           ],
           "fuel": "Petrol",
           "power": "100-130hp",
@@ -683,11 +698,11 @@
         {
           "h3": "BMW 2002 2002 Touring Engine Replacement",
           "slug": "2002-2002-touring-engine",
-          "subtitle": "M10 B20 2.0L Petrol · 100-130hp · 1968-1976",
+          "subtitle": "M10 B20 2.0L Petrol Â· 100-130hp Â· 1968-1976",
           "priceRange": "£3,000-£5,000",
           "cta": "Compare 2002 Touring Engine Prices",
           "engineCodes": [
-            "M10"
+            "M10 B20"
           ],
           "fuel": "Petrol",
           "power": "100-130hp",
@@ -697,11 +712,11 @@
         {
           "h3": "BMW 2002 2002 Race Engine Replacement",
           "slug": "2002-2002-race-engine",
-          "subtitle": "M10 B20 Race 2.0L Petrol · 150-200+hp · 1968-1976",
+          "subtitle": "M10 B20 Race 2.0L Petrol · 150-200+hp · 1968-1976 · Rebuilt: £7,500-£18,000",
           "priceRange": "£7,500-£18,000",
           "cta": "Compare 2002 Race Engine Prices",
           "engineCodes": [
-            "M10"
+            "M10 B20 Race"
           ],
           "fuel": "Petrol",
           "power": "",
@@ -1297,7 +1312,7 @@
     "engineSizes": {
       "tag": "Engine Sizes",
       "h2": "BMW 2002 Engines by Size - Find the Right Displacement for Your Variant",
-      "intro": "",
+      "intro": "Every petrol displacement officially fitted to the BMW 2002 is detailed below, with compatible M10 engine codes, production years and known failure points to help you identify the correct replacement unit.",
       "groups": [
         {
           "title": "BMW 2002 Petrol Engine Sizes",
@@ -1402,7 +1417,7 @@
     "fuelTypes": {
       "tag": "BMW 2002 Engines Fuel Type",
       "h2": "BMW 2002 Engines by Fuel Type",
-      "intro": "",
+      "intro": "Choose your BMW 2002 engine by fuel type to compare realistic replacement prices, known issues, and compatible UK supply options - from the economical 1502 to the legendary 2002 Turbo.",
       "items": [
         {
           "title": "BMW 2002 Petrol Engines",

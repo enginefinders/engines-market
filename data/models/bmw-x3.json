@@ -15,6 +15,8 @@
     "canonical": "/bmw/x3"
   },
   "assets": {
+    "mainImage": "/images/brands/bmw/models/bmw-x3-model-card.png",
+    "smallImage": "/images/brands/bmw/models/bmw-x3-model-card.png",
     "heroBg": "/images/brands/bmw/models/bmw-x3-model-card.png",
     "howItWorksBg": "/images/brands/bmw/brand/bmw-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/bmw/brand/bmw-engine-codes-bg.webp",
@@ -169,6 +171,20 @@
           "Nationwide Delivery",
           "Trusted UK Suppliers"
         ]
+      }
+    },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "",
+      "description": "",
+      "cards": [],
+      "headingLines": [],
+      "imageAlt": "BMW X3 engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
       }
     },
     "liveMarketPrices": {
@@ -449,8 +465,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/bmw/models/live-feed-bmw-x3.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",
@@ -535,7 +550,7 @@
         {
           "h3": "BMW X3 sDrive18d Engine Replacement",
           "slug": "x3-sdrive18d-engine",
-          "subtitle": "N47D20 2.0L Diesel · 143hp · 2010-2015",
+          "subtitle": "N47D20 2.0L Diesel Â· 143hp Â· 2010-2015",
           "priceRange": "£1,400-£2,800",
           "cta": "Compare sDrive18d Engine Prices",
           "engineCodes": [
@@ -549,11 +564,12 @@
         {
           "h3": "BMW X3 xDrive20d Engine Replacement",
           "slug": "x3-xdrive20d-engine",
-          "subtitle": "N47D20C / B47D20 2.0L Diesel · 184-190hp · 2008-2021",
+          "subtitle": "N47D20C / B47D20 2.0L Diesel Â· 184-190hp Â· 2008-2021",
           "priceRange": "£1,400-£3,200",
           "cta": "Compare xDrive20d Engine Prices",
           "engineCodes": [
-            "N47D20C"
+            "N47D20C",
+            "B47D20"
           ],
           "fuel": "Diesel",
           "power": "184-190hp",
@@ -563,11 +579,12 @@
         {
           "h3": "BMW X3 xDrive30d Engine Replacement",
           "slug": "x3-xdrive30d-engine",
-          "subtitle": "M57D30 / N57D30 3.0L Diesel · 258-286hp · 2003-2019",
+          "subtitle": "M57D30 / N57D30 3.0L Diesel Â· 258-286hp Â· 2003-2019",
           "priceRange": "£1,800-£4,000",
           "cta": "Compare xDrive30d Engine Prices",
           "engineCodes": [
-            "M57D30"
+            "M57D30",
+            "N57D30"
           ],
           "fuel": "Diesel",
           "power": "258-286hp",
@@ -577,7 +594,7 @@
         {
           "h3": "BMW X3 xDrive35d Engine Replacement",
           "slug": "x3-xdrive35d-engine",
-          "subtitle": "N57D30 3.0L Diesel · 313hp · 2010-2017",
+          "subtitle": "N57D30 3.0L Diesel Â· 313hp Â· 2010-2017",
           "priceRange": "£2,200-£4,200",
           "cta": "Compare xDrive35d Engine Prices",
           "engineCodes": [
@@ -591,7 +608,7 @@
         {
           "h3": "BMW X3 xDrive20i Engine Replacement",
           "slug": "x3-xdrive20i-engine",
-          "subtitle": "B48B20 2.0L Petrol · 184hp · 2017-2024",
+          "subtitle": "B48B20 2.0L Petrol Â· 184hp Â· 2017-2024",
           "priceRange": "£1,800-£3,800",
           "cta": "Compare xDrive20i Engine Prices",
           "engineCodes": [
@@ -605,11 +622,12 @@
         {
           "h3": "BMW X3 xDrive28i Engine Replacement",
           "slug": "x3-xdrive28i-engine",
-          "subtitle": "N52B30 / N20B20 3.0L / 2.0L Petrol · 231-245hp · 2006-2015",
+          "subtitle": "N52B30 / N20B20 3.0L / 2.0L Petrol Â· 231-245hp Â· 2006-2015",
           "priceRange": "£1,500-£3,000",
           "cta": "Compare xDrive28i Engine Prices",
           "engineCodes": [
-            "N52B30"
+            "N52B30",
+            "N20B20"
           ],
           "fuel": "Petrol",
           "power": "231-245hp",
@@ -619,7 +637,7 @@
         {
           "h3": "BMW X3 xDrive35i Engine Replacement",
           "slug": "x3-xdrive35i-engine",
-          "subtitle": "N55B30 3.0L Petrol · 306hp · 2010-2017",
+          "subtitle": "N55B30 3.0L Petrol Â· 306hp Â· 2010-2017",
           "priceRange": "£3,000-£6,000",
           "cta": "Compare xDrive35i Engine Prices",
           "engineCodes": [
@@ -633,7 +651,7 @@
         {
           "h3": "BMW X3 M40i Engine Replacement",
           "slug": "x3-m40i-engine",
-          "subtitle": "B58B30 3.0L Petrol · 355-382hp · 2018-2024",
+          "subtitle": "B58B30 3.0L Petrol Â· 355-382hp Â· 2018-2024",
           "priceRange": "£4,000-£7,000",
           "cta": "Compare X3 M40i Engine Prices",
           "engineCodes": [
@@ -647,7 +665,7 @@
         {
           "h3": "BMW X3 M Competition Engine Replacement",
           "slug": "x3-m-competition-engine",
-          "subtitle": "S58B30 3.0L Petrol · 503-510hp · 2019-2024",
+          "subtitle": "S58B30 3.0L Petrol Â· 503-510hp Â· 2019-2024",
           "priceRange": "£6,000-£9,500",
           "cta": "Compare X3 M Competition Engine Prices",
           "engineCodes": [
@@ -661,7 +679,7 @@
         {
           "h3": "BMW X3 xDrive30e Engine Replacement",
           "slug": "x3-xdrive30e-engine",
-          "subtitle": "B48B20 2.0L PHEV · 292hp (combined) · 2019-2024",
+          "subtitle": "B48B20 2.0L PHEV Â· 292hp (combined) Â· 2019-2024",
           "priceRange": "£3,500-£6,000",
           "cta": "Compare xDrive30e Engine Prices",
           "engineCodes": [
@@ -675,7 +693,7 @@
         {
           "h3": "BMW X3 2.5i Engine Replacement",
           "slug": "x3-2-5i-engine",
-          "subtitle": "M54B25 2.5L Petrol · 192hp · 2003-2006",
+          "subtitle": "M54B25 2.5L Petrol Â· 192hp Â· 2003-2006",
           "priceRange": "£1,000-£2,200",
           "cta": "Compare X3 2.5i Engine Prices",
           "engineCodes": [
@@ -689,7 +707,7 @@
         {
           "h3": "BMW X3 3.0si Engine Replacement",
           "slug": "x3-3-0si-engine",
-          "subtitle": "N52B30 3.0L Petrol · 272hp · 2006-2010",
+          "subtitle": "N52B30 3.0L Petrol Â· 272hp Â· 2006-2010",
           "priceRange": "£1,500-£2,800",
           "cta": "Compare X3 3.0si Engine Prices",
           "engineCodes": [
@@ -1687,7 +1705,7 @@
           "items": [
             {
               "title": "BMW X3 2.0L Plug-In Hybrid Engines",
-              "description": "The xDrive30e introduced a plug-in hybrid powertrain to the G01 X3 range, combining a B48B20 2.0-litre petrol engine with an electric motor for a combined 292 hp. The system allows up to 30 miles of electric-only range, making it attractive for company car drivers. While the combustion engine itself is reliable, the hybrid system adds complexity and specialised replacement considerations. Not sure which engine size your BMW X3 needs? Enter your registration number above - we’ll identify the exact displacement, engine code and compatible replacement options instantly. All engines supplied through EngineMarket include a minimum 12‑month unlimited mileage warranty from UK BMW X3 specialists.",
+              "description": "The xDrive30e introduced a plug-in hybrid powertrain to the G01 X3 range, combining a B48B20 2.0-litre petrol engine with an electric motor for a combined 292 hp. The system allows up to 30 miles of electric-only range, making it attractive for company car drivers. While the combustion engine itself is reliable, the hybrid system adds complexity and specialised replacement considerations.",
               "engineCodes": [
                 "B48B20 (PHEV variant)"
               ],
@@ -2369,7 +2387,20 @@
       "tag": "Why Choose Us",
       "h2": "Why UK BMW X3 Owners Trust EngineMarket",
       "intro": "Join thousands of UK drivers who compare BMW X3 engine prices through our network of trusted specialists - every rebuilt and reconditioned unit backed by a minimum 12‑month unlimited mileage warranty and nationwide delivery.",
-      "points": [],
+      "points": [
+        {
+          "title": "Trusted BMW X3 Engine Suppliers",
+          "description": "Every garage and engine rebuilder in our network is vetted, rated, and reviewed by real BMW X3 owners."
+        },
+        {
+          "title": "Compare BMW X3 Engine Replacement Companies",
+          "description": "See prices, warranty terms, and supply & fit options side‑by‑side before you commit."
+        },
+        {
+          "title": "UK Engine Replacement Services for BMW X3",
+          "description": "Covering every variant from sDrive18d to X3 M Competition, with supply‑only or full supply & fit available nationwide."
+        }
+      ],
       "finalText": "Find the best BMW X3 engine replacement UK drivers rely on. Compare prices from trusted specialists today and get back on the road with confidence.",
       "buttonText": "Compare BMW X3 Engine Prices Now →",
       "secondaryAction": {

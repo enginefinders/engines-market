@@ -15,13 +15,15 @@
     "canonical": "/bmw/m1"
   },
   "assets": {
-    "heroBg": "/images/brands/bmw/models/bmw-m1-model-card.png",
+    "mainImage": "/images/brands/bmw/models/bmw-x1-model-card.png",
+    "smallImage": "/images/brands/bmw/models/bmw-x1-model-card.png",
+    "heroBg": "/images/brands/bmw/models/bmw-x1-model-card.png",
     "howItWorksBg": "/images/brands/bmw/brand/bmw-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/bmw/brand/bmw-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/bmw/brand/bmw-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/bmw/brand/bmw-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/bmw/brand/bmw-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/bmw/models/bmw-m1-model-card.png"
+    "ctaImage": "/images/brands/bmw/models/bmw-x1-model-card.png"
   },
   "sections": {
     "hero": {
@@ -169,6 +171,20 @@
           "Nationwide Delivery",
           "Trusted UK Suppliers"
         ]
+      }
+    },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "",
+      "description": "",
+      "cards": [],
+      "headingLines": [],
+      "imageAlt": "BMW M1 engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
       }
     },
     "liveMarketPrices": {
@@ -361,8 +377,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/bmw/models/live-feed-bmw-m1.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",
@@ -413,7 +428,7 @@
     "variantCoverage": {
       "tag": "Models We Cover",
       "h2": "BMW M1 Engine Replacement - All Variants Covered",
-      "subheading": "",
+      "subheading": "From the original 1978 Street specification to the final 1981 Procar homologation models, our network of UK BMW M1 engine specialists helps you compare rebuilt, reconditioned and used engine prices. Typical price range for a rebuilt M88 unit with 12-month warranty - supply & fit available nationwide.",
       "groups": [
         {
           "title": "Street Specification Range",
@@ -447,12 +462,11 @@
         {
           "h3": "BMW M1 Street Version Engine Replacement",
           "slug": "m1-street-version-engine",
-          "subtitle": "M88/1 3.5L Petrol · 277hp · 1978-1981",
+          "subtitle": "M88/1 3.5L Petrol Â· 277hp Â· 1978-1981",
           "priceRange": "£18,500-£45,000",
           "cta": "Compare Street Version Engine Prices",
           "engineCodes": [
-            "M88",
-            "1"
+            "M88"
           ],
           "fuel": "Petrol",
           "power": "277hp",
@@ -462,12 +476,11 @@
         {
           "h3": "BMW M1 Late Production Engine Replacement",
           "slug": "m1-late-production-engine",
-          "subtitle": "M88/3 3.5L Petrol · 277hp · 1980-1981",
+          "subtitle": "M88/3 3.5L Petrol Â· 277hp Â· 1980-1981",
           "priceRange": "£19,500-£48,000",
           "cta": "Compare Late Production Engine Prices",
           "engineCodes": [
-            "M88",
-            "3"
+            "M88"
           ],
           "fuel": "Petrol",
           "power": "277hp",
@@ -477,12 +490,11 @@
         {
           "h3": "BMW M1 Early Production Engine Replacement",
           "slug": "m1-early-production-engine",
-          "subtitle": "M88/1 3.5L Petrol · 277hp · 1978-1979",
+          "subtitle": "M88/1 3.5L Petrol Â· 277hp Â· 1978-1979",
           "priceRange": "£18,500-£46,000",
           "cta": "Compare Early Production Engine Prices",
           "engineCodes": [
-            "M88",
-            "1"
+            "M88"
           ],
           "fuel": "Petrol",
           "power": "277hp",
@@ -492,12 +504,11 @@
         {
           "h3": "BMW M1 Numbers Matching Engine Replacement",
           "slug": "m1-numbers-matching-engine",
-          "subtitle": "M88/1 3.5L Petrol · 277hp · 1978-1981",
+          "subtitle": "M88/1 3.5L Petrol Â· 277hp Â· 1978-1981",
           "priceRange": "£22,000-£52,000",
           "cta": "Compare Numbers Matching Engine Prices",
           "engineCodes": [
-            "M88",
-            "1"
+            "M88"
           ],
           "fuel": "Petrol",
           "power": "277hp",
@@ -507,12 +518,11 @@
         {
           "h3": "BMW M1 Procar Edition Engine Replacement",
           "slug": "m1-procar-edition-engine",
-          "subtitle": "M88/2 3.5L Petrol · 470hp · 1979-1980",
+          "subtitle": "M88/2 3.5L Petrol Â· 470hp Â· 1979-1980",
           "priceRange": "£35,000-£85,000",
           "cta": "Compare Procar Edition Engine Prices",
           "engineCodes": [
-            "M88",
-            "2"
+            "M88"
           ],
           "fuel": "Petrol",
           "power": "470hp",
@@ -522,12 +532,11 @@
         {
           "h3": "BMW M1 Group 5 Racing Engine Replacement",
           "slug": "m1-group-5-racing-engine",
-          "subtitle": "M88/2 3.5L Petrol · 500hp · 1979-1981",
+          "subtitle": "M88/2 3.5L Petrol Â· 500hp Â· 1979-1981",
           "priceRange": "£45,000-£95,000",
           "cta": "Compare Group 5 Racing Engine Prices",
           "engineCodes": [
-            "M88",
-            "2"
+            "M88"
           ],
           "fuel": "Petrol",
           "power": "500hp",
@@ -537,12 +546,11 @@
         {
           "h3": "BMW M1 Motorsport Derivative Engine Replacement",
           "slug": "m1-motorsport-derivative-engine",
-          "subtitle": "M88/2 3.5L Petrol · 470-500hp · 1979-1981",
+          "subtitle": "M88/2 3.5L Petrol Â· 470-500hp Â· 1979-1981",
           "priceRange": "£38,000-£90,000",
           "cta": "Compare Motorsport Derivative Engine Prices",
           "engineCodes": [
-            "M88",
-            "2"
+            "M88"
           ],
           "fuel": "Petrol",
           "power": "470-500hp",
@@ -552,12 +560,11 @@
         {
           "h3": "BMW M1 Investment Grade Engine Replacement",
           "slug": "m1-investment-grade-engine",
-          "subtitle": "M88/3 3.5L Petrol · 277hp · 1978-1981",
+          "subtitle": "M88/3 3.5L Petrol Â· 277hp Â· 1978-1981",
           "priceRange": "£25,000-£58,000",
           "cta": "Compare Investment Grade Engine Prices",
           "engineCodes": [
-            "M88",
-            "3"
+            "M88"
           ],
           "fuel": "Petrol",
           "power": "277hp",
@@ -567,12 +574,11 @@
         {
           "h3": "BMW M1 Left-Hand Drive Import Engine Replacement",
           "slug": "m1-left-hand-drive-import-engine",
-          "subtitle": "M88/1 3.5L Petrol · 277hp · 1978-1981",
+          "subtitle": "M88/1 3.5L Petrol Â· 277hp Â· 1978-1981",
           "priceRange": "£19,000-£47,000",
           "cta": "Compare Left-Hand Drive Import Engine Prices",
           "engineCodes": [
-            "M88",
-            "1"
+            "M88"
           ],
           "fuel": "Petrol",
           "power": "277hp",
@@ -582,12 +588,11 @@
         {
           "h3": "BMW M1 Right-Hand Drive Conversion Engine Replacement",
           "slug": "m1-right-hand-drive-conversion-engine",
-          "subtitle": "M88/1 3.5L Petrol · 277hp · 1978-1981",
+          "subtitle": "M88/1 3.5L Petrol Â· 277hp Â· 1978-1981",
           "priceRange": "£20,000-£50,000",
           "cta": "Compare Right-Hand Drive Conversion Engine Prices",
           "engineCodes": [
-            "M88",
-            "1"
+            "M88"
           ],
           "fuel": "Petrol",
           "power": "277hp",
@@ -597,12 +602,11 @@
         {
           "h3": "BMW M1 Driver Quality Engine Replacement",
           "slug": "m1-driver-quality-engine",
-          "subtitle": "M88/3 3.5L Petrol · 277hp · 1978-1981",
+          "subtitle": "M88/3 3.5L Petrol Â· 277hp Â· 1978-1981",
           "priceRange": "£17,500-£42,000",
           "cta": "Compare Driver Quality Engine Prices",
           "engineCodes": [
-            "M88",
-            "3"
+            "M88"
           ],
           "fuel": "Petrol",
           "power": "277hp",
@@ -612,12 +616,11 @@
         {
           "h3": "BMW M1 Museum Specification Engine Replacement",
           "slug": "m1-museum-specification-engine",
-          "subtitle": "M88/1 3.5L Petrol · 277hp · 1978-1981",
+          "subtitle": "M88/1 3.5L Petrol Â· 277hp Â· 1978-1981",
           "priceRange": "£28,000-£65,000",
           "cta": "Compare Museum Specification Engine Prices",
           "engineCodes": [
-            "M88",
-            "1"
+            "M88"
           ],
           "fuel": "Petrol",
           "power": "277hp",

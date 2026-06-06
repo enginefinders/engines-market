@@ -15,6 +15,8 @@
     "canonical": "/bmw/7-series"
   },
   "assets": {
+    "mainImage": "/images/brands/bmw/models/bmw-7-series-model-card.png",
+    "smallImage": "/images/brands/bmw/models/bmw-7-series-model-card.png",
     "heroBg": "/images/brands/bmw/models/bmw-7-series-model-card.png",
     "howItWorksBg": "/images/brands/bmw/brand/bmw-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/bmw/brand/bmw-engine-codes-bg.webp",
@@ -169,6 +171,20 @@
           "Nationwide Delivery",
           "Trusted UK Suppliers"
         ]
+      }
+    },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "",
+      "description": "",
+      "cards": [],
+      "headingLines": [],
+      "imageAlt": "BMW 7 Series engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
       }
     },
     "liveMarketPrices": {
@@ -433,8 +449,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/bmw/models/live-feed-bmw-7-series.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",
@@ -519,7 +534,7 @@
         {
           "h3": "BMW 7 Series 730d Engine Replacement",
           "slug": "7-series-730d-engine",
-          "subtitle": "M57D30/N57D30/B57D30 3.0L Diesel · 218-286hp · 2004-2022",
+          "subtitle": "M57D30/N57D30/B57D30 3.0L Diesel Â· 218-286hp Â· 2004-2022",
           "priceRange": "£1,800-£4,800",
           "cta": "Compare 730d Engine Prices",
           "engineCodes": [
@@ -535,7 +550,7 @@
         {
           "h3": "BMW 7 Series 740d Engine Replacement",
           "slug": "7-series-740d-engine",
-          "subtitle": "N57D30TU/B57D30 3.0L Diesel · 306-340hp · 2009-2022",
+          "subtitle": "N57D30TU/B57D30 3.0L Diesel Â· 306-340hp Â· 2009-2022",
           "priceRange": "£2,200-£4,600",
           "cta": "Compare 740d Engine Prices",
           "engineCodes": [
@@ -550,7 +565,7 @@
         {
           "h3": "BMW 7 Series 740i Engine Replacement",
           "slug": "7-series-740i-engine",
-          "subtitle": "N62B40/N55B30/B58B30 3.0L-4.0L Petrol · 245-326hp · 2002-2022",
+          "subtitle": "N62B40/N55B30/B58B30 3.0L-4.0L Petrol Â· 245-326hp Â· 2002-2022",
           "priceRange": "£2,500-£5,200",
           "cta": "Compare 740i Engine Prices",
           "engineCodes": [
@@ -566,7 +581,7 @@
         {
           "h3": "BMW 7 Series 745i Engine Replacement",
           "slug": "7-series-745i-engine",
-          "subtitle": "N62B44 4.4L Petrol · 333hp · 2002-2008",
+          "subtitle": "N62B44 4.4L Petrol Â· 333hp Â· 2002-2008",
           "priceRange": "£2,800-£5,800",
           "cta": "Compare 745i Engine Prices",
           "engineCodes": [
@@ -580,7 +595,7 @@
         {
           "h3": "BMW 7 Series 750i Engine Replacement",
           "slug": "7-series-750i-engine",
-          "subtitle": "N62B48/N63B44 4.4L Petrol · 367-450hp · 2005-2015",
+          "subtitle": "N62B48/N63B44 4.4L Petrol Â· 367-450hp Â· 2005-2015",
           "priceRange": "£3,500-£7,200",
           "cta": "Compare 750i Engine Prices",
           "engineCodes": [
@@ -595,7 +610,7 @@
         {
           "h3": "BMW 7 Series 745Li Engine Replacement",
           "slug": "7-series-745li-engine",
-          "subtitle": "N62B44 4.4L Petrol · 333hp · 2003-2008",
+          "subtitle": "N62B44 4.4L Petrol Â· 333hp Â· 2003-2008",
           "priceRange": "£3,000-£6,200",
           "cta": "Compare 745Li Engine Prices",
           "engineCodes": [
@@ -609,7 +624,7 @@
         {
           "h3": "BMW 7 Series 740Li Engine Replacement",
           "slug": "7-series-740li-engine",
-          "subtitle": "N63B44/B58B30 3.0L-4.4L Petrol · 326-450hp · 2009-2022",
+          "subtitle": "N63B44/B58B30 3.0L-4.4L Petrol Â· 326-450hp Â· 2009-2022",
           "priceRange": "£3,200-£6,800",
           "cta": "Compare 740Li Engine Prices",
           "engineCodes": [
@@ -624,7 +639,7 @@
         {
           "h3": "BMW 7 Series 750Li Engine Replacement",
           "slug": "7-series-750li-engine",
-          "subtitle": "N63B44TU/N63B44TU3 4.4L Petrol · 450-530hp · 2009-2022",
+          "subtitle": "N63B44TU/N63B44TU3 4.4L Petrol Â· 450-530hp Â· 2009-2022",
           "priceRange": "£4,200-£8,200",
           "cta": "Compare 750Li Engine Prices",
           "engineCodes": [
@@ -639,7 +654,7 @@
         {
           "h3": "BMW 7 Series 760i Engine Replacement",
           "slug": "7-series-760i-engine",
-          "subtitle": "N73B60/N74B66 6.0L-6.6L Petrol · 445-544hp · 2003-2015",
+          "subtitle": "N73B60/N74B66 6.0L-6.6L Petrol Â· 445-544hp Â· 2003-2015",
           "priceRange": "£5,500-£10,500",
           "cta": "Compare 760i Engine Prices",
           "engineCodes": [
@@ -654,7 +669,7 @@
         {
           "h3": "BMW 7 Series 760Li Engine Replacement",
           "slug": "7-series-760li-engine",
-          "subtitle": "N73B60/N74B66 6.0L-6.6L Petrol · 445-610hp · 2003-2022",
+          "subtitle": "N73B60/N74B66 6.0L-6.6L Petrol Â· 445-610hp Â· 2003-2022",
           "priceRange": "£6,500-£12,500",
           "cta": "Compare 760Li Engine Prices",
           "engineCodes": [
@@ -669,7 +684,7 @@
         {
           "h3": "BMW 7 Series 730i Engine Replacement",
           "slug": "7-series-730i-engine",
-          "subtitle": "M54B30/N52B30/B58B30 3.0L Petrol · 231-258hp · 1999-2022",
+          "subtitle": "M54B30/N52B30/B58B30 3.0L Petrol Â· 231-258hp Â· 1999-2022",
           "priceRange": "£1,500-£4,200",
           "cta": "Compare 730i Engine Prices",
           "engineCodes": [
@@ -685,7 +700,7 @@
         {
           "h3": "BMW 7 Series 728i Engine Replacement",
           "slug": "7-series-728i-engine",
-          "subtitle": "M52B28 2.8L Petrol · 193hp · 1994-2001",
+          "subtitle": "M52B28 2.8L Petrol Â· 193hp Â· 1994-2001",
           "priceRange": "£1,400-£3,800",
           "cta": "Compare 728i Engine Prices",
           "engineCodes": [
@@ -699,7 +714,7 @@
       ],
       "directory": {
         "h3": "All BMW 7 Series Variants - Engine Replacement Coverage",
-        "intro": "",
+        "intro": "A full alphabetical listing of every BMW 7 Series trim covered by our network. All entries link to a dedicated variant page, where prices are further broken down by engine code, model year, and condition type. Click a live link to compare quotes.",
         "groups": [
           {
             "title": "Diesel Variants",
@@ -745,7 +760,7 @@
         ],
         "label": "Variant Directory"
       },
-      "closing": "",
+      "closing": "Not sure which variant your BMW 7 Series is? Enter your registration number above - we'll identify the exact sub-model, engine code and compatible replacement options instantly.",
       "engineGuide": {
         "tag": "Engine Codes",
         "h2": "BMW 7 Series Engine Codes - Full Technical Specifications & Replacement Guide",
@@ -1600,7 +1615,7 @@
           "items": [
             {
               "title": "BMW 7 Series 2.0L Hybrid Engines",
-              "description": "Combining a turbocharged 2.0-litre petrol block with an integrated electric motor, the 740e and 745e plug-in hybrid variants deliver substantial combined torque while significantly reducing official CO2 emissions for fleet and private buyers. The combustion core shares architecture with standard B48 units but features reinforced internals and modified ancillary routing to accommodate the high-voltage powertrain integration. Not sure which engine size your BMW 7 Series needs? Enter your registration number above - we’ll identify the exact displacement, engine code and compatible replacement options instantly. All engines supplied through EngineMarket include a minimum 12‑month unlimited mileage warranty from UK BMW 7 Series specialists.",
+              "description": "Combining a turbocharged 2.0-litre petrol block with an integrated electric motor, the 740e and 745e plug-in hybrid variants deliver substantial combined torque while significantly reducing official CO2 emissions for fleet and private buyers. The combustion core shares architecture with standard B48 units but features reinforced internals and modified ancillary routing to accommodate the high-voltage powertrain integration.",
               "engineCodes": [
                 "B48B20H (PHEV specific variants)"
               ],

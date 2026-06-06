@@ -15,6 +15,8 @@
     "canonical": "/bmw/2-series"
   },
   "assets": {
+    "mainImage": "/images/brands/bmw/models/bmw-2-series-model-card.png",
+    "smallImage": "/images/brands/bmw/models/bmw-2-series-model-card.png",
     "heroBg": "/images/brands/bmw/models/bmw-2-series-model-card.png",
     "howItWorksBg": "/images/brands/bmw/brand/bmw-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/bmw/brand/bmw-engine-codes-bg.webp",
@@ -169,6 +171,20 @@
           "Nationwide Delivery",
           "Trusted UK Suppliers"
         ]
+      }
+    },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "",
+      "description": "",
+      "cards": [],
+      "headingLines": [],
+      "imageAlt": "BMW 2 Series engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
       }
     },
     "liveMarketPrices": {
@@ -433,8 +449,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/bmw/models/live-feed-bmw-2-series.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",
@@ -519,7 +534,7 @@
         {
           "h3": "BMW 2 Series 218d Engine Replacement",
           "slug": "2-series-218d-engine",
-          "subtitle": "B47D20 2.0L Diesel · 150hp · 2014-2021",
+          "subtitle": "B47D20 2.0L Diesel Â· 150hp Â· 2014-2021",
           "priceRange": "£1,950-£3,200",
           "cta": "Compare 218d Engine Prices",
           "engineCodes": [
@@ -533,7 +548,7 @@
         {
           "h3": "BMW 2 Series 220d Engine Replacement",
           "slug": "2-series-220d-engine",
-          "subtitle": "B47D20 2.0L Diesel · 190hp · 2014-2021",
+          "subtitle": "B47D20 2.0L Diesel Â· 190hp Â· 2014-2021",
           "priceRange": "£2,200-£3,600",
           "cta": "Compare 220d Engine Prices",
           "engineCodes": [
@@ -547,7 +562,7 @@
         {
           "h3": "BMW 2 Series 225d Engine Replacement",
           "slug": "2-series-225d-engine",
-          "subtitle": "B47D20T1 2.0L Diesel · 224hp · 2015-2021",
+          "subtitle": "B47D20T1 2.0L Diesel Â· 224hp Â· 2015-2021",
           "priceRange": "£2,900-£4,500",
           "cta": "Compare 225d Engine Prices",
           "engineCodes": [
@@ -561,7 +576,7 @@
         {
           "h3": "BMW 2 Series 216d Engine Replacement",
           "slug": "2-series-216d-engine",
-          "subtitle": "B37C15 1.5L Diesel · 116hp · 2015-2021",
+          "subtitle": "B37C15 1.5L Diesel Â· 116hp Â· 2015-2021",
           "priceRange": "£2,000-£3,300",
           "cta": "Compare 216d Engine Prices",
           "engineCodes": [
@@ -575,7 +590,7 @@
         {
           "h3": "BMW 2 Series 218i Engine Replacement",
           "slug": "2-series-218i-engine",
-          "subtitle": "B38A15 1.5L Petrol · 136hp · 2014-2021",
+          "subtitle": "B38A15 1.5L Petrol Â· 136hp Â· 2014-2021",
           "priceRange": "£1,850-£3,100",
           "cta": "Compare 218i Engine Prices",
           "engineCodes": [
@@ -589,7 +604,7 @@
         {
           "h3": "BMW 2 Series 220i Engine Replacement",
           "slug": "2-series-220i-engine",
-          "subtitle": "B48B20 2.0L Petrol · 184hp · 2015-2021",
+          "subtitle": "B48B20 2.0L Petrol Â· 184hp Â· 2015-2021",
           "priceRange": "£2,100-£3,800",
           "cta": "Compare 220i Engine Prices",
           "engineCodes": [
@@ -603,7 +618,7 @@
         {
           "h3": "BMW 2 Series 220i Engine Replacement",
           "slug": "2-series-220i-engine",
-          "subtitle": "N20B20 2.0L Petrol · 184hp · 2014-2017",
+          "subtitle": "N20B20 2.0L Petrol Â· 184hp Â· 2014-2017",
           "priceRange": "£1,900-£3,400",
           "cta": "Compare 220i Engine Prices",
           "engineCodes": [
@@ -617,7 +632,7 @@
         {
           "h3": "BMW 2 Series 228i Engine Replacement",
           "slug": "2-series-228i-engine",
-          "subtitle": "B48B20 2.0L Petrol · 231hp · 2015-2021",
+          "subtitle": "B48B20 2.0L Petrol Â· 231hp Â· 2015-2021",
           "priceRange": "£2,500-£4,100",
           "cta": "Compare 228i Engine Prices",
           "engineCodes": [
@@ -631,7 +646,7 @@
         {
           "h3": "BMW 2 Series M235i Engine Replacement",
           "slug": "2-series-m235i-engine",
-          "subtitle": "N55B30 3.0L Petrol · 326hp · 2014-2018",
+          "subtitle": "N55B30 3.0L Petrol Â· 326hp Â· 2014-2018",
           "priceRange": "£3,900-£6,500",
           "cta": "Compare M235i Engine Prices",
           "engineCodes": [
@@ -645,7 +660,7 @@
         {
           "h3": "BMW 2 Series M240i Engine Replacement",
           "slug": "2-series-m240i-engine",
-          "subtitle": "B58B30 3.0L Petrol · 340hp · 2016-2021",
+          "subtitle": "B58B30 3.0L Petrol Â· 340hp Â· 2016-2021",
           "priceRange": "£4,200-£7,500",
           "cta": "Compare M240i Engine Prices",
           "engineCodes": [
@@ -659,7 +674,7 @@
         {
           "h3": "BMW 2 Series 218d xDrive Engine Replacement",
           "slug": "2-series-218d-xdrive-engine",
-          "subtitle": "B47D20 2.0L Diesel · 150hp · 2015-2021",
+          "subtitle": "B47D20 2.0L Diesel Â· 150hp Â· 2015-2021",
           "priceRange": "£2,100-£3,400",
           "cta": "Compare 218d xDrive Engine Prices",
           "engineCodes": [
@@ -673,7 +688,7 @@
         {
           "h3": "BMW 2 Series M240i xDrive Engine Replacement",
           "slug": "2-series-m240i-xdrive-engine",
-          "subtitle": "B58B30 3.0L Petrol · 340hp · 2016-2021",
+          "subtitle": "B58B30 3.0L Petrol Â· 340hp Â· 2016-2021",
           "priceRange": "£4,500-£8,000",
           "cta": "Compare M240i xDrive Engine Prices",
           "engineCodes": [

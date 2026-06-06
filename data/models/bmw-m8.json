@@ -15,6 +15,8 @@
     "canonical": "/bmw/m8"
   },
   "assets": {
+    "mainImage": "/images/brands/bmw/models/bmw-m8-model-card.png",
+    "smallImage": "/images/brands/bmw/models/bmw-m8-model-card.png",
     "heroBg": "/images/brands/bmw/models/bmw-m8-model-card.png",
     "howItWorksBg": "/images/brands/bmw/brand/bmw-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/bmw/brand/bmw-engine-codes-bg.webp",
@@ -169,6 +171,20 @@
           "Nationwide Delivery",
           "Trusted UK Suppliers"
         ]
+      }
+    },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "",
+      "description": "",
+      "cards": [],
+      "headingLines": [],
+      "imageAlt": "BMW M8 engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
       }
     },
     "liveMarketPrices": {
@@ -408,14 +424,6 @@
             "m8 final edition",
             "m8 final edition engine"
           ]
-        },
-        {
-          "key": "-engine",
-          "label": "",
-          "matchers": [
-            "",
-            "engine"
-          ]
         }
       ],
       "ui": {
@@ -425,8 +433,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/bmw/models/live-feed-bmw-m8.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",
@@ -510,7 +517,7 @@
         {
           "h3": "BMW M8 Competition Coupe Engine Replacement",
           "slug": "m8-competition-coupe-engine",
-          "subtitle": "S63B44T4 4.4L Petrol · 617hp · 2019-2024",
+          "subtitle": "S63B44T4 4.4L Petrol Â· 617hp Â· 2019-2024",
           "priceRange": "£15,500-£22,000",
           "cta": "Compare M8 Competition Coupe Engine Prices",
           "engineCodes": [
@@ -524,7 +531,7 @@
         {
           "h3": "BMW M8 Competition Convertible Engine Replacement",
           "slug": "m8-competition-convertible-engine",
-          "subtitle": "S63B44T4 4.4L Petrol · 617hp · 2019-2024",
+          "subtitle": "S63B44T4 4.4L Petrol Â· 617hp Â· 2019-2024",
           "priceRange": "£15,000-£23,000",
           "cta": "Compare M8 Competition Convertible Engine Prices",
           "engineCodes": [
@@ -538,7 +545,7 @@
         {
           "h3": "BMW M8 Competition Gran Coupe Engine Replacement",
           "slug": "m8-competition-gran-coupe-engine",
-          "subtitle": "S63B44T4 4.4L Petrol · 617hp · 2020-2024",
+          "subtitle": "S63B44T4 4.4L Petrol Â· 617hp Â· 2020-2024",
           "priceRange": "£14,995-£22,500",
           "cta": "Compare M8 Competition Gran Coupe Engine Prices",
           "engineCodes": [
@@ -552,7 +559,7 @@
         {
           "h3": "BMW M8 Coupe Engine Replacement",
           "slug": "m8-coupe-engine",
-          "subtitle": "S63B44B 4.4L Petrol · 600hp · 2019-2024",
+          "subtitle": "S63B44B 4.4L Petrol Â· 600hp Â· 2019-2024",
           "priceRange": "£14,000-£19,000",
           "cta": "Compare M8 Coupe Engine Prices",
           "engineCodes": [
@@ -566,7 +573,7 @@
         {
           "h3": "BMW M8 Convertible Engine Replacement",
           "slug": "m8-convertible-engine",
-          "subtitle": "S63B44B 4.4L Petrol · 600hp · 2019-2024",
+          "subtitle": "S63B44B 4.4L Petrol Â· 600hp Â· 2019-2024",
           "priceRange": "£14,500-£19,500",
           "cta": "Compare M8 Convertible Engine Prices",
           "engineCodes": [
@@ -580,7 +587,7 @@
         {
           "h3": "BMW M8 Gran Coupe Engine Replacement",
           "slug": "m8-gran-coupe-engine",
-          "subtitle": "S63B44B 4.4L Petrol · 600hp · 2020-2024",
+          "subtitle": "S63B44B 4.4L Petrol Â· 600hp Â· 2020-2024",
           "priceRange": "£13,500-£18,000",
           "cta": "Compare M8 Gran Coupe Engine Prices",
           "engineCodes": [
@@ -594,7 +601,7 @@
         {
           "h3": "BMW M8 First Edition Engine Replacement",
           "slug": "m8-first-edition-engine",
-          "subtitle": "S63B44T4 4.4L Petrol · 617hp · 2019-2020",
+          "subtitle": "S63B44T4 4.4L Petrol Â· 617hp Â· 2019-2020",
           "priceRange": "£16,000-£24,000",
           "cta": "Compare M8 First Edition Engine Prices",
           "engineCodes": [
@@ -608,7 +615,7 @@
         {
           "h3": "BMW M8 Pre-LCI Engine Replacement",
           "slug": "m8-pre-lci-engine",
-          "subtitle": "S63B44B 4.4L Petrol · 600-617hp · 2019-2021",
+          "subtitle": "S63B44B 4.4L Petrol Â· 600-617hp Â· 2019-2021",
           "priceRange": "£13,000-£19,500",
           "cta": "Compare M8 Pre-LCI Engine Prices",
           "engineCodes": [
@@ -622,7 +629,7 @@
         {
           "h3": "BMW M8 LCI Engine Replacement",
           "slug": "m8-lci-engine",
-          "subtitle": "S63B44T4 4.4L Petrol · 617hp · 2022-2024",
+          "subtitle": "S63B44T4 4.4L Petrol Â· 617hp Â· 2022-2024",
           "priceRange": "£15,000-£22,000",
           "cta": "Compare M8 LCI Engine Prices",
           "engineCodes": [
@@ -636,7 +643,7 @@
         {
           "h3": "BMW M8 Final Edition Engine Replacement",
           "slug": "m8-final-edition-engine",
-          "subtitle": "S63B44T4 4.4L Petrol · 617hp · 2024-2025",
+          "subtitle": "S63B44T4 4.4L Petrol Â· 617hp Â· 2024-2025",
           "priceRange": "£16,500-£25,000",
           "cta": "Compare M8 Final Edition Engine Prices",
           "engineCodes": [
@@ -646,25 +653,11 @@
           "power": "617hp",
           "years": "2024-2025",
           "image": ""
-        },
-        {
-          "h3": "",
-          "slug": "-engine",
-          "subtitle": "All BMW M8 Variants - Engine Replacement Coverage",
-          "priceRange": "",
-          "cta": "Introductory text:",
-          "engineCodes": [
-            "All BMW M8 Variants - Engine Replacement Coverage"
-          ],
-          "fuel": "",
-          "power": "",
-          "years": "",
-          "image": ""
         }
       ],
       "directory": {
-        "h3": "",
-        "intro": "",
+        "h3": "All BMW M8 Variants - Engine Replacement Coverage",
+        "intro": "A full alphabetical listing of every BMW M8 trim covered by our network. All entries link to a dedicated variant page, where prices are further broken down by engine code, model year, and condition type. Click a live link to compare quotes.",
         "groups": [
           {
             "title": "Diesel Variants",
@@ -702,7 +695,7 @@
         ],
         "label": "Variant Directory"
       },
-      "closing": "",
+      "closing": "Not sure which variant your BMW M8 is? Enter your registration number above - we’ll identify the exact sub-model, engine code and compatible replacement options instantly.",
       "engineGuide": {
         "tag": "Engine Codes",
         "h2": "BMW M8 Engine Codes - Full Technical Specifications & Replacement Guide",
@@ -798,7 +791,7 @@
             ]
           }
         ],
-        "closing": ""
+        "closing": "Can't find your engine code? Enter your registration number above - we'll instantly identify the exact unit, its technical specifications, and live replacement prices from UK BMW M8 engine specialists. Every rebuilt engine comes with a minimum 12-month unlimited mileage warranty."
       },
       "headingLines": [
         "BMW M8 Engine Replacement",
@@ -816,7 +809,7 @@
       "tag": "Engine Codes",
       "h2": "BMW M8 Engine Codes - Full Technical Specifications & Replacement Guide",
       "h3": "Every engine code fitted to the BMW M8 across all generations, with technical specs, compatible variants and trims, known failure points, and average rebuilt prices from UK specialists. Select any engine code to compare quotes.",
-      "closingLine": "",
+      "closingLine": "Can't find your engine code? Enter your registration number above - we'll instantly identify the exact unit, its technical specifications, and live replacement prices from UK BMW M8 engine specialists. Every rebuilt engine comes with a minimum 12-month unlimited mileage warranty.",
       "filters": [
         "Petrol Engines"
       ],
@@ -1639,7 +1632,20 @@
       "tag": "Why Choose Us",
       "h2": "Why UK BMW M8 Owners Trust EngineMarket",
       "intro": "Join thousands of UK drivers who compare BMW M8 engine prices through our network of trusted specialists - every rebuilt and reconditioned unit backed by a minimum 12‑month unlimited mileage warranty and nationwide delivery.",
-      "points": [],
+      "points": [
+        {
+          "title": "Trusted BMW M8 Engine Suppliers",
+          "description": "Every garage and engine rebuilder in our network is vetted, rated, and reviewed by real BMW M8 owners."
+        },
+        {
+          "title": "Compare BMW M8 Engine Replacement Companies",
+          "description": "See prices, warranty terms, and supply & fit options side‑by‑side before you commit."
+        },
+        {
+          "title": "UK Engine Replacement Services for BMW M8",
+          "description": "Covering every variant from M8 Coupe to Competition Gran Coupe, with supply‑only or full supply & fit available nationwide."
+        }
+      ],
       "finalText": "Find the best BMW M8 engine replacement UK drivers rely on. Compare prices from trusted specialists today and get back on the road with confidence.",
       "buttonText": "Compare BMW M8 Engine Prices Now →",
       "secondaryAction": {

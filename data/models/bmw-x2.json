@@ -15,13 +15,15 @@
     "canonical": "/bmw/x2"
   },
   "assets": {
-    "heroBg": "/images/brands/bmw/models/bmw-x2-model-card.png",
+    "mainImage": "/images/brands/bmw/models/bmw-x6-model-card.png",
+    "smallImage": "/images/brands/bmw/models/bmw-x6-model-card.png",
+    "heroBg": "/images/brands/bmw/models/bmw-x6-model-card.png",
     "howItWorksBg": "/images/brands/bmw/brand/bmw-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/bmw/brand/bmw-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/bmw/brand/bmw-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/bmw/brand/bmw-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/bmw/brand/bmw-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/bmw/models/bmw-x2-model-card.png"
+    "ctaImage": "/images/brands/bmw/models/bmw-x6-model-card.png"
   },
   "sections": {
     "hero": {
@@ -169,6 +171,20 @@
           "Nationwide Delivery",
           "Trusted UK Suppliers"
         ]
+      }
+    },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "",
+      "description": "",
+      "cards": [],
+      "headingLines": [],
+      "imageAlt": "BMW X2 engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
       }
     },
     "liveMarketPrices": {
@@ -433,8 +449,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/bmw/models/live-feed-bmw-x2.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",
@@ -519,7 +534,7 @@
         {
           "h3": "BMW X2 xDrive20d Engine Replacement",
           "slug": "x2-xdrive20d-engine",
-          "subtitle": "B47C20B 2.0L Diesel · 190hp · 2018-2023",
+          "subtitle": "B47C20B 2.0L Diesel Â· 190hp Â· 2018-2023",
           "priceRange": "£2,200-£4,200",
           "cta": "Compare xDrive20d Engine Prices",
           "engineCodes": [
@@ -533,7 +548,7 @@
         {
           "h3": "BMW X2 sDrive18d Engine Replacement",
           "slug": "x2-sdrive18d-engine",
-          "subtitle": "B47C20A 2.0L Diesel · 150hp · 2018-2023",
+          "subtitle": "B47C20A 2.0L Diesel Â· 150hp Â· 2018-2023",
           "priceRange": "£1,800-£3,400",
           "cta": "Compare sDrive18d Engine Prices",
           "engineCodes": [
@@ -547,7 +562,7 @@
         {
           "h3": "BMW X2 xDrive18d Engine Replacement",
           "slug": "x2-xdrive18d-engine",
-          "subtitle": "B47C20A 2.0L Diesel · 150hp · 2018-2023",
+          "subtitle": "B47C20A 2.0L Diesel Â· 150hp Â· 2018-2023",
           "priceRange": "£1,900-£3,500",
           "cta": "Compare xDrive18d Engine Prices",
           "engineCodes": [
@@ -561,7 +576,7 @@
         {
           "h3": "BMW X2 sDrive20i Engine Replacement",
           "slug": "x2-sdrive20i-engine",
-          "subtitle": "B48A20C 2.0L Petrol · 192hp · 2018-2023",
+          "subtitle": "B48A20C 2.0L Petrol Â· 192hp Â· 2018-2023",
           "priceRange": "£2,000-£4,000",
           "cta": "Compare sDrive20i Engine Prices",
           "engineCodes": [
@@ -575,7 +590,7 @@
         {
           "h3": "BMW X2 xDrive20i Engine Replacement",
           "slug": "x2-xdrive20i-engine",
-          "subtitle": "B48A20C 2.0L Petrol · 192hp · 2018-2023",
+          "subtitle": "B48A20C 2.0L Petrol Â· 192hp Â· 2018-2023",
           "priceRange": "£2,100-£4,200",
           "cta": "Compare xDrive20i Engine Prices",
           "engineCodes": [
@@ -589,7 +604,7 @@
         {
           "h3": "BMW X2 sDrive18i Engine Replacement",
           "slug": "x2-sdrive18i-engine",
-          "subtitle": "B38A15A 1.5L Petrol · 140hp · 2018-2023",
+          "subtitle": "B38A15A 1.5L Petrol Â· 140hp Â· 2018-2023",
           "priceRange": "£1,600-£3,000",
           "cta": "Compare sDrive18i Engine Prices",
           "engineCodes": [
@@ -603,7 +618,7 @@
         {
           "h3": "BMW X2 M35i xDrive Engine Replacement",
           "slug": "x2-m35i-xdrive-engine",
-          "subtitle": "B48A20E 2.0L Petrol · 306hp · 2019-2023",
+          "subtitle": "B48A20E 2.0L Petrol Â· 306hp Â· 2019-2023",
           "priceRange": "£3,200-£5,800",
           "cta": "Compare M35i xDrive Engine Prices",
           "engineCodes": [
@@ -617,7 +632,7 @@
         {
           "h3": "BMW X2 xDrive25i Engine Replacement",
           "slug": "x2-xdrive25i-engine",
-          "subtitle": "B48A20B 2.0L Petrol · 231hp · 2018-2023",
+          "subtitle": "B48A20B 2.0L Petrol Â· 231hp Â· 2018-2023",
           "priceRange": "£2,400-£4,600",
           "cta": "Compare xDrive25i Engine Prices",
           "engineCodes": [
@@ -631,7 +646,7 @@
         {
           "h3": "BMW X2 M Sport X Engine Replacement",
           "slug": "x2-m-sport-x-engine",
-          "subtitle": "B48A20C/B47C20B 2.0L Petrol/Diesel · 192/190hp · 2018-2023",
+          "subtitle": "B48A20C/B47C20B 2.0L Petrol/Diesel Â· 192/190hp Â· 2018-2023",
           "priceRange": "£2,000-£4,200",
           "cta": "Compare M Sport X Engine Prices",
           "engineCodes": [
@@ -646,7 +661,7 @@
         {
           "h3": "BMW X2 SE Engine Replacement",
           "slug": "x2-se-engine",
-          "subtitle": "B47C20A/B38A15A 2.0L Diesel/1.5L Petrol · 150/140hp · 2018-2023",
+          "subtitle": "B47C20A/B38A15A 2.0L Diesel/1.5L Petrol · 150/140hp · 2018-2023 · Rebuilt: £1,600-£3,400",
           "priceRange": "£1,600-£3,400",
           "cta": "Compare SE Engine Prices",
           "engineCodes": [
@@ -661,7 +676,7 @@
         {
           "h3": "BMW X2 M Mesh Edition Engine Replacement",
           "slug": "x2-m-mesh-edition-engine",
-          "subtitle": "B48A20E 2.0L Petrol · 306hp · 2020-2021",
+          "subtitle": "B48A20E 2.0L Petrol Â· 306hp Â· 2020-2021",
           "priceRange": "£3,400-£6,000",
           "cta": "Compare M Mesh Edition Engine Prices",
           "engineCodes": [
@@ -675,7 +690,7 @@
         {
           "h3": "BMW X2 sDrive20d Engine Replacement",
           "slug": "x2-sdrive20d-engine",
-          "subtitle": "B47C20B 2.0L Diesel · 190hp · 2018-2020",
+          "subtitle": "B47C20B 2.0L Diesel Â· 190hp Â· 2018-2020",
           "priceRange": "£2,000-£3,800",
           "cta": "Compare sDrive20d Engine Prices",
           "engineCodes": [
@@ -1449,7 +1464,7 @@
     "fuelTypes": {
       "tag": "BMW X2 Engines Fuel Type",
       "h2": "BMW X2 Engines by Fuel Type",
-      "intro": "",
+      "intro": "Choose your BMW X2 engine by fuel type to compare realistic replacement prices, known issues, and compatible UK supply options - from the efficient B47 diesel 18d to the high‑output B48A20E M35i.",
       "items": [
         {
           "title": "BMW X2 Diesel Engines",
@@ -1873,7 +1888,7 @@
     "trustCta": {
       "tag": "Why Choose Us",
       "h2": "Why UK BMW X2 Owners Trust EngineMarket",
-      "intro": "",
+      "intro": "Join thousands of UK drivers who compare BMW X2 engine prices through our network of trusted specialists - every rebuilt and reconditioned unit backed by a minimum 12‑month unlimited mileage warranty and nationwide delivery.",
       "points": [
         {
           "title": "Trusted BMW X2 Engine Suppliers",

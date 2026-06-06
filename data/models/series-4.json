@@ -15,6 +15,8 @@
     "canonical": "/bmw/4-series"
   },
   "assets": {
+    "mainImage": "/images/brands/bmw/models/bmw-4-series-model-card.png",
+    "smallImage": "/images/brands/bmw/models/bmw-4-series-model-card.png",
     "heroBg": "/images/brands/bmw/models/bmw-4-series-model-card.png",
     "howItWorksBg": "/images/brands/bmw/brand/bmw-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/bmw/brand/bmw-engine-codes-bg.webp",
@@ -169,6 +171,20 @@
           "Nationwide Delivery",
           "Trusted UK Suppliers"
         ]
+      }
+    },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "",
+      "description": "",
+      "cards": [],
+      "headingLines": [],
+      "imageAlt": "BMW 4 Series engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
       }
     },
     "liveMarketPrices": {
@@ -441,8 +457,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/bmw/models/live-feed-bmw-4-series.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",
@@ -527,7 +542,7 @@
         {
           "h3": "BMW 4 Series 420d Engine Replacement",
           "slug": "4-series-420d-engine",
-          "subtitle": "N47D20C/B47D20A 2.0L Diesel · 184-190hp · 2013-2024",
+          "subtitle": "N47D20C/B47D20A 2.0L Diesel Â· 184-190hp Â· 2013-2024",
           "priceRange": "£1,226-£3,500",
           "cta": "Compare 420d Engine Prices",
           "engineCodes": [
@@ -542,7 +557,7 @@
         {
           "h3": "BMW 4 Series 430d Engine Replacement",
           "slug": "4-series-430d-engine",
-          "subtitle": "N57D30A/B57D30A 3.0L Diesel · 258-265hp · 2013-2024",
+          "subtitle": "N57D30A/B57D30A 3.0L Diesel Â· 258-265hp Â· 2013-2024",
           "priceRange": "£2,700-£4,900",
           "cta": "Compare 430d Engine Prices",
           "engineCodes": [
@@ -557,7 +572,7 @@
         {
           "h3": "BMW 4 Series 418d Engine Replacement",
           "slug": "4-series-418d-engine",
-          "subtitle": "B47C20U0/B47D20A 2.0L Diesel · 143-150hp · 2013-2024",
+          "subtitle": "B47C20U0/B47D20A 2.0L Diesel Â· 143-150hp Â· 2013-2024",
           "priceRange": "£1,200-£2,800",
           "cta": "Compare 418d Engine Prices",
           "engineCodes": [
@@ -572,7 +587,7 @@
         {
           "h3": "BMW 4 Series 425d Engine Replacement",
           "slug": "4-series-425d-engine",
-          "subtitle": "B47D20B 2.0L Diesel · 218-224hp · 2014-2024",
+          "subtitle": "B47D20B 2.0L Diesel Â· 218-224hp Â· 2014-2024",
           "priceRange": "£1,900-£3,300",
           "cta": "Compare 425d Engine Prices",
           "engineCodes": [
@@ -586,7 +601,7 @@
         {
           "h3": "BMW 4 Series 420i Engine Replacement",
           "slug": "4-series-420i-engine",
-          "subtitle": "N20B20B/B48B20A 2.0L Petrol · 184hp · 2013-2024",
+          "subtitle": "N20B20B/B48B20A 2.0L Petrol Â· 184hp Â· 2013-2024",
           "priceRange": "£1,300-£3,700",
           "cta": "Compare 420i Engine Prices",
           "engineCodes": [
@@ -601,7 +616,7 @@
         {
           "h3": "BMW 4 Series 430i Engine Replacement",
           "slug": "4-series-430i-engine",
-          "subtitle": "B48B20B 2.0L Petrol · 252-258hp · 2016-2024",
+          "subtitle": "B48B20B 2.0L Petrol Â· 252-258hp Â· 2016-2024",
           "priceRange": "£2,100-£3,700",
           "cta": "Compare 430i Engine Prices",
           "engineCodes": [
@@ -615,7 +630,7 @@
         {
           "h3": "BMW 4 Series 428i Engine Replacement",
           "slug": "4-series-428i-engine",
-          "subtitle": "N20B20B 2.0L Petrol · 245hp · 2013-2016",
+          "subtitle": "N20B20B 2.0L Petrol Â· 245hp Â· 2013-2016",
           "priceRange": "£1,950-£3,400",
           "cta": "Compare 428i Engine Prices",
           "engineCodes": [
@@ -629,7 +644,7 @@
         {
           "h3": "BMW 4 Series 418i Engine Replacement",
           "slug": "4-series-418i-engine",
-          "subtitle": "B38B15A/B48A20U1 1.5L/2.0L Petrol · 136-140hp · 2013-2024",
+          "subtitle": "B38B15A/B48A20U1 1.5L/2.0L Petrol Â· 136-140hp Â· 2013-2024",
           "priceRange": "£1,000-£2,400",
           "cta": "Compare 418i Engine Prices",
           "engineCodes": [
@@ -644,7 +659,7 @@
         {
           "h3": "BMW 4 Series M4 Engine Replacement",
           "slug": "4-series-m4-engine",
-          "subtitle": "S55B30A/S58B30A 3.0L Petrol · 431-510hp · 2014-2024",
+          "subtitle": "S55B30A/S58B30A 3.0L Petrol Â· 431-510hp Â· 2014-2024",
           "priceRange": "£5,500-£11,500",
           "cta": "Compare M4 Engine Prices",
           "engineCodes": [
@@ -659,7 +674,7 @@
         {
           "h3": "BMW 4 Series 440i Engine Replacement",
           "slug": "4-series-440i-engine",
-          "subtitle": "B58B30A 3.0L Petrol · 326hp · 2017-2020",
+          "subtitle": "B58B30A 3.0L Petrol Â· 326hp Â· 2017-2020",
           "priceRange": "£2,800-£4,700",
           "cta": "Compare 440i Engine Prices",
           "engineCodes": [
@@ -673,7 +688,7 @@
         {
           "h3": "BMW 4 Series 435i Engine Replacement",
           "slug": "4-series-435i-engine",
-          "subtitle": "N55B30A 3.0L Petrol · 306hp · 2013-2016",
+          "subtitle": "N55B30A 3.0L Petrol Â· 306hp Â· 2013-2016",
           "priceRange": "£2,600-£4,400",
           "cta": "Compare 435i Engine Prices",
           "engineCodes": [
@@ -687,7 +702,7 @@
         {
           "h3": "BMW 4 Series 420d xDrive Engine Replacement",
           "slug": "4-series-420d-xdrive-engine",
-          "subtitle": "N47D20C/B47D20A 2.0L Diesel · 184-190hp · 2013-2024",
+          "subtitle": "N47D20C/B47D20A 2.0L Diesel Â· 184-190hp Â· 2013-2024",
           "priceRange": "£1,400-£3,800",
           "cta": "Compare 420d xDrive Engine Prices",
           "engineCodes": [
@@ -1750,7 +1765,7 @@
             },
             {
               "title": "BMW 4 Series 3.0L Hybrid Engines",
-              "description": "The 48-volt mild-hybrid system pairs with the latest generation 3.0L inline-six to deliver seamless stop-start functionality, torque fill during gear changes and enhanced fuel efficiency across the M440i range. A belt-starter-generator replaces the conventional alternator, drawing power from a compact lithium-ion auxiliary battery that requires minimal servicing. Engine replacement on MHEV models demands precise high-voltage safety protocols and software integration to ensure the starter-generator communicates correctly with the updated engine control unit. Not sure which engine size your BMW 4 Series needs? Enter your registration number above - we’ll identify the exact displacement, engine code and compatible replacement options instantly. All engines supplied through EngineMarket include a minimum 12‑month unlimited mileage warranty from UK BMW 4 Series specialists.",
+              "description": "The 48-volt mild-hybrid system pairs with the latest generation 3.0L inline-six to deliver seamless stop-start functionality, torque fill during gear changes and enhanced fuel efficiency across the M440i range. A belt-starter-generator replaces the conventional alternator, drawing power from a compact lithium-ion auxiliary battery that requires minimal servicing. Engine replacement on MHEV models demands precise high-voltage safety protocols and software integration to ensure the starter-generator communicates correctly with the updated engine control unit.",
               "engineCodes": [
                 "B58B30M2",
                 "integrated 48V belt-starter-generator"

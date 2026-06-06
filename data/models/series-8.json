@@ -15,13 +15,15 @@
     "canonical": "/bmw/8-series"
   },
   "assets": {
-    "heroBg": "/images/brands/bmw/models/bmw-8-series-model-card.png",
+    "mainImage": "/images/brands/bmw/models/bmw-z-series-model-card.png",
+    "smallImage": "/images/brands/bmw/models/bmw-z-series-model-card.png",
+    "heroBg": "/images/brands/bmw/models/bmw-z-series-model-card.png",
     "howItWorksBg": "/images/brands/bmw/brand/bmw-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/bmw/brand/bmw-engine-codes-bg.webp",
     "engineTypesBg": "/images/brands/bmw/brand/bmw-engine-types-bg.webp",
     "engineSizesBg": "/images/brands/bmw/brand/bmw-engine-sizes-bg.webp",
     "fuelTypesBg": "/images/brands/bmw/brand/bmw-fuel-types-bg.webp",
-    "ctaImage": "/images/brands/bmw/models/bmw-8-series-model-card.png"
+    "ctaImage": "/images/brands/bmw/models/bmw-z-series-model-card.png"
   },
   "sections": {
     "hero": {
@@ -169,6 +171,20 @@
           "Nationwide Delivery",
           "Trusted UK Suppliers"
         ]
+      }
+    },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "",
+      "description": "",
+      "cards": [],
+      "headingLines": [],
+      "imageAlt": "BMW 8 Series engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
       }
     },
     "liveMarketPrices": {
@@ -433,8 +449,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/bmw/models/live-feed-bmw-8-series.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",
@@ -519,7 +534,7 @@
         {
           "h3": "BMW 8 Series 830d Engine Replacement",
           "slug": "8-series-830d-engine",
-          "subtitle": "B57D30C 3.0L Diesel · 265hp · 2021-2024",
+          "subtitle": "B57D30C 3.0L Diesel Â· 265hp Â· 2021-2024",
           "priceRange": "£2,100-£3,800",
           "cta": "Compare 830d Engine Prices",
           "engineCodes": [
@@ -533,7 +548,7 @@
         {
           "h3": "BMW 8 Series 840d xDrive Coupe Engine Replacement",
           "slug": "8-series-840d-xdrive-coupe-engine",
-          "subtitle": "B57D30A 3.0L Diesel · 320hp · 2018-2024",
+          "subtitle": "B57D30A 3.0L Diesel Â· 320hp Â· 2018-2024",
           "priceRange": "£2,400-£4,200",
           "cta": "Compare 840d xDrive Coupe Engine Prices",
           "engineCodes": [
@@ -547,7 +562,7 @@
         {
           "h3": "BMW 8 Series 840d xDrive Gran Coupe Engine Replacement",
           "slug": "8-series-840d-xdrive-gran-coupe-engine",
-          "subtitle": "B57D30A 3.0L Diesel · 320hp · 2019-2024",
+          "subtitle": "B57D30A 3.0L Diesel Â· 320hp Â· 2019-2024",
           "priceRange": "£2,400-£4,300",
           "cta": "Compare 840d xDrive Gran Coupe Engine Prices",
           "engineCodes": [
@@ -561,7 +576,7 @@
         {
           "h3": "BMW 8 Series 840i Coupe Engine Replacement",
           "slug": "8-series-840i-coupe-engine",
-          "subtitle": "B58B30B 3.0L Petrol · 340hp · 2018-2024",
+          "subtitle": "B58B30B 3.0L Petrol Â· 340hp Â· 2018-2024",
           "priceRange": "£3,200-£5,500",
           "cta": "Compare 840i Coupe Engine Prices",
           "engineCodes": [
@@ -575,7 +590,7 @@
         {
           "h3": "BMW 8 Series 840i Gran Coupe Engine Replacement",
           "slug": "8-series-840i-gran-coupe-engine",
-          "subtitle": "B58B30B 3.0L Petrol · 340hp · 2019-2024",
+          "subtitle": "B58B30B 3.0L Petrol Â· 340hp Â· 2019-2024",
           "priceRange": "£3,300-£5,600",
           "cta": "Compare 840i Gran Coupe Engine Prices",
           "engineCodes": [
@@ -589,7 +604,7 @@
         {
           "h3": "BMW 8 Series 840i Convertible Engine Replacement",
           "slug": "8-series-840i-convertible-engine",
-          "subtitle": "B58B30B 3.0L Petrol · 340hp · 2019-2024",
+          "subtitle": "B58B30B 3.0L Petrol Â· 340hp Â· 2019-2024",
           "priceRange": "£3,300-£5,600",
           "cta": "Compare 840i Convertible Engine Prices",
           "engineCodes": [
@@ -603,7 +618,7 @@
         {
           "h3": "BMW 8 Series M850i xDrive Engine Replacement",
           "slug": "8-series-m850i-xdrive-engine",
-          "subtitle": "N63TU2 4.4L V8 Twin-Turbo Petrol · 530hp · 2019-2024",
+          "subtitle": "N63TU2 4.4L V8 Twin-Turbo Petrol · 530hp · 2019-2024 · Rebuilt: £4,900-£9,500",
           "priceRange": "£4,900-£9,500",
           "cta": "Compare M850i xDrive Engine Prices",
           "engineCodes": [
@@ -617,7 +632,7 @@
         {
           "h3": "BMW 8 Series M8 Competition Engine Replacement",
           "slug": "8-series-m8-competition-engine",
-          "subtitle": "S63B44T4 4.4L V8 High-Output Petrol · 625hp · 2019-2024",
+          "subtitle": "S63B44T4 4.4L V8 High-Output Petrol · 625hp · 2019-2024 · Rebuilt: £7,500-£12,500",
           "priceRange": "£7,500-£12,500",
           "cta": "Compare M8 Competition Engine Prices",
           "engineCodes": [
@@ -631,7 +646,7 @@
         {
           "h3": "BMW 8 Series E31 850Ci Engine Replacement",
           "slug": "8-series-e31-850ci-engine",
-          "subtitle": "M70B50 5.0L V12 Petrol · 300hp · 1990-1999",
+          "subtitle": "M70B50 5.0L V12 Petrol Â· 300hp Â· 1990-1999",
           "priceRange": "£6,500-£11,000",
           "cta": "Compare E31 850Ci Engine Prices",
           "engineCodes": [
@@ -645,7 +660,7 @@
         {
           "h3": "BMW 8 Series E31 840Ci Engine Replacement",
           "slug": "8-series-e31-840ci-engine",
-          "subtitle": "M60B40 4.0L V8 Petrol · 286hp · 1993-1999",
+          "subtitle": "M60B40 4.0L V8 Petrol Â· 286hp Â· 1993-1999",
           "priceRange": "£4,200-£7,500",
           "cta": "Compare E31 840Ci Engine Prices",
           "engineCodes": [
@@ -659,7 +674,7 @@
         {
           "h3": "BMW 8 Series E31 850CSi Engine Replacement",
           "slug": "8-series-e31-850csi-engine",
-          "subtitle": "S70B56 5.6L V12 Petrol · 380hp · 1992-1996",
+          "subtitle": "S70B56 5.6L V12 Petrol Â· 380hp Â· 1992-1996",
           "priceRange": "£9,000-£15,000",
           "cta": "Compare E31 850CSi Engine Prices",
           "engineCodes": [
@@ -673,7 +688,7 @@
         {
           "h3": "BMW 8 Series E31 830i Engine Replacement",
           "slug": "8-series-e31-830i-engine",
-          "subtitle": "M60B30 3.0L Inline-6 Petrol · 218hp · 1990-1996",
+          "subtitle": "M60B30 3.0L Inline-6 Petrol · 218hp · 1990-1996 · Rebuilt: £3,900-£6,500",
           "priceRange": "£3,900-£6,500",
           "cta": "Compare E31 830i Engine Prices",
           "engineCodes": [
@@ -1512,7 +1527,7 @@
     "engineSizes": {
       "tag": "Engine Sizes",
       "h2": "BMW 8 Series Engines by Size - Find the Right Displacement for Your Variant",
-      "intro": "",
+      "intro": "Every engine displacement officially fitted to the BMW 8 Series across all UK generations is listed below, complete with compatible engine codes, production years and common failure notes for accurate identification.",
       "groups": [
         {
           "title": "BMW 8 Series Diesel Engine Sizes",
@@ -1657,7 +1672,7 @@
     "fuelTypes": {
       "tag": "BMW 8 Series Engines Fuel Type",
       "h2": "BMW 8 Series Engines by Fuel Type",
-      "intro": "",
+      "intro": "Choose your BMW 8 Series engine by fuel type to compare realistic replacement prices, known issues, and compatible UK supply options - from early E31 V12s to the latest G-chassis 48V mild-hybrid units.",
       "items": [
         {
           "title": "BMW 8 Series Diesel Engines",
@@ -2279,7 +2294,7 @@
     "trustCta": {
       "tag": "Why Choose Us",
       "h2": "Why UK BMW 8 Series Owners Trust EngineMarket",
-      "intro": "",
+      "intro": "Join thousands of UK drivers who compare BMW 8 Series engine prices through our network of trusted specialists - every rebuilt and reconditioned unit backed by a minimum 12‑month unlimited mileage warranty and nationwide delivery.",
       "points": [
         {
           "title": "Trusted BMW 8 Series Engine Suppliers",

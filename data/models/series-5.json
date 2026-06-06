@@ -15,6 +15,8 @@
     "canonical": "/bmw/5-series"
   },
   "assets": {
+    "mainImage": "/images/brands/bmw/models/bmw-5-series-model-card.png",
+    "smallImage": "/images/brands/bmw/models/bmw-5-series-model-card.png",
     "heroBg": "/images/brands/bmw/models/bmw-5-series-model-card.png",
     "howItWorksBg": "/images/brands/bmw/brand/bmw-how-it-works-bg.webp",
     "engineCodesBg": "/images/brands/bmw/brand/bmw-engine-codes-bg.webp",
@@ -169,6 +171,20 @@
           "Nationwide Delivery",
           "Trusted UK Suppliers"
         ]
+      }
+    },
+    "engineIntelligence": {
+      "tag": "Engine Intelligence",
+      "h2": "",
+      "description": "",
+      "cards": [],
+      "headingLines": [],
+      "imageAlt": "BMW 5 Series engine intelligence reference",
+      "ui": {
+        "productionHistoryLabel": "Production History",
+        "knownFailuresLabel": "Known Failures",
+        "specsLabel": "Specs",
+        "replacementCostLabel": "Replacement Cost"
       }
     },
     "liveMarketPrices": {
@@ -449,8 +465,7 @@
         "noEntriesLabel": "No entries match that model filter yet.",
         "updatedLabel": "Last updated:",
         "ctaLabel": "Live Quote Benchmark"
-      },
-      "imageSrc": "/images/brands/bmw/models/live-feed-bmw-5-series.webp"
+      }
     },
     "reviews": {
       "tag": "Customer Reviews",
@@ -535,7 +550,7 @@
         {
           "h3": "BMW 5 Series 518d Engine Replacement",
           "slug": "5-series-518d-engine",
-          "subtitle": "B47D20 2.0L Diesel · 150hp · 2017-2024",
+          "subtitle": "B47D20 2.0L Diesel Â· 150hp Â· 2017-2024",
           "priceRange": "£1,800-£3,400",
           "cta": "Compare 518d Engine Prices",
           "engineCodes": [
@@ -549,11 +564,12 @@
         {
           "h3": "BMW 5 Series 520d Engine Replacement",
           "slug": "5-series-520d-engine",
-          "subtitle": "N47D20 / B47D20 2.0L Diesel · 184-190hp · 2010-2024",
+          "subtitle": "N47D20 / B47D20 2.0L Diesel Â· 184-190hp Â· 2010-2024",
           "priceRange": "£1,600-£3,600",
           "cta": "Compare 520d Engine Prices",
           "engineCodes": [
-            "N47D20"
+            "N47D20",
+            "B47D20"
           ],
           "fuel": "Diesel",
           "power": "184-190hp",
@@ -563,11 +579,12 @@
         {
           "h3": "BMW 5 Series 525d Engine Replacement",
           "slug": "5-series-525d-engine",
-          "subtitle": "M57TU / N47D20 2.0-3.0L Diesel · 197-218hp · 2003-2017",
+          "subtitle": "M57TU / N47D20 2.0-3.0L Diesel Â· 197-218hp Â· 2003-2017",
           "priceRange": "£1,900-£3,800",
           "cta": "Compare 525d Engine Prices",
           "engineCodes": [
-            "M57TU"
+            "M57TU",
+            "N47D20"
           ],
           "fuel": "Diesel",
           "power": "197-218hp",
@@ -577,11 +594,13 @@
         {
           "h3": "BMW 5 Series 530d Engine Replacement",
           "slug": "5-series-530d-engine",
-          "subtitle": "M57D30 / N57D30 / B57D30 3.0L Diesel · 231-286hp · 2003-2024",
+          "subtitle": "M57D30 / N57D30 / B57D30 3.0L Diesel Â· 231-286hp Â· 2003-2024",
           "priceRange": "£2,200-£4,400",
           "cta": "Compare 530d Engine Prices",
           "engineCodes": [
-            "M57D30"
+            "M57D30",
+            "N57D30",
+            "B57D30"
           ],
           "fuel": "Diesel",
           "power": "231-286hp",
@@ -591,11 +610,12 @@
         {
           "h3": "BMW 5 Series 520i Engine Replacement",
           "slug": "5-series-520i-engine",
-          "subtitle": "N20B20 / B48B20 2.0L Petrol · 184-252hp · 2011-2024",
+          "subtitle": "N20B20 / B48B20 2.0L Petrol Â· 184-252hp Â· 2011-2024",
           "priceRange": "£1,500-£3,200",
           "cta": "Compare 520i Engine Prices",
           "engineCodes": [
-            "N20B20"
+            "N20B20",
+            "B48B20"
           ],
           "fuel": "Petrol",
           "power": "184-252hp",
@@ -605,7 +625,7 @@
         {
           "h3": "BMW 5 Series 535i Engine Replacement",
           "slug": "5-series-535i-engine",
-          "subtitle": "N55B30 3.0L Petrol · 306hp · 2010-2017",
+          "subtitle": "N55B30 3.0L Petrol Â· 306hp Â· 2010-2017",
           "priceRange": "£2,400-£4,800",
           "cta": "Compare 535i Engine Prices",
           "engineCodes": [
@@ -619,7 +639,7 @@
         {
           "h3": "BMW 5 Series 540i Engine Replacement",
           "slug": "5-series-540i-engine",
-          "subtitle": "B58B30 3.0L Petrol · 326-340hp · 2017-2024",
+          "subtitle": "B58B30 3.0L Petrol Â· 326-340hp Â· 2017-2024",
           "priceRange": "£2,800-£5,500",
           "cta": "Compare 540i Engine Prices",
           "engineCodes": [
@@ -633,7 +653,7 @@
         {
           "h3": "BMW 5 Series 550i Engine Replacement",
           "slug": "5-series-550i-engine",
-          "subtitle": "N63B44 4.4L Petrol · 407-450hp · 2010-2017",
+          "subtitle": "N63B44 4.4L Petrol Â· 407-450hp Â· 2010-2017",
           "priceRange": "£3,200-£6,500",
           "cta": "Compare 550i Engine Prices",
           "engineCodes": [
@@ -647,7 +667,7 @@
         {
           "h3": "BMW 5 Series 535d Engine Replacement",
           "slug": "5-series-535d-engine",
-          "subtitle": "N57S 3.0L Triple Turbo Diesel · 381hp · 2013-2017",
+          "subtitle": "N57S 3.0L Triple Turbo Diesel · 381hp · 2013-2017 · Rebuilt: £2,600-£5,200",
           "priceRange": "£2,600-£5,200",
           "cta": "Compare 535d Engine Prices",
           "engineCodes": [
@@ -661,7 +681,7 @@
         {
           "h3": "BMW 5 Series M5 Engine Replacement",
           "slug": "5-series-m5-engine",
-          "subtitle": "S63B44 4.4L V8 Petrol · 560-625hp · 2011-2024",
+          "subtitle": "S63B44 4.4L V8 Petrol Â· 560-625hp Â· 2011-2024",
           "priceRange": "£5,500-£9,500",
           "cta": "Compare M5 Engine Prices",
           "engineCodes": [
@@ -675,13 +695,13 @@
         {
           "h3": "BMW 5 Series 530e Engine Replacement",
           "slug": "5-series-530e-engine",
-          "subtitle": "B48B20 + Electric 2.0L PHEV · 252-292hp · 2017-2024",
+          "subtitle": "B48B20 + Electric 2.0L PHEV Â· 252-292hp Â· 2017-2024",
           "priceRange": "£2,400-£4,600",
           "cta": "Compare 530e Engine Prices",
           "engineCodes": [
             "B48B20"
           ],
-          "fuel": "Phev",
+          "fuel": "Electric",
           "power": "252-292hp",
           "years": "2017-2024",
           "image": ""
@@ -689,13 +709,13 @@
         {
           "h3": "BMW 5 Series 545e Engine Replacement",
           "slug": "5-series-545e-engine",
-          "subtitle": "B58B30 + Electric 3.0L PHEV · 394hp · 2020-2024",
+          "subtitle": "B58B30 + Electric 3.0L PHEV Â· 394hp Â· 2020-2024",
           "priceRange": "£3,500-£6,800",
           "cta": "Compare 545e Engine Prices",
           "engineCodes": [
             "B58B30"
           ],
-          "fuel": "Phev",
+          "fuel": "Electric",
           "power": "394hp",
           "years": "2020-2024",
           "image": ""
@@ -1805,7 +1825,7 @@
             },
             {
               "title": "BMW 5 Series 3.0L Hybrid Engines",
-              "description": "Positioned as the premium electrified executive choice, the 3.0-litre inline-six hybrid pairs a larger electric motor with BMW’s acclaimed B58 petrol unit to deliver near-V8 acceleration with zero-emission city driving. This configuration targets fleet buyers and performance enthusiasts seeking cutting-edge technology without sacrificing driving dynamics. Not sure which engine size your BMW 5 Series needs? Enter your registration number above - we’ll identify the exact displacement, engine code and compatible replacement options instantly. All engines supplied through EngineMarket include a minimum 12‑month unlimited mileage warranty from UK BMW 5 Series specialists.",
+              "description": "Positioned as the premium electrified executive choice, the 3.0-litre inline-six hybrid pairs a larger electric motor with BMW’s acclaimed B58 petrol unit to deliver near-V8 acceleration with zero-emission city driving. This configuration targets fleet buyers and performance enthusiasts seeking cutting-edge technology without sacrificing driving dynamics.",
               "engineCodes": [
                 "B58B30 (PHEV variants)"
               ],
@@ -1843,7 +1863,7 @@
     "fuelTypes": {
       "tag": "BMW 5 Series Engines Fuel Type",
       "h2": "BMW 5 Series Engines by Fuel Type",
-      "intro": "",
+      "intro": "Choose your BMW 5 Series engine by fuel type to compare realistic replacement prices, known issues, and compatible UK supply options - from early M57 diesel workhorses to the latest B58 mild-hybrid units.",
       "items": [
         {
           "title": "BMW 5 Series Diesel Engines",
