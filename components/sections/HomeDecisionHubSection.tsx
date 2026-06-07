@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useMemo, useState } from "react";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
@@ -20,6 +21,16 @@ import {
 } from "@/lib/homeDecisionHubData";
 
 type StepId = 1 | 2 | 3;
+
+// Store Step 1 card image URLs in a centralized object
+const failureImages: Record<string, string> = {
+  "timing-chain": "/Home/CalculatorIcons/01.webp",
+  "seized-engine": "/Home/CalculatorIcons/02.webp",
+  "head-gasket": "/Home/CalculatorIcons/03.webp",
+  "turbo-damage": "/Home/CalculatorIcons/04.webp",
+  "crankshaft-bearing": "/Home/CalculatorIcons/05.webp",
+  "oil-pump": "/Home/CalculatorIcons/06.webp",
+};
 
 function TickIcon() {
   return (
@@ -77,9 +88,9 @@ function getVerdictMeta(verdict: VerdictId) {
   if (verdict === "A") {
     return {
       icon: <CircleTickIcon />,
-      accent: "text-[#15803d]",
-      bg: "bg-[#f0fdf4]",
-      border: "border-[#86efac]",
+      accent: "text-[#22c55e]",
+      bg: "bg-[#15803d]/10",
+      border: "border-[#15803d]/30",
       title: "Replacement is likely worth it for your vehicle.",
       subtitle: "Based on your answers, engine replacement makes financial sense.",
     };
@@ -88,9 +99,9 @@ function getVerdictMeta(verdict: VerdictId) {
   if (verdict === "B") {
     return {
       icon: <ScaleIcon />,
-      accent: "text-[#b45309]",
-      bg: "bg-[#fffbeb]",
-      border: "border-[#fcd34d]",
+      accent: "text-[#fbbf24]",
+      bg: "bg-[#fbbf24]/10",
+      border: "border-[#fbbf24]/30",
       title: "Engine replacement is borderline. Get real quotes before deciding.",
       subtitle: "Real specialist quotes could change this picture significantly.",
     };
@@ -99,9 +110,9 @@ function getVerdictMeta(verdict: VerdictId) {
   if (verdict === "C") {
     return {
       icon: <LoopIcon />,
-      accent: "text-[#1d4ed8]",
-      bg: "bg-[#eff6ff]",
-      border: "border-[#93c5fd]",
+      accent: "text-[#60a5fa]",
+      bg: "bg-[#3b82f6]/10",
+      border: "border-[#3b82f6]/30",
       title: "You have two strong options. Here is the comparison.",
       subtitle: "Your vehicle value supports both replacement and buying another used car.",
     };
@@ -109,9 +120,9 @@ function getVerdictMeta(verdict: VerdictId) {
 
   return {
     icon: <WarningIcon />,
-    accent: "text-[#dc2626]",
-    bg: "bg-[#fef2f2]",
-    border: "border-[#fca5a5]",
+    accent: "text-[#f87171]",
+    bg: "bg-[#ef4444]/10",
+    border: "border-[#ef4444]/30",
     title: "Replacement costs may exceed your vehicle's value.",
     subtitle: "Consider all options carefully - but low-cost used routes can still be worth checking.",
   };
@@ -125,31 +136,48 @@ function StepIndicator({ step }: { step: StepId }) {
   ] as const;
 
   return (
-    <div className="hidden items-start gap-3 sm:flex">
+    // 1. Added w-full to ensure it stretches to the edges of its parent container
+    <div className="hidden w-full sm:flex">
       {steps.map((item, index) => {
         const done = step > item.number;
         const active = step === item.number;
+        const isLast = index === steps.length - 1;
 
         return (
-          <div key={item.number} className="flex min-w-0 flex-1 items-start gap-3">
-            <div className="flex flex-col items-center gap-2">
-              <div
-                className={`flex h-8 w-8 items-center justify-center rounded-full border-2 text-[12px] font-bold transition ${
-                  done || active
-                    ? "border-[#15803d] bg-[#15803d] text-white"
-                    : "border-[#d9e2ec] bg-white text-[#94a3b8]"
-                }`}
-              >
-                {done ? <TickIcon /> : item.number}
-              </div>
-              <span className={`text-[11px] font-bold uppercase tracking-[0.08em] ${done || active ? "text-[#15803d]" : "text-[#94a3b8]"}`}>
-                {item.label}
-              </span>
+          // 2. flex-1 ensures each step takes up equal width (spanning full section)
+          // items-center keeps the circle and label perfectly centered under each other
+          <div
+            key={item.number}
+            className="relative flex flex-1 flex-col items-center"
+          >
+            {/* Circle */}
+            <div
+              className={`relative z-10 flex h-8 w-8 items-center justify-center rounded-full border-2 text-[12px] font-bold transition ${
+                done || active
+                  ? 'border-[#15803d] bg-[#15803d] text-white'
+                  : 'border-[#2d3748] bg-[#1a2744] text-white/40'
+              }`}
+            >
+              {done ? <TickIcon /> : item.number}
             </div>
 
-            {index < steps.length - 1 ? (
-              <div className={`mt-4 h-[2px] flex-1 ${step > item.number ? "bg-[#15803d]" : "bg-[#e2e8f0]"}`} />
-            ) : null}
+            {/* Connecting Line */}
+            {!isLast && (
+              <div
+                className={`absolute top-[15px] left-1/2 h-[2px] w-full ${
+                  step > item.number ? 'bg-[#15803d]' : 'bg-[#2d3748]'
+                }`}
+              />
+            )}
+
+            {/* Label */}
+            <span
+              className={`mt-2 text-[11px] font-bold uppercase tracking-[0.08em] ${
+                done || active ? 'text-[#22c55e]' : 'text-white/40'
+              }`}
+            >
+              {item.label}
+            </span>
           </div>
         );
       })}
@@ -165,30 +193,46 @@ function MobileStepIndicator({ step }: { step: StepId }) {
   ] as const;
 
   return (
-    <div className="mb-4 sm:hidden">
-      <div className="mb-3 h-[3px] overflow-hidden rounded-full bg-[#dbe3ec]">
-        <div
-          className="h-full rounded-full bg-[#15803d] transition-[width]"
-          style={{ width: `${Math.round((step / 3) * 100)}%` }}
-        />
-      </div>
-      <div className="flex items-start justify-between gap-3">
-        {steps.map((item) => {
+    // 1. Added w-full to ensure it stretches to the edges of its parent container
+    <div className="mb-4 w-full sm:hidden">
+      <div className="flex w-full">
+        {steps.map((item, index) => {
           const done = step > item.number;
           const active = step === item.number;
+          const isLast = index === steps.length - 1;
 
           return (
-            <div key={item.number} className="flex flex-1 flex-col items-center gap-2">
+            // 2. flex-1 ensures each step takes up equal width (spanning full section)
+            <div
+              key={item.number}
+              className="relative flex flex-1 flex-col items-center"
+            >
+              {/* Circle */}
               <div
-                className={`flex h-8 w-8 items-center justify-center rounded-full border-2 text-[12px] font-bold ${
+                className={`relative z-10 flex h-8 w-8 items-center justify-center rounded-full border-2 text-[12px] font-bold transition ${
                   done || active
                     ? "border-[#15803d] bg-[#15803d] text-white"
-                    : "border-[#d9e2ec] bg-white text-[#94a3b8]"
+                    : "border-[#2d3748] bg-[#1a2744] text-white/40"
                 }`}
               >
                 {done ? <TickIcon /> : item.number}
               </div>
-              <span className={`text-[10px] font-bold uppercase tracking-[0.08em] ${done || active ? "text-[#15803d]" : "text-[#94a3b8]"}`}>
+
+              {/* Connecting Line */}
+              {!isLast && (
+                <div
+                  className={`absolute top-[15px] left-1/2 h-[2px] w-full ${
+                    step > item.number ? "bg-[#15803d]" : "bg-[#2d3748]"
+                  }`}
+                />
+              )}
+
+              {/* Label */}
+              <span
+                className={`mt-2 text-[10px] font-bold uppercase tracking-[0.08em] ${
+                  done || active ? "text-[#22c55e]" : "text-white/40"
+                }`}
+              >
                 {item.label}
               </span>
             </div>
@@ -201,19 +245,19 @@ function MobileStepIndicator({ step }: { step: StepId }) {
 
 function ResultPreview() {
   return (
-    <div className="hidden rounded-[18px] border border-white/10 bg-[rgba(255,255,255,0.08)] p-5 text-white/80 shadow-[0_18px_40px_rgba(0,0,0,0.18)] lg:block">
-      <div className="flex items-center gap-3 text-[#86efac]">
-        <CircleTickIcon />
-        <span className="text-[14px] font-semibold uppercase tracking-[0.08em]">Preview Result</span>
+    <div className="hidden rounded-[18px] border border-white/5 bg-gradient-to-b from-[#1a2744] via-[#0f1d33] to-[#0a1929] p-6 shadow-[0_18px_40px_rgba(0,0,0,0.18)] lg:block">
+      <div className="flex items-center gap-2">
+        <div className="h-2 w-2 rounded-full bg-[#22c55e]" />
+        <span className="text-[12px] font-semibold uppercase tracking-[0.12em] text-white/60">Preview Result</span>
       </div>
-      <h3 className="mt-4 font-['Manrope'] text-[24px] font-bold leading-[1.15] text-white">
-        Replacement is likely worth it
+      <h3 className="mt-5 font-['Manrope'] text-[15px] font-bold leading-[1.25] text-white" style={{ fontSize: "18px" }}>
+        Replacement is likely <span className="text-[#22c55e]">worth it</span>
       </h3>
-      <div className="mt-5 rounded-[14px] border border-white/10 bg-white/10 p-4">
-        <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-white/60">Typical Cost</p>
-        <p className="mt-2 text-[28px] font-black text-[#86efac]">GBP 2,200-5,500</p>
-        <p className="mt-2 text-[12px] leading-[1.6] text-white/70">
-          Compare it against your car&apos;s current value and see whether replacement makes financial sense.
+      <div className="mt-6">
+        <p className="text-[10px] font-semibold uppercase tracking-[0.12em] text-white/50">Typical Cost</p>
+        <p className="mt-2 font-['Manrope'] text-[25px] font-black text-[#22c55e]">£2,200–5,500</p>
+        <p className="mt-3 text-[13px] leading-[1.6] text-white/60">
+          Compare against your car&apos;s current value and see whether replacement makes financial sense.
         </p>
       </div>
     </div>
@@ -240,73 +284,75 @@ function VerdictScreen({
 
   return (
     <div>
-      <div className={`rounded-[16px] border p-5 sm:p-6 ${verdict.bg} ${verdict.border}`}>
+      {/* Verdict Banner */}
+      <div className={`rounded-[16px] border p-2 sm:p-6 ${verdict.bg} ${verdict.border}`}>
         <div className={`flex items-start gap-3 ${verdict.accent}`}>
           {verdict.icon}
           <div>
-            <h3 className="font-['Manrope'] text-[24px] font-bold leading-[1.2] text-[#0d1b2e]">{verdict.title}</h3>
-            <p className="mt-2 text-[14px] leading-[1.6] text-[#4b5563]">{verdict.subtitle}</p>
+            <p className="font-['Manrope'] text-[14px] sm:text-[24px] font-bold leading-[1.2] text-white">{verdict.title}</p>
+            <p className="mt-2 text-[14px] leading-[1.6] text-white/70">{verdict.subtitle}</p>
           </div>
         </div>
       </div>
 
-      <div className="mt-5 overflow-hidden rounded-[16px] border border-[#e2e8f0] bg-white">
-        <div className="border-b border-[#e2e8f0] bg-[#0d1b2e] px-5 py-3">
+      {/* Cost Breakdown Card */}
+      <div className="mt-5 overflow-hidden rounded-[16px] border border-white/10 bg-[#112240]">
+        <div className="border-b border-white/10 bg-[#0d1b2e] px-5 py-3">
           <p className="text-[11px] font-bold uppercase tracking-[0.12em] text-[#94a3b8]">Your Estimated Cost Breakdown</p>
         </div>
 
-        <div className="grid gap-3 p-5 sm:grid-cols-2 sm:p-6">
-          <div className="rounded-[12px] border border-[#86efac] bg-[#f0fdf4] p-4">
-            <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-[#6b7280]">{failureLabel} - {conditionLabel}</p>
-            <p className="mt-2 font-['Manrope'] text-[26px] font-black text-[#15803d]">
+        <div className="grid gap-2 sm:gap-3 p-2 sm:p-5 sm:grid-cols-2 sm:p-6">
+          <div className="rounded-[12px] border border-[#15803d]/30 bg-[#15803d]/10 p-4">
+            <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-white/60">{failureLabel} - {conditionLabel}</p>
+            <p className="mt-2 font-['Manrope'] text-[18px] sm:text-[26px] font-black text-[#22c55e]">
               {formatCurrency(verdictState.costs.low)} - {formatCurrency(verdictState.costs.high)}
             </p>
-            <p className="mt-1 text-[12px] text-[#6b7280]">Typical cost supplied & fitted</p>
+            <p className="mt-1 text-[12px] text-white/50">Typical cost supplied & fitted</p>
           </div>
 
-          <div className="rounded-[12px] border border-[#e2e8f0] bg-[#f8fafc] p-4">
-            <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-[#6b7280]">Main Dealer Estimate</p>
-            <p className="mt-2 font-['Manrope'] text-[26px] font-black text-[#94a3b8] line-through">
+          <div className="rounded-[12px] border border-white/10 bg-[#1a2744] p-4">
+            <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-white/60">Main Dealer Estimate</p>
+            <p className="mt-2 font-['Manrope'] text-[18px] sm:text-[26px] font-black text-[#94a3b8] line-through">
               {formatCurrency(verdictState.costs.mdLow)} - {formatCurrency(verdictState.costs.mdHigh)}
             </p>
-            <p className="mt-1 text-[12px] text-[#6b7280]">Typical main dealer pricing</p>
+            <p className="mt-1 text-[12px] text-white/50">Typical main dealer pricing</p>
           </div>
 
-          <div className="rounded-[12px] border border-[#e2e8f0] bg-[#f8fafc] p-4">
-            <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-[#6b7280]">Your Car&apos;s Estimated Value</p>
-            <p className="mt-2 font-['Manrope'] text-[24px] font-black text-[#0d1b2e]">{formatCurrency(carValue)}</p>
-            <p className="mt-1 text-[12px] text-[#6b7280]">Before the engine failure</p>
+          <div className="rounded-[12px] border border-white/10 bg-[#1a2744] p-4">
+            <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-white/60">Your Car&apos;s Estimated Value</p>
+            <p className="mt-2 font-['Manrope'] text-[18px] sm:text-[24px] font-black text-white">{formatCurrency(carValue)}</p>
+            <p className="mt-1 text-[12px] text-white/50">Before the engine failure</p>
           </div>
 
-          <div className="rounded-[12px] border border-[#e2e8f0] bg-[#f8fafc] p-4">
-            <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-[#6b7280]">Replacement as % of Car Value</p>
-            <p className="mt-2 font-['Manrope'] text-[24px] font-black text-[#0d1b2e]">{verdictState.replacementAsPercentOfCarValue}%</p>
-            <p className="mt-1 text-[12px] text-[#6b7280]">EnginesMarket typical cost only</p>
+          <div className="rounded-[12px] border border-white/10 bg-[#1a2744] p-4">
+            <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-white/60">Replacement as % of Car Value</p>
+            <p className="mt-2 font-['Manrope'] text-[18px] sm:text-[24px] font-black text-white">{verdictState.replacementAsPercentOfCarValue}%</p>
+            <p className="mt-1 text-[12px] text-white/50">EnginesMarket typical cost only</p>
           </div>
         </div>
 
         <div className="px-5 pb-5 sm:px-6 sm:pb-6">
-          <div className="rounded-[12px] border border-[#86efac] bg-[#f0fdf4] px-4 py-3 text-[14px] font-semibold text-[#15803d]">
+          <div className="rounded-[12px] border border-[#15803d]/30 bg-[#15803d]/10 px-4 py-3 text-[14px] font-semibold text-[#22c55e]">
             Potential saving via EnginesMarket: up to {verdictState.savingVsDealer}%
           </div>
 
           {verdictState.verdict === "C" ? (
             <div className="mt-4 grid gap-3 sm:grid-cols-2">
-              <div className="rounded-[12px] border border-[#dbe5f2] bg-[#f8fafc] p-4">
-                <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-[#15803d]">Option 1 - Replace the Engine</p>
-                <p className="mt-2 font-['Manrope'] text-[20px] font-black text-[#0d1b2e]">
+              <div className="rounded-[12px] border border-white/10 bg-[#1a2744] p-4">
+                <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-[#22c55e]">Option 1 - Replace the Engine</p>
+                <p className="mt-2 font-['Manrope'] text-[20px] font-black text-white">
                   {formatCurrency(verdictState.costs.low)} - {formatCurrency(verdictState.costs.high)}
                 </p>
-                <p className="mt-2 text-[13px] leading-[1.6] text-[#6b7280]">
+                <p className="mt-2 text-[13px] leading-[1.6] text-white/60">
                   Your car retains its value. Cheaper than buying another equivalent vehicle outright.
                 </p>
               </div>
-              <div className="rounded-[12px] border border-[#dbe5f2] bg-[#f8fafc] p-4">
-                <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-[#1d4ed8]">Option 2 - Buy a Replacement Car</p>
-                <p className="mt-2 font-['Manrope'] text-[20px] font-black text-[#0d1b2e]">
+              <div className="rounded-[12px] border border-white/10 bg-[#1a2744] p-4">
+                <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-[#60a5fa]">Option 2 - Buy a Replacement Car</p>
+                <p className="mt-2 font-['Manrope'] text-[20px] font-black text-white">
                   {formatCurrency(Math.round(carValue * 1.1))} - {formatCurrency(Math.round(carValue * 1.4))}
                 </p>
-                <p className="mt-2 text-[13px] leading-[1.6] text-[#6b7280]">
+                <p className="mt-2 text-[13px] leading-[1.6] text-white/60">
                   Higher upfront cost. May be preferable if the rest of the vehicle is also near end of life.
                 </p>
               </div>
@@ -314,9 +360,9 @@ function VerdictScreen({
           ) : null}
 
           {verdictState.verdict === "D" ? (
-            <div className="mt-4 rounded-[12px] border border-[#fecaca] bg-[#fff7f7] p-4">
-              <p className="text-[13px] font-semibold text-[#0d1b2e]">Options worth considering:</p>
-              <ul className="mt-3 space-y-2 text-[13px] leading-[1.6] text-[#6b7280]">
+            <div className="mt-4 rounded-[12px] border border-[#ef4444]/30 bg-[#ef4444]/10 p-4">
+              <p className="text-[13px] font-semibold text-white">Options worth considering:</p>
+              <ul className="mt-3 space-y-2 text-[13px] leading-[1.6] text-white/70">
                 <li>Get quotes anyway - some low-mileage used engines can bring total costs under GBP 1,200.</li>
                 <li>DVLA scrap value is typically around GBP 150-350 for an unrunning vehicle.</li>
                 <li>Part-exchange as a non-runner can still be an option with some dealers.</li>
@@ -326,6 +372,7 @@ function VerdictScreen({
         </div>
       </div>
 
+      {/* Action Buttons */}
       <div className="mt-5">
         <div className="flex flex-col gap-3 sm:flex-row">
           <a
@@ -341,21 +388,21 @@ function VerdictScreen({
           {verdictState.verdict === "C" ? (
             <a
               href="#home-hero-reg-form"
-              className="inline-flex min-h-[52px] items-center justify-center rounded-[10px] border border-[#d9e2ec] bg-white px-5 text-[14px] font-semibold text-[#0d1b2e] transition hover:bg-[#f8fafc]"
+              className="inline-flex min-h-[52px] items-center justify-center rounded-[10px] border border-white/10 bg-[#1a2744] px-5 text-[14px] font-semibold text-white transition hover:bg-[#0f1d33]"
             >
               View Car Value Guide
             </a>
           ) : verdictState.verdict === "D" ? (
             <a
               href="#home-hero-reg-form"
-              className="inline-flex min-h-[52px] items-center justify-center rounded-[10px] border border-[#d9e2ec] bg-white px-5 text-[14px] font-semibold text-[#0d1b2e] transition hover:bg-[#f8fafc]"
+              className="inline-flex min-h-[52px] items-center justify-center rounded-[10px] border border-white/10 bg-[#1a2744] px-5 text-[14px] font-semibold text-white transition hover:bg-[#0f1d33]"
             >
               Honest Cost Comparison Guide
             </a>
           ) : null}
         </div>
 
-        <div className="mt-3 flex flex-wrap justify-center gap-x-5 gap-y-2 text-[12px] text-[#6b7280]">
+        <div className="mt-3 flex flex-wrap justify-center gap-x-5 gap-y-2 text-[12px] text-white/50">
           <span>No obligation</span>
           <span>100+ vetted UK specialists</span>
           <span>Free to use</span>
@@ -364,7 +411,7 @@ function VerdictScreen({
         <button
           type="button"
           onClick={onReset}
-          className="mx-auto mt-4 block text-[13px] text-[#6b7280] underline underline-offset-2"
+          className="mx-auto mt-4 block text-[13px] text-white/60 underline underline-offset-2 hover:text-white"
         >
           Start again / Try different inputs
         </button>
@@ -419,15 +466,11 @@ export default function HomeDecisionHubSection() {
           <p className="mx-auto mt-4 text-[15px] leading-[1.7] text-[#94a3b8] sm:text-[16px]">
             Enter your failure type and vehicle details below. We&apos;ll show you the typical replacement cost, how it compares to your car&apos;s value, and whether replacement makes financial sense. The most common question we receive: &quot;My engine has failed - is it worth replacing, or should I scrap the car?&quot; The answer depends on your failure type, vehicle value, and which type of replacement engine you choose - and the difference between a GBP 2,200 reconditioned engine via EnginesMarket and a GBP 14,000 main dealer quote is often the deciding factor.
           </p>
-
-          {/* <p className="mx-auto mt-4 max-w-[68ch] text-[14px] leading-[1.7] text-white/65">
-            The most common question we receive: &quot;My engine has failed - is it worth replacing, or should I scrap the car?&quot; The answer depends on your failure type, vehicle value, and which type of replacement engine you choose - and the difference between a GBP 2,200 reconditioned engine via EnginesMarket and a GBP 14,000 main dealer quote is often the deciding factor.
-          </p> */}
         </div>
 
         <div className="mt-6 grid gap-5 lg:grid-cols-[minmax(0,1fr)_260px] lg:items-start">
-          <div className="overflow-hidden rounded-[24px] bg-white shadow-[0_22px_60px_rgba(0,0,0,0.28)]">
-            <div className="h-[3px] w-full bg-[#dbe3ec]">
+          <div className="overflow-hidden rounded-[24px] bg-[#03132a] shadow-[0_22px_60px_rgba(0,0,0,0.28)]">
+            <div className="h-[3px] w-full bg-[#2d3748]">
               {!showResult ? (
                 <div className="h-full bg-[#15803d] transition-[width]" style={{ width: `${Math.round((step / 3) * 100)}%` }} />
               ) : (
@@ -435,7 +478,7 @@ export default function HomeDecisionHubSection() {
               )}
             </div>
 
-            <div className="p-5 sm:p-7 lg:p-9">
+            <div className="p-2 sm:p-7 lg:p-9">
               {showResult && failureType && vehicleAge ? (
                 <VerdictScreen
                   failureType={failureType}
@@ -451,8 +494,13 @@ export default function HomeDecisionHubSection() {
 
                   {step === 1 ? (
                     <div>
-                      <h3 className="font-['Manrope'] text-[22px] font-bold text-[#0d1b2e]">What happened to your engine?</h3>
-                      <div className="mt-5 grid grid-cols-2 gap-3 md:grid-cols-3 xl:grid-cols-4">
+                      <div className="mb-6 mt-6">
+                        <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-white/60">Step 1 - Failure Type</p>
+                        <h3 className="mt-2 font-['Manrope'] text-[28px] font-bold text-white">What happened to your engine?</h3>
+                        <p className="mt-2 text-[14px] text-white/60">Select the issue that best describes your engine problem.</p>
+                      </div>
+
+                      <div className="grid gap-4 grid-cols-2 lg:grid-cols-3">
                         {failureTypes.slice(0, 6).map((failure) => {
                           const selected = failureType === failure.id;
 
@@ -461,50 +509,79 @@ export default function HomeDecisionHubSection() {
                               key={failure.id}
                               type="button"
                               onClick={() => setFailureType(failure.id)}
-                              className={`flex min-h-[90px] flex-col items-center justify-center gap-2 rounded-[12px] border px-3 py-4 text-center transition ${
-                                selected
-                                  ? "border-2 border-[#15803d] bg-[#f0fdf4] shadow-[0_0_0_4px_rgba(21,128,61,0.08)]"
-                                  : "border-[#e2e8f0] bg-white hover:border-[#15803d] hover:shadow-[0_2px_12px_rgba(21,128,61,0.15)]"
-                              }`}
+                              className={`relative flex min-h-[150px] flex-col items-center justify-center gap-3 rounded-[12px] border-2 p-1 sm:p-3 text-center transition-all duration-200 ${selected
+                                  ? "border-[#15803d] bg-gradient-to-b from-[#1a2744] via-[#0f1d33] to-[#0a1929] shadow-[0_0_25px_rgba(21,128,61,0.4)]"
+                                  : "border-[#2d3748] bg-gradient-to-b from-[#1a2744] via-[#0f1d33] to-[#0a1929] hover:border-[#15803d]/60 hover:shadow-[0_0_20px_rgba(21,128,61,0.25)]"
+                                }`}
                             >
-                              <span className="text-[24px] leading-none">{failure.emoji}</span>
-                              <span className="text-[12px] font-bold leading-[1.35] text-[#0d1b2e]">{failure.label}</span>
-                              <span className="text-[10.5px] leading-[1.45] text-[#94a3b8]">{failure.description}</span>
+                              {selected && (
+                                <div className="absolute left-2 top-2 sm:left-5 sm:top-5 flex h-7 w-7 items-center justify-center rounded-full bg-[#15803d] text-white shadow-lg">
+                                  <TickIcon />
+                                </div>
+                              )}
+
+                              <div className={`h-15 w-15 sm:h-20 sm:w-20 flex-shrink-0 overflow-hidden rounded-lg ${selected ? '' : 'opacity-90'}`}>
+                                <Image
+                                  src={failureImages[failure.id] || "/images/failures/default.png"}
+                                  alt={failure.label}
+                                  width={80}
+                                  height={80}
+                                  className="h-full w-full object-cover"
+                                />
+                              </div>
+
+                              <div className="flex-1">
+                                <p className={`text-[13px] sm:text-[15px] font-bold leading-[1.35] ${selected ? "text-white" : "text-white"}`}>
+                                  {failure.label}
+                                </p>
+                                <p className={`mt-2 text-[11px] sm:text-[13px] leading-[1.5] ${selected ? "text-[#94a3b8]" : "text-[#64748b]"}`}>
+                                  {failure.description}
+                                </p>
+                              </div>
                             </button>
                           );
                         })}
+
+                                                {/* Not Sure / Multiple Issues - Full Width */}
+                        {(() => {
+                          const unknown = failureTypes.find((item) => item.id === "unknown");
+                          const selected = failureType === "unknown";
+
+                          if (!unknown) return null;
+
+                          return (
+                            <button
+                              type="button"
+                              onClick={() => setFailureType("unknown")}
+                              className={`col-span-2 sm:col-span-2 lg:col-span-3 flex min-h-[72px] items-center gap-4 rounded-[12px] border px-5 py-4 text-left transition ${selected
+                                  ? "border-2 border-[#15803d] bg-[#0f1d33] shadow-[0_0_0_4px_rgba(21,128,61,0.08)]"
+                                  : "border-[#2d3748] bg-[#0a1929] hover:border-[#15803d] hover:shadow-[0_2px_12px_rgba(21,128,61,0.15)]"
+                                }`}
+                            >
+                              <div className={`flex h-12 w-12 items-center justify-center rounded-full ${selected ? " text-[#15803d]" : "text-white"}`}>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                  <circle cx="12" cy="12" r="10" />
+                                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+                                  <path d="M12 17h.01" />
+                                </svg>
+                              </div>
+                              <div className="flex-1">
+                                <p className={`text-[14px] font-bold ${selected ? "text-white" : "text-white/80"}`}>{unknown.label}</p>
+                                <p className={`mt-0.5 text-[12px] ${selected ? "text-[#94a3b8]" : "text-[#6b7280]"}`}>{unknown.description}</p>
+                              </div>
+                              <svg viewBox="0 0 24 24" className="h-5 w-5 text-[#94a3b8]" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <path d="M9 18l6-6-6-6" />
+                              </svg>
+                            </button>
+                          );
+                        })()}
                       </div>
-
-                      {(() => {
-                        const unknown = failureTypes.find((item) => item.id === "unknown");
-                        const selected = failureType === "unknown";
-
-                        if (!unknown) return null;
-
-                        return (
-                          <button
-                            type="button"
-                            onClick={() => setFailureType("unknown")}
-                            className={`mt-3 flex min-h-[68px] w-full items-center gap-4 rounded-[12px] border px-4 py-4 text-left transition ${
-                              selected
-                                ? "border-2 border-[#15803d] bg-[#f0fdf4] shadow-[0_0_0_4px_rgba(21,128,61,0.08)]"
-                                : "border-[#e2e8f0] bg-white hover:border-[#15803d] hover:shadow-[0_2px_12px_rgba(21,128,61,0.15)]"
-                            }`}
-                          >
-                            <span className="text-[24px]">{unknown.emoji}</span>
-                            <div>
-                              <p className="text-[13px] font-bold text-[#0d1b2e]">{unknown.label}</p>
-                              <p className="mt-1 text-[12px] text-[#94a3b8]">{unknown.description}</p>
-                            </div>
-                          </button>
-                        );
-                      })()}
 
                       <button
                         type="button"
                         disabled={!failureType}
                         onClick={() => setStep(2)}
-                        className="mt-5 inline-flex min-h-[52px] w-full items-center justify-center gap-2 rounded-[10px] bg-[#15803d] px-5 text-[15px] font-bold text-white shadow-[0_4px_16px_rgba(21,128,61,0.35)] transition hover:bg-[#166534] disabled:cursor-not-allowed disabled:bg-[#d1d5db] disabled:shadow-none"
+                        className="mt-6 inline-flex min-h-[52px] w-full items-center justify-center gap-2 rounded-[10px] bg-[#15803d] px-5 text-[15px] font-bold text-white shadow-[0_4px_16px_rgba(21,128,61,0.35)] transition hover:bg-[#166534] disabled:cursor-not-allowed disabled:bg-[#374151] disabled:text-white/50 disabled:shadow-none"
                       >
                         <span>Next Step</span>
                         <ArrowIcon />
@@ -514,10 +591,14 @@ export default function HomeDecisionHubSection() {
 
                   {step === 2 ? (
                     <div>
-                      <h3 className="font-['Manrope'] text-[22px] font-bold text-[#0d1b2e]">Tell us about your vehicle</h3>
+                      <div className="mb-6 mt-6">
+                        <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-white/60">Step 2 - Your Vehicle</p>
+                        <h3 className="mt-2 font-['Manrope'] text-[28px] font-bold text-white">Tell us about your vehicle</h3>
+                        <p className="mt-2 text-[14px] text-white/60">Provide details about your car to get an accurate valuation.</p>
+                      </div>
 
                       <div className="mt-6">
-                        <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-[#4b5563]">Vehicle Age</p>
+                        <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-white/60">Vehicle Age</p>
                         <div className="mt-3 flex flex-wrap gap-2">
                           {vehicleAgeOptions.map((age) => {
                             const selected = vehicleAge === age.id;
@@ -527,11 +608,10 @@ export default function HomeDecisionHubSection() {
                                 key={age.id}
                                 type="button"
                                 onClick={() => setVehicleAge(age.id)}
-                                className={`rounded-full border px-4 py-3 text-[14px] font-bold transition ${
-                                  selected
-                                    ? "border-[#0d1b2e] bg-[#0d1b2e] text-white"
-                                    : "border-[#e2e8f0] bg-white text-[#4b5563] hover:border-[#15803d] hover:text-[#15803d]"
-                                }`}
+                                className={`rounded-full border px-2 sm:px-4 py-2 sm:py-3 text-[14px] font-bold transition ${selected
+                                    ? "border-[#15803d] bg-[#15803d]/20 text-white shadow-[0_0_15px_rgba(21,128,61,0.3)]"
+                                    : "border-[#2d3748] bg-[#1a2744] text-white/70 hover:border-[#15803d]/60 hover:text-white"
+                                  }`}
                               >
                                 {age.label}
                               </button>
@@ -541,14 +621,14 @@ export default function HomeDecisionHubSection() {
                       </div>
 
                       <div className="mt-7">
-                        <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-[#4b5563]">Estimated Current Car Value</p>
-                        <p className="mt-2 text-[13px] leading-[1.6] text-[#6b7280]">
+                        <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-white/60">Estimated Current Car Value</p>
+                        <p className="mt-2 text-[14px] leading-[1.6] text-white/60">
                           What would your car sell for in its current condition, before the engine failure?
                         </p>
 
-                        <div className="mt-4 rounded-[12px] border border-[#86efac] bg-[#f0fdf4] px-5 py-4 text-center">
-                          <p className="font-['Manrope'] text-[34px] font-black text-[#15803d]">{formatCurrency(vehicleValue)}</p>
-                          <p className="mt-1 text-[11px] text-[#6b7280]">estimated car value</p>
+                        <div className="mt-4 rounded-[12px] border border-[#15803d]/30 bg-[#15803d]/10 px-5 py-4 text-center">
+                          <p className="font-['Manrope'] text-[34px] font-black text-[#22c55e]">{formatCurrency(vehicleValue)}</p>
+                          <p className="mt-1 text-[11px] text-white/60">estimated car value</p>
                         </div>
 
                         <input
@@ -557,33 +637,33 @@ export default function HomeDecisionHubSection() {
                           max={vehicleValueSteps.length - 1}
                           step={1}
                           value={nearestValueIndex}
-	                          onChange={(event) => setVehicleValue(vehicleValueSteps[Number(event.currentTarget.value)] ?? 5000)}
+                          onChange={(event) => setVehicleValue(vehicleValueSteps[Number(event.currentTarget.value)] ?? 5000)}
                           className="mt-5 h-1 w-full cursor-pointer accent-[#15803d]"
                         />
 
-                        <div className="mt-2 flex justify-between gap-2 text-[10px] text-[#94a3b8]">
+                        <div className="mt-2 flex justify-between gap-2 text-[10px] text-white/40">
                           {vehicleValueSteps.map((value) => (
                             <span key={value}>{formatVehicleValueStep(value)}</span>
                           ))}
                         </div>
 
                         <div className="mt-4 grid gap-3 sm:grid-cols-[minmax(0,1fr)_160px]">
-                          <div className="text-[12px] leading-[1.6] text-[#94a3b8]">
+                          <div className="text-[12px] leading-[1.6] text-white/50">
                             Not sure? Check a quick valuation on Auto Trader or We Buy Any Car. This helps us give you an accurate replacement vs. scrap comparison.
                           </div>
                           <label className="flex flex-col gap-1">
-                            <span className="text-[11px] font-bold uppercase tracking-[0.08em] text-[#6b7280]">Manual Value</span>
+                            <span className="text-[11px] font-bold uppercase tracking-[0.08em] text-white/60">Manual Value</span>
                             <input
                               type="number"
                               min={500}
                               step={100}
                               value={vehicleValue}
                               onChange={(event) => {
-	                                const nextValue = Number(event.currentTarget.value);
+                                const nextValue = Number(event.currentTarget.value);
                                 if (!Number.isFinite(nextValue)) return;
                                 setVehicleValue(Math.max(500, Math.min(20000, nextValue)));
                               }}
-                              className="h-[44px] rounded-[10px] border border-[#e2e8f0] px-3 text-[14px] font-semibold text-[#0d1b2e] outline-none focus:border-[#15803d]"
+                              className="h-[44px] rounded-[10px] border border-[#2d3748] bg-[#1a2744] px-3 text-[14px] font-semibold text-white outline-none transition focus:border-[#15803d] focus:ring-1 focus:ring-[#15803d]/50"
                             />
                           </label>
                         </div>
@@ -593,7 +673,7 @@ export default function HomeDecisionHubSection() {
                         <button
                           type="button"
                           onClick={() => setStep(1)}
-                          className="text-[13px] text-[#6b7280] underline underline-offset-2"
+                          className="text-[13px] text-white/60 underline underline-offset-2 hover:text-white"
                         >
                           Back
                         </button>
@@ -601,7 +681,7 @@ export default function HomeDecisionHubSection() {
                           type="button"
                           disabled={!vehicleAge}
                           onClick={() => setStep(3)}
-                          className="inline-flex min-h-[52px] flex-1 items-center justify-center gap-2 rounded-[10px] bg-[#15803d] px-5 text-[15px] font-bold text-white shadow-[0_4px_16px_rgba(21,128,61,0.35)] transition hover:bg-[#166534] disabled:cursor-not-allowed disabled:bg-[#d1d5db] disabled:shadow-none"
+                          className="inline-flex min-h-[52px] flex-1 items-center justify-center gap-2 rounded-[10px] bg-[#15803d] px-5 text-[15px] font-bold text-white shadow-[0_4px_16px_rgba(21,128,61,0.35)] transition hover:bg-[#166534] disabled:cursor-not-allowed disabled:bg-[#374151] disabled:text-white/50 disabled:shadow-none"
                         >
                           <span>Next Step</span>
                           <ArrowIcon />
@@ -612,10 +692,13 @@ export default function HomeDecisionHubSection() {
 
                   {step === 3 ? (
                     <div>
-                      <h3 className="font-['Manrope'] text-[22px] font-bold text-[#0d1b2e]">What type of replacement engine are you open to?</h3>
-                      <p className="mt-2 text-[13px] leading-[1.6] text-[#6b7280]">
-                        Not sure which is right for you? We&apos;ll show you the cost difference in your results.
-                      </p>
+                      <div className="mb-6 mt-6">
+                        <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-white/60">Step 3 - Engine Type</p>
+                        <h3 className="mt-2 font-['Manrope'] text-[28px] font-bold text-white">What type of replacement engine are you open to?</h3>
+                        <p className="mt-2 text-[14px] leading-[1.6] text-white/60">
+                          Not sure which is right for you? We&apos;ll show you the cost difference in your results.
+                        </p>
+                      </div>
 
                       <div className="mt-5 flex flex-col gap-3 lg:flex-row">
                         {engineConditions.map((condition) => {
@@ -626,14 +709,18 @@ export default function HomeDecisionHubSection() {
                               key={condition.id}
                               type="button"
                               onClick={() => setEngineCondition(condition.id)}
-                              className={`flex-1 rounded-[12px] border px-4 py-5 text-center transition ${
-                                selected
-                                  ? "border-2 border-[#15803d] bg-[#f0fdf4]"
-                                  : "border-[#e2e8f0] bg-white hover:border-[#15803d]"
-                              }`}
+                              className={`relative flex-1 rounded-[12px] border-2 px-4 py-5 text-center transition-all duration-200 ${selected
+                                  ? "border-[#15803d] bg-gradient-to-b from-[#1a2744] via-[#0f1d33] to-[#0a1929] shadow-[0_0_25px_rgba(21,128,61,0.4)]"
+                                  : "border-[#2d3748] bg-gradient-to-b from-[#1a2744] via-[#0f1d33] to-[#0a1929] hover:border-[#15803d]/60 hover:shadow-[0_0_20px_rgba(21,128,61,0.25)]"
+                                }`}
                             >
-                              <p className="font-['Manrope'] text-[18px] font-bold text-[#0d1b2e]">{condition.label}</p>
-                              <p className={`mt-2 text-[13px] font-semibold ${selected ? "text-[#15803d]" : "text-[#94a3b8]"}`}>{condition.from}</p>
+                              {selected && (
+                                <div className="absolute right-4 top-4 flex h-6 w-6 items-center justify-center rounded-full bg-[#15803d] text-white shadow-lg">
+                                  <TickIcon />
+                                </div>
+                              )}
+                              <p className="font-['Manrope'] text-[18px] font-bold text-white">{condition.label}</p>
+                              <p className={`mt-2 text-[13px] font-semibold ${selected ? "text-[#22c55e]" : "text-white/60"}`}>{condition.from}</p>
                             </button>
                           );
                         })}
@@ -643,7 +730,7 @@ export default function HomeDecisionHubSection() {
                         <button
                           type="button"
                           onClick={() => setStep(2)}
-                          className="text-[13px] text-[#6b7280] underline underline-offset-2"
+                          className="text-[13px] text-white/60 underline underline-offset-2 hover:text-white"
                         >
                           Back
                         </button>
@@ -664,7 +751,7 @@ export default function HomeDecisionHubSection() {
                       <button
                         type="button"
                         onClick={() => setStep((current) => (current === 3 ? 2 : 1))}
-                        className="text-[13px] text-[#6b7280] underline underline-offset-2"
+                        className="text-[13px] text-white/60 underline underline-offset-2 hover:text-white"
                       >
                         Back
                       </button>
@@ -678,13 +765,13 @@ export default function HomeDecisionHubSection() {
           {!showResult ? (
             <div className="lg:sticky lg:top-8">
               <ResultPreview />
-              <div className="mt-4 hidden rounded-[18px] border border-white/10 bg-[#112240] p-4 text-white/80 lg:block">
+              <div className="mt-4 hidden rounded-[18px] border border-white/10 bg-gradient-to-b from-[#1a2744] via-[#0f1d33] to-[#0a1929] p-4 text-white/80 lg:block">
                 <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-[#94a3b8]">Cross-brand reference</p>
-                <p className="mt-2 font-['Manrope'] text-[20px] font-bold text-white">Timing Chain Failure</p>
+                <p className="mt-2 font-['Manrope'] text-[18px] font-bold text-white">Timing Chain Failure</p>
                 <p className="mt-2 text-[13px] text-[#94a3b8]">
                   Reconditioned S&F typical range:
                 </p>
-                <p className="mt-1 font-['Manrope'] text-[22px] font-black text-[#22c55e]">
+                <p className="mt-1 font-['Manrope'] text-[20px] font-black text-[#22c55e]">
                   {formatCurrency(previewCosts.low)} - {formatCurrency(previewCosts.high)}
                 </p>
               </div>
@@ -693,8 +780,8 @@ export default function HomeDecisionHubSection() {
         </div>
 
         {!showResult ? (
-          <div className="sticky bottom-0 z-10 mt-4 rounded-[16px] border border-[#dbe3ec] bg-white p-4 shadow-[0_-6px_22px_rgba(13,27,46,0.08)] sm:hidden">
-            <div className="mb-3 text-[12px] font-semibold text-[#6b7280]">
+          <div className="sticky bottom-0 z-10 mt-4 rounded-[16px] border border-white/10 bg-[#03132a] p-4 shadow-[0_-6px_22px_rgba(0,0,0,0.5)] sm:hidden">
+            <div className="mb-3 text-[12px] font-semibold text-white/60">
               {step === 2 ? "Step 2 of 3 - Your Vehicle" : step === 3 ? "Step 3 of 3 - Engine Type" : "Step 1 of 3 - Failure Type"}
             </div>
             {step === 2 ? (
@@ -702,7 +789,7 @@ export default function HomeDecisionHubSection() {
                 type="button"
                 disabled={!vehicleAge}
                 onClick={() => setStep(3)}
-                className="inline-flex min-h-[52px] w-full items-center justify-center gap-2 rounded-[10px] bg-[#15803d] px-5 text-[15px] font-bold text-white shadow-[0_4px_16px_rgba(21,128,61,0.35)] transition disabled:cursor-not-allowed disabled:bg-[#d1d5db] disabled:shadow-none"
+                className="inline-flex min-h-[52px] w-full items-center justify-center gap-2 rounded-[10px] bg-[#15803d] px-5 text-[15px] font-bold text-white shadow-[0_4px_16px_rgba(21,128,61,0.35)] transition disabled:cursor-not-allowed disabled:bg-[#374151] disabled:text-white/50 disabled:shadow-none"
               >
                 <span>Next Step</span>
                 <ArrowIcon />
@@ -711,7 +798,7 @@ export default function HomeDecisionHubSection() {
               <button
                 type="button"
                 onClick={() => setShowResult(true)}
-                className="inline-flex min-h-[52px] w-full items-center justify-center gap-2 rounded-[10px] bg-[#15803d] px-5 text-[15px] font-bold text-white shadow-[0_4px_16px_rgba(21,128,61,0.35)] transition"
+                className="inline-flex min-h-[52px] w-full items-center justify-center gap-2 rounded-[10px] bg-[#15803d] px-5 text-[15px] font-bold text-white shadow-[0_4px_16px_rgba(21,128,61,0.35)] transition hover:bg-[#166534]"
               >
                 <span>See My Results</span>
                 <ArrowIcon />
@@ -728,11 +815,11 @@ export default function HomeDecisionHubSection() {
           <div className="mt-5 overflow-x-auto rounded-[16px] border border-white/10">
             <table className="min-w-[720px] w-full border-collapse">
               <thead>
-                <tr className="bg-[#15803d]">
+                <tr className="bg-[#1a2744]">
                   {["Failure Type", "Reconditioned S&F", "Rebuilt S&F", "Used S&F", "Main Dealer Est."].map((heading) => (
                     <th
                       key={heading}
-                      className="px-4 py-3 text-left text-[11px] font-bold uppercase tracking-[0.08em] text-white"
+                      className="px-2 sm:px-4 py-2 sm:py-4 text-left text-[13px] font-bold uppercase tracking-[0.08em] text-[#7791b3]"
                     >
                       {heading}
                     </th>
@@ -741,12 +828,12 @@ export default function HomeDecisionHubSection() {
               </thead>
               <tbody>
                 {staticCostTableRows.map((row, index) => (
-                  <tr key={row.label} className={index % 2 === 0 ? "bg-[#112240]" : "bg-[#0d1b2e]"}>
-                    <td className="border-b border-white/5 px-4 py-4 text-[14px] font-semibold text-white">{row.label}</td>
-                    <td className="border-b border-white/5 px-4 py-4 text-[15px] font-bold text-[#22c55e]">{row.reconditioned}</td>
-                    <td className="border-b border-white/5 px-4 py-4 text-[15px] font-bold text-[#cbd5e1]">{row.rebuilt}</td>
-                    <td className="border-b border-white/5 px-4 py-4 text-[15px] font-bold text-[#cbd5e1]">{row.used}</td>
-                    <td className="border-b border-white/5 px-4 py-4 text-[15px] font-bold text-[#94a3b8] line-through">{row.mainDealer}</td>
+                  <tr key={row.label} className={index % 2 === 0 ? "bg-[#0f1d33]" : "bg-[#0d1b2e]"}>
+                    <td className="border-b border-white/5 px-2 sm:px-4 py-2 sm:py-4 text-[12px] sm:text-[14px] font-semibold text-white">{row.label}</td>
+                    <td className="border-b border-white/5 px-2 sm:px-4 py-2 sm:py-4 text-[12px] text-[14px] font-bold text-[#22c55e]">{row.reconditioned}</td>
+                    <td className="border-b border-white/5 px-2 sm:px-4 py-2 sm:py-4 text-[12px] text-[14px] font-bold text-[#cbd5e1]">{row.rebuilt}</td>
+                    <td className="border-b border-white/5 px-2 sm:px-4 py-2 sm:py-4 text-[12px] text-[14px] font-bold text-[#cbd5e1]">{row.used}</td>
+                    <td className="border-b border-white/5 px-2 sm:px-4 py-2 sm:py-4 text-[12px] text-[14px] font-bold text-[#94a3b8] line-through">{row.mainDealer}</td>
                   </tr>
                 ))}
               </tbody>

@@ -79,7 +79,7 @@ export default function HomeLiveFeedSection({ rows }: Props) {
   }, [activeBrand, rows]);
 
   return (
-    <Section className="bg-[#f5f5f5] px-2 py-7 sm:py-8 lg:py-10">
+    <Section className="bg-[#f5f5f5] sm:px-2 py-7 sm:py-8 lg:py-10">
       {/* Mobile Image: Full width, appears before the Container on phone screens */}
       <div className="relative mb-6 h-150 w-full overflow-hidden lg:hidden">
         <Image

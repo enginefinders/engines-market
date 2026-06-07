@@ -625,7 +625,7 @@ function MobileStack({ cards }: { cards: HomeEngineTypeCard[] }) {
         return (
           <div 
             key={c.id} 
-            className={`c-card ${active ? 'active' : ''} ${flipped ? 'flipped' : ''}`}
+            className={`c-card mt-5 ${active ? 'active' : ''} ${flipped ? 'flipped' : ''}`}
             style={{ zIndex: active ? 10 : 1 }}
           >
             <div className="flip-inner">
@@ -668,29 +668,31 @@ function MobileStack({ cards }: { cards: HomeEngineTypeCard[] }) {
                     </div>
                     <div style={{ marginTop: 12 }}>
                       <button 
-                        type="button" 
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          flipCard(i);
-                        }}
-                        style={{ 
-                          background: 'transparent', 
-                          border: 0, 
-                          color: '#15803d', 
-                          fontWeight: 700,
-                          fontSize: '11.5px',
-                          display: 'flex',
-                          alignItems: 'center',
-                          gap: '5px'
-                        }}
-                      >
-                        Tap to see full details
-                        <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
-                          <path d="M11.5 6.5A5 5 0 0 1 2 8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-                          <path d="M1.5 6.5A5 5 0 0 1 11 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-                          <polyline points="10,2.5 11,5 8.5,5.8" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
-                        </svg>
-                      </button>
+  type="button" 
+  onClick={(e) => {
+    e.stopPropagation();
+    flipCard(i);
+  }}
+  style={{ 
+    background: 'transparent', 
+    border: 0, 
+    color: '#15803d', 
+    fontWeight: 700,
+    fontSize: '11.5px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center', // Centers the content horizontally
+    width: '100%', // Ensures the button takes full width so centering is visible
+    gap: '5px'
+  }}
+>
+  Tap to see full details
+  <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+    <path d="M11.5 6.5A5 5 0 0 1 2 8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+    <path d="M1.5 6.5A5 5 0 0 1 11 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+    <polyline points="10,2.5 11,5 8.5,5.8" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+</button>
                     </div>
                   </div>
                 </div>
