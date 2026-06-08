@@ -715,7 +715,7 @@ export default function HomeDecisionHubSection() {
                                 }`}
                             >
                               {selected && (
-                                <div className="absolute right-4 top-4 flex h-6 w-6 items-center justify-center rounded-full bg-[#15803d] text-white shadow-lg">
+                                <div className="absolute left-2 top-2 flex h-6 w-6 items-center justify-center rounded-full bg-[#15803d] text-white shadow-lg">
                                   <TickIcon />
                                 </div>
                               )}
