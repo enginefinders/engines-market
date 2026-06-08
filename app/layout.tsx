@@ -9,6 +9,11 @@ export const metadata: Metadata = {
   title: "Engines Market",
   description:
     "Compare prices for reconditioned, rebuilt and used engines from trusted UK engine specialists.",
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/apple-icon.png",
+  },
 };
 
 export default function RootLayout({

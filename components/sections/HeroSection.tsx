@@ -357,9 +357,17 @@ export default function HeroSection({
     <section className="overflow-x-hidden bg-[#f8f9fa]">
       <div className="bg-[#0d1b2e] text-white lg:hidden">
         <div className="flex items-center justify-between px-4 py-3">
-          <div className="font-['Manrope'] text-[17px] font-extrabold tracking-[-0.3px] text-white">
-            {strictData ? mobileBar.brandText : (mobileBar.brandText ?? "ENGINEMARKET")}
-          </div>
+          <Link href="/" className="shrink-0" aria-label="Engine Market homepage">
+            <Image
+              src="/branding/engine-market-logo-rectangle.png"
+              alt="Engines Market"
+              width={5752}
+              height={2280}
+              priority
+              className="h-8 w-auto object-contain"
+              sizes="140px"
+            />
+          </Link>
 
           <div className="flex items-center gap-2">
             <a

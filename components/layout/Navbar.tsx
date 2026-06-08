@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { getBrandHref } from "@/lib/modelRoutes";
@@ -55,14 +56,15 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 hidden bg-[#061a33] text-white shadow-md lg:block">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center gap-2">
-          <div className="flex h-9 w-9 items-center justify-center rounded-full bg-green-600 text-sm font-bold">
-            EM
-          </div>
-          <div className="leading-tight">
-            <p className="text-sm font-extrabold uppercase">Engine</p>
-            <p className="text-xs font-semibold text-green-400">Market</p>
-          </div>
+        <Link href="/" className="flex items-center" aria-label="Engine Market homepage">
+          <Image
+            src="/branding/engine-market-logo-rectangle.png"
+            alt="Engines Market"
+            width={5752}
+            height={2280}
+            priority
+            className="h-10 w-auto object-contain"
+          />
         </Link>
 
         <nav className="hidden items-center gap-7 text-sm font-semibold lg:flex">

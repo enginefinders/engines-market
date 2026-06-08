@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useMemo, useState, type FormEvent } from "react";
 import { useRouter } from "next/navigation";
 import Container from "@/components/ui/Container";
@@ -925,6 +927,17 @@ export default function HomeHeroSection({ data }: Props) {
 
             {/* ── LEFT / MAIN COLUMN ── */}
             <div className="flex flex-col lg:col-span-6">
+              <Link href="/" className="mb-5 flex justify-center lg:hidden" aria-label="Engine Market homepage">
+                <Image
+                  src="/branding/engine-market-logo-rectangle.png"
+                  alt="Engines Market"
+                  width={5752}
+                  height={2280}
+                  priority
+                  className="h-10 w-auto object-contain"
+                  sizes="180px"
+                />
+              </Link>
 
               {/* Badge */}
               {/* <span className="mb-4 inline-flex w-fit items-center gap-[6px] rounded-full bg-[#0d1b2e] px-[10px] py-[4px] text-[10px] font-bold uppercase tracking-[0.12em] text-white">
