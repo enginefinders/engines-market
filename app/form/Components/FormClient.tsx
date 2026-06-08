@@ -91,33 +91,59 @@ export default function FormPage() {
     };
 
     const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+        e.preventDefault();
+        setIsSubmitting(true);
 
-    setIsSubmitting(true);
+        try {
+            const res = await fetch('/api/send-quote', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
 
-    try {
-        const res = await fetch('/api/send-quote', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(formData),
-        });
+            const data = await res.json();
 
-        const data = await res.json();
+            if (data.success) {
+                alert('Quote request sent successfully!');
+                
+                // ==========================================
+                // OPTION 1: Clear the form fields (Recommended)
+                // ==========================================
+                setFormData({
+                    registrationNumber: '',
+                    make: '',
+                    model: '',
+                    year: '',
+                    fuelType: '',
+                    engineCapacity: '',
+                    engineCode: '',
+                    color: '',
+                    wheelplan: '',
+                    fullName: '',
+                    phone: '',
+                    email: '',
+                    postcode: '',
+                    remarks: '',
+                });
 
-        if (data.success) {
-            alert('Quote request sent successfully!');
-        } else {
-            alert('Failed to send request.');
+                // ==========================================
+                // OPTION 2: Reload the page entirely
+                // (Uncomment the line below and remove Option 1 if you prefer a hard reload)
+                // ==========================================
+                // window.location.reload();
+                
+            } else {
+                alert('Failed to send request.');
+            }
+        } catch (error) {
+            console.error(error);
+            alert('Something went wrong.');
+        } finally {
+            setIsSubmitting(false);
         }
-    } catch (error) {
-        console.error(error);
-        alert('Something went wrong.');
-    } finally {
-        setIsSubmitting(false);
-    }
-};
+    };
 
     return (
         <div className="min-h-screen bg-gray-50 py-8 px-4 md:px-8">
@@ -143,7 +169,6 @@ export default function FormPage() {
                             >
                                 Car Details
                             </h2>
-
 
                             {/* Registration Number */}
                             <div>
@@ -243,7 +268,7 @@ export default function FormPage() {
                                 </div>
                             </div>
 
-                            {/* Fuel Type and Year */}
+                            {/* Engine Size and Color */}
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                                 <div>
                                     <label className="block text-sm font-medium text-gray-900 mb-2">
@@ -272,7 +297,8 @@ export default function FormPage() {
                                     />
                                 </div>
                             </div>
-                            {/* Make and Model */}
+                            
+                            {/* Engine Code */}
                             <div className="grid grid-cols-1 sm:grid-cols-1 gap-2">
                                 <div>
                                     <label className="block text-sm font-medium text-gray-900 mb-2">
@@ -331,7 +357,7 @@ export default function FormPage() {
                                 />
                             </div>
 
-                            {/* Email & Postcode split into two rows for cleaner visual alignment */}
+                            {/* Email & Postcode */}
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <div>
                                     <label className="block text-sm font-medium text-gray-900 mb-2">
@@ -363,6 +389,7 @@ export default function FormPage() {
                                     />
                                 </div>
                             </div>
+                            
                             {/* Any Remarks Section */}
                             <div className="mb-8">
                                 <label className="block text-sm font-medium text-gray-900 mb-2">
@@ -381,18 +408,14 @@ export default function FormPage() {
 
                     </div>
 
-
-
-
-
                     {/* Submit Button */}
                     <button
-    type="submit"
-    disabled={isSubmitting}
-    className="w-full py-4 px-6 bg-[#15803d] text-white text-lg font-bold rounded-lg hover:bg-green-700 transition uppercase tracking-wide shadow-md disabled:opacity-60 disabled:cursor-not-allowed"
->
-    {isSubmitting ? 'SENDING...' : 'SEND ME PRICE QUOTE'}
-</button>
+                        type="submit"
+                        disabled={isSubmitting}
+                        className="w-full py-4 px-6 bg-[#15803d] text-white text-lg font-bold rounded-lg hover:bg-green-700 transition uppercase tracking-wide shadow-md disabled:opacity-60 disabled:cursor-not-allowed"
+                    >
+                        {isSubmitting ? 'SENDING...' : 'SEND ME PRICE QUOTE'}
+                    </button>
                 </form>
             </div>
         </div>
