@@ -82,6 +82,21 @@ const mobileClusterTitles: Record<string, string> = {
   star: "General"
 };
 
+// 👇 Helper to calculate visible limit based on Tailwind breakpoints
+function getVisibleLimit() {
+    if (typeof window === 'undefined') return 3; // SSR fallback
+    const width = window.innerWidth;
+    if (width >= 1170) return 7; // lg and above
+    if (width >= 1050) return 6;
+    if (width >= 940) return 5;
+    if (width >= 820) return 4;
+    if (width >= 768) return 3;
+    if (width >= 767) return 6;
+    if (width >= 580) return 5;
+    if (width >= 500) return 4;  // sm
+    return 3;                    // default (phone)
+}
+
 function SearchIcon() {
     return (
         <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" aria-hidden="true">
@@ -333,31 +348,17 @@ export default function HomeFaqHubSection() {
     // 👇 State and refs for the "All" dropdown
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const dropdownRef = useRef<HTMLDivElement>(null);
-    const [isMobile, setIsMobile] = useState(false);
 
-    // Detect screen size to determine tab limits (7 for desktop, 3 for mobile)
-    useEffect(() => {
-        const checkMobile = () => {
-            setIsMobile(window.innerWidth < 768); // 768px is Tailwind's 'md' breakpoint
-        };
-        checkMobile();
-        window.addEventListener('resize', checkMobile);
-        return () => window.removeEventListener('resize', checkMobile);
-    }, []);
+    // 👇 Responsive visible limit state (3 for phone, 5 for sm, 6 for md, 7 for lg+)
+    const [visibleLimit, setVisibleLimit] = useState(getVisibleLimit);
 
-    // Close dropdown when clicking outside
     useEffect(() => {
-        const handleClickOutside = (event: MouseEvent) => {
-            if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-                setIsDropdownOpen(false);
-            }
-        };
-        document.addEventListener('mousedown', handleClickOutside);
-        return () => document.removeEventListener('mousedown', handleClickOutside);
+        const updateLimit = () => setVisibleLimit(getVisibleLimit());
+        window.addEventListener('resize', updateLimit);
+        return () => window.removeEventListener('resize', updateLimit);
     }, []);
 
     // Slice arrays based on device limit
-    const visibleLimit = isMobile ? 3 : 7;
     const visibleBrands = clusterBrands.slice(0, visibleLimit);
     const hiddenBrands = clusterBrands.slice(visibleLimit);
 
