@@ -1,6 +1,6 @@
 "use client";
 
-import { useDeferredValue, useMemo, useState, type KeyboardEvent, type ReactNode } from "react";
+import { useDeferredValue, useEffect, useMemo, useRef, useState, type KeyboardEvent, type ReactNode } from "react";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
 import {
@@ -330,6 +330,37 @@ export default function HomeFaqHubSection() {
     const deferredQuery = useDeferredValue(searchValue.trim().toLowerCase());
     const [manualOpenItemId, setManualOpenItemId] = useState<string | null>(null);
 
+    // 👇 State and refs for the "All" dropdown
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const dropdownRef = useRef<HTMLDivElement>(null);
+    const [isMobile, setIsMobile] = useState(false);
+
+    // Detect screen size to determine tab limits (7 for desktop, 3 for mobile)
+    useEffect(() => {
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth < 768); // 768px is Tailwind's 'md' breakpoint
+        };
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
+
+    // Close dropdown when clicking outside
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+                setIsDropdownOpen(false);
+            }
+        };
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => document.removeEventListener('mousedown', handleClickOutside);
+    }, []);
+
+    // Slice arrays based on device limit
+    const visibleLimit = isMobile ? 3 : 7;
+    const visibleBrands = clusterBrands.slice(0, visibleLimit);
+    const hiddenBrands = clusterBrands.slice(visibleLimit);
+
     const currentBrand = clusterBrands.find((brand) => getBrandId(brand.brand) === activeBrand) ?? clusterBrands[0];
     const faqItems = currentBrand?.faqs ?? [];
 
@@ -343,7 +374,6 @@ export default function HomeFaqHubSection() {
 
     const visibleCount = filteredFaqs.length;
     
-    // Changed fallback from firstVisibleId to null to close FAQs by default
     const openItemId = manualOpenItemId && filteredFaqs.some((_, index) => manualOpenItemId === `faq-${getBrandId(currentBrand?.brand ?? "")}-${index}`)
         ? manualOpenItemId
         : null;
@@ -406,7 +436,6 @@ export default function HomeFaqHubSection() {
                         {clusters.map((cluster, index) => {
                             const isActive = cluster.id === activeCluster;
                             
-                            // Determine icon type to map to short mobile title
                             const iconType = cluster.raw.cluster.includes("COST") ? "pound" : cluster.raw.cluster.includes("FAILURE") ? "warning" : cluster.raw.cluster.includes("TYPE") ? "layers" : cluster.raw.cluster.includes("REBUILD") ? "scales" : cluster.raw.cluster.includes("SPECIALIST") ? "shield" : cluster.raw.cluster.includes("CODE") ? "chip" : cluster.raw.cluster.includes("LIFESPAN") ? "clock" : cluster.raw.cluster.includes("PROCESS") ? "process" : cluster.raw.cluster.includes("VALUE") ? "chart" : "star";
 
                             return (
@@ -431,14 +460,9 @@ export default function HomeFaqHubSection() {
                                 >
                                     <div className="flex flex-col items-center gap-1 md:flex-row md:gap-3">
                                         <ClusterIcon type={iconType} />
-                                        {/* <span className="text-[10px] font-bold uppercase tracking-[0.08em] text-white/70 md:hidden">
-                                            {index + 1}
-                                        </span> */}
                                     </div>
                                     <span className="text-[10px] font-medium leading-[1.2] md:text-[13px]">
-                                        {/* Desktop: Original title with index */}
                                         <span className="hidden md:inline">{index + 1}. {cluster.label}</span>
-                                        {/* Mobile: Short title from object */}
                                         <span className="md:hidden">{index + 1} {mobileClusterTitles[iconType]}</span>
                                     </span>
                                 </button>
@@ -447,10 +471,16 @@ export default function HomeFaqHubSection() {
                     </nav>
 
                     <div id="faq-content" className="flex-1 min-w-0 flex flex-col">
-                        <div className="border-b border-[#e2e8f0] bg-[#f8fafc] px-0 py-0">
-                            <div className="flex gap-2 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden" role="tablist" aria-label="Select car brand">
-                                {/* 👇 UPDATED BRAND TABS WITH LOGOS */}
-                                {clusterBrands.map((brand) => {
+                        {/* 👇 BRAND TABS SECTION (Dropdown is now outside the scrolling container!) */}
+                        <div className="border-b border-[#e2e8f0] bg-[#f8fafc] px-0 py-0 relative">
+                            {/* Scrolling tabs container */}
+                            <div 
+                                className="flex gap-2 items-center overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden" 
+                                role="tablist" 
+                                aria-label="Select car brand"
+                                style={{ paddingRight: hiddenBrands.length > 0 ? '80px' : '0px' }}
+                            >
+                                {visibleBrands.map((brand) => {
                                     const brandId = getBrandId(brand.brand);
                                     const isActive = brandId === activeBrand;
                                     const logoSrc = brandLogoSources[brandId];
@@ -465,7 +495,7 @@ export default function HomeFaqHubSection() {
                                                 setActiveBrand(brandId);
                                                 setManualOpenItemId(null);
                                             }}
-                                            className={`flex min-w-[110px] flex-none flex-col items-center justify-center gap-1.5 border px-3 py-2.5 text-center transition ${
+                                            className={`flex min-w-[90px] min-[429px]:min-w-[108px] flex-none flex-col items-center justify-center gap-1.5 border px-3 py-2.5 text-center transition ${
                                                 isActive
                                                     ? "border-[#15803d] bg-[#15803d] text-[#0d1b2e] shadow-[0_8px_20px_rgba(13,27,46,0.06)]"
                                                     : "border-transparent bg-transparent text-[#6b7280] hover:bg-white"
@@ -487,6 +517,65 @@ export default function HomeFaqHubSection() {
                                     );
                                 })}
                             </div>
+
+                            {/* Dropdown button fixed to the right (Outside the overflow container so it doesn't get clipped) */}
+                            {hiddenBrands.length > 0 && (
+                                <div className="absolute top-0 right-0 h-full flex items-center pr-2 border-l border-[#e2e8f0] bg-[#f8fafc]" ref={dropdownRef}>
+                                    <div className="relative">
+                                        <button
+                                            type="button"
+                                            onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                                            className={`flex min-w-[70px] flex-none flex-col items-center justify-center gap-1.5 border px-3 py-2.5 text-center transition ${
+                                                isDropdownOpen 
+                                                    ? "border-transparent bg-transparent text-[#15803d]" 
+                                                    : "border-transparent bg-transparent text-[#6b7280] hover:bg-white"
+                                            }`}
+                                        >
+                                            <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                                            </svg>
+                                            <span className="text-[11px] font-semibold leading-tight">
+                                                All ({hiddenBrands.length})
+                                            </span>
+                                        </button>
+
+                                        {/* Dropdown Menu */}
+                                        {isDropdownOpen && (
+                                            <div className="absolute top-full right-0 z-50 mt-1 w-48 rounded-lg border border-[#e2e8f0] bg-white shadow-lg p-2 max-h-60 overflow-y-auto">
+                                                {hiddenBrands.map((brand) => {
+                                                    const brandId = getBrandId(brand.brand);
+                                                    const isActive = brandId === activeBrand;
+                                                    const logoSrc = brandLogoSources[brandId];
+
+                                                    return (
+                                                        <button
+                                                            key={brand.brand}
+                                                            type="button"
+                                                            onClick={() => {
+                                                                setActiveBrand(brandId);
+                                                                setManualOpenItemId(null);
+                                                                setIsDropdownOpen(false);
+                                                            }}
+                                                            className={`flex w-full items-center gap-3 rounded-md px-3 py-2 text-left transition ${
+                                                                isActive
+                                                                    ? "bg-[#f0fdf4] text-[#15803d]"
+                                                                    : "text-[#374151] hover:bg-[#f8fafc]"
+                                                            }`}
+                                                        >
+                                                            {logoSrc ? (
+                                                                <img src={logoSrc} alt="" className="h-5 w-5 object-contain" />
+                                                            ) : (
+                                                                <div className="h-5 w-5 rounded-full bg-gray-100" />
+                                                            )}
+                                                            <span className="text-[13px] font-medium truncate">{brand.brand}</span>
+                                                        </button>
+                                                    );
+                                                })}
+                                            </div>
+                                        )}
+                                    </div>
+                                </div>
+                            )}
                         </div>
 
                         <div className="faq-accordion h-[560px] overflow-y-auto [scrollbar-color:#cbd5e1_transparent] [scrollbar-width:thin] lg:h-[440px]" role="region" aria-live="polite">
@@ -537,65 +626,63 @@ export default function HomeFaqHubSection() {
                                 No matching FAQs yet. Try a different brand, cluster or search term.
                             </div>
                         </div>
-
-                        
                     </div>
-                    
                 </div>
-                <div className="grid gap-3  px-4 py-4 sm:grid-cols-3 sm:px-6">
-                            <div className="flex items-start gap-3">
-                                <TrustIcon>
-                                    <ShieldTickIcon />
-                                </TrustIcon>
-                                <div>
-                                    <p className="text-[13px] font-semibold text-[#0d1b2e]">100% Independent</p>
-                                    <p className="mt-1 text-[12px] leading-[1.6] text-[#6b7280]">We are not a supplier, garage or engine builder.</p>
-                                </div>
-                            </div>
-
-                            <div className="flex items-start gap-3">
-                                <TrustIcon>
-                                    <UsersIcon />
-                                </TrustIcon>
-                                <div>
-                                    <p className="text-[13px] font-semibold text-[#0d1b2e]">100+ Vetted Specialists</p>
-                                    <p className="mt-1 text-[12px] leading-[1.6] text-[#6b7280]">Quotes from trusted UK engine replacement experts.</p>
-                                </div>
-                            </div>
-
-                            <div className="flex items-start gap-3">
-                                <TrustIcon>
-                                    <PoundIcon />
-                                </TrustIcon>
-                                <div>
-                                    <p className="text-[13px] font-semibold text-[#0d1b2e]">Free & No Obligation</p>
-                                    <p className="mt-1 text-[12px] leading-[1.6] text-[#6b7280]">Compare real quotes and decide what is right for you.</p>
-                                </div>
-                            </div>
+                
+                <div className="grid gap-3 px-4 py-4 sm:grid-cols-3 sm:px-6">
+                    <div className="flex items-start gap-3">
+                        <TrustIcon>
+                            <ShieldTickIcon />
+                        </TrustIcon>
+                        <div>
+                            <p className="text-[13px] font-semibold text-[#0d1b2e]">100% Independent</p>
+                            <p className="mt-1 text-[12px] leading-[1.6] text-[#6b7280]">We are not a supplier, garage or engine builder.</p>
                         </div>
+                    </div>
 
-                        <div className="border-t border-[#eef2f7]  px-4 py-5 sm:px-6 sm:py-6">
-                            <div className="rounded-[16px] border border-[#dfe6ef] bg-[#f8fbff] p-4 sm:p-5">
-                                <div className="flex flex-col gap-4 border-l-4 border-[#0d1b2e] pl-4 sm:flex-row sm:items-center sm:justify-between">
-                                    <div className="max-w-[54ch]">
-                                        <p className="text-[11px] font-bold uppercase tracking-[0.12em] text-[#64748b]">Still Need A Real Price?</p>
-                                        <p className="mt-2 text-[14px] leading-[1.7] text-[#475569] sm:text-[15px]">
-                                            Compare quotes from vetted UK engine specialists and see real replacement prices for your vehicle, engine code and warranty options.
-                                        </p>
-                                    </div>
-
-                                    <a
-                                        href="#home-hero-reg-form"
-                                        data-quote-context="FAQ footer CTA"
-                                        data-quote-source="home-faq-footer-cta"
-                                        className="inline-flex min-h-[48px] w-full items-center justify-center gap-2 rounded-[10px] bg-[#0d1b2e] px-5 text-[14px] font-semibold text-white transition hover:bg-[#11284a] sm:w-auto sm:min-w-[250px]"
-                                    >
-                                        <span>Get Free Engine Quotes</span>
-                                        <ArrowIcon />
-                                    </a>
-                                </div>
-                            </div>
+                    <div className="flex items-start gap-3">
+                        <TrustIcon>
+                            <UsersIcon />
+                        </TrustIcon>
+                        <div>
+                            <p className="text-[13px] font-semibold text-[#0d1b2e]">100+ Vetted Specialists</p>
+                            <p className="mt-1 text-[12px] leading-[1.6] text-[#6b7280]">Quotes from trusted UK engine replacement experts.</p>
                         </div>
+                    </div>
+
+                    <div className="flex items-start gap-3">
+                        <TrustIcon>
+                            <PoundIcon />
+                        </TrustIcon>
+                        <div>
+                            <p className="text-[13px] font-semibold text-[#0d1b2e]">Free & No Obligation</p>
+                            <p className="mt-1 text-[12px] leading-[1.6] text-[#6b7280]">Compare real quotes and decide what is right for you.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="border-t border-[#eef2f7] px-4 py-5 sm:px-6 sm:py-6">
+                    <div className="rounded-[16px] border border-[#dfe6ef] bg-[#f8fbff] p-4 sm:p-5">
+                        <div className="flex flex-col gap-4 border-l-4 border-[#0d1b2e] pl-4 sm:flex-row sm:items-center sm:justify-between">
+                            <div className="max-w-[54ch]">
+                                <p className="text-[11px] font-bold uppercase tracking-[0.12em] text-[#64748b]">Still Need A Real Price?</p>
+                                <p className="mt-2 text-[14px] leading-[1.7] text-[#475569] sm:text-[15px]">
+                                    Compare quotes from vetted UK engine specialists and see real replacement prices for your vehicle, engine code and warranty options.
+                                </p>
+                            </div>
+
+                            <a
+                                href="#home-hero-reg-form"
+                                data-quote-context="FAQ footer CTA"
+                                data-quote-source="home-faq-footer-cta"
+                                className="inline-flex min-h-[48px] w-full items-center justify-center gap-2 rounded-[10px] bg-[#0d1b2e] px-5 text-[14px] font-semibold text-white transition hover:bg-[#11284a] sm:w-auto sm:min-w-[250px]"
+                            >
+                                <span>Get Free Engine Quotes</span>
+                                <ArrowIcon />
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </Container>
         </Section>
     );

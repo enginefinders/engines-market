@@ -227,7 +227,7 @@ export default function HomeBrandGridSection({ brands, featuredSlugs }: Props) {
                   {/* Dropdown */}
                   {isOpen ? (
                     <div
-                      className={`absolute left-[-1px] right-[-1px] z-50 bg-[#0d1b2e] p-2 py-4 border border-[#e5e7eb] ${
+                      className={`absolute left-[-1px] right-[-1px] z-50 bg-[#0d1b2e] p-2 py-[6px] min-[397px]:py-[22px] border border-[#e5e7eb] ${
                         isLastRow
                           ? "bottom-full rounded-t-[10px] border-b-0"
                           : "top-full rounded-b-[10px] border-t-0"
