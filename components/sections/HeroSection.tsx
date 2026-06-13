@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState, type FormEvent } from "react";
+import { useState, useMemo, type FormEvent } from "react";
+import Container from "@/components/ui/Container";
 import { getModelHref } from "@/lib/modelRoutes";
 import type { HeroSectionData, ModelsSectionData } from "@/types/brand";
 
@@ -181,8 +182,93 @@ function EngineWatermark() {
   );
 }
 
+function LightningIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-5 w-5 flex-none" fill="none" aria-hidden="true">
+      <path
+        d="M13 2L4.5 13.5H11L10 22l9.5-12H13V2z"
+        stroke="#15803d"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function LocationIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-5 w-5 flex-none" fill="none" aria-hidden="true">
+      <path d="M12 2C8.7 2 6 4.7 6 8c0 4.5 6 12 6 12s6-7.5 6-12c0-3.3-2.7-6-6-6z" stroke="#15803d" strokeWidth="1.5" />
+      <circle cx="12" cy="8" r="2" stroke="#15803d" strokeWidth="1.5" />
+    </svg>
+  );
+}
+
+function PoundIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-5 w-5 flex-none" fill="none" aria-hidden="true">
+      <path d="M8 18h8" stroke="#15803d" strokeWidth="1.5" strokeLinecap="round" />
+      <path d="M7 14h7" stroke="#15803d" strokeWidth="1.5" strokeLinecap="round" />
+      <path d="M9 14V9.5C9 7.6 10.6 6 12.5 6 14.4 6 16 7.6 16 9.5" stroke="#15803d" strokeWidth="1.5" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function WrenchIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-5 w-5 flex-none" fill="none" aria-hidden="true">
+      <path
+        d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
+        stroke="#15803d"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function ShieldCheckIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-5 w-5 flex-none" fill="none" aria-hidden="true">
+      <path
+        d="M12 3L4 7v5c0 4.8 3.4 9.3 8 10.3C16.6 21.3 20 16.8 20 12V7L12 3z"
+        stroke="#15803d"
+        strokeWidth="1.5"
+        strokeLinejoin="round"
+      />
+      <path d="M9 12l2 2 4-4" stroke="#15803d" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function BottomBarIcon({ type }: { type: string }) {
+  switch (type) {
+    case "lightning":
+      return <LightningIcon />;
+    case "location":
+      return <LocationIcon />;
+    case "pound":
+      return <PoundIcon />;
+    case "wrench":
+      return <WrenchIcon />;
+    case "shield":
+      return <ShieldCheckIcon />;
+    default:
+      return null;
+  }
+}
+
 const badgeIcons = [ToolIcon, ShieldIcon, DeliveryIcon, UsersIcon];
 const carIcons = [CarIconOne, CarIconTwo, CarIconThree];
+
+const bottomBarItems = [
+  { icon: "lightning", text: "Instant engine replacement quote - 100% free, no obligation" },
+  { icon: "location", text: "Engine replacement near me - UK-wide specialist network" },
+  { icon: "pound", text: "Compare reconditioned, rebuilt & used engine prices" },
+  { icon: "wrench", text: "Supply & fit available - parts and labour from vetted specialists" }
+];
 
 function splitHeadline(title: string) {
   const normalizedTitle = title.replace(/[–—]/g, "-");
@@ -333,12 +419,12 @@ export default function HeroSection({
   const [registration, setRegistration] = useState("");
   const [showHeroImage, setShowHeroImage] = useState(Boolean(bgImage));
   const headingLines = resolveHeadingLines(data);
-  const tickerItems = getTickerItems(data.ticker);
-  const tickerLoop = buildTickerLoop(tickerItems);
   const brandName = inferBrandName(data);
   const displayModels = resolveHeroCards(data, modelCards);
   const mobileBar = data.mobileBar ?? {};
   const registrationInput = data.registrationInput ?? {};
+
+  const bottomTickerLoop = useMemo(() => [...bottomBarItems, ...bottomBarItems], []);
 
   function openQuoteCheckout(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -380,7 +466,8 @@ export default function HeroSection({
         </div>
       </div>
 
-      <div className="mx-auto grid max-w-[1200px] min-w-0 items-center gap-8 px-3 py-7 sm:px-6 md:px-8 md:py-8 lg:grid-cols-[62fr_38fr] lg:gap-7 lg:px-8 lg:py-[52px]">
+      <div className="mx-auto grid max-w-[1200px] min-w-0 items-center sm:gap-8 px-3 py-7 sm:px-6 md:px-8 md:py-8 lg:grid-cols-[60fr_40fr] lg:gap-7 lg:px-8 lg:py-[52px]">
+        {/* LEFT COLUMN */}
         <div className="flex min-w-0 flex-col">
           <span className="mb-[14px] inline-flex w-fit items-center rounded-[20px] bg-[#0d1b2e] px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.08em] text-white md:mb-[18px] md:px-[14px] md:py-[6px] md:text-[10.5px]">
             {data.tag}
@@ -404,21 +491,24 @@ export default function HeroSection({
             {data.subheading}
           </p>
 
-          <div className="mt-[18px] grid min-w-0 grid-cols-2 gap-2 md:mt-6 md:flex md:flex-wrap lg:flex-nowrap lg:overflow-x-auto lg:pb-1 [&::-webkit-scrollbar]:hidden">
-            {data.trustBadges.slice(0, 4).map((badge, index) => {
-              const Icon = badgeIcons[index] ?? ShieldIcon;
+          <div className="mt-[18px] grid min-w-0 grid-cols-4 gap-1.5 md:mt-6 md:flex md:flex-wrap lg:flex-nowrap lg:overflow-x-auto lg:pb-1 [&::-webkit-scrollbar]:hidden">
+  {data.trustBadges.slice(0, 4).map((badge, index) => {
+    const Icon = badgeIcons[index] ?? ShieldIcon;
 
-              return (
-                <div
-                  key={badge}
-                  className="flex items-center gap-2 rounded-lg bg-[#13253f] px-[13px] py-2 text-[11.5px] font-semibold text-white md:px-[14px] md:py-[9px] md:text-[12.5px]"
-                >
-                  <Icon />
-                  <span className="whitespace-nowrap">{badge}</span>
-                </div>
-              );
-            })}
-          </div>
+    return (
+      <div
+        key={badge}
+        className="flex flex-col items-center justify-center gap-1 rounded-lg bg-[#13253f] px-2 py-2 text-[11px] font-semibold text-white md:flex-row md:items-center md:justify-start md:px-[14px] md:py-[9px] md:text-[12.5px]"
+      >
+        {/* Added flex-shrink-0 and fixed size to icon so it doesn't squish */}
+        <Icon className="w-4 h-4 flex-shrink-0" />
+        
+        {/* Removed whitespace-nowrap so text wraps exactly like in your screenshot */}
+        <span className="leading-tight text-center md:text-left">{badge}</span>
+      </div>
+    );
+  })}
+</div>
 
           {displayModels.length ? (
             <div className="mt-5 flex min-w-0 flex-col md:mt-7">
@@ -430,9 +520,9 @@ export default function HeroSection({
                 const lineOne = model.lineOne?.trim()
                   ? splitHighlightLineOne(model.lineOne)
                   : {
-                      lead: shortTitle,
-                      accent: normalizedPrice ? `- ${normalizedPrice}` : "",
-                    };
+                    lead: shortTitle,
+                    accent: normalizedPrice ? `- ${normalizedPrice}` : "",
+                  };
 
                 return (
                   <div
@@ -493,10 +583,33 @@ export default function HeroSection({
               })}
             </div>
           ) : null}
+        </div>
 
+        {/* RIGHT COLUMN */}
+        <div className="relative flex w-full min-w-0 flex-col items-center justify-center sm:gap-6 overflow-hidden px-3 lg:min-h-0 lg:px-0">
+          {bgImage && showHeroImage ? (
+            <div className="relative h-auto w-full max-w-full overflow-hidden rounded-[24px] lg:min-h-[300px]">
+              <div className="relative aspect-[5/3] w-full lg:aspect-auto lg:min-h-[300px]">
+                <Image
+                  src={bgImage}
+                  alt={data.imageAlt ?? brandName}
+                  fill
+                  className="object-contain p-2"
+                  sizes="(max-width: 767px) 100vw, (min-width: 768px) 500px"
+                  onError={() => setShowHeroImage(false)}
+                />
+              </div>
+            </div>
+          ) : (
+            <div className="absolute inset-0 flex items-center justify-center">
+              <EngineWatermark />
+            </div>
+          )}
+
+          {/* FORM MOVED HERE */}
           <form
             id="hero-reg-form"
-            className="mt-5 flex min-w-0 flex-col gap-[10px] md:mt-[26px] md:flex-row md:items-stretch"
+            className="flex w-full max-w-full flex-col gap-[10px] px-0 sm:px-2"
             onSubmit={openQuoteCheckout}
           >
             <label
@@ -506,7 +619,7 @@ export default function HeroSection({
               {strictData ? registrationInput.label : (registrationInput.label ?? "Enter your vehicle registration")}
             </label>
 
-            <div className="flex h-[68px] w-full min-w-0 overflow-hidden rounded-lg border-[3px] border-[#1a1a1a] bg-[#ffdd00] md:h-[56px] md:w-[52%] md:min-w-[300px] md:flex-[0_0_auto]">
+            <div className="flex h-[68px] w-full min-w-0 overflow-hidden rounded-lg border-[3px] border-[#1a1a1a] bg-[#ffdd00] md:h-[56px]">
               <div className="flex h-full w-[46px] shrink-0 flex-col items-center justify-center gap-[3px] border-r-2 border-[#1a1a1a] bg-[#003399] px-0.5 md:w-11">
                 <UkFlagIcon />
                 <span className="text-[12px] font-extrabold leading-none tracking-[0.05em] text-white">
@@ -528,7 +641,7 @@ export default function HeroSection({
                 spellCheck={false}
                 value={registration}
                 onChange={(event) => setRegistration(event.currentTarget.value.toUpperCase())}
-                className="h-full min-w-0 flex-1 bg-transparent px-2 text-center text-[28px] font-bold uppercase tracking-[0.11em] text-[#111] outline-none placeholder:text-[rgba(30,30,30,0.35)] placeholder:text-[22px] placeholder:tracking-[0.05em] md:text-[24px] md:placeholder:text-[18px]"
+                className="h-full min-w-0 flex-1 bg-transparent px-2 text-center text-[28px] font-bold uppercase tracking-[0.11em] text-[#111] outline-none placeholder:text-gray-800 placeholder:text-[22px] placeholder:tracking-[0.05em] md:text-[24px] md:placeholder:text-[18px]"
                 style={{
                   fontFamily: '"Charles Wright","Arial Black","Arial",sans-serif',
                 }}
@@ -538,59 +651,54 @@ export default function HeroSection({
             <button
               type="submit"
               aria-label={`Get free ${brandName} engine replacement quotes`}
-              className="flex h-[52px] w-full min-w-0 items-center justify-center gap-1 rounded-lg bg-[#15803d] px-5 font-['Manrope'] text-[15px] font-bold text-white shadow-[0_4px_16px_rgba(21,128,61,0.30)] transition hover:bg-[#16a34a] hover:shadow-[0_6px_22px_rgba(21,128,61,0.42)] md:h-[56px] md:flex-1"
+              className="flex h-[52px] w-full min-w-0 items-center justify-center gap-1 rounded-lg bg-[#15803d] px-5 font-['Manrope'] text-[15px] font-bold text-white shadow-[0_4px_16px_rgba(21,128,61,0.30)] transition hover:bg-[#16a34a] hover:shadow-[0_6px_22px_rgba(21,128,61,0.42)] md:h-[56px]"
             >
               <span>{buttonText(data, brandName, strictData)}</span>
-              <span className="hidden text-base md:inline-block">-&gt;</span>
             </button>
           </form>
 
+          {/* SECURE NOTE MOVED HERE */}
           {secureNote(data, brandName, strictData) ? (
-            <p className="mt-[10px] flex items-start gap-1.5 text-[12px] leading-[1.55] text-[#64748b] md:text-[12.5px]">
-              <span className="mt-px shrink-0 text-[#6b7280]">
-                <LockIcon />
-              </span>
+            <p className="flex w-full max-w-full items-center justify-center px-4 text-center text-[12px] leading-[1.55] text-[#64748b] md:text-[12.5px]">
               <span>{secureNote(data, brandName, strictData)}</span>
             </p>
           ) : null}
         </div>
-
-        <div className="relative hidden min-h-[340px] items-center justify-center lg:flex">
-          {bgImage && showHeroImage ? (
-            <div className="relative h-full min-h-[340px] w-full overflow-hidden rounded-[24px] bg-white shadow-[0_24px_60px_rgba(13,27,46,0.16)]">
-              <Image
-                src={bgImage}
-                alt={data.imageAlt ?? brandName}
-                fill
-                className="object-contain p-6"
-                sizes="(min-width: 1024px) 420px, 100vw"
-                onError={() => setShowHeroImage(false)}
-              />
-            </div>
-          ) : (
-            <div className="absolute inset-0 flex items-center justify-center">
-              <EngineWatermark />
-            </div>
-          )}
-        </div>
       </div>
 
-      <div className="flex h-[42px] w-full items-center overflow-hidden bg-[#0d1b2e]">
-        <div className="hero-ticker-track">
-          {[0, 1].map((copyIndex) => (
-            <div key={copyIndex} className="hero-ticker-segment">
-              {tickerLoop.map((item, itemIndex) => (
+      <div className="bg-[#0d1b2e]">
+        {/* Desktop: scrolling ticker */}
+        <div className="hidden h-14 items-center overflow-hidden lg:flex">
+          <Container className="max-w-[1400px] px-10">
+            <div className="hero-ticker-track h-14" style={{ animationDuration: "32s" }}>
+              {bottomTickerLoop.map((item, index) => (
                 <span
-                  key={`${copyIndex}-${itemIndex}-${item}`}
-                  className="inline-flex items-center px-4 text-[11.5px] font-medium uppercase tracking-[0.05em] text-white md:px-5 md:text-[12px]"
+                  key={`desktop-bottom-ticker-${index}`}
+                  className="flex h-14 flex-none items-center gap-[10px] border-r border-r-white/10 px-6 text-[12px] leading-[1.4] text-white/80"
+                  style={{ fontFamily: "Inter, sans-serif" }}
                 >
-                  <span className="mr-[11px] inline-block h-[5px] w-[5px] rounded-full bg-[#15803d] md:mr-3 md:h-[6px] md:w-[6px]" />
-                  <span>{item}</span>
-                  <span className="mx-[10px] text-[11px] text-[#4b5563] md:mx-3">|</span>
+                  <BottomBarIcon type={item.icon} />
+                  <span>{item.text}</span>
                 </span>
               ))}
             </div>
-          ))}
+          </Container>
+        </div>
+
+        {/* Mobile: scrolling ticker */}
+        <div className="flex h-12 items-center overflow-hidden lg:hidden">
+          <div className="hero-ticker-track h-12" style={{ animationDuration: "45s" }}>
+            {bottomTickerLoop.map((item, index) => (
+              <span
+                key={`bottom-ticker-${index}`}
+                className="flex h-12 flex-none items-center gap-[8px] border-r border-r-white/10 px-5 text-[12px] text-white/80"
+                style={{ fontFamily: "Inter, sans-serif" }}
+              >
+                <BottomBarIcon type={item.icon} />
+                <span>{item.text}</span>
+              </span>
+            ))}
+          </div>
         </div>
       </div>
     </section>

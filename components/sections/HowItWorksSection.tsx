@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import type { HowItWorksData } from "@/types/brand";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
@@ -11,37 +11,19 @@ type Props = {
   sectionId?: string;
 };
 
-function RegistrationIcon() {
+function ArrowIcon() {
   return (
-    <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" aria-hidden="true">
-      <rect x="3" y="6" width="18" height="13" rx="2" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M3 10h18" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-      <circle cx="7" cy="14" r="1" fill="currentColor" />
-      <path d="M10 14h7" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+    <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" aria-hidden="true">
+      <path d="M5 12h14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      <path d="m13 6 6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 }
 
-function QuoteIcon() {
+function TickIcon() {
   return (
-    <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" aria-hidden="true">
-      <path
-        d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <line x1="7" y1="7" x2="7.01" y2="7" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-    </svg>
-  );
-}
-
-function ShieldIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" aria-hidden="true">
-      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-      <polyline points="9 12 11 14 15 10" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+    <svg viewBox="0 0 16 16" className="h-3.5 w-3.5" fill="none" aria-hidden="true">
+      <path d="m3.2 8.3 3 3.1 6.7-7" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 }
@@ -100,45 +82,6 @@ function UsersIcon() {
   );
 }
 
-function CheckIcon() {
-  return (
-    <svg viewBox="0 0 12 12" className="h-[10px] w-[10px]" fill="none" aria-hidden="true">
-      <polyline points="2,6 5,9 10,3" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
-
-function RefreshIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-[11px] w-[11px]" fill="none" aria-hidden="true">
-      <path d="M1 4v6h6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M3.51 15a9 9 0 1 0 .49-4.1" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
-
-function ExternalIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-[10px] w-[10px]" fill="none" aria-hidden="true">
-      <path d="M14 3h7v7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M10 14 21 3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M21 14v7h-7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M3 10v11h11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
-
-function ArrowChevron() {
-  return <span className="text-[22px] font-extralight leading-none text-[#d1d5db]">›</span>;
-}
-
-function getIcon(icon: string) {
-  if (icon === "registration") return <RegistrationIcon />;
-  if (icon === "quote") return <QuoteIcon />;
-  if (icon === "shield") return <ShieldIcon />;
-  return <ShieldIcon />;
-}
-
 function splitTagline(tagline: string) {
   const normalized = tagline.replace(/[–—]/g, "-");
   const parts = normalized.split("-");
@@ -163,197 +106,12 @@ function splitHeading(title: string) {
     .filter(Boolean);
 }
 
-function DesktopSideCard({
-  card,
-  onOpen,
-  stepLabel,
-  actionLabel,
-}: {
-  card: HowItWorksData["cards"][number];
-  onOpen: () => void;
-  stepLabel: string;
-  actionLabel: string;
-}) {
-  return (
-    <button
-      type="button"
-      onClick={onOpen}
-      className="flex h-full w-full flex-col rounded-[12px] border border-[#e5e7eb] bg-white px-[14px] py-[14px] text-left shadow-[0_2px_12px_rgba(13,27,46,0.06)] transition hover:border-[#0d1b2e]"
-    >
-      <div className="mx-auto flex h-[58px] w-[58px] items-center justify-center rounded-[12px] bg-[#0d1b2e] text-[#22c55e]">
-        {getIcon(card.icon)}
-      </div>
-
-      <span className="mt-[10px] inline-flex w-fit text-[9px] font-bold uppercase tracking-[0.9px] text-[#15803d]">
-        {stepLabel} {card.number}
-      </span>
-
-      <div role="heading" aria-level={3} className="mt-[10px] font-['Manrope'] text-[15px] font-bold leading-[1.25] text-[#0d1b2e]">
-        {card.front.h3}
-      </div>
-
-      <p className="mt-[8px] text-[12px] leading-[1.55] text-[#6b7280]">{card.front.text}</p>
-
-      <div className="mt-auto flex items-center justify-end pt-5 text-[10px] font-semibold text-[#6b7280]">
-        <span className="inline-flex items-center gap-[5px]">
-          <RefreshIcon />
-          <span>{actionLabel}</span>
-        </span>
-        <span className="ml-2">
-          <ArrowChevron />
-        </span>
-      </div>
-    </button>
-  );
-}
-
-function DesktopActiveCard({
-  card,
-  onClose,
-  stepLabel,
-  actionLabel,
-}: {
-  card: HowItWorksData["cards"][number];
-  onClose: () => void;
-  stepLabel: string;
-  actionLabel: string;
-}) {
-  return (
-    <button
-      type="button"
-      onClick={onClose}
-      className="h-full w-full rounded-[12px] border border-[#1e3a5f] bg-[#0d1b2e] px-[18px] py-[18px] text-left shadow-[0_6px_20px_rgba(13,27,46,0.18)]"
-    >
-      <div className="mb-[14px] flex items-center justify-between gap-3">
-        <div className="flex items-center gap-3">
-          <div className="flex h-[48px] w-[48px] items-center justify-center rounded-[12px] border border-[rgba(34,197,94,0.25)] bg-[rgba(34,197,94,0.1)] text-[#22c55e]">
-            {getIcon(card.icon)}
-          </div>
-          <span className="inline-flex text-[9px] font-bold uppercase tracking-[0.9px] text-[#22c55e]">
-            {stepLabel} {card.number}
-          </span>
-        </div>
-        <span className="inline-flex items-center gap-[4px] text-[9px] font-semibold text-[#64748b]">
-          <span>{actionLabel}</span>
-          <ExternalIcon />
-        </span>
-      </div>
-
-      <div role="heading" aria-level={3} className="max-w-[520px] font-['Manrope'] text-[17px] font-bold leading-[1.25] !text-white">
-        {card.back.heading}
-      </div>
-
-      <p className="mt-[10px] max-w-[560px] text-[12px] leading-[1.55] text-[#94a3b8]">{card.back.text}</p>
-
-      <ul className="mt-[14px] space-y-[10px]">
-        {card.back.bullets.map((bullet) => (
-          <li key={bullet} className="flex items-start gap-[9px] border-b border-[rgba(148,163,184,0.16)] pb-[10px] text-[12px] leading-[1.45] text-[#cbd5e1] last:border-b-0 last:pb-0">
-            <span className="mt-[1px] flex h-[18px] w-[18px] flex-none items-center justify-center rounded-full bg-[#15803d] text-white">
-              <CheckIcon />
-            </span>
-            <span>{bullet}</span>
-          </li>
-        ))}
-      </ul>
-    </button>
-  );
-}
-
-function MobileCard({
-  card,
-  open,
-  onToggle,
-  stepLabel,
-  openLabel,
-  closeLabel,
-}: {
-  card: HowItWorksData["cards"][number];
-  open: boolean;
-  onToggle: () => void;
-  stepLabel: string;
-  openLabel: string;
-  closeLabel: string;
-}) {
-  return (
-    <div className="overflow-hidden rounded-[12px]">
-      {!open ? (
-        <button
-          type="button"
-          onClick={onToggle}
-          className="flex w-full items-start gap-3 rounded-[12px] border border-[#e5e7eb] bg-white px-[14px] py-[14px] text-left transition hover:border-[#0d1b2e]"
-        >
-          <div className="flex h-[50px] w-[50px] flex-none items-center justify-center rounded-[10px] bg-[#0d1b2e] text-[#22c55e]">
-            {getIcon(card.icon)}
-          </div>
-
-          <div className="min-w-0 flex-1">
-            <span className="mb-[6px] inline-block text-[9px] font-bold uppercase tracking-[0.9px] text-[#15803d]">
-              {stepLabel} {card.number}
-            </span>
-            <div role="heading" aria-level={3} className="font-['Manrope'] text-[14px] font-bold leading-[1.3] text-[#0d1b2e]">
-              {card.front.h3}
-            </div>
-            <p className="mt-[5px] text-[11.5px] leading-[1.5] text-[#6b7280]">{card.front.text}</p>
-            <span className="mt-2 inline-flex items-center gap-[5px] text-[10px] font-semibold text-[#15803d]">
-              <RefreshIcon />
-              <span>{openLabel}</span>
-            </span>
-          </div>
-
-          <span className="flex-none pt-[14px]">
-            <ArrowChevron />
-          </span>
-        </button>
-      ) : (
-        <button
-          type="button"
-          onClick={onToggle}
-          className="w-full rounded-[12px] border border-[#1e3a5f] bg-[#0d1b2e] px-[18px] py-[18px] text-left"
-        >
-          <div className="mb-[14px] flex items-center justify-between gap-3">
-            <span className="inline-flex text-[9px] font-bold uppercase tracking-[0.9px] text-[#22c55e]">
-              {stepLabel} {card.number}
-            </span>
-            <span className="inline-flex items-center gap-1 text-[9px] font-semibold text-[#475569]">
-              <span>{closeLabel}</span>
-              <RefreshIcon />
-            </span>
-          </div>
-
-          <div role="heading" aria-level={3} className="font-['Manrope'] text-[17px] font-bold leading-[1.25] !text-white">
-            {card.back.heading}
-          </div>
-          <p className="mt-2 text-[12px] leading-[1.55] text-[#94a3b8]">{card.back.text}</p>
-
-          <ul className="mt-[14px] space-y-[10px]">
-            {card.back.bullets.map((bullet) => (
-              <li key={bullet} className="flex items-start gap-[9px] text-[12px] leading-[1.45] text-[#cbd5e1]">
-                <span className="mt-[1px] flex h-[18px] w-[18px] flex-none items-center justify-center rounded-full bg-[#15803d] text-white">
-                  <CheckIcon />
-                </span>
-                <span>{bullet}</span>
-              </li>
-            ))}
-          </ul>
-        </button>
-      )}
-    </div>
-  );
-}
-
 export default function HowItWorksSection({ data, bgImage, sectionId }: Props) {
-  const defaultCardNumber = data.cards[1]?.number ?? data.cards[0]?.number ?? 1;
-  const [activeCard, setActiveCard] = useState<number>(defaultCardNumber);
+  const [activeStep, setActiveStep] = useState<number | null>(null);
   const tagline = splitTagline(data.tagline);
   const headingLines = data.headingLines?.length ? data.headingLines : splitHeading(data.h2);
   const ui = data.ui ?? {};
-  const stepLabel = ui.stepLabel ?? "Step";
   const footerNote = ui.footerNote ?? "Most replacements completed within 3-5 days.";
-
-  const active = useMemo(
-    () => data.cards.find((card) => card.number === activeCard) ?? data.cards[0],
-    [activeCard, data.cards],
-  );
 
   const trustLabels = ui.mobileTrustItems ?? [
     "12-Month Warranty",
@@ -368,7 +126,7 @@ export default function HowItWorksSection({ data, bgImage, sectionId }: Props) {
   }));
 
   return (
-    <Section id={sectionId} className="relative overflow-hidden bg-[#f8f9fa]">
+    <Section id={sectionId} className="relative overflow-hidden bg-[#f8f9fa] py-7 sm:py-8 lg:py-10">
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div
           className="absolute right-0 top-0 hidden h-[340px] w-[440px] opacity-[0.08] lg:block"
@@ -381,13 +139,13 @@ export default function HowItWorksSection({ data, bgImage, sectionId }: Props) {
         />
       </div>
 
-      <Container className="relative max-w-[1180px] px-0 sm:px-5 lg:px-4">
-        <div className="px-4 pt-[28px] sm:px-0 lg:pt-0">
+      <Container className="relative max-w-[1400px]">
+        <div className="mx-auto lg:mx-0">
           <div className="section-pill mb-[14px]">
             <span>{data.tag}</span>
           </div>
 
-          <h2 className="max-w-[760px] font-['Manrope'] text-[27px] font-extrabold leading-[1.12] tracking-[-0.5px] text-[#0d1b2e] lg:text-[44px] lg:leading-[1.03] lg:tracking-[-1px]">
+          <h2 className="max-w-[850px] font-['Manrope'] text-[27px] font-extrabold leading-[1.12] tracking-[-0.5px] text-[#0d1b2e] lg:text-[44px] lg:leading-[1.03] lg:tracking-[-1px]">
             {headingLines.map((line, index) => {
               const isAccent = headingLines.length > 1 && index === headingLines.length - 1;
               return (
@@ -402,71 +160,120 @@ export default function HowItWorksSection({ data, bgImage, sectionId }: Props) {
           </h2>
         </div>
 
-        <div className="mt-[18px] px-4 sm:px-0 lg:hidden">
-          <div className="flex flex-col gap-[10px]">
-            {data.cards.map((card) => (
-              <MobileCard
-                key={card.number}
-                card={card}
-                open={activeCard === card.number}
-                onToggle={() => setActiveCard((current) => (current === card.number ? 0 : card.number))}
-                stepLabel={stepLabel}
-                openLabel={ui.mobileOpenLabel ?? "Tap to flip"}
-                closeLabel={ui.mobileCloseLabel ?? "Tap to flip back"}
-              />
-            ))}
-          </div>
-        </div>
+        <div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+          {data.cards.map((card) => {
+            const flipped = activeStep === card.number;
 
-        <div className="mt-[18px] hidden lg:block">
-          <div className="grid gap-[14px] lg:grid-cols-3">
-            {data.cards.map((card) => {
-              const isActive = card.number === active?.number;
+            return (
+              <div key={card.number} className="perspective-1000 min-h-[260px] sm:min-h-[280px] xl:min-h-[290px]">
+                <button
+                  type="button"
+                  onClick={() => setActiveStep(flipped ? null : card.number)}
+                  className="block h-full w-full text-left"
+                  aria-pressed={flipped}
+                  aria-label={`${flipped ? "Hide details for" : "Show details for"} step ${card.number}`}
+                >
+                  <div
+                    className={`relative h-full min-h-[260px] rounded-[18px] transition duration-500 [transform-style:preserve-3d] lg:min-h-[280px] xl:min-h-[290px] ${flipped ? "[transform:rotateY(180deg)]" : ""
+                      }`}
+                  >
+                    <div className="absolute inset-0 flex h-full flex-col overflow-hidden rounded-[18px] border border-[#dbe4ef] bg-white p-2 sm:p-4 shadow-[0_18px_40px_rgba(13,27,46,0.08)] [backface-visibility:hidden] text-center">
+                      <span className="mt-0 font-['Manrope'] text-left text-2xl font-extrabold uppercase tracking-[0.18em] text-gray-400">
+                        0{card.number}
+                      </span>
 
-              return isActive ? (
-                <DesktopActiveCard
-                  key={card.number}
-                  card={card}
-                  onClose={() => setActiveCard(card.number)}
-                  stepLabel={stepLabel}
-                  actionLabel={ui.desktopOpenLabel ?? "Click to view details"}
-                />
-              ) : (
-                <DesktopSideCard
-                  key={card.number}
-                  card={card}
-                  onOpen={() => setActiveCard(card.number)}
-                  stepLabel={stepLabel}
-                  actionLabel={ui.desktopClosedLabel ?? "Click to expand"}
-                />
-              );
-            })}
-          </div>
-        </div>
+                      <div className={`mx-auto flex items-center justify-center rounded-[14px] p-2 ${card.number === 1 ? "w-70 h-22" : "h-12 w-12 sm:h-14 sm:w-14"}`}>
+                        <img
+                          src={card.number === 1 ? "/Home/reg-here.webp" : card.number === 2 ? "/Home/save-money.webp" : "/Home/quote-button 1.png"}
+                          alt={`Step ${card.number} icon`}
+                          className="h-full w-full object-contain"
+                        />
+                      </div>
 
-        <div className="mx-4 mt-4 rounded-[12px] border border-[#0d1b2e] bg-white px-4 py-4 lg:mx-0 lg:mt-[14px] lg:flex lg:items-center lg:gap-4">
-          <div className="mb-3 flex h-[42px] w-[42px] items-center justify-center rounded-full bg-[#15803d] text-white lg:mb-0 lg:h-[46px] lg:w-[46px]">
-            <MedalIcon />
-          </div>
-          <div className="text-[13px] leading-[1.45] text-[#0d1b2e]">
-            <p className="font-semibold">
-              {tagline.lead}
-              {tagline.emphasis ? <span className="font-bold text-[#15803d]"> - {tagline.emphasis}</span> : null}
-            </p>
-            <p className="mt-1 text-[12px] font-normal leading-[1.4] text-[#6b7280]">{footerNote}</p>
-          </div>
-        </div>
+                      <h3 className="mt-3 font-['Manrope'] text-[24px] font-bold leading-[1] text-[#0d1b2e]">
+                        {card.front.h3}
+                      </h3>
 
-        <div className="mt-4 grid grid-cols-4 gap-[6px] border-t border-[#e5e7eb] bg-white px-[10px] py-[14px] lg:hidden">
-          {trustItems.map((item) => (
-            <div key={item.label} className="flex flex-col items-center gap-[6px] text-center">
-              <div className="flex h-[30px] w-[30px] items-center justify-center rounded-[8px] bg-[#f0fdf4] text-[#15803d]">
-                {item.icon}
+                      <p className="mx-auto mt-4 text-[12px] sm:text-[14px] leading-[1.65] text-[#5a6478]">
+                        {card.front.text}
+                      </p>
+
+                      <span className="ml-auto mt-auto inline-flex items-center gap-2 pt-0 text-[14px] font-bold text-[#15803d]">
+                        <span>See how it works</span>
+                        <ArrowIcon />
+                      </span>
+                    </div>
+
+                    <div className="absolute inset-0 flex h-full flex-col overflow-hidden rounded-[18px] border border-[#0d1b2e] bg-[#0d1b2e] p-2 sm:p-4 text-white shadow-[0_24px_48px_rgba(7,25,54,0.2)] [backface-visibility:hidden] [transform:rotateY(180deg)]">
+                      <h3 className="mt-5 text-center font-['Manrope'] text-[24px] font-bold leading-[1] text-white">
+                        {card.back.heading}
+                      </h3>
+
+                      <div className="mt-4 min-h-0 flex-1 overflow-y-auto pr-2 [scrollbar-color:#86efac_transparent] [scrollbar-width:thin]">
+                        <p className="text-[15px] leading-[1.65] text-[#c3d1e2]">
+                          {card.back.text}
+                        </p>
+
+                        <ul className="mt-5 space-y-3">
+                          {card.back.bullets.map((bullet) => (
+                            <li key={bullet} className="flex items-start gap-3 text-[14px] leading-[1.55] text-[#e7eef8]">
+                              <span className="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-[#15803d] text-white">
+                                <TickIcon />
+                              </span>
+                              <span>{bullet}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </button>
               </div>
-              <span className="text-[9px] font-semibold leading-[1.3] text-[#6b7280]">{item.label}</span>
-            </div>
-          ))}
+            );
+          })}
         </div>
+
+       <div className="mx-auto mt-6 rounded-[12px] px-4 py-4 sm:mx-0 lg:mt-[24px] flex flex-nowrap sm:flex-wrap justify-center gap-2 sm:gap-3 lg:gap-4 items-stretch sm:items-center">
+  
+  {/* 12-Month Warranty */}
+  <div className="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 p-1.5 sm:px-3 sm:py-1.5 rounded-lg sm:rounded-full bg-slate-50 flex-1 sm:flex-none">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[#15803D] shrink-0">
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
+      <path d="m9 12 2 2 4-4" />
+    </svg>
+    <span className="text-[10px] leading-tight font-medium text-slate-700 text-center sm:text-sm sm:leading-none">12-Month Warranty</span>
+  </div>
+
+  {/* Supply & Fit Available */}
+  <div className="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 p-1.5 sm:px-3 sm:py-1.5 rounded-lg sm:rounded-full bg-slate-50 flex-1 sm:flex-none">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[#15803D] shrink-0">
+      <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+    </svg>
+    <span className="text-[10px] leading-tight font-medium text-slate-700 text-center sm:text-sm sm:leading-none">Supply & Fit Available</span>
+  </div>
+
+  {/* Nationwide Delivery */}
+  <div className="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 p-1.5 sm:px-3 sm:py-1.5 rounded-lg sm:rounded-full bg-slate-50 flex-1 sm:flex-none">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[#15803D] shrink-0">
+      <rect width="16" height="13" x="1" y="3" rx="2" />
+      <path d="M16 8h4l3 3v5h-7V8z" />
+      <circle cx="5.5" cy="18.5" r="2.5" />
+      <circle cx="18.5" cy="18.5" r="2.5" />
+    </svg>
+    <span className="text-[10px] leading-tight font-medium text-slate-700 text-center sm:text-sm sm:leading-none">Nationwide Delivery</span>
+  </div>
+
+  {/* Trusted UK Suppliers */}
+  <div className="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 p-1.5 sm:px-3 sm:py-1.5 rounded-lg sm:rounded-full bg-slate-50 flex-1 sm:flex-none">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[#15803D] shrink-0">
+      <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" />
+      <path d="m9 12 2 2 4-4" />
+    </svg>
+    <span className="text-[10px] leading-tight font-medium text-slate-700 text-center sm:text-sm sm:leading-none">Trusted UK Suppliers</span>
+  </div>
+
+</div>
+
       </Container>
     </Section>
   );
