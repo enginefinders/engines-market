@@ -33,7 +33,7 @@ export default function FaqSection({ data, strictData = false }: Props) {
     <Section className="bg-white">
       <Container>
         <div className="mx-auto max-w-[860px] text-center">
-          <p className="section-pill mb-1.5">{data.tag}</p>
+          <p className="section-pill mb-1.5 mx-auto">{data.tag}</p>
           <h2>
             {headingLines.map((line, index) => (
               <span key={`${line}-${index}`} className={`block ${headingLines.length > 1 && index === headingLines.length - 1 ? "text-[#15803d]" : ""}`}>
@@ -44,100 +44,113 @@ export default function FaqSection({ data, strictData = false }: Props) {
           <p className="text-body mt-2.5 text-slate-700">{data.intro}</p>
         </div>
 
-        <div className="faq-scroll-panel mx-auto mt-6 max-w-5xl space-y-2.5">
-          {data.items.map((item, index) => (
-            <details key={item.question} className="surface-card-soft overflow-hidden" open={index === defaultOpenIndex}>
-              <summary className="cursor-pointer list-none px-4 py-3.5">
-                {strictData ? (
-                  ui.questionLabelPrefix ? <p className="text-label text-green-700">{ui.questionLabelPrefix} {index + 1}</p> : null
-                ) : (
-                  <p className="text-label text-green-700">{ui.questionLabelPrefix ?? "Question"} {index + 1}</p>
-                )}
-                <h3 className="mt-1 pr-6 text-[0.98rem]">{item.question}</h3>
-              </summary>
-
-              <div className="border-t border-slate-200 bg-white px-4 py-3.5">
-                <p className="text-small text-slate-700">{item.answer}</p>
-
-                {item.keyPoints?.length ? (
-                  <div className="mt-3 rounded-xl bg-slate-50 px-3.5 py-3">
-                    {strictData ? (
-                      ui.keyPointsLabel ? <p className="text-label text-slate-500">{ui.keyPointsLabel}</p> : null
-                    ) : (
-                      <p className="text-label text-slate-500">{ui.keyPointsLabel ?? "Key points"}</p>
-                    )}
-                    <ul className="mt-2 space-y-1.5 text-small font-semibold text-slate-700">
-                      {item.keyPoints.map((point) => (
-                        <li key={point}>• {point}</li>
-                      ))}
-                    </ul>
-                  </div>
-                ) : null}
-
-                {item.comparisonTable?.headers?.length && item.comparisonTable.rows?.length ? (
-                  <div className="mt-3 overflow-hidden rounded-xl border border-slate-200 bg-white">
-                    {strictData ? (
-                      ui.comparisonTableLabel ? (
-                        <div className="border-b border-slate-200 bg-slate-50 px-3.5 py-2">
-                          <p className="text-label text-slate-500">{ui.comparisonTableLabel}</p>
-                        </div>
-                      ) : null
-                    ) : (
-                      <div className="border-b border-slate-200 bg-slate-50 px-3.5 py-2">
-                        <p className="text-label text-slate-500">{ui.comparisonTableLabel ?? "Comparison table"}</p>
-                      </div>
-                    )}
-
-                    <div className="overflow-x-auto">
-                      <table className="min-w-full border-collapse text-left">
-                        <thead>
-                          <tr className="border-b border-slate-200">
-                            {item.comparisonTable.headers.map((header) => (
-                              <th
-                                key={header}
-                                className="px-3.5 py-2.5 font-['Manrope'] text-[11px] font-extrabold uppercase tracking-[0.04em] text-[#0d1b2e]"
-                              >
-                                {header}
-                              </th>
-                            ))}
-                          </tr>
-                        </thead>
-                        <tbody>
-                          {item.comparisonTable.rows.map((row, rowIndex) => (
-                            <tr key={`${item.question}-row-${rowIndex}`} className="border-b border-slate-100 last:border-b-0">
-                              {row.map((cell, cellIndex) => (
-                                <td
-                                  key={`${item.question}-row-${rowIndex}-cell-${cellIndex}`}
-                                  className="align-top px-3.5 py-2.5 text-[11.5px] leading-[1.5] text-slate-700"
-                                >
-                                  {cell}
-                                </td>
-                              ))}
-                            </tr>
-                          ))}
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                ) : null}
-
-                {item.warning && (!strictData || ui.warningTitle) && (
-                  <div className="mt-3">
-                    <WarningCard
-                      label={strictData ? "" : "Warning"}
-                      title={strictData ? (ui.warningTitle || "") : (ui.warningTitle ?? "Check fitment and engine condition before ordering")}
-                      body={item.warning}
-                    />
-                  </div>
-                )}
-
-                <a href="#quote-form" data-quote-context={item.question} data-quote-source="faq" className="action-link mt-4">
-                  {item.cta}
-                </a>
-              </div>
-            </details>
-          ))}
+        <div className="faq-scroll-panel mx-auto mt-6 max-w-5xl">
+  {data.items.map((item, index) => (
+    <details key={item.question} className="group block surface-card-soft overflow-hidden" open={index === defaultOpenIndex}>
+      <summary className="flex min-h-[56px] w-full cursor-pointer list-none items-center justify-between gap-4 border-b border-slate-100 px-5 py-5 text-left transition hover:bg-slate-50 sm:px-6 group-open:border-b-2 group-open:border-green-700 group-open:text-green-700 [&::-webkit-details-marker]:hidden">
+        <div className="flex flex-col gap-1">
+          {strictData ? (
+            ui.questionLabelPrefix ? <p className="text-label text-green-700">{ui.questionLabelPrefix} {index + 1}</p> : null
+          ) : (
+            <p className="text-label text-green-700">{ui.questionLabelPrefix ?? "Question"} {index + 1}</p>
+          )}
+          <h3 
+  className="text-[15px] font-semibold leading-[1.45] text-slate-900 group-open:text-green-700" 
+  style={{ fontSize: '15px' }}
+>
+  {item.question}
+</h3>
         </div>
+        <svg
+          viewBox="0 0 24 24"
+          className="h-[18px] w-[18px] flex-none text-slate-400 transition group-open:rotate-180 group-open:text-green-700"
+          fill="none"
+          aria-hidden="true"
+        >
+          <path d="m6 9 6 6 6-6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      </summary>
+
+      <div className="border-b border-slate-200 bg-slate-50 px-5 py-5 sm:px-6 sm:py-6">
+        <p className="text-[15px] leading-[1.75] text-slate-700">{item.answer}</p>
+
+        {item.keyPoints?.length ? (
+          <div className="mt-4">
+            {strictData ? (
+              ui.keyPointsLabel ? <p className="text-[15px] font-semibold text-slate-900 mb-2">{ui.keyPointsLabel}</p> : null
+            ) : (
+              <p className="text-[15px] font-semibold text-slate-900 mb-2">{ui.keyPointsLabel ?? "Key points"}</p>
+            )}
+            <ul className="space-y-2 rounded-[14px] border border-slate-200 bg-white px-4 py-4 text-[15px] leading-[1.7] text-slate-700">
+              {item.keyPoints.map((point) => (
+                <li key={point} className="flex gap-3">
+                  <span className="mt-[0.55rem] h-2 w-2 flex-none rounded-full bg-green-700" />
+                  <span className="font-semibold">{point}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ) : null}
+
+        {item.comparisonTable?.headers?.length && item.comparisonTable.rows?.length ? (
+          <div className="mt-4">
+            {strictData ? (
+              ui.comparisonTableLabel ? (
+                <p className="text-[15px] font-semibold text-slate-900 mb-2">{ui.comparisonTableLabel}</p>
+              ) : null
+            ) : (
+              <p className="text-[15px] font-semibold text-slate-900 mb-2">{ui.comparisonTableLabel ?? "Comparison table"}</p>
+            )}
+            <div className="overflow-x-auto rounded-[14px] border border-slate-200 bg-white">
+              <table className="min-w-full border-collapse text-left text-[14px]">
+                <thead className="bg-slate-50">
+                  <tr>
+                    {item.comparisonTable.headers.map((header) => (
+                      <th
+                        key={header}
+                        className="border-b border-slate-200 px-4 py-3 font-semibold text-[#0d1b2e]"
+                      >
+                        {header}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {item.comparisonTable.rows.map((row, rowIndex) => (
+                    <tr key={`${item.question}-row-${rowIndex}`} className={rowIndex % 2 === 0 ? "bg-white" : "bg-slate-50/50"}>
+                      {row.map((cell, cellIndex) => (
+                        <td
+                          key={`${item.question}-row-${rowIndex}-cell-${cellIndex}`}
+                          className="border-b border-slate-100 px-4 py-3 align-top text-slate-700"
+                        >
+                          {cell}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        ) : null}
+
+        {item.warning && (!strictData || ui.warningTitle) && (
+          <div className="mt-4">
+            <WarningCard
+              label={strictData ? "" : "Warning"}
+              title={strictData ? (ui.warningTitle || "") : (ui.warningTitle ?? "Check fitment and engine condition before ordering")}
+              body={item.warning}
+            />
+          </div>
+        )}
+
+        <a href="#quote-form" data-quote-context={item.question} data-quote-source="faq" className="mt-4 inline-block text-[14px] font-semibold text-green-700 transition hover:underline">
+          {item.cta}
+        </a>
+      </div>
+    </details>
+  ))}
+</div>
 
         {data.disclaimer ? (
           <div className="mx-auto mt-3 max-w-5xl rounded-xl border border-slate-200 bg-slate-50 px-4 py-3">

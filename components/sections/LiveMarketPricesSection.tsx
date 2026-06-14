@@ -183,7 +183,7 @@ export default function LiveMarketPricesSection({
           <span>{data.tag}</span>
         </div>
 
-        <h2 className="max-w-none font-['Manrope'] text-[26px] font-extrabold leading-[1.18] tracking-[-0.4px] text-[#0d1b2e] md:text-[30px] md:tracking-[-0.7px] lg:text-[43px] lg:leading-[1.06] lg:tracking-[-1px]">
+        <h2 className="max-w-[700px] font-['Manrope'] text-[26px] font-extrabold leading-[1.18] tracking-[-0.4px] text-[#0d1b2e] md:text-[30px] md:tracking-[-0.7px] lg:text-[43px] lg:leading-[1.06] lg:tracking-[-1px]">
           {headingLines.map((line, index) => {
             const isAccent = headingLines.length > 1 && index === headingLines.length - 1;
             return (
@@ -194,7 +194,7 @@ export default function LiveMarketPricesSection({
           })}
         </h2>
 
-        <p className="mt-[10px] max-w-[760px] text-[13px] leading-[1.6] text-[#6b7280] md:text-[14px]">
+        <p className="mt-[10px] max-w-[700px] text-[13px] leading-[1.6] text-[#6b7280] md:text-[14px]">
           {data.h3}
         </p>
 
@@ -213,9 +213,9 @@ export default function LiveMarketPricesSection({
             </div>
           </div>
 
-          <div className="space-y-3 lg:flex lg:h-full lg:flex-col">
+          <div className=" lg:flex lg:h-full lg:flex-col">
             {isDocumentMode ? (
-              <div className="rounded-[10px] bg-[#0d1b2e] px-4 py-[12px] shadow-[0_2px_12px_rgba(13,27,46,0.16)]">
+              <div className="rounded-t-[14px] bg-[#0d1b2e] px-4 py-[12px] shadow-[0_2px_12px_rgba(13,27,46,0.16)]">
                 <div className="text-[12px] font-bold uppercase tracking-[0.08em] text-white">
                   Average Market Prices
                 </div>
@@ -278,7 +278,7 @@ export default function LiveMarketPricesSection({
             ) : null}
 
             <div className="space-y-2 lg:flex lg:h-full lg:flex-col lg:space-y-0">
-              <div className="overflow-hidden rounded-[14px] border border-[#dfe5ee] bg-white shadow-[0_2px_12px_rgba(13,27,46,0.07)] lg:flex lg:h-[520px] lg:flex-col">
+              <div className="overflow-hidden rounded-b-[14px] border border-white/10 bg-gradient-to-br from-[#0b1a2e] via-[#0f2035] to-[#0a1628] shadow-[0_10px_28px_rgba(0,0,0,0.4)] lg:flex lg:h-[520px] lg:flex-col">
                 {isDocumentMode ? null : (
                   <div className="border-b border-[#e4e7ee] bg-[#f9fafc] px-4 py-[10px] text-[11px] font-medium text-[#9aa3b5]">
                     Showing {visibleRows.length} {visibleRows.length === 1 ? (ui.showingSingleLabel ?? "entry") : (ui.showingPluralLabel ?? "entries")}
@@ -294,13 +294,13 @@ export default function LiveMarketPricesSection({
                       {visibleRows.map((row, index) => (
                         <li
                           key={`${row.Year}-${row.Model}-${row["Engine Code"]}-${index}`}
-                          className="border-b border-[#e4e7ee] px-[14px] py-[11px] transition hover:bg-[rgba(45,122,58,0.04)] last:border-b-0 md:px-[16px]"
+                          className="border-b border-white/10 px-[14px] py-[11px] transition hover:bg-[rgba(45,122,58,0.04)] last:border-b-0 md:px-[16px]"
                         >
                           <div className="mb-[4px] flex items-baseline justify-between gap-[8px]">
-                            <span className="min-w-0 flex-1 truncate text-[14px] font-semibold text-[#0d1f3c]">
+                            <span className="min-w-0 flex-1 truncate text-[14px] font-semibold text-white">
                               {row.Model}
                             </span>
-                            <span className="flex-none whitespace-nowrap text-[11px] font-normal text-[#9aa3b5]">
+                            <span className="flex-none whitespace-nowrap text-[11px] font-normal text-white">
                               {row.Year}
                             </span>
                             <span className="flex-none whitespace-nowrap text-[15px] font-bold text-[#2d7a3a]">
@@ -309,14 +309,14 @@ export default function LiveMarketPricesSection({
                           </div>
 
                           <div className="flex items-center justify-between gap-[8px]">
-                            <span className="min-w-0 flex-1 truncate text-[11.5px] text-[#5a6478]">
+                            <span className="min-w-0 flex-1 truncate text-[11.5px] text-white">
                               {row["Reported Issue"]}
                             </span>
                             <div className="flex flex-none gap-[4px]">
-                              <span className="rounded-full bg-[#0d1f3c] px-[7px] py-[2px] text-[10.5px] font-medium text-white">
+                              <span className="rounded-full bg-white/5 border border-white/10 px-2 py-0.75 text-[10px] font-medium text-white/80">
                                 {row["Engine Code"]}
                               </span>
-                              <span className="rounded-full bg-[#0d1f3c] px-[7px] py-[2px] text-[10.5px] font-medium text-white">
+                              <span className="rounded-full bg-white/5 border border-white/10 px-2 py-0.75 text-[10px] font-medium text-white/80">
                                 {row.Fuel}
                               </span>
                             </div>
@@ -344,11 +344,11 @@ export default function LiveMarketPricesSection({
               </div>
 
               {isDocumentMode ? (
-                <div className="rounded-[10px] bg-[#0d1b2e] px-4 py-[10px] shadow-[0_2px_12px_rgba(13,27,46,0.16)]">
-                  <div className="flex items-center gap-[6px] text-[11px] font-medium text-white/80">
+                <div className="rounded-[10px] px-4 py-[10px]">
+                  <div className="flex items-center gap-[6px] text-[11px] font-medium text-[#0d1b2e]">
                     <RefreshIcon />
                     <span>
-                      {isDocumentMode ? (ui.updatedLabel || "") : (ui.updatedLabel ?? "Last updated:")} <span className="font-semibold text-white">{formatUpdatedAt(clock)}</span>
+                      {isDocumentMode ? (ui.updatedLabel || "") : (ui.updatedLabel ?? "Last updated:")} <span className="font-semibold text-[#0d1b2e]">{formatUpdatedAt(clock)}</span>
                     </span>
                   </div>
                 </div>

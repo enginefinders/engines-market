@@ -22,9 +22,9 @@ type HeroSectionProps = {
   strictData?: boolean;
 };
 
-function ToolIcon() {
+function ToolIcon({ className }: { className?: string }) {
   return (
-    <svg viewBox="0 0 24 24" className="h-[15px] w-[15px]" fill="none" aria-hidden="true">
+    <svg viewBox="0 0 24 24" className={`h-[15px] w-[15px] ${className || ""}`} fill="none" aria-hidden="true">
       <path
         d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
         stroke="currentColor"
@@ -36,18 +36,18 @@ function ToolIcon() {
   );
 }
 
-function ShieldIcon() {
+function ShieldIcon({ className }: { className?: string }) {
   return (
-    <svg viewBox="0 0 24 24" className="h-[15px] w-[15px]" fill="none" aria-hidden="true">
+    <svg viewBox="0 0 24 24" className={`h-[15px] w-[15px] ${className || ""}`} fill="none" aria-hidden="true">
       <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" strokeWidth="2" />
       <path d="m9 12 2 2 4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 }
 
-function DeliveryIcon() {
+function DeliveryIcon({ className }: { className?: string }) {
   return (
-    <svg viewBox="0 0 24 24" className="h-[15px] w-[15px]" fill="none" aria-hidden="true">
+    <svg viewBox="0 0 24 24" className={`h-[15px] w-[15px] ${className || ""}`} fill="none" aria-hidden="true">
       <rect x="1" y="3" width="15" height="13" rx="1" stroke="currentColor" strokeWidth="2" />
       <path d="M16 8h4l3 5v4h-7V8z" stroke="currentColor" strokeWidth="2" />
       <circle cx="5.5" cy="18.5" r="2.5" stroke="currentColor" strokeWidth="2" />
@@ -56,9 +56,9 @@ function DeliveryIcon() {
   );
 }
 
-function UsersIcon() {
+function UsersIcon({ className }: { className?: string }) {
   return (
-    <svg viewBox="0 0 24 24" className="h-[15px] w-[15px]" fill="none" aria-hidden="true">
+    <svg viewBox="0 0 24 24" className={`h-[15px] w-[15px] ${className || ""}`} fill="none" aria-hidden="true">
       <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" strokeWidth="2" />
       <circle cx="9" cy="7" r="4" stroke="currentColor" strokeWidth="2" />
       <path d="M23 21v-2a4 4 0 0 0-3-3.87" stroke="currentColor" strokeWidth="2" />

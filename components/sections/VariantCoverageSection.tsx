@@ -107,50 +107,6 @@ function formatCodeAndType(card: VariantCard) {
   return [codes, engineType].filter(Boolean).join(" ");
 }
 
-function getPerformanceScore(power: string) {
-  const values = power.match(/\d+/g)?.map(Number) ?? [];
-  return values.length ? Math.max(...values) : 0;
-}
-
-function getCardGroup(card: VariantCard) {
-  if (/^BMW\s+M/i.test(card.h3) || getPerformanceScore(card.power) >= 250) {
-    return "performance";
-  }
-
-  return /diesel/i.test(card.fuel) ? "diesel" : "petrol";
-}
-
-function groupCards(cards: VariantCard[]) {
-  const orderedGroups = [
-    { key: "diesel", title: "Core Diesel Range" },
-    { key: "petrol", title: "Core Petrol Range" },
-    { key: "performance", title: "Performance Range" },
-  ] as const;
-
-  return orderedGroups
-    .map((group) => ({
-      ...group,
-      cards: cards.filter((card) => getCardGroup(card) === group.key),
-    }))
-    .filter((group) => group.cards.length > 0);
-}
-
-function groupCardsFromData(data: ModelVariantCoverageSectionData, cards: VariantCard[]) {
-  if (data.groups?.length) {
-    return data.groups
-      .map((group) => ({
-        key: group.title.toLowerCase().replace(/[^a-z0-9]+/g, "-"),
-        title: group.title,
-        cards: group.cardSlugs
-          .map((slug) => cards.find((card) => card.slug === slug))
-          .filter((card): card is VariantCard => Boolean(card)),
-      }))
-      .filter((group) => group.cards.length > 0);
-  }
-
-  return groupCards(cards);
-}
-
 function isRenderableDirectoryItem(item: string) {
   const normalizedItem = item.trim();
 
@@ -213,13 +169,13 @@ export default function VariantCoverageSection({ data }: Props) {
   const [seenCards, setSeenCards] = useState<Record<string, boolean>>(
     defaultOpenCard ? { [defaultOpenCard]: true } : {},
   );
-  const groupedCards = useMemo(() => groupCardsFromData(data, renderableCards), [data, renderableCards]);
+  
   const headingLines = data.headingLines?.length ? data.headingLines : [data.h2];
   const ui = data.ui ?? {};
   const directoryHeading = data.directory.h3.trim();
   const directoryIntro = data.directory.intro.trim();
 
-  if (!groupedCards.length) {
+  if (!renderableCards.length) {
     return null;
   }
 
@@ -231,13 +187,13 @@ export default function VariantCoverageSection({ data }: Props) {
   return (
     <Section className="bg-white">
       <Container className="max-w-[1120px]">
-        <div className="mx-auto max-w-[760px] text-center">
-          <div className="section-pill mx-auto mb-[14px]">
+        <div className=" max-w-[760px] text-left">
+          <div className="section-pill mb-[14px]">
             <GridIcon />
             <span>{data.tag}</span>
           </div>
 
-          <h2 className="mx-auto max-w-[760px] text-[30px] font-extrabold leading-[1.02] tracking-[-0.04em] text-[#0d1b2e] md:text-[40px]">
+          <h2 className=" max-w-[760px] text-[30px] font-extrabold leading-[1.02] tracking-[-0.04em] text-[#0d1b2e] md:text-[40px]">
             {headingLines.map((line, index) => {
               const isAccent = headingLines.length > 1 && index === headingLines.length - 1;
               return (
@@ -247,125 +203,115 @@ export default function VariantCoverageSection({ data }: Props) {
               );
             })}
           </h2>
-          <p className="mx-auto mt-3 max-w-[720px] text-[14px] leading-[1.75] text-slate-600">
+          <p className="mt-3 max-w-[720px] text-[14px] leading-[1.75] text-slate-600">
             {data.subheading}
           </p>
         </div>
 
-        <div className="mt-9 space-y-9">
-          {groupedCards.map((group) => (
-            <div key={group.key}>
-              <div className="mb-5 flex items-center justify-center gap-3">
-                <span className="h-[2px] w-10 rounded-full bg-[#15803d]" />
-                <h3 className="text-[18px] font-bold tracking-[-0.02em] text-[#0d1b2e]">{group.title}</h3>
-                <span className="h-[2px] w-10 rounded-full bg-[#15803d]" />
-              </div>
+        <div className="mt-9">
+          <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-5">
+            {renderableCards.map((card) => {
+              const isOpen = openCard === card.slug;
+              const shortName = formatVariantName(card.h3);
+              const animateChevron = !isOpen && !seenCards[card.slug];
+              const codeAndType = formatCodeAndType(card);
 
-              <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
-                {group.cards.map((card) => {
-                  const isOpen = openCard === card.slug;
-                  const shortName = formatVariantName(card.h3);
-                  const animateChevron = !isOpen && !seenCards[card.slug];
-                  const codeAndType = formatCodeAndType(card);
+              return (
+                <article
+                  key={card.slug}
+                  className={`overflow-hidden rounded-[12px] border bg-white shadow-[0_2px_8px_rgba(13,27,46,0.05)] transition duration-300 ${
+                    isOpen
+                      ? "border-[rgba(21,128,61,0.18)] shadow-[0_10px_26px_rgba(13,27,46,0.12)]"
+                      : "border-slate-200 hover:border-slate-300 hover:shadow-[0_8px_18px_rgba(13,27,46,0.08)]"
+                  }`}
+                >
+                  <button
+                    type="button"
+                    onClick={() => toggleCard(card.slug)}
+                    aria-expanded={isOpen}
+                    className="flex min-h-[230px] w-full flex-col items-center px-4 py-4 text-center md:min-h-[248px]"
+                  >
+                    <div className="flex min-h-[78px] w-full items-center justify-center">
+                      {card.image ? (
+                        <div className="relative h-[62px] w-full max-w-[152px]">
+                          <Image
+                            src={card.image}
+                            alt={card.h3}
+                            fill
+                            className="object-contain"
+                            sizes="150px"
+                          />
+                        </div>
+                      ) : (
+                        <div className="font-['Manrope'] text-[27px] font-extrabold leading-[0.92] text-[#0d1b2e] sm:text-[31px]">
+                          {shortName}
+                        </div>
+                      )}
+                    </div>
 
-                  return (
-                    <article
-                      key={card.slug}
-                      className={`overflow-hidden rounded-[12px] border bg-white shadow-[0_2px_8px_rgba(13,27,46,0.05)] transition duration-300 ${
-                        isOpen
-                          ? "border-[rgba(21,128,61,0.18)] shadow-[0_10px_26px_rgba(13,27,46,0.12)]"
-                          : "border-slate-200 hover:border-slate-300 hover:shadow-[0_8px_18px_rgba(13,27,46,0.08)]"
-                      }`}
-                    >
-                      <button
-                        type="button"
-                        onClick={() => toggleCard(card.slug)}
-                        aria-expanded={isOpen}
-                        className="flex min-h-[230px] w-full flex-col items-center px-4 py-4 text-center md:min-h-[248px]"
-                      >
-                        <div className="flex min-h-[78px] w-full items-center justify-center">
-                          {card.image ? (
-                            <div className="relative h-[62px] w-full max-w-[152px]">
-                              <Image
-                                src={card.image}
-                                alt={card.h3}
-                                fill
-                                className="object-contain"
-                                sizes="150px"
-                              />
-                            </div>
-                          ) : (
-                            <div className="font-['Manrope'] text-[27px] font-extrabold leading-[0.92] text-[#0d1b2e] sm:text-[31px]">
-                              {shortName}
-                            </div>
-                          )}
+                    <div className="mt-4 w-full max-w-[250px]">
+                      <div className="font-['Manrope'] text-[15px] font-extrabold leading-[1.18] text-[#0d1b2e]">
+                        {card.h3}
+                      </div>
+                      <p className="mt-2 text-[11.5px] font-semibold leading-[1.4] text-[#4b5563]">
+                        {codeAndType}
+                      </p>
+                      <p className="mt-3 font-['Manrope'] text-[15px] font-semibold leading-none text-[#374151]">
+                        Rebuilt: {card.priceRange}
+                      </p>
+                    </div>
+
+                    <span className="mt-auto inline-flex pt-4 text-[#15803d]">
+                      <ChevronIcon open={isOpen} animated={animateChevron} />
+                    </span>
+                  </button>
+
+                  {isOpen ? (
+                    <div className="bg-[#0d1b2e] px-4 pb-4 pt-4 text-white">
+                      <div className="space-y-[10px]">
+                        <div className="flex items-center justify-between gap-3 rounded-[8px] border border-white/8 bg-white/[0.03] px-3 py-[9px]">
+                          <span className="flex-none text-[10px] font-semibold uppercase tracking-[0.08em] text-white/60">
+                            {ui.specsLabel ?? "Specs"}
+                          </span>
+                          <span className="min-w-0 flex-1 truncate text-right text-[11px] font-semibold leading-none text-white md:text-[11.5px]">
+                            {card.power}
+                          </span>
                         </div>
 
-                        <div className="mt-4 w-full max-w-[250px]">
-                          <div className="font-['Manrope'] text-[15px] font-extrabold leading-[1.18] text-[#0d1b2e]">
-                            {card.h3}
-                          </div>
-                          <p className="mt-2 text-[11.5px] font-semibold leading-[1.4] text-[#4b5563]">
-                            {codeAndType}
-                          </p>
-                          <p className="mt-3 font-['Manrope'] text-[15px] font-semibold leading-none text-[#374151]">
-                            Rebuilt: {card.priceRange}
-                          </p>
+                        <div className="flex items-center justify-between gap-3 rounded-[8px] border border-white/8 bg-white/[0.03] px-3 py-[9px]">
+                          <span className="flex-none text-[10px] font-semibold uppercase tracking-[0.08em] text-white/60">
+                            {ui.yearsLabel ?? "Years"}
+                          </span>
+                          <span className="min-w-0 flex-1 truncate text-right text-[11px] font-semibold leading-none text-white md:text-[11.5px]">
+                            {card.years?.trim() || ui.yearsFallback || "Check exact year coverage by registration"}
+                          </span>
                         </div>
 
-                        <span className="mt-auto inline-flex pt-4 text-[#15803d]">
-                          <ChevronIcon open={isOpen} animated={animateChevron} />
-                        </span>
-                      </button>
-
-                      {isOpen ? (
-                        <div className="bg-[#0d1b2e] px-4 pb-4 pt-4 text-white">
-                          <div className="space-y-[10px]">
-                            <div className="flex items-center justify-between gap-3 rounded-[8px] border border-white/8 bg-white/[0.03] px-3 py-[9px]">
-                              <span className="flex-none text-[10px] font-semibold uppercase tracking-[0.08em] text-white/60">
-                                {ui.specsLabel ?? "Specs"}
-                              </span>
-                              <span className="min-w-0 flex-1 truncate text-right text-[11px] font-semibold leading-none text-white md:text-[11.5px]">
-                                {card.power}
-                              </span>
-                            </div>
-
-                            <div className="flex items-center justify-between gap-3 rounded-[8px] border border-white/8 bg-white/[0.03] px-3 py-[9px]">
-                              <span className="flex-none text-[10px] font-semibold uppercase tracking-[0.08em] text-white/60">
-                                {ui.yearsLabel ?? "Years"}
-                              </span>
-                              <span className="min-w-0 flex-1 truncate text-right text-[11px] font-semibold leading-none text-white md:text-[11.5px]">
-                                {card.years?.trim() || ui.yearsFallback || "Check exact year coverage by registration"}
-                              </span>
-                            </div>
-
-                            <div className="flex items-center justify-between gap-3 rounded-[8px] border border-white/8 bg-white/[0.03] px-3 py-[9px]">
-                              <span className="flex-none text-[10px] font-semibold uppercase tracking-[0.08em] text-white/60">
-                                {ui.rebuiltLabel ?? "Rebuilt"}
-                              </span>
-                              <span className="min-w-0 flex-1 truncate text-right font-['Manrope'] text-[14px] font-extrabold leading-none text-white md:text-[15px]">
+                        <div className="flex items-center justify-between gap-3 rounded-[8px] border border-white/8 bg-white/[0.03] px-3 py-[9px]">
+                          <span className="flex-none text-[10px] font-semibold uppercase tracking-[0.08em] text-white/60">
+                            {ui.rebuiltLabel ?? "Rebuilt"}
+                          </span>
+                          <span className="min-w-0 flex-1 truncate text-right font-['Manrope'] text-[14px] font-extrabold leading-none text-white md:text-[15px]">
                             {card.priceRange}
-                              </span>
-                            </div>
-                          </div>
-
-                          <a
-                            href="#quote-form"
-                            data-quote-context={card.h3}
-                            data-quote-source="variant-coverage"
-                            className="mt-4 inline-flex h-10 w-full items-center justify-center gap-2 rounded-[7px] bg-[#15803d] px-4 text-[12.5px] font-semibold text-white transition hover:bg-[#166534]"
-                          >
-                            <span>{card.cta}</span>
-                            <ArrowIcon />
-                          </a>
+                          </span>
                         </div>
-                      ) : null}
-                    </article>
-                  );
-                })}
-              </div>
-            </div>
-          ))}
+                      </div>
+
+                      <a
+                        href="#quote-form"
+                        data-quote-context={card.h3}
+                        data-quote-source="variant-coverage"
+                        className="mt-4 inline-flex h-10 w-full items-center justify-center gap-2 rounded-[7px] bg-[#15803d] px-2 text-[10px] font-semibold text-white transition hover:bg-[#166534]"
+                      >
+                        <span>{card.cta}</span>
+                        <ArrowIcon />
+                      </a>
+                    </div>
+                  ) : null}
+                </article>
+              );
+            })}
+          </div>
         </div>
 
         <div className="mt-8 rounded-[18px] border border-slate-200 bg-[#f8fafc] p-4 md:p-5">
@@ -410,4 +356,3 @@ export default function VariantCoverageSection({ data }: Props) {
     </Section>
   );
 }
-
