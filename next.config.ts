@@ -4,9 +4,13 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-   async rewrites() {
+  async rewrites() {
     return {
       beforeFiles: [
+        {
+          source: "/about",
+          destination: "/about/about-us.html",
+        },
         {
           source: "/prices/:slug",
           destination: "/prices/:slug.html",
@@ -14,7 +18,7 @@ const nextConfig: NextConfig = {
         {
           source: "/about/:slug",
           destination: "/about/:slug.html",
-       },
+        },
       ],
     };
   },
