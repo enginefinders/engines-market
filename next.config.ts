@@ -19,6 +19,18 @@ const nextConfig: NextConfig = {
           source: "/about/:slug",
           destination: "/about/:slug.html",
         },
+        {
+          source: "/legal/:slug",
+          destination: "/legal/:slug.html",
+        },
+        {
+          source: "/reviews",
+          destination: "/reviews.html",
+        },
+        {
+          source: "/get-a-quote",
+          destination: "/get-a-quote.html",
+        },
       ],
     };
   },
