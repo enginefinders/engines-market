@@ -11,9 +11,25 @@ const nextConfig: NextConfig = {
           source: "/about",
           destination: "/about/about-us.html",
         },
+                {
+          source: "/compare/:slug",
+          destination: "/compare/:slug.html",
+        },
+                {
+          source: "/insights/:slug",
+          destination: "/insights/:slug.html",
+        },
+                {
+          source: "/services/:slug",
+          destination: "/services/:slug.html",
+        },
         {
           source: "/prices/:slug",
           destination: "/prices/:slug.html",
+        },
+                {
+          source: "/services/gearbox-replacement/:slug",
+          destination: "/services/gearbox-replacement/:slug.html",
         },
         {
           source: "/about/:slug",

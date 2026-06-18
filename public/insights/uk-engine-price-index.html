@@ -1,0 +1,2509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UK Engine Price Index 2026 – 24,650 Quote Dataset | Engines Market</title>
+    <meta name="description" content="UK Engine Price Index 2026: reconditioned £2,100–£3,500, used £1,500–£2,800. Based on 24,650 real quotes. Condition-stratified, region-normalised pricing intelligence." />
+    <link rel="canonical" href="https://enginesmarket.co.uk/insights/uk-engine-price-index" />
+
+    <!-- Schema: Organization -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "@id": "https://www.enginesmarket.co.uk/#organization",
+            "name": "Engines Market",
+            "url": "https://www.enginesmarket.co.uk/",
+            "telephone": "020 3488 4649",
+            "email": "info@enginesmarket.co.uk",
+            "logo": "https://www.enginesmarket.co.uk/images/logo.png",
+            "sameAs": [
+                "https://www.facebook.com/enginesmarket",
+                "https://x.com/EnginesMarket",
+                "https://www.instagram.com/enginesmarketuk/",
+                "https://www.tiktok.com/@enginesmarket"
+            ]
+        }
+    </script>
+
+    <!-- Schema: Dataset -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Dataset",
+            "name": "UK Engine Price Index 2026",
+            "description": "A structured dataset of UK engine replacement pricing derived from 24,650 real quote requests processed through EnginesMarket.co.uk in 2025. Includes condition-stratified, region-normalised, and segment-banded pricing intelligence.",
+            "identifier": "EM-PI-2026-01",
+            "creator": {
+                "@type": "Organization",
+                "name": "Engines Market",
+                "url": "https://enginesmarket.co.uk"
+            },
+            "datePublished": "2026-06-18",
+            "dateModified": "2026-06-18",
+            "keywords": "UK engine price index, engine replacement costs, reconditioned engine prices, used engine costs, automotive aftermarket data",
+            "temporalCoverage": "2025-01-01/2025-12-31",
+            "spatialCoverage": {
+                "@type": "Country",
+                "name": "United Kingdom"
+            }
+        }
+    </script>
+
+    <!-- Schema: Breadcrumb -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://enginesmarket.co.uk/" },
+                { "@type": "ListItem", "position": 2, "name": "Insights", "item": "https://enginesmarket.co.uk/insights/" },
+                { "@type": "ListItem", "position": 3, "name": "UK Engine Price Index 2026", "item": "https://enginesmarket.co.uk/insights/uk-engine-price-index" }
+            ]
+        }
+    </script>
+
+    <!-- Schema: Article -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "UK Engine Price Index 2026 — 24,650 Quote Dataset",
+            "description": "UK Engine Price Index 2026: reconditioned £2,100–£3,500, used £1,500–£2,800. Based on 24,650 real quotes. Condition-stratified, region-normalised pricing intelligence.",
+            "datePublished": "2026-06-18",
+            "dateModified": "2026-06-18",
+            "author": {
+                "@type": "Organization",
+                "name": "Engines Market"
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "Engines Market",
+                "url": "https://enginesmarket.co.uk"
+            }
+        }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* ─── RESET & TOKENS ─── */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth
+        }
+
+        :root {
+            --navy: #0B1628;
+            --navy-2: #0F2545;
+            --navy-3: #162f57;
+            --navy-mid: #1e3a6e;
+            --green: #1A6B3C;
+            --green-2: #22A05A;
+            --green-3: #2ecc76;
+            --green-pale: #e8f5ee;
+            --green-mid: #d0edde;
+            --red: #c0392b;
+            --red-bg: #fdecea;
+            --red-mid: #e74c3c;
+            --amber: #d97706;
+            --amber-bg: #fef3c7;
+            --amber-mid: #f59e0b;
+            --white: #ffffff;
+            --off-white: #f4f6fb;
+            --surface: #eef1f8;
+            --border: rgba(11, 22, 40, .12);
+            --border-2: rgba(11, 22, 40, .2);
+            --text-1: #0b1628;
+            --text-2: #2c3e5a;
+            --text-3: #5a6a85;
+            --text-4: #8a99b4;
+            --font-display: 'Barlow Condensed', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            --font-mono: 'IBM Plex Mono', monospace;
+            --r4: 4px;
+            --r8: 8px;
+            --r12: 12px;
+            --r16: 16px;
+            --r24: 24px;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--off-white);
+            color: var(--text-1);
+            -webkit-font-smoothing: antialiased;
+            line-height: 1.6
+        }
+
+        /* ─── NAV ─── */
+        .nav {
+            position: sticky;
+            top: 0;
+            z-index: 200;
+            background: var(--navy);
+            border-bottom: 1px solid rgba(255, 255, 255, .07);
+        }
+        .nav-inner {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0 24px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            flex-shrink: 0;
+        }
+        .nav-logo-mark {
+            width: 32px;
+            height: 32px;
+            border-radius: 6px;
+            background: var(--green-2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .nav-logo-mark svg {
+            width: 18px;
+            height: 18px;
+            fill: white
+        }
+        .nav-logo-text {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            letter-spacing: .04em;
+            color: #fff;
+            font-weight: 700
+        }
+        .nav-crumb {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex: 1;
+            font-size: .72rem;
+            color: rgba(255, 255, 255, .4);
+        }
+        .nav-crumb a {
+            color: rgba(255, 255, 255, .5);
+            text-decoration: none
+        }
+        .nav-crumb a:hover {
+            color: rgba(255, 255, 255, .8)
+        }
+        .nav-crumb span {
+            color: rgba(255, 255, 255, .2)
+        }
+        .nav-cta {
+            font-size: .78rem;
+            font-weight: 600;
+            padding: 8px 18px;
+            background: var(--green-2);
+            color: #fff;
+            border-radius: 6px;
+            text-decoration: none;
+            flex-shrink: 0;
+            transition: background .15s;
+        }
+        .nav-cta:hover {
+            background: var(--green-3)
+        }
+
+        /* ─── HERO ─── */
+        .hero {
+            background: var(--navy);
+            position: relative;
+            overflow: hidden;
+            padding: 0;
+        }
+        .hero-inner {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: grid;
+            grid-template-columns: 1fr 480px;
+            min-height: 580px;
+            position: relative;
+            z-index: 2;
+        }
+        .hero-content {
+            padding: 56px 48px 56px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: .68rem;
+            font-weight: 600;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            color: var(--green-3);
+            margin-bottom: 20px;
+        }
+        .hero-eyebrow::before {
+            content: '';
+            width: 24px;
+            height: 2px;
+            background: var(--green-2);
+            border-radius: 1px;
+        }
+        .hero-h1 {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1.05;
+            letter-spacing: .01em;
+            color: #fff;
+            margin-bottom: 24px;
+        }
+        .hero-h1 em {
+            color: var(--green-3);
+            font-style: normal
+        }
+        .hero-tagline {
+            font-size: .95rem;
+            color: rgba(255, 255, 255, .65);
+            line-height: 1.75;
+            margin-bottom: 28px;
+            max-width: 480px;
+        }
+        .hero-tagline strong {
+            color: #fff
+        }
+
+        .hero-costs {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+        }
+        .hcost {
+            flex: 1;
+            min-width: 160px;
+            border-radius: var(--r12);
+            padding: 16px 18px;
+            border: 1px solid;
+        }
+        .hcost.ok {
+            background: rgba(26, 107, 60, .25);
+            border-color: rgba(34, 160, 90, .35)
+        }
+        .hcost.warn {
+            background: rgba(217, 119, 6, .15);
+            border-color: rgba(245, 158, 11, .3)
+        }
+        .hcost.high {
+            background: rgba(192, 57, 43, .2);
+            border-color: rgba(231, 76, 60, .3)
+        }
+        .hcost-label {
+            font-size: .62rem;
+            font-weight: 600;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            margin-bottom: 6px
+        }
+        .hcost.ok .hcost-label {
+            color: var(--green-3)
+        }
+        .hcost.warn .hcost-label {
+            color: var(--amber-mid)
+        }
+        .hcost.high .hcost-label {
+            color: #ff8a80
+        }
+        .hcost-amount {
+            font-family: var(--font-display);
+            font-size: 1.7rem;
+            font-weight: 700;
+            line-height: 1;
+            color: #fff
+        }
+        .hcost-sub {
+            font-size: .72rem;
+            color: rgba(255, 255, 255, .45);
+            margin-top: 4px
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 28px
+        }
+        .btn-hero-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: .88rem;
+            font-weight: 600;
+            padding: 13px 26px;
+            background: var(--green-2);
+            color: #fff;
+            border-radius: var(--r8);
+            text-decoration: none;
+            transition: background .15s, transform .1s;
+        }
+        .btn-hero-primary:hover {
+            background: var(--green-3);
+            transform: translateY(-1px)
+        }
+        .btn-hero-primary svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor
+        }
+        .btn-hero-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: .88rem;
+            font-weight: 500;
+            padding: 13px 22px;
+            background: rgba(255, 255, 255, .08);
+            color: rgba(255, 255, 255, .8);
+            border: 1px solid rgba(255, 255, 255, .15);
+            border-radius: var(--r8);
+            text-decoration: none;
+            transition: background .15s;
+        }
+        .btn-hero-secondary:hover {
+            background: rgba(255, 255, 255, .14)
+        }
+        .hero-trust {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-size: .72rem;
+            color: rgba(255, 255, 255, .35);
+            flex-wrap: wrap;
+        }
+        .hero-trust-item {
+            display: flex;
+            align-items: center;
+            gap: 5px
+        }
+        .hero-trust-dot {
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: var(--green-2)
+        }
+
+        .hero-visual {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 40px 0 40px 24px;
+        }
+        .hero-bg-grid {
+            position: absolute;
+            inset: 0;
+            background-image: linear-gradient(rgba(255, 255, 255, .03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, .03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            pointer-events: none;
+        }
+        .hero-bg-glow {
+            position: absolute;
+            bottom: -80px;
+            right: -80px;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(26, 107, 60, .18) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .price-illustration {
+            width: 100%;
+            max-width: 420px;
+            height: auto;
+            filter: drop-shadow(0 24px 48px rgba(0, 0, 0, .5))
+        }
+        .hero-quote-panel {
+            width: 100%;
+            max-width: 430px;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            gap: 14px;
+            position: relative;
+            z-index: 2;
+        }
+        .hero-engine-placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .hero-placeholder-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+            border-radius: var(--r16);
+            padding: 20px;
+        }
+        .hero-reg-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .hero-reg-input {
+            width: 100%;
+            min-height: 56px;
+            border: 3px solid #050505;
+            border-radius: 8px;
+            background: #ffd800;
+            color: #091428;
+            text-align: center;
+            font-family: var(--font-display);
+            font-size: 1.55rem;
+            font-weight: 700;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            outline: none;
+            box-shadow: 0 10px 24px rgba(0, 0, 0, .25);
+        }
+        .hero-reg-input::placeholder {
+            color: rgba(9, 20, 40, .65);
+        }
+        .hero-reg-button {
+            width: 100%;
+            min-height: 54px;
+            border: 0;
+            border-radius: var(--r8);
+            background: var(--green-2);
+            color: #fff;
+            font-size: .9rem;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 12px 26px rgba(34, 160, 90, .25);
+            transition: background .15s, transform .1s;
+        }
+        .hero-reg-button:hover {
+            background: var(--green-3);
+            transform: translateY(-1px);
+        }
+        .hero-reg-note {
+            font-size: .72rem;
+            color: rgba(255, 255, 255, .45);
+            text-align: center;
+            line-height: 1.5;
+        }
+        .hero-trust-under-cta {
+            justify-content: center;
+            gap: 8px 12px;
+            margin-top: 2px;
+        }
+        .hero-trust-under-cta .hero-trust-item {
+            padding: 6px 9px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, .06);
+            border: 1px solid rgba(255, 255, 255, .09);
+            color: rgba(255, 255, 255, .58);
+        }
+        .hero-lock {
+            color: var(--green-3);
+            margin-right: 4px;
+        }
+        .brand-logo-placeholder {
+            display: none;
+        }
+
+        /* ─── MAIN ─── */
+        .main {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 40px 24px 64px
+        }
+
+        /* ─── SECTION TITLES ─── */
+        .sec-label {
+            font-size: .65rem;
+            font-weight: 600;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            color: var(--text-4);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .sec-h2 {
+            font-family: var(--font-display);
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 6px;
+            letter-spacing: .01em;
+            line-height: 1.15;
+        }
+        .sec-sub {
+            font-size: .85rem;
+            color: var(--text-3);
+            line-height: 1.65;
+            margin-bottom: 20px
+        }
+
+        /* ─── CARD BASE ─── */
+        .card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--r16);
+            overflow: hidden;
+            margin-bottom: 16px;
+        }
+        .card-p {
+            padding: 28px 32px
+        }
+
+        /* ─── TABLES ─── */
+        .tbl-scroll {
+            overflow-x: auto;
+            margin-bottom: 8px;
+            border-radius: var(--r8);
+            border: 1px solid var(--border)
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: .8rem
+        }
+        thead th {
+            text-align: left;
+            font-size: .65rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: .08em;
+            padding: 10px 16px;
+            background: var(--navy);
+            color: rgba(255, 255, 255, .5);
+            white-space: nowrap;
+        }
+        thead th:first-child {
+            border-radius: var(--r8) 0 0 0
+        }
+        thead th:last-child {
+            border-radius: 0 var(--r8) 0 0
+        }
+        tbody td {
+            padding: 11px 16px;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-2);
+            vertical-align: middle;
+            line-height: 1.45;
+        }
+        tbody tr:last-child td {
+            border-bottom: none
+        }
+        tbody tr:hover td {
+            background: var(--off-white)
+        }
+        .td-engine {
+            font-weight: 500;
+            color: var(--text-1)
+        }
+        .td-cost {
+            font-family: var(--font-mono);
+            font-size: .77rem;
+            white-space: nowrap
+        }
+        .td-cost.ok {
+            color: var(--green)
+        }
+        .td-cost.warn {
+            color: var(--amber)
+        }
+        .td-cost.high {
+            color: var(--red)
+        }
+        .td-badge {
+            display: inline-block;
+            font-size: .65rem;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 20px;
+        }
+        .td-badge.popular {
+            background: var(--green-pale);
+            color: var(--green)
+        }
+        .td-badge.budget {
+            background: var(--amber-bg);
+            color: var(--amber)
+        }
+        .td-badge.premium {
+            background: var(--navy-2);
+            color: var(--green-3)
+        }
+        .tbl-note {
+            font-size: .72rem;
+            color: var(--text-4);
+            font-style: italic;
+            padding: 10px 2px
+        }
+        .confidence-badge {
+            display: inline-block;
+            font-size: .65rem;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 12px;
+            background: var(--surface);
+            color: var(--text-3);
+        }
+        .confidence-badge.high {
+            background: var(--green-pale);
+            color: var(--green);
+        }
+        .confidence-badge.medium {
+            background: var(--amber-bg);
+            color: var(--amber);
+        }
+        .confidence-badge.low {
+            background: var(--red-bg);
+            color: var(--red);
+        }
+
+        /* ─── CONDITION CARDS ─── */
+        .condition-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 16px
+        }
+        .cond-card {
+            border: 1px solid var(--border);
+            border-radius: var(--r12);
+            padding: 18px 20px;
+            background: var(--white);
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .cond-title {
+            font-weight: 600;
+            font-size: .9rem;
+            color: var(--text-1)
+        }
+        .cond-cost {
+            font-family: var(--font-mono);
+            font-size: .85rem;
+            font-weight: 500;
+            color: var(--green)
+        }
+        .cond-desc {
+            font-size: .75rem;
+            color: var(--text-3);
+            line-height: 1.5
+        }
+
+        /* ─── COST DRIVERS ─── */
+        .drivers-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 16px
+        }
+        .driver-card {
+            background: var(--off-white);
+            border-radius: var(--r12);
+            padding: 16px 18px;
+            border: 1px solid var(--border);
+        }
+        .driver-icon {
+            font-size: 1.2rem;
+            margin-bottom: 6px
+        }
+        .driver-title {
+            font-size: .82rem;
+            font-weight: 600;
+            color: var(--text-1);
+            margin-bottom: 4px
+        }
+        .driver-desc {
+            font-size: .75rem;
+            color: var(--text-3);
+            line-height: 1.5
+        }
+
+        /* ─── MARKET INTELLIGENCE ─── */
+        .market-block {
+            background: var(--navy);
+            border-radius: var(--r16);
+            overflow: hidden;
+            margin-bottom: 16px
+        }
+        .market-header {
+            padding: 32px 36px 24px;
+            border-bottom: 1px solid rgba(255, 255, 255, .07);
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 24px;
+        }
+        .market-headline {
+            flex: 1
+        }
+        .market-headline .sec-label {
+            color: rgba(255, 255, 255, .3);
+            border-color: rgba(255, 255, 255, .07)
+        }
+        .market-headline .sec-h2 {
+            color: #fff
+        }
+        .market-headline .sec-sub {
+            color: rgba(255, 255, 255, .5);
+            max-width: 480px
+        }
+        .market-total {
+            text-align: right;
+            flex-shrink: 0
+        }
+        .market-num {
+            font-family: var(--font-display);
+            font-size: 3.2rem;
+            font-weight: 700;
+            color: var(--green-3);
+            line-height: 1
+        }
+        .market-num-label {
+            font-size: .72rem;
+            color: rgba(255, 255, 255, .35);
+            margin-top: 4px
+        }
+
+        .market-bars {
+            padding: 28px 36px
+        }
+        .market-bar-item {
+            display: grid;
+            grid-template-columns: 200px 1fr 130px;
+            gap: 16px;
+            align-items: center;
+            margin-bottom: 18px;
+        }
+        .market-bar-item:last-child {
+            margin-bottom: 0
+        }
+        .mb-engine {
+            font-size: .83rem;
+            font-weight: 500;
+            color: rgba(255, 255, 255, .8)
+        }
+        .mb-bar-wrap {
+            display: flex;
+            flex-direction: column;
+            gap: 5px
+        }
+        .mb-bar-track {
+            height: 8px;
+            background: rgba(255, 255, 255, .08);
+            border-radius: 4px;
+            overflow: hidden
+        }
+        .mb-bar-fill {
+            height: 100%;
+            border-radius: 4px;
+            width: 0;
+            transition: width 1.2s cubic-bezier(.22, .61, .36, 1)
+        }
+        .mb-note {
+            font-size: .7rem;
+            color: rgba(255, 255, 255, .3);
+            line-height: 1.4
+        }
+        .mb-stat {
+            text-align: right
+        }
+        .mb-count {
+            font-family: var(--font-mono);
+            font-size: .85rem;
+            font-weight: 500;
+            color: var(--green-3)
+        }
+        .mb-verified {
+            font-size: .65rem;
+            color: rgba(255, 255, 255, .25);
+            margin-top: 2px
+        }
+
+        .market-insight {
+            margin: 0 36px;
+            padding: 20px 24px;
+            background: rgba(255, 255, 255, .04);
+            border-radius: var(--r12);
+            border: 1px solid rgba(255, 255, 255, .07);
+            margin-bottom: 28px;
+        }
+        .mi-label {
+            font-size: .62rem;
+            font-weight: 600;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: var(--green-3);
+            margin-bottom: 8px
+        }
+        .mi-text {
+            font-size: .82rem;
+            color: rgba(255, 255, 255, .6);
+            line-height: 1.7;
+            font-style: italic
+        }
+        .mi-source {
+            font-size: .7rem;
+            color: rgba(255, 255, 255, .25);
+            margin-top: 6px
+        }
+
+        /* ─── METHODOLOGY BADGES ─── */
+        .methodology-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 8px;
+            margin-top: 8px
+        }
+        .methodology-badge {
+            background: #fff;
+            border-radius: var(--r8);
+            padding: 10px 14px;
+            border: 1px solid var(--border);
+        }
+        .methodology-badge strong {
+            font-size: .7rem;
+            display: block;
+        }
+        .methodology-badge span {
+            font-size: .7rem;
+            color: var(--text-3);
+        }
+        .methodology-badge .green {
+            color: var(--green);
+        }
+        .methodology-badge .amber {
+            color: var(--amber);
+        }
+        .methodology-badge .grey {
+            color: var(--text-4);
+        }
+
+        /* ─── VALUE GRID ─── */
+        .value-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 16px
+        }
+        .value-card {
+            border-radius: var(--r12);
+            padding: 16px 18px;
+            border: 1px solid var(--border);
+            background: var(--off-white);
+        }
+        .value-card strong {
+            display: block;
+            font-size: .9rem;
+            color: var(--text-1);
+            margin-bottom: 4px
+        }
+        .value-card span {
+            font-size: .75rem;
+            color: var(--text-3);
+            line-height: 1.5
+        }
+
+        /* ─── REGIONAL CARDS ─── */
+        .regional-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 16px
+        }
+        .regional-card {
+            border-radius: var(--r12);
+            padding: 16px 18px;
+            border: 1px solid var(--border);
+            background: var(--off-white);
+        }
+        .regional-card .region-name {
+            font-weight: 600;
+            font-size: .85rem;
+            color: var(--text-1);
+            margin-bottom: 4px
+        }
+        .regional-card .region-rate {
+            font-family: var(--font-mono);
+            font-size: .8rem;
+            color: var(--text-2);
+        }
+        .regional-card .region-impact {
+            font-size: .72rem;
+            color: var(--text-3);
+            margin-top: 4px
+        }
+
+        /* ─── HISTORICAL TREND ─── */
+        .trend-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 16px
+        }
+        .trend-card {
+            background: var(--off-white);
+            border-radius: var(--r12);
+            padding: 16px 18px;
+            border: 1px solid var(--border);
+        }
+        .trend-card .trend-year {
+            font-size: .7rem;
+            font-weight: 600;
+            color: var(--text-4);
+            letter-spacing: .08em;
+            text-transform: uppercase;
+        }
+        .trend-card .trend-value {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin: 4px 0;
+        }
+        .trend-card .trend-change {
+            font-size: .72rem;
+            color: var(--text-3);
+        }
+        .trend-card .trend-change.up {
+            color: var(--green);
+        }
+        .trend-card .trend-change.down {
+            color: var(--red);
+        }
+
+        /* ─── FORECAST TABLE ─── */
+        .forecast-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 16px
+        }
+        .forecast-card {
+            border-radius: var(--r12);
+            padding: 16px 18px;
+            border: 1px solid var(--border);
+            background: var(--off-white);
+        }
+        .forecast-card .fc-condition {
+            font-weight: 600;
+            font-size: .8rem;
+            color: var(--text-1);
+        }
+        .forecast-card .fc-2025 {
+            font-size: .7rem;
+            color: var(--text-4);
+            text-decoration: line-through;
+        }
+        .forecast-card .fc-2026 {
+            font-family: var(--font-mono);
+            font-size: .85rem;
+            font-weight: 600;
+            color: var(--green);
+            margin: 4px 0;
+        }
+        .forecast-card .fc-change {
+            font-size: .7rem;
+            font-weight: 600;
+        }
+        .forecast-card .fc-change.up {
+            color: var(--red);
+        }
+        .forecast-card .fc-change.down {
+            color: var(--green);
+        }
+        .forecast-card .fc-confidence {
+            font-size: .6rem;
+            color: var(--text-4);
+            margin-top: 4px;
+        }
+
+        /* ─── INLINE CTA ─── */
+        .inline-cta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 14px 18px;
+            background: var(--green-pale);
+            border: 1px solid rgba(34, 160, 90, .3);
+            border-radius: var(--r8);
+            margin-top: 20px;
+        }
+        .inline-cta-text {
+            font-size: .82rem;
+            color: var(--green);
+            font-weight: 500
+        }
+        .btn-sm {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-size: .78rem;
+            font-weight: 600;
+            padding: 8px 16px;
+            background: var(--green);
+            color: #fff;
+            border-radius: 6px;
+            text-decoration: none;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+        .btn-sm:hover {
+            background: var(--green-2)
+        }
+
+        /* ─── FAQ ─── */
+        .faq-list {
+            display: flex;
+            flex-direction: column
+        }
+        details {
+            border-bottom: 1px solid var(--border)
+        }
+        details:last-child {
+            border-bottom: none
+        }
+        details summary {
+            font-size: .88rem;
+            font-weight: 500;
+            color: var(--text-1);
+            cursor: pointer;
+            list-style: none;
+            padding: 16px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            user-select: none;
+        }
+        details summary::-webkit-details-marker {
+            display: none
+        }
+        .faq-ico {
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: var(--surface);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: .7rem;
+            color: var(--text-3);
+            flex-shrink: 0;
+            transition: transform .2s, background .15s;
+        }
+        details[open] .faq-ico {
+            transform: rotate(45deg);
+            background: var(--navy);
+            color: #fff
+        }
+        .faq-body {
+            font-size: .83rem;
+            color: var(--text-2);
+            line-height: 1.75;
+            padding: 0 32px 16px 0;
+        }
+        .faq-body a {
+            color: var(--green);
+            text-decoration: underline;
+            text-underline-offset: 2px
+        }
+
+        /* ─── RELATED ─── */
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px
+        }
+        .related-link {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            padding: 16px 18px;
+            border: 1px solid var(--border);
+            border-radius: var(--r12);
+            text-decoration: none;
+            background: var(--white);
+            transition: border-color .15s, box-shadow .15s;
+        }
+        .related-link:hover {
+            border-color: var(--green-2);
+            box-shadow: 0 2px 12px rgba(26, 107, 60, .12)
+        }
+        .related-link-arrow {
+            font-size: .7rem;
+            color: var(--text-4)
+        }
+        .related-link-text {
+            font-size: .82rem;
+            font-weight: 500;
+            color: var(--text-1);
+            line-height: 1.4
+        }
+        .related-link:hover .related-link-text {
+            color: var(--green)
+        }
+
+        /* ─── FINAL CTA ─── */
+        .final-cta {
+            background: var(--navy);
+            border-radius: var(--r16);
+            padding: 40px 48px;
+            margin-bottom: 16px;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 32px;
+            align-items: center;
+        }
+        .fc-eyebrow {
+            font-size: .68rem;
+            font-weight: 600;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            color: var(--green-3);
+            margin-bottom: 10px
+        }
+        .fc-headline {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 10px;
+            line-height: 1.1
+        }
+        .fc-sub {
+            font-size: .85rem;
+            color: rgba(255, 255, 255, .55);
+            line-height: 1.65;
+            margin-bottom: 6px
+        }
+        .fc-trust {
+            font-size: .72rem;
+            color: rgba(255, 255, 255, .28)
+        }
+        .fc-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center
+        }
+        .btn-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: .88rem;
+            font-weight: 600;
+            padding: 14px 28px;
+            background: var(--green-2);
+            color: #fff;
+            border-radius: var(--r8);
+            text-decoration: none;
+            white-space: nowrap;
+            transition: background .15s;
+        }
+        .btn-cta:hover {
+            background: var(--green-3)
+        }
+        .btn-cta svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor
+        }
+        .fc-note {
+            font-size: .72rem;
+            color: rgba(255, 255, 255, .3);
+            text-align: center
+        }
+
+        /* ─── FOOTER ─── */
+        footer {
+            background: var(--navy);
+            border-top: 1px solid rgba(255, 255, 255, .06);
+            padding: 28px 0
+        }
+        .footer-inner {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px
+        }
+        .footer-text {
+            font-size: .75rem;
+            color: rgba(255, 255, 255, .3);
+            line-height: 1.65
+        }
+        .footer-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap
+        }
+        .footer-links a {
+            font-size: .75rem;
+            color: rgba(255, 255, 255, .3);
+            text-decoration: underline;
+            text-underline-offset: 2px
+        }
+        .footer-links a:hover {
+            color: rgba(255, 255, 255, .6)
+        }
+
+        /* ─── RESPONSIVE ─── */
+        @media(max-width:900px) {
+            .hero-visual {
+                display: flex;
+                padding: 0 0 34px;
+            }
+            .hero-quote-panel {
+                max-width: 100%;
+            }
+            .hero-engine-placeholder {
+                min-height: 180px;
+                margin-top: -10px;
+            }
+            .hero-placeholder-img {
+                max-height: 180px;
+                padding: 0;
+            }
+            .hero-actions {
+                display: none;
+            }
+            .nav-cta {
+                display: none;
+            }
+            .hero-inner {
+                grid-template-columns: 1fr;
+                min-height: auto
+            }
+            .hero-content {
+                padding: 40px 0
+            }
+            .condition-grid {
+                grid-template-columns: 1fr 1fr
+            }
+            .drivers-grid {
+                grid-template-columns: 1fr
+            }
+            .regional-grid {
+                grid-template-columns: 1fr
+            }
+            .trend-grid {
+                grid-template-columns: 1fr
+            }
+            .forecast-grid {
+                grid-template-columns: 1fr 1fr
+            }
+            .related-grid {
+                grid-template-columns: 1fr 1fr
+            }
+            .final-cta {
+                grid-template-columns: 1fr;
+                text-align: center
+            }
+            .fc-actions {
+                align-items: stretch
+            }
+            .market-header {
+                flex-direction: column
+            }
+            .market-total {
+                text-align: left
+            }
+            .market-bar-item {
+                grid-template-columns: 160px 1fr
+            }
+            .mb-stat {
+                display: none
+            }
+            .value-grid {
+                grid-template-columns: 1fr 1fr
+            }
+        }
+        @media(max-width:600px) {
+            .hero-inner {
+                padding: 0 14px;
+            }
+            .hero-content {
+                padding: 32px 0 18px;
+            }
+            .hero-h1 {
+                font-size: 2rem;
+                text-align: center;
+            }
+            .hero-tagline {
+                text-align: center;
+                font-size: .86rem;
+            }
+            .hero-costs {
+                margin-bottom: 20px;
+            }
+            .hero-reg-input {
+                min-height: 64px;
+                font-size: 1.65rem;
+                border-radius: 7px;
+            }
+            .hero-reg-button {
+                min-height: 56px;
+                font-size: .9rem;
+            }
+            .hero-reg-note {
+                color: var(--text-3);
+            }
+            .hero-trust-under-cta {
+                display: none;
+            }
+            .nav-cta {
+                display: none;
+            }
+            .card-p {
+                padding: 20px
+            }
+            .condition-grid {
+                grid-template-columns: 1fr
+            }
+            .value-grid {
+                grid-template-columns: 1fr
+            }
+            .forecast-grid {
+                grid-template-columns: 1fr
+            }
+            .related-grid {
+                grid-template-columns: 1fr
+            }
+            .hero-h1 {
+                font-size: 2.2rem
+            }
+            .hero-actions {
+                flex-direction: column;
+                width: 100%;
+            }
+            .btn-hero-primary,
+            .btn-hero-secondary {
+                width: 100%;
+                justify-content: center;
+                text-align: center;
+            }
+            .hero-costs {
+                flex-direction: column;
+            }
+            .hcost {
+                min-width: 0;
+                width: 100%;
+            }
+            body {
+                overflow-x: hidden;
+            }
+            .market-bars {
+                padding: 20px
+            }
+            .market-header {
+                padding: 24px 20px 18px
+            }
+            .market-bar-item {
+                grid-template-columns: 140px 1fr
+            }
+        }
+        @media(prefers-reduced-motion:reduce) {
+            * {
+                transition: none !important;
+                animation: none !important
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ═══ NAV ═══ -->
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <div class="nav-inner">
+            <a href="/" class="nav-logo" aria-label="Engines Market home">
+                <div class="nav-logo-mark">
+                    <svg viewBox="0 0 18 18"><path d="M9 2L16 14H2L9 2Z"/></svg>
+                </div>
+                <span class="nav-logo-text">Engines Market</span>
+            </a>
+            <nav class="nav-crumb" aria-label="Breadcrumb">
+                <a href="/">Home</a><span>›</span>
+                <a href="/insights">Insights</a><span>›</span>
+                <span>UK Engine Price Index 2026</span>
+            </nav>
+            <a href="/get-a-quote" class="nav-cta">Get free quotes →</a>
+        </div>
+    </nav>
+
+    <!-- ═══ HERO ═══ -->
+    <section class="hero" aria-labelledby="hero-heading">
+        <div class="hero-bg-grid"></div>
+        <div class="hero-bg-glow"></div>
+        <div class="hero-inner">
+            <div class="hero-content">
+                <div class="hero-eyebrow">UK Engine Price Index · 2026 · Document ID: EM-PI-2026-01</div>
+                <h1 class="hero-h1" id="hero-heading">
+                    UK Engine Price Index 2026<br>
+                    <em>24,650 Real Quote Dataset</em>
+                </h1>
+                <p class="hero-tagline">
+                    <strong>Reconditioned:</strong> £2,100–£3,500 · <strong>Used:</strong> £1,500–£2,800<br>
+                    <strong>Rebuilt:</strong> £4,500–£7,500 · <strong>Remanufactured:</strong> £5,500–£9,000<br>
+                    <strong>New OEM:</strong> £6,500–£11,000+<br>
+                    Condition-stratified, region-normalised pricing intelligence from 24,650 real UK quote requests.
+                </p>
+                <div class="hero-costs">
+                    <div class="hcost ok">
+                        <div class="hcost-label">Reconditioned (most popular)</div>
+                        <div class="hcost-amount">£2,100–£3,500</div>
+                        <div class="hcost-sub">70.45% of 2025 requests · [H] confidence</div>
+                    </div>
+                    <div class="hcost warn">
+                        <div class="hcost-label">Used (budget option)</div>
+                        <div class="hcost-amount">£1,500–£2,800</div>
+                        <div class="hcost-sub">29.55% of requests · [H] confidence</div>
+                    </div>
+                    <div class="hcost high">
+                        <div class="hcost-label">New OEM (premium)</div>
+                        <div class="hcost-amount">£6,500–£11,000+</div>
+                        <div class="hcost-sub">Supply only · [L] confidence</div>
+                    </div>
+                </div>
+                <div class="hero-trust">
+                    <div class="hero-trust-item"><span class="hero-trust-dot"></span>24,650 quote requests analysed</div>
+                    <div class="hero-trust-item"><span class="hero-trust-dot"></span>100+ UK specialist suppliers</div>
+                    <div class="hero-trust-item"><span class="hero-trust-dot"></span>Jan–Dec 2025 data</div>
+                </div>
+            </div>
+            <!-- HERO ENGINE PLACEHOLDER -->
+            <div class="hero-visual">
+                <div class="hero-quote-panel">
+                    <div class="hero-engine-placeholder">
+                        <img src="/img/hero3.png" 
+                             alt="Engine replacement illustration" 
+                             loading="lazy" 
+                             class="hero-placeholder-img">
+                    </div>
+                    <form class="hero-reg-form" action="/get-a-quote" method="get">
+                        <input class="hero-reg-input" type="text" name="reg" placeholder="AB12 CDE" aria-label="Vehicle registration number" />
+                        <button class="hero-reg-button" type="submit">Get Your Personalised Price →</button>
+                    </form>
+                    <div class="hero-trust hero-trust-under-cta">
+                        <div class="hero-trust-item"><span class="hero-trust-dot"></span>100+ UK specialist suppliers</div>
+                        <div class="hero-trust-item"><span class="hero-trust-dot"></span>24,650 verified quotes in 2025</div>
+                        <div class="hero-trust-item"><span class="hero-trust-dot"></span>Free · No obligation</div>
+                    </div>
+                    <div class="hero-reg-note"><span class="hero-lock" aria-hidden="true">🔒</span> Secure enquiry · no spam · genuine quotes from vetted UK engine suppliers.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ MAIN ═══ -->
+    <main class="main">
+
+        <!-- ── INDEX OVERVIEW ── -->
+        <div class="card card-p" style="background:var(--off-white);border-color:var(--border-2)">
+            <div class="sec-label">Index Overview · Document ID: EM-PI-2026-01</div>
+            <h2 class="sec-h2">About the UK Engine Price Index 2026</h2>
+            <p style="font-size:.85rem;color:var(--text-2);line-height:1.75;margin-bottom:12px">
+                This is the <strong>UK Engine Price Index 2026</strong>, a structured dataset derived from <strong>24,650 real engine replacement quote requests</strong> submitted through EnginesMarket.co.uk between 1 January and 31 December 2025.
+            </p>
+            <p style="font-size:.85rem;color:var(--text-2);line-height:1.75;margin-bottom:12px">
+                The index provides <strong>condition-stratified, region-normalised, and segment-banded pricing intelligence</strong> for the UK automotive aftermarket. It is designed to serve as a reference dataset for industry professionals, journalists, researchers, and vehicle owners evaluating engine replacement economics.
+            </p>
+            <p style="font-size:.78rem;color:var(--text-4);font-style:italic;margin-top:8px">
+                This index does not provide real-time quotes. For personalised pricing, use the Engines Market comparison service.
+            </p>
+            <div class="methodology-grid">
+                <div class="methodology-badge"><strong class="green">[EM-VERIFIED]</strong><span>Exact count or percentage from our CRM</span></div>
+                <div class="methodology-badge"><strong class="amber">[EM-QUOTE]</strong><span>Derived from supplier quotes &amp; interviews</span></div>
+                <div class="methodology-badge"><strong class="grey">[THIRD-PARTY]</strong><span>External data from named industry sources</span></div>
+                <div class="methodology-badge"><strong class="grey">[INDUSTRY ESTIMATE]</strong><span>Informed estimate where no proprietary data exists</span></div>
+            </div>
+            <p style="font-size:.72rem;color:var(--text-4);margin-top:12px">Review cycle: annually · next full review: January 2027 · prices reviewed quarterly.</p>
+        </div>
+
+        <!-- ── DATASET METHODOLOGY ── -->
+        <section>
+            <div class="card card-p">
+                <div class="sec-label">Dataset Methodology</div>
+                <h2 class="sec-h2">How the data was collected and analysed</h2>
+                <p class="sec-sub">The UK Engine Price Index is built on a robust methodology with clear inclusion criteria, weighting systems, and confidence scoring.</p>
+
+                <h3 style="font-size:.85rem;font-weight:600;margin:16px 0 10px;color:var(--text-1)">Data Universe</h3>
+                <div class="tbl-scroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Parameter</th>
+                                <th>Specification</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td class="td-engine">Total quote requests</td><td>24,650</td></tr>
+                            <tr><td class="td-engine">Time period</td><td>1 Jan 2025 – 31 Dec 2025</td></tr>
+                            <tr><td class="td-engine">Geographic coverage</td><td>United Kingdom (all nations and regions)</td></tr>
+                            <tr><td class="td-engine">Supplier network</td><td>100+ vetted UK specialists</td></tr>
+                            <tr><td class="td-engine">Vehicle types</td><td>Passenger cars, SUVs, light commercial vehicles (&lt;3.5t)</td></tr>
+                            <tr><td class="td-engine">Condition types</td><td>Used, Reconditioned, Rebuilt, Remanufactured, New OEM</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 style="font-size:.85rem;font-weight:600;margin:16px 0 10px;color:var(--text-1)">Data Classification System</h3>
+                <div class="tbl-scroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Code</th>
+                                <th>Full Name</th>
+                                <th>Definition</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="td-engine"><strong>DQD</strong></td>
+                                <td>Direct Quote Dataset</td>
+                                <td>Raw quote requests submitted through EnginesMarket.co.uk. All quotes are customer-initiated.</td>
+                            </tr>
+                            <tr>
+                                <td class="td-engine"><strong>SCTD</strong></td>
+                                <td>Supplier Confirmed Transaction Data</td>
+                                <td>Quotes that progressed to confirmed supplier bookings. Cross-checked with supplier records.</td>
+                            </tr>
+                            <tr>
+                                <td class="td-engine"><strong>PISD</strong></td>
+                                <td>Post-Installation Survey Dataset</td>
+                                <td>Survey responses from customers 3–6 months after engine replacement. n = 100+.</td>
+                            </tr>
+                            <tr>
+                                <td class="td-engine"><strong>EBD</strong></td>
+                                <td>External Benchmark Data</td>
+                                <td>Third-party sources (AutoTrader, IBISWorld, industry surveys) used for contextual validation.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 style="font-size:.85rem;font-weight:600;margin:16px 0 10px;color:var(--text-1)">Data Inclusion &amp; Exclusion Rules</h3>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:12px">
+                    <div style="background:var(--green-pale);border-radius:var(--r12);padding:16px 18px;border-left:3px solid var(--green)">
+                        <strong style="font-size:.8rem;color:var(--green)">✅ Included</strong>
+                        <ul style="font-size:.75rem;color:var(--text-3);line-height:1.6;margin-top:6px;padding-left:18px">
+                            <li>Complete quote requests with valid vehicle and engine identification</li>
+                            <li>Requests with confirmed supplier pricing</li>
+                            <li>Requests across all UK regions</li>
+                        </ul>
+                    </div>
+                    <div style="background:var(--red-bg);border-radius:var(--r12);padding:16px 18px;border-left:3px solid var(--red)">
+                        <strong style="font-size:.8rem;color:var(--red)">❌ Excluded</strong>
+                        <ul style="font-size:.75rem;color:var(--text-3);line-height:1.6;margin-top:6px;padding-left:18px">
+                            <li>Duplicate submissions (same vehicle, same user, same engine, &lt;24hrs)</li>
+                            <li>Incomplete submissions (missing engine code, registration, or model year)</li>
+                            <li>Dealer spam submissions</li>
+                            <li>Requests for engines not fitting the vehicle</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3 style="font-size:.85rem;font-weight:600;margin:16px 0 10px;color:var(--text-1)">Weighting System</h3>
+                <div class="tbl-scroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Condition Type</th>
+                                <th>Weight</th>
+                                <th>Rationale</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td class="td-engine">Reconditioned</td><td>1.0</td><td>Largest sample (17,365 requests, 70.45%). Highest confidence.</td></tr>
+                            <tr><td class="td-engine">Used</td><td>0.85</td><td>Second-largest sample. Some submissions lack complete labour data.</td></tr>
+                            <tr><td class="td-engine">Rebuilt</td><td>0.70</td><td>Smaller sample. Higher variation in scope of work.</td></tr>
+                            <tr><td class="td-engine">Remanufactured</td><td>0.65</td><td>Smallest sample. Standardised but limited volume.</td></tr>
+                            <tr><td class="td-engine">New OEM</td><td>0.55</td><td>Very limited sample volume. EBD used for validation.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 style="font-size:.85rem;font-weight:600;margin:16px 0 10px;color:var(--text-1)">Price Normalisation</h3>
+                <p style="font-size:.8rem;color:var(--text-2);line-height:1.7;margin-bottom:8px">
+                    All prices in this index are <strong>fitted costs</strong> unless explicitly stated as supply-only. Fitted costs include:
+                </p>
+                <ul style="font-size:.78rem;color:var(--text-2);line-height:1.7;padding-left:20px;margin-bottom:12px">
+                    <li>Engine supply</li>
+                    <li>Standard replacement labour (by region)</li>
+                    <li>Consumables (fluids, filters)</li>
+                    <li>Standard warranty coverage</li>
+                </ul>
+                <p style="font-size:.78rem;color:var(--text-3);font-style:italic">
+                    <strong>Regional labour rates used for normalisation:</strong> Scotland, NI, rural: £55–£80/hr · North England, Midlands, Wales: £65–£95/hr · South England (excl. London/SE): £75–£110/hr · London &amp; South East: £110–£160/hr
+                </p>
+
+                <h3 style="font-size:.85rem;font-weight:600;margin:16px 0 10px;color:var(--text-1)">Confidence Scoring</h3>
+                <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:8px">
+                    <div style="background:var(--green-pale);border-radius:var(--r12);padding:12px 16px;text-align:center;border:1px solid rgba(34,160,90,.3)">
+                        <div style="font-family:var(--font-display);font-size:1.2rem;font-weight:700;color:var(--green)">[H]</div>
+                        <div style="font-size:.75rem;color:var(--text-3)">High Confidence<br>n &gt; 1,000</div>
+                    </div>
+                    <div style="background:var(--amber-bg);border-radius:var(--r12);padding:12px 16px;text-align:center;border:1px solid rgba(217,119,6,.3)">
+                        <div style="font-family:var(--font-display);font-size:1.2rem;font-weight:700;color:var(--amber)">[M]</div>
+                        <div style="font-size:.75rem;color:var(--text-3)">Medium Confidence<br>n = 200–999</div>
+                    </div>
+                    <div style="background:var(--red-bg);border-radius:var(--r12);padding:12px 16px;text-align:center;border:1px solid rgba(192,57,43,.3)">
+                        <div style="font-family:var(--font-display);font-size:1.2rem;font-weight:700;color:var(--red)">[L]</div>
+                        <div style="font-size:.75rem;color:var(--text-3)">Low Confidence<br>n &lt; 200</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── BASELINE INDEX VALUES ── -->
+        <section>
+            <div class="card card-p">
+                <div class="sec-label">Index Core · Baseline Values</div>
+                <h2 class="sec-h2">UK Engine Price Index 2026 — Baseline Values</h2>
+                <p class="sec-sub">Condition-stratified pricing for all engine types. All prices are fitted costs unless stated otherwise.</p>
+                <div class="tbl-scroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Condition</th>
+                                <th>Price Range (Fitted)</th>
+                                <th>Confidence</th>
+                                <th>Data Source</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="td-engine">Reconditioned</td>
+                                <td class="td-cost ok">£2,100 – £3,500</td>
+                                <td><span class="confidence-badge high">[H]</span></td>
+                                <td>DQD + SCTD</td>
+                            </tr>
+                            <tr>
+                                <td class="td-engine">Used</td>
+                                <td class="td-cost warn">£1,500 – £2,800</td>
+                                <td><span class="confidence-badge high">[H]</span></td>
+                                <td>DQD + SCTD</td>
+                            </tr>
+                            <tr>
+                                <td class="td-engine">Rebuilt</td>
+                                <td class="td-cost warn">£4,500 – £7,500</td>
+                                <td><span class="confidence-badge medium">[M]</span></td>
+                                <td>DQD + SCTD</td>
+                            </tr>
+                            <tr>
+                                <td class="td-engine">Remanufactured</td>
+                                <td class="td-cost warn">£5,500 – £9,000</td>
+                                <td><span class="confidence-badge medium">[M]</span></td>
+                                <td>DQD + SCTD</td>
+                            </tr>
+                            <tr>
+                                <td class="td-engine">New OEM</td>
+                                <td class="td-cost high">£6,500 – £11,000+</td>
+                                <td><span class="confidence-badge low">[L]</span></td>
+                                <td>DQD + EBD</td>
+                            </tr>
+                            <tr style="background:var(--navy);color:#fff">
+                                <td class="td-engine" style="color:#fff;font-weight:700">Index baseline (weighted average)</td>
+                                <td class="td-cost" style="color:var(--green-3);font-weight:700">£3,100 – £4,800</td>
+                                <td><span class="confidence-badge high">[H]</span></td>
+                                <td style="color:rgba(255,255,255,.5)">DQD</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="tbl-note">[EM-VERIFIED] based on 24,650 quote requests in 2025. Fitted costs assume indie labour at regional average.</p>
+            </div>
+        </section>
+
+        <!-- ── CONDITION DEMAND SHARE ── -->
+        <section>
+            <div class="card card-p">
+                <div class="sec-label">Condition Demand Share 2025</div>
+                <h2 class="sec-h2">What UK vehicle owners actually chose</h2>
+                <p class="sec-sub">Based on 24,650 real quote requests. [EM-VERIFIED]</p>
+                <div class="tbl-scroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Condition</th>
+                                <th>Requests</th>
+                                <th>Percentage</th>
+                                <th>Confidence</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="td-engine">Reconditioned</td>
+                                <td><strong>17,365</strong></td>
+                                <td><span class="td-badge popular">70.45%</span></td>
+                                <td><span class="confidence-badge high">[H]</span></td>
+                            </tr>
+                            <tr>
+                                <td class="td-engine">Used</td>
+                                <td><strong>7,284</strong></td>
+                                <td><span class="td-badge budget">29.55%</span></td>
+                                <td><span class="confidence-badge high">[H]</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="inline-cta">
+                    <span class="inline-cta-text">See how much your engine would cost →</span>
+                    <a href="/get-a-quote" class="btn-sm">Get your quote</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── PRICE BY ENGINE CONFIGURATION ── -->
+        <section>
+            <div class="card card-p">
+                <div class="sec-label">Price by Engine Configuration</div>
+                <h2 class="sec-h2">Cost breakdown by engine type</h2>
+                <p class="sec-sub">Detailed pricing for each engine configuration, with example engines and confidence ratings. [EM-QUOTE]</p>
+
+                <h3 style="font-size:.85rem;font-weight:600;margin:16px 0 10px;color:var(--text-1)">4-Cylinder Diesel</h3>
+                <div class="tbl-scroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Metric</th>
+                                <th>Value</th>
+                                <th>Confidence</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td class="td-engine">Reconditioned (fitted)</td><td class="td-cost ok">£2,500 – £4,800</td><td><span class="confidence-badge high">[H]</span></td></tr>
+                            <tr><td class="td-engine">Used (fitted)</td><td class="td-cost warn">£1,800 – £3,200</td><td><span class="confidence-badge high">[H]</span></td></tr>
+                            <tr><td class="td-engine">Rebuilt (fitted)</td><td class="td-cost warn">£3,500 – £5,500</td><td><span class="confidence-badge medium">[M]</span></td></tr>
+                            <tr><td class="td-engine">Sample volume</td><td>14,200+</td><td>DQD</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p style="font-size:.72rem;color:var(--text-4);margin-bottom:16px">Example engines: BMW N47D20C, Mercedes OM651, Land Rover 204DTD, VW EA189 2.0 TDI</p>
+
+                <h3 style="font-size:.85rem;font-weight:600;margin:16px 0 10px;color:var(--text-1)">4-Cylinder Petrol</h3>
+                <div class="tbl-scroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Metric</th>
+                                <th>Value</th>
+                                <th>Confidence</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td class="td-engine">Reconditioned (fitted)</td><td class="td-cost ok">£2,000 – £4,200</td><td><span class="confidence-badge high">[H]</span></td></tr>
+                            <tr><td class="td-engine">Used (fitted)</td><td class="td-cost warn">£1,500 – £2,800</td><td><span class="confidence-badge medium">[M]</span></td></tr>
+                            <tr><td class="td-engine">Rebuilt (fitted)</td><td class="td-cost warn">£3,500 – £5,500</td><td><span class="confidence-badge medium">[M]</span></td></tr>
+                            <tr><td class="td-engine">Sample volume</td><td>3,800+</td><td>DQD</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p style="font-size:.72rem;color:var(--text-4);margin-bottom:16px">Example engines: BMW B48, VW EA888, Ford EcoBoost, Honda L15B</p>
+
+                <h3 style="font-size:.85rem;font-weight:600;margin:16px 0 10px;color:var(--text-1)">6-Cylinder Diesel</h3>
+                <div class="tbl-scroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Metric</th>
+                                <th>Value</th>
+                                <th>Confidence</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td class="td-engine">Reconditioned (fitted)</td><td class="td-cost ok">£4,500 – £8,000</td><td><span class="confidence-badge high">[H]</span></td></tr>
+                            <tr><td class="td-engine">Used (fitted)</td><td class="td-cost warn">£3,000 – £5,500</td><td><span class="confidence-badge high">[H]</span></td></tr>
+                            <tr><td class="td-engine">Rebuilt (fitted)</td><td class="td-cost warn">£5,000 – £8,000</td><td><span class="confidence-badge medium">[M]</span></td></tr>
+                            <tr><td class="td-engine">Sample volume</td><td>4,200+</td><td>DQD</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p style="font-size:.72rem;color:var(--text-4);margin-bottom:16px">Example engines: BMW N57/B57, Mercedes OM642, Land Rover 306DT</p>
+
+                <h3 style="font-size:.85rem;font-weight:600;margin:16px 0 10px;color:var(--text-1)">6-Cylinder Petrol</h3>
+                <div class="tbl-scroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Metric</th>
+                                <th>Value</th>
+                                <th>Confidence</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td class="td-engine">Reconditioned (fitted)</td><td class="td-cost ok">£4,200 – £7,500</td><td><span class="confidence-badge medium">[M]</span></td></tr>
+                            <tr><td class="td-engine">Used (fitted)</td><td class="td-cost warn">£2,800 – £5,000</td><td><span class="confidence-badge medium">[M]</span></td></tr>
+                            <tr><td class="td-engine">Rebuilt (fitted)</td><td class="td-cost warn">£5,000 – £8,000</td><td><span class="confidence-badge medium">[M]</span></td></tr>
+                            <tr><td class="td-engine">Sample volume</td><td>800+</td><td>DQD</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p style="font-size:.72rem;color:var(--text-4);margin-bottom:16px">Example engines: BMW B58, Mercedes M276, Jaguar AJ126</p>
+
+                <h3 style="font-size:.85rem;font-weight:600;margin:16px 0 10px;color:var(--text-1)">V8 / Performance</h3>
+                <div class="tbl-scroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Metric</th>
+                                <th>Value</th>
+                                <th>Confidence</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td class="td-engine">Reconditioned (fitted)</td><td class="td-cost high">£7,500 – £12,000</td><td><span class="confidence-badge medium">[M]</span></td></tr>
+                            <tr><td class="td-engine">Used (fitted)</td><td class="td-cost high">£5,000 – £8,500</td><td><span class="confidence-badge medium">[M]</span></td></tr>
+                            <tr><td class="td-engine">Rebuilt (fitted)</td><td class="td-cost high">£8,000 – £14,000</td><td><span class="confidence-badge low">[L]</span></td></tr>
+                            <tr><td class="td-engine">Sample volume</td><td>500+</td><td>DQD</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p style="font-size:.72rem;color:var(--text-4)">Example engines: BMW S63/N63, Land Rover 508PS, Mercedes M177</p>
+            </div>
+        </section>
+
+        <!-- ── PRICE BY VEHICLE SEGMENT ── -->
+        <section>
+            <div class="card card-p">
+                <div class="sec-label">Price by Vehicle Segment</div>
+                <h2 class="sec-h2">What you'll pay by vehicle type</h2>
+                <p class="sec-sub">Typical fitted costs for a reconditioned engine, the most popular choice (70.45% of 2025 requests). [EM-QUOTE]</p>
+                <div class="tbl-scroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Vehicle Segment</th>
+                                <th>Example Models</th>
+                                <th>Engine Size</th>
+                                <th>Recon Fitted Cost</th>
+                                <th>Replacement-to-Value Ratio</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="td-engine">Small Car</td>
+                                <td>Ford Fiesta, VW Polo, Vauxhall Corsa</td>
+                                <td>1.0–1.6L</td>
+                                <td class="td-cost ok">£2,000 – £3,500</td>
+                                <td>40–70% <span class="confidence-badge" style="font-size:.6rem">[INDUSTRY ESTIMATE]</span></td>
+                            </tr>
+                            <tr>
+                                <td class="td-engine">Family Car</td>
+                                <td>Ford Focus, VW Golf, Audi A3</td>
+                                <td>1.6–2.0L</td>
+                                <td class="td-cost ok">£2,500 – £4,500</td>
+                                <td>25–50% <span class="confidence-badge" style="font-size:.6rem">[INDUSTRY ESTIMATE]</span></td>
+                            </tr>
+                            <tr>
+                                <td class="td-engine">Executive</td>
+                                <td>BMW 3 Series, Audi A4, Mercedes C-Class</td>
+                                <td>2.0L Diesel</td>
+                                <td class="td-cost warn">£3,500 – £5,500</td>
+                                <td>20–40% <span class="confidence-badge" style="font-size:.6rem">[INDUSTRY ESTIMATE]</span></td>
+                            </tr>
+                            <tr>
+                                <td class="td-engine">Large SUV</td>
+                                <td>Range Rover Sport, Audi Q7, BMW X5</td>
+                                <td>3.0L V6</td>
+                                <td class="td-cost high">£5,000 – £8,500</td>
+                                <td>15–35% <span class="confidence-badge" style="font-size:.6rem">[INDUSTRY ESTIMATE]</span></td>
+                            </tr>
+                            <tr>
+                                <td class="td-engine">Premium / Performance</td>
+                                <td>Porsche Cayenne, BMW M, Mercedes AMG</td>
+                                <td>V8</td>
+                                <td class="td-cost high">£7,000 – £12,000+</td>
+                                <td>10–30% <span class="confidence-badge" style="font-size:.6rem">[INDUSTRY ESTIMATE]</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="tbl-note">[EM-QUOTE] derived from supplier quotes. Fitted costs assume indie labour at regional average. Replacement-to-value ratios are industry estimates.</p>
+            </div>
+        </section>
+
+        <!-- ── REGIONAL PRICE VARIATION ── -->
+        <section>
+            <div class="card card-p">
+                <div class="sec-label">Regional Price Variation</div>
+                <h2 class="sec-h2">How location affects your total cost</h2>
+                <p class="sec-sub">Geographic price variation of 20–40% exists between the North and London/SE. This is driven almost entirely by labour rate differentials, not engine supply costs. [THIRD-PARTY]</p>
+
+                <h3 style="font-size:.85rem;font-weight:600;margin:16px 0 10px;color:var(--text-1)">Regional Labour Rate Impact</h3>
+                <div class="tbl-scroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Region</th>
+                                <th>Labour Rate</th>
+                                <th>Impact on 4-Cyl (10hrs)</th>
+                                <th>Impact on V8 (16hrs)</th>
+                                <th>Confidence</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td class="td-engine">Scotland, NI, rural</td><td>£55–£80/hr</td><td>£550–£800</td><td>£880–£1,280</td><td><span class="confidence-badge high">[H]</span></td></tr>
+                            <tr><td class="td-engine">North England, Midlands, Wales</td><td>£65–£95/hr</td><td>£650–£950</td><td>£1,040–£1,520</td><td><span class="confidence-badge high">[H]</span></td></tr>
+                            <tr><td class="td-engine">South England (excl. London/SE)</td><td>£75–£110/hr</td><td>£750–£1,100</td><td>£1,200–£1,760</td><td><span class="confidence-badge high">[H]</span></td></tr>
+                            <tr><td class="td-engine">London &amp; South East</td><td>£110–£160/hr</td><td>£1,100–£1,600</td><td>£1,760–£2,560</td><td><span class="confidence-badge high">[H]</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 style="font-size:.85rem;font-weight:600;margin:16px 0 10px;color:var(--text-1)">Regional Price Index (Normalised to North England = 1.0)</h3>
+                <div class="tbl-scroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Region</th>
+                                <th>Reconditioned 4-Cyl (fitted)</th>
+                                <th>Reconditioned V8 (fitted)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td class="td-engine">North England, Midlands, Wales</td><td class="td-cost ok">£2,500 – £3,800 (1.0)</td><td class="td-cost ok">£7,500 – £10,000 (1.0)</td></tr>
+                            <tr><td class="td-engine">Scotland, NI, rural</td><td class="td-cost ok">£2,800 – £4,000 (1.08)</td><td class="td-cost ok">£8,000 – £10,500 (1.05)</td></tr>
+                            <tr><td class="td-engine">South England (excl. London/SE)</td><td class="td-cost warn">£3,000 – £4,200 (1.15)</td><td class="td-cost warn">£8,500 – £11,500 (1.12)</td></tr>
+                            <tr><td class="td-engine">London &amp; South East</td><td class="td-cost high">£3,500 – £5,000 (1.35)</td><td class="td-cost high">£10,000 – £13,500 (1.30)</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="tbl-note">[EM-QUOTE] derived from supplier quote data. Geographic price variation of 20–40% exists between the North and London/SE.</p>
+                <div class="inline-cta">
+                    <span class="inline-cta-text">Get a quote for your region →</span>
+                    <a href="/get-a-quote" class="btn-sm">Compare quotes</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── HISTORICAL TREND ANALYSIS ── -->
+        <section>
+            <div class="card card-p">
+                <div class="sec-label">Historical Trend Analysis</div>
+                <h2 class="sec-h2">Six years of market data (2020–2025)</h2>
+                <p class="sec-sub">Understanding how the market has evolved helps predict future trends. [EM-VERIFIED]</p>
+
+                <h3 style="font-size:.85rem;font-weight:600;margin:16px 0 10px;color:var(--text-1)">Condition Market Share (2020–2025)</h3>
+                <div class="tbl-scroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Year</th>
+                                <th>Reconditioned Share</th>
+                                <th>Used Share</th>
+                                <th>Reconditioned Volume</th>
+                                <th>Used Volume</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td class="td-engine">2020</td><td>58%</td><td>42%</td><td>DQD</td><td>DQD</td></tr>
+                            <tr><td class="td-engine">2021</td><td>62%</td><td>38%</td><td>DQD</td><td>DQD</td></tr>
+                            <tr><td class="td-engine">2022</td><td>66%</td><td>34%</td><td>DQD</td><td>DQD</td></tr>
+                            <tr><td class="td-engine">2023</td><td>68%</td><td>32%</td><td>DQD</td><td>DQD</td></tr>
+                            <tr><td class="td-engine">2024</td><td>69%</td><td>31%</td><td>DQD</td><td>DQD</td></tr>
+                            <tr><td class="td-engine" style="font-weight:700">2025</td><td style="font-weight:700;color:var(--green)">70.45%</td><td style="font-weight:700;color:var(--amber)">29.55%</td><td style="font-weight:700">17,365</td><td style="font-weight:700">7,284</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div style="background:var(--off-white);border-radius:var(--r12);padding:16px 20px;margin:12px 0;border-left:3px solid var(--green-2)">
+                    <p style="font-size:.8rem;color:var(--text-2);line-height:1.7">
+                        <strong>Trend observation:</strong> The reconditioned share has increased steadily from 58% to 70.45% over six years. This correlates with: increased vehicle complexity (ECU integration), higher quality standards in reconditioning, and growing awareness that used engines often lack documented history.
+                    </p>
+                </div>
+
+                <h3 style="font-size:.85rem;font-weight:600;margin:16px 0 10px;color:var(--text-1)">Reconditioned Price Trend (2020–2025)</h3>
+                <div class="tbl-scroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Year</th>
+                                <th>Lower Bound</th>
+                                <th>Upper Bound</th>
+                                <th>Confidence</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td class="td-engine">2020</td><td>£2,200</td><td>£3,200</td><td><span class="confidence-badge medium">[M]</span></td></tr>
+                            <tr><td class="td-engine">2021</td><td>£2,300</td><td>£3,300</td><td><span class="confidence-badge medium">[M]</span></td></tr>
+                            <tr><td class="td-engine">2022</td><td>£2,200</td><td>£3,400</td><td><span class="confidence-badge medium">[M]</span></td></tr>
+                            <tr><td class="td-engine">2023</td><td>£2,200</td><td>£3,500</td><td><span class="confidence-badge high">[H]</span></td></tr>
+                            <tr><td class="td-engine">2024</td><td>£2,100</td><td>£3,600</td><td><span class="confidence-badge high">[H]</span></td></tr>
+                            <tr><td class="td-engine" style="font-weight:700">2025</td><td style="font-weight:700">£2,100</td><td style="font-weight:700">£3,600</td><td><span class="confidence-badge high">[H]</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div style="background:var(--off-white);border-radius:var(--r12);padding:16px 20px;margin:12px 0;border-left:3px solid var(--amber-mid)">
+                    <p style="font-size:.8rem;color:var(--text-2);line-height:1.7">
+                        <strong>Trend observation:</strong> Prices have remained broadly stable despite inflation. This is attributed to: increased competition in the reconditioning sector, more efficient rebuild processes, standardisation of warranty packages, and used engine price compression.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── MARKET DYNAMICS ANALYSIS ── -->
+        <section>
+            <div class="card card-p">
+                <div class="sec-label">Market Dynamics Analysis</div>
+                <h2 class="sec-h2">What's driving engine replacement costs</h2>
+                <p class="sec-sub">Understanding the forces behind price movements helps predict future trends.</p>
+
+                <h3 style="font-size:.85rem;font-weight:600;margin:16px 0 10px;color:var(--text-1)">Cost Drivers</h3>
+                <div style="background:var(--off-white);border-radius:var(--r12);padding:16px 20px;margin-bottom:12px;border:1px solid var(--border)">
+                    <p style="font-size:.8rem;font-weight:600;color:var(--text-1);margin-bottom:4px">Labour Inflation:</p>
+                    <p style="font-size:.78rem;color:var(--text-2);line-height:1.6">
+                        Average hourly rate increased from £65.63 to £68.51 (+4.4%) in 12 months <span style="color:var(--text-4);font-style:italic">[THIRD-PARTY: Industry workshop surveys, 2025]</span><br>
+                        London rates grew at 5.1% vs. 3.8% in the North. Technician shortage continues to drive rate increases.
+                    </p>
+                </div>
+
+                <div style="background:var(--off-white);border-radius:var(--r12);padding:16px 20px;margin-bottom:12px;border:1px solid var(--border)">
+                    <p style="font-size:.8rem;font-weight:600;color:var(--text-1);margin-bottom:4px">Parts Inflation (12-Month Change):</p>
+                    <ul style="font-size:.78rem;color:var(--text-2);line-height:1.7;padding-left:20px">
+                        <li><strong>Timing chain kits:</strong> +5–10% <span class="confidence-badge medium" style="font-size:.55rem">[M]</span></li>
+                        <li><strong>Turbochargers:</strong> +8–15% <span class="confidence-badge medium" style="font-size:.55rem">[M]</span></li>
+                        <li><strong>Injectors:</strong> +5–10% <span class="confidence-badge medium" style="font-size:.55rem">[M]</span></li>
+                        <li><strong>Engine oil:</strong> +10–15% <span class="confidence-badge" style="font-size:.55rem">[THIRD-PARTY]</span></li>
+                        <li><strong>Gasket sets:</strong> +4–8% <span class="confidence-badge medium" style="font-size:.55rem">[M]</span></li>
+                    </ul>
+                </div>
+
+                <div style="background:var(--off-white);border-radius:var(--r12);padding:16px 20px;margin-bottom:12px;border:1px solid var(--border)">
+                    <p style="font-size:.8rem;font-weight:600;color:var(--text-1);margin-bottom:4px">Supply Chain:</p>
+                    <ul style="font-size:.78rem;color:var(--text-2);line-height:1.7;padding-left:20px">
+                        <li><strong>ECU and electronic module lead times:</strong> 12–18 weeks <span class="confidence-badge" style="font-size:.55rem">[EM-QUOTE]</span></li>
+                        <li><strong>Premium brand used engine availability:</strong> tightening (BMW, Land Rover) <span class="confidence-badge" style="font-size:.55rem">[EM-QUOTE]</span></li>
+                        <li><strong>Recon capacity:</strong> near full utilisation in Q4 2025 <span class="confidence-badge" style="font-size:.55rem">[EM-QUOTE]</span></li>
+                    </ul>
+                </div>
+
+                <h3 style="font-size:.85rem;font-weight:600;margin:16px 0 10px;color:var(--text-1)">Demand Drivers</h3>
+                <div class="tbl-scroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Driver</th>
+                                <th>Direction</th>
+                                <th>Impact</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="td-engine">Average vehicle age (UK)</td>
+                                <td>↑ 8.4 years (2025)</td>
+                                <td>Increased replacement demand</td>
+                            </tr>
+                            <tr>
+                                <td class="td-engine">Cost of new vehicles</td>
+                                <td>↑ 18% vs 2020</td>
+                                <td>Keeps older vehicles on road</td>
+                            </tr>
+                            <tr>
+                                <td class="td-engine">MOT pass rate (older vehicles)</td>
+                                <td>↓ 82% at 10+ years</td>
+                                <td>Drives major component failures</td>
+                            </tr>
+                            <tr>
+                                <td class="td-engine">Insurance write-off thresholds</td>
+                                <td>↑ (higher vehicle values)</td>
+                                <td>More engines are being replaced vs. scrapped</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="tbl-note">[THIRD-PARTY] based on DVLA data, industry surveys, and insurance industry reports.</p>
+            </div>
+        </section>
+
+        <!-- ── FORECAST 2026 ── -->
+        <section>
+            <div class="card card-p">
+                <div class="sec-label">Forecast 2026</div>
+                <h2 class="sec-h2">UK Engine Price Index 2026 — Forecast</h2>
+                <p class="sec-sub">Forecast values are derived from a weighted model incorporating historical trend analysis (2020–2025), observed supply chain lead times, inflation projections (Bank of England targets, 2–3% annual), labour rate trajectory (historical 3–5% annual increase), and vehicle parc age distribution. <strong>Confidence interval: ±5–8%</strong> depending on condition segment.</p>
+
+                <div class="tbl-scroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Condition</th>
+                                <th>2025 Index</th>
+                                <th>2026 Forecast</th>
+                                <th>Change</th>
+                                <th>Confidence</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="td-engine">Reconditioned (4-cyl)</td>
+                                <td>£2,500 – £4,800</td>
+                                <td class="td-cost ok">£2,600 – £5,000</td>
+                                <td><span class="td-badge" style="background:var(--amber-bg);color:var(--amber)">+3%</span></td>
+                                <td><span class="confidence-badge medium">[M]</span></td>
+                            </tr>
+                            <tr>
+                                <td class="td-engine">Reconditioned (V8)</td>
+                                <td>£7,500 – £12,000</td>
+                                <td class="td-cost warn">£7,700 – £12,500</td>
+                                <td><span class="td-badge" style="background:var(--amber-bg);color:var(--amber)">+3–4%</span></td>
+                                <td><span class="confidence-badge medium">[M]</span></td>
+                            </tr>
+                            <tr>
+                                <td class="td-engine">Used (4-cyl)</td>
+                                <td>£1,800 – £3,200</td>
+                                <td class="td-cost warn">£1,900 – £3,400</td>
+                                <td><span class="td-badge" style="background:var(--amber-bg);color:var(--amber)">+5–6%</span></td>
+                                <td><span class="confidence-badge medium">[M]</span></td>
+                            </tr>
+                            <tr>
+                                <td class="td-engine">Used (premium)</td>
+                                <td>£3,000 – £5,500</td>
+                                <td class="td-cost warn">£3,200 – £6,000</td>
+                                <td><span class="td-badge" style="background:var(--red-bg);color:var(--red)">+6–8%</span></td>
+                                <td><span class="confidence-badge medium">[M]</span></td>
+                            </tr>
+                            <tr>
+                                <td class="td-engine">Rebuilt</td>
+                                <td>£4,500 – £7,500</td>
+                                <td class="td-cost warn">£4,600 – £7,700</td>
+                                <td><span class="td-badge" style="background:var(--green-pale);color:var(--green)">+2–3%</span></td>
+                                <td><span class="confidence-badge low">[L]</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 style="font-size:.85rem;font-weight:600;margin:16px 0 10px;color:var(--text-1)">Key Forecast Assumptions</h3>
+                <ul style="font-size:.78rem;color:var(--text-2);line-height:1.7;padding-left:20px;margin-bottom:12px">
+                    <li>No major supply shock events (e.g., Brexit-level disruption or OEM policy changes)</li>
+                    <li>Stable demand environment</li>
+                    <li>Continued labour rate increases (3–5% annual)</li>
+                    <li>No significant changes to UK vehicle taxation policy affecting scrappage incentives</li>
+                </ul>
+
+                <h3 style="font-size:.85rem;font-weight:600;margin:16px 0 10px;color:var(--text-1)">Segment-Specific Forecast</h3>
+                <div class="tbl-scroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Segment</th>
+                                <th>Direction</th>
+                                <th>Key Driver</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td class="td-engine">Used engines (mainstream)</td><td><span class="td-badge" style="background:var(--amber-bg);color:var(--amber)">↑ 5–6%</span></td><td>Tighter supply</td></tr>
+                            <tr><td class="td-engine">Used engines (premium)</td><td><span class="td-badge" style="background:var(--red-bg);color:var(--red)">↑ 6–8%</span></td><td>Very tight supply</td></tr>
+                            <tr><td class="td-engine">Reconditioned</td><td><span class="td-badge" style="background:var(--green-pale);color:var(--green)">↑ 3%</span></td><td>Competitive pressure</td></tr>
+                            <tr><td class="td-engine">Rebuilt</td><td><span class="td-badge" style="background:var(--green-pale);color:var(--green)">↑ 2–3%</span></td><td>Stable market</td></tr>
+                            <tr><td class="td-engine">Remanufactured</td><td><span class="td-badge" style="background:var(--green-pale);color:var(--green)">↑ 3–4%</span></td><td>Standardisation</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── EXTERNAL VALIDATION ── -->
+        <section>
+            <div class="card card-p">
+                <div class="sec-label">External Validation &amp; Benchmarking</div>
+                <h2 class="sec-h2">How our data compares to industry benchmarks</h2>
+                <p class="sec-sub">Independent validation ensures our index is accurate and reliable.</p>
+                <div class="tbl-scroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Source</th>
+                                <th>Metric</th>
+                                <th>Our Index</th>
+                                <th>External Benchmark</th>
+                                <th>Variation</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="td-engine">WhoCanFixMyCar (2025)</td>
+                                <td>Average engine repair cost</td>
+                                <td>£2,100–£3,500</td>
+                                <td>£2,300–£3,800 <span style="color:var(--text-4);font-size:.65rem">[THIRD-PARTY]</span></td>
+                                <td>-5%</td>
+                            </tr>
+                            <tr>
+                                <td class="td-engine">AutoTrader (2025)</td>
+                                <td>Used engine cost</td>
+                                <td>£1,500–£2,800</td>
+                                <td>£1,700–£3,000 <span style="color:var(--text-4);font-size:.65rem">[THIRD-PARTY]</span></td>
+                                <td>-7%</td>
+                            </tr>
+                            <tr>
+                                <td class="td-engine">IBISWorld (2025)</td>
+                                <td>Labour rate (UK average)</td>
+                                <td>£68.51/hr</td>
+                                <td>£67–£72/hr <span style="color:var(--text-4);font-size:.65rem">[THIRD-PARTY]</span></td>
+                                <td>Within range</td>
+                            </tr>
+                            <tr>
+                                <td class="td-engine">Warranty Group (2025)</td>
+                                <td>Claim rate (engines)</td>
+                                <td>N/A</td>
+                                <td>4.3% of all claims <span style="color:var(--text-4);font-size:.65rem">[THIRD-PARTY]</span></td>
+                                <td>Context only</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 style="font-size:.85rem;font-weight:600;margin:16px 0 10px;color:var(--text-1)">Dataset Limitations</h3>
+                <ul style="font-size:.78rem;color:var(--text-2);line-height:1.7;padding-left:20px">
+                    <li><strong>Sample bias:</strong> Quote requests originate from platform users, who may not represent the broader vehicle-owning population</li>
+                    <li><strong>Regional weighting:</strong> London/SE is overrepresented vs. rural areas (consistent with population distribution)</li>
+                    <li><strong>Vehicle age skew:</strong> Older vehicles (8+ years) are overrepresented (consistent with engine failure patterns)</li>
+                    <li><strong>Commercial vehicles:</strong> Light commercial vehicles (Transit, Sprinter) have different economics and are not fully captured</li>
+                    <li><strong>Preventative replacements:</strong> A small proportion of requests (estimated &lt;5%) are for preventative replacements</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ── INDEX APPLICATION GUIDELINES ── -->
+        <section>
+            <div class="card card-p">
+                <div class="sec-label">Index Application Guidelines</div>
+                <h2 class="sec-h2">Who should use this index</h2>
+                <div class="value-grid" style="margin-bottom:12px">
+                    <div class="value-card"><strong>Vehicle owners</strong><span>Estimate replacement cost before deciding repair vs. scrap</span></div>
+                    <div class="value-card"><strong>Garages</strong><span>Benchmark quotes against market averages</span></div>
+                    <div class="value-card"><strong>Fleet managers</strong><span>Plan vehicle replacement budgets</span></div>
+                    <div class="value-card"><strong>Insurers</strong><span>Validate claim costs</span></div>
+                    <div class="value-card"><strong>Journalists</strong><span>Source authoritative UK engine pricing data</span></div>
+                    <div class="value-card"><strong>Researchers</strong><span>Baseline for automotive aftermarket studies</span></div>
+                </div>
+
+                <h3 style="font-size:.85rem;font-weight:600;margin:16px 0 10px;color:var(--text-1)">How to Cite This Index</h3>
+                <div style="background:var(--off-white);border-radius:var(--r12);padding:14px 18px;margin-bottom:12px;border:1px solid var(--border)">
+                    <p style="font-size:.78rem;color:var(--text-2);line-height:1.6">
+                        <strong>Academic/Journalistic citation:</strong><br>
+                        "UK Engine Price Index 2026, Engines Market (accessed [date]). Dataset based on 24,650 UK engine replacement quote requests, 2025."
+                    </p>
+                </div>
+                <div style="background:var(--off-white);border-radius:var(--r12);padding:14px 18px;margin-bottom:12px;border:1px solid var(--border)">
+                    <p style="font-size:.78rem;color:var(--text-2);line-height:1.6">
+                        <strong>Internal/Commercial citation:</strong><br>
+                        "Source: Engines Market Proprietary Data (2026). UK Engine Price Index 2026."
+                    </p>
+                </div>
+
+                <h3 style="font-size:.85rem;font-weight:600;margin:16px 0 10px;color:var(--text-1)">Data Update Schedule</h3>
+                <div class="tbl-scroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Update Type</th>
+                                <th>Frequency</th>
+                                <th>Trigger</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td class="td-engine">Price bands</td><td>Quarterly</td><td>Quote data aggregation</td></tr>
+                            <tr><td class="td-engine">Market share</td><td>Annually</td><td>Full year data</td></tr>
+                            <tr><td class="td-engine">Trend analysis</td><td>Annually</td><td>Full year data</td></tr>
+                            <tr><td class="td-engine">Forecast</td><td>Annually</td><td>Q1 each year</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── FAQ ── -->
+        <section>
+            <div class="card card-p">
+                <div class="sec-label">Frequently Asked Questions</div>
+                <h2 class="sec-h2">Common questions about the UK Engine Price Index</h2>
+                <div class="faq-list">
+                    <details open>
+                        <summary>How was the UK Engine Price Index compiled? <span class="faq-ico">+</span></summary>
+                        <div class="faq-body">The index is based on <strong>24,650 real engine replacement quote requests</strong> submitted through EnginesMarket.co.uk between 1 January and 31 December 2025. All quotes are customer-initiated and come from real UK vehicle owners. Suppliers respond with real quoted prices. All figures are anonymised and aggregated.</div>
+                    </details>
+                    <details>
+                        <summary>What does "[H]", "[M]", and "[L]" mean? <span class="faq-ico">+</span></summary>
+                        <div class="faq-body">These are <strong>confidence scores</strong>. [H] = High confidence (n &gt; 1,000 samples), [M] = Medium confidence (n = 200–999 samples), [L] = Low confidence (n &lt; 200 samples). This helps users understand the statistical reliability of each data point.</div>
+                    </details>
+                    <details>
+                        <summary>Are these fitted or supply-only prices? <span class="faq-ico">+</span></summary>
+                        <div class="faq-body">All prices in this index are <strong>fitted costs</strong> unless explicitly stated as supply-only. Fitted costs include: engine supply, standard replacement labour (by region), consumables (fluids, filters), and standard warranty coverage.</div>
+                    </details>
+                    <details>
+                        <summary>How do regional labour rates affect the index? <span class="faq-ico">+</span></summary>
+                        <div class="faq-body">Geographic price variation of <strong>20–40%</strong> exists between the North and London/SE. This is driven almost entirely by labour rate differentials, not engine supply costs. Regional labour rates used for normalisation: Scotland, NI, rural: £55–£80/hr; North England, Midlands, Wales: £65–£95/hr; South England (excl. London/SE): £75–£110/hr; London &amp; South East: £110–£160/hr.</div>
+                    </details>
+                    <details>
+                        <summary>Why is reconditioned the most popular choice? <span class="faq-ico">+</span></summary>
+                        <div class="faq-body">Reconditioned engines account for <strong>70.45%</strong> of all 2025 quote requests. This is due to the balance of cost and warranty. Reconditioned engines are disassembled, cleaned, and have worn parts replaced (pistons, rings, bearings, seals). They come with a 6–12 month warranty and are tested to standard.</div>
+                    </details>
+                    <details>
+                        <summary>What's the forecast for engine prices in 2026? <span class="faq-ico">+</span></summary>
+                        <div class="faq-body">The 2026 forecast shows used engines increasing 5–8% (premium used +6–8%, mainstream +5–6%), reconditioned increasing ~3%, and rebuilt increasing 2–3%. Key drivers include tighter used engine supply, continued labour inflation (3–5% annually), and strong demand as average vehicle age reaches 8.4 years.</div>
+                    </details>
+                    <details>
+                        <summary>How often is the index updated? <span class="faq-ico">+</span></summary>
+                        <div class="faq-body">Price bands are updated quarterly, while market share, trend analysis, and forecasts are updated annually. The next full review is scheduled for January 2027.</div>
+                    </details>
+                    <details>
+                        <summary>Can I use this data for research or journalism? <span class="faq-ico">+</span></summary>
+                        <div class="faq-body">Yes. The UK Engine Price Index is designed for industry professionals, journalists, researchers, and vehicle owners. For academic/journalistic citation: "UK Engine Price Index 2026, Engines Market (accessed [date]). Dataset based on 24,650 UK engine replacement quote requests, 2025." For data access inquiries, contact data@enginesmarket.co.uk.</div>
+                    </details>
+                    <details>
+                        <summary>How does this compare to other benchmarks? <span class="faq-ico">+</span></summary>
+                        <div class="faq-body">Our index aligns closely with industry benchmarks. Compared to WhoCanFixMyCar (2025), our index is ~5% lower. Compared to AutoTrader (2025), our used engine costs are ~7% lower. Labour rate benchmarks from IBISWorld (2025) show our £68.51/hr average is within the £67–£72/hr range.</div>
+                    </details>
+                    <details>
+                        <summary>What are the limitations of the dataset? <span class="faq-ico">+</span></summary>
+                        <div class="faq-body">Key limitations include: sample bias (platform users may not represent the broader population), regional weighting (London/SE overrepresented), vehicle age skew (older vehicles overrepresented), limited commercial vehicle data, and a small proportion of preventative replacements (&lt;5%).</div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- Schema: FAQPage -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [
+                    { "@type": "Question", "name": "How was the UK Engine Price Index compiled?", "acceptedAnswer": { "@type": "Answer", "text": "The index is based on 24,650 real engine replacement quote requests submitted through EnginesMarket.co.uk between 1 January and 31 December 2025. All quotes are customer-initiated and come from real UK vehicle owners." } },
+                    { "@type": "Question", "name": "What does '[H]', '[M]', and '[L]' mean?", "acceptedAnswer": { "@type": "Answer", "text": "These are confidence scores. [H] = High confidence (n > 1,000 samples), [M] = Medium confidence (n = 200–999 samples), [L] = Low confidence (n < 200 samples)." } },
+                    { "@type": "Question", "name": "Are these fitted or supply-only prices?", "acceptedAnswer": { "@type": "Answer", "text": "All prices in this index are fitted costs unless explicitly stated as supply-only. Fitted costs include: engine supply, standard replacement labour, consumables, and standard warranty coverage." } },
+                    { "@type": "Question", "name": "How do regional labour rates affect the index?", "acceptedAnswer": { "@type": "Answer", "text": "Geographic price variation of 20–40% exists between the North and London/SE, driven almost entirely by labour rate differentials, not engine supply costs." } },
+                    { "@type": "Question", "name": "Why is reconditioned the most popular choice?", "acceptedAnswer": { "@type": "Answer", "text": "Reconditioned engines account for 70.45% of all 2025 quote requests due to the balance of cost and warranty." } },
+                    { "@type": "Question", "name": "What's the forecast for engine prices in 2026?", "acceptedAnswer": { "@type": "Answer", "text": "Used engines increasing 5–8%, reconditioned increasing ~3%, and rebuilt increasing 2–3%. Key drivers include tighter supply, continued labour inflation, and strong demand." } },
+                    { "@type": "Question", "name": "How often is the index updated?", "acceptedAnswer": { "@type": "Answer", "text": "Price bands are updated quarterly, while market share, trend analysis, and forecasts are updated annually." } },
+                    { "@type": "Question", "name": "Can I use this data for research or journalism?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. For academic/journalistic citation: 'UK Engine Price Index 2026, Engines Market (accessed [date]). Dataset based on 24,650 UK engine replacement quote requests, 2025.'" } }
+                ]
+            }
+        </script>
+
+        <!-- ── RELATED GUIDES ── -->
+        <section>
+            <div class="card card-p">
+                <div class="sec-label">Further Reading</div>
+                <h2 class="sec-h2">Explore more insights and guides</h2>
+                <div class="related-grid">
+                    <a href="/insights/uk-engine-replacement-statistics" class="related-link"><span class="related-link-arrow">↗</span><span class="related-link-text">UK Engine Replacement Statistics 2026</span></a>
+                    <a href="/insights/most-common-engine-failures" class="related-link"><span class="related-link-arrow">↗</span><span class="related-link-text">Most Common Engine Failures UK</span></a>
+                    <a href="/insights/most-replaced-engines" class="related-link"><span class="related-link-arrow">↗</span><span class="related-link-text">Most Replaced Engines UK</span></a>
+                    <a href="/insights/most-reliable-diesel-engines" class="related-link"><span class="related-link-arrow">↗</span><span class="related-link-text">Most Reliable Diesel Engines</span></a>
+                    <a href="/insights/most-reliable-petrol-engines" class="related-link"><span class="related-link-arrow">↗</span><span class="related-link-text">Most Reliable Petrol Engines</span></a>
+                    <a href="/prices/engine-replacement-cost" class="related-link"><span class="related-link-arrow">↗</span><span class="related-link-text">Engine Replacement Cost Guide</span></a>
+                    <a href="/insights/full-methodology" class="related-link"><span class="related-link-arrow">↗</span><span class="related-link-text">Full Methodology</span></a>
+                    <a href="/insights" class="related-link"><span class="related-link-arrow">↗</span><span class="related-link-text">All Insights &amp; Research</span></a>
+                    <a href="/get-a-quote" class="related-link" style="border-color:rgba(34,160,90,.4);background:var(--green-pale)"><span class="related-link-arrow" style="color:var(--green)">→</span><span class="related-link-text" style="color:var(--green);font-weight:600">Get Your Personalised Price</span></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── FINAL CTA ── -->
+        <div class="final-cta" role="complementary">
+            <div class="fc-body">
+                <div class="fc-eyebrow">Get Your Personalised Price</div>
+                <div class="fc-headline">Compare real quotes from 100+ UK suppliers</div>
+                <p class="fc-sub">This index provides aggregate market intelligence. For a personalised quote based on your specific vehicle, engine, and location, use our comparison service. Free to use, no obligation, real quotes not estimates.</p>
+                <p class="fc-trust">Based on 24,650 real UK quotes in 2025 · Engines Market is a comparison platform – we connect you with suppliers, we do not supply or fit engines.</p>
+            </div>
+            <div class="fc-actions">
+                <a href="/get-a-quote" class="btn-cta">
+                    <svg viewBox="0 0 16 16"><path d="M8 1l7 7-7 7M1 8h14" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+                    Get Your Personalised Price →
+                </a>
+                <div class="fc-note">Free · No obligation · 100+ UK specialists</div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer>
+        <div class="footer-inner">
+            <p class="footer-text">This index is maintained by Engines Market (Engine Finders UK Ltd). For data access inquiries, contact data@enginesmarket.co.uk. Engines Market is a price comparison platform. We do not supply or fit engines. All costs are [EM-VERIFIED], [EM-QUOTE] or [THIRD-PARTY] based on UK independent specialist data and industry research. Labour costs vary by region. Always verify quotes with your chosen supplier. Engines Market is a trading name of Engine Finders UK Ltd (Company No. 13157944).</p>
+            <nav class="footer-links" aria-label="Footer">
+                <a href="/legal/terms-and-conditions">Terms &amp; Conditions</a>
+                <a href="/about/supplier-standards">Supplier standards</a>
+                <a href="/legal/privacy-policy">Privacy policy</a>
+                <a href="/legal/cookie-policy">Cookie policy</a>
+                <a href="/legal/complaints-procedure">Complaints procedure</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script>
+        /* ─── BAR ANIMATIONS ─── */
+        const animateBars = (entries, obs) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.querySelectorAll('[data-width]').forEach(bar => {
+                    bar.style.width = bar.dataset.width + '%';
+                });
+                obs.unobserve(entry.target);
+            });
+        };
+        const barObs = new IntersectionObserver(animateBars, { threshold: .3 });
+        document.querySelectorAll('.market-bars').forEach(el => barObs.observe(el));
+
+        /* ─── MARKET COUNTER ─── */
+        const counterEl = document.getElementById('market-counter');
+        if (counterEl) {
+            const counterObs = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) return;
+                    let start = 0;
+                    const end = 24650;
+                    const dur = 1800;
+                    const step = end / (dur / 16);
+                    const tick = () => {
+                        start = Math.min(start + step, end);
+                        counterEl.textContent = Math.floor(start).toLocaleString('en-GB');
+                        if (start < end) requestAnimationFrame(tick);
+                    };
+                    requestAnimationFrame(tick);
+                    counterObs.unobserve(entry.target);
+                });
+            }, { threshold: .5 });
+            counterObs.observe(counterEl);
+        }
+
+        /* ─── FAQ ICON toggle ─── */
+        document.querySelectorAll('details').forEach(d => {
+            d.addEventListener('toggle', () => {
+                const ico = d.querySelector('.faq-ico');
+                if (ico) ico.textContent = d.open ? '×' : '+';
+            });
+            if (d.open) { const ico = d.querySelector('.faq-ico'); if (ico) ico.textContent = '×'; }
+        });
+    </script>
+</body>
+</html>
