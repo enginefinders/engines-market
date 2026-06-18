@@ -31,6 +31,10 @@ const nextConfig: NextConfig = {
           source: "/get-a-quote",
           destination: "/get-a-quote.html",
         },
+        {
+          source: "/failures/:slug",
+          destination: "/failures/:slug.html",
+        },
       ],
     };
   },
