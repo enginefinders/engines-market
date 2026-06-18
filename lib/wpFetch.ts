@@ -1,6 +1,6 @@
 const GRAPHQL_URL =
   process.env.NEXT_PUBLIC_WP_GRAPHQL ??
-  "https://admin.private-numberplates.uk/graphql";
+  "http://wp.enginesmarket.co.uk/graphql";
 
 export async function wpFetch<T>(
   query: string,
