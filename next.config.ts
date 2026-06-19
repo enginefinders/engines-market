@@ -51,6 +51,10 @@ const nextConfig: NextConfig = {
           source: "/failures/:slug",
           destination: "/failures/:slug.html",
         },
+        {
+          source: "/case-studies/:slug",
+          destination: "/case-studies/:slug.html",
+        },
       ],
     };
   },
