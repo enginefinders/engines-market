@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BMW N47 Timing Chain Failure Case Study | Engines Market</title>
+  <meta name="description" content="Premium visual case study showing how a BMW N47 timing chain rattle became a catastrophic engine failure and a £5,050 repair decision." />
+  <style>
+    :root {
+      --navy: #000032;
+      --navy-2: #07113a;
+      --ink: #101827;
+      --muted: #647084;
+      --line: rgba(15, 23, 42, 0.12);
+      --soft: #f7f9fc;
+      --soft-2: #eef4ff;
+      --green: #15803d;
+      --green-2: #16a34a;
+      --orange: #f97316;
+      --red: #dc2626;
+      --amber: #d97706;
+      --blue: #2563eb;
+      --white: #ffffff;
+      --shadow: 0 24px 70px rgba(0, 0, 50, 0.16);
+      --shadow-soft: 0 16px 45px rgba(15, 23, 42, 0.10);
+      --radius-img: 12px;
+      --radius-xl: 30px;
+      --radius-lg: 22px;
+      --radius-md: 16px;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: #fff;
+      line-height: 1.6;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(var(--max), calc(100% - 40px)); margin-inline: auto; }
+    .section { padding: 72px 0; position: relative; overflow: hidden; }
+    .section-tight { padding: 48px 0; }
+    .dark { background: var(--navy); color: #fff; }
+    .soft { background: var(--soft); }
+    .section-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 13px;
+      border-radius: 999px;
+      color: var(--green);
+      background: rgba(21, 128, 61, 0.10);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .11em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .dark .section-kicker { color: #9ff3bd; background: rgba(22, 163, 74, .14); }
+    h1, h2, h3 { margin: 0; line-height: 1.15; letter-spacing: -0.03em; }
+    h1 { font-size: 48px; max-width: none; }
+    h2 { font-size: 28px; max-width: none; }
+    h3 { font-size: clamp(22px, 2.4vw, 32px); }
+    p { margin: 0; }
+    .lead { font-size: clamp(18px, 2vw, 22px); color: rgba(255,255,255,.78); max-width: none; margin-top: 20px; }
+    .section-intro { width: 100%; }
+    .section-intro .text-muted { margin-top: 18px; }
+    .text-muted { color: var(--muted); }
+    .dark .text-muted { color: rgba(255,255,255,.68); }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; align-items: center; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    .card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 26px;
+      box-shadow: var(--shadow-soft);
+    }
+    .dark .card { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.13); box-shadow: none; color: #fff; backdrop-filter: blur(16px); }
+    .stat-card {
+      background: rgba(255,255,255,.09);
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 18px;
+      padding: 18px;
+      backdrop-filter: blur(12px);
+    }
+    .stat-card strong { display: block; font-size: 24px; line-height: 1; margin-bottom: 8px; }
+    .stat-card span { color: rgba(255,255,255,.66); font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
+    .btn-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 15px 22px;
+      border-radius: 999px;
+      font-weight: 900;
+      letter-spacing: -0.01em;
+      border: 1px solid transparent;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: var(--green-2); color: #fff; box-shadow: 0 18px 36px rgba(22, 163, 74, .28); }
+    .btn-secondary { background: rgba(255,255,255,.08); color: #fff; border-color: rgba(255,255,255,.22); }
+    .btn-dark { background: var(--navy); color: #fff; }
+    .image-frame {
+      border-radius: var(--radius-img);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255,255,255,.10);
+      background: #fff;
+    }
+    .image-frame img { width: 100%; height: auto; display: block; object-fit: contain; }
+    .caption { font-size: 13px; color: var(--muted); margin-top: 12px; }
+    .dark .caption { color: rgba(255,255,255,.58); }
+
+    /* Hero */
+    .hero {
+      display: block;
+      padding: 64px 0 48px;
+      color: #fff;
+      background:
+        linear-gradient(90deg, rgba(0,0,50,.96) 0%, rgba(0,0,50,.82) 42%, rgba(0,0,50,.16) 100%),
+        url('/case-studies/assets/hero-split.jpg') center/cover no-repeat;
+      position: relative;
+    }
+    .hero:before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 16% 18%, rgba(22,163,74,.22), transparent 30%), radial-gradient(circle at 74% 30%, rgba(249,115,22,.16), transparent 28%);
+      pointer-events: none;
+    }
+    .hero-content { position: relative; z-index: 1; }
+    .eyebrow-row { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.10);
+      border: 1px solid rgba(255,255,255,.18);
+      color: rgba(255,255,255,.82);
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .09em;
+      backdrop-filter: blur(12px);
+    }
+    .hero-quote {
+      max-width: none;
+      margin: 24px 0 0;
+      padding: 20px 24px;
+      border-left: 4px solid var(--green-2);
+      background: rgba(255,255,255,.08);
+      border-radius: 0 18px 18px 0;
+      color: rgba(255,255,255,.86);
+      font-size: clamp(18px, 2vw, 24px);
+      font-weight: 720;
+    }
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+      margin-top: 40px;
+    }
+
+    /* Sticky nav */
+    .case-nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255,255,255,.92);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--line);
+    }
+    .case-nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding-block: 12px;
+      overflow-x: auto;
+    }
+    .nav-brand { font-weight: 950; color: var(--navy); white-space: nowrap; }
+    .nav-links { display: flex; gap: 10px; align-items: center; }
+    .nav-links a {
+      white-space: nowrap;
+      font-size: 13px;
+      font-weight: 850;
+      color: #334155;
+      padding: 9px 12px;
+      border-radius: 999px;
+    }
+    .nav-links a:hover { background: var(--soft-2); color: var(--navy); }
+    .nav-cta { background: var(--green-2) !important; color: #fff !important; }
+
+    /* Intro/specs */
+    .spec-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 24px; }
+    .spec-item { border: 1px solid var(--line); border-radius: 16px; padding: 16px; background: #fff; }
+    .spec-item span { display: block; color: var(--muted); font-size: 12px; font-weight: 850; text-transform: uppercase; letter-spacing: .08em; }
+    .spec-item strong { display: block; color: var(--navy); font-size: 18px; margin-top: 5px; }
+    .disclaimer {
+      margin-top: 22px;
+      padding: 18px 20px;
+      border-radius: 18px;
+      background: #fff7ed;
+      border: 1px solid rgba(249,115,22,.28);
+      color: #7c2d12;
+      font-size: 14px;
+    }
+
+    /* Sound */
+    .sound-stage {
+      position: relative;
+      margin-top: 34px;
+      border-radius: var(--radius-img);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255,255,255,.12);
+    }
+    .sound-stage img { width: 100%; height: auto; object-fit: contain; }
+    .sound-overlay {
+      position: absolute;
+      inset: auto 24px 24px 24px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .sound-card {
+      background: rgba(0,0,50,.78);
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 18px;
+      padding: 18px;
+      color: #fff;
+      backdrop-filter: blur(14px);
+    }
+    .sound-card small { display: block; color: #9ff3bd; font-weight: 900; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 7px; }
+    .sound-card strong { display: block; font-size: 22px; line-height: 1.05; margin-bottom: 8px; }
+    .warning-box {
+      margin-top: 26px;
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      background: #fef2f2;
+      border: 1px solid rgba(220,38,38,.20);
+      color: #7f1d1d;
+      font-weight: 700;
+    }
+
+    /* Timeline */
+    .timeline-panel {
+      margin-top: 32px;
+      border-radius: var(--radius-img);
+      overflow: hidden;
+      background: #fff;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+    .timeline-panel img { width: 100%; height: auto; object-fit: contain; }
+    .timeline-copy {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      padding: 28px;
+    }
+    .thought-card { padding: 22px; border-radius: 20px; background: var(--soft); border: 1px solid var(--line); }
+    .thought-card strong { display: block; color: var(--navy); margin-bottom: 8px; font-size: 18px; }
+
+    /* Final day */
+    .snap-panel {
+      position: relative;
+      padding: 56px;
+      border-radius: var(--radius-xl);
+      background: linear-gradient(135deg, rgba(255,255,255,.10), rgba(255,255,255,.04));
+      border: 1px solid rgba(255,255,255,.16);
+      overflow: hidden;
+    }
+    .snap-panel:before {
+      content: "SNAP";
+      position: absolute;
+      right: -24px;
+      top: -40px;
+      font-size: 158px;
+      line-height: 1;
+      font-weight: 1000;
+      letter-spacing: -.08em;
+      color: rgba(255,255,255,.055);
+    }
+    .quote-large {
+      position: relative;
+      max-width: none;
+      font-size: clamp(26px, 4vw, 50px);
+      line-height: 1.05;
+      letter-spacing: -0.045em;
+      font-weight: 950;
+    }
+    .event-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 34px; position: relative; }
+    .event-card { padding: 20px; border-radius: 18px; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.14); }
+    .event-card span { color: #9ff3bd; font-weight: 950; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; }
+    .event-card strong { display: block; margin-top: 6px; font-size: 18px; }
+
+    /* Diagnosis */
+    .diagnosis-images { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 34px; }
+    .diagnosis-board { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 22px; }
+    .finding { padding: 20px; border-radius: 18px; border: 1px solid var(--line); background: #fff; }
+    .finding span { display: block; color: var(--red); font-weight: 950; text-transform: uppercase; letter-spacing: .08em; font-size: 12px; margin-bottom: 8px; }
+    .finding strong { display: block; color: var(--navy); font-size: 19px; line-height: 1.2; }
+    .verdict-card {
+      margin-top: 22px;
+      padding: 30px;
+      border-radius: var(--radius-lg);
+      background: var(--navy);
+      color: #fff;
+      border-left: 7px solid var(--red);
+      box-shadow: var(--shadow);
+    }
+    .verdict-card strong { color: #fff; display: block; font-size: 14px; text-transform: uppercase; letter-spacing: .12em; margin-bottom: 10px; }
+    .verdict-card p { font-size: clamp(20px, 2.5vw, 30px); line-height: 1.18; font-weight: 850; }
+
+    /* Pricing toggle */
+    .toggle-shell {
+      margin-top: 34px;
+      background: #fff;
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .tablist { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; background: #eef2f7; padding: 10px; }
+    .tab-btn {
+      border: 0;
+      padding: 16px;
+      border-radius: 18px;
+      font-weight: 950;
+      background: transparent;
+      color: #334155;
+      cursor: pointer;
+      font-size: 15px;
+    }
+    .tab-btn[aria-pressed="true"] { background: var(--navy); color: #fff; box-shadow: 0 14px 30px rgba(0,0,50,.18); }
+    .toggle-body { padding: 18px; }
+    .price-panel { display: none; grid-template-columns: .86fr 1.14fr; gap: 28px; align-items: stretch; }
+    .price-panel.active { display: grid; }
+    .price-feature {
+      border-radius: 24px;
+      padding: 14px;
+      color: #fff;
+      background: linear-gradient(135deg, var(--navy), #172554);
+      position: relative;
+      overflow: hidden;
+    }
+    .price-feature.green { background: linear-gradient(135deg, #064e3b, var(--green-2)); }
+    .price-feature.grey { background: linear-gradient(135deg, #334155, #111827); }
+    .price-feature:after {
+      content: "";
+      position: absolute;
+      width: 240px;
+      height: 240px;
+      right: -90px;
+      top: -90px;
+      background: rgba(255,255,255,.10);
+      border-radius: 50%;
+    }
+    .price-feature h3 { position: relative; z-index: 1; }
+    .price-feature .price { position: relative; z-index: 1; display: block; font-size: clamp(36px, 4vw, 52px); line-height: 1; font-weight: 1000; letter-spacing: -.06em; margin: 22px 0 8px; }
+    .price-feature .sub { position: relative; z-index: 1; color: rgba(255,255,255,.76); }
+    .badge { display: inline-flex; padding: 7px 10px; border-radius: 999px; background: rgba(255,255,255,.16); color: #fff; font-weight: 900; text-transform: uppercase; font-size: 11px; letter-spacing: .08em; margin-bottom: 16px; position: relative; z-index: 1; }
+    .detail-list { display: grid; gap: 12px; }
+    .detail-row { display: grid; grid-template-columns: 160px 1fr; gap: 16px; padding: 15px 0; border-bottom: 1px solid var(--line); }
+    .detail-row:last-child { border-bottom: 0; }
+    .detail-row span { color: var(--muted); font-weight: 850; font-size: 13px; text-transform: uppercase; letter-spacing: .08em; }
+    .detail-row strong { color: var(--ink); font-weight: 780; }
+
+    /* Uncertainty */
+    .uncertainty-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 34px;
+      align-items: start;
+    }
+    .risk-paths { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .path-card { padding: 24px; border-radius: 22px; border: 1px solid rgba(255,255,255,.14); background: rgba(255,255,255,.08); }
+    .path-card h3 { font-size: 24px; margin-bottom: 10px; }
+    .path-card .cost { color: #9ff3bd; display: block; font-weight: 1000; font-size: 28px; margin: 13px 0; }
+    .path-card.recommended { border-color: rgba(22,163,74,.60); box-shadow: inset 0 0 0 1px rgba(22,163,74,.36); }
+
+    /* Fork */
+    .fork-decision {
+      margin-top: 34px;
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+    .decision-pair { display: grid; gap: 16px; }
+    .decision-full { margin-top: 16px; width: 100%; }
+    .decision-mini {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding: 22px;
+      border-radius: 20px;
+      background: #fff;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-soft);
+    }
+    .card-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .card-head strong { flex: 1; min-width: 0; font-size: 22px; color: var(--navy); margin: 0; line-height: 1.15; }
+    .card-head span { flex-shrink: 0; white-space: nowrap; color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .09em; font-weight: 900; text-align: right; }
+    .decision-mini > p { margin: 0; }
+    .chosen { border-left: 6px solid var(--green-2); }
+
+    /* Matrix/outcome */
+    .matrix { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 32px; }
+    .matrix-card {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding: 22px;
+      border-radius: 20px;
+      background: #fff;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-soft);
+    }
+    .matrix-card .card-head strong { font-size: 24px; }
+    .matrix-card > p { margin: 0; }
+    .matrix-card.verdict { background: var(--navy); color: #fff; grid-column: span 3; display: grid; grid-template-columns: .85fr 1.15fr; gap: 20px; align-items: center; }
+    .matrix-card.verdict .card-head strong { color: #fff; font-size: 24px; }
+    .matrix-card.verdict .card-head span { color: rgba(255,255,255,.72); }
+    .matrix-card.verdict p { color: rgba(255,255,255,.72); margin: 0; }
+
+    .outcome {
+      background: linear-gradient(135deg, var(--navy) 0%, #0a1a4a 50%, var(--navy-2) 100%);
+      color: #fff;
+    }
+    .outcome-split {
+      display: grid;
+      grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+      gap: 24px;
+      align-items: stretch;
+    }
+    .outcome-card {
+      max-width: none;
+      margin: 0;
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: var(--radius-xl);
+      padding: 12px;
+      backdrop-filter: blur(18px);
+      box-shadow: 0 28px 80px rgba(0,0,0,.30);
+    }
+    .outcome-image { display: flex; align-items: center; min-height: 0; }
+    .outcome-image img { width: 100%; height: auto; object-fit: contain; }
+    .outcome-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 26px; }
+    .outcome-metric { padding: 18px; border-radius: 18px; background: rgba(255,255,255,.10); border: 1px solid rgba(255,255,255,.12); }
+    .outcome-metric span { display: block; color: rgba(255,255,255,.62); font-weight: 900; text-transform: uppercase; letter-spacing: .08em; font-size: 12px; }
+    .outcome-metric strong { display: block; color: #fff; font-size: 22px; line-height: 1.15; margin-top: 6px; }
+    .owner-quote { margin-top: 24px; padding: 24px; border-radius: 22px; background: rgba(255,255,255,.10); border-left: 5px solid var(--green-2); font-size: 20px; font-weight: 750; }
+
+    /* Lessons */
+    .compare-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 32px; }
+    .compare-card { padding: 30px; border-radius: var(--radius-lg); background: #fff; border: 1px solid var(--line); box-shadow: var(--shadow-soft); position: relative; overflow: hidden; }
+    .compare-card:before { content: ""; position: absolute; inset: 0 0 auto 0; height: 6px; background: var(--green-2); }
+    .compare-card.danger:before { background: var(--red); }
+    .compare-card small { color: var(--muted); font-weight: 900; text-transform: uppercase; letter-spacing: .09em; }
+    .compare-card strong { display: block; font-size: clamp(28px, 3vw, 42px); letter-spacing: -.06em; color: var(--navy); margin: 8px 0 8px; }
+    .maths-callout { margin-top: 24px; padding: 28px; border-radius: var(--radius-lg); background: #ecfdf5; border: 1px solid rgba(22,163,74,.20); color: #064e3b; font-weight: 850; font-size: clamp(20px, 2vw, 26px); }
+
+    /* Parts accordion */
+    details {
+      margin-top: 28px;
+      border-radius: var(--radius-lg);
+      background: #fff;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+    }
+    summary { cursor: pointer; padding: 24px; font-weight: 950; color: var(--navy); font-size: 18px; }
+    .parts-table { width: 100%; border-collapse: collapse; }
+    .parts-table th, .parts-table td { text-align: left; padding: 14px 24px; border-top: 1px solid var(--line); }
+    .parts-table th { background: var(--soft); color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .08em; }
+
+    /* CTA */
+    .final-cta {
+      color: #fff;
+      background:
+        linear-gradient(90deg, rgba(0,0,50,.96), rgba(0,0,50,.72)),
+        url('/case-studies/assets/workshop-blur.png') center/cover no-repeat;
+      padding: 72px 0;
+    }
+    .cta-box {
+      border-radius: var(--radius-xl);
+      padding: 12px;
+      background: linear-gradient(135deg, rgba(255,255,255,.12), rgba(255,255,255,.06));
+      border: 1px solid rgba(255,255,255,.18);
+      backdrop-filter: blur(16px);
+      display: grid;
+      grid-template-columns: 1.08fr .92fr;
+      gap: 36px;
+      align-items: center;
+    }
+    .form-card { background: #fff; color: var(--ink); padding: 28px; border-radius: 24px; box-shadow: var(--shadow); }
+    .form-grid { display: grid; gap: 12px; margin-top: 16px; }
+    .input { width: 100%; min-height: 48px; padding: 13px 14px; border: 1px solid var(--line); border-radius: 14px; font: inherit; }
+    .fake-submit { width: 100%; border: 0; cursor: pointer; }
+    .source-note { margin-top: 24px; font-size: 13px; color: rgba(255,255,255,.60); }
+
+    /* Animation */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.in { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 980px) {
+      .grid-2, .grid-3, .grid-4, .price-panel, .fork-decision, .uncertainty-split, .outcome-split, .cta-box { grid-template-columns: 1fr; }
+      .hero-stats { grid-template-columns: repeat(2, 1fr); }
+      .hero-stats .stat-card:last-child {
+        grid-column: 1 / -1;
+        width: calc((100% - 14px) / 2);
+        margin-inline: auto;
+      }
+      .sound-overlay { position: static; grid-template-columns: 1fr; padding: 16px; background: var(--navy); }
+      .timeline-copy, .diagnosis-images, .diagnosis-board, .matrix, .compare-cards, .risk-paths, .outcome-grid { grid-template-columns: 1fr; }
+      .matrix-card.verdict { grid-column: auto; grid-template-columns: 1fr; }
+      .detail-row { grid-template-columns: 1fr; gap: 4px; }
+      .case-nav .container { width: 100%; padding-inline: 18px; }
+      .nav-brand { display: none; }
+      .hero { padding: 56px 0 40px; }
+    }
+
+    @media (max-width: 640px) {
+      .container { width: min(100% - 28px, var(--max)); }
+      .section { padding: 52px 0; }
+      h1 { font-size: 32px; }
+      h2 { font-size: 26px; }
+      .btn { width: 100%; }
+
+      /* Hero pills — fit 3+ per row */
+      .pill {
+        font-size: 9px;
+        padding: 5px 8px;
+        letter-spacing: .05em;
+        gap: 4px;
+      }
+      .eyebrow-row { gap: 6px; margin-bottom: 18px; }
+
+      /* Cost option tabs — stay in one row */
+      .tablist { grid-template-columns: repeat(3, 1fr); gap: 4px; padding: 6px; }
+      .tab-btn { padding: 10px 4px; font-size: 10px; border-radius: 12px; line-height: 1.2; }
+
+      /* Tighter parent shells when children have their own padding */
+      .toggle-body { padding: 12px; }
+      .outcome-card { padding: 12px; }
+      .cta-box { padding: 12px; }
+      .price-feature { padding: 12px; }
+
+      .snap-panel { padding: 30px 22px; }
+      .event-strip { grid-template-columns: 1fr; }
+      .parts-table { font-size: 14px; }
+      .parts-table th, .parts-table td { padding: 12px 14px; }
+
+      /* Hero stats — 2 per row */
+      .hero-stats { grid-template-columns: repeat(2, 1fr); }
+      .hero-stats .stat-card:last-child {
+        grid-column: 1 / -1;
+        width: calc((100% - 14px) / 2);
+        margin-inline: auto;
+      }
+
+      /* Spec boxes — "Model : BMW 320d (F30)" inline row */
+      .spec-grid { grid-template-columns: 1fr; gap: 8px; margin-top: 16px; }
+      .spec-item {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        gap: 0 6px;
+        padding: 12px 14px;
+      }
+      .spec-item span,
+      .spec-item strong {
+        display: inline;
+        margin: 0;
+        font-size: 14px;
+        text-transform: none;
+        letter-spacing: 0;
+        font-weight: 700;
+      }
+      .spec-item span { color: var(--muted); font-weight: 850; text-transform: capitalize; }
+      .spec-item span::after { content: " : "; }
+      .spec-item strong { color: var(--navy); }
+
+      /* Sound cards — "Stage 1 : 1–2 second rattle" */
+      .sound-card small,
+      .sound-card strong {
+        display: inline;
+        margin: 0;
+        font-size: 15px;
+        text-transform: none;
+        letter-spacing: 0;
+      }
+      .sound-card small { color: #9ff3bd; font-weight: 900; }
+      .sound-card small::after { content: " : "; }
+      .sound-card strong { font-weight: 800; }
+      .sound-card p { margin-top: 8px; font-size: 14px; }
+
+      /* Snap events — "Moment 01 : Motorway merge" */
+      .event-card span,
+      .event-card strong {
+        display: inline;
+        margin: 0;
+        font-size: 14px;
+        text-transform: none;
+        letter-spacing: 0;
+      }
+      .event-card span { color: #9ff3bd; font-weight: 950; }
+      .event-card span::after { content: " : "; }
+      .event-card strong { font-size: 15px; }
+      .event-card p { margin-top: 8px; font-size: 14px; }
+
+      /* Hidden risk — path title left, price top-right, then two paras */
+      .path-card {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 8px 12px;
+        padding: 18px;
+      }
+      .path-card h3 {
+        grid-column: 1;
+        grid-row: 1;
+        margin: 0;
+        font-size: 17px;
+        align-self: center;
+      }
+      .path-card .cost {
+        grid-column: 2;
+        grid-row: 1;
+        margin: 0;
+        font-size: 20px;
+        text-align: right;
+        align-self: center;
+      }
+      .path-card > p:not(.text-muted) {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        font-size: 14px;
+      }
+      .path-card > p.text-muted {
+        grid-column: 1 / -1;
+        grid-row: 3;
+        font-size: 13px;
+      }
+
+      /* Fork in the road — flex header */
+      .card-head strong { font-size: 15px; }
+      .card-head span { font-size: 11px; letter-spacing: .06em; }
+      .matrix-card .card-head strong { font-size: 18px; }
+      .matrix-card.verdict .card-head strong { font-size: 18px; }
+
+      /* Full-bleed images — 2px side inset on mobile */
+      .image-frame,
+      .sound-stage,
+      .timeline-panel,
+      .outcome-image {
+        width: calc(100vw - 4px);
+        max-width: calc(100vw - 4px);
+        margin-left: calc(50% - 50vw + 2px);
+        border-radius: var(--radius-img);
+      }
+      .image-frame img,
+      .sound-stage img,
+      .timeline-panel img,
+      .outcome-image img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+
+      /* Outcome metrics — "Final cost : £5,050 total" */
+      .outcome-metric span,
+      .outcome-metric strong {
+        display: inline;
+        margin: 0;
+        font-size: 13px;
+        text-transform: none;
+        letter-spacing: 0;
+      }
+      .outcome-metric span { font-weight: 900; }
+      .outcome-metric span::after { content: " : "; }
+      .outcome-metric strong { font-size: 15px; }
+    }
+  </style>
+    <link rel="stylesheet" href="/static-nav.css?v=2" data-em-static-nav>
+</head>
+<body>
+  <header class="hero" id="top">
+    <div class="container hero-content reveal in">
+      <div class="eyebrow-row">
+        <span class="pill">BMW 320d F30</span>
+        <span class="pill">N47D20C</span>
+        <span class="pill">Timing Chain Failure</span>
+        <span class="pill">Representative Case Study</span>
+      </div>
+      <h1>BMW N47 Timing Chain Failure: How a “Bag of Spanners” Noise Became a £5,050 Repair</h1>
+      <p class="lead">A premium visual breakdown of ignored warning signs, catastrophic timing chain failure, replacement options, and the decision that protected the owner from a second major bill.</p>
+      <div class="hero-quote">“I heard a sharp metallic snap, then the engine just cut out on the dual carriageway. No warning lights. No overheating. Just silence and the smell of oil.”</div>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="#quote">Compare BMW N47 Engine Quotes</a>
+        <a class="btn btn-secondary" href="#timeline">See the Failure Timeline</a>
+      </div>
+      <div class="hero-stats" aria-label="Case summary statistics">
+        <div class="stat-card"><strong>72,000</strong><span>First symptom</span></div>
+        <div class="stat-card"><strong>86,500</strong><span>Mileage at failure</span></div>
+        <div class="stat-card"><strong>£4,200</strong><span>Engine fitted</span></div>
+        <div class="stat-card"><strong>£5,050</strong><span>Final total</span></div>
+        <div class="stat-card"><strong>18 months</strong><span>Warranty</span></div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="case-nav" aria-label="Case study navigation">
+    <div class="container">
+      <a href="#top" class="nav-brand">BMW N47 Case File</a>
+      <div class="nav-links">
+        <a href="#warning">Warning Signs</a>
+        <a href="#timeline">Timeline</a>
+        <a href="#diagnosis">Diagnosis</a>
+        <a href="#options">Options</a>
+        <a href="#decision">Decision</a>
+        <a href="#outcome">Outcome</a>
+        <a href="#quote" class="nav-cta">Get Quote</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="section soft" id="case-summary">
+      <div class="container">
+        <div class="section-intro reveal">
+          <span class="section-kicker">Executive case file</span>
+          <h2>What happened to the 2014 BMW 320d?</h2>
+          <p class="text-muted">For three months before the snap, the owner had heard a brief rattle on cold starts. It slowly worsened from one second of noise into a metallic clatter that sounded like a bag of spanners under the bonnet.</p>
+        </div>
+        <div class="grid-2" style="margin-top:34px;">
+          <div class="reveal">
+            <div class="spec-grid">
+              <div class="spec-item"><span>Model</span><strong>BMW 320d (F30)</strong></div>
+              <div class="spec-item"><span>Year</span><strong>2014</strong></div>
+              <div class="spec-item"><span>Engine</span><strong>N47D20C — 2.0 diesel</strong></div>
+              <div class="spec-item"><span>First symptom</span><strong>72,000 miles</strong></div>
+              <div class="spec-item"><span>Failure mileage</span><strong>86,500 miles</strong></div>
+              <div class="spec-item"><span>Service history</span><strong>BMW dealer → independent</strong></div>
+            </div>
+            <div class="disclaimer"><strong>Disclaimer:</strong> This is an illustrative representative scenario based on common N47 failure patterns, Engines Market quote-request data, workshop consensus, and known failure-pattern data. Individual outcomes vary.</div>
+          </div>
+          <div class="image-frame reveal">
+            <img src="/case-studies/assets/isometric-320d.png" alt="Isometric 3D render of 2014 BMW 320d F30 with N47 engine and spec labels" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark" id="warning">
+      <div class="container">
+        <span class="section-kicker reveal">Warning sign</span>
+        <h2 class="reveal">The sound changed before the engine failed.</h2>
+        <p class="lead reveal">The page should make visitors recognise the warning immediately: a short cold-start rattle that becomes longer, sharper, and more metallic.</p>
+        <div class="sound-stage reveal">
+          <img src="/case-studies/assets/sound-visualisation.jpg" alt="Sound wave visualisation showing BMW N47 bag of spanners noise progressing to engine snap" />
+          <div class="sound-overlay">
+            <div class="sound-card"><small>Stage 1</small><strong> 1–2 second rattle</strong><p>Brief noise after ignition, then quiet once warm.</p></div>
+            <div class="sound-card"><small>Stage 2</small><strong> Bag of spanners</strong><p>Prolonged metallic chatter from the timing case area.</p></div>
+            <div class="sound-card"><small>Stage 3</small><strong> Sharp snap</strong><p>Complete chain failure, instant power loss, and no restart.</p></div>
+          </div>
+        </div>
+        <div class="warning-box reveal">What the owner thought: “It is probably just a diesel thing. Maybe the oil needs to circulate.” What it actually was: the rear-mounted timing chain tensioner losing hydraulic pressure overnight.</div>
+      </div>
+    </section>
+
+    <section class="section" id="timeline">
+      <div class="container">
+        <span class="section-kicker reveal">Six-month timeline</span>
+        <h2 class="reveal">Six months of ignored warnings before catastrophic failure.</h2>
+        <div class="timeline-panel reveal">
+          <img src="/case-studies/assets/timeline-bg.png" alt="BMW N47 failure timeline showing six month progression from 72k to 86.5k miles" />
+          <div class="timeline-copy">
+            <div class="thought-card"><strong>What the owner noticed</strong><p>A brief cold-start rattle became a prolonged metallic clatter over six months.</p></div>
+            <div class="thought-card"><strong>What was happening internally</strong><p>The timing chain was slapping against the guides, while metal debris silently circulated through the engine oil.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark" id="final-day">
+      <div class="container">
+        <div class="snap-panel reveal">
+          <p class="quote-large">On the M62 near Manchester, the owner accelerated to merge. At around 3,200 RPM, there was a loud snap.</p>
+          <div class="event-strip">
+            <div class="event-card"><span>Moment 01</span><strong>Motorway merge</strong><p class="text-muted">The car was accelerating under load.</p></div>
+            <div class="event-card"><span>Moment 02</span><strong>Drivetrain warning</strong><p class="text-muted">The engine immediately lost all power.</p></div>
+            <div class="event-card"><span>Moment 03</span><strong>Recovery required</strong><p class="text-muted">The car coasted to the hard shoulder and would not restart.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft" id="diagnosis">
+      <div class="container">
+        <span class="section-kicker reveal">Workshop diagnosis</span>
+        <h2 class="reveal">The specialist confirmed catastrophic mechanical failure.</h2>
+        <p class="text-muted reveal" style="margin-top:18px;">The specialist performed a compression test and borescope inspection. The diagnosis took less than an hour, and the findings were severe.</p>
+        <div class="diagnosis-images">
+          <div class="image-frame reveal"><img src="/case-studies/assets/snapped-timing-chain.png" alt="BMW N47 timing chain snapped with broken links and metal fragments" /></div>
+          <div class="image-frame reveal"><img src="/case-studies/assets/borescope-valves-pistons.png" alt="Borescope split showing bent valves and damaged pistons on cylinders 2 and 3" /></div>
+        </div>
+        <div class="diagnosis-board reveal">
+          <div class="finding"><span>Timing chain</span><strong>Snapped completely. Multiple links separated.</strong></div>
+          <div class="finding"><span>Valves</span><strong>Cylinders 2 and 3 bent after piston impact.</strong></div>
+          <div class="finding"><span>Pistons</span><strong>Crown damage and skirt scoring found.</strong></div>
+          <div class="finding"><span>Cylinder head</span><strong>Valve guides cracked and head warped.</strong></div>
+          <div class="finding"><span>Oil pickup</span><strong>Blocked with chain guide debris.</strong></div>
+          <div class="finding"><span>Turbocharger</span><strong>Unknown condition; possible debris contamination.</strong></div>
+        </div>
+        <div class="verdict-card reveal"><strong>Specialist summary</strong><p>“The engine is mechanically destroyed. Repair is not economically viable. You need a replacement engine.”</p></div>
+      </div>
+    </section>
+
+    <section class="section" id="options">
+      <div class="container">
+        <span class="section-kicker reveal">Interactive cost options</span>
+        <h2 class="reveal">Used, reconditioned, or new: the real replacement decision.</h2>
+        <p class="text-muted reveal" style="margin-top:18px;">This section works as a marketplace-style price toggle. It lets visitors compare risk, warranty, lead time, and suitability without feeling pushed into one option.</p>
+
+        <div class="toggle-shell reveal">
+          <div class="tablist" role="tablist" aria-label="Engine replacement options">
+            <button class="tab-btn" role="tab" aria-pressed="false" data-tab="used">Used Engine</button>
+            <button class="tab-btn" role="tab" aria-pressed="true" data-tab="reconditioned">Reconditioned Engine</button>
+            <button class="tab-btn" role="tab" aria-pressed="false" data-tab="new">New BMW Crate Engine</button>
+          </div>
+          <div class="toggle-body">
+            <article class="price-panel" data-panel="used">
+              <div class="price-feature grey"><span class="badge">Lowest upfront cost</span><h3>Used Engine</h3><span class="price">£2,500–£4,500</span><p class="sub">Fitted cost at an independent specialist. Best when budget matters more than long-term certainty.</p></div>
+              <div class="detail-list">
+                <div class="detail-row"><span>Supply cost</span><strong>£1,800–£3,200 [ESTIMATED — Table A]</strong></div>
+                <div class="detail-row"><span>Warranty</span><strong>1–6 months, supplier dependent</strong></div>
+                <div class="detail-row"><span>Lead time</span><strong>2–5 days</strong></div>
+                <div class="detail-row"><span>Key risk</span><strong>Unknown service history; same underlying N47 weakness</strong></div>
+                <div class="detail-row"><span>Best for</span><strong>Vehicles worth under £5,000 or owners planning to sell within 12 months</strong></div>
+              </div>
+            </article>
+
+            <article class="price-panel active" data-panel="reconditioned">
+              <div class="price-feature green"><span class="badge">Most common choice</span><h3>Reconditioned Engine</h3><span class="price">£3,500–£5,500</span><p class="sub">Default recommendation in this case because it balanced cost, warranty, and long-term confidence.</p></div>
+              <div class="detail-list">
+                <div class="detail-row"><span>Supply cost</span><strong>£3,200–£5,500 [ESTIMATED — Table A]</strong></div>
+                <div class="detail-row"><span>Warranty</span><strong>12–24 months, parts and labour</strong></div>
+                <div class="detail-row"><span>Lead time</span><strong>3–7 days</strong></div>
+                <div class="detail-row"><span>Included</span><strong>New timing chain, tensioner, guides, gaskets, seals, piston rings, bearings</strong></div>
+                <div class="detail-row"><span>Best for</span><strong>Vehicles worth £8,000–£15,000 or owners keeping the car 2+ years</strong></div>
+              </div>
+            </article>
+
+            <article class="price-panel" data-panel="new">
+              <div class="price-feature"><span class="badge">Factory option</span><h3>New BMW Crate Engine</h3><span class="price">£6,500–£11,000+</span><p class="sub">The highest certainty option, but difficult to justify unless vehicle value or insurance context supports it.</p></div>
+              <div class="detail-list">
+                <div class="detail-row"><span>Supply cost</span><strong>£4,500–£8,000+ [THIRD-PARTY — BMW dealer pricing]</strong></div>
+                <div class="detail-row"><span>Warranty</span><strong>24 months, BMW</strong></div>
+                <div class="detail-row"><span>Lead time</span><strong>7–14 days</strong></div>
+                <div class="detail-row"><span>Included</span><strong>Zero-mile factory engine and full BMW parts warranty</strong></div>
+                <div class="detail-row"><span>Best for</span><strong>High-value vehicles, insurance claims, or owners keeping the car 5+ years</strong></div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark" id="uncertainty">
+      <div class="container">
+        <div class="section-intro reveal">
+          <span class="section-kicker">Hidden risk</span>
+          <h2>The turbo question made the repair decision more complex.</h2>
+          <p class="lead">When the specialist dropped the oil sump, they found chain guide debris and fine metal particles. The turbo oil supply comes from the main oil gallery, so debris could have scored the turbo bearings.</p>
+        </div>
+        <div class="uncertainty-split">
+          <div class="risk-paths reveal">
+            <div class="path-card"><h3>Path A</h3><p>Fit only the reconditioned engine and take the risk on the existing turbo.</p><span class="cost">£4,200</span><p class="text-muted">If turbo fails later: add £800–£1,500 plus labour.</p></div>
+            <div class="path-card recommended"><h3>Path B</h3><p>Replace the turbo preventatively at the same time as the engine.</p><span class="cost">£5,050</span><p class="text-muted">£4,200 engine + £850 turbo. Risk reduced upfront.</p></div>
+          </div>
+          <div class="image-frame reveal"><img src="/case-studies/assets/oil-system-flowchart.png" alt="BMW N47 oil system diagram showing debris contamination path to turbo" /></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft" id="decision">
+      <div class="container">
+        <span class="section-kicker reveal">Fork in the road</span>
+        <h2 class="reveal">Strip it down or replace the engine?</h2>
+        <p class="text-muted reveal" style="margin-top:18px;">The owner had to decide whether to pay for a strip-down inspection or move straight to a warrantied replacement engine.</p>
+        <div class="fork-decision">
+          <div class="image-frame reveal"><img src="/case-studies/assets/fork-road.png" alt="BMW N47 repair decision — strip-down vs full engine replacement comparison" /></div>
+          <div class="decision-pair reveal">
+            <div class="decision-mini"><div class="card-head"><strong>Strip-down inspection</strong><span>Path 1</span></div><p class="text-muted">£1,200 diagnostic plus £3,500–£6,000 rebuild if salvageable. Timeline: 10–14 days.</p></div>
+            <div class="decision-mini chosen"><div class="card-head"><strong>Full replacement</strong><span>Path 2 — chosen</span></div><p class="text-muted">£4,200 fitted for a reconditioned N47 with warranty. Timeline: 5–7 days.</p></div>
+          </div>
+        </div>
+        <div class="decision-mini decision-full reveal"><div class="card-head"><strong>Warped head + scored pistons</strong><span>Why</span></div><p class="text-muted">Rebuilding would cost nearly as much as replacement without the same bottom-end warranty confidence.</p></div>
+
+        <div class="matrix reveal">
+          <div class="matrix-card"><div class="card-head"><strong>£7,500–£9,500</strong><span>Vehicle value</span></div><p class="text-muted">Repair was around 50% of vehicle value, within the watch zone but still viable.</p></div>
+          <div class="matrix-card"><div class="card-head"><strong>2–3 years</strong><span>Ownership horizon</span></div><p class="text-muted">The owner planned to keep the car long enough for warranty to matter.</p></div>
+          <div class="matrix-card"><div class="card-head"><strong>High</strong><span>Warranty importance</span></div><p class="text-muted">A young family meant another unexpected £4,000 bill was not acceptable.</p></div>
+          <div class="matrix-card"><div class="card-head"><strong>Documented repair</strong><span>Resale value</span></div><p class="text-muted">A reconditioned engine with paperwork carried more confidence than a used unit.</p></div>
+          <div class="matrix-card"><div class="card-head"><strong>Low</strong><span>Risk tolerance</span></div><p class="text-muted">The owner preferred higher upfront cost for lower long-term risk.</p></div>
+          <div class="matrix-card"><div class="card-head"><strong>70.45%</strong><span>Market context</span></div><p class="text-muted">Reconditioned engines were the most common choice in Engines Market 2025 quote data.</p></div>
+          <div class="matrix-card verdict"><div class="card-head"><strong>Reconditioned engine + preventative turbo</strong><span>Final verdict</span></div><p>The decision balanced replacement cost, warranty protection, contamination risk, and the owner’s need for peace of mind.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section outcome" id="outcome">
+      <div class="container">
+        <div class="outcome-split">
+          <div class="outcome-card reveal">
+            <span class="section-kicker">Outcome</span>
+            <h2>What happened after the repair?</h2>
+            <p class="lead">The final decision was painful upfront, but the warranty later paid off and gave the owner confidence when selling the car.</p>
+            <div class="outcome-grid">
+              <div class="outcome-metric"><span>Final cost</span><strong>£5,050 total</strong></div>
+              <div class="outcome-metric"><span>Lead time</span><strong>6 days</strong></div>
+              <div class="outcome-metric"><span>Warranty</span><strong>18 months / 18,000 miles</strong></div>
+              <div class="outcome-metric"><span>Warranty result</span><strong>£540 injector fault covered</strong></div>
+              <div class="outcome-metric"><span>Long-term result</span><strong>22 months without engine issues</strong></div>
+              <div class="outcome-metric"><span>Sold for</span><strong>£4,250</strong></div>
+            </div>
+            <div class="owner-quote">“Paying £5,000 was painful. But the warranty saved me when the injector failed. And I sold the car with a clear conscience because I could show the next owner exactly what was done.”</div>
+          </div>
+          <div class="image-frame outcome-image reveal">
+            <img src="/case-studies/assets/workshop-blur.png" alt="BMW engine workshop after successful N47 replacement repair" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="lessons">
+      <div class="container">
+        <span class="section-kicker reveal">Lessons learned</span>
+        <h2 class="reveal">The prevention maths is the strongest takeaway.</h2>
+        <p class="text-muted reveal" style="margin-top:18px;">If your N47 sounds like a bag of spanners on cold start, even for one second, book a timing chain inspection within seven days. Do not wait for the next service.</p>
+        <div class="compare-cards">
+          <div class="compare-card reveal"><small>Preventative chain replacement</small><strong>£650–£1,800</strong><p class="text-muted">Engine continues to run safely when action is taken at the first rattle.</p></div>
+          <div class="compare-card danger reveal"><small>After chain snap</small><strong>£3,500–£5,500+</strong><p class="text-muted">Car off the road for 5–7 days, with possible turbo contamination and replacement risk.</p></div>
+        </div>
+        <div class="maths-callout reveal">A £1,500 chain replacement could have avoided a £4,200 engine replacement. In this scenario, ignoring the noise cost nearly three times more.</div>
+
+        <details class="reveal">
+          <summary>Click to expand — BMW N47 OEM part numbers</summary>
+          <table class="parts-table">
+            <thead><tr><th>Component</th><th>BMW OEM Part Number</th></tr></thead>
+            <tbody>
+              <tr><td>Timing chain (primary)</td><td>11 31 7 798 980</td></tr>
+              <tr><td>Timing chain (oil pump)</td><td>11 41 7 802 343</td></tr>
+              <tr><td>Chain tensioner (primary)</td><td>11 31 7 798 982</td></tr>
+              <tr><td>Chain tensioner (oil pump)</td><td>11 41 7 802 344</td></tr>
+              <tr><td>Upper chain guide</td><td>11 31 7 798 990</td></tr>
+              <tr><td>Lower chain guide</td><td>11 31 7 798 991</td></tr>
+              <tr><td>Crankshaft sprocket bolt</td><td>11 21 7 800 341</td></tr>
+              <tr><td>Timing case gasket set</td><td>11 14 7 798 654</td></tr>
+              <tr><td>Oil pan gasket</td><td>11 13 7 798 234</td></tr>
+              <tr><td>Turbocharger (remanufactured)</td><td>11 65 7 802 345</td></tr>
+              <tr><td>Injector seal kit (per injector)</td><td>13 53 7 798 212</td></tr>
+            </tbody>
+          </table>
+        </details>
+      </div>
+    </section>
+
+    <section class="final-cta" id="quote">
+      <div class="container">
+        <div class="cta-box reveal">
+          <div>
+            <span class="section-kicker">Get a real quote</span>
+            <h2>Need a real quote for your BMW N47?</h2>
+            <p class="lead">Compare quotes from UK BMW engine specialists for timing chain failure, reconditioned engines, used engines, and full replacement options.</p>
+            <div class="btn-row">
+              <a class="btn btn-primary" href="#">Compare BMW Engine Prices</a>
+              <a class="btn btn-secondary" href="#options">Review Replacement Options</a>
+            </div>
+            <p class="source-note">Data sources used in the content: Engines Market 2025 internal quote data, workshop consensus, third-party vehicle market references, and known N47 failure-pattern data.</p>
+          </div>
+          <div class="form-card" aria-label="Quote form mockup">
+            <h3>Quick quote check</h3>
+            <p class="text-muted" style="margin-top:8px;">Replace this mock form with your live lead form or Elementor shortcode.</p>
+            <div class="form-grid">
+              <input class="input" type="text" placeholder="Registration number" aria-label="Registration number" />
+              <input class="input" type="text" placeholder="Mileage" aria-label="Mileage" />
+              <select class="input" aria-label="Current issue">
+                <option>Cold-start rattle</option>
+                <option>Chain snapped / non-start</option>
+                <option>Engine replacement quote</option>
+                <option>Not sure yet</option>
+              </select>
+              <button class="btn btn-dark fake-submit" type="button">Start Comparison</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const buttons = document.querySelectorAll('.tab-btn');
+    const panels = document.querySelectorAll('.price-panel');
+
+    buttons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const tab = button.dataset.tab;
+        buttons.forEach((btn) => btn.setAttribute('aria-pressed', String(btn === button)));
+        panels.forEach((panel) => panel.classList.toggle('active', panel.dataset.panel === tab));
+      });
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+  </script>
+    <script src="/static-nav.js?v=2" defer data-em-static-nav></script>
+</body>
+</html>
