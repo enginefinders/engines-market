@@ -81,13 +81,26 @@ export const compareResourceLinks: NavigationLink[] = [
 ];
 
 export const caseStudyResourceLinks: NavigationLink[] = [
-  { label: "BMW N47 Case Study", href: "/case-studies/bmw-n47-case-study" },
-  { label: "BMW N57 Case Study", href: "/case-studies/bmw-n57-case-study" },
-  { label: "Ford Ranger 3.2 Case Study", href: "/case-studies/ford-ranger-32-case-study" },
-  { label: "Jaguar Ingenium Case Study", href: "/case-studies/jaguar-ingenium-case-study" },
-  { label: "Jaguar XF AJDV6 Case Study", href: "/case-studies/jaguar-xf-ajdv6-case-study" },
-  { label: "Range Rover Evoque Case Study", href: "/case-studies/range-rover-evoque-case-study" },
-  { label: "Range Rover SDV6 Case Study", href: "/case-studies/range-rover-sdv6-case-study" },
+  { label: "Audi A4 Timing Chain Failure", href: "/case-studies/audi-a4-timing-chain-failure" },
+  { label: "Audi A6 Oil Consumption", href: "/case-studies/audi-a6-oil-consumption" },
+  { label: "BMW 320d Engine Replacement", href: "/case-studies/bmw-320d-engine-replacement" },
+  { label: "BMW N47 Timing Chain Failure", href: "/case-studies/bmw-n47-timing-chain-failure" },
+  { label: "BMW N57 Engine Replacement", href: "/case-studies/bmw-n57-engine-replacement" },
+  { label: "Ford Ranger Engine Replacement", href: "/case-studies/ford-ranger-engine-replacement" },
+  { label: "Ford Transit Engine Failure", href: "/case-studies/ford-transit-engine-failure" },
+  { label: "Jaguar Ingenium Timing Chain", href: "/case-studies/jaguar-ingenium-timing-chain" },
+  { label: "Jaguar XF Engine Replacement", href: "/case-studies/jaguar-xf-engine-replacement" },
+  { label: "Land Rover Discovery Crank Failure", href: "/case-studies/land-rover-discovery-crank-failure" },
+  { label: "Mercedes OM651 Timing Chain", href: "/case-studies/mercedes-om651-timing-chain" },
+  { label: "Mercedes Sprinter Engine Replacement", href: "/case-studies/mercedes-sprinter-engine-replacement" },
+  { label: "Nissan Navara Engine Failure", href: "/case-studies/nissan-navara-engine-failure" },
+  { label: "Peugeot Boxer Engine Replacement", href: "/case-studies/peugeot-boxer-engine-replacement" },
+  { label: "Range Rover Evoque Timing Chain", href: "/case-studies/range-rover-evoque-timing-chain" },
+  { label: "Range Rover SDV6 Crankshaft Failure", href: "/case-studies/range-rover-sdv6-crankshaft-failure" },
+  { label: "Toyota Hilux Engine Replacement", href: "/case-studies/toyota-hilux-engine-replacement" },
+  { label: "Vauxhall Vivaro Engine Failure", href: "/case-studies/vauxhall-vivaro-engine-failure" },
+  { label: "VW Amarok Engine Replacement", href: "/case-studies/vw-amarok-engine-replacement" },
+  { label: "VW Transporter Engine Rebuild", href: "/case-studies/vw-transporter-engine-rebuild" },
 ];
 
 export const insightResourceLinks: NavigationLink[] = [

@@ -52,10 +52,14 @@ const nextConfig: NextConfig = {
           destination: "/failures/:slug.html",
         },
         {
+          source: "/case-studies/nissan-navara-engine-failure",
+          destination: "/case-studies/nissan-navara-d40-case-study.html",
+        },
+        {
           source: "/case-studies/:slug",
           destination: "/case-studies/:slug.html",
         },
-           {
+        {
           source: "/symptoms/:slug",
           destination: "/symptoms/:slug.html",
         },
