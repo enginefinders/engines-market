@@ -1,65 +1,129 @@
-import fs from "node:fs";
-import path from "node:path";
-
 import type { NavigationLink } from "@/lib/navigation";
 
-const ignoredFileNames = new Set(["readme.md"]);
+export const serviceResourceLinks: NavigationLink[] = [
+  { label: "Engine Diagnostic", href: "/services/engine-diagnostic" },
+  { label: "Engine Fitting", href: "/services/engine-fitting" },
+  { label: "Engine Inspection Service", href: "/services/engine-inspection-service" },
+  { label: "Engine Inspection", href: "/services/engine-inspection" },
+  { label: "Engine Repair", href: "/services/engine-repair" },
+  { label: "Gearbox Replacement", href: "/services/gearbox-replacement" },
+  { label: "Rebuilt Engines", href: "/services/rebuilt-engines" },
+  { label: "Reconditioned Engines", href: "/services/reconditioned-engines" },
+  { label: "Remanufactured Engines", href: "/services/remanufactured-engines" },
+  { label: "Replacement Engines", href: "/services/replacement-engines" },
+  { label: "Supply And Fit", href: "/services/supply-and-fit" },
+  { label: "Used Engines", href: "/services/used-engines" },
+  { label: "Vehicle Recovery", href: "/services/vehicle-recovery" },
+  { label: "Automatic Gearbox Replacement", href: "/services/gearbox-replacement/automatic" },
+  { label: "Manual Gearbox Replacement", href: "/services/gearbox-replacement/manual" },
+];
 
-function titleFromSlug(slug: string) {
-  return slug
-    .replace(/\.html$/i, "")
-    .split("-")
-    .filter(Boolean)
-    .map((part) => {
-      if (part.toLowerCase() === "uk") return "UK";
-      if (part.toLowerCase() === "dpf") return "DPF";
-      if (part.toLowerCase() === "egr") return "EGR";
-      return part.charAt(0).toUpperCase() + part.slice(1);
-    })
-    .join(" ");
-}
+export const priceResourceLinks: NavigationLink[] = [
+  { label: "Crankshaft Repair Cost", href: "/prices/crankshaft-repair-cost" },
+  { label: "DPF Replacement Cost", href: "/prices/dpf-replacement-cost" },
+  { label: "Engine Fitting Cost", href: "/prices/engine-fitting-cost" },
+  { label: "Engine Replacement Cost", href: "/prices/engine-replacement-cost" },
+  { label: "Garage Labour Rates", href: "/prices/garage-labour-rates" },
+  { label: "Gearbox Replacement Cost", href: "/prices/gearbox-replacement-cost" },
+  { label: "Head Gasket Repair Cost", href: "/prices/head-gasket-repair-cost" },
+  { label: "Injector Replacement Cost", href: "/prices/injector-replacement-cost" },
+  { label: "Rebuilt Engine Cost", href: "/prices/rebuilt-engine-cost" },
+  { label: "Reconditioned Engine Cost", href: "/prices/reconditioned-engine-cost" },
+  { label: "Remanufactured Engine Cost", href: "/prices/remanfactured-engine-cost" },
+  { label: "Timing Chain Replacement Cost", href: "/prices/timing-chain-replacement-cost" },
+  { label: "Turbo Replacement Cost", href: "/prices/turbo-replacement-cost" },
+  { label: "Used Engine Cost", href: "/prices/used-engine-cost" },
+  { label: "Vehicle Recovery Cost", href: "/prices/vehicle-recovery-cost" },
+];
 
-function walkHtmlFiles(directory: string, baseHref: string): NavigationLink[] {
-  if (!fs.existsSync(directory)) {
-    return [];
-  }
-
-  const entries = fs.readdirSync(directory, { withFileTypes: true });
-
-  return entries.flatMap((entry) => {
-    const fullPath = path.join(directory, entry.name);
-
-    if (entry.isDirectory()) {
-      return walkHtmlFiles(fullPath, `${baseHref}/${entry.name}`);
-    }
-
-    if (!entry.isFile() || ignoredFileNames.has(entry.name.toLowerCase()) || !entry.name.endsWith(".html")) {
-      return [];
-    }
-
-    const slug = entry.name.replace(/\.html$/i, "");
-
-    return [{
-      label: titleFromSlug(slug),
-      href: `${baseHref}/${slug}`,
-    }];
-  });
-}
-
-export function getPublicHtmlLinks(publicFolder: string): NavigationLink[] {
-  return walkHtmlFiles(path.join(process.cwd(), "public", publicFolder), `/${publicFolder}`)
-    .sort((first, second) => first.label.localeCompare(second.label));
-}
-
-export const symptomLinks: NavigationLink[] = [
+export const failureResourceLinks: NavigationLink[] = [
+  { label: "Camshaft Failure", href: "/failures/camshaft-failure" },
+  { label: "Coolant Contamination", href: "/failures/coolant-contamination" },
+  { label: "Crankshaft Failure", href: "/failures/crankshaft-failure" },
+  { label: "Cylinder Bore Damage", href: "/failures/cylinder-bore-damage" },
+  { label: "DPF Failure", href: "/failures/dpf-failure" },
+  { label: "EGR Failure", href: "/failures/egr-failure" },
   { label: "Engine Knock", href: "/failures/engine-knock" },
   { label: "Engine Management Light", href: "/failures/engine-management-light" },
+  { label: "Engine Seizure", href: "/failures/engine-seizure" },
   { label: "Engine Vibration", href: "/failures/engine-vibration" },
-  { label: "Excessive Smoke", href: "/failures/excessive-smoke" },
   { label: "Excessive Oil Consumption", href: "/failures/excessive-oil-consumption" },
+  { label: "Excessive Smoke", href: "/failures/excessive-smoke" },
+  { label: "Fuel Pump Failure", href: "/failures/fuel-pump-failure" },
+  { label: "Head Gasket Failure", href: "/failures/head-gasket-failure" },
+  { label: "Injector Failure", href: "/failures/injector-failure" },
   { label: "Low Compression", href: "/failures/low-compression" },
   { label: "Misfiring Engine", href: "/failures/misfiring-engine" },
+  { label: "Oil Pump Failure", href: "/failures/oil-pump-failure" },
   { label: "Overheating Engine", href: "/failures/overheating-engine" },
+  { label: "Piston Failure", href: "/failures/piston-failure" },
+  { label: "Rod Bearing Failure", href: "/failures/rod-bearing-failure" },
+  { label: "Timing Belt Failure", href: "/failures/timing-belt-failure" },
+  { label: "Timing Chain Failure", href: "/failures/timing-chain-failure" },
+  { label: "Turbo Failure", href: "/failures/turbo-failure" },
+  { label: "Water Pump Failure", href: "/failures/water-pump-failure" },
+];
+
+export const compareResourceLinks: NavigationLink[] = [
+  { label: "Diesel Vs Petrol Running Cost", href: "/compare/diesel-vs-petrol-running-cost" },
+  { label: "Local Garage Vs Specialist", href: "/compare/local-garage-vs-specialist" },
+  { label: "Main Dealer Vs Independent Specialist", href: "/compare/main-dealer-vs-independent-specialist" },
+  { label: "New Vs Reconditioned Engine", href: "/compare/new-vs-reconditioned-engine" },
+  { label: "Rebuild Vs Replacement", href: "/compare/rebuild-vs-replacement" },
+  { label: "Reconditioned Vs Rebuilt Engine", href: "/compare/reconditioned-vs-rebuilt-engine" },
+  { label: "Reconditioned Vs Remanufactured Engine", href: "/compare/reconditioned-vs-remanufactured-engine" },
+  { label: "Repair Vs Reconditioned Engine", href: "/compare/repair-vs-reconditioned-engine" },
+  { label: "Repair Vs Replacement", href: "/compare/repair-vs-replacement" },
+  { label: "Repairing Vs Scrapping", href: "/compare/repairing-vs-scrapping" },
+  { label: "Supply Only Vs Supply Fit", href: "/compare/supply-only-vs-supply-fit" },
+  { label: "Used Vs Rebuilt Engine", href: "/compare/used-vs-rebuilt-engine" },
+  { label: "Used Vs Reconditioned Engine", href: "/compare/used-vs-reconditioned-engine" },
+];
+
+export const caseStudyResourceLinks: NavigationLink[] = [
+  { label: "BMW N47 Case Study", href: "/case-studies/bmw-n47-case-study" },
+  { label: "BMW N57 Case Study", href: "/case-studies/bmw-n57-case-study" },
+  { label: "Ford Ranger 3.2 Case Study", href: "/case-studies/ford-ranger-32-case-study" },
+  { label: "Jaguar Ingenium Case Study", href: "/case-studies/jaguar-ingenium-case-study" },
+  { label: "Jaguar XF AJDV6 Case Study", href: "/case-studies/jaguar-xf-ajdv6-case-study" },
+  { label: "Range Rover Evoque Case Study", href: "/case-studies/range-rover-evoque-case-study" },
+  { label: "Range Rover SDV6 Case Study", href: "/case-studies/range-rover-sdv6-case-study" },
+];
+
+export const insightResourceLinks: NavigationLink[] = [
+  { label: "Average Engine Replacement Times", href: "/insights/average-engine-replacement-times" },
+  { label: "Engine Warranty Statistics UK", href: "/insights/engine-warranty-statistics-uk" },
+  { label: "Most Common Engine Failures UK", href: "/insights/most-common-engine-failures-uk" },
+  { label: "Most Expensive Engine Repairs UK", href: "/insights/most-expensive-engine-repairs-uk" },
+  { label: "Most Reliable Diesel Engines", href: "/insights/most-reliable-diesel-engines" },
+  { label: "Most Reliable Petrol Engines", href: "/insights/most-reliable-petrol-engines" },
+  { label: "Most Replaced Engines UK", href: "/insights/most-replaced-engines-uk" },
+  { label: "UK Engine Market Report 2026", href: "/insights/uk-engine-market-report-2026" },
+  { label: "UK Engine Price Index", href: "/insights/uk-engine-price-index" },
+  { label: "UK Engine Replacement Statistics", href: "/insights/uk-engine-replacement-statistics" },
+];
+
+export const symptomLinks: NavigationLink[] = [
+  { label: "Black Smoke", href: "/symptoms/black-smoke" },
+  { label: "Blue Smoke", href: "/symptoms/blue-smoke" },
+  { label: "Check Engine Light", href: "/symptoms/check-engine-light" },
+  { label: "Coolant Loss", href: "/symptoms/coolant-loss" },
+  { label: "Coolant Warning Light", href: "/symptoms/coolant-warning-light" },
+  { label: "DPF Warning Light", href: "/symptoms/dpf-warning-light" },
+  { label: "Engine Knocking Noise", href: "/symptoms/engine-knocking-noise" },
+  { label: "Engine Overheating", href: "/symptoms/engine-overheating" },
+  { label: "Engine Rattling Noise", href: "/symptoms/engine-rattling-noise" },
+  { label: "Engine Stalling", href: "/symptoms/engine-stalling" },
+  { label: "Engine Ticking Noise", href: "/symptoms/engine-ticking-noise" },
+  { label: "Engine Won't Start", href: "/symptoms/engine-wont-start" },
+  { label: "Excessive Oil Consumption", href: "/symptoms/excessive-oil-consumption" },
+  { label: "Exhaust Leak Sound", href: "/symptoms/exhaust-leak-sound" },
+  { label: "Limp Mode", href: "/symptoms/limp-mode" },
+  { label: "Loss Of Power", href: "/symptoms/loss-of-power" },
+  { label: "Metal Shavings In Oil", href: "/symptoms/metal-shavings-in-oil" },
+  { label: "Oil Warning Light", href: "/symptoms/oil-warning-light" },
+  { label: "Rough Idle", href: "/symptoms/rough-idle" },
+  { label: "White Smoke", href: "/symptoms/white-smoke" },
 ];
 
 export const guideLinks: NavigationLink[] = [
@@ -71,3 +135,17 @@ export const guideLinks: NavigationLink[] = [
   { label: "Garage Labour Rates", href: "/prices/garage-labour-rates" },
   { label: "All Resources", href: "/resources" },
 ];
+
+const publicHtmlLinksByFolder: Record<string, NavigationLink[]> = {
+  services: serviceResourceLinks,
+  prices: priceResourceLinks,
+  failures: failureResourceLinks,
+  compare: compareResourceLinks,
+  "case-studies": caseStudyResourceLinks,
+  insights: insightResourceLinks,
+  symptoms: symptomLinks,
+};
+
+export function getPublicHtmlLinks(publicFolder: string): NavigationLink[] {
+  return publicHtmlLinksByFolder[publicFolder] ?? [];
+}
