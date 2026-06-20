@@ -4,10 +4,11 @@ import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { wpFetch } from "@/lib/wpFetch";
+import "./index.css";
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: "http://enginesmarket.co.uk/blog",
+    canonical: "https://enginesmarket.co.uk/blog",
   },
 };
 
