@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { FiChevronDown, FiMenu, FiX } from "react-icons/fi";
@@ -10,12 +11,16 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 bg-[#061a33] text-white shadow-md">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center gap-3" aria-label="Engines Market homepage">
-          <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-green-500 text-sm font-black text-[#061a33]">
-            EM
-          </span>
-          <span className="text-base font-black tracking-[0.02em] sm:text-lg">Engines Market</span>
+      <div className="mx-auto flex h-24 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <Link href="/" className="flex shrink-0 items-center" aria-label="Engines Market homepage">
+          <Image
+            src="/branding/engine-market-logo-stacked-cropped.webp"
+            alt="Engines Market"
+            width={160}
+            height={160}
+            priority
+            className="h-24 w-24 object-contain"
+          />
         </Link>
 
         <nav className="hidden items-center gap-1 text-sm font-semibold lg:flex" aria-label="Primary navigation">
@@ -23,7 +28,7 @@ export default function Navbar() {
             <div key={item.label} className="group relative">
               <Link
                 href={item.href}
-                className="flex h-16 items-center gap-1 px-3 transition hover:text-[#86efac]"
+                className="flex h-24 items-center gap-1 px-3 transition hover:text-[#86efac]"
               >
                 {item.label}
                 {item.links ? <FiChevronDown className="h-4 w-4 transition group-hover:rotate-180" aria-hidden="true" /> : null}

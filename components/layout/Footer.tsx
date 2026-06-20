@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { footerNavigation } from "@/lib/navigation";
 
@@ -7,11 +8,14 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-[1.15fr_3fr]">
           <div>
-            <Link href="/" className="inline-flex items-center gap-3" aria-label="Engines Market homepage">
-              <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-green-500 text-sm font-black text-[#061a33]">
-                EM
-              </span>
-              <span className="text-lg font-black tracking-[0.02em]">Engines Market</span>
+            <Link href="/" className="inline-flex items-center" aria-label="Engines Market homepage">
+              <Image
+                src="/branding/engine-market-logo-stacked-cropped.webp"
+                alt="Engines Market"
+                width={160}
+                height={160}
+                className="h-24 w-24 object-contain"
+              />
             </Link>
             <p className="mt-4 max-w-sm text-sm leading-6 text-slate-300">
               Compare replacement, used and reconditioned engine options from trusted UK specialists.
