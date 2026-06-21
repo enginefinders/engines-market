@@ -138,8 +138,8 @@
         "Updated regularly"
       ],
       "feed": {
-        "isDynamic": true,
-        "rowsCount": 0,
+        "isDynamic": false,
+        "rowsCount": 40,
         "columns": [
           "Year",
           "Model",
@@ -152,7 +152,328 @@
         "refreshLabel": "Refresh feed",
         "density": "premium",
         "visibleRows": 20,
-        "entries": []
+        "entries": [
+          {
+            "Year": "2014",
+            "Model": "Bentley Continental GT V8",
+            "Engine Code": "EA825",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£5,500 – £9,000",
+            "Reported Issue": "High-pressure fuel pump bolts loosen - fuel leak fire risk"
+          },
+          {
+            "Year": "2006",
+            "Model": "Bentley Flying Spur W12",
+            "Engine Code": "BR7",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£6,000 – £10,000",
+            "Reported Issue": "Overheating and coolant loss - head gasket and bolt stretch"
+          },
+          {
+            "Year": "2018",
+            "Model": "Bentley Bentayga W12",
+            "Engine Code": "BR6",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£6,500 – £12,000",
+            "Reported Issue": "Camshaft failure reported - rare but costly to repair"
+          },
+          {
+            "Year": "1987",
+            "Model": "Bentley Mulsanne S",
+            "Engine Code": "L-Series",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£4,500 – £8,000",
+            "Reported Issue": "Hydrolock from water ingress - bent conrod and engine seizure"
+          },
+          {
+            "Year": "2017",
+            "Model": "Bentley Continental GT Speed",
+            "Engine Code": "BR7",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£6,000 – £10,000",
+            "Reported Issue": "Coil pack failure - uneven idling and misfire under load"
+          },
+          {
+            "Year": "2000",
+            "Model": "Bentley Arnage Red Label",
+            "Engine Code": "L-Series",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£4,500 – £8,000",
+            "Reported Issue": "Head gasket failure - coolant loss and white smoke"
+          },
+          {
+            "Year": "2020",
+            "Model": "Bentley Flying Spur V8",
+            "Engine Code": "EA825",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£5,500 – £9,000",
+            "Reported Issue": "High-pressure fuel pump bolts - internal damage and fire risk"
+          },
+          {
+            "Year": "2016",
+            "Model": "Bentley Bentayga Diesel",
+            "Engine Code": "(Diesel)",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£5,000 – £8,500",
+            "Reported Issue": "AdBlue pump failure - emissions warning and reduced power"
+          },
+          {
+            "Year": "1991",
+            "Model": "Bentley Turbo R",
+            "Engine Code": "L-Series",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£4,500 – £8,000",
+            "Reported Issue": "Turbocharger failure - loss of boost and reduced performance"
+          },
+          {
+            "Year": "2019",
+            "Model": "Bentley Continental GT W12",
+            "Engine Code": "BR6",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£6,000 – £10,000",
+            "Reported Issue": "Engine overheating - cylinder head bolt stretch from heat"
+          },
+          {
+            "Year": "2004",
+            "Model": "Bentley Continental GT W12",
+            "Engine Code": "BR7",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£6,000 – £10,000",
+            "Reported Issue": "Electrical system faults - low voltage causes 65+ error codes"
+          },
+          {
+            "Year": "2015",
+            "Model": "Bentley Mulsanne Speed",
+            "Engine Code": "L-Series",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£4,500 – £8,000",
+            "Reported Issue": "Hydrolock from water ingress - complete engine destruction"
+          },
+          {
+            "Year": "2021",
+            "Model": "Bentley Bentayga V8",
+            "Engine Code": "EA825",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£5,500 – £9,000",
+            "Reported Issue": "Fuel pump bolt recall - potential engine bay fire"
+          },
+          {
+            "Year": "1993",
+            "Model": "Bentley Brooklands",
+            "Engine Code": "L-Series",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£4,500 – £8,000",
+            "Reported Issue": "Shattered camshaft follower - extensive valvetrain damage"
+          },
+          {
+            "Year": "2012",
+            "Model": "Bentley Continental GT W12",
+            "Engine Code": "BR7",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£6,000 – £10,000",
+            "Reported Issue": "Coolant tank swelling - overheating from failed thermostat"
+          },
+          {
+            "Year": "2007",
+            "Model": "Bentley Flying Spur W12",
+            "Engine Code": "BR7",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£6,000 – £10,000",
+            "Reported Issue": "Low oil pressure and whining noise - engine bearing wear"
+          },
+          {
+            "Year": "2019",
+            "Model": "Bentley Continental GT V8",
+            "Engine Code": "EA825",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£5,500 – £9,000",
+            "Reported Issue": "PCV valve buried under turbo plumbing - rough idle and oil leaks"
+          },
+          {
+            "Year": "2022",
+            "Model": "Bentley Flying Spur Hybrid",
+            "Engine Code": "EA839",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£5,000 – £8,500",
+            "Reported Issue": "Hybrid system coolant leak - battery cooling failure"
+          },
+          {
+            "Year": "1989",
+            "Model": "Bentley Turbo R",
+            "Engine Code": "L-Series",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£4,500 – £8,000",
+            "Reported Issue": "CIS fuel distributor gumming - clogged injectors and non-start"
+          },
+          {
+            "Year": "2017",
+            "Model": "Bentley Bentayga W12",
+            "Engine Code": "BR6",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£6,500 – £12,000",
+            "Reported Issue": "Oil and fluid leaks - split vacuum hose pipes common"
+          },
+          {
+            "Year": "2008",
+            "Model": "Bentley Brooklands Coupe",
+            "Engine Code": "L-Series",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£4,500 – £8,000",
+            "Reported Issue": "Valve cover gasket leaks - oil loss and smoking"
+          },
+          {
+            "Year": "2020",
+            "Model": "Bentley Continental GT Speed",
+            "Engine Code": "BR6",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£6,000 – £10,000",
+            "Reported Issue": "Carbon build-up on W12 valves - misfire and cold start issues"
+          },
+          {
+            "Year": "2005",
+            "Model": "Bentley Arnage T",
+            "Engine Code": "L-Series",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£4,500 – £8,000",
+            "Reported Issue": "Flat tappet wear - camshaft damage from poor lubrication"
+          },
+          {
+            "Year": "2015",
+            "Model": "Bentley Flying Spur V8",
+            "Engine Code": "EA825",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£5,500 – £9,000",
+            "Reported Issue": "Fuel system recall - improperly torqued pump bolts"
+          },
+          {
+            "Year": "1997",
+            "Model": "Bentley Brooklands",
+            "Engine Code": "L-Series",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£4,500 – £8,000",
+            "Reported Issue": "Head gasket failure - overheating and coolant consumption"
+          },
+          {
+            "Year": "2023",
+            "Model": "Bentley Bentayga EWB V8",
+            "Engine Code": "EA825",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£5,500 – £9,000",
+            "Reported Issue": "Turbo underboost code P0299 - wastegate actuator failure"
+          },
+          {
+            "Year": "2010",
+            "Model": "Bentley Continental GT Supersports",
+            "Engine Code": "BR7",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£6,000 – £10,000",
+            "Reported Issue": "W12 coil pack failure - rough running and misfire"
+          },
+          {
+            "Year": "2018",
+            "Model": "Bentley Mulsanne",
+            "Engine Code": "L-Series",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£4,500 – £8,000",
+            "Reported Issue": "Rear main seal seepage - oil leaks from ageing gaskets"
+          },
+          {
+            "Year": "2003",
+            "Model": "Bentley Continental GT W12",
+            "Engine Code": "BR7",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£6,000 – £10,000",
+            "Reported Issue": "Starter motor earthing fault - non-start despite cranking"
+          },
+          {
+            "Year": "2021",
+            "Model": "Bentley Flying Spur W12",
+            "Engine Code": "BR6",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£6,000 – £10,000",
+            "Reported Issue": "AdBlue system failure - emissions warning light"
+          },
+          {
+            "Year": "2016",
+            "Model": "Bentley Bentayga W12",
+            "Engine Code": "BR6",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£6,500 – £12,000",
+            "Reported Issue": "Fuel supply module overheating - potential fire recall"
+          },
+          {
+            "Year": "1994",
+            "Model": "Bentley Turbo R",
+            "Engine Code": "L-Series",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£4,500 – £8,000",
+            "Reported Issue": "Turbo boost loss - wastegate failure and performance drop"
+          },
+          {
+            "Year": "2013",
+            "Model": "Bentley Continental GT V8",
+            "Engine Code": "EA825",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£5,500 – £9,000",
+            "Reported Issue": "Vacuum leak from cracked lines - fluctuating idle and misfire"
+          },
+          {
+            "Year": "2019",
+            "Model": "Bentley Mulsanne Extended WB",
+            "Engine Code": "L-Series",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£4,500 – £8,000",
+            "Reported Issue": "Hydrolock risk from water ingestion - bent connecting rods"
+          },
+          {
+            "Year": "2009",
+            "Model": "Bentley Arnage Final Series",
+            "Engine Code": "L-Series",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£4,500 – £8,000",
+            "Reported Issue": "Electrical glitches and corrosion - engine management issues"
+          },
+          {
+            "Year": "2022",
+            "Model": "Bentley Continental GT W12",
+            "Engine Code": "BR6",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£6,000 – £10,000",
+            "Reported Issue": "Coolant system leak - expansion tank and hose failure"
+          },
+          {
+            "Year": "2019",
+            "Model": "Bentley Bentayga Speed",
+            "Engine Code": "BR6",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£6,500 – £12,000",
+            "Reported Issue": "W12 camshaft wear - rare but specialist rebuild required"
+          },
+          {
+            "Year": "2024",
+            "Model": "Bentley Continental GT V8",
+            "Engine Code": "EA825",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£5,500 – £9,000",
+            "Reported Issue": "High-pressure fuel pump bolt torque - manufacturing recall"
+          },
+          {
+            "Year": "2002",
+            "Model": "Bentley Arnage R",
+            "Engine Code": "L-Series",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£4,500 – £8,000",
+            "Reported Issue": "Heater tap and suction hose failure - coolant system leaks"
+          },
+          {
+            "Year": "2020",
+            "Model": "Bentley Bentayga V8",
+            "Engine Code": "EA825",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£5,500 – £9,000",
+            "Reported Issue": "PCV valve failure - oil consumption and rough idle"
+          }
+        ]
       },
       "imageSrc": "/images/brands/bentley/brand/live-feed-bentley.webp"
     },

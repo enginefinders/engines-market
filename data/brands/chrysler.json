@@ -138,8 +138,8 @@
         "Updated regularly"
       ],
       "feed": {
-        "isDynamic": true,
-        "rowsCount": 0,
+        "isDynamic": false,
+        "rowsCount": 50,
         "columns": [
           "Year",
           "Model",
@@ -152,7 +152,408 @@
         "refreshLabel": "Refresh feed",
         "density": "premium",
         "visibleRows": 20,
-        "entries": []
+        "entries": [
+          {
+            "Year": "2006",
+            "Model": "Chrysler 300C 3.0 CRD",
+            "Engine Code": "OM642",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,500 – £4,500",
+            "Reported Issue": "Oil cooler seal leak - O-rings fail in V of engine"
+          },
+          {
+            "Year": "2014",
+            "Model": "Chrysler 300 S 3.6 V6",
+            "Engine Code": "3.6L Pentastar",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£2,200 – £3,800",
+            "Reported Issue": "Rocker arm failure - ticking noise from top end"
+          },
+          {
+            "Year": "2003",
+            "Model": "Chrysler PT Cruiser 2.2 CRD",
+            "Engine Code": "2.2L CRD",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£1,500 – £2,800",
+            "Reported Issue": "Fuel injector failure - rough idle and loss of power"
+          },
+          {
+            "Year": "2007",
+            "Model": "Chrysler Grand Voyager 2.8 CRD",
+            "Engine Code": "2.8L CRD",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£1,800 – £3,200",
+            "Reported Issue": "Timing belt slip - bent valves and engine destruction"
+          },
+          {
+            "Year": "2005",
+            "Model": "Chrysler 300C 5.7 HEMI",
+            "Engine Code": "5.7L HEMI",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£3,800 – £6,500",
+            "Reported Issue": "Dropped valve seat - piston smashes valve head"
+          },
+          {
+            "Year": "2001",
+            "Model": "Chrysler Neon 2.0",
+            "Engine Code": "2.0L",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£900 – £1,800",
+            "Reported Issue": "Head gasket failure - coolant loss and overheating"
+          },
+          {
+            "Year": "2008",
+            "Model": "Chrysler Crossfire 3.2 V6",
+            "Engine Code": "3.2L",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£2,000 – £3,500",
+            "Reported Issue": "Crankshaft position sensor failure - non-start condition"
+          },
+          {
+            "Year": "2009",
+            "Model": "Chrysler 300C 2.7 V6",
+            "Engine Code": "2.7L",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£1,800 – £3,200",
+            "Reported Issue": "Engine sludge buildup - PCV system failure and oil starvation"
+          },
+          {
+            "Year": "2002",
+            "Model": "Chrysler Voyager 2.5 CRD",
+            "Engine Code": "2.5L CRD",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£1,500 – £2,800",
+            "Reported Issue": "Injector failure - expensive replacement at low mileage"
+          },
+          {
+            "Year": "2012",
+            "Model": "Chrysler 300C 3.6 V6",
+            "Engine Code": "3.6L Pentastar",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£2,200 – £3,800",
+            "Reported Issue": "Cylinder head cracking - left head failure on early units"
+          },
+          {
+            "Year": "2004",
+            "Model": "Chrysler PT Cruiser 2.4",
+            "Engine Code": "2.4L",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£1,200 – £2,200",
+            "Reported Issue": "Oil galley plug failure - oil leakage and fire risk"
+          },
+          {
+            "Year": "2006",
+            "Model": "Chrysler Grand Voyager 3.3 V6",
+            "Engine Code": "3.3L",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£1,800 – £3,000",
+            "Reported Issue": "Cylinder head gasket leak - coolant loss and misfire"
+          },
+          {
+            "Year": "2007",
+            "Model": "Chrysler 300C 3.0 CRD",
+            "Engine Code": "OM642",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,500 – £4,500",
+            "Reported Issue": "Exhaust pressure sensor failure - P0299 low boost code"
+          },
+          {
+            "Year": "2003",
+            "Model": "Chrysler Voyager 2.8 CRD",
+            "Engine Code": "2.8L CRD",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£1,800 – £3,200",
+            "Reported Issue": "Fuel pressure relief valve failure - engine cuts out"
+          },
+          {
+            "Year": "2008",
+            "Model": "Chrysler 300C 5.7 HEMI",
+            "Engine Code": "5.7L HEMI",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£3,800 – £6,500",
+            "Reported Issue": "PCV valve failure - rich running and rough idle"
+          },
+          {
+            "Year": "2005",
+            "Model": "Chrysler Crossfire 3.2 V6",
+            "Engine Code": "3.2L",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£2,000 – £3,500",
+            "Reported Issue": "Vapor canister purge valve failure - hesitation on acceleration"
+          },
+          {
+            "Year": "2010",
+            "Model": "Chrysler 300C 2.7 V6",
+            "Engine Code": "2.7L",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£1,800 – £3,200",
+            "Reported Issue": "Camshaft position sensor failure - engine stalls and dies"
+          },
+          {
+            "Year": "2004",
+            "Model": "Chrysler Grand Voyager 2.8 CRD",
+            "Engine Code": "2.8L CRD",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£1,800 – £3,200",
+            "Reported Issue": "Turbocharger failure - loss of power and black smoke"
+          },
+          {
+            "Year": "2006",
+            "Model": "Chrysler PT Cruiser 2.2 CRD",
+            "Engine Code": "2.2L CRD",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£1,500 – £2,800",
+            "Reported Issue": "Intake manifold flap failure - wedged flaps and power loss"
+          },
+          {
+            "Year": "2013",
+            "Model": "Chrysler 300 S 3.6 V6",
+            "Engine Code": "3.6L Pentastar",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£2,200 – £3,800",
+            "Reported Issue": "Spark plug tube oil leak - misfire from oil in plug wells"
+          },
+          {
+            "Year": "2002",
+            "Model": "Chrysler Neon 2.0",
+            "Engine Code": "2.0L",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£900 – £1,800",
+            "Reported Issue": "Piston slap on cold start - loud knocking from engine"
+          },
+          {
+            "Year": "2005",
+            "Model": "Chrysler 300C 3.5 V6",
+            "Engine Code": "3.5L",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£2,200 – £3,800",
+            "Reported Issue": "Multiple cylinder misfire - rough idle and stumbling acceleration"
+          },
+          {
+            "Year": "2008",
+            "Model": "Chrysler Grand Voyager 3.3 V6",
+            "Engine Code": "3.3L",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£1,800 – £3,000",
+            "Reported Issue": "Ignition coil failure - severe lack of power under load"
+          },
+          {
+            "Year": "2006",
+            "Model": "Chrysler 300C 3.0 CRD",
+            "Engine Code": "OM642",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,500 – £4,500",
+            "Reported Issue": "Glow plug failure - cold start issues and warning lights"
+          },
+          {
+            "Year": "2003",
+            "Model": "Chrysler PT Cruiser 2.4",
+            "Engine Code": "2.4L",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£1,200 – £2,200",
+            "Reported Issue": "Radiator cooling fan electrical short - engine bay fire risk"
+          },
+          {
+            "Year": "2007",
+            "Model": "Chrysler Voyager 2.5 CRD",
+            "Engine Code": "2.5L CRD",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£1,500 – £2,800",
+            "Reported Issue": "Turbo pipe failure - complete loss of boost and power"
+          },
+          {
+            "Year": "2009",
+            "Model": "Chrysler 300C 5.7 HEMI",
+            "Engine Code": "5.7L HEMI",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£3,800 – £6,500",
+            "Reported Issue": "Camshaft position sensor sync failure - loss of power"
+          },
+          {
+            "Year": "2004",
+            "Model": "Chrysler Crossfire 3.2 V6",
+            "Engine Code": "3.2L",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£2,000 – £3,500",
+            "Reported Issue": "Fuel pressure regulator failure - hard starting and stalling"
+          },
+          {
+            "Year": "2011",
+            "Model": "Chrysler 300C 3.6 V6",
+            "Engine Code": "3.6L Pentastar",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£2,200 – £3,800",
+            "Reported Issue": "Timing chain guide cracks - rattle and engine failure risk"
+          },
+          {
+            "Year": "2005",
+            "Model": "Chrysler Grand Voyager 2.8 CRD",
+            "Engine Code": "2.8L CRD",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£1,800 – £3,200",
+            "Reported Issue": "Low fuel pressure - P115B forced engine shutdown"
+          },
+          {
+            "Year": "2008",
+            "Model": "Chrysler 300C 2.7 V6",
+            "Engine Code": "2.7L",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£1,800 – £3,200",
+            "Reported Issue": "Engine hydrolock from sludge - seized engine below 100k miles"
+          },
+          {
+            "Year": "2006",
+            "Model": "Chrysler PT Cruiser 2.2 CRD",
+            "Engine Code": "2.2L CRD",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£1,500 – £2,800",
+            "Reported Issue": "Engine control unit failure - non-start and electrical faults"
+          },
+          {
+            "Year": "2003",
+            "Model": "Chrysler Voyager 2.8 CRD",
+            "Engine Code": "2.8L CRD",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£1,800 – £3,200",
+            "Reported Issue": "Crankshaft sensor failure - engine cuts out when hot"
+          },
+          {
+            "Year": "2007",
+            "Model": "Chrysler 300C 3.5 V6",
+            "Engine Code": "3.5L",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£2,200 – £3,800",
+            "Reported Issue": "Stuck valve lifter - burned exhaust valve and misfire"
+          },
+          {
+            "Year": "2004",
+            "Model": "Chrysler Neon 2.0",
+            "Engine Code": "2.0L",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£900 – £1,800",
+            "Reported Issue": "Broken cam pulley alignment dowel - rev limit issues"
+          },
+          {
+            "Year": "2015",
+            "Model": "Chrysler 300 S 3.6 V6",
+            "Engine Code": "3.6L Pentastar",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£2,200 – £3,800",
+            "Reported Issue": "Cylinder head cracking - coolant leak and misfire"
+          },
+          {
+            "Year": "2006",
+            "Model": "Chrysler Grand Voyager 3.3 V6",
+            "Engine Code": "3.3L",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£1,800 – £3,000",
+            "Reported Issue": "Idle air control valve failure - stalling when driving"
+          },
+          {
+            "Year": "2005",
+            "Model": "Chrysler 300C 3.0 CRD",
+            "Engine Code": "OM642",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,500 – £4,500",
+            "Reported Issue": "Coolant loss from reservoir - pipework and cap issues"
+          },
+          {
+            "Year": "2002",
+            "Model": "Chrysler PT Cruiser 2.4",
+            "Engine Code": "2.4L",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£1,200 – £2,200",
+            "Reported Issue": "Balance shaft bearing debris - loss of oil pressure"
+          },
+          {
+            "Year": "2008",
+            "Model": "Chrysler 300C 5.7 HEMI",
+            "Engine Code": "5.7L HEMI",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£3,800 – £6,500",
+            "Reported Issue": "Spun main bearing - crankshaft damage and engine rebuild"
+          },
+          {
+            "Year": "2005",
+            "Model": "Chrysler Crossfire 3.2 V6",
+            "Engine Code": "3.2L",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£2,000 – £3,500",
+            "Reported Issue": "Camshaft adjuster solenoid failure - rough idle and power loss"
+          },
+          {
+            "Year": "2009",
+            "Model": "Chrysler Grand Voyager 2.8 CRD",
+            "Engine Code": "2.8L CRD",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£1,800 – £3,200",
+            "Reported Issue": "High-pressure fuel pump failure - non-start and fuel contamination"
+          },
+          {
+            "Year": "2007",
+            "Model": "Chrysler 300C 2.7 V6",
+            "Engine Code": "2.7L",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£1,800 – £3,200",
+            "Reported Issue": "Multiple cylinder misfire - P0300 random misfire codes"
+          },
+          {
+            "Year": "2004",
+            "Model": "Chrysler Voyager 2.5 CRD",
+            "Engine Code": "2.5L CRD",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£1,500 – £2,800",
+            "Reported Issue": "Fuel solenoid failure - engine cut out on motorway"
+          },
+          {
+            "Year": "2010",
+            "Model": "Chrysler 300C 3.6 V6",
+            "Engine Code": "3.6L Pentastar",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£2,200 – £3,800",
+            "Reported Issue": "Rocker arm needle bearing failure - ticking and misfire"
+          },
+          {
+            "Year": "2006",
+            "Model": "Chrysler PT Cruiser 2.2 CRD",
+            "Engine Code": "2.2L CRD",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£1,500 – £2,800",
+            "Reported Issue": "Turbocharger failure - loss of power when engine hot"
+          },
+          {
+            "Year": "2005",
+            "Model": "Chrysler 300C 3.5 V6",
+            "Engine Code": "3.5L",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£2,200 – £3,800",
+            "Reported Issue": "TIPM electrical faults - random engine management issues"
+          },
+          {
+            "Year": "2003",
+            "Model": "Chrysler Neon 2.0",
+            "Engine Code": "2.0L",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£900 – £1,800",
+            "Reported Issue": "Transmission issues - hard to find mechanic to repair"
+          },
+          {
+            "Year": "2008",
+            "Model": "Chrysler 300C 3.0 CRD",
+            "Engine Code": "OM642",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,500 – £4,500",
+            "Reported Issue": "Turbo underboost - P0299 code despite new turbo"
+          },
+          {
+            "Year": "2013",
+            "Model": "Chrysler 300 S 3.6 V6",
+            "Engine Code": "3.6L Pentastar",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£2,200 – £3,800",
+            "Reported Issue": "Cylinder head casting defect - engine replacement required"
+          }
+        ]
       },
       "imageSrc": "/images/brands/chrysler/brand/live-feed-chrysler.webp"
     },

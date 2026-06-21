@@ -138,8 +138,8 @@
         "Updated regularly"
       ],
       "feed": {
-        "isDynamic": true,
-        "rowsCount": 0,
+        "isDynamic": false,
+        "rowsCount": 100,
         "columns": [
           "Year",
           "Model",
@@ -152,7 +152,808 @@
         "refreshLabel": "Refresh feed",
         "density": "premium",
         "visibleRows": 20,
-        "entries": []
+        "entries": [
+          {
+            "Year": "2015",
+            "Model": "Volvo V60 D4",
+            "Engine Code": "D4204T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,200 – £3,800",
+            "Reported Issue": "EGR cooler blockage - carbon paste causes valve sticking"
+          },
+          {
+            "Year": "2017",
+            "Model": "Volvo XC60 D4",
+            "Engine Code": "D4204T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,200 – £3,800",
+            "Reported Issue": "Intake manifold melting - fire risk on 2014-2019 models"
+          },
+          {
+            "Year": "2016",
+            "Model": "Volvo V70 D5",
+            "Engine Code": "D5244T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,500 – £4,200",
+            "Reported Issue": "Injector leak-off - rough running first few seconds after start"
+          },
+          {
+            "Year": "2014",
+            "Model": "Volvo S60 T5",
+            "Engine Code": "B4204T",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£2,500 – £4,500",
+            "Reported Issue": "Piston ring carbon buildup - excessive oil consumption"
+          },
+          {
+            "Year": "2018",
+            "Model": "Volvo XC90 T6",
+            "Engine Code": "B4204T27",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£3,000 – £5,500",
+            "Reported Issue": "Clogged oil rings - oil consumption at high mileage"
+          },
+          {
+            "Year": "2012",
+            "Model": "Volvo V50 D2",
+            "Engine Code": "D4162T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£1,800 – £3,000",
+            "Reported Issue": "Lumpy idle and stalling - engine vibration under load"
+          },
+          {
+            "Year": "2015",
+            "Model": "Volvo V40 D4",
+            "Engine Code": "D4204T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,200 – £3,800",
+            "Reported Issue": "EGR valve/cooler failure - check engine light and limp mode"
+          },
+          {
+            "Year": "2016",
+            "Model": "Volvo XC90 D5",
+            "Engine Code": "D5244T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,500 – £4,200",
+            "Reported Issue": "Rising oil level - diesel dilution from DPF regens"
+          },
+          {
+            "Year": "2013",
+            "Model": "Volvo S80 D5",
+            "Engine Code": "D5244T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,500 – £4,200",
+            "Reported Issue": "Alternator pulley failure - can cause major engine damage"
+          },
+          {
+            "Year": "2017",
+            "Model": "Volvo V90 D4",
+            "Engine Code": "D4204T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,200 – £3,800",
+            "Reported Issue": "EGR system clogging - carbon deposits in intake manifold"
+          },
+          {
+            "Year": "2014",
+            "Model": "Volvo XC70 D5",
+            "Engine Code": "D5244T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,500 – £4,200",
+            "Reported Issue": "Cam belt pulley failure - engine rebuilt under warranty"
+          },
+          {
+            "Year": "2018",
+            "Model": "Volvo S90 T5",
+            "Engine Code": "B4204T",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£2,500 – £4,500",
+            "Reported Issue": "Oil consumption - early VEA petrol design flaw"
+          },
+          {
+            "Year": "2011",
+            "Model": "Volvo C30 D2",
+            "Engine Code": "D4162T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£1,800 – £3,000",
+            "Reported Issue": "Cylinder head/block failure - coolant loss when warm"
+          },
+          {
+            "Year": "2016",
+            "Model": "Volvo XC60 D5",
+            "Engine Code": "D5244T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,500 – £4,200",
+            "Reported Issue": "Injector failure - rough running and black smoke"
+          },
+          {
+            "Year": "2015",
+            "Model": "Volvo V60 T5",
+            "Engine Code": "B4204T",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£2,500 – £4,500",
+            "Reported Issue": "Fuel pressure regulator failure - hot start issues"
+          },
+          {
+            "Year": "2017",
+            "Model": "Volvo XC90 T5",
+            "Engine Code": "B4204T",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£2,500 – £4,500",
+            "Reported Issue": "Carbon buildup on throttle body - rough starts"
+          },
+          {
+            "Year": "2013",
+            "Model": "Volvo V70 D3",
+            "Engine Code": "D5204T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,200 – £3,800",
+            "Reported Issue": "EGR valve clogging - carbon deposits and rough idle"
+          },
+          {
+            "Year": "2016",
+            "Model": "Volvo S60 D4",
+            "Engine Code": "D4204T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,200 – £3,800",
+            "Reported Issue": "Engine stutter at low revs - 1500-1800 RPM hesitation"
+          },
+          {
+            "Year": "2014",
+            "Model": "Volvo V40 D2",
+            "Engine Code": "D4162T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£1,800 – £3,000",
+            "Reported Issue": "Oxygen sensor failure - check engine light and limp mode"
+          },
+          {
+            "Year": "2018",
+            "Model": "Volvo XC60 T6",
+            "Engine Code": "B4204T27",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£3,000 – £5,500",
+            "Reported Issue": "Oil consumption - clogged oil rings at 200,000 km"
+          },
+          {
+            "Year": "2012",
+            "Model": "Volvo XC90 2.5T",
+            "Engine Code": "B5254T2",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£2,500 – £4,500",
+            "Reported Issue": "Turbocharger shaft wear - oil consumption after 200,000 km"
+          },
+          {
+            "Year": "2015",
+            "Model": "Volvo V60 D3",
+            "Engine Code": "D4204T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,200 – £3,800",
+            "Reported Issue": "Cracked intake manifold - EGR-related failure"
+          },
+          {
+            "Year": "2017",
+            "Model": "Volvo S90 D4",
+            "Engine Code": "D4204T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,200 – £3,800",
+            "Reported Issue": "EMAP pipe blockage - EGR cooler soot accumulation"
+          },
+          {
+            "Year": "2016",
+            "Model": "Volvo XC70 D4",
+            "Engine Code": "D4204T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,200 – £3,800",
+            "Reported Issue": "Coolant pressurisation - EGR cooler coolant leak"
+          },
+          {
+            "Year": "2013",
+            "Model": "Volvo S60 T5",
+            "Engine Code": "B5254T12",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£2,500 – £4,500",
+            "Reported Issue": "Oil breather diaphragm failure - oil consumption"
+          },
+          {
+            "Year": "2018",
+            "Model": "Volvo V90 T6",
+            "Engine Code": "B4204T27",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£3,000 – £5,500",
+            "Reported Issue": "Supercharger clutch failure - loss of low-end power"
+          },
+          {
+            "Year": "2014",
+            "Model": "Volvo V50 D3",
+            "Engine Code": "D5204T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,200 – £3,800",
+            "Reported Issue": "Injector contamination - rough running from 100,000 km"
+          },
+          {
+            "Year": "2016",
+            "Model": "Volvo XC90 D4",
+            "Engine Code": "D4204T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,200 – £3,800",
+            "Reported Issue": "Oil consumption - carbon accumulation in cylinders"
+          },
+          {
+            "Year": "2015",
+            "Model": "Volvo V40 T4",
+            "Engine Code": "B4204T",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£2,200 – £4,000",
+            "Reported Issue": "Timing chain VVT pin failure - chain snap risk"
+          },
+          {
+            "Year": "2017",
+            "Model": "Volvo S60 D4",
+            "Engine Code": "D4204T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,200 – £3,800",
+            "Reported Issue": "Turbo underboost - P2262 code and lack of power"
+          },
+          {
+            "Year": "2012",
+            "Model": "Volvo XC70 D5",
+            "Engine Code": "D5244T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,500 – £4,200",
+            "Reported Issue": "Hot start issues - injector leak-off common D5 fault"
+          },
+          {
+            "Year": "2018",
+            "Model": "Volvo XC60 T5",
+            "Engine Code": "B4204T",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£2,500 – £4,500",
+            "Reported Issue": "Oil consumption - 2014-2016 VEA petrol design flaw"
+          },
+          {
+            "Year": "2016",
+            "Model": "Volvo V90 D5",
+            "Engine Code": "D5244T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,500 – £4,200",
+            "Reported Issue": "DPF regeneration issues - oil level rises from diesel dilution"
+          },
+          {
+            "Year": "2013",
+            "Model": "Volvo C30 T5",
+            "Engine Code": "B5254T7",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£2,500 – £4,500",
+            "Reported Issue": "Fuel pressure regulator diaphragm rupture - hot start misfire"
+          },
+          {
+            "Year": "2015",
+            "Model": "Volvo V60 D4",
+            "Engine Code": "D4204T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,200 – £3,800",
+            "Reported Issue": "Oil leak - cam cover gasket weeping at rear"
+          },
+          {
+            "Year": "2017",
+            "Model": "Volvo XC90 T5",
+            "Engine Code": "B4204T",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£2,500 – £4,500",
+            "Reported Issue": "Throttle body carbon buildup - high fuel consumption"
+          },
+          {
+            "Year": "2016",
+            "Model": "Volvo S80 D4",
+            "Engine Code": "D4204T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,200 – £3,800",
+            "Reported Issue": "Porous engine block - oil leak between engine and gearbox"
+          },
+          {
+            "Year": "2014",
+            "Model": "Volvo V40 D2",
+            "Engine Code": "D4162T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£1,800 – £3,000",
+            "Reported Issue": "DPF clogging - short journeys cause soot accumulation"
+          },
+          {
+            "Year": "2018",
+            "Model": "Volvo V60 T6",
+            "Engine Code": "B4204T27",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£3,000 – £5,500",
+            "Reported Issue": "Supercharger failure - mechanical compressor issues"
+          },
+          {
+            "Year": "2012",
+            "Model": "Volvo XC90 D5",
+            "Engine Code": "D5244T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,500 – £4,200",
+            "Reported Issue": "Glow plug leak - loss of compression and cold start issues"
+          },
+          {
+            "Year": "2015",
+            "Model": "Volvo S60 D4",
+            "Engine Code": "D4204T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,200 – £3,800",
+            "Reported Issue": "EGR valve sticking - carbon paste from overcooling"
+          },
+          {
+            "Year": "2017",
+            "Model": "Volvo XC60 D4",
+            "Engine Code": "D4204T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,200 – £3,800",
+            "Reported Issue": "Inlet manifold cracking - EGR fire risk recall"
+          },
+          {
+            "Year": "2013",
+            "Model": "Volvo V70 T5",
+            "Engine Code": "B5254T12",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£2,500 – £4,500",
+            "Reported Issue": "Piston ring carbon buildup - oil consumption at high mileage"
+          },
+          {
+            "Year": "2016",
+            "Model": "Volvo S90 D4",
+            "Engine Code": "D4204T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,200 – £3,800",
+            "Reported Issue": "EMAP pipe soot blockage - EGR system failure"
+          },
+          {
+            "Year": "2018",
+            "Model": "Volvo XC90 D5",
+            "Engine Code": "D5244T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,500 – £4,200",
+            "Reported Issue": "High-pressure fuel pump failure - non-start condition"
+          },
+          {
+            "Year": "2014",
+            "Model": "Volvo V50 D2",
+            "Engine Code": "D4162T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£1,800 – £3,000",
+            "Reported Issue": "Engine vibration under load - strong shuddering"
+          },
+          {
+            "Year": "2015",
+            "Model": "Volvo V60 T5",
+            "Engine Code": "B4204T",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£2,500 – £4,500",
+            "Reported Issue": "Timing chain VVT pin failure - B4204T7 common issue"
+          },
+          {
+            "Year": "2017",
+            "Model": "Volvo XC70 D4",
+            "Engine Code": "D4204T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,200 – £3,800",
+            "Reported Issue": "Oil consumption - piston ring carbon accumulation"
+          },
+          {
+            "Year": "2016",
+            "Model": "Volvo S60 T6",
+            "Engine Code": "B4204T27",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£3,000 – £5,500",
+            "Reported Issue": "Supercharger clutch wear - loss of power at low RPM"
+          },
+          {
+            "Year": "2012",
+            "Model": "Volvo C30 D3",
+            "Engine Code": "D5204T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,200 – £3,800",
+            "Reported Issue": "Injector failure - rough running from 100,000 km"
+          },
+          {
+            "Year": "2018",
+            "Model": "Volvo V90 T5",
+            "Engine Code": "B4204T",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£2,500 – £4,500",
+            "Reported Issue": "Oil consumption - VEA petrol engine design flaw"
+          },
+          {
+            "Year": "2015",
+            "Model": "Volvo XC60 D5",
+            "Engine Code": "D5244T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,500 – £4,200",
+            "Reported Issue": "Cam belt pulley failure - plastic pulley fails on D5"
+          },
+          {
+            "Year": "2017",
+            "Model": "Volvo XC90 D4",
+            "Engine Code": "D4204T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,200 – £3,800",
+            "Reported Issue": "Intake manifold melt - fire risk on 2014-2019 VEA engines"
+          },
+          {
+            "Year": "2014",
+            "Model": "Volvo V40 T4",
+            "Engine Code": "B4204T",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£2,200 – £4,000",
+            "Reported Issue": "Fuel pressure regulator - hot start misfire"
+          },
+          {
+            "Year": "2016",
+            "Model": "Volvo V70 D4",
+            "Engine Code": "D4204T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,200 – £3,800",
+            "Reported Issue": "EGR valve/cooler clogging - carbon paste and sticking"
+          },
+          {
+            "Year": "2018",
+            "Model": "Volvo S90 T6",
+            "Engine Code": "B4204T27",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£3,000 – £5,500",
+            "Reported Issue": "Oil consumption - clogged oil rings at higher mileage"
+          },
+          {
+            "Year": "2013",
+            "Model": "Volvo XC70 T5",
+            "Engine Code": "B5254T7",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£2,500 – £4,500",
+            "Reported Issue": "Fuel pressure regulator diaphragm - rough starts and high fuel use"
+          },
+          {
+            "Year": "2015",
+            "Model": "Volvo S60 D3",
+            "Engine Code": "D4204T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,200 – £3,800",
+            "Reported Issue": "Engine stutter at 1500-1800 RPM - D4 common issue"
+          },
+          {
+            "Year": "2017",
+            "Model": "Volvo XC60 T5",
+            "Engine Code": "B4204T",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£2,500 – £4,500",
+            "Reported Issue": "Carbon buildup on throttle body - significant reduction in performance"
+          },
+          {
+            "Year": "2016",
+            "Model": "Volvo V90 D5",
+            "Engine Code": "D5244T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,500 – £4,200",
+            "Reported Issue": "Rising oil level - diesel dilution from DPF regeneration"
+          },
+          {
+            "Year": "2014",
+            "Model": "Volvo V40 D2",
+            "Engine Code": "D4162T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£1,800 – £3,000",
+            "Reported Issue": "Cylinder head gasket failure - low coolant warning when warm"
+          },
+          {
+            "Year": "2018",
+            "Model": "Volvo XC90 T6",
+            "Engine Code": "B4204T27",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£3,000 – £5,500",
+            "Reported Issue": "Supercharger failure - mechanical compressor bearing wear"
+          },
+          {
+            "Year": "2012",
+            "Model": "Volvo S80 D5",
+            "Engine Code": "D5244T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,500 – £4,200",
+            "Reported Issue": "Hot start injector leak-off - common 5-cyl diesel issue"
+          },
+          {
+            "Year": "2015",
+            "Model": "Volvo V60 D4",
+            "Engine Code": "D4204T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,200 – £3,800",
+            "Reported Issue": "EMAP pipe blockage - soot accumulation from EGR system"
+          },
+          {
+            "Year": "2017",
+            "Model": "Volvo XC90 D5",
+            "Engine Code": "D5244T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,500 – £4,200",
+            "Reported Issue": "High-pressure fuel pump failure - no fuel to injectors"
+          },
+          {
+            "Year": "2016",
+            "Model": "Volvo S60 T5",
+            "Engine Code": "B4204T",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£2,500 – £4,500",
+            "Reported Issue": "Oil breather diaphragm failure - oil consumption and smoke"
+          },
+          {
+            "Year": "2013",
+            "Model": "Volvo V70 D3",
+            "Engine Code": "D5204T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,200 – £3,800",
+            "Reported Issue": "Injector contamination - rough running from 100,000 km"
+          },
+          {
+            "Year": "2018",
+            "Model": "Volvo V90 T5",
+            "Engine Code": "B4204T",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£2,500 – £4,500",
+            "Reported Issue": "Timing chain VVT pin failure - B4204T7 common issue"
+          },
+          {
+            "Year": "2015",
+            "Model": "Volvo XC60 D4",
+            "Engine Code": "D4204T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,200 – £3,800",
+            "Reported Issue": "Coolant pressurisation - EGR cooler failure"
+          },
+          {
+            "Year": "2017",
+            "Model": "Volvo S90 D4",
+            "Engine Code": "D4204T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,200 – £3,800",
+            "Reported Issue": "Turbo underboost - P02CB code and lack of power"
+          },
+          {
+            "Year": "2014",
+            "Model": "Volvo V50 D2",
+            "Engine Code": "D4162T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£1,800 – £3,000",
+            "Reported Issue": "Lumpy idle when cold - 30 seconds to a minute then fine"
+          },
+          {
+            "Year": "2016",
+            "Model": "Volvo XC70 D5",
+            "Engine Code": "D5244T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,500 – £4,200",
+            "Reported Issue": "Alternator pulley failure - common D5 weakness"
+          },
+          {
+            "Year": "2018",
+            "Model": "Volvo XC60 T6",
+            "Engine Code": "B4204T27",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£3,000 – £5,500",
+            "Reported Issue": "Supercharger clutch failure - low-end power loss"
+          },
+          {
+            "Year": "2015",
+            "Model": "Volvo S60 D4",
+            "Engine Code": "D4204T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,200 – £3,800",
+            "Reported Issue": "Intake manifold melt - EGR fire risk recall"
+          },
+          {
+            "Year": "2017",
+            "Model": "Volvo V90 D4",
+            "Engine Code": "D4204T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,200 – £3,800",
+            "Reported Issue": "EGR valve sticking - carbon paste from overcooling"
+          },
+          {
+            "Year": "2016",
+            "Model": "Volvo V60 T5",
+            "Engine Code": "B4204T",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£2,500 – £4,500",
+            "Reported Issue": "Oil consumption - 2014-2016 VEA petrol design flaw"
+          },
+          {
+            "Year": "2013",
+            "Model": "Volvo C30 T5",
+            "Engine Code": "B5254T7",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£2,500 – £4,500",
+            "Reported Issue": "Fuel pressure regulator failure - hot start and misfire"
+          },
+          {
+            "Year": "2015",
+            "Model": "Volvo V40 D4",
+            "Engine Code": "D4204T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,200 – £3,800",
+            "Reported Issue": "Oil leak - cam cover gasket weeping at rear"
+          },
+          {
+            "Year": "2018",
+            "Model": "Volvo XC90 D5",
+            "Engine Code": "D5244T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,500 – £4,200",
+            "Reported Issue": "Glow plug leak - loss of compression and cold start issues"
+          },
+          {
+            "Year": "2017",
+            "Model": "Volvo S60 D4",
+            "Engine Code": "D4204T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,200 – £3,800",
+            "Reported Issue": "Porous engine block - oil leak between engine and gearbox"
+          },
+          {
+            "Year": "2014",
+            "Model": "Volvo V60 D3",
+            "Engine Code": "D4204T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,200 – £3,800",
+            "Reported Issue": "Engine stutter at low revs - 1500-1800 RPM hesitation"
+          },
+          {
+            "Year": "2016",
+            "Model": "Volvo XC90 T6",
+            "Engine Code": "B4204T27",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£3,000 – £5,500",
+            "Reported Issue": "Clogged oil rings - oil consumption at high mileage"
+          },
+          {
+            "Year": "2015",
+            "Model": "Volvo S80 D4",
+            "Engine Code": "D4204T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,200 – £3,800",
+            "Reported Issue": "EMAP pipe blockage - soot accumulation from EGR system"
+          },
+          {
+            "Year": "2018",
+            "Model": "Volvo V90 T6",
+            "Engine Code": "B4204T27",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£3,000 – £5,500",
+            "Reported Issue": "Supercharger bearing wear - mechanical compressor failure"
+          },
+          {
+            "Year": "2012",
+            "Model": "Volvo V70 T5",
+            "Engine Code": "B5254T12",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£2,500 – £4,500",
+            "Reported Issue": "Piston ring carbon buildup - excessive oil consumption"
+          },
+          {
+            "Year": "2016",
+            "Model": "Volvo XC60 D4",
+            "Engine Code": "D4204T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,200 – £3,800",
+            "Reported Issue": "EGR valve/cooler failure - check engine light and limp mode"
+          },
+          {
+            "Year": "2017",
+            "Model": "Volvo S90 T5",
+            "Engine Code": "B4204T",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£2,500 – £4,500",
+            "Reported Issue": "Throttle body carbon buildup - rough starts and high fuel use"
+          },
+          {
+            "Year": "2015",
+            "Model": "Volvo V40 D2",
+            "Engine Code": "D4162T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£1,800 – £3,000",
+            "Reported Issue": "DPF clogging - oxygen sensor failure and limp mode"
+          },
+          {
+            "Year": "2018",
+            "Model": "Volvo XC60 T5",
+            "Engine Code": "B4204T",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£2,500 – £4,500",
+            "Reported Issue": "Timing chain VVT pin failure - B4204T7 common issue"
+          },
+          {
+            "Year": "2016",
+            "Model": "Volvo S60 D4",
+            "Engine Code": "D4204T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,200 – £3,800",
+            "Reported Issue": "Intake manifold cracking - EGR-related failure"
+          },
+          {
+            "Year": "2017",
+            "Model": "Volvo V90 D5",
+            "Engine Code": "D5244T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,500 – £4,200",
+            "Reported Issue": "High-pressure fuel pump failure - non-start condition"
+          },
+          {
+            "Year": "2013",
+            "Model": "Volvo V50 D3",
+            "Engine Code": "D5204T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,200 – £3,800",
+            "Reported Issue": "Injector failure - rough running from 100,000 km"
+          },
+          {
+            "Year": "2015",
+            "Model": "Volvo XC90 D5",
+            "Engine Code": "D5244T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,500 – £4,200",
+            "Reported Issue": "Rising oil level - diesel dilution from DPF regens"
+          },
+          {
+            "Year": "2018",
+            "Model": "Volvo V60 T6",
+            "Engine Code": "B4204T27",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£3,000 – £5,500",
+            "Reported Issue": "Supercharger clutch wear - loss of power at low RPM"
+          },
+          {
+            "Year": "2016",
+            "Model": "Volvo S90 D4",
+            "Engine Code": "D4204T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,200 – £3,800",
+            "Reported Issue": "Oil consumption - carbon accumulation in cylinders"
+          },
+          {
+            "Year": "2014",
+            "Model": "Volvo V70 D4",
+            "Engine Code": "D4204T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,200 – £3,800",
+            "Reported Issue": "Coolant pressurisation - EGR cooler coolant leak"
+          },
+          {
+            "Year": "2017",
+            "Model": "Volvo XC90 T6",
+            "Engine Code": "B4204T27",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£3,000 – £5,500",
+            "Reported Issue": "Oil consumption - clogged oil rings at 200,000 km"
+          },
+          {
+            "Year": "2015",
+            "Model": "Volvo S60 T5",
+            "Engine Code": "B4204T",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£2,500 – £4,500",
+            "Reported Issue": "Oil breather diaphragm failure - oil consumption and smoke"
+          },
+          {
+            "Year": "2012",
+            "Model": "Volvo C30 D2",
+            "Engine Code": "D4162T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£1,800 – £3,000",
+            "Reported Issue": "Cylinder head/block failure - low coolant warning when warm"
+          },
+          {
+            "Year": "2018",
+            "Model": "Volvo XC90 D5",
+            "Engine Code": "D5244T",
+            "Fuel": "Diesel",
+            "Avg. Quoted Price": "£2,500 – £4,200",
+            "Reported Issue": "Alternator pulley failure - can cause major engine damage"
+          }
+        ]
       },
       "imageSrc": "/images/brands/volvo/brand/live-feed-volvo.webp"
     },

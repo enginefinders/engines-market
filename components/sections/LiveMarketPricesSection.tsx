@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import type { LiveMarketPriceEntry, LiveMarketPricesData, ModelsSectionData } from "@/types/brand";
 import { CtaStrip } from "@/components/ui/CalloutCards";
 import Container from "@/components/ui/Container";
@@ -24,6 +24,37 @@ type FilterTab = {
   label: string;
   matchers: string[];
 };
+
+const TAB_GAP_PX = 6;
+const MOBILE_BREAKPOINT_PX = 640;
+const DROPDOWN_ITEM_HEIGHT_PX = 40;
+const DROPDOWN_ITEM_GAP_PX = 4;
+const DROPDOWN_PADDING_PX = 16;
+const GENERIC_MATCHERS = new Set(["series", "class", "engine", "engines", "model", "models"]);
+
+function normalizeFilterText(value: string) {
+  return value
+    .toLowerCase()
+    .replace(/&/g, " and ")
+    .replace(/mercedes-benz/g, "mercedes")
+    .replace(/mercedes benz/g, "mercedes")
+    .replace(/rolls-royce/g, "rolls royce")
+    .replace(/a-class/g, "a class")
+    .replace(/b-class/g, "b class")
+    .replace(/c-class/g, "c class")
+    .replace(/e-class/g, "e class")
+    .replace(/g-class/g, "g class")
+    .replace(/s-class/g, "s class")
+    .replace(/glc-class/g, "glc class")
+    .replace(/gla-class/g, "gla class")
+    .replace(/gle-class/g, "gle class")
+    .replace(/glk-class/g, "glk class")
+    .replace(/m-class/g, "m class")
+    .replace(/r-class/g, "r class")
+    .replace(/[^a-z0-9]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
 
 function RefreshIcon({ spinning = false }: { spinning?: boolean }) {
   return (
@@ -50,6 +81,16 @@ function ChevronDownIcon({ open }: { open: boolean }) {
       aria-hidden="true"
     >
       <polyline points="6,9 12,15 18,9" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function InfoAlertIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-[14px] w-[14px]" fill="none" aria-hidden="true">
+      <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="2" />
+      <path d="M12 7.5h.01" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" />
+      <path d="M12 11v5" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" />
     </svg>
   );
 }
@@ -93,17 +134,34 @@ function cleanModelLabel(label: string) {
     .trim();
 }
 
+function sanitizeMatchers(label: string, matchers: string[]) {
+  const labelMatcher = normalizeFilterText(label);
+  const deduped = new Set<string>();
+
+  for (const matcher of [labelMatcher, ...matchers.map((value) => normalizeFilterText(value))]) {
+    if (!matcher) continue;
+    if (GENERIC_MATCHERS.has(matcher)) continue;
+
+    const parts = matcher.split(" ").filter(Boolean);
+    if (parts.length === 1 && !/\d/.test(parts[0]) && parts[0].length < 4) continue;
+
+    deduped.add(matcher);
+  }
+
+  return [...deduped];
+}
+
 function buildFilterTabs(modelCards?: ModelsSectionData["cards"]): FilterTab[] {
   if (!modelCards?.length) return [];
 
   const tabs = modelCards.map((card) => {
     const label = cleanModelLabel(card.h3);
-    const slugWords = card.slug.replace(/-/g, " ").trim();
+    const slugWords = cleanModelLabel(card.slug.replace(/-/g, " ").trim());
 
     return {
       key: card.slug,
       label,
-      matchers: [label.toLowerCase(), slugWords.toLowerCase()],
+      matchers: sanitizeMatchers(label, [slugWords]),
     };
   });
 
@@ -115,6 +173,23 @@ function buildFilterTabs(modelCards?: ModelsSectionData["cards"]): FilterTab[] {
     },
     ...tabs,
   ];
+}
+
+function sanitizeFilterTabs(filterTabs: FilterTab[]) {
+  return filterTabs.map((tab) => {
+    if (tab.key === "all") {
+      return {
+        ...tab,
+        label: "All",
+      };
+    }
+
+    return {
+      ...tab,
+      label: cleanModelLabel(tab.label),
+      matchers: sanitizeMatchers(tab.label, tab.matchers),
+    };
+  });
 }
 
 function formatUpdatedAt(clock: Date) {
@@ -137,7 +212,12 @@ export default function LiveMarketPricesSection({
   const [clock, setClock] = useState(() => new Date(initialTimestamp ?? "2025-01-01T12:00:00.000Z"));
   const [activeTab, setActiveTab] = useState("all");
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [notesOpen, setNotesOpen] = useState(false);
+  const [visibleTabCount, setVisibleTabCount] = useState(4);
+  const [dropdownMaxVisibleItems, setDropdownMaxVisibleItems] = useState(13);
   const isDocumentMode = displayMode === "document";
+  const tabBarRef = useRef<HTMLDivElement | null>(null);
+  const measureRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const intervalId = window.setInterval(() => {
@@ -147,30 +227,151 @@ export default function LiveMarketPricesSection({
     return () => window.clearInterval(intervalId);
   }, []);
 
-  const feedRows = useMemo(
-    () => buildFeedRows(data.feed.entries, data.feed.density, data.feed.visibleRows, 0, clock),
-    [clock, data.feed.density, data.feed.entries, data.feed.visibleRows],
-  );
-
   const filterTabs = useMemo(
-    () => data.filterTabs?.length ? data.filterTabs : buildFilterTabs(modelCards),
+    () => sanitizeFilterTabs(data.filterTabs?.length ? data.filterTabs : buildFilterTabs(modelCards)),
     [data.filterTabs, modelCards],
   );
   const activeFilter = filterTabs.find((tab) => tab.key === activeTab) ?? filterTabs[0] ?? null;
   const ui = data.ui ?? {};
+  const modelTabs = filterTabs.filter((tab) => tab.key !== "all");
 
-  const visibleRows = useMemo(() => {
-    if (isDocumentMode) return feedRows;
-    if (!activeFilter || activeFilter.key === "all") return feedRows;
+  const modelEntryCounts = useMemo(() => {
+    const counts = new Map<string, number>();
 
-    return feedRows.filter((row) => {
-      const model = row.Model.toLowerCase();
+    for (const tab of modelTabs) {
+      const count = data.feed.entries.reduce((total, row) => {
+        const model = normalizeFilterText(row.Model);
+        return total + (tab.matchers.some((matcher) => model.includes(matcher)) ? 1 : 0);
+      }, 0);
+
+      counts.set(tab.key, count);
+    }
+
+    return counts;
+  }, [data.feed.entries, modelTabs]);
+
+  const rankedTabs = useMemo(() => {
+    return [...modelTabs].sort((left, right) => {
+      const countDiff = (modelEntryCounts.get(right.key) ?? 0) - (modelEntryCounts.get(left.key) ?? 0);
+      if (countDiff !== 0) return countDiff;
+      return left.label.localeCompare(right.label, "en", { sensitivity: "base" });
+    });
+  }, [modelEntryCounts, modelTabs]);
+
+  const dropdownTabs = useMemo(() => {
+    return [...modelTabs].sort((left, right) => left.label.localeCompare(right.label, "en", { sensitivity: "base" }));
+  }, [modelTabs]);
+
+  const filteredEntries = useMemo(() => {
+    if (isDocumentMode) return data.feed.entries;
+    if (!activeFilter || activeFilter.key === "all") return data.feed.entries;
+
+    return data.feed.entries.filter((row) => {
+      const model = normalizeFilterText(row.Model);
       return activeFilter.matchers.some((matcher) => model.includes(matcher));
     });
-  }, [activeFilter, feedRows, isDocumentMode]);
+  }, [activeFilter, data.feed.entries, isDocumentMode]);
 
-  const pinnedTabs = filterTabs.length ? filterTabs.slice(0, 5) : [];
-  const overflowTabs = filterTabs.slice(5);
+  const visibleRows = useMemo(() => {
+    const visibleRowCount = Math.min(data.feed.visibleRows, filteredEntries.length || data.feed.visibleRows);
+    return buildFeedRows(filteredEntries, data.feed.density, visibleRowCount, 0, clock);
+  }, [clock, data.feed.density, data.feed.visibleRows, filteredEntries]);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const updateDropdownLimit = () => {
+      setDropdownMaxVisibleItems(window.innerWidth < MOBILE_BREAKPOINT_PX ? 5 : 13);
+    };
+
+    updateDropdownLimit();
+    window.addEventListener("resize", updateDropdownLimit);
+    return () => window.removeEventListener("resize", updateDropdownLimit);
+  }, []);
+
+  useEffect(() => {
+    if (isDocumentMode) return;
+    if (!tabBarRef.current || !measureRef.current) return;
+
+    const recomputeVisibleTabs = () => {
+      const barWidth = tabBarRef.current?.clientWidth ?? 0;
+      const measureElements = Array.from(
+        measureRef.current?.querySelectorAll<HTMLElement>("[data-measure-key]") ?? [],
+      );
+
+      if (!barWidth || !measureElements.length) {
+        setVisibleTabCount(4);
+        return;
+      }
+
+      const widthMap = new Map(
+        measureElements.map((element) => [element.dataset.measureKey ?? "", element.offsetWidth]),
+      );
+      const allWidth = widthMap.get("all") ?? 0;
+      const moreWidth = widthMap.get("more") ?? 0;
+
+      let fitWithoutDropdown = 0;
+      let usedWithoutDropdown = allWidth;
+
+      for (const tab of rankedTabs) {
+        const tabWidth = widthMap.get(tab.key) ?? 0;
+        const nextUsed = usedWithoutDropdown + TAB_GAP_PX + tabWidth;
+
+        if (nextUsed > barWidth) break;
+        usedWithoutDropdown = nextUsed;
+        fitWithoutDropdown += 1;
+      }
+
+      if (fitWithoutDropdown >= rankedTabs.length) {
+        setVisibleTabCount(fitWithoutDropdown);
+        return;
+      }
+
+      let fitWithDropdown = 0;
+      let usedWithDropdown = allWidth;
+
+      for (const tab of rankedTabs) {
+        const tabWidth = widthMap.get(tab.key) ?? 0;
+        const nextUsed = usedWithDropdown + TAB_GAP_PX + tabWidth;
+        const requiredWithMore = nextUsed + TAB_GAP_PX + moreWidth;
+
+        if (requiredWithMore > barWidth) break;
+        usedWithDropdown = nextUsed;
+        fitWithDropdown += 1;
+      }
+
+      setVisibleTabCount(fitWithDropdown);
+    };
+
+    recomputeVisibleTabs();
+
+    const observer = new ResizeObserver(() => {
+      recomputeVisibleTabs();
+    });
+
+    observer.observe(tabBarRef.current);
+    return () => observer.disconnect();
+  }, [isDocumentMode, rankedTabs]);
+
+  useEffect(() => {
+    if (!notesOpen) return;
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setNotesOpen(false);
+      }
+    };
+
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [notesOpen]);
+
+  const pinnedTabs = rankedTabs.slice(0, visibleTabCount);
+  const overflowTabs = visibleTabCount < rankedTabs.length ? dropdownTabs : [];
+  const dropdownMaxHeight =
+    dropdownMaxVisibleItems * DROPDOWN_ITEM_HEIGHT_PX +
+    Math.max(0, dropdownMaxVisibleItems - 1) * DROPDOWN_ITEM_GAP_PX +
+    DROPDOWN_PADDING_PX;
 
   const headingLines = data.headingLines?.length ? data.headingLines : [data.h2];
   const sectionImage = imageSrc || "";
@@ -222,16 +423,20 @@ export default function LiveMarketPricesSection({
               </div>
             ) : filterTabs.length ? (
               <div className="rounded-[10px] bg-[#0d1b2e] p-[10px] shadow-[0_2px_12px_rgba(13,27,46,0.16)]">
-                <div className="flex items-center gap-[6px]">
+                <div ref={tabBarRef} className="flex items-center gap-[6px]">
                   <div className="flex min-w-0 flex-1 items-center gap-[6px] overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-                    {pinnedTabs.map((tab) => {
+                    {[filterTabs[0], ...pinnedTabs].filter(Boolean).map((tab) => {
+                      if (!tab) return null;
                       const active = activeTab === tab.key;
 
                       return (
                         <button
                           key={tab.key}
                           type="button"
-                          onClick={() => setActiveTab(tab.key)}
+                          onClick={() => {
+                            setActiveTab(tab.key);
+                            setDrawerOpen(false);
+                          }}
                           className={`flex-none rounded-full border px-[12px] py-[7px] text-[11.5px] font-medium transition ${
                             active
                               ? "border-[#15803d] bg-[#15803d] text-white"
@@ -255,7 +460,10 @@ export default function LiveMarketPricesSection({
                       </button>
 
                       {drawerOpen ? (
-                        <div className="absolute right-0 top-[calc(100%+8px)] z-20 flex min-w-[180px] flex-col gap-1 rounded-[12px] border border-[#e5e7eb] bg-white p-2 shadow-[0_14px_34px_rgba(13,27,46,0.16)]">
+                        <div
+                          className="absolute right-0 top-[calc(100%+8px)] z-20 flex min-w-[180px] flex-col gap-1 overflow-y-auto rounded-[12px] border border-[#e5e7eb] bg-white p-2 shadow-[0_14px_34px_rgba(13,27,46,0.16)]"
+                          style={{ maxHeight: `${dropdownMaxHeight}px` }}
+                        >
                           {overflowTabs.map((tab) => (
                             <button
                               key={tab.key}
@@ -273,6 +481,26 @@ export default function LiveMarketPricesSection({
                       ) : null}
                     </div>
                   ) : null}
+                </div>
+
+                <div ref={measureRef} className="pointer-events-none absolute left-[-9999px] top-[-9999px] opacity-0">
+                  <div className="flex items-center gap-[6px]">
+                    {[filterTabs[0], ...rankedTabs].filter(Boolean).map((tab) => (
+                      <span
+                        key={`measure-${tab?.key ?? "unknown"}`}
+                        data-measure-key={tab?.key ?? "unknown"}
+                        className="flex-none rounded-full border px-[12px] py-[7px] text-[11.5px] font-medium"
+                      >
+                        {tab?.label}
+                      </span>
+                    ))}
+                    <span
+                      data-measure-key="more"
+                      className="flex h-[30px] w-[30px] flex-none items-center justify-center rounded-full border"
+                    >
+                      <ChevronDownIcon open={false} />
+                    </span>
+                  </div>
                 </div>
               </div>
             ) : null}
@@ -333,11 +561,24 @@ export default function LiveMarketPricesSection({
 
                 {isDocumentMode ? null : (
                   <div className="border-t border-[#e4e7ee] bg-[#f9fafc] px-4 py-[10px]">
-                    <div className="flex items-center gap-[6px] text-[11px] font-medium text-[#9aa3b5]">
-                      <RefreshIcon />
-                      <span>
-                        {ui.updatedLabel ?? "Last updated:"} <span className="font-semibold text-[#6b7280]">{formatUpdatedAt(clock)}</span>
-                      </span>
+                    <div className="flex items-center justify-between gap-3">
+                      <div className="flex items-center gap-[6px] text-[11px] font-medium text-[#9aa3b5]">
+                        <RefreshIcon />
+                        <span>
+                          {ui.updatedLabel ?? "Last updated:"} <span className="font-semibold text-[#6b7280]">{formatUpdatedAt(clock)}</span>
+                        </span>
+                      </div>
+
+                      {data.notes?.items?.length ? (
+                        <button
+                          type="button"
+                          onClick={() => setNotesOpen(true)}
+                          className="flex h-6 w-6 flex-none items-center justify-center rounded-full border border-[#cfd7e3] bg-white text-[#6b7280] transition hover:border-[#0d1b2e] hover:text-[#0d1b2e]"
+                          aria-label={`Open ${data.notes.title}`}
+                        >
+                          <InfoAlertIcon />
+                        </button>
+                      ) : null}
                     </div>
                   </div>
                 )}
@@ -374,6 +615,45 @@ export default function LiveMarketPricesSection({
           </div>
         )}
       </Container>
+
+      {data.notes?.items?.length && notesOpen ? (
+        <div
+          className="fixed inset-0 z-[120] flex items-center justify-center bg-[#0d1b2e]/60 px-4 py-6"
+          onClick={() => setNotesOpen(false)}
+        >
+          <div
+            className="max-h-[min(80vh,720px)] w-full max-w-[720px] overflow-hidden rounded-[18px] bg-white shadow-[0_24px_80px_rgba(13,27,46,0.28)]"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <div className="flex items-start justify-between gap-4 border-b border-[#e5e7eb] px-5 py-4 md:px-6">
+              <div>
+                <div className="text-[12px] font-bold uppercase tracking-[0.08em] text-[#15803d]">Market Notes</div>
+                <h3 className="mt-1 text-[20px] font-extrabold text-[#0d1b2e]">{data.notes.title}</h3>
+              </div>
+
+              <button
+                type="button"
+                onClick={() => setNotesOpen(false)}
+                className="flex h-9 w-9 flex-none items-center justify-center rounded-full border border-[#d7dde8] text-[#6b7280] transition hover:border-[#0d1b2e] hover:text-[#0d1b2e]"
+                aria-label="Close notes"
+              >
+                <span className="text-lg leading-none">×</span>
+              </button>
+            </div>
+
+            <div className="max-h-[calc(min(80vh,720px)-88px)] overflow-y-auto px-5 py-4 md:px-6 md:py-5">
+              <ul className="space-y-3">
+                {data.notes.items.map((note) => (
+                  <li key={note} className="flex items-start gap-3 text-[14px] leading-[1.65] text-[#445065]">
+                    <span className="mt-[8px] h-[6px] w-[6px] flex-none rounded-full bg-[#15803d]" />
+                    <span>{note}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      ) : null}
     </Section>
   );
 }
