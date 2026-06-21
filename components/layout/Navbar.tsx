@@ -8,18 +8,19 @@ import { headerNavigation } from "@/lib/navigation";
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
 
   return (
     <header className="sticky top-0 z-50 bg-[#061a33] text-white shadow-md">
-      <div className="mx-auto flex h-24 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex shrink-0 items-center" aria-label="Engines Market homepage">
           <Image
-            src="/branding/engine-market-logo-stacked-cropped.webp"
+            src="/branding/engine-market-logo-rectangle.png"
             alt="Engines Market"
-            width={160}
-            height={160}
+            width={5752}
+            height={2280}
             priority
-            className="h-24 w-24 object-contain"
+            className="h-12 w-40 rounded bg-white object-contain p-1"
           />
         </Link>
 
@@ -28,7 +29,7 @@ export default function Navbar() {
             <div key={item.label} className="group relative">
               <Link
                 href={item.href}
-                className="flex h-24 items-center gap-1 px-3 transition hover:text-[#86efac]"
+                className="flex h-16 items-center gap-1 px-3 transition hover:text-[#86efac]"
               >
                 {item.label}
                 {item.links ? <FiChevronDown className="h-4 w-4 transition group-hover:rotate-180" aria-hidden="true" /> : null}
@@ -77,16 +78,34 @@ export default function Navbar() {
       {mobileOpen ? (
         <nav className="border-t border-white/10 bg-[#061a33] px-4 py-4 lg:hidden" aria-label="Mobile navigation">
           <div className="space-y-3">
-            {headerNavigation.map((item) => (
-              <div key={item.label} className="rounded-lg bg-white/5">
-                <Link
-                  href={item.href}
-                  className="block px-4 py-3 text-sm font-black"
-                  onClick={() => setMobileOpen(false)}
-                >
-                  {item.label}
-                </Link>
-                {item.links ? (
+            {headerNavigation.map((item) => {
+              const expanded = mobileExpanded === item.label;
+
+              return (
+                <div key={item.label} className="rounded-lg bg-white/5">
+                  {item.links ? (
+                    <button
+                      type="button"
+                      className="flex w-full items-center justify-between px-4 py-3 text-left text-sm font-black"
+                      aria-expanded={expanded}
+                      onClick={() => setMobileExpanded(expanded ? null : item.label)}
+                    >
+                      <span>{item.label}</span>
+                      <FiChevronDown
+                        className={`h-4 w-4 transition ${expanded ? "rotate-180" : ""}`}
+                        aria-hidden="true"
+                      />
+                    </button>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      className="block px-4 py-3 text-sm font-black"
+                      onClick={() => setMobileOpen(false)}
+                    >
+                      {item.label}
+                    </Link>
+                  )}
+                  {item.links && expanded ? (
                   <div className="grid gap-1 px-4 pb-4">
                     {item.links.map((link) => (
                       <Link
@@ -100,8 +119,9 @@ export default function Navbar() {
                     ))}
                   </div>
                 ) : null}
-              </div>
-            ))}
+                </div>
+              );
+            })}
           </div>
           <Link
             href="/get-a-quote"

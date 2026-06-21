@@ -25,7 +25,7 @@ body > footer:not(.em-static-footer) {
 
 .em-static-header__inner {
   max-width: 1280px;
-  height: 96px;
+  height: 64px;
   margin: 0 auto;
   padding: 0 32px;
   display: flex;
@@ -49,9 +49,12 @@ body > footer:not(.em-static-footer) {
 
 .em-static-logo__image {
   display: block;
-  width: 96px;
-  height: 96px;
+  width: 160px;
+  height: 48px;
+  border-radius: 4px;
   object-fit: contain;
+  background: #fff;
+  padding: 4px;
 }
 
 .em-static-nav {
@@ -68,7 +71,7 @@ body > footer:not(.em-static-footer) {
 
 .em-static-nav__trigger,
 .em-static-nav__direct {
-  height: 96px;
+  height: 64px;
   padding: 0 13px;
   display: inline-flex;
   align-items: center;
@@ -305,7 +308,7 @@ body > footer:not(.em-static-footer) {
   .em-static-nav__dropdown {
     position: static;
     width: auto;
-    display: grid;
+    display: none;
     gap: 2px;
     border: 0;
     border-radius: 0 0 8px 8px;
@@ -315,6 +318,10 @@ body > footer:not(.em-static-footer) {
     visibility: visible;
     transform: none;
     padding: 0 14px 12px;
+  }
+
+  .em-static-nav__item[data-expanded="true"] .em-static-nav__dropdown {
+    display: grid;
   }
 
   .em-static-nav__dropdown a {
@@ -334,8 +341,8 @@ body > footer:not(.em-static-footer) {
 
 @media (max-width: 640px) {
   .em-static-logo__image {
-    width: 84px;
-    height: 84px;
+    width: 150px;
+    height: 44px;
   }
 
   .em-static-footer__nav {

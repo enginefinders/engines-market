@@ -106,7 +106,7 @@
   function makeLogo() {
     const logo = link("", "/", "em-static-logo");
     logo.setAttribute("aria-label", "Engines Market homepage");
-    logo.innerHTML = '<img class="em-static-logo__image" src="/branding/engine-market-logo-stacked-cropped.webp" alt="Engines Market" width="160" height="160">';
+    logo.innerHTML = '<img class="em-static-logo__image" src="/branding/engine-market-logo-rectangle.png" alt="Engines Market" width="5752" height="2280">';
     return logo;
   }
 
@@ -129,6 +129,19 @@
       if (group.links) {
         const trigger = link(group.label, group.href, "em-static-nav__trigger");
         trigger.innerHTML = `${group.label}<span class="em-static-nav__chevron">⌵</span>`;
+        trigger.addEventListener("click", (event) => {
+          if (!window.matchMedia("(max-width: 1023px)").matches) return;
+          event.preventDefault();
+          const expanded = item.getAttribute("data-expanded") === "true";
+          nav.querySelectorAll(".em-static-nav__item[data-expanded='true']").forEach((openItem) => {
+            if (openItem !== item) openItem.removeAttribute("data-expanded");
+          });
+          if (expanded) {
+            item.removeAttribute("data-expanded");
+          } else {
+            item.setAttribute("data-expanded", "true");
+          }
+        });
         item.appendChild(trigger);
 
         const dropdown = document.createElement("div");
