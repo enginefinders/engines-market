@@ -1,0 +1,2292 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compare Engine Options UK — Used vs Reconditioned vs Rebuilt vs Repair</title>
+    <meta name="description" content="Compare engine replacement options — used, reconditioned, rebuilt, new, and repair. Costs, warranties, and which is right for your vehicle. Data from 24,650 UK quotes." />
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Urbanist:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <style>
+        /* ===== ENGINES MARKET STATIC NAV + FOOTER ===== */
+        :root {
+            --em-primary: #061a33;
+            --em-primary-2: #0d1b2e;
+            --em-accent: #15803d;
+            --em-accent-hover: #16a34a;
+            --em-accent-soft: #86efac;
+            --em-blue: #061a33;
+            --em-icon: #061a33;
+            --em-text: #122033;
+            --em-text-secondary: #475569;
+            --em-text-muted: #64748b;
+            --em-surface: #ffffff;
+            --em-surface-soft: #f8fafc;
+            --em-border: #dbe3ee;
+            --em-footer-muted: #cbd5e1;
+            --em-footer-bottom: #94a3b8;
+        }
+
+        .em-static-header,
+        .em-static-footer,
+        .em-static-header *,
+        .em-static-footer * {
+            box-sizing: border-box;
+        }
+
+        body>.nav:not(.em-static-header),
+        body>footer:not(.em-static-footer) {
+            display: none !important;
+        }
+
+        .em-static-header {
+            position: sticky;
+            top: 0;
+            z-index: 9999;
+            background: var(--em-primary);
+            color: #fff;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            font-family: Urbanist, Inter, ui-sans-serif, system-ui, sans-serif;
+            box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.1), 0 2px 4px -2px rgba(15, 23, 42, 0.1);
+        }
+
+        .em-static-header__inner {
+            max-width: 1280px;
+            height: 64px;
+            margin: 0 auto;
+            padding: 0 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .em-static-logo,
+        .em-static-nav a,
+        .em-static-footer a {
+            color: inherit !important;
+            text-decoration: none !important;
+        }
+
+        .em-static-logo {
+            display: inline-flex;
+            align-items: center;
+            flex: 0 0 auto;
+        }
+
+        .em-static-logo__image {
+            display: block;
+            width: 160px;
+            height: 48px;
+            border-radius: 4px;
+            object-fit: contain;
+            background: #fff;
+            padding: 4px;
+        }
+
+        .em-static-nav {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            flex: 1 1 auto;
+            justify-content: center;
+        }
+
+        .em-static-nav__item {
+            position: relative;
+        }
+
+        .em-static-nav__trigger,
+        .em-static-nav__direct {
+            height: 64px;
+            padding: 0 13px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            border: 0;
+            background: transparent;
+            color: #fff;
+            font: inherit;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 1;
+            cursor: pointer;
+            text-decoration: none !important;
+        }
+
+        .em-static-nav__trigger:hover,
+        .em-static-nav__direct:hover {
+            color: var(--em-accent-soft);
+        }
+
+        .em-static-nav__chevron {
+            display: inline-flex;
+            width: 16px;
+            height: 16px;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            line-height: 1;
+        }
+
+        .em-static-nav__dropdown {
+            position: absolute;
+            top: 64px;
+            left: 0;
+            width: 288px;
+            padding: 8px;
+            border: 1px solid var(--em-border);
+            border-radius: 0 0 8px 8px;
+            background: #fff;
+            color: var(--em-text);
+            box-shadow: 0 18px 45px rgba(6, 26, 51, 0.18);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(8px);
+            transition: opacity 160ms ease, transform 160ms ease, visibility 160ms ease;
+        }
+
+        .em-static-nav__item:hover .em-static-nav__dropdown,
+        .em-static-nav__item:focus-within .em-static-nav__dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .em-static-nav__dropdown a {
+            display: block;
+            border-radius: 6px;
+            padding: 10px 12px;
+            color: var(--em-text) !important;
+            font-size: 14px;
+            font-weight: 750;
+        }
+
+        .em-static-nav__dropdown a:hover {
+            background: #f1f5f9;
+            color: var(--em-accent) !important;
+        }
+
+        .em-static-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex: 0 0 auto;
+            font-size: 14px;
+            font-weight: 900;
+        }
+
+        .em-static-actions a {
+            color: #fff !important;
+            text-decoration: none !important;
+        }
+
+        .em-static-quote {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 38px;
+            padding: 0 18px;
+            border-radius: 8px;
+            background: var(--em-accent-hover);
+            color: #fff !important;
+            font-weight: 900;
+            text-decoration: none !important;
+        }
+
+        .em-static-quote:hover {
+            background: var(--em-accent);
+        }
+
+        .em-static-menu {
+            display: none;
+            width: 40px;
+            height: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            background: transparent;
+            color: #fff;
+            font-size: 22px;
+            cursor: pointer;
+        }
+
+        .em-static-footer {
+            background: var(--em-primary);
+            color: #fff;
+            font-family: Urbanist, Inter, ui-sans-serif, system-ui, sans-serif;
+            margin-top: 56px;
+        }
+
+        .em-static-footer__inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 48px 32px;
+            display: grid;
+            grid-template-columns: 1.15fr 3fr;
+            gap: 40px;
+        }
+
+        .em-static-footer__brand p {
+            max-width: 340px;
+            margin: 18px 0 0;
+            color: var(--em-footer-muted);
+            font-size: 14px;
+            line-height: 1.55;
+        }
+
+        .em-static-footer__contact {
+            margin-top: 24px;
+            display: grid;
+            gap: 10px;
+            color: #e2e8f0;
+            font-size: 14px;
+            font-weight: 800;
+        }
+
+        .em-static-footer__nav {
+            display: grid;
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+            gap: 32px;
+        }
+
+        .em-static-footer h2 {
+            margin: 0;
+            color: #fff !important;
+            font-size: 14px !important;
+            line-height: 1.1 !important;
+            letter-spacing: 0.08em !important;
+            text-transform: uppercase;
+            font-weight: 900;
+            font-family: inherit !important;
+        }
+
+        .em-static-footer ul {
+            margin: 16px 0 0;
+            padding: 0;
+            list-style: none;
+            display: grid;
+            gap: 12px;
+        }
+
+        .em-static-footer li {
+            margin: 0;
+        }
+
+        .em-static-footer a {
+            color: var(--em-footer-muted) !important;
+            font-size: 14px;
+            line-height: 1.35;
+        }
+
+        .em-static-footer a:hover {
+            color: var(--em-accent-soft) !important;
+        }
+
+        .em-static-footer__bottom {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 24px 32px 32px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--em-footer-bottom);
+            font-size: 12px;
+        }
+
+        /* ===== RESET & BASE ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #f8fafc;
+            color: #0f172a;
+            line-height: 1.6;
+        }
+
+        /* ===== CONTAINER ===== */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            background: linear-gradient(145deg, #0b1a33 0%, #1a3a5c 50%, #0b1a33 100%);
+            color: #ffffff;
+            padding: 60px 0 50px;
+            border-radius: 0 0 40px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.10) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: clamp(2.2rem, 4vw, 3.2rem);
+            font-weight: 900;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+        }
+
+        .hero-text h1 .highlight {
+            background: linear-gradient(135deg, #60a5fa, #38bdf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-text p {
+            font-size: 1.15rem;
+            color: rgba(255, 255, 255, 0.85);
+            max-width: 560px;
+            margin-bottom: 20px;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 32px;
+            flex-wrap: wrap;
+            margin-top: 8px;
+        }
+
+        .hero-stats .stat {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hero-stats .stat .number {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #60a5fa;
+            line-height: 1.2;
+        }
+
+        .hero-stats .stat .label {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 400;
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-image-placeholder {
+            width: 100%;
+            max-width: 480px;
+            aspect-ratio: 4/3;
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.10);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 32px;
+            text-align: center;
+            backdrop-filter: blur(4px);
+        }
+
+        .hero-image-placeholder i {
+            font-size: 4rem;
+            color: rgba(96, 165, 250, 0.6);
+            margin-bottom: 12px;
+        }
+
+        .hero-image-placeholder p {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.5);
+            max-width: 280px;
+        }
+
+        .hero-image-placeholder .badge {
+            display: inline-block;
+            background: rgba(96, 165, 250, 0.2);
+            padding: 4px 16px;
+            border-radius: 100px;
+            font-size: 0.75rem;
+            color: #93c5fd;
+            border: 1px solid rgba(96, 165, 250, 0.2);
+            margin-top: 8px;
+        }
+
+        /* ===== BREADCRUMB ===== */
+        .breadcrumb {
+            padding: 16px 0 8px;
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+
+        .breadcrumb a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== SECTION TITLE ===== */
+        .section-title {
+            text-align: center;
+            margin: 56px 0 12px;
+        }
+
+        .section-title h2 {
+            font-size: clamp(1.8rem, 2.8vw, 2.4rem);
+            font-weight: 800;
+            letter-spacing: -0.01em;
+            color: #0f172a;
+        }
+
+        .section-title p {
+            color: #64748b;
+            max-width: 640px;
+            margin: 8px auto 0;
+            font-size: 1.05rem;
+        }
+
+        /* ===== COMPARISON TABLE ===== */
+        .comparison-table-wrap {
+            overflow-x: auto;
+            margin: 16px 0 8px;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+            min-width: 600px;
+            background: #ffffff;
+            border-radius: 16px;
+            border: 1px solid #eef2f6;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+        }
+
+        .comparison-table th {
+            text-align: left;
+            font-weight: 700;
+            color: #0f172a;
+            padding: 16px 14px 14px 14px;
+            border-bottom: 2px solid #eef2f6;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            background: #f8fafc;
+        }
+
+        .comparison-table th:first-child {
+            border-radius: 16px 0 0 0;
+        }
+        .comparison-table th:last-child {
+            border-radius: 0 16px 0 0;
+        }
+
+        .comparison-table td {
+            padding: 14px 14px;
+            border-bottom: 1px solid #f1f5f9;
+            color: #1e293b;
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: 0;
+        }
+
+        .comparison-table .highlight-row td {
+            background: #f8fafc;
+            font-weight: 600;
+        }
+
+        .comparison-table .option-name {
+            font-weight: 700;
+            color: var(--em-primary);
+        }
+
+        .comparison-table .badge-best {
+            display: inline-block;
+            background: #dcfce7;
+            color: var(--em-accent-hover);
+            padding: 1px 10px;
+            border-radius: 100px;
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+
+        .comparison-table .warranty {
+            font-weight: 600;
+        }
+
+        /* ===== COMPARISON CARDS GRID ===== */
+        .compare-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 24px;
+            margin: 24px 0 16px;
+        }
+
+        .compare-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 24px 22px 22px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 4px 12px rgba(0, 0, 0, 0.04);
+            transition: all 0.3s ease;
+            border: 1px solid #eef2f6;
+            position: relative;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.5s ease forwards;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            cursor: pointer;
+        }
+
+        .compare-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            border-color: #b3d4fc;
+        }
+
+        .compare-card .icon-wrap {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .compare-card .icon-wrap i {
+            font-size: 1.5rem;
+            color: var(--em-primary);
+            opacity: 0.7;
+        }
+
+        .compare-card .category-tag {
+            display: inline-block;
+            font-size: 0.6rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            padding: 2px 12px;
+            border-radius: 100px;
+            background: #dbeafe;
+            color: var(--em-primary);
+            border: 1px solid #bfdbfe;
+            margin-bottom: 4px;
+        }
+
+        .compare-card:hover .category-tag {
+            background: #dcfce7;
+            color: var(--em-accent);
+            border-color: #bbf7d0;
+        }
+
+        .compare-card h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+            color: #0f172a;
+        }
+
+        .compare-card p {
+            font-size: 0.9rem;
+            color: #475569;
+            line-height: 1.5;
+            margin-bottom: 6px;
+        }
+
+        .compare-card .saving {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--em-accent-hover);
+            background: #ecfdf5;
+            padding: 2px 12px;
+            border-radius: 100px;
+            display: inline-block;
+        }
+
+        .compare-card .meta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.8rem;
+            color: #64748b;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+
+        .compare-card .meta .tag {
+            background: #f1f5f9;
+            padding: 2px 12px;
+            border-radius: 100px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: #475569;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+
+        .compare-card .arrow {
+            margin-left: auto;
+            color: #94a3b8;
+            transition: all 0.3s ease;
+        }
+
+        .compare-card:hover .arrow {
+            color: var(--em-accent-hover);
+            transform: translateX(4px);
+        }
+
+        .compare-card:hover h3 {
+            color: var(--em-primary) !important;
+        }
+
+        /* ===== SECTION DIVIDER ===== */
+        .section-divider {
+            margin: 48px 0 16px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .section-divider span {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #0f172a;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-divider span i {
+            color: var(--em-primary) !important;
+        }
+
+        .section-divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: #e2e8f0;
+        }
+
+        /* ===== DECISION FRAMEWORKS ===== */
+        .framework-section {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 36px 32px 32px;
+            margin: 24px 0 20px;
+            border: 1px solid #eef2f6;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+        }
+
+        .framework-section h3 {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .framework-section h3 i {
+            color: var(--em-primary);
+        }
+
+        .framework-section .subhead {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .framework-table-wrap {
+            overflow-x: auto;
+        }
+
+        .framework-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+            min-width: 400px;
+        }
+
+        .framework-table th {
+            text-align: left;
+            font-weight: 700;
+            color: #0f172a;
+            padding: 12px 12px 10px 0;
+            border-bottom: 2px solid #eef2f6;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+
+        .framework-table td {
+            padding: 11px 12px 11px 0;
+            border-bottom: 1px solid #f1f5f9;
+            color: #1e293b;
+        }
+
+        .framework-table tr:last-child td {
+            border-bottom: 0;
+        }
+
+        .framework-table .best-option {
+            font-weight: 700;
+            color: var(--em-accent-hover);
+        }
+
+        /* ===== MARKET INTELLIGENCE ===== */
+        .market-intel {
+            background: #f8fafc;
+            border-radius: 16px;
+            padding: 28px 28px;
+            border: 1px solid #eef2f6;
+            margin: 16px 0 12px;
+        }
+
+        .market-intel h4 {
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .market-intel h4 i {
+            color: var(--em-primary);
+        }
+
+        .market-intel p {
+            color: #475569;
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+        }
+
+        .market-intel .intel-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+        }
+
+        .market-intel .intel-item {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 12px 14px;
+            border: 1px solid #eef2f6;
+            text-align: center;
+        }
+
+        .market-intel .intel-item .value {
+            font-weight: 800;
+            font-size: 1.1rem;
+            color: var(--em-primary);
+        }
+
+        .market-intel .intel-item .label {
+            font-size: 0.8rem;
+            color: #64748b;
+            display: block;
+            margin-top: 2px;
+        }
+
+        .market-intel .intel-item .pct {
+            font-weight: 700;
+            color: var(--em-accent-hover);
+        }
+
+        /* ===== SAVINGS EXAMPLES ===== */
+        .savings-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 12px 0 8px;
+        }
+
+        .savings-card {
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 20px 18px;
+            border: 1px solid #eef2f6;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+            transition: all 0.2s ease;
+        }
+
+        .savings-card:hover {
+            border-color: #b3d4fc;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        .savings-card .vehicle-name {
+            font-weight: 700;
+            font-size: 1rem;
+            color: #0f172a;
+            margin-bottom: 2px;
+        }
+
+        .savings-card .option-label {
+            font-size: 0.8rem;
+            color: #64748b;
+            margin-bottom: 6px;
+        }
+
+        .savings-card .cost-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 4px 0;
+            font-size: 0.9rem;
+        }
+
+        .savings-card .cost-row .dealer {
+            color: #ef4444;
+            text-decoration: line-through;
+            font-weight: 500;
+        }
+
+        .savings-card .cost-row .em-price {
+            color: var(--em-accent-hover);
+            font-weight: 700;
+        }
+
+        .savings-card .saving-amount {
+            display: inline-block;
+            background: #dcfce7;
+            color: var(--em-accent-hover);
+            padding: 2px 14px;
+            border-radius: 100px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            margin-top: 4px;
+        }
+
+        /* ===== WHAT TO DO NEXT ===== */
+        .next-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 24px 0 16px;
+        }
+
+        .next-step {
+            background: #f8fafc;
+            border-radius: 14px;
+            padding: 20px 18px;
+            border: 1px solid #eef2f6;
+            text-align: center;
+        }
+
+        .next-step .num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: var(--em-primary);
+            color: #fff;
+            font-weight: 800;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+        }
+
+        .next-step h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 2px;
+        }
+
+        .next-step p {
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+
+        /* ===== CTA ===== */
+        .cta-section {
+            background: radial-gradient(circle at 85% 10%, rgba(22, 163, 74, 0.22), transparent 34%), linear-gradient(145deg, var(--em-primary) 0%, var(--em-primary-2) 58%, var(--em-primary) 100%);
+            color: #fff;
+            border-radius: 20px;
+            padding: 48px 40px;
+            text-align: center;
+            margin: 40px 0 32px;
+        }
+
+        .cta-section h2 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .cta-section p {
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 560px;
+            margin: 0 auto 24px;
+            font-size: 1.05rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--em-accent-hover), var(--em-accent));
+            color: #fff;
+            font-weight: 700;
+            font-size: 1.1rem;
+            padding: 16px 40px;
+            border-radius: 100px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 16px rgba(21, 128, 61, 0.30);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(21, 128, 61, 0.40);
+            background: linear-gradient(135deg, var(--em-accent), #166534);
+        }
+
+        .cta-button i {
+            margin-left: 10px;
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .compare-card:nth-child(1) {
+            animation-delay: 0.04s;
+        }
+        .compare-card:nth-child(2) {
+            animation-delay: 0.08s;
+        }
+        .compare-card:nth-child(3) {
+            animation-delay: 0.12s;
+        }
+        .compare-card:nth-child(4) {
+            animation-delay: 0.16s;
+        }
+        .compare-card:nth-child(5) {
+            animation-delay: 0.20s;
+        }
+        .compare-card:nth-child(6) {
+            animation-delay: 0.24s;
+        }
+        .compare-card:nth-child(7) {
+            animation-delay: 0.28s;
+        }
+        .compare-card:nth-child(8) {
+            animation-delay: 0.32s;
+        }
+        .compare-card:nth-child(9) {
+            animation-delay: 0.36s;
+        }
+        .compare-card:nth-child(10) {
+            animation-delay: 0.40s;
+        }
+        .compare-card:nth-child(11) {
+            animation-delay: 0.44s;
+        }
+        .compare-card:nth-child(12) {
+            animation-delay: 0.48s;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 992px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+            .hero-text {
+                text-align: center;
+            }
+            .hero-text p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .hero-stats {
+                justify-content: center;
+            }
+            .hero-image-placeholder {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero {
+                padding: 40px 0 32px;
+            }
+            .hero-stats {
+                gap: 16px;
+            }
+            .hero-stats .stat .number {
+                font-size: 1.4rem;
+            }
+            .compare-grid {
+                grid-template-columns: 1fr;
+                gap: 14px;
+            }
+            .compare-card {
+                padding: 18px 16px;
+                border-radius: 14px;
+            }
+            .compare-card .icon-wrap i {
+                font-size: 1.3rem;
+            }
+            .comparison-table {
+                font-size: 0.8rem;
+                min-width: 400px;
+            }
+            .comparison-table th,
+            .comparison-table td {
+                padding: 10px 10px;
+            }
+            .framework-section {
+                padding: 24px 16px;
+            }
+            .framework-table {
+                font-size: 0.8rem;
+                min-width: 300px;
+            }
+            .framework-table th,
+            .framework-table td {
+                padding: 10px 8px 10px 0;
+            }
+            .savings-grid {
+                grid-template-columns: 1fr;
+            }
+            .market-intel .intel-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .cta-section {
+                padding: 32px 20px;
+            }
+            .cta-button {
+                padding: 14px 28px;
+                font-size: 1rem;
+                width: 100%;
+                text-align: center;
+            }
+            .em-static-footer__inner {
+                grid-template-columns: 1fr;
+                padding: 40px 22px;
+            }
+            .em-static-footer__nav {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+            .next-steps {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .market-intel .intel-grid {
+                grid-template-columns: 1fr;
+            }
+            .next-steps {
+                grid-template-columns: 1fr;
+            }
+            .em-static-footer__nav {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 1023px) {
+            .em-static-header__inner {
+                padding: 0 18px;
+            }
+            .em-static-nav,
+            .em-static-actions {
+                display: none;
+            }
+            .em-static-menu {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .em-static-header[data-open="true"] .em-static-nav {
+                position: absolute;
+                top: 64px;
+                left: 0;
+                right: 0;
+                display: grid;
+                justify-content: stretch;
+                gap: 8px;
+                padding: 14px 18px 18px;
+                background: var(--em-primary);
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+            }
+            .em-static-nav__item {
+                border-radius: 8px;
+                background: rgba(255, 255, 255, 0.06);
+            }
+            .em-static-nav__trigger,
+            .em-static-nav__direct {
+                width: 100%;
+                height: auto;
+                min-height: 44px;
+                justify-content: space-between;
+                padding: 12px 14px;
+            }
+            .em-static-nav__dropdown {
+                position: static;
+                width: auto;
+                display: none;
+                gap: 2px;
+                border: 0;
+                border-radius: 0 0 8px 8px;
+                box-shadow: none;
+                background: transparent;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                padding: 0 14px 12px;
+            }
+            .em-static-nav__item[data-expanded="true"] .em-static-nav__dropdown {
+                display: grid;
+            }
+            .em-static-nav__dropdown a {
+                color: var(--em-footer-muted) !important;
+                padding: 7px 0;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .em-static-logo__image {
+                width: 150px;
+                height: 44px;
+            }
+        }
+
+        /* ===== THEME ADAPTATION: NAVY + GREEN ===== */
+        body {
+            font-family: Urbanist, Inter, -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--em-surface-soft);
+            color: var(--em-text);
+        }
+
+        .hero,
+        .cta-section {
+            background: radial-gradient(circle at 85% 10%, rgba(22, 163, 74, 0.22), transparent 34%), linear-gradient(145deg, var(--em-primary) 0%, var(--em-primary-2) 58%, var(--em-primary) 100%);
+        }
+
+        .hero-text h1 .highlight {
+            background: linear-gradient(135deg, var(--em-accent-soft), var(--em-accent-hover));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero::before {
+            background: radial-gradient(circle, rgba(22, 163, 74, 0.16) 0%, transparent 70%);
+        }
+        .hero::after {
+            background: radial-gradient(circle, rgba(134, 239, 172, 0.10) 0%, transparent 70%);
+        }
+
+        .hero-stats .stat .number,
+        .breadcrumb a {
+            color: var(--em-accent-hover);
+        }
+
+        .hero-image-placeholder i {
+            color: var(--em-accent-soft);
+        }
+
+        .hero-image-placeholder {
+            border-color: rgba(134, 239, 172, 0.18);
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(13, 27, 46, 0.20));
+        }
+
+        .hero-image-placeholder .badge {
+            background: rgba(21, 128, 61, 0.22);
+            color: var(--em-accent-soft);
+            border-color: rgba(134, 239, 172, 0.24);
+        }
+
+        .section-title h2,
+        .compare-card h3,
+        .section-divider span,
+        .framework-section h3,
+        .market-intel h4 {
+            color: var(--em-text);
+        }
+
+        .section-title p,
+        .compare-card p,
+        .framework-section .subhead,
+        .market-intel p,
+        .next-step p,
+        .comparison-table td {
+            color: var(--em-text-secondary);
+        }
+
+        .compare-card,
+        .framework-section,
+        .savings-card,
+        .market-intel .intel-item {
+            border-color: var(--em-border);
+            box-shadow: 0 1px 3px rgba(6, 26, 51, 0.06), 0 12px 26px rgba(6, 26, 51, 0.04);
+        }
+
+        .compare-card:hover {
+            border-color: rgba(21, 128, 61, 0.35);
+            box-shadow: 0 14px 38px rgba(6, 26, 51, 0.11);
+        }
+
+        .compare-card .category-tag {
+            background: #dbeafe;
+            color: var(--em-primary);
+            border-color: #bfdbfe;
+        }
+
+        .compare-card:hover .category-tag {
+            background: #dcfce7;
+            color: var(--em-accent);
+            border-color: #bbf7d0;
+        }
+
+        .compare-card .icon-wrap i {
+            color: var(--em-primary);
+        }
+
+        .compare-card .saving {
+            background: #ecfdf5;
+            color: var(--em-accent-hover);
+        }
+
+        .compare-card .meta .tag {
+            background: #f1f5f9;
+            color: #475569;
+        }
+
+        .compare-card .arrow {
+            color: #94a3b8;
+        }
+
+        .compare-card:hover .arrow {
+            color: var(--em-accent-hover);
+        }
+
+        .compare-card:hover h3 {
+            color: var(--em-primary) !important;
+        }
+
+        .section-divider::after {
+            background: var(--em-border);
+        }
+
+        .cta-button {
+            box-shadow: 0 4px 16px rgba(21, 128, 61, 0.30);
+        }
+
+        .cta-button:hover {
+            background: linear-gradient(135deg, var(--em-accent), #166534);
+            box-shadow: 0 8px 32px rgba(21, 128, 61, 0.40);
+        }
+
+        .comparison-table {
+            border-color: var(--em-border);
+        }
+
+        .comparison-table th {
+            background: var(--em-surface-soft);
+            color: var(--em-text);
+        }
+
+        .comparison-table .option-name {
+            color: var(--em-primary);
+        }
+
+        .comparison-table .badge-best {
+            background: #dcfce7;
+            color: var(--em-accent-hover);
+        }
+
+        .comparison-table .highlight-row td {
+            background: #f8fafc;
+        }
+
+        .framework-table th {
+            color: var(--em-text);
+        }
+
+        .framework-table .best-option {
+            color: var(--em-accent-hover);
+        }
+
+        .market-intel {
+            background: var(--em-surface-soft);
+            border-color: var(--em-border);
+        }
+
+        .market-intel .intel-item .value {
+            color: var(--em-primary);
+        }
+
+        .market-intel .intel-item .pct {
+            color: var(--em-accent-hover);
+        }
+
+        .savings-card .saving-amount {
+            background: #dcfce7;
+            color: var(--em-accent-hover);
+        }
+
+        .savings-card .cost-row .em-price {
+            color: var(--em-accent-hover);
+        }
+
+        .savings-card .cost-row .dealer {
+            color: #ef4444;
+        }
+
+        .next-step .num {
+            background: var(--em-primary);
+        }
+
+        .framework-section h3 i {
+            color: var(--em-primary);
+        }
+        .market-intel h4 i {
+            color: var(--em-primary);
+        }
+        .comparison-table .warranty {
+            color: var(--em-text);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== ENGINES MARKET STATIC HEADER ===== -->
+    <header class="em-static-header">
+        <div class="em-static-header__inner">
+            <a class="em-static-logo" href="/" aria-label="Engines Market homepage">
+                <img class="em-static-logo__image" src="/branding/engine-market-logo-rectangle.png" alt="Engines Market" width="5752" height="2280" />
+            </a>
+
+            <nav class="em-static-nav" aria-label="Primary navigation">
+                <div class="em-static-nav__item">
+                    <a href="/services" class="em-static-nav__trigger">Services <span class="em-static-nav__chevron">⌵</span></a>
+                    <div class="em-static-nav__dropdown">
+                        <a href="/services/replacement-engines">Replacement Engines</a>
+                        <a href="/services/used-engines">Used Engines</a>
+                        <a href="/services/reconditioned-engines">Reconditioned Engines</a>
+                        <a href="/services/rebuilt-engines">Rebuilt Engines</a>
+                        <a href="/services/engine-fitting">Engine Fitting</a>
+                        <a href="/services/engine-repair">Engine Repair</a>
+                        <a href="/services/engine-diagnostic">Engine Diagnostics</a>
+                        <a href="/services/gearbox-replacement">Gearbox Replacement</a>
+                    </div>
+                </div>
+                <div class="em-static-nav__item">
+                    <a href="/prices" class="em-static-nav__trigger">Prices <span class="em-static-nav__chevron">⌵</span></a>
+                    <div class="em-static-nav__dropdown">
+                        <a href="/prices/engine-replacement-cost">Engine Replacement Cost</a>
+                        <a href="/prices/used-engine-cost">Used Engine Cost</a>
+                        <a href="/prices/reconditioned-engine-cost">Reconditioned Engine Cost</a>
+                        <a href="/prices/engine-fitting-cost">Engine Fitting Cost</a>
+                        <a href="/prices/garage-labour-rates">Labour Cost Guide</a>
+                        <a href="/prices/timing-chain-replacement-cost">Timing Chain Cost</a>
+                        <a href="/prices/head-gasket-repair-cost">Head Gasket Cost</a>
+                        <a href="/prices/turbo-replacement-cost">Turbo Cost</a>
+                    </div>
+                </div>
+                <div class="em-static-nav__item">
+                    <a href="/resources#brands" class="em-static-nav__trigger">Brands <span class="em-static-nav__chevron">⌵</span></a>
+                    <div class="em-static-nav__dropdown">
+                        <a href="/bmw">BMW</a>
+                        <a href="/mercedes-benz">Mercedes-Benz</a>
+                        <a href="/land-rover">Land Rover</a>
+                        <a href="/audi">Audi</a>
+                        <a href="/ford">Ford</a>
+                        <a href="/vauxhall">Vauxhall</a>
+                        <a href="/resources#brands">All 41 Brands</a>
+                    </div>
+                </div>
+                <div class="em-static-nav__item">
+                    <a href="/resources" class="em-static-nav__trigger">Knowledge <span class="em-static-nav__chevron">⌵</span></a>
+                    <div class="em-static-nav__dropdown">
+                        <a href="/failures">Engine Failures</a>
+                        <a href="/symptoms">Car Symptoms</a>
+                        <a href="/compare">Compare Options</a>
+                        <a href="/case-studies">Case Studies</a>
+                        <a href="/guides">Guides &amp; Tools</a>
+                        <a href="/resources">All Resources</a>
+                    </div>
+                </div>
+                <div class="em-static-nav__item">
+                    <a href="/insights" class="em-static-nav__trigger">Insights <span class="em-static-nav__chevron">⌵</span></a>
+                    <div class="em-static-nav__dropdown">
+                        <a href="/insights/uk-engine-price-index">UK Engine Price Index</a>
+                        <a href="/insights/uk-engine-replacement-statistics">Engine Replacement Statistics</a>
+                        <a href="/insights/most-replaced-engines-uk">Most Replaced Engines</a>
+                        <a href="/insights/most-reliable-diesel-engines">Most Reliable Engines</a>
+                        <a href="/insights/uk-engine-market-report-2026">UK Market Report 2026</a>
+                    </div>
+                </div>
+                <div class="em-static-nav__item">
+                    <a href="/blog" class="em-static-nav__direct">Blog</a>
+                </div>
+            </nav>
+
+            <div class="em-static-actions">
+                <a href="tel:03330000044">0333 000 0044</a>
+                <a href="/get-a-quote" class="em-static-quote">Get Quote</a>
+            </div>
+
+            <button class="em-static-menu" type="button" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+        </div>
+    </header>
+
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main>
+
+        <!-- ===== HERO SECTION ===== -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+
+                    <!-- Hero Text -->
+                    <div class="hero-text">
+                        <h1>
+                            Compare <span class="highlight">Engine Options</span> — Used vs Reconditioned vs Rebuilt
+                        </h1>
+                        <p>
+                            Used, reconditioned, rebuilt, remanufactured, or repair — which is right for you?
+                            This comparison hub helps you understand the trade-offs between cost, warranty,
+                            reliability, and vehicle value. Based on 24,650 real UK quote requests.
+                        </p>
+
+                        <div class="hero-stats">
+                            <div class="stat">
+                                <span class="number">24,650</span>
+                                <span class="label">Quote Requests in 2025 <span style="color:#86efac;">[EM-VERIFIED]</span></span>
+                            </div>
+                            <div class="stat">
+                                <span class="number">70.45%</span>
+                                <span class="label">Chose Reconditioned <span style="color:#86efac;">[EM-VERIFIED]</span></span>
+                            </div>
+                            <div class="stat">
+                                <span class="number">40–70%</span>
+                                <span class="label">Average Saving vs Dealer</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hero Image Placeholder -->
+                    <div class="hero-image">
+                        <div class="hero-image-placeholder">
+                            <i class="fas fa-balance-scale"></i>
+                            <p>Comparison Hub</p>
+                            <span class="badge">[EM-VERIFIED] · 24,650 Quotes · 2025</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== BREADCRUMB ===== -->
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="/">Home</a>
+                <span style="color:#94a3b8; margin:0 6px;">›</span>
+                <span style="color:#475569;">Compare</span>
+            </div>
+        </div>
+
+        <!-- ===== INTRODUCTION ===== -->
+        <div class="container">
+            <div class="section-title">
+                <h2>Choose the Right Engine Option</h2>
+                <p>
+                    Choosing the right engine option can save you thousands. This hub compares all your options —
+                    used, reconditioned, rebuilt, remanufactured, and repair. We'll help you understand which
+                    option makes sense for your budget, vehicle value, and ownership plans.
+                </p>
+            </div>
+        </div>
+
+        <!-- ===== QUICK COMPARISON — AT A GLANCE ===== -->
+        <div class="container">
+            <div class="section-divider">
+                <span><i class="fas fa-table"></i> Quick Comparison — At a Glance</span>
+            </div>
+
+            <div class="comparison-table-wrap">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Option</th>
+                            <th>Supply Cost</th>
+                            <th>Fitted Cost</th>
+                            <th>Warranty</th>
+                            <th>Best For</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="option-name">Used</td>
+                            <td>£500–£3,500</td>
+                            <td>£1,500–£4,500</td>
+                            <td class="warranty">1–6 months</td>
+                            <td>Budget, older vehicles</td>
+                        </tr>
+                        <tr class="highlight-row">
+                            <td class="option-name">Reconditioned <span class="badge-best">Most Popular</span></td>
+                            <td>£1,200–£5,500</td>
+                            <td>£2,500–£6,500</td>
+                            <td class="warranty">6–24 months</td>
+                            <td>Most owners, best value</td>
+                        </tr>
+                        <tr>
+                            <td class="option-name">Rebuilt</td>
+                            <td>£2,500–£8,000</td>
+                            <td>£4,000–£9,500</td>
+                            <td class="warranty">12–24 months</td>
+                            <td>Long-term ownership</td>
+                        </tr>
+                        <tr>
+                            <td class="option-name">Remanufactured</td>
+                            <td>£4,500–£12,000+</td>
+                            <td>£6,500–£16,000+</td>
+                            <td class="warranty">12–36 months</td>
+                            <td>OEM spec, commercial</td>
+                        </tr>
+                        <tr>
+                            <td class="option-name">Repair</td>
+                            <td>£50–£2,000+</td>
+                            <td>Varies</td>
+                            <td class="warranty">3–12 months</td>
+                            <td>Minor / isolated failures</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- ===== COMPARISON CATEGORIES — VISUAL GRID ===== -->
+
+        <!-- ===== CATEGORY 1: ENGINE TYPE COMPARISONS ===== -->
+        <div class="container">
+            <div class="section-divider">
+                <span><i class="fas fa-cogs"></i> Engine Type Comparisons</span>
+            </div>
+
+            <div class="compare-grid">
+
+                <a href="/compare/used-vs-reconditioned-engine" class="compare-card">
+                    <span class="category-tag">Engine Type</span>
+                    <div class="icon-wrap">
+                        <i class="fas fa-arrows-left-right"></i>
+                        <span style="font-weight:600;font-size:0.85rem;color:#475569;">Used vs Reconditioned</span>
+                    </div>
+                    <h3>Used vs Reconditioned</h3>
+                    <p>Cost vs warranty — understand the trade-off between budget and peace of mind.</p>
+                    <span class="saving">£600–£1,000 saving</span>
+                    <div class="meta">
+                        <span class="tag">Cost vs Warranty</span>
+                        <span class="arrow"><i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <a href="/compare/used-vs-rebuilt-engine" class="compare-card">
+                    <span class="category-tag">Engine Type</span>
+                    <div class="icon-wrap">
+                        <i class="fas fa-arrows-left-right"></i>
+                        <span style="font-weight:600;font-size:0.85rem;color:#475569;">Used vs Rebuilt</span>
+                    </div>
+                    <h3>Used vs Rebuilt</h3>
+                    <p>Budget vs premium — decide if the extra investment is worth it for your vehicle.</p>
+                    <span class="saving">£1,000–£3,000 saving</span>
+                    <div class="meta">
+                        <span class="tag">Budget vs Premium</span>
+                        <span class="arrow"><i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <a href="/compare/reconditioned-vs-rebuilt-engine" class="compare-card">
+                    <span class="category-tag">Engine Type</span>
+                    <div class="icon-wrap">
+                        <i class="fas fa-arrows-left-right"></i>
+                        <span style="font-weight:600;font-size:0.85rem;color:#475569;">Reconditioned vs Rebuilt</span>
+                    </div>
+                    <h3>Reconditioned vs Rebuilt</h3>
+                    <p>Exchange vs send yours — which approach delivers better value for your situation.</p>
+                    <span class="saving">£500–£2,000 saving</span>
+                    <div class="meta">
+                        <span class="tag">Exchange vs Send</span>
+                        <span class="arrow"><i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <a href="/compare/reconditioned-vs-remanufactured-engine" class="compare-card">
+                    <span class="category-tag">Engine Type</span>
+                    <div class="icon-wrap">
+                        <i class="fas fa-arrows-left-right"></i>
+                        <span style="font-weight:600;font-size:0.85rem;color:#475569;">Reconditioned vs Remanufactured</span>
+                    </div>
+                    <h3>Reconditioned vs Remanufactured</h3>
+                    <p>Quality standard — understand the difference in specification and what it means for you.</p>
+                    <span class="saving">£1,000–£3,000 saving</span>
+                    <div class="meta">
+                        <span class="tag">Quality</span>
+                        <span class="arrow"><i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <a href="/compare/new-vs-reconditioned-engine" class="compare-card">
+                    <span class="category-tag">Engine Type</span>
+                    <div class="icon-wrap">
+                        <i class="fas fa-arrows-left-right"></i>
+                        <span style="font-weight:600;font-size:0.85rem;color:#475569;">New vs Reconditioned</span>
+                    </div>
+                    <h3>New vs Reconditioned</h3>
+                    <p>Brand new vs restored — is the premium for a new engine ever worth it?</p>
+                    <span class="saving">40–60% saving</span>
+                    <div class="meta">
+                        <span class="tag">New vs Restored</span>
+                        <span class="arrow"><i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+            </div>
+
+            <!-- ===== CATEGORY 2: DECISION COMPARISONS ===== -->
+            <div class="section-divider">
+                <span><i class="fas fa-brain"></i> Decision Comparisons</span>
+            </div>
+
+            <div class="compare-grid">
+
+                <a href="/compare/repair-vs-replacement" class="compare-card">
+                    <span class="category-tag">Decision</span>
+                    <div class="icon-wrap">
+                        <i class="fas fa-arrows-left-right"></i>
+                        <span style="font-weight:600;font-size:0.85rem;color:#475569;">Repair vs Replacement</span>
+                    </div>
+                    <h3>Repair vs Replacement</h3>
+                    <p>Can I fix it or do I need a new engine? Know when to stop repairing.</p>
+                    <div class="meta">
+                        <span class="tag">Decision</span>
+                        <span class="arrow"><i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <a href="/compare/repair-vs-reconditioned-engine" class="compare-card">
+                    <span class="category-tag">Decision</span>
+                    <div class="icon-wrap">
+                        <i class="fas fa-arrows-left-right"></i>
+                        <span style="font-weight:600;font-size:0.85rem;color:#475569;">Repair vs Reconditioned</span>
+                    </div>
+                    <h3>Repair vs Reconditioned</h3>
+                    <p>Fix one failure or replace all? Compare the long-term economics.</p>
+                    <div class="meta">
+                        <span class="tag">Fix vs Replace</span>
+                        <span class="arrow"><i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <a href="/compare/repair-vs-used-engine" class="compare-card">
+                    <span class="category-tag">Decision</span>
+                    <div class="icon-wrap">
+                        <i class="fas fa-arrows-left-right"></i>
+                        <span style="font-weight:600;font-size:0.85rem;color:#475569;">Repair vs Used</span>
+                    </div>
+                    <h3>Repair vs Used</h3>
+                    <p>Which is cheaper for my car? We compare the costs and outcomes.</p>
+                    <div class="meta">
+                        <span class="tag">Cost Comparison</span>
+                        <span class="arrow"><i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <a href="/compare/rebuild-vs-replacement" class="compare-card">
+                    <span class="category-tag">Decision</span>
+                    <div class="icon-wrap">
+                        <i class="fas fa-arrows-left-right"></i>
+                        <span style="font-weight:600;font-size:0.85rem;color:#475569;">Rebuild vs Replacement</span>
+                    </div>
+                    <h3>Rebuild vs Replacement</h3>
+                    <p>Send mine or buy exchange? Understand the pros and cons of each approach.</p>
+                    <div class="meta">
+                        <span class="tag">Rebuild vs Exchange</span>
+                        <span class="arrow"><i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <a href="/compare/repairing-vs-scrapping" class="compare-card">
+                    <span class="category-tag">Decision</span>
+                    <div class="icon-wrap">
+                        <i class="fas fa-arrows-left-right"></i>
+                        <span style="font-weight:600;font-size:0.85rem;color:#475569;">Repairing vs Scrapping</span>
+                    </div>
+                    <h3>Repairing vs Scrapping</h3>
+                    <p>When to stop spending? Use our frameworks to make the tough call.</p>
+                    <div class="meta">
+                        <span class="tag">Scrap or Repair</span>
+                        <span class="arrow"><i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+            </div>
+
+            <!-- ===== CATEGORY 3: SERVICE COMPARISONS ===== -->
+            <div class="section-divider">
+                <span><i class="fas fa-hand-holding-heart"></i> Service Comparisons</span>
+            </div>
+
+            <div class="compare-grid">
+
+                <a href="/compare/supply-only-vs-supply-fit" class="compare-card">
+                    <span class="category-tag">Service</span>
+                    <div class="icon-wrap">
+                        <i class="fas fa-arrows-left-right"></i>
+                        <span style="font-weight:600;font-size:0.85rem;color:#475569;">Supply Only vs Supply &amp; Fit</span>
+                    </div>
+                    <h3>Supply Only vs Supply &amp; Fit</h3>
+                    <p>Buy engine only or full service? Compare the costs and convenience.</p>
+                    <div class="meta">
+                        <span class="tag">Service</span>
+                        <span class="arrow"><i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <a href="/compare/local-garage-vs-specialist" class="compare-card">
+                    <span class="category-tag">Service</span>
+                    <div class="icon-wrap">
+                        <i class="fas fa-arrows-left-right"></i>
+                        <span style="font-weight:600;font-size:0.85rem;color:#475569;">Local Garage vs Specialist</span>
+                    </div>
+                    <h3>Local Garage vs Specialist</h3>
+                    <p>Generalist vs expert — which type of workshop is right for your engine replacement?</p>
+                    <div class="meta">
+                        <span class="tag">Workshop</span>
+                        <span class="arrow"><i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <a href="/compare/engine-rebuild-vs-swap" class="compare-card">
+                    <span class="category-tag">Service</span>
+                    <div class="icon-wrap">
+                        <i class="fas fa-arrows-left-right"></i>
+                        <span style="font-weight:600;font-size:0.85rem;color:#475569;">Engine Rebuild vs Swap</span>
+                    </div>
+                    <h3>Engine Rebuild vs Swap</h3>
+                    <p>Restore vs replace with a different engine — which approach is best for your car?</p>
+                    <div class="meta">
+                        <span class="tag">Rebuild vs Swap</span>
+                        <span class="arrow"><i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+
+        <!-- ===== DECISION FRAMEWORKS ===== -->
+        <div class="container">
+
+            <!-- ===== THE VEHICLE VALUE RULE ===== -->
+            <div class="framework-section">
+                <h3><i class="fas fa-car"></i> The Vehicle Value Rule</h3>
+                <div class="subhead">Use your vehicle's current market value to guide your decision.</div>
+
+                <div class="framework-table-wrap">
+                    <table class="framework-table">
+                        <thead>
+                            <tr>
+                                <th>Vehicle Value</th>
+                                <th>Best Option</th>
+                                <th>Reasoning</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Under £3,000</td>
+                                <td class="best-option">Scrap or used engine</td>
+                                <td>Replacement cost exceeds vehicle value</td>
+                            </tr>
+                            <tr>
+                                <td>£3,000–£5,000</td>
+                                <td class="best-option">Used engine</td>
+                                <td>Budget option minimises loss</td>
+                            </tr>
+                            <tr>
+                                <td>£5,000–£8,000</td>
+                                <td class="best-option">Evaluate both</td>
+                                <td>Reconditioned may be viable</td>
+                            </tr>
+                            <tr>
+                                <td>£8,000–£15,000</td>
+                                <td class="best-option">Reconditioned</td>
+                                <td>Warranty justifies premium</td>
+                            </tr>
+                            <tr>
+                                <td>£15,000+</td>
+                                <td class="best-option">Reconditioned or rebuilt</td>
+                                <td>Premium option recommended</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- ===== THE OWNERSHIP HORIZON RULE ===== -->
+            <div class="framework-section">
+                <h3><i class="fas fa-clock"></i> The Ownership Horizon Rule</h3>
+                <div class="subhead">How long you plan to keep the vehicle determines the best option.</div>
+
+                <div class="framework-table-wrap">
+                    <table class="framework-table">
+                        <thead>
+                            <tr>
+                                <th>Ownership Period</th>
+                                <th>Best Option</th>
+                                <th>Reasoning</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Under 1 year</td>
+                                <td class="best-option">Used engine</td>
+                                <td>Minimise upfront cost</td>
+                            </tr>
+                            <tr>
+                                <td>1–2 years</td>
+                                <td class="best-option">Used or reconditioned</td>
+                                <td>Balance cost and reliability</td>
+                            </tr>
+                            <tr>
+                                <td>2–5 years</td>
+                                <td class="best-option">Reconditioned</td>
+                                <td>Warranty covers ownership period</td>
+                            </tr>
+                            <tr>
+                                <td>5+ years</td>
+                                <td class="best-option">Rebuilt or new</td>
+                                <td>Long-term reliability</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ===== MARKET INTELLIGENCE ===== -->
+        <div class="container">
+            <div class="market-intel">
+                <h4><i class="fas fa-chart-bar"></i> Market Intelligence — What Others Chose</h4>
+                <p>
+                    Based on <strong>24,650 quote requests</strong> in 2025, here's what UK vehicle owners
+                    actually chose based on their vehicle value.
+                </p>
+
+                <div class="intel-grid">
+                    <div class="intel-item">
+                        <span class="value">Under £5,000</span>
+                        <span class="label">Most Chosen: <span class="pct">Used Engine (42%)</span></span>
+                    </div>
+                    <div class="intel-item">
+                        <span class="value">£5,000–£15,000</span>
+                        <span class="label">Most Chosen: <span class="pct">Reconditioned (68%)</span></span>
+                    </div>
+                    <div class="intel-item">
+                        <span class="value">£15,000–£30,000</span>
+                        <span class="label">Most Chosen: <span class="pct">Reconditioned (72%)</span></span>
+                    </div>
+                    <div class="intel-item">
+                        <span class="value">£30,000+</span>
+                        <span class="label">Most Chosen: <span class="pct">Reconditioned / Rebuilt (85%)</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== REAL-WORLD SAVINGS EXAMPLES ===== -->
+        <div class="container">
+            <div class="section-divider">
+                <span><i class="fas fa-pound-sign"></i> Real-World Savings Examples</span>
+            </div>
+
+            <div class="savings-grid">
+
+                <div class="savings-card">
+                    <div class="vehicle-name">BMW 320d (N47) — Reconditioned</div>
+                    <div class="option-label">Reconditioned engine with 12-month warranty</div>
+                    <div class="cost-row">
+                        <span class="dealer">Dealer: £7,000–£9,000</span>
+                        <span class="em-price">EM: £3,200–£5,500</span>
+                    </div>
+                    <span class="saving-amount">Save £2,000–£4,000</span>
+                </div>
+
+                <div class="savings-card">
+                    <div class="vehicle-name">Range Rover Sport (SDV6) — Reconditioned</div>
+                    <div class="option-label">Reconditioned engine with 24-month warranty</div>
+                    <div class="cost-row">
+                        <span class="dealer">Dealer: £20,000–£30,000</span>
+                        <span class="em-price">EM: £6,500–£9,500</span>
+                    </div>
+                    <span class="saving-amount">Save £10,000–£20,000</span>
+                </div>
+
+                <div class="savings-card">
+                    <div class="vehicle-name">Ford Focus (1.6 TDCi) — Used</div>
+                    <div class="option-label">Used engine with 3-month warranty</div>
+                    <div class="cost-row">
+                        <span class="dealer">Dealer: £2,000–£3,500</span>
+                        <span class="em-price">EM: £400–£900</span>
+                    </div>
+                    <span class="saving-amount">Save £1,000–£2,500</span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ===== WHAT TO DO NEXT ===== -->
+        <div class="container">
+            <div class="section-divider">
+                <span><i class="fas fa-arrow-right"></i> What To Do Next</span>
+            </div>
+
+            <div class="next-steps">
+                <div class="next-step">
+                    <div class="num">1</div>
+                    <h4>Check Your Vehicle Value</h4>
+                    <p>Use Parkers, AutoTrader to understand your car's current worth.</p>
+                </div>
+                <div class="next-step">
+                    <div class="num">2</div>
+                    <h4>Decide Your Ownership Plan</h4>
+                    <p>How long will you keep the vehicle? This changes the best option.</p>
+                </div>
+                <div class="next-step">
+                    <div class="num">3</div>
+                    <h4>Compare Options</h4>
+                    <p>Browse the comparisons above to narrow down your choices.</p>
+                </div>
+                <div class="next-step">
+                    <div class="num">4</div>
+                    <h4>Get a Quote</h4>
+                    <p>Compare real prices from 100+ UK specialists.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== CTA SECTION ===== -->
+        <div class="container">
+            <div class="cta-section">
+                <h2>Ready to Compare Options?</h2>
+                <p>Get real quotes from 100+ UK specialists and make an informed decision.</p>
+                <a href="/get-a-quote" class="cta-button">
+                    Get Your Free Quote <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+
+    <!-- ===== ENGINES MARKET STATIC FOOTER ===== -->
+    <footer class="em-static-footer">
+        <div class="em-static-footer__inner">
+            <div class="em-static-footer__brand">
+                <a class="em-static-logo" href="/" aria-label="Engines Market homepage">
+                    <img class="em-static-logo__image" src="/branding/engine-market-logo-rectangle.png" alt="Engines Market" width="5752" height="2280" />
+                </a>
+                <p>Compare replacement, used and reconditioned engine options from trusted UK specialists.</p>
+                <div class="em-static-footer__contact">
+                    <a href="tel:03330000044">0333 000 0044</a>
+                    <a href="/get-a-quote">Get a quote</a>
+                </div>
+            </div>
+
+            <nav class="em-static-footer__nav" aria-label="Footer navigation">
+                <div>
+                    <h2>Company</h2>
+                    <ul>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/about/how-engines-market-works">How It Works</a></li>
+                        <li><a href="/about/supplier-standards">Supplier Standards</a></li>
+                        <li><a href="/reviews">Reviews</a></li>
+                        <li><a href="/about/contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Services</h2>
+                    <ul>
+                        <li><a href="/services/replacement-engines">Replacement Engines</a></li>
+                        <li><a href="/services/used-engines">Used Engines</a></li>
+                        <li><a href="/services/reconditioned-engines">Reconditioned Engines</a></li>
+                        <li><a href="/services/rebuilt-engines">Rebuilt Engines</a></li>
+                        <li><a href="/services/engine-fitting">Engine Fitting</a></li>
+                        <li><a href="/services/engine-repair">Engine Repair</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Knowledge</h2>
+                    <ul>
+                        <li><a href="/failures">Engine Failures</a></li>
+                        <li><a href="/symptoms">Car Symptoms</a></li>
+                        <li><a href="/compare">Compare Options</a></li>
+                        <li><a href="/case-studies">Case Studies</a></li>
+                        <li><a href="/guides">Guides &amp; Tools</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Legal</h2>
+                    <ul>
+                        <li><a href="/legal/privacy-policy">Privacy Policy</a></li>
+                        <li><a href="/legal/terms-and-conditions">Terms &amp; Conditions</a></li>
+                        <li><a href="/resources#legal">Cookie Policy</a></li>
+                        <li><a href="/resources#legal">Modern Slavery</a></li>
+                        <li><a href="/resources#legal">Accessibility</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Tools</h2>
+                    <ul>
+                        <li><a href="/guides">Find Engine Number</a></li>
+                        <li><a href="/guides">Engine History Check</a></li>
+                        <li><a href="/resources#locations">Locations</a></li>
+                        <li><a href="/resources">View All Resources</a></li>
+                        <li><a href="/sitemap.xml">Sitemap</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="em-static-footer__bottom">Copyright 2026 Engines Market. All rights reserved.</div>
+    </footer>
+
+
+    <!-- ===== SCHEMA MARKUP (JSON-LD) ===== -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "name": "Compare Engine Options UK",
+            "description": "Compare engine replacement options — used, reconditioned, rebuilt, new, and repair. Costs, warranties, and which is right for your vehicle.",
+            "url": "https://enginesmarket.co.uk/compare/",
+            "numberOfItems": 12,
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Used vs Reconditioned",
+                "url": "https://enginesmarket.co.uk/compare/used-vs-reconditioned-engine"
+            }, {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Used vs Rebuilt",
+                "url": "https://enginesmarket.co.uk/compare/used-vs-rebuilt-engine"
+            }, {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Reconditioned vs Rebuilt",
+                "url": "https://enginesmarket.co.uk/compare/reconditioned-vs-rebuilt-engine"
+            }, {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "Reconditioned vs Remanufactured",
+                "url": "https://enginesmarket.co.uk/compare/reconditioned-vs-remanufactured-engine"
+            }, {
+                "@type": "ListItem",
+                "position": 5,
+                "name": "New vs Reconditioned",
+                "url": "https://enginesmarket.co.uk/compare/new-vs-reconditioned-engine"
+            }, {
+                "@type": "ListItem",
+                "position": 6,
+                "name": "Repair vs Replacement",
+                "url": "https://enginesmarket.co.uk/compare/repair-vs-replacement"
+            }, {
+                "@type": "ListItem",
+                "position": 7,
+                "name": "Repair vs Reconditioned",
+                "url": "https://enginesmarket.co.uk/compare/repair-vs-reconditioned-engine"
+            }, {
+                "@type": "ListItem",
+                "position": 8,
+                "name": "Repair vs Used",
+                "url": "https://enginesmarket.co.uk/compare/repair-vs-used-engine"
+            }, {
+                "@type": "ListItem",
+                "position": 9,
+                "name": "Rebuild vs Replacement",
+                "url": "https://enginesmarket.co.uk/compare/rebuild-vs-replacement"
+            }, {
+                "@type": "ListItem",
+                "position": 10,
+                "name": "Repairing vs Scrapping",
+                "url": "https://enginesmarket.co.uk/compare/repairing-vs-scrapping"
+            }, {
+                "@type": "ListItem",
+                "position": 11,
+                "name": "Supply Only vs Supply & Fit",
+                "url": "https://enginesmarket.co.uk/compare/supply-only-vs-supply-fit"
+            }, {
+                "@type": "ListItem",
+                "position": 12,
+                "name": "Local Garage vs Specialist",
+                "url": "https://enginesmarket.co.uk/compare/local-garage-vs-specialist"
+            }, {
+                "@type": "ListItem",
+                "position": 13,
+                "name": "Engine Rebuild vs Swap",
+                "url": "https://enginesmarket.co.uk/compare/engine-rebuild-vs-swap"
+            }]
+        }
+    </script>
+
+    <!-- ===== ADDITIONAL SCHEMA: BREADCRUMB ===== -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://enginesmarket.co.uk/"
+            }, {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Compare",
+                "item": "https://enginesmarket.co.uk/compare/"
+            }]
+        }
+    </script>
+
+    <!-- ===== LAZY LOAD & INTERSECTION OBSERVER ===== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
+            // Lazy load compare cards with Intersection Observer
+            const cards = document.querySelectorAll('.compare-card');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                observer.observe(card);
+            });
+
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href === '#') return;
+                    const target = document.querySelector(href);
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+
+        });
+    </script>
+
+
+    <script>
+        (function() {
+            if (window.__enginesMarketStaticNavigationLoaded) return;
+            window.__enginesMarketStaticNavigationLoaded = true;
+
+            const header = document.querySelector('.em-static-header');
+            const menu = document.querySelector('.em-static-menu');
+            const nav = document.querySelector('.em-static-nav');
+            if (!header || !menu || !nav) return;
+
+            menu.addEventListener('click', function() {
+                const open = header.getAttribute('data-open') === 'true';
+                header.setAttribute('data-open', String(!open));
+                menu.setAttribute('aria-expanded', String(!open));
+                menu.textContent = open ? '☰' : '×';
+            });
+
+            nav.querySelectorAll('.em-static-nav__trigger').forEach(function(trigger) {
+                trigger.addEventListener('click', function(event) {
+                    if (!window.matchMedia('(max-width: 1023px)').matches) return;
+                    event.preventDefault();
+                    const item = trigger.closest('.em-static-nav__item');
+                    const expanded = item.getAttribute('data-expanded') === 'true';
+                    nav.querySelectorAll(".em-static-nav__item[data-expanded='true']").forEach(function(
+                        openItem) {
+                        if (openItem !== item) openItem.removeAttribute('data-expanded');
+                    });
+                    if (expanded) item.removeAttribute('data-expanded');
+                    else item.setAttribute('data-expanded', 'true');
+                });
+            });
+        })();
+    </script>
+
+</body>
+</html>

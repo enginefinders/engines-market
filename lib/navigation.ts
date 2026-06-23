@@ -120,15 +120,15 @@ export const companyLinks: NavigationLink[] = [
 export const legalLinks: NavigationLink[] = [
   { label: "Privacy Policy", href: "/legal/privacy-policy" },
   { label: "Terms & Conditions", href: "/legal/terms-and-conditions" },
-  { label: "Cookie Policy", href: "/resources#legal" },
-  { label: "Modern Slavery", href: "/resources#legal" },
-  { label: "Accessibility", href: "/resources#legal" },
+  { label: "Cookie Policy", href: "/legal" },
+  { label: "Modern Slavery", href: "/legal" },
+  { label: "Accessibility", href: "/legal" },
 ];
 
 export const toolLinks: NavigationLink[] = [
   { label: "Find Engine Number", href: "/guides" },
   { label: "Engine History Check", href: "/guides" },
-  { label: "Locations", href: "/resources#locations" },
+  { label: "Locations", href: "/locations" },
   { label: "View All Resources", href: "/resources" },
   { label: "Sitemap", href: "/sitemap.xml" },
 ];

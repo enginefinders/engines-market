@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { FiChevronDown } from "react-icons/fi";
 import { footerNavigation } from "@/lib/navigation";
 
 export default function Footer() {
@@ -26,7 +27,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <nav className="grid gap-x-10 gap-y-8 sm:grid-cols-2 lg:grid-cols-5" aria-label="Footer navigation">
+          <nav className="hidden gap-x-10 gap-y-8 lg:grid lg:grid-cols-5" aria-label="Footer navigation">
             {footerNavigation.map((column) => (
               <div key={column.label}>
                 <h2 className="font-black uppercase tracking-[0.08em] text-white">
@@ -42,6 +43,28 @@ export default function Footer() {
                   ))}
                 </ul>
               </div>
+            ))}
+          </nav>
+
+          <nav className="space-y-3 lg:hidden" aria-label="Footer navigation">
+            {footerNavigation.map((column) => (
+              <details key={column.label} className="group overflow-hidden rounded-2xl border border-white/10 bg-white/5">
+                <summary className="flex cursor-pointer list-none items-center justify-between px-4 py-4 font-black uppercase tracking-[0.08em] text-white">
+                  <span>{column.label}</span>
+                  <FiChevronDown className="h-4 w-4 transition group-open:rotate-180" aria-hidden="true" />
+                </summary>
+                <div className="border-t border-white/10 px-4 py-4">
+                  <ul className="grid gap-3">
+                    {column.links.map((link) => (
+                      <li key={`${column.label}-${link.href}-${link.label}`}>
+                        <Link href={link.href} className="text-sm text-slate-300 transition hover:text-green-300">
+                          {link.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </details>
             ))}
           </nav>
         </div>

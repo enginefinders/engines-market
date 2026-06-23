@@ -1,18 +1,9 @@
-import ResourceHubPage from "@/components/pages/ResourceHubPage";
-import { getPublicHtmlLinks } from "@/lib/resourceContent";
+import HubPage, { getHubPageMetadata } from "@/components/pages/HubPage";
 
-export const metadata = {
-  title: "Engine Services | Engines Market",
-  description: "Browse engine replacement, fitting, repair and gearbox services.",
-};
+export function generateMetadata() {
+  return getHubPageMetadata("services");
+}
 
 export default function ServicesPage() {
-  return (
-    <ResourceHubPage
-      eyebrow="Services"
-      title="Engine Services"
-      description="Explore replacement, used, reconditioned and rebuilt engine services, plus fitting, repair and diagnostics."
-      sections={[{ title: "Services", links: getPublicHtmlLinks("services") }]}
-    />
-  );
+  return <HubPage slug="services" />;
 }

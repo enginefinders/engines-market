@@ -1,18 +1,9 @@
-import ResourceHubPage from "@/components/pages/ResourceHubPage";
-import { symptomLinks } from "@/lib/resourceContent";
+import HubPage, { getHubPageMetadata } from "@/components/pages/HubPage";
 
-export const metadata = {
-  title: "Car Symptoms | Engines Market",
-  description: "Use engine symptoms to find relevant failure guides.",
-};
+export function generateMetadata() {
+  return getHubPageMetadata("symptoms");
+}
 
 export default function SymptomsPage() {
-  return (
-    <ResourceHubPage
-      eyebrow="Knowledge"
-      title="Car Symptoms"
-      description="Start with the symptom you can see, hear or feel, then follow the relevant engine guide."
-      sections={[{ title: "Common Symptoms", links: symptomLinks }]}
-    />
-  );
+  return <HubPage slug="symptoms" />;
 }

@@ -10,8 +10,13 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
 
+  function closeMobileMenu() {
+    setMobileOpen(false);
+    setMobileExpanded(null);
+  }
+
   return (
-    <header className="sticky top-0 z-50 bg-[#061a33] text-white shadow-md">
+    <header className="sticky top-0 z-[90] bg-[#061a33] text-white shadow-md">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex shrink-0 items-center" aria-label="Engines Market homepage">
           <Image
@@ -69,67 +74,79 @@ export default function Navbar() {
           className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/20 lg:hidden"
           aria-label="Open navigation menu"
           aria-expanded={mobileOpen}
-          onClick={() => setMobileOpen((open) => !open)}
+          onClick={() => {
+            setMobileOpen((open) => !open);
+            if (mobileOpen) {
+              setMobileExpanded(null);
+            }
+          }}
         >
           {mobileOpen ? <FiX className="h-5 w-5" aria-hidden="true" /> : <FiMenu className="h-5 w-5" aria-hidden="true" />}
         </button>
       </div>
 
       {mobileOpen ? (
-        <nav className="border-t border-white/10 bg-[#061a33] px-4 py-4 lg:hidden" aria-label="Mobile navigation">
-          <div className="space-y-3">
-            {headerNavigation.map((item) => {
-              const expanded = mobileExpanded === item.label;
+        <nav
+          className="absolute inset-x-0 top-full h-[70vh] max-h-[calc(100vh-4rem)] overflow-hidden border-t border-white/10 bg-[#061a33] px-4 py-4 shadow-2xl lg:hidden"
+          aria-label="Mobile navigation"
+        >
+          <div className="h-full overflow-y-auto overscroll-contain pr-1">
+            <div className="space-y-3">
+              {headerNavigation.map((item) => {
+                const expanded = mobileExpanded === item.label;
 
-              return (
-                <div key={item.label} className="rounded-lg bg-white/5">
-                  {item.links ? (
-                    <button
-                      type="button"
-                      className="flex w-full items-center justify-between px-4 py-3 text-left text-sm font-black"
-                      aria-expanded={expanded}
-                      onClick={() => setMobileExpanded(expanded ? null : item.label)}
-                    >
-                      <span>{item.label}</span>
-                      <FiChevronDown
-                        className={`h-4 w-4 transition ${expanded ? "rotate-180" : ""}`}
-                        aria-hidden="true"
-                      />
-                    </button>
-                  ) : (
-                    <Link
-                      href={item.href}
-                      className="block px-4 py-3 text-sm font-black"
-                      onClick={() => setMobileOpen(false)}
-                    >
-                      {item.label}
-                    </Link>
-                  )}
-                  {item.links && expanded ? (
-                  <div className="grid gap-1 px-4 pb-4">
-                    {item.links.map((link) => (
-                      <Link
-                        key={link.href}
-                        href={link.href}
-                        className="py-1.5 text-sm text-slate-300"
-                        onClick={() => setMobileOpen(false)}
+                return (
+                  <div key={item.label} className="rounded-lg bg-white/5">
+                    {item.links ? (
+                      <button
+                        type="button"
+                        className="flex w-full items-center justify-between px-4 py-3 text-left text-sm font-black"
+                        aria-expanded={expanded}
+                        onClick={() => setMobileExpanded(expanded ? null : item.label)}
                       >
-                        {link.label}
+                        <span>{item.label}</span>
+                        <FiChevronDown
+                          className={`h-4 w-4 transition ${expanded ? "rotate-180" : ""}`}
+                          aria-hidden="true"
+                        />
+                      </button>
+                    ) : (
+                      <Link
+                        href={item.href}
+                        className="block px-4 py-3 text-sm font-black"
+                        onClick={closeMobileMenu}
+                      >
+                        {item.label}
                       </Link>
-                    ))}
+                    )}
+                    {item.links && expanded ? (
+                      <div className="px-4 pb-4">
+                        <div className="grid gap-1">
+                          {item.links.map((link) => (
+                            <Link
+                              key={link.href}
+                              href={link.href}
+                              className="rounded-md py-1.5 text-sm text-slate-300 transition hover:bg-white/5 hover:text-white"
+                              onClick={closeMobileMenu}
+                            >
+                              {link.label}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    ) : null}
                   </div>
-                ) : null}
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
+            <Link
+              href="/get-a-quote"
+              className="mt-4 block rounded-lg bg-green-600 px-4 py-3 text-center text-sm font-black"
+              onClick={closeMobileMenu}
+            >
+              Get Quote
+            </Link>
           </div>
-          <Link
-            href="/get-a-quote"
-            className="mt-4 block rounded-lg bg-green-600 px-4 py-3 text-center text-sm font-black"
-            onClick={() => setMobileOpen(false)}
-          >
-            Get Quote
-          </Link>
         </nav>
       ) : null}
     </header>

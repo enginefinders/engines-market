@@ -25,23 +25,6 @@ function ChevronIcon({ open = false, animate = false }: { open?: boolean; animat
   );
 }
 
-function PlusIcon({ open = false }: { open?: boolean }) {
-  return (
-    <svg viewBox="0 0 24 24" className={`h-4 w-4 transition-transform ${open ? "rotate-45" : ""}`} fill="none" aria-hidden="true">
-      <path d="M12 5v14M5 12h14" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
-    </svg>
-  );
-}
-
-function ArrowIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" aria-hidden="true">
-      <path d="M5 12h14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-      <path d="m13 6 6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
-
 const brandLogoSources: Record<string, string> = {
   "alfa-romeo": "/BrandsLogos/alpha-romeo-logo-small.webp.webp",
   "aston-martin": "/BrandsLogos/aston-martin-logo-small.webp.webp",
@@ -227,7 +210,7 @@ export default function HomeBrandGridSection({ brands, featuredSlugs }: Props) {
                   {/* Dropdown */}
                   {isOpen ? (
                     <div
-                      className={`absolute left-[-1px] right-[-1px] z-50 bg-[#0d1b2e] p-2 py-4 border border-[#e5e7eb] ${
+                      className={`absolute left-[-1px] right-[-1px] z-20 border border-[#e5e7eb] bg-[#0d1b2e] p-2 py-4 ${
                         isLastRow
                           ? "bottom-full rounded-t-[10px] border-b-0"
                           : "top-full rounded-b-[10px] border-t-0"
