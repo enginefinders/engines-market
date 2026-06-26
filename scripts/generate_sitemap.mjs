@@ -5,11 +5,39 @@ const ROOT = process.cwd();
 const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://enginesmarket.co.uk").trim().replace(/\/+$/, "");
 const INDEX_MODEL_PAGES = process.env.INDEX_MODEL_PAGES == null ? true : process.env.INDEX_MODEL_PAGES === "true";
 const INDEX_VARIANT_PAGES =
-  process.env.INDEX_VARIANT_PAGES == null ? false : process.env.INDEX_VARIANT_PAGES === "true";
+  process.env.INDEX_VARIANT_PAGES == null ? true : process.env.INDEX_VARIANT_PAGES === "true";
+const PUBLIC_DIR = path.join(ROOT, "public");
+const STATIC_APP_ROUTES = [
+  "/blog",
+  "/case-studies",
+  "/compare",
+  "/failures",
+  "/form",
+  "/guides",
+  "/insights",
+  "/legal",
+  "/locations",
+  "/prices",
+  "/resources",
+  "/services",
+  "/symptoms",
+];
 const UTF8_BOM = /^\uFEFF/;
 
 function normalizeSlugPart(value) {
   return String(value || "").trim().toLowerCase();
+}
+
+function normalizeRoute(route) {
+  if (!route) {
+    return "/";
+  }
+
+  if (route === "/") {
+    return route;
+  }
+
+  return route.replace(/\/+$/, "");
 }
 
 function getCanonicalModelSlug(brandSlug, modelSlug) {
@@ -100,6 +128,99 @@ function escapeXml(value) {
     .replace(/'/g, "&apos;");
 }
 
+function extractPathnameFromCanonical(value) {
+  try {
+    const url = new URL(value);
+    return normalizeRoute(url.pathname);
+  } catch {
+    return null;
+  }
+}
+
+function extractCanonicalRoute(html) {
+  const match = html.match(/<link\s+rel=["']canonical["']\s+href=["']([^"']+)["']/i);
+  if (!match) {
+    return null;
+  }
+
+  return extractPathnameFromCanonical(match[1]);
+}
+
+function deriveStaticRouteFromFilePath(filePath) {
+  const relativePath = path.relative(PUBLIC_DIR, filePath).replace(/\\/g, "/");
+
+  if (relativePath === "about/about-us.html") {
+    return "/about";
+  }
+
+  if (relativePath === "reviews.html") {
+    return "/reviews";
+  }
+
+  if (relativePath === "get-a-quote.html") {
+    return "/get-a-quote";
+  }
+
+  if (relativePath === "case-studies/nissan-navara-d40-case-study.html") {
+    return "/case-studies/nissan-navara-engine-failure";
+  }
+
+  const withoutExtension = relativePath.replace(/\.html$/i, "");
+  const segments = withoutExtension.split("/");
+
+  if (segments[0] === "services" && segments[1] === "gearbox-replacement" && segments[2]) {
+    return `/services/gearbox-replacement/${segments[2]}`;
+  }
+
+  if (
+    ["about", "compare", "insights", "services", "prices", "legal", "failures", "case-studies", "symptoms"].includes(
+      segments[0],
+    ) &&
+    segments[1]
+  ) {
+    return `/${segments.join("/")}`;
+  }
+
+  if (segments.length === 1 && segments[0]) {
+    return `/${segments[0]}`;
+  }
+
+  return null;
+}
+
+async function readStaticPublicRoutes(dirPath = PUBLIC_DIR) {
+  const entries = await readdir(dirPath, { withFileTypes: true });
+  const routes = new Set();
+
+  for (const entry of entries) {
+    const entryPath = path.join(dirPath, entry.name);
+
+    if (entry.isDirectory()) {
+      const nestedRoutes = await readStaticPublicRoutes(entryPath);
+      for (const route of nestedRoutes) {
+        routes.add(route);
+      }
+      continue;
+    }
+
+    if (!entry.isFile() || !entry.name.endsWith(".html")) {
+      continue;
+    }
+
+    try {
+      const raw = await readFile(entryPath, "utf-8");
+      const route = extractCanonicalRoute(raw) ?? deriveStaticRouteFromFilePath(entryPath);
+      if (route) {
+        routes.add(route);
+      }
+    } catch {
+      continue;
+    }
+  }
+
+  return routes;
+}
+
 function renderSitemap(entries) {
   const lines = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'];
 
@@ -125,8 +246,25 @@ async function main() {
   const brandPages = await readJsonFiles(brandsDir, isBrandPageData);
   const modelPages = await readJsonFiles(modelsDir, isModelPageData);
   const variantPages = await readJsonFiles(variantsDir, isVariantPageData);
+  const staticPublicRoutes = await readStaticPublicRoutes();
 
-  const entries = [toUrlEntry(`${SITE_URL}/`, lastModified, 1)];
+  const entryMap = new Map();
+
+  function addEntry(route, priority) {
+    const normalizedRoute = normalizeRoute(route);
+    const url = normalizedRoute === "/" ? `${SITE_URL}/` : `${SITE_URL}${normalizedRoute}`;
+    entryMap.set(url, toUrlEntry(url, lastModified, priority));
+  }
+
+  addEntry("/", 1);
+
+  for (const route of STATIC_APP_ROUTES) {
+    addEntry(route, 0.75);
+  }
+
+  for (const route of staticPublicRoutes) {
+    addEntry(route, 0.75);
+  }
 
   const seenBrands = new Set();
   for (const page of brandPages) {
@@ -135,7 +273,7 @@ async function main() {
       continue;
     }
     seenBrands.add(brandSlug);
-    entries.push(toUrlEntry(`${SITE_URL}/${brandSlug}`, lastModified, 0.8));
+    addEntry(`/${brandSlug}`, 0.8);
   }
 
   if (INDEX_MODEL_PAGES) {
@@ -148,7 +286,7 @@ async function main() {
         continue;
       }
       seenModels.add(key);
-      entries.push(toUrlEntry(`${SITE_URL}/${brandSlug}/${modelSlug}`, lastModified, 0.7));
+      addEntry(`/${brandSlug}/${modelSlug}`, 0.7);
     }
   }
 
@@ -163,10 +301,11 @@ async function main() {
         continue;
       }
       seenVariants.add(key);
-      entries.push(toUrlEntry(`${SITE_URL}/${brandSlug}/${modelSlug}/${variantSlug}`, lastModified, 0.6));
+      addEntry(`/${brandSlug}/${modelSlug}/${variantSlug}`, 0.6);
     }
   }
 
+  const entries = [...entryMap.values()];
   await writeFile(path.join(ROOT, "sitemap.xml"), renderSitemap(entries), "utf-8");
   console.log(`Generated sitemap.xml with ${entries.length} URLs.`);
 }

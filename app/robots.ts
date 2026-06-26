@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://www.enginesmarket.co.uk/sitemap.xml",
+    sitemap: "https://enginesmarket.co.uk/sitemap.xml",
   };
 }
