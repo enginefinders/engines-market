@@ -18,4 +18,4 @@ export const SITE_URL = normalizeSiteUrl(
 );
 
 export const INDEX_MODEL_PAGES = readBooleanFlag("INDEX_MODEL_PAGES", true);
-export const INDEX_VARIANT_PAGES = readBooleanFlag("INDEX_VARIANT_PAGES", false);
+export const INDEX_VARIANT_PAGES = readBooleanFlag("INDEX_VARIANT_PAGES", true);
