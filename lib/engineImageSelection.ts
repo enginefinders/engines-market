@@ -61,17 +61,20 @@ function collectBrandEngineCandidates(pageData: BrandPageData) {
   ]).filter(assetExists);
 }
 
+function isLiveMarketInfographic(assetPath?: string | null) {
+  return Boolean(assetPath?.startsWith("/brand-wcu/"));
+}
+
 function collectBrandCarCandidates(pageData: BrandPageData) {
   const brandSlug = pageData.brand.slug;
 
   return uniquePaths([
-    pageData.sections.liveMarketPrices.imageSrc,
-    resolveBrandAsset(brandSlug, `live-feed-${brandSlug}`),
-    resolveBrandAsset(brandSlug, `${brandSlug}-live-market-bg`),
     resolveBrandAsset(brandSlug, `${brandSlug}-hero-bg`),
     ...pageData.sections.models.cards.map((card) => card.image),
     pageData.assets.heroBg,
-  ]).filter(assetExists);
+    resolveBrandAsset(brandSlug, `live-feed-${brandSlug}`),
+    resolveBrandAsset(brandSlug, `${brandSlug}-live-market-bg`),
+  ]).filter((assetPath) => assetExists(assetPath) && !isLiveMarketInfographic(assetPath));
 }
 
 export function resolveBrandPageVisuals(pageData: BrandPageData) {
@@ -89,11 +92,10 @@ export function resolveBrandPageVisuals(pageData: BrandPageData) {
       pageData.sections.liveMarketPrices.imageSrc,
       resolveBrandAsset(pageData.brand.slug, `live-feed-${pageData.brand.slug}`),
       resolveBrandAsset(pageData.brand.slug, `${pageData.brand.slug}-live-market-bg`),
-      carCandidates[1],
-      carCandidates[0],
       pageData.sections.models.cards[0]?.image,
       pageData.assets.heroBg,
-    ]).find(assetExists)
+    ]).find((assetPath) => assetExists(assetPath))
+    ?? pageData.sections.liveMarketPrices.imageSrc
     ?? heroMainCar;
 
   return {

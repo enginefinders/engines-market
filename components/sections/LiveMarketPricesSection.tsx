@@ -174,10 +174,15 @@ export default function LiveMarketPricesSection({
 
   const headingLines = data.headingLines?.length ? data.headingLines : [data.h2];
   const sectionImage = imageSrc || "";
+  const containerClass = isDocumentMode ? "!max-w-[1240px]" : "!max-w-[1320px]";
+  const gridClass = isDocumentMode ? "lg:grid-cols-[1.05fr_0.95fr]" : "lg:grid-cols-[1.28fr_0.72fr]";
+  const imageMinHeightClass = isDocumentMode ? "min-h-[380px] lg:min-h-[450px]" : "min-h-[440px] lg:min-h-[620px]";
+  const feedMinHeightClass = isDocumentMode ? "lg:min-h-[450px]" : "lg:min-h-[620px]";
+  const imageSizes = isDocumentMode ? "(max-width: 1024px) 100vw, 48vw" : "(max-width: 1024px) 100vw, 58vw";
 
   return (
     <Section className="bg-[#f8f9fa]">
-      <Container className="max-w-[1220px]">
+      <Container className={containerClass}>
         <div className="section-pill mb-[14px]">
           <span className="h-[7px] w-[7px] animate-pulse rounded-full bg-[#15803d]" />
           <span>{data.tag}</span>
@@ -198,20 +203,20 @@ export default function LiveMarketPricesSection({
           {data.h3}
         </p>
 
-        <div className="mt-6 grid gap-5 lg:grid-cols-[0.98fr_1.02fr] lg:items-stretch">
-          <div className="relative w-full min-h-[320px] lg:min-h-[430px]">
+        <div className={`mt-6 grid gap-5 lg:items-stretch ${gridClass}`}>
+          <div className={`relative w-full ${imageMinHeightClass}`}>
             {sectionImage ? (
               <Image
                 src={sectionImage}
                 alt={data.imageAlt ?? ""}
                 fill
                 className="object-contain object-center"
-                sizes="(max-width: 1024px) 100vw, 46vw"
+                sizes={imageSizes}
               />
             ) : null}
           </div>
 
-          <div className="min-w-0 lg:flex lg:h-full lg:min-h-[430px] lg:flex-col">
+          <div className={`min-w-0 lg:flex lg:h-full lg:flex-col ${feedMinHeightClass}`}>
             {isDocumentMode ? (
               <div className="rounded-t-[14px] bg-[#0d1b2e] px-4 py-[12px] shadow-[0_2px_12px_rgba(13,27,46,0.16)]">
                 <div className="text-[12px] font-bold uppercase tracking-[0.08em] text-white">
@@ -276,7 +281,7 @@ export default function LiveMarketPricesSection({
             ) : null}
 
             <div className="space-y-2 lg:flex lg:h-full lg:flex-col lg:space-y-0">
-              <div className="overflow-hidden rounded-b-[14px] border border-white/10 bg-gradient-to-br from-[#0b1a2e] via-[#0f2035] to-[#0a1628] shadow-[0_10px_28px_rgba(0,0,0,0.4)] lg:flex lg:min-h-[430px] lg:flex-1 lg:flex-col">
+              <div className={`overflow-hidden rounded-b-[14px] border border-white/10 bg-gradient-to-br from-[#0b1a2e] via-[#0f2035] to-[#0a1628] shadow-[0_10px_28px_rgba(0,0,0,0.4)] lg:flex lg:flex-1 lg:flex-col ${feedMinHeightClass}`}>
                 {isDocumentMode ? null : (
                   <div className="border-b border-[#e4e7ee] bg-[#f9fafc] px-4 py-[10px] text-[11px] font-medium text-[#9aa3b5]">
                     Showing {visibleRows.length} {visibleRows.length === 1 ? (ui.showingSingleLabel ?? "entry") : (ui.showingPluralLabel ?? "entries")}
