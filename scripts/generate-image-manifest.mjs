@@ -3,6 +3,7 @@ import path from "node:path";
 
 const PUBLIC_DIR = path.join(process.cwd(), "public");
 const BRANDS_DIR = path.join(PUBLIC_DIR, "images", "brands");
+const BRAND_WCU_DIR = path.join(PUBLIC_DIR, "brand-wcu");
 const OUTPUT_FILE = path.join(process.cwd(), "lib", "image-manifest.json");
 
 async function walk(dir, fileList = []) {
@@ -24,7 +25,10 @@ async function walk(dir, fileList = []) {
 async function main() {
   try {
     console.log("Generating image manifest...");
-    const allImages = await walk(BRANDS_DIR);
+    const allImages = [
+      ...(await walk(BRANDS_DIR)),
+      ...(await walk(BRAND_WCU_DIR)),
+    ];
     
     // Convert to a Set for O(1) lookup in a Map-like structure
     // but JSON doesn't support Set, so we'll use an object as a hash map

@@ -198,22 +198,20 @@ export default function LiveMarketPricesSection({
           {data.h3}
         </p>
 
-        <div className="mt-6 grid gap-6 lg:grid-cols-[0.76fr_1.24fr] lg:items-start">
-          <div className="relative overflow-hidden rounded-[16px] border border-[#e5e7eb] bg-white shadow-[0_2px_12px_rgba(13,27,46,0.07)]">
-            <div className="relative aspect-[4/3.6] min-h-[340px] lg:min-h-[520px]">
-              {sectionImage ? (
-                <Image
-                  src={sectionImage}
-                  alt={data.imageAlt ?? ""}
-                  fill
-                  className="object-contain object-center p-3 lg:p-4"
-                  sizes="(max-width: 1024px) 100vw, 38vw"
-                />
-              ) : null}
-            </div>
+        <div className="mt-6 grid gap-5 lg:grid-cols-[0.98fr_1.02fr] lg:items-stretch">
+          <div className="relative w-full min-h-[320px] lg:min-h-[430px]">
+            {sectionImage ? (
+              <Image
+                src={sectionImage}
+                alt={data.imageAlt ?? ""}
+                fill
+                className="object-contain object-center"
+                sizes="(max-width: 1024px) 100vw, 46vw"
+              />
+            ) : null}
           </div>
 
-          <div className=" lg:flex lg:h-full lg:flex-col">
+          <div className="min-w-0 lg:flex lg:h-full lg:min-h-[430px] lg:flex-col">
             {isDocumentMode ? (
               <div className="rounded-t-[14px] bg-[#0d1b2e] px-4 py-[12px] shadow-[0_2px_12px_rgba(13,27,46,0.16)]">
                 <div className="text-[12px] font-bold uppercase tracking-[0.08em] text-white">
@@ -278,7 +276,7 @@ export default function LiveMarketPricesSection({
             ) : null}
 
             <div className="space-y-2 lg:flex lg:h-full lg:flex-col lg:space-y-0">
-              <div className="overflow-hidden rounded-b-[14px] border border-white/10 bg-gradient-to-br from-[#0b1a2e] via-[#0f2035] to-[#0a1628] shadow-[0_10px_28px_rgba(0,0,0,0.4)] lg:flex lg:h-[520px] lg:flex-col">
+              <div className="overflow-hidden rounded-b-[14px] border border-white/10 bg-gradient-to-br from-[#0b1a2e] via-[#0f2035] to-[#0a1628] shadow-[0_10px_28px_rgba(0,0,0,0.4)] lg:flex lg:min-h-[430px] lg:flex-1 lg:flex-col">
                 {isDocumentMode ? null : (
                   <div className="border-b border-[#e4e7ee] bg-[#f9fafc] px-4 py-[10px] text-[11px] font-medium text-[#9aa3b5]">
                     Showing {visibleRows.length} {visibleRows.length === 1 ? (ui.showingSingleLabel ?? "entry") : (ui.showingPluralLabel ?? "entries")}
@@ -288,7 +286,7 @@ export default function LiveMarketPricesSection({
                   </div>
                 )}
 
-                <div className="max-h-[520px] overflow-y-auto lg:flex-1 lg:max-h-none">
+                <div className="max-h-[520px] overflow-y-auto lg:max-h-none lg:flex-1">
                   {visibleRows.length ? (
                     <ul className="list-none">
                       {visibleRows.map((row, index) => (

@@ -96,8 +96,13 @@ function resolveCarPlaceholder(pageData: ModelPageData) {
 }
 
 function resolveLiveMarketPlaceholder(pageData: ModelPageData, carPlaceholder: string) {
+  const configured = pageData.sections.liveMarketPrices.imageSrc?.trim();
+  if (configured && (configured.startsWith("/brand-wcu/") || assetExists(configured))) {
+    return configured;
+  }
+
   const imageCandidates = modelSlugCandidates(pageData).flatMap((candidate) => [
-    pageData.sections.liveMarketPrices.imageSrc,
+    configured,
     buildLiveFeedImagePath(pageData.brand.slug, candidate),
   ]);
 
