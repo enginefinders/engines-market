@@ -198,7 +198,7 @@ def main() -> None:
             data = json.load(handle)
 
         live = data.setdefault("sections", {}).setdefault("liveMarketPrices", {})
-        live["imageSrc"] = f"/brand-wcu/{meta['file']}"
+        live["imageSrc"] = f"/images/brand-wcu/{meta['file']}"
         live["imageAlt"] = meta["alt"]
 
         with json_path.open("w", encoding="utf-8", newline="\n") as handle:

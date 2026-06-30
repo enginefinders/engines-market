@@ -62,7 +62,7 @@ function collectBrandEngineCandidates(pageData: BrandPageData) {
 }
 
 function isLiveMarketInfographic(assetPath?: string | null) {
-  return Boolean(assetPath?.startsWith("/brand-wcu/"));
+  return Boolean(assetPath?.startsWith("/images/brand-wcu/"));
 }
 
 function collectBrandCarCandidates(pageData: BrandPageData) {
