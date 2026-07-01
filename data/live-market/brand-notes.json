@@ -1,0 +1,631 @@
+{
+  "generatedAt": "2026-06-21T15:58:40.619Z",
+  "sourceFileName": "Untitled document (1).docx",
+  "brands": {
+    "alfa-romeo": {
+      "brandName": "Alfa Romeo",
+      "title": "Alfa Romeo Notes",
+      "items": [
+        "Prices shown are supply-only reconditioned engine costs from UK independent specialists. Main dealer fitted costs may be significantly higher.",
+        "MultiAir engines (1.4, 2.0 TBi-M) are known for solenoid and filter failures - the MultiAir unit itself costs £700+ to replace. Regular oil changes (every 5k miles) are critical.",
+        "TwinSpark engines suffer from camshaft variator failure (diesel-like rattle), cambelt failure every 3 years, and bottom-end bearing failure if oil is low.",
+        "JTS engines (1.9, 2.0, 2.2) have coil pack and MAF sensor issues; the 2.2 JTS also suffers from timing chain stretch and carbon buildup on exhaust valves.",
+        "JTDM diesel engines (1.9, 2.0, 2.2, 2.4) commonly suffer from swirl flap failure (one of the most expensive failures on Alfa diesels), EGR/DPF issues, turbocharger failure, and injector problems.",
+        "V6 Busso engines are generally robust but require cambelt changes every 30k miles or 3 years - failure is catastrophic.",
+        "2.9 V6 (Giulia/Stelvio QV) has a known fuel pump recall affecting 54,000 vehicles due to sudden power loss.",
+        "Labour rates are based on £65-85/hr indie specialist rates; London/SE adds 40-60%."
+      ]
+    },
+    "aston-martin": {
+      "brandName": "Aston Martin",
+      "title": "Aston Martin Notes",
+      "items": [
+        "Prices shown are supply-only reconditioned engine costs from UK independent specialists. Main dealer fitted costs may be 2-3x higher.",
+        "V12 engine replacements can exceed £10,000 in parts alone. One documented Vanquish engine replacement cost £10,634 in parts plus 34 hours labour.",
+        "V8 Vantage engines (AM05/AM14) are described by specialists as \"bombproof\" with only sporadic tappet shim issues.",
+        "V12 engines (AM28/AM29) have multiple known failure points including coil packs, breather valves, and catalytic converter ingestion.",
+        "M177 (Mercedes-AMG) engines have an official recall for oil cooler hose failure affecting 1,095 vehicles.",
+        "Labour rates are based on £65-100/hr indie specialist rates; main dealers charge significantly more."
+      ]
+    },
+    "bentley": {
+      "brandName": "Bentley",
+      "title": "Bentley Notes",
+      "items": [
+        "Prices shown are supply-only reconditioned engine costs from UK independent specialists. Main dealer fitted costs may be significantly higher.",
+        "W12 engine replacements can exceed £30,000 for a brand-new OEM unit; reconditioned units typically range from £6,000-£10,000.",
+        "6.75 L-Series V8 engines are becoming increasingly difficult to source as production ceased in 2020. Specialist rebuilders like Flying Spares are the primary source.",
+        "EA825 V8 engines have an active recall for high-pressure fuel pump bolts that can cause fuel leaks and fire risk.",
+        "W12 engines are generally robust but suffer from heat-related issues including cylinder head bolt stretch and coolant system failures.",
+        "Classic models (Turbo R, Brooklands, Arnage) frequently suffer from age-related issues including flat tappet wear, head gasket failure, and hydraulic lock from water ingress.",
+        "Labour rates are based on £80-150/hr indie specialist rates; main dealers charge significantly more.",
+        "W12 production ceased in April 2024 after over 100,000 units built at Crewe."
+      ]
+    },
+    "bmw": {
+      "brandName": "BMW",
+      "title": "BMW Notes",
+      "items": [
+        "Prices shown are supply-only reconditioned engine costs from UK independent specialists. Main dealer fitted costs may be significantly higher.",
+        "N47/N57 timing chain repairs are notoriously labour-intensive due to rear-mounted chain design, with costs often exceeding £2,000 for chain replacement alone.",
+        "B47 engines (2014+) relocated the timing chain to the front, making it more durable and easier to service.",
+        "N63 V8 engines have earned the nickname \"N63 nightmare\" with repair bills consistently exceeding £10,000.",
+        "S63 engines share many N63 weaknesses but are more robust; timing chain tensioner wear is a common issue.",
+        "B58 engines are generally reliable but have well-documented PCV valve and coolant system issues.",
+        "S55 engines (M3/M4) are prone to crank hub spin, which can cause catastrophic engine failure.",
+        "Labour rates are based on £65/hr indie specialist rates; London/SE adds 40-60%."
+      ]
+    },
+    "cadillac": {
+      "brandName": "Cadillac",
+      "title": "Cadillac Notes",
+      "items": [
+        "Prices shown are supply-only reconditioned engine costs from UK independent specialists. Main dealer fitted costs may be 40-60% higher.",
+        "L87 6.2L V8 engines are subject to a major NHTSA recall (April 2025) affecting 2021-2024 Escalade models due to connecting rod and crankshaft manufacturing defects. Over 28,000 engine failures were documented between April 2021 and February 2025.",
+        "Northstar V8 engines (1993-2011) are notorious for head gasket failure due to head bolt thread issues in the aluminium block. Pre-2000 engines had short fine-thread bolts that pulled out. Post-2004 engines with coarse-thread bolts are more reliable.",
+        "LFX 3.6L V6 engines suffer from timing chain stretching (P0008) which can cost $1,800-$4,000 to repair. High-pressure fuel pump (HPFP) failure (P0089) is also common.",
+        "LTG 2.0L turbo engines have weak timing chain guides with loose upper bolts, carbon buildup on intake valves, and weak pistons.",
+        "LSA/LT4 supercharged V8 engines (CTS-V) suffer from supercharger isolator coupler wear causing rattle at idle.",
+        "AFM (Active Fuel Management) lifters on 6.2L V8 engines can collapse and cause misfire and camshaft damage.",
+        "Cadillac BLS was a Saab 9-3-based model sold in Europe (2006-2009) with Saab-sourced engines including the 1.9 TiD diesel and 2.0 Ecotec turbo.",
+        "Labour rates are based on £65-85/hr indie specialist rates; London/SE adds 40-60%."
+      ]
+    },
+    "chevrolet": {
+      "brandName": "Chevrolet",
+      "title": "Chevrolet Notes",
+      "items": [
+        "Prices shown are supply-only reconditioned engine costs from UK independent specialists. Main dealer fitted costs may be significantly higher.",
+        "2.0 VCDi engines (Z20DMH/A20DMH/Z20D1) are GM-sourced diesels also found in Vauxhall models. They are generally robust but suffer from DPF, EGR, and timing belt issues.",
+        "1.7 VCDi engines (A17DTS) have multiple reported failures including ECU, throttle body, DMF, and glow plugs.",
+        "1.2/1.4 petrol engines (B12D1/F14D3) suffer from head gasket, timing belt, and cooling system failures.",
+        "0.8 Matiz engines are sensitive to E10 fuel, causing misfire issues at 2000rpm.",
+        "Captiva diesel ECUs (2007-2011) are known to fail completely, causing non-start.",
+        "Labour rates are based on £55-75/hr indie specialist rates; London/SE adds 40-60%.",
+        "Chevrolet officially withdrew from the UK market in 2015 - parts availability is increasingly limited; many owners now rely on Vauxhall/Opel dealers or specialist importers."
+      ]
+    },
+    "chrysler": {
+      "brandName": "Chrysler",
+      "title": "Chrysler Notes",
+      "items": [
+        "Prices shown are supply-only reconditioned engine costs from UK independent specialists. Main dealer fitted costs may be significantly higher.",
+        "2.7L V6 engines are notoriously prone to sludge failure; many owners scrap vehicles with under 100k miles due to replacement costs.",
+        "5.7L HEMI engines suffer from dropped valve seats on early models (2005-2008); fitting Eagle heads (2009+) is the recommended fix.",
+        "OM642 diesel engines (Mercedes-sourced) share common faults with Mercedes models including oil cooler seal leaks and exhaust pressure sensor failure.",
+        "2.8L CRD engines (VM Motori) suffer from timing belt, turbo, and fuel system issues; timing belt slip can cause catastrophic engine damage.",
+        "3.6L Pentastar engines had cylinder head cracking issues on early units (2011-2013) with an extended warranty programme in some markets.",
+        "2.4L engines have known oil galley plug issues that can cause engine fires and balance shaft bearing debris causing oil pressure loss.",
+        "Labour rates are based on £65-85/hr indie specialist rates; London/SE adds 40-60%."
+      ]
+    },
+    "citroen": {
+      "brandName": "Citroen",
+      "title": "Citroen Notes",
+      "items": [
+        "Prices shown are supply-only reconditioned engine costs from UK independent specialists. Main dealer fitted costs may be significantly higher.",
+        "1.2 PureTech engines have a well-documented wet timing belt issue. The belt runs in engine oil and can degrade, shedding debris that blocks the oil pickup strainer. Pre-2022 models are most affected. Replacement costs typically £1,200-£1,500.",
+        "1.6 THP (Prince) engines suffer from timing chain stretch on pre-2014 models, high-pressure fuel pump failure, and excessive oil consumption. Chain replacement is essential before catastrophic failure occurs.",
+        "1.6 HDi (DV6) engines can suffer from timing chain tensioner wear, injector seal failure, turbocharger issues, and EGR valve clogging. The early 16-valve versions were more problematic than the 8-valve units.",
+        "2.0 HDi (DW10) engines are generally reliable but suffer from ignition coil failure, EGR valve issues, injector wiring faults, and DPF clogging. Crankshaft pulley failure is also reported on some models.",
+        "1.5 BlueHDi (DV5) engines have reported cam chain issues including premature wear and snapping. AdBlue system failures are also common.",
+        "Grand C4 Picasso models have known thermostat housing outlet seal leaks, crankshaft rear oil seal leaks, and flywheel failures.",
+        "Labour rates are based on £55-75/hr indie specialist rates; London/SE adds 40-60%."
+      ]
+    },
+    "dodge": {
+      "brandName": "Dodge",
+      "title": "Dodge Notes",
+      "items": [
+        "Prices shown are supply-only reconditioned engine costs from UK independent specialists. Main dealer fitted costs may be significantly higher.",
+        "2.0 CRD engines are Volkswagen PD-sourced units (found in Golf GT TD). Early Journeys (2006-2008) had a subpar 2.0 CRD prone to seizing. Common issues include DPF clogging, turbo failure, ECU failure, and alternator weakness.",
+        "2.8 CRD engines are VM Motori-sourced units. Common issues after 120,000km include variable turbocharger clogged with soot, dirty common rail injectors, fuel rail pressure issues, and starting problems.",
+        "1.4 MultiAir engines (Fiat-sourced) suffer from MultiAir unit solenoid failure, oil drain issues causing no compression, and cold weather stalling below -6.5°C.",
+        "2.4 MultiAir engines have similar MultiAir brick failures, misfire, and open circuit injector issues.",
+        "2.0 petrol engines suffer from excessive oil consumption, engine stalling, and early mechanical wear.",
+        "HEMI V8 engines suffer from lifter tick, camshaft damage, fuel injector failure, and ignition coil failure causing misfire.",
+        "3.6 Pentastar engines suffer from cylinder head cracking on early units and oil cooler housing leaks.",
+        "Labour rates are based on £55-75/hr indie specialist rates; London/SE adds 40-60%."
+      ]
+    },
+    "ferrari": {
+      "brandName": "Ferrari",
+      "title": "Ferrari Notes",
+      "items": [
+        "Prices shown are supply-only reconditioned engine costs from UK independent specialists. Main dealer fitted costs may be 40-60% higher.",
+        "F136 V8 engines (4.3L / 4.5L) suffered from a crankshaft machining defect affecting 2011-2012 models, causing potential engine seizure. Ferrari recalled vehicles due to incorrect grinding machine setup. Early 458 Italias also had fire risks from heat shield adhesive melting.",
+        "F154 twin-turbo V8 engines (3.9L) have had recalls for low-pressure fuel line leaks causing fire risk and loose crankshaft bolts. Turbo failures have been reported under 30,000 miles.",
+        "F140 V12 engines (6.0L / 6.3L / 6.5L) suffer from oil pump primary shaft bearing wear causing loss of oil pressure and seizure. Cam cover gaskets fail from heat exposure near exhaust headers.",
+        "F119 V8 engines (360 Modena) suffer from air pump check valve failure causing P0411 codes and ignition coil failure.",
+        "F133 V12 engines (550/575M, 456) suffer from oil leaks, cooling system failure, and primary shaft bearing wear.",
+        "F136 engines are considered relatively reliable, with some reports suggesting they surpass Mercedes M273 and Toyota UZ engines in reliability.",
+        "Labour rates are based on £120-200/hr specialist rates; Ferrari main dealers charge significantly more."
+      ]
+    },
+    "fiat": {
+      "brandName": "Fiat",
+      "title": "Fiat Notes",
+      "items": [
+        "Prices shown are supply-only reconditioned engine costs from UK independent specialists. Main dealer fitted costs may be significantly higher.",
+        "1.2 FIRE engines are generally robust but suffer from head gasket failure (often at 60-65k miles), timing belt wear (recommended 60k-100k km interval), and coil pack failure.",
+        "1.4 MultiAir engines suffer from MultiAir unit solenoid failure (around 100k miles), oil strainer clogging causing no compression, and incorrect oil destroying the unit.",
+        "0.9 TwinAir engines suffer from Uniair module failure (£2k+ repair), turbo failure (approx. £1,500), actuator rattling, and engine misfire from cold.",
+        "1.3 MultiJet diesel engines suffer from DPF blockage (poor DPF implementation in ECU), EGR valve clogging, glow plug failure, and injector issues.",
+        "1.6 MultiJet diesel engines suffer from turbocharger failure (120k-180k km), EGR pipe air leaks causing power loss, and loss of power with no engine light.",
+        "1.4 T-Jet engines suffer from turbo exhaust housing cracking, boost leaks, MAF/MAP sensor failure, and oil smoke from turbo wear.",
+        "2.0 MultiJet diesel engines suffer from DPF clogging, timing chain issues, and injector failure.",
+        "1.9 MultiJet engines suffer from injector failure (loud knock and black smoke), turbo failure (120k-180k km), and timing chain wear.",
+        "1.0 FireFly engines are newer and suffer from wet timing belt degradation, debris blocking oil pickup, and oil contamination."
+      ]
+    },
+    "ford": {
+      "brandName": "Ford",
+      "title": "Ford Notes",
+      "items": [
+        "Prices shown are supply-only reconditioned engine costs from UK independent specialists. Main dealer fitted costs may be 30-50% higher.",
+        "1.0 EcoBoost wet belt engines have a well-documented issue where the timing belt degrades in oil, shedding debris that blocks the oil pickup strainer. This is catastrophic if not addressed. Ford revised the belt design post-2017 but issues persist.",
+        "1.5/1.6 EcoBoost petrol engines suffer from coolant loss through head gasket failure and block porosity. Overheating is a common precursor to engine failure.",
+        "DV6 1.6 TDCi diesels suffer from DPF clogging (particularly urban use), injector failure, EGR valve clogging, and turbocharger failure. Timing chain tensioner wear is also reported.",
+        "DV6C 1.5 TDCi diesels (2014+) suffer from wet belt degradation, injector seal failure, and DPF blockage.",
+        "Duratorq 2.2 TDCi (Transit/Mondeo) suffer from DPF clogging, EGR valve issues, turbocharger failure (2 turbos in 3 months reported on one Transit), and dual mass flywheel failure.",
+        "Duratorq 2.0 TDCi suffer from EGR cooler failure, DPF clogging, dual mass flywheel failure, and crankshaft pulley failure.",
+        "Duratec 1.6 Ti-VCT petrol engines suffer from timing belt and ignition coil failure.",
+        "Sigma 1.25/1.4 petrol engines suffer from coil pack failure and water pump leaks.",
+        "Labour rates are based on £55-75/hr indie specialist rates; London/SE adds 40-60%."
+      ]
+    },
+    "honda": {
+      "brandName": "Honda",
+      "title": "Honda Notes",
+      "items": [
+        "Prices shown are supply-only reconditioned engine costs from UK independent specialists. Main dealer fitted costs may be significantly higher.",
+        "1.5 VTEC Turbo engines (L15B/L15B7) have a well-documented oil dilution issue where fuel enters the engine oil, particularly in cold weather and short trips. This is a design characteristic of direct injection engines but is more pronounced in this Honda engine. Fuel in oil reduces lubrication, can cause bearing wear, and increases oil level.",
+        "2.2 i-DTEC (N22B) diesel engines suffer from DPF blockage (particularly urban use), EGR valve clogging, turbocharger failure (loss of boost and whistling), dual mass flywheel failure, injector failure (diesel knock and black smoke), and DPF regeneration issues.",
+        "1.6 i-DTEC (N16A) diesel engines suffer from DPF clogging, EGR valve clogging/carbon buildup, DPF regeneration failure in city driving, and turbocharger failure.",
+        "K20 engines (Civic Type R) have a known fuel pump module failure leading to engine stalling. The K20C1 in FK8/FL5 models has fuel system contamination and injector/pump failure issues. Some models are subject to fuel pump recalls.",
+        "R18/R20 i-VTEC petrol engines suffer from timing chain stretch/tensioner wear (rattle at cold start), engine mount failure (vibration at idle), and engine shaking at idle.",
+        "K24 i-VTEC petrol engines suffer from VTC actuator rattle at cold start and VTEC solenoid failure (P2646 code and limp mode).",
+        "1.3/1.4 i-VTEC engines (Jazz) suffer from ignition coil failure (misfire and rough idle), injector failure, and water pump failure.",
+        "Labour rates are based on £55-75/hr indie specialist rates; London/SE adds 40-60%."
+      ]
+    },
+    "hyundai": {
+      "brandName": "Hyundai",
+      "title": "Hyundai Notes",
+      "items": [
+        "Prices shown are supply-only reconditioned engine costs from UK independent specialists. Main dealer fitted costs may be 40-60% higher.",
+        "Theta II GDI engines (2.0L/2.4L) are notorious for connecting rod bearing failure due to manufacturing debris blocking oil flow. This affects 2011-2016 models and can cause catastrophic engine seizure. A knocking noise is the typical indicator.",
+        "1.7 CRDi engines (U2) suffer from timing chain stretch, DPF clogging, and EGR valve failure. Owners frequently disable EGR and DPF via software to avoid recurring issues.",
+        "1.6 CRDi engines (D4FB) suffer from timing chain stretch (rattling at 80,000-120,000 km), injector failure, DPF clogging, and EGR valve carbon buildup.",
+        "2.0 CRDi engines (D4HA) suffer from timing chain wear (rattling at 80,000-120,000 km), turbocharger failure, DPF clogging, and injector failure.",
+        "2.2 CRDi engines (D4HB) suffer from EGR valve clogging, high-pressure fuel pump failure, crankshaft sensor failure, injector failure, and DPF clogging.",
+        "1.6 T-GDi engines (G4FJ) suffer from timing chain wear (metallic rattling at cold start), carbon buildup on intake valves, injector failure, and fuel pump issues.",
+        "1.6 GDi engines (G4FD) suffer from carbon buildup on intake valves, HPFP failure, engine overheating (faulty thermostat at 30,000-60,000 miles), and timing chain noise.",
+        "1.0 T-GDi engines (G4LC) suffer from timing chain wear (rattling from 40,000-60,000 km) and hesitation/stuttering around 2000-2300 RPM.",
+        "1.8/2.0 Nu MPi engines suffer from oil leaks (worn gaskets/seals), timing belt wear, fuel injector clogging, and piston slap under cold load.",
+        "3.3 Lambda II V6 engines have been subject to class action lawsuits for catastrophic failure including sudden power loss, coolant loss, high engine temperatures, and smoke from engine compartments.",
+        "GDI engines generally suffer from carbon buildup on intake valves because fuel is injected directly into the cylinder, not washing the intake valves.",
+        "Labour rates are based on £55-75/hr indie specialist rates; London/SE adds 40-60%."
+      ]
+    },
+    "isuzu": {
+      "brandName": "Isuzu",
+      "title": "Isuzu Notes",
+      "items": [
+        "Prices shown are supply-only reconditioned engine costs from UK independent specialists. Main dealer fitted costs may be 40-60% higher.",
+        "4JJ1 3.0L engines are generally reliable but suffer from injector failure (white/grey smoke at startup, misfire codes P0201-P0204, knocking sound, reduced power), turbocharger issues (loss of power above 2000 RPM, excessive black smoke, P0299 underboost), and EGR valve clogging.",
+        "4JK1 2.5L engines suffer from timing belt tensioner failure, fuel control valve faults causing hesitation and poor throttle response, injector clogging, and EGR valve issues.",
+        "4JH1 3.0L engines (Trooper) are known for injector problems, rough running, and injector seal failure leading to oil in the sump and self-destruction.",
+        "4JB1 2.8L engines are legendary for reliability but suffer from injection pump failure, oil pump gear issues, cold start smoking, and fuel system air ingress from pinholes in steel fuel lines.",
+        "4JG2 3.1L engines (Trooper) are considered very reliable but suffer from warm start failure, ticking from valve train, and undersized radiators causing overheating.",
+        "RZ4E 1.9L engines (2021+ D-Max) suffer from DPF regen issues where incomplete regen cycles cause diesel to be flushed into the engine oil.",
+        "D-Max models (2017-2018) had a recall for camshaft gear teeth breaking due to poor heat treatment, causing sudden engine stop.",
+        "Labour rates are based on £55-75/hr indie specialist rates; London/SE adds 40-60%."
+      ]
+    },
+    "iveco": {
+      "brandName": "Iveco",
+      "title": "Iveco Notes",
+      "items": [
+        "Prices shown are supply-only reconditioned engine costs from UK independent specialists. Main dealer fitted costs may be 40-60% higher.",
+        "F1C 3.0L engines use a timing chain (not a belt) with typical lifespan of 250,000-400,000 km. Rattling or metallic noise during cold startup indicates tensioner wear. Timing failure can lead to valve and piston damage costing over £2,000.",
+        "F1A 2.3L engines use a timing belt that requires regular replacement. If the belt snaps on this interference engine, bent valves and rocker damage are common.",
+        "3.0 HPT / F1C injector seal leaks are a known issue causing blow-by, carbon buildup, and fuel odour in the cabin. Black deposits around injectors are an early warning sign.",
+        "2.8 8140 engines (2000-2006) are considered the most reliable of the Daily engine range but suffer from injector faults, crankshaft sensor failures, and running-on-3-cylinders issues.",
+        "EGR valve clogging on 2.3 HPI and 3.0 HPT engines is common, especially with frequent stop-start urban driving. Cleaning or replacement is required every 60,000-90,000 km.",
+        "DPF clogging affects Euro 4/5/6 models with urban use; blocked DPFs require forced regeneration or replacement.",
+        "Turbocharger actuator failure on 2.3 HPI engines leads to underboost and limp mode.",
+        "2.3 HPI engines without EGR/DPF are considered very reliable and fuel-efficient.",
+        "Early Cursor engines (2007-2008) had reputation issues with durability in some applications.",
+        "Labour rates are based on £55-85/hr indie specialist rates; London/SE adds 40-60%. Heavy truck specialists may charge £85-120/hr."
+      ]
+    },
+    "jaguar": {
+      "brandName": "Jaguar",
+      "title": "Jaguar Notes",
+      "items": [
+        "Prices shown are supply-only reconditioned engine costs from UK independent specialists. Main dealer fitted costs may be 40-60% higher.",
+        "204DTD / AJ200D 2.0 Ingenium diesel suffers from timing chain stretch (rear-mounted chain fails from 60k miles), oil dilution from incomplete DPF regenerations (diesel washes down cylinder walls), timing chain guide/plastic tensioner failure, snapped injector bolts, and balance shaft bearing failure. Revised chain design introduced from late 2019.",
+        "204PT 2.0 Ingenium petrol suffers from water pump failure, carbon buildup on intake valves (direct injection), thermostat housing leaks, and PCV valve issues.",
+        "AJ126 3.0 V6 supercharged petrol suffers from timing chain tensioner failure (same as AJ133), plastic V-pipe cracking under supercharger causing coolant loss, supercharger coupler wear, injector carbon buildup, and water pump failure.",
+        "AJ133 5.0 V8 supercharged petrol suffers from timing chain tensioner failure on pre-2013 models, timing chain guide wear (aluminium guides weak), cooling system pipe failures, supercharger coupler wear, and water pump failure. Revised tensioner design introduced in 2013.",
+        "AJ126D 3.0 V6 diesel suffers from crankshaft failure (rare but catastrophic), plastic inlet manifold cracking, and DPF clogging.",
+        "2.2D (Ford/PSA-sourced) suffers from timing belt failure, DPF blockage, injector failure, and EGR valve clogging.",
+        "Labour rates are based on £65-85/hr indie specialist rates; London/SE adds 40-60%. Jaguar main dealer rates are typically £120-180/hr. Timing chain replacement on rear-mounted Ingenium diesel engines requires gearbox removal, making it an expensive job."
+      ]
+    },
+    "jeep": {
+      "brandName": "Jeep",
+      "title": "Jeep Notes",
+      "items": [
+        "Prices shown are supply-only reconditioned engine costs from UK independent specialists. Main dealer fitted costs may be 40-60% higher.",
+        "3.6 Pentastar V6 suffers from rocker arm needle bearing failure (ticking noise, misfire, reduced power), especially pre-2019 models. Cylinder head failure, water pump seizing, and oil pump defects are also common. Sand-casting production remnants can clog radiators.",
+        "2.8 CRD (VM Motori) suffers from timing belt failure (rocker arms bend on interference engine), turbocharger failure (repair needed before 100,000 km), hard starting in cold weather, fuel regulator valve failure, and crankshaft sensor faults.",
+        "3.0 CRD (OM642) suffers from oil cooler seal failure in the V of the engine, EGR valve clogging (rough idle, flat spots on take-off), hard starting, timing chain issues, and crankshaft seal leaks.",
+        "2.0 MultiJet has a major sand contamination issue from casting process (affects 2014-2019 models) causing catastrophic engine failure. Also suffers from HPFP failure, DPF clogging, EGR cooler leaks, and rough idle.",
+        "2.4 Tigershark suffers from excessive oil consumption (class action settlement, often burning a quart every 1,000 miles), piston ring failure, and MultiAir channel clogging.",
+        "1.4 MultiAir suffers from timing chain tensioner failure and camshaft phaser wear (metallic noise as early as 40,000 km), MultiAir unit solenoid failure, and timing belt failure on interference engine.",
+        "5.7 HEMI suffers from camshaft lobe wear, lifter failure, misfire (P0300, injector harness issues, PCM problems), and valve train failure.",
+        "6.2 Supercharged (Hellcat) suffers from supercharger bearing failure (whine and boost loss) and fuel system issues.",
+        "Labour rates are based on £55-75/hr indie specialist rates; London/SE adds 40-60%."
+      ]
+    },
+    "kia": {
+      "brandName": "Kia",
+      "title": "Kia Notes",
+      "items": [
+        "Prices shown are supply-only reconditioned engine costs from UK independent specialists. Main dealer fitted costs may be 40-60% higher.",
+        "U2 1.7 CRDi engines suffer from timing chain stretch (rattling on cold start), DPF clogging (urban driving), EGR valve failure (carbon deposits and stalling), and turbocharger issues.",
+        "U2 1.6 CRDi engines suffer from DPF blockage (short journeys), EGR valve clogging, turbocharger failure, and injector seal leaks.",
+        "R 2.0 CRDi engines (D4HA) suffer from timing chain stretch (rattling at 80k-120k km), turbocharger failure (whistling and loss of power), injector failure, and DPF clogging.",
+        "D4HB 2.2 CRDi engines suffer from EGR valve clogging, injector seal leaks, DPF blockage, and injector failure.",
+        "GDi / T-GDi petrol engines (1.6 GDI, 1.6 T-GDI) suffer from carbon buildup on intake valves (cold start misfire, rough idle), high-pressure fuel pump failure, timing chain wear, and injector failure.",
+        "G4FG 1.4 MPi engines suffer from ignition coil failure and water pump failure.",
+        "G4LD 1.2 MPi engines suffer from fuel injector sticking open (melted catalytic converter), ignition coil failure, and water pump failure.",
+        "3.3 Lambda II V6 engines suffer from fuel injector failure (rough idle, misfire), oil consumption (high oil use between services), and timing chain stretch.",
+        "Smartstream 2.0 T-GDi / 2.5 T-GDi engines suffer from fuel pump failure (sudden loss of power), timing chain wear, and injector failure.",
+        "Niro Hybrid suffers from battery cooling fan failure causing overheating and battery degradation issues.",
+        "Kia Petrol direct injection (GDi) engines require strict oil specification and regular maintenance; carbon build-up on intake valves is a common issue because fuel is injected directly into the cylinder rather than washing the intake valves.",
+        "Labour rates are based on £55-75/hr indie specialist rates; London/SE adds 40-60%"
+      ]
+    },
+    "land-rover": {
+      "brandName": "Land Rover",
+      "title": "Land Rover Notes",
+      "items": [
+        "Prices shown are supply-only reconditioned engine costs from UK independent specialists. Main dealer fitted costs may be 40-60% higher, with dealer labour rates typically £120-180/hr vs £65-85/hr for independents.",
+        "SDV6/TDV6 3.0 diesel engines (306DT) suffer from catastrophic crankshaft bearing failure due to tin-aluminium coating fatigue. Cold-start knock is the early warning sign. Full reconditioned engines cost £6,500-£9,500; bottom-end rebuilds £5,500-£7,000.",
+        "Ingenium D 2.0 diesel engines (204DTD) suffer from timing chain failure caused by oil dilution from incomplete DPF regenerations. Pre-2019 models are most affected. Chain replacement costs £1,200-£2,500; full engine replacement £4,500-£6,500.",
+        "Ingenium P 2.0 petrol engines (204PT) are more reliable than diesel Ingenium. Water pump failure and cooling system leaks are the primary weaknesses. Replacement costs typically £3,000-£5,000.",
+        "TDV8 3.6 engines (368DT) have early timing chain tensioner failure (2006-2009 L322/L320) and crankshaft fracture risk. Avoid units without proven service history. Chain replacement £1,500-£3,000; full engine £6,000-£9,000.",
+        "4.4 SDV8 (448DT) has no catastrophic bottom-end design flaw and is considered durable. Oil cooler leaks in the V8 valley are the main issue. Replacement costs £6,000-£9,000.",
+        "Freelander 2.2 Duratorq (224DT) is Ford-sourced with good parts availability. EGR cooler and turbo actuator failures are common. Replacement costs £2,000-£3,500."
+      ]
+    },
+    "lexus": {
+      "brandName": "Lexus",
+      "title": "Lexus Notes",
+      "items": [
+        "Prices shown are supply-only reconditioned engine costs from UK independent specialists. Main dealer fitted costs may be 40-60% higher.",
+        "2GR-FE / 2GR-FSE V6 engines suffer from oil consumption (2007-2015 models, 1 liter per 5,000 km), VVT-i rattle on cold start (locking pin wear), front timing cover oil leaks, and VVT-i oil supply hose pinhole leaks.",
+        "4GR-FSE direct injection V6 (IS250/GS300) suffers from carbon buildup on intake valves requiring walnut blasting cleaning every 60,000 miles. This is a design flaw of early direct injection systems.",
+        "1UR-FSE / 1UR-FE V8 (LS460/GX460) suffers from valley coolant leaks (coolant pooling on transmission housing), timing chain cover oil weeps, and throttle body faults (P2111/P2112).",
+        "3UR-FE V8 (LX570) suffers from cam tower leaks (seals develop leaks over time), valve spring breakage on early models, and oil consumption from coked oil scraper rings.",
+        "2AZ-FE / 2AZ-FXE 4-cylinder suffers from excessive oil consumption due to piston ring design flaw (Toyota TSB issued for 2006-2011 models).",
+        "1MZ-FE 3.0L V6 suffers from oil sludge due to poor PCV valve placement and routing. A class action lawsuit was filed over this issue.",
+        "2AD-FTV diesel (IS220d) suffers from head gasket failure, injector failure, EGR valve failure, and DPF clogging. This engine is widely considered Lexus's least reliable modern engine.",
+        "2ZR-FXE hybrid (CT200h) suffers from EGR system clogging (death rattle), head gasket failure at higher mileage, clogged injection nozzles, and faulty PCV valves.",
+        "3UZ-FE V8 (LS430/SC430) requires timing belt replacement at 90,000 miles; failure is catastrophic as it is an interference engine.",
+        "Lexus Petrol direct injection (GDi) engines require strict fuel quality; carbon build-up on intake valves is a common issue because fuel is injected directly into the cylinder rather than washing the intake valves.",
+        "Labour rates are based on £65-85/hr indie specialist rates; London/SE adds 40-60%. Lexus main dealer rates are typically £120-180/hr."
+      ]
+    },
+    "mazda": {
+      "brandName": "Mazda",
+      "title": "Mazda Notes",
+      "items": [
+        "Prices shown are supply-only reconditioned engine costs from UK independent specialists. Main dealer fitted costs may be 40-60% higher.",
+        "Skyactiv-D 2.2 diesel engines (SH-VPTR/SH-VPTS) have multiple well-documented issues including head gasket failure (combustion gases into coolant), injector seal leakage causing carbon buildup, oil pickup strainer blockage leading to oil starvation and seizure, VVT camshaft wear, and DPF blockage causing oil dilution and rapid timing chain wear.",
+        "Skyactiv-G petrol engines (PE-VPS/PY-VPR) suffer from carbon buildup on intake valves (inherent to direct injection), thermostat failure causing overheating, cylinder head cracking on 2.5L units, and high-pressure fuel pump failure.",
+        "MZR 2.0L petrol engines (LF-VE/LF-DE) suffer from stuck oil control rings causing excessive oil consumption, timing chain rattle, and rough idle from MAF sensor/vacuum leaks.",
+        "MZR 2.3L turbo engines (L3-VDT) suffer from carbon buildup, turbo seal failure, PCV system failure, and complex intake manifold flap issues.",
+        "MZR 1.6L petrol engines (Z6-VE) suffer from high-pressure fuel pump failure between 60,000-100,000 km, VVT actuator rattle on cold start, and camshaft position sensor failure.",
+        "Renesis rotary engines (RX-8) suffer from apex seal wear causing low compression and hot start failure. Early 2004-2005 models are most prone to failure due to reduced oil injection for emissions.",
+        "MZR-CD diesel engines suffer from timing chain stretch on 2.2L units and DPF blockage on 2.0L units.",
+        "Mazda 1.4/1.6 HDi diesel engines (PSA-sourced) suffer from injector issues, loss of power, misfires, rough idling, and stalling.",
+        "Labour rates are based on £55-75/hr indie specialist rates; London/SE adds 40-60%."
+      ]
+    },
+    "mercedes-benz": {
+      "brandName": "Mercedes Benz",
+      "title": "Mercedes Benz Notes",
+      "items": [
+        "R9M 1.6 dCi engines suffer from timing chain stretch (cold start rattle), DPF blockage (short journeys, regeneration failure), AdBlue system failure (NOx sensors, pump issues), and injector failure.",
+        "M9R 2.0 dCi engines suffer from injector failure, EGR valve clogging, turbocharger failure, and timing chain stretch.",
+        "H4A/H4J 1.2/1.6 TCe petrol engines suffer from timing chain stretch (rattle at 40,000-60,000 km), especially on pre-2015 units. Carbon buildup on intake valves and injector failure are also common.",
+        "H5Ht 1.3 TCe petrol engines (Nissan/Mercedes co-developed) suffer from timing chain stretch, fuel injector failure, and carbon buildup on intake valves.",
+        "K4M 1.6 16V petrol engines suffer from ignition coil failure, engine oil pressure warning (oil pump failure), and general oil leaks.",
+        "D4F 1.2 16V petrol engines suffer from coil pack failure, ignition coil failure, and engine misfire.",
+        "1.2 TCe engines have timing chain issues; the chain can stretch, causing rattle on cold start and potential engine damage.",
+        "1.5 dCi engines require strict oil change intervals (every 10,000 km) to prevent turbocharger failure and timing chain issues.",
+        "AdBlue systems on R9M/M9R Euro 6 engines commonly fail due to crystallisation and pump issues.",
+        "Labour rates are based on £55-75/hr indie specialist rates; London/SE adds 40-60%."
+      ]
+    },
+    "mg": {
+      "brandName": "MG",
+      "title": "MG Notes",
+      "items": [
+        "Prices shown are supply-only reconditioned engine costs from UK independent specialists. Main dealer fitted costs may be 40-60% higher.",
+        "1.5 T-GDI petrol engines suffer from timing chain stretch (documented cases at just 48,000 km), crankshaft endfloat causing stalling and juddering, oil consumption with no warning light, and engine management issues.",
+        "1.0 T-GDI petrol engines suffer from GPF blockage without warning lights, underpowered performance, engine juddering at 40-50 mph, and cylinder head gasket failures.",
+        "1.5 VTI-TECH petrol engines suffer from head gasket failure, stalling when cold, ignition coil failure, and oil leaks.",
+        "K-Series 1.8 petrol engines are notorious for head gasket failure, a well-documented weakness. Thermostat housing failure and water pump failure are also common.",
+        "KV6 2.5 V6 engines suffer from VIS actuator failure causing power loss, timing belt service requirements at 60,000 miles, and thermostat housing leaks.",
+        "1.9 DTi / CDTi diesel engines suffer from clutch slave cylinder failure with no replacement parts available, injector failure, EGR valve failure, and turbocharger failure.",
+        "1.5 DTi diesel engines suffer from engine cutting out while driving, DPF blockage, and oil dilution from regeneration.",
+        "MG parts availability is a significant concern, particularly for older models and diesel variants.",
+        "Labour rates are based on £55-75/hr indie specialist rates; London/SE adds 40-60%."
+      ]
+    },
+    "mini": {
+      "brandName": "Mini",
+      "title": "Mini Notes",
+      "items": [
+        "Prices shown are supply-only reconditioned engine costs from UK independent specialists. Main dealer fitted costs may be 40-60% higher. Dealer quotes for complete engine replacement can reach £13,000-£17,000, whereas reconditioned units typically range £2,200-£4,500.",
+        "N14 / N18 (Prince) engines suffer from timing chain tensioner failure (the \"death rattle\") which can cause catastrophic engine destruction without warning. Other common faults include high-pressure fuel pump (HPFP) failure, inlet valve coking (carbon buildup causing hesitation and loss of power), and excessive oil consumption from worn piston rings or valve stem seals. The N18 (2010-2011 onwards) improved many issues, but HPFP and thermostat housing failures remain common.",
+        "B38 / B48 (BMW modular) engines suffer from water pump and cooling system failures (plastic housings and pipes crack), thermal module (thermostat) failure causing overheating, carbon buildup on intake valves, engine mount hydraulic failure, and PCV valve issues.",
+        "B37 / B47 diesel engines suffer from DPF blockage (short journeys cause regeneration failure), EGR valve clogging, injector failure, and MAF sensor faults.",
+        "PSA-sourced 1.6D / 2.0D engines suffer from DPF blockage, exhaust back pressure sensor failure, injector failure, and vacuum valve issues.",
+        "Labour rates are based on £55-75/hr indie specialist rates; London/SE adds 40-60%. MINI main dealer rates are typically £120-180/hr."
+      ]
+    },
+    "mitsubishi": {
+      "brandName": "Mitsubishi",
+      "title": "Mitsubishi Notes",
+      "items": [
+        "Prices shown are supply-only reconditioned engine costs from UK independent specialists. Main dealer fitted costs may be 40-60% higher.",
+        "4N14 2.2 DI-D has a well-documented balance shaft drive coupling failure that is \"extremely common\" worldwide. It is probable that ALL unmodified engines of this type are affected. EGR valve scoring, DPF regeneration issues, and injector failures are also common.",
+        "4B11 / 4B12 petrol engines suffer from premature timing chain stretch (from around 60,000 miles onwards). This causes P0016/P0017 cam/crank correlation codes, rough idle, cold start rattle, and can lead to engine failure if not addressed.",
+        "4B11T (Evolution X) shares the same timing chain stretch weakness. Early 4B11 engines had chain stretch problems; late models have heavier chains.",
+        "4D56 2.5 diesel suffers from turbo overboost (wastegate sensor failure), EGR valve failure, injector pump failure, and crankshaft weakness. Injectors are critically sensitive to fuel quality.",
+        "4M41 3.2 DI-D suffers from turbocharger overboost, cracked cylinder heads, cracked pistons and big end bearing failure, and fuel injector failure.",
+        "Colt 1.3 / 1.1 engines (4G13) suffer from timing chain stretching from 60,000-100,000 km causing rattling on cold starts and rough idling.",
+        "ASX 1.8 DI-D suffers from DPF clogging after 60,000-80,000 km, especially on short journeys.",
+        "Eclipse Cross 2.2 diesel (4N14) suffers from injection system faults and turbocharger problems as early as 40,000 km.",
+        "Mitsubishi GDI petrol engines suffer from carbon buildup on intake valves, a well-known problem with direct-injection petrol engines.",
+        "Labour rates are based on £55-75/hr indie specialist rates; London/SE adds 40-60%."
+      ]
+    },
+    "nissan": {
+      "brandName": "Nissan",
+      "title": "Nissan Notes",
+      "items": [
+        "Prices shown are supply-only reconditioned engine costs from UK independent specialists. Main dealer fitted costs may be 40-60% higher.",
+        "K9K 1.5 dCi engines suffer from turbocharger failure (oil starvation, whistling, loss of boost), injector failure (rough running, black smoke), DPF blockage (urban driving, short journeys), and EGR valve clogging (carbon deposits). This engine is used across Nissan, Renault, Dacia, Mercedes-Benz (A-Class), and various others.",
+        "R9M 1.6 dCi engines suffer from DPF blockage (short journeys), timing chain stretch (cold start rattle), AdBlue system failure (NOx sensor, pump issues), and EGR valve failure.",
+        "M9R 2.0 dCi engines suffer from injector failure, DPF blockage, timing chain stretch, and EGR valve clogging.",
+        "YD25 2.5 dCi engines (Navara) suffer from timing chain stretch (80,000-120,000 km), injector failure, EGR valve clogging, and turbocharger failure.",
+        "ZD30 3.0 dCi engines suffer from piston failure (cracked and holed pistons from overheating), a well-known issue in Navara/Patrol.",
+        "HR16DE 1.6 petrol suffers from timing chain stretch (cold start rattle), ignition coil failure, and oil consumption.",
+        "HR12DE 1.2 DIG-S/DIG-T suffers from timing chain stretch, turbocharger failure, and engine management light issues.",
+        "VQ35/37 engines (350Z/370Z) suffer from oil gallery gasket failure (oil pressure drop), VVT solenoid failure, and carbon buildup.",
+        "VR38DETT (GT-R) suffers from transmission oil pump failure (not engine related), turbocharger failure, and injector issues.",
+        "Labour rates are based on £55-75/hr indie specialist rates; London/SE adds 40-60%."
+      ]
+    },
+    "peugeot": {
+      "brandName": "Peugeot",
+      "title": "Peugeot Notes",
+      "items": [
+        "Prices shown are supply-only reconditioned engine costs from UK independent specialists. Main dealer fitted costs may be significantly higher.",
+        "1.2 PureTech engines (EB2) have a well-documented wet timing belt issue. The belt runs in engine oil and can degrade, shedding debris that blocks the oil pickup strainer. Pre-2022 models are most affected. Replacement costs typically £1,200-£1,500.",
+        "1.6 THP (Prince) engines suffer from timing chain stretch on pre-2014 models, high-pressure fuel pump failure, excessive oil consumption, and carbon buildup on intake valves. Chain replacement is essential before catastrophic failure occurs.",
+        "1.6 HDi (DV6) engines can suffer from timing chain tensioner wear, injector seal failure, turbocharger issues, EGR valve clogging, and DPF blockage. The early 16-valve versions were more problematic than the 8-valve units.",
+        "2.0 HDi (DW10) engines are generally reliable but suffer from ignition coil failure, EGR valve issues, injector wiring faults, DPF clogging, and crankshaft pulley failure.",
+        "1.5 BlueHDi (DV5) engines have reported cam chain issues including premature wear, snapping, and oil pump failure. AdBlue system failures are also common.",
+        "1.6 VTi engines suffer from ignition coil failure, camshaft position sensor failure, O2 sensor failure, and rough idling.",
+        "2.2 HDi (DW12) engines suffer from swirl flap motor failure, DPF pressure sensor failure, lambda sensor failure, and turbo pressure solenoid failure.",
+        "208 GTi/RCZ 1.6 THP 200 suffer from HPFP failure, timing chain guide failure, high oil consumption, and fuel pump failure.",
+        "Labour rates are based on £55-75/hr indie specialist rates; London/SE adds 40-60%."
+      ]
+    },
+    "porsche": {
+      "brandName": "Porsche",
+      "title": "Porsche Notes",
+      "items": [
+        "Prices shown are supply-only reconditioned engine costs from UK independent specialists. Main dealer fitted costs may be 40-60% higher.",
+        "M96/M97 engines suffer from IMS bearing failure (1997-2005 models) which can cause sudden, catastrophic engine damage. A class action lawsuit was settled over this issue. Early 997s also affected; later cars received factory-fitted solution.",
+        "9A1 engines (991.1) suffer from bore scoring across multiple cylinders, often developing into misfire and exhaust valve failure.",
+        "EA839 2.9L/3.0L V6 (Macan) suffers from water pump failure causing coolant to leak into vacuum lines and affect turbo wastegates, rocker arm bearing failures on early production units, aluminum cam sprocket wear, rear main crankshaft seal oil leaks, failing thermostats, and timing case oil leaks.",
+        "M48 4.5L V8 (Cayenne) suffers from engine cylinder scoring (nikasil coating wear at 65-75,000 miles), coolant governor/valley coolant leaks, and timing chain tensioner wear.",
+        "EA825 4.0L V8 suffers from cylinder head oil leaks, oil separator failure, and water pump failure.",
+        "Porsche engine replacement costs can be extremely high: 911 engine rebuilds often exceed £10,000, Macan engine replacement quoted at £36,000 (dealership), Cayenne replacement engines from £12,335.",
+        "Labour rates are based on £80-150/hr indie specialist rates; Porsche main dealers charge £150-250/hr."
+      ]
+    },
+    "range-rover": {
+      "brandName": "Range Rover",
+      "title": "Range Rover Notes",
+      "items": [
+        "Prices shown are supply-only reconditioned engine costs from UK independent specialists. Main dealer fitted costs may be 40-60% higher. L405 and L494 engine replacements can exceed £10,000 at main dealers.",
+        "306DT SDV6/TDV6 3.0 diesel suffers from crankshaft bearing failure due to tin-aluminium coating fatigue, timing chain stretch, and EGR cooler leaks. Early signs include rhythmic knocking from the lower block. Replacement costs can reach several thousand pounds.",
+        "276DT 2.7 TDV6 suffers from oil pump housing failure (weak point at tensioner mount) which often kills the engine. Also prone to turbo failure from oil contamination.",
+        "368DT 3.6 TDV8 suffers from timing chain tensioner collapse (\"the death rattle\"), crankshaft fracture risk, and turbo actuator faults. High-risk after 100k miles.",
+        "448DT 4.4 SDV8 has no catastrophic bottom-end design flaw but suffers from coolant crossover pipe leaks under the intake manifold (can hydrolock the engine), oil cooler seal leaks, and water pump failures. Has LR-TIS-2011-066 TSB for timing chain tensioner.",
+        "508PS 5.0 SC V8 suffers from timing chain tensioner wear, supercharger coupler wear, and ignition system failures.",
+        "204DTD Ingenium D 2.0 diesel suffers from timing chain failure caused by oil dilution from incomplete DPF regenerations, turbocharger failure, high-pressure fuel pump failure, EGR system overload, and piston cooling oil jet solenoid failure. Early signs include rattling on cold start and Restricted Performance messages. If timing chain snaps, pistons hit valves destroying the engine.",
+        "204PT Ingenium P 2.0 petrol suffers from water pump failure, CVVL system failure causing misfire, ignition coil failure, direct injector coking and carbon buildup on intake valves.",
+        "306PS 3.0 Ingenium petrol suffers from misfire from ignition coil failure, injector coking, and CVVL system faults.",
+        "224DT 2.2 Duratorq (Ford-sourced) suffers from EGR cooler leaks, timing chain tensioner wear, turbocharger failure, and DPF blockage.",
+        "Labour rates are based on £65-85/hr indie specialist rates; London/SE adds 40-60%. Range Rover main dealer rates are typically £120-180/hr."
+      ]
+    },
+    "renault": {
+      "brandName": "Renault",
+      "title": "Renault Notes",
+      "items": [
+        "Prices shown are supply-only reconditioned engine costs from UK independent specialists. Main dealer fitted costs may be 40-60% higher."
+      ]
+    },
+    "audi": {
+      "brandName": "Audi",
+      "title": "Audi Notes",
+      "items": [
+        "Prices shown are supply-only reconditioned engine costs from UK independent specialists. Main dealer fitted costs may be 40-60% higher. Audi main dealer rates are typically £120-180/hr.",
+        "EA189 2.0 TDI engines (1,050 [EM-VERIFIED] requests) have a well-documented Dieselgate software \"fix\" that increased EGR/DPF failures. Injector coking and turbocharger failure are common at 80k-150k miles. EGR valve replacement typically costs £400-£1,200; turbo replacement £800-£2,000.",
+        "EA288 2.0 TDI engines (310 [EM-VERIFIED] requests) are generally more reliable than EA189 but suffer from AdBlue system failures including NOx sensor and pump crystallisation. AdBlue repairs typically cost £400-£1,500. Timing chain issues are less common but reported.",
+        "EA888 Gen3 2.0 TSI engines (130 [EM-VERIFIED] requests) suffer from water pump/thermostat housing failure (£400-£800), carbon buildup on intake valves requiring walnut blasting (£300-£600), and PCV valve failure. The Gen3 is significantly improved over Gen1/2 timing chain tensioner issues.",
+        "EA111 1.4 TSI engines (140 [EM-VERIFIED] requests) have timing chain tensioner failure that can cause catastrophic engine damage. Supercharger clutch issues on twincharger versions are also common. Chain replacement typically costs £800-£1,500.",
+        "EA211 1.0 TSI engines (135 [EM-VERIFIED] requests) are generally reliable but suffer from water pump leaks (£400-£800) and carbon buildup on intake valves. They are considered more durable than the EA111 they replaced.",
+        "Audi 3.0 TDI V6 engines (EA897) suffer from timing chain stretch (rattle on cold start), oil pump failure causing loss of oil pressure, and injector failure. These are complex engines with high labour costs.",
+        "Audi 3.0 TFSI V6 engines (EA837/EA839) suffer from timing chain tensioner failure, carbon buildup on intake valves, and water pump failure. Chain replacement can exceed £1,500 in parts alone.",
+        "Audi 4.0 TFSI V8 engines suffer from turbocharger failure (oil starvation), PCV valve failure, oil consumption from piston ring wear, and cooling system leaks. These are among the most expensive Audi engines to replace, with reconditioned units starting from £4,500.",
+        "Audi 2.5 TFSI 5-cylinder engines (RS3/TT RS) are generally robust but suffer from timing chain stretch, carbon buildup, and turbocharger failure under track use. Oil consumption from piston ring wear is reported on higher mileage units.",
+        "Common across all Audi TSI/TFSI engines: Carbon buildup on intake valves is a direct injection design drawback. Walnut blasting is recommended every 60k-80k miles for optimal performance.",
+        "Common across all Audi TDI engines: DPF clogging is common with urban driving. Regular motorway runs for regeneration are essential. EGR valve clogging affects older models significantly.",
+        "Quattro drivetrain complexity adds significant labour time to engine replacement. Some engine repairs require subframe and drivetrain removal.",
+        "Labour rates are based on £55-75/hr indie specialist rates; London/SE adds 40-60%. Specialist Audi/VW independent garages typically charge £65-85/hr.",
+        "Parts availability for EA189 and EA111 engines is excellent due to high volumes. EA288 and EA888 parts are also widely available. Older models (pre-2005) may have limited parts availability.",
+        "Used engine prices for common Audi engines can be significantly cheaper, but condition is variable. Reconditioned units offer warranty and peace of mind.",
+        "<w:pgSz w:h=\"16834\" w:w=\"11909\" w:orient=\"portrait\"/><w:pgMar w:bottom=\"1440\" w:top=\"1440\" w:left=\"1440\" w:right=\"1440\" w:header=\"720\" w:footer=\"720\"/><w:pgNumType w:start=\"1\"/></w:sectPr></w:pPr><w:r w:rsidDel=\"00000000\" w:rsidR=\"00000000\" w:rsidRPr=\"00000000\"><w:rPr><w:b w:val=\"1\"/><w:bCs w:val=\"1\"/><w:rtl w:val=\"0\"/></w:rPr><w:t xml:space=\"preserve\">Main dealer costs can be 40-60% higher than independent specialists, with some dealerships charging £150/hr+ for labour."
+      ]
+    },
+    "rolls-royce": {
+      "brandName": "Rolls Royce",
+      "title": "Rolls Royce Notes",
+      "items": [
+        "Prices shown are supply-only reconditioned engine costs from UK independent specialists. Main dealer fitted costs may be 40-60% higher.",
+        "N73B68 engines (Phantom VII) are based on BMW's N73 V12 family and suffer from alternator bracket gasket oil leaks ($3 gasket but four-figure labour), zero-lash tappet wear causing camshaft damage, oil cooler leaks, and cooling system corrosion.",
+        "N74B66 / N74B68 engines (Ghost, Wraith, Dawn, Cullinan, Phantom VIII) suffer from timing chain tensioner wear, high-pressure fuel pump failure (Bosch CP4.2 cavitation), piezo fuel injector failure, valve stem seal wear, turbocharger wastegate rattle, VANOS solenoid failure, and oil cooler leaks.",
+        "Cullinan-specific issues include turbo wastegate rattle (Service Bulletin RSB-2021-07) and oil cooler leaks exacerbated by all-wheel-drive thermal load.",
+        "Ghost-specific issues include timing chain wear (Service Bulletin SWE-19-03) due to unique ZF 8HP transmission load profiles and ISG motor integration faults.",
+        "Labour rates are based on £100-200/hr indie specialist rates; Rolls-Royce main dealers charge £200-300/hr."
+      ]
+    },
+    "seat": {
+      "brandName": "Seat",
+      "title": "Seat Notes",
+      "items": [
+        "Prices shown are supply-only reconditioned engine costs from UK independent specialists. Main dealer fitted costs may be 40-60% higher.",
+        "EA111 1.2/1.4 TSI engines suffer from timing chain tensioner failure (catastrophic engine damage), timing chain stretch (rattle from engine bay), and guide wear. Chain-related issues can cause complete engine destruction.",
+        "EA189 1.6/2.0 TDI engines suffer from EGR valve clogging, DPF blockage, injector failure, EGR cooler failure, and turbocharger issues. Dieselgate software \"fix\" increased EGR/DPF failures.",
+        "EA288 2.0 TDI engines suffer from AdBlue system failure (NOx sensors, pump crystallisation), water pump failure, DPF clogging, and timing chain stretch.",
+        "EA211 1.0/1.4/1.5 TSI engines suffer from timing chain stretch, carbon buildup on intake valves, turbocharger failure, water pump failure, and injector failure.",
+        "EA888 2.0 TSI engines (Cupra) suffer from water pump/thermostat housing leaks, PCV valve failure (whistling, oil consumption), and carbon buildup on intake valves.",
+        "EA111 1.4 TSI twincharger (Leon FR/Ibiza Cupra) suffers from supercharger clutch failure, timing chain issues, and carbon buildup on intake valves.",
+        "Labour rates are based on £55-75/hr indie specialist rates; London/SE adds 40-60%."
+      ]
+    },
+    "skoda": {
+      "brandName": "Skoda",
+      "title": "Skoda Notes",
+      "items": [
+        "Prices shown are supply-only reconditioned engine costs from UK independent specialists. Main dealer fitted costs may be 40-60% higher.",
+        "EA111 1.2/1.4 TSI engines suffer from timing chain tensioner failure (catastrophic engine damage), timing chain stretch (rattle from engine bay), and guide wear. Chain-related issues can cause complete engine destruction.",
+        "EA189 1.6/2.0 TDI engines suffer from EGR valve clogging, DPF blockage, injector failure, EGR cooler failure, and turbocharger issues. Dieselgate software \"fix\" increased EGR/DPF failures.",
+        "EA288 2.0 TDI engines suffer from AdBlue system failure (NOx sensors, pump crystallisation), water pump failure, DPF clogging, and timing chain stretch.",
+        "EA211 1.0/1.4/1.5 TSI engines suffer from timing chain stretch, carbon buildup on intake valves, turbocharger failure, water pump failure, and injector failure.",
+        "EA888 2.0 TSI engines (vRS) suffer from water pump/thermostat housing leaks, PCV valve failure (whistling, oil consumption), and carbon buildup on intake valves.",
+        "Labour rates are based on £55-75/hr indie specialist rates; London/SE adds 40-60%."
+      ]
+    },
+    "subaru": {
+      "brandName": "Subaru",
+      "title": "Subaru Notes",
+      "items": [
+        "Prices shown are supply-only reconditioned engine costs from UK independent specialists. Main dealer fitted costs may be 40-60% higher.",
+        "EJ25 series engines (2.5L) suffer from head gasket failure (particularly in naturally aspirated EJ251/EJ253 models), oil consumption issues, and ringland failure in turbocharged variants (EJ255/EJ257) due to detonation. Timing belt replacement is critical every 90,000 miles or 6 years on EJ series engines.",
+        "EJ20 series engines (2.0L) suffer from timing belt tensioner failure, rod bearing wear due to oiling issues, and head gasket failure in earlier models.",
+        "EE20 diesel engines are considered Subaru's biggest engine failure by owners. Common issues include crankshaft failure (non-viable repair costs), DPF clogging, EGR valve clogging, injector failure, and glow plug seizure (often snapping off in the head).",
+        "FB20 / FB25 engines suffer from excessive oil consumption (2011-2015 models affected), timing chain cover oil leaks due to RTV sealant failure, and timing chain tensioner wear.",
+        "FA20 engines (BRZ) suffer from excessive oil consumption (high-pressure fuel pump issue), valve spring recall (2013 models), and fuel injector failure.",
+        "FA24 engines (newer BRZ) suffer from RTV sealant debris blocking the oil pickup, causing oil starvation.",
+        "EZ30 / EZ36 H6 engines suffer from oil gallery gasket failure, oil cooler line leaks, and oil consumption.",
+        "Labour rates are based on £65-85/hr indie specialist rates; London/SE adds 40-60%. Subaru boxer engines are notoriously labour-intensive, with head gasket jobs often exceeding £1,500 in labour alone."
+      ]
+    },
+    "suzuki": {
+      "brandName": "Suzuki",
+      "title": "Suzuki Notes",
+      "items": [
+        "Prices shown are supply-only reconditioned engine costs from UK independent specialists. Main dealer fitted costs may be 40-60% higher. Suzuki main dealer quoted £6,000-£7,000 for a Vitara engine rebuild, whereas independent specialists offer significantly lower rates.",
+        "K14C/K14D 1.4 Boosterjet engines have a well-documented cracked cylinder head issue. The manifold integrated into the head suffers from heat stress, particularly on short journeys where the engine doesn't fully warm up. Coolant loss is the primary symptom, often leading to head gasket failure and engine seizure. This affects Vitara, S-Cross, and Swift Sport models.",
+        "K12B/K12C 1.2 Dualjet engines suffer from high oil consumption on poorly maintained high-mileage units, timing chain stretch, and piston ring wear.",
+        "K10C 1.0 Boosterjet engines suffer from turbocharger failure, carbon buildup on intake valves, timing chain stretch, and injector failure.",
+        "M15A/M16A petrol engines suffer from timing chain stretch (rattle on cold start), high oil consumption from piston ring wear, and ignition coil failure.",
+        "K15B 1.5 Jimny engines suffer from valve cover oil leaks, throttle body contamination causing stalling, MAF sensor failure, and oil pump strainer blockage.",
+        "D13A 1.3 DDiS diesel (Fiat-sourced) suffers from injector failure, turbocharger failure, EGR valve clogging, DPF blockage, and injector seal failure.",
+        "D20AA 2.0 DDiS diesel suffers from DPF clogging (short journeys), EGR valve clogging, turbocharger failure, and high-pressure fuel pump failure.",
+        "Labour rates are based on £55-75/hr indie specialist rates; London/SE adds 40-60%. Suzuki main dealer rates are typically £90-140/hr."
+      ]
+    },
+    "toyota": {
+      "brandName": "Toyota",
+      "title": "Toyota Notes",
+      "items": [
+        "Prices shown are supply-only reconditioned engine costs from UK independent specialists. Main dealer fitted costs may be 40-60% higher.",
+        "1ZZ-FE / 3ZZ-FE 1.6-1.8 VVT-i petrol engines (2000-2005) are known for excessive oil consumption (1L/600 miles) due to insufficient oil capacity and poor piston ring design causing bore mis-shape. Ignition coil failure as early as 60,000 km is common.",
+        "2AD-FTV / 2AD-FHV 2.0-2.2 D-4D diesel engines suffer from multiple issues including EGR valve clogging (Denso design that fails open), injector failure (piezo injectors causing power loss), head gasket failure requiring new cylinder head, DPF blockage requiring engine removal, and piston/turbo problems.",
+        "1ND-TV 1.4 D-4D diesel engines suffer from cylinder head cracking from thermal stress, turbocharger failure from poor maintenance, and DPF blockage on short urban trips.",
+        "2ZR-FE 1.8 Dual VVT-i petrol engines suffer from excessive oil consumption on 2011-2015 models and VVT solenoid failure causing engine hesitation and pinging.",
+        "8NR-FTS 1.2 Turbo petrol engines suffer from turbo wastegate regulating valve vibration (causing strange noise, resolved by modified vacuum pipe), misfire at low speed acceleration, carbon buildup on intake valves, and high-pressure fuel pump recalls.",
+        "A25A-FXS 2.5 Hybrid engines suffer from coolant bypass valve failure causing overheating and leaks, engine temperature spikes affecting 2019-2023 models, and water pump failures.",
+        "2ZR-FXE 1.8 Hybrid engines suffer from EGR system clogging, inverter failure, battery cooling fan issues, and transmission actuator failure.",
+        "G16E-GTS 1.6 Turbo (GR Yaris) suffers from boost solenoid failure (vibration kills OEM units), boost pressure drop from faulty sensor/solenoid, and faulty injectors causing piston disintegration.",
+        "1KD-FTV 3.0 D-4D diesel engines suffer from cracked pistons (distinctive metal knocking, black smoke, power loss), burnt copper O-rings (white smoke on startup), and turbocharger issues from 120,000-150,000 km.",
+        "1GR-FE 4.0 V6 petrol engines suffer from timing chain issues (P0016 code), water pump failure, and fuel pump failure.",
+        "1KR-FE 1.0 petrol engines (Aygo) suffer from timing chain noise, clutch wear, and water leaks.",
+        "1.5 D-4D diesel (Proace) suffers from Stellantis-sourced engine issues including oil starvation and injector clogging.",
+        "Toyota hybrids generally have low engine failure rates, with battery issues being the most common warranty claim at 3.89%.",
+        "Labour rates are based on £55-75/hr indie specialist rates; London/SE adds 40-60%. Toyota main dealer rates are typically £90-140/hr."
+      ]
+    },
+    "vauxhall": {
+      "brandName": "Vauxhall",
+      "title": "Vauxhall Notes",
+      "items": [
+        "Prices shown are supply-only reconditioned engine costs from UK independent specialists. Main dealer fitted costs may be 40-60% higher.",
+        "Z19DTH 1.9 CDTi engines suffer from swirl flap failure (fragments ingested into engine), injector plug corrosion causing misfire and rough running, EGR valve sticking (RPM bouncing and rev limiter behaviour), and fuel pressure regulator failure.",
+        "A20DTH 2.0 CDTi engines suffer from oil pickup seal hardening causing oil starvation and bottom end failure (the \"dreaded main bearing failure\"), crankshaft keyway failure causing cam timing slip, DPF blockage, and timing chain stretch.",
+        "D16DTH / B16DTH 1.6 CDTi engines suffer from oil pump failure (plastic internals and drive chains fail causing oil pressure loss), timing chain tensioner wear, EGR cooler failure, and crankshaft position sensor failure.",
+        "Z14XEP / Z16XER petrol engines suffer from timing chain stretch and tensioner failure (the \"diesel-like rattle\" on cold start), which can lead to skipped chains and bent valves. This is one of the most recognisable timing chain issues in the UK aftermarket.",
+        "A14NET / A16LET turbo petrol engines suffer from turbo oil feed line blockage, PCV valve failure causing rough idle, head gasket failure, and piston ring failure.",
+        "1.2 PureTech (wet belt) engines suffer from wet timing belt degradation where the belt sheds debris into the oil, blocking the oil pickup strainer and causing oil starvation. This can lead to catastrophic engine failure. Vauxhall/Stellantis has opened a compensation portal for affected UK customers.",
+        "1.5 BlueHDi / DV5 diesel engines suffer from cam chain premature wear and snapping, AdBlue system failure (NOx sensor crystallisation), and DPF clogging.",
+        "1.3 CDTi engines suffer from timing chain slippage, EGR valve clogging, turbocharger failure, and DPF blockage.",
+        "1.7 CDTi engines (Astra H) suffer from head gasket issues and alternator problems.",
+        "M9R 2.0 CDTi (Vivaro) suffers from injector failure, DPF blockages, and engine wiring harness chafing.",
+        "Labour rates are based on £55-75/hr indie specialist rates; London/SE adds 40-60%. Vauxhall main dealer rates are typically £90-140/hr."
+      ]
+    },
+    "volkswagen": {
+      "brandName": "Volkswagen",
+      "title": "Volkswagen Notes",
+      "items": [
+        "Prices shown are supply-only reconditioned engine costs from UK independent specialists. Main dealer fitted costs may be 40-60% higher.",
+        "EA111 1.4 TSI engines suffer from timing chain tensioner failure (catastrophic engine damage), timing chain stretch (rattle from engine bay), and guide wear. Chain-related issues can cause complete engine destruction.",
+        "EA189 1.6/2.0 TDI engines suffer from EGR valve clogging, DPF blockage, injector failure, EGR cooler failure, and turbocharger issues. Dieselgate software \"fix\" increased EGR/DPF failures.",
+        "EA288 2.0 TDI engines suffer from AdBlue system failure (NOx sensors, pump crystallisation), water pump failure, DPF clogging, and timing chain stretch.",
+        "EA211 1.0/1.4/1.5 TSI engines suffer from timing chain stretch, carbon buildup on intake valves, turbocharger failure, water pump failure, and injector failure.",
+        "EA888 Gen3/Gen4 2.0 TSI engines (GTI/R) suffer from water pump/thermostat housing leaks, PCV valve failure (whistling, oil consumption), and carbon buildup on intake valves.",
+        "EA897 3.0 TDI V6 engines suffer from oil pump failure (loss of oil pressure) and AdBlue system failures.",
+        "Labour rates are based on £55-75/hr indie specialist rates; London/SE adds 40-60%. VW main dealer rates are typically £90-140/hr."
+      ]
+    },
+    "volvo": {
+      "brandName": "Volvo",
+      "title": "Volvo Notes",
+      "items": [
+        "Prices shown are supply-only reconditioned engine costs from UK independent specialists. Main dealer fitted costs may be 40-60% higher. Typical Volvo engine replacement costs range from £1,700 to £7,350, with most complete jobs between £2,500-£4,000.",
+        "VEA D4 / D3 diesel engines (D4204T) suffer from multiple well-documented issues including EGR cooler blockage causing carbon paste that sticks the EGR valve, intake manifold melting with fire risk on 2014-2019 models, engine stutter at 1500-1800 RPM, oil consumption from carbon accumulation in cylinders, cam cover gasket weeping, and porous engine blocks. Volvo redesigned the EGR cooler and piston oil rings to address these issues.",
+        "D5 5-cylinder diesel engines (D5244T) suffer from injector leak-off causing rough running on hot start, rising oil level from diesel dilution during DPF regeneration, cam belt pulley failure (plastic pulley fails), alternator pulley failure, and high-pressure fuel pump issues.",
+        "1.6 D2 diesel engines (D4162T) suffer from cylinder head/block failure causing coolant loss, lumpy idle and stalling, O2 sensor and DPF clogging issues, and strong engine vibration under load.",
+        "T5 5-cylinder petrol engines suffer from piston ring carbon buildup causing oil consumption, fuel pressure regulator diaphragm failure causing hot start issues, oil breather diaphragm failure, and throttle body carbon buildup.",
+        "B4204T 4-cylinder VEA petrol engines suffer from oil consumption (early VEA petrol design flaw, 2014-2016 models), timing chain VVT pin failure causing chain snap risk, and clogged oil rings at higher mileage.",
+        "T6 twin-charged petrol engines (B4204T27) suffer from supercharger clutch/bearing wear, oil consumption, and clogged oil rings at higher mileage.",
+        "Labour rates are based on £55-75/hr indie specialist rates; London/SE adds 40-60%. Volvo main dealer rates are typically £100-150/hr."
+      ]
+    }
+  }
+}

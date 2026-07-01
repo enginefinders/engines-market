@@ -138,8 +138,8 @@
         "Updated regularly"
       ],
       "feed": {
-        "isDynamic": true,
-        "rowsCount": 0,
+        "isDynamic": false,
+        "rowsCount": 50,
         "columns": [
           "Year",
           "Model",
@@ -152,7 +152,408 @@
         "refreshLabel": "Refresh feed",
         "density": "premium",
         "visibleRows": 20,
-        "entries": []
+        "entries": [
+          {
+            "Year": "2011",
+            "Model": "Ferrari 458 Italia",
+            "Engine Code": "F136",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£6,500 – £12,000",
+            "Reported Issue": "Crankshaft machining defect - engine seizure and failure"
+          },
+          {
+            "Year": "2016",
+            "Model": "Ferrari 488 GTB",
+            "Engine Code": "F154",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£7,500 – £14,000",
+            "Reported Issue": "Low-pressure fuel line leak - potential engine bay fire"
+          },
+          {
+            "Year": "2009",
+            "Model": "Ferrari California",
+            "Engine Code": "F136",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£6,000 – £11,000",
+            "Reported Issue": "Crankshaft grinding error - engine could seize"
+          },
+          {
+            "Year": "2017",
+            "Model": "Ferrari F12 Berlinetta",
+            "Engine Code": "F140",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£7,000 – £13,000",
+            "Reported Issue": "Oil pump primary shaft bearing wear - metal shavings in oil"
+          },
+          {
+            "Year": "2004",
+            "Model": "Ferrari 360 Modena",
+            "Engine Code": "F119",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£5,000 – £9,000",
+            "Reported Issue": "Air pump check valve failure - P0411 emissions code"
+          },
+          {
+            "Year": "2020",
+            "Model": "Ferrari F8 Tributo",
+            "Engine Code": "F154",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£7,500 – £14,000",
+            "Reported Issue": "Crankshaft bolts loose - official recall for V8 models"
+          },
+          {
+            "Year": "2014",
+            "Model": "Ferrari FF",
+            "Engine Code": "F140",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£7,000 – £13,000",
+            "Reported Issue": "Oil leakage from cam covers - rubber gaskets cook and crack"
+          },
+          {
+            "Year": "2010",
+            "Model": "Ferrari 458 Italia",
+            "Engine Code": "F136",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£6,500 – £12,000",
+            "Reported Issue": "Engine compartment overheating - heat shield adhesive fire risk"
+          },
+          {
+            "Year": "2015",
+            "Model": "Ferrari 488 GTB",
+            "Engine Code": "F154",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£7,500 – £14,000",
+            "Reported Issue": "Turbocharger failure - oil starvation and low RPM issues"
+          },
+          {
+            "Year": "2007",
+            "Model": "Ferrari F430",
+            "Engine Code": "F136",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£5,500 – £10,000",
+            "Reported Issue": "Camshaft timing off - spark knock at low speed"
+          },
+          {
+            "Year": "2012",
+            "Model": "Ferrari California",
+            "Engine Code": "F136",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£6,000 – £11,000",
+            "Reported Issue": "Crankshaft vibration recall - engine could seize"
+          },
+          {
+            "Year": "2018",
+            "Model": "Ferrari Portofino",
+            "Engine Code": "F154",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£7,000 – £13,000",
+            "Reported Issue": "Crankshaft bolts loose - V8 engine recall campaign"
+          },
+          {
+            "Year": "2006",
+            "Model": "Ferrari 612 Scaglietti",
+            "Engine Code": "F140",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£6,500 – £12,000",
+            "Reported Issue": "Oil pump bearing failure - loss of oil pressure and seizure"
+          },
+          {
+            "Year": "2013",
+            "Model": "Ferrari 458 Italia",
+            "Engine Code": "F136",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£6,500 – £12,000",
+            "Reported Issue": "Direct injection carbon buildup - intake valve deposits"
+          },
+          {
+            "Year": "2019",
+            "Model": "Ferrari 488 Pista",
+            "Engine Code": "F154",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£8,000 – £15,000",
+            "Reported Issue": "Misfire at full boost - carboned injectors and restricted flow"
+          },
+          {
+            "Year": "2003",
+            "Model": "Ferrari 575M Maranello",
+            "Engine Code": "F133",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£6,000 – £11,000",
+            "Reported Issue": "Oil leak and radiator boiling - cooling system failure"
+          },
+          {
+            "Year": "2016",
+            "Model": "Ferrari GTC4Lusso",
+            "Engine Code": "F140",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£7,000 – £13,000",
+            "Reported Issue": "Engine overheating - hot-running V12 requires careful maintenance"
+          },
+          {
+            "Year": "2010",
+            "Model": "Ferrari 458 Italia",
+            "Engine Code": "F136",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£6,500 – £12,000",
+            "Reported Issue": "Fire risk from engine bay - heat melting wheel-arch adhesive"
+          },
+          {
+            "Year": "2014",
+            "Model": "Ferrari California T",
+            "Engine Code": "F154",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£6,500 – £12,000",
+            "Reported Issue": "Fuel pump leak - fire risk from low-pressure fuel line"
+          },
+          {
+            "Year": "2005",
+            "Model": "Ferrari F430",
+            "Engine Code": "F136",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£5,500 – £10,000",
+            "Reported Issue": "Valve guide wear - excessive oil consumption at high RPM"
+          },
+          {
+            "Year": "2017",
+            "Model": "Ferrari 812 Superfast",
+            "Engine Code": "F140",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£8,000 – £15,000",
+            "Reported Issue": "V12 engine oil leaks - gasket failure from heat and pressure"
+          },
+          {
+            "Year": "2012",
+            "Model": "Ferrari FF",
+            "Engine Code": "F140",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£7,000 – £13,000",
+            "Reported Issue": "Oil pump failure - complete loss of oil pressure"
+          },
+          {
+            "Year": "2020",
+            "Model": "Ferrari Roma",
+            "Engine Code": "F154",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£7,500 – £14,000",
+            "Reported Issue": "Crankshaft bolts inspection - V8 recall for loose bolts"
+          },
+          {
+            "Year": "2009",
+            "Model": "Ferrari California",
+            "Engine Code": "F136",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£6,000 – £11,000",
+            "Reported Issue": "Engine warning light - control system failure"
+          },
+          {
+            "Year": "2018",
+            "Model": "Ferrari 488 GTB",
+            "Engine Code": "F154",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£7,500 – £14,000",
+            "Reported Issue": "Exhaust smoke and whirling sound - turbo failure symptoms"
+          },
+          {
+            "Year": "2004",
+            "Model": "Ferrari 360 Spider",
+            "Engine Code": "F119",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£5,000 – £9,000",
+            "Reported Issue": "Ignition coil failure - misfire and rough running"
+          },
+          {
+            "Year": "2015",
+            "Model": "Ferrari F12 Berlinetta",
+            "Engine Code": "F140",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£7,000 – £13,000",
+            "Reported Issue": "V12 engine oil seepage - rubber gaskets fail from heat"
+          },
+          {
+            "Year": "2011",
+            "Model": "Ferrari 458 Italia",
+            "Engine Code": "F136",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£6,500 – £12,000",
+            "Reported Issue": "Crankshaft grinding machine error - 2012 recall"
+          },
+          {
+            "Year": "2019",
+            "Model": "Ferrari F8 Tributo",
+            "Engine Code": "F154",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£7,500 – £14,000",
+            "Reported Issue": "ECU internal hardware failure - engine dying and hard starting"
+          },
+          {
+            "Year": "2007",
+            "Model": "Ferrari 599 GTB",
+            "Engine Code": "F140",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£6,500 – £12,000",
+            "Reported Issue": "EGR valve failure - engine stalling and misfire"
+          },
+          {
+            "Year": "2013",
+            "Model": "Ferrari California",
+            "Engine Code": "F136",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£6,000 – £11,000",
+            "Reported Issue": "Engine seizure risk - crankshaft incorrectly machined"
+          },
+          {
+            "Year": "2016",
+            "Model": "Ferrari 488 GTB",
+            "Engine Code": "F154",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£7,500 – £14,000",
+            "Reported Issue": "Fuel line leak - potential engine fire from faulty pump"
+          },
+          {
+            "Year": "2002",
+            "Model": "Ferrari 456M",
+            "Engine Code": "F133",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£5,500 – £10,000",
+            "Reported Issue": "Primary shaft bearing wear - oil pressure loss and seizure"
+          },
+          {
+            "Year": "2018",
+            "Model": "Ferrari Portofino",
+            "Engine Code": "F154",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£7,000 – £13,000",
+            "Reported Issue": "Turbocharger failure - low mileage failure under 3,000 miles"
+          },
+          {
+            "Year": "2010",
+            "Model": "Ferrari 458 Italia",
+            "Engine Code": "F136",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£6,500 – £12,000",
+            "Reported Issue": "Lean combustion in city traffic - engine compartment starvation"
+          },
+          {
+            "Year": "2008",
+            "Model": "Ferrari F430",
+            "Engine Code": "F136",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£5,500 – £10,000",
+            "Reported Issue": "Exhaust manifold failure - common V8 issue"
+          },
+          {
+            "Year": "2017",
+            "Model": "Ferrari GTC4Lusso",
+            "Engine Code": "F140",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£7,000 – £13,000",
+            "Reported Issue": "Oil pump bearing seizure - primary shaft bearing inspection"
+          },
+          {
+            "Year": "2015",
+            "Model": "Ferrari 488 GTB",
+            "Engine Code": "F154",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£7,500 – £14,000",
+            "Reported Issue": "Turbo failure under 30,000 miles - premature wear"
+          },
+          {
+            "Year": "2005",
+            "Model": "Ferrari 612 Scaglietti",
+            "Engine Code": "F140",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£6,500 – £12,000",
+            "Reported Issue": "Cam cover oil leak - gaskets cook near exhaust headers"
+          },
+          {
+            "Year": "2021",
+            "Model": "Ferrari Roma Spider",
+            "Engine Code": "F154",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£7,500 – £14,000",
+            "Reported Issue": "Crankshaft bolts loose - V8 engine recall inspection"
+          },
+          {
+            "Year": "2012",
+            "Model": "Ferrari FF",
+            "Engine Code": "F140",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£7,000 – £13,000",
+            "Reported Issue": "V12 engine hot running - overheating in traffic"
+          },
+          {
+            "Year": "2006",
+            "Model": "Ferrari 599 GTB",
+            "Engine Code": "F140",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£6,500 – £12,000",
+            "Reported Issue": "Intake manifold gasket leak - oil seepage"
+          },
+          {
+            "Year": "2014",
+            "Model": "Ferrari 458 Speciale",
+            "Engine Code": "F136",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£7,000 – £13,000",
+            "Reported Issue": "High RPM engine damage - forged internals stressed"
+          },
+          {
+            "Year": "2019",
+            "Model": "Ferrari 488 Pista",
+            "Engine Code": "F154",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£8,000 – £15,000",
+            "Reported Issue": "ECU malfunction - P1675 code from MAF sensor"
+          },
+          {
+            "Year": "2009",
+            "Model": "Ferrari California",
+            "Engine Code": "F136",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£6,000 – £11,000",
+            "Reported Issue": "Transmission clutch sensor failure - stop-and-go driving"
+          },
+          {
+            "Year": "2016",
+            "Model": "Ferrari F12 Berlinetta",
+            "Engine Code": "F140",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£7,000 – £13,000",
+            "Reported Issue": "Blow-by oil leakage - piston ring failure in V12"
+          },
+          {
+            "Year": "2011",
+            "Model": "Ferrari 458 Italia",
+            "Engine Code": "F136",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£6,500 – £12,000",
+            "Reported Issue": "Engine fire from heat shield - adhesive melts near exhaust"
+          },
+          {
+            "Year": "2020",
+            "Model": "Ferrari F8 Spider",
+            "Engine Code": "F154",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£7,500 – £14,000",
+            "Reported Issue": "Crankshaft bolts loose - V8 engine recall from Maranello"
+          },
+          {
+            "Year": "2003",
+            "Model": "Ferrari 575M Maranello",
+            "Engine Code": "F133",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£6,000 – £11,000",
+            "Reported Issue": "Engine overheating and oil leaks - cooling system failure"
+          },
+          {
+            "Year": "2017",
+            "Model": "Ferrari 812 Superfast",
+            "Engine Code": "F140",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£8,000 – £15,000",
+            "Reported Issue": "Oil pressure loss - primary shaft bearing inspection required"
+          }
+        ]
       },
       "imageSrc": "/images/brand-wcu/Ferrari-engines-replacement-UK.webp",
       "imageAlt": "Ferrari replacement engines UK – reconditioned engines for 488, F8 Tributo, SF90 and 296 GTB models with 3.9 V8 Twin-Turbo engine prices from £10,000-£18,000, 6.5 V12 F140 from £12,000-£22,000 and V6 Hybrid F163 from £10,000-£16,000"

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
 import { SITE_URL } from "@/lib/site";
 
@@ -9,6 +10,11 @@ export const metadata: Metadata = {
   title: "Engines Market",
   description:
     "Compare prices for reconditioned, rebuilt and used engines from trusted UK engine specialists.",
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/apple-icon.png",
+  },
 };
 
 export default function RootLayout({
@@ -23,6 +29,7 @@ export default function RootLayout({
           <Navbar />
 
           <main className="flex-1">{children}</main>
+          <Footer />
         </div>
       </body>
     </html>

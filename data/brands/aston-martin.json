@@ -138,8 +138,8 @@
         "Updated regularly"
       ],
       "feed": {
-        "isDynamic": true,
-        "rowsCount": 0,
+        "isDynamic": false,
+        "rowsCount": 60,
         "columns": [
           "Year",
           "Model",
@@ -152,7 +152,488 @@
         "refreshLabel": "Refresh feed",
         "density": "premium",
         "visibleRows": 20,
-        "entries": []
+        "entries": [
+          {
+            "Year": "2005",
+            "Model": "Aston Martin V8 Vantage 4.3",
+            "Engine Code": "AM05",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£4,000 – £7,000",
+            "Reported Issue": "Timing cover gasket leak - 23hr labour to replace"
+          },
+          {
+            "Year": "2007",
+            "Model": "Aston Martin V8 Vantage 4.3",
+            "Engine Code": "AM05",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£4,000 – £7,000",
+            "Reported Issue": "Clutch wear at 15k miles - expensive replacement"
+          },
+          {
+            "Year": "2006",
+            "Model": "Aston Martin V8 Vantage 4.3",
+            "Engine Code": "AM05",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£4,000 – £7,000",
+            "Reported Issue": "Alternator belt squeal - tensioner adjustment needed"
+          },
+          {
+            "Year": "2008",
+            "Model": "Aston Martin V8 Vantage 4.3",
+            "Engine Code": "AM05",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£4,000 – £7,000",
+            "Reported Issue": "Front timing cover oil leak - upgraded gasket required"
+          },
+          {
+            "Year": "2009",
+            "Model": "Aston Martin V8 Vantage 4.7",
+            "Engine Code": "AM14",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£4,500 – £8,000",
+            "Reported Issue": "Coil pack failure - water ingress causes misfire"
+          },
+          {
+            "Year": "2010",
+            "Model": "Aston Martin V8 Vantage 4.7",
+            "Engine Code": "AM14",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£4,500 – £8,000",
+            "Reported Issue": "Syncromesh wear - grinding on specific gears"
+          },
+          {
+            "Year": "2011",
+            "Model": "Aston Martin V8 Vantage 4.7",
+            "Engine Code": "AM14",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£4,500 – £8,000",
+            "Reported Issue": "Tappet shim wear - ticking noise from top end"
+          },
+          {
+            "Year": "2012",
+            "Model": "Aston Martin V8 Vantage 4.7",
+            "Engine Code": "AM14",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£4,500 – £8,000",
+            "Reported Issue": "Clutch failure - expensive replacement common"
+          },
+          {
+            "Year": "2013",
+            "Model": "Aston Martin V8 Vantage 4.7",
+            "Engine Code": "AM14",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£4,500 – £8,000",
+            "Reported Issue": "Oil pressure loss - cooler hose split risk"
+          },
+          {
+            "Year": "2014",
+            "Model": "Aston Martin V8 Vantage 4.7",
+            "Engine Code": "AM14",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£4,500 – £8,000",
+            "Reported Issue": "Ignition coil failure - engine management light"
+          },
+          {
+            "Year": "2004",
+            "Model": "Aston Martin DB9 V12",
+            "Engine Code": "AM28",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£5,400 – £9,000",
+            "Reported Issue": "Coil pack failure - misfire under acceleration"
+          },
+          {
+            "Year": "2005",
+            "Model": "Aston Martin DB9 V12",
+            "Engine Code": "AM28",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£5,400 – £9,000",
+            "Reported Issue": "Sticking breather valve - oil pullover misfire"
+          },
+          {
+            "Year": "2006",
+            "Model": "Aston Martin DB9 V12",
+            "Engine Code": "AM28",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£5,400 – £9,000",
+            "Reported Issue": "Cylinder liner wear - oval bores cause ticking"
+          },
+          {
+            "Year": "2007",
+            "Model": "Aston Martin DB9 V12",
+            "Engine Code": "AM28",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£5,400 – £9,000",
+            "Reported Issue": "Catalytic converter failure - misfire damages cats"
+          },
+          {
+            "Year": "2008",
+            "Model": "Aston Martin DB9 V12",
+            "Engine Code": "AM28",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£5,400 – £9,000",
+            "Reported Issue": "Small end bush wear - dreaded DB9 tick noise"
+          },
+          {
+            "Year": "2009",
+            "Model": "Aston Martin DB9 V12",
+            "Engine Code": "AM29",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£5,500 – £10,000",
+            "Reported Issue": "Breather circuit failure - oil in intake manifold"
+          },
+          {
+            "Year": "2010",
+            "Model": "Aston Martin DB9 V12",
+            "Engine Code": "AM29",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£5,500 – £10,000",
+            "Reported Issue": "Ignition coil failure - hesitation on acceleration"
+          },
+          {
+            "Year": "2011",
+            "Model": "Aston Martin DB9 V12",
+            "Engine Code": "AM29",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£5,500 – £10,000",
+            "Reported Issue": "Catalytic converter ingestion - engine destruction risk"
+          },
+          {
+            "Year": "2012",
+            "Model": "Aston Martin DB9 V12",
+            "Engine Code": "AM29",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£5,500 – £10,000",
+            "Reported Issue": "Low oil pressure - oil cooler hose failure"
+          },
+          {
+            "Year": "2013",
+            "Model": "Aston Martin DBS V12",
+            "Engine Code": "AM28",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£6,000 – £12,000",
+            "Reported Issue": "Dual ECU failure - one bank dead, cold exhaust"
+          },
+          {
+            "Year": "2008",
+            "Model": "Aston Martin DBS V12",
+            "Engine Code": "AM28",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£6,000 – £12,000",
+            "Reported Issue": "Throttle actuator fault - P2106 limp mode"
+          },
+          {
+            "Year": "2009",
+            "Model": "Aston Martin DBS V12",
+            "Engine Code": "AM28",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£6,000 – £12,000",
+            "Reported Issue": "Catalytic converter failure - ingested into engine"
+          },
+          {
+            "Year": "2010",
+            "Model": "Aston Martin DBS V12",
+            "Engine Code": "AM28",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£6,000 – £12,000",
+            "Reported Issue": "Ignition coil failure - misfire and rough idle"
+          },
+          {
+            "Year": "2011",
+            "Model": "Aston Martin DBS V12",
+            "Engine Code": "AM28",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£6,000 – £12,000",
+            "Reported Issue": "PCV system failure - oil consumption and smoke"
+          },
+          {
+            "Year": "2012",
+            "Model": "Aston Martin V12 Vantage",
+            "Engine Code": "AM28",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£5,500 – £10,000",
+            "Reported Issue": "Catalytic converter ingestion - catastrophic engine failure"
+          },
+          {
+            "Year": "2013",
+            "Model": "Aston Martin V12 Vantage",
+            "Engine Code": "AM28",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£5,500 – £10,000",
+            "Reported Issue": "Sticking breather valve - oil pullover misfire"
+          },
+          {
+            "Year": "2014",
+            "Model": "Aston Martin V12 Vantage S",
+            "Engine Code": "AE31",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£6,500 – £12,000",
+            "Reported Issue": "Coil pack failure - water ingress common issue"
+          },
+          {
+            "Year": "2015",
+            "Model": "Aston Martin V12 Vantage S",
+            "Engine Code": "AE31",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£6,500 – £12,000",
+            "Reported Issue": "Turbo coolant line leak - heat damage to hoses"
+          },
+          {
+            "Year": "2016",
+            "Model": "Aston Martin V12 Vantage S",
+            "Engine Code": "AE31",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£6,500 – £12,000",
+            "Reported Issue": "Oil cooler hose failure - sudden oil pressure loss"
+          },
+          {
+            "Year": "2010",
+            "Model": "Aston Martin Rapide V12",
+            "Engine Code": "AM28",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£5,500 – £10,000",
+            "Reported Issue": "Big end bearing failure - complete engine seizure"
+          },
+          {
+            "Year": "2011",
+            "Model": "Aston Martin Rapide V12",
+            "Engine Code": "AM28",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£5,500 – £10,000",
+            "Reported Issue": "Low-pressure fuel pump failure - starting issues"
+          },
+          {
+            "Year": "2012",
+            "Model": "Aston Martin Rapide V12",
+            "Engine Code": "AM29",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£5,500 – £10,000",
+            "Reported Issue": "Camshaft position sensor failure - P0340 code"
+          },
+          {
+            "Year": "2013",
+            "Model": "Aston Martin Rapide V12",
+            "Engine Code": "AM29",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£5,500 – £10,000",
+            "Reported Issue": "Catalytic converter failure - engine misfire damage"
+          },
+          {
+            "Year": "2014",
+            "Model": "Aston Martin Rapide V12",
+            "Engine Code": "AM29",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£5,500 – £10,000",
+            "Reported Issue": "Ignition coil failure - check emissions light"
+          },
+          {
+            "Year": "2013",
+            "Model": "Aston Martin Vanquish V12",
+            "Engine Code": "AM29",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£6,500 – £12,000",
+            "Reported Issue": "Big end bearing failure - engine seized at low miles"
+          },
+          {
+            "Year": "2014",
+            "Model": "Aston Martin Vanquish V12",
+            "Engine Code": "AM29",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£6,500 – £12,000",
+            "Reported Issue": "Catalytic converter failure - misfire damages cats"
+          },
+          {
+            "Year": "2015",
+            "Model": "Aston Martin Vanquish V12",
+            "Engine Code": "AM29",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£6,500 – £12,000",
+            "Reported Issue": "Injector circuit malfunction - C1933 code"
+          },
+          {
+            "Year": "2016",
+            "Model": "Aston Martin Vanquish V12",
+            "Engine Code": "AM29",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£6,500 – £12,000",
+            "Reported Issue": "Ignition coil failure - rough idle and shaking"
+          },
+          {
+            "Year": "2017",
+            "Model": "Aston Martin Vanquish V12",
+            "Engine Code": "AM29",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£6,500 – £12,000",
+            "Reported Issue": "Oil pressure loss - cooler hose failure risk"
+          },
+          {
+            "Year": "2016",
+            "Model": "Aston Martin DB11 V8",
+            "Engine Code": "M177",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£5,500 – £10,000",
+            "Reported Issue": "Oil cooler hose split - sudden oil loss and fire risk"
+          },
+          {
+            "Year": "2017",
+            "Model": "Aston Martin DB11 V8",
+            "Engine Code": "M177",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£5,500 – £10,000",
+            "Reported Issue": "Water pump failure - coolant system overheating"
+          },
+          {
+            "Year": "2018",
+            "Model": "Aston Martin DB11 V8",
+            "Engine Code": "M177",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£5,500 – £10,000",
+            "Reported Issue": "Ignition coil water ingress - misfire from wet coils"
+          },
+          {
+            "Year": "2019",
+            "Model": "Aston Martin DB11 V8",
+            "Engine Code": "M177",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£5,500 – £10,000",
+            "Reported Issue": "Wastegate linkage failure - loss of boost pressure"
+          },
+          {
+            "Year": "2020",
+            "Model": "Aston Martin DB11 V8",
+            "Engine Code": "M177",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£5,500 – £10,000",
+            "Reported Issue": "Manifold cracking - boost leak from billet manifold"
+          },
+          {
+            "Year": "2016",
+            "Model": "Aston Martin DB11 V12",
+            "Engine Code": "AE31",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£6,500 – £12,000",
+            "Reported Issue": "Coolant system failure - water pump motor issues"
+          },
+          {
+            "Year": "2017",
+            "Model": "Aston Martin DB11 V12",
+            "Engine Code": "AE31",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£6,500 – £12,000",
+            "Reported Issue": "Starter motor failure - grinding noise on start"
+          },
+          {
+            "Year": "2018",
+            "Model": "Aston Martin DB11 V12",
+            "Engine Code": "AE31",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£6,500 – £12,000",
+            "Reported Issue": "Turbocharger coolant line leak - heat damage"
+          },
+          {
+            "Year": "2019",
+            "Model": "Aston Martin DB11 V12",
+            "Engine Code": "AE31",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£6,500 – £12,000",
+            "Reported Issue": "Oil cooler hose failure - oil pressure warning"
+          },
+          {
+            "Year": "2020",
+            "Model": "Aston Martin DBX",
+            "Engine Code": "M177",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£5,500 – £10,000",
+            "Reported Issue": "Engine misfire - ignition coil failure"
+          },
+          {
+            "Year": "2021",
+            "Model": "Aston Martin DBX",
+            "Engine Code": "M177",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£5,500 – £10,000",
+            "Reported Issue": "Coolant system warning - sensor or pump failure"
+          },
+          {
+            "Year": "2022",
+            "Model": "Aston Martin DBX 707",
+            "Engine Code": "M177",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£5,500 – £10,000",
+            "Reported Issue": "Oil cooler hose split - recall issued for 1,095 cars"
+          },
+          {
+            "Year": "2023",
+            "Model": "Aston Martin DBX 707",
+            "Engine Code": "M177",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£5,500 – £10,000",
+            "Reported Issue": "Fuel pump failure - engine stalling issues"
+          },
+          {
+            "Year": "2018",
+            "Model": "Aston Martin Vantage (new)",
+            "Engine Code": "M177",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£5,500 – £10,000",
+            "Reported Issue": "Oil cooler hose failure - oil loss and smoke risk"
+          },
+          {
+            "Year": "2019",
+            "Model": "Aston Martin Vantage (new)",
+            "Engine Code": "M177",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£5,500 – £10,000",
+            "Reported Issue": "Water ingress to coil packs - misfire on start"
+          },
+          {
+            "Year": "2020",
+            "Model": "Aston Martin Vantage (new)",
+            "Engine Code": "M177",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£5,500 – £10,000",
+            "Reported Issue": "Turbo seal leak - oil consumption under track use"
+          },
+          {
+            "Year": "2021",
+            "Model": "Aston Martin Vantage F1",
+            "Engine Code": "M177",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£5,500 – £10,000",
+            "Reported Issue": "Manifold cracking - boost leak and reduced power"
+          },
+          {
+            "Year": "2024",
+            "Model": "Aston Martin DB12",
+            "Engine Code": "M177",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£5,500 – £10,000",
+            "Reported Issue": "Oil cooler hose recall - engine seizure risk"
+          },
+          {
+            "Year": "2024",
+            "Model": "Aston Martin DB12",
+            "Engine Code": "M177",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£5,500 – £10,000",
+            "Reported Issue": "Engine power cut - random electrical faults"
+          },
+          {
+            "Year": "2025",
+            "Model": "Aston Martin Vanquish (new)",
+            "Engine Code": "AE31",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£7,000 – £14,000",
+            "Reported Issue": "V12 cooling system - complex overheating issues"
+          },
+          {
+            "Year": "2025",
+            "Model": "Aston Martin Valiant",
+            "Engine Code": "AE31",
+            "Fuel": "Petrol",
+            "Avg. Quoted Price": "£7,000 – £14,000",
+            "Reported Issue": "Limited production - specialist parts availability"
+          }
+        ]
       },
       "imageSrc": "/images/brand-wcu/Aston-Martin-engines-replacement-UK.webp",
       "imageAlt": "Aston Martin replacement engines UK – reconditioned engines for DB9, DBX, Vantage and Virage models with 5.9 V12 engine prices from £4,500-£5,400, 4.0 V8 M177 from £8,000-£14,000 and 4.3 V8 from £4,000-£8,000"

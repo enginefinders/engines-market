@@ -1,0 +1,1863 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Engine Guides &amp; Tools UK — Find Engine Number, Savings Calculator &amp; More</title>
+    <meta name="description" content="Essential engine guides and tools. Find your engine number, calculate replacement savings, check engine history, and browse live market data. Free UK tools." />
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Urbanist:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <style>
+        /* ===== ENGINES MARKET STATIC NAV + FOOTER ===== */
+        :root {
+            --em-primary: #061a33;
+            --em-primary-2: #0d1b2e;
+            --em-accent: #15803d;
+            --em-accent-hover: #16a34a;
+            --em-accent-soft: #86efac;
+            --em-blue: #061a33;
+            --em-icon: #061a33;
+            --em-text: #122033;
+            --em-text-secondary: #475569;
+            --em-text-muted: #64748b;
+            --em-surface: #ffffff;
+            --em-surface-soft: #f8fafc;
+            --em-border: #dbe3ee;
+            --em-footer-muted: #cbd5e1;
+            --em-footer-bottom: #94a3b8;
+        }
+
+        .em-static-header,
+        .em-static-footer,
+        .em-static-header *,
+        .em-static-footer * {
+            box-sizing: border-box;
+        }
+
+        body>.nav:not(.em-static-header),
+        body>footer:not(.em-static-footer) {
+            display: none !important;
+        }
+
+        .em-static-header {
+            position: sticky;
+            top: 0;
+            z-index: 9999;
+            background: var(--em-primary);
+            color: #fff;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            font-family: Urbanist, Inter, ui-sans-serif, system-ui, sans-serif;
+            box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.1), 0 2px 4px -2px rgba(15, 23, 42, 0.1);
+        }
+
+        .em-static-header__inner {
+            max-width: 1280px;
+            height: 64px;
+            margin: 0 auto;
+            padding: 0 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .em-static-logo,
+        .em-static-nav a,
+        .em-static-footer a {
+            color: inherit !important;
+            text-decoration: none !important;
+        }
+
+        .em-static-logo {
+            display: inline-flex;
+            align-items: center;
+            flex: 0 0 auto;
+        }
+
+        .em-static-logo__image {
+            display: block;
+            width: 160px;
+            height: 48px;
+            border-radius: 4px;
+            object-fit: contain;
+            background: #fff;
+            padding: 4px;
+        }
+
+        .em-static-nav {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            flex: 1 1 auto;
+            justify-content: center;
+        }
+
+        .em-static-nav__item {
+            position: relative;
+        }
+
+        .em-static-nav__trigger,
+        .em-static-nav__direct {
+            height: 64px;
+            padding: 0 13px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            border: 0;
+            background: transparent;
+            color: #fff;
+            font: inherit;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 1;
+            cursor: pointer;
+            text-decoration: none !important;
+        }
+
+        .em-static-nav__trigger:hover,
+        .em-static-nav__direct:hover {
+            color: var(--em-accent-soft);
+        }
+
+        .em-static-nav__chevron {
+            display: inline-flex;
+            width: 16px;
+            height: 16px;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            line-height: 1;
+        }
+
+        .em-static-nav__dropdown {
+            position: absolute;
+            top: 64px;
+            left: 0;
+            width: 288px;
+            padding: 8px;
+            border: 1px solid var(--em-border);
+            border-radius: 0 0 8px 8px;
+            background: #fff;
+            color: var(--em-text);
+            box-shadow: 0 18px 45px rgba(6, 26, 51, 0.18);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(8px);
+            transition: opacity 160ms ease, transform 160ms ease, visibility 160ms ease;
+        }
+
+        .em-static-nav__item:hover .em-static-nav__dropdown,
+        .em-static-nav__item:focus-within .em-static-nav__dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .em-static-nav__dropdown a {
+            display: block;
+            border-radius: 6px;
+            padding: 10px 12px;
+            color: var(--em-text) !important;
+            font-size: 14px;
+            font-weight: 750;
+        }
+
+        .em-static-nav__dropdown a:hover {
+            background: #f1f5f9;
+            color: var(--em-accent) !important;
+        }
+
+        .em-static-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex: 0 0 auto;
+            font-size: 14px;
+            font-weight: 900;
+        }
+
+        .em-static-actions a {
+            color: #fff !important;
+            text-decoration: none !important;
+        }
+
+        .em-static-quote {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 38px;
+            padding: 0 18px;
+            border-radius: 8px;
+            background: var(--em-accent-hover);
+            color: #fff !important;
+            font-weight: 900;
+            text-decoration: none !important;
+        }
+
+        .em-static-quote:hover {
+            background: var(--em-accent);
+        }
+
+        .em-static-menu {
+            display: none;
+            width: 40px;
+            height: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            background: transparent;
+            color: #fff;
+            font-size: 22px;
+            cursor: pointer;
+        }
+
+        .em-static-footer {
+            background: var(--em-primary);
+            color: #fff;
+            font-family: Urbanist, Inter, ui-sans-serif, system-ui, sans-serif;
+            margin-top: 56px;
+        }
+
+        .em-static-footer__inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 48px 32px;
+            display: grid;
+            grid-template-columns: 1.15fr 3fr;
+            gap: 40px;
+        }
+
+        .em-static-footer__brand p {
+            max-width: 340px;
+            margin: 18px 0 0;
+            color: var(--em-footer-muted);
+            font-size: 14px;
+            line-height: 1.55;
+        }
+
+        .em-static-footer__contact {
+            margin-top: 24px;
+            display: grid;
+            gap: 10px;
+            color: #e2e8f0;
+            font-size: 14px;
+            font-weight: 800;
+        }
+
+        .em-static-footer__nav {
+            display: grid;
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+            gap: 32px;
+        }
+
+        .em-static-footer h2 {
+            margin: 0;
+            color: #fff !important;
+            font-size: 14px !important;
+            line-height: 1.1 !important;
+            letter-spacing: 0.08em !important;
+            text-transform: uppercase;
+            font-weight: 900;
+            font-family: inherit !important;
+        }
+
+        .em-static-footer ul {
+            margin: 16px 0 0;
+            padding: 0;
+            list-style: none;
+            display: grid;
+            gap: 12px;
+        }
+
+        .em-static-footer li {
+            margin: 0;
+        }
+
+        .em-static-footer a {
+            color: var(--em-footer-muted) !important;
+            font-size: 14px;
+            line-height: 1.35;
+        }
+
+        .em-static-footer a:hover {
+            color: var(--em-accent-soft) !important;
+        }
+
+        .em-static-footer__bottom {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 24px 32px 32px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--em-footer-bottom);
+            font-size: 12px;
+        }
+
+        /* ===== RESET & BASE ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #f8fafc;
+            color: #0f172a;
+            line-height: 1.6;
+        }
+
+        /* ===== CONTAINER ===== */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            background: linear-gradient(145deg, #0b1a33 0%, #1a3a5c 50%, #0b1a33 100%);
+            color: #ffffff;
+            padding: 60px 0 50px;
+            border-radius: 0 0 40px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.10) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: clamp(2.2rem, 4vw, 3.2rem);
+            font-weight: 900;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+        }
+
+        .hero-text h1 .highlight {
+            background: linear-gradient(135deg, #60a5fa, #38bdf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-text p {
+            font-size: 1.15rem;
+            color: rgba(255, 255, 255, 0.85);
+            max-width: 560px;
+            margin-bottom: 20px;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 32px;
+            flex-wrap: wrap;
+            margin-top: 8px;
+        }
+
+        .hero-stats .stat {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hero-stats .stat .number {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #60a5fa;
+            line-height: 1.2;
+        }
+
+        .hero-stats .stat .label {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 400;
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-image-placeholder {
+            width: 100%;
+            max-width: 480px;
+            aspect-ratio: 4/3;
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.10);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 32px;
+            text-align: center;
+            backdrop-filter: blur(4px);
+        }
+
+        .hero-image-placeholder i {
+            font-size: 4rem;
+            color: rgba(96, 165, 250, 0.6);
+            margin-bottom: 12px;
+        }
+
+        .hero-image-placeholder p {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.5);
+            max-width: 280px;
+        }
+
+        .hero-image-placeholder .badge {
+            display: inline-block;
+            background: rgba(96, 165, 250, 0.2);
+            padding: 4px 16px;
+            border-radius: 100px;
+            font-size: 0.75rem;
+            color: #93c5fd;
+            border: 1px solid rgba(96, 165, 250, 0.2);
+            margin-top: 8px;
+        }
+
+        /* ===== BREADCRUMB ===== */
+        .breadcrumb {
+            padding: 16px 0 8px;
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+
+        .breadcrumb a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== SECTION TITLE ===== */
+        .section-title {
+            text-align: center;
+            margin: 56px 0 12px;
+        }
+
+        .section-title h2 {
+            font-size: clamp(1.8rem, 2.8vw, 2.4rem);
+            font-weight: 800;
+            letter-spacing: -0.01em;
+            color: #0f172a;
+        }
+
+        .section-title p {
+            color: #64748b;
+            max-width: 640px;
+            margin: 8px auto 0;
+            font-size: 1.05rem;
+        }
+
+        /* ===== TOOL CARDS GRID ===== */
+        .tool-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 24px;
+            margin: 24px 0 16px;
+        }
+
+        .tool-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 28px 24px 24px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 4px 12px rgba(0, 0, 0, 0.04);
+            transition: all 0.3s ease;
+            border: 1px solid #eef2f6;
+            position: relative;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.5s ease forwards;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            cursor: pointer;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            border-color: #b3d4fc;
+        }
+
+        .tool-card .icon {
+            width: 52px;
+            height: 52px;
+            background: linear-gradient(135deg, #eff6ff, #dbeafe) !important;
+            border: 1px solid #bfdbfe !important;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            color: var(--em-primary) !important;
+            margin-bottom: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .tool-card:hover .icon {
+            background: linear-gradient(135deg, var(--em-accent-hover), var(--em-accent)) !important;
+            border-color: transparent !important;
+            color: #ffffff !important;
+        }
+
+        .tool-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #0f172a;
+        }
+
+        .tool-card p {
+            font-size: 0.95rem;
+            color: #475569;
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+
+        .tool-card .meta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.8rem;
+            color: #64748b;
+        }
+
+        .tool-card .meta .tag {
+            background: #dbeafe !important;
+            color: var(--em-primary) !important;
+            border: 1px solid #bfdbfe !important;
+            padding: 2px 12px;
+            border-radius: 100px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+
+        .tool-card:hover .meta .tag {
+            background: #dcfce7 !important;
+            color: var(--em-accent) !important;
+            border-color: #bbf7d0 !important;
+        }
+
+        .tool-card .arrow {
+            margin-left: auto;
+            color: #94a3b8;
+            transition: all 0.3s ease;
+        }
+
+        .tool-card:hover .arrow {
+            color: var(--em-accent-hover);
+            transform: translateX(4px);
+        }
+
+        .tool-card:hover h3 {
+            color: var(--em-primary) !important;
+        }
+
+        /* ===== SECTION DIVIDER ===== */
+        .section-divider {
+            margin: 48px 0 16px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .section-divider span {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #0f172a;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-divider span i {
+            color: var(--em-primary) !important;
+        }
+
+        .section-divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: #e2e8f0;
+        }
+
+        /* ===== TOOL DETAILS ===== */
+        .tool-detail {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 40px 40px 36px;
+            margin: 32px 0 24px;
+            border: 1px solid #eef2f6;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+        }
+
+        .tool-detail h3 {
+            font-size: 1.4rem;
+            font-weight: 800;
+            margin-bottom: 4px;
+            color: #0f172a;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .tool-detail h3 i {
+            color: var(--em-primary);
+            font-size: 1.6rem;
+        }
+
+        .tool-detail .subhead {
+            color: #64748b;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .tool-detail-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px 24px;
+            margin-top: 8px;
+        }
+
+        .tool-detail-grid .item {
+            display: flex;
+            flex-direction: column;
+            padding: 10px 0;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .tool-detail-grid .item .label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: #94a3b8;
+        }
+
+        .tool-detail-grid .item .value {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #0f172a;
+            margin-top: 2px;
+        }
+
+        .tool-detail-grid .item .value i {
+            color: var(--em-accent-hover);
+            margin-right: 4px;
+        }
+
+        /* ===== WHY USE ===== */
+        .why-choose {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 48px 40px;
+            margin: 48px 0 32px;
+            border: 1px solid #eef2f6;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+        }
+
+        .why-choose h2 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 32px;
+            color: #0f172a;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+        }
+
+        .why-item {
+            text-align: center;
+            padding: 16px 12px;
+        }
+
+        .why-item i {
+            font-size: 2rem;
+            color: var(--em-primary) !important;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .why-item h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+            color: #0f172a;
+        }
+
+        .why-item p {
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+
+        /* ===== UPCOMING TOOLS ===== */
+        .upcoming-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin: 16px 0 8px;
+        }
+
+        .upcoming-item {
+            background: #f8fafc;
+            border-radius: 14px;
+            padding: 20px 18px;
+            border: 1px dashed #dbe3ee;
+            text-align: center;
+        }
+
+        .upcoming-item i {
+            font-size: 1.8rem;
+            color: var(--em-primary);
+            opacity: 0.5;
+            margin-bottom: 6px;
+            display: block;
+        }
+
+        .upcoming-item h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 2px;
+        }
+
+        .upcoming-item p {
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+
+        .upcoming-item .coming-badge {
+            display: inline-block;
+            margin-top: 6px;
+            background: #e2e8f0;
+            padding: 2px 14px;
+            border-radius: 100px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: #475569;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+
+        /* ===== WHAT TO DO NEXT ===== */
+        .next-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 24px 0 16px;
+        }
+
+        .next-step {
+            background: #f8fafc;
+            border-radius: 14px;
+            padding: 20px 18px;
+            border: 1px solid #eef2f6;
+            text-align: center;
+        }
+
+        .next-step .num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: var(--em-primary);
+            color: #fff;
+            font-weight: 800;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+        }
+
+        .next-step h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 2px;
+        }
+
+        .next-step p {
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+
+        /* ===== CTA ===== */
+        .cta-section {
+            background: radial-gradient(circle at 85% 10%, rgba(22, 163, 74, 0.22), transparent 34%), linear-gradient(145deg, var(--em-primary) 0%, var(--em-primary-2) 58%, var(--em-primary) 100%);
+            color: #fff;
+            border-radius: 20px;
+            padding: 48px 40px;
+            text-align: center;
+            margin: 40px 0 32px;
+        }
+
+        .cta-section h2 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .cta-section p {
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 560px;
+            margin: 0 auto 24px;
+            font-size: 1.05rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--em-accent-hover), var(--em-accent));
+            color: #fff;
+            font-weight: 700;
+            font-size: 1.1rem;
+            padding: 16px 40px;
+            border-radius: 100px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 16px rgba(21, 128, 61, 0.30);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(21, 128, 61, 0.40);
+            background: linear-gradient(135deg, var(--em-accent), #166534);
+        }
+
+        .cta-button i {
+            margin-left: 10px;
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .tool-card:nth-child(1) {
+            animation-delay: 0.05s;
+        }
+        .tool-card:nth-child(2) {
+            animation-delay: 0.10s;
+        }
+        .tool-card:nth-child(3) {
+            animation-delay: 0.15s;
+        }
+        .tool-card:nth-child(4) {
+            animation-delay: 0.20s;
+        }
+        .tool-card:nth-child(5) {
+            animation-delay: 0.25s;
+        }
+        .tool-card:nth-child(6) {
+            animation-delay: 0.30s;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 992px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+            .hero-text {
+                text-align: center;
+            }
+            .hero-text p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .hero-stats {
+                justify-content: center;
+            }
+            .hero-image-placeholder {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero {
+                padding: 40px 0 32px;
+            }
+            .hero-stats {
+                gap: 16px;
+            }
+            .hero-stats .stat .number {
+                font-size: 1.4rem;
+            }
+            .tool-grid {
+                grid-template-columns: 1fr;
+                gap: 14px;
+            }
+            .tool-card {
+                display: grid;
+                grid-template-columns: 48px minmax(0, 1fr);
+                column-gap: 14px;
+                align-items: center;
+                padding: 18px 16px;
+                border-radius: 14px;
+            }
+            .tool-card .icon {
+                width: 48px;
+                height: 48px;
+                margin: 0;
+                grid-column: 1;
+                grid-row: 1;
+            }
+            .tool-card h3 {
+                grid-column: 2;
+                grid-row: 1;
+                margin: 0;
+                align-self: center;
+                line-height: 1.2;
+            }
+            .tool-card p,
+            .tool-card .meta {
+                grid-column: 1 / -1;
+            }
+            .tool-card p {
+                margin-top: 12px;
+            }
+            .tool-detail {
+                padding: 28px 18px;
+            }
+            .tool-detail-grid {
+                grid-template-columns: 1fr;
+            }
+            .why-choose {
+                padding: 32px 20px;
+            }
+            .cta-section {
+                padding: 32px 20px;
+            }
+            .cta-button {
+                padding: 14px 28px;
+                font-size: 1rem;
+                width: 100%;
+                text-align: center;
+            }
+            .em-static-footer__inner {
+                grid-template-columns: 1fr;
+                padding: 40px 22px;
+            }
+            .em-static-footer__nav {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+            .upcoming-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .next-steps {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .upcoming-grid {
+                grid-template-columns: 1fr;
+            }
+            .next-steps {
+                grid-template-columns: 1fr;
+            }
+            .em-static-footer__nav {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 1023px) {
+            .em-static-header__inner {
+                padding: 0 18px;
+            }
+            .em-static-nav,
+            .em-static-actions {
+                display: none;
+            }
+            .em-static-menu {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .em-static-header[data-open="true"] .em-static-nav {
+                position: absolute;
+                top: 64px;
+                left: 0;
+                right: 0;
+                display: grid;
+                justify-content: stretch;
+                gap: 8px;
+                padding: 14px 18px 18px;
+                background: var(--em-primary);
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+            }
+            .em-static-nav__item {
+                border-radius: 8px;
+                background: rgba(255, 255, 255, 0.06);
+            }
+            .em-static-nav__trigger,
+            .em-static-nav__direct {
+                width: 100%;
+                height: auto;
+                min-height: 44px;
+                justify-content: space-between;
+                padding: 12px 14px;
+            }
+            .em-static-nav__dropdown {
+                position: static;
+                width: auto;
+                display: none;
+                gap: 2px;
+                border: 0;
+                border-radius: 0 0 8px 8px;
+                box-shadow: none;
+                background: transparent;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                padding: 0 14px 12px;
+            }
+            .em-static-nav__item[data-expanded="true"] .em-static-nav__dropdown {
+                display: grid;
+            }
+            .em-static-nav__dropdown a {
+                color: var(--em-footer-muted) !important;
+                padding: 7px 0;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .em-static-logo__image {
+                width: 150px;
+                height: 44px;
+            }
+        }
+
+        /* ===== THEME ADAPTATION: NAVY + GREEN ===== */
+        body {
+            font-family: Urbanist, Inter, -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--em-surface-soft);
+            color: var(--em-text);
+        }
+
+        .hero,
+        .cta-section {
+            background: radial-gradient(circle at 85% 10%, rgba(22, 163, 74, 0.22), transparent 34%), linear-gradient(145deg, var(--em-primary) 0%, var(--em-primary-2) 58%, var(--em-primary) 100%);
+        }
+
+        .hero-text h1 .highlight {
+            background: linear-gradient(135deg, var(--em-accent-soft), var(--em-accent-hover));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero::before {
+            background: radial-gradient(circle, rgba(22, 163, 74, 0.16) 0%, transparent 70%);
+        }
+        .hero::after {
+            background: radial-gradient(circle, rgba(134, 239, 172, 0.10) 0%, transparent 70%);
+        }
+
+        .hero-stats .stat .number,
+        .breadcrumb a {
+            color: var(--em-accent-hover);
+        }
+
+        .hero-image-placeholder i {
+            color: var(--em-accent-soft);
+        }
+
+        .section-divider span i,
+        .why-item i {
+            color: var(--em-icon);
+        }
+
+        .hero-image-placeholder {
+            border-color: rgba(134, 239, 172, 0.18);
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(13, 27, 46, 0.20));
+        }
+
+        .hero-image-placeholder .badge {
+            background: rgba(21, 128, 61, 0.22);
+            color: var(--em-accent-soft);
+            border-color: rgba(134, 239, 172, 0.24);
+        }
+
+        .section-title h2,
+        .tool-card h3,
+        .section-divider span,
+        .why-choose h2,
+        .tool-detail h3 {
+            color: var(--em-text);
+        }
+
+        .section-title p,
+        .tool-card p,
+        .why-item p,
+        .tool-detail .subhead,
+        .next-step p,
+        .upcoming-item p {
+            color: var(--em-text-secondary);
+        }
+
+        .tool-card,
+        .why-choose,
+        .tool-detail {
+            border-color: var(--em-border);
+            box-shadow: 0 1px 3px rgba(6, 26, 51, 0.06), 0 12px 26px rgba(6, 26, 51, 0.04);
+        }
+
+        .tool-card:hover {
+            border-color: rgba(21, 128, 61, 0.35);
+            box-shadow: 0 14px 38px rgba(6, 26, 51, 0.11);
+        }
+
+        .tool-card .icon {
+            background: linear-gradient(135deg, #eff6ff, #dbeafe) !important;
+            border: 1px solid #bfdbfe !important;
+            color: var(--em-primary) !important;
+        }
+
+        .tool-card:hover .icon {
+            background: linear-gradient(135deg, var(--em-accent-hover), var(--em-accent)) !important;
+            border-color: transparent !important;
+            color: #ffffff !important;
+        }
+
+        .tool-card .meta .tag {
+            background: #dbeafe !important;
+            color: var(--em-primary) !important;
+            border: 1px solid #bfdbfe !important;
+        }
+
+        .tool-card:hover .meta .tag {
+            background: #dcfce7 !important;
+            color: var(--em-accent) !important;
+            border-color: #bbf7d0 !important;
+        }
+
+        .tool-card .arrow {
+            color: #94a3b8;
+        }
+
+        .tool-card:hover .arrow {
+            color: var(--em-accent-hover);
+        }
+
+        .tool-card:hover h3 {
+            color: var(--em-primary) !important;
+        }
+
+        .section-divider::after {
+            background: var(--em-border);
+        }
+
+        .cta-button {
+            box-shadow: 0 4px 16px rgba(21, 128, 61, 0.30);
+        }
+
+        .cta-button:hover {
+            background: linear-gradient(135deg, var(--em-accent), #166534);
+            box-shadow: 0 8px 32px rgba(21, 128, 61, 0.40);
+        }
+
+        .tool-detail-grid .item .value i {
+            color: var(--em-accent-hover);
+        }
+
+        .next-step .num {
+            background: var(--em-primary);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== ENGINES MARKET STATIC HEADER ===== -->
+    <header class="em-static-header">
+        <div class="em-static-header__inner">
+            <a class="em-static-logo" href="/" aria-label="Engines Market homepage">
+                <img class="em-static-logo__image" src="/branding/engine-market-logo-rectangle.png" alt="Engines Market" width="5752" height="2280" />
+            </a>
+
+            <nav class="em-static-nav" aria-label="Primary navigation">
+                <div class="em-static-nav__item">
+                    <a href="/services" class="em-static-nav__trigger">Services <span class="em-static-nav__chevron">⌵</span></a>
+                    <div class="em-static-nav__dropdown">
+                        <a href="/services/replacement-engines">Replacement Engines</a>
+                        <a href="/services/used-engines">Used Engines</a>
+                        <a href="/services/reconditioned-engines">Reconditioned Engines</a>
+                        <a href="/services/rebuilt-engines">Rebuilt Engines</a>
+                        <a href="/services/engine-fitting">Engine Fitting</a>
+                        <a href="/services/engine-repair">Engine Repair</a>
+                        <a href="/services/engine-diagnostic">Engine Diagnostics</a>
+                        <a href="/services/gearbox-replacement">Gearbox Replacement</a>
+                    </div>
+                </div>
+                <div class="em-static-nav__item">
+                    <a href="/prices" class="em-static-nav__trigger">Prices <span class="em-static-nav__chevron">⌵</span></a>
+                    <div class="em-static-nav__dropdown">
+                        <a href="/prices/engine-replacement-cost">Engine Replacement Cost</a>
+                        <a href="/prices/used-engine-cost">Used Engine Cost</a>
+                        <a href="/prices/reconditioned-engine-cost">Reconditioned Engine Cost</a>
+                        <a href="/prices/engine-fitting-cost">Engine Fitting Cost</a>
+                        <a href="/prices/garage-labour-rates">Labour Cost Guide</a>
+                        <a href="/prices/timing-chain-replacement-cost">Timing Chain Cost</a>
+                        <a href="/prices/head-gasket-repair-cost">Head Gasket Cost</a>
+                        <a href="/prices/turbo-replacement-cost">Turbo Cost</a>
+                    </div>
+                </div>
+                <div class="em-static-nav__item">
+                    <a href="/resources#brands" class="em-static-nav__trigger">Brands <span class="em-static-nav__chevron">⌵</span></a>
+                    <div class="em-static-nav__dropdown">
+                        <a href="/bmw">BMW</a>
+                        <a href="/mercedes-benz">Mercedes-Benz</a>
+                        <a href="/land-rover">Land Rover</a>
+                        <a href="/audi">Audi</a>
+                        <a href="/ford">Ford</a>
+                        <a href="/vauxhall">Vauxhall</a>
+                        <a href="/resources#brands">All 41 Brands</a>
+                    </div>
+                </div>
+                <div class="em-static-nav__item">
+                    <a href="/resources" class="em-static-nav__trigger">Knowledge <span class="em-static-nav__chevron">⌵</span></a>
+                    <div class="em-static-nav__dropdown">
+                        <a href="/failures">Engine Failures</a>
+                        <a href="/symptoms">Car Symptoms</a>
+                        <a href="/compare">Compare Options</a>
+                        <a href="/case-studies">Case Studies</a>
+                        <a href="/guides">Guides &amp; Tools</a>
+                        <a href="/resources">All Resources</a>
+                    </div>
+                </div>
+                <div class="em-static-nav__item">
+                    <a href="/insights" class="em-static-nav__trigger">Insights <span class="em-static-nav__chevron">⌵</span></a>
+                    <div class="em-static-nav__dropdown">
+                        <a href="/insights/uk-engine-price-index">UK Engine Price Index</a>
+                        <a href="/insights/uk-engine-replacement-statistics">Engine Replacement Statistics</a>
+                        <a href="/insights/most-replaced-engines-uk">Most Replaced Engines</a>
+                        <a href="/insights/most-reliable-diesel-engines">Most Reliable Engines</a>
+                        <a href="/insights/uk-engine-market-report-2026">UK Market Report 2026</a>
+                    </div>
+                </div>
+                <div class="em-static-nav__item">
+                    <a href="/blog" class="em-static-nav__direct">Blog</a>
+                </div>
+            </nav>
+
+            <div class="em-static-actions">
+                <a href="tel:03330000044">0333 000 0044</a>
+                <a href="/get-a-quote" class="em-static-quote">Get Quote</a>
+            </div>
+
+            <button class="em-static-menu" type="button" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+        </div>
+    </header>
+
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main>
+
+        <!-- ===== HERO SECTION ===== -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+
+                    <!-- Hero Text -->
+                    <div class="hero-text">
+                        <h1>
+                            Essential <span class="highlight">Tools &amp; Guides</span> for Engine Replacement
+                        </h1>
+                        <p>
+                            Find your engine number, calculate potential savings, check engine history, and browse live market data.
+                            All free for UK vehicle owners.
+                        </p>
+
+                        <div class="hero-stats">
+                            <div class="stat">
+                                <span class="number">24,650</span>
+                                <span class="label">Quote Requests in 2025 <span style="color:#86efac;">[EM-VERIFIED]</span></span>
+                            </div>
+                            <div class="stat">
+                                <span class="number">70.45%</span>
+                                <span class="label">Chose Reconditioned <span style="color:#86efac;">[EM-VERIFIED]</span></span>
+                            </div>
+                            <div class="stat">
+                                <span class="number">100+</span>
+                                <span class="label">Vetted UK Specialists</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hero Image Placeholder -->
+                    <div class="hero-image">
+                        <div class="hero-image-placeholder">
+                            <i class="fas fa-tools"></i>
+                            <p>Guides &amp; Tools Hub</p>
+                            <span class="badge">Free · Data-Driven · UK</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== BREADCRUMB ===== -->
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="/">Home</a>
+                <span style="color:#94a3b8; margin:0 6px;">›</span>
+                <span style="color:#475569;">Guides &amp; Tools</span>
+            </div>
+        </div>
+
+        <!-- ===== INTRODUCTION ===== -->
+        <div class="container">
+            <div class="section-title">
+                <h2>Navigate Engine Replacement with Confidence</h2>
+                <p>
+                    These guides and tools help you navigate engine replacement with confidence.
+                    From finding your engine number to calculating savings, each resource is designed
+                    to make the process simpler and more transparent.
+                </p>
+            </div>
+        </div>
+
+        <!-- ===== TOOLS & GUIDES — VISUAL GRID ===== -->
+
+        <!-- ===== ESSENTIAL TOOLS ===== -->
+        <div class="container">
+            <div class="section-divider">
+                <span><i class="fas fa-wrench"></i> Essential Tools</span>
+            </div>
+
+            <div class="tool-grid">
+
+                <!-- Tool: Engine Replacement Savings Calculator -->
+                <a href="/tools/engine-replacement-savings-calculator" class="tool-card">
+                    <div class="icon"><i class="fas fa-calculator"></i></div>
+                    <h3>Engine Replacement Savings Calculator</h3>
+                    <p>Compare used, reconditioned, and new costs for your vehicle. See potential savings before you buy.</p>
+                    <div class="meta">
+                        <span class="tag">Calculator</span>
+                        <span>Free</span>
+                        <span class="arrow"><i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <!-- Tool: Engine History Check -->
+                <a href="/tools/engine-history-check" class="tool-card">
+                    <div class="icon"><i class="fas fa-file-alt"></i></div>
+                    <h3>Engine History Check</h3>
+                    <p>Check if an engine is stolen, written off, or has outstanding finance. Avoid buying a problematic engine.</p>
+                    <div class="meta">
+                        <span class="tag">History</span>
+                        <span>Free</span>
+                        <span class="arrow"><i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <!-- Tool: Live Market Feed -->
+                <a href="/market/live" class="tool-card">
+                    <div class="icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Live Market Feed</h3>
+                    <p>Real-time view of UK engine replacement demand. See what others are buying and paying right now.</p>
+                    <div class="meta">
+                        <span class="tag">Live</span>
+                        <span>Real-time</span>
+                        <span class="arrow"><i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <!-- Tool: Wanted -->
+                <a href="/wanted" class="tool-card">
+                    <div class="icon"><i class="fas fa-bullhorn"></i></div>
+                    <h3>Wanted</h3>
+                    <p>Submit a request for engines you can't find. Find rare or hard-to-source engines with specialist help.</p>
+                    <div class="meta">
+                        <span class="tag">Request</span>
+                        <span>Free</span>
+                        <span class="arrow"><i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+            </div>
+
+            <!-- ===== ESSENTIAL GUIDES ===== -->
+            <div class="section-divider">
+                <span><i class="fas fa-book-open"></i> Essential Guides</span>
+            </div>
+
+            <div class="tool-grid">
+
+                <!-- Guide: How to Find Your Engine Number -->
+                <a href="/guides/how-to-find-engine-number" class="tool-card">
+                    <div class="icon"><i class="fas fa-map-signs"></i></div>
+                    <h3>How to Find Your Engine Number</h3>
+                    <p>Step-by-step guide to locating your engine number. Anyone needing a quote or ordering parts.</p>
+                    <div class="meta">
+                        <span class="tag">Guide</span>
+                        <span>Step-by-step</span>
+                        <span class="arrow"><i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <!-- Guide: Engine Replacement Guide (extra card for balance) -->
+                <a href="/guides/engine-replacement-guide" class="tool-card">
+                    <div class="icon"><i class="fas fa-engine"></i></div>
+                    <h3>Engine Replacement Guide</h3>
+                    <p>Complete walkthrough of the engine replacement process — from diagnosis to fitting and warranty.</p>
+                    <div class="meta">
+                        <span class="tag">Guide</span>
+                        <span>Comprehensive</span>
+                        <span class="arrow"><i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+
+        <!-- ===== TOOL DETAILS ===== -->
+        <div class="container">
+
+            <!-- Tool Detail: Engine Replacement Savings Calculator -->
+            <div class="tool-detail" id="savings-calculator">
+                <h3><i class="fas fa-calculator"></i> Engine Replacement Savings Calculator</h3>
+                <div class="subhead">Compare costs side by side and see how much you could save.</div>
+                <div class="tool-detail-grid">
+                    <div class="item"><span class="label">Input</span><span class="value">Vehicle registration, mileage, failure type, vehicle value</span></div>
+                    <div class="item"><span class="label">Output</span><span class="value">Estimated costs for used, reconditioned, and new engines</span></div>
+                    <div class="item"><span class="label">Savings</span><span class="value"><i class="fas fa-pound-sign"></i> Side-by-side comparison showing potential savings</span></div>
+                    <div class="item"><span class="label">Decision</span><span class="value">Repair vs replacement guidance based on vehicle value</span></div>
+                </div>
+            </div>
+
+            <!-- Tool Detail: Engine History Check -->
+            <div class="tool-detail" id="history-check">
+                <h3><i class="fas fa-file-alt"></i> Engine History Check</h3>
+                <div class="subhead">Know the full history of any engine before you commit to buying.</div>
+                <div class="tool-detail-grid">
+                    <div class="item"><span class="label">Check for</span><span class="value"><i class="fas fa-check-circle" style="color:var(--em-accent-hover);"></i> Stolen vehicle, outstanding finance, write-off category</span></div>
+                    <div class="item"><span class="label">Check for</span><span class="value"><i class="fas fa-check-circle" style="color:var(--em-accent-hover);"></i> Mileage consistency, scrapped vehicle status</span></div>
+                    <div class="item"><span class="label">Check for</span><span class="value"><i class="fas fa-check-circle" style="color:var(--em-accent-hover);"></i> Vehicle spec verification (engine matches original)</span></div>
+                    <div class="item"><span class="label">Partner</span><span class="value">Trusted UK vehicle history provider</span></div>
+                </div>
+            </div>
+
+            <!-- Tool Detail: Live Market Feed -->
+            <div class="tool-detail" id="live-market">
+                <h3><i class="fas fa-chart-line"></i> Live Market Feed</h3>
+                <div class="subhead">See what the UK engine market is doing in real time.</div>
+                <div class="tool-detail-grid">
+                    <div class="item"><span class="label">Recent quotes</span><span class="value">Anonymised recent quote requests from UK users</span></div>
+                    <div class="item"><span class="label">Market heatmap</span><span class="value">Price ranges by UK region</span></div>
+                    <div class="item"><span class="label">Trending engines</span><span class="value">Most requested engines in the last 24 hours</span></div>
+                    <div class="item"><span class="label">Market dashboard</span><span class="value">Average costs, most searched engines, price index</span></div>
+                </div>
+            </div>
+
+            <!-- Tool Detail: Wanted -->
+            <div class="tool-detail" id="wanted">
+                <h3><i class="fas fa-bullhorn"></i> Wanted</h3>
+                <div class="subhead">Can't find the engine you need? Let the market come to you.</div>
+                <div class="tool-detail-grid">
+                    <div class="item"><span class="label">Submit request</span><span class="value">Engine make, model, code, budget, condition</span></div>
+                    <div class="item"><span class="label">Supplier notification</span><span class="value">Relevant specialists alerted to your request</span></div>
+                    <div class="item"><span class="label">Market intelligence</span><span class="value">Shows which rare engines are in demand</span></div>
+                    <div class="item"><span class="label">Success stories</span><span class="value">Examples of users who found their engine</span></div>
+                </div>
+            </div>
+
+            <!-- Tool Detail: How to Find Your Engine Number -->
+            <div class="tool-detail" id="find-engine-number">
+                <h3><i class="fas fa-map-signs"></i> How to Find Your Engine Number</h3>
+                <div class="subhead">A practical guide to locating your engine number quickly and accurately.</div>
+                <div class="tool-detail-grid">
+                    <div class="item"><span class="label">V5C Logbook</span><span class="value">The easiest way — engine number is legally recorded</span></div>
+                    <div class="item"><span class="label">Physical location</span><span class="value">On the engine block — visual guide included</span></div>
+                    <div class="item"><span class="label">Using VIN</span><span class="value">Decoding VIN to find engine code</span></div>
+                    <div class="item"><span class="label">Online decoders</span><span class="value">Free tools for UK registration plates</span></div>
+                    <div class="item"><span class="label">OEM part numbers</span><span class="value">Database of engine codes and part numbers</span></div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ===== WHY USE OUR TOOLS ===== -->
+        <div class="container">
+            <div class="why-choose">
+                <h2>Why Use Our Tools?</h2>
+                <div class="why-grid">
+                    <div class="why-item">
+                        <i class="fas fa-gem"></i>
+                        <h4>Free</h4>
+                        <p>All tools are free to use — no hidden charges or sign-up fees.</p>
+                    </div>
+                    <div class="why-item">
+                        <i class="fas fa-database"></i>
+                        <h4>Data-Driven</h4>
+                        <p>Powered by 24,650 real quote requests from UK vehicle owners.</p>
+                    </div>
+                    <div class="why-item">
+                        <i class="fas fa-flag"></i>
+                        <h4>UK-Specific</h4>
+                        <p>Built for UK vehicle owners with local data and regional insights.</p>
+                    </div>
+                    <div class="why-item">
+                        <i class="fas fa-hand-peace"></i>
+                        <h4>No Obligation</h4>
+                        <p>No pressure to buy — use the tools, make your own decision.</p>
+                    </div>
+                    <div class="why-item">
+                        <i class="fas fa-eye"></i>
+                        <h4>Transparent</h4>
+                        <p>All data clearly labelled <strong>[EM-VERIFIED]</strong> or <strong>[THIRD-PARTY]</strong>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== UPCOMING TOOLS ===== -->
+        <div class="container">
+            <div class="section-divider">
+                <span><i class="fas fa-clock"></i> Upcoming Tools (Coming Soon)</span>
+            </div>
+
+            <div class="upcoming-grid">
+                <div class="upcoming-item">
+                    <i class="fas fa-car"></i>
+                    <h4>Vehicle Value Checker</h4>
+                    <p>Real-time market value for your car</p>
+                    <span class="coming-badge">Coming Soon</span>
+                </div>
+                <div class="upcoming-item">
+                    <i class="fas fa-code"></i>
+                    <h4>Engine Code Lookup</h4>
+                    <p>Database of engine codes and specifications</p>
+                    <span class="coming-badge">Coming Soon</span>
+                </div>
+                <div class="upcoming-item">
+                    <i class="fas fa-map-pin"></i>
+                    <h4>Garage Finder</h4>
+                    <p>Find vetted specialists in your area</p>
+                    <span class="coming-badge">Coming Soon</span>
+                </div>
+                <div class="upcoming-item">
+                    <i class="fas fa-sync-alt"></i>
+                    <h4>Reconditioned Engine Tracker</h4>
+                    <p>Track your engine build progress</p>
+                    <span class="coming-badge">Coming Soon</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== WHAT TO DO NEXT ===== -->
+        <div class="container">
+            <div class="section-divider">
+                <span><i class="fas fa-arrow-right"></i> What To Do Next</span>
+            </div>
+
+            <div class="next-steps">
+                <div class="next-step">
+                    <div class="num">1</div>
+                    <h4>Use a Tool</h4>
+                    <p>Get a savings estimate, check engine history, or browse the live market.</p>
+                </div>
+                <div class="next-step">
+                    <div class="num">2</div>
+                    <h4>Read a Guide</h4>
+                    <p>Find your engine number or understand the replacement process step by step.</p>
+                </div>
+                <div class="next-step">
+                    <div class="num">3</div>
+                    <h4>Browse the Live Market</h4>
+                    <p>See what others are buying and paying in real time.</p>
+                </div>
+                <div class="next-step">
+                    <div class="num">4</div>
+                    <h4>Get a Quote</h4>
+                    <p>When you're ready, compare prices from 100+ UK specialists.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== CTA SECTION ===== -->
+        <div class="container">
+            <div class="cta-section">
+                <h2>Ready to Get a Quote?</h2>
+                <p>Compare prices from 100+ UK specialists. Enter your registration and get started for free.</p>
+                <a href="/get-a-quote" class="cta-button">
+                    Get Your Free Quote <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+
+    <!-- ===== ENGINES MARKET STATIC FOOTER ===== -->
+    <footer class="em-static-footer">
+        <div class="em-static-footer__inner">
+            <div class="em-static-footer__brand">
+                <a class="em-static-logo" href="/" aria-label="Engines Market homepage">
+                    <img class="em-static-logo__image" src="/branding/engine-market-logo-rectangle.png" alt="Engines Market" width="5752" height="2280" />
+                </a>
+                <p>Compare replacement, used and reconditioned engine options from trusted UK specialists.</p>
+                <div class="em-static-footer__contact">
+                    <a href="tel:03330000044">0333 000 0044</a>
+                    <a href="/get-a-quote">Get a quote</a>
+                </div>
+            </div>
+
+            <nav class="em-static-footer__nav" aria-label="Footer navigation">
+                <div>
+                    <h2>Company</h2>
+                    <ul>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/about/how-engines-market-works">How It Works</a></li>
+                        <li><a href="/about/supplier-standards">Supplier Standards</a></li>
+                        <li><a href="/reviews">Reviews</a></li>
+                        <li><a href="/about/contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Services</h2>
+                    <ul>
+                        <li><a href="/services/replacement-engines">Replacement Engines</a></li>
+                        <li><a href="/services/used-engines">Used Engines</a></li>
+                        <li><a href="/services/reconditioned-engines">Reconditioned Engines</a></li>
+                        <li><a href="/services/rebuilt-engines">Rebuilt Engines</a></li>
+                        <li><a href="/services/engine-fitting">Engine Fitting</a></li>
+                        <li><a href="/services/engine-repair">Engine Repair</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Knowledge</h2>
+                    <ul>
+                        <li><a href="/failures">Engine Failures</a></li>
+                        <li><a href="/symptoms">Car Symptoms</a></li>
+                        <li><a href="/compare">Compare Options</a></li>
+                        <li><a href="/case-studies">Case Studies</a></li>
+                        <li><a href="/guides">Guides &amp; Tools</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Legal</h2>
+                    <ul>
+                        <li><a href="/legal/privacy-policy">Privacy Policy</a></li>
+                        <li><a href="/legal/terms-and-conditions">Terms &amp; Conditions</a></li>
+                        <li><a href="/resources#legal">Cookie Policy</a></li>
+                        <li><a href="/resources#legal">Modern Slavery</a></li>
+                        <li><a href="/resources#legal">Accessibility</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Tools</h2>
+                    <ul>
+                        <li><a href="/guides">Find Engine Number</a></li>
+                        <li><a href="/guides">Engine History Check</a></li>
+                        <li><a href="/resources#locations">Locations</a></li>
+                        <li><a href="/resources">View All Resources</a></li>
+                        <li><a href="/sitemap.xml">Sitemap</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="em-static-footer__bottom">Copyright 2026 Engines Market. All rights reserved.</div>
+    </footer>
+
+
+    <!-- ===== SCHEMA MARKUP (JSON-LD) ===== -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "name": "Engine Guides & Tools",
+            "description": "Essential engine guides and tools. Find your engine number, calculate replacement savings, check engine history, and browse live market data. Free UK tools.",
+            "url": "https://enginesmarket.co.uk/guides/",
+            "numberOfItems": 6,
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Engine Replacement Savings Calculator",
+                "url": "https://enginesmarket.co.uk/tools/engine-replacement-savings-calculator",
+                "description": "Compare used, reconditioned, and new costs for your vehicle. See potential savings before you buy."
+            }, {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Engine History Check",
+                "url": "https://enginesmarket.co.uk/tools/engine-history-check",
+                "description": "Check if an engine is stolen, written off, or has outstanding finance."
+            }, {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Live Market Feed",
+                "url": "https://enginesmarket.co.uk/market/live",
+                "description": "Real-time view of UK engine replacement demand. See what others are buying and paying."
+            }, {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "Wanted",
+                "url": "https://enginesmarket.co.uk/wanted",
+                "description": "Submit a request for engines you can't find. Find rare or hard-to-source engines."
+            }, {
+                "@type": "ListItem",
+                "position": 5,
+                "name": "How to Find Your Engine Number",
+                "url": "https://enginesmarket.co.uk/guides/how-to-find-engine-number",
+                "description": "Step-by-step guide to locating your engine number. Anyone needing a quote or ordering parts."
+            }, {
+                "@type": "ListItem",
+                "position": 6,
+                "name": "Engine Replacement Guide",
+                "url": "https://enginesmarket.co.uk/guides/engine-replacement-guide",
+                "description": "Complete walkthrough of the engine replacement process — from diagnosis to fitting and warranty."
+            }]
+        }
+    </script>
+
+    <!-- ===== ADDITIONAL SCHEMA: BREADCRUMB ===== -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://enginesmarket.co.uk/"
+            }, {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Guides & Tools",
+                "item": "https://enginesmarket.co.uk/guides/"
+            }]
+        }
+    </script>
+
+    <!-- ===== LAZY LOAD & INTERSECTION OBSERVER ===== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
+            // Lazy load tool cards with Intersection Observer
+            const cards = document.querySelectorAll('.tool-card');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                observer.observe(card);
+            });
+
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href === '#') return;
+                    const target = document.querySelector(href);
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+
+        });
+    </script>
+
+
+    <script>
+        (function() {
+            if (window.__enginesMarketStaticNavigationLoaded) return;
+            window.__enginesMarketStaticNavigationLoaded = true;
+
+            const header = document.querySelector('.em-static-header');
+            const menu = document.querySelector('.em-static-menu');
+            const nav = document.querySelector('.em-static-nav');
+            if (!header || !menu || !nav) return;
+
+            menu.addEventListener('click', function() {
+                const open = header.getAttribute('data-open') === 'true';
+                header.setAttribute('data-open', String(!open));
+                menu.setAttribute('aria-expanded', String(!open));
+                menu.textContent = open ? '☰' : '×';
+            });
+
+            nav.querySelectorAll('.em-static-nav__trigger').forEach(function(trigger) {
+                trigger.addEventListener('click', function(event) {
+                    if (!window.matchMedia('(max-width: 1023px)').matches) return;
+                    event.preventDefault();
+                    const item = trigger.closest('.em-static-nav__item');
+                    const expanded = item.getAttribute('data-expanded') === 'true';
+                    nav.querySelectorAll(".em-static-nav__item[data-expanded='true']").forEach(function(
+                    openItem) {
+                        if (openItem !== item) openItem.removeAttribute('data-expanded');
+                    });
+                    if (expanded) item.removeAttribute('data-expanded');
+                    else item.setAttribute('data-expanded', 'true');
+                });
+            });
+        })();
+    </script>
+
+</body>
+</html>

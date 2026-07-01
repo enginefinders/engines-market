@@ -11,15 +11,15 @@ const nextConfig: NextConfig = {
           source: "/about",
           destination: "/about/about-us.html",
         },
-                {
+        {
           source: "/compare/:slug",
           destination: "/compare/:slug.html",
         },
-                {
+        {
           source: "/insights/:slug",
           destination: "/insights/:slug.html",
         },
-                {
+        {
           source: "/services/:slug",
           destination: "/services/:slug.html",
         },
@@ -27,7 +27,7 @@ const nextConfig: NextConfig = {
           source: "/prices/:slug",
           destination: "/prices/:slug.html",
         },
-                {
+        {
           source: "/services/gearbox-replacement/:slug",
           destination: "/services/gearbox-replacement/:slug.html",
         },
@@ -52,8 +52,16 @@ const nextConfig: NextConfig = {
           destination: "/failures/:slug.html",
         },
         {
+          source: "/case-studies/nissan-navara-engine-failure",
+          destination: "/case-studies/nissan-navara-d40-case-study.html",
+        },
+        {
           source: "/case-studies/:slug",
           destination: "/case-studies/:slug.html",
+        },
+        {
+          source: "/symptoms/:slug",
+          destination: "/symptoms/:slug.html",
         },
       ],
     };
