@@ -375,15 +375,23 @@ export default function LiveMarketPricesSection({
 
   const headingLines = data.headingLines?.length ? data.headingLines : [data.h2];
   const sectionImage = imageSrc || "";
-  const containerClass = isDocumentMode ? "!max-w-[1240px]" : "!max-w-[1320px]";
-  const gridClass = isDocumentMode ? "lg:grid-cols-[1.05fr_0.95fr]" : "lg:grid-cols-[1.28fr_0.72fr]";
-  const imageMinHeightClass = isDocumentMode ? "min-h-[380px] lg:min-h-[450px]" : "min-h-[440px] lg:min-h-[620px]";
-  const feedMinHeightClass = isDocumentMode ? "lg:min-h-[450px]" : "lg:min-h-[620px]";
-  const imageSizes = isDocumentMode ? "(max-width: 1024px) 100vw, 48vw" : "(max-width: 1024px) 100vw, 58vw";
+  const gridClass = "lg:grid-cols-[1.05fr_0.95fr] lg:items-stretch";
+  const imageColumnClass = "relative w-full min-h-[350px] lg:min-h-[410px]";
+  const brandImageClass = "h-full min-h-[320px] w-full object-center lg:min-h-[370px]";
+  const feedColumnClass = isDocumentMode
+    ? "min-w-0 lg:flex lg:h-full lg:flex-col lg:min-h-[410px]"
+    : "min-w-0 lg:flex lg:h-full lg:flex-col lg:min-h-[370px]";
+  const imageSizes = "(max-width: 1024px) 100vw, 48vw";
+  const feedPanelClass = isDocumentMode
+    ? "overflow-hidden rounded-b-[14px] border border-white/10 bg-gradient-to-br from-[#0b1a2e] via-[#0f2035] to-[#0a1628] shadow-[0_10px_28px_rgba(0,0,0,0.4)] lg:flex lg:flex-1 lg:flex-col lg:min-h-[410px]"
+    : "overflow-hidden rounded-b-[14px] border border-white/10 bg-gradient-to-br from-[#0b1a2e] via-[#0f2035] to-[#0a1628] shadow-[0_10px_28px_rgba(0,0,0,0.4)] lg:flex lg:flex-1 lg:flex-col lg:min-h-[370px]";
+  const feedScrollClass = isDocumentMode
+    ? "max-h-[480px] overflow-y-auto lg:max-h-none lg:flex-1"
+    : "max-h-[440px] overflow-y-auto lg:max-h-none lg:flex-1";
 
   return (
     <Section className="bg-[#f8f9fa]">
-      <Container className={containerClass}>
+      <Container className="!max-w-[1240px]">
         <div className="section-pill mb-[14px]">
           <span className="h-[7px] w-[7px] animate-pulse rounded-full bg-[#15803d]" />
           <span>{data.tag}</span>
@@ -404,20 +412,31 @@ export default function LiveMarketPricesSection({
           {data.h3}
         </p>
 
-        <div className={`mt-6 grid gap-5 lg:items-stretch ${gridClass}`}>
-          <div className={`relative w-full ${imageMinHeightClass}`}>
-            {sectionImage ? (
-              <Image
-                src={sectionImage}
-                alt={data.imageAlt ?? ""}
-                fill
-                className="object-contain object-center"
-                sizes={imageSizes}
-              />
-            ) : null}
-          </div>
+        <div className={`mt-6 grid gap-5 ${gridClass}`}>
+          {isDocumentMode ? (
+            <div className={imageColumnClass}>
+              {sectionImage ? (
+                <Image
+                  src={sectionImage}
+                  alt={data.imageAlt ?? ""}
+                  fill
+                  className="object-contain object-center"
+                  sizes={imageSizes}
+                />
+              ) : null}
+            </div>
+          ) : sectionImage ? (
+            <Image
+              src={sectionImage}
+              alt={data.imageAlt ?? ""}
+              width={960}
+              height={720}
+              className={brandImageClass}
+              sizes={imageSizes}
+            />
+          ) : null}
 
-          <div className={`min-w-0 lg:flex lg:h-full lg:flex-col ${feedMinHeightClass}`}>
+          <div className={feedColumnClass}>
             {isDocumentMode ? (
               <div className="rounded-t-[14px] bg-[#0d1b2e] px-4 py-[12px] shadow-[0_2px_12px_rgba(13,27,46,0.16)]">
                 <div className="text-[12px] font-bold uppercase tracking-[0.08em] text-white">
@@ -509,7 +528,7 @@ export default function LiveMarketPricesSection({
             ) : null}
 
             <div className="space-y-2 lg:flex lg:h-full lg:flex-col lg:space-y-0">
-              <div className={`overflow-hidden rounded-b-[14px] border border-white/10 bg-gradient-to-br from-[#0b1a2e] via-[#0f2035] to-[#0a1628] shadow-[0_10px_28px_rgba(0,0,0,0.4)] lg:flex lg:flex-1 lg:flex-col ${feedMinHeightClass}`}>
+              <div className={feedPanelClass}>
                 {isDocumentMode ? null : (
                   <div className="border-b border-[#e4e7ee] bg-[#f9fafc] px-4 py-[10px] text-[11px] font-medium text-[#9aa3b5]">
                     Showing {visibleRows.length} {visibleRows.length === 1 ? (ui.showingSingleLabel ?? "entry") : (ui.showingPluralLabel ?? "entries")}
@@ -519,7 +538,7 @@ export default function LiveMarketPricesSection({
                   </div>
                 )}
 
-                <div className="max-h-[520px] overflow-y-auto lg:max-h-none lg:flex-1">
+                <div className={feedScrollClass}>
                   {visibleRows.length ? (
                     <ul className="list-none">
                       {visibleRows.map((row, index) => (
