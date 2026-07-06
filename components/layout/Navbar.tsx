@@ -2,13 +2,16 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { FiChevronDown, FiMenu, FiX } from "react-icons/fi";
 import { headerNavigation } from "@/lib/navigation";
 
 export default function Navbar() {
+  const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
+  const isModelPage = pathname.split("/").filter(Boolean).length === 2;
 
   function closeMobileMenu() {
     setMobileOpen(false);
@@ -16,7 +19,9 @@ export default function Navbar() {
   }
 
   return (
-    <header className="sticky top-0 z-[90] bg-[#061a33] text-white shadow-md">
+    <header
+      className={`sticky top-0 z-[90] bg-[#061a33] text-white shadow-md ${isModelPage ? "hidden lg:block" : ""}`}
+    >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex shrink-0 items-center" aria-label="Engines Market homepage">
           <Image

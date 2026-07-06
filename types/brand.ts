@@ -68,6 +68,12 @@ export type HeroSectionData = {
     countryCode?: string;
     countryLabel?: string;
   };
+  disclaimer?: {
+    title?: string;
+    note: string;
+    notesTitle?: string;
+    notes?: string[];
+  };
   form: {
     heading: string;
     subtitle: string;
@@ -198,6 +204,10 @@ export type ModelsSectionData = {
     priceRange: string;
     cta: string;
     image: string;
+    lineOne?: string;
+    heroLineTwo?: string;
+    engineCodes?: string[];
+    imageAlt?: string;
   }[];
 };
 
