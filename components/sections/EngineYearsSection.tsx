@@ -347,7 +347,7 @@ function YearPanel({
                   <SectionLabel icon={<TagIcon />} label={engineCodesLabel} />
                   <div className="mt-1 flex flex-wrap gap-[6px]">
                     {(item.engineCodesCovered ?? []).map((code, index) => (
-                      <span key={`${code}-${index}`} className="rounded-[7px] border border-[#0d1b2e] bg-[#f8fbff] px-[10px] py-[5px] text-[11.5px] font-bold text-[#0d1b2e]">
+                      <span key={`${code}-${index}`} className="rounded-[7px] border-[0.5px] border-[#2a6dd6] shadow-[0_0_3px_rgba(42,109,214,0.4),0_0_6px_rgba(42,109,214,0.2),0_2px_4px_rgba(42,109,214,0.15)] border-[#0d1b2e] bg-[#f8fbff] px-[10px] py-[5px] text-[11.5px] font-bold text-[#0d1b2e]">
                         {code}
                       </span>
                     ))}
@@ -425,7 +425,7 @@ function YearPanel({
                   <SectionLabel icon={<TagIcon />} label={engineCodesLabel} />
                   <div className="mt-1 flex flex-wrap gap-[7px]">
                     {(item.engineCodesCovered ?? []).map((code, index) => (
-                      <span key={`${code}-${index}`} className="rounded-[7px] border border-[#0d1b2e] bg-[#f8fbff] px-[11px] py-[5px] text-[12px] font-bold text-[#0d1b2e]">
+                      <span key={`${code}-${index}`} className="rounded-[7px] border-[0.5px] border-[#2a6dd6] shadow-[0_0_3px_rgba(42,109,214,0.4),0_0_6px_rgba(42,109,214,0.2),0_2px_4px_rgba(42,109,214,0.15)] bg-[#f8fbff] px-[11px] py-[5px] text-[12px] font-bold text-[#0d1b2e]">
                         {code}
                       </span>
                     ))}
@@ -454,7 +454,7 @@ function YearPanel({
           href="#quote-form"
           data-quote-context={`${item.year} ${brandName} engines`}
           data-quote-source="engine-years"
-          className="mt-[14px] flex items-center gap-[13px] rounded-[14px] bg-[#0d1b2e] px-[18px] py-[15px] transition hover:bg-[#1e3a5f] md:mt-0 md:rounded-none md:px-7 md:py-[18px]"
+          className="mt-[14px] flex items-center gap-[13px] rounded-md bg-[#0d1b2e] px-[18px] py-[15px] transition hover:bg-[#1e3a5f] md:mt-0 md:rounded-none md:px-7 md:py-[18px] border border-green-400 shadow-[0_0_15px_rgba(74,222,128,0.5),inset_0_0_12px_rgba(74,222,128,0.3)]"
         >
           <div className="flex h-[42px] w-[42px] flex-none items-center justify-center rounded-[10px] bg-[#15803d] text-white md:h-[44px] md:w-[44px] md:rounded-[11px]">
             <CalendarIcon className="h-[22px] w-[22px]" />
@@ -487,9 +487,9 @@ export default function EngineYearsSection({ brandName, data, strictData = false
 
   return (
     <Section className="bg-[#f8f9fa]">
-      <Container className="max-w-[1200px]">
+      <Container className="max-w-[1400px]">
         <div className="section-pill mb-[14px]">
-          <CalendarIcon className="h-[13px] w-[13px]" />
+          {/* <CalendarIcon className="h-[13px] w-[13px]" /> */}
           <span>{data.tag}</span>
         </div>
 
@@ -580,7 +580,7 @@ export default function EngineYearsSection({ brandName, data, strictData = false
           </>
         ) : null}
 
-        {strictData ? (
+        {/* {strictData ? (
           summaryCta.title && summaryCta.buttonText ? (
             <div className="mt-3">
               <CtaStrip
@@ -616,7 +616,7 @@ export default function EngineYearsSection({ brandName, data, strictData = false
               }}
             />
           </div>
-        )}
+        )} */}
       </Container>
     </Section>
   );

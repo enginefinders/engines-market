@@ -5,6 +5,7 @@ import type { CommonProblemsData } from "@/types/brand";
 import { RecommendationCard } from "@/components/ui/CalloutCards";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
+import { FaCar } from "react-icons/fa";
 
 type Props = {
   data: CommonProblemsData;
@@ -13,6 +14,59 @@ type Props = {
 
 function normalizeText(text: string) {
   return text.replace(/[–—]/g, "-");
+}
+
+function formatAffectedModelLabel(value: string, isPrimary: boolean) {
+  const normalized = normalizeText(value).trim();
+
+  if (!isPrimary) {
+    return normalized;
+  }
+
+  const seriesMatch = normalized.match(/(?:^|\s)(?:Series|Class)\s+(.+)$/i);
+  if (seriesMatch?.[1]) {
+    return seriesMatch[1].trim();
+  }
+
+  const tokens = normalized.split(/\s+/);
+  if (tokens.length > 2) {
+    return tokens.slice(-2).join(" ");
+  }
+
+  return normalized;
+}
+
+function parseAffectedModelsSummary(affectedModels: string) {
+  const normalized = normalizeText(affectedModels).trim();
+  const match = normalized.match(/^(.*?)(?:\s*\(([^()]*)\)\s*)?$/);
+  const vehiclePart = match?.[1]?.trim() ?? normalized;
+  const metaPart = match?.[2]?.trim() ?? "";
+
+  const vehicles = vehiclePart
+    .split(",")
+    .map((item, index) => formatAffectedModelLabel(item, index === 0))
+    .filter(Boolean);
+
+  const yearMatch = metaPart.match(/\b\d{4}\s*-\s*\d{4}\b/);
+  const productionYears = yearMatch ? yearMatch[0].replace(/\s*-\s*/g, " - ") : "";
+  const engineText = metaPart
+    .replace(yearMatch?.[0] ?? "", "")
+    .replace(/^[,\s-]+/, "")
+    .trim();
+
+  const engine = engineText
+    ? engineText
+        .split(/\s*(?:&|\/|,)\s*/)
+        .map((item) => item.trim())
+        .filter(Boolean)
+        .join(" / ")
+    : "";
+
+  return {
+    vehicles,
+    productionYears,
+    engine,
+  };
 }
 
 function splitHeading(text: string) {
@@ -112,10 +166,10 @@ function ProblemIcon({ index }: { index: number }) {
   return icons[index % icons.length];
 }
 
-function MetaIcon({ type }: { type: "models" | "mileage" | "root" }) {
+function MetaIcon({ type, className }: { type: "models" | "mileage" | "root"; className?: string }) {
   if (type === "models") {
     return (
-      <svg viewBox="0 0 24 24" className="h-[18px] w-[18px]" fill="none" aria-hidden="true">
+      <svg viewBox="0 0 24 24" className={className ?? "h-[18px] w-[18px]"} fill="none" aria-hidden="true">
         <rect x="3" y="8" width="18" height="8" rx="2" stroke="currentColor" strokeWidth="1.8" />
         <circle cx="7.5" cy="17.5" r="1.8" stroke="currentColor" strokeWidth="1.8" />
         <circle cx="16.5" cy="17.5" r="1.8" stroke="currentColor" strokeWidth="1.8" />
@@ -126,7 +180,7 @@ function MetaIcon({ type }: { type: "models" | "mileage" | "root" }) {
 
   if (type === "mileage") {
     return (
-      <svg viewBox="0 0 24 24" className="h-[18px] w-[18px]" fill="none" aria-hidden="true">
+      <svg viewBox="0 0 24 24" className={className ?? "h-[18px] w-[18px]"} fill="none" aria-hidden="true">
         <path d="M4 14a8 8 0 1 1 16 0" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
         <path d="m12 14 4-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
         <circle cx="12" cy="14" r="1.2" fill="currentColor" />
@@ -135,7 +189,7 @@ function MetaIcon({ type }: { type: "models" | "mileage" | "root" }) {
   }
 
   return (
-    <svg viewBox="0 0 24 24" className="h-[18px] w-[18px]" fill="none" aria-hidden="true">
+    <svg viewBox="0 0 24 24" className={className ?? "h-[18px] w-[18px]"} fill="none" aria-hidden="true">
       <path
         d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"
         stroke="currentColor"
@@ -192,6 +246,63 @@ function PoundIcon() {
   );
 }
 
+function AffectedVehiclesCard({
+  affectedModels,
+  mobile = false,
+}: {
+  affectedModels: string;
+  mobile?: boolean;
+}) {
+  const summary = parseAffectedModelsSummary(affectedModels);
+  const vehicles = summary.vehicles.length ? summary.vehicles : [affectedModels];
+
+  return (
+    <div className={`rounded-[10px] border border-[#e7edf6] bg-white shadow-[0_1px_0_rgba(15,23,42,0.02)] ${mobile ? "px-2 py-2" : "px-2 py-2"}`}>
+      <div className={`flex items-center gap-2 ${mobile ? "mb-2" : "mb-3"}`}>
+        <div className={`flex flex-none items-center justify-center rounded-full bg-[#f3f6fb] text-black ${mobile ? "h-7 w-7" : "h-8 w-8"}`}>
+          <FaCar className={mobile ? "h-[16px] w-[16px]" : "h-[20px] w-[20px]"} />
+        </div>
+        <div className="min-w-0">
+          <div className={`font-['Manrope'] font-extrabold uppercase tracking-[0.03em] text-[#172554] ${mobile ? "text-[9px]" : "text-[10px]"}`}>
+            Most Affected Vehicles
+          </div>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-2 gap-2">
+        {vehicles.slice(0, 4).map((vehicle, index) => (
+          <div
+            key={`${vehicle}-${index}`}
+            className="flex items-center rounded-[6px] border border-[#2a6dd6] bg-[linear-gradient(180deg,#ffffff_0%,#f4f8ff_100%)] p-1.5 shadow-[0_0_0_1px_rgba(42,109,214,0.45),0_0_12px_rgba(42,109,214,0.22),inset_0_1px_0_rgba(255,255,255,0.9)]"
+          >
+            <div className={`flex flex-none items-center justify-center text-[#2563eb] ${mobile ? "h-5 w-5" : "h-7 w-7"}`}>
+              <FaCar className={mobile ? "h-[9px] w-[9px]" : "h-[10px] w-[10px]"} />
+            </div>
+            <div className={`min-w-0 truncate whitespace-nowrap font-['Manrope'] font-extrabold leading-none tracking-[-0.03em] text-[#0f172a] ${mobile ? "text-[12px] ml-1.5" : "text-[14px]"}`}>
+              {vehicle}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {summary.productionYears ? (
+        <div className={`mt-2.5 space-y-1 font-['Manrope'] leading-[1.35] text-[#0f172a] ${mobile ? "text-[11px]" : "mt-3 space-y-1.5 text-[13px]"}`}>
+          <p>
+            <span className="font-extrabold">Production Years:</span>{" "}
+            <span className="font-medium text-[#334155]">{summary.productionYears}</span>
+          </p>
+          {summary.engine ? (
+            <p>
+              <span className="font-extrabold">Engine:</span>{" "}
+              <span className="font-medium text-[#334155]">{summary.engine}</span>
+            </p>
+          ) : null}
+        </div>
+      ) : null}
+    </div>
+  );
+}
+
 function MobileProblemCard({
   problem,
   index,
@@ -204,6 +315,26 @@ function MobileProblemCard({
   onToggle: () => void;
 }) {
   const detail = splitProblemDetail(problem.group, problem.h4);
+
+  const getTierColors = (tier: string) => {
+    const label = normalizeText(tier).toLowerCase();
+
+    if (label.includes("full replacement") || label.includes("recommended") || label.includes("best value")) {
+      return {
+        accentText: "text-[#15803d]",
+      };
+    }
+
+    if (label.includes("intermediate") || label.includes("moderate")) {
+      return {
+        accentText: "text-[#b45309]",
+      };
+    }
+
+    return {
+      accentText: "text-[#2563eb]",
+    };
+  };
 
   return (
     <div className="mb-[10px] overflow-hidden rounded-[12px] border border-[#e5e7eb] bg-white shadow-[0_2px_8px_rgba(13,27,46,0.05)]">
@@ -225,50 +356,94 @@ function MobileProblemCard({
       </button>
 
       {open ? (
-        <div className="border-t border-[#f1f5f9] px-4 py-4">
-          <div className="space-y-3">
-            <div className="rounded-[10px] border border-[#e5e7eb] bg-[#f8f9fa] p-3">
-              <div className="mb-1 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.6px] text-[#0d1b2e]">
-                <MetaIcon type="models" />
-                <span>Affected Models</span>
+        <div className="border-t border-[#f1f5f9] px-3 py-4">
+          {/* 2-column grid for top cards */}
+          <div className="grid grid-cols-2 gap-2.5">
+            <AffectedVehiclesCard affectedModels={problem.affectedModels} mobile />
+
+            <div className="rounded-[10px] border border-[#f1f5f9] bg-white px-2 py-2 text-center shadow-[0_1px_0_rgba(15,23,42,0.02)]">
+              {/* Header */}
+              <div className="mb-3 flex items-center justify-center gap-1.5">
+                <div className="flex h-7 w-7 items-center justify-center rounded-full bg-[#f1f5f9]">
+                  <MetaIcon type="mileage" className="h-4 w-4 text-[#0d1b2e]" />
+                </div>
+                <span className="text-[9px] font-bold uppercase tracking-[0.05em] text-[#0d1b2e]">
+                  Failure Mileage Range
+                </span>
               </div>
-              <p className="text-[12px] leading-[1.55] text-[#374151]">{problem.affectedModels}</p>
-            </div>
-            <div className="rounded-[10px] border border-[#e5e7eb] bg-[#f8f9fa] p-3">
-              <div className="mb-1 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.6px] text-[#0d1b2e]">
-                <MetaIcon type="mileage" />
-                <span>Typical Failure Mileage</span>
+
+              {/* Gauge/Meter Image */}
+              <div className="mb-3 flex justify-center">
+                <img
+                  src="/meterr.webp"
+                  alt="Mileage gauge indicator"
+                  className="h-14 w-auto object-contain"
+                />
               </div>
-              <p className="text-[12px] leading-[1.55] text-[#374151]">{problem.typicalFailureMileage}</p>
-            </div>
-            <div className="rounded-[10px] border border-[#e5e7eb] bg-[#f8f9fa] p-3">
-              <div className="mb-1 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.6px] text-[#0d1b2e]">
-                <MetaIcon type="root" />
-                <span>Root Cause</span>
+
+              {/* Mileage Range */}
+              <div className="mb-1 text-[13px] font-bold text-[#2563eb]">
+                {problem.typicalFailureMileage}
               </div>
-              <p className="text-[12px] leading-[1.55] text-[#374151]">{problem.rootCause}</p>
+
+              {/* Subtitle */}
+              <p className="text-[10px] text-gray-600">
+                Typical failure window
+              </p>
             </div>
+          </div>
+
+          {/* Root Cause - Full Width */}
+          <div className="mt-3 rounded-[10px] border border-[#e7edf6] bg-white px-3 py-3 shadow-[0_1px_0_rgba(15,23,42,0.02)]">
+            <div className="mb-2 flex items-center gap-2">
+              <div className="flex h-7 w-7 items-center justify-center rounded-full bg-[#f1f5f9]">
+                <MetaIcon type="root" className="h-4 w-4 text-[#0d1b2e]" />
+              </div>
+              <span className="text-[10px] font-bold uppercase tracking-[0.05em] text-[#0d1b2e]">Root Cause</span>
+            </div>
+            <p className="text-[11.5px] leading-[1.5] text-[#374151]">{problem.rootCause}</p>
           </div>
 
           {problem.repairOptions?.length ? (
             <div className="mt-4 space-y-3">
-              {problem.repairOptions.map((option, optionIndex) => (
-                <div key={`${option.tier || "repair-option"}-${optionIndex}`} className="rounded-[12px] border border-[#e5e7eb] bg-white p-3">
-                  <div className="font-['Manrope'] text-[12px] font-bold text-[#0d1b2e]">{option.tier}</div>
-                  <div className="mt-2 grid grid-cols-2 gap-2">
-                    <div className="rounded-[8px] bg-[#f8f9fa] p-2">
-                      <div className="text-[10px] font-bold uppercase tracking-[0.05em] text-[#9ca3af]">Dealer</div>
-                      <div className="mt-1 text-[12px] font-bold text-[#64748b]">{option.dealerPrice}</div>
+              {problem.repairOptions.map((option, optionIndex) => {
+                const colors = getTierColors(option.tier);
+
+                return (
+                  <div
+                    key={`${option.tier || "repair-option"}-${optionIndex}`}
+                    className="rounded-[12px] border border-[#d9e1ea] bg-white p-2 shadow-[0_4px_14px_rgba(15,23,42,0.07)]"
+                  >
+                    <div className="mb-3 rounded-[8px] px-3 py-2 text-black">
+                      <div className={`font-['Manrope'] text-[13px] font-bold ${colors.accentText}`}>{option.tier}</div>
                     </div>
-                    <div className="rounded-[8px] bg-[#f8fbff] p-2">
-                      <div className="text-[10px] font-bold uppercase tracking-[0.05em] text-[#0d1b2e]">Specialist</div>
-                      <div className="mt-1 text-[12px] font-extrabold text-[#0d1b2e]">{option.specialistPrice}</div>
+
+                    <div className="grid grid-cols-2 gap-2 mb-3">
+                      <div className="relative overflow-hidden rounded-[8px] border border-[#cfe0ff] bg-[linear-gradient(180deg,rgba(23,57,113,0.92)_0%,rgba(12,32,66,0.96)_100%)] p-2 text-white shadow-[0_8px_16px_rgba(23,57,113,0.22),inset_0_1px_0_rgba(255,255,255,0.16)]">
+                        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.22)_0%,rgba(255,255,255,0.03)_38%,rgba(255,255,255,0)_62%)]" />
+                        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/65 to-transparent" />
+                        <div className="relative z-10">
+                          <div className="text-[10px] font-bold uppercase tracking-[0.05em] opacity-90">DEALER</div>
+                          <div className="mt-1 text-[13px] font-bold">{option.dealerPrice}</div>
+                        </div>
+                      </div>
+                      <div className="relative overflow-hidden rounded-[8px] border border-[#bfe8cb] bg-[linear-gradient(180deg,rgba(44,103,36,0.92)_0%,rgba(25,70,33,0.96)_100%)] p-2 text-white shadow-[0_8px_16px_rgba(44,103,36,0.18),inset_0_1px_0_rgba(255,255,255,0.16)]">
+                        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.24)_0%,rgba(255,255,255,0.04)_40%,rgba(255,255,255,0)_65%)]" />
+                        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/65 to-transparent" />
+                        <div className="relative z-10">
+                          <div className="text-[10px] font-bold uppercase tracking-[0.05em] opacity-90">SPECIALIST</div>
+                          <div className="mt-1 text-[13px] font-bold">{option.specialistPrice}</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <p className="text-[12px] leading-[1.55] text-[#374151] mb-2">{option.whatItInvolves}</p>
+                    <div className={`rounded-[8px] text-[11.5px] leading-[1.5] text-[#6b7280]`}>
+                      {option.longevity}
                     </div>
                   </div>
-                  <p className="mt-3 text-[11.5px] leading-[1.55] text-[#374151]">{option.whatItInvolves}</p>
-                  <div className="mt-2 rounded-[8px] bg-[#f8f9fa] p-2 text-[11px] leading-[1.5] text-[#6b7280]">{option.longevity}</div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           ) : null}
 
@@ -292,10 +467,26 @@ function MobileProblemCard({
 
 export default function CommonProblemsSection({ data, bgImage }: Props) {
   const [active, setActive] = useState(0);
-  const [openMobile, setOpenMobile] = useState(0);
+  const [openMobile, setOpenMobile] = useState(-1);
+  const [isTextExpanded, setIsTextExpanded] = useState(false);
+  const [isDisclaimerExpanded, setIsDisclaimerExpanded] = useState(false);
+
   const current = useMemo(() => data.problems[active] ?? data.problems[0], [active, data.problems]);
   const heading = splitHeading(data.h2);
   const currentDetail = current ? splitProblemDetail(current.group, current.h4) : null;
+
+  // Text truncation logic
+  const maxLength = 170;
+  const isLongText = data.h3.length > maxLength;
+  let displayText = data.h3;
+  if (isLongText && !isTextExpanded) {
+    let truncated = data.h3.substring(0, maxLength);
+    const lastSpace = truncated.lastIndexOf(" ");
+    if (lastSpace > 0) {
+      truncated = truncated.substring(0, lastSpace);
+    }
+    displayText = truncated.trim() + "...";
+  }
 
   const supportItems = [
     { label: "12-Month Warranty", icon: <WarrantyIcon /> },
@@ -305,7 +496,7 @@ export default function CommonProblemsSection({ data, bgImage }: Props) {
   ];
 
   return (
-    <Section className="relative overflow-hidden bg-[#f8f9fa]">
+    <Section className="relative overflow-hidden bg-[#f7f8fb]">
       {bgImage ? (
         <div className="pointer-events-none absolute inset-x-0 top-0 hidden h-[200px] lg:block">
           <div
@@ -320,24 +511,33 @@ export default function CommonProblemsSection({ data, bgImage }: Props) {
         </div>
       ) : null}
 
-      <Container className="relative max-w-[1180px]">
+      <Container className="relative max-w-[1400px] px-2">
         <div className="section-pill mb-[14px]">
-          <WarningTriangleIcon />
           <span>{data.tag}</span>
         </div>
 
         <div className="hidden gap-5 lg:grid lg:grid-cols-[320px_minmax(0,1fr)] lg:items-start">
           <div className="rounded-[14px] border border-[#e5e7eb] bg-white p-5 shadow-[0_2px_10px_rgba(13,27,46,0.05)]">
-            <h2 className="text-[26px] font-extrabold leading-[1.18] tracking-[-0.5px] text-[#0d1b2e]">
+            <h2 className="text-[26px] font-extrabold leading-[1.18] tracking-[-0.5px] text-[#0d1b2e]" style={{ fontSize: '26px' }}>
               <span>{heading.primary}</span>
-              {heading.accent ? (
-                <>
-                  <br />
-                  <span className="text-[#15803d]">{heading.accent}</span>
-                </>
-              ) : null}
             </h2>
-            <p className="mt-4 text-[12px] leading-[1.7] text-[#6b7280]">{data.h3}</p>
+
+            {/* Updated Desktop Paragraph */}
+            <p className="mt-4 text-[12px] leading-[1.7] text-[#6b7280]">
+              {displayText}
+              {isLongText && (
+                <>
+                  {" "}
+                  <button
+                    type="button"
+                    onClick={() => setIsTextExpanded((prev) => !prev)}
+                    className="font-semibold text-[#15803d] hover:underline focus:outline-none"
+                  >
+                    {isTextExpanded ? "see less" : "see more"}
+                  </button>
+                </>
+              )}
+            </p>
 
             <div className="mt-5 space-y-2">
               {data.problems.map((problem, index) => {
@@ -348,11 +548,10 @@ export default function CommonProblemsSection({ data, bgImage }: Props) {
                     key={`${problem.group || "problem"}-${index}`}
                     type="button"
                     onClick={() => setActive(index)}
-                    className={`flex w-full items-center gap-3 rounded-[10px] border px-3 py-3 text-left transition ${
-                      activeProblem
-                        ? "border-[#bbf7d0] bg-[#f0fdf4]"
-                        : "border-[#e5e7eb] bg-white hover:border-[#cbd5e1] hover:bg-slate-50"
-                    }`}
+                    className={`flex w-full items-center gap-3 rounded-[10px] border px-3 py-3 text-left transition ${activeProblem
+                      ? "border border-green-400 shadow-[0_0_15px_rgba(74,222,128,0.5),inset_0_0_12px_rgba(74,222,128,0.3)]"
+                      : "border-[#e5e7eb] bg-white hover:border-[#cbd5e1] hover:bg-slate-50"
+                      }`}
                   >
                     <div className={`flex h-9 w-9 flex-none items-center justify-center rounded-[8px] ${activeProblem ? "bg-[#15803d] text-white" : "bg-[#0d1b2e] text-white"}`}>
                       <ProblemIcon index={index} />
@@ -395,25 +594,44 @@ export default function CommonProblemsSection({ data, bgImage }: Props) {
               </div>
 
               <div className="mt-4 grid gap-3 md:grid-cols-3">
-                <div className="rounded-[10px] border border-[#f1f5f9] px-4 py-3">
-                  <div className="mb-2 flex items-center gap-2 text-[#0d1b2e]">
-                    <MetaIcon type="models" />
-                    <span className="text-[10px] font-bold uppercase tracking-[0.06em] text-[#0d1b2e]">Affected Models</span>
+                <AffectedVehiclesCard affectedModels={current.affectedModels} />
+
+                <div className="rounded-[10px] border border-[#f1f5f9] px-2 py-2 text-center">
+                  {/* Header */}
+                  <div className="mb-4 flex items-center justify-center gap-2">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#f1f5f9]">
+                      <MetaIcon type="mileage" className="h-6 w-6 text-[#0d1b2e]" />
+                    </div>
+                    <span className="text-[10px] font-bold uppercase tracking-[0.06em] text-[#0d1b2e]">
+                      Failure Mileage Range
+                    </span>
                   </div>
-                  <p className="text-[11.5px] leading-[1.55] text-[#374151]">{current.affectedModels}</p>
+
+                  {/* Gauge/Meter Image */}
+                  <div className="mb-4 flex justify-center">
+                    <img
+                      src="/meterr.webp"
+                      alt="Mileage gauge indicator"
+                      className="h-15 w-auto object-contain"
+                    />
+                  </div>
+
+                  {/* Mileage Range */}
+                  <div className="mb-1 text-[15px] font-bold text-[#2563eb]">
+                    {current.typicalFailureMileage}
+                  </div>
+
+                  {/* Subtitle */}
+                  <p className="text-[12px] text-gray-800">
+                    Typical failure window
+                  </p>
                 </div>
 
                 <div className="rounded-[10px] border border-[#f1f5f9] px-4 py-3">
-                  <div className="mb-2 flex items-center gap-2 text-[#0d1b2e]">
-                    <MetaIcon type="mileage" />
-                    <span className="text-[10px] font-bold uppercase tracking-[0.06em] text-[#0d1b2e]">Typical Failure Mileage</span>
-                  </div>
-                  <p className="text-[11.5px] leading-[1.55] text-[#374151]">{current.typicalFailureMileage}</p>
-                </div>
-
-                <div className="rounded-[10px] border border-[#f1f5f9] px-4 py-3">
-                  <div className="mb-2 flex items-center gap-2 text-[#0d1b2e]">
-                    <MetaIcon type="root" />
+                  <div className="mb-2 flex items-center gap-2 text-[#0d1b2e] ">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#f1f5f9]">
+                      <MetaIcon type="root" className="h-5 w-5 text-[#0d1b2e]" />
+                    </div>
                     <span className="text-[10px] font-bold uppercase tracking-[0.06em] text-[#0d1b2e]">Root Cause</span>
                   </div>
                   <p className="text-[11.5px] leading-[1.55] text-[#374151]">{current.rootCause}</p>
@@ -443,13 +661,12 @@ export default function CommonProblemsSection({ data, bgImage }: Props) {
                               <tr key={`${option.tier || "repair-option"}-${optionIndex}`} className="border-b border-[#f1f5f9] align-top last:border-b-0">
                                 <td className="px-[12px] py-[12px] text-[11.5px] text-[#374151]">
                                   <div className="font-['Manrope'] text-[12px] font-bold text-[#0d1b2e]">{option.tier}</div>
-                                  <div className={`mt-2 inline-flex rounded-[999px] px-2 py-[3px] text-[9px] font-bold uppercase tracking-[0.05em] ${
-                                    variant === "recommended"
-                                      ? "bg-[#f0fdf4] text-[#15803d]"
-                                      : variant === "moderate"
-                                        ? "bg-[#fff7ed] text-[#c2410c]"
-                                        : "bg-[#f8fafc] text-[#64748b]"
-                                  }`}>
+                                  <div className={`mt-2 inline-flex rounded-[999px] px-2 py-[3px] text-[9px] font-bold uppercase tracking-[0.05em] ${variant === "recommended"
+                                    ? "bg-[#f0fdf4] text-[#15803d]"
+                                    : variant === "moderate"
+                                      ? "bg-[#fff7ed] text-[#c2410c]"
+                                      : "bg-[#f8fafc] text-[#64748b]"
+                                    }`}>
                                     {variant === "recommended" ? "Best Value" : variant === "moderate" ? "Intermediate" : "Minor"}
                                   </div>
                                 </td>
@@ -480,36 +697,36 @@ export default function CommonProblemsSection({ data, bgImage }: Props) {
                 />
               </div>
 
-              {(data.finalCta.h4 || data.finalCta.paragraph || data.finalCta.buttonText) ? (
-                <div className="mt-4 rounded-[14px] border border-[#dbe6f3] bg-[#f8fbff] p-4 md:p-5">
-                  {data.finalCta.h4 ? (
-                    <h4 className="font-['Manrope'] text-[18px] font-extrabold leading-[1.2] tracking-[-0.03em] text-[#0d1b2e]">
-                      {data.finalCta.h4}
-                    </h4>
-                  ) : null}
 
-                  {data.finalCta.paragraph ? (
-                    <p className="mt-3 max-w-[760px] text-[12px] leading-[1.75] text-[#4b5563]">
-                      {data.finalCta.paragraph}
-                    </p>
-                  ) : null}
-
-                  {data.finalCta.buttonText ? (
-                    <a
-                      href="#quote-form"
-                      data-quote-context={data.finalCta.h4 || current.group}
-                      data-quote-source="common-problems-final-cta"
-                      className="mt-4 inline-flex min-h-[44px] items-center justify-center rounded-[10px] bg-[#15803d] px-5 text-[12.5px] font-semibold text-white transition hover:bg-[#166534]"
-                    >
-                      {data.finalCta.buttonText}
-                    </a>
-                  ) : null}
-                </div>
-              ) : null}
             </div>
           ) : null}
         </div>
+        {(data.finalCta.h4 || data.finalCta.paragraph || data.finalCta.buttonText) ? (
+          <div className="hidden md:block mt-4 rounded-[14px] border border-[#dbe6f3] bg-[#f8fbff] p-4 md:p-5">
+            {data.finalCta.h4 ? (
+              <h4 className="font-['Manrope'] text-[18px] font-extrabold leading-[1.2] tracking-[-0.03em] text-[#0d1b2e]">
+                {data.finalCta.h4}
+              </h4>
+            ) : null}
 
+            {data.finalCta.paragraph ? (
+              <p className="mt-3 max-w-full text-[12px] leading-[1.75] text-[#4b5563]">
+                {data.finalCta.paragraph}
+              </p>
+            ) : null}
+
+            {data.finalCta.buttonText ? (
+              <a
+                href="#quote-form"
+                data-quote-context={data.finalCta.h4 || current.group}
+                data-quote-source="common-problems-final-cta"
+                className="mt-4 inline-flex min-h-[44px] items-center justify-center rounded-[10px] bg-[#15803d] px-5 text-[12.5px] font-semibold text-white transition hover:bg-[#166534]"
+              >
+                {data.finalCta.buttonText}
+              </a>
+            ) : null}
+          </div>
+        ) : null}
         <div className="lg:hidden">
           <h2 className="text-[26px] font-extrabold leading-[1.2] tracking-[-0.4px] text-[#0d1b2e] md:text-[36px] md:leading-[1.15] md:tracking-[-0.7px]">
             <span>{heading.primary}</span>
@@ -520,7 +737,23 @@ export default function CommonProblemsSection({ data, bgImage }: Props) {
               </>
             ) : null}
           </h2>
-          <p className="mb-5 mt-[10px] text-[13px] leading-[1.65] text-[#6b7280]">{data.h3}</p>
+
+          {/* Updated Mobile Paragraph */}
+          <p className="mb-5 mt-[10px] text-[13px] leading-[1.65] text-[#6b7280]">
+            {displayText}
+            {isLongText && (
+              <>
+                {" "}
+                <button
+                  type="button"
+                  onClick={() => setIsTextExpanded((prev) => !prev)}
+                  className="font-semibold text-[#15803d] hover:underline focus:outline-none"
+                >
+                  {isTextExpanded ? "see less" : "see more"}
+                </button>
+              </>
+            )}
+          </p>
 
           {data.problems.map((problem, index) => (
             <MobileProblemCard
@@ -532,7 +765,7 @@ export default function CommonProblemsSection({ data, bgImage }: Props) {
             />
           ))}
 
-          {(data.finalCta.h4 || data.finalCta.paragraph || data.finalCta.buttonText) ? (
+          {/* {(data.finalCta.h4 || data.finalCta.paragraph || data.finalCta.buttonText) ? (
             <div className="mt-4 rounded-[14px] border border-[#dbe6f3] bg-[#f8fbff] p-4">
               {data.finalCta.h4 ? (
                 <h4 className="font-['Manrope'] text-[18px] font-extrabold leading-[1.2] tracking-[-0.03em] text-[#0d1b2e]">
@@ -557,25 +790,53 @@ export default function CommonProblemsSection({ data, bgImage }: Props) {
                 </a>
               ) : null}
             </div>
-          ) : null}
+          ) : null} */}
         </div>
 
         {data.finalCta.disclaimer ? (
           <div className="mt-5 rounded-[12px] border border-[#e5e7eb] bg-white px-4 py-3 lg:mt-4">
             <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_420px] lg:items-center">
-              <p className="text-[10.5px] leading-[1.65] text-[#9ca3af] md:text-[11px] md:leading-[1.7]">
-                <strong className="font-semibold text-[#6b7280]">Disclaimer:</strong> {data.finalCta.disclaimer}
-              </p>
+              <div>
+                <p
+                  className="text-[10.5px] leading-[1.65] text-[#9ca3af] md:text-[11px] md:leading-[1.7]"
+                  style={
+                    isDisclaimerExpanded
+                      ? undefined
+                      : {
+                          display: "-webkit-box",
+                          WebkitLineClamp: 3,
+                          WebkitBoxOrient: "vertical",
+                          overflow: "hidden",
+                        }
+                  }
+                >
+                  <strong className="font-semibold text-[#6b7280]">Disclaimer:</strong> {data.finalCta.disclaimer}
+                </p>
+                <button
+                  type="button"
+                  onClick={() => setIsDisclaimerExpanded((current) => !current)}
+                  className="mt-2 text-[10.5px] font-semibold text-[#15803d] transition hover:text-[#166534]"
+                >
+                  {isDisclaimerExpanded ? "View Less" : "View More"}
+                </button>
+              </div>
 
-              <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
-                {supportItems.map((item) => (
-                  <div key={item.label} className="flex flex-col items-center gap-2 text-center">
-                    <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#f0fdf4] text-[#15803d]">
-                      {item.icon}
+              <div className="overflow-x-auto">
+                <div className="flex min-w-max items-start gap-2 whitespace-nowrap">
+                  {supportItems.map((item, index) => (
+                    <div key={item.label} className="flex items-center gap-2">
+                      <div className="inline-flex min-w-[68px] flex-col items-center gap-2 text-center">
+                        <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#f0fdf4] text-[#15803d]">
+                          {item.icon}
+                        </div>
+                        <span className="text-[10px] leading-[1.35] text-[#6b7280]">{item.label}</span>
+                      </div>
+                      {index < supportItems.length - 1 ? (
+                        <span className="pt-3 text-[16px] leading-none text-[#cbd5e1]">|</span>
+                      ) : null}
                     </div>
-                    <span className="text-[10px] leading-[1.35] text-[#6b7280]">{item.label}</span>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -585,18 +846,3 @@ export default function CommonProblemsSection({ data, bgImage }: Props) {
   );
 }
 
-function WarningTriangleIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-3 w-3 flex-none" fill="none" aria-hidden="true">
-      <path
-        d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <line x1="12" y1="9" x2="12" y2="13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-      <line x1="12" y1="17" x2="12.01" y2="17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-    </svg>
-  );
-}

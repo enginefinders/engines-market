@@ -88,7 +88,11 @@ export default function DocumentModelPage({
 
       <ReviewsSection data={reviewsData} useDataHeading />
 
-      <VariantCoverageSection data={visualData.sections.variantCoverage} />
+      <VariantCoverageSection 
+        data={visualData.sections.variantCoverage} 
+        brandName={visualData.brand.name}
+        modelName={visualData.model.name}
+      />
 
       <ModelEngineCodesSection
         data={visualData.sections.engineCodes}

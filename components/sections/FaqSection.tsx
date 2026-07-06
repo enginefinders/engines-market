@@ -32,8 +32,8 @@ export default function FaqSection({ data, strictData = false }: Props) {
   return (
     <Section className="bg-white">
       <Container>
-        <div className="mx-auto max-w-[860px] text-center">
-          <p className="section-pill mb-1.5 mx-auto">{data.tag}</p>
+        <div className="max-w-[860px]">
+          <p className="section-pill mb-1.5">{data.tag}</p>
           <h2>
             {headingLines.map((line, index) => (
               <span key={`${line}-${index}`} className={`block ${headingLines.length > 1 && index === headingLines.length - 1 ? "text-[#15803d]" : ""}`}>
@@ -44,116 +44,137 @@ export default function FaqSection({ data, strictData = false }: Props) {
           <p className="text-body mt-2.5 text-slate-700">{data.intro}</p>
         </div>
 
-        <div className="faq-scroll-panel mx-auto mt-6 max-w-5xl">
-  {data.items.map((item, index) => (
-    <details key={item.question} className="group block surface-card-soft overflow-hidden" open={index === defaultOpenIndex}>
-      <summary className="flex min-h-[56px] w-full cursor-pointer list-none items-center justify-between gap-4 border-b border-slate-100 px-5 py-5 text-left transition hover:bg-slate-50 sm:px-6 group-open:border-b-2 group-open:border-green-700 group-open:text-green-700 [&::-webkit-details-marker]:hidden">
-        <div className="flex flex-col gap-1">
-          {strictData ? (
-            ui.questionLabelPrefix ? <p className="text-label text-green-700">{ui.questionLabelPrefix} {index + 1}</p> : null
-          ) : (
-            <p className="text-label text-green-700">{ui.questionLabelPrefix ?? "Question"} {index + 1}</p>
-          )}
-          <h3 
-  className="text-[15px] font-semibold leading-[1.45] text-slate-900 group-open:text-green-700" 
-  style={{ fontSize: '15px' }}
->
-  {item.question}
-</h3>
-        </div>
-        <svg
-          viewBox="0 0 24 24"
-          className="h-[18px] w-[18px] flex-none text-slate-400 transition group-open:rotate-180 group-open:text-green-700"
-          fill="none"
-          aria-hidden="true"
-        >
-          <path d="m6 9 6 6 6-6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
-      </summary>
+        <div className="faq-scroll-panel mx-auto mt-6 max-w-[1400px]">
+          {data.items.map((item, index) => (
+            <details key={item.question} className="group block surface-card-soft overflow-hidden" open={index === defaultOpenIndex}>
+              <summary className="flex min-h-[56px] w-full cursor-pointer list-none items-center justify-between gap-4 border-b border-slate-100 px-5 py-5 text-left transition hover:bg-slate-50 sm:px-6 group-open:border-b-2 group-open:border-green-700 group-open:text-green-700 [&::-webkit-details-marker]:hidden">
+                <div className="flex flex-col gap-1">
+                  {strictData ? (
+                    ui.questionLabelPrefix ? <p className="text-label text-green-700">{ui.questionLabelPrefix} {index + 1}</p> : null
+                  ) : (
+                    <p className="text-label text-green-700">{ui.questionLabelPrefix ?? "Question"} {index + 1}</p>
+                  )}
+                  <h3
+                    className="text-[15px] font-semibold leading-[1.45] text-slate-900 group-open:text-green-700"
+                    style={{ fontSize: '15px' }}
+                  >
+                    {item.question}
+                  </h3>
+                </div>
+                <svg
+                  viewBox="0 0 24 24"
+                  className="h-[18px] w-[18px] flex-none text-slate-400 transition group-open:rotate-180 group-open:text-green-700"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path d="m6 9 6 6 6-6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </summary>
 
-      <div className="border-b border-slate-200 bg-slate-50 px-5 py-5 sm:px-6 sm:py-6">
-        <p className="text-[15px] leading-[1.75] text-slate-700">{item.answer}</p>
+              <div className="border-b border-slate-200 bg-slate-50 px-5 py-5 sm:px-6 sm:py-6">
+                <p className="text-[15px] leading-[1.75] text-slate-700">{item.answer}</p>
 
-        {item.keyPoints?.length ? (
-          <div className="mt-4">
-            {strictData ? (
-              ui.keyPointsLabel ? <p className="text-[15px] font-semibold text-slate-900 mb-2">{ui.keyPointsLabel}</p> : null
-            ) : (
-              <p className="text-[15px] font-semibold text-slate-900 mb-2">{ui.keyPointsLabel ?? "Key points"}</p>
-            )}
-            <ul className="space-y-2 rounded-[14px] border border-slate-200 bg-white px-4 py-4 text-[15px] leading-[1.7] text-slate-700">
-              {item.keyPoints.map((point) => (
-                <li key={point} className="flex gap-3">
-                  <span className="mt-[0.55rem] h-2 w-2 flex-none rounded-full bg-green-700" />
-                  <span className="font-semibold">{point}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ) : null}
-
-        {item.comparisonTable?.headers?.length && item.comparisonTable.rows?.length ? (
-          <div className="mt-4">
-            {strictData ? (
-              ui.comparisonTableLabel ? (
-                <p className="text-[15px] font-semibold text-slate-900 mb-2">{ui.comparisonTableLabel}</p>
-              ) : null
-            ) : (
-              <p className="text-[15px] font-semibold text-slate-900 mb-2">{ui.comparisonTableLabel ?? "Comparison table"}</p>
-            )}
-            <div className="overflow-x-auto rounded-[14px] border border-slate-200 bg-white">
-              <table className="min-w-full border-collapse text-left text-[14px]">
-                <thead className="bg-slate-50">
-                  <tr>
-                    {item.comparisonTable.headers.map((header) => (
-                      <th
-                        key={header}
-                        className="border-b border-slate-200 px-4 py-3 font-semibold text-[#0d1b2e]"
-                      >
-                        {header}
-                      </th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  {item.comparisonTable.rows.map((row, rowIndex) => (
-                    <tr key={`${item.question}-row-${rowIndex}`} className={rowIndex % 2 === 0 ? "bg-white" : "bg-slate-50/50"}>
-                      {row.map((cell, cellIndex) => (
-                        <td
-                          key={`${item.question}-row-${rowIndex}-cell-${cellIndex}`}
-                          className="border-b border-slate-100 px-4 py-3 align-top text-slate-700"
-                        >
-                          {cell}
-                        </td>
+                {item.keyPoints?.length ? (
+                  <div className="mt-4">
+                    {strictData ? (
+                      ui.keyPointsLabel ? <p className="text-[15px] font-semibold text-slate-900 mb-2">{ui.keyPointsLabel}</p> : null
+                    ) : (
+                      <p className="text-[15px] font-semibold text-slate-900 mb-2">{ui.keyPointsLabel ?? "Key points"}</p>
+                    )}
+                    <ul className="space-y-2 rounded-[14px] border border-slate-200 bg-white px-4 py-4 text-[15px] leading-[1.7] text-slate-700">
+                      {item.keyPoints.map((point) => (
+                        <li key={point} className="flex gap-3">
+                          <span className="mt-[0.55rem] h-2 w-2 flex-none rounded-full bg-green-700" />
+                          <span className="font-semibold">{point}</span>
+                        </li>
                       ))}
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        ) : null}
+                    </ul>
+                  </div>
+                ) : null}
 
-        {item.warning && (!strictData || ui.warningTitle) && (
-          <div className="mt-4">
-            <WarningCard
-              label={strictData ? "" : "Warning"}
-              title={strictData ? (ui.warningTitle || "") : (ui.warningTitle ?? "Check fitment and engine condition before ordering")}
-              body={item.warning}
-            />
-          </div>
-        )}
+                {item.comparisonTable?.headers?.length && item.comparisonTable.rows?.length ? (
+                  <div className="mt-4">
+                    {strictData ? (
+                      ui.comparisonTableLabel ? (
+                        <p className="text-[15px] font-semibold text-slate-900 mb-2">{ui.comparisonTableLabel}</p>
+                      ) : null
+                    ) : (
+                      <p className="text-[15px] font-semibold text-slate-900 mb-2">{ui.comparisonTableLabel ?? "Comparison table"}</p>
+                    )}
+                    <div className="overflow-x-auto rounded-[14px] border border-slate-200 bg-white">
+                      <table className="min-w-full border-collapse text-left text-[14px]">
+                        <thead className="bg-slate-50">
+                          <tr>
+                            {item.comparisonTable.headers.map((header) => (
+                              <th
+                                key={header}
+                                className="border-b border-slate-200 px-4 py-3 font-semibold text-[#0d1b2e]"
+                              >
+                                {header}
+                              </th>
+                            ))}
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {item.comparisonTable.rows.map((row, rowIndex) => (
+                            <tr key={`${item.question}-row-${rowIndex}`} className={rowIndex % 2 === 0 ? "bg-white" : "bg-slate-50/50"}>
+                              {row.map((cell, cellIndex) => (
+                                <td
+                                  key={`${item.question}-row-${rowIndex}-cell-${cellIndex}`}
+                                  className="border-b border-slate-100 px-4 py-3 align-top text-slate-700"
+                                >
+                                  {cell}
+                                </td>
+                              ))}
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                ) : null}
 
-        <a href="#quote-form" data-quote-context={item.question} data-quote-source="faq" className="mt-4 inline-block text-[14px] font-semibold text-green-700 transition hover:underline">
-          {item.cta}
-        </a>
-      </div>
-    </details>
-  ))}
-</div>
+                {item.warning && (!strictData || ui.warningTitle) && (
+                  <div className="mt-4">
+                    <WarningCard
+                      label={strictData ? "" : "Warning"}
+                      title={strictData ? (ui.warningTitle || "") : (ui.warningTitle ?? "Check fitment and engine condition before ordering")}
+                      body={item.warning}
+                    />
+                  </div>
+                )}
+
+                <a 
+  href="#quote-form" 
+  data-quote-context={item.question} 
+  data-quote-source="faq" 
+  className="mt-4 inline-flex items-center gap-2 text-[14px] font-semibold text-green-700 border border-[#2a6dd6] bg-white shadow-[0_0_12px_rgba(42,109,214,0.2)] transition p-2 rounded-lg"
+>
+  {item.cta}
+  
+  {/* Right Arrow Icon */}
+  <svg 
+    xmlns="http://www.w3.org/2000/svg" 
+    fill="none" 
+    viewBox="0 0 24 24" 
+    strokeWidth={2} 
+    stroke="currentColor" 
+    className="w-4 h-4"
+  >
+    <path 
+      strokeLinecap="round" 
+      strokeLinejoin="round" 
+      d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" 
+    />
+  </svg>
+</a>
+              </div>
+            </details>
+          ))}
+        </div>
 
         {data.disclaimer ? (
-          <div className="mx-auto mt-3 max-w-5xl rounded-xl border border-slate-200 bg-slate-50 px-4 py-3">
+          <div className="mx-auto mt-3 max-w-[1400px] rounded-xl border border-slate-200 bg-slate-50 px-4 py-3">
             {strictData ? (
               ui.disclaimerLabel ? <p className="text-label text-slate-500">{ui.disclaimerLabel}</p> : null
             ) : (

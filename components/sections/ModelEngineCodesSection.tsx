@@ -6,6 +6,8 @@ import type { EngineCodesData } from "@/types/brand";
 import type { ModelPageData } from "@/types/model";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
+import { FaArrowRight, FaCar, FaCheck, FaChevronDown, FaExclamationTriangle, FaGasPump } from "react-icons/fa";
+import { TbEngineFilled } from "react-icons/tb";
 
 type Props = {
   data: EngineCodesData;
@@ -219,62 +221,32 @@ function chunkEngines(engines: EngineRow[]) {
   return rows;
 }
 
-function EngineIcon() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <rect x="4" y="7" width="13" height="10" rx="2" />
-      <path d="M17 10h3l2 2v3h-5" />
-      <path d="M8 7V4h5v3" />
-      <circle cx="8.5" cy="17.5" r="1.5" fill="currentColor" stroke="none" />
-      <circle cx="16.5" cy="17.5" r="1.5" fill="currentColor" stroke="none" />
-    </svg>
-  );
+function EngineIcon({ className = "w-[24px] h-[24px]" }: { className?: string }) {
+  return <TbEngineFilled className={className} />;
 }
 
-function SpecsIcon() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="m5 13 4 4L19 7" />
-    </svg>
-  );
+function FuelPumpIcon({ className = "w-[24px] h-[24px]" }: { className?: string }) {
+  return <FaGasPump className={className} />;
 }
 
-function WarningIcon() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z" />
-      <line x1="12" y1="9" x2="12" y2="13" />
-      <line x1="12" y1="17" x2="12.01" y2="17" />
-    </svg>
-  );
+function SpecsIcon({ className = "w-[24px] h-[24px]" }: { className?: string }) {
+  return <FaCheck className={className} />;
 }
 
-function CarIcon() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M5 13 7.4 7.9C7.7 7.2 8.3 6.8 8.9 6.8H15.1C15.7 6.8 16.3 7.2 16.6 7.9L19 13" />
-      <path d="M4.5 13H19.5C20.3 13 21 13.7 21 14.5V17.5C21 18.3 20.3 19 19.5 19H4.5C3.7 19 3 18.3 3 17.5V14.5C3 13.7 3.7 13 4.5 13Z" />
-      <circle cx="7.5" cy="16" r="1" />
-      <circle cx="16.5" cy="16" r="1" />
-    </svg>
-  );
+function WarningIcon({ className = "w-[24px] h-[24px]" }: { className?: string }) {
+  return <FaExclamationTriangle className={className} />;
 }
 
-function ChevronIcon() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <polyline points="6 9 12 15 18 9" />
-    </svg>
-  );
+function CarIcon({ className = "w-[24px] h-[24px]" }: { className?: string }) {
+  return <FaCar className={className} />;
 }
 
-function ArrowIcon() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <line x1="5" y1="12" x2="19" y2="12" />
-      <polyline points="12 5 19 12 12 19" />
-    </svg>
-  );
+function ChevronIcon({ className = "w-[18px] h-[18px]" }: { className?: string }) {
+  return <FaChevronDown className={className} />;
+}
+
+function ArrowIcon({ className = "w-[14px] h-[14px]" }: { className?: string }) {
+  return <FaArrowRight className={className} />;
 }
 
 type Selection = {
@@ -282,14 +254,35 @@ type Selection = {
   engineIndex: number;
 } | null;
 
+function getFuelIcon(fuelType: string, className?: string) {
+  const normalized = fuelType.toLowerCase();
+  if (normalized.includes("petrol") || normalized.includes("gasoline")) {
+    return <FuelPumpIcon className={className} />;
+  }
+  return <EngineIcon className={className} />;
+}
+
 export default function ModelEngineCodesSection({ data, guide, modelName, strictData = false }: Props) {
   const [selection, setSelection] = useState<Selection>(null);
+  const [activeTabIndex, setActiveTabIndex] = useState(0);
   const guideLookup = useMemo(() => buildGuideLookup(guide), [guide]);
   const headingLines = data.headingLines?.length ? data.headingLines : [strictData ? data.h2 : (guide.h2 || data.h2)].filter(Boolean);
+  const mobileHeadingLine = headingLines[0] ?? "";
   const intro = strictData ? data.h3 : (guide.h3 || data.h3);
   const closingLine = strictData ? (data.closingLine || "") : (guide.closing || data.closingLine || "");
   const ui = data.ui ?? {};
   const closingAction = data.closingAction ?? {};
+
+  const renderableGroups = useMemo(
+    () =>
+      data.groups
+        .map((group, index) => ({ group, index, validEngines: group.engines.filter(isRenderableEngineRow) }))
+        .filter((entry) => entry.validEngines.length > 0),
+    [data.groups],
+  );
+
+  const safeActiveIndex = activeTabIndex >= renderableGroups.length ? 0 : activeTabIndex;
+  const activeGroupEntry = renderableGroups[safeActiveIndex];
 
   function toggleSelection(familyIndex: number, engineIndex: number) {
     setSelection((current) =>
@@ -299,1032 +292,434 @@ export default function ModelEngineCodesSection({ data, guide, modelName, strict
     );
   }
 
+  function handleTabClick(index: number) {
+    setActiveTabIndex(index);
+    setSelection(null);
+  }
+
   return (
-    <Section id="model-engine-codes" className="model-engine-codes bg-[linear-gradient(180deg,#ffffff_0%,#f6f8fb_100%)]">
-      <Container className="max-w-[1240px]">
-        <div className="engine-codes-section">
-          <div className="ecs-container">
-            <header className="ecs-header">
-              {strictData ? (data.tag ? <div className="tag">{data.tag}</div> : null) : <div className="tag">{data.tag || guide.tag}</div>}
-              <h2>
+    <Section id="model-engine-codes" className="bg-[linear-gradient(180deg,#ffffff_0%,#f6f8fb_100%)]">
+      <Container className="max-w-[1400px]">
+        <div className="py-[42px] px-[18px] pb-[64px] md:py-[42px] md:px-[18px] md:pb-[64px] max-[720px]:px-[12px] max-[720px]:pb-[10px] max-[720px]:pt-[20px]">
+          <div className="max-w-[1240px] mx-auto">
+            <header className="max-w-[1000px]">
+              {strictData ? (data.tag ? <div className="inline-flex items-center justify-center min-h-[34px] px-[16px] rounded-full bg-[linear-gradient(180deg,#16355d_0%,#081a34_100%)] text-white text-[12px] font-extrabold tracking-[0.12em] uppercase shadow-[0_8px_20px_rgba(8,26,52,0.14)] mb-[14px]">{data.tag}</div> : null) : <div className="inline-flex items-center justify-center min-h-[34px] px-[16px] rounded-full bg-[linear-gradient(180deg,#16355d_0%,#081a34_100%)] text-white text-[12px] font-extrabold tracking-[0.12em] uppercase shadow-[0_8px_20px_rgba(8,26,52,0.14)] mb-[14px]">{data.tag || guide.tag}</div>}
+              <h2 className="mb-[10px] text-[clamp(31px,4vw,52px)] leading-[1.03] tracking-[-0.04em] text-[#10203a] max-[720px]:text-[32px]">
+                <span className="block min-[721px]:hidden">{mobileHeadingLine}</span>
                 {headingLines.map((line, index) => (
-                  <span key={`${line}-${index}`} style={{ display: "block", color: headingLines.length > 1 && index === headingLines.length - 1 ? "#15803d" : undefined }}>
+                  <span key={`${line}-${index}`} className="hidden min-[721px]:block" style={{ color: headingLines.length > 1 && index === headingLines.length - 1 ? "#15803d" : undefined }}>
                     {line}
                   </span>
                 ))}
               </h2>
-              <p>{intro}</p>
+              <p className="text-[#64748b] text-[16px] leading-[1.55] max-[720px]:hidden">{intro}</p>
             </header>
-
-            {data.groups.map((group, familyIndex) => {
-              const validEngines = group.engines.filter(isRenderableEngineRow);
-
-              if (!validEngines.length) {
-                return null;
-              }
-
-              const rows = chunkEngines(validEngines);
-
-              return (
-                <section key={group.name} className="engine-family">
-                  <div className="family-title">
-                    <span className="family-icon" aria-hidden="true">
-                      <EngineIcon />
-                    </span>
-                    <div>
-                      <h3>{group.name}</h3>
-                      <p>{group.era}</p>
-                    </div>
-                  </div>
-
-                  <div className="engine-list">
-                    {rows.map((row, rowIndex) => {
-                      const startIndex = rowIndex * 2;
-                      const selectedRowEngineIndex = row.findIndex(
-                        (_engine, index) =>
-                          selection?.familyIndex === familyIndex &&
-                          selection.engineIndex === startIndex + index,
-                      );
-                      const activeEngine =
-                        selectedRowEngineIndex >= 0 ? row[selectedRowEngineIndex] : null;
-                      const visibleRow = activeEngine ? [activeEngine] : row;
-                      const trailingRow = activeEngine
-                        ? row.filter((engine) => engine.code !== activeEngine.code)
-                        : [];
-
-                      const renderEngineCard = (engine: EngineRow) => {
-                        const originalIndex = validEngines.findIndex(
-                          (candidate) => candidate.code === engine.code,
-                        );
-                        const selected =
-                          selection?.familyIndex === familyIndex &&
-                          selection.engineIndex === originalIndex;
-                        const detail = getGuideDetail(engine.code, guideLookup);
-                        const years = deriveYears(engine.compatibleModels, detail?.years, strictData);
-                        const accordionHeading = buildAccordionHeading(engine, detail, years);
-                        const summaryCode = repairEngineCodeValue(detail?.code || engine.code);
-                        const summaryTitle = repairEngineTitleValue(
-                          detail?.code || engine.code,
-                          detail?.title || engine.title || "",
-                          detail?.size || engine.size,
-                          detail?.fuel || engine.fuel,
-                        );
-
-                        return (
-                          <article
-                            key={engine.code}
-                            className={`engine-card${selected ? " is-active" : ""}`}
-                          >
-                            <button
-                              className={`engine-summary${selected ? " is-selected" : ""}`}
-                              type="button"
-                              aria-expanded={selected}
-                              onClick={() => toggleSelection(familyIndex, originalIndex)}
-                            >
-                              <span className="engine-thumb" aria-hidden="true">
-                                <EngineIcon />
-                              </span>
-
-                              <span className="engine-main">
-                                {selected ? (
-                                  <span className="summary-heading">{accordionHeading}</span>
-                                ) : (
-                                  <span className="summary-line">
-                                    <strong>{summaryCode}</strong>
-                                    <small>{summaryTitle || toSummary(engine)}</small>
-                                  </span>
-                                )}
-                                <span className="engine-meta">{engine.power}</span>
-                              </span>
-
-                              <span className="price">
-                                {ui.summaryPriceLabel ? <small>{ui.summaryPriceLabel}</small> : null}
-                                <strong>{toPriceText(engine.avgRebuiltPrice)}</strong>
-                              </span>
-
-                              <span className="chev" aria-hidden="true">
-                                <ChevronIcon />
-                              </span>
-                            </button>
-                          </article>
-                        );
-                      };
-
-                      return (
-                        <div key={`${group.name}-${rowIndex}`} className="engine-row">
-                          {visibleRow.map(renderEngineCard)}
-
-                          <div className={`family-open-slot${activeEngine ? " is-visible" : ""}`}>
-                            {activeEngine ? (
-                              (() => {
-                                const detail = getGuideDetail(activeEngine.code, guideLookup);
-                                const years = deriveYears(
-                                  activeEngine.compatibleModels,
-                                  detail?.years,
-                                  strictData,
-                                );
-                                const detailImage = detail?.image || activeEngine.image;
-                                const quoteText = detail?.cta || activeEngine.cta || "";
-                                const engineHeading = buildEngineHeading(activeEngine, detail);
-                                const historyText = buildHistory(
-                                  activeEngine,
-                                  detail,
-                                  modelName,
-                                  strictData,
-                                );
-
-                                return (
-                                  <div className="engine-details">
-                                    <div className="open-panel">
-                                      <div className="hero-row">
-                                        <div className="image-frame">
-                                          <div className="image-placeholder">
-                                            <div className="engine-image">
-                                              {detailImage ? (
-                                                <Image
-                                                  src={detailImage}
-                                                  alt={`${repairEngineCodeValue(detail?.code || activeEngine.code)} engine`}
-                                                  fill
-                                                  className="object-contain"
-                                                  sizes="150px"
-                                                />
-                                              ) : null}
-                                            </div>
-                                            <div>
-                                              <strong>{repairEngineCodeValue(detail?.code || activeEngine.code)}</strong>
-                                              {ui.exampleImageLabel ? <span>{ui.exampleImageLabel}</span> : null}
-                                            </div>
-                                          </div>
-                                        </div>
-
-                                        <div className="hero-copy">
-                                          <div className="hero-top">
-                                            <div className="history-block">
-                                              <div className="engine-detail-heading">{engineHeading}</div>
-                                              {ui.historyLabel ? <span className="history-label">{ui.historyLabel}</span> : null}
-                                              {historyText ? <p>{historyText}</p> : null}
-                                            </div>
-
-                                            <div className="price-box">
-                                              {ui.summaryPriceLabel ? <small>{ui.summaryPriceLabel}</small> : null}
-                                              <strong>
-                                                {toPriceText(activeEngine.avgRebuiltPrice)}
-                                              </strong>
-                                              {ui.supplyLabel ? <span>{ui.supplyLabel}</span> : null}
-                                              {quoteText ? (
-                                                <a
-                                                  className="quote-link"
-                                                  href="#quote-form"
-                                                  data-quote-engine-code={repairEngineCodeValue(detail?.code || activeEngine.code)}
-                                                  data-quote-context={activeEngine.compatibleModels}
-                                                >
-                                                  <span className="quote-link-text">
-                                                    <span>{quoteText}</span>
-                                                  </span>
-                                                  <ArrowIcon />
-                                                </a>
-                                              ) : null}
-                                            </div>
-                                          </div>
-
-                                          <div className="variant-wrap">
-                                            {ui.variantsLabel ? <small>{ui.variantsLabel}</small> : null}
-                                            <div className="variant-tags">
-                                              {buildVariants(activeEngine, detail).map((variant) => (
-                                                <span key={variant}>{variant}</span>
-                                              ))}
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-
-                                      <div className="info-grid">
-                                        <section className="info-box specs-box">
-                                          {ui.specsTitle ? (
-                                            <h4>
-                                              <span className="icon">
-                                                <SpecsIcon />
-                                              </span>
-                                              {ui.specsTitle}
-                                            </h4>
-                                          ) : null}
-                                          <ul className="spec-list">
-                                            {ui.fuelLabel ? (
-                                            <li>
-                                              <span>{ui.fuelLabel}</span>
-                                              <strong>{detail?.fuel || activeEngine.fuel}</strong>
-                                            </li>
-                                            ) : null}
-                                            {ui.sizeLabel ? (
-                                            <li>
-                                              <span>{ui.sizeLabel}</span>
-                                              <strong>{detail?.size || activeEngine.size}</strong>
-                                            </li>
-                                            ) : null}
-                                            {ui.powerLabel ? (
-                                            <li>
-                                              <span>{ui.powerLabel}</span>
-                                              <strong>{detail?.power || activeEngine.power}</strong>
-                                            </li>
-                                            ) : null}
-                                            {ui.yearsLabel ? (
-                                            <li>
-                                              <span>{ui.yearsLabel}</span>
-                                              <strong>{years}</strong>
-                                            </li>
-                                            ) : null}
-                                          </ul>
-                                        </section>
-
-                                        <section className="info-box failures-box">
-                                          {ui.failuresTitle ? (
-                                            <h4>
-                                              <span className="icon">
-                                                <WarningIcon />
-                                              </span>
-                                              {ui.failuresTitle}
-                                            </h4>
-                                          ) : null}
-                                          <ul className="failure-list">
-                                            {buildFailures(detail, group.failureNote).map((failure) => (
-                                              <li key={failure}>{failure}</li>
-                                            ))}
-                                          </ul>
-                                        </section>
-                                      </div>
-
-                                      <div className="mobile-action-row">
-                                        <div className="mobile-price-summary">
-                                          {ui.summaryPriceLabel ? <small>{ui.summaryPriceLabel}</small> : null}
-                                          <strong>
-                                            {toPriceText(activeEngine.avgRebuiltPrice)}
-                                          </strong>
-                                          {ui.supplyLabel ? <span>{ui.supplyLabel}</span> : null}
-                                        </div>
-                                        {quoteText ? (
-                                          <a
-                                            className="quote-link"
-                                            href="#quote-form"
-                                            data-quote-engine-code={repairEngineCodeValue(detail?.code || activeEngine.code)}
-                                            data-quote-context={activeEngine.compatibleModels}
-                                          >
-                                            <span className="quote-link-text">
-                                              <span>{quoteText}</span>
-                                            </span>
-                                            <ArrowIcon />
-                                          </a>
-                                        ) : null}
-                                      </div>
-                                    </div>
-                                  </div>
-                                );
-                              })()
-                            ) : null}
-                          </div>
-
-                          {trailingRow.map(renderEngineCard)}
-                        </div>
-                      );
-                    })}
-                  </div>
-                </section>
-              );
-            })}
-
-            {closingLine || closingAction.title || closingAction.buttonText ? (
-            <div className="closing-card">
-              <div className="closing-icon">
-                <CarIcon />
-              </div>
-              <div>
-                {closingAction.title ? <h3>{closingAction.title}</h3> : null}
-                {closingLine ? <p>{closingLine}</p> : null}
-              </div>
-              {closingAction.buttonText ? (
-                <a href="#quote-form" className="cta-btn">
-                  {closingAction.buttonText}
-                  <ArrowIcon />
-                </a>
-              ) : null}
-            </div>
-            ) : null}
           </div>
         </div>
       </Container>
 
-      <style jsx global>{`
-        .model-engine-codes svg {
-          fill: none;
-          stroke: currentColor;
-          stroke-width: 2;
-          stroke-linecap: round;
-          stroke-linejoin: round;
-        }
-
-        .model-engine-codes .engine-codes-section {
-          padding: 42px 18px 64px;
-        }
-
-        .model-engine-codes .ecs-container {
-          max-width: 1240px;
-          margin: 0 auto;
-        }
-
-        .model-engine-codes .ecs-header {
-          max-width: 960px;
-          margin: 0 auto 24px;
-          text-align: center;
-        }
-
-        .model-engine-codes .tag {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          min-height: 34px;
-          padding: 0 16px;
-          border-radius: 999px;
-          background: linear-gradient(180deg, #16355d 0%, #081a34 100%);
-          color: #ffffff;
-          font-size: 12px;
-          font-weight: 800;
-          letter-spacing: 0.12em;
-          text-transform: uppercase;
-          box-shadow: 0 8px 20px rgba(8, 26, 52, 0.14);
-          margin-bottom: 14px;
-        }
-
-        .model-engine-codes .ecs-header h2 {
-          margin: 0 0 10px;
-          font-size: clamp(31px, 4vw, 52px);
-          line-height: 1.03;
-          letter-spacing: -0.04em;
-          color: #10203a;
-        }
-
-        .model-engine-codes .ecs-header p {
-          margin: 0;
-          color: #64748b;
-          font-size: 16px;
-          line-height: 1.55;
-        }
-
-        .model-engine-codes .engine-family {
-          margin-top: 24px;
-        }
-
-        .model-engine-codes .family-title {
-          display: flex;
-          align-items: center;
-          gap: 12px;
-          margin-bottom: 12px;
-        }
-
-        .model-engine-codes .family-icon {
-          width: 38px;
-          height: 38px;
-          border-radius: 12px;
-          background: #f5f8fc;
-          color: #0d1b2e;
-          display: grid;
-          place-items: center;
-          flex: 0 0 auto;
-        }
-
-        .model-engine-codes .family-icon svg,
-        .model-engine-codes .closing-icon svg {
-          width: 24px;
-          height: 24px;
-        }
-
-        .model-engine-codes .family-title h3 {
-          margin: 0;
-          font-size: 26px;
-          letter-spacing: -0.03em;
-          color: #10203a;
-        }
-
-        .model-engine-codes .family-title p {
-          margin: 4px 0 0;
-          color: #64748b;
-          font-size: 14px;
-          line-height: 1.45;
-        }
-
-        .model-engine-codes .engine-list {
-          display: grid;
-          gap: 10px;
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-
-        .model-engine-codes .engine-row {
-          display: contents;
-        }
-
-        .model-engine-codes .engine-card {
-          min-width: 0;
-        }
-
-        .model-engine-codes .engine-card.is-active {
-          grid-column: 1 / -1;
-        }
-
-        .model-engine-codes .engine-summary {
-          width: 100%;
-          border: 1px solid #dfe7ef;
-          border-radius: 20px;
-          background: #ffffff;
-          box-shadow: 0 12px 30px rgba(12, 29, 53, 0.06);
-          display: grid;
-          grid-template-columns: 54px minmax(0, 1fr) minmax(122px, 150px) 16px;
-          align-items: center;
-          gap: 10px;
-          min-height: 76px;
-          padding: 14px 16px;
-          text-align: left;
-          color: inherit;
-          cursor: pointer;
-          transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-        }
-
-        .model-engine-codes .engine-summary:hover {
-          background: #fbfdff;
-        }
-
-        .model-engine-codes .engine-summary.is-selected {
-          grid-template-columns: minmax(0, 1fr) 16px;
-          min-height: 60px;
-          padding: 10px 14px;
-          border-radius: 20px 20px 0 0;
-          border-color: #b8cadb;
-          box-shadow: 0 10px 22px rgba(16, 39, 68, 0.08);
-          background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
-        }
-
-        .model-engine-codes .engine-thumb {
-          width: 48px;
-          height: 48px;
-          border-radius: 14px;
-          border: 1px solid #d7e2ec;
-          background: linear-gradient(180deg, #eef3f9 0%, #dfe8f2 100%);
-          color: #334155;
-          display: grid;
-          place-items: center;
-        }
-
-        .model-engine-codes .engine-thumb svg {
-          width: 22px;
-          height: 22px;
-        }
-
-        .model-engine-codes .engine-main {
-          min-width: 0;
-        }
-
-        .model-engine-codes .summary-line {
-          display: block;
-        }
-
-        .model-engine-codes .summary-heading {
-          display: block;
-          margin: 0;
-          color: #10203a;
-          font-size: 18px;
-          font-weight: 800;
-          line-height: 1.2;
-          letter-spacing: -0.03em;
-        }
-
-        .model-engine-codes .summary-line strong {
-          display: block;
-          margin: 0 0 3px;
-          font-family: Consolas, "SFMono-Regular", monospace;
-          font-size: 20px;
-          line-height: 1;
-          letter-spacing: -0.05em;
-          color: #10203a;
-        }
-
-        .model-engine-codes .summary-separator {
-          display: none;
-          color: #5b6d84;
-          font-size: 13px;
-          font-weight: 800;
-          line-height: 1;
-        }
-
-        .model-engine-codes .summary-line small {
-          display: block;
-          margin: 0;
-          color: #2c3b50;
-          font-size: 12px;
-          font-weight: 500;
-          line-height: 1.3;
-        }
-
-        .model-engine-codes .summary-years {
-          display: none;
-          font-size: 13px;
-          font-weight: 500;
-          line-height: 1.2;
-          color: #64748b;
-        }
-
-        .model-engine-codes .engine-meta {
-          margin-top: 4px;
-          color: #64748b;
-          font-size: 10px;
-          font-weight: 700;
-          letter-spacing: 0.04em;
-          text-transform: uppercase;
-        }
-
-        .model-engine-codes .price {
-          text-align: right;
-          padding-left: 4px;
-        }
-
-        .model-engine-codes .price small {
-          display: block;
-          color: #64748b;
-          font-size: 8px;
-          font-weight: 800;
-          letter-spacing: 0.12em;
-          text-transform: uppercase;
-          margin-bottom: 4px;
-        }
-
-        .model-engine-codes .price strong {
-          color: #13823d;
-          font-size: 18px;
-          line-height: 0.96;
-          letter-spacing: -0.05em;
-        }
-
-        .model-engine-codes .chev {
-          color: #13823d;
-          display: grid;
-          place-items: center;
-          transition: transform 0.2s ease;
-        }
-
-        .model-engine-codes .chev svg {
-          width: 18px;
-          height: 18px;
-        }
-
-        .model-engine-codes .engine-summary.is-selected .chev {
-          transform: rotate(180deg);
-        }
-
-        .model-engine-codes .engine-summary.is-selected .engine-thumb,
-        .model-engine-codes .engine-summary.is-selected .price,
-        .model-engine-codes .engine-summary.is-selected .engine-meta {
-          display: none;
-        }
-
-        .model-engine-codes .family-open-slot {
-          grid-column: 1 / -1;
-          display: none;
-          margin-top: -14px;
-        }
-
-        .model-engine-codes .family-open-slot.is-visible {
-          display: block;
-        }
-
-        .model-engine-codes .open-panel {
-          display: grid;
-          grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
-          column-gap: 12px;
-          background: linear-gradient(135deg, #081a34 0%, #0d2848 100%);
-          border-radius: 0 0 18px 18px;
-          box-shadow: 0 18px 30px rgba(11, 31, 57, 0.26);
-          overflow: hidden;
-          padding: 0 12px 5px;
-        }
-
-        .model-engine-codes .hero-row {
-          display: grid;
-          grid-template-columns: 150px minmax(0, 1fr);
-          color: #ffffff;
-          overflow: hidden;
-        }
-
-        .model-engine-codes .image-frame {
-          padding: 8px;
-          display: flex;
-          align-items: center;
-        }
-
-        .model-engine-codes .image-placeholder {
-          width: 100%;
-          max-height: 96px;
-          border-radius: 16px;
-          background: linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%);
-          display: grid;
-          place-items: center;
-          text-align: center;
-          padding: 10px;
-        }
-
-        .model-engine-codes .engine-image {
-          position: relative;
-          width: 100%;
-          aspect-ratio: 1 / 1;
-          max-height: 96px;
-        }
-
-        .model-engine-codes .image-placeholder strong {
-          display: block;
-          font-size: 10px;
-          line-height: 1.3;
-        }
-
-        .model-engine-codes .image-placeholder span {
-          display: block;
-          margin-top: 3px;
-          color: #bfd0e1;
-          font-size: 8px;
-          line-height: 1.32;
-        }
-
-        .model-engine-codes .hero-copy {
-          padding: 12px 16px 4px 12px;
-          display: grid;
-          gap: 8px;
-        }
-
-        .model-engine-codes .hero-top {
-          display: grid;
-          grid-template-columns: minmax(0, 1fr) 180px;
-          gap: 8px;
-          align-items: start;
-        }
-
-        .model-engine-codes .hero-copy p {
-          margin: 0;
-          color: #e1ebf5;
-          font-size: 11px;
-          line-height: 1.4;
-        }
-
-        .model-engine-codes .engine-detail-heading {
-          margin: 0 0 6px;
-          color: #ffffff;
-          font-size: 15px;
-          font-weight: 800;
-          line-height: 1.25;
-          letter-spacing: -0.02em;
-        }
-
-        .model-engine-codes .history-label {
-          display: block;
-          margin: 0 0 5px;
-          color: #ffffff;
-          font-size: 13px;
-          font-weight: 800;
-          line-height: 1.2;
-        }
-
-        .model-engine-codes .price-box {
-          width: 100%;
-          max-width: 178px;
-          justify-self: end;
-          padding: 2px 0 2px 16px;
-          border-left: 1px solid rgba(255, 255, 255, 0.16);
-        }
-
-        .model-engine-codes .price-box small,
-        .model-engine-codes .mobile-price-summary small,
-        .model-engine-codes .variant-wrap small {
-          display: block;
-          color: #bfd0e1;
-          font-size: 9px;
-          font-weight: 800;
-          letter-spacing: 0.12em;
-          text-transform: uppercase;
-        }
-
-        .model-engine-codes .price-box strong,
-        .model-engine-codes .mobile-price-summary strong {
-          display: block;
-          color: #42d272;
-          font-size: 18px;
-          line-height: 1;
-          letter-spacing: -0.05em;
-          margin: 4px 0;
-        }
-
-        .model-engine-codes .price-box span,
-        .model-engine-codes .mobile-price-summary span {
-          display: block;
-          color: #bfd0e1;
-          font-size: 9px;
-          line-height: 1.4;
-          margin-bottom: 6px;
-        }
-
-        .model-engine-codes .quote-link {
-          display: inline-flex;
-          align-items: center;
-          gap: 6px;
-          color: #42d272;
-          font-size: 10px;
-          font-weight: 800;
-          line-height: 1.35;
-        }
-
-        .model-engine-codes .quote-link-text {
-          display: inline-grid;
-          gap: 1px;
-        }
-
-        .model-engine-codes .quote-link svg,
-        .model-engine-codes .cta-btn svg {
-          width: 14px;
-          height: 14px;
-        }
-
-        .model-engine-codes .variant-wrap {
-          display: grid;
-          gap: 6px;
-          margin-top: -8px;
-        }
-
-        .model-engine-codes .variant-tags {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 6px;
-        }
-
-        .model-engine-codes .variant-tags span {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          min-height: 22px;
-          padding: 0 9px;
-          border-radius: 2px;
-          background: linear-gradient(180deg, rgba(255, 255, 255, 0.11) 0%, rgba(255, 255, 255, 0.05) 100%);
-          border: 1px solid rgba(255, 255, 255, 0.16);
-          color: #f7fbff;
-          font-size: 8px;
-          font-weight: 700;
-          line-height: 1;
-        }
-
-        .model-engine-codes .info-grid {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 8px;
-          padding: 8px 0 0;
-        }
-
-        .model-engine-codes .info-box {
-          border: 1px solid #dfe7ef;
-          border-radius: 4px;
-          background: #ffffff;
-          padding: 9px 9px 6px;
-        }
-
-        .model-engine-codes .info-box h4 {
-          margin: 0 0 7px;
-          display: flex;
-          align-items: center;
-          gap: 8px;
-          font-size: 12px;
-          letter-spacing: -0.02em;
-          color: #10203a;
-        }
-
-        .model-engine-codes .info-box .icon {
-          width: 24px;
-          height: 24px;
-          border-radius: 10px;
-          display: grid;
-          place-items: center;
-          flex: 0 0 auto;
-        }
-
-        .model-engine-codes .specs-box .icon {
-          background: #eef5fb;
-          color: #274564;
-        }
-
-        .model-engine-codes .failures-box .icon {
-          background: #fff2f2;
-          color: #c73a3a;
-        }
-
-        .model-engine-codes .spec-list,
-        .model-engine-codes .failure-list {
-          list-style: none;
-          margin: 0;
-          padding: 0;
-          display: grid;
-          gap: 5px;
-        }
-
-        .model-engine-codes .spec-list li {
-          display: flex;
-          justify-content: space-between;
-          gap: 10px;
-          padding: 3px 0;
-          border-bottom: 1px solid #e8eef5;
-        }
-
-        .model-engine-codes .spec-list li:last-child {
-          border-bottom: 0;
-          padding-bottom: 1px;
-        }
-
-        .model-engine-codes .spec-list span {
-          color: #64748b;
-          font-size: 10px;
-          line-height: 1.2;
-        }
-
-        .model-engine-codes .spec-list strong {
-          font-size: 11px;
-          line-height: 1.2;
-          text-align: right;
-          color: #10203a;
-        }
-
-        .model-engine-codes .failure-list li {
-          position: relative;
-          padding-left: 12px;
-          color: #2d3e55;
-          font-size: 10px;
-          line-height: 1.28;
-        }
-
-        .model-engine-codes .failure-list li::before {
-          content: "";
-          position: absolute;
-          top: 6px;
-          left: 0;
-          width: 6px;
-          height: 6px;
-          border-radius: 50%;
-          background: #c73a3a;
-          box-shadow: 0 0 0 3px rgba(199, 58, 58, 0.14);
-        }
-
-        .model-engine-codes .mobile-action-row {
-          display: none;
-        }
-
-        .model-engine-codes .closing-card {
-          margin-top: 30px;
-          border: 1px solid #0d1b2e;
-          border-radius: 22px;
-          background: #ffffff;
-          display: grid;
-          grid-template-columns: 74px 1fr auto;
-          gap: 16px;
-          align-items: center;
-          padding: 18px;
-          box-shadow: 0 12px 30px rgba(12, 29, 53, 0.06);
-        }
-
-        .model-engine-codes .closing-icon {
-          width: 58px;
-          height: 58px;
-          border-radius: 16px;
-          background: #f5f8fc;
-          color: #0d1b2e;
-          display: grid;
-          place-items: center;
-        }
-
-        .model-engine-codes .closing-card h3 {
-          margin: 0 0 6px;
-          font-size: 20px;
-          letter-spacing: -0.03em;
-          color: #10203a;
-        }
-
-        .model-engine-codes .closing-card p {
-          margin: 0;
-          color: #40546c;
-          font-size: 14px;
-          line-height: 1.5;
-        }
-
-        .model-engine-codes .cta-btn {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          gap: 10px;
-          min-height: 48px;
-          padding: 0 20px;
-          border-radius: 14px;
-          background: #0d1b2e;
-          color: #ffffff;
-          font-size: 15px;
-          font-weight: 800;
-          white-space: nowrap;
-          box-shadow: 0 10px 20px rgba(13, 27, 46, 0.18);
-        }
-
-        @media (max-width: 920px) {
-          .model-engine-codes .engine-list,
-          .model-engine-codes .open-panel {
-            grid-template-columns: 1fr;
-          }
-
-          .model-engine-codes .hero-row {
-            grid-template-columns: 132px minmax(0, 1fr);
-          }
-
-          .model-engine-codes .hero-top {
-            grid-template-columns: minmax(0, 1fr) 188px;
-          }
-
-          .model-engine-codes .closing-card {
-            grid-template-columns: 1fr;
-          }
-        }
-
-        @media (max-width: 720px) {
-          .model-engine-codes .engine-codes-section {
-            padding: 34px 12px 50px;
-          }
-
-          .model-engine-codes .ecs-header h2 {
-            font-size: 32px;
-          }
-
-          .model-engine-codes .ecs-header p,
-          .model-engine-codes .family-title p {
-            font-size: 15px;
-          }
-
-          .model-engine-codes .family-title h3 {
-            font-size: 24px;
-          }
-
-          .model-engine-codes .engine-summary {
-            grid-template-columns: 44px minmax(0, 1fr) minmax(104px, 122px) 14px;
-            gap: 8px;
-            padding: 12px;
-            min-height: 70px;
-          }
-
-          .model-engine-codes .engine-thumb {
-            width: 40px;
-            height: 40px;
-            border-radius: 12px;
-          }
-
-          .model-engine-codes .engine-thumb svg {
-            width: 19px;
-            height: 19px;
-          }
-
-          .model-engine-codes .summary-line strong {
-            font-size: 18px;
-          }
-
-          .model-engine-codes .summary-line small {
-            font-size: 11px;
-          }
-
-          .model-engine-codes .summary-heading {
-            font-size: 16px;
-          }
-
-          .model-engine-codes .price strong {
-            font-size: 16px;
-          }
-
-          .model-engine-codes .open-panel {
-            padding: 0 10px 5px;
-          }
-
-          .model-engine-codes .info-grid {
-            grid-template-columns: 1fr 1fr;
-          }
-
-          .model-engine-codes .hero-row {
-            grid-template-columns: 120px minmax(0, 1fr);
-          }
-
-          .model-engine-codes .hero-top {
-            grid-template-columns: 1fr;
-          }
-
-          .model-engine-codes .price-box {
-            display: none;
-          }
-
-          .model-engine-codes .mobile-action-row {
-            display: grid;
-            gap: 10px;
-            padding: 8px 0 4px;
-          }
-        }
-      `}</style>
+      {renderableGroups.length > 1 && (
+        <div className="max-w-[800px] mx-auto bg-[linear-gradient(180deg,#0d1b2e_0%,#081a34_100%)] py-[24px] max-[720px]:bg-transparent max-[720px]:py-[0px] shadow-[0_4px_20px_rgba(8,26,52,0.15)] max-[720px]:shadow-none">
+          <div className="max-w-[1240px] mx-auto px-[18px] max-[720px]:px-0">
+            <div className="flex gap-[8px] rounded-[16px] bg-white/4 shadow-[inset_0_2px_8px_rgba(0,0,0,0.2)] max-[720px]:gap-0 max-[720px]:overflow-hidden max-[720px]:rounded-none max-[720px]:border max-[720px]:border-[#dfe7ef] max-[720px]:bg-white max-[720px]:shadow-[0_8px_18px_rgba(13,27,46,0.06)] max-[720px]:p-0">
+              {renderableGroups.map((entry, index) => {
+                const isActive = index === safeActiveIndex;
+                return (
+                  <button
+                    key={entry.group.name}
+                    type="button"
+                    className={`flex-1 min-w-0 inline-flex items-center justify-center gap-[8px] py-[12px] px-[16px] rounded-[12px] border border-transparent text-[14px] font-bold tracking-[0.01em] cursor-pointer transition-all duration-200 text-[#bfd0e1] max-[720px]:gap-[6px] max-[720px]:rounded-none max-[720px]:border-y-0 max-[720px]:border-l-0 max-[720px]:px-[10px] max-[720px]:py-[13px] max-[720px]:text-[13px] ${index < renderableGroups.length - 1 ? "max-[720px]:border-r max-[720px]:border-r-[#dfe7ef]" : ""} ${isActive
+                      ? "bg-[linear-gradient(180deg,#1a3a66_0%,#0f2a4e_100%)] border-[#2a6dd6] text-white shadow-[0_0_0_2px_rgba(42,109,214,1),0_0_10px_rgba(42,109,214,0.8),0_0_25px_rgba(42,109,214,0.6),0_0_50px_rgba(42,109,214,0.4),0_8px_20px_rgba(42,109,214,0.5)] max-[720px]:shadow-[inset_0_1px_0_rgba(255,255,255,0.14),0_0_0_1px_rgba(42,109,214,0.95),0_0_12px_rgba(42,109,214,0.35)]"
+                      : "bg-transparent hover:text-white hover:bg-white/6 max-[720px]:bg-white max-[720px]:text-[#10203a] max-[720px]:shadow-none"
+                      }`}
+                    onClick={() => handleTabClick(index)}
+                    aria-selected={isActive}
+                    role="tab"
+                  >
+                    <span className="w-[20px] h-[20px] grid place-items-center text-current">
+                      {getFuelIcon(entry.group.name, "w-[18px] h-[18px] max-[720px]:w-[16px] max-[720px]:h-[16px]")}
+                    </span>
+                    <span className="whitespace-nowrap overflow-hidden text-ellipsis max-[420px]:text-[12px]">{entry.group.name}</span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      )}
+
+      <Container className="max-w-[1400px]">
+        <div className="py-[42px] px-[18px] pb-[64px] max-[720px]:px-[12px] max-[720px]:pt-[10px] max-[720px]:pb-[50px]">
+          <div className="max-w-[1240px] mx-auto">
+            {activeGroupEntry ? (
+              <section className="mt-[24px]">
+                <div className="flex items-center gap-[12px] mb-[12px] max-[720px]:hidden">
+                  <span className="w-[38px] h-[38px] rounded-[12px] bg-[#f5f8fc] text-[#0d1b2e] grid place-items-center flex-shrink-0">
+                    {getFuelIcon(activeGroupEntry.group.name, "w-[24px] h-[24px]")}
+                  </span>
+                  <div>
+                    <h3 className="text-[26px] tracking-[-0.03em] text-[#10203a] max-[720px]:text-[24px]">{activeGroupEntry.group.name}</h3>
+                    <p className="mt-[4px] text-[#64748b] text-[14px] leading-[1.45] max-[720px]:text-[15px]">{activeGroupEntry.group.era}</p>
+                  </div>
+                </div>
+                <p className="hidden max-[720px]:block mb-[12px] text-[#64748b] text-[14px] leading-[1.45]">
+                  {activeGroupEntry.group.era}
+                </p>
+
+                <div className="grid gap-[10px] grid-cols-2 max-[920px]:grid-cols-1 max-[720px]:gap-[2px]">
+                  {chunkEngines(activeGroupEntry.validEngines).map((row, rowIndex) => {
+                    const startIndex = rowIndex * 2;
+                    const selectedRowEngineIndex = row.findIndex(
+                      (_engine, index) =>
+                        selection?.familyIndex === safeActiveIndex &&
+                        selection.engineIndex === startIndex + index,
+                    );
+                    const activeEngine =
+                      selectedRowEngineIndex >= 0 ? row[selectedRowEngineIndex] : null;
+                    const visibleRow = activeEngine ? [activeEngine] : row;
+                    const trailingRow = activeEngine
+                      ? row.filter((engine) => engine.code !== activeEngine.code)
+                      : [];
+
+                    const renderEngineCard = (engine: EngineRow) => {
+                      const originalIndex = activeGroupEntry.validEngines.findIndex(
+                        (candidate) => candidate.code === engine.code,
+                      );
+                      const selected =
+                        selection?.familyIndex === safeActiveIndex &&
+                        selection.engineIndex === originalIndex;
+                      const detail = getGuideDetail(engine.code, guideLookup);
+                      const years = deriveYears(engine.compatibleModels, detail?.years, strictData);
+                      const accordionHeading = buildAccordionHeading(engine, detail, years);
+                      const summaryCode = repairEngineCodeValue(detail?.code || engine.code);
+                      const summaryTitle = repairEngineTitleValue(
+                        detail?.code || engine.code,
+                        detail?.title || engine.title || "",
+                        detail?.size || engine.size,
+                        detail?.fuel || engine.fuel,
+                      );
+
+                      return (
+                        <article
+                          key={engine.code}
+                          className={`min-w-0 ${selected ? "col-span-full" : ""}`}
+                        >
+                          <button
+                            className={`w-full border border-[#dfe7ef] rounded-[20px] bg-white shadow-[0_12px_30px_rgba(12,29,53,0.06)] grid items-center gap-[10px] text-left text-inherit cursor-pointer transition-all duration-200 hover:bg-[#fbfdff] max-[720px]:rounded-none ${selected
+                              ? "grid-cols-[minmax(0,1fr)_16px] min-h-[60px] py-[10px] px-[14px] rounded-t-[20px] rounded-b-none border-[#b8cadb] shadow-[0_10px_22px_rgba(16,39,68,0.08)] bg-[linear-gradient(180deg,#ffffff_0%,#fbfdff_100%)] max-[720px]:min-h-[60px] max-[720px]:py-[10px] max-[720px]:px-[14px] max-[720px]:rounded-none"
+                              : "grid-cols-[54px_minmax(0,1fr)_minmax(122px,150px)_16px] min-h-[76px] py-[14px] px-[16px] max-[720px]:grid-cols-[44px_minmax(0,1fr)_minmax(104px,122px)_14px] max-[720px]:gap-[8px] max-[720px]:p-[12px] max-[720px]:min-h-[70px]"
+                              }`}
+                            type="button"
+                            aria-expanded={selected}
+                            onClick={() => toggleSelection(safeActiveIndex, originalIndex)}
+                          >
+                            {!selected && (
+                              <span className="w-[48px] h-[48px] rounded-[14px] border border-[#d7e2ec] bg-[linear-gradient(180deg,#eef3f9_0%,#dfe8f2_100%)] text-[#334155] grid place-items-center max-[720px]:w-[40px] max-[720px]:h-[40px] max-[720px]:rounded-none">
+                                <EngineIcon className="w-[22px] h-[22px] max-[720px]:w-[19px] max-[720px]:h-[19px]" />
+                              </span>
+                            )}
+
+                            <span className="min-w-0">
+                              {selected ? (
+                                <span className="block text-[#10203a] text-[18px] font-extrabold leading-[1.2] tracking-[-0.03em] max-[720px]:text-[16px]">{accordionHeading}</span>
+                              ) : (
+                                <span className="block">
+                                  <strong className="block font-[Consolas,'SFMono-Regular',monospace] text-[20px] leading-[1] tracking-[-0.05em] text-[#10203a] max-[720px]:text-[18px]">{summaryCode}</strong>
+                                  <small className="block text-[#2c3b50] text-[12px] font-medium leading-[1.3] max-[720px]:text-[11px]">{summaryTitle || toSummary(engine)}</small>
+                                </span>
+                              )}
+                              {!selected && <span className="block mt-[4px] text-[#64748b] text-[10px] font-bold tracking-[0.04em] uppercase">{engine.power}</span>}
+                            </span>
+
+                            {!selected && (
+                              <span className="text-right pl-[4px]">
+                                {ui.summaryPriceLabel && <small className="block text-[#64748b] text-[8px] font-extrabold tracking-[0.12em] uppercase mb-[4px]">{ui.summaryPriceLabel}</small>}
+                                <strong className="text-[#13823d] text-[18px] leading-[0.96] tracking-[-0.05em] max-[720px]:text-[16px]">{toPriceText(engine.avgRebuiltPrice)}</strong>
+                              </span>
+                            )}
+
+                            <span className={`text-[#13823d] grid place-items-center transition-transform duration-200 ${selected ? "rotate-180" : ""}`}>
+                              <ChevronIcon />
+                            </span>
+                          </button>
+                        </article>
+                      );
+                    };
+
+                    return (
+                      <div key={`${activeGroupEntry.group.name}-${rowIndex}`} className="contents">
+                        {visibleRow.map(renderEngineCard)}
+
+                        <div className={`col-span-full ${activeEngine ? "block" : "hidden"} -mt-[14px]`}>
+                          {activeEngine ? (
+                            (() => {
+                              const detail = getGuideDetail(activeEngine.code, guideLookup);
+                              const years = deriveYears(
+                                activeEngine.compatibleModels,
+                                detail?.years,
+                                strictData,
+                              );
+                              const detailImage = detail?.image || activeEngine.image;
+                              const quoteText = detail?.cta || activeEngine.cta || "";
+                              const engineHeading = buildEngineHeading(activeEngine, detail);
+                              const historyText = buildHistory(
+                                activeEngine,
+                                detail,
+                                modelName,
+                                strictData,
+                              );
+
+                              return (
+                                <div>
+                                  <div className="grid grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] gap-x-[12px] bg-[linear-gradient(135deg,#081a34_0%,#0d2848_100%)] rounded-b-[18px] shadow-[0_18px_30px_rgba(11,31,57,0.26)] overflow-hidden pt-0 px-[12px] pb-[2px] max-[920px]:grid-cols-1 max-[720px]:rounded-none max-[720px]:px-[10px] max-[720px]:pb-[2px]">
+                                    <div className="grid grid-cols-[150px_minmax(0,1fr)] text-white overflow-hidden max-[920px]:grid-cols-[132px_minmax(0,1fr)] max-[720px]:grid-cols-[120px_minmax(0,1fr)]">
+
+                                      {/* Image Column - Tighter padding */}
+                                      <div className="p-[4px] flex items-center">
+                                        <div className="w-full max-h-[150px] rounded-[16px] grid place-items-center text-center">
+                                          <div className="engine-image relative w-full aspect-square max-h-[150px]">
+                                            {detailImage ? (
+                                              <Image
+                                                src={detailImage}
+                                                alt={`${repairEngineCodeValue(detail?.code || activeEngine.code)} engine`}
+                                                fill
+                                                className="object-contain"
+                                                sizes="150px"
+                                              />
+                                            ) : null}
+                                          </div>
+                                        </div>
+                                      </div>
+
+                                      {/* Text Column - Tighter padding and gap */}
+                                      <div className="grid gap-[3px] py-[4px] px-[16px] pt-[4px] pl-[12px] max-[720px]:gap-[8px] max-[720px]:px-[10px] max-[720px]:pt-[6px] max-[720px]:pb-[4px]">
+                                        <div className="grid grid-cols-[minmax(0,1fr)_180px] gap-[8px] items-start max-[920px]:grid-cols-[minmax(0,1fr)_188px] max-[720px]:grid-cols-1">
+                                          <div>
+                                            {/* Reduced margins */}
+                                            <div className="mb-[2px] text-white text-[15px] font-extrabold leading-[1.25] tracking-[-0.02em]">{engineHeading}</div>
+                                            {ui.historyLabel && <span className="block mb-[1px] text-white text-[13px] font-extrabold leading-[1.2] max-[720px]:mb-[6px] max-[720px]:pt-[6px]">{ui.historyLabel}</span>}
+                                            {historyText && <p className="text-[#e1ebf5] text-[11px] leading-[1.4] max-[720px]:leading-[1.5]">{historyText}</p>}
+                                          </div>
+
+                                          {/* Price & Quote Column */}
+                                          <div className="w-full max-w-[178px] justify-self-end py-[2px] pl-[16px] max-[720px]:hidden">
+
+                                            {/* Glass Price Box - Minimal padding */}
+                                            <div className="relative overflow-hidden rounded-xl border border-green-400 bg-[#0d1526]/50 backdrop-blur-xl shadow-[0_0_15px_rgba(74,222,128,0.5),inset_0_0_12px_rgba(74,222,128,0.3)] mb-1">
+                                              <div
+                                                className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-white/20 pointer-events-none"
+                                                style={{ clipPath: 'polygon(60% 0, 100% 0, 100% 100%, 40% 100%)' }}
+                                              />
+                                              <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent" />
+
+                                              <div className="relative z-10 px-3 py-1.5">
+                                                {ui.summaryPriceLabel && (
+                                                  <small className="block text-[#bfd0e1] text-[9px] font-extrabold tracking-[0.12em] uppercase">
+                                                    {ui.summaryPriceLabel}
+                                                  </small>
+                                                )}
+                                                <strong className="block text-[#42d272] text-[18px] leading-[1] tracking-[-0.05em] my-[1px]">
+                                                  {toPriceText(activeEngine.avgRebuiltPrice)}
+                                                </strong>
+                                                {ui.supplyLabel && (
+                                                  <span className="block text-[#bfd0e1] text-[9px] leading-[1.4]">
+                                                    {ui.supplyLabel}
+                                                  </span>
+                                                )}
+                                              </div>
+                                            </div>
+
+                                            {/* Quote Button - Minimal padding */}
+                                            {quoteText && (
+                                              <a
+  className="group flex w-full items-center justify-between gap-2 rounded-xl bg-[#050b14] py-1 px-2 shadow-[0_0_0_1px_rgba(30,144,255,1),0_0_12px_rgba(30,144,255,0.4),inset_0_0_8px_rgba(30,144,255,0.1)] transition hover:shadow-[0_0_0_1px_rgba(30,144,255,1),0_0_20px_rgba(30,144,255,0.6),inset_0_0_12px_rgba(30,144,255,0.2)]"
+  href="#quote-form"
+  data-quote-engine-code={repairEngineCodeValue(detail?.code || activeEngine.code)}
+  data-quote-context={activeEngine.compatibleModels}
+>
+  <div className="flex-shrink-0 text-[#1e90ff]">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+      <polyline points="14 2 14 8 20 8" />
+      <line x1="16" y1="13" x2="8" y2="13" />
+      <line x1="16" y1="17" x2="8" y2="17" />
+      <circle cx="18" cy="18" r="3.5" fill="#050b14" stroke="currentColor" />
+      <text x="18" y="20" fontSize="7" fontWeight="bold" fill="currentColor" textAnchor="middle" fontFamily="sans-serif">£</text>
+    </svg>
+  </div>
+  <span className="flex-1 text-[10px] font-bold leading-snug text-[#f1f5f9]">
+    {quoteText}
+  </span>
+</a>
+                                            )}
+                                          </div>
+                                        </div>
+
+                                        {/* Variants Section - Desktop only (hidden on mobile) */}
+                                        <div className="grid gap-[2px] border-t border-white/16 pt-[4px] max-[720px]:hidden">
+                                          {ui.variantsLabel && <small className="block text-[#bfd0e1] text-[9px] font-extrabold tracking-[0.12em] uppercase">{ui.variantsLabel}</small>}
+                                          <div className="flex flex-wrap gap-[6px]">
+                                            {buildVariants(activeEngine, detail).map((variant) => (
+                                              <span key={variant} className="inline-flex items-center justify-center min-h-[20px] px-[8px] rounded-[4px] bg-[linear-gradient(180deg,#1a3a66_0%,#0f2a4e_100%)] text-white text-[8px] font-bold leading-[1] shadow-[0_0_0_1px_rgba(42,109,214,1),0_0_10px_rgba(42,109,214,0.8),0_0_25px_rgba(42,109,214,0.6),0_0_50px_rgba(42,109,214,0.4),0_8px_20px_rgba(42,109,214,0.5)] max-[720px]:rounded-none">{variant}</span>
+                                            ))}
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    {/* Variants Section - Mobile only (below image + text row) */}
+                                    <div className="hidden max-[720px]:grid gap-[6px] border-t border-white/16 pt-[10px] px-[10px] pb-[4px]">
+                                      {ui.variantsLabel && <small className="block text-[#bfd0e1] text-[9px] font-extrabold tracking-[0.12em] uppercase max-[720px]:mb-[2px]">{ui.variantsLabel}</small>}
+                                      <div className="flex flex-wrap gap-[6px]">
+                                        {buildVariants(activeEngine, detail).map((variant) => (
+                                          <span key={variant} className="inline-flex items-center justify-center min-h-[22px] px-[8px] rounded-[3px] bg-[linear-gradient(180deg,#1a3a66_0%,#0f2a4e_100%)] text-white text-[8px] font-bold leading-[1] shadow-[0_0_0_1px_rgba(42,109,214,1),0_0_10px_rgba(42,109,214,0.8),0_0_25px_rgba(42,109,214,0.6),0_0_50px_rgba(42,109,214,0.4),0_8px_20px_rgba(42,109,214,0.5)] rounded-none">{variant}</span>
+                                        ))}
+                                      </div>
+                                    </div>
+
+                                    {/* Specs & Failures Columns - Tighter top padding */}
+                                    <div className="grid grid-cols-2 gap-[8px] pt-[4px] max-[720px]:pt-[8px]">
+                                      <section className="border border-[#dfe7ef] rounded-[4px] bg-white py-[4px] px-[9px] pb-[4px] max-[720px]:rounded-none">
+                                        {ui.specsTitle && (
+                                          <h4 className="mb-[3px] flex items-center gap-[8px] text-[12px] tracking-[-0.02em] text-[#10203a] max-[720px]:mb-[6px]">
+                                            <span className="w-[24px] h-[24px] rounded-[10px] grid place-items-center flex-shrink-0 bg-[#eef5fb] text-[#274564] max-[720px]:hidden">
+                                              <SpecsIcon />
+                                            </span>
+                                            {ui.specsTitle}
+                                          </h4>
+                                        )}
+                                        <ul className="list-none m-0 pt-4 grid gap-[8px] max-[720px]:pt-[2px] max-[720px]:gap-[10px]">
+                                          {ui.fuelLabel && (
+                                            <li className="flex justify-between gap-[10px] py-[1px] border-b border-[#e8eef5] last:border-b-0 last:pb-[1px] max-[720px]:py-[4px]">
+                                              <span className="text-[#64748b] text-[12px] leading-[1.2]">{ui.fuelLabel}</span>
+                                              <strong className="text-[12px] leading-[1.2] text-right text-[#10203a]">{detail?.fuel || activeEngine.fuel}</strong>
+                                            </li>
+                                          )}
+                                          {ui.sizeLabel && (
+                                            <li className="flex justify-between gap-[10px] py-[1px] border-b border-[#e8eef5] last:border-b-0 last:pb-[1px] max-[720px]:py-[4px]">
+                                              <span className="text-[#64748b] text-[12px] leading-[1.2]">{ui.sizeLabel}</span>
+                                              <strong className="text-[12px] leading-[1.2] text-right text-[#10203a]">{detail?.size || activeEngine.size}</strong>
+                                            </li>
+                                          )}
+                                          {ui.powerLabel && (
+                                            <li className="flex justify-between gap-[10px] py-[1px] border-b border-[#e8eef5] last:border-b-0 last:pb-[1px] max-[720px]:py-[4px]">
+                                              <span className="text-[#64748b] text-[12px] leading-[1.2]">{ui.powerLabel}</span>
+                                              <strong className="text-[12px] leading-[1.2] text-right text-[#10203a]">{detail?.power || activeEngine.power}</strong>
+                                            </li>
+                                          )}
+                                          {ui.yearsLabel && (
+                                            <li className="flex justify-between gap-[10px] py-[1px] border-b border-[#e8eef5] last:border-b-0 last:pb-[1px] max-[720px]:py-[4px]">
+                                              <span className="text-[#64748b] text-[12px] leading-[1.2]">{ui.yearsLabel}</span>
+                                              <strong className="text-[12px] leading-[1.2] text-right text-[#10203a]">{years}</strong>
+                                            </li>
+                                          )}
+                                        </ul>
+                                      </section>
+
+                                      <section className="border border-[#dfe7ef] rounded-[4px] bg-white py-[4px] px-[9px] pb-[4px] max-[720px]:rounded-none">
+                                        {ui.failuresTitle && (
+                                          <h4 className="mb-[3px] flex items-center gap-[8px] text-[12px] tracking-[-0.02em] text-[#10203a] max-[720px]:mb-[6px]">
+                                            <span className="w-[24px] h-[24px] rounded-[10px] grid place-items-center flex-shrink-0 bg-[#fff2f2] text-[#c73a3a] max-[720px]:hidden">
+                                              <WarningIcon />
+                                            </span>
+                                            {ui.failuresTitle}
+                                          </h4>
+                                        )}
+                                        <ul className="list-none m-0 pt-4 grid gap-[2px] max-[720px]:pt-[2px] max-[720px]:gap-[8px]">
+                                          {buildFailures(detail, activeGroupEntry.group.failureNote).map((failure) => (
+                                            <li key={failure} className="relative pl-[12px] text-[#2d3e55] text-[12px] leading-[1.28] before:content-[''] before:absolute before:top-[6px] before:left-0 before:w-[6px] before:h-[6px] before:rounded-full before:bg-[#c73a3a] before:shadow-[0_0_0_3px_rgba(199,58,58,0.14)]">{failure}</li>
+                                          ))}
+                                        </ul>
+                                      </section>
+                                    </div>
+
+                                    {/* Mobile Bottom Section */}
+                                    <div className="hidden max-[720px]:grid gap-[4px] py-[2px] pt-[12px] pb-[2px]">
+                                      {/* Price Box */}
+                                      <div className="relative overflow-hidden rounded-xl border border-green-400 bg-[#0d1526]/50 backdrop-blur-xl shadow-[0_0_15px_rgba(74,222,128,0.5),inset_0_0_12px_rgba(74,222,128,0.3)] max-[720px]:rounded-none">
+                                        <div
+                                          className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-white/20 pointer-events-none"
+                                          style={{ clipPath: 'polygon(60% 0, 100% 0, 100% 100%, 40% 100%)' }}
+                                        />
+                                        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent" />
+
+                                        <div className="relative z-10 px-3 py-1.5">
+                                          {ui.summaryPriceLabel && (
+                                            <small className="block text-[#bfd0e1] text-[9px] font-extrabold tracking-[0.12em] uppercase">
+                                              {ui.summaryPriceLabel}
+                                            </small>
+                                          )}
+                                          <strong className="block text-[#42d272] text-[18px] leading-[1] tracking-[-0.05em] my-[1px]">
+                                            {toPriceText(activeEngine.avgRebuiltPrice)}
+                                          </strong>
+                                          {ui.supplyLabel && (
+                                            <span className="block text-[#bfd0e1] text-[9px] leading-[1.4]">
+                                              {ui.supplyLabel}
+                                            </span>
+                                          )}
+                                        </div>
+                                      </div>
+
+                                      {/* Quote CTA */}
+                                      {quoteText && (
+                                        <a
+  className="group flex w-full items-center gap-[8px] bg-transparent py-[2px] px-0 shadow-none transition-opacity hover:opacity-85"
+  href="#quote-form"
+  data-quote-engine-code={repairEngineCodeValue(detail?.code || activeEngine.code)}
+  data-quote-context={activeEngine.compatibleModels}
+>
+  <div className="flex-shrink-0 text-[#2a6dd6] drop-shadow-[0_0_8px_rgba(42,109,214,0.55)]">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+      <polyline points="14 2 14 8 20 8" />
+      <line x1="16" y1="13" x2="8" y2="13" />
+      <line x1="16" y1="17" x2="8" y2="17" />
+      <circle cx="18" cy="18" r="3.5" fill="#050b14" stroke="currentColor" />
+      <text x="18" y="20" fontSize="7" fontWeight="bold" fill="currentColor" textAnchor="middle" fontFamily="sans-serif">£</text>
+    </svg>
+  </div>
+  <span className="flex-1 text-[11px] font-bold leading-snug text-white">
+    <span className="mr-[6px] inline-block text-[#2a6dd6] drop-shadow-[0_0_8px_rgba(42,109,214,0.55)]" aria-hidden="true">→</span>
+    {quoteText}
+  </span>
+</a>
+                                      )}
+                                    </div>
+                                  </div>
+                                </div>
+                              );
+                            })()
+                          ) : null}
+                        </div>
+
+                        {trailingRow.map(renderEngineCard)}
+                      </div>
+                    );
+                  })}
+                </div>
+              </section>
+            ) : null}
+
+            {(closingLine || closingAction.title || closingAction.buttonText) && (
+              <div className="mt-[30px] border border-[#0d1b2e] rounded-[22px] bg-white grid grid-cols-[74px_1fr_auto] gap-[16px] items-center p-[18px] shadow-[0_12px_30px_rgba(12,29,53,0.06)] max-[920px]:grid-cols-1 max-[720px]:hidden">
+                <div className="w-[58px] h-[58px] rounded-[16px] bg-[#f5f8fc] text-[#0d1b2e] grid place-items-center">
+                  <CarIcon />
+                </div>
+                <div>
+                  {closingAction.title && <h3 className="mb-[6px] text-[20px] tracking-[-0.03em] text-[#10203a]">{closingAction.title}</h3>}
+                  {closingLine && <p className="text-[#40546c] text-[14px] leading-[1.5]">{closingLine}</p>}
+                </div>
+                {closingAction.buttonText && (
+                  <a href="#quote-form" className="inline-flex items-center justify-center gap-[10px] min-h-[48px] px-[20px] rounded-[14px] bg-[#0d1b2e] text-white text-[15px] font-extrabold whitespace-nowrap shadow-[0_10px_20px_rgba(13,27,46,0.18)]">
+                    {closingAction.buttonText}
+                    <ArrowIcon />
+                  </a>
+                )}
+              </div>
+            )}
+          </div>
+        </div>
+      </Container>
     </Section>
   );
 }

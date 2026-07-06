@@ -30,7 +30,7 @@ export default function EngineIntelligenceSection({ data, imageSrc }: Props) {
 
   return (
     <Section className="bg-[#f8f9fa]">
-      <Container className="max-w-[1240px]">
+      <Container className="max-w-[1400px]">
         <div className="section-pill mb-[14px]">
           <span>{data.tag}</span>
         </div>

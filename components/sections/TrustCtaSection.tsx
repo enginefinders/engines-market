@@ -135,7 +135,7 @@ export default function TrustCtaSection({
   const showSecondaryAction = ui.showSecondaryAction ?? (displayMode === "brand");
 
   return (
-    <Section className="bg-white px-0 pt-3 sm:pt-4">
+    <Section className="bg-[#f8fafc] px-0 pt-3 sm:pt-4">
       <div className="w-full overflow-hidden bg-[#071936] shadow-[0_18px_46px_rgba(7,25,54,0.16)]">
         <div className="w-full">
           <div className="relative grid gap-0 lg:grid-cols-[1.06fr_0.94fr]">

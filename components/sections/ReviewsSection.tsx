@@ -137,15 +137,15 @@ export default function ReviewsSection({ data, useDataHeading = false }: Props) 
   return (
     <Section className="bg-white">
       <Container>
-        <div className="mx-auto max-w-[980px]">
+        <div className="mx-auto max-w-[1400px] px-2">
           <div>
             <p className="section-pill">
-              <TagIcon />
+              {/* <TagIcon /> */}
               {data.tag}
             </p>
 
             <div className="mt-3 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
-              <h2 className="max-w-[620px]">
+              <h2 className="max-w-[1020px]">
                 {useDataHeading ? (
                   headingLines.map((line, index) => (
                     <span key={`${line}-${index}`} className={`block ${headingLines.length > 1 && index === headingLines.length - 1 ? "text-[#15803d]" : ""}`}>
@@ -185,7 +185,7 @@ export default function ReviewsSection({ data, useDataHeading = false }: Props) 
                 return (
                   <article
                     key={`${review.name}-${review.location}-${reviewIndex}`}
-                    className="rounded-[14px] border border-slate-200 bg-white px-4 py-4 shadow-[0_2px_10px_rgba(13,27,46,0.06)]"
+                    className="rounded-[14px] border border-slate-200 bg-white px-4 py-8 shadow-[0_2px_10px_rgba(13,27,46,0.06)]"
                   >
                     <div className="flex items-start justify-between gap-3">
                       <div className="flex min-w-0 items-center gap-3">
@@ -193,16 +193,16 @@ export default function ReviewsSection({ data, useDataHeading = false }: Props) 
                           {review.name.charAt(0)}
                         </div>
                         <div className="min-w-0">
-                          <p className="truncate font-['Manrope'] text-[13px] font-bold leading-[1.2] text-[#0d1b2e]">
+                          <p className="truncate font-['Manrope'] text-[15px] font-bold leading-[1.2] text-[#0d1b2e]">
                             {review.name}
                           </p>
-                          <StarRow size="text-[13px]" />
+                          <StarRow size="text-[14px]" />
                         </div>
                       </div>
                       <ReviewSource source={source} />
                     </div>
 
-                    <p className="mt-3 text-[12.5px] leading-[1.6] text-slate-600">
+                    <p className="mt-3 text-[14px] leading-[1.6] text-slate-600">
                       &ldquo;{review.text}&rdquo;
                     </p>
                   </article>
@@ -244,14 +244,14 @@ export default function ReviewsSection({ data, useDataHeading = false }: Props) 
             </div>
           </div>
 
-          <div className="mt-5 rounded-[12px] border border-[#0d1b2e] bg-white px-4 py-4">
+          <div className="mt-5 rounded-[12px] border border-[#2a6dd6] bg-white shadow-[0_0_12px_rgba(42,109,214,0.2)] bg-white px-4 py-4">
             <div className="flex items-start gap-3">
               <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#0d1b2e] text-white">
                 <ReviewBadgeIcon />
               </span>
               <div>
                 <p className="font-['Manrope'] text-[14px] font-bold text-[#0d1b2e]">
-                  {ui.leaveReviewTitle ?? "Highly Rated Experience - Leave a Review"}
+                  {ui.leaveReviewTitle ?? "Had a good / bad experience? Please leave a review"}
                 </p>
                 <p className="mt-1 text-[12.5px] leading-[1.55] text-slate-500">
                   <a href={LEAVE_REVIEW_HREF} className="font-semibold text-[#0d1b2e] underline decoration-slate-300 underline-offset-2">

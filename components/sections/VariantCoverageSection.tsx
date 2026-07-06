@@ -1,13 +1,15 @@
 "use client";
 
 import Image from "next/image";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { ModelVariantCoverageSectionData } from "@/types/model";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
 
 type Props = {
   data: ModelVariantCoverageSectionData;
+  brandName?: string;
+  modelName?: string;
 };
 
 type VariantCard = ModelVariantCoverageSectionData["cards"][number];
@@ -56,9 +58,8 @@ function ChevronIcon({
   return (
     <svg
       viewBox="0 0 24 24"
-      className={`h-4 w-4 transition-transform duration-300 ${
-        open ? "rotate-180" : animated ? "chevron-breathe-down" : ""
-      }`}
+      className={`h-4 w-4 transition-transform duration-300 ${open ? "rotate-180" : animated ? "chevron-breathe-down" : ""
+        }`}
       fill="none"
       aria-hidden="true"
     >
@@ -155,21 +156,57 @@ function getRenderableDirectoryGroups(data: ModelVariantCoverageSectionData) {
     .filter((group) => group.items.length > 0);
 }
 
-export default function VariantCoverageSection({ data }: Props) {
+export default function VariantCoverageSection({ data, brandName, modelName }: Props) {
   const renderableCards = useMemo(
     () => data.cards.filter(isRenderableVariantCard),
     [data.cards],
   );
+  
+  // THIS IS THE VARIABLE THAT WAS MISSING
   const renderableDirectoryGroups = useMemo(
     () => getRenderableDirectoryGroups(data),
     [data],
   );
-  const defaultOpenCard = renderableCards[0]?.slug ?? null;
-  const [openCard, setOpenCard] = useState<string | null>(defaultOpenCard);
-  const [seenCards, setSeenCards] = useState<Record<string, boolean>>(
-    defaultOpenCard ? { [defaultOpenCard]: true } : {},
-  );
-  
+
+  const [openCard, setOpenCard] = useState<string | null>(null);
+  const [seenCards, setSeenCards] = useState<Record<string, boolean>>({});
+
+  const [columns, setColumns] = useState<number>(2);
+  const [isMobile, setIsMobile] = useState<boolean>(false);
+  const [showAllCards, setShowAllCards] = useState<boolean>(false);
+  const [isDirectoryOpen, setIsDirectoryOpen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (typeof window === 'undefined') return;
+      const width = window.innerWidth;
+      
+      if (width >= 1536) setColumns(6);
+      else if (width >= 1280) setColumns(5);
+      else setColumns(2);
+
+      const mobile = width < 768;
+      setIsMobile(mobile);
+      
+      if (!mobile) {
+        setShowAllCards(false);
+      }
+    };
+    
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const cardsToDisplay = useMemo(() => {
+    if (isMobile && !showAllCards && renderableCards.length > 6) {
+      return renderableCards.slice(0, 6);
+    }
+    return renderableCards;
+  }, [isMobile, showAllCards, renderableCards]);
+
+  const totalRows = Math.ceil(cardsToDisplay.length / columns);
+
   const headingLines = data.headingLines?.length ? data.headingLines : [data.h2];
   const ui = data.ui ?? {};
   const directoryHeading = data.directory.h3.trim();
@@ -185,174 +222,277 @@ export default function VariantCoverageSection({ data }: Props) {
   }
 
   return (
-    <Section className="bg-white">
-      <Container className="max-w-[1120px]">
-        <div className=" max-w-[760px] text-left">
-          <div className="section-pill mb-[14px]">
-            <GridIcon />
-            <span>{data.tag}</span>
+    <>
+      <style>{`
+        @keyframes variant-marquee-slide {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        .variant-marquee-box {
+          max-width: 20ch;
+        }
+        .variant-marquee-track {
+          display: inline-flex;
+          white-space: nowrap;
+          animation: variant-marquee-slide 12s linear infinite;
+          animation-play-state: paused;
+        }
+        .variant-marquee-box:hover .variant-marquee-track {
+          animation-play-state: running; 
+        }
+        @keyframes fade-in-down {
+          0% { opacity: 0; transform: translateY(-10px); }
+          100% { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-down {
+          animation: fade-in-down 0.3s ease-out forwards;
+        }
+      `}</style>
+
+      <Section className="bg-[#f7f8fb]">
+        <Container className="max-w-[1400px] px-2">
+          <div className=" max-w-[760px] text-left">
+            <div className="section-pill mb-[14px]">
+              <span>{data.tag}</span>
+            </div>
+
+            <h2 className=" max-w-[760px] text-[30px] font-extrabold leading-[1.02] tracking-[-0.04em] text-[#0d1b2e] md:text-[40px]">
+              {headingLines.map((line, index) => {
+                const isAccent = headingLines.length > 1 && index === headingLines.length - 1;
+                return (
+                  <span key={`${line}-${index}`} className={`block ${isAccent ? "text-[#15803d]" : ""}`}>
+                    {line}
+                  </span>
+                );
+              })}
+            </h2>
+            <p className="mt-3 max-w-[720px] text-[14px] leading-[1.75] text-slate-600">
+              {data.subheading}
+            </p>
           </div>
 
-          <h2 className=" max-w-[760px] text-[30px] font-extrabold leading-[1.02] tracking-[-0.04em] text-[#0d1b2e] md:text-[40px]">
-            {headingLines.map((line, index) => {
-              const isAccent = headingLines.length > 1 && index === headingLines.length - 1;
-              return (
-                <span key={`${line}-${index}`} className={`block ${isAccent ? "text-[#15803d]" : ""}`}>
-                  {line}
-                </span>
-              );
-            })}
-          </h2>
-          <p className="mt-3 max-w-[720px] text-[14px] leading-[1.75] text-slate-600">
-            {data.subheading}
-          </p>
-        </div>
+          <div className="mt-6 md:mt-9">
+            <div className="grid gap-4 grid-cols-2 xl:grid-cols-5 2xl:grid-cols-6">
+              {cardsToDisplay.map((card, index) => {
+                const rowIndex = Math.floor(index / columns);
+                const isLastRow = rowIndex === totalRows - 1 && totalRows > 1;
+                const isOpen = openCard === card.slug;
+                const shortName = formatVariantName(card.h3);
+                const animateChevron = !isOpen && !seenCards[card.slug];
+                const codeAndType = formatCodeAndType(card);
 
-        <div className="mt-9">
-          <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-5">
-            {renderableCards.map((card) => {
-              const isOpen = openCard === card.slug;
-              const shortName = formatVariantName(card.h3);
-              const animateChevron = !isOpen && !seenCards[card.slug];
-              const codeAndType = formatCodeAndType(card);
-
-              return (
-                <article
-                  key={card.slug}
-                  className={`overflow-hidden rounded-[12px] border bg-white shadow-[0_2px_8px_rgba(13,27,46,0.05)] transition duration-300 ${
-                    isOpen
-                      ? "border-[rgba(21,128,61,0.18)] shadow-[0_10px_26px_rgba(13,27,46,0.12)]"
-                      : "border-slate-200 hover:border-slate-300 hover:shadow-[0_8px_18px_rgba(13,27,46,0.08)]"
-                  }`}
-                >
-                  <button
-                    type="button"
-                    onClick={() => toggleCard(card.slug)}
-                    aria-expanded={isOpen}
-                    className="flex min-h-[230px] w-full flex-col items-center px-4 py-4 text-center md:min-h-[248px]"
-                  >
-                    <div className="flex min-h-[78px] w-full items-center justify-center">
-                      {card.image ? (
-                        <div className="relative h-[62px] w-full max-w-[152px]">
-                          <Image
-                            src={card.image}
-                            alt={card.h3}
-                            fill
-                            className="object-contain"
-                            sizes="150px"
-                          />
-                        </div>
-                      ) : (
-                        <div className="font-['Manrope'] text-[27px] font-extrabold leading-[0.92] text-[#0d1b2e] sm:text-[31px]">
-                          {shortName}
-                        </div>
-                      )}
-                    </div>
-
-                    <div className="mt-4 w-full max-w-[250px]">
-                      <div className="font-['Manrope'] text-[15px] font-extrabold leading-[1.18] text-[#0d1b2e]">
-                        {card.h3}
-                      </div>
-                      <p className="mt-2 text-[11.5px] font-semibold leading-[1.4] text-[#4b5563]">
-                        {codeAndType}
-                      </p>
-                      <p className="mt-3 font-['Manrope'] text-[15px] font-semibold leading-none text-[#374151]">
-                        Rebuilt: {card.priceRange}
-                      </p>
-                    </div>
-
-                    <span className="mt-auto inline-flex pt-4 text-[#15803d]">
-                      <ChevronIcon open={isOpen} animated={animateChevron} />
-                    </span>
-                  </button>
-
-                  {isOpen ? (
-                    <div className="bg-[#0d1b2e] px-4 pb-4 pt-4 text-white">
-                      <div className="space-y-[10px]">
-                        <div className="flex items-center justify-between gap-3 rounded-[8px] border border-white/8 bg-white/[0.03] px-3 py-[9px]">
-                          <span className="flex-none text-[10px] font-semibold uppercase tracking-[0.08em] text-white/60">
-                            {ui.specsLabel ?? "Specs"}
-                          </span>
-                          <span className="min-w-0 flex-1 truncate text-right text-[11px] font-semibold leading-none text-white md:text-[11.5px]">
-                            {card.power}
-                          </span>
-                        </div>
-
-                        <div className="flex items-center justify-between gap-3 rounded-[8px] border border-white/8 bg-white/[0.03] px-3 py-[9px]">
-                          <span className="flex-none text-[10px] font-semibold uppercase tracking-[0.08em] text-white/60">
-                            {ui.yearsLabel ?? "Years"}
-                          </span>
-                          <span className="min-w-0 flex-1 truncate text-right text-[11px] font-semibold leading-none text-white md:text-[11.5px]">
-                            {card.years?.trim() || ui.yearsFallback || "Check exact year coverage by registration"}
-                          </span>
-                        </div>
-
-                        <div className="flex items-center justify-between gap-3 rounded-[8px] border border-white/8 bg-white/[0.03] px-3 py-[9px]">
-                          <span className="flex-none text-[10px] font-semibold uppercase tracking-[0.08em] text-white/60">
-                            {ui.rebuiltLabel ?? "Rebuilt"}
-                          </span>
-                          <span className="min-w-0 flex-1 truncate text-right font-['Manrope'] text-[14px] font-extrabold leading-none text-white md:text-[15px]">
-                            {card.priceRange}
-                          </span>
-                        </div>
-                      </div>
-
-                      <a
-                        href="#quote-form"
-                        data-quote-context={card.h3}
-                        data-quote-source="variant-coverage"
-                        className="mt-4 inline-flex h-10 w-full items-center justify-center gap-2 rounded-[7px] bg-[#15803d] px-2 text-[10px] font-semibold text-white transition hover:bg-[#166534]"
-                      >
-                        <span>{card.cta}</span>
-                        <ArrowIcon />
-                      </a>
-                    </div>
-                  ) : null}
-                </article>
-              );
-            })}
-          </div>
-        </div>
-
-        <div className="mt-8 rounded-[18px] border border-slate-200 bg-[#f8fafc] p-4 md:p-5">
-          <div className="flex items-center gap-2 text-[12px] font-bold uppercase tracking-[0.08em] text-[#15803d]">
-            <BookIcon />
-            <span>{data.directory.label ?? "Variant Directory"}</span>
-          </div>
-          {directoryHeading ? (
-            <h3 className="mt-3 text-[24px] font-extrabold tracking-[-0.03em] text-[#0d1b2e]">
-              {directoryHeading}
-            </h3>
-          ) : null}
-          {directoryIntro ? (
-            <p className="mt-2 max-w-[900px] text-[13px] leading-[1.7] text-slate-600">{directoryIntro}</p>
-          ) : null}
-
-          <div className="mt-5 grid gap-3 lg:grid-cols-3">
-            {renderableDirectoryGroups.map((group) => (
-              <article key={group.title} className="rounded-[14px] border border-slate-200 bg-white p-4">
-                <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-[#15803d]">{group.title}</p>
-                <div className="mt-3 flex flex-wrap gap-[7px]">
-                  {group.items.map((item, index) => (
-                    <span
-                      key={`${group.title}-${item}-${index}`}
-                      className="rounded-full border border-slate-200 bg-slate-50 px-[10px] py-[5px] text-[11px] font-semibold text-slate-700"
+                return (
+                  <article key={card.slug} className="relative">
+                    <div
+                      className={`overflow-hidden rounded-[12px] border bg-white shadow-[0_2px_8px_rgba(13,27,46,0.05)] transition duration-300 ${isOpen
+                          ? `border-[rgba(21,128,61,0.18)] shadow-[0_10px_26px_rgba(13,27,46,0.12)] ${isLastRow
+                            ? "rounded-b-[12px] rounded-t-none border-t-0"
+                            : "rounded-t-[12px] rounded-b-none border-b-0"
+                          }`
+                          : "border-slate-200 hover:border-slate-300 hover:shadow-[0_8px_18px_rgba(13,27,46,0.08)]"
+                        }`}
                     >
-                      {item}
-                    </span>
+                      <button
+                        type="button"
+                        onClick={() => toggleCard(card.slug)}
+                        aria-expanded={isOpen}
+                        className="flex min-h-[230px] w-full flex-col items-center px-2 pb-2 pt-1.5 sm:px-4 sm:py-4 text-center md:min-h-[248px]"
+                      >
+                        <div className="flex min-h-[82px] w-full items-center justify-center">
+                          {card.image ? (
+                            <div className="relative h-[68px] w-full max-w-[158px]">
+                              <Image
+                                src={card.image}
+                                alt={card.h3}
+                                fill
+                                className="object-contain"
+                                sizes="150px"
+                              />
+                            </div>
+                          ) : (
+                            <div className="font-['Manrope'] text-[27px] font-extrabold leading-[0.92] text-[#0d1b2e] sm:text-[31px]">
+                              {shortName}
+                            </div>
+                          )}
+                        </div>
+
+                        <div className="mt-3 w-full max-w-[250px]">
+                          <div className="font-['Manrope'] text-[16px] font-extrabold leading-[1.18] text-[#0d1b2e] md:text-[15px]">
+                            {card.h3}
+                          </div>
+                          <p className="mt-2 text-[11.5px] font-semibold leading-[1.4] text-[#4b5563]">
+                            {codeAndType}
+                          </p>
+                          <p className="mt-3 font-['Manrope'] text-[15px] font-semibold leading-none text-[#374151]">
+                            Rebuilt: {card.priceRange}
+                          </p>
+                        </div>
+
+                        <span className="mt-auto inline-flex pt-2 text-[#15803d] md:pt-4">
+                          <ChevronIcon open={isOpen} animated={animateChevron} />
+                        </span>
+                      </button>
+                    </div>
+
+                    {isOpen ? (
+                      <div
+                        className={`absolute left-[-1px] right-[-1px] z-50 bg-[#0d1b2e] px-4 pb-4 pt-4 text-white border border-[rgba(21,128,61,0.18)] min-h-[248px] sm:min-h-[267px] ${isLastRow
+                            ? "bottom-full rounded-t-[12px] border-b-0"
+                            : "top-full rounded-b-[12px] border-t-0"
+                          }`}
+                      >
+                        <div className="space-y-[10px]">
+                          <div className="flex items-center justify-between gap-3 rounded-[8px] border border-blue-500 shadow-[0_0_15px_rgba(59,130,246,0.5),inset_0_0_12px_rgba(59,130,246,0.3)] transition hover:shadow-[0_0_20px_rgba(59,130,246,0.8),inset_0_0_15px_rgba(59,130,246,0.5)] hover:bg-slate-800 bg-white/[0.03] px-3 py-3 sm:py-4">
+                            <span className="flex-none text-[10px] font-semibold uppercase tracking-[0.08em] text-white/60">
+                              {ui.specsLabel ?? "Specs"}
+                            </span>
+                            <span className="min-w-0 flex-1 truncate text-right text-[11px] font-semibold leading-none text-white md:text-[11.5px]">
+                              {card.power}
+                            </span>
+                          </div>
+
+                          <div className="flex items-center justify-between gap-3 rounded-[8px] border border-blue-500 shadow-[0_0_15px_rgba(59,130,246,0.5),inset_0_0_12px_rgba(59,130,246,0.3)] transition hover:shadow-[0_0_20px_rgba(59,130,246,0.8),inset_0_0_15px_rgba(59,130,246,0.5)] hover:bg-slate-800 bg-white/[0.03] px-3 py-3 sm:py-4">
+                            <span className="flex-none text-[10px] font-semibold uppercase tracking-[0.08em] text-white/60">
+                              {ui.yearsLabel ?? "Years"}
+                            </span>
+                            <span className="min-w-0 flex-1 truncate text-right text-[11px] font-semibold leading-none text-white md:text-[11.5px]">
+                              {card.years?.trim() || ui.yearsFallback || "Check exact year coverage by registration"}
+                            </span>
+                          </div>
+
+                          <div className="flex items-center justify-between gap-3 rounded-[8px] border border-blue-500 shadow-[0_0_15px_rgba(59,130,246,0.5),inset_0_0_12px_rgba(59,130,246,0.3)] transition hover:shadow-[0_0_20px_rgba(59,130,246,0.8),inset_0_0_15px_rgba(59,130,246,0.5)] hover:bg-slate-800 bg-white/[0.03] px-3 py-3 sm:py-4">
+                            <span className="flex-none text-[10px] font-semibold uppercase tracking-[0.08em] text-white/60">
+                              {ui.rebuiltLabel ?? "Rebuilt"}
+                            </span>
+                            <span className="min-w-0 flex-1 truncate text-right font-['Manrope'] text-[14px] font-extrabold leading-none text-white md:text-[15px] ">
+                              {card.priceRange}
+                            </span>
+                          </div>
+                        </div>
+
+                        <a
+                          href="#quote-form"
+                          data-quote-context={card.h3}
+                          data-quote-source="variant-coverage"
+                          className="mt-4 inline-flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-slate-900 px-2 text-[13px] font-semibold text-white border border-green-400 shadow-[0_0_15px_rgba(74,222,128,0.5),inset_0_0_12px_rgba(74,222,128,0.3)] transition hover:shadow-[0_0_20px_rgba(74,222,128,0.8),inset_0_0_15px_rgba(74,222,128,0.5)] hover:bg-slate-800"
+                        >
+                          <span>{card.cta}</span>
+                          <ArrowIcon />
+                        </a>
+                      </div>
+                    ) : null}
+                  </article>
+                );
+              })}
+            </div>
+
+            {isMobile && renderableCards.length > 6 && (
+              <div className="mt-8 flex justify-center">
+                <button
+                  type="button"
+                  onClick={() => setShowAllCards((prev) => !prev)}
+                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-slate-900 px-6 py-3 text-[14px] font-semibold text-white border border-green-400 shadow-[0_0_15px_rgba(74,222,128,0.5),inset_0_0_12px_rgba(74,222,128,0.3)] transition hover:shadow-[0_0_20px_rgba(74,222,128,0.8),inset_0_0_15px_rgba(74,222,128,0.5)] hover:bg-slate-800"
+                >
+                  {showAllCards ? "View Less" : "View More"}
+                  <ChevronIcon open={showAllCards} animated={false} />
+                </button>
+              </div>
+            )}
+          </div>
+
+          {/* --- ACCORDION SECTION --- */}
+          <div className="mt-8 rounded-[18px] border border-slate-200 bg-[#f8fafc] p-4 md:p-5">
+            <button
+              type="button"
+              onClick={() => setIsDirectoryOpen((prev) => !prev)}
+              className="w-full text-left flex items-start justify-between gap-4 bg-transparent border-none outline-none cursor-pointer p-0"
+            >
+              <div>
+                <div className="flex items-center gap-2 text-[12px] font-bold uppercase tracking-[0.08em] text-[#15803d]">
+                  <BookIcon />
+                  <span>{data.directory.label ?? "Variant Directory"}</span>
+                </div>
+                {directoryHeading ? (
+                  <h3 className="mt-3 text-[24px] font-extrabold tracking-[-0.03em] text-[#0d1b2e]">
+                    {directoryHeading}
+                  </h3>
+                ) : null}
+              </div>
+              <span className={`flex-shrink-0 mt-2 text-[#15803d] transition-transform duration-300 ${isDirectoryOpen ? 'rotate-180' : ''}`}>
+                <ChevronIcon open={isDirectoryOpen} animated={false} />
+              </span>
+            </button>
+
+            {isDirectoryOpen && (
+              <div className="animate-fade-in-down mt-4 max-h-[calc(100vh-10rem)] overflow-y-auto pr-1 scroll-smooth overscroll-contain md:mt-0 md:max-h-none md:overflow-visible md:pr-0">
+                {directoryIntro ? (
+                  <p className="max-w-[900px] text-[13px] leading-[1.7] text-slate-600">{directoryIntro}</p>
+                ) : null}
+
+                <div className="mt-5 grid gap-3 lg:grid-cols-3">
+                  {renderableDirectoryGroups.map((group) => (
+                    <article key={group.title} className="rounded-sm border-[0.5px] border-[#2a6dd6] shadow-[0_0_3px_rgba(42,109,214,0.4),0_0_6px_rgba(42,109,214,0.2),0_2px_4px_rgba(42,109,214,0.15)] bg-white p-4">
+                      <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-[#15803d]">{group.title}</p>
+                      <div className="mt-3 grid grid-cols-3 gap-2">
+                        {group.items.map((item, index) => {
+                          const fullText = [modelName, item].filter(Boolean).join(" ");
+                          const isLong = fullText.length > 20;
+                          const truncatedText = isLong ? `${fullText.slice(0, 20)}...` : fullText;
+
+                          return (
+                            <span
+                              key={`${group.title}-${item}-${index}`}
+                              className={`group/marquee relative inline-flex min-w-0 w-full items-center justify-center overflow-hidden rounded-[8px] border border-slate-200 bg-slate-50 px-[8px] py-[7px] text-[11px] font-semibold text-slate-700 ${isLong ? 'variant-marquee-box max-w-none' : ''}`}
+                              title={fullText}
+                            >
+                              {!isLong ? (
+                                <span className="block w-full truncate text-center">{fullText}</span>
+                              ) : (
+                                <>
+                                  <span className="block w-full whitespace-nowrap text-center transition-opacity duration-300 group-hover/marquee:opacity-0">
+                                    {truncatedText}
+                                  </span>
+                                  <span className="absolute inset-0 flex items-center px-[8px] opacity-0 transition-opacity duration-300 group-hover/marquee:opacity-100">
+                                    <span className="variant-marquee-track">
+                                      <span className="pr-8">{fullText}</span>
+                                      <span className="pr-8">{fullText}</span>
+                                    </span>
+                                  </span>
+                                </>
+                              )}
+                            </span>
+                          );
+                        })}
+                      </div>
+                    </article>
                   ))}
                 </div>
-              </article>
-            ))}
+              </div>
+            )}
           </div>
-        </div>
 
-        {data.closing ? (
-          <p className="mx-auto mt-4 max-w-[980px] text-[13px] leading-[1.75] text-slate-600">
-            {data.closing}
-          </p>
-        ) : null}
-      </Container>
-    </Section>
+          {data.closing ? (
+  <div className="mt-4 flex items-center gap-2">
+    <svg
+      className="h-4 w-4 flex-shrink-0 text-slate-600"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+      />
+    </svg>
+    <p className="text-[13px] leading-[1.75] text-slate-600">
+      {data.closing}
+    </p>
+  </div>
+) : null}
+        </Container>
+      </Section>
+    </>
   );
 }

@@ -361,8 +361,7 @@ function buildHeroLineTwo(model: HeroModelCard) {
   }
 
   if (model.engineCodes?.length) {
-    const rebuiltFrom = model.priceRange.match(/(?:\u00A3|Â£|Ã‚Â£)[\d,]+/i)?.[0] ?? model.priceRange;
-    return `-> Rebuilt units from ${rebuiltFrom} \u00B7 Common codes: ${model.engineCodes.join(", ")}`;
+    return `-> Rebuilt units from ${model.priceRange} - Common codes: ${model.engineCodes.join(", ")}`;
   }
 
   return "";
@@ -424,43 +423,19 @@ function resolveHeadingLines(data: HeroSectionData) {
   return [data.h1];
 }
 
-function resolveHeroCards(data: HeroSectionData, modelCards: HeroModelCard[], fallbackImage?: string) {
-  const findMatchingModelCard = (title: string) => {
-    const normalize = (value: string) =>
-      value
-        .toLowerCase()
-        .replace(/\s+engine replacement$/i, "")
-        .replace(/\s+engines?$/i, "")
-        .replace(/[^a-z0-9]+/g, " ")
-        .trim();
-
-    const target = normalize(title);
-
-    return modelCards.find((card) => {
-      const cardTitle = normalize(card.h3);
-      const cardSlug = normalize(card.slug.replace(/-/g, " "));
-
-      return cardTitle === target || cardSlug === target;
-    });
-  };
-
+function resolveHeroCards(data: HeroSectionData, modelCards: HeroModelCard[]) {
   if (data.highlights?.length) {
-    return data.highlights.map((card, index) => {
-      const matchedModelCard = findMatchingModelCard(card.title);
-
-      return {
-        h3: card.title,
-        slug: matchedModelCard?.slug ?? `highlight-${index + 1}`,
-        subtitle: matchedModelCard?.subtitle ?? "",
-        priceRange: card.price || matchedModelCard?.priceRange || "",
-        cta: matchedModelCard?.cta ?? "",
-        image: card.image?.trim() || matchedModelCard?.image || fallbackImage || "",
-        lineOne: card.line1 ?? matchedModelCard?.lineOne ?? "",
-        heroLineTwo: card.detail ?? card.line2 ?? matchedModelCard?.heroLineTwo ?? "",
-        engineCodes: matchedModelCard?.engineCodes,
-        imageAlt: card.imageAlt ?? matchedModelCard?.imageAlt ?? card.title,
-      };
-    });
+    return data.highlights.map((card, index) => ({
+      h3: card.title,
+      slug: `highlight-${index + 1}`,
+      subtitle: "",
+      priceRange: card.price,
+      cta: "",
+      image: card.image ?? "",
+      lineOne: card.line1 ?? "",
+      heroLineTwo: card.detail ?? "",
+      imageAlt: card.imageAlt ?? card.title,
+    }));
   }
 
   return buildHeroCards(modelCards);
@@ -475,14 +450,11 @@ export default function HeroSection({
 }: HeroSectionProps) {
   const [registration, setRegistration] = useState("");
   const [showHeroImage, setShowHeroImage] = useState(Boolean(bgImage));
-  const [isDisclaimerOpen, setIsDisclaimerOpen] = useState(false);
   const headingLines = resolveHeadingLines(data);
   const brandName = inferBrandName(data);
-  const displayModels = resolveHeroCards(data, modelCards, bgImage);
+  const displayModels = resolveHeroCards(data, modelCards);
   const mobileBar = data.mobileBar ?? {};
   const registrationInput = data.registrationInput ?? {};
-  const disclaimer = data.disclaimer;
-  const hasDisclaimer = Boolean(disclaimer?.note?.trim());
 
   const bottomTickerLoop = useMemo(() => [...bottomBarItems, ...bottomBarItems], []);
 
@@ -503,43 +475,23 @@ export default function HeroSection({
     <section className="overflow-x-hidden bg-[#f8f9fa]">
       <div className="bg-[#0d1b2e] text-white lg:hidden">
         <div className="flex items-center justify-between gap-2 px-4 py-3">
-          {strictData ? (
-            <div className="font-['Manrope'] text-[15px] font-extrabold tracking-[-0.3px] text-white sm:text-[17px]">
-              {mobileBar.brandText ?? "ENGINEMARKET"}
-            </div>
-          ) : (
-            <Link href="/" className="shrink-0" aria-label="Engine Market homepage">
-              <Image
-                src="/branding/engine-market-logo-rectangle.png"
-                alt="Engines Market"
-                width={5752}
-                height={2280}
-                priority
-                className="h-8 w-auto object-contain"
-                sizes="140px"
-              />
-            </Link>
-          )}
+          <div className="font-['Manrope'] text-[15px] font-extrabold tracking-[-0.3px] text-white sm:text-[17px]">
+            {strictData ? mobileBar.brandText : (mobileBar.brandText ?? "ENGINEMARKET")}
+          </div>
 
           <div className="flex items-center gap-2">
             <a
-              href={strictData ? PHONE_NUMBER_HREF : "tel:03330000044"}
-              className={`inline-flex items-center gap-1.5 rounded-md border border-white/20 bg-white/10 text-white ${
-                strictData
-                  ? "px-2.5 py-[7px] text-[10px] font-semibold tracking-[0.01em] sm:px-3 sm:text-[11.5px]"
-                  : "px-3 py-[7px] text-[11px] font-semibold"
-              }`}
-              aria-label={strictData ? `Call ${PHONE_NUMBER_DISPLAY}` : undefined}
+              href={PHONE_NUMBER_HREF}
+              className="inline-flex items-center gap-1.5 rounded-md border border-white/20 bg-white/10 px-2.5 py-[7px] text-[10px] font-semibold tracking-[0.01em] text-white sm:px-3 sm:text-[11.5px]"
+              aria-label={`Call ${PHONE_NUMBER_DISPLAY}`}
             >
               <PhoneIcon />
-              <span>{strictData ? PHONE_NUMBER_DISPLAY : (mobileBar.callLabel ?? "Call")}</span>
+              <span>{PHONE_NUMBER_DISPLAY}</span>
             </a>
             <a
               href="#quote-form"
               data-quote-source="hero-mobile"
-              className={`rounded-md bg-[#15803d] px-3 py-[7px] font-['Manrope'] font-bold text-white ${
-                strictData ? "text-[11px] sm:text-[11.5px]" : "text-[11.5px]"
-              }`}
+              className="rounded-md bg-[#15803d] px-3 py-[7px] font-['Manrope'] text-[11px] font-bold text-white sm:text-[11.5px]"
             >
               {strictData ? mobileBar.quoteLabel : (mobileBar.quoteLabel ?? "GET QUOTES")}
             </a>
@@ -547,13 +499,7 @@ export default function HeroSection({
         </div>
       </div>
 
-      <div
-        className={`mx-auto grid min-w-0 items-center px-3 sm:px-6 md:px-8 ${
-          strictData
-            ? "max-w-[1400px] py-5 sm:gap-8 md:py-8 lg:grid-cols-[55fr_45fr] lg:gap-7 lg:px-8 lg:py-[52px]"
-            : "max-w-[1200px] py-7 sm:gap-8 md:py-8 lg:grid-cols-[60fr_40fr] lg:gap-7 lg:px-8 lg:py-[52px]"
-        }`}
-      >
+      <div className="mx-auto grid max-w-[1400px] min-w-0 items-center px-3 py-5 sm:gap-8 sm:px-6 md:px-8 md:py-8 lg:grid-cols-[55fr_45fr] lg:gap-7 lg:px-8 lg:py-[52px]">
         {/* LEFT COLUMN */}
         <div className="flex min-w-0 flex-col">
           <span className="mb-[14px] inline-flex w-fit items-center rounded-[20px] bg-[#0d1b2e] px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.08em] text-white md:mb-[18px] md:px-[14px] md:py-[6px] md:text-[10.5px]">
@@ -579,23 +525,23 @@ export default function HeroSection({
           </p>
 
           <div className="mt-[18px] grid min-w-0 grid-cols-4 gap-1.5 md:mt-6 md:flex md:flex-wrap lg:flex-nowrap lg:overflow-x-auto lg:pb-1 [&::-webkit-scrollbar]:hidden">
-  {data.trustBadges.slice(0, 4).map((badge, index) => {
-    const Icon = badgeIcons[index] ?? ShieldIcon;
+            {data.trustBadges.slice(0, 4).map((badge, index) => {
+              const Icon = badgeIcons[index] ?? ShieldIcon;
 
-    return (
-      <div
-        key={badge}
-        className="flex flex-col items-center justify-center gap-1 rounded-lg bg-[#13253f] px-2 py-2 text-[11px] font-semibold text-white md:flex-row md:items-center md:justify-start md:px-[14px] md:py-[9px] md:text-[12.5px]"
-      >
-        {/* Added flex-shrink-0 and fixed size to icon so it doesn't squish */}
-        <Icon className="w-4 h-4 flex-shrink-0" />
-        
-        {/* Removed whitespace-nowrap so text wraps exactly like in your screenshot */}
-        <span className="leading-tight text-center md:text-left">{badge}</span>
-      </div>
-    );
-  })}
-</div>
+              return (
+                <div
+                  key={badge}
+                  className="flex flex-col items-center justify-center gap-1 rounded-lg bg-[#13253f] px-2 py-2 text-[11px] font-semibold text-white md:flex-row md:items-center md:justify-start md:px-[14px] md:py-[9px] md:text-[12.5px]"
+                >
+                  {/* Added flex-shrink-0 and fixed size to icon so it doesn't squish */}
+                  <Icon className="w-4 h-4 flex-shrink-0" />
+
+                  {/* Removed whitespace-nowrap so text wraps exactly like in your screenshot */}
+                  <span className="leading-tight text-center md:text-left">{badge}</span>
+                </div>
+              );
+            })}
+          </div>
 
           {displayModels.length ? (
             <div className="mt-5 flex min-w-0 flex-col md:mt-7">
@@ -604,8 +550,8 @@ export default function HeroSection({
                 const shortTitle = stripBrandFromModel(model.h3, brandName);
                 const normalizedPrice = model.priceRange.replace(/^Starting\s+/i, "").replace(/^Available\s+/i, "");
                 const modelHref = brandSlug ? getModelHref(brandSlug, model) : null;
-                const commonCodesLine = strictData ? buildCommonCodesLine(model) : "";
-                const rebuiltUnitsLine = strictData ? buildRebuiltUnitsLine(model) : "";
+                const commonCodesLine = buildCommonCodesLine(model);
+                const rebuiltUnitsLine = buildRebuiltUnitsLine(model);
                 const desktopDetailLine =
                   model.lineOne?.trim() && model.heroLineTwo?.trim()
                     ? model.heroLineTwo.trim()
@@ -615,9 +561,9 @@ export default function HeroSection({
                 const lineOne = model.lineOne?.trim()
                   ? splitHighlightLineOne(model.lineOne)
                   : {
-                    lead: shortTitle,
-                    accent: normalizedPrice ? `- ${normalizedPrice}` : "",
-                  };
+                      lead: shortTitle,
+                      accent: normalizedPrice ? `- ${normalizedPrice}` : "",
+                    };
 
                 return (
                   <div
@@ -625,33 +571,23 @@ export default function HeroSection({
                     className={`py-[10px] md:py-3 ${index < displayModels.length - 1 ? "border-b border-[#f3f4f6]" : ""}`}
                   >
                     <div className="flex min-w-0 items-start overflow-hidden">
-                      <div
-                        className={`shrink-0 items-center justify-center overflow-hidden rounded-md ${
-                          strictData
-                            ? "mr-3 flex h-[42px] w-[68px] md:mr-[10px] md:h-[60px] md:w-[72px]"
-                            : "mr-2 flex h-[34px] w-[58px] bg-white md:mr-[10px] md:h-[40px] md:w-[72px]"
-                        }`}
-                      >
+                      <div className="mr-3 flex h-[42px] w-[68px] shrink-0 items-center justify-center overflow-hidden rounded-md md:mr-[10px] md:h-[60px] md:w-[72px]">
                         {model.image ? (
                           <Image
                             src={model.image}
                             alt={model.imageAlt ?? model.h3}
                             width={72}
                             height={40}
-                            sizes={strictData ? "(max-width: 767px) 68px, 72px" : "72px"}
+                            sizes="(max-width: 767px) 68px, 72px"
                             className="h-full w-full object-contain"
                           />
                         ) : (
-                          <div
-                            className={`flex items-center text-[#0d1b2e]/50 ${
-                              strictData ? "h-[30px] w-[52px] md:h-[26px] md:w-[44px]" : "h-[22px] w-[38px] md:h-[26px] md:w-[44px]"
-                            }`}
-                          >
+                          <div className="flex h-[30px] w-[52px] items-center text-[#0d1b2e]/50 md:h-[26px] md:w-[44px]">
                             <Icon />
                           </div>
                         )}
                       </div>
-                      <div className={`min-w-0 ${strictData ? "md:space-y-0" : ""}`}>
+                      <div className="min-w-0 md:space-y-0">
                         <div className="flex min-w-0 items-center overflow-hidden whitespace-nowrap">
                           {modelHref ? (
                             <Link
@@ -687,15 +623,6 @@ export default function HeroSection({
                             {desktopDetailLine}
                           </p>
                         ) : null}
-                        {!strictData && model.lineOne?.trim() && model.heroLineTwo?.trim() ? (
-                          <p className="mt-1 text-[11px] leading-[1.45] text-[#64748b] md:text-[12px]">
-                            {model.heroLineTwo.trim()}
-                          </p>
-                        ) : !strictData && buildHeroLineTwo(model) ? (
-                          <p className="mt-1 text-[11px] leading-[1.45] text-[#64748b] md:text-[12px]">
-                            {buildHeroLineTwo(model)}
-                          </p>
-                        ) : null}
                       </div>
                     </div>
                   </div>
@@ -703,72 +630,19 @@ export default function HeroSection({
               })}
             </div>
           ) : null}
-
-          {hasDisclaimer ? (
-            <div className="mt-4 rounded-[20px] border border-[#dbe4ef] bg-white/80 shadow-[0_12px_40px_rgba(13,27,46,0.06)] backdrop-blur-sm">
-              <button
-                type="button"
-                onClick={() => setIsDisclaimerOpen((current) => !current)}
-                aria-expanded={isDisclaimerOpen}
-                className="flex w-full items-center justify-between gap-3 px-4 py-3 text-left md:px-5"
-              >
-                <span className="font-['Manrope'] text-[12px] font-extrabold uppercase tracking-[0.08em] text-[#152b4a] md:text-[12.5px]">
-                  {disclaimer?.title?.trim() || "Disclaimer Note"}
-                </span>
-                <span className="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-[#cbd5e1] text-[18px] font-semibold leading-none text-[#15803d]">
-                  {isDisclaimerOpen ? "-" : "+"}
-                </span>
-              </button>
-
-              {isDisclaimerOpen ? (
-                <div className="border-t border-[#e2e8f0] px-4 py-4 text-[12px] leading-[1.65] text-[#475569] md:px-5 md:text-[13px]">
-                  <p>
-                    <span className="font-['Manrope'] text-[11px] font-extrabold uppercase tracking-[0.08em] text-[#152b4a]">
-                      {disclaimer?.title?.trim() || "Disclaimer Note"}:
-                    </span>{" "}
-                    {disclaimer?.note.trim()}
-                  </p>
-
-                  {disclaimer?.notes?.length ? (
-                    <div className="mt-3">
-                      <p className="font-['Manrope'] text-[11px] font-extrabold uppercase tracking-[0.08em] text-[#152b4a]">
-                        {disclaimer.notesTitle?.trim() || "Notes"}:
-                      </p>
-                      <ul className="mt-2 space-y-1.5">
-                        {disclaimer.notes.map((item) => (
-                          <li key={item} className="flex gap-2">
-                            <span className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-[#15803d]" />
-                            <span>{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ) : null}
-                </div>
-              ) : null}
-            </div>
-          ) : null}
         </div>
 
         {/* RIGHT COLUMN */}
-        <div
-          className={`relative flex w-full min-w-0 flex-col items-center justify-center overflow-hidden px-3 lg:min-h-0 lg:px-0 ${
-            strictData ? "pt-1 md:pt-0" : "sm:gap-6"
-          }`}
-        >
+        <div className="relative flex w-full min-w-0 flex-col items-center justify-center overflow-hidden px-3 pt-1 md:pt-0 lg:min-h-0 lg:px-0">
           {bgImage && showHeroImage ? (
             <div className="relative h-auto w-full max-w-full overflow-hidden rounded-[24px] lg:min-h-[300px]">
-              <div
-                className={`relative w-full lg:aspect-auto lg:min-h-[300px] ${
-                  strictData ? "aspect-[2.05/1] md:aspect-[5/3]" : "aspect-[5/3]"
-                }`}
-              >
+              <div className="relative aspect-[2.05/1] w-full md:aspect-[5/3] lg:aspect-auto lg:min-h-[300px]">
                 <Image
                   src={bgImage}
                   alt={data.imageAlt ?? brandName}
                   fill
-                  className={`object-contain ${strictData ? "md:p-2" : "p-2"}`}
-                  sizes={strictData ? "(max-width: 767px) 100vw, (min-width: 768px) 600px" : "(max-width: 767px) 100vw, (min-width: 768px) 500px"}
+                  className="object-contain md:p-2"
+                  sizes="(max-width: 767px) 100vw, (min-width: 768px) 600px"
                   onError={() => setShowHeroImage(false)}
                 />
               </div>
@@ -782,7 +656,7 @@ export default function HeroSection({
           {/* FORM MOVED HERE */}
           <form
             id="hero-reg-form"
-            className={`flex w-full flex-col gap-[10px] px-0 sm:px-2 ${strictData ? "max-w-md" : "max-w-full"}`}
+            className="flex w-full max-w-md flex-col gap-[10px] px-0 sm:px-2"
             onSubmit={openQuoteCheckout}
           >
             <label

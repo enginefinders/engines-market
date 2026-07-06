@@ -68,12 +68,6 @@ export type HeroSectionData = {
     countryCode?: string;
     countryLabel?: string;
   };
-  disclaimer?: {
-    title?: string;
-    note: string;
-    notesTitle?: string;
-    notes?: string[];
-  };
   form: {
     heading: string;
     subtitle: string;
@@ -118,10 +112,6 @@ export type LiveMarketPricesData = {
   h3: string;
   imageSrc?: string;
   imageAlt?: string;
-  notes?: {
-    title: string;
-    items: string[];
-  };
   introBullets: {
     label: string;
     text: string;
@@ -204,10 +194,6 @@ export type ModelsSectionData = {
     priceRange: string;
     cta: string;
     image: string;
-    lineOne?: string;
-    heroLineTwo?: string;
-    engineCodes?: string[];
-    imageAlt?: string;
   }[];
 };
 
