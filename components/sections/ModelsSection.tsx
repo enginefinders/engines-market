@@ -11,6 +11,7 @@ import Section from "@/components/ui/Section";
 type Props = {
   data: ModelsSectionData;
   brandSlug: string;
+  documentMode?: boolean;
 };
 
 function splitHeading(title: string) {
@@ -55,7 +56,7 @@ function ArrowIcon({ open = false }: { open?: boolean }) {
   );
 }
 
-export default function ModelsSection({ data, brandSlug }: Props) {
+export default function ModelsSection({ data, brandSlug, documentMode = false }: Props) {
   const heading = splitHeading(data.h2);
   const [openCard, setOpenCard] = useState<string | null>(null);
   const [showAllModels, setShowAllModels] = useState(false);
@@ -81,7 +82,7 @@ export default function ModelsSection({ data, brandSlug }: Props) {
         />
       </div>
 
-      <Container>
+      <Container className={documentMode ? "max-w-[1400px] px-0 sm:px-0 lg:px-0" : ""}>
         <div className="relative z-[1] max-w-[760px] text-left">
           <p className="section-pill">
             <GridIcon />

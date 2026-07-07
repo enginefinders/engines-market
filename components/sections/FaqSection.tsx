@@ -5,6 +5,7 @@ import Section from "@/components/ui/Section";
 type Props = {
   data: FaqSectionData;
   strictData?: boolean;
+  documentMode?: boolean;
 };
 
 function splitHeading(text: string) {
@@ -23,17 +24,17 @@ function splitHeading(text: string) {
   };
 }
 
-export default function FaqSection({ data, strictData = false }: Props) {
+export default function FaqSection({ data, strictData = false, documentMode = false }: Props) {
   const heading = splitHeading(data.h2);
   const headingLines = data.headingLines?.length ? data.headingLines : [heading.primary, heading.accent].filter(Boolean);
   const ui = data.ui ?? {};
   const defaultOpenIndex = data.defaultOpenIndex ?? 0;
   const mobileHeading = "Frequently Asked Question";
 
-  return (
-    <Section className="bg-white">
-      <Container>
-        <div className="max-w-[860px]">
+    return (
+      <Section className="bg-white">
+      <Container className={documentMode ? "max-w-[1400px] px-0 sm:px-0 lg:px-0" : ""}>
+        <div className={documentMode ? "max-w-[1400px]" : "max-w-[860px]"}>
           <p className="section-pill mb-1.5">{data.tag}</p>
           <h2>
             <span className="block md:hidden text-[#15803d]">{mobileHeading}</span>
@@ -48,7 +49,7 @@ export default function FaqSection({ data, strictData = false }: Props) {
           <p className="text-body mt-2.5 text-slate-700">{data.intro}</p>
         </div>
 
-        <div className="faq-scroll-panel mx-auto mt-6 max-w-[1400px]">
+        <div className={`faq-scroll-panel mx-auto mt-6 max-w-[1400px] ${documentMode ? "pr-0" : ""}`}>
           {data.items.map((item, index) => (
             <details key={item.question} className="group block surface-card-soft overflow-hidden" open={index === defaultOpenIndex}>
               <summary className="flex min-h-[56px] w-full cursor-pointer list-none items-center justify-between gap-4 border-b border-slate-100 px-5 py-5 text-left transition hover:bg-slate-50 sm:px-6 group-open:border-b-2 group-open:border-green-700 group-open:text-green-700 [&::-webkit-details-marker]:hidden">

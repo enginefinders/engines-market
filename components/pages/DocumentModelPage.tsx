@@ -86,12 +86,13 @@ export default function DocumentModelPage({
         />
       )}
 
-      <ReviewsSection data={reviewsData} useDataHeading />
+      <ReviewsSection data={reviewsData} useDataHeading documentMode />
 
       <VariantCoverageSection 
         data={visualData.sections.variantCoverage} 
         brandName={visualData.brand.name}
         modelName={visualData.model.name}
+        documentMode
       />
 
       <ModelEngineCodesSection
@@ -99,6 +100,7 @@ export default function DocumentModelPage({
         guide={visualData.sections.variantCoverage.engineGuide}
         modelName={visualData.model.name}
         strictData
+        documentMode
       />
 
       {visualData.sections.commonProblems ? (
@@ -124,11 +126,12 @@ export default function DocumentModelPage({
         data={visualData.sections.fuelTypes}
         bgImage={visualData.assets.fuelTypesBg}
         strictData
+        documentMode
       />
 
       <EngineYearsSection brandName={visualData.model.name} data={visualData.sections.engineYears} strictData />
 
-      <FaqSection data={visualData.sections.faq} strictData />
+      <FaqSection data={visualData.sections.faq} strictData documentMode />
 
       <TrustCtaSection
         data={visualData.sections.trustCta}

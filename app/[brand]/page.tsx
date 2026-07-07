@@ -116,7 +116,7 @@ export default async function BrandPage({ params }: BrandPageProps) {
         initialTimestamp={initialTimestamp}
       />
 
-      <ReviewsSection data={reviewsData} useDataHeading />
+      <ReviewsSection data={reviewsData} useDataHeading documentMode />
 
       <ModelsSection
         data={{
@@ -124,27 +124,29 @@ export default async function BrandPage({ params }: BrandPageProps) {
           cards: modelCardsWithResolvedImages,
         }}
         brandSlug={pageData.brand.slug}
+        documentMode
       />
 
       <EngineCodesSection data={pageData.sections.engineCodes} bgImage={pageData.assets.engineCodesBg} />
 
-      <CommonProblemsSection data={pageData.sections.commonProblems} bgImage={pageData.assets.commonProblemsBg} />
+      <CommonProblemsSection data={pageData.sections.commonProblems} bgImage={pageData.assets.commonProblemsBg} documentMode />
 
       <EngineTypesSection
         data={pageData.sections.engineTypes}
         bgImage={pageData.assets.engineTypesBg}
+        documentMode
         sectionId="brand-engine-types"
       />
 
       <EngineSizesSection brandName={pageData.brand.name} data={pageData.sections.engineSizes} bgImage={pageData.assets.engineSizesBg} />
 
-      <FuelTypesSection data={pageData.sections.fuelTypes} bgImage={pageData.assets.fuelTypesBg} />
+      <FuelTypesSection data={pageData.sections.fuelTypes} bgImage={pageData.assets.fuelTypesBg} documentMode />
 
-      <EngineCodeDirectorySection data={pageData.sections.engineCodeDirectory} bgImage={pageData.assets.engineCodeDirectoryBg} />
+      <EngineCodeDirectorySection data={pageData.sections.engineCodeDirectory} bgImage={pageData.assets.engineCodeDirectoryBg} documentMode />
 
       <EngineYearsSection brandName={pageData.brand.name} data={pageData.sections.engineYears} />
 
-      <FaqSection data={pageData.sections.faq} />
+      <FaqSection data={pageData.sections.faq} documentMode />
 
       <TrustCtaSection
         data={pageData.sections.trustCta}

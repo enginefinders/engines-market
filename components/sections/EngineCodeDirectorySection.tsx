@@ -9,6 +9,7 @@ import Section from "@/components/ui/Section";
 type Props = {
   data: EngineCodeDirectoryData;
   bgImage?: string;
+  documentMode?: boolean;
 };
 
 function parseFamilyName(name: string) {
@@ -100,7 +101,7 @@ function splitHeading(text: string) {
   };
 }
 
-export default function EngineCodeDirectorySection({ data, bgImage }: Props) {
+export default function EngineCodeDirectorySection({ data, bgImage, documentMode = false }: Props) {
   const [activeFamilyIndex, setActiveFamilyIndex] = useState(0);
   const [openIndices, setOpenIndices] = useState<number[]>(() => data.families.map(() => 0));
   const [directoryOpen, setDirectoryOpen] = useState(false);
@@ -143,7 +144,7 @@ export default function EngineCodeDirectorySection({ data, bgImage }: Props) {
         </div>
       ) : null}
 
-      <Container>
+      <Container className={documentMode ? "max-w-[1400px] px-0 sm:px-0 lg:px-0" : ""}>
         <div className="relative z-[1] max-w-[620px]">
           <div>
             {data.tag ? <p className="section-pill mb-1.5">{data.tag}</p> : null}

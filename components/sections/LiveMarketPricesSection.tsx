@@ -177,8 +177,8 @@ export default function LiveMarketPricesSection({
   const sectionImage = imageSrc || "";
 
   return (
-    <Section className="bg-[#f5f5f5] sm:px-2 py-7 sm:py-8 lg:py-10">
-      <Container className="max-w-[1400px] px-2">
+    <Section className={`bg-[#f5f5f5] py-7 sm:py-8 lg:py-10 ${isDocumentMode ? "" : "sm:px-2"}`}>
+      <Container className={`max-w-[1400px] ${isDocumentMode ? "px-0 sm:px-0 lg:px-0" : "px-2"}`}>
         <div className=" max-w-190 text-start">
           <div className="section-pill">
             <span className="h-2 w-2 rounded-full bg-[#22c55e]" />

@@ -14,6 +14,7 @@ type Props = {
   guide: ModelPageData["sections"]["variantCoverage"]["engineGuide"];
   modelName: string;
   strictData?: boolean;
+  documentMode?: boolean;
 };
 
 type GuideEntry = ModelPageData["sections"]["variantCoverage"]["engineGuide"]["families"][number]["entries"][number];
@@ -262,7 +263,7 @@ function getFuelIcon(fuelType: string, className?: string) {
   return <EngineIcon className={className} />;
 }
 
-export default function ModelEngineCodesSection({ data, guide, modelName, strictData = false }: Props) {
+export default function ModelEngineCodesSection({ data, guide, modelName, strictData = false, documentMode = false }: Props) {
   const [selection, setSelection] = useState<Selection>(null);
   const [activeTabIndex, setActiveTabIndex] = useState(0);
   const guideLookup = useMemo(() => buildGuideLookup(guide), [guide]);
@@ -270,6 +271,16 @@ export default function ModelEngineCodesSection({ data, guide, modelName, strict
   const mobileHeadingLine = headingLines[0] ?? "";
   const intro = strictData ? data.h3 : (guide.h3 || data.h3);
   const closingLine = strictData ? (data.closingLine || "") : (guide.closing || data.closingLine || "");
+  const sectionContainerClass = documentMode ? "max-w-[1400px] px-0 sm:px-0 lg:px-0" : "max-w-[1400px]";
+  const topShellClass = documentMode
+    ? "py-[42px] px-0 pb-[64px] md:py-[42px] md:px-0 md:pb-[64px] max-[720px]:px-0 max-[720px]:pb-[10px] max-[720px]:pt-[20px]"
+    : "py-[42px] px-[18px] pb-[64px] md:py-[42px] md:px-[18px] md:pb-[64px] max-[720px]:px-[12px] max-[720px]:pb-[10px] max-[720px]:pt-[20px]";
+  const tabShellClass = documentMode
+    ? "max-w-[1240px] mx-auto px-0 max-[720px]:px-0"
+    : "max-w-[1240px] mx-auto px-[18px] max-[720px]:px-0";
+  const contentShellClass = documentMode
+    ? "py-[42px] px-0 pb-[64px] max-[720px]:px-0 max-[720px]:pt-[10px] max-[720px]:pb-[50px]"
+    : "py-[42px] px-[18px] pb-[64px] max-[720px]:px-[12px] max-[720px]:pt-[10px] max-[720px]:pb-[50px]";
   const ui = data.ui ?? {};
   const closingAction = data.closingAction ?? {};
 
@@ -297,10 +308,10 @@ export default function ModelEngineCodesSection({ data, guide, modelName, strict
     setSelection(null);
   }
 
-  return (
-    <Section id="model-engine-codes" className="bg-[linear-gradient(180deg,#ffffff_0%,#f6f8fb_100%)]">
-      <Container className="max-w-[1400px]">
-        <div className="py-[42px] px-[18px] pb-[64px] md:py-[42px] md:px-[18px] md:pb-[64px] max-[720px]:px-[12px] max-[720px]:pb-[10px] max-[720px]:pt-[20px]">
+    return (
+      <Section id="model-engine-codes" className="bg-[linear-gradient(180deg,#ffffff_0%,#f6f8fb_100%)]">
+      <Container className={sectionContainerClass}>
+        <div className={topShellClass}>
           <div className="max-w-[1240px] mx-auto">
             <header className="max-w-[1000px]">
               {strictData ? (data.tag ? <div className="inline-flex items-center justify-center min-h-[34px] px-[16px] rounded-full bg-[linear-gradient(180deg,#16355d_0%,#081a34_100%)] text-white text-[12px] font-extrabold tracking-[0.12em] uppercase shadow-[0_8px_20px_rgba(8,26,52,0.14)] mb-[14px]">{data.tag}</div> : null) : <div className="inline-flex items-center justify-center min-h-[34px] px-[16px] rounded-full bg-[linear-gradient(180deg,#16355d_0%,#081a34_100%)] text-white text-[12px] font-extrabold tracking-[0.12em] uppercase shadow-[0_8px_20px_rgba(8,26,52,0.14)] mb-[14px]">{data.tag || guide.tag}</div>}
@@ -319,37 +330,40 @@ export default function ModelEngineCodesSection({ data, guide, modelName, strict
       </Container>
 
       {renderableGroups.length > 1 && (
-        <div className="max-w-[800px] mx-auto bg-[linear-gradient(180deg,#0d1b2e_0%,#081a34_100%)] py-[24px] max-[720px]:bg-transparent max-[720px]:py-[0px] shadow-[0_4px_20px_rgba(8,26,52,0.15)] max-[720px]:shadow-none">
-          <div className="max-w-[1240px] mx-auto px-[18px] max-[720px]:px-0">
-            <div className="flex gap-[8px] rounded-[16px] bg-white/4 shadow-[inset_0_2px_8px_rgba(0,0,0,0.2)] max-[720px]:gap-0 max-[720px]:overflow-hidden max-[720px]:rounded-none max-[720px]:border max-[720px]:border-[#dfe7ef] max-[720px]:bg-white max-[720px]:shadow-[0_8px_18px_rgba(13,27,46,0.06)] max-[720px]:p-0">
-              {renderableGroups.map((entry, index) => {
-                const isActive = index === safeActiveIndex;
-                return (
-                  <button
-                    key={entry.group.name}
-                    type="button"
-                    className={`flex-1 min-w-0 inline-flex items-center justify-center gap-[8px] py-[12px] px-[16px] rounded-[12px] border border-transparent text-[14px] font-bold tracking-[0.01em] cursor-pointer transition-all duration-200 text-[#bfd0e1] max-[720px]:gap-[6px] max-[720px]:rounded-none max-[720px]:border-y-0 max-[720px]:border-l-0 max-[720px]:px-[10px] max-[720px]:py-[13px] max-[720px]:text-[13px] ${index < renderableGroups.length - 1 ? "max-[720px]:border-r max-[720px]:border-r-[#dfe7ef]" : ""} ${isActive
-                      ? "bg-[linear-gradient(180deg,#1a3a66_0%,#0f2a4e_100%)] border-[#2a6dd6] text-white shadow-[0_0_0_2px_rgba(42,109,214,1),0_0_10px_rgba(42,109,214,0.8),0_0_25px_rgba(42,109,214,0.6),0_0_50px_rgba(42,109,214,0.4),0_8px_20px_rgba(42,109,214,0.5)] max-[720px]:shadow-[inset_0_1px_0_rgba(255,255,255,0.14),0_0_0_1px_rgba(42,109,214,0.95),0_0_12px_rgba(42,109,214,0.35)]"
-                      : "bg-transparent hover:text-white hover:bg-white/6 max-[720px]:bg-white max-[720px]:text-[#10203a] max-[720px]:shadow-none"
+        <Container className={sectionContainerClass}>
+          <div className={tabShellClass}>
+            <div className="overflow-hidden rounded-[6px] border border-[#d9e1ea] bg-white shadow-[0_4px_12px_rgba(13,27,46,0.05)]">
+              <div className="flex items-stretch divide-x divide-[#d9e1ea]">
+                {renderableGroups.map((entry, index) => {
+                  const isActive = index === safeActiveIndex;
+                  return (
+                    <button
+                      key={entry.group.name}
+                      type="button"
+                      className={`relative flex min-h-[46px] min-w-0 basis-0 flex-1 items-center justify-center gap-[8px] px-[12px] py-[12px] text-[13px] font-bold tracking-[0.02em] transition-all duration-200 max-[420px]:gap-[6px] max-[420px]:px-[6px] max-[420px]:text-[11px] ${
+                        isActive
+                          ? "z-10 bg-[linear-gradient(180deg,#173a6d_0%,#0c213f_100%)] text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.26),inset_0_-1px_0_rgba(6,18,35,0.85),0_0_0_1px_rgba(45,107,255,0.45),0_0_20px_rgba(45,107,255,0.45),0_8px_18px_rgba(17,47,95,0.32)] before:absolute before:inset-x-0 before:top-0 before:h-[42%] before:bg-[linear-gradient(180deg,rgba(255,255,255,0.2),rgba(255,255,255,0))] before:content-['']"
+                          : "bg-white text-[#22324a] shadow-none hover:bg-[#f8fafc]"
                       }`}
-                    onClick={() => handleTabClick(index)}
-                    aria-selected={isActive}
-                    role="tab"
-                  >
-                    <span className="w-[20px] h-[20px] grid place-items-center text-current">
-                      {getFuelIcon(entry.group.name, "w-[18px] h-[18px] max-[720px]:w-[16px] max-[720px]:h-[16px]")}
-                    </span>
-                    <span className="whitespace-nowrap overflow-hidden text-ellipsis max-[420px]:text-[12px]">{entry.group.name}</span>
-                  </button>
-                );
-              })}
+                      onClick={() => handleTabClick(index)}
+                      aria-selected={isActive}
+                      role="tab"
+                    >
+                      <span className="relative z-10 grid h-[18px] w-[18px] place-items-center text-current max-[420px]:h-[15px] max-[420px]:w-[15px]">
+                        {getFuelIcon(entry.group.name, "h-[16px] w-[16px] max-[420px]:h-[14px] max-[420px]:w-[14px]")}
+                      </span>
+                      <span className="relative z-10 truncate">{entry.group.name}</span>
+                    </button>
+                  );
+                })}
+              </div>
             </div>
           </div>
-        </div>
+        </Container>
       )}
 
-      <Container className="max-w-[1400px]">
-        <div className="py-[42px] px-[18px] pb-[64px] max-[720px]:px-[12px] max-[720px]:pt-[10px] max-[720px]:pb-[50px]">
+      <Container className={sectionContainerClass}>
+        <div className={contentShellClass}>
           <div className="max-w-[1240px] mx-auto">
             {activeGroupEntry ? (
               <section className="mt-[24px]">

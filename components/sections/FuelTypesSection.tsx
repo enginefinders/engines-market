@@ -9,6 +9,7 @@ type Props = {
   data: FuelTypesData;
   bgImage?: string;
   strictData?: boolean;
+  documentMode?: boolean;
 };
 
 type FuelItem = FuelTypesData["items"][number];
@@ -339,7 +340,7 @@ function FuelPanel({
   );
 }
 
-export default function FuelTypesSection({ data, bgImage, strictData = false }: Props) {
+export default function FuelTypesSection({ data, bgImage, strictData = false, documentMode = false }: Props) {
   const items = data.items ?? [];
   const [activeItemIndex, setActiveItemIndex] = useState(0);
 
@@ -363,7 +364,7 @@ export default function FuelTypesSection({ data, bgImage, strictData = false }: 
         </div>
       ) : null}
 
-      <Container>
+      <Container className={documentMode ? "max-w-[1400px] px-0 sm:px-0 lg:px-0" : ""}>
         <div className="relative z-[1]">
           <p className="section-pill">{data.tag}</p>
 

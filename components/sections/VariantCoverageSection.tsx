@@ -10,6 +10,7 @@ type Props = {
   data: ModelVariantCoverageSectionData;
   brandName?: string;
   modelName?: string;
+  documentMode?: boolean;
 };
 
 type VariantCard = ModelVariantCoverageSectionData["cards"][number];
@@ -156,7 +157,7 @@ function getRenderableDirectoryGroups(data: ModelVariantCoverageSectionData) {
     .filter((group) => group.items.length > 0);
 }
 
-export default function VariantCoverageSection({ data, brandName, modelName }: Props) {
+export default function VariantCoverageSection({ data, brandName, modelName, documentMode = false }: Props) {
   const renderableCards = useMemo(
     () => data.cards.filter(isRenderableVariantCard),
     [data.cards],
@@ -250,7 +251,7 @@ export default function VariantCoverageSection({ data, brandName, modelName }: P
       `}</style>
 
       <Section className="bg-[#f7f8fb]">
-        <Container className="max-w-[1400px] px-2">
+        <Container className={`max-w-[1400px] ${documentMode ? "px-0 sm:px-0 lg:px-0" : "px-2"}`}>
           <div className=" max-w-[760px] text-left">
             <div className="section-pill mb-[14px]">
               <span>{data.tag}</span>
@@ -284,12 +285,12 @@ export default function VariantCoverageSection({ data, brandName, modelName }: P
                 return (
                   <article key={card.slug} className="relative">
                     <div
-                      className={`overflow-hidden rounded-[12px] border bg-white shadow-[0_2px_8px_rgba(13,27,46,0.05)] transition duration-300 ${isOpen
-                          ? `border-[rgba(21,128,61,0.18)] shadow-[0_10px_26px_rgba(13,27,46,0.12)] ${isLastRow
+                      className={`overflow-hidden rounded-[12px] border bg-white transition duration-300 ${isOpen
+                          ? `border-[#2969af] shadow-[0_0_0_1px_rgba(42,109,214,1),0_0_5px_rgba(42,109,214,0.4),0_0_12px_rgba(42,109,214,0.3),0_0_20px_rgba(42,109,214,0.2),0_3px_10px_rgba(42,109,214,0.25)] ${isLastRow
                             ? "rounded-b-[12px] rounded-t-none border-t-0"
                             : "rounded-t-[12px] rounded-b-none border-b-0"
                           }`
-                          : "border-slate-200 hover:border-slate-300 hover:shadow-[0_8px_18px_rgba(13,27,46,0.08)]"
+                          : "border-slate-200 shadow-[0_2px_8px_rgba(13,27,46,0.05)] hover:border-slate-300 hover:shadow-[0_8px_18px_rgba(13,27,46,0.08)]"
                         }`}
                     >
                       <button
@@ -336,12 +337,12 @@ export default function VariantCoverageSection({ data, brandName, modelName }: P
 
                     {isOpen ? (
                       <div
-                        className={`absolute left-[-1px] right-[-1px] z-50 bg-[#0d1b2e] px-4 pb-4 pt-4 text-white border border-[rgba(21,128,61,0.18)] min-h-[248px] sm:min-h-[267px] ${isLastRow
+                        className={`relative absolute left-[-1px] right-[-1px] z-50 overflow-hidden border-[0.5px] border-[#2969af] bg-[#0d1b2e] px-4 pb-4 pt-4 text-white shadow-[0_0_0_1px_rgba(42,109,214,1),0_0_5px_rgba(42,109,214,0.4),0_0_12px_rgba(42,109,214,0.3),0_0_20px_rgba(42,109,214,0.2),0_3px_10px_rgba(42,109,214,0.25)] before:pointer-events-none before:absolute before:inset-0 before:bg-[linear-gradient(125deg,rgba(255,255,255,0.18)_0%,rgba(255,255,255,0.05)_22%,rgba(255,255,255,0)_42%,rgba(45,107,255,0.16)_50%,rgba(255,255,255,0)_64%)] after:pointer-events-none after:absolute after:inset-x-0 after:top-0 after:h-px after:bg-gradient-to-r after:from-transparent after:via-white/70 after:to-transparent min-h-[248px] sm:min-h-[267px] ${isLastRow
                             ? "bottom-full rounded-t-[12px] border-b-0"
                             : "top-full rounded-b-[12px] border-t-0"
                           }`}
                       >
-                        <div className="space-y-[10px]">
+                        <div className="relative z-10 space-y-[10px]">
                           <div className="flex items-center justify-between gap-3 rounded-[8px] border border-blue-500 shadow-[0_0_15px_rgba(59,130,246,0.5),inset_0_0_12px_rgba(59,130,246,0.3)] transition hover:shadow-[0_0_20px_rgba(59,130,246,0.8),inset_0_0_15px_rgba(59,130,246,0.5)] hover:bg-slate-800 bg-white/[0.03] px-3 py-3 sm:py-4">
                             <span className="flex-none text-[10px] font-semibold uppercase tracking-[0.08em] text-white/60">
                               {ui.specsLabel ?? "Specs"}

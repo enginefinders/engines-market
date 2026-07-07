@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useId, useMemo, useState } from "react";
 import type { CommonProblemsData } from "@/types/brand";
 import { RecommendationCard } from "@/components/ui/CalloutCards";
 import Container from "@/components/ui/Container";
@@ -10,6 +10,7 @@ import { FaCar } from "react-icons/fa";
 type Props = {
   data: CommonProblemsData;
   bgImage?: string;
+  documentMode?: boolean;
 };
 
 function normalizeText(text: string) {
@@ -34,6 +35,68 @@ function formatAffectedModelLabel(value: string, isPrimary: boolean) {
   }
 
   return normalized;
+}
+
+function FailureMileageGauge({ mobile = false }: { mobile?: boolean }) {
+  const gaugeId = useId().replace(/:/g, "");
+  const width = mobile ? 118 : 140;
+  const height = mobile ? 60 : 72;
+  const strokeWidth = mobile ? 10 : 12;
+
+  return (
+    <svg
+      viewBox={`0 0 ${width} ${height}`}
+      className={mobile ? "h-[56px] w-[110px]" : "h-[68px] w-[132px]"}
+      aria-hidden="true"
+    >
+      <defs>
+        <linearGradient id={`${gaugeId}-track`} x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stopColor="#dbeafe" />
+          <stop offset="50%" stopColor="#93c5fd" />
+          <stop offset="100%" stopColor="#2563eb" />
+        </linearGradient>
+        <linearGradient id={`${gaugeId}-needle`} x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#1d4ed8" />
+          <stop offset="100%" stopColor="#0f172a" />
+        </linearGradient>
+        <filter id={`${gaugeId}-glow`} x="-20%" y="-20%" width="140%" height="140%">
+          <feDropShadow dx="0" dy="4" stdDeviation="4" floodColor="#2563eb" floodOpacity="0.18" />
+        </filter>
+      </defs>
+
+      <path
+        d={`M ${strokeWidth} ${height - strokeWidth} A ${(width / 2) - strokeWidth / 2} ${(width / 2) - strokeWidth / 2} 0 0 1 ${width - strokeWidth} ${height - strokeWidth}`}
+        fill="none"
+        stroke="#e2e8f0"
+        strokeWidth={strokeWidth}
+        strokeLinecap="round"
+      />
+      <path
+        d={`M ${strokeWidth} ${height - strokeWidth} A ${(width / 2) - strokeWidth / 2} ${(width / 2) - strokeWidth / 2} 0 0 1 ${width - strokeWidth} ${height - strokeWidth}`}
+        fill="none"
+        stroke={`url(#${gaugeId}-track)`}
+        strokeWidth={strokeWidth}
+        strokeLinecap="round"
+        strokeDasharray="220"
+        strokeDashoffset="58"
+        filter={`url(#${gaugeId}-glow)`}
+      />
+
+      <g transform={`translate(${width / 2} ${height - strokeWidth})`}>
+        <line
+          x1="0"
+          y1="0"
+          x2={mobile ? "28" : "34"}
+          y2={mobile ? "-22" : "-26"}
+          stroke={`url(#${gaugeId}-needle)`}
+          strokeWidth={mobile ? "4" : "5"}
+          strokeLinecap="round"
+        />
+        <circle r={mobile ? "7" : "8"} fill="#0f172a" />
+        <circle r={mobile ? "3.5" : "4"} fill="#60a5fa" />
+      </g>
+    </svg>
+  );
 }
 
 function parseAffectedModelsSummary(affectedModels: string) {
@@ -374,11 +437,7 @@ function MobileProblemCard({
 
               {/* Gauge/Meter Image */}
               <div className="mb-3 flex justify-center">
-                <img
-                  src="/meterr.webp"
-                  alt="Mileage gauge indicator"
-                  className="h-14 w-auto object-contain"
-                />
+                <FailureMileageGauge mobile />
               </div>
 
               {/* Mileage Range */}
@@ -465,7 +524,7 @@ function MobileProblemCard({
   );
 }
 
-export default function CommonProblemsSection({ data, bgImage }: Props) {
+export default function CommonProblemsSection({ data, bgImage, documentMode = false }: Props) {
   const [active, setActive] = useState(0);
   const [openMobile, setOpenMobile] = useState(-1);
   const [isTextExpanded, setIsTextExpanded] = useState(false);
@@ -511,7 +570,7 @@ export default function CommonProblemsSection({ data, bgImage }: Props) {
         </div>
       ) : null}
 
-      <Container className="relative max-w-[1400px] px-2">
+      <Container className={`relative max-w-[1400px] ${documentMode ? "px-0 sm:px-0 lg:px-0" : "px-2"}`}>
         <div className="section-pill mb-[14px]">
           <span>{data.tag}</span>
         </div>
@@ -609,11 +668,7 @@ export default function CommonProblemsSection({ data, bgImage }: Props) {
 
                   {/* Gauge/Meter Image */}
                   <div className="mb-4 flex justify-center">
-                    <img
-                      src="/meterr.webp"
-                      alt="Mileage gauge indicator"
-                      className="h-15 w-auto object-contain"
-                    />
+                    <FailureMileageGauge />
                   </div>
 
                   {/* Mileage Range */}

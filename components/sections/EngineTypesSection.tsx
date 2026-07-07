@@ -22,6 +22,7 @@ type Props = {
   dynamicBrandCta?: boolean;
   displayMode?: "brand" | "document";
   sectionId?: string;
+  documentMode?: boolean;
 };
 
 function normalizeText(text: string) {
@@ -105,7 +106,6 @@ function FlipCard({
   type: EngineTypesData["types"][number];
   open: boolean;
   onToggle: () => void;
-  frontActionLabel: string;
   backActionLabel: string;
   priceLabel: string;
   uniformHeight: number;
@@ -221,35 +221,37 @@ function FlipCard({
             WebkitBackfaceVisibility: "hidden",
           }}
         >
-          <div className="scrollbar-dark h-full overflow-y-auto rounded-[12px] border border-[#1e3a5f] bg-[#0d1b2e] px-4 py-4 shadow-[0_2px_8px_rgba(13,27,46,0.15)] lg:rounded-[16px] lg:px-5 lg:py-4 lg:shadow-[0_8px_24px_rgba(13,27,46,0.18)]">
-            <div className="mb-2 flex items-center justify-between gap-3">
-              <span className={`inline-flex rounded-full border px-[8px] py-[1px] text-[8.5px] font-bold uppercase tracking-[0.7px] ${badgeClass}`}>
-                {badge}
-              </span>
-              <button
-                type="button"
-                onClick={onToggle}
-                className="inline-flex items-center gap-1 text-[8.5px] font-bold text-[#475569] transition-colors hover:text-white"
-              >
-                <TbRefresh className="h-3.5 w-3.5" />
-                <span>{backActionLabel}</span>
-              </button>
+          <div className="scrollbar-dark relative h-full overflow-y-auto rounded-[12px] border-[1.5px] border-[#3b82f6] bg-[#0d1b2e] px-4 py-4 shadow-[0_0_0_1px_rgba(59,130,246,1),0_0_8px_rgba(59,130,246,0.5),0_0_16px_rgba(59,130,246,0.38),0_0_26px_rgba(59,130,246,0.24),0_4px_12px_rgba(42,109,214,0.28)] lg:rounded-[16px] lg:px-5 lg:py-4">
+            <div className="relative z-10">
+              <div className="mb-2 flex items-center justify-between gap-3">
+                <span className={`inline-flex rounded-full border px-[8px] py-[1px] text-[8.5px] font-bold uppercase tracking-[0.7px] ${badgeClass}`}>
+                  {badge}
+                </span>
+                <button
+                  type="button"
+                  onClick={onToggle}
+                  className="inline-flex items-center gap-1 text-[8.5px] font-bold text-[#475569] transition-colors hover:text-white"
+                >
+                  <TbRefresh className="h-3.5 w-3.5" />
+                  <span>{backActionLabel}</span>
+                </button>
+              </div>
+
+              <p className="text-[12.5px] leading-[1.6] text-[#e2e8f0] lg:text-[13px]">
+                {backDescription}
+              </p>
+
+              {backBullets.length ? (
+                <ul className="mt-2 space-y-1.5 text-[11px] leading-[1.55] text-[#cbd5e1] lg:text-[11.5px]">
+                  {backBullets.map((bullet) => (
+                    <li key={bullet} className="flex gap-2">
+                      <span className="mt-[4px] h-[5px] w-[5px] flex-none rounded-full bg-[#22c55e]" />
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
+              ) : null}
             </div>
-
-            <p className="text-[12.5px] leading-[1.6] text-[#e2e8f0] lg:text-[13px]">
-              {backDescription}
-            </p>
-
-            {backBullets.length ? (
-              <ul className="mt-2 space-y-1.5 text-[11px] leading-[1.55] text-[#cbd5e1] lg:text-[11.5px]">
-                {backBullets.map((bullet) => (
-                  <li key={bullet} className="flex gap-2">
-                    <span className="mt-[4px] h-[5px] w-[5px] flex-none rounded-full bg-[#22c55e]" />
-                    <span>{bullet}</span>
-                  </li>
-                ))}
-              </ul>
-            ) : null}
           </div>
         </div>
       </div>
@@ -268,6 +270,7 @@ export default function EngineTypesSection({
   dynamicBrandCta = false,
   displayMode = "brand",
   sectionId,
+  documentMode = false,
 }: Props) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const [uniformHeight, setUniformHeight] = useState(228);
@@ -330,7 +333,7 @@ export default function EngineTypesSection({
         </div>
       ) : null}
 
-      <Container className="relative max-w-[1400px]">
+      <Container className={`relative max-w-[1400px] ${documentMode ? "px-0 sm:px-0 lg:px-0" : ""}`}>
         <div className="section-pill mb-[14px]">
           <span>{data.tag}</span>
         </div>
@@ -365,7 +368,6 @@ export default function EngineTypesSection({
                 type={type}
                 open={openIndex === index}
                 onToggle={() => setOpenIndex((current) => (current === index ? null : index))}
-                frontActionLabel={isDocumentMode ? (ui.frontActionLabel || "") : (ui.frontActionLabel ?? "What is it?")}
                 backActionLabel={isDocumentMode ? (ui.backActionLabel || "") : (ui.backActionLabel ?? "Flip back")}
                 priceLabel={isDocumentMode ? (ui.priceLabel || "") : (ui.priceLabel ?? "Typical price range")}
                 uniformHeight={uniformHeight}

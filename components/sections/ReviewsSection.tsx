@@ -8,6 +8,7 @@ import Section from "@/components/ui/Section";
 type Props = {
   data: ReviewsSectionData;
   useDataHeading?: boolean;
+  documentMode?: boolean;
 };
 
 const REVIEW_SOURCES = ["google", "facebook", "trustpilot", "google", "facebook", "trustpilot"] as const;
@@ -108,7 +109,7 @@ function splitHeading(title: string) {
   };
 }
 
-export default function ReviewsSection({ data, useDataHeading = false }: Props) {
+export default function ReviewsSection({ data, useDataHeading = false, documentMode = false }: Props) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const reviewCount = data.reviews.length;
   const heading = splitHeading(data.h2);
@@ -136,8 +137,8 @@ export default function ReviewsSection({ data, useDataHeading = false }: Props) 
 
   return (
     <Section className="bg-white">
-      <Container>
-        <div className="mx-auto max-w-[1400px] px-2">
+      <Container className={documentMode ? "max-w-[1400px] px-0 sm:px-0 lg:px-0" : ""}>
+        <div className={`mx-auto max-w-[1400px] ${documentMode ? "" : "px-2"}`}>
           <div>
             <p className="section-pill">
               {/* <TagIcon /> */}

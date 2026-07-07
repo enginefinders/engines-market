@@ -192,7 +192,7 @@ export default function TrustCtaSection({
                     descriptionAs="h3"
                     titleClassName="!mt-1 !font-['Urbanist'] !text-[13px] !font-extrabold !leading-[1.35] !tracking-normal !normal-case !text-white"
                     descriptionClassName="!mt-1 !font-['Urbanist'] !text-[12px] !font-medium !leading-[1.6] !tracking-normal !normal-case !text-slate-200"
-                    buttonClassName="!relative !min-h-[46px] !overflow-hidden !rounded-[10px] !border !border-[#15803d] !bg-[linear-gradient(180deg,#1aae4d_0%,#15803d_100%)] !px-5 !text-[12px] !font-bold !text-white !shadow-[inset_0_1px_0_rgba(255,255,255,0.2),0_0_14px_rgba(34,197,94,0.26)] before:!absolute before:!inset-x-0 before:!top-0 before:!h-[45%] before:!bg-[linear-gradient(180deg,rgba(255,255,255,0.2),rgba(255,255,255,0))] before:!content-['']"
+                    buttonClassName="!relative !min-h-[46px] !overflow-visible !rounded-[10px] !border !border-[#15803d] !bg-[linear-gradient(180deg,#1aae4d_0%,#15803d_100%)] !px-5 !text-[12px] !font-bold !text-white !shadow-[inset_0_1px_0_rgba(255,255,255,0.2),0_0_14px_rgba(34,197,94,0.26)] !whitespace-nowrap md:!min-w-[360px] md:!justify-between before:!absolute before:!inset-x-0 before:!top-0 before:!h-[45%] before:!bg-[linear-gradient(180deg,rgba(255,255,255,0.2),rgba(255,255,255,0))] before:!content-['']"
                     icon={<QuoteIcon />}
                     linkProps={{
                       href: "#quote-form",
@@ -218,7 +218,7 @@ export default function TrustCtaSection({
                     title={stripTitle}
                     description={stripDescription}
                     buttonText={data.buttonText.replace("->", "").trim()}
-                    buttonClassName="!relative !min-h-[46px] !overflow-hidden !rounded-[10px] !border !border-[#15803d] !bg-[linear-gradient(180deg,#1aae4d_0%,#15803d_100%)] !text-white !shadow-[inset_0_1px_0_rgba(255,255,255,0.2),0_0_14px_rgba(34,197,94,0.26)] before:!absolute before:!inset-x-0 before:!top-0 before:!h-[45%] before:!bg-[linear-gradient(180deg,rgba(255,255,255,0.2),rgba(255,255,255,0))] before:!content-['']"
+                    buttonClassName="!relative !min-h-[46px] !overflow-visible !rounded-[10px] !border !border-[#15803d] !bg-[linear-gradient(180deg,#1aae4d_0%,#15803d_100%)] !px-5 !text-white !shadow-[inset_0_1px_0_rgba(255,255,255,0.2),0_0_14px_rgba(34,197,94,0.26)] !whitespace-nowrap md:!min-w-[360px] md:!justify-between before:!absolute before:!inset-x-0 before:!top-0 before:!h-[45%] before:!bg-[linear-gradient(180deg,rgba(255,255,255,0.2),rgba(255,255,255,0))] before:!content-['']"
                     icon={<QuoteIcon />}
                     linkProps={{
                       href: "#quote-form",
@@ -241,7 +241,7 @@ export default function TrustCtaSection({
               </div>
 
               <div className="mt-3">
-                <div className="grid grid-cols-2 divide-x divide-y divide-white/14 rounded-[10px] bg-white/[0.04] px-1 py-1 sm:grid-cols-4 sm:divide-y-0">
+                <div className="grid grid-cols-2 divide-x divide-y divide-white/14 rounded-none bg-white/[0.04] px-0 py-0 sm:grid-cols-4 sm:divide-y-0">
                   {trustBullets.map((item) => (
                     <span key={item} className="min-w-0 px-2 py-2 text-center text-[0.62rem] leading-[1.25] font-semibold text-slate-300 sm:py-1 sm:text-[0.68rem]">
                       {item}
