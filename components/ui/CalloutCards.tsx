@@ -177,9 +177,9 @@ export function CtaStrip({
           <a
             href={linkProps?.href ?? "#quote-form"}
             {...linkProps}
-            className={`inline-flex min-h-[46px] items-center justify-center gap-2 rounded-[10px] px-5 text-[12px] font-bold transition ${buttonClass} ${buttonClassName ?? ""} ${linkProps?.className ?? ""}`}
+            className={`inline-flex w-full min-h-[46px] items-center justify-between gap-2 rounded-[10px] px-4 text-[12px] font-bold transition md:w-auto md:justify-center md:px-5 ${buttonClass} ${buttonClassName ?? ""} ${linkProps?.className ?? ""}`}
           >
-            <span>{buttonText}</span>
+            <span className="min-w-0 flex-1 text-left leading-[1.35] md:flex-none md:text-center">{buttonText}</span>
             <ArrowIcon className="h-[13px] w-[13px]" />
           </a>
           {secondaryAction}

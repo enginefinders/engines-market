@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useRef, useState } from "react";
+import { useMemo, useState } from "react";
 import type { EngineYearsData } from "@/types/brand";
 import { CtaStrip } from "@/components/ui/CalloutCards";
 import Container from "@/components/ui/Container";
@@ -454,17 +454,17 @@ function YearPanel({
           href="#quote-form"
           data-quote-context={`${item.year} ${brandName} engines`}
           data-quote-source="engine-years"
-          className="mt-[14px] flex items-center gap-[13px] rounded-md bg-[#0d1b2e] px-[18px] py-[15px] transition hover:bg-[#1e3a5f] md:mt-0 md:rounded-none md:px-7 md:py-[18px] border border-green-400 shadow-[0_0_15px_rgba(74,222,128,0.5),inset_0_0_12px_rgba(74,222,128,0.3)]"
+          className="mt-[14px] flex items-center gap-3 rounded-[8px] border border-[#16a34a] bg-[linear-gradient(180deg,#16345e_0%,#0d1b2e_100%)] px-4 py-3 text-white transition hover:bg-[linear-gradient(180deg,#1b3d6c_0%,#112643_100%)] md:mt-0 md:px-5 md:py-[13px] shadow-[0_0_0_1px_rgba(22,163,74,0.14),0_0_14px_rgba(22,163,74,0.38)]"
         >
-          <div className="flex h-[42px] w-[42px] flex-none items-center justify-center rounded-[10px] bg-[#15803d] text-white md:h-[44px] md:w-[44px] md:rounded-[11px]">
-            <CalendarIcon className="h-[22px] w-[22px]" />
+          <div className="flex h-9 w-9 flex-none items-center justify-center rounded-[8px] bg-[#16a34a] text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.16)]">
+            <CalendarIcon className="h-[18px] w-[18px]" />
           </div>
-            <div className="min-w-0 flex-1">
-              <div className="font-['Manrope'] text-[14.5px] font-extrabold leading-[1.25] text-white md:text-[15px]">
-                {ctaText}
-              </div>
+          <div className="min-w-0 flex-1">
+            <div className="font-['Manrope'] text-[13.5px] font-extrabold leading-[1.2] text-white md:text-[14px]">
+              {ctaText}
             </div>
-          <div className="flex h-9 w-9 flex-none items-center justify-center rounded-[8px] bg-[#15803d] text-white md:h-10 md:w-10 md:rounded-[9px]">
+          </div>
+          <div className="flex h-9 w-9 flex-none items-center justify-center rounded-[8px] bg-[#16a34a] text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.16)]">
             <ArrowRightIcon />
           </div>
         </a>
@@ -475,15 +475,9 @@ function YearPanel({
 
 export default function EngineYearsSection({ brandName, data, strictData = false }: Props) {
   const [activeIndex, setActiveIndex] = useState(0);
-  const desktopStripRef = useRef<HTMLDivElement>(null);
   const activeYear = useMemo(() => data.years[activeIndex] ?? data.years[0], [activeIndex, data.years]);
   const headingLines = data.headingLines?.length ? data.headingLines : [splitHeading(data.h2).primary, splitHeading(data.h2).accent].filter(Boolean);
   const ui = data.ui ?? {};
-  const summaryCta = data.summaryCta ?? {};
-
-  const shiftYears = (direction: number) => {
-    desktopStripRef.current?.scrollBy({ left: direction * 240, behavior: "smooth" });
-  };
 
   return (
     <Section className="bg-[#f8f9fa]">
@@ -504,68 +498,28 @@ export default function EngineYearsSection({ brandName, data, strictData = false
           {data.intro}
         </p>
 
-        <div className="hidden md:flex md:items-center md:gap-2 md:pb-1 md:pr-1">
-          <button
-            type="button"
-            onClick={() => shiftYears(-1)}
-            className="flex h-16 w-9 flex-none items-center justify-center rounded-[10px] border-[1.5px] border-[#e5e7eb] bg-white text-[#0d1b2e] transition hover:border-[#0d1b2e] hover:text-[#0d1b2e]"
-          >
-            <ArrowLeftIcon />
-          </button>
-
+        <div className="mb-[18px] overflow-hidden border border-[#13243d] bg-[#0d1b2e] shadow-[0_10px_24px_rgba(13,27,46,0.12)]">
           <div
-            ref={desktopStripRef}
-            className="flex flex-1 items-center gap-2 overflow-x-auto pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            className="grid w-full"
+            style={{ gridTemplateColumns: `repeat(${Math.max(data.years.length, 1)}, minmax(0, 1fr))` }}
           >
             {data.years.map((item, index) => (
               <button
                 key={`${item.year}-${index}`}
                 type="button"
                 onClick={() => setActiveIndex(index)}
-                className={`flex h-[58px] w-[110px] flex-none items-center justify-center rounded-[10px] border bg-white px-[10px] text-center transition ${
+                className={`relative flex min-h-[44px] items-center justify-center border-r border-[#233856] px-2 py-3 text-center transition last:border-r-0 md:min-h-[46px] md:px-4 ${
                   activeIndex === index
-                    ? "border-2 border-[#0d1b2e]"
-                    : "border-[1.5px] border-[#e5e7eb] hover:border-[#0d1b2e]"
+                    ? "bg-[linear-gradient(180deg,#1fa34a_0%,#15803d_100%)] text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.22),inset_0_-1px_0_rgba(10,87,42,0.5),0_0_0_1px_rgba(34,197,94,0.2)] before:absolute before:inset-x-0 before:top-0 before:h-[45%] before:bg-[linear-gradient(180deg,rgba(255,255,255,0.2),rgba(255,255,255,0))] before:content-['']"
+                    : "bg-[#0d1b2e] text-white hover:bg-[#10233d]"
                 }`}
               >
-                <div className={`font-['Manrope'] text-[14px] font-extrabold leading-[1.15] ${activeIndex === index ? "text-[#15803d]" : "text-[#0d1b2e]"}`}>
+                <span className="relative z-[1] font-['Manrope'] text-[12px] font-extrabold leading-[1.1] md:text-[14px]">
                   {normalizeYearLabel(item.year)}
-                </div>
+                </span>
               </button>
             ))}
           </div>
-
-          <button
-            type="button"
-            onClick={() => shiftYears(1)}
-            className="flex h-16 w-9 flex-none items-center justify-center rounded-[10px] border-[1.5px] border-[#e5e7eb] bg-white text-[#0d1b2e] transition hover:border-[#0d1b2e] hover:text-[#0d1b2e]"
-          >
-            <ArrowRightIcon />
-          </button>
-        </div>
-
-        <div className="mb-[18px] flex items-center gap-[6px] overflow-x-auto rounded-[14px] bg-[#0d1b2e] p-[10px] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:hidden">
-          {data.years.map((item, index) => (
-            <button
-              key={`${item.year}-${index}`}
-              type="button"
-              onClick={() => setActiveIndex(index)}
-              className={`min-w-[90px] flex-none rounded-[10px] border px-[14px] py-[9px] text-left transition ${
-                activeIndex === index
-                  ? "border-[#15803d] bg-[#15803d]"
-                  : "border-[#334155] bg-transparent"
-              }`}
-            >
-              <div className="font-['Manrope'] text-[13px] font-extrabold leading-[1.15] text-white">{normalizeYearLabel(item.year)}</div>
-            </button>
-          ))}
-          <button
-            type="button"
-            onClick={() => desktopStripRef.current?.scrollTo({ left: desktopStripRef.current.scrollWidth, behavior: "smooth" })}
-            className="ml-auto flex h-9 w-9 flex-none items-center justify-center rounded-[10px] border border-[#334155] text-[#94a3b8]"
-          >
-            <ArrowRightIcon className="h-4 w-4 rotate-90" />
-          </button>
         </div>
 
         {activeYear ? (

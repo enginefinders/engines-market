@@ -211,7 +211,7 @@ export default function LiveMarketPricesSection({
           <div className="relative hidden min-h-55 overflow-hidden lg:min-h-full lg:block">
             {sectionImage ? (
               <Image
-                src="/model.webp"
+                src={sectionImage}
                 alt={data.imageAlt ?? "Market data visualization"}
                 fill
                 className="object-contain"
@@ -358,7 +358,7 @@ export default function LiveMarketPricesSection({
         <div className="relative mt-6 h-[480px] w-full overflow-hidden rounded-2xl lg:hidden">
           {sectionImage ? (
             <Image
-              src="/model.webp"
+              src={sectionImage}
               alt={data.imageAlt ?? "Market data visualization"}
               fill
               className="object-cover"

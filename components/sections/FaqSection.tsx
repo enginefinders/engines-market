@@ -28,6 +28,7 @@ export default function FaqSection({ data, strictData = false }: Props) {
   const headingLines = data.headingLines?.length ? data.headingLines : [heading.primary, heading.accent].filter(Boolean);
   const ui = data.ui ?? {};
   const defaultOpenIndex = data.defaultOpenIndex ?? 0;
+  const mobileHeading = "Frequently Asked Question";
 
   return (
     <Section className="bg-white">
@@ -35,11 +36,14 @@ export default function FaqSection({ data, strictData = false }: Props) {
         <div className="max-w-[860px]">
           <p className="section-pill mb-1.5">{data.tag}</p>
           <h2>
-            {headingLines.map((line, index) => (
-              <span key={`${line}-${index}`} className={`block ${headingLines.length > 1 && index === headingLines.length - 1 ? "text-[#15803d]" : ""}`}>
-                {line}
-              </span>
-            ))}
+            <span className="block md:hidden text-[#15803d]">{mobileHeading}</span>
+            <span className="hidden md:block">
+              {headingLines.map((line, index) => (
+                <span key={`${line}-${index}`} className={`block ${headingLines.length > 1 && index === headingLines.length - 1 ? "text-[#15803d]" : ""}`}>
+                  {line}
+                </span>
+              ))}
+            </span>
           </h2>
           <p className="text-body mt-2.5 text-slate-700">{data.intro}</p>
         </div>
@@ -84,7 +88,7 @@ export default function FaqSection({ data, strictData = false }: Props) {
                     <ul className="space-y-2 rounded-[14px] border border-slate-200 bg-white px-4 py-4 text-[15px] leading-[1.7] text-slate-700">
                       {item.keyPoints.map((point) => (
                         <li key={point} className="flex gap-3">
-                          <span className="mt-[0.55rem] h-2 w-2 flex-none rounded-full bg-green-700" />
+                          <span className="mt-[0.55rem] h-2 w-2 flex-none rounded-full bg-[#0d1b2e]" />
                           <span className="font-semibold">{point}</span>
                         </li>
                       ))}
@@ -144,30 +148,30 @@ export default function FaqSection({ data, strictData = false }: Props) {
                   </div>
                 )}
 
-                <a 
-  href="#quote-form" 
-  data-quote-context={item.question} 
-  data-quote-source="faq" 
-  className="mt-4 inline-flex items-center gap-2 text-[14px] font-semibold text-green-700 border border-[#2a6dd6] bg-white shadow-[0_0_12px_rgba(42,109,214,0.2)] transition p-2 rounded-lg"
->
-  {item.cta}
-  
-  {/* Right Arrow Icon */}
-  <svg 
-    xmlns="http://www.w3.org/2000/svg" 
-    fill="none" 
-    viewBox="0 0 24 24" 
-    strokeWidth={2} 
-    stroke="currentColor" 
-    className="w-4 h-4"
-  >
-    <path 
-      strokeLinecap="round" 
-      strokeLinejoin="round" 
-      d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" 
-    />
-  </svg>
-</a>
+                <a
+                  href="#quote-form"
+                  data-quote-context={item.question}
+                  data-quote-source="faq"
+                  className="mt-4 flex w-full items-center justify-between rounded-[8px] border border-[#163b6e] bg-[linear-gradient(180deg,#16345e_0%,#0d1b2e_100%)] px-4 py-3 text-[12.5px] font-bold text-white shadow-[0_0_0_1px_rgba(22,163,74,0.1),0_0_12px_rgba(22,163,74,0.14)] transition hover:bg-[linear-gradient(180deg,#1a3b68_0%,#112643_100%)]"
+                >
+                  <span className="pr-3">{item.cta}</span>
+                  <span className="inline-flex h-8 w-8 flex-none items-center justify-center rounded-[8px] bg-[#16a34a] text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.16)]">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={2}
+                      stroke="currentColor"
+                      className="h-4 w-4"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                      />
+                    </svg>
+                  </span>
+                </a>
               </div>
             </details>
           ))}

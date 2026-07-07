@@ -68,6 +68,12 @@ export type HeroSectionData = {
     countryCode?: string;
     countryLabel?: string;
   };
+  disclaimer?: {
+    title?: string;
+    note: string;
+    notesTitle?: string;
+    notes?: string[];
+  };
   form: {
     heading: string;
     subtitle: string;

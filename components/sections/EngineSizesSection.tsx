@@ -84,20 +84,6 @@ function FuelTabIcon({ kind }: { kind: FuelKind }) {
   );
 }
 
-function TagIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-3 w-3" fill="none" aria-hidden="true">
-      <path
-        d="M4 12a8 8 0 1 0 16 0A8 8 0 0 0 4 12Zm8-5v5l3 2"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
 function ArrowIcon() {
   return (
     <svg viewBox="0 0 24 24" className="h-[13px] w-[13px]" fill="none" aria-hidden="true">
@@ -127,9 +113,13 @@ function fuelBadgeLabel(kind: FuelKind) {
 }
 
 function fuelBadgeClass(kind: FuelKind) {
-  if (kind === "petrol") return "border-[#fed7aa] bg-[#fff8f0] text-[#c2410c]";
-  if (kind === "hybrid") return "border-[#0d1b2e] bg-[#f8fbff] text-[#0d1b2e]";
-  return "border-[#0d1b2e] bg-[#f8fbff] text-[#0d1b2e]";
+  if (kind === "petrol") return "border-[#F59E0B] bg-white text-[#B45309]";
+  if (kind === "hybrid") return "border-[#2D6BFF] bg-white text-[#1D4ED8]";
+  return "border-[#2D6BFF] bg-white text-[#1D4ED8]";
+}
+
+function commonFailureText(item: GroupItem) {
+  return item.commonFailurePoints?.join(", ").replace(/\s*,\s*/g, ", ").trim() ?? "";
 }
 
 function SizeAccordionCard({
@@ -217,15 +207,15 @@ function SizeAccordionCard({
 
           {item.commonFailurePoints?.length ? (
             <div className="mt-4 flex gap-3">
-              <div className="w-[2px] flex-none rounded-full bg-[#f97316]" />
+              <div className="w-[2px] flex-none bg-[#f97316]" />
               <div className="min-w-0">
-                <div className="font-['Manrope'] text-[11px] font-extrabold uppercase tracking-[0.05em] text-[#dc2626]">
+                <div className="font-['Manrope'] text-[11px] font-extrabold uppercase tracking-[0.06em] text-[#dc2626]">
                   {displayMode === "document"
                     ? (ui.warningLabel || "Common Failure Points")
                     : (ui.warningLabel ?? (kind === "hybrid" ? "Important Notes" : "Common Failure Points"))}
                 </div>
-                <p className="mt-1 text-[11px] leading-[1.55] text-[#475569]">
-                  {item.commonFailurePoints.join(", ")}
+                <p className="mt-1 text-[11px] leading-[1.55] text-[#334155]">
+                  {commonFailureText(item)}
                 </p>
               </div>
             </div>
@@ -235,10 +225,10 @@ function SizeAccordionCard({
             href="#quote-form"
             data-quote-context={item.title}
             data-quote-source="engine-sizes"
-            className="mt-4 flex w-full items-center justify-between rounded-[8px] border border-[#12294a] bg-[#0d1b2e] px-3 py-[11px] text-[11.5px] font-bold text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.08),0_8px_16px_rgba(13,27,46,0.18)] transition hover:bg-[#16304e]"
+            className="mt-4 flex w-full items-center justify-between rounded-[6px] border border-[#091a30] bg-[linear-gradient(180deg,#132c50_0%,#0b1d38_100%)] px-3 py-[11px] text-[11.5px] font-bold text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.1),0_8px_18px_rgba(10,24,45,0.22)] transition hover:bg-[linear-gradient(180deg,#16345e_0%,#0d2344_100%)]"
           >
             <span>{item.cta.replace(/\s*->\s*$/, "")}</span>
-            <span className="text-[#22c55e]">
+            <span className="flex h-5 w-5 items-center justify-center text-[#22c55e]">
               <ArrowIcon />
             </span>
           </a>
@@ -323,8 +313,8 @@ export default function EngineSizesSection({
 
         {/* Unified Responsive Tab Navigation */}
         <div className="mt-5">
-          <div className="overflow-hidden rounded-[8px] border border-[#d9e1ea] bg-white shadow-[0_4px_12px_rgba(13,27,46,0.05)]">
-            <div className="flex items-stretch">
+          <div className="overflow-hidden rounded-[6px] border border-[#d9e1ea] bg-white shadow-[0_4px_12px_rgba(13,27,46,0.05)]">
+            <div className="flex items-stretch divide-x divide-[#d9e1ea]">
               {groups.map((group, index) => {
                 const isActive = index === activeGroupIndex;
                 const kind = tagVariant(group.title);
@@ -338,25 +328,13 @@ export default function EngineSizesSection({
                       setActiveGroupIndex(index);
                       setOpenItemIndex(0);
                     }}
-                    className={`flex flex-1 items-center justify-center gap-1 border-r border-[#d9e1ea] px-2 py-[10px] font-['Manrope'] text-[11px] font-bold transition-all duration-200 md:gap-[8px] md:px-4 md:py-[11px] md:text-[12px] ${
-                      index === groups.length - 1 ? "border-r-0" : ""
-                    } ${
+                    className={`relative flex min-h-[42px] basis-0 flex-1 items-center justify-center px-2 py-[10px] font-['Manrope'] text-[11px] font-bold uppercase tracking-[0.02em] transition-all duration-200 md:min-h-[44px] md:px-4 md:py-[11px] md:text-[12px] ${
                       isActive
-                        ? "bg-[linear-gradient(180deg,#1a3a66_0%,#0f2a4e_100%)] text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.18),0_0_0_1px_rgba(42,109,214,0.95),0_0_8px_rgba(42,109,214,0.45),0_4px_12px_rgba(42,109,214,0.28)]"
-                        : "bg-white text-[#0d1b2e] hover:bg-[#f8fafc]"
+                        ? "z-10 bg-[linear-gradient(180deg,#173a6d_0%,#0c213f_100%)] text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.26),inset_0_-1px_0_rgba(6,18,35,0.85),0_0_0_1px_rgba(45,107,255,0.45),0_0_20px_rgba(45,107,255,0.45),0_8px_18px_rgba(17,47,95,0.32)] before:absolute before:inset-x-0 before:top-0 before:h-[42%] before:bg-[linear-gradient(180deg,rgba(255,255,255,0.2),rgba(255,255,255,0))] before:content-['']"
+                        : "bg-white text-[#22324a] shadow-none hover:bg-[#f8fafc]"
                     }`}
                   >
-                    {isActive && (
-                      <span className="hidden md:inline-flex">
-                        <FuelTabIcon kind={kind} />
-                      </span>
-                    )}
-                    <span className="hidden md:inline truncate">
-                      {isActive ? group.title.toUpperCase() : shortLabel}
-                    </span>
-                    <span className="md:hidden truncate">
-                      {shortLabel}
-                    </span>
+                    <span className="truncate">{shortLabel}</span>
                   </button>
                 );
               })}

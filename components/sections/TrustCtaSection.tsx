@@ -192,7 +192,7 @@ export default function TrustCtaSection({
                     descriptionAs="h3"
                     titleClassName="!mt-1 !font-['Urbanist'] !text-[13px] !font-extrabold !leading-[1.35] !tracking-normal !normal-case !text-white"
                     descriptionClassName="!mt-1 !font-['Urbanist'] !text-[12px] !font-medium !leading-[1.6] !tracking-normal !normal-case !text-slate-200"
-                    buttonClassName="!min-h-[46px] !rounded-[10px] !px-5 !text-[12px] !font-bold"
+                    buttonClassName="!relative !min-h-[46px] !overflow-hidden !rounded-[10px] !border !border-[#15803d] !bg-[linear-gradient(180deg,#1aae4d_0%,#15803d_100%)] !px-5 !text-[12px] !font-bold !text-white !shadow-[inset_0_1px_0_rgba(255,255,255,0.2),0_0_14px_rgba(34,197,94,0.26)] before:!absolute before:!inset-x-0 before:!top-0 before:!h-[45%] before:!bg-[linear-gradient(180deg,rgba(255,255,255,0.2),rgba(255,255,255,0))] before:!content-['']"
                     icon={<QuoteIcon />}
                     linkProps={{
                       href: "#quote-form",
@@ -218,6 +218,7 @@ export default function TrustCtaSection({
                     title={stripTitle}
                     description={stripDescription}
                     buttonText={data.buttonText.replace("->", "").trim()}
+                    buttonClassName="!relative !min-h-[46px] !overflow-hidden !rounded-[10px] !border !border-[#15803d] !bg-[linear-gradient(180deg,#1aae4d_0%,#15803d_100%)] !text-white !shadow-[inset_0_1px_0_rgba(255,255,255,0.2),0_0_14px_rgba(34,197,94,0.26)] before:!absolute before:!inset-x-0 before:!top-0 before:!h-[45%] before:!bg-[linear-gradient(180deg,rgba(255,255,255,0.2),rgba(255,255,255,0))] before:!content-['']"
                     icon={<QuoteIcon />}
                     linkProps={{
                       href: "#quote-form",
@@ -239,13 +240,14 @@ export default function TrustCtaSection({
                 )}
               </div>
 
-              <div className="mt-3 flex flex-wrap gap-x-3 gap-y-1.5">
-                {trustBullets.map((item) => (
-                  <span key={item} className="inline-flex items-center gap-1.5 text-[0.68rem] font-semibold text-slate-300">
-                    <CheckIcon />
-                    {item}
-                  </span>
-                ))}
+              <div className="mt-3">
+                <div className="grid grid-cols-2 divide-x divide-y divide-white/14 rounded-[10px] bg-white/[0.04] px-1 py-1 sm:grid-cols-4 sm:divide-y-0">
+                  {trustBullets.map((item) => (
+                    <span key={item} className="min-w-0 px-2 py-2 text-center text-[0.62rem] leading-[1.25] font-semibold text-slate-300 sm:py-1 sm:text-[0.68rem]">
+                      {item}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
 
@@ -259,19 +261,21 @@ export default function TrustCtaSection({
                 fill
                 className="object-cover object-center opacity-[0.84]"
               />
+              <div className="absolute inset-x-[12%] top-[14%] h-[26%] rounded-[28px] bg-[linear-gradient(180deg,rgba(255,255,255,0.28),rgba(255,255,255,0.05))] opacity-35 blur-[2px]" />
+              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.12),rgba(255,255,255,0)_24%,rgba(255,255,255,0)_70%,rgba(255,255,255,0.08))] mix-blend-screen" />
 
-              <div className="absolute bottom-3 right-3 rounded-2xl border border-white/10 bg-[#06172f]/88 px-3.5 py-2.5 text-right backdrop-blur-sm">
+              <div className="absolute inset-x-3 bottom-3 max-w-[calc(100%-24px)] rounded-2xl border border-white/10 bg-[#06172f]/88 px-3 py-2.5 text-center backdrop-blur-sm lg:inset-x-auto lg:right-3 lg:max-w-[320px] lg:text-right">
                 {isDocumentMode || isVariantMode ? (
                   <>
                     {ui.imageBadgeLabel ? <p className="text-label text-green-300">{ui.imageBadgeLabel}</p> : null}
-                    {ui.imageBadgeTitle ? <p className="mt-1 text-[0.8rem] font-bold text-white">{ui.imageBadgeTitle}</p> : null}
-                    {ui.imageBadgeText ? <p className="mt-1 text-[0.69rem] text-slate-300">{ui.imageBadgeText}</p> : null}
+                    {ui.imageBadgeTitle ? <p className="mt-1 break-words text-[0.74rem] font-bold leading-[1.3] text-white lg:text-[0.8rem]">{ui.imageBadgeTitle}</p> : null}
+                    {ui.imageBadgeText ? <p className="mt-1 break-words text-[0.65rem] leading-[1.35] text-slate-300 lg:text-[0.69rem]">{ui.imageBadgeText}</p> : null}
                   </>
                 ) : (
                   <>
                     <p className="text-label text-green-300">{ui.imageBadgeLabel ?? "Trusted supplier network"}</p>
-                    <p className="mt-1 text-[0.8rem] font-bold text-white">{ui.imageBadgeTitle ?? "Warranty-backed rebuilt & used options"}</p>
-                    <p className="mt-1 text-[0.69rem] text-slate-300">{ui.imageBadgeText ?? "Every quote checked for fitment, quality and lead time."}</p>
+                    <p className="mt-1 break-words text-[0.72rem] font-bold leading-[1.3] text-white sm:text-[0.8rem]">{ui.imageBadgeTitle ?? "Warranty-backed rebuilt & used options"}</p>
+                    <p className="mt-1 break-words text-[0.64rem] leading-[1.35] text-slate-300 sm:text-[0.69rem]">{ui.imageBadgeText ?? "Every quote checked for fitment, quality and lead time."}</p>
                   </>
                 )}
               </div>

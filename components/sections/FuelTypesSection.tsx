@@ -123,6 +123,16 @@ function splitDashItem(entry: string) {
   };
 }
 
+function splitFamilyEntry(entry: string) {
+  const normalized = normalizeText(entry);
+  const [left, ...rest] = normalized.split(" - ");
+
+  return {
+    code: left?.trim() ?? normalized,
+    detail: rest.join(" - ").trim(),
+  };
+}
+
 function deriveFamiliesLabel(title: string) {
   const normalized = normalizeText(title).trim();
   const base = normalized.replace(/\s+Engines$/i, "").trim();
@@ -151,12 +161,10 @@ function resolveSectionLabel({
 
 function FuelPanel({
   item,
-  mobile = false,
   ui,
   strictData = false,
 }: {
   item: FuelItem;
-  mobile?: boolean;
   ui: NonNullable<FuelTypesData["ui"]>;
   strictData?: boolean;
 }) {
@@ -196,55 +204,29 @@ function FuelPanel({
     fallback: "Important Notes",
   });
 
-  // Blue glow shadow for content boxes
-  const blueGlowShadow = "shadow-[0_0_0_1px_rgba(42,109,214,1),0_0_5px_rgba(42,109,214,0.4),0_0_12px_rgba(42,109,214,0.3),0_0_20px_rgba(42,109,214,0.2),0_3px_10px_rgba(42,109,214,0.25)]";
-
-  // Green glow shadow for CTA box
-  const greenGlowShadow = "shadow-[0_0_15px_rgba(74,222,128,0.5),inset_0_0_12px_rgba(74,222,128,0.3)]";
-
   return (
     <div className="flex h-full flex-col rounded-[14px] border border-[#e5e7eb] bg-white shadow-[0_2px_10px_rgba(13,27,46,0.05)]">
-      {/* <div className="rounded-t-[14px] bg-[#0d1b2e] px-4 py-3">
-        <div className="flex items-center gap-3">
-          <span className="inline-flex h-9 w-9 flex-none items-center justify-center rounded-[10px] bg-[#16a34a] text-white">
-            <PanelIcon title={item.title} />
-          </span>
-          <div
-            role="heading"
-            aria-level={3}
-            className="font-['Manrope'] text-[15px] font-extrabold leading-[1.2] !text-white"
-          >
-            {item.title}
-          </div>
-        </div>
-      </div> */}
-
       <div className="flex flex-1 flex-col px-4 py-4">
         <p className="text-[12px] leading-[1.7] text-[#475569]">
           {normalizeText(item.descriptor || item.description)}
         </p>
 
-        {/* 2x2 Grid for the four main boxes */}
-        <div className="mt-4 grid grid-cols-1 gap-3 md:grid-cols-2">
-          {/* Common Engine Families */}
+        <div className="mt-5 grid grid-cols-1 gap-5 md:grid-cols-2">
           {families.length ? (
-            <div className="rounded-lg border-[0.5px] border-[#2a6dd6] bg-white shadow-[0_0_12px_rgba(42,109,214,0.2)]">
+            <div className="rounded-[10px] bg-white">
               {familiesLabel ? (
-                <div className="border-b border-[#eef2f7] px-4 py-[10px] text-[10px] font-black uppercase tracking-[0.08em] text-[#2a6dd6]">
+                <div className="px-1 pb-2 text-[10px] font-black uppercase tracking-[0.08em] text-[#2a6dd6]">
                   {familiesLabel}
                 </div>
               ) : null}
-              <div className="px-4 py-3">
-                <div className="space-y-[10px]">
+              <div className="overflow-hidden rounded-[10px] bg-white">
+                <div className="divide-y divide-[#e9eef5]">
                   {families.map((entry) => {
-                    const parsed = splitDashItem(entry);
+                    const parsed = splitFamilyEntry(entry);
                     return (
-                      <div key={entry} className="flex gap-2 text-[11.5px] leading-[1.55] text-[#475569]">
-                        <span className="mt-[6px] h-[6px] w-[6px] shrink-0 rounded-full bg-[#2a6dd6]" />
-                        <span>
-                          <span className="font-bold text-[#0d1b2e]">{parsed.title}</span>
-                          {parsed.detail ? ` - ${parsed.detail}` : ""}
-                        </span>
+                      <div key={entry} className="grid grid-cols-[92px_minmax(0,1fr)] gap-3 px-1 py-3 text-[11.5px] leading-[1.55]">
+                        <div className="font-extrabold text-[#0d1b2e]">{parsed.code}</div>
+                        <div className="text-[#64748b]">{parsed.detail || parsed.code}</div>
                       </div>
                     );
                   })}
@@ -253,25 +235,21 @@ function FuelPanel({
             </div>
           ) : null}
 
-          {/* Found In */}
           {foundIn.length ? (
-            <div className="rounded-lg border border-[#2a6dd6] bg-white shadow-[0_0_12px_rgba(42,109,214,0.2)]">
+            <div className="rounded-[10px] bg-white">
               {foundInLabel ? (
-                <div className="border-b border-[#eef2f7] px-4 py-[10px] text-[10px] font-black uppercase tracking-[0.08em] text-[#2a6dd6]">
+                <div className="px-1 pb-2 text-[10px] font-black uppercase tracking-[0.08em] text-[#2a6dd6]">
                   {foundInLabel}
                 </div>
               ) : null}
-              <div className="px-4 py-3">
-                <div className="space-y-[10px]">
+              <div className="overflow-hidden rounded-[10px] bg-white">
+                <div className="divide-y divide-[#e9eef5]">
                   {foundIn.map((entry) => {
                     const parsed = splitDashItem(entry);
                     return (
-                      <div key={entry} className="flex gap-2 text-[11.5px] leading-[1.55] text-[#475569]">
-                        <span className="mt-[6px] h-[6px] w-[6px] shrink-0 rounded-full bg-[#2a6dd6]" />
-                        <span>
-                          <span className="font-bold text-[#0d1b2e]">{parsed.title}</span>
-                          {parsed.detail ? ` - ${parsed.detail}` : ""}
-                        </span>
+                      <div key={entry} className="grid grid-cols-[110px_minmax(0,1fr)] gap-3 px-1 py-3 text-[11.5px] leading-[1.55]">
+                        <div className="font-extrabold text-[#0d1b2e]">{parsed.title}</div>
+                        <div className="text-[#64748b]">{parsed.detail || parsed.title}</div>
                       </div>
                     );
                   })}
@@ -280,20 +258,18 @@ function FuelPanel({
             </div>
           ) : null}
 
-          {/* Known For */}
           {knownFor.length ? (
-            <div className="rounded-lg border border-[#2a6dd6] bg-white shadow-[0_0_12px_rgba(42,109,214,0.2)]">
+            <div className="rounded-[10px] bg-white">
               {knownForLabel ? (
-                <div className="border-b border-[#eef2f7] px-4 py-[10px] text-[10px] font-black uppercase tracking-[0.08em] text-[#2a6dd6]">
+                <div className="px-1 pb-2 text-[10px] font-black uppercase tracking-[0.08em] text-[#2a6dd6]">
                   {knownForLabel}
                 </div>
               ) : null}
-              <div className="px-4 py-3">
-                <div className="space-y-[10px]">
+              <div className="overflow-hidden rounded-[10px] bg-white">
+                <div className="divide-y divide-[#e9eef5]">
                   {knownFor.map((entry) => (
-                    <div key={entry} className="flex gap-2 text-[11.5px] leading-[1.55] text-[#475569]">
-                      <span className="mt-[6px] h-[6px] w-[6px] shrink-0 rounded-full bg-[#2a6dd6]" />
-                      <span>{normalizeText(entry)}</span>
+                    <div key={entry} className="px-1 py-3 text-[11.5px] leading-[1.6] text-[#64748b]">
+                      {normalizeText(entry)}
                     </div>
                   ))}
                 </div>
@@ -301,27 +277,27 @@ function FuelPanel({
             </div>
           ) : null}
 
-          {/* Typical Models */}
           {typicalModels.length ? (
-            <div className="rounded-lg border border-[#2a6dd6] bg-white shadow-[0_0_12px_rgba(42,109,214,0.2)]">
+            <div className="rounded-[10px] bg-white">
               {modelsLabel ? (
-                <div className="border-b border-[#eef2f7] px-4 py-[10px] text-[10px] font-black uppercase tracking-[0.08em] text-[#2a6dd6]">
+                <div className="px-1 pb-2 text-[10px] font-black uppercase tracking-[0.08em] text-[#2a6dd6]">
                   {modelsLabel}
                 </div>
               ) : null}
-              <div className={`grid gap-x-4 gap-y-[10px] px-4 py-3 ${mobile ? "grid-cols-1" : "grid-cols-2"}`}>
+              <div className="flex flex-wrap gap-3 px-1 py-1">
                 {typicalModels.map((entry) => (
-                  <div key={entry} className="flex gap-2 text-[11.5px] leading-[1.55] text-[#475569]">
-                    <span className="mt-[6px] h-[6px] w-[6px] shrink-0 rounded-full bg-[#2a6dd6]" />
-                    <span>{normalizeText(entry)}</span>
-                  </div>
+                  <span
+                    key={entry}
+                    className="inline-flex rounded-[10px] border border-[#2D6BFF] bg-white px-3 py-2 text-[11px] font-bold leading-[1.35] text-[#1D4ED8] shadow-[0_0_0_1px_rgba(45,107,255,0.18),0_0_10px_rgba(45,107,255,0.18)]"
+                  >
+                    {normalizeText(entry)}
+                  </span>
                 ))}
               </div>
             </div>
           ) : null}
         </div>
 
-        {/* CTA Button - full width below grid with softer green glow */}
         {item.cta ? (
           <div className="mt-3 flex items-center justify-between gap-3 rounded-[10px] border border-green-400 bg-white px-4 py-3 shadow-md shadow-green-400/30">
             <a
@@ -338,20 +314,18 @@ function FuelPanel({
           </div>
         ) : null}
 
-        {/* Important Notes - full width below grid */}
         {importantNotes.length ? (
-          <div className={`mt-3 rounded-[12px] border border-[#2a6dd6] bg-white shadow-[0_0_12px_rgba(42,109,214,0.2)]`}>
+          <div className="mt-4 rounded-[10px] bg-white">
             {notesLabel ? (
-              <div className="border-b border-[#eef2f7] px-4 py-[10px] text-[10px] font-black uppercase tracking-[0.08em] text-[#2a6dd6]">
+              <div className="px-1 pb-2 text-[10px] font-black uppercase tracking-[0.08em] text-[#2a6dd6]">
                 {notesLabel}
               </div>
             ) : null}
-            <div className="px-4 py-3">
-              <div className="space-y-[10px]">
+            <div className="overflow-hidden rounded-[10px] bg-white">
+              <div className="divide-y divide-[#e9eef5]">
                 {importantNotes.map((entry) => (
-                  <div key={entry} className="flex gap-2 text-[11.5px] leading-[1.55] text-[#475569]">
-                    <span className="mt-[6px] h-[6px] w-[6px] shrink-0 rounded-full bg-[#2a6dd6]" />
-                    <span>{normalizeText(entry)}</span>
+                  <div key={entry} className="px-1 py-3 text-[11.5px] leading-[1.6] text-[#64748b]">
+                    {normalizeText(entry)}
                   </div>
                 ))}
               </div>
@@ -407,10 +381,10 @@ export default function FuelTypesSection({ data, bgImage, strictData = false }: 
               </p>
             </div>
 
-            {/* Tab Navigation */}
             {items.length > 1 && (
               <div className="mt-6">
-                <div className="flex rounded-[12px] border border-[#e5e7eb] bg-white shadow-sm">
+                <div className="overflow-hidden rounded-[6px] border border-[#d9e1ea] bg-white shadow-[0_4px_12px_rgba(13,27,46,0.05)]">
+                  <div className="flex items-stretch divide-x divide-[#d9e1ea]">
                   {items.map((item, index) => {
                     const isActive = index === activeItemIndex;
                     const fuelType = getTabLabel(item.title);
@@ -420,25 +394,17 @@ export default function FuelTypesSection({ data, bgImage, strictData = false }: 
                         key={item.title}
                         type="button"
                         onClick={() => setActiveItemIndex(index)}
-                        className={`flex flex-1 items-center justify-center gap-1 md:gap-2 rounded-[8px] px-2 md:px-4 py-3 text-[11px] md:text-[13px] font-bold transition-all duration-200 ${isActive
-                            ? "bg-[linear-gradient(180deg,#1a3a66_0%,#0f2a4e_100%)] border-[#2a6dd6] text-white shadow-[0_0_0_1px_rgba(42,109,214,1),0_0_6px_rgba(42,109,214,0.5),0_0_15px_rgba(42,109,214,0.4),0_0_30px_rgba(42,109,214,0.25),0_4px_12px_rgba(42,109,214,0.3)]"
-                            : "text-[#475569] hover:bg-[#f8fafc]"
-                          }`}
+                        className={`relative flex min-h-[42px] basis-0 flex-1 items-center justify-center px-2 py-[10px] font-['Manrope'] text-[11px] font-bold uppercase tracking-[0.02em] transition-all duration-200 md:min-h-[44px] md:px-4 md:py-[11px] md:text-[12px] ${
+                          isActive
+                            ? "z-10 bg-[linear-gradient(180deg,#173a6d_0%,#0c213f_100%)] text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.26),inset_0_-1px_0_rgba(6,18,35,0.85),0_0_0_1px_rgba(45,107,255,0.45),0_0_20px_rgba(45,107,255,0.45),0_8px_18px_rgba(17,47,95,0.32)] before:absolute before:inset-x-0 before:top-0 before:h-[42%] before:bg-[linear-gradient(180deg,rgba(255,255,255,0.2),rgba(255,255,255,0))] before:content-['']"
+                            : "bg-white text-[#22324a] shadow-none hover:bg-[#f8fafc]"
+                        }`}
                       >
-                        {isActive && (
-                          <span className="hidden md:inline-flex">
-                            <PanelIcon title={item.title} />
-                          </span>
-                        )}
-                        <span className="hidden md:inline">
-                          {isActive ? item.title.toUpperCase() : fuelType.toUpperCase()}
-                        </span>
-                        <span className="md:hidden">
-                          {fuelType.toUpperCase()}
-                        </span>
+                        <span>{fuelType.toUpperCase()}</span>
                       </button>
                     );
                   })}
+                  </div>
                 </div>
               </div>
             )}
@@ -447,7 +413,7 @@ export default function FuelTypesSection({ data, bgImage, strictData = false }: 
 
         {activeItem && items.length ? (
           <div className="mt-6">
-            <FuelPanel item={activeItem} mobile={false} ui={ui} strictData={strictData} />
+            <FuelPanel item={activeItem} ui={ui} strictData={strictData} />
           </div>
         ) : (
           <div className="mt-6 rounded-[14px] border border-slate-200 bg-white px-5 py-5 shadow-[0_2px_10px_rgba(13,27,46,0.04)]">

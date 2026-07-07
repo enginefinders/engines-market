@@ -118,6 +118,25 @@ function resolveLiveMarketPlaceholder(pageData: ModelPageData, carPlaceholder: s
   return preferred ?? carPlaceholder;
 }
 
+function resolveSectionBackground(pageData: ModelPageData, configuredPath?: string | null) {
+  if (assetExists(configuredPath)) {
+    return configuredPath ?? "";
+  }
+
+  const brandSlug = pageData.brand.slug;
+  const fallback = uniquePaths([
+    `/images/brands/${brandSlug}/brand/${brandSlug}-hero-bg.webp`,
+    `/images/brands/${brandSlug}/brand/${brandSlug}-hero-bg.png`,
+    `/images/brands/${brandSlug}/brand/${brandSlug}-live-market-bg.webp`,
+    `/images/brands/${brandSlug}/brand/${brandSlug}-live-market-bg.png`,
+    `/images/brands/${brandSlug}/brand/live-feed-${brandSlug}.webp`,
+    pageData.assets.mainImage,
+    pageData.assets.smallImage,
+  ]).find(assetExists);
+
+  return fallback ?? "";
+}
+
 function isAcceptableEngineImage(assetPath: string | undefined, brandSlug: string) {
   if (!assetPath || !assetExists(assetPath)) {
     return false;
@@ -191,6 +210,11 @@ export function applyModelPageVisualPlaceholders(pageData: ModelPageData): Model
       mainImage: resolvedImages.resolvedMainImage,
       smallImage: resolvedImages.resolvedSmallImage,
       heroBg: assetExists(resolvedImages.resolvedMainImage) ? resolvedImages.resolvedMainImage : carPlaceholder,
+      howItWorksBg: resolveSectionBackground(pageData, pageData.assets.howItWorksBg),
+      engineCodesBg: resolveSectionBackground(pageData, pageData.assets.engineCodesBg),
+      engineTypesBg: resolveSectionBackground(pageData, pageData.assets.engineTypesBg),
+      engineSizesBg: resolveSectionBackground(pageData, pageData.assets.engineSizesBg),
+      fuelTypesBg: resolveSectionBackground(pageData, pageData.assets.fuelTypesBg),
       ctaImage: assetExists(resolvedImages.resolvedMainImage) ? resolvedImages.resolvedMainImage : carPlaceholder,
     },
     sections: {

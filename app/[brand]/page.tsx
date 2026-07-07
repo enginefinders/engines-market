@@ -19,8 +19,7 @@ import { getBrandPageData, getBrandSlugs } from "@/lib/brandData";
 import { resolveBrandPageVisuals } from "@/lib/engineImageSelection";
 import { resolveModelImagePaths } from "@/lib/modelImageAssets";
 import { getBrandModelCards } from "@/lib/modelPageData";
-import { getModelHref } from "@/lib/modelRoutes";
-import { SITE_URL } from "@/lib/site";
+import { buildBrandStructuredData } from "@/lib/structuredData";
 import { buildStaticReviewsSection } from "@/lib/staticReviews";
 import type { BrandPageData } from "@/types/brand";
 import { notFound } from "next/navigation";
@@ -37,91 +36,6 @@ export async function generateStaticParams() {
   return brandSlugs.map((brand) => ({
     brand,
   }));
-}
-
-function buildStructuredData(
-  pageData: BrandPageData,
-  modelCards: BrandPageData["sections"]["models"]["cards"],
-) {
-  const reviewsData = buildStaticReviewsSection(pageData.brand.name);
-
-  if (pageData.structuredData) {
-    return pageData.structuredData;
-  }
-
-  const canonical = `${SITE_URL}${pageData.seo.canonical}`;
-
-  return {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebPage",
-        "@id": `${canonical}#webpage`,
-        name: pageData.seo.title,
-        description: pageData.seo.description,
-        url: canonical,
-        breadcrumb: {
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            {
-              "@type": "ListItem",
-              position: 1,
-              name: "Home",
-              item: SITE_URL,
-            },
-            {
-              "@type": "ListItem",
-              position: 2,
-              name: `${pageData.brand.name} Engines`,
-              item: canonical,
-            },
-          ],
-        },
-      },
-      {
-        "@type": "Product",
-        "@id": `${canonical}#product`,
-        name: pageData.seo.title,
-        description: pageData.seo.description,
-        brand: {
-          "@type": "Brand",
-          name: pageData.brand.name,
-        },
-        aggregateRating: {
-          "@type": "AggregateRating",
-          ratingValue: reviewsData.rating.value,
-          ratingCount: reviewsData.rating.count,
-        },
-      },
-      {
-        "@type": "FAQPage",
-        "@id": `${canonical}#faq`,
-        mainEntity: pageData.sections.faq.items.map((item) => ({
-          "@type": "Question",
-          name: item.question,
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: `${item.answer} ${item.cta}`,
-          },
-        })),
-      },
-      {
-        "@type": "ItemList",
-        "@id": `${canonical}#models`,
-        name: `${pageData.brand.name} Engine Models`,
-        itemListElement: modelCards.map((model, index) => ({
-          "@type": "ListItem",
-            position: index + 1,
-            item: {
-              "@type": "Product",
-              name: model.h3,
-              url: `${SITE_URL}${getModelHref(pageData.brand.slug, model)}`,
-              description: model.subtitle,
-            },
-          })),
-      },
-    ],
-  };
 }
 
 export async function generateMetadata({
@@ -155,7 +69,7 @@ export default async function BrandPage({ params }: BrandPageProps) {
     pageData.brand.slug,
     pageData.sections.models.cards,
   );
-  const structuredData = buildStructuredData(pageData, allBrandModelCards);
+  const structuredData = buildBrandStructuredData(pageData, allBrandModelCards);
   const reviewsData = buildStaticReviewsSection(pageData.brand.name);
   const brandVisuals = resolveBrandPageVisuals(pageData);
   const modelCardsWithResolvedImages = allBrandModelCards.map((card) => ({
@@ -168,10 +82,7 @@ export default async function BrandPage({ params }: BrandPageProps) {
       configuredHeroImage: card.image,
     }).resolvedSmallImage,
   }));
-  const heroModelCards = pageData.sections.models.cards.map((card, index) => ({
-    ...card,
-    image: brandVisuals.heroCardEngines[index] ?? brandVisuals.heroCardEngines[index % brandVisuals.heroCardEngines.length] ?? card.image,
-  }));
+  const heroModelCards = modelCardsWithResolvedImages.slice(0, 3);
   const trustCtaImage =
     pageData.brand.slug === "land-rover"
       ? "/images/brands/land-rover/cta-image.webp"

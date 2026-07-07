@@ -423,19 +423,44 @@ function resolveHeadingLines(data: HeroSectionData) {
   return [data.h1];
 }
 
-function resolveHeroCards(data: HeroSectionData, modelCards: HeroModelCard[]) {
+function resolveHeroCards(data: HeroSectionData, modelCards: HeroModelCard[], fallbackImage: string) {
+  const normalize = (value: string) =>
+    value
+      .toLowerCase()
+      .replace(/^bmw\s+/i, "")
+      .replace(/\s+engine replacement$/i, "")
+      .replace(/\s+engines?$/i, "")
+      .replace(/[^a-z0-9]+/g, " ")
+      .trim();
+
+  const findMatchingModelCard = (title: string) => {
+    const target = normalize(title);
+
+    return modelCards.find((card) => {
+      const cardTitle = normalize(card.h3);
+      const cardSlug = normalize(card.slug.replace(/-/g, " "));
+
+      return cardTitle === target || cardSlug === target;
+    });
+  };
+
   if (data.highlights?.length) {
-    return data.highlights.map((card, index) => ({
-      h3: card.title,
-      slug: `highlight-${index + 1}`,
-      subtitle: "",
-      priceRange: card.price,
-      cta: "",
-      image: card.image ?? "",
-      lineOne: card.line1 ?? "",
-      heroLineTwo: card.detail ?? "",
-      imageAlt: card.imageAlt ?? card.title,
-    }));
+    return data.highlights.map((card, index) => {
+      const matchedModelCard = findMatchingModelCard(card.title);
+
+      return {
+        h3: card.title,
+        slug: matchedModelCard?.slug ?? `highlight-${index + 1}`,
+        subtitle: matchedModelCard?.subtitle ?? "",
+        priceRange: card.price || matchedModelCard?.priceRange || "",
+        cta: matchedModelCard?.cta ?? "",
+        image: card.image?.trim() || matchedModelCard?.image || fallbackImage || "",
+        lineOne: card.line1 ?? matchedModelCard?.lineOne ?? "",
+        heroLineTwo: card.detail ?? card.line2 ?? matchedModelCard?.heroLineTwo ?? "",
+        engineCodes: matchedModelCard?.engineCodes,
+        imageAlt: card.imageAlt ?? matchedModelCard?.imageAlt ?? card.title,
+      };
+    });
   }
 
   return buildHeroCards(modelCards);
@@ -450,11 +475,14 @@ export default function HeroSection({
 }: HeroSectionProps) {
   const [registration, setRegistration] = useState("");
   const [showHeroImage, setShowHeroImage] = useState(Boolean(bgImage));
+  const [isDisclaimerOpen, setIsDisclaimerOpen] = useState(false);
   const headingLines = resolveHeadingLines(data);
   const brandName = inferBrandName(data);
-  const displayModels = resolveHeroCards(data, modelCards);
+  const displayModels = resolveHeroCards(data, modelCards, bgImage);
   const mobileBar = data.mobileBar ?? {};
   const registrationInput = data.registrationInput ?? {};
+  const disclaimer = data.disclaimer;
+  const hasDisclaimer = Boolean(disclaimer?.note?.trim());
 
   const bottomTickerLoop = useMemo(() => [...bottomBarItems, ...bottomBarItems], []);
 
@@ -501,7 +529,7 @@ export default function HeroSection({
 
       <div className="mx-auto grid max-w-[1400px] min-w-0 items-center px-3 py-5 sm:gap-8 sm:px-6 md:px-8 md:py-8 lg:grid-cols-[55fr_45fr] lg:gap-7 lg:px-8 lg:py-[52px]">
         {/* LEFT COLUMN */}
-        <div className="flex min-w-0 flex-col">
+        <div className="flex min-w-0 flex-col lg:pr-8 xl:pr-10">
           <span className="mb-[14px] inline-flex w-fit items-center rounded-[20px] bg-[#0d1b2e] px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.08em] text-white md:mb-[18px] md:px-[14px] md:py-[6px] md:text-[10.5px]">
             {data.tag}
           </span>
@@ -512,7 +540,7 @@ export default function HeroSection({
               return (
                 <span
                   key={`${line}-${index}`}
-                  className={`block max-w-none min-w-0 break-words text-[clamp(25px,5.4vw,56px)] leading-[1.06] ${isAccent ? "text-[#15803d]" : "text-[#152b4a] lg:whitespace-nowrap"}`}
+                  className={`block max-w-none min-w-0 break-words text-[clamp(25px,5vw,56px)] leading-[1.06] ${isAccent ? "text-[#15803d]" : "text-[#152b4a]"}`}
                 >
                   {line}
                 </span>
@@ -588,22 +616,21 @@ export default function HeroSection({
                         )}
                       </div>
                       <div className="min-w-0 md:space-y-0">
-                        <div className="flex min-w-0 items-center overflow-hidden whitespace-nowrap">
+                        <div className="flex min-w-0 flex-wrap items-baseline gap-x-1 gap-y-0.5 overflow-hidden">
                           {modelHref ? (
                             <Link
                               href={modelHref}
-                              className="min-w-0 truncate font-['Manrope'] text-[13.5px] font-bold text-[#0d1b2e] transition hover:text-[#15803d] md:text-[clamp(14px,1vw,17px)]"
+                              className="min-w-0 max-w-full font-['Manrope'] text-[13.5px] font-bold leading-tight text-[#0d1b2e] transition hover:text-[#15803d] md:text-[clamp(14px,1vw,17px)]"
                             >
                               {lineOne.lead}
                             </Link>
                           ) : (
-                            <span className="min-w-0 truncate font-['Manrope'] text-[13.5px] font-bold text-[#0d1b2e] md:text-[clamp(14px,1vw,17px)]">
+                            <span className="min-w-0 max-w-full font-['Manrope'] text-[13.5px] font-bold leading-tight text-[#0d1b2e] md:text-[clamp(14px,1vw,17px)]">
                               {lineOne.lead}
                             </span>
                           )}
                           {lineOne.accent ? (
-                            <span className="min-w-0 truncate font-['Manrope'] text-[13.5px] font-bold text-[#15803d] md:text-[clamp(14px,1vw,17px)]">
-                              {" "}
+                            <span className="min-w-0 max-w-full font-['Manrope'] text-[13.5px] font-bold leading-tight text-[#15803d] md:text-[clamp(14px,1vw,17px)]">
                               {lineOne.accent}
                             </span>
                           ) : null}
@@ -630,12 +657,57 @@ export default function HeroSection({
               })}
             </div>
           ) : null}
+
+          {hasDisclaimer ? (
+            <div className="mt-4 rounded-[20px] border border-[#dbe4ef] bg-white/80 shadow-[0_12px_40px_rgba(13,27,46,0.06)] backdrop-blur-sm">
+              <button
+                type="button"
+                onClick={() => setIsDisclaimerOpen((current) => !current)}
+                aria-expanded={isDisclaimerOpen}
+                className="flex w-full items-center justify-between gap-3 px-4 py-3 text-left md:px-5"
+              >
+                <span className="font-['Manrope'] text-[12px] font-extrabold uppercase tracking-[0.08em] text-[#152b4a] md:text-[12.5px]">
+                  {disclaimer?.title?.trim() || "Disclaimer Note"}
+                </span>
+                <span className="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-[#cbd5e1] text-[18px] font-semibold leading-none text-[#15803d]">
+                  {isDisclaimerOpen ? "-" : "+"}
+                </span>
+              </button>
+
+              {isDisclaimerOpen ? (
+                <div className="border-t border-[#e2e8f0] px-4 py-4 text-[12px] leading-[1.65] text-[#475569] md:px-5 md:text-[13px]">
+                  <p>
+                    <span className="font-['Manrope'] text-[11px] font-extrabold uppercase tracking-[0.08em] text-[#152b4a]">
+                      {disclaimer?.title?.trim() || "Disclaimer Note"}:
+                    </span>{" "}
+                    {disclaimer?.note.trim()}
+                  </p>
+
+                  {disclaimer?.notes?.length ? (
+                    <div className="mt-3">
+                      <p className="font-['Manrope'] text-[11px] font-extrabold uppercase tracking-[0.08em] text-[#152b4a]">
+                        {disclaimer.notesTitle?.trim() || "Notes"}:
+                      </p>
+                      <ul className="mt-2 space-y-1.5">
+                        {disclaimer.notes.map((item) => (
+                          <li key={item} className="flex gap-2">
+                            <span className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-[#15803d]" />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ) : null}
+                </div>
+              ) : null}
+            </div>
+          ) : null}
         </div>
 
         {/* RIGHT COLUMN */}
-        <div className="relative flex w-full min-w-0 flex-col items-center justify-center overflow-hidden px-3 pt-1 md:pt-0 lg:min-h-0 lg:px-0">
+        <div className="relative mt-5 flex w-full min-w-0 flex-col items-center justify-center gap-4 overflow-hidden px-3 pt-1 md:mt-0 md:gap-5 md:pt-0 lg:min-h-0 lg:px-0">
           {bgImage && showHeroImage ? (
-            <div className="relative h-auto w-full max-w-full overflow-hidden rounded-[24px] lg:min-h-[300px]">
+            <div className="relative h-auto w-full max-w-[320px] overflow-hidden rounded-[24px] md:max-w-full lg:min-h-[300px]">
               <div className="relative aspect-[2.05/1] w-full md:aspect-[5/3] lg:aspect-auto lg:min-h-[300px]">
                 <Image
                   src={bgImage}
