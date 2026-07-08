@@ -237,7 +237,7 @@ function FuelPanel({
           ) : null}
 
           {foundIn.length ? (
-            <div className="rounded-[10px] bg-white">
+            <div className="rounded-[10px] bg-white md:border-l md:border-[#eef2f7] md:pl-5">
               {foundInLabel ? (
                 <div className="px-1 pb-2 text-[10px] font-black uppercase tracking-[0.08em] text-[#2a6dd6]">
                   {foundInLabel}
@@ -279,7 +279,7 @@ function FuelPanel({
           ) : null}
 
           {typicalModels.length ? (
-            <div className="rounded-[10px] bg-white">
+            <div className="rounded-[10px] bg-white md:border-l md:border-[#eef2f7] md:pl-5">
               {modelsLabel ? (
                 <div className="px-1 pb-2 text-[10px] font-black uppercase tracking-[0.08em] text-[#2a6dd6]">
                   {modelsLabel}
@@ -384,7 +384,7 @@ export default function FuelTypesSection({ data, bgImage, strictData = false, do
 
             {items.length > 1 && (
               <div className="mt-6">
-                <div className="overflow-hidden rounded-[6px] border border-[#d9e1ea] bg-white shadow-[0_4px_12px_rgba(13,27,46,0.05)]">
+                <div className="overflow-hidden rounded-[6px] border border-[#d9e1ea] bg-white shadow-[0_4px_12px_rgba(13,27,46,0.05)] max-[720px]:rounded-none max-[720px]:border-x-0">
                   <div className="flex items-stretch divide-x divide-[#d9e1ea]">
                   {items.map((item, index) => {
                     const isActive = index === activeItemIndex;

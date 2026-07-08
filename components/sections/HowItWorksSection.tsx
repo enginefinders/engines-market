@@ -163,9 +163,10 @@ export default function HowItWorksSection({ data, bgImage, sectionId }: Props) {
         <div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {data.cards.map((card) => {
             const flipped = activeStep === card.number;
+            const isRegistrationCard = card.number === 1;
 
             return (
-              <div key={card.number} className="perspective-1000 min-h-[260px] sm:min-h-[280px] xl:min-h-[290px]">
+              <div key={card.number} className="perspective-1000 min-h-[218px] sm:min-h-[232px] xl:min-h-[248px]">
                 <button
                   type="button"
                   onClick={() => setActiveStep(flipped ? null : card.number)}
@@ -174,52 +175,56 @@ export default function HowItWorksSection({ data, bgImage, sectionId }: Props) {
                   aria-label={`${flipped ? "Hide details for" : "Show details for"} step ${card.number}`}
                 >
                   <div
-                    className={`relative h-full min-h-[260px] rounded-[18px] transition duration-500 [transform-style:preserve-3d] lg:min-h-[280px] xl:min-h-[290px] ${flipped ? "[transform:rotateY(180deg)]" : ""
+                    className={`relative h-full min-h-[218px] rounded-[18px] transition duration-500 [transform-style:preserve-3d] lg:min-h-[232px] xl:min-h-[248px] ${flipped ? "[transform:rotateY(180deg)]" : ""
                       }`}
                   >
-                    <div className="absolute inset-0 flex h-full flex-col overflow-hidden rounded-[18px] border border-[#dbe4ef] bg-white px-3 pb-4 pt-3 sm:p-4 shadow-[0_18px_40px_rgba(13,27,46,0.08)] [backface-visibility:hidden] text-center">
+                    <div className="absolute inset-0 flex h-full flex-col overflow-hidden rounded-[18px] border border-[#dbe4ef] bg-white px-4 pb-4 pt-4 shadow-[0_18px_40px_rgba(13,27,46,0.08)] [backface-visibility:hidden] text-center sm:px-5 sm:pb-5 sm:pt-5">
                       <span className="mt-0 hidden font-['Manrope'] text-left text-2xl font-extrabold uppercase tracking-[0.18em] text-gray-400 md:block">
                         0{card.number}
                       </span>
 
-                      <div className="mx-auto mt-1 flex h-[74px] w-full max-w-[140px] items-center justify-center rounded-[14px] p-1 sm:mt-0 sm:p-2">
+                      <div
+                        className={`mx-auto mt-0 flex items-center justify-center rounded-[14px] p-1 ${
+                          isRegistrationCard ? "h-[68px] w-[138px]" : "h-16 w-16"
+                        }`}
+                      >
                         <img
                           src={card.number === 1 ? "/Home/reg-here.webp" : card.number === 2 ? "/Home/save-money.webp" : "/Home/quote-button 1.png"}
                           alt={`Step ${card.number} icon`}
-                          className="max-h-[58px] w-auto max-w-full object-contain sm:max-h-full sm:w-full"
+                          className={isRegistrationCard ? "h-[54px] w-[126px] object-contain" : "h-14 w-14 object-contain"}
                         />
                       </div>
 
-                      <h3 className="mt-2 px-2 font-['Manrope'] text-[26px] font-bold leading-[1.02] text-[#0d1b2e] md:text-[24px]">
+                      <h3 className="mt-3 font-['Manrope'] text-[16px] font-bold leading-[1.15] text-[#0d1b2e] md:text-[20px]">
                         {card.front.h3}
                       </h3>
 
-                      <p className="mx-auto mt-3 px-4 text-[14px] leading-[1.65] text-[#5a6478] sm:text-[14px]">
+                      <p className="mx-auto mt-3 w-full max-w-[280px] text-[13px] leading-[1.65] text-[#5a6478]">
                         {card.front.text}
                       </p>
 
-                      <span className="ml-auto mt-auto inline-flex items-center gap-2 pt-2 text-[14px] font-bold text-[#15803d]">
+                      <span className="ml-auto mt-auto inline-flex items-center gap-2 pt-3 text-[13px] font-bold text-[#15803d]">
                         <span>See how it works</span>
                         <ArrowIcon />
                       </span>
                     </div>
 
-                    <div className="absolute inset-0 flex h-full flex-col overflow-hidden rounded-[18px]  bg-[#0d1b2e] p-2 sm:p-4 text-white border-[0.5px] border-[#2969af] shadow-[0_0_0_1px_rgba(42,109,214,1),0_0_5px_rgba(42,109,214,0.4),0_0_12px_rgba(42,109,214,0.3),0_0_20px_rgba(42,109,214,0.2),0_3px_10px_rgba(42,109,214,0.25)] [backface-visibility:hidden] [transform:rotateY(180deg)]">
+                    <div className="absolute inset-0 flex h-full flex-col overflow-hidden rounded-[18px] bg-[#0d1b2e] p-4 text-white border-[0.5px] border-[#2969af] shadow-[0_0_0_1px_rgba(42,109,214,1),0_0_5px_rgba(42,109,214,0.4),0_0_12px_rgba(42,109,214,0.3),0_0_20px_rgba(42,109,214,0.2),0_3px_10px_rgba(42,109,214,0.25)] [backface-visibility:hidden] [transform:rotateY(180deg)] sm:p-5">
                       <div className="flex flex-col items-center gap-4">
                       </div>
 
-                      <h3 className="mt-5 text-center font-['Manrope'] text-[24px] font-bold leading-[1] text-white">
+                      <h3 className="mt-2 text-center font-['Manrope'] text-[18px] font-bold leading-[1.15] text-white sm:text-[22px]">
                         {card.back.heading}
                       </h3>
 
                       <div className="mt-4 min-h-0 flex-1 overflow-y-auto pr-2 [scrollbar-color:#86efac_transparent] [scrollbar-width:thin]">
-                        <p className="text-[15px] leading-[1.65] text-[#c3d1e2]">
+                        <p className="text-[13px] leading-[1.65] text-[#c3d1e2] sm:text-[14px]">
                           {card.back.text}
                         </p>
 
                         <ul className="mt-5 space-y-3">
                           {card.back.bullets.map((bullet) => (
-                            <li key={bullet} className="flex items-start gap-3 text-[14px] leading-[1.55] text-[#e7eef8]">
+                            <li key={bullet} className="flex items-start gap-3 text-[13px] leading-[1.55] text-[#e7eef8] sm:text-[14px]">
                               <span className="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-[#15803d] text-white">
                                 <TickIcon />
                               </span>

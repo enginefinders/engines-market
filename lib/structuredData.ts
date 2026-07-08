@@ -13,7 +13,7 @@ const ORGANIZATION_NODE = {
   "@id": ORGANIZATION_ID,
   name: "Engines Market",
   url: HOME_URL,
-  logo: `${SITE_URL}/images/logo.png`,
+  logo: `${SITE_URL}/branding/engine-market-logo-rectangle.png`,
   contactPoint: {
     "@type": "ContactPoint",
     telephone: "+44-20-3488-4649",
@@ -46,13 +46,35 @@ function buildWebsiteNode() {
     publisher: {
       "@id": ORGANIZATION_ID,
     },
-    potentialAction: {
-      "@type": "SearchAction",
-      target: `${SITE_URL}/search?q={search_term_string}`,
-      "query-input": "required name=search_term_string",
-    },
   };
 }
+
+const HOME_TITLE = "Engine Replacement Cost UK - Compare 100+ Vetted Suppliers";
+const HOME_DESCRIPTION =
+  "Compare engine replacement prices from 100+ vetted UK suppliers. Reconditioned, rebuilt & used engines with 12-24 month warranty. Supply & fit available UK-wide. Get free quotes.";
+
+const HOME_FAQ_ENTRIES = [
+  {
+    question: "How much does engine replacement cost in the UK?",
+    answer:
+      "Engine replacement prices vary by make, model, engine code and whether you choose a used, reconditioned or rebuilt unit. Engines Market helps you compare quotes from vetted UK suppliers before you decide.",
+  },
+  {
+    question: "What engine types can I compare on Engines Market?",
+    answer:
+      "You can compare used, reconditioned, rebuilt, remanufactured and supply-and-fit engine options through vetted UK suppliers.",
+  },
+  {
+    question: "Is supply and fit available across the UK?",
+    answer:
+      "Yes. Supply and fit is available through UK-wide specialists, alongside supply-only options if you already have a garage lined up.",
+  },
+  {
+    question: "What warranty do replacement engines include?",
+    answer:
+      "Most quoted engines include a 12-24 month warranty, with terms varying by supplier and engine type.",
+  },
+] as const;
 
 function buildFaqEntities(items: { question: string; answer: string; cta: string }[]) {
   return items.map((item) => ({
@@ -249,6 +271,89 @@ export function buildModelStructuredData(pageData: ModelPageData) {
             "@type": "Service",
             name: card.h3,
             description: `${card.subtitle}. ${card.cta}`.trim(),
+          },
+        })),
+      },
+    ],
+  };
+}
+
+export function buildHomeStructuredData(
+  engineTypes: Array<{ title: string; price: string; summary: string }>,
+) {
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      buildWebsiteNode(),
+      ORGANIZATION_NODE,
+      {
+        "@type": "WebPage",
+        "@id": `${HOME_URL}#webpage`,
+        url: HOME_URL,
+        name: HOME_TITLE,
+        description: HOME_DESCRIPTION,
+        isPartOf: {
+          "@id": WEBSITE_ID,
+        },
+        about: {
+          "@id": `${HOME_URL}#service`,
+        },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: `${SITE_URL}/images/og-image.png`,
+        },
+        mainEntity: {
+          "@id": `${HOME_URL}#service`,
+        },
+      },
+      {
+        "@type": "Service",
+        "@id": `${HOME_URL}#service`,
+        name: HOME_TITLE,
+        url: HOME_URL,
+        description: HOME_DESCRIPTION,
+        serviceType: [
+          "Engine replacement price comparison",
+          "Reconditioned engine quotes",
+          "Rebuilt engine quotes",
+          "Used engine quotes",
+          "Engine supply and fit",
+        ],
+        provider: {
+          "@id": ORGANIZATION_ID,
+        },
+        areaServed: {
+          "@type": "Country",
+          name: "United Kingdom",
+        },
+        hasOfferCatalog: {
+          "@type": "OfferCatalog",
+          name: "Replacement Engine Options",
+          itemListElement: engineTypes.map((engineType, index) => ({
+            "@type": "Offer",
+            position: index + 1,
+            itemOffered: {
+              "@type": "Service",
+              name: engineType.title,
+              description: engineType.summary,
+            },
+            priceSpecification: {
+              "@type": "PriceSpecification",
+              priceCurrency: "GBP",
+              description: engineType.price,
+            },
+          })),
+        },
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${HOME_URL}#faq`,
+        mainEntity: HOME_FAQ_ENTRIES.map((item) => ({
+          "@type": "Question",
+          name: item.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: item.answer,
           },
         })),
       },

@@ -160,7 +160,7 @@ export function CtaStrip({
   return (
     <div className={`rounded-[14px] px-4 py-4 ${outerClass}`}>
       <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-        <div className="flex items-start gap-3">
+        <div className="flex flex-col gap-3 md:flex-row md:items-start">
           <div className={`flex h-12 w-12 flex-none items-center justify-center rounded-full ${iconWrapClass}`}>
             {icon ?? <ShieldIcon />}
           </div>
@@ -198,14 +198,14 @@ export function RecommendationCard({
   linkProps,
 }: RecommendationCardProps) {
   return (
-    <div className="rounded-[14px] border border-[#0d1b2e] bg-white px-4 py-4 shadow-[0_10px_24px_rgba(13,27,46,0.06)]">
+    <div className="rounded-[14px] border border-[#2D6BFF] bg-white px-4 py-4 shadow-[0_0_0_1px_rgba(45,107,255,0.18),0_0_16px_rgba(45,107,255,0.14),0_10px_24px_rgba(13,27,46,0.06)]">
       <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
         <div className="flex items-start gap-3">
-          <div className="flex h-11 w-11 flex-none items-center justify-center rounded-full bg-[#f5f8fc] text-[#0d1b2e]">
+          <div className="flex h-11 w-11 flex-none items-center justify-center rounded-full bg-[#eef4ff] text-[#2D6BFF]">
             <ShieldIcon />
           </div>
           <div className="min-w-0">
-            <div className="text-[10px] font-extrabold uppercase tracking-[0.12em] text-[#64748b]">{label}</div>
+            <div className="text-[10px] font-extrabold uppercase tracking-[0.12em] text-[#2D6BFF]">{label}</div>
             {title ? <div className="mt-1 text-[13px] font-extrabold leading-[1.35] text-[#0d1b2e]">{title}</div> : null}
             <p className="mt-1 text-[12px] leading-[1.65] text-[#475569]">{body}</p>
             <ChipRow chips={chips} tone="recommendation" />
@@ -216,7 +216,7 @@ export function RecommendationCard({
           <a
             href={linkProps?.href ?? "#quote-form"}
             {...linkProps}
-            className={`inline-flex min-h-[42px] items-center justify-center gap-2 rounded-[10px] border border-[#0d1b2e] bg-white px-4 text-[11px] font-bold text-[#0d1b2e] transition hover:bg-[#f8fbff] md:min-w-[220px] ${linkProps?.className ?? ""}`}
+            className={`inline-flex min-h-[42px] items-center justify-center gap-2 rounded-[10px] border border-[#2D6BFF] bg-[#071322] px-4 text-[11px] font-bold text-white shadow-[0_0_0_1px_rgba(45,107,255,0.18),0_0_12px_rgba(45,107,255,0.14)] transition hover:bg-[#0d1b2e] md:min-w-[220px] ${linkProps?.className ?? ""}`}
           >
             <span>{ctaText}</span>
             <ArrowIcon className="h-[12px] w-[12px]" />

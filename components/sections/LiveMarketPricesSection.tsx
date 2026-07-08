@@ -175,6 +175,7 @@ export default function LiveMarketPricesSection({
 
   const headingLines = data.headingLines?.length ? data.headingLines : [data.h2];
   const sectionImage = imageSrc || "";
+  const hasMobileImage = Boolean(sectionImage);
 
   return (
     <Section className={`bg-[#f5f5f5] py-7 sm:py-8 lg:py-10 ${isDocumentMode ? "" : "sm:px-2"}`}>
@@ -355,20 +356,24 @@ export default function LiveMarketPricesSection({
         </div>
 
         {/* ✅ Mobile Image — now BELOW the table, only visible on phones */}
-        <div className="relative mt-6 h-[480px] w-full overflow-hidden rounded-2xl lg:hidden">
+        <div
+          className={`relative mt-6 w-full overflow-hidden rounded-2xl bg-white lg:hidden ${
+            hasMobileImage ? "aspect-[4/7]" : "hidden"
+          }`}
+        >
           {sectionImage ? (
             <Image
               src={sectionImage}
               alt={data.imageAlt ?? "Market data visualization"}
               fill
-              className="object-cover"
+              className="object-contain"
               sizes="100vw"
               priority
             />
           ) : null}
         </div>
 
-        <div className="flex justify-end items-center gap-[6px] px-4 py-3 text-[11px] font-medium text-[#9aa3b5] border-t border-white/10">
+        <div className="flex items-center justify-end gap-[6px] px-4 py-3 text-[11px] font-medium text-[#9aa3b5]">
           <RefreshIcon />
           <span>
             {ui.updatedLabel ?? "Last updated:"} <span className="font-semibold text-[#6b7280]">{formatUpdatedAt(clock)}</span>

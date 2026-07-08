@@ -498,7 +498,7 @@ export default function EngineYearsSection({ brandName, data, strictData = false
           {data.intro}
         </p>
 
-        <div className="mb-[18px] overflow-hidden border border-[#13243d] bg-[#0d1b2e] shadow-[0_10px_24px_rgba(13,27,46,0.12)]">
+        <div className="mb-[18px] overflow-hidden border border-[#13243d] bg-[#0d1b2e] shadow-[0_10px_24px_rgba(13,27,46,0.12)] max-[720px]:mx-[-16px] max-[720px]:border-x-0">
           <div
             className="grid w-full"
             style={{ gridTemplateColumns: `repeat(${Math.max(data.years.length, 1)}, minmax(0, 1fr))` }}

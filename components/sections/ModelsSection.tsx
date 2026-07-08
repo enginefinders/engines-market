@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { getModelHref } from "@/lib/modelRoutes";
 import type { ModelsSectionData } from "@/types/brand";
 import Container from "@/components/ui/Container";
@@ -60,10 +60,31 @@ export default function ModelsSection({ data, brandSlug, documentMode = false }:
   const heading = splitHeading(data.h2);
   const [openCard, setOpenCard] = useState<string | null>(null);
   const [showAllModels, setShowAllModels] = useState(false);
-  const initialVisibleCount = 5;
+  const [isMobile, setIsMobile] = useState(false);
+  const initialVisibleCount = 4;
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (typeof window === "undefined") {
+        return;
+      }
+
+      const mobile = window.innerWidth < 768;
+      setIsMobile(mobile);
+
+      if (!mobile) {
+        setShowAllModels(false);
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const visibleCards = useMemo(
-    () => (showAllModels ? data.cards : data.cards.slice(0, initialVisibleCount)),
-    [data.cards, showAllModels],
+    () => (isMobile && !showAllModels ? data.cards.slice(0, initialVisibleCount) : data.cards),
+    [data.cards, initialVisibleCount, isMobile, showAllModels],
   );
   const hiddenModelsCount = Math.max(data.cards.length - initialVisibleCount, 0);
 
@@ -103,7 +124,53 @@ export default function ModelsSection({ data, brandSlug, documentMode = false }:
           <p className="text-body mt-4 max-w-[660px] text-slate-600">{data.subheading}</p>
         </div>
 
-        <div className="mt-7 grid gap-3 sm:grid-cols-2 xl:grid-cols-5">
+        <div className="mt-7 grid grid-cols-2 gap-3 md:hidden">
+          {visibleCards.map((model) => {
+            const modelHref = getModelHref(brandSlug, model);
+
+            return (
+              <article
+                key={model.slug}
+                className="overflow-hidden rounded-[18px] border border-slate-200 bg-white shadow-[0_10px_30px_rgba(13,27,46,0.08)]"
+              >
+                <Link href={modelHref} className="block h-full">
+                  <div className="relative aspect-[1.18/1] overflow-hidden bg-[linear-gradient(180deg,#f8fbff_0%,#eef3f9_100%)]">
+                    <Image
+                      src={model.image || `/images/brands/${brandSlug}/models/${brandSlug}-${model.slug}-small.webp`}
+                      alt={model.h3}
+                      fill
+                      className="object-contain p-2"
+                      sizes="(max-width: 767px) 50vw, 25vw"
+                    />
+                  </div>
+
+                  <div className="space-y-2 px-3 pb-3 pt-3">
+                    <h3 className="font-['Manrope'] text-[15px] font-extrabold leading-[1.15] text-[#0d1b2e]">
+                      {model.h3}
+                    </h3>
+                    <p className="text-[10.5px] leading-[1.45] text-slate-500">{model.subtitle}</p>
+
+                    <div className="border-t border-slate-100 pt-2">
+                      <p className="text-[10px] font-semibold uppercase tracking-[0.08em] text-slate-400">
+                        Starting from
+                      </p>
+                      <p className="mt-1 font-['Manrope'] text-[14px] font-extrabold leading-none text-[#15803d]">
+                        {normalizePriceRange(model.priceRange)}
+                      </p>
+                    </div>
+
+                    <div className="inline-flex items-center gap-1.5 text-[11px] font-extrabold text-[#15803d]">
+                      <span>{model.cta.replace(/\s*-+>\s*$/, "")}</span>
+                      <ArrowIcon />
+                    </div>
+                  </div>
+                </Link>
+              </article>
+            );
+          })}
+        </div>
+
+        <div className="mt-7 hidden gap-3 md:grid md:grid-cols-2 xl:grid-cols-5">
           {visibleCards.map((model) => {
             const isOpen = openCard === model.slug;
             const modelHref = getModelHref(brandSlug, model);
@@ -167,7 +234,7 @@ export default function ModelsSection({ data, brandSlug, documentMode = false }:
           })}
         </div>
 
-        {hiddenModelsCount > 0 ? (
+        {isMobile && hiddenModelsCount > 0 ? (
           <div className="mt-5 flex items-center justify-center">
             <button
               type="button"

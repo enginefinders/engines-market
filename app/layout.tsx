@@ -10,6 +10,17 @@ export const metadata: Metadata = {
   title: "Engines Market",
   description:
     "Compare prices for reconditioned, rebuilt and used engines from trusted UK engine specialists.",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   icons: {
     icon: "/icon.png",
     shortcut: "/icon.png",

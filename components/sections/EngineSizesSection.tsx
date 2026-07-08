@@ -12,6 +12,7 @@ type Props = {
   bgImage?: string;
   dynamicBrandLabel?: boolean;
   displayMode?: "brand" | "document";
+  documentMode?: boolean;
 };
 
 type FuelKind = "diesel" | "petrol" | "hybrid";
@@ -267,6 +268,7 @@ export default function EngineSizesSection({
   bgImage,
   dynamicBrandLabel = false,
   displayMode = "brand",
+  documentMode = false,
 }: Props) {
   const ui = data.ui ?? {};
   const groups = data.groups;
@@ -296,7 +298,7 @@ export default function EngineSizesSection({
         </div>
       ) : null}
 
-      <Container className="relative max-w-[1400px]">
+      <Container className={`relative max-w-[1400px] ${documentMode || displayMode === "document" ? "px-0 sm:px-0 lg:px-0" : ""}`}>
         <div className="section-pill mb-[14px]">
           {/* <TagIcon /> */}
           <span>{data.tag}</span>
@@ -313,7 +315,8 @@ export default function EngineSizesSection({
 
         {/* Unified Responsive Tab Navigation */}
         <div className="mt-5">
-          <div className="overflow-hidden rounded-[6px] border border-[#d9e1ea] bg-white shadow-[0_4px_12px_rgba(13,27,46,0.05)]">
+          <div className="max-[720px]:mx-[-16px]">
+          <div className="overflow-hidden rounded-[6px] border border-[#d9e1ea] bg-white shadow-[0_4px_12px_rgba(13,27,46,0.05)] max-[720px]:rounded-none max-[720px]:border-x-0">
             <div className="flex items-stretch divide-x divide-[#d9e1ea]">
               {groups.map((group, index) => {
                 const isActive = index === activeGroupIndex;
@@ -339,6 +342,7 @@ export default function EngineSizesSection({
                 );
               })}
             </div>
+          </div>
           </div>
         </div>
 

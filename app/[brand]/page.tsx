@@ -138,7 +138,12 @@ export default async function BrandPage({ params }: BrandPageProps) {
         sectionId="brand-engine-types"
       />
 
-      <EngineSizesSection brandName={pageData.brand.name} data={pageData.sections.engineSizes} bgImage={pageData.assets.engineSizesBg} />
+      <EngineSizesSection
+        brandName={pageData.brand.name}
+        data={pageData.sections.engineSizes}
+        bgImage={pageData.assets.engineSizesBg}
+        documentMode
+      />
 
       <FuelTypesSection data={pageData.sections.fuelTypes} bgImage={pageData.assets.fuelTypesBg} documentMode />
 

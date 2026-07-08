@@ -502,11 +502,7 @@ export default function HeroSection({
   return (
     <section className="overflow-x-hidden bg-[#f8f9fa]">
       <div className="bg-[#0d1b2e] text-white lg:hidden">
-        <div className="flex items-center justify-between gap-2 px-4 py-3">
-          <div className="font-['Manrope'] text-[15px] font-extrabold tracking-[-0.3px] text-white sm:text-[17px]">
-            {strictData ? mobileBar.brandText : (mobileBar.brandText ?? "ENGINEMARKET")}
-          </div>
-
+        <div className="flex items-center justify-end gap-2 px-4 py-3">
           <div className="flex items-center gap-2">
             <a
               href={PHONE_NUMBER_HREF}

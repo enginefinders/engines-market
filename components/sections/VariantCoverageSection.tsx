@@ -14,6 +14,7 @@ type Props = {
 };
 
 type VariantCard = ModelVariantCoverageSectionData["cards"][number];
+const MOBILE_VISIBLE_COUNT = 6;
 
 function isRenderableVariantCard(card: VariantCard) {
   const hasHeading = card.h3.trim().length > 0;
@@ -97,6 +98,32 @@ function formatVariantName(title: string) {
     .trim();
 }
 
+function normalizeVariantSubtitle(subtitle: string) {
+  return subtitle.replace(/\u00c2\u00b7/g, "\u00b7").replace(/\s+/g, " ").trim();
+}
+
+function resolveVariantVehicleImage(card: VariantCard) {
+  const years = card.years?.trim() ?? "";
+
+  if (/^2019-2024$/.test(years) || /^2019/.test(years)) {
+    return "/images/brands/bmw/models/bmw-1-series-f40-model-card.png";
+  }
+
+  if (/^(2011|2012|2016)/.test(years)) {
+    return "/images/brands/bmw/models/bmw-1-series-f20-f21-model-card.png";
+  }
+
+  if (/^2004-2011$/.test(years) || /^2004/.test(years)) {
+    return "/images/brands/bmw/models/bmw-1-series-e81-e87-model-card.png";
+  }
+
+  if (/2004-2024/.test(years)) {
+    return "/images/brands/bmw/models/bmw-1-series-model-card.png";
+  }
+
+  return "/images/brands/bmw/models/bmw-1-series-model-card.png";
+}
+
 function extractEngineType(card: VariantCard) {
   const match = card.subtitle.match(/\d(?:\.\d)?L\s+[A-Za-z]+/);
   return match?.[0] ?? `${card.fuel}`.trim();
@@ -163,7 +190,6 @@ export default function VariantCoverageSection({ data, brandName, modelName, doc
     [data.cards],
   );
   
-  // THIS IS THE VARIABLE THAT WAS MISSING
   const renderableDirectoryGroups = useMemo(
     () => getRenderableDirectoryGroups(data),
     [data],
@@ -199,14 +225,15 @@ export default function VariantCoverageSection({ data, brandName, modelName, doc
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const cardsToDisplay = useMemo(() => {
-    if (isMobile && !showAllCards && renderableCards.length > 6) {
-      return renderableCards.slice(0, 6);
+  const mobileCardsToDisplay = useMemo(() => {
+    if (isMobile && !showAllCards && renderableCards.length > MOBILE_VISIBLE_COUNT) {
+      return renderableCards.slice(0, MOBILE_VISIBLE_COUNT);
     }
     return renderableCards;
   }, [isMobile, showAllCards, renderableCards]);
 
-  const totalRows = Math.ceil(cardsToDisplay.length / columns);
+  const totalRows = Math.ceil(renderableCards.length / columns);
+  const useStackedExpansion = columns <= 2;
 
   const headingLines = data.headingLines?.length ? data.headingLines : [data.h2];
   const ui = data.ui ?? {};
@@ -220,6 +247,53 @@ export default function VariantCoverageSection({ data, brandName, modelName, doc
   function toggleCard(slug: string) {
     setOpenCard((current) => (current === slug ? null : slug));
     setSeenCards((current) => (current[slug] ? current : { ...current, [slug]: true }));
+  }
+
+  function renderExpandedPanel(card: VariantCard, extraClassName = "") {
+    return (
+      <div
+        className={`relative overflow-hidden border-[0.5px] border-[#2969af] bg-[#0d1b2e] px-4 pb-4 pt-4 text-white shadow-[0_0_0_1px_rgba(42,109,214,1),0_0_5px_rgba(42,109,214,0.4),0_0_12px_rgba(42,109,214,0.3),0_0_20px_rgba(42,109,214,0.2),0_3px_10px_rgba(42,109,214,0.25)] before:pointer-events-none before:absolute before:inset-0 before:bg-[linear-gradient(125deg,rgba(255,255,255,0.18)_0%,rgba(255,255,255,0.05)_22%,rgba(255,255,255,0)_42%,rgba(45,107,255,0.16)_50%,rgba(255,255,255,0)_64%)] after:pointer-events-none after:absolute after:inset-x-0 after:top-0 after:h-px after:bg-gradient-to-r after:from-transparent after:via-white/70 after:to-transparent ${extraClassName}`}
+      >
+        <div className="relative z-10 space-y-[10px]">
+          <div className="flex items-center justify-between gap-3 rounded-[8px] border border-blue-500 bg-white/[0.03] px-3 py-3 shadow-[0_0_15px_rgba(59,130,246,0.5),inset_0_0_12px_rgba(59,130,246,0.3)] transition hover:bg-slate-800 hover:shadow-[0_0_20px_rgba(59,130,246,0.8),inset_0_0_15px_rgba(59,130,246,0.5)] sm:py-4">
+            <span className="flex-none text-[10px] font-semibold uppercase tracking-[0.08em] text-white/60">
+              {ui.specsLabel ?? "Specs"}
+            </span>
+            <span className="min-w-0 flex-1 truncate text-right text-[11px] font-semibold leading-none text-white md:text-[11.5px]">
+              {card.power}
+            </span>
+          </div>
+
+          <div className="flex items-center justify-between gap-3 rounded-[8px] border border-blue-500 bg-white/[0.03] px-3 py-3 shadow-[0_0_15px_rgba(59,130,246,0.5),inset_0_0_12px_rgba(59,130,246,0.3)] transition hover:bg-slate-800 hover:shadow-[0_0_20px_rgba(59,130,246,0.8),inset_0_0_15px_rgba(59,130,246,0.5)] sm:py-4">
+            <span className="flex-none text-[10px] font-semibold uppercase tracking-[0.08em] text-white/60">
+              {ui.yearsLabel ?? "Years"}
+            </span>
+            <span className="min-w-0 flex-1 truncate text-right text-[11px] font-semibold leading-none text-white md:text-[11.5px]">
+              {card.years?.trim() || ui.yearsFallback || "Check exact year coverage by registration"}
+            </span>
+          </div>
+
+          <div className="flex items-center justify-between gap-3 rounded-[8px] border border-blue-500 bg-white/[0.03] px-3 py-3 shadow-[0_0_15px_rgba(59,130,246,0.5),inset_0_0_12px_rgba(59,130,246,0.3)] transition hover:bg-slate-800 hover:shadow-[0_0_20px_rgba(59,130,246,0.8),inset_0_0_15px_rgba(59,130,246,0.5)] sm:py-4">
+            <span className="flex-none text-[10px] font-semibold uppercase tracking-[0.08em] text-white/60">
+              {ui.rebuiltLabel ?? "Rebuilt"}
+            </span>
+            <span className="min-w-0 flex-1 truncate text-right font-['Manrope'] text-[14px] font-extrabold leading-none text-white md:text-[15px] ">
+              {card.priceRange}
+            </span>
+          </div>
+        </div>
+
+        <a
+          href="#quote-form"
+          data-quote-context={card.h3}
+          data-quote-source="variant-coverage"
+          className="mt-4 inline-flex h-12 w-full items-center justify-center gap-2 rounded-xl border border-green-400 bg-slate-900 px-2 text-[13px] font-semibold text-white shadow-[0_0_15px_rgba(74,222,128,0.5),inset_0_0_12px_rgba(74,222,128,0.3)] transition hover:bg-slate-800 hover:shadow-[0_0_20px_rgba(74,222,128,0.8),inset_0_0_15px_rgba(74,222,128,0.5)]"
+        >
+          <span>{card.cta}</span>
+          <ArrowIcon />
+        </a>
+      </div>
+    );
   }
 
   return (
@@ -273,20 +347,81 @@ export default function VariantCoverageSection({ data, brandName, modelName, doc
           </div>
 
           <div className="mt-6 md:mt-9">
-            <div className="grid gap-4 grid-cols-2 xl:grid-cols-5 2xl:grid-cols-6">
-              {cardsToDisplay.map((card, index) => {
+            <div className="grid grid-cols-2 gap-3 md:hidden">
+              {mobileCardsToDisplay.map((card) => {
+                const shortName = formatVariantName(card.h3);
+                const isOpen = openCard === card.slug;
+                const animateChevron = !isOpen && !seenCards[card.slug];
+                const vehicleImage = resolveVariantVehicleImage(card);
+
+                return (
+                  <article key={card.slug} className="relative">
+                    <div
+                      className={`overflow-hidden rounded-[12px] border bg-white transition duration-300 ${
+                        isOpen
+                          ? "rounded-b-none border-[#2969af] border-b-0 shadow-[0_0_0_1px_rgba(42,109,214,1),0_0_5px_rgba(42,109,214,0.4),0_0_12px_rgba(42,109,214,0.3),0_0_20px_rgba(42,109,214,0.2),0_3px_10px_rgba(42,109,214,0.25)]"
+                          : "border-slate-200 shadow-[0_2px_8px_rgba(13,27,46,0.05)]"
+                      }`}
+                    >
+                      <button
+                        type="button"
+                        onClick={() => toggleCard(card.slug)}
+                        aria-expanded={isOpen}
+                        className="flex min-h-[224px] w-full flex-col items-center px-3 pb-2 pt-3 text-center"
+                      >
+                        <div className="flex min-h-[72px] w-full items-center justify-center">
+                          <div className="relative h-[66px] w-full max-w-[118px]">
+                            <Image
+                              src={vehicleImage}
+                              alt={shortName}
+                              fill
+                              className="object-contain"
+                              sizes="118px"
+                            />
+                          </div>
+                        </div>
+
+                        <div className="mt-3 flex w-full flex-1 flex-col">
+                          <div className="min-h-[32px] font-['Manrope'] text-[13px] font-extrabold leading-[1.18] text-[#0d1b2e]">
+                            {shortName}
+                          </div>
+                          <p className="mt-2 min-h-[28px] text-[10px] font-semibold leading-[1.4] text-[#4b5563]">
+                            {normalizeVariantSubtitle(card.subtitle)}
+                          </p>
+                          <p className="mt-4 font-['Manrope'] text-[13px] font-semibold leading-none text-[#374151]">
+                            Rebuilt: {card.priceRange}
+                          </p>
+                        </div>
+
+                        <span className="mt-auto inline-flex pt-3 text-[#15803d]">
+                          <ChevronIcon open={isOpen} animated={animateChevron} />
+                        </span>
+                      </button>
+                    </div>
+
+                    {isOpen ? renderExpandedPanel(card, "rounded-b-[12px] border-t-0") : null}
+                  </article>
+                );
+              })}
+            </div>
+
+            <div className="hidden gap-4 md:grid md:grid-cols-2 xl:grid-cols-5 2xl:grid-cols-6">
+              {renderableCards.map((card, index) => {
                 const rowIndex = Math.floor(index / columns);
                 const isLastRow = rowIndex === totalRows - 1 && totalRows > 1;
                 const isOpen = openCard === card.slug;
                 const shortName = formatVariantName(card.h3);
                 const animateChevron = !isOpen && !seenCards[card.slug];
                 const codeAndType = formatCodeAndType(card);
+                const vehicleImage = resolveVariantVehicleImage(card);
 
                 return (
                   <article key={card.slug} className="relative">
                     <div
                       className={`overflow-hidden rounded-[12px] border bg-white transition duration-300 ${isOpen
-                          ? `border-[#2969af] shadow-[0_0_0_1px_rgba(42,109,214,1),0_0_5px_rgba(42,109,214,0.4),0_0_12px_rgba(42,109,214,0.3),0_0_20px_rgba(42,109,214,0.2),0_3px_10px_rgba(42,109,214,0.25)] ${isLastRow
+                          ? `border-[#2969af] shadow-[0_0_0_1px_rgba(42,109,214,1),0_0_5px_rgba(42,109,214,0.4),0_0_12px_rgba(42,109,214,0.3),0_0_20px_rgba(42,109,214,0.2),0_3px_10px_rgba(42,109,214,0.25)] ${useStackedExpansion
+                            ? "rounded-b-none border-b-0"
+                            : isLastRow
                             ? "rounded-b-[12px] rounded-t-none border-t-0"
                             : "rounded-t-[12px] rounded-b-none border-b-0"
                           }`
@@ -300,26 +435,20 @@ export default function VariantCoverageSection({ data, brandName, modelName, doc
                         className="flex min-h-[230px] w-full flex-col items-center px-2 pb-2 pt-1.5 sm:px-4 sm:py-4 text-center md:min-h-[248px]"
                       >
                         <div className="flex min-h-[82px] w-full items-center justify-center">
-                          {card.image ? (
-                            <div className="relative h-[68px] w-full max-w-[158px]">
-                              <Image
-                                src={card.image}
-                                alt={card.h3}
-                                fill
-                                className="object-contain"
-                                sizes="150px"
-                              />
-                            </div>
-                          ) : (
-                            <div className="font-['Manrope'] text-[27px] font-extrabold leading-[0.92] text-[#0d1b2e] sm:text-[31px]">
-                              {shortName}
-                            </div>
-                          )}
+                          <div className="relative h-[80px] w-full max-w-[170px]">
+                            <Image
+                              src={vehicleImage}
+                              alt={shortName}
+                              fill
+                              className="object-contain"
+                              sizes="170px"
+                            />
+                          </div>
                         </div>
 
                         <div className="mt-3 w-full max-w-[250px]">
                           <div className="font-['Manrope'] text-[16px] font-extrabold leading-[1.18] text-[#0d1b2e] md:text-[15px]">
-                            {card.h3}
+                            {shortName}
                           </div>
                           <p className="mt-2 text-[11.5px] font-semibold leading-[1.4] text-[#4b5563]">
                             {codeAndType}
@@ -335,59 +464,25 @@ export default function VariantCoverageSection({ data, brandName, modelName, doc
                       </button>
                     </div>
 
-                    {isOpen ? (
-                      <div
-                        className={`relative absolute left-[-1px] right-[-1px] z-50 overflow-hidden border-[0.5px] border-[#2969af] bg-[#0d1b2e] px-4 pb-4 pt-4 text-white shadow-[0_0_0_1px_rgba(42,109,214,1),0_0_5px_rgba(42,109,214,0.4),0_0_12px_rgba(42,109,214,0.3),0_0_20px_rgba(42,109,214,0.2),0_3px_10px_rgba(42,109,214,0.25)] before:pointer-events-none before:absolute before:inset-0 before:bg-[linear-gradient(125deg,rgba(255,255,255,0.18)_0%,rgba(255,255,255,0.05)_22%,rgba(255,255,255,0)_42%,rgba(45,107,255,0.16)_50%,rgba(255,255,255,0)_64%)] after:pointer-events-none after:absolute after:inset-x-0 after:top-0 after:h-px after:bg-gradient-to-r after:from-transparent after:via-white/70 after:to-transparent min-h-[248px] sm:min-h-[267px] ${isLastRow
-                            ? "bottom-full rounded-t-[12px] border-b-0"
-                            : "top-full rounded-b-[12px] border-t-0"
-                          }`}
-                      >
-                        <div className="relative z-10 space-y-[10px]">
-                          <div className="flex items-center justify-between gap-3 rounded-[8px] border border-blue-500 shadow-[0_0_15px_rgba(59,130,246,0.5),inset_0_0_12px_rgba(59,130,246,0.3)] transition hover:shadow-[0_0_20px_rgba(59,130,246,0.8),inset_0_0_15px_rgba(59,130,246,0.5)] hover:bg-slate-800 bg-white/[0.03] px-3 py-3 sm:py-4">
-                            <span className="flex-none text-[10px] font-semibold uppercase tracking-[0.08em] text-white/60">
-                              {ui.specsLabel ?? "Specs"}
-                            </span>
-                            <span className="min-w-0 flex-1 truncate text-right text-[11px] font-semibold leading-none text-white md:text-[11.5px]">
-                              {card.power}
-                            </span>
-                          </div>
-
-                          <div className="flex items-center justify-between gap-3 rounded-[8px] border border-blue-500 shadow-[0_0_15px_rgba(59,130,246,0.5),inset_0_0_12px_rgba(59,130,246,0.3)] transition hover:shadow-[0_0_20px_rgba(59,130,246,0.8),inset_0_0_15px_rgba(59,130,246,0.5)] hover:bg-slate-800 bg-white/[0.03] px-3 py-3 sm:py-4">
-                            <span className="flex-none text-[10px] font-semibold uppercase tracking-[0.08em] text-white/60">
-                              {ui.yearsLabel ?? "Years"}
-                            </span>
-                            <span className="min-w-0 flex-1 truncate text-right text-[11px] font-semibold leading-none text-white md:text-[11.5px]">
-                              {card.years?.trim() || ui.yearsFallback || "Check exact year coverage by registration"}
-                            </span>
-                          </div>
-
-                          <div className="flex items-center justify-between gap-3 rounded-[8px] border border-blue-500 shadow-[0_0_15px_rgba(59,130,246,0.5),inset_0_0_12px_rgba(59,130,246,0.3)] transition hover:shadow-[0_0_20px_rgba(59,130,246,0.8),inset_0_0_15px_rgba(59,130,246,0.5)] hover:bg-slate-800 bg-white/[0.03] px-3 py-3 sm:py-4">
-                            <span className="flex-none text-[10px] font-semibold uppercase tracking-[0.08em] text-white/60">
-                              {ui.rebuiltLabel ?? "Rebuilt"}
-                            </span>
-                            <span className="min-w-0 flex-1 truncate text-right font-['Manrope'] text-[14px] font-extrabold leading-none text-white md:text-[15px] ">
-                              {card.priceRange}
-                            </span>
-                          </div>
-                        </div>
-
-                        <a
-                          href="#quote-form"
-                          data-quote-context={card.h3}
-                          data-quote-source="variant-coverage"
-                          className="mt-4 inline-flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-slate-900 px-2 text-[13px] font-semibold text-white border border-green-400 shadow-[0_0_15px_rgba(74,222,128,0.5),inset_0_0_12px_rgba(74,222,128,0.3)] transition hover:shadow-[0_0_20px_rgba(74,222,128,0.8),inset_0_0_15px_rgba(74,222,128,0.5)] hover:bg-slate-800"
-                        >
-                          <span>{card.cta}</span>
-                          <ArrowIcon />
-                        </a>
-                      </div>
-                    ) : null}
+                    {isOpen
+                      ? renderExpandedPanel(
+                          card,
+                          `${useStackedExpansion
+                            ? "rounded-b-[12px] border-t-0"
+                            : `absolute left-[-1px] right-[-1px] z-50 ${
+                                isLastRow
+                                  ? "bottom-full rounded-t-[12px] border-b-0"
+                                  : "top-full rounded-b-[12px] border-t-0"
+                              }`
+                          } min-h-[248px] sm:min-h-[267px]`,
+                        )
+                      : null}
                   </article>
                 );
               })}
             </div>
 
-            {isMobile && renderableCards.length > 6 && (
+            {isMobile && renderableCards.length > MOBILE_VISIBLE_COUNT && (
               <div className="mt-8 flex justify-center">
                 <button
                   type="button"
@@ -425,7 +520,7 @@ export default function VariantCoverageSection({ data, brandName, modelName, doc
             </button>
 
             {isDirectoryOpen && (
-              <div className="animate-fade-in-down mt-4 max-h-[calc(100vh-10rem)] overflow-y-auto pr-1 scroll-smooth overscroll-contain md:mt-0 md:max-h-none md:overflow-visible md:pr-0">
+              <div className="animate-fade-in-down mt-4 max-h-[calc(100vh-10rem)] overflow-y-auto pr-4 scroll-smooth overscroll-contain md:mt-0 md:max-h-none md:overflow-visible md:pr-0">
                 {directoryIntro ? (
                   <p className="max-w-[900px] text-[13px] leading-[1.7] text-slate-600">{directoryIntro}</p>
                 ) : null}

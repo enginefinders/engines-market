@@ -280,6 +280,7 @@ export default function EngineTypesSection({
   const ui = data.ui ?? {};
   const closingCard = data.closingCard ?? {};
   const isDocumentMode = displayMode === "document";
+  const useFullBleedDocumentLayout = documentMode || isDocumentMode;
 
   useEffect(() => {
     const calculateMaxHeight = () => {
@@ -333,7 +334,7 @@ export default function EngineTypesSection({
         </div>
       ) : null}
 
-      <Container className={`relative max-w-[1400px] ${documentMode ? "px-0 sm:px-0 lg:px-0" : ""}`}>
+      <Container className={`relative max-w-[1400px] ${useFullBleedDocumentLayout ? "px-0 sm:px-0 lg:px-0" : ""}`}>
         <div className="section-pill mb-[14px]">
           <span>{data.tag}</span>
         </div>

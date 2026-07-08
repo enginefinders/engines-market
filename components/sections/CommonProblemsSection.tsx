@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useId, useMemo, useState } from "react";
 import type { CommonProblemsData } from "@/types/brand";
 import { RecommendationCard } from "@/components/ui/CalloutCards";
@@ -366,18 +367,48 @@ function AffectedVehiclesCard({
   );
 }
 
+function ProblemVisual({
+  src,
+  alt,
+  mobile = false,
+}: {
+  src: string;
+  alt: string;
+  mobile?: boolean;
+}) {
+  return (
+    <div
+      className={`relative overflow-hidden rounded-[12px] border border-[#dbe5f4] bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.92),rgba(243,246,252,0.96))] shadow-[0_6px_18px_rgba(13,27,46,0.08)] ${
+        mobile ? "h-[164px]" : "h-[240px]"
+      }`}
+    >
+      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.44)_0%,rgba(255,255,255,0.08)_30%,rgba(255,255,255,0)_62%)]" />
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        className="object-contain p-3"
+        sizes={mobile ? "100vw" : "(max-width: 1024px) 100vw, 40vw"}
+      />
+    </div>
+  );
+}
+
 function MobileProblemCard({
   problem,
   index,
   open,
   onToggle,
+  fallbackImage,
 }: {
   problem: CommonProblemsData["problems"][number];
   index: number;
   open: boolean;
   onToggle: () => void;
+  fallbackImage?: string;
 }) {
   const detail = splitProblemDetail(problem.group, problem.h4);
+  const visualSrc = problem.image?.trim() || fallbackImage?.trim() || "";
 
   const getTierColors = (tier: string) => {
     const label = normalizeText(tier).toLowerCase();
@@ -420,6 +451,12 @@ function MobileProblemCard({
 
       {open ? (
         <div className="border-t border-[#f1f5f9] px-3 py-4">
+          {visualSrc ? (
+            <div className="mb-3">
+              <ProblemVisual src={visualSrc} alt={detail.title} mobile />
+            </div>
+          ) : null}
+
           {/* 2-column grid for top cards */}
           <div className="grid grid-cols-2 gap-2.5">
             <AffectedVehiclesCard affectedModels={problem.affectedModels} mobile />
@@ -652,6 +689,15 @@ export default function CommonProblemsSection({ data, bgImage, documentMode = fa
                 </div>
               </div>
 
+              {current.image?.trim() || bgImage?.trim() ? (
+                <div className="mt-4">
+                  <ProblemVisual
+                    src={current.image?.trim() || bgImage?.trim() || ""}
+                    alt={currentDetail?.title ?? current.group}
+                  />
+                </div>
+              ) : null}
+
               <div className="mt-4 grid gap-3 md:grid-cols-3">
                 <AffectedVehiclesCard affectedModels={current.affectedModels} />
 
@@ -817,6 +863,7 @@ export default function CommonProblemsSection({ data, bgImage, documentMode = fa
               index={index}
               open={openMobile === index}
               onToggle={() => setOpenMobile((currentIndex) => (currentIndex === index ? -1 : index))}
+              fallbackImage={bgImage}
             />
           ))}
 

@@ -250,6 +250,16 @@ function ArrowIcon({ className = "w-[14px] h-[14px]" }: { className?: string }) 
   return <FaArrowRight className={className} />;
 }
 
+function QuoteDocIcon({ className = "w-[16px] h-[16px]" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} fill="none" aria-hidden="true">
+      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M14 2v6h6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M8 13h8M8 17h5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+    </svg>
+  );
+}
+
 type Selection = {
   familyIndex: number;
   engineIndex: number;
@@ -332,7 +342,7 @@ export default function ModelEngineCodesSection({ data, guide, modelName, strict
       {renderableGroups.length > 1 && (
         <Container className={sectionContainerClass}>
           <div className={tabShellClass}>
-            <div className="overflow-hidden rounded-[6px] border border-[#d9e1ea] bg-white shadow-[0_4px_12px_rgba(13,27,46,0.05)]">
+            <div className="overflow-hidden rounded-[6px] border border-[#d9e1ea] bg-white shadow-[0_4px_12px_rgba(13,27,46,0.05)] max-[720px]:rounded-none max-[720px]:border-x-0">
               <div className="flex items-stretch divide-x divide-[#d9e1ea]">
                 {renderableGroups.map((entry, index) => {
                   const isActive = index === safeActiveIndex;
@@ -419,16 +429,16 @@ export default function ModelEngineCodesSection({ data, guide, modelName, strict
                           className={`min-w-0 ${selected ? "col-span-full" : ""}`}
                         >
                           <button
-                            className={`w-full border border-[#dfe7ef] rounded-[20px] bg-white shadow-[0_12px_30px_rgba(12,29,53,0.06)] grid items-center gap-[10px] text-left text-inherit cursor-pointer transition-all duration-200 hover:bg-[#fbfdff] max-[720px]:rounded-none ${selected
-                              ? "grid-cols-[minmax(0,1fr)_16px] min-h-[60px] py-[10px] px-[14px] rounded-t-[20px] rounded-b-none border-[#b8cadb] shadow-[0_10px_22px_rgba(16,39,68,0.08)] bg-[linear-gradient(180deg,#ffffff_0%,#fbfdff_100%)] max-[720px]:min-h-[60px] max-[720px]:py-[10px] max-[720px]:px-[14px] max-[720px]:rounded-none"
-                              : "grid-cols-[54px_minmax(0,1fr)_minmax(122px,150px)_16px] min-h-[76px] py-[14px] px-[16px] max-[720px]:grid-cols-[44px_minmax(0,1fr)_minmax(104px,122px)_14px] max-[720px]:gap-[8px] max-[720px]:p-[12px] max-[720px]:min-h-[70px]"
+                            className={`w-full border border-[#dfe7ef] rounded-[20px] bg-white shadow-[0_12px_30px_rgba(12,29,53,0.06)] grid items-center gap-[10px] text-left text-inherit cursor-pointer transition-all duration-200 hover:bg-[#fbfdff] ${selected
+                              ? "grid-cols-[minmax(0,1fr)_16px] min-h-[60px] py-[10px] px-[14px] rounded-t-[20px] rounded-b-none border-[#b8cadb] shadow-[0_10px_22px_rgba(16,39,68,0.08)] bg-[linear-gradient(180deg,#ffffff_0%,#fbfdff_100%)] max-[720px]:min-h-[62px] max-[720px]:py-[12px] max-[720px]:px-[16px] max-[720px]:rounded-t-[18px]"
+                              : "grid-cols-[54px_minmax(0,1fr)_minmax(122px,150px)_16px] min-h-[76px] py-[14px] px-[16px] max-[720px]:grid-cols-[44px_minmax(0,1fr)_minmax(104px,122px)_14px] max-[720px]:gap-[8px] max-[720px]:min-h-[72px] max-[720px]:rounded-[18px] max-[720px]:px-[12px] max-[720px]:py-[12px]"
                               }`}
                             type="button"
                             aria-expanded={selected}
                             onClick={() => toggleSelection(safeActiveIndex, originalIndex)}
                           >
                             {!selected && (
-                              <span className="w-[48px] h-[48px] rounded-[14px] border border-[#d7e2ec] bg-[linear-gradient(180deg,#eef3f9_0%,#dfe8f2_100%)] text-[#334155] grid place-items-center max-[720px]:w-[40px] max-[720px]:h-[40px] max-[720px]:rounded-none">
+                              <span className="w-[48px] h-[48px] rounded-[14px] border border-[#d7e2ec] bg-[linear-gradient(180deg,#eef3f9_0%,#dfe8f2_100%)] text-[#334155] grid place-items-center max-[720px]:w-[40px] max-[720px]:h-[40px] max-[720px]:rounded-[12px]">
                                 <EngineIcon className="w-[22px] h-[22px] max-[720px]:w-[19px] max-[720px]:h-[19px]" />
                               </span>
                             )}
@@ -485,11 +495,11 @@ export default function ModelEngineCodesSection({ data, guide, modelName, strict
 
                               return (
                                 <div>
-                                  <div className="grid grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] gap-x-[12px] bg-[linear-gradient(135deg,#081a34_0%,#0d2848_100%)] rounded-b-[18px] shadow-[0_18px_30px_rgba(11,31,57,0.26)] overflow-hidden pt-0 px-[12px] pb-[2px] max-[920px]:grid-cols-1 max-[720px]:rounded-none max-[720px]:px-[10px] max-[720px]:pb-[2px]">
-                                    <div className="grid grid-cols-[150px_minmax(0,1fr)] text-white overflow-hidden max-[920px]:grid-cols-[132px_minmax(0,1fr)] max-[720px]:grid-cols-[120px_minmax(0,1fr)]">
+                                  <div className="grid grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] gap-x-[12px] overflow-hidden rounded-b-[18px] bg-[linear-gradient(135deg,#081a34_0%,#0d2848_100%)] px-[12px] pb-[10px] pt-0 shadow-[0_18px_30px_rgba(11,31,57,0.26)] max-[920px]:grid-cols-1 max-[720px]:rounded-b-[18px] max-[720px]:px-[12px] max-[720px]:pb-[12px]">
+                                    <div className="grid grid-cols-[150px_minmax(0,1fr)] text-white overflow-hidden max-[920px]:grid-cols-[132px_minmax(0,1fr)] max-[720px]:grid-cols-[110px_minmax(0,1fr)]">
 
                                       {/* Image Column - Tighter padding */}
-                                      <div className="p-[4px] flex items-center">
+                                      <div className="flex items-center p-[4px] max-[720px]:pt-[8px]">
                                         <div className="w-full max-h-[150px] rounded-[16px] grid place-items-center text-center">
                                           <div className="engine-image relative w-full aspect-square max-h-[150px]">
                                             {detailImage ? (
@@ -506,13 +516,13 @@ export default function ModelEngineCodesSection({ data, guide, modelName, strict
                                       </div>
 
                                       {/* Text Column - Tighter padding and gap */}
-                                      <div className="grid gap-[3px] py-[4px] px-[16px] pt-[4px] pl-[12px] max-[720px]:gap-[8px] max-[720px]:px-[10px] max-[720px]:pt-[6px] max-[720px]:pb-[4px]">
+                                      <div className="grid gap-[3px] py-[4px] px-[16px] pt-[4px] pl-[12px] max-[720px]:gap-[8px] max-[720px]:px-[8px] max-[720px]:pt-[8px] max-[720px]:pb-[4px] max-[720px]:pl-[12px]">
                                         <div className="grid grid-cols-[minmax(0,1fr)_180px] gap-[8px] items-start max-[920px]:grid-cols-[minmax(0,1fr)_188px] max-[720px]:grid-cols-1">
                                           <div>
                                             {/* Reduced margins */}
-                                            <div className="mb-[2px] text-white text-[15px] font-extrabold leading-[1.25] tracking-[-0.02em]">{engineHeading}</div>
-                                            {ui.historyLabel && <span className="block mb-[1px] text-white text-[13px] font-extrabold leading-[1.2] max-[720px]:mb-[6px] max-[720px]:pt-[6px]">{ui.historyLabel}</span>}
-                                            {historyText && <p className="text-[#e1ebf5] text-[11px] leading-[1.4] max-[720px]:leading-[1.5]">{historyText}</p>}
+                                            <div className="mb-[2px] text-white text-[15px] font-extrabold leading-[1.25] tracking-[-0.02em] max-[720px]:text-[14px]">{engineHeading}</div>
+                                            {ui.historyLabel && <span className="block mb-[1px] text-white text-[13px] font-extrabold leading-[1.2] max-[720px]:mb-[4px] max-[720px]:pt-[2px] max-[720px]:text-[12px]">{ui.historyLabel}</span>}
+                                            {historyText && <p className="text-[#e1ebf5] text-[11px] leading-[1.4] max-[720px]:text-[10.5px] max-[720px]:leading-[1.55]">{historyText}</p>}
                                           </div>
 
                                           {/* Price & Quote Column */}
@@ -574,7 +584,7 @@ export default function ModelEngineCodesSection({ data, guide, modelName, strict
                                           {ui.variantsLabel && <small className="block text-[#bfd0e1] text-[9px] font-extrabold tracking-[0.12em] uppercase">{ui.variantsLabel}</small>}
                                           <div className="flex flex-wrap gap-[6px]">
                                             {buildVariants(activeEngine, detail).map((variant) => (
-                                              <span key={variant} className="inline-flex items-center justify-center min-h-[20px] px-[8px] rounded-[4px] bg-[linear-gradient(180deg,#1a3a66_0%,#0f2a4e_100%)] text-white text-[8px] font-bold leading-[1] shadow-[0_0_0_1px_rgba(42,109,214,1),0_0_10px_rgba(42,109,214,0.8),0_0_25px_rgba(42,109,214,0.6),0_0_50px_rgba(42,109,214,0.4),0_8px_20px_rgba(42,109,214,0.5)] max-[720px]:rounded-none">{variant}</span>
+                                              <span key={variant} className="inline-flex items-center justify-center min-h-[20px] px-[8px] rounded-[4px] bg-[linear-gradient(180deg,#1a3a66_0%,#0f2a4e_100%)] text-white text-[8px] font-bold leading-[1] shadow-[0_0_0_1px_rgba(42,109,214,1),0_0_10px_rgba(42,109,214,0.8),0_0_25px_rgba(42,109,214,0.6),0_0_50px_rgba(42,109,214,0.4),0_8px_20px_rgba(42,109,214,0.5)]">{variant}</span>
                                             ))}
                                           </div>
                                         </div>
@@ -586,14 +596,14 @@ export default function ModelEngineCodesSection({ data, guide, modelName, strict
                                       {ui.variantsLabel && <small className="block text-[#bfd0e1] text-[9px] font-extrabold tracking-[0.12em] uppercase max-[720px]:mb-[2px]">{ui.variantsLabel}</small>}
                                       <div className="flex flex-wrap gap-[6px]">
                                         {buildVariants(activeEngine, detail).map((variant) => (
-                                          <span key={variant} className="inline-flex items-center justify-center min-h-[22px] px-[8px] rounded-[3px] bg-[linear-gradient(180deg,#1a3a66_0%,#0f2a4e_100%)] text-white text-[8px] font-bold leading-[1] shadow-[0_0_0_1px_rgba(42,109,214,1),0_0_10px_rgba(42,109,214,0.8),0_0_25px_rgba(42,109,214,0.6),0_0_50px_rgba(42,109,214,0.4),0_8px_20px_rgba(42,109,214,0.5)] rounded-none">{variant}</span>
+                                          <span key={variant} className="inline-flex min-h-[26px] items-center justify-center rounded-[8px] border border-[#2d6bff] bg-[#0f2a4e] px-[10px] text-[9px] font-bold leading-[1] text-white shadow-[0_0_0_1px_rgba(45,107,255,0.28),0_0_10px_rgba(45,107,255,0.18)]">{variant}</span>
                                         ))}
                                       </div>
                                     </div>
 
                                     {/* Specs & Failures Columns - Tighter top padding */}
                                     <div className="grid grid-cols-2 gap-[8px] pt-[4px] max-[720px]:pt-[8px]">
-                                      <section className="border border-[#dfe7ef] rounded-[4px] bg-white py-[4px] px-[9px] pb-[4px] max-[720px]:rounded-none">
+                                      <section className="border border-[#dfe7ef] rounded-[12px] bg-white py-[4px] px-[9px] pb-[4px]">
                                         {ui.specsTitle && (
                                           <h4 className="mb-[3px] flex items-center gap-[8px] text-[12px] tracking-[-0.02em] text-[#10203a] max-[720px]:mb-[6px]">
                                             <span className="w-[24px] h-[24px] rounded-[10px] grid place-items-center flex-shrink-0 bg-[#eef5fb] text-[#274564] max-[720px]:hidden">
@@ -630,7 +640,7 @@ export default function ModelEngineCodesSection({ data, guide, modelName, strict
                                         </ul>
                                       </section>
 
-                                      <section className="border border-[#dfe7ef] rounded-[4px] bg-white py-[4px] px-[9px] pb-[4px] max-[720px]:rounded-none">
+                                      <section className="border border-[#dfe7ef] rounded-[12px] bg-white py-[4px] px-[9px] pb-[4px]">
                                         {ui.failuresTitle && (
                                           <h4 className="mb-[3px] flex items-center gap-[8px] text-[12px] tracking-[-0.02em] text-[#10203a] max-[720px]:mb-[6px]">
                                             <span className="w-[24px] h-[24px] rounded-[10px] grid place-items-center flex-shrink-0 bg-[#fff2f2] text-[#c73a3a] max-[720px]:hidden">
@@ -650,7 +660,7 @@ export default function ModelEngineCodesSection({ data, guide, modelName, strict
                                     {/* Mobile Bottom Section */}
                                     <div className="hidden max-[720px]:grid gap-[4px] py-[2px] pt-[12px] pb-[2px]">
                                       {/* Price Box */}
-                                      <div className="relative overflow-hidden rounded-xl border border-green-400 bg-[#0d1526]/50 backdrop-blur-xl shadow-[0_0_15px_rgba(74,222,128,0.5),inset_0_0_12px_rgba(74,222,128,0.3)] max-[720px]:rounded-none">
+                                      <div className="relative overflow-hidden rounded-xl border border-green-400 bg-[#0d1526]/50 backdrop-blur-xl shadow-[0_0_15px_rgba(74,222,128,0.5),inset_0_0_12px_rgba(74,222,128,0.3)]">
                                         <div
                                           className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-white/20 pointer-events-none"
                                           style={{ clipPath: 'polygon(60% 0, 100% 0, 100% 100%, 40% 100%)' }}
@@ -677,7 +687,7 @@ export default function ModelEngineCodesSection({ data, guide, modelName, strict
                                       {/* Quote CTA */}
                                       {quoteText && (
                                         <a
-  className="group flex w-full items-center gap-[8px] bg-transparent py-[2px] px-0 shadow-none transition-opacity hover:opacity-85"
+  className="group flex w-full items-center gap-3 rounded-[14px] border border-[#2d6bff] bg-[#071322] px-3 py-3 text-left shadow-[0_0_0_1px_rgba(45,107,255,0.32),0_0_16px_rgba(45,107,255,0.18)] transition hover:shadow-[0_0_0_1px_rgba(45,107,255,0.5),0_0_22px_rgba(45,107,255,0.28)]"
   href="#quote-form"
   data-quote-engine-code={repairEngineCodeValue(detail?.code || activeEngine.code)}
   data-quote-context={activeEngine.compatibleModels}

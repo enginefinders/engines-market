@@ -104,13 +104,18 @@ export default function DocumentModelPage({
       />
 
       {visualData.sections.commonProblems ? (
-        <CommonProblemsSection data={visualData.sections.commonProblems} />
+        <CommonProblemsSection
+          data={visualData.sections.commonProblems}
+          bgImage={resolvedModelImage}
+          documentMode
+        />
       ) : null}
 
       <EngineTypesSection
         data={visualData.sections.engineTypes}
         dynamicBrandCta
         displayMode="document"
+        documentMode
         sectionId="model-engine-types"
       />
 
