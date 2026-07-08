@@ -343,6 +343,7 @@ function FuelPanel({
 export default function FuelTypesSection({ data, bgImage, strictData = false, documentMode = false }: Props) {
   const items = data.items ?? [];
   const [activeItemIndex, setActiveItemIndex] = useState(0);
+  const mobileTabRailClass = "mt-6 max-[720px]:mx-[-16px]";
 
   const activeItem = items[activeItemIndex] ?? items[0] ?? null;
   const headingLines = data.headingLines?.length ? data.headingLines : [data.h2];
@@ -383,7 +384,7 @@ export default function FuelTypesSection({ data, bgImage, strictData = false, do
             </div>
 
             {items.length > 1 && (
-              <div className="mt-6">
+              <div className={mobileTabRailClass}>
                 <div className="overflow-hidden rounded-[6px] border border-[#d9e1ea] bg-white shadow-[0_4px_12px_rgba(13,27,46,0.05)] max-[720px]:rounded-none max-[720px]:border-x-0">
                   <div className="flex items-stretch divide-x divide-[#d9e1ea]">
                   {items.map((item, index) => {

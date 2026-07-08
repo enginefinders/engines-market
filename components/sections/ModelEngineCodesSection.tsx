@@ -286,8 +286,8 @@ export default function ModelEngineCodesSection({ data, guide, modelName, strict
     ? "py-[42px] px-0 pb-[64px] md:py-[42px] md:px-0 md:pb-[64px] max-[720px]:px-0 max-[720px]:pb-[10px] max-[720px]:pt-[20px]"
     : "py-[42px] px-[18px] pb-[64px] md:py-[42px] md:px-[18px] md:pb-[64px] max-[720px]:px-[12px] max-[720px]:pb-[10px] max-[720px]:pt-[20px]";
   const tabShellClass = documentMode
-    ? "max-w-[1240px] mx-auto px-0 max-[720px]:px-0"
-    : "max-w-[1240px] mx-auto px-[18px] max-[720px]:px-0";
+    ? "max-w-[1240px] mx-auto px-0 max-[720px]:mx-[-16px] max-[720px]:px-0"
+    : "max-w-[1240px] mx-auto px-[18px] max-[720px]:mx-[-16px] max-[720px]:px-0";
   const contentShellClass = documentMode
     ? "py-[42px] px-0 pb-[64px] max-[720px]:px-0 max-[720px]:pt-[10px] max-[720px]:pb-[50px]"
     : "py-[42px] px-[18px] pb-[64px] max-[720px]:px-[12px] max-[720px]:pt-[10px] max-[720px]:pb-[50px]";
