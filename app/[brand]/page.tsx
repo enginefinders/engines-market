@@ -19,6 +19,7 @@ import { getBrandPageData, getBrandSlugs } from "@/lib/brandData";
 import { resolveBrandPageVisuals } from "@/lib/engineImageSelection";
 import { resolveModelImagePaths } from "@/lib/modelImageAssets";
 import { getBrandModelCards } from "@/lib/modelPageData";
+import { SITE_URL } from "@/lib/site";
 import { buildBrandStructuredData } from "@/lib/structuredData";
 import { buildStaticReviewsSection } from "@/lib/staticReviews";
 import type { BrandPageData } from "@/types/brand";
@@ -53,6 +54,18 @@ export async function generateMetadata({
     description: pageData.seo.description,
     alternates: {
       canonical: pageData.seo.canonical,
+    },
+    metadataBase: new URL(SITE_URL),
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+        "max-video-preview": -1,
+      },
     },
   };
 }

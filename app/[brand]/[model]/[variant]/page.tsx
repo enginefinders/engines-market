@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import DocumentVariantPage from "@/components/pages/DocumentVariantPage";
 import { getVariantPageData, getVariantPageStaticParams } from "@/lib/variantPageData";
-import { INDEX_VARIANT_PAGES } from "@/lib/site";
+import { SITE_URL } from "@/lib/site";
 import { notFound, permanentRedirect } from "next/navigation";
 
 type VariantPageProps = {
@@ -30,18 +30,18 @@ export async function generateMetadata({ params }: VariantPageProps): Promise<Me
     alternates: {
       canonical: pageData.seo.canonical,
     },
-    robots: INDEX_VARIANT_PAGES
-      ? undefined
-      : {
-          index: false,
-          follow: true,
-          nocache: true,
-          googleBot: {
-            index: false,
-            follow: true,
-            noimageindex: true,
-          },
-        },
+    metadataBase: new URL(SITE_URL),
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+        "max-video-preview": -1,
+      },
+    },
   };
 }
 

@@ -3,9 +3,6 @@ import path from "node:path";
 
 const ROOT = process.cwd();
 const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://enginesmarket.co.uk").trim().replace(/\/+$/, "");
-const INDEX_MODEL_PAGES = process.env.INDEX_MODEL_PAGES == null ? true : process.env.INDEX_MODEL_PAGES === "true";
-const INDEX_VARIANT_PAGES =
-  process.env.INDEX_VARIANT_PAGES == null ? true : process.env.INDEX_VARIANT_PAGES === "true";
 const PUBLIC_DIR = path.join(ROOT, "public");
 const STATIC_APP_ROUTES = [
   "/blog",
@@ -276,33 +273,29 @@ async function main() {
     addEntry(`/${brandSlug}`, 0.8);
   }
 
-  if (INDEX_MODEL_PAGES) {
-    const seenModels = new Set();
-    for (const page of modelPages) {
-      const brandSlug = normalizeSlugPart(page.brand.slug);
-      const modelSlug = getCanonicalModelSlug(page.brand.slug, page.model.slug);
-      const key = `${brandSlug}::${modelSlug}`;
-      if (!brandSlug || !modelSlug || seenModels.has(key)) {
-        continue;
-      }
-      seenModels.add(key);
-      addEntry(`/${brandSlug}/${modelSlug}`, 0.7);
+  const seenModels = new Set();
+  for (const page of modelPages) {
+    const brandSlug = normalizeSlugPart(page.brand.slug);
+    const modelSlug = getCanonicalModelSlug(page.brand.slug, page.model.slug);
+    const key = `${brandSlug}::${modelSlug}`;
+    if (!brandSlug || !modelSlug || seenModels.has(key)) {
+      continue;
     }
+    seenModels.add(key);
+    addEntry(`/${brandSlug}/${modelSlug}`, 0.7);
   }
 
-  if (INDEX_VARIANT_PAGES) {
-    const seenVariants = new Set();
-    for (const page of variantPages) {
-      const brandSlug = normalizeSlugPart(page.brand.slug);
-      const modelSlug = normalizeSlugPart(page.model.slug);
-      const variantSlug = normalizeSlugPart(page.variant.slug);
-      const key = `${brandSlug}::${modelSlug}::${variantSlug}`;
-      if (!brandSlug || !modelSlug || !variantSlug || seenVariants.has(key)) {
-        continue;
-      }
-      seenVariants.add(key);
-      addEntry(`/${brandSlug}/${modelSlug}/${variantSlug}`, 0.6);
+  const seenVariants = new Set();
+  for (const page of variantPages) {
+    const brandSlug = normalizeSlugPart(page.brand.slug);
+    const modelSlug = normalizeSlugPart(page.model.slug);
+    const variantSlug = normalizeSlugPart(page.variant.slug);
+    const key = `${brandSlug}::${modelSlug}::${variantSlug}`;
+    if (!brandSlug || !modelSlug || !variantSlug || seenVariants.has(key)) {
+      continue;
     }
+    seenVariants.add(key);
+    addEntry(`/${brandSlug}/${modelSlug}/${variantSlug}`, 0.6);
   }
 
   const entries = [...entryMap.values()];

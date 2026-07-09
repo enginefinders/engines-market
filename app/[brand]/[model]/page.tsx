@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import DocumentModelPage from "@/components/pages/DocumentModelPage";
 import { getModelPageData, getModelPageStaticParams } from "@/lib/modelPageData";
-import { INDEX_MODEL_PAGES } from "@/lib/site";
+import { SITE_URL } from "@/lib/site";
 import { notFound, permanentRedirect } from "next/navigation";
 
 type ModelPageProps = {
@@ -31,18 +31,18 @@ export async function generateMetadata({
     alternates: {
       canonical: pageData.seo.canonical,
     },
-    robots: INDEX_MODEL_PAGES
-      ? undefined
-      : {
-          index: false,
-          follow: true,
-          nocache: true,
-          googleBot: {
-            index: false,
-            follow: true,
-            noimageindex: true,
-          },
-        },
+    metadataBase: new URL(SITE_URL),
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+        "max-video-preview": -1,
+      },
+    },
   };
 }
 
