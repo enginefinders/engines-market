@@ -14,6 +14,7 @@ type Props = {
   imageSrc?: string;
   displayMode?: "brand" | "document";
   initialTimestamp?: string;
+  mobileHeadingOverride?: string;
 };
 
 type FeedRow = LiveMarketPriceEntry & {
@@ -134,6 +135,7 @@ export default function LiveMarketPricesSection({
   imageSrc,
   displayMode = "brand",
   initialTimestamp,
+  mobileHeadingOverride,
 }: Props) {
   const [clock, setClock] = useState(() => new Date(initialTimestamp ?? "2025-01-01T12:00:00.000Z"));
   const [activeTab, setActiveTab] = useState("all");
@@ -187,23 +189,57 @@ export default function LiveMarketPricesSection({
           </div>
 
           <div className="mt-4 flex flex-col">
-            <h2 className="font-['Manrope'] text-[28px] font-bold leading-[1.12] text-[#0d1b2e] sm:text-[30px] lg:text-[32px]">
-  {headingLines.map((line, index) => {
-    const parts = line.split(/(Engine Replacement)/);
+            {mobileHeadingOverride ? (
+              <>
+                <h2 className="font-['Manrope'] text-[28px] font-bold leading-[1.08] text-[#0d1b2e] sm:hidden">
+                  {mobileHeadingOverride.split(/(Engine Replacement)/).map((part, index) =>
+                    part === "Engine Replacement" ? (
+                      <span key={index} className="text-[#15803d]">
+                        {part}
+                      </span>
+                    ) : (
+                      <span key={index}>{part}</span>
+                    ),
+                  )}
+                </h2>
 
-    return (
-      <span key={`${line}-${index}`} className="block">
-        {parts.map((part, i) =>
-          part === "Engine Replacement" ? (
-            <span key={i} className="text-[#15803d]">{part}</span>
-          ) : (
-            <span key={i}>{part}</span>
-          )
-        )}
-      </span>
-    );
-  })}
-</h2>
+                <h2 className="hidden font-['Manrope'] text-[28px] font-bold leading-[1.12] text-[#0d1b2e] sm:block sm:text-[30px] lg:text-[32px]">
+                  {headingLines.map((line, index) => {
+                    const parts = line.split(/(Engine Replacement)/);
+
+                    return (
+                      <span key={`${line}-${index}`} className="block">
+                        {parts.map((part, i) =>
+                          part === "Engine Replacement" ? (
+                            <span key={i} className="text-[#15803d]">{part}</span>
+                          ) : (
+                            <span key={i}>{part}</span>
+                          )
+                        )}
+                      </span>
+                    );
+                  })}
+                </h2>
+              </>
+            ) : (
+              <h2 className="font-['Manrope'] text-[28px] font-bold leading-[1.12] text-[#0d1b2e] sm:text-[30px] lg:text-[32px]">
+                {headingLines.map((line, index) => {
+                  const parts = line.split(/(Engine Replacement)/);
+
+                  return (
+                    <span key={`${line}-${index}`} className="block">
+                      {parts.map((part, i) =>
+                        part === "Engine Replacement" ? (
+                          <span key={i} className="text-[#15803d]">{part}</span>
+                        ) : (
+                          <span key={i}>{part}</span>
+                        )
+                      )}
+                    </span>
+                  );
+                })}
+              </h2>
+            )}
           </div>
         </div>
 
@@ -357,16 +393,17 @@ export default function LiveMarketPricesSection({
 
         {/* ✅ Mobile Image — now BELOW the table, only visible on phones */}
         <div
-          className={`relative mt-6 w-full overflow-hidden rounded-2xl bg-white lg:hidden ${
-            hasMobileImage ? "aspect-[4/7]" : "hidden"
+          className={`mt-6 w-full lg:hidden ${
+            hasMobileImage ? "block" : "hidden"
           }`}
         >
           {sectionImage ? (
             <Image
               src={sectionImage}
               alt={data.imageAlt ?? "Market data visualization"}
-              fill
-              className="object-contain"
+              width={400}
+              height={700}
+              className="h-auto w-full rounded-[4px]"
               sizes="100vw"
               priority
             />

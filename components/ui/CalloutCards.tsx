@@ -200,16 +200,18 @@ export function RecommendationCard({
   return (
     <div className="rounded-[14px] border border-[#2D6BFF] bg-white px-4 py-4 shadow-[0_0_0_1px_rgba(45,107,255,0.18),0_0_16px_rgba(45,107,255,0.14),0_10px_24px_rgba(13,27,46,0.06)]">
       <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
-        <div className="flex items-start gap-3">
-          <div className="flex h-11 w-11 flex-none items-center justify-center rounded-full bg-[#eef4ff] text-[#2D6BFF]">
-            <ShieldIcon />
+        <div className="min-w-0 flex-1">
+          <div className="flex items-start gap-3">
+            <div className="flex h-11 w-11 flex-none items-center justify-center rounded-full bg-[#eef4ff] text-[#2D6BFF]">
+              <ShieldIcon />
+            </div>
+            <div className="min-w-0">
+              <div className="text-[10px] font-extrabold uppercase tracking-[0.12em] text-[#2D6BFF]">{label}</div>
+              {title ? <div className="mt-1 text-[13px] font-extrabold leading-[1.35] text-[#0d1b2e]">{title}</div> : null}
+            </div>
           </div>
-          <div className="min-w-0">
-            <div className="text-[10px] font-extrabold uppercase tracking-[0.12em] text-[#2D6BFF]">{label}</div>
-            {title ? <div className="mt-1 text-[13px] font-extrabold leading-[1.35] text-[#0d1b2e]">{title}</div> : null}
-            <p className="mt-1 text-[12px] leading-[1.65] text-[#475569]">{body}</p>
-            <ChipRow chips={chips} tone="recommendation" />
-          </div>
+          <p className="mt-2 text-[12px] leading-[1.65] text-[#475569]">{body}</p>
+          <ChipRow chips={chips} tone="recommendation" />
         </div>
 
         {ctaText ? (

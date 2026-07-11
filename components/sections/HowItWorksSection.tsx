@@ -166,7 +166,7 @@ export default function HowItWorksSection({ data, bgImage, sectionId }: Props) {
             const isRegistrationCard = card.number === 1;
 
             return (
-              <div key={card.number} className="perspective-1000 min-h-[218px] sm:min-h-[232px] xl:min-h-[248px]">
+              <div key={card.number} className="perspective-1000 min-h-[258px] sm:min-h-[276px] xl:min-h-[296px]">
                 <button
                   type="button"
                   onClick={() => setActiveStep(flipped ? null : card.number)}
@@ -175,10 +175,10 @@ export default function HowItWorksSection({ data, bgImage, sectionId }: Props) {
                   aria-label={`${flipped ? "Hide details for" : "Show details for"} step ${card.number}`}
                 >
                   <div
-                    className={`relative h-full min-h-[218px] rounded-[18px] transition duration-500 [transform-style:preserve-3d] lg:min-h-[232px] xl:min-h-[248px] ${flipped ? "[transform:rotateY(180deg)]" : ""
+                    className={`relative h-full min-h-[258px] rounded-[18px] transition duration-500 [transform-style:preserve-3d] lg:min-h-[276px] xl:min-h-[296px] ${flipped ? "[transform:rotateY(180deg)]" : ""
                       }`}
                   >
-                    <div className="absolute inset-0 flex h-full flex-col overflow-hidden rounded-[18px] border border-[#dbe4ef] bg-white px-4 pb-4 pt-4 shadow-[0_18px_40px_rgba(13,27,46,0.08)] [backface-visibility:hidden] text-center sm:px-5 sm:pb-5 sm:pt-5">
+                    <div className="absolute inset-0 flex h-full flex-col overflow-hidden rounded-[18px] border border-[#dbe4ef] bg-white px-3 pb-4 pt-4 shadow-[0_18px_40px_rgba(13,27,46,0.08)] [backface-visibility:hidden] text-center sm:px-4 sm:pb-5 sm:pt-5">
                       <span className="mt-0 hidden font-['Manrope'] text-left text-2xl font-extrabold uppercase tracking-[0.18em] text-gray-400 md:block">
                         0{card.number}
                       </span>
@@ -195,11 +195,11 @@ export default function HowItWorksSection({ data, bgImage, sectionId }: Props) {
                         />
                       </div>
 
-                      <h3 className="mt-3 font-['Manrope'] text-[16px] font-bold leading-[1.15] text-[#0d1b2e] md:text-[20px]">
+                      <h3 className="mt-3 font-['Manrope'] text-[16px] font-bold leading-[1.2] text-[#0d1b2e] md:text-[18px] xl:text-[20px]">
                         {card.front.h3}
                       </h3>
 
-                      <p className="mx-auto mt-3 w-full max-w-[280px] text-[13px] leading-[1.65] text-[#5a6478]">
+                      <p className="mx-auto mt-3 w-full max-w-[320px] text-[13.5px] leading-[1.6] text-[#5a6478] md:text-[14px] md:leading-[1.65]">
                         {card.front.text}
                       </p>
 

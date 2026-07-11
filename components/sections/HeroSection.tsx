@@ -20,6 +20,8 @@ type HeroSectionProps = {
   modelCards?: HeroModelCard[];
   brandSlug?: string;
   strictData?: boolean;
+  tagOverride?: string;
+  disclaimerMode?: "accordion" | "icon";
 };
 
 function ToolIcon({ className }: { className?: string }) {
@@ -72,20 +74,6 @@ function LockIcon() {
     <svg viewBox="0 0 24 24" className="h-[13px] w-[13px]" fill="none" aria-hidden="true">
       <rect x="3" y="11" width="18" height="11" rx="2" ry="2" stroke="currentColor" strokeWidth="2" />
       <path d="M7 11V7a5 5 0 0 1 10 0v4" stroke="currentColor" strokeWidth="2" />
-    </svg>
-  );
-}
-
-function PhoneIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-3 w-3" fill="none" aria-hidden="true">
-      <path
-        d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.37 19a19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-2.93-8.38A2 2 0 0 1 4.11 2.5h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
     </svg>
   );
 }
@@ -262,9 +250,6 @@ function BottomBarIcon({ type }: { type: string }) {
 
 const badgeIcons = [ToolIcon, ShieldIcon, DeliveryIcon, UsersIcon];
 const carIcons = [CarIconOne, CarIconTwo, CarIconThree];
-const PHONE_NUMBER_DISPLAY = "020 3488 4649";
-const PHONE_NUMBER_HREF = "tel:02034884649";
-
 const bottomBarItems = [
   { icon: "lightning", text: "Instant engine replacement quote - 100% free, no obligation" },
   { icon: "location", text: "Engine replacement near me - UK-wide specialist network" },
@@ -410,6 +395,26 @@ function splitHighlightLineOne(text: string) {
   };
 }
 
+function splitCommonCodesText(text: string) {
+  const match = text.match(/^(.*?Common codes:\s*)(.+)$/i);
+
+  if (!match) {
+    return null;
+  }
+
+  return {
+    prefix: match[1],
+    codes: match[2],
+  };
+}
+
+function buildDisclaimerLines(note: string) {
+  const normalized = note.replace(/\s+/g, " ").trim();
+  const sentences = normalized.match(/[^.!?]+[.!?]?/g)?.map((sentence) => sentence.trim()).filter(Boolean) ?? [];
+
+  return (sentences.length ? sentences : [normalized]).slice(0, 3);
+}
+
 function resolveHeadingLines(data: HeroSectionData) {
   if (data.headingLines?.length) {
     return data.headingLines.filter((line) => line.trim());
@@ -472,6 +477,8 @@ export default function HeroSection({
   modelCards = [],
   brandSlug,
   strictData = false,
+  tagOverride,
+  disclaimerMode = "accordion",
 }: HeroSectionProps) {
   const [registration, setRegistration] = useState("");
   const [showHeroImage, setShowHeroImage] = useState(Boolean(bgImage));
@@ -479,10 +486,10 @@ export default function HeroSection({
   const headingLines = resolveHeadingLines(data);
   const brandName = inferBrandName(data);
   const displayModels = resolveHeroCards(data, modelCards, bgImage);
-  const mobileBar = data.mobileBar ?? {};
   const registrationInput = data.registrationInput ?? {};
   const disclaimer = data.disclaimer;
   const hasDisclaimer = Boolean(disclaimer?.note?.trim());
+  const disclaimerLines = disclaimer?.note?.trim() ? buildDisclaimerLines(disclaimer.note) : [];
 
   const bottomTickerLoop = useMemo(() => [...bottomBarItems, ...bottomBarItems], []);
 
@@ -501,33 +508,11 @@ export default function HeroSection({
 
   return (
     <section className="overflow-x-hidden bg-[#f8f9fa]">
-      <div className="bg-[#0d1b2e] text-white lg:hidden">
-        <div className="flex items-center justify-end gap-2 px-4 py-3">
-          <div className="flex items-center gap-2">
-            <a
-              href={PHONE_NUMBER_HREF}
-              className="inline-flex items-center gap-1.5 rounded-md border border-white/20 bg-white/10 px-2.5 py-[7px] text-[10px] font-semibold tracking-[0.01em] text-white sm:px-3 sm:text-[11.5px]"
-              aria-label={`Call ${PHONE_NUMBER_DISPLAY}`}
-            >
-              <PhoneIcon />
-              <span>{PHONE_NUMBER_DISPLAY}</span>
-            </a>
-            <a
-              href="#quote-form"
-              data-quote-source="hero-mobile"
-              className="rounded-md bg-[#15803d] px-3 py-[7px] font-['Manrope'] text-[11px] font-bold text-white sm:text-[11.5px]"
-            >
-              {strictData ? mobileBar.quoteLabel : (mobileBar.quoteLabel ?? "GET QUOTES")}
-            </a>
-          </div>
-        </div>
-      </div>
-
       <div className="mx-auto grid max-w-[1400px] min-w-0 items-center px-3 py-5 sm:gap-8 sm:px-6 md:px-8 md:py-8 lg:grid-cols-[55fr_45fr] lg:gap-7 lg:px-8 lg:py-[52px]">
         {/* LEFT COLUMN */}
         <div className="flex min-w-0 flex-col lg:pr-8 xl:pr-10">
           <span className="mb-[14px] inline-flex w-fit items-center rounded-[20px] bg-[#0d1b2e] px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.08em] text-white md:mb-[18px] md:px-[14px] md:py-[6px] md:text-[10.5px]">
-            {data.tag}
+            {tagOverride ?? data.tag}
           </span>
 
           <h1 className="max-w-none min-w-0 font-['Manrope'] font-extrabold tracking-[-0.03em] text-[#152b4a]">
@@ -582,6 +567,8 @@ export default function HeroSection({
                     : !strictData && buildHeroLineTwo(model)
                       ? buildHeroLineTwo(model)
                       : "";
+                const commonCodesParts = splitCommonCodesText(commonCodesLine);
+                const desktopDetailCommonCodesParts = splitCommonCodesText(desktopDetailLine);
                 const lineOne = model.lineOne?.trim()
                   ? splitHighlightLineOne(model.lineOne)
                   : {
@@ -633,7 +620,14 @@ export default function HeroSection({
                         </div>
                         {commonCodesLine ? (
                           <p className="text-[11px] leading-[1.45] text-[#64748b] md:hidden">
-                            {commonCodesLine}
+                            {commonCodesParts ? (
+                              <>
+                                {commonCodesParts.prefix}
+                                <span className="text-[#2563eb]">{commonCodesParts.codes}</span>
+                              </>
+                            ) : (
+                              commonCodesLine
+                            )}
                           </p>
                         ) : null}
                         {rebuiltUnitsLine ? (
@@ -643,7 +637,14 @@ export default function HeroSection({
                         ) : null}
                         {desktopDetailLine ? (
                           <p className="hidden text-[12px] leading-[1.45] text-[#64748b] md:mt-1 md:block">
-                            {desktopDetailLine}
+                            {desktopDetailCommonCodesParts ? (
+                              <>
+                                {desktopDetailCommonCodesParts.prefix}
+                                <span className="text-[#2563eb]">{desktopDetailCommonCodesParts.codes}</span>
+                              </>
+                            ) : (
+                              desktopDetailLine
+                            )}
                           </p>
                         ) : null}
                       </div>
@@ -655,48 +656,74 @@ export default function HeroSection({
           ) : null}
 
           {hasDisclaimer ? (
-            <div className="mt-4 rounded-[20px] border border-[#dbe4ef] bg-white/80 shadow-[0_12px_40px_rgba(13,27,46,0.06)] backdrop-blur-sm">
-              <button
-                type="button"
-                onClick={() => setIsDisclaimerOpen((current) => !current)}
-                aria-expanded={isDisclaimerOpen}
-                className="flex w-full items-center justify-between gap-3 px-4 py-3 text-left md:px-5"
-              >
-                <span className="font-['Manrope'] text-[12px] font-extrabold uppercase tracking-[0.08em] text-[#152b4a] md:text-[12.5px]">
-                  {disclaimer?.title?.trim() || "Disclaimer Note"}
-                </span>
-                <span className="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-[#cbd5e1] text-[18px] font-semibold leading-none text-[#15803d]">
-                  {isDisclaimerOpen ? "-" : "+"}
-                </span>
-              </button>
-
-              {isDisclaimerOpen ? (
-                <div className="border-t border-[#e2e8f0] px-4 py-4 text-[12px] leading-[1.65] text-[#475569] md:px-5 md:text-[13px]">
-                  <p>
-                    <span className="font-['Manrope'] text-[11px] font-extrabold uppercase tracking-[0.08em] text-[#152b4a]">
-                      {disclaimer?.title?.trim() || "Disclaimer Note"}:
-                    </span>{" "}
-                    {disclaimer?.note.trim()}
-                  </p>
-
-                  {disclaimer?.notes?.length ? (
-                    <div className="mt-3">
-                      <p className="font-['Manrope'] text-[11px] font-extrabold uppercase tracking-[0.08em] text-[#152b4a]">
-                        {disclaimer.notesTitle?.trim() || "Notes"}:
-                      </p>
-                      <ul className="mt-2 space-y-1.5">
-                        {disclaimer.notes.map((item) => (
-                          <li key={item} className="flex gap-2">
-                            <span className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-[#15803d]" />
-                            <span>{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ) : null}
+            disclaimerMode === "icon" ? (
+              <div className="mt-4">
+                <div className="flex justify-end">
+                  <button
+                    type="button"
+                    onClick={() => setIsDisclaimerOpen((current) => !current)}
+                    aria-expanded={isDisclaimerOpen}
+                    aria-label="Toggle disclaimer"
+                    className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-black text-[11px] font-bold leading-none text-black transition focus:outline-none focus:ring-2 focus:ring-[#2d7a3a] focus:ring-offset-2"
+                  >
+                    !
+                  </button>
                 </div>
-              ) : null}
-            </div>
+
+                {isDisclaimerOpen ? (
+                  <div className="mt-2 rounded-[16px] border border-[#dbe4ef] bg-white/85 px-4 py-3 text-[11.5px] leading-[1.6] text-[#64748b] shadow-[0_12px_32px_rgba(13,27,46,0.07)] backdrop-blur-sm md:px-5 md:text-[12.5px]">
+                    <div className="space-y-1.5">
+                      {disclaimerLines.map((line, index) => (
+                        <p key={`${line}-${index}`}>{line}</p>
+                      ))}
+                    </div>
+                  </div>
+                ) : null}
+              </div>
+            ) : (
+              <div className="mt-4 rounded-[20px] border border-[#dbe4ef] bg-white/80 shadow-[0_12px_40px_rgba(13,27,46,0.06)] backdrop-blur-sm">
+                <button
+                  type="button"
+                  onClick={() => setIsDisclaimerOpen((current) => !current)}
+                  aria-expanded={isDisclaimerOpen}
+                  className="flex w-full items-center justify-between gap-3 px-4 py-3 text-left md:px-5"
+                >
+                  <span className="font-['Manrope'] text-[12px] font-extrabold uppercase tracking-[0.08em] text-[#152b4a] md:text-[12.5px]">
+                    {disclaimer?.title?.trim() || "Disclaimer Note"}
+                  </span>
+                  <span className="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-[#cbd5e1] text-[18px] font-semibold leading-none text-[#15803d]">
+                    {isDisclaimerOpen ? "-" : "+"}
+                  </span>
+                </button>
+
+                {isDisclaimerOpen ? (
+                  <div className="border-t border-[#e2e8f0] px-4 py-4 text-[12px] leading-[1.65] text-[#475569] md:px-5 md:text-[13px]">
+                    <p>
+                      <span className="font-['Manrope'] text-[11px] font-extrabold uppercase tracking-[0.08em] text-[#152b4a]">
+                        {disclaimer?.title?.trim() || "Disclaimer Note"}:
+                      </span>{" "}
+                      {disclaimer?.note.trim()}
+                    </p>
+
+                    {disclaimer?.notes?.length ? (
+                      <div className="mt-3">
+                        <p className="font-['Manrope'] text-[11px] font-extrabold uppercase tracking-[0.08em] text-[#152b4a]">
+                          {disclaimer.notesTitle?.trim() || "Notes"}:
+                        </p>
+                        <ul className="mt-2 space-y-1.5">
+                          {disclaimer.notes.map((item) => (
+                            <li key={item} className="flex gap-2">
+                              <span className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-[#15803d]" />
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ) : null}
+                  </div>
+                ) : null}
+              </div>
+            )
           ) : null}
         </div>
 
@@ -734,29 +761,27 @@ export default function HeroSection({
               {strictData ? registrationInput.label : (registrationInput.label ?? "Enter your vehicle registration")}
             </label>
 
-            <div className="flex h-[68px] w-full min-w-0 overflow-hidden rounded-lg border-[3px] border-[#1a1a1a] bg-[#ffdd00] md:h-[56px]">
-              <div className="flex h-full w-[46px] shrink-0 flex-col items-center justify-center gap-[3px] border-r-2 border-[#1a1a1a] bg-[#003399] px-0.5 md:w-11">
-                <UkFlagIcon />
-                <span className="text-[12px] font-extrabold leading-none tracking-[0.05em] text-white">
-                  {strictData ? registrationInput.countryCode : (registrationInput.countryCode ?? "UK")}
+            <div className="flex h-[60px] w-full min-w-0 overflow-hidden rounded-[8px] border-[3px] border-[#1a1a1a] bg-[#ffdd00] md:h-[56px]">
+              <div className="flex h-full w-[52px] shrink-0 flex-col items-center justify-center border-r-2 border-[#1a1a1a] bg-[#003399] px-0.5 md:w-[50px]">
+                <div className="relative -top-[2px]">
+                  <UkFlagIcon />
+                </div>
+                <span className="relative top-[2px] text-[12px] font-extrabold leading-none tracking-[0.04em] text-[#ffdd00] md:text-[11px]">
+                  UK
                 </span>
               </div>
 
               <input
                 id="reg-input"
                 type="text"
-                placeholder={
-                  strictData
-                    ? (registrationInput.platePlaceholder || data.form.inputPlaceholder || "")
-                    : (registrationInput.platePlaceholder ?? data.form.inputPlaceholder ?? "AB12 CDE")
-                }
+                placeholder="REG HERE"
                 maxLength={8}
                 autoCapitalize="characters"
                 autoComplete="off"
                 spellCheck={false}
                 value={registration}
                 onChange={(event) => setRegistration(event.currentTarget.value.toUpperCase())}
-                className="h-full min-w-0 flex-1 bg-transparent px-2 text-center text-[28px] font-bold uppercase tracking-[0.11em] text-[#111] outline-none placeholder:text-gray-800 placeholder:text-[22px] placeholder:tracking-[0.05em] md:text-[24px] md:placeholder:text-[18px]"
+                className="h-full min-w-0 flex-1 bg-transparent px-2 pb-[1px] pt-0 text-center text-[28px] font-bold uppercase tracking-[0.06em] text-[#111] outline-none placeholder:text-[#111] placeholder:text-[24px] placeholder:font-bold placeholder:tracking-[0.04em] md:text-[24px] md:placeholder:text-[20px]"
                 style={{
                   fontFamily: '"Charles Wright","Arial Black","Arial",sans-serif',
                 }}

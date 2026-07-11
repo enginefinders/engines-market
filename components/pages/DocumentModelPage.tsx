@@ -32,6 +32,22 @@ function toHeroCards(data: ModelPageData) {
   }));
 }
 
+function buildModelMarketplaceLabel(modelName: string, brandName: string) {
+  const escapedBrand = brandName.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const shortModelName = modelName.replace(new RegExp(`^${escapedBrand}\\s+`, "i"), "").trim();
+  return `${shortModelName || modelName} Marketplace`;
+}
+
+function stripBrandFromModelName(modelName: string, brandName: string) {
+  const escapedBrand = brandName.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const shortModelName = modelName.replace(new RegExp(`^${escapedBrand}\\s+`, "i"), "").trim();
+  return shortModelName || modelName;
+}
+
+function buildMobileLiveMarketHeading(modelName: string, brandName: string) {
+  return `${stripBrandFromModelName(modelName, brandName)} Engine Replacement`;
+}
+
 type DocumentModelPageProps = {
   data: ModelPageData;
 };
@@ -45,6 +61,8 @@ export default function DocumentModelPage({
   const reviewsData = buildStaticReviewsSection(visualData.model.name);
   const resolvedModelImage = visualData.assets.mainImage || visualData.assets.heroBg;
   const initialTimestamp = new Date().toISOString();
+  const marketplaceLabel = buildModelMarketplaceLabel(visualData.model.name, visualData.brand.name);
+  const mobileLiveMarketHeading = buildMobileLiveMarketHeading(visualData.model.name, visualData.brand.name);
   const showEngineIntelligence =
     TIER3_BRAND_SLUGS.has(visualData.brand.slug) &&
     Boolean(visualData.sections.engineIntelligence?.cards.length);
@@ -63,6 +81,8 @@ export default function DocumentModelPage({
         bgImage={resolvedModelImage}
         modelCards={heroCards}
         strictData
+        tagOverride={marketplaceLabel}
+        disclaimerMode="icon"
       />
 
       <HowItWorksSection
@@ -83,6 +103,7 @@ export default function DocumentModelPage({
           imageSrc={visualData.sections.liveMarketPrices.imageSrc ?? resolvedModelImage}
           displayMode="document"
           initialTimestamp={initialTimestamp}
+          mobileHeadingOverride={mobileLiveMarketHeading}
         />
       )}
 

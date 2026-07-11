@@ -58,7 +58,7 @@ function priceParts(text: string) {
 
     return cleaned;
   };
-  const noteMatch = value.match(/(\s*(\(.+\)|on top of engine price))$/i);
+  const noteMatch = value.match(/(\s*(\(.+\)|on top of engine price|added to engine price))$/i);
   const note = noteMatch ? formatNote(noteMatch[1]) : "";
   const main = noteMatch ? value.slice(0, noteMatch.index).trim() : value;
 
@@ -78,6 +78,11 @@ function typeBadge(title: string) {
   if (normalized.includes("used")) return "Used";
   if (normalized.includes("rebuilt")) return "Rebuilt";
   return "Reconditioned";
+}
+
+function priceDisplayLabel(label: string) {
+  const cleaned = label.replace(/ range:?$/i, "").replace(/:$/, "").trim();
+  return cleaned.replace(/^typical price$/i, "Typical Price");
 }
 
 function isFeaturedCard(title: string) {
@@ -180,18 +185,17 @@ function FlipCard({
             </div>
 
             <div className="px-4 py-3 lg:px-5 lg:py-3.5">
-              <div className="text-[10.5px] font-medium text-[#6b7280] lg:text-[11px]">
-                {(priceLabel || price.label).replace(/:$/, "")}:
-              </div>
-
-              <div className="mt-2 grid grid-cols-[112px_1px_minmax(0,1fr)] items-center gap-3 lg:grid-cols-[132px_1px_minmax(0,1fr)]">
+              <div className="grid grid-cols-[minmax(138px,150px)_1px_minmax(0,1fr)] items-center gap-2.5 lg:grid-cols-[minmax(160px,176px)_1px_minmax(0,1fr)] lg:gap-3">
                 <div className="min-w-0">
-                  <div className="font-['Manrope'] text-[17px] font-extrabold leading-[1.1] text-[#0d1b2e] lg:text-[18px]">
+                  <div className="text-[10.5px] font-medium leading-[1.2] text-[#6b7280] lg:text-[11px]">
+                    {priceDisplayLabel(priceLabel || price.label)}
+                  </div>
+                  <div className="mt-1 whitespace-nowrap font-['Manrope'] text-[16px] font-extrabold leading-[1.1] text-[#0d1b2e] lg:text-[18px]">
                     {price.main}
                   </div>
                   {price.note ? (
-                    <div className="mt-1 whitespace-nowrap text-[9px] font-semibold leading-[1.2] text-[#4b5563] lg:text-[10.5px]">
-                      {price.note}
+                    <div className="mt-0.5 whitespace-nowrap text-[9px] font-semibold leading-[1.2] text-[#4b5563] lg:text-[10.5px]">
+                      ({price.note})
                     </div>
                   ) : null}
                 </div>
@@ -202,7 +206,7 @@ function FlipCard({
                   href="#quote-form"
                   data-quote-context={type.title}
                   data-quote-source="engine-types"
-                  className="inline-flex min-w-0 items-center justify-between gap-2 pl-0.5 text-[11px] font-semibold leading-[1.35] text-[#059669] transition-colors hover:text-[#047857] lg:text-[12px]"
+                  className="inline-flex min-w-0 items-center justify-between gap-2 pl-1 text-[10px] font-semibold uppercase leading-[1.28] text-[#059669] transition-colors hover:text-[#047857] lg:text-[12px] lg:leading-[1.35]"
                   onClick={(e) => e.stopPropagation()}
                 >
                   <span className="min-w-0">{type.cta}</span>
@@ -259,9 +263,170 @@ function FlipCard({
   );
 }
 
+function MobileEngineTypeStack({
+  types,
+  activeIndex,
+  onSelect,
+  priceLabel,
+}: {
+  types: EngineTypesData["types"];
+  activeIndex: number;
+  onSelect: (index: number) => void;
+  priceLabel: string;
+}) {
+  const orderedIndexes = [
+    ...types.map((_, index) => index).filter((index) => index !== activeIndex),
+    activeIndex,
+  ].filter((index) => index >= 0 && index < types.length);
+
+  return (
+    <div className="mt-[18px] md:hidden">
+      <div className="relative mx-auto max-w-[520px] overflow-visible px-[2px] pb-8">
+        {orderedIndexes.map((originalIndex, stackIndex) => {
+          const type = types[originalIndex];
+          const active = originalIndex === activeIndex;
+          const price = priceParts(type.priceRange);
+          const icon = getTypeIcon(type.title);
+          const frontDescription = fullText(type.frontDescription || type.description);
+          const backDescription = fullText(type.backDescription || type.description);
+          const backBullets = type.backBullets?.map((bullet) => fullText(bullet)).filter(Boolean) ?? [];
+          const offsetX = active ? 42 : Math.min(stackIndex * 14, 52);
+          const widthTrim = active ? 42 : 42;
+          const rotate = 0;
+
+          return (
+            <article
+              key={type.title}
+              className={`relative transition-all duration-300 ${active ? "z-30" : "z-10"}`}
+              style={{
+                marginTop: stackIndex === 0 ? 0 : -54,
+                transform: `translateX(${offsetX}px) rotate(${rotate}deg)`,
+                width: `calc(100% - ${widthTrim}px)`,
+              }}
+            >
+              <div
+                role="button"
+                tabIndex={0}
+                onClick={() => onSelect(originalIndex)}
+                onKeyDown={(event) => {
+                  if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault();
+                    onSelect(originalIndex);
+                  }
+                }}
+                className={`w-full rounded-[8px] border bg-white text-left shadow-[0_10px_24px_rgba(13,27,46,0.08)] transition-all duration-300 ${
+                  active
+                    ? "border-[#2D6BFF] bg-white shadow-[0_0_0_1px_rgba(45,107,255,0.38),0_0_22px_rgba(45,107,255,0.2),0_16px_36px_rgba(13,27,46,0.16)]"
+                    : "min-h-[112px] border-[#d8e6f5] bg-[linear-gradient(180deg,#ffffff_0%,#edf7ff_100%)] opacity-[0.98] shadow-[0_8px_18px_rgba(13,27,46,0.07)] hover:border-[#93c5fd]"
+                }`}
+                aria-expanded={active}
+              >
+                {active ? (
+                  <div className="h-[4px] rounded-t-[7px] bg-[linear-gradient(90deg,#2D6BFF_0%,#38bdf8_48%,#2D6BFF_100%)]" />
+                ) : null}
+                <div className={`flex gap-3 ${active ? "items-start px-4 py-4" : "items-start px-3 py-3"}`}>
+                  <span className="flex h-10 w-10 flex-none items-center justify-center rounded-full bg-[#e8f4fd] text-[#0d1b2e]">
+                    {icon}
+                  </span>
+                  <span className="min-w-0 flex-1">
+                    <span className={`block font-['Manrope'] font-extrabold uppercase leading-[1.16] text-[#0d1b2e] ${active ? "text-[13px]" : "line-clamp-2 text-[12px]"}`}>
+                      {type.title}
+                    </span>
+                    {active ? (
+                      <span className="mt-1 block text-[11px] leading-[1.45] text-[#64748b]">
+                        {frontDescription}
+                      </span>
+                    ) : null}
+                  </span>
+                  {active ? (
+                    <span className="flex-none rounded-full border border-[#bfdbfe] bg-[#eff6ff] px-2 py-1 text-[8px] font-extrabold uppercase tracking-[0.12em] text-[#2563eb]">
+                      Open
+                    </span>
+                  ) : null}
+                  {!active ? (
+                    <span className="ml-auto flex-none text-right">
+                      <span className="block whitespace-nowrap font-['Manrope'] text-[12px] font-extrabold leading-none text-[#15803d]">
+                        {price.main}
+                      </span>
+                      {price.note ? (
+                        <span className="mt-1 block max-w-[82px] truncate whitespace-nowrap text-[8.5px] font-semibold leading-none text-[#64748b]">
+                          ({price.note})
+                        </span>
+                      ) : null}
+                    </span>
+                  ) : null}
+                </div>
+
+                {active ? (
+                  <div className="border-t border-[#e5e7eb] px-4 pb-4 pt-3">
+                    <div className="grid grid-cols-[minmax(145px,1fr)_1px_minmax(0,1fr)] items-center gap-3">
+                      <div className="min-w-0">
+                        <div className="text-[10.5px] font-medium leading-[1.2] text-[#6b7280]">
+                          {priceDisplayLabel(priceLabel || price.label)}
+                        </div>
+                        <div className="mt-1 whitespace-nowrap font-['Manrope'] text-[16px] font-extrabold leading-[1.1] text-[#0d1b2e]">
+                          {price.main}
+                        </div>
+                        {price.note ? (
+                          <div className="mt-0.5 whitespace-nowrap text-[9px] font-semibold leading-[1.2] text-[#4b5563]">
+                            ({price.note})
+                          </div>
+                        ) : null}
+                      </div>
+                      <div className="h-10 w-px bg-[#d7dde5]" />
+                      <a
+                        href="#quote-form"
+                        data-quote-context={type.title}
+                        data-quote-source="engine-types-mobile-stack"
+                        className="inline-flex min-w-0 items-center justify-between gap-2 pl-1 text-[10px] font-semibold uppercase leading-[1.28] text-[#059669] transition-colors hover:text-[#047857]"
+                        onClick={(event) => event.stopPropagation()}
+                      >
+                        <span className="min-w-0">{type.cta}</span>
+                        <TbArrowRight className="h-3.5 w-3.5 flex-none" />
+                      </a>
+                    </div>
+
+                    <div className="mt-3 rounded-[10px] bg-[#f8fbff] px-3 py-3">
+                      <p className="text-[11.5px] leading-[1.55] text-[#475569]">
+                        {backDescription}
+                      </p>
+                      {backBullets.length ? (
+                        <ul className="mt-2 space-y-1.5 text-[11px] leading-[1.45] text-[#334155]">
+                          {backBullets.map((bullet) => (
+                            <li key={bullet} className="flex gap-2">
+                              <span className="mt-[5px] h-[5px] w-[5px] flex-none rounded-full bg-[#22c55e]" />
+                              <span>{bullet}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      ) : null}
+                    </div>
+                  </div>
+                ) : null}
+              </div>
+            </article>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
 function inferBrandLabel(title: string) {
   const match = title.match(/^(.*?)\s+Engine Types/i);
   return match?.[1]?.trim() || "Engine";
+}
+
+function compactEngineTypesHeading(title: string) {
+  const match = title.match(/^(.*?)\s+Engine Types/i);
+  return match ? `${match[1].trim()} Engine Types` : title;
+}
+
+function normalizeClosingCopy(text: string) {
+  return normalizeText(text).replace(
+    /^All engine types include a minimum 12[-\s]?month(?: unlimited mileage)? warranty/i,
+    "All rebuilt engines include a minimum 12-month warranty",
+  );
 }
 
 export default function EngineTypesSection({
@@ -273,10 +438,14 @@ export default function EngineTypesSection({
   documentMode = false,
 }: Props) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [activeMobileCard, setActiveMobileCard] = useState(0);
+  const [isClosingExpanded, setIsClosingExpanded] = useState(false);
   const [uniformHeight, setUniformHeight] = useState(228);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
   const headingLines = data.headingLines?.length ? data.headingLines : data.h2.split(/\s+-\s+/);
+  const mobileHeading = compactEngineTypesHeading(data.h2);
   const brandLabel = inferBrandLabel(data.h2);
+  const closingText = normalizeClosingCopy(data.closing);
   const ui = data.ui ?? {};
   const closingCard = data.closingCard ?? {};
   const isDocumentMode = displayMode === "document";
@@ -340,10 +509,11 @@ export default function EngineTypesSection({
         </div>
 
         <h2 className="max-w-[920px] font-['Manrope'] text-[26px] font-extrabold leading-[1.14] tracking-[-0.7px] text-[#0d1b2e] md:text-[30px] lg:text-[36px]">
+          <span className="block md:hidden">{mobileHeading}</span>
           {headingLines.map((line, index) => (
             <span
               key={`${line}-${index}`}
-              className={`block ${headingLines.length > 1 && index === headingLines.length - 1 ? "text-[#15803d]" : ""}`}
+              className={`hidden md:block ${headingLines.length > 1 && index === headingLines.length - 1 ? "text-[#15803d]" : ""}`}
             >
               {line}
             </span>
@@ -357,7 +527,14 @@ export default function EngineTypesSection({
           {data.intro}
         </p>
 
-        <div className="mt-[22px] grid gap-x-3 gap-y-2 lg:grid-cols-2 lg:gap-x-4 lg:gap-y-2.5">
+        <MobileEngineTypeStack
+          types={data.types}
+          activeIndex={activeMobileCard}
+          onSelect={setActiveMobileCard}
+          priceLabel={isDocumentMode ? (ui.priceLabel || "") : (ui.priceLabel ?? "Typical price range")}
+        />
+
+        <div className="mt-[22px] hidden gap-x-3 gap-y-2 md:grid lg:grid-cols-2 lg:gap-x-4 lg:gap-y-2.5">
           {data.types.map((type, index) => (
             <div
               key={type.title}
@@ -378,9 +555,29 @@ export default function EngineTypesSection({
         </div>
 
         {isDocumentMode ? (
-          <p className="mt-4 text-[12.5px] leading-[1.75] text-[#4b5563] lg:text-center lg:text-[13px]">
-            {normalizeText(data.closing)}
-          </p>
+          <div className="mt-4 text-[12.5px] leading-[1.75] text-[#4b5563] lg:text-center lg:text-[13px]">
+            <p
+              style={
+                isClosingExpanded
+                  ? undefined
+                  : {
+                      display: "-webkit-box",
+                      WebkitLineClamp: 3,
+                      WebkitBoxOrient: "vertical",
+                      overflow: "hidden",
+                    }
+              }
+            >
+              {closingText}
+            </p>
+            <button
+              type="button"
+              onClick={() => setIsClosingExpanded((current) => !current)}
+              className="mt-1 text-[12px] font-bold text-[#0d1b2e] underline decoration-[#2D6BFF]/40 underline-offset-4 transition hover:text-[#2D6BFF] lg:text-[12.5px]"
+            >
+              {isClosingExpanded ? "View Less" : "View More"}
+            </button>
+          </div>
         ) : (
           <div className="mt-4">
             <CtaStrip
@@ -392,7 +589,7 @@ export default function EngineTypesSection({
                   ? `Compare ${brandLabel} engine prices with vetted UK suppliers`
                   : "Compare Land Rover engine prices with vetted UK suppliers")
               }
-              description={normalizeText(data.closing)}
+              description={closingText}
               buttonText={closingCard.buttonText ?? (dynamicBrandCta ? `Compare ${brandLabel} Prices` : "Compare Land Rover Prices")}
               icon={<TbShieldCheck className="h-6 w-6" />}
               linkProps={{

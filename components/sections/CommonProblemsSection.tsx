@@ -6,7 +6,6 @@ import type { CommonProblemsData } from "@/types/brand";
 import { RecommendationCard } from "@/components/ui/CalloutCards";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
-import { FaCar } from "react-icons/fa";
 
 type Props = {
   data: CommonProblemsData;
@@ -321,11 +320,8 @@ function AffectedVehiclesCard({
   const vehicles = summary.vehicles.length ? summary.vehicles : [affectedModels];
 
   return (
-    <div className={`rounded-[10px] border border-[#e7edf6] bg-white shadow-[0_1px_0_rgba(15,23,42,0.02)] ${mobile ? "px-2 py-2" : "px-2 py-2"}`}>
+      <div className={`rounded-[10px] border border-[#e7edf6] bg-white shadow-[0_1px_0_rgba(15,23,42,0.02)] ${mobile ? "px-2 py-2" : "px-2 py-2"}`}>
       <div className={`flex items-center gap-2 ${mobile ? "mb-2" : "mb-3"}`}>
-        <div className={`flex flex-none items-center justify-center rounded-full bg-[#f3f6fb] text-black ${mobile ? "h-7 w-7" : "h-8 w-8"}`}>
-          <FaCar className={mobile ? "h-[16px] w-[16px]" : "h-[20px] w-[20px]"} />
-        </div>
         <div className="min-w-0">
           <div className={`font-['Manrope'] font-extrabold uppercase tracking-[0.03em] text-[#172554] ${mobile ? "text-[9px]" : "text-[10px]"}`}>
             Most Affected Vehicles
@@ -337,12 +333,9 @@ function AffectedVehiclesCard({
         {vehicles.slice(0, 4).map((vehicle, index) => (
           <div
             key={`${vehicle}-${index}`}
-            className="flex items-center rounded-[6px] border border-[#2a6dd6] bg-[linear-gradient(180deg,#ffffff_0%,#f4f8ff_100%)] p-1.5 shadow-[0_0_0_1px_rgba(42,109,214,0.45),0_0_12px_rgba(42,109,214,0.22),inset_0_1px_0_rgba(255,255,255,0.9)]"
+            className="flex items-center justify-center rounded-[6px] border border-[#2a6dd6] bg-[linear-gradient(180deg,#ffffff_0%,#f4f8ff_100%)] p-1.5 shadow-[0_0_0_1px_rgba(42,109,214,0.45),0_0_12px_rgba(42,109,214,0.22),inset_0_1px_0_rgba(255,255,255,0.9)]"
           >
-            <div className={`flex flex-none items-center justify-center text-[#2563eb] ${mobile ? "h-5 w-5" : "h-7 w-7"}`}>
-              <FaCar className={mobile ? "h-[9px] w-[9px]" : "h-[10px] w-[10px]"} />
-            </div>
-            <div className={`min-w-0 truncate whitespace-nowrap font-['Manrope'] font-extrabold leading-none tracking-[-0.03em] text-[#0f172a] ${mobile ? "text-[12px] ml-1.5" : "text-[14px]"}`}>
+            <div className={`min-w-0 truncate whitespace-nowrap font-['Manrope'] font-extrabold leading-none tracking-[-0.03em] text-[#0f172a] ${mobile ? "text-[12px]" : "text-[14px]"}`}>
               {vehicle}
             </div>
           </div>
@@ -501,7 +494,7 @@ function MobileProblemCard({
           </div>
 
           {problem.repairOptions?.length ? (
-            <div className="mt-4 space-y-3">
+            <div className="mt-3 space-y-2">
               {problem.repairOptions.map((option, optionIndex) => {
                 const colors = getTierColors(option.tier);
 
@@ -510,11 +503,11 @@ function MobileProblemCard({
                     key={`${option.tier || "repair-option"}-${optionIndex}`}
                     className="rounded-[12px] border border-[#d9e1ea] bg-white p-2 shadow-[0_4px_14px_rgba(15,23,42,0.07)]"
                   >
-                    <div className="mb-3 rounded-[8px] px-3 py-2 text-black">
-                      <div className={`font-['Manrope'] text-[13px] font-bold ${colors.accentText}`}>{option.tier}</div>
+                    <div className="mb-1 rounded-[8px] px-2 py-1 text-black">
+                      <div className={`font-['Manrope'] text-[12px] font-bold leading-[1.25] ${colors.accentText}`}>{option.tier}</div>
                     </div>
 
-                    <div className="grid grid-cols-2 gap-2 mb-3">
+                    <div className="grid grid-cols-2 gap-2 mb-2">
                       <div className="relative overflow-hidden rounded-[8px] border border-[#cfe0ff] bg-[linear-gradient(180deg,rgba(23,57,113,0.92)_0%,rgba(12,32,66,0.96)_100%)] p-2 text-white shadow-[0_8px_16px_rgba(23,57,113,0.22),inset_0_1px_0_rgba(255,255,255,0.16)]">
                         <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.22)_0%,rgba(255,255,255,0.03)_38%,rgba(255,255,255,0)_62%)]" />
                         <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/65 to-transparent" />
@@ -533,7 +526,7 @@ function MobileProblemCard({
                       </div>
                     </div>
 
-                    <p className="text-[12px] leading-[1.55] text-[#374151] mb-2">{option.whatItInvolves}</p>
+                    <p className="text-[12px] leading-[1.5] text-[#374151] mb-1.5">{option.whatItInvolves}</p>
                     <div className={`rounded-[8px] text-[11.5px] leading-[1.5] text-[#6b7280]`}>
                       {option.longevity}
                     </div>
@@ -829,18 +822,17 @@ export default function CommonProblemsSection({ data, bgImage, documentMode = fa
           </div>
         ) : null}
         <div className="lg:hidden">
-          <h2 className="text-[26px] font-extrabold leading-[1.2] tracking-[-0.4px] text-[#0d1b2e] md:text-[36px] md:leading-[1.15] md:tracking-[-0.7px]">
+          <h2 className="mb-4 text-[26px] font-extrabold leading-[1.2] tracking-[-0.4px] text-[#0d1b2e] md:text-[36px] md:leading-[1.15] md:tracking-[-0.7px]">
             <span>{heading.primary}</span>
             {heading.accent ? (
               <>
-                <br />
-                <span className="text-[#15803d]">{heading.accent}</span>
+                <br className="hidden md:block" />
+                <span className="hidden text-[#15803d] md:inline">{heading.accent}</span>
               </>
             ) : null}
           </h2>
 
-          {/* Updated Mobile Paragraph */}
-          <p className="mb-5 mt-[10px] text-[13px] leading-[1.65] text-[#6b7280]">
+          <p className="mb-5 mt-[10px] hidden text-[13px] leading-[1.65] text-[#6b7280] md:block">
             {displayText}
             {isLongText && (
               <>
@@ -897,7 +889,25 @@ export default function CommonProblemsSection({ data, bgImage, documentMode = fa
 
         {data.finalCta.disclaimer ? (
           <div className="mt-5 rounded-[12px] border border-[#e5e7eb] bg-white px-4 py-3 lg:mt-4">
-            <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_420px] lg:items-center">
+            <div className="grid gap-4 lg:grid-cols-[420px_minmax(0,1fr)] lg:items-center">
+              <div className="overflow-x-auto">
+                <div className="flex min-w-max items-start gap-2 whitespace-nowrap">
+                  {supportItems.map((item, index) => (
+                    <div key={item.label} className="flex items-center gap-2">
+                      <div className="inline-flex min-w-[68px] flex-col items-center gap-2 text-center">
+                        <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#f0fdf4] text-[#15803d]">
+                          {item.icon}
+                        </div>
+                        <span className="text-[10px] leading-[1.35] text-[#6b7280]">{item.label}</span>
+                      </div>
+                      {index < supportItems.length - 1 ? (
+                        <span className="pt-3 text-[16px] leading-none text-[#cbd5e1]">|</span>
+                      ) : null}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
               <div>
                 <p
                   className="text-[10.5px] leading-[1.65] text-[#9ca3af] md:text-[11px] md:leading-[1.7]"
@@ -921,24 +931,6 @@ export default function CommonProblemsSection({ data, bgImage, documentMode = fa
                 >
                   {isDisclaimerExpanded ? "View Less" : "View More"}
                 </button>
-              </div>
-
-              <div className="overflow-x-auto">
-                <div className="flex min-w-max items-start gap-2 whitespace-nowrap">
-                  {supportItems.map((item, index) => (
-                    <div key={item.label} className="flex items-center gap-2">
-                      <div className="inline-flex min-w-[68px] flex-col items-center gap-2 text-center">
-                        <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#f0fdf4] text-[#15803d]">
-                          {item.icon}
-                        </div>
-                        <span className="text-[10px] leading-[1.35] text-[#6b7280]">{item.label}</span>
-                      </div>
-                      {index < supportItems.length - 1 ? (
-                        <span className="pt-3 text-[16px] leading-none text-[#cbd5e1]">|</span>
-                      ) : null}
-                    </div>
-                  ))}
-                </div>
               </div>
             </div>
           </div>

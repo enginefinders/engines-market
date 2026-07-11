@@ -279,17 +279,22 @@ export default function ModelEngineCodesSection({ data, guide, modelName, strict
   const guideLookup = useMemo(() => buildGuideLookup(guide), [guide]);
   const headingLines = data.headingLines?.length ? data.headingLines : [strictData ? data.h2 : (guide.h2 || data.h2)].filter(Boolean);
   const mobileHeadingLine = headingLines[0] ?? "";
+  const splitLastHeadingToken = (line: string) => {
+    const match = line.match(/^(.*\s)([A-Z][A-Z0-9-]{2,}(?:\/[A-Z0-9-]+)*)$/);
+    return match ? { lead: match[1], accent: match[2] } : { lead: line, accent: "" };
+  };
+  const mobileHeadingParts = splitLastHeadingToken(mobileHeadingLine);
   const intro = strictData ? data.h3 : (guide.h3 || data.h3);
   const closingLine = strictData ? (data.closingLine || "") : (guide.closing || data.closingLine || "");
   const sectionContainerClass = documentMode ? "max-w-[1400px] px-0 sm:px-0 lg:px-0" : "max-w-[1400px]";
   const topShellClass = documentMode
-    ? "py-[42px] px-0 pb-[64px] md:py-[42px] md:px-0 md:pb-[64px] max-[720px]:px-0 max-[720px]:pb-[10px] max-[720px]:pt-[20px]"
+    ? "py-[42px] px-0 pb-[64px] md:py-[42px] md:px-0 md:pb-[64px] max-[720px]:px-0 max-[720px]:pb-[4px] max-[720px]:pt-[20px]"
     : "py-[42px] px-[18px] pb-[64px] md:py-[42px] md:px-[18px] md:pb-[64px] max-[720px]:px-[12px] max-[720px]:pb-[10px] max-[720px]:pt-[20px]";
   const tabShellClass = documentMode
     ? "max-w-[1240px] mx-auto px-0 max-[720px]:mx-[-16px] max-[720px]:px-0"
     : "max-w-[1240px] mx-auto px-[18px] max-[720px]:mx-[-16px] max-[720px]:px-0";
   const contentShellClass = documentMode
-    ? "py-[42px] px-0 pb-[64px] max-[720px]:px-0 max-[720px]:pt-[10px] max-[720px]:pb-[50px]"
+    ? "py-[42px] px-0 pb-[64px] max-[720px]:px-0 max-[720px]:pt-[4px] max-[720px]:pb-[50px]"
     : "py-[42px] px-[18px] pb-[64px] max-[720px]:px-[12px] max-[720px]:pt-[10px] max-[720px]:pb-[50px]";
   const ui = data.ui ?? {};
   const closingAction = data.closingAction ?? {};
@@ -325,8 +330,11 @@ export default function ModelEngineCodesSection({ data, guide, modelName, strict
           <div className="max-w-[1240px] mx-auto">
             <header className="max-w-[1000px]">
               {strictData ? (data.tag ? <div className="inline-flex items-center justify-center min-h-[34px] px-[16px] rounded-full bg-[linear-gradient(180deg,#16355d_0%,#081a34_100%)] text-white text-[12px] font-extrabold tracking-[0.12em] uppercase shadow-[0_8px_20px_rgba(8,26,52,0.14)] mb-[14px]">{data.tag}</div> : null) : <div className="inline-flex items-center justify-center min-h-[34px] px-[16px] rounded-full bg-[linear-gradient(180deg,#16355d_0%,#081a34_100%)] text-white text-[12px] font-extrabold tracking-[0.12em] uppercase shadow-[0_8px_20px_rgba(8,26,52,0.14)] mb-[14px]">{data.tag || guide.tag}</div>}
-              <h2 className="mb-[10px] text-[clamp(31px,4vw,52px)] leading-[1.03] tracking-[-0.04em] text-[#10203a] max-[720px]:text-[32px]">
-                <span className="block min-[721px]:hidden">{mobileHeadingLine}</span>
+              <h2 className="mb-[10px] text-[clamp(31px,4vw,52px)] leading-[1.03] tracking-[-0.04em] text-[#10203a] max-[720px]:mb-[6px] max-[720px]:text-[32px]">
+                <span className="block min-[721px]:hidden">
+                  {mobileHeadingParts.lead}
+                  {mobileHeadingParts.accent ? <span className="text-[#15803d]">{mobileHeadingParts.accent}</span> : null}
+                </span>
                 {headingLines.map((line, index) => (
                   <span key={`${line}-${index}`} className="hidden min-[721px]:block" style={{ color: headingLines.length > 1 && index === headingLines.length - 1 ? "#15803d" : undefined }}>
                     {line}
@@ -430,7 +438,7 @@ export default function ModelEngineCodesSection({ data, guide, modelName, strict
                         >
                           <button
                             className={`w-full border border-[#dfe7ef] rounded-[20px] bg-white shadow-[0_12px_30px_rgba(12,29,53,0.06)] grid items-center gap-[10px] text-left text-inherit cursor-pointer transition-all duration-200 hover:bg-[#fbfdff] ${selected
-                              ? "grid-cols-[minmax(0,1fr)_16px] min-h-[60px] py-[10px] px-[14px] rounded-t-[20px] rounded-b-none border-[#b8cadb] shadow-[0_10px_22px_rgba(16,39,68,0.08)] bg-[linear-gradient(180deg,#ffffff_0%,#fbfdff_100%)] max-[720px]:min-h-[62px] max-[720px]:py-[12px] max-[720px]:px-[16px] max-[720px]:rounded-t-[18px]"
+                              ? "grid-cols-[minmax(0,1fr)_16px] min-h-[60px] items-center py-[11px] px-[14px] rounded-t-[14px] rounded-b-none border-[#b8cadb] shadow-[0_10px_22px_rgba(16,39,68,0.08)] bg-[linear-gradient(180deg,#ffffff_0%,#fbfdff_100%)] max-[720px]:min-h-[58px] max-[720px]:py-[11px] max-[720px]:px-[16px] max-[720px]:rounded-t-[12px]"
                               : "grid-cols-[54px_minmax(0,1fr)_minmax(122px,150px)_16px] min-h-[76px] py-[14px] px-[16px] max-[720px]:grid-cols-[44px_minmax(0,1fr)_minmax(104px,122px)_14px] max-[720px]:gap-[8px] max-[720px]:min-h-[72px] max-[720px]:rounded-[18px] max-[720px]:px-[12px] max-[720px]:py-[12px]"
                               }`}
                             type="button"
@@ -495,7 +503,7 @@ export default function ModelEngineCodesSection({ data, guide, modelName, strict
 
                               return (
                                 <div>
-                                  <div className="grid grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] gap-x-[12px] overflow-hidden rounded-b-[18px] bg-[linear-gradient(135deg,#081a34_0%,#0d2848_100%)] px-[12px] pb-[10px] pt-0 shadow-[0_18px_30px_rgba(11,31,57,0.26)] max-[920px]:grid-cols-1 max-[720px]:rounded-b-[18px] max-[720px]:px-[12px] max-[720px]:pb-[12px]">
+                                  <div className="grid grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] gap-x-[12px] overflow-hidden rounded-b-[12px] bg-[linear-gradient(135deg,#081a34_0%,#0d2848_100%)] px-[12px] pb-[10px] pt-0 shadow-[0_18px_30px_rgba(11,31,57,0.26)] max-[920px]:grid-cols-1 max-[720px]:rounded-b-[12px] max-[720px]:px-[12px] max-[720px]:pb-[12px]">
                                     <div className="grid grid-cols-[150px_minmax(0,1fr)] text-white overflow-hidden max-[920px]:grid-cols-[132px_minmax(0,1fr)] max-[720px]:grid-cols-[110px_minmax(0,1fr)]">
 
                                       {/* Image Column - Tighter padding */}
@@ -529,7 +537,7 @@ export default function ModelEngineCodesSection({ data, guide, modelName, strict
                                           <div className="w-full max-w-[178px] justify-self-end py-[2px] pl-[16px] max-[720px]:hidden">
 
                                             {/* Glass Price Box - Minimal padding */}
-                                            <div className="relative overflow-hidden rounded-xl border border-green-400 bg-[#0d1526]/50 backdrop-blur-xl shadow-[0_0_15px_rgba(74,222,128,0.5),inset_0_0_12px_rgba(74,222,128,0.3)] mb-1">
+                                            <div className="relative overflow-hidden rounded-[7px] border border-green-400 bg-[#0d1526]/50 backdrop-blur-xl shadow-[0_0_15px_rgba(74,222,128,0.5),inset_0_0_12px_rgba(74,222,128,0.3)] mb-1">
                                               <div
                                                 className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-white/20 pointer-events-none"
                                                 style={{ clipPath: 'polygon(60% 0, 100% 0, 100% 100%, 40% 100%)' }}
@@ -556,7 +564,7 @@ export default function ModelEngineCodesSection({ data, guide, modelName, strict
                                             {/* Quote Button - Minimal padding */}
                                             {quoteText && (
                                               <a
-  className="group flex w-full items-center justify-between gap-2 rounded-xl bg-[#050b14] py-1 px-2 shadow-[0_0_0_1px_rgba(30,144,255,1),0_0_12px_rgba(30,144,255,0.4),inset_0_0_8px_rgba(30,144,255,0.1)] transition hover:shadow-[0_0_0_1px_rgba(30,144,255,1),0_0_20px_rgba(30,144,255,0.6),inset_0_0_12px_rgba(30,144,255,0.2)]"
+  className="group flex w-full items-center justify-between gap-2 rounded-[7px] bg-[#050b14] py-1 px-2 shadow-[0_0_0_1px_rgba(30,144,255,1),0_0_12px_rgba(30,144,255,0.4),inset_0_0_8px_rgba(30,144,255,0.1)] transition hover:shadow-[0_0_0_1px_rgba(30,144,255,1),0_0_20px_rgba(30,144,255,0.6),inset_0_0_12px_rgba(30,144,255,0.2)]"
   href="#quote-form"
   data-quote-engine-code={repairEngineCodeValue(detail?.code || activeEngine.code)}
   data-quote-context={activeEngine.compatibleModels}
@@ -596,16 +604,16 @@ export default function ModelEngineCodesSection({ data, guide, modelName, strict
                                       {ui.variantsLabel && <small className="block text-[#bfd0e1] text-[9px] font-extrabold tracking-[0.12em] uppercase max-[720px]:mb-[2px]">{ui.variantsLabel}</small>}
                                       <div className="flex flex-wrap gap-[6px]">
                                         {buildVariants(activeEngine, detail).map((variant) => (
-                                          <span key={variant} className="inline-flex min-h-[26px] items-center justify-center rounded-[8px] border border-[#2d6bff] bg-[#0f2a4e] px-[10px] text-[9px] font-bold leading-[1] text-white shadow-[0_0_0_1px_rgba(45,107,255,0.28),0_0_10px_rgba(45,107,255,0.18)]">{variant}</span>
+                                          <span key={variant} className="inline-flex min-h-[26px] items-center justify-center rounded-[5px] border border-[#2d6bff] bg-[#0f2a4e] px-[10px] text-[9px] font-bold leading-[1] text-white shadow-[0_0_0_1px_rgba(45,107,255,0.28),0_0_10px_rgba(45,107,255,0.18)]">{variant}</span>
                                         ))}
                                       </div>
                                     </div>
 
                                     {/* Specs & Failures Columns - Tighter top padding */}
                                     <div className="grid grid-cols-2 gap-[8px] pt-[4px] max-[720px]:pt-[8px]">
-                                      <section className="border border-[#dfe7ef] rounded-[12px] bg-white py-[4px] px-[9px] pb-[4px]">
+                                      <section className="border border-[#dfe7ef] rounded-[7px] bg-white py-[4px] px-[9px] pb-[4px]">
                                         {ui.specsTitle && (
-                                          <h4 className="mb-[3px] flex items-center gap-[8px] text-[12px] tracking-[-0.02em] text-[#10203a] max-[720px]:mb-[6px]">
+                                          <h4 className="mb-[3px] flex items-center gap-[8px] text-[11px] font-semibold tracking-[-0.02em] text-[#10203a] max-[720px]:mb-[6px]">
                                             <span className="w-[24px] h-[24px] rounded-[10px] grid place-items-center flex-shrink-0 bg-[#eef5fb] text-[#274564] max-[720px]:hidden">
                                               <SpecsIcon />
                                             </span>
@@ -614,35 +622,35 @@ export default function ModelEngineCodesSection({ data, guide, modelName, strict
                                         )}
                                         <ul className="list-none m-0 pt-4 grid gap-[8px] max-[720px]:pt-[2px] max-[720px]:gap-[10px]">
                                           {ui.fuelLabel && (
-                                            <li className="flex justify-between gap-[10px] py-[1px] border-b border-[#e8eef5] last:border-b-0 last:pb-[1px] max-[720px]:py-[4px]">
-                                              <span className="text-[#64748b] text-[12px] leading-[1.2]">{ui.fuelLabel}</span>
-                                              <strong className="text-[12px] leading-[1.2] text-right text-[#10203a]">{detail?.fuel || activeEngine.fuel}</strong>
+                                            <li className="flex min-h-[28px] items-center justify-between gap-[10px] py-[1px] border-b border-[#e8eef5] last:border-b-0 last:pb-[1px] max-[720px]:py-[3px]">
+                                              <span className="flex items-center text-[#64748b] text-[12px] leading-[1.2]">{ui.fuelLabel}</span>
+                                              <strong className="flex items-center text-[12px] leading-[1.2] text-right text-[#10203a]">{detail?.fuel || activeEngine.fuel}</strong>
                                             </li>
                                           )}
                                           {ui.sizeLabel && (
-                                            <li className="flex justify-between gap-[10px] py-[1px] border-b border-[#e8eef5] last:border-b-0 last:pb-[1px] max-[720px]:py-[4px]">
-                                              <span className="text-[#64748b] text-[12px] leading-[1.2]">{ui.sizeLabel}</span>
-                                              <strong className="text-[12px] leading-[1.2] text-right text-[#10203a]">{detail?.size || activeEngine.size}</strong>
+                                            <li className="flex min-h-[28px] items-center justify-between gap-[10px] py-[1px] border-b border-[#e8eef5] last:border-b-0 last:pb-[1px] max-[720px]:py-[3px]">
+                                              <span className="flex items-center text-[#64748b] text-[12px] leading-[1.2]">{ui.sizeLabel}</span>
+                                              <strong className="flex items-center text-[12px] leading-[1.2] text-right text-[#10203a]">{detail?.size || activeEngine.size}</strong>
                                             </li>
                                           )}
                                           {ui.powerLabel && (
-                                            <li className="flex justify-between gap-[10px] py-[1px] border-b border-[#e8eef5] last:border-b-0 last:pb-[1px] max-[720px]:py-[4px]">
-                                              <span className="text-[#64748b] text-[12px] leading-[1.2]">{ui.powerLabel}</span>
-                                              <strong className="text-[12px] leading-[1.2] text-right text-[#10203a]">{detail?.power || activeEngine.power}</strong>
+                                            <li className="flex min-h-[28px] items-center justify-between gap-[10px] py-[1px] border-b border-[#e8eef5] last:border-b-0 last:pb-[1px] max-[720px]:py-[3px]">
+                                              <span className="flex items-center text-[#64748b] text-[12px] leading-[1.2]">{ui.powerLabel}</span>
+                                              <strong className="flex items-center text-[12px] leading-[1.2] text-right text-[#10203a]">{detail?.power || activeEngine.power}</strong>
                                             </li>
                                           )}
                                           {ui.yearsLabel && (
-                                            <li className="flex justify-between gap-[10px] py-[1px] border-b border-[#e8eef5] last:border-b-0 last:pb-[1px] max-[720px]:py-[4px]">
-                                              <span className="text-[#64748b] text-[12px] leading-[1.2]">{ui.yearsLabel}</span>
-                                              <strong className="text-[12px] leading-[1.2] text-right text-[#10203a]">{years}</strong>
+                                            <li className="flex min-h-[28px] items-center justify-between gap-[10px] py-[1px] border-b border-[#e8eef5] last:border-b-0 last:pb-[1px] max-[720px]:py-[3px]">
+                                              <span className="flex items-center text-[#64748b] text-[12px] leading-[1.2]">{ui.yearsLabel}</span>
+                                              <strong className="flex items-center text-[12px] leading-[1.2] text-right text-[#10203a]">{years}</strong>
                                             </li>
                                           )}
                                         </ul>
                                       </section>
 
-                                      <section className="border border-[#dfe7ef] rounded-[12px] bg-white py-[4px] px-[9px] pb-[4px]">
+                                      <section className="border border-[#dfe7ef] rounded-[7px] bg-white py-[4px] px-[9px] pb-[4px]">
                                         {ui.failuresTitle && (
-                                          <h4 className="mb-[3px] flex items-center gap-[8px] text-[12px] tracking-[-0.02em] text-[#10203a] max-[720px]:mb-[6px]">
+                                          <h4 className="mb-[3px] flex items-center gap-[8px] text-[11px] font-semibold tracking-[-0.02em] text-[#10203a] max-[720px]:mb-[6px]">
                                             <span className="w-[24px] h-[24px] rounded-[10px] grid place-items-center flex-shrink-0 bg-[#fff2f2] text-[#c73a3a] max-[720px]:hidden">
                                               <WarningIcon />
                                             </span>
@@ -660,7 +668,7 @@ export default function ModelEngineCodesSection({ data, guide, modelName, strict
                                     {/* Mobile Bottom Section */}
                                     <div className="hidden max-[720px]:grid gap-[4px] py-[2px] pt-[12px] pb-[2px]">
                                       {/* Price Box */}
-                                      <div className="relative overflow-hidden rounded-xl border border-green-400 bg-[#0d1526]/50 backdrop-blur-xl shadow-[0_0_15px_rgba(74,222,128,0.5),inset_0_0_12px_rgba(74,222,128,0.3)]">
+                                      <div className="relative overflow-hidden rounded-[7px] border border-green-400 bg-[#0d1526]/50 backdrop-blur-xl shadow-[0_0_15px_rgba(74,222,128,0.5),inset_0_0_12px_rgba(74,222,128,0.3)]">
                                         <div
                                           className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-white/20 pointer-events-none"
                                           style={{ clipPath: 'polygon(60% 0, 100% 0, 100% 100%, 40% 100%)' }}
@@ -687,7 +695,7 @@ export default function ModelEngineCodesSection({ data, guide, modelName, strict
                                       {/* Quote CTA */}
                                       {quoteText && (
                                         <a
-  className="group flex w-full items-center gap-3 rounded-[14px] border border-[#2d6bff] bg-[#071322] px-3 py-3 text-left shadow-[0_0_0_1px_rgba(45,107,255,0.32),0_0_16px_rgba(45,107,255,0.18)] transition hover:shadow-[0_0_0_1px_rgba(45,107,255,0.5),0_0_22px_rgba(45,107,255,0.28)]"
+  className="group flex w-full items-center justify-between gap-3 rounded-[7px] border border-[#2d6bff] bg-[#071322] px-3 py-3 text-left shadow-[0_0_0_1px_rgba(45,107,255,0.32),0_0_16px_rgba(45,107,255,0.18)] transition hover:shadow-[0_0_0_1px_rgba(45,107,255,0.5),0_0_22px_rgba(45,107,255,0.28)]"
   href="#quote-form"
   data-quote-engine-code={repairEngineCodeValue(detail?.code || activeEngine.code)}
   data-quote-context={activeEngine.compatibleModels}
@@ -702,10 +710,11 @@ export default function ModelEngineCodesSection({ data, guide, modelName, strict
       <text x="18" y="20" fontSize="7" fontWeight="bold" fill="currentColor" textAnchor="middle" fontFamily="sans-serif">£</text>
     </svg>
   </div>
-  <span className="flex-1 text-[11px] font-bold leading-snug text-white">
+  <span className="flex-1 text-[11px] font-bold leading-snug text-white [&>span]:hidden">
     <span className="mr-[6px] inline-block text-[#2a6dd6] drop-shadow-[0_0_8px_rgba(42,109,214,0.55)]" aria-hidden="true">→</span>
     {quoteText}
   </span>
+  <ArrowIcon className="h-[13px] w-[13px] flex-none text-[#2a6dd6] drop-shadow-[0_0_8px_rgba(42,109,214,0.55)]" />
 </a>
                                       )}
                                     </div>

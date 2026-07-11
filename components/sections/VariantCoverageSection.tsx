@@ -184,6 +184,15 @@ function getRenderableDirectoryGroups(data: ModelVariantCoverageSectionData) {
     .filter((group) => group.items.length > 0);
 }
 
+function splitDirectoryHeading(heading: string) {
+  const parts = heading
+    .split(/\s+-\s+/)
+    .map((part) => part.trim())
+    .filter(Boolean);
+
+  return parts.length ? parts : [heading];
+}
+
 export default function VariantCoverageSection({ data, brandName, modelName, documentMode = false }: Props) {
   const renderableCards = useMemo(
     () => data.cards.filter(isRenderableVariantCard),
@@ -238,6 +247,7 @@ export default function VariantCoverageSection({ data, brandName, modelName, doc
   const headingLines = data.headingLines?.length ? data.headingLines : [data.h2];
   const ui = data.ui ?? {};
   const directoryHeading = data.directory.h3.trim();
+  const directoryHeadingLines = splitDirectoryHeading(directoryHeading);
   const directoryIntro = data.directory.intro.trim();
 
   if (!renderableCards.length) {
@@ -250,9 +260,11 @@ export default function VariantCoverageSection({ data, brandName, modelName, doc
   }
 
   function renderExpandedPanel(card: VariantCard, extraClassName = "") {
+    const isAbsolutePanel = extraClassName.includes("absolute");
+
     return (
       <div
-        className={`relative overflow-hidden border-[0.5px] border-[#2969af] bg-[#0d1b2e] px-4 pb-4 pt-4 text-white shadow-[0_0_0_1px_rgba(42,109,214,1),0_0_5px_rgba(42,109,214,0.4),0_0_12px_rgba(42,109,214,0.3),0_0_20px_rgba(42,109,214,0.2),0_3px_10px_rgba(42,109,214,0.25)] before:pointer-events-none before:absolute before:inset-0 before:bg-[linear-gradient(125deg,rgba(255,255,255,0.18)_0%,rgba(255,255,255,0.05)_22%,rgba(255,255,255,0)_42%,rgba(45,107,255,0.16)_50%,rgba(255,255,255,0)_64%)] after:pointer-events-none after:absolute after:inset-x-0 after:top-0 after:h-px after:bg-gradient-to-r after:from-transparent after:via-white/70 after:to-transparent ${extraClassName}`}
+        className={`${isAbsolutePanel ? "" : "relative"} overflow-hidden border-[0.5px] border-[#2969af] bg-[#0d1b2e] px-4 pb-4 pt-4 text-white shadow-[0_0_0_1px_rgba(42,109,214,1),0_0_5px_rgba(42,109,214,0.4),0_0_12px_rgba(42,109,214,0.3),0_0_20px_rgba(42,109,214,0.2),0_3px_10px_rgba(42,109,214,0.25)] before:pointer-events-none before:absolute before:inset-0 before:bg-[linear-gradient(125deg,rgba(255,255,255,0.18)_0%,rgba(255,255,255,0.05)_22%,rgba(255,255,255,0)_42%,rgba(45,107,255,0.16)_50%,rgba(255,255,255,0)_64%)] after:pointer-events-none after:absolute after:inset-x-0 after:top-0 after:h-px after:bg-gradient-to-r after:from-transparent after:via-white/70 after:to-transparent ${extraClassName}`}
       >
         <div className="relative z-10 space-y-[10px]">
           <div className="flex items-center justify-between gap-3 rounded-[8px] border border-blue-500 bg-white/[0.03] px-3 py-3 shadow-[0_0_15px_rgba(59,130,246,0.5),inset_0_0_12px_rgba(59,130,246,0.3)] transition hover:bg-slate-800 hover:shadow-[0_0_20px_rgba(59,130,246,0.8),inset_0_0_15px_rgba(59,130,246,0.5)] sm:py-4">
@@ -277,7 +289,7 @@ export default function VariantCoverageSection({ data, brandName, modelName, doc
             <span className="flex-none text-[10px] font-semibold uppercase tracking-[0.08em] text-white/60">
               {ui.rebuiltLabel ?? "Rebuilt"}
             </span>
-            <span className="min-w-0 flex-1 truncate text-right font-['Manrope'] text-[14px] font-extrabold leading-none text-white md:text-[15px] ">
+            <span className="min-w-0 flex-1 text-right font-['Manrope'] text-[12px] font-extrabold leading-tight text-white md:text-[13px]">
               {card.priceRange}
             </span>
           </div>
@@ -287,10 +299,14 @@ export default function VariantCoverageSection({ data, brandName, modelName, doc
           href="#quote-form"
           data-quote-context={card.h3}
           data-quote-source="variant-coverage"
-          className="mt-4 inline-flex h-12 w-full items-center justify-center gap-2 rounded-xl border border-green-400 bg-slate-900 px-2 text-[13px] font-semibold text-white shadow-[0_0_15px_rgba(74,222,128,0.5),inset_0_0_12px_rgba(74,222,128,0.3)] transition hover:bg-slate-800 hover:shadow-[0_0_20px_rgba(74,222,128,0.8),inset_0_0_15px_rgba(74,222,128,0.5)]"
+          className="mt-4 inline-flex min-h-12 w-full items-center justify-between gap-2 overflow-hidden rounded-xl border border-green-400 bg-slate-900 px-3 py-2 text-white shadow-[0_0_15px_rgba(74,222,128,0.5),inset_0_0_12px_rgba(74,222,128,0.3)] transition hover:bg-slate-800 hover:shadow-[0_0_20px_rgba(74,222,128,0.8),inset_0_0_15px_rgba(74,222,128,0.5)]"
         >
-          <span>{card.cta}</span>
-          <ArrowIcon />
+          <span className="min-w-0 flex-1 text-left text-[10px] font-semibold uppercase tracking-[0.08em] leading-[1.35] text-white/85 break-words">
+            {card.cta}
+          </span>
+          <span className="shrink-0">
+            <ArrowIcon />
+          </span>
         </a>
       </div>
     );
@@ -328,7 +344,7 @@ export default function VariantCoverageSection({ data, brandName, modelName, doc
         <Container className={`max-w-[1400px] ${documentMode ? "px-0 sm:px-0 lg:px-0" : "px-2"}`}>
           <div className=" max-w-[760px] text-left">
             <div className="section-pill mb-[14px]">
-              <span>{data.tag}</span>
+              <span>{documentMode ? "Variants We Cover" : data.tag}</span>
             </div>
 
             <h2 className=" max-w-[760px] text-[30px] font-extrabold leading-[1.02] tracking-[-0.04em] text-[#0d1b2e] md:text-[40px]">
@@ -341,25 +357,25 @@ export default function VariantCoverageSection({ data, brandName, modelName, doc
                 );
               })}
             </h2>
-            <p className="mt-3 max-w-[720px] text-[14px] leading-[1.75] text-slate-600">
+            <p className="mt-3 hidden max-w-[720px] text-[14px] leading-[1.75] text-slate-600 md:block">
               {data.subheading}
             </p>
           </div>
 
           <div className="mt-6 md:mt-9">
             <div className="grid grid-cols-2 gap-3 md:hidden">
-              {mobileCardsToDisplay.map((card) => {
+              {mobileCardsToDisplay.map((card, index) => {
                 const shortName = formatVariantName(card.h3);
                 const isOpen = openCard === card.slug;
                 const animateChevron = !isOpen && !seenCards[card.slug];
                 const vehicleImage = resolveVariantVehicleImage(card);
 
                 return (
-                  <article key={card.slug} className="relative">
+                  <article key={card.slug} className={`relative ${isOpen ? "z-50" : "z-[1]"}`}>
                     <div
-                      className={`overflow-hidden rounded-[12px] border bg-white transition duration-300 ${
+                      className={`relative ${isOpen ? "overflow-visible" : "overflow-hidden"} rounded-[12px] border bg-white transition duration-300 ${
                         isOpen
-                          ? "rounded-b-none border-[#2969af] border-b-0 shadow-[0_0_0_1px_rgba(42,109,214,1),0_0_5px_rgba(42,109,214,0.4),0_0_12px_rgba(42,109,214,0.3),0_0_20px_rgba(42,109,214,0.2),0_3px_10px_rgba(42,109,214,0.25)]"
+                          ? "rounded-t-[12px] rounded-b-none border-[#2969af] border-b-0 shadow-[0_0_0_1px_rgba(42,109,214,1),0_0_5px_rgba(42,109,214,0.4),0_0_12px_rgba(42,109,214,0.3),0_0_20px_rgba(42,109,214,0.2),0_3px_10px_rgba(42,109,214,0.25)]"
                           : "border-slate-200 shadow-[0_2px_8px_rgba(13,27,46,0.05)]"
                       }`}
                     >
@@ -367,16 +383,16 @@ export default function VariantCoverageSection({ data, brandName, modelName, doc
                         type="button"
                         onClick={() => toggleCard(card.slug)}
                         aria-expanded={isOpen}
-                        className="flex min-h-[224px] w-full flex-col items-center px-3 pb-2 pt-3 text-center"
+                        className="flex min-h-[224px] w-full flex-col items-center px-3 pb-2 pt-2 text-center"
                       >
-                        <div className="flex min-h-[72px] w-full items-center justify-center">
-                          <div className="relative h-[66px] w-full max-w-[118px]">
+                        <div className="flex min-h-[86px] w-full items-center justify-center py-[1px]">
+                          <div className="relative h-[84px] w-full max-w-[132px]">
                             <Image
                               src={vehicleImage}
                               alt={shortName}
                               fill
                               className="object-contain"
-                              sizes="118px"
+                              sizes="132px"
                             />
                           </div>
                         </div>
@@ -388,7 +404,7 @@ export default function VariantCoverageSection({ data, brandName, modelName, doc
                           <p className="mt-2 min-h-[28px] text-[10px] font-semibold leading-[1.4] text-[#4b5563]">
                             {normalizeVariantSubtitle(card.subtitle)}
                           </p>
-                          <p className="mt-4 font-['Manrope'] text-[13px] font-semibold leading-none text-[#374151]">
+                          <p className="mt-2 font-['Manrope'] text-[12.5px] font-semibold leading-tight text-[#374151]">
                             Rebuilt: {card.priceRange}
                           </p>
                         </div>
@@ -397,9 +413,14 @@ export default function VariantCoverageSection({ data, brandName, modelName, doc
                           <ChevronIcon open={isOpen} animated={animateChevron} />
                         </span>
                       </button>
-                    </div>
 
-                    {isOpen ? renderExpandedPanel(card, "rounded-b-[12px] border-t-0") : null}
+                      {isOpen
+                        ? renderExpandedPanel(
+                            card,
+                            "absolute left-[-1px] right-[-1px] top-full z-50 rounded-b-[12px] border-t-0",
+                          )
+                        : null}
+                    </div>
                   </article>
                 );
               })}
@@ -487,7 +508,7 @@ export default function VariantCoverageSection({ data, brandName, modelName, doc
                 <button
                   type="button"
                   onClick={() => setShowAllCards((prev) => !prev)}
-                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-slate-900 px-6 py-3 text-[14px] font-semibold text-white border border-green-400 shadow-[0_0_15px_rgba(74,222,128,0.5),inset_0_0_12px_rgba(74,222,128,0.3)] transition hover:shadow-[0_0_20px_rgba(74,222,128,0.8),inset_0_0_15px_rgba(74,222,128,0.5)] hover:bg-slate-800"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl border border-[#2d6bff] bg-slate-900 px-6 py-3 text-[14px] font-semibold text-white shadow-[0_0_15px_rgba(45,107,255,0.55),inset_0_0_12px_rgba(45,107,255,0.28)] transition hover:bg-slate-800 hover:shadow-[0_0_20px_rgba(45,107,255,0.85),inset_0_0_15px_rgba(45,107,255,0.45)]"
                 >
                   {showAllCards ? "View Less" : "View More"}
                   <ChevronIcon open={showAllCards} animated={false} />
@@ -508,21 +529,47 @@ export default function VariantCoverageSection({ data, brandName, modelName, doc
                   <BookIcon />
                   <span>{data.directory.label ?? "Variant Directory"}</span>
                 </div>
-                {directoryHeading ? (
-                  <h3 className="mt-3 text-[24px] font-extrabold tracking-[-0.03em] text-[#0d1b2e]">
-                    {directoryHeading}
-                  </h3>
-                ) : null}
               </div>
               <span className={`flex-shrink-0 mt-2 text-[#15803d] transition-transform duration-300 ${isDirectoryOpen ? 'rotate-180' : ''}`}>
                 <ChevronIcon open={isDirectoryOpen} animated={false} />
               </span>
             </button>
 
+            {!isDirectoryOpen && data.closing ? (
+              <div className="mt-4 flex items-start gap-2">
+                <svg
+                  className="mt-[3px] h-4 w-4 flex-shrink-0 text-slate-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+                <p className="text-[12.5px] leading-[1.65] text-slate-600">
+                  {data.closing}
+                </p>
+              </div>
+            ) : null}
+
             {isDirectoryOpen && (
               <div className="animate-fade-in-down mt-4 max-h-[calc(100vh-10rem)] overflow-y-auto pr-4 scroll-smooth overscroll-contain md:mt-0 md:max-h-none md:overflow-visible md:pr-0">
+                {directoryHeading ? (
+                  <h3 className="text-[22px] font-extrabold leading-[1.05] tracking-[-0.03em] text-[#0d1b2e] md:text-[24px]">
+                    {directoryHeadingLines.map((line, index) => (
+                      <span key={`${line}-${index}`} className="block">
+                        {line}
+                      </span>
+                    ))}
+                  </h3>
+                ) : null}
+
                 {directoryIntro ? (
-                  <p className="max-w-[900px] text-[13px] leading-[1.7] text-slate-600">{directoryIntro}</p>
+                  <p className="mt-4 max-w-[900px] text-[13px] leading-[1.7] text-slate-600">{directoryIntro}</p>
                 ) : null}
 
                 <div className="mt-5 grid gap-3 lg:grid-cols-3">
@@ -563,30 +610,30 @@ export default function VariantCoverageSection({ data, brandName, modelName, doc
                     </article>
                   ))}
                 </div>
+
+                {data.closing ? (
+                  <div className="mt-4 flex items-start gap-2">
+                    <svg
+                      className="mt-[3px] h-4 w-4 flex-shrink-0 text-slate-600"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                    <p className="text-[12.5px] leading-[1.65] text-slate-600">
+                      {data.closing}
+                    </p>
+                  </div>
+                ) : null}
               </div>
             )}
           </div>
-
-          {data.closing ? (
-  <div className="mt-4 flex items-center gap-2">
-    <svg
-      className="h-4 w-4 flex-shrink-0 text-slate-600"
-      fill="none"
-      stroke="currentColor"
-      viewBox="0 0 24 24"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={2}
-        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-      />
-    </svg>
-    <p className="text-[13px] leading-[1.75] text-slate-600">
-      {data.closing}
-    </p>
-  </div>
-) : null}
         </Container>
       </Section>
     </>
