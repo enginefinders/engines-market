@@ -117,7 +117,13 @@ function EngineWatermark() {
 }
 
 const carIcons = [CarIconOne, CarIconTwo, CarIconThree];
-const bottomBarItems = [
+type BottomBarItem = {
+  src: string;
+  text: string;
+  cropRight?: boolean;
+};
+
+const bottomBarItems: BottomBarItem[] = [
   { src: "/icons/engine-market/light-green-instant-quote.png", text: "Instant engine replacement quote - 100% free, no obligation" },
   { src: "/icons/engine-market/light-green-pound.png", text: "Engine replacement near me - UK-wide specialist network" },
   { src: "/icons/engine-market/light-green-pound.png", text: "Compare reconditioned, rebuilt & used engine prices" },
