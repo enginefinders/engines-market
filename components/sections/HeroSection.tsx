@@ -135,27 +135,27 @@ function getTrustBadgeIcon(label: string): DecorativeIconConfig {
 
   if (normalized.includes("nationwide") || normalized.includes("delivery") || normalized.includes("uk-wide")) {
     return {
-      src: "/icons/engine-market/dark-blue-nationwide-delivery.png",
+      src: "/icons/engine-market/white-nationwide-delivery.png",
       className: "h-[18px] w-[30px] object-contain md:h-[20px] md:w-[34px]",
     };
   }
 
   if (normalized.includes("supplier")) {
     return {
-      src: "/icons/engine-market/dark-blue-vetted-specialists.png",
+      src: "/icons/engine-market/white-vetted-specialists.png",
       className: "h-[18px] w-[24px] object-contain md:h-[20px] md:w-[28px]",
     };
   }
 
   if (normalized.includes("warranty")) {
     return {
-      src: "/icons/engine-market/dark-blue-warranty.png",
+      src: "/icons/engine-market/white-warranty.png",
       className: "h-[18px] w-[18px] object-contain md:h-[20px] md:w-[20px]",
     };
   }
 
   return {
-    src: "/icons/engine-market/dark-blue-supply-fit.png",
+    src: "/icons/engine-market/white-supply-fit.png",
     className: "h-[18px] w-[18px] object-contain md:h-[20px] md:w-[20px]",
   };
 }
