@@ -369,13 +369,14 @@ export default function VariantCoverageSection({ data, brandName, modelName, doc
                 const isOpen = openCard === card.slug;
                 const animateChevron = !isOpen && !seenCards[card.slug];
                 const vehicleImage = resolveVariantVehicleImage(card);
+                const opensUpward = index >= mobileCardsToDisplay.length - 2;
 
                 return (
                   <article key={card.slug} className={`relative ${isOpen ? "z-50" : "z-[1]"}`}>
                     <div
                       className={`relative ${isOpen ? "overflow-visible" : "overflow-hidden"} rounded-[12px] border bg-white transition duration-300 ${
                         isOpen
-                          ? "rounded-t-[12px] rounded-b-none border-[#2969af] border-b-0 shadow-[0_0_0_1px_rgba(42,109,214,1),0_0_5px_rgba(42,109,214,0.4),0_0_12px_rgba(42,109,214,0.3),0_0_20px_rgba(42,109,214,0.2),0_3px_10px_rgba(42,109,214,0.25)]"
+                          ? `${opensUpward ? "rounded-b-[12px] rounded-t-none border-t-0" : "rounded-t-[12px] rounded-b-none border-b-0"} border-[#2969af] shadow-[0_0_0_1px_rgba(42,109,214,1),0_0_5px_rgba(42,109,214,0.4),0_0_12px_rgba(42,109,214,0.3),0_0_20px_rgba(42,109,214,0.2),0_3px_10px_rgba(42,109,214,0.25)]`
                           : "border-slate-200 shadow-[0_2px_8px_rgba(13,27,46,0.05)]"
                       }`}
                     >
@@ -383,7 +384,7 @@ export default function VariantCoverageSection({ data, brandName, modelName, doc
                         type="button"
                         onClick={() => toggleCard(card.slug)}
                         aria-expanded={isOpen}
-                        className="flex min-h-[224px] w-full flex-col items-center px-3 pb-2 pt-2 text-center"
+                        className="flex h-[224px] w-full flex-col items-center px-3 pb-2 pt-2 text-center"
                       >
                         <div className="flex min-h-[86px] w-full items-center justify-center py-[1px]">
                           <div className="relative h-[84px] w-full max-w-[132px]">
@@ -417,7 +418,9 @@ export default function VariantCoverageSection({ data, brandName, modelName, doc
                       {isOpen
                         ? renderExpandedPanel(
                             card,
-                            "absolute left-[-1px] right-[-1px] top-full z-50 rounded-b-[12px] border-t-0",
+                            opensUpward
+                              ? "absolute bottom-full left-[-1px] right-[-1px] z-50 rounded-t-[12px] border-b-0"
+                              : "absolute left-[-1px] right-[-1px] top-full z-50 rounded-b-[12px] border-t-0",
                           )
                         : null}
                     </div>

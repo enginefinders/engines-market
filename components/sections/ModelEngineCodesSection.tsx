@@ -438,7 +438,7 @@ export default function ModelEngineCodesSection({ data, guide, modelName, strict
                         >
                           <button
                             className={`w-full border border-[#dfe7ef] rounded-[20px] bg-white shadow-[0_12px_30px_rgba(12,29,53,0.06)] grid items-center gap-[10px] text-left text-inherit cursor-pointer transition-all duration-200 hover:bg-[#fbfdff] ${selected
-                              ? "grid-cols-[minmax(0,1fr)_16px] min-h-[60px] items-center py-[11px] px-[14px] rounded-t-[14px] rounded-b-none border-[#b8cadb] shadow-[0_10px_22px_rgba(16,39,68,0.08)] bg-[linear-gradient(180deg,#ffffff_0%,#fbfdff_100%)] max-[720px]:min-h-[58px] max-[720px]:py-[11px] max-[720px]:px-[16px] max-[720px]:rounded-t-[12px]"
+                              ? "grid-cols-[16px_minmax(0,1fr)_16px] h-[60px] items-center py-0 px-[14px] rounded-t-[14px] rounded-b-none border-[#b8cadb] shadow-[0_10px_22px_rgba(16,39,68,0.08)] bg-[linear-gradient(180deg,#ffffff_0%,#fbfdff_100%)] max-[720px]:h-[56px] max-[720px]:py-0 max-[720px]:px-[16px] max-[720px]:rounded-t-[12px]"
                               : "grid-cols-[54px_minmax(0,1fr)_minmax(122px,150px)_16px] min-h-[76px] py-[14px] px-[16px] max-[720px]:grid-cols-[44px_minmax(0,1fr)_minmax(104px,122px)_14px] max-[720px]:gap-[8px] max-[720px]:min-h-[72px] max-[720px]:rounded-[18px] max-[720px]:px-[12px] max-[720px]:py-[12px]"
                               }`}
                             type="button"
@@ -450,10 +450,11 @@ export default function ModelEngineCodesSection({ data, guide, modelName, strict
                                 <EngineIcon className="w-[22px] h-[22px] max-[720px]:w-[19px] max-[720px]:h-[19px]" />
                               </span>
                             )}
+                            {selected && <span aria-hidden="true" className="block h-4 w-4" />}
 
-                            <span className="min-w-0">
+                            <span className={`min-w-0 ${selected ? "flex h-full items-center justify-center self-stretch text-center" : ""}`}>
                               {selected ? (
-                                <span className="block text-[#10203a] text-[18px] font-extrabold leading-[1.2] tracking-[-0.03em] max-[720px]:text-[16px]">{accordionHeading}</span>
+                                <span className="flex h-full items-center justify-center text-center text-[#10203a] text-[18px] font-extrabold leading-[1.15] tracking-[-0.03em] max-[720px]:text-[16px]">{accordionHeading}</span>
                               ) : (
                                 <span className="block">
                                   <strong className="block font-[Consolas,'SFMono-Regular',monospace] text-[20px] leading-[1] tracking-[-0.05em] text-[#10203a] max-[720px]:text-[18px]">{summaryCode}</strong>
@@ -613,7 +614,7 @@ export default function ModelEngineCodesSection({ data, guide, modelName, strict
                                     <div className="grid grid-cols-2 gap-[8px] pt-[4px] max-[720px]:pt-[8px]">
                                       <section className="border border-[#dfe7ef] rounded-[7px] bg-white py-[4px] px-[9px] pb-[4px]">
                                         {ui.specsTitle && (
-                                          <h4 className="mb-[3px] flex items-center gap-[8px] text-[11px] font-semibold tracking-[-0.02em] text-[#10203a] max-[720px]:mb-[6px]">
+                                          <h4 className="mb-[3px] flex items-center gap-[8px] text-[10px] font-[400] leading-[1.15] tracking-[-0.02em] text-[#10203a] max-[720px]:mb-[6px] max-[720px]:text-[10px]" style={{ fontWeight: 400 }}>
                                             <span className="w-[24px] h-[24px] rounded-[10px] grid place-items-center flex-shrink-0 bg-[#eef5fb] text-[#274564] max-[720px]:hidden">
                                               <SpecsIcon />
                                             </span>
@@ -650,7 +651,7 @@ export default function ModelEngineCodesSection({ data, guide, modelName, strict
 
                                       <section className="border border-[#dfe7ef] rounded-[7px] bg-white py-[4px] px-[9px] pb-[4px]">
                                         {ui.failuresTitle && (
-                                          <h4 className="mb-[3px] flex items-center gap-[8px] text-[11px] font-semibold tracking-[-0.02em] text-[#10203a] max-[720px]:mb-[6px]">
+                                          <h4 className="mb-[3px] flex items-center gap-[8px] text-[10px] font-[400] leading-[1.15] tracking-[-0.02em] text-[#10203a] max-[720px]:mb-[6px] max-[720px]:text-[10px]" style={{ fontWeight: 400 }}>
                                             <span className="w-[24px] h-[24px] rounded-[10px] grid place-items-center flex-shrink-0 bg-[#fff2f2] text-[#c73a3a] max-[720px]:hidden">
                                               <WarningIcon />
                                             </span>

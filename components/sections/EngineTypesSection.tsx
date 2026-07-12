@@ -274,10 +274,7 @@ function MobileEngineTypeStack({
   onSelect: (index: number) => void;
   priceLabel: string;
 }) {
-  const orderedIndexes = [
-    ...types.map((_, index) => index).filter((index) => index !== activeIndex),
-    activeIndex,
-  ].filter((index) => index >= 0 && index < types.length);
+  const orderedIndexes = types.map((_, index) => index).filter((index) => index >= 0 && index < types.length);
 
   return (
     <div className="mt-[18px] md:hidden">
@@ -290,8 +287,10 @@ function MobileEngineTypeStack({
           const frontDescription = fullText(type.frontDescription || type.description);
           const backDescription = fullText(type.backDescription || type.description);
           const backBullets = type.backBullets?.map((bullet) => fullText(bullet)).filter(Boolean) ?? [];
-          const offsetX = active ? 42 : Math.min(stackIndex * 14, 52);
-          const widthTrim = active ? 42 : 42;
+          const previousIsActive = stackIndex > 0 && orderedIndexes[stackIndex - 1] === activeIndex;
+          const lastInactive = stackIndex === orderedIndexes.length - 1 && !active;
+          const offsetX = Math.min(stackIndex * 14, 52);
+          const widthTrim = 42;
           const rotate = 0;
 
           return (
@@ -299,7 +298,7 @@ function MobileEngineTypeStack({
               key={type.title}
               className={`relative transition-all duration-300 ${active ? "z-30" : "z-10"}`}
               style={{
-                marginTop: stackIndex === 0 ? 0 : -54,
+                marginTop: stackIndex === 0 ? 0 : previousIsActive ? 8 : -54,
                 transform: `translateX(${offsetX}px) rotate(${rotate}deg)`,
                 width: `calc(100% - ${widthTrim}px)`,
               }}
@@ -317,7 +316,7 @@ function MobileEngineTypeStack({
                 className={`w-full rounded-[8px] border bg-white text-left shadow-[0_10px_24px_rgba(13,27,46,0.08)] transition-all duration-300 ${
                   active
                     ? "border-[#2D6BFF] bg-white shadow-[0_0_0_1px_rgba(45,107,255,0.38),0_0_22px_rgba(45,107,255,0.2),0_16px_36px_rgba(13,27,46,0.16)]"
-                    : "min-h-[112px] border-[#d8e6f5] bg-[linear-gradient(180deg,#ffffff_0%,#edf7ff_100%)] opacity-[0.98] shadow-[0_8px_18px_rgba(13,27,46,0.07)] hover:border-[#93c5fd]"
+                    : `${lastInactive ? "min-h-0" : "min-h-[112px]"} border-[#d8e6f5] bg-[linear-gradient(180deg,#ffffff_0%,#edf7ff_100%)] opacity-[0.98] shadow-[0_8px_18px_rgba(13,27,46,0.07)] hover:border-[#93c5fd]`
                 }`}
                 aria-expanded={active}
               >

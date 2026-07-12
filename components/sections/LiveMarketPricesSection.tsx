@@ -258,12 +258,12 @@ export default function LiveMarketPricesSection({
           </div>
 
           {/* Right Table Container */}
-          <div className="rounded-2xl border border-white/10 bg-gradient-to-br from-[#0b1a2e] via-[#0f2035] to-[#0a1628] shadow-[0_10px_28px_rgba(0,0,0,0.4)] w-full overflow-hidden flex flex-col h-[600px] lg:h-[700px]">
+          <div className="rounded-[8px] border border-white/10 bg-gradient-to-br from-[#0b1a2e] via-[#0f2035] to-[#0a1628] shadow-[0_10px_28px_rgba(0,0,0,0.4)] w-full overflow-hidden flex flex-col h-[600px] lg:h-[700px] md:rounded-[14px]">
             
             {/* Header/Nav */}
             {!isDocumentMode && filterTabs.length ? (
               <nav className="relative z-10 mb-4 flex-shrink-0" aria-label="Filter live engine data by brand">
-                <div className="rounded-t-xl bg-[#0d1f3c] shadow-[0_10px_24px_rgba(13,31,60,0.15)]">
+                <div className="rounded-t-[8px] bg-[#0d1f3c] shadow-[0_10px_24px_rgba(13,31,60,0.15)] md:rounded-t-xl">
                   <div className="flex items-center gap-1 px-2 py-2">
                     <div className="flex min-w-0 flex-1 items-center gap-1 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
                       {pinnedTabs.map((tab) => {
@@ -324,7 +324,7 @@ export default function LiveMarketPricesSection({
                 </div>
               </nav>
             ) : isDocumentMode ? (
-              <div className="rounded-t-xl bg-[#0d1f3c] px-4 py-3 flex-shrink-0 shadow-[0_10px_24px_rgba(13,31,60,0.15)]">
+              <div className="rounded-t-[8px] bg-[#0d1f3c] px-4 py-3 flex-shrink-0 shadow-[0_10px_24px_rgba(13,31,60,0.15)] md:rounded-t-xl">
                 <div className="text-[12px] font-bold uppercase tracking-[0.08em] text-[#2563eb] drop-shadow-[0_0_10px_rgba(37,99,235,0.8),0_0_20px_rgba(37,99,235,0.4)] flex items-center gap-2">
                   <GiNetworkBars /> Average Market Prices
                 </div>
