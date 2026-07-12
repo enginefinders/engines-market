@@ -7,13 +7,8 @@ import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
 import {
   TbArrowRight,
-  TbEngine,
   TbRefresh,
-  TbSettings,
   TbShieldCheck,
-  TbTool,
-  TbTools,
-  TbTruck,
 } from "react-icons/tb";
 
 type Props = {
@@ -89,15 +84,19 @@ function isFeaturedCard(title: string) {
   return title.toLowerCase().includes("rebuilt");
 }
 
+function DesignerIcon({ src, alt = "" }: { src: string; alt?: string }) {
+  return <img src={src} alt={alt} className="h-8 w-8 object-contain" loading="lazy" />;
+}
+
 function getTypeIcon(title: string) {
   const normalized = title.toLowerCase();
 
-  if (normalized.includes("remanufactured")) return <TbEngine className="h-6 w-6" />;
-  if (normalized.includes("supply")) return <TbTruck className="h-6 w-6" />;
-  if (normalized.includes("used")) return <TbTool className="h-6 w-6" />;
-  if (normalized.includes("refurbished")) return <TbTools className="h-6 w-6" />;
-  if (normalized.includes("rebuilt")) return <TbSettings className="h-6 w-6" />;
-  return <TbEngine className="h-6 w-6" />;
+  if (normalized.includes("remanufactured")) return <DesignerIcon src="/icons/engine-market/type-remanufactured.png" />;
+  if (normalized.includes("supply")) return <DesignerIcon src="/icons/engine-market/type-supply-fit.png" />;
+  if (normalized.includes("used")) return <DesignerIcon src="/icons/engine-market/type-used.png" />;
+  if (normalized.includes("refurbished")) return <DesignerIcon src="/icons/engine-market/type-refurbished.png" />;
+  if (normalized.includes("rebuilt")) return <DesignerIcon src="/icons/engine-market/type-rebuilt.png" />;
+  return <DesignerIcon src="/icons/engine-market/type-reconditioned.png" />;
 }
 
 function FlipCard({
@@ -436,8 +435,16 @@ export default function EngineTypesSection({
   sectionId,
   documentMode = false,
 }: Props) {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-  const [activeMobileCard, setActiveMobileCard] = useState(0);
+  const isDocumentMode = displayMode === "document";
+  const useFullBleedDocumentLayout = documentMode || isDocumentMode;
+  const lastCardIndex = data.types.length - 1;
+  const defaultModelCardIndex = lastCardIndex >= 0 ? lastCardIndex : 0;
+  const [openIndex, setOpenIndex] = useState<number | null>(() =>
+    useFullBleedDocumentLayout && lastCardIndex >= 0 ? lastCardIndex : null,
+  );
+  const [activeMobileCard, setActiveMobileCard] = useState(() =>
+    useFullBleedDocumentLayout ? defaultModelCardIndex : 0,
+  );
   const [isClosingExpanded, setIsClosingExpanded] = useState(false);
   const [uniformHeight, setUniformHeight] = useState(228);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -447,8 +454,6 @@ export default function EngineTypesSection({
   const closingText = normalizeClosingCopy(data.closing);
   const ui = data.ui ?? {};
   const closingCard = data.closingCard ?? {};
-  const isDocumentMode = displayMode === "document";
-  const useFullBleedDocumentLayout = documentMode || isDocumentMode;
 
   useEffect(() => {
     const calculateMaxHeight = () => {
@@ -465,6 +470,19 @@ export default function EngineTypesSection({
       clearTimeout(timeoutId);
     };
   }, [data.types, openIndex]);
+
+  const handleMobileSelect = (index: number) => {
+    setActiveMobileCard(index);
+
+    if (useFullBleedDocumentLayout) {
+      setOpenIndex(index);
+    }
+  };
+
+  const handleFlipToggle = (index: number) => {
+    setOpenIndex((current) => (current === index ? null : index));
+    setActiveMobileCard(index);
+  };
 
   return (
     <Section id={sectionId} className="relative overflow-hidden bg-[#f8fafc]">
@@ -529,7 +547,7 @@ export default function EngineTypesSection({
         <MobileEngineTypeStack
           types={data.types}
           activeIndex={activeMobileCard}
-          onSelect={setActiveMobileCard}
+          onSelect={handleMobileSelect}
           priceLabel={isDocumentMode ? (ui.priceLabel || "") : (ui.priceLabel ?? "Typical price range")}
         />
 
@@ -544,7 +562,7 @@ export default function EngineTypesSection({
               <FlipCard
                 type={type}
                 open={openIndex === index}
-                onToggle={() => setOpenIndex((current) => (current === index ? null : index))}
+                onToggle={() => handleFlipToggle(index)}
                 backActionLabel={isDocumentMode ? (ui.backActionLabel || "") : (ui.backActionLabel ?? "Flip back")}
                 priceLabel={isDocumentMode ? (ui.priceLabel || "") : (ui.priceLabel ?? "Typical price range")}
                 uniformHeight={uniformHeight}

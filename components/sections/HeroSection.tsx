@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useMemo, type FormEvent } from "react";
+import { useState, useMemo, type CSSProperties, type FormEvent } from "react";
 import Container from "@/components/ui/Container";
 import { getModelHref } from "@/lib/modelRoutes";
 import type { HeroSectionData, ModelsSectionData } from "@/types/brand";
@@ -23,60 +23,6 @@ type HeroSectionProps = {
   tagOverride?: string;
   disclaimerMode?: "accordion" | "icon";
 };
-
-function ToolIcon({ className }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 24 24" className={`h-[15px] w-[15px] ${className || ""}`} fill="none" aria-hidden="true">
-      <path
-        d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
-function ShieldIcon({ className }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 24 24" className={`h-[15px] w-[15px] ${className || ""}`} fill="none" aria-hidden="true">
-      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" strokeWidth="2" />
-      <path d="m9 12 2 2 4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
-
-function DeliveryIcon({ className }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 24 24" className={`h-[15px] w-[15px] ${className || ""}`} fill="none" aria-hidden="true">
-      <rect x="1" y="3" width="15" height="13" rx="1" stroke="currentColor" strokeWidth="2" />
-      <path d="M16 8h4l3 5v4h-7V8z" stroke="currentColor" strokeWidth="2" />
-      <circle cx="5.5" cy="18.5" r="2.5" stroke="currentColor" strokeWidth="2" />
-      <circle cx="18.5" cy="18.5" r="2.5" stroke="currentColor" strokeWidth="2" />
-    </svg>
-  );
-}
-
-function UsersIcon({ className }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 24 24" className={`h-[15px] w-[15px] ${className || ""}`} fill="none" aria-hidden="true">
-      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" strokeWidth="2" />
-      <circle cx="9" cy="7" r="4" stroke="currentColor" strokeWidth="2" />
-      <path d="M23 21v-2a4 4 0 0 0-3-3.87" stroke="currentColor" strokeWidth="2" />
-      <path d="M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" strokeWidth="2" />
-    </svg>
-  );
-}
-
-function LockIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-[13px] w-[13px]" fill="none" aria-hidden="true">
-      <rect x="3" y="11" width="18" height="11" rx="2" ry="2" stroke="currentColor" strokeWidth="2" />
-      <path d="M7 11V7a5 5 0 0 1 10 0v4" stroke="currentColor" strokeWidth="2" />
-    </svg>
-  );
-}
 
 function UkFlagIcon() {
   return (
@@ -170,92 +116,58 @@ function EngineWatermark() {
   );
 }
 
-function LightningIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-5 w-5 flex-none" fill="none" aria-hidden="true">
-      <path
-        d="M13 2L4.5 13.5H11L10 22l9.5-12H13V2z"
-        stroke="#15803d"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
-function LocationIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-5 w-5 flex-none" fill="none" aria-hidden="true">
-      <path d="M12 2C8.7 2 6 4.7 6 8c0 4.5 6 12 6 12s6-7.5 6-12c0-3.3-2.7-6-6-6z" stroke="#15803d" strokeWidth="1.5" />
-      <circle cx="12" cy="8" r="2" stroke="#15803d" strokeWidth="1.5" />
-    </svg>
-  );
-}
-
-function PoundIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-5 w-5 flex-none" fill="none" aria-hidden="true">
-      <path d="M8 18h8" stroke="#15803d" strokeWidth="1.5" strokeLinecap="round" />
-      <path d="M7 14h7" stroke="#15803d" strokeWidth="1.5" strokeLinecap="round" />
-      <path d="M9 14V9.5C9 7.6 10.6 6 12.5 6 14.4 6 16 7.6 16 9.5" stroke="#15803d" strokeWidth="1.5" strokeLinecap="round" />
-    </svg>
-  );
-}
-
-function WrenchIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-5 w-5 flex-none" fill="none" aria-hidden="true">
-      <path
-        d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
-        stroke="#15803d"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
-function ShieldCheckIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-5 w-5 flex-none" fill="none" aria-hidden="true">
-      <path
-        d="M12 3L4 7v5c0 4.8 3.4 9.3 8 10.3C16.6 21.3 20 16.8 20 12V7L12 3z"
-        stroke="#15803d"
-        strokeWidth="1.5"
-        strokeLinejoin="round"
-      />
-      <path d="M9 12l2 2 4-4" stroke="#15803d" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
-
-function BottomBarIcon({ type }: { type: string }) {
-  switch (type) {
-    case "lightning":
-      return <LightningIcon />;
-    case "location":
-      return <LocationIcon />;
-    case "pound":
-      return <PoundIcon />;
-    case "wrench":
-      return <WrenchIcon />;
-    case "shield":
-      return <ShieldCheckIcon />;
-    default:
-      return null;
-  }
-}
-
-const badgeIcons = [ToolIcon, ShieldIcon, DeliveryIcon, UsersIcon];
 const carIcons = [CarIconOne, CarIconTwo, CarIconThree];
 const bottomBarItems = [
-  { icon: "lightning", text: "Instant engine replacement quote - 100% free, no obligation" },
-  { icon: "location", text: "Engine replacement near me - UK-wide specialist network" },
-  { icon: "pound", text: "Compare reconditioned, rebuilt & used engine prices" },
-  { icon: "wrench", text: "Supply & fit available - parts and labour from vetted specialists" }
+  { src: "/icons/engine-market/how-get-quote.png", text: "Instant engine replacement quote - 100% free, no obligation" },
+  { src: "/icons/engine-market/trust-uk-coverage.png", text: "Engine replacement near me - UK-wide specialist network", cropRight: true },
+  { src: "/icons/engine-market/how-compare-prices.png", text: "Compare reconditioned, rebuilt & used engine prices" },
+  { src: "/icons/engine-market/type-supply-fit.png", text: "Supply & fit available - parts and labour from vetted specialists" },
 ];
+
+type DecorativeIconConfig = {
+  src: string;
+  className: string;
+  style?: CSSProperties;
+};
+
+function getTrustBadgeIcon(label: string): DecorativeIconConfig {
+  const normalized = label.toLowerCase();
+
+  if (normalized.includes("nationwide") || normalized.includes("delivery") || normalized.includes("uk-wide")) {
+    return {
+      src: "/icons/engine-market/trust-uk-coverage.png",
+      className: "h-[18px] w-[30px] object-cover md:h-[20px] md:w-[34px]",
+      style: { objectPosition: "right center" },
+    };
+  }
+
+  if (normalized.includes("supplier")) {
+    return {
+      src: "/icons/engine-market/trust-supplier-verification.png",
+      className: "h-[18px] w-[22px] object-contain md:h-[20px] md:w-[24px]",
+    };
+  }
+
+  if (normalized.includes("warranty")) {
+    return {
+      src: "/icons/engine-market/trust-verification.png",
+      className: "h-[18px] w-[18px] object-contain md:h-[20px] md:w-[20px]",
+    };
+  }
+
+  return {
+    src: "/icons/engine-market/type-supply-fit.png",
+    className: "h-[18px] w-[18px] object-contain md:h-[20px] md:w-[20px]",
+  };
+}
+
+function DecorativeIcon({
+  src,
+  className,
+  style,
+}: DecorativeIconConfig) {
+  return <img src={src} alt="" aria-hidden="true" className={className} style={style} loading="eager" />;
+}
 
 function splitHeadline(title: string) {
   const normalizedTitle = title.replace(/[–—]/g, "-");
@@ -268,21 +180,6 @@ function splitHeadline(title: string) {
     lead: match[1].trim(),
     accent: match[2].trim(),
   };
-}
-
-function getTickerItems(ticker: string) {
-  return ticker
-    .split(/\s+-\s+/)
-    .map((item) => item.trim())
-    .filter(Boolean);
-}
-
-function buildTickerLoop(items: string[]) {
-  if (!items.length) {
-    return [];
-  }
-
-  return Array.from({ length: 4 }, () => items).flat();
 }
 
 function inferBrandName(data: HeroSectionData) {
@@ -535,17 +432,16 @@ export default function HeroSection({
 
           <div className="mt-[18px] grid min-w-0 grid-cols-4 gap-1.5 md:mt-6 md:flex md:flex-wrap lg:flex-nowrap lg:overflow-x-auto lg:pb-1 [&::-webkit-scrollbar]:hidden">
             {data.trustBadges.slice(0, 4).map((badge, index) => {
-              const Icon = badgeIcons[index] ?? ShieldIcon;
+              const badgeIcon = getTrustBadgeIcon(badge);
 
               return (
                 <div
-                  key={badge}
+                  key={`${badge}-${index}`}
                   className="flex flex-col items-center justify-center gap-1 rounded-lg bg-[#13253f] px-2 py-2 text-[11px] font-semibold text-white md:flex-row md:items-center md:justify-start md:px-[14px] md:py-[9px] md:text-[12.5px]"
                 >
-                  {/* Added flex-shrink-0 and fixed size to icon so it doesn't squish */}
-                  <Icon className="w-4 h-4 flex-shrink-0" />
-
-                  {/* Removed whitespace-nowrap so text wraps exactly like in your screenshot */}
+                  <div className="flex min-h-5 items-center justify-center">
+                    <DecorativeIcon {...badgeIcon} />
+                  </div>
                   <span className="leading-tight text-center md:text-left">{badge}</span>
                 </div>
               );
@@ -817,7 +713,11 @@ export default function HeroSection({
                   className="flex h-14 flex-none items-center gap-[10px] border-r border-r-white/10 px-6 text-[12px] leading-[1.4] text-white/80"
                   style={{ fontFamily: "Inter, sans-serif" }}
                 >
-                  <BottomBarIcon type={item.icon} />
+                  <DecorativeIcon
+                    src={item.src}
+                    className={`flex-none object-contain ${item.cropRight ? "h-7 w-[42px] object-cover" : "h-7 w-7"}`}
+                    style={item.cropRight ? { objectPosition: "right center" } : undefined}
+                  />
                   <span>{item.text}</span>
                 </span>
               ))}
@@ -834,7 +734,11 @@ export default function HeroSection({
                 className="flex h-12 flex-none items-center gap-[8px] border-r border-r-white/10 px-5 text-[12px] text-white/80"
                 style={{ fontFamily: "Inter, sans-serif" }}
               >
-                <BottomBarIcon type={item.icon} />
+                <DecorativeIcon
+                  src={item.src}
+                  className={`flex-none object-contain ${item.cropRight ? "h-6 w-9 object-cover" : "h-6 w-6"}`}
+                  style={item.cropRight ? { objectPosition: "right center" } : undefined}
+                />
                 <span>{item.text}</span>
               </span>
             ))}

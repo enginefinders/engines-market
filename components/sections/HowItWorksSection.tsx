@@ -28,60 +28,6 @@ function TickIcon() {
   );
 }
 
-function MedalIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-[22px] w-[22px]" fill="none" aria-hidden="true">
-      <circle cx="12" cy="14" r="5" stroke="currentColor" strokeWidth="1.8" />
-      <path d="M8.21 13.89 7 23l5-3 5 3-1.21-9.12" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M15 7a3 3 0 1 0-6 0" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-    </svg>
-  );
-}
-
-function WarrantyIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-[15px] w-[15px]" fill="none" aria-hidden="true">
-      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
-
-function WrenchIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-[15px] w-[15px]" fill="none" aria-hidden="true">
-      <path
-        d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
-function TruckIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-[15px] w-[15px]" fill="none" aria-hidden="true">
-      <rect x="1" y="3" width="15" height="13" rx="1" stroke="currentColor" strokeWidth="2" />
-      <path d="M16 8h4l3 3v5h-7V8z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-      <circle cx="5.5" cy="18.5" r="2.5" stroke="currentColor" strokeWidth="2" />
-      <circle cx="18.5" cy="18.5" r="2.5" stroke="currentColor" strokeWidth="2" />
-    </svg>
-  );
-}
-
-function UsersIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-[15px] w-[15px]" fill="none" aria-hidden="true">
-      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-      <circle cx="9" cy="7" r="4" stroke="currentColor" strokeWidth="2" />
-      <path d="M23 21v-2a4 4 0 0 0-3-3.87" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-      <path d="M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-    </svg>
-  );
-}
-
 function splitTagline(tagline: string) {
   const normalized = tagline.replace(/[–—]/g, "-");
   const parts = normalized.split("-");
@@ -106,23 +52,66 @@ function splitHeading(title: string) {
     .filter(Boolean);
 }
 
+function trustIconForLabel(label: string) {
+  const normalized = label.toLowerCase();
+
+  if (normalized.includes("nationwide") || normalized.includes("delivery") || normalized.includes("uk-wide")) {
+    return {
+      src: "/icons/engine-market/trust-uk-coverage.png",
+      className: "h-[18px] w-[30px] object-cover",
+      style: { objectPosition: "right center" },
+    };
+  }
+
+  if (normalized.includes("supplier")) {
+    return {
+      src: "/icons/engine-market/trust-supplier-verification.png",
+      className: "h-[18px] w-[22px] object-contain",
+    };
+  }
+
+  if (normalized.includes("warranty")) {
+    return {
+      src: "/icons/engine-market/trust-verification.png",
+      className: "h-[16px] w-[16px] object-contain",
+    };
+  }
+
+  return {
+    src: "/icons/engine-market/type-supply-fit.png",
+    className: "h-[18px] w-[18px] object-contain",
+  };
+}
+
+function stepIconSrc(card: HowItWorksData["cards"][number]) {
+  const combined = `${card.front.h3} ${card.front.text} ${card.back.heading}`.toLowerCase();
+
+  if (combined.includes("registration") || combined.includes("reg")) return "/icons/engine-market/how-reg.png";
+  if (combined.includes("choose") || combined.includes("best deal") || combined.includes("save")) {
+    return "/icons/engine-market/how-choose-deal.png";
+  }
+  if (combined.includes("compare")) return "/icons/engine-market/how-compare-prices.png";
+  if (combined.includes("quote")) return "/icons/engine-market/how-get-quote.png";
+
+  if (card.number === 1) return "/icons/engine-market/how-reg.png";
+  if (card.number === 2) return "/icons/engine-market/how-get-quote.png";
+  return "/icons/engine-market/how-choose-deal.png";
+}
+
 export default function HowItWorksSection({ data, bgImage, sectionId }: Props) {
   const [activeStep, setActiveStep] = useState<number | null>(null);
-  const tagline = splitTagline(data.tagline);
+  splitTagline(data.tagline);
   const headingLines = data.headingLines?.length ? data.headingLines : splitHeading(data.h2);
   const ui = data.ui ?? {};
-  const footerNote = ui.footerNote ?? "Most replacements completed within 3-5 days.";
 
-  const trustLabels = ui.mobileTrustItems ?? [
+  const footerTrustItems = (ui.mobileTrustItems ?? [
     "12-Month Warranty",
     "Supply & Fit Available",
     "Nationwide Delivery",
     "Trusted UK Suppliers",
-  ];
-  const trustItems = trustLabels.map((label, index) => ({
+  ]).map((label) => ({
     label,
-    icon:
-      index === 0 ? <WarrantyIcon /> : index === 1 ? <WrenchIcon /> : index === 2 ? <TruckIcon /> : <UsersIcon />,
+    icon: trustIconForLabel(label),
   }));
 
   return (
@@ -185,13 +174,13 @@ export default function HowItWorksSection({ data, bgImage, sectionId }: Props) {
 
                       <div
                         className={`mx-auto mt-0 flex items-center justify-center rounded-[14px] p-1 ${
-                          isRegistrationCard ? "h-[68px] w-[138px]" : "h-16 w-16"
+                          isRegistrationCard ? "h-[92px] w-[184px]" : "h-[86px] w-[86px] md:h-[96px] md:w-[96px]"
                         }`}
                       >
                         <img
-                          src={card.number === 1 ? "/Home/reg-here.webp" : card.number === 2 ? "/Home/save-money.webp" : "/Home/quote-button 1.png"}
+                          src={stepIconSrc(card)}
                           alt={`Step ${card.number} icon`}
-                          className={isRegistrationCard ? "h-[54px] w-[126px] object-contain" : "h-14 w-14 object-contain"}
+                          className={isRegistrationCard ? "h-[76px] w-[166px] object-contain" : "h-[72px] w-[72px] object-contain md:h-[80px] md:w-[80px]"}
                         />
                       </div>
 
@@ -241,54 +230,26 @@ export default function HowItWorksSection({ data, bgImage, sectionId }: Props) {
           })}
         </div>
 
-        <div className="mx-auto mt-2 sm:mt-6 rounded-[12px] px-4 py-4 sm:mx-0 lg:mt-[24px] flex flex-nowrap sm:flex-wrap justify-center gap-2 sm:gap-3 lg:gap-4 items-stretch sm:items-center">
-
-          {/* 12-Month Warranty */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 p-1.5 sm:px-3 sm:py-1.5 rounded-lg sm:rounded-full bg-slate-50 flex-1 sm:flex-none">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[#15803D] shrink-0">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
-              <path d="m9 12 2 2 4-4" />
-            </svg>
-            <span className="text-[10px] leading-tight font-medium text-slate-700 text-center sm:text-sm sm:leading-none">12-Month Warranty</span>
-          </div>
-
-          {/* Separator */}
-          <div className="w-px h-5 sm:h-6 bg-slate-300 self-center shrink-0" aria-hidden="true"></div>
-
-          {/* Supply & Fit Available */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 p-1.5 sm:px-3 sm:py-1.5 rounded-lg sm:rounded-full bg-slate-50 flex-1 sm:flex-none">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[#15803D] shrink-0">
-              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
-            </svg>
-            <span className="text-[10px] leading-tight font-medium text-slate-700 text-center sm:text-sm sm:leading-none">Supply & Fit Available</span>
-          </div>
-
-          {/* Separator */}
-          <div className="w-px h-5 sm:h-6 bg-slate-300 self-center shrink-0" aria-hidden="true"></div>
-
-          {/* Nationwide Delivery */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 p-1.5 sm:px-3 sm:py-1.5 rounded-lg sm:rounded-full bg-slate-50 flex-1 sm:flex-none">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[#15803D] shrink-0">
-              <rect width="16" height="13" x="1" y="3" rx="2" />
-              <path d="M16 8h4l3 3v5h-7V8z" />
-              <circle cx="5.5" cy="18.5" r="2.5" />
-              <circle cx="18.5" cy="18.5" r="2.5" />
-            </svg>
-            <span className="text-[10px] leading-tight font-medium text-slate-700 text-center sm:text-sm sm:leading-none">Nationwide Delivery</span>
-          </div>
-
-          {/* Separator */}
-          <div className="w-px h-5 sm:h-6 bg-slate-300 self-center shrink-0" aria-hidden="true"></div>
-
-          {/* Trusted UK Suppliers */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 p-1.5 sm:px-3 sm:py-1.5 rounded-lg sm:rounded-full bg-slate-50 flex-1 sm:flex-none">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[#15803D] shrink-0">
-              <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" />
-              <path d="m9 12 2 2 4-4" />
-            </svg>
-            <span className="text-[10px] leading-tight font-medium text-slate-700 text-center sm:text-sm sm:leading-none">Trusted UK Suppliers</span>
-          </div>
-
+        <div className="mx-auto mt-2 flex flex-nowrap items-stretch justify-center gap-2 rounded-[12px] px-4 py-4 sm:mx-0 sm:mt-6 sm:flex-wrap sm:items-center sm:gap-3 lg:mt-[24px] lg:gap-4">
+          {footerTrustItems.map((item, index) => (
+            <div key={item.label} className="contents">
+              <div className="flex flex-1 flex-col items-center justify-center gap-1 rounded-lg bg-slate-50 p-1.5 sm:flex-none sm:flex-row sm:gap-2 sm:rounded-full sm:px-3 sm:py-1.5">
+                <img
+                  src={item.icon.src}
+                  alt=""
+                  aria-hidden="true"
+                  className={`${item.icon.className} shrink-0`}
+                  style={item.icon.style}
+                />
+                <span className="text-center text-[10px] font-medium leading-tight text-slate-700 sm:text-sm sm:leading-none">
+                  {item.label}
+                </span>
+              </div>
+              {index < footerTrustItems.length - 1 ? (
+                <div className="h-5 w-px shrink-0 self-center bg-slate-300 sm:h-6" aria-hidden="true"></div>
+              ) : null}
+            </div>
+          ))}
         </div>
 
       </Container>
