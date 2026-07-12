@@ -57,28 +57,27 @@ function trustIconForLabel(label: string) {
 
   if (normalized.includes("nationwide") || normalized.includes("delivery") || normalized.includes("uk-wide")) {
     return {
-      src: "/icons/engine-market/trust-uk-coverage.png",
-      className: "h-[18px] w-[30px] object-cover",
-      style: { objectPosition: "right center" },
+      src: "/icons/engine-market/light-green-nationwide-delivery.png",
+      className: "h-[18px] w-[30px] object-contain",
     };
   }
 
   if (normalized.includes("supplier")) {
     return {
-      src: "/icons/engine-market/trust-supplier-verification.png",
-      className: "h-[18px] w-[22px] object-contain",
+      src: "/icons/engine-market/light-green-trusted-seller.png",
+      className: "h-[18px] w-[18px] object-contain",
     };
   }
 
   if (normalized.includes("warranty")) {
     return {
-      src: "/icons/engine-market/trust-verification.png",
+      src: "/icons/engine-market/light-green-warranty.png",
       className: "h-[16px] w-[16px] object-contain",
     };
   }
 
   return {
-    src: "/icons/engine-market/type-supply-fit.png",
+    src: "/icons/engine-market/light-green-supply-fit.png",
     className: "h-[18px] w-[18px] object-contain",
   };
 }
@@ -90,11 +89,11 @@ function stepIconSrc(card: HowItWorksData["cards"][number]) {
   if (combined.includes("choose") || combined.includes("best deal") || combined.includes("save")) {
     return "/icons/engine-market/how-choose-deal.png";
   }
-  if (combined.includes("compare")) return "/icons/engine-market/how-compare-prices.png";
+  if (combined.includes("compare")) return "/icons/engine-market/how-compare-prices-3d.png";
   if (combined.includes("quote")) return "/icons/engine-market/how-get-quote.png";
 
   if (card.number === 1) return "/icons/engine-market/how-reg.png";
-  if (card.number === 2) return "/icons/engine-market/how-get-quote.png";
+  if (card.number === 2) return "/icons/engine-market/how-compare-prices-3d.png";
   return "/icons/engine-market/how-choose-deal.png";
 }
 
@@ -153,6 +152,7 @@ export default function HowItWorksSection({ data, bgImage, sectionId }: Props) {
           {data.cards.map((card) => {
             const flipped = activeStep === card.number;
             const isRegistrationCard = card.number === 1;
+            const isComparisonCard = card.number === 2;
 
             return (
               <div key={card.number} className="perspective-1000 min-h-[258px] sm:min-h-[276px] xl:min-h-[296px]">
@@ -174,13 +174,23 @@ export default function HowItWorksSection({ data, bgImage, sectionId }: Props) {
 
                       <div
                         className={`mx-auto mt-0 flex items-center justify-center rounded-[14px] p-1 ${
-                          isRegistrationCard ? "h-[92px] w-[184px]" : "h-[86px] w-[86px] md:h-[96px] md:w-[96px]"
+                          isRegistrationCard
+                            ? "h-[92px] w-[184px]"
+                            : isComparisonCard
+                              ? "h-[96px] w-[96px] md:h-[108px] md:w-[108px]"
+                              : "h-[90px] w-[90px] md:h-[100px] md:w-[100px]"
                         }`}
                       >
                         <img
                           src={stepIconSrc(card)}
                           alt={`Step ${card.number} icon`}
-                          className={isRegistrationCard ? "h-[76px] w-[166px] object-contain" : "h-[72px] w-[72px] object-contain md:h-[80px] md:w-[80px]"}
+                          className={
+                            isRegistrationCard
+                              ? "h-[76px] w-[166px] object-contain"
+                              : isComparisonCard
+                                ? "h-[86px] w-[86px] object-contain md:h-[96px] md:w-[96px]"
+                                : "h-[78px] w-[78px] object-contain md:h-[86px] md:w-[86px]"
+                          }
                         />
                       </div>
 

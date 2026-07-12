@@ -118,10 +118,10 @@ function EngineWatermark() {
 
 const carIcons = [CarIconOne, CarIconTwo, CarIconThree];
 const bottomBarItems = [
-  { src: "/icons/engine-market/how-get-quote.png", text: "Instant engine replacement quote - 100% free, no obligation" },
-  { src: "/icons/engine-market/trust-uk-coverage.png", text: "Engine replacement near me - UK-wide specialist network", cropRight: true },
-  { src: "/icons/engine-market/how-compare-prices.png", text: "Compare reconditioned, rebuilt & used engine prices" },
-  { src: "/icons/engine-market/type-supply-fit.png", text: "Supply & fit available - parts and labour from vetted specialists" },
+  { src: "/icons/engine-market/dark-blue-instant-quote.png", text: "Instant engine replacement quote - 100% free, no obligation" },
+  { src: "/icons/engine-market/dark-blue-pound.png", text: "Engine replacement near me - UK-wide specialist network" },
+  { src: "/icons/engine-market/dark-blue-pound.png", text: "Compare reconditioned, rebuilt & used engine prices" },
+  { src: "/icons/engine-market/dark-blue-supply-fit.png", text: "Supply & fit available - parts and labour from vetted specialists" },
 ];
 
 type DecorativeIconConfig = {
@@ -135,28 +135,27 @@ function getTrustBadgeIcon(label: string): DecorativeIconConfig {
 
   if (normalized.includes("nationwide") || normalized.includes("delivery") || normalized.includes("uk-wide")) {
     return {
-      src: "/icons/engine-market/trust-uk-coverage.png",
-      className: "h-[18px] w-[30px] object-cover md:h-[20px] md:w-[34px]",
-      style: { objectPosition: "right center" },
+      src: "/icons/engine-market/dark-blue-nationwide-delivery.png",
+      className: "h-[18px] w-[30px] object-contain md:h-[20px] md:w-[34px]",
     };
   }
 
   if (normalized.includes("supplier")) {
     return {
-      src: "/icons/engine-market/trust-supplier-verification.png",
-      className: "h-[18px] w-[22px] object-contain md:h-[20px] md:w-[24px]",
+      src: "/icons/engine-market/dark-blue-vetted-specialists.png",
+      className: "h-[18px] w-[24px] object-contain md:h-[20px] md:w-[28px]",
     };
   }
 
   if (normalized.includes("warranty")) {
     return {
-      src: "/icons/engine-market/trust-verification.png",
+      src: "/icons/engine-market/dark-blue-warranty.png",
       className: "h-[18px] w-[18px] object-contain md:h-[20px] md:w-[20px]",
     };
   }
 
   return {
-    src: "/icons/engine-market/type-supply-fit.png",
+    src: "/icons/engine-market/dark-blue-supply-fit.png",
     className: "h-[18px] w-[18px] object-contain md:h-[20px] md:w-[20px]",
   };
 }

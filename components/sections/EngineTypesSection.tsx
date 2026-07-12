@@ -85,7 +85,14 @@ function isFeaturedCard(title: string) {
 }
 
 function DesignerIcon({ src, alt = "" }: { src: string; alt?: string }) {
-  return <img src={src} alt={alt} className="h-8 w-8 object-contain" loading="lazy" />;
+  return (
+    <img
+      src={src}
+      alt={alt}
+      className="h-10 w-10 scale-[1.55] object-contain drop-shadow-[0_2px_6px_rgba(13,27,46,0.18)]"
+      loading="lazy"
+    />
+  );
 }
 
 function getTypeIcon(title: string) {
@@ -165,7 +172,7 @@ function FlipCard({
             }`}
           >
             <div className="flex flex-1 gap-3 px-4 py-[18px] lg:px-5 lg:py-5">
-              <div className="flex h-10 w-10 flex-none items-center justify-center rounded-full bg-[#e8f4fd] text-[#0d1b2e] lg:h-11 lg:w-11">
+              <div className="flex h-11 w-11 flex-none items-center justify-center rounded-full bg-[#e8f4fd] text-[#0d1b2e] lg:h-12 lg:w-12">
                 {icon}
               </div>
 
