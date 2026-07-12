@@ -4,6 +4,7 @@ import { useState } from "react";
 import type { HowItWorksData } from "@/types/brand";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
+import type { CSSProperties } from "react";
 
 type Props = {
   data: HowItWorksData;
@@ -52,7 +53,13 @@ function splitHeading(title: string) {
     .filter(Boolean);
 }
 
-function trustIconForLabel(label: string) {
+type TrustIconConfig = {
+  src: string;
+  className: string;
+  style?: CSSProperties;
+};
+
+function trustIconForLabel(label: string): TrustIconConfig {
   const normalized = label.toLowerCase();
 
   if (normalized.includes("nationwide") || normalized.includes("delivery") || normalized.includes("uk-wide")) {
