@@ -87,14 +87,14 @@ function stepIconSrc(card: HowItWorksData["cards"][number]) {
 
   if (combined.includes("registration") || combined.includes("reg")) return "/icons/engine-market/how-reg.png";
   if (combined.includes("choose") || combined.includes("best deal") || combined.includes("save")) {
-    return "/icons/engine-market/how-choose-deal.png";
+    return "/icons/engine-market/how-compare-prices-3d.png";
   }
   if (combined.includes("compare")) return "/icons/engine-market/how-compare-prices-3d.png";
   if (combined.includes("quote")) return "/icons/engine-market/how-get-quote.png";
 
   if (card.number === 1) return "/icons/engine-market/how-reg.png";
   if (card.number === 2) return "/icons/engine-market/how-compare-prices-3d.png";
-  return "/icons/engine-market/how-choose-deal.png";
+  return "/icons/engine-market/how-compare-prices-3d.png";
 }
 
 export default function HowItWorksSection({ data, bgImage, sectionId }: Props) {

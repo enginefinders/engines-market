@@ -6,8 +6,7 @@ import type { EngineCodesData } from "@/types/brand";
 import type { ModelPageData } from "@/types/model";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
-import { FaArrowRight, FaCar, FaCheck, FaChevronDown, FaExclamationTriangle, FaGasPump } from "react-icons/fa";
-import { TbEngineFilled } from "react-icons/tb";
+import { FaArrowRight, FaChevronDown } from "react-icons/fa";
 
 type Props = {
   data: EngineCodesData;
@@ -222,24 +221,28 @@ function chunkEngines(engines: EngineRow[]) {
   return rows;
 }
 
-function EngineIcon({ className = "w-[24px] h-[24px]" }: { className?: string }) {
-  return <TbEngineFilled className={className} />;
-}
-
-function FuelPumpIcon({ className = "w-[24px] h-[24px]" }: { className?: string }) {
-  return <FaGasPump className={className} />;
+function FuelAssetIcon({
+  src,
+  className = "w-[24px] h-[24px]",
+  fit = "contain",
+}: {
+  src: string;
+  className?: string;
+  fit?: "contain" | "cover";
+}) {
+  return <img src={src} alt="" className={`${className} ${fit === "cover" ? "object-cover" : "object-contain"}`} loading="lazy" />;
 }
 
 function SpecsIcon({ className = "w-[24px] h-[24px]" }: { className?: string }) {
-  return <FaCheck className={className} />;
+  return <FuelAssetIcon src="/icons/engine-market/white-technical-spec.png" className={className} />;
 }
 
 function WarningIcon({ className = "w-[24px] h-[24px]" }: { className?: string }) {
-  return <FaExclamationTriangle className={className} />;
+  return <FuelAssetIcon src="/icons/engine-market/white-not-sure.png" className={className} />;
 }
 
-function CarIcon({ className = "w-[24px] h-[24px]" }: { className?: string }) {
-  return <FaCar className={className} />;
+function CarIcon({ className = "w-[28px] h-[28px]" }: { className?: string }) {
+  return <FuelAssetIcon src="/icons/engine-market/dark-blue-car.png" className={className} />;
 }
 
 function ChevronIcon({ className = "w-[18px] h-[18px]" }: { className?: string }) {
@@ -250,28 +253,60 @@ function ArrowIcon({ className = "w-[14px] h-[14px]" }: { className?: string }) 
   return <FaArrowRight className={className} />;
 }
 
-function QuoteDocIcon({ className = "w-[16px] h-[16px]" }: { className?: string }) {
+function getFuelTabIcon(fuelType: string, active = false, className?: string) {
+  const normalized = fuelType.toLowerCase();
+  if (normalized.includes("diesel")) {
+    return (
+      <FuelAssetIcon
+        src={active ? "/icons/engine-market/white-diesel-engine.png" : "/icons/engine-market/dark-blue-diesel-engine.png"}
+        className={className}
+      />
+    );
+  }
+  if (normalized.includes("petrol") || normalized.includes("gasoline")) {
+    return (
+      <FuelAssetIcon
+        src={active ? "/icons/engine-market/white-petrol-engine.png" : "/icons/engine-market/dark-blue-petrol-engine.png"}
+        className={className}
+      />
+    );
+  }
+  if (normalized.includes("hybrid") || normalized.includes("mhev")) {
+    return (
+      <FuelAssetIcon
+        src={active ? "/icons/engine-market/white-hybrid-engine.png" : "/icons/engine-market/dark-blue-hybrid-engine.png"}
+        className={className}
+      />
+    );
+  }
   return (
-    <svg viewBox="0 0 24 24" className={className} fill="none" aria-hidden="true">
-      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M14 2v6h6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M8 13h8M8 17h5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-    </svg>
+    <FuelAssetIcon
+      src={active ? "/icons/engine-market/white-petrol-engine.png" : "/icons/engine-market/dark-blue-petrol-engine.png"}
+      className={className}
+    />
   );
+}
+
+function getFuelSectionIcon(fuelType: string, className?: string) {
+  const normalized = fuelType.toLowerCase();
+
+  if (normalized.includes("diesel")) {
+    return <FuelAssetIcon src="/icons/engine-market/fuel-heading-diesel.png" className={className} />;
+  }
+  if (normalized.includes("hybrid") || normalized.includes("mhev")) {
+    return <FuelAssetIcon src="/icons/engine-market/fuel-heading-hybrid.png" className={className} />;
+  }
+  return <FuelAssetIcon src="/icons/engine-market/fuel-heading-petrol.png" className={className} />;
+}
+
+function getAccordionEngineIcon(_fuelType: string, className?: string) {
+  return <FuelAssetIcon src="/icons/engine-market/fuel-row-petrol.png" className={className} fit="cover" />;
 }
 
 type Selection = {
   familyIndex: number;
   engineIndex: number;
 } | null;
-
-function getFuelIcon(fuelType: string, className?: string) {
-  const normalized = fuelType.toLowerCase();
-  if (normalized.includes("petrol") || normalized.includes("gasoline")) {
-    return <FuelPumpIcon className={className} />;
-  }
-  return <EngineIcon className={className} />;
-}
 
 export default function ModelEngineCodesSection({ data, guide, modelName, strictData = false, documentMode = false }: Props) {
   const [selection, setSelection] = useState<Selection>(null);
@@ -358,7 +393,7 @@ export default function ModelEngineCodesSection({ data, guide, modelName, strict
                     <button
                       key={entry.group.name}
                       type="button"
-                      className={`relative flex min-h-[46px] min-w-0 basis-0 flex-1 items-center justify-center gap-[8px] px-[12px] py-[12px] text-[13px] font-bold tracking-[0.02em] transition-all duration-200 max-[420px]:gap-[6px] max-[420px]:px-[6px] max-[420px]:text-[11px] ${
+                      className={`relative flex min-h-[48px] min-w-0 basis-0 flex-1 items-center justify-center gap-[9px] px-[12px] py-[12px] text-[13px] font-bold tracking-[0.02em] transition-all duration-200 max-[420px]:gap-[7px] max-[420px]:px-[6px] max-[420px]:text-[11px] ${
                         isActive
                           ? "z-10 bg-[linear-gradient(180deg,#173a6d_0%,#0c213f_100%)] text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.26),inset_0_-1px_0_rgba(6,18,35,0.85),0_0_0_1px_rgba(45,107,255,0.45),0_0_20px_rgba(45,107,255,0.45),0_8px_18px_rgba(17,47,95,0.32)] before:absolute before:inset-x-0 before:top-0 before:h-[42%] before:bg-[linear-gradient(180deg,rgba(255,255,255,0.2),rgba(255,255,255,0))] before:content-['']"
                           : "bg-white text-[#22324a] shadow-none hover:bg-[#f8fafc]"
@@ -367,8 +402,8 @@ export default function ModelEngineCodesSection({ data, guide, modelName, strict
                       aria-selected={isActive}
                       role="tab"
                     >
-                      <span className="relative z-10 grid h-[18px] w-[18px] place-items-center text-current max-[420px]:h-[15px] max-[420px]:w-[15px]">
-                        {getFuelIcon(entry.group.name, "h-[16px] w-[16px] max-[420px]:h-[14px] max-[420px]:w-[14px]")}
+                      <span className="relative z-10 grid h-[26px] w-[26px] place-items-center text-current max-[420px]:h-[20px] max-[420px]:w-[20px]">
+                        {getFuelTabIcon(entry.group.name, isActive, "h-[24px] w-[24px] max-[420px]:h-[18px] max-[420px]:w-[18px]")}
                       </span>
                       <span className="relative z-10 truncate">{entry.group.name}</span>
                     </button>
@@ -386,8 +421,8 @@ export default function ModelEngineCodesSection({ data, guide, modelName, strict
             {activeGroupEntry ? (
               <section className="mt-[24px]">
                 <div className="flex items-center gap-[12px] mb-[12px] max-[720px]:hidden">
-                  <span className="w-[38px] h-[38px] rounded-[12px] bg-[#f5f8fc] text-[#0d1b2e] grid place-items-center flex-shrink-0">
-                    {getFuelIcon(activeGroupEntry.group.name, "w-[24px] h-[24px]")}
+                  <span className="w-[44px] h-[44px] rounded-[12px] bg-[#f5f8fc] text-[#0d1b2e] grid place-items-center flex-shrink-0">
+                    {getFuelSectionIcon(activeGroupEntry.group.name, "w-[32px] h-[32px]")}
                   </span>
                   <div>
                     <h3 className="text-[26px] tracking-[-0.03em] text-[#10203a] max-[720px]:text-[24px]">{activeGroupEntry.group.name}</h3>
@@ -446,8 +481,8 @@ export default function ModelEngineCodesSection({ data, guide, modelName, strict
                             onClick={() => toggleSelection(safeActiveIndex, originalIndex)}
                           >
                             {!selected && (
-                              <span className="w-[48px] h-[48px] rounded-[14px] border border-[#d7e2ec] bg-[linear-gradient(180deg,#eef3f9_0%,#dfe8f2_100%)] text-[#334155] grid place-items-center max-[720px]:w-[40px] max-[720px]:h-[40px] max-[720px]:rounded-[12px]">
-                                <EngineIcon className="w-[22px] h-[22px] max-[720px]:w-[19px] max-[720px]:h-[19px]" />
+                              <span className="w-[52px] h-[52px] overflow-hidden rounded-[14px] border border-[#d7e2ec] bg-white text-[#334155] block max-[720px]:w-[44px] max-[720px]:h-[44px] max-[720px]:rounded-[12px]">
+                                {getAccordionEngineIcon(activeGroupEntry.group.name, "h-full w-full")}
                               </span>
                             )}
                             {selected && <span aria-hidden="true" className="block h-4 w-4" />}
@@ -615,7 +650,7 @@ export default function ModelEngineCodesSection({ data, guide, modelName, strict
                                       <section className="border border-[#dfe7ef] rounded-[7px] bg-white py-[4px] px-[9px] pb-[4px]">
                                         {ui.specsTitle && (
                                           <h4 className="mb-[3px] flex items-center gap-[8px] text-[10px] font-[400] leading-[1.15] tracking-[-0.02em] text-[#10203a] max-[720px]:mb-[6px] max-[720px]:text-[10px]" style={{ fontWeight: 400 }}>
-                                            <span className="w-[24px] h-[24px] rounded-[10px] grid place-items-center flex-shrink-0 bg-[#eef5fb] text-[#274564] max-[720px]:hidden">
+                                            <span className="w-[24px] h-[24px] rounded-[8px] grid place-items-center flex-shrink-0 bg-[#10203a] max-[720px]:hidden">
                                               <SpecsIcon />
                                             </span>
                                             {ui.specsTitle}
@@ -652,7 +687,7 @@ export default function ModelEngineCodesSection({ data, guide, modelName, strict
                                       <section className="border border-[#dfe7ef] rounded-[7px] bg-white py-[4px] px-[9px] pb-[4px]">
                                         {ui.failuresTitle && (
                                           <h4 className="mb-[3px] flex items-center gap-[8px] text-[10px] font-[400] leading-[1.15] tracking-[-0.02em] text-[#10203a] max-[720px]:mb-[6px] max-[720px]:text-[10px]" style={{ fontWeight: 400 }}>
-                                            <span className="w-[24px] h-[24px] rounded-[10px] grid place-items-center flex-shrink-0 bg-[#fff2f2] text-[#c73a3a] max-[720px]:hidden">
+                                            <span className="w-[24px] h-[24px] rounded-[8px] grid place-items-center flex-shrink-0 bg-[#10203a] max-[720px]:hidden">
                                               <WarningIcon />
                                             </span>
                                             {ui.failuresTitle}

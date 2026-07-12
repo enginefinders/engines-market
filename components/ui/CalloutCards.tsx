@@ -48,6 +48,16 @@ type AdviceCardProps = {
   linkProps?: LinkProps;
 };
 
+function AssetIcon({
+  src,
+  className = "h-5 w-5",
+}: {
+  src: string;
+  className?: string;
+}) {
+  return <img src={src} alt="" aria-hidden="true" className={`${className} object-contain`} loading="lazy" />;
+}
+
 function ArrowIcon({ className = "h-4 w-4" }: { className?: string }) {
   return (
     <svg viewBox="0 0 24 24" className={className} fill="none" aria-hidden="true">
@@ -73,29 +83,11 @@ function ShieldIcon() {
 }
 
 function AdviceIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" aria-hidden="true">
-      <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="2" />
-      <path d="M9.5 12.5 11 14l3.5-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-      <path d="M12 7h.01" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-    </svg>
-  );
+  return <AssetIcon src="/icons/engine-market/dark-blue-not-sure.png" />;
 }
 
 function WarningIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" aria-hidden="true">
-      <path
-        d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <line x1="12" y1="9" x2="12" y2="13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-      <line x1="12" y1="17" x2="12.01" y2="17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-    </svg>
-  );
+  return <AssetIcon src="/icons/engine-market/dark-blue-not-sure.png" />;
 }
 
 function ChipRow({

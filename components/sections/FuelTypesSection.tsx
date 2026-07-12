@@ -28,60 +28,8 @@ function FuelIcon() {
   );
 }
 
-function PetrolIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" aria-hidden="true">
-      <path
-        d="M13 2 4 14h7l-1 8 10-12h-7l1-8Z"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
-function BatteryIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" aria-hidden="true">
-      <rect x="3" y="7" width="15" height="10" rx="2" stroke="currentColor" strokeWidth="2" />
-      <path d="M18 10h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2" stroke="currentColor" strokeWidth="2" />
-      <path d="M8 10v4M12 10v4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-    </svg>
-  );
-}
-
-function PlugIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" aria-hidden="true">
-      <path
-        d="M7 7v4a5 5 0 0 0 10 0V7M9 7V3M15 7V3M12 16v5"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
-function ElectricIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" aria-hidden="true">
-      <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="2" />
-      <path d="M13 6 8 13h4l-1 5 5-7h-4l1-5Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
-
 function ShieldCheckIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" aria-hidden="true">
-      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" stroke="currentColor" strokeWidth="2" />
-      <path d="m9 12 2 2 4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
+  return <img src="/icons/engine-market/dark-blue-not-sure.png" alt="" aria-hidden="true" className="h-4 w-4 object-contain" loading="lazy" />;
 }
 
 function ArrowIcon() {
@@ -90,16 +38,6 @@ function ArrowIcon() {
       <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
-}
-
-function PanelIcon({ title }: { title: string }) {
-  const normalized = title.toLowerCase();
-
-  if (normalized.includes("plug-in") || normalized.includes("phev")) return <PlugIcon />;
-  if (normalized.includes("mild hybrid") || normalized.includes("mhev")) return <BatteryIcon />;
-  if (normalized.includes("electric")) return <ElectricIcon />;
-  if (normalized.includes("petrol")) return <PetrolIcon />;
-  return <FuelIcon />;
 }
 
 function getTabLabel(title: string) {

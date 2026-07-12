@@ -118,10 +118,10 @@ function EngineWatermark() {
 
 const carIcons = [CarIconOne, CarIconTwo, CarIconThree];
 const bottomBarItems = [
-  { src: "/icons/engine-market/dark-blue-instant-quote.png", text: "Instant engine replacement quote - 100% free, no obligation" },
-  { src: "/icons/engine-market/dark-blue-pound.png", text: "Engine replacement near me - UK-wide specialist network" },
-  { src: "/icons/engine-market/dark-blue-pound.png", text: "Compare reconditioned, rebuilt & used engine prices" },
-  { src: "/icons/engine-market/dark-blue-supply-fit.png", text: "Supply & fit available - parts and labour from vetted specialists" },
+  { src: "/icons/engine-market/light-green-instant-quote.png", text: "Instant engine replacement quote - 100% free, no obligation" },
+  { src: "/icons/engine-market/light-green-pound.png", text: "Engine replacement near me - UK-wide specialist network" },
+  { src: "/icons/engine-market/light-green-pound.png", text: "Compare reconditioned, rebuilt & used engine prices" },
+  { src: "/icons/engine-market/light-green-supply-fit.png", text: "Supply & fit available - parts and labour from vetted specialists" },
 ];
 
 type DecorativeIconConfig = {

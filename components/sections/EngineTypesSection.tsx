@@ -89,7 +89,7 @@ function DesignerIcon({ src, alt = "" }: { src: string; alt?: string }) {
     <img
       src={src}
       alt={alt}
-      className="h-10 w-10 scale-[1.55] object-contain drop-shadow-[0_2px_6px_rgba(13,27,46,0.18)]"
+      className="h-11 w-11 scale-[1.75] object-contain drop-shadow-[0_2px_8px_rgba(13,27,46,0.2)]"
       loading="lazy"
     />
   );
@@ -172,7 +172,7 @@ function FlipCard({
             }`}
           >
             <div className="flex flex-1 gap-3 px-4 py-[18px] lg:px-5 lg:py-5">
-              <div className="flex h-11 w-11 flex-none items-center justify-center rounded-full bg-[#e8f4fd] text-[#0d1b2e] lg:h-12 lg:w-12">
+              <div className="flex h-12 w-12 flex-none items-center justify-center rounded-full bg-[#e8f4fd] text-[#0d1b2e] lg:h-[54px] lg:w-[54px]">
                 {icon}
               </div>
 
@@ -273,11 +273,15 @@ function MobileEngineTypeStack({
   types,
   activeIndex,
   onSelect,
+  onClose,
+  backActionLabel,
   priceLabel,
 }: {
   types: EngineTypesData["types"];
-  activeIndex: number;
+  activeIndex: number | null;
   onSelect: (index: number) => void;
+  onClose: () => void;
+  backActionLabel: string;
   priceLabel: string;
 }) {
   const orderedIndexes = types.map((_, index) => index).filter((index) => index >= 0 && index < types.length);
@@ -288,6 +292,8 @@ function MobileEngineTypeStack({
         {orderedIndexes.map((originalIndex, stackIndex) => {
           const type = types[originalIndex];
           const active = originalIndex === activeIndex;
+          const badge = typeBadge(type.title);
+          const variant = typeVariant(type.title);
           const price = priceParts(type.priceRange);
           const icon = getTypeIcon(type.title);
           const frontDescription = fullText(type.frontDescription || type.description);
@@ -298,6 +304,16 @@ function MobileEngineTypeStack({
           const offsetX = Math.min(stackIndex * 14, 52);
           const widthTrim = 42;
           const rotate = 0;
+          const badgeClass =
+            variant === "remanu"
+              ? "border-[#bfdbfe] bg-[#eff6ff] text-[#2563eb]"
+              : variant === "refurb"
+                ? "border-[#fde68a] bg-[#fefce8] text-[#a16207]"
+                : variant === "supplyfit"
+                  ? "border-[#e9d5ff] bg-[#fdf4ff] text-[#7c3aed]"
+                  : variant === "used"
+                    ? "border-[#e5e7eb] bg-[#f8f9fa] text-[#6b7280]"
+                    : "border-[#0d1b2e] bg-[#f8fbff] text-[#0d1b2e]";
 
           return (
             <article
@@ -307,48 +323,136 @@ function MobileEngineTypeStack({
                 marginTop: stackIndex === 0 ? 0 : previousIsActive ? 8 : -54,
                 transform: `translateX(${offsetX}px) rotate(${rotate}deg)`,
                 width: `calc(100% - ${widthTrim}px)`,
+                height: active ? 334 : undefined,
+                perspective: active ? "1200px" : undefined,
+                WebkitPerspective: active ? "1200px" : undefined,
               }}
             >
-              <div
-                role="button"
-                tabIndex={0}
-                onClick={() => onSelect(originalIndex)}
-                onKeyDown={(event) => {
-                  if (event.key === "Enter" || event.key === " ") {
-                    event.preventDefault();
-                    onSelect(originalIndex);
-                  }
-                }}
-                className={`w-full rounded-[8px] border bg-white text-left shadow-[0_10px_24px_rgba(13,27,46,0.08)] transition-all duration-300 ${
-                  active
-                    ? "border-[#2D6BFF] bg-white shadow-[0_0_0_1px_rgba(45,107,255,0.38),0_0_22px_rgba(45,107,255,0.2),0_16px_36px_rgba(13,27,46,0.16)]"
-                    : `${lastInactive ? "min-h-0" : "min-h-[112px]"} border-[#d8e6f5] bg-[linear-gradient(180deg,#ffffff_0%,#edf7ff_100%)] opacity-[0.98] shadow-[0_8px_18px_rgba(13,27,46,0.07)] hover:border-[#93c5fd]`
-                }`}
-                aria-expanded={active}
-              >
-                {active ? (
-                  <div className="h-[4px] rounded-t-[7px] bg-[linear-gradient(90deg,#2D6BFF_0%,#38bdf8_48%,#2D6BFF_100%)]" />
-                ) : null}
-                <div className={`flex gap-3 ${active ? "items-start px-4 py-4" : "items-start px-3 py-3"}`}>
-                  <span className="flex h-10 w-10 flex-none items-center justify-center rounded-full bg-[#e8f4fd] text-[#0d1b2e]">
-                    {icon}
-                  </span>
-                  <span className="min-w-0 flex-1">
-                    <span className={`block font-['Manrope'] font-extrabold uppercase leading-[1.16] text-[#0d1b2e] ${active ? "text-[13px]" : "line-clamp-2 text-[12px]"}`}>
-                      {type.title}
+              {active ? (
+                <div
+                  className="relative h-full w-full transition-transform duration-[550ms]"
+                  style={{
+                    transform: "rotateY(180deg)",
+                    transformStyle: "preserve-3d",
+                    WebkitTransformStyle: "preserve-3d",
+                  }}
+                >
+                  <div
+                    className="absolute inset-0"
+                    style={{ backfaceVisibility: "hidden", WebkitBackfaceVisibility: "hidden" }}
+                  >
+                    <div className="flex h-full w-full flex-col rounded-[10px] border border-[#d8e6f5] bg-[linear-gradient(180deg,#ffffff_0%,#edf7ff_100%)] shadow-[0_8px_18px_rgba(13,27,46,0.07)]">
+                      <div className="flex items-start gap-3 px-3 py-3">
+                        <span className="flex h-11 w-11 flex-none items-center justify-center rounded-full bg-[#e8f4fd] text-[#0d1b2e]">
+                          {icon}
+                        </span>
+                        <span className="min-w-0 flex-1">
+                          <span className="block font-['Manrope'] text-[12px] font-extrabold uppercase leading-[1.16] text-[#0d1b2e]">
+                            {type.title}
+                          </span>
+                          <span className="mt-1 block text-[11px] leading-[1.45] text-[#64748b]">
+                            {frontDescription}
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    className="absolute inset-0"
+                    style={{
+                      backfaceVisibility: "hidden",
+                      transform: "rotateY(180deg)",
+                      WebkitBackfaceVisibility: "hidden",
+                    }}
+                  >
+                    <div className="scrollbar-dark h-full overflow-y-auto rounded-[10px] border-[1.5px] border-[#3b82f6] bg-[#0d1b2e] px-4 py-4 shadow-[0_0_0_1px_rgba(59,130,246,1),0_0_8px_rgba(59,130,246,0.5),0_0_16px_rgba(59,130,246,0.38),0_0_26px_rgba(59,130,246,0.24),0_4px_12px_rgba(42,109,214,0.28)]">
+                      <div className="mb-2 flex items-center justify-between gap-3">
+                        <span className={`inline-flex rounded-full border px-[8px] py-[1px] text-[8.5px] font-bold uppercase tracking-[0.7px] ${badgeClass}`}>
+                          {badge}
+                        </span>
+                        <button
+                          type="button"
+                          onClick={(event) => {
+                            event.stopPropagation();
+                            onClose();
+                          }}
+                          className="inline-flex items-center gap-1 text-[8.5px] font-bold text-[#94a3b8] transition-colors hover:text-white"
+                        >
+                          <TbRefresh className="h-3.5 w-3.5" />
+                          <span>{backActionLabel}</span>
+                        </button>
+                      </div>
+
+                      <p className="text-[12px] leading-[1.6] text-[#e2e8f0]">
+                        {backDescription}
+                      </p>
+
+                      {backBullets.length ? (
+                        <ul className="mt-3 space-y-1.5 text-[11px] leading-[1.5] text-[#cbd5e1]">
+                          {backBullets.map((bullet) => (
+                            <li key={bullet} className="flex gap-2">
+                              <span className="mt-[4px] h-[5px] w-[5px] flex-none rounded-full bg-[#22c55e]" />
+                              <span>{bullet}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      ) : null}
+
+                      <div className="mt-4 grid grid-cols-[minmax(145px,1fr)_1px_minmax(0,1fr)] items-center gap-3 border-t border-white/10 pt-3">
+                        <div className="min-w-0">
+                          <div className="text-[10.5px] font-medium leading-[1.2] text-[#94a3b8]">
+                            {priceDisplayLabel(priceLabel || price.label)}
+                          </div>
+                          <div className="mt-1 whitespace-nowrap font-['Manrope'] text-[16px] font-extrabold leading-[1.1] text-white">
+                            {price.main}
+                          </div>
+                          {price.note ? (
+                            <div className="mt-0.5 whitespace-nowrap text-[9px] font-semibold leading-[1.2] text-[#cbd5e1]">
+                              ({price.note})
+                            </div>
+                          ) : null}
+                        </div>
+                        <div className="h-10 w-px bg-white/10" />
+                        <a
+                          href="#quote-form"
+                          data-quote-context={type.title}
+                          data-quote-source="engine-types-mobile-stack"
+                          className="inline-flex min-w-0 items-center justify-between gap-2 pl-1 text-[10px] font-semibold uppercase leading-[1.28] text-[#4ade80] transition-colors hover:text-[#86efac]"
+                          onClick={(event) => event.stopPropagation()}
+                        >
+                          <span className="min-w-0">{type.cta}</span>
+                          <TbArrowRight className="h-3.5 w-3.5 flex-none" />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <div
+                  role="button"
+                  tabIndex={0}
+                  onClick={() => onSelect(originalIndex)}
+                  onKeyDown={(event) => {
+                    if (event.key === "Enter" || event.key === " ") {
+                      event.preventDefault();
+                      onSelect(originalIndex);
+                    }
+                  }}
+                  className={`w-full rounded-[8px] border bg-white text-left shadow-[0_10px_24px_rgba(13,27,46,0.08)] transition-all duration-300 ${
+                    `${lastInactive ? "min-h-0" : "min-h-[112px]"} border-[#d8e6f5] bg-[linear-gradient(180deg,#ffffff_0%,#edf7ff_100%)] opacity-[0.98] shadow-[0_8px_18px_rgba(13,27,46,0.07)] hover:border-[#93c5fd]`
+                  }`}
+                  aria-expanded={false}
+                >
+                  <div className="flex items-start gap-3 px-3 py-3">
+                    <span className="flex h-11 w-11 flex-none items-center justify-center rounded-full bg-[#e8f4fd] text-[#0d1b2e]">
+                      {icon}
                     </span>
-                    {active ? (
-                      <span className="mt-1 block text-[11px] leading-[1.45] text-[#64748b]">
-                        {frontDescription}
+                    <span className="min-w-0 flex-1">
+                      <span className="line-clamp-2 block font-['Manrope'] text-[12px] font-extrabold uppercase leading-[1.16] text-[#0d1b2e]">
+                        {type.title}
                       </span>
-                    ) : null}
-                  </span>
-                  {active ? (
-                    <span className="flex-none rounded-full border border-[#bfdbfe] bg-[#eff6ff] px-2 py-1 text-[8px] font-extrabold uppercase tracking-[0.12em] text-[#2563eb]">
-                      Open
                     </span>
-                  ) : null}
-                  {!active ? (
                     <span className="ml-auto flex-none text-right">
                       <span className="block whitespace-nowrap font-['Manrope'] text-[12px] font-extrabold leading-none text-[#15803d]">
                         {price.main}
@@ -359,56 +463,9 @@ function MobileEngineTypeStack({
                         </span>
                       ) : null}
                     </span>
-                  ) : null}
-                </div>
-
-                {active ? (
-                  <div className="border-t border-[#e5e7eb] px-4 pb-4 pt-3">
-                    <div className="grid grid-cols-[minmax(145px,1fr)_1px_minmax(0,1fr)] items-center gap-3">
-                      <div className="min-w-0">
-                        <div className="text-[10.5px] font-medium leading-[1.2] text-[#6b7280]">
-                          {priceDisplayLabel(priceLabel || price.label)}
-                        </div>
-                        <div className="mt-1 whitespace-nowrap font-['Manrope'] text-[16px] font-extrabold leading-[1.1] text-[#0d1b2e]">
-                          {price.main}
-                        </div>
-                        {price.note ? (
-                          <div className="mt-0.5 whitespace-nowrap text-[9px] font-semibold leading-[1.2] text-[#4b5563]">
-                            ({price.note})
-                          </div>
-                        ) : null}
-                      </div>
-                      <div className="h-10 w-px bg-[#d7dde5]" />
-                      <a
-                        href="#quote-form"
-                        data-quote-context={type.title}
-                        data-quote-source="engine-types-mobile-stack"
-                        className="inline-flex min-w-0 items-center justify-between gap-2 pl-1 text-[10px] font-semibold uppercase leading-[1.28] text-[#059669] transition-colors hover:text-[#047857]"
-                        onClick={(event) => event.stopPropagation()}
-                      >
-                        <span className="min-w-0">{type.cta}</span>
-                        <TbArrowRight className="h-3.5 w-3.5 flex-none" />
-                      </a>
-                    </div>
-
-                    <div className="mt-3 rounded-[10px] bg-[#f8fbff] px-3 py-3">
-                      <p className="text-[11.5px] leading-[1.55] text-[#475569]">
-                        {backDescription}
-                      </p>
-                      {backBullets.length ? (
-                        <ul className="mt-2 space-y-1.5 text-[11px] leading-[1.45] text-[#334155]">
-                          {backBullets.map((bullet) => (
-                            <li key={bullet} className="flex gap-2">
-                              <span className="mt-[5px] h-[5px] w-[5px] flex-none rounded-full bg-[#22c55e]" />
-                              <span>{bullet}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      ) : null}
-                    </div>
                   </div>
-                ) : null}
-              </div>
+                </div>
+              )}
             </article>
           );
         })}
@@ -449,8 +506,8 @@ export default function EngineTypesSection({
   const [openIndex, setOpenIndex] = useState<number | null>(() =>
     useFullBleedDocumentLayout && lastCardIndex >= 0 ? lastCardIndex : null,
   );
-  const [activeMobileCard, setActiveMobileCard] = useState(() =>
-    useFullBleedDocumentLayout ? defaultModelCardIndex : 0,
+  const [activeMobileCard, setActiveMobileCard] = useState<number | null>(() =>
+    useFullBleedDocumentLayout ? defaultModelCardIndex : null,
   );
   const [isClosingExpanded, setIsClosingExpanded] = useState(false);
   const [uniformHeight, setUniformHeight] = useState(228);
@@ -479,11 +536,7 @@ export default function EngineTypesSection({
   }, [data.types, openIndex]);
 
   const handleMobileSelect = (index: number) => {
-    setActiveMobileCard(index);
-
-    if (useFullBleedDocumentLayout) {
-      setOpenIndex(index);
-    }
+    setActiveMobileCard((current) => (current === index ? null : index));
   };
 
   const handleFlipToggle = (index: number) => {
@@ -555,6 +608,8 @@ export default function EngineTypesSection({
           types={data.types}
           activeIndex={activeMobileCard}
           onSelect={handleMobileSelect}
+          onClose={() => setActiveMobileCard(null)}
+          backActionLabel={isDocumentMode ? (ui.backActionLabel || "") : (ui.backActionLabel ?? "Flip back")}
           priceLabel={isDocumentMode ? (ui.priceLabel || "") : (ui.priceLabel ?? "Typical price range")}
         />
 
