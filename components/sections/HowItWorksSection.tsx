@@ -83,6 +83,10 @@ function trustIconForLabel(label: string) {
 }
 
 function stepIconSrc(card: HowItWorksData["cards"][number]) {
+  if (card.number === 1) return "/icons/engine-market/how-reg.png";
+  if (card.number === 2) return "/icons/engine-market/how-compare-prices-3d.png";
+  if (card.number === 3) return "/icons/engine-market/how-choose-deal.png";
+
   const combined = `${card.front.h3} ${card.front.text} ${card.back.heading}`.toLowerCase();
 
   if (combined.includes("registration") || combined.includes("reg")) return "/icons/engine-market/how-reg.png";
@@ -92,8 +96,6 @@ function stepIconSrc(card: HowItWorksData["cards"][number]) {
   if (combined.includes("compare")) return "/icons/engine-market/how-compare-prices-3d.png";
   if (combined.includes("quote")) return "/icons/engine-market/how-get-quote.png";
 
-  if (card.number === 1) return "/icons/engine-market/how-reg.png";
-  if (card.number === 2) return "/icons/engine-market/how-compare-prices-3d.png";
   return "/icons/engine-market/how-choose-deal.png";
 }
 
