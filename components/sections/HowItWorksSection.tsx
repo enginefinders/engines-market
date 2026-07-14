@@ -10,6 +10,7 @@ type Props = {
   data: HowItWorksData;
   bgImage: string;
   sectionId?: string;
+  flush?: boolean;
 };
 
 function ArrowIcon() {
@@ -106,7 +107,7 @@ function stepIconSrc(card: HowItWorksData["cards"][number]) {
   return "/icons/engine-market/how-choose-deal.png";
 }
 
-export default function HowItWorksSection({ data, bgImage, sectionId }: Props) {
+export default function HowItWorksSection({ data, bgImage, sectionId, flush = false }: Props) {
   const [activeStep, setActiveStep] = useState<number | null>(null);
   splitTagline(data.tagline);
   const headingLines = data.headingLines?.length ? data.headingLines : splitHeading(data.h2);
@@ -123,7 +124,10 @@ export default function HowItWorksSection({ data, bgImage, sectionId }: Props) {
   }));
 
   return (
-    <Section id={sectionId} className="relative overflow-hidden bg-[#f7f8fb] px-2 pb-7 pt-4 sm:py-8 lg:py-10">
+    <Section
+      id={sectionId}
+      className={`relative overflow-hidden bg-[#f7f8fb] ${flush ? "!px-0 !py-0" : "px-2 pb-7 pt-4 sm:py-8 lg:py-10"}`}
+    >
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div
           className="absolute right-0 top-0 hidden h-[340px] w-[440px] opacity-[0.08] lg:block"
@@ -136,7 +140,7 @@ export default function HowItWorksSection({ data, bgImage, sectionId }: Props) {
         />
       </div>
 
-      <Container className="relative max-w-[1400px]">
+      <Container className={flush ? "relative !max-w-none !px-0 sm:!px-0 lg:!px-0" : "relative max-w-[1400px]"}>
         <div className="mx-auto lg:mx-0">
           <div className="section-pill mb-[14px]">
             <span>{data.tag}</span>

@@ -32,9 +32,9 @@ export default function FaqSection({ data, strictData = false, documentMode = fa
   const mobileHeading = "Frequently Asked Question";
 
     return (
-      <Section className="bg-white">
-      <Container className={documentMode ? "max-w-[1400px] px-0 sm:px-0 lg:px-0" : ""}>
-        <div className={documentMode ? "max-w-[1400px]" : "max-w-[860px]"}>
+      <Section className={documentMode ? "bg-white !py-0" : "bg-white"}>
+      <Container className={documentMode ? "!max-w-none !px-0 sm:!px-0 lg:!px-0" : ""}>
+        <div className={documentMode ? "max-w-none" : "max-w-[860px]"}>
           <p className="section-pill mb-1.5">{data.tag}</p>
           <h2>
             <span className="block md:hidden text-[#15803d]">{mobileHeading}</span>

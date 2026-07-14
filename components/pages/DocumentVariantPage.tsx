@@ -1,12 +1,12 @@
 import { Suspense } from "react";
 import QuoteCheckoutModal from "@/components/checkout/QuoteCheckoutModal";
 import FaqSection from "@/components/sections/FaqSection";
-import HeroSection from "@/components/sections/HeroSection";
 import HowItWorksSection from "@/components/sections/HowItWorksSection";
-import TrustCtaSection from "@/components/sections/TrustCtaSection";
 import VariantCommonProblemsSection from "@/components/sections/VariantCommonProblemsSection";
 import VariantEngineGuideSection from "@/components/sections/VariantEngineGuideSection";
+import VariantHeroSection from "@/components/sections/VariantHeroSection";
 import VariantHistoryTimelineSection from "@/components/sections/VariantHistoryTimelineSection";
+import VariantTrustCtaSection from "@/components/sections/VariantTrustCtaSection";
 import { resolveModelImagePaths } from "@/lib/modelImageAssets";
 import type { VariantPageData } from "@/types/variant";
 
@@ -35,12 +35,13 @@ export default function DocumentVariantPage({ data }: DocumentVariantPageProps) 
         />
       ) : null}
 
-      <HeroSection data={data.sections.hero} bgImage={mainImage} strictData />
+      <VariantHeroSection data={data.sections.hero} bgImage={mainImage} />
 
       <HowItWorksSection
         data={data.sections.howItWorks}
         bgImage={data.assets.howItWorksBg}
         sectionId="how-it-works"
+        flush
       />
 
       <VariantHistoryTimelineSection data={data.sections.historyTimeline} />
@@ -49,13 +50,12 @@ export default function DocumentVariantPage({ data }: DocumentVariantPageProps) 
 
       <VariantCommonProblemsSection data={data.sections.commonProblems} />
 
-      <FaqSection data={data.sections.faq} strictData />
+      <FaqSection data={data.sections.faq} strictData documentMode />
 
-      <TrustCtaSection
+      <VariantTrustCtaSection
         data={data.sections.trustCta}
         brandName={data.variant.name}
         imageSrc={mainImage}
-        displayMode="variant"
       />
 
       <Suspense fallback={null}>

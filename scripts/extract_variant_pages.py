@@ -17,8 +17,9 @@ VARIANTS_DIR = REPO_ROOT / "data" / "variants"
 
 SECTION_RE = re.compile(r"^#?\s*SECTION\s+(?P<number>\d+)(?:\s*[—-]|\s*$)", re.IGNORECASE)
 LABEL_RE = re.compile(r"^(?P<label>[A-Za-z0-9 ()/&'\-]+):\s*(?P<value>.*)$")
-QUESTION_RE = re.compile(r"^Q:\s*(?P<value>.+)$", re.IGNORECASE)
+QUESTION_RE = re.compile(r"^Q(?:\d+)?:\s*(?P<value>.+)$", re.IGNORECASE)
 H3_RE = re.compile(r"^H3:\s*(?P<value>.+)$", re.IGNORECASE)
+H4_RE = re.compile(r"^H4:\s*(?P<value>.+)$", re.IGNORECASE)
 
 MOJIBAKE_REPLACEMENTS = {
     "ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â": "-",
@@ -188,10 +189,11 @@ def collect_block(lines: list[str], start_label: str) -> list[str]:
     for raw_line in lines:
         normalized = normalize_text(raw_line)
         matched = match_label(normalized)
+        is_bullet_like = bool(re.match(r"^\s*(?:â€¢|•|->|-|\d+\.)\s*", repair_text(raw_line))) or normalized.startswith("|")
 
         if matched:
             current_label, current_value = matched
-            if collecting and current_label != target:
+            if collecting and current_label != target and not is_bullet_like:
                 break
             if current_label == target:
                 collecting = True
@@ -308,6 +310,25 @@ def parse_engine_blocks(lines: list[str]) -> list[list[str]]:
     return blocks
 
 
+def parse_h4_blocks(lines: list[str]) -> list[list[str]]:
+    blocks: list[list[str]] = []
+    current: list[str] = []
+
+    for line in lines:
+        if H4_RE.match(normalize_text(line)):
+            if current:
+                blocks.append(current)
+            current = [line]
+            continue
+        if current:
+            current.append(line)
+
+    if current:
+        blocks.append(current)
+
+    return blocks
+
+
 def find_first_arrow_line(lines: list[str]) -> str:
     for raw_line in lines:
         normalized = normalize_text(raw_line)
@@ -323,12 +344,54 @@ def split_dash_pair(value: str) -> tuple[str, str]:
     return normalize_text(value), normalize_text(value)
 
 
+def extract_metadata_lines(lines: list[str]) -> list[str]:
+    for index, raw_line in enumerate(lines):
+        normalized = normalize_text(raw_line)
+        if normalized.startswith("META TITLE") or normalized.startswith("<script"):
+            return lines[index:]
+    return []
+
+
+def split_title_and_description(value: str) -> tuple[str, str]:
+    match = re.match(r"^(.*?)\s*\((.+)\)$", normalize_text(value))
+    if not match:
+        return normalize_text(value), ""
+    return match.group(1).strip(), match.group(2).strip()
+
+
+def split_outside_parentheses(value: str) -> list[str]:
+    parts: list[str] = []
+    current: list[str] = []
+    depth = 0
+
+    for char in value:
+        if char == "(":
+            depth += 1
+        elif char == ")" and depth > 0:
+            depth -= 1
+
+        if char == "," and depth == 0:
+            piece = "".join(current).strip()
+            if piece:
+                parts.append(piece)
+            current = []
+            continue
+
+        current.append(char)
+
+    tail = "".join(current).strip()
+    if tail:
+        parts.append(tail)
+
+    return parts
+
+
 def parse_metadata(section_lines: list[str]) -> dict[str, Any]:
     title = find_label(section_lines, "META TITLE")
     description = find_label(section_lines, "META DESCRIPTION")
     canonical = find_label(section_lines, "CANONICAL URL")
     if canonical:
-        canonical = canonical.replace("https://www.enginesmarket.co.uk", "").rstrip("/") or canonical
+        canonical = re.sub(r"^https?://(?:www\.)?enginesmarket\.co\.uk", "", canonical).rstrip("/") or canonical
 
     script_lines: list[str] = []
     capture_script = False
@@ -540,6 +603,48 @@ def parse_hero(section_lines: list[str], fallback_variant_name: str, hero_bg: st
     line2 = find_label(section_lines, "LINE 2")
     image_alt = find_label(section_lines, "ALT TEXT")
     engine_image_alt = find_label(section_lines, "ENGINE IMAGE ALT TEXT") or image_alt
+    engine_option_alts: list[str] = []
+    for line in collect_block(section_lines, "ENGINE THUMBNAILS"):
+        normalized = normalize_text(line)
+        if normalized.lower().startswith("alt text:"):
+            engine_option_alts.append(normalized.split(":", 1)[1].strip())
+
+    line2_prices = {
+        "used": "",
+        "reconditioned": "",
+        "rebuilt": "",
+    }
+    for tone in line2_prices:
+        match = re.search(rf"{tone}\s+from\s+([^·]+)", normalize_text(line2), re.IGNORECASE)
+        if match:
+            line2_prices[tone] = f"From {match.group(1).strip()}"
+
+    engine_options = [
+        {
+            "label": "Used",
+            "price": line2_prices["used"] or "From quote",
+            "description": "Tested, bare/short engine",
+            "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+            "imageAlt": engine_option_alts[0] if len(engine_option_alts) > 0 else engine_image_alt,
+            "tone": "used",
+        },
+        {
+            "label": "Reconditioned",
+            "price": line2_prices["reconditioned"] or "From quote",
+            "description": "Rod bearings addressed, tested",
+            "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+            "imageAlt": engine_option_alts[1] if len(engine_option_alts) > 1 else engine_image_alt,
+            "tone": "reconditioned",
+        },
+        {
+            "label": "Rebuilt",
+            "price": line2_prices["rebuilt"] or "From quote",
+            "description": "Upgraded bearings, full teardown, revised valvetrain",
+            "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+            "imageAlt": engine_option_alts[2] if len(engine_option_alts) > 2 else engine_image_alt,
+            "tone": "rebuilt",
+        },
+    ]
 
     return {
         "tag": find_label(section_lines, "TAG PILL"),
@@ -561,6 +666,8 @@ def parse_hero(section_lines: list[str], fallback_variant_name: str, hero_bg: st
                 "imageAlt": engine_image_alt,
             }
         ],
+        "engineOptions": engine_options,
+        "vehicleBadge": fallback_variant_name.split()[-1] if fallback_variant_name else "",
         "mobileBar": {
             "brandText": "ENGINEMARKET",
             "callLabel": "Call",
@@ -598,12 +705,97 @@ def normalize_hero_variant(hero: dict[str, Any], variant_name: str) -> None:
     hero["registrationInput"]["label"] = f"Enter your {variant_name} registration"
     hero["form"]["heading"] = f"Find Your {variant_name} Engine"
     hero["form"]["subtitle"] = f"Enter your registration number to compare {variant_name} engine options."
+    hero["vehicleBadge"] = variant_name.split()[-1] if variant_name else hero.get("vehicleBadge", "")
     if hero.get("highlights"):
         hero["highlights"][0]["title"] = f"{variant_name} Engine"
         hero["highlights"][0]["price"] = price
 
 
 def parse_how_it_works(section_lines: list[str], variant_name: str) -> dict[str, Any]:
+    card_pattern = re.compile(r"^CARD\s+(?P<number>\d+)", re.IGNORECASE)
+    direct_cards: list[dict[str, Any]] = []
+    current_card: dict[str, Any] | None = None
+
+    for raw_line in section_lines:
+        line = normalize_text(raw_line)
+        if not line or is_noise_line(line):
+            continue
+
+        card_match = card_pattern.match(line)
+        if card_match:
+            if current_card:
+                direct_cards.append(current_card)
+            current_card = {
+                "number": int(card_match.group("number")),
+                "front": {"h3": "", "text": ""},
+                "back": {"heading": "", "text": "", "bullets": []},
+            }
+            continue
+
+        if current_card is None:
+            continue
+
+        if line.lower().startswith("front:"):
+            front_line = line.split(":", 1)[1].strip()
+            front_line = re.sub(r"^[^A-Za-z0-9]+[^.]*icon\.\s*", "", front_line, flags=re.IGNORECASE)
+            h3_match = re.search(r"H3:\s*(.+?)(?:\.\s+|$)", front_line, re.IGNORECASE)
+            if h3_match:
+                current_card["front"]["h3"] = h3_match.group(1).strip()
+                remaining = front_line.replace(h3_match.group(0), "").strip(" .")
+                if remaining:
+                    current_card["front"]["text"] = remaining
+            else:
+                current_card["front"]["text"] = front_line
+            continue
+
+        if line.lower().startswith("flip:"):
+            flip_line = line.split(":", 1)[1].strip()
+            first_sentence, _, remainder = flip_line.partition(". ")
+            current_card["back"]["heading"] = first_sentence.strip()
+            current_card["back"]["text"] = remainder.strip() if remainder else flip_line
+            if remainder:
+                current_card["back"]["bullets"] = [part.strip() for part in re.split(r";\s+|,\s+(?=[A-Z])", remainder) if part.strip()]
+            continue
+
+    if current_card:
+        direct_cards.append(current_card)
+
+    if direct_cards:
+        direct_cards.sort(key=lambda card: card["number"])
+        icon_map = {1: "registration", 2: "quote", 3: "shield"}
+        return {
+            "tag": "How It Works",
+            "h2": f"3 Simple Steps to Finding the Best {variant_name} Replacement Engine",
+            "headingLines": ["3 Simple Steps", f"to Finding the Best {variant_name} Replacement Engine"],
+            "cards": [
+                {
+                    "number": card["number"],
+                    "icon": icon_map.get(card["number"], "registration"),
+                    "front": card["front"],
+                    "back": {
+                        **card["back"],
+                        "bullets": card["back"]["bullets"] or ([card["back"]["text"]] if card["back"]["text"] else []),
+                    },
+                }
+                for card in direct_cards
+            ],
+            "tagline": find_label(section_lines, "TAGLINE"),
+            "ui": {
+                "stepLabel": "Step",
+                "desktopClosedLabel": "Click to expand",
+                "desktopOpenLabel": "Click to view details",
+                "mobileOpenLabel": "Tap to flip",
+                "mobileCloseLabel": "Tap to flip back",
+                "footerNote": "Most replacements completed within 3-5 days.",
+                "mobileTrustItems": [
+                    "12-Month Warranty",
+                    "Supply & Fit Available",
+                    "Nationwide Delivery",
+                    "Trusted UK Suppliers",
+                ],
+            },
+        }
+
     card_fronts: dict[str, list[str]] = {}
     card_flips: dict[str, list[str]] = {}
     current_key: str | None = None
@@ -706,17 +898,162 @@ def parse_how_it_works(section_lines: list[str], variant_name: str) -> dict[str,
 
 
 def parse_history_timeline(section_lines: list[str]) -> dict[str, Any]:
+    timeline_bullets = extract_bullets(section_lines, "TIMELINE") or extract_bullets(section_lines, "KEY MILESTONES")
+    timeline_items = []
+    for bullet in timeline_bullets:
+        year_match = re.match(r"^(?P<year>(?:\d{4}|Present))\s*-\s*(?P<description>.+)$", bullet, re.IGNORECASE)
+        timeline_items.append(
+            {
+                "year": year_match.group("year") if year_match else "",
+                "description": year_match.group("description") if year_match else bullet,
+            }
+        )
+
+    raw_specs = extract_bullets(section_lines, "KEY SPECS SNAPSHOT")
+    spec_items = []
+    for bullet in raw_specs:
+        if ":" in bullet:
+            label, value = bullet.split(":", 1)
+            spec_items.append({"label": label.strip(), "value": value.strip()})
+        else:
+            spec_items.append({"label": bullet, "value": bullet})
+
+    intro_lines: list[str] = []
+    collecting_intro = False
+    for raw_line in section_lines:
+        line = normalize_text(raw_line)
+        if not line or is_noise_line(line):
+            continue
+        if line.upper().startswith("TAG:") or line.upper().startswith("H2:"):
+            collecting_intro = True
+            continue
+        if line.upper().startswith("TIMELINE:"):
+            break
+        if collecting_intro and not match_label(line):
+            intro_lines.append(line)
+
+    h2 = find_label(section_lines, "H2")
+    vehicle_title = h2.split(" - ", 1)[0].strip() if " - " in h2 else h2.split(" — ", 1)[0].strip()
+    closing_note = ""
+    specs_block = collect_block(section_lines, "KEY SPECS SNAPSHOT")
+    for line in reversed(specs_block):
+        normalized = clean_bullet(line) or normalize_text(line)
+        if normalized and ":" not in normalized:
+            closing_note = normalized
+            break
+
     return {
         "tag": "Variant History",
-        "h2": find_label(section_lines, "H2"),
-        "intro": " ".join(collect_block(section_lines, "INTRO PARAGRAPH")),
-        "milestones": extract_bullets(section_lines, "KEY MILESTONES"),
+        "h2": h2,
+        "intro": " ".join(intro_lines) or " ".join(collect_block(section_lines, "INTRO PARAGRAPH")),
+        "milestones": timeline_items,
+        "vehicleTitle": vehicle_title,
+        "vehicleMeta": spec_items[:3],
         "specsLabel": "Key Specs Snapshot",
-        "specs": extract_bullets(section_lines, "KEY SPECS SNAPSHOT"),
+        "specs": spec_items,
+        "closingNote": closing_note,
     }
 
 
 def parse_engine_guide(section_lines: list[str]) -> dict[str, Any]:
+    h4_blocks = parse_h4_blocks(section_lines)
+    if h4_blocks:
+        items = []
+        for block in h4_blocks:
+            heading_match = H4_RE.match(normalize_text(block[0]))
+            if not heading_match:
+                continue
+
+            title = heading_match.group("value").strip()
+            code, clean_title = split_dash_pair(title)
+            raw_specs = extract_bullets(block[1:], "KEY SPECS")
+            specs = []
+            compatible_trim_levels: list[str] = []
+            for bullet in raw_specs:
+                if ":" not in bullet:
+                    continue
+                label, value = bullet.split(":", 1)
+                normalized_label = label.strip()
+                normalized_value = value.strip()
+                if normalized_label.lower().startswith("compatible trim"):
+                    compatible_trim_levels = split_outside_parentheses(normalized_value)
+                    continue
+                specs.append({"label": normalized_label, "value": normalized_value})
+
+            cost_block: list[str] = []
+            collecting_costs = False
+            for raw_line in block[1:]:
+                normalized = normalize_text(raw_line)
+                if not normalized:
+                    if cost_block:
+                        break
+                    continue
+                matched = match_label(normalized)
+                if normalized.upper().startswith("COST GUIDE"):
+                    collecting_costs = True
+                    if ":" in normalized:
+                        cost_block.append(normalized.split(":", 1)[1].strip())
+                    continue
+                if collecting_costs and matched and not normalized.startswith("-"):
+                    break
+                if collecting_costs:
+                    cost_block.append(normalized)
+
+            cost_intro = ""
+            costs = []
+            for line in cost_block:
+                normalized = normalize_text(line)
+                if not normalized:
+                    continue
+                if normalized.startswith("-") or normalized.startswith("•"):
+                    bullet = clean_bullet(normalized)
+                    if ":" in bullet:
+                        label, value = bullet.split(":", 1)
+                        cost_label, description = split_title_and_description(label)
+                        costs.append(
+                            {
+                                "label": cost_label,
+                                "value": value.strip(),
+                                "description": description,
+                            }
+                        )
+                elif not cost_intro:
+                    cost_intro = normalized
+
+            items.append(
+                {
+                    "code": code,
+                    "title": clean_title,
+                    "specs": specs,
+                    "costs": costs,
+                    "compatibleTrimLevels": compatible_trim_levels,
+                    "commonFailure": " ".join(collect_block(block[1:], "COMMON FAILURE")),
+                    "cta": find_label(block[1:], "CTA") or find_first_arrow_line(block[1:]),
+                    "closing": " ".join(
+                        line
+                        for line in collect_block(block[1:], "CTA")
+                        if not normalize_text(line).startswith("(")
+                    ),
+                    "intro": cost_intro,
+                }
+            )
+
+        prompt = " ".join(collect_block(section_lines, "CAN'T FIND YOUR EXACT SPEC")) or " ".join(
+            line
+            for line in section_lines
+            if normalize_text(line).lower().startswith("can't find your exact spec")
+        )
+
+        return {
+            "tag": find_label(section_lines, "TAG") or "Compatible Engines",
+            "h2": find_label(section_lines, "H2"),
+            "sectionTitle": find_label(section_lines, "SECTION TITLE") or "Compatible Engine Codes & Cost Guide",
+            "sectionSubtitle": find_label(section_lines, "SECTION SUBTITLE") or "Find your exact engine code, specs and UK replacement cost guide.",
+            "intro": items[0].pop("intro", "") if items else "",
+            "items": items,
+            "prompt": prompt,
+        }
+
     items = []
     for block in parse_engine_blocks(section_lines):
         title_match = H3_RE.match(normalize_text(block[0]))
@@ -758,6 +1095,98 @@ def parse_engine_guide(section_lines: list[str]) -> dict[str, Any]:
 
 
 def parse_common_problems(section_lines: list[str], variant_name: str) -> dict[str, Any]:
+    h4_blocks = parse_h4_blocks(section_lines)
+    if h4_blocks:
+        intro_lines: list[str] = []
+        for raw_line in section_lines:
+            normalized = normalize_text(raw_line)
+            if not normalized or is_noise_line(normalized):
+                continue
+            if normalized.startswith("## "):
+                continue
+            if normalized.upper().startswith("TAG:") or normalized.upper().startswith("H2:"):
+                continue
+            if H4_RE.match(normalized):
+                break
+            if match_label(normalized) and (normalized.endswith(":") or normalized.upper() == normalized):
+                continue
+            intro_lines.append(normalized)
+
+        problems = []
+        final_cta_title = ""
+        final_cta_paragraph = ""
+
+        for block in h4_blocks:
+            heading_match = H4_RE.match(normalize_text(block[0]))
+            if not heading_match:
+                continue
+
+            heading = heading_match.group("value").strip()
+            affected = " ".join(collect_block(block[1:], "AFFECTED MODELS")) or " ".join(collect_block(block[1:], "AFFECTED"))
+            root_cause = " ".join(collect_block(block[1:], "ROOT CAUSE"))
+            repair_options = parse_repair_options(block[1:], "REPAIR OPTIONS")
+            if repair_options and len(repair_options[0]) == 5:
+                for option in repair_options:
+                    option.setdefault("estimatedTime", "")
+
+            if affected or root_cause or repair_options:
+                for option in repair_options:
+                    if len(option) >= 5:
+                        continue
+
+                six_cell_rows = parse_table(block[1:], "REPAIR OPTIONS", min_cells=6)
+                if six_cell_rows:
+                    repair_options = [
+                        {
+                            "tier": row[0],
+                            "dealerPrice": row[1],
+                            "specialistPrice": row[2],
+                            "whatItInvolves": row[3],
+                            "longevity": row[4],
+                            "estimatedTime": row[5],
+                        }
+                        for row in six_cell_rows
+                    ]
+
+                problems.append(
+                    {
+                        "group": heading.split(" - ", 1)[0].strip(),
+                        "h4": heading,
+                        "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+                        "affectedModels": affected,
+                        "typicalFailureMileage": " ".join(collect_block(block[1:], "TYPICAL FAILURE MILEAGE")),
+                        "rootCause": root_cause,
+                        "whyItHappens": " ".join(collect_block(block[1:], "WHY IT HAPPENS")),
+                        "repairOptions": repair_options,
+                        "vehicleValueCheck": " ".join(collect_block(block[1:], "VEHICLE VALUE CHECK")),
+                        "recommendation": " ".join(collect_block(block[1:], "OUR RECOMMENDATION")),
+                        "cta": find_label(block[1:], "CTA") or find_first_arrow_line(block[1:]),
+                    }
+                )
+                continue
+
+            final_cta_title = heading
+            for raw_line in block[1:]:
+                normalized = normalize_text(raw_line)
+                if normalized and not match_label(normalized):
+                    final_cta_paragraph = normalized
+                    break
+
+        return {
+            "tag": find_label(section_lines, "TAG") or "Common Problems",
+            "h2": find_label(section_lines, "H2"),
+            "h3": " ".join(intro_lines),
+            "problems": problems,
+            "emptyState": None,
+            "finalCta": {
+                "h4": final_cta_title or f"Don't let engine failure write off your {variant_name}",
+                "paragraph": final_cta_paragraph,
+                "buttonText": find_label(section_lines, "CTA BUTTON"),
+                "disclaimer": " ".join(collect_block(section_lines, "DISCLAIMER")),
+            },
+            "reviewSummary": None,
+        }
+
     problems = []
     closing_title = ""
     closing_paragraph = ""
@@ -819,6 +1248,62 @@ def parse_common_problems(section_lines: list[str], variant_name: str) -> dict[s
 
 
 def parse_faq(section_lines: list[str], variant_name: str) -> dict[str, Any]:
+    direct_questions = parse_question_blocks(section_lines)
+    if direct_questions:
+        items = []
+        for block in direct_questions:
+            question_match = QUESTION_RE.match(normalize_text(block[0]))
+            if not question_match:
+                continue
+
+            answer_lines: list[str] = []
+            key_points: list[str] = []
+            warning = None
+            cta = ""
+            for raw_line in block[1:]:
+                normalized = normalize_text(raw_line)
+                if not normalized:
+                    continue
+                if normalized.startswith("->"):
+                    cta = normalized
+                    continue
+                if raw_line.strip().startswith("-") or raw_line.strip().startswith("•"):
+                    bullet = clean_bullet(raw_line)
+                    if bullet:
+                        key_points.append(bullet)
+                    continue
+                if "If you hear knocking" in normalized:
+                    warning = normalized
+                    continue
+                answer_lines.append(normalized)
+
+            items.append(
+                {
+                    "question": question_match.group("value").strip(),
+                    "answer": answer_lines[0] if answer_lines else "",
+                    "keyPoints": key_points,
+                    "comparisonTable": None,
+                    "warning": warning,
+                    "cta": cta,
+                }
+            )
+
+        return {
+            "tag": find_label(section_lines, "TAG") or "FAQ",
+            "h2": find_label(section_lines, "H2"),
+            "intro": f"Everything {variant_name} owners usually ask before choosing a rebuilt, reconditioned or used replacement engine.",
+            "defaultOpenIndex": 0,
+            "disclaimer": " ".join(collect_block(section_lines, "DISCLAIMER")),
+            "items": items,
+            "ui": {
+                "questionLabelPrefix": "Question",
+                "keyPointsLabel": "Key points",
+                "comparisonTableLabel": "Comparison table",
+                "disclaimerLabel": "Disclaimer",
+                "warningTitle": "Important",
+            },
+        }
+
     items = []
     for block in parse_question_blocks(section_lines):
         question_match = QUESTION_RE.match(normalize_text(block[0]))
@@ -868,6 +1353,31 @@ def parse_faq(section_lines: list[str], variant_name: str) -> dict[str, Any]:
 
 
 def parse_trust_cta(section_lines: list[str], variant_name: str) -> dict[str, Any]:
+    trust_badge_lines = extract_bullets(section_lines, "TRUST BADGES")
+    if trust_badge_lines:
+        points = []
+        for line in trust_badge_lines[:3]:
+            title, description = split_dash_pair(line)
+            points.append(
+                {
+                    "title": title.strip(),
+                    "description": description.strip() if description.strip() != title.strip() else "",
+                }
+            )
+
+        return {
+            "tag": find_label(section_lines, "TAG") or "Why Choose Us",
+            "h2": find_label(section_lines, "H2"),
+            "intro": f"Compare quotes from trusted UK {variant_name} engine specialists with warranty-backed rebuilt, reconditioned and used options nationwide.",
+            "points": points,
+            "finalText": find_label(section_lines, "CLOSING LINE"),
+            "buttonText": find_label(section_lines, "CTA BUTTON"),
+            "secondaryAction": {"text": "", "href": "tel:03330000044"},
+            "ui": {
+                "showSecondaryAction": False,
+            },
+        }
+
     points = []
     for label in ("TRUST BULLET 1", "TRUST BULLET 2", "TRUST BULLET 3"):
         text = find_label(section_lines, label)
@@ -898,10 +1408,12 @@ def find_variant_name(hero: dict[str, Any]) -> str:
 
 def build_output_data(
     source_path: Path,
+    lines: list[str],
     section_map: dict[int, list[str]],
     parent_model: dict[str, Any] | None,
 ) -> dict[str, Any]:
-    metadata = parse_metadata(section_map.get(8, []))
+    metadata_lines = section_map.get(8, []) or extract_metadata_lines(lines)
+    metadata = parse_metadata(metadata_lines)
     parent_brand = parent_model.get("brand", {}) if parent_model else {}
     parent_model_meta = parent_model.get("model", {}) if parent_model else {}
     brand_slug, model_slug, variant_slug = derive_route_parts(metadata, source_path.stem)
@@ -1073,10 +1585,11 @@ def validate_variant_data(source_path: Path, section_map: dict[int, list[str]], 
 def extract_file(source_path: Path, output_dir: Path) -> tuple[Path, list[str]]:
     lines = read_lines(source_path)
     section_map = split_sections(lines)
-    metadata = parse_metadata(section_map.get(8, []))
+    metadata_lines = section_map.get(8, []) or extract_metadata_lines(lines)
+    metadata = parse_metadata(metadata_lines)
     brand_slug, model_slug, _variant_slug = derive_route_parts(metadata, source_path.stem)
     parent_model = load_parent_model_page(brand_slug, model_slug)
-    data = build_output_data(source_path, section_map, parent_model)
+    data = build_output_data(source_path, lines, section_map, parent_model)
     warnings = validate_variant_data(source_path, section_map, data)
     output_dir.mkdir(parents=True, exist_ok=True)
     output_path = output_dir / f"{data['variant']['storageSlug']}.json"
