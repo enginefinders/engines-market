@@ -29,10 +29,10 @@ function isRenderableVariantCard(card: VariantCard) {
 }
 
 function BookIcon() {
-  return <img src="/icons/engine-market/dark-green-variant-directory.png" alt="" aria-hidden="true" className="h-3.5 w-3.5 object-contain" loading="lazy" />;
+  return <img src="/icons/engine-market/dark-green-variant-directory.png" alt="" aria-hidden="true" className="h-5 w-5 object-contain" loading="lazy" />;
 }
 
-function NotSureIcon({ className = "h-4 w-4" }: { className?: string }) {
+function NotSureIcon({ className = "h-5 w-5" }: { className?: string }) {
   return <img src="/icons/engine-market/dark-blue-not-sure.png" alt="" aria-hidden="true" className={`${className} object-contain`} loading="lazy" />;
 }
 
@@ -514,7 +514,7 @@ export default function VariantCoverageSection({ data, modelName, documentMode =
               className="w-full text-left flex items-start justify-between gap-4 bg-transparent border-none outline-none cursor-pointer p-0"
             >
               <div>
-                <div className="flex items-center gap-2 text-[12px] font-bold uppercase tracking-[0.08em] text-[#15803d]">
+                <div className="flex items-center gap-2.5 text-[12px] font-bold uppercase tracking-[0.08em] text-[#15803d]">
                   <BookIcon />
                   <span>{data.directory.label ?? "Variant Directory"}</span>
                 </div>
@@ -526,7 +526,7 @@ export default function VariantCoverageSection({ data, modelName, documentMode =
 
             {!isDirectoryOpen && data.closing ? (
               <div className="mt-4 flex items-start gap-2">
-                <NotSureIcon className="mt-[3px] h-4 w-4 flex-shrink-0" />
+                <NotSureIcon className="mt-[2px] h-5 w-5 flex-shrink-0" />
                 <p className="text-[12.5px] leading-[1.65] text-slate-600">
                   {data.closing}
                 </p>
@@ -590,19 +590,7 @@ export default function VariantCoverageSection({ data, modelName, documentMode =
 
                 {data.closing ? (
                   <div className="mt-4 flex items-start gap-2">
-                    <svg
-                      className="mt-[3px] h-4 w-4 flex-shrink-0 text-slate-600"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                      />
-                    </svg>
+                    <NotSureIcon className="mt-[2px] h-5 w-5 flex-shrink-0" />
                     <p className="text-[12.5px] leading-[1.65] text-slate-600">
                       {data.closing}
                     </p>

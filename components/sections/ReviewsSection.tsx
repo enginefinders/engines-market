@@ -14,27 +14,22 @@ type Props = {
 const REVIEW_SOURCES = ["google", "facebook", "trustpilot", "google", "facebook", "trustpilot"] as const;
 const LEAVE_REVIEW_HREF = "mailto:ef2crm@gmail.com?subject=EnginesMarket%20review";
 
-function TagIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" aria-hidden="true">
-      <path
-        d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2Z"
-        stroke="currentColor"
-        strokeWidth="2.2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
 function ReviewBadgeIcon() {
   return (
-    <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" aria-hidden="true">
-      <path d="M21 11.5a8.5 8.5 0 1 1-4.14-7.3" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="m9.5 12 1.8 1.8 4.7-4.8" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="m8.7 20.3-.5 2.7 3.8-2.1 3.8 2.1-.5-2.7" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
+    <span className="relative block h-11 w-11" aria-hidden="true">
+      <img
+        src="/icons/engine-market/colored-experience-positive.png"
+        alt=""
+        className="absolute -left-0.5 bottom-0 h-8 w-8 object-contain"
+        loading="lazy"
+      />
+      <img
+        src="/icons/engine-market/colored-experience-negative.png"
+        alt=""
+        className="absolute -right-0.5 top-0 h-7 w-7 object-contain"
+        loading="lazy"
+      />
+    </span>
   );
 }
 
@@ -245,9 +240,9 @@ export default function ReviewsSection({ data, useDataHeading = false, documentM
             </div>
           </div>
 
-          <div className="mt-5 rounded-[12px] border border-[#2a6dd6] bg-white shadow-[0_0_12px_rgba(42,109,214,0.2)] bg-white px-4 py-4">
+          <div className="mt-5 rounded-[12px] border border-[#2a6dd6] bg-white px-4 py-4 shadow-[0_0_12px_rgba(42,109,214,0.2)]">
             <div className="flex items-start gap-3">
-              <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#0d1b2e] text-white">
+              <span className="inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-[16px] border border-[#dbe4ef] bg-[#f8fafc] text-white shadow-[0_6px_18px_rgba(13,27,46,0.08)]">
                 <ReviewBadgeIcon />
               </span>
               <div>

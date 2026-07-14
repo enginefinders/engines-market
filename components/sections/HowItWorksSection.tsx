@@ -188,10 +188,10 @@ export default function HowItWorksSection({ data, bgImage, sectionId, flush = fa
                       <div
                         className={`mx-auto mt-0 flex items-center justify-center rounded-[14px] p-1 ${
                           isRegistrationCard
-                            ? "h-[92px] w-[184px]"
+                            ? "h-[114px] w-[224px] md:h-[124px] md:w-[236px]"
                             : isComparisonCard
-                              ? "h-[96px] w-[96px] md:h-[108px] md:w-[108px]"
-                              : "h-[90px] w-[90px] md:h-[100px] md:w-[100px]"
+                              ? "h-[114px] w-[114px] md:h-[126px] md:w-[126px]"
+                              : "h-[108px] w-[108px] md:h-[118px] md:w-[118px]"
                         }`}
                       >
                         <img
@@ -199,10 +199,10 @@ export default function HowItWorksSection({ data, bgImage, sectionId, flush = fa
                           alt={`Step ${card.number} icon`}
                           className={
                             isRegistrationCard
-                              ? "h-[76px] w-[166px] object-contain"
+                              ? "h-[96px] w-[196px] object-contain md:h-[106px] md:w-[208px]"
                               : isComparisonCard
-                                ? "h-[86px] w-[86px] object-contain md:h-[96px] md:w-[96px]"
-                                : "h-[78px] w-[78px] object-contain md:h-[86px] md:w-[86px]"
+                                ? "h-[98px] w-[98px] object-contain md:h-[108px] md:w-[108px]"
+                                : "h-[92px] w-[92px] object-contain md:h-[100px] md:w-[100px]"
                           }
                         />
                       </div>
