@@ -44,11 +44,11 @@ export default function DocumentVariantPage({ data }: DocumentVariantPageProps) 
         flush
       />
 
-      <VariantHistoryTimelineSection data={data.sections.historyTimeline} />
+      <VariantHistoryTimelineSection data={data.sections.historyTimeline} vehicleImage={mainImage} />
 
       <VariantEngineGuideSection data={data.sections.engineGuide} />
 
-      <VariantCommonProblemsSection data={data.sections.commonProblems} />
+      <VariantCommonProblemsSection data={data.sections.commonProblems} vehicleImage={mainImage} />
 
       <FaqSection data={data.sections.faq} strictData documentMode />
 

@@ -11,48 +11,30 @@ type Props = {
 };
 
 const defaultEngineImage = "/images/shared/hero-engines/temporary-performance-engine.jpeg";
-
-function WrenchIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" aria-hidden="true">
-      <path
-        d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
+const bottomBarItems = [
+  {
+    src: "/icons/engine-market/light-green-instant-quote.png",
+    text: "Instant engine replacement quote - 100% free, no obligation",
+  },
+  {
+    src: "/icons/engine-market/light-green-pound.png",
+    text: "Engine replacement near me - UK-wide specialist network",
+  },
+  {
+    src: "/icons/engine-market/light-green-pound.png",
+    text: "Compare reconditioned, rebuilt & used engine prices",
+  },
+  {
+    src: "/icons/engine-market/light-green-supply-fit.png",
+    text: "Supply & fit available - parts and labour from vetted specialists",
+  },
+] as const;
 
 function ShieldIcon() {
   return (
     <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" aria-hidden="true">
       <path d="M12 3 20 7v5c0 5-3 8-8 10-5-2-8-5-8-10V7l8-4Z" stroke="currentColor" strokeWidth="1.8" />
       <path d="m8.5 12 2.2 2.2 4.8-5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
-
-function TruckIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" aria-hidden="true">
-      <path d="M3 7h11v10H3V7Z" stroke="currentColor" strokeWidth="1.8" />
-      <path d="M14 11h4l3 3v3h-7v-6Z" stroke="currentColor" strokeWidth="1.8" />
-      <circle cx="7" cy="18" r="1.5" fill="currentColor" />
-      <circle cx="18" cy="18" r="1.5" fill="currentColor" />
-    </svg>
-  );
-}
-
-function UsersIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" aria-hidden="true">
-      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" strokeWidth="1.8" />
-      <circle cx="9" cy="7" r="4" stroke="currentColor" strokeWidth="1.8" />
-      <path d="M23 21v-2a4 4 0 0 0-3-3.87" stroke="currentColor" strokeWidth="1.8" />
-      <path d="M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" strokeWidth="1.8" />
     </svg>
   );
 }
@@ -87,17 +69,23 @@ function UkFlagIcon() {
   );
 }
 
+function AssetIcon({
+  src,
+  alt = "",
+  className = "h-5 w-5 object-contain",
+}: {
+  src: string;
+  alt?: string;
+  className?: string;
+}) {
+  return <Image src={src} alt={alt} width={28} height={28} className={className} />;
+}
+
 function getTrustIcon(index: number) {
-  if (index === 0) {
-    return <WrenchIcon />;
-  }
-  if (index === 1) {
-    return <ShieldIcon />;
-  }
-  if (index === 2) {
-    return <TruckIcon />;
-  }
-  return <UsersIcon />;
+  if (index === 0) return <AssetIcon src="/icons/variant/light-blue/supply-fit.png" className="h-5 w-5 object-contain" />;
+  if (index === 1) return <AssetIcon src="/icons/variant/light-blue/warranty.png" className="h-5 w-5 object-contain" />;
+  if (index === 2) return <AssetIcon src="/icons/variant/light-blue/nationwide.png" className="h-5 w-7 object-contain" />;
+  return <AssetIcon src="/icons/variant/light-blue/specialists.png" className="h-5 w-5 object-contain" />;
 }
 
 function getOptionToneClasses(tone?: string) {
@@ -121,10 +109,7 @@ function getOptionToneClasses(tone?: string) {
 
 function parseAnchorPrice(data: VariantHeroData) {
   const line = data.highlights?.[0]?.line1 ?? data.highlights?.[0]?.price ?? "";
-  if (!line) {
-    return data.highlights?.[0]?.price ?? "";
-  }
-
+  if (!line) return data.highlights?.[0]?.price ?? "";
   const pieces = line.split(/[-:]/);
   return pieces.length > 1 ? pieces.slice(1).join("-").trim() : line;
 }
@@ -158,60 +143,53 @@ function getHeadlineParts(h1: string) {
   };
 }
 
-function getTickerItems(ticker: string) {
-  return ticker
-    .split(/[●•·|]/)
-    .map((item) => item.trim())
-    .filter(Boolean);
-}
-
 export default function VariantHeroSection({ data, bgImage }: Props) {
   const headline = getHeadlineParts(data.h1);
   const optionCards = getEngineCards(data);
   const anchorPrice = parseAnchorPrice(data);
   const detailLine = data.highlights?.[0]?.detail ?? data.highlights?.[0]?.line2 ?? "";
-  const tickerItems = getTickerItems(data.ticker);
+  const bottomTickerLoop = [...bottomBarItems, ...bottomBarItems];
 
   return (
-    <Section className="overflow-hidden bg-white !py-0">
-      <Container className="!max-w-none !px-0 sm:!px-0 lg:!px-0">
+    <Section className="overflow-hidden bg-white !py-[2px]">
+      <Container className="!max-w-none !px-[2px] sm:!px-[2px] lg:!px-[2px]">
         <div className="relative overflow-hidden">
           <div className="absolute inset-0 bg-[linear-gradient(126deg,rgba(255,255,255,0.98)_0%,rgba(255,255,255,0.98)_40%,rgba(241,246,253,0.98)_58%,rgba(225,234,247,0.95)_74%,rgba(211,224,243,0.92)_100%)]" />
           <div className="absolute inset-y-0 right-0 hidden w-[52%] bg-[linear-gradient(135deg,transparent_0%,transparent_28%,rgba(195,210,236,0.3)_28%,rgba(195,210,236,0.3)_36%,transparent_36%,transparent_49%,rgba(195,210,236,0.22)_49%,rgba(195,210,236,0.22)_57%,transparent_57%)] lg:block" />
-          <div className="pointer-events-none absolute right-[2%] top-1 hidden text-[150px] font-black leading-none text-[#d4e2f6] opacity-70 lg:block">
-            {data.vehicleBadge ?? "M3"}
-          </div>
-
-          <div className="relative grid gap-6 lg:grid-cols-[minmax(0,1.03fr)_minmax(500px,0.97fr)] lg:items-center">
-            <div className="max-w-[700px] pt-2">
-              <div className="inline-flex items-center gap-2 rounded-full bg-[#1f8b41] px-4 py-2 text-[12px] font-bold uppercase tracking-[0.03em] text-white shadow-[0_8px_18px_rgba(31,139,65,0.18)]">
-                <ShieldIcon />
+          <div className="relative grid gap-4 px-4 pt-3 lg:grid-cols-[minmax(0,1.03fr)_minmax(500px,0.97fr)] lg:items-center lg:px-6 lg:pt-2">
+            <div className="max-w-[700px] pt-1">
+              <div className="inline-flex items-center gap-2 rounded-full border border-[#d7e4fb] bg-[#f2f7ff] px-3 py-2 text-[10px] font-bold uppercase tracking-[0.03em] text-[#1558c0] shadow-[0_8px_18px_rgba(31,139,65,0.08)] lg:border-0 lg:bg-[#1f8b41] lg:text-white lg:shadow-[0_8px_18px_rgba(31,139,65,0.18)]">
+                <span className="text-[#0b2347] lg:text-white">
+                  <ShieldIcon />
+                </span>
                 <span>{data.tag}</span>
               </div>
 
-              <h1 className="mt-5 max-w-[760px] font-['Manrope'] text-[38px] font-extrabold leading-[0.98] tracking-normal text-[#0b2347] sm:text-[50px] lg:text-[64px]">
+              <h1 className="mt-4 max-w-[760px] font-['Manrope'] text-[33px] font-extrabold leading-[0.98] tracking-normal text-[#0b2347] sm:text-[42px] lg:text-[58px]">
                 <span className="block">{headline.lead}</span>
-                {headline.accent ? <span className="mt-2 block text-[#169347]">{headline.accent}</span> : null}
+                {headline.accent ? <span className="mt-1.5 block text-[#169347]">{headline.accent}</span> : null}
               </h1>
 
-              <p className="mt-4 max-w-[650px] text-[17px] leading-[1.65] text-[#253c5d]">{data.subheading}</p>
+              <p className="mt-4 max-w-[650px] text-[15px] leading-[1.65] text-[#253c5d] sm:text-[16px]">
+                {data.subheading}
+              </p>
 
-              <div className="mt-6 grid grid-cols-2 gap-x-4 gap-y-4 border-y border-[#e2e8f1] py-4 sm:grid-cols-4 lg:max-w-[720px]">
+              <div className="mt-5 grid grid-cols-2 gap-3 py-1 sm:grid-cols-4 lg:max-w-[720px]">
                 {data.trustBadges.map((badge, index) => (
                   <div
                     key={`${badge}-${index}`}
-                    className={`inline-flex min-w-0 items-center gap-3 pr-4 text-[#163d8c] ${
-                      index < data.trustBadges.length - 1 ? "border-r border-[#dbe5f2]" : ""
+                    className={`flex min-w-0 items-center gap-3 rounded-[14px] border border-[#e0e7f1] bg-white px-3 py-3 text-[#163d8c] shadow-[0_10px_20px_rgba(15,23,42,0.05)] lg:rounded-none lg:border-0 lg:bg-transparent lg:px-0 lg:py-0 lg:shadow-none ${
+                      index < data.trustBadges.length - 1 ? "lg:border-r lg:border-[#dbe5f2] lg:pr-3" : ""
                     }`}
                   >
                     <div className="text-[#1558c0]">{getTrustIcon(index)}</div>
-                    <p className="text-[14px] font-semibold leading-[1.35] text-[#112b57]">{badge}</p>
+                    <p className="text-[13px] font-semibold leading-[1.22] text-[#112b57]">{badge}</p>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="relative mx-auto flex min-h-[250px] w-full max-w-[690px] items-end justify-center lg:min-h-[410px]">
+            <div className="relative mx-auto hidden min-h-[228px] w-full max-w-[690px] items-end justify-center lg:flex lg:min-h-[370px]">
               <div className="absolute inset-x-14 bottom-4 h-12 rounded-full bg-[radial-gradient(circle,rgba(100,116,139,0.24),rgba(100,116,139,0))] blur-2xl" />
               <Image
                 src={bgImage}
@@ -224,40 +202,40 @@ export default function VariantHeroSection({ data, bgImage }: Props) {
             </div>
           </div>
 
-          <div className="relative mt-5 grid gap-4 xl:grid-cols-[minmax(0,1.38fr)_minmax(390px,0.82fr)]">
-            <div className="rounded-none border border-[#e0e7f1] bg-white/92 p-4 shadow-[0_16px_32px_rgba(15,23,42,0.06)] backdrop-blur-sm sm:p-5">
-              <div className="grid gap-5 lg:grid-cols-[220px_minmax(0,1fr)] lg:items-center">
-                <div className="relative mx-auto flex h-[190px] w-full max-w-[240px] items-center justify-center">
+          <div className="relative mt-3 grid gap-3 px-4 pb-3 xl:grid-cols-[minmax(0,1.38fr)_minmax(390px,0.82fr)] lg:px-6">
+            <div className="rounded-[18px] border border-[#e0e7f1] bg-white/92 p-3 shadow-[0_16px_32px_rgba(15,23,42,0.06)] backdrop-blur-sm sm:p-4 lg:rounded-none">
+              <div className="grid gap-4 lg:grid-cols-[200px_minmax(0,1fr)] lg:items-center">
+                <div className="relative mx-auto flex h-[168px] w-full max-w-[210px] items-center justify-center">
                   <Image
                     src={optionCards[0]?.image || defaultEngineImage}
                     alt={optionCards[0]?.imageAlt || `${data.h1} engine`}
                     fill
                     className="object-contain"
-                    sizes="240px"
+                    sizes="210px"
                   />
                 </div>
 
                 <div>
-                  <div className="inline-flex rounded-full bg-[#09295a] px-4 py-1.5 text-[13px] font-extrabold tracking-[0.03em] text-white">
+                  <div className="inline-flex rounded-full bg-[#09295a] px-3 py-1 text-[10px] font-extrabold tracking-[0.03em] text-white">
                     {data.highlights?.[0]?.title?.replace(/\s+Engine$/i, "") || "Engine Code"}
                   </div>
 
-                  <p className="mt-3 font-['Manrope'] text-[25px] font-extrabold tracking-normal text-[#0b2347] sm:text-[33px]">
+                  <p className="mt-2.5 font-['Manrope'] text-[22px] font-extrabold tracking-normal text-[#0b2347] sm:text-[28px]">
                     From <span className="text-[#149347]">{anchorPrice || data.highlights?.[0]?.price}</span>
                   </p>
 
-                  {detailLine ? <p className="mt-2 text-[15px] leading-[1.6] text-[#334a68]">{detailLine}</p> : null}
+                  {detailLine ? <p className="mt-1.5 text-[13px] leading-[1.55] text-[#334a68]">{detailLine}</p> : null}
 
-                  <div className="mt-4 grid gap-3 md:grid-cols-3">
+                  <div className="mt-3 grid grid-cols-3 gap-0 overflow-hidden rounded-[16px] border border-[#dfe7f1]">
                     {optionCards.map((option, index) => {
                       const tone = getOptionToneClasses(option.tone);
                       return (
-                        <div key={`${option.label}-${index}`} className="rounded-none border border-[#dfe7f1] bg-[#fbfdff] px-4 py-3.5">
-                          <div className={`inline-flex rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-[0.04em] ${tone.badge}`}>
+                        <div key={`${option.label}-${index}`} className={`bg-[#fbfdff] px-3 py-3 ${index < optionCards.length - 1 ? "border-r border-[#dfe7f1]" : ""}`}>
+                          <div className={`inline-flex rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.04em] ${tone.badge}`}>
                             {option.label}
                           </div>
-                          <p className={`mt-3 text-[16px] font-extrabold ${tone.price}`}>{option.price}</p>
-                          <p className="mt-1.5 text-[13px] leading-[1.5] text-[#4d6483]">{option.description}</p>
+                          <p className={`mt-2 text-[13px] font-extrabold ${tone.price} sm:text-[14px]`}>{option.price}</p>
+                          <p className="mt-1 text-[11px] leading-[1.5] text-[#4d6483] sm:text-[12px]">{option.description}</p>
                         </div>
                       );
                     })}
@@ -266,13 +244,13 @@ export default function VariantHeroSection({ data, bgImage }: Props) {
               </div>
             </div>
 
-            <div className="rounded-none border border-[#e0e7f1] bg-white/95 p-4 shadow-[0_16px_32px_rgba(15,23,42,0.06)] backdrop-blur-sm sm:p-5">
-              <div className="grid gap-4">
-                <div className="grid grid-cols-[92px_1fr] overflow-hidden rounded-none border border-[#dbe4f0] bg-[#fbfdff]">
-                  <div className="grid grid-cols-[1fr_auto] items-center gap-3 border-r border-[#dbe4f0] px-4 py-3">
+            <div className="flex min-h-[250px] items-center rounded-[18px] border border-[#e0e7f1] bg-white/95 p-3 shadow-[0_16px_32px_rgba(15,23,42,0.06)] backdrop-blur-sm sm:min-h-[262px] sm:p-4 lg:rounded-none">
+              <div className="grid w-full gap-3">
+                <div className="grid grid-cols-[88px_1fr] overflow-hidden rounded-none border border-[#dbe4f0] bg-[#fbfdff]">
+                  <div className="grid grid-cols-[1fr_auto] items-center gap-3 border-r border-[#dbe4f0] px-3 py-2.5">
                     <div className="flex items-center gap-2">
                       <UkFlagIcon />
-                      <span className="text-[16px] font-extrabold text-[#0b2347]">{data.registrationInput?.countryCode ?? "GB"}</span>
+                      <span className="text-[15px] font-extrabold text-[#0b2347]">{data.registrationInput?.countryCode ?? "GB"}</span>
                     </div>
                     <svg viewBox="0 0 24 24" className="h-4 w-4 text-[#0b2347]" fill="none" aria-hidden="true">
                       <path d="m6 9 6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -281,7 +259,7 @@ export default function VariantHeroSection({ data, bgImage }: Props) {
                   <input
                     type="text"
                     placeholder={data.registrationInput?.platePlaceholder || data.form.inputPlaceholder}
-                    className="min-w-0 border-0 bg-transparent px-5 text-[17px] text-[#0b2347] outline-none placeholder:text-[#7487a1]"
+                    className="min-w-0 border-0 bg-transparent px-4 text-[15px] text-[#0b2347] outline-none placeholder:text-[#7487a1]"
                     aria-label={data.registrationInput?.label || data.form.heading}
                   />
                 </div>
@@ -290,13 +268,15 @@ export default function VariantHeroSection({ data, bgImage }: Props) {
                   href="#quote-form"
                   data-quote-context={data.form.heading}
                   data-quote-source="variant-hero"
-                  className="inline-flex min-h-[72px] items-center justify-center gap-3 rounded-none bg-[#169347] px-6 text-center text-[17px] font-extrabold text-white shadow-[0_16px_28px_rgba(22,147,71,0.24)] transition hover:bg-[#117f3b]"
+                  className="inline-flex min-h-[58px] items-center justify-center gap-3 rounded-[10px] bg-[#169347] px-5 text-center text-[15px] font-extrabold text-white shadow-[0_16px_28px_rgba(22,147,71,0.24)] transition hover:bg-[#117f3b]"
                 >
                   <span>{data.form.buttonText.replace(/\s*->\s*$/, "")}</span>
-                  <ArrowIcon />
+                  <span className="pl-1.5">
+                    <ArrowIcon />
+                  </span>
                 </a>
 
-                <div className="flex items-start gap-3 text-[15px] leading-[1.6] text-[#253a58]">
+                <div className="flex items-start gap-3 px-1 text-[13px] leading-[1.5] text-[#253a58]">
                   <span className="mt-1 text-[#0b2347]">
                     <LockIcon />
                   </span>
@@ -306,18 +286,37 @@ export default function VariantHeroSection({ data, bgImage }: Props) {
             </div>
           </div>
 
-          {tickerItems.length ? (
-            <div className="relative mt-4 overflow-hidden rounded-[18px] bg-[#061d46] px-4 py-3 text-white shadow-[0_12px_24px_rgba(8,31,71,0.16)]">
-              <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-1.5 text-[14px] font-medium">
-                {tickerItems.map((item, index) => (
-                  <span key={`${item}-${index}`} className="inline-flex items-center gap-3">
-                    <span>{item}</span>
-                    {index < tickerItems.length - 1 ? <span className="h-2 w-2 rounded-full bg-[#22c55e]" /> : null}
+          <div className="bg-[#0a1c36]">
+            <div className="hidden h-14 items-center overflow-hidden bg-[#0a1c36] lg:flex">
+              <Container className="!max-w-none !px-4 sm:!px-4 lg:!px-6">
+                <div className="hero-ticker-track h-14 bg-[#0a1c36]" style={{ animationDuration: "32s" }}>
+                  {bottomTickerLoop.map((item, index) => (
+                    <span
+                      key={`desktop-bottom-ticker-${index}`}
+                      className="flex h-14 flex-none items-center gap-[10px] border-r border-r-white/10 px-6 text-[12px] leading-[1.4] text-white/80"
+                    >
+                      <img src={item.src} alt="" aria-hidden="true" className="h-7 w-7 flex-none object-contain" loading="eager" />
+                      <span>{item.text}</span>
+                    </span>
+                  ))}
+                </div>
+              </Container>
+            </div>
+
+            <div className="flex h-12 items-center overflow-hidden bg-[#0a1c36] lg:hidden">
+              <div className="hero-ticker-track h-12 bg-[#0a1c36]" style={{ animationDuration: "45s" }}>
+                {bottomTickerLoop.map((item, index) => (
+                  <span
+                    key={`mobile-bottom-ticker-${index}`}
+                    className="flex h-12 flex-none items-center gap-[8px] border-r border-r-white/10 px-5 text-[12px] text-white/80"
+                  >
+                    <img src={item.src} alt="" aria-hidden="true" className="h-6 w-6 flex-none object-contain" loading="eager" />
+                    <span>{item.text}</span>
                   </span>
                 ))}
               </div>
             </div>
-          ) : null}
+          </div>
         </div>
       </Container>
     </Section>

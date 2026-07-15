@@ -16,7 +16,7 @@ MODELS_DIR = REPO_ROOT / "data" / "models"
 VARIANTS_DIR = REPO_ROOT / "data" / "variants"
 
 SECTION_RE = re.compile(r"^#?\s*SECTION\s+(?P<number>\d+)(?:\s*[—-]|\s*$)", re.IGNORECASE)
-LABEL_RE = re.compile(r"^(?P<label>[A-Za-z0-9 ()/&'\-]+):\s*(?P<value>.*)$")
+LABEL_RE = re.compile(r"^(?P<label>[^:]{1,160}):\s*(?P<value>.*)$")
 QUESTION_RE = re.compile(r"^Q(?:\d+)?:\s*(?P<value>.+)$", re.IGNORECASE)
 H3_RE = re.compile(r"^H3:\s*(?P<value>.+)$", re.IGNORECASE)
 H4_RE = re.compile(r"^H4:\s*(?P<value>.+)$", re.IGNORECASE)
@@ -161,11 +161,37 @@ def match_label(line: str) -> tuple[str, str] | None:
     return label_match.group("label").upper(), label_match.group("value").strip()
 
 
+def matches_label_variant(current_label: str, target: str) -> bool:
+    normalized_current = normalize_text(current_label).upper()
+    normalized_target = normalize_text(target).upper()
+    return normalized_current == normalized_target or normalized_current.startswith(f"{normalized_target} (")
+
+
 def find_label(lines: list[str], label: str, default: str = "") -> str:
     target = label.upper()
     for index, line in enumerate(lines):
         matched = match_label(line)
         if matched and matched[0] == target:
+            if matched[1]:
+                return matched[1]
+
+            for trailing_line in lines[index + 1 :]:
+                normalized = normalize_text(trailing_line)
+                if not normalized:
+                    continue
+                if is_noise_line(normalized):
+                    continue
+                if match_label(normalized):
+                    return default
+                return normalized
+    return default
+
+
+def find_label_variant(lines: list[str], label: str, default: str = "") -> str:
+    target = label.upper()
+    for index, line in enumerate(lines):
+        matched = match_label(line)
+        if matched and matches_label_variant(matched[0], target):
             if matched[1]:
                 return matched[1]
 
@@ -213,6 +239,38 @@ def collect_block(lines: list[str], start_label: str) -> list[str]:
     return values
 
 
+def collect_block_variant(lines: list[str], start_label: str) -> list[str]:
+    target = start_label.upper()
+    values: list[str] = []
+    collecting = False
+
+    for raw_line in lines:
+        normalized = normalize_text(raw_line)
+        matched = match_label(normalized)
+        is_bullet_like = bool(re.match(r"^\s*(?:Ã¢â‚¬Â¢|â€¢|->|-|\d+\.)\s*", repair_text(raw_line))) or normalized.startswith("|")
+
+        if matched:
+            current_label, current_value = matched
+            if collecting and not matches_label_variant(current_label, target) and not is_bullet_like:
+                break
+            if matches_label_variant(current_label, target):
+                collecting = True
+                if current_value:
+                    values.append(current_value)
+                continue
+
+        if collecting:
+            if not normalized:
+                if values:
+                    break
+                continue
+            if is_noise_line(normalized):
+                continue
+            values.append(normalized)
+
+    return values
+
+
 def clean_bullet(value: str) -> str:
     line = strip_leading_marker(value)
     has_marker = bool(re.match(r"^\s*(?:â€¢|•|->|-|\[[^\]]+\])\s*", repair_text(value)))
@@ -224,6 +282,15 @@ def clean_bullet(value: str) -> str:
 def extract_bullets(lines: list[str], start_label: str) -> list[str]:
     bullets: list[str] = []
     for value in collect_block(lines, start_label):
+        line = clean_bullet(value)
+        if line and not line.startswith("|"):
+            bullets.append(line)
+    return bullets
+
+
+def extract_bullets_variant(lines: list[str], start_label: str) -> list[str]:
+    bullets: list[str] = []
+    for value in collect_block_variant(lines, start_label):
         line = clean_bullet(value)
         if line and not line.startswith("|"):
             bullets.append(line)
@@ -244,10 +311,26 @@ def parse_table(lines: list[str], start_label: str, min_cells: int) -> list[list
     return rows
 
 
+def parse_table_variant(lines: list[str], start_label: str, min_cells: int) -> list[list[str]]:
+    block = collect_block_variant(lines, start_label)
+    table_lines = [line for line in block if line.strip().startswith("|")]
+    if len(table_lines) < 3:
+        return []
+
+    rows: list[list[str]] = []
+    for line in table_lines[2:]:
+        cells = [normalize_text(cell) for cell in line.strip().strip("|").split("|")]
+        if len(cells) >= min_cells:
+            rows.append(cells)
+    return rows
+
+
 def parse_repair_options(lines: list[str], start_label: str) -> list[dict[str, str]]:
     rows = parse_table(lines, start_label, min_cells=5)
     if not rows:
-        block = collect_block(lines, start_label)
+        rows = parse_table_variant(lines, start_label, min_cells=5)
+    if not rows:
+        block = collect_block(lines, start_label) or collect_block_variant(lines, start_label)
         values = [normalize_text(line) for line in block if normalize_text(line)]
         header_markers = {
             "Repair Tier",
@@ -898,7 +981,11 @@ def parse_how_it_works(section_lines: list[str], variant_name: str) -> dict[str,
 
 
 def parse_history_timeline(section_lines: list[str]) -> dict[str, Any]:
-    timeline_bullets = extract_bullets(section_lines, "TIMELINE") or extract_bullets(section_lines, "KEY MILESTONES")
+    timeline_bullets = (
+        extract_bullets(section_lines, "TIMELINE")
+        or extract_bullets_variant(section_lines, "TIMELINE")
+        or extract_bullets(section_lines, "KEY MILESTONES")
+    )
     timeline_items = []
     for bullet in timeline_bullets:
         year_match = re.match(r"^(?P<year>(?:\d{4}|Present))\s*-\s*(?P<description>.+)$", bullet, re.IGNORECASE)
@@ -934,18 +1021,18 @@ def parse_history_timeline(section_lines: list[str]) -> dict[str, Any]:
 
     h2 = find_label(section_lines, "H2")
     vehicle_title = h2.split(" - ", 1)[0].strip() if " - " in h2 else h2.split(" — ", 1)[0].strip()
-    closing_note = ""
-    specs_block = collect_block(section_lines, "KEY SPECS SNAPSHOT")
-    for line in reversed(specs_block):
-        normalized = clean_bullet(line) or normalize_text(line)
-        if normalized and ":" not in normalized:
-            closing_note = normalized
-            break
+    closing_note = find_label(section_lines, "CLOSING LINE") or find_label_variant(section_lines, "CLOSING LINE")
 
     return {
         "tag": "Variant History",
         "h2": h2,
-        "intro": " ".join(intro_lines) or " ".join(collect_block(section_lines, "INTRO PARAGRAPH")),
+        "intro": (
+            find_label(section_lines, "INTRO")
+            or find_label_variant(section_lines, "INTRO")
+            or " ".join(intro_lines)
+            or " ".join(collect_block(section_lines, "INTRO PARAGRAPH"))
+            or " ".join(collect_block_variant(section_lines, "INTRO"))
+        ),
         "milestones": timeline_items,
         "vehicleTitle": vehicle_title,
         "vehicleMeta": spec_items[:3],
@@ -1134,7 +1221,7 @@ def parse_common_problems(section_lines: list[str], variant_name: str) -> dict[s
                     if len(option) >= 5:
                         continue
 
-                six_cell_rows = parse_table(block[1:], "REPAIR OPTIONS", min_cells=6)
+                six_cell_rows = parse_table(block[1:], "REPAIR OPTIONS", min_cells=6) or parse_table_variant(block[1:], "REPAIR OPTIONS", min_cells=6)
                 if six_cell_rows:
                     repair_options = [
                         {
@@ -1353,7 +1440,7 @@ def parse_faq(section_lines: list[str], variant_name: str) -> dict[str, Any]:
 
 
 def parse_trust_cta(section_lines: list[str], variant_name: str) -> dict[str, Any]:
-    trust_badge_lines = extract_bullets(section_lines, "TRUST BADGES")
+    trust_badge_lines = extract_bullets(section_lines, "TRUST BADGES") or extract_bullets_variant(section_lines, "TRUST BADGES")
     if trust_badge_lines:
         points = []
         for line in trust_badge_lines[:3]:
@@ -1370,7 +1457,7 @@ def parse_trust_cta(section_lines: list[str], variant_name: str) -> dict[str, An
             "h2": find_label(section_lines, "H2"),
             "intro": f"Compare quotes from trusted UK {variant_name} engine specialists with warranty-backed rebuilt, reconditioned and used options nationwide.",
             "points": points,
-            "finalText": find_label(section_lines, "CLOSING LINE"),
+            "finalText": find_label(section_lines, "CLOSING LINE") or find_label_variant(section_lines, "CLOSING LINE"),
             "buttonText": find_label(section_lines, "CTA BUTTON"),
             "secondaryAction": {"text": "", "href": "tel:03330000044"},
             "ui": {

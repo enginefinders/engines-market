@@ -8,79 +8,51 @@ import Section from "@/components/ui/Section";
 
 type Props = {
   data: VariantCommonProblemsData;
+  vehicleImage?: string;
 };
 
-const engineImage = "/images/shared/hero-engines/temporary-performance-engine.jpeg";
+const engineImage = "/images/brands/bmw/models/bmw-m3-removebg.png";
 const bearingImage = "/case-studies/assets/3.1-ford-ranger-32-seized-bearings.png";
+const ctaEngineImage = "/images/shared/hero-engines/temporary-performance-engine.jpeg";
+
+function AssetIcon({
+  src,
+  alt = "",
+  className = "h-5 w-5 object-contain",
+}: {
+  src: string;
+  alt?: string;
+  className?: string;
+}) {
+  return <Image src={src} alt={alt} width={28} height={28} className={className} />;
+}
 
 function WarningIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" aria-hidden="true">
-      <path d="M12 3 22 20H2L12 3Z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
-      <path d="M12 9v4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-      <circle cx="12" cy="17" r="1" fill="currentColor" />
-    </svg>
-  );
+  return <AssetIcon src="/icons/variant/dark-green/major-change.png" className="h-6 w-6 object-contain" />;
 }
 
 function CarIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" aria-hidden="true">
-      <path d="M5 14h14l-1.5-4.5a2 2 0 0 0-1.9-1.4H8.4a2 2 0 0 0-1.9 1.4L5 14Z" stroke="currentColor" strokeWidth="1.8" />
-      <circle cx="8" cy="16.5" r="1.5" fill="currentColor" />
-      <circle cx="16" cy="16.5" r="1.5" fill="currentColor" />
-    </svg>
-  );
+  return <AssetIcon src="/icons/variant/dark-green/car.png" className="h-5 w-5 object-contain" />;
 }
 
 function GaugeIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" aria-hidden="true">
-      <path d="M5 17a7 7 0 1 1 14 0" stroke="currentColor" strokeWidth="1.8" />
-      <path d="m12 13 4-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-    </svg>
-  );
+  return <AssetIcon src="/icons/variant/dark-green/calendar.png" className="h-5 w-5 object-contain" />;
 }
 
 function CogIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" aria-hidden="true">
-      <path d="M12 8.5A3.5 3.5 0 1 0 12 15.5 3.5 3.5 0 1 0 12 8.5Z" stroke="currentColor" strokeWidth="1.8" />
-      <path
-        d="M19.4 15a1 1 0 0 0 .2 1.1l.1.1a1.9 1.9 0 0 1 0 2.7 1.9 1.9 0 0 1-2.7 0l-.1-.1a1 1 0 0 0-1.1-.2 1 1 0 0 0-.6.9V20a2 2 0 0 1-4 0v-.2a1 1 0 0 0-.6-.9 1 1 0 0 0-1.1.2l-.1.1a1.9 1.9 0 0 1-2.7 0 1.9 1.9 0 0 1 0-2.7l.1-.1a1 1 0 0 0 .2-1.1 1 1 0 0 0-.9-.6H4a2 2 0 0 1 0-4h.2a1 1 0 0 0 .9-.6 1 1 0 0 0-.2-1.1l-.1-.1a1.9 1.9 0 0 1 0-2.7 1.9 1.9 0 0 1 2.7 0l.1.1a1 1 0 0 0 1.1.2 1 1 0 0 0 .6-.9V4a2 2 0 0 1 4 0v.2a1 1 0 0 0 .6.9 1 1 0 0 0 1.1-.2l.1-.1a1.9 1.9 0 0 1 2.7 0 1.9 1.9 0 0 1 0 2.7l-.1.1a1 1 0 0 0-.2 1.1 1 1 0 0 0 .9.6H20a2 2 0 0 1 0 4h-.2a1 1 0 0 0-.9.6Z"
-        stroke="currentColor"
-        strokeWidth="1.4"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
+  return <AssetIcon src="/icons/variant/dark-green/upgraded-components.png" className="h-5 w-5 object-contain" />;
 }
 
 function ClockIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" aria-hidden="true">
-      <circle cx="12" cy="12" r="8" stroke="currentColor" strokeWidth="1.8" />
-      <path d="M12 8v5l3 2" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-    </svg>
-  );
+  return <AssetIcon src="/icons/variant/dark-green/calendar.png" className="h-5 w-5 object-contain" />;
 }
 
 function RecommendationIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" aria-hidden="true">
-      <path d="M12 3 20 7v5c0 5-3 8-8 10-5-2-8-5-8-10V7l8-4Z" stroke="currentColor" strokeWidth="1.8" />
-      <path d="m8.5 12 2.2 2.2 4.8-5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
+  return <AssetIcon src="/icons/variant/white/warranty.png" className="h-6 w-6 object-contain" />;
 }
 
 function SummaryIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" aria-hidden="true">
-      <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.8" />
-      <path d="M8 12h8M8 16h5M8 8h8" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-    </svg>
-  );
+  return <AssetIcon src="/icons/variant/dark-green/known-for.png" className="h-6 w-6 object-contain" />;
 }
 
 function ArrowIcon() {
@@ -109,47 +81,74 @@ function getTimeLabel(value?: string) {
   return value && value.trim() ? value : "1 - 2 days";
 }
 
-export default function VariantCommonProblemsSection({ data }: Props) {
+function getRepairTierMeta(index: number) {
+  if (index === 0) {
+    return {
+      icon: "/icons/engine-market/white-warranty.png",
+      iconBg: "bg-[#1f8b41]",
+      label: "Minor",
+      labelClass: "bg-[#e8f6eb] text-[#16803d]",
+    };
+  }
+
+  return {
+    icon: "/icons/engine-market/white-petrol-engine.png",
+    iconBg: "bg-[#ef4444]",
+    label: "Best Value",
+    labelClass: "bg-[#fde8e8] text-[#dc2626]",
+  };
+}
+
+export default function VariantCommonProblemsSection({ data, vehicleImage }: Props) {
   const [activeIndex, setActiveIndex] = useState(0);
   const activeProblem = data.problems[activeIndex] ?? data.problems[0];
   const heading = useMemo(() => (activeProblem ? splitProblemHeading(activeProblem.h4) : null), [activeProblem]);
-  const leadProblemImage =
-    activeProblem?.image && activeProblem.image !== engineImage ? activeProblem.image : bearingImage;
+  const leadProblemImage = bearingImage;
+  const headerVehicleImage = vehicleImage || engineImage;
+  const headingParts = data.h2.split("Repair Cost");
 
   if (!activeProblem && !data.emptyState) {
     return null;
   }
 
   return (
-    <Section className="bg-white !py-0">
-      <Container className="!max-w-none !px-0 sm:!px-0 lg:!px-0">
+    <Section className="bg-white !py-[2px]">
+      <Container className="!max-w-none !px-[2px] sm:!px-[2px] lg:!px-[2px]">
         <div>
-          <div className="relative overflow-hidden bg-[linear-gradient(90deg,rgba(2,9,24,0.95),rgba(7,19,38,0.8)),url('/images/brands/bmw/brand/bmw-live-market-bg.png')] bg-cover bg-center px-5 py-5 sm:px-7 lg:px-10 lg:py-6">
-            <div className="grid gap-5 lg:grid-cols-[minmax(0,0.96fr)_minmax(360px,0.9fr)] lg:items-center">
-              <div>
+          <div className="relative overflow-hidden bg-[linear-gradient(90deg,rgba(2,9,24,0.95),rgba(7,19,38,0.8)),url('/images/brands/bmw/brand/bmw-live-market-bg.png')] bg-cover bg-center px-5 py-4 sm:px-6 lg:px-9 lg:py-5">
+            <div className="relative grid gap-4 lg:grid-cols-[minmax(0,0.96fr)_minmax(360px,0.9fr)] lg:items-center">
+              <div className="relative z-10 pr-[34%] sm:pr-[40%] lg:pr-0">
                 <div className="inline-flex rounded-full bg-[#1f8b41] px-4 py-2 text-[12px] font-bold uppercase tracking-[0.03em] text-white">
                   {data.tag}
                 </div>
-                <h2 className="mt-4 max-w-[820px] font-['Manrope'] text-[34px] font-extrabold leading-[1.05] tracking-normal text-white sm:text-[46px] lg:text-[58px]">
-                  {data.h2}
-                </h2>
-                <p className="mt-3 max-w-[760px] text-[16px] leading-[1.65] text-slate-200">{data.h3}</p>
+                <div className="mt-3 max-w-[820px] font-['Manrope'] text-[31px] font-extrabold leading-[1.04] tracking-normal text-white sm:text-[40px] lg:text-[50px]">
+                  {headingParts.length > 1 ? (
+                    <>
+                      {headingParts[0]}
+                      <span className="text-[#2db24c]">Repair Cost</span>
+                      {headingParts.slice(1).join("Repair Cost")}
+                    </>
+                  ) : (
+                    data.h2
+                  )}
+                </div>
+                <p className="mt-2 max-w-[700px] text-[14px] leading-[1.55] text-slate-200">{data.h3}</p>
               </div>
 
-              <div className="relative mx-auto flex min-h-[210px] w-full max-w-[520px] items-end justify-center lg:min-h-[260px]">
+              <div className="pointer-events-none absolute inset-y-0 right-[-4%] hidden w-[58%] items-end justify-center lg:relative lg:flex lg:right-auto lg:w-full lg:max-w-[520px] lg:pointer-events-auto lg:min-h-[230px]">
                 <div className="absolute inset-x-14 bottom-4 h-12 rounded-full bg-[radial-gradient(circle,rgba(59,130,246,0.22),rgba(59,130,246,0))] blur-2xl" />
                 <Image
-                  src="/images/brands/bmw/models/bmw-m3-model-card.png"
-                  alt="BMW M3"
+                  src={headerVehicleImage}
+                  alt={data.h2}
                   fill
-                  className="object-contain object-center drop-shadow-[0_24px_34px_rgba(2,8,22,0.36)]"
+                  className="object-contain object-right-bottom drop-shadow-[0_24px_34px_rgba(2,8,22,0.36)] lg:object-center"
                   sizes="(max-width: 1024px) 100vw, 38vw"
                 />
               </div>
             </div>
           </div>
 
-          <div className="px-0 py-0">
+          <div className="px-[2px] py-[2px]">
             {data.problems.length > 1 ? (
               <div className="mb-4 flex flex-wrap gap-2.5">
                 {data.problems.map((problem, index) => (
@@ -171,71 +170,71 @@ export default function VariantCommonProblemsSection({ data }: Props) {
 
             {activeProblem && heading ? (
               <>
-                <div className="grid gap-5 xl:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)]">
-                  <div className="overflow-hidden rounded-[16px] border border-[#dbe5f2] bg-[#101317] shadow-[0_16px_30px_rgba(15,23,42,0.1)]">
-                    <div className="relative min-h-[320px]">
+                <div className="grid items-start gap-5 sm:grid-cols-[minmax(180px,0.72fr)_minmax(0,1.28fr)] xl:grid-cols-[minmax(0,0.84fr)_minmax(0,1.16fr)]">
+                  <div className="overflow-hidden rounded-[14px] border border-[#dbe5f2] bg-white shadow-[0_16px_30px_rgba(15,23,42,0.08)] sm:mt-[72px] xl:mt-[96px]">
+                    <div className="relative min-h-[250px] w-full sm:min-h-[320px] xl:min-h-[372px]">
                       <Image
                         src={leadProblemImage}
                         alt={activeProblem.imageAlt || heading.title}
                         fill
-                        className="object-cover"
+                        className="h-full w-full object-cover object-center"
                         sizes="(max-width: 1280px) 100vw, 32vw"
                       />
                     </div>
                   </div>
 
-                  <div className="border border-[#dbe5f2] bg-white px-5 py-5 shadow-[0_16px_30px_rgba(15,23,42,0.06)] sm:px-6">
+                  <div className="bg-white px-4 py-4 shadow-[0_16px_30px_rgba(15,23,42,0.06)] sm:px-5">
                     <div className="inline-flex rounded-full bg-[#0b2347] px-4 py-2 text-[12px] font-bold uppercase tracking-[0.03em] text-white">
                       {activeProblem.group}
                     </div>
 
-                    <h3 className="mt-4 font-['Manrope'] text-[30px] font-extrabold leading-[1.08] tracking-normal text-[#0b2347] sm:text-[40px]">
+                    <div className="mt-3 font-['Manrope'] text-[34px] font-extrabold leading-[1.05] tracking-normal text-[#0b2347] sm:text-[42px]">
                       {heading.title}
-                    </h3>
-                    {heading.detail ? <p className="mt-2 text-[16px] font-semibold text-[#233a5d]">{heading.detail}</p> : null}
+                    </div>
+                    {heading.detail ? <p className="mt-1.5 text-[14px] font-semibold text-[#233a5d]">{heading.detail}</p> : null}
 
-                    <div className="mt-5 grid border border-[#dbe5f2] md:grid-cols-2">
-                      <div className="border-b border-[#dbe5f2] px-4 py-4 md:border-b-0 md:border-r">
+                    <div className="mt-4 grid overflow-hidden rounded-[16px] border border-[#dbe5f2] grid-cols-2">
+                      <div className="border-b border-[#dbe5f2] px-3.5 py-3 md:border-b-0 md:border-r">
                         <div className="flex items-start gap-3">
                           <span className="text-[#15803d]">
                             <CarIcon />
                           </span>
                           <div>
                             <p className="text-[13px] font-bold uppercase tracking-[0.03em] text-[#0f274d]">Affected Vehicles</p>
-                            <p className="mt-2 text-[15px] leading-[1.6] text-[#314865]">{activeProblem.affectedModels}</p>
+                            <p className="mt-1.5 text-[13px] leading-[1.5] text-[#314865]">{activeProblem.affectedModels}</p>
                           </div>
                         </div>
                       </div>
-                      <div className="px-4 py-4">
+                      <div className="px-3.5 py-3">
                         <div className="flex items-start gap-3">
                           <span className="text-[#15803d]">
                             <GaugeIcon />
                           </span>
                           <div>
                             <p className="text-[13px] font-bold uppercase tracking-[0.03em] text-[#0f274d]">Typical Failure Mileage</p>
-                            <p className="mt-2 text-[15px] leading-[1.6] text-[#314865]">{activeProblem.typicalFailureMileage}</p>
+                            <p className="mt-1.5 text-[13px] leading-[1.5] text-[#314865]">{activeProblem.typicalFailureMileage}</p>
                           </div>
                         </div>
                       </div>
-                      <div className="border-t border-[#dbe5f2] px-4 py-4 md:border-r">
+                      <div className="border-t border-[#dbe5f2] px-3.5 py-3 md:border-r">
                         <div className="flex items-start gap-3">
                           <span className="text-[#15803d]">
                             <CogIcon />
                           </span>
                           <div>
                             <p className="text-[13px] font-bold uppercase tracking-[0.03em] text-[#0f274d]">Root Cause</p>
-                            <p className="mt-2 text-[15px] leading-[1.6] text-[#314865]">{activeProblem.rootCause}</p>
+                            <p className="mt-1.5 text-[13px] leading-[1.5] text-[#314865]">{activeProblem.rootCause}</p>
                           </div>
                         </div>
                       </div>
-                      <div className="border-t border-[#dbe5f2] px-4 py-4">
+                      <div className="border-t border-[#dbe5f2] px-3.5 py-3">
                         <div className="flex items-start gap-3">
                           <span className="text-[#15803d]">
                             <WarningIcon />
                           </span>
                           <div>
                             <p className="text-[13px] font-bold uppercase tracking-[0.03em] text-[#0f274d]">Why It Happens</p>
-                            <p className="mt-2 text-[15px] leading-[1.6] text-[#314865]">
+                            <p className="mt-1.5 text-[13px] leading-[1.5] text-[#314865]">
                               {activeProblem.whyItHappens?.trim() || activeProblem.rootCause}
                             </p>
                           </div>
@@ -246,12 +245,62 @@ export default function VariantCommonProblemsSection({ data }: Props) {
                 </div>
 
                 {activeProblem.repairOptions?.length ? (
-                  <div className="mt-5 overflow-hidden border border-[#dbe5f2] bg-white shadow-[0_16px_30px_rgba(15,23,42,0.06)]">
-                    <div className="bg-[#081f47] px-4 py-3 text-white">
-                      <h4 className="text-[18px] font-extrabold tracking-normal !text-white">Repair Options & Estimated Costs (UK Ranges)</h4>
+                  <div className="mt-5 overflow-hidden rounded-[12px] border border-[#dbe5f2] bg-white shadow-[0_16px_30px_rgba(15,23,42,0.06)]">
+                    <div className="bg-[#081f47] px-4 py-2.5 text-white">
+                      <div className="text-[17px] font-extrabold tracking-normal !text-white">
+                        Repair Options & Estimated Costs (UK Ranges)
+                      </div>
                     </div>
 
-                    <div className="overflow-x-auto">
+                    <div className="grid gap-4 p-4 lg:hidden">
+                      {activeProblem.repairOptions.map((option, index) => (
+                        <div key={`${option.tier}-mobile-${index}`} className="overflow-hidden rounded-[16px] border border-[#dbe5f2] bg-[#fbfdff]">
+                          <div className={`px-4 py-3 text-[17px] font-extrabold leading-[1.35] ${
+                            index === 0 ? "text-[#15803d]" : "text-[#0b2347]"
+                          }`}>
+                            {option.tier}
+                          </div>
+
+                          <div className="grid grid-cols-2 border-t border-[#dbe5f2]">
+                            <div className="border-r border-[#dbe5f2] px-4 py-4">
+                              <p className="text-[12px] font-bold uppercase tracking-[0.03em] text-[#0f274d]">Dealer (parts + labour)</p>
+                              <p className="mt-2 text-[16px] font-extrabold text-[#b91c1c]">{option.dealerPrice}</p>
+                            </div>
+                            <div className="px-4 py-4">
+                              <p className="text-[12px] font-bold uppercase tracking-[0.03em] text-[#0f274d]">Specialist (parts + labour)</p>
+                              <p className="mt-2 text-[16px] font-extrabold text-[#15803d]">{option.specialistPrice}</p>
+                            </div>
+                          </div>
+
+                          <div className="grid border-t border-[#dbe5f2] sm:grid-cols-2">
+                            <div className="border-b border-[#dbe5f2] px-4 py-4 sm:border-b-0 sm:border-r">
+                              <p className="text-[12px] font-bold uppercase tracking-[0.03em] text-[#0f274d]">What it involves</p>
+                              <p className="mt-2 text-[13px] leading-[1.65] text-[#314865]">{option.whatItInvolves}</p>
+                            </div>
+                            <div className="px-4 py-4">
+                              <p className="text-[12px] font-bold uppercase tracking-[0.03em] text-[#0f274d]">Suitability</p>
+                              <p className="mt-2 text-[13px] leading-[1.65] text-[#314865]">{option.longevity}</p>
+                            </div>
+                          </div>
+
+                          <div className="border-t border-[#dbe5f2] px-4 py-3">
+                            <div className="inline-flex items-center gap-2 whitespace-nowrap rounded-full bg-[#f3fbf4] px-3 py-2 text-[13px] font-bold text-[#15803d]">
+                              <ClockIcon />
+                              <span>{getTimeLabel(option.estimatedTime).replace(/\s+/g, " ")}</span>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+
+                      <div className="flex items-start gap-3 rounded-[14px] border border-[#dbe5f2] bg-[#fbfdff] px-4 py-3 text-[13px] leading-[1.6] text-[#314865]">
+                        <span className="mt-0.5 text-[#0b2347]">
+                          <SummaryIcon />
+                        </span>
+                        <span>All prices are indicative UK market ranges based on current UK specialist supplier data.</span>
+                      </div>
+                    </div>
+
+                    <div className="hidden overflow-x-auto lg:block">
                       <table className="min-w-full border-collapse">
                         <thead className="bg-[#f6f9fc]">
                           <tr className="text-left text-[12px] font-bold uppercase tracking-[0.03em] text-[#0f274d]">
@@ -267,16 +316,32 @@ export default function VariantCommonProblemsSection({ data }: Props) {
                           {activeProblem.repairOptions.map((option, index) => (
                             <tr key={`${option.tier}-${index}`} className="align-top">
                               <td className="border-b border-[#e7edf5] px-4 py-4">
-                                <p className="text-[16px] font-extrabold leading-[1.35] text-[#0b2347]">{option.tier}</p>
+                                <div className="flex items-start gap-3">
+                                  <div className={`flex h-10 w-10 flex-none items-center justify-center rounded-full ${getRepairTierMeta(index).iconBg}`}>
+                                    <Image
+                                      src={getRepairTierMeta(index).icon}
+                                      alt=""
+                                      width={18}
+                                      height={18}
+                                      className="object-contain"
+                                    />
+                                  </div>
+                                  <div>
+                                    <p className="text-[14px] font-extrabold leading-[1.4] text-[#0b2347]">{option.tier}</p>
+                                    <span className={`mt-2 inline-flex rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.03em] ${getRepairTierMeta(index).labelClass}`}>
+                                      {getRepairTierMeta(index).label}
+                                    </span>
+                                  </div>
+                                </div>
                               </td>
                               <td className="border-b border-[#e7edf5] px-4 py-4 text-[16px] font-extrabold text-[#b91c1c]">{option.dealerPrice}</td>
                               <td className="border-b border-[#e7edf5] px-4 py-4 text-[16px] font-extrabold text-[#15803d]">{option.specialistPrice}</td>
-                              <td className="border-b border-[#e7edf5] px-4 py-4 text-[14px] leading-[1.65] text-[#314865]">{option.whatItInvolves}</td>
-                              <td className="border-b border-[#e7edf5] px-4 py-4 text-[14px] leading-[1.65] text-[#314865]">{option.longevity}</td>
+                              <td className="border-b border-[#e7edf5] px-4 py-4 text-[13px] leading-[1.6] text-[#314865]">{option.whatItInvolves}</td>
+                              <td className="border-b border-[#e7edf5] px-4 py-4 text-[13px] leading-[1.6] text-[#314865]">{option.longevity}</td>
                               <td className="border-b border-[#e7edf5] px-4 py-4">
-                                <div className="inline-flex items-center gap-2 rounded-full bg-[#f3fbf4] px-3 py-2 text-[14px] font-bold text-[#15803d]">
+                                <div className="inline-flex items-center gap-2 whitespace-nowrap rounded-full bg-[#f3fbf4] px-3 py-2 text-[13px] font-bold text-[#15803d]">
                                   <ClockIcon />
-                                  <span>{getTimeLabel(option.estimatedTime)}</span>
+                                  <span>{getTimeLabel(option.estimatedTime).replace(/\s+/g, " ")}</span>
                                 </div>
                               </td>
                             </tr>
@@ -289,65 +354,77 @@ export default function VariantCommonProblemsSection({ data }: Props) {
 
                 <div className="mt-5 grid gap-4 xl:grid-cols-2">
                   {activeProblem.vehicleValueCheck ? (
-                    <div className="border border-[#dcebdd] bg-[linear-gradient(135deg,#f1faf3,#edf7f1)] px-5 py-4 shadow-[0_12px_24px_rgba(22,128,61,0.08)]">
+                    <div className="rounded-[14px] border border-[#dcebdd] bg-[linear-gradient(135deg,#f1faf3,#edf7f1)] px-5 py-4 shadow-[0_12px_24px_rgba(22,128,61,0.08)]">
                       <div className="flex items-start gap-4">
-                        <div className="flex h-12 w-12 flex-none items-center justify-center rounded-full bg-white text-[#16803d] shadow-[0_8px_18px_rgba(22,128,61,0.12)]">
-                          <SummaryIcon />
+                        <div className="flex h-12 w-12 flex-none items-center justify-center rounded-full bg-white shadow-[0_8px_18px_rgba(22,128,61,0.12)]">
+                          <Image src="/icons/engine-market/dark-blue-pound.png" alt="" width={22} height={22} className="object-contain" />
                         </div>
                         <div>
                           <p className="text-[17px] font-extrabold text-[#16803d]">Vehicle Value Check</p>
-                          <p className="mt-2 text-[15px] leading-[1.65] text-[#24405a]">{activeProblem.vehicleValueCheck}</p>
+                          <p className="mt-2 text-[14px] leading-[1.6] text-[#24405a]">{activeProblem.vehicleValueCheck}</p>
                         </div>
                       </div>
                     </div>
                   ) : null}
 
                   {activeProblem.recommendation ? (
-                    <div className="border border-[#d7e4fb] bg-[linear-gradient(135deg,#f7fbff,#eff6ff)] px-5 py-4 shadow-[0_12px_24px_rgba(37,99,235,0.07)]">
+                    <div className="rounded-[14px] border border-[#d7e4fb] bg-[linear-gradient(135deg,#f7fbff,#eff6ff)] px-5 py-4 shadow-[0_12px_24px_rgba(37,99,235,0.07)]">
                       <div className="flex items-start gap-4">
-                        <div className="flex h-12 w-12 flex-none items-center justify-center rounded-full bg-white text-[#2563eb] shadow-[0_8px_18px_rgba(37,99,235,0.12)]">
-                          <RecommendationIcon />
+                        <div className="flex h-12 w-12 flex-none items-center justify-center rounded-full bg-white shadow-[0_8px_18px_rgba(37,99,235,0.12)]">
+                          <Image src="/icons/engine-market/dark-blue-warranty.png" alt="" width={22} height={22} className="object-contain" />
                         </div>
                         <div>
                           <p className="text-[17px] font-extrabold text-[#2563eb]">Our Recommendation</p>
-                          <p className="mt-2 text-[15px] leading-[1.65] text-[#24405a]">{activeProblem.recommendation}</p>
+                          <p className="mt-2 text-[14px] leading-[1.6] text-[#24405a]">{activeProblem.recommendation}</p>
                         </div>
                       </div>
                     </div>
                   ) : null}
                 </div>
 
-                <div className="mt-5 grid gap-5 bg-[#081f47] px-5 py-5 text-white shadow-[0_18px_34px_rgba(8,31,71,0.18)] lg:grid-cols-[minmax(0,0.94fr)_minmax(320px,0.56fr)] lg:items-center">
-                  <div className="grid gap-4 sm:grid-cols-[126px_minmax(0,1fr)] sm:items-center">
-                    <div className="relative mx-auto h-[108px] w-[108px]">
-                      <Image src={engineImage} alt={data.finalCta.h4} fill className="object-contain" sizes="108px" />
+                <div className="mt-5 grid gap-4">
+                  <div className="grid gap-4 rounded-[14px] bg-[#081f47] px-4 py-4 text-white shadow-[0_18px_34px_rgba(8,31,71,0.18)] sm:grid-cols-[88px_minmax(0,1fr)] sm:items-center">
+                    <div className="relative mx-auto h-[70px] w-[70px] overflow-hidden rounded-[12px]">
+                      <Image src={ctaEngineImage} alt="" fill className="object-contain" sizes="70px" />
                     </div>
-                    <div>
-                      <h4 className="font-['Manrope'] text-[30px] font-extrabold leading-[1.1] tracking-normal text-white sm:text-[36px]">
-                        {data.finalCta.h4}
-                      </h4>
-                      <p className="mt-3 text-[15px] leading-[1.7] text-slate-200">{data.finalCta.paragraph}</p>
+                    <div className="grid gap-3 sm:grid-cols-[minmax(0,1fr)_280px] sm:items-center">
+                      <p className="text-[16px] font-semibold leading-[1.4] text-white">
+                        {activeProblem.cta.replace(/\s*->\s*$/, "")}
+                      </p>
+                      <a
+                        href="#quote-form"
+                        data-quote-context={`${activeProblem.group} repair guidance`}
+                        data-quote-source="variant-common-problems"
+                        className="inline-flex min-h-[54px] w-full items-center justify-center gap-3 rounded-[8px] bg-[#1d9f42] px-6 text-[15px] font-bold text-white transition hover:bg-[#18883a]"
+                      >
+                        <span>Compare Engine Prices</span>
+                        <ArrowIcon />
+                      </a>
                     </div>
                   </div>
 
-                  <div className="border border-white/10 bg-white/[0.03] p-4">
-                    <p className="text-[16px] font-semibold leading-[1.55] text-white">
-                      {activeProblem.cta.replace(/\s*->\s*$/, "")}
-                    </p>
-                    <a
-                      href="#quote-form"
-                      data-quote-context={`${activeProblem.group} repair guidance`}
-                      data-quote-source="variant-common-problems"
-                      className="mt-4 inline-flex min-h-[56px] w-full items-center justify-center gap-3 bg-[#1d9f42] px-6 text-[16px] font-extrabold text-white transition hover:bg-[#18883a]"
-                    >
-                      <span>{data.finalCta.buttonText.replace(/\s*->\s*$/, "")}</span>
-                      <ArrowIcon />
-                    </a>
+                  <div className="grid gap-5 rounded-[16px] bg-[#071735] px-5 py-5 text-white shadow-[0_18px_34px_rgba(8,31,71,0.18)] lg:grid-cols-[minmax(0,0.96fr)_minmax(320px,0.54fr)] lg:items-center">
+                    <div className="flex items-start gap-4">
+                      <div className="flex h-14 w-14 flex-none items-center justify-center rounded-full border border-[#1f8b41] bg-[#071c38] text-[#6ae086]">
+                        <RecommendationIcon />
+                      </div>
+                      <div>
+                        <h4 className="font-['Manrope'] text-[30px] font-extrabold leading-[1.1] tracking-normal text-white sm:text-[36px]">
+                          {data.finalCta.h4}
+                        </h4>
+                        <p className="mt-3 text-[14px] leading-[1.65] text-slate-200">{data.finalCta.paragraph}</p>
+                      </div>
+                    </div>
 
-                    <div className="mt-4 grid gap-2 text-[13px] text-slate-300 sm:grid-cols-3">
-                      <span>12-Month Warranty Minimum</span>
-                      <span>UK Specialists Vetted</span>
-                      <span>Best Price Guarantee</span>
+                    <div className="rounded-[14px] border border-[#1f8b41]/55 bg-[#081f47] p-4">
+                      <div className="flex items-start gap-3">
+                        <div className="flex h-11 w-11 flex-none items-center justify-center rounded-full border border-white/15 bg-[#0b2347]">
+                          <Image src="/icons/engine-market/white-technical-spec.png" alt="" width={22} height={22} className="object-contain" />
+                        </div>
+                        <p className="text-[15px] font-semibold leading-[1.5] text-[#39c85e]">
+                          {data.finalCta.buttonText.replace(/\s*->\s*$/, "")}
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>

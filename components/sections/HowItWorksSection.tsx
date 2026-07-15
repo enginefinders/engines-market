@@ -126,7 +126,7 @@ export default function HowItWorksSection({ data, bgImage, sectionId, flush = fa
   return (
     <Section
       id={sectionId}
-      className={`relative overflow-hidden bg-[#f7f8fb] ${flush ? "!px-0 !py-0" : "px-2 pb-7 pt-4 sm:py-8 lg:py-10"}`}
+      className={`relative overflow-hidden bg-[#f7f8fb] ${flush ? "!px-[2px] !py-[2px]" : "px-2 pb-7 pt-4 sm:py-8 lg:py-10"}`}
     >
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div
@@ -140,7 +140,7 @@ export default function HowItWorksSection({ data, bgImage, sectionId, flush = fa
         />
       </div>
 
-      <Container className={flush ? "relative !max-w-none !px-0 sm:!px-0 lg:!px-0" : "relative max-w-[1400px]"}>
+      <Container className={flush ? "relative !max-w-none !px-[2px] sm:!px-[2px] lg:!px-[2px]" : "relative max-w-[1400px]"}>
         <div className="mx-auto lg:mx-0">
           <div className="section-pill mb-[14px]">
             <span>{data.tag}</span>

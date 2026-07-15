@@ -9,18 +9,18 @@
     "slug": "1-series"
   },
   "variant": {
-    "name": "BMW 114d",
+    "name": "BMW 1 Series 114d",
     "slug": "114d-engine",
     "storageSlug": "bmw-1-series-114d-engine"
   },
   "seo": {
-    "title": "BMW 114d Rebuilt Engines from £1,700 | UK Supply",
-    "description": "BMW 114d engine replacement cost guide. Compare rebuilt, reconditioned & used 114d engine prices from £1,700. 12-month warranty & UK supply fit specialists.",
+    "title": "BMW 1 Series 114d Engine Replacement | Compare Prices",
+    "description": "BMW 1 Series 114d engine replacement cost guide. Compare rebuilt, reconditioned & used 114d engine prices from £1,495. 12-month warranty & UK supply fit specialists.",
     "canonical": "/bmw/1-series/114d-engine"
   },
   "assets": {
-    "mainImage": "/images/brands/bmw/models/bmw-1-series-main.webp",
-    "smallImage": "/images/brands/bmw/models/bmw-1-series-small.webp",
+    "mainImage": "/images/brands/bmw/models/bmw-1-series-model-card.png",
+    "smallImage": "/images/brands/bmw/models/bmw-1-series-model-card.png",
     "heroBg": "/images/brands/bmw/models/bmw-1-series-model-card.png",
     "howItWorksBg": "/images/brands/bmw/brand/bmw-how-it-works-bg.webp",
     "ctaImage": "/images/brands/bmw/models/bmw-1-series-model-card.png"
@@ -29,48 +29,34 @@
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "WebSite",
-        "@id": "https://www.enginesmarket.co.uk/#website",
-        "url": "https://www.enginesmarket.co.uk/",
-        "name": "Engines Market",
-        "publisher": {
-          "@id": "https://www.enginesmarket.co.uk/#organization"
-        }
-      },
-      {
-        "@type": "Organization",
-        "@id": "https://www.enginesmarket.co.uk/#organization",
-        "name": "Engines Market",
-        "url": "https://www.enginesmarket.co.uk/",
-        "logo": "https://www.enginesmarket.co.uk/images/logo.png",
-        "sameAs": [
-          "https://www.facebook.com/enginesmarket",
-          "https://x.com/EnginesMarket",
-          "https://www.instagram.com/enginesmarketuk/",
-          "https://www.tiktok.com/@enginesmarket"
-        ]
-      },
-      {
         "@type": "WebPage",
         "@id": "https://www.enginesmarket.co.uk/bmw/1-series/114d-engine/#webpage",
         "url": "https://www.enginesmarket.co.uk/bmw/1-series/114d-engine/",
-        "name": "BMW 114d Engine Replacement - Compare Prices & Get Quotes",
-        "description": "BMW 114d engine replacement cost guide. Compare rebuilt, reconditioned & used 114d engine prices from £1,700. 12-month warranty & UK supply fit specialists.",
+        "name": "BMW 1 Series 114d Engine Replacement - Compare Prices & Get Quotes",
+        "description": "BMW 1 Series 114d engine replacement cost guide. Compare rebuilt, reconditioned & used 114d engine prices from £1,495. 12-month warranty & UK supply fit specialists.",
         "isPartOf": {
           "@id": "https://www.enginesmarket.co.uk/#website"
         },
         "about": [
           {
             "@type": "Car",
-            "name": "BMW 114d"
+            "name": "BMW 1 Series 114d",
+            "brand": {
+              "@type": "Brand",
+              "name": "BMW"
+            },
+            "model": "1 Series 114d"
           },
           {
             "@type": "Service",
-            "name": "BMW 114d Engine Replacement"
+            "name": "BMW 1 Series 114d Engine Replacement"
           }
         ],
         "mainEntity": {
           "@id": "https://www.enginesmarket.co.uk/bmw/1-series/114d-engine/#service"
+        },
+        "breadcrumb": {
+          "@id": "https://www.enginesmarket.co.uk/bmw/1-series/114d-engine/#breadcrumb"
         }
       },
       {
@@ -92,13 +78,13 @@
           {
             "@type": "ListItem",
             "position": 3,
-            "name": "1 Series",
+            "name": "BMW 1 Series",
             "item": "https://www.enginesmarket.co.uk/bmw/1-series/"
           },
           {
             "@type": "ListItem",
             "position": 4,
-            "name": "114d",
+            "name": "BMW 1 Series 114d",
             "item": "https://www.enginesmarket.co.uk/bmw/1-series/114d-engine/"
           }
         ]
@@ -106,81 +92,23 @@
       {
         "@type": "Service",
         "@id": "https://www.enginesmarket.co.uk/bmw/1-series/114d-engine/#service",
-        "name": "BMW 114d Engine Replacement Service",
+        "name": "BMW 1 Series 114d Engine Replacement Service",
         "serviceType": [
-          "BMW 114d Engine Replacement",
-          "Reconditioned BMW 114d Engines",
-          "Used BMW 114d Engines",
-          "BMW 114d Engine Supply and Fit",
-          "BMW 114d Engine Price Comparison"
+          "BMW 1 Series 114d Engine Replacement",
+          "Reconditioned BMW 1 Series 114d Engines",
+          "Used BMW 1 Series 114d Engines",
+          "BMW 1 Series 114d Engine Supply and Fit",
+          "BMW 1 Series 114d Engine Price Comparison"
         ],
         "provider": {
           "@id": "https://www.enginesmarket.co.uk/#organization"
         },
-        "areaServed": [
-          {
-            "@type": "City",
-            "name": "London"
-          },
-          {
-            "@type": "City",
-            "name": "Manchester"
-          },
-          {
-            "@type": "City",
-            "name": "Birmingham"
-          },
-          {
-            "@type": "City",
-            "name": "Glasgow"
-          },
-          {
-            "@type": "City",
-            "name": "Bristol"
-          },
-          {
-            "@type": "City",
-            "name": "Leeds"
-          },
-          {
-            "@type": "Country",
-            "name": "United Kingdom"
-          }
-        ],
+        "areaServed": {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
         "url": "https://www.enginesmarket.co.uk/bmw/1-series/114d-engine/",
-        "description": "BMW 114d engine replacement cost guide. Compare rebuilt, reconditioned & used 114d engine prices from £1,700. 12-month warranty & UK supply fit specialists.",
-        "category": [
-          "Rebuilt Engine Replacement",
-          "Reconditioned Engine Supply",
-          "Used Engine Supply",
-          "Engine Supply and Fit Service"
-        ]
-      },
-      {
-        "@type": "ItemList",
-        "@id": "https://www.enginesmarket.co.uk/bmw/1-series/114d-engine/#engine-options",
-        "name": "BMW 114d Available Engine Options",
-        "numberOfItems": 2,
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "item": {
-              "@type": "Service",
-              "name": "N47D16A Engine Replacement",
-              "description": "N47D16A Diesel 95 PS / 70 kW"
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "item": {
-              "@type": "Service",
-              "name": "B37D15A Engine Replacement",
-              "description": "B37D15A Diesel 97 PS / 71 kW"
-            }
-          }
-        ]
+        "description": "BMW 1 Series 114d engine replacement cost guide. Compare rebuilt, reconditioned & used 114d engine prices from £1,495. 12-month warranty & UK supply fit specialists."
       },
       {
         "@type": "FAQPage",
@@ -188,66 +116,50 @@
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "How long does a BMW 114d engine last with proper maintenance?",
+            "name": "How much does a BMW 1 Series 114d engine replacement cost?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "A well-maintained BMW 114d engine can exceed 150,000 miles before requiring major work. Regular oil changes with BMW-approved spec oil and timely timing chain inspections are critical for N47D16A longevity."
+              "text": "A BMW 1 Series 114d engine replacement typically costs £1,495-£2,400 for a reconditioned or rebuilt N47D16A or B37D15A unit supply-only. With supply and fit, expect £2,300-£3,500 depending on the specialist and location."
             }
           },
           {
             "@type": "Question",
-            "name": "Should I buy a used, reconditioned, or rebuilt BMW 114d engine?",
+            "name": "What are the signs of timing chain failure in a BMW 114d?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Rebuilt engines offer the best long-term value for BMW 114d owners, with upgraded failure-point components and warranty protection that used or reconditioned units cannot match."
+              "text": "The most common warning signs of N47 timing chain failure in a BMW 1 Series 114d include a rattling noise from the engine on cold start (the \"death rattle\"), rough idling, poor engine performance, and in later stages, the engine management light illuminating."
             }
           },
           {
             "@type": "Question",
-            "name": "Can I drive my BMW 114d if I hear a timing chain rattle?",
+            "name": "Is it worth replacing the engine in a BMW 1 Series 114d?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "No - cold-start rattling indicates tensioner wear and requires immediate specialist assessment to avoid catastrophic engine damage."
+              "text": "A 2012-2015 BMW 1 Series 114d is typically valued at £2,500-£6,000. If your 114d is worth under £3,500, a full rebuilt engine may not be economically viable - consider a used engine or scrap the car. If your car is worth £4,500+ (low mileage, M Sport spec, good condition), a reconditioned engine with warranty is a sound investment."
             }
           },
           {
             "@type": "Question",
-            "name": "Does the BMW 114d B37D15A engine have the same timing chain issues as the N47D16A?",
+            "name": "How long does a BMW 1 Series 114d engine replacement take?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The B37D15A three-cylinder engine has a revised timing system with fewer widespread failure reports, though regular maintenance remains essential."
+              "text": "A BMW 1 Series 114d engine replacement typically takes 2-3 days for a specialist to complete, including removal of the old unit and fitting the replacement. Timing chain replacement alone (without full engine removal) can be completed in 1-2 days."
             }
           },
           {
             "@type": "Question",
-            "name": "What oil specification does the BMW 114d engine require?",
+            "name": "What's the difference between the BMW 114d and 116d?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "BMW 114d engines require BMW Longlife-04 approved 5W-30 synthetic diesel oil to protect turbochargers, EGR systems, and timing components."
+              "text": "Both the BMW 114d and 116d use similar engine families but with different power outputs. The 114d produces 95 hp (70 kW), while the 116d produces 116 hp (85 kW) in later models. The 114d was positioned as the entry-level diesel model."
             }
           },
           {
             "@type": "Question",
-            "name": "How much does it cost to replace a BMW 114d engine with supply and fit?",
+            "name": "Does a BMW 1 Series 114d rebuilt engine come with a warranty?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Supply and fit for a rebuilt BMW 114d engine typically ranges £2,200-£3,500 depending on workshop location and vehicle condition."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Will a rebuilt BMW 114d engine affect my car's value or MOT?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "A professionally fitted rebuilt engine with documentation does not negatively impact MOT eligibility and can preserve your BMW 114d's resale value."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Where can I find a trusted BMW 114d N47D16A engine specialist near me?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "EngineMarket connects you with vetted UK BMW 114d N47D16A specialists nationwide. Most network partners offer vehicle collection and drop-off recovery services - they will collect your non-running 114d, complete the engine replacement in their workshop, and deliver it back. Compare live quotes from certified rebuilders who understand your 114d's specific N47D16A requirements - all backed by minimum 12-month unlimited mileage warranty."
+              "text": "Yes - every rebuilt BMW 1 Series 114d engine supplied through EnginesMarket comes with a minimum 12-month unlimited-mileage warranty. This covers the engine against manufacturing defects and component failure, giving you peace of mind when investing in a replacement N47 or B37 unit."
             }
           }
         ]
@@ -256,72 +168,96 @@
   },
   "sections": {
     "hero": {
-      "tag": "BMW ENGINE MARKETPLACE",
-      "h1": "BMW 114d Engine Replacement - Compare Prices & Get Quotes",
-      "subheading": "Get quotes today from trusted UK BMW 114d engine specialists. Compare prices on reconditioned, rebuilt and used engines for your 114d - supply & fit available nationwide.",
+      "tag": "BMW 114d SPECIALISTS",
+      "h1": "BMW 1 Series 114d Engine Replacement - Compare Prices & Get Quotes",
+      "subheading": "Get quotes today from trusted UK BMW 1 Series 114d engine specialists. Compare prices on reconditioned, rebuilt and used engines for your BMW 114d - whether you own a 2012-2015 F20/F21 with the N47D16 or a 2015-onwards model with the B37D15A three-cylinder diesel.",
       "trustBadges": [
         "Supply & Fit Available",
         "12-Month Warranty",
         "Nationwide Delivery",
         "100+ Suppliers"
       ],
-      "ctaLinkText": "Get Free BMW 114d Engine Quotes ->",
-      "supportingText": "Get tailored BMW 114d engine quotes from vetted UK specialists.",
+      "ctaLinkText": "Get Free BMW 1 Series 114d Engine Quotes ->",
+      "supportingText": "Get tailored BMW 1 Series 114d engine quotes from vetted UK specialists.",
       "ticker": "● Instant Quotes · No Obligation · 100% Free · Reconditioned · Rebuilt · Used · Supply & Fit Available · UK-Wide Network",
-      "imageAlt": "BMW 114d engine replacement UK - compare reconditioned and rebuilt engine prices",
+      "imageAlt": "BMW 1 Series 114d engine replacement UK - compare reconditioned and rebuilt engine prices",
       "highlights": [
         {
-          "title": "BMW 114d Engine",
-          "price": "from £1,700 to £2,400",
-          "line1": "BMW 114d Engine - from £1,700 to £2,400",
-          "line2": "-> Rebuilt units from £1,700 · Engine codes: N47D16A, B37D15A",
-          "detail": "-> Rebuilt units from £1,700 · Engine codes: N47D16A, B37D15A",
+          "title": "BMW 1 Series 114d Engine",
+          "price": "N47D16A / B37D15A - from £1,495 to £2,400",
+          "line1": "N47D16A / B37D15A - from £1,495 to £2,400",
+          "line2": "-> Used from £1,100 · Reconditioned from £1,495 · Common codes: N47D16A, N47D16U1, B37D15A",
+          "detail": "-> Used from £1,100 · Reconditioned from £1,495 · Common codes: N47D16A, N47D16U1, B37D15A",
           "image": "/images/brands/bmw/models/bmw-1-series-model-card.png",
-          "imageAlt": "BMW 114d engine replacement - N47D16A B37D15A rebuilt reconditioned UK"
+          "imageAlt": "BMW 1 Series 114d engine replacement UK - compare reconditioned and rebuilt engine prices"
         }
       ],
+      "engineOptions": [
+        {
+          "label": "Used",
+          "price": "From £1,100",
+          "description": "Tested, bare/short engine",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "imageAlt": "BMW 1 Series 114d engine replacement UK - compare reconditioned and rebuilt engine prices",
+          "tone": "used"
+        },
+        {
+          "label": "Reconditioned",
+          "price": "From £1,495",
+          "description": "Rod bearings addressed, tested",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "imageAlt": "BMW 1 Series 114d engine replacement UK - compare reconditioned and rebuilt engine prices",
+          "tone": "reconditioned"
+        },
+        {
+          "label": "Rebuilt",
+          "price": "From quote",
+          "description": "Upgraded bearings, full teardown, revised valvetrain",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "imageAlt": "BMW 1 Series 114d engine replacement UK - compare reconditioned and rebuilt engine prices",
+          "tone": "rebuilt"
+        }
+      ],
+      "vehicleBadge": "114d",
       "mobileBar": {
         "brandText": "ENGINEMARKET",
         "callLabel": "Call",
         "quoteLabel": "GET QUOTES"
       },
       "registrationInput": {
-        "label": "Enter your BMW 114d registration",
+        "label": "Enter your BMW 1 Series 114d registration",
         "platePlaceholder": "AB12 CDE",
         "countryCode": "UK",
         "countryLabel": "United Kingdom"
       },
       "form": {
-        "heading": "Find Your BMW 114d Engine",
-        "subtitle": "Enter your registration number to compare BMW 114d engine options.",
+        "heading": "Find Your BMW 1 Series 114d Engine",
+        "subtitle": "Enter your registration number to compare BMW 1 Series 114d engine options.",
         "inputPlaceholder": "AB12 CDE",
-        "buttonText": "Get Free BMW 114d Engine Quotes ->",
-        "note": "Secure enquiry - no spam, no pressure. Genuine quotes only from vetted UK BMW 114d specialists."
+        "buttonText": "Get Free BMW 1 Series 114d Engine Quotes ->",
+        "note": "Secure enquiry - no spam, no pressure. Genuine quotes only from vetted UK BMW 1 Series 114d specialists."
       }
     },
     "howItWorks": {
       "tag": "How It Works",
-      "h2": "3 Simple Steps to Finding the Best BMW 114d Replacement Engine",
+      "h2": "3 Simple Steps to Finding the Best BMW 1 Series 114d Replacement Engine",
       "headingLines": [
         "3 Simple Steps",
-        "to Finding the Best BMW 114d Replacement Engine"
+        "to Finding the Best BMW 1 Series 114d Replacement Engine"
       ],
       "cards": [
         {
           "number": 1,
           "icon": "registration",
           "front": {
-            "h3": "Enter Your BMW 114d Registration",
-            "text": "Instantly verify your exact engine code, fuel type and specification via DVLA - covering every SE to M Sport in the 114d range."
+            "h3": "Confirm Your BMW 1 Series 114d",
+            "text": "🖼️ [Registration icon]. Enter your reg to verify your exact engine code and fuel type"
           },
           "back": {
-            "heading": "Your Car, Precisely Identified",
-            "text": "Engines Market uses the official DVLA database to pull accurate details about your 114d, not just model name.",
+            "heading": "EnginesMarket cross-checks the DVLA record against known BMW 1 Series 114d engine codes (N47D16A, N47D16U1, B37D15A) so your quote request is accurate before it reaches a supplier - no guesswork, no wrong parts.",
+            "text": "EnginesMarket cross-checks the DVLA record against known BMW 1 Series 114d engine codes (N47D16A, N47D16U1, B37D15A) so your quote request is accurate before it reaches a supplier - no guesswork, no wrong parts.",
             "bullets": [
-              "Your Precise Model - from SE, Sport, M Sport, EfficientDynamics",
-              "Your Engine Code - N47D16A, B37D15A and more",
-              "Vehicle Specs Check - fuel type, engine size, year, variant - all verified instantly",
-              "No paperwork, no guesswork, 100% free."
+              "EnginesMarket cross-checks the DVLA record against known BMW 1 Series 114d engine codes (N47D16A, N47D16U1, B37D15A) so your quote request is accurate before it reaches a supplier - no guesswork, no wrong parts."
             ]
           }
         },
@@ -329,19 +265,14 @@
           "number": 2,
           "icon": "quote",
           "front": {
-            "h3": "Compare BMW 114d Engine Prices",
-            "text": "Review live quotes from vetted UK specialists for your 114d. See rebuilt, reconditioned and used pricing side-by-side with warranty terms and delivery options."
+            "h3": "Compare BMW 1 Series 114d Engine Quotes",
+            "text": "🖼️ [Compare icon]. View used, reconditioned and rebuilt options side by side"
           },
           "back": {
-            "heading": "Transparent Pricing, Trusted Suppliers",
-            "text": "Every quote comes from our network of certified BMW specialists who understand your 114d's specific engine requirements.",
+            "heading": "Our UK supplier network sends you transparent, itemised quotes covering all condition types for your BMW 1 Series 114d - from budget used N47 units to fully rebuilt B37 three-cylinder engines with warranty",
+            "text": "No obligation, no pressure.",
             "bullets": [
-              "Rebuilt Engines - Full teardown with upgraded failure-point components",
-              "Reconditioned Units - Tested and restored to OEM tolerances",
-              "Used Engines - Low-mileage donor units with compression verification",
-              "Supply & Fit at garages near you - Professional installation with workmanship warranty included, available at workshops across the UK",
-              "Many specialists have workshops near you, offering convenient collection and fitting services.",
-              "Compare confidently knowing every supplier is vetted and reviewed."
+              "No obligation, no pressure."
             ]
           }
         },
@@ -349,23 +280,19 @@
           "number": 3,
           "icon": "shield",
           "front": {
-            "h3": "Secure Your BMW 114d Engine Quote",
-            "text": "Select the best option for your budget and arrange delivery or fitting. Every 114d engine supplied through our network includes minimum 12-month unlimited mileage warranty protection."
+            "h3": "Choose Your BMW 1 Series 114d Specialist",
+            "text": "🖼️ [Booking icon]. Book with a vetted specialist offering warranty and nationwide delivery"
           },
           "back": {
-            "heading": "Back On The Road With Confidence",
-            "text": "Once you've compared quotes for your 114d, choose your preferred specialist and confirm your order directly.",
+            "heading": "Every rebuilt BMW 1 Series 114d engine comes with a minimum 12-month warranty",
+            "text": "Choose supply only or full supply and fit - with nationwide delivery and collection options available across the UK.",
             "bullets": [
-              "12-Month Unlimited Mileage Warranty - Standard on every rebuilt and reconditioned unit",
-              "Nationwide Delivery - Direct to your door or chosen workshop",
-              "Vehicle Collection & Recovery - Many suppliers can collect your non-running 114d and complete the engine replacement at their workshop near you, then deliver it back",
-              "Post-Fit Support - Dedicated assistance for ECU coding and adaptation queries",
-              "Your BMW 114d deserves specialist care at fair market pricing."
+              "Choose supply only or full supply and fit - with nationwide delivery and collection options available across the UK."
             ]
           }
         }
       ],
-      "tagline": "Live UK Engine Market Data for BMW 114d Owners",
+      "tagline": "",
       "ui": {
         "stepLabel": "Step",
         "desktopClosedLabel": "Click to expand",
@@ -383,319 +310,303 @@
     },
     "historyTimeline": {
       "tag": "Variant History",
-      "h2": "BMW 114d Engine History & Production Timeline",
-      "intro": "The BMW 114d launched in 2012 as the entry-level diesel variant of the F20/F21 1 Series, initially powered by the 1.6-litre N47D16A inline-four engine. In 2015, BMW transitioned to the more efficient 1.5-litre B37D15A three-cylinder unit to meet Euro 6 emissions standards while maintaining comparable output. The BMW 114d remains available through the UK used and specialist reconditioned engine network, with both engine families supported by our vetted supplier partners.",
+      "h2": "BMW 1 Series 114d - Engine History & Specs at a Glance",
+      "intro": "The BMW 114d was launched in November 2012 as the entry-level diesel model in the second-generation (F20/F21) 1 Series range. It replaced the earlier 116d as the most affordable way into BMW diesel hatchback ownership, using a 1.6-litre turbocharged four-cylinder diesel engine that prioritised economy over outright performance. In 2015, the 114d badge was carried over into the Life Cycle Impulse (LCI) update with a switch to BMW's newer B37 three-cylinder diesel engine.",
       "milestones": [
-        "2012 - N47D16A introduced with 95 PS / 70 kW and 235 Nm (173 lb-ft), marking the 114d's debut as the most accessible diesel 1 Series variant with Euro 5 compliance",
-        "2015 - Engine transition to B37D15A three-cylinder architecture; power revised to 97 PS / 71 kW and torque to 240 Nm (177 lb-ft), achieving Euro 6 emissions with improved fuel economy",
-        "2019 - F20/F21 generation production concluded; 114d continued via remaining stock and specialist rebuild channels with both N47D16A and B37D15A units supported through our network",
-        "Present - BMW 114d engines remain available through our UK specialist network; reconditioned and rebuilt units supplied with upgraded failure-point components and 12-month warranty coverage"
+        {
+          "year": "2012",
+          "description": "N47D16A / N47D16U1, 1.6L turbocharged diesel, 95 hp, launched with the F20 five-door and F21 three-door 1 Series"
+        },
+        {
+          "year": "2015",
+          "description": "BMW 114d receives the LCI update; engine switches to B37D15A, 1.5L three-cylinder turbo diesel, 94 hp, for F20/F21 models"
+        },
+        {
+          "year": "2019",
+          "description": "F20/F21 generation ends; the 114d badge is discontinued"
+        }
+      ],
+      "vehicleTitle": "BMW 1 Series 114d",
+      "vehicleMeta": [
+        {
+          "label": "Fuel Type",
+          "value": "Diesel"
+        },
+        {
+          "label": "Engine Size Range",
+          "value": "1.6L (1,598 cc) - 1.5L (1,496 cc)"
+        },
+        {
+          "label": "Power Output Range",
+          "value": "94-95 hp (70 kW) across all production"
+        }
       ],
       "specsLabel": "Key Specs Snapshot",
       "specs": [
-        "Fuel Type: Diesel",
-        "Engine Size: 1.5L / 1.6L",
-        "Power Output: 95-97 PS / 70-71 kW",
-        "Torque: 235-240 Nm / 173-177 lb-ft",
-        "Years Produced: 2012-Present"
-      ]
+        {
+          "label": "Fuel Type",
+          "value": "Diesel"
+        },
+        {
+          "label": "Engine Size Range",
+          "value": "1.6L (1,598 cc) - 1.5L (1,496 cc)"
+        },
+        {
+          "label": "Power Output Range",
+          "value": "94-95 hp (70 kW) across all production"
+        },
+        {
+          "label": "Years Produced",
+          "value": "2012-2019"
+        }
+      ],
+      "closingNote": "Every engine fitted to the BMW 1 Series 114d is covered below, with UK rebuilt pricing and known failure points."
     },
     "engineGuide": {
-      "tag": "Compatible Engines",
-      "h2": "BMW 114d Engine Codes - Specs, Failures & Replacement Costs",
+      "tag": "Engine Codes & Pricing",
+      "h2": "BMW 1 Series 114d Engine Codes - Specifications & Replacement Cost",
+      "sectionTitle": "Compatible Engine Codes & Cost Guide",
+      "sectionSubtitle": "Find your exact engine code, specs and UK replacement cost guide.",
+      "intro": "",
       "items": [
         {
-          "code": "N47D16A",
-          "title": "1.6L Diesel",
+          "code": "N47D16A / N47D16U1",
+          "title": "1.6L Turbo Diesel (2012-2015)",
           "specs": [
             {
-              "label": "Power",
-              "value": "95 PS / 70 kW"
-            },
-            {
-              "label": "Torque",
-              "value": "235 Nm / 173 lb-ft"
+              "label": "Power Output",
+              "value": "95 hp (70 kW)"
             },
             {
               "label": "Years Fitted",
               "value": "2012-2015"
-            },
-            {
-              "label": "Compatible Trims",
-              "value": "SE · Sport · Urban · EfficientDynamics · ES · M Sport"
             }
           ],
           "costs": [
             {
               "label": "Used",
-              "value": "£1,100 - £1,700"
+              "value": "£1,100-£1,500",
+              "description": ""
             },
             {
               "label": "Reconditioned",
-              "value": "£1,700 - £2,300"
+              "value": "£1,495-£1,900",
+              "description": ""
             },
             {
               "label": "Rebuilt",
-              "value": "£1,700 - £2,400"
+              "value": "£1,700-£2,400",
+              "description": ""
             }
           ],
-          "commonFailure": "Timing chain tensioner wear documented across multiple UK owner forums (60k-100k miles) [[51]][[54]][[56]].",
-          "cta": "-> Compare N47D16A BMW 114d engine replacement prices",
-          "closing": "All N47D16A engines supplied through our network include upgraded failure-point components and minimum 12-month unlimited mileage warranty."
+          "compatibleTrimLevels": [
+            "114d",
+            "114d SE",
+            "114d Sport",
+            "114d Urban",
+            "114d M Sport"
+          ],
+          "commonFailure": "The N47 engine family is prone to timing chain tensioner and guide failure. The original tensioner was too short, allowing the chain to become slack and rub against the guides. Because the N47 is an interference engine, a snapped timing chain can cause pistons to collide with valves - resulting in catastrophic engine failure. Typical failure mileage: 60,000-100,000 miles.",
+          "cta": "-> Get quotes for N47D16A BMW 1 Series 114d engine replacement",
+          "closing": "-> Get quotes for N47D16A BMW 1 Series 114d engine replacement"
         },
         {
           "code": "B37D15A",
-          "title": "1.5L Diesel",
+          "title": "1.5L Turbo Diesel (2015-2019)",
           "specs": [
             {
-              "label": "Power",
-              "value": "97 PS / 71 kW"
-            },
-            {
-              "label": "Torque",
-              "value": "240 Nm / 177 lb-ft"
+              "label": "Power Output",
+              "value": "94 hp (70 kW)"
             },
             {
               "label": "Years Fitted",
               "value": "2015-2019"
-            },
-            {
-              "label": "Compatible Trims",
-              "value": "SE · Sport · Urban · EfficientDynamics Plus · M Sport · M Sport Shadow Edition"
             }
           ],
           "costs": [
             {
               "label": "Used",
-              "value": "£1,100 - £1,700"
+              "value": "£1,200-£1,600",
+              "description": ""
             },
             {
               "label": "Reconditioned",
-              "value": "£1,700 - £2,300"
+              "value": "£1,600-£2,000",
+              "description": ""
             },
             {
               "label": "Rebuilt",
-              "value": "£1,700 - £2,400"
+              "value": "£1,800-£2,500",
+              "description": ""
             }
           ],
-          "commonFailure": "No widely reported failure pattern.",
-          "cta": "-> Compare B37D15A BMW 114d engine replacement prices",
-          "closing": "All B37D15A engines supplied through our network include upgraded failure-point components and minimum 12-month unlimited mileage warranty."
+          "compatibleTrimLevels": [
+            "114d",
+            "114d SE",
+            "114d Sport",
+            "114d M Sport (LCI models)"
+          ],
+          "commonFailure": "The B37 is generally more reliable than the N47, but early examples can suffer from EGR cooler issues. BMW issued a major recall for diesel models (including the 114d) manufactured between November 2011 and September 2017 over concerns that a faulty EGR cooler posed a potential fire risk. Check whether your vehicle has had the recall work completed.",
+          "cta": "-> Get quotes for B37D15A BMW 1 Series 114d engine replacement",
+          "closing": "-> Get quotes for B37D15A BMW 1 Series 114d engine replacement",
+          "intro": ""
         }
       ],
-      "closing": "Can't find your engine code? Enter your registration number above - we'll instantly identify the exact unit fitted to your BMW 114d and provide live quotes from UK specialists."
+      "prompt": ""
     },
     "commonProblems": {
       "tag": "Common Problems",
-      "h2": "BMW 114d Engine Problems - What It Costs to Fix & When Replacement Makes Sense",
-      "h3": "The BMW 114d, powered by the N47D16A and B37D15A diesel engines, is generally reliable when maintained, though the earlier N47D16A unit has documented failure patterns requiring attention. Every rebuilt BMW 114d engine supplied through EngineMarket includes upgraded failure-point components and a minimum 12-month unlimited mileage warranty. Use this guide to understand repair costs and decide whether repair or replacement offers better value for your 114d.",
+      "h2": "BMW 1 Series 114d Engine Problems - Repair Cost vs Replacement",
+      "h3": "H3: The BMW 1 Series 114d is powered by two different diesel engines across its production run. Early cars (2012-2015) use the N47D16 four-cylinder - a member of BMW's notoriously timing-chain-troubled N47 family. Later cars (2015-2019) use the B37D15A three-cylinder, which is more reliable but not without its own issues. Replacement demand for the BMW 114d is driven primarily by N47 timing chain failure and EGR cooler recalls on both engines. Every rebuilt engine supplied through EnginesMarket includes upgraded components addressing the original failure points, plus a minimum 12-month unlimited-mileage warranty.",
       "problems": [
         {
-          "group": "Timing Chain Tensioner Wear",
-          "h4": "Timing Chain Tensioner Wear - Why BMW 114d N47D16A Engines Fail",
-          "affectedModels": "BMW 114d SE, Sport, Urban, EfficientDynamics, M Sport (2012-2015, N47D16A)",
+          "group": "Timing Chain Tensioner & Guide Failure",
+          "h4": "Timing Chain Tensioner & Guide Failure - Why the BMW 1 Series 114d N47 Engine Fails Prematurely",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "affectedModels": "BMW 1 Series 114d (N47D16A / N47D16U1, 2012-2015)",
           "typicalFailureMileage": "60,000-100,000 miles",
-          "rootCause": "The N47D16A's timing chain tensioner can lose hydraulic pressure over time, allowing chain slack that leads to rattling on cold starts and, if unaddressed, catastrophic valve/piston contact. This pattern is documented across PistonHeads, babybmw.net, and Honest John owner reviews.",
+          "rootCause": "The timing chain, guides, and tensioners on BMW's N47 diesel engine were poorly designed and constructed. The original tensioner was too short and allowed the chain to become slack, which would then rub and clatter against the guides. Because the N47 is an interference engine, a stretched or snapped timing chain can cause pistons to collide with valves - resulting in catastrophic engine failure.",
+          "whyItHappens": "",
           "repairOptions": [
             {
-              "tier": "Minor Repair - Early rattling diagnosis",
-              "dealerPrice": "£850-£1,200",
-              "specialistPrice": "£550-£800",
-              "whatItInvolves": "Tensioner replacement, chain guide inspection, oil system flush",
-              "longevity": "Preventative; effective if caught before chain stretch"
+              "tier": "Timing Chain Replacement (preventative)",
+              "dealerPrice": "£1,200-£1,800",
+              "specialistPrice": "£800-£1,300",
+              "whatItInvolves": "Replace timing chain, tensioner, guides and sprockets",
+              "longevity": "Best if caught early - rattle present but engine still running",
+              "estimatedTime": ""
             },
             {
-              "tier": "Major Repair - Chain stretch detected",
-              "dealerPrice": "£2,200-£3,100",
-              "specialistPrice": "£1,400-£2,000",
-              "whatItInvolves": "Full timing chain kit, tensioner, guides, sprockets, labour-intensive front-end strip",
-              "longevity": "Restores reliability if no internal damage occurred"
-            },
-            {
-              "tier": "Full Replacement - Rebuilt N47D16A Engine",
-              "dealerPrice": "£3,800-£5,200",
-              "specialistPrice": "£1,700-£2,400",
-              "whatItInvolves": "Complete stripped block rebuild with upgraded tensioner, new chain kit, bench-tested, ECU-matched, 12-month warranty. Workshop-fitted.",
-              "longevity": "Permanent solution when valve/piston contact has occurred"
+              "tier": "Full Replacement - rebuilt/reconditioned engine",
+              "dealerPrice": "£3,200-£4,800",
+              "specialistPrice": "£2,300-£3,500 (matches Section 4 rebuilt pricing)",
+              "whatItInvolves": "Supply & fit, upgraded timing components, 12-month warranty",
+              "longevity": "When chain has snapped or engine is already damaged",
+              "estimatedTime": ""
             }
           ],
-          "recommendation": "If your BMW 114d is under 80k miles and only shows cold-start rattling, a specialist tensioner replacement may be cost-effective. However, if the chain has jumped or engine damage is confirmed, a rebuilt N47D16A unit from our network offers better long-term value than a major repair.",
-          "cta": "-> Compare rebuilt N47D16A engine prices for your BMW 114d"
+          "vehicleValueCheck": "A typical 2012-2015 BMW 1 Series 114d is currently valued at approximately £2,500-£6,000 depending on mileage and condition [THIRD-PARTY - Auto Trader / Parkers market observation]. This places the 114d in the \"repair or used engine typically makes more sense than a full rebuilt unit\" bracket for lower-value examples. If your 114d is worth under £3,500 and the engine has suffered catastrophic timing chain failure, evaluate scrap value first - replacement cost may approach or exceed the car's market value. For well-maintained, higher-spec examples (M Sport, low mileage) worth £4,500+, a reconditioned or rebuilt engine with warranty is a viable investment.",
+          "recommendation": "If you hear the characteristic \"death rattle\" from the timing chain on cold start in your N47-powered BMW 114d, act immediately. An £800-£1,300 specialist timing chain replacement is far cheaper than a full engine rebuild. If the chain has already snapped, the repair bill often exceeds the car's value - in that scenario, compare rebuilt engine prices through EnginesMarket against the cost of replacing the car. For owners planning to keep their 114d for 2+ years, a reconditioned N47 with upgraded timing components and warranty offers genuine peace of mind.",
+          "cta": "-> Compare rebuilt N47D16A BMW 1 Series 114d engine prices"
         },
         {
-          "group": "EGR Cooler Cracking",
-          "h4": "EGR Cooler Cracking - Why BMW 114d Diesel Engines Fail",
-          "affectedModels": "BMW 114d SE, Sport, Urban, EfficientDynamics, M Sport (2012-2019, N47D16A / B37D15A)",
-          "typicalFailureMileage": "70,000-110,000 miles",
-          "rootCause": "Diesel exhaust gas recirculation coolers can develop internal cracks from thermal cycling, leading to coolant loss, white smoke, or engine overheating. UK specialists list EGR cooler replacement as a common BMW 114d repair item.",
+          "group": "EGR Cooler Failure",
+          "h4": "EGR Cooler Failure - BMW 114d Diesel Recall Issue",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "affectedModels": "BMW 1 Series 114d (N47D16A / N47D16U1 / B37D15A, 2011-2017)",
+          "typicalFailureMileage": "Variable - recall covers affected vehicles regardless of mileage",
+          "rootCause": "A faulty EGR cooler can develop internal leaks, potentially allowing coolant to mix with exhaust gases. In worst-case scenarios, this can lead to a fire risk.",
+          "whyItHappens": "",
           "repairOptions": [
             {
-              "tier": "Minor Repair - EGR valve cleaning",
-              "dealerPrice": "£450-£650",
-              "specialistPrice": "£250-£400",
-              "whatItInvolves": "Valve removal, carbon clean, gasket replacement, system reset",
-              "longevity": "Temporary; does not address cooler integrity"
+              "tier": "EGR Cooler Replacement (recall or out-of-warranty)",
+              "dealerPrice": "£600-£1,000",
+              "specialistPrice": "£400-£700",
+              "whatItInvolves": "Replace EGR cooler and related components",
+              "longevity": "Check if your vehicle is covered by the BMW recall first",
+              "estimatedTime": ""
             },
             {
-              "tier": "Major Repair - EGR cooler replacement",
-              "dealerPrice": "£1,400-£1,900",
-              "specialistPrice": "£850-£1,200",
-              "whatItInvolves": "Cooler assembly replacement, coolant flush, pressure test, ECU adaptation",
-              "longevity": "Restores cooling function; use OEM-spec parts"
-            },
-            {
-              "tier": "Full Replacement - Rebuilt [Engine Code] Engine",
-              "dealerPrice": "£3,800-£5,200",
-              "specialistPrice": "£1,700-£2,400",
-              "whatItInvolves": "Complete stripped block rebuild with upgraded EGR system components, bench-tested, ECU-matched, 12-month warranty. Workshop-fitted.",
-              "longevity": "Permanent solution when overheating has caused internal damage"
+              "tier": "Full Replacement - rebuilt engine",
+              "dealerPrice": "£3,200-£4,800",
+              "specialistPrice": "£2,300-£3,500",
+              "whatItInvolves": "Complete rebuilt unit with new EGR components",
+              "longevity": "If EGR failure has caused secondary damage",
+              "estimatedTime": ""
             }
           ],
-          "recommendation": "For isolated EGR cooler failure with no overheating damage, specialist replacement is the most cost-effective path. If coolant loss led to overheating or bearing wear, compare rebuilt engine quotes - the price difference versus major repair is often marginal with our network specialists.",
-          "cta": "-> Compare rebuilt BMW 114d engine prices with upgraded EGR components"
+          "vehicleValueCheck": "",
+          "recommendation": "Before paying for any EGR-related repair on your BMW 1 Series 114d, check whether your vehicle is affected by the BMW diesel recall. BMW recalled 1.6 million diesel vehicles globally (including the 114d) manufactured between November 2011 and September 2017. If your car is affected, the repair may be free of charge at a main dealer. If not, a specialist EGR cooler replacement is significantly cheaper than main dealer pricing.",
+          "cta": "-> Compare BMW 1 Series 114d engine prices"
         }
       ],
+      "emptyState": null,
       "finalCta": {
-        "h4": "Don't Let Engine Failure Write Off Your BMW 114d",
-        "paragraph": "Timing chain and EGR issues represent the most documented failure patterns for the BMW 114d, but both are manageable with early diagnosis or specialist rebuild support. EngineMarket connects you with certified UK BMW 114d specialists offering rebuilt units with upgraded failure-point components, nationwide delivery, vehicle collection and recovery, and 12-month warranty coverage. Compare live quotes today and get back on the road without paying main dealer premiums.",
-        "buttonText": "Compare BMW 114d N47D16A Engine Replacement Prices Now ->",
-        "disclaimer": "All prices are indicative UK market ranges based on historical quote data and repair requests from our network of engine specialists. Dealer pricing is estimated based on published main dealer labour rates and genuine OEM parts pricing. Specialist pricing reflects actual quote data from EngineMarket's UK network. Actual costs vary depending on damage severity, vehicle condition, variant, and workshop location within the UK. Use our free comparison tool to get tailored quotes for your specific BMW 114d and engine code. Every engine supplied through EngineMarket carries a minimum 12-month unlimited mileage warranty - always confirm exact terms with your chosen supplier."
-      }
+        "h4": "Don't Let Engine Failure Write Off Your BMW 1 Series 114d",
+        "paragraph": "The N47 engine in your early BMW 114d has a well-known timing chain weakness - but with the right specialist, this can be addressed before catastrophic failure occurs. Later B37-powered cars are more reliable but should be checked for outstanding EGR recalls. Whether you need a preventative timing chain replacement or a full rebuilt engine with upgraded components and a 12-month warranty, EnginesMarket connects you with vetted UK specialists who know the 114d inside out. Compare prices today and keep your BMW on the road.",
+        "buttonText": "Compare BMW 1 Series 114d Engine Replacement Prices Now ->",
+        "disclaimer": "\"All prices are indicative UK market ranges based on historical quote data and repair requests from our network of engine specialists. Dealer pricing is estimated based on published main dealer labour rates and genuine OEM parts pricing. Specialist pricing reflects actual quote data from EnginesMarket's UK network. Actual costs vary depending on damage severity, vehicle condition, variant, and workshop location within the UK. Use our free comparison tool to get tailored quotes for your specific BMW 1 Series 114d. Every engine supplied through EnginesMarket carries a minimum 12-month unlimited mileage warranty - always confirm exact terms with your chosen supplier.\""
+      },
+      "reviewSummary": null
     },
     "faq": {
-      "tag": "FAQs",
-      "h2": "BMW 114d Engine Replacement - Frequently Asked Questions",
-      "intro": "Everything BMW 114d owners usually ask before choosing a rebuilt, reconditioned or used replacement engine.",
+      "tag": "FAQ",
+      "h2": "BMW 1 Series 114d Engine Replacement - Frequently Asked Questions",
+      "intro": "Everything BMW 1 Series 114d owners usually ask before choosing a rebuilt, reconditioned or used replacement engine.",
       "defaultOpenIndex": 0,
-      "disclaimer": "All prices are indicative UK market ranges based on historical quote data from our network of engine specialists. Actual costs vary by variant, engine code, damage severity and workshop location. Use our free comparison tool to get tailored quotes. Every engine supplied through EngineMarket carries a minimum 12-month unlimited mileage warranty - always confirm terms with your chosen supplier.",
+      "disclaimer": "",
       "items": [
         {
-          "question": "How long does a BMW 114d engine last with proper maintenance?",
-          "answer": "A well-maintained BMW 114d engine can exceed 150,000 miles before requiring major work. Regular oil changes with BMW-approved spec oil and timely timing chain inspections are critical for N47D16A longevity.",
+          "question": "How much does a BMW 1 Series 114d engine replacement cost?",
+          "answer": "A BMW 1 Series 114d engine replacement typically costs £1,495-£2,400 for a reconditioned or rebuilt N47D16A or B37D15A unit supply-only. With supply and fit, expect £2,300-£3,500 depending on the specialist and location.",
           "keyPoints": [
-            "N47D16A units benefit from early timing chain tensioner checks at 60k miles",
-            "B37D15A engines show improved reliability with fewer widespread failure reports",
-            "Full service history and correct oil specification significantly extend engine life",
-            "Rebuilt units from our network include upgraded components addressing known weak points"
+            "Used N47D16A engines: £1,100-£1,500",
+            "Reconditioned N47D16A: £1,495-£1,900",
+            "Rebuilt B37D15A with warranty: £1,800-£2,500"
           ],
           "comparisonTable": null,
           "warning": null,
-          "cta": "-> Check your BMW 114d's exact engine code and get preventative maintenance quotes"
+          "cta": "-> Compare BMW 1 Series 114d engine replacement quotes"
         },
         {
-          "question": "Should I buy a used, reconditioned, or rebuilt BMW 114d engine?",
-          "answer": "Rebuilt engines offer the best long-term value for BMW 114d owners, with upgraded failure-point components and warranty protection that used or reconditioned units cannot match.",
+          "question": "What are the signs of timing chain failure in a BMW 114d?",
+          "answer": "The most common warning signs of N47 timing chain failure in a BMW 1 Series 114d include a rattling noise from the engine on cold start (the \"death rattle\"), rough idling, poor engine performance, and in later stages, the engine management light illuminating.",
           "keyPoints": [
-            "Used engines are lowest cost but carry unknown wear history and limited warranty",
-            "Reconditioned units are cleaned and tested but may not address design weaknesses",
-            "Rebuilt engines include upgraded tensioners, seals, and components prone to failure",
-            "All rebuilt units through our network include 12-month unlimited mileage warranty"
-          ],
-          "comparisonTable": {
-            "headers": [
-              "Engine Condition",
-              "Typical Price Range (Supply Only)",
-              "Warranty & Component Coverage"
-            ],
-            "rows": [
-              [
-                "Used (low-mileage donor)",
-                "£1,100-£1,700",
-                "30-90 days; no upgraded components"
-              ],
-              [
-                "Reconditioned (tested/restored)",
-                "£1,700-£2,300",
-                "6-12 months; OEM-spec parts only"
-              ],
-              [
-                "Rebuilt (upgraded failure points)",
-                "£1,700-£2,400",
-                "12 months unlimited; upgraded tensioners, seals, gaskets"
-              ]
-            ]
-          },
-          "warning": "Avoid used engines without compression test documentation - hidden wear can lead to repeat failure within months.",
-          "cta": "-> Compare rebuilt BMW 114d engine prices with warranty protection today"
-        },
-        {
-          "question": "Can I drive my BMW 114d if I hear a timing chain rattle?",
-          "answer": "No - cold-start rattling indicates tensioner wear and requires immediate specialist assessment to avoid catastrophic engine damage.",
-          "keyPoints": [
-            "Rattling on cold start signals chain slack from tensioner failure",
-            "Continuing to drive risks chain jump, valve/piston contact, and write-off",
-            "Arrange vehicle collection to a specialist workshop - do not drive the car",
-            "Our network suppliers can collect your non-running 114d for assessment"
-          ],
-          "comparisonTable": null,
-          "warning": "Driving with timing chain noise can cause irreversible engine damage within minutes.",
-          "cta": "-> Get urgent quotes from BMW 114d timing chain specialists near you"
-        },
-        {
-          "question": "Does the BMW 114d B37D15A engine have the same timing chain issues as the N47D16A?",
-          "answer": "The B37D15A three-cylinder engine has a revised timing system with fewer widespread failure reports, though regular maintenance remains essential.",
-          "keyPoints": [
-            "B37D15A uses an updated chain design with improved tensioner hydraulics",
-            "Fewer UK forum reports of catastrophic failure compared to N47D16A",
-            "Still requires oil changes with BMW Longlife-04 spec to prevent premature wear",
-            "Rebuilt B37D15A units from our network include all latest component revisions"
+            "Rattling noise lasting 1-2 seconds on cold start is the earliest warning",
+            "Ignoring the rattle can lead to chain skipping or snapping",
+            "A snapped timing chain on an N47 engine usually means catastrophic engine damage"
           ],
           "comparisonTable": null,
           "warning": null,
-          "cta": "-> Compare rebuilt B37D15A engine prices for your BMW 114d"
+          "cta": "-> Get a BMW 114d timing chain inspection quote"
         },
         {
-          "question": "What oil specification does the BMW 114d engine require?",
-          "answer": "BMW 114d engines require BMW Longlife-04 approved 5W-30 synthetic diesel oil to protect turbochargers, EGR systems, and timing components.",
+          "question": "Is it worth replacing the engine in a BMW 1 Series 114d?",
+          "answer": "A 2012-2015 BMW 1 Series 114d is typically valued at £2,500-£6,000. If your 114d is worth under £3,500, a full rebuilt engine may not be economically viable - consider a used engine or scrap the car. If your car is worth £4,500+ (low mileage, M Sport spec, good condition), a reconditioned engine with warranty is a sound investment.",
           "keyPoints": [
-            "Using incorrect oil accelerates timing chain wear and turbo failure",
-            "Longlife-04 spec maintains detergent levels for diesel particulate filter compatibility",
-            "Oil capacity: ~4.25L for N47D16A, ~4.25L for B37D15A (check dipstick)",
-            "Our specialist network uses only OEM-spec oils during rebuild and fitment"
+            "Vehicle value is the key factor in the decision",
+            "Used engines offer a budget-friendly alternative",
+            "Rebuilt engines with warranty suit owners keeping the car 2+ years"
           ],
           "comparisonTable": null,
           "warning": null,
-          "cta": "-> Get quotes from BMW 114d specialists using correct Longlife-04 oil"
+          "cta": "-> Compare BMW 114d engine prices - used, reconditioned and rebuilt"
         },
         {
-          "question": "How much does it cost to replace a BMW 114d engine with supply and fit?",
-          "answer": "Supply and fit for a rebuilt BMW 114d engine typically ranges £2,200-£3,500 depending on workshop location and vehicle condition.",
+          "question": "How long does a BMW 1 Series 114d engine replacement take?",
+          "answer": "A BMW 1 Series 114d engine replacement typically takes 2-3 days for a specialist to complete, including removal of the old unit and fitting the replacement. Timing chain replacement alone (without full engine removal) can be completed in 1-2 days.",
           "keyPoints": [
-            "Price includes rebuilt engine, labour, fluids, gaskets, and ECU adaptation",
-            "Vehicle collection and drop-off recovery often included by network specialists",
-            "Rebuilt units include upgraded failure-point components and 12-month warranty",
-            "Compare live quotes to find the best value specialist near you"
+            "Supply-only: engine delivered next working day in many cases",
+            "Supply and fit: allow 2-3 working days",
+            "Mobile fitting options available through some specialists"
           ],
           "comparisonTable": null,
           "warning": null,
-          "cta": "-> Compare supply and fit quotes for your BMW 114d engine replacement"
+          "cta": "-> Get a BMW 114d supply and fit quote"
         },
         {
-          "question": "Will a rebuilt BMW 114d engine affect my car's value or MOT?",
-          "answer": "A professionally fitted rebuilt engine with documentation does not negatively impact MOT eligibility and can preserve your BMW 114d's resale value.",
+          "question": "What's the difference between the BMW 114d and 116d?",
+          "answer": "Both the BMW 114d and 116d use similar engine families but with different power outputs. The 114d produces 95 hp (70 kW), while the 116d produces 116 hp (85 kW) in later models. The 114d was positioned as the entry-level diesel model.",
           "keyPoints": [
-            "MOT testers assess engine presence and emissions, not replacement history",
-            "Keep invoices and warranty documentation for future buyer transparency",
-            "Rebuilt engines from our network meet OEM tolerances and emissions standards",
-            "Full service history post-rebuild supports stronger resale positioning"
+            "Same N47/B37 engine families - many parts are interchangeable",
+            "114d: 95 hp, 235 Nm torque",
+            "116d: 116 hp (later models), higher torque output"
           ],
           "comparisonTable": null,
           "warning": null,
-          "cta": "-> Get quotes from DVLA-compliant BMW 114d engine specialists today"
+          "cta": "-> Compare BMW 1 Series engine options"
         },
         {
-          "question": "Where can I find a trusted BMW 114d N47D16A engine specialist near me?",
-          "answer": "EngineMarket connects you with vetted UK BMW 114d N47D16A specialists nationwide. Most network partners offer vehicle collection and drop-off recovery services - they will collect your non-running 114d, complete the engine replacement in their workshop, and deliver it back. Compare live quotes from certified rebuilders who understand your 114d's specific N47D16A requirements - all backed by minimum 12-month unlimited mileage warranty.",
+          "question": "Does a BMW 1 Series 114d rebuilt engine come with a warranty?",
+          "answer": "Yes - every rebuilt BMW 1 Series 114d engine supplied through EnginesMarket comes with a minimum 12-month unlimited-mileage warranty. This covers the engine against manufacturing defects and component failure, giving you peace of mind when investing in a replacement N47 or B37 unit.",
           "keyPoints": [
-            "Vetted BMW 114d N47D16A specialists rated by real UK owners",
-            "Vehicle collection and drop-off recovery available from most network suppliers nationwide",
-            "Live price comparison for rebuilt, reconditioned and used N47D16A units",
-            "Minimum 12-month unlimited mileage warranty on every engine supplied",
-            "Transparent quotes with no hidden fees or obligation to proceed"
+            "12-month warranty is standard on all rebuilt engines",
+            "Some specialists offer extended warranty options",
+            "Always confirm exact warranty terms with your chosen supplier"
           ],
           "comparisonTable": null,
           "warning": null,
-          "cta": "-> Get quotes from BMW 114d N47D16A specialists near you today"
+          "cta": "-> Get a warranted BMW 114d rebuilt engine quote"
         }
       ],
       "ui": {
@@ -708,33 +619,30 @@
     },
     "trustCta": {
       "tag": "Why Choose Us",
-      "h2": "Why UK BMW 114d Owners Trust EngineMarket",
-      "intro": "Compare quotes from trusted UK BMW 114d engine specialists with warranty-backed rebuilt, reconditioned and used options nationwide.",
+      "h2": "Compare BMW 1 Series 114d Engine Prices Today",
+      "intro": "Compare quotes from trusted UK BMW 1 Series 114d engine specialists with warranty-backed rebuilt, reconditioned and used options nationwide.",
       "points": [
         {
-          "title": "Vetted BMW 114d Specialists",
-          "description": "Every rebuilder and garage in our network is rated and reviewed by real owners of your 114d."
+          "title": "500+ BMW 1 Series engines supplied through our network",
+          "description": ""
         },
         {
-          "title": "Transparent Price Comparison",
-          "description": "See rebuilt, reconditioned and used engine costs side-by-side before committing, with no hidden fees or obligation."
+          "title": "12-Month Warranty on every rebuilt BMW 114d engine",
+          "description": ""
         },
         {
-          "title": "Nationwide Coverage, Local Recovery",
-          "description": "Supply-only delivery across the UK, with vehicle collection and workshop fitting available from specialists near you for hassle-free BMW 114d engine replacement."
+          "title": "Nationwide UK delivery",
+          "description": "supply & fit available"
         }
       ],
-      "finalText": "Find the best BMW 114d engine replacement UK drivers rely on. Compare prices from trusted specialists near you today and get back on the road with confidence.",
-      "buttonText": "Compare BMW 114d Engine Prices Now ->",
+      "finalText": "Comparing quotes for your BMW 1 Series 114d engine replacement is completely free and carries no obligation. Enter your registration above, tell us your preferred engine condition - used, reconditioned or rebuilt - and receive tailored quotes from vetted UK specialists who know the N47 and B37 diesel engines inside out. No spam, no pressure, just genuine prices from trusted BMW 114d experts.",
+      "buttonText": "Get Free BMW 1 Series 114d Engine Quotes ->",
       "secondaryAction": {
         "text": "",
         "href": "tel:03330000044"
       },
       "ui": {
-        "showSecondaryAction": false,
-        "imageBadgeLabel": "Variant-specific support",
-        "imageBadgeTitle": "BMW 114d specialists across the UK",
-        "imageBadgeText": "Compare supply-only and supply & fit quotes from vetted independent engine specialists."
+        "showSecondaryAction": false
       }
     }
   }
