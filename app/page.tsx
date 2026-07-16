@@ -51,10 +51,6 @@ export const metadata: Metadata = {
       "Compare engine replacement prices from 200+ vetted UK suppliers. Reconditioned, rebuilt & used engines with 12-24 month warranty. Supply & fit available UK-wide.",
     images: ["https://www.enginesmarket.co.uk/images/og-image.png"],
   },
-  robots: {
-    index: true,
-    follow: true,
-  },
 };
 
 export default function Home() {

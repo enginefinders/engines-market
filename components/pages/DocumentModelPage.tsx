@@ -112,7 +112,9 @@ export default function DocumentModelPage({
       <VariantCoverageSection 
         data={visualData.sections.variantCoverage} 
         brandName={visualData.brand.name}
+        brandSlug={visualData.brand.slug}
         modelName={visualData.model.name}
+        modelSlug={visualData.model.slug}
         documentMode
       />
 

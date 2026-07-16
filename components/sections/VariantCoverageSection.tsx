@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import type { ModelVariantCoverageSectionData } from "@/types/model";
 import Container from "@/components/ui/Container";
@@ -9,7 +10,9 @@ import Section from "@/components/ui/Section";
 type Props = {
   data: ModelVariantCoverageSectionData;
   brandName?: string;
+  brandSlug?: string;
   modelName?: string;
+  modelSlug?: string;
   documentMode?: boolean;
 };
 
@@ -179,7 +182,34 @@ function splitDirectoryHeading(heading: string) {
   return parts.length ? parts : [heading];
 }
 
-export default function VariantCoverageSection({ data, modelName, documentMode = false }: Props) {
+function buildVariantHref(cardSlug: string, brandSlug?: string, modelSlug?: string) {
+  const normalizedCardSlug = cardSlug.trim().replace(/^\/+|\/+$/g, "");
+
+  if (!normalizedCardSlug) {
+    return null;
+  }
+
+  if (normalizedCardSlug.includes("/")) {
+    return `/${normalizedCardSlug}`;
+  }
+
+  if (!brandSlug || !modelSlug) {
+    return null;
+  }
+
+  return `/${brandSlug.trim().replace(/^\/+|\/+$/g, "")}/${modelSlug
+    .trim()
+    .replace(/^\/+|\/+$/g, "")}/${normalizedCardSlug}`;
+}
+
+export default function VariantCoverageSection({
+  data,
+  brandName,
+  brandSlug,
+  modelName,
+  modelSlug,
+  documentMode = false,
+}: Props) {
   const renderableCards = useMemo(
     () => data.cards.filter(isRenderableVariantCard),
     [data.cards],
@@ -247,6 +277,7 @@ export default function VariantCoverageSection({ data, modelName, documentMode =
 
   function renderExpandedPanel(card: VariantCard, extraClassName = "") {
     const isAbsolutePanel = extraClassName.includes("absolute");
+    const variantHref = buildVariantHref(card.slug, brandSlug, modelSlug);
 
     return (
       <div
@@ -281,19 +312,34 @@ export default function VariantCoverageSection({ data, modelName, documentMode =
           </div>
         </div>
 
-        <a
-          href="#quote-form"
-          data-quote-context={card.h3}
-          data-quote-source="variant-coverage"
-          className="mt-4 inline-flex min-h-12 w-full items-center justify-between gap-2 overflow-hidden rounded-xl border border-green-400 bg-slate-900 px-3 py-2 text-white shadow-[0_0_15px_rgba(74,222,128,0.5),inset_0_0_12px_rgba(74,222,128,0.3)] transition hover:bg-slate-800 hover:shadow-[0_0_20px_rgba(74,222,128,0.8),inset_0_0_15px_rgba(74,222,128,0.5)]"
-        >
-          <span className="min-w-0 flex-1 text-left text-[10px] font-semibold uppercase tracking-[0.08em] leading-[1.35] text-white/85 break-words">
-            {card.cta}
-          </span>
-          <span className="shrink-0">
-            <ArrowIcon />
-          </span>
-        </a>
+        {variantHref ? (
+          <Link
+            href={variantHref}
+            className="mt-4 inline-flex min-h-12 w-full items-center justify-between gap-2 overflow-hidden rounded-xl border border-green-400 bg-slate-900 px-3 py-2 text-white shadow-[0_0_15px_rgba(74,222,128,0.5),inset_0_0_12px_rgba(74,222,128,0.3)] transition hover:bg-slate-800 hover:shadow-[0_0_20px_rgba(74,222,128,0.8),inset_0_0_15px_rgba(74,222,128,0.5)]"
+            aria-label={`Open ${card.h3} variant page`}
+          >
+            <span className="min-w-0 flex-1 text-left text-[10px] font-semibold uppercase tracking-[0.08em] leading-[1.35] text-white/85 break-words">
+              {card.cta || `Open ${brandName ?? ""} ${card.h3}`.trim()}
+            </span>
+            <span className="shrink-0">
+              <ArrowIcon />
+            </span>
+          </Link>
+        ) : (
+          <a
+            href="#quote-form"
+            data-quote-context={card.h3}
+            data-quote-source="variant-coverage"
+            className="mt-4 inline-flex min-h-12 w-full items-center justify-between gap-2 overflow-hidden rounded-xl border border-green-400 bg-slate-900 px-3 py-2 text-white shadow-[0_0_15px_rgba(74,222,128,0.5),inset_0_0_12px_rgba(74,222,128,0.3)] transition hover:bg-slate-800 hover:shadow-[0_0_20px_rgba(74,222,128,0.8),inset_0_0_15px_rgba(74,222,128,0.5)]"
+          >
+            <span className="min-w-0 flex-1 text-left text-[10px] font-semibold uppercase tracking-[0.08em] leading-[1.35] text-white/85 break-words">
+              {card.cta}
+            </span>
+            <span className="shrink-0">
+              <ArrowIcon />
+            </span>
+          </a>
+        )}
       </div>
     );
   }

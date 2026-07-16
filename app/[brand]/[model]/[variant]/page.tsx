@@ -31,17 +31,6 @@ export async function generateMetadata({ params }: VariantPageProps): Promise<Me
       canonical: pageData.seo.canonical,
     },
     metadataBase: new URL(SITE_URL),
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        "max-image-preview": "large",
-        "max-snippet": -1,
-        "max-video-preview": -1,
-      },
-    },
   };
 }
 
