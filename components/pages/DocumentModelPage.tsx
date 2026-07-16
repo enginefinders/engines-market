@@ -16,6 +16,7 @@ import TrustCtaSection from "@/components/sections/TrustCtaSection";
 import VariantCoverageSection from "@/components/sections/VariantCoverageSection";
 import { TIER3_BRAND_SLUGS } from "@/lib/tier3Brands";
 import { applyModelPageVisualPlaceholders } from "@/lib/modelVisualSelection";
+import { getVariantRouteMapForModel } from "@/lib/variantPageData";
 import { buildStaticReviewsSection } from "@/lib/staticReviews";
 import type { ModelPageData } from "@/types/model";
 
@@ -52,7 +53,7 @@ type DocumentModelPageProps = {
   data: ModelPageData;
 };
 
-export default function DocumentModelPage({
+export default async function DocumentModelPage({
   data,
 }: DocumentModelPageProps) {
   const visualData = applyModelPageVisualPlaceholders(data);
@@ -66,6 +67,11 @@ export default function DocumentModelPage({
   const showEngineIntelligence =
     TIER3_BRAND_SLUGS.has(visualData.brand.slug) &&
     Boolean(visualData.sections.engineIntelligence?.cards.length);
+  const variantRouteMap = await getVariantRouteMapForModel(
+    visualData.brand.slug,
+    visualData.model.slug,
+    visualData.sections.variantCoverage.cards,
+  );
 
   return (
     <>
@@ -115,6 +121,7 @@ export default function DocumentModelPage({
         brandSlug={visualData.brand.slug}
         modelName={visualData.model.name}
         modelSlug={visualData.model.slug}
+        variantRouteMap={variantRouteMap}
         documentMode
       />
 

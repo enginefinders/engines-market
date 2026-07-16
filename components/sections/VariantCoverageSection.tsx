@@ -13,6 +13,7 @@ type Props = {
   brandSlug?: string;
   modelName?: string;
   modelSlug?: string;
+  variantRouteMap?: Record<string, string>;
   documentMode?: boolean;
 };
 
@@ -208,6 +209,7 @@ export default function VariantCoverageSection({
   brandSlug,
   modelName,
   modelSlug,
+  variantRouteMap,
   documentMode = false,
 }: Props) {
   const renderableCards = useMemo(
@@ -277,7 +279,9 @@ export default function VariantCoverageSection({
 
   function renderExpandedPanel(card: VariantCard, extraClassName = "") {
     const isAbsolutePanel = extraClassName.includes("absolute");
-    const variantHref = buildVariantHref(card.slug, brandSlug, modelSlug);
+    const variantHref =
+      variantRouteMap?.[card.slug] ??
+      buildVariantHref(card.slug, brandSlug, modelSlug);
 
     return (
       <div
