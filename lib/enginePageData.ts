@@ -1,0 +1,115 @@
+import { readdir, readFile } from "node:fs/promises";
+import path from "node:path";
+import type { EnginePageData } from "@/types/engine-page";
+
+const ENGINES_DIR = path.join(process.cwd(), "data", "engines");
+const UTF8_BOM = /^\uFEFF/;
+const SHOULD_CACHE_ENGINE_PAGES = process.env.NODE_ENV === "production";
+let allEnginePagesPromise: Promise<EnginePageData[]> | null = null;
+
+function normalizeSlugPart(value: string) {
+  return value.trim().toLowerCase();
+}
+
+function isEnginePageData(value: unknown): value is EnginePageData {
+  if (!value || typeof value !== "object") {
+    return false;
+  }
+
+  const page = value as Partial<EnginePageData>;
+
+  return Boolean(
+    page.brand &&
+      typeof page.brand.name === "string" &&
+      typeof page.brand.slug === "string" &&
+      page.engine &&
+      typeof page.engine.code === "string" &&
+      typeof page.engine.slug === "string" &&
+      page.sections?.hero,
+  );
+}
+
+function parseEnginePageData(raw: string) {
+  const parsed = JSON.parse(raw.replace(UTF8_BOM, "")) as EnginePageData;
+  return isEnginePageData(parsed) ? parsed : null;
+}
+
+async function readEnginePageDataFile(fileBaseName: string) {
+  try {
+    const filePath = path.join(ENGINES_DIR, `${fileBaseName}.json`);
+    const raw = await readFile(filePath, "utf-8");
+    return parseEnginePageData(raw);
+  } catch {
+    return null;
+  }
+}
+
+async function getAllEnginePageData() {
+  if (SHOULD_CACHE_ENGINE_PAGES && allEnginePagesPromise) {
+    return allEnginePagesPromise;
+  }
+
+  const loadPagesPromise = (async () => {
+    try {
+      const entries = await readdir(ENGINES_DIR, { withFileTypes: true });
+      const pages = await Promise.all(
+        entries
+          .filter((entry) => entry.isFile() && entry.name.endsWith(".json"))
+          .map(async (entry) => {
+            try {
+              const raw = await readFile(path.join(ENGINES_DIR, entry.name), "utf-8");
+              return parseEnginePageData(raw);
+            } catch {
+              return null;
+            }
+          }),
+      );
+
+      return pages.filter((page): page is EnginePageData => Boolean(page));
+    } catch {
+      return [];
+    }
+  })();
+
+  if (SHOULD_CACHE_ENGINE_PAGES) {
+    allEnginePagesPromise = loadPagesPromise;
+  }
+
+  return loadPagesPromise;
+}
+
+export async function getEnginePageData(brand: string, engineSlug: string) {
+  const normalizedBrand = normalizeSlugPart(brand);
+  const normalizedEngineSlug = normalizeSlugPart(engineSlug);
+  const directCandidates = [`${normalizedBrand}-${normalizedEngineSlug}`, normalizedEngineSlug];
+
+  for (const candidate of directCandidates) {
+    const directMatch = await readEnginePageDataFile(candidate);
+    if (
+      directMatch &&
+      normalizeSlugPart(directMatch.brand.slug) === normalizedBrand &&
+      normalizeSlugPart(directMatch.engine.slug) === normalizedEngineSlug
+    ) {
+      return directMatch;
+    }
+  }
+
+  const pages = await getAllEnginePageData();
+
+  return (
+    pages.find(
+      (page) =>
+        normalizeSlugPart(page.brand.slug) === normalizedBrand &&
+        normalizeSlugPart(page.engine.slug) === normalizedEngineSlug,
+    ) ?? null
+  );
+}
+
+export async function getEnginePageStaticParams() {
+  const pages = await getAllEnginePageData();
+
+  return pages.map((page) => ({
+    brand: page.brand.slug,
+    model: page.engine.slug,
+  }));
+}
