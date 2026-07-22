@@ -1,8 +1,3252 @@
 [
   {
-    "source": "C:\\Users\\Rahma\\Downloads\\EM-Variant-Page-BMW-M3-E90-FULL.md",
-    "output": "data\\variants\\bmw-m3-e90-engine.json",
-    "route": "bmw-m3-e90-engine",
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 1 Series 114d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-1-series-114d-engine.json",
+    "route": "bmw-1-series-114d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 1 Series 114i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-1-series-114i-engine.json",
+    "route": "bmw-1-series-114i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 1 Series 116d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-1-series-116d-engine.json",
+    "route": "bmw-1-series-116d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 1 Series 116i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-1-series-116i-engine.json",
+    "route": "bmw-1-series-116i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 1 Series 118d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-1-series-118d-engine.json",
+    "route": "bmw-1-series-118d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 1 Series 118i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-1-series-118i-engine.json",
+    "route": "bmw-1-series-118i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 1 Series 120.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-1-series-120-engine.json",
+    "route": "bmw-1-series-120-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 1 Series 120d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-1-series-120d-engine.json",
+    "route": "bmw-1-series-120d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 1 Series 120i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-1-series-120i-engine.json",
+    "route": "bmw-1-series-120i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 1 Series 123d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-1-series-123d-engine.json",
+    "route": "bmw-1-series-123d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 1 Series 125d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-1-series-125d-engine.json",
+    "route": "bmw-1-series-125d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 1 Series 125i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-1-series-125i-engine.json",
+    "route": "bmw-1-series-125i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 1 Series 128ti.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-1-series-128ti-engine.json",
+    "route": "bmw-1-series-128ti-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 1 Series 130i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-1-series-130i-engine.json",
+    "route": "bmw-1-series-130i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 1 Series 135i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-1-series-135i-engine.json",
+    "route": "bmw-1-series-135i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 1 Series M135i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-1-series-m135i-engine.json",
+    "route": "bmw-1-series-m135i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 1 Series M140i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-1-series-m140i-engine.json",
+    "route": "bmw-1-series-m140i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 2 Series 214d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-2-series-214d-engine.json",
+    "route": "bmw-2-series-214d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 2 Series 216d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-2-series-216d-engine.json",
+    "route": "bmw-2-series-216d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 2 Series 216i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-2-series-216i-engine.json",
+    "route": "bmw-2-series-216i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 2 Series 218d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-2-series-218d-engine.json",
+    "route": "bmw-2-series-218d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 2 Series 218i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-2-series-218i-engine.json",
+    "route": "bmw-2-series-218i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 2 Series 220d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-2-series-220d-engine.json",
+    "route": "bmw-2-series-220d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 2 Series 220i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-2-series-220i-engine.json",
+    "route": "bmw-2-series-220i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 2 Series 223i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-2-series-223i-engine.json",
+    "route": "bmw-2-series-223i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 2 Series 225e.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-2-series-225e-engine.json",
+    "route": "bmw-2-series-225e-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 2 Series 230i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-2-series-230i-engine.json",
+    "route": "bmw-2-series-230i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 2 Series M235i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-2-series-m235i-engine.json",
+    "route": "bmw-2-series-m235i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 2 Series M240i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-2-series-m240i-engine.json",
+    "route": "bmw-2-series-m240i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 2002.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-2002-bmw-2002-engine.json",
+    "route": "bmw-2002-bmw-2002-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 3 Series 316.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-3-series-316-engine.json",
+    "route": "bmw-3-series-316-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 3 Series 316d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-3-series-316d-engine.json",
+    "route": "bmw-3-series-316d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 3 Series 316i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-3-series-316i-engine.json",
+    "route": "bmw-3-series-316i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 3 Series 318d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-3-series-318d-engine.json",
+    "route": "bmw-3-series-318d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 3 Series 318i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-3-series-318i-engine.json",
+    "route": "bmw-3-series-318i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 3 Series 318is.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-3-series-318is-engine.json",
+    "route": "bmw-3-series-318is-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 3 Series 318tds.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-3-series-318tds-engine.json",
+    "route": "bmw-3-series-318tds-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 3 Series 318ti.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-3-series-318ti-engine.json",
+    "route": "bmw-3-series-318ti-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 3 Series 320d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-3-series-320d-engine.json",
+    "route": "bmw-3-series-320d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 3 Series 320e.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-3-series-320e-engine.json",
+    "route": "bmw-3-series-320e-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 3 Series 320i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-3-series-320i-engine.json",
+    "route": "bmw-3-series-320i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 3 Series 320si.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-3-series-320si-engine.json",
+    "route": "bmw-3-series-320si-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 3 Series 323i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-3-series-323i-engine.json",
+    "route": "bmw-3-series-323i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 3 Series 324d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-3-series-324d-engine.json",
+    "route": "bmw-3-series-324d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 3 Series 325d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-3-series-325d-engine.json",
+    "route": "bmw-3-series-325d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 3 Series 325e.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-3-series-325e-engine.json",
+    "route": "bmw-3-series-325e-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 3 Series 325i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-3-series-325i-engine.json",
+    "route": "bmw-3-series-325i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 3 Series 328i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-3-series-328i-engine.json",
+    "route": "bmw-3-series-328i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 3 Series 330d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-3-series-330d-engine.json",
+    "route": "bmw-3-series-330d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 3 Series 330e.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-3-series-330e-engine.json",
+    "route": "bmw-3-series-330e-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 3 Series 330i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-3-series-330i-engine.json",
+    "route": "bmw-3-series-330i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 3 Series 335d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-3-series-335d-engine.json",
+    "route": "bmw-3-series-335d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 3 Series 335i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-3-series-335i-engine.json",
+    "route": "bmw-3-series-335i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 3 Series 340i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-3-series-340i-engine.json",
+    "route": "bmw-3-series-340i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 3 Series ActiveHybrid 3.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-3-series-activehybrid-3-engine.json",
+    "route": "bmw-3-series-activehybrid-3-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 3 Series M340d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-3-series-m340d-engine.json",
+    "route": "bmw-3-series-m340d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 3 Series M340i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-3-series-m340i-engine.json",
+    "route": "bmw-3-series-m340i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 4 Series 418d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-4-series-418d-engine.json",
+    "route": "bmw-4-series-418d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 4 Series 418i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-4-series-418i-engine.json",
+    "route": "bmw-4-series-418i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 4 Series 420d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-4-series-420d-engine.json",
+    "route": "bmw-4-series-420d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 4 Series 420i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-4-series-420i-engine.json",
+    "route": "bmw-4-series-420i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 4 Series 425d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-4-series-425d-engine.json",
+    "route": "bmw-4-series-425d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 4 Series 428i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-4-series-428i-engine.json",
+    "route": "bmw-4-series-428i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 4 Series 430d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-4-series-430d-engine.json",
+    "route": "bmw-4-series-430d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 4 Series 430i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-4-series-430i-engine.json",
+    "route": "bmw-4-series-430i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 4 Series 435d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-4-series-435d-engine.json",
+    "route": "bmw-4-series-435d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 4 Series 435i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-4-series-435i-engine.json",
+    "route": "bmw-4-series-435i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 4 Series 440i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-4-series-440i-engine.json",
+    "route": "bmw-4-series-440i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 4 Series M440d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-4-series-m440d-engine.json",
+    "route": "bmw-4-series-m440d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 4 Series M440i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-4-series-m440i-engine.json",
+    "route": "bmw-4-series-m440i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 5 Series 518d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-5-series-518d-engine.json",
+    "route": "bmw-5-series-518d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 5 Series 518i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-5-series-518i-engine.json",
+    "route": "bmw-5-series-518i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 5 Series 520d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-5-series-520d-engine.json",
+    "route": "bmw-5-series-520d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 5 Series 520e.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-5-series-520e-engine.json",
+    "route": "bmw-5-series-520e-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 5 Series 520i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-5-series-520i-engine.json",
+    "route": "bmw-5-series-520i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 5 Series 523i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-5-series-523i-engine.json",
+    "route": "bmw-5-series-523i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 5 Series 524td.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-5-series-524td-engine.json",
+    "route": "bmw-5-series-524td-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 5 Series 525d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-5-series-525d-engine.json",
+    "route": "bmw-5-series-525d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 5 Series 525e.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-5-series-525e-engine.json",
+    "route": "bmw-5-series-525e-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 5 Series 525i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-5-series-525i-engine.json",
+    "route": "bmw-5-series-525i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 5 Series 525tds.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-5-series-525tds-engine.json",
+    "route": "bmw-5-series-525tds-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 5 Series 528i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-5-series-528i-engine.json",
+    "route": "bmw-5-series-528i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 5 Series 530d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-5-series-530d-engine.json",
+    "route": "bmw-5-series-530d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 5 Series 530e.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-5-series-530e-engine.json",
+    "route": "bmw-5-series-530e-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 5 Series 530i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-5-series-530i-engine.json",
+    "route": "bmw-5-series-530i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 5 Series 535d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-5-series-535d-engine.json",
+    "route": "bmw-5-series-535d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 5 Series 535i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-5-series-535i-engine.json",
+    "route": "bmw-5-series-535i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 5 Series 540d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-5-series-540d-engine.json",
+    "route": "bmw-5-series-540d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 5 Series 540i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-5-series-540i-engine.json",
+    "route": "bmw-5-series-540i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 5 Series 545e.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-5-series-545e-engine.json",
+    "route": "bmw-5-series-545e-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 5 Series 545i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-5-series-545i-engine.json",
+    "route": "bmw-5-series-545i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 5 Series 550i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-5-series-550i-engine.json",
+    "route": "bmw-5-series-550i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 5 Series M550d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-5-series-m550d-engine.json",
+    "route": "bmw-5-series-m550d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 5 Series M550i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-5-series-m550i-engine.json",
+    "route": "bmw-5-series-m550i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 6 Series 620d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-6-series-620d-engine.json",
+    "route": "bmw-6-series-620d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 6 Series 630d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-6-series-630d-engine.json",
+    "route": "bmw-6-series-630d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 6 Series 630i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-6-series-630i-engine.json",
+    "route": "bmw-6-series-630i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 6 Series 635csi.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-6-series-635csi-engine.json",
+    "route": "bmw-6-series-635csi-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 6 Series 635d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-6-series-635d-engine.json",
+    "route": "bmw-6-series-635d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 6 Series 640d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-6-series-640d-engine.json",
+    "route": "bmw-6-series-640d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 6 Series 640i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-6-series-640i-engine.json",
+    "route": "bmw-6-series-640i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 6 Series 645Ci.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-6-series-645ci-engine.json",
+    "route": "bmw-6-series-645ci-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 6 Series 650i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-6-series-650i-engine.json",
+    "route": "bmw-6-series-650i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 7 Series 725tds.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-7-series-725tds-engine.json",
+    "route": "bmw-7-series-725tds-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 7 Series 728i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-7-series-728i-engine.json",
+    "route": "bmw-7-series-728i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 7 Series 730d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-7-series-730d-engine.json",
+    "route": "bmw-7-series-730d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 7 Series 730i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-7-series-730i-engine.json",
+    "route": "bmw-7-series-730i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 7 Series 735i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-7-series-735i-engine.json",
+    "route": "bmw-7-series-735i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 7 Series 740d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-7-series-740d-engine.json",
+    "route": "bmw-7-series-740d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 7 Series 740i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-7-series-740i-engine.json",
+    "route": "bmw-7-series-740i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 7 Series 745e.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-7-series-745e-engine.json",
+    "route": "bmw-7-series-745e-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 7 Series 745i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-7-series-745i-engine.json",
+    "route": "bmw-7-series-745i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 7 Series 750e.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-7-series-750e-engine.json",
+    "route": "bmw-7-series-750e-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 7 Series 750i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-7-series-750i-engine.json",
+    "route": "bmw-7-series-750i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 7 Series 760i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-7-series-760i-engine.json",
+    "route": "bmw-7-series-760i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 8 Series 840Ci.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-8-series-840ci-engine.json",
+    "route": "bmw-8-series-840ci-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 8 Series 840d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-8-series-840d-engine.json",
+    "route": "bmw-8-series-840d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 8 Series 840i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-8-series-840i-engine.json",
+    "route": "bmw-8-series-840i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 8 Series 850CSi.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-8-series-850csi-engine.json",
+    "route": "bmw-8-series-850csi-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 8 Series 850i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-8-series-850i-engine.json",
+    "route": "bmw-8-series-850i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW 8 Series M850i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-8-series-m850i-engine.json",
+    "route": "bmw-8-series-m850i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW M1 3.5.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-m1-35-engine.json",
+    "route": "bmw-m1-35-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW M135i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-m135i-m135i-engine.json",
+    "route": "bmw-m135i-m135i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X1 16d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x1-16d-engine.json",
+    "route": "bmw-x1-16d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X1 20i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x1-20i-engine.json",
+    "route": "bmw-x1-20i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X1 23d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x1-23d-engine.json",
+    "route": "bmw-x1-23d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X1 25e.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x1-25e-engine.json",
+    "route": "bmw-x1-25e-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X1 sDrive18d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x1-sdrive18d-engine.json",
+    "route": "bmw-x1-sdrive18d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X1 sDrive18i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x1-sdrive18i-engine.json",
+    "route": "bmw-x1-sdrive18i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X1 sDrive20d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x1-sdrive20d-engine.json",
+    "route": "bmw-x1-sdrive20d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X1 xDrive23i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x1-xdrive23i-engine.json",
+    "route": "bmw-x1-xdrive23i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X1 xDrive25d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x1-xdrive25d-engine.json",
+    "route": "bmw-x1-xdrive25d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X1 xDrive28i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x1-xdrive28i-engine.json",
+    "route": "bmw-x1-xdrive28i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X2 18i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x2-18i-engine.json",
+    "route": "bmw-x2-18i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X2 20d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x2-20d-engine.json",
+    "route": "bmw-x2-20d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X2 M35i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x2-m35i-engine.json",
+    "route": "bmw-x2-m35i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X2 sDrive18d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x2-sdrive18d-engine.json",
+    "route": "bmw-x2-sdrive18d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X2 sDrive20i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x2-sdrive20i-engine.json",
+    "route": "bmw-x2-sdrive20i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X2 xDrive25e.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x2-xdrive25e-engine.json",
+    "route": "bmw-x2-xdrive25e-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X3 18d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x3-18d-engine.json",
+    "route": "bmw-x3-18d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X3 2.0d E83.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x3-20d-e83-engine.json",
+    "route": "bmw-x3-20d-e83-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X3 20d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x3-20d-engine.json",
+    "route": "bmw-x3-20d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X3 30d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x3-30d-engine.json",
+    "route": "bmw-x3-30d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X3 35i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x3-35i-engine.json",
+    "route": "bmw-x3-35i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X3 E83 3.0d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x3-e83-30d-engine.json",
+    "route": "bmw-x3-e83-30d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X3 E83.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x3-e83-petrol-engine.json",
+    "route": "bmw-x3-e83-petrol-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X3 G01 30i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x3-g01-30i-engine.json",
+    "route": "bmw-x3-g01-30i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X3 M40d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x3-m40d-engine.json",
+    "route": "bmw-x3-m40d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X3 M40i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x3-m40i-engine.json",
+    "route": "bmw-x3-m40i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X3 sDrive20i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x3-sdrive20i-engine.json",
+    "route": "bmw-x3-sdrive20i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X3 xDrive28i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x3-xdrive28i-engine.json",
+    "route": "bmw-x3-xdrive28i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X3 xDrive30e.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x3-xdrive30e-engine.json",
+    "route": "bmw-x3-xdrive30e-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X3 xDrive35d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x3-xdrive35d-engine.json",
+    "route": "bmw-x3-xdrive35d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X3 xDrive50e.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x3-xdrive50e-engine.json",
+    "route": "bmw-x3-xdrive50e-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X4 M40d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x4-m40d-engine.json",
+    "route": "bmw-x4-m40d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X4 M40i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x4-m40i-engine.json",
+    "route": "bmw-x4-m40i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X4 xDrive20i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x4-xdrive20i-engine.json",
+    "route": "bmw-x4-xdrive20i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X4 xDrive35d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x4-xdrive35d-engine.json",
+    "route": "bmw-x4-xdrive35d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X5 25d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x5-25d-engine.json",
+    "route": "bmw-x5-25d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X5 3.0i E53.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x5-3-0i-e53-engine.json",
+    "route": "bmw-x5-3-0i-e53-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X5 30d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x5-30d-engine.json",
+    "route": "bmw-x5-30d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X5 30si.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x5-30si-engine.json",
+    "route": "bmw-x5-30si-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X5 35d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x5-35d-engine.json",
+    "route": "bmw-x5-35d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X5 35i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x5-35i-engine.json",
+    "route": "bmw-x5-35i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X5 4.4i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x5-44i-engine.json",
+    "route": "bmw-x5-44i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X5 4.8is.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x5-48is-engine.json",
+    "route": "bmw-x5-48is-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X5 40d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x5-40d-engine.json",
+    "route": "bmw-x5-40d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X5 40e.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x5-40e-engine.json",
+    "route": "bmw-x5-40e-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X5 40i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x5-40i-engine.json",
+    "route": "bmw-x5-40i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X5 45e.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x5-45e-engine.json",
+    "route": "bmw-x5-45e-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X5 50e.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x5-50e-engine.json",
+    "route": "bmw-x5-50e-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X5 50i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x5-50i-engine.json",
+    "route": "bmw-x5-50i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X5 E53 30d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x5-e53-30d-engine.json",
+    "route": "bmw-x5-e53-30d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X5 M.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x5-x5-m-engine.json",
+    "route": "bmw-x5-x5-m-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X5 M50d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x5-m50d-engine.json",
+    "route": "bmw-x5-m50d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X5 M60i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x5-m60i-engine.json",
+    "route": "bmw-x5-m60i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X6 30d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x6-30d-engine.json",
+    "route": "bmw-x6-30d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X6 40d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x6-40d-engine.json",
+    "route": "bmw-x6-40d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X6 40i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x6-40i-engine.json",
+    "route": "bmw-x6-40i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X6 50i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x6-50i-engine.json",
+    "route": "bmw-x6-50i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X6 M.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x6-x6-m-engine.json",
+    "route": "bmw-x6-x6-m-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X6 M50d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x6-m50d-engine.json",
+    "route": "bmw-x6-m50d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X6 M60i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x6-m60i-engine.json",
+    "route": "bmw-x6-m60i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X7 30d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x7-30d-engine.json",
+    "route": "bmw-x7-30d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X7 40d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x7-40d-engine.json",
+    "route": "bmw-x7-40d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X7 40i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x7-40i-engine.json",
+    "route": "bmw-x7-40i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X7 M50d.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x7-m50d-engine.json",
+    "route": "bmw-x7-m50d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW X7 M60i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-x7-m60i-engine.json",
+    "route": "bmw-x7-m60i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW Z Series Z8.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-z-series-z8-engine.json",
+    "route": "bmw-z-series-z8-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW Z1 2.5.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-z1-25-engine.json",
+    "route": "bmw-z1-25-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW Z1 25i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-z1-25i-engine.json",
+    "route": "bmw-z1-25i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW Z3 1.9i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-z3-19-engine.json",
+    "route": "bmw-z3-19-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW Z3 2.2i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-z3-22i-engine.json",
+    "route": "bmw-z3-22i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW Z3 30i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-z3-30i-engine.json",
+    "route": "bmw-z3-30i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW Z3 M.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-z3-m-engine.json",
+    "route": "bmw-z3-m-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW Z4 2.5i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-z4-25i-engine.json",
+    "route": "bmw-z4-25i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW Z4 20i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-z4-20i-engine.json",
+    "route": "bmw-z4-20i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW Z4 22i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-z4-22i-engine.json",
+    "route": "bmw-z4-22i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW Z4 30i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-z4-30i-engine.json",
+    "route": "bmw-z4-30i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW Z4 35i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-z4-35i-engine.json",
+    "route": "bmw-z4-35i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW Z4 M.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-z4-z4-m-engine.json",
+    "route": "bmw-z4-z4-m-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW Z4 M40i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-z4-m40i-engine.json",
+    "route": "bmw-z4-m40i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW Z4 sDrive23i.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-z4-sdrive23i-engine.json",
+    "route": "bmw-z4-sdrive23i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\BMW\\BMW Z8 4.9.txt",
+    "output": "engine-market-main\\data\\variants\\bmw-z8-49-engine.json",
+    "route": "bmw-z8-49-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Ford\\Ford Fiesta 1.0 EcoBoost Mild Hybrid.txt",
+    "output": "engine-market-main\\data\\variants\\ford-fiesta-10-ecoboost-mild-hybrid-engine.json",
+    "route": "ford-fiesta-10-ecoboost-mild-hybrid-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Ford\\Ford Fiesta 1.0 EcoBoost.txt",
+    "output": "engine-market-main\\data\\variants\\ford-fiesta-10-ecoboost-engine.json",
+    "route": "ford-fiesta-10-ecoboost-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Ford\\Ford Fiesta 1.1 Ti-VCT.txt",
+    "output": "engine-market-main\\data\\variants\\ford-fiesta-11-ti-vct-engine.json",
+    "route": "ford-fiesta-11-ti-vct-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Ford\\Ford Fiesta 1.25 & 1.4 Petrol.txt",
+    "output": "engine-market-main\\data\\variants\\ford-fiesta-125-14-petrol-engine.json",
+    "route": "ford-fiesta-125-14-petrol-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Ford\\Ford Fiesta 1.5 EcoBoost ST.txt",
+    "output": "engine-market-main\\data\\variants\\ford-fiesta-15-ecoboost-st-engine.json",
+    "route": "ford-fiesta-15-ecoboost-st-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Ford\\Ford Fiesta 1.5 TDCi.txt",
+    "output": "engine-market-main\\data\\variants\\ford-fiesta-15-tdci-engine.json",
+    "route": "ford-fiesta-15-tdci-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Ford\\Ford Fiesta 1.6 TDCi.txt",
+    "output": "engine-market-main\\data\\variants\\ford-fiesta-16-tdci-engine.json",
+    "route": "ford-fiesta-16-tdci-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Ford\\Ford Fiesta ST 1.5 EcoBoost.txt",
+    "output": "engine-market-main\\data\\variants\\ford-fiesta-st-15-ecoboost-engine.json",
+    "route": "ford-fiesta-st-15-ecoboost-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Ford\\Ford Fiesta ST 1.6 EcoBoost Mk7.txt",
+    "output": "engine-market-main\\data\\variants\\ford-fiesta-16-ecoboost-st-mk7-engine.json",
+    "route": "ford-fiesta-16-ecoboost-st-mk7-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Ford\\Ford Fiesta ST 1.6 EcoBoost.txt",
+    "output": "engine-market-main\\data\\variants\\ford-fiesta-st-16-ecoboost-engine.json",
+    "route": "ford-fiesta-st-16-ecoboost-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Ford\\Ford Focus 1.0 EcoBoost.txt",
+    "output": "engine-market-main\\data\\variants\\ford-focus-10-ecoboost-engine.json",
+    "route": "ford-focus-10-ecoboost-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Ford\\Ford Focus 1.4 Petrol, early Mk2.txt",
+    "output": "engine-market-main\\data\\variants\\ford-focus-14-petrol-early-mk2-engine.json",
+    "route": "ford-focus-14-petrol-early-mk2-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Ford\\Ford Focus 1.5 EcoBoost.txt",
+    "output": "engine-market-main\\data\\variants\\ford-focus-15-ecoboost-engine.json",
+    "route": "ford-focus-15-ecoboost-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Ford\\Ford Focus 1.5 TDCi.txt",
+    "output": "engine-market-main\\data\\variants\\ford-focus-15-tdci-engine.json",
+    "route": "ford-focus-15-tdci-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Ford\\Ford Focus 1.6 TDCi.txt",
+    "output": "engine-market-main\\data\\variants\\ford-focus-16-tdci-engine.json",
+    "route": "ford-focus-16-tdci-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Ford\\Ford Focus 1.6 Ti-VCT Petrol.txt",
+    "output": "engine-market-main\\data\\variants\\ford-focus-16-ti-vct-petrol-engine.json",
+    "route": "ford-focus-16-ti-vct-petrol-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Ford\\Ford Focus 1.8 TDCi.txt",
+    "output": "engine-market-main\\data\\variants\\ford-focus-18-tdci-engine.json",
+    "route": "ford-focus-18-tdci-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Ford\\Ford Focus 2.0 TDCi.txt",
+    "output": "engine-market-main\\data\\variants\\ford-focus-20-tdci-engine.json",
+    "route": "ford-focus-20-tdci-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Ford\\Ford Focus RS 2.3 EcoBoost.txt",
+    "output": "engine-market-main\\data\\variants\\ford-focus-rs-23-ecoboost-engine.json",
+    "route": "ford-focus-rs-23-ecoboost-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Ford\\Ford Focus ST 2.0 _ 2.3 EcoBoost.txt",
+    "output": "engine-market-main\\data\\variants\\ford-focus-st-20-23-ecoboost-engine.json",
+    "route": "ford-focus-st-20-23-ecoboost-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Ford\\Ford Galaxy 1.5-2.0 EcoBoost.txt",
+    "output": "engine-market-main\\data\\variants\\ford-galaxy-1-5-2-0-ecoboost-engine.json",
+    "route": "ford-galaxy-1-5-2-0-ecoboost-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Ford\\Ford Galaxy 1.6 TDCi.txt",
+    "output": "engine-market-main\\data\\variants\\ford-galaxy-16-tdci-engine.json",
+    "route": "ford-galaxy-16-tdci-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Ford\\Ford Galaxy 2.0 TDCi EcoBlue.txt",
+    "output": "engine-market-main\\data\\variants\\ford-galaxy-20-tdci-ecoblue-engine.json",
+    "route": "ford-galaxy-20-tdci-ecoblue-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Ford\\Ford Kuga 1.5 EcoBoost.txt",
+    "output": "engine-market-main\\data\\variants\\ford-kuga-15-ecoboost-engine.json",
+    "route": "ford-kuga-15-ecoboost-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Ford\\Ford Kuga 1.6 TDCi.txt",
+    "output": "engine-market-main\\data\\variants\\ford-kuga-16-tdci-engine.json",
+    "route": "ford-kuga-16-tdci-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Ford\\Ford Kuga 2.0 EcoBlue.txt",
+    "output": "engine-market-main\\data\\variants\\ford-kuga-20-ecoblue-engine.json",
+    "route": "ford-kuga-20-ecoblue-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Ford\\Ford Kuga 2.0 TDCi.txt",
+    "output": "engine-market-main\\data\\variants\\ford-kuga-20-tdci-engine.json",
+    "route": "ford-kuga-20-tdci-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Ford\\Ford Kuga 2.5 PHEV.txt",
+    "output": "engine-market-main\\data\\variants\\ford-kuga-25-phev-engine.json",
+    "route": "ford-kuga-25-phev-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Ford\\Ford Kuga ST-Line 1.5 EcoBoost.txt",
+    "output": "engine-market-main\\data\\variants\\ford-kuga-st-line-15-ecoboost-engine.json",
+    "route": "ford-kuga-st-line-15-ecoboost-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Ford\\Ford Mondeo 1.5 EcoBoost.txt",
+    "output": "engine-market-main\\data\\variants\\ford-mondeo-15-ecoboost-engine.json",
+    "route": "ford-mondeo-15-ecoboost-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Ford\\Ford Mondeo 1.6 & 2.0 TDCi.txt",
+    "output": "engine-market-main\\data\\variants\\ford-mondeo-16-20-tdci-engine.json",
+    "route": "ford-mondeo-16-20-tdci-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Ford\\Ford Mondeo 2.0 EcoBoost.txt",
+    "output": "engine-market-main\\data\\variants\\ford-mondeo-20-ecoboost-engine.json",
+    "route": "ford-mondeo-20-ecoboost-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Ford\\Ford Mondeo 2.0 Hybrid.txt",
+    "output": "engine-market-main\\data\\variants\\ford-mondeo-20-hybrid-engine.json",
+    "route": "ford-mondeo-20-hybrid-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Ford\\Ford Mondeo 2.2 TDCi.txt",
+    "output": "engine-market-main\\data\\variants\\ford-mondeo-22-tdci-engine.json",
+    "route": "ford-mondeo-22-tdci-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Ford\\Ford Mondeo Vignale.txt",
+    "output": "engine-market-main\\data\\variants\\ford-mondeo-vignale-trims-various-engines-engine.json",
+    "route": "ford-mondeo-vignale-trims-various-engines-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Ford\\Ford Puma 1.0 EcoBoost Mild Hybrid.txt",
+    "output": "engine-market-main\\data\\variants\\ford-puma-10-ecoboost-mild-hybrid-engine.json",
+    "route": "ford-puma-10-ecoboost-mild-hybrid-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Ford\\Ford Puma 1.5 EcoBlue.txt",
+    "output": "engine-market-main\\data\\variants\\ford-puma-15-ecoblue-engine.json",
+    "route": "ford-puma-15-ecoblue-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Ford\\Ford Puma ST 1.5 EcoBoost.txt",
+    "output": "engine-market-main\\data\\variants\\ford-puma-st-15-ecoboost-engine.json",
+    "route": "ford-puma-st-15-ecoboost-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Ford\\Ford S-Max 1.6 & 2.0 TDCi.txt",
+    "output": "engine-market-main\\data\\variants\\ford-s-max-16-20-tdci-engine.json",
+    "route": "ford-s-max-16-20-tdci-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Ford\\Ford S-Max 2.0 EcoBlue.txt",
+    "output": "engine-market-main\\data\\variants\\ford-s-max-20-ecoblue-engine.json",
+    "route": "ford-s-max-20-ecoblue-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Ford\\Ford S-Max 2.0 EcoBoost.txt",
+    "output": "engine-market-main\\data\\variants\\ford-s-max-20-ecoboost-engine.json",
+    "route": "ford-s-max-20-ecoboost-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Ford\\Ford S-Max 2.2 TDCi.txt",
+    "output": "engine-market-main\\data\\variants\\ford-s-max-22-tdci-engine.json",
+    "route": "ford-s-max-22-tdci-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Honda\\Honda Accord 2.0 & 2.4 i-VTEC.txt",
+    "output": "engine-market-main\\data\\variants\\honda-accord-20-24-i-vtec-engine.json",
+    "route": "honda-accord-20-24-i-vtec-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Honda\\Honda Accord 2.2 i-DTEC.txt",
+    "output": "engine-market-main\\data\\variants\\honda-accord-22-i-dtec-engine.json",
+    "route": "honda-accord-22-i-dtec-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Honda\\Honda Accord Hybrid i-MMD.txt",
+    "output": "engine-market-main\\data\\variants\\honda-accord-hybrid-i-mmd-engine.json",
+    "route": "honda-accord-hybrid-i-mmd-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Honda\\Honda Civic 1.4 _ 1.6 i-VTEC EP.txt",
+    "output": "engine-market-main\\data\\variants\\honda-civic-14-16-i-vtec-ep-engine.json",
+    "route": "honda-civic-14-16-i-vtec-ep-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Honda\\Honda Civic 1.5 VTEC Turbo.txt",
+    "output": "engine-market-main\\data\\variants\\honda-civic-15-vtec-turbo-engine.json",
+    "route": "honda-civic-15-vtec-turbo-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Honda\\Honda Civic 1.6 i-DTEC.txt",
+    "output": "engine-market-main\\data\\variants\\honda-civic-16-i-dtec-engine.json",
+    "route": "honda-civic-16-i-dtec-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Honda\\Honda Civic 1.8 i-VTEC.txt",
+    "output": "engine-market-main\\data\\variants\\honda-civic-18-i-vtec-engine.json",
+    "route": "honda-civic-18-i-vtec-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Honda\\Honda Civic 2.0 i-VTEC Type R.txt",
+    "output": "engine-market-main\\data\\variants\\honda-civic-20-i-vtec-type-r-engine.json",
+    "route": "honda-civic-20-i-vtec-type-r-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Honda\\Honda Civic 2.2 i-DTEC.txt",
+    "output": "engine-market-main\\data\\variants\\honda-civic-22-i-dtec-engine.json",
+    "route": "honda-civic-22-i-dtec-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Honda\\Honda Civic e_HEV Hybrid.txt",
+    "output": "engine-market-main\\data\\variants\\honda-civic-ehev-hybrid-engine.json",
+    "route": "honda-civic-ehev-hybrid-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Honda\\Honda CR-V 1.5 VTEC Turbo.txt",
+    "output": "engine-market-main\\data\\variants\\honda-cr-v-15-vtec-turbo-engine.json",
+    "route": "honda-cr-v-15-vtec-turbo-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Honda\\Honda CR-V 1.6 i-DTEC.txt",
+    "output": "engine-market-main\\data\\variants\\honda-cr-v-16-i-dtec-engine.json",
+    "route": "honda-cr-v-16-i-dtec-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Honda\\Honda CR-V 2.0 i-VTEC.txt",
+    "output": "engine-market-main\\data\\variants\\honda-cr-v-20-i-vtec-engine.json",
+    "route": "honda-cr-v-20-i-vtec-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Honda\\Honda CR-V 2.2 i-DTEC.txt",
+    "output": "engine-market-main\\data\\variants\\honda-cr-v-22-i-dtec-engine.json",
+    "route": "honda-cr-v-22-i-dtec-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Honda\\Honda CR-V e_HEV Hybrid.txt",
+    "output": "engine-market-main\\data\\variants\\honda-cr-v-e-hev-hybrid-engine.json",
+    "route": "honda-cr-v-e-hev-hybrid-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Honda\\Honda HR-V 1.5 VTEC Turbo.txt",
+    "output": "engine-market-main\\data\\variants\\honda-hr-v-15-vtec-turbo-engine.json",
+    "route": "honda-hr-v-15-vtec-turbo-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Honda\\Honda HR-V 1.6 i-DTEC.txt",
+    "output": "engine-market-main\\data\\variants\\honda-hr-v-16-i-dtec-engine.json",
+    "route": "honda-hr-v-16-i-dtec-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Honda\\Honda HR-V 1.8 i-VTEC (Early).txt",
+    "output": "engine-market-main\\data\\variants\\honda-hr-v-18-i-vtec-early-engine.json",
+    "route": "honda-hr-v-18-i-vtec-early-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Honda\\Honda HR-V e_HEV Hybrid.txt",
+    "output": "engine-market-main\\data\\variants\\honda-hr-v-e-hev-hybrid-engine.json",
+    "route": "honda-hr-v-e-hev-hybrid-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Honda\\Honda Jazz 1.2 & 1.4 i-VTEC.txt",
+    "output": "engine-market-main\\data\\variants\\honda-jazz-12-14-i-vtec-engine.json",
+    "route": "honda-jazz-12-14-i-vtec-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Honda\\Honda Jazz 1.3 Hybrid IMA .txt",
+    "output": "engine-market-main\\data\\variants\\honda-jazz-13-hybrid-ima-engine.json",
+    "route": "honda-jazz-13-hybrid-ima-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Honda\\Honda Jazz e_HEV Hybrid Crosstar.txt",
+    "output": "engine-market-main\\data\\variants\\honda-jazz-e-hev-hybrid-crosstar-engine.json",
+    "route": "honda-jazz-e-hev-hybrid-crosstar-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar 2.0 V6.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-x-type-20-v6-engine.json",
+    "route": "jaguar-x-type-20-v6-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\JAGUAR 3.2 V8.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-xj-32-v8-engine.json",
+    "route": "jaguar-xj-32-v8-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar 4.0 V8.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-xj-40-v8-engine.json",
+    "route": "jaguar-xj-40-v8-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar E-Pace D150.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-e-pace-d150-engine.json",
+    "route": "jaguar-e-pace-d150-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar E-Pace D165.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-e-pace-d165-engine.json",
+    "route": "jaguar-e-pace-d165-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar E-Pace D200.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-e-pace-d200-engine.json",
+    "route": "jaguar-e-pace-d200-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar E-Pace D240.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-e-pace-d240-engine.json",
+    "route": "jaguar-e-pace-d240-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar E-Pace P200.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-e-pace-p200-engine.json",
+    "route": "jaguar-e-pace-p200-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar E-Pace P250.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-e-pace-p250-engine.json",
+    "route": "jaguar-e-pace-p250-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar E-Pace P300.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-e-pace-p300-engine.json",
+    "route": "jaguar-e-pace-p300-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar E-Pace P300e.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-e-pace-p300e-engine.json",
+    "route": "jaguar-e-pace-p300e-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar F-Pace 20D.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-f-pace-20d-engine.json",
+    "route": "jaguar-f-pace-20d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar F-Pace 3.0D.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-f-pace-30d-engine.json",
+    "route": "jaguar-f-pace-30d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar F-Pace D300.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-f-pace-d300-engine.json",
+    "route": "jaguar-f-pace-d300-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar F-Pace P250.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-f-pace-p250-engine.json",
+    "route": "jaguar-f-pace-p250-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar F-Pace P300.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-f-pace-p300-engine.json",
+    "route": "jaguar-f-pace-p300-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar F-Pace P400.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-f-pace-p400-engine.json",
+    "route": "jaguar-f-pace-p400-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar F-Pace P400e.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-f-pace-p400e-engine.json",
+    "route": "jaguar-f-pace-p400e-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar F-Pace SVR.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-f-pace-svr-engine.json",
+    "route": "jaguar-f-pace-svr-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar F-Type 3.0 V6.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-f-type-30-v6-engine.json",
+    "route": "jaguar-f-type-30-v6-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar F-Type P300.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-f-type-p300-engine.json",
+    "route": "jaguar-f-type-p300-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar F-Type P450.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-f-type-p450-engine.json",
+    "route": "jaguar-f-type-p450-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar F-Type R.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-f-type-r-engine.json",
+    "route": "jaguar-f-type-r-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar F-Type SVR.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-f-type-svr-engine.json",
+    "route": "jaguar-f-type-svr-engine",
+    "warnings": [
+      "Legacy engine-page schema detected: source uses live-market / sub-model / engine-types sections instead of the variant-page section 3-7 structure."
+    ]
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar F-Type V6 S.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-f-type-v6-s-engine.json",
+    "route": "jaguar-f-type-v6-s-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar I-Pace EV400.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-i-pace-ev400-engine.json",
+    "route": "jaguar-i-pace-ev400-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar S-Type 2.5 V6.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-s-type-25-v6-engine.json",
+    "route": "jaguar-s-type-25-v6-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar S-Type 2.7D.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-s-type-27d-engine.json",
+    "route": "jaguar-s-type-27d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar S-Type 3.0 V6.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-s-type-30-v6-engine.json",
+    "route": "jaguar-s-type-30-v6-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar S-Type 4.0 V8.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-s-type-40-v8-engine.json",
+    "route": "jaguar-s-type-40-v8-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar S-Type 4.2 V8.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-s-type-42-v8-engine.json",
+    "route": "jaguar-s-type-42-v8-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar S-Type R.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-s-type-r-engine.json",
+    "route": "jaguar-s-type-r-engine",
+    "warnings": [
+      "Legacy engine-page schema detected: source uses live-market / sub-model / engine-types sections instead of the variant-page section 3-7 structure."
+    ]
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar X-Type 2.0D.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-x-type-20d-engine.json",
+    "route": "jaguar-x-type-20d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar X-Type 2.2D.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-x-type-22d-engine.json",
+    "route": "jaguar-x-type-22d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar X-Type 2.5 V6.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-x-type-25-v6-engine.json",
+    "route": "jaguar-x-type-25-v6-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar X-Type 3.0 V6.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-x-type-3-0-v6-engine.json",
+    "route": "jaguar-x-type-3-0-v6-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar XE 25t.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-xe-25t-engine.json",
+    "route": "jaguar-xe-25t-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar XE D200.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-xe-d200-engine.json",
+    "route": "jaguar-xe-d200-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar XE P300.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-xe-p300-engine.json",
+    "route": "jaguar-xe-p300-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar XE S.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-xe-s-engine.json",
+    "route": "jaguar-xe-s-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar XE SV Project 8.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-xe-project-8-engine.json",
+    "route": "jaguar-xe-project-8-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar XF 2.0 Petrol.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-xf-2-0-petrol-engine.json",
+    "route": "jaguar-xf-2-0-petrol-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar XF 2.2D.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-xf-22d-engine.json",
+    "route": "jaguar-xf-22d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar XF 2.7D.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-xf-27d-engine.json",
+    "route": "jaguar-xf-27d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar XF 3.0 SC.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-xf-30-sc-engine.json",
+    "route": "jaguar-xf-30-sc-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar XF 3.0D.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-xf-3-0-diesel-engine.json",
+    "route": "jaguar-xf-3-0-diesel-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar XF 4.2 V8.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-xf-42-v8-engine.json",
+    "route": "jaguar-xf-42-v8-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar XF D200.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-xf-d200-engine.json",
+    "route": "jaguar-xf-d200-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar XF XFR.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-xf-xfr-engine.json",
+    "route": "jaguar-xf-xfr-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar XJ 2.7D.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-xj-27d-engine.json",
+    "route": "jaguar-xj-27d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar XJ 3.0 SC.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-xj-30-sc-engine.json",
+    "route": "jaguar-xj-30-sc-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar XJ 3.0 V6.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-xj-30-v6-engine.json",
+    "route": "jaguar-xj-30-v6-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar XJ 3.0D.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-xj-30d-engine.json",
+    "route": "jaguar-xj-30d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar XJ 3.2.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-xj-32-engine.json",
+    "route": "jaguar-xj-32-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar XJ 3.5 V8.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-xj-35-v8-engine.json",
+    "route": "jaguar-xj-35-v8-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\JAGUAR XJ 4.0.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-xj-40-engine.json",
+    "route": "jaguar-xj-40-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar XJ 4.2 V8.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-xj-4-2-v8-engine.json",
+    "route": "jaguar-xj-4-2-v8-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar XJ 5.0 V8.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-xj-50-v8-engine.json",
+    "route": "jaguar-xj-50-v8-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar XJ 5.3 V12.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-xj-53-v12-engine.json",
+    "route": "jaguar-xj-53-v12-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar XJ 6.0 V12.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-xj-60-v12-engine.json",
+    "route": "jaguar-xj-60-v12-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar XJ X358.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-xj-x358-engine.json",
+    "route": "jaguar-xj-x358-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar XJ XK6.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-xj-xk6-small.json",
+    "route": "jaguar-xj-xk6-small",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar XJ.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-xj-jaguar-xj-engine.json",
+    "route": "jaguar-xj-jaguar-xj-engine",
+    "warnings": [
+      "Legacy engine-page schema detected: source uses live-market / sub-model / engine-types sections instead of the variant-page section 3-7 structure."
+    ]
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar XK 4.2.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-xk-4-2-engine.json",
+    "route": "jaguar-xk-4-2-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar XK 5.0.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-xk-50-engine.json",
+    "route": "jaguar-xk-50-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\JAGUAR XKR-S.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-xk-xkr-s-engine.json",
+    "route": "jaguar-xk-xkr-s-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Jaguar\\Jaguar XKR.txt",
+    "output": "engine-market-main\\data\\variants\\jaguar-xkr-xkr-engine.json",
+    "route": "jaguar-xkr-xkr-engine",
+    "warnings": [
+      "Legacy engine-page schema detected: source uses live-market / sub-model / engine-types sections instead of the variant-page section 3-7 structure."
+    ]
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz Citan 108_109_110_111_112 CDI.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-citan-108-112-cdi-engine.json",
+    "route": "mercedes-benz-citan-108-112-cdi-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz Citan Petrol.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-citan-petrol-engine.json",
+    "route": "mercedes-benz-citan-petrol-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz CLA 180_200 Petrol.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-cla-cla-180-200-petrol-engine.json",
+    "route": "mercedes-benz-cla-cla-180-200-petrol-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz CLA 250.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-cla-cla-250-engine.json",
+    "route": "mercedes-benz-cla-cla-250-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz CLA 35 AMG.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-cla-cla-35-amg-engine.json",
+    "route": "mercedes-benz-cla-cla-35-amg-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz CLA 45 AMG.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-cla-cla-45-amg-engine.json",
+    "route": "mercedes-benz-cla-cla-45-amg-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz CLK 200_220 CDI.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-clk-clk-200-220-cdi-engine.json",
+    "route": "mercedes-benz-clk-clk-200-220-cdi-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz CLK 230_320 Petrol.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-clk-clk-230-320-petrol-engine.json",
+    "route": "mercedes-benz-clk-clk-230-320-petrol-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz CLK 270_320 CDI.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-clk-clk-270-320-cdi-engine.json",
+    "route": "mercedes-benz-clk-clk-270-320-cdi-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz CLK 350.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-clk-clk-350-engine.json",
+    "route": "mercedes-benz-clk-clk-350-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz CLK 55_63 AMG.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-clk-clk-55-63-amg-engine.json",
+    "route": "mercedes-benz-clk-clk-55-63-amg-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz CLS 220_250 CDI.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-cls-cls-220-250-cdi-engine.json",
+    "route": "mercedes-benz-cls-cls-220-250-cdi-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz CLS 320_350 CDI.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-cls-cls-320-350-cdi-engine.json",
+    "route": "mercedes-benz-cls-cls-320-350-cdi-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz CLS 350_400 d.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-cls-cls-350-400d-engine.json",
+    "route": "mercedes-benz-cls-cls-350-400d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz CLS 350_500 Petrol.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-cls-cls-350-500-petrol-engine.json",
+    "route": "mercedes-benz-cls-cls-350-500-petrol-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz CLS 450_500 Modern.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-cls-cls-450-500-modern-engine.json",
+    "route": "mercedes-benz-cls-cls-450-500-modern-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz CLS 63 AMG.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-cls-cls-63-amg-engine.json",
+    "route": "mercedes-benz-cls-cls-63-amg-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz E Class 200 _ 230 Petrol.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-e-class-200-230-petrol-engine.json",
+    "route": "mercedes-benz-e-class-200-230-petrol-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz E Class 200 _ 250 Petrol Turbo.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-e-class-200-250-petrol-turbo-engine.json",
+    "route": "mercedes-benz-e-class-200-250-petrol-turbo-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz E Class 200 CDI _ 220 CDI.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-e-class-200-220-diesel-older-engine.json",
+    "route": "mercedes-benz-e-class-200-220-diesel-older-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz E Class 200 CDI.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-e-class-200-cdi-engine.json",
+    "route": "mercedes-benz-e-class-200-cdi-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz E Class 220 CDI.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-e-class-220-cdi-engine.json",
+    "route": "mercedes-benz-e-class-220-cdi-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz E Class 250 CDI.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-e-class-250-cdi-engine.json",
+    "route": "mercedes-benz-e-class-250-cdi-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz E Class 270 CDI _ 300 CDI.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-e-class-270-300-cdi-engine.json",
+    "route": "mercedes-benz-e-class-270-300-cdi-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz E Class 280 _ 350 Petrol.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-e-class-280-350-petrol-engine.json",
+    "route": "mercedes-benz-e-class-280-350-petrol-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz E Class 300 _ 450 Modern Petrol.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-e-class-300-450-modern-petrol-engine.json",
+    "route": "mercedes-benz-e-class-300-450-modern-petrol-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz E Class 300d.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-e-class-300d-engine.json",
+    "route": "mercedes-benz-e-class-300d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz E Class 320 CDI _ 350 CDI.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-e-class-320-350-cdi-engine.json",
+    "route": "mercedes-benz-e-class-320-350-cdi-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz E Class 350 d _ 400 d.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-e-class-350-400d-engine.json",
+    "route": "mercedes-benz-e-class-350-400d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz E Class 500 _ 550.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-e-class-500-550-engine.json",
+    "route": "mercedes-benz-e-class-500-550-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz E Class E53 AMG.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-e-class-e53-amg-engine.json",
+    "route": "mercedes-benz-e-class-e53-amg-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz E Class E63 AMG.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-e-class-e63-amg-engine.json",
+    "route": "mercedes-benz-e-class-e63-amg-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz G Class 250_300 Diesel.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-g-class-250-300-diesel-engine.json",
+    "route": "mercedes-benz-g-class-250-300-diesel-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz G Class G 350 _ G 500 (Older Petrol).txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-g-class-g350-500-petrol-older-engine.json",
+    "route": "mercedes-benz-g-class-g350-500-petrol-older-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz G Class G 350 d.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-g-class-g350d-engine.json",
+    "route": "mercedes-benz-g-class-g350d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz G Class G 500 _ G 550.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-g-class-g55-amg-engine.json",
+    "route": "mercedes-benz-g-class-g55-amg-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz G Class G 63 AMG.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-g-class-g63-amg-engine.json",
+    "route": "mercedes-benz-g-class-g63-amg-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz G Class G 65 AMG.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-g-class-g65-amg-engine.json",
+    "route": "mercedes-benz-g-class-g65-amg-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz GLA Class AMG GLA 35.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-gla-class-amg-gla-35-engine.json",
+    "route": "mercedes-benz-gla-class-amg-gla-35-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz GLA Class AMG GLA 45.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-gla-class-amg-gla-45-engine.json",
+    "route": "mercedes-benz-gla-class-amg-gla-45-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz GLA Class GLA 200 _ GLA 250 (Petrol).txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-gla-class-200-250-petrol-engine.json",
+    "route": "mercedes-benz-gla-class-200-250-petrol-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz GLA Class GLA 200 d _ GLA 220 d.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-gla-class-200-220d-engine.json",
+    "route": "mercedes-benz-gla-class-200-220d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz GLC Class 250_300 Petrol.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-glc-class-250-300-petrol-engine.json",
+    "route": "mercedes-benz-glc-class-250-300-petrol-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz GLC Class 350d_400d.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-glc-class-350-400d-engine.json",
+    "route": "mercedes-benz-glc-class-350-400d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz GLC Class GLC 220d _ GLC 250d.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-glc-class-220-250d-engine.json",
+    "route": "mercedes-benz-glc-class-220-250d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz GLC Class GLC 300d.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-glc-class-glc-300d-engine.json",
+    "route": "mercedes-benz-glc-class-glc-300d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz GLC Class GLC43.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-glc-class-glc43-engine.json",
+    "route": "mercedes-benz-glc-class-glc43-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz GLC Class GLC63.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-glc-class-glc63-engine.json",
+    "route": "mercedes-benz-glc-class-glc63-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz GLE Class 250d_300d.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-gle-class-250-300d-engine.json",
+    "route": "mercedes-benz-gle-class-250-300d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz GLE Class 350_450 Petrol.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-gle-class-350-450-petrol-engine.json",
+    "route": "mercedes-benz-gle-class-350-450-petrol-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz GLE Class 350d_400d.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-gle-class-350-400d-engine.json",
+    "route": "mercedes-benz-gle-class-350-400d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz GLE Class 500_580.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-gle-class-500-580-engine.json",
+    "route": "mercedes-benz-gle-class-500-580-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz GLE Class GLE53.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-gle-class-gle53-engine.json",
+    "route": "mercedes-benz-gle-class-gle53-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz GLE Class GLE63.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-gle-class-gle63-engine.json",
+    "route": "mercedes-benz-gle-class-gle63-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz GLK Class 200_250 Petrol.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-glk-class-200-250-petrol-engine.json",
+    "route": "mercedes-benz-glk-class-200-250-petrol-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz GLK Class 220 CDI_250 CDI.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-glk-class-220-250-cdi-engine.json",
+    "route": "mercedes-benz-glk-class-220-250-cdi-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz GLK Class 320 CDI_350 CDI.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-glk-class-320-350-cdi-engine.json",
+    "route": "mercedes-benz-glk-class-320-350-cdi-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz GLS Class 350d_400d.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-gls-350-400d-engine.json",
+    "route": "mercedes-benz-gls-350-400d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz GLS Class 450_580.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-gls-450-580-engine.json",
+    "route": "mercedes-benz-gls-450-580-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz GLS Class GLS63.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-gls-gls63-engine.json",
+    "route": "mercedes-benz-gls-gls63-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz M Class 230_350 Petrol.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-m-class-230-350-petrol-engine.json",
+    "route": "mercedes-benz-m-class-230-350-petrol-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz M Class 250 BlueTEC_350 BlueTEC.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-m-class-250-350-bluetec-engine.json",
+    "route": "mercedes-benz-m-class-250-350-bluetec-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz M Class 270 CDI_320 CDI.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-m-class-270-320-cdi-engine.json",
+    "route": "mercedes-benz-m-class-270-320-cdi-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz M Class 500_63 AMG.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-m-class-500-63-amg-engine.json",
+    "route": "mercedes-benz-m-class-500-63-amg-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz R Class 280 CDI_320 CDI.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-r-class-280-320-cdi-engine.json",
+    "route": "mercedes-benz-r-class-280-320-cdi-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz R Class 350_500 Petrol.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-r-class-350-500-petrol-engine.json",
+    "route": "mercedes-benz-r-class-350-500-petrol-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz S Class 280_420 Petrol Older.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-s-class-280-420-petrol-older-engine.json",
+    "route": "mercedes-benz-s-class-280-420-petrol-older-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz S Class 300_320 CDI Older.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-s-class-300-320-cdi-older-engine.json",
+    "route": "mercedes-benz-s-class-300-320-cdi-older-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz S Class 320 CDI_350 CDI.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-s-class-320-350-cdi-engine.json",
+    "route": "mercedes-benz-s-class-320-350-cdi-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz S Class 350_450 Petrol.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-s-class-350-450-petrol-engine.json",
+    "route": "mercedes-benz-s-class-350-450-petrol-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz S Class 350d_400d.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-s-class-350-400d-engine.json",
+    "route": "mercedes-benz-s-class-350-400d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz S Class 430_580 V8.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-s-class-430-580-v8-engine.json",
+    "route": "mercedes-benz-s-class-430-580-v8-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz S Class S600 V12.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-s-class-s600-v12-engine.json",
+    "route": "mercedes-benz-s-class-s600-v12-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz S Class S63.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-s-class-s63-engine.json",
+    "route": "mercedes-benz-s-class-s63-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz SL 280_350 Petrol.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-sl-280-350-petrol-engine.json",
+    "route": "mercedes-benz-sl-280-350-petrol-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz SL 350_400_450 Modern.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-sl-350-450-modern-engine.json",
+    "route": "mercedes-benz-sl-350-450-modern-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz SL 500_560.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-sl-500-560-engine.json",
+    "route": "mercedes-benz-sl-500-560-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz SL Class SL55_SL63 AMG.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-sl-55-63-amg-engine.json",
+    "route": "mercedes-benz-sl-55-63-amg-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz SL Class SL600 V12.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-sl-sl600-v12-engine.json",
+    "route": "mercedes-benz-sl-sl600-v12-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz SL SL600 V12.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-sl-sl600-v12-engine.json",
+    "route": "mercedes-benz-sl-sl600-v12-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz SLC 180_200.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-slc-180-200-engine.json",
+    "route": "mercedes-benz-slc-180-200-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz SLC Class 220d_250d.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-slc-220-250d-engine.json",
+    "route": "mercedes-benz-slc-220-250d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz SLC Class 43 AMG.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-slc-43-amg-engine.json",
+    "route": "mercedes-benz-slc-43-amg-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz SLK Class 200 CDI.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-slk-200-cdi-engine.json",
+    "route": "mercedes-benz-slk-200-cdi-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz SLK Class 200_230.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-slk-200-230-kompressor-engine.json",
+    "route": "mercedes-benz-slk-200-230-kompressor-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz SLK Class 250_350.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-slk-250-350-engine.json",
+    "route": "mercedes-benz-slk-250-350-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz SLK Class 55 AMG.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-slk-55-amg-engine.json",
+    "route": "mercedes-benz-slk-55-amg-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz SLS AMG 6.2 V8.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-sls-amg-62-v8-engine.json",
+    "route": "mercedes-benz-sls-amg-62-v8-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz SLS AMG Black Series.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-sls-amg-black-series-engine.json",
+    "route": "mercedes-benz-sls-amg-black-series-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz SLS AMG GT.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-sls-amg-gt-engine.json",
+    "route": "mercedes-benz-sls-amg-gt-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz Sprinter 208_211_313_316 CDI Older.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-sprinter-208-316-cdi-older-engine.json",
+    "route": "mercedes-benz-sprinter-208-316-cdi-older-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz Sprinter 209_219_309_319 CDI.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-sprinter-209-319-cdi-engine.json",
+    "route": "mercedes-benz-sprinter-209-319-cdi-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz Sprinter 211_317 CDI.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-sprinter-211-317-cdi-engine.json",
+    "route": "mercedes-benz-sprinter-211-317-cdi-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz V Class V200 _ V250 (Petrol).txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-v-class-200-250-petrol-engine.json",
+    "route": "mercedes-benz-v-class-200-250-petrol-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz V Class V200d _ V220d.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-v-class-200-220d-engine.json",
+    "route": "mercedes-benz-v-class-200-220d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz V Class V250d _ V300d.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-v-class-250-300d-engine.json",
+    "route": "mercedes-benz-v-class-250-300d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz Vaneo 1.6 & 1.9 Petrol.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-vaneo-1-6-and-1-9-petrol-engine.json",
+    "route": "mercedes-benz-vaneo-1-6-and-1-9-petrol-engine",
+    "warnings": [
+      "Legacy engine-page schema detected: source uses live-market / sub-model / engine-types sections instead of the variant-page section 3-7 structure."
+    ]
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz Vaneo 1.7 CDI.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-vaneo-1-7-cdi-engine.json",
+    "route": "mercedes-benz-vaneo-1-7-cdi-engine",
+    "warnings": [
+      "Legacy engine-page schema detected: source uses live-market / sub-model / engine-types sections instead of the variant-page section 3-7 structure."
+    ]
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz Vario Diesel.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-vario-diesel-engine.json",
+    "route": "mercedes-benz-vario-diesel-engine",
+    "warnings": [
+      "Legacy engine-page schema detected: source uses live-market / sub-model / engine-types sections instead of the variant-page section 3-7 structure."
+    ]
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz Viano 2.2 CDI.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-viano-2-2-cdi-engine.json",
+    "route": "mercedes-benz-viano-2-2-cdi-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz Viano 3.0 CDI _ 3.5 CDI.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-viano-3-0-3-5-cdi-engine.json",
+    "route": "mercedes-benz-viano-3-0-3-5-cdi-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz Viano 3.2 V6 _ 3.7 V6.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-viano-3-2-3-7-v6-engine.json",
+    "route": "mercedes-benz-viano-3-2-3-7-v6-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz Vito 108-113 CDI (Older).txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-vito-108-113-cdi-older-engine.json",
+    "route": "mercedes-benz-vito-108-113-cdi-older-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz Vito 109-119 CDI.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-vito-109-119-cdi-engine.json",
+    "route": "mercedes-benz-vito-109-119-cdi-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes Benz Vito 111-126 Petrol.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-vito-111-126-petrol-engine.json",
+    "route": "mercedes-benz-vito-111-126-petrol-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes-Benz A-Class 180 CDI.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-a-class-180-cdi-engine.json",
+    "route": "mercedes-benz-a-class-180-cdi-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes-Benz A-Class 180d.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-a-class-180d-engine.json",
+    "route": "mercedes-benz-a-class-180d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes-Benz A-Class 200 CDI .txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-a-class-200-cdi-engine.json",
+    "route": "mercedes-benz-a-class-200-cdi-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes-Benz A-Class 200 Petrol.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-a-class-200-petrol-engine.json",
+    "route": "mercedes-benz-a-class-200-petrol-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes-Benz A-Class 200d.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-a-class-200d-engine.json",
+    "route": "mercedes-benz-a-class-200d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes-Benz A-Class A250.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-a-class-250-engine.json",
+    "route": "mercedes-benz-a-class-250-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes-Benz A-Class A35 AMG.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-a-class-a35-amg-engine.json",
+    "route": "mercedes-benz-a-class-a35-amg-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes-Benz A-Class A45 AMG.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-a-class-a45-amg-engine.json",
+    "route": "mercedes-benz-a-class-a45-amg-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes-Benz A160 _ A180 Petrol.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-a-class-160-180-petrol-engine.json",
+    "route": "mercedes-benz-a-class-160-180-petrol-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes-Benz A160 CDI.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-a-class-160-cdi-engine.json",
+    "route": "mercedes-benz-a-class-160-cdi-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes-Benz AMG GT 43.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-amg-gt-gt-43-engine.json",
+    "route": "mercedes-benz-amg-gt-gt-43-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes-Benz AMG GT 63.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-amg-gt-gt-63-engine.json",
+    "route": "mercedes-benz-amg-gt-gt-63-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes-Benz AMG GT R.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-amg-gt-gt-r-engine.json",
+    "route": "mercedes-benz-amg-gt-gt-r-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes-Benz AMG GT S _ GT C.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-amg-gt-gt-s-c-engine.json",
+    "route": "mercedes-benz-amg-gt-gt-s-c-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes-Benz B Class B180 _ B200 Petrol.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-b-class-b180-b200-petrol-engine.json",
+    "route": "mercedes-benz-b-class-b180-b200-petrol-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes-Benz B Class B180 CDI.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-b-class-b180-cdi-engine.json",
+    "route": "mercedes-benz-b-class-b180-cdi-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes-Benz B Class B200 CDI.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-b-class-b200-cdi-engine.json",
+    "route": "mercedes-benz-b-class-b200-cdi-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes-Benz C-Class 180 _ 200 Petrol.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-c-class-180-200-petrol-engine.json",
+    "route": "mercedes-benz-c-class-180-200-petrol-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes-Benz C-Class 200 CDI _ 220 CDI.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-c-class-200-220-cdi-engine.json",
+    "route": "mercedes-benz-c-class-200-220-cdi-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes-Benz C-Class 200 CDI.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-c-class-200-cdi-engine.json",
+    "route": "mercedes-benz-c-class-200-cdi-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes-Benz C-Class 220 _ 230 Petrol.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-c-class-220-230-petrol-engine.json",
+    "route": "mercedes-benz-c-class-220-230-petrol-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes-Benz C-Class 220 CDI.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-c-class-220-cdi-engine.json",
+    "route": "mercedes-benz-c-class-220-cdi-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes-Benz C-Class 250 CDI.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-c-class-250-cdi-engine.json",
+    "route": "mercedes-benz-c-class-250-cdi-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes-Benz C-Class 250 Petrol.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-c-class-250-petrol-engine.json",
+    "route": "mercedes-benz-c-class-250-petrol-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes-Benz C-Class 270 CDI _ 300 CDI.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-c-class-270-300-cdi-engine.json",
+    "route": "mercedes-benz-c-class-270-300-cdi-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes-Benz C-Class 300 Petrol.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-c-class-300-petrol-engine.json",
+    "route": "mercedes-benz-c-class-300-petrol-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes-Benz C-Class 300d.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-c-class-300d-engine.json",
+    "route": "mercedes-benz-c-class-300d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes-Benz C-Class 320 CDI _ 350 CDI.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-c-class-320-350-cdi-engine.json",
+    "route": "mercedes-benz-c-class-320-350-cdi-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes-Benz C-Class 350 _ 400 Petrol.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-c-class-350-400-petrol-engine.json",
+    "route": "mercedes-benz-c-class-350-400-petrol-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes-Benz C-Class C43 AMG.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-c-class-c43-amg-engine.json",
+    "route": "mercedes-benz-c-class-c43-amg-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes-Benz C-Class C63 AMG.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-c-class-c63-amg-engine.json",
+    "route": "mercedes-benz-c-class-c63-amg-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes-Benz C-Class C63 Hybrid.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-c-class-c63-hybrid-engine.json",
+    "route": "mercedes-benz-c-class-c63-hybrid-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes-Benz CLA 180d _ 200d.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-cla-180-200d-engine.json",
+    "route": "mercedes-benz-cla-180-200d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes-Benz CLA 220d.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-cla-220d-engine.json",
+    "route": "mercedes-benz-cla-220d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes-Benz CLC 180 _ 200 Petrol.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-clc-class-180-200-petrol-engine.json",
+    "route": "mercedes-benz-clc-class-180-200-petrol-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mercedes Benz\\Mercedes-Benz CLC 200 CDI _ 220 CDI.txt",
+    "output": "engine-market-main\\data\\variants\\mercedes-benz-clc-class-200-220-cdi-engine.json",
+    "route": "mercedes-benz-clc-class-200-220-cdi-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mini\\MINI Clubman Cooper D.txt",
+    "output": "engine-market-main\\data\\variants\\mini-clubman-cooper-d-engine.json",
+    "route": "mini-clubman-cooper-d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mini\\Mini Clubman Cooper S.txt",
+    "output": "engine-market-main\\data\\variants\\mini-clubman-cooper-s-engine.json",
+    "route": "mini-clubman-cooper-s-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mini\\MINI Clubman Cooper SD.txt",
+    "output": "engine-market-main\\data\\variants\\mini-clubman-cooper-sd-engine.json",
+    "route": "mini-clubman-cooper-sd-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mini\\MINI Clubman Cooper.txt",
+    "output": "engine-market-main\\data\\variants\\mini-clubman-cooper-engine.json",
+    "route": "mini-clubman-cooper-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mini\\Mini Clubman John Cooper Works.txt",
+    "output": "engine-market-main\\data\\variants\\mini-clubman-jcw-engine.json",
+    "route": "mini-clubman-jcw-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mini\\MINI Convertible Cooper S.txt",
+    "output": "engine-market-main\\data\\variants\\mini-convertible-cooper-s-engine.json",
+    "route": "mini-convertible-cooper-s-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mini\\Mini Convertible Cooper SD.txt",
+    "output": "engine-market-main\\data\\variants\\mini-convertible-cooper-d-sd-engine.json",
+    "route": "mini-convertible-cooper-d-sd-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mini\\Mini Convertible Cooper.txt",
+    "output": "engine-market-main\\data\\variants\\mini-convertible-cooper-engine.json",
+    "route": "mini-convertible-cooper-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mini\\Mini Convertible JCW.txt",
+    "output": "engine-market-main\\data\\variants\\mini-convertible-jcw-engine.json",
+    "route": "mini-convertible-jcw-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mini\\MINI Convertible One.txt",
+    "output": "engine-market-main\\data\\variants\\mini-convertible-one-engine.json",
+    "route": "mini-convertible-one-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mini\\Mini Countryman Cooper D.txt",
+    "output": "engine-market-main\\data\\variants\\mini-countryman-cooper-d-engine.json",
+    "route": "mini-countryman-cooper-d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mini\\MINI Countryman Cooper S _ Cooper S ALL4.txt",
+    "output": "engine-market-main\\data\\variants\\mini-countryman-cooper-s---cooper-s-all4-engine.json",
+    "route": "mini-countryman-cooper-s---cooper-s-all4-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mini\\Mini Countryman Cooper S E ALL4 PHEV.txt",
+    "output": "engine-market-main\\data\\variants\\mini-countryman-cooper-s-e-all4-phev-engine.json",
+    "route": "mini-countryman-cooper-s-e-all4-phev-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mini\\Mini Countryman Cooper SD.txt",
+    "output": "engine-market-main\\data\\variants\\mini-countryman-cooper-sd---sd-all4.json",
+    "route": "mini-countryman-cooper-sd---sd-all4",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mini\\Mini Countryman Cooper.txt",
+    "output": "engine-market-main\\data\\variants\\mini-countryman-cooper.json",
+    "route": "mini-countryman-cooper",
+    "warnings": [
+      "Legacy engine-page schema detected: source uses live-market / sub-model / engine-types sections instead of the variant-page section 3-7 structure."
+    ]
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mini\\Mini Countryman John Cooper Works.txt",
+    "output": "engine-market-main\\data\\variants\\mini-countryman-jcw---jcw-all4-engine.json",
+    "route": "mini-countryman-jcw---jcw-all4-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mini\\Mini Hatch Cooper D.txt",
+    "output": "engine-market-main\\data\\variants\\mini-hatch-cooper-d-engine.json",
+    "route": "mini-hatch-cooper-d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mini\\MINI Hatch Cooper S.txt",
+    "output": "engine-market-main\\data\\variants\\mini-hatch-cooper-s-engine.json",
+    "route": "mini-hatch-cooper-s-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mini\\Mini Hatch Cooper SD.txt",
+    "output": "engine-market-main\\data\\variants\\mini-hatch-cooper-sd-engine.json",
+    "route": "mini-hatch-cooper-sd-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mini\\Mini Hatch Cooper SE Electric.txt",
+    "output": "engine-market-main\\data\\variants\\mini-hatch-cooper-e-se-electric-engine.json",
+    "route": "mini-hatch-cooper-e-se-electric-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mini\\Mini Hatch Cooper.txt",
+    "output": "engine-market-main\\data\\variants\\mini-hatch-cooper-engine.json",
+    "route": "mini-hatch-cooper-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mini\\Mini Hatch John Cooper Works.txt",
+    "output": "engine-market-main\\data\\variants\\mini-hatch-john-cooper-works-jcw-engine.json",
+    "route": "mini-hatch-john-cooper-works-jcw-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mini\\Mini Hatch One D.txt",
+    "output": "engine-market-main\\data\\variants\\mini-hatch-one-d-engine.json",
+    "route": "mini-hatch-one-d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Mini\\Mini Hatch One.txt",
+    "output": "engine-market-main\\data\\variants\\mini-hatch-one-engine.json",
+    "route": "mini-hatch-one-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Toyota\\Toyota Auris 1.4 D-4D.txt",
+    "output": "engine-market-main\\data\\variants\\toyota-auris-14-d-4d-engine.json",
+    "route": "toyota-auris-14-d-4d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Toyota\\Toyota Auris 1.6 Valvematic.txt",
+    "output": "engine-market-main\\data\\variants\\toyota-auris-1-6-valvematic-engine.json",
+    "route": "toyota-auris-1-6-valvematic-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Toyota\\Toyota Auris 1.8 Hybrid.txt",
+    "output": "engine-market-main\\data\\variants\\toyota-auris-18-hybrid-engine.json",
+    "route": "toyota-auris-18-hybrid-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Toyota\\Toyota Auris 1.8 Valvematic.txt",
+    "output": "engine-market-main\\data\\variants\\toyota-auris-18-valvematic-engine.json",
+    "route": "toyota-auris-18-valvematic-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Toyota\\Toyota Avensis 1.6 _ 1.8 VVT‑i.txt",
+    "output": "engine-market-main\\data\\variants\\toyota-avensis-16-18-vvt-i-engine.json",
+    "route": "toyota-avensis-16-18-vvt-i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Toyota\\Toyota Avensis 2.0 D-4D.txt",
+    "output": "engine-market-main\\data\\variants\\toyota-avensis-20-d-4d-engine.json",
+    "route": "toyota-avensis-20-d-4d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Toyota\\Toyota Avensis 2.0 Valvematic.txt",
+    "output": "engine-market-main\\data\\variants\\toyota-avensis-20-valvematic-engine.json",
+    "route": "toyota-avensis-20-valvematic-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Toyota\\Toyota Avensis 2.2 D-4D.txt",
+    "output": "engine-market-main\\data\\variants\\toyota-avensis-22-d-4d-engine.json",
+    "route": "toyota-avensis-22-d-4d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Toyota\\Toyota Aygo 1.0 VVT-i.txt",
+    "output": "engine-market-main\\data\\variants\\toyota-aygo-10-vvt-i-engine.json",
+    "route": "toyota-aygo-10-vvt-i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Toyota\\Toyota Aygo 1.4 HDi.txt",
+    "output": "engine-market-main\\data\\variants\\toyota-aygo-14-hdi-engine.json",
+    "route": "toyota-aygo-14-hdi-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Toyota\\Toyota Aygo X 1.0.txt",
+    "output": "engine-market-main\\data\\variants\\toyota-aygo-x-aygo-x-10-engine.json",
+    "route": "toyota-aygo-x-aygo-x-10-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Toyota\\Toyota C-HR 1.2T Petrol.txt",
+    "output": "engine-market-main\\data\\variants\\toyota-c-hr-12t-petrol-engine.json",
+    "route": "toyota-c-hr-12t-petrol-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Toyota\\Toyota C-HR 1.8 Hybrid.txt",
+    "output": "engine-market-main\\data\\variants\\toyota-c-hr-18-hybrid-engine.json",
+    "route": "toyota-c-hr-18-hybrid-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Toyota\\Toyota C-HR 2.0 Hybrid.txt",
+    "output": "engine-market-main\\data\\variants\\toyota-c-hr-20-hybrid-engine.json",
+    "route": "toyota-c-hr-20-hybrid-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Toyota\\Toyota C-HR PHEV.txt",
+    "output": "engine-market-main\\data\\variants\\toyota-c-hr-phev-engine.json",
+    "route": "toyota-c-hr-phev-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Toyota\\Toyota Corolla 1.4 _ 1.6 Petrol.txt",
+    "output": "engine-market-main\\data\\variants\\toyota-corolla-14-16-petrol-engine.json",
+    "route": "toyota-corolla-14-16-petrol-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Toyota\\Toyota Corolla 1.8 Hybrid.txt",
+    "output": "engine-market-main\\data\\variants\\toyota-corolla-18-hybrid-engine.json",
+    "route": "toyota-corolla-18-hybrid-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Toyota\\Toyota Corolla 1.8 Valvematic.txt",
+    "output": "engine-market-main\\data\\variants\\toyota-corolla-18-valvematic-engine.json",
+    "route": "toyota-corolla-18-valvematic-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Toyota\\Toyota Corolla 2.0 D-4D.txt",
+    "output": "engine-market-main\\data\\variants\\toyota-corolla-2-0-d-4d-engine.json",
+    "route": "toyota-corolla-2-0-d-4d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Toyota\\Toyota GR Corolla.txt",
+    "output": "engine-market-main\\data\\variants\\toyota-corolla-gr-corolla-engine.json",
+    "route": "toyota-corolla-gr-corolla-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Toyota\\Toyota GR Yaris.txt",
+    "output": "engine-market-main\\data\\variants\\toyota-yaris-gr-yaris-engine.json",
+    "route": "toyota-yaris-gr-yaris-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Toyota\\Toyota Hilux 2.4 D-4D.txt",
+    "output": "engine-market-main\\data\\variants\\toyota-hilux-24-d-4d-engine.json",
+    "route": "toyota-hilux-24-d-4d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Toyota\\Toyota Hilux 2.5 D-4D.txt",
+    "output": "engine-market-main\\data\\variants\\toyota-hilux-25-d-4d-engine.json",
+    "route": "toyota-hilux-25-d-4d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Toyota\\Toyota Hilux 2.8 D-4D.txt",
+    "output": "engine-market-main\\data\\variants\\toyota-hilux-28-d-4d-engine.json",
+    "route": "toyota-hilux-28-d-4d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Toyota\\Toyota Hilux 3.0 D-4D.txt",
+    "output": "engine-market-main\\data\\variants\\toyota-hilux-30-d-4d-engine.json",
+    "route": "toyota-hilux-30-d-4d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Toyota\\Toyota Land Cruiser 2.8 D-4D.txt",
+    "output": "engine-market-main\\data\\variants\\toyota-land-cruiser-28-d-4d-engine.json",
+    "route": "toyota-land-cruiser-28-d-4d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Toyota\\Toyota Land Cruiser 3.0 D-4D.txt",
+    "output": "engine-market-main\\data\\variants\\toyota-land-cruiser-30-d-4d-engine.json",
+    "route": "toyota-land-cruiser-30-d-4d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Toyota\\Toyota Land Cruiser 4.5 D‑4D V8.txt",
+    "output": "engine-market-main\\data\\variants\\toyota-land-cruiser-45-d-4d-v8-engine.json",
+    "route": "toyota-land-cruiser-45-d-4d-v8-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Toyota\\Toyota Prius 1.5 Hybrid.txt",
+    "output": "engine-market-main\\data\\variants\\toyota-prius-15-hybrid-early-engine.json",
+    "route": "toyota-prius-15-hybrid-early-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Toyota\\Toyota Prius 1.8 Hybrid.txt",
+    "output": "engine-market-main\\data\\variants\\toyota-prius-18-hybrid-engine.json",
+    "route": "toyota-prius-18-hybrid-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Toyota\\Toyota Prius 2.0 Hybrid.txt",
+    "output": "engine-market-main\\data\\variants\\toyota-prius-20-hybrid-latest-engine.json",
+    "route": "toyota-prius-20-hybrid-latest-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Toyota\\Toyota Prius Plug-in Hybrid.txt",
+    "output": "engine-market-main\\data\\variants\\toyota-prius-plug-in-hybrid-engine.json",
+    "route": "toyota-prius-plug-in-hybrid-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Toyota\\Toyota RAV4 1.8 Valvematic.txt",
+    "output": "engine-market-main\\data\\variants\\toyota-rav4-1-8-valvematic-engine.json",
+    "route": "toyota-rav4-1-8-valvematic-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Toyota\\Toyota RAV4 2.2 D‑4D.txt",
+    "output": "engine-market-main\\data\\variants\\toyota-rav4-22-d-4d-engine.json",
+    "route": "toyota-rav4-22-d-4d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Toyota\\Toyota RAV4 2.5 Hybrid.txt",
+    "output": "engine-market-main\\data\\variants\\toyota-rav4-25-hybrid-engine.json",
+    "route": "toyota-rav4-25-hybrid-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Toyota\\Toyota RAV4 2.5 PHEV.txt",
+    "output": "engine-market-main\\data\\variants\\toyota-rav4-25-phev-engine.json",
+    "route": "toyota-rav4-25-phev-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Toyota\\Toyota Yaris 1.0 _ 1.3 VVT-i.txt",
+    "output": "engine-market-main\\data\\variants\\toyota-yaris-10-13-vvt-i-engine.json",
+    "route": "toyota-yaris-10-13-vvt-i-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Toyota\\Toyota Yaris 1.4 D-4D.txt",
+    "output": "engine-market-main\\data\\variants\\toyota-yaris-1-4-d-4d-engine.json",
+    "route": "toyota-yaris-1-4-d-4d-engine",
+    "warnings": []
+  },
+  {
+    "source": "C:\\Users\\Rahma\\Downloads\\variantsdata\\Toyota\\Toyota Yaris 1.5 Hybrid.txt",
+    "output": "engine-market-main\\data\\variants\\toyota-yaris-15-hybrid-engine.json",
+    "route": "toyota-yaris-15-hybrid-engine",
     "warnings": []
   }
 ]

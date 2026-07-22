@@ -1,0 +1,71 @@
+[
+  {
+    "brand_folder": "Kia",
+    "source": "C:\\Users\\Rahma\\Downloads\\EM-Varient-Pages\\Kia\\Kia Ceed 1.6 CRDi.txt",
+    "output": "C:\\Users\\Rahma\\new_engine\\engine-market-main\\data\\variants\\kia-ceed-1-6-crdi-engine.json",
+    "warnings": [
+      "Legacy engine-page schema detected: source uses live-market / sub-model / engine-types sections instead of the variant-page section 3-7 structure."
+    ]
+  },
+  {
+    "brand_folder": "Kia",
+    "source": "C:\\Users\\Rahma\\Downloads\\EM-Varient-Pages\\Kia\\Kia Ceed Xceed 1.0-1.5 T-GDI.txt",
+    "output": "C:\\Users\\Rahma\\new_engine\\engine-market-main\\data\\variants\\kia-ceed-xceed-1-0-1-5-t-gdi-engine.json",
+    "warnings": [
+      "Legacy engine-page schema detected: source uses live-market / sub-model / engine-types sections instead of the variant-page section 3-7 structure."
+    ]
+  },
+  {
+    "brand_folder": "Kia",
+    "source": "C:\\Users\\Rahma\\Downloads\\EM-Varient-Pages\\Kia\\Kia Niro 1.6 Hybrid.txt",
+    "output": "C:\\Users\\Rahma\\new_engine\\engine-market-main\\data\\variants\\kia-niro-1-6-hybrid-engine.json",
+    "warnings": [
+      "Missing source section 3",
+      "Missing source section 4",
+      "Missing source section 5",
+      "Missing source section 6",
+      "Missing source section 7",
+      "How It Works has fewer than 3 cards",
+      "How It Works card 1 missing front heading",
+      "How It Works card 1 missing front text",
+      "How It Works card 1 missing back heading",
+      "How It Works card 1 missing back text",
+      "How It Works card 1 missing back bullets",
+      "How It Works card 2 missing front heading",
+      "How It Works card 2 missing front text",
+      "How It Works card 2 missing back heading",
+      "How It Works card 2 missing back text",
+      "How It Works card 2 missing back bullets",
+      "Missing history timeline H2",
+      "Missing history timeline intro",
+      "Missing history timeline milestones",
+      "Missing history timeline specs",
+      "Missing engine guide H2",
+      "Missing engine guide items",
+      "Missing common problems H2",
+      "Missing common problems intro",
+      "Missing common problems items",
+      "Missing FAQ H2",
+      "Missing FAQ items",
+      "Missing trust CTA H2",
+      "Missing trust CTA final text",
+      "Missing trust CTA button text"
+    ]
+  },
+  {
+    "brand_folder": "Kia",
+    "source": "C:\\Users\\Rahma\\Downloads\\EM-Varient-Pages\\Kia\\Kia Picanto 1.0 & 1.25 Petrol.txt",
+    "output": "C:\\Users\\Rahma\\new_engine\\engine-market-main\\data\\variants\\kia-picanto-10-125-petrol-engine.json",
+    "warnings": [
+      "Legacy engine-page schema detected: source uses live-market / sub-model / engine-types sections instead of the variant-page section 3-7 structure."
+    ]
+  },
+  {
+    "brand_folder": "Kia",
+    "source": "C:\\Users\\Rahma\\Downloads\\EM-Varient-Pages\\Kia\\Kia e-Niro Electric.txt",
+    "output": "C:\\Users\\Rahma\\new_engine\\engine-market-main\\data\\variants\\kia-e-niro-electric-engine.json",
+    "warnings": [
+      "Legacy engine-page schema detected: source uses live-market / sub-model / engine-types sections instead of the variant-page section 3-7 structure."
+    ]
+  }
+]

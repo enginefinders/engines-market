@@ -1,0 +1,237 @@
+{
+  "brand": {
+    "name": "Audi",
+    "slug": "audi",
+    "tone": "premium"
+  },
+  "model": {
+    "name": "Audi A4",
+    "slug": "a4"
+  },
+  "variant": {
+    "name": "",
+    "slug": "40-tfsi-2-0-tfsi-engine",
+    "storageSlug": "audi-a4-40-tfsi-2-0-tfsi-engine"
+  },
+  "seo": {
+    "title": "",
+    "description": "",
+    "canonical": "/audi/a4/40-tfsi-2-0-tfsi-engine"
+  },
+  "assets": {
+    "mainImage": "/images/brands/audi/models/audi-a4-main.webp",
+    "smallImage": "/images/brands/audi/models/audi-a4-small.webp",
+    "heroBg": "/images/brands/audi/models/audi-a4-model-card.png",
+    "howItWorksBg": "/images/brands/audi/brand/audi-how-it-works-bg.webp",
+    "ctaImage": "/images/brands/audi/models/audi-a4-model-card.png"
+  },
+  "structuredData": null,
+  "sections": {
+    "hero": {
+      "tag": "",
+      "h1": "",
+      "subheading": "",
+      "trustBadges": [],
+      "ctaLinkText": "",
+      "supportingText": "Get tailored  engine quotes from vetted UK specialists.",
+      "ticker": "",
+      "imageAlt": "",
+      "highlights": [
+        {
+          "title": " Engine",
+          "price": "",
+          "line1": "",
+          "line2": "",
+          "detail": "",
+          "image": "/images/brands/audi/models/audi-a4-model-card.png",
+          "imageAlt": ""
+        }
+      ],
+      "engineOptions": [
+        {
+          "label": "Used",
+          "price": "From quote",
+          "description": "Tested, bare/short engine",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "imageAlt": "",
+          "tone": "used"
+        },
+        {
+          "label": "Reconditioned",
+          "price": "From quote",
+          "description": "Rod bearings addressed, tested",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "imageAlt": "",
+          "tone": "reconditioned"
+        },
+        {
+          "label": "Rebuilt",
+          "price": "From quote",
+          "description": "Upgraded bearings, full teardown, revised valvetrain",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "imageAlt": "",
+          "tone": "rebuilt"
+        }
+      ],
+      "vehicleBadge": "TFSI",
+      "mobileBar": {
+        "brandText": "ENGINEMARKET",
+        "callLabel": "Call",
+        "quoteLabel": "GET QUOTES"
+      },
+      "registrationInput": {
+        "label": "Enter your  registration",
+        "platePlaceholder": "AB12 CDE",
+        "countryCode": "UK",
+        "countryLabel": "United Kingdom"
+      },
+      "form": {
+        "heading": "Find Your  Engine",
+        "subtitle": "Enter your registration number to compare  engine options.",
+        "inputPlaceholder": "AB12 CDE",
+        "buttonText": "",
+        "note": ""
+      }
+    },
+    "howItWorks": {
+      "tag": "How It Works",
+      "h2": "3 Simple Steps to Finding the Best  Replacement Engine",
+      "headingLines": [
+        "3 Simple Steps",
+        "to Finding the Best  Replacement Engine"
+      ],
+      "cards": [
+        {
+          "number": 1,
+          "icon": "registration",
+          "front": {
+            "h3": "",
+            "text": ""
+          },
+          "back": {
+            "heading": "",
+            "text": "",
+            "bullets": []
+          }
+        },
+        {
+          "number": 2,
+          "icon": "quote",
+          "front": {
+            "h3": "",
+            "text": ""
+          },
+          "back": {
+            "heading": "",
+            "text": "",
+            "bullets": []
+          }
+        },
+        {
+          "number": 3,
+          "icon": "shield",
+          "front": {
+            "h3": "",
+            "text": ""
+          },
+          "back": {
+            "heading": "",
+            "text": "",
+            "bullets": []
+          }
+        }
+      ],
+      "tagline": "",
+      "ui": {
+        "stepLabel": "Step",
+        "desktopClosedLabel": "Click to expand",
+        "desktopOpenLabel": "Click to view details",
+        "mobileOpenLabel": "Tap to flip",
+        "mobileCloseLabel": "Tap to flip back",
+        "footerNote": "Most replacements completed within 3-5 days.",
+        "mobileTrustItems": [
+          "12-Month Warranty",
+          "Supply & Fit Available",
+          "Nationwide Delivery",
+          "Trusted UK Suppliers"
+        ]
+      }
+    },
+    "historyTimeline": {
+      "tag": "Variant History",
+      "h2": "",
+      "intro": "",
+      "milestones": [],
+      "vehicleTitle": "",
+      "vehicleMeta": [],
+      "specsLabel": "Key Specs Snapshot",
+      "specs": [],
+      "closingNote": ""
+    },
+    "engineGuide": {
+      "tag": "Compatible Engines",
+      "h2": "",
+      "items": [],
+      "closing": ""
+    },
+    "commonProblems": {
+      "tag": "Common Problems",
+      "h2": "",
+      "h3": "",
+      "problems": [],
+      "emptyState": null,
+      "finalCta": {
+        "h4": "Don't let engine failure write off your ",
+        "paragraph": "",
+        "buttonText": "",
+        "disclaimer": ""
+      }
+    },
+    "faq": {
+      "tag": "FAQs",
+      "h2": "",
+      "intro": "Everything  owners usually ask before choosing a rebuilt, reconditioned or used replacement engine.",
+      "defaultOpenIndex": 0,
+      "disclaimer": "",
+      "items": [],
+      "ui": {
+        "questionLabelPrefix": "Question",
+        "keyPointsLabel": "Key points",
+        "comparisonTableLabel": "Comparison table",
+        "disclaimerLabel": "Disclaimer",
+        "warningTitle": "Important"
+      }
+    },
+    "trustCta": {
+      "tag": "Why Choose Us",
+      "h2": "",
+      "intro": "Compare quotes from trusted UK  engine specialists with warranty-backed rebuilt, reconditioned and used options nationwide.",
+      "points": [
+        {
+          "title": "",
+          "description": ""
+        },
+        {
+          "title": "",
+          "description": ""
+        },
+        {
+          "title": "",
+          "description": ""
+        }
+      ],
+      "finalText": "",
+      "buttonText": "",
+      "secondaryAction": {
+        "text": "",
+        "href": "tel:03330000044"
+      },
+      "ui": {
+        "showSecondaryAction": false,
+        "imageBadgeLabel": "Variant-specific support",
+        "imageBadgeTitle": " specialists across the UK",
+        "imageBadgeText": "Compare supply-only and supply & fit quotes from vetted independent engine specialists."
+      }
+    }
+  }
+}

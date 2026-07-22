@@ -16,10 +16,71 @@ MODELS_DIR = REPO_ROOT / "data" / "models"
 VARIANTS_DIR = REPO_ROOT / "data" / "variants"
 
 SECTION_RE = re.compile(r"^#?\s*SECTION\s+(?P<number>\d+)(?:\s*[—-]|\s*$)", re.IGNORECASE)
+SECTION_RE = re.compile(r"^(?:#+\s*)?SECTION\s+(?P<number>\d+)(?:\s*[â€”-]|\s*$)", re.IGNORECASE)
 LABEL_RE = re.compile(r"^(?P<label>[^:]{1,160}):\s*(?P<value>.*)$")
 QUESTION_RE = re.compile(r"^Q(?:\d+)?:\s*(?P<value>.+)$", re.IGNORECASE)
 H3_RE = re.compile(r"^H3:\s*(?P<value>.+)$", re.IGNORECASE)
 H4_RE = re.compile(r"^H4:\s*(?P<value>.+)$", re.IGNORECASE)
+MARKDOWN_HEADING_RE = re.compile(r"^(?P<hashes>#{2,6})\s*(?P<value>.+?)\s*$")
+
+KNOWN_LABEL_PREFIXES = (
+    "TAG",
+    "TAG PILL",
+    "H1",
+    "H2",
+    "H3",
+    "H4",
+    "Q",
+    "INTRO",
+    "SUBHEADING",
+    "TRUST BADGES",
+    "TRUST BULLET",
+    "VARIANT IMAGE",
+    "MODEL IMAGE",
+    "ENGINE THUMBNAILS",
+    "PRICE ANCHOR",
+    "PRICE ANCHOR ROW",
+    "LINE 1",
+    "LINE 2",
+    "REGISTRATION INPUT",
+    "CTA",
+    "CTA BUTTON",
+    "CTA NOTE",
+    "TICKER",
+    "CARD",
+    "FRONT",
+    "FLIP",
+    "TIMELINE",
+    "KEY SPECS",
+    "KEY SPECS SNAPSHOT",
+    "COST GUIDE",
+    "COMMON FAILURE",
+    "COMMON FAILURES",
+    "COMMON OPERATIONAL CHARACTERISTICS",
+    "CLOSING LINE",
+    "FINAL",
+    "AFFECTED",
+    "AFFECTED MODELS",
+    "AFFECTED VEHICLES",
+    "TYPICAL FAILURE MILEAGE",
+    "ROOT CAUSE",
+    "REPAIR OPTIONS",
+    "VEHICLE VALUE CHECK",
+    "OUR RECOMMENDATION",
+    "PARAGRAPH",
+    "FEED TABLE",
+    "SUBTITLE",
+    "SECTION TITLE",
+    "SECTION SUBTITLE",
+    "META TITLE",
+    "META DESCRIPTION",
+    "CANONICAL URL",
+    "DISCLAIMER",
+    "SHORT SUMMARY",
+    "WARNING",
+    "KEY POINTS",
+    "COMPARISON TABLE",
+)
 
 MOJIBAKE_REPLACEMENTS = {
     "ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â": "-",
@@ -93,6 +154,57 @@ def normalize_text(value: str) -> str:
     return text.strip()
 
 
+def normalize_structured_line(value: str) -> str:
+    text = normalize_text(value)
+    if not text:
+        return ""
+
+    text = re.sub(r"^>\s*", "", text)
+    text = re.sub(r"^\*\*(.+?)\*\*(.*)$", r"\1\2", text)
+    text = re.sub(r"^__(.+?)__(.*)$", r"\1\2", text)
+    text = re.sub(r"^`(.+?)`(.*)$", r"\1\2", text)
+    text = re.sub(r"^\*(?!\*)(.+?:)\*\s*", r"\1 ", text)
+    text = re.sub(r"^\*\*(.+?:)\*\*\s*", r"\1 ", text)
+    text = re.sub(r"^__(.+?:)__\s*", r"\1 ", text)
+    text = re.sub(r"^`(.+?:)`\s*", r"\1 ", text)
+    text = re.sub(r"^\*\*(.+)\*\*$", r"\1", text)
+    text = re.sub(r"^__(.+)__$", r"\1", text)
+    text = re.sub(r"^`(.+)`$", r"\1", text)
+    return normalize_text(text)
+
+
+def is_probable_label_name(label: str) -> bool:
+    normalized = normalize_text(label).upper()
+    return any(
+        normalized == prefix
+        or normalized.startswith(f"{prefix} ")
+        or normalized.startswith(f"{prefix} (")
+        for prefix in KNOWN_LABEL_PREFIXES
+    )
+
+
+def match_markdown_heading(line: str, min_level: int = 2) -> tuple[int, str] | None:
+    heading_match = MARKDOWN_HEADING_RE.match(normalize_structured_line(line))
+    if not heading_match:
+        return None
+    level = len(heading_match.group("hashes"))
+    if level < min_level:
+        return None
+    return level, heading_match.group("value").strip()
+
+
+def first_markdown_heading(lines: list[str], min_level: int = 2, max_level: int | None = None) -> str:
+    for line in lines:
+        matched = match_markdown_heading(line, min_level=min_level)
+        if not matched:
+            continue
+        level, value = matched
+        if max_level is not None and level > max_level:
+            continue
+        return value
+    return ""
+
+
 def is_separator_line(value: str) -> bool:
     text = normalize_text(value)
     return bool(text) and (
@@ -154,11 +266,93 @@ def split_sections(lines: list[str]) -> dict[int, list[str]]:
     return sections
 
 
+def section_contains_text(section_lines: list[str], *phrases: str) -> bool:
+    haystack = " ".join(normalize_text(line).upper() for line in section_lines if normalize_text(line))
+    return any(normalize_text(phrase).upper() in haystack for phrase in phrases)
+
+
+def detect_legacy_engine_page_schema(section_map: dict[int, list[str]]) -> bool:
+    return any(
+        (
+            number == 3
+            and section_contains_text(lines, "LIVE MARKET PRICES", "LIVE PRICING", "LIVE MARKET")
+        )
+        or (number == 4 and section_contains_text(lines, "POPULAR SUB-MODELS", "MODELS WE COVER"))
+        or (number == 7 and section_contains_text(lines, "ENGINE TYPES", "WHY CHOOSE US / FINAL CTA"))
+        or (number == 8 and section_contains_text(lines, "MODEL YEARS COVERAGE", "WHY CHOOSE US / FINAL CTA"))
+        for number, lines in section_map.items()
+    )
+
+
+def detect_legacy_engine_page_source(lines: list[str]) -> bool:
+    normalized_lines = [normalize_structured_line(line).upper() for line in lines if normalize_structured_line(line)]
+    has_live_market_heading = any(
+        "SECTION 3" in line
+        and (
+            "LIVE MARKET PRICES" in line
+            or "LIVE PRICING/MARKET SIGNALS" in line
+            or "LIVE PRICING" in line
+        )
+        or "SECTION 3" in line and "LIVE FEED" in line
+        or line.startswith("### 3: LIVE MARKET PRICES")
+        or line.startswith("### 3: LIVE PRICING")
+        or line.startswith("### 3: LIVE FEED")
+        or line == "3: LIVE MARKET PRICES"
+        or line == "3: LIVE PRICING"
+        or line == "3: LIVE FEED"
+        for line in normalized_lines
+    )
+    has_submodels_heading = any(
+        ("SECTION 4" in line and "POPULAR SUB-MODELS" in line) or line.startswith("### 4: POPULAR SUB-MODELS")
+        or ("SECTION 4" in line and "VARIANT GRID" in line)
+        or line.startswith("### 4: VARIANT GRID")
+        or line == "4: POPULAR SUB-MODELS"
+        or line == "4: VARIANT GRID"
+        for line in normalized_lines
+    )
+    has_engine_types_heading = any(
+        ("SECTION 7" in line and "ENGINE TYPES" in line)
+        or ("SECTION 7" in line and "REPAIR TYPES" in line)
+        or ("SECTION 7" in line and "REPLACEMENT ENGINE OPTIONS" in line)
+        or line.startswith("### 7: ENGINE TYPES")
+        or line.startswith("### 7 (REVISED): ENGINE TYPES")
+        or line.startswith("### 7: REPAIR TYPES")
+        or line.startswith("### 7: REPLACEMENT ENGINE OPTIONS")
+        or line == "7: ENGINE TYPES"
+        or line == "7: REPAIR TYPES"
+        or line == "7: REPLACEMENT ENGINE OPTIONS"
+        for line in normalized_lines
+    )
+    has_model_years_heading = any(
+        ("SECTION 8" in line and "MODEL YEARS COVERAGE" in line)
+        or ("SECTION 8" in line and "ENGINES BY YEAR" in line)
+        or ("SECTION 8" in line and "ENGINE SIZES BY FUEL TYPE" in line)
+        or ("SECTION 8" in line and "COMPONENT SPECIFICATIONS" in line)
+        or ("SECTION 8" in line and "FAQ" in line)
+        or line.startswith("### 8: MODEL YEARS COVERAGE")
+        or line.startswith("### 8: ENGINE SIZES BY FUEL TYPE")
+        or line == "8: ENGINES BY YEAR"
+        or line == "8: FAQ"
+        for line in normalized_lines
+    )
+    has_final_cta_heading = any("SECTION 8" in line and "WHY CHOOSE US / FINAL CTA" in line for line in normalized_lines)
+    return (
+        (has_live_market_heading and has_submodels_heading)
+        or has_engine_types_heading
+        or has_model_years_heading
+        or has_final_cta_heading
+    )
+
+
 def match_label(line: str) -> tuple[str, str] | None:
-    label_match = LABEL_RE.match(normalize_text(line))
+    normalized_line = normalize_structured_line(line)
+    label_match = LABEL_RE.match(normalized_line)
     if not label_match:
         return None
-    return label_match.group("label").upper(), label_match.group("value").strip()
+    label = label_match.group("label").upper()
+    if not is_probable_label_name(label):
+        return None
+    return label, label_match.group("value").strip()
 
 
 def matches_label_variant(current_label: str, target: str) -> bool:
@@ -325,6 +519,19 @@ def parse_table_variant(lines: list[str], start_label: str, min_cells: int) -> l
     return rows
 
 
+def parse_first_table(lines: list[str], min_cells: int) -> list[list[str]]:
+    table_lines = [line for line in lines if normalize_text(line).startswith("|")]
+    if len(table_lines) < 3:
+        return []
+
+    rows: list[list[str]] = []
+    for line in table_lines[2:]:
+        cells = [normalize_text(cell) for cell in line.strip().strip("|").split("|")]
+        if len(cells) >= min_cells:
+            rows.append(cells)
+    return rows
+
+
 def parse_repair_options(lines: list[str], start_label: str) -> list[dict[str, str]]:
     rows = parse_table(lines, start_label, min_cells=5)
     if not rows:
@@ -360,7 +567,7 @@ def parse_question_blocks(lines: list[str]) -> list[list[str]]:
     current: list[str] = []
 
     for line in lines:
-        if QUESTION_RE.match(normalize_text(line)):
+        if QUESTION_RE.match(normalize_structured_line(line)):
             if current:
                 blocks.append(current)
             current = [line]
@@ -379,7 +586,7 @@ def parse_engine_blocks(lines: list[str]) -> list[list[str]]:
     current: list[str] = []
 
     for line in lines:
-        if H3_RE.match(normalize_text(line)):
+        if H3_RE.match(normalize_structured_line(line)):
             if current:
                 blocks.append(current)
             current = [line]
@@ -398,7 +605,8 @@ def parse_h4_blocks(lines: list[str]) -> list[list[str]]:
     current: list[str] = []
 
     for line in lines:
-        if H4_RE.match(normalize_text(line)):
+        markdown_heading = match_markdown_heading(line, min_level=3)
+        if H4_RE.match(normalize_structured_line(line)) or markdown_heading:
             if current:
                 blocks.append(current)
             current = [line]
@@ -800,7 +1008,7 @@ def parse_how_it_works(section_lines: list[str], variant_name: str) -> dict[str,
     current_card: dict[str, Any] | None = None
 
     for raw_line in section_lines:
-        line = normalize_text(raw_line)
+        line = normalize_structured_line(raw_line)
         if not line or is_noise_line(line):
             continue
 
@@ -885,7 +1093,7 @@ def parse_how_it_works(section_lines: list[str], variant_name: str) -> dict[str,
     current_store: dict[str, list[str]] | None = None
 
     for raw_line in section_lines:
-        line = normalize_text(raw_line)
+        line = normalize_structured_line(raw_line)
         if line.startswith("CARD ") and line.endswith("FRONT:"):
             current_key = line.replace(":", "")
             current_store = card_fronts
@@ -924,7 +1132,7 @@ def parse_how_it_works(section_lines: list[str], variant_name: str) -> dict[str,
         front_h3 = ""
         front_text_parts: list[str] = []
         for line in front_lines:
-            h3_match = H3_RE.match(line)
+            h3_match = H3_RE.match(normalize_structured_line(line))
             if h3_match:
                 front_h3 = h3_match.group("value").strip()
                 continue
@@ -1008,7 +1216,7 @@ def parse_history_timeline(section_lines: list[str]) -> dict[str, Any]:
     intro_lines: list[str] = []
     collecting_intro = False
     for raw_line in section_lines:
-        line = normalize_text(raw_line)
+        line = normalize_structured_line(raw_line)
         if not line or is_noise_line(line):
             continue
         if line.upper().startswith("TAG:") or line.upper().startswith("H2:"):
@@ -1019,7 +1227,7 @@ def parse_history_timeline(section_lines: list[str]) -> dict[str, Any]:
         if collecting_intro and not match_label(line):
             intro_lines.append(line)
 
-    h2 = find_label(section_lines, "H2")
+    h2 = find_label(section_lines, "H2") or first_markdown_heading(section_lines, min_level=2, max_level=2)
     vehicle_title = h2.split(" - ", 1)[0].strip() if " - " in h2 else h2.split(" — ", 1)[0].strip()
     closing_note = find_label(section_lines, "CLOSING LINE") or find_label_variant(section_lines, "CLOSING LINE")
 
@@ -1047,11 +1255,15 @@ def parse_engine_guide(section_lines: list[str]) -> dict[str, Any]:
     if h4_blocks:
         items = []
         for block in h4_blocks:
-            heading_match = H4_RE.match(normalize_text(block[0]))
-            if not heading_match:
+            heading_match = H4_RE.match(normalize_structured_line(block[0]))
+            heading_value = heading_match.group("value").strip() if heading_match else ""
+            if not heading_value:
+                markdown_heading = match_markdown_heading(block[0], min_level=3)
+                heading_value = markdown_heading[1] if markdown_heading else ""
+            if not heading_value:
                 continue
 
-            title = heading_match.group("value").strip()
+            title = heading_value
             code, clean_title = split_dash_pair(title)
             raw_specs = extract_bullets(block[1:], "KEY SPECS")
             specs = []
@@ -1070,7 +1282,7 @@ def parse_engine_guide(section_lines: list[str]) -> dict[str, Any]:
             cost_block: list[str] = []
             collecting_costs = False
             for raw_line in block[1:]:
-                normalized = normalize_text(raw_line)
+                normalized = normalize_structured_line(raw_line)
                 if not normalized:
                     if cost_block:
                         break
@@ -1107,6 +1319,12 @@ def parse_engine_guide(section_lines: list[str]) -> dict[str, Any]:
                 elif not cost_intro:
                     cost_intro = normalized
 
+            common_failure = (
+                " ".join(collect_block(block[1:], "COMMON FAILURE"))
+                or " ".join(collect_block(block[1:], "COMMON FAILURES"))
+                or " ".join(collect_block(block[1:], "COMMON OPERATIONAL CHARACTERISTICS"))
+            )
+
             items.append(
                 {
                     "code": code,
@@ -1114,7 +1332,7 @@ def parse_engine_guide(section_lines: list[str]) -> dict[str, Any]:
                     "specs": specs,
                     "costs": costs,
                     "compatibleTrimLevels": compatible_trim_levels,
-                    "commonFailure": " ".join(collect_block(block[1:], "COMMON FAILURE")),
+                    "commonFailure": common_failure,
                     "cta": find_label(block[1:], "CTA") or find_first_arrow_line(block[1:]),
                     "closing": " ".join(
                         line
@@ -1133,7 +1351,7 @@ def parse_engine_guide(section_lines: list[str]) -> dict[str, Any]:
 
         return {
             "tag": find_label(section_lines, "TAG") or "Compatible Engines",
-            "h2": find_label(section_lines, "H2"),
+            "h2": find_label(section_lines, "H2") or first_markdown_heading(section_lines, min_level=2, max_level=2),
             "sectionTitle": find_label(section_lines, "SECTION TITLE") or "Compatible Engine Codes & Cost Guide",
             "sectionSubtitle": find_label(section_lines, "SECTION SUBTITLE") or "Find your exact engine code, specs and UK replacement cost guide.",
             "intro": items[0].pop("intro", "") if items else "",
@@ -1143,7 +1361,7 @@ def parse_engine_guide(section_lines: list[str]) -> dict[str, Any]:
 
     items = []
     for block in parse_engine_blocks(section_lines):
-        title_match = H3_RE.match(normalize_text(block[0]))
+        title_match = H3_RE.match(normalize_structured_line(block[0]))
         if not title_match:
             continue
 
@@ -1175,7 +1393,7 @@ def parse_engine_guide(section_lines: list[str]) -> dict[str, Any]:
 
     return {
         "tag": "Compatible Engines",
-        "h2": find_label(section_lines, "H2"),
+        "h2": find_label(section_lines, "H2") or first_markdown_heading(section_lines, min_level=2, max_level=2),
         "items": items,
         "closing": " ".join(collect_block(section_lines, "SECTION 4 CLOSING")),
     }
@@ -1184,9 +1402,10 @@ def parse_engine_guide(section_lines: list[str]) -> dict[str, Any]:
 def parse_common_problems(section_lines: list[str], variant_name: str) -> dict[str, Any]:
     h4_blocks = parse_h4_blocks(section_lines)
     if h4_blocks:
+        explicit_intro = find_label(section_lines, "H3") or find_label_variant(section_lines, "H3")
         intro_lines: list[str] = []
         for raw_line in section_lines:
-            normalized = normalize_text(raw_line)
+            normalized = normalize_structured_line(raw_line)
             if not normalized or is_noise_line(normalized):
                 continue
             if normalized.startswith("## "):
@@ -1200,23 +1419,50 @@ def parse_common_problems(section_lines: list[str], variant_name: str) -> dict[s
             intro_lines.append(normalized)
 
         problems = []
+        section_recommendation = " ".join(collect_block(section_lines, "OUR RECOMMENDATION"))
         final_cta_title = ""
         final_cta_paragraph = ""
 
         for block in h4_blocks:
-            heading_match = H4_RE.match(normalize_text(block[0]))
-            if not heading_match:
+            heading_match = H4_RE.match(normalize_structured_line(block[0]))
+            heading_value = heading_match.group("value").strip() if heading_match else ""
+            if not heading_value:
+                markdown_heading = match_markdown_heading(block[0], min_level=3)
+                heading_value = markdown_heading[1] if markdown_heading else ""
+            if not heading_value:
                 continue
 
-            heading = heading_match.group("value").strip()
+            heading = heading_value
             affected = " ".join(collect_block(block[1:], "AFFECTED MODELS")) or " ".join(collect_block(block[1:], "AFFECTED"))
             root_cause = " ".join(collect_block(block[1:], "ROOT CAUSE"))
             repair_options = parse_repair_options(block[1:], "REPAIR OPTIONS")
+            if not repair_options:
+                table_rows = parse_first_table(block[1:], min_cells=5)
+                repair_options = [
+                    {
+                        "tier": row[0],
+                        "dealerPrice": row[1],
+                        "specialistPrice": row[2],
+                        "whatItInvolves": row[3],
+                        "longevity": row[4],
+                    }
+                    for row in table_rows
+                ]
             if repair_options and len(repair_options[0]) == 5:
                 for option in repair_options:
                     option.setdefault("estimatedTime", "")
 
-            if affected or root_cause or repair_options:
+            typical_failure_mileage = " ".join(collect_block(block[1:], "TYPICAL FAILURE MILEAGE"))
+            why_it_happens = " ".join(collect_block(block[1:], "WHY IT HAPPENS"))
+            vehicle_value_check = " ".join(collect_block(block[1:], "VEHICLE VALUE CHECK"))
+            block_recommendation = " ".join(collect_block(block[1:], "OUR RECOMMENDATION"))
+            recommendation = block_recommendation or section_recommendation
+
+            has_structured_problem = bool(
+                root_cause or repair_options or typical_failure_mileage or why_it_happens or vehicle_value_check or block_recommendation
+            )
+
+            if has_structured_problem:
                 for option in repair_options:
                     if len(option) >= 5:
                         continue
@@ -1241,12 +1487,12 @@ def parse_common_problems(section_lines: list[str], variant_name: str) -> dict[s
                         "h4": heading,
                         "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
                         "affectedModels": affected,
-                        "typicalFailureMileage": " ".join(collect_block(block[1:], "TYPICAL FAILURE MILEAGE")),
+                        "typicalFailureMileage": typical_failure_mileage,
                         "rootCause": root_cause,
-                        "whyItHappens": " ".join(collect_block(block[1:], "WHY IT HAPPENS")),
+                        "whyItHappens": why_it_happens,
                         "repairOptions": repair_options,
-                        "vehicleValueCheck": " ".join(collect_block(block[1:], "VEHICLE VALUE CHECK")),
-                        "recommendation": " ".join(collect_block(block[1:], "OUR RECOMMENDATION")),
+                        "vehicleValueCheck": vehicle_value_check,
+                        "recommendation": recommendation,
                         "cta": find_label(block[1:], "CTA") or find_first_arrow_line(block[1:]),
                     }
                 )
@@ -1254,15 +1500,15 @@ def parse_common_problems(section_lines: list[str], variant_name: str) -> dict[s
 
             final_cta_title = heading
             for raw_line in block[1:]:
-                normalized = normalize_text(raw_line)
+                normalized = normalize_structured_line(raw_line)
                 if normalized and not match_label(normalized):
                     final_cta_paragraph = normalized
                     break
 
         return {
             "tag": find_label(section_lines, "TAG") or "Common Problems",
-            "h2": find_label(section_lines, "H2"),
-            "h3": " ".join(intro_lines),
+            "h2": find_label(section_lines, "H2") or first_markdown_heading(section_lines, min_level=2, max_level=2),
+            "h3": explicit_intro or " ".join(intro_lines),
             "problems": problems,
             "emptyState": None,
             "finalCta": {
@@ -1280,7 +1526,7 @@ def parse_common_problems(section_lines: list[str], variant_name: str) -> dict[s
     intro = " ".join(collect_block(section_lines, "INTRO PARAGRAPH"))
 
     for block in parse_engine_blocks(section_lines):
-        heading_match = H3_RE.match(normalize_text(block[0]))
+        heading_match = H3_RE.match(normalize_structured_line(block[0]))
         if not heading_match:
             continue
 
@@ -1294,7 +1540,7 @@ def parse_common_problems(section_lines: list[str], variant_name: str) -> dict[s
         if not has_problem_fields:
             closing_title = heading
             for line in block[1:]:
-                normalized = normalize_text(line)
+                normalized = normalize_structured_line(line)
                 if normalized and not match_label(normalized):
                     closing_paragraph = normalized
                     break
@@ -1315,7 +1561,7 @@ def parse_common_problems(section_lines: list[str], variant_name: str) -> dict[s
 
     return {
         "tag": "Common Problems",
-        "h2": find_label(section_lines, "H2"),
+        "h2": find_label(section_lines, "H2") or first_markdown_heading(section_lines, min_level=2, max_level=2),
         "h3": intro,
         "problems": problems,
         "emptyState": {
@@ -1339,7 +1585,7 @@ def parse_faq(section_lines: list[str], variant_name: str) -> dict[str, Any]:
     if direct_questions:
         items = []
         for block in direct_questions:
-            question_match = QUESTION_RE.match(normalize_text(block[0]))
+            question_match = QUESTION_RE.match(normalize_structured_line(block[0]))
             if not question_match:
                 continue
 
@@ -1348,7 +1594,7 @@ def parse_faq(section_lines: list[str], variant_name: str) -> dict[str, Any]:
             warning = None
             cta = ""
             for raw_line in block[1:]:
-                normalized = normalize_text(raw_line)
+                normalized = normalize_structured_line(raw_line)
                 if not normalized:
                     continue
                 if normalized.startswith("->"):
@@ -1377,7 +1623,7 @@ def parse_faq(section_lines: list[str], variant_name: str) -> dict[str, Any]:
 
         return {
             "tag": find_label(section_lines, "TAG") or "FAQ",
-            "h2": find_label(section_lines, "H2"),
+            "h2": find_label(section_lines, "H2") or first_markdown_heading(section_lines, min_level=2, max_level=2),
             "intro": f"Everything {variant_name} owners usually ask before choosing a rebuilt, reconditioned or used replacement engine.",
             "defaultOpenIndex": 0,
             "disclaimer": " ".join(collect_block(section_lines, "DISCLAIMER")),
@@ -1393,7 +1639,7 @@ def parse_faq(section_lines: list[str], variant_name: str) -> dict[str, Any]:
 
     items = []
     for block in parse_question_blocks(section_lines):
-        question_match = QUESTION_RE.match(normalize_text(block[0]))
+        question_match = QUESTION_RE.match(normalize_structured_line(block[0]))
         if not question_match:
             continue
 
@@ -1424,7 +1670,7 @@ def parse_faq(section_lines: list[str], variant_name: str) -> dict[str, Any]:
 
     return {
         "tag": "FAQs",
-        "h2": find_label(section_lines, "H2"),
+        "h2": find_label(section_lines, "H2") or first_markdown_heading(section_lines, min_level=2, max_level=2),
         "intro": f"Everything {variant_name} owners usually ask before choosing a rebuilt, reconditioned or used replacement engine.",
         "defaultOpenIndex": 0,
         "disclaimer": " ".join(collect_block(section_lines, "DISCLAIMER")),
@@ -1454,7 +1700,7 @@ def parse_trust_cta(section_lines: list[str], variant_name: str) -> dict[str, An
 
         return {
             "tag": find_label(section_lines, "TAG") or "Why Choose Us",
-            "h2": find_label(section_lines, "H2"),
+            "h2": find_label(section_lines, "H2") or first_markdown_heading(section_lines, min_level=2, max_level=2),
             "intro": f"Compare quotes from trusted UK {variant_name} engine specialists with warranty-backed rebuilt, reconditioned and used options nationwide.",
             "points": points,
             "finalText": find_label(section_lines, "CLOSING LINE") or find_label_variant(section_lines, "CLOSING LINE"),
@@ -1473,7 +1719,7 @@ def parse_trust_cta(section_lines: list[str], variant_name: str) -> dict[str, An
 
     return {
         "tag": "Why Choose Us",
-        "h2": find_label(section_lines, "H2"),
+        "h2": find_label(section_lines, "H2") or first_markdown_heading(section_lines, min_level=2, max_level=2),
         "intro": f"Compare quotes from trusted UK {variant_name} engine specialists with warranty-backed rebuilt, reconditioned and used options nationwide.",
         "points": points,
         "finalText": find_label(section_lines, "FINAL CTA LINE"),
@@ -1566,6 +1812,12 @@ def build_output_data(
 
 
 def validate_variant_data(source_path: Path, section_map: dict[int, list[str]], data: dict[str, Any]) -> list[str]:
+    source_lines = read_lines(source_path)
+    if detect_legacy_engine_page_source(source_lines):
+        return [
+            "Legacy engine-page schema detected: source uses live-market / sub-model / engine-types sections instead of the variant-page section 3-7 structure."
+        ]
+
     warnings: list[str] = []
 
     for section_number in range(1, 8):
@@ -1689,7 +1941,7 @@ def collect_input_files(input_path: Path) -> list[Path]:
         return [input_path]
     return sorted(
         path
-        for path in input_path.iterdir()
+        for path in input_path.rglob("*")
         if path.is_file() and path.suffix.lower() in {".txt", ".md", ".markdown"}
     )
 
