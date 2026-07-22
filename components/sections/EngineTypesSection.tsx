@@ -272,15 +272,21 @@ function FlipCard({
 function MobileEngineTypeStack({
   types,
   activeIndex,
+  flippedIndex,
   onSelect,
-  onClose,
+  onFlip,
+  onUnflip,
+  frontActionLabel,
   backActionLabel,
   priceLabel,
 }: {
   types: EngineTypesData["types"];
   activeIndex: number | null;
+  flippedIndex: number | null;
   onSelect: (index: number) => void;
-  onClose: () => void;
+  onFlip: (index: number) => void;
+  onUnflip: () => void;
+  frontActionLabel: string;
   backActionLabel: string;
   priceLabel: string;
 }) {
@@ -292,6 +298,7 @@ function MobileEngineTypeStack({
         {orderedIndexes.map((originalIndex, stackIndex) => {
           const type = types[originalIndex];
           const active = originalIndex === activeIndex;
+          const flipped = originalIndex === flippedIndex;
           const badge = typeBadge(type.title);
           const variant = typeVariant(type.title);
           const price = priceParts(type.priceRange);
@@ -323,7 +330,7 @@ function MobileEngineTypeStack({
                 marginTop: stackIndex === 0 ? 0 : previousIsActive ? 8 : -54,
                 transform: `translateX(${offsetX}px) rotate(${rotate}deg)`,
                 width: `calc(100% - ${widthTrim}px)`,
-                height: active ? 334 : undefined,
+                height: active ? (flipped ? 334 : 218) : undefined,
                 perspective: active ? "1200px" : undefined,
                 WebkitPerspective: active ? "1200px" : undefined,
               }}
@@ -332,7 +339,7 @@ function MobileEngineTypeStack({
                 <div
                   className="relative h-full w-full transition-transform duration-[550ms]"
                   style={{
-                    transform: "rotateY(180deg)",
+                    transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)",
                     transformStyle: "preserve-3d",
                     WebkitTransformStyle: "preserve-3d",
                   }}
@@ -341,7 +348,19 @@ function MobileEngineTypeStack({
                     className="absolute inset-0"
                     style={{ backfaceVisibility: "hidden", WebkitBackfaceVisibility: "hidden" }}
                   >
-                    <div className="flex h-full w-full flex-col rounded-[10px] border border-[#d8e6f5] bg-[linear-gradient(180deg,#ffffff_0%,#edf7ff_100%)] shadow-[0_8px_18px_rgba(13,27,46,0.07)]">
+                    <div
+                      role="button"
+                      tabIndex={0}
+                      onClick={() => onFlip(originalIndex)}
+                      onKeyDown={(event) => {
+                        if (event.key === "Enter" || event.key === " ") {
+                          event.preventDefault();
+                          onFlip(originalIndex);
+                        }
+                      }}
+                      className="flex h-full w-full cursor-pointer flex-col rounded-[10px] border border-[#d8e6f5] bg-[linear-gradient(180deg,#ffffff_0%,#edf7ff_100%)] shadow-[0_8px_18px_rgba(13,27,46,0.07)]"
+                      aria-expanded={!flipped}
+                    >
                       <div className="flex items-start gap-3 px-3 py-3">
                         <span className="flex h-11 w-11 flex-none items-center justify-center rounded-full bg-[#e8f4fd] text-[#0d1b2e]">
                           {icon}
@@ -354,6 +373,52 @@ function MobileEngineTypeStack({
                             {frontDescription}
                           </span>
                         </span>
+                      </div>
+
+                      <div className="mx-3">
+                        <div className="h-px bg-[#d8e6f5]" />
+                      </div>
+
+                      <div className="px-3 pb-3 pt-3">
+                        <div className="grid grid-cols-[minmax(145px,1fr)_1px_minmax(0,1fr)] items-center gap-3">
+                          <div className="min-w-0">
+                            <div className="text-[10.5px] font-medium leading-[1.2] text-[#64748b]">
+                              {priceDisplayLabel(priceLabel || price.label)}
+                            </div>
+                            <div className="mt-1 whitespace-nowrap font-['Manrope'] text-[16px] font-extrabold leading-[1.1] text-[#0d1b2e]">
+                              {price.main}
+                            </div>
+                            {price.note ? (
+                              <div className="mt-0.5 whitespace-nowrap text-[9px] font-semibold leading-[1.2] text-[#64748b]">
+                                ({price.note})
+                              </div>
+                            ) : null}
+                          </div>
+                          <div className="h-10 w-px bg-[#d7dde5]" />
+                          <div className="flex min-w-0 flex-col items-start gap-2 pl-1">
+                            <a
+                              href="#quote-form"
+                              data-quote-context={type.title}
+                              data-quote-source="engine-types-mobile-stack"
+                              className="inline-flex min-w-0 items-center justify-between gap-2 text-[10px] font-semibold uppercase leading-[1.28] text-[#059669] transition-colors hover:text-[#047857]"
+                              onClick={(event) => event.stopPropagation()}
+                            >
+                              <span className="min-w-0">{type.cta}</span>
+                              <TbArrowRight className="h-3.5 w-3.5 flex-none" />
+                            </a>
+                            <button
+                              type="button"
+                              onClick={(event) => {
+                                event.stopPropagation();
+                                onFlip(originalIndex);
+                              }}
+                              className="inline-flex items-center gap-1 text-[9px] font-bold uppercase tracking-[0.04em] text-[#0d1b2e]/70 transition-colors hover:text-[#0d1b2e]"
+                            >
+                              <TbRefresh className="h-3.5 w-3.5" />
+                              <span>{frontActionLabel}</span>
+                            </button>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -375,7 +440,7 @@ function MobileEngineTypeStack({
                           type="button"
                           onClick={(event) => {
                             event.stopPropagation();
-                            onClose();
+                            onUnflip();
                           }}
                           className="inline-flex items-center gap-1 text-[8.5px] font-bold text-[#94a3b8] transition-colors hover:text-white"
                         >
@@ -502,13 +567,11 @@ export default function EngineTypesSection({
   const isDocumentMode = displayMode === "document";
   const useFullBleedDocumentLayout = documentMode || isDocumentMode;
   const lastCardIndex = data.types.length - 1;
-  const defaultModelCardIndex = lastCardIndex >= 0 ? lastCardIndex : 0;
   const [openIndex, setOpenIndex] = useState<number | null>(() =>
     useFullBleedDocumentLayout && lastCardIndex >= 0 ? lastCardIndex : null,
   );
-  const [activeMobileCard, setActiveMobileCard] = useState<number | null>(() =>
-    useFullBleedDocumentLayout ? defaultModelCardIndex : null,
-  );
+  const [activeMobileCard, setActiveMobileCard] = useState<number | null>(null);
+  const [flippedMobileCard, setFlippedMobileCard] = useState<number | null>(null);
   const [isClosingExpanded, setIsClosingExpanded] = useState(false);
   const [uniformHeight, setUniformHeight] = useState(228);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -536,12 +599,21 @@ export default function EngineTypesSection({
   }, [data.types, openIndex]);
 
   const handleMobileSelect = (index: number) => {
-    setActiveMobileCard((current) => (current === index ? null : index));
+    setActiveMobileCard(index);
+    setFlippedMobileCard(null);
   };
 
   const handleFlipToggle = (index: number) => {
     setOpenIndex((current) => (current === index ? null : index));
+  };
+
+  const handleMobileFlip = (index: number) => {
     setActiveMobileCard(index);
+    setFlippedMobileCard(index);
+  };
+
+  const handleMobileUnflip = () => {
+    setFlippedMobileCard(null);
   };
 
   return (
@@ -607,8 +679,11 @@ export default function EngineTypesSection({
         <MobileEngineTypeStack
           types={data.types}
           activeIndex={activeMobileCard}
+          flippedIndex={flippedMobileCard}
           onSelect={handleMobileSelect}
-          onClose={() => setActiveMobileCard(null)}
+          onFlip={handleMobileFlip}
+          onUnflip={handleMobileUnflip}
+          frontActionLabel={isDocumentMode ? (ui.frontActionLabel || "") : (ui.frontActionLabel ?? "What is it?")}
           backActionLabel={isDocumentMode ? (ui.backActionLabel || "") : (ui.backActionLabel ?? "Flip back")}
           priceLabel={isDocumentMode ? (ui.priceLabel || "") : (ui.priceLabel ?? "Typical price range")}
         />

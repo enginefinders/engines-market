@@ -398,7 +398,10 @@ export default function LiveMarketPricesSection({
   const headingLines = data.headingLines?.length ? data.headingLines : [data.h2];
   const sectionImage = imageSrc || "";
   const gridClass = "lg:grid-cols-[1.05fr_0.95fr] lg:items-stretch";
-  const imageColumnClass = "relative w-full min-h-[350px] lg:min-h-[410px]";
+  const imageColumnClass = "w-full lg:h-full";
+  const imageFrameClass = isDocumentMode
+    ? "overflow-hidden rounded-[14px] border border-[#dce6f3] bg-[linear-gradient(180deg,#ffffff_0%,#f3f8ff_100%)] shadow-[0_10px_28px_rgba(13,27,46,0.08)]"
+    : "";
   const brandImageClass = "h-full min-h-[320px] w-full object-center lg:min-h-[370px]";
   const feedColumnClass = isDocumentMode
     ? "min-w-0 lg:flex lg:h-full lg:flex-col lg:min-h-[410px]"
@@ -455,15 +458,18 @@ export default function LiveMarketPricesSection({
         <div className={`mt-6 grid gap-5 ${gridClass}`}>
           {isDocumentMode ? (
             <div className={imageColumnClass}>
-              {sectionImage ? (
-                <Image
-                  src={sectionImage}
-                  alt={data.imageAlt ?? ""}
-                  fill
-                  className="object-contain object-center"
-                  sizes={imageSizes}
-                />
-              ) : null}
+              <div className={imageFrameClass}>
+                {sectionImage ? (
+                  <Image
+                    src={sectionImage}
+                    alt={data.imageAlt ?? ""}
+                    width={960}
+                    height={1280}
+                    className="h-auto w-full object-contain"
+                    sizes={imageSizes}
+                  />
+                ) : null}
+              </div>
             </div>
           ) : sectionImage ? (
             <Image
