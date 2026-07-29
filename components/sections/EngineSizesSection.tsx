@@ -48,41 +48,26 @@ function brandNameLabel(brandName: string, sizeTitle: string, kind: FuelKind) {
 
 function FuelTabIcon({ kind }: { kind: FuelKind }) {
   if (kind === "petrol") {
-    return (
-      <svg viewBox="0 0 24 24" className="h-[14px] w-[14px]" fill="none" aria-hidden="true">
-        <polygon
-          points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-    );
+    return <img src="/icons/engine-market/dark-blue-petrol-engine.png" alt="" aria-hidden="true" className="h-[16px] w-[16px] object-contain" loading="lazy" />;
   }
 
   if (kind === "hybrid") {
-    return (
-      <svg viewBox="0 0 24 24" className="h-[14px] w-[14px]" fill="none" aria-hidden="true">
-        <path
-          d="M5 17H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v9a2 2 0 0 1-2 2h-5"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <polyline points="14 15 17 18 14 21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-        <line x1="17" y1="18" x2="9" y2="18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-      </svg>
-    );
+    return <img src="/icons/engine-market/dark-blue-hybrid-engine.png" alt="" aria-hidden="true" className="h-[16px] w-[16px] object-contain" loading="lazy" />;
   }
 
-  return (
-    <svg viewBox="0 0 24 24" className="h-[14px] w-[14px]" fill="none" aria-hidden="true">
-      <rect x="3" y="7" width="18" height="10" rx="2" stroke="currentColor" strokeWidth="2" />
-      <path d="M8 7V5h8v2M6 10h2M16 10h2M12 7v10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-    </svg>
-  );
+  return <img src="/icons/engine-market/dark-blue-diesel-engine.png" alt="" aria-hidden="true" className="h-[16px] w-[16px] object-contain" loading="lazy" />;
+}
+
+function ActiveFuelTabIcon({ kind }: { kind: FuelKind }) {
+  if (kind === "petrol") {
+    return <img src="/icons/engine-market/white-petrol-engine.png" alt="" aria-hidden="true" className="h-[16px] w-[16px] object-contain" loading="lazy" />;
+  }
+
+  if (kind === "hybrid") {
+    return <img src="/icons/engine-market/white-hybrid-engine.png" alt="" aria-hidden="true" className="h-[16px] w-[16px] object-contain" loading="lazy" />;
+  }
+
+  return <img src="/icons/engine-market/white-diesel-engine.png" alt="" aria-hidden="true" className="h-[16px] w-[16px] object-contain" loading="lazy" />;
 }
 
 function ArrowIcon() {
@@ -283,7 +268,7 @@ export default function EngineSizesSection({
   const activeKind = tagVariant(activeGroup?.title ?? "diesel");
 
   return (
-    <Section className="relative overflow-hidden bg-[#f8f9fa]">
+    <Section className="relative overflow-hidden bg-[#f8f9fa] max-[720px]:pt-4">
       {bgImage ? (
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
           <div
@@ -317,7 +302,7 @@ export default function EngineSizesSection({
         <div className="mt-5">
           <div className="max-[720px]:mx-[-16px]">
           <div className="overflow-hidden rounded-[6px] border border-[#d9e1ea] bg-white shadow-[0_4px_12px_rgba(13,27,46,0.05)] max-[720px]:rounded-none max-[720px]:border-x-0">
-            <div className="flex items-stretch divide-x divide-[#d9e1ea]">
+            <div className="grid items-stretch bg-[#d9e1ea]" style={{ gridTemplateColumns: `repeat(${groups.length}, minmax(0, 1fr))` }}>
               {groups.map((group, index) => {
                 const isActive = index === activeGroupIndex;
                 const kind = tagVariant(group.title);
@@ -331,13 +316,16 @@ export default function EngineSizesSection({
                       setActiveGroupIndex(index);
                       setOpenItemIndex(0);
                     }}
-                    className={`relative flex min-h-[42px] basis-0 flex-1 items-center justify-center px-2 py-[10px] font-['Manrope'] text-[11px] font-bold uppercase tracking-[0.02em] transition-all duration-200 md:min-h-[44px] md:px-4 md:py-[11px] md:text-[12px] ${
+                    className={`relative flex min-h-[42px] items-center justify-center px-2 py-[10px] font-['Manrope'] text-[11px] font-bold uppercase tracking-[0.02em] transition-all duration-200 md:min-h-[44px] md:px-4 md:py-[11px] md:text-[12px] ${
                       isActive
                         ? "z-10 bg-[linear-gradient(180deg,#173a6d_0%,#0c213f_100%)] text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.26),inset_0_-1px_0_rgba(6,18,35,0.85),0_0_0_1px_rgba(45,107,255,0.45),0_0_20px_rgba(45,107,255,0.45),0_8px_18px_rgba(17,47,95,0.32)] before:absolute before:inset-x-0 before:top-0 before:h-[42%] before:bg-[linear-gradient(180deg,rgba(255,255,255,0.2),rgba(255,255,255,0))] before:content-['']"
                         : "bg-white text-[#22324a] shadow-none hover:bg-[#f8fafc]"
                     }`}
                   >
-                    <span className="truncate">{shortLabel}</span>
+                    <span className="inline-flex items-center gap-1.5 truncate">
+                      {isActive ? <ActiveFuelTabIcon kind={kind} /> : <FuelTabIcon kind={kind} />}
+                      <span className="truncate">{shortLabel}</span>
+                    </span>
                   </button>
                 );
               })}

@@ -294,7 +294,7 @@ function MobileEngineTypeStack({
 
   return (
     <div className="mt-[18px] md:hidden">
-      <div className="relative mx-auto max-w-[520px] overflow-visible px-[2px] pb-8">
+      <div className="relative mx-auto max-w-[520px] overflow-visible px-[2px] pb-4">
         {orderedIndexes.map((originalIndex, stackIndex) => {
           const type = types[originalIndex];
           const active = originalIndex === activeIndex;
@@ -569,7 +569,9 @@ export default function EngineTypesSection({
   const [openIndex, setOpenIndex] = useState<number | null>(() =>
     useFullBleedDocumentLayout && lastCardIndex >= 0 ? lastCardIndex : null,
   );
-  const [activeMobileCard, setActiveMobileCard] = useState<number | null>(null);
+  const [activeMobileCard, setActiveMobileCard] = useState<number | null>(() =>
+    useFullBleedDocumentLayout && lastCardIndex >= 0 ? lastCardIndex : null,
+  );
   const [flippedMobileCard, setFlippedMobileCard] = useState<number | null>(null);
   const [isClosingExpanded, setIsClosingExpanded] = useState(false);
   const [uniformHeight, setUniformHeight] = useState(228);
@@ -616,7 +618,7 @@ export default function EngineTypesSection({
   };
 
   return (
-    <Section id={sectionId} className="relative overflow-hidden bg-[#f8fafc]">
+    <Section id={sectionId} className="relative overflow-hidden bg-[#f8fafc] max-[720px]:pb-3">
       <style jsx>{`
         .scrollbar-dark::-webkit-scrollbar {
           width: 6px;
@@ -708,7 +710,7 @@ export default function EngineTypesSection({
         </div>
 
         {isDocumentMode ? (
-          <div className="mt-4 text-[12.5px] leading-[1.75] text-[#4b5563] lg:text-center lg:text-[13px]">
+          <div className="mt-3 text-[12.5px] leading-[1.75] text-[#4b5563] lg:text-center lg:text-[13px]">
             <p
               style={
                 isClosingExpanded

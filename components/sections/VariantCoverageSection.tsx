@@ -420,7 +420,7 @@ export default function VariantCoverageSection({
                         type="button"
                         onClick={() => toggleCard(card.slug)}
                         aria-expanded={isOpen}
-                        className="flex h-[214px] w-full flex-col items-center px-3 pb-3 pt-2.5 text-center"
+                        className="flex h-[224px] w-full flex-col items-center px-3 pb-4 pt-3 text-center"
                       >
                         <div className="flex min-h-[82px] w-full items-center justify-center py-[1px]">
                           <div className="relative h-[84px] w-full max-w-[132px]">
@@ -446,7 +446,7 @@ export default function VariantCoverageSection({
                           </p>
                         </div>
 
-                        <span className="mt-1 inline-flex text-[#15803d]">
+                        <span className="mt-2 inline-flex text-[#15803d]">
                           <ChevronIcon open={isOpen} animated={animateChevron} />
                         </span>
                       </button>

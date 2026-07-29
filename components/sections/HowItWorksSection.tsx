@@ -168,7 +168,7 @@ export default function HowItWorksSection({ data, bgImage, sectionId, flush = fa
             const isComparisonCard = card.number === 2;
 
             return (
-              <div key={card.number} className="perspective-1000 min-h-[258px] sm:min-h-[276px] xl:min-h-[296px]">
+              <div key={card.number} className="perspective-1000 min-h-[306px] sm:min-h-[320px] lg:min-h-[276px] xl:min-h-[296px]">
                 <button
                   type="button"
                   onClick={() => setActiveStep(flipped ? null : card.number)}
@@ -177,10 +177,10 @@ export default function HowItWorksSection({ data, bgImage, sectionId, flush = fa
                   aria-label={`${flipped ? "Hide details for" : "Show details for"} step ${card.number}`}
                 >
                   <div
-                    className={`relative h-full min-h-[258px] rounded-[18px] transition duration-500 [transform-style:preserve-3d] lg:min-h-[276px] xl:min-h-[296px] ${flipped ? "[transform:rotateY(180deg)]" : ""
+                    className={`relative h-full min-h-[306px] rounded-[18px] transition duration-500 [transform-style:preserve-3d] sm:min-h-[320px] lg:min-h-[276px] xl:min-h-[296px] ${flipped ? "[transform:rotateY(180deg)]" : ""
                       }`}
                   >
-                    <div className="absolute inset-0 flex h-full flex-col overflow-hidden rounded-[18px] border border-[#dbe4ef] bg-white px-2.5 pb-4 pt-4 shadow-[0_18px_40px_rgba(13,27,46,0.08)] [backface-visibility:hidden] text-center sm:px-4 sm:pb-5 sm:pt-5">
+                    <div className="absolute inset-0 flex h-full flex-col overflow-hidden rounded-[18px] border border-[#dbe4ef] bg-white px-3 pb-5 pt-4 shadow-[0_18px_40px_rgba(13,27,46,0.08)] [backface-visibility:hidden] text-center sm:px-4 sm:pb-5 sm:pt-5">
                       <span className="mt-0 hidden font-['Manrope'] text-left text-2xl font-extrabold uppercase tracking-[0.18em] text-gray-400 md:block">
                         0{card.number}
                       </span>
@@ -188,7 +188,7 @@ export default function HowItWorksSection({ data, bgImage, sectionId, flush = fa
                       <div
                         className={`mx-auto mt-0 flex items-center justify-center rounded-[14px] p-1 ${
                           isRegistrationCard
-                            ? "h-[126px] w-[246px] md:h-[132px] md:w-[248px]"
+                            ? "h-[154px] w-[300px] md:h-[146px] md:w-[286px]"
                             : isComparisonCard
                               ? "h-[122px] w-[122px] md:h-[130px] md:w-[130px]"
                               : "h-[116px] w-[116px] md:h-[124px] md:w-[124px]"
@@ -199,7 +199,7 @@ export default function HowItWorksSection({ data, bgImage, sectionId, flush = fa
                           alt={`Step ${card.number} icon`}
                           className={
                             isRegistrationCard
-                              ? "h-[108px] w-[220px] object-contain md:h-[114px] md:w-[224px]"
+                              ? "h-[142px] w-[286px] object-contain scale-[1.16] md:h-[132px] md:w-[268px]"
                               : isComparisonCard
                                 ? "h-[108px] w-[108px] object-contain md:h-[114px] md:w-[114px]"
                                 : "h-[102px] w-[102px] object-contain md:h-[108px] md:w-[108px]"
@@ -215,7 +215,7 @@ export default function HowItWorksSection({ data, bgImage, sectionId, flush = fa
                         {card.front.text}
                       </p>
 
-                      <span className="ml-auto mt-auto inline-flex items-center gap-2 px-1 pt-3 text-[13px] font-bold text-[#15803d]">
+                      <span className="ml-auto mt-auto inline-flex items-center gap-2 px-1 pt-4 text-[13px] font-bold text-[#15803d]">
                         <span>See how it works</span>
                         <ArrowIcon />
                       </span>

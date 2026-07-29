@@ -27,14 +27,6 @@ function splitFinalCtaText(text: string) {
   };
 }
 
-function CheckIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" aria-hidden="true">
-      <path d="m6 12 4 4 8-8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
-
 function ShieldIcon() {
   return (
     <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" aria-hidden="true">
@@ -79,18 +71,36 @@ function PhoneIcon() {
   );
 }
 
-function getTrustIcon(title: string) {
+type TrustIconAsset = {
+  src?: string;
+  alt: string;
+  fallback: () => JSX.Element;
+};
+
+function getTrustIcon(title: string): TrustIconAsset {
   const normalized = title.toLowerCase();
 
   if (normalized.includes("compare")) {
-    return CompareIcon;
+    return {
+      src: "/icons/engine-market/accent-variant-directory.png",
+      alt: "Variant directory icon",
+      fallback: CompareIcon,
+    };
   }
 
   if (normalized.includes("service") || normalized.includes("supply")) {
-    return DeliveryIcon;
+    return {
+      src: "/icons/engine-market/accent-nationwide-delivery.png",
+      alt: "Nationwide delivery icon",
+      fallback: DeliveryIcon,
+    };
   }
 
-  return ShieldIcon;
+  return {
+    src: "/icons/engine-market/accent-warranty-minimum-standard.png",
+    alt: "Warranty minimum standard icon",
+    fallback: ShieldIcon,
+  };
 }
 
 export default function TrustCtaSection({
@@ -160,12 +170,23 @@ export default function TrustCtaSection({
 
               <div className="mt-3.5 grid gap-2 sm:grid-cols-3">
                 {data.points.map((point, index) => {
-                  const Icon = getTrustIcon(point.title);
+                  const trustIcon = getTrustIcon(point.title);
+                  const FallbackIcon = trustIcon.fallback;
 
                   return (
                     <div key={`${point.title}-${index}`} className="rounded-2xl border border-white/10 bg-white/[0.06] px-3 py-2.5">
                       <div className="flex items-center gap-2 text-green-300">
-                        <Icon />
+                        {trustIcon.src ? (
+                          <Image
+                            src={trustIcon.src}
+                            alt={trustIcon.alt}
+                            width={16}
+                            height={16}
+                            className="h-4 w-4 object-contain"
+                          />
+                        ) : (
+                          <FallbackIcon />
+                        )}
                         {showPointLabel && pointLabel ? <p className="text-label text-green-300">{pointLabel}</p> : null}
                       </div>
                       <p className="mt-1.5 text-[0.8rem] font-bold leading-5 text-white">{point.title}</p>

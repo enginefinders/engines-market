@@ -326,8 +326,8 @@ export default function ModelEngineCodesSection({ data, guide, modelName, strict
     ? "py-[36px] px-0 pb-[52px] md:py-[40px] md:px-0 md:pb-[56px] max-[720px]:px-[12px] max-[720px]:pb-[4px] max-[720px]:pt-[20px]"
     : "py-[42px] px-[18px] pb-[64px] md:py-[42px] md:px-[18px] md:pb-[64px] max-[720px]:px-[12px] max-[720px]:pb-[10px] max-[720px]:pt-[20px]";
   const tabShellClass = documentMode
-    ? "max-w-[1240px] mx-auto px-0 max-[720px]:mx-[-16px] max-[720px]:px-0"
-    : "max-w-[1240px] mx-auto px-[18px] max-[720px]:mx-[-16px] max-[720px]:px-0";
+    ? "max-w-[1240px] mx-auto px-0 max-[720px]:mx-[-12px] max-[720px]:px-0"
+    : "max-w-[1240px] mx-auto px-[18px] max-[720px]:mx-[-12px] max-[720px]:px-0";
   const contentShellClass = documentMode
     ? "py-[34px] px-0 pb-[54px] max-[720px]:px-[12px] max-[720px]:pt-[4px] max-[720px]:pb-[18px]"
     : "py-[42px] px-[18px] pb-[64px] max-[720px]:px-[12px] max-[720px]:pt-[10px] max-[720px]:pb-[18px]";
@@ -386,14 +386,17 @@ export default function ModelEngineCodesSection({ data, guide, modelName, strict
         <Container className={sectionContainerClass}>
           <div className={tabShellClass}>
             <div className="overflow-hidden rounded-[6px] border border-[#d9e1ea] bg-white shadow-[0_4px_12px_rgba(13,27,46,0.05)] max-[720px]:rounded-none max-[720px]:border-x-0">
-              <div className="flex items-stretch divide-x divide-[#d9e1ea]">
+              <div
+                className="grid items-stretch bg-[#d9e1ea]"
+                style={{ gridTemplateColumns: `repeat(${renderableGroups.length}, minmax(0, 1fr))` }}
+              >
                 {renderableGroups.map((entry, index) => {
                   const isActive = index === safeActiveIndex;
                   return (
                     <button
                       key={entry.group.name}
                       type="button"
-                      className={`relative flex min-h-[48px] min-w-0 basis-0 flex-1 items-center justify-center gap-[9px] px-[12px] py-[12px] text-[13px] font-bold tracking-[0.02em] transition-all duration-200 max-[420px]:gap-[7px] max-[420px]:px-[6px] max-[420px]:text-[11px] ${
+                      className={`relative flex min-h-[48px] min-w-0 items-center justify-center gap-[9px] px-[12px] py-[12px] text-[13px] font-bold tracking-[0.02em] transition-all duration-200 max-[420px]:gap-[7px] max-[420px]:px-[6px] max-[420px]:text-[11px] ${
                         isActive
                           ? "z-10 bg-[linear-gradient(180deg,#173a6d_0%,#0c213f_100%)] text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.26),inset_0_-1px_0_rgba(6,18,35,0.85),0_0_0_1px_rgba(45,107,255,0.45),0_0_20px_rgba(45,107,255,0.45),0_8px_18px_rgba(17,47,95,0.32)] before:absolute before:inset-x-0 before:top-0 before:h-[42%] before:bg-[linear-gradient(180deg,rgba(255,255,255,0.2),rgba(255,255,255,0))] before:content-['']"
                           : "bg-white text-[#22324a] shadow-none hover:bg-[#f8fafc]"
