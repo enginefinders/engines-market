@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { ReactElement } from "react";
 import { CtaStrip } from "@/components/ui/CalloutCards";
 import Section from "@/components/ui/Section";
 import type { TrustCtaData } from "@/types/brand";
@@ -74,7 +75,7 @@ function PhoneIcon() {
 type TrustIconAsset = {
   src?: string;
   alt: string;
-  fallback: () => JSX.Element;
+  fallback: () => ReactElement;
 };
 
 function getTrustIcon(title: string): TrustIconAsset {
