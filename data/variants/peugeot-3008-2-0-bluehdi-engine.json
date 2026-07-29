@@ -14,8 +14,8 @@
     "storageSlug": "peugeot-3008-2-0-bluehdi-engine"
   },
   "seo": {
-    "title": "Peugeot 3008 2.0 BlueHDi Engine Replacement - Compare Prices & Save",
-    "description": "Get quotes today from trusted UK Peugeot 3008 2.0 BlueHDi specialists. Compare prices on reconditioned, rebuilt and used DW10FC engines - supply & fit available nationwide.",
+    "title": "Peugeot 3008 2.0 BlueHDi Engine Replacement | Compare Prices",
+    "description": "Peugeot 3008 2.0 BlueHDi engine replacement cost guide. Compare rebuilt, reconditioned & used DW10FC diesel engine prices from £1,200. 12-month warranty & UK supply fit specialists.",
     "canonical": "/peugeot/3008/2-0-bluehdi-engine"
   },
   "assets": {
@@ -25,12 +25,174 @@
     "howItWorksBg": "/images/brands/peugeot/brand/peugeot-how-it-works-bg.webp",
     "ctaImage": "/images/brands/peugeot/models/peugeot-3008-model-card.png"
   },
-  "structuredData": null,
+  "structuredData": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.enginesmarket.co.uk/#website",
+        "url": "https://www.enginesmarket.co.uk/",
+        "name": "Engines Market",
+        "publisher": {
+          "@id": "https://www.enginesmarket.co.uk/#organization"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.enginesmarket.co.uk/#organization",
+        "name": "Engines Market",
+        "url": "https://www.enginesmarket.co.uk/",
+        "logo": "https://www.enginesmarket.co.uk/images/logo.png",
+        "sameAs": [
+          "https://www.facebook.com/enginesmarket",
+          "https://x.com/EnginesMarket",
+          "https://www.instagram.com/enginesmarketuk/",
+          "https://www.tiktok.com/@enginesmarket"
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.enginesmarket.co.uk/peugeot/3008/2-0-bluehdi-engine/#webpage",
+        "url": "https://www.enginesmarket.co.uk/peugeot/3008/2-0-bluehdi-engine/",
+        "name": "Peugeot 3008 2.0 BlueHDi Engine Replacement - Compare Prices & Get Quotes",
+        "description": "Peugeot 3008 2.0 BlueHDi engine replacement cost guide. Compare rebuilt, reconditioned & used DW10FC diesel engine prices from £1,200. 12-month warranty & UK supply fit specialists.",
+        "isPartOf": {
+          "@id": "https://www.enginesmarket.co.uk/#website"
+        },
+        "about": [
+          {
+            "@type": "Car",
+            "name": "Peugeot 3008 2.0 BlueHDi",
+            "brand": {
+              "@type": "Brand",
+              "name": "Peugeot"
+            },
+            "model": "3008 2.0 BlueHDi"
+          },
+          {
+            "@type": "Service",
+            "name": "Peugeot 3008 2.0 BlueHDi Engine Replacement"
+          }
+        ],
+        "mainEntity": {
+          "@id": "https://www.enginesmarket.co.uk/peugeot/3008/2-0-bluehdi-engine/#service"
+        },
+        "breadcrumb": {
+          "@id": "https://www.enginesmarket.co.uk/peugeot/3008/2-0-bluehdi-engine/#breadcrumb"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.enginesmarket.co.uk/peugeot/3008/2-0-bluehdi-engine/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.enginesmarket.co.uk/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Peugeot",
+            "item": "https://www.enginesmarket.co.uk/peugeot/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Peugeot 3008",
+            "item": "https://www.enginesmarket.co.uk/peugeot/3008/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Peugeot 3008 2.0 BlueHDi",
+            "item": "https://www.enginesmarket.co.uk/peugeot/3008/2-0-bluehdi-engine/"
+          }
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://www.enginesmarket.co.uk/peugeot/3008/2-0-bluehdi-engine/#service",
+        "name": "Peugeot 3008 2.0 BlueHDi Engine Replacement Service",
+        "serviceType": [
+          "Peugeot 3008 2.0 BlueHDi Engine Replacement",
+          "Reconditioned Peugeot 3008 2.0 BlueHDi Engines",
+          "Used Peugeot 3008 2.0 BlueHDi Engines",
+          "Peugeot 3008 2.0 BlueHDi Engine Supply and Fit",
+          "Peugeot 3008 2.0 BlueHDi Engine Price Comparison"
+        ],
+        "provider": {
+          "@id": "https://www.enginesmarket.co.uk/#organization"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        "url": "https://www.enginesmarket.co.uk/peugeot/3008/2-0-bluehdi-engine/",
+        "description": "Peugeot 3008 2.0 BlueHDi engine replacement cost guide. Compare rebuilt, reconditioned & used DW10FC diesel engine prices from £1,200. 12-month warranty & UK supply fit specialists."
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.enginesmarket.co.uk/peugeot/3008/2-0-bluehdi-engine/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does a Peugeot 3008 2.0 BlueHDi engine replacement cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A rebuilt Peugeot 3008 2.0 BlueHDi engine typically costs £1,900-£3,500 supply-only, depending on power output and supplier. DW10FC 150hp units start around £1,900, while 180hp units range £2,000-£3,500. The older DW10BTED4 (RHR) units range £1,800-£3,200. Used engines start from £1,200. Supply & fit adds £400-£900 labour. Main dealer replacement can exceed £6,500."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What are the most common Peugeot 3008 2.0 BlueHDi engine problems?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The most common Peugeot 3008 2.0 BlueHDi (DW10FC) engine problems are DPF regeneration failure causing loss of power and limp mode, EGR cooler failure causing coolant loss and white smoke, injector seal wear causing oil dilution, and AdBlue system faults triggering countdowns. The 2.0 BlueHDi is generally more robust than the 1.6L unit but shares emissions system vulnerabilities."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is it worth replacing the engine on a Peugeot 3008 2.0 BlueHDi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Replacing a Peugeot 3008 2.0 BlueHDi engine is worthwhile if the vehicle is otherwise sound. A rebuilt unit costs £1,900-£3,500 versus £6,000-£18,000 for a comparable used 3008. With dealer replacement potentially exceeding £6,500, specialist rebuilt units offer significant savings. The 2.0 BlueHDi's strong torque and towing capability make it a desirable engine - replacement often makes sense for well-maintained GT and Allure trims."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does a Peugeot 3008 2.0 BlueHDi engine last?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "With proper maintenance, the Peugeot 3008 2.0 BlueHDi (DW10FC) engine typically reaches 150,000-200,000 miles. Regular oil changes, DPF-friendly driving (regular motorway runs) and AdBlue system maintenance are essential for longevity. The DW10 family is generally considered one of the most reliable diesel engines in the Peugeot range, with many examples exceeding 200,000 miles."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What's the difference between Peugeot 3008 2.0 BlueHDi and 2.0 HDi engines?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The 2.0 BlueHDi (DW10FC) is a Euro 6 diesel introduced in 2016, featuring AdBlue (SCR) for lower NOx emissions. The 2.0 HDi (DW10BTED4/RHR) is a Euro 5 diesel from 2009-2016 without AdBlue. Both use the same 2.0L (1,997cc) DW10 architecture, but the BlueHDi has more complex emissions hardware and is generally more fuel-efficient. The BlueHDi is also more sensitive to short-journey driving patterns due to its DPF and AdBlue systems."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I find my Peugeot 3008 2.0 BlueHDi engine code?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Your Peugeot 3008 2.0 BlueHDi engine code is DW10FC (RHE) for second-generation models (2016-2024) or DW10BTED4 (RHR) for first-generation models (2009-2016). It appears on the VIN plate under the bonnet, stamped on the engine block, or on your V5C registration document section D.2. Enter your reg above for instant verification."
+            }
+          }
+        ]
+      }
+    ]
+  },
   "sections": {
     "hero": {
-      "tag": "Peugeot ENGINE MARKETPLACE",
-      "h1": "Peugeot 3008 2.0 BlueHDi Engine Replacement - Compare Prices & Save",
-      "subheading": "Get quotes today from trusted UK Peugeot 3008 2.0 BlueHDi specialists. Compare prices on reconditioned, rebuilt and used DW10FC engines - supply & fit available nationwide.",
+      "tag": "PEUGEOT 3008 2.0 BLUEHDI SPECIALISTS",
+      "h1": "Peugeot 3008 2.0 BlueHDi Engine Replacement - Compare Prices & Get Quotes",
+      "subheading": "Get quotes today from trusted UK Peugeot 3008 2.0 BlueHDi engine specialists. Compare prices on reconditioned, rebuilt and used DW10FC and RHE diesel units - supply & fit available with a minimum 12-month warranty.",
       "trustBadges": [
         "Supply & Fit Available",
         "12-Month Warranty",
@@ -44,10 +206,10 @@
       "highlights": [
         {
           "title": "Peugeot 3008 2.0 BlueHDi Engine",
-          "price": "[DW10FC BlueHDi engine image] 3008 2.0 BlueHDi Engines - from £1,800 to £3,500",
-          "line1": "[DW10FC BlueHDi engine image] 3008 2.0 BlueHDi Engines - from £1,800 to £3,500",
-          "line2": "-> Rebuilt units from £1,800 · Common codes: DW10FC, RHE, RHF",
-          "detail": "-> Rebuilt units from £1,800 · Common codes: DW10FC, RHE, RHF",
+          "price": "DW10FC / RHE 2.0 BlueHDi - from £1,300 to £3,500",
+          "line1": "DW10FC / RHE 2.0 BlueHDi - from £1,300 to £3,500",
+          "line2": "-> Used from £1,300 · Reconditioned from £1,800 · Common codes: DW10FC, RHE, DW10BTED4, RHR",
+          "detail": "-> Used from £1,300 · Reconditioned from £1,800 · Common codes: DW10FC, RHE, DW10BTED4, RHR",
           "image": "/images/brands/peugeot/models/peugeot-3008-model-card.png",
           "imageAlt": ""
         }
@@ -55,7 +217,7 @@
       "engineOptions": [
         {
           "label": "Used",
-          "price": "From quote",
+          "price": "From £1,300",
           "description": "Tested, bare/short engine",
           "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
           "imageAlt": "",
@@ -63,7 +225,7 @@
         },
         {
           "label": "Reconditioned",
-          "price": "From quote",
+          "price": "From £1,800",
           "description": "Rod bearings addressed, tested",
           "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
           "imageAlt": "",
@@ -110,26 +272,45 @@
           "number": 1,
           "icon": "registration",
           "front": {
-            "h3": "",
-            "text": ""
+            "h3": "Confirm Your Peugeot 3008 2.0 BlueHDi",
+            "text": "🖼️ [Registration icon]. Instantly verify your exact model, engine code (DW10FC or RHE) and fuel type via DVLA"
           },
           "back": {
-            "heading": "",
-            "text": "",
-            "bullets": []
+            "heading": "EnginesMarket cross-checks the DVLA record against known Peugeot 3008 2.0 BlueHDi engine codes so your quote request is accurate before it reaches a supplier - no paperwork, no guesswork, 100% free",
+            "text": "Whether you have the 150hp or 180hp DW10FC variant, we match you with the right specialists.",
+            "bullets": [
+              "Whether you have the 150hp or 180hp DW10FC variant, we match you with the right specialists."
+            ]
           }
         },
         {
-          "number": 1,
-          "icon": "registration",
+          "number": 2,
+          "icon": "quote",
           "front": {
-            "h3": "",
-            "text": ""
+            "h3": "Compare Peugeot 3008 2.0 BlueHDi Engine Quotes",
+            "text": "🖼️ [Compare icon]. See used, reconditioned and rebuilt DW10FC options side-by-side"
           },
           "back": {
-            "heading": "",
-            "text": "",
-            "bullets": []
+            "heading": "Our UK network of Peugeot 3008 2.0 BlueHDi specialists sends you transparent, itemised quotes covering all condition types - no obligation, no hidden fees, just genuine prices for your exact diesel engine code.",
+            "text": "Our UK network of Peugeot 3008 2.0 BlueHDi specialists sends you transparent, itemised quotes covering all condition types - no obligation, no hidden fees, just genuine prices for your exact diesel engine code.",
+            "bullets": [
+              "Our UK network of Peugeot 3008 2.0 BlueHDi specialists sends you transparent, itemised quotes covering all condition types - no obligation, no hidden fees, just genuine prices for your exact diesel engine code."
+            ]
+          }
+        },
+        {
+          "number": 3,
+          "icon": "shield",
+          "front": {
+            "h3": "Choose Your Peugeot 3008 2.0 BlueHDi Specialist",
+            "text": "🖼️ [Booking icon]. Book supply & fit with a minimum 12-month warranty"
+          },
+          "back": {
+            "heading": "Every rebuilt Peugeot 3008 2.0 BlueHDi engine comes with a minimum 12-month unlimited mileage warranty",
+            "text": "Choose supply-only or full supply & fit with nationwide delivery to your chosen garage.",
+            "bullets": [
+              "Choose supply-only or full supply & fit with nationwide delivery to your chosen garage."
+            ]
           }
         }
       ],
@@ -151,106 +332,477 @@
     },
     "historyTimeline": {
       "tag": "Variant History",
-      "h2": "What Are UK Drivers Paying for Peugeot 3008 2.0 BlueHDi Engine Replacement?",
-      "intro": "Live UK Engine Market Data What Are UK Drivers Paying for Peugeot 3008 2.0 BlueHDi Engine Replacement? The table below shows typical UK rebuilt engine costs across Peugeot 3008 2.0 BlueHDi variants - compare failure causes, engine codes, fuel types, and price ranges to benchmark what UK drivers are paying. The DW10FC is the Euro 6 evolution of PSA's long-running 2.0-litre diesel, bringing AdBlue technology and 150-180hp outputs to Gen 2 3008 models. | Variant | Years | Price Range | Common Failure | Engine Code | Fuel | |---------|-------|-------------|----------------|-------------|------| | Peugeot 3008 2.0 BlueHDi GT | 2016-2024 | £1,900-£3,500 | DPF regeneration failure | DW10FC | Diesel 2.0L | | Peugeot 3008 2.0 BlueHDi GT Line | 2016-2024 | £1,900-£3,500 | EGR cooler leak | DW10FC | Diesel 2.0L | | Peugeot 3008 2.0 BlueHDi Allure | 2016-2024 | £1,800-£3,300 | Injector seal wear | DW10FC | Diesel 2.0L | | Peugeot 3008 2.0 HDi GT | 2009-2016 | £1,800-£3,200 | EGR cooler failure | DW10BTED4 | Diesel 2.0L | | Peugeot 3008 2.0 HDi Allure | 2009-2016 | £1,800-£3,200 | Turbo oil seal leak | DW10BTED4 | Diesel 2.0L |",
-      "milestones": [],
-      "vehicleTitle": "What Are UK Drivers Paying for Peugeot 3008 2.0 BlueHDi Engine Replacement?",
-      "vehicleMeta": [],
-      "specsLabel": "Key Specs Snapshot",
-      "specs": [],
-      "closingNote": ""
-    },
-    "engineGuide": {
-      "tag": "Compatible Engines",
-      "h2": "Peugeot 3008 2.0 BlueHDi Engine Replacement - All Variants Covered",
-      "items": [
+      "h2": "Peugeot 3008 2.0 BlueHDi - Engine History & Specs at a Glance",
+      "intro": "The Peugeot 3008 2.0 BlueHDi (DW10FC) is the performance diesel option for the second-generation (2016-present) 3008, delivering strong torque, excellent towing capability and refined motorway cruising. Part of Stellantis's DW10 engine family, the 2.0 BlueHDi produces up to 180hp and offers the best balance of power and economy for GT and high-spec trims. Available in 150hp and 180hp outputs, it powers Allure, GT Line and GT variants - but its complex AdBlue system and DPF maintenance requirements have made it a source of replacement enquiries for high-mileage examples. A limited number of first-generation facelift models (2013-2016) also used the DW10BTED4 (RHR) 2.0 HDi engine, which shares similar architecture but lacks the AdBlue system of the BlueHDi.",
+      "milestones": [
         {
-          "code": "Peugeot 3008 2.0 BlueHDi GT Engine Replacement",
-          "title": "Peugeot 3008 2.0 BlueHDi GT Engine Replacement",
-          "specs": [],
-          "costs": [],
-          "commonFailure": "",
-          "cta": "-> Compare 2.0 BlueHDi GT Engine Prices",
-          "closing": ""
+          "year": "",
+          "description": "**2009** - First-generation 3008 launched with DW10BTED4 (RHR) 2.0 HDi 150hp"
         },
         {
-          "code": "Peugeot 3008 2.0 BlueHDi GT Line Engine Replacement",
-          "title": "Peugeot 3008 2.0 BlueHDi GT Line Engine Replacement",
-          "specs": [],
-          "costs": [],
-          "commonFailure": "",
-          "cta": "-> Compare 2.0 BlueHDi GT Line Engine Prices",
-          "closing": ""
+          "year": "",
+          "description": "**2013** - Facelift models carry forward DW10BTED4 with minor emissions updates"
         },
         {
-          "code": "Peugeot 3008 2.0 BlueHDi Allure Engine Replacement",
-          "title": "Peugeot 3008 2.0 BlueHDi Allure Engine Replacement",
-          "specs": [],
-          "costs": [],
-          "commonFailure": "",
-          "cta": "-> Compare 2.0 BlueHDi Allure Engine Prices",
-          "closing": ""
+          "year": "",
+          "description": "**2016** - Second-generation 3008 launched with DW10FC (RHE) 2.0 BlueHDi 150hp and 180hp"
         },
         {
-          "code": "Peugeot 3008 2.0 HDi GT Engine Replacement",
-          "title": "Peugeot 3008 2.0 HDi GT Engine Replacement",
-          "specs": [],
-          "costs": [],
-          "commonFailure": "",
-          "cta": "-> Compare 2.0 HDi GT Engine Prices",
-          "closing": ""
+          "year": "",
+          "description": "**2017** - DW10FC becomes the performance diesel option for GT and GT Line trims"
         },
         {
-          "code": "Peugeot 3008 2.0 HDi Allure Engine Replacement",
-          "title": "Peugeot 3008 2.0 HDi Allure Engine Replacement",
-          "specs": [],
-          "costs": [],
-          "commonFailure": "",
-          "cta": "-> Compare 2.0 HDi Allure Engine Prices",
-          "closing": ""
+          "year": "",
+          "description": "**2019** - Minor ECU refinements to improve DPF regeneration and AdBlue calibration"
         },
         {
-          "code": "Peugeot 3008 2.0 HDi Active Engine Replacement",
-          "title": "Peugeot 3008 2.0 HDi Active Engine Replacement",
-          "specs": [],
-          "costs": [],
-          "commonFailure": "",
-          "cta": "-> Compare 2.0 HDi Active Engine Prices",
-          "closing": ""
+          "year": "",
+          "description": "**2021** - 2.0 BlueHDi continues as the flagship diesel for GT models"
         },
         {
-          "code": "All Peugeot 3008 2.0 Diesel Variants",
-          "title": "Engine Replacement Coverage",
-          "specs": [],
-          "costs": [],
-          "commonFailure": "",
-          "cta": "",
-          "closing": "Not sure which variant your Peugeot 3008 is? Enter your registration number above - we'll identify the exact sub-model, engine code and compatible replacement options instantly."
+          "year": "",
+          "description": "**2024** - Final production of 2.0 BlueHDi as Peugeot transitions to electrified powertrains"
         }
       ],
-      "closing": ""
+      "vehicleTitle": "Peugeot 3008 2.0 BlueHDi",
+      "vehicleMeta": [
+        {
+          "label": "Fuel Type",
+          "value": "Diesel"
+        },
+        {
+          "label": "Engine Family",
+          "value": "DW10 (BlueHDi / HDi)"
+        },
+        {
+          "label": "Engine Codes",
+          "value": "DW10FC (RHE, BlueHDi) / DW10BTED4 (RHR, HDi)"
+        }
+      ],
+      "specsLabel": "Key Specs Snapshot",
+      "specs": [
+        {
+          "label": "Fuel Type",
+          "value": "Diesel"
+        },
+        {
+          "label": "Engine Family",
+          "value": "DW10 (BlueHDi / HDi)"
+        },
+        {
+          "label": "Engine Codes",
+          "value": "DW10FC (RHE, BlueHDi) / DW10BTED4 (RHR, HDi)"
+        },
+        {
+          "label": "Engine Size",
+          "value": "2.0L (1,997cc)"
+        },
+        {
+          "label": "Configuration",
+          "value": "Inline 4-cylinder, 16-valve DOHC"
+        },
+        {
+          "label": "Power Output",
+          "value": "150hp (110kW) - 180hp (132kW)"
+        },
+        {
+          "label": "Torque",
+          "value": "370-400 Nm @ 2,000 rpm"
+        },
+        {
+          "label": "Fuel System",
+          "value": "Common-rail direct injection"
+        },
+        {
+          "label": "Emissions Standard",
+          "value": "Euro 6 (BlueHDi) / Euro 5 (HDi)"
+        },
+        {
+          "label": "Years Produced",
+          "value": "2009-2024"
+        }
+      ],
+      "closingNote": "Every DW10FC and DW10BTED4 engine fitted to the Peugeot 3008 2.0 BlueHDi is covered below, with UK rebuilt pricing and known failure points."
+    },
+    "engineGuide": {
+      "tag": "Engine Codes & Pricing",
+      "h2": "Peugeot 3008 2.0 BlueHDi Engine Codes - Specifications & Replacement Cost",
+      "sectionTitle": "Compatible Engine Codes & Cost Guide",
+      "sectionSubtitle": "Find your exact engine code, specs and UK replacement cost guide.",
+      "intro": "",
+      "items": [
+        {
+          "code": "DW10BTED4 (RHR)",
+          "title": "2.0L HDi (2009-2016)",
+          "specs": [
+            {
+              "label": "Fuel Type",
+              "value": "Diesel"
+            },
+            {
+              "label": "Engine Code",
+              "value": "DW10BTED4 (RHR)"
+            },
+            {
+              "label": "Engine Size",
+              "value": "2.0 Litre (1,997cc)"
+            },
+            {
+              "label": "Power Output",
+              "value": "150hp (110kW)"
+            },
+            {
+              "label": "Torque",
+              "value": "340 Nm @ 2,000 rpm"
+            },
+            {
+              "label": "Configuration",
+              "value": "Inline 4-cylinder, 16-valve DOHC"
+            },
+            {
+              "label": "Injection",
+              "value": "Common-rail"
+            },
+            {
+              "label": "Emissions",
+              "value": "Euro 5 (no AdBlue)"
+            },
+            {
+              "label": "Years Fitted",
+              "value": "2009-2016"
+            }
+          ],
+          "costs": [
+            {
+              "label": "Used",
+              "value": "£1,200-£2,000",
+              "description": ""
+            },
+            {
+              "label": "Reconditioned",
+              "value": "£1,800-£2,800",
+              "description": ""
+            },
+            {
+              "label": "Rebuilt",
+              "value": "£1,800-£3,200",
+              "description": ""
+            }
+          ],
+          "compatibleTrimLevels": [
+            "Active",
+            "Allure",
+            "GT (first-generation)"
+          ],
+          "commonFailure": "EGR cooler failure causing coolant loss; injector seal wear causing oil dilution; turbocharger oil feed line coking; DPF blockage on short-journey driving.",
+          "cta": "-> Get quotes for DW10BTED4 Peugeot 3008 2.0 HDi engine replacement",
+          "closing": "-> Get quotes for DW10BTED4 Peugeot 3008 2.0 HDi engine replacement"
+        },
+        {
+          "code": "DW10FC (RHE)",
+          "title": "2.0L BlueHDi (2016-2024)",
+          "specs": [
+            {
+              "label": "Fuel Type",
+              "value": "Diesel"
+            },
+            {
+              "label": "Engine Code",
+              "value": "DW10FC (RHE)"
+            },
+            {
+              "label": "Engine Size",
+              "value": "2.0 Litre (1,997cc)"
+            },
+            {
+              "label": "Power Output",
+              "value": "150hp (110kW) / 180hp (132kW)"
+            },
+            {
+              "label": "Torque",
+              "value": "370-400 Nm @ 2,000 rpm"
+            },
+            {
+              "label": "Configuration",
+              "value": "Inline 4-cylinder, 16-valve DOHC"
+            },
+            {
+              "label": "Injection",
+              "value": "Common-rail"
+            },
+            {
+              "label": "Emissions",
+              "value": "Euro 6 with AdBlue (SCR) and DPF"
+            },
+            {
+              "label": "Years Fitted",
+              "value": "2016-2024"
+            }
+          ],
+          "costs": [
+            {
+              "label": "Used",
+              "value": "£1,300-£2,600",
+              "description": ""
+            },
+            {
+              "label": "Reconditioned",
+              "value": "£1,800-£3,200",
+              "description": ""
+            },
+            {
+              "label": "Rebuilt",
+              "value": "£1,900-£3,500",
+              "description": ""
+            }
+          ],
+          "compatibleTrimLevels": [
+            "Allure",
+            "GT Line",
+            "GT (second-generation)"
+          ],
+          "commonFailure": "DPF regeneration failure causing power loss and limp mode; EGR cooler leak leading to coolant contamination; injector seal wear causing diesel dilution of oil; AdBlue system sensor faults; turbocharger bearing wear.",
+          "cta": "-> Get quotes for DW10FC Peugeot 3008 2.0 BlueHDi engine replacement",
+          "closing": "-> Get quotes for DW10FC Peugeot 3008 2.0 BlueHDi engine replacement",
+          "intro": ""
+        }
+      ],
+      "prompt": ""
     },
     "commonProblems": {
-      "tag": "Engine Codes",
-      "h2": "Peugeot 3008 2.0 BlueHDi Engine Codes - Full Technical Specifications & Replacement Guide",
-      "h3": "Every 2.0-litre diesel engine code fitted to the Peugeot 3008 across all generations, with technical specs, compatible variants and trims, known failure points, and average rebuilt prices from UK specialists. Select any engine code to compare quotes.",
-      "problems": [],
+      "tag": "Common Problems",
+      "h2": "Peugeot 3008 2.0 BlueHDi Engine Problems - Repair Cost vs Replacement",
+      "h3": "The Peugeot 3008 2.0 BlueHDi (DW10FC) is a robust, high-torque diesel - but its complex emissions hardware and high-mileage wear patterns create distinct failure points. DPF regeneration failure, EGR cooler leaks and injector seal wear are the primary drivers of replacement enquiries. The DW10 family is generally considered one of the most reliable diesel engines in the Peugeot range when properly maintained, but the AdBlue system adds complexity to the BlueHDi variants. Every rebuilt Peugeot 3008 2.0 BlueHDi engine through EnginesMarket includes upgraded components addressing the original failure points, plus a minimum 12-month unlimited-mileage warranty.",
+      "problems": [
+        {
+          "group": "DPF Regeneration Failure",
+          "h4": "DPF Regeneration Failure - Why Peugeot 3008 2.0 BlueHDi Engines Lose Power",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "affectedModels": "Peugeot 3008 2.0 BlueHDi (DW10FC, 2016-2024)",
+          "typicalFailureMileage": "60,000-100,000 miles",
+          "rootCause": "Short-journey driving prevents the DPF from reaching regeneration temperature, causing soot buildup that blocks exhaust flow. The 2.0 BlueHDi's DPF is sensitive to urban driving patterns, and regeneration requires sustained motorway speeds to complete effectively. The DW10FC is particularly susceptible to DPF-related faults if used predominantly for city driving.",
+          "whyItHappens": "",
+          "repairOptions": [
+            {
+              "tier": "Minor - Forced Regeneration",
+              "dealerPrice": "£200-£400",
+              "specialistPrice": "£100-£250",
+              "whatItInvolves": "Diagnostic reset, extended high-speed drive or forced regen cycle",
+              "longevity": "Works if blockage is early-stage and sensors are functional",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Intermediate - DPF Clean/Replace",
+              "dealerPrice": "£800-£1,800",
+              "specialistPrice": "£400-£1,200",
+              "whatItInvolves": "Remove DPF for off-car cleaning or supply fitted replacement unit",
+              "longevity": "Restores function if substrate isn't melted or cracked",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Full Replacement - Rebuilt DW10FC Engine",
+              "dealerPrice": "£4,800-£6,500",
+              "specialistPrice": "£1,900-£3,500",
+              "whatItInvolves": "Supply & fit rebuilt unit with new DPF, EGR and AdBlue components, 12-month warranty",
+              "longevity": "Needed if blockage caused turbo or piston damage",
+              "estimatedTime": ""
+            }
+          ],
+          "vehicleValueCheck": "",
+          "recommendation": "For a Peugeot 3008 2.0 BlueHDi used mainly for short trips, invest in regular motorway runs to allow DPF regeneration. The 2.0 BlueHDi's DPF is larger and more robust than the 1.6L unit, but still requires attention. If the anti-pollution warning appears, address it promptly. A rebuilt engine is only necessary if the DPF has caused turbo or internal damage - the DW10FC block is generally robust and can be saved if caught early.",
+          "cta": "-> Compare rebuilt DW10FC Peugeot 3008 2.0 BlueHDi engine prices"
+        },
+        {
+          "group": "EGR Cooler Failure",
+          "h4": "EGR Cooler Failure - Why Peugeot 3008 2.0 BlueHDi Engines Lose Coolant",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "affectedModels": "Peugeot 3008 2.0 BlueHDi / HDi (DW10FC / DW10BTED4, 2009-2024)",
+          "typicalFailureMileage": "70,000-120,000 miles",
+          "rootCause": "The EGR cooler can develop micro-fractures in its weld seams, allowing coolant to leak into the exhaust manifold or combustion chambers. This leads to coolant loss, white smoke from the exhaust and, in severe cases, hydrolock. The DW10BTED4 (pre-BlueHDi) is particularly prone to this issue due to its earlier cooler design, but the DW10FC can also suffer from cooler failure at higher mileages.",
+          "whyItHappens": "",
+          "repairOptions": [
+            {
+              "tier": "Intermediate - EGR Cooler Replacement",
+              "dealerPrice": "£700-£1,200",
+              "specialistPrice": "£400-£800",
+              "whatItInvolves": "Replacement of EGR cooler, coolant flush, system pressure test",
+              "longevity": "Effective if caught before engine damage occurs",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Full Replacement - Rebuilt DW10FC/DW10BTED4 Engine",
+              "dealerPrice": "£4,500-£6,500",
+              "specialistPrice": "£1,800-£3,500",
+              "whatItInvolves": "Supply & fit rebuilt unit with new EGR cooler, 12-month warranty",
+              "longevity": "Only if cooler failure has caused cylinder head or piston damage",
+              "estimatedTime": ""
+            }
+          ],
+          "vehicleValueCheck": "",
+          "recommendation": "EGR cooler failure on the Peugeot 3008 2.0 BlueHDi should be addressed immediately. If you notice unexplained coolant loss or sweet exhaust smell, have the EGR cooler inspected. Replacing the cooler is a straightforward specialist job. A rebuilt engine is only necessary if coolant has entered the combustion chambers causing hydrolock or piston damage.",
+          "cta": "-> Compare rebuilt DW10FC Peugeot 3008 2.0 BlueHDi engine prices"
+        },
+        {
+          "group": "Injector Seal Wear",
+          "h4": "Injector Seal Wear - Why Peugeot 3008 2.0 BlueHDi Engines Suffer Oil Dilution",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "affectedModels": "Peugeot 3008 2.0 BlueHDi (DW10FC, 2016-2024)",
+          "typicalFailureMileage": "80,000-120,000 miles",
+          "rootCause": "Injector seals degrade over time, allowing combustion gases to leak past the injector and causing oil dilution. The DW10FC's injector design is generally robust, but high-mileage examples can develop seal wear, leading to increased oil levels, reduced lubrication and potential engine damage.",
+          "whyItHappens": "",
+          "repairOptions": [
+            {
+              "tier": "Intermediate - Injector Seal Replacement",
+              "dealerPrice": "£400-£700",
+              "specialistPrice": "£250-£450",
+              "whatItInvolves": "Removal of injectors, replacement of seals, recutting of injector seats",
+              "longevity": "Effective; prevents further oil dilution",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Full Replacement - Rebuilt DW10FC Engine",
+              "dealerPrice": "£4,800-£6,500",
+              "specialistPrice": "£1,900-£3,500",
+              "whatItInvolves": "Supply & fit rebuilt unit with new injectors and seals, 12-month warranty",
+              "longevity": "Only if injector failure has caused cylinder head damage",
+              "estimatedTime": ""
+            }
+          ],
+          "vehicleValueCheck": "",
+          "recommendation": "Injector seal wear on the Peugeot 3008 2.0 BlueHDi is less common than on the 1.6L units but should still be addressed promptly. If you notice rising oil levels or a diesel smell in the oil, have the injector seals inspected. A specialist can replace seals and recut seats in around four hours. If the vehicle has a history of multiple injector failures or the head is damaged, a rebuilt engine may be more cost-effective.",
+          "cta": "-> Compare rebuilt DW10FC Peugeot 3008 2.0 BlueHDi engine prices"
+        },
+        {
+          "group": "AdBlue System Faults",
+          "h4": "AdBlue System Faults - Why Peugeot 3008 2.0 BlueHDi Engines Trigger Countdowns",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "affectedModels": "Peugeot 3008 2.0 BlueHDi (DW10FC, 2016-2024)",
+          "typicalFailureMileage": "50,000-90,000 miles",
+          "rootCause": "Crystallised urea deposits clog the AdBlue injector nozzle, triggering fault codes and eventually a countdown to engine immobilisation. The 2.0 BlueHDi's AdBlue system is similar to the 1.6L but may have different sensor calibration. Sensor faults are also common, triggering \"AdBlue system fault\" warnings.",
+          "whyItHappens": "",
+          "repairOptions": [
+            {
+              "tier": "Minor - Injector Clean/Reset",
+              "dealerPrice": "£250-£500",
+              "specialistPrice": "£120-£300",
+              "whatItInvolves": "Remove injector, ultrasonic clean, system reset, test drive",
+              "longevity": "Effective if caught before countdown reaches zero",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Intermediate - Injector Replacement",
+              "dealerPrice": "£600-£1,100",
+              "specialistPrice": "£350-£700",
+              "whatItInvolves": "Supply and fit new AdBlue injector, recalibrate system",
+              "longevity": "Restores function; may need tank flush if contamination severe",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Full Replacement - Rebuilt DW10FC Engine",
+              "dealerPrice": "£4,800-£6,500",
+              "specialistPrice": "£1,900-£3,500",
+              "whatItInvolves": "Supply & fit rebuilt unit with new emissions hardware, 12-month warranty",
+              "longevity": "Only if injector failure led to NOx damage or engine derate",
+              "estimatedTime": ""
+            }
+          ],
+          "vehicleValueCheck": "",
+          "recommendation": "Address AdBlue warnings immediately - a £120-£300 specialist clean can prevent a £700 injector replacement. If the countdown has started, act fast to avoid immobilisation. Replacement engines are only needed if the fault caused secondary damage. The 2.0 BlueHDi's AdBlue system is generally reliable when maintained with genuine AdBlue fluid.",
+          "cta": "-> Enquire about DW10FC Peugeot 3008 2.0 BlueHDi engine availability"
+        }
+      ],
       "emptyState": null,
       "finalCta": {
-        "h4": "DW10FC - 2.0L Diesel (Gen 2, 2016-2024)",
-        "paragraph": "History: The DW10FC is the Euro 6 evolution of the 2.0-litre diesel, adding AdBlue technology for emissions compliance while delivering 150-180hp. Fitted to the most powerful 3008 diesel variants, it's the performance choice for Allure, GT Line and GT trims.",
-        "buttonText": "",
-        "disclaimer": ""
+        "h4": "Don't Let Engine Failure Write Off Your Peugeot 3008 2.0 BlueHDi",
+        "paragraph": "Whether you're dealing with DPF regeneration failure, EGR cooler leaks, injector seal wear or AdBlue faults, EngineMarket connects you directly with verified UK Peugeot 3008 2.0 BlueHDi specialists who understand these exact failure patterns. Every rebuilt unit features upgraded components to permanently address the root cause, is bench-tested for performance, and comes with a minimum 12-month unlimited mileage warranty. Skip the main dealer premium - compare transparent supply-and-fit quotes from multiple trusted specialists and get back on the road with confidence.",
+        "buttonText": "Compare Peugeot 3008 2.0 BlueHDi Engine Replacement Prices Now ->",
+        "disclaimer": "\"All prices are indicative UK market ranges based on historical quote data and repair requests from our network of engine specialists. Dealer pricing is estimated based on published main dealer labour rates and genuine OEM parts pricing. Specialist pricing reflects actual quote data from EnginesMarket's UK network. Actual costs vary depending on damage severity, vehicle condition, variant, and workshop location within the UK. Use our free comparison tool to get tailored quotes for your specific Peugeot 3008 2.0 BlueHDi. Every engine supplied through EnginesMarket carries a minimum 12-month unlimited mileage warranty - always confirm exact terms with your chosen supplier.\""
       },
       "reviewSummary": null
     },
     "faq": {
-      "tag": "FAQs",
-      "h2": "Peugeot 3008 2.0 BlueHDi Engine Problems - What It Costs to Fix & When Replacement Makes Sense",
+      "tag": "FAQ",
+      "h2": "Peugeot 3008 2.0 BlueHDi Engine Replacement - Frequently Asked Questions",
       "intro": "Everything Peugeot 3008 2.0 BlueHDi owners usually ask before choosing a rebuilt, reconditioned or used replacement engine.",
       "defaultOpenIndex": 0,
-      "disclaimer": "All prices are indicative UK market ranges based on historical quote data and repair requests from our network of engine specialists. Dealer pricing is estimated based on published main dealer labour rates and genuine OEM parts pricing. Specialist pricing reflects actual quote data from EngineMarket's UK network. Actual costs vary depending on damage severity, vehicle condition, variant, and workshop location within the UK. Use our free comparison tool to get tailored quotes for your specific Peugeot 3008 and engine code. Every engine supplied through EngineMarket carries a minimum 12-month unlimited mileage warranty - always confirm exact terms with your chosen supplier.",
-      "items": [],
+      "disclaimer": "",
+      "items": [
+        {
+          "question": "How much does a Peugeot 3008 2.0 BlueHDi engine replacement cost?",
+          "answer": "A rebuilt Peugeot 3008 2.0 BlueHDi engine typically costs **£1,900-£3,500** supply-only, depending on power output and supplier. DW10FC 150hp units start around **£1,900**, while 180hp units range **£2,000-£3,500**. The older DW10BTED4 (RHR) units range **£1,800-£3,200**. Used engines start from **£1,200**. Supply & fit adds **£400-£900** labour. Main dealer replacement can exceed **£6,500**.",
+          "keyPoints": [
+            "Rebuilt DW10FC 150hp: £1,900-£3,200",
+            "Rebuilt DW10FC 180hp: £2,000-£3,500",
+            "Rebuilt DW10BTED4: £1,800-£3,200",
+            "Used engines: £1,200-£2,600"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Get instant quotes for Peugeot 3008 2.0 BlueHDi engine replacement from UK specialists"
+        },
+        {
+          "question": "What are the most common Peugeot 3008 2.0 BlueHDi engine problems?",
+          "answer": "The most common Peugeot 3008 2.0 BlueHDi (DW10FC) engine problems are **DPF regeneration failure** causing loss of power and limp mode, **EGR cooler failure** causing coolant loss and white smoke, **injector seal wear** causing oil dilution, and **AdBlue system faults** triggering countdowns. The 2.0 BlueHDi is generally more robust than the 1.6L unit but shares emissions system vulnerabilities.",
+          "keyPoints": [
+            "DPF blockage from short-journey driving (60k-100k miles)",
+            "EGR cooler leak causing coolant loss (70k-120k miles)",
+            "Injector seal wear causing oil dilution (80k-120k miles)",
+            "AdBlue injector crystallisation triggering countdowns"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Compare rebuilt DW10FC Peugeot 3008 2.0 BlueHDi engine prices"
+        },
+        {
+          "question": "Is it worth replacing the engine on a Peugeot 3008 2.0 BlueHDi?",
+          "answer": "Replacing a Peugeot 3008 2.0 BlueHDi engine is worthwhile if the vehicle is otherwise sound. A rebuilt unit costs **£1,900-£3,500** versus **£6,000-£18,000** for a comparable used 3008. With dealer replacement potentially exceeding **£6,500**, specialist rebuilt units offer significant savings. The 2.0 BlueHDi's strong torque and towing capability make it a desirable engine - replacement often makes sense for well-maintained GT and Allure trims.",
+          "keyPoints": [
+            "Rebuilt DW10FC: £1,900-£3,500",
+            "Dealer replacement: £4,800-£6,500+",
+            "Comparable used 3008: £6,000-£18,000"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Get a tailored Peugeot 3008 2.0 BlueHDi engine replacement quote today"
+        },
+        {
+          "question": "How long does a Peugeot 3008 2.0 BlueHDi engine last?",
+          "answer": "With proper maintenance, the Peugeot 3008 2.0 BlueHDi (DW10FC) engine typically reaches **150,000-200,000 miles**. Regular oil changes, DPF-friendly driving (regular motorway runs) and AdBlue system maintenance are essential for longevity. The DW10 family is generally considered one of the most reliable diesel engines in the Peugeot range, with many examples exceeding 200,000 miles.",
+          "keyPoints": [
+            "150,000-200,000 miles achievable with proper maintenance",
+            "Regular motorway driving prevents DPF blockage",
+            "AdBlue system maintenance critical for BlueHDi longevity",
+            "The 2.0L block is robust and well-engineered"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Find a reconditioned Peugeot 3008 2.0 BlueHDi engine with 12-month warranty"
+        },
+        {
+          "question": "What's the difference between Peugeot 3008 2.0 BlueHDi and 2.0 HDi engines?",
+          "answer": "The 2.0 BlueHDi (DW10FC) is a **Euro 6** diesel introduced in 2016, featuring AdBlue (SCR) for lower NOx emissions. The 2.0 HDi (DW10BTED4/RHR) is a **Euro 5** diesel from 2009-2016 without AdBlue. Both use the same 2.0L (1,997cc) DW10 architecture, but the BlueHDi has more complex emissions hardware and is generally more fuel-efficient. The BlueHDi is also more sensitive to short-journey driving patterns due to its DPF and AdBlue systems.",
+          "keyPoints": [
+            "2.0 BlueHDi (DW10FC): Euro 6, AdBlue, 150-180hp (2016-2024)",
+            "2.0 HDi (DW10BTED4): Euro 5, no AdBlue, 150hp (2009-2016)",
+            "BlueHDi more efficient but has AdBlue system complexity"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Compare Peugeot 3008 2.0 BlueHDi vs 2.0 HDi engine options"
+        },
+        {
+          "question": "How do I find my Peugeot 3008 2.0 BlueHDi engine code?",
+          "answer": "Your Peugeot 3008 2.0 BlueHDi engine code is **DW10FC (RHE)** for second-generation models (2016-2024) or **DW10BTED4 (RHR)** for first-generation models (2009-2016). It appears on the VIN plate under the bonnet, stamped on the engine block, or on your V5C registration document section D.2. Enter your reg above for instant verification.",
+          "keyPoints": [
+            "VIN plate under bonnet shows engine code",
+            "V5C section D.2 lists the official engine code",
+            "DW10FC / RHE = 2.0L BlueHDi; DW10BTED4 / RHR = 2.0L HDi"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Enter your registration to identify your exact Peugeot 3008 2.0 BlueHDi engine code instantly"
+        }
+      ],
       "ui": {
         "questionLabelPrefix": "Question",
         "keyPointsLabel": "Key points",
@@ -261,33 +813,30 @@
     },
     "trustCta": {
       "tag": "Why Choose Us",
-      "h2": "Peugeot 3008 2.0 BlueHDi Engine Types - Options, Costs & What to Expect",
+      "h2": "Compare Peugeot 3008 2.0 BlueHDi Engine Prices Today",
       "intro": "Compare quotes from trusted UK Peugeot 3008 2.0 BlueHDi engine specialists with warranty-backed rebuilt, reconditioned and used options nationwide.",
       "points": [
         {
-          "title": "",
+          "title": "50+ Peugeot 3008 2.0 BlueHDi engines supplied through our network",
           "description": ""
         },
         {
-          "title": "",
+          "title": "12-Month Warranty on every rebuilt DW10FC and DW10BTED4 engine",
           "description": ""
         },
         {
-          "title": "",
-          "description": ""
+          "title": "Nationwide UK delivery",
+          "description": "supply & fit available"
         }
       ],
-      "finalText": "",
-      "buttonText": "",
+      "finalText": "Comparing Peugeot 3008 2.0 BlueHDi engine quotes is completely free and carries no obligation. Enter your registration above, tell us your DW10FC or DW10BTED4 engine code, and receive transparent, fixed-price quotes from our vetted UK specialists within hours. Whether you need a used engine for a quick fix or a fully rebuilt DW10FC unit with upgraded emissions components and a 12-month warranty, we'll match you with the right supplier for your budget.",
+      "buttonText": "Get Free Peugeot 3008 2.0 BlueHDi Engine Quotes ->",
       "secondaryAction": {
         "text": "",
         "href": "tel:03330000044"
       },
       "ui": {
-        "showSecondaryAction": false,
-        "imageBadgeLabel": "Variant-specific support",
-        "imageBadgeTitle": "Peugeot 3008 2.0 BlueHDi specialists across the UK",
-        "imageBadgeText": "Compare supply-only and supply & fit quotes from vetted independent engine specialists."
+        "showSecondaryAction": false
       }
     }
   }

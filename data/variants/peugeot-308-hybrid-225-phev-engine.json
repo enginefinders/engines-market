@@ -14,8 +14,8 @@
     "storageSlug": "peugeot-308-hybrid-225-phev-engine"
   },
   "seo": {
-    "title": "Peugeot 308 Hybrid 225 PHEV Engine Replacement - Compare Prices & Save",
-    "description": "Get quotes today from trusted UK Peugeot 308 Hybrid 225 PHEV specialists. Compare prices on reconditioned, rebuilt and used 1.6 PureTech hybrid engines - supply & fit available nationwide.",
+    "title": "Peugeot 308 Hybrid 225 PHEV Engine Replacement | Compare Prices",
+    "description": "Peugeot 308 Hybrid 225 PHEV engine replacement cost guide. Compare rebuilt, reconditioned & used EP6FDT hybrid engine prices from £1,800. 12-month warranty & UK hybrid supply fit specialists.",
     "canonical": "/peugeot/308/hybrid-225-phev-engine"
   },
   "assets": {
@@ -25,12 +25,174 @@
     "howItWorksBg": "/images/brands/peugeot/brand/peugeot-how-it-works-bg.webp",
     "ctaImage": "/images/brands/peugeot/models/peugeot-308-model-card.png"
   },
-  "structuredData": null,
+  "structuredData": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.enginesmarket.co.uk/#website",
+        "url": "https://www.enginesmarket.co.uk/",
+        "name": "Engines Market",
+        "publisher": {
+          "@id": "https://www.enginesmarket.co.uk/#organization"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.enginesmarket.co.uk/#organization",
+        "name": "Engines Market",
+        "url": "https://www.enginesmarket.co.uk/",
+        "logo": "https://www.enginesmarket.co.uk/images/logo.png",
+        "sameAs": [
+          "https://www.facebook.com/enginesmarket",
+          "https://x.com/EnginesMarket",
+          "https://www.instagram.com/enginesmarketuk/",
+          "https://www.tiktok.com/@enginesmarket"
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.enginesmarket.co.uk/peugeot/308/hybrid-225-phev-engine/#webpage",
+        "url": "https://www.enginesmarket.co.uk/peugeot/308/hybrid-225-phev-engine/",
+        "name": "Peugeot 308 Hybrid 225 PHEV Engine Replacement - Compare Prices & Get Quotes",
+        "description": "Peugeot 308 Hybrid 225 PHEV engine replacement cost guide. Compare rebuilt, reconditioned & used EP6FDT hybrid engine prices from £1,800. 12-month warranty & UK hybrid supply fit specialists.",
+        "isPartOf": {
+          "@id": "https://www.enginesmarket.co.uk/#website"
+        },
+        "about": [
+          {
+            "@type": "Car",
+            "name": "Peugeot 308 Hybrid 225 PHEV",
+            "brand": {
+              "@type": "Brand",
+              "name": "Peugeot"
+            },
+            "model": "308 Hybrid 225 PHEV"
+          },
+          {
+            "@type": "Service",
+            "name": "Peugeot 308 Hybrid 225 PHEV Engine Replacement"
+          }
+        ],
+        "mainEntity": {
+          "@id": "https://www.enginesmarket.co.uk/peugeot/308/hybrid-225-phev-engine/#service"
+        },
+        "breadcrumb": {
+          "@id": "https://www.enginesmarket.co.uk/peugeot/308/hybrid-225-phev-engine/#breadcrumb"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.enginesmarket.co.uk/peugeot/308/hybrid-225-phev-engine/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.enginesmarket.co.uk/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Peugeot",
+            "item": "https://www.enginesmarket.co.uk/peugeot/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Peugeot 308",
+            "item": "https://www.enginesmarket.co.uk/peugeot/308/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Peugeot 308 Hybrid 225 PHEV",
+            "item": "https://www.enginesmarket.co.uk/peugeot/308/hybrid-225-phev-engine/"
+          }
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://www.enginesmarket.co.uk/peugeot/308/hybrid-225-phev-engine/#service",
+        "name": "Peugeot 308 Hybrid 225 PHEV Engine Replacement Service",
+        "serviceType": [
+          "Peugeot 308 Hybrid 225 PHEV Engine Replacement",
+          "Reconditioned Peugeot 308 Hybrid 225 PHEV Engines",
+          "Used Peugeot 308 Hybrid 225 PHEV Engines",
+          "Peugeot 308 Hybrid 225 PHEV Engine Supply and Fit",
+          "Peugeot 308 Hybrid 225 PHEV Engine Price Comparison"
+        ],
+        "provider": {
+          "@id": "https://www.enginesmarket.co.uk/#organization"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        "url": "https://www.enginesmarket.co.uk/peugeot/308/hybrid-225-phev-engine/",
+        "description": "Peugeot 308 Hybrid 225 PHEV engine replacement cost guide. Compare rebuilt, reconditioned & used EP6FDT hybrid engine prices from £1,800. 12-month warranty & UK hybrid supply fit specialists."
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.enginesmarket.co.uk/peugeot/308/hybrid-225-phev-engine/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does a Peugeot 308 Hybrid 225 PHEV engine replacement cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A rebuilt Peugeot 308 Hybrid 225 PHEV engine typically costs £2,800-£5,500 supply-only, depending on the supplier and whether the hybrid system components are included. Used units start from £1,800. Supply & fit adds £800-£1,500 labour due to high-voltage system complexity. Main dealer replacement can exceed £8,000-£10,000."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What are the most common Peugeot 308 Hybrid 225 PHEV problems?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The most common Peugeot 308 Hybrid 225 PHEV problems are high-voltage battery degradation reducing electric range (reported from 41 miles down to 17 miles in cold weather), onboard charger faults preventing plug-in charging, electric motor/inverter cooling system leaks, and timing chain tensioner wear on the EP6FDT petrol engine. The 1.6 hybrid is generally considered reliable - 'the most reliable engine Peugeot have made in a while' - but the hybrid system has its own failure points."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is it worth replacing the hybrid engine on a Peugeot 308 Hybrid 225 PHEV?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Replacing a Peugeot 308 Hybrid 225 PHEV engine is worthwhile if the vehicle is otherwise sound. A rebuilt unit costs £2,800-£5,500 versus £18,000-£35,000 for a comparable used 308 Hybrid 225. With dealer replacement potentially exceeding £8,000-£10,000, specialist rebuilt units offer significant savings. Hybrid vehicles command strong residuals, making replacement a sensible investment for well-maintained examples."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does a Peugeot 308 Hybrid 225 PHEV battery last?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "With proper maintenance, the Peugeot 308 Hybrid 225 PHEV battery typically lasts 8-10 years or 80,000-120,000 miles. The 12.44 kWh battery is sensitive to temperature - owners report reduced range in cold weather (from 41 miles to as low as 17 miles). Battery health checks should be performed regularly. Extended warranty is recommended when buying used."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What's the difference between Peugeot 308 Hybrid 225 and Hybrid 180?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The 308 Hybrid 225 uses the EP6FDT 1.6L turbo petrol engine producing 180hp combined with an 81kW electric motor for 225hp total. The Hybrid 180 uses a 1.2L PureTech petrol engine producing 150hp combined. Both have similar electric-only range and battery capacity, but the 225 offers significantly more power. The 225 uses a timing chain (more reliable than the 1.2's wet belt). The 225 is also more expensive to replace."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I find my Peugeot 308 Hybrid 225 PHEV engine code?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Your Peugeot 308 Hybrid 225 PHEV engine code is EP6FDT. It appears on the VIN plate under the bonnet, stamped on the engine block, or on your V5C registration document section D.2. Enter your reg above for instant verification."
+            }
+          }
+        ]
+      }
+    ]
+  },
   "sections": {
     "hero": {
-      "tag": "Peugeot ENGINE MARKETPLACE",
-      "h1": "Peugeot 308 Hybrid 225 PHEV Engine Replacement - Compare Prices & Save",
-      "subheading": "Get quotes today from trusted UK Peugeot 308 Hybrid 225 PHEV specialists. Compare prices on reconditioned, rebuilt and used 1.6 PureTech hybrid engines - supply & fit available nationwide.",
+      "tag": "PEUGEOT 308 HYBRID 225 SPECIALISTS",
+      "h1": "Peugeot 308 Hybrid 225 PHEV Engine Replacement - Compare Prices & Get Quotes",
+      "subheading": "Get quotes today from trusted UK Peugeot 308 Hybrid 225 PHEV engine specialists. Compare prices on reconditioned, rebuilt and used EP6FDT petrol-electric hybrid units - supply & fit available with a minimum 12-month warranty.",
       "trustBadges": [
         "Supply & Fit Available",
         "12-Month Warranty",
@@ -44,10 +206,10 @@
       "highlights": [
         {
           "title": "Peugeot 308 Hybrid 225 PHEV Engine",
-          "price": "[1.6 PureTech Hybrid engine image] 308 Hybrid 225 PHEV Engines - from £2,500 to £5,500",
-          "line1": "[1.6 PureTech Hybrid engine image] 308 Hybrid 225 PHEV Engines - from £2,500 to £5,500",
-          "line2": "-> Rebuilt units from £2,500 · Common codes: EP6FDT, 5GF (Hybrid variant)",
-          "detail": "-> Rebuilt units from £2,500 · Common codes: EP6FDT, 5GF (Hybrid variant)",
+          "price": "EP6FDT Hybrid 225 - from £2,500 to £5,500",
+          "line1": "EP6FDT Hybrid 225 - from £2,500 to £5,500",
+          "line2": "-> Used from £1,800 · Reconditioned from £2,500 · Common codes: EP6FDT, EP6FDT PHEV",
+          "detail": "-> Used from £1,800 · Reconditioned from £2,500 · Common codes: EP6FDT, EP6FDT PHEV",
           "image": "/images/brands/peugeot/models/peugeot-308-model-card.png",
           "imageAlt": ""
         }
@@ -55,7 +217,7 @@
       "engineOptions": [
         {
           "label": "Used",
-          "price": "From quote",
+          "price": "From £1,800",
           "description": "Tested, bare/short engine",
           "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
           "imageAlt": "",
@@ -63,7 +225,7 @@
         },
         {
           "label": "Reconditioned",
-          "price": "From quote",
+          "price": "From £2,500",
           "description": "Rod bearings addressed, tested",
           "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
           "imageAlt": "",
@@ -110,26 +272,45 @@
           "number": 1,
           "icon": "registration",
           "front": {
-            "h3": "",
-            "text": ""
+            "h3": "Confirm Your Peugeot 308 Hybrid 225 PHEV",
+            "text": "🖼️ [Registration icon]. Instantly verify your exact model, engine code (EP6FDT) and fuel type via DVLA"
           },
           "back": {
-            "heading": "",
-            "text": "",
-            "bullets": []
+            "heading": "EnginesMarket cross-checks the DVLA record against known Peugeot 308 Hybrid 225 PHEV engine codes so your quote request is accurate before it reaches a supplier - no paperwork, no guesswork, 100% free",
+            "text": "Whether you have the 180hp petrol engine or the full 225hp hybrid system, we match you with the right specialists.",
+            "bullets": [
+              "Whether you have the 180hp petrol engine or the full 225hp hybrid system, we match you with the right specialists."
+            ]
           }
         },
         {
-          "number": 1,
-          "icon": "registration",
+          "number": 2,
+          "icon": "quote",
           "front": {
-            "h3": "",
-            "text": ""
+            "h3": "Compare Peugeot 308 Hybrid 225 PHEV Engine Quotes",
+            "text": "🖼️ [Compare icon]. See used, reconditioned and rebuilt EP6FDT hybrid options side-by-side"
           },
           "back": {
-            "heading": "",
-            "text": "",
-            "bullets": []
+            "heading": "Our UK network of Peugeot 308 Hybrid 225 PHEV specialists sends you transparent, itemised quotes covering all condition types - no obligation, no hidden fees, just genuine prices for your exact hybrid petrol engine code.",
+            "text": "Our UK network of Peugeot 308 Hybrid 225 PHEV specialists sends you transparent, itemised quotes covering all condition types - no obligation, no hidden fees, just genuine prices for your exact hybrid petrol engine code.",
+            "bullets": [
+              "Our UK network of Peugeot 308 Hybrid 225 PHEV specialists sends you transparent, itemised quotes covering all condition types - no obligation, no hidden fees, just genuine prices for your exact hybrid petrol engine code."
+            ]
+          }
+        },
+        {
+          "number": 3,
+          "icon": "shield",
+          "front": {
+            "h3": "Choose Your Peugeot 308 Hybrid 225 PHEV Specialist",
+            "text": "🖼️ [Booking icon]. Book supply & fit with a minimum 12-month warranty"
+          },
+          "back": {
+            "heading": "Every rebuilt Peugeot 308 Hybrid 225 PHEV engine comes with a minimum 12-month unlimited mileage warranty",
+            "text": "Choose supply-only or full supply & fit with nationwide delivery to your chosen garage. All work carried out by hybrid-certified technicians with high-voltage system expertise.",
+            "bullets": [
+              "Choose supply-only or full supply & fit with nationwide delivery to your chosen garage. All work carried out by hybrid-certified technicians with high-voltage system expertise."
+            ]
           }
         }
       ],
@@ -151,79 +332,437 @@
     },
     "historyTimeline": {
       "tag": "Variant History",
-      "h2": "What Are UK Drivers Paying for Peugeot 308 Hybrid 225 PHEV Engine Replacement?",
-      "intro": "Live UK Engine Market Data What Are UK Drivers Paying for Peugeot 308 Hybrid 225 PHEV Engine Replacement? The table below shows typical UK rebuilt engine costs across Peugeot 308 Hybrid 225 PHEV variants - compare failure causes, engine codes, fuel types, and price ranges to benchmark what UK drivers are paying. The Hybrid 225 combines a 180hp 1.6-litre PureTech turbo petrol engine with an 81kW electric motor, delivering 225hp combined through an 8-speed e-EAT8 automatic gearbox. The combustion engine is the same EP6FDT unit found in the 1.6 PureTech, but with hybrid-specific calibration and ancillaries. | Variant | Years | Price Range | Common Failure | Engine Code | Fuel | |---------|-------|-------------|----------------|-------------|------| | Peugeot 308 Hybrid 225 GT | 2021-present | £2,500-£5,500 | 12V battery discharge | EP6FDT (Hybrid) | Petrol PHEV 1.6L | | Peugeot 308 Hybrid 225 Allure | 2021-present | £2,500-£5,500 | Onboard charger failure | EP6FDT (Hybrid) | Petrol PHEV 1.6L | | Peugeot 308 Hybrid 225 GT | 2021-present | £6,000-£10,000 | Traction battery degradation | N/A (Battery) | Petrol PHEV 1.6L |",
-      "milestones": [],
-      "vehicleTitle": "What Are UK Drivers Paying for Peugeot 308 Hybrid 225 PHEV Engine Replacement?",
-      "vehicleMeta": [],
-      "specsLabel": "Key Specs Snapshot",
-      "specs": [],
-      "closingNote": ""
-    },
-    "engineGuide": {
-      "tag": "Compatible Engines",
-      "h2": "Peugeot 308 Hybrid 225 PHEV Engine Replacement - All Variants Covered",
-      "items": [
+      "h2": "Peugeot 308 Hybrid 225 PHEV - Engine History & Specs at a Glance",
+      "intro": "The Peugeot 308 Hybrid 225 PHEV is the plug-in hybrid flagship of the third-generation (Phase 3, 2021-present) 308 range, combining a 1.6-litre turbocharged petrol engine with a powerful electric motor for a combined 225hp output. The EP6FDT petrol engine - part of the Prince family jointly developed with BMW - delivers 180hp on its own, while the 81kW electric motor adds instant torque for seamless acceleration and up to 59 km (37 miles) of electric-only range. Paired with an 8-speed e-EAT8 automatic gearbox, the Hybrid 225 offers 0-62mph in 7.6 seconds and CO2 emissions from 26 g/km. The 1.6 Hybrid is considered one of the most reliable engines Peugeot has produced in recent years, using a timing chain rather than the wet belt found on smaller PureTech units.",
+      "milestones": [
         {
-          "code": "Peugeot 308 Hybrid 225 Allure Engine Replacement",
-          "title": "Peugeot 308 Hybrid 225 Allure Engine Replacement",
-          "specs": [],
-          "costs": [],
-          "commonFailure": "",
-          "cta": "-> Compare Hybrid 225 Allure Engine Prices",
-          "closing": ""
+          "year": "",
+          "description": "**2021** - Third-generation 308 launched with EP6FDT 1.6 Hybrid 225 PHEV for GT and GT Pack trims"
         },
         {
-          "code": "Peugeot 308 Hybrid 225 GT Engine Replacement",
-          "title": "Peugeot 308 Hybrid 225 GT Engine Replacement",
-          "specs": [],
-          "costs": [],
-          "commonFailure": "",
-          "cta": "-> Compare Hybrid 225 GT Engine Prices",
-          "closing": ""
+          "year": "",
+          "description": "**2022** - Hybrid 225 carries over with minor ECU refinements and updated infotainment"
         },
         {
-          "code": "Peugeot 308 Hybrid 225 GT Premium Engine Replacement",
-          "title": "Peugeot 308 Hybrid 225 GT Premium Engine Replacement",
-          "specs": [],
-          "costs": [],
-          "commonFailure": "",
-          "cta": "-> Compare Hybrid 225 GT Premium Engine Prices",
-          "closing": ""
+          "year": "",
+          "description": "**2023** - Battery management system updates to improve cold-weather range performance"
         },
         {
-          "code": "All Peugeot 308 Hybrid 225 PHEV Variants",
-          "title": "Engine Replacement Coverage",
-          "specs": [],
-          "costs": [],
-          "commonFailure": "",
-          "cta": "",
-          "closing": "Not sure which variant your Peugeot 308 Hybrid is? Enter your registration number above - we'll identify the exact sub-model, engine code and compatible replacement options instantly."
+          "year": "",
+          "description": "**2024** - Continued production; 308 Hybrid 225 remains the performance PHEV option"
+        },
+        {
+          "year": "",
+          "description": "**2025** - New generation of PHEV powertrains announced, but EP6FDT remains in service"
         }
       ],
-      "closing": ""
+      "vehicleTitle": "Peugeot 308 Hybrid 225 PHEV",
+      "vehicleMeta": [
+        {
+          "label": "Fuel Type",
+          "value": "Petrol-Electric Plug-in Hybrid (PHEV)"
+        },
+        {
+          "label": "Engine Family",
+          "value": "Prince (BMW/PSA joint development)"
+        },
+        {
+          "label": "Engine Code",
+          "value": "EP6FDT"
+        }
+      ],
+      "specsLabel": "Key Specs Snapshot",
+      "specs": [
+        {
+          "label": "Fuel Type",
+          "value": "Petrol-Electric Plug-in Hybrid (PHEV)"
+        },
+        {
+          "label": "Engine Family",
+          "value": "Prince (BMW/PSA joint development)"
+        },
+        {
+          "label": "Engine Code",
+          "value": "EP6FDT"
+        },
+        {
+          "label": "Engine Size",
+          "value": "1.6L (1,598cc)"
+        },
+        {
+          "label": "Configuration",
+          "value": "Inline 4-cylinder, 16-valve DOHC"
+        },
+        {
+          "label": "Petrol Engine Power",
+          "value": "180hp (132kW) @ 6,000rpm"
+        },
+        {
+          "label": "Electric Motor Power",
+          "value": "81kW (110hp)"
+        },
+        {
+          "label": "Combined Power Output",
+          "value": "225hp (165kW)"
+        },
+        {
+          "label": "Combined Torque",
+          "value": "360 Nm"
+        },
+        {
+          "label": "Battery Capacity",
+          "value": "12.44 kWh"
+        },
+        {
+          "label": "Electric-Only Range",
+          "value": "Up to 59 km (37 miles) WLTP"
+        },
+        {
+          "label": "Transmission",
+          "value": "8-speed e-EAT8 automatic"
+        },
+        {
+          "label": "0-62mph",
+          "value": "7.6 seconds"
+        },
+        {
+          "label": "Years Produced",
+          "value": "2021-present"
+        }
+      ],
+      "closingNote": "Every EP6FDT engine fitted to the Peugeot 308 Hybrid 225 PHEV is covered below, with UK rebuilt pricing and known failure points."
+    },
+    "engineGuide": {
+      "tag": "Engine Codes & Pricing",
+      "h2": "Peugeot 308 Hybrid 225 PHEV Engine Codes - Specifications & Replacement Cost",
+      "sectionTitle": "Compatible Engine Codes & Cost Guide",
+      "sectionSubtitle": "Find your exact engine code, specs and UK replacement cost guide.",
+      "intro": "",
+      "items": [
+        {
+          "code": "EP6FDT",
+          "title": "1.6L Turbo Petrol PHEV (2021-present)",
+          "specs": [
+            {
+              "label": "Fuel Type",
+              "value": "Petrol (Plug-in Hybrid)"
+            },
+            {
+              "label": "Engine Code",
+              "value": "EP6FDT (also known as EP6FDT PHEV / EP6FDT Hybrid)"
+            },
+            {
+              "label": "Engine Size",
+              "value": "1.6 Litre (1,598cc)"
+            },
+            {
+              "label": "Power Output (Petrol only)",
+              "value": "180hp (132kW) @ 6,000rpm"
+            },
+            {
+              "label": "Power Output (Combined)",
+              "value": "225hp (165kW)"
+            },
+            {
+              "label": "Torque (Petrol only)",
+              "value": "250 Nm @ 1,750 rpm"
+            },
+            {
+              "label": "Torque (Combined)",
+              "value": "360 Nm"
+            },
+            {
+              "label": "Compression Ratio",
+              "value": "10.5:1"
+            },
+            {
+              "label": "Configuration",
+              "value": "Inline 4-cylinder, 16-valve DOHC"
+            },
+            {
+              "label": "Injection",
+              "value": "Direct injection"
+            },
+            {
+              "label": "Timing Drive",
+              "value": "Chain-driven (not wet belt)"
+            },
+            {
+              "label": "Electric Motor",
+              "value": "81kW (110hp) integrated with e-EAT8 gearbox"
+            },
+            {
+              "label": "Battery",
+              "value": "12.44 kWh lithium-ion"
+            },
+            {
+              "label": "Years Fitted",
+              "value": "2021-present"
+            }
+          ],
+          "costs": [
+            {
+              "label": "Used",
+              "value": "£1,800-£3,200",
+              "description": ""
+            },
+            {
+              "label": "Reconditioned",
+              "value": "£2,500-£4,000",
+              "description": ""
+            },
+            {
+              "label": "Rebuilt",
+              "value": "£2,800-£5,500",
+              "description": ""
+            }
+          ],
+          "compatibleTrimLevels": [
+            "GT",
+            "GT Pack",
+            "Allure (selected markets)"
+          ],
+          "commonFailure": "High-voltage battery capacity loss affecting electric-only range (reported from 17-41 miles in cold weather); onboard charger faults; electric motor/inverter cooling system leaks; timing chain tensioner wear (shared with EP6 family); high-pressure fuel pump failure; carbon buildup on intake valves.",
+          "cta": "-> Get quotes for EP6FDT Peugeot 308 Hybrid 225 PHEV engine replacement",
+          "closing": "-> Get quotes for EP6FDT Peugeot 308 Hybrid 225 PHEV engine replacement"
+        }
+      ],
+      "prompt": ""
     },
     "commonProblems": {
-      "tag": "Engine Codes",
-      "h2": "Peugeot 308 Hybrid 225 PHEV Engine Codes - Full Technical Specifications & Replacement Guide",
-      "h3": "The 1.6-litre turbo petrol engine fitted to the Peugeot 308 Hybrid 225 PHEV, with technical specs, compatible variants and trims, known failure points, and average rebuilt prices from UK specialists. Select the engine code to compare quotes.",
-      "problems": [],
+      "tag": "Common Problems",
+      "h2": "Peugeot 308 Hybrid 225 PHEV Engine Problems - Repair Cost vs Replacement",
+      "h3": "The Peugeot 308 Hybrid 225 PHEV's EP6FDT engine is considered one of the most reliable petrol units Peugeot has produced in recent years - using a timing chain rather than the wet belt found on smaller PureTech engines. However, the complexity of the plug-in hybrid system introduces its own failure points: battery degradation, onboard charger faults, and electric motor/inverter issues. Early production examples also saw a handful of traction chain and charger failures. Every rebuilt Peugeot 308 Hybrid 225 PHEV engine through EnginesMarket includes upgraded components addressing the original failure points, plus a minimum 12-month unlimited-mileage warranty - with specialist high-voltage system integration and calibration included.",
+      "problems": [
+        {
+          "group": "High-Voltage Battery Degradation",
+          "h4": "High-Voltage Battery Degradation - Why Peugeot 308 Hybrid 225 PHEV Engines Lose Electric Range",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "affectedModels": "Peugeot 308 Hybrid 225 PHEV (EP6FDT, 2021-present)",
+          "typicalFailureMileage": "30,000-60,000 miles",
+          "rootCause": "The 12.44 kWh lithium-ion battery pack degrades over time, reducing electric-only range. Owners have reported range dropping from 41 miles to as low as 17 miles in cold weather, though dealers often attribute this to temperature. Battery management system (BMS) faults can also trigger system warnings and reduced power output. Unlike some newer PHEVs, the 308 Hybrid does not use LFP battery technology.",
+          "whyItHappens": "",
+          "repairOptions": [
+            {
+              "tier": "Diagnostic - Battery Health Check & BMS Reset",
+              "dealerPrice": "£150-£300",
+              "specialistPrice": "£100-£200",
+              "whatItInvolves": "Battery capacity test, BMS recalibration, system health check",
+              "longevity": "Identifies if replacement is needed; does not restore lost capacity",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Intermediate - Battery Cell Replacement / Module Swap",
+              "dealerPrice": "£2,500-£4,500",
+              "specialistPrice": "£1,500-£3,000",
+              "whatItInvolves": "Replacement of degraded battery modules, BMS recalibration",
+              "longevity": "Effective if caught early; extends battery life by 20k-40k miles",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Full Replacement - Rebuilt Hybrid Powertrain",
+              "dealerPrice": "£8,000-£10,000",
+              "specialistPrice": "£2,800-£5,500",
+              "whatItInvolves": "Complete rebuilt unit with new battery pack, electric motor and engine, 12-month warranty",
+              "longevity": "Required if battery degradation has affected inverter or motor health",
+              "estimatedTime": ""
+            }
+          ],
+          "vehicleValueCheck": "",
+          "recommendation": "Battery degradation is the most common issue on the Peugeot 308 Hybrid 225 PHEV. If you notice reduced electric-only range, have the battery health checked immediately. Extended warranty can be valuable - some owners recommend purchasing warranty extension when buying new or approved used. If the battery has lost more than 30% of its capacity, a replacement is usually more cost-effective than continued use. A rebuilt hybrid powertrain with a new battery pack is the most reliable long-term solution.",
+          "cta": "-> Enquire about Peugeot 308 Hybrid 225 PHEV battery and powertrain replacement"
+        },
+        {
+          "group": "Onboard Charger & Charging Port Faults",
+          "h4": "Onboard Charger & Charging Port Faults - Why Peugeot 308 Hybrid 225 PHEV Systems Fail to Charge",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "affectedModels": "Peugeot 308 Hybrid 225 PHEV (EP6FDT, 2021-present)",
+          "typicalFailureMileage": "20,000-50,000 miles",
+          "rootCause": "The onboard charger and charging port can develop faults, preventing plug-in charging. Early production examples saw a handful of onboard charger failures. The standard charger is 3.6kW, with a 7.4kW optional upgrade available. Faults can also occur in the charging port or the cable itself.",
+          "whyItHappens": "",
+          "repairOptions": [
+            {
+              "tier": "Minor - Charging Port / Cable Replacement",
+              "dealerPrice": "£200-£500",
+              "specialistPrice": "£100-£300",
+              "whatItInvolves": "Replacement of charging port or cable, system reset",
+              "longevity": "Effective if fault is in the port or cable",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Intermediate - Onboard Charger Replacement",
+              "dealerPrice": "£800-£1,500",
+              "specialistPrice": "£500-£1,000",
+              "whatItInvolves": "Replacement of onboard charger module, system recalibration",
+              "longevity": "Restores charging function; requires specialist high-voltage handling",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Full Replacement - Rebuilt Hybrid Powertrain",
+              "dealerPrice": "£8,000-£10,000",
+              "specialistPrice": "£2,800-£5,500",
+              "whatItInvolves": "Complete rebuilt unit with new charger, battery and motor, 12-month warranty",
+              "longevity": "Only if charger fault has caused wider electrical system damage",
+              "estimatedTime": ""
+            }
+          ],
+          "vehicleValueCheck": "",
+          "recommendation": "Onboard charger faults on the Peugeot 308 Hybrid 225 PHEV should be addressed promptly - without the ability to charge, the vehicle becomes a heavier, less efficient petrol car. Check that your vehicle has had any outstanding campaigns addressed. If the charger has failed, replacement is straightforward for a specialist. A full powertrain replacement is only necessary if the fault has caused wider electrical damage.",
+          "cta": "-> Compare rebuilt Peugeot 308 Hybrid 225 PHEV powertrain prices"
+        },
+        {
+          "group": "Timing Chain & Petrol Engine Wear",
+          "h4": "Timing Chain & Petrol Engine Wear - Why EP6FDT Units Develop Rattle and Loss of Power",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "affectedModels": "Peugeot 308 Hybrid 225 PHEV (EP6FDT, 2021-present)",
+          "typicalFailureMileage": "50,000-90,000 miles",
+          "rootCause": "The EP6FDT shares the Prince engine family's timing chain architecture - chain-driven, not wet belt. While more reliable than wet belt units, the timing chain tensioner can still wear over time, causing cold-start rattle and, in severe cases, chain jump. The 1.6 hybrid is considered the most reliable engine Peugeot has made in a while, but high-mileage examples may still develop chain issues. Carbon buildup on intake valves from direct injection is also a concern, though less severe than on earlier Prince engines.",
+          "whyItHappens": "",
+          "repairOptions": [
+            {
+              "tier": "Minor - Timing Chain Kit Replacement",
+              "dealerPrice": "£900-£1,600",
+              "specialistPrice": "£600-£1,100",
+              "whatItInvolves": "Replacement of chain, tensioner (revised), guides and VANOS sprockets",
+              "longevity": "Effective if caught early; prevents catastrophic failure",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Full Replacement - Rebuilt EP6FDT Engine",
+              "dealerPrice": "£4,000-£5,500",
+              "specialistPrice": "£2,800-£5,500",
+              "whatItInvolves": "Complete rebuilt unit with upgraded timing components, new HPFP and hybrid system calibration, 12-month warranty",
+              "longevity": "Required if chain has jumped or caused valve damage",
+              "estimatedTime": ""
+            }
+          ],
+          "vehicleValueCheck": "",
+          "recommendation": "If your Peugeot 308 Hybrid 225 PHEV exhibits cold-start rattle, address it immediately - the 1.6 hybrid is reliable but timing chain issues can still occur on high-mileage examples. A timing chain kit replacement is significantly cheaper than a full engine replacement. Regular oil changes with correct 0W-30 fully synthetic oil are critical to preventing timing chain guide wear. Carbon cleaning every 60,000 miles is also recommended for direct-injection engines.",
+          "cta": "-> Compare rebuilt EP6FDT Peugeot 308 Hybrid 225 PHEV engine prices"
+        },
+        {
+          "group": "Electric Motor & Inverter Cooling System Leaks",
+          "h4": "Electric Motor & Inverter Cooling System Leaks - Why Peugeot 308 Hybrid 225 PHEV Systems Overheat",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "affectedModels": "Peugeot 308 Hybrid 225 PHEV (EP6FDT, 2021-present)",
+          "typicalFailureMileage": "40,000-80,000 miles",
+          "rootCause": "The electric motor and inverter have dedicated cooling systems that can develop leaks, leading to overheating and reduced power output. The 81kW (110hp) electric motor integrated with the e-EAT8 gearbox generates significant heat under load. Coolant leaks in the inverter cooling circuit can trigger system warnings and limit electric-only operation.",
+          "whyItHappens": "",
+          "repairOptions": [
+            {
+              "tier": "Intermediate - Cooling System Repair",
+              "dealerPrice": "£800-£1,500",
+              "specialistPrice": "£500-£1,000",
+              "whatItInvolves": "Replacement of coolant hoses, pump, or radiator; system flush and refill",
+              "longevity": "Effective if caught before motor/inverter damage occurs",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Full Replacement - Rebuilt Hybrid Powertrain",
+              "dealerPrice": "£8,000-£10,000",
+              "specialistPrice": "£2,800-£5,500",
+              "whatItInvolves": "Complete rebuilt unit with new motor, inverter and cooling system, 12-month warranty",
+              "longevity": "Required if overheating has caused motor or inverter failure",
+              "estimatedTime": ""
+            }
+          ],
+          "vehicleValueCheck": "",
+          "recommendation": "Cooling system leaks on the Peugeot 308 Hybrid 225 PHEV should be addressed immediately. If you notice coolant loss or system warnings, have the cooling system inspected. Replacing hoses or the water pump early can prevent catastrophic motor or inverter failure. A full powertrain replacement is only necessary if overheating has caused internal damage.",
+          "cta": "-> Compare rebuilt Peugeot 308 Hybrid 225 PHEV powertrain prices"
+        }
+      ],
       "emptyState": null,
       "finalCta": {
-        "h4": "EP6FDT - 1.6L Petrol Turbo (Hybrid 225 PHEV)",
-        "paragraph": "History: The EP6FDT is the latest evolution of PSA's Prince engine family, co-developed with BMW. In the 308 Hybrid 225, it produces 180hp from the combustion engine alone, combined with an 81kW electric motor for a total system output of 225hp. The engine is mated to an 8-speed e-EAT8 automatic gearbox with an integrated electric motor.",
-        "buttonText": "",
-        "disclaimer": ""
+        "h4": "Don't Let Hybrid Failure Write Off Your Peugeot 308 Hybrid 225 PHEV",
+        "paragraph": "Whether you're dealing with battery degradation, charger faults, timing chain wear or cooling system leaks, EngineMarket connects you directly with verified UK Peugeot 308 Hybrid 225 PHEV specialists who understand these exact failure patterns. Every rebuilt unit features upgraded components to permanently address the root cause, is bench-tested for performance, and comes with a minimum 12-month unlimited mileage warranty. Hybrid specialist fitting includes high-voltage system safety procedures, inverter calibration and battery management system integration. Skip the main dealer premium - compare transparent supply-and-fit quotes from multiple trusted specialists and get back on the road with confidence.",
+        "buttonText": "Compare Peugeot 308 Hybrid 225 PHEV Powertrain Replacement Prices Now ->",
+        "disclaimer": "\"All prices are indicative UK market ranges based on historical quote data and repair requests from our network of engine specialists. Dealer pricing is estimated based on published main dealer labour rates and genuine OEM parts pricing. Specialist pricing reflects actual quote data from EnginesMarket's UK network. Actual costs vary depending on damage severity, vehicle condition, variant, and workshop location within the UK. Use our free comparison tool to get tailored quotes for your specific Peugeot 308 Hybrid 225 PHEV. Every powertrain supplied through EnginesMarket carries a minimum 12-month unlimited mileage warranty - always confirm exact terms with your chosen supplier.\""
       },
       "reviewSummary": null
     },
     "faq": {
-      "tag": "FAQs",
-      "h2": "Peugeot 308 Hybrid 225 PHEV Engine Problems - What It Costs to Fix & When Replacement Makes Sense",
+      "tag": "FAQ",
+      "h2": "Peugeot 308 Hybrid 225 PHEV Engine Replacement - Frequently Asked Questions",
       "intro": "Everything Peugeot 308 Hybrid 225 PHEV owners usually ask before choosing a rebuilt, reconditioned or used replacement engine.",
       "defaultOpenIndex": 0,
-      "disclaimer": "All prices are indicative UK market ranges based on historical quote data and repair requests from our network of engine specialists. Dealer pricing is estimated based on published main dealer labour rates and genuine OEM parts pricing. Specialist pricing reflects actual quote data from EngineMarket's UK network. Actual costs vary depending on damage severity, vehicle condition, variant, and workshop location within the UK. Use our free comparison tool to get tailored quotes for your specific Peugeot 308 Hybrid 225 PHEV and engine code. Every engine supplied through EngineMarket carries a minimum 12-month unlimited mileage warranty - always confirm exact terms with your chosen supplier. Traction battery warranty terms are subject to manufacturer conditions - confirm eligibility with your Peugeot dealer.",
-      "items": [],
+      "disclaimer": "",
+      "items": [
+        {
+          "question": "How much does a Peugeot 308 Hybrid 225 PHEV engine replacement cost?",
+          "answer": "A rebuilt Peugeot 308 Hybrid 225 PHEV engine typically costs **£2,800-£5,500** supply-only, depending on the supplier and whether the hybrid system components are included. Used units start from **£1,800**. Supply & fit adds **£800-£1,500** labour due to high-voltage system complexity. Main dealer replacement can exceed **£8,000-£10,000**.",
+          "keyPoints": [
+            "Rebuilt EP6FDT hybrid engine: £2,800-£5,500",
+            "Reconditioned EP6FDT: £2,500-£4,000",
+            "Used EP6FDT: £1,800-£3,200"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Get instant quotes for Peugeot 308 Hybrid 225 PHEV engine replacement from UK specialists"
+        },
+        {
+          "question": "What are the most common Peugeot 308 Hybrid 225 PHEV problems?",
+          "answer": "The most common Peugeot 308 Hybrid 225 PHEV problems are **high-voltage battery degradation** reducing electric range (reported from 41 miles down to 17 miles in cold weather), **onboard charger faults** preventing plug-in charging, **electric motor/inverter cooling system leaks**, and **timing chain tensioner wear** on the EP6FDT petrol engine. The 1.6 hybrid is generally considered reliable - \"the most reliable engine Peugeot have made in a while\" - but the hybrid system has its own failure points.",
+          "keyPoints": [
+            "Battery degradation: reduced electric range and fuel economy",
+            "Charger faults: preventing plug-in charging",
+            "Timing chain wear: cold-start rattle on high-mileage examples",
+            "Cooling system leaks: motor/inverter overheating"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Compare rebuilt Peugeot 308 Hybrid 225 PHEV powertrain prices"
+        },
+        {
+          "question": "Is it worth replacing the hybrid engine on a Peugeot 308 Hybrid 225 PHEV?",
+          "answer": "Replacing a Peugeot 308 Hybrid 225 PHEV engine is worthwhile if the vehicle is otherwise sound. A rebuilt unit costs **£2,800-£5,500** versus **£18,000-£35,000** for a comparable used 308 Hybrid 225. With dealer replacement potentially exceeding **£8,000-£10,000**, specialist rebuilt units offer significant savings. Hybrid vehicles command strong residuals, making replacement a sensible investment for well-maintained examples.",
+          "keyPoints": [
+            "Rebuilt hybrid powertrain: £2,800-£5,500",
+            "Dealer replacement: £8,000-£10,000+",
+            "Comparable used 308 Hybrid 225: £18,000-£35,000"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Get a tailored Peugeot 308 Hybrid 225 PHEV powertrain replacement quote today"
+        },
+        {
+          "question": "How long does a Peugeot 308 Hybrid 225 PHEV battery last?",
+          "answer": "With proper maintenance, the Peugeot 308 Hybrid 225 PHEV battery typically lasts **8-10 years or 80,000-120,000 miles**. The 12.44 kWh battery is sensitive to temperature - owners report reduced range in cold weather (from 41 miles to as low as 17 miles). Battery health checks should be performed regularly. Extended warranty is recommended when buying used.",
+          "keyPoints": [
+            "Battery capacity: 12.44 kWh",
+            "Typical lifespan: 8-10 years / 80,000-120,000 miles",
+            "Cold weather range reduction is common",
+            "Extended warranty recommended for peace of mind"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Find a reconditioned Peugeot 308 Hybrid 225 PHEV powertrain with 12-month warranty"
+        },
+        {
+          "question": "What's the difference between Peugeot 308 Hybrid 225 and Hybrid 180?",
+          "answer": "The 308 Hybrid 225 uses the **EP6FDT** 1.6L turbo petrol engine producing **180hp** combined with an 81kW electric motor for **225hp** total. The Hybrid 180 uses a **1.2L PureTech** petrol engine producing **150hp** combined. Both have similar electric-only range and battery capacity, but the 225 offers significantly more power. The 225 uses a timing chain (more reliable than the 1.2's wet belt). The 225 is also more expensive to replace.",
+          "keyPoints": [
+            "Hybrid 225: 1.6L EP6FDT, 225hp, timing chain",
+            "Hybrid 180: 1.2L PureTech, 180hp, wet belt",
+            "225 more powerful and more reliable engine",
+            "225 higher replacement cost"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Compare Peugeot 308 Hybrid 225 vs Hybrid 180 options"
+        },
+        {
+          "question": "How do I find my Peugeot 308 Hybrid 225 PHEV engine code?",
+          "answer": "Your Peugeot 308 Hybrid 225 PHEV engine code is **EP6FDT**. It appears on the VIN plate under the bonnet, stamped on the engine block, or on your V5C registration document section D.2. Enter your reg above for instant verification.",
+          "keyPoints": [
+            "VIN plate under bonnet shows engine code",
+            "V5C section D.2 lists the official engine code",
+            "EP6FDT = 1.6L Hybrid 225 PHEV"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Enter your registration to identify your exact Peugeot 308 Hybrid 225 PHEV engine code instantly"
+        }
+      ],
       "ui": {
         "questionLabelPrefix": "Question",
         "keyPointsLabel": "Key points",
@@ -234,33 +773,30 @@
     },
     "trustCta": {
       "tag": "Why Choose Us",
-      "h2": "Peugeot 308 Hybrid 225 PHEV Engine Types - Options, Costs & What to Expect",
+      "h2": "Compare Peugeot 308 Hybrid 225 PHEV Engine Prices Today",
       "intro": "Compare quotes from trusted UK Peugeot 308 Hybrid 225 PHEV engine specialists with warranty-backed rebuilt, reconditioned and used options nationwide.",
       "points": [
         {
-          "title": "",
+          "title": "20+ Peugeot 308 Hybrid 225 PHEV engines supplied through our network",
           "description": ""
         },
         {
-          "title": "",
+          "title": "12-Month Warranty on every rebuilt EP6FDT hybrid engine",
           "description": ""
         },
         {
-          "title": "",
-          "description": ""
+          "title": "Nationwide UK delivery",
+          "description": "supply & fit available by hybrid-certified technicians"
         }
       ],
-      "finalText": "",
-      "buttonText": "",
+      "finalText": "Comparing Peugeot 308 Hybrid 225 PHEV engine quotes is completely free and carries no obligation. Enter your registration above, tell us your EP6FDT engine code, and receive transparent, fixed-price quotes from our vetted UK specialists within hours. Whether you need a used hybrid unit for a quick fix or a fully rebuilt EP6FDT powertrain with upgraded battery, motor and engine components and a 12-month warranty, we'll match you with the right supplier for your budget. All work is carried out by hybrid-certified technicians with high-voltage system expertise.",
+      "buttonText": "Get Free Peugeot 308 Hybrid 225 PHEV Engine Quotes ->",
       "secondaryAction": {
         "text": "",
         "href": "tel:03330000044"
       },
       "ui": {
-        "showSecondaryAction": false,
-        "imageBadgeLabel": "Variant-specific support",
-        "imageBadgeTitle": "Peugeot 308 Hybrid 225 PHEV specialists across the UK",
-        "imageBadgeText": "Compare supply-only and supply & fit quotes from vetted independent engine specialists."
+        "showSecondaryAction": false
       }
     }
   }

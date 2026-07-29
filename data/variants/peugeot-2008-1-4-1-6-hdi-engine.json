@@ -14,8 +14,8 @@
     "storageSlug": "peugeot-2008-1-4-1-6-hdi-engine"
   },
   "seo": {
-    "title": "Peugeot 2008 1.4 & 1.6 HDi Engine Replacement - Compare Prices & Save",
-    "description": "Get quotes today from trusted UK Peugeot 2008 HDi specialists. Compare prices on reconditioned, rebuilt and used 8HZ, 9HZ and DV6 engines - supply & fit available nationwide.",
+    "title": "Peugeot 2008 1.4 & 1.6 HDi Engine Replacement | Compare Prices",
+    "description": "Peugeot 2008 1.4 & 1.6 HDi engine replacement cost guide. Compare rebuilt, reconditioned & used 8HZ 9HZ diesel engine prices from £520. 12-month warranty & UK supply fit specialists.",
     "canonical": "/peugeot/2008/1-4-1-6-hdi-engine"
   },
   "assets": {
@@ -25,12 +25,174 @@
     "howItWorksBg": "/images/brands/peugeot/brand/peugeot-how-it-works-bg.webp",
     "ctaImage": "/images/brands/peugeot/models/peugeot-2008-model-card.png"
   },
-  "structuredData": null,
+  "structuredData": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.enginesmarket.co.uk/#website",
+        "url": "https://www.enginesmarket.co.uk/",
+        "name": "Engines Market",
+        "publisher": {
+          "@id": "https://www.enginesmarket.co.uk/#organization"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.enginesmarket.co.uk/#organization",
+        "name": "Engines Market",
+        "url": "https://www.enginesmarket.co.uk/",
+        "logo": "https://www.enginesmarket.co.uk/images/logo.png",
+        "sameAs": [
+          "https://www.facebook.com/enginesmarket",
+          "https://x.com/EnginesMarket",
+          "https://www.instagram.com/enginesmarketuk/",
+          "https://www.tiktok.com/@enginesmarket"
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.enginesmarket.co.uk/peugeot/2008/1-4-1-6-hdi-engine/#webpage",
+        "url": "https://www.enginesmarket.co.uk/peugeot/2008/1-4-1-6-hdi-engine/",
+        "name": "Peugeot 2008 1.4 & 1.6 HDi Engine Replacement - Compare Prices & Get Quotes",
+        "description": "Peugeot 2008 1.4 & 1.6 HDi engine replacement cost guide. Compare rebuilt, reconditioned & used 8HZ 9HZ diesel engine prices from £520. 12-month warranty & UK supply fit specialists.",
+        "isPartOf": {
+          "@id": "https://www.enginesmarket.co.uk/#website"
+        },
+        "about": [
+          {
+            "@type": "Car",
+            "name": "Peugeot 2008 1.4 & 1.6 HDi",
+            "brand": {
+              "@type": "Brand",
+              "name": "Peugeot"
+            },
+            "model": "2008 1.4 & 1.6 HDi"
+          },
+          {
+            "@type": "Service",
+            "name": "Peugeot 2008 1.4 & 1.6 HDi Engine Replacement"
+          }
+        ],
+        "mainEntity": {
+          "@id": "https://www.enginesmarket.co.uk/peugeot/2008/1-4-1-6-hdi-engine/#service"
+        },
+        "breadcrumb": {
+          "@id": "https://www.enginesmarket.co.uk/peugeot/2008/1-4-1-6-hdi-engine/#breadcrumb"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.enginesmarket.co.uk/peugeot/2008/1-4-1-6-hdi-engine/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.enginesmarket.co.uk/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Peugeot",
+            "item": "https://www.enginesmarket.co.uk/peugeot/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Peugeot 2008",
+            "item": "https://www.enginesmarket.co.uk/peugeot/2008/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Peugeot 2008 1.4 & 1.6 HDi",
+            "item": "https://www.enginesmarket.co.uk/peugeot/2008/1-4-1-6-hdi-engine/"
+          }
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://www.enginesmarket.co.uk/peugeot/2008/1-4-1-6-hdi-engine/#service",
+        "name": "Peugeot 2008 1.4 & 1.6 HDi Engine Replacement Service",
+        "serviceType": [
+          "Peugeot 2008 1.4 & 1.6 HDi Engine Replacement",
+          "Reconditioned Peugeot 2008 1.4 & 1.6 HDi Engines",
+          "Used Peugeot 2008 1.4 & 1.6 HDi Engines",
+          "Peugeot 2008 1.4 & 1.6 HDi Engine Supply and Fit",
+          "Peugeot 2008 1.4 & 1.6 HDi Engine Price Comparison"
+        ],
+        "provider": {
+          "@id": "https://www.enginesmarket.co.uk/#organization"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        "url": "https://www.enginesmarket.co.uk/peugeot/2008/1-4-1-6-hdi-engine/",
+        "description": "Peugeot 2008 1.4 & 1.6 HDi engine replacement cost guide. Compare rebuilt, reconditioned & used 8HZ 9HZ diesel engine prices from £520. 12-month warranty & UK supply fit specialists."
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.enginesmarket.co.uk/peugeot/2008/1-4-1-6-hdi-engine/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does a Peugeot 2008 1.4 or 1.6 HDi engine replacement cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A rebuilt Peugeot 2008 HDi engine typically costs £1,800-£3,100 supply-only, depending on engine size and condition. The 1.4 HDi (8HZ) is cheaper to replace - from £1,800 - while the 1.6 HDi (9HZ) ranges £2,900-£3,100. Used engines start from £520. Supply & fit adds £400-£800 labour."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What are the most common Peugeot 2008 1.6 HDi engine problems?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The most common Peugeot 2008 1.6 HDi (9HZ) engine problems are EGR valve failure causing rough idle and power loss, DPF blockage from short-journey driving triggering anti-pollution faults, and turbo actuator failure causing loss of boost. Fuel injector issues and oil dilution from injector seal leaks are also reported."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What causes the Peugeot 2008 1.4 HDi anti-pollution fault?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The 'anti-pollution fault' warning on a Peugeot 2008 1.4 HDi is usually caused by DPF blockage from short-journey driving preventing regeneration, or EGR valve carbon buildup. The 1.4 HDi's DPF is sensitive to urban driving patterns, and the warning often appears alongside loss of power or limp mode."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is it worth replacing the engine on a Peugeot 2008 1.4 or 1.6 HDi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Replacing a Peugeot 2008 1.4 or 1.6 HDi engine is worthwhile if the vehicle is otherwise sound and the replacement cost stays below the vehicle's value. With 2008 HDi values typically £3,000-£9,000, a rebuilt engine at £1,800-£3,100 represents a significant but often justifiable investment. For sub-£4,000 examples, a used engine from £520 may be more economical."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does a Peugeot 2008 1.6 HDi engine last?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "With proper maintenance, the Peugeot 2008 1.6 HDi (9HZ) engine typically reaches 150,000-200,000 miles. The 1.4 HDi (8HZ) is similarly durable but suffers from DPF sensitivity in urban use. Regular oil changes, EGR cleaning and DPF-friendly driving (regular motorway runs) are essential for longevity."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What's the difference between Peugeot 2008 HDi and BlueHDi engines?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Peugeot 2008 HDi engines (8HZ, 9HZ) are pre-Euro 6 units fitted to first-generation 2008s from 2013-2016. They have simpler emissions hardware (EGR + DPF) but no AdBlue system. BlueHDi engines (DV6C, DV5RC) replaced them from 2015 onwards with Euro 6 compliance, adding AdBlue/SCR systems for lower NOx emissions but greater complexity. HDi engines are generally simpler and cheaper to maintain."
+            }
+          }
+        ]
+      }
+    ]
+  },
   "sections": {
     "hero": {
-      "tag": "Peugeot ENGINE MARKETPLACE",
-      "h1": "Peugeot 2008 1.4 & 1.6 HDi Engine Replacement - Compare Prices & Save",
-      "subheading": "Get quotes today from trusted UK Peugeot 2008 HDi specialists. Compare prices on reconditioned, rebuilt and used 8HZ, 9HZ and DV6 engines - supply & fit available nationwide.",
+      "tag": "PEUGEOT 2008 HDi SPECIALISTS",
+      "h1": "Peugeot 2008 1.4 & 1.6 HDi Engine Replacement - Compare Prices & Get Quotes",
+      "subheading": "Get quotes today from trusted UK Peugeot 2008 1.4 and 1.6 HDi engine specialists. Compare prices on reconditioned, rebuilt and used 8HZ and 9HZ diesel units - supply & fit available with a minimum 12-month warranty.",
       "trustBadges": [
         "Supply & Fit Available",
         "12-Month Warranty",
@@ -44,10 +206,10 @@
       "highlights": [
         {
           "title": "Peugeot 2008 1.4 & 1.6 HDi Engine",
-          "price": "[9HZ 1.6 HDi engine image] 2008 1.6 HDi 92 Engines - from £2,900 to £3,100",
-          "line1": "[9HZ 1.6 HDi engine image] 2008 1.6 HDi 92 Engines - from £2,900 to £3,100",
-          "line2": "-> Rebuilt units from £2,900 · Common codes: 9HZ, DV6, DV6TED4",
-          "detail": "-> Rebuilt units from £2,900 · Common codes: 9HZ, DV6, DV6TED4",
+          "price": "8HZ 1.4 HDi & 9HZ 1.6 HDi - from £520 to £3,100",
+          "line1": "8HZ 1.4 HDi & 9HZ 1.6 HDi - from £520 to £3,100",
+          "line2": "-> Used from £520 · Reconditioned from £1,200 · Common codes: 8HZ, 9HZ, 9HD",
+          "detail": "-> Used from £520 · Reconditioned from £1,200 · Common codes: 8HZ, 9HZ, 9HD",
           "image": "/images/brands/peugeot/models/peugeot-2008-model-card.png",
           "imageAlt": ""
         }
@@ -55,7 +217,7 @@
       "engineOptions": [
         {
           "label": "Used",
-          "price": "From quote",
+          "price": "From £520",
           "description": "Tested, bare/short engine",
           "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
           "imageAlt": "",
@@ -63,7 +225,7 @@
         },
         {
           "label": "Reconditioned",
-          "price": "From quote",
+          "price": "From £1,200",
           "description": "Rod bearings addressed, tested",
           "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
           "imageAlt": "",
@@ -95,7 +257,7 @@
         "subtitle": "Enter your registration number to compare Peugeot 2008 1.4 & 1.6 HDi engine options.",
         "inputPlaceholder": "AB12 CDE",
         "buttonText": "Get Free Peugeot 2008 HDi Engine Quotes ->",
-        "note": "Secure enquiry - no spam, no pressure. Genuine quotes only from vetted UK Peugeot 2008 HDi specialists."
+        "note": "Secure enquiry - no spam, no pressure. Genuine quotes only from vetted UK Peugeot 2008 1.4 and 1.6 HDi specialists."
       }
     },
     "howItWorks": {
@@ -110,26 +272,45 @@
           "number": 1,
           "icon": "registration",
           "front": {
-            "h3": "",
-            "text": ""
+            "h3": "Confirm Your Peugeot 2008 HDi",
+            "text": "🖼️ [Registration icon]. Instantly verify your exact model, engine code (8HZ or 9HZ) and fuel type via DVLA"
           },
           "back": {
-            "heading": "",
-            "text": "",
-            "bullets": []
+            "heading": "EnginesMarket cross-checks the DVLA record against known Peugeot 2008 HDi engine codes so your quote request is accurate before it reaches a supplier - no paperwork, no guesswork, 100% free",
+            "text": "Whether you have the 1.4L 8HZ or 1.6L 9HZ, we match you with the right specialists.",
+            "bullets": [
+              "Whether you have the 1.4L 8HZ or 1.6L 9HZ, we match you with the right specialists."
+            ]
           }
         },
         {
-          "number": 1,
-          "icon": "registration",
+          "number": 2,
+          "icon": "quote",
           "front": {
-            "h3": "",
-            "text": ""
+            "h3": "Compare Peugeot 2008 HDi Engine Quotes",
+            "text": "🖼️ [Compare icon]. See used, reconditioned and rebuilt 8HZ and 9HZ options side-by-side"
           },
           "back": {
-            "heading": "",
-            "text": "",
-            "bullets": []
+            "heading": "Our UK network of Peugeot 2008 HDi specialists sends you transparent, itemised quotes covering all condition types - no obligation, no hidden fees, just genuine prices for your exact diesel engine code.",
+            "text": "Our UK network of Peugeot 2008 HDi specialists sends you transparent, itemised quotes covering all condition types - no obligation, no hidden fees, just genuine prices for your exact diesel engine code.",
+            "bullets": [
+              "Our UK network of Peugeot 2008 HDi specialists sends you transparent, itemised quotes covering all condition types - no obligation, no hidden fees, just genuine prices for your exact diesel engine code."
+            ]
+          }
+        },
+        {
+          "number": 3,
+          "icon": "shield",
+          "front": {
+            "h3": "Choose Your Peugeot 2008 HDi Specialist",
+            "text": "🖼️ [Booking icon]. Book supply & fit with a minimum 12-month warranty"
+          },
+          "back": {
+            "heading": "Every rebuilt Peugeot 2008 1.4 and 1.6 HDi engine comes with a minimum 12-month unlimited mileage warranty",
+            "text": "Choose supply-only or full supply & fit with nationwide delivery to your chosen garage.",
+            "bullets": [
+              "Choose supply-only or full supply & fit with nationwide delivery to your chosen garage."
+            ]
           }
         }
       ],
@@ -151,124 +332,394 @@
     },
     "historyTimeline": {
       "tag": "Variant History",
-      "h2": "What Are UK Drivers Paying for Peugeot 2008 1.4/1.6 HDi Engine Replacement?",
-      "intro": "Live UK Engine Market Data What Are UK Drivers Paying for Peugeot 2008 1.4/1.6 HDi Engine Replacement? The table below shows typical UK rebuilt engine costs across Peugeot 2008 1.4 and 1.6 HDi variants - compare failure causes, engine codes, fuel types, and price ranges to benchmark what UK drivers are paying. The 1.6 HDi/BlueHDi powered most diesel 2008s across both generations, with DPF and EGR issues driving replacement demand on high-mileage examples. The 1.4 HDi served as the entry-level diesel for early models【7†L27-L32】. | Variant | Years | Price Range | Common Failure | Engine Code | Fuel | |---------|-------|-------------|----------------|-------------|------| | Peugeot 2008 Active 1.6 HDi 92 | 2013-2016 | £2,900-£3,100 | EGR valve failure | 9HZ | Diesel 1.6L | | Peugeot 2008 Allure 1.6 HDi 92 | 2013-2016 | £2,900-£3,100 | Injector seal leaks | 9HZ | Diesel 1.6L | | Peugeot 2008 Active 1.6 BlueHDi 100 | 2013-2019 | £3,000-£3,200 | DPF blockage | DV6C | Diesel 1.6L | | Peugeot 2008 Allure 1.6 BlueHDi 120 | 2013-2019 | £3,100-£3,300 | AdBlue injector failure | DV6T | Diesel 1.6L | | Peugeot 2008 Active 1.4 HDi 68 | 2013-2016 | £2,700-£2,900 | Turbo wastegate sticking | 8HZ | Diesel 1.4L |",
-      "milestones": [],
-      "vehicleTitle": "What Are UK Drivers Paying for Peugeot 2008 1.4/1.6 HDi Engine Replacement?",
-      "vehicleMeta": [],
-      "specsLabel": "Key Specs Snapshot",
-      "specs": [],
-      "closingNote": ""
-    },
-    "engineGuide": {
-      "tag": "Compatible Engines",
-      "h2": "Peugeot 2008 1.4/1.6 HDi Engine Replacement - All Variants Covered",
-      "items": [
+      "h2": "Peugeot 2008 1.4 & 1.6 HDi - Engine History & Specs at a Glance",
+      "intro": "The Peugeot 2008 1.4 and 1.6 HDi diesel engines powered the first-generation (A94) 2008 from launch in 2013 until the arrival of the BlueHDi range in 2015. The 1.4 HDi (8HZ / DV4TD) was the entry-level diesel, offering modest 68hp output and excellent economy for budget-conscious buyers. The 1.6 HDi (9HZ / DV6TED4) was the higher-output workhorse, delivering 92hp and stronger torque for motorway driving. Both engines are pre-Euro 6, meaning they lack the complex AdBlue systems of later BlueHDi units - simpler emissions hardware, but with their own EGR and DPF challenges.",
+      "milestones": [
         {
-          "code": "Peugeot 2008 Active 1.6 HDi 92 Engine Replacement",
-          "title": "Peugeot 2008 Active 1.6 HDi 92 Engine Replacement",
-          "specs": [],
-          "costs": [],
-          "commonFailure": "",
-          "cta": "-> Compare Active 1.6 HDi 92 Engine Prices",
-          "closing": ""
+          "year": "",
+          "description": "**2013** - Peugeot 2008 launched with 1.4 HDi 68hp (8HZ) and 1.6 HDi 92hp (9HZ) diesel options"
         },
         {
-          "code": "Peugeot 2008 Allure 1.6 HDi 92 Engine Replacement",
-          "title": "Peugeot 2008 Allure 1.6 HDi 92 Engine Replacement",
-          "specs": [],
-          "costs": [],
-          "commonFailure": "",
-          "cta": "-> Compare Allure 1.6 HDi 92 Engine Prices",
-          "closing": ""
+          "year": "",
+          "description": "**2014** - 1.6 HDi carries over with minor ECU updates for emissions compliance"
         },
         {
-          "code": "Peugeot 2008 Active 1.6 BlueHDi 100 Engine Replacement",
-          "title": "Peugeot 2008 Active 1.6 BlueHDi 100 Engine Replacement",
-          "specs": [],
-          "costs": [],
-          "commonFailure": "",
-          "cta": "-> Compare Active 1.6 BlueHDi 100 Engine Prices",
-          "closing": ""
+          "year": "",
+          "description": "**2015** - BlueHDi 1.6L (DV6C) introduced, replacing both HDi units in most trims"
         },
         {
-          "code": "Peugeot 2008 Allure 1.6 BlueHDi 120 Engine Replacement",
-          "title": "Peugeot 2008 Allure 1.6 BlueHDi 120 Engine Replacement",
-          "specs": [],
-          "costs": [],
-          "commonFailure": "",
-          "cta": "-> Compare Allure 1.6 BlueHDi 120 Engine Prices",
-          "closing": ""
-        },
-        {
-          "code": "Peugeot 2008 Active 1.4 HDi 68 Engine Replacement",
-          "title": "Peugeot 2008 Active 1.4 HDi 68 Engine Replacement",
-          "specs": [],
-          "costs": [],
-          "commonFailure": "",
-          "cta": "-> Compare Active 1.4 HDi 68 Engine Prices",
-          "closing": ""
-        },
-        {
-          "code": "Peugeot 2008 Access 1.4 HDi 68 Engine Replacement",
-          "title": "Peugeot 2008 Access 1.4 HDi 68 Engine Replacement",
-          "specs": [],
-          "costs": [],
-          "commonFailure": "",
-          "cta": "-> Compare Access 1.4 HDi 68 Engine Prices",
-          "closing": ""
-        },
-        {
-          "code": "Peugeot 2008 GT Line 1.6 BlueHDi 100 Engine Replacement",
-          "title": "Peugeot 2008 GT Line 1.6 BlueHDi 100 Engine Replacement",
-          "specs": [],
-          "costs": [],
-          "commonFailure": "",
-          "cta": "-> Compare GT Line 1.6 BlueHDi 100 Engine Prices",
-          "closing": ""
-        },
-        {
-          "code": "Peugeot 2008 GT 1.6 BlueHDi 120 Engine Replacement",
-          "title": "Peugeot 2008 GT 1.6 BlueHDi 120 Engine Replacement",
-          "specs": [],
-          "costs": [],
-          "commonFailure": "",
-          "cta": "-> Compare GT 1.6 BlueHDi 120 Engine Prices",
-          "closing": ""
-        },
-        {
-          "code": "All Peugeot 2008 1.4/1.6 Diesel Variants",
-          "title": "Engine Replacement Coverage",
-          "specs": [],
-          "costs": [],
-          "commonFailure": "",
-          "cta": "",
-          "closing": "Not sure which variant your Peugeot 2008 is? Enter your registration number above - we'll identify the exact sub-model, engine code and compatible replacement options instantly【7†L56】."
+          "year": "",
+          "description": "**2016** - Final year for 1.4 HDi and 1.6 HDi in UK 2008 models"
         }
       ],
-      "closing": ""
+      "vehicleTitle": "Peugeot 2008 1.4 & 1.6 HDi",
+      "vehicleMeta": [
+        {
+          "label": "Fuel Type",
+          "value": "Diesel"
+        },
+        {
+          "label": "Engine Family",
+          "value": "DV4 (1.4L) / DV6 (1.6L)"
+        },
+        {
+          "label": "Engine Size",
+          "value": "1.4L (1,397cc) - 1.6L (1,560cc)"
+        }
+      ],
+      "specsLabel": "Key Specs Snapshot",
+      "specs": [
+        {
+          "label": "Fuel Type",
+          "value": "Diesel"
+        },
+        {
+          "label": "Engine Family",
+          "value": "DV4 (1.4L) / DV6 (1.6L)"
+        },
+        {
+          "label": "Engine Size",
+          "value": "1.4L (1,397cc) - 1.6L (1,560cc)"
+        },
+        {
+          "label": "Power Output Range",
+          "value": "68-92hp across the range"
+        },
+        {
+          "label": "Years Produced",
+          "value": "2013-2016"
+        }
+      ],
+      "closingNote": "Every 8HZ and 9HZ engine fitted to the Peugeot 2008 1.4 and 1.6 HDi is covered below, with UK rebuilt pricing and known failure points."
+    },
+    "engineGuide": {
+      "tag": "Engine Codes & Pricing",
+      "h2": "Peugeot 2008 1.4 & 1.6 HDi Engine Codes - Specifications & Replacement Cost",
+      "sectionTitle": "Compatible Engine Codes & Cost Guide",
+      "sectionSubtitle": "Find your exact engine code, specs and UK replacement cost guide.",
+      "intro": "",
+      "items": [
+        {
+          "code": "8HZ (DV4TD)",
+          "title": "1.4L HDi (2013-2016)",
+          "specs": [
+            {
+              "label": "Fuel Type",
+              "value": "Diesel"
+            },
+            {
+              "label": "Engine Size",
+              "value": "1.4 Litre (1,397cc)"
+            },
+            {
+              "label": "Power Output",
+              "value": "68hp (50kW)"
+            },
+            {
+              "label": "Torque",
+              "value": "160 Nm"
+            },
+            {
+              "label": "Configuration",
+              "value": "Inline 4-cylinder, 8-valve SOHC"
+            },
+            {
+              "label": "Injection",
+              "value": "Common-rail direct injection"
+            },
+            {
+              "label": "Years Fitted",
+              "value": "2013-2016"
+            }
+          ],
+          "costs": [
+            {
+              "label": "Used",
+              "value": "£520-£900",
+              "description": ""
+            },
+            {
+              "label": "Reconditioned",
+              "value": "£1,200-£2,000",
+              "description": ""
+            },
+            {
+              "label": "Rebuilt",
+              "value": "£1,800-£2,700",
+              "description": ""
+            }
+          ],
+          "compatibleTrimLevels": [
+            "Active 1.4 HDi 68",
+            "Access 1.4 HDi 68"
+          ],
+          "commonFailure": "Turbo wastegate sticking causing boost loss (70k+ miles); glow plug relay failure in cold weather; oil pump wear leading to low pressure warnings; EGR valve carbon buildup causing rough idle.",
+          "cta": "-> Get quotes for 8HZ Peugeot 2008 1.4 HDi engine replacement",
+          "closing": "-> Get quotes for 8HZ Peugeot 2008 1.4 HDi engine replacement"
+        },
+        {
+          "code": "9HZ (DV6TED4)",
+          "title": "1.6L HDi (2013-2016)",
+          "specs": [
+            {
+              "label": "Fuel Type",
+              "value": "Diesel"
+            },
+            {
+              "label": "Engine Size",
+              "value": "1.6 Litre (1,560cc)"
+            },
+            {
+              "label": "Power Output",
+              "value": "92hp (68kW)"
+            },
+            {
+              "label": "Torque",
+              "value": "180-215 Nm"
+            },
+            {
+              "label": "Configuration",
+              "value": "Inline 4-cylinder, 16-valve DOHC"
+            },
+            {
+              "label": "Injection",
+              "value": "Common-rail direct injection"
+            },
+            {
+              "label": "Years Fitted",
+              "value": "2013-2016"
+            }
+          ],
+          "costs": [
+            {
+              "label": "Used",
+              "value": "£794-£1,200",
+              "description": ""
+            },
+            {
+              "label": "Reconditioned",
+              "value": "£1,500-£2,400",
+              "description": ""
+            },
+            {
+              "label": "Rebuilt",
+              "value": "£2,900-£3,100",
+              "description": ""
+            }
+          ],
+          "compatibleTrimLevels": [
+            "Active 1.6 HDi 92",
+            "Allure 1.6 HDi 92",
+            "Access 1.6 HDi 92"
+          ],
+          "commonFailure": "EGR valve sticking causing rough idle and power loss; DPF blockage on short-journey driving; turbo actuator failure around 70k miles; injector seal leaks leading to oil dilution.",
+          "cta": "-> Get quotes for 9HZ Peugeot 2008 1.6 HDi engine replacement",
+          "closing": "-> Get quotes for 9HZ Peugeot 2008 1.6 HDi engine replacement",
+          "intro": ""
+        }
+      ],
+      "prompt": ""
     },
     "commonProblems": {
-      "tag": "Engine Codes",
-      "h2": "Peugeot 2008 1.4/1.6 HDi Engine Codes - Full Technical Specifications & Replacement Guide",
-      "h3": "Every 1.4 and 1.6-litre diesel engine code fitted to the Peugeot 2008, with technical specs, compatible variants and trims, known failure points, and average rebuilt prices from UK specialists. Select any engine code to compare quotes【8†L68-L69】.",
-      "problems": [],
+      "tag": "Common Problems",
+      "h2": "Peugeot 2008 1.4 & 1.6 HDi Engine Problems - Repair Cost vs Replacement",
+      "h3": "The Peugeot 2008 1.4 and 1.6 HDi engines are generally robust workhorses, but age, mileage and the demands of diesel emissions systems create distinct failure patterns. The 1.6 HDi's EGR valve, DPF and turbo actuator are the most common failure points, while the 1.4 HDi suffers from turbo wastegate and glow plug issues. Unlike later BlueHDi units, these pre-Euro 6 engines lack AdBlue complexity - but DPF and EGR problems remain significant drivers of replacement enquiries. Every rebuilt Peugeot 2008 HDi engine through EnginesMarket includes upgraded components addressing the original failure points, plus a minimum 12-month unlimited-mileage warranty.",
+      "problems": [
+        {
+          "group": "EGR Valve Failure",
+          "h4": "EGR Valve Failure - Why Peugeot 2008 1.6 HDi Engines Lose Power and Run Roughly",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "affectedModels": "Peugeot 2008 1.6 HDi (9HZ, 2013-2016)",
+          "typicalFailureMileage": "70,000-110,000 miles",
+          "rootCause": "Carbon buildup from exhaust gases sticks the EGR valve open or closed, disrupting the air-fuel mixture and triggering fault codes. Owners report intermittent power loss, rough idle and engine management lights. The issue is often accompanied by black smoke from the exhaust.",
+          "whyItHappens": "",
+          "repairOptions": [
+            {
+              "tier": "Minor - EGR Clean",
+              "dealerPrice": "£180-£350",
+              "specialistPrice": "£90-£220",
+              "whatItInvolves": "Remove valve, clean with solvent, reinstall and reset ECU",
+              "longevity": "Works if valve mechanism isn't worn or seized",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Intermediate - EGR Replace",
+              "dealerPrice": "£450-£850",
+              "specialistPrice": "£250-£500",
+              "whatItInvolves": "Supply and fit new EGR valve, gaskets, recalibrate system",
+              "longevity": "Restores function; may need intake manifold clean too",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Full Replacement - Rebuilt 9HZ Engine",
+              "dealerPrice": "£4,500-£6,000",
+              "specialistPrice": "£2,900-£3,100",
+              "whatItInvolves": "Supply & fit rebuilt 1.6 HDi with new EGR, turbo check, 12-month warranty",
+              "longevity": "Needed if stuck EGR caused turbo or piston damage",
+              "estimatedTime": ""
+            }
+          ],
+          "vehicleValueCheck": "",
+          "recommendation": "EGR issues on the 2008 1.6 HDi are common but usually fixable without engine replacement. Clean or replace the valve early to avoid secondary damage - a £200 specialist clean can prevent a £2,900 engine replacement. Only consider a rebuilt engine if the fault has already caused turbo or internal wear.",
+          "cta": "-> Compare rebuilt 9HZ Peugeot 2008 1.6 HDi engine prices"
+        },
+        {
+          "group": "DPF Blockage",
+          "h4": "DPF Blockage - Why Peugeot 2008 HDi Engines Trigger Anti-Pollution Faults",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "affectedModels": "Peugeot 2008 1.4 HDi (8HZ) and 1.6 HDi (9HZ), 2013-2016",
+          "typicalFailureMileage": "60,000-100,000 miles",
+          "rootCause": "Short-journey driving prevents the DPF from reaching regeneration temperature, causing soot buildup that eventually blocks exhaust flow. Owners report \"anti-pollution fault\" warnings, limp mode and loss of power. The 1.4 HDi is particularly susceptible to DPF-related warning lights.",
+          "whyItHappens": "",
+          "repairOptions": [
+            {
+              "tier": "Minor - Forced Regeneration",
+              "dealerPrice": "£200-£400",
+              "specialistPrice": "£100-£250",
+              "whatItInvolves": "Diagnostic reset, extended high-speed drive or forced regen cycle",
+              "longevity": "Works if blockage is early-stage and sensors are functional",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Intermediate - DPF Clean/Replace",
+              "dealerPrice": "£800-£1,500",
+              "specialistPrice": "£400-£900",
+              "whatItInvolves": "Remove DPF for off-car cleaning or supply fitted replacement unit",
+              "longevity": "Restores function if substrate isn't melted or cracked",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Full Replacement - Rebuilt HDi Engine",
+              "dealerPrice": "£4,000-£5,800",
+              "specialistPrice": "£1,800-£3,100",
+              "whatItInvolves": "Supply & fit rebuilt HDi with new DPF, EGR, 12-month warranty",
+              "longevity": "Needed if blockage caused turbo or piston damage",
+              "estimatedTime": ""
+            }
+          ],
+          "vehicleValueCheck": "",
+          "recommendation": "For a Peugeot 2008 HDi used mainly for short trips, invest in periodic DPF cleaning before blockage becomes severe. The 1.4 HDi's DPF warnings are often the first sign of trouble - address them promptly. If the DPF has caused turbo damage or excessive backpressure, a rebuilt engine with fresh emissions components offers better long-term value.",
+          "cta": "-> Compare rebuilt HDi engine prices for your Peugeot 2008 diesel"
+        },
+        {
+          "group": "Turbocharger Failure",
+          "h4": "Turbocharger Failure - Why Peugeot 2008 HDi Engines Lose Boost and Smoke Excessively",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "affectedModels": "Peugeot 2008 1.4 HDi (8HZ) and 1.6 HDi (9HZ), 2013-2016",
+          "typicalFailureMileage": "70,000-120,000 miles",
+          "rootCause": "The turbocharger's wastegate actuator can stick, or the variable geometry mechanism can seize from carbon buildup. Owners report loss of power, black smoke under load and unusual turbo noises. The 1.4 HDi's turbo wastegate is a known weak point, while the 1.6 HDi's turbo actuator can fail at higher mileages.",
+          "whyItHappens": "",
+          "repairOptions": [
+            {
+              "tier": "Intermediate - Turbo Actuator / Replacement",
+              "dealerPrice": "£1,200-£2,000",
+              "specialistPrice": "£700-£1,400",
+              "whatItInvolves": "Replacement of actuator or complete turbo unit with new oil feed lines",
+              "longevity": "Restores boost; viable if no engine damage",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Full Replacement - Rebuilt HDi Engine",
+              "dealerPrice": "£4,200-£6,000",
+              "specialistPrice": "£1,800-£3,100",
+              "whatItInvolves": "Complete rebuilt unit with new turbo assembly and revised oil feeds",
+              "longevity": "Required if turbo failure has caused engine damage",
+              "estimatedTime": ""
+            }
+          ],
+          "vehicleValueCheck": "",
+          "recommendation": "If your Peugeot 2008 HDi has lost power and is smoking excessively, have the turbo system inspected immediately. Actuator replacement is often sufficient if caught early. Once turbo debris has contaminated the oil system or caused bearing damage, a full rebuilt engine is the safest option.",
+          "cta": "-> Compare rebuilt HDi turbo engine prices for your Peugeot 2008"
+        }
+      ],
       "emptyState": null,
       "finalCta": {
-        "h4": "8HZ - 1.4L Diesel (HDi)",
-        "paragraph": "History: The 8HZ is the entry-level diesel for budget-conscious 2008 buyers from 2013 to 2016. It offers modest 68hp power but proven durability in light-duty use【8†L100-L107】.",
-        "buttonText": "",
-        "disclaimer": ""
+        "h4": "Don't Let Engine Failure Write Off Your Peugeot 2008 1.4 or 1.6 HDi",
+        "paragraph": "Whether you're dealing with EGR valve failure, DPF blockage or turbo issues, EngineMarket connects you directly with verified UK Peugeot 2008 HDi specialists who understand these exact failure patterns. Every rebuilt unit features upgraded components to permanently address the root cause, is bench-tested for performance, and comes with a minimum 12-month unlimited mileage warranty. Skip the main dealer premium - compare transparent supply-and-fit quotes from multiple trusted specialists and get back on the road with confidence.",
+        "buttonText": "Compare Peugeot 2008 1.4 & 1.6 HDi Engine Replacement Prices Now ->",
+        "disclaimer": "\"All prices are indicative UK market ranges based on historical quote data and repair requests from our network of engine specialists. Dealer pricing is estimated based on published main dealer labour rates and genuine OEM parts pricing. Specialist pricing reflects actual quote data from EnginesMarket's UK network. Actual costs vary depending on damage severity, vehicle condition, variant, and workshop location within the UK. Use our free comparison tool to get tailored quotes for your specific Peugeot 2008 1.4 or 1.6 HDi. Every engine supplied through EnginesMarket carries a minimum 12-month unlimited mileage warranty - always confirm exact terms with your chosen supplier.\""
       },
       "reviewSummary": null
     },
     "faq": {
-      "tag": "FAQs",
-      "h2": "Peugeot 2008 1.4/1.6 HDi Engine Problems - What It Costs to Fix & When Replacement Makes Sense",
+      "tag": "FAQ",
+      "h2": "Peugeot 2008 1.4 & 1.6 HDi Engine Replacement - Frequently Asked Questions",
       "intro": "Everything Peugeot 2008 1.4 & 1.6 HDi owners usually ask before choosing a rebuilt, reconditioned or used replacement engine.",
       "defaultOpenIndex": 0,
-      "disclaimer": "All prices are indicative UK market ranges based on historical quote data and repair requests from our network of engine specialists. Dealer pricing is estimated based on published main dealer labour rates and genuine OEM parts pricing. Specialist pricing reflects actual quote data from EngineMarket's UK network. Actual costs vary depending on damage severity, vehicle condition, variant, and workshop location within the UK. Use our free comparison tool to get tailored quotes for your specific Peugeot 2008 and engine code. Every engine supplied through EngineMarket carries a minimum 12-month unlimited mileage warranty - always confirm exact terms with your chosen supplier【7†L211-L213】.",
-      "items": [],
+      "disclaimer": "",
+      "items": [
+        {
+          "question": "How much does a Peugeot 2008 1.4 or 1.6 HDi engine replacement cost?",
+          "answer": "A rebuilt Peugeot 2008 HDi engine typically costs **£1,800-£3,100** supply-only, depending on engine size and condition. The 1.4 HDi (8HZ) is cheaper to replace - from **£1,800** - while the 1.6 HDi (9HZ) ranges **£2,900-£3,100**. Used engines start from **£520**. Supply & fit adds **£400-£800** labour.",
+          "keyPoints": [
+            "Rebuilt 8HZ 1.4 HDi: £1,800-£2,700",
+            "Rebuilt 9HZ 1.6 HDi: £2,900-£3,100",
+            "Used engines: £520-£1,200"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Get instant quotes for Peugeot 2008 1.4 and 1.6 HDi engine replacement from UK specialists"
+        },
+        {
+          "question": "What are the most common Peugeot 2008 1.6 HDi engine problems?",
+          "answer": "The most common Peugeot 2008 1.6 HDi (9HZ) engine problems are **EGR valve failure** causing rough idle and power loss, **DPF blockage** from short-journey driving triggering anti-pollution faults, and **turbo actuator failure** causing loss of boost. Fuel injector issues and oil dilution from injector seal leaks are also reported.",
+          "keyPoints": [
+            "EGR valve sticking causes rough running and fault codes",
+            "DPF blockage triggers limp mode and anti-pollution warnings",
+            "Turbo actuator failure leads to black smoke and power loss"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Compare rebuilt 9HZ Peugeot 2008 1.6 HDi engine prices"
+        },
+        {
+          "question": "What causes the Peugeot 2008 1.4 HDi anti-pollution fault?",
+          "answer": "The \"anti-pollution fault\" warning on a Peugeot 2008 1.4 HDi is usually caused by **DPF blockage** from short-journey driving preventing regeneration, or **EGR valve carbon buildup**. The 1.4 HDi's DPF is sensitive to urban driving patterns, and the warning often appears alongside loss of power or limp mode.",
+          "keyPoints": [
+            "DPF blockage from interrupted regeneration cycles",
+            "EGR valve sticking from carbon deposits",
+            "Address promptly to prevent engine damage"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Get urgent quotes for Peugeot 2008 1.4 HDi engine replacement"
+        },
+        {
+          "question": "Is it worth replacing the engine on a Peugeot 2008 1.4 or 1.6 HDi?",
+          "answer": "Replacing a Peugeot 2008 1.4 or 1.6 HDi engine is worthwhile if the vehicle is otherwise sound and the replacement cost stays below the vehicle's value. With 2008 HDi values typically **£3,000-£9,000**, a rebuilt engine at **£1,800-£3,100** represents a significant but often justifiable investment. For sub-£4,000 examples, a used engine from £520 may be more economical.",
+          "keyPoints": [
+            "1.4 HDi rebuilt: £1,800-£2,700",
+            "1.6 HDi rebuilt: £2,900-£3,100",
+            "Used HDi engines: £520-£1,200"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Get a tailored Peugeot 2008 HDi engine replacement quote today"
+        },
+        {
+          "question": "How long does a Peugeot 2008 1.6 HDi engine last?",
+          "answer": "With proper maintenance, the Peugeot 2008 1.6 HDi (9HZ) engine typically reaches **150,000-200,000 miles**. The 1.4 HDi (8HZ) is similarly durable but suffers from DPF sensitivity in urban use. Regular oil changes, EGR cleaning and DPF-friendly driving (regular motorway runs) are essential for longevity.",
+          "keyPoints": [
+            "1.6 HDi: 150,000-200,000 miles with proper maintenance",
+            "1.4 HDi: similar durability but DPF-sensitive in city driving",
+            "EGR cleaning recommended every 40,000-60,000 miles"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Find a reconditioned Peugeot 2008 HDi engine with 12-month warranty"
+        },
+        {
+          "question": "What's the difference between Peugeot 2008 HDi and BlueHDi engines?",
+          "answer": "Peugeot 2008 HDi engines (8HZ, 9HZ) are pre-Euro 6 units fitted to first-generation 2008s from 2013-2016. They have simpler emissions hardware (EGR + DPF) but no AdBlue system. BlueHDi engines (DV6C, DV5RC) replaced them from 2015 onwards with Euro 6 compliance, adding AdBlue/SCR systems for lower NOx emissions but greater complexity. HDi engines are generally simpler and cheaper to maintain.",
+          "keyPoints": [
+            "HDi (8HZ/9HZ): pre-Euro 6, no AdBlue, simpler emissions",
+            "BlueHDi (DV6C/DV5RC): Euro 6, AdBlue system, more complex"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Compare Peugeot 2008 HDi vs BlueHDi engine options"
+        }
+      ],
       "ui": {
         "questionLabelPrefix": "Question",
         "keyPointsLabel": "Key points",
@@ -279,33 +730,30 @@
     },
     "trustCta": {
       "tag": "Why Choose Us",
-      "h2": "Peugeot 2008 1.4/1.6 HDi Engine Types - Options, Costs & What to Expect",
+      "h2": "Compare Peugeot 2008 1.4 & 1.6 HDi Engine Prices Today",
       "intro": "Compare quotes from trusted UK Peugeot 2008 1.4 & 1.6 HDi engine specialists with warranty-backed rebuilt, reconditioned and used options nationwide.",
       "points": [
         {
-          "title": "",
+          "title": "100+ Peugeot 2008 HDi engines supplied through our network",
           "description": ""
         },
         {
-          "title": "",
+          "title": "12-Month Warranty on every rebuilt 8HZ and 9HZ engine",
           "description": ""
         },
         {
-          "title": "",
-          "description": ""
+          "title": "Nationwide UK delivery",
+          "description": "supply & fit available"
         }
       ],
-      "finalText": "",
-      "buttonText": "",
+      "finalText": "Comparing Peugeot 2008 1.4 and 1.6 HDi engine quotes is completely free and carries no obligation. Enter your registration above, tell us your 8HZ or 9HZ engine code, and receive transparent, fixed-price quotes from our vetted UK specialists within hours. Whether you need a used engine for a quick fix or a fully rebuilt HDi unit with upgraded EGR and turbo components and a 12-month warranty, we'll match you with the right supplier for your budget.",
+      "buttonText": "Get Free Peugeot 2008 1.4 & 1.6 HDi Engine Quotes ->",
       "secondaryAction": {
         "text": "",
         "href": "tel:03330000044"
       },
       "ui": {
-        "showSecondaryAction": false,
-        "imageBadgeLabel": "Variant-specific support",
-        "imageBadgeTitle": "Peugeot 2008 1.4 & 1.6 HDi specialists across the UK",
-        "imageBadgeText": "Compare supply-only and supply & fit quotes from vetted independent engine specialists."
+        "showSecondaryAction": false
       }
     }
   }

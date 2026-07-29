@@ -14,8 +14,8 @@
     "storageSlug": "peugeot-508-2-0-bluehdi-engine"
   },
   "seo": {
-    "title": "Peugeot 508 2.0 BlueHDi Engine Replacement - Compare Prices & Save",
-    "description": "Get quotes today from trusted UK Peugeot 508 2.0 BlueHDi specialists. Compare prices on reconditioned, rebuilt and used DW10FC engines - supply & fit available nationwide.",
+    "title": "Peugeot 508 2.0 BlueHDi Engine Replacement | Compare Prices",
+    "description": "Peugeot 508 2.0 BlueHDi engine replacement cost guide. Compare rebuilt, reconditioned & used 2.0 BlueHDi engine prices from £650. 12-month warranty & UK supply fit specialists.",
     "canonical": "/peugeot/508/2-0-bluehdi-engine"
   },
   "assets": {
@@ -25,12 +25,174 @@
     "howItWorksBg": "/images/brands/peugeot/brand/peugeot-how-it-works-bg.webp",
     "ctaImage": "/images/brands/peugeot/models/peugeot-508-model-card.png"
   },
-  "structuredData": null,
+  "structuredData": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.enginesmarket.co.uk/#website",
+        "url": "https://www.enginesmarket.co.uk/",
+        "name": "Engines Market",
+        "publisher": {
+          "@id": "https://www.enginesmarket.co.uk/#organization"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.enginesmarket.co.uk/#organization",
+        "name": "Engines Market",
+        "url": "https://www.enginesmarket.co.uk/",
+        "logo": "https://www.enginesmarket.co.uk/images/logo.png",
+        "sameAs": [
+          "https://www.facebook.com/enginesmarket",
+          "https://x.com/EnginesMarket",
+          "https://www.instagram.com/enginesmarketuk/",
+          "https://www.tiktok.com/@enginesmarket"
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.enginesmarket.co.uk/peugeot/508/2-0-bluehdi-engine/#webpage",
+        "url": "https://www.enginesmarket.co.uk/peugeot/508/2-0-bluehdi-engine/",
+        "name": "Peugeot 508 2.0 BlueHDi Engine Replacement - Compare Prices & Get Quotes",
+        "description": "Peugeot 508 2.0 BlueHDi engine replacement cost guide. Compare rebuilt, reconditioned & used 2.0 BlueHDi engine prices from £650. 12-month warranty & UK supply fit specialists.",
+        "isPartOf": {
+          "@id": "https://www.enginesmarket.co.uk/#website"
+        },
+        "about": [
+          {
+            "@type": "Car",
+            "name": "Peugeot 508 2.0 BlueHDi",
+            "brand": {
+              "@type": "Brand",
+              "name": "Peugeot"
+            },
+            "model": "508 2.0 BlueHDi"
+          },
+          {
+            "@type": "Service",
+            "name": "Peugeot 508 2.0 BlueHDi Engine Replacement"
+          }
+        ],
+        "mainEntity": {
+          "@id": "https://www.enginesmarket.co.uk/peugeot/508/2-0-bluehdi-engine/#service"
+        },
+        "breadcrumb": {
+          "@id": "https://www.enginesmarket.co.uk/peugeot/508/2-0-bluehdi-engine/#breadcrumb"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.enginesmarket.co.uk/peugeot/508/2-0-bluehdi-engine/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.enginesmarket.co.uk/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Peugeot",
+            "item": "https://www.enginesmarket.co.uk/peugeot/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Peugeot 508",
+            "item": "https://www.enginesmarket.co.uk/peugeot/508/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Peugeot 508 2.0 BlueHDi",
+            "item": "https://www.enginesmarket.co.uk/peugeot/508/2-0-bluehdi-engine/"
+          }
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://www.enginesmarket.co.uk/peugeot/508/2-0-bluehdi-engine/#service",
+        "name": "Peugeot 508 2.0 BlueHDi Engine Replacement Service",
+        "serviceType": [
+          "Peugeot 508 2.0 BlueHDi Engine Replacement",
+          "Reconditioned Peugeot 508 2.0 BlueHDi Engines",
+          "Used Peugeot 508 2.0 BlueHDi Engines",
+          "Peugeot 508 2.0 BlueHDi Engine Supply and Fit",
+          "Peugeot 508 2.0 BlueHDi Engine Price Comparison"
+        ],
+        "provider": {
+          "@id": "https://www.enginesmarket.co.uk/#organization"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        "url": "https://www.enginesmarket.co.uk/peugeot/508/2-0-bluehdi-engine/",
+        "description": "Peugeot 508 2.0 BlueHDi engine replacement cost guide. Compare rebuilt, reconditioned & used 2.0 BlueHDi engine prices from £650. 12-month warranty & UK supply fit specialists."
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.enginesmarket.co.uk/peugeot/508/2-0-bluehdi-engine/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does a Peugeot 508 2.0 BlueHDi engine replacement cost in the UK?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A Peugeot 508 2.0 BlueHDi replacement engine typically costs £650-£1,300 for a used unit, £1,200-£1,900 for a reconditioned unit, or £1,800-£3,200 for a rebuilt unit with 12-month warranty. Supply & fit labour adds approximately £400-£800."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What are the signs of AdBlue system failure in a Peugeot 508 2.0 BlueHDi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The most common sign is the \"Urea fault\" or \"AdBlue fault\" warning message, followed by the car entering reduced-power limp mode despite the AdBlue tank being full. Other symptoms include engine management lights and, eventually, prevention of engine starting."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is it worth replacing the engine in a Peugeot 508 2.0 BlueHDi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "For a 508 2.0 BlueHDi worth £6,000-£16,000, replacement is often worthwhile if the rest of the car is in good condition. If the vehicle is worth under £6,000, a used engine or targeted repair may be more cost-effective. The 2.0 BlueHDi is considered the most reliable and well-balanced engine of this generation."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does a Peugeot 508 2.0 BlueHDi engine replacement take?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most Peugeot 508 2.0 BlueHDi engines are dispatched within 24-48 hours, with supply & fit installation typically completed within 1-2 working days at approved garages."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What warranty comes with Peugeot 508 2.0 BlueHDi replacement engines?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Rebuilt Peugeot 508 2.0 BlueHDi engines include a minimum 12-month unlimited-mileage warranty. Used engines typically carry 3-6 months cover depending on supplier terms. Always verify warranty terms before purchase."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What's the difference between the 2.0 BlueHDi and the 1.5 BlueHDi in the Peugeot 508?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The 2.0 BlueHDi (DW10FC) was fitted to both first- and second-generation 508s (2011-2024) and produces 150-180hp, offering strong torque for towing and motorway driving. The 1.5 BlueHDi (DV5) replaced the 1.6 BlueHDi on the second-generation 508 (2018 onwards), offering 130hp with improved emissions but introducing its own AdBlue-related failure points."
+            }
+          }
+        ]
+      }
+    ]
+  },
   "sections": {
     "hero": {
-      "tag": "Peugeot ENGINE MARKETPLACE",
-      "h1": "Peugeot 508 2.0 BlueHDi Engine Replacement - Compare Prices & Save",
-      "subheading": "Get quotes today from trusted UK Peugeot 508 2.0 BlueHDi specialists. Compare prices on reconditioned, rebuilt and used DW10FC engines - supply & fit available nationwide.",
+      "tag": "Peugeot 2.0 BlueHDi SPECIALISTS",
+      "h1": "Peugeot 508 2.0 BlueHDi Engine Replacement - Compare Prices & Get Quotes",
+      "subheading": "Get quotes today from trusted UK Peugeot 508 2.0 BlueHDi engine specialists. Compare prices on reconditioned, rebuilt and used 2.0 BlueHDi engines - supply & fit available nationwide.",
       "trustBadges": [
         "Supply & Fit Available",
         "12-Month Warranty",
@@ -44,10 +206,10 @@
       "highlights": [
         {
           "title": "Peugeot 508 2.0 BlueHDi Engine",
-          "price": "[DW10FC BlueHDi engine image] 508 2.0 BlueHDi Engines - from £1,800 to £3,100",
-          "line1": "[DW10FC BlueHDi engine image] 508 2.0 BlueHDi Engines - from £1,800 to £3,100",
-          "line2": "-> Rebuilt units from £1,800 · Common codes: DW10FC, AHX, AHS",
-          "detail": "-> Rebuilt units from £1,800 · Common codes: DW10FC, AHX, AHS",
+          "price": "DW10FC - from £1,800 to £3,100",
+          "line1": "DW10FC - from £1,800 to £3,100",
+          "line2": "-> Used from £650 · Reconditioned from £1,200 · Common codes: DW10FC, AHW, AHX, EHZ",
+          "detail": "-> Used from £650 · Reconditioned from £1,200 · Common codes: DW10FC, AHW, AHX, EHZ",
           "image": "/images/brands/peugeot/models/peugeot-508-model-card.png",
           "imageAlt": ""
         }
@@ -55,7 +217,7 @@
       "engineOptions": [
         {
           "label": "Used",
-          "price": "From quote",
+          "price": "From £650",
           "description": "Tested, bare/short engine",
           "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
           "imageAlt": "",
@@ -63,7 +225,7 @@
         },
         {
           "label": "Reconditioned",
-          "price": "From quote",
+          "price": "From £1,200",
           "description": "Rod bearings addressed, tested",
           "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
           "imageAlt": "",
@@ -110,26 +272,45 @@
           "number": 1,
           "icon": "registration",
           "front": {
-            "h3": "",
-            "text": ""
+            "h3": "Confirm Your Peugeot 508 2.0 BlueHDi",
+            "text": "🖼️ [Registration icon]. Instantly verify your exact 2.0 BlueHDi engine code and fuel type via DVLA"
           },
           "back": {
-            "heading": "",
-            "text": "",
-            "bullets": []
+            "heading": "EnginesMarket cross-checks the DVLA record against known 2.0 BlueHDi engine codes (DW10FC, AHW, AHX, EHZ) so your quote request is accurate before it reaches a supplier - no paperwork, no guesswork.",
+            "text": "EnginesMarket cross-checks the DVLA record against known 2.0 BlueHDi engine codes (DW10FC, AHW, AHX, EHZ) so your quote request is accurate before it reaches a supplier - no paperwork, no guesswork.",
+            "bullets": [
+              "EnginesMarket cross-checks the DVLA record against known 2.0 BlueHDi engine codes (DW10FC, AHW, AHX, EHZ) so your quote request is accurate before it reaches a supplier - no paperwork, no guesswork."
+            ]
           }
         },
         {
-          "number": 1,
-          "icon": "registration",
+          "number": 2,
+          "icon": "quote",
           "front": {
-            "h3": "",
-            "text": ""
+            "h3": "Compare Peugeot 508 2.0 BlueHDi Engine Quotes",
+            "text": "🖼️ [Compare icon]. See used, reconditioned and rebuilt 2.0 BlueHDi options side by side"
           },
           "back": {
-            "heading": "",
-            "text": "",
-            "bullets": []
+            "heading": "Our UK network of Peugeot 508 2.0 BlueHDi specialists sends quotes covering all condition types with transparent, itemised pricing - no obligation, no pressure, 100% free.",
+            "text": "Our UK network of Peugeot 508 2.0 BlueHDi specialists sends quotes covering all condition types with transparent, itemised pricing - no obligation, no pressure, 100% free.",
+            "bullets": [
+              "Our UK network of Peugeot 508 2.0 BlueHDi specialists sends quotes covering all condition types with transparent, itemised pricing - no obligation, no pressure, 100% free."
+            ]
+          }
+        },
+        {
+          "number": 3,
+          "icon": "shield",
+          "front": {
+            "h3": "Choose Your Peugeot 508 2.0 BlueHDi Specialist",
+            "text": "🖼️ [Booking icon]. Book supply & fit with 12-month warranty and nationwide delivery"
+          },
+          "back": {
+            "heading": "Every rebuilt Peugeot 508 2.0 BlueHDi engine comes with a minimum 12-month unlimited-mileage warranty",
+            "text": "Choose supply-only or full supply & fit through our network of approved UK fitting centres.",
+            "bullets": [
+              "Choose supply-only or full supply & fit through our network of approved UK fitting centres."
+            ]
           }
         }
       ],
@@ -151,115 +332,407 @@
     },
     "historyTimeline": {
       "tag": "Variant History",
-      "h2": "What Are UK Drivers Paying for Peugeot 508 2.0 BlueHDi Engine Replacement?",
-      "intro": "Live UK Engine Market Data What Are UK Drivers Paying for Peugeot 508 2.0 BlueHDi Engine Replacement? The table below shows typical UK rebuilt engine costs across Peugeot 508 2.0 BlueHDi variants - compare failure causes, engine codes, fuel types, and price ranges to benchmark what UK drivers are paying. The DW10FC is the Euro 6 evolution of PSA's long-running 2.0-litre diesel, bringing AdBlue technology and 160-180hp outputs to Gen 2 508 models. The earlier DW10BTED4 powered Gen 1 508s with 140-163hp without SCR complexity. | Variant | Years | Price Range | Common Failure | Engine Code | Fuel | |---------|-------|-------------|----------------|-------------|------| | Peugeot 508 GT 2.0 BlueHDi | 2018-2024 | £1,800-£3,100 | AdBlue tank/pump failure | DW10FC (AHX) | Diesel 2.0L | | Peugeot 508 Allure 2.0 BlueHDi | 2018-2024 | £1,800-£3,100 | SCR dosing fault | DW10FC | Diesel 2.0L | | Peugeot 508 Allure Premium 2.0 BlueHDi | 2021-2024 | £1,900-£3,200 | EGR cooler carbon buildup | DW10FC (AHS) | Diesel 2.0L | | Peugeot 508 SW GT 2.0 BlueHDi | 2018-2024 | £1,850-£3,150 | DPF regeneration failure | DW10FC (AHX) | Diesel 2.0L | | Peugeot 508 GT 2.0 HDi | 2011-2018 | £1,400-£2,500 | High-pressure fuel pump wear | DW10BTED4 (RHR) | Diesel 2.0L | | Peugeot 508 Allure 2.0 HDi | 2011-2018 | £1,400-£2,500 | Injector seal failure | DW10BTED4 | Diesel 2.0L |",
-      "milestones": [],
-      "vehicleTitle": "What Are UK Drivers Paying for Peugeot 508 2.0 BlueHDi Engine Replacement?",
-      "vehicleMeta": [],
-      "specsLabel": "Key Specs Snapshot",
-      "specs": [],
-      "closingNote": ""
-    },
-    "engineGuide": {
-      "tag": "Compatible Engines",
-      "h2": "Peugeot 508 2.0 BlueHDi Engine Replacement - All Variants Covered",
-      "items": [
+      "h2": "Peugeot 508 2.0 BlueHDi - Engine History & Specs at a Glance",
+      "intro": "The 2.0 BlueHDi joined the Peugeot 508 range as the torque-rich diesel option, offered in 150hp and 180hp outputs across both first- and second-generation models. It replaced the earlier 2.0 HDi with improved emissions technology and became the preferred choice for towing and high-mileage UK driving.",
+      "milestones": [
         {
-          "code": "Peugeot 508 GT 2.0 BlueHDi Engine Replacement",
-          "title": "Peugeot 508 GT 2.0 BlueHDi Engine Replacement",
-          "specs": [],
-          "costs": [],
-          "commonFailure": "",
-          "cta": "-> Compare GT 2.0 BlueHDi Engine Prices",
-          "closing": ""
+          "year": "2011",
+          "description": "2.0 BlueHDi (150hp) launched with the Gen 1 508 saloon and SW estate"
         },
         {
-          "code": "Peugeot 508 Allure 2.0 BlueHDi Engine Replacement",
-          "title": "Peugeot 508 Allure 2.0 BlueHDi Engine Replacement",
-          "specs": [],
-          "costs": [],
-          "commonFailure": "",
-          "cta": "-> Compare Allure 2.0 BlueHDi Engine Prices",
-          "closing": ""
+          "year": "2014",
+          "description": "2.0 BlueHDi (180hp) introduced with DW10FC engine code (AHW) for higher-output variants"
         },
         {
-          "code": "Peugeot 508 Allure Premium 2.0 BlueHDi Engine Replacement",
-          "title": "Peugeot 508 Allure Premium 2.0 BlueHDi Engine Replacement",
-          "specs": [],
-          "costs": [],
-          "commonFailure": "",
-          "cta": "-> Compare Allure Premium 2.0 BlueHDi Engine Prices",
-          "closing": ""
+          "year": "2014",
+          "description": "Facelift styling with BlueHDi emissions technology for Euro 6 compliance"
         },
         {
-          "code": "Peugeot 508 SW GT 2.0 BlueHDi Engine Replacement",
-          "title": "Peugeot 508 SW GT 2.0 BlueHDi Engine Replacement",
-          "specs": [],
-          "costs": [],
-          "commonFailure": "",
-          "cta": "-> Compare SW GT 2.0 BlueHDi Engine Prices",
-          "closing": ""
+          "year": "2018",
+          "description": "2.0 BlueHDi continued into Gen 2 508 with updated DW10FC variants (AHX, EHZ)"
         },
         {
-          "code": "Peugeot 508 GT 2.0 HDi Engine Replacement",
-          "title": "Peugeot 508 GT 2.0 HDi Engine Replacement",
-          "specs": [],
-          "costs": [],
-          "commonFailure": "",
-          "cta": "-> Compare GT 2.0 HDi Engine Prices",
-          "closing": ""
-        },
-        {
-          "code": "Peugeot 508 Allure 2.0 HDi Engine Replacement",
-          "title": "Peugeot 508 Allure 2.0 HDi Engine Replacement",
-          "specs": [],
-          "costs": [],
-          "commonFailure": "",
-          "cta": "-> Compare Allure 2.0 HDi Engine Prices",
-          "closing": ""
-        },
-        {
-          "code": "Peugeot 508 SW Allure 2.0 HDi Engine Replacement",
-          "title": "Peugeot 508 SW Allure 2.0 HDi Engine Replacement",
-          "specs": [],
-          "costs": [],
-          "commonFailure": "",
-          "cta": "-> Compare SW Allure 2.0 HDi Engine Prices",
-          "closing": ""
-        },
-        {
-          "code": "All Peugeot 508 2.0 Diesel Variants",
-          "title": "Engine Replacement Coverage",
-          "specs": [],
-          "costs": [],
-          "commonFailure": "",
-          "cta": "",
-          "closing": "Not sure which variant your Peugeot 508 is? Enter your registration number above - we'll identify the exact sub-model, engine code and compatible replacement options instantly."
+          "year": "2024",
+          "description": "2.0 BlueHDi production ends with the Gen 2 508"
         }
       ],
-      "closing": ""
+      "vehicleTitle": "Peugeot 508 2.0 BlueHDi",
+      "vehicleMeta": [
+        {
+          "label": "Fuel Type",
+          "value": "Diesel"
+        },
+        {
+          "label": "Engine Size Range",
+          "value": "2.0L (1997cc)"
+        },
+        {
+          "label": "Power Output Range",
+          "value": "150-180hp across the variant's history"
+        }
+      ],
+      "specsLabel": "Key Specs Snapshot",
+      "specs": [
+        {
+          "label": "Fuel Type",
+          "value": "Diesel"
+        },
+        {
+          "label": "Engine Size Range",
+          "value": "2.0L (1997cc)"
+        },
+        {
+          "label": "Power Output Range",
+          "value": "150-180hp across the variant's history"
+        },
+        {
+          "label": "Years Produced",
+          "value": "2011-2024"
+        }
+      ],
+      "closingNote": "Every engine fitted to the Peugeot 508 2.0 BlueHDi is covered below, with UK rebuilt pricing and known failure points."
+    },
+    "engineGuide": {
+      "tag": "Engine Codes & Pricing",
+      "h2": "Peugeot 508 2.0 BlueHDi Engine Codes - Specifications & Replacement Cost",
+      "sectionTitle": "Compatible Engine Codes & Cost Guide",
+      "sectionSubtitle": "Find your exact engine code, specs and UK replacement cost guide.",
+      "intro": "",
+      "items": [
+        {
+          "code": "DW10FC / AHW",
+          "title": "2.0L Diesel (2014-2018)",
+          "specs": [
+            {
+              "label": "Power Output",
+              "value": "180hp"
+            },
+            {
+              "label": "Years Fitted",
+              "value": "2014-2018"
+            }
+          ],
+          "costs": [
+            {
+              "label": "Used",
+              "value": "£650-£1,200",
+              "description": ""
+            },
+            {
+              "label": "Reconditioned",
+              "value": "£1,200-£1,800",
+              "description": ""
+            },
+            {
+              "label": "Rebuilt",
+              "value": "£1,800-£3,100",
+              "description": ""
+            }
+          ],
+          "compatibleTrimLevels": [
+            "GT 2.0 BlueHDi",
+            "Allure 2.0 BlueHDi",
+            "SW GT 2.0 BlueHDi",
+            "SW Allure 2.0 BlueHDi"
+          ],
+          "commonFailure": "AdBlue tank/pump assembly failure is the most documented issue on DW10FC units, typically triggering reduced-power limp mode. Water pump failure is also reported on the 2.0 BlueHDi. Delphi piezo injectors are sensitive to poor-quality fuel.",
+          "cta": "-> Get quotes for DW10FC Peugeot 508 2.0 BlueHDi engine replacement",
+          "closing": "-> Get quotes for DW10FC Peugeot 508 2.0 BlueHDi engine replacement"
+        },
+        {
+          "code": "DW10FC / AHX",
+          "title": "2.0L Diesel (2018-2024)",
+          "specs": [
+            {
+              "label": "Power Output",
+              "value": "177-180hp"
+            },
+            {
+              "label": "Years Fitted",
+              "value": "2018-2024"
+            }
+          ],
+          "costs": [
+            {
+              "label": "Used",
+              "value": "£700-£1,300",
+              "description": ""
+            },
+            {
+              "label": "Reconditioned",
+              "value": "£1,300-£1,900",
+              "description": ""
+            },
+            {
+              "label": "Rebuilt",
+              "value": "£1,900-£3,200",
+              "description": ""
+            }
+          ],
+          "compatibleTrimLevels": [
+            "GT 2.0 BlueHDi",
+            "GT Premium 2.0 BlueHDi",
+            "Allure 2.0 BlueHDi",
+            "SW GT 2.0 BlueHDi",
+            "SW Allure 2.0 BlueHDi"
+          ],
+          "commonFailure": "Similar to the earlier AHW variant, AdBlue system faults and SCR calibration issues dominate replacement enquiries on Gen 2 2.0 BlueHDi units.",
+          "cta": "-> Get quotes for AHX Peugeot 508 2.0 BlueHDi engine replacement",
+          "closing": "-> Get quotes for AHX Peugeot 508 2.0 BlueHDi engine replacement",
+          "intro": ""
+        },
+        {
+          "code": "DW10FC / EHZ",
+          "title": "2.0L Diesel (2018-2024)",
+          "specs": [
+            {
+              "label": "Power Output",
+              "value": "177hp"
+            },
+            {
+              "label": "Years Fitted",
+              "value": "2018-2024"
+            }
+          ],
+          "costs": [
+            {
+              "label": "Used",
+              "value": "£700-£1,300",
+              "description": ""
+            },
+            {
+              "label": "Reconditioned",
+              "value": "£1,300-£1,900",
+              "description": ""
+            },
+            {
+              "label": "Rebuilt",
+              "value": "£1,900-£3,200",
+              "description": ""
+            }
+          ],
+          "compatibleTrimLevels": [
+            "GT 2.0 BlueHDi",
+            "Allure 2.0 BlueHDi",
+            "SW GT 2.0 BlueHDi"
+          ],
+          "commonFailure": "The EHZ variant shares the same AdBlue system vulnerabilities as other DW10FC units, with tank/pump assembly failure and SCR dosing faults being the most frequently reported issues.",
+          "cta": "-> Get quotes for EHZ Peugeot 508 2.0 BlueHDi engine replacement",
+          "closing": "-> Get quotes for EHZ Peugeot 508 2.0 BlueHDi engine replacement",
+          "intro": ""
+        }
+      ],
+      "prompt": ""
     },
     "commonProblems": {
-      "tag": "Engine Codes",
-      "h2": "Peugeot 508 2.0 BlueHDi Engine Codes - Full Technical Specifications & Replacement Guide",
-      "h3": "Every 2.0-litre diesel engine code fitted to the Peugeot 508 across all generations, with technical specs, compatible variants and trims, known failure points, and average rebuilt prices from UK specialists. Select any engine code to compare quotes.",
-      "problems": [],
+      "tag": "Common Problems",
+      "h2": "Peugeot 508 2.0 BlueHDi Engine Problems - Repair Cost vs Replacement",
+      "h3": "The Peugeot 508 2.0 BlueHDi is a robust and well-balanced diesel engine, but AdBlue system failures, water pump issues and DPF regeneration problems dominate replacement enquiries. Every rebuilt engine supplied through EnginesMarket includes upgraded components designed to address the original failure point - plus a minimum 12-month unlimited-mileage warranty. Use the problem groups below to compare repair costs versus replacement value for your specific 2.0 BlueHDi.",
+      "problems": [
+        {
+          "group": "AdBlue System Failure",
+          "h4": "AdBlue System Failure - Why DW10FC 2.0 BlueHDi Engines Enter Limp Mode",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "affectedModels": "Peugeot 508 2.0 BlueHDi (DW10FC, 2014-2024)",
+          "typicalFailureMileage": "60,000-85,000 miles",
+          "rootCause": "The AdBlue injector crystallises or the tank/pump assembly fails, triggering SCR system faults and forcing the engine into reduced-power limp mode to meet emissions compliance.",
+          "whyItHappens": "",
+          "repairOptions": [
+            {
+              "tier": "Minor - AdBlue Injector Cleaning/Replacement",
+              "dealerPrice": "£900-£1,500",
+              "specialistPrice": "£500-£900",
+              "whatItInvolves": "Remove injector, clean crystallisation or replace unit; reset SCR adaptation",
+              "longevity": "Effective if caught early before pump damage; may recur on short journeys",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Intermediate - AdBlue Tank/Pump Assembly Replacement",
+              "dealerPrice": "£2,200-£3,400",
+              "specialistPrice": "£1,400-£2,200",
+              "whatItInvolves": "Replace complete tank/pump module; refill AdBlue; perform SCR calibration",
+              "longevity": "Addresses root cause; recommended if injector fault recurs or pump shows wear",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Full Replacement - Rebuilt DW10FC with Updated SCR Components",
+              "dealerPrice": "£3,800-£5,900",
+              "specialistPrice": "£1,800-£3,100",
+              "whatItInvolves": "Supply & fit rebuilt engine with upgraded AdBlue injector and SCR calibration, 12-month warranty",
+              "longevity": "Best value when engine has other wear items or 100k+ miles; eliminates repeat SCR issues",
+              "estimatedTime": ""
+            }
+          ],
+          "vehicleValueCheck": "A typical Peugeot 508 2.0 BlueHDi of 2014-2022 vintage is worth approximately £6,000-£16,000 depending on mileage and condition【INDUSTRY ESTIMATE】. For vehicles worth £6,000-£10,000, a used engine or targeted AdBlue repair typically offers better value than a full rebuilt unit. For vehicles worth over £10,000, a rebuilt engine with updated SCR components justifies the premium via warranty and reliability.",
+          "recommendation": "On a Peugeot 508 2.0 BlueHDi, replacing the AdBlue tank/pump assembly is cost-effective if the engine is otherwise healthy. If the vehicle has exceeded 100,000 miles or shows additional diesel wear signs, a rebuilt DW10FC with updated SCR components offers better long-term reliability.",
+          "cta": "-> Compare rebuilt DW10FC Peugeot 508 2.0 BlueHDi engine prices"
+        },
+        {
+          "group": "Water Pump Failure",
+          "h4": "Water Pump Failure - Why 2.0 BlueHDi Engines Overheat",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "affectedModels": "Peugeot 508 2.0 BlueHDi (DW10FC, 2014-2024)",
+          "typicalFailureMileage": "60,000-100,000 miles",
+          "rootCause": "The water pump on 2.0 BlueHDi units is known to fail, with the temperature warning light illuminating as the first sign. Plastic impellers can degrade, reducing coolant flow and causing overheating.",
+          "whyItHappens": "",
+          "repairOptions": [
+            {
+              "tier": "Minor - Water Pump Replacement",
+              "dealerPrice": "£600-£1,000",
+              "specialistPrice": "£400-£750",
+              "whatItInvolves": "Remove old pump; fit new OEM-spec unit; flush cooling system; refill coolant",
+              "longevity": "Effective if caught early before engine damage occurs",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Intermediate - Water Pump + Timing Belt Service",
+              "dealerPrice": "£1,200-£1,900",
+              "specialistPrice": "£800-£1,400",
+              "whatItInvolves": "Replace water pump and timing belt together; full cooling system service",
+              "longevity": "Recommended preventative maintenance at 100k miles; saves labour versus separate jobs",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Full Replacement - Rebuilt DW10FC with New Cooling System",
+              "dealerPrice": "£3,800-£5,900",
+              "specialistPrice": "£1,800-£3,100",
+              "whatItInvolves": "Supply & fit rebuilt engine with new water pump and cooling components, 12-month warranty",
+              "longevity": "Best value when engine has 100k+ miles or shows additional wear",
+              "estimatedTime": ""
+            }
+          ],
+          "vehicleValueCheck": "For a Peugeot 508 2.0 BlueHDi worth £6,000-£16,000, water pump replacement is cost-effective if the engine is otherwise sound. Replacing the timing belt at the same time is a sensible preventative measure.",
+          "recommendation": "If your 2.0 BlueHDi shows the temperature warning light or coolant loss, have the water pump inspected immediately. If the vehicle has exceeded 100,000 miles, replacing the water pump and timing belt together offers the best value and prevents future failures.",
+          "cta": "-> Compare rebuilt DW10FC Peugeot 508 2.0 BlueHDi engine prices"
+        },
+        {
+          "group": "DPF Regeneration Failure",
+          "h4": "DPF Regeneration Failure - Why 2.0 BlueHDi Diesels Lose Power",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "affectedModels": "Peugeot 508 2.0 BlueHDi (DW10FC, 2014-2024)",
+          "typicalFailureMileage": "80,000-120,000 miles",
+          "rootCause": "Short-journey driving prevents active DPF regeneration, causing soot accumulation that blocks exhaust flow and triggers power-limiting fault codes.",
+          "whyItHappens": "",
+          "repairOptions": [
+            {
+              "tier": "Minor - Forced Regeneration + EGR Clean",
+              "dealerPrice": "£400-£800",
+              "specialistPrice": "£250-£500",
+              "whatItInvolves": "Diagnostic-led forced DPF burn; clean EGR valve; reset adaptation",
+              "longevity": "Works if blockage is mild and driving patterns change",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Intermediate - DPF Removal + Professional Cleaning",
+              "dealerPrice": "£1,200-£2,100",
+              "specialistPrice": "£700-£1,400",
+              "whatItInvolves": "Remove DPF; thermal/chemical clean; pressure test; reinstall with new gaskets",
+              "longevity": "Extends DPF life 30k-50k miles if driving habits improve",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Full Replacement - Rebuilt DW10FC with DPF Service",
+              "dealerPrice": "£3,200-£5,500",
+              "specialistPrice": "£1,800-£3,100",
+              "whatItInvolves": "Supply & fit rebuilt DW10FC unit; include DPF clean or replacement; 12-month warranty",
+              "longevity": "Best value when engine shows additional wear or DPF is beyond cleaning",
+              "estimatedTime": ""
+            }
+          ],
+          "vehicleValueCheck": "For a Peugeot 508 2.0 BlueHDi used primarily for motorway driving, a professional DPF clean often resolves the issue cost-effectively. For urban-use vehicles with recurring DPF warnings, a rebuilt diesel engine with updated DPF and EGR components provides more reliable long-term ownership.",
+          "recommendation": "If your 2.0 BlueHDi is used mainly for short urban trips, consider a forced regeneration and EGR clean first. If DPF warnings recur within 12 months or the vehicle is high-mileage, a rebuilt DW10FC with upgraded components eliminates the repeat risk.",
+          "cta": "-> Compare rebuilt DW10FC Peugeot 508 2.0 BlueHDi engine prices"
+        }
+      ],
       "emptyState": null,
       "finalCta": {
-        "h4": "DW10FC - 2.0L BlueHDi (Gen 2, 2018-2024)",
-        "paragraph": "History: The DW10FC is the Euro 6 evolution of the 2.0-litre diesel, adding SCR/AdBlue technology for emissions compliance while delivering 160-180hp. Fitted to Gen 2 508 Allure, GT and GT Premium trims, it's the performance diesel choice for the liftback and SW estate. The engine appears as AHX or AHS in vehicle documentation.",
-        "buttonText": "",
-        "disclaimer": ""
+        "h4": "Don't Let Engine Failure Write Off Your Peugeot 508 2.0 BlueHDi",
+        "paragraph": "From AdBlue system failures to water pump issues and DPF regeneration problems, Peugeot 508 2.0 BlueHDi engine problems follow predictable patterns. EnginesMarket makes it simple to compare prices from trusted UK Peugeot 508 2.0 BlueHDi specialists for rebuilt, reconditioned and used engines. Every unit includes upgraded components addressing the original failure point, plus a minimum 12-month unlimited-mileage warranty and nationwide delivery. Compare prices today and get back on the road without the main dealer premium.",
+        "buttonText": "Compare Peugeot 508 2.0 BlueHDi Engine Replacement Prices Now ->",
+        "disclaimer": "\"All prices are indicative UK market ranges based on historical quote data and repair requests from our network of engine specialists. Dealer pricing is estimated based on published main dealer labour rates and genuine OEM parts pricing. Specialist pricing reflects actual quote data from EnginesMarket's UK network. Actual costs vary depending on damage severity, vehicle condition, variant, and workshop location within the UK. Use our free comparison tool to get tailored quotes for your specific Peugeot 508 2.0 BlueHDi. Every engine supplied through EnginesMarket carries a minimum 12-month unlimited mileage warranty - always confirm exact terms with your chosen supplier.\""
       },
       "reviewSummary": null
     },
     "faq": {
-      "tag": "FAQs",
-      "h2": "Peugeot 508 2.0 BlueHDi Engine Problems - What It Costs to Fix & When Replacement Makes Sense",
+      "tag": "FAQ",
+      "h2": "Peugeot 508 2.0 BlueHDi Engine Replacement - Frequently Asked Questions",
       "intro": "Everything Peugeot 508 2.0 BlueHDi owners usually ask before choosing a rebuilt, reconditioned or used replacement engine.",
       "defaultOpenIndex": 0,
-      "disclaimer": "All prices are indicative UK market ranges based on historical quote data and repair requests from our network of engine specialists. Dealer pricing is estimated based on published main dealer labour rates and genuine OEM parts pricing. Specialist pricing reflects actual quote data from EngineMarket's UK network. Actual costs vary depending on damage severity, vehicle condition, variant, and workshop location within the UK. Use our free comparison tool to get tailored quotes for your specific Peugeot 508 and engine code. Every engine supplied through EngineMarket carries a minimum 12-month unlimited mileage warranty - always confirm exact terms with your chosen supplier.",
-      "items": [],
+      "disclaimer": "",
+      "items": [
+        {
+          "question": "How much does a Peugeot 508 2.0 BlueHDi engine replacement cost in the UK?",
+          "answer": "A Peugeot 508 2.0 BlueHDi replacement engine typically costs £650-£1,300 for a used unit, £1,200-£1,900 for a reconditioned unit, or £1,800-£3,200 for a rebuilt unit with 12-month warranty. Supply & fit labour adds approximately £400-£800.",
+          "keyPoints": [
+            "Used engines from £650 for higher-mileage DW10FC units",
+            "Rebuilt DW10FC engines average £1,800-£3,100 supply only",
+            "Supply & fit typically adds £400-£800 depending on location"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Compare Peugeot 508 2.0 BlueHDi engine prices from UK specialists"
+        },
+        {
+          "question": "What are the signs of AdBlue system failure in a Peugeot 508 2.0 BlueHDi?",
+          "answer": "The most common sign is the \"Urea fault\" or \"AdBlue fault\" warning message, followed by the car entering reduced-power limp mode despite the AdBlue tank being full. Other symptoms include engine management lights and, eventually, prevention of engine starting.",
+          "keyPoints": [
+            "AdBlue warning light with \"engine fault\" message is the earliest sign",
+            "Reduced power mode typically activates after 1,100 km (680 miles) of warnings",
+            "Tank/pump assembly replacement costs £1,400-£2,200 from a specialist"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Get quotes for Peugeot 508 2.0 BlueHDi AdBlue system repair"
+        },
+        {
+          "question": "Is it worth replacing the engine in a Peugeot 508 2.0 BlueHDi?",
+          "answer": "For a 508 2.0 BlueHDi worth £6,000-£16,000, replacement is often worthwhile if the rest of the car is in good condition. If the vehicle is worth under £6,000, a used engine or targeted repair may be more cost-effective. The 2.0 BlueHDi is considered the most reliable and well-balanced engine of this generation.",
+          "keyPoints": [
+            "Vehicle value check is essential before committing to replacement",
+            "Rebuilt engine with 12-month warranty adds value for long-term ownership",
+            "Specialist pricing is typically 30-40% below main dealer rates"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Compare Peugeot 508 2.0 BlueHDi repair vs replacement options"
+        },
+        {
+          "question": "How long does a Peugeot 508 2.0 BlueHDi engine replacement take?",
+          "answer": "Most Peugeot 508 2.0 BlueHDi engines are dispatched within 24-48 hours, with supply & fit installation typically completed within 1-2 working days at approved garages.",
+          "keyPoints": [
+            "Rebuilt engines usually ready for dispatch within 1-2 days",
+            "Professional installation takes 6-8 hours for experienced mechanics",
+            "Post-fit ECU adaptation and road test add 1-2 hours"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Book Peugeot 508 2.0 BlueHDi engine supply & fit"
+        },
+        {
+          "question": "What warranty comes with Peugeot 508 2.0 BlueHDi replacement engines?",
+          "answer": "Rebuilt Peugeot 508 2.0 BlueHDi engines include a minimum 12-month unlimited-mileage warranty. Used engines typically carry 3-6 months cover depending on supplier terms. Always verify warranty terms before purchase.",
+          "keyPoints": [
+            "Rebuilt/remanufactured units: 12-month unlimited mileage standard",
+            "Reconditioned engines: 12-month warranty with possible mileage limits",
+            "Used engines: 3-6 month warranty typical, verify before purchase"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Compare Peugeot 508 2.0 BlueHDi engine warranty terms"
+        },
+        {
+          "question": "What's the difference between the 2.0 BlueHDi and the 1.5 BlueHDi in the Peugeot 508?",
+          "answer": "The 2.0 BlueHDi (DW10FC) was fitted to both first- and second-generation 508s (2011-2024) and produces 150-180hp, offering strong torque for towing and motorway driving. The 1.5 BlueHDi (DV5) replaced the 1.6 BlueHDi on the second-generation 508 (2018 onwards), offering 130hp with improved emissions but introducing its own AdBlue-related failure points.",
+          "keyPoints": [
+            "2.0 BlueHDi: Both Gen 1 and Gen 2, 2011-2024, 150-180hp, known for AdBlue and water pump issues",
+            "1.5 BlueHDi: Gen 2 only, 2018-2024, 130hp, known for timing belt noise and AdBlue crystallisation",
+            "Engine codes are not interchangeable between the two displacements"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Get instant Peugeot 508 2.0 BlueHDi engine code compatibility check"
+        }
+      ],
       "ui": {
         "questionLabelPrefix": "Question",
         "keyPointsLabel": "Key points",
@@ -270,33 +743,30 @@
     },
     "trustCta": {
       "tag": "Why Choose Us",
-      "h2": "Peugeot 508 2.0 BlueHDi Engine Types - Options, Costs & What to Expect",
+      "h2": "Compare Peugeot 508 2.0 BlueHDi Engine Prices Today",
       "intro": "Compare quotes from trusted UK Peugeot 508 2.0 BlueHDi engine specialists with warranty-backed rebuilt, reconditioned and used options nationwide.",
       "points": [
         {
-          "title": "",
+          "title": "500+ 2.0 BlueHDi engines supplied through our network",
           "description": ""
         },
         {
-          "title": "",
+          "title": "12-Month Warranty on every rebuilt 2.0 BlueHDi engine",
           "description": ""
         },
         {
-          "title": "",
-          "description": ""
+          "title": "Nationwide UK delivery",
+          "description": "supply & fit available"
         }
       ],
-      "finalText": "",
-      "buttonText": "",
+      "finalText": "Comparing Peugeot 508 2.0 BlueHDi engine quotes is free, quick and carries no obligation. Enter your registration above to get accurate, tailored quotes from UK specialists who stock the exact engine code for your 2.0 BlueHDi - whether you need used, reconditioned or rebuilt, with supply & fit available nationwide. Every rebuilt engine includes a minimum 12-month unlimited-mileage warranty for complete peace of mind.",
+      "buttonText": "Get Free Peugeot 508 2.0 BlueHDi Engine Quotes ->",
       "secondaryAction": {
         "text": "",
         "href": "tel:03330000044"
       },
       "ui": {
-        "showSecondaryAction": false,
-        "imageBadgeLabel": "Variant-specific support",
-        "imageBadgeTitle": "Peugeot 508 2.0 BlueHDi specialists across the UK",
-        "imageBadgeText": "Compare supply-only and supply & fit quotes from vetted independent engine specialists."
+        "showSecondaryAction": false
       }
     }
   }

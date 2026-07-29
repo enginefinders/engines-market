@@ -14,8 +14,8 @@
     "storageSlug": "kia-niro-1-6-hybrid-engine"
   },
   "seo": {
-    "title": "Kia Niro 1.6 Hybrid Engine Replacement - Compare Prices & Save",
-    "description": "Get quotes today from trusted UK Kia Niro hybrid specialists. Compare prices on reconditioned, rebuilt and used hybrid powertrains - supply & fit available nationwide.",
+    "title": "Kia Niro 1.6 Hybrid Engine Replacement | Compare Prices",
+    "description": "Kia Niro 1.6 Hybrid engine replacement cost guide. Compare rebuilt, reconditioned & used G4LE engine prices from £2,200. 12-month warranty & UK hybrid supply fit specialists.",
     "canonical": "/kia/niro/1-6-hybrid-engine"
   },
   "assets": {
@@ -25,12 +25,174 @@
     "howItWorksBg": "/images/brands/kia/brand/kia-how-it-works-bg.webp",
     "ctaImage": "/images/brands/kia/models/kia-niro-model-card.jpg"
   },
-  "structuredData": null,
+  "structuredData": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.enginesmarket.co.uk/#website",
+        "url": "https://www.enginesmarket.co.uk/",
+        "name": "Engines Market",
+        "publisher": {
+          "@id": "https://www.enginesmarket.co.uk/#organization"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.enginesmarket.co.uk/#organization",
+        "name": "Engines Market",
+        "url": "https://www.enginesmarket.co.uk/",
+        "logo": "https://www.enginesmarket.co.uk/images/logo.png",
+        "sameAs": [
+          "https://www.facebook.com/enginesmarket",
+          "https://x.com/EnginesMarket",
+          "https://www.instagram.com/enginesmarketuk/",
+          "https://www.tiktok.com/@enginesmarket"
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.enginesmarket.co.uk/kia/niro/1-6-hybrid-engine/#webpage",
+        "url": "https://www.enginesmarket.co.uk/kia/niro/1-6-hybrid-engine/",
+        "name": "Kia Niro 1.6 Hybrid Engine Replacement - Compare Prices & Get Quotes",
+        "description": "Kia Niro 1.6 Hybrid engine replacement cost guide. Compare rebuilt, reconditioned & used G4LE engine prices from £2,200. 12-month warranty & UK hybrid supply fit specialists.",
+        "isPartOf": {
+          "@id": "https://www.enginesmarket.co.uk/#website"
+        },
+        "about": [
+          {
+            "@type": "Car",
+            "name": "Kia Niro 1.6 Hybrid",
+            "brand": {
+              "@type": "Brand",
+              "name": "Kia"
+            },
+            "model": "Niro 1.6 Hybrid"
+          },
+          {
+            "@type": "Service",
+            "name": "Kia Niro 1.6 Hybrid Engine Replacement"
+          }
+        ],
+        "mainEntity": {
+          "@id": "https://www.enginesmarket.co.uk/kia/niro/1-6-hybrid-engine/#service"
+        },
+        "breadcrumb": {
+          "@id": "https://www.enginesmarket.co.uk/kia/niro/1-6-hybrid-engine/#breadcrumb"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.enginesmarket.co.uk/kia/niro/1-6-hybrid-engine/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.enginesmarket.co.uk/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Kia",
+            "item": "https://www.enginesmarket.co.uk/kia/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Kia Niro",
+            "item": "https://www.enginesmarket.co.uk/kia/niro/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Kia Niro 1.6 Hybrid",
+            "item": "https://www.enginesmarket.co.uk/kia/niro/1-6-hybrid-engine/"
+          }
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://www.enginesmarket.co.uk/kia/niro/1-6-hybrid-engine/#service",
+        "name": "Kia Niro 1.6 Hybrid Engine Replacement Service",
+        "serviceType": [
+          "Kia Niro 1.6 Hybrid Engine Replacement",
+          "Reconditioned Kia Niro 1.6 Hybrid Engines",
+          "Used Kia Niro 1.6 Hybrid Engines",
+          "Kia Niro 1.6 Hybrid Engine Supply and Fit",
+          "Kia Niro 1.6 Hybrid Engine Price Comparison"
+        ],
+        "provider": {
+          "@id": "https://www.enginesmarket.co.uk/#organization"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        "url": "https://www.enginesmarket.co.uk/kia/niro/1-6-hybrid-engine/",
+        "description": "Kia Niro 1.6 Hybrid engine replacement cost guide. Compare rebuilt, reconditioned & used G4LE engine prices from £2,200. 12-month warranty & UK hybrid supply fit specialists."
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.enginesmarket.co.uk/kia/niro/1-6-hybrid-engine/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does a Kia Niro 1.6 Hybrid engine replacement cost in the UK?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A reconditioned Kia Niro 1.6 Hybrid G4LE engine typically costs £2,200-£3,800 supply-only, depending on variant, mileage and supplier. Rebuilt units with upgraded components addressing carbon buildup command the higher end. Supply & fit adds £450-£850 labour. Main dealer replacements can exceed £4,500-£6,000."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What engine code does my Kia Niro 1.6 Hybrid have?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Your Kia Niro 1.6 Hybrid uses the G4LE 1.6L Kappa II GDI engine code, fitted to all UK HEV variants from 2016 onwards. Verify via your V5C logbook, VIN decoder, or by entering your registration on our compatibility checker for instant confirmation before ordering any replacement unit."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What causes Kia Niro 1.6 Hybrid engine carbon buildup?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Kia Niro 1.6 Hybrid G4LE carbon buildup occurs because direct injection petrol bypasses the intake valves, preventing fuel from washing away crankcase vapour deposits. Over time, hard carbon accumulates on intake ports and combustion chambers, restricting airflow and disrupting the Atkinson-cycle hybrid balance, particularly on high-mileage company car examples doing urban stop-start driving."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What are the signs of DCT failure in a Kia Niro 1.6 Hybrid?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "DCT failure in the Kia Niro 1.6 Hybrid typically presents as shuddering or jerking when pulling away from a stop, particularly when cold. Owners also report hesitation when changing gear, loss of power under acceleration, and transmission warning lights on the dashboard. The issue often occurs at low speeds and in stop-and-go traffic."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Should I rebuild or replace my Kia Niro 1.6 Hybrid engine?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "For most Kia Niro 1.6 Hybrid owners facing G4LE failure, a professionally rebuilt engine offers better value than attempting a partial rebuild. Rebuilt units include upgraded components addressing known failure points like timing tensioners and piston rings, come with 12-month warranty, and avoid the risk of hidden damage discovered mid-repair on your hybrid powertrain."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does a Kia Niro 1.6 Hybrid engine last?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "With proper maintenance, a Kia Niro 1.6 Hybrid G4LE engine typically lasts 150,000-200,000 miles before requiring major work. Most UK replacements occur between 80,000-120,000 miles due to carbon buildup or DCT issues rather than complete engine failure. Regular oil changes with correct specification and avoiding excessive short journeys significantly extend G4LE lifespan."
+            }
+          }
+        ]
+      }
+    ]
+  },
   "sections": {
     "hero": {
-      "tag": "KIA NIRO HYBRID ENGINE MARKETPLACE",
-      "h1": "Kia Niro 1.6 Hybrid Engine Replacement - Compare Prices & Save",
-      "subheading": "Get quotes today from trusted UK Kia Niro hybrid specialists. Compare prices on reconditioned, rebuilt and used hybrid powertrains - supply & fit available nationwide.",
+      "tag": "KIA NIRO 1.6 HYBRID SPECIALISTS",
+      "h1": "Kia Niro 1.6 Hybrid Engine Replacement - Compare Prices & Get Quotes",
+      "subheading": "Get quotes today from trusted UK Kia Niro 1.6 Hybrid engine specialists. Compare prices on reconditioned, rebuilt and used G4LE hybrid units - supply & fit available with a minimum 12-month warranty.",
       "trustBadges": [
         "Supply & Fit Available",
         "12-Month Warranty",
@@ -44,10 +206,10 @@
       "highlights": [
         {
           "title": "Kia Niro 1.6 Hybrid Engine",
-          "price": "[1.6 GDI Hybrid engine image] Niro 1.6 GDI Hybrid Engines - from £1,450 to £3,200",
-          "line1": "[1.6 GDI Hybrid engine image] Niro 1.6 GDI Hybrid Engines - from £1,450 to £3,200",
-          "line2": "-> Rebuilt units from £1,650 · Common codes: G4LE, G4LE Hybrid",
-          "detail": "-> Rebuilt units from £1,650 · Common codes: G4LE, G4LE Hybrid",
+          "price": "G4LE 1.6 Hybrid - from £2,200 to £3,800",
+          "line1": "G4LE 1.6 Hybrid - from £2,200 to £3,800",
+          "line2": "-> Used from £1,800 · Reconditioned from £2,200 · Common codes: G4LE",
+          "detail": "-> Used from £1,800 · Reconditioned from £2,200 · Common codes: G4LE",
           "image": "/images/brands/kia/models/kia-niro-model-card.jpg",
           "imageAlt": ""
         }
@@ -55,7 +217,7 @@
       "engineOptions": [
         {
           "label": "Used",
-          "price": "From quote",
+          "price": "From £1,800",
           "description": "Tested, bare/short engine",
           "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
           "imageAlt": "",
@@ -63,7 +225,7 @@
         },
         {
           "label": "Reconditioned",
-          "price": "From quote",
+          "price": "From £2,200",
           "description": "Rod bearings addressed, tested",
           "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
           "imageAlt": "",
@@ -95,7 +257,7 @@
         "subtitle": "Enter your registration number to compare Kia Niro 1.6 Hybrid engine options.",
         "inputPlaceholder": "AB12 CDE",
         "buttonText": "Get Free Kia Niro 1.6 Hybrid Engine Quotes ->",
-        "note": "Secure enquiry - no spam, no pressure. Genuine quotes only from vetted UK Kia Niro hybrid specialists."
+        "note": "Secure enquiry - no spam, no pressure. Genuine quotes only from vetted UK Kia Niro 1.6 Hybrid specialists."
       }
     },
     "howItWorks": {
@@ -110,26 +272,45 @@
           "number": 1,
           "icon": "registration",
           "front": {
-            "h3": "",
-            "text": ""
+            "h3": "Confirm Your Kia Niro 1.6 Hybrid",
+            "text": "🖼️ [Registration icon]. Instantly verify your exact model, engine code (G4LE) and fuel type via DVLA"
           },
           "back": {
-            "heading": "",
-            "text": "",
-            "bullets": []
+            "heading": "EnginesMarket cross-checks the DVLA record against known Kia Niro 1.6 Hybrid G4LE engine codes so your quote request is accurate before it reaches a supplier - no paperwork, no guesswork, 100% free.",
+            "text": "EnginesMarket cross-checks the DVLA record against known Kia Niro 1.6 Hybrid G4LE engine codes so your quote request is accurate before it reaches a supplier - no paperwork, no guesswork, 100% free.",
+            "bullets": [
+              "EnginesMarket cross-checks the DVLA record against known Kia Niro 1.6 Hybrid G4LE engine codes so your quote request is accurate before it reaches a supplier - no paperwork, no guesswork, 100% free."
+            ]
           }
         },
         {
-          "number": 1,
-          "icon": "registration",
+          "number": 2,
+          "icon": "quote",
           "front": {
-            "h3": "",
-            "text": ""
+            "h3": "Compare Kia Niro 1.6 Hybrid Engine Quotes",
+            "text": "🖼️ [Compare icon]. See used, reconditioned and rebuilt G4LE options side-by-side"
           },
           "back": {
-            "heading": "",
-            "text": "",
-            "bullets": []
+            "heading": "Our UK network of Kia Niro 1.6 Hybrid specialists sends you transparent, itemised quotes covering all condition types - no obligation, no hidden fees, just genuine prices for your exact hybrid engine.",
+            "text": "Our UK network of Kia Niro 1.6 Hybrid specialists sends you transparent, itemised quotes covering all condition types - no obligation, no hidden fees, just genuine prices for your exact hybrid engine.",
+            "bullets": [
+              "Our UK network of Kia Niro 1.6 Hybrid specialists sends you transparent, itemised quotes covering all condition types - no obligation, no hidden fees, just genuine prices for your exact hybrid engine."
+            ]
+          }
+        },
+        {
+          "number": 3,
+          "icon": "shield",
+          "front": {
+            "h3": "Choose Your Kia Niro 1.6 Hybrid Specialist",
+            "text": "🖼️ [Booking icon]. Book supply & fit with a minimum 12-month warranty"
+          },
+          "back": {
+            "heading": "Every rebuilt Kia Niro 1.6 Hybrid engine comes with a minimum 12-month unlimited mileage warranty",
+            "text": "Choose supply-only or full supply & fit with nationwide delivery to your chosen garage. All work carried out by hybrid-certified technicians.",
+            "bullets": [
+              "Choose supply-only or full supply & fit with nationwide delivery to your chosen garage. All work carried out by hybrid-certified technicians."
+            ]
           }
         }
       ],
@@ -151,41 +332,321 @@
     },
     "historyTimeline": {
       "tag": "Variant History",
-      "h2": "",
-      "intro": "",
-      "milestones": [],
-      "vehicleTitle": "",
-      "vehicleMeta": [],
+      "h2": "Kia Niro 1.6 Hybrid - Engine History & Specs at a Glance",
+      "intro": "The Kia Niro 1.6 Hybrid launched in 2016 as Kia's first dedicated hybrid crossover, combining the practicality of an SUV with exceptional fuel economy. Powered by the G4LE 1.6-litre Kappa II GDI engine paired with an electric motor and 6-speed dual-clutch transmission, the Niro 1.6 Hybrid established itself as one of the UK's most popular self-charging hybrids, particularly among fleet and company car drivers. The engine remained in production through the first-generation Niro (DE, 2016-2022) and continues into the second-generation (SG2, 2022-present) with refinements.",
+      "milestones": [
+        {
+          "year": "",
+          "description": "**2016** - Niro 1.6 Hybrid (HEV) launched with G4LE 1.6L Atkinson-cycle GDI engine, 105hp combustion + 139hp combined, paired with 6-speed dry DCT"
+        },
+        {
+          "year": "",
+          "description": "**2017** - PHEV variant introduced with same G4LE engine, larger battery pack and enhanced cooling"
+        },
+        {
+          "year": "",
+          "description": "**2019** - Mid-cycle updates to G4LE thermal management and ECU mapping"
+        },
+        {
+          "year": "",
+          "description": "**2022** - Second-generation Niro (SG2) debuts with revised G4LE engine featuring improved thermal pathways and updated wet DCT replacing the dry clutch system"
+        }
+      ],
+      "vehicleTitle": "Kia Niro 1.6 Hybrid",
+      "vehicleMeta": [
+        {
+          "label": "Fuel Type",
+          "value": "Petrol Hybrid (HEV)"
+        },
+        {
+          "label": "Engine Size",
+          "value": "1.6L (1,580 cc / 1,591 cc)"
+        },
+        {
+          "label": "Power Output",
+          "value": "105hp (engine) / 139hp combined system"
+        }
+      ],
       "specsLabel": "Key Specs Snapshot",
-      "specs": [],
-      "closingNote": ""
+      "specs": [
+        {
+          "label": "Fuel Type",
+          "value": "Petrol Hybrid (HEV)"
+        },
+        {
+          "label": "Engine Size",
+          "value": "1.6L (1,580 cc / 1,591 cc)"
+        },
+        {
+          "label": "Power Output",
+          "value": "105hp (engine) / 139hp combined system"
+        },
+        {
+          "label": "Torque",
+          "value": "148 Nm (engine) / 265 Nm combined system"
+        },
+        {
+          "label": "Years Produced",
+          "value": "2016-present"
+        }
+      ],
+      "closingNote": "Every G4LE engine fitted to the Kia Niro 1.6 Hybrid is covered below, with UK rebuilt pricing and known failure points."
     },
     "engineGuide": {
-      "tag": "Compatible Engines",
-      "h2": "",
-      "items": [],
-      "closing": ""
+      "tag": "Engine Codes & Pricing",
+      "h2": "Kia Niro 1.6 Hybrid Engine Codes - Specifications & Replacement Cost",
+      "sectionTitle": "Compatible Engine Codes & Cost Guide",
+      "sectionSubtitle": "Find your exact engine code, specs and UK replacement cost guide.",
+      "intro": "",
+      "items": [
+        {
+          "code": "G4LE",
+          "title": "1.6L Petrol Hybrid (2016-present)",
+          "specs": [
+            {
+              "label": "Fuel Type",
+              "value": "HEV (Full Hybrid)"
+            },
+            {
+              "label": "Engine Size",
+              "value": "1.6 Litre (1,580 cc / 1,591 cc)"
+            },
+            {
+              "label": "Power Output",
+              "value": "105hp (engine) / 139hp combined system"
+            },
+            {
+              "label": "Torque",
+              "value": "148 Nm (engine) / 265 Nm combined system"
+            },
+            {
+              "label": "Years Fitted",
+              "value": "2016-present"
+            }
+          ],
+          "costs": [
+            {
+              "label": "Used",
+              "value": "£1,800-£3,200",
+              "description": ""
+            },
+            {
+              "label": "Reconditioned",
+              "value": "£2,200-£3,600",
+              "description": ""
+            },
+            {
+              "label": "Rebuilt",
+              "value": "£2,200-£3,800",
+              "description": ""
+            }
+          ],
+          "compatibleTrimLevels": [
+            "Niro 1 HEV",
+            "Niro 2 HEV",
+            "Niro 3 HEV",
+            "Niro 4 HEV",
+            "First Edition HEV",
+            "Niro 2 HEV Gen2",
+            "Niro 3 HEV Gen2",
+            "Niro 4 HEV Gen2"
+          ],
+          "commonFailure": "GDI carbon buildup on intake valves from 50,000 miles (80,000 km), DCT mechatronic shudder from 25,000-37,000 miles (40,000-60,000 km), and timing chain tensioner wear causing cold-start rattle.",
+          "cta": "-> Get quotes for G4LE Kia Niro 1.6 Hybrid engine replacement",
+          "closing": "-> Get quotes for G4LE Kia Niro 1.6 Hybrid engine replacement"
+        }
+      ],
+      "prompt": ""
     },
     "commonProblems": {
       "tag": "Common Problems",
-      "h2": "",
-      "h3": "",
-      "problems": [],
+      "h2": "Kia Niro 1.6 Hybrid Engine Problems - Repair Cost vs Replacement",
+      "h3": "The Kia Niro 1.6 Hybrid's G4LE engine is generally reliable, but the combination of direct injection, hybrid stop-start cycling and DCT complexity creates distinct failure patterns. GDI carbon buildup, DCT shudder and timing chain wear dominate UK replacement enquiries, particularly on high-mileage company car examples. Every rebuilt G4LE engine through EnginesMarket includes upgraded components addressing the original failure points, plus a minimum 12-month unlimited-mileage warranty.",
+      "problems": [
+        {
+          "group": "GDI Carbon Buildup",
+          "h4": "GDI Carbon Buildup - Why Kia Niro 1.6 Hybrid Engines Lose Power and Efficiency",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "affectedModels": "Kia Niro 1.6 Hybrid (G4LE, 2016-present)",
+          "typicalFailureMileage": "50,000 miles (80,000 km)+",
+          "rootCause": "Direct injection petrol bypasses the intake valves, preventing fuel from washing away crankcase vapour. Hard carbon deposits accumulate on intake ports and combustion chambers, restricting airflow and disrupting the Atkinson-cycle hybrid balance. Kia dealers have acknowledged that GDI engines will carbon up over time.",
+          "whyItHappens": "",
+          "repairOptions": [
+            {
+              "tier": "Minor - Walnut Blasting & Decarbonisation",
+              "dealerPrice": "£650-£950",
+              "specialistPrice": "£380-£620",
+              "whatItInvolves": "Intake manifold removal, walnut shell media blasting of valves, ECU adaptation reset",
+              "longevity": "Restores airflow; typically effective for 40k-50k miles if oil quality is maintained",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Full Replacement - Rebuilt G4LE Hybrid Engine",
+              "dealerPrice": "£4,500-£6,000+",
+              "specialistPrice": "£2,200-£3,800",
+              "whatItInvolves": "Complete removal of damaged unit, installation of rebuilt hybrid engine with updated piston rings & intake design, full system calibration",
+              "longevity": "Permanent solution; eliminates carbon-prone weak points, restores factory MPG with 12-month warranty",
+              "estimatedTime": ""
+            }
+          ],
+          "vehicleValueCheck": "A typical Kia Niro 1.6 Hybrid is worth roughly **£7,000-£18,000** depending on age, mileage and condition [INDUSTRY ESTIMATE]. A full rebuilt engine at specialist pricing (£2,200-£3,800 supply & fit) represents **15-35% of the vehicle's value** - generally viable if the battery, body and transmission are in good condition. For sub-£6,000 examples, a used engine may be the more financially sensible route.",
+          "recommendation": "For Kia Niro 1.6 Hybrid owners noticing rough idle or reduced MPG between 50k-70k miles, a professional decarbonisation is highly cost-effective. However, if blue smoke, persistent misfire codes, or significant compression loss are present, the damage has likely progressed beyond cleaning. At that stage, a rebuilt G4LE unit with redesigned intake components offers far better long-term value than repeated patch repairs.",
+          "cta": "-> Compare rebuilt G4LE Kia Niro 1.6 Hybrid engine prices today"
+        },
+        {
+          "group": "DCT Shudder & Jerking",
+          "h4": "DCT Shudder & Jerking - Why Kia Niro 1.6 Hybrids Feel Like Engine Knock",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "affectedModels": "Kia Niro 1.6 Hybrid (G4LE + 6-speed DCT, 2016-present)",
+          "typicalFailureMileage": "25,000-37,000 miles (40,000-60,000 km)",
+          "rootCause": "The dual-clutch transmission relies on precise thermal management and mechatronic actuator calibration. Frequent stop-start urban driving and hybrid electric-vehicle handovers cause clutch pack overheating and actuator wear, leading to jerking, hesitation, and false \"engine misfire\" warnings. Owners report shuddering when cold, particularly when shifting from Reverse to Drive, and at low speeds in stop-and-go traffic. A Motor Trend long-term test attributed the issue to the DCT.",
+          "whyItHappens": "",
+          "repairOptions": [
+            {
+              "tier": "Intermediate - Mechatronic Rebuild & Clutch Pack",
+              "dealerPrice": "£1,900-£2,600",
+              "specialistPrice": "£1,200-£1,700",
+              "whatItInvolves": "Removal of DCT unit, replacement of worn clutch discs, mechatronic valve body refurbishment, fresh fluid & software calibration",
+              "longevity": "Addresses shudder; lifespan 40k-60k miles if driving style adapts to hybrid stop-start demands",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Full Replacement - Rebuilt G4LE + DCT Integration",
+              "dealerPrice": "£4,500-£6,000+",
+              "specialistPrice": "£2,600-£3,800",
+              "whatItInvolves": "Complete powertrain swap, rebuilt hybrid engine matched to recalibrated DCT, full immobiliser & hybrid sync diagnostics",
+              "longevity": "Eliminates drivetrain mismatch; ideal when flywheel damage or chronic calibration faults have compromised engine performance",
+              "estimatedTime": ""
+            }
+          ],
+          "vehicleValueCheck": "",
+          "recommendation": "DCT shudder is frequently misdiagnosed as an engine fault on the Kia Niro 1.6 Hybrid. If symptoms are purely low-speed judder without engine warning lights, a specialist mechatronic recalibration and clutch refresh is usually sufficient. Make sure you come to a complete stop before shifting between Reverse and Drive. But if the vehicle enters limp mode, experiences severe knocking, or shows metallic debris in the DCT sump, the stress has likely transferred to the engine mounts and flywheel. In those cases, a matched rebuilt engine and transmission package prevents repeat failures.",
+          "cta": "-> Check Kia Niro 1.6 Hybrid DCT and engine bundle prices"
+        },
+        {
+          "group": "Timing Chain Tensioner Wear",
+          "h4": "Timing Chain Tensioner Wear - Why Kia Niro 1.6 Hybrids Rattle on Cold Start",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "affectedModels": "Kia Niro 1.6 Hybrid (G4LE, 2016-present)",
+          "typicalFailureMileage": "60,000-100,000 miles",
+          "rootCause": "The hybrid stop-start cycle places intense, repeated load on the timing chain tensioner. OEM plastic guides and a weak tensioner spring allow the chain to slacken over time, causing a metallic rattle on cold starts and eventual timing misalignment. All Kia Niro hybrid models use a timing chain.",
+          "whyItHappens": "",
+          "repairOptions": [
+            {
+              "tier": "Minor - Preventative Timing Chain Kit",
+              "dealerPrice": "£1,100-£1,500",
+              "specialistPrice": "£650-£950",
+              "whatItInvolves": "Front engine cover removal, replacement of chain, upgraded metal guides, high-pressure tensioner, oil pump chain inspection",
+              "longevity": "Highly recommended at 70k-80k miles; prevents catastrophic valve damage if addressed before jump",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Full Replacement - Rebuilt G4LE Engine with Upgraded Timing",
+              "dealerPrice": "£4,000-£5,500",
+              "specialistPrice": "£2,100-£3,400",
+              "whatItInvolves": "Complete engine replacement using a rebuilt unit fitted with reinforced timing components, full compression & leak-down verified before installation",
+              "longevity": "Permanent resolution; ideal if chain has already jumped timing, bent valves, or contaminated oil pump with guide debris",
+              "estimatedTime": ""
+            }
+          ],
+          "vehicleValueCheck": "",
+          "recommendation": "Do not ignore a cold-start rattle on your Kia Niro 1.6 Hybrid. A preventative timing chain kit replacement is significantly cheaper than repairing a bent-valve G4LE engine. We strongly recommend installing an upgraded metal-guide kit at the 80k-mile service interval. If the chain has already stretched past the tensioner limit or caused cam/crank misalignment, a full rebuilt unit with factory-upgraded timing components is the safest and most cost-effective route.",
+          "cta": "-> Compare G4LE timing-safe Kia Niro 1.6 Hybrid engine replacements"
+        }
+      ],
       "emptyState": null,
       "finalCta": {
-        "h4": "Don't let engine failure write off your Kia Niro 1.6 Hybrid",
-        "paragraph": "",
-        "buttonText": "",
-        "disclaimer": ""
-      }
+        "h4": "Don't Let Engine Failure Write Off Your Kia Niro 1.6 Hybrid",
+        "paragraph": "Hybrid engine failures on the Kia Niro 1.6 Hybrid rarely happen without warning, but waiting too long turns manageable maintenance into catastrophic repair bills. Whether you're dealing with carbon buildup, DCT shudder, or timing chain wear, our network of vetted UK specialists provides transparent, like-for-like replacement options tailored to your exact G4LE variant. Every rebuilt engine arrives with upgraded weak-point components, full bench testing, and a minimum 12-month unlimited mileage warranty, delivered and fitted nationwide. Stop comparing isolated repair quotes and secure a complete, warrantied powertrain solution at a fraction of main dealer pricing.",
+        "buttonText": "Compare Kia Niro 1.6 Hybrid Engine Replacement Prices Now ->",
+        "disclaimer": "\"All prices are indicative UK market ranges based on historical quote data and repair requests from our network of engine specialists. Dealer pricing is estimated based on published main dealer labour rates and genuine OEM parts pricing. Specialist pricing reflects actual quote data from EnginesMarket's UK network. Actual costs vary depending on damage severity, vehicle condition, variant, and workshop location within the UK. Use our free comparison tool to get tailored quotes for your specific Kia Niro 1.6 Hybrid. Every engine supplied through EnginesMarket carries a minimum 12-month unlimited mileage warranty - always confirm exact terms with your chosen supplier.\""
+      },
+      "reviewSummary": null
     },
     "faq": {
-      "tag": "FAQs",
-      "h2": "",
+      "tag": "FAQ",
+      "h2": "Kia Niro 1.6 Hybrid Engine Replacement - Frequently Asked Questions",
       "intro": "Everything Kia Niro 1.6 Hybrid owners usually ask before choosing a rebuilt, reconditioned or used replacement engine.",
       "defaultOpenIndex": 0,
       "disclaimer": "",
-      "items": [],
+      "items": [
+        {
+          "question": "How much does a Kia Niro 1.6 Hybrid engine replacement cost in the UK?",
+          "answer": "A reconditioned Kia Niro 1.6 Hybrid G4LE engine typically costs **£2,200-£3,800** supply-only, depending on variant, mileage and supplier. Rebuilt units with upgraded components addressing carbon buildup command the higher end. Supply & fit adds **£450-£850** labour. Main dealer replacements can exceed **£4,500-£6,000**.",
+          "keyPoints": [
+            "Reconditioned G4LE hybrid engines: £2,200-£3,800 supply-only UK",
+            "Supply & fit labour: typically adds £450-£850 to engine price",
+            "Rebuilt units with upgraded components cost more but last longer"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Get instant quotes for Kia Niro 1.6 Hybrid engine replacement from UK specialists"
+        },
+        {
+          "question": "What engine code does my Kia Niro 1.6 Hybrid have?",
+          "answer": "Your Kia Niro 1.6 Hybrid uses the **G4LE** 1.6L Kappa II GDI engine code, fitted to all UK HEV variants from 2016 onwards. Verify via your V5C logbook, VIN decoder, or by entering your registration on our compatibility checker for instant confirmation before ordering any replacement unit.",
+          "keyPoints": [
+            "All UK Kia Niro hybrids use G4LE 1.6L Kappa II GDI code",
+            "Check V5C logbook section D.2 or use our VIN decoder tool",
+            "Gen1 (2016-2021) and Gen2 (2022+) G4LE units differ slightly"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Check your Kia Niro 1.6 Hybrid engine code instantly with our free tool"
+        },
+        {
+          "question": "What causes Kia Niro 1.6 Hybrid engine carbon buildup?",
+          "answer": "Kia Niro 1.6 Hybrid G4LE carbon buildup occurs because direct injection petrol bypasses the intake valves, preventing fuel from washing away crankcase vapour deposits. Over time, hard carbon accumulates on intake ports and combustion chambers, restricting airflow and disrupting the Atkinson-cycle hybrid balance, particularly on high-mileage company car examples doing urban stop-start driving.",
+          "keyPoints": [
+            "Direct injection design means fuel never cleans intake valves on G4LE",
+            "Urban stop-start driving accelerates carbon accumulation",
+            "Symptoms include rough idle, reduced MPG, and hybrid system error codes",
+            "Walnut blasting can clean valves; rebuilt engines address root cause permanently"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Compare Kia Niro 1.6 Hybrid G4LE engines with upgraded intake components today"
+        },
+        {
+          "question": "What are the signs of DCT failure in a Kia Niro 1.6 Hybrid?",
+          "answer": "DCT failure in the Kia Niro 1.6 Hybrid typically presents as **shuddering or jerking** when pulling away from a stop, particularly when cold. Owners also report **hesitation when changing gear**, **loss of power under acceleration**, and **transmission warning lights** on the dashboard. The issue often occurs at low speeds and in stop-and-go traffic.",
+          "keyPoints": [
+            "Shuddering when shifting from Reverse to Drive when cold",
+            "Jerking under light acceleration between 25-40 mph",
+            "Metallic noises from the transmission",
+            "Transmission warning lights on the dashboard"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Compare Kia Niro 1.6 Hybrid DCT and engine bundle prices"
+        },
+        {
+          "question": "Should I rebuild or replace my Kia Niro 1.6 Hybrid engine?",
+          "answer": "For most Kia Niro 1.6 Hybrid owners facing G4LE failure, a professionally rebuilt engine offers better value than attempting a partial rebuild. Rebuilt units include upgraded components addressing known failure points like timing tensioners and piston rings, come with 12-month warranty, and avoid the risk of hidden damage discovered mid-repair on your hybrid powertrain.",
+          "keyPoints": [
+            "Rebuilt G4LE engines include upgraded timing components and piston rings",
+            "12-month unlimited mileage warranty covers rebuilt units from our network",
+            "Partial rebuilds risk missing hidden damage in hybrid-integrated G4LE blocks",
+            "Supply & fit service ensures proper hybrid system calibration post-installation"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Get quotes for rebuilt Kia Niro 1.6 Hybrid engines with warranty included"
+        },
+        {
+          "question": "How long does a Kia Niro 1.6 Hybrid engine last?",
+          "answer": "With proper maintenance, a Kia Niro 1.6 Hybrid G4LE engine typically lasts **150,000-200,000 miles** before requiring major work. Most UK replacements occur between **80,000-120,000 miles** due to carbon buildup or DCT issues rather than complete engine failure. Regular oil changes with correct specification and avoiding excessive short journeys significantly extend G4LE lifespan.",
+          "keyPoints": [
+            "Well-maintained G4LE hybrid engines often reach 150,000-200,000 miles",
+            "Most UK replacements happen 80,000-120,000 miles due to carbon or DCT issues",
+            "Using correct 0W-20 synthetic oil prevents premature wear on G4LE components",
+            "Avoiding excessive short journeys reduces carbon buildup risk"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Compare low-mileage reconditioned Kia Niro 1.6 Hybrid G4LE engines from UK suppliers"
+        }
+      ],
       "ui": {
         "questionLabelPrefix": "Question",
         "keyPointsLabel": "Key points",
@@ -196,33 +657,30 @@
     },
     "trustCta": {
       "tag": "Why Choose Us",
-      "h2": "",
+      "h2": "Compare Kia Niro 1.6 Hybrid Engine Prices Today",
       "intro": "Compare quotes from trusted UK Kia Niro 1.6 Hybrid engine specialists with warranty-backed rebuilt, reconditioned and used options nationwide.",
       "points": [
         {
-          "title": "",
+          "title": "200+ Kia Niro 1.6 Hybrid engines supplied through our network",
           "description": ""
         },
         {
-          "title": "",
+          "title": "12-Month Warranty on every rebuilt G4LE engine",
           "description": ""
         },
         {
-          "title": "",
-          "description": ""
+          "title": "Nationwide UK delivery",
+          "description": "supply & fit available by hybrid-certified technicians"
         }
       ],
-      "finalText": "",
-      "buttonText": "",
+      "finalText": "Comparing Kia Niro 1.6 Hybrid engine quotes is completely free and carries no obligation. Enter your registration above, tell us your G4LE engine code, and receive transparent, fixed-price quotes from our vetted UK specialists within hours. Whether you need a used engine for a quick fix or a fully rebuilt G4LE with upgraded components and a 12-month warranty, we'll match you with the right supplier for your budget. All work is carried out by hybrid-certified technicians who understand the specific requirements of Kia's hybrid powertrain.",
+      "buttonText": "Get Free Kia Niro 1.6 Hybrid Engine Quotes ->",
       "secondaryAction": {
         "text": "",
         "href": "tel:03330000044"
       },
       "ui": {
-        "showSecondaryAction": false,
-        "imageBadgeLabel": "Variant-specific support",
-        "imageBadgeTitle": "Kia Niro 1.6 Hybrid specialists across the UK",
-        "imageBadgeText": "Compare supply-only and supply & fit quotes from vetted independent engine specialists."
+        "showSecondaryAction": false
       }
     }
   }
