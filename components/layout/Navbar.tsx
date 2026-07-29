@@ -35,11 +35,11 @@ export default function Navbar() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 max-[1023px]:border-b-0">
         <Link href="/" className="flex items-center" onClick={closeMobileMenu}>
           <Image
-            src="/branding/engine-market-logo-rectangle.png"
+            src="/branding/engine-market-logo-white-transparent.png"
             alt="Engines Market"
-            width={182}
-            height={46}
-            className="h-10 w-auto object-contain"
+            width={520}
+            height={150}
+            className="h-11 w-auto max-w-[210px] object-contain sm:h-12 sm:max-w-[240px]"
             priority
           />
         </Link>

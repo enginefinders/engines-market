@@ -200,33 +200,24 @@ function tierVariant(tier: string) {
   return "minor";
 }
 
-function ProblemIcon({ index }: { index: number }) {
-  const icons = [
-    <svg key="0" viewBox="0 0 24 24" className="h-[18px] w-[18px]" fill="none" aria-hidden="true">
-      <path d="M12 2 4 10l4 12h8l4-12-8-8Z" stroke="currentColor" strokeWidth="1.9" strokeLinejoin="round" />
-      <path d="m9.5 12 2 2 4-4" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>,
-    <svg key="1" viewBox="0 0 24 24" className="h-[18px] w-[18px]" fill="none" aria-hidden="true">
-      <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="1.8" />
-      <path
-        d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-      />
-    </svg>,
-    <svg key="2" viewBox="0 0 24 24" className="h-[18px] w-[18px]" fill="none" aria-hidden="true">
-      <path d="M7 7h10v10H7z" stroke="currentColor" strokeWidth="1.8" />
-      <path d="M4 11h3M17 11h3M9 4v3M15 4v3M9 17v3M15 17v3" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-    </svg>,
-    <svg key="3" viewBox="0 0 24 24" className="h-[18px] w-[18px]" fill="none" aria-hidden="true">
-      <path d="M4 7h16v10H4z" stroke="currentColor" strokeWidth="1.8" />
-      <path d="M8 4v3M16 4v3M8 17v3M16 17v3" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-      <path d="M7 12h10" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-    </svg>,
-  ];
+function ProblemIcon({ index, active = false }: { index: number; active?: boolean }) {
+  const icons = active
+    ? [
+        "/icons/engine-market/active-blue-timing-chain.png",
+        "/icons/engine-market/active-blue-rod-bearing.png",
+        "/icons/engine-market/active-blue-hpfp-icon.png",
+        "/icons/engine-market/active-blue-cooling-system.png",
+        "/icons/engine-market/active-blue-egr-icon.png",
+      ]
+    : [
+    "/icons/engine-market/dark-green-timing-chain.png",
+    "/icons/engine-market/dark-green-rod-bearing.png",
+    "/icons/engine-market/dark-green-hpfp-icon.png",
+    "/icons/engine-market/dark-green-cooling-system.png",
+    "/icons/engine-market/dark-green-egr-icon.png",
+      ];
 
-  return icons[index % icons.length];
+  return <Image src={icons[index % icons.length]} alt="" width={24} height={24} className="h-[24px] w-[24px] object-contain" />;
 }
 
 function MetaIcon({ type, className }: { type: "models" | "mileage" | "root"; className?: string }) {
@@ -267,46 +258,19 @@ function MetaIcon({ type, className }: { type: "models" | "mileage" | "root"; cl
 }
 
 function WarrantyIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-[18px] w-[18px]" fill="none" aria-hidden="true">
-      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" strokeWidth="1.8" />
-      <path d="m9 12 2 2 4-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
+  return <Image src="/icons/engine-market/light-green-warranty-minimum.png" alt="" width={18} height={18} className="h-[18px] w-[18px] object-contain" />;
 }
 
 function GearIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-[18px] w-[18px]" fill="none" aria-hidden="true">
-      <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="1.8" />
-      <path
-        d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06A1.65 1.65 0 0 0 15 19.4a1.65 1.65 0 0 0-1 .6 1.65 1.65 0 0 0-.33 1V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-.33-1 1.65 1.65 0 0 0-1-.6 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-.6-1 1.65 1.65 0 0 0-1-.33H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1-.33 1.65 1.65 0 0 0 .6-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-.6 1.65 1.65 0 0 0 .33-1V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 .33 1 1.65 1.65 0 0 0 1 .6 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9c.26.3.47.65.6 1 .13.36.2.74.2 1.13s-.07.77-.2 1.13c-.13.35-.34.7-.6 1Z"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
+  return <Image src="/icons/engine-market/light-green-upgraded-components.png" alt="" width={18} height={18} className="h-[18px] w-[18px] object-contain" />;
 }
 
 function TruckIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-[18px] w-[18px]" fill="none" aria-hidden="true">
-      <rect x="1" y="3" width="15" height="13" rx="1" stroke="currentColor" strokeWidth="1.8" />
-      <path d="M16 8h4l3 3v5h-7V8z" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-      <circle cx="5.5" cy="18.5" r="2.5" stroke="currentColor" strokeWidth="1.8" />
-      <circle cx="18.5" cy="18.5" r="2.5" stroke="currentColor" strokeWidth="1.8" />
-    </svg>
-  );
+  return <Image src="/icons/engine-market/light-green-nationwide-delivery-2.png" alt="" width={18} height={18} className="h-[18px] w-[18px] object-contain" />;
 }
 
 function PoundIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-[18px] w-[18px]" fill="none" aria-hidden="true">
-      <path d="M15 6a3 3 0 1 0-6 0v11m-2-5h8m-8 4h7" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-    </svg>
-  );
+  return <Image src="/icons/engine-market/light-green-pound-icon-2.png" alt="" width={18} height={18} className="h-[18px] w-[18px] object-contain" />;
 }
 
 function AffectedVehiclesCard({
@@ -430,8 +394,8 @@ function MobileProblemCard({
         onClick={onToggle}
         className="flex w-full items-center gap-3 px-[14px] py-[14px] text-left transition hover:bg-[#fafafa]"
       >
-        <div className="flex h-9 w-9 flex-none items-center justify-center rounded-[8px] bg-[#0d1b2e] text-[#22c55e]">
-          <ProblemIcon index={index} />
+        <div className="flex h-11 w-11 flex-none items-center justify-center rounded-[10px] bg-[#0d1b2e] text-[#22c55e]">
+          <ProblemIcon index={index} active={open} />
         </div>
         <div className="min-w-0 flex-1">
           <div className="font-['Manrope'] text-[13.5px] font-bold leading-[1.25] text-[#0d1b2e]">{detail.title}</div>
@@ -600,7 +564,7 @@ export default function CommonProblemsSection({ data, bgImage, documentMode = fa
         </div>
       ) : null}
 
-      <Container className={`relative max-w-[1400px] ${documentMode ? "px-0 sm:px-0 lg:px-0" : "px-2"}`}>
+      <Container className={`relative max-w-[1400px] ${documentMode ? "" : "px-2"}`}>
         <div className="section-pill mb-[14px]">
           <span>{data.tag}</span>
         </div>
@@ -642,8 +606,8 @@ export default function CommonProblemsSection({ data, bgImage, documentMode = fa
                       : "border-[#e5e7eb] bg-white hover:border-[#cbd5e1] hover:bg-slate-50"
                       }`}
                   >
-                    <div className={`flex h-9 w-9 flex-none items-center justify-center rounded-[8px] ${activeProblem ? "bg-[#15803d] text-white" : "bg-[#0d1b2e] text-white"}`}>
-                      <ProblemIcon index={index} />
+                    <div className={`flex h-11 w-11 flex-none items-center justify-center rounded-[10px] ${activeProblem ? "bg-[#15803d] text-white" : "bg-[#0d1b2e] text-white"}`}>
+                      <ProblemIcon index={index} active={activeProblem} />
                     </div>
                     <div className="min-w-0 flex-1">
                       <div className="font-['Manrope'] text-[13px] font-bold leading-[1.25] text-[#0d1b2e]">
@@ -667,10 +631,10 @@ export default function CommonProblemsSection({ data, bgImage, documentMode = fa
           </div>
 
           {current ? (
-            <div className="rounded-[14px] border border-[#e5e7eb] bg-white p-5 shadow-[0_2px_12px_rgba(13,27,46,0.06)]">
+            <div className="min-w-0 rounded-[14px] border border-[#e5e7eb] bg-white p-5 shadow-[0_2px_12px_rgba(13,27,46,0.06)]">
               <div className="flex items-start gap-4 border-b border-[#f1f5f9] pb-4">
-                <div className="flex h-[44px] w-[44px] flex-none items-center justify-center rounded-[10px] bg-[#15803d] text-white">
-                  <ProblemIcon index={active} />
+                <div className="flex h-[52px] w-[52px] flex-none items-center justify-center rounded-[12px] bg-[#15803d] text-white">
+                  <ProblemIcon index={active} active />
                 </div>
                 <div className="min-w-0">
                   <div className="font-['Manrope'] text-[16px] font-extrabold leading-[1.25] text-[#0d1b2e]">
@@ -682,7 +646,7 @@ export default function CommonProblemsSection({ data, bgImage, documentMode = fa
                 </div>
               </div>
 
-              {current.image?.trim() || bgImage?.trim() ? (
+              {!documentMode && (current.image?.trim() || bgImage?.trim()) ? (
                 <div className="mt-4">
                   <ProblemVisual
                     src={current.image?.trim() || bgImage?.trim() || ""}
@@ -691,10 +655,10 @@ export default function CommonProblemsSection({ data, bgImage, documentMode = fa
                 </div>
               ) : null}
 
-              <div className="mt-4 grid gap-3 md:grid-cols-3">
+              <div className="mt-4 grid gap-3 lg:grid-cols-[1.18fr_0.9fr_1fr]">
                 <AffectedVehiclesCard affectedModels={current.affectedModels} />
 
-                <div className="rounded-[10px] border border-[#f1f5f9] px-2 py-2 text-center">
+                <div className="rounded-[10px] border border-[#f1f5f9] px-3 py-3 text-center">
                   {/* Header */}
                   <div className="mb-4 flex items-center justify-center gap-2">
                     <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#f1f5f9]">
@@ -890,7 +854,7 @@ export default function CommonProblemsSection({ data, bgImage, documentMode = fa
         {data.finalCta.disclaimer ? (
           <div className="mt-5 rounded-[12px] border border-[#e5e7eb] bg-white px-4 py-3 lg:mt-4">
             <div className="grid gap-4 lg:grid-cols-[420px_minmax(0,1fr)] lg:items-center">
-              <div className="overflow-x-auto">
+              <div className="support-strip-scroll overflow-x-auto [scrollbar-width:thin] [scrollbar-color:rgba(148,163,184,0.45)_transparent] [&::-webkit-scrollbar]:h-1.5 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-[#cbd5e1] [&::-webkit-scrollbar-thumb]:hover:bg-[#94a3b8]">
                 <div className="flex min-w-max items-start gap-2 whitespace-nowrap">
                   {supportItems.map((item, index) => (
                     <div key={item.label} className="flex items-center gap-2">

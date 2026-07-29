@@ -188,10 +188,10 @@ export default function HowItWorksSection({ data, bgImage, sectionId, flush = fa
                       <div
                         className={`mx-auto mt-0 flex items-center justify-center rounded-[14px] p-1 ${
                           isRegistrationCard
-                            ? "h-[114px] w-[224px] md:h-[124px] md:w-[236px]"
+                            ? "h-[126px] w-[246px] md:h-[132px] md:w-[248px]"
                             : isComparisonCard
-                              ? "h-[114px] w-[114px] md:h-[126px] md:w-[126px]"
-                              : "h-[108px] w-[108px] md:h-[118px] md:w-[118px]"
+                              ? "h-[122px] w-[122px] md:h-[130px] md:w-[130px]"
+                              : "h-[116px] w-[116px] md:h-[124px] md:w-[124px]"
                         }`}
                       >
                         <img
@@ -199,10 +199,10 @@ export default function HowItWorksSection({ data, bgImage, sectionId, flush = fa
                           alt={`Step ${card.number} icon`}
                           className={
                             isRegistrationCard
-                              ? "h-[96px] w-[196px] object-contain md:h-[106px] md:w-[208px]"
+                              ? "h-[108px] w-[220px] object-contain md:h-[114px] md:w-[224px]"
                               : isComparisonCard
-                                ? "h-[98px] w-[98px] object-contain md:h-[108px] md:w-[108px]"
-                                : "h-[92px] w-[92px] object-contain md:h-[100px] md:w-[100px]"
+                                ? "h-[108px] w-[108px] object-contain md:h-[114px] md:w-[114px]"
+                                : "h-[102px] w-[102px] object-contain md:h-[108px] md:w-[108px]"
                           }
                         />
                       </div>
@@ -215,7 +215,7 @@ export default function HowItWorksSection({ data, bgImage, sectionId, flush = fa
                         {card.front.text}
                       </p>
 
-                      <span className="ml-auto mt-auto inline-flex items-center gap-2 pt-3 text-[13px] font-bold text-[#15803d]">
+                      <span className="ml-auto mt-auto inline-flex items-center gap-2 px-1 pt-3 text-[13px] font-bold text-[#15803d]">
                         <span>See how it works</span>
                         <ArrowIcon />
                       </span>

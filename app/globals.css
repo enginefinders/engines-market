@@ -381,6 +381,25 @@ svg[class*="h-9 w-9"] {
   max-height: 28rem;
   overflow-y: auto;
   padding-right: 0.3rem;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(148, 163, 184, 0.55) transparent;
+}
+
+.faq-scroll-panel::-webkit-scrollbar {
+  width: 6px;
+}
+
+.faq-scroll-panel::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.faq-scroll-panel::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.55);
+  border-radius: 999px;
+}
+
+.faq-scroll-panel::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.7);
 }
 
 @keyframes modelsPeek {

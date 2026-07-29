@@ -11,11 +11,11 @@ export default function Footer() {
           <div>
             <Link href="/" className="inline-flex items-center" aria-label="Engines Market homepage">
               <Image
-                src="/branding/engine-market-logo-rectangle.png"
+                src="/branding/engine-market-logo-white-transparent.png"
                 alt="Engines Market"
-                width={5752}
-                height={2280}
-                className="h-16 w-52 rounded bg-white object-contain p-1.5"
+                width={520}
+                height={150}
+                className="h-16 w-auto max-w-[260px] object-contain"
               />
             </Link>
             <p className="mt-4 max-w-sm text-sm leading-6 text-slate-300">

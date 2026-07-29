@@ -101,6 +101,17 @@ function InfoAlertIcon() {
   );
 }
 
+function MarketPulseIcon({ className = "h-[15px] w-[15px]" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} fill="none" aria-hidden="true">
+      <path d="M4 18h16" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" />
+      <path d="M7 16V9" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" />
+      <path d="M12 16V6" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" />
+      <path d="M17 16v-4" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" />
+    </svg>
+  );
+}
+
 function buildFeedRows(
   entries: LiveMarketPriceEntry[],
   density: "standard" | "premium",
@@ -397,21 +408,23 @@ export default function LiveMarketPricesSection({
 
   const headingLines = data.headingLines?.length ? data.headingLines : [data.h2];
   const sectionImage = imageSrc || "";
-  const gridClass = "lg:grid-cols-[1.05fr_0.95fr] lg:items-stretch";
-  const imageColumnClass = "w-full lg:h-full";
+  const gridClass = isDocumentMode
+    ? "lg:grid-cols-[minmax(420px,0.49fr)_minmax(520px,0.51fr)] lg:items-stretch"
+    : "lg:grid-cols-[minmax(0,0.88fr)_minmax(0,1.12fr)] lg:items-stretch";
+  const imageColumnClass = isDocumentMode ? "w-full lg:flex lg:h-full lg:min-h-[500px]" : "w-full lg:h-full";
   const imageFrameClass = isDocumentMode
-    ? "overflow-hidden rounded-[14px] border border-[#dce6f3] bg-[linear-gradient(180deg,#ffffff_0%,#f3f8ff_100%)] shadow-[0_10px_28px_rgba(13,27,46,0.08)]"
+    ? "overflow-hidden rounded-[22px] border border-[#d8e5f0] bg-[linear-gradient(180deg,#f5fbf6_0%,#eef6ff_100%)] shadow-[0_18px_42px_rgba(13,27,46,0.1)] lg:flex lg:h-full lg:w-full"
     : "";
   const brandImageClass = "h-full min-h-[320px] w-full object-center lg:min-h-[370px]";
   const feedColumnClass = isDocumentMode
-    ? "min-w-0 lg:flex lg:h-full lg:flex-col lg:min-h-[410px]"
+    ? "min-w-0 lg:flex lg:h-full lg:flex-col lg:min-h-[500px]"
     : "min-w-0 lg:flex lg:h-full lg:flex-col lg:min-h-[370px]";
-  const imageSizes = "(max-width: 1024px) 100vw, 48vw";
+  const imageSizes = isDocumentMode ? "(max-width: 1024px) 100vw, 52vw" : "(max-width: 1024px) 100vw, 48vw";
   const feedPanelClass = isDocumentMode
-    ? "overflow-hidden rounded-b-[14px] border border-white/10 bg-gradient-to-br from-[#0b1a2e] via-[#0f2035] to-[#0a1628] shadow-[0_10px_28px_rgba(0,0,0,0.4)] lg:flex lg:flex-1 lg:flex-col lg:min-h-[410px]"
+    ? "overflow-hidden rounded-b-[22px] border border-[#102845] border-t-0 bg-[linear-gradient(180deg,#10243e_0%,#0c1c31_46%,#091523_100%)] shadow-[0_18px_42px_rgba(9,21,35,0.34)] lg:flex lg:flex-1 lg:flex-col lg:min-h-[500px]"
     : "overflow-hidden rounded-b-[14px] border border-white/10 bg-gradient-to-br from-[#0b1a2e] via-[#0f2035] to-[#0a1628] shadow-[0_10px_28px_rgba(0,0,0,0.4)] lg:flex lg:flex-1 lg:flex-col lg:min-h-[370px]";
   const feedScrollClass = isDocumentMode
-    ? "max-h-[480px] overflow-y-auto lg:max-h-none lg:flex-1"
+    ? "max-h-[440px] overflow-y-auto [scrollbar-width:thin] [scrollbar-color:rgba(103,199,255,0.4)_transparent] [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-[#67c7ff]/50 [&::-webkit-scrollbar-thumb]:hover:bg-[#67c7ff]/75 lg:max-h-[448px] lg:flex-1"
     : "max-h-[440px] overflow-y-auto lg:max-h-none lg:flex-1";
 
   return (
@@ -460,14 +473,25 @@ export default function LiveMarketPricesSection({
             <div className={imageColumnClass}>
               <div className={imageFrameClass}>
                 {sectionImage ? (
-                  <Image
-                    src={sectionImage}
-                    alt={data.imageAlt ?? ""}
-                    width={960}
-                    height={1280}
-                    className="h-auto w-full object-contain"
-                    sizes={imageSizes}
-                  />
+                  <div className="w-full bg-[radial-gradient(circle_at_18%_16%,rgba(187,247,208,0.72),rgba(255,255,255,0)_34%),radial-gradient(circle_at_82%_82%,rgba(191,219,254,0.44),rgba(255,255,255,0)_28%),linear-gradient(180deg,#f8fcf8_0%,#eef5ff_100%)] lg:relative lg:h-full lg:min-h-[500px]">
+                    <Image
+                      src={sectionImage}
+                      alt={data.imageAlt ?? ""}
+                      width={960}
+                      height={1400}
+                      className="block h-auto w-full object-contain lg:hidden"
+                      sizes="100vw"
+                    />
+                    <div className="hidden lg:block lg:h-full lg:min-h-[500px]">
+                      <Image
+                        src={sectionImage}
+                        alt={data.imageAlt ?? ""}
+                        fill
+                        className="object-contain object-center object-top"
+                        sizes={imageSizes}
+                      />
+                    </div>
+                  </div>
                 ) : null}
               </div>
             </div>
@@ -484,9 +508,12 @@ export default function LiveMarketPricesSection({
 
           <div className={feedColumnClass}>
             {isDocumentMode ? (
-              <div className="rounded-t-[14px] bg-[#0d1b2e] px-4 py-[12px] shadow-[0_2px_12px_rgba(13,27,46,0.16)]">
-                <div className="text-[12px] font-bold uppercase tracking-[0.08em] text-white">
-                  Average Market Prices
+              <div className="rounded-t-[22px] border border-[#2e5c99] border-b-0 bg-[linear-gradient(180deg,#14325a_0%,#10243e_100%)] px-5 py-[14px] shadow-[0_0_0_1px_rgba(82,169,255,0.18),0_12px_28px_rgba(13,27,46,0.24)]">
+                <div className="flex items-center gap-[9px] text-[11px] font-bold uppercase tracking-[0.11em] text-[#69d4ff]">
+                  <span className="grid h-[24px] w-[24px] place-items-center rounded-full bg-[#112948] text-[#69d4ff] shadow-[0_0_14px_rgba(105,212,255,0.26)]">
+                    <MarketPulseIcon />
+                  </span>
+                  <span>Average Market Prices</span>
                 </div>
               </div>
             ) : filterTabs.length ? (
@@ -590,29 +617,29 @@ export default function LiveMarketPricesSection({
                       {visibleRows.map((row, index) => (
                         <li
                           key={`${row.Year}-${row.Model}-${row["Engine Code"]}-${index}`}
-                          className="border-b border-white/10 px-[14px] py-[11px] transition hover:bg-[rgba(45,122,58,0.04)] last:border-b-0 md:px-[16px]"
+                          className="border-b border-white/10 px-[16px] py-[13px] transition hover:bg-[rgba(105,212,255,0.05)] last:border-b-0 md:px-[18px]"
                         >
-                          <div className="mb-[4px] flex items-baseline justify-between gap-[8px]">
-                            <span className="min-w-0 flex-1 truncate text-[14px] font-semibold text-white">
+                          <div className="mb-[5px] flex items-baseline justify-between gap-[10px]">
+                            <span className="min-w-0 flex-1 truncate text-[14px] font-semibold text-white md:text-[14.5px]">
                               {row.Model}
                             </span>
-                            <span className="flex-none whitespace-nowrap text-[11px] font-normal text-white">
+                            <span className="flex-none whitespace-nowrap text-[11px] font-medium text-white/75">
                               {row.Year}
                             </span>
-                            <span className="flex-none whitespace-nowrap text-[15px] font-bold text-[#2d7a3a]">
+                            <span className="flex-none whitespace-nowrap text-[16px] font-extrabold text-[#35df77] [text-shadow:0_0_12px_rgba(53,223,119,0.22)]">
                               {row["Avg. Quoted Price"]}
                             </span>
                           </div>
 
                           <div className="flex items-center justify-between gap-[8px]">
-                            <span className="min-w-0 flex-1 truncate text-[11.5px] text-white">
+                            <span className="min-w-0 flex-1 truncate text-[11.5px] text-white/76">
                               {row["Reported Issue"]}
                             </span>
-                            <div className="flex flex-none gap-[4px]">
-                              <span className="rounded-full bg-white/5 border border-white/10 px-2 py-0.75 text-[10px] font-medium text-white/80">
+                            <div className="flex flex-none gap-[5px]">
+                              <span className="rounded-full border border-white/12 bg-white/[0.06] px-2.5 py-1 text-[10px] font-semibold text-white/78">
                                 {row["Engine Code"]}
                               </span>
-                              <span className="rounded-full bg-white/5 border border-white/10 px-2 py-0.75 text-[10px] font-medium text-white/80">
+                              <span className="rounded-full border border-white/12 bg-white/[0.06] px-2.5 py-1 text-[10px] font-semibold text-white/78">
                                 {row.Fuel}
                               </span>
                             </div>
@@ -653,11 +680,11 @@ export default function LiveMarketPricesSection({
               </div>
 
               {isDocumentMode ? (
-                <div className="rounded-[10px] px-4 py-[10px]">
-                  <div className="flex items-center gap-[6px] text-[11px] font-medium text-[#0d1b2e]">
+                <div className="rounded-b-[22px] border border-[#dce6f3] border-t-0 bg-[linear-gradient(180deg,#f7fbff_0%,#eef5fb_100%)] px-4 py-[11px] shadow-[0_12px_28px_rgba(13,27,46,0.08)]">
+                  <div className="flex items-center gap-[6px] text-[11px] font-medium text-[#42546e]">
                     <RefreshIcon />
                     <span>
-                      {(ui.updatedLabel || "")} <span className="font-semibold text-[#0d1b2e]">{formatUpdatedAt(clock)}</span>
+                      {(ui.updatedLabel || "Last updated:")} <span className="font-semibold text-[#0d1b2e]">{formatUpdatedAt(clock)}</span>
                     </span>
                   </div>
                 </div>

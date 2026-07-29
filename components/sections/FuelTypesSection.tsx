@@ -29,7 +29,7 @@ function FuelIcon() {
 }
 
 function ShieldCheckIcon() {
-  return <img src="/icons/engine-market/dark-blue-not-sure.png" alt="" aria-hidden="true" className="h-4 w-4 object-contain" loading="lazy" />;
+  return <img src="/icons/engine-market/light-green-not-sure-circle.png" alt="" aria-hidden="true" className="h-5 w-5 object-contain" loading="lazy" />;
 }
 
 function ArrowIcon() {
@@ -48,6 +48,59 @@ function getTabLabel(title: string) {
   if (normalized.includes("plug-in") || normalized.includes("phev")) return "PHEV";
   if (normalized.includes("electric")) return "Electric";
   return title;
+}
+
+function getTabKind(title: string) {
+  const normalized = title.toLowerCase();
+  if (normalized.includes("diesel")) return "diesel";
+  if (normalized.includes("petrol")) return "petrol";
+  if (normalized.includes("mild hybrid") || normalized.includes("mhev")) return "mhev";
+  if (normalized.includes("plug-in") || normalized.includes("phev")) return "phev";
+  if (normalized.includes("electric")) return "electric";
+  return "other";
+}
+
+function TabFuelIcon({ kind }: { kind: ReturnType<typeof getTabKind> }) {
+  if (kind === "petrol") {
+    return (
+      <svg viewBox="0 0 24 24" className="h-[14px] w-[14px]" fill="none" aria-hidden="true">
+        <polygon
+          points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    );
+  }
+
+  if (kind === "mhev" || kind === "phev" || kind === "electric") {
+    return (
+      <svg viewBox="0 0 24 24" className="h-[14px] w-[14px]" fill="none" aria-hidden="true">
+        <path
+          d="M5 17H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v9a2 2 0 0 1-2 2h-5"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <polyline points="14 15 17 18 14 21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        <line x1="17" y1="18" x2="9" y2="18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      </svg>
+    );
+  }
+
+  if (kind === "diesel") {
+    return (
+      <svg viewBox="0 0 24 24" className="h-[14px] w-[14px]" fill="none" aria-hidden="true">
+        <rect x="3" y="7" width="18" height="10" rx="2" stroke="currentColor" strokeWidth="2" />
+        <path d="M8 7V5h8v2M6 10h2M16 10h2M12 7v10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      </svg>
+    );
+  }
+
+  return null;
 }
 
 function splitDashItem(entry: string) {
@@ -328,6 +381,7 @@ export default function FuelTypesSection({ data, bgImage, strictData = false, do
                   {items.map((item, index) => {
                     const isActive = index === activeItemIndex;
                     const fuelType = getTabLabel(item.title);
+                    const fuelKind = getTabKind(item.title);
 
                     return (
                       <button
@@ -340,7 +394,10 @@ export default function FuelTypesSection({ data, bgImage, strictData = false, do
                             : "bg-white text-[#22324a] shadow-none hover:bg-[#f8fafc]"
                         }`}
                       >
-                        <span>{fuelType.toUpperCase()}</span>
+                        <span className="inline-flex items-center gap-1.5">
+                          <TabFuelIcon kind={fuelKind} />
+                          <span>{fuelType.toUpperCase()}</span>
+                        </span>
                       </button>
                     );
                   })}

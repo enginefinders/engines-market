@@ -558,7 +558,7 @@ export default function HeroSection({
 
           {hasDisclaimer ? (
             disclaimerMode === "icon" ? (
-              <div className="mt-4">
+              <div className="mt-4 lg:hidden">
                 <div className="flex justify-end">
                   <button
                     type="button"
@@ -703,6 +703,32 @@ export default function HeroSection({
             <p className="flex w-full max-w-full items-center justify-center px-4 text-center text-[12px] leading-[1.55] text-[#64748b] md:text-[12.5px]">
               <span>{secureNote(data, brandName, strictData)}</span>
             </p>
+          ) : null}
+
+          {hasDisclaimer && disclaimerMode === "icon" ? (
+            <div className="hidden w-full max-w-md lg:block">
+              <div className="flex justify-end">
+                <button
+                  type="button"
+                  onClick={() => setIsDisclaimerOpen((current) => !current)}
+                  aria-expanded={isDisclaimerOpen}
+                  aria-label="Toggle disclaimer"
+                  className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-black text-[11px] font-bold leading-none text-black transition focus:outline-none focus:ring-2 focus:ring-[#2d7a3a] focus:ring-offset-2"
+                >
+                  !
+                </button>
+              </div>
+
+              {isDisclaimerOpen ? (
+                <div className="mt-2 rounded-[16px] border border-[#dbe4ef] bg-white/85 px-4 py-3 text-[11.5px] leading-[1.6] text-[#64748b] shadow-[0_12px_32px_rgba(13,27,46,0.07)] backdrop-blur-sm md:px-5 md:text-[12.5px]">
+                  <div className="space-y-1.5">
+                    {disclaimerLines.map((line, index) => (
+                      <p key={`${line}-${index}`}>{line}</p>
+                    ))}
+                  </div>
+                </div>
+              ) : null}
+            </div>
           ) : null}
         </div>
       </div>

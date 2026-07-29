@@ -30,13 +30,15 @@ export default function FaqSection({ data, strictData = false, documentMode = fa
   const ui = data.ui ?? {};
   const defaultOpenIndex = data.defaultOpenIndex ?? 0;
   const mobileHeading = "Frequently Asked Question";
+  const shellClass = documentMode ? "mx-auto max-w-[1080px]" : "max-w-[860px]";
+  const faqPanelClass = documentMode ? "mx-auto mt-6 max-w-[1080px]" : "faq-scroll-panel mx-auto mt-6 max-w-[1400px]";
 
-    return (
-      <Section className={documentMode ? "bg-white !py-[2px]" : "bg-white"}>
-      <Container className={documentMode ? "!max-w-none !px-[2px] sm:!px-[2px] lg:!px-[2px]" : ""}>
-        <div className={documentMode ? "max-w-none" : "max-w-[860px]"}>
+  return (
+    <Section className={documentMode ? "bg-white !py-[8px] lg:!py-[14px]" : "bg-white"}>
+      <Container>
+        <div className={shellClass}>
           <p className="section-pill mb-1.5">{data.tag}</p>
-          <h2>
+          <h2 className="font-['Manrope'] text-[28px] font-extrabold leading-[1.12] tracking-[-0.03em] text-[#0d1b2e] lg:text-[42px]">
             <span className="block md:hidden text-[#15803d]">{mobileHeading}</span>
             <span className="hidden md:block">
               {headingLines.map((line, index) => (
@@ -49,7 +51,7 @@ export default function FaqSection({ data, strictData = false, documentMode = fa
           <p className="text-body mt-2.5 text-slate-700">{data.intro}</p>
         </div>
 
-        <div className={`faq-scroll-panel mx-auto mt-6 max-w-[1400px] ${documentMode ? "pr-0" : ""}`}>
+        <div className={`${faqPanelClass} ${documentMode ? "pr-0" : ""}`}>
           {data.items.map((item, index) => (
             <details key={item.question} className="group block surface-card-soft overflow-hidden" open={index === defaultOpenIndex}>
               <summary className="flex min-h-[56px] w-full cursor-pointer list-none items-center justify-between gap-4 border-b border-slate-100 px-5 py-5 text-left transition hover:bg-slate-50 sm:px-6 group-open:border-b-2 group-open:border-green-700 group-open:text-green-700 [&::-webkit-details-marker]:hidden">
@@ -179,7 +181,7 @@ export default function FaqSection({ data, strictData = false, documentMode = fa
         </div>
 
         {data.disclaimer ? (
-          <div className="mx-auto mt-3 max-w-[1400px] rounded-xl border border-slate-200 bg-slate-50 px-4 py-3">
+          <div className={`mx-auto mt-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 ${documentMode ? "max-w-[1080px]" : "max-w-[1400px]"}`}>
             {strictData ? (
               ui.disclaimerLabel ? <p className="text-label text-slate-500">{ui.disclaimerLabel}</p> : null
             ) : (

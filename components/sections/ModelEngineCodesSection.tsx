@@ -321,16 +321,16 @@ export default function ModelEngineCodesSection({ data, guide, modelName, strict
   const mobileHeadingParts = splitLastHeadingToken(mobileHeadingLine);
   const intro = strictData ? data.h3 : (guide.h3 || data.h3);
   const closingLine = strictData ? (data.closingLine || "") : (guide.closing || data.closingLine || "");
-  const sectionContainerClass = documentMode ? "max-w-[1400px] px-0 sm:px-0 lg:px-0" : "max-w-[1400px]";
+  const sectionContainerClass = "max-w-[1400px]";
   const topShellClass = documentMode
-    ? "py-[42px] px-0 pb-[64px] md:py-[42px] md:px-0 md:pb-[64px] max-[720px]:px-0 max-[720px]:pb-[4px] max-[720px]:pt-[20px]"
+    ? "py-[36px] px-0 pb-[52px] md:py-[40px] md:px-0 md:pb-[56px] max-[720px]:px-[12px] max-[720px]:pb-[4px] max-[720px]:pt-[20px]"
     : "py-[42px] px-[18px] pb-[64px] md:py-[42px] md:px-[18px] md:pb-[64px] max-[720px]:px-[12px] max-[720px]:pb-[10px] max-[720px]:pt-[20px]";
   const tabShellClass = documentMode
     ? "max-w-[1240px] mx-auto px-0 max-[720px]:mx-[-16px] max-[720px]:px-0"
     : "max-w-[1240px] mx-auto px-[18px] max-[720px]:mx-[-16px] max-[720px]:px-0";
   const contentShellClass = documentMode
-    ? "py-[42px] px-0 pb-[64px] max-[720px]:px-0 max-[720px]:pt-[4px] max-[720px]:pb-[50px]"
-    : "py-[42px] px-[18px] pb-[64px] max-[720px]:px-[12px] max-[720px]:pt-[10px] max-[720px]:pb-[50px]";
+    ? "py-[34px] px-0 pb-[54px] max-[720px]:px-[12px] max-[720px]:pt-[4px] max-[720px]:pb-[18px]"
+    : "py-[42px] px-[18px] pb-[64px] max-[720px]:px-[12px] max-[720px]:pt-[10px] max-[720px]:pb-[18px]";
   const ui = data.ui ?? {};
   const closingAction = data.closingAction ?? {};
 

@@ -89,7 +89,7 @@ function DesignerIcon({ src, alt = "" }: { src: string; alt?: string }) {
     <img
       src={src}
       alt={alt}
-      className="h-11 w-11 scale-[1.75] object-contain drop-shadow-[0_2px_8px_rgba(13,27,46,0.2)]"
+      className="h-8 w-8 scale-[1.12] object-contain drop-shadow-[0_2px_8px_rgba(13,27,46,0.2)] md:h-9 md:w-9 md:scale-[1.24] lg:h-[44px] lg:w-[44px] lg:scale-[1.36]"
       loading="lazy"
     />
   );
@@ -171,16 +171,16 @@ function FlipCard({
               featured ? "border-[#dbe5f4]" : "border-[#e5e7eb]"
             }`}
           >
-            <div className="flex flex-1 gap-3 px-4 py-[18px] lg:px-5 lg:py-5">
-              <div className="flex h-12 w-12 flex-none items-center justify-center rounded-full bg-[#e8f4fd] text-[#0d1b2e] lg:h-[54px] lg:w-[54px]">
+            <div className="flex flex-1 gap-3 px-4 py-[18px] lg:px-5 lg:py-[22px]">
+              <div className="flex h-10 w-10 flex-none items-center justify-center rounded-full bg-[#e8f4fd] text-[#0d1b2e] md:h-11 md:w-11 lg:h-[62px] lg:w-[62px]">
                 {icon}
               </div>
 
               <div className="flex flex-1 flex-col">
-                <h3 className="font-['Manrope'] text-[14px] font-extrabold leading-[1.3] text-[#0d1b2e] lg:text-[13px]">
+                <h3 className="font-['Manrope'] text-[14px] font-extrabold leading-[1.3] text-[#0d1b2e] lg:text-[16px]">
                   {type.title}
                 </h3>
-                <p className="mt-1 text-[11.5px] leading-[1.5] text-[#4b5563] lg:text-[12.5px] lg:leading-[1.55]">
+                <p className="mt-1 text-[11.5px] leading-[1.5] text-[#4b5563] lg:text-[13.5px] lg:leading-[1.65]">
                   {frontDescription}
                 </p>
               </div>
@@ -196,7 +196,7 @@ function FlipCard({
                   <div className="text-[10.5px] font-medium leading-[1.2] text-[#6b7280] lg:text-[11px]">
                     {priceDisplayLabel(priceLabel || price.label)}
                   </div>
-                  <div className="mt-1 whitespace-nowrap font-['Manrope'] text-[16px] font-extrabold leading-[1.1] text-[#0d1b2e] lg:text-[18px]">
+                  <div className="mt-1 whitespace-nowrap font-['Manrope'] text-[16px] font-extrabold leading-[1.1] text-[#0d1b2e] lg:text-[20px]">
                     {price.main}
                   </div>
                   {price.note ? (
@@ -247,12 +247,12 @@ function FlipCard({
                 </button>
               </div>
 
-              <p className="text-[12.5px] leading-[1.6] text-[#e2e8f0] lg:text-[13px]">
+              <p className="text-[12.5px] leading-[1.6] text-[#e2e8f0] lg:text-[13.5px]">
                 {backDescription}
               </p>
 
               {backBullets.length ? (
-                <ul className="mt-2 space-y-1.5 text-[11px] leading-[1.55] text-[#cbd5e1] lg:text-[11.5px]">
+                <ul className="mt-2 space-y-1.5 text-[11px] leading-[1.55] text-[#cbd5e1] lg:text-[12px]">
                   {backBullets.map((bullet) => (
                     <li key={bullet} className="flex gap-2">
                       <span className="mt-[4px] h-[5px] w-[5px] flex-none rounded-full bg-[#22c55e]" />
@@ -307,7 +307,6 @@ function MobileEngineTypeStack({
           const backDescription = fullText(type.backDescription || type.description);
           const backBullets = type.backBullets?.map((bullet) => fullText(bullet)).filter(Boolean) ?? [];
           const previousIsActive = stackIndex > 0 && orderedIndexes[stackIndex - 1] === activeIndex;
-          const lastInactive = stackIndex === orderedIndexes.length - 1 && !active;
           const offsetX = Math.min(stackIndex * 14, 52);
           const widthTrim = 42;
           const rotate = 0;
@@ -362,7 +361,7 @@ function MobileEngineTypeStack({
                       aria-expanded={!flipped}
                     >
                       <div className="flex items-start gap-3 px-3 py-3">
-                        <span className="flex h-11 w-11 flex-none items-center justify-center rounded-full bg-[#e8f4fd] text-[#0d1b2e]">
+                        <span className="flex h-10 w-10 flex-none items-center justify-center rounded-full bg-[#e8f4fd] text-[#0d1b2e]">
                           {icon}
                         </span>
                         <span className="min-w-0 flex-1">
@@ -505,12 +504,12 @@ function MobileEngineTypeStack({
                     }
                   }}
                   className={`w-full rounded-[8px] border bg-white text-left shadow-[0_10px_24px_rgba(13,27,46,0.08)] transition-all duration-300 ${
-                    `${lastInactive ? "min-h-0" : "min-h-[112px]"} border-[#d8e6f5] bg-[linear-gradient(180deg,#ffffff_0%,#edf7ff_100%)] opacity-[0.98] shadow-[0_8px_18px_rgba(13,27,46,0.07)] hover:border-[#93c5fd]`
+                    `min-h-[112px] border-[#d8e6f5] bg-[linear-gradient(180deg,#ffffff_0%,#edf7ff_100%)] opacity-[0.98] shadow-[0_8px_18px_rgba(13,27,46,0.07)] hover:border-[#93c5fd]`
                   }`}
                   aria-expanded={false}
                 >
                   <div className="flex items-start gap-3 px-3 py-3">
-                    <span className="flex h-11 w-11 flex-none items-center justify-center rounded-full bg-[#e8f4fd] text-[#0d1b2e]">
+                    <span className="flex h-10 w-10 flex-none items-center justify-center rounded-full bg-[#e8f4fd] text-[#0d1b2e]">
                       {icon}
                     </span>
                     <span className="min-w-0 flex-1">

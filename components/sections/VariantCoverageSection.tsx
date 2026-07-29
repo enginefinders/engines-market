@@ -33,11 +33,11 @@ function isRenderableVariantCard(card: VariantCard) {
 }
 
 function BookIcon() {
-  return <img src="/icons/engine-market/dark-green-variant-directory.png" alt="" aria-hidden="true" className="h-5 w-5 object-contain" loading="lazy" />;
+  return <img src="/icons/engine-market/dark-green-variant-directory.png" alt="" aria-hidden="true" className="h-6 w-6 object-contain" loading="lazy" />;
 }
 
 function NotSureIcon({ className = "h-5 w-5" }: { className?: string }) {
-  return <img src="/icons/engine-market/dark-blue-not-sure.png" alt="" aria-hidden="true" className={`${className} object-contain`} loading="lazy" />;
+  return <img src="/icons/engine-market/dark-green-not-sure.png" alt="" aria-hidden="true" className={`${className} object-contain`} loading="lazy" />;
 }
 
 function ChevronIcon({
@@ -420,9 +420,9 @@ export default function VariantCoverageSection({
                         type="button"
                         onClick={() => toggleCard(card.slug)}
                         aria-expanded={isOpen}
-                        className="flex h-[224px] w-full flex-col items-center px-3 pb-2 pt-2 text-center"
+                        className="flex h-[214px] w-full flex-col items-center px-3 pb-3 pt-2.5 text-center"
                       >
-                        <div className="flex min-h-[86px] w-full items-center justify-center py-[1px]">
+                        <div className="flex min-h-[82px] w-full items-center justify-center py-[1px]">
                           <div className="relative h-[84px] w-full max-w-[132px]">
                             <Image
                               src={vehicleImage}
@@ -434,19 +434,19 @@ export default function VariantCoverageSection({
                           </div>
                         </div>
 
-                        <div className="mt-3 flex w-full flex-1 flex-col">
+                        <div className="mt-2.5 flex w-full flex-1 flex-col">
                           <div className="min-h-[32px] font-['Manrope'] text-[13px] font-extrabold leading-[1.18] text-[#0d1b2e]">
                             {shortName}
                           </div>
-                          <p className="mt-2 min-h-[28px] text-[10px] font-semibold leading-[1.4] text-[#4b5563]">
+                          <p className="mt-1.5 min-h-[28px] text-[10px] font-semibold leading-[1.4] text-[#4b5563]">
                             {normalizeVariantSubtitle(card.subtitle)}
                           </p>
-                          <p className="mt-2 font-['Manrope'] text-[12.5px] font-semibold leading-tight text-[#374151]">
+                          <p className="mt-auto pt-2 font-['Manrope'] text-[12.5px] font-semibold leading-tight text-[#374151]">
                             Rebuilt: {card.priceRange}
                           </p>
                         </div>
 
-                        <span className="mt-auto inline-flex pt-3 text-[#15803d]">
+                        <span className="mt-1 inline-flex text-[#15803d]">
                           <ChevronIcon open={isOpen} animated={animateChevron} />
                         </span>
                       </button>
@@ -557,7 +557,7 @@ export default function VariantCoverageSection({
           </div>
 
           {/* --- ACCORDION SECTION --- */}
-          <div className="mt-8 rounded-[18px] border border-slate-200 bg-[#f8fafc] p-4 md:p-5">
+          <div className="mt-5 rounded-[18px] border border-slate-200 bg-[#f8fafc] p-4 md:mt-8 md:p-5">
             <button
               type="button"
               onClick={() => setIsDirectoryOpen((prev) => !prev)}
@@ -569,15 +569,15 @@ export default function VariantCoverageSection({
                   <span>{data.directory.label ?? "Variant Directory"}</span>
                 </div>
               </div>
-              <span className={`flex-shrink-0 mt-2 text-[#15803d] transition-transform duration-300 ${isDirectoryOpen ? 'rotate-180' : ''}`}>
+              <span className={`mt-1 flex-shrink-0 text-[#15803d] transition-transform duration-300 ${isDirectoryOpen ? 'rotate-180' : ''}`}>
                 <ChevronIcon open={isDirectoryOpen} animated={false} />
               </span>
             </button>
 
             {!isDirectoryOpen && data.closing ? (
-              <div className="mt-4 flex items-start gap-2">
-                <NotSureIcon className="mt-[2px] h-5 w-5 flex-shrink-0" />
-                <p className="text-[12.5px] leading-[1.65] text-slate-600">
+              <div className="mt-3 flex items-start gap-2.5">
+                <NotSureIcon className="mt-[2px] h-6 w-6 flex-shrink-0" />
+                <p className="text-[12.5px] leading-[1.6] text-slate-600">
                   {data.closing}
                 </p>
               </div>
@@ -639,9 +639,9 @@ export default function VariantCoverageSection({
                 </div>
 
                 {data.closing ? (
-                  <div className="mt-4 flex items-start gap-2">
-                    <NotSureIcon className="mt-[2px] h-5 w-5 flex-shrink-0" />
-                    <p className="text-[12.5px] leading-[1.65] text-slate-600">
+                  <div className="mt-4 flex items-start gap-2.5">
+                    <NotSureIcon className="mt-[2px] h-6 w-6 flex-shrink-0" />
+                    <p className="text-[12.5px] leading-[1.6] text-slate-600">
                       {data.closing}
                     </p>
                   </div>
