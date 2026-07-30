@@ -1,6 +1,7 @@
 import { readdir, readFile } from "node:fs/promises";
 import path from "node:path";
 import type { EnginePageData } from "@/types/engine-page";
+import { getEngineCodeLookupKeys, type EngineLinkMap } from "@/lib/engineLinks";
 
 const ENGINES_DIR = path.join(process.cwd(), "data", "engines");
 const UTF8_BOM = /^\uFEFF/;
@@ -112,4 +113,25 @@ export async function getEnginePageStaticParams() {
     brand: page.brand.slug,
     model: page.engine.slug,
   }));
+}
+
+export async function getEngineLinkMapForBrand(brand: string) {
+  const normalizedBrand = normalizeSlugPart(brand);
+  const pages = await getAllEnginePageData();
+  const engineLinks: EngineLinkMap = {};
+
+  for (const page of pages) {
+    if (normalizeSlugPart(page.brand.slug) !== normalizedBrand) {
+      continue;
+    }
+
+    const href = `/${page.brand.slug}/${page.engine.slug}`;
+    for (const key of getEngineCodeLookupKeys(page.engine.code)) {
+      if (!engineLinks[key]) {
+        engineLinks[key] = href;
+      }
+    }
+  }
+
+  return engineLinks;
 }

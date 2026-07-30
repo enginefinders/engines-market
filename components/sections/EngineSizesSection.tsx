@@ -1,6 +1,8 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
+import { getEngineLinkForCode, type EngineLinkMap } from "@/lib/engineLinks";
 import type { EngineSizesData } from "@/types/brand";
 import { AdviceCard } from "@/components/ui/CalloutCards";
 import Container from "@/components/ui/Container";
@@ -9,6 +11,7 @@ import Section from "@/components/ui/Section";
 type Props = {
   brandName: string;
   data: EngineSizesData;
+  engineLinks?: EngineLinkMap;
   bgImage?: string;
   dynamicBrandLabel?: boolean;
   displayMode?: "brand" | "document";
@@ -108,10 +111,30 @@ function commonFailureText(item: GroupItem) {
   return item.commonFailurePoints?.join(", ").replace(/\s*,\s*/g, ", ").trim() ?? "";
 }
 
+function renderEngineCodeList(engineCodes: string[], engineLinks?: EngineLinkMap) {
+  return engineCodes.map((code, index) => {
+    const href = getEngineLinkForCode(code, engineLinks);
+
+    return (
+      <span key={`${code}-${index}`}>
+        {index > 0 ? ", " : ""}
+        {href ? (
+          <Link href={href} className="font-semibold text-[#0d1b2e] underline-offset-2 hover:text-[#15803d] hover:underline">
+            {code}
+          </Link>
+        ) : (
+          code
+        )}
+      </span>
+    );
+  });
+}
+
 function SizeAccordionCard({
   brandName,
   dynamicBrandLabel,
   displayMode,
+  engineLinks,
   item,
   kind,
   open,
@@ -121,6 +144,7 @@ function SizeAccordionCard({
   brandName: string;
   dynamicBrandLabel: boolean;
   displayMode: "brand" | "document";
+  engineLinks?: EngineLinkMap;
   item: GroupItem;
   kind: FuelKind;
   open: boolean;
@@ -172,7 +196,7 @@ function SizeAccordionCard({
                 {item.engineCodes?.length ? (
                   <tr className="border-b border-[#e5f2e8]">
                     <td className="w-[42%] px-3 py-[10px] text-[9px] font-bold uppercase tracking-[0.5px] text-[#64748b]">{displayMode === "document" ? (ui.engineCodesLabel || "") : (ui.engineCodesLabel ?? "Engine Code(s)")}</td>
-                    <td className="px-3 py-[10px] text-[11px] leading-[1.5] text-[#334155]">{item.engineCodes.join(", ")}</td>
+                    <td className="px-3 py-[10px] text-[11px] leading-[1.5] text-[#334155]">{renderEngineCodeList(item.engineCodes, engineLinks)}</td>
                   </tr>
                 ) : null}
                 {item.compatibleModels?.length ? (
@@ -250,6 +274,7 @@ function HelperNote({
 export default function EngineSizesSection({
   brandName,
   data,
+  engineLinks,
   bgImage,
   dynamicBrandLabel = false,
   displayMode = "brand",
@@ -347,6 +372,7 @@ export default function EngineSizesSection({
               brandName={brandName}
               dynamicBrandLabel={dynamicBrandLabel}
               displayMode={displayMode}
+              engineLinks={engineLinks}
               item={item}
               kind={activeKind}
               open={openItemIndex === index}

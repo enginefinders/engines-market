@@ -1,6 +1,8 @@
 "use client";
 
+import Link from "next/link";
 import { useMemo, useState } from "react";
+import { getEngineLinkForCode, splitLeadingEngineCode, type EngineLinkMap } from "@/lib/engineLinks";
 import type { EngineYearsData } from "@/types/brand";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
@@ -8,6 +10,7 @@ import Section from "@/components/ui/Section";
 type Props = {
   brandName: string;
   data: EngineYearsData;
+  engineLinks?: EngineLinkMap;
   strictData?: boolean;
 };
 
@@ -187,19 +190,69 @@ function SectionLabel({
 function BulletList({
   items,
   useCheck = false,
+  engineLinks,
+  linkLeadingCode = false,
 }: {
   items: string[];
   useCheck?: boolean;
+  engineLinks?: EngineLinkMap;
+  linkLeadingCode?: boolean;
 }) {
   return (
     <div className="flex flex-col gap-[7px]">
       {items.map((item, index) => (
         <div key={`${item}-${index}`} className="flex items-start gap-2 text-[12.2px] leading-[1.6] text-[#374151]">
           {useCheck ? <span className="mt-[1px] text-[#15803d]"><CheckIcon /></span> : <span className="mt-[5px] h-[7px] w-[7px] flex-none rounded-full bg-[#15803d]" />}
-          <span>{item}</span>
+          <span>
+            {(() => {
+              if (!linkLeadingCode) {
+                return item;
+              }
+
+              const parsed = splitLeadingEngineCode(item);
+              if (!parsed) {
+                return item;
+              }
+
+              const href = getEngineLinkForCode(parsed.code, engineLinks);
+              if (!href) {
+                return item;
+              }
+
+              return (
+                <>
+                  <Link href={href} className="font-extrabold text-[#0d1b2e] underline-offset-2 hover:text-[#15803d] hover:underline">
+                    {parsed.code}
+                  </Link>
+                  {parsed.remainder ? ` - ${parsed.remainder}` : ""}
+                </>
+              );
+            })()}
+          </span>
         </div>
       ))}
     </div>
+  );
+}
+
+function EngineCodeBadge({
+  code,
+  engineLinks,
+}: {
+  code: string;
+  engineLinks?: EngineLinkMap;
+}) {
+  const href = getEngineLinkForCode(code, engineLinks);
+  const className = "rounded-[7px] border-[0.5px] border-[#2a6dd6] bg-[#f8fbff] px-[10px] py-[5px] text-[11.5px] font-bold text-[#0d1b2e] shadow-[0_0_3px_rgba(42,109,214,0.4),0_0_6px_rgba(42,109,214,0.2),0_2px_4px_rgba(42,109,214,0.15)]";
+
+  if (!href) {
+    return <span className={className}>{code}</span>;
+  }
+
+  return (
+    <Link href={href} className={`${className} inline-flex underline-offset-2 hover:text-[#15803d] hover:underline`}>
+      {code}
+    </Link>
   );
 }
 
@@ -207,12 +260,14 @@ function YearPanel({
   item,
   brandName,
   mobile = false,
+  engineLinks,
   ui,
   strictData = false,
 }: {
   item: EngineYearsData["years"][number];
   brandName: string;
   mobile?: boolean;
+  engineLinks?: EngineLinkMap;
   ui: NonNullable<EngineYearsData["ui"]>;
   strictData?: boolean;
 }) {
@@ -280,15 +335,13 @@ function YearPanel({
               <div className="grid grid-cols-2 border-b border-[#f1f5f9]">
                 <div className="border-r border-[#f1f5f9] px-[14px] py-3">
                   <SectionLabel icon={<EngineIcon />} label={mainEnginesLabel} />
-                  <BulletList items={item.mainEngines ?? []} />
+                  <BulletList items={item.mainEngines ?? []} engineLinks={engineLinks} linkLeadingCode />
                 </div>
                 <div className="px-[14px] py-3">
                   <SectionLabel icon={<TagIcon />} label={engineCodesLabel} />
                   <div className="mt-1 flex flex-wrap gap-[6px]">
                     {(item.engineCodesCovered ?? []).map((code, index) => (
-                      <span key={`${code}-${index}`} className="rounded-[7px] border-[0.5px] border-[#2a6dd6] shadow-[0_0_3px_rgba(42,109,214,0.4),0_0_6px_rgba(42,109,214,0.2),0_2px_4px_rgba(42,109,214,0.15)] border-[#0d1b2e] bg-[#f8fbff] px-[10px] py-[5px] text-[11.5px] font-bold text-[#0d1b2e]">
-                        {code}
-                      </span>
+                      <EngineCodeBadge key={`${code}-${index}`} code={code} engineLinks={engineLinks} />
                     ))}
                   </div>
                 </div>
@@ -337,7 +390,7 @@ function YearPanel({
               {item.mainEngines?.length ? (
                 <div className="border-r border-[#f1f5f9] px-5 py-[18px] last:border-r-0">
                   <SectionLabel icon={<EngineIcon />} label={mainEnginesLabel} />
-                  <BulletList items={item.mainEngines} />
+                  <BulletList items={item.mainEngines} engineLinks={engineLinks} linkLeadingCode />
                 </div>
               ) : <div className="border-r border-[#f1f5f9] px-5 py-[18px]" />}
 
@@ -364,9 +417,7 @@ function YearPanel({
                   <SectionLabel icon={<TagIcon />} label={engineCodesLabel} />
                   <div className="mt-1 flex flex-wrap gap-[7px]">
                     {(item.engineCodesCovered ?? []).map((code, index) => (
-                      <span key={`${code}-${index}`} className="rounded-[7px] border-[0.5px] border-[#2a6dd6] shadow-[0_0_3px_rgba(42,109,214,0.4),0_0_6px_rgba(42,109,214,0.2),0_2px_4px_rgba(42,109,214,0.15)] bg-[#f8fbff] px-[11px] py-[5px] text-[12px] font-bold text-[#0d1b2e]">
-                        {code}
-                      </span>
+                      <EngineCodeBadge key={`${code}-${index}`} code={code} engineLinks={engineLinks} />
                     ))}
                   </div>
                 </div>
@@ -412,7 +463,7 @@ function YearPanel({
   );
 }
 
-export default function EngineYearsSection({ brandName, data, strictData = false }: Props) {
+export default function EngineYearsSection({ brandName, data, engineLinks, strictData = false }: Props) {
   const [activeIndex, setActiveIndex] = useState(0);
   const activeYear = useMemo(() => data.years[activeIndex] ?? data.years[0], [activeIndex, data.years]);
   const headingLines = data.headingLines?.length ? data.headingLines : [splitHeading(data.h2).primary, splitHeading(data.h2).accent].filter(Boolean);
@@ -464,11 +515,11 @@ export default function EngineYearsSection({ brandName, data, strictData = false
         {activeYear ? (
           <>
             <div className="hidden md:block">
-              <YearPanel item={activeYear} brandName={brandName} ui={ui} strictData={strictData} />
+              <YearPanel item={activeYear} brandName={brandName} engineLinks={engineLinks} ui={ui} strictData={strictData} />
             </div>
 
             <div className="md:hidden">
-              <YearPanel item={activeYear} brandName={brandName} mobile ui={ui} strictData={strictData} />
+              <YearPanel item={activeYear} brandName={brandName} engineLinks={engineLinks} mobile ui={ui} strictData={strictData} />
             </div>
           </>
         ) : null}

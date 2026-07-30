@@ -19,6 +19,7 @@ import { applyModelPageVisualPlaceholders } from "@/lib/modelVisualSelection";
 import { getVariantRouteMapForModel } from "@/lib/variantPageData";
 import { buildStaticReviewsSection } from "@/lib/staticReviews";
 import type { ModelPageData } from "@/types/model";
+import { getEngineLinkMapForBrand } from "@/lib/enginePageData";
 
 function toHeroCards(data: ModelPageData) {
   return data.sections.variantCoverage.cards.map((card) => ({
@@ -72,6 +73,7 @@ export default async function DocumentModelPage({
     visualData.model.slug,
     visualData.sections.variantCoverage.cards,
   );
+  const engineLinks = await getEngineLinkMapForBrand(visualData.brand.slug);
 
   return (
     <>
@@ -129,6 +131,7 @@ export default async function DocumentModelPage({
         data={visualData.sections.engineCodes}
         guide={visualData.sections.variantCoverage.engineGuide}
         modelName={visualData.model.name}
+        engineLinks={engineLinks}
         strictData
         documentMode
       />
@@ -155,16 +158,18 @@ export default async function DocumentModelPage({
         bgImage={visualData.assets.engineSizesBg}
         dynamicBrandLabel
         displayMode="document"
+        engineLinks={engineLinks}
       />
 
       <FuelTypesSection
         data={visualData.sections.fuelTypes}
         bgImage={visualData.assets.fuelTypesBg}
+        engineLinks={engineLinks}
         strictData
         documentMode
       />
 
-      <EngineYearsSection brandName={visualData.model.name} data={visualData.sections.engineYears} strictData />
+      <EngineYearsSection brandName={visualData.model.name} data={visualData.sections.engineYears} engineLinks={engineLinks} strictData />
 
       <FaqSection data={visualData.sections.faq} strictData documentMode />
 

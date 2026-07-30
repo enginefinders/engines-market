@@ -1,12 +1,15 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
+import { getEngineLinkForCode, type EngineLinkMap } from "@/lib/engineLinks";
 import type { FuelTypesData } from "@/types/brand";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
 
 type Props = {
   data: FuelTypesData;
+  engineLinks?: EngineLinkMap;
   bgImage?: string;
   strictData?: boolean;
   documentMode?: boolean;
@@ -153,10 +156,12 @@ function resolveSectionLabel({
 
 function FuelPanel({
   item,
+  engineLinks,
   ui,
   strictData = false,
 }: {
   item: FuelItem;
+  engineLinks?: EngineLinkMap;
   ui: NonNullable<FuelTypesData["ui"]>;
   strictData?: boolean;
 }) {
@@ -215,9 +220,18 @@ function FuelPanel({
                 <div className="divide-y divide-[#e9eef5]">
                   {families.map((entry) => {
                     const parsed = splitFamilyEntry(entry);
+                    const href = getEngineLinkForCode(parsed.code, engineLinks);
                     return (
                       <div key={entry} className="grid grid-cols-[92px_minmax(0,1fr)] gap-3 px-1 py-3 text-[11.5px] leading-[1.55]">
-                        <div className="font-extrabold text-[#0d1b2e]">{parsed.code}</div>
+                        <div className="font-extrabold text-[#0d1b2e]">
+                          {href ? (
+                            <Link href={href} className="underline-offset-2 hover:text-[#15803d] hover:underline">
+                              {parsed.code}
+                            </Link>
+                          ) : (
+                            parsed.code
+                          )}
+                        </div>
                         <div className="text-[#64748b]">{parsed.detail || parsed.code}</div>
                       </div>
                     );
@@ -331,7 +345,7 @@ function FuelPanel({
   );
 }
 
-export default function FuelTypesSection({ data, bgImage, strictData = false, documentMode = false }: Props) {
+export default function FuelTypesSection({ data, engineLinks, bgImage, strictData = false, documentMode = false }: Props) {
   const items = data.items ?? [];
   const [activeItemIndex, setActiveItemIndex] = useState(0);
   const mobileTabRailClass = "mt-6 max-[720px]:mx-[-16px]";
@@ -410,7 +424,7 @@ export default function FuelTypesSection({ data, bgImage, strictData = false, do
 
         {activeItem && items.length ? (
           <div className="mt-6">
-            <FuelPanel item={activeItem} ui={ui} strictData={strictData} />
+                <FuelPanel item={activeItem} engineLinks={engineLinks} ui={ui} strictData={strictData} />
           </div>
         ) : (
           <div className="mt-6 rounded-[14px] border border-slate-200 bg-white px-5 py-5 shadow-[0_2px_10px_rgba(13,27,46,0.04)]">

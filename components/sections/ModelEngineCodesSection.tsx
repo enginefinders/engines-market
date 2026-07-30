@@ -1,7 +1,9 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useMemo, useState } from "react";
+import { getEngineLinkForCode, splitLeadingEngineCode, type EngineLinkMap } from "@/lib/engineLinks";
 import type { EngineCodesData } from "@/types/brand";
 import type { ModelPageData } from "@/types/model";
 import Container from "@/components/ui/Container";
@@ -12,6 +14,7 @@ type Props = {
   data: EngineCodesData;
   guide: ModelPageData["sections"]["variantCoverage"]["engineGuide"];
   modelName: string;
+  engineLinks?: EngineLinkMap;
   strictData?: boolean;
   documentMode?: boolean;
 };
@@ -308,7 +311,7 @@ type Selection = {
   engineIndex: number;
 } | null;
 
-export default function ModelEngineCodesSection({ data, guide, modelName, strictData = false, documentMode = false }: Props) {
+export default function ModelEngineCodesSection({ data, guide, modelName, engineLinks, strictData = false, documentMode = false }: Props) {
   const [selection, setSelection] = useState<Selection>(null);
   const [activeTabIndex, setActiveTabIndex] = useState(0);
   const guideLookup = useMemo(() => buildGuideLookup(guide), [guide]);
@@ -533,6 +536,8 @@ export default function ModelEngineCodesSection({ data, guide, modelName, strict
                               const detailImage = detail?.image || activeEngine.image;
                               const quoteText = detail?.cta || activeEngine.cta || "";
                               const engineHeading = buildEngineHeading(activeEngine, detail);
+                              const linkedHeading = splitLeadingEngineCode(engineHeading);
+                              const engineHeadingHref = linkedHeading ? getEngineLinkForCode(linkedHeading.code, engineLinks) : null;
                               const historyText = buildHistory(
                                 activeEngine,
                                 detail,
@@ -567,7 +572,18 @@ export default function ModelEngineCodesSection({ data, guide, modelName, strict
                                         <div className="grid grid-cols-[minmax(0,1fr)_180px] gap-[8px] items-start max-[920px]:grid-cols-[minmax(0,1fr)_188px] max-[720px]:grid-cols-1">
                                           <div>
                                             {/* Reduced margins */}
-                                            <div className="mb-[2px] text-white text-[15px] font-extrabold leading-[1.25] tracking-[-0.02em] max-[720px]:text-[14px]">{engineHeading}</div>
+                                            <div className="mb-[2px] text-white text-[15px] font-extrabold leading-[1.25] tracking-[-0.02em] max-[720px]:text-[14px]">
+                                              {linkedHeading && engineHeadingHref ? (
+                                                <>
+                                                  <Link href={engineHeadingHref} className="underline-offset-2 hover:text-[#78c7ff] hover:underline">
+                                                    {linkedHeading.code}
+                                                  </Link>
+                                                  {linkedHeading.remainder ? ` - ${linkedHeading.remainder}` : ""}
+                                                </>
+                                              ) : (
+                                                engineHeading
+                                              )}
+                                            </div>
                                             {ui.historyLabel && <span className="block mb-[1px] text-white text-[13px] font-extrabold leading-[1.2] max-[720px]:mb-[4px] max-[720px]:pt-[2px] max-[720px]:text-[12px]">{ui.historyLabel}</span>}
                                             {historyText && <p className="text-[#e1ebf5] text-[11px] leading-[1.4] max-[720px]:text-[10.5px] max-[720px]:leading-[1.55]">{historyText}</p>}
                                           </div>
