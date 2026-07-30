@@ -91,13 +91,13 @@ function trustIconForLabel(label: string): TrustIconConfig {
 }
 
 function stepIconSrc(card: HowItWorksData["cards"][number]) {
-  if (card.number === 1) return "/icons/engine-market/how-reg.png";
+  if (card.number === 1) return "/Home/reg-here.webp";
   if (card.number === 2) return "/icons/engine-market/how-compare-prices-3d.png";
   if (card.number === 3) return "/icons/engine-market/how-choose-deal.png";
 
   const combined = `${card.front.h3} ${card.front.text} ${card.back.heading}`.toLowerCase();
 
-  if (combined.includes("registration") || combined.includes("reg")) return "/icons/engine-market/how-reg.png";
+  if (combined.includes("registration") || combined.includes("reg")) return "/Home/reg-here.webp";
   if (combined.includes("choose") || combined.includes("best deal") || combined.includes("save")) {
     return "/icons/engine-market/how-choose-deal.png";
   }
@@ -168,7 +168,7 @@ export default function HowItWorksSection({ data, bgImage, sectionId, flush = fa
             const isComparisonCard = card.number === 2;
 
             return (
-              <div key={card.number} className="perspective-1000 min-h-[306px] sm:min-h-[320px] lg:min-h-[276px] xl:min-h-[296px]">
+              <div key={card.number} className="perspective-1000 min-h-[228px] sm:min-h-[240px] lg:min-h-[236px] xl:min-h-[244px]">
                 <button
                   type="button"
                   onClick={() => setActiveStep(flipped ? null : card.number)}
@@ -177,21 +177,21 @@ export default function HowItWorksSection({ data, bgImage, sectionId, flush = fa
                   aria-label={`${flipped ? "Hide details for" : "Show details for"} step ${card.number}`}
                 >
                   <div
-                    className={`relative h-full min-h-[306px] rounded-[18px] transition duration-500 [transform-style:preserve-3d] sm:min-h-[320px] lg:min-h-[276px] xl:min-h-[296px] ${flipped ? "[transform:rotateY(180deg)]" : ""
+                    className={`relative h-full min-h-[228px] rounded-[18px] transition duration-500 [transform-style:preserve-3d] sm:min-h-[240px] lg:min-h-[236px] xl:min-h-[244px] ${flipped ? "[transform:rotateY(180deg)]" : ""
                       }`}
                   >
-                    <div className="absolute inset-0 flex h-full flex-col overflow-hidden rounded-[18px] border border-[#dbe4ef] bg-white px-3 pb-5 pt-4 shadow-[0_18px_40px_rgba(13,27,46,0.08)] [backface-visibility:hidden] text-center sm:px-4 sm:pb-5 sm:pt-5">
-                      <span className="mt-0 hidden font-['Manrope'] text-left text-2xl font-extrabold uppercase tracking-[0.18em] text-gray-400 md:block">
+                    <div className="absolute inset-0 flex h-full flex-col overflow-hidden rounded-[18px] border border-[#dbe4ef] bg-white px-3 pb-2.5 pt-2.5 shadow-[0_18px_40px_rgba(13,27,46,0.08)] [backface-visibility:hidden] text-center sm:px-4 sm:pb-3 sm:pt-3 lg:px-5 lg:pb-4 lg:pt-4">
+                      <span className="ml-auto hidden font-['Manrope'] text-[18px] font-extrabold uppercase leading-none tracking-[0.14em] text-gray-400 sm:text-[22px]">
                         0{card.number}
                       </span>
 
                       <div
-                        className={`mx-auto mt-0 flex items-center justify-center rounded-[14px] p-1 ${
+                        className={`mx-auto flex items-center justify-center rounded-[14px] lg:min-h-[84px] ${
                           isRegistrationCard
-                            ? "h-[154px] w-[300px] md:h-[146px] md:w-[286px]"
+                            ? "h-[82px] w-[232px] sm:h-[86px] sm:w-[242px] md:h-[88px] md:w-[246px]"
                             : isComparisonCard
-                              ? "h-[122px] w-[122px] md:h-[130px] md:w-[130px]"
-                              : "h-[116px] w-[116px] md:h-[124px] md:w-[124px]"
+                              ? "h-[92px] w-[92px] sm:h-[96px] sm:w-[96px] md:h-[98px] md:w-[98px]"
+                              : "h-[86px] w-[86px] sm:h-[90px] sm:w-[90px] md:h-[92px] md:w-[92px]"
                         }`}
                       >
                         <img
@@ -199,23 +199,27 @@ export default function HowItWorksSection({ data, bgImage, sectionId, flush = fa
                           alt={`Step ${card.number} icon`}
                           className={
                             isRegistrationCard
-                              ? "h-[142px] w-[286px] object-contain scale-[1.16] md:h-[132px] md:w-[268px]"
+                              ? "h-[62px] w-[206px] object-contain sm:h-[66px] sm:w-[220px] md:h-[68px] md:w-[224px]"
                               : isComparisonCard
-                                ? "h-[108px] w-[108px] object-contain md:h-[114px] md:w-[114px]"
-                                : "h-[102px] w-[102px] object-contain md:h-[108px] md:w-[108px]"
+                                ? "h-[84px] w-[84px] object-contain sm:h-[88px] sm:w-[88px] md:h-[90px] md:w-[90px]"
+                                : "h-[78px] w-[78px] object-contain sm:h-[82px] sm:w-[82px] md:h-[84px] md:w-[84px]"
                           }
                         />
                       </div>
 
-                      <h3 className="mt-3 font-['Manrope'] text-[17px] font-bold leading-[1.18] text-[#0d1b2e] md:text-[18px] xl:text-[20px]">
-                        {card.front.h3}
-                      </h3>
+                      <div className="mt-1 flex min-h-[38px] items-start justify-center lg:min-h-[58px] xl:min-h-[58px]">
+                        <h3 className="font-['Manrope'] text-[16px] font-bold leading-[1.14] text-[#0d1b2e] md:text-[18px] xl:text-[20px]">
+                          {card.front.h3}
+                        </h3>
+                      </div>
 
-                      <p className="mx-auto mt-3 w-full max-w-[340px] text-[14px] leading-[1.62] text-[#5a6478] md:text-[14px] md:leading-[1.65]">
-                        {card.front.text}
-                      </p>
+                      <div className="-mt-2 flex min-h-[40px] items-start justify-center lg:min-h-[54px] xl:min-h-[58px]">
+                        <p className="mx-auto w-full max-w-[340px] text-[12px] leading-[1.42] text-[#5a6478] md:text-[14px] md:leading-[1.55]">
+                          {card.front.text}
+                        </p>
+                      </div>
 
-                      <span className="ml-auto mt-auto inline-flex items-center gap-2 px-1 pt-4 text-[13px] font-bold text-[#15803d]">
+                      <span className="ml-auto mt-auto inline-flex min-h-[28px] items-center gap-2 px-1 pb-1 pt-0 text-[12.5px] font-bold text-[#15803d] sm:text-[13px] lg:pb-1.5">
                         <span>See how it works</span>
                         <ArrowIcon />
                       </span>

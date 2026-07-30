@@ -618,7 +618,10 @@ export default function EngineTypesSection({
   };
 
   return (
-    <Section id={sectionId} className="relative overflow-hidden bg-[#f8fafc] max-[720px]:pb-3">
+    <Section
+      id={sectionId}
+      className={documentMode ? "relative overflow-hidden bg-white !py-[20px] md:!py-[24px] lg:!py-[28px] max-[720px]:pb-3" : "relative overflow-hidden bg-[#f8fafc] max-[720px]:pb-3"}
+    >
       <style jsx>{`
         .scrollbar-dark::-webkit-scrollbar {
           width: 6px;

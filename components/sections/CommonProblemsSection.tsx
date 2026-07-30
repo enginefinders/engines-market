@@ -549,7 +549,7 @@ export default function CommonProblemsSection({ data, bgImage, documentMode = fa
   ];
 
   return (
-    <Section className="relative overflow-hidden bg-[#f7f8fb]">
+    <Section className={documentMode ? "relative overflow-hidden bg-[#f7f8fb] !py-[20px] md:!py-[24px] lg:!py-[28px]" : "relative overflow-hidden bg-[#f7f8fb]"}>
       {bgImage ? (
         <div className="pointer-events-none absolute inset-x-0 top-0 hidden h-[200px] lg:block">
           <div

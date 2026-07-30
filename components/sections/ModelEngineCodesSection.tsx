@@ -321,15 +321,15 @@ export default function ModelEngineCodesSection({ data, guide, modelName, strict
   const mobileHeadingParts = splitLastHeadingToken(mobileHeadingLine);
   const intro = strictData ? data.h3 : (guide.h3 || data.h3);
   const closingLine = strictData ? (data.closingLine || "") : (guide.closing || data.closingLine || "");
-  const sectionContainerClass = "max-w-[1400px]";
+  const sectionContainerClass = documentMode ? "max-w-[1400px] px-0 sm:px-0 lg:px-0" : "max-w-[1400px]";
   const topShellClass = documentMode
-    ? "py-[36px] px-0 pb-[52px] md:py-[40px] md:px-0 md:pb-[56px] max-[720px]:px-[12px] max-[720px]:pb-[4px] max-[720px]:pt-[20px]"
+    ? "pt-[18px] px-0 pb-[16px] md:pt-[20px] md:px-0 md:pb-[18px] max-[720px]:px-[8px] max-[720px]:pb-[2px] max-[720px]:pt-[10px]"
     : "py-[42px] px-[18px] pb-[64px] md:py-[42px] md:px-[18px] md:pb-[64px] max-[720px]:px-[12px] max-[720px]:pb-[10px] max-[720px]:pt-[20px]";
   const tabShellClass = documentMode
-    ? "max-w-[1240px] mx-auto px-0 max-[720px]:mx-[-12px] max-[720px]:px-0"
+    ? "mx-auto px-0 max-[720px]:mx-[-8px] max-[720px]:px-0"
     : "max-w-[1240px] mx-auto px-[18px] max-[720px]:mx-[-12px] max-[720px]:px-0";
   const contentShellClass = documentMode
-    ? "py-[34px] px-0 pb-[54px] max-[720px]:px-[12px] max-[720px]:pt-[4px] max-[720px]:pb-[18px]"
+    ? "pt-[10px] px-0 pb-[14px] max-[720px]:px-[8px] max-[720px]:pt-[0px] max-[720px]:pb-[6px]"
     : "py-[42px] px-[18px] pb-[64px] max-[720px]:px-[12px] max-[720px]:pt-[10px] max-[720px]:pb-[18px]";
   const ui = data.ui ?? {};
   const closingAction = data.closingAction ?? {};
@@ -359,10 +359,10 @@ export default function ModelEngineCodesSection({ data, guide, modelName, strict
   }
 
     return (
-      <Section id="model-engine-codes" className="bg-[linear-gradient(180deg,#ffffff_0%,#f6f8fb_100%)]">
+      <Section id="model-engine-codes" className="bg-white !py-[8px] md:!py-[10px] lg:!py-[12px]">
       <Container className={sectionContainerClass}>
         <div className={topShellClass}>
-          <div className="max-w-[1240px] mx-auto">
+          <div className="mx-auto">
             <header className="max-w-[1000px]">
               {strictData ? (data.tag ? <div className="inline-flex items-center justify-center min-h-[34px] px-[16px] rounded-full bg-[linear-gradient(180deg,#16355d_0%,#081a34_100%)] text-white text-[12px] font-extrabold tracking-[0.12em] uppercase shadow-[0_8px_20px_rgba(8,26,52,0.14)] mb-[14px]">{data.tag}</div> : null) : <div className="inline-flex items-center justify-center min-h-[34px] px-[16px] rounded-full bg-[linear-gradient(180deg,#16355d_0%,#081a34_100%)] text-white text-[12px] font-extrabold tracking-[0.12em] uppercase shadow-[0_8px_20px_rgba(8,26,52,0.14)] mb-[14px]">{data.tag || guide.tag}</div>}
               <h2 className="mb-[10px] text-[clamp(31px,4vw,52px)] leading-[1.03] tracking-[-0.04em] text-[#10203a] max-[720px]:mb-[6px] max-[720px]:text-[32px]">
@@ -420,9 +420,9 @@ export default function ModelEngineCodesSection({ data, guide, modelName, strict
 
       <Container className={sectionContainerClass}>
         <div className={contentShellClass}>
-          <div className="max-w-[1240px] mx-auto">
+          <div className="mx-auto">
             {activeGroupEntry ? (
-              <section className="mt-[24px]">
+              <section className="mt-[12px]">
                 <div className="flex items-center gap-[12px] mb-[12px] max-[720px]:hidden">
                   <span className="w-[44px] h-[44px] rounded-[12px] bg-[#f5f8fc] text-[#0d1b2e] grid place-items-center flex-shrink-0">
                     {getFuelSectionIcon(activeGroupEntry.group.name, "w-[32px] h-[32px]")}

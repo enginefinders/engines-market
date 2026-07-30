@@ -30,12 +30,12 @@ export default function FaqSection({ data, strictData = false, documentMode = fa
   const ui = data.ui ?? {};
   const defaultOpenIndex = data.defaultOpenIndex ?? 0;
   const mobileHeading = "Frequently Asked Question";
-  const shellClass = documentMode ? "mx-auto max-w-[1080px]" : "max-w-[860px]";
-  const faqPanelClass = documentMode ? "mx-auto mt-6 max-w-[1080px]" : "faq-scroll-panel mx-auto mt-6 max-w-[1400px]";
+  const shellClass = documentMode ? "w-full" : "max-w-[860px]";
+  const faqPanelClass = documentMode ? "mt-3 w-full" : "faq-scroll-panel mx-auto mt-6 max-w-[1400px]";
 
   return (
-    <Section className={documentMode ? "bg-white !py-[8px] lg:!py-[14px]" : "bg-white"}>
-      <Container>
+    <Section className={documentMode ? "bg-white !py-[8px] md:!py-[10px] lg:!py-[12px]" : "bg-white"}>
+      <Container className={documentMode ? "max-w-[1400px] px-0 sm:px-0 lg:px-0" : ""}>
         <div className={shellClass}>
           <p className="section-pill mb-1.5">{data.tag}</p>
           <h2 className="font-['Manrope'] text-[28px] font-extrabold leading-[1.12] tracking-[-0.03em] text-[#0d1b2e] lg:text-[42px]">
@@ -48,13 +48,13 @@ export default function FaqSection({ data, strictData = false, documentMode = fa
               ))}
             </span>
           </h2>
-          <p className="text-body mt-2.5 text-slate-700">{data.intro}</p>
+          <p className="text-body mt-2 text-slate-700">{data.intro}</p>
         </div>
 
         <div className={`${faqPanelClass} ${documentMode ? "pr-0" : ""}`}>
           {data.items.map((item, index) => (
             <details key={item.question} className="group block surface-card-soft overflow-hidden" open={index === defaultOpenIndex}>
-              <summary className="flex min-h-[56px] w-full cursor-pointer list-none items-center justify-between gap-4 border-b border-slate-100 px-5 py-5 text-left transition hover:bg-slate-50 sm:px-6 group-open:border-b-2 group-open:border-green-700 group-open:text-green-700 [&::-webkit-details-marker]:hidden">
+              <summary className="flex min-h-[52px] w-full cursor-pointer list-none items-center justify-between gap-4 border-b border-slate-100 px-5 py-4 text-left transition hover:bg-slate-50 sm:px-6 group-open:border-b-2 group-open:border-green-700 group-open:text-green-700 [&::-webkit-details-marker]:hidden">
                 <div className="flex flex-col gap-1">
                   {strictData ? (
                     ui.questionLabelPrefix ? <p className="text-label text-green-700">{ui.questionLabelPrefix} {index + 1}</p> : null
@@ -78,7 +78,7 @@ export default function FaqSection({ data, strictData = false, documentMode = fa
                 </svg>
               </summary>
 
-              <div className="border-b border-slate-200 bg-slate-50 px-5 py-5 sm:px-6 sm:py-6">
+              <div className="border-b border-slate-200 bg-slate-50 px-5 py-4 sm:px-6 sm:py-5">
                 <p className="text-[15px] leading-[1.75] text-slate-700">{item.answer}</p>
 
                 {item.keyPoints?.length ? (
@@ -88,7 +88,7 @@ export default function FaqSection({ data, strictData = false, documentMode = fa
                     ) : (
                       <p className="text-[15px] font-semibold text-slate-900 mb-2">{ui.keyPointsLabel ?? "Key points"}</p>
                     )}
-                    <ul className="space-y-2 rounded-[14px] border border-slate-200 bg-white px-4 py-4 text-[15px] leading-[1.7] text-slate-700">
+                    <ul className="space-y-2 rounded-[14px] border border-slate-200 bg-white px-4 py-3.5 text-[15px] leading-[1.7] text-slate-700">
                       {item.keyPoints.map((point) => (
                         <li key={point} className="flex gap-3">
                           <span className="mt-[0.55rem] h-2 w-2 flex-none rounded-full bg-[#0d1b2e]" />
@@ -181,7 +181,7 @@ export default function FaqSection({ data, strictData = false, documentMode = fa
         </div>
 
         {data.disclaimer ? (
-          <div className={`mx-auto mt-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 ${documentMode ? "max-w-[1080px]" : "max-w-[1400px]"}`}>
+          <div className={`mt-2 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 ${documentMode ? "w-full" : "mx-auto max-w-[1400px]"}`}>
             {strictData ? (
               ui.disclaimerLabel ? <p className="text-label text-slate-500">{ui.disclaimerLabel}</p> : null
             ) : (

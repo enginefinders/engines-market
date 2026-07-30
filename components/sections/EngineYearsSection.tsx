@@ -419,7 +419,7 @@ export default function EngineYearsSection({ brandName, data, strictData = false
   const ui = data.ui ?? {};
 
   return (
-    <Section className="bg-[#f8f9fa]">
+    <Section className="bg-[#f8f9fa] !py-[20px] md:!py-[24px] lg:!py-[28px]">
       <Container className="max-w-[1400px]">
         <div className="section-pill mb-[14px]">
           {/* <CalendarIcon className="h-[13px] w-[13px]" /> */}

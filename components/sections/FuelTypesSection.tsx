@@ -341,7 +341,7 @@ export default function FuelTypesSection({ data, bgImage, strictData = false, do
   const ui = data.ui ?? {};
 
   return (
-    <Section className="relative overflow-hidden bg-white">
+    <Section className={documentMode ? "relative overflow-hidden bg-white !py-[20px] md:!py-[24px] lg:!py-[28px]" : "relative overflow-hidden bg-white"}>
       {bgImage ? (
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
           <div

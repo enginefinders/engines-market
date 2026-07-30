@@ -268,7 +268,13 @@ export default function EngineSizesSection({
   const activeKind = tagVariant(activeGroup?.title ?? "diesel");
 
   return (
-    <Section className="relative overflow-hidden bg-[#f8f9fa] max-[720px]:pt-4">
+    <Section
+      className={
+        documentMode || displayMode === "document"
+          ? "relative overflow-hidden bg-[#f8f9fa] !py-[20px] md:!py-[24px] lg:!py-[28px] max-[720px]:pt-3"
+          : "relative overflow-hidden bg-[#f8f9fa] max-[720px]:pt-4"
+      }
+    >
       {bgImage ? (
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
           <div
