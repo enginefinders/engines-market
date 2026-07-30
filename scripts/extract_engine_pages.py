@@ -11,10 +11,10 @@ from typing import Any
 SECTION_SPLIT_RE = re.compile(r"^# SECTION\s+(\d+)\b.*$", re.MULTILINE)
 LINK_RE = re.compile(r"\[([^\]]+)\]\(([^)]+)\)")
 INLINE_LINK_NOTE_RE = re.compile(
-    r"\[(?:Link(?: once)?):\s*(/[^]\s]+|https?://[^]\s]+)\]",
+    r"\[(?:Link(?: once)?):\s*(/[^]\s]+|https?://[^]\s]+)\s*\]",
     re.IGNORECASE,
 )
-BARE_PATH_NOTE_RE = re.compile(r"\[(/[^]\s]+)\]")
+BARE_PATH_NOTE_RE = re.compile(r"\[(/[^]\s]+)\s*\]")
 SCRIPT_RE = re.compile(
     r'<script type="application/ld\+json">\s*(\{.*?\})\s*</script>',
     re.DOTALL | re.IGNORECASE,
@@ -32,6 +32,14 @@ SOURCE_NOTE_RE = re.compile(
 CODE_TOKEN_RE = re.compile(r"\b(?:[A-Z][A-Z0-9]{2,}[A-Z0-9./-]*|[0-9][A-Z][A-Z0-9./-]*)\b")
 NON_ASCII_DASH_RE = re.compile(r"[\u2012\u2013\u2014\u2015]")
 WHITESPACE_RE = re.compile(r"\s+")
+MOJIBAKE_HINT_RE = re.compile(r"[ÃÂâðœšž€¢™]")
+DECORATIVE_RULE_RE = re.compile(r"^(?:[=\-_*#~•·─━═]{6,}\s*)+")
+INTERNAL_TRAILER_RE = re.compile(
+    r"(?:META TITLE:|META DESCRIPTION:|CANONICAL URL:|OG TITLE:|OG DESCRIPTION:|OG URL:|OG TYPE:|OG SITE NAME:|"
+    r"TWITTER CARD:|TWITTER TITLE:|TWITTER DESCRIPTION:|<script type=\"application/ld\+json\">|"
+    r"internal - strip before publish|PRODUCTION NOTES\b|LINK PENDING flags:|# META & SCHEMA PACKAGE)",
+    re.IGNORECASE,
+)
 ENGINESMARKET_SERVICE_RE = re.compile(
     r"https?://(?:www\.)?enginesmarket\.co\.uk(/services/[a-z-]+)(?:/)?",
     re.IGNORECASE,
@@ -44,6 +52,38 @@ SERVICE_PATHS = {
     "supply & fit": "/services/supply-and-fit",
     "supply and fit": "/services/supply-and-fit",
 }
+
+
+def decode_source_text(value: str) -> str:
+    value = value.replace("\ufeff", "").replace("\u00a0", " ")
+    fixed = value
+    for _ in range(3):
+        if not MOJIBAKE_HINT_RE.search(fixed):
+            break
+        try:
+            candidate = fixed.encode("cp1252").decode("utf-8")
+        except UnicodeError:
+            break
+        if candidate == fixed:
+            break
+        fixed = candidate
+    return fixed
+
+
+def strip_internal_trailer(value: str) -> str:
+    match = INTERNAL_TRAILER_RE.search(value)
+    if match:
+        return value[: match.start()]
+    return value
+
+
+def strip_decorative_prefix(value: str) -> str:
+    cleaned = value.lstrip()
+    while True:
+        updated = DECORATIVE_RULE_RE.sub("", cleaned, count=1).lstrip()
+        if updated == cleaned:
+            return cleaned
+        cleaned = updated
 
 
 def normalize_whitespace(value: str) -> str:
@@ -83,6 +123,53 @@ def clean_label(value: str) -> str:
 def remove_links_keep_text(value: str) -> str:
     value = LINK_RE.sub(lambda match: match.group(1), value)
     return cleanup_text(value)
+
+
+def normalize_whitespace(value: str) -> str:
+    value = decode_source_text(value)
+    value = NON_ASCII_DASH_RE.sub("-", value)
+    return WHITESPACE_RE.sub(" ", value).strip()
+
+
+def cleanup_text(value: str) -> str:
+    value = strip_internal_trailer(decode_source_text(value))
+    value = strip_decorative_prefix(value)
+    value = normalize_whitespace(value)
+    value = value.replace("Ã¢â€ â€™", "")
+    value = value.replace("→", "").replace("➡", "").replace("➜", "")
+    value = value.replace("✅", "").replace("🔧", "").replace("🚚", "").replace("👥", "").replace("🔒", "")
+    value = value.replace("`", "")
+    value = PENDING_RE.sub("", value)
+    value = SOURCE_NOTE_RE.sub("", value)
+    value = INLINE_LINK_NOTE_RE.sub("", value)
+    value = BARE_PATH_NOTE_RE.sub("", value)
+    value = value.replace("[]", "")
+    return normalize_whitespace(value)
+
+
+def clean_label(value: str) -> str:
+    value = decode_source_text(value)
+    for token in ("✅", "🔧", "🚚", "👥", "🔒", "🇬🇧", "GB"):
+        value = value.replace(token, "")
+    value = value.replace("Ã¢â€ â€™", "").strip(" :-")
+    return cleanup_text(value)
+
+
+def extract_trust_bullets(value: str) -> list[str]:
+    decoded = strip_internal_trailer(decode_source_text(value))
+    trust_match = re.search(r"TRUST POINTS:\s*(.+)", decoded, re.IGNORECASE)
+    segment = trust_match.group(1) if trust_match else decoded
+    segment = re.split(r"\bCLOSING PARAGRAPH:\b", segment, maxsplit=1, flags=re.IGNORECASE)[0]
+    return [cleanup_text(part) for part in re.split(r"(?:✅|🔧|🚚|👥|•)", segment) if cleanup_text(part)]
+
+
+def extract_trust_paragraph(value: str) -> str:
+    decoded = strip_internal_trailer(decode_source_text(value))
+    closing_match = re.search(r"CLOSING PARAGRAPH:\s*(.+)", decoded, re.IGNORECASE)
+    if closing_match:
+        return cleanup_text(closing_match.group(1))
+    stripped = re.sub(r"\bTRUST POINTS:\b", "", decoded, flags=re.IGNORECASE)
+    return cleanup_text(stripped)
 
 
 def split_sections(raw: str) -> dict[int, str]:
@@ -154,9 +241,6 @@ def extract_inline_href(value: str, fallback_label: str | None = None) -> str:
     lowered = value.lower()
     if fallback_label and fallback_label.lower() in SERVICE_PATHS:
         return SERVICE_PATHS[fallback_label.lower()]
-    for label, href in SERVICE_PATHS.items():
-        if label in lowered:
-            return href
     return "#"
 
 
@@ -1412,6 +1496,326 @@ class EnginePageParser:
         return
 
 
+def _patched_parse_variants(self: "EnginePageParser", block: str, related: dict[str, Any]) -> dict[str, Any]:
+    paragraph_lines: list[str] = []
+    closing = ""
+    for line in lines_of(block):
+        stripped = clean_prefixed_line(decode_source_text(line))
+        if not stripped or stripped.startswith("TAG:") or stripped.startswith("H2:"):
+            continue
+        if INTERNAL_TRAILER_RE.search(stripped) or stripped.startswith("# META"):
+            continue
+        if "Not sure" in stripped or "HOW TO CONFIRM YOUR CODE:" in stripped:
+            closing = cleanup_text(stripped.split(":", 1)[-1] if ":" in stripped else stripped)
+            continue
+        if stripped.startswith("H4:") or stripped.startswith("#### "):
+            continue
+        paragraph_lines.append(remove_links_keep_text(stripped))
+
+    relatives = []
+    seen_codes: set[str] = set()
+    for item in related["items"]:
+        code = cleanup_text(item["code"])
+        if not code or code.lower() in {"none", "n/a", "unknown"} or code in seen_codes:
+            continue
+        relative = {"code": code, "description": item.get("description", "")}
+        if item.get("href") and item["href"] != "#":
+            relative["href"] = item["href"]
+        relatives.append(relative)
+        seen_codes.add(code)
+
+    if not relatives:
+        current_code = self.infer_engine_code()
+        for line in paragraph_lines:
+            for match in CODE_TOKEN_RE.findall(line):
+                code = cleanup_text(match)
+                if code == current_code or code in seen_codes or not any(char.isdigit() for char in code):
+                    continue
+                relatives.append({"code": code, "description": cleanup_text(line)})
+                seen_codes.add(code)
+                if len(relatives) >= 4:
+                    break
+            if len(relatives) >= 4:
+                break
+
+    intro = paragraph_lines[0] if paragraph_lines else ""
+    if len(paragraph_lines) > 1:
+        intro = " ".join(paragraph_lines[:-1])
+    return {
+        "tag": cleanup_text(prefixed_value(block, "TAG:") or "Engine Variants"),
+        "title": cleanup_text(prefixed_value(block, "H2:") or ""),
+        "intro": intro,
+        "relatives": relatives,
+        "closing": closing or (paragraph_lines[-1] if paragraph_lines else ""),
+    }
+
+
+def _patched_parse_markdown_variants(
+    self: "EnginePageParser", block: str, heading: str, related_section: dict[str, Any]
+) -> dict[str, Any]:
+    paragraphs = []
+    closing = ""
+    for line in lines_of(block):
+        stripped = line.strip()
+        if not stripped or stripped == "---":
+            continue
+        plain = clean_prefixed_line(decode_source_text(stripped))
+        if INTERNAL_TRAILER_RE.search(plain) or plain.startswith("# META"):
+            continue
+        if plain.startswith("Where to Find"):
+            continue
+        if plain.startswith("- "):
+            paragraphs.append(strip_bold(plain[2:]))
+            continue
+        if plain.lower().startswith("always source") or plain.lower().startswith("enter your registration"):
+            closing = remove_links_keep_text(plain)
+            continue
+        paragraphs.append(remove_links_keep_text(plain))
+    relatives = []
+    for item in related_section["items"]:
+        relative = {"code": item["code"], "description": item["description"]}
+        if item.get("href") and item["href"] != "#":
+            relative["href"] = item["href"]
+        relatives.append(relative)
+    return {
+        "tag": "Engine Variants",
+        "title": heading,
+        "intro": " ".join(paragraphs[:2]).strip(),
+        "relatives": relatives,
+        "closing": closing or (" ".join(paragraphs[2:]).strip() if len(paragraphs) > 2 else ""),
+    }
+
+
+def _patched_parse_trust_cta(self: "EnginePageParser", block: str) -> dict[str, Any]:
+    lines = [clean_prefixed_line(decode_source_text(line)) for line in lines_of(block)]
+    bullets: list[str] = []
+    paragraph_parts: list[str] = []
+    for line in lines:
+        if not line or line.startswith(("TAG:", "H2:", "CTA BUTTON:", "**[", "```", "***")):
+            continue
+        if INTERNAL_TRAILER_RE.search(line) and "TRUST POINTS:" not in line.upper():
+            continue
+        if "TRUST POINTS:" in line.upper():
+            bullets.extend(extract_trust_bullets(line))
+            paragraph = extract_trust_paragraph(line)
+            if paragraph:
+                paragraph_parts.append(paragraph)
+            continue
+        if line.startswith(("✅", "🔧", "🚚", "👥", "- ")):
+            bullets.append(clean_label(line))
+            continue
+        paragraph_parts.append(remove_links_keep_text(line))
+    return {
+        "tag": cleanup_text(prefixed_value(block, "TAG:") or "Why EnginesMarket"),
+        "title": cleanup_text(prefixed_value(block, "H2:") or ""),
+        "bullets": bullets,
+        "paragraph": cleanup_text(" ".join(part for part in paragraph_parts if part)),
+        "buttonText": cleanup_text(prefixed_value(block, "CTA BUTTON:") or "Get Free Engine Quotes"),
+        "note": "Secure enquiry - no spam. Quotes only from vetted UK engine specialists.",
+    }
+
+
+BUYING_GUIDE_LABEL_RE = re.compile(
+    r"(?mi)^\s*\*{0,2}(USED|RECONDITIONED|REBUILT|NEW|SUPPLY\s*&\s*FIT(?:\s+LINE)?|VEHICLE VALUE NOTE|CTA BUTTON)\*{0,2}:\s*"
+)
+MARKDOWN_RELATED_LINE_RE = re.compile(
+    r"^\*{0,2}(Predecessor|Successor|Sibling|Cross(?:[\u2010-\u2015-]Brand(?:\s+(?:Twin|Context))?))\s*[—-]\s*(.+?)\*{0,2}\s*[—-]\s*(.+)$",
+    re.IGNORECASE,
+)
+
+
+def _normalize_buying_label(label: str) -> str:
+    cleaned = cleanup_text(label).upper()
+    if cleaned.startswith("SUPPLY & FIT"):
+        return "SUPPLY & FIT LINE"
+    return cleaned
+
+
+def _split_buying_guide_entries(block: str) -> dict[str, str]:
+    text = decode_source_text(block)
+    matches = list(BUYING_GUIDE_LABEL_RE.finditer(text))
+    entries: dict[str, str] = {}
+    for index, match in enumerate(matches):
+        label = _normalize_buying_label(match.group(1))
+        start = match.end()
+        end = matches[index + 1].start() if index + 1 < len(matches) else len(text)
+        entries[label] = text[start:end].strip()
+    return entries
+
+
+def _maybe_repair_merged_buying_guide(
+    self: "EnginePageParser", entries: dict[str, str]
+) -> dict[str, str]:
+    repaired = dict(entries)
+    used_raw = repaired.get("USED", "")
+    if "RECONDITIONED" not in repaired and "Compare reconditioned" in used_raw:
+        split_markers = (
+            "this engine's known weak points:",
+            "This effectively resets the engine's reliability clock",
+        )
+        split_index = -1
+        marker_used = ""
+        lowered = used_raw.lower()
+        for marker in split_markers:
+            split_index = lowered.find(marker.lower())
+            if split_index != -1:
+                marker_used = marker
+                break
+        if split_index != -1:
+            used_text = used_raw[:split_index].strip()
+            if "[Explore" in used_text:
+                used_text = used_text.split("[Explore", 1)[0].strip()
+            repaired["USED"] = used_text
+            recon_tail = used_raw[split_index:].strip()
+            if marker_used == "this engine's known weak points:":
+                brand_name = cleanup_text(self.path.parent.name)
+                engine_code = self.infer_engine_code()
+                recon_tail = (
+                    f"A reconditioned {brand_name} {engine_code} engine should specifically address {recon_tail}"
+                )
+            repaired["RECONDITIONED"] = recon_tail
+    return repaired
+
+
+def _repatched_parse_buying_guide(self: "EnginePageParser", block: str) -> dict[str, Any]:
+    entries = _maybe_repair_merged_buying_guide(self, _split_buying_guide_entries(block))
+    options: list[dict[str, str]] = []
+
+    for label in ("USED", "RECONDITIONED"):
+        raw = entries.get(label, "")
+        if not raw:
+            self.warning(f"buying guide missing {label.lower()} option")
+            continue
+        href = extract_inline_href(raw, label.lower())
+        if href == "#":
+            self.warning(f"buying guide {label.lower()} option missing explicit href")
+        options.append({"label": label.title(), "body": remove_links_keep_text(raw), "href": href})
+
+    top_tier_found = False
+    for label in ("REBUILT", "NEW"):
+        raw = entries.get(label, "")
+        if not raw:
+            continue
+        top_tier_found = True
+        href = extract_inline_href(raw, label.lower())
+        if href == "#":
+            self.warning(f"buying guide {label.lower()} option missing explicit href")
+        options.append({"label": label.title(), "body": remove_links_keep_text(raw), "href": href})
+
+    if not top_tier_found:
+        self.warning("buying guide missing rebuilt option")
+
+    supply_fit = entries.get("SUPPLY & FIT LINE", "")
+    supply_fit_href = extract_inline_href(supply_fit, "supply & fit")
+    if supply_fit and supply_fit_href == "#":
+        self.warning("buying guide supply and fit link missing explicit href")
+
+    return {
+        "tag": cleanup_text(prefixed_value(block, "TAG:") or "Buying Guide"),
+        "title": cleanup_text(prefixed_value(block, "H2:") or ""),
+        "options": options,
+        "supplyFitLine": remove_links_keep_text(supply_fit),
+        "vehicleValueNote": cleanup_text(entries.get("VEHICLE VALUE NOTE", "")),
+        "cta": cleanup_text(entries.get("CTA BUTTON", "Compare engine prices")),
+    }
+
+
+def _parse_related_line(self: "EnginePageParser", line: str) -> dict[str, str] | None:
+    stripped = clean_prefixed_line(decode_source_text(line))
+    if not stripped:
+        return None
+
+    classic_match = RELATED_RE.match(stripped)
+    if classic_match:
+        relation = cleanup_text(classic_match.group(1)).title()
+        raw = classic_match.group(2)
+    else:
+        markdown_match = MARKDOWN_RELATED_LINE_RE.match(stripped)
+        if not markdown_match:
+            return None
+        relation = cleanup_text(markdown_match.group(1)).replace("Brand", "-Brand").title()
+        raw = f"{markdown_match.group(2)} - {markdown_match.group(3)}"
+
+    href = extract_inline_href(raw)
+    links = markdown_links(raw)
+    if links:
+        code = cleanup_text(links[0]["label"])
+        remainder = remove_links_keep_text(LINK_RE.sub("", raw))
+    else:
+        parts = re.split(r"\s+[—-]\s+", remove_links_keep_text(raw), maxsplit=1)
+        code = cleanup_text(parts[0])
+        remainder = cleanup_text(parts[1]) if len(parts) > 1 else ""
+
+    code = code.strip("[] ").lstrip("- ").strip()
+    if not any(char.isdigit() for char in code):
+        token_matches = [token for token in CODE_TOKEN_RE.findall(code) if any(char.isdigit() for char in token)]
+        if token_matches:
+            code = cleanup_text(token_matches[0])
+    if code.lower() in {"none", "n/a", "na"}:
+        href = "#"
+
+    if href == "#" and "LINK PENDING" in raw and code and code.lower() not in {"none", "n/a", "na"}:
+        self.warning(f"related {relation.lower()} link pending for {code or 'unknown code'}")
+
+    return {"relation": relation, "code": code or "Unknown", "href": href, "description": remainder}
+
+
+def _repatched_parse_related(self: "EnginePageParser", block: str) -> dict[str, Any]:
+    items = []
+    for line in lines_of(block):
+        parsed = _parse_related_line(self, line)
+        if parsed:
+            items.append(parsed)
+
+    return {
+        "tag": cleanup_text(prefixed_value(block, "TAG:") or "Related Engines"),
+        "title": cleanup_text(prefixed_value(block, "H2:") or ""),
+        "items": items,
+    }
+
+
+def _repatched_parse_trust_cta(self: "EnginePageParser", block: str) -> dict[str, Any]:
+    lines = [clean_prefixed_line(decode_source_text(line)) for line in lines_of(block)]
+    bullets: list[str] = []
+    paragraph_parts: list[str] = []
+    for line in lines:
+        if not line or line.startswith(("TAG:", "H2:", "CTA BUTTON:", "**[", "```", "***")):
+            continue
+        if line.startswith("<script") or line.startswith("{"):
+            break
+        if INTERNAL_TRAILER_RE.search(line):
+            if "TRUST POINTS:" not in line.upper():
+                break
+            line = re.split(INTERNAL_TRAILER_RE, line, maxsplit=1, flags=re.IGNORECASE)[0].strip()
+        if "TRUST POINTS:" in line.upper():
+            bullets.extend(
+                bullet for bullet in extract_trust_bullets(line) if bullet and bullet.upper() != "TRUST POINTS:"
+            )
+            paragraph = extract_trust_paragraph(line)
+            if paragraph:
+                paragraph_parts.append(paragraph)
+            continue
+        if line.startswith(("âœ…", "ðŸ”§", "ðŸšš", "ðŸ‘¥", "- ")):
+            bullets.append(clean_label(line))
+            continue
+        paragraph_parts.append(remove_links_keep_text(line))
+    return {
+        "tag": cleanup_text(prefixed_value(block, "TAG:") or "Why EnginesMarket"),
+        "title": cleanup_text(prefixed_value(block, "H2:") or ""),
+        "bullets": bullets,
+        "paragraph": cleanup_text(" ".join(part for part in paragraph_parts if part)),
+        "buttonText": cleanup_text(prefixed_value(block, "CTA BUTTON:") or "Get Free Engine Quotes"),
+        "note": "Secure enquiry - no spam. Quotes only from vetted UK engine specialists.",
+    }
+
+
+EnginePageParser.parse_variants = _patched_parse_variants
+EnginePageParser.parse_markdown_variants = _patched_parse_markdown_variants
+EnginePageParser.parse_trust_cta = _repatched_parse_trust_cta
+EnginePageParser.parse_buying_guide = _repatched_parse_buying_guide
+EnginePageParser.parse_related = _repatched_parse_related
+
+
 def collect_files(input_dir: Path) -> list[Path]:
     return sorted(path for path in input_dir.rglob("*.txt") if path.is_file())
 
@@ -1497,7 +1901,7 @@ def main() -> int:
     write_json(batch_dir / "warnings.json", file_warnings)
     write_json(batch_dir / "skipped_collisions.json", skipped_duplicates)
 
-    print(json.dumps(summary, indent=2, ensure_ascii=False))
+    print(json.dumps(summary, indent=2, ensure_ascii=True))
     return 0
 
 
