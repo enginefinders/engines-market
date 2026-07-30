@@ -106,7 +106,7 @@
   function makeLogo() {
     const logo = link("", "/", "em-static-logo");
     logo.setAttribute("aria-label", "Engines Market homepage");
-    logo.innerHTML = '<img class="em-static-logo__image" src="/branding/engine-market-logo-white-transparent.png" alt="Engines Market" width="520" height="150">';
+    logo.innerHTML = '<img class="em-static-logo__image" src="/branding/engine-market-logo-header-tight.png" alt="Engines Market" width="3919" height="763">';
     return logo;
   }
 

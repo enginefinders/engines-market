@@ -32,14 +32,14 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-100 bg-[#061a33] text-white shadow-md max-[1023px]:shadow-none">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 max-[1023px]:border-b-0">
+      <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-4 sm:px-6 lg:h-[78px] lg:px-8 max-[1023px]:border-b-0">
         <Link href="/" className="flex items-center" onClick={closeMobileMenu}>
           <Image
-            src="/branding/engine-market-logo-white-transparent.png"
+            src="/branding/engine-market-logo-header-tight.png"
             alt="Engines Market"
-            width={520}
-            height={150}
-            className="h-11 w-auto max-w-[210px] object-contain sm:h-12 sm:max-w-[240px]"
+            width={3919}
+            height={763}
+            className="h-[38px] w-auto max-w-[230px] object-contain sm:h-[42px] sm:max-w-[255px] lg:h-[52px] lg:max-w-[320px]"
             priority
           />
         </Link>
@@ -47,7 +47,7 @@ export default function Navbar() {
         <nav className="hidden items-center gap-1 text-sm font-semibold lg:flex" aria-label="Primary navigation">
           {headerNavigation.map((item) => (
             <div key={item.label} className="group relative">
-              <Link href={item.href} className="flex h-16 items-center gap-1 px-3 transition hover:text-[#86efac]">
+              <Link href={item.href} className="flex h-full items-center gap-1 px-3 transition hover:text-[#86efac]">
                 {item.label}
                 {item.links ? <FiChevronDown className="h-4 w-4 transition group-hover:rotate-180" aria-hidden="true" /> : null}
               </Link>
@@ -78,7 +78,7 @@ export default function Navbar() {
         <div className="flex items-center gap-1.5 self-center lg:hidden">
           <a
             href="tel:03330000044"
-            className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white sm:h-11 sm:w-11"
             aria-label="Call Engines Market"
           >
             <PhoneIcon />
@@ -87,14 +87,14 @@ export default function Navbar() {
             href="https://wa.me/443330000044"
             target="_blank"
             rel="noreferrer"
-            className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/15 bg-[#25D366] text-white"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-[#25D366] text-white sm:h-11 sm:w-11"
             aria-label="Chat on WhatsApp"
           >
             <FaWhatsapp className="h-[17px] w-[17px]" aria-hidden="true" />
           </a>
           <button
             type="button"
-            className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/15 bg-white/5"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 sm:h-11 sm:w-11"
             aria-label="Open navigation menu"
             aria-expanded={mobileOpen}
             onClick={() => {
