@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useId, useMemo, useState } from "react";
+import { useEffect, useId, useMemo, useState } from "react";
 import type { CommonProblemsData } from "@/types/brand";
 import { RecommendationCard } from "@/components/ui/CalloutCards";
 import Container from "@/components/ui/Container";
@@ -273,6 +273,40 @@ function PoundIcon() {
   return <Image src="/icons/engine-market/light-green-pound-icon-2.png" alt="" width={18} height={18} className="h-[18px] w-[18px] object-contain" />;
 }
 
+function getProblemFallbackImage(problemText: string, fallbackImage?: string) {
+  const normalized = normalizeText(problemText).toLowerCase();
+
+  if (normalized.includes("timing chain")) {
+    return "/case-studies/assets/snapped-timing-chain.png";
+  }
+
+  if (normalized.includes("rod bearing") || normalized.includes("bearing")) {
+    return "/case-studies/assets/bearing-scoring.png";
+  }
+
+  if (normalized.includes("hpfp") || normalized.includes("injector")) {
+    return "/case-studies/assets/injector-carbon.png";
+  }
+
+  if (normalized.includes("coolant") || normalized.includes("cooling") || normalized.includes("overheat")) {
+    return "/case-studies/assets/workshop-blur.png";
+  }
+
+  if (normalized.includes("egr") || normalized.includes("turbo")) {
+    return "/case-studies/assets/twin-turbo-debris.png";
+  }
+
+  if (normalized.includes("crank hub") || normalized.includes("crankshaft")) {
+    return "/case-studies/assets/crankshaft-snapped.png";
+  }
+
+  if (normalized.includes("valve stem") || normalized.includes("blue smoke") || normalized.includes("oil consumption")) {
+    return "/case-studies/assets/borescope-valves-pistons.png";
+  }
+
+  return fallbackImage?.trim() || "/case-studies/assets/workshop-blur.png";
+}
+
 function AffectedVehiclesCard({
   affectedModels,
   mobile = false,
@@ -327,12 +361,22 @@ function AffectedVehiclesCard({
 function ProblemVisual({
   src,
   alt,
+  fallbackSrc,
   mobile = false,
 }: {
   src: string;
   alt: string;
+  fallbackSrc?: string;
   mobile?: boolean;
 }) {
+  const normalizedSrc = src.trim();
+  const normalizedFallback = fallbackSrc?.trim() || "";
+  const [displaySrc, setDisplaySrc] = useState(normalizedSrc || normalizedFallback);
+
+  useEffect(() => {
+    setDisplaySrc(normalizedSrc || normalizedFallback);
+  }, [normalizedSrc, normalizedFallback]);
+
   return (
     <div
       className={`relative overflow-hidden rounded-[12px] border border-[#dbe5f4] bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.92),rgba(243,246,252,0.96))] shadow-[0_6px_18px_rgba(13,27,46,0.08)] ${
@@ -341,11 +385,16 @@ function ProblemVisual({
     >
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.44)_0%,rgba(255,255,255,0.08)_30%,rgba(255,255,255,0)_62%)]" />
       <Image
-        src={src}
+        src={displaySrc}
         alt={alt}
         fill
         className="object-contain p-3"
         sizes={mobile ? "100vw" : "(max-width: 1024px) 100vw, 40vw"}
+        onError={() => {
+          if (normalizedFallback && displaySrc !== normalizedFallback) {
+            setDisplaySrc(normalizedFallback);
+          }
+        }}
       />
     </div>
   );
@@ -365,7 +414,8 @@ function MobileProblemCard({
   fallbackImage?: string;
 }) {
   const detail = splitProblemDetail(problem.group, problem.h4);
-  const visualSrc = problem.image?.trim() || fallbackImage?.trim() || "";
+  const visualSrc = problem.image?.trim() || "";
+  const fallbackVisualSrc = getProblemFallbackImage(`${problem.group} ${problem.h4}`, fallbackImage);
 
   const getTierColors = (tier: string) => {
     const label = normalizeText(tier).toLowerCase();
@@ -408,9 +458,9 @@ function MobileProblemCard({
 
       {open ? (
         <div className="border-t border-[#f1f5f9] px-3 py-4">
-          {visualSrc ? (
+          {visualSrc || fallbackVisualSrc ? (
             <div className="mb-3">
-              <ProblemVisual src={visualSrc} alt={detail.title} mobile />
+              <ProblemVisual src={visualSrc} fallbackSrc={fallbackVisualSrc} alt={detail.title} mobile />
             </div>
           ) : null}
 
