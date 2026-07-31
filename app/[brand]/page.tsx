@@ -103,6 +103,7 @@ export default async function BrandPage({ params }: BrandPageProps) {
         bgImage={brandVisuals.hero}
         modelCards={heroModelCards}
         brandSlug={pageData.brand.slug}
+        disclaimerMode="icon"
       />
 
       <HowItWorksSection
@@ -115,6 +116,7 @@ export default async function BrandPage({ params }: BrandPageProps) {
         data={pageData.sections.liveMarketPrices}
         modelCards={pageData.sections.models.cards}
         imageSrc={pageData.sections.liveMarketPrices.imageSrc ?? brandVisuals.liveMarket}
+        displayMode="document"
         initialTimestamp={initialTimestamp}
       />
 

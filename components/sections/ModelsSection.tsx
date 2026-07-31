@@ -41,12 +41,12 @@ function ArrowIcon({ open = false }: { open?: boolean }) {
   return (
     <svg
       viewBox="0 0 24 24"
-      className={`h-3.5 w-3.5 shrink-0 transition-transform ${open ? "rotate-90" : ""}`}
+      className={`h-3.5 w-3.5 shrink-0 transition-transform ${open ? "rotate-180" : ""}`}
       fill="none"
       aria-hidden="true"
     >
       <path
-        d="M9 6l6 6-6 6"
+        d="M6 9l6 6 6-6"
         stroke="currentColor"
         strokeWidth="2.4"
         strokeLinecap="round"
@@ -178,44 +178,50 @@ export default function ModelsSection({ data, brandSlug, documentMode = false }:
             return (
               <article
                 key={model.slug}
-                className="overflow-hidden rounded-[14px] border border-slate-200 bg-white shadow-[0_2px_10px_rgba(13,27,46,0.06)] transition hover:border-[#0d1b2e] hover:shadow-[0_8px_24px_rgba(13,27,46,0.1)]"
+                className="overflow-hidden rounded-[12px] border border-slate-200 bg-white shadow-[0_2px_8px_rgba(13,27,46,0.05)] transition hover:border-slate-300 hover:shadow-[0_8px_18px_rgba(13,27,46,0.08)]"
               >
-                <div className="flex items-center justify-between gap-3 px-4 py-4">
-                  <div className="min-w-0">
-                    <div
-                      role="heading"
-                      aria-level={3}
-                      className="font-['Manrope'] text-[13px] font-extrabold leading-[1.25] text-[#0d1b2e]"
-                    >
-                      {model.h3}
-                    </div>
-                    <p className="mt-2 font-['Manrope'] text-[15px] font-extrabold tracking-[-0.02em] text-green-700">
-                      {normalizePriceRange(model.priceRange)}
-                    </p>
-                  </div>
-
-                  <button
-                    type="button"
-                    onClick={() => setOpenCard((current) => (current === model.slug ? null : model.slug))}
-                    aria-label={isOpen ? `Hide ${model.h3} details` : `Show ${model.h3} details`}
-                    className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-slate-200 text-[#15803d] transition hover:border-[#0d1b2e] hover:bg-[#f8fbff]"
-                  >
-                    <ArrowIcon open={isOpen} />
-                  </button>
-                </div>
-
-                {isOpen ? (
-                  <div className="border-t border-slate-100 px-4 pb-4 pt-3">
-                    <div className="relative aspect-[4/3] overflow-hidden rounded-[12px] bg-white">
+                <button
+                  type="button"
+                  onClick={() => setOpenCard((current) => (current === model.slug ? null : model.slug))}
+                  aria-expanded={isOpen}
+                  aria-label={isOpen ? `Hide ${model.h3} details` : `Show ${model.h3} details`}
+                  className="flex min-h-[248px] w-full flex-col items-center px-2 pb-2 pt-1.5 text-center sm:px-4 sm:py-4"
+                >
+                  <div className="flex min-h-[82px] w-full items-center justify-center">
+                    <div className="relative h-[80px] w-full max-w-[170px]">
                       <Image
                         src={model.image || `/images/brands/${brandSlug}/models/${brandSlug}-${model.slug}-small.webp`}
                         alt={model.h3}
                         fill
-                        className="object-contain p-3"
-                        sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 20vw"
+                        className="object-contain"
+                        sizes="170px"
                       />
                     </div>
+                  </div>
 
+                  <div className="mt-3 w-full max-w-[250px]">
+                    <div
+                      role="heading"
+                      aria-level={3}
+                      className="font-['Manrope'] text-[15px] font-extrabold leading-[1.18] text-[#0d1b2e]"
+                    >
+                      {model.h3}
+                    </div>
+                    <p className="mt-2 text-[11.5px] font-semibold leading-[1.4] text-[#4b5563]">
+                      {model.subtitle}
+                    </p>
+                    <p className="mt-3 font-['Manrope'] text-[15px] font-semibold leading-none text-[#374151]">
+                      Rebuilt: {normalizePriceRange(model.priceRange)}
+                    </p>
+                  </div>
+
+                  <span className="mt-auto inline-flex pt-4 text-[#15803d]">
+                    <ArrowIcon open={isOpen} />
+                  </span>
+                </button>
+
+                {isOpen ? (
+                  <div className="border-t border-slate-100 px-4 pb-4 pt-3">
                     <p className="mt-3 text-[11px] leading-[1.55] text-slate-500">{model.subtitle}</p>
 
                     <Link

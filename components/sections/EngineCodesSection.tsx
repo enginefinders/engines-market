@@ -191,7 +191,7 @@ export default function EngineCodesSection({ data, bgImage }: Props) {
         </div>
       ) : null}
 
-      <Container className="relative max-w-[1200px]">
+      <Container className="relative max-w-[1400px] px-0 sm:px-0 lg:px-0">
         <div className="section-pill mb-[14px] md:rounded-full">
           <MoneyTagIcon />
           <span>{data.tag}</span>
