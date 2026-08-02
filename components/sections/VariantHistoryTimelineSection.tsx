@@ -100,7 +100,7 @@ export default function VariantHistoryTimelineSection({ data, vehicleImage }: Pr
   return (
     <Section className="bg-white !py-[2px]">
       <Container className="max-w-[1400px] px-0 sm:px-0 lg:px-0">
-        <div className="relative overflow-hidden bg-[radial-gradient(circle_at_top,#edf4ff_0%,#ffffff_54%,#f7fbff_100%)] px-[2px] py-[2px]">
+        <div className="relative overflow-hidden bg-[radial-gradient(circle_at_top,#edf4ff_0%,#ffffff_54%,#f7fbff_100%)] py-[2px]">
           <div className="grid gap-8 lg:grid-cols-[minmax(0,0.96fr)_minmax(520px,1.04fr)]">
             <div>
               <div className="inline-flex items-center gap-2 rounded-full bg-[#edf7ef] px-4 py-2 text-[12px] font-bold uppercase tracking-[0.03em] text-[#16803d]">
@@ -154,19 +154,18 @@ export default function VariantHistoryTimelineSection({ data, vehicleImage }: Pr
             </div>
 
             <div>
-              <div className="relative min-h-[248px] overflow-hidden rounded-[24px] bg-[linear-gradient(180deg,rgba(255,255,255,0.2),rgba(240,246,252,0.75))] px-2 pt-2 sm:min-h-[300px] sm:px-4 sm:pt-4 sm:rounded-[28px]">
-                <div className="pointer-events-none absolute right-[12%] top-[8%] h-[220px] w-[220px] rounded-full border-[6px] border-[#e7ecf5]" />
-                <div className="pointer-events-none absolute right-[18%] top-[3%] h-[260px] w-[260px] rounded-full border border-[#edf2f8]" />
-
-                <div className="relative mx-auto h-[240px] w-full max-w-[760px] sm:h-[290px]">
+              <div className="relative min-h-[280px] overflow-hidden bg-[#eef3fa] sm:min-h-[332px]">
+                <div className="absolute inset-0">
                   <Image
                     src={vehicleImage || "/images/brands/bmw/models/bmw-m3-removebg.png"}
                     alt={vehicleTitle}
                     fill
-                    className="object-contain object-right-bottom scale-[1.08] sm:scale-100 sm:object-center"
+                    className="object-cover object-[72%_center] sm:object-[74%_center] lg:object-[78%_center]"
                     sizes="(max-width: 1024px) 100vw, 48vw"
                   />
                 </div>
+                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.14),rgba(240,246,252,0.24))]" />
+                <div className="absolute inset-y-0 left-0 w-[24%] bg-[linear-gradient(90deg,rgba(238,243,250,0.56),rgba(238,243,250,0))]" />
               </div>
 
               <div className="mt-4 rounded-[20px] border border-[#e4ebf4] bg-white px-5 py-4 shadow-[0_14px_26px_rgba(15,23,42,0.05)]">

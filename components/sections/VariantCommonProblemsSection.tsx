@@ -148,7 +148,7 @@ export default function VariantCommonProblemsSection({ data, vehicleImage }: Pro
             </div>
           </div>
 
-          <div className="px-[2px] py-[2px]">
+          <div className="py-[2px]">
             {data.problems.length > 1 ? (
               <div className="mb-4 flex flex-wrap gap-2.5">
                 {data.problems.map((problem, index) => (

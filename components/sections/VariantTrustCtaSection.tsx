@@ -77,8 +77,8 @@ export default function VariantTrustCtaSection({ data, brandName, imageSrc }: Pr
 
   return (
     <Section className="bg-white !pt-[2px] !pb-0">
-      <Container className="max-w-[1400px] px-0 sm:px-0 lg:px-0">
-        <div className="overflow-hidden rounded-[18px] border border-[#d6deea] bg-[radial-gradient(circle_at_76%_18%,rgba(255,255,255,0.14),transparent_24%),linear-gradient(135deg,#07152d_0%,#081a34_46%,#09182f_100%)] shadow-[0_14px_28px_rgba(8,31,71,0.14)]">
+      <div className="overflow-hidden border-t border-[#d6deea] bg-[radial-gradient(circle_at_76%_18%,rgba(255,255,255,0.14),transparent_24%),linear-gradient(135deg,#07152d_0%,#081a34_46%,#09182f_100%)]">
+        <Container className="max-w-[1400px] px-0 sm:px-0 lg:px-0">
           <div className="grid gap-4 px-4 py-4 sm:px-6 sm:py-5 lg:grid-cols-[minmax(0,0.96fr)_minmax(500px,1.04fr)] lg:items-start lg:px-7 lg:py-6">
             <div className="max-w-[780px]">
               <div className="inline-flex items-center gap-2 rounded-full bg-[#1f7f3d] px-4 py-2 text-[11px] font-bold uppercase tracking-[0.03em] text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.15)]">
@@ -116,16 +116,17 @@ export default function VariantTrustCtaSection({ data, brandName, imageSrc }: Pr
               </p>
             </div>
 
-            <div className="relative mx-auto flex min-h-[220px] w-full max-w-[840px] items-end justify-center sm:min-h-[280px] lg:min-h-[408px]">
-                <div className="pointer-events-none absolute inset-x-[8%] bottom-4 h-10 rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.16),rgba(255,255,255,0))] blur-[22px]" />
-                <div className="pointer-events-none absolute right-[8%] top-[4%] h-[84%] w-[82%] bg-[radial-gradient(circle_at_45%_30%,rgba(255,255,255,0.12),transparent_34%)]" />
-                <Image
-                  src={imageSrc}
-                  alt={data.imageAlt ?? `${brandName} vehicle`}
-                  fill
-                  className="object-contain object-right-bottom drop-shadow-[0_22px_34px_rgba(0,0,0,0.24)]"
-                  sizes="(max-width: 1024px) 100vw, 45vw"
-                />
+            <div className="relative mx-auto flex min-h-[220px] w-full max-w-[840px] items-end justify-center overflow-hidden sm:min-h-[280px] lg:min-h-[408px]">
+              <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(7,21,45,0.08),rgba(7,21,45,0)_36%)]" />
+              <div className="pointer-events-none absolute inset-x-[8%] bottom-4 h-10 rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.16),rgba(255,255,255,0))] blur-[22px]" />
+              <div className="pointer-events-none absolute right-[8%] top-[4%] h-[84%] w-[82%] bg-[radial-gradient(circle_at_45%_30%,rgba(255,255,255,0.12),transparent_34%)]" />
+              <Image
+                src={imageSrc}
+                alt={data.imageAlt ?? `${brandName} vehicle`}
+                fill
+                className="object-cover object-[78%_center] drop-shadow-[0_22px_34px_rgba(0,0,0,0.24)] sm:object-[80%_center] lg:object-[84%_center]"
+                sizes="(max-width: 1024px) 100vw, 45vw"
+              />
             </div>
           </div>
 
@@ -188,8 +189,8 @@ export default function VariantTrustCtaSection({ data, brandName, imageSrc }: Pr
               </div>
             </div>
           </div>
-        </div>
-      </Container>
+        </Container>
+      </div>
     </Section>
   );
 }
