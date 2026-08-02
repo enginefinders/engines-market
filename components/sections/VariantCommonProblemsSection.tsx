@@ -113,7 +113,7 @@ export default function VariantCommonProblemsSection({ data, vehicleImage }: Pro
 
   return (
     <Section className="bg-white !py-[2px]">
-      <Container className="!max-w-none !px-[2px] sm:!px-[2px] lg:!px-[2px]">
+      <Container className="max-w-[1400px] px-0 sm:px-0 lg:px-0">
         <div>
           <div className="relative overflow-hidden bg-[linear-gradient(90deg,rgba(2,9,24,0.95),rgba(7,19,38,0.8)),url('/images/brands/bmw/brand/bmw-live-market-bg.png')] bg-cover bg-center px-5 py-4 sm:px-6 lg:px-9 lg:py-5">
             <div className="relative grid gap-4 lg:grid-cols-[minmax(0,0.96fr)_minmax(360px,0.9fr)] lg:items-center">

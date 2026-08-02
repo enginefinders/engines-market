@@ -409,22 +409,22 @@ export default function LiveMarketPricesSection({
   const headingLines = data.headingLines?.length ? data.headingLines : [data.h2];
   const sectionImage = imageSrc || "";
   const gridClass = isDocumentMode
-    ? "lg:grid-cols-[minmax(300px,0.34fr)_minmax(720px,0.66fr)] lg:items-stretch"
+    ? "lg:grid-cols-[400px_minmax(0,1fr)] lg:items-stretch"
     : "lg:grid-cols-[minmax(0,0.88fr)_minmax(0,1.12fr)] lg:items-stretch";
-  const imageColumnClass = isDocumentMode ? "w-full lg:flex lg:h-full lg:min-h-[760px]" : "w-full lg:h-full";
+  const imageColumnClass = isDocumentMode ? "w-full lg:flex lg:h-full lg:min-h-[792px]" : "w-full lg:h-full";
   const imageFrameClass = isDocumentMode
-    ? "overflow-hidden rounded-[14px] border border-[#d8e5f0] bg-[linear-gradient(180deg,#f5fbf6_0%,#eef6ff_100%)] shadow-[0_18px_42px_rgba(13,27,46,0.1)] lg:flex lg:h-full lg:w-full"
+    ? "overflow-hidden rounded-[12px] border border-[#e4edf5] bg-white shadow-[0_14px_32px_rgba(13,27,46,0.08)] lg:flex lg:h-full lg:w-full"
     : "";
   const brandImageClass = "h-full min-h-[320px] w-full object-center lg:min-h-[370px]";
   const feedColumnClass = isDocumentMode
-    ? "min-w-0 lg:flex lg:h-full lg:flex-col lg:min-h-[760px]"
+    ? "min-w-0 lg:flex lg:h-full lg:flex-col lg:min-h-[792px]"
     : "min-w-0 lg:flex lg:h-full lg:flex-col lg:min-h-[370px]";
   const imageSizes = isDocumentMode ? "(max-width: 1024px) 100vw, 34vw" : "(max-width: 1024px) 100vw, 48vw";
   const feedPanelClass = isDocumentMode
-    ? "overflow-hidden rounded-b-[14px] border border-[#102845] border-t-0 bg-[linear-gradient(180deg,#10243e_0%,#0c1c31_46%,#091523_100%)] shadow-[0_18px_42px_rgba(9,21,35,0.34)] lg:flex lg:flex-1 lg:flex-col lg:min-h-[760px]"
+    ? "overflow-hidden rounded-b-[14px] border border-[#102845] border-t-0 bg-[linear-gradient(180deg,#10243e_0%,#0c1c31_46%,#091523_100%)] shadow-[0_18px_42px_rgba(9,21,35,0.34)] lg:flex lg:flex-1 lg:flex-col lg:min-h-[792px]"
     : "overflow-hidden rounded-b-[14px] border border-white/10 bg-gradient-to-br from-[#0b1a2e] via-[#0f2035] to-[#0a1628] shadow-[0_10px_28px_rgba(0,0,0,0.4)] lg:flex lg:flex-1 lg:flex-col lg:min-h-[370px]";
   const feedScrollClass = isDocumentMode
-    ? "max-h-[440px] overflow-y-auto [scrollbar-width:thin] [scrollbar-color:rgba(103,199,255,0.4)_transparent] [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-[#67c7ff]/50 [&::-webkit-scrollbar-thumb]:hover:bg-[#67c7ff]/75 lg:max-h-[708px] lg:flex-1"
+    ? "max-h-[440px] overflow-y-auto [scrollbar-width:thin] [scrollbar-color:rgba(103,199,255,0.4)_transparent] [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-[#67c7ff]/50 [&::-webkit-scrollbar-thumb]:hover:bg-[#67c7ff]/75 lg:max-h-[740px] lg:flex-1"
     : "max-h-[440px] overflow-y-auto lg:max-h-none lg:flex-1";
 
   return (
@@ -473,7 +473,7 @@ export default function LiveMarketPricesSection({
             <div className={imageColumnClass}>
               <div className={imageFrameClass}>
                 {sectionImage ? (
-                  <div className="w-full bg-[radial-gradient(circle_at_18%_16%,rgba(187,247,208,0.72),rgba(255,255,255,0)_34%),radial-gradient(circle_at_82%_82%,rgba(191,219,254,0.44),rgba(255,255,255,0)_28%),linear-gradient(180deg,#f8fcf8_0%,#eef5ff_100%)] lg:relative lg:h-full lg:min-h-[760px]">
+                  <div className="w-full lg:relative lg:h-full lg:min-h-[792px]">
                     <Image
                       src={sectionImage}
                       alt={data.imageAlt ?? ""}
@@ -482,12 +482,12 @@ export default function LiveMarketPricesSection({
                       className="block h-auto w-full object-contain lg:hidden"
                       sizes="100vw"
                     />
-                    <div className="hidden lg:block lg:h-full lg:min-h-[760px]">
+                    <div className="hidden lg:block lg:h-full lg:min-h-[792px]">
                       <Image
                         src={sectionImage}
                         alt={data.imageAlt ?? ""}
                         fill
-                        className="scale-[1.012] object-contain object-center"
+                        className="scale-[1.01] object-cover object-top"
                         sizes={imageSizes}
                       />
                     </div>

@@ -1,0 +1,666 @@
+{
+  "brand": {
+    "name": "BMW",
+    "slug": "bmw",
+    "tone": "premium"
+  },
+  "model": {
+    "name": "BMW X4",
+    "slug": "x4"
+  },
+  "variant": {
+    "name": "BMW X4 xDrive35d",
+    "slug": "xdrive35d-engine",
+    "storageSlug": "bmw-x4-xdrive35d-engine"
+  },
+  "seo": {
+    "title": "BMW X4 xDrive35d Engine Replacement | Compare Prices",
+    "description": "BMW X4 xDrive35d engine replacement cost guide. Compare rebuilt, reconditioned & used N57D30 engine prices from £2,500. 12-month warranty & UK supply fit specialists.",
+    "canonical": "/bmw/x4/xdrive35d-engine"
+  },
+  "assets": {
+    "mainImage": "/images/brands/bmw/models/bmw-x4-model-card.png",
+    "smallImage": "/images/brands/bmw/models/bmw-x4-model-card.png",
+    "heroBg": "/images/brands/bmw/models/bmw-x4-model-card.png",
+    "howItWorksBg": "/images/brands/bmw/brand/bmw-how-it-works-bg.webp",
+    "ctaImage": "/images/brands/bmw/models/bmw-x4-model-card.png"
+  },
+  "structuredData": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.enginesmarket.co.uk/#website",
+        "url": "https://www.enginesmarket.co.uk/",
+        "name": "Engines Market",
+        "publisher": {
+          "@id": "https://www.enginesmarket.co.uk/#organization"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.enginesmarket.co.uk/#organization",
+        "name": "Engines Market",
+        "url": "https://www.enginesmarket.co.uk/",
+        "logo": "https://www.enginesmarket.co.uk/images/logo.png"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.enginesmarket.co.uk/bmw/x4/xdrive35d-engine/#webpage",
+        "url": "https://www.enginesmarket.co.uk/bmw/x4/xdrive35d-engine/",
+        "name": "BMW X4 xDrive35d Engine Replacement - Compare Prices & Get Quotes",
+        "description": "BMW X4 xDrive35d engine replacement cost guide. Compare rebuilt, reconditioned & used N57D30 engine prices from £2,500. 12-month warranty & UK supply fit specialists.",
+        "isPartOf": {
+          "@id": "https://www.enginesmarket.co.uk/#website"
+        },
+        "about": [
+          {
+            "@type": "Car",
+            "name": "BMW X4 xDrive35d",
+            "brand": {
+              "@type": "Brand",
+              "name": "BMW"
+            },
+            "model": "X4 xDrive35d"
+          },
+          {
+            "@type": "Service",
+            "name": "BMW X4 xDrive35d Engine Replacement"
+          }
+        ],
+        "mainEntity": {
+          "@id": "https://www.enginesmarket.co.uk/bmw/x4/xdrive35d-engine/#service"
+        },
+        "breadcrumb": {
+          "@id": "https://www.enginesmarket.co.uk/bmw/x4/xdrive35d-engine/#breadcrumb"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.enginesmarket.co.uk/bmw/x4/xdrive35d-engine/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.enginesmarket.co.uk/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "BMW",
+            "item": "https://www.enginesmarket.co.uk/bmw/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "BMW X4",
+            "item": "https://www.enginesmarket.co.uk/bmw/x4/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "BMW X4 xDrive35d",
+            "item": "https://www.enginesmarket.co.uk/bmw/x4/xdrive35d-engine/"
+          }
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://www.enginesmarket.co.uk/bmw/x4/xdrive35d-engine/#service",
+        "name": "BMW X4 xDrive35d Engine Replacement Service",
+        "serviceType": [
+          "BMW X4 xDrive35d Engine Replacement",
+          "Reconditioned BMW X4 xDrive35d Engines",
+          "Used BMW X4 xDrive35d Engines",
+          "BMW X4 xDrive35d Engine Supply and Fit",
+          "BMW X4 xDrive35d Engine Price Comparison"
+        ],
+        "provider": {
+          "@id": "https://www.enginesmarket.co.uk/#organization"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        "url": "https://www.enginesmarket.co.uk/bmw/x4/xdrive35d-engine/",
+        "description": "BMW X4 xDrive35d engine replacement cost guide. Compare rebuilt, reconditioned & used N57D30 engine prices from £2,500. 12-month warranty & UK supply fit specialists."
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.enginesmarket.co.uk/bmw/x4/xdrive35d-engine/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does a BMW X4 xDrive35d engine replacement cost in the UK?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A rebuilt N57D30 engine for the BMW X4 xDrive35d typically costs £6,000-£9,000 supply-only, depending on condition and supplier. Specialist fitting adds £780-£1,040 (12-16 hours at independent labour rates)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What are the signs of N57D30 timing chain failure in a BMW X4 xDrive35d?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The most common warning sign is a metallic rattling noise from the rear of the engine on cold start. Other symptoms include rough idle, reduced performance, and in severe cases, a check engine light."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is the BMW X4 xDrive35d N57D30 engine reliable for high mileage?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The N57D30 is widely regarded as one of BMW's more reliable modern diesel engines when properly maintained. With strict oil change intervals and preventative maintenance, it routinely exceeds 150,000-200,000 miles."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I fit a used BMW X4 xDrive35d engine instead of a rebuilt one?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, used N57D30 engines cost £2,500-£4,500 supply-only. However, they offer no warranty on internal condition and may carry the same original failure risks (timing chain, EGR, turbo)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does a BMW X4 xDrive35d engine replacement take with supply and fit?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A specialist can typically complete a BMW X4 xDrive35d engine replacement in 4-6 working days, including delivery of the rebuilt N57D30 engine and professional fitting."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What's the difference between the BMW X4 xDrive35d and xDrive30d?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Both use the N57D30 3.0-litre straight-six diesel, but the xDrive35d is the higher-output version. The xDrive30d produces 258hp, while the xDrive35d produces 313hp - a 55hp difference from different turbocharging and engine mapping."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "sections": {
+    "hero": {
+      "tag": "BMW X4 XDRIVE35D SPECIALISTS",
+      "h1": "BMW X4 xDrive35d Engine Replacement - Compare Prices & Get Quotes",
+      "subheading": "Get quotes today from trusted UK BMW X4 xDrive35d engine specialists. Compare prices on reconditioned, rebuilt and used engines for the 313hp 3.0-litre straight-six diesel - supply & fit available nationwide.",
+      "trustBadges": [
+        "Supply & Fit Available",
+        "12-Month Warranty",
+        "Nationwide Delivery",
+        "100+ Suppliers"
+      ],
+      "ctaLinkText": "Get Free BMW X4 xDrive35d Engine Quotes ->",
+      "supportingText": "Get tailored BMW X4 xDrive35d engine quotes from vetted UK specialists.",
+      "ticker": "● Instant Quotes · No Obligation · 100% Free · Reconditioned · Rebuilt · Used · Supply & Fit Available · UK-Wide Network",
+      "imageAlt": "",
+      "highlights": [
+        {
+          "title": "BMW X4 xDrive35d Engine",
+          "price": "N57D30B - from £4,500 to £7,000",
+          "line1": "N57D30B - from £4,500 to £7,000",
+          "line2": "-> Used from £2,500 · Reconditioned from £4,500 · Common codes: N57D30B, N57D30T1",
+          "detail": "-> Used from £2,500 · Reconditioned from £4,500 · Common codes: N57D30B, N57D30T1",
+          "image": "/images/brands/bmw/models/bmw-x4-model-card.png",
+          "imageAlt": ""
+        }
+      ],
+      "engineOptions": [
+        {
+          "label": "Used",
+          "price": "From £2,500",
+          "description": "Tested, bare/short engine",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "imageAlt": "",
+          "tone": "used"
+        },
+        {
+          "label": "Reconditioned",
+          "price": "From £4,500",
+          "description": "Rod bearings addressed, tested",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "imageAlt": "",
+          "tone": "reconditioned"
+        },
+        {
+          "label": "Rebuilt",
+          "price": "From quote",
+          "description": "Upgraded bearings, full teardown, revised valvetrain",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "imageAlt": "",
+          "tone": "rebuilt"
+        }
+      ],
+      "vehicleBadge": "xDrive35d",
+      "mobileBar": {
+        "brandText": "ENGINEMARKET",
+        "callLabel": "Call",
+        "quoteLabel": "GET QUOTES"
+      },
+      "registrationInput": {
+        "label": "Enter your BMW X4 xDrive35d registration",
+        "platePlaceholder": "AB12 CDE",
+        "countryCode": "UK",
+        "countryLabel": "United Kingdom"
+      },
+      "form": {
+        "heading": "Find Your BMW X4 xDrive35d Engine",
+        "subtitle": "Enter your registration number to compare BMW X4 xDrive35d engine options.",
+        "inputPlaceholder": "AB12 CDE",
+        "buttonText": "Get Free BMW X4 xDrive35d Engine Quotes ->",
+        "note": "Secure enquiry - no spam, no pressure. Genuine quotes only from vetted UK BMW X4 xDrive35d specialists."
+      }
+    },
+    "howItWorks": {
+      "tag": "How It Works",
+      "h2": "3 Simple Steps to Finding the Best BMW X4 xDrive35d Replacement Engine",
+      "headingLines": [
+        "3 Simple Steps",
+        "to Finding the Best BMW X4 xDrive35d Replacement Engine"
+      ],
+      "cards": [
+        {
+          "number": 1,
+          "icon": "registration",
+          "front": {
+            "h3": "Confirm Your BMW X4 xDrive35d",
+            "text": "🖼️ [Registration icon]. Instantly verify your exact 3.0-litre diesel engine code and fuel type via DVLA - xDrive35d or xDrive35d M Sport"
+          },
+          "back": {
+            "heading": "EnginesMarket cross-checks the DVLA record against known BMW X4 xDrive35d engine codes (N57D30B, N57D30T1) so your quote request is accurate before it reaches a specialist",
+            "text": "This ensures you're quoted for the correct 313hp straight-six unit, not a lower-spec diesel.",
+            "bullets": [
+              "This ensures you're quoted for the correct 313hp straight-six unit, not a lower-spec diesel."
+            ]
+          }
+        },
+        {
+          "number": 2,
+          "icon": "quote",
+          "front": {
+            "h3": "Compare BMW X4 xDrive35d Engine Quotes",
+            "text": "🖼️ [Compare icon]. Get prices on used, reconditioned and rebuilt N57D30 engines from our UK network"
+          },
+          "back": {
+            "heading": "Our vetted supplier network sends you quotes covering all condition types - used, reconditioned and rebuilt - with transparent, itemised pricing",
+            "text": "No obligation, no pressure, just genuine BMW X4 xDrive35d specialist quotes delivered to your inbox.",
+            "bullets": [
+              "No obligation, no pressure, just genuine BMW X4 xDrive35d specialist quotes delivered to your inbox."
+            ]
+          }
+        },
+        {
+          "number": 3,
+          "icon": "shield",
+          "front": {
+            "h3": "Choose Your BMW X4 xDrive35d Specialist",
+            "text": "🖼️ [Booking icon]. Select your preferred supplier with 12-month warranty and nationwide delivery options"
+          },
+          "back": {
+            "heading": "Every rebuilt BMW X4 xDrive35d engine supplied through our network carries a minimum 12-month unlimited-mileage warranty",
+            "text": "Choose supply-only or full supply & fit - nationwide delivery and collection options available from UK BMW specialists.",
+            "bullets": [
+              "Choose supply-only or full supply & fit - nationwide delivery and collection options available from UK BMW specialists."
+            ]
+          }
+        }
+      ],
+      "tagline": "",
+      "ui": {
+        "stepLabel": "Step",
+        "desktopClosedLabel": "Click to expand",
+        "desktopOpenLabel": "Click to view details",
+        "mobileOpenLabel": "Tap to flip",
+        "mobileCloseLabel": "Tap to flip back",
+        "footerNote": "Most replacements completed within 3-5 days.",
+        "mobileTrustItems": [
+          "12-Month Warranty",
+          "Supply & Fit Available",
+          "Nationwide Delivery",
+          "Trusted UK Suppliers"
+        ]
+      }
+    },
+    "historyTimeline": {
+      "tag": "Variant History",
+      "h2": "BMW X4 xDrive35d - Engine History & Specs at a Glance",
+      "intro": "The BMW X4 xDrive35d joined the first-generation (F26) X4 lineup at launch in July 2014 as the flagship diesel variant. Powered exclusively by BMW's N57D30 3.0-litre straight-six turbodiesel, the xDrive35d offered 313hp and 630Nm of torque - making it the most potent diesel X4 available until the G02-generation M40d arrived in 2018.",
+      "milestones": [
+        {
+          "year": "",
+          "description": "July 2014 - BMW X4 xDrive35d launched in the UK with N57D30B engine, 3.0-litre straight-six diesel producing 313hp and 630Nm; paired exclusively with 8-speed ZF automatic transmission and xDrive all-wheel drive."
+        },
+        {
+          "year": "2016",
+          "description": "Engine code designation N57D30T1 appears on later production models; specifications unchanged at 313hp / 630Nm."
+        },
+        {
+          "year": "",
+          "description": "2018 (March) - F26-generation X4 production ends; xDrive35d discontinued with no direct successor in the G02 generation (M40d replaced it as the performance diesel flagship)."
+        }
+      ],
+      "vehicleTitle": "BMW X4 xDrive35d",
+      "vehicleMeta": [
+        {
+          "label": "Fuel Type",
+          "value": "Diesel"
+        },
+        {
+          "label": "Engine Size Range",
+          "value": "3.0L (2,993cc)"
+        },
+        {
+          "label": "Power Output Range",
+          "value": "313hp (230kW) across all production years"
+        }
+      ],
+      "specsLabel": "Key Specs Snapshot",
+      "specs": [
+        {
+          "label": "Fuel Type",
+          "value": "Diesel"
+        },
+        {
+          "label": "Engine Size Range",
+          "value": "3.0L (2,993cc)"
+        },
+        {
+          "label": "Power Output Range",
+          "value": "313hp (230kW) across all production years"
+        },
+        {
+          "label": "Years Produced",
+          "value": "2014-2018"
+        }
+      ],
+      "closingNote": "Every engine fitted to the BMW X4 xDrive35d is covered below, with UK rebuilt pricing and known failure points for the N57D30 straight-six diesel."
+    },
+    "engineGuide": {
+      "tag": "Engine Codes & Pricing",
+      "h2": "BMW X4 xDrive35d Engine Codes - Specifications & Replacement Cost",
+      "sectionTitle": "Compatible Engine Codes & Cost Guide",
+      "sectionSubtitle": "Find your exact engine code, specs and UK replacement cost guide.",
+      "intro": "",
+      "items": [
+        {
+          "code": "N57D30B / N57D30T1",
+          "title": "3.0L Diesel (2014-2018)",
+          "specs": [
+            {
+              "label": "Power Output",
+              "value": "313hp (230kW)"
+            },
+            {
+              "label": "Years Fitted",
+              "value": "2014-2018"
+            }
+          ],
+          "costs": [
+            {
+              "label": "Used",
+              "value": "£2,500-£4,500",
+              "description": ""
+            },
+            {
+              "label": "Reconditioned",
+              "value": "£4,500-£7,000",
+              "description": ""
+            },
+            {
+              "label": "Rebuilt",
+              "value": "£6,000-£9,000",
+              "description": ""
+            }
+          ],
+          "compatibleTrimLevels": [
+            "xDrive35d",
+            "xDrive35d SE",
+            "xDrive35d xLine",
+            "xDrive35d M Sport (xDrive35d M Sport represents the vast majority of UK sales)"
+          ],
+          "commonFailure": "The N57D30 engine is known for timing chain stretch (rear-mounted chain, labour-intensive to replace), EGR cooler failures which can lead to coolant loss and in rare cases vehicle fires, turbocharger wear from oil starvation or excessive heat, and intake manifold carbon buildup requiring periodic cleaning. Typical failure mileage: 80,000-150,000 miles.",
+          "cta": "-> Get quotes for N57D30 BMW X4 xDrive35d engine replacement",
+          "closing": "-> Get quotes for N57D30 BMW X4 xDrive35d engine replacement"
+        }
+      ],
+      "prompt": ""
+    },
+    "commonProblems": {
+      "tag": "Common Problems",
+      "h2": "BMW X4 xDrive35d Engine Problems - Repair Cost vs Replacement",
+      "h3": "The BMW X4 xDrive35d's N57D30 3.0-litre straight-six diesel is broadly regarded as one of BMW's more robust diesel engines when properly maintained. However, it has well-documented weak points - timing chain stretch, EGR cooler failure, and turbocharger wear being the most significant. Rebuilt engines supplied through EnginesMarket include upgraded components addressing these original failure points, plus a minimum 12-month unlimited-mileage warranty.",
+      "problems": [
+        {
+          "group": "N57D30 Timing Chain Stretch",
+          "h4": "N57D30 Timing Chain Stretch - Why the BMW X4 xDrive35d's Straight-Six Wears Prematurely",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "affectedModels": "BMW X4 xDrive35d (N57D30B / N57D30T1, 2014-2018)",
+          "typicalFailureMileage": "80,000-150,000 miles",
+          "rootCause": "Like the N47, the N57's timing chain is positioned at the flywheel side (rear) of the engine. Chain stretch and guide deterioration cause slack, leading to rattling noises on cold start and eventual timing jump. If the chain snaps or jumps teeth, valve-to-piston collision occurs - requiring a full engine replacement.",
+          "whyItHappens": "",
+          "repairOptions": [
+            {
+              "tier": "Preventative Timing Chain Replacement - catch it early",
+              "dealerPrice": "£2,500-£3,500",
+              "specialistPrice": "£1,500-£2,500",
+              "whatItInvolves": "New timing chain, tensioners, guides, and oil pump chain; engine remains in car",
+              "longevity": "80,000+ miles if caught before stretch causes sprocket wear",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Full Replacement - Rebuilt Engine - after catastrophic failure",
+              "dealerPrice": "£9,000-£13,000",
+              "specialistPrice": "£6,000-£9,000",
+              "whatItInvolves": "Supply & fit of rebuilt N57D30 engine with upgraded timing components, bench tested, 12-month warranty",
+              "longevity": "100,000+ miles expected; upgraded components address original flaw",
+              "estimatedTime": ""
+            }
+          ],
+          "vehicleValueCheck": "A typical 2014-2018 BMW X4 xDrive35d M Sport with 60,000-100,000 miles is worth approximately £8,180-£15,460 depending on condition and mileage. Private sale values average around £19,800 for well-maintained examples. With rebuilt engine costs at £6,000-£9,000 supply-only (plus £780-£1,040 fitting), replacement represents roughly 40-60% of vehicle value - firmly in \"watch\" territory. Evaluate the car's overall condition carefully before committing to a full rebuild. If the body and transmission are sound, replacement makes excellent financial sense on a £10k+ example.",
+          "recommendation": "If you hear a rattling noise from the rear of the engine on cold starts, act immediately. A preventative timing chain replacement at a specialist costs £1,500-£2,500 and saves the engine - far cheaper than a full rebuild. Once the chain fails, replacement is the only option. On an xDrive35d worth £10,000-£15,000, a £6,000-£9,000 rebuilt engine with upgraded components is a viable investment if the rest of the car is in good order.",
+          "cta": "-> Compare rebuilt N57D30 BMW X4 xDrive35d engine prices"
+        },
+        {
+          "group": "N57D30 EGR Cooler Failure",
+          "h4": "N57D30 EGR Cooler Failure - Diesel Emissions System Weakness",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "affectedModels": "BMW X4 xDrive35d (N57D30B / N57D30T1, 2014-2018)",
+          "typicalFailureMileage": "60,000-100,000 miles",
+          "rootCause": "The exhaust gas recirculation (EGR) cooler develops internal cracks or becomes clogged with carbon deposits. This can lead to coolant loss, white smoke from the exhaust, reduced engine performance, and in severe cases, coolant entering the combustion chamber causing hydro-lock. BMW has acknowledged that prior corrective actions on N57 EGR coolers were inadequate, leading to continued instances of leaks and - in rare cases - vehicle fires.",
+          "whyItHappens": "",
+          "repairOptions": [
+            {
+              "tier": "EGR Cooler Replacement - standard fix",
+              "dealerPrice": "£1,200-£1,800",
+              "specialistPrice": "£700-£1,200",
+              "whatItInvolves": "Replace EGR cooler, clean EGR valve, replace gaskets, reset adaptations",
+              "longevity": "60,000-80,000 miles on replacement unit",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "EGR Cooler + Intake Manifold Cleaning - severe carbon buildup",
+              "dealerPrice": "£1,600-£2,500",
+              "specialistPrice": "£1,000-£1,600",
+              "whatItInvolves": "Replace cooler, walnut-blast intake manifold and valves, replace all gaskets",
+              "longevity": "80,000+ miles with proper maintenance",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Full Replacement - Rebuilt Engine - after hydro-lock damage",
+              "dealerPrice": "£9,000-£13,000",
+              "specialistPrice": "£6,000-£9,000",
+              "whatItInvolves": "Supply & fit rebuilt engine with upgraded EGR components, 12-month warranty",
+              "longevity": "Complete restoration with upgraded cooler design",
+              "estimatedTime": ""
+            }
+          ],
+          "vehicleValueCheck": "",
+          "recommendation": "At the first sign of coolant loss without visible external leaks, have the EGR cooler pressure-tested. Replacement at a specialist (£700-£1,200) is significantly cheaper than dealer pricing (£1,200-£1,800). If the failure has caused coolant ingestion and bent connecting rods, a rebuilt engine is your only option - budget for a rebuilt N57D30 rather than a new dealer unit to save £3,000-£4,000.",
+          "cta": "-> Get quotes for N57D30 EGR cooler replacement and engine options for your X4 xDrive35d"
+        },
+        {
+          "group": "N57D30 Turbocharger Failure",
+          "h4": "N57D30 Turbocharger Failure - Performance Diesel Weakness",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "affectedModels": "BMW X4 xDrive35d (N57D30B / N57D30T1, 2014-2018)",
+          "typicalFailureMileage": "80,000-120,000 miles",
+          "rootCause": "The N57's turbocharger can fail due to oil starvation (often from neglected oil changes or blocked oil feed lines) or excessive heat from sustained high-load driving. Symptoms include loss of power, excessive smoke from the exhaust, and unusual noises from the engine bay.",
+          "whyItHappens": "",
+          "repairOptions": [
+            {
+              "tier": "Turbocharger Rebuild / Replacement - turbo only",
+              "dealerPrice": "£2,500-£4,000",
+              "specialistPrice": "£1,400-£2,200",
+              "whatItInvolves": "Remove, rebuild or replace turbo unit, new gaskets and oil lines",
+              "longevity": "60,000+ miles on rebuilt turbo",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Full Replacement - Rebuilt Engine - after turbo failure debris",
+              "dealerPrice": "£10,000-£14,000",
+              "specialistPrice": "£6,500-£9,500",
+              "whatItInvolves": "Supply & fit rebuilt N57D30 engine with upgraded turbo components",
+              "longevity": "Full factory specification; upgraded components available",
+              "estimatedTime": ""
+            }
+          ],
+          "vehicleValueCheck": "",
+          "recommendation": "The N57D30 demands strict oil change intervals - every 8,000-10,000 miles with BMW Longlife-04 spec oil. If you hear metallic rattling or whistling from the turbo, or notice blue exhaust smoke, have it inspected immediately. Turbo rebuild or replacement at a specialist (£1,400-£2,200) is significantly cheaper than dealer pricing. If the turbo has catastrophically failed and sent debris through the engine, a full replacement is required.",
+          "cta": "-> Compare rebuilt N57D30 turbo and engine prices for BMW X4 xDrive35d"
+        }
+      ],
+      "emptyState": null,
+      "finalCta": {
+        "h4": "Don't Let Engine Failure Write Off Your BMW X4 xDrive35d",
+        "paragraph": "From N57 timing chain stretch to EGR cooler failures and turbocharger wear, the BMW X4 xDrive35d's 3.0-litre straight-six diesel has specific weak points that can lead to costly repairs. EnginesMarket connects you with trusted UK BMW X4 specialists who supply rebuilt N57D30 engines with upgraded components designed to address these original failure points - all backed by a minimum 12-month unlimited-mileage warranty. Compare prices across our nationwide network and get back on the road without the main dealer premium.",
+        "buttonText": "Compare BMW X4 xDrive35d Engine Replacement Prices Now ->",
+        "disclaimer": "\"All prices are indicative UK market ranges based on historical quote data and repair requests from our network of engine specialists. Dealer pricing is estimated based on published main dealer labour rates and genuine OEM parts pricing. Specialist pricing reflects actual quote data from EnginesMarket's UK network. Actual costs vary depending on damage severity, vehicle condition, variant, and workshop location within the UK. Use our free comparison tool to get tailored quotes for your specific BMW X4 xDrive35d. Every engine supplied through EnginesMarket carries a minimum 12-month unlimited mileage warranty - always confirm exact terms with your chosen supplier.\""
+      },
+      "reviewSummary": null
+    },
+    "faq": {
+      "tag": "FAQ",
+      "h2": "BMW X4 xDrive35d Engine Replacement - Frequently Asked Questions",
+      "intro": "Everything BMW X4 xDrive35d owners usually ask before choosing a rebuilt, reconditioned or used replacement engine.",
+      "defaultOpenIndex": 0,
+      "disclaimer": "",
+      "items": [
+        {
+          "question": "How much does a BMW X4 xDrive35d engine replacement cost in the UK?",
+          "answer": "A rebuilt N57D30 engine for the BMW X4 xDrive35d typically costs £6,000-£9,000 supply-only, depending on condition and supplier. Specialist fitting adds £780-£1,040 (12-16 hours at independent labour rates).",
+          "keyPoints": [
+            "Used engines: £2,500-£4,500 supply-only",
+            "Reconditioned units: £4,500-£7,000 supply-only",
+            "Main dealer replacement can cost 2-3x more than specialist rebuilt units"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Get a fixed-price quote for your BMW X4 xDrive35d engine replacement today"
+        },
+        {
+          "question": "What are the signs of N57D30 timing chain failure in a BMW X4 xDrive35d?",
+          "answer": "The most common warning sign is a metallic rattling noise from the rear of the engine on cold start. Other symptoms include rough idle, reduced performance, and in severe cases, a check engine light.",
+          "keyPoints": [
+            "Rattling noise is most noticeable on first start of the day",
+            "Chain stretch can cause the engine to jump timing without warning",
+            "Preventative replacement costs £1,500-£2,500 at a specialist",
+            "Post-failure engine replacement costs £6,000-£9,000 for a rebuilt unit"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Compare rebuilt N57D30 engine prices for your X4 xDrive35d"
+        },
+        {
+          "question": "Is the BMW X4 xDrive35d N57D30 engine reliable for high mileage?",
+          "answer": "The N57D30 is widely regarded as one of BMW's more reliable modern diesel engines when properly maintained. With strict oil change intervals and preventative maintenance, it routinely exceeds 150,000-200,000 miles.",
+          "keyPoints": [
+            "Timing chain stretch is the primary concern - address rattling immediately",
+            "EGR cooler failure is common - pressure-test at first sign of coolant loss",
+            "Turbocharger wear is preventable with 8,000-10,000-mile oil changes",
+            "Intake manifold carbon cleaning recommended every 50,000-60,000 miles"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Get quotes for a rebuilt N57D30 engine for your X4 xDrive35d"
+        },
+        {
+          "question": "Can I fit a used BMW X4 xDrive35d engine instead of a rebuilt one?",
+          "answer": "Yes, used N57D30 engines cost £2,500-£4,500 supply-only. However, they offer no warranty on internal condition and may carry the same original failure risks (timing chain, EGR, turbo).",
+          "keyPoints": [
+            "Used engines are 40-60% cheaper than rebuilt units upfront",
+            "No guarantee on timing chain wear, injector health, or turbo condition",
+            "Rebuilt engines address original failure points with upgraded components",
+            "All EnginesMarket rebuilt engines include 12-month unlimited-mileage warranty"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Compare used vs rebuilt engine prices for your BMW X4 xDrive35d"
+        },
+        {
+          "question": "How long does a BMW X4 xDrive35d engine replacement take with supply and fit?",
+          "answer": "A specialist can typically complete a BMW X4 xDrive35d engine replacement in 4-6 working days, including delivery of the rebuilt N57D30 engine and professional fitting.",
+          "keyPoints": [
+            "Engine delivery to your chosen garage takes 1-2 working days",
+            "Fitting time: 3-4 days for the 3.0-litre straight-six (12-16 labour hours)",
+            "ISN coding and immobiliser matching adds 1 day for ECU synchronisation",
+            "Most specialists offer courtesy cars or collection/delivery services"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Book supply and fit for your BMW X4 xDrive35d engine replacement"
+        },
+        {
+          "question": "What's the difference between the BMW X4 xDrive35d and xDrive30d?",
+          "answer": "Both use the N57D30 3.0-litre straight-six diesel, but the xDrive35d is the higher-output version. The xDrive30d produces 258hp, while the xDrive35d produces 313hp - a 55hp difference from different turbocharging and engine mapping.",
+          "keyPoints": [
+            "xDrive35d: 313hp, 630Nm torque, 0-62mph in 5.2 seconds",
+            "xDrive30d: 258hp, 560Nm torque, 0-62mph in 5.8 seconds",
+            "Both share the same N57D30 engine family and common failure points",
+            "xDrive35d was the flagship diesel until the G02 M40d arrived in 2018"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Get the right engine for your specific X4 variant"
+        }
+      ],
+      "ui": {
+        "questionLabelPrefix": "Question",
+        "keyPointsLabel": "Key points",
+        "comparisonTableLabel": "Comparison table",
+        "disclaimerLabel": "Disclaimer",
+        "warningTitle": "Important"
+      }
+    },
+    "trustCta": {
+      "tag": "Why Choose Us",
+      "h2": "Compare BMW X4 xDrive35d Engine Prices Today",
+      "intro": "Compare quotes from trusted UK BMW X4 xDrive35d engine specialists with warranty-backed rebuilt, reconditioned and used options nationwide.",
+      "points": [
+        {
+          "title": "100+ N57D30 engines supplied for BMW X4 xDrive35d through our network",
+          "description": ""
+        },
+        {
+          "title": "12-Month Warranty on every rebuilt BMW X4 xDrive35d engine",
+          "description": ""
+        },
+        {
+          "title": "Nationwide UK delivery",
+          "description": "supply & fit available from BMW specialists"
+        }
+      ],
+      "finalText": "Comparing quotes for your BMW X4 xDrive35d engine replacement is completely free and carries no obligation. Enter your registration above to get matched with trusted UK specialists who supply rebuilt, reconditioned and used N57D30 engines specifically for your xDrive35d. Every rebuilt unit comes with a minimum 12-month unlimited-mileage warranty, upgraded components addressing the original failure points, and nationwide delivery or supply & fit options.",
+      "buttonText": "Get Free BMW X4 xDrive35d Engine Quotes ->",
+      "secondaryAction": {
+        "text": "",
+        "href": "tel:03330000044"
+      },
+      "ui": {
+        "showSecondaryAction": false
+      }
+    }
+  }
+}

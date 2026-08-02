@@ -1,0 +1,764 @@
+{
+  "brand": {
+    "name": "BMW",
+    "slug": "bmw",
+    "tone": "premium"
+  },
+  "model": {
+    "name": "BMW X7",
+    "slug": "x7"
+  },
+  "variant": {
+    "name": "BMW X7 M60i",
+    "slug": "m60i-engine",
+    "storageSlug": "bmw-x7-m60i-engine"
+  },
+  "seo": {
+    "title": "BMW X7 M60i Engine Replacement | Compare Prices",
+    "description": "BMW X7 M60i engine replacement cost guide. Compare rebuilt, reconditioned & used S68B44 V8 engine prices from £7,500. 12-month warranty & UK supply fit specialists.",
+    "canonical": "/bmw/x7/m60i-engine"
+  },
+  "assets": {
+    "mainImage": "/images/brands/bmw/models/bmw-x6-model-card.png",
+    "smallImage": "/images/brands/bmw/models/bmw-x6-model-card.png",
+    "heroBg": "/images/brands/bmw/models/bmw-x6-model-card.png",
+    "howItWorksBg": "/images/brands/bmw/brand/bmw-how-it-works-bg.webp",
+    "ctaImage": "/images/brands/bmw/models/bmw-x6-model-card.png"
+  },
+  "structuredData": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.enginesmarket.co.uk/#website",
+        "url": "https://www.enginesmarket.co.uk/",
+        "name": "Engines Market",
+        "publisher": {
+          "@id": "https://www.enginesmarket.co.uk/#organization"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.enginesmarket.co.uk/#organization",
+        "name": "Engines Market",
+        "url": "https://www.enginesmarket.co.uk/",
+        "logo": "https://www.enginesmarket.co.uk/images/logo.png",
+        "sameAs": [
+          "https://www.facebook.com/enginesmarket",
+          "https://x.com/EnginesMarket",
+          "https://www.instagram.com/enginesmarketuk/",
+          "https://www.tiktok.com/@enginesmarket"
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.enginesmarket.co.uk/bmw/x7/m60i-engine/#webpage",
+        "url": "https://www.enginesmarket.co.uk/bmw/x7/m60i-engine/",
+        "name": "BMW X7 M60i Engine Replacement - Compare Prices & Get Quotes",
+        "description": "BMW X7 M60i engine replacement cost guide. Compare rebuilt, reconditioned & used S68B44 V8 engine prices from £7,500. 12-month warranty & UK supply fit specialists.",
+        "isPartOf": {
+          "@id": "https://www.enginesmarket.co.uk/#website"
+        },
+        "about": [
+          {
+            "@type": "Car",
+            "name": "BMW X7 M60i",
+            "brand": {
+              "@type": "Brand",
+              "name": "BMW"
+            },
+            "model": "X7 M60i"
+          },
+          {
+            "@type": "Service",
+            "name": "BMW X7 M60i Engine Replacement"
+          }
+        ],
+        "mainEntity": {
+          "@id": "https://www.enginesmarket.co.uk/bmw/x7/m60i-engine/#service"
+        },
+        "breadcrumb": {
+          "@id": "https://www.enginesmarket.co.uk/bmw/x7/m60i-engine/#breadcrumb"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.enginesmarket.co.uk/bmw/x7/m60i-engine/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.enginesmarket.co.uk/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "BMW",
+            "item": "https://www.enginesmarket.co.uk/bmw/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "BMW X7",
+            "item": "https://www.enginesmarket.co.uk/bmw/x7/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "BMW X7 M60i",
+            "item": "https://www.enginesmarket.co.uk/bmw/x7/m60i-engine/"
+          }
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://www.enginesmarket.co.uk/bmw/x7/m60i-engine/#service",
+        "name": "BMW X7 M60i Engine Replacement Service",
+        "serviceType": [
+          "BMW X7 M60i Engine Replacement",
+          "Reconditioned BMW X7 M60i Engines",
+          "Used BMW X7 M60i Engines",
+          "BMW X7 M60i Engine Supply and Fit",
+          "BMW X7 M60i Engine Price Comparison"
+        ],
+        "provider": {
+          "@id": "https://www.enginesmarket.co.uk/#organization"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        "url": "https://www.enginesmarket.co.uk/bmw/x7/m60i-engine/",
+        "description": "BMW X7 M60i engine replacement cost guide. Compare rebuilt, reconditioned & used S68B44 V8 engine prices from £7,500. 12-month warranty & UK supply fit specialists."
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.enginesmarket.co.uk/bmw/x7/m60i-engine/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does a BMW X7 M60i engine replacement cost in the UK?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A full BMW X7 M60i engine replacement typically costs £7,500-£12,000 supply-only for a rebuilt S68B44 unit, or £8,500-£13,000 fitted by a specialist. Used engines start from £4,500, while reconditioned units typically cost £6,500-£9,500. Prices reflect the hot-vee V8 complexity - specialist rebuilders only. Professional fitting adds £1,000-£2,000 including ECU coding and 48V system calibration. Rebuilt units include upgraded piston rings and cooling components. 12-month unlimited-mileage warranty on all rebuilt engines."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What are the common problems with the BMW X7 M60i S68B44 engine?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The S68B44 V8 has three main areas of reported concern: oil consumption (piston rings and valve stem seals), turbocharger wastegate rattle and boost loss, and cooling system leaks (expansion tank and crossover pipes). Oil consumption typically appears from 30,000-80,000 miles. Wastegate rattle on deceleration indicates actuator wear. Low coolant warnings point to cooling system leaks. The hot-vee design concentrates heat - regular maintenance is critical. Ignoring oil consumption on the S68 V8 can lead to bore scoring and catastrophic engine failure."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is the BMW X7 M60i reliable? How long does the S68B44 engine last?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The S68B44 is BMW's latest hot-vee V8, building on lessons from the N63 and S63. It's more robust than its predecessors, with closed-deck blocks and reinforced internals. With proper maintenance - strict oil change intervals and proactive cooling system care - S68 engines can exceed 100,000-150,000 miles. Use BMW Longlife-04 oil and change every 8,000-10,000 miles. Oil consumption and cooling system are the main wear items. 48V mild-hybrid system requires specialist maintenance. The S68 is a significant improvement over earlier N63 engines."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is it worth replacing the engine on a BMW X7 M60i?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "For a 2022-2024 X7 M60i worth £73,000-£95,000, a £7,500-£12,000 rebuilt S68B44 engine represents excellent value - typically 10-18% of the vehicle's value. Replacement cost is small relative to vehicle value. If body, gearbox, and chassis are sound, a rebuilt engine adds years of life. Used engine (£4,500-£7,000) is the budget option for short-term ownership. Rebuilt engine (£7,500-£12,000) offers warranty and peace of mind."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What's the difference between the BMW X7 M60i and the M50i?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The M60i (2022-present) replaced the M50i (2019-2022). Both use 4.4-litre twin-turbo V8s, but the M60i features the newer S68B44 engine with 48V mild-hybrid assistance, closed-deck block, and improved thermal management. M60i: S68B44, 530hp, 48V mild-hybrid, 4.7s 0-62mph. M50i: N63B44T3, 523hp, no mild-hybrid. M60i has improved fuel economy and smoother stop-start. Engine codes are not interchangeable - always match the correct code."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I replace my BMW X7 M60i engine with a different size or fuel type?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Engine swaps to a different size or fuel type are technically complex and rarely cost-effective on the G07 X7. Stick to like-for-like replacement using the correct S68B44A or S68B44T0 engine code for your M60i. ECU, wiring loom, fuel system, and exhaust all differ between petrol and diesel. 48V mild-hybrid system is integrated with the engine. Transmission requires specific fluid (ZF Lifeguard Hybrid 2). Insurance must be notified of any non-standard engine swap."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "sections": {
+    "hero": {
+      "tag": "BMW X7 M60i SPECIALISTS",
+      "h1": "BMW X7 M60i Engine Replacement - Compare Prices & Get Quotes",
+      "subheading": "Get quotes today from trusted UK BMW X7 M60i engine specialists. Compare prices on reconditioned, rebuilt and used S68B44 V8 engines for the G07 X7 M60i - supply & fit available nationwide.",
+      "trustBadges": [
+        "Supply & Fit Available",
+        "12-Month Warranty",
+        "Nationwide Delivery",
+        "100+ Suppliers"
+      ],
+      "ctaLinkText": "Get Free BMW X7 M60i Engine Quotes ->",
+      "supportingText": "Get tailored BMW X7 M60i engine quotes from vetted UK specialists.",
+      "ticker": "● Instant Quotes · No Obligation · 100% Free · Reconditioned · Rebuilt · Used · Supply & Fit Available · UK-Wide Network",
+      "imageAlt": "",
+      "highlights": [
+        {
+          "title": "BMW X7 M60i Engine",
+          "price": "S68B44A / S68B44T0 - from £7,500 to £12,000",
+          "line1": "S68B44A / S68B44T0 - from £7,500 to £12,000",
+          "line2": "-> Used from £4,500 · Reconditioned from £6,500 · Common codes: S68B44A, S68B44T0",
+          "detail": "-> Used from £4,500 · Reconditioned from £6,500 · Common codes: S68B44A, S68B44T0",
+          "image": "/images/brands/bmw/models/bmw-x6-model-card.png",
+          "imageAlt": ""
+        }
+      ],
+      "engineOptions": [
+        {
+          "label": "Used",
+          "price": "From £4,500",
+          "description": "Tested, bare/short engine",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "imageAlt": "",
+          "tone": "used"
+        },
+        {
+          "label": "Reconditioned",
+          "price": "From £6,500",
+          "description": "Rod bearings addressed, tested",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "imageAlt": "",
+          "tone": "reconditioned"
+        },
+        {
+          "label": "Rebuilt",
+          "price": "From quote",
+          "description": "Upgraded bearings, full teardown, revised valvetrain",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "imageAlt": "",
+          "tone": "rebuilt"
+        }
+      ],
+      "vehicleBadge": "M60i",
+      "mobileBar": {
+        "brandText": "ENGINEMARKET",
+        "callLabel": "Call",
+        "quoteLabel": "GET QUOTES"
+      },
+      "registrationInput": {
+        "label": "Enter your BMW X7 M60i registration",
+        "platePlaceholder": "AB12 CDE",
+        "countryCode": "UK",
+        "countryLabel": "United Kingdom"
+      },
+      "form": {
+        "heading": "Find Your BMW X7 M60i Engine",
+        "subtitle": "Enter your registration number to compare BMW X7 M60i engine options.",
+        "inputPlaceholder": "AB12 CDE",
+        "buttonText": "Get Free BMW X7 M60i Engine Quotes ->",
+        "note": "Secure enquiry - no spam, no pressure. Genuine quotes only from vetted UK BMW X7 M60i specialists."
+      }
+    },
+    "howItWorks": {
+      "tag": "How It Works",
+      "h2": "3 Simple Steps to Finding the Best BMW X7 M60i Replacement Engine",
+      "headingLines": [
+        "3 Simple Steps",
+        "to Finding the Best BMW X7 M60i Replacement Engine"
+      ],
+      "cards": [
+        {
+          "number": 1,
+          "icon": "registration",
+          "front": {
+            "h3": "Confirm Your BMW X7 M60i",
+            "text": "🖼️ [Registration icon]. Instantly verify your exact G07 X7 M60i and S68B44 V8 engine code via DVLA"
+          },
+          "back": {
+            "heading": "EnginesMarket cross-checks the DVLA record against known BMW X7 M60i engine codes - S68B44A, S68B44T0 - so your quote request is accurate before it reaches a supplier.",
+            "text": "EnginesMarket cross-checks the DVLA record against known BMW X7 M60i engine codes - S68B44A, S68B44T0 - so your quote request is accurate before it reaches a supplier.",
+            "bullets": [
+              "EnginesMarket cross-checks the DVLA record against known BMW X7 M60i engine codes - S68B44A, S68B44T0 - so your quote request is accurate before it reaches a supplier."
+            ]
+          }
+        },
+        {
+          "number": 2,
+          "icon": "quote",
+          "front": {
+            "h3": "Compare BMW X7 M60i Engine Quotes",
+            "text": "🖼️ [Compare icon]. See used, reconditioned and rebuilt S68B44 V8 engine prices side by side"
+          },
+          "back": {
+            "heading": "Our network of UK BMW specialists sends you quotes covering all condition types with transparent, itemised pricing - no obligation, no pressure.",
+            "text": "Our network of UK BMW specialists sends you quotes covering all condition types with transparent, itemised pricing - no obligation, no pressure.",
+            "bullets": [
+              "Our network of UK BMW specialists sends you quotes covering all condition types with transparent, itemised pricing - no obligation, no pressure."
+            ]
+          }
+        },
+        {
+          "number": 3,
+          "icon": "shield",
+          "front": {
+            "h3": "Choose Your BMW X7 M60i Specialist",
+            "text": "🖼️ [Booking icon]. Every rebuilt S68B44 engine comes with a minimum 12-month warranty"
+          },
+          "back": {
+            "heading": "Select your preferred supplier, arrange nationwide delivery or supply & fit through their workshop network - all backed by a minimum 12-month unlimited-mileage warranty.",
+            "text": "Select your preferred supplier, arrange nationwide delivery or supply & fit through their workshop network - all backed by a minimum 12-month unlimited-mileage warranty.",
+            "bullets": [
+              "Select your preferred supplier, arrange nationwide delivery or supply & fit through their workshop network - all backed by a minimum 12-month unlimited-mileage warranty."
+            ]
+          }
+        }
+      ],
+      "tagline": "",
+      "ui": {
+        "stepLabel": "Step",
+        "desktopClosedLabel": "Click to expand",
+        "desktopOpenLabel": "Click to view details",
+        "mobileOpenLabel": "Tap to flip",
+        "mobileCloseLabel": "Tap to flip back",
+        "footerNote": "Most replacements completed within 3-5 days.",
+        "mobileTrustItems": [
+          "12-Month Warranty",
+          "Supply & Fit Available",
+          "Nationwide Delivery",
+          "Trusted UK Suppliers"
+        ]
+      }
+    },
+    "historyTimeline": {
+      "tag": "Variant History",
+      "h2": "BMW X7 M60i - Engine History & Specs at a Glance",
+      "intro": "The BMW X7 M60i was introduced with the G07 LCI (facelift) in August 2022, replacing the previous M50i as the flagship performance petrol variant of the X7 range. Powered by the S68B44 - a 4.4-litre twin-turbo V8 with 48V mild-hybrid assistance - the M60i delivers 530hp and 750Nm of torque, propelling the 2.6-tonne luxury SUV from 0-62mph in just 4.7 seconds.",
+      "milestones": [
+        {
+          "year": "2022",
+          "description": "S68B44A, 4.4L twin-turbo V8 with 48V mild-hybrid, 530hp - launch engine for G07 LCI X7 M60i"
+        },
+        {
+          "year": "2022",
+          "description": "48V integrated starter-generator (ISG) provides 12hp electric boost and enables coasting functionality"
+        },
+        {
+          "year": "2023",
+          "description": "S68B44T0 (technical update) with revised emissions calibration and software optimisation"
+        },
+        {
+          "year": "2023",
+          "description": "Minor recall for exhaust system fasteners on select 2023 models"
+        },
+        {
+          "year": "2024",
+          "description": "Production continues; M60i remains the flagship petrol V8 X7 variant"
+        }
+      ],
+      "vehicleTitle": "BMW X7 M60i",
+      "vehicleMeta": [
+        {
+          "label": "Fuel Type",
+          "value": "Petrol (Mild-Hybrid)"
+        },
+        {
+          "label": "Engine Size",
+          "value": "4.4L (4,395cc)"
+        },
+        {
+          "label": "Power Output",
+          "value": "530hp (390kW) @ 5,500-6,000rpm"
+        }
+      ],
+      "specsLabel": "Key Specs Snapshot",
+      "specs": [
+        {
+          "label": "Fuel Type",
+          "value": "Petrol (Mild-Hybrid)"
+        },
+        {
+          "label": "Engine Size",
+          "value": "4.4L (4,395cc)"
+        },
+        {
+          "label": "Power Output",
+          "value": "530hp (390kW) @ 5,500-6,000rpm"
+        },
+        {
+          "label": "Torque",
+          "value": "750Nm @ 1,800-4,600rpm"
+        },
+        {
+          "label": "Electric Motor",
+          "value": "12hp / 200Nm (48V ISG)"
+        },
+        {
+          "label": "0-62mph",
+          "value": "4.7 seconds"
+        },
+        {
+          "label": "Years Produced",
+          "value": "2022-present"
+        }
+      ],
+      "closingNote": "Every engine fitted to the BMW X7 M60i is covered below, with UK rebuilt pricing and known failure points for the S68B44 V8."
+    },
+    "engineGuide": {
+      "tag": "Engine Codes & Pricing",
+      "h2": "BMW X7 M60i Engine Codes - Specifications & Replacement Cost",
+      "sectionTitle": "Compatible Engine Codes & Cost Guide",
+      "sectionSubtitle": "Find your exact engine code, specs and UK replacement cost guide.",
+      "intro": "",
+      "items": [
+        {
+          "code": "S68B44A",
+          "title": "4.4L V8 Mild-Hybrid Petrol (2022-2023)",
+          "specs": [
+            {
+              "label": "Power Output",
+              "value": "530hp (390kW) @ 5,500-6,000rpm"
+            },
+            {
+              "label": "Torque",
+              "value": "750Nm @ 1,800-4,600rpm"
+            },
+            {
+              "label": "Electric Motor",
+              "value": "12hp / 200Nm 48V ISG"
+            },
+            {
+              "label": "Years Fitted",
+              "value": "2022-2023"
+            }
+          ],
+          "costs": [
+            {
+              "label": "Used",
+              "value": "£4,500-£7,000",
+              "description": ""
+            },
+            {
+              "label": "Reconditioned",
+              "value": "£6,500-£9,500",
+              "description": ""
+            },
+            {
+              "label": "Rebuilt",
+              "value": "£7,500-£12,000",
+              "description": ""
+            }
+          ],
+          "compatibleTrimLevels": [
+            "M60i",
+            "M60i M Sport",
+            "M60i xDrive"
+          ],
+          "commonFailure": "The S68B44A hot-vee V8 - with turbochargers positioned inside the 90-degree cylinder V - concentrates significant heat in the engine valley. Oil consumption has been reported on some early units, with valve stem seals and PCV systems being common contributors. Turbocharger wastegate rattle and cooling system leaks have also been noted on higher-mileage examples.",
+          "cta": "-> Get quotes for S68B44A BMW X7 M60i engine replacement",
+          "closing": "-> Get quotes for S68B44A BMW X7 M60i engine replacement"
+        },
+        {
+          "code": "S68B44T0",
+          "title": "4.4L V8 Mild-Hybrid Petrol (2023-present)",
+          "specs": [
+            {
+              "label": "Power Output",
+              "value": "523-530hp (390kW)"
+            },
+            {
+              "label": "Torque",
+              "value": "750Nm"
+            },
+            {
+              "label": "Electric Motor",
+              "value": "12hp 48V ISG"
+            },
+            {
+              "label": "Years Fitted",
+              "value": "2023-present"
+            }
+          ],
+          "costs": [
+            {
+              "label": "Used",
+              "value": "£4,800-£7,500",
+              "description": ""
+            },
+            {
+              "label": "Reconditioned",
+              "value": "£6,800-£10,000",
+              "description": ""
+            },
+            {
+              "label": "Rebuilt",
+              "value": "£8,000-£12,500",
+              "description": ""
+            }
+          ],
+          "compatibleTrimLevels": [
+            "M60i",
+            "M60i M Sport",
+            "M60i xDrive"
+          ],
+          "commonFailure": "The S68B44T0 shares the same hot-vee architecture as the S68B44A. Oil consumption from piston ring and valve stem seal wear remains a reported concern. The 48V mild-hybrid system - particularly the belt-starter generator - can develop faults, and the ZF8 transmission requires specific Lifeguard Hybrid 2 fluid to avoid premature wear.",
+          "cta": "-> Get quotes for S68B44T0 BMW X7 M60i engine replacement",
+          "closing": "-> Get quotes for S68B44T0 BMW X7 M60i engine replacement",
+          "intro": ""
+        }
+      ],
+      "prompt": ""
+    },
+    "commonProblems": {
+      "tag": "Common Problems",
+      "h2": "BMW X7 M60i Engine Problems - Repair Cost vs Replacement",
+      "h3": "The BMW X7 M60i is powered by the S68B44 - a 4.4-litre twin-turbo V8 that represents BMW's latest evolution of the hot-vee V8 architecture. With 530hp and 750Nm of torque, it delivers extraordinary performance, but the compact hot-vee design concentrates significant heat in the engine valley, introducing potential failure points around oil consumption, turbocharger components, and cooling systems. Rebuilt S68B44 engines supplied through EnginesMarket include upgraded components addressing the original failure points, plus a minimum 12-month unlimited-mileage warranty.",
+      "problems": [
+        {
+          "group": "Oil Consumption",
+          "h4": "Oil Consumption - Why the BMW X7 M60i Burns Oil and Needs Frequent Top-Ups",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "affectedModels": "BMW X7 M60i (S68B44A / S68B44T0, 2022-present)",
+          "typicalFailureMileage": "30,000-80,000 miles",
+          "rootCause": "The S68 hot-vee design generates sustained high cylinder wall temperatures that accelerate piston ring and valve stem seal degradation. This reduces compression sealing and allows oil to enter the combustion chamber. Some S68 engines have been reported to consume oil at rates that require frequent top-ups between services.",
+          "whyItHappens": "",
+          "repairOptions": [
+            {
+              "tier": "Minor - PCV valve cover replacement & software update",
+              "dealerPrice": "£1,200-£1,800",
+              "specialistPrice": "£800-£1,300",
+              "whatItInvolves": "Replace crankcase ventilation system, updated oil separator, ECU oil consumption mapping adjustment",
+              "longevity": "Effective only for early-stage consumption under 0.5L per 1,000 miles.",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Intermediate - Valve stem seal replacement",
+              "dealerPrice": "£4,000-£6,000",
+              "specialistPrice": "£2,500-£4,000",
+              "whatItInvolves": "Replace valve stem seals (upgraded Viton material), camshaft locking tools, timing reset",
+              "longevity": "40,000-80,000 miles. Requires specialist tooling.",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Full Replacement - rebuilt/reconditioned engine",
+              "dealerPrice": "£12,000-£18,000",
+              "specialistPrice": "£8,500-£13,000",
+              "whatItInvolves": "Supply & fit rebuilt S68B44 engine with upgraded piston rings, reinforced oil galleries, bench tested, 12-month warranty",
+              "longevity": "Required if oil consumption exceeds 1L per 1,000 miles or bore scoring is present.",
+              "estimatedTime": ""
+            }
+          ],
+          "vehicleValueCheck": "A typical 2022-2024 BMW X7 M60i is valued at approximately £73,000-£95,000 in the UK market. With a rebuilt S68B44 engine costing £7,500-£12,000 supply-only (plus £1,000-£2,000 fitting), replacement cost represents 10-18% of vehicle value - making full replacement financially viable on all but the highest-mileage examples.",
+          "recommendation": "Oil consumption on the S68 V8 is a known characteristic that can worsen sharply once piston rings begin to glaze. If consumption exceeds 0.5L per 1,000 miles, have a specialist perform a leak-down test to identify the source. Valve stem seal replacement at a specialist (£2,500-£4,000) is cost-effective if caught before bore scoring occurs. Once consumption reaches 1L per 1,000 miles, a full rebuilt engine with upgraded piston rings is the only permanent solution.",
+          "cta": "-> Compare rebuilt S68B44 BMW X7 M60i engine prices"
+        },
+        {
+          "group": "Turbocharger Wastegate Rattle & Boost Loss",
+          "h4": "Turbocharger Wastegate Rattle & Boost Loss - Why the BMW X7 M60i Loses Power",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "affectedModels": "BMW X7 M60i (S68B44A / S68B44T0, 2022-present)",
+          "typicalFailureMileage": "40,000-90,000 miles",
+          "rootCause": "The S68's twin-turbo setup uses electronically controlled wastegate actuators. High exhaust gas temperatures in the hot-vee layout can cause wastegate linkage play and actuator bearing wear, resulting in boost pressure loss and persistent rattling noises on deceleration.",
+          "whyItHappens": "",
+          "repairOptions": [
+            {
+              "tier": "Intermediate - Turbo actuator replacement",
+              "dealerPrice": "£1,800-£2,800",
+              "specialistPrice": "£1,200-£1,900",
+              "whatItInvolves": "Replace wastegate actuator, recalibrate with diagnostic tool",
+              "longevity": "40,000-90,000 miles. Viable if turbo shaft has no play.",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Major - Turbo rebuild or replacement",
+              "dealerPrice": "£3,500-£5,500",
+              "specialistPrice": "£2,500-£4,000",
+              "whatItInvolves": "Remove turbo, rebuild with new bearings, seals, actuator",
+              "longevity": "Required if wastegate failure caused turbine damage.",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Full Replacement - rebuilt/reconditioned engine",
+              "dealerPrice": "£12,000-£18,000",
+              "specialistPrice": "£8,500-£13,000",
+              "whatItInvolves": "Supply & fit rebuilt S68B44 engine with reinforced turbo mounts, updated oil feed lines, 12-month warranty",
+              "longevity": "Required if turbo failure contaminated the intercooler or caused cylinder scoring.",
+              "estimatedTime": ""
+            }
+          ],
+          "vehicleValueCheck": "See above. Specialist turbo actuator replacement (£1,200-£1,900) is cost-effective on any X7 M60i.",
+          "recommendation": "Wastegate rattle on the S68 V8 should never be ignored - it directly precedes actuator seizure and potential turbo oil leakage into the intake. A specialist turbo actuator replacement is highly effective for early-stage symptoms. If the check engine light illuminates with persistent limp mode and metallic debris is detected in the intake tract, a full rebuilt engine becomes the only reliable fix.",
+          "cta": "-> Compare BMW X7 M60i turbo repair and replacement quotes"
+        },
+        {
+          "group": "Cooling System Leaks",
+          "h4": "Cooling System Leaks - Why the BMW X7 M60i Loses Coolant",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "affectedModels": "BMW X7 M60i (S68B44A / S68B44T0, 2022-present)",
+          "typicalFailureMileage": "30,000-70,000 miles",
+          "rootCause": "The hot-vee V8 architecture places turbochargers inside the engine V, subjecting cooling system components - particularly the coolant crossover pipes and expansion tank - to extreme thermal cycling. Plastic components can develop hairline cracks, leading to coolant loss and potential overheating.",
+          "whyItHappens": "",
+          "repairOptions": [
+            {
+              "tier": "Minor - Coolant expansion tank replacement",
+              "dealerPrice": "£600-£900",
+              "specialistPrice": "£400-£650",
+              "whatItInvolves": "Replace expansion tank and supply lines, bleed cooling system",
+              "longevity": "30,000-70,000 miles. Viable if caught before overheating.",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Intermediate - Coolant crossover pipe replacement",
+              "dealerPrice": "£1,200-£1,800",
+              "specialistPrice": "£800-£1,300",
+              "whatItInvolves": "Replace coolant crossover pipes, water pump, thermostat",
+              "longevity": "50,000-80,000 miles. Recommended preventatively on S68 engines.",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Full Replacement - rebuilt/reconditioned engine",
+              "dealerPrice": "£12,000-£18,000",
+              "specialistPrice": "£8,500-£13,000",
+              "whatItInvolves": "Supply & fit rebuilt S68B44 engine with upgraded cooling components, 12-month warranty",
+              "longevity": "Required if overheating caused head gasket or block damage.",
+              "estimatedTime": ""
+            }
+          ],
+          "vehicleValueCheck": "See above. Specialist cooling system repairs under £1,300 are cost-effective on any X7 M60i.",
+          "recommendation": "The S68's cooling system is its Achilles' heel - monitor coolant levels monthly and address any drop immediately. Preventative replacement of the expansion tank and crossover pipes at 50,000 miles is far cheaper than the engine replacement that follows an overheat. If you see low coolant warnings, stop driving and have the system inspected by a specialist with S68 experience.",
+          "cta": "-> Compare BMW X7 M60i cooling system repair and replacement quotes"
+        }
+      ],
+      "emptyState": null,
+      "finalCta": {
+        "h4": "Don't Let Engine Failure Write Off Your BMW X7 M60i",
+        "paragraph": "The S68B44-powered BMW X7 M60i is a masterpiece of engineering - a 530hp V8 that delivers effortless performance in a luxury SUV package. But the hot-vee architecture that makes it so responsive also makes it vulnerable to heat-related wear. EnginesMarket connects you with trusted UK BMW specialists who supply rebuilt S68B44 engines with upgraded components specifically designed to address the original failure points. Every engine comes with a minimum 12-month unlimited-mileage warranty, nationwide delivery, and supply & fit options across the UK. Compare prices today - and keep your M60i on the road without paying main dealer prices.",
+        "buttonText": "Compare BMW X7 M60i Engine Replacement Prices Now ->",
+        "disclaimer": "\"All prices are indicative UK market ranges based on historical quote data and repair requests from our network of engine specialists. Dealer pricing is estimated based on published main dealer labour rates and genuine OEM parts pricing. Specialist pricing reflects actual quote data from EnginesMarket's UK network. Actual costs vary depending on damage severity, vehicle condition, variant, and workshop location within the UK. Use our free comparison tool to get tailored quotes for your specific BMW X7 M60i. Every engine supplied through EnginesMarket carries a minimum 12-month unlimited mileage warranty - always confirm exact terms with your chosen supplier.\""
+      },
+      "reviewSummary": null
+    },
+    "faq": {
+      "tag": "FAQ",
+      "h2": "BMW X7 M60i Engine Replacement - Frequently Asked Questions",
+      "intro": "Everything BMW X7 M60i owners usually ask before choosing a rebuilt, reconditioned or used replacement engine.",
+      "defaultOpenIndex": 0,
+      "disclaimer": "All prices are indicative UK market ranges based on historical quote data from our network of engine specialists. Actual costs vary by variant, engine code, damage severity and workshop location. Use our free comparison tool to get tailored quotes. Every engine supplied through EngineMarket carries a minimum 12-month unlimited mileage warranty - always confirm terms with your chosen supplier.",
+      "items": [
+        {
+          "question": "How much does a BMW X7 M60i engine replacement cost in the UK?",
+          "answer": "A full BMW X7 M60i engine replacement typically costs £7,500-£12,000 supply-only for a rebuilt S68B44 unit, or £8,500-£13,000 fitted by a specialist. Used engines start from £4,500, while reconditioned units typically cost £6,500-£9,500.",
+          "keyPoints": [
+            "Prices reflect the hot-vee V8 complexity - specialist rebuilders only",
+            "Professional fitting adds £1,000-£2,000 including ECU coding and 48V system calibration",
+            "Rebuilt units include upgraded piston rings and cooling components",
+            "12-month unlimited-mileage warranty on all rebuilt engines"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Compare BMW X7 M60i engine replacement prices from UK specialists"
+        },
+        {
+          "question": "What are the common problems with the BMW X7 M60i S68B44 engine?",
+          "answer": "The S68B44 V8 has three main areas of reported concern: oil consumption (piston rings and valve stem seals), turbocharger wastegate rattle and boost loss, and cooling system leaks (expansion tank and crossover pipes).",
+          "keyPoints": [
+            "Oil consumption typically appears from 30,000-80,000 miles",
+            "Wastegate rattle on deceleration indicates actuator wear",
+            "Low coolant warnings point to cooling system leaks",
+            "The hot-vee design concentrates heat - regular maintenance is critical"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Get quotes for BMW X7 M60i S68B44 engine repairs and replacement"
+        },
+        {
+          "question": "Is the BMW X7 M60i reliable? How long does the S68B44 engine last?",
+          "answer": "The S68B44 is BMW's latest hot-vee V8, building on lessons from the N63 and S63. It's more robust than its predecessors, with closed-deck blocks and reinforced internals. With proper maintenance - strict oil change intervals and proactive cooling system care - S68 engines can exceed 100,000-150,000 miles.",
+          "keyPoints": [
+            "Use BMW Longlife-04 oil and change every 8,000-10,000 miles",
+            "Oil consumption and cooling system are the main wear items",
+            "48V mild-hybrid system requires specialist maintenance",
+            "The S68 is a significant improvement over earlier N63 engines"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Find a long-life rebuilt BMW X7 M60i engine with 12-month warranty"
+        },
+        {
+          "question": "Is it worth replacing the engine on a BMW X7 M60i?",
+          "answer": "For a 2022-2024 X7 M60i worth £73,000-£95,000, a £7,500-£12,000 rebuilt S68B44 engine represents excellent value - typically 10-18% of the vehicle's value.",
+          "keyPoints": [
+            "Replacement cost is small relative to vehicle value",
+            "If body, gearbox, and chassis are sound, a rebuilt engine adds years of life",
+            "Used engine (£4,500-£7,000) is the budget option for short-term ownership",
+            "Rebuilt engine (£7,500-£12,000) offers warranty and peace of mind"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Check BMW X7 M60i engine replacement value for your specific model"
+        },
+        {
+          "question": "What's the difference between the BMW X7 M60i and the M50i?",
+          "answer": "The M60i (2022-present) replaced the M50i (2019-2022). Both use 4.4-litre twin-turbo V8s, but the M60i features the newer S68B44 engine with 48V mild-hybrid assistance, closed-deck block, and improved thermal management.",
+          "keyPoints": [
+            "M60i: S68B44, 530hp, 48V mild-hybrid, 4.7s 0-62mph",
+            "M50i: N63B44T3, 523hp, no mild-hybrid",
+            "M60i has improved fuel economy and smoother stop-start",
+            "Engine codes are not interchangeable - always match the correct code"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Find a code-matched BMW X7 M60i replacement engine - enter your reg above"
+        },
+        {
+          "question": "Can I replace my BMW X7 M60i engine with a different size or fuel type?",
+          "answer": "Engine swaps to a different size or fuel type are technically complex and rarely cost-effective on the G07 X7. Stick to like-for-like replacement using the correct S68B44A or S68B44T0 engine code for your M60i.",
+          "keyPoints": [
+            "ECU, wiring loom, fuel system, and exhaust all differ between petrol and diesel",
+            "48V mild-hybrid system is integrated with the engine",
+            "Transmission requires specific fluid (ZF Lifeguard Hybrid 2)",
+            "Insurance must be notified of any non-standard engine swap"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Find a code-matched BMW X7 M60i replacement engine - enter your reg above"
+        }
+      ],
+      "ui": {
+        "questionLabelPrefix": "Question",
+        "keyPointsLabel": "Key points",
+        "comparisonTableLabel": "Comparison table",
+        "disclaimerLabel": "Disclaimer",
+        "warningTitle": "Important"
+      }
+    },
+    "trustCta": {
+      "tag": "Why Choose Us",
+      "h2": "Compare BMW X7 M60i Engine Prices Today",
+      "intro": "Compare quotes from trusted UK BMW X7 M60i engine specialists with warranty-backed rebuilt, reconditioned and used options nationwide.",
+      "points": [
+        {
+          "title": "100+ S68B44-powered BMW X7 M60i engines supplied through our network",
+          "description": ""
+        },
+        {
+          "title": "12-Month Warranty on every rebuilt BMW X7 M60i engine",
+          "description": ""
+        },
+        {
+          "title": "Nationwide UK delivery",
+          "description": "supply & fit available"
+        }
+      ],
+      "finalText": "Comparing quotes for your BMW X7 M60i is completely free and carries no obligation. Enter your registration above to get matched with trusted UK specialists who stock the exact S68B44 engine code for your G07 X7 - whether you need a used, reconditioned, or rebuilt unit with a 12-month warranty. Get back on the road with confidence and without the main dealer premium.",
+      "buttonText": "Get Free BMW X7 M60i Engine Quotes ->",
+      "secondaryAction": {
+        "text": "",
+        "href": "tel:03330000044"
+      },
+      "ui": {
+        "showSecondaryAction": false
+      }
+    }
+  }
+}

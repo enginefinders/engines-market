@@ -66,7 +66,7 @@ export default function VariantEngineGuideSection({ data }: Props) {
 
   return (
     <Section className="bg-white !py-[2px]">
-      <Container className="!max-w-none !px-[2px] sm:!px-[2px] lg:!px-[2px]">
+      <Container className="max-w-[1400px] px-0 sm:px-0 lg:px-0">
           <div className="px-[2px] py-[2px]">
             <div className="mb-4 flex flex-wrap items-center gap-2">
               <span className="inline-flex rounded-full bg-[#0b2347] px-4 py-2 text-[13px] font-bold uppercase tracking-[0.03em] text-white">

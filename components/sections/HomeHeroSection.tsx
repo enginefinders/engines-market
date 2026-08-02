@@ -800,6 +800,7 @@ export default function HomeHeroSection({ data }: Props) {
   const [registration, setRegistration] = useState("");
   const [isRegistrationLookupLoading, setIsRegistrationLookupLoading] = useState(false);
   const [registrationLookupError, setRegistrationLookupError] = useState("");
+  const [isDisclaimerOpen, setIsDisclaimerOpen] = useState(false);
   const [groupIndex, setGroupIndex] = useState(0);
   const [carouselOffset, setCarouselOffset] = useState(0);
   const [desktopCarouselOffset, setDesktopCarouselOffset] = useState(0);
@@ -984,12 +985,30 @@ export default function HomeHeroSection({ data }: Props) {
               </div>
 
               {/* Disclaimer */}
-              <p
-                className="px-1 pb-2 pt-[6px] text-[10px] italic leading-[1.4] text-[#9ca3af]"
-                style={{ fontFamily: "Inter, sans-serif" }}
-              >
-                Prices are indicative rebuilt/reconditioned supply-only averages. Actual quotes vary by variant, year and supplier.
-              </p>
+              <div className="px-1 pb-2 pt-[6px]">
+                <div className="flex justify-end">
+                  <button
+                    type="button"
+                    onClick={() => setIsDisclaimerOpen((current) => !current)}
+                    aria-expanded={isDisclaimerOpen}
+                    aria-label="Toggle disclaimer"
+                    className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-black text-[11px] font-bold leading-none text-black transition focus:outline-none focus:ring-2 focus:ring-[#2d7a3a] focus:ring-offset-2"
+                  >
+                    !
+                  </button>
+                </div>
+
+                {isDisclaimerOpen ? (
+                  <div
+                    className="mt-2 rounded-[16px] border border-[#dbe4ef] bg-white/85 px-4 py-3 text-[11.5px] leading-[1.6] text-[#64748b] shadow-[0_12px_32px_rgba(13,27,46,0.07)] backdrop-blur-sm md:px-5 md:text-[12.5px]"
+                    style={{ fontFamily: "Inter, sans-serif" }}
+                  >
+                    <p>
+                      Prices are indicative rebuilt/reconditioned supply-only averages. Actual quotes vary by variant, year and supplier.
+                    </p>
+                  </div>
+                ) : null}
+              </div>
 
               {/* Desktop coverage stats */}
               <p

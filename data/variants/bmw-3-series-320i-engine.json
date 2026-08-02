@@ -14,23 +14,163 @@
     "storageSlug": "bmw-3-series-320i-engine"
   },
   "seo": {
-    "title": "BMW 3 Series 320i Engine Replacement - Compare Prices & Get Quotes",
-    "description": "Get quotes today from trusted UK BMW 3 Series 320i engine specialists. Compare prices on reconditioned, rebuilt and used engines for your 3 Series 320i - supply & fit available nationwide.",
+    "title": "BMW 3 Series 320i Engine Replacement | Compare Prices",
+    "description": "BMW 3 Series 320i engine replacement cost guide. Compare rebuilt, reconditioned & used 320i engine prices from £1,800. 12-month warranty & UK supply fit specialists.",
     "canonical": "/bmw/3-series/320i-engine"
   },
   "assets": {
-    "mainImage": "/images/brands/bmw/models/bmw-3-series-main.webp",
-    "smallImage": "/images/brands/bmw/models/bmw-3-series-small.webp",
+    "mainImage": "/images/brands/bmw/models/bmw-3-series-model-card.png",
+    "smallImage": "/images/brands/bmw/models/bmw-3-series-model-card.png",
     "heroBg": "/images/brands/bmw/models/bmw-3-series-model-card.png",
     "howItWorksBg": "/images/brands/bmw/brand/bmw-how-it-works-bg.webp",
     "ctaImage": "/images/brands/bmw/models/bmw-3-series-model-card.png"
   },
-  "structuredData": null,
+  "structuredData": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://www.enginesmarket.co.uk/bmw/3-series/320i-engine/#webpage",
+        "url": "https://www.enginesmarket.co.uk/bmw/3-series/320i-engine/",
+        "name": "BMW 3 Series 320i Engine Replacement - Compare Prices & Get Quotes",
+        "description": "BMW 3 Series 320i engine replacement cost guide. Compare rebuilt, reconditioned & used 320i engine prices from £1,800. 12-month warranty & UK supply fit specialists.",
+        "isPartOf": {
+          "@id": "https://www.enginesmarket.co.uk/#website"
+        },
+        "about": [
+          {
+            "@type": "Car",
+            "name": "BMW 3 Series 320i",
+            "brand": {
+              "@type": "Brand",
+              "name": "BMW"
+            },
+            "model": "3 Series 320i"
+          },
+          {
+            "@type": "Service",
+            "name": "BMW 3 Series 320i Engine Replacement"
+          }
+        ],
+        "mainEntity": {
+          "@id": "https://www.enginesmarket.co.uk/bmw/3-series/320i-engine/#service"
+        },
+        "breadcrumb": {
+          "@id": "https://www.enginesmarket.co.uk/bmw/3-series/320i-engine/#breadcrumb"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.enginesmarket.co.uk/bmw/3-series/320i-engine/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.enginesmarket.co.uk/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "BMW",
+            "item": "https://www.enginesmarket.co.uk/bmw/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "BMW 3 Series",
+            "item": "https://www.enginesmarket.co.uk/bmw/3-series/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "BMW 3 Series 320i",
+            "item": "https://www.enginesmarket.co.uk/bmw/3-series/320i-engine/"
+          }
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://www.enginesmarket.co.uk/bmw/3-series/320i-engine/#service",
+        "name": "BMW 3 Series 320i Engine Replacement Service",
+        "serviceType": [
+          "BMW 3 Series 320i Engine Replacement",
+          "Reconditioned BMW 3 Series 320i Engines",
+          "Used BMW 3 Series 320i Engines",
+          "BMW 3 Series 320i Engine Supply and Fit",
+          "BMW 3 Series 320i Engine Price Comparison"
+        ],
+        "provider": {
+          "@id": "https://www.enginesmarket.co.uk/#organization"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        "url": "https://www.enginesmarket.co.uk/bmw/3-series/320i-engine/",
+        "description": "BMW 3 Series 320i engine replacement cost guide. Compare rebuilt, reconditioned & used 320i engine prices from £1,800. 12-month warranty & UK supply fit specialists."
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.enginesmarket.co.uk/bmw/3-series/320i-engine/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does a BMW 3 Series 320i engine replacement cost in the UK?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A BMW 3 Series 320i engine replacement typically costs between £1,800 and £6,000 supply-only, depending on the engine code and condition type. Used engines: £400-£1,500 (older codes) to £1,500-£2,800 (B48). Reconditioned engines: £1,000-£4,500. Rebuilt engines: £1,800-£6,000 with 12-month warranty. Supply and fit adds approximately £650-£1,000 in labour depending on the generation."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What are the signs of timing chain failure in a BMW 3 Series 320i?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "On N43 and N20 320i engines, the key warning signs are: a rattling or clacking noise from the front of the engine on cold start, a whining noise that increases with engine RPM, rough idle or misfires, and engine management light with timing-related fault codes. If you hear any of these, get the car inspected immediately - catching it early can save your engine."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is it worth replacing the engine in a BMW 3 Series 320i?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It depends on the age and value of your car. E46 320i (worth £1,500-£5,000): repair if possible; full rebuild only if the car is exceptional. E90 320i (worth £2,500-£8,000): timing chain repair or used engine often makes sense. F30 320i (worth £5,000-£14,000): rebuilt engine with warranty is usually a sound investment. G20 320i (worth £15,000+): replacement cost is small relative to vehicle value. Always compare the cost of replacement against your car's current market value before deciding."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What's the difference between the BMW 320i and 330i engines?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The 320i and 330i share the same B48 engine family but with different tuning. 320i (B48B20A): 181-184hp. 330i (B48B20B): 248hp. The 330i uses a higher-output version of the same modular 2.0-litre turbo engine, with different pistons, turbocharger, and engine management calibration. Both are four-cylinder, 2.0-litre units - the 320i is the more fuel-efficient choice, while the 330i offers significantly more performance."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does a BMW 3 Series 320i engine replacement take?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A typical BMW 3 Series 320i engine replacement takes 2-5 working days. E46/E90 (M54/N46/N43): 10-14 hours labour - around 2-3 days. F30/G20 (N20/B48): 8-12 hours labour - around 2-3 days. Supply-only engines can be delivered nationwide within 1-2 working days. Full supply & fit typically adds 1-2 days for booking and workshop scheduling."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does a rebuilt BMW 3 Series 320i engine come with a warranty?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Every rebuilt BMW 3 Series 320i engine supplied through EnginesMarket comes with a minimum 12-month unlimited-mileage warranty as standard. The warranty covers manufacturing defects and parts failure. Upgraded components address the original failure points (e.g. improved timing chain tensioners on N43/N20). Always confirm exact warranty terms with your chosen supplier."
+            }
+          }
+        ]
+      }
+    ]
+  },
   "sections": {
     "hero": {
-      "tag": "BMW ENGINE MARKETPLACE",
+      "tag": "BMW 320i SPECIALISTS",
       "h1": "BMW 3 Series 320i Engine Replacement - Compare Prices & Get Quotes",
-      "subheading": "Get quotes today from trusted UK BMW 3 Series 320i engine specialists. Compare prices on reconditioned, rebuilt and used engines for your 3 Series 320i - supply & fit available nationwide.",
+      "subheading": "Get quotes today from trusted UK BMW 3 Series 320i engine specialists. Compare prices on reconditioned, rebuilt and used engines for every 320i generation - from the E46 M54 to the G20 B48.",
       "trustBadges": [
         "Supply & Fit Available",
         "12-Month Warranty",
@@ -40,18 +180,45 @@
       "ctaLinkText": "Get Free BMW 3 Series 320i Engine Quotes ->",
       "supportingText": "Get tailored BMW 3 Series 320i engine quotes from vetted UK specialists.",
       "ticker": "● Instant Quotes · No Obligation · 100% Free · Reconditioned · Rebuilt · Used · Supply & Fit Available · UK-Wide Network",
-      "imageAlt": "BMW 3 Series 320i engine replacement UK - compare reconditioned and rebuilt engine prices",
+      "imageAlt": "",
       "highlights": [
         {
           "title": "BMW 3 Series 320i Engine",
-          "price": "from £1,495 to £3,495",
-          "line1": "BMW 3 Series 320i Engine - from £1,495 to £3,495",
-          "line2": "-> Rebuilt units from £1,495 · Engine codes: N46B20, N43B20, N20B20, B48B20",
-          "detail": "-> Rebuilt units from £1,495 · Engine codes: N46B20, N43B20, N20B20, B48B20",
+          "price": "B48B20A - from £3,800 to £6,000",
+          "line1": "B48B20A - from £3,800 to £6,000",
+          "line2": "-> Used from £1,500 · Reconditioned from £2,800 · Common codes: M54B22, N46B20, N43B20A, N20B20A, N20B20B, B48B20A",
+          "detail": "-> Used from £1,500 · Reconditioned from £2,800 · Common codes: M54B22, N46B20, N43B20A, N20B20A, N20B20B, B48B20A",
           "image": "/images/brands/bmw/models/bmw-3-series-model-card.png",
-          "imageAlt": "BMW 3 Series 320i engine replacement - N46B20 N43B20 N20B20 B48B20 rebuilt reconditioned UK"
+          "imageAlt": ""
         }
       ],
+      "engineOptions": [
+        {
+          "label": "Used",
+          "price": "From £1,500",
+          "description": "Tested, bare/short engine",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "imageAlt": "",
+          "tone": "used"
+        },
+        {
+          "label": "Reconditioned",
+          "price": "From £2,800",
+          "description": "Rod bearings addressed, tested",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "imageAlt": "",
+          "tone": "reconditioned"
+        },
+        {
+          "label": "Rebuilt",
+          "price": "From quote",
+          "description": "Upgraded bearings, full teardown, revised valvetrain",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "imageAlt": "",
+          "tone": "rebuilt"
+        }
+      ],
+      "vehicleBadge": "320i",
       "mobileBar": {
         "brandText": "ENGINEMARKET",
         "callLabel": "Call",
@@ -83,17 +250,14 @@
           "number": 1,
           "icon": "registration",
           "front": {
-            "h3": "Enter Your BMW 3 Series 320i Registration",
-            "text": "Instantly verify your exact engine code, fuel type and specification via DVLA - covering every SE to M Sport in the 3 Series 320i range."
+            "h3": "Confirm Your BMW 3 Series 320i",
+            "text": "🖼️ [Registration icon]. One line referencing DVLA verification of engine code and fuel type"
           },
           "back": {
-            "heading": "Your Car, Precisely Identified",
-            "text": "Engines Market uses the official DVLA database to pull accurate details about your 3 Series 320i, not just model name.",
+            "heading": "EnginesMarket cross-checks the DVLA record against known 320i engine codes (M54B22, N46B20, N43B20A, N20B20A, N20B20B, B48B20A) so the quote request is accurate before it reaches a supplier.",
+            "text": "EnginesMarket cross-checks the DVLA record against known 320i engine codes (M54B22, N46B20, N43B20A, N20B20A, N20B20B, B48B20A) so the quote request is accurate before it reaches a supplier.",
             "bullets": [
-              "Your Precise Model - from SE, Sport, M Sport, EfficientDynamics Edition, xDrive",
-              "Your Engine Code - N46B20, N43B20, N20B20, B48B20 and more",
-              "Vehicle Specs Check - fuel type, engine size, year, variant - all verified instantly",
-              "No paperwork, no guesswork, 100% free."
+              "EnginesMarket cross-checks the DVLA record against known 320i engine codes (M54B22, N46B20, N43B20A, N20B20A, N20B20B, B48B20A) so the quote request is accurate before it reaches a supplier."
             ]
           }
         },
@@ -101,19 +265,14 @@
           "number": 2,
           "icon": "quote",
           "front": {
-            "h3": "Compare BMW 3 Series 320i Engine Prices",
-            "text": "Review live quotes from vetted UK specialists for your 3 Series 320i. See rebuilt, reconditioned and used pricing side-by-side with warranty terms and delivery options."
+            "h3": "Compare BMW 3 Series 320i Engine Quotes",
+            "text": "🖼️ [Compare icon]. One line on used/reconditioned/rebuilt options"
           },
           "back": {
-            "heading": "Transparent Pricing, Trusted Suppliers",
-            "text": "Every quote comes from our network of certified BMW specialists who understand your 3 Series 320i's specific engine requirements.",
+            "heading": "Our supplier network sends quotes covering all condition types - used, reconditioned, and rebuilt - with transparent, itemised pricing",
+            "text": "No obligation, no pressure.",
             "bullets": [
-              "Rebuilt Engines - Full teardown with upgraded failure-point components",
-              "Reconditioned Units - Tested and restored to OEM tolerances",
-              "Used Engines - Low-mileage donor units with compression verification",
-              "Supply & Fit at garages near you - Professional installation with workmanship warranty included, available at workshops across the UK",
-              "Many specialists have workshops near you, offering convenient collection and fitting services.",
-              "Compare confidently knowing every supplier is vetted and reviewed."
+              "No obligation, no pressure."
             ]
           }
         },
@@ -121,23 +280,19 @@
           "number": 3,
           "icon": "shield",
           "front": {
-            "h3": "Secure Your BMW 3 Series 320i Engine Quote",
-            "text": "Select the best option for your budget and arrange delivery or fitting. Every 3 Series 320i engine supplied through our network includes minimum 12-month unlimited mileage warranty protection."
+            "h3": "Choose Your BMW 3 Series 320i Specialist",
+            "text": "🖼️ [Booking icon]. One line on warranty and nationwide delivery"
           },
           "back": {
-            "heading": "Back On The Road With Confidence",
-            "text": "Once you've compared quotes for your 3 Series 320i, choose your preferred specialist and confirm your order directly.",
+            "heading": "Every rebuilt BMW 3 Series 320i engine comes with a minimum 12-month warranty",
+            "text": "Choose supply-only or full supply & fit with nationwide delivery and collection options.",
             "bullets": [
-              "12-Month Unlimited Mileage Warranty - Standard on every rebuilt and reconditioned unit",
-              "Nationwide Delivery - Direct to your door or chosen workshop",
-              "Vehicle Collection & Recovery - Many suppliers can collect your non-running 3 Series 320i and complete the engine replacement at their workshop near you, then deliver it back",
-              "Post-Fit Support - Dedicated assistance for ECU coding and adaptation queries",
-              "Your BMW 3 Series 320i deserves specialist care at fair market pricing."
+              "Choose supply-only or full supply & fit with nationwide delivery and collection options."
             ]
           }
         }
       ],
-      "tagline": "Live UK Engine Market Data for BMW 3 Series 320i Owners",
+      "tagline": "",
       "ui": {
         "stepLabel": "Step",
         "desktopClosedLabel": "Click to expand",
@@ -155,384 +310,489 @@
     },
     "historyTimeline": {
       "tag": "Variant History",
-      "h2": "BMW 3 Series 320i Engine History & Production Timeline",
-      "intro": "The BMW 3 Series 320i has evolved through three distinct generations since 2005, transitioning from naturally aspirated inline-four engines to high-efficiency turbocharged units. Initially launched with the N46 and N43 petrol engines in the E90 chassis, the variant shifted to the N20 turbocharged engine in the F30 generation before adopting the current B48 powertrain in the G20. This progression reflects BMW’s strategic move toward downsized, forced-induction engines that meet stringent Euro 6 emissions standards while maintaining performance. The current G20 generation remains in production, offering the refined B48 engine with improved thermal management and reliability over its predecessors.",
+      "h2": "BMW 3 Series 320i - Engine History & Specs at a Glance",
+      "intro": "The BMW 320i has been the heart of the 3 Series petrol range since the E21 generation launched in 1975. Over five decades, the 320i badge has moved from a carburettor-fed four-cylinder to a six-cylinder M54, then back to four-cylinder N-series engines, and finally to the modern modular B48 turbo - each generation bringing more power, efficiency and complexity.",
       "milestones": [
-        "2005 - N46B20 introduced with 150 bhp / 200 Nm, marking the entry-level petrol option for the E90 3 Series with Valvetronic technology.",
-        "2007 - N43B20 replaced N46 in select markets, offering 170 bhp / 210 Nm with direct injection, though later plagued by high-pressure fuel pump issues.",
-        "2012 - N20B20 introduced in the F30 generation, delivering 184 bhp / 270 Nm, marking the shift to turbocharging for the 320i badge.",
-        "2015 - B48B20 replaced N20 in the F30 LCI (Life Cycle Impulse), maintaining 184 bhp but increasing torque to 290 Nm (manual) / 270 Nm (auto) and improving reliability.",
-        "2019 - G20 generation launched with updated B48B20, producing 184 bhp / 300 Nm, featuring enhanced cooling systems and mild-hybrid integration in later models.",
-        "Present - Still in production, with the G20 320i continuing as a core model in the UK lineup until the expected G50 launch in late 2026."
+        {
+          "year": "1975",
+          "description": "M10B20, 2.0-litre four-cylinder, fuel-injected (123hp) - E21 generation"
+        },
+        {
+          "year": "1977",
+          "description": "M20B20, 2.0-litre six-cylinder (120hp) - E21 generation, carburettor"
+        },
+        {
+          "year": "1982",
+          "description": "M20B20, 2.0-litre six-cylinder (125hp) - E30 generation"
+        },
+        {
+          "year": "1991",
+          "description": "M50B20, 2.0-litre straight-six (150hp) - E36 generation, DOHC"
+        },
+        {
+          "year": "1998",
+          "description": "M52TUB20, 2.0-litre straight-six (150hp) - E46 generation, double VANOS"
+        },
+        {
+          "year": "2000",
+          "description": "M54B22, 2.2-litre straight-six (170hp) - E46 facelift, increased displacement"
+        },
+        {
+          "year": "2005",
+          "description": "N46B20, 2.0-litre four-cylinder (150hp) - E90 generation, Valvetronic"
+        },
+        {
+          "year": "2007",
+          "description": "N43B20A, 2.0-litre four-cylinder (170hp) - E90/E92 generation, direct injection"
+        },
+        {
+          "year": "2012",
+          "description": "N20B20A/B, 2.0-litre four-cylinder turbo (184hp) - F30 generation, TwinPower Turbo"
+        },
+        {
+          "year": "2015",
+          "description": "B48B20A, 2.0-litre four-cylinder turbo (181hp) - F30 LCI / G20 generation, modular engine"
+        },
+        {
+          "year": "2019",
+          "description": "B48B20B, 2.0-litre four-cylinder turbo (184hp) - G20 generation, updated"
+        }
+      ],
+      "vehicleTitle": "BMW 3 Series 320i",
+      "vehicleMeta": [
+        {
+          "label": "Fuel Type",
+          "value": "Petrol"
+        },
+        {
+          "label": "Engine Size Range",
+          "value": "2.0L-2.2L"
+        },
+        {
+          "label": "Power Output Range",
+          "value": "120-184hp across the variant's history"
+        }
       ],
       "specsLabel": "Key Specs Snapshot",
       "specs": [
-        "Fuel Type: Petrol",
-        "Engine Size: 2.0L",
-        "Power Output: 184 bhp / 181 PS (current G20/F30 LCI B48)",
-        "Torque: 300 Nm / 221 lb-ft (current G20 B48)",
-        "Years Produced: 2005-Present"
-      ]
+        {
+          "label": "Fuel Type",
+          "value": "Petrol"
+        },
+        {
+          "label": "Engine Size Range",
+          "value": "2.0L-2.2L"
+        },
+        {
+          "label": "Power Output Range",
+          "value": "120-184hp across the variant's history"
+        },
+        {
+          "label": "Years Produced",
+          "value": "1975-present"
+        }
+      ],
+      "closingNote": "Every engine fitted to the BMW 3 Series 320i is covered below, with UK rebuilt pricing and known failure points."
     },
     "engineGuide": {
-      "tag": "Compatible Engines",
-      "h2": "BMW 3 Series 320i Engine Codes - Specs, Failures & Replacement Costs",
+      "tag": "Engine Codes & Pricing",
+      "h2": "BMW 3 Series 320i Engine Codes - Specifications & Replacement Cost",
+      "sectionTitle": "Compatible Engine Codes & Cost Guide",
+      "sectionSubtitle": "Find your exact engine code, specs and UK replacement cost guide.",
+      "intro": "",
       "items": [
         {
-          "code": "N46B20",
-          "title": "2.0L Petrol",
+          "code": "M54B22",
+          "title": "2.2L Petrol (2000-2005)",
           "specs": [
             {
-              "label": "Power",
-              "value": "150 bhp / 152 PS"
+              "label": "Power Output",
+              "value": "170hp"
             },
             {
-              "label": "Torque",
-              "value": "200 Nm / 148 lb-ft"
+              "label": "Years Fitted",
+              "value": "2000-2005"
+            }
+          ],
+          "costs": [
+            {
+              "label": "Used",
+              "value": "£400-£900",
+              "description": ""
+            },
+            {
+              "label": "Reconditioned",
+              "value": "£1,200-£2,200",
+              "description": ""
+            },
+            {
+              "label": "Rebuilt",
+              "value": "£2,000-£3,200",
+              "description": ""
+            }
+          ],
+          "compatibleTrimLevels": [
+            "320i",
+            "320i SE",
+            "320i Sport",
+            "320i M Sport"
+          ],
+          "commonFailure": "VANOS solenoid failure and oil leaks from the valve cover gasket are common on higher-mileage M54 units. Cooling system components (water pump, expansion tank) also degrade with age.",
+          "cta": "-> Get quotes for M54B22 BMW 3 Series 320i engine replacement",
+          "closing": "-> Get quotes for M54B22 BMW 3 Series 320i engine replacement"
+        },
+        {
+          "code": "N46B20",
+          "title": "2.0L Petrol (2005-2007)",
+          "specs": [
+            {
+              "label": "Power Output",
+              "value": "150hp"
             },
             {
               "label": "Years Fitted",
               "value": "2005-2007"
-            },
-            {
-              "label": "Compatible Trims",
-              "value": "E90 (2005-2007): SE, Sport, M Sport"
             }
           ],
           "costs": [
             {
               "label": "Used",
-              "value": "£800 - £1,200"
+              "value": "£350-£800",
+              "description": ""
             },
             {
               "label": "Reconditioned",
-              "value": "£1,800 - £2,400"
+              "value": "£1,000-£1,800",
+              "description": ""
             },
             {
               "label": "Rebuilt",
-              "value": "£2,500 - £3,200"
+              "value": "£1,800-£2,800",
+              "description": ""
             }
           ],
-          "commonFailure": "Timing chain guide wear and tensioner failure documented across multiple UK owner forums (60k-100k miles), often leading to catastrophic engine damage if ignored.",
-          "cta": "-> Compare N46B20 BMW 3 Series 320i engine replacement prices",
-          "closing": "All N46B20 engines supplied through our network include upgraded failure-point components and minimum 12-month unlimited mileage warranty."
+          "compatibleTrimLevels": [
+            "320i",
+            "320i SE",
+            "320i M Sport",
+            "320i ES"
+          ],
+          "commonFailure": "Valve stem seal wear causes excessive oil consumption - blue smoke on acceleration is the telltale sign. Timing chain tensioner failure is also reported.",
+          "cta": "-> Get quotes for N46B20 BMW 3 Series 320i engine replacement",
+          "closing": "-> Get quotes for N46B20 BMW 3 Series 320i engine replacement",
+          "intro": ""
         },
         {
-          "code": "N43B20",
-          "title": "2.0L Petrol",
+          "code": "N43B20A",
+          "title": "2.0L Petrol (2007-2012)",
           "specs": [
             {
-              "label": "Power",
-              "value": "170 bhp / 172 PS"
-            },
-            {
-              "label": "Torque",
-              "value": "210 Nm / 155 lb-ft"
+              "label": "Power Output",
+              "value": "170hp"
             },
             {
               "label": "Years Fitted",
-              "value": "2007-2011"
-            },
-            {
-              "label": "Compatible Trims",
-              "value": "E90/E91/E92/E93 (2007-2011): SE, Sport, M Sport, Exclusive Edition"
+              "value": "2007-2012"
             }
           ],
           "costs": [
             {
               "label": "Used",
-              "value": "£900 - £1,400"
+              "value": "£500-£1,200",
+              "description": ""
             },
             {
               "label": "Reconditioned",
-              "value": "£2,000 - £2,600"
+              "value": "£1,500-£2,800",
+              "description": ""
             },
             {
               "label": "Rebuilt",
-              "value": "£2,800 - £3,500"
+              "value": "£2,500-£4,000",
+              "description": ""
             }
           ],
-          "commonFailure": "High-pressure fuel pump (HPFP) failure and injector issues widely reported by UK specialists and owners, causing rough running and starting difficulties.",
-          "cta": "-> Compare N43B20 BMW 3 Series 320i engine replacement prices",
-          "closing": "All N43B20 engines supplied through our network include upgraded failure-point components and minimum 12-month unlimited mileage warranty."
+          "compatibleTrimLevels": [
+            "320i",
+            "320i SE",
+            "320i M Sport",
+            "320i EfficientDynamics"
+          ],
+          "commonFailure": "Timing chain tensioner and guide failure is the primary weak point - the original tensioner was too short, allowing chain slack and guide break-up.High-pressure fuel pump and injector issues also affect this engine.",
+          "cta": "-> Get quotes for N43B20A BMW 3 Series 320i engine replacement",
+          "closing": "-> Get quotes for N43B20A BMW 3 Series 320i engine replacement",
+          "intro": ""
         },
         {
-          "code": "N20B20",
-          "title": "2.0L Petrol",
+          "code": "N20B20A / N20B20B",
+          "title": "2.0L Turbo Petrol (2012-2015)",
           "specs": [
             {
-              "label": "Power",
-              "value": "184 bhp / 181 PS"
-            },
-            {
-              "label": "Torque",
-              "value": "270 Nm / 199 lb-ft"
+              "label": "Power Output",
+              "value": "184hp (both variants)"
             },
             {
               "label": "Years Fitted",
               "value": "2012-2015"
-            },
-            {
-              "label": "Compatible Trims",
-              "value": "F30/F31 (2012-2015): SE, Sport, M Sport, Modern, Luxury"
             }
           ],
           "costs": [
             {
               "label": "Used",
-              "value": "£1,200 - £1,800"
+              "value": "£700-£1,500",
+              "description": ""
             },
             {
               "label": "Reconditioned",
-              "value": "£2,200 - £2,900"
+              "value": "£1,800-£3,200",
+              "description": ""
             },
             {
               "label": "Rebuilt",
-              "value": "£3,000 - £3,800"
+              "value": "£2,800-£4,500",
+              "description": ""
             }
           ],
-          "commonFailure": "Timing chain guide wear and tensioner failure documented across multiple UK owner forums (60k-100k miles), with plastic guides prone to breaking and causing chain jump.",
-          "cta": "-> Compare N20B20 BMW 3 Series 320i engine replacement prices",
-          "closing": "All N20B20 engines supplied through our network include upgraded failure-point components and minimum 12-month unlimited mileage warranty."
+          "compatibleTrimLevels": [
+            "320i",
+            "320i SE",
+            "320i Sport",
+            "320i M Sport",
+            "320i xDrive"
+          ],
+          "commonFailure": "Timing chain guide failure is well-documented on N20 engines - a rattling or whining noise from the front of the engine on start-up is the primary symptom.Oil pump chain tensioner issues are also reported.",
+          "cta": "-> Get quotes for N20B20 BMW 3 Series 320i engine replacement",
+          "closing": "-> Get quotes for N20B20 BMW 3 Series 320i engine replacement",
+          "intro": ""
         },
         {
-          "code": "B48B20",
-          "title": "2.0L Petrol",
+          "code": "B48B20A / B48B20B",
+          "title": "2.0L Turbo Petrol (2015-present)",
           "specs": [
             {
-              "label": "Power",
-              "value": "184 bhp / 181 PS"
-            },
-            {
-              "label": "Torque",
-              "value": "300 Nm / 221 lb-ft"
+              "label": "Power Output",
+              "value": "181-184hp"
             },
             {
               "label": "Years Fitted",
-              "value": "2015-Present"
-            },
-            {
-              "label": "Compatible Trims",
-              "value": "F30/F31 LCI (2015-2019): SE, Sport, M Sport, Shadow Edition · G20/G21 (2019-Present): SE, Sport, M Sport, M Sport Pro"
+              "value": "2015-present"
             }
           ],
           "costs": [
             {
               "label": "Used",
-              "value": "£1,800 - £2,500"
+              "value": "£1,500-£2,800",
+              "description": ""
             },
             {
               "label": "Reconditioned",
-              "value": "£2,800 - £3,500"
+              "value": "£2,800-£4,500",
+              "description": ""
             },
             {
               "label": "Rebuilt",
-              "value": "£3,500 - £4,500"
+              "value": "£3,800-£6,000",
+              "description": ""
             }
           ],
-          "commonFailure": "Coolant system leaks from plastic vent lines and thermostat housing cracking cited by UK specialists and forum users, particularly in pre-2018 units.",
-          "cta": "-> Compare B48B20 BMW 3 Series 320i engine replacement prices",
-          "closing": "All B48B20 engines supplied through our network include upgraded failure-point components and minimum 12-month unlimited mileage warranty."
+          "compatibleTrimLevels": [
+            "320i",
+            "320i SE",
+            "320i Sport",
+            "320i M Sport",
+            "320i xDrive"
+          ],
+          "commonFailure": "Coolant leaks are the most common B48 issue - from the water pump, thermostat housing, and oil filter housing.Plastic coolant pipe connections can become brittle and fail between 40,000-80,000 miles.",
+          "cta": "-> Get quotes for B48B20 BMW 3 Series 320i engine replacement",
+          "closing": "-> Get quotes for B48B20 BMW 3 Series 320i engine replacement",
+          "intro": ""
         }
       ],
-      "closing": "Can't find your engine code? Enter your registration number above - we'll instantly identify the exact unit fitted to your BMW 3 Series 320i and provide live quotes from UK specialists."
+      "prompt": ""
     },
     "commonProblems": {
       "tag": "Common Problems",
-      "h2": "BMW 3 Series 320i Engine Problems - What It Costs to Fix & When Replacement Makes Sense",
-      "h3": "The BMW 3 Series 320i petrol variants, predominantly fitted with N20-B20B (2012-2018) and B48-B20A (2015-2024) turbocharged four-cylinder engines, offer strong performance but face specific reliability challenges documented across UK owner forums and specialist workshops. Every rebuilt BMW 3 Series 320i engine supplied through EngineMarket includes upgraded failure-point components and a minimum 12-month unlimited mileage warranty. Use this guide to compare repair tiers and get instant quotes from certified UK specialists.",
+      "h2": "BMW 3 Series 320i Engine Problems - Repair Cost vs Replacement",
+      "h3": "The BMW 3 Series 320i's petrol engines have evolved significantly over the years, but several recurring failure points drive replacement demand. The N43 and N20 timing chain issues are the most common reasons 320i owners seek engine replacement, while the B48's cooling system problems typically require less drastic intervention. Rebuilt engines through EnginesMarket include upgraded components addressing the original failure point, plus a minimum 12-month unlimited-mileage warranty.",
       "problems": [
         {
-          "group": "N20 Timing Chain and Guide Failure",
-          "h4": "N20 Timing Chain and Guide Failure - Why BMW 3 Series 320i N20-B20B Engines Fail",
-          "affectedModels": "BMW 3 Series 320i SE, Sport, M Sport, EfficientDynamics (2012-2018, N20-B20B)",
-          "typicalFailureMileage": "60,000-95,000 miles",
-          "rootCause": "The N20 engine's plastic timing chain guides degrade prematurely due to heat cycling and oil quality sensitivity, causing chain slack, rattling on cold start, and potential catastrophic interference damage if the chain skips teeth. This pattern is corroborated across PistonHeads UK forum threads and explicitly listed by UK specialists such as Apexx Engines as a known rebuild trigger apexxengines.co.uk f30.bimmerpost.com www.pistonheads.com",
+          "group": "Timing Chain Failure",
+          "h4": "Timing Chain Failure - Why the BMW 3 Series 320i N43 and N20 Engines Wear Prematurely",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "affectedModels": "BMW 3 Series 320i (N43B20A, 2007-2012; N20B20A/B, 2012-2015)",
+          "typicalFailureMileage": "30,000-90,000 miles",
+          "rootCause": "The timing chain tensioner was underspecified, allowing the chain to slacken and rub against - or break - the plastic guides. On interference engines, a skipped tooth means valve-to-piston contact and catastrophic failure.",
+          "whyItHappens": "",
           "repairOptions": [
             {
-              "tier": "Minor Repair - Early guide inspection/replacement",
-              "dealerPrice": "£800-£1,200 (estimated based on standard UK dealer rates)",
-              "specialistPrice": "£500-£800",
-              "whatItInvolves": "Removal of valve cover, inspection of timing chain tensioner and upper guide, replacement of plastic guide with upgraded metal-reinforced unit",
-              "longevity": "Preventative fix; extends life by 30k-50k miles if caught before chain stretch"
+              "tier": "Timing chain replacement (preventative)",
+              "dealerPrice": "£1,500-£2,500",
+              "specialistPrice": "£800-£1,500",
+              "whatItInvolves": "Replace tensioner, guides and chain. Oil pan drop to remove guide debris.",
+              "longevity": "Best if caught early - rattle on start-up but no performance loss",
+              "estimatedTime": ""
             },
             {
-              "tier": "Major Repair - Full timing chain kit replacement",
-              "dealerPrice": "£1,500-£2,200 (estimated based on standard UK dealer rates)",
-              "specialistPrice": "£900-£1,400",
-              "whatItInvolves": "Complete timing chain kit (chain, tensioner, guides, sprockets), oil pump chain inspection, fresh synthetic oil and filter",
-              "longevity": "Restores factory timing integrity; suitable if engine still runs without misfire codes"
-            },
-            {
-              "tier": "Full Replacement - Rebuilt N20-B20B Engine",
-              "dealerPrice": "£4,500-£7,000 (estimated based on standard UK dealer rates)",
-              "specialistPrice": "£2,300-£3,800",
-              "whatItInvolves": "Complete stripped block rebuild with upgraded metal timing chain guides, new tensioner, crankshaft bearings, bench-tested, ECU-matched, 12-month warranty. Workshop-fitted.",
-              "longevity": "Permanent solution when chain has skipped teeth, caused valve/piston contact, or engine has seized"
+              "tier": "Full Replacement - rebuilt/reconditioned engine",
+              "dealerPrice": "£5,000-£8,000",
+              "specialistPrice": "£2,500-£4,500 (matches Section 4 rebuilt pricing)",
+              "whatItInvolves": "Supply & fit, upgraded timing components addressing the original failure point, 12-month warranty",
+              "longevity": "If timing has jumped or engine is damaged",
+              "estimatedTime": ""
             }
           ],
-          "recommendation": "If your BMW 3 Series 320i N20-B20B exhibits cold-start rattling before 70k miles, we recommend immediate specialist diagnosis - preventative guide replacement is far more cost-effective than post-failure rebuild. Once interference damage has occurred, full engine replacement with upgraded components is the only reliable long-term solution.",
-          "cta": "-> Compare rebuilt N20-B20B engine prices for your BMW 3 Series 320i"
+          "vehicleValueCheck": "A typical BMW 3 Series 320i of N43/N20 age (2007-2015) is worth approximately £3,000-£10,000 depending on mileage and condition [THIRD-PARTY]. For sub-£4,000 examples, a used engine or timing chain repair may offer better value than a full rebuilt unit. For cars worth £6,000+, a rebuilt engine with warranty is a sound investment if you plan to keep the car.",
+          "recommendation": "If you hear a rattling noise from the front of the engine on cold start, get it inspected immediately. Replacing the timing chain and tensioner before failure costs £800-£1,500 at a specialist and can save your engine. If the engine has already jumped timing, a full replacement is usually the most cost-effective route - a specialist rebuild with upgraded components costs less than a dealer replacement and carries a 12-month warranty.",
+          "cta": "-> Compare rebuilt N43/N20 BMW 3 Series 320i engine prices"
         },
         {
-          "group": "Valve Cover and Oil Filter Housing Gasket Leaks",
-          "h4": "Valve Cover and Oil Filter Housing Gasket Leaks - Why BMW 3 Series 320i N46/N20 Engines Fail",
-          "affectedModels": "BMW 3 Series 320i SE, Sport, EfficientDynamics (2005-2015, N46-B20B, N46T-B20BD, N20-B20B)",
-          "typicalFailureMileage": "70,000-110,000 miles",
-          "rootCause": "Rubber gaskets on the valve cover and oil filter housing harden and crack due to prolonged heat exposure, allowing oil to seep onto hot engine components or drip onto the ground. PistonHeads UK threads and Bimmerforums discussions consistently report this as a high-frequency maintenance item on N46 and early N20 variants www.facebook.com www.bimmerforums.co.uk www.bimmerforums.com",
+          "group": "Coolant System Failure",
+          "h4": "Coolant System Failure - Why the BMW 3 Series 320i B48 Engine Loses Coolant",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "affectedModels": "BMW 3 Series 320i (B48B20A/B, 2015-present)",
+          "typicalFailureMileage": "40,000-80,000 miles",
+          "rootCause": "The B48's cooling system uses plastic components - water pump, thermostat housing, oil filter housing, and coolant pipes - that become brittle with heat cycling. Seals fail, pipes crack, and coolant leaks develop.",
+          "whyItHappens": "",
           "repairOptions": [
             {
-              "tier": "Minor Repair - Valve cover gasket replacement",
-              "dealerPrice": "£400-£650 (estimated based on standard UK dealer rates)",
-              "specialistPrice": "£250-£400",
-              "whatItInvolves": "Remove valve cover, clean sealing surfaces, fit new OEM-spec gasket and spark tube seals, torque to specification",
-              "longevity": "Resolves external oil leaks; gasket typically lasts 40k-60k miles post-repair"
+              "tier": "Coolant leak repair (component replacement)",
+              "dealerPrice": "£600-£1,200",
+              "specialistPrice": "£300-£800",
+              "whatItInvolves": "Replace failed component - water pump, thermostat housing, or coolant pipe",
+              "longevity": "If caught early and no overheating damage",
+              "estimatedTime": ""
             },
             {
-              "tier": "Major Repair - Oil filter housing gasket + coolant service",
-              "dealerPrice": "£700-£1,100 (estimated based on standard UK dealer rates)",
-              "specialistPrice": "£450-£750",
-              "whatItInvolves": "Replace oil filter housing gasket, inspect for coolant/oil cross-contamination, flush cooling system, replace thermostat if aged",
-              "longevity": "Prevents expensive downstream damage; recommended if leak persists after valve cover service"
-            },
-            {
-              "tier": "Full Replacement - Rebuilt N46/N20 Engine",
-              "dealerPrice": "£4,200-£6,500 (estimated based on standard UK dealer rates)",
-              "specialistPrice": "£2,100-£3,500",
-              "whatItInvolves": "Complete stripped block rebuild with upgraded gasket materials, new oil pump, bench-tested, ECU-matched, 12-month warranty. Workshop-fitted.",
-              "longevity": "Only necessary if chronic leaks have caused bearing wear, sludge buildup, or hydrostatic lock"
+              "tier": "Full Replacement - rebuilt engine",
+              "dealerPrice": "£5,000-£8,000",
+              "specialistPrice": "£3,800-£6,000 (matches Section 4 rebuilt pricing)",
+              "whatItInvolves": "Supply & fit, with all cooling system components renewed",
+              "longevity": "If engine has overheated and sustained damage",
+              "estimatedTime": ""
             }
           ],
-          "recommendation": "On a BMW 3 Series 320i worth £3,000-£8,000, addressing gasket leaks early with specialist-tier repairs preserves engine health without over-investing. However, if oil contamination has reached crankshaft bearings or caused persistent misfires, a rebuilt engine with upgraded sealing components offers better long-term value than repeated patch repairs.",
-          "cta": "-> Compare rebuilt N46/N20 engine prices for your BMW 3 Series 320i"
+          "vehicleValueCheck": "A BMW 3 Series 320i G20 (2019+) is typically worth £15,000-£35,000 [THIRD-PARTY]. Replacement cost is small relative to vehicle value - a rebuilt engine with warranty is a straightforward decision for higher-value cars.",
+          "recommendation": "For B48 320i owners, preventative cooling system maintenance is the smart play. Replacing the water pump and thermostat housing at 60,000 miles as a preventative measure costs far less than an engine replacement if a leak leads to overheating. If the engine has already overheated, a specialist rebuild with renewed cooling components is the reliable long-term solution.",
+          "cta": "-> Compare rebuilt B48 BMW 3 Series 320i engine prices"
+        },
+        {
+          "group": "Oil Consumption",
+          "h4": "Oil Consumption - Why the BMW 3 Series 320i N46 Engine Burns Oil",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "affectedModels": "BMW 3 Series 320i (N46B20, 2005-2007)",
+          "typicalFailureMileage": "50,000-100,000 miles",
+          "rootCause": "Valve stem seals harden and lose their sealing ability, allowing oil to seep past the valves into the combustion chamber.Piston ring wear can also contribute.",
+          "whyItHappens": "",
+          "repairOptions": [
+            {
+              "tier": "Valve stem seal replacement",
+              "dealerPrice": "£1,200-£2,000",
+              "specialistPrice": "£600-£1,200",
+              "whatItInvolves": "Replace valve stem seals - can often be done without removing the cylinder head",
+              "longevity": "If oil consumption is the only issue",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Full Replacement - rebuilt engine",
+              "dealerPrice": "£4,000-£6,000",
+              "specialistPrice": "£1,800-£2,800 (matches Section 4 rebuilt pricing)",
+              "whatItInvolves": "Supply & fit, fully rebuilt unit",
+              "longevity": "If oil consumption is severe or other issues exist",
+              "estimatedTime": ""
+            }
+          ],
+          "vehicleValueCheck": "An E90-generation BMW 3 Series 320i (2005-2007) is typically worth £1,500-£5,000 [THIRD-PARTY]. For sub-£3,000 examples, a valve stem seal repair may be the maximum justifiable spend. If the engine needs a full rebuild, evaluate scrap value carefully.",
+          "recommendation": "For N46 320i owners, monitor oil consumption carefully. If you're adding more than 1 litre per 1,000 miles, valve stem seal replacement is the cost-effective fix. A full rebuilt engine is only justified if the car is otherwise in excellent condition and you plan to keep it.",
+          "cta": "-> Compare rebuilt N46 BMW 3 Series 320i engine prices"
         }
       ],
       "emptyState": null,
       "finalCta": {
         "h4": "Don't Let Engine Failure Write Off Your BMW 3 Series 320i",
-        "paragraph": "Timing chain guide wear and persistent oil leaks represent the two most frequently documented failure patterns on BMW 3 Series 320i petrol engines across UK owner communities. EngineMarket connects you directly with certified UK BMW 3 Series 320i specialists who supply rebuilt units featuring upgraded failure-point components, nationwide delivery, vehicle collection and drop-off recovery services, and minimum 12-month unlimited mileage warranty. Compare live quotes today to get your 320i back on the road without paying main dealer premiums.",
-        "buttonText": "Compare BMW 3 Series 320i N20-B20B Engine Replacement Prices Now ->",
-        "disclaimer": "All prices are indicative UK market ranges based on historical quote data and repair requests from our network of engine specialists. Dealer pricing is estimated based on published main dealer labour rates and genuine OEM parts pricing. Specialist pricing reflects actual quote data from EngineMarket's UK network. Actual costs vary depending on damage severity, vehicle condition, variant, and workshop location within the UK. Use our free comparison tool to get tailored quotes for your specific BMW 3 Series 320i and engine code. Every engine supplied through EngineMarket carries a minimum 12-month unlimited mileage warranty - always confirm exact terms with your chosen supplier."
-      }
+        "paragraph": "Whether you own an E46 M54, an E90 N43, an F30 N20, or a G20 B48, engine failure doesn't have to mean the end of the road. Every rebuilt BMW 3 Series 320i engine through EnginesMarket comes with upgraded components addressing the original failure points, a minimum 12-month unlimited-mileage warranty, and nationwide delivery. Compare specialist prices today - and save thousands over main dealer rates.",
+        "buttonText": "Compare BMW 3 Series 320i Engine Replacement Prices Now ->",
+        "disclaimer": "\"All prices are indicative UK market ranges based on historical quote data and repair requests from our network of engine specialists. Dealer pricing is estimated based on published main dealer labour rates and genuine OEM parts pricing. Specialist pricing reflects actual quote data from EnginesMarket's UK network. Actual costs vary depending on damage severity, vehicle condition, variant, and workshop location within the UK. Use our free comparison tool to get tailored quotes for your specific BMW 3 Series 320i. Every engine supplied through EnginesMarket carries a minimum 12-month unlimited mileage warranty - always confirm exact terms with your chosen supplier.\""
+      },
+      "reviewSummary": null
     },
     "faq": {
-      "tag": "FAQs",
+      "tag": "FAQ",
       "h2": "BMW 3 Series 320i Engine Replacement - Frequently Asked Questions",
       "intro": "Everything BMW 3 Series 320i owners usually ask before choosing a rebuilt, reconditioned or used replacement engine.",
       "defaultOpenIndex": 0,
-      "disclaimer": "All prices are indicative UK market ranges based on historical quote data from our network of engine specialists. Actual costs vary by variant, engine code, damage severity and workshop location. Use our free comparison tool to get tailored quotes. Every engine supplied through EngineMarket carries a minimum 12-month unlimited mileage warranty - always confirm terms with your chosen supplier.",
+      "disclaimer": "",
       "items": [
         {
           "question": "How much does a BMW 3 Series 320i engine replacement cost in the UK?",
-          "answer": "A rebuilt BMW 3 Series 320i engine typically costs £2,300-£3,800 supplied and fitted by a specialist, significantly less than main dealer quotes which can exceed £6,000. Prices vary by engine code (N20-B20B or B48-B20A), damage severity, and workshop location.",
+          "answer": "A BMW 3 Series 320i engine replacement typically costs between £1,800 and £6,000 supply-only, depending on the engine code and condition type.",
           "keyPoints": [
-            "Specialist quotes average £2,300-£3,800 for supply and fit of rebuilt unit",
-            "Main dealer replacements often exceed £6,000 due to higher labour rates",
-            "Full price includes upgraded components addressing original failure pattern",
-            "12-month unlimited mileage warranty standard on EngineMarket network units",
-            "Free comparison tool delivers tailored quotes within minutes",
-            "Get instant BMW 3 Series 320i engine replacement quotes now"
+            "Used engines: £400-£1,500 (older codes) to £1,500-£2,800 (B48)",
+            "Reconditioned engines: £1,000-£4,500",
+            "Rebuilt engines: £1,800-£6,000 with 12-month warranty"
           ],
           "comparisonTable": null,
           "warning": null,
-          "cta": "-> Get instant BMW 3 Series 320i engine replacement quotes now"
+          "cta": "-> Get a free BMW 3 Series 320i engine quote now"
         },
         {
-          "question": "Should I choose used, reconditioned, or rebuilt for my BMW 3 Series 320i engine?",
-          "answer": "Rebuilt BMW 3 Series 320i engines offer the best balance of reliability and value, with upgraded failure-point components and warranty protection that used or basic reconditioned units cannot match.",
+          "question": "What are the signs of timing chain failure in a BMW 3 Series 320i?",
+          "answer": "On N43 and N20 320i engines, the key warning signs are:",
           "keyPoints": [
-            "Used engines carry unknown history and minimal warranty coverage",
-            "Reconditioned units refresh wear items but may retain original weak components",
-            "Rebuilt engines include upgraded parts targeting known failure patterns",
-            "All EngineMarket rebuilt units carry 12-month unlimited mileage warranty"
-          ],
-          "comparisonTable": null,
-          "warning": "Never fit a used engine without compression and leak-down testing - hidden damage can cause repeat failure within months.",
-          "cta": "-> Compare rebuilt vs reconditioned BMW 3 Series 320i engine options today"
-        },
-        {
-          "question": "Can I drive my BMW 3 Series 320i if I hear a timing chain rattle?",
-          "answer": "No - a rattling timing chain on your BMW 3 Series 320i N20-B20B engine signals imminent failure risk; continue driving may cause catastrophic valve/piston damage requiring full engine replacement.",
-          "keyPoints": [
-            "Cold-start rattling indicates worn plastic timing chain guides",
-            "Chain stretch can cause misfire codes and loss of power",
-            "Immediate specialist diagnosis prevents interference damage",
-            "Towing to workshop is far cheaper than post-failure rebuild"
-          ],
-          "comparisonTable": null,
-          "warning": "Driving with a rattling timing chain risks bent valves, piston damage, and total engine seizure.",
-          "cta": "-> Book urgent BMW 3 Series 320i timing chain diagnosis with a specialist now"
-        },
-        {
-          "question": "How long does a rebuilt BMW 3 Series 320i engine last?",
-          "answer": "A properly rebuilt BMW 3 Series 320i engine with upgraded failure-point components typically lasts 80,000-120,000 miles when maintained with correct oil specifications and service intervals.",
-          "keyPoints": [
-            "Upgraded metal timing chain guides prevent repeat N20 failure",
-            "Synthetic oil changes every 10k miles maximise longevity",
-            "Bench testing and ECU matching ensure optimal performance",
-            "12-month unlimited mileage warranty provides immediate peace of mind",
-            "Get quotes for long-life rebuilt BMW 3 Series 320i engines today"
+            "A rattling or clacking noise from the front of the engine on cold start",
+            "A whining noise that increases with engine RPM",
+            "Rough idle or misfires",
+            "Engine management light with timing-related fault codes"
           ],
           "comparisonTable": null,
           "warning": null,
-          "cta": "-> Get quotes for long-life rebuilt BMW 3 Series 320i engines today"
+          "cta": "-> Compare N43/N20 BMW 3 Series 320i engine replacement prices"
         },
         {
-          "question": "Do BMW 3 Series 320i engine specialists offer vehicle collection?",
-          "answer": "Yes - most certified BMW 3 Series 320i engine specialists in the EngineMarket network provide vehicle collection and drop-off recovery services nationwide, collecting your non-running car and delivering it back post-repair.",
+          "question": "Is it worth replacing the engine in a BMW 3 Series 320i?",
+          "answer": "It depends on the age and value of your car:",
           "keyPoints": [
-            "Collection service included in most specialist quotes",
-            "Recovery vehicles transport your 320i safely to workshop",
-            "Drop-off delivery returns your car fully repaired and tested",
-            "No need to arrange separate towing or transport",
-            "Find BMW 3 Series 320i specialists with collection service near you"
+            "E46 320i (worth £1,500-£5,000): repair if possible; full rebuild only if the car is exceptional",
+            "E90 320i (worth £2,500-£8,000): timing chain repair or used engine often makes sense",
+            "F30 320i (worth £5,000-£14,000): rebuilt engine with warranty is usually a sound investment",
+            "G20 320i (worth £15,000+): replacement cost is small relative to vehicle value"
           ],
           "comparisonTable": null,
           "warning": null,
-          "cta": "-> Find BMW 3 Series 320i specialists with collection service near you"
+          "cta": "-> Get a BMW 3 Series 320i replacement cost assessment"
         },
         {
-          "question": "Is it worth replacing the engine on a high-mileage BMW 3 Series 320i?",
-          "answer": "Yes - if your BMW 3 Series 320i is otherwise in good condition, a rebuilt engine costing £2,300-£3,800 often represents better value than purchasing a replacement vehicle with unknown history.",
+          "question": "What's the difference between the BMW 320i and 330i engines?",
+          "answer": "The 320i and 330i share the same B48 engine family but with different tuning:",
           "keyPoints": [
-            "Compare rebuild cost against current market value of your 320i",
-            "Rebuilt engine restores performance and extends usable life",
-            "Avoid depreciation hit of buying another used premium car",
-            "Warranty protection reduces future financial risk",
-            "Calculate whether engine replacement makes financial sense for your 320i"
+            "320i (B48B20A): 181-184hp",
+            "330i (B48B20B): 248hp"
           ],
           "comparisonTable": null,
           "warning": null,
-          "cta": "-> Calculate whether engine replacement makes financial sense for your 320i"
+          "cta": "-> Compare BMW 3 Series 320i vs 330i engine prices"
         },
         {
-          "question": "What's the difference between N20-B20B and B48-B20A engines in the BMW 3 Series 320i?",
-          "answer": "The N20-B20B (2012-2018) uses plastic timing chain guides prone to wear, while the B48-B20A (2015-2024) features improved metal guides and enhanced thermal management for greater reliability.",
+          "question": "How long does a BMW 3 Series 320i engine replacement take?",
+          "answer": "A typical BMW 3 Series 320i engine replacement takes 2-5 working days:",
           "keyPoints": [
-            "N20-B20B requires upgraded metal guides during rebuild",
-            "B48-B20A has fewer documented timing-related failures",
-            "Both engines share similar power output (~184 PS)",
-            "Correct engine code identification ensures parts compatibility",
-            "Verify your BMW 3 Series 320i engine code before requesting quotes"
+            "E46/E90 (M54/N46/N43): 10-14 hours labour - around 2-3 days",
+            "F30/G20 (N20/B48): 8-12 hours labour - around 2-3 days"
           ],
           "comparisonTable": null,
           "warning": null,
-          "cta": "-> Verify your BMW 3 Series 320i engine code before requesting quotes"
+          "cta": "-> Compare BMW 3 Series 320i supply & fit quotes"
         },
         {
-          "question": "Where can I find a trusted BMW 3 Series 320i N20-B20B engine specialist near me?",
-          "answer": "EngineMarket connects you with vetted UK BMW 3 Series 320i N20-B20B specialists nationwide. Most network partners offer vehicle collection and drop-off recovery services - they will collect your non-running 3 Series 320i, complete the engine replacement in their workshop, and deliver it back. Compare live quotes from certified rebuilders who understand your 320i's specific N20-B20B requirements - all backed by minimum 12-month unlimited mileage warranty.",
+          "question": "Does a rebuilt BMW 3 Series 320i engine come with a warranty?",
+          "answer": "Yes. Every rebuilt BMW 3 Series 320i engine supplied through EnginesMarket comes with a minimum 12-month unlimited-mileage warranty as standard.",
           "keyPoints": [
-            "Vetted BMW 3 Series 320i N20-B20B specialists rated by real UK owners",
-            "Vehicle collection and drop-off recovery available from most network suppliers nationwide",
-            "Live price comparison for rebuilt, reconditioned and used N20-B20B units",
-            "Minimum 12-month unlimited mileage warranty on every engine supplied",
-            "Transparent quotes with no hidden fees or obligation to proceed",
-            "Get quotes from BMW 3 Series 320i N20-B20B specialists near you today"
+            "The warranty covers manufacturing defects and parts failure",
+            "Upgraded components address the original failure points (e.g. improved timing chain tensioners on N43/N20)",
+            "Always confirm exact warranty terms with your chosen supplier"
           ],
           "comparisonTable": null,
           "warning": null,
-          "cta": "-> Get quotes from BMW 3 Series 320i N20-B20B specialists near you today"
+          "cta": "-> Get a warranted BMW 3 Series 320i engine quote"
         }
       ],
       "ui": {
@@ -545,33 +805,30 @@
     },
     "trustCta": {
       "tag": "Why Choose Us",
-      "h2": "Why UK BMW 3 Series 320i Owners Trust EngineMarket",
+      "h2": "Compare BMW 3 Series 320i Engine Prices Today",
       "intro": "Compare quotes from trusted UK BMW 3 Series 320i engine specialists with warranty-backed rebuilt, reconditioned and used options nationwide.",
       "points": [
         {
-          "title": "Vetted BMW 3 Series 320i Specialists",
-          "description": "Every rebuilder and garage in our network is rated and reviewed by real owners of your 3 Series 320i."
+          "title": "500+ BMW 3 Series 320i engines supplied through our network",
+          "description": ""
         },
         {
-          "title": "Transparent Price Comparison",
-          "description": "See rebuilt, reconditioned and used engine costs side-by-side before committing, with no hidden fees or obligation."
+          "title": "12-Month Warranty on every rebuilt BMW 320i engine",
+          "description": ""
         },
         {
-          "title": "Nationwide Coverage, Local Recovery",
-          "description": "Supply-only delivery across the UK, with vehicle collection and workshop fitting available from specialists near you for hassle-free BMW 3 Series 320i engine replacement."
+          "title": "Nationwide UK delivery",
+          "description": "supply & fit available"
         }
       ],
-      "finalText": "Find the best BMW 3 Series 320i engine replacement UK drivers rely on. Compare prices from trusted specialists near you today and get back on the road with confidence.",
-      "buttonText": "Compare BMW 3 Series 320i Engine Prices Now ->",
+      "finalText": "Comparing quotes for your BMW 3 Series 320i is free, quick, and completely no-obligation. Whether you need a used M54B22 for an E46, a reconditioned N43B20A for an E90, or a rebuilt B48B20A for a G20, our network of UK specialists has the right engine for your exact 320i and engine code. Enter your registration above and start comparing today.",
+      "buttonText": "Get Free BMW 3 Series 320i Engine Quotes ->",
       "secondaryAction": {
         "text": "",
         "href": "tel:03330000044"
       },
       "ui": {
-        "showSecondaryAction": false,
-        "imageBadgeLabel": "Variant-specific support",
-        "imageBadgeTitle": "BMW 3 Series 320i specialists across the UK",
-        "imageBadgeText": "Compare supply-only and supply & fit quotes from vetted independent engine specialists."
+        "showSecondaryAction": false
       }
     }
   }

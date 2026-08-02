@@ -1,0 +1,771 @@
+{
+  "brand": {
+    "name": "BMW",
+    "slug": "bmw",
+    "tone": "premium"
+  },
+  "model": {
+    "name": "BMW M1",
+    "slug": "m1"
+  },
+  "variant": {
+    "name": "BMW M1 3.5",
+    "slug": "35-engine",
+    "storageSlug": "bmw-m1-35-engine"
+  },
+  "seo": {
+    "title": "BMW M1 3.5 Engine Replacement | Compare Prices",
+    "description": "BMW M1 3.5 engine replacement cost guide. Compare rebuilt, reconditioned & used M88/1 and M88/3 3.5-litre straight-six engine prices from £18,500. 12-month warranty & UK supply fit specialists.",
+    "canonical": "/bmw/m1/35-engine"
+  },
+  "assets": {
+    "mainImage": "/images/brands/bmw/models/bmw-x1-model-card.png",
+    "smallImage": "/images/brands/bmw/models/bmw-x1-model-card.png",
+    "heroBg": "/images/brands/bmw/models/bmw-x1-model-card.png",
+    "howItWorksBg": "/images/brands/bmw/brand/bmw-how-it-works-bg.webp",
+    "ctaImage": "/images/brands/bmw/models/bmw-x1-model-card.png"
+  },
+  "structuredData": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.enginesmarket.co.uk/#website",
+        "url": "https://www.enginesmarket.co.uk/",
+        "name": "Engines Market",
+        "publisher": {
+          "@id": "https://www.enginesmarket.co.uk/#organization"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.enginesmarket.co.uk/#organization",
+        "name": "Engines Market",
+        "url": "https://www.enginesmarket.co.uk/",
+        "logo": "https://www.enginesmarket.co.uk/images/logo.png",
+        "sameAs": [
+          "https://www.facebook.com/enginesmarket",
+          "https://x.com/EnginesMarket",
+          "https://www.instagram.com/enginesmarketuk/",
+          "https://www.tiktok.com/@enginesmarket"
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.enginesmarket.co.uk/bmw/m1/35-engine/#webpage",
+        "url": "https://www.enginesmarket.co.uk/bmw/m1/35-engine/",
+        "name": "BMW M1 3.5 Engine Replacement - Compare Prices & Get Quotes",
+        "description": "BMW M1 3.5 engine replacement cost guide. Compare rebuilt, reconditioned & used M88/1 and M88/3 3.5-litre straight-six engine prices from £18,500. 12-month warranty & UK supply fit specialists.",
+        "isPartOf": {
+          "@id": "https://www.enginesmarket.co.uk/#website"
+        },
+        "about": [
+          {
+            "@type": "Car",
+            "name": "BMW M1 3.5",
+            "brand": {
+              "@type": "Brand",
+              "name": "BMW"
+            },
+            "model": "M1 3.5"
+          },
+          {
+            "@type": "Service",
+            "name": "BMW M1 3.5 Engine Replacement"
+          }
+        ],
+        "mainEntity": {
+          "@id": "https://www.enginesmarket.co.uk/bmw/m1/35-engine/#service"
+        },
+        "breadcrumb": {
+          "@id": "https://www.enginesmarket.co.uk/bmw/m1/35-engine/#breadcrumb"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.enginesmarket.co.uk/bmw/m1/35-engine/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.enginesmarket.co.uk/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "BMW",
+            "item": "https://www.enginesmarket.co.uk/bmw/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "BMW M1",
+            "item": "https://www.enginesmarket.co.uk/bmw/m1/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "BMW M1 3.5",
+            "item": "https://www.enginesmarket.co.uk/bmw/m1/35-engine/"
+          }
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://www.enginesmarket.co.uk/bmw/m1/35-engine/#service",
+        "name": "BMW M1 3.5 Engine Replacement Service",
+        "serviceType": [
+          "BMW M1 3.5 Engine Replacement",
+          "Reconditioned BMW M1 3.5 Engines",
+          "Used BMW M1 3.5 Engines",
+          "BMW M1 3.5 Engine Supply and Fit",
+          "BMW M1 3.5 Engine Price Comparison"
+        ],
+        "provider": {
+          "@id": "https://www.enginesmarket.co.uk/#organization"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        "url": "https://www.enginesmarket.co.uk/bmw/m1/35-engine/",
+        "description": "BMW M1 3.5 engine replacement cost guide. Compare rebuilt, reconditioned & used M88/1 and M88/3 3.5-litre straight-six engine prices from £18,500. 12-month warranty & UK supply fit specialists."
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.enginesmarket.co.uk/bmw/m1/35-engine/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does a BMW M1 3.5 engine replacement cost in the UK?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A BMW M1 3.5 engine replacement typically costs £18,500-£48,000 supply-only for rebuilt units, or £22,000-£55,000 fitted by a specialist. The M88 is a specialist heritage engine requiring expert knowledge. Used M88/1 engines: £15,000-£25,000 supply-only. Used M88/3 engines: £18,000-£30,000 supply-only. Reconditioned units: £19,500-£42,000 supply-only. Rebuilt units with upgraded components: £22,000-£48,000 supply-only. Professional fitting adds £3,000-£7,000 depending on workshop location."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What engine code is fitted to my BMW M1 3.5?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Every BMW M1 3.5 uses the M88 3.5-litre straight-six. Early production cars (1978-1979) use the M88/1 with Kugelfischer mechanical injection. Late production cars (1980-1981) use the M88/3 with Bosch Motronic electronic injection. M88/1: 277hp, Kugelfischer mechanical injection, 1978-1979. M88/3: 277-286hp, Bosch Motronic injection, 1980-1981. Both share the same 3,453cc displacement, cast iron block, and DOHC 24-valve head. Engine number format begins with M88 followed by variant suffix and serial sequence."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is the BMW M1 3.5 M88 engine reliable?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The M88 has a reputation for being 'genuinely solid for a high-strung engine of its era'. However, it has well-documented weaknesses that are critical to address: Timing chain tensioner is the weak point - tensions slowly on startup. Cooling system is the single biggest reliability risk. Kugelfischer injection on M88/1 requires specialist calibration. M88/3 with Bosch Motronic is more reliable for daily use. Regular maintenance and preventative replacement are essential for collector-grade preservation."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What are the signs of timing chain failure on a BMW M1 3.5?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The M88's timing chain tensioner is the engine's Achilles' heel: Rattling noise on cold start that disappears as oil pressure builds. The tensioner 'tensions too slowly on startup and lets the chains slap the guides'. Chain slap wears the guides prematurely. The guides have been described as a 'time bomb'. The upgraded S50B32 tensioner is a recommended preventative upgrade."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is it worth replacing the engine on a BMW M1 3.5?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "For an M1 3.5 worth £150,000-£600,000+, a rebuilt M88 at £22,000-£48,000 can make excellent financial sense if the body, interior, and chassis are in good condition. Compare replacement cost against vehicle value - replacement is viable well beyond 70% of car's value for collector-grade examples. Matching-numbers examples command significant premiums. Non-running M1 chassis lose 40-60% of valuation versus documented, engine-ready examples. Heritage-specification replacements with BMW Group Classic certification support institutional acquisition. Always factor 12-month warranty and provenance documentation into replacement decision."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I use a standard BMW engine in my BMW M1 3.5?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No - the BMW M1 3.5 requires the specific M88 3.5-litre straight-six due to the unique mid-engine chassis mounting, dry sump lubrication system, and Kugelfischer/Bosch injection architecture. M88 engine block features unique mid-engine mounting points. Dry sump lubrication system requires M88-specific oil pump and reservoir configuration. Kugelfischer mechanical injection on M88/1 cannot be replicated with modern systems. Non-M88 engine installations void collector valuation premiums and heritage documentation authenticity."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "sections": {
+    "hero": {
+      "tag": "BMW M1 3.5 SPECIALISTS",
+      "h1": "BMW M1 3.5 Engine Replacement - Compare Prices & Get Quotes",
+      "subheading": "Get quotes today from trusted UK BMW M1 3.5 engine specialists. Compare prices on reconditioned, rebuilt and used M88/1 and M88/3 3.5-litre straight-six engines for the E26 mid-engined supercar - supply & fit available.",
+      "trustBadges": [
+        "Supply & Fit Available",
+        "12-Month Warranty",
+        "Nationwide Delivery",
+        "100+ Suppliers"
+      ],
+      "ctaLinkText": "Get Free BMW M1 3.5 Engine Quotes ->",
+      "supportingText": "Get tailored BMW M1 3.5 engine quotes from vetted UK specialists.",
+      "ticker": "● Instant Quotes · No Obligation · 100% Free · Reconditioned · Rebuilt · Used · Supply & Fit Available · UK-Wide Network",
+      "imageAlt": "",
+      "highlights": [
+        {
+          "title": "BMW M1 3.5 Engine",
+          "price": "M88/1 / M88/3 3.5 Straight-Six - from £18,500 to £48,000",
+          "line1": "M88/1 / M88/3 3.5 Straight-Six - from £18,500 to £48,000",
+          "line2": "-> Used from £15,000 · Reconditioned from £19,500 · Common codes: M88/1, M88/3",
+          "detail": "-> Used from £15,000 · Reconditioned from £19,500 · Common codes: M88/1, M88/3",
+          "image": "/images/brands/bmw/models/bmw-x1-model-card.png",
+          "imageAlt": ""
+        }
+      ],
+      "engineOptions": [
+        {
+          "label": "Used",
+          "price": "From £15,000",
+          "description": "Tested, bare/short engine",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "imageAlt": "",
+          "tone": "used"
+        },
+        {
+          "label": "Reconditioned",
+          "price": "From £19,500",
+          "description": "Rod bearings addressed, tested",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "imageAlt": "",
+          "tone": "reconditioned"
+        },
+        {
+          "label": "Rebuilt",
+          "price": "From quote",
+          "description": "Upgraded bearings, full teardown, revised valvetrain",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "imageAlt": "",
+          "tone": "rebuilt"
+        }
+      ],
+      "vehicleBadge": "3.5",
+      "mobileBar": {
+        "brandText": "ENGINEMARKET",
+        "callLabel": "Call",
+        "quoteLabel": "GET QUOTES"
+      },
+      "registrationInput": {
+        "label": "Enter your BMW M1 3.5 registration",
+        "platePlaceholder": "AB12 CDE",
+        "countryCode": "UK",
+        "countryLabel": "United Kingdom"
+      },
+      "form": {
+        "heading": "Find Your BMW M1 3.5 Engine",
+        "subtitle": "Enter your registration number to compare BMW M1 3.5 engine options.",
+        "inputPlaceholder": "AB12 CDE",
+        "buttonText": "Get Free BMW M1 3.5 Engine Quotes ->",
+        "note": "Secure enquiry - no spam, no pressure. Genuine quotes only from vetted UK BMW M1 3.5 specialists."
+      }
+    },
+    "howItWorks": {
+      "tag": "How It Works",
+      "h2": "3 Simple Steps to Finding the Best BMW M1 3.5 Replacement Engine",
+      "headingLines": [
+        "3 Simple Steps",
+        "to Finding the Best BMW M1 3.5 Replacement Engine"
+      ],
+      "cards": [
+        {
+          "number": 1,
+          "icon": "registration",
+          "front": {
+            "h3": "Confirm Your BMW M1 3.5",
+            "text": "🖼️ [Registration icon]. Instantly verify your E26 M1 via DVLA - M88/1 or M88/3 3.5-litre straight-six, mid-engine rear-wheel drive"
+          },
+          "back": {
+            "heading": "EnginesMarket cross-checks the DVLA record against known M1 engine codes (M88/1, M88/3) so your quote request is accurate before it reaches a supplier - no guesswork, no paperwork, 100% free.",
+            "text": "EnginesMarket cross-checks the DVLA record against known M1 engine codes (M88/1, M88/3) so your quote request is accurate before it reaches a supplier - no guesswork, no paperwork, 100% free.",
+            "bullets": [
+              "EnginesMarket cross-checks the DVLA record against known M1 engine codes (M88/1, M88/3) so your quote request is accurate before it reaches a supplier - no guesswork, no paperwork, 100% free."
+            ]
+          }
+        },
+        {
+          "number": 2,
+          "icon": "quote",
+          "front": {
+            "h3": "Compare BMW M1 3.5 Engine Quotes",
+            "text": "🖼️ [Compare icon]. See used, reconditioned and rebuilt M88 straight-six prices side-by-side"
+          },
+          "back": {
+            "heading": "Our network of UK BMW heritage specialists sends you quotes covering all condition types with transparent, itemised pricing - supply-only or fully fitted",
+            "text": "No obligation, no pressure, just genuine prices from workshops that know the M88 engine family inside out.",
+            "bullets": [
+              "No obligation, no pressure, just genuine prices from workshops that know the M88 engine family inside out."
+            ]
+          }
+        },
+        {
+          "number": 3,
+          "icon": "shield",
+          "front": {
+            "h3": "Choose Your BMW M1 3.5 Specialist",
+            "text": "🖼️ [Booking icon]. Every rebuilt M88 straight-six comes with a minimum 12-month warranty and nationwide delivery options"
+          },
+          "back": {
+            "heading": "Compare warranty terms, specialist reviews, and fitted prices before you commit",
+            "text": "Every engine supplied through EnginesMarket carries a minimum 12-month unlimited mileage warranty, with supply & fit available across the UK.",
+            "bullets": [
+              "Every engine supplied through EnginesMarket carries a minimum 12-month unlimited mileage warranty, with supply & fit available across the UK."
+            ]
+          }
+        }
+      ],
+      "tagline": "",
+      "ui": {
+        "stepLabel": "Step",
+        "desktopClosedLabel": "Click to expand",
+        "desktopOpenLabel": "Click to view details",
+        "mobileOpenLabel": "Tap to flip",
+        "mobileCloseLabel": "Tap to flip back",
+        "footerNote": "Most replacements completed within 3-5 days.",
+        "mobileTrustItems": [
+          "12-Month Warranty",
+          "Supply & Fit Available",
+          "Nationwide Delivery",
+          "Trusted UK Suppliers"
+        ]
+      }
+    },
+    "historyTimeline": {
+      "tag": "Variant History",
+      "h2": "BMW M1 3.5 - Engine History & Specs at a Glance",
+      "intro": "The BMW M1 (E26) is BMW's first and only mid-engined supercar, produced from 1978 to 1981 with just 453 units built. Powered exclusively by the legendary M88 3.5-litre straight-six engine - designed by Paul Rosche - the M1 established BMW M's performance credentials and remains one of the most collectable BMWs ever built. The 3.5-litre engine, featuring Kugelfischer mechanical fuel injection, dry sump lubrication, and six individual throttle bodies, delivered 277hp in street specification.",
+      "milestones": [
+        {
+          "year": "1978",
+          "description": "BMW M1 production begins with M88/1 3.5L straight-six, 277hp, Kugelfischer mechanical injection, dry sump lubrication"
+        },
+        {
+          "year": "1979",
+          "description": "Procar racing variant introduced with M88/1 in Group 4 specification, approximately 470hp"
+        },
+        {
+          "year": "1980",
+          "description": "M88/3 engine specification introduced with updated internal components"
+        },
+        {
+          "year": "1981",
+          "description": "End of production; 453 M1s built in total"
+        },
+        {
+          "year": "1981",
+          "description": "present - M1 enters collector-car status; M88 engine maintenance and replacement demand persists"
+        }
+      ],
+      "vehicleTitle": "BMW M1 3.5",
+      "vehicleMeta": [
+        {
+          "label": "Fuel Type",
+          "value": "Petrol (naturally aspirated, mechanical fuel injection)"
+        },
+        {
+          "label": "Engine Size",
+          "value": "3.5L (3,453cc)"
+        },
+        {
+          "label": "Power Output",
+          "value": "277hp @ 6,500rpm"
+        }
+      ],
+      "specsLabel": "Key Specs Snapshot",
+      "specs": [
+        {
+          "label": "Fuel Type",
+          "value": "Petrol (naturally aspirated, mechanical fuel injection)"
+        },
+        {
+          "label": "Engine Size",
+          "value": "3.5L (3,453cc)"
+        },
+        {
+          "label": "Power Output",
+          "value": "277hp @ 6,500rpm"
+        },
+        {
+          "label": "Torque",
+          "value": "330Nm @ 5,000rpm"
+        },
+        {
+          "label": "Years Produced",
+          "value": "1978-1981"
+        }
+      ],
+      "closingNote": "Every engine fitted to the BMW M1 3.5 is covered below, with UK rebuilt pricing and known failure points specific to the M88 straight-six."
+    },
+    "engineGuide": {
+      "tag": "Engine Codes & Pricing",
+      "h2": "BMW M1 3.5 Engine Codes - Specifications & Replacement Cost",
+      "sectionTitle": "Compatible Engine Codes & Cost Guide",
+      "sectionSubtitle": "Find your exact engine code, specs and UK replacement cost guide.",
+      "intro": "",
+      "items": [
+        {
+          "code": "M88/1",
+          "title": "3.5L Straight-Six Petrol (1978-1981)",
+          "specs": [
+            {
+              "label": "Power Output",
+              "value": "277hp (207kW) @ 6,500rpm"
+            },
+            {
+              "label": "Torque",
+              "value": "330Nm (243 lb-ft) @ 5,000rpm"
+            },
+            {
+              "label": "Displacement",
+              "value": "3,453cc (3.5L)"
+            },
+            {
+              "label": "Bore × Stroke",
+              "value": "93.4mm × 84.0mm"
+            },
+            {
+              "label": "Compression Ratio",
+              "value": "9.0:1"
+            },
+            {
+              "label": "Years Fitted",
+              "value": "1978-1981 (all M1 production)"
+            },
+            {
+              "label": "Engine Features",
+              "value": "Cast iron block, aluminium cylinder head, DOHC 24-valve, Kugelfischer mechanical fuel injection, six individual throttle bodies, dry sump lubrication, single-row timing chain"
+            }
+          ],
+          "costs": [
+            {
+              "label": "Used",
+              "value": "£15,000-£25,000",
+              "description": ""
+            },
+            {
+              "label": "Reconditioned",
+              "value": "£19,500-£38,000",
+              "description": ""
+            },
+            {
+              "label": "Rebuilt",
+              "value": "£22,000-£45,000",
+              "description": ""
+            }
+          ],
+          "compatibleTrimLevels": [
+            "Street Version",
+            "Early Production",
+            "Late Production",
+            "Left-Hand Drive Import",
+            "Numbers Matching Specification"
+          ],
+          "commonFailure": "Timing chain tensioner wear - the M88 tensioner tensions slowly on startup, allowing chain slap against guides. Cooling system degradation - water pump, thermostat housing, and hoses are decades old. Kugelfischer injection calibration drift requiring specialist service.",
+          "cta": "-> Get quotes for M88/1 BMW M1 3.5 engine replacement",
+          "closing": "-> Get quotes for M88/1 BMW M1 3.5 engine replacement"
+        },
+        {
+          "code": "M88/3",
+          "title": "3.5L Straight-Six Petrol (1980-1981)",
+          "specs": [
+            {
+              "label": "Power Output",
+              "value": "277-286hp (204-210kW) @ 6,500rpm"
+            },
+            {
+              "label": "Torque",
+              "value": "340Nm @ 4,500rpm"
+            },
+            {
+              "label": "Displacement",
+              "value": "3,453cc (3.5L)"
+            },
+            {
+              "label": "Bore × Stroke",
+              "value": "93.4mm × 84.0mm"
+            },
+            {
+              "label": "Compression Ratio",
+              "value": "10.5:1"
+            },
+            {
+              "label": "Years Fitted",
+              "value": "1980-1981 (late production M1)"
+            },
+            {
+              "label": "Engine Features",
+              "value": "Cast iron block, aluminium cylinder head, DOHC 24-valve, Bosch Motronic electronic injection (replacing Kugelfischer), six individual throttle bodies, dry sump lubrication"
+            }
+          ],
+          "costs": [
+            {
+              "label": "Used",
+              "value": "£18,000-£30,000",
+              "description": ""
+            },
+            {
+              "label": "Reconditioned",
+              "value": "£22,000-£42,000",
+              "description": ""
+            },
+            {
+              "label": "Rebuilt",
+              "value": "£25,000-£48,000",
+              "description": ""
+            }
+          ],
+          "compatibleTrimLevels": [
+            "Late Production",
+            "Investment Grade",
+            "Museum Specification",
+            "Numbers Matching Specification"
+          ],
+          "commonFailure": "Same as M88/1 - timing chain tensioner wear, cooling system degradation, oil leaks from cylinder head gasket area. M88/3 benefits from improved injection system reliability (Bosch Motronic vs Kugelfischer).",
+          "cta": "-> Get quotes for M88/3 BMW M1 3.5 engine replacement",
+          "closing": "-> Get quotes for M88/3 BMW M1 3.5 engine replacement",
+          "intro": ""
+        }
+      ],
+      "prompt": ""
+    },
+    "commonProblems": {
+      "tag": "Common Problems",
+      "h2": "BMW M1 3.5 Engine Problems - Repair Cost vs Replacement",
+      "h3": "The BMW M1 3.5's M88 straight-six is one of the greatest engines ever built by BMW M, but as these cars approach 45+ years of age, predictable wear patterns emerge - timing chain tensioner fatigue, cooling system degradation, and Kugelfischer injection calibration drift being the most significant. Every rebuilt engine supplied through EnginesMarket includes upgraded components designed to address these original failure points - plus a minimum 12-month unlimited mileage warranty.",
+      "problems": [
+        {
+          "group": "Timing Chain Tensioner Fatigue",
+          "h4": "Timing Chain Tensioner Fatigue - Why the BMW M1 3.5's M88 Engine Rattles on Start-Up",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "affectedModels": "BMW M1 3.5 (1978-1981, M88/1, M88/3)",
+          "typicalFailureMileage": "40,000-60,000 miles",
+          "rootCause": "The M88's timing chain tensioner design tensions slowly on startup, allowing chain slap against the guides. The guides wear prematurely and, if ignored, the chain can jump or break - catastrophic failure in this interference engine. As one specialist noted: \"The M88 is known to be the worst of them all; it tensions too slowly on startup and lets the chains slap the guides, wearing them out prematurely\".",
+          "whyItHappens": "",
+          "repairOptions": [
+            {
+              "tier": "Preventative - Timing Chain & Tensioner Upgrade",
+              "dealerPrice": "£4,200-£6,500",
+              "specialistPrice": "£2,800-£4,100",
+              "whatItInvolves": "Replace timing chain, guides, tensioner with upgraded S50B32 tensioner, new sprockets",
+              "longevity": "Essential preventative maintenance; 40,000+ mile lifespan",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Full Replacement - rebuilt/reconditioned engine",
+              "dealerPrice": "£38,000-£65,000",
+              "specialistPrice": "£22,000-£45,000",
+              "whatItInvolves": "Supply & fit rebuilt M88/1 or M88/3 with upgraded tensioner, upgraded guides, 12-month warranty",
+              "longevity": "Required if chain has jumped causing valve/piston damage",
+              "estimatedTime": ""
+            }
+          ],
+          "vehicleValueCheck": "A typical BMW M1 3.5 is worth £150,000-£600,000+ depending on condition, mileage, provenance, and specification. Matching-numbers examples command significant premiums. Given the vehicle's collector-car status and appreciating value, engine replacement is generally viable for well-maintained examples. For higher-mileage or less original examples, evaluate the vehicle's overall condition before committing.",
+          "recommendation": "On any M1 3.5 without documented timing chain work within the last 40,000 miles, preventative chain and tensioner upgrade is absolutely essential. A £2,800-£4,100 specialist chain kit with the upgraded S50B32 tensioner is the single best investment you can make. Once the chain fails, the engine is almost certainly damaged - a full rebuild or replacement is the only reliable solution.",
+          "cta": "-> Compare rebuilt M88 engine prices for your BMW M1 3.5"
+        },
+        {
+          "group": "Cooling System Degradation",
+          "h4": "Cooling System Degradation - Why the BMW M1 3.5 Overheats",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "affectedModels": "BMW M1 3.5 (1978-1981, M88/1, M88/3)",
+          "typicalFailureMileage": "30,000-50,000 miles (time-based)",
+          "rootCause": "The M88's cooling system - water pump, thermostat housing, and associated hoses - uses components that are now decades old. As one expert states: \"The cooling system is the single biggest reliability risk; a full coolant overhaul is the first job on any unrefreshed example\". Overheating an M88 causes head gasket failure - a very expensive repair.",
+          "whyItHappens": "",
+          "repairOptions": [
+            {
+              "tier": "Preventative Cooling System Overhaul",
+              "dealerPrice": "£1,500-£2,500",
+              "specialistPrice": "£900-£1,600",
+              "whatItInvolves": "Replace water pump, thermostat, hoses, coolant flush, pressure test",
+              "longevity": "Essential preventative maintenance; 40,000+ mile lifespan",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Cylinder Head Rebuild (post-overheat)",
+              "dealerPrice": "£4,000-£6,500",
+              "specialistPrice": "£2,500-£4,200",
+              "whatItInvolves": "Head skim, pressure test, new head gasket, cooling system overhaul",
+              "longevity": "Viable only if block and bottom end remain undamaged",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Full Replacement - rebuilt/reconditioned engine",
+              "dealerPrice": "£38,000-£65,000",
+              "specialistPrice": "£22,000-£45,000",
+              "whatItInvolves": "Supply & fit rebuilt M88 with upgraded cooling components, electric water pump conversion option, 12-month warranty",
+              "longevity": "Required if overheating caused cracked block or scored bores",
+              "estimatedTime": ""
+            }
+          ],
+          "vehicleValueCheck": "",
+          "recommendation": "On any M1 3.5 without documented cooling system work, proactive replacement of the water pump, thermostat, and hoses is essential. A £900-£1,600 specialist overhaul is far cheaper than a £22,000+ engine rebuild. Some specialists now offer electric water pump conversions to improve cooling at low RPM and in traffic. Check coolant levels regularly.",
+          "cta": "-> Compare BMW M1 3.5 cooling system repair costs"
+        },
+        {
+          "group": "Kugelfischer Injection Calibration Drift",
+          "h4": "Kugelfischer Injection Calibration Drift - Why the BMW M1 3.5 Runs Rich or Lean",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "affectedModels": "BMW M1 3.5 (1978-1980, M88/1)",
+          "typicalFailureMileage": "40,000-70,000 miles",
+          "rootCause": "The Kugelfischer mechanical injection system - used on M88/1 engines - suffers from internal plunger wear and linkage fatigue over time, causing erratic fuel delivery. The system requires specialist calibration that few workshops can perform correctly.",
+          "whyItHappens": "",
+          "repairOptions": [
+            {
+              "tier": "Kugelfischer Calibration & Flow Bench Service",
+              "dealerPrice": "£2,800-£4,200",
+              "specialistPrice": "£1,800-£2,800",
+              "whatItInvolves": "Pump removal, disassembly, plunger reconditioning, flow bench calibration to factory tolerances",
+              "longevity": "Restores correct fuel delivery; 20,000+ mile lifespan",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Full Replacement - rebuilt/reconditioned engine",
+              "dealerPrice": "£38,000-£65,000",
+              "specialistPrice": "£22,000-£45,000",
+              "whatItInvolves": "Supply & fit rebuilt M88/1 with fully reconditioned Kugelfischer pump, upgraded seals, 12-month warranty",
+              "longevity": "Required if lean running has scored cylinder walls",
+              "estimatedTime": ""
+            }
+          ],
+          "vehicleValueCheck": "",
+          "recommendation": "Kugelfischer systems are highly serviceable when addressed early. If your M1 exhibits hesitation, backfires, or uneven idle but maintains compression, a specialist calibration service is the right first step. However, once detonation damage occurs, a heritage-spec rebuilt engine becomes the only reliable solution.",
+          "cta": "-> Get quotes for BMW M1 3.5 Kugelfischer injection rebuild vs engine replacement"
+        }
+      ],
+      "emptyState": null,
+      "finalCta": {
+        "h4": "Don't Let Engine Failure Write Off Your BMW M1 3.5",
+        "paragraph": "A failed M88 doesn't have to mean the end of the road for your M1 3.5. Whether you're facing timing chain tensioner fatigue, cooling system degradation, or Kugelfischer injection issues, EnginesMarket connects you with trusted UK BMW heritage specialists who supply rebuilt engines with upgraded components specifically designed to address the original failure points. Every engine comes with a minimum 12-month unlimited mileage warranty, nationwide delivery, and supply & fit options across the UK. Compare prices today - and keep one of BMW's rarest and most collectable supercars on the road without paying the main dealer premium.",
+        "buttonText": "Compare BMW M1 3.5 Engine Replacement Prices Now ->",
+        "disclaimer": "\"All prices are indicative UK market ranges based on historical quote data and repair requests from our network of engine specialists. Dealer pricing is estimated based on published main dealer labour rates and genuine OEM parts pricing. Specialist pricing reflects actual quote data from EnginesMarket's UK network. Actual costs vary depending on damage severity, vehicle condition, variant, and workshop location within the UK. Use our free comparison tool to get tailored quotes for your specific BMW M1 3.5. Every engine supplied through EnginesMarket carries a minimum 12-month unlimited mileage warranty - always confirm exact terms with your chosen supplier.\""
+      },
+      "reviewSummary": null
+    },
+    "faq": {
+      "tag": "FAQ",
+      "h2": "BMW M1 3.5 Engine Replacement - Frequently Asked Questions",
+      "intro": "Everything BMW M1 3.5 owners usually ask before choosing a rebuilt, reconditioned or used replacement engine.",
+      "defaultOpenIndex": 0,
+      "disclaimer": "",
+      "items": [
+        {
+          "question": "How much does a BMW M1 3.5 engine replacement cost in the UK?",
+          "answer": "A BMW M1 3.5 engine replacement typically costs £18,500-£48,000 supply-only for rebuilt units, or £22,000-£55,000 fitted by a specialist. The M88 is a specialist heritage engine requiring expert knowledge.",
+          "keyPoints": [
+            "Used M88/1 engines: £15,000-£25,000 supply-only",
+            "Used M88/3 engines: £18,000-£30,000 supply-only",
+            "Reconditioned units: £19,500-£42,000 supply-only",
+            "Rebuilt units with upgraded components: £22,000-£48,000 supply-only",
+            "Professional fitting adds £3,000-£7,000 depending on workshop location"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Compare BMW M1 3.5 engine replacement prices from UK specialists"
+        },
+        {
+          "question": "What engine code is fitted to my BMW M1 3.5?",
+          "answer": "Every BMW M1 3.5 uses the M88 3.5-litre straight-six. Early production cars (1978-1979) use the M88/1 with Kugelfischer mechanical injection. Late production cars (1980-1981) use the M88/3 with Bosch Motronic electronic injection.",
+          "keyPoints": [
+            "M88/1: 277hp, Kugelfischer mechanical injection, 1978-1979",
+            "M88/3: 277-286hp, Bosch Motronic injection, 1980-1981",
+            "Both share the same 3,453cc displacement, cast iron block, and DOHC 24-valve head",
+            "Engine number format begins with M88 followed by variant suffix and serial sequence"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Verify your BMW M1 3.5 engine code with heritage documentation specialists"
+        },
+        {
+          "question": "Is the BMW M1 3.5 M88 engine reliable?",
+          "answer": "The M88 has a reputation for being \"genuinely solid for a high-strung engine of its era\". However, it has well-documented weaknesses that are critical to address:",
+          "keyPoints": [
+            "Timing chain tensioner is the weak point - tensions slowly on startup",
+            "Cooling system is the single biggest reliability risk",
+            "Kugelfischer injection on M88/1 requires specialist calibration",
+            "M88/3 with Bosch Motronic is more reliable for daily use",
+            "Regular maintenance and preventative replacement are essential for collector-grade preservation"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Get quotes for BMW M1 3.5 M88 engine repairs"
+        },
+        {
+          "question": "What are the signs of timing chain failure on a BMW M1 3.5?",
+          "answer": "The M88's timing chain tensioner is the engine's Achilles' heel:",
+          "keyPoints": [
+            "Rattling noise on cold start that disappears as oil pressure builds",
+            "The tensioner \"tensions too slowly on startup and lets the chains slap the guides\"",
+            "Chain slap wears the guides prematurely",
+            "The guides have been described as a \"time bomb\"",
+            "The upgraded S50B32 tensioner is a recommended preventative upgrade"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Get quotes for BMW M1 3.5 timing chain replacement"
+        },
+        {
+          "question": "Is it worth replacing the engine on a BMW M1 3.5?",
+          "answer": "For an M1 3.5 worth £150,000-£600,000+, a rebuilt M88 at £22,000-£48,000 can make excellent financial sense if the body, interior, and chassis are in good condition.",
+          "keyPoints": [
+            "Compare replacement cost against vehicle value - replacement is viable well beyond 70% of car's value for collector-grade examples",
+            "Matching-numbers examples command significant premiums",
+            "Non-running M1 chassis lose 40-60% of valuation versus documented, engine-ready examples",
+            "Heritage-specification replacements with BMW Group Classic certification support institutional acquisition",
+            "Always factor 12-month warranty and provenance documentation into replacement decision"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Check BMW M1 3.5 engine replacement value for your specific car"
+        },
+        {
+          "question": "Can I use a standard BMW engine in my BMW M1 3.5?",
+          "answer": "No - the BMW M1 3.5 requires the specific M88 3.5-litre straight-six due to the unique mid-engine chassis mounting, dry sump lubrication system, and Kugelfischer/Bosch injection architecture.",
+          "keyPoints": [
+            "M88 engine block features unique mid-engine mounting points",
+            "Dry sump lubrication system requires M88-specific oil pump and reservoir configuration",
+            "Kugelfischer mechanical injection on M88/1 cannot be replicated with modern systems",
+            "Non-M88 engine installations void collector valuation premiums and heritage documentation authenticity"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Source authentic BMW M1 3.5 M88 replacement engines from certified heritage specialists"
+        }
+      ],
+      "ui": {
+        "questionLabelPrefix": "Question",
+        "keyPointsLabel": "Key points",
+        "comparisonTableLabel": "Comparison table",
+        "disclaimerLabel": "Disclaimer",
+        "warningTitle": "Important"
+      }
+    },
+    "trustCta": {
+      "tag": "Why Choose Us",
+      "h2": "Compare BMW M1 3.5 Engine Prices Today",
+      "intro": "Compare quotes from trusted UK BMW M1 3.5 engine specialists with warranty-backed rebuilt, reconditioned and used options nationwide.",
+      "points": [
+        {
+          "title": "453 BMW M1s ever built",
+          "description": "specialist heritage engine support available"
+        },
+        {
+          "title": "12-Month Warranty on every rebuilt M88 engine",
+          "description": ""
+        },
+        {
+          "title": "Nationwide UK delivery",
+          "description": "supply & fit available"
+        }
+      ],
+      "finalText": "Comparing quotes for your BMW M1 3.5 is free, no-obligation, and specific to your exact E26 supercar and its M88 engine code - M88/1 or M88/3. Whether you need a used replacement, a reconditioned unit, or a full rebuilt engine with upgraded timing components, our network of trusted UK BMW heritage specialists delivers transparent pricing and nationwide coverage. Don't let a failed engine end the life of BMW's first and only mid-engined supercar - compare prices today and preserve your collector-grade asset with confidence.",
+      "buttonText": "Get Free BMW M1 3.5 Engine Quotes ->",
+      "secondaryAction": {
+        "text": "",
+        "href": "tel:03330000044"
+      },
+      "ui": {
+        "showSecondaryAction": false
+      }
+    }
+  }
+}

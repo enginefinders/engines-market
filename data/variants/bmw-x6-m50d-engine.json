@@ -1,0 +1,730 @@
+{
+  "brand": {
+    "name": "BMW",
+    "slug": "bmw",
+    "tone": "premium"
+  },
+  "model": {
+    "name": "BMW X6",
+    "slug": "x6"
+  },
+  "variant": {
+    "name": "BMW X6 M50d",
+    "slug": "m50d-engine",
+    "storageSlug": "bmw-x6-m50d-engine"
+  },
+  "seo": {
+    "title": "BMW X6 M50d Engine Replacement | Compare Prices",
+    "description": "BMW X6 M50d engine replacement cost guide. Compare rebuilt, reconditioned & used N57D30S triple-turbo engine prices from £2,500. 12-month warranty & UK supply fit specialists.",
+    "canonical": "/bmw/x6/m50d-engine"
+  },
+  "assets": {
+    "mainImage": "/images/brands/bmw/models/bmw-x6-model-card.png",
+    "smallImage": "/images/brands/bmw/models/bmw-x6-model-card.png",
+    "heroBg": "/images/brands/bmw/models/bmw-x6-model-card.png",
+    "howItWorksBg": "/images/brands/bmw/brand/bmw-how-it-works-bg.webp",
+    "ctaImage": "/images/brands/bmw/models/bmw-x6-model-card.png"
+  },
+  "structuredData": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.enginesmarket.co.uk/#website",
+        "url": "https://www.enginesmarket.co.uk/",
+        "name": "Engines Market",
+        "publisher": {
+          "@id": "https://www.enginesmarket.co.uk/#organization"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.enginesmarket.co.uk/#organization",
+        "name": "Engines Market",
+        "url": "https://www.enginesmarket.co.uk/",
+        "logo": "https://www.enginesmarket.co.uk/images/logo.png",
+        "sameAs": [
+          "https://www.facebook.com/enginesmarket",
+          "https://x.com/EnginesMarket",
+          "https://www.instagram.com/enginesmarketuk/",
+          "https://www.tiktok.com/@enginesmarket"
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.enginesmarket.co.uk/bmw/x6/m50d-engine/#webpage",
+        "url": "https://www.enginesmarket.co.uk/bmw/x6/m50d-engine/",
+        "name": "BMW X6 M50d Engine Replacement - Compare Prices & Get Quotes",
+        "description": "BMW X6 M50d engine replacement cost guide. Compare rebuilt, reconditioned & used N57D30S triple-turbo engine prices from £2,500. 12-month warranty & UK supply fit specialists.",
+        "isPartOf": {
+          "@id": "https://www.enginesmarket.co.uk/#website"
+        },
+        "about": [
+          {
+            "@type": "Car",
+            "name": "BMW X6 M50d",
+            "brand": {
+              "@type": "Brand",
+              "name": "BMW"
+            },
+            "model": "X6 M50d"
+          },
+          {
+            "@type": "Service",
+            "name": "BMW X6 M50d Engine Replacement"
+          }
+        ],
+        "mainEntity": {
+          "@id": "https://www.enginesmarket.co.uk/bmw/x6/m50d-engine/#service"
+        },
+        "breadcrumb": {
+          "@id": "https://www.enginesmarket.co.uk/bmw/x6/m50d-engine/#breadcrumb"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.enginesmarket.co.uk/bmw/x6/m50d-engine/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.enginesmarket.co.uk/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "BMW",
+            "item": "https://www.enginesmarket.co.uk/bmw/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "BMW X6",
+            "item": "https://www.enginesmarket.co.uk/bmw/x6/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "BMW X6 M50d",
+            "item": "https://www.enginesmarket.co.uk/bmw/x6/m50d-engine/"
+          }
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://www.enginesmarket.co.uk/bmw/x6/m50d-engine/#service",
+        "name": "BMW X6 M50d Engine Replacement Service",
+        "serviceType": [
+          "BMW X6 M50d Engine Replacement",
+          "Reconditioned BMW X6 M50d Engines",
+          "Used BMW X6 M50d Engines",
+          "BMW X6 M50d Engine Supply and Fit",
+          "BMW X6 M50d Engine Price Comparison"
+        ],
+        "provider": {
+          "@id": "https://www.enginesmarket.co.uk/#organization"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        "url": "https://www.enginesmarket.co.uk/bmw/x6/m50d-engine/",
+        "description": "BMW X6 M50d engine replacement cost guide. Compare rebuilt, reconditioned & used N57D30S triple-turbo engine prices from £2,500. 12-month warranty & UK supply fit specialists."
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.enginesmarket.co.uk/bmw/x6/m50d-engine/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does a BMW X6 M50d engine replacement cost in the UK?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A full BMW X6 M50d engine replacement typically costs £3,000-£5,500 supply-only for a rebuilt N57D30S unit, or £5,500-£8,500 fitted by a specialist. Used engines start from £1,800, while reconditioned units typically cost £2,800-£4,500. Prices reflect the triple-turbo complexity - specialist rebuilders only. Professional fitting adds £1,000-£2,000 including ECU coding and xDrive calibration. Rebuilt units include upgraded timing chain and turbo components. 12-month unlimited-mileage warranty on all rebuilt engines."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What are the common problems with the BMW X6 M50d N57D30S engine?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The N57D30S triple-turbo diesel has three main areas of concern: timing chain tensioner failure (80,000-130,000 miles), small turbo bearing failure (80,000-150,000 miles), and EGR cooler coolant leaks (60,000-100,000 miles). Timing chain rattle on cold start is the first warning sign. Whining noise or loss of boost indicates turbo failure. Low coolant and white smoke point to EGR cooler failure. M50d has a \"how rare is my car\" value - 93% of UK-registered M50ds are still on the road. N57 timing chain failure is catastrophic - if you hear rattle, act immediately."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is the BMW X6 M50d reliable? How long does the N57D30S engine last?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The N57D30S is a high-performance diesel - powerful and smooth, but the triple-turbo complexity means maintenance costs are higher than standard diesel X6 models. With proper care, M50d engines regularly exceed 120,000-150,000 miles. Annual oil changes (not BMW's extended intervals) are critical. Timing chain and turbo bearings are the main wear items. M50d was discontinued in 2020 due to emissions regulations. 93% of UK M50ds are still on the road - a testament to their desirability."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is it worth replacing the engine on a BMW X6 M50d?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "For a 2014-2018 X6 M50d worth £16,890-£55,000, a £3,000-£5,500 rebuilt N57D30S engine represents good value - typically 10-25% of the vehicle's value. Replacement cost is moderate relative to vehicle value. If body, gearbox, and chassis are sound, a rebuilt engine adds years of life. Used engine (£1,800-£2,800) is the budget option for short-term ownership. Rebuilt engine (£3,000-£5,500) offers warranty and peace of mind."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What's the difference between the BMW X6 M50d and the X6 M?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The M50d (2014-2019) uses the N57D30S triple-turbo 3.0-litre diesel producing 381hp and 740Nm torque. The X6 M (F86, 2015-2019) uses the S63B44B twin-turbo 4.4-litre V8 petrol producing 567-575hp - a completely different driving experience. M50d: diesel, 381hp, 740Nm, 36mpg. X6 M: petrol V8, 567-575hp, higher running costs. Engine codes are not interchangeable - always match the correct code. M50d was BMW's most powerful diesel when launched."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I replace my BMW X6 M50d engine with a different size or fuel type?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Engine swaps to a different size or fuel type are technically complex and rarely cost-effective on the F16 X6. Stick to like-for-like replacement using the correct N57D30S or N57D30S1 engine code for your M50d. ECU, wiring loom, fuel system, and exhaust all differ between petrol and diesel. Triple-turbo system is M50d-specific - not interchangeable with single-turbo N57. Transmission and xDrive calibration are M50d-specific. Insurance must be notified of any non-standard engine swap."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "sections": {
+    "hero": {
+      "tag": "BMW X6 M50d SPECIALISTS",
+      "h1": "BMW X6 M50d Engine Replacement - Compare Prices & Get Quotes",
+      "subheading": "Get quotes today from trusted UK BMW X6 M50d engine specialists. Compare prices on reconditioned, rebuilt and used N57D30S triple-turbo diesel engines - supply & fit available nationwide.",
+      "trustBadges": [
+        "Supply & Fit Available",
+        "12-Month Warranty",
+        "Nationwide Delivery",
+        "100+ Suppliers"
+      ],
+      "ctaLinkText": "Get Free BMW X6 M50d Engine Quotes ->",
+      "supportingText": "Get tailored BMW X6 M50d engine quotes from vetted UK specialists.",
+      "ticker": "● Instant Quotes · No Obligation · 100% Free · Reconditioned · Rebuilt · Used · Supply & Fit Available · UK-Wide Network",
+      "imageAlt": "",
+      "highlights": [
+        {
+          "title": "BMW X6 M50d Engine",
+          "price": "N57D30S / N57D30S1 - from £2,500 to £5,500",
+          "line1": "N57D30S / N57D30S1 - from £2,500 to £5,500",
+          "line2": "-> Used from £1,800 · Reconditioned from £2,800 · Common codes: N57D30S, N57D30S1",
+          "detail": "-> Used from £1,800 · Reconditioned from £2,800 · Common codes: N57D30S, N57D30S1",
+          "image": "/images/brands/bmw/models/bmw-x6-model-card.png",
+          "imageAlt": ""
+        }
+      ],
+      "engineOptions": [
+        {
+          "label": "Used",
+          "price": "From £1,800",
+          "description": "Tested, bare/short engine",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "imageAlt": "",
+          "tone": "used"
+        },
+        {
+          "label": "Reconditioned",
+          "price": "From £2,800",
+          "description": "Rod bearings addressed, tested",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "imageAlt": "",
+          "tone": "reconditioned"
+        },
+        {
+          "label": "Rebuilt",
+          "price": "From quote",
+          "description": "Upgraded bearings, full teardown, revised valvetrain",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "imageAlt": "",
+          "tone": "rebuilt"
+        }
+      ],
+      "vehicleBadge": "M50d",
+      "mobileBar": {
+        "brandText": "ENGINEMARKET",
+        "callLabel": "Call",
+        "quoteLabel": "GET QUOTES"
+      },
+      "registrationInput": {
+        "label": "Enter your BMW X6 M50d registration",
+        "platePlaceholder": "AB12 CDE",
+        "countryCode": "UK",
+        "countryLabel": "United Kingdom"
+      },
+      "form": {
+        "heading": "Find Your BMW X6 M50d Engine",
+        "subtitle": "Enter your registration number to compare BMW X6 M50d engine options.",
+        "inputPlaceholder": "AB12 CDE",
+        "buttonText": "Get Free BMW X6 M50d Engine Quotes ->",
+        "note": "Secure enquiry - no spam, no pressure. Genuine quotes only from vetted UK BMW X6 M50d specialists."
+      }
+    },
+    "howItWorks": {
+      "tag": "How It Works",
+      "h2": "3 Simple Steps to Finding the Best BMW X6 M50d Replacement Engine",
+      "headingLines": [
+        "3 Simple Steps",
+        "to Finding the Best BMW X6 M50d Replacement Engine"
+      ],
+      "cards": [
+        {
+          "number": 1,
+          "icon": "registration",
+          "front": {
+            "h3": "Confirm Your BMW X6 M50d",
+            "text": "🖼️ [Registration icon]. Instantly verify your exact F16 X6 M50d and N57D30S triple-turbo engine code via DVLA"
+          },
+          "back": {
+            "heading": "EnginesMarket cross-checks the DVLA record against known BMW X6 M50d engine codes - N57D30S, N57D30S1 - so your quote request is accurate before it reaches a supplier.",
+            "text": "EnginesMarket cross-checks the DVLA record against known BMW X6 M50d engine codes - N57D30S, N57D30S1 - so your quote request is accurate before it reaches a supplier.",
+            "bullets": [
+              "EnginesMarket cross-checks the DVLA record against known BMW X6 M50d engine codes - N57D30S, N57D30S1 - so your quote request is accurate before it reaches a supplier."
+            ]
+          }
+        },
+        {
+          "number": 2,
+          "icon": "quote",
+          "front": {
+            "h3": "Compare BMW X6 M50d Engine Quotes",
+            "text": "🖼️ [Compare icon]. See used, reconditioned and rebuilt N57D30S engine prices side by side"
+          },
+          "back": {
+            "heading": "Our network of UK BMW specialists sends you quotes covering all condition types with transparent, itemised pricing - no obligation, no pressure.",
+            "text": "Our network of UK BMW specialists sends you quotes covering all condition types with transparent, itemised pricing - no obligation, no pressure.",
+            "bullets": [
+              "Our network of UK BMW specialists sends you quotes covering all condition types with transparent, itemised pricing - no obligation, no pressure."
+            ]
+          }
+        },
+        {
+          "number": 3,
+          "icon": "shield",
+          "front": {
+            "h3": "Choose Your BMW X6 M50d Specialist",
+            "text": "🖼️ [Booking icon]. Every rebuilt N57D30S engine comes with a minimum 12-month warranty"
+          },
+          "back": {
+            "heading": "Select your preferred supplier, arrange nationwide delivery or supply & fit through their workshop network - all backed by a minimum 12-month unlimited-mileage warranty.",
+            "text": "Select your preferred supplier, arrange nationwide delivery or supply & fit through their workshop network - all backed by a minimum 12-month unlimited-mileage warranty.",
+            "bullets": [
+              "Select your preferred supplier, arrange nationwide delivery or supply & fit through their workshop network - all backed by a minimum 12-month unlimited-mileage warranty."
+            ]
+          }
+        }
+      ],
+      "tagline": "",
+      "ui": {
+        "stepLabel": "Step",
+        "desktopClosedLabel": "Click to expand",
+        "desktopOpenLabel": "Click to view details",
+        "mobileOpenLabel": "Tap to flip",
+        "mobileCloseLabel": "Tap to flip back",
+        "footerNote": "Most replacements completed within 3-5 days.",
+        "mobileTrustItems": [
+          "12-Month Warranty",
+          "Supply & Fit Available",
+          "Nationwide Delivery",
+          "Trusted UK Suppliers"
+        ]
+      }
+    },
+    "historyTimeline": {
+      "tag": "Variant History",
+      "h2": "BMW X6 M50d - Engine History & Specs at a Glance",
+      "intro": "The BMW X6 M50d was introduced with the second-generation F16 X6 in December 2014 as the flagship diesel M Performance model. Powered by the N57D30S - a 3.0-litre triple-turbo straight-six diesel producing 381hp and 740Nm of torque - the M50d represented the pinnacle of BMW's diesel engineering until it was discontinued in 2020.",
+      "milestones": [
+        {
+          "year": "2014",
+          "description": "N57D30S, 3.0L triple-turbo diesel, 381hp - launch engine for F16 X6 M50d"
+        },
+        {
+          "year": "2016",
+          "description": "N57D30S1, 3.0L triple-turbo diesel, 381hp - revised engine variant with updated emissions calibration"
+        },
+        {
+          "year": "2019",
+          "description": "N57D30S1 (updated), 3.0L triple-turbo diesel, 394hp - final production variant for G06 X6 M50d"
+        },
+        {
+          "year": "2020",
+          "description": "M50d discontinued - BMW ceased Europe-wide production of the M50d badge"
+        }
+      ],
+      "vehicleTitle": "BMW X6 M50d",
+      "vehicleMeta": [
+        {
+          "label": "Fuel Type",
+          "value": "Diesel"
+        },
+        {
+          "label": "Engine Size",
+          "value": "2,993cc"
+        },
+        {
+          "label": "Power Output",
+          "value": "381-394hp"
+        }
+      ],
+      "specsLabel": "Key Specs Snapshot",
+      "specs": [
+        {
+          "label": "Fuel Type",
+          "value": "Diesel"
+        },
+        {
+          "label": "Engine Size",
+          "value": "2,993cc"
+        },
+        {
+          "label": "Power Output",
+          "value": "381-394hp"
+        },
+        {
+          "label": "Torque",
+          "value": "740Nm @ 2,000-3,000rpm"
+        },
+        {
+          "label": "0-62mph",
+          "value": "5.2 seconds (F16) / 5.0 seconds (G06)"
+        },
+        {
+          "label": "Years Produced",
+          "value": "2014-2020"
+        }
+      ],
+      "closingNote": "Every engine fitted to the BMW X6 M50d is covered below, with UK rebuilt pricing and known failure points for the N57D30S triple-turbo diesel."
+    },
+    "engineGuide": {
+      "tag": "Engine Codes & Pricing",
+      "h2": "BMW X6 M50d Engine Codes - Specifications & Replacement Cost",
+      "sectionTitle": "Compatible Engine Codes & Cost Guide",
+      "sectionSubtitle": "Find your exact engine code, specs and UK replacement cost guide.",
+      "intro": "",
+      "items": [
+        {
+          "code": "N57D30S",
+          "title": "3.0L Triple-Turbo Diesel (2014-2016)",
+          "specs": [
+            {
+              "label": "Power Output",
+              "value": "381hp (280kW) @ 4,000-4,400rpm"
+            },
+            {
+              "label": "Torque",
+              "value": "740Nm @ 2,000-3,000rpm"
+            },
+            {
+              "label": "Years Fitted",
+              "value": "2014-2016"
+            }
+          ],
+          "costs": [
+            {
+              "label": "Used",
+              "value": "£1,800-£2,800",
+              "description": ""
+            },
+            {
+              "label": "Reconditioned",
+              "value": "£2,800-£4,200",
+              "description": ""
+            },
+            {
+              "label": "Rebuilt",
+              "value": "£3,000-£5,500",
+              "description": ""
+            }
+          ],
+          "compatibleTrimLevels": [
+            "M50d",
+            "M50d M Sport (F16 generation)"
+          ],
+          "commonFailure": "The N57D30S triple-turbo system is complex - the small high-speed turbo is prone to bearing failure between 80,000-150,000 miles. Timing chain tensioner wear and EGR valve carbon buildup are also documented issues. [EM-INTERVIEW]",
+          "cta": "-> Get quotes for N57D30S BMW X6 M50d engine replacement",
+          "closing": "-> Get quotes for N57D30S BMW X6 M50d engine replacement"
+        },
+        {
+          "code": "N57D30S1",
+          "title": "3.0L Triple-Turbo Diesel (2016-2019)",
+          "specs": [
+            {
+              "label": "Power Output",
+              "value": "381-394hp"
+            },
+            {
+              "label": "Torque",
+              "value": "740Nm"
+            },
+            {
+              "label": "Years Fitted",
+              "value": "2016-2019"
+            }
+          ],
+          "costs": [
+            {
+              "label": "Used",
+              "value": "£1,800-£3,200",
+              "description": ""
+            },
+            {
+              "label": "Reconditioned",
+              "value": "£2,800-£4,500",
+              "description": ""
+            },
+            {
+              "label": "Rebuilt",
+              "value": "£3,200-£5,500",
+              "description": ""
+            }
+          ],
+          "compatibleTrimLevels": [
+            "M50d",
+            "M50d M Sport (F16 generation)"
+          ],
+          "commonFailure": "The N57D30S1 shares the same triple-turbo complexity as the earlier N57D30S. Timing chain tensioner failure - a known N57 family issue - can lead to catastrophic engine damage if not addressed. EGR valve carbonisation and turbocharger bearing wear are the most frequently reported problems on higher-mileage units. [EM-INTERVIEW]",
+          "cta": "-> Get quotes for N57D30S1 BMW X6 M50d engine replacement",
+          "closing": "-> Get quotes for N57D30S1 BMW X6 M50d engine replacement",
+          "intro": ""
+        }
+      ],
+      "prompt": ""
+    },
+    "commonProblems": {
+      "tag": "Common Problems",
+      "h2": "BMW X6 M50d Engine Problems - Repair Cost vs Replacement",
+      "h3": "The BMW X6 M50d is powered by the N57D30S - a 3.0-litre triple-turbo straight-six diesel that represents the pinnacle of BMW's N57 engine family. With 381hp and 740Nm of torque, it delivers outstanding performance, but the complex triple-turbo system and rear-mounted timing chain introduce failure points that can be expensive to address. Rebuilt N57D30S engines supplied through EnginesMarket include upgraded components addressing the original failure points, plus a minimum 12-month unlimited-mileage warranty.",
+      "problems": [
+        {
+          "group": "Timing Chain Tensioner Failure",
+          "h4": "Timing Chain Tensioner Failure - Why the BMW X6 M50d Diesel Engine Rattles on Start-Up",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "affectedModels": "BMW X6 M50d (N57D30S / N57D30S1, 2014-2019)",
+          "typicalFailureMileage": "80,000-130,000 miles",
+          "rootCause": "The N57 engine family places the timing chain at the rear of the engine block. Chain tensioner failure allows slack to develop, causing chain guide breakage. If ignored, the chain can snap - allowing pistons to contact valves, requiring full engine replacement.",
+          "whyItHappens": "",
+          "repairOptions": [
+            {
+              "tier": "Preventative - Timing chain & tensioner replacement",
+              "dealerPrice": "£2,500-£3,800",
+              "specialistPrice": "£1,800-£2,500",
+              "whatItInvolves": "Replace timing chain, tensioner, guides, and sprockets. Engine remains in vehicle.",
+              "longevity": "80,000-100,000 miles. Viable if caught early with rattle symptoms.",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Full Replacement - rebuilt/reconditioned engine",
+              "dealerPrice": "£8,000-£12,000",
+              "specialistPrice": "£5,500-£8,500",
+              "whatItInvolves": "Supply & fit fully rebuilt N57D30S engine with upgraded chain components, bench tested, 12-month warranty.",
+              "longevity": "Required if chain has snapped causing valve/piston damage.",
+              "estimatedTime": ""
+            }
+          ],
+          "vehicleValueCheck": "A typical 2014-2018 BMW X6 M50d is valued at approximately £16,890-£55,000 in the UK market, with average prices around £30,000. With a rebuilt N57D30S engine costing £3,000-£5,500 supply-only (plus £1,000-£2,000 fitting), replacement cost represents 10-25% of vehicle value on most examples - making full replacement financially viable for all but the highest-mileage cars.",
+          "recommendation": "If your X6 M50d develops a cold-start rattle that disappears as the engine warms, act immediately - preventative chain replacement at a specialist (£1,800-£2,500) saves thousands compared to a full engine replacement. Once the chain snaps, the engine is beyond economic repair. For an M50d worth £20,000+, a rebuilt engine with upgraded components represents excellent value.",
+          "cta": "-> Compare rebuilt N57D30S BMW X6 M50d engine prices"
+        },
+        {
+          "group": "Triple-Turbo Failure",
+          "h4": "Triple-Turbo Failure - Why the BMW X6 M50d Loses Boost and Enters Limp Mode",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "affectedModels": "BMW X6 M50d (N57D30S / N57D30S1, 2014-2019)",
+          "typicalFailureMileage": "80,000-150,000 miles",
+          "rootCause": "The N57D30S features a complex triple-turbo system - one small high-speed turbo for low-end response and two larger turbos for mid-to-high-range power. The small high-speed turbo is prone to bearing failure, causing whining noise, loss of boost, and limp mode. Failure of one turbo can damage the entire system if not caught early.",
+          "whyItHappens": "",
+          "repairOptions": [
+            {
+              "tier": "Intermediate - Small turbo replacement",
+              "dealerPrice": "£3,000-£4,500",
+              "specialistPrice": "£1,800-£3,000",
+              "whatItInvolves": "Replace failed small high-speed turbo, inspect oil supply lines, replace filters",
+              "longevity": "80,000-120,000 miles. Viable if caught before other turbos damaged.",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Major - Full triple-turbo replacement",
+              "dealerPrice": "£6,000-£9,000",
+              "specialistPrice": "£4,000-£6,500",
+              "whatItInvolves": "Replace all three turbos, oil supply lines, filters, gaskets",
+              "longevity": "100,000+ miles. Required if multiple turbos affected.",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Full Replacement - rebuilt/reconditioned engine",
+              "dealerPrice": "£8,000-£12,000",
+              "specialistPrice": "£5,500-£8,500",
+              "whatItInvolves": "Supply & fit rebuilt engine with upgraded turbo components, 12-month warranty",
+              "longevity": "Required if turbo failure caused engine damage or oil contamination.",
+              "estimatedTime": ""
+            }
+          ],
+          "vehicleValueCheck": "See above. Specialist turbo replacement (£1,800-£3,000) is cost-effective on any M50d worth more than £15,000.",
+          "recommendation": "The M50d's triple-turbo system is its party piece - and its Achilles' heel. If you hear a whining noise or notice loss of boost, have the turbo system inspected immediately. The small turbo fails first - replacing just this unit at a specialist (£1,800-£3,000) can save you from a full turbo system replacement. Always ensure the oil supply line filter is replaced - blocked filters kill turbos repeatedly.",
+          "cta": "-> Compare BMW X6 M50d turbo repair and replacement quotes"
+        },
+        {
+          "group": "EGR Cooler Failure",
+          "h4": "EGR Cooler Failure - Why the BMW X6 M50d Loses Coolant and Misfires",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "affectedModels": "BMW X6 M50d (N57D30S / N57D30S1, 2014-2019)",
+          "typicalFailureMileage": "60,000-100,000 miles",
+          "rootCause": "The EGR cooler develops internal cracks due to thermal cycling between hot exhaust gases and engine coolant. Coolant leaks into the intake manifold, causing misfires, white smoke, and potentially hydrolock.",
+          "whyItHappens": "",
+          "repairOptions": [
+            {
+              "tier": "Minor - EGR cooler replacement",
+              "dealerPrice": "£900-£1,400",
+              "specialistPrice": "£550-£850",
+              "whatItInvolves": "Replace EGR cooler, new gaskets, cooling system flush, intake manifold inspection",
+              "longevity": "60,000-100,000 miles. Viable if caught before hydrolock.",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Full Replacement - rebuilt/reconditioned engine",
+              "dealerPrice": "£8,000-£12,000",
+              "specialistPrice": "£5,500-£8,500",
+              "whatItInvolves": "Supply & fit rebuilt engine with new EGR cooler, 12-month warranty",
+              "longevity": "Required if hydrolock bent conrods (rare but catastrophic).",
+              "estimatedTime": ""
+            }
+          ],
+          "vehicleValueCheck": "See above. Specialist EGR cooler replacement under £850 is excellent value on any M50d.",
+          "recommendation": "An EGR cooler failure caught early is a £550-£850 specialist fix - don't ignore the low coolant warning light. If you've already driven through misfires, get a compression test before replacing anything. On a high-mileage M50d (100,000+), if the cooler has failed twice, consider an aftermarket upgraded cooler. Never let a dealer sell you an engine for EGR cooler failure without a compression test first.",
+          "cta": "-> Compare BMW X6 M50d EGR cooler replacement quotes"
+        }
+      ],
+      "emptyState": null,
+      "finalCta": {
+        "h4": "Don't Let Engine Failure Write Off Your BMW X6 M50d",
+        "paragraph": "The N57D30S-powered BMW X6 M50d is one of the most remarkable diesel engines ever fitted to a production SUV - but the triple-turbo complexity and rear-mounted timing chain demand specialist maintenance. EnginesMarket connects you with trusted UK BMW specialists who supply rebuilt N57D30S engines with upgraded components specifically designed to address the original failure points. Every engine comes with a minimum 12-month unlimited-mileage warranty, nationwide delivery, and supply & fit options across the UK. Compare prices today - and keep your M50d on the road without paying main dealer prices.",
+        "buttonText": "Compare BMW X6 M50d Engine Replacement Prices Now ->",
+        "disclaimer": "\"All prices are indicative UK market ranges based on historical quote data and repair requests from our network of engine specialists. Dealer pricing is estimated based on published main dealer labour rates and genuine OEM parts pricing. Specialist pricing reflects actual quote data from EnginesMarket's UK network. Actual costs vary depending on damage severity, vehicle condition, variant, and workshop location within the UK. Use our free comparison tool to get tailored quotes for your specific BMW X6 M50d. Every engine supplied through EnginesMarket carries a minimum 12-month unlimited mileage warranty - always confirm exact terms with your chosen supplier.\""
+      },
+      "reviewSummary": null
+    },
+    "faq": {
+      "tag": "FAQ",
+      "h2": "BMW X6 M50d Engine Replacement - Frequently Asked Questions",
+      "intro": "Everything BMW X6 M50d owners usually ask before choosing a rebuilt, reconditioned or used replacement engine.",
+      "defaultOpenIndex": 0,
+      "disclaimer": "All prices are indicative UK market ranges based on historical quote data from our network of engine specialists. Actual costs vary by variant, engine code, damage severity and workshop location. Use our free comparison tool to get tailored quotes. Every engine supplied through EngineMarket carries a minimum 12-month unlimited mileage warranty - always confirm terms with your chosen supplier.",
+      "items": [
+        {
+          "question": "How much does a BMW X6 M50d engine replacement cost in the UK?",
+          "answer": "A full BMW X6 M50d engine replacement typically costs £3,000-£5,500 supply-only for a rebuilt N57D30S unit, or £5,500-£8,500 fitted by a specialist. Used engines start from £1,800, while reconditioned units typically cost £2,800-£4,500.",
+          "keyPoints": [
+            "Prices reflect the triple-turbo complexity - specialist rebuilders only",
+            "Professional fitting adds £1,000-£2,000 including ECU coding and xDrive calibration",
+            "Rebuilt units include upgraded timing chain and turbo components",
+            "12-month unlimited-mileage warranty on all rebuilt engines"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Compare BMW X6 M50d engine replacement prices from UK specialists"
+        },
+        {
+          "question": "What are the common problems with the BMW X6 M50d N57D30S engine?",
+          "answer": "The N57D30S triple-turbo diesel has three main areas of concern: timing chain tensioner failure (80,000-130,000 miles), small turbo bearing failure (80,000-150,000 miles), and EGR cooler coolant leaks (60,000-100,000 miles).",
+          "keyPoints": [
+            "Timing chain rattle on cold start is the first warning sign",
+            "Whining noise or loss of boost indicates turbo failure",
+            "Low coolant and white smoke point to EGR cooler failure",
+            "M50d has a \"how rare is my car\" value - 93% of UK-registered M50ds are still on the road"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Get quotes for BMW X6 M50d N57D30S engine repairs and replacement"
+        },
+        {
+          "question": "Is the BMW X6 M50d reliable? How long does the N57D30S engine last?",
+          "answer": "The N57D30S is a high-performance diesel - powerful and smooth, but the triple-turbo complexity means maintenance costs are higher than standard diesel X6 models. With proper care, M50d engines regularly exceed 120,000-150,000 miles.",
+          "keyPoints": [
+            "Annual oil changes (not BMW's extended intervals) are critical",
+            "Timing chain and turbo bearings are the main wear items",
+            "M50d was discontinued in 2020 due to emissions regulations",
+            "93% of UK M50ds are still on the road - a testament to their desirability"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Find a long-life rebuilt BMW X6 M50d engine with 12-month warranty"
+        },
+        {
+          "question": "Is it worth replacing the engine on a BMW X6 M50d?",
+          "answer": "For a 2014-2018 X6 M50d worth £16,890-£55,000, a £3,000-£5,500 rebuilt N57D30S engine represents good value - typically 10-25% of the vehicle's value.",
+          "keyPoints": [
+            "Replacement cost is moderate relative to vehicle value",
+            "If body, gearbox, and chassis are sound, a rebuilt engine adds years of life",
+            "Used engine (£1,800-£2,800) is the budget option for short-term ownership",
+            "Rebuilt engine (£3,000-£5,500) offers warranty and peace of mind"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Check BMW X6 M50d engine replacement value for your specific model"
+        },
+        {
+          "question": "What's the difference between the BMW X6 M50d and the X6 M?",
+          "answer": "The M50d (2014-2019) uses the N57D30S triple-turbo 3.0-litre diesel producing 381hp and 740Nm torque. The X6 M (F86, 2015-2019) uses the S63B44B twin-turbo 4.4-litre V8 petrol producing 567-575hp - a completely different driving experience.",
+          "keyPoints": [
+            "M50d: diesel, 381hp, 740Nm, 36mpg",
+            "X6 M: petrol V8, 567-575hp, higher running costs",
+            "Engine codes are not interchangeable - always match the correct code",
+            "M50d was BMW's most powerful diesel when launched"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Find a code-matched BMW X6 M50d replacement engine - enter your reg above"
+        },
+        {
+          "question": "Can I replace my BMW X6 M50d engine with a different size or fuel type?",
+          "answer": "Engine swaps to a different size or fuel type are technically complex and rarely cost-effective on the F16 X6. Stick to like-for-like replacement using the correct N57D30S or N57D30S1 engine code for your M50d.",
+          "keyPoints": [
+            "ECU, wiring loom, fuel system, and exhaust all differ between petrol and diesel",
+            "Triple-turbo system is M50d-specific - not interchangeable with single-turbo N57",
+            "Transmission and xDrive calibration are M50d-specific",
+            "Insurance must be notified of any non-standard engine swap"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Find a code-matched BMW X6 M50d replacement engine - enter your reg above"
+        }
+      ],
+      "ui": {
+        "questionLabelPrefix": "Question",
+        "keyPointsLabel": "Key points",
+        "comparisonTableLabel": "Comparison table",
+        "disclaimerLabel": "Disclaimer",
+        "warningTitle": "Important"
+      }
+    },
+    "trustCta": {
+      "tag": "Why Choose Us",
+      "h2": "Compare BMW X6 M50d Engine Prices Today",
+      "intro": "Compare quotes from trusted UK BMW X6 M50d engine specialists with warranty-backed rebuilt, reconditioned and used options nationwide.",
+      "points": [
+        {
+          "title": "100+ N57D30S-powered BMW X6 M50d engines supplied through our network",
+          "description": ""
+        },
+        {
+          "title": "12-Month Warranty on every rebuilt BMW X6 M50d engine",
+          "description": ""
+        },
+        {
+          "title": "Nationwide UK delivery",
+          "description": "supply & fit available"
+        }
+      ],
+      "finalText": "Comparing quotes for your BMW X6 M50d is completely free and carries no obligation. Enter your registration above to get matched with trusted UK specialists who stock the exact N57D30S engine code for your F16 X6 - whether you need a used, reconditioned, or rebuilt unit with a 12-month warranty. Get back on the road with confidence and without the main dealer premium.",
+      "buttonText": "Get Free BMW X6 M50d Engine Quotes ->",
+      "secondaryAction": {
+        "text": "",
+        "href": "tel:03330000044"
+      },
+      "ui": {
+        "showSecondaryAction": false
+      }
+    }
+  }
+}

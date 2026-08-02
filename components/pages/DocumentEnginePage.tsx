@@ -578,7 +578,7 @@ export default function DocumentEnginePage({ data }: DocumentEnginePageProps) {
                   <div className="relative aspect-square overflow-hidden rounded-[14px] bg-white">
                     <Image
                       src="/images/shared/hero-engines/temporary-performance-engine.jpeg"
-                      alt="BMW N47D20C quote reference"
+                      alt={`${data.brand.name} ${data.engine.code} quote reference`}
                       fill
                       className="object-contain p-2"
                       sizes="84px"
@@ -587,7 +587,7 @@ export default function DocumentEnginePage({ data }: DocumentEnginePageProps) {
                   <div>
                     <div className="text-[13px] font-extrabold uppercase tracking-[0.05em] text-[#17803d]">Matched Before Pricing</div>
                     <p className="mt-1 text-[14px] leading-[1.7] text-[#516581]">
-                      We confirm the exact BMW fitment before suppliers send a quote, which helps avoid vague &quot;N47&quot; matches.
+                      We confirm the exact {data.brand.name} fitment before suppliers send a quote, which helps avoid vague engine-family matches.
                     </p>
                   </div>
                 </div>

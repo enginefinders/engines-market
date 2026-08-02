@@ -1,0 +1,796 @@
+{
+  "brand": {
+    "name": "BMW",
+    "slug": "bmw",
+    "tone": "premium"
+  },
+  "model": {
+    "name": "BMW X3",
+    "slug": "x3"
+  },
+  "variant": {
+    "name": "BMW X3 sDrive20i",
+    "slug": "sdrive20i-engine",
+    "storageSlug": "bmw-x3-sdrive20i-engine"
+  },
+  "seo": {
+    "title": "BMW X3 sDrive20i Engine Replacement | Compare Prices",
+    "description": "BMW X3 sDrive20i engine replacement cost guide. Compare rebuilt, reconditioned & used B48B20 engine prices from £1,800. 12-month warranty & UK supply fit specialists.",
+    "canonical": "/bmw/x3/sdrive20i-engine"
+  },
+  "assets": {
+    "mainImage": "/images/brands/bmw/models/bmw-x3-model-card.png",
+    "smallImage": "/images/brands/bmw/models/bmw-x3-model-card.png",
+    "heroBg": "/images/brands/bmw/models/bmw-x3-model-card.png",
+    "howItWorksBg": "/images/brands/bmw/brand/bmw-how-it-works-bg.webp",
+    "ctaImage": "/images/brands/bmw/models/bmw-x3-model-card.png"
+  },
+  "structuredData": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.enginesmarket.co.uk/#website",
+        "url": "https://www.enginesmarket.co.uk/",
+        "name": "Engines Market",
+        "publisher": {
+          "@id": "https://www.enginesmarket.co.uk/#organization"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.enginesmarket.co.uk/#organization",
+        "name": "Engines Market",
+        "url": "https://www.enginesmarket.co.uk/",
+        "logo": "https://www.enginesmarket.co.uk/images/logo.png"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.enginesmarket.co.uk/bmw/x3/sdrive20i-engine/#webpage",
+        "url": "https://www.enginesmarket.co.uk/bmw/x3/sdrive20i-engine/",
+        "name": "BMW X3 sDrive20i Engine Replacement - Compare Prices & Get Quotes",
+        "description": "BMW X3 sDrive20i engine replacement cost guide. Compare rebuilt, reconditioned & used B48B20 engine prices from £1,800. 12-month warranty & UK supply fit specialists.",
+        "isPartOf": {
+          "@id": "https://www.enginesmarket.co.uk/#website"
+        },
+        "about": [
+          {
+            "@type": "Car",
+            "name": "BMW X3 sDrive20i",
+            "brand": {
+              "@type": "Brand",
+              "name": "BMW"
+            },
+            "model": "X3 sDrive20i"
+          },
+          {
+            "@type": "Service",
+            "name": "BMW X3 sDrive20i Engine Replacement"
+          }
+        ],
+        "mainEntity": {
+          "@id": "https://www.enginesmarket.co.uk/bmw/x3/sdrive20i-engine/#service"
+        },
+        "breadcrumb": {
+          "@id": "https://www.enginesmarket.co.uk/bmw/x3/sdrive20i-engine/#breadcrumb"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.enginesmarket.co.uk/bmw/x3/sdrive20i-engine/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.enginesmarket.co.uk/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "BMW",
+            "item": "https://www.enginesmarket.co.uk/bmw/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "BMW X3",
+            "item": "https://www.enginesmarket.co.uk/bmw/x3/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "BMW X3 sDrive20i",
+            "item": "https://www.enginesmarket.co.uk/bmw/x3/sdrive20i-engine/"
+          }
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://www.enginesmarket.co.uk/bmw/x3/sdrive20i-engine/#service",
+        "name": "BMW X3 sDrive20i Engine Replacement Service",
+        "serviceType": [
+          "BMW X3 sDrive20i Engine Replacement",
+          "Reconditioned BMW X3 sDrive20i Engines",
+          "Used BMW X3 sDrive20i Engines",
+          "BMW X3 sDrive20i Engine Supply and Fit",
+          "BMW X3 sDrive20i Engine Price Comparison"
+        ],
+        "provider": {
+          "@id": "https://www.enginesmarket.co.uk/#organization"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        "url": "https://www.enginesmarket.co.uk/bmw/x3/sdrive20i-engine/",
+        "description": "BMW X3 sDrive20i engine replacement cost guide. Compare rebuilt, reconditioned & used B48B20 engine prices from £1,800. 12-month warranty & UK supply fit specialists."
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.enginesmarket.co.uk/bmw/x3/sdrive20i-engine/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does a BMW X3 sDrive20i engine replacement cost in the UK?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A B48B20 engine for the BMW X3 sDrive20i typically costs £1,800-£4,500 supply-only depending on condition - used units start around £1,800, reconditioned from £2,500, and fully rebuilt from £3,200. Supply & fit adds £500-£1,000."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is the BMW X3 sDrive20i B48B20 engine reliable?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, the B48B20 is generally regarded as a reliable and refined engine when properly maintained. It avoids the major timing chain issues of the N20, but coolant system failures and oil leaks are well-documented weak points."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What causes coolant loss on the BMW X3 sDrive20i B48B20 engine?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The B48B20's plastic coolant components - water pump, thermostat housing, and coolant transfer pipe - become brittle under thermal cycling, developing cracks that cause coolant loss. This is the most common failure point on B48 engines."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is the BMW X3 sDrive20i B48B20 timing chain a problem?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The B48B20 timing chain is far more reliable than the N20 it replaced - BMW redesigned the timing chain system to address the N20's notorious guide failure. Timing chain wear can occur at very high mileage (80,000+ miles) if oil changes are neglected, but it is not the widespread failure point the N20 was."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is it worth replacing the engine on a BMW X3 sDrive20i?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A 2017-2024 BMW X3 sDrive20i is typically worth £14,000-£28,000. A rebuilt B48B20 engine at £3,200-£4,500 supply-only is usually a sound investment if the car is otherwise in good condition."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I know which engine code my BMW X3 sDrive20i has?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Check your BMW X3 sDrive20i's VIN plate under the bonnet or in the driver's door shut - the engine code is printed as an 8-11 character code. For the sDrive20i, the engine code will be B48B20, B48B20A or B48B20C. You can also enter your registration in the tool above."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "sections": {
+    "hero": {
+      "tag": "BMW X3 sDrive20i SPECIALISTS",
+      "h1": "BMW X3 sDrive20i Engine Replacement - Compare Prices & Get Quotes",
+      "subheading": "Get quotes today from trusted UK BMW X3 sDrive20i engine specialists. Compare prices on reconditioned, rebuilt and used B48B20 engines for your rear-wheel-drive G01 X3 - supply & fit available nationwide.",
+      "trustBadges": [
+        "Supply & Fit Available",
+        "12-Month Warranty",
+        "Nationwide Delivery",
+        "100+ Suppliers"
+      ],
+      "ctaLinkText": "Get Free BMW X3 sDrive20i Engine Quotes ->",
+      "supportingText": "Get tailored BMW X3 sDrive20i engine quotes from vetted UK specialists.",
+      "ticker": "● Instant Quotes · No Obligation · 100% Free · Reconditioned · Rebuilt · Used · Supply & Fit Available · UK-Wide Network",
+      "imageAlt": "",
+      "highlights": [
+        {
+          "title": "BMW X3 sDrive20i Engine",
+          "price": "B48B20 - from £1,800 to £3,800",
+          "line1": "B48B20 - from £1,800 to £3,800",
+          "line2": "-> Used from £1,800 · Reconditioned from £2,500 · Common codes: B48B20, B48B20A, B48B20C",
+          "detail": "-> Used from £1,800 · Reconditioned from £2,500 · Common codes: B48B20, B48B20A, B48B20C",
+          "image": "/images/brands/bmw/models/bmw-x3-model-card.png",
+          "imageAlt": ""
+        }
+      ],
+      "engineOptions": [
+        {
+          "label": "Used",
+          "price": "From £1,800",
+          "description": "Tested, bare/short engine",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "imageAlt": "",
+          "tone": "used"
+        },
+        {
+          "label": "Reconditioned",
+          "price": "From £2,500",
+          "description": "Rod bearings addressed, tested",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "imageAlt": "",
+          "tone": "reconditioned"
+        },
+        {
+          "label": "Rebuilt",
+          "price": "From quote",
+          "description": "Upgraded bearings, full teardown, revised valvetrain",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "imageAlt": "",
+          "tone": "rebuilt"
+        }
+      ],
+      "vehicleBadge": "sDrive20i",
+      "mobileBar": {
+        "brandText": "ENGINEMARKET",
+        "callLabel": "Call",
+        "quoteLabel": "GET QUOTES"
+      },
+      "registrationInput": {
+        "label": "Enter your BMW X3 sDrive20i registration",
+        "platePlaceholder": "AB12 CDE",
+        "countryCode": "UK",
+        "countryLabel": "United Kingdom"
+      },
+      "form": {
+        "heading": "Find Your BMW X3 sDrive20i Engine",
+        "subtitle": "Enter your registration number to compare BMW X3 sDrive20i engine options.",
+        "inputPlaceholder": "AB12 CDE",
+        "buttonText": "Get Free BMW X3 sDrive20i Engine Quotes ->",
+        "note": "Secure enquiry - no spam, no pressure. Genuine quotes only from vetted UK BMW X3 sDrive20i specialists."
+      }
+    },
+    "howItWorks": {
+      "tag": "How It Works",
+      "h2": "3 Simple Steps to Finding the Best BMW X3 sDrive20i Replacement Engine",
+      "headingLines": [
+        "3 Simple Steps",
+        "to Finding the Best BMW X3 sDrive20i Replacement Engine"
+      ],
+      "cards": [
+        {
+          "number": 1,
+          "icon": "registration",
+          "front": {
+            "h3": "Confirm Your BMW X3 sDrive20i",
+            "text": "🖼️ [Registration icon]. Enter your reg to verify your sDrive20i's B48B20 engine code and fuel type via DVLA"
+          },
+          "back": {
+            "heading": "EnginesMarket cross-checks the DVLA record against known sDrive20i engine codes - B48B20, B48B20A, B48B20C - so your quote request is accurate before it reaches a specialist",
+            "text": "No guesswork, no paperwork.",
+            "bullets": [
+              "No guesswork, no paperwork."
+            ]
+          }
+        },
+        {
+          "number": 2,
+          "icon": "quote",
+          "front": {
+            "h3": "Compare BMW X3 sDrive20i Engine Quotes",
+            "text": "🖼️ [Compare icon]. See used, reconditioned and rebuilt B48B20 prices side-by-side from UK BMW specialists"
+          },
+          "back": {
+            "heading": "Our supplier network sends you itemised, transparent quotes covering all condition types - from budget used units to fully rebuilt B48B20 engines with upgraded cooling system components",
+            "text": "No obligation, no pressure.",
+            "bullets": [
+              "No obligation, no pressure."
+            ]
+          }
+        },
+        {
+          "number": 3,
+          "icon": "shield",
+          "front": {
+            "h3": "Choose Your BMW X3 sDrive20i Specialist",
+            "text": "🖼️ [Booking icon]. Book your chosen engine with supply & fit - 12-month warranty and nationwide delivery included"
+          },
+          "back": {
+            "heading": "Every rebuilt B48B20 engine supplied through our network carries a minimum 12-month unlimited-mileage warranty with upgraded cooling system components",
+            "text": "Choose supply-only or full supply & fit with UK-wide delivery and collection - one invoice, no logistics stress.",
+            "bullets": [
+              "Choose supply-only or full supply & fit with UK-wide delivery and collection - one invoice, no logistics stress."
+            ]
+          }
+        }
+      ],
+      "tagline": "",
+      "ui": {
+        "stepLabel": "Step",
+        "desktopClosedLabel": "Click to expand",
+        "desktopOpenLabel": "Click to view details",
+        "mobileOpenLabel": "Tap to flip",
+        "mobileCloseLabel": "Tap to flip back",
+        "footerNote": "Most replacements completed within 3-5 days.",
+        "mobileTrustItems": [
+          "12-Month Warranty",
+          "Supply & Fit Available",
+          "Nationwide Delivery",
+          "Trusted UK Suppliers"
+        ]
+      }
+    },
+    "historyTimeline": {
+      "tag": "Variant History",
+      "h2": "BMW X3 sDrive20i (G01) - Engine History & Specs at a Glance",
+      "intro": "The sDrive20i joined the G01 X3 range as the entry-level petrol variant, offering rear-wheel drive and the B48B20 2.0-litre turbocharged four-cylinder engine. Launched as a more affordable, fuel-efficient alternative to the xDrive models, the sDrive20i brought BMW's modular B-series engine family to the third-generation X3 for UK buyers prioritising running costs over all-weather traction.",
+      "milestones": [
+        {
+          "year": "2017",
+          "description": "G01 X3 launched; sDrive20i introduced with B48B20, 2.0L four-cylinder turbo petrol, 184hp, 300Nm, eight-speed automatic, rear-wheel drive"
+        },
+        {
+          "year": "2020",
+          "description": "Minor updates to engine management; B48B20 continues with 184hp"
+        },
+        {
+          "year": "2021",
+          "description": "G01 LCI (facelift) brings 48V mild hybrid technology to xDrive variants; sDrive20i continues without MHEV in some markets"
+        },
+        {
+          "year": "2024",
+          "description": "G01 production ends; G45 generation replaces it"
+        }
+      ],
+      "vehicleTitle": "BMW X3 sDrive20i (G01)",
+      "vehicleMeta": [
+        {
+          "label": "Fuel Type",
+          "value": "Petrol"
+        },
+        {
+          "label": "Engine Size",
+          "value": "2.0L (1,998cc)"
+        },
+        {
+          "label": "Power Output",
+          "value": "184hp (135kW) at 5,000rpm"
+        }
+      ],
+      "specsLabel": "Key Specs Snapshot",
+      "specs": [
+        {
+          "label": "Fuel Type",
+          "value": "Petrol"
+        },
+        {
+          "label": "Engine Size",
+          "value": "2.0L (1,998cc)"
+        },
+        {
+          "label": "Power Output",
+          "value": "184hp (135kW) at 5,000rpm"
+        },
+        {
+          "label": "Torque",
+          "value": "300Nm at 1,350-4,600rpm"
+        },
+        {
+          "label": "Transmission",
+          "value": "Eight-speed automatic"
+        },
+        {
+          "label": "Drivetrain",
+          "value": "Rear-wheel drive (sDrive)"
+        },
+        {
+          "label": "Years Produced",
+          "value": "2017-2024 (G01 generation)"
+        }
+      ],
+      "closingNote": "Every engine fitted to the BMW X3 sDrive20i is covered below, with UK rebuilt pricing and known failure points specific to the B48B20 turbo petrol unit."
+    },
+    "engineGuide": {
+      "tag": "Engine Codes & Pricing",
+      "h2": "BMW X3 sDrive20i Engine Codes - Specifications & Replacement Cost",
+      "sectionTitle": "Compatible Engine Codes & Cost Guide",
+      "sectionSubtitle": "Find your exact engine code, specs and UK replacement cost guide.",
+      "intro": "(Source: Table A - using B48B20 proxy, adjusted for G01 sDrive20i availability)",
+      "items": [
+        {
+          "code": "B48B20",
+          "title": "2.0L Petrol Turbo (2017-2024)",
+          "specs": [
+            {
+              "label": "Power Output",
+              "value": "184hp (135kW) at 5,000rpm"
+            },
+            {
+              "label": "Torque",
+              "value": "300Nm at 1,350-4,600rpm"
+            },
+            {
+              "label": "Displacement",
+              "value": "1,998cc, four cylinders inline, DOHC, 16 valves, turbocharged with direct injection"
+            },
+            {
+              "label": "Compression Ratio",
+              "value": "11.0:1"
+            },
+            {
+              "label": "Bore x Stroke",
+              "value": "84.0mm x 90.1mm"
+            },
+            {
+              "label": "Fuel System",
+              "value": "Direct injection with TwinPower Turbo"
+            },
+            {
+              "label": "Years Fitted",
+              "value": "2017-2024"
+            }
+          ],
+          "costs": [
+            {
+              "label": "Used",
+              "value": "£1,800-£2,800",
+              "description": ""
+            },
+            {
+              "label": "Reconditioned",
+              "value": "£2,500-£3,800",
+              "description": ""
+            },
+            {
+              "label": "Rebuilt",
+              "value": "£3,200-£4,500",
+              "description": ""
+            }
+          ],
+          "compatibleTrimLevels": [
+            "sDrive20i",
+            "sDrive20i SE",
+            "sDrive20i Sport",
+            "sDrive20i M Sport",
+            "sDrive20i xLine"
+          ],
+          "commonFailure": "The B48B20 is generally a reliable engine, but several issues are well-documented. Coolant leaks from the water pump, thermostat housing, and coolant transfer pipe are the most frequently reported problems. Oil leaks from the oil filter housing gasket and valve cover gasket are common at higher mileages. Timing chain tensioner wear can cause a rattling noise on startup, though this is less common than on the N20 predecessor. Carbon buildup on intake valves due to direct injection is also a known issue.",
+          "cta": "-> Get quotes for B48B20 BMW X3 sDrive20i engine replacement",
+          "closing": "-> Get quotes for B48B20 BMW X3 sDrive20i engine replacement"
+        },
+        {
+          "code": "B48B20A",
+          "title": "2.0L Petrol Turbo (Early Production, 2017-2020)",
+          "specs": [
+            {
+              "label": "Power Output",
+              "value": "184hp (135kW)"
+            },
+            {
+              "label": "Displacement",
+              "value": "1,998cc"
+            },
+            {
+              "label": "Years Fitted",
+              "value": "2017-2020"
+            }
+          ],
+          "costs": [
+            {
+              "label": "Used",
+              "value": "£1,800-£2,800",
+              "description": ""
+            },
+            {
+              "label": "Reconditioned",
+              "value": "£2,500-£3,800",
+              "description": ""
+            },
+            {
+              "label": "Rebuilt",
+              "value": "£3,200-£4,500",
+              "description": ""
+            }
+          ],
+          "compatibleTrimLevels": [
+            "sDrive20i (early production)"
+          ],
+          "commonFailure": "Same as B48B20 above, with coolant leaks being the primary concern on early production units.",
+          "cta": "-> Get quotes for B48B20A BMW X3 sDrive20i engine replacement",
+          "closing": "-> Get quotes for B48B20A BMW X3 sDrive20i engine replacement",
+          "intro": ""
+        },
+        {
+          "code": "B48B20C",
+          "title": "2.0L Petrol Turbo (Later Production, 2020-2024)",
+          "specs": [
+            {
+              "label": "Power Output",
+              "value": "184hp (135kW)"
+            },
+            {
+              "label": "Displacement",
+              "value": "1,998cc"
+            },
+            {
+              "label": "Years Fitted",
+              "value": "2020-2024"
+            }
+          ],
+          "costs": [
+            {
+              "label": "Used",
+              "value": "£1,900-£2,900",
+              "description": ""
+            },
+            {
+              "label": "Reconditioned",
+              "value": "£2,600-£3,900",
+              "description": ""
+            },
+            {
+              "label": "Rebuilt",
+              "value": "£3,300-£4,600",
+              "description": ""
+            }
+          ],
+          "compatibleTrimLevels": [
+            "sDrive20i (late production)",
+            "sDrive20i LCI"
+          ],
+          "commonFailure": "Same as B48B20 above, with some revisions to cooling system components in later production.",
+          "cta": "-> Get quotes for B48B20C BMW X3 sDrive20i engine replacement",
+          "closing": "-> Get quotes for B48B20C BMW X3 sDrive20i engine replacement",
+          "intro": ""
+        }
+      ],
+      "prompt": ""
+    },
+    "commonProblems": {
+      "tag": "Common Problems",
+      "h2": "BMW X3 sDrive20i Engine Problems - Repair Cost vs Replacement",
+      "h3": "The B48B20 engine in the BMW X3 sDrive20i is a significant step forward from the N20 it replaced - timing chain issues are far less frequent, and the engine is generally reliable when properly maintained. However, the B48 has its own well-documented weaknesses: cooling system failures are the most common cause of serious engine damage, followed by oil leaks and timing chain tensioner wear. Every rebuilt B48B20 engine supplied through EnginesMarket includes upgraded cooling system components and a minimum 12-month unlimited-mileage warranty.",
+      "problems": [
+        {
+          "group": "B48B20 Coolant System Failure",
+          "h4": "B48B20 Coolant System Failure - Why Your BMW X3 sDrive20i Loses Coolant and Overheats",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "affectedModels": "BMW X3 sDrive20i (B48B20, 2017-2024)",
+          "typicalFailureMileage": "40,000-80,000 miles",
+          "rootCause": "The B48 engine's plastic coolant components - including the water pump, thermostat housing, and coolant transfer pipe - become brittle under thermal cycling. Cracks develop, causing coolant loss that can lead to sudden overheating and head gasket failure if not addressed promptly.",
+          "whyItHappens": "",
+          "repairOptions": [
+            {
+              "tier": "Water Pump & Thermostat Replacement",
+              "dealerPrice": "£800-£1,200",
+              "specialistPrice": "£450-£800",
+              "whatItInvolves": "Replace water pump, thermostat housing, coolant flush",
+              "longevity": "Viable if caught early; prevents overheating.",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Coolant Transfer Pipe Replacement",
+              "dealerPrice": "£1,200-£1,800",
+              "specialistPrice": "£700-£1,100",
+              "whatItInvolves": "Replace coolant transfer pipe, bleed system",
+              "longevity": "Labour-intensive due to intake removal.",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Full Replacement - Rebuilt B48B20 Engine",
+              "dealerPrice": "£4,500-£6,500",
+              "specialistPrice": "£3,200-£4,500",
+              "whatItInvolves": "Supply of rebuilt unit with upgraded cooling components, fitted, tested, 12-month warranty",
+              "longevity": "Required if overheating has warped cylinder head.",
+              "estimatedTime": ""
+            }
+          ],
+          "vehicleValueCheck": "A typical 2017-2024 BMW X3 sDrive20i is valued at approximately £14,000-£28,000 depending on mileage, condition and trim. At this value band, a reconditioned or rebuilt engine (£2,500-£4,500) is a sound investment if the car is otherwise in good condition.",
+          "recommendation": "B48 coolant leaks are the single most discussed issue on X3 forums. If you smell coolant or see the low coolant warning, act immediately. Check your coolant level monthly. A £450-£800 specialist repair is far cheaper than a £3,200-£4,500 engine replacement.",
+          "cta": "-> Compare rebuilt B48B20 BMW X3 sDrive20i engine prices"
+        },
+        {
+          "group": "B48B20 Oil Leaks",
+          "h4": "B48B20 Oil Leaks - Valve Cover and Oil Filter Housing Gaskets",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "affectedModels": "BMW X3 sDrive20i (B48B20, 2017-2024)",
+          "typicalFailureMileage": "50,000-100,000 miles",
+          "rootCause": "The oil filter housing gasket and valve cover gasket degrade over time, causing oil leaks. The oil filter housing on B48 engines is particularly problematic - the plastic housing can crack, leading to oil leaks externally or internally.",
+          "whyItHappens": "",
+          "repairOptions": [
+            {
+              "tier": "Valve Cover Gasket Replacement",
+              "dealerPrice": "£600-£900",
+              "specialistPrice": "£350-£600",
+              "whatItInvolves": "Replace valve cover gasket, clean oil residue",
+              "longevity": "Resolves external oil leaks; prevents oil dripping onto exhaust.",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Oil Filter Housing Gasket Replacement",
+              "dealerPrice": "£500-£800",
+              "specialistPrice": "£300-£500",
+              "whatItInvolves": "Replace oil filter housing gasket, oil change",
+              "longevity": "Resolves oil leaks from filter housing.",
+              "estimatedTime": ""
+            }
+          ],
+          "vehicleValueCheck": "",
+          "recommendation": "Oil leaks on the B48 are common but not catastrophic if addressed early. A small oil leak around the valve cover or oil filter housing is a relatively inexpensive fix at a specialist. However, if left unchecked, oil can drip onto the exhaust or turbocharger, creating a fire risk - address oil leaks promptly.",
+          "cta": "-> Get quotes for BMW X3 sDrive20i B48B20 oil leak repair"
+        },
+        {
+          "group": "B48B20 Timing Chain Tensioner Wear",
+          "h4": "B48B20 Timing Chain Tensioner Wear - Rattling on Start-Up",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "affectedModels": "BMW X3 sDrive20i (B48B20, 2017-2024)",
+          "typicalFailureMileage": "80,000-120,000 miles",
+          "rootCause": "The timing chain tensioner can lose hydraulic pressure, causing chain slack and a metallic rattle on cold start. While far less common than on the N20, poor maintenance and extended oil change intervals can accelerate wear.",
+          "whyItHappens": "",
+          "repairOptions": [
+            {
+              "tier": "Timing Chain Tensioner Replacement",
+              "dealerPrice": "£800-£1,200",
+              "specialistPrice": "£500-£800",
+              "whatItInvolves": "Replace tensioner, inspect chain and guides",
+              "longevity": "Viable if caught early and no chain damage.",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Full Timing Chain Kit Replacement",
+              "dealerPrice": "£1,500-£2,200",
+              "specialistPrice": "£900-£1,500",
+              "whatItInvolves": "Replace chain, guides, tensioner, sprockets",
+              "longevity": "Recommended if rattle is persistent or chain has stretched.",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Full Replacement - Rebuilt B48B20 Engine",
+              "dealerPrice": "£4,500-£6,500",
+              "specialistPrice": "£3,200-£4,500",
+              "whatItInvolves": "Supply of rebuilt unit with upgraded timing components, fitted, tested, 12-month warranty",
+              "longevity": "Required if chain has jumped timing or caused valve damage.",
+              "estimatedTime": ""
+            }
+          ],
+          "vehicleValueCheck": "",
+          "recommendation": "The B48B20 timing chain is far more reliable than the N20 - most owners will never need to replace it. However, if you hear a rattling noise on cold start or the engine is approaching 100,000 miles with no chain service history, a specialist inspection is recommended. Regular oil changes every 8,000-10,000 miles are critical for chain longevity.",
+          "cta": "-> Compare rebuilt B48B20 BMW X3 sDrive20i engine prices"
+        }
+      ],
+      "emptyState": null,
+      "finalCta": {
+        "h4": "Don't Let Engine Failure Write Off Your BMW X3 sDrive20i",
+        "paragraph": "The failures above account for the majority of BMW X3 sDrive20i engine replacement enquiries we see - coolant system failures on lower-mileage cars, oil leaks on higher-mileage units, and timing chain tensioner wear. EnginesMarket makes it simple to compare prices from trusted UK BMW specialists who use upgraded components specifically designed to prevent these failures from recurring. Every rebuilt B48B20 engine includes a minimum 12-month unlimited-mileage warranty, nationwide delivery, and supply & fit options. Compare prices today and get back on the road without the main dealer premium.",
+        "buttonText": "Compare BMW X3 sDrive20i Engine Replacement Prices Now ->",
+        "disclaimer": "\"All prices are indicative UK market ranges based on historical quote data and repair requests from our network of engine specialists. Dealer pricing is estimated based on published main dealer labour rates and genuine OEM parts pricing. Specialist pricing reflects actual quote data from EnginesMarket's UK network. Actual costs vary depending on damage severity, vehicle condition, variant, and workshop location within the UK. Use our free comparison tool to get tailored quotes for your specific BMW X3 sDrive20i. Every engine supplied through EnginesMarket carries a minimum 12-month unlimited mileage warranty - always confirm exact terms with your chosen supplier.\""
+      },
+      "reviewSummary": null
+    },
+    "faq": {
+      "tag": "FAQ",
+      "h2": "BMW X3 sDrive20i Engine Replacement - Frequently Asked Questions",
+      "intro": "Everything BMW X3 sDrive20i owners usually ask before choosing a rebuilt, reconditioned or used replacement engine.",
+      "defaultOpenIndex": 0,
+      "disclaimer": "All prices are indicative UK market ranges based on historical quote data from our network of engine specialists. Actual costs vary by variant, engine code, damage severity and workshop location. Use our free comparison tool to get tailored quotes. Every engine supplied through EnginesMarket carries a minimum 12-month unlimited mileage warranty - always confirm terms with your chosen supplier.",
+      "items": [
+        {
+          "question": "How much does a BMW X3 sDrive20i engine replacement cost in the UK?",
+          "answer": "A B48B20 engine for the BMW X3 sDrive20i typically costs £1,800-£4,500 supply-only depending on condition - used units start around £1,800, reconditioned from £2,500, and fully rebuilt from £3,200. Supply & fit adds £500-£1,000.",
+          "keyPoints": [
+            "Used B48B20: £1,800-£2,800 supply-only",
+            "Reconditioned B48B20: £2,500-£3,800 supply-only",
+            "Rebuilt B48B20: £3,200-£4,500 supply-only",
+            "Dealer replacement costs 40-60% more than specialist prices"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Compare rebuilt BMW X3 sDrive20i engine prices by your exact variant"
+        },
+        {
+          "question": "Is the BMW X3 sDrive20i B48B20 engine reliable?",
+          "answer": "Yes, the B48B20 is generally regarded as a reliable and refined engine when properly maintained. It avoids the major timing chain issues of the N20, but coolant system failures and oil leaks are well-documented weak points.",
+          "keyPoints": [
+            "B48 is part of BMW's modular B-series - significantly improved over N20",
+            "Coolant leaks from water pump and thermostat are the main concerns",
+            "Oil filter housing gasket leaks are common at higher mileage",
+            "Regular oil changes every 8,000-10,000 miles are essential"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Check availability of reconditioned B48B20 BMW X3 sDrive20i engines"
+        },
+        {
+          "question": "What causes coolant loss on the BMW X3 sDrive20i B48B20 engine?",
+          "answer": "The B48B20's plastic coolant components - water pump, thermostat housing, and coolant transfer pipe - become brittle under thermal cycling, developing cracks that cause coolant loss. This is the most common failure point on B48 engines.",
+          "keyPoints": [
+            "Plastic components degrade with heat and age",
+            "Symptoms: low coolant warning, coolant smell, overheating",
+            "Upgraded components in rebuilt engines address this weakness"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Get quotes for BMW X3 sDrive20i B48B20 coolant system repair"
+        },
+        {
+          "question": "Is the BMW X3 sDrive20i B48B20 timing chain a problem?",
+          "answer": "The B48B20 timing chain is far more reliable than the N20 it replaced - BMW redesigned the timing chain system to address the N20's notorious guide failure. Timing chain wear can occur at very high mileage (80,000+ miles) if oil changes are neglected, but it is not the widespread failure point the N20 was.",
+          "keyPoints": [
+            "B48 timing chain system is significantly improved over N20",
+            "Preventative maintenance: regular oil changes every 8,000-10,000 miles",
+            "Cold-start rattle is the key warning sign",
+            "Most owners will never need to replace the timing chain"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Get quotes for BMW X3 sDrive20i B48B20 timing chain inspection"
+        },
+        {
+          "question": "Is it worth replacing the engine on a BMW X3 sDrive20i?",
+          "answer": "A 2017-2024 BMW X3 sDrive20i is typically worth £14,000-£28,000. A rebuilt B48B20 engine at £3,200-£4,500 supply-only is usually a sound investment if the car is otherwise in good condition.",
+          "keyPoints": [
+            "G01 X3 values remain strong - replacement is cost-effective",
+            "Rebuilt engine includes 12-month warranty and upgraded components",
+            "Specialist replacement costs half what a main dealer charges",
+            "Consider body and chassis condition before committing"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Compare BMW X3 sDrive20i engine rebuild vs replacement costs"
+        },
+        {
+          "question": "How do I know which engine code my BMW X3 sDrive20i has?",
+          "answer": "Check your BMW X3 sDrive20i's VIN plate under the bonnet or in the driver's door shut - the engine code is printed as an 8-11 character code. For the sDrive20i, the engine code will be B48B20, B48B20A or B48B20C. You can also enter your registration in the tool above.",
+          "keyPoints": [
+            "VIN plate shows engine code (Motor/Mot) - typically 8-11 characters",
+            "Registration lookup above identifies exact engine code instantly",
+            "Service history documents list engine code and variant details",
+            "sDrive20i codes: B48B20, B48B20A, B48B20C"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Enter your registration above to identify your BMW X3 sDrive20i engine code instantly"
+        }
+      ],
+      "ui": {
+        "questionLabelPrefix": "Question",
+        "keyPointsLabel": "Key points",
+        "comparisonTableLabel": "Comparison table",
+        "disclaimerLabel": "Disclaimer",
+        "warningTitle": "Important"
+      }
+    },
+    "trustCta": {
+      "tag": "Why Choose Us",
+      "h2": "Compare BMW X3 sDrive20i Engine Prices Today",
+      "intro": "Compare quotes from trusted UK BMW X3 sDrive20i engine specialists with warranty-backed rebuilt, reconditioned and used options nationwide.",
+      "points": [
+        {
+          "title": "100+ B48B20 engines supplied for BMW X3 sDrive20i through our network",
+          "description": ""
+        },
+        {
+          "title": "12-Month Warranty on every rebuilt BMW X3 sDrive20i engine with upgraded cooling components",
+          "description": ""
+        },
+        {
+          "title": "Nationwide UK delivery",
+          "description": "supply & fit available for your sDrive20i"
+        }
+      ],
+      "finalText": "Comparing quotes for your BMW X3 sDrive20i engine replacement is completely free and carries no obligation. Enter your registration above, tell us your preferred engine condition - used, reconditioned, or rebuilt - and receive tailored quotes from trusted UK BMW sDrive20i specialists within hours. Every rebuilt B48B20 engine includes upgraded cooling system components, a minimum 12-month unlimited-mileage warranty, and nationwide delivery. Get back on the road with confidence - without the main dealer premium.",
+      "buttonText": "Get Free BMW X3 sDrive20i Engine Quotes ->",
+      "secondaryAction": {
+        "text": "",
+        "href": "tel:03330000044"
+      },
+      "ui": {
+        "showSecondaryAction": false
+      }
+    }
+  }
+}

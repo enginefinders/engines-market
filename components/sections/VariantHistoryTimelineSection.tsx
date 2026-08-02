@@ -99,7 +99,7 @@ export default function VariantHistoryTimelineSection({ data, vehicleImage }: Pr
 
   return (
     <Section className="bg-white !py-[2px]">
-      <Container className="!max-w-none !px-[2px] sm:!px-[2px] lg:!px-[2px]">
+      <Container className="max-w-[1400px] px-0 sm:px-0 lg:px-0">
         <div className="relative overflow-hidden bg-[radial-gradient(circle_at_top,#edf4ff_0%,#ffffff_54%,#f7fbff_100%)] px-[2px] py-[2px]">
           <div className="grid gap-8 lg:grid-cols-[minmax(0,0.96fr)_minmax(520px,1.04fr)]">
             <div>

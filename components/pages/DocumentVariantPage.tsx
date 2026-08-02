@@ -41,7 +41,6 @@ export default function DocumentVariantPage({ data }: DocumentVariantPageProps) 
         data={data.sections.howItWorks}
         bgImage={data.assets.howItWorksBg}
         sectionId="how-it-works"
-        flush
       />
 
       <VariantHistoryTimelineSection data={data.sections.historyTimeline} vehicleImage={mainImage} />

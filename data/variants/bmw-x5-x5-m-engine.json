@@ -1,0 +1,775 @@
+{
+  "brand": {
+    "name": "BMW",
+    "slug": "bmw",
+    "tone": "premium"
+  },
+  "model": {
+    "name": "BMW X5",
+    "slug": "x5"
+  },
+  "variant": {
+    "name": "BMW X5 M",
+    "slug": "x5-m-engine",
+    "storageSlug": "bmw-x5-x5-m-engine"
+  },
+  "seo": {
+    "title": "BMW X5 M Engine Replacement | Compare Prices",
+    "description": "BMW X5 M engine replacement cost guide. Compare rebuilt, reconditioned & used S63 V8 engine prices from £6,000. 12-month warranty & UK supply fit specialists.",
+    "canonical": "/bmw/x5/x5-m-engine"
+  },
+  "assets": {
+    "mainImage": "/images/brands/bmw/models/bmw-x5-model-card.png",
+    "smallImage": "/images/brands/bmw/models/bmw-x5-model-card.png",
+    "heroBg": "/images/brands/bmw/models/bmw-x5-model-card.png",
+    "howItWorksBg": "/images/brands/bmw/brand/bmw-how-it-works-bg.webp",
+    "ctaImage": "/images/brands/bmw/models/bmw-x5-model-card.png"
+  },
+  "structuredData": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.enginesmarket.co.uk/#website",
+        "url": "https://www.enginesmarket.co.uk/",
+        "name": "Engines Market",
+        "publisher": {
+          "@id": "https://www.enginesmarket.co.uk/#organization"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.enginesmarket.co.uk/#organization",
+        "name": "Engines Market",
+        "url": "https://www.enginesmarket.co.uk/",
+        "logo": "https://www.enginesmarket.co.uk/images/logo.png",
+        "sameAs": [
+          "https://www.facebook.com/enginesmarket",
+          "https://x.com/EnginesMarket",
+          "https://www.instagram.com/enginesmarketuk/",
+          "https://www.tiktok.com/@enginesmarket"
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.enginesmarket.co.uk/bmw/x5/x5-m-engine/#webpage",
+        "url": "https://www.enginesmarket.co.uk/bmw/x5/x5-m-engine/",
+        "name": "BMW X5 M Engine Replacement - Compare Prices & Get Quotes",
+        "description": "BMW X5 M engine replacement cost guide. Compare rebuilt, reconditioned & used S63 V8 engine prices from £6,000. 12-month warranty & UK supply fit specialists.",
+        "isPartOf": {
+          "@id": "https://www.enginesmarket.co.uk/#website"
+        },
+        "about": [
+          {
+            "@type": "Car",
+            "name": "BMW X5 M",
+            "brand": {
+              "@type": "Brand",
+              "name": "BMW"
+            },
+            "model": "X5 M"
+          },
+          {
+            "@type": "Service",
+            "name": "BMW X5 M Engine Replacement"
+          }
+        ],
+        "mainEntity": {
+          "@id": "https://www.enginesmarket.co.uk/bmw/x5/x5-m-engine/#service"
+        },
+        "breadcrumb": {
+          "@id": "https://www.enginesmarket.co.uk/bmw/x5/x5-m-engine/#breadcrumb"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.enginesmarket.co.uk/bmw/x5/x5-m-engine/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.enginesmarket.co.uk/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "BMW",
+            "item": "https://www.enginesmarket.co.uk/bmw/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "BMW X5",
+            "item": "https://www.enginesmarket.co.uk/bmw/x5/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "BMW X5 M",
+            "item": "https://www.enginesmarket.co.uk/bmw/x5/x5-m-engine/"
+          }
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://www.enginesmarket.co.uk/bmw/x5/x5-m-engine/#service",
+        "name": "BMW X5 M Engine Replacement Service",
+        "serviceType": [
+          "BMW X5 M Engine Replacement",
+          "Reconditioned BMW X5 M Engines",
+          "Used BMW X5 M Engines",
+          "BMW X5 M Engine Supply and Fit",
+          "BMW X5 M Engine Price Comparison"
+        ],
+        "provider": {
+          "@id": "https://www.enginesmarket.co.uk/#organization"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        "url": "https://www.enginesmarket.co.uk/bmw/x5/x5-m-engine/",
+        "description": "BMW X5 M engine replacement cost guide. Compare rebuilt, reconditioned & used S63 V8 engine prices from £6,000. 12-month warranty & UK supply fit specialists."
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.enginesmarket.co.uk/bmw/x5/x5-m-engine/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does a BMW X5 M engine replacement cost in the UK?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A BMW X5 M engine replacement typically costs £6,000-£14,000 supply-only for rebuilt units, or £10,000-£18,000 fitted by a specialist. The S63 V8 is a complex, high-performance engine requiring specialist knowledge. Used S63B44 engines: £5,000-£9,000 supply-only. Reconditioned units: £8,000-£14,000 supply-only. Professional fitting adds £1,500-£3,000 depending on workshop location. Dealership replacement quotes often exceed £20,000."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is the BMW X5 M S63 engine reliable?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The S63 is a remarkable engine when properly maintained, but it has well-documented weaknesses. Early versions (S63B44) are prone to rod bearing wear, timing chain tensioner failure, and turbocharger issues. Later revisions (S63TU, S63TU2, S63TU4) addressed many of these concerns. Rod bearings typically need attention between 60,000-100,000 miles. Frequent oil changes (every 5,000-6,000 miles) are critical. Cooling system components should be inspected regularly. Later F95-generation engines are significantly more robust."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What are the signs of rod bearing failure in a BMW X5 M?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The most common warning signs are a knocking noise from the bottom end (especially on cold start), metallic debris in the oil, low oil pressure warnings, and in severe cases, engine seizure. Knocking noise that increases with RPM is the most serious warning sign. Oil analysis can detect bearing material in the oil before failure. Ignoring rod bearing noise will destroy the engine. Preventative bearing replacement at 60,000 miles is strongly recommended."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is it worth replacing the engine on a high-mileage BMW X5 M?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "For an E70 X5 M worth £18,000-£30,000, a rebuilt S63 at £10,000-£15,000 can make financial sense if the body, gearbox, and interior are in excellent condition. For F85 and F95 examples worth £35,000+, replacement is generally viable. Compare replacement cost against vehicle value - specialist advice: replacement viable up to 70% of car's value. Low-mileage, well-maintained examples justify higher investment. Factor 12-month warranty into replacement decision. Always get a full vehicle inspection before committing to major work."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What are the differences between the E70, F85 and F95 X5 M engines?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Each generation uses a different iteration of the S63 V8: E70 (2009-2013): S63B44, 555hp, first-generation M V8. F85 (2014-2018): S63B44T2, 575hp, Valvetronic added. F95 (2020-present): S63B44B, 600-625hp, latest TU4 version. Later generations are more powerful and generally more reliable, with BMW addressing many early issues."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Should I buy a used or rebuilt engine for my BMW X5 M?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A rebuilt engine with upgraded components - particularly rod bearings and timing chain components - offers significantly better long-term reliability than a used engine of unknown provenance. For a high-performance M car, the additional cost of a rebuilt unit is typically justified. Used engines: lower upfront cost but unknown history and no warranty. Rebuilt engines: upgraded components, 12-month warranty, known quality. Reconditioned engines: mid-range option with some new components. For X5 M ownership, rebuilt is strongly recommended for peace of mind."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "sections": {
+    "hero": {
+      "tag": "BMW X5 M SPECIALISTS",
+      "h1": "BMW X5 M Engine Replacement - Compare Prices & Get Quotes",
+      "subheading": "Get quotes today from trusted UK BMW X5 M engine specialists. Compare prices on reconditioned, rebuilt and used S63 V8 engines for the full-fat M division SUV - supply & fit available nationwide.",
+      "trustBadges": [
+        "Supply & Fit Available",
+        "12-Month Warranty",
+        "Nationwide Delivery",
+        "100+ Suppliers"
+      ],
+      "ctaLinkText": "Get Free BMW X5 M Engine Quotes ->",
+      "supportingText": "Get tailored BMW X5 M engine quotes from vetted UK specialists.",
+      "ticker": "● Instant Quotes · No Obligation · 100% Free · Reconditioned · Rebuilt · Used · Supply & Fit Available · UK-Wide Network",
+      "imageAlt": "",
+      "highlights": [
+        {
+          "title": "BMW X5 M Engine",
+          "price": "S63B44 4.4 V8 Twin-Turbo - from £6,000 to £14,000",
+          "line1": "S63B44 4.4 V8 Twin-Turbo - from £6,000 to £14,000",
+          "line2": "-> Used from £5,000 · Reconditioned from £8,000 · Common codes: S63B44, S63B44T2, S63B44B",
+          "detail": "-> Used from £5,000 · Reconditioned from £8,000 · Common codes: S63B44, S63B44T2, S63B44B",
+          "image": "/images/brands/bmw/models/bmw-x5-model-card.png",
+          "imageAlt": ""
+        }
+      ],
+      "engineOptions": [
+        {
+          "label": "Used",
+          "price": "From £5,000",
+          "description": "Tested, bare/short engine",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "imageAlt": "",
+          "tone": "used"
+        },
+        {
+          "label": "Reconditioned",
+          "price": "From £8,000",
+          "description": "Rod bearings addressed, tested",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "imageAlt": "",
+          "tone": "reconditioned"
+        },
+        {
+          "label": "Rebuilt",
+          "price": "From quote",
+          "description": "Upgraded bearings, full teardown, revised valvetrain",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "imageAlt": "",
+          "tone": "rebuilt"
+        }
+      ],
+      "vehicleBadge": "M",
+      "mobileBar": {
+        "brandText": "ENGINEMARKET",
+        "callLabel": "Call",
+        "quoteLabel": "GET QUOTES"
+      },
+      "registrationInput": {
+        "label": "Enter your BMW X5 M registration",
+        "platePlaceholder": "AB12 CDE",
+        "countryCode": "UK",
+        "countryLabel": "United Kingdom"
+      },
+      "form": {
+        "heading": "Find Your BMW X5 M Engine",
+        "subtitle": "Enter your registration number to compare BMW X5 M engine options.",
+        "inputPlaceholder": "AB12 CDE",
+        "buttonText": "Get Free BMW X5 M Engine Quotes ->",
+        "note": "Secure enquiry - no spam, no pressure. Genuine quotes only from vetted UK BMW X5 M specialists."
+      }
+    },
+    "howItWorks": {
+      "tag": "How It Works",
+      "h2": "3 Simple Steps to Finding the Best BMW X5 M Replacement Engine",
+      "headingLines": [
+        "3 Simple Steps",
+        "to Finding the Best BMW X5 M Replacement Engine"
+      ],
+      "cards": [
+        {
+          "number": 1,
+          "icon": "registration",
+          "front": {
+            "h3": "Confirm Your BMW X5 M",
+            "text": "🖼️ [Registration icon]. Instantly verify your E70, F85 or F95 X5 M via DVLA - S63B44 4.4-litre twin-turbo V8, M xDrive all-wheel drive"
+          },
+          "back": {
+            "heading": "EnginesMarket cross-checks the DVLA record against known X5 M engine codes (S63B44, S63B44T2, S63B44B) so your quote request is accurate before it reaches a supplier - no guesswork, no paperwork, 100% free.",
+            "text": "EnginesMarket cross-checks the DVLA record against known X5 M engine codes (S63B44, S63B44T2, S63B44B) so your quote request is accurate before it reaches a supplier - no guesswork, no paperwork, 100% free.",
+            "bullets": [
+              "EnginesMarket cross-checks the DVLA record against known X5 M engine codes (S63B44, S63B44T2, S63B44B) so your quote request is accurate before it reaches a supplier - no guesswork, no paperwork, 100% free."
+            ]
+          }
+        },
+        {
+          "number": 2,
+          "icon": "quote",
+          "front": {
+            "h3": "Compare BMW X5 M Engine Quotes",
+            "text": "🖼️ [Compare icon]. See used, reconditioned and rebuilt S63 V8 prices side-by-side"
+          },
+          "back": {
+            "heading": "Our network of UK BMW M specialists sends you quotes covering all condition types with transparent, itemised pricing - supply-only or fully fitted",
+            "text": "No obligation, no pressure, just genuine prices from workshops that know the S63 engine inside out.",
+            "bullets": [
+              "No obligation, no pressure, just genuine prices from workshops that know the S63 engine inside out."
+            ]
+          }
+        },
+        {
+          "number": 3,
+          "icon": "shield",
+          "front": {
+            "h3": "Choose Your BMW X5 M Specialist",
+            "text": "🖼️ [Booking icon]. Every rebuilt S63 V8 comes with a minimum 12-month warranty and nationwide delivery options"
+          },
+          "back": {
+            "heading": "Compare warranty terms, specialist reviews, and fitted prices before you commit",
+            "text": "Every engine supplied through EnginesMarket carries a minimum 12-month unlimited mileage warranty, with supply & fit available across the UK. M-specialist fitting is essential for correct calibration.",
+            "bullets": [
+              "Every engine supplied through EnginesMarket carries a minimum 12-month unlimited mileage warranty, with supply & fit available across the UK. M-specialist fitting is essential for correct calibration."
+            ]
+          }
+        }
+      ],
+      "tagline": "",
+      "ui": {
+        "stepLabel": "Step",
+        "desktopClosedLabel": "Click to expand",
+        "desktopOpenLabel": "Click to view details",
+        "mobileOpenLabel": "Tap to flip",
+        "mobileCloseLabel": "Tap to flip back",
+        "footerNote": "Most replacements completed within 3-5 days.",
+        "mobileTrustItems": [
+          "12-Month Warranty",
+          "Supply & Fit Available",
+          "Nationwide Delivery",
+          "Trusted UK Suppliers"
+        ]
+      }
+    },
+    "historyTimeline": {
+      "tag": "Variant History",
+      "h2": "BMW X5 M - Engine History & Specs at a Glance",
+      "intro": "The BMW X5 M is the full-fat M division version of the X5 - distinct from the M Performance M50d models. First launched in 2009 on the E70 platform, the X5 M has spanned three generations, each powered by a version of BMW's S63 4.4-litre twin-turbo V8. With power outputs ranging from 555hp to 617hp, the X5 M represents the pinnacle of BMW's high-performance SUV engineering.",
+      "milestones": [
+        {
+          "year": "2009",
+          "description": "E70 X5 M launched, S63B44 4.4-litre twin-turbo V8, 555hp, 680Nm, 0-60mph in 4.5 seconds"
+        },
+        {
+          "year": "2014",
+          "description": "F85 X5 M debuts, S63B44T2 engine, 575hp, 750Nm, 0-60mph in 4.2 seconds"
+        },
+        {
+          "year": "2015",
+          "description": "2018 - F85 X5 M and X5 M Competition production, 575hp, xDrive all-wheel drive"
+        },
+        {
+          "year": "2020",
+          "description": "F95 X5 M launched, S63B44B engine, 600hp, 750Nm, 0-60mph in 3.8 seconds"
+        },
+        {
+          "year": "2020",
+          "description": "present - F95 X5 M and X5 M Competition, up to 617hp in Competition form"
+        },
+        {
+          "year": "2023",
+          "description": "G05 LCI M Competition, 625hp, M xDrive, 0-60mph in 3.7 seconds"
+        }
+      ],
+      "vehicleTitle": "BMW X5 M",
+      "vehicleMeta": [
+        {
+          "label": "Fuel Type",
+          "value": "Petrol (twin-turbocharged V8)"
+        },
+        {
+          "label": "Engine Size",
+          "value": "4.4L (4,395cc)"
+        },
+        {
+          "label": "Power Output Range",
+          "value": "555-625hp across the variant's history"
+        }
+      ],
+      "specsLabel": "Key Specs Snapshot",
+      "specs": [
+        {
+          "label": "Fuel Type",
+          "value": "Petrol (twin-turbocharged V8)"
+        },
+        {
+          "label": "Engine Size",
+          "value": "4.4L (4,395cc)"
+        },
+        {
+          "label": "Power Output Range",
+          "value": "555-625hp across the variant's history"
+        },
+        {
+          "label": "Years Produced",
+          "value": "2009-present"
+        }
+      ],
+      "closingNote": "Every engine fitted to the BMW X5 M is covered below, with UK rebuilt pricing and known failure points specific to the S63 V8 family."
+    },
+    "engineGuide": {
+      "tag": "Engine Codes & Pricing",
+      "h2": "BMW X5 M Engine Codes - Specifications & Replacement Cost",
+      "sectionTitle": "Compatible Engine Codes & Cost Guide",
+      "sectionSubtitle": "Find your exact engine code, specs and UK replacement cost guide.",
+      "intro": "",
+      "items": [
+        {
+          "code": "S63B44",
+          "title": "4.4L Twin-Turbo V8 Petrol (2009-2013)",
+          "specs": [
+            {
+              "label": "Power Output",
+              "value": "555hp (414kW)"
+            },
+            {
+              "label": "Torque",
+              "value": "680Nm (501lb-ft)"
+            },
+            {
+              "label": "Years Fitted",
+              "value": "2009-2013 (E70 X5 M)"
+            },
+            {
+              "label": "Engine Features",
+              "value": "Hot-vee twin-turbo V8, DOHC 32-valve, direct injection, cross-bank exhaust manifold"
+            }
+          ],
+          "costs": [
+            {
+              "label": "Used",
+              "value": "£5,000-£8,000",
+              "description": ""
+            },
+            {
+              "label": "Reconditioned",
+              "value": "£8,000-£12,000",
+              "description": ""
+            },
+            {
+              "label": "Rebuilt",
+              "value": "£10,000-£15,000",
+              "description": ""
+            }
+          ],
+          "compatibleTrimLevels": [
+            "X5 M (E70)"
+          ],
+          "commonFailure": "Rod bearing wear is a well-documented issue on early S63 engines. Timing chain tensioner failure and turbocharger issues also reported.",
+          "cta": "-> Get quotes for S63B44 BMW X5 M engine replacement",
+          "closing": "-> Get quotes for S63B44 BMW X5 M engine replacement"
+        },
+        {
+          "code": "S63B44T2",
+          "title": "4.4L Twin-Turbo V8 Petrol (2014-2018)",
+          "specs": [
+            {
+              "label": "Power Output",
+              "value": "575hp (423kW)"
+            },
+            {
+              "label": "Torque",
+              "value": "750Nm (553lb-ft)"
+            },
+            {
+              "label": "Years Fitted",
+              "value": "2014-2018 (F85 X5 M)"
+            },
+            {
+              "label": "Engine Features",
+              "value": "Updated S63TU with Valvetronic, improved cooling, cross-bank exhaust manifold"
+            }
+          ],
+          "costs": [
+            {
+              "label": "Used",
+              "value": "£5,000-£9,000",
+              "description": ""
+            },
+            {
+              "label": "Reconditioned",
+              "value": "£9,000-£14,000",
+              "description": ""
+            },
+            {
+              "label": "Rebuilt",
+              "value": "£12,000-£18,000",
+              "description": ""
+            }
+          ],
+          "compatibleTrimLevels": [
+            "X5 M (F85)",
+            "X5 M Competition (F85)"
+          ],
+          "commonFailure": "Rod bearing wear remains a concern. Turbocharger failures and cooling system weaknesses are also documented on higher-mileage examples.",
+          "cta": "-> Get quotes for S63B44T2 BMW X5 M engine replacement",
+          "closing": "-> Get quotes for S63B44T2 BMW X5 M engine replacement",
+          "intro": ""
+        },
+        {
+          "code": "S63B44B",
+          "title": "4.4L Twin-Turbo V8 Petrol (2020-present)",
+          "specs": [
+            {
+              "label": "Power Output",
+              "value": "600-617hp (up to 625hp in LCI Competition)"
+            },
+            {
+              "label": "Torque",
+              "value": "750Nm (553lb-ft)"
+            },
+            {
+              "label": "Years Fitted",
+              "value": "2020-present (F95 X5 M)"
+            },
+            {
+              "label": "Engine Features",
+              "value": "Latest S63TU4 with 48V mild hybrid (on later examples), improved rod bearings, enhanced cooling"
+            }
+          ],
+          "costs": [
+            {
+              "label": "Used",
+              "value": "£7,000-£12,000",
+              "description": ""
+            },
+            {
+              "label": "Reconditioned",
+              "value": "£12,000-£18,000",
+              "description": ""
+            },
+            {
+              "label": "Rebuilt",
+              "value": "£15,000-£22,000+",
+              "description": ""
+            }
+          ],
+          "compatibleTrimLevels": [
+            "X5 M (F95)",
+            "X5 M Competition (F95)"
+          ],
+          "commonFailure": "Earlier issues largely addressed, but high-performance use still demands strict maintenance. Cooling system and turbocharger health require monitoring.",
+          "cta": "-> Get quotes for S63B44B BMW X5 M engine replacement",
+          "closing": "-> Get quotes for S63B44B BMW X5 M engine replacement",
+          "intro": ""
+        }
+      ],
+      "prompt": ""
+    },
+    "commonProblems": {
+      "tag": "Common Problems",
+      "h2": "BMW X5 M Engine Problems - Repair Cost vs Replacement",
+      "h3": "The BMW X5 M's S63 4.4-litre twin-turbo V8 is a masterpiece of M division engineering, delivering brutal performance and a soundtrack to match. However, like any high-output engine, it has well-documented weaknesses - particularly rod bearing wear, timing chain tensioner failure, and turbocharger issues. Every rebuilt S63 engine supplied through EnginesMarket includes upgraded components addressing the original failure points - plus a minimum 12-month unlimited mileage warranty.",
+      "problems": [
+        {
+          "group": "Rod Bearing Wear",
+          "h4": "Rod Bearing Wear - Why the BMW X5 M's S63 V8 Fails Prematurely",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "affectedModels": "BMW X5 M (E70 2009-2013, F85 2014-2018, S63B44, S63B44T2)",
+          "typicalFailureMileage": "60,000-100,000 miles",
+          "rootCause": "The S63 engine's rod bearings are subjected to extreme loads, particularly during high-RPM use. Insufficient lubrication, oil degradation, or manufacturing tolerances can cause premature wear. If ignored, bearing failure leads to catastrophic engine seizure - a £10,000+ repair bill.",
+          "whyItHappens": "",
+          "repairOptions": [
+            {
+              "tier": "Preventative - Rod Bearing Replacement",
+              "dealerPrice": "£3,500-£5,500",
+              "specialistPrice": "£2,500-£4,000",
+              "whatItInvolves": "Replace connecting rod bearings, new bolts, oil system flush",
+              "longevity": "Viable as preventative maintenance from 60,000 miles",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Full Replacement - rebuilt/reconditioned engine",
+              "dealerPrice": "£15,000-£22,000",
+              "specialistPrice": "£10,000-£15,000",
+              "whatItInvolves": "Supply & fit rebuilt S63 engine with upgraded bearings, 12-month warranty",
+              "longevity": "Required if bearing failure caused crank or rod damage",
+              "estimatedTime": ""
+            }
+          ],
+          "vehicleValueCheck": "A typical BMW X5 M is worth £18,000-£80,000 depending on generation, mileage, and condition (`[THIRD-PARTY]` - Auto Trader market observation). For an E70 X5 M worth £18,000-£30,000, a rebuilt engine at £10,000-£15,000 represents 35-50% of the vehicle's value - evaluate body, gearbox, and interior condition carefully. For F85 and F95 examples worth £35,000+, replacement is generally viable. Sub-£20,000 E70 examples should be assessed for scrap value first.",
+          "recommendation": "On any S63-powered X5 M approaching 60,000 miles, preventative rod bearing replacement at a specialist is the single best investment you can make. It's far cheaper than a full engine replacement and adds years of life to the engine. If you hear a knocking noise from the bottom end, stop driving immediately - continued use will destroy the engine.",
+          "cta": "-> Compare rebuilt S63 engine prices for your BMW X5 M"
+        },
+        {
+          "group": "Timing Chain Tensioner Failure",
+          "h4": "Timing Chain Tensioner Failure - Why the BMW X5 M Rattles on Start-Up",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "affectedModels": "BMW X5 M (E70 2009-2013, F85 2014-2018, S63B44, S63B44T2)",
+          "typicalFailureMileage": "70,000-120,000 miles",
+          "rootCause": "The S63's timing chain tensioner can fail, allowing the chain to slacken. This produces a rattling noise on cold start that disappears as oil pressure builds. If ignored, the chain can skip or snap - allowing pistons to contact valves and destroying the engine.",
+          "whyItHappens": "",
+          "repairOptions": [
+            {
+              "tier": "Timing Chain & Tensioner Replacement",
+              "dealerPrice": "£2,500-£4,000",
+              "specialistPrice": "£1,800-£2,800",
+              "whatItInvolves": "Replace timing chain, tensioner, guides, and sprockets",
+              "longevity": "Viable if caught at first rattle; 70,000-100,000 mile interval",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Full Replacement - rebuilt/reconditioned engine",
+              "dealerPrice": "£15,000-£22,000",
+              "specialistPrice": "£10,000-£15,000",
+              "whatItInvolves": "Supply & fit rebuilt S63 engine with new timing components, 12-month warranty",
+              "longevity": "Required if chain has jumped or snapped",
+              "estimatedTime": ""
+            }
+          ],
+          "vehicleValueCheck": "",
+          "recommendation": "If your X5 M develops a rattling noise on cold start that disappears as the engine warms, act immediately. Preventative chain and tensioner replacement at a specialist costs under £3,000 - far less than the £10,000+ for a full engine replacement once the chain fails.",
+          "cta": "-> Get quotes for S63 timing chain repair and replacement"
+        },
+        {
+          "group": "Turbocharger Failure",
+          "h4": "Turbocharger Failure - Why the BMW X5 M Loses Boost",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "affectedModels": "BMW X5 M (E70 2009-2013, F85 2014-2018, F95 2020-present, S63B44, S63B44T2, S63B44B)",
+          "typicalFailureMileage": "80,000-150,000 miles",
+          "rootCause": "The S63's twin turbos operate under extreme stress, generating significant heat. Oil starvation, contamination, or carbon buildup can cause turbocharger failure. Symptoms include loss of power, excessive smoke (white or blue), and a high-pitched whining noise from the engine bay.",
+          "whyItHappens": "",
+          "repairOptions": [
+            {
+              "tier": "Turbocharger Replacement",
+              "dealerPrice": "£3,000-£5,000",
+              "specialistPrice": "£2,000-£3,500",
+              "whatItInvolves": "Replace failed turbocharger(s), oil feed lines, gaskets",
+              "longevity": "Viable if one turbo has failed and caught early",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Full Engine Replacement",
+              "dealerPrice": "£15,000-£22,000",
+              "specialistPrice": "£10,000-£15,000",
+              "whatItInvolves": "Supply & fit rebuilt S63 engine with new turbos, 12-month warranty",
+              "longevity": "Recommended if both turbos failed or debris contaminated engine",
+              "estimatedTime": ""
+            }
+          ],
+          "vehicleValueCheck": "",
+          "recommendation": "Regular oil changes with the correct BMW-approved oil are critical for turbocharger longevity on the S63. If you notice power loss or unusual noises, have the turbos inspected immediately. Ignoring turbo failure can send debris through the engine - turning a £2,500 repair into a £10,000+ replacement.",
+          "cta": "-> Compare BMW X5 M turbo replacement and engine prices"
+        }
+      ],
+      "emptyState": null,
+      "finalCta": {
+        "h4": "Don't Let Engine Failure Write Off Your BMW X5 M",
+        "paragraph": "A failed S63 V8 doesn't have to mean the end of the road for your X5 M. Whether you're facing rod bearing wear, timing chain tensioner failure, turbocharger issues, or any other catastrophic problem, EnginesMarket connects you with trusted UK BMW M specialists who supply rebuilt S63 engines with upgraded components specifically designed to address the original failure points. Every engine comes with a minimum 12-month unlimited mileage warranty, nationwide delivery, and supply & fit options across the UK. Compare prices today - and keep one of BMW's most thrilling SUVs on the road without paying the main dealer premium.",
+        "buttonText": "Compare BMW X5 M Engine Replacement Prices Now ->",
+        "disclaimer": "\"All prices are indicative UK market ranges based on historical quote data and repair requests from our network of engine specialists. Dealer pricing is estimated based on published main dealer labour rates and genuine OEM parts pricing. Specialist pricing reflects actual quote data from EnginesMarket's UK network. Actual costs vary depending on damage severity, vehicle condition, variant, and workshop location within the UK. Use our free comparison tool to get tailored quotes for your specific BMW X5 M. Every engine supplied through EnginesMarket carries a minimum 12-month unlimited mileage warranty - always confirm exact terms with your chosen supplier.\""
+      },
+      "reviewSummary": null
+    },
+    "faq": {
+      "tag": "FAQ",
+      "h2": "BMW X5 M Engine Replacement - Frequently Asked Questions",
+      "intro": "Everything BMW X5 M owners usually ask before choosing a rebuilt, reconditioned or used replacement engine.",
+      "defaultOpenIndex": 0,
+      "disclaimer": "",
+      "items": [
+        {
+          "question": "How much does a BMW X5 M engine replacement cost in the UK?",
+          "answer": "A BMW X5 M engine replacement typically costs £6,000-£14,000 supply-only for rebuilt units, or £10,000-£18,000 fitted by a specialist. The S63 V8 is a complex, high-performance engine requiring specialist knowledge.",
+          "keyPoints": [
+            "Used S63B44 engines: £5,000-£9,000 supply-only",
+            "Reconditioned units: £8,000-£14,000 supply-only",
+            "Professional fitting adds £1,500-£3,000 depending on workshop location",
+            "Dealership replacement quotes often exceed £20,000"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Compare BMW X5 M engine replacement prices from UK specialists"
+        },
+        {
+          "question": "Is the BMW X5 M S63 engine reliable?",
+          "answer": "The S63 is a remarkable engine when properly maintained, but it has well-documented weaknesses. Early versions (S63B44) are prone to rod bearing wear, timing chain tensioner failure, and turbocharger issues. Later revisions (S63TU, S63TU2, S63TU4) addressed many of these concerns.",
+          "keyPoints": [
+            "Rod bearings typically need attention between 60,000-100,000 miles",
+            "Frequent oil changes (every 5,000-6,000 miles) are critical",
+            "Cooling system components should be inspected regularly",
+            "Later F95-generation engines are significantly more robust"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Get quotes for BMW X5 M S63 engine repairs"
+        },
+        {
+          "question": "What are the signs of rod bearing failure in a BMW X5 M?",
+          "answer": "The most common warning signs are a knocking noise from the bottom end (especially on cold start), metallic debris in the oil, low oil pressure warnings, and in severe cases, engine seizure.",
+          "keyPoints": [
+            "Knocking noise that increases with RPM is the most serious warning sign",
+            "Oil analysis can detect bearing material in the oil before failure",
+            "Ignoring rod bearing noise will destroy the engine",
+            "Preventative bearing replacement at 60,000 miles is strongly recommended"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Get quotes for BMW X5 M rod bearing replacement"
+        },
+        {
+          "question": "Is it worth replacing the engine on a high-mileage BMW X5 M?",
+          "answer": "For an E70 X5 M worth £18,000-£30,000, a rebuilt S63 at £10,000-£15,000 can make financial sense if the body, gearbox, and interior are in excellent condition. For F85 and F95 examples worth £35,000+, replacement is generally viable.",
+          "keyPoints": [
+            "Compare replacement cost against vehicle value - specialist advice: replacement viable up to 70% of car's value",
+            "Low-mileage, well-maintained examples justify higher investment",
+            "Factor 12-month warranty into replacement decision",
+            "Always get a full vehicle inspection before committing to major work"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Check BMW X5 M engine replacement value for your specific generation"
+        },
+        {
+          "question": "What are the differences between the E70, F85 and F95 X5 M engines?",
+          "answer": "Each generation uses a different iteration of the S63 V8:",
+          "keyPoints": [
+            "E70 (2009-2013): S63B44, 555hp, first-generation M V8",
+            "F85 (2014-2018): S63B44T2, 575hp, Valvetronic added",
+            "F95 (2020-present): S63B44B, 600-625hp, latest TU4 version"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Compare BMW X5 M engine replacement options by generation"
+        },
+        {
+          "question": "Should I buy a used or rebuilt engine for my BMW X5 M?",
+          "answer": "A rebuilt engine with upgraded components - particularly rod bearings and timing chain components - offers significantly better long-term reliability than a used engine of unknown provenance. For a high-performance M car, the additional cost of a rebuilt unit is typically justified.",
+          "keyPoints": [
+            "Used engines: lower upfront cost but unknown history and no warranty",
+            "Rebuilt engines: upgraded components, 12-month warranty, known quality",
+            "Reconditioned engines: mid-range option with some new components",
+            "For X5 M ownership, rebuilt is strongly recommended for peace of mind"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Compare used vs rebuilt BMW X5 M engine prices"
+        }
+      ],
+      "ui": {
+        "questionLabelPrefix": "Question",
+        "keyPointsLabel": "Key points",
+        "comparisonTableLabel": "Comparison table",
+        "disclaimerLabel": "Disclaimer",
+        "warningTitle": "Important"
+      }
+    },
+    "trustCta": {
+      "tag": "Why Choose Us",
+      "h2": "Compare BMW X5 M Engine Prices Today",
+      "intro": "Compare quotes from trusted UK BMW X5 M engine specialists with warranty-backed rebuilt, reconditioned and used options nationwide.",
+      "points": [
+        {
+          "title": "11,000+ BMW X5 M engines supported through our network",
+          "description": ""
+        },
+        {
+          "title": "12-Month Warranty on every rebuilt S63 V8 engine",
+          "description": ""
+        },
+        {
+          "title": "Nationwide UK delivery",
+          "description": "supply & fit available"
+        }
+      ],
+      "finalText": "Comparing quotes for your BMW X5 M is free, no-obligation, and specific to your exact M division SUV and its S63 engine code - S63B44, S63B44T2, or S63B44B. Whether you need a used replacement, a reconditioned unit, or a full rebuilt engine with upgraded rod bearings and timing components, our network of trusted UK BMW M specialists delivers transparent pricing and nationwide coverage. Don't let a failed engine end the life of one of BMW's most thrilling SUVs - compare prices today and get back on the road with confidence.",
+      "buttonText": "Get Free BMW X5 M Engine Quotes ->",
+      "secondaryAction": {
+        "text": "",
+        "href": "tel:03330000044"
+      },
+      "ui": {
+        "showSecondaryAction": false
+      }
+    }
+  }
+}

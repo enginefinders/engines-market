@@ -1,0 +1,806 @@
+{
+  "brand": {
+    "name": "BMW",
+    "slug": "bmw",
+    "tone": "premium"
+  },
+  "model": {
+    "name": "BMW X3",
+    "slug": "x3"
+  },
+  "variant": {
+    "name": "BMW X3 M40d",
+    "slug": "m40d-engine",
+    "storageSlug": "bmw-x3-m40d-engine"
+  },
+  "seo": {
+    "title": "BMW X3 M40d Engine Replacement | Compare Performance Diesel Prices",
+    "description": "BMW X3 M40d engine replacement cost guide. Compare rebuilt, reconditioned & used M40d engine prices from £4,200. 12-month warranty & UK M Performance specialists.",
+    "canonical": "/bmw/x3/m40d-engine"
+  },
+  "assets": {
+    "mainImage": "/images/brands/bmw/models/bmw-x3-model-card.png",
+    "smallImage": "/images/brands/bmw/models/bmw-x3-model-card.png",
+    "heroBg": "/images/brands/bmw/models/bmw-x3-model-card.png",
+    "howItWorksBg": "/images/brands/bmw/brand/bmw-how-it-works-bg.webp",
+    "ctaImage": "/images/brands/bmw/models/bmw-x3-model-card.png"
+  },
+  "structuredData": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.enginesmarket.co.uk/#website",
+        "url": "https://www.enginesmarket.co.uk/",
+        "name": "Engines Market",
+        "publisher": {
+          "@id": "https://www.enginesmarket.co.uk/#organization"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.enginesmarket.co.uk/#organization",
+        "name": "Engines Market",
+        "url": "https://www.enginesmarket.co.uk/",
+        "logo": "https://www.enginesmarket.co.uk/images/logo.png"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.enginesmarket.co.uk/bmw/x3/m40d-engine/#webpage",
+        "url": "https://www.enginesmarket.co.uk/bmw/x3/m40d-engine/",
+        "name": "BMW X3 M40d Engine Replacement - Compare Prices & Get Quotes",
+        "description": "BMW X3 M40d engine replacement cost guide. Compare rebuilt, reconditioned & used M40d engine prices from £4,200. 12-month warranty & UK M Performance specialists.",
+        "isPartOf": {
+          "@id": "https://www.enginesmarket.co.uk/#website"
+        },
+        "about": [
+          {
+            "@type": "Car",
+            "name": "BMW X3 M40d",
+            "brand": {
+              "@type": "Brand",
+              "name": "BMW"
+            },
+            "model": "X3 M40d"
+          },
+          {
+            "@type": "Service",
+            "name": "BMW X3 M40d Engine Replacement"
+          }
+        ],
+        "mainEntity": {
+          "@id": "https://www.enginesmarket.co.uk/bmw/x3/m40d-engine/#service"
+        },
+        "breadcrumb": {
+          "@id": "https://www.enginesmarket.co.uk/bmw/x3/m40d-engine/#breadcrumb"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.enginesmarket.co.uk/bmw/x3/m40d-engine/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.enginesmarket.co.uk/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "BMW",
+            "item": "https://www.enginesmarket.co.uk/bmw/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "BMW X3",
+            "item": "https://www.enginesmarket.co.uk/bmw/x3/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "BMW X3 M40d",
+            "item": "https://www.enginesmarket.co.uk/bmw/x3/m40d-engine/"
+          }
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://www.enginesmarket.co.uk/bmw/x3/m40d-engine/#service",
+        "name": "BMW X3 M40d Engine Replacement Service",
+        "serviceType": [
+          "BMW X3 M40d Engine Replacement",
+          "Reconditioned BMW X3 M40d Engines",
+          "Used BMW X3 M40d Engines",
+          "BMW X3 M40d Engine Supply and Fit",
+          "BMW X3 M40d Performance Diesel Engine Price Comparison"
+        ],
+        "provider": {
+          "@id": "https://www.enginesmarket.co.uk/#organization"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        "url": "https://www.enginesmarket.co.uk/bmw/x3/m40d-engine/",
+        "description": "BMW X3 M40d engine replacement cost guide. Compare rebuilt, reconditioned & used M40d engine prices from £4,200. 12-month warranty & UK M Performance specialists."
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.enginesmarket.co.uk/bmw/x3/m40d-engine/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does a BMW X3 M40d engine replacement cost in the UK?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A BMW X3 M40d rebuilt engine typically costs £4,200-£7,500 supply-only, reflecting the complexity of the B57D30B twin-turbo diesel and the specialist expertise required. Supply & fit adds £650-£1,200 depending on the specialist and your location. B57D30B (2018-2024): £4,200-£7,500 supply-only. Used engines start from £2,500 supply-only. M Performance engine requires specialist calibration and coding. Main dealer replacement costs 40-60% more than specialist prices."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is the BMW X3 M40d B57 engine reliable?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes - the B57 is a significant improvement over the N57 it replaced. The timing chain is notably robust and reliable. However, the M40d's complex emissions systems - AdBlue, DPF, and EGR - require regular maintenance. Issues with the AdBlue system, EGR cooler, and HPFP have been reported. B57 timing chain is far more durable than N47/N57 predecessors. AdBlue system faults are the most common complaint. Regular motorway driving helps prevent DPF clogging. Use only BMW Longlife-04 approved oil. The M40d is a high-performance engine - it demands proper maintenance."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What causes BMW X3 M40d AdBlue system failure?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "AdBlue system failure in the X3 M40d is typically caused by crystallisation of the AdBlue injector nozzle, blocked dosing lines, or failed NOx sensors. Low AdBlue levels or contaminated fluid can also trigger system warnings. AdBlue injector nozzle crystallisation is the most common cause. Dosing lines can become blocked with crystallised urea. NOx sensors can fail, triggering warning lights. Low or contaminated AdBlue fluid causes system faults.  Warning: Ignoring AdBlue warnings can lead to engine start countdown and immobilisation."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What are the signs of BMW X3 M40d EGR cooler failure?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Signs of EGR cooler failure include coolant loss, sweet-smelling white smoke from the exhaust, rough running, and the Check Engine Light coming on. In severe cases, coolant can enter the cylinders, causing hydrolock and bent connecting rods. Coolant loss with no visible external leak. Sweet-smelling white exhaust smoke. Engine running rough or misfiring. Check Engine Light or EGR-related fault codes.  Warning: EGR cooler failure can cause engine hydrolock - if you see white smoke, stop driving immediately."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is it worth replacing the engine on a BMW X3 M40d?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes - the BMW X3 M40d retains strong residual values (£25,000-£45,000 depending on age and mileage). A £4,800-£6,800 rebuilt engine is a worthwhile investment compared to replacing the entire vehicle. M40d values remain strong - replacement is usually cost-effective. Rebuilt engine includes 12-month warranty and upgraded components. Specialist replacement costs half what a main dealer charges. The B57 engine is capable of 200,000+ miles with proper maintenance."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the labour cost to replace a BMW X3 M40d engine?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Specialist labour for BMW X3 M40d engine replacement typically costs £650-£1,200, covering 10-16 hours of work. Main dealers charge £1,800-£3,000 for the same job. Independent BMW specialist: £70-£90 per hour, 10-16 hours total. Main dealer: £180-£250 per hour, same labour time. Twin-turbo B57 engine requires more time than four-cylinder units. M Performance calibration and coding add to the complexity."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "sections": {
+    "hero": {
+      "tag": "BMW X3 M40d SPECIALISTS",
+      "h1": "BMW X3 M40d Engine Replacement - Compare Prices & Get Quotes",
+      "subheading": "Get quotes today from trusted UK BMW X3 M40d engine specialists. Compare prices on reconditioned, rebuilt and used BMW X3 M40d engines - supply & fit available nationwide for the ultimate performance diesel SUV.",
+      "trustBadges": [
+        "Supply & Fit Available",
+        "12-Month Warranty",
+        "Nationwide Delivery",
+        "100+ Suppliers"
+      ],
+      "ctaLinkText": "Get Free BMW X3 M40d Engine Quotes ->",
+      "supportingText": "Get tailored BMW X3 M40d engine quotes from vetted UK specialists.",
+      "ticker": "● Instant Quotes · No Obligation · 100% Free · Reconditioned · Rebuilt · Used · Supply & Fit Available · UK-Wide Network",
+      "imageAlt": "",
+      "highlights": [
+        {
+          "title": "BMW X3 M40d Engine",
+          "price": "B57D30B - from £4,200 to £7,500",
+          "line1": "B57D30B - from £4,200 to £7,500",
+          "line2": "-> Used from £2,500 · Reconditioned from £4,500 · Common codes: B57D30B, B57D30A",
+          "detail": "-> Used from £2,500 · Reconditioned from £4,500 · Common codes: B57D30B, B57D30A",
+          "image": "/images/brands/bmw/models/bmw-x3-model-card.png",
+          "imageAlt": ""
+        }
+      ],
+      "engineOptions": [
+        {
+          "label": "Used",
+          "price": "From £2,500",
+          "description": "Tested, bare/short engine",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "imageAlt": "",
+          "tone": "used"
+        },
+        {
+          "label": "Reconditioned",
+          "price": "From £4,500",
+          "description": "Rod bearings addressed, tested",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "imageAlt": "",
+          "tone": "reconditioned"
+        },
+        {
+          "label": "Rebuilt",
+          "price": "From quote",
+          "description": "Upgraded bearings, full teardown, revised valvetrain",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "imageAlt": "",
+          "tone": "rebuilt"
+        }
+      ],
+      "vehicleBadge": "M40d",
+      "mobileBar": {
+        "brandText": "ENGINEMARKET",
+        "callLabel": "Call",
+        "quoteLabel": "GET QUOTES"
+      },
+      "registrationInput": {
+        "label": "Enter your BMW X3 M40d registration",
+        "platePlaceholder": "AB12 CDE",
+        "countryCode": "UK",
+        "countryLabel": "United Kingdom"
+      },
+      "form": {
+        "heading": "Find Your BMW X3 M40d Engine",
+        "subtitle": "Enter your registration number to compare BMW X3 M40d engine options.",
+        "inputPlaceholder": "AB12 CDE",
+        "buttonText": "Get Free BMW X3 M40d Engine Quotes ->",
+        "note": "Secure enquiry - no spam, no pressure. Genuine quotes only from vetted UK BMW X3 M40d specialists."
+      }
+    },
+    "howItWorks": {
+      "tag": "How It Works",
+      "h2": "3 Simple Steps to Finding the Best BMW X3 M40d Replacement Engine",
+      "headingLines": [
+        "3 Simple Steps",
+        "to Finding the Best BMW X3 M40d Replacement Engine"
+      ],
+      "cards": [
+        {
+          "number": 1,
+          "icon": "registration",
+          "front": {
+            "h3": "Confirm Your BMW X3 M40d",
+            "text": "🖼️ [Registration icon]. Enter your reg to verify your exact M40d variant and engine code - B57D30B - via DVLA"
+          },
+          "back": {
+            "heading": "Engines Market cross-checks the DVLA record against known BMW X3 M40d engine codes - B57D30B - and confirms your vehicle's specifications, so your quote request goes to specialists who understand the high-performance B57 diesel.",
+            "text": "Engines Market cross-checks the DVLA record against known BMW X3 M40d engine codes - B57D30B - and confirms your vehicle's specifications, so your quote request goes to specialists who understand the high-performance B57 diesel.",
+            "bullets": [
+              "Engines Market cross-checks the DVLA record against known BMW X3 M40d engine codes - B57D30B - and confirms your vehicle's specifications, so your quote request goes to specialists who understand the high-performance B57 diesel."
+            ]
+          }
+        },
+        {
+          "number": 2,
+          "icon": "quote",
+          "front": {
+            "h3": "Compare BMW X3 M40d Engine Quotes",
+            "text": "🖼️ [Compare icon]. See used, reconditioned and rebuilt B57D30B engine prices side-by-side from UK BMW performance diesel specialists"
+          },
+          "back": {
+            "heading": "Our vetted supplier network sends you quotes covering every condition type - used, reconditioned, rebuilt - with itemised, transparent pricing",
+            "text": "No obligation, no pressure.",
+            "bullets": [
+              "No obligation, no pressure."
+            ]
+          }
+        },
+        {
+          "number": 3,
+          "icon": "shield",
+          "front": {
+            "h3": "Choose Your BMW X3 M40d Specialist",
+            "text": "🖼️ [Booking icon]. Every rebuilt M40d engine includes a 12-month warranty with nationwide delivery and supply & fit options"
+          },
+          "back": {
+            "heading": "Every rebuilt BMW X3 M40d engine through our network carries a minimum 12-month unlimited-mileage warranty",
+            "text": "Choose supply-only or full supply & fit with UK-wide delivery and collection - including M Performance calibration verification.",
+            "bullets": [
+              "Choose supply-only or full supply & fit with UK-wide delivery and collection - including M Performance calibration verification."
+            ]
+          }
+        }
+      ],
+      "tagline": "",
+      "ui": {
+        "stepLabel": "Step",
+        "desktopClosedLabel": "Click to expand",
+        "desktopOpenLabel": "Click to view details",
+        "mobileOpenLabel": "Tap to flip",
+        "mobileCloseLabel": "Tap to flip back",
+        "footerNote": "Most replacements completed within 3-5 days.",
+        "mobileTrustItems": [
+          "12-Month Warranty",
+          "Supply & Fit Available",
+          "Nationwide Delivery",
+          "Trusted UK Suppliers"
+        ]
+      }
+    },
+    "historyTimeline": {
+      "tag": "Variant History",
+      "h2": "BMW X3 M40d - Engine History & Specs at a Glance",
+      "intro": "The BMW X3 M40d arrived with the G01 generation in 2018 as the flagship diesel performance variant, sitting above the xDrive30d and below the X3 M. Powered by the B57D30B 3.0-litre straight-six diesel with twin-turbocharging, the M40d delivers 340hp and a monumental 700Nm of torque - making it one of the most powerful production diesel SUVs ever sold in the UK. With M Performance treatment including enhanced cooling, a sports exhaust and adaptive suspension, the M40d offers the effortless torque of a diesel with the performance credentials to match.",
+      "milestones": [
+        {
+          "year": "2018",
+          "description": "G01 X3 M40d launches with B57D30B, 326hp (UK market), 680Nm, twin-turbo straight-six diesel"
+        },
+        {
+          "year": "2019",
+          "description": "B57D30B updated to 340hp, 700Nm with revised ECU calibration and improved emissions hardware"
+        },
+        {
+          "year": "2020",
+          "description": "48V mild hybrid system introduced, improving stop-start smoothness and reducing turbo lag"
+        },
+        {
+          "year": "2021",
+          "description": "G01 LCI facelift brings revised styling, iDrive 7 and continued B57D30B with MHEV"
+        },
+        {
+          "year": "2023",
+          "description": "M40d continues through to end of G01 production"
+        },
+        {
+          "year": "2024",
+          "description": "G45 generation launches; M40d badge replaced by M50 diesel in some markets"
+        }
+      ],
+      "vehicleTitle": "BMW X3 M40d",
+      "vehicleMeta": [
+        {
+          "label": "Fuel Type",
+          "value": "Diesel"
+        },
+        {
+          "label": "Engine Size",
+          "value": "3.0L (2,993cc)"
+        },
+        {
+          "label": "Power Output",
+          "value": "326-340hp (depending on model year)"
+        }
+      ],
+      "specsLabel": "Key Specs Snapshot",
+      "specs": [
+        {
+          "label": "Fuel Type",
+          "value": "Diesel"
+        },
+        {
+          "label": "Engine Size",
+          "value": "3.0L (2,993cc)"
+        },
+        {
+          "label": "Power Output",
+          "value": "326-340hp (depending on model year)"
+        },
+        {
+          "label": "Torque",
+          "value": "680-700Nm"
+        },
+        {
+          "label": "Engine Code",
+          "value": "B57D30B"
+        },
+        {
+          "label": "Cylinders",
+          "value": "Inline 6, twin-turbocharged"
+        },
+        {
+          "label": "0-62mph",
+          "value": "4.9 seconds"
+        },
+        {
+          "label": "Years Produced",
+          "value": "2018-2024"
+        }
+      ],
+      "closingNote": "Every engine fitted to the BMW X3 M40d is covered below, with UK rebuilt pricing and known failure points."
+    },
+    "engineGuide": {
+      "tag": "Engine Codes & Pricing",
+      "h2": "BMW X3 M40d Engine Codes - Specifications & Replacement Cost",
+      "sectionTitle": "Compatible Engine Codes & Cost Guide",
+      "sectionSubtitle": "Find your exact engine code, specs and UK replacement cost guide.",
+      "intro": "",
+      "items": [
+        {
+          "code": "B57D30B",
+          "title": "3.0L Twin-Turbo Diesel (2018-2024)",
+          "specs": [
+            {
+              "label": "Power Output",
+              "value": "326-340hp (depending on model year)"
+            },
+            {
+              "label": "Torque",
+              "value": "680-700Nm"
+            },
+            {
+              "label": "Years Fitted",
+              "value": "2018-2024 (G01)"
+            },
+            {
+              "label": "Engine Code",
+              "value": "B57D30B"
+            },
+            {
+              "label": "Note",
+              "value": "The M40d's B57 engine is shared with the M550d and M850d in different states of tune - but X3 M40d units have specific ECU calibration and cooling requirements"
+            }
+          ],
+          "costs": [
+            {
+              "label": "Used",
+              "value": "£2,500-£4,500",
+              "description": ""
+            },
+            {
+              "label": "Reconditioned",
+              "value": "£4,500-£6,500",
+              "description": ""
+            },
+            {
+              "label": "Rebuilt",
+              "value": "£4,200-£7,500",
+              "description": ""
+            }
+          ],
+          "compatibleTrimLevels": [
+            "X3 M40d",
+            "X3 M40d M Sport"
+          ],
+          "commonFailure": "High-pressure fuel pump (HPFP) failure - some B57D30B units have experienced HPFP issues, leading to poor starting and reduced performance. DPF clogging and AdBlue system faults are also reported, particularly on vehicles used primarily for urban driving. Turbocharger wear can occur at higher mileages.",
+          "cta": "-> Get quotes for B57D30B BMW X3 M40d engine replacement",
+          "closing": "-> Get quotes for B57D30B BMW X3 M40d engine replacement"
+        },
+        {
+          "code": "B57D30A",
+          "title": "3.0L Diesel (2017-2020)",
+          "specs": [
+            {
+              "label": "Power Output",
+              "value": "265hp"
+            },
+            {
+              "label": "Torque",
+              "value": "620Nm"
+            },
+            {
+              "label": "Years Fitted",
+              "value": "2017-2020 (G01 xDrive30d)"
+            },
+            {
+              "label": "Note",
+              "value": "The B57D30A is the lower-output version of the B57 family, fitted to the xDrive30d. The M40d uses the higher-output B57D30B exclusively in the UK."
+            }
+          ],
+          "costs": [
+            {
+              "label": "Used",
+              "value": "£1,800-£3,000",
+              "description": ""
+            },
+            {
+              "label": "Reconditioned",
+              "value": "£3,000-£4,500",
+              "description": ""
+            },
+            {
+              "label": "Rebuilt",
+              "value": "£3,000-£4,500",
+              "description": ""
+            }
+          ],
+          "compatibleTrimLevels": [
+            "xDrive30d (not M40d-badged - included for family reference)"
+          ],
+          "commonFailure": "DPF clogging - the B57D30A's DPF is particularly sensitive to urban driving patterns.",
+          "cta": "-> Get quotes for B57D30A BMW X3 engine replacement",
+          "closing": "-> Get quotes for B57D30A BMW X3 engine replacement",
+          "intro": ""
+        }
+      ],
+      "prompt": ""
+    },
+    "commonProblems": {
+      "tag": "Common Problems",
+      "h2": "BMW X3 M40d Engine Problems - Repair Cost vs Replacement",
+      "h3": "The BMW X3 M40d's B57D30B twin-turbo diesel is a masterpiece of engineering - but even the best engines have their weak points. While the B57 is significantly more reliable than the older N57, issues with the AdBlue system, DPF, EGR cooler, and high-pressure fuel pump have been reported. Every rebuilt engine supplied through Engines Market includes upgraded components addressing the original failure point - plus a minimum 12-month unlimited-mileage warranty. Below we break down the most common X3 M40d failures, what genuine repair costs look like, and when a rebuilt engine is the smarter financial decision.",
+      "problems": [
+        {
+          "group": "BMW X3 M40d AdBlue / SCR System Failure",
+          "h4": "BMW X3 M40d AdBlue / SCR System Failure - The Most Common B57 Diesel Fault",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "affectedModels": "BMW X3 M40d (2018-2024, B57D30B)",
+          "typicalFailureMileage": "40,000-80,000 miles",
+          "rootCause": "The AdBlue (DEF) injection system can suffer from crystallisation and clogging of the injector nozzle. NOx sensors can also fail, triggering warning lights and potentially limiting vehicle performance. The dosing line from the tank to the injector can become blocked or damaged.",
+          "whyItHappens": "",
+          "repairOptions": [
+            {
+              "tier": "Minor - AdBlue Injector Cleaning / Replacement",
+              "dealerPrice": "£400-£700",
+              "specialistPrice": "£200-£400",
+              "whatItInvolves": "Clean or replace AdBlue injector, flush system, reset adaptations",
+              "longevity": "Viable if caught early - crystallisation is reversible",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Intermediate - AdBlue Dosing System Overhaul",
+              "dealerPrice": "£800-£1,500",
+              "specialistPrice": "£500-£900",
+              "whatItInvolves": "Replace injector, dosing line, NOx sensors, system recalibration",
+              "longevity": "Required if dosing line blocked or NOx sensors have failed",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Full Replacement - Rebuilt Engine (Supply & Fit)",
+              "dealerPrice": "£6,000-£9,000",
+              "specialistPrice": "£4,500-£6,500",
+              "whatItInvolves": "Supply of rebuilt unit with new AdBlue system components, fitted, tested, 12-month warranty",
+              "longevity": "Required only if neglect has caused broader engine damage",
+              "estimatedTime": ""
+            }
+          ],
+          "vehicleValueCheck": "A typical BMW X3 M40d is worth £25,000-£45,000. AdBlue system repairs at £200-£900 are a minor expense. Full engine replacement is rarely needed unless the AdBlue system failure has been ignored.",
+          "recommendation": "If you see an AdBlue system warning or the dreaded \"Engine start in X miles\" countdown, do not ignore it. Have a specialist diagnose the system immediately - a £200-£400 injector cleaning is far cheaper than a £4,500+ engine replacement. Use only genuine AdBlue fluid and avoid supermarket own-brand products.",
+          "cta": "-> Get quotes for BMW X3 M40d AdBlue system repair and engine replacement"
+        },
+        {
+          "group": "BMW X3 M40d EGR Cooler Failure",
+          "h4": "BMW X3 M40d EGR Cooler Failure - Coolant Loss & Hydrolock Risk",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "affectedModels": "BMW X3 M40d (2018-2024, B57D30B)",
+          "typicalFailureMileage": "50,000-90,000 miles",
+          "rootCause": "The EGR cooler can develop internal cracks due to thermal cycling, allowing coolant to leak into the exhaust system. In severe cases, coolant can enter the combustion chambers, causing hydraulic lock (hydrolock) and bent connecting rods. Symptoms include coolant loss, sweet-smelling white exhaust smoke, and rough running.",
+          "whyItHappens": "",
+          "repairOptions": [
+            {
+              "tier": "Minor - EGR Cooler Replacement Only",
+              "dealerPrice": "£1,000-£1,500",
+              "specialistPrice": "£550-£850",
+              "whatItInvolves": "Replace EGR cooler, flush cooling system, reset adaptations",
+              "longevity": "Full fix if caught before coolant enters cylinders",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Major - Cooler + Top End Overhaul",
+              "dealerPrice": "£2,800-£4,000",
+              "specialistPrice": "£1,800-£2,800",
+              "whatItInvolves": "EGR cooler replacement plus cylinder head removal, inspection, new head gasket",
+              "longevity": "Viable if no bent rods confirmed",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Full Replacement - Rebuilt Engine (Supply & Fit)",
+              "dealerPrice": "£6,000-£9,000",
+              "specialistPrice": "£4,500-£6,500",
+              "whatItInvolves": "Supply of rebuilt unit with revised EGR cooler, fitted, tested, 12-month warranty",
+              "longevity": "Required if hydrolock confirmed",
+              "estimatedTime": ""
+            }
+          ],
+          "vehicleValueCheck": "EGR cooler replacement at £550-£850 is a minor expense on a £25,000-£45,000 M40d. Full engine replacement is rarely needed unless the issue has been ignored.",
+          "recommendation": "Check if your X3 M40d has outstanding EGR cooler recall work. If you notice coolant loss, white exhaust smoke, or a burning smell, have a specialist inspect the EGR cooler immediately. A £550-£850 cooler replacement is cheap insurance against a £4,500+ engine rebuild.",
+          "cta": "-> Get quotes for BMW X3 M40d EGR cooler repair and replacement"
+        },
+        {
+          "group": "BMW X3 M40d DPF & Turbocharger Issues",
+          "h4": "BMW X3 M40d DPF & Turbocharger Issues - The Cost of Urban Driving",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "affectedModels": "BMW X3 M40d (2018-2024, B57D30B)",
+          "typicalFailureMileage": "60,000-100,000 miles (DPF); 80,000-120,000 miles (turbo)",
+          "rootCause": "Urban driving cycles prevent active DPF regeneration, causing soot accumulation. The turbocharger in the M40d is critical for its high-performance output but is prone to wear and tear over time, leading to oil leaks, worn bearings, or damage to the turbine blades.",
+          "whyItHappens": "",
+          "repairOptions": [
+            {
+              "tier": "Minor - DPF Clean & EGR Service",
+              "dealerPrice": "£600-£900",
+              "specialistPrice": "£350-£600",
+              "whatItInvolves": "Forced regeneration, DPF cleaning, EGR valve service",
+              "longevity": "Works only for early-stage blockage",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Intermediate - Turbocharger Replacement",
+              "dealerPrice": "£2,200-£3,500",
+              "specialistPrice": "£1,300-£2,200",
+              "whatItInvolves": "Replace turbo unit, new oil feed pipes, full flush",
+              "longevity": "Viable if caught before debris enters engine",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Full Replacement - Rebuilt Engine with New Turbo (Supply & Fit)",
+              "dealerPrice": "£6,500-£9,500",
+              "specialistPrice": "£4,800-£6,800",
+              "whatItInvolves": "Supply of rebuilt unit with new turbo, full oil system flush, fitted, tested, 12-month warranty",
+              "longevity": "Required if turbo debris has circulated through engine",
+              "estimatedTime": ""
+            }
+          ],
+          "vehicleValueCheck": "A £350-£600 DPF clean is worthwhile on any M40d. Turbo replacement at £1,300-£2,200 is cost-effective given the vehicle's value. Full engine replacement is only needed if the turbo has disintegrated.",
+          "recommendation": "If you only drive short urban trips, take your X3 M40d on a 30-minute motorway run every few weeks to allow DPF regeneration. If you hear a whining noise or experience loss of power, stop driving and have a specialist inspect the turbo immediately. A £1,300-£2,200 turbo replacement is far cheaper than a £4,800+ engine rebuild.",
+          "cta": "-> Compare BMW X3 M40d DPF and turbo replacement costs"
+        },
+        {
+          "group": "BMW X3 M40d High-Pressure Fuel Pump (HPFP) Failure",
+          "h4": "BMW X3 M40d High-Pressure Fuel Pump (HPFP) Failure - Starting & Performance Issues",
+          "image": "/images/shared/hero-engines/temporary-performance-engine.jpeg",
+          "affectedModels": "BMW X3 M40d (2018-2024, B57D30B)",
+          "typicalFailureMileage": "60,000-100,000 miles",
+          "rootCause": "The high-pressure fuel pump in the B57D30B can develop internal wear, leading to poor starting, reduced performance, and fuel system contamination. Fuel injector issues can also cause rough idling, decreased fuel efficiency, and engine misfires.",
+          "whyItHappens": "",
+          "repairOptions": [
+            {
+              "tier": "Minor - HPFP Replacement Only",
+              "dealerPrice": "£1,200-£1,800",
+              "specialistPrice": "£700-£1,200",
+              "whatItInvolves": "Replace high-pressure fuel pump, fuel filter, system flush",
+              "longevity": "Viable if caught early before contamination spreads",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Intermediate - HPFP + Full Injector Set",
+              "dealerPrice": "£2,800-£4,000",
+              "specialistPrice": "£1,800-£2,800",
+              "whatItInvolves": "Replace HPFP and all six injectors, fuel system flush, coding",
+              "longevity": "Recommended if HPFP failure has contaminated the fuel system",
+              "estimatedTime": ""
+            },
+            {
+              "tier": "Full Replacement - Rebuilt Engine (Supply & Fit)",
+              "dealerPrice": "£6,000-£9,000",
+              "specialistPrice": "£4,500-£6,500",
+              "whatItInvolves": "Supply of rebuilt unit with new HPFP and injectors, fitted, tested, 12-month warranty",
+              "longevity": "Required if fuel system contamination has damaged the engine",
+              "estimatedTime": ""
+            }
+          ],
+          "vehicleValueCheck": "HPFP replacement at £700-£1,200 is cost-effective on any M40d. Full injector set at £1,800-£2,800 is also worthwhile given the vehicle's value.",
+          "recommendation": "If your X3 M40d struggles to start, runs rough, or has poor fuel economy, have the HPFP and injectors tested immediately. A £700-£1,200 HPFP replacement is far cheaper than a £4,500+ engine rebuild. Use only premium diesel fuel to help protect the high-pressure fuel system.",
+          "cta": "-> Get quotes for BMW X3 M40d HPFP and injector repair"
+        }
+      ],
+      "emptyState": null,
+      "finalCta": {
+        "h4": "Don't Let Engine Failure Write Off Your BMW X3 M40d",
+        "paragraph": "The failures above account for the majority of BMW X3 M40d engine replacement enquiries we see - AdBlue system issues, EGR cooler failure, DPF and turbocharger problems, and HPFP wear. The B57 is a robust engine, but it demands proper maintenance and prompt attention to warning signs. Engines Market makes it simple to compare prices from trusted UK BMW X3 M40d specialists who use upgraded components specifically designed to prevent these failures from recurring. Every rebuilt engine includes a minimum 12-month unlimited-mileage warranty, nationwide delivery, and supply & fit options. Compare prices today and get back on the road without the main dealer premium.",
+        "buttonText": "Compare BMW X3 M40d Engine Replacement Prices Now ->",
+        "disclaimer": "\"All prices are indicative UK market ranges based on historical quote data and repair requests from our network of engine specialists. Dealer pricing is estimated based on published main dealer labour rates and genuine OEM parts pricing. Specialist pricing reflects actual quote data from Engines Market's UK network. Actual costs vary depending on damage severity, vehicle condition, variant, and workshop location within the UK. Use our free comparison tool to get tailored quotes for your specific BMW X3 M40d. Every engine supplied through Engines Market carries a minimum 12-month unlimited mileage warranty - always confirm exact terms with your chosen supplier.\""
+      },
+      "reviewSummary": null
+    },
+    "faq": {
+      "tag": "FAQ",
+      "h2": "BMW X3 M40d Engine Replacement - Frequently Asked Questions",
+      "intro": "Everything BMW X3 M40d owners usually ask before choosing a rebuilt, reconditioned or used replacement engine.",
+      "defaultOpenIndex": 0,
+      "disclaimer": "",
+      "items": [
+        {
+          "question": "How much does a BMW X3 M40d engine replacement cost in the UK?",
+          "answer": "A BMW X3 M40d rebuilt engine typically costs £4,200-£7,500 supply-only, reflecting the complexity of the B57D30B twin-turbo diesel and the specialist expertise required. Supply & fit adds £650-£1,200 depending on the specialist and your location.",
+          "keyPoints": [
+            "B57D30B (2018-2024): £4,200-£7,500 supply-only",
+            "Used engines start from £2,500 supply-only",
+            "M Performance engine requires specialist calibration and coding",
+            "Main dealer replacement costs 40-60% more than specialist prices"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Compare rebuilt BMW X3 M40d engine prices by your exact variant"
+        },
+        {
+          "question": "Is the BMW X3 M40d B57 engine reliable?",
+          "answer": "Yes - the B57 is a significant improvement over the N57 it replaced. The timing chain is notably robust and reliable. However, the M40d's complex emissions systems - AdBlue, DPF, and EGR - require regular maintenance. Issues with the AdBlue system, EGR cooler, and HPFP have been reported.",
+          "keyPoints": [
+            "B57 timing chain is far more durable than N47/N57 predecessors",
+            "AdBlue system faults are the most common complaint",
+            "Regular motorway driving helps prevent DPF clogging",
+            "Use only BMW Longlife-04 approved oil",
+            "The M40d is a high-performance engine - it demands proper maintenance"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Find a reconditioned BMW X3 M40d engine with 12-month warranty"
+        },
+        {
+          "question": "What causes BMW X3 M40d AdBlue system failure?",
+          "answer": "AdBlue system failure in the X3 M40d is typically caused by crystallisation of the AdBlue injector nozzle, blocked dosing lines, or failed NOx sensors. Low AdBlue levels or contaminated fluid can also trigger system warnings.",
+          "keyPoints": [
+            "AdBlue injector nozzle crystallisation is the most common cause",
+            "Dosing lines can become blocked with crystallised urea",
+            "NOx sensors can fail, triggering warning lights",
+            "Low or contaminated AdBlue fluid causes system faults"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Get quotes for BMW X3 M40d AdBlue system repair and engine inspection"
+        },
+        {
+          "question": "What are the signs of BMW X3 M40d EGR cooler failure?",
+          "answer": "Signs of EGR cooler failure include coolant loss, sweet-smelling white smoke from the exhaust, rough running, and the Check Engine Light coming on. In severe cases, coolant can enter the cylinders, causing hydrolock and bent connecting rods.",
+          "keyPoints": [
+            "Coolant loss with no visible external leak",
+            "Sweet-smelling white exhaust smoke",
+            "Engine running rough or misfiring",
+            "Check Engine Light or EGR-related fault codes"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Get quotes for BMW X3 M40d EGR cooler replacement and engine inspection"
+        },
+        {
+          "question": "Is it worth replacing the engine on a BMW X3 M40d?",
+          "answer": "Yes - the BMW X3 M40d retains strong residual values (£25,000-£45,000 depending on age and mileage). A £4,800-£6,800 rebuilt engine is a worthwhile investment compared to replacing the entire vehicle.",
+          "keyPoints": [
+            "M40d values remain strong - replacement is usually cost-effective",
+            "Rebuilt engine includes 12-month warranty and upgraded components",
+            "Specialist replacement costs half what a main dealer charges",
+            "The B57 engine is capable of 200,000+ miles with proper maintenance"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Compare BMW X3 M40d engine rebuild vs replacement costs for your model year"
+        },
+        {
+          "question": "What is the labour cost to replace a BMW X3 M40d engine?",
+          "answer": "Specialist labour for BMW X3 M40d engine replacement typically costs £650-£1,200, covering 10-16 hours of work. Main dealers charge £1,800-£3,000 for the same job.",
+          "keyPoints": [
+            "Independent BMW specialist: £70-£90 per hour, 10-16 hours total",
+            "Main dealer: £180-£250 per hour, same labour time",
+            "Twin-turbo B57 engine requires more time than four-cylinder units",
+            "M Performance calibration and coding add to the complexity"
+          ],
+          "comparisonTable": null,
+          "warning": null,
+          "cta": "-> Find BMW X3 M40d supply & fit engine deals with UK-wide fitting network"
+        }
+      ],
+      "ui": {
+        "questionLabelPrefix": "Question",
+        "keyPointsLabel": "Key points",
+        "comparisonTableLabel": "Comparison table",
+        "disclaimerLabel": "Disclaimer",
+        "warningTitle": "Important"
+      }
+    },
+    "trustCta": {
+      "tag": "Why Choose Us",
+      "h2": "Compare BMW X3 M40d Engine Prices Today",
+      "intro": "Compare quotes from trusted UK BMW X3 M40d engine specialists with warranty-backed rebuilt, reconditioned and used options nationwide.",
+      "points": [
+        {
+          "title": "100+ BMW M Performance engines supplied through our network",
+          "description": ""
+        },
+        {
+          "title": "12-Month Warranty on every rebuilt BMW X3 M40d engine",
+          "description": ""
+        },
+        {
+          "title": "Nationwide UK delivery",
+          "description": "supply & fit available"
+        }
+      ],
+      "finalText": "Comparing quotes for your BMW X3 M40d is free, fast, and completely no-obligation. Enter your registration above to receive tailored prices from UK BMW M Performance specialists for your exact engine code - whether you need a used B57D30B, a reconditioned unit, or a fully rebuilt engine with warranty. Our network covers all G01 M40d variants, with supply & fit available nationwide. Get back on the road with confidence and without the main dealer premium.",
+      "buttonText": "Get Free BMW X3 M40d Engine Quotes ->",
+      "secondaryAction": {
+        "text": "",
+        "href": "tel:03330000044"
+      },
+      "ui": {
+        "showSecondaryAction": false
+      }
+    }
+  }
+}

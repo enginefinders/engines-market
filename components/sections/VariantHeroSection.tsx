@@ -152,7 +152,7 @@ export default function VariantHeroSection({ data, bgImage }: Props) {
 
   return (
     <Section className="overflow-hidden bg-white !py-[2px]">
-      <Container className="!max-w-none !px-[2px] sm:!px-[2px] lg:!px-[2px]">
+      <Container className="max-w-[1400px] px-0 sm:px-0 lg:px-0">
         <div className="relative overflow-hidden">
           <div className="absolute inset-0 bg-[linear-gradient(126deg,rgba(255,255,255,0.98)_0%,rgba(255,255,255,0.98)_40%,rgba(241,246,253,0.98)_58%,rgba(225,234,247,0.95)_74%,rgba(211,224,243,0.92)_100%)]" />
           <div className="absolute inset-y-0 right-0 hidden w-[52%] bg-[linear-gradient(135deg,transparent_0%,transparent_28%,rgba(195,210,236,0.3)_28%,rgba(195,210,236,0.3)_36%,transparent_36%,transparent_49%,rgba(195,210,236,0.22)_49%,rgba(195,210,236,0.22)_57%,transparent_57%)] lg:block" />
