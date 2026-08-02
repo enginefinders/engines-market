@@ -10,8 +10,6 @@ const wwwHost = canonicalHost.startsWith("www.")
 const buildRobotsTxt = () =>
   `User-agent: *
 Allow: /
-
-Host: ${canonicalHost}
 Sitemap: ${canonicalOrigin}/sitemap.xml
 `;
 
