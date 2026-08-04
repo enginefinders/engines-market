@@ -99,6 +99,19 @@ function getRepairTierMeta(index: number) {
   };
 }
 
+function normalizeCopy(text: string) {
+  return text
+    .replaceAll("Â£", "£")
+    .replaceAll("Â·", "·")
+    .replace(/[â€“â€”]/g, "-")
+    .replaceAll("Â", "")
+    .trim();
+}
+
+function stripArrow(text: string) {
+  return normalizeCopy(text).replace(/^\s*->\s*/u, "").replace(/\s*->\s*$/u, "").trim();
+}
+
 export default function VariantCommonProblemsSection({ data, vehicleImage }: Props) {
   const [activeIndex, setActiveIndex] = useState(0);
   const activeProblem = data.problems[activeIndex] ?? data.problems[0];
@@ -106,6 +119,7 @@ export default function VariantCommonProblemsSection({ data, vehicleImage }: Pro
   const leadProblemImage = bearingImage;
   const headerVehicleImage = vehicleImage || engineImage;
   const headingParts = data.h2.split("Repair Cost");
+  const hasDualInfoCards = Boolean(activeProblem?.vehicleValueCheck && activeProblem?.recommendation);
 
   if (!activeProblem && !data.emptyState) {
     return null;
@@ -115,9 +129,19 @@ export default function VariantCommonProblemsSection({ data, vehicleImage }: Pro
     <Section className="bg-white !py-[2px]">
       <Container className="max-w-[1400px] px-0 sm:px-0 lg:px-0">
         <div>
-          <div className="relative overflow-hidden bg-[linear-gradient(90deg,rgba(2,9,24,0.95),rgba(7,19,38,0.8)),url('/images/brands/bmw/brand/bmw-live-market-bg.png')] bg-cover bg-center px-5 py-4 sm:px-6 lg:px-9 lg:py-5">
+          <div className="relative -mx-[15px] overflow-hidden bg-[linear-gradient(90deg,rgba(2,9,24,0.95),rgba(7,19,38,0.8)),url('/images/brands/bmw/brand/bmw-live-market-bg.png')] bg-cover bg-center px-[15px] py-4 sm:-mx-5 sm:px-5 lg:-mx-4 lg:px-8 lg:py-6">
+            <div className="pointer-events-none absolute inset-y-0 right-[-12%] w-[62%] lg:hidden">
+              <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(4,12,28,0)_0%,rgba(4,12,28,0.24)_26%,rgba(4,12,28,0.58)_100%)]" />
+              <Image
+                src={headerVehicleImage}
+                alt=""
+                fill
+                className="object-cover object-right opacity-28"
+                sizes="62vw"
+              />
+            </div>
             <div className="relative grid gap-4 lg:grid-cols-[minmax(0,0.96fr)_minmax(360px,0.9fr)] lg:items-center">
-              <div className="relative z-10 pr-[34%] sm:pr-[40%] lg:pr-0">
+              <div className="relative z-10 pr-0 lg:pr-0">
                 <div className="inline-flex rounded-full bg-[#1f8b41] px-4 py-2 text-[12px] font-bold uppercase tracking-[0.03em] text-white">
                   {data.tag}
                 </div>
@@ -132,46 +156,28 @@ export default function VariantCommonProblemsSection({ data, vehicleImage }: Pro
                     data.h2
                   )}
                 </div>
-                <p className="mt-2 max-w-[700px] text-[14px] leading-[1.55] text-slate-200">{data.h3}</p>
+                <p className="mt-2 max-w-none text-[14px] leading-[1.55] text-slate-200 lg:max-w-[700px]">{data.h3}</p>
               </div>
 
-              <div className="pointer-events-none absolute inset-y-0 right-[-4%] hidden w-[58%] items-end justify-center lg:relative lg:flex lg:right-auto lg:w-full lg:max-w-[520px] lg:pointer-events-auto lg:min-h-[230px]">
-                <div className="absolute inset-x-14 bottom-4 h-12 rounded-full bg-[radial-gradient(circle,rgba(59,130,246,0.22),rgba(59,130,246,0))] blur-2xl" />
+              <div className="pointer-events-none absolute inset-y-0 right-[-2%] hidden w-[56%] items-end justify-center lg:relative lg:flex lg:right-auto lg:w-full lg:max-w-[500px] lg:pointer-events-auto lg:min-h-[250px]">
+                <div className="absolute inset-x-[14%] bottom-5 h-10 rounded-full bg-[radial-gradient(circle,rgba(59,130,246,0.16),rgba(59,130,246,0))] blur-[24px]" />
+                <div className="absolute right-[8%] top-[12%] h-[72%] w-[72%] rounded-[28px] bg-[radial-gradient(circle_at_48%_42%,rgba(255,255,255,0.12),rgba(255,255,255,0.03)_52%,transparent_82%)]" />
                 <Image
                   src={headerVehicleImage}
                   alt={data.h2}
                   fill
-                  className="object-contain object-right-bottom drop-shadow-[0_24px_34px_rgba(2,8,22,0.36)] lg:object-center"
+                  className="object-contain object-[72%_88%] opacity-[0.9] drop-shadow-[0_22px_34px_rgba(2,8,22,0.28)] lg:scale-[0.97]"
                   sizes="(max-width: 1024px) 100vw, 38vw"
                 />
               </div>
             </div>
           </div>
 
-          <div className="py-[2px]">
-            {data.problems.length > 1 ? (
-              <div className="mb-4 flex flex-wrap gap-2.5">
-                {data.problems.map((problem, index) => (
-                  <button
-                    key={`${problem.group}-${index}`}
-                    type="button"
-                    onClick={() => setActiveIndex(index)}
-                    className={`rounded-full px-4 py-2 text-[13px] font-bold transition ${
-                      index === activeIndex
-                        ? "bg-[#0b2347] text-white shadow-[0_10px_20px_rgba(11,35,71,0.14)]"
-                        : "bg-[#eef4ff] text-[#0b2347] hover:bg-[#dde9fb]"
-                    }`}
-                  >
-                    {problem.group}
-                  </button>
-                ))}
-              </div>
-            ) : null}
-
+          <div className="-mx-[15px] px-[15px] py-[2px] sm:-mx-5 sm:px-5 lg:-mx-4 lg:px-4">
             {activeProblem && heading ? (
               <>
-                <div className="grid items-start gap-5 sm:grid-cols-[minmax(180px,0.72fr)_minmax(0,1.28fr)] xl:grid-cols-[minmax(0,0.84fr)_minmax(0,1.16fr)]">
-                  <div className="overflow-hidden rounded-[14px] border border-[#dbe5f2] bg-white shadow-[0_16px_30px_rgba(15,23,42,0.08)] sm:mt-[72px] xl:mt-[96px]">
+                <div className="grid items-start gap-5 lg:grid-cols-[minmax(360px,0.86fr)_minmax(0,1.14fr)] xl:gap-8">
+                  <div className="overflow-hidden rounded-[18px] border border-[#dbe5f2] bg-white shadow-[0_16px_30px_rgba(15,23,42,0.08)] lg:mt-[92px] xl:mt-[104px]">
                     <div className="relative min-h-[250px] w-full sm:min-h-[320px] xl:min-h-[372px]">
                       <Image
                         src={leadProblemImage}
@@ -181,19 +187,55 @@ export default function VariantCommonProblemsSection({ data, vehicleImage }: Pro
                         sizes="(max-width: 1280px) 100vw, 32vw"
                       />
                     </div>
+
+                    {data.problems.length > 1 ? (
+                      <div className="grid grid-cols-2 gap-2 border-t border-[#dbe5f2] bg-[#f7faff] p-3 lg:hidden">
+                        {data.problems.map((problem, index) => (
+                          <button
+                            key={`${problem.group}-mobile-${index}`}
+                            type="button"
+                            onClick={() => setActiveIndex(index)}
+                            className={`rounded-full px-3 py-2 text-[12px] font-bold leading-[1.2] transition ${
+                              index === activeIndex
+                                ? "bg-[#0b2347] text-white shadow-[0_8px_18px_rgba(11,35,71,0.14)]"
+                                : "bg-white text-[#0b2347] ring-1 ring-[#d7e2f0]"
+                            }`}
+                          >
+                            {problem.group}
+                          </button>
+                        ))}
+                      </div>
+                    ) : null}
                   </div>
 
-                  <div className="bg-white px-4 py-4 shadow-[0_16px_30px_rgba(15,23,42,0.06)] sm:px-5">
-                    <div className="inline-flex rounded-full bg-[#0b2347] px-4 py-2 text-[12px] font-bold uppercase tracking-[0.03em] text-white">
-                      {activeProblem.group}
-                    </div>
+                  <div className="bg-white px-0 py-1 sm:px-5 lg:rounded-[22px] lg:border lg:border-[#e5edf6] lg:bg-[linear-gradient(180deg,#ffffff_0%,#fbfdff_100%)] lg:p-6 lg:shadow-[0_18px_34px_rgba(15,23,42,0.05)]">
+                    {data.problems.length > 1 ? (
+                      <div className="mb-5 hidden lg:flex lg:justify-center">
+                        <div className="inline-flex flex-wrap gap-1.5 rounded-[18px] border border-[#d8e2f0] bg-[linear-gradient(180deg,#f8fbff_0%,#eef4fb_100%)] p-1.5 shadow-[0_14px_26px_rgba(15,23,42,0.06)]">
+                          {data.problems.map((problem, index) => (
+                            <button
+                              key={`${problem.group}-${index}`}
+                              type="button"
+                              onClick={() => setActiveIndex(index)}
+                              className={`rounded-[14px] px-5 py-2.5 text-[13px] font-bold transition ${
+                                index === activeIndex
+                                  ? "bg-[#0b2347] text-white shadow-[0_10px_20px_rgba(11,35,71,0.18)]"
+                                  : "bg-transparent text-[#0b2347] hover:bg-white"
+                              }`}
+                            >
+                              {problem.group}
+                            </button>
+                          ))}
+                        </div>
+                      </div>
+                    ) : null}
 
-                    <div className="mt-3 font-['Manrope'] text-[34px] font-extrabold leading-[1.05] tracking-normal text-[#0b2347] sm:text-[42px]">
+                    <div className="mt-0 font-['Manrope'] text-[34px] font-extrabold leading-[1.05] tracking-normal text-[#0b2347] sm:text-[42px]">
                       {heading.title}
                     </div>
                     {heading.detail ? <p className="mt-1.5 text-[14px] font-semibold text-[#233a5d]">{heading.detail}</p> : null}
 
-                    <div className="mt-4 grid overflow-hidden rounded-[16px] border border-[#dbe5f2] grid-cols-2">
+                    <div className="mt-4 grid overflow-hidden rounded-[16px] border border-[#dbe5f2] grid-cols-2 bg-white">
                       <div className="border-b border-[#dbe5f2] px-3.5 py-3 md:border-b-0 md:border-r">
                         <div className="flex items-start gap-3">
                           <span className="text-[#15803d]">
@@ -352,7 +394,7 @@ export default function VariantCommonProblemsSection({ data, vehicleImage }: Pro
                   </div>
                 ) : null}
 
-                <div className="mt-5 grid gap-4 xl:grid-cols-2">
+                <div className={`mt-5 grid gap-4 ${hasDualInfoCards ? "xl:grid-cols-2" : ""}`}>
                   {activeProblem.vehicleValueCheck ? (
                     <div className="rounded-[14px] border border-[#dcebdd] bg-[linear-gradient(135deg,#f1faf3,#edf7f1)] px-5 py-4 shadow-[0_12px_24px_rgba(22,128,61,0.08)]">
                       <div className="flex items-start gap-4">
@@ -382,48 +424,67 @@ export default function VariantCommonProblemsSection({ data, vehicleImage }: Pro
                   ) : null}
                 </div>
 
-                <div className="mt-5 grid gap-4">
-                  <div className="grid gap-4 rounded-[14px] bg-[#081f47] px-4 py-4 text-white shadow-[0_18px_34px_rgba(8,31,71,0.18)] sm:grid-cols-[88px_minmax(0,1fr)] sm:items-center">
-                    <div className="relative mx-auto h-[70px] w-[70px] overflow-hidden rounded-[12px]">
-                      <Image src={ctaEngineImage} alt="" fill className="object-contain" sizes="70px" />
+                <div className="mt-6 rounded-[16px] bg-[#071735] px-4 py-5 text-white shadow-[0_18px_34px_rgba(8,31,71,0.18)] sm:px-5 sm:py-6 lg:px-6 lg:py-6">
+                  <div className="grid gap-6 lg:grid-cols-[150px_minmax(0,1.08fr)_1px_minmax(360px,0.96fr)] lg:items-center xl:grid-cols-[170px_minmax(0,1.1fr)_1px_minmax(390px,0.98fr)]">
+                    <div className="relative mx-auto h-[104px] w-[128px] sm:h-[118px] sm:w-[144px] lg:mx-0 lg:h-[132px] lg:w-[164px]">
+                      <div className="absolute inset-0 rounded-[18px] bg-[radial-gradient(circle_at_50%_55%,rgba(255,255,255,0.14),rgba(255,255,255,0)_68%)] blur-xl" />
+                      <div className="absolute inset-y-[6%] left-[4%] right-[4%] bg-[linear-gradient(90deg,rgba(7,23,53,0.96)_0%,rgba(7,23,53,0.28)_18%,rgba(7,23,53,0)_50%,rgba(7,23,53,0.22)_82%,rgba(7,23,53,0.94)_100%)]" />
+                      <div className="absolute inset-x-[10%] bottom-1 h-8 rounded-full bg-[radial-gradient(circle,rgba(67,87,118,0.34),rgba(67,87,118,0)_72%)] blur-2xl" />
+                      <Image
+                        src={ctaEngineImage}
+                        alt=""
+                        fill
+                        className="object-contain object-center [mask-image:radial-gradient(circle_at_center,black_58%,transparent_94%)]"
+                        sizes="164px"
+                      />
                     </div>
-                    <div className="grid gap-3 sm:grid-cols-[minmax(0,1fr)_280px] sm:items-center">
-                      <p className="text-[16px] font-semibold leading-[1.4] text-white">
-                        {activeProblem.cta.replace(/\s*->\s*$/, "")}
+
+                    <div className="min-w-0">
+                      <h4 className="font-['Manrope'] text-[28px] font-extrabold leading-[1.08] tracking-normal text-white sm:text-[32px] lg:text-[38px]">
+                        {normalizeCopy(data.finalCta.h4)}
+                      </h4>
+                      <p className="mt-3 max-w-[700px] text-[14px] leading-[1.78] text-slate-200 sm:text-[15px] lg:mt-3.5 lg:text-[15px]">
+                        {normalizeCopy(data.finalCta.paragraph)}
                       </p>
+                    </div>
+
+                    <div className="hidden h-full min-h-[176px] w-px bg-white/14 lg:block" />
+
+                    <div className="rounded-[14px] border border-white/10 bg-[#0a214d] px-5 py-5 sm:px-6 sm:py-6 lg:min-h-[176px]">
+                      <div className="flex items-start gap-3">
+                        <div className="flex h-11 w-11 flex-none items-center justify-center rounded-full border border-white/15 bg-[#071735]">
+                          <RecommendationIcon />
+                        </div>
+                        <div className="min-w-0">
+                          <p className="text-[15px] font-semibold leading-[1.6] text-white/90">
+                            {stripArrow(activeProblem.cta)}
+                          </p>
+                        </div>
+                      </div>
+
                       <a
                         href="#quote-form"
                         data-quote-context={`${activeProblem.group} repair guidance`}
                         data-quote-source="variant-common-problems"
-                        className="inline-flex min-h-[54px] w-full items-center justify-center gap-3 rounded-[8px] bg-[#1d9f42] px-6 text-[15px] font-bold text-white transition hover:bg-[#18883a]"
+                        className="mt-5 inline-flex min-h-[58px] w-full items-center justify-center gap-3 rounded-[8px] bg-[#1d9f42] px-6 text-[15px] font-bold text-white transition hover:bg-[#18883a] sm:min-h-[60px]"
                       >
-                        <span>Compare Engine Prices</span>
+                        <span>{stripArrow(data.finalCta.buttonText)}</span>
                         <ArrowIcon />
                       </a>
-                    </div>
-                  </div>
 
-                  <div className="grid gap-5 rounded-[16px] bg-[#071735] px-5 py-5 text-white shadow-[0_18px_34px_rgba(8,31,71,0.18)] lg:grid-cols-[minmax(0,0.96fr)_minmax(320px,0.54fr)] lg:items-center">
-                    <div className="flex items-start gap-4">
-                      <div className="flex h-14 w-14 flex-none items-center justify-center rounded-full border border-[#1f8b41] bg-[#071c38] text-[#6ae086]">
-                        <RecommendationIcon />
-                      </div>
-                      <div>
-                        <h4 className="font-['Manrope'] text-[30px] font-extrabold leading-[1.1] tracking-normal text-white sm:text-[36px]">
-                          {data.finalCta.h4}
-                        </h4>
-                        <p className="mt-3 text-[14px] leading-[1.65] text-slate-200">{data.finalCta.paragraph}</p>
-                      </div>
-                    </div>
-
-                    <div className="rounded-[14px] border border-[#1f8b41]/55 bg-[#081f47] p-4">
-                      <div className="flex items-start gap-3">
-                        <div className="flex h-11 w-11 flex-none items-center justify-center rounded-full border border-white/15 bg-[#0b2347]">
-                          <Image src="/icons/engine-market/white-technical-spec.png" alt="" width={22} height={22} className="object-contain" />
+                      <div className="mt-5 grid gap-3 border-t border-white/10 pt-4 sm:grid-cols-3 sm:pt-5">
+                        <div className="flex items-center gap-2 text-[12px] font-semibold text-white/85">
+                          <Image src="/icons/engine-market/light-green-warranty-minimum.png" alt="" width={16} height={16} className="object-contain" />
+                          <span>12-Month Minimum</span>
                         </div>
-                        <p className="text-[15px] font-semibold leading-[1.5] text-[#39c85e]">
-                          {data.finalCta.buttonText.replace(/\s*->\s*$/, "")}
-                        </p>
+                        <div className="flex items-center gap-2 text-[12px] font-semibold text-white/85">
+                          <Image src="/icons/engine-market/light-green-trusted-seller.png" alt="" width={16} height={16} className="object-contain" />
+                          <span>UK Specialists Vetted</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-[12px] font-semibold text-white/85">
+                          <Image src="/icons/engine-market/light-green-pound-icon-2.png" alt="" width={16} height={16} className="object-contain" />
+                          <span>Best Price Guidance</span>
+                        </div>
                       </div>
                     </div>
                   </div>

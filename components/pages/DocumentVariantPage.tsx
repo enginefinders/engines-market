@@ -26,6 +26,7 @@ export default function DocumentVariantPage({ data }: DocumentVariantPageProps) 
   });
   const mainImage = resolvedImages.resolvedMainImage;
   const heroImage = data.assets.heroBg || mainImage;
+  const ctaImage = data.assets.ctaImage || mainImage || heroImage;
 
   return (
     <>
@@ -49,7 +50,11 @@ export default function DocumentVariantPage({ data }: DocumentVariantPageProps) 
         variantLayout
       />
 
-      <VariantHistoryTimelineSection data={data.sections.historyTimeline} vehicleImage={heroImage} />
+      <VariantHistoryTimelineSection
+        data={data.sections.historyTimeline}
+        vehicleImage={heroImage}
+        mobileVehicleImage={mainImage || heroImage}
+      />
 
       <VariantEngineGuideSection data={data.sections.engineGuide} />
 
@@ -60,7 +65,7 @@ export default function DocumentVariantPage({ data }: DocumentVariantPageProps) 
       <VariantTrustCtaSection
         data={data.sections.trustCta}
         brandName={data.variant.name}
-        imageSrc={heroImage}
+        imageSrc={ctaImage}
       />
 
       <Suspense fallback={null}>

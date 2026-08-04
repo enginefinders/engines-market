@@ -202,53 +202,181 @@ export default function VariantHeroSection({ data, backgroundArtwork, vehicleIma
         <div className="absolute inset-y-0 right-0 hidden w-[54%] bg-[radial-gradient(circle_at_72%_38%,rgba(255,255,255,0.52),rgba(255,255,255,0)_44%)] lg:block" />
 
         <Container className="relative max-w-[1400px] !px-0 sm:!px-0 lg:!px-0">
-          <div className="grid items-center gap-5 px-0 pb-6 pt-4 sm:pb-7 lg:grid-cols-[minmax(0,0.92fr)_minmax(500px,1.02fr)] lg:gap-8 lg:pb-5 lg:pt-7">
+          <div className="grid items-center gap-3 px-[1px] pb-2 pt-3 sm:px-0 sm:gap-5 sm:pb-5 sm:pt-4 lg:grid-cols-[minmax(0,0.92fr)_minmax(520px,1.04fr)] lg:gap-10 lg:pb-10 lg:pt-7">
             <div className="relative z-10 max-w-[700px]">
-              <div className="inline-flex items-center gap-2 rounded-full bg-[#1f8b41] px-3 py-2 text-[10px] font-bold uppercase tracking-[0.03em] text-white shadow-[0_8px_18px_rgba(31,139,65,0.18)]">
+              <div className="inline-flex items-center gap-2 rounded-full bg-[#1f8b41] px-2.5 py-1.5 text-[9px] font-bold uppercase tracking-[0.03em] text-white shadow-[0_8px_18px_rgba(31,139,65,0.18)] sm:px-3 sm:py-2 sm:text-[10px]">
                 <span className="text-white">
                   <ShieldIcon />
                 </span>
                 <span>{tagText}</span>
               </div>
 
-              <h1 className="mt-4 max-w-[760px] font-['Manrope'] text-[33px] font-extrabold leading-[0.98] tracking-normal text-[#0b2347] sm:text-[42px] lg:text-[58px]">
+              <h1 className="mt-2.5 max-w-[760px] font-['Manrope'] text-[22px] font-extrabold leading-[0.97] tracking-normal text-[#0b2347] sm:text-[30px] lg:mt-4 lg:text-[58px]">
                 <span className="block">{headline.lead}</span>
                 {headline.accent ? <span className="mt-1.5 block text-[#169347]">{headline.accent}</span> : null}
               </h1>
 
-              <p className="mt-4 max-w-[650px] text-[15px] leading-[1.68] text-[#253c5d] sm:text-[16px]">
+              <p className="mt-2 max-w-[650px] text-[12px] leading-[1.4] text-[#253c5d] sm:text-[14px] lg:mt-4 lg:text-[16px] lg:leading-[1.68]">
                 {subheading}
               </p>
 
-              <div className="mt-5 grid grid-cols-2 gap-3 py-1 sm:grid-cols-4 lg:max-w-[760px]">
+              <div className="mt-2.5 grid grid-cols-4 gap-1 py-1 sm:gap-2 lg:mt-5 lg:max-w-[760px]">
                 {trustBadges.map((badge, index) => (
                   <div
                     key={`${badge}-${index}`}
-                    className={`flex min-w-0 items-center gap-3 rounded-[14px] border border-[#e0e7f1] bg-white/88 px-3 py-3 text-[#163d8c] shadow-[0_10px_20px_rgba(15,23,42,0.05)] backdrop-blur-[6px] lg:rounded-none lg:border-0 lg:bg-transparent lg:px-0 lg:py-0 lg:shadow-none lg:backdrop-blur-none ${
+                    className={`flex min-w-0 flex-col items-center gap-0.5 rounded-[10px] border border-[#e0e7f1] bg-white/88 px-1 py-1.5 text-center text-[#163d8c] shadow-[0_8px_18px_rgba(15,23,42,0.045)] backdrop-blur-[6px] sm:px-2.5 sm:py-2 lg:flex-row lg:items-center lg:gap-3 lg:rounded-none lg:border-0 lg:bg-transparent lg:px-0 lg:py-0 lg:text-left lg:shadow-none lg:backdrop-blur-none ${
                       index < trustBadges.length - 1 ? "lg:border-r lg:border-[#dbe5f2] lg:pr-4" : ""
                     }`}
                   >
                     <div className="text-[#1558c0]">{getTrustIcon(index)}</div>
-                    <p className="text-[13px] font-semibold leading-[1.24] text-[#112b57]">{badge}</p>
+                    <p className="text-[9px] font-semibold leading-[1.15] text-[#112b57] sm:text-[10px] lg:text-[13px] lg:leading-[1.24]">{badge}</p>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="relative z-10 min-h-[230px] sm:min-h-[280px] lg:min-h-[430px]">
-              <div className="absolute inset-x-[8%] bottom-[7%] top-[20%] rounded-full bg-[radial-gradient(circle,rgba(132,149,175,0.18),rgba(132,149,175,0)_68%)] blur-3xl lg:inset-x-[16%] lg:bottom-[8%] lg:top-[14%]" />
-              <Image
-                src={vehicleImage}
-                alt={normalizeCopy(data.imageAlt || headline.lead)}
-                fill
-                priority
-                className="object-contain object-[72%_66%] lg:translate-x-[8%] lg:object-[78%_62%] xl:translate-x-[12%] xl:object-[82%_61%]"
-                sizes="(max-width: 1024px) 100vw, 48vw"
-              />
+            <div className="relative z-10 hidden min-h-[240px] sm:min-h-[300px] lg:block lg:min-h-[452px]">
+              <div className="absolute inset-x-[6%] bottom-[9%] top-[18%] rounded-full bg-[radial-gradient(circle,rgba(132,149,175,0.22),rgba(132,149,175,0)_68%)] blur-3xl lg:inset-x-[10%] lg:bottom-[6%] lg:top-[12%]" />
+              <div className="absolute inset-0 overflow-hidden lg:right-[-2%]">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_76%_42%,rgba(255,255,255,0.46),rgba(255,255,255,0)_38%)]" />
+                <div className="absolute inset-y-0 left-0 w-[24%] bg-[linear-gradient(90deg,#eef3f8_0%,rgba(238,243,248,0.95)_26%,rgba(238,243,248,0.12)_100%)] lg:w-[16%]" />
+                <div className="absolute inset-y-[4%] right-0 w-[12%] bg-[linear-gradient(270deg,#eef3f8_0%,rgba(238,243,248,0.54)_36%,rgba(238,243,248,0)_100%)] lg:w-[9%]" />
+                <div className="absolute inset-x-[9%] bottom-[2%] h-9 rounded-full bg-[radial-gradient(circle,rgba(97,116,143,0.18),rgba(97,116,143,0)_72%)] blur-2xl lg:inset-x-[16%]" />
+                <Image
+                  src={vehicleImage}
+                  alt={normalizeCopy(data.imageAlt || headline.lead)}
+                  fill
+                  priority
+                  className="object-contain object-[78%_68%] [mask-image:radial-gradient(circle_at_64%_50%,black_58%,rgba(0,0,0,0.88)_74%,transparent_98%)] lg:translate-x-[10%] lg:object-[82%_60%] xl:translate-x-[14%] xl:object-[84%_58%]"
+                  sizes="(max-width: 1024px) 100vw, 48vw"
+                />
+              </div>
             </div>
           </div>
 
-          <div className="relative grid gap-4 pb-4 xl:grid-cols-[minmax(0,1.3fr)_minmax(400px,0.84fr)]">
+          <div className="relative pb-0 lg:hidden">
+            <div className="border-0 bg-transparent p-0 shadow-none">
+              <div className="rounded-[18px] border border-[#dfe7f1] bg-white/97 p-2 shadow-[0_14px_28px_rgba(15,23,42,0.06)] backdrop-blur-sm sm:p-3.5">
+                <div className="grid grid-cols-[86px_minmax(0,1fr)] items-center gap-2 sm:grid-cols-[112px_minmax(0,1fr)] sm:gap-3">
+                  <div className="relative mx-auto flex h-[84px] w-full max-w-[92px] items-center justify-center sm:h-[108px] sm:max-w-[118px]">
+                    <Image
+                      src={optionCards[0]?.image || defaultEngineImage}
+                      alt={normalizeCopy(optionCards[0]?.imageAlt || `${headline.lead} engine`)}
+                      fill
+                      className="object-contain"
+                      sizes="118px"
+                    />
+                  </div>
+
+                  <div className="min-w-0">
+                    <div className="inline-flex rounded-full bg-[#09295a] px-2.5 py-1 text-[8px] font-extrabold tracking-[0.03em] text-white sm:text-[9px]">
+                      {highlightLabel}
+                    </div>
+
+                    <p className="mt-1.5 font-['Manrope'] text-[15px] font-extrabold leading-[1.05] tracking-normal text-[#0b2347] sm:text-[20px]">
+                      From <span className="text-[#149347]">{anchorPrice || normalizeCopy(data.highlights?.[0]?.price || "")}</span>
+                    </p>
+
+                    {detailLine ? <p className="mt-1 text-[10px] leading-[1.32] text-[#334a68] sm:text-[11px]">{detailLine}</p> : null}
+                  </div>
+                </div>
+
+                <div
+                  className="mt-2.5 grid overflow-hidden rounded-[16px] border border-[#dfe7f1]"
+                  style={{ gridTemplateColumns: `repeat(${optionCards.length}, minmax(0, 1fr))` }}
+                >
+                  {optionCards.map((option, index) => {
+                    const tone = getOptionToneClasses(option.tone);
+                    return (
+                      <div
+                        key={`mobile-${option.label}-${index}`}
+                        className={`bg-[#fbfdff] px-2 py-2.5 sm:px-2.5 sm:py-3 ${index < optionCards.length - 1 ? "border-r border-[#dfe7f1]" : ""}`}
+                      >
+                        <div className={`inline-flex rounded-full px-2 py-1 text-[8px] font-bold uppercase tracking-[0.04em] ${tone.badge}`}>
+                          {option.label}
+                        </div>
+                        <p className={`mt-1.5 text-[11px] font-extrabold leading-[1.15] ${tone.price} sm:text-[12px]`}>{option.price}</p>
+                        <p className="mt-1 text-[9px] leading-[1.35] text-[#4d6483] sm:text-[10px]">{option.description}</p>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+
+              <div className="relative mt-2 min-h-[108px] overflow-hidden rounded-none border-0 bg-[#eef3f8] sm:rounded-[16px] sm:border sm:border-[#dfe7f1] sm:min-h-[140px]">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(255,255,255,0.98),rgba(255,255,255,0.92)_24%,rgba(239,244,250,0.82)_50%,rgba(229,237,247,0.82)_100%)]" />
+                <div className="absolute inset-0 bg-[linear-gradient(118deg,rgba(255,255,255,0)_0%,rgba(255,255,255,0)_48%,rgba(210,221,236,0.42)_48%,rgba(210,221,236,0.42)_55%,rgba(255,255,255,0)_55%,rgba(255,255,255,0)_66%,rgba(215,226,240,0.26)_66%,rgba(215,226,240,0.26)_72%,rgba(255,255,255,0)_72%)]" />
+                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.3)_0%,rgba(255,255,255,0.02)_26%,rgba(239,244,250,0.05)_58%,rgba(232,239,248,0.58)_100%)]" />
+                {backgroundArtwork ? (
+                  <div
+                    className="absolute inset-y-0 right-[-10%] w-[62%] opacity-[0.05] blur-[1px]"
+                    style={{
+                      backgroundImage: `url(${backgroundArtwork})`,
+                      backgroundRepeat: "no-repeat",
+                      backgroundPosition: "right center",
+                      backgroundSize: "cover",
+                    }}
+                  />
+                ) : null}
+                <div className="absolute right-[5%] top-[12%] font-['Manrope'] text-[44px] font-extrabold uppercase leading-none tracking-[-0.08em] text-[#dbe4ef] opacity-75 sm:text-[56px]">
+                  {vehicleBadge}
+                </div>
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_40%,rgba(255,255,255,0.46),rgba(255,255,255,0)_36%)]" />
+                <div className="absolute inset-y-0 left-0 w-[28%] bg-[linear-gradient(90deg,#eef3f8_0%,rgba(238,243,248,0.96)_36%,rgba(238,243,248,0.14)_100%)]" />
+                <div className="absolute inset-y-[5%] right-0 w-[12%] bg-[linear-gradient(270deg,#eef3f8_0%,rgba(238,243,248,0.56)_34%,rgba(238,243,248,0)_100%)]" />
+                <div className="absolute inset-x-[14%] bottom-[5%] h-8 rounded-full bg-[radial-gradient(circle,rgba(97,116,143,0.18),rgba(97,116,143,0)_72%)] blur-2xl" />
+                <Image
+                  src={vehicleImage}
+                  alt={normalizeCopy(data.imageAlt || headline.lead)}
+                  fill
+                  priority
+                  className="object-contain object-center [mask-image:radial-gradient(circle_at_60%_56%,black_58%,rgba(0,0,0,0.9)_78%,transparent_100%)] scale-[0.98] sm:scale-[1.02]"
+                  sizes="100vw"
+                />
+              </div>
+
+              <div className="mt-2 grid gap-2 pb-2 sm:pb-0">
+                <div className="grid grid-cols-[88px_1fr] overflow-hidden rounded-[12px] border border-[#d7e1ee] bg-[#fbfcfe]">
+                  <div className="grid grid-cols-[1fr_auto] items-center gap-2 border-r border-[#d7e1ee] px-3 py-2.5">
+                    <div className="flex items-center gap-2">
+                      <UkFlagIcon />
+                      <span className="text-[13px] font-extrabold text-[#0b2347]">{normalizeCopy(data.registrationInput?.countryCode ?? "UK")}</span>
+                    </div>
+                    <svg viewBox="0 0 24 24" className="h-4 w-4 text-[#0b2347]" fill="none" aria-hidden="true">
+                      <path d="m6 9 6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </div>
+                  <input
+                    type="text"
+                    placeholder={inputPlaceholder}
+                    className="min-h-[48px] min-w-0 border-0 bg-transparent px-3 text-[13px] font-medium text-[#0b2347] outline-none placeholder:font-normal placeholder:text-[#7487a1]"
+                    aria-label={normalizeCopy(data.registrationInput?.label || data.form.heading)}
+                  />
+                </div>
+
+                <a
+                  href="#quote-form"
+                  data-quote-context={normalizeCopy(data.form.heading)}
+                  data-quote-source="variant-hero"
+                  className="inline-flex min-h-[48px] items-center justify-center gap-3 rounded-[12px] bg-[#169347] px-4 text-center text-[13px] font-extrabold text-white shadow-[0_14px_24px_rgba(22,147,71,0.2)] transition hover:bg-[#117f3b]"
+                >
+                  <span>{formButtonText}</span>
+                  <span className="pl-1">
+                    <ArrowIcon />
+                  </span>
+                </a>
+
+                <div className="flex items-start gap-2 px-1 text-[10px] leading-[1.32] text-[#253a58]">
+                  <span className="mt-0.5 text-[#0b2347]">
+                    <LockIcon />
+                  </span>
+                  <p>{formNote}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="relative hidden gap-5 pb-5 lg:grid xl:grid-cols-[minmax(0,1.3fr)_minmax(420px,0.86fr)] xl:gap-6">
             <div className="rounded-[20px] border border-[#dfe7f1] bg-white/96 p-4 shadow-[0_16px_32px_rgba(15,23,42,0.06)] backdrop-blur-sm sm:p-5">
               <div className="grid gap-4 lg:grid-cols-[188px_minmax(0,1fr)] lg:items-center">
                 <div className="relative mx-auto flex h-[174px] w-full max-w-[210px] items-center justify-center lg:h-[188px] lg:max-w-[220px]">
@@ -296,10 +424,10 @@ export default function VariantHeroSection({ data, backgroundArtwork, vehicleIma
               </div>
             </div>
 
-            <div className="flex min-h-[250px] items-center rounded-[20px] border border-[#dfe7f1] bg-white/98 p-4 shadow-[0_16px_32px_rgba(15,23,42,0.06)] backdrop-blur-sm sm:min-h-[262px] sm:p-5">
-              <div className="grid w-full gap-4">
+            <div className="flex min-h-[286px] items-center rounded-[20px] border border-[#dfe7f1] bg-white/98 p-5 shadow-[0_16px_32px_rgba(15,23,42,0.06)] backdrop-blur-sm sm:min-h-[312px] sm:p-6">
+              <div className="grid w-full gap-5">
                 <div className="grid grid-cols-[104px_1fr] overflow-hidden rounded-[12px] border border-[#d7e1ee] bg-[#fbfcfe]">
-                  <div className="grid grid-cols-[1fr_auto] items-center gap-3 border-r border-[#d7e1ee] px-4 py-3">
+                  <div className="grid grid-cols-[1fr_auto] items-center gap-3 border-r border-[#d7e1ee] px-4 py-4">
                     <div className="flex items-center gap-2">
                       <UkFlagIcon />
                       <span className="text-[15px] font-extrabold text-[#0b2347]">{normalizeCopy(data.registrationInput?.countryCode ?? "UK")}</span>
@@ -311,7 +439,7 @@ export default function VariantHeroSection({ data, backgroundArtwork, vehicleIma
                   <input
                     type="text"
                     placeholder={inputPlaceholder}
-                    className="min-h-[58px] min-w-0 border-0 bg-transparent px-4 text-[16px] font-medium text-[#0b2347] outline-none placeholder:font-normal placeholder:text-[#7487a1]"
+                    className="min-h-[68px] min-w-0 border-0 bg-transparent px-4 text-[17px] font-medium text-[#0b2347] outline-none placeholder:font-normal placeholder:text-[#7487a1]"
                     aria-label={normalizeCopy(data.registrationInput?.label || data.form.heading)}
                   />
                 </div>
@@ -320,7 +448,7 @@ export default function VariantHeroSection({ data, backgroundArtwork, vehicleIma
                   href="#quote-form"
                   data-quote-context={normalizeCopy(data.form.heading)}
                   data-quote-source="variant-hero"
-                  className="inline-flex min-h-[58px] items-center justify-center gap-3 rounded-[12px] bg-[#169347] px-5 text-center text-[15px] font-extrabold text-white shadow-[0_16px_28px_rgba(22,147,71,0.24)] transition hover:bg-[#117f3b]"
+                  className="inline-flex min-h-[68px] items-center justify-center gap-3 rounded-[12px] bg-[#169347] px-5 text-center text-[15px] font-extrabold text-white shadow-[0_16px_28px_rgba(22,147,71,0.24)] transition hover:bg-[#117f3b]"
                 >
                   <span>{formButtonText}</span>
                   <span className="pl-1">
