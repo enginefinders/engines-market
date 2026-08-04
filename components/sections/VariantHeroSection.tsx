@@ -7,7 +7,8 @@ import Section from "@/components/ui/Section";
 
 type Props = {
   data: VariantHeroData;
-  bgImage: string;
+  backgroundArtwork?: string;
+  vehicleImage: string;
 };
 
 const defaultEngineImage = "/images/shared/hero-engines/temporary-performance-engine.jpeg";
@@ -107,19 +108,38 @@ function getOptionToneClasses(tone?: string) {
   };
 }
 
+function normalizeCopy(text: string) {
+  return text
+    .replaceAll("Â£", "£")
+    .replaceAll("Â·", "·")
+    .replace(/[â€“â€”]/g, "-")
+    .replaceAll("Â", "")
+    .trim();
+}
+
+function stripLeadingArrow(text: string) {
+  return normalizeCopy(text).replace(/^\s*->\s*/u, "").trim();
+}
+
 function parseAnchorPrice(data: VariantHeroData) {
-  const line = data.highlights?.[0]?.line1 ?? data.highlights?.[0]?.price ?? "";
-  if (!line) return data.highlights?.[0]?.price ?? "";
+  const line = normalizeCopy(data.highlights?.[0]?.line1 ?? data.highlights?.[0]?.price ?? "");
+  if (!line) return normalizeCopy(data.highlights?.[0]?.price ?? "");
   const pieces = line.split(/[-:]/);
-  return pieces.length > 1 ? pieces.slice(1).join("-").trim() : line;
+  const extracted = pieces.length > 1 ? pieces.slice(1).join("-").trim() : line;
+  return extracted.replace(/^from\s+/i, "").trim();
 }
 
 function getEngineCards(data: VariantHeroData) {
   if (data.engineOptions?.length) {
-    return data.engineOptions;
+    return data.engineOptions.map((option) => ({
+      ...option,
+      label: normalizeCopy(option.label),
+      price: normalizeCopy(option.price),
+      description: stripLeadingArrow(option.description),
+    }));
   }
 
-  const detail = data.highlights?.[0]?.detail ?? "";
+  const detail = stripLeadingArrow(data.highlights?.[0]?.detail ?? "");
   return [
     {
       label: "Used",
@@ -133,9 +153,10 @@ function getEngineCards(data: VariantHeroData) {
 }
 
 function getHeadlineParts(h1: string) {
-  const match = h1.match(/^(.*?)(?:\s*-\s*)(.*)$/);
+  const normalized = normalizeCopy(h1);
+  const match = normalized.match(/^(.*?)(?:\s*-\s*)(.*)$/);
   if (!match) {
-    return { lead: h1, accent: "" };
+    return { lead: normalized, accent: "" };
   }
   return {
     lead: match[1].trim(),
@@ -143,40 +164,51 @@ function getHeadlineParts(h1: string) {
   };
 }
 
-export default function VariantHeroSection({ data, bgImage }: Props) {
+export default function VariantHeroSection({ data, backgroundArtwork, vehicleImage }: Props) {
   const headline = getHeadlineParts(data.h1);
   const optionCards = getEngineCards(data);
   const anchorPrice = parseAnchorPrice(data);
-  const detailLine = data.highlights?.[0]?.detail ?? data.highlights?.[0]?.line2 ?? "";
+  const detailLine = stripLeadingArrow(data.highlights?.[0]?.detail ?? data.highlights?.[0]?.line2 ?? "");
   const bottomTickerLoop = [...bottomBarItems, ...bottomBarItems];
+  const vehicleBadge = normalizeCopy(data.vehicleBadge || headline.lead.split(" ").slice(-1)[0] || "BMW");
+  const tagText = normalizeCopy(data.tag);
+  const subheading = normalizeCopy(data.subheading);
+  const trustBadges = data.trustBadges.map((badge) => normalizeCopy(badge));
+  const formButtonText = stripLeadingArrow(data.form.buttonText).replace(/\s*->\s*$/u, "");
+  const inputPlaceholder = normalizeCopy(data.registrationInput?.platePlaceholder || data.form.inputPlaceholder);
+  const formNote = normalizeCopy(data.form.note);
+  const highlightLabel = normalizeCopy(data.highlights?.[0]?.title?.replace(/\s+Engine$/i, "") || "Engine Code");
 
   return (
-    <Section className="overflow-hidden bg-white !py-[2px]">
-      <div className="relative overflow-hidden">
-        <div className="relative min-h-[320px] overflow-hidden bg-[#f7f9fc] sm:min-h-[360px] lg:min-h-[420px]">
-          <div className="absolute inset-0">
-            <Image
-              src={bgImage}
-              alt=""
-              fill
-              className="object-cover object-[92%_center] sm:object-[92%_center] lg:object-[94%_center]"
-              sizes="100vw"
-              priority
-            />
-          </div>
-          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(247,249,252,0.995)_0%,rgba(247,249,252,0.985)_22%,rgba(247,249,252,0.94)_38%,rgba(247,249,252,0.76)_52%,rgba(247,249,252,0.34)_70%,rgba(247,249,252,0.04)_100%)]" />
-          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.22)_0%,rgba(255,255,255,0)_28%,rgba(247,249,252,0.08)_72%,rgba(247,249,252,0.52)_100%)]" />
-          <div className="absolute inset-y-0 right-0 hidden w-[50%] bg-[radial-gradient(circle_at_72%_45%,rgba(255,255,255,0)_0%,rgba(255,255,255,0.04)_34%,rgba(255,255,255,0.3)_62%,rgba(247,249,252,0.72)_100%)] lg:block" />
-          <div className="absolute inset-y-0 right-0 hidden w-[52%] bg-[linear-gradient(135deg,transparent_0%,transparent_32%,rgba(195,210,236,0.12)_32%,rgba(195,210,236,0.12)_40%,transparent_40%,transparent_52%,rgba(195,210,236,0.08)_52%,rgba(195,210,236,0.08)_60%,transparent_60%)] lg:block" />
+    <Section className="overflow-hidden !px-0 !py-[2px]">
+      <div className="relative overflow-hidden bg-[#eef3f8]">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_16%_18%,rgba(255,255,255,0.98),rgba(255,255,255,0.92)_22%,rgba(239,244,250,0.82)_50%,rgba(229,237,247,0.8)_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(115deg,rgba(255,255,255,0)_0%,rgba(255,255,255,0)_44%,rgba(210,221,236,0.42)_44%,rgba(210,221,236,0.42)_49%,rgba(255,255,255,0)_49%,rgba(255,255,255,0)_58%,rgba(215,226,240,0.22)_58%,rgba(215,226,240,0.22)_64%,rgba(255,255,255,0)_64%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.76)_0%,rgba(255,255,255,0.32)_36%,rgba(239,244,250,0.08)_58%,rgba(232,239,248,0.55)_100%)]" />
+        {backgroundArtwork ? (
+          <div
+            className="absolute inset-y-0 right-[-8%] hidden w-[42%] opacity-[0.035] blur-[1px] lg:block"
+            style={{
+              backgroundImage: `url(${backgroundArtwork})`,
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "right center",
+              backgroundSize: "cover",
+            }}
+          />
+        ) : null}
+        <div className="absolute right-[6%] top-8 hidden font-['Manrope'] text-[160px] font-extrabold uppercase leading-none tracking-[-0.08em] text-[#dbe4ef] opacity-70 lg:block xl:text-[190px]">
+          {vehicleBadge}
+        </div>
+        <div className="absolute inset-y-0 right-0 hidden w-[54%] bg-[radial-gradient(circle_at_72%_38%,rgba(255,255,255,0.52),rgba(255,255,255,0)_44%)] lg:block" />
 
-          <Container className="relative max-w-[1400px] px-0 sm:px-0 lg:px-0">
-            <div className="px-0 pb-5 pt-4 sm:px-0 sm:pb-6 lg:px-0 lg:pb-8 lg:pt-6">
-              <div className="max-w-[700px] pt-1 lg:max-w-[52%]">
-              <div className="inline-flex items-center gap-2 rounded-full border border-[#d7e4fb] bg-[#f2f7ff] px-3 py-2 text-[10px] font-bold uppercase tracking-[0.03em] text-[#1558c0] shadow-[0_8px_18px_rgba(31,139,65,0.08)] lg:border-0 lg:bg-[#1f8b41] lg:text-white lg:shadow-[0_8px_18px_rgba(31,139,65,0.18)]">
-                <span className="text-[#0b2347] lg:text-white">
+        <Container className="relative max-w-[1400px] !px-0 sm:!px-0 lg:!px-0">
+          <div className="grid items-center gap-5 px-0 pb-6 pt-4 sm:pb-7 lg:grid-cols-[minmax(0,0.92fr)_minmax(500px,1.02fr)] lg:gap-8 lg:pb-5 lg:pt-7">
+            <div className="relative z-10 max-w-[700px]">
+              <div className="inline-flex items-center gap-2 rounded-full bg-[#1f8b41] px-3 py-2 text-[10px] font-bold uppercase tracking-[0.03em] text-white shadow-[0_8px_18px_rgba(31,139,65,0.18)]">
+                <span className="text-white">
                   <ShieldIcon />
                 </span>
-                <span>{data.tag}</span>
+                <span>{tagText}</span>
               </div>
 
               <h1 className="mt-4 max-w-[760px] font-['Manrope'] text-[33px] font-extrabold leading-[0.98] tracking-normal text-[#0b2347] sm:text-[42px] lg:text-[58px]">
@@ -184,63 +216,78 @@ export default function VariantHeroSection({ data, bgImage }: Props) {
                 {headline.accent ? <span className="mt-1.5 block text-[#169347]">{headline.accent}</span> : null}
               </h1>
 
-              <p className="mt-4 max-w-[650px] text-[15px] leading-[1.65] text-[#253c5d] sm:text-[16px]">
-                {data.subheading}
+              <p className="mt-4 max-w-[650px] text-[15px] leading-[1.68] text-[#253c5d] sm:text-[16px]">
+                {subheading}
               </p>
 
-              <div className="mt-5 grid grid-cols-2 gap-3 py-1 sm:grid-cols-4 lg:max-w-[720px]">
-                {data.trustBadges.map((badge, index) => (
+              <div className="mt-5 grid grid-cols-2 gap-3 py-1 sm:grid-cols-4 lg:max-w-[760px]">
+                {trustBadges.map((badge, index) => (
                   <div
                     key={`${badge}-${index}`}
                     className={`flex min-w-0 items-center gap-3 rounded-[14px] border border-[#e0e7f1] bg-white/88 px-3 py-3 text-[#163d8c] shadow-[0_10px_20px_rgba(15,23,42,0.05)] backdrop-blur-[6px] lg:rounded-none lg:border-0 lg:bg-transparent lg:px-0 lg:py-0 lg:shadow-none lg:backdrop-blur-none ${
-                      index < data.trustBadges.length - 1 ? "lg:border-r lg:border-[#dbe5f2] lg:pr-3" : ""
+                      index < trustBadges.length - 1 ? "lg:border-r lg:border-[#dbe5f2] lg:pr-4" : ""
                     }`}
                   >
                     <div className="text-[#1558c0]">{getTrustIcon(index)}</div>
-                    <p className="text-[13px] font-semibold leading-[1.22] text-[#112b57]">{badge}</p>
+                    <p className="text-[13px] font-semibold leading-[1.24] text-[#112b57]">{badge}</p>
                   </div>
                 ))}
               </div>
             </div>
-          </div>
-          </Container>
-        </div>
 
-        <Container className="max-w-[1400px] px-0 sm:px-0 lg:px-0">
-          <div className="relative mt-3 grid gap-3 px-0 pb-3 sm:px-0 xl:grid-cols-[minmax(0,1.38fr)_minmax(390px,0.82fr)] lg:px-0">
-            <div className="rounded-[18px] border border-[#e0e7f1] bg-white/92 p-3 shadow-[0_16px_32px_rgba(15,23,42,0.06)] backdrop-blur-sm sm:p-4 lg:rounded-none">
-              <div className="grid gap-4 lg:grid-cols-[200px_minmax(0,1fr)] lg:items-center">
-                <div className="relative mx-auto flex h-[168px] w-full max-w-[210px] items-center justify-center">
+            <div className="relative z-10 min-h-[230px] sm:min-h-[280px] lg:min-h-[430px]">
+              <div className="absolute inset-x-[8%] bottom-[7%] top-[20%] rounded-full bg-[radial-gradient(circle,rgba(132,149,175,0.18),rgba(132,149,175,0)_68%)] blur-3xl lg:inset-x-[16%] lg:bottom-[8%] lg:top-[14%]" />
+              <Image
+                src={vehicleImage}
+                alt={normalizeCopy(data.imageAlt || headline.lead)}
+                fill
+                priority
+                className="object-contain object-[72%_66%] lg:translate-x-[8%] lg:object-[78%_62%] xl:translate-x-[12%] xl:object-[82%_61%]"
+                sizes="(max-width: 1024px) 100vw, 48vw"
+              />
+            </div>
+          </div>
+
+          <div className="relative grid gap-4 pb-4 xl:grid-cols-[minmax(0,1.3fr)_minmax(400px,0.84fr)]">
+            <div className="rounded-[20px] border border-[#dfe7f1] bg-white/96 p-4 shadow-[0_16px_32px_rgba(15,23,42,0.06)] backdrop-blur-sm sm:p-5">
+              <div className="grid gap-4 lg:grid-cols-[188px_minmax(0,1fr)] lg:items-center">
+                <div className="relative mx-auto flex h-[174px] w-full max-w-[210px] items-center justify-center lg:h-[188px] lg:max-w-[220px]">
                   <Image
                     src={optionCards[0]?.image || defaultEngineImage}
-                    alt={optionCards[0]?.imageAlt || `${data.h1} engine`}
+                    alt={normalizeCopy(optionCards[0]?.imageAlt || `${headline.lead} engine`)}
                     fill
                     className="object-contain"
-                    sizes="210px"
+                    sizes="220px"
                   />
                 </div>
 
                 <div>
                   <div className="inline-flex rounded-full bg-[#09295a] px-3 py-1 text-[10px] font-extrabold tracking-[0.03em] text-white">
-                    {data.highlights?.[0]?.title?.replace(/\s+Engine$/i, "") || "Engine Code"}
+                    {highlightLabel}
                   </div>
 
-                  <p className="mt-2.5 font-['Manrope'] text-[22px] font-extrabold tracking-normal text-[#0b2347] sm:text-[28px]">
-                    From <span className="text-[#149347]">{anchorPrice || data.highlights?.[0]?.price}</span>
+                  <p className="mt-2.5 font-['Manrope'] text-[26px] font-extrabold tracking-normal text-[#0b2347] sm:text-[30px]">
+                    From <span className="text-[#149347]">{anchorPrice || normalizeCopy(data.highlights?.[0]?.price || "")}</span>
                   </p>
 
-                  {detailLine ? <p className="mt-1.5 text-[13px] leading-[1.55] text-[#334a68]">{detailLine}</p> : null}
+                  {detailLine ? <p className="mt-1.5 text-[13px] leading-[1.6] text-[#334a68]">{detailLine}</p> : null}
 
-                  <div className="mt-3 grid grid-cols-3 gap-0 overflow-hidden rounded-[16px] border border-[#dfe7f1]">
+                  <div
+                    className="mt-4 grid overflow-hidden rounded-[18px] border border-[#dfe7f1]"
+                    style={{ gridTemplateColumns: `repeat(${optionCards.length}, minmax(0, 1fr))` }}
+                  >
                     {optionCards.map((option, index) => {
                       const tone = getOptionToneClasses(option.tone);
                       return (
-                        <div key={`${option.label}-${index}`} className={`bg-[#fbfdff] px-3 py-3 ${index < optionCards.length - 1 ? "border-r border-[#dfe7f1]" : ""}`}>
+                        <div
+                          key={`${option.label}-${index}`}
+                          className={`bg-[#fbfdff] px-3 py-3 sm:px-4 sm:py-4 ${index < optionCards.length - 1 ? "border-r border-[#dfe7f1]" : ""}`}
+                        >
                           <div className={`inline-flex rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.04em] ${tone.badge}`}>
                             {option.label}
                           </div>
                           <p className={`mt-2 text-[13px] font-extrabold ${tone.price} sm:text-[14px]`}>{option.price}</p>
-                          <p className="mt-1 text-[11px] leading-[1.5] text-[#4d6483] sm:text-[12px]">{option.description}</p>
+                          <p className="mt-1 text-[11px] leading-[1.55] text-[#4d6483] sm:text-[12px]">{option.description}</p>
                         </div>
                       );
                     })}
@@ -249,13 +296,13 @@ export default function VariantHeroSection({ data, bgImage }: Props) {
               </div>
             </div>
 
-            <div className="flex min-h-[250px] items-center rounded-[18px] border border-[#e0e7f1] bg-white/95 p-3 shadow-[0_16px_32px_rgba(15,23,42,0.06)] backdrop-blur-sm sm:min-h-[262px] sm:p-4 lg:rounded-none">
-              <div className="grid w-full gap-3">
-                <div className="grid grid-cols-[88px_1fr] overflow-hidden rounded-none border border-[#dbe4f0] bg-[#fbfdff]">
-                  <div className="grid grid-cols-[1fr_auto] items-center gap-3 border-r border-[#dbe4f0] px-3 py-2.5">
+            <div className="flex min-h-[250px] items-center rounded-[20px] border border-[#dfe7f1] bg-white/98 p-4 shadow-[0_16px_32px_rgba(15,23,42,0.06)] backdrop-blur-sm sm:min-h-[262px] sm:p-5">
+              <div className="grid w-full gap-4">
+                <div className="grid grid-cols-[104px_1fr] overflow-hidden rounded-[12px] border border-[#d7e1ee] bg-[#fbfcfe]">
+                  <div className="grid grid-cols-[1fr_auto] items-center gap-3 border-r border-[#d7e1ee] px-4 py-3">
                     <div className="flex items-center gap-2">
                       <UkFlagIcon />
-                      <span className="text-[15px] font-extrabold text-[#0b2347]">{data.registrationInput?.countryCode ?? "GB"}</span>
+                      <span className="text-[15px] font-extrabold text-[#0b2347]">{normalizeCopy(data.registrationInput?.countryCode ?? "UK")}</span>
                     </div>
                     <svg viewBox="0 0 24 24" className="h-4 w-4 text-[#0b2347]" fill="none" aria-hidden="true">
                       <path d="m6 9 6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -263,29 +310,29 @@ export default function VariantHeroSection({ data, bgImage }: Props) {
                   </div>
                   <input
                     type="text"
-                    placeholder={data.registrationInput?.platePlaceholder || data.form.inputPlaceholder}
-                    className="min-w-0 border-0 bg-transparent px-4 text-[15px] text-[#0b2347] outline-none placeholder:text-[#7487a1]"
-                    aria-label={data.registrationInput?.label || data.form.heading}
+                    placeholder={inputPlaceholder}
+                    className="min-h-[58px] min-w-0 border-0 bg-transparent px-4 text-[16px] font-medium text-[#0b2347] outline-none placeholder:font-normal placeholder:text-[#7487a1]"
+                    aria-label={normalizeCopy(data.registrationInput?.label || data.form.heading)}
                   />
                 </div>
 
                 <a
                   href="#quote-form"
-                  data-quote-context={data.form.heading}
+                  data-quote-context={normalizeCopy(data.form.heading)}
                   data-quote-source="variant-hero"
-                  className="inline-flex min-h-[58px] items-center justify-center gap-3 rounded-[10px] bg-[#169347] px-5 text-center text-[15px] font-extrabold text-white shadow-[0_16px_28px_rgba(22,147,71,0.24)] transition hover:bg-[#117f3b]"
+                  className="inline-flex min-h-[58px] items-center justify-center gap-3 rounded-[12px] bg-[#169347] px-5 text-center text-[15px] font-extrabold text-white shadow-[0_16px_28px_rgba(22,147,71,0.24)] transition hover:bg-[#117f3b]"
                 >
-                  <span>{data.form.buttonText.replace(/\s*->\s*$/, "")}</span>
-                  <span className="pl-1.5">
+                  <span>{formButtonText}</span>
+                  <span className="pl-1">
                     <ArrowIcon />
                   </span>
                 </a>
 
-                <div className="flex items-start gap-3 px-1 text-[13px] leading-[1.5] text-[#253a58]">
+                <div className="flex items-start gap-3 px-1 text-[13px] leading-[1.52] text-[#253a58]">
                   <span className="mt-1 text-[#0b2347]">
                     <LockIcon />
                   </span>
-                  <p>{data.form.note}</p>
+                  <p>{formNote}</p>
                 </div>
               </div>
             </div>

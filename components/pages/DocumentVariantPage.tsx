@@ -36,12 +36,17 @@ export default function DocumentVariantPage({ data }: DocumentVariantPageProps) 
         />
       ) : null}
 
-      <VariantHeroSection data={data.sections.hero} bgImage={heroImage} />
+      <VariantHeroSection
+        data={data.sections.hero}
+        backgroundArtwork={heroImage}
+        vehicleImage={mainImage || heroImage}
+      />
 
       <HowItWorksSection
         data={data.sections.howItWorks}
         bgImage={data.assets.howItWorksBg}
         sectionId="how-it-works"
+        variantLayout
       />
 
       <VariantHistoryTimelineSection data={data.sections.historyTimeline} vehicleImage={heroImage} />

@@ -1,16 +1,16 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type CSSProperties } from "react";
 import type { HowItWorksData } from "@/types/brand";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
-import type { CSSProperties } from "react";
 
 type Props = {
   data: HowItWorksData;
   bgImage: string;
   sectionId?: string;
   flush?: boolean;
+  variantLayout?: boolean;
 };
 
 function ArrowIcon() {
@@ -30,28 +30,28 @@ function TickIcon() {
   );
 }
 
-function splitTagline(tagline: string) {
-  const normalized = tagline.replace(/[–—]/g, "-");
-  const parts = normalized.split("-");
-
-  if (parts.length > 1) {
-    return {
-      lead: parts[0].trim(),
-      emphasis: parts.slice(1).join("-").trim(),
-    };
-  }
-
-  return {
-    lead: normalized,
-    emphasis: "",
-  };
-}
-
 function splitHeading(title: string) {
   return title
     .split(/\s+-\s+/)
     .map((line) => line.trim())
     .filter(Boolean);
+}
+
+function normalizeCopy(text: string) {
+  return text
+    .replaceAll("Â£", "£")
+    .replaceAll("Â·", "·")
+    .replace(/[â€“â€”]/g, "-")
+    .replaceAll("Â", "")
+    .trim();
+}
+
+function sanitizeStepText(text: string) {
+  return normalizeCopy(text)
+    .replace(/^(?:🖼️|ðŸ–¼ï¸)\s*/u, "")
+    .replace(/^\[[^\]]+\]\.?\s*/u, "")
+    .replace(/^\s*->\s*/u, "")
+    .trim();
 }
 
 type TrustIconConfig = {
@@ -107,11 +107,30 @@ function stepIconSrc(card: HowItWorksData["cards"][number]) {
   return "/icons/engine-market/how-choose-deal.png";
 }
 
-export default function HowItWorksSection({ data, bgImage, sectionId, flush = false }: Props) {
+export default function HowItWorksSection({
+  data,
+  bgImage,
+  sectionId,
+  flush = false,
+  variantLayout = false,
+}: Props) {
   const [activeStep, setActiveStep] = useState<number | null>(null);
-  splitTagline(data.tagline);
   const headingLines = data.headingLines?.length ? data.headingLines : splitHeading(data.h2);
   const ui = data.ui ?? {};
+  const cards = data.cards.map((card) => ({
+    ...card,
+    front: {
+      ...card.front,
+      h3: normalizeCopy(card.front.h3),
+      text: sanitizeStepText(card.front.text),
+    },
+    back: {
+      ...card.back,
+      heading: normalizeCopy(card.back.heading),
+      text: normalizeCopy(card.back.text),
+      bullets: card.back.bullets.map((bullet) => normalizeCopy(bullet)),
+    },
+  }));
 
   const footerTrustItems = (ui.mobileTrustItems ?? [
     "12-Month Warranty",
@@ -119,7 +138,7 @@ export default function HowItWorksSection({ data, bgImage, sectionId, flush = fa
     "Nationwide Delivery",
     "Trusted UK Suppliers",
   ]).map((label) => ({
-    label,
+    label: normalizeCopy(label),
     icon: trustIconForLabel(label),
   }));
 
@@ -140,10 +159,16 @@ export default function HowItWorksSection({ data, bgImage, sectionId, flush = fa
         />
       </div>
 
-      <Container className={flush ? "relative max-w-[1400px] !px-0 sm:!px-0 lg:!px-0" : "relative max-w-[1400px]"}>
+      <Container
+        className={
+          flush
+            ? "relative max-w-[1400px] !px-0 sm:!px-0 lg:!px-0"
+            : `relative max-w-[1400px] ${variantLayout ? "px-4 sm:px-5 lg:px-6" : ""}`
+        }
+      >
         <div className="mx-auto lg:mx-0">
           <div className="section-pill mb-[14px]">
-            <span>{data.tag}</span>
+            <span>{normalizeCopy(data.tag)}</span>
           </div>
 
           <h2 className="max-w-[850px] font-['Manrope'] text-[27px] font-extrabold leading-[1.12] tracking-[-0.5px] text-[#0d1b2e] lg:text-[44px] lg:leading-[1.03] lg:tracking-[-1px]">
@@ -154,21 +179,26 @@ export default function HowItWorksSection({ data, bgImage, sectionId, flush = fa
                   key={`${line}-${index}`}
                   className={`block ${isAccent ? "text-[#15803d]" : ""} ${index > 0 ? "mt-1 text-[21px] leading-[1.15] lg:text-[34px]" : ""}`}
                 >
-                  {line}
+                  {normalizeCopy(line)}
                 </span>
               );
             })}
           </h2>
         </div>
 
-        <div className="mt-5 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-          {data.cards.map((card) => {
+        <div className={`mt-5 grid gap-4 md:grid-cols-2 xl:grid-cols-3 ${variantLayout ? "xl:gap-5" : ""}`}>
+          {cards.map((card) => {
             const flipped = activeStep === card.number;
             const isRegistrationCard = card.number === 1;
             const isComparisonCard = card.number === 2;
 
             return (
-              <div key={card.number} className="perspective-1000 min-h-[228px] sm:min-h-[240px] lg:min-h-[236px] xl:min-h-[244px]">
+              <div
+                key={card.number}
+                className={`perspective-1000 min-h-[228px] sm:min-h-[240px] lg:min-h-[236px] ${
+                  variantLayout ? "xl:min-h-[256px]" : "xl:min-h-[244px]"
+                }`}
+              >
                 <button
                   type="button"
                   onClick={() => setActiveStep(flipped ? null : card.number)}
@@ -177,10 +207,11 @@ export default function HowItWorksSection({ data, bgImage, sectionId, flush = fa
                   aria-label={`${flipped ? "Hide details for" : "Show details for"} step ${card.number}`}
                 >
                   <div
-                    className={`relative h-full min-h-[228px] rounded-[18px] transition duration-500 [transform-style:preserve-3d] sm:min-h-[240px] lg:min-h-[236px] xl:min-h-[244px] ${flipped ? "[transform:rotateY(180deg)]" : ""
-                      }`}
+                    className={`relative h-full min-h-[228px] rounded-[18px] transition duration-500 [transform-style:preserve-3d] sm:min-h-[240px] lg:min-h-[236px] ${
+                      variantLayout ? "xl:min-h-[256px]" : "xl:min-h-[244px]"
+                    } ${flipped ? "[transform:rotateY(180deg)]" : ""}`}
                   >
-                    <div className="absolute inset-0 flex h-full flex-col overflow-hidden rounded-[18px] border border-[#dbe4ef] bg-white px-3 pb-2.5 pt-2.5 shadow-[0_18px_40px_rgba(13,27,46,0.08)] [backface-visibility:hidden] text-center sm:px-4 sm:pb-3 sm:pt-3 lg:px-5 lg:pb-4 lg:pt-4">
+                    <div className="absolute inset-0 flex h-full flex-col overflow-hidden rounded-[18px] border border-[#dbe4ef] bg-white px-3 pb-3 pt-3 text-center shadow-[0_18px_40px_rgba(13,27,46,0.08)] [backface-visibility:hidden] sm:px-4 sm:pb-4 sm:pt-4 lg:px-5 lg:pb-5 lg:pt-5">
                       <span className="ml-auto hidden font-['Manrope'] text-[18px] font-extrabold uppercase leading-none tracking-[0.14em] text-gray-400 sm:text-[22px]">
                         0{card.number}
                       </span>
@@ -207,14 +238,22 @@ export default function HowItWorksSection({ data, bgImage, sectionId, flush = fa
                         />
                       </div>
 
-                      <div className="mt-1 flex min-h-[38px] items-start justify-center lg:min-h-[58px] xl:min-h-[58px]">
-                        <h3 className="font-['Manrope'] text-[16px] font-bold leading-[1.14] text-[#0d1b2e] md:text-[18px] xl:text-[20px]">
+                      <div className={`mt-3 flex items-start justify-center ${variantLayout ? "min-h-[48px] lg:min-h-[62px]" : "min-h-[38px] lg:min-h-[58px] xl:min-h-[58px]"}`}>
+                        <h3
+                          className={`font-['Manrope'] font-bold leading-[1.14] text-[#0d1b2e] ${
+                            variantLayout ? "text-[15px] md:text-[17px] xl:text-[18px]" : "text-[16px] md:text-[18px] xl:text-[20px]"
+                          }`}
+                        >
                           {card.front.h3}
                         </h3>
                       </div>
 
-                      <div className="-mt-2 flex min-h-[40px] items-start justify-center lg:min-h-[54px] xl:min-h-[58px]">
-                        <p className="mx-auto w-full max-w-[340px] text-[12px] leading-[1.42] text-[#5a6478] md:text-[14px] md:leading-[1.55]">
+                      <div className={`mt-2 flex items-start justify-center ${variantLayout ? "min-h-[54px] lg:min-h-[62px]" : "min-h-[40px] lg:min-h-[54px] xl:min-h-[58px]"}`}>
+                        <p
+                          className={`mx-auto w-full max-w-[340px] text-[#5a6478] ${
+                            variantLayout ? "text-[12px] leading-[1.5] md:text-[13px]" : "text-[12px] leading-[1.42] md:text-[14px] md:leading-[1.55]"
+                          }`}
+                        >
                           {card.front.text}
                         </p>
                       </div>
@@ -225,10 +264,7 @@ export default function HowItWorksSection({ data, bgImage, sectionId, flush = fa
                       </span>
                     </div>
 
-                    <div className="absolute inset-0 flex h-full flex-col overflow-hidden rounded-[18px] bg-[#0d1b2e] p-4 text-white border-[0.5px] border-[#2969af] shadow-[0_0_0_1px_rgba(42,109,214,1),0_0_5px_rgba(42,109,214,0.4),0_0_12px_rgba(42,109,214,0.3),0_0_20px_rgba(42,109,214,0.2),0_3px_10px_rgba(42,109,214,0.25)] [backface-visibility:hidden] [transform:rotateY(180deg)] sm:p-5">
-                      <div className="flex flex-col items-center gap-4">
-                      </div>
-
+                    <div className="absolute inset-0 flex h-full flex-col overflow-hidden rounded-[18px] border-[0.5px] border-[#2969af] bg-[#0d1b2e] p-4 text-white shadow-[0_0_0_1px_rgba(42,109,214,1),0_0_5px_rgba(42,109,214,0.4),0_0_12px_rgba(42,109,214,0.3),0_0_20px_rgba(42,109,214,0.2),0_3px_10px_rgba(42,109,214,0.25)] [backface-visibility:hidden] [transform:rotateY(180deg)] sm:p-5">
                       <h3 className="mt-2 text-center font-['Manrope'] text-[18px] font-bold leading-[1.15] text-white sm:text-[22px]">
                         {card.back.heading}
                       </h3>
@@ -257,10 +293,18 @@ export default function HowItWorksSection({ data, bgImage, sectionId, flush = fa
           })}
         </div>
 
-        <div className="mx-auto mt-2 flex flex-nowrap items-stretch justify-center gap-2 rounded-[12px] px-4 py-4 sm:mx-0 sm:mt-6 sm:flex-wrap sm:items-center sm:gap-3 lg:mt-[24px] lg:gap-4">
+        <div
+          className={`mx-auto mt-2 flex flex-nowrap items-stretch justify-center gap-2 rounded-[12px] px-4 py-4 sm:mx-0 sm:mt-6 sm:flex-wrap sm:items-center sm:gap-3 lg:gap-4 ${
+            variantLayout ? "border-t border-[#e3ebf5] lg:mt-5 lg:px-0" : "lg:mt-[24px]"
+          }`}
+        >
           {footerTrustItems.map((item, index) => (
             <div key={item.label} className="contents">
-              <div className="flex flex-1 flex-col items-center justify-center gap-1 rounded-lg bg-slate-50 p-1.5 sm:flex-none sm:flex-row sm:gap-2 sm:rounded-full sm:px-3 sm:py-1.5">
+              <div
+                className={`flex flex-1 flex-col items-center justify-center gap-1 p-1.5 sm:flex-none sm:flex-row sm:gap-2 ${
+                  variantLayout ? "rounded-none bg-transparent sm:px-1 sm:py-0" : "rounded-lg bg-slate-50 sm:rounded-full sm:px-3 sm:py-1.5"
+                }`}
+              >
                 <img
                   src={item.icon.src}
                   alt=""
@@ -278,7 +322,6 @@ export default function HowItWorksSection({ data, bgImage, sectionId, flush = fa
             </div>
           ))}
         </div>
-
       </Container>
     </Section>
   );
