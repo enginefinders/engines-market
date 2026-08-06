@@ -29,9 +29,88 @@ export default function FaqSection({ data, strictData = false, documentMode = fa
   const headingLines = data.headingLines?.length ? data.headingLines : [heading.primary, heading.accent].filter(Boolean);
   const ui = data.ui ?? {};
   const defaultOpenIndex = data.defaultOpenIndex ?? 0;
-  const mobileHeading = "Frequently Asked Question";
   const shellClass = documentMode ? "w-full" : "max-w-[860px]";
   const faqPanelClass = documentMode ? "mt-3 w-full" : "faq-scroll-panel mx-auto mt-6 max-w-[1400px]";
+
+  if (documentMode) {
+    return (
+      <Section className="bg-white !py-0">
+        <Container className="!max-w-none !px-0">
+          <div className="py-0">
+            <div className="px-0 py-0.5 sm:px-0 sm:py-1 lg:px-0 lg:py-1">
+              <div className="inline-flex items-center rounded-full bg-[#081f47] px-4 py-2 text-[14px] font-extrabold uppercase tracking-[0.04em] text-white shadow-[0_10px_24px_rgba(8,31,71,0.14)]">
+                {data.tag}
+              </div>
+
+              <h2 className="mt-3 font-['Manrope'] text-[32px] font-extrabold leading-[1.06] tracking-[-0.05em] text-[#0b2347] sm:text-[40px] lg:text-[48px]">
+                {headingLines.map((line, index) => (
+                  <span key={`${line}-${index}`} className={`block ${headingLines.length > 1 && index === headingLines.length - 1 ? "text-[#17803d]" : ""}`}>
+                    {line}
+                  </span>
+                ))}
+              </h2>
+
+              <div className="mt-3 grid gap-2">
+                {data.items.map((item, index) => (
+                  <details
+                    key={item.question}
+                    className="group overflow-hidden rounded-[10px] border border-[#dbe5f2] bg-white"
+                  >
+                    <summary className="flex min-h-[62px] cursor-pointer list-none items-center justify-between gap-3 px-4 py-3.5 text-left [&::-webkit-details-marker]:hidden sm:px-5 lg:grid lg:grid-cols-[104px_minmax(0,1fr)_18px] lg:gap-4 lg:py-3">
+                      <div className="hidden items-center text-[13px] font-extrabold uppercase tracking-[0.04em] text-[#17803d] lg:flex">
+                        Question {index + 1}
+                      </div>
+                      <h3 className="min-w-0 text-[17px] font-extrabold leading-[1.42] tracking-[-0.03em] text-[#0b2347] sm:text-[18px] lg:text-[16px]">
+                        {item.question}
+                      </h3>
+                      <svg
+                        viewBox="0 0 24 24"
+                        className="h-5 w-5 flex-none text-[#0b2347] transition group-open:rotate-180"
+                        fill="none"
+                        aria-hidden="true"
+                      >
+                        <path d="m6 9 6 6 6-6" stroke="currentColor" strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </summary>
+
+                    <div className="border-t border-[#e6edf6] px-4 py-3.5 sm:px-5 sm:py-4 lg:px-5 lg:py-4">
+                      <p className="text-[15px] leading-[1.74] text-[#173660] lg:text-[14px] lg:leading-[1.68]">{item.answer}</p>
+
+                      {item.keyPoints?.length ? (
+                        <ul className="mt-3 grid gap-1.5 text-[14px] leading-[1.6] text-[#173660]">
+                          {item.keyPoints.map((point) => (
+                            <li key={point} className="flex gap-3">
+                              <span className="mt-[0.62rem] h-2 w-2 flex-none rounded-full bg-[#17803d]" />
+                              <span>{point}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      ) : null}
+
+                      {item.cta ? (
+                        <a
+                          href="#quote-form"
+                          data-quote-context={item.question}
+                          data-quote-source="faq"
+                          className="mt-3 inline-flex items-center gap-2 text-[14px] font-extrabold text-[#17803d] transition hover:opacity-80"
+                        >
+                          <span>{item.cta}</span>
+                          <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" aria-hidden="true">
+                            <path d="M4 12h16" stroke="currentColor" strokeWidth="2.1" strokeLinecap="round" />
+                            <path d="m13 5 7 7-7 7" stroke="currentColor" strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round" />
+                          </svg>
+                        </a>
+                      ) : null}
+                    </div>
+                  </details>
+                ))}
+              </div>
+            </div>
+          </div>
+        </Container>
+      </Section>
+    );
+  }
 
   return (
     <Section className={documentMode ? "bg-white !py-[8px] md:!py-[10px] lg:!py-[12px]" : "bg-white"}>
@@ -39,7 +118,13 @@ export default function FaqSection({ data, strictData = false, documentMode = fa
         <div className={shellClass}>
           <p className="section-pill mb-1.5">{data.tag}</p>
           <h2 className="font-['Manrope'] text-[28px] font-extrabold leading-[1.12] tracking-[-0.03em] text-[#0d1b2e] lg:text-[42px]">
-            <span className="block md:hidden text-[#15803d]">{mobileHeading}</span>
+            <span className="block md:hidden">
+              {headingLines.map((line, index) => (
+                <span key={`${line}-${index}-mobile`} className={`block ${headingLines.length > 1 && index === headingLines.length - 1 ? "text-[#15803d]" : ""}`}>
+                  {line}
+                </span>
+              ))}
+            </span>
             <span className="hidden md:block">
               {headingLines.map((line, index) => (
                 <span key={`${line}-${index}`} className={`block ${headingLines.length > 1 && index === headingLines.length - 1 ? "text-[#15803d]" : ""}`}>
