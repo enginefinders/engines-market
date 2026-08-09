@@ -35,7 +35,7 @@ export default function FaqSection({ data, strictData = false, documentMode = fa
   if (documentMode) {
     return (
       <Section className="bg-white !py-0">
-        <Container className="!max-w-none !px-0">
+        <Container className="max-w-[1400px] px-[15px] sm:px-5 lg:px-4">
           <div className="py-0">
             <div className="px-0 py-0.5 sm:px-0 sm:py-1 lg:px-0 lg:py-1">
               <div className="inline-flex items-center rounded-full bg-[#081f47] px-4 py-2 text-[14px] font-extrabold uppercase tracking-[0.04em] text-white shadow-[0_10px_24px_rgba(8,31,71,0.14)]">

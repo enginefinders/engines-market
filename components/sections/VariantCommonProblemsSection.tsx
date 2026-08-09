@@ -112,6 +112,23 @@ function stripArrow(text: string) {
   return normalizeCopy(text).replace(/^\s*->\s*/u, "").replace(/\s*->\s*$/u, "").trim();
 }
 
+function renderCommonProblemHeading(text: string) {
+  const accentPhrases = ["Engine Problems", "Repair Cost", "Replacement"];
+  const pattern = new RegExp(`(${accentPhrases.map((phrase) => phrase.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|")})`, "gi");
+  const parts = text.split(pattern).filter(Boolean);
+
+  return parts.map((part, index) => {
+    const isAccent = accentPhrases.some((phrase) => phrase.toLowerCase() === part.toLowerCase());
+    return isAccent ? (
+      <span key={`${part}-${index}`} className="text-[#2db24c]">
+        {part}
+      </span>
+    ) : (
+      <span key={`${part}-${index}`}>{part}</span>
+    );
+  });
+}
+
 export default function VariantCommonProblemsSection({ data, vehicleImage }: Props) {
   const [activeIndex, setActiveIndex] = useState(0);
   const activeProblem = data.problems[activeIndex] ?? data.problems[0];
@@ -129,7 +146,7 @@ export default function VariantCommonProblemsSection({ data, vehicleImage }: Pro
     <Section className="bg-white !py-[2px]">
       <Container className="max-w-[1400px] px-0 sm:px-0 lg:px-0">
         <div>
-          <div className="relative -mx-[15px] overflow-hidden bg-[linear-gradient(90deg,rgba(2,9,24,0.95),rgba(7,19,38,0.8)),url('/images/brands/bmw/brand/bmw-live-market-bg.png')] bg-cover bg-center px-[15px] py-4 sm:-mx-5 sm:px-5 lg:-mx-4 lg:px-8 lg:py-6">
+          <div className="relative left-1/2 w-screen -translate-x-1/2 overflow-hidden bg-[linear-gradient(90deg,rgba(2,9,24,0.95),rgba(7,19,38,0.8)),url('/images/brands/bmw/brand/bmw-live-market-bg.png')] bg-cover bg-center py-4 lg:py-6">
             <div className="pointer-events-none absolute inset-y-0 right-[-12%] w-[62%] lg:hidden">
               <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(4,12,28,0)_0%,rgba(4,12,28,0.24)_26%,rgba(4,12,28,0.58)_100%)]" />
               <Image
@@ -140,12 +157,14 @@ export default function VariantCommonProblemsSection({ data, vehicleImage }: Pro
                 sizes="62vw"
               />
             </div>
-            <div className="relative grid gap-4 lg:grid-cols-[minmax(0,0.96fr)_minmax(360px,0.9fr)] lg:items-center">
+            <div className="relative mx-auto grid max-w-[1400px] gap-4 px-[15px] sm:px-5 lg:grid-cols-[minmax(0,0.96fr)_minmax(360px,0.9fr)] lg:items-center lg:px-4">
               <div className="relative z-10 pr-0 lg:pr-0">
                 <div className="inline-flex rounded-full bg-[#1f8b41] px-4 py-2 text-[12px] font-bold uppercase tracking-[0.03em] text-white">
                   {data.tag}
                 </div>
                 <div className="mt-3 max-w-[820px] font-['Manrope'] text-[31px] font-extrabold leading-[1.04] tracking-normal text-white sm:text-[40px] lg:text-[50px]">
+                  <span className="lg:hidden">{renderCommonProblemHeading(data.h2)}</span>
+                  <span className="hidden lg:inline">
                   {headingParts.length > 1 ? (
                     <>
                       {headingParts[0]}
@@ -155,6 +174,7 @@ export default function VariantCommonProblemsSection({ data, vehicleImage }: Pro
                   ) : (
                     data.h2
                   )}
+                  </span>
                 </div>
                 <p className="mt-2 max-w-none text-[14px] leading-[1.55] text-slate-200 lg:max-w-[700px]">{data.h3}</p>
               </div>
@@ -173,11 +193,11 @@ export default function VariantCommonProblemsSection({ data, vehicleImage }: Pro
             </div>
           </div>
 
-          <div className="-mx-[15px] px-[15px] py-[2px] sm:-mx-5 sm:px-5 lg:-mx-4 lg:px-4">
+          <div className="px-[15px] py-[2px] sm:px-5 lg:px-4">
             {activeProblem && heading ? (
               <>
                 <div className="grid items-start gap-5 lg:grid-cols-[minmax(360px,0.86fr)_minmax(0,1.14fr)] xl:gap-8">
-                  <div className="overflow-hidden rounded-[18px] border border-[#dbe5f2] bg-white shadow-[0_16px_30px_rgba(15,23,42,0.08)] lg:mt-[92px] xl:mt-[104px]">
+                  <div className="overflow-hidden rounded-[14px] border border-[#dbe5f2] bg-white shadow-[0_16px_30px_rgba(15,23,42,0.08)] lg:mt-[92px] xl:mt-[104px]">
                     <div className="relative min-h-[250px] w-full sm:min-h-[320px] xl:min-h-[372px]">
                       <Image
                         src={leadProblemImage}
@@ -187,30 +207,41 @@ export default function VariantCommonProblemsSection({ data, vehicleImage }: Pro
                         sizes="(max-width: 1280px) 100vw, 32vw"
                       />
                     </div>
-
-                    {data.problems.length > 1 ? (
-                      <div className="grid grid-cols-2 gap-2 border-t border-[#dbe5f2] bg-[#f7faff] p-3 lg:hidden">
-                        {data.problems.map((problem, index) => (
-                          <button
-                            key={`${problem.group}-mobile-${index}`}
-                            type="button"
-                            onClick={() => setActiveIndex(index)}
-                            className={`rounded-full px-3 py-2 text-[12px] font-bold leading-[1.2] transition ${
-                              index === activeIndex
-                                ? "bg-[#0b2347] text-white shadow-[0_8px_18px_rgba(11,35,71,0.14)]"
-                                : "bg-white text-[#0b2347] ring-1 ring-[#d7e2f0]"
-                            }`}
-                          >
-                            {problem.group}
-                          </button>
-                        ))}
-                      </div>
-                    ) : null}
                   </div>
 
-                  <div className="bg-white px-0 py-1 sm:px-5 lg:rounded-[22px] lg:border lg:border-[#e5edf6] lg:bg-[linear-gradient(180deg,#ffffff_0%,#fbfdff_100%)] lg:p-6 lg:shadow-[0_18px_34px_rgba(15,23,42,0.05)]">
+                  <div className="bg-white px-0 py-0.5 sm:px-5 lg:rounded-[18px] lg:border lg:border-[#e5edf6] lg:bg-[linear-gradient(180deg,#ffffff_0%,#fbfdff_100%)] lg:p-6 lg:shadow-[0_18px_34px_rgba(15,23,42,0.05)]">
                     {data.problems.length > 1 ? (
-                      <div className="mb-5 hidden lg:flex lg:justify-center">
+                      <>
+                      <div className="mb-3 lg:hidden">
+                        <div className="overflow-hidden rounded-[6px] border border-[#d9e1ea] bg-white shadow-[0_4px_12px_rgba(13,27,46,0.05)]">
+                          <div
+                            className="grid items-stretch bg-[#d9e1ea]"
+                            style={{ gridTemplateColumns: `repeat(${data.problems.length}, minmax(0, 1fr))` }}
+                          >
+                            {data.problems.map((problem, index) => {
+                              const isActive = index === activeIndex;
+                              return (
+                                <button
+                                  key={`${problem.group}-mobile-${index}`}
+                                  type="button"
+                                  onClick={() => setActiveIndex(index)}
+                                  aria-selected={isActive}
+                                  role="tab"
+                                  className={`relative flex min-h-[44px] min-w-0 items-center justify-center px-2 py-2 text-[10.5px] font-bold leading-[1.15] tracking-[0.01em] transition-all duration-200 ${
+                                    isActive
+                                      ? "z-10 bg-[linear-gradient(180deg,#173a6d_0%,#0c213f_100%)] text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.26),inset_0_-1px_0_rgba(6,18,35,0.85),0_0_0_1px_rgba(45,107,255,0.45),0_0_20px_rgba(45,107,255,0.38),0_8px_18px_rgba(17,47,95,0.26)] before:absolute before:inset-x-0 before:top-0 before:h-[42%] before:bg-[linear-gradient(180deg,rgba(255,255,255,0.2),rgba(255,255,255,0))] before:content-['']"
+                                      : "bg-white text-[#22324a] hover:bg-[#f8fafc]"
+                                  }`}
+                                >
+                                  <span className="relative z-10 line-clamp-2">{problem.group}</span>
+                                </button>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="mb-5 hidden lg:flex lg:justify-start">
                         <div className="inline-flex flex-wrap gap-1.5 rounded-[18px] border border-[#d8e2f0] bg-[linear-gradient(180deg,#f8fbff_0%,#eef4fb_100%)] p-1.5 shadow-[0_14px_26px_rgba(15,23,42,0.06)]">
                           {data.problems.map((problem, index) => (
                             <button
@@ -228,16 +259,17 @@ export default function VariantCommonProblemsSection({ data, vehicleImage }: Pro
                           ))}
                         </div>
                       </div>
+                      </>
                     ) : null}
 
-                    <div className="mt-0 font-['Manrope'] text-[34px] font-extrabold leading-[1.05] tracking-normal text-[#0b2347] sm:text-[42px]">
+                    <div className="mt-0 font-['Manrope'] text-[28px] font-extrabold leading-[1.05] tracking-normal text-[#0b2347] sm:text-[42px]">
                       {heading.title}
                     </div>
                     {heading.detail ? <p className="mt-1.5 text-[14px] font-semibold text-[#233a5d]">{heading.detail}</p> : null}
 
-                    <div className="mt-4 grid overflow-hidden rounded-[16px] border border-[#dbe5f2] grid-cols-2 bg-white">
-                      <div className="border-b border-[#dbe5f2] px-3.5 py-3 md:border-b-0 md:border-r">
-                        <div className="flex items-start gap-3">
+                    <div className="mt-3 grid grid-cols-2 overflow-hidden rounded-[12px] border border-[#dbe5f2] bg-white sm:mt-4 sm:rounded-[16px]">
+                      <div className="border-b border-[#dbe5f2] px-2.5 py-2.5 md:border-b-0 md:border-r sm:px-3.5 sm:py-3">
+                        <div className="flex items-start gap-2.5 sm:gap-3">
                           <span className="text-[#15803d]">
                             <CarIcon />
                           </span>
@@ -247,8 +279,8 @@ export default function VariantCommonProblemsSection({ data, vehicleImage }: Pro
                           </div>
                         </div>
                       </div>
-                      <div className="px-3.5 py-3">
-                        <div className="flex items-start gap-3">
+                      <div className="px-2.5 py-2.5 sm:px-3.5 sm:py-3">
+                        <div className="flex items-start gap-2.5 sm:gap-3">
                           <span className="text-[#15803d]">
                             <GaugeIcon />
                           </span>
@@ -258,8 +290,8 @@ export default function VariantCommonProblemsSection({ data, vehicleImage }: Pro
                           </div>
                         </div>
                       </div>
-                      <div className="border-t border-[#dbe5f2] px-3.5 py-3 md:border-r">
-                        <div className="flex items-start gap-3">
+                      <div className="border-t border-[#dbe5f2] px-2.5 py-2.5 md:border-r sm:px-3.5 sm:py-3">
+                        <div className="flex items-start gap-2.5 sm:gap-3">
                           <span className="text-[#15803d]">
                             <CogIcon />
                           </span>
@@ -269,8 +301,8 @@ export default function VariantCommonProblemsSection({ data, vehicleImage }: Pro
                           </div>
                         </div>
                       </div>
-                      <div className="border-t border-[#dbe5f2] px-3.5 py-3">
-                        <div className="flex items-start gap-3">
+                      <div className="border-t border-[#dbe5f2] px-2.5 py-2.5 sm:px-3.5 sm:py-3">
+                        <div className="flex items-start gap-2.5 sm:gap-3">
                           <span className="text-[#15803d]">
                             <WarningIcon />
                           </span>
@@ -294,38 +326,38 @@ export default function VariantCommonProblemsSection({ data, vehicleImage }: Pro
                       </div>
                     </div>
 
-                    <div className="grid gap-4 p-4 lg:hidden">
+                    <div className="grid gap-3 p-2.5 lg:hidden">
                       {activeProblem.repairOptions.map((option, index) => (
-                        <div key={`${option.tier}-mobile-${index}`} className="overflow-hidden rounded-[16px] border border-[#dbe5f2] bg-[#fbfdff]">
-                          <div className={`px-4 py-3 text-[17px] font-extrabold leading-[1.35] ${
+                        <div key={`${option.tier}-mobile-${index}`} className="overflow-hidden rounded-[12px] border border-[#dbe5f2] bg-[#fbfdff]">
+                          <div className={`px-3 py-2 text-[16px] font-extrabold leading-[1.3] ${
                             index === 0 ? "text-[#15803d]" : "text-[#0b2347]"
                           }`}>
                             {option.tier}
                           </div>
 
                           <div className="grid grid-cols-2 border-t border-[#dbe5f2]">
-                            <div className="border-r border-[#dbe5f2] px-4 py-4">
+                            <div className="border-r border-[#dbe5f2] px-3 py-3">
                               <p className="text-[12px] font-bold uppercase tracking-[0.03em] text-[#0f274d]">Dealer (parts + labour)</p>
                               <p className="mt-2 text-[16px] font-extrabold text-[#b91c1c]">{option.dealerPrice}</p>
                             </div>
-                            <div className="px-4 py-4">
+                            <div className="px-3 py-3">
                               <p className="text-[12px] font-bold uppercase tracking-[0.03em] text-[#0f274d]">Specialist (parts + labour)</p>
                               <p className="mt-2 text-[16px] font-extrabold text-[#15803d]">{option.specialistPrice}</p>
                             </div>
                           </div>
 
                           <div className="grid border-t border-[#dbe5f2] sm:grid-cols-2">
-                            <div className="border-b border-[#dbe5f2] px-4 py-4 sm:border-b-0 sm:border-r">
+                            <div className="border-b border-[#dbe5f2] px-3 py-3 sm:border-b-0 sm:border-r">
                               <p className="text-[12px] font-bold uppercase tracking-[0.03em] text-[#0f274d]">What it involves</p>
                               <p className="mt-2 text-[13px] leading-[1.65] text-[#314865]">{option.whatItInvolves}</p>
                             </div>
-                            <div className="px-4 py-4">
+                            <div className="px-3 py-3">
                               <p className="text-[12px] font-bold uppercase tracking-[0.03em] text-[#0f274d]">Suitability</p>
                               <p className="mt-2 text-[13px] leading-[1.65] text-[#314865]">{option.longevity}</p>
                             </div>
                           </div>
 
-                          <div className="border-t border-[#dbe5f2] px-4 py-3">
+                          <div className="border-t border-[#dbe5f2] px-3 py-2.5">
                             <div className="inline-flex items-center gap-2 whitespace-nowrap rounded-full bg-[#f3fbf4] px-3 py-2 text-[13px] font-bold text-[#15803d]">
                               <ClockIcon />
                               <span>{getTimeLabel(option.estimatedTime).replace(/\s+/g, " ")}</span>
@@ -424,9 +456,9 @@ export default function VariantCommonProblemsSection({ data, vehicleImage }: Pro
                   ) : null}
                 </div>
 
-                <div className="mt-6 rounded-[16px] bg-[#071735] px-4 py-5 text-white shadow-[0_18px_34px_rgba(8,31,71,0.18)] sm:px-5 sm:py-6 lg:px-6 lg:py-6">
-                  <div className="grid gap-6 lg:grid-cols-[150px_minmax(0,1.08fr)_1px_minmax(360px,0.96fr)] lg:items-center xl:grid-cols-[170px_minmax(0,1.1fr)_1px_minmax(390px,0.98fr)]">
-                    <div className="relative mx-auto h-[104px] w-[128px] sm:h-[118px] sm:w-[144px] lg:mx-0 lg:h-[132px] lg:w-[164px]">
+                <div className="relative left-1/2 mt-6 w-screen -translate-x-1/2 bg-[#071735] px-[15px] py-4 text-white shadow-[0_18px_34px_rgba(8,31,71,0.18)] sm:px-5 sm:py-5 lg:px-4 lg:py-6">
+                  <div className="mx-auto grid max-w-[1400px] gap-3 lg:grid-cols-[150px_minmax(0,1.08fr)_1px_minmax(360px,0.96fr)] lg:items-center lg:gap-6 xl:grid-cols-[170px_minmax(0,1.1fr)_1px_minmax(390px,0.98fr)]">
+                    <div className="relative mx-auto hidden h-[104px] w-[128px] sm:h-[118px] sm:w-[144px] lg:mx-0 lg:block lg:h-[132px] lg:w-[164px]">
                       <div className="absolute inset-0 rounded-[18px] bg-[radial-gradient(circle_at_50%_55%,rgba(255,255,255,0.14),rgba(255,255,255,0)_68%)] blur-xl" />
                       <div className="absolute inset-y-[6%] left-[4%] right-[4%] bg-[linear-gradient(90deg,rgba(7,23,53,0.96)_0%,rgba(7,23,53,0.28)_18%,rgba(7,23,53,0)_50%,rgba(7,23,53,0.22)_82%,rgba(7,23,53,0.94)_100%)]" />
                       <div className="absolute inset-x-[10%] bottom-1 h-8 rounded-full bg-[radial-gradient(circle,rgba(67,87,118,0.34),rgba(67,87,118,0)_72%)] blur-2xl" />
@@ -439,18 +471,30 @@ export default function VariantCommonProblemsSection({ data, vehicleImage }: Pro
                       />
                     </div>
 
-                    <div className="min-w-0">
-                      <h4 className="font-['Manrope'] text-[28px] font-extrabold leading-[1.08] tracking-normal text-white sm:text-[32px] lg:text-[38px]">
+                    <div className="min-w-0 overflow-hidden">
+                      <div className="relative float-left mr-3 mt-0 h-[92px] w-[106px] lg:hidden">
+                        <div className="absolute inset-0 rounded-[16px] bg-[radial-gradient(circle_at_50%_55%,rgba(255,255,255,0.14),rgba(255,255,255,0)_68%)] blur-xl" />
+                        <div className="absolute inset-y-[6%] left-[4%] right-[4%] bg-[linear-gradient(90deg,rgba(7,23,53,0.96)_0%,rgba(7,23,53,0.22)_30%,rgba(7,23,53,0)_58%,rgba(7,23,53,0.2)_82%,rgba(7,23,53,0.94)_100%)]" />
+                        <div className="absolute inset-x-[10%] bottom-0 h-6 rounded-full bg-[radial-gradient(circle,rgba(67,87,118,0.34),rgba(67,87,118,0)_72%)] blur-xl" />
+                        <Image
+                          src={ctaEngineImage}
+                          alt=""
+                          fill
+                          className="object-contain object-center [mask-image:radial-gradient(circle_at_center,black_58%,transparent_94%)]"
+                          sizes="106px"
+                        />
+                      </div>
+                      <h4 className="font-['Manrope'] text-[18px] font-extrabold leading-[1.08] tracking-normal text-white sm:text-[24px] lg:text-[38px]">
                         {normalizeCopy(data.finalCta.h4)}
                       </h4>
-                      <p className="mt-3 max-w-[700px] text-[14px] leading-[1.78] text-slate-200 sm:text-[15px] lg:mt-3.5 lg:text-[15px]">
+                      <p className="mt-1.5 max-w-[700px] text-[12px] leading-[1.52] text-slate-200 sm:text-[14px] lg:mt-3.5 lg:text-[15px] lg:leading-[1.78]">
                         {normalizeCopy(data.finalCta.paragraph)}
                       </p>
                     </div>
 
                     <div className="hidden h-full min-h-[176px] w-px bg-white/14 lg:block" />
 
-                    <div className="rounded-[14px] border border-white/10 bg-[#0a214d] px-5 py-5 sm:px-6 sm:py-6 lg:min-h-[176px]">
+                    <div className="rounded-[10px] border border-white/10 bg-[#0a214d] px-3.5 py-3.5 sm:px-5 sm:py-5 lg:min-h-[176px] lg:rounded-[14px] lg:px-5 lg:py-5">
                       <div className="flex items-start gap-3">
                         <div className="flex h-11 w-11 flex-none items-center justify-center rounded-full border border-white/15 bg-[#071735]">
                           <RecommendationIcon />

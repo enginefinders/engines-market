@@ -78,6 +78,25 @@ function normalizeMilestoneText(description: string) {
   return { title: match[1].trim(), body: match[2].trim() };
 }
 
+function renderMobileHistoryHeading(heading: string) {
+  const accentMatch = heading.match(/(Engine History\s*&\s*Specs)/i);
+  if (!accentMatch || accentMatch.index === undefined) {
+    return heading;
+  }
+
+  const accent = accentMatch[0];
+  const before = heading.slice(0, accentMatch.index);
+  const after = heading.slice(accentMatch.index + accent.length);
+
+  return (
+    <>
+      {before}
+      <span className="text-[#16803d]">{accent}</span>
+      {after}
+    </>
+  );
+}
+
 export default function VariantHistoryTimelineSection({ data, vehicleImage, mobileVehicleImage }: Props) {
   const rawMilestones = data.milestones as Array<VariantHistoryTimelineData["milestones"][number] | string>;
   const rawSpecs = data.specs as Array<VariantHistoryTimelineData["specs"][number] | string>;
@@ -118,10 +137,10 @@ export default function VariantHistoryTimelineSection({ data, vehicleImage, mobi
 
   return (
     <Section className="-mt-[1px] bg-white !py-0">
-      <Container className="max-w-[1400px] px-0 sm:px-0 lg:px-0">
-        <div className="relative -mx-[15px] overflow-hidden bg-[radial-gradient(circle_at_top,#edf4ff_0%,#ffffff_54%,#f7fbff_100%)] px-[1px] py-2 sm:-mx-5 sm:px-0 sm:py-3 lg:mx-0 lg:py-5">
-          <div className="grid gap-8 lg:grid-cols-[minmax(0,0.82fr)_minmax(0,1.18fr)] xl:gap-10">
-            <div className="lg:pr-4">
+      <Container className="max-w-[1400px] px-4 sm:px-5 lg:px-0">
+        <div className="relative overflow-hidden bg-[radial-gradient(circle_at_top,#edf4ff_0%,#ffffff_54%,#f7fbff_100%)] py-2 sm:py-3 lg:mx-0 lg:px-0 lg:py-5">
+          <div className="grid gap-7 lg:grid-cols-[minmax(0,0.82fr)_minmax(0,1.18fr)] lg:gap-9 xl:gap-10">
+            <div className="relative z-10 min-w-0 lg:pr-4">
               <div className="lg:hidden">
                 <div className="inline-flex items-center gap-2 rounded-full bg-[#edf7ef] px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.03em] text-[#16803d]">
                   <AssetIcon src="/icons/variant/dark-green/calendar.png" className="h-4 w-4 object-contain" />
@@ -129,16 +148,16 @@ export default function VariantHistoryTimelineSection({ data, vehicleImage, mobi
                 </div>
 
                 <h2 className="mt-2.5 w-full max-w-none font-['Manrope'] text-[24px] font-extrabold leading-[1.01] tracking-normal text-[#0b2347]">
-                  {normalizedHeading}
+                  {renderMobileHistoryHeading(normalizedHeading)}
                 </h2>
 
-                <div className="mt-2.5 grid grid-cols-[minmax(0,1fr)_156px] items-start gap-2.5">
-                  <p className="min-w-0 pr-2 text-[12px] leading-[1.62] text-[#243b5a]">
+                <div className="mt-2.5 grid grid-cols-[minmax(0,1fr)_138px] items-start gap-1.5">
+                  <p className="min-w-0 pr-1 text-[12px] leading-[1.62] text-[#243b5a]">
                     {normalizedIntro}
                   </p>
 
                   {mobileVehicleImage ? (
-                    <div className="relative mt-1 overflow-hidden bg-transparent">
+                    <div className="relative mt-2 overflow-hidden bg-transparent">
                       <div className="pointer-events-none absolute inset-y-0 -left-[10%] w-[58%] bg-[linear-gradient(90deg,#f7fbff_0%,rgba(247,251,255,0.98)_22%,rgba(247,251,255,0.7)_52%,rgba(247,251,255,0.14)_78%,rgba(247,251,255,0)_100%)]" />
                       <div className="pointer-events-none absolute inset-y-[8%] right-[-4%] w-[26%] bg-[linear-gradient(270deg,rgba(247,251,255,0.88)_0%,rgba(247,251,255,0.28)_56%,rgba(247,251,255,0)_100%)]" />
                       <div className="pointer-events-none absolute inset-x-[10%] bottom-[4%] h-7 rounded-full bg-[radial-gradient(circle,rgba(97,116,143,0.18),rgba(97,116,143,0)_72%)] blur-[19px]" />
@@ -147,8 +166,8 @@ export default function VariantHistoryTimelineSection({ data, vehicleImage, mobi
                         alt={normalizedHeading}
                         width={1280}
                         height={853}
-                        className="relative z-[1] h-auto w-full translate-x-[8px] translate-y-[8px] scale-[1.13] object-contain object-center"
-                        sizes="156px"
+                        className="relative z-[1] h-auto w-full translate-x-[3px] translate-y-[10px] scale-[1.06] object-contain object-center"
+                        sizes="138px"
                       />
                       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.03)_0%,rgba(255,255,255,0.12)_100%)]" />
                     </div>
@@ -188,7 +207,7 @@ export default function VariantHistoryTimelineSection({ data, vehicleImage, mobi
                     const split = normalizeMilestoneText(milestone.description);
 
                     return (
-                      <div key={`${milestone.year}-${index}`} className="grid grid-cols-[52px_44px_minmax(0,1fr)] items-start gap-2.5 sm:grid-cols-[72px_58px_minmax(0,1fr)] sm:gap-3">
+                      <div key={`${milestone.year}-${index}`} className="grid grid-cols-[52px_44px_minmax(0,1fr)] items-start gap-2.5 border-b border-[#e3edf7] pb-1 last:border-b-0 sm:grid-cols-[72px_58px_minmax(0,1fr)] sm:gap-3 sm:border-b-0 sm:pb-0">
                         <div className="relative pt-3 text-[14px] font-extrabold text-[#16803d] sm:pt-3.5 sm:text-[16px]">
                           {index < milestones.length - 1 ? (
                             <span className="absolute left-[5px] top-7 h-[calc(100%+10px)] w-px bg-[#bad7c0] sm:left-[6px] sm:top-8" aria-hidden="true" />
@@ -201,7 +220,7 @@ export default function VariantHistoryTimelineSection({ data, vehicleImage, mobi
                           <TimelineIcon index={index} />
                         </div>
 
-                        <div className="border-b border-[#e7edf5] py-2.5 last:border-b-0 sm:py-3">
+                        <div className="py-2.5 sm:border-b sm:border-[#e7edf5] sm:py-3 sm:last:border-b-0">
                           <p className="text-[12px] leading-[1.45] text-[#314865] sm:text-[13px] sm:leading-[1.52]">
                             <span className="font-extrabold text-[#0f274d]">{split.title}</span>
                             {split.body ? <span>{` ${split.body}`}</span> : null}
@@ -214,37 +233,37 @@ export default function VariantHistoryTimelineSection({ data, vehicleImage, mobi
               </div>
             </div>
 
-            <div className="lg:pl-2">
-              <div className="relative hidden overflow-hidden rounded-[26px] bg-transparent lg:block">
-                <div className="pointer-events-none absolute inset-0 rounded-[26px] bg-[radial-gradient(circle_at_72%_34%,rgba(255,255,255,0.68),rgba(255,255,255,0)_48%)]" />
+            <div className="min-w-0 lg:pl-0">
+              <div className="relative hidden overflow-hidden bg-transparent lg:-ml-4 lg:block xl:-ml-6">
+                <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_72%_34%,rgba(255,255,255,0.66),rgba(255,255,255,0)_48%)]" />
                 {vehicleImage ? (
                   <Image
                     src={vehicleImage}
                     alt={normalizedHeading}
                     width={1280}
                     height={853}
-                    className="relative z-[1] h-auto w-full object-cover object-center"
+                    className="relative z-[1] h-auto w-full object-cover object-center drop-shadow-[0_18px_30px_rgba(15,23,42,0.08)]"
                     sizes="(max-width: 1024px) 100vw, 58vw"
                   />
                 ) : null}
-                <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.08)_0%,rgba(255,255,255,0.02)_38%,rgba(255,255,255,0.18)_100%)]" />
-                <div className="pointer-events-none absolute inset-y-0 left-0 w-[44%] bg-[linear-gradient(90deg,#f7fbff_0%,rgba(247,251,255,0.94)_20%,rgba(247,251,255,0.72)_42%,rgba(247,251,255,0.24)_68%,rgba(247,251,255,0)_100%)]" />
+                <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.1)_0%,rgba(255,255,255,0.02)_38%,rgba(255,255,255,0.2)_100%)]" />
+                <div className="pointer-events-none absolute inset-y-0 left-0 w-[58%] bg-[linear-gradient(90deg,#f7fbff_0%,rgba(247,251,255,0.99)_16%,rgba(247,251,255,0.84)_40%,rgba(247,251,255,0.42)_70%,rgba(247,251,255,0)_100%)]" />
               </div>
 
               {(normalizedVehicleTitle || normalizedVehicleSubtitle || vehicleMeta.length > 0) ? (
-                <div className="mt-1 overflow-hidden rounded-[18px] border border-[#dfe7f1] bg-white/96 shadow-[0_12px_24px_rgba(15,23,42,0.05)] sm:mt-4 lg:hidden">
-                  <div className="px-3 py-2.5 sm:px-4 sm:py-3">
+                <div className="mt-1 overflow-hidden bg-transparent sm:mt-4 lg:hidden">
+                  <div className="py-2 sm:py-3">
                     {normalizedVehicleTitle ? <h3 className="text-[16px] font-extrabold text-[#0b2347] sm:text-[18px]">{normalizedVehicleTitle}</h3> : null}
                     {normalizedVehicleSubtitle ? <p className="mt-1 text-[12px] leading-[1.45] text-[#314865] sm:text-[13px]">{normalizedVehicleSubtitle}</p> : null}
                     {vehicleMeta.length ? (
                       <div
-                        className="mt-2 grid gap-0 overflow-hidden rounded-[12px] border border-[#e5edf6] bg-[#fbfdff] text-[#314865] sm:text-[11px]"
+                        className="mt-2 grid gap-0 bg-transparent text-[#314865] sm:text-[11px]"
                         style={{ gridTemplateColumns: `repeat(${vehicleMeta.length}, minmax(0, 1fr))` }}
                       >
                         {vehicleMeta.map((item, index) => (
                           <div
                             key={`${item.label}-${index}`}
-                            className={`flex min-w-0 items-start gap-1.5 px-2 py-2 text-left text-[8.5px] leading-[1.2] text-[#314865] sm:px-2.5 sm:text-[10px] ${index < vehicleMeta.length - 1 ? "border-r border-[#d8e1ec]" : ""}`}
+                            className={`flex min-w-0 items-start gap-1.5 px-2 py-1.5 text-left text-[8.5px] leading-[1.2] text-[#314865] first:pl-0 last:pr-0 sm:px-2.5 sm:text-[10px] ${index < vehicleMeta.length - 1 ? "border-r border-[#d8e1ec]" : ""}`}
                           >
                             <span className="flex h-5 w-5 flex-none items-center justify-center rounded-full bg-[#eef8ef] text-[#16803d] sm:h-6 sm:w-6">
                               {getMetaIcon(item.label, "h-3 w-3 sm:h-3.5 sm:w-3.5")}
@@ -267,19 +286,19 @@ export default function VariantHistoryTimelineSection({ data, vehicleImage, mobi
                   <span className="h-px flex-1 bg-[#dbe5f2]" />
                 </div>
 
-                <div className="mt-3 rounded-[18px] border border-[#e4ebf4] bg-white/96 px-2 py-2.5 shadow-[0_10px_20px_rgba(15,23,42,0.04)] sm:mt-4 sm:px-3 sm:py-3">
-                  <div className="grid grid-cols-4 gap-0">
+                <div className="mt-2.5 bg-transparent sm:mt-3">
+                  <div className="grid grid-cols-2 gap-x-3 gap-y-2 sm:grid-cols-4 sm:gap-x-4">
                   {specs.map((spec, index) => (
                     <div
                       key={`${spec.label}-${index}`}
-                        className="border-r border-[#e5edf6] px-1.5 text-center last:border-r-0 sm:px-2.5"
+                        className="flex min-w-0 items-center gap-2 border-r border-[#dfe8f2] pr-2 last:border-r-0 sm:gap-2.5 sm:pr-3"
                     >
-                        <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-full bg-[#eef8ef] text-[#16803d] sm:h-11 sm:w-11">
-                          {getMetaIcon(spec.label, "h-4 w-4 sm:h-4.5 sm:w-4.5")}
+                        <div className="flex h-8 w-8 flex-none items-center justify-center rounded-full bg-[#eef8ef] text-[#16803d] sm:h-9 sm:w-9 lg:h-10 lg:w-10">
+                          {getMetaIcon(spec.label, "h-[18px] w-[18px] sm:h-5 sm:w-5 lg:h-6 lg:w-6")}
                         </div>
-                        <p className="mt-2 text-[9px] leading-[1.3] text-[#173153] sm:text-[10px] sm:leading-[1.38]">
-                          <span className="font-semibold">{normalizeCopy(spec.label)}</span>
-                          <span className="mt-1 block text-[#314865]">{normalizeCopy(spec.value)}</span>
+                        <p className="min-w-0 text-left text-[9px] leading-[1.22] text-[#173153] sm:text-[9.5px] lg:text-[10px]">
+                          <span className="block font-bold">{normalizeCopy(spec.label)}</span>
+                          <span className="mt-0.5 block text-[#314865]">{normalizeCopy(spec.value)}</span>
                         </p>
                       </div>
                   ))}
@@ -287,15 +306,15 @@ export default function VariantHistoryTimelineSection({ data, vehicleImage, mobi
                 </div>
 
                 {normalizedClosingNote ? (
-                  <div className="mt-4 rounded-[18px] border border-[#dcebdd] bg-[linear-gradient(135deg,#f1faf3,#edf7f1)] px-3 py-3 shadow-[0_12px_24px_rgba(22,128,61,0.08)] sm:mt-5 sm:px-4 sm:py-4">
-                    <div className="grid gap-3 sm:grid-cols-[minmax(0,1fr)_110px] sm:items-center">
-                      <div className="flex items-start gap-3">
-                        <div className="flex h-10 w-10 flex-none items-center justify-center rounded-full bg-white text-[#16803d] shadow-[0_10px_20px_rgba(22,128,61,0.1)] sm:h-12 sm:w-12">
-                          <ShieldIcon className="h-5 w-5 sm:h-6 sm:w-6" />
+                  <div className="mt-3 rounded-[10px] border border-[#dcebdd] bg-[linear-gradient(135deg,#f1faf3,#edf7f1)] px-2.5 py-2 shadow-[0_10px_20px_rgba(22,128,61,0.07)] sm:mt-4 sm:px-3 sm:py-2.5">
+                    <div className="grid gap-2.5 sm:grid-cols-[minmax(0,1fr)_92px] sm:items-center">
+                      <div className="flex items-start gap-2.5">
+                        <div className="flex h-8 w-8 flex-none items-center justify-center rounded-full bg-white text-[#16803d] shadow-[0_8px_16px_rgba(22,128,61,0.09)] sm:h-9 sm:w-9">
+                          <ShieldIcon className="h-[18px] w-[18px] sm:h-5 sm:w-5" />
                         </div>
-                        <p className="text-[12px] leading-[1.5] text-[#24405a] sm:text-[14px] sm:leading-[1.68]">{normalizedClosingNote}</p>
+                        <p className="text-[11px] leading-[1.42] text-[#24405a] sm:text-[12px] sm:leading-[1.5]">{normalizedClosingNote}</p>
                       </div>
-                      <div className="relative mx-auto hidden h-[88px] w-[110px] sm:block">
+                      <div className="relative mx-auto hidden h-[66px] w-[92px] sm:block">
                         <Image
                           src="/images/shared/hero-engines/temporary-petrol-engine.jpeg"
                           alt=""

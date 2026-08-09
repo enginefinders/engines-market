@@ -37,6 +37,39 @@ function splitHeading(title: string) {
     .filter(Boolean);
 }
 
+function renderMobileHeadingLine(line: string, index: number, isAccentLine: boolean) {
+  const normalizedLine = normalizeCopy(line);
+  const accentMatch = normalizedLine.match(/(Best|Replacement Engine|What to Choose|Choose)/i);
+  if (!accentMatch || accentMatch.index === undefined) {
+    if (isAccentLine) {
+      const words = normalizedLine.split(/\s+/);
+      const accentWordCount = Math.min(3, Math.max(1, words.length));
+      const before = words.slice(0, -accentWordCount).join(" ");
+      const accent = words.slice(-accentWordCount).join(" ");
+      return (
+        <>
+          {before ? `${before} ` : ""}
+          <span className="text-[#15803d]">{accent}</span>
+        </>
+      );
+    }
+
+    return normalizedLine;
+  }
+
+  const before = normalizedLine.slice(0, accentMatch.index);
+  const accent = accentMatch[0];
+  const after = normalizedLine.slice(accentMatch.index + accent.length);
+
+  return (
+    <>
+      {before}
+      <span className="text-[#15803d]">{accent}</span>
+      {after}
+    </>
+  );
+}
+
 function normalizeCopy(text: string) {
   return text
     .replaceAll("Â£", "£")
@@ -177,9 +210,10 @@ export default function HowItWorksSection({
               return (
                 <span
                   key={`${line}-${index}`}
-                  className={`block ${isAccent ? "text-[#15803d]" : ""} ${index > 0 ? "mt-1 text-[21px] leading-[1.15] lg:text-[34px]" : ""}`}
+                  className={`block ${isAccent ? "lg:text-[#15803d]" : ""} ${index > 0 ? "mt-1 text-[21px] leading-[1.15] lg:text-[34px]" : ""}`}
                 >
-                  {normalizeCopy(line)}
+                  <span className="lg:hidden">{renderMobileHeadingLine(line, index, isAccent)}</span>
+                  <span className="hidden lg:inline">{normalizeCopy(line)}</span>
                 </span>
               );
             })}
@@ -195,9 +229,7 @@ export default function HowItWorksSection({
             return (
               <div
                 key={card.number}
-                className={`perspective-1000 min-h-[228px] sm:min-h-[240px] lg:min-h-[236px] ${
-                  variantLayout ? "xl:min-h-[256px]" : "xl:min-h-[244px]"
-                }`}
+                className={`perspective-1000 ${variantLayout ? "min-h-[254px] sm:min-h-[250px] lg:min-h-[236px] xl:min-h-[256px]" : "min-h-[228px] sm:min-h-[240px] lg:min-h-[236px] xl:min-h-[244px]"}`}
               >
                 <button
                   type="button"
@@ -207,9 +239,7 @@ export default function HowItWorksSection({
                   aria-label={`${flipped ? "Hide details for" : "Show details for"} step ${card.number}`}
                 >
                   <div
-                    className={`relative h-full min-h-[228px] rounded-[18px] transition duration-500 [transform-style:preserve-3d] sm:min-h-[240px] lg:min-h-[236px] ${
-                      variantLayout ? "xl:min-h-[256px]" : "xl:min-h-[244px]"
-                    } ${flipped ? "[transform:rotateY(180deg)]" : ""}`}
+                    className={`relative h-full ${variantLayout ? "min-h-[254px] sm:min-h-[250px] lg:min-h-[236px] xl:min-h-[256px]" : "min-h-[228px] sm:min-h-[240px] lg:min-h-[236px] xl:min-h-[244px]"} rounded-[18px] transition duration-500 [transform-style:preserve-3d] ${flipped ? "[transform:rotateY(180deg)]" : ""}`}
                   >
                     <div className="absolute inset-0 flex h-full flex-col overflow-hidden rounded-[18px] border border-[#dbe4ef] bg-white px-3 pb-3 pt-3 text-center shadow-[0_18px_40px_rgba(13,27,46,0.08)] [backface-visibility:hidden] sm:px-4 sm:pb-4 sm:pt-4 lg:px-5 lg:pb-5 lg:pt-5">
                       <span className="ml-auto hidden font-['Manrope'] text-[18px] font-extrabold uppercase leading-none tracking-[0.14em] text-gray-400 sm:text-[22px]">
@@ -219,10 +249,10 @@ export default function HowItWorksSection({
                       <div
                         className={`mx-auto flex items-center justify-center rounded-[14px] lg:min-h-[84px] ${
                           isRegistrationCard
-                            ? "h-[82px] w-[232px] sm:h-[86px] sm:w-[242px] md:h-[88px] md:w-[246px]"
+                            ? "h-[74px] w-[224px] sm:h-[86px] sm:w-[242px] md:h-[88px] md:w-[246px]"
                             : isComparisonCard
-                              ? "h-[92px] w-[92px] sm:h-[96px] sm:w-[96px] md:h-[98px] md:w-[98px]"
-                              : "h-[86px] w-[86px] sm:h-[90px] sm:w-[90px] md:h-[92px] md:w-[92px]"
+                              ? "h-[78px] w-[78px] sm:h-[96px] sm:w-[96px] md:h-[98px] md:w-[98px]"
+                              : "h-[74px] w-[74px] sm:h-[90px] sm:w-[90px] md:h-[92px] md:w-[92px]"
                         }`}
                       >
                         <img
@@ -230,15 +260,15 @@ export default function HowItWorksSection({
                           alt={`Step ${card.number} icon`}
                           className={
                             isRegistrationCard
-                              ? "h-[62px] w-[206px] object-contain sm:h-[66px] sm:w-[220px] md:h-[68px] md:w-[224px]"
+                              ? "h-[58px] w-[198px] object-contain sm:h-[66px] sm:w-[220px] md:h-[68px] md:w-[224px]"
                               : isComparisonCard
-                                ? "h-[84px] w-[84px] object-contain sm:h-[88px] sm:w-[88px] md:h-[90px] md:w-[90px]"
-                                : "h-[78px] w-[78px] object-contain sm:h-[82px] sm:w-[82px] md:h-[84px] md:w-[84px]"
+                                ? "h-[70px] w-[70px] object-contain sm:h-[88px] sm:w-[88px] md:h-[90px] md:w-[90px]"
+                                : "h-[66px] w-[66px] object-contain sm:h-[82px] sm:w-[82px] md:h-[84px] md:w-[84px]"
                           }
                         />
                       </div>
 
-                      <div className={`mt-3 flex items-start justify-center ${variantLayout ? "min-h-[48px] lg:min-h-[62px]" : "min-h-[38px] lg:min-h-[58px] xl:min-h-[58px]"}`}>
+                      <div className={`mt-2 flex items-start justify-center ${variantLayout ? "min-h-[40px] lg:min-h-[62px]" : "min-h-[38px] lg:min-h-[58px] xl:min-h-[58px]"}`}>
                         <h3
                           className={`font-['Manrope'] font-bold leading-[1.14] text-[#0d1b2e] ${
                             variantLayout ? "text-[15px] md:text-[17px] xl:text-[18px]" : "text-[16px] md:text-[18px] xl:text-[20px]"
@@ -248,7 +278,7 @@ export default function HowItWorksSection({
                         </h3>
                       </div>
 
-                      <div className={`mt-2 flex items-start justify-center ${variantLayout ? "min-h-[54px] lg:min-h-[62px]" : "min-h-[40px] lg:min-h-[54px] xl:min-h-[58px]"}`}>
+                      <div className={`mt-1.5 flex items-start justify-center ${variantLayout ? "min-h-[50px] lg:min-h-[62px]" : "min-h-[40px] lg:min-h-[54px] xl:min-h-[58px]"}`}>
                         <p
                           className={`mx-auto w-full max-w-[340px] text-[#5a6478] ${
                             variantLayout ? "text-[12px] leading-[1.5] md:text-[13px]" : "text-[12px] leading-[1.42] md:text-[14px] md:leading-[1.55]"
@@ -258,7 +288,7 @@ export default function HowItWorksSection({
                         </p>
                       </div>
 
-                      <span className="ml-auto mt-auto inline-flex min-h-[28px] items-center gap-2 px-1 pb-1 pt-0 text-[12.5px] font-bold text-[#15803d] sm:text-[13px] lg:pb-1.5">
+                      <span className="ml-auto mt-auto inline-flex min-h-[24px] items-center gap-2 px-1 pb-0 pt-0 text-[12px] font-bold text-[#15803d] sm:min-h-[28px] sm:text-[13px] lg:pb-1.5">
                         <span>See how it works</span>
                         <ArrowIcon />
                       </span>

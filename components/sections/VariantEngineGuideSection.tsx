@@ -109,6 +109,25 @@ function getVariantReplacementLabel(sectionTitle: string) {
   return cleaned ? `${cleaned} engine replacement` : "engine replacement";
 }
 
+function renderMobileGuideHeading(heading: string) {
+  const match = heading.match(/(Codes?\s*-\s*Specifications\s*&\s*Replacement Cost)/i);
+  if (!match || match.index === undefined) {
+    return heading;
+  }
+
+  const before = heading.slice(0, match.index);
+  const accent = match[0];
+  const after = heading.slice(match.index + accent.length);
+
+  return (
+    <>
+      {before}
+      <span className="text-[#16803d]">{accent}</span>
+      {after}
+    </>
+  );
+}
+
 export default function VariantEngineGuideSection({ data }: Props) {
   const replacementLabel = getVariantReplacementLabel(data.h2);
   const normalizedTag = normalizeCopy(data.tag);
@@ -116,8 +135,8 @@ export default function VariantEngineGuideSection({ data }: Props) {
 
   return (
     <Section className="bg-white !py-[2px]">
-      <Container className="max-w-[1400px] px-0 sm:px-0 lg:px-0">
-        <div className="-mx-[15px] bg-white px-[15px] py-[2px] sm:mx-0 sm:px-0">
+      <Container className="max-w-[1400px] px-4 sm:px-5 lg:px-0">
+        <div className="bg-white py-[2px]">
           <div className="mb-3 flex flex-wrap items-center gap-2 sm:mb-4">
             <span className="inline-flex rounded-full bg-[#0b2347] px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.03em] text-white sm:px-4 sm:py-2 sm:text-[12px]">
               {normalizedTag}
@@ -125,15 +144,16 @@ export default function VariantEngineGuideSection({ data }: Props) {
           </div>
 
           <h2 className="max-w-none font-['Manrope'] text-[22px] font-extrabold leading-[1.03] tracking-normal text-[#0b2347] sm:max-w-[760px] sm:text-[32px] lg:text-[46px]">
-            {normalizedHeading}
+            <span className="sm:hidden">{renderMobileGuideHeading(normalizedHeading)}</span>
+            <span className="hidden sm:inline">{normalizedHeading}</span>
           </h2>
 
-          <div className="mt-3 grid gap-4 sm:mt-5 sm:gap-6">
+          <div className="mt-3 grid gap-3 sm:mt-4 sm:gap-5">
             {data.items.map((item, index) => (
               <article key={`${item.code}-${index}`} className="grid gap-3 sm:gap-4 xl:grid-cols-[minmax(0,0.95fr)_minmax(410px,0.85fr)] xl:items-start">
-                <div className="flex flex-col gap-4">
-                  <div className="rounded-[14px] border border-[#dbe5f2] bg-white p-3 shadow-[0_16px_30px_rgba(15,23,42,0.06)] sm:p-4 lg:p-5">
-                    <div className="grid grid-cols-[minmax(0,1fr)_108px] items-start gap-3 sm:grid-cols-[minmax(0,1fr)_190px] sm:gap-4 lg:grid-cols-[minmax(0,1fr)_250px] lg:gap-5 xl:grid-cols-[minmax(0,1fr)_290px]">
+                <div className="flex flex-col gap-3 sm:gap-4">
+                  <div className="rounded-[10px] border border-[#dbe5f2] bg-white p-2 shadow-[0_14px_26px_rgba(15,23,42,0.055)] sm:p-3 lg:p-4">
+                    <div className="grid grid-cols-[minmax(0,1fr)_102px] items-start gap-2 sm:grid-cols-[minmax(0,1fr)_178px] sm:gap-3 lg:grid-cols-[minmax(0,1fr)_238px] lg:gap-3 xl:grid-cols-[minmax(0,1fr)_270px]">
                       <div>
                         <div className="flex items-start gap-3 sm:gap-4">
                           <div className="flex h-11 w-11 flex-none items-center justify-center rounded-[10px] bg-[#0b2347] text-white shadow-[0_12px_24px_rgba(11,35,71,0.16)] sm:h-12 sm:w-12 lg:h-14 lg:w-14 lg:rounded-[12px]">
@@ -149,7 +169,7 @@ export default function VariantEngineGuideSection({ data }: Props) {
                           </div>
                         </div>
 
-                        <div className="mt-3 grid gap-2.5 border-t border-[#e7edf5] pt-3 sm:mt-4 sm:gap-3 sm:pt-4">
+                        <div className="mt-2.5 grid gap-2 border-t border-[#e7edf5] pt-2.5 sm:mt-3 sm:gap-2.5 sm:pt-3">
                           {item.specs.map((spec, specIndex) => (
                             <div key={`${item.code}-${spec.label}-${specIndex}`} className="grid grid-cols-[22px_minmax(0,1fr)] gap-2 sm:grid-cols-[26px_minmax(0,1fr)] sm:gap-3">
                               <div className="pt-0.5 text-[#16803d]">{getSpecIcon(specIndex)}</div>
@@ -179,7 +199,7 @@ export default function VariantEngineGuideSection({ data }: Props) {
                         ) : null}
                       </div>
 
-                      <div className="relative mx-auto h-[102px] w-full max-w-[110px] self-start sm:mx-0 sm:ml-auto sm:h-[170px] sm:max-w-[180px] lg:h-[230px] lg:max-w-[250px] xl:h-[280px] xl:max-w-[300px]">
+                      <div className="relative -ml-3 h-[102px] w-[calc(100%+12px)] max-w-[118px] self-start sm:-ml-5 sm:h-[170px] sm:max-w-[190px] lg:-ml-8 lg:h-[230px] lg:max-w-[262px] xl:h-[276px] xl:max-w-[310px]">
                         <Image
                           src={engineImage}
                           alt={`${normalizeCopy(item.code)} engine`}
@@ -219,7 +239,7 @@ export default function VariantEngineGuideSection({ data }: Props) {
                 </div>
 
                 <div className="flex flex-col gap-3 sm:gap-4">
-                  <div className="rounded-[14px] border border-[#dbe5f2] bg-white p-3 shadow-[0_16px_30px_rgba(15,23,42,0.06)] sm:p-4 lg:p-5">
+                  <div className="rounded-[10px] border border-[#dbe5f2] bg-white p-2.5 shadow-[0_14px_26px_rgba(15,23,42,0.055)] sm:p-3 lg:p-4">
                     <div className="flex items-center gap-2.5 sm:gap-3">
                       <div className="flex h-10 w-10 flex-none items-center justify-center rounded-full bg-[#0b2347] text-white sm:h-11 sm:w-11 lg:h-12 lg:w-12">
                         <AssetIcon src="/icons/variant/white/em-pound.png" className="h-4 w-4 object-contain sm:h-5 sm:w-5" />
@@ -240,7 +260,7 @@ export default function VariantEngineGuideSection({ data }: Props) {
                         return (
                           <div
                             key={`${item.code}-${cost.label}-${costIndex}`}
-                            className={`grid grid-cols-[minmax(0,1fr)_auto] items-center gap-2 rounded-[10px] border px-2.5 py-2 sm:gap-3 sm:px-3.5 sm:py-2.5 ${meta.rowBg} ${meta.rowBorder}`}
+                            className={`grid grid-cols-[minmax(0,1fr)_auto] items-center gap-2 rounded-[8px] border px-2 py-1.5 sm:gap-2.5 sm:px-2.5 sm:py-2 ${meta.rowBg} ${meta.rowBorder}`}
                           >
                             <div className="flex min-w-0 items-start gap-2.5 sm:gap-3">
                               <div className={`mt-0.5 flex h-8 w-8 flex-none items-center justify-center rounded-full ${meta.iconBg} text-white sm:h-9 sm:w-9 lg:h-10 lg:w-10`}>
@@ -262,29 +282,27 @@ export default function VariantEngineGuideSection({ data }: Props) {
                     </div>
                   </div>
 
-                  <div className="rounded-[14px] border border-[#f3d1cf] bg-[linear-gradient(135deg,#fff8f7,#fff5f3)] p-3 shadow-[0_16px_30px_rgba(185,28,28,0.05)] sm:p-4 lg:p-5">
-                    <div className="grid grid-cols-[minmax(0,1fr)_88px] items-center gap-2.5 sm:grid-cols-[minmax(0,1fr)_112px] sm:gap-3 lg:grid-cols-[minmax(0,1fr)_128px] lg:gap-4">
+                  <div className="rounded-[10px] border border-[#f3d1cf] bg-[linear-gradient(135deg,#fff8f7,#fff5f3)] p-2 shadow-[0_14px_26px_rgba(185,28,28,0.045)] sm:p-3 lg:p-4">
+                    <div className="grid grid-cols-[minmax(0,1fr)_82px] items-center gap-2 sm:grid-cols-[minmax(0,1fr)_104px] sm:gap-2.5 lg:grid-cols-[minmax(0,1fr)_120px] lg:gap-3">
                       <div>
-                          <div className="flex items-start gap-2.5 sm:gap-3 lg:gap-4">
+                          <div className="flex items-center gap-2.5 sm:gap-3">
                             <div className="flex h-9 w-9 flex-none items-center justify-center rounded-full bg-[#c62828] shadow-[0_10px_22px_rgba(198,40,40,0.16)] sm:h-10 sm:w-10 lg:h-12 lg:w-12">
                               <AssetIcon src="/icons/variant/white/rod-bearing.png" className="h-4 w-4 object-contain sm:h-5 sm:w-5 lg:h-6 lg:w-6" />
                             </div>
-                          <div>
-                            <h4 className="text-[15px] font-extrabold tracking-normal text-[#b91c1c] sm:text-[17px] lg:text-[20px]">Common Failure</h4>
-                            <p className="mt-1 text-[11px] leading-[1.4] text-[#5d1c1c] sm:mt-1.5 sm:text-[12px] sm:leading-[1.48] lg:mt-2 lg:text-[16px] lg:leading-[1.68]">
-                              {normalizeCopy(item.commonFailure)}
-                            </p>
-                          </div>
+                            <h4 className="text-[14px] font-extrabold tracking-normal text-[#b91c1c] sm:text-[16px] lg:text-[19px]">Common Failure</h4>
                         </div>
+                        <p className="mt-1.5 text-[11px] leading-[1.36] text-[#5d1c1c] sm:text-[12px] sm:leading-[1.44] lg:text-[15px] lg:leading-[1.56]">
+                          {normalizeCopy(item.commonFailure)}
+                        </p>
                       </div>
 
-                      <div className="relative mx-auto h-[88px] w-[80px] overflow-hidden rounded-[10px] sm:h-[104px] sm:w-[96px] lg:h-[132px] lg:w-[122px] lg:rounded-[12px]">
+                      <div className="relative mx-auto h-[82px] w-[76px] overflow-hidden rounded-[8px] sm:h-[98px] sm:w-[90px] lg:h-[122px] lg:w-[112px]">
                         <Image src={bearingImage} alt="Bearing damage" fill className="object-cover" sizes="122px" />
                       </div>
                     </div>
                   </div>
 
-                  <div className="rounded-[14px] bg-[#071d45] px-3 py-3 text-white shadow-[0_14px_28px_rgba(8,31,71,0.18)] xl:hidden">
+                  <div className="rounded-[10px] bg-[#071d45] px-2.5 py-2 text-white shadow-[0_14px_28px_rgba(8,31,71,0.18)] xl:hidden">
                     <div className="grid grid-cols-[44px_minmax(0,1fr)_110px] items-center gap-2.5">
                       <div className="relative h-11 w-11 overflow-hidden rounded-[10px] border border-white/10 bg-white/5">
                         <Image src={engineImage} alt={`${normalizeCopy(item.code)} quote`} fill className="object-cover" sizes="48px" />

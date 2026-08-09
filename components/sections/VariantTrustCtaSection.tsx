@@ -76,42 +76,42 @@ export default function VariantTrustCtaSection({ data, brandName, imageSrc }: Pr
   const cleanedButtonText = data.buttonText.replace(/\s*->\s*$/, "");
 
   return (
-    <Section className="bg-white !pt-[2px] !pb-0">
-      <div className="overflow-hidden border-t border-[#d6deea] bg-[radial-gradient(circle_at_76%_18%,rgba(255,255,255,0.14),transparent_24%),linear-gradient(135deg,#07152d_0%,#081a34_46%,#09182f_100%)]">
+    <Section className="overflow-hidden bg-white !pt-[2px] !pb-0">
+      <div className="relative left-1/2 w-screen -translate-x-1/2 overflow-hidden border-t border-[#d6deea] bg-[radial-gradient(circle_at_76%_18%,rgba(255,255,255,0.14),transparent_24%),linear-gradient(135deg,#07152d_0%,#081a34_46%,#09182f_100%)]">
         <Container className="max-w-[1400px] px-0 sm:px-0 lg:px-0">
-          <div className="grid gap-7 px-4 py-5 sm:px-6 sm:py-6 lg:grid-cols-[minmax(0,0.96fr)_minmax(520px,1.04fr)] lg:items-start lg:px-7 lg:py-8 lg:gap-8">
+          <div className="grid gap-4 px-3.5 py-4 sm:px-6 sm:py-6 lg:grid-cols-[minmax(0,0.96fr)_minmax(520px,1.04fr)] lg:items-start lg:px-7 lg:py-7 lg:gap-7">
             <div className="max-w-[780px]">
               <div className="inline-flex items-center gap-2 rounded-full bg-[#1f7f3d] px-4 py-2 text-[11px] font-bold uppercase tracking-[0.03em] text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.15)]">
                 <AssetIcon src="/icons/variant/white/warranty.png" className="h-4 w-4 object-contain" />
                 <span>{data.tag}</span>
               </div>
 
-              <h2 className="mt-4 max-w-[860px] font-['Manrope'] text-[31px] font-extrabold leading-[1.02] tracking-normal text-white sm:text-[44px] lg:text-[58px]">
+              <h2 className="mt-3 max-w-[860px] font-['Manrope'] text-[31px] font-extrabold leading-[1.02] tracking-normal text-white sm:text-[44px] lg:text-[58px]">
                 {heading.lead ? <span className="block">{heading.lead}</span> : null}
                 {heading.accent ? <span className="block text-[#39c85e]">{heading.accent}</span> : null}
                 {heading.tail ? <span className="block">{heading.tail}</span> : null}
               </h2>
 
-              <div className="mt-5 grid gap-3 md:grid-cols-3">
+              <div className="mt-2 grid gap-2 md:grid-cols-3">
                 {data.points.map((point, index) => (
                   <div
                     key={`${point.title}-${index}`}
-                    className="rounded-[12px] border border-white/12 bg-white/[0.035] px-4 py-3.5 text-white/95 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]"
+                    className="rounded-[9px] border border-white/10 bg-white/[0.035] px-2.5 py-1.5 text-white/95 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]"
                   >
-                    <div className="flex items-start gap-3">
-                      <div className="mt-0.5 flex h-7 w-7 flex-none items-center justify-center text-[#7af085]">
+                    <div className="flex items-center gap-2.5">
+                      <div className="flex h-7 w-7 flex-none items-center justify-center text-[#7af085]">
                         {getPointIcon(index)}
                       </div>
                       <div>
-                        <p className="text-[14px] font-semibold leading-[1.45]">{point.title}</p>
-                        {point.description ? <p className="mt-1 text-[13px] leading-[1.5] text-slate-300">{point.description}</p> : null}
+                        <p className="text-[13px] font-semibold leading-[1.18]">{point.title}</p>
+                        {point.description ? <p className="mt-0.5 text-[11px] leading-[1.22] text-slate-300">{point.description}</p> : null}
                       </div>
                     </div>
                   </div>
                 ))}
               </div>
 
-              <p className="mt-5 max-w-[720px] text-[15px] leading-[1.72] text-slate-200 sm:text-[16px]">
+              <p className="mt-4 max-w-[720px] text-[15px] leading-[1.62] text-slate-200 sm:text-[16px]">
                 {data.finalText}
               </p>
             </div>
@@ -134,28 +134,28 @@ export default function VariantTrustCtaSection({ data, brandName, imageSrc }: Pr
             </div>
           </div>
 
-          <div className="border-t border-white/10 px-4 pt-5 pb-0 sm:px-6 sm:pt-5.5 sm:pb-0 lg:px-7 lg:pt-6 lg:pb-0">
-            <div className="grid gap-5 lg:grid-cols-[minmax(270px,0.36fr)_minmax(410px,0.42fr)_52px_minmax(420px,0.48fr)] lg:items-center">
-              <div className="flex items-center gap-4 px-1 py-3">
-                <div className="flex h-[62px] w-[62px] flex-none items-center justify-center rounded-full bg-[#10283e] text-[#8df39e]">
-                  <AssetIcon src="/icons/engine-market/dark-green-not-sure.png" className="h-8 w-8 object-contain" />
+          <div className="px-3.5 pt-0 pb-3 sm:px-6 sm:pb-4 lg:px-7 lg:pb-5">
+            <div className="grid gap-2.5 rounded-[12px] border border-white/18 bg-white/[0.095] p-1.5 pb-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.16),0_18px_38px_rgba(0,0,0,0.2)] backdrop-blur-[22px] lg:grid-cols-[minmax(250px,0.36fr)_minmax(300px,0.32fr)_32px_minmax(330px,0.34fr)] lg:items-center lg:p-2">
+              <div className="flex items-center gap-3 px-1 py-1">
+                <div className="flex h-10 w-10 flex-none items-center justify-center rounded-full border border-emerald-300/20 bg-emerald-400/10 text-[#8df39e] shadow-[0_0_22px_rgba(47,210,92,0.16)]">
+                  <AssetIcon src="/icons/engine-market/dark-green-not-sure.png" className="h-5 w-5 object-contain" />
                 </div>
                 <div>
-                  <p className="text-[19px] font-medium text-white">Enter your registration</p>
-                  <p className="mt-1 text-[13.5px] leading-[1.7] text-slate-300">{`and get matched with verified ${brandName} specialists.`}</p>
+                  <p className="text-[13px] font-semibold leading-[1.15] text-white">Enter your registration</p>
+                  <p className="mt-0.5 text-[10.5px] leading-[1.25] text-slate-300">{`and get matched with verified ${brandName} specialists.`}</p>
                 </div>
               </div>
 
-              <div className="px-0 py-3">
-                <div className="overflow-hidden rounded-[12px] border-[2px] border-[#1a2d5f] bg-[#f3b700] text-[#071735] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.28)]">
-                  <div className="grid grid-cols-[74px_1fr]">
-                    <div className="bg-[#132e73] px-3 py-4 text-center font-bold text-white">
-                      <div className="text-[13px]">UK</div>
+              <div className="px-0 py-1">
+                <div className="overflow-hidden rounded-[8px] border border-amber-300/60 bg-[#f3b700] text-[#071735] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.3)]">
+                  <div className="grid grid-cols-[52px_1fr]">
+                    <div className="bg-[#132e73] px-2 py-2.5 text-center font-bold text-white">
+                      <div className="text-[10px]">UK</div>
                     </div>
-                    <div className="px-5 py-4 text-center text-[30px] font-black tracking-[0.03em] sm:text-[34px]">REG 123</div>
+                    <div className="px-3 py-2.5 text-center text-[22px] font-black tracking-[0.03em]">REG 123</div>
                   </div>
                 </div>
-                <div className="mt-2 flex items-center gap-2 text-[12.5px] text-slate-300">
+                <div className="mt-1 hidden items-center gap-1.5 text-[10px] text-slate-300 lg:flex">
                   <LockIcon />
                   <span>100% Secure</span>
                   <span>{"\u2022"}</span>
@@ -163,8 +163,8 @@ export default function VariantTrustCtaSection({ data, brandName, imageSrc }: Pr
                 </div>
               </div>
 
-              <div className="hidden justify-center text-white lg:flex">
-                <span className="inline-flex h-9 w-9 items-center justify-center">
+              <div className="hidden justify-center text-white/90 lg:flex">
+                <span className="inline-flex h-7 w-7 items-center justify-center">
                   <ArrowIcon />
                 </span>
               </div>
@@ -173,13 +173,13 @@ export default function VariantTrustCtaSection({ data, brandName, imageSrc }: Pr
                 href="#quote-form"
                 data-quote-context={`Final ${brandName} engine comparison`}
                 data-quote-source="variant-trust-cta"
-                className="inline-flex min-h-[96px] w-full flex-col items-center justify-center rounded-[12px] bg-[#24993f] px-6 text-center text-white shadow-[0_14px_24px_rgba(29,159,66,0.2)] transition hover:bg-[#1f8a39] sm:min-h-[102px]"
+                className="inline-flex min-h-[58px] w-full flex-col items-center justify-center rounded-[8px] bg-[#24993f] px-4 py-2 text-center text-white shadow-[0_14px_24px_rgba(29,159,66,0.2)] transition hover:bg-[#1f8a39]"
               >
-                <span className="flex items-center justify-center gap-3 text-[18px] font-extrabold sm:text-[19px]">
+                <span className="flex items-center justify-center gap-2.5 text-[13px] font-extrabold sm:text-[14px]">
                   <span>{cleanedButtonText}</span>
                   <ArrowIcon />
                 </span>
-                <span className="mt-1.5 text-[14px] text-green-50/92">Fast. Free. No Obligation.</span>
+                <span className="mt-0.5 text-[10.5px] text-green-50/92">Fast. Free. No Obligation.</span>
               </a>
 
               <div className="flex items-center justify-center gap-3 px-2 text-white lg:hidden">
