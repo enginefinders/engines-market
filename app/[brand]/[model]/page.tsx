@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import AutoInternalLinks from "@/components/internal-links/AutoInternalLinks";
 import DocumentEnginePage from "@/components/pages/DocumentEnginePage";
 import DocumentModelPage from "@/components/pages/DocumentModelPage";
 import { getEnginePageData, getEnginePageStaticParams } from "@/lib/enginePageData";
+import { getInternalLinkTargets } from "@/lib/internalLinkIndex";
 import { getModelPageData, getModelPageStaticParams } from "@/lib/modelPageData";
 import { SITE_URL } from "@/lib/site";
 import { notFound, permanentRedirect } from "next/navigation";
@@ -64,7 +66,17 @@ export default async function ModelPage({ params }: ModelPageProps) {
       permanentRedirect(`/${enginePageData.brand.slug}/${enginePageData.engine.slug}`);
     }
 
-    return <DocumentEnginePage data={enginePageData} />;
+    const internalLinkTargets = await getInternalLinkTargets({
+      brandSlug: enginePageData.brand.slug,
+      currentPath: enginePageData.seo.canonical,
+    });
+
+    return (
+      <>
+        <AutoInternalLinks targets={internalLinkTargets} />
+        <DocumentEnginePage data={enginePageData} />
+      </>
+    );
   }
 
   const pageData = await getModelPageData(brand, model);
@@ -77,5 +89,16 @@ export default async function ModelPage({ params }: ModelPageProps) {
     permanentRedirect(`/${pageData.brand.slug}/${pageData.model.slug}`);
   }
 
-  return <DocumentModelPage data={pageData} />;
+  const internalLinkTargets = await getInternalLinkTargets({
+    brandSlug: pageData.brand.slug,
+    modelSlug: pageData.model.slug,
+    currentPath: pageData.seo.canonical,
+  });
+
+  return (
+    <>
+      <AutoInternalLinks targets={internalLinkTargets} />
+      <DocumentModelPage data={pageData} />
+    </>
+  );
 }

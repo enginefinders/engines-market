@@ -130,7 +130,7 @@ async function readVariantPageFile(fileBaseName: string) {
   }
 }
 
-async function getAllVariantPageData() {
+export async function getAllVariantPageData() {
   try {
     const entries = await readdir(VARIANTS_DIR, { withFileTypes: true });
     const pages = await Promise.all(

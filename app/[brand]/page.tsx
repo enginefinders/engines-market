@@ -15,14 +15,15 @@ import EngineYearsSection from "@/components/sections/EngineYearsSection";
 import FaqSection from "@/components/sections/FaqSection";
 import TrustCtaSection from "@/components/sections/TrustCtaSection";
 import QuoteCheckoutModal from "@/components/checkout/QuoteCheckoutModal";
+import AutoInternalLinks from "@/components/internal-links/AutoInternalLinks";
 import { getBrandPageData, getBrandSlugs } from "@/lib/brandData";
 import { resolveBrandPageVisuals } from "@/lib/engineImageSelection";
+import { getInternalLinkTargets } from "@/lib/internalLinkIndex";
 import { resolveModelImagePaths } from "@/lib/modelImageAssets";
 import { getBrandModelCards } from "@/lib/modelPageData";
 import { SITE_URL } from "@/lib/site";
 import { buildBrandStructuredData } from "@/lib/structuredData";
 import { buildStaticReviewsSection } from "@/lib/staticReviews";
-import type { BrandPageData } from "@/types/brand";
 import { notFound } from "next/navigation";
 
 type BrandPageProps = {
@@ -90,9 +91,15 @@ export default async function BrandPage({ params }: BrandPageProps) {
       ? "/images/brands/land-rover/cta-image.webp"
       : pageData.sections.models.cards[0]?.image ?? pageData.assets.heroBg;
   const initialTimestamp = new Date().toISOString();
+  const internalLinkTargets = await getInternalLinkTargets({
+    brandSlug: pageData.brand.slug,
+    currentPath: pageData.seo.canonical,
+  });
 
   return (
     <>
+      <AutoInternalLinks targets={internalLinkTargets} />
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

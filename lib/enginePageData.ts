@@ -45,7 +45,7 @@ async function readEnginePageDataFile(fileBaseName: string) {
   }
 }
 
-async function getAllEnginePageData() {
+export async function getAllEnginePageData() {
   if (SHOULD_CACHE_ENGINE_PAGES && allEnginePagesPromise) {
     return allEnginePagesPromise;
   }

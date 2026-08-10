@@ -106,7 +106,7 @@ async function readModelPageDataFile(fileBaseName: string) {
   }
 }
 
-async function getAllModelPageData() {
+export async function getAllModelPageData() {
   if (SHOULD_CACHE_MODEL_PAGES && allModelPagesPromise) {
     return allModelPagesPromise;
   }
