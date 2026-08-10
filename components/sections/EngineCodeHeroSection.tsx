@@ -144,7 +144,7 @@ export default function EngineCodeHeroSection({ data }: Props) {
 
   return (
     <Section className="overflow-hidden bg-[radial-gradient(circle_at_top,#f5f8fd_0%,#ffffff_35%,#ffffff_100%)] pb-4 pt-4 sm:pb-6 sm:pt-5 lg:pb-7 lg:pt-5">
-      <Container className="!max-w-none !px-3 md:!px-0 lg:!pl-3 lg:!pr-0">
+      <Container className="!max-w-[1400px]">
         <div className="relative">
           <div className="absolute right-[10%] top-[66px] hidden h-[540px] w-[540px] rounded-full border border-[#ebf0f7] lg:block" />
           <div className="absolute right-[16%] top-[116px] hidden h-[404px] w-[404px] rounded-full border border-[#f1f5fa] lg:block" />
@@ -225,16 +225,16 @@ export default function EngineCodeHeroSection({ data }: Props) {
             </div>
           </div>
 
-          <div className="mt-2 grid grid-cols-2 gap-2 lg:hidden">
+          <div className="mt-2 grid grid-cols-4 gap-1 lg:hidden">
             {mobileTrustBadges.map((badge, index) => (
               <div
                 key={`${badge}-mobile-${index}`}
-                className="flex min-h-[64px] items-center gap-2 rounded-[10px] border border-[#dbe5f2] bg-white px-2.5 py-2 shadow-[0_8px_20px_rgba(15,23,42,0.04)]"
+                className="flex min-h-[42px] items-center gap-1 rounded-[6px] border border-[#12325f] bg-[#082553] px-1.5 py-1.5 shadow-[0_7px_16px_rgba(8,37,83,0.14)]"
               >
-                <div className="flex h-9 w-9 flex-none items-center justify-center rounded-[8px] bg-[#082553] text-white">
+                <div className="flex h-7 w-7 flex-none items-center justify-center text-white [&_svg]:h-5 [&_svg]:w-5">
                   {getTrustIcon(index)}
                 </div>
-                <p className="text-[13px] font-semibold leading-[1.2] text-[#0b2347] sm:text-[14px]">{badge}</p>
+                <p className="min-w-0 text-[8px] font-semibold leading-[1.08] text-white sm:text-[8.5px]">{badge}</p>
               </div>
             ))}
           </div>
@@ -251,9 +251,9 @@ export default function EngineCodeHeroSection({ data }: Props) {
                         : ""
                     }`}
                   >
-                    <div className="min-w-0">
-                      <div className="text-[13px] font-semibold leading-[1.15] text-[#0b2347] lg:text-[15px]">{item.label}</div>
-                      <div className="mt-0 text-[23px] font-extrabold tracking-[-0.05em] text-[#17803d] sm:text-[30px]" style={{ fontFamily: '"Urbanist", ui-sans-serif, system-ui, sans-serif' }}>
+                    <div className="flex min-w-0 flex-1 items-baseline gap-1.5 lg:block lg:flex-none">
+                      <div className="text-[12px] font-semibold leading-[1.15] text-[#0b2347] lg:text-[15px]">{item.label}</div>
+                      <div className="mt-0 text-[19px] font-extrabold tracking-[-0.05em] text-[#17803d] sm:text-[24px] lg:text-[30px]" style={{ fontFamily: '"Urbanist", ui-sans-serif, system-ui, sans-serif' }}>
                         {item.price}
                       </div>
                     </div>

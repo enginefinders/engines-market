@@ -219,43 +219,46 @@ export default function DocumentFailureDesktopPanel({ ctaText, engineCode, failu
               </div>
             </div>
 
-            <a
-              href="#quote-form"
-              data-quote-context={failuresTitle}
-              data-quote-source="engine-failures-inline"
-              data-quote-engine-code={engineCode}
-              className="flex items-center justify-between rounded-[12px] border border-[#d9e4f6] bg-[#f7fbff] px-5 py-3.5 text-[#1d4ed8] transition hover:border-[#bfd4f3] hover:text-[#17803d]"
-            >
-              <div className="flex items-center gap-3">
-                <DocumentLinkIcon />
-                <span className="text-[17px] font-extrabold tracking-[-0.02em]">Read more about {activeItem.title}</span>
-              </div>
-              <span aria-hidden="true">
-                <CompatibilityMetaIcon kind="link" />
-              </span>
-            </a>
           </div>
         </article>
 
-        <div className="relative overflow-hidden rounded-[8px] bg-[linear-gradient(90deg,#081f47_0%,#071a3b_100%)] px-4 py-3 text-white shadow-[0_8px_16px_rgba(8,31,71,0.1)]">
-          <div className="relative z-[1] flex items-center justify-between gap-5">
-            <div className="flex items-center gap-4">
-              <div className="flex h-10 w-10 flex-none items-center justify-center rounded-full bg-[#17803d] text-white">
-                <TagOutlineIcon />
-              </div>
-              <p className="max-w-[520px] font-['Manrope'] text-[21px] font-extrabold leading-[1.28] tracking-[-0.03em] text-white">
-                {ctaText}
-              </p>
+        <div className="grid items-stretch gap-4 lg:grid-cols-[3fr_7fr]">
+          <a
+            href="#quote-form"
+            data-quote-context={failuresTitle}
+            data-quote-source="engine-failures-inline"
+            data-quote-engine-code={engineCode}
+            className="flex min-h-[68px] items-center justify-between rounded-[10px] border border-[#d9e4f6] bg-[#f7fbff] px-4 py-3 text-[#1d4ed8] transition hover:border-[#bfd4f3] hover:text-[#17803d]"
+          >
+            <div className="flex min-w-0 items-center gap-3">
+              <DocumentLinkIcon />
+              <span className="text-[15px] font-extrabold leading-[1.2] tracking-[-0.02em]">Read more about {activeItem.title}</span>
             </div>
-            <a
-              href="#quote-form"
-              data-quote-context={failuresTitle}
-              data-quote-source="engine-failures-cta"
-              data-quote-engine-code={engineCode}
-              className="inline-flex min-h-[42px] items-center justify-center rounded-[6px] bg-[#0d8d3b] px-4 py-1 text-[16px] font-semibold text-white shadow-[0_8px_16px_rgba(13,141,59,0.12)] transition hover:bg-[#0a7b33]"
-            >
-              Compare Rebuilt {engineCode} Prices
-            </a>
+            <span className="flex-none" aria-hidden="true">
+              <CompatibilityMetaIcon kind="link" />
+            </span>
+          </a>
+
+          <div className="relative overflow-hidden rounded-[8px] bg-[linear-gradient(90deg,#081f47_0%,#071a3b_100%)] px-4 py-3 text-white shadow-[0_8px_16px_rgba(8,31,71,0.1)]">
+            <div className="relative z-[1] flex h-full items-center justify-between gap-5">
+              <div className="flex min-w-0 items-center gap-4">
+                <div className="flex h-10 w-10 flex-none items-center justify-center rounded-full bg-[#17803d] text-white">
+                  <TagOutlineIcon />
+                </div>
+                <p className="max-w-[520px] font-['Manrope'] text-[20px] font-extrabold leading-[1.22] tracking-[-0.03em] text-white">
+                  {ctaText}
+                </p>
+              </div>
+              <a
+                href="#quote-form"
+                data-quote-context={failuresTitle}
+                data-quote-source="engine-failures-cta"
+                data-quote-engine-code={engineCode}
+                className="inline-flex min-h-[42px] flex-none items-center justify-center rounded-[6px] bg-[#0d8d3b] px-4 py-1 text-[16px] font-semibold text-white shadow-[0_8px_16px_rgba(13,141,59,0.12)] transition hover:bg-[#0a7b33]"
+              >
+                Compare Rebuilt {engineCode} Prices
+              </a>
+            </div>
           </div>
         </div>
       </div>

@@ -428,28 +428,34 @@ export default function VariantCommonProblemsSection({ data, vehicleImage }: Pro
 
                 <div className={`mt-5 grid gap-4 ${hasDualInfoCards ? "xl:grid-cols-2" : ""}`}>
                   {activeProblem.vehicleValueCheck ? (
-                    <div className="rounded-[14px] border border-[#dcebdd] bg-[linear-gradient(135deg,#f1faf3,#edf7f1)] px-5 py-4 shadow-[0_12px_24px_rgba(22,128,61,0.08)]">
-                      <div className="flex items-start gap-4">
-                        <div className="flex h-12 w-12 flex-none items-center justify-center rounded-full bg-white shadow-[0_8px_18px_rgba(22,128,61,0.12)]">
-                          <Image src="/icons/engine-market/dark-blue-pound.png" alt="" width={22} height={22} className="object-contain" />
+                    <div className="rounded-[14px] border border-[#dcebdd] bg-[linear-gradient(135deg,#f1faf3,#edf7f1)] px-4 py-4 shadow-[0_12px_24px_rgba(22,128,61,0.08)] sm:px-5">
+                      <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:gap-4">
+                        <div className="flex items-center gap-3 sm:block">
+                          <div className="flex h-12 w-12 flex-none items-center justify-center rounded-full bg-white shadow-[0_8px_18px_rgba(22,128,61,0.12)]">
+                            <Image src="/icons/engine-market/dark-blue-pound.png" alt="" width={22} height={22} className="object-contain" />
+                          </div>
+                          <p className="text-[17px] font-extrabold text-[#16803d] sm:hidden">Vehicle Value Check</p>
                         </div>
                         <div>
-                          <p className="text-[17px] font-extrabold text-[#16803d]">Vehicle Value Check</p>
-                          <p className="mt-2 text-[14px] leading-[1.6] text-[#24405a]">{activeProblem.vehicleValueCheck}</p>
+                          <p className="hidden text-[17px] font-extrabold text-[#16803d] sm:block">Vehicle Value Check</p>
+                          <p className="text-[14px] leading-[1.6] text-[#24405a] sm:mt-2">{activeProblem.vehicleValueCheck}</p>
                         </div>
                       </div>
                     </div>
                   ) : null}
 
                   {activeProblem.recommendation ? (
-                    <div className="rounded-[14px] border border-[#d7e4fb] bg-[linear-gradient(135deg,#f7fbff,#eff6ff)] px-5 py-4 shadow-[0_12px_24px_rgba(37,99,235,0.07)]">
-                      <div className="flex items-start gap-4">
-                        <div className="flex h-12 w-12 flex-none items-center justify-center rounded-full bg-white shadow-[0_8px_18px_rgba(37,99,235,0.12)]">
-                          <Image src="/icons/engine-market/dark-blue-warranty.png" alt="" width={22} height={22} className="object-contain" />
+                    <div className="rounded-[14px] border border-[#d7e4fb] bg-[linear-gradient(135deg,#f7fbff,#eff6ff)] px-4 py-4 shadow-[0_12px_24px_rgba(37,99,235,0.07)] sm:px-5">
+                      <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:gap-4">
+                        <div className="flex items-center gap-3 sm:block">
+                          <div className="flex h-12 w-12 flex-none items-center justify-center rounded-full bg-white shadow-[0_8px_18px_rgba(37,99,235,0.12)]">
+                            <Image src="/icons/engine-market/dark-blue-warranty.png" alt="" width={22} height={22} className="object-contain" />
+                          </div>
+                          <p className="text-[17px] font-extrabold text-[#2563eb] sm:hidden">Our Recommendation</p>
                         </div>
                         <div>
-                          <p className="text-[17px] font-extrabold text-[#2563eb]">Our Recommendation</p>
-                          <p className="mt-2 text-[14px] leading-[1.6] text-[#24405a]">{activeProblem.recommendation}</p>
+                          <p className="hidden text-[17px] font-extrabold text-[#2563eb] sm:block">Our Recommendation</p>
+                          <p className="text-[14px] leading-[1.6] text-[#24405a] sm:mt-2">{activeProblem.recommendation}</p>
                         </div>
                       </div>
                     </div>
@@ -542,17 +548,20 @@ export default function VariantCommonProblemsSection({ data, vehicleImage }: Pro
             )}
 
             <div
-              className={`mt-5 grid gap-4 border border-[#dbe5f2] bg-[#fbfdff] px-5 py-5 ${
+              className={`mt-5 grid gap-4 border border-[#dbe5f2] bg-[#fbfdff] px-4 py-4 sm:px-5 sm:py-5 ${
                 data.reviewSummary ? "lg:grid-cols-[minmax(0,1fr)_320px] lg:items-center" : ""
               }`}
             >
-              <div className="flex items-start gap-4">
-                <div className="flex h-12 w-12 flex-none items-center justify-center rounded-full bg-white text-[#0b2347] shadow-[0_8px_18px_rgba(11,35,71,0.08)]">
-                  <SummaryIcon />
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:gap-4">
+                <div className="flex items-center gap-3 sm:block">
+                  <div className="flex h-12 w-12 flex-none items-center justify-center rounded-full bg-white text-[#0b2347] shadow-[0_8px_18px_rgba(11,35,71,0.08)]">
+                    <SummaryIcon />
+                  </div>
+                  <p className="text-[17px] font-extrabold text-[#0f274d] sm:hidden">Important Information</p>
                 </div>
                 <div>
-                  <p className="text-[17px] font-extrabold text-[#0f274d]">Important Information</p>
-                  <p className="mt-2 text-[15px] leading-[1.7] text-[#314865]">{data.finalCta.disclaimer}</p>
+                  <p className="hidden text-[17px] font-extrabold text-[#0f274d] sm:block">Important Information</p>
+                  <p className="text-[15px] leading-[1.7] text-[#314865] sm:mt-2">{data.finalCta.disclaimer}</p>
                 </div>
               </div>
 

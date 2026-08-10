@@ -14,13 +14,24 @@ type DocumentEnginePageProps = {
 };
 
 function SectionHeading({ tag, title }: { tag: string; title: string }) {
+  const headingSeparator = title.includes(" — ") ? " — " : title.includes(" - ") ? " - " : "";
+  const headingParts = headingSeparator ? title.split(headingSeparator) : [title];
+  const headingLead = headingSeparator ? headingParts.slice(0, -1).join(headingSeparator) : title;
+  const headingAccent = headingSeparator ? headingParts[headingParts.length - 1] : "";
+
   return (
     <div className="max-w-[840px]">
-      <div className="inline-flex items-center rounded-full bg-[#eaf8ee] px-4 py-2 text-[14px] font-extrabold uppercase tracking-[0.04em] text-[#17803d]">
+      <div className="inline-flex items-center rounded-full bg-[#081f47] px-3 py-1.5 text-[11px] font-extrabold uppercase tracking-[0.04em] text-white shadow-[0_8px_18px_rgba(8,31,71,0.16)] sm:px-3.5 sm:text-[12px]">
         {tag}
       </div>
       <h2 className="mt-3 font-['Manrope'] text-[34px] font-extrabold tracking-[-0.04em] text-[#0b2347] sm:text-[42px]">
-        {title}
+        {headingLead}
+        {headingAccent ? (
+          <>
+            <span>{headingSeparator}</span>
+            <span className="text-[#17803d]">{headingAccent}</span>
+          </>
+        ) : null}
       </h2>
     </div>
   );
@@ -131,8 +142,8 @@ function SpecsDataRow({ label, value }: { label: string; value: string }) {
         : "font-semibold text-[#173660]";
 
   return (
-    <div className="grid grid-cols-[144px_minmax(0,1fr)] border-t border-[#e6edf6] first:border-t-0 sm:grid-cols-[258px_minmax(0,1fr)]">
-      <div className="flex items-center gap-2 border-r border-[#e6edf6] px-2.5 py-2 sm:gap-2.5 sm:px-3 sm:py-2.5">
+    <div className="grid grid-cols-[144px_minmax(0,1fr)] border-t border-[#edf3f9] first:border-t-0 sm:grid-cols-[258px_minmax(0,1fr)]">
+      <div className="flex items-center gap-2 border-r border-[#edf3f9] px-2.5 py-2 sm:gap-2.5 sm:px-3 sm:py-2.5">
         <div className="flex h-8 w-8 flex-none items-center justify-center rounded-[10px] border border-[#dde6f2] bg-white text-[#0b2347] shadow-[0_4px_12px_rgba(15,23,42,0.03)] sm:h-9 sm:w-9">
           <SpecsPanelIcon label={label} />
         </div>
@@ -432,6 +443,7 @@ export default function DocumentEnginePage({ data }: DocumentEnginePageProps) {
   const compatibilitySummary = `${data.engine.code} is documented across ${data.sections.compatibility.rows.length} BMW applications spanning ${compatibilityModels}. Registration lookup confirms the exact suffix before quotes are sent.`;
   const costGuideTitleBase = data.sections.costGuide.title.replace(/\s*\(UK\)\s*$/i, "").trim();
   const costGuideHasUk = /\(UK\)\s*$/i.test(data.sections.costGuide.title);
+  const costGuideTag = data.sections.costGuide.tag.replace(/section\s*4\s*/i, "").trim() || "Prices";
   const costGuideInfoLine = renderCopy(data.sections.costGuide.paragraphs[0] ?? "All pricing guidance shown here is indicative.").replace(/^\(|\)$/g, "").trim();
   const costGuidePriceFactors = data.sections.costGuide.paragraphs.slice(1).map((paragraph) => renderCopy(paragraph));
   const costGuideEngineImage = data.sections.hero.engineImage.src;
@@ -441,23 +453,34 @@ export default function DocumentEnginePage({ data }: DocumentEnginePageProps) {
     ? `Verified issue focus: ${commonFailure}.`
     : "Real-world failure data and repair guidance from UK specialists.";
   const variantItems = data.sections.variants.relatives.slice(0, 3);
+  const variantTitleSeparator = data.sections.variants.title.includes(" — ")
+    ? " — "
+    : data.sections.variants.title.includes(" - ")
+      ? " - "
+      : "";
+  const variantTitlePieces = variantTitleSeparator
+    ? data.sections.variants.title.split(variantTitleSeparator)
+    : [data.sections.variants.title];
+  const variantTitleLead = variantTitleSeparator ? variantTitlePieces.slice(0, -1).join(variantTitleSeparator) : data.sections.variants.title;
+  const variantTitleAccent = variantTitleSeparator ? variantTitlePieces[variantTitlePieces.length - 1] : "";
+  const variantCardLabels = ["Easily Confused", "Alternative / Next-Gen Code", "Related JLR Variants"];
   const variantAccentCards = [
     {
-      border: "border-[#ff3a3a]",
+      line: "#ff3a3a",
       glow: "bg-[linear-gradient(180deg,#fff5f5_0%,#ffffff_100%)]",
       pill: "text-[#ff2b2b]",
       iconBg: "bg-[#fff1f1]",
       icon: "/icons/engine-market/imported/accent-engine.png",
     },
     {
-      border: "border-[#ff7a1a]",
+      line: "#ff7a1a",
       glow: "bg-[linear-gradient(180deg,#fff8f1_0%,#ffffff_100%)]",
       pill: "text-[#ff7a1a]",
       iconBg: "bg-[#fff4ea]",
       icon: "/icons/engine-market/imported/accent-upgraded-components.png",
     },
     {
-      border: "border-[#17803d]",
+      line: "#17803d",
       glow: "bg-[linear-gradient(180deg,#f4fcf6_0%,#ffffff_100%)]",
       pill: "text-[#17803d]",
       iconBg: "bg-[#edf9f0]",
@@ -568,7 +591,7 @@ export default function DocumentEnginePage({ data }: DocumentEnginePageProps) {
       <EngineCodeHeroSection data={heroData} />
 
       <Section className="-mt-2 bg-[linear-gradient(180deg,#ffffff_0%,#f7fcf8_100%)] pt-0 pb-2 sm:-mt-2 sm:pt-0 sm:pb-3 lg:-mt-3 lg:pt-0 lg:pb-4">
-        <Container className="!max-w-none !px-2.5 md:!px-0 lg:!pl-3 lg:!pr-0">
+        <Container className="!max-w-[1400px]">
           <div className="py-0">
             <div className="relative overflow-hidden bg-[radial-gradient(circle_at_top_left,#f4f8fe_0%,#ffffff_34%,#ffffff_100%)] py-0 lg:min-h-[520px]">
               <div className="absolute inset-y-0 right-0 hidden w-[74%] lg:block">
@@ -643,7 +666,7 @@ export default function DocumentEnginePage({ data }: DocumentEnginePageProps) {
       </Section>
 
       <Section className="bg-[linear-gradient(180deg,#f8fbff_0%,#f6fbf7_100%)] pt-3 pb-4 sm:pt-4 sm:pb-5 lg:pt-4 lg:pb-6">
-        <Container className="!max-w-none !px-2.5 md:!px-0 lg:!pl-3 lg:!pr-0">
+        <Container className="!max-w-[1400px]">
           <div className="py-0">
             <div className="relative overflow-hidden bg-[radial-gradient(circle_at_top_right,#eef5ff_0%,#ffffff_42%,#f7fbff_100%)]">
               <div className="absolute right-[3%] top-[2%] hidden opacity-[0.06] lg:block">
@@ -668,17 +691,17 @@ export default function DocumentEnginePage({ data }: DocumentEnginePageProps) {
                       <table className="min-w-full border-collapse">
                         <thead className="bg-[#081f47] text-white">
                           <tr>
-                            <th className="px-3 py-3 text-center text-[13px] font-extrabold uppercase tracking-[0.05em]">Model</th>
-                            <th className="px-2 py-3 text-center text-[13px] font-extrabold uppercase tracking-[0.05em]">Generation/Chassis</th>
-                            <th className="px-3 py-3 text-center text-[13px] font-extrabold uppercase tracking-[0.05em]">Badge(s)</th>
-                            <th className="px-3 py-3 text-center text-[13px] font-extrabold uppercase tracking-[0.05em]">Years</th>
+                            <th className="border-r border-white/10 px-3 py-3 text-center text-[13px] font-extrabold uppercase tracking-[0.05em]">Model</th>
+                            <th className="border-r border-white/10 px-2 py-3 text-center text-[13px] font-extrabold uppercase tracking-[0.05em]">Generation/Chassis</th>
+                            <th className="border-r border-white/10 px-3 py-3 text-center text-[13px] font-extrabold uppercase tracking-[0.05em]">Badge(s)</th>
+                            <th className="border-r border-white/10 px-3 py-3 text-center text-[13px] font-extrabold uppercase tracking-[0.05em]">Years</th>
                             <th className="px-3 py-3 text-center text-[13px] font-extrabold uppercase tracking-[0.05em]">Link</th>
                           </tr>
                         </thead>
                         <tbody>
                           {data.sections.compatibility.rows.map((row, index) => (
-                            <tr key={`${row.model}-${row.generation}-${index}`} className="border-t border-[#e7eef8]">
-                              <td className="px-3 py-2.5 align-middle text-[15px] font-bold leading-[1.3] text-[#0b2347]">
+                            <tr key={`${row.model}-${row.generation}-${index}`} className="border-t border-[#edf3f9]">
+                              <td className="border-r border-[#edf3f9] px-3 py-2.5 align-middle text-[15px] font-bold leading-[1.3] text-[#0b2347]">
                                 <div className="flex items-center justify-start gap-2.5 text-left">
                                   <Image
                                     src={modelImageMap[row.model] ?? "/images/brands/bmw/models/bmw-3-series-model-card.png"}
@@ -690,13 +713,13 @@ export default function DocumentEnginePage({ data }: DocumentEnginePageProps) {
                                   <span>{data.brand.name} {row.model}</span>
                                 </div>
                               </td>
-                              <td className="px-2 py-2.5 text-center align-middle text-[15px] font-semibold leading-[1.3] text-[#173660]">
+                              <td className="border-r border-[#edf3f9] px-2 py-2.5 text-center align-middle text-[15px] font-semibold leading-[1.3] text-[#173660]">
                                 {row.generation}
                               </td>
-                              <td className="px-3 py-2.5 text-center align-middle text-[15px] font-semibold leading-[1.3] text-[#173660]">
+                              <td className="border-r border-[#edf3f9] px-3 py-2.5 text-center align-middle text-[15px] font-semibold leading-[1.3] text-[#173660]">
                                 {row.badges}
                               </td>
-                              <td className="whitespace-nowrap px-3 py-2.5 text-center align-middle text-[15px] font-semibold text-[#173660]">
+                              <td className="whitespace-nowrap border-r border-[#edf3f9] px-3 py-2.5 text-center align-middle text-[15px] font-semibold text-[#173660]">
                                 {row.years}
                               </td>
                               <td className="px-3 py-2.5 text-center align-middle">
@@ -784,74 +807,74 @@ export default function DocumentEnginePage({ data }: DocumentEnginePageProps) {
                 </div>
               </div>
 
-              <div className="mt-5 grid gap-4 lg:hidden">
+              <div className="mt-3 grid gap-2.5 lg:hidden">
                 {data.sections.compatibility.rows.map((row, index) => (
                   <article
                     key={`mobile-${row.model}-${row.generation}-${index}`}
-                    className="overflow-hidden rounded-[15px] border border-[#dbe5f2] bg-white shadow-[0_10px_22px_rgba(15,23,42,0.05)]"
+                    className="overflow-hidden rounded-[10px] border border-[#dbe5f2] bg-white shadow-[0_8px_18px_rgba(15,23,42,0.04)]"
                   >
                     <div className="grid grid-cols-[38%_62%]">
-                      <div className="relative min-h-[118px] overflow-hidden bg-[linear-gradient(180deg,#0a2b73_0%,#1643a8_20%,#7ad8ff_52%,#ffffff_100%)]">
-                        <div className="absolute left-[10px] top-1/2 h-[82px] w-[82px] -translate-y-1/2 rounded-full border border-[#d6fbff] shadow-[0_0_12px_rgba(224,242,254,0.98),0_0_26px_rgba(34,211,238,0.74),0_0_44px_rgba(125,211,252,0.38)]" />
+                      <div className="relative min-h-[104px] overflow-hidden bg-[linear-gradient(180deg,#0a2b73_0%,#1643a8_16%,#7ad8ff_50%,#ffffff_100%)]">
+                        <div className="absolute left-[8px] top-1/2 h-[72px] w-[72px] -translate-y-1/2 rounded-full border border-[#d6fbff] shadow-[0_0_12px_rgba(224,242,254,0.98),0_0_24px_rgba(34,211,238,0.72),0_0_38px_rgba(125,211,252,0.34)]" />
                         <Image
                           src={mobileModelCutoutMap[row.model] ?? genericMobileCarCutout}
                           alt={`${data.brand.name} ${row.model}`}
                           fill
                           sizes="38vw"
-                          className="object-contain p-1.5 drop-shadow-[0_10px_14px_rgba(2,6,23,0.24)]"
+                          className="object-contain p-1 drop-shadow-[0_10px_14px_rgba(2,6,23,0.24)]"
                         />
                       </div>
 
-                      <div className="px-2 py-2">
+                      <div className="px-2 py-1.5">
                         <div className="flex items-start gap-1.5">
-                          <div className="flex h-7 w-7 flex-none items-center justify-center bg-[linear-gradient(180deg,#001228_0%,#1570ff_52%,#03122e_100%)] text-[12px] font-black tracking-[-0.04em] text-white shadow-[0_0_18px_rgba(56,189,248,0.62)] [clip-path:polygon(25%_6%,75%_6%,100%_50%,75%_94%,25%_94%,0_50%)]">
+                          <div className="flex h-6 w-6 flex-none items-center justify-center bg-[linear-gradient(180deg,#001228_0%,#1570ff_52%,#03122e_100%)] text-[10px] font-black tracking-[-0.04em] text-white shadow-[0_0_16px_rgba(56,189,248,0.58)] [clip-path:polygon(25%_6%,75%_6%,100%_50%,75%_94%,25%_94%,0_50%)]">
                             {String(index + 1).padStart(2, "0")}
                           </div>
-                          <h3 className="pt-0.5 text-[15px] font-extrabold leading-[1.02] tracking-[-0.04em] text-[#0b2347]">
+                          <h3 className="pt-0.5 text-[14px] font-extrabold leading-[1.02] tracking-[-0.04em] text-[#0b2347]">
                             {data.brand.name} {row.model}
                           </h3>
                         </div>
 
-                        <div className="mt-2 grid gap-1.5">
-                          <div className="grid grid-cols-[110px_minmax(0,1fr)] items-center gap-2 border-b border-[#e8eef7] pb-1.5">
+                        <div className="mt-1.5 grid gap-1">
+                          <div className="grid grid-cols-[104px_minmax(0,1fr)] items-center gap-2 border-b border-[#e8eef7] pb-1">
                             <div className="flex items-center gap-1.5 text-[#17803d]">
                               <span className="scale-110">
                                 <CompatibilityMetaIcon kind="generation" />
                               </span>
-                              <span className="text-[10px] font-bold leading-[1.05] text-[#0b2347]">Generation/Chassis</span>
+                              <span className="text-[9.5px] font-bold leading-[1.05] text-[#0b2347]">Generation/Chassis</span>
                             </div>
-                            <div className="pl-0.5 text-[11px] font-semibold leading-[1.2] text-[#173660]">{row.generation}</div>
+                            <div className="pl-0.5 text-[10.5px] font-semibold leading-[1.2] text-[#173660]">{row.generation}</div>
                           </div>
 
-                          <div className="grid grid-cols-[110px_minmax(0,1fr)] items-center gap-2 border-b border-[#e8eef7] pb-1.5">
+                          <div className="grid grid-cols-[104px_minmax(0,1fr)] items-center gap-2 border-b border-[#e8eef7] pb-1">
                             <div className="flex items-center gap-1.5 text-[#17803d]">
                               <CompatibilityMetaIcon kind="badges" />
-                              <span className="text-[10px] font-bold leading-[1.05] text-[#0b2347]">Badge(s)</span>
+                              <span className="text-[9.5px] font-bold leading-[1.05] text-[#0b2347]">Badge(s)</span>
                             </div>
-                            <div className="pl-0.5 text-[11px] font-semibold leading-[1.2] text-[#173660]">{row.badges}</div>
+                            <div className="pl-0.5 text-[10.5px] font-semibold leading-[1.2] text-[#173660]">{row.badges}</div>
                           </div>
 
-                          <div className="grid grid-cols-[110px_minmax(0,1fr)] items-center gap-2 border-b border-[#e8eef7] pb-1.5">
+                          <div className="grid grid-cols-[104px_minmax(0,1fr)] items-center gap-2 border-b border-[#e8eef7] pb-1">
                             <div className="flex items-center gap-1.5 text-[#17803d]">
                               <CompatibilityMetaIcon kind="years" />
-                              <span className="text-[10px] font-bold leading-[1.05] text-[#0b2347]">Years</span>
+                              <span className="text-[9.5px] font-bold leading-[1.05] text-[#0b2347]">Years</span>
                             </div>
-                            <div className="whitespace-nowrap pl-0.5 text-[11px] font-semibold leading-[1.2] text-[#173660]">{row.years}</div>
+                            <div className="whitespace-nowrap pl-0.5 text-[10.5px] font-semibold leading-[1.2] text-[#173660]">{row.years}</div>
                           </div>
 
-                          <div className="grid grid-cols-[110px_minmax(0,1fr)] items-start gap-2">
+                          <div className="grid grid-cols-[104px_minmax(0,1fr)] items-start gap-2">
                             <div className="flex items-center gap-1.5 text-[#17803d]">
                               <span className="scale-[0.82]">
                                 <CompatibilityMetaIcon kind="link" />
                               </span>
-                              <span className="text-[10px] font-bold leading-[1.05] text-[#0b2347]">Link</span>
+                              <span className="text-[9.5px] font-bold leading-[1.05] text-[#0b2347]">Link</span>
                             </div>
                             <div className="flex flex-wrap items-center gap-x-1 gap-y-0.5">
                               {row.links.map((link) => (
                                 <Link
                                   key={link.label}
                                   href={link.href}
-                                  className="inline-flex items-center gap-0.5 text-[11px] font-bold text-[#1d4ed8] transition hover:text-[#17803d]"
+                                  className="inline-flex items-center gap-0.5 text-[10.5px] font-bold text-[#1d4ed8] transition hover:text-[#17803d]"
                                 >
                                   <span>{link.label}</span>
                                   <span aria-hidden="true">
@@ -868,44 +891,44 @@ export default function DocumentEnginePage({ data }: DocumentEnginePageProps) {
                 ))}
               </div>
 
-              <div className="mt-4 grid gap-4 lg:hidden">
-                <div className="overflow-hidden rounded-[14px] border border-[#103061] bg-[linear-gradient(160deg,#061a40_0%,#0c2a59_74%,#10224c_100%)] px-4 py-4 text-white shadow-[0_16px_34px_rgba(8,31,71,0.2)]">
-                  <div className="flex items-start gap-4">
-                    <div className="flex h-14 w-14 flex-none items-center justify-center rounded-full border border-[#2c6fff] text-[#4ea3ff] shadow-[0_0_22px_rgba(78,163,255,0.22)]">
+              <div className="mt-2.5 grid gap-2.5 lg:hidden">
+                <div className="overflow-hidden rounded-[10px] border border-[#103061] bg-[linear-gradient(160deg,#061a40_0%,#0c2a59_74%,#10224c_100%)] px-3 py-3 text-white shadow-[0_12px_26px_rgba(8,31,71,0.18)]">
+                  <div className="flex items-start gap-3">
+                    <div className="flex h-10 w-10 flex-none items-center justify-center rounded-full border border-[#2c6fff] text-[#4ea3ff] shadow-[0_0_18px_rgba(78,163,255,0.2)]">
                       <GlobeOutlineIcon />
                     </div>
                     <div className="min-w-0">
-                      <div className="text-[18px] font-extrabold tracking-[-0.03em] text-white">CROSS-BRAND</div>
-                      <p className="mt-1.5 max-w-[960px] text-[15px] leading-[1.68] text-[#dce6f5]">{compatibilitySummary}</p>
+                      <div className="text-[15px] font-extrabold tracking-[-0.03em] text-white">CROSS-BRAND</div>
+                      <p className="mt-1 max-w-[960px] text-[13px] leading-[1.52] text-[#dce6f5]">{compatibilitySummary}</p>
                     </div>
                   </div>
                 </div>
 
-                <div className="rounded-[14px] border border-[#dbe5f2] bg-white px-4 py-4 shadow-[0_10px_24px_rgba(15,23,42,0.04)]">
-                  <div className="flex items-start gap-4">
-                    <div className="flex h-14 w-14 flex-none items-center justify-center rounded-full border border-[#cae9d3] text-[#17803d] shadow-[0_10px_22px_rgba(23,128,61,0.08)]">
+                <div className="rounded-[10px] border border-[#dbe5f2] bg-white px-3 py-3 shadow-[0_8px_18px_rgba(15,23,42,0.04)]">
+                  <div className="flex items-start gap-3">
+                    <div className="flex h-10 w-10 flex-none items-center justify-center rounded-full border border-[#cae9d3] text-[#17803d] shadow-[0_8px_18px_rgba(23,128,61,0.07)]">
                       <LockOutlineIcon />
                     </div>
                     <div className="min-w-0">
-                      <div className="text-[18px] font-extrabold tracking-[-0.03em] text-[#0b2347]">Not sure which engine your car has?</div>
-                      <p className="mt-1.5 max-w-[920px] text-[15px] leading-[1.68] text-[#516581]">{data.sections.compatibility.closing}</p>
+                      <div className="text-[15px] font-extrabold tracking-[-0.03em] text-[#0b2347]">Not sure which engine your car has?</div>
+                      <p className="mt-1 max-w-[920px] text-[13px] leading-[1.5] text-[#516581]">{data.sections.compatibility.closing}</p>
                     </div>
                   </div>
                 </div>
 
-                <div className="grid gap-2">
-                  <div className="overflow-hidden rounded-[10px] border border-[#e2bc19] bg-[#ffcc12] shadow-[0_10px_20px_rgba(234,179,8,0.12)]">
-                    <div className="grid min-h-[48px] grid-cols-[130px_1fr]">
-                      <div className="flex items-center gap-3 border-r border-[#d5a800] px-4 text-[#0b2347]">
+                <div className="grid gap-1.5">
+                  <div className="overflow-hidden rounded-[7px] border border-[#e2bc19] bg-[#ffcc12] shadow-[0_8px_18px_rgba(234,179,8,0.1)]">
+                    <div className="grid min-h-[38px] grid-cols-[108px_1fr]">
+                      <div className="flex items-center gap-2 border-r border-[#d5a800] px-2.5 text-[#0b2347]">
                         <UkFlagInlineIcon />
-                        <span className="text-[18px] font-extrabold">{data.sections.hero.quoteCard.countryCode}</span>
+                        <span className="text-[14px] font-extrabold">{data.sections.hero.quoteCard.countryCode}</span>
                         <ChevronDownMiniIcon />
                       </div>
                       <input
                         type="text"
                         aria-label="Vehicle registration"
                         placeholder={data.sections.hero.quoteCard.placeholder}
-                        className="min-w-0 border-0 bg-transparent px-4 text-[16px] font-medium text-[#0b2347] outline-none placeholder:text-[#334155]"
+                        className="min-w-0 border-0 bg-transparent px-2.5 text-[13px] font-medium text-[#0b2347] outline-none placeholder:text-[#334155]"
                       />
                     </div>
                   </div>
@@ -915,7 +938,7 @@ export default function DocumentEnginePage({ data }: DocumentEnginePageProps) {
                     data-quote-context={data.sections.compatibility.title}
                     data-quote-source="engine-compatibility"
                     data-quote-engine-code={data.engine.code}
-                    className="inline-flex min-h-[48px] items-center justify-center gap-3 rounded-[10px] bg-[#0d8d3b] px-5 text-center text-[17px] font-extrabold text-white shadow-[0_10px_22px_rgba(13,141,59,0.16)] transition hover:bg-[#0a7b33]"
+                    className="inline-flex min-h-[38px] items-center justify-center gap-2 rounded-[7px] bg-[#0d8d3b] px-3 text-center text-[14px] font-extrabold text-white shadow-[0_10px_22px_rgba(13,141,59,0.16)] transition hover:bg-[#0a7b33]"
                   >
                     <span>{data.sections.hero.quoteCard.buttonText}</span>
                     <ArrowRightMiniIcon />
@@ -928,7 +951,7 @@ export default function DocumentEnginePage({ data }: DocumentEnginePageProps) {
       </Section>
 
       <Section className="-mt-8 bg-white lg:-mt-10">
-        <Container className="!max-w-none !px-0">
+        <Container className="!max-w-[1400px]">
           <div className="py-0">
             <div className="relative overflow-hidden">
               <div className="absolute inset-x-0 top-0 h-[220px] bg-[radial-gradient(circle_at_top_left,#f5f8ff_0%,#ffffff_52%,#ffffff_100%)]" />
@@ -937,46 +960,43 @@ export default function DocumentEnginePage({ data }: DocumentEnginePageProps) {
               <div className="absolute right-[-10px] top-[90px] h-[140px] w-[330px] rounded-full border border-[#d8e8ff] opacity-60 lg:h-[180px] lg:w-[560px]" />
 
               <div className="relative px-4 pb-4 pt-1.5 sm:px-5 sm:pb-4 sm:pt-2 lg:px-6 lg:pb-4 lg:pt-2">
-                <div className="grid gap-1 lg:grid-cols-[minmax(0,1fr)_520px] lg:items-start">
+                <div className="grid gap-1 lg:grid-cols-[minmax(0,0.92fr)_minmax(480px,0.95fr)] lg:items-start">
                   <div className="relative z-[1] max-w-[760px] pt-0.5">
-                    <div className="flex items-center gap-3 text-[15px] uppercase tracking-[0.18em]">
-                      <span className="font-extrabold text-[#2563eb]">Section 4</span>
-                      <span className="font-semibold text-[#0b2347]">{data.sections.costGuide.tag}</span>
-                    </div>
+                    <span className="inline-flex items-center rounded-full bg-[#0b6b36] px-3 py-1.5 text-[11px] font-extrabold uppercase tracking-[0.04em] text-white shadow-[0_8px_18px_rgba(11,107,54,0.16)] sm:px-3.5 sm:text-[12px]">{costGuideTag}</span>
                     <h2 className="mt-2 font-['Manrope'] text-[34px] font-extrabold leading-[1.02] tracking-[-0.05em] text-[#0b2347] sm:text-[46px] lg:text-[62px]">
                       <span>{costGuideTitleBase} </span>
                       {costGuideHasUk ? <span className="text-[#17803d]">(UK)</span> : null}
                     </h2>
                   </div>
 
-                  <div className="relative min-h-[146px] lg:min-h-[220px]">
+                  <div className="relative min-h-[164px] lg:min-h-[260px] xl:min-h-[282px]">
                     <Image
                       src={genericMobileCarCutout}
                       alt={`${data.brand.name} ${data.engine.code} pricing visual`}
                       fill
-                      sizes="(max-width: 1024px) 92vw, 520px"
-                      className="object-contain object-right-top drop-shadow-[0_18px_22px_rgba(15,23,42,0.16)]"
+                      sizes="(max-width: 1024px) 92vw, 680px"
+                      className="scale-[1.08] object-contain object-right-top drop-shadow-[0_18px_22px_rgba(15,23,42,0.16)] lg:scale-[1.16] xl:scale-[1.24]"
                     />
                   </div>
                 </div>
 
-                <div className="-mt-2 overflow-hidden rounded-[16px] border border-[#dde7f4] bg-white shadow-[0_10px_20px_rgba(15,23,42,0.04)] lg:-mt-10">
+                <div className="-mt-2 overflow-hidden rounded-[14px] border border-[#dde7f4] bg-white shadow-[0_10px_20px_rgba(15,23,42,0.04)] lg:-mt-14">
                   <table className="w-full table-fixed border-collapse">
                     <thead className="bg-[#081f47] text-white">
                       <tr>
-                        <th className="w-[25%] border-r border-[#27406f] px-3 py-2 text-center align-middle sm:px-4 lg:px-5 lg:py-2.5">
+                        <th className="w-[25%] border-r border-white/10 px-3 py-2 text-center align-middle sm:px-4 lg:px-5 lg:py-2.5">
                           <div className="flex min-h-[44px] flex-col items-center justify-center gap-1 sm:flex-row sm:gap-2.5">
                             <AssetIcon src="/icons/engine-market/engine-green.png" className="h-5 w-5 sm:h-8 sm:w-8 lg:h-9 lg:w-9" />
                             <span className="text-[8px] font-extrabold uppercase leading-[1.05] tracking-[0.03em] sm:text-[13px] lg:text-[15px]">Condition</span>
                           </div>
                         </th>
-                        <th className="w-[25%] border-r border-[#27406f] px-3 py-2 text-center align-middle sm:px-4 lg:px-5 lg:py-2.5">
+                        <th className="w-[25%] border-r border-white/10 px-3 py-2 text-center align-middle sm:px-4 lg:px-5 lg:py-2.5">
                           <div className="flex min-h-[44px] flex-col items-center justify-center gap-1 sm:flex-row sm:gap-2.5">
                             <AssetIcon src="/icons/variant/white/em-pound.png" className="h-5 w-5 sm:h-8 sm:w-8 lg:h-9 lg:w-9" />
                             <span className="text-[8px] font-extrabold uppercase leading-[1.05] tracking-[0.03em] sm:text-[13px] lg:text-[15px]">Supply Only</span>
                           </div>
                         </th>
-                        <th className="w-[24%] border-r border-[#27406f] px-3 py-2 text-center align-middle sm:px-4 lg:px-5 lg:py-2.5">
+                        <th className="w-[24%] border-r border-white/10 px-3 py-2 text-center align-middle sm:px-4 lg:px-5 lg:py-2.5">
                           <div className="flex min-h-[44px] flex-col items-center justify-center gap-1 sm:flex-row sm:gap-2.5">
                             <AssetIcon src="/icons/variant/white/supply-fit.png" className="h-5 w-5 sm:h-8 sm:w-8 lg:h-9 lg:w-9" />
                             <div className="text-center">
@@ -1004,17 +1024,17 @@ export default function DocumentEnginePage({ data }: DocumentEnginePageProps) {
                         const conditionTone = row.condition === "Reconditioned" ? "text-[#17803d]" : "text-[#0b2347]";
 
                         return (
-                          <tr key={row.condition} className="border-t border-[#e7eef8]">
-                            <td className="border-r border-[#e7eef8] px-2 py-2.5 align-middle sm:px-4 lg:px-5 lg:py-3.5">
-                              <div className="flex flex-col items-center justify-center gap-1 text-center">
-                                <AssetIcon src={conditionIcon} className="h-8 w-8 sm:h-10 sm:w-10 lg:h-11 lg:w-11" />
+                          <tr key={row.condition} className="border-t border-[#edf3f9]">
+                            <td className="border-r border-[#edf3f9] px-2 py-2.5 align-middle sm:px-4 lg:px-4 lg:py-3">
+                              <div className="flex items-center justify-center gap-2 text-center sm:gap-2.5 lg:justify-start lg:pl-16 lg:text-left">
+                                <AssetIcon src={conditionIcon} className="h-7 w-7 sm:h-8 sm:w-8 lg:h-9 lg:w-9" />
                                 <span className={`text-[11px] font-bold tracking-[-0.02em] sm:text-[15px] lg:text-[17px] ${conditionTone}`}>{row.condition}</span>
                               </div>
                             </td>
-                            <td className="border-r border-[#e7eef8] px-2 py-2.5 text-center text-[11px] font-semibold tracking-[-0.02em] text-[#0b2347] sm:px-4 sm:text-[16px] lg:px-5 lg:py-3.5 lg:text-[20px]">
+                            <td className="border-r border-[#edf3f9] px-2 py-2.5 text-center text-[11px] font-semibold tracking-[-0.02em] text-[#0b2347] sm:px-4 sm:text-[16px] lg:px-5 lg:py-3.5 lg:text-[20px]">
                               {renderCopy(row.supplyOnly)}
                             </td>
-                            <td className="border-r border-[#e7eef8] px-2 py-2.5 text-center text-[11px] font-semibold tracking-[-0.02em] text-[#0b2347] sm:px-4 sm:text-[16px] lg:px-5 lg:py-3.5 lg:text-[20px]">
+                            <td className="border-r border-[#edf3f9] px-2 py-2.5 text-center text-[11px] font-semibold tracking-[-0.02em] text-[#0b2347] sm:px-4 sm:text-[16px] lg:px-5 lg:py-3.5 lg:text-[20px]">
                               {renderCopy(row.fitted)}
                             </td>
                             <td className="px-2 py-2.5 text-center text-[10px] font-medium text-[#173660] sm:px-4 sm:text-[16px] lg:px-5 lg:py-3.5 lg:text-[19px]">
@@ -1029,7 +1049,7 @@ export default function DocumentEnginePage({ data }: DocumentEnginePageProps) {
 
                 <div className="mt-3 grid gap-3 lg:grid-cols-[minmax(0,1fr)_420px] lg:items-start">
                   <div className="grid gap-3">
-                    <div className="rounded-[11px] border border-[#dfe8f5] bg-[linear-gradient(180deg,#ffffff_0%,#f8fbff_100%)] px-3 py-2.5 shadow-[0_8px_18px_rgba(15,23,42,0.03)]">
+                    <div className="rounded-[10px] border border-[#dfe8f5] bg-[linear-gradient(180deg,#ffffff_0%,#f8fbff_100%)] px-3 py-2.5 shadow-[0_8px_18px_rgba(15,23,42,0.03)]">
                       <div className="flex items-center gap-3 text-[#2563eb]">
                         <InfoCircleIcon />
                         <p className="text-[14px] leading-[1.52] text-[#173660] sm:text-[15px]">{costGuideInfoLine}</p>
@@ -1037,7 +1057,7 @@ export default function DocumentEnginePage({ data }: DocumentEnginePageProps) {
                     </div>
 
                     <div className="grid gap-3">
-                      <div className="relative rounded-[12px] border border-[#dce6f2] bg-white px-3 py-3 shadow-[0_8px_18px_rgba(15,23,42,0.03)] before:absolute before:bottom-0 before:left-0 before:top-0 before:w-[3px] before:rounded-l-[12px] before:bg-[#2563eb] before:content-[''] sm:px-4 sm:py-4 sm:before:hidden">
+                      <div className="relative rounded-[10px] border border-[#dce6f2] bg-white px-3 py-3 shadow-[0_8px_18px_rgba(15,23,42,0.03)] before:absolute before:bottom-0 before:left-0 before:top-0 before:w-[3px] before:rounded-l-[10px] before:bg-[#2563eb] before:content-[''] sm:px-4 sm:py-4 sm:before:hidden">
                         <div className="flex items-start gap-3.5">
                           <div className="flex h-[52px] w-[52px] flex-none items-center justify-center rounded-full bg-[#eef4ff] text-[#2563eb] shadow-[0_8px_20px_rgba(37,99,235,0.1)]">
                             <AssetIcon src="/icons/engine-market/dark-blue-supply-fit.png" className="h-8 w-8" />
@@ -1051,7 +1071,7 @@ export default function DocumentEnginePage({ data }: DocumentEnginePageProps) {
                         </div>
                       </div>
 
-                      <div className="relative rounded-[12px] border border-[#dce6f2] bg-white px-3 py-3 shadow-[0_8px_18px_rgba(15,23,42,0.03)] before:absolute before:bottom-0 before:left-0 before:top-0 before:w-[3px] before:rounded-l-[12px] before:bg-[#2563eb] before:content-[''] sm:px-4 sm:py-4 sm:before:hidden">
+                      <div className="relative rounded-[10px] border border-[#dce6f2] bg-white px-3 py-3 shadow-[0_8px_18px_rgba(15,23,42,0.03)] before:absolute before:bottom-0 before:left-0 before:top-0 before:w-[3px] before:rounded-l-[10px] before:bg-[#2563eb] before:content-[''] sm:px-4 sm:py-4 sm:before:hidden">
                         <div className="flex items-start gap-3.5">
                           <div className="flex h-[52px] w-[52px] flex-none items-center justify-center rounded-full bg-[#eef4ff] text-[#2563eb] shadow-[0_8px_20px_rgba(37,99,235,0.1)]">
                             <AssetIcon src="/icons/engine-market/dark-blue-pound.png" className="h-8 w-8" />
@@ -1071,9 +1091,9 @@ export default function DocumentEnginePage({ data }: DocumentEnginePageProps) {
                     </div>
                   </div>
 
-                  <div className="relative overflow-hidden rounded-[12px] border border-[#dce6f2] bg-[linear-gradient(160deg,#fbfefd_0%,#f4fbf7_62%,#eff9f3_100%)] px-2.5 py-2 shadow-[0_10px_20px_rgba(15,23,42,0.04)] lg:self-center lg:px-2.5 lg:py-1.5">
-                    <div className="absolute right-[-24px] top-[16px] h-[140px] w-[140px] rounded-full bg-[radial-gradient(circle,rgba(48,169,87,0.18)_0%,rgba(48,169,87,0)_72%)]" />
-                    <div className="relative z-[1] flex h-full flex-col lg:min-h-[242px]">
+                  <div className="relative overflow-hidden rounded-[10px] border border-[#dce6f2] bg-[linear-gradient(160deg,#fbfefd_0%,#f4fbf7_62%,#eff9f3_100%)] px-2.5 py-2 shadow-[0_10px_20px_rgba(15,23,42,0.04)] lg:self-center lg:px-2 lg:py-1.5">
+                    <div className="absolute right-[-38px] top-[-12px] h-[210px] w-[210px] rounded-full bg-[radial-gradient(circle,rgba(48,169,87,0.22)_0%,rgba(48,169,87,0)_72%)]" />
+                    <div className="relative z-[1] flex h-full flex-col lg:min-h-[232px]">
                       <div className="grid grid-cols-[minmax(0,1fr)_116px] items-start gap-2 lg:block">
                         <div className="min-w-0 lg:max-w-[58%]">
                           <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#17803d] text-white shadow-[0_10px_22px_rgba(23,128,61,0.18)] lg:h-10 lg:w-10">
@@ -1086,13 +1106,13 @@ export default function DocumentEnginePage({ data }: DocumentEnginePageProps) {
                             Get competitive quotes from trusted UK specialists today.
                           </p>
                         </div>
-                        <div className="relative min-h-[108px] lg:absolute lg:right-2 lg:top-3 lg:min-h-[112px] lg:w-[36%]">
+                        <div className="relative min-h-[108px] lg:absolute lg:right-[-18px] lg:top-[-8px] lg:h-[178px] lg:min-h-0 lg:w-[54%]">
                           <Image
                             src="/images/shared/hero-engines/temporary-diesel-engine-cutout.png"
                             alt={`${data.engine.code} engine quote visual`}
                             fill
-                            sizes="(max-width: 1024px) 116px, 420px"
-                            className="object-contain object-top drop-shadow-[0_16px_22px_rgba(15,23,42,0.18)]"
+                            sizes="(max-width: 1024px) 116px, 360px"
+                            className="scale-[1.16] object-contain object-right-top drop-shadow-[0_16px_22px_rgba(15,23,42,0.18)]"
                           />
                         </div>
                       </div>
@@ -1101,7 +1121,7 @@ export default function DocumentEnginePage({ data }: DocumentEnginePageProps) {
                         data-quote-context={data.sections.costGuide.title}
                         data-quote-source="engine-cost-guide"
                         data-quote-engine-code={data.engine.code}
-                        className="relative z-[1] mt-1.5 inline-flex min-h-[40px] w-full items-center justify-center gap-3 rounded-[10px] bg-[#0d8d3b] px-3 py-1 text-center text-[14px] font-semibold text-white shadow-[0_12px_24px_rgba(13,141,59,0.16)] transition hover:bg-[#0a7b33] lg:mt-auto lg:min-h-[42px] lg:text-[15px]"
+                        className="relative z-[1] mt-1.5 inline-flex min-h-[40px] w-full items-center justify-center gap-3 rounded-[8px] bg-[#0d8d3b] px-3 py-1 text-center text-[14px] font-semibold text-white shadow-[0_12px_24px_rgba(13,141,59,0.16)] transition hover:bg-[#0a7b33] lg:mt-auto lg:min-h-[42px] lg:text-[15px]"
                       >
                         <ArrowRightMiniIcon />
                         <span>{data.sections.costGuide.cta}</span>
@@ -1116,33 +1136,35 @@ export default function DocumentEnginePage({ data }: DocumentEnginePageProps) {
       </Section>
 
       <Section className="-mt-5 bg-[linear-gradient(180deg,#ffffff_0%,#fbfefd_100%)] !pt-0 !pb-0 lg:-mt-6 lg:!pb-0">
-        <Container className="!max-w-none !px-0">
+        <Container className="!max-w-[1400px]">
           <div className="py-0">
             <div className="relative px-3 pb-1 pt-0 sm:px-4 sm:pb-2 sm:pt-0 lg:px-2 lg:pb-2 lg:pt-0">
                 <div className="grid gap-2 lg:grid-cols-1 lg:items-start">
-                  <div className="relative z-[1] max-w-none">
-                    <div className="inline-flex items-center rounded-full bg-[#17803d] px-4 py-2 text-[13px] font-extrabold uppercase tracking-[0.04em] text-white shadow-[0_8px_20px_rgba(23,128,61,0.22)]">
-                      {failureTagLabel}
+                  <div className="grid grid-cols-[minmax(0,1fr)_118px] items-start gap-2 lg:block">
+                    <div className="relative z-[1] min-w-0">
+                      <div className="inline-flex items-center rounded-full bg-[#0b6b36] px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-[0.04em] text-white shadow-[0_8px_18px_rgba(11,107,54,0.14)] sm:px-3 sm:text-[11px] lg:px-3.5 lg:py-1.5 lg:text-[12px]">
+                        {failureTagLabel}
+                      </div>
+                      <h2 className="mt-2 font-['Manrope'] text-[27px] font-extrabold leading-[1.02] tracking-[-0.05em] text-[#0b2347] sm:text-[42px] lg:text-[44px] lg:leading-none lg:whitespace-nowrap xl:text-[48px]">
+                        {data.sections.failures.title}
+                      </h2>
+                      <div className="mt-2 h-[3px] w-[46px] rounded-full bg-[#17803d] lg:mt-4 lg:h-[4px] lg:w-[56px]" />
+                      <p className="mt-2 max-w-[740px] text-[12.5px] leading-[1.45] text-[#173660] sm:text-[15px] lg:mt-4 lg:text-[17px] lg:leading-[1.74]">
+                        Every engine has its weak points. Here are the known issues with the {data.engine.code}, based on real-world data and verified failure patterns.
+                      </p>
+                      <p className="mt-1 max-w-[620px] text-[11.5px] leading-[1.38] text-[#516581] sm:text-[13px] lg:mt-2 lg:text-[15px] lg:leading-[1.65]">{failureGuideLine}</p>
                     </div>
-                    <h2 className="mt-3 font-['Manrope'] text-[36px] font-extrabold leading-[1.03] tracking-[-0.05em] text-[#0b2347] sm:text-[48px] lg:text-[44px] lg:leading-none lg:whitespace-nowrap xl:text-[48px]">
-                      {data.sections.failures.title}
-                    </h2>
-                    <div className="mt-4 h-[4px] w-[56px] rounded-full bg-[#17803d]" />
-                    <p className="mt-4 max-w-[740px] text-[17px] leading-[1.74] text-[#173660]">
-                      Every engine has its weak points. Here are the known issues with the {data.engine.code}, based on real-world data and verified failure patterns.
-                    </p>
-                    <p className="mt-2 max-w-[620px] text-[15px] leading-[1.65] text-[#516581]">{failureGuideLine}</p>
-                  </div>
 
-                  <div className="relative min-h-[176px] lg:hidden">
-                    <div className="absolute right-0 top-0 h-full w-full bg-[radial-gradient(circle_at_center,rgba(221,235,255,0.35)_0%,rgba(221,235,255,0)_68%)]" />
-                    <Image
-                      src={genericMobileCarCutout}
-                      alt={`${data.brand.name} ${data.engine.code} common problems visual`}
-                      fill
-                      sizes="(max-width: 1024px) 92vw, 430px"
-                      className="object-contain object-right-top drop-shadow-[0_18px_22px_rgba(15,23,42,0.16)]"
-                    />
+                    <div className="relative min-h-[142px] lg:hidden">
+                      <div className="absolute right-[-16px] top-1 h-[118px] w-[146px] bg-[radial-gradient(circle_at_center,rgba(221,235,255,0.42)_0%,rgba(221,235,255,0)_68%)]" />
+                      <Image
+                        src={genericMobileCarCutout}
+                        alt={`${data.brand.name} ${data.engine.code} common problems visual`}
+                        fill
+                        sizes="120px"
+                        className="object-contain object-right-top drop-shadow-[0_14px_18px_rgba(15,23,42,0.14)]"
+                      />
+                    </div>
                   </div>
                 </div>
 
@@ -1159,21 +1181,21 @@ export default function DocumentEnginePage({ data }: DocumentEnginePageProps) {
                   }))}
                 />
 
-                <div className="mt-6 grid gap-4 lg:hidden">
+                <div className="mt-3 grid gap-2.5 lg:hidden">
                   {failureItems.map((item, index) => {
                     const open = index === 0;
                     return (
                       <details
                         key={item.title}
                         open={open}
-                        className={`overflow-hidden rounded-[20px] border bg-white shadow-[0_12px_24px_rgba(15,23,42,0.05)] ${open ? "border-[#4aa7ff]" : "border-[#dce5f2]"}`}
+                        className={`overflow-hidden rounded-[10px] border bg-white shadow-[0_8px_18px_rgba(15,23,42,0.04)] ${open ? "border-[#4aa7ff]" : "border-[#dce5f2]"}`}
                       >
                         <summary className="list-none cursor-pointer">
-                          <div className={`flex items-center gap-4 px-4 py-4 ${open ? "bg-[linear-gradient(90deg,#061a40_0%,#0a2151_100%)] text-white" : "bg-white text-[#0b2347]"}`}>
-                            <div className={`flex h-14 w-14 flex-none items-center justify-center rounded-[12px] ${open ? "bg-[#0b2f79] text-[#55b4ff]" : "bg-[#081f47] text-white"}`}>
+                          <div className={`flex items-center gap-2.5 px-3 py-3 ${open ? "bg-[linear-gradient(90deg,#061a40_0%,#0a2151_100%)] text-white" : "bg-white text-[#0b2347]"}`}>
+                            <div className={`flex h-10 w-10 flex-none items-center justify-center rounded-[8px] ${open ? "bg-[#0b2f79] text-[#55b4ff]" : "bg-[#081f47] text-white"}`}>
                               <FailureIssueIcon title={item.title} active={open} />
                             </div>
-                            <div className="min-w-0 flex-1 text-[18px] font-extrabold leading-[1.34] tracking-[-0.03em]">
+                            <div className="min-w-0 flex-1 text-[14px] font-extrabold leading-[1.22] tracking-[-0.03em]">
                               {index + 1}. {item.title}
                             </div>
                             <ChevronToggleIcon open={open} />
@@ -1181,39 +1203,39 @@ export default function DocumentEnginePage({ data }: DocumentEnginePageProps) {
                         </summary>
 
                         {open ? (
-                          <div className="grid gap-4 p-4">
-                            <div className="grid gap-4 rounded-[18px] border border-[#e5edf7] bg-white px-4 py-4">
-                              <div className="grid grid-cols-[64px_minmax(0,1fr)] items-start gap-3">
-                                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[#f1faf4] text-[#17803d]">
+                          <div className="grid gap-2.5 p-2.5">
+                            <div className="grid gap-2.5 rounded-[10px] border border-[#e5edf7] bg-white px-3 py-3">
+                              <div className="grid grid-cols-[44px_minmax(0,1fr)] items-start gap-2.5">
+                                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#f1faf4] text-[#17803d]">
                                   <CompatibilityMetaIcon kind="years" />
                                 </div>
                                 <div>
-                                  <div className="text-[17px] font-extrabold text-[#17803d]">Typical onset:</div>
-                                  <div className="mt-1 text-[18px] font-extrabold tracking-[-0.03em] text-[#0b2347]">{renderCopy(item.onset)}</div>
+                                  <div className="text-[13px] font-extrabold text-[#17803d]">Typical onset:</div>
+                                  <div className="mt-0.5 text-[14px] font-extrabold tracking-[-0.03em] text-[#0b2347]">{renderCopy(item.onset)}</div>
                                 </div>
                               </div>
                             </div>
 
-                            <div className="grid gap-4 rounded-[18px] border border-[#e5edf7] bg-white px-4 py-4">
-                              <div className="grid grid-cols-[64px_minmax(0,1fr)] items-start gap-3">
-                                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[#f4f8ff] text-[#0b2347]">
+                            <div className="grid gap-2.5 rounded-[10px] border border-[#e5edf7] bg-white px-3 py-3">
+                              <div className="grid grid-cols-[44px_minmax(0,1fr)] items-start gap-2.5">
+                                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#f4f8ff] text-[#0b2347]">
                                   <SpecsPanelIcon label="Most Common Failure" />
                                 </div>
                                 <div>
-                                  <div className="text-[17px] font-extrabold text-[#0b2347]">What happens:</div>
-                                  <p className="mt-2 text-[16px] leading-[1.72] text-[#173660]">{renderCopy(item.whatHappens)}</p>
+                                  <div className="text-[13px] font-extrabold text-[#0b2347]">What happens:</div>
+                                  <p className="mt-1 text-[13px] leading-[1.5] text-[#173660]">{renderCopy(item.whatHappens)}</p>
                                 </div>
                               </div>
                             </div>
 
-                            <div className="grid gap-4 rounded-[18px] border border-[#e5edf7] bg-white px-4 py-4">
-                              <div className="grid grid-cols-[64px_minmax(0,1fr)] items-start gap-3">
-                                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[#f1faf4] text-[#17803d]">
+                            <div className="grid gap-2.5 rounded-[10px] border border-[#e5edf7] bg-white px-3 py-3">
+                              <div className="grid grid-cols-[44px_minmax(0,1fr)] items-start gap-2.5">
+                                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#f1faf4] text-[#17803d]">
                                   <PriceTableHeaderIcon kind="fitted" />
                                 </div>
                                 <div>
-                                  <div className="text-[17px] font-extrabold text-[#17803d]">Repair vs replace:</div>
-                                  <p className="mt-2 text-[16px] leading-[1.72] text-[#173660]">{renderCopy(item.repairVsReplace)}</p>
+                                  <div className="text-[13px] font-extrabold text-[#17803d]">Repair vs replace:</div>
+                                  <p className="mt-1 text-[13px] leading-[1.5] text-[#173660]">{renderCopy(item.repairVsReplace)}</p>
                                 </div>
                               </div>
                             </div>
@@ -1223,11 +1245,11 @@ export default function DocumentEnginePage({ data }: DocumentEnginePageProps) {
                               data-quote-context={data.sections.failures.title}
                               data-quote-source="engine-failures-mobile"
                               data-quote-engine-code={data.engine.code}
-                              className="flex items-center justify-between rounded-[16px] border border-[#d9e4f6] bg-[#f7fbff] px-4 py-4 text-[#1d4ed8]"
+                              className="flex items-center justify-between rounded-[9px] border border-[#d9e4f6] bg-[#f7fbff] px-3 py-3 text-[#1d4ed8]"
                             >
                               <div className="flex items-center gap-3">
                                 <DocumentLinkIcon />
-                                <span className="text-[16px] font-extrabold tracking-[-0.02em]">Read more about this issue</span>
+                                <span className="text-[13px] font-extrabold tracking-[-0.02em]">Read more about this issue</span>
                               </div>
                               <CompatibilityMetaIcon kind="link" />
                             </a>
@@ -1237,16 +1259,16 @@ export default function DocumentEnginePage({ data }: DocumentEnginePageProps) {
                     );
                   })}
 
-                  <div className="rounded-[20px] border border-[#dce9df] bg-[linear-gradient(180deg,#fbfffc_0%,#f3fbf5_100%)] px-4 py-4 shadow-[0_10px_24px_rgba(15,23,42,0.04)]">
-                    <div className="flex items-start gap-4">
-                      <div className="flex h-14 w-14 flex-none items-center justify-center rounded-[14px] bg-[#17803d] text-white shadow-[0_10px_22px_rgba(23,128,61,0.16)]">
+                  <div className="rounded-[10px] border border-[#dce9df] bg-[linear-gradient(180deg,#fbfffc_0%,#f3fbf5_100%)] px-3 py-3 shadow-[0_8px_18px_rgba(15,23,42,0.04)]">
+                    <div className="flex items-start gap-3">
+                      <div className="flex h-10 w-10 flex-none items-center justify-center rounded-[9px] bg-[#17803d] text-white shadow-[0_8px_18px_rgba(23,128,61,0.14)]">
                         <CompatibilityMetaIcon kind="badges" />
                       </div>
-                      <p className="text-[16px] leading-[1.76] text-[#173660]">{renderCopy(data.sections.failures.goodYearsLine)}</p>
+                      <p className="text-[13px] leading-[1.52] text-[#173660]">{renderCopy(data.sections.failures.goodYearsLine)}</p>
                     </div>
                   </div>
 
-                  <div className="relative overflow-hidden rounded-[22px] bg-[linear-gradient(135deg,#081f47_0%,#071936_100%)] px-5 py-5 text-white shadow-[0_18px_36px_rgba(8,31,71,0.18)]">
+                  <div className="relative overflow-hidden rounded-[10px] bg-[linear-gradient(135deg,#081f47_0%,#071936_100%)] px-3 py-3 text-white shadow-[0_14px_28px_rgba(8,31,71,0.16)]">
                     <div className="absolute right-0 top-0 h-full w-[44%] opacity-20">
                       <Image
                         src={costGuideEngineImage}
@@ -1258,10 +1280,10 @@ export default function DocumentEnginePage({ data }: DocumentEnginePageProps) {
                     </div>
                     <div className="relative z-[1]">
                       <div className="flex items-center gap-4">
-                        <div className="flex h-14 w-14 flex-none items-center justify-center rounded-full bg-[#0b2f79] text-[#48b0ff] shadow-[0_0_22px_rgba(72,176,255,0.35)]">
+                        <div className="flex h-10 w-10 flex-none items-center justify-center rounded-full bg-[#0b2f79] text-[#48b0ff] shadow-[0_0_18px_rgba(72,176,255,0.3)]">
                           <TagOutlineIcon />
                         </div>
-                        <p className="max-w-[360px] font-['Manrope'] text-[22px] font-extrabold leading-[1.34] tracking-[-0.04em] text-white">
+                        <p className="max-w-[360px] font-['Manrope'] text-[17px] font-extrabold leading-[1.24] tracking-[-0.04em] text-white">
                           {data.sections.failures.cta}
                         </p>
                       </div>
@@ -1270,7 +1292,7 @@ export default function DocumentEnginePage({ data }: DocumentEnginePageProps) {
                         data-quote-context={data.sections.failures.title}
                         data-quote-source="engine-failures-mobile-cta"
                         data-quote-engine-code={data.engine.code}
-                        className="mt-5 inline-flex min-h-[54px] w-full items-center justify-center rounded-[12px] bg-[#0d8d3b] px-4 py-2 text-center text-[17px] font-extrabold text-white shadow-[0_14px_26px_rgba(13,141,59,0.18)]"
+                        className="mt-3 inline-flex min-h-[40px] w-full items-center justify-center rounded-[7px] bg-[#0d8d3b] px-3 py-1.5 text-center text-[14px] font-extrabold text-white shadow-[0_10px_22px_rgba(13,141,59,0.16)]"
                       >
                         Compare Rebuilt {data.engine.code} Prices
                       </a>
@@ -1283,86 +1305,85 @@ export default function DocumentEnginePage({ data }: DocumentEnginePageProps) {
       </Section>
 
       <Section className="bg-white !py-0">
-        <Container className="!max-w-none !px-0">
+        <Container className="!max-w-[1400px]">
           <div className="py-0">
             <div className="relative overflow-hidden bg-[radial-gradient(circle_at_top_left,#eef5ff_0%,#ffffff_36%,#ffffff_100%)] px-2.5 py-0.5 sm:px-3 sm:py-1 lg:px-1 lg:py-1">
-              <div className="absolute right-0 top-0 h-full w-full bg-[radial-gradient(circle_at_right_center,rgba(86,161,255,0.16)_0%,rgba(86,161,255,0.06)_18%,rgba(255,255,255,0)_44%)]" />
+              <div className="absolute right-0 top-0 h-[330px] w-[58%] bg-[radial-gradient(circle_at_right_center,rgba(86,161,255,0.14)_0%,rgba(86,161,255,0.05)_28%,rgba(255,255,255,0)_62%)]" />
               <div className="relative z-[1]">
-                <div className="flex flex-wrap items-center gap-2">
-                  <div className="inline-flex items-center gap-2 rounded-[9px] border border-[#cfe0ff] bg-white px-2.5 py-1.5 text-[11px] font-bold tracking-[-0.02em] text-[#2563eb] shadow-[0_6px_14px_rgba(37,99,235,0.05)] sm:text-[12px]">
-                    <span className="flex h-5 w-5 items-center justify-center rounded-full border border-current">
-                      <svg viewBox="0 0 20 20" className="h-3.5 w-3.5" fill="none" aria-hidden="true">
-                        <path d="M6 10h8M10 6v8" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-                      </svg>
-                    </span>
-                    SECTION 6 - SUB-CODES &amp; TECHNICAL VARIANTS
-                  </div>
-                  <div className="inline-flex items-center rounded-[9px] border border-[#dbe4f3] bg-white px-2.5 py-1.5 text-[11px] font-medium tracking-[-0.02em] text-[#0b2347] shadow-[0_6px_14px_rgba(15,23,42,0.035)] sm:text-[12px]">
-                    TAG: {data.sections.variants.tag}
-                  </div>
-                </div>
+                <span className="inline-flex items-center rounded-full bg-[#0b6b36] px-3 py-1.5 text-[11px] font-extrabold uppercase tracking-[0.04em] text-white shadow-[0_8px_18px_rgba(11,107,54,0.16)] sm:px-3.5 sm:text-[12px]">
+                  {data.sections.variants.tag}
+                </span>
 
-                <div className="relative mt-2 min-h-[238px] overflow-hidden rounded-[12px] sm:min-h-[258px] lg:min-h-[270px]">
-                  <div className="absolute -top-8 bottom-4 right-[-2%] min-h-[140px] w-full sm:-top-10 lg:-top-12 lg:right-[4%] lg:w-[62%]">
-                    <div className="absolute inset-y-0 right-0 z-[1] w-full bg-[linear-gradient(90deg,#ffffff_0%,rgba(255,255,255,0.96)_14%,rgba(255,255,255,0.76)_30%,rgba(255,255,255,0.18)_58%,rgba(255,255,255,0)_100%)]" />
-                    <div className="absolute inset-y-0 left-0 hidden w-[72%] rounded-full border border-[#d9e7ff] opacity-65 lg:block" />
-                    <div className="absolute inset-y-[10%] left-[8%] hidden w-[58%] rounded-full border border-[#d9e7ff] opacity-40 lg:block" />
+                <div className="relative mt-2 grid grid-cols-[minmax(0,1fr)_118px] items-start gap-2 lg:grid-cols-[minmax(0,0.58fr)_minmax(360px,0.42fr)] lg:gap-3">
+                  <div className="relative z-[2] max-w-[760px] pt-0.5">
+                    <h2 className="font-['Manrope'] text-[27px] font-extrabold leading-[1.02] tracking-[-0.06em] text-[#0b2347] sm:text-[42px] lg:text-[42px] xl:text-[48px]">
+                      {variantTitleLead}
+                      {variantTitleAccent ? (
+                        <>
+                          <span>{variantTitleSeparator}</span>
+                          <span className="text-[#17803d]">{variantTitleAccent}</span>
+                        </>
+                      ) : null}
+                    </h2>
+                    <p className="mt-2 max-w-[720px] text-[12.5px] leading-[1.42] text-[#173660] sm:text-[15px] lg:mt-2.5 lg:text-[16px] lg:leading-[1.55]">
+                      {renderCopy(data.sections.variants.intro)}
+                    </p>
+                  </div>
+
+                  <div className="relative min-h-[132px] overflow-hidden rounded-[8px] sm:min-h-[220px] lg:min-h-[238px] lg:rounded-[10px]">
+                    <div className="absolute inset-y-0 left-[-14%] z-[1] w-[50%] bg-[linear-gradient(90deg,#ffffff_0%,rgba(255,255,255,0.88)_45%,rgba(255,255,255,0)_100%)]" />
+                    <div className="absolute inset-0 rounded-full border border-[#d9e7ff] opacity-45" />
                     <Image
                       src={costGuideEngineImage}
                       alt={`${data.engine.code} variant reference`}
                       fill
-                      sizes="(max-width: 1024px) 100vw, 58vw"
-                      className="object-contain object-left-top lg:scale-[1.2]"
+                      sizes="(max-width: 1024px) 118px, 500px"
+                      className="object-contain object-right-top drop-shadow-[0_12px_18px_rgba(15,23,42,0.12)] lg:scale-[1.08]"
                     />
-                  </div>
-
-                  <div className="relative z-[2] max-w-[1040px] pt-1 lg:max-w-[1120px]">
-                    <h2 className="font-['Manrope'] text-[32px] font-extrabold leading-[1.02] tracking-[-0.06em] text-[#0b2347] sm:text-[42px] lg:whitespace-nowrap lg:text-[42px] xl:text-[48px]">
-                      {data.sections.variants.title}
-                    </h2>
-                    <div className="mt-2.5 h-[4px] w-12 rounded-full bg-[#2563eb]" />
-                    <p className="mt-2.5 max-w-[760px] text-[14px] leading-[1.52] text-[#173660] sm:text-[15px] lg:text-[16px] lg:leading-[1.55]">
-                      {renderCopy(data.sections.variants.intro)}
-                    </p>
                   </div>
                 </div>
 
-                <div className="relative z-[3] -mt-[96px] w-full rounded-[9px] border border-[#cfe0ff] bg-white/92 px-2.5 py-2 shadow-[0_8px_18px_rgba(37,99,235,0.045)] backdrop-blur-sm sm:-mt-[112px] sm:px-3 lg:-mt-[138px]">
-                  <div className="grid gap-2 sm:grid-cols-[38px_minmax(0,1fr)] sm:items-start">
-                    <div className="flex h-9 w-9 items-center justify-center rounded-[8px] bg-[linear-gradient(180deg,#ffffff_0%,#eef5ff_100%)] text-[#2563eb] shadow-[0_8px_16px_rgba(37,99,235,0.08)]">
+                <div className="relative z-[3] mt-2 w-full rounded-[8px] border border-[#cfe0ff] bg-white/92 px-2.5 py-2 shadow-[0_8px_18px_rgba(37,99,235,0.045)] backdrop-blur-sm sm:px-3">
+                  <div className="grid grid-cols-[34px_minmax(0,1fr)] items-start gap-2">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-[7px] bg-[linear-gradient(180deg,#ffffff_0%,#eef5ff_100%)] text-[#2563eb] shadow-[0_8px_16px_rgba(37,99,235,0.08)] sm:h-9 sm:w-9 sm:rounded-[8px]">
                       <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" aria-hidden="true">
                         <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.9" />
                         <path d="M12 10v6M12 7h.01" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
                       </svg>
                     </div>
-                    <p className="text-[13px] leading-[1.48] tracking-[-0.02em] text-[#173660] sm:text-[14px] lg:text-[14.5px]">
+                    <p className="text-[12.5px] leading-[1.44] tracking-[-0.02em] text-[#173660] sm:text-[14px] lg:text-[14.5px]">
                       {renderCopy(data.sections.variants.closing)}
                     </p>
                   </div>
                 </div>
 
-                <div className="mt-2.5 grid gap-2.5 lg:grid-cols-3">
+                <div className="mt-2.5 grid items-stretch gap-2 lg:gap-2.5 lg:grid-cols-3">
                   {variantItems.map((item, index) => {
                     const accent = variantAccentCards[index] ?? variantAccentCards[variantAccentCards.length - 1];
+                    const label = variantCardLabels[index] ?? "Engine Variant";
                     return (
                       <div
                         key={item.code}
-                        className={`relative overflow-hidden rounded-[10px] border border-[#e3ebf6] ${accent.glow} px-2.5 py-2.5 shadow-[0_8px_18px_rgba(15,23,42,0.035)] before:absolute before:bottom-0 before:left-0 before:top-0 before:w-[3px] before:rounded-l-[10px] before:${accent.border} before:content-[''] sm:px-3 sm:py-3 lg:min-h-[160px] lg:px-3 lg:py-3`}
+                        className={`relative flex h-full min-h-0 overflow-hidden rounded-[8px] border border-[#e8eef7] ${accent.glow} px-2.5 py-2.5 shadow-[0_6px_14px_rgba(15,23,42,0.025)] lg:min-h-[150px] lg:rounded-[9px] lg:px-3 lg:py-3`}
                       >
-                        <div className="relative z-[1] flex items-start gap-2.5">
-                          <div className={`flex h-[50px] w-[50px] flex-none items-center justify-center rounded-[9px] ${accent.iconBg} shadow-[0_8px_16px_rgba(15,23,42,0.035)] sm:h-14 sm:w-14`}>
-                            <AssetIcon src={accent.icon} className="h-8 w-8 sm:h-9 sm:w-9" />
-                          </div>
-                          <div className="min-w-0 flex-1">
-                            <div className={`text-[10px] font-extrabold uppercase tracking-[0.04em] ${accent.pill}`}>{item.code}</div>
-                            <div className="mt-0.5 text-[20px] font-extrabold leading-[1.02] tracking-[-0.05em] text-[#0b2347] sm:text-[22px]">
-                              {item.code}
+                        <div className="absolute inset-x-0 bottom-0 h-[3px]" style={{ backgroundColor: accent.line }} />
+                        <div className="relative z-[1] flex min-h-full flex-col">
+                          <div className="flex items-start justify-between gap-3">
+                            <div className={`flex h-[42px] w-[42px] flex-none items-center justify-center rounded-[8px] ${accent.iconBg} shadow-[0_8px_16px_rgba(15,23,42,0.035)] lg:h-[50px] lg:w-[50px] lg:rounded-[9px]`}>
+                              <AssetIcon src={accent.icon} className="h-7 w-7 lg:h-8 lg:w-8" />
                             </div>
-                            <p className="mt-1.5 text-[13px] leading-[1.46] text-[#173660] sm:text-[14px]">
-                              {renderCopy(item.description)}
-                            </p>
+                            <div className={`${accent.pill} mt-0.5`}>
+                              <ArrowRightMiniIcon />
+                            </div>
                           </div>
-                          <div className={`${accent.pill} mt-1 hidden lg:flex`}>
+                          <div className={`mt-1.5 text-[9.5px] font-extrabold uppercase tracking-[0.04em] ${accent.pill} lg:mt-2 lg:text-[10px]`}>{label}</div>
+                          <div className="mt-0.5 text-[20px] font-extrabold leading-[1.02] tracking-[-0.05em] text-[#0b2347] lg:text-[22px]">
+                            {item.code}
+                          </div>
+                          <p className="mt-1 text-[12.5px] leading-[1.38] text-[#173660] lg:mt-1.5 lg:text-[13px] lg:leading-[1.44]">
+                            {renderCopy(item.description)}
+                          </p>
+                          <div className={`${accent.pill} mt-auto hidden`}>
                             <ArrowRightMiniIcon />
                           </div>
                         </div>
@@ -1371,14 +1392,14 @@ export default function DocumentEnginePage({ data }: DocumentEnginePageProps) {
                   })}
                 </div>
 
-                <div className="mt-2.5 rounded-[10px] border border-[#ccdcff] bg-[linear-gradient(180deg,#ffffff_0%,#f8fbff_100%)] px-2.5 py-2.5 shadow-[0_8px_18px_rgba(37,99,235,0.045)] sm:px-3 sm:py-3 lg:px-3 lg:py-2.5">
-                  <div className="grid gap-2.5 lg:grid-cols-[minmax(0,1fr)_420px] lg:items-center">
-                    <div className="grid gap-2.5 sm:grid-cols-[52px_minmax(0,1fr)] sm:items-center">
-                      <div className="flex h-11 w-11 items-center justify-center rounded-[9px] border border-[#d7e5ff] bg-[linear-gradient(180deg,#ffffff_0%,#eef5ff_100%)] text-[#2563eb] shadow-[0_8px_16px_rgba(37,99,235,0.08)]">
+                <div className="mt-2.5 rounded-[9px] border border-[#ccdcff] bg-[linear-gradient(180deg,#ffffff_0%,#f8fbff_100%)] px-2.5 py-2 shadow-[0_8px_18px_rgba(37,99,235,0.045)] sm:px-3 lg:px-3">
+                  <div className="grid gap-2.5 lg:grid-cols-[minmax(0,1fr)_400px] lg:items-center">
+                    <div className="grid gap-2 sm:grid-cols-[48px_minmax(0,1fr)] sm:items-center">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-[8px] border border-[#d7e5ff] bg-[linear-gradient(180deg,#ffffff_0%,#eef5ff_100%)] text-[#2563eb] shadow-[0_8px_16px_rgba(37,99,235,0.08)]">
                         <LockOutlineIcon />
                       </div>
                       <div>
-                        <h3 className="font-['Manrope'] text-[19px] font-extrabold leading-[1.04] tracking-[-0.04em] text-[#0b2347] sm:text-[21px]">
+                        <h3 className="font-['Manrope'] text-[18px] font-extrabold leading-[1.04] tracking-[-0.04em] text-[#0b2347] sm:text-[20px]">
                           Confirm the exact {data.engine.code} fitment
                         </h3>
                         <p className="mt-1 max-w-[620px] text-[12.5px] leading-[1.42] text-[#173660] sm:text-[13.5px]">
@@ -1387,8 +1408,8 @@ export default function DocumentEnginePage({ data }: DocumentEnginePageProps) {
                       </div>
                     </div>
 
-                    <div className="grid gap-1.5 rounded-[9px] border border-[#dbe5f6] bg-white p-1.5 sm:grid-cols-[minmax(0,1fr)_150px] sm:items-stretch lg:max-w-[420px]">
-                      <div className="flex min-h-[38px] items-center gap-2 rounded-[7px] border border-[#dce6f2] bg-white px-2 text-[#0b2347]">
+                    <div className="grid gap-1.5 rounded-[8px] border border-[#dbe5f6] bg-white p-1.5 sm:grid-cols-[minmax(0,1fr)_144px] sm:items-stretch lg:max-w-[400px]">
+                      <div className="flex min-h-[36px] items-center gap-2 rounded-[6px] border border-[#dce6f2] bg-white px-2 text-[#0b2347]">
                         <UkFlagInlineIcon />
                         <ChevronDownMiniIcon />
                         <div className="h-6 w-px bg-[#dbe5f2]" />
@@ -1403,7 +1424,7 @@ export default function DocumentEnginePage({ data }: DocumentEnginePageProps) {
                         data-quote-context={data.sections.variants.title}
                         data-quote-source="engine-variants-confirm"
                         data-quote-engine-code={data.engine.code}
-                        className="inline-flex min-h-[38px] items-center justify-center gap-1.5 rounded-[7px] bg-[linear-gradient(180deg,#2f76ff_0%,#2563eb_100%)] px-2.5 text-center text-[13px] font-semibold text-white shadow-[0_10px_20px_rgba(37,99,235,0.16)] transition hover:brightness-95"
+                        className="inline-flex min-h-[36px] items-center justify-center gap-1.5 rounded-[6px] bg-[linear-gradient(180deg,#2f76ff_0%,#2563eb_100%)] px-2.5 text-center text-[13px] font-semibold text-white shadow-[0_10px_20px_rgba(37,99,235,0.16)] transition hover:brightness-95"
                       >
                         <span>Confirm Engine</span>
                         <ArrowRightMiniIcon />
@@ -1418,39 +1439,38 @@ export default function DocumentEnginePage({ data }: DocumentEnginePageProps) {
       </Section>
 
       <Section className="bg-[linear-gradient(180deg,#ffffff_0%,#fbfefd_100%)] !py-0">
-        <Container className="!max-w-none !px-0">
-          <div className="px-3 py-1 sm:px-4 sm:py-1.5 lg:px-2 lg:py-1.5">
+        <Container className="!max-w-[1400px]">
+          <div className="px-3 py-0.5 sm:px-4 sm:py-1 lg:px-2 lg:py-0.5">
             <div className="max-w-[1180px]">
-              <div className="inline-flex items-center rounded-[9px] bg-[#0b6b36] px-3 py-1.5 text-[12px] font-extrabold uppercase tracking-[0.04em] text-white shadow-[0_8px_18px_rgba(11,107,54,0.14)]">
+              <div className="inline-flex items-center rounded-full bg-[#0b6b36] px-3 py-1.5 text-[11px] font-extrabold uppercase tracking-[0.04em] text-white shadow-[0_8px_18px_rgba(11,107,54,0.16)] sm:px-3.5 sm:text-[12px]">
                 {data.sections.buyingGuide.tag}
               </div>
-              <h2 className="mt-2 font-['Manrope'] text-[31px] font-extrabold leading-[1.05] tracking-[-0.05em] text-[#0b2347] sm:text-[40px] lg:text-[48px]">
+              <h2 className="mt-1.5 font-['Manrope'] text-[30px] font-extrabold leading-[1.04] tracking-[-0.05em] text-[#0b2347] sm:text-[36px] lg:text-[38px]">
                 {data.sections.buyingGuide.title}
               </h2>
-              <div className="mt-3 h-[4px] w-12 rounded-full bg-[#17803d]" />
-              <p className="mt-3 max-w-[860px] text-[15px] leading-[1.58] text-[#173660] sm:text-[16px] lg:text-[17px]">
+              <p className="mt-1.5 max-w-[860px] text-[13.5px] leading-[1.42] text-[#173660] sm:text-[14px] lg:text-[14.5px]">
                 Choosing the right replacement route depends on your budget, risk tolerance, and ownership goals. Here&apos;s a breakdown of your options.
               </p>
             </div>
 
-            <div className="mt-4 grid gap-3 lg:grid-cols-2">
+            <div className="mt-2.5 grid items-start gap-2 lg:grid-cols-2">
               {buyingGuideCards.map((card) => (
-                <div key={card.label} className="overflow-hidden rounded-[12px] border border-[#dbe5f2] bg-white shadow-[0_8px_18px_rgba(15,23,42,0.035)]">
-                  <div className="flex items-start gap-3 px-3 py-3 sm:px-4 sm:py-3.5 lg:gap-4 lg:px-4 lg:py-4">
-                    <div className={`flex h-[70px] w-[70px] flex-none items-center justify-center rounded-[10px] ${card.tile} shadow-[0_10px_20px_rgba(15,23,42,0.1)] sm:h-[78px] sm:w-[78px]`}>
-                      <AssetIcon src={card.icon} className="h-11 w-11 sm:h-12 sm:w-12" />
+                <div key={card.label} className="overflow-hidden rounded-[9px] border border-[#dbe5f2] bg-white shadow-[0_5px_12px_rgba(15,23,42,0.025)]">
+                  <div className="flex items-start gap-2.5 px-2.5 py-2 sm:px-3 sm:py-2.5 lg:gap-2.5 lg:px-2.5 lg:py-2">
+                    <div className={`flex h-[48px] w-[48px] flex-none items-center justify-center rounded-[7px] ${card.tile} shadow-[0_7px_14px_rgba(15,23,42,0.08)] sm:h-[54px] sm:w-[54px] lg:h-[50px] lg:w-[50px]`}>
+                      <AssetIcon src={card.icon} className="h-7 w-7 sm:h-8 sm:w-8" />
                     </div>
                     <div className="min-w-0 flex-1">
-                      <h3 className={`font-['Manrope'] text-[21px] font-extrabold leading-[1.04] tracking-[-0.04em] ${card.heading} sm:text-[23px] lg:text-[25px]`}>
+                      <h3 className={`font-['Manrope'] text-[17px] font-extrabold leading-[1.04] tracking-[-0.04em] ${card.heading} sm:text-[18px] lg:text-[18px]`}>
                         {card.label}:
                       </h3>
-                      <p className="mt-1.5 text-[14px] leading-[1.58] text-[#173660] sm:text-[15px] lg:text-[15.5px]">
+                      <p className="mt-0.5 text-[12.5px] leading-[1.36] text-[#173660] sm:text-[13px] lg:text-[13px]">
                         {card.body}
                       </p>
                     </div>
                   </div>
-                  <div className="flex items-center justify-between border-t border-[#dbe5f2] px-3 py-2.5 sm:px-4">
-                    <Link href={card.href} className={`text-[15px] font-semibold tracking-[-0.02em] ${card.link} transition hover:opacity-80`}>
+                  <div className="flex items-center justify-between border-t border-[#e5edf7] px-2.5 py-1 sm:px-3">
+                    <Link href={card.href} className={`text-[12px] font-semibold tracking-[-0.02em] ${card.link} transition hover:opacity-80 sm:text-[12.5px]`}>
                       {card.linkText}
                     </Link>
                     <div className={card.link}>
@@ -1461,27 +1481,32 @@ export default function DocumentEnginePage({ data }: DocumentEnginePageProps) {
               ))}
             </div>
 
-            <div className="mt-3 rounded-[12px] border border-[#dbe5f2] bg-[linear-gradient(180deg,#ffffff_0%,#f8fcf9_100%)] px-3 py-3 shadow-[0_8px_18px_rgba(15,23,42,0.035)] sm:px-4 sm:py-3.5 lg:grid lg:grid-cols-[minmax(0,1fr)_340px] lg:items-center lg:gap-4">
-              <div className="grid gap-3 sm:grid-cols-[76px_minmax(0,1fr)] sm:items-center">
-                <div className="flex h-[68px] w-[68px] items-center justify-center rounded-[10px] bg-[#0b6b36] text-white shadow-[0_10px_20px_rgba(11,107,54,0.12)]">
+            <div className="mt-2 rounded-[9px] border border-[#dbe5f2] bg-[linear-gradient(180deg,#ffffff_0%,#f8fcf9_100%)] px-2.5 py-2 shadow-[0_5px_12px_rgba(15,23,42,0.025)] sm:px-3 lg:grid lg:grid-cols-[minmax(0,1fr)_310px] lg:items-center lg:gap-2.5">
+              <div className="grid gap-2 sm:grid-cols-[52px_minmax(0,1fr)] sm:items-center">
+                <div className="flex h-[46px] w-[46px] items-center justify-center rounded-[7px] bg-[#0b6b36] text-white shadow-[0_7px_14px_rgba(11,107,54,0.09)]">
                   <VehicleValueIcon />
                 </div>
                 <div className="min-w-0">
-                  <h3 className="font-['Manrope'] text-[22px] font-extrabold leading-[1.04] tracking-[-0.04em] text-[#146f38] sm:text-[24px] lg:text-[25px]">Vehicle Value Note:</h3>
-                  <p className="mt-1.5 text-[14px] leading-[1.58] text-[#173660] sm:text-[15px] lg:text-[15.5px]">{renderCopy(data.sections.buyingGuide.vehicleValueNote)}</p>
+                  <h3 className="font-['Manrope'] text-[17px] font-extrabold leading-[1.04] tracking-[-0.04em] text-[#146f38] sm:text-[18px] lg:text-[18px]">Vehicle Value Note:</h3>
+                  <p className="mt-0.5 text-[12.5px] leading-[1.34] text-[#173660] sm:text-[13px] lg:text-[13px]">{renderCopy(data.sections.buyingGuide.vehicleValueNote)}</p>
                 </div>
               </div>
 
-              <div className="mt-3 min-w-0 border-t border-[#dbe5f2] pt-3 lg:mt-0 lg:border-l lg:border-t-0 lg:pl-4 lg:pt-0">
-                <h3 className="font-['Manrope'] text-[24px] font-extrabold leading-[1.04] tracking-[-0.05em] text-[#0b2347] sm:text-[27px] lg:text-[24px]">
-                  {data.sections.buyingGuide.cta}
-                </h3>
+              <div className="mt-2 min-w-0 border-t border-[#dbe5f2] pt-2 lg:mt-0 lg:border-l lg:border-t-0 lg:pl-2.5 lg:pt-0">
+                <div className="grid grid-cols-[42px_minmax(0,1fr)] items-center gap-2">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#eaf8ee] text-[#0b6b36] shadow-[0_7px_14px_rgba(11,107,54,0.08)]">
+                    <AssetIcon src="/icons/engine-market/imported/blue-engine.png" className="h-6 w-6" />
+                  </div>
+                  <h3 className="font-['Manrope'] text-[17px] font-extrabold leading-[1.04] tracking-[-0.05em] text-[#0b2347] sm:text-[19px] lg:text-[18px]">
+                    {data.sections.buyingGuide.cta}
+                  </h3>
+                </div>
                 <a
                   href="#quote-form"
                   data-quote-context={data.sections.buyingGuide.title}
                   data-quote-source="engine-buying-guide"
                   data-quote-engine-code={data.engine.code}
-                  className="mt-2 inline-flex min-h-[42px] w-full items-center justify-center gap-2 rounded-[8px] bg-[#0d8d3b] px-3 py-1 text-center text-[15px] font-semibold text-white shadow-[0_10px_20px_rgba(13,141,59,0.14)] transition hover:bg-[#0a7b33]"
+                  className="mt-1.5 inline-flex min-h-[32px] w-full items-center justify-center gap-2 rounded-[6px] bg-[#0d8d3b] px-2.5 py-0.5 text-center text-[12.5px] font-semibold text-white shadow-[0_7px_14px_rgba(13,141,59,0.1)] transition hover:bg-[#0a7b33]"
                 >
                   <span>{data.sections.buyingGuide.cta}</span>
                   <ArrowRightMiniIcon />
@@ -1493,55 +1518,54 @@ export default function DocumentEnginePage({ data }: DocumentEnginePageProps) {
       </Section>
 
       <Section className="bg-white !py-0">
-        <Container className="!max-w-none !px-0">
+        <Container className="!max-w-[1400px]">
           <div className="py-0">
             <div className="px-3 py-1 sm:px-4 sm:py-1.5 lg:px-4 lg:py-1.5">
               <div className="max-w-[980px]">
-                <div className="inline-flex items-center rounded-full bg-[#0b6b36] px-4 py-2 text-[14px] font-extrabold uppercase tracking-[0.04em] text-white shadow-[0_10px_24px_rgba(11,107,54,0.18)]">
+                <div className="inline-flex items-center rounded-full bg-[#0b6b36] px-3 py-1.5 text-[11px] font-extrabold uppercase tracking-[0.04em] text-white shadow-[0_8px_18px_rgba(11,107,54,0.16)] sm:px-3.5 sm:text-[12px]">
                   {data.sections.related.tag}
                 </div>
-                <h2 className="mt-3 font-['Manrope'] text-[32px] font-extrabold leading-[1.06] tracking-[-0.05em] text-[#0b2347] sm:text-[40px] lg:text-[48px]">
+                <h2 className="mt-2 font-['Manrope'] text-[28px] font-extrabold leading-[1.04] tracking-[-0.05em] text-[#0b2347] sm:text-[40px] lg:mt-3 lg:text-[48px]">
                   {data.sections.related.title}
                 </h2>
-                <div className="mt-3 h-[5px] w-14 rounded-full bg-[#17803d]" />
-                <p className="mt-3 max-w-[920px] text-[16px] leading-[1.68] text-[#173660] sm:text-[17px] lg:text-[18px]">
-                  Explore engines that are closely related to the {data.brand.name} {data.engine.code} - including its predecessor, successor, and key family variants.
+                <p className="mt-2 max-w-[920px] text-[13px] leading-[1.45] text-[#173660] sm:text-[17px] lg:mt-3 lg:text-[18px] lg:leading-[1.68]">
+                  Explore engines that are closely related to the {data.brand.name} {data.engine.code}, including its predecessor, successor, and key family variants.
                 </p>
               </div>
 
-              <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+              <div className="mt-3 grid grid-cols-2 gap-2 md:grid-cols-2 lg:mt-4 lg:gap-3 xl:grid-cols-4">
                 {data.sections.related.items.map((item, index) => {
                   const meta = relatedCardMeta[index % relatedCardMeta.length];
                   return (
                     <Link
                       key={`${item.relation}-${item.code}`}
                       href={item.href}
-                      className="group rounded-[18px] bg-white px-4 py-4 transition hover:-translate-y-[2px] sm:px-4 sm:py-4 lg:px-4 lg:py-3.5"
+                      className="group rounded-[10px] bg-white px-2.5 py-3 shadow-[0_6px_14px_rgba(15,23,42,0.035)] transition hover:-translate-y-[2px] sm:px-4 sm:py-4 lg:rounded-[18px] lg:px-4 lg:py-3.5"
                     >
                       <div className="flex h-full flex-col items-center text-center lg:grid lg:grid-cols-[60px_minmax(0,1fr)_18px] lg:items-start lg:gap-4 lg:text-left">
-                        <div className={`flex h-[90px] w-[90px] items-center justify-center rounded-full ${meta.tile} shadow-[0_14px_28px_rgba(15,23,42,0.14)] lg:h-[64px] lg:w-[64px] lg:rounded-[14px]`}>
-                          <AssetIcon src={meta.icon} className="h-[52px] w-[52px] lg:h-[38px] lg:w-[38px]" />
+                        <div className={`flex h-[58px] w-[58px] items-center justify-center rounded-full ${meta.tile} shadow-[0_12px_22px_rgba(15,23,42,0.12)] sm:h-[90px] sm:w-[90px] lg:h-[64px] lg:w-[64px] lg:rounded-[14px]`}>
+                          <AssetIcon src={meta.icon} className="h-8 w-8 sm:h-[52px] sm:w-[52px] lg:h-[38px] lg:w-[38px]" />
                         </div>
 
-                        <div className="mt-4 min-w-0 lg:mt-0">
-                          <div className={`text-[13px] font-extrabold uppercase tracking-[0.04em] ${meta.tone}`}>{item.relation}</div>
-                          <div className="mt-1 flex items-center justify-center gap-2 lg:justify-start">
-                            <h3 className="font-['Manrope'] text-[28px] font-extrabold leading-[1.02] tracking-[-0.05em] text-[#0b2347] lg:text-[18px]">
+                        <div className="mt-2 min-w-0 sm:mt-4 lg:mt-0">
+                          <div className={`text-[10px] font-extrabold uppercase tracking-[0.04em] ${meta.tone} sm:text-[13px]`}>{item.relation}</div>
+                          <div className="mt-0.5 flex items-center justify-center gap-1.5 lg:justify-start">
+                            <h3 className="font-['Manrope'] text-[18px] font-extrabold leading-[1.02] tracking-[-0.05em] text-[#0b2347] sm:text-[28px] lg:text-[18px]">
                               {item.code}
                             </h3>
-                            <svg viewBox="0 0 24 24" className="h-5 w-5 text-[#0b2347]" fill="none" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" className="h-4 w-4 text-[#0b2347] sm:h-5 sm:w-5" fill="none" aria-hidden="true">
                               <path d="M14 5h5v5M10 14l9-9M19 14v5h-5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
                               <path d="M5 10V5h5M5 5l5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
                           </div>
-                          <div className="mx-auto mt-3 h-px w-full max-w-[360px] bg-[#e6edf6] lg:mx-0" />
-                          <p className="mt-3 text-[16px] leading-[1.66] text-[#173660] lg:text-[14px] lg:leading-[1.52]">
+                          <div className="mx-auto mt-2 h-px w-full max-w-[360px] bg-[#e6edf6] lg:mx-0 lg:mt-3" />
+                          <p className="mt-2 text-[11.5px] leading-[1.38] text-[#173660] sm:text-[16px] sm:leading-[1.66] lg:mt-3 lg:text-[14px] lg:leading-[1.52]">
                             {renderCopy(item.description)}
                           </p>
                         </div>
 
-                        <div className="mt-4 text-[#146f38] lg:mt-1">
-                          <svg viewBox="0 0 24 24" className="h-7 w-7 transition group-hover:translate-y-[2px] lg:h-5 lg:w-5 lg:group-hover:translate-x-[2px] lg:group-hover:translate-y-0" fill="none" aria-hidden="true">
+                        <div className="mt-2 text-[#146f38] sm:mt-4 lg:mt-1">
+                          <svg viewBox="0 0 24 24" className="h-5 w-5 transition group-hover:translate-y-[2px] sm:h-7 sm:w-7 lg:h-5 lg:w-5 lg:group-hover:translate-x-[2px] lg:group-hover:translate-y-0" fill="none" aria-hidden="true">
                             <path d="m6 9 6 6 6-6" stroke="currentColor" strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round" className="lg:hidden" />
                             <path d="M8 5h8M16 5l-4 4m4-4-4-4" stroke="currentColor" strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round" className="hidden lg:block" />
                           </svg>
@@ -1563,8 +1587,7 @@ export default function DocumentEnginePage({ data }: DocumentEnginePageProps) {
           <div className="py-0">
             <div className="overflow-hidden lg:grid lg:grid-cols-[minmax(0,1fr)_40%]">
               <div className="bg-[linear-gradient(145deg,#071936_0%,#071f47_48%,#0a234f_100%)] px-4 py-4 text-white sm:px-5 sm:py-5 lg:px-5 lg:py-5">
-                <div className="h-[5px] w-10 rounded-full bg-[#77d33f]" />
-                <h2 className="mt-3 font-['Manrope'] text-[31px] font-extrabold leading-[1.04] tracking-[-0.06em] text-white sm:text-[38px] lg:max-w-[760px] lg:text-[50px]">
+                <h2 className="font-['Manrope'] text-[31px] font-extrabold leading-[1.04] tracking-[-0.06em] text-white sm:text-[38px] lg:max-w-[760px] lg:text-[50px]">
                   {data.sections.trustCta.title}
                 </h2>
                 <p className="mt-3 max-w-[760px] text-[16px] leading-[1.68] text-[#d7e1f0] sm:text-[17px] lg:text-[17px]">
