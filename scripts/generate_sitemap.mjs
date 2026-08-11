@@ -88,6 +88,17 @@ function isVariantPageData(value) {
   );
 }
 
+function isEnginePageData(value) {
+  return Boolean(
+    value &&
+      typeof value === "object" &&
+      value.brand &&
+      typeof value.brand.slug === "string" &&
+      value.engine &&
+      typeof value.engine.slug === "string",
+  );
+}
+
 async function readJsonFiles(dirPath, predicate) {
   const entries = await readdir(dirPath, { withFileTypes: true });
   const items = await Promise.all(
@@ -238,11 +249,13 @@ async function main() {
   const brandsDir = path.join(ROOT, "data", "brands");
   const modelsDir = path.join(ROOT, "data", "models");
   const variantsDir = path.join(ROOT, "data", "variants");
+  const enginesDir = path.join(ROOT, "data", "engines");
   const lastModified = new Date().toISOString();
 
   const brandPages = await readJsonFiles(brandsDir, isBrandPageData);
   const modelPages = await readJsonFiles(modelsDir, isModelPageData);
   const variantPages = await readJsonFiles(variantsDir, isVariantPageData);
+  const enginePages = await readJsonFiles(enginesDir, isEnginePageData);
   const staticPublicRoutes = await readStaticPublicRoutes();
 
   const entryMap = new Map();
@@ -283,6 +296,18 @@ async function main() {
     }
     seenModels.add(key);
     addEntry(`/${brandSlug}/${modelSlug}`, 0.7);
+  }
+
+  const seenEngines = new Set();
+  for (const page of enginePages) {
+    const brandSlug = normalizeSlugPart(page.brand.slug);
+    const engineSlug = normalizeSlugPart(page.engine.slug);
+    const key = `${brandSlug}::${engineSlug}`;
+    if (!brandSlug || !engineSlug || seenEngines.has(key)) {
+      continue;
+    }
+    seenEngines.add(key);
+    addEntry(`/${brandSlug}/${engineSlug}`, 0.65);
   }
 
   const seenVariants = new Set();
