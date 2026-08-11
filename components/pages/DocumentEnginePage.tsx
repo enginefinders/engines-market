@@ -370,12 +370,21 @@ const modelImageMap: Record<string, string> = {
   "3 Series": "/images/brands/bmw/models/bmw-3-series-model-card.png",
   "4 Series": "/images/brands/bmw/models/bmw-4-series-model-card.png",
   "5 Series": "/images/brands/bmw/models/bmw-5-series-model-card.png",
+  M2: "/images/brands/bmw/models/bmw-m2-model-card.png",
+  M3: "/images/brands/bmw/models/bmw-m3-model-card.png",
+  M4: "/images/brands/bmw/models/bmw-m4-model-card.png",
   X1: "/images/brands/bmw/models/bmw-x1-model-card.png",
   X3: "/images/brands/bmw/models/bmw-x3-model-card.png",
+  X4: "/images/brands/bmw/models/bmw-x4-model-card.png",
 };
 
 const mobileModelCutoutMap: Record<string, string> = {
   "1 Series": "/images/brands/bmw/models/bmw-1-series-116d-removebg.png",
+  M2: "/images/brands/bmw/models/bmw-m2-model-card.png",
+  M3: "/images/brands/bmw/models/bmw-m3-removebg.png",
+  M4: "/images/brands/bmw/models/bmw-m4-model-card.png",
+  X3: "/images/brands/bmw/models/bmw-x3-model-card.png",
+  X4: "/images/brands/bmw/models/bmw-x4-model-card.png",
 };
 
 const genericMobileCarCutout = "/images/brands/bmw/models/bmw-m3-removebg.png";
@@ -403,6 +412,64 @@ function cleanCopy(value: string) {
 
 function renderCopy(value: string) {
   return cleanCopy(normaliseCopy(value));
+}
+
+function stripBrandFromModelName(brandName: string, modelName: string) {
+  const brandPattern = new RegExp(`^${brandName.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\s+`, "i");
+  return modelName.replace(brandPattern, "").trim();
+}
+
+function getCompatibilityModelName(brandName: string, modelName: string) {
+  const shortName = stripBrandFromModelName(brandName, modelName);
+  return `${brandName} ${shortName}`.replace(/\s+/g, " ").trim();
+}
+
+function slugifyPathPart(value: string) {
+  return value
+    .toLowerCase()
+    .replace(/&/g, " and ")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+function getCompatibilityBaseModelName(modelName: string) {
+  return modelName
+    .replace(/\b(gran coupe|competition|convertible|touring|saloon|estate|coupe|xdrive|cs|csl)\b/gi, " ")
+    .replace(/\s+\bM\b$/i, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function getCompatibilityBaseModelSlug(modelName: string) {
+  const shortName = getCompatibilityBaseModelName(modelName);
+
+  return slugifyPathPart(shortName || modelName);
+}
+
+function getCompatibilityModelImageSrc(brandName: string, modelName: string, imageMap: Record<string, string>, fallback: string) {
+  const shortName = stripBrandFromModelName(brandName, modelName);
+  const baseName = getCompatibilityBaseModelName(shortName);
+  return imageMap[shortName] ?? imageMap[baseName] ?? fallback;
+}
+
+function getCompatibilityLinks(
+  brandSlug: string,
+  brandName: string,
+  row: EnginePageData["sections"]["compatibility"]["rows"][number],
+) {
+  if (row.links.length) {
+    return row.links;
+  }
+
+  const displayName = getCompatibilityModelName(brandName, row.model);
+  const shortName = stripBrandFromModelName(brandName, row.model);
+
+  return [
+    {
+      label: displayName,
+      href: `/${brandSlug}/${getCompatibilityBaseModelSlug(shortName)}`,
+    },
+  ];
 }
 
 export default function DocumentEnginePage({ data }: DocumentEnginePageProps) {
@@ -704,13 +771,18 @@ export default function DocumentEnginePage({ data }: DocumentEnginePageProps) {
                               <td className="border-r border-[#edf3f9] px-3 py-2.5 align-middle text-[15px] font-bold leading-[1.3] text-[#0b2347]">
                                 <div className="flex items-center justify-start gap-2.5 text-left">
                                   <Image
-                                    src={modelImageMap[row.model] ?? "/images/brands/bmw/models/bmw-3-series-model-card.png"}
-                                    alt={`${data.brand.name} ${row.model}`}
+                                    src={getCompatibilityModelImageSrc(
+                                      data.brand.name,
+                                      row.model,
+                                      modelImageMap,
+                                      "/images/brands/bmw/models/bmw-3-series-model-card.png",
+                                    )}
+                                    alt={getCompatibilityModelName(data.brand.name, row.model)}
                                     width={58}
                                     height={34}
                                     className="h-[34px] w-[58px] object-contain"
                                   />
-                                  <span>{data.brand.name} {row.model}</span>
+                                  <span>{getCompatibilityModelName(data.brand.name, row.model)}</span>
                                 </div>
                               </td>
                               <td className="border-r border-[#edf3f9] px-2 py-2.5 text-center align-middle text-[15px] font-semibold leading-[1.3] text-[#173660]">
@@ -724,7 +796,7 @@ export default function DocumentEnginePage({ data }: DocumentEnginePageProps) {
                               </td>
                               <td className="px-3 py-2.5 text-center align-middle">
                                 <div className="grid justify-items-center gap-1.5">
-                                  {row.links.map((link, linkIndex) => (
+                                  {getCompatibilityLinks(data.brand.slug, data.brand.name, row).map((link, linkIndex) => (
                                     <Link
                                       key={link.label}
                                       href={link.href}
@@ -817,8 +889,8 @@ export default function DocumentEnginePage({ data }: DocumentEnginePageProps) {
                       <div className="relative min-h-[104px] overflow-hidden bg-[linear-gradient(180deg,#0a2b73_0%,#1643a8_16%,#7ad8ff_50%,#ffffff_100%)]">
                         <div className="absolute left-[8px] top-1/2 h-[72px] w-[72px] -translate-y-1/2 rounded-full border border-[#d6fbff] shadow-[0_0_12px_rgba(224,242,254,0.98),0_0_24px_rgba(34,211,238,0.72),0_0_38px_rgba(125,211,252,0.34)]" />
                         <Image
-                          src={mobileModelCutoutMap[row.model] ?? genericMobileCarCutout}
-                          alt={`${data.brand.name} ${row.model}`}
+                          src={getCompatibilityModelImageSrc(data.brand.name, row.model, mobileModelCutoutMap, genericMobileCarCutout)}
+                          alt={getCompatibilityModelName(data.brand.name, row.model)}
                           fill
                           sizes="38vw"
                           className="object-contain p-1 drop-shadow-[0_10px_14px_rgba(2,6,23,0.24)]"
@@ -831,7 +903,7 @@ export default function DocumentEnginePage({ data }: DocumentEnginePageProps) {
                             {String(index + 1).padStart(2, "0")}
                           </div>
                           <h3 className="pt-0.5 text-[14px] font-extrabold leading-[1.02] tracking-[-0.04em] text-[#0b2347]">
-                            {data.brand.name} {row.model}
+                            {getCompatibilityModelName(data.brand.name, row.model)}
                           </h3>
                         </div>
 
@@ -870,7 +942,7 @@ export default function DocumentEnginePage({ data }: DocumentEnginePageProps) {
                               <span className="text-[9.5px] font-bold leading-[1.05] text-[#0b2347]">Link</span>
                             </div>
                             <div className="flex flex-wrap items-center gap-x-1 gap-y-0.5">
-                              {row.links.map((link) => (
+                              {getCompatibilityLinks(data.brand.slug, data.brand.name, row).map((link) => (
                                 <Link
                                   key={link.label}
                                   href={link.href}
@@ -950,7 +1022,7 @@ export default function DocumentEnginePage({ data }: DocumentEnginePageProps) {
         </Container>
       </Section>
 
-      <Section className="-mt-8 bg-white lg:-mt-10">
+      <Section className="mt-1.5 bg-white lg:-mt-10">
         <Container className="!max-w-[1400px]">
           <div className="py-0">
             <div className="relative overflow-hidden">
@@ -984,30 +1056,30 @@ export default function DocumentEnginePage({ data }: DocumentEnginePageProps) {
                   <table className="w-full table-fixed border-collapse">
                     <thead className="bg-[#081f47] text-white">
                       <tr>
-                        <th className="w-[25%] border-r border-white/10 px-3 py-2 text-center align-middle sm:px-4 lg:px-5 lg:py-2.5">
+                        <th className="w-[30%] border-r border-white/10 px-1 py-1.5 text-center align-middle sm:w-[25%] sm:px-4 lg:px-5 lg:py-2.5">
                           <div className="flex min-h-[44px] flex-col items-center justify-center gap-1 sm:flex-row sm:gap-2.5">
-                            <AssetIcon src="/icons/engine-market/engine-green.png" className="h-5 w-5 sm:h-8 sm:w-8 lg:h-9 lg:w-9" />
+                            <AssetIcon src="/icons/engine-market/engine-green.png" className="h-4 w-4 sm:h-8 sm:w-8 lg:h-9 lg:w-9" />
                             <span className="text-[8px] font-extrabold uppercase leading-[1.05] tracking-[0.03em] sm:text-[13px] lg:text-[15px]">Condition</span>
                           </div>
                         </th>
-                        <th className="w-[25%] border-r border-white/10 px-3 py-2 text-center align-middle sm:px-4 lg:px-5 lg:py-2.5">
+                        <th className="w-[22%] border-r border-white/10 px-1 py-1.5 text-center align-middle sm:w-[25%] sm:px-4 lg:px-5 lg:py-2.5">
                           <div className="flex min-h-[44px] flex-col items-center justify-center gap-1 sm:flex-row sm:gap-2.5">
-                            <AssetIcon src="/icons/variant/white/em-pound.png" className="h-5 w-5 sm:h-8 sm:w-8 lg:h-9 lg:w-9" />
+                            <AssetIcon src="/icons/variant/white/em-pound.png" className="h-4 w-4 sm:h-8 sm:w-8 lg:h-9 lg:w-9" />
                             <span className="text-[8px] font-extrabold uppercase leading-[1.05] tracking-[0.03em] sm:text-[13px] lg:text-[15px]">Supply Only</span>
                           </div>
                         </th>
-                        <th className="w-[24%] border-r border-white/10 px-3 py-2 text-center align-middle sm:px-4 lg:px-5 lg:py-2.5">
+                        <th className="w-[23%] border-r border-white/10 px-1 py-1.5 text-center align-middle sm:w-[24%] sm:px-4 lg:px-5 lg:py-2.5">
                           <div className="flex min-h-[44px] flex-col items-center justify-center gap-1 sm:flex-row sm:gap-2.5">
-                            <AssetIcon src="/icons/variant/white/supply-fit.png" className="h-5 w-5 sm:h-8 sm:w-8 lg:h-9 lg:w-9" />
+                            <AssetIcon src="/icons/variant/white/supply-fit.png" className="h-4 w-4 sm:h-8 sm:w-8 lg:h-9 lg:w-9" />
                             <div className="text-center">
                               <div className="text-[8px] font-extrabold uppercase leading-[1.05] tracking-[0.03em] sm:text-[13px] lg:text-[15px]">Fitted</div>
                               <div className="text-[6px] font-medium uppercase leading-[1.05] tracking-[0.04em] text-[#d9e6fb] sm:text-[9px] lg:text-[10px]">(Independent Specialist)</div>
                             </div>
                           </div>
                         </th>
-                        <th className="w-[26%] px-3 py-2 text-center align-middle sm:px-4 lg:px-5 lg:py-2.5">
+                        <th className="w-[25%] px-1 py-1.5 text-center align-middle sm:w-[26%] sm:px-4 lg:px-5 lg:py-2.5">
                           <div className="flex min-h-[44px] flex-col items-center justify-center gap-1 sm:flex-row sm:gap-2.5">
-                            <AssetIcon src="/icons/variant/white/warranty.png" className="h-5 w-5 sm:h-8 sm:w-8 lg:h-9 lg:w-9" />
+                            <AssetIcon src="/icons/variant/white/warranty.png" className="h-4 w-4 sm:h-8 sm:w-8 lg:h-9 lg:w-9" />
                             <span className="text-[8px] font-extrabold uppercase leading-[1.05] tracking-[0.03em] sm:text-[13px] lg:text-[15px]">Typical Warranty</span>
                           </div>
                         </th>
@@ -1025,19 +1097,19 @@ export default function DocumentEnginePage({ data }: DocumentEnginePageProps) {
 
                         return (
                           <tr key={row.condition} className="border-t border-[#edf3f9]">
-                            <td className="border-r border-[#edf3f9] px-2 py-2.5 align-middle sm:px-4 lg:px-4 lg:py-3">
-                              <div className="flex items-center justify-center gap-2 text-center sm:gap-2.5 lg:justify-start lg:pl-16 lg:text-left">
-                                <AssetIcon src={conditionIcon} className="h-7 w-7 sm:h-8 sm:w-8 lg:h-9 lg:w-9" />
-                                <span className={`text-[11px] font-bold tracking-[-0.02em] sm:text-[15px] lg:text-[17px] ${conditionTone}`}>{row.condition}</span>
+                            <td className="border-r border-[#edf3f9] px-1 py-2 align-middle sm:px-4 lg:px-4 lg:py-3">
+                              <div className="flex flex-col items-center justify-center gap-0.5 text-center sm:flex-row sm:gap-2.5 lg:justify-start lg:pl-16 lg:text-left">
+                                <AssetIcon src={conditionIcon} className="h-5 w-5 sm:h-8 sm:w-8 lg:h-9 lg:w-9" />
+                                <span className={`max-w-full text-[9.5px] font-bold leading-[1.05] tracking-[-0.03em] sm:text-[15px] lg:text-[17px] ${conditionTone}`}>{row.condition}</span>
                               </div>
                             </td>
-                            <td className="border-r border-[#edf3f9] px-2 py-2.5 text-center text-[11px] font-semibold tracking-[-0.02em] text-[#0b2347] sm:px-4 sm:text-[16px] lg:px-5 lg:py-3.5 lg:text-[20px]">
+                            <td className="border-r border-[#edf3f9] px-1 py-2 text-center text-[9.5px] font-semibold leading-[1.16] tracking-[-0.03em] text-[#0b2347] sm:px-4 sm:text-[16px] lg:px-5 lg:py-3.5 lg:text-[20px]">
                               {renderCopy(row.supplyOnly)}
                             </td>
-                            <td className="border-r border-[#edf3f9] px-2 py-2.5 text-center text-[11px] font-semibold tracking-[-0.02em] text-[#0b2347] sm:px-4 sm:text-[16px] lg:px-5 lg:py-3.5 lg:text-[20px]">
+                            <td className="border-r border-[#edf3f9] px-1 py-2 text-center text-[9.5px] font-semibold leading-[1.16] tracking-[-0.03em] text-[#0b2347] sm:px-4 sm:text-[16px] lg:px-5 lg:py-3.5 lg:text-[20px]">
                               {renderCopy(row.fitted)}
                             </td>
-                            <td className="px-2 py-2.5 text-center text-[10px] font-medium text-[#173660] sm:px-4 sm:text-[16px] lg:px-5 lg:py-3.5 lg:text-[19px]">
+                            <td className="px-1 py-2 text-center text-[9.5px] font-medium leading-[1.16] text-[#173660] sm:px-4 sm:text-[16px] lg:px-5 lg:py-3.5 lg:text-[19px]">
                               {row.warranty}
                             </td>
                           </tr>
@@ -1135,7 +1207,7 @@ export default function DocumentEnginePage({ data }: DocumentEnginePageProps) {
         </Container>
       </Section>
 
-      <Section className="-mt-5 bg-[linear-gradient(180deg,#ffffff_0%,#fbfefd_100%)] !pt-0 !pb-0 lg:-mt-6 lg:!pb-0">
+      <Section className="mt-1.5 bg-[linear-gradient(180deg,#ffffff_0%,#fbfefd_100%)] !pt-0 !pb-0 lg:-mt-6 lg:!pb-0">
         <Container className="!max-w-[1400px]">
           <div className="py-0">
             <div className="relative px-3 pb-1 pt-0 sm:px-4 sm:pb-2 sm:pt-0 lg:px-2 lg:pb-2 lg:pt-0">
@@ -1183,26 +1255,26 @@ export default function DocumentEnginePage({ data }: DocumentEnginePageProps) {
 
                 <div className="mt-3 grid gap-2.5 lg:hidden">
                   {failureItems.map((item, index) => {
-                    const open = index === 0;
                     return (
                       <details
                         key={item.title}
-                        open={open}
-                        className={`overflow-hidden rounded-[10px] border bg-white shadow-[0_8px_18px_rgba(15,23,42,0.04)] ${open ? "border-[#4aa7ff]" : "border-[#dce5f2]"}`}
+                        open={index === 0 ? true : undefined}
+                        className="group overflow-hidden rounded-[10px] border border-[#dce5f2] bg-white shadow-[0_8px_18px_rgba(15,23,42,0.04)] open:border-[#4aa7ff]"
                       >
                         <summary className="list-none cursor-pointer">
-                          <div className={`flex items-center gap-2.5 px-3 py-3 ${open ? "bg-[linear-gradient(90deg,#061a40_0%,#0a2151_100%)] text-white" : "bg-white text-[#0b2347]"}`}>
-                            <div className={`flex h-10 w-10 flex-none items-center justify-center rounded-[8px] ${open ? "bg-[#0b2f79] text-[#55b4ff]" : "bg-[#081f47] text-white"}`}>
-                              <FailureIssueIcon title={item.title} active={open} />
+                          <div className="flex items-center gap-2.5 bg-white px-3 py-3 text-[#0b2347] group-open:bg-[linear-gradient(90deg,#061a40_0%,#0a2151_100%)] group-open:text-white">
+                            <div className="flex h-10 w-10 flex-none items-center justify-center rounded-[8px] bg-[#081f47] text-white group-open:bg-[#0b2f79] group-open:text-[#55b4ff]">
+                              <FailureIssueIcon title={item.title} active={false} />
                             </div>
                             <div className="min-w-0 flex-1 text-[14px] font-extrabold leading-[1.22] tracking-[-0.03em]">
                               {index + 1}. {item.title}
                             </div>
-                            <ChevronToggleIcon open={open} />
+                            <span className="transition group-open:rotate-180">
+                              <ChevronToggleIcon />
+                            </span>
                           </div>
                         </summary>
 
-                        {open ? (
                           <div className="grid gap-2.5 p-2.5">
                             <div className="grid gap-2.5 rounded-[10px] border border-[#e5edf7] bg-white px-3 py-3">
                               <div className="grid grid-cols-[44px_minmax(0,1fr)] items-start gap-2.5">
@@ -1254,7 +1326,6 @@ export default function DocumentEnginePage({ data }: DocumentEnginePageProps) {
                               <CompatibilityMetaIcon kind="link" />
                             </a>
                           </div>
-                        ) : null}
                       </details>
                     );
                   })}
@@ -1304,7 +1375,7 @@ export default function DocumentEnginePage({ data }: DocumentEnginePageProps) {
         </Container>
       </Section>
 
-      <Section className="bg-white !py-0">
+      <Section className="mt-1.5 bg-white !py-0 lg:mt-0">
         <Container className="!max-w-[1400px]">
           <div className="py-0">
             <div className="relative overflow-hidden bg-[radial-gradient(circle_at_top_left,#eef5ff_0%,#ffffff_36%,#ffffff_100%)] px-2.5 py-0.5 sm:px-3 sm:py-1 lg:px-1 lg:py-1">
@@ -1438,7 +1509,7 @@ export default function DocumentEnginePage({ data }: DocumentEnginePageProps) {
         </Container>
       </Section>
 
-      <Section className="bg-[linear-gradient(180deg,#ffffff_0%,#fbfefd_100%)] !py-0">
+      <Section className="mt-1.5 bg-[linear-gradient(180deg,#ffffff_0%,#fbfefd_100%)] !py-0 lg:mt-0">
         <Container className="!max-w-[1400px]">
           <div className="px-3 py-0.5 sm:px-4 sm:py-1 lg:px-2 lg:py-0.5">
             <div className="max-w-[1180px]">
@@ -1456,15 +1527,15 @@ export default function DocumentEnginePage({ data }: DocumentEnginePageProps) {
             <div className="mt-2.5 grid items-start gap-2 lg:grid-cols-2">
               {buyingGuideCards.map((card) => (
                 <div key={card.label} className="overflow-hidden rounded-[9px] border border-[#dbe5f2] bg-white shadow-[0_5px_12px_rgba(15,23,42,0.025)]">
-                  <div className="flex items-start gap-2.5 px-2.5 py-2 sm:px-3 sm:py-2.5 lg:gap-2.5 lg:px-2.5 lg:py-2">
-                    <div className={`flex h-[48px] w-[48px] flex-none items-center justify-center rounded-[7px] ${card.tile} shadow-[0_7px_14px_rgba(15,23,42,0.08)] sm:h-[54px] sm:w-[54px] lg:h-[50px] lg:w-[50px]`}>
+                  <div className="block px-2.5 py-2 after:block after:clear-both after:content-[''] sm:flex sm:items-start sm:gap-2.5 sm:px-3 sm:py-2.5 lg:gap-2.5 lg:px-2.5 lg:py-2">
+                    <div className={`float-left mr-3 mb-1 flex h-[58px] w-[58px] flex-none items-center justify-center rounded-[7px] ${card.tile} shadow-[0_7px_14px_rgba(15,23,42,0.08)] sm:float-none sm:mr-0 sm:mb-0 sm:h-[54px] sm:w-[54px] lg:h-[50px] lg:w-[50px]`}>
                       <AssetIcon src={card.icon} className="h-7 w-7 sm:h-8 sm:w-8" />
                     </div>
                     <div className="min-w-0 flex-1">
-                      <h3 className={`font-['Manrope'] text-[17px] font-extrabold leading-[1.04] tracking-[-0.04em] ${card.heading} sm:text-[18px] lg:text-[18px]`}>
+                      <h3 className={`font-['Manrope'] text-[16px] font-extrabold leading-[1.04] tracking-[-0.04em] ${card.heading} sm:text-[18px] lg:text-[18px]`}>
                         {card.label}:
                       </h3>
-                      <p className="mt-0.5 text-[12.5px] leading-[1.36] text-[#173660] sm:text-[13px] lg:text-[13px]">
+                      <p className="mt-0.5 text-[12px] leading-[1.34] text-[#173660] sm:text-[13px] lg:text-[13px]">
                         {card.body}
                       </p>
                     </div>
@@ -1517,7 +1588,7 @@ export default function DocumentEnginePage({ data }: DocumentEnginePageProps) {
         </Container>
       </Section>
 
-      <Section className="bg-white !py-0">
+      <Section className="mt-1.5 bg-white !py-0 lg:mt-0">
         <Container className="!max-w-[1400px]">
           <div className="py-0">
             <div className="px-3 py-1 sm:px-4 sm:py-1.5 lg:px-4 lg:py-1.5">
