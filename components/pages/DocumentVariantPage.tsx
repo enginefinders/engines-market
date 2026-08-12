@@ -8,6 +8,7 @@ import VariantHeroSection from "@/components/sections/VariantHeroSection";
 import VariantHistoryTimelineSection from "@/components/sections/VariantHistoryTimelineSection";
 import VariantTrustCtaSection from "@/components/sections/VariantTrustCtaSection";
 import { resolveModelImagePaths } from "@/lib/modelImageAssets";
+import { resolveVariantArtwork } from "@/lib/variantImageAssets";
 import type { VariantPageData } from "@/types/variant";
 
 type DocumentVariantPageProps = {
@@ -27,6 +28,15 @@ export default function DocumentVariantPage({ data }: DocumentVariantPageProps) 
   const mainImage = resolvedImages.resolvedMainImage;
   const heroImage = data.assets.heroBg || mainImage;
   const ctaImage = data.assets.ctaImage || mainImage || heroImage;
+  const variantHistoryImage =
+    resolveVariantArtwork({
+      brandSlug: data.brand.slug,
+      brandName: data.brand.name,
+      modelSlug: data.model.slug,
+      modelName: data.model.name,
+      variantSlug: data.variant.slug,
+      variantName: data.variant.name,
+    }) || heroImage;
 
   return (
     <>
@@ -52,8 +62,8 @@ export default function DocumentVariantPage({ data }: DocumentVariantPageProps) 
 
       <VariantHistoryTimelineSection
         data={data.sections.historyTimeline}
-        vehicleImage={heroImage}
-        mobileVehicleImage={mainImage || heroImage}
+        vehicleImage={variantHistoryImage}
+        mobileVehicleImage={variantHistoryImage}
       />
 
       <VariantEngineGuideSection data={data.sections.engineGuide} />

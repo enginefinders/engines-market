@@ -6,6 +6,7 @@ import { useEffect, useMemo, useState } from "react";
 import type { ModelVariantCoverageSectionData } from "@/types/model";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
+import { resolveVariantArtwork } from "@/lib/variantImageAssets";
 
 type Props = {
   data: ModelVariantCoverageSectionData;
@@ -92,26 +93,55 @@ function normalizeVariantSubtitle(subtitle: string) {
   return subtitle.replace(/\u00c2\u00b7/g, "\u00b7").replace(/\s+/g, " ").trim();
 }
 
-function resolveVariantVehicleImage(card: VariantCard) {
+function resolveVariantVehicleImage({
+  card,
+  brandSlug,
+  brandName,
+  modelSlug,
+  modelName,
+}: {
+  card: VariantCard;
+  brandSlug?: string;
+  brandName?: string;
+  modelSlug?: string;
+  modelName?: string;
+}) {
+  const variantArtwork = resolveVariantArtwork({
+    brandSlug,
+    brandName,
+    modelSlug,
+    modelName,
+    variantSlug: card.slug,
+    cardTitle: card.h3,
+    cardImage: card.image,
+  });
+
+  if (variantArtwork) {
+    return {
+      src: variantArtwork,
+      zoomed: true,
+    };
+  }
+
   const years = card.years?.trim() ?? "";
 
   if (/^2019-2024$/.test(years) || /^2019/.test(years)) {
-    return "/images/brands/bmw/models/bmw-1-series-f40-model-card.png";
+    return { src: "/images/brands/bmw/models/bmw-1-series-f40-model-card.png", zoomed: false };
   }
 
   if (/^(2011|2012|2016)/.test(years)) {
-    return "/images/brands/bmw/models/bmw-1-series-f20-f21-model-card.png";
+    return { src: "/images/brands/bmw/models/bmw-1-series-f20-f21-model-card.png", zoomed: false };
   }
 
   if (/^2004-2011$/.test(years) || /^2004/.test(years)) {
-    return "/images/brands/bmw/models/bmw-1-series-e81-e87-model-card.png";
+    return { src: "/images/brands/bmw/models/bmw-1-series-e81-e87-model-card.png", zoomed: false };
   }
 
   if (/2004-2024/.test(years)) {
-    return "/images/brands/bmw/models/bmw-1-series-model-card.png";
+    return { src: "/images/brands/bmw/models/bmw-1-series-model-card.png", zoomed: false };
   }
 
-  return "/images/brands/bmw/models/bmw-1-series-model-card.png";
+  return { src: "/images/brands/bmw/models/bmw-1-series-model-card.png", zoomed: false };
 }
 
 function extractEngineType(card: VariantCard) {
@@ -404,7 +434,13 @@ export default function VariantCoverageSection({
                 const shortName = formatVariantName(card.h3);
                 const isOpen = openCard === card.slug;
                 const animateChevron = !isOpen && !seenCards[card.slug];
-                const vehicleImage = resolveVariantVehicleImage(card);
+                const vehicleImage = resolveVariantVehicleImage({
+                  card,
+                  brandSlug,
+                  brandName,
+                  modelSlug,
+                  modelName,
+                });
                 const opensUpward = index >= mobileCardsToDisplay.length - 2;
 
                 return (
@@ -425,10 +461,14 @@ export default function VariantCoverageSection({
                         <div className="flex min-h-[82px] w-full items-center justify-center py-[1px]">
                           <div className="relative h-[84px] w-full max-w-[132px]">
                             <Image
-                              src={vehicleImage}
+                              src={vehicleImage.src}
                               alt={shortName}
                               fill
-                              className="object-contain"
+                              className={
+                                vehicleImage.zoomed
+                                  ? "scale-[1.24] object-cover object-center"
+                                  : "object-contain"
+                              }
                               sizes="132px"
                             />
                           </div>
@@ -473,7 +513,13 @@ export default function VariantCoverageSection({
                 const shortName = formatVariantName(card.h3);
                 const animateChevron = !isOpen && !seenCards[card.slug];
                 const codeAndType = formatCodeAndType(card);
-                const vehicleImage = resolveVariantVehicleImage(card);
+                const vehicleImage = resolveVariantVehicleImage({
+                  card,
+                  brandSlug,
+                  brandName,
+                  modelSlug,
+                  modelName,
+                });
 
                 return (
                   <article key={card.slug} className="relative">
@@ -497,10 +543,14 @@ export default function VariantCoverageSection({
                         <div className="flex min-h-[82px] w-full items-center justify-center">
                           <div className="relative h-[80px] w-full max-w-[170px]">
                             <Image
-                              src={vehicleImage}
+                              src={vehicleImage.src}
                               alt={shortName}
                               fill
-                              className="object-contain"
+                              className={
+                                vehicleImage.zoomed
+                                  ? "scale-[1.2] object-cover object-center"
+                                  : "object-contain"
+                              }
                               sizes="170px"
                             />
                           </div>
