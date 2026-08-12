@@ -34,6 +34,7 @@ const EXPLICIT_SLUG_ALIASES: Record<string, string[]> = {
   "honda-accord-2-2-i-ctdi": ["honda-accord-2-2-i-dtec"],
   "honda-civic-1-4-i-vtec": ["honda-civic-1-4-1-6-i-vtec-ep"],
   "honda-civic-1-6-i-dtec-2017": ["honda-civic-1-6-i-dtec"],
+  "honda-civic-1-0-vtec-turbo": ["honda-civic-1-5-vtec-turbo"],
   "honda-civic-1-8-i-vtec-facelift": ["honda-civic-1-8-i-vtec"],
   "honda-civic-2-2-i-ctdi": ["honda-civic-2-2-i-dtec"],
   "honda-civic-type-r-fk8": ["honda-civic-2-0-i-vtec-type-r"],
