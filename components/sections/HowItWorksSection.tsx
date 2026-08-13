@@ -39,7 +39,7 @@ function splitHeading(title: string) {
 
 function renderMobileHeadingLine(line: string, index: number, isAccentLine: boolean) {
   const normalizedLine = normalizeCopy(line);
-  const accentMatch = normalizedLine.match(/(Best|Replacement Engine|What to Choose|Choose)/i);
+  const accentMatch = normalizedLine.match(/(BMW Replacement Engine|Replacement Engine|What to Choose|Choose)/i);
   if (!accentMatch || accentMatch.index === undefined) {
     if (isAccentLine) {
       const words = normalizedLine.split(/\s+/);
@@ -99,27 +99,27 @@ function trustIconForLabel(label: string): TrustIconConfig {
   if (normalized.includes("nationwide") || normalized.includes("delivery") || normalized.includes("uk-wide")) {
     return {
       src: "/icons/engine-market/light-green-nationwide-delivery.png",
-      className: "h-[18px] w-[30px] object-contain",
+      className: "h-[30px] w-[44px] object-contain sm:h-[18px] sm:w-[30px]",
     };
   }
 
   if (normalized.includes("supplier")) {
     return {
       src: "/icons/engine-market/light-green-trusted-seller.png",
-      className: "h-[18px] w-[18px] object-contain",
+      className: "h-[30px] w-[30px] object-contain sm:h-[18px] sm:w-[18px]",
     };
   }
 
   if (normalized.includes("warranty")) {
     return {
       src: "/icons/engine-market/light-green-warranty.png",
-      className: "h-[16px] w-[16px] object-contain",
+      className: "h-[30px] w-[30px] object-contain sm:h-[16px] sm:w-[16px]",
     };
   }
 
   return {
     src: "/icons/engine-market/light-green-supply-fit.png",
-    className: "h-[18px] w-[18px] object-contain",
+    className: "h-[30px] w-[30px] object-contain sm:h-[18px] sm:w-[18px]",
   };
 }
 
@@ -213,7 +213,7 @@ export default function HowItWorksSection({
                   className={`block ${isAccent ? "lg:text-[#15803d]" : ""} ${index > 0 ? "mt-1 text-[21px] leading-[1.15] lg:text-[34px]" : ""}`}
                 >
                   <span className="lg:hidden">{renderMobileHeadingLine(line, index, isAccent)}</span>
-                  <span className="hidden lg:inline">{normalizeCopy(line)}</span>
+                  <span className="hidden lg:inline">{renderMobileHeadingLine(line, index, isAccent)}</span>
                 </span>
               );
             })}
@@ -229,7 +229,7 @@ export default function HowItWorksSection({
             return (
               <div
                 key={card.number}
-                className={`perspective-1000 ${variantLayout ? "min-h-[278px] sm:min-h-[276px] lg:min-h-[282px] xl:min-h-[292px]" : "min-h-[258px] sm:min-h-[266px] lg:min-h-[282px] xl:min-h-[292px]"}`}
+                className={`perspective-1000 ${variantLayout ? "min-h-[278px] sm:min-h-[276px] lg:min-h-[282px] xl:min-h-[292px]" : "min-h-[272px] sm:min-h-[276px] lg:min-h-[292px] xl:min-h-[302px]"}`}
               >
                 <button
                   type="button"
@@ -239,7 +239,7 @@ export default function HowItWorksSection({
                   aria-label={`${flipped ? "Hide details for" : "Show details for"} step ${card.number}`}
                 >
                   <div
-                    className={`relative h-full ${variantLayout ? "min-h-[278px] sm:min-h-[276px] lg:min-h-[282px] xl:min-h-[292px]" : "min-h-[258px] sm:min-h-[266px] lg:min-h-[282px] xl:min-h-[292px]"} rounded-[18px] transition duration-500 [transform-style:preserve-3d] ${flipped ? "[transform:rotateY(180deg)]" : ""}`}
+                    className={`relative h-full ${variantLayout ? "min-h-[278px] sm:min-h-[276px] lg:min-h-[282px] xl:min-h-[292px]" : "min-h-[272px] sm:min-h-[276px] lg:min-h-[292px] xl:min-h-[302px]"} rounded-[18px] transition duration-500 [transform-style:preserve-3d] ${flipped ? "[transform:rotateY(180deg)]" : ""}`}
                   >
                     <div className="absolute inset-0 flex h-full flex-col overflow-hidden rounded-[18px] border border-[#dbe4ef] bg-white px-3 pb-1 pt-3 text-center shadow-[0_18px_40px_rgba(13,27,46,0.08)] [backface-visibility:hidden] sm:px-4 sm:pb-1 sm:pt-4 lg:px-5 lg:pb-1 lg:pt-5">
                       <span className="ml-auto hidden font-['Manrope'] text-[18px] font-extrabold uppercase leading-none tracking-[0.14em] text-gray-400 sm:text-[22px]">
@@ -271,7 +271,7 @@ export default function HowItWorksSection({
                       <div className={`mt-2 flex items-start justify-center ${variantLayout ? "min-h-[34px] lg:min-h-[44px]" : "min-h-[32px] lg:min-h-[42px]"}`}>
                         <h3
                           className={`font-['Manrope'] font-bold leading-[1.14] text-[#0d1b2e] ${
-                            variantLayout ? "text-[15px] md:text-[17px] xl:text-[18px]" : "text-[16px] md:text-[18px] xl:text-[20px]"
+                            variantLayout ? "text-[17px] md:text-[17px] xl:text-[18px]" : "text-[20px] md:text-[20px] xl:text-[22px]"
                           }`}
                         >
                           {card.front.h3}
@@ -281,7 +281,7 @@ export default function HowItWorksSection({
                       <div className={`mt-1 flex items-start justify-center ${variantLayout ? "min-h-[42px] lg:min-h-[48px]" : "min-h-[36px] lg:min-h-[44px]"}`}>
                         <p
                           className={`mx-auto w-full max-w-[340px] text-[#5a6478] ${
-                            variantLayout ? "text-[12px] leading-[1.5] md:text-[13px]" : "text-[12px] leading-[1.42] md:text-[14px] md:leading-[1.55]"
+                            variantLayout ? "text-[14px] leading-[1.5] md:text-[13px]" : "text-[16px] leading-[1.45] md:text-[16px] md:leading-[1.55]"
                           }`}
                         >
                           {card.front.text}

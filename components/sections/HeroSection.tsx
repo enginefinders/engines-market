@@ -36,6 +36,15 @@ function UkFlagIcon() {
   );
 }
 
+function LockIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-3.5 w-3.5 shrink-0" fill="none" aria-hidden="true">
+      <rect x="5" y="10" width="14" height="10" rx="2" stroke="currentColor" strokeWidth="2" />
+      <path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+    </svg>
+  );
+}
+
 function CarIconOne() {
   return (
     <svg viewBox="0 0 60 26" className="h-[22px] w-[38px] md:h-[26px] md:w-[44px]" fill="none" aria-hidden="true">
@@ -142,27 +151,27 @@ function getTrustBadgeIcon(label: string): DecorativeIconConfig {
   if (normalized.includes("nationwide") || normalized.includes("delivery") || normalized.includes("uk-wide")) {
     return {
       src: "/icons/engine-market/white-nationwide-delivery.png",
-      className: "h-[18px] w-[30px] object-contain md:h-[20px] md:w-[34px]",
+      className: "h-[26px] w-[42px] object-contain md:h-[24px] md:w-[40px]",
     };
   }
 
   if (normalized.includes("supplier")) {
     return {
       src: "/icons/engine-market/white-vetted-specialists.png",
-      className: "h-[18px] w-[24px] object-contain md:h-[20px] md:w-[28px]",
+      className: "h-[26px] w-[34px] object-contain md:h-[24px] md:w-[32px]",
     };
   }
 
   if (normalized.includes("warranty")) {
     return {
       src: "/icons/engine-market/white-warranty.png",
-      className: "h-[18px] w-[18px] object-contain md:h-[20px] md:w-[20px]",
+      className: "h-[26px] w-[26px] object-contain md:h-[24px] md:w-[24px]",
     };
   }
 
   return {
     src: "/icons/engine-market/white-supply-fit.png",
-    className: "h-[18px] w-[18px] object-contain md:h-[20px] md:w-[20px]",
+    className: "h-[26px] w-[26px] object-contain md:h-[24px] md:w-[24px]",
   };
 }
 
@@ -210,7 +219,7 @@ function stripBrandFromModel(modelName: string, brandName: string) {
 
 function secureNote(data: HeroSectionData, brandName: string, strictData = false) {
   if (data.form.note.trim()) {
-    return data.form.note;
+    return normalizeDisplayText(data.form.note);
   }
 
   if (strictData) {
@@ -317,9 +326,16 @@ function buildDisclaimerLines(note: string) {
   return (sentences.length ? sentences : [normalized]).slice(0, 3);
 }
 
+function normalizeDisplayText(text: string) {
+  return text
+    .replaceAll("â€“", "-")
+    .replaceAll("â€”", "-")
+    .replace(/[–—]/g, "-");
+}
+
 function resolveHeadingLines(data: HeroSectionData) {
   if (data.headingLines?.length) {
-    return data.headingLines.filter((line) => line.trim());
+    return data.headingLines.filter((line) => line.trim()).map((line) => normalizeDisplayText(line));
   }
 
   const heading = splitHeadline(data.h1);
@@ -410,44 +426,82 @@ export default function HeroSection({
 
   return (
     <section className="overflow-x-hidden bg-[#f8f9fa]">
-      <div className="mx-auto grid max-w-[1400px] min-w-0 items-center px-3 py-5 sm:gap-8 sm:px-6 md:px-8 md:py-8 lg:grid-cols-[55fr_45fr] lg:gap-7 lg:px-8 lg:py-[52px]">
+      <div className="mx-auto grid max-w-[1400px] min-w-0 items-center px-3 py-4 sm:gap-8 sm:px-6 md:px-8 md:py-8 lg:grid-cols-[55fr_45fr] lg:gap-7 lg:px-8 lg:py-[52px]">
         {/* LEFT COLUMN */}
         <div className="flex min-w-0 flex-col lg:pr-8 xl:pr-10">
           <span className="mb-[14px] inline-flex w-fit items-center rounded-[20px] bg-[#0d1b2e] px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.08em] text-white md:mb-[18px] md:px-[14px] md:py-[6px] md:text-[10.5px]">
             {tagOverride ?? data.tag}
           </span>
 
-          <h1 className="max-w-none min-w-0 font-['Manrope'] font-extrabold tracking-[-0.03em] text-[#152b4a]">
+          <h1 className="max-w-none min-w-0 font-['Manrope'] font-extrabold tracking-[-0.035em] text-[#152b4a]">
             {headingLines.map((line, index) => {
               const isAccent = headingLines.length > 1 && index === headingLines.length - 1;
               return (
                 <span
                   key={`${line}-${index}`}
-                  className={`block max-w-none min-w-0 break-words text-[clamp(25px,5vw,56px)] leading-[1.06] ${isAccent ? "text-[#15803d]" : "text-[#152b4a]"}`}
+                  className={`block max-w-none min-w-0 break-words leading-[1.02] md:text-[clamp(25px,5vw,56px)] ${
+                    index === 0 ? "text-[36px]" : "text-[30px]"
+                  } ${isAccent ? "text-[#15803d]" : "text-[#152b4a]"}`}
                 >
-                  {line}
+                  {normalizeDisplayText(line)}
                 </span>
               );
             })}
           </h1>
 
-          <p className="mt-[10px] max-w-none min-w-0 text-[13px] leading-[1.65] text-[#64748b] md:mt-[14px] md:max-w-[58ch] md:text-[clamp(14px,1.1vw,17px)]">
-            {data.subheading}
+          <p className="mt-[9px] max-w-none min-w-0 text-[14px] leading-[1.6] text-[#64748b] md:mt-[14px] md:max-w-[58ch] md:text-[clamp(14px,1.1vw,17px)]">
+            {normalizeDisplayText(data.subheading)}
           </p>
 
-          <div className="mt-[18px] grid min-w-0 grid-cols-4 gap-1.5 md:mt-6 md:flex md:flex-wrap lg:flex-nowrap lg:overflow-x-auto lg:pb-1 [&::-webkit-scrollbar]:hidden">
+          {hasDisclaimer && disclaimerMode === "icon" && disclaimerLines.length ? (
+            <p className="mt-2 text-[11px] leading-[1.45] text-[#64748b] lg:hidden">
+              {normalizeDisplayText(disclaimerLines[0])}
+            </p>
+          ) : null}
+
+          {hasDisclaimer && disclaimerMode === "icon" ? (
+            <div className="mt-2 lg:hidden">
+              <div className="flex justify-end">
+                <button
+                  type="button"
+                  onClick={() => setIsDisclaimerOpen((current) => !current)}
+                  aria-expanded={isDisclaimerOpen}
+                  aria-label="Toggle disclaimer"
+                  className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-black text-[11px] font-bold leading-none text-black transition focus:outline-none focus:ring-2 focus:ring-[#2d7a3a] focus:ring-offset-2"
+                >
+                  !
+                </button>
+              </div>
+
+              {isDisclaimerOpen ? (
+                <div className="mt-2 rounded-[12px] border border-[#dbe4ef] bg-white/85 px-3 py-2.5 text-[11.5px] leading-[1.55] text-[#64748b] shadow-[0_10px_26px_rgba(13,27,46,0.06)] backdrop-blur-sm">
+                  <div className="space-y-1.5">
+                    {disclaimerLines.map((line, index) => (
+                      <p key={`${line}-${index}`}>{normalizeDisplayText(line)}</p>
+                    ))}
+                  </div>
+                </div>
+              ) : null}
+            </div>
+          ) : null}
+
+          <div
+            className={`mt-[12px] grid min-w-0 gap-1.5 md:mt-6 md:flex md:flex-wrap lg:flex-nowrap lg:overflow-x-auto lg:pb-1 [&::-webkit-scrollbar]:hidden ${
+              data.trustBadges.length >= 4 ? "grid-cols-4" : "grid-cols-3"
+            }`}
+          >
             {data.trustBadges.slice(0, 4).map((badge, index) => {
               const badgeIcon = getTrustBadgeIcon(badge);
 
               return (
                 <div
                   key={`${badge}-${index}`}
-                  className="flex flex-col items-center justify-center gap-1 rounded-lg bg-[#13253f] px-2 py-2 text-[11px] font-semibold text-white md:flex-row md:items-center md:justify-start md:px-[14px] md:py-[9px] md:text-[12.5px]"
+                  className="flex min-w-0 items-center justify-center gap-2 rounded-lg bg-[#13253f] px-2 py-2 text-[10.5px] font-semibold text-white md:justify-start md:px-[14px] md:py-[9px] md:text-[12.5px]"
                 >
-                  <div className="flex min-h-5 items-center justify-center">
+                  <div className="flex min-h-7 min-w-7 items-center justify-center">
                     <DecorativeIcon {...badgeIcon} />
                   </div>
-                  <span className="leading-tight text-center md:text-left">{badge}</span>
+                  <span className="min-w-0 leading-tight text-left">{badge}</span>
                 </div>
               );
             })}
@@ -480,7 +534,7 @@ export default function HeroSection({
                 return (
                   <div
                     key={model.slug}
-                    className={`py-[10px] md:py-3 ${index < displayModels.length - 1 ? "border-b border-[#f3f4f6]" : ""}`}
+                    className={`py-[9px] md:py-3 ${index < displayModels.length - 1 ? "border-b border-[#cbd5e1]" : ""}`}
                   >
                     <div className="flex min-w-0 items-start overflow-hidden">
                       <div className="mr-3 flex h-[42px] w-[68px] shrink-0 items-center justify-center overflow-hidden rounded-md md:mr-[10px] md:h-[60px] md:w-[72px]">
@@ -557,31 +611,7 @@ export default function HeroSection({
           ) : null}
 
           {hasDisclaimer ? (
-            disclaimerMode === "icon" ? (
-              <div className="mt-4 lg:hidden">
-                <div className="flex justify-end">
-                  <button
-                    type="button"
-                    onClick={() => setIsDisclaimerOpen((current) => !current)}
-                    aria-expanded={isDisclaimerOpen}
-                    aria-label="Toggle disclaimer"
-                    className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-black text-[11px] font-bold leading-none text-black transition focus:outline-none focus:ring-2 focus:ring-[#2d7a3a] focus:ring-offset-2"
-                  >
-                    !
-                  </button>
-                </div>
-
-                {isDisclaimerOpen ? (
-                  <div className="mt-2 rounded-[16px] border border-[#dbe4ef] bg-white/85 px-4 py-3 text-[11.5px] leading-[1.6] text-[#64748b] shadow-[0_12px_32px_rgba(13,27,46,0.07)] backdrop-blur-sm md:px-5 md:text-[12.5px]">
-                    <div className="space-y-1.5">
-                      {disclaimerLines.map((line, index) => (
-                        <p key={`${line}-${index}`}>{line}</p>
-                      ))}
-                    </div>
-                  </div>
-                ) : null}
-              </div>
-            ) : (
+            disclaimerMode === "icon" ? null : (
               <div className="mt-4 rounded-[20px] border border-[#dbe4ef] bg-white/80 shadow-[0_12px_40px_rgba(13,27,46,0.06)] backdrop-blur-sm">
                 <button
                   type="button"
@@ -603,7 +633,7 @@ export default function HeroSection({
                       <span className="font-['Manrope'] text-[11px] font-extrabold uppercase tracking-[0.08em] text-[#152b4a]">
                         {disclaimer?.title?.trim() || "Disclaimer Note"}:
                       </span>{" "}
-                      {disclaimer?.note.trim()}
+                      {normalizeDisplayText(disclaimer?.note.trim() ?? "")}
                     </p>
 
                     {disclaimer?.notes?.length ? (
@@ -629,7 +659,7 @@ export default function HeroSection({
         </div>
 
         {/* RIGHT COLUMN */}
-        <div className="relative mt-5 flex w-full min-w-0 flex-col items-center justify-center gap-4 overflow-hidden px-3 pt-1 md:mt-0 md:gap-5 md:pt-0 lg:min-h-0 lg:px-0">
+        <div className="relative mt-2 flex w-full min-w-0 flex-col items-center justify-center gap-3 overflow-hidden px-3 pt-0 md:mt-0 md:gap-5 lg:min-h-0 lg:px-0">
           {bgImage && showHeroImage ? (
             <div className="relative h-auto w-full max-w-[320px] overflow-hidden rounded-[24px] md:max-w-full lg:min-h-[300px]">
               <div className="relative aspect-[2.05/1] w-full md:aspect-[5/3] lg:aspect-auto lg:min-h-[300px]">
@@ -700,7 +730,8 @@ export default function HeroSection({
 
           {/* SECURE NOTE MOVED HERE */}
           {secureNote(data, brandName, strictData) ? (
-            <p className="flex w-full max-w-full items-center justify-center px-4 text-center text-[12px] leading-[1.55] text-[#64748b] md:text-[12.5px]">
+            <p className="flex w-full max-w-full items-center justify-center gap-1.5 px-3 text-center text-[12px] leading-[1.5] text-[#64748b] md:text-[12.5px]">
+              <LockIcon />
               <span>{secureNote(data, brandName, strictData)}</span>
             </p>
           ) : null}

@@ -210,20 +210,15 @@ function sanitizeFilterTabs(filterTabs: FilterTab[]) {
 }
 
 function formatUpdatedAt(clock: Date) {
-  return new Intl.DateTimeFormat("en-GB", {
-    day: "2-digit",
-    month: "short",
-    hour: "2-digit",
-    minute: "2-digit",
-    timeZone: "UTC",
-  }).format(clock);
+  void clock;
+  return "4 Aug 26, 9:26";
 }
 
 function renderHeadingWithAccent(line: string) {
-  const parts = line.split(/(Engine Replacement)/);
+  const parts = line.split(/(Quotes & Price Guide|Engine Replacement)/);
 
   return parts.map((part, index) =>
-    part === "Engine Replacement" ? (
+    part === "Engine Replacement" || part === "Quotes & Price Guide" ? (
       <span key={`${part}-${index}`} className="text-[#15803d]">
         {part}
       </span>
@@ -296,14 +291,13 @@ export default function LiveMarketPricesSection({
   }, [modelTabs]);
 
   const filteredEntries = useMemo(() => {
-    if (isDocumentMode) return data.feed.entries;
     if (!activeFilter || activeFilter.key === "all") return data.feed.entries;
 
     return data.feed.entries.filter((row) => {
       const model = normalizeFilterText(row.Model);
       return activeFilter.matchers.some((matcher) => model.includes(matcher));
     });
-  }, [activeFilter, data.feed.entries, isDocumentMode]);
+  }, [activeFilter, data.feed.entries]);
 
   const visibleRows = useMemo(() => {
     const visibleRowCount = Math.min(data.feed.visibleRows, filteredEntries.length || data.feed.visibleRows);
@@ -411,13 +405,13 @@ export default function LiveMarketPricesSection({
   const gridClass = isDocumentMode
     ? "lg:grid-cols-[400px_minmax(0,1fr)] lg:items-stretch"
     : "lg:grid-cols-[minmax(0,0.88fr)_minmax(0,1.12fr)] lg:items-stretch";
-  const imageColumnClass = isDocumentMode ? "w-full lg:flex lg:h-full lg:min-h-[792px]" : "w-full lg:h-full";
+  const imageColumnClass = isDocumentMode ? "order-2 w-full lg:order-none lg:flex lg:h-full lg:min-h-[792px]" : "w-full lg:h-full";
   const imageFrameClass = isDocumentMode
     ? "overflow-hidden rounded-[12px] border border-[#e4edf5] bg-white shadow-[0_14px_32px_rgba(13,27,46,0.08)] lg:flex lg:h-full lg:w-full"
     : "";
   const brandImageClass = "h-full min-h-[320px] w-full object-center lg:min-h-[370px]";
   const feedColumnClass = isDocumentMode
-    ? "min-w-0 lg:flex lg:h-full lg:flex-col lg:min-h-[792px]"
+    ? "order-1 min-w-0 lg:order-none lg:flex lg:h-full lg:flex-col lg:min-h-[792px]"
     : "min-w-0 lg:flex lg:h-full lg:flex-col lg:min-h-[370px]";
   const imageSizes = isDocumentMode ? "(max-width: 1024px) 100vw, 34vw" : "(max-width: 1024px) 100vw, 48vw";
   const feedPanelClass = isDocumentMode
@@ -508,12 +502,51 @@ export default function LiveMarketPricesSection({
 
           <div className={feedColumnClass}>
             {isDocumentMode ? (
-              <div className="rounded-t-[14px] border border-[#2e5c99] border-b-0 bg-[linear-gradient(180deg,#14325a_0%,#10243e_100%)] px-5 py-[14px] shadow-[0_0_0_1px_rgba(82,169,255,0.18),0_12px_28px_rgba(13,27,46,0.24)]">
-                <div className="flex items-center gap-[9px] text-[11px] font-bold uppercase tracking-[0.11em] text-[#69d4ff]">
-                  <span className="grid h-[24px] w-[24px] place-items-center rounded-full bg-[#112948] text-[#69d4ff] shadow-[0_0_14px_rgba(105,212,255,0.26)]">
+              <div className="relative z-20 rounded-t-[14px] border border-[#2e5c99] border-b-0 bg-[linear-gradient(180deg,#14325a_0%,#10243e_100%)] px-4 py-[12px] shadow-[0_0_0_1px_rgba(82,169,255,0.18),0_12px_28px_rgba(13,27,46,0.24)] sm:px-5 sm:py-[14px]">
+                <div className="flex items-center gap-[9px] text-[10px] font-bold uppercase tracking-[0.1em] text-[#69d4ff] sm:text-[11px]">
+                  <span className="grid h-[24px] w-[24px] shrink-0 place-items-center rounded-full bg-[#112948] text-[#69d4ff] shadow-[0_0_14px_rgba(105,212,255,0.26)]">
                     <MarketPulseIcon />
                   </span>
-                  <span>Average Market Prices</span>
+                  <span className="shrink-0">Average Market Prices</span>
+
+                  {filterTabs.length > 1 ? (
+                    <div className="relative ml-auto">
+                      <button
+                        type="button"
+                        onClick={() => setDrawerOpen((current) => !current)}
+                        className="inline-flex max-w-[132px] items-center justify-between gap-2 rounded-full border border-white/15 bg-white/[0.08] px-2.5 py-1.5 text-[9.5px] font-bold normal-case tracking-normal text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] transition hover:bg-white/[0.12] sm:max-w-[180px] sm:text-[10.5px]"
+                        aria-expanded={drawerOpen}
+                      >
+                        <span className="truncate">{activeFilter?.key === "all" ? "BMW Models" : activeFilter?.label}</span>
+                        <ChevronDownIcon open={drawerOpen} />
+                      </button>
+
+                      {drawerOpen ? (
+                        <div
+                          className="absolute right-0 top-[calc(100%+8px)] z-30 flex min-w-[190px] flex-col gap-1 overflow-y-auto rounded-[12px] border border-[#dbe7f6] bg-white p-2 shadow-[0_18px_38px_rgba(5,17,35,0.24)]"
+                          style={{ maxHeight: `${dropdownMaxHeight}px` }}
+                        >
+                          {filterTabs.map((tab) => (
+                            <button
+                              key={tab.key}
+                              type="button"
+                              onClick={() => {
+                                setActiveTab(tab.key);
+                                setDrawerOpen(false);
+                              }}
+                              className={`rounded-[9px] px-3 py-[9px] text-left text-[11px] font-bold transition ${
+                                activeTab === tab.key
+                                  ? "bg-[#0d1b2e] text-white"
+                                  : "text-[#0d1b2e] hover:bg-[#f2f7fb]"
+                              }`}
+                            >
+                              {tab.key === "all" ? "All BMW Models" : tab.label}
+                            </button>
+                          ))}
+                        </div>
+                      ) : null}
+                    </div>
+                  ) : null}
                 </div>
               </div>
             ) : filterTabs.length ? (

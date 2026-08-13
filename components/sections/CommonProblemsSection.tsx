@@ -133,19 +133,37 @@ function parseAffectedModelsSummary(affectedModels: string) {
 }
 
 function splitHeading(text: string) {
+  const normalized = normalizeText(text).replace(/[\u2013\u2014]/g, "-");
   const accent = "What It Costs to Fix & When Replacement Makes Sense";
-  if (text.includes(accent)) {
+  if (normalized.includes(accent)) {
     return {
-      primary: text.replace(accent, "").replace(/\s+-\s*$/, "").trim(),
+      primary: normalized.replace(accent, "").replace(/\s+-\s*$/, "").trim(),
       accent,
     };
   }
 
-  const parts = text.split(/\s+-\s+/);
+  const parts = normalized.split(/\s+-\s+/);
   return {
-    primary: parts[0] ?? text,
+    primary: parts[0] ?? normalized,
     accent: parts.length > 1 ? parts.slice(1).join(" ") : "",
   };
+}
+
+function HighlightCommonHeading({ text }: { text: string }) {
+  const marker = "BMW Engine";
+  const index = text.indexOf(marker);
+
+  if (index === -1) {
+    return <>{text}</>;
+  }
+
+  return (
+    <>
+      {text.slice(0, index)}
+      <span className="text-[#15803d]">{marker}</span>
+      {text.slice(index + marker.length)}
+    </>
+  );
 }
 
 function splitProblemDetail(group: string, detail: string) {
@@ -217,7 +235,7 @@ function ProblemIcon({ index, active = false }: { index: number; active?: boolea
     "/icons/engine-market/dark-green-egr-icon.png",
       ];
 
-  return <Image src={icons[index % icons.length]} alt="" width={24} height={24} className="h-[24px] w-[24px] object-contain" />;
+  return <Image src={icons[index % icons.length]} alt="" width={34} height={34} className="h-[30px] w-[30px] object-contain" />;
 }
 
 function MetaIcon({ type, className }: { type: "models" | "mileage" | "root"; className?: string }) {
@@ -442,15 +460,15 @@ function MobileProblemCard({
       <button
         type="button"
         onClick={onToggle}
-        className="flex w-full items-center gap-3 px-[14px] py-[14px] text-left transition hover:bg-[#fafafa]"
+        className="flex w-full items-center gap-3 px-[12px] py-[12px] text-left transition hover:bg-[#fafafa]"
       >
-        <div className="flex h-11 w-11 flex-none items-center justify-center rounded-[10px] bg-[#0d1b2e] text-[#22c55e]">
+        <div className="flex h-10 w-10 flex-none items-center justify-center text-[#0d1b2e]">
           <ProblemIcon index={index} active={open} />
         </div>
         <div className="min-w-0 flex-1">
-          <div className="font-['Manrope'] text-[13.5px] font-bold leading-[1.25] text-[#0d1b2e]">{detail.title}</div>
+          <div className="font-['Manrope'] text-[15.5px] font-bold leading-[1.2] text-[#0d1b2e]">{detail.title}</div>
           {detail.supporting ? (
-            <div className="mt-0.5 text-[10.5px] text-[#9ca3af]">{detail.supporting}</div>
+            <div className="mt-0.5 text-[12.5px] leading-[1.3] text-[#64748b]">{detail.supporting}</div>
           ) : null}
         </div>
         <span className={`flex-none text-[18px] leading-none text-[#d1d5db] transition ${open ? "rotate-180 text-[#15803d]" : ""}`}>⌄</span>
@@ -615,14 +633,14 @@ export default function CommonProblemsSection({ data, bgImage, documentMode = fa
       ) : null}
 
       <Container className={`relative max-w-[1400px] ${documentMode ? "" : "px-2"}`}>
-        <div className="section-pill mb-[14px]">
+        <div className="section-pill mb-[14px] !text-[#38bdf8] [&_*]:!text-[#38bdf8]">
           <span>{data.tag}</span>
         </div>
 
         <div className="hidden gap-5 lg:grid lg:grid-cols-[320px_minmax(0,1fr)] lg:items-start">
           <div className="rounded-[14px] border border-[#e5e7eb] bg-white p-5 shadow-[0_2px_10px_rgba(13,27,46,0.05)]">
             <h2 className="text-[26px] font-extrabold leading-[1.18] tracking-[-0.5px] text-[#0d1b2e]" style={{ fontSize: '26px' }}>
-              <span>{heading.primary}</span>
+              <HighlightCommonHeading text={heading.primary} />
             </h2>
 
             {/* Updated Desktop Paragraph */}
@@ -836,8 +854,8 @@ export default function CommonProblemsSection({ data, bgImage, documentMode = fa
           </div>
         ) : null}
         <div className="lg:hidden">
-          <h2 className="mb-4 text-[26px] font-extrabold leading-[1.2] tracking-[-0.4px] text-[#0d1b2e] md:text-[36px] md:leading-[1.15] md:tracking-[-0.7px]">
-            <span>{heading.primary}</span>
+          <h2 className="mb-2 text-[26px] font-extrabold leading-[1.2] tracking-[-0.4px] text-[#0d1b2e] md:text-[36px] md:leading-[1.15] md:tracking-[-0.7px]">
+            <HighlightCommonHeading text={heading.primary} />
             {heading.accent ? (
               <>
                 <br className="hidden md:block" />

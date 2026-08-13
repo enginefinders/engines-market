@@ -89,7 +89,7 @@ export default function ModelsSection({ data, brandSlug, documentMode = false }:
   const hiddenModelsCount = Math.max(data.cards.length - initialVisibleCount, 0);
 
   return (
-    <Section id="brand-models" className="relative overflow-hidden bg-white">
+    <Section id="brand-models" className="relative overflow-hidden bg-white !pt-2 sm:!pt-4 lg:!pt-7">
       <div className="pointer-events-none absolute inset-x-0 top-0 hidden lg:block">
         <div
           className="absolute right-0 top-0 h-[230px] w-[260px] opacity-[0.1]"
@@ -110,7 +110,7 @@ export default function ModelsSection({ data, brandSlug, documentMode = false }:
             {data.tag}
           </p>
 
-          <h2 className="mt-3">
+          <h2 className="mt-2">
             {heading.before}
             {heading.accent ? (
               <>
@@ -120,51 +120,72 @@ export default function ModelsSection({ data, brandSlug, documentMode = false }:
             ) : null}
           </h2>
 
-          <div className="mt-3 h-[3px] w-12 rounded-full bg-green-500" />
-          <p className="text-body mt-4 max-w-[660px] text-slate-600">{data.subheading}</p>
+          <p className="text-body mt-2 max-w-[660px] text-slate-600">{data.subheading}</p>
         </div>
 
-        <div className="mt-7 grid grid-cols-2 gap-3 md:hidden">
+        <div className="mt-4 grid grid-cols-2 gap-3 md:hidden">
           {visibleCards.map((model) => {
             const modelHref = getModelHref(brandSlug, model);
+            const isOpen = openCard === model.slug;
 
             return (
               <article
                 key={model.slug}
-                className="overflow-hidden rounded-[18px] border border-slate-200 bg-white shadow-[0_10px_30px_rgba(13,27,46,0.08)]"
+                className="overflow-hidden rounded-[14px] border border-slate-200 bg-white shadow-[0_8px_22px_rgba(13,27,46,0.07)]"
               >
-                <Link href={modelHref} className="block h-full">
-                  <div className="relative aspect-[1.18/1] overflow-hidden bg-[linear-gradient(180deg,#f8fbff_0%,#eef3f9_100%)]">
+                <Link href={modelHref} className="block">
+                  <div className="relative aspect-[1.26/1] overflow-hidden bg-[linear-gradient(180deg,#f8fbff_0%,#eef3f9_100%)]">
                     <Image
                       src={model.image || `/images/brands/${brandSlug}/models/${brandSlug}-${model.slug}-small.webp`}
                       alt={model.h3}
                       fill
-                      className="object-contain p-2"
+                      className="object-contain p-1.5"
                       sizes="(max-width: 767px) 50vw, 25vw"
                     />
                   </div>
+                </Link>
 
-                  <div className="space-y-2 px-3 pb-3 pt-3">
-                    <h3 className="font-['Manrope'] text-[15px] font-extrabold leading-[1.15] text-[#0d1b2e]">
+                <div className="space-y-2 px-3 pb-3 pt-2.5">
+                  <Link
+                    href={modelHref}
+                    className="block font-['Manrope'] text-[14px] font-extrabold leading-[1.15] text-[#0d1b2e] transition hover:text-[#15803d]"
+                  >
+                    <h3>
                       {model.h3}
                     </h3>
-                    <p className="text-[10.5px] leading-[1.45] text-slate-500">{model.subtitle}</p>
+                  </Link>
+                  <p className="text-[10.5px] leading-[1.45] text-slate-500">{model.subtitle}</p>
 
-                    <div className="border-t border-slate-100 pt-2">
-                      <p className="text-[10px] font-semibold uppercase tracking-[0.08em] text-slate-400">
+                  <button
+                    type="button"
+                    onClick={() => setOpenCard((current) => (current === model.slug ? null : model.slug))}
+                    aria-expanded={isOpen}
+                    aria-label={isOpen ? `Hide ${model.h3} quote link` : `Show ${model.h3} quote link`}
+                    className="flex w-full items-center justify-between gap-2 border-t border-slate-100 pt-2 text-left"
+                  >
+                    <span>
+                      <span className="block text-[9.5px] font-semibold uppercase tracking-[0.08em] text-slate-400">
                         Starting from
-                      </p>
-                      <p className="mt-1 font-['Manrope'] text-[14px] font-extrabold leading-none text-[#15803d]">
+                      </span>
+                      <span className="mt-0.5 block font-['Manrope'] text-[13px] font-extrabold leading-none text-[#0d1b2e]">
                         {normalizePriceRange(model.priceRange)}
-                      </p>
-                    </div>
+                      </span>
+                    </span>
+                    <span className="text-[#0d1b2e]">
+                      <ArrowIcon open={isOpen} />
+                    </span>
+                  </button>
 
-                    <div className="inline-flex items-center gap-1.5 text-[11px] font-extrabold text-[#15803d]">
+                  {isOpen ? (
+                    <Link
+                      href={modelHref}
+                      className="mt-2 flex items-center justify-between gap-2 rounded-[8px] bg-[#15803d] px-2.5 py-2 font-['Manrope'] text-[10.5px] font-bold leading-tight text-white shadow-[0_8px_18px_rgba(21,128,61,0.18)]"
+                    >
                       <span>{model.cta.replace(/\s*-+>\s*$/, "")}</span>
                       <ArrowIcon />
-                    </div>
+                    </Link>
+                  ) : null}
                   </div>
-                </Link>
               </article>
             );
           })}

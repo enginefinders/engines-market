@@ -111,8 +111,6 @@ export default function ReviewsSection({ data, useDataHeading = false, documentM
   const headingLines = data.headingLines?.length ? data.headingLines : [heading.lineOne, heading.lineTwo].filter(Boolean);
   const ui = data.ui ?? {};
   const reviewSources = data.sources?.length ? data.sources : REVIEW_SOURCES;
-  const ratingLabel = `${data.rating.value} out of 5`;
-
   const desktopIndices = useMemo(
     () => getVisibleIndices(reviewCount, currentIndex, 3),
     [currentIndex, reviewCount],
@@ -156,12 +154,14 @@ export default function ReviewsSection({ data, useDataHeading = false, documentM
                 )}
               </h2>
 
-              <div className="flex items-center gap-3 rounded-[12px] border border-slate-200 bg-white px-4 py-3 shadow-[0_2px_10px_rgba(13,27,46,0.05)] lg:mb-1">
+              <div className="flex items-center gap-3 rounded-[10px] border border-[#18365d] bg-[linear-gradient(135deg,#07182c_0%,#0d2848_100%)] px-4 py-3 text-white shadow-[0_12px_30px_rgba(6,24,43,0.24)] lg:mb-1">
                 <StarRow size="text-[18px]" />
-                <div className="text-[13px] leading-[1.35] text-slate-500">
-                  <div className="font-['Manrope'] text-[16px] font-extrabold leading-none text-[#0d1b2e]">
-                    {ratingLabel}
-                  </div>
+                <div className="h-8 w-px bg-white/18" aria-hidden="true" />
+                <div className="flex items-end gap-1.5 text-[12px] leading-none text-white/70">
+                  <span className="font-['Manrope'] text-[24px] font-extrabold leading-none text-white">
+                    {data.rating.value}
+                  </span>
+                  <span className="pb-1">out of 5</span>
                 </div>
               </div>
             </div>
@@ -206,7 +206,7 @@ export default function ReviewsSection({ data, useDataHeading = false, documentM
               })}
             </div>
 
-            <div className="rounded-[14px] border border-slate-200 bg-white px-4 py-5 shadow-[0_2px_10px_rgba(13,27,46,0.06)] lg:hidden">
+            <div className="rounded-[14px] border border-[#d8e6f5] bg-[linear-gradient(180deg,#ffffff_0%,#f8fbff_100%)] px-4 py-4 shadow-[0_8px_20px_rgba(13,27,46,0.08)] lg:hidden">
               <div className="flex items-center justify-between gap-3">
                 <ReviewSource source={reviewSources[currentIndex % reviewSources.length] as (typeof REVIEW_SOURCES)[number]} />
                 <StarRow size="text-[18px]" />

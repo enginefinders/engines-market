@@ -39,13 +39,17 @@ function typeVariant(title: string) {
   return "recon";
 }
 
+function isSupplyFitType(title: string) {
+  return typeVariant(title) === "supplyfit";
+}
+
 function priceParts(text: string) {
   const normalized = normalizeText(text);
   const [rawLabel, rawValue] = normalized.split(":");
   const label = rawValue === undefined ? "Typical price range" : rawLabel.trim();
   const value = (rawValue ?? normalized).trim();
   const formatNote = (note: string) => {
-    const cleaned = note.replace(/^\(|\)$/g, "").trim();
+    const cleaned = note.replace(/^[\s(]+|[\s)]+$/g, "").trim();
 
     if (/on top of engine price/i.test(cleaned)) {
       return "Added to the engine price";
@@ -329,7 +333,7 @@ function MobileEngineTypeStack({
                 marginTop: stackIndex === 0 ? 0 : previousIsActive ? 8 : -54,
                 transform: `translateX(${offsetX}px) rotate(${rotate}deg)`,
                 width: `calc(100% - ${widthTrim}px)`,
-                height: active ? (flipped ? 334 : 218) : undefined,
+                height: active ? (flipped ? 220 : 188) : undefined,
                 perspective: active ? "1200px" : undefined,
                 WebkitPerspective: active ? "1200px" : undefined,
               }}
@@ -360,12 +364,12 @@ function MobileEngineTypeStack({
                       className="flex h-full w-full cursor-pointer flex-col rounded-[10px] border border-[#d8e6f5] bg-[linear-gradient(180deg,#ffffff_0%,#edf7ff_100%)] shadow-[0_8px_18px_rgba(13,27,46,0.07)]"
                       aria-expanded={!flipped}
                     >
-                      <div className="flex items-start gap-3 px-3 py-3">
+                      <div className="flex items-center gap-3 px-3 py-2.5">
                         <span className="flex h-10 w-10 flex-none items-center justify-center rounded-full bg-[#e8f4fd] text-[#0d1b2e]">
                           {icon}
                         </span>
                         <span className="min-w-0 flex-1">
-                          <span className="block font-['Manrope'] text-[12px] font-extrabold uppercase leading-[1.16] text-[#0d1b2e]">
+                          <span className="block font-['Manrope'] text-[14px] font-extrabold uppercase leading-[1.12] text-[#0d1b2e]">
                             {type.title}
                           </span>
                           <span className="mt-1 block text-[11px] leading-[1.45] text-[#64748b]">
@@ -378,7 +382,7 @@ function MobileEngineTypeStack({
                         <div className="h-px bg-[#d8e6f5]" />
                       </div>
 
-                      <div className="px-3 pb-3 pt-3">
+                      <div className="px-3 pb-2.5 pt-2.5">
                         <div className="grid grid-cols-[minmax(145px,1fr)_1px_minmax(0,1fr)] items-center gap-3">
                           <div className="min-w-0">
                             <div className="text-[10.5px] font-medium leading-[1.2] text-[#64748b]">
@@ -430,7 +434,7 @@ function MobileEngineTypeStack({
                       WebkitBackfaceVisibility: "hidden",
                     }}
                   >
-                    <div className="scrollbar-dark h-full overflow-y-auto rounded-[10px] border-[1.5px] border-[#3b82f6] bg-[#0d1b2e] px-4 py-4 shadow-[0_0_0_1px_rgba(59,130,246,1),0_0_8px_rgba(59,130,246,0.5),0_0_16px_rgba(59,130,246,0.38),0_0_26px_rgba(59,130,246,0.24),0_4px_12px_rgba(42,109,214,0.28)]">
+                    <div className="scrollbar-dark h-full overflow-y-auto rounded-[10px] border-[1.5px] border-[#3b82f6] bg-[#0d1b2e] px-3 py-2.5 shadow-[0_0_0_1px_rgba(59,130,246,1),0_0_8px_rgba(59,130,246,0.5),0_0_16px_rgba(59,130,246,0.38),0_0_26px_rgba(59,130,246,0.24),0_4px_12px_rgba(42,109,214,0.28)]">
                       <div className="mb-2 flex items-center justify-between gap-3">
                         <span className={`inline-flex rounded-full border px-[8px] py-[1px] text-[8.5px] font-bold uppercase tracking-[0.7px] ${badgeClass}`}>
                           {badge}
@@ -448,12 +452,12 @@ function MobileEngineTypeStack({
                         </button>
                       </div>
 
-                      <p className="text-[12px] leading-[1.6] text-[#e2e8f0]">
+                      <p className="text-[12px] leading-[1.48] text-[#e2e8f0]">
                         {backDescription}
                       </p>
 
                       {backBullets.length ? (
-                        <ul className="mt-3 space-y-1.5 text-[11px] leading-[1.5] text-[#cbd5e1]">
+                        <ul className="mt-2 space-y-1 text-[10.5px] leading-[1.42] text-[#cbd5e1]">
                           {backBullets.map((bullet) => (
                             <li key={bullet} className="flex gap-2">
                               <span className="mt-[4px] h-[5px] w-[5px] flex-none rounded-full bg-[#22c55e]" />
@@ -463,7 +467,7 @@ function MobileEngineTypeStack({
                         </ul>
                       ) : null}
 
-                      <div className="mt-4 grid grid-cols-[minmax(145px,1fr)_1px_minmax(0,1fr)] items-center gap-3 border-t border-white/10 pt-3">
+                      <div className="mt-2 grid grid-cols-[minmax(145px,1fr)_1px_minmax(0,1fr)] items-center gap-3 border-t border-white/10 pt-2">
                         <div className="min-w-0">
                           <div className="text-[10.5px] font-medium leading-[1.2] text-[#94a3b8]">
                             {priceDisplayLabel(priceLabel || price.label)}
@@ -508,12 +512,12 @@ function MobileEngineTypeStack({
                   }`}
                   aria-expanded={false}
                 >
-                  <div className="flex items-start gap-3 px-3 py-3">
+                  <div className="flex items-center gap-3 px-3 py-3">
                     <span className="flex h-10 w-10 flex-none items-center justify-center rounded-full bg-[#e8f4fd] text-[#0d1b2e]">
                       {icon}
                     </span>
                     <span className="min-w-0 flex-1">
-                      <span className="line-clamp-2 block font-['Manrope'] text-[12px] font-extrabold uppercase leading-[1.16] text-[#0d1b2e]">
+                      <span className="line-clamp-2 block font-['Manrope'] text-[14px] font-extrabold uppercase leading-[1.12] text-[#0d1b2e]">
                         {type.title}
                       </span>
                     </span>
@@ -538,6 +542,128 @@ function MobileEngineTypeStack({
   );
 }
 
+function MobileSupplyFitCard({
+  type,
+  flipped,
+  onToggle,
+  frontActionLabel,
+  backActionLabel,
+  priceLabel,
+}: {
+  type: EngineTypesData["types"][number];
+  flipped: boolean;
+  onToggle: () => void;
+  frontActionLabel: string;
+  backActionLabel: string;
+  priceLabel: string;
+}) {
+  const icon = getTypeIcon(type.title);
+  const price = priceParts(type.priceRange);
+  const frontDescription = fullText(type.frontDescription || type.description);
+  const backDescription = fullText(type.backDescription || type.description);
+  const backBullets = type.backBullets?.map((bullet) => fullText(bullet)).filter(Boolean) ?? [];
+
+  return (
+    <div className="mt-4 flex justify-center md:hidden">
+      <article
+        role="button"
+        tabIndex={0}
+        onClick={onToggle}
+        onKeyDown={(event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            onToggle();
+          }
+        }}
+        className={`w-full max-w-[430px] cursor-pointer rounded-[10px] border shadow-[0_8px_18px_rgba(13,27,46,0.08)] transition ${
+          flipped
+            ? "border-[#d8e6f5] bg-white text-[#0d1b2e]"
+            : "border-[#173a73] bg-[#0d1b2e] text-white"
+        }`}
+        aria-expanded={flipped}
+      >
+        <div className="flex items-start gap-2.5 px-3 py-2.5">
+          <span
+            className={`flex h-9 w-9 flex-none items-center justify-center rounded-full ${
+              flipped ? "bg-[#e8f4fd]" : "bg-white/10"
+            }`}
+          >
+            {icon}
+          </span>
+          <div className="min-w-0 flex-1">
+            <h3 className={`font-['Manrope'] text-[14px] font-extrabold uppercase leading-[1.18] ${flipped ? "text-[#0d1b2e]" : "text-white"}`}>
+              {type.title}
+            </h3>
+            <p className={`mt-1 text-[11px] leading-[1.38] ${flipped ? "text-[#475569]" : "line-clamp-2 text-white/78"}`}>
+              {flipped ? backDescription : frontDescription}
+            </p>
+          </div>
+          <span className={`mt-0.5 inline-flex items-center gap-1 text-[8.5px] font-bold uppercase tracking-[0.04em] ${flipped ? "text-[#0d1b2e]/60" : "text-white/60"}`}>
+            <TbRefresh className="h-3 w-3" />
+            {flipped ? backActionLabel : frontActionLabel}
+          </span>
+        </div>
+
+        {flipped && backBullets.length ? (
+          <ul className="mx-3 mb-2 space-y-1 rounded-[8px] bg-[#f8fbff] px-3 py-2 text-[10.5px] leading-[1.38] text-[#475569]">
+            {backBullets.map((bullet) => (
+              <li key={bullet} className="flex gap-2">
+                <span className="mt-[5px] h-[4px] w-[4px] flex-none rounded-full bg-[#15803d]" />
+                <span>{bullet}</span>
+              </li>
+            ))}
+          </ul>
+        ) : null}
+
+        <div className={`mx-3 h-px ${flipped ? "bg-[#d8e6f5]" : "bg-white/12"}`} />
+
+        <div className="grid grid-cols-[minmax(132px,1fr)_1px_minmax(0,1fr)] items-center gap-3 px-3 py-2.5">
+          <div className="min-w-0">
+            <div className={`text-[10px] font-medium leading-[1.2] ${flipped ? "text-[#64748b]" : "text-white/65"}`}>
+              {priceDisplayLabel(priceLabel || price.label)}
+            </div>
+            <div className={`mt-1 whitespace-nowrap font-['Manrope'] text-[16px] font-extrabold leading-[1.1] ${flipped ? "text-[#0d1b2e]" : "text-white"}`}>
+              {price.main}
+            </div>
+            {price.note ? (
+              <div className={`mt-0.5 whitespace-nowrap text-[9px] font-semibold leading-[1.2] ${flipped ? "text-[#64748b]" : "text-white/65"}`}>
+                ({price.note})
+              </div>
+            ) : null}
+          </div>
+          <div className={`h-9 w-px ${flipped ? "bg-[#d7dde5]" : "bg-white/15"}`} />
+          <a
+            href="#quote-form"
+            data-quote-context={type.title}
+            data-quote-source="engine-types-supply-fit-mobile"
+            className={`inline-flex min-w-0 items-center justify-between gap-2 text-[10px] font-semibold uppercase leading-[1.28] transition ${
+              flipped ? "text-[#059669] hover:text-[#047857]" : "text-[#4ade80] hover:text-[#86efac]"
+            }`}
+            onClick={(event) => event.stopPropagation()}
+          >
+            <span className="min-w-0">{type.cta}</span>
+            <TbArrowRight className="h-3.5 w-3.5 flex-none" />
+          </a>
+        </div>
+
+        {flipped ? (
+          <button
+            type="button"
+            onClick={(event) => {
+              event.stopPropagation();
+              onToggle();
+            }}
+            className="mx-3 mb-2 inline-flex items-center gap-1 text-[9px] font-bold uppercase tracking-[0.04em] text-[#0d1b2e]/70 transition-colors hover:text-[#0d1b2e]"
+          >
+            <TbRefresh className="h-3.5 w-3.5" />
+            <span>{backActionLabel}</span>
+          </button>
+        ) : null}
+      </article>
+    </div>
+  );
+}
+
 function inferBrandLabel(title: string) {
   const match = title.match(/^(.*?)\s+Engine Types/i);
   return match?.[1]?.trim() || "Engine";
@@ -545,7 +671,7 @@ function inferBrandLabel(title: string) {
 
 function compactEngineTypesHeading(title: string) {
   const match = title.match(/^(.*?)\s+Engine Types/i);
-  return match ? `${match[1].trim()} Engine Types` : title;
+  return match ? `${match[1].trim()} Replacement Engine Types` : title;
 }
 
 function normalizeClosingCopy(text: string) {
@@ -565,18 +691,25 @@ export default function EngineTypesSection({
 }: Props) {
   const isDocumentMode = displayMode === "document";
   const useFullBleedDocumentLayout = documentMode || isDocumentMode;
+  const mobileStackTypes = data.types.filter((type) => !isSupplyFitType(type.title));
+  const mobileSupplyFitType = data.types.find((type) => isSupplyFitType(type.title));
   const lastCardIndex = data.types.length - 1;
+  const lastMobileStackIndex = mobileStackTypes.length - 1;
   const [openIndex, setOpenIndex] = useState<number | null>(() =>
     useFullBleedDocumentLayout && lastCardIndex >= 0 ? lastCardIndex : null,
   );
   const [activeMobileCard, setActiveMobileCard] = useState<number | null>(() =>
-    useFullBleedDocumentLayout && lastCardIndex >= 0 ? lastCardIndex : null,
+    useFullBleedDocumentLayout && lastMobileStackIndex >= 0 ? lastMobileStackIndex : null,
   );
   const [flippedMobileCard, setFlippedMobileCard] = useState<number | null>(null);
+  const [supplyFitFlipped, setSupplyFitFlipped] = useState(false);
   const [isClosingExpanded, setIsClosingExpanded] = useState(false);
   const [uniformHeight, setUniformHeight] = useState(228);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
-  const headingLines = data.headingLines?.length ? data.headingLines : data.h2.split(/\s+-\s+/);
+  const normalizedHeading = normalizeText(data.h2)
+    .replace(/[\u2013\u2014]/g, "-")
+    .replace(/\bBMW Engine Types\b/i, "BMW Replacement Engine Types");
+  const headingLines = data.headingLines?.length ? data.headingLines : normalizedHeading.split(/\s+-\s+/);
   const mobileHeading = compactEngineTypesHeading(data.h2);
   const brandLabel = inferBrandLabel(data.h2);
   const closingText = normalizeClosingCopy(data.closing);
@@ -681,7 +814,7 @@ export default function EngineTypesSection({
         </p>
 
         <MobileEngineTypeStack
-          types={data.types}
+          types={mobileStackTypes}
           activeIndex={activeMobileCard}
           flippedIndex={flippedMobileCard}
           onSelect={handleMobileSelect}
@@ -691,6 +824,17 @@ export default function EngineTypesSection({
           backActionLabel={isDocumentMode ? (ui.backActionLabel || "") : (ui.backActionLabel ?? "Flip back")}
           priceLabel={isDocumentMode ? (ui.priceLabel || "") : (ui.priceLabel ?? "Typical price range")}
         />
+
+        {mobileSupplyFitType ? (
+          <MobileSupplyFitCard
+            type={mobileSupplyFitType}
+            flipped={supplyFitFlipped}
+            onToggle={() => setSupplyFitFlipped((current) => !current)}
+            frontActionLabel={isDocumentMode ? (ui.frontActionLabel || "") : (ui.frontActionLabel ?? "What is it?")}
+            backActionLabel={isDocumentMode ? (ui.backActionLabel || "") : (ui.backActionLabel ?? "Flip back")}
+            priceLabel={isDocumentMode ? (ui.priceLabel || "") : (ui.priceLabel ?? "Typical price range")}
+          />
+        ) : null}
 
         <div className="mt-[22px] hidden gap-x-3 gap-y-2 md:grid lg:grid-cols-2 lg:gap-x-4 lg:gap-y-2.5">
           {data.types.map((type, index) => (
