@@ -1620,218 +1620,136 @@
       ]
     },
     "engineCodes": {
-      "tag": "Replacement Cost",
-      "h2": "Mazda Engine Codes & Average Rebuilt Prices (UK Supply)",
-      "h3": "Compare costs for every major Mazda engine — SKYACTIV-G, SKYACTIV-D and MZR. All prices are typical UK market ranges for professionally rebuilt engines with warranty. Click “Get Quote” on any engine to receive tailored prices from our network of UK Mazda specialists.",
+      "tag": "Engine Codes",
+      "h2": "Mazda Engine Codes - Most Replaced Engines & Full Directory",
+      "h3": "Every major Mazda engine code with technical specs, compatible UK models, known failures and average rebuilt prices. Use the quick-reference accordion below for all remaining codes.",
+      "closingLine": "Can't find your engine code? Enter your registration number above - we'll identify the exact Mazda engine fitted to your vehicle.",
       "filters": [
-        "All",
-        "Diesel",
-        "Petrol"
+        "Diesel Engines (Most Replaced in the UK)",
+        "Petrol Engines (Most Replaced in the UK)"
       ],
       "groups": [
         {
-          "name": "SKYACTIV-G Petrol",
-          "era": "2011–Present",
-          "failureNote": "SKYACTIV-G petrol engines are generally reliable but suffer carbon buildup on intake valves due to direct injection, particularly the 2.0L variant in Mazda3 and CX-30 . Cylinder head cracking (early 2.5L) and thermostat failures also occur. Our rebuilt units include professionally cleaned intake ports and new valve stem seals.",
+          "name": "Diesel Engines (Most Replaced in the UK)",
+          "era": "Extracted from Mazda diesel engines (most replaced in the uk) technical replacement data.",
+          "failureNote": "DPF clogging - common on vehicles used for short journeys, EGR carbon buildup - leading to rough running and emissions warning lights",
           "engines": [
+            {
+              "code": "S5-DPTS",
+              "title": "1.5L Diesel (Skyactiv-D)",
+              "familyHeading": "S5-DPTS - 1.5L Diesel (Skyactiv-D)",
+              "fuel": "Diesel",
+              "size": "1.5 Litre",
+              "power": "105 hp (77 kW) @ 4,000 rpm",
+              "compatibleModels": "Mazda2 (DJ), Demio (DJ)",
+              "avgRebuiltPrice": "£1,200 - £2,200 supply only",
+              "cta": "→ Get quotes for S5-DPTS Mazda engine replacement"
+            },
+            {
+              "code": "S8-DPTS",
+              "title": "1.8L Diesel (Skyactiv-D)",
+              "familyHeading": "S8-DPTS - 1.8L Diesel (Skyactiv-D)",
+              "fuel": "Diesel",
+              "size": "1.8 Litre",
+              "power": "116 hp",
+              "compatibleModels": "CX-3 (DK), CX-30 (DM), Mazda3 (BP)",
+              "avgRebuiltPrice": "£1,500 - £2,500 supply only",
+              "cta": "→ Get quotes for S8-DPTS Mazda engine replacement"
+            },
+            {
+              "code": "SH-VPTS",
+              "title": "2.2L Diesel (Skyactiv-D)",
+              "familyHeading": "SH-VPTS - 2.2L Diesel (Skyactiv-D)",
+              "fuel": "Diesel",
+              "size": "2.2 Litre",
+              "power": "175-190 hp",
+              "compatibleModels": "Mazda6 (GJ/GL), CX-5 (KE/KF)",
+              "avgRebuiltPrice": "£2,500 - £4,000 supply only",
+              "cta": "→ Get quotes for SH-VPTS Mazda engine replacement"
+            }
+          ]
+        },
+        {
+          "name": "Petrol Engines (Most Replaced in the UK)",
+          "era": "Extracted from Mazda petrol engines (most replaced in the uk) technical replacement data.",
+          "failureNote": "Carbon buildup on intake valves - a common issue on direct-injection engines, Rare unit - spare parts are expensive and not very common",
+          "engines": [
+            {
+              "code": "HF-VPH",
+              "title": "2.0L Petrol (Skyactiv-X)",
+              "familyHeading": "HF-VPH - 2.0L Petrol (Skyactiv-X)",
+              "fuel": "Petrol",
+              "size": "2.0 Litre",
+              "power": "180-190 hp",
+              "compatibleModels": "Mazda3 (BP), CX-30 (DM)",
+              "avgRebuiltPrice": "£2,500 - £4,500 supply only",
+              "cta": "→ Get quotes for HF-VPH Mazda engine replacement"
+            },
+            {
+              "code": "L8-DE",
+              "title": "1.8L Petrol",
+              "familyHeading": "L8-DE - 1.8L Petrol",
+              "fuel": "Petrol",
+              "size": "1.8 Litre",
+              "power": "120-125 hp",
+              "compatibleModels": "Mazda3 (BK/BL), Mazda5, Premacy, MPV",
+              "avgRebuiltPrice": "£800 - £1,500 supply only",
+              "cta": "→ Get quotes for L8-DE Mazda engine replacement"
+            },
+            {
+              "code": "P3-VPS",
+              "title": "1.3L Petrol",
+              "familyHeading": "P3-VPS - 1.3L Petrol",
+              "fuel": "Petrol",
+              "size": "1.3 Litre",
+              "power": "84-92 hp",
+              "compatibleModels": "Mazda2 (DJ), Demio (DJ)",
+              "avgRebuiltPrice": "£600 - £1,200 supply only",
+              "cta": "→ Get quotes for P3-VPS Mazda engine replacement"
+            },
+            {
+              "code": "P5-VPS",
+              "title": "1.5L Petrol (Skyactiv-G)",
+              "familyHeading": "P5-VPS - 1.5L Petrol (Skyactiv-G)",
+              "fuel": "Petrol",
+              "size": "1.5 Litre",
+              "power": "110-115 hp",
+              "compatibleModels": "Mazda2 (DJ), Mazda3 (BM), CX-3 (DK)",
+              "avgRebuiltPrice": "£1,200 - £2,200 supply only",
+              "cta": "→ Get quotes for P5-VPS Mazda engine replacement"
+            },
             {
               "code": "PE-VPS",
+              "title": "2.0L Petrol (Skyactiv-G)",
+              "familyHeading": "PE-VPS - 2.0L Petrol (Skyactiv-G)",
               "fuel": "Petrol",
-              "size": "2.0L",
-              "power": "165 HP",
-              "compatibleModels": "Mazda3 (BM/BN), Mazda6 (GJ/GL), CX-5 (KE)",
-              "avgRebuiltPrice": "£1,800 – £3,800",
-              "cta": "Get Quote for PE-VPS"
+              "size": "2.0 Litre",
+              "power": "155-165 hp",
+              "compatibleModels": "Mazda3 (BM/BP), Mazda6 (GJ), CX-3 (DK), CX-5 (KE/KF), MX-5 (ND)",
+              "avgRebuiltPrice": "£1,500 - £2,800 supply only",
+              "cta": "→ Get quotes for PE-VPS Mazda engine replacement"
             },
             {
-              "code": "PY-VPS",
+              "code": "PY-RPS",
+              "title": "2.5L Petrol (Skyactiv-G)",
+              "familyHeading": "PY-RPS - 2.5L Petrol (Skyactiv-G)",
               "fuel": "Petrol",
-              "size": "2.5L",
-              "power": "187 HP",
-              "compatibleModels": "Mazda6 (GJ/GL), CX-5 (KE/KF), CX-9 (TC)",
-              "avgRebuiltPrice": "£2,000 – £4,500",
-              "cta": "Get Quote for PY-VPS"
+              "size": "2.5 Litre",
+              "power": "188-190 hp",
+              "compatibleModels": "CX-5 (KF)",
+              "avgRebuiltPrice": "£2,000 - £3,500 supply only",
+              "cta": "→ Get quotes for PY-RPS Mazda engine replacement"
             },
             {
-              "code": "P5-VPS (SKYACTIV-G 1.5)",
+              "code": "PY-VPR",
+              "title": "2.5L Petrol (Turbo)",
+              "familyHeading": "PY-VPR - 2.5L Petrol (Turbo)",
               "fuel": "Petrol",
-              "size": "1.5L",
-              "power": "111 HP",
-              "compatibleModels": "Mazda2 (DJ), Mazda3 (BP)",
-              "avgRebuiltPrice": "£1,400 – £3,200",
-              "cta": "Get Quote for P5-VPS (SKYACTIV-G 1.5)"
-            }
-          ]
-        },
-        {
-          "name": "SKYACTIV-D Diesel",
-          "era": "2011–Present",
-          "failureNote": "SKYACTIV-D engines are known for severe intake carbon buildup (coked intake), DPF clogging, and P2002 DPF efficiency codes leading to engine failure. Excessive oil consumption and EGR issues are also common . Our rebuilt engines include professionally cleaned intakes, new EGR valves, and upgraded oil control components.",
-          "engines": [
-            {
-              "code": "SH (S5)",
-              "fuel": "Diesel",
-              "size": "1.5L",
-              "power": "105 HP",
-              "compatibleModels": "Mazda2 (DJ), Mazda3 (BM)",
-              "avgRebuiltPrice": "£2,000 – £4,000",
-              "cta": "Get Quote for SH (S5)"
-            },
-            {
-              "code": "SH (S8)",
-              "fuel": "Diesel",
-              "size": "2.2L",
-              "power": "148 HP",
-              "compatibleModels": "Mazda6 (GJ), CX-5 (KE)",
-              "avgRebuiltPrice": "£2,800 – £5,200",
-              "cta": "Get Quote for SH (S8)"
-            },
-            {
-              "code": "S9",
-              "fuel": "Diesel",
-              "size": "2.2L",
-              "power": "173 HP",
-              "compatibleModels": "Mazda6 (GJ), CX-5 (KE/KF)",
-              "avgRebuiltPrice": "£3,000 – £5,800",
-              "cta": "Get Quote for S9"
-            }
-          ]
-        },
-        {
-          "name": "MZR Petrol",
-          "era": "2002–2015",
-          "failureNote": "MZR petrol engines suffer timing chain stretch and VVT actuator failure, causing rattle on startup (particularly the 2.5L) . If ignored, this leads to valve damage. Our rebuilt units include new timing chains, upgraded tensioners, and refurbished VVT units.",
-          "engines": [
-            {
-              "code": "L813",
-              "fuel": "Petrol",
-              "size": "1.8L",
-              "power": "118 HP",
-              "compatibleModels": "Mazda3 (BK), Mazda5 (CR), Mazda6 (GG)",
-              "avgRebuiltPrice": "£1,200 – £3,000",
-              "cta": "Get Quote for L813"
-            },
-            {
-              "code": "LF17",
-              "fuel": "Petrol",
-              "size": "2.0L",
-              "power": "147 HP",
-              "compatibleModels": "Mazda3 (BK/BL), Mazda6 (GG), Mazda MX-5 (NC)",
-              "avgRebuiltPrice": "£1,400 – £3,200",
-              "cta": "Get Quote for LF17"
-            },
-            {
-              "code": "L3-VE",
-              "fuel": "Petrol",
-              "size": "2.3L",
-              "power": "158 HP",
-              "compatibleModels": "Mazda6 (GG/GH), Mazda CX-7 (ER), Mazda MPV (LY)",
-              "avgRebuiltPrice": "£1,500 – £3,500",
-              "cta": "Get Quote for L3-VE"
-            },
-            {
-              "code": "L5-VE",
-              "fuel": "Petrol",
-              "size": "2.5L",
-              "power": "170 HP",
-              "compatibleModels": "Mazda6 (GH), Mazda3 (BL), Mazda CX-7 (ER)",
-              "avgRebuiltPrice": "£1,600 – £3,800",
-              "cta": "Get Quote for L5-VE"
-            },
-            {
-              "code": "L3-VDT",
-              "fuel": "Petrol (Turbo)",
-              "size": "2.3L",
-              "power": "256 HP",
-              "compatibleModels": "Mazda3 MPS (BK/BL), Mazda6 MPS (GG), CX-7 (ER)",
-              "avgRebuiltPrice": "£2,500 – £5,000",
-              "cta": "Get Quote for L3-VDT"
-            }
-          ]
-        },
-        {
-          "name": "MZR-CD Diesel",
-          "era": "2002–2011",
-          "failureNote": "*Common failure points: MZR-CD engines suffer catastrophic carbon buildup, DPF clogging, and fuel injector failure. Knocking noises are common . Our rebuilt engines include professionally cleaned intakes, new injectors, and refurbished DPF systems.",
-          "engines": [
-            {
-              "code": "R2AA",
-              "fuel": "Diesel",
-              "size": "2.0L",
-              "power": "138 HP",
-              "compatibleModels": "Mazda6 (GG), Mazda MPV (LY)",
-              "avgRebuiltPrice": "£1,800 – £3,800",
-              "cta": "Get Quote for R2AA"
-            },
-            {
-              "code": "R2BA",
-              "fuel": "Diesel",
-              "size": "2.0L",
-              "power": "141 HP",
-              "compatibleModels": "Mazda6 (GH)",
-              "avgRebuiltPrice": "£1,900 – £4,000",
-              "cta": "Get Quote for R2BA"
-            },
-            {
-              "code": "R2CA",
-              "fuel": "Diesel",
-              "size": "2.2L",
-              "power": "158 HP",
-              "compatibleModels": "Mazda6 (GH), CX-7 (ER)",
-              "avgRebuiltPrice": "£2,200 – £4,500",
-              "cta": "Get Quote for R2CA"
-            }
-          ]
-        },
-        {
-          "name": "Legacy & Classic Engines",
-          "era": "All years",
-          "failureNote": "Legacy and classic Mazda petrol engines remain popular in enthusiast and restoration circles. Most replacement demand comes from age-related oil leaks, bottom-end wear, cooling-system damage, and long-term storage issues rather than one single factory defect.",
-          "engines": [
-            {
-              "code": "BP (BP4W, BP6D)",
-              "fuel": "Petrol",
-              "size": "1.8L",
-              "power": "138 HP",
-              "compatibleModels": "Mazda MX-5 (NA/NB), Mazda 323F (BJ)",
-              "avgRebuiltPrice": "£1,500 – £4,000",
-              "cta": "Get Quote for BP (BP4W, BP6D)"
-            },
-            {
-              "code": "B6",
-              "fuel": "Petrol",
-              "size": "1.6L",
-              "power": "114 HP",
-              "compatibleModels": "Mazda MX-5 (NA), Mazda 323 (BG)",
-              "avgRebuiltPrice": "£1,000 – £2,800",
-              "cta": "Get Quote for B6"
-            },
-            {
-              "code": "FE",
-              "fuel": "Petrol",
-              "size": "2.0L",
-              "power": "85–115 HP",
-              "compatibleModels": "Mazda 626, Mazda Bongo, Mazda MPV",
-              "avgRebuiltPrice": "£900 – £2,200",
-              "cta": "Get Quote for FE"
-            },
-            {
-              "code": "WL-T",
-              "fuel": "Diesel",
-              "size": "2.5L",
-              "power": "108 HP",
-              "compatibleModels": "Mazda Bongo, Mazda BT-50",
-              "avgRebuiltPrice": "£2,000 – £4,500",
-              "cta": "Get Quote for WL-T"
-            },
-            {
-              "code": "13B-MSP (Renesis)",
-              "fuel": "Rotary (Petrol)",
-              "size": "1.3L",
-              "power": "228–238 HP",
-              "compatibleModels": "Mazda RX-8 (SE3P)",
-              "avgRebuiltPrice": "£3,500 – £7,000",
-              "cta": "Get Quote for 13B-MSP (Renesis)"
+              "size": "2.5 Litre",
+              "power": "188-192 hp",
+              "compatibleModels": "CX-5 (KF), Mazda6 (GJ)",
+              "avgRebuiltPrice": "£2,500 - £4,500 supply only",
+              "cta": "→ Get quotes for PY-VPR Mazda engine replacement"
             }
           ]
         }

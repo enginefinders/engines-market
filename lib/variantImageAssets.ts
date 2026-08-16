@@ -61,6 +61,17 @@ const EXPLICIT_SLUG_ALIASES: Record<string, string[]> = {
   "vauxhall-corsa-10-12-14-petrol": ["vauxhall-corsa-1-0-1-2-1-4-petrol"],
   "vauxhall-corsa-12-puretech-15-bluehdi": ["vauxhall-corsa-1-2-puretech-1-5-bluehdi"],
   "vauxhall-meriva-13-17-cdti": ["vauxhall-meriva-1-3-1-7-cdti"],
+  "volkswagen-golf-1-5-tsi": ["volkswagen-golf-1-5-tsi-etsi"],
+  "volkswagen-golf-15-tsi": ["volkswagen-golf-1-5-tsi-etsi"],
+  "volkswagen-polo-1-4-tdi": ["volkswagen-polo-1-4-1-6-tdi"],
+  "volkswagen-polo-1-6-tdi": ["volkswagen-polo-1-4-1-6-tdi"],
+  "volkswagen-polo-14-tdi": ["volkswagen-polo-1-4-1-6-tdi"],
+  "volkswagen-polo-16-tdi": ["volkswagen-polo-1-4-1-6-tdi"],
+  "vw-golf-1-5-tsi-etsi": ["volkswagen-golf-1-5-tsi-etsi"],
+  "vw-passat-2-0-tsi": ["volkswagen-passat-2-0-tsi"],
+  "vw-polo-1-4-1-6-tdi": ["volkswagen-polo-1-4-1-6-tdi"],
+  "vw-polo-gti-2-0-tsi": ["volkswagen-polo-gti-2-0-tsi"],
+  "vw-sharan-1-4-2-0-tsi": ["volkswagen-sharan-1-4-2-0-tsi"],
 };
 
 function normalizeAssetSlug(value?: string | null) {
@@ -222,6 +233,7 @@ function resolveVariantArtworkMatch({
   const normalizedBrandSlug = normalizeAssetSlug(brandSlug);
   const lookupBrands = unique([
     normalizedBrandSlug,
+    normalizedBrandSlug === "vw" ? "volkswagen" : "",
     normalizedBrandSlug === "land-rover" && normalizeAssetSlug(modelSlug).startsWith("range-rover")
       ? "range-rover"
       : "",

@@ -1572,262 +1572,136 @@
       ]
     },
     "engineCodes": {
-      "tag": "Replacement Cost",
-      "h2": "Suzuki Engine Codes & Average Rebuilt Prices (UK Supply)",
-      "h3": "Compare costs for every major Suzuki engine — K-series petrol, D-series diesel, and M-series units. All prices are typical UK market ranges for professionally rebuilt engines with warranty. Click \"Get Quote\" on any engine to receive tailored prices from our network of UK Suzuki specialists.",
+      "tag": "Engine Codes",
+      "h2": "Suzuki Engine Codes - Most Replaced Engines & Full Directory",
+      "h3": "Every major Suzuki engine code with technical specs, compatible UK models, known failures and average rebuilt prices. Use the quick-reference accordion below for all remaining codes.",
+      "closingLine": "Can't find your engine code? Enter your registration number above - we'll identify the exact Suzuki engine fitted to your vehicle.",
       "filters": [
-        "All",
-        "Petrol",
-        "Diesel",
-        "K-Series",
-        "D-Series",
-        "M-Series to help users quickly navigate the engine families covered below."
+        "Petrol Engines (Most Replaced in the UK)",
+        "Diesel Engines (Most Replaced in the UK)"
       ],
       "groups": [
         {
-          "name": "K-Series Petrol Engines",
-          "era": "1994–present",
-          "failureNote": "The most common Suzuki engine family in the UK. Known for timing chain stretch issues on early 1.2L variants. Common failure points: K-series petrol engines are known for timing chain stretch (especially K12B in 2011-2017 Swifts) and rattling on cold starts. Our rebuilt units include upgraded timing chain tensioners and genuine OEM-spec components.",
+          "name": "Petrol Engines (Most Replaced in the UK)",
+          "era": "Extracted from Suzuki petrol engines (most replaced in the uk) technical replacement data.",
+          "failureNote": "Timing chain stretch - a known issue on the K14C, with symptoms appearing as early as 80,000-120,000 km (50,000-75,000 miles), causing rattling noises on cold starts, Turbocharger wastegate rattle and failure - wastegate actuator failure costs €300-600, full turbo replacement at a dealer runs €1,200-€1,800",
           "engines": [
             {
-              "code": "K10B",
+              "code": "K14C",
+              "title": "1.4L Petrol (Boosterjet)",
+              "familyHeading": "K14C - 1.4L Petrol (Boosterjet)",
               "fuel": "Petrol",
-              "size": "1.0L (996cc)",
-              "power": "65-68 HP",
-              "compatibleModels": "Suzuki Alto (2009-2015), Suzuki Celerio (2014-2021), Suzuki Wagon R (2008-2012)",
-              "avgRebuiltPrice": "£900 – £2,200",
-              "cta": "Get Quote for K10B"
-            },
-            {
-              "code": "K12B",
-              "fuel": "Petrol",
-              "size": "1.2L (1242cc)",
-              "power": "90-94 HP",
-              "compatibleModels": "Suzuki Swift (2011-2017), Suzuki Ignis (2016-2020), Suzuki Splash (2008-2014), Suzuki Solio",
-              "avgRebuiltPrice": "£1,100 – £2,900",
-              "cta": "Get Quote for K12B"
-            },
-            {
-              "code": "K12C",
-              "fuel": "Petrol",
-              "size": "1.2L (1242cc)",
-              "power": "90 HP",
-              "compatibleModels": "Suzuki Ignis (2016-present), Suzuki Swift (2017-present)",
-              "avgRebuiltPrice": "£1,200 – £3,000",
-              "cta": "Get Quote for K12C"
-            },
-            {
-              "code": "K14B",
-              "fuel": "Petrol",
-              "size": "1.4L (1372cc)",
-              "power": "92-95 HP",
-              "compatibleModels": "Suzuki Swift (pre-2011), Suzuki Wagon R",
-              "avgRebuiltPrice": "£1,100 – £2,700",
-              "cta": "Get Quote for K14B"
-            },
-            {
-              "code": "K14C (Boosterjet)",
-              "fuel": "Petrol Turbo",
-              "size": "1.4L (1371cc)",
-              "power": "138-140 HP",
-              "compatibleModels": "Suzuki Swift Sport (ZC33S, 2017-present), Suzuki Vitara (2015-2024), Suzuki S-Cross (2013-2021)",
-              "avgRebuiltPrice": "£2,200 – £4,500",
-              "cta": "Get Quote for K14C (Boosterjet)"
+              "size": "1.4 Litre",
+              "power": "138-140 hp",
+              "compatibleModels": "Swift Sport (ZC33S), Vitara (2015-2025), S-Cross (2015-2025)",
+              "avgRebuiltPrice": "£2,500 - £4,000+ supply only",
+              "cta": "→ Get quotes for K14C Suzuki engine replacement"
             },
             {
               "code": "K15B",
+              "title": "1.5L Petrol",
+              "familyHeading": "K15B - 1.5L Petrol",
               "fuel": "Petrol",
-              "size": "1.5L (1462cc)",
-              "power": "103-105 HP",
-              "compatibleModels": "Suzuki Jimny (JB74, 2018-present), Suzuki Ertiga (2018-present), Suzuki Ciaz (2015-2020)",
-              "avgRebuiltPrice": "£1,300 – £3,200",
-              "cta": "Get Quote for K15B"
-            }
-          ]
-        },
-        {
-          "name": "M-Series Petrol Engines",
-          "era": "1999–present",
-          "failureNote": "The enthusiast's choice — powers Jimny, Swift Sport, and SX4 through the 2000s. Robust but age-related failures common. Common failure points: M-series engines are generally robust but suffer from coil pack failures, cam position sensor issues, and oil leaks with age. Our rebuilt engines include new gaskets, seals, and tested ignition components.",
-          "engines": [
+              "size": "1.5 Litre",
+              "power": "100-102 hp",
+              "compatibleModels": "Jimny (2018-present)",
+              "avgRebuiltPrice": "£1,500 - £2,500 supply only",
+              "cta": "→ Get quotes for K15B Suzuki engine replacement"
+            },
             {
-              "code": "M13A",
+              "code": "K10C",
+              "title": "1.0L Petrol (Boosterjet)",
+              "familyHeading": "K10C - 1.0L Petrol (Boosterjet)",
               "fuel": "Petrol",
-              "size": "1.3L (1328cc)",
-              "power": "85-90 HP",
-              "compatibleModels": "Suzuki Jimny (JB23/JB43, 1998-2018), Suzuki Swift (ZC11S, 2005-2010), Suzuki Ignis (2000-2005)",
-              "avgRebuiltPrice": "£1,200 – £3,200",
-              "cta": "Get Quote for M13A"
+              "size": "1.0 Litre",
+              "power": "110-111 hp",
+              "compatibleModels": "Swift (AZ), Baleno (EW), Vitara (APK), S-Cross (AKK)",
+              "avgRebuiltPrice": "£1,800 - £2,800 supply only",
+              "cta": "→ Get quotes for K10C Suzuki engine replacement"
+            },
+            {
+              "code": "K12M",
+              "title": "1.2L Petrol",
+              "familyHeading": "K12M - 1.2L Petrol",
+              "fuel": "Petrol",
+              "size": "1.2 Litre",
+              "power": "83-90 hp",
+              "compatibleModels": "Swift (2010-present), Ignis (2016-present), Baleno (2016-present)",
+              "avgRebuiltPrice": "£1,200 - £2,000 supply only",
+              "cta": "→ Get quotes for K12M Suzuki engine replacement"
+            },
+            {
+              "code": "K14B",
+              "title": "1.4L Petrol",
+              "familyHeading": "K14B - 1.4L Petrol",
+              "fuel": "Petrol",
+              "size": "1.4 Litre",
+              "power": "91-94 hp",
+              "compatibleModels": "Swift (AZG, 2017), Baleno",
+              "avgRebuiltPrice": "£1,200 - £2,000 supply only",
+              "cta": "→ Get quotes for K14B Suzuki engine replacement"
+            },
+            {
+              "code": "K14D",
+              "title": "1.4L Petrol (Mild Hybrid)",
+              "familyHeading": "K14D - 1.4L Petrol (Mild Hybrid)",
+              "fuel": "Petrol (Mild Hybrid)",
+              "size": "1.4 Litre",
+              "power": "129-140 hp",
+              "compatibleModels": "Vitara (APK), S-Cross (AKK)",
+              "avgRebuiltPrice": "£2,500 - £4,000 supply only",
+              "cta": "→ Get quotes for K14D Suzuki engine replacement"
+            },
+            {
+              "code": "K15C",
+              "title": "1.5L Petrol (Mild Hybrid)",
+              "familyHeading": "K15C - 1.5L Petrol (Mild Hybrid)",
+              "fuel": "Petrol (Mild Hybrid)",
+              "size": "1.5 Litre",
+              "power": "100-115 hp",
+              "compatibleModels": "Vitara (LY), Grand Vitara",
+              "avgRebuiltPrice": "£2,000 - £3,500 supply only",
+              "cta": "→ Get quotes for K15C Suzuki engine replacement"
             },
             {
               "code": "M15A",
+              "title": "1.5L Petrol",
+              "familyHeading": "M15A - 1.5L Petrol",
               "fuel": "Petrol",
-              "size": "1.5L (1490cc)",
-              "power": "100-110 HP",
-              "compatibleModels": "Suzuki Swift (2005-2010), Suzuki Liana (2001-2007), Suzuki Ignis (2003-2010)",
-              "avgRebuiltPrice": "£1,200 – £3,100",
-              "cta": "Get Quote for M15A"
-            },
-            {
-              "code": "M16A",
-              "fuel": "Petrol",
-              "size": "1.6L (1586cc)",
-              "power": "125-134 HP",
-              "compatibleModels": "Suzuki Swift Sport (ZC31S/ZD31S, 2005-2010), Suzuki SX4 (2006-2013), Suzuki Vitara (pre-2015)",
-              "avgRebuiltPrice": "£1,400 – £3,500",
-              "cta": "Get Quote for M16A"
-            },
-            {
-              "code": "M18A",
-              "fuel": "Petrol",
-              "size": "1.8L (1796cc)",
-              "power": "125 HP",
-              "compatibleModels": "Suzuki SX4 (2006-2014), Suzuki Liana (2004-2007)",
-              "avgRebuiltPrice": "£1,500 – £3,600",
-              "cta": "Get Quote for M18A"
+              "size": "1.5 Litre",
+              "power": "100-110 hp",
+              "compatibleModels": "Swift (ZC11S, 2005-2010)",
+              "avgRebuiltPrice": "£1,200 - £2,000 supply only",
+              "cta": "→ Get quotes for M15A Suzuki engine replacement"
             }
           ]
         },
         {
-          "name": "G-Series Petrol Engines",
-          "era": "1984–2006",
-          "failureNote": "The classic Jimny/Samurai workhorse. Simple, durable, but increasingly rare. High demand for off-road rebuilds. Common failure points: G-series engines suffer from carburettor issues (early models) and head gasket failure. Our rebuilds include new head gaskets and upgraded seals.",
+          "name": "Diesel Engines (Most Replaced in the UK)",
+          "era": "Extracted from Suzuki diesel engines (most replaced in the uk) technical replacement data.",
+          "failureNote": "Injector failure - defective injectors are a common cause of rough running on DDiS engines, EGR valve sticking - the EGR valve gets dirty quickly and can stick",
           "engines": [
             {
-              "code": "G13BB",
-              "fuel": "Petrol",
-              "size": "1.3L (1298cc)",
-              "power": "76-85 HP",
-              "compatibleModels": "Suzuki Jimny (JB23, 1998-2005), Suzuki Swift (1995-2004), Suzuki Samurai (late models)",
-              "avgRebuiltPrice": "£1,100 – £2,600",
-              "cta": "Get Quote for G13BB"
-            },
-            {
-              "code": "G16B",
-              "fuel": "Petrol",
-              "size": "1.6L (1590cc)",
-              "power": "95 HP",
-              "compatibleModels": "Suzuki Vitara (1990-2005), Suzuki Grand Vitara (pre-2005), Suzuki Samurai",
-              "avgRebuiltPrice": "£1,200 – £2,800",
-              "cta": "Get Quote for G16B"
-            }
-          ]
-        },
-        {
-          "name": "J-Series Petrol Engines",
-          "era": "1996–2019",
-          "failureNote": "Found in larger Suzuki SUVs. Reliable but prone to timing chain rattle at higher mileage. Common failure points: J-series timing chains can stretch causing rattle and check engine lights. Our rebuilt units include new timing chains, tensioners, and guides.",
-          "engines": [
-            {
-              "code": "J20A",
-              "fuel": "Petrol",
-              "size": "2.0L (1995cc)",
-              "power": "126-140 HP",
-              "compatibleModels": "Suzuki Grand Vitara (2005-2015), Suzuki Vitara (1998-2005)",
-              "avgRebuiltPrice": "£1,500 – £3,800",
-              "cta": "Get Quote for J20A"
-            },
-            {
-              "code": "J24B",
-              "fuel": "Petrol",
-              "size": "2.4L (2393cc)",
-              "power": "166-169 HP",
-              "compatibleModels": "Suzuki Grand Vitara (2006-2015), Suzuki Kizashi (2009-2014)",
-              "avgRebuiltPrice": "£1,600 – £4,200",
-              "cta": "Get Quote for J24B"
-            }
-          ]
-        },
-        {
-          "name": "D-Series Diesel Engines",
-          "era": "2006–present",
-          "failureNote": "Licensed from Fiat — these engines power many Suzuki diesels. Known for DPF and injector failures. Common failure points: D-series diesel engines suffer from DPF blockage, EGR valve failure, and injector problems — particularly on the D16AA in 2014-2019 Vitaras. Our rebuilt engines come with cleaned/replaced DPF and EGR components.",
-          "engines": [
-            {
-              "code": "D13A (1.3 DDiS)",
+              "code": "D13A",
+              "title": "1.3L Diesel (DDiS)",
+              "familyHeading": "D13A - 1.3L Diesel (DDiS)",
               "fuel": "Diesel",
-              "size": "1.3L (1248cc)",
-              "power": "70-90 HP",
-              "compatibleModels": "Suzuki Swift (2005-2017), Suzuki SX4 (2006-2013), Suzuki Splash (2008-2014), Suzuki Ignis (2016-2019)",
-              "avgRebuiltPrice": "£1,300 – £3,000",
-              "cta": "Get Quote for D13A (1.3 DDiS)"
+              "size": "1.3 Litre",
+              "power": "69-75 hp",
+              "compatibleModels": "Swift (2005-2010), SX4 (2006-2014)",
+              "avgRebuiltPrice": "£1,200 - £2,000 supply only",
+              "cta": "→ Get quotes for D13A Suzuki engine replacement"
             },
             {
-              "code": "D16AA (1.6 DDiS)",
+              "code": "D16A",
+              "title": "1.6L Diesel (DDiS)",
+              "familyHeading": "D16A - 1.6L Diesel (DDiS)",
               "fuel": "Diesel",
-              "size": "1.6L (1598cc)",
-              "power": "120 HP",
-              "compatibleModels": "Suzuki Vitara (2014-2019), Suzuki S-Cross (2013-2020)",
-              "avgRebuiltPrice": "£1,800 – £4,200",
-              "cta": "Get Quote for D16AA (1.6 DDiS)"
-            },
-            {
-              "code": "D20A",
-              "fuel": "Diesel",
-              "size": "2.0L (1956cc)",
-              "power": "135 HP",
-              "compatibleModels": "Suzuki SX4 (2010-2014, Europe)",
-              "avgRebuiltPrice": "£1,800 – £4,000",
-              "cta": "Get Quote for D20A"
-            }
-          ]
-        },
-        {
-          "name": "H-Series V6 Petrol Engines",
-          "era": "1994–2009",
-          "failureNote": "Found in premium Grand Vitara models. Complex but powerful — lower replacement volume. Common failure points: H-series V6 engines are known for timing chain tensioner wear and cooling system issues. Our rebuilds include new tensioners and water pumps.",
-          "engines": [
-            {
-              "code": "H25A",
-              "fuel": "Petrol V6",
-              "size": "2.5L (2495cc)",
-              "power": "158-165 HP",
-              "compatibleModels": "Suzuki Grand Vitara (SQ416/420, 1998-2005)",
-              "avgRebuiltPrice": "£2,000 – £4,000",
-              "cta": "Get Quote for H25A"
-            },
-            {
-              "code": "H27A",
-              "fuel": "Petrol V6",
-              "size": "2.7L (2736cc)",
-              "power": "185 HP",
-              "compatibleModels": "Suzuki Grand Vitara (2005-2011, US/Europe)",
-              "avgRebuiltPrice": "£2,200 – £4,500",
-              "cta": "Get Quote for H27A"
-            }
-          ]
-        },
-        {
-          "name": "Small Capacity Engines — K6A / R06A / F6A",
-          "era": "All years",
-          "failureNote": "660cc Kei car engines — primarily for Alto, Jimny (JB23), Carry, and Every models. Niche but high demand in off-road/import circles. Common failure points: These small turbo engines suffer from turbocharger wear and head gasket failures. Our rebuilt units include reconditioned turbos and upgraded gaskets",
-          "engines": [
-            {
-              "code": "K6A",
-              "fuel": "Petrol",
-              "size": "0.66L (658cc)",
-              "power": "54-64 HP",
-              "compatibleModels": "Suzuki Jimny (JB23, 1998-2018), Suzuki Alto (HA24/HA25), Suzuki Wagon R (MH21S)",
-              "avgRebuiltPrice": "£1,000 – £2,400",
-              "cta": "Get Quote for K6A"
-            },
-            {
-              "code": "R06A",
-              "fuel": "Petrol Turbo",
-              "size": "0.66L (658cc)",
-              "power": "64 HP",
-              "compatibleModels": "Suzuki Jimny (JB64, 2018-present), Suzuki Alto Turbo RS, Suzuki Hustler",
-              "avgRebuiltPrice": "£1,200 – £2,800",
-              "cta": "Get Quote for R06A"
-            },
-            {
-              "code": "F6A",
-              "fuel": "Petrol",
-              "size": "0.66L (657cc)",
-              "power": "40-58 HP",
-              "compatibleModels": "Suzuki Every (DE51V), Suzuki Carry (1985-1999), Jimny (JA11/JA12)",
-              "avgRebuiltPrice": "£900 – £2,200",
-              "cta": "Get Quote for F6A"
+              "size": "1.6 Litre",
+              "power": "118-120 hp",
+              "compatibleModels": "SX4 (2007-2014), Vitara (2015-2018)",
+              "avgRebuiltPrice": "£1,500 - £2,500 supply only",
+              "cta": "→ Get quotes for D16A Suzuki engine replacement"
             }
           ]
         }
@@ -2358,77 +2232,80 @@
       "closing": "Not sure which engine size your Suzuki needs? Enter your registration number and we'll match you to the exact engine code and displacement — instantly. All engines supplied with a minimum 12‑month warranty from UK Suzuki specialists."
     },
     "fuelTypes": {
-      "tag": "Complete Suzuki Engines List",
-      "h2": "Suzuki Engines by Fuel Type",
-      "intro": "Choose your Suzuki engine by fuel type to compare realistic replacement prices, known brand-wide issues, and UK specialist supply – from the popular high-mileage petrols to the troublesome diesels and the latest mild hybrids.",
+      "tag": "Suzuki Engines by Fuel Type",
+      "h2": "Suzuki Engine Codes - Most Replaced Engines & Full Directory",
+      "intro": "Every major Suzuki engine code with technical specs, compatible UK models, known failures and average rebuilt prices. Use the quick-reference accordion below for all remaining codes.",
       "items": [
         {
-          "title": "Suzuki Diesel Engines",
-          "description": "Suzuki diesel engines cover many of the brand's highest-mileage UK models. Replacement demand is usually driven by timing system wear, injector and turbo faults, plus EGR or DPF-related damage once repeat short-journey use starts affecting reliability.",
-          "descriptor": "High-mileage motorway and SUV applications",
+          "title": "Diesel Engines",
+          "description": "Suzuki's diesel engine range in the UK is limited to the DDiS family - 1.3-litre (D13A) and 1.6-litre (D16A) units - fitted to the Swift, SX4, and Vitara. Replacement demand is driven by injector failure, EGR valve sticking, and timing chain wear on these higher-mileage vehicles.",
+          "descriptor": "Suzuki's diesel engine range in the UK is limited to the DDiS family - 1.3-litre (D13A) and 1.6-litre (D16A) units - fitted to the Swift, SX4, and Vitara. Replacement demand is driven by injector failure, EGR valve sticking, and timing chain wear on these higher-mileage vehicles.",
           "families": [
-            "D-Series Diesel Engines"
+            "£1,200 - £2,500 (supply only)",
+            "1.3 DDiS (D13A): £1,200 - £2,000",
+            "1.6 DDiS (D16A): £1,500 - £2,500"
           ],
-          "foundIn": [
-            "Suzuki Alto Engines",
-            "Suzuki Apv Engines",
-            "Suzuki Baleno Engines",
-            "Suzuki Carry Engines"
-          ],
-          "knownFor": [
-            "EGR valve carbonisation",
-            "injector seal leaks",
-            "DPF blockage",
-            "injector failure"
-          ],
-          "typicalModels": [
-            "Suzuki Alto Engines",
-            "Suzuki Apv Engines",
-            "Suzuki Baleno Engines",
-            "Suzuki Carry Engines"
-          ],
+          "foundIn": [],
+          "knownFor": [],
+          "typicalModels": [],
           "importantNotes": [
-            "Short-journey use increases DPF, EGR, and oil-dilution risk on many diesel engines.",
-            "A documented service history matters more on diesel replacements because injector, turbo, and timing faults often build gradually."
+            "High-mileage motorway drivers covering 15,000+ miles annually",
+            "Company car drivers benefiting from lower fuel costs",
+            "Fleet operators prioritising efficiency",
+            "Urban drivers with short daily trips who are better served by petrol (DPF and EGR issues are common)",
+            "Low-mileage users who don't drive enough to justify the diesel premium",
+            "Typical searches: Suzuki Swift 1.3 DDiS engine replacement, Suzuki SX4 diesel engine cost, Suzuki diesel engine specialist UK, Suzuki D13A injector problems, Suzuki DDiS EGR valve failure, Suzuki Vitara 1.6 diesel engine replacement → Get quotes for Suzuki Diesel replacement engines → Not sure which diesel you have? Enter your registration number for an instant match"
           ],
-          "cta": "Compare Suzuki diesel engine prices"
+          "cta": "→ Get quotes for Suzuki Diesel replacement engines"
         },
         {
-          "title": "Suzuki Petrol Engines",
-          "description": "Suzuki petrol engines span everything from core daily-driver models to higher-output performance variants. Most replacement enquiries start with timing chain noise, oil consumption, cooling-system failure, or internal wear that makes a warranted replacement more sensible than repeated repairs.",
-          "descriptor": "Core passenger-car and performance applications",
+          "title": "Petrol Engines",
+          "description": "Suzuki's petrol engine range in the UK spans from the 1.0-litre K10C Boosterjet to the 1.4-litre K14C Boosterjet in the Swift Sport - delivering everything from city car economy to sporty performance. Suzuki's naturally aspirated engines (K12M, K14B, K15B) are known for their simplicity and reliability, while the Boosterjet range offers more power but has more documented issues.",
+          "descriptor": "Suzuki's petrol engine range in the UK spans from the 1.0-litre K10C Boosterjet to the 1.4-litre K14C Boosterjet in the Swift Sport - delivering everything from city car economy to sporty performance. Suzuki's naturally aspirated engines (K12M, K14B, K15B) are known for their simplicity and reliability, while the Boosterjet range offers more power but has more documented issues.",
           "families": [
-            "K-Series Petrol Engines",
-            "M-Series Petrol Engines",
-            "G-Series Petrol Engines",
-            "J-Series Petrol Engines"
+            "£1,200 - £4,000+ (supply only)",
+            "K10C (1.0 Boosterjet): £1,800 - £2,800",
+            "K12M (1.2): £1,200 - £2,000",
+            "K14B (1.4): £1,200 - £2,000",
+            "K14C (1.4 Boosterjet): £2,500 - £4,000+"
           ],
-          "foundIn": [
-            "Suzuki Alto Engines",
-            "Suzuki Apv Engines",
-            "Suzuki Baleno Engines",
-            "Suzuki Carry Engines"
-          ],
-          "knownFor": [
-            "Timing chain stretch",
-            "valve clearance issues",
-            "Turbocharger bearing wear",
-            "intercooler leaks"
-          ],
-          "typicalModels": [
-            "Suzuki Alto Engines",
-            "Suzuki Apv Engines",
-            "Suzuki Baleno Engines",
-            "Suzuki Carry Engines"
-          ],
+          "foundIn": [],
+          "knownFor": [],
+          "typicalModels": [],
           "importantNotes": [
-            "Cold-start rattles, overheating history, and oil use are the biggest warning signs before a petrol engine replacement becomes necessary.",
-            "Direct-injection petrol engines often need specialist attention for carbon build-up alongside the main mechanical repair."
+            "Urban and suburban drivers with lower annual mileage (under 12,000 miles)",
+            "City car owners prioritising simplicity and low running costs (Ignis, Swift)",
+            "Enthusiasts wanting the performance character of the Swift Sport",
+            "High-mileage motorway drivers who would benefit from diesel's superior fuel economy",
+            "Drivers prioritising maximum fuel efficiency over performance",
+            "Typical searches: Suzuki Swift Sport 1.4 Boosterjet engine replacement, Suzuki Vitara 1.4 engine cost, Suzuki petrol engine specialist UK, Suzuki K14C timing chain problems, Suzuki 1.0 Boosterjet engine problems, Suzuki Ignis 1.2 engine replacement, Suzuki Swift engine price, Suzuki Jimny 1.5 engine for sale → Compare Suzuki Petrol engine prices → Not sure which petrol you have? Enter your registration number for an instant match"
           ],
-          "cta": "Compare Suzuki petrol engine prices"
+          "cta": "→ Compare Suzuki Petrol engine prices"
+        },
+        {
+          "title": "Hybrid & Mild Hybrid (MHEV) Engines",
+          "description": "Suzuki's hybrid range includes the Swift, Vitara, and S-Cross with mild-hybrid (MHEV) technology, combining 1.4-litre Boosterjet or 1.5-litre naturally aspirated engines with a 48V or 12V belt-integrated starter-generator. Hybrid systems are still relatively rare in the replacement market, but enquiries are growing.",
+          "descriptor": "Suzuki's hybrid range includes the Swift, Vitara, and S-Cross with mild-hybrid (MHEV) technology, combining 1.4-litre Boosterjet or 1.5-litre naturally aspirated engines with a 48V or 12V belt-integrated starter-generator. Hybrid systems are still relatively rare in the replacement market, but enquiries are growing.",
+          "families": [
+            "MHEV (Mild Hybrid - K14D, K15C): Combines a petrol engine with a belt-integrated starter-generator (ISG) and a small lithium-ion battery. The system provides torque assistance during acceleration, regenerative braking, and start-stop functionality.",
+            "Battery location: The lithium-ion battery is typically located under the front seats or in the engine bay.",
+            "No Plug-in Option: Suzuki's MHEV systems are self-charging; they cannot be charged from an external plug."
+          ],
+          "foundIn": [],
+          "knownFor": [],
+          "typicalModels": [],
+          "importantNotes": [
+            "Urban commuters who benefit from improved fuel economy in stop-start traffic",
+            "Company car drivers benefiting from lower Benefit-in-Kind (BIK) tax rates",
+            "Drivers who want to reduce fuel costs and emissions without going fully electric",
+            "Drivers without access to a specialist hybrid garage - parts and expertise are limited",
+            "High-mileage users who would benefit more from diesel's efficiency on long runs",
+            "Typical searches: Suzuki Swift hybrid engine replacement, Suzuki Vitara mild hybrid battery price, Suzuki hybrid engine specialist UK, Suzuki K14D hybrid problems, Suzuki hybrid battery degradation, Suzuki ISG belt failure, Suzuki S-Cross hybrid engine for sale → Enquire about Suzuki Hybrid engine availability → Not sure which hybrid you have? Enter your registration number for an instant match"
+          ],
+          "cta": "Get quotes for Suzuki Suzuki Hybrid & Mild Hybrid (MHEV) Engines engines"
         }
       ],
-      "closing": "Not sure which fuel type your Suzuki has? Enter your registration number above to instantly identify your model, engine code, fuel system and compatible replacement options – all backed by a minimum 12‑month unlimited mileage warranty from UK Suzuki specialists."
+      "closing": "Not sure which fuel type your Suzuki has? Enter your registration number for an instant match."
     },
     "engineCodeDirectory": {
       "tag": "Engine Codes",

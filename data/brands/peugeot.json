@@ -1684,283 +1684,122 @@
       ]
     },
     "engineCodes": {
-      "tag": "Replacement Cost",
-      "h2": "Peugeot Engine Codes & Average Rebuilt Prices (UK Supply)",
-      "h3": "Compare costs for every major Peugeot engine — PureTech, BlueHDi, HDi and THP families. All prices are typical UK market ranges for professionally rebuilt engines with warranty. Click \"Get Quote\" on any engine to receive tailored prices from our network of UK Peugeot specialists.",
+      "tag": "Engine Codes",
+      "h2": "Peugeot Engine Codes - Most Replaced Engines & Full Directory",
+      "h3": "Every major Peugeot engine code with technical specs, compatible UK models, known failures and average rebuilt prices. Use the quick-reference accordion below for all remaining codes.",
+      "closingLine": "Can't find your engine code? Enter your registration number above - we'll identify the exact Peugeot engine fitted to your vehicle.",
       "filters": [
-        "All",
-        "Petrol",
-        "Diesel",
-        "PureTech",
-        "BlueHDi",
-        "HDi",
-        "Classic — for improved UX."
+        "Diesel Engines (Most Replaced in the UK)",
+        "Petrol Engines (Most Replaced in the UK)",
+        "Hybrid / Electrified Engines"
       ],
       "groups": [
         {
-          "name": "PureTech Petrol (EB Family) — 2012–Present",
-          "era": "All years",
-          "failureNote": "for each row Common failure points: The EB2 PureTech engine is known for wet belt degradation causing oil starvation and catastrophic failure. Our rebuilt units include upgraded timing belts and revised oil pump components to prevent recurrence.",
+          "name": "Diesel Engines (Most Replaced in the UK)",
+          "era": "Extracted from Peugeot diesel engines (most replaced in the uk) technical replacement data.",
+          "failureNote": "Cam chain failure - The DV5RC engine, particularly from 2017-2023, is prone to premature wear and failure of the camshaft chain. An undersized 7mm chain was used initially, which can stretch or snap, causing severe timing issues., Timing belt and chain complexity - The engine uses both a timing belt and a separate cam chain, adding complexity to servicing and increasing the risk of failure if not meticulously maintained.",
           "engines": [
             {
-              "code": "EB0",
-              "fuel": "Petrol",
-              "size": "1.0L",
-              "power": "68-75 HP",
-              "compatibleModels": "108, 208",
-              "avgRebuiltPrice": "£1,200 – £2,800",
-              "cta": "Get Quote for EB0"
+              "code": "DV5RC",
+              "title": "1.5L Diesel (BlueHDi)",
+              "familyHeading": "DV5RC - 1.5L Diesel (BlueHDi)",
+              "fuel": "Diesel",
+              "size": "1.5 Litre",
+              "power": "130-131 hp",
+              "compatibleModels": "308 (T9), 3008 (P84), 5008 (P87), Partner, Expert",
+              "avgRebuiltPrice": "£1,800 - £2,800 supply only",
+              "cta": "→ Get quotes for DV5RC Peugeot engine replacement"
             },
             {
-              "code": "EB2",
-              "fuel": "Petrol",
-              "size": "1.2L",
-              "power": "82-110 HP",
-              "compatibleModels": "208, 2008, 308, 3008, 5008",
-              "avgRebuiltPrice": "£1,500 – £3,500",
-              "cta": "Get Quote for EB2"
+              "code": "DV6TED4",
+              "title": "1.6L Diesel (HDi)",
+              "familyHeading": "DV6TED4 - 1.6L Diesel (HDi)",
+              "fuel": "Diesel",
+              "size": "1.6 Litre",
+              "power": "109-112 hp",
+              "compatibleModels": "207, 307, 308 (T7), 3008 (T8), 5008, Partner",
+              "avgRebuiltPrice": "£1,100 - £1,300 supply only",
+              "cta": "→ Get quotes for DV6TED4 Peugeot engine replacement"
+            },
+            {
+              "code": "DW10C",
+              "title": "2.0L Diesel (HDi)",
+              "familyHeading": "DW10C - 2.0L Diesel (HDi)",
+              "fuel": "Diesel",
+              "size": "2.0 Litre",
+              "power": "163 hp",
+              "compatibleModels": "508, 3008 (T84), 5008, Expert, RCZ",
+              "avgRebuiltPrice": "£2,195 supply only",
+              "cta": "→ Get quotes for DW10C Peugeot engine replacement"
+            },
+            {
+              "code": "DW12",
+              "title": "2.2L Diesel (HDi)",
+              "familyHeading": "DW12 - 2.2L Diesel (HDi)",
+              "fuel": "Diesel",
+              "size": "2.2 Litre",
+              "power": "120-200 hp",
+              "compatibleModels": "Boxer, 4007, 807, Expert",
+              "avgRebuiltPrice": "£2,195 - £2,500 supply only",
+              "cta": "→ Get quotes for DW12 Peugeot engine replacement"
             }
           ]
         },
         {
-          "name": "Prince / THP Petrol (EP Family) — 2006–2019",
-          "era": "All years",
-          "failureNote": "for each row Common failure points: The EP6 (Prince/THP) engines suffer from timing chain stretch, high-pressure fuel pump failure, and carbon build-up on direct injection valves. Our rebuilt units include upgraded timing chain kits and full decarbonisation.",
+          "name": "Petrol Engines (Most Replaced in the UK)",
+          "era": "Extracted from Peugeot petrol engines (most replaced in the uk) technical replacement data.",
+          "failureNote": "Wet timing belt degradation - The timing belt runs in oil and can degrade prematurely, shedding particles that clog the oil pickup and starve the engine of oil., Oil pressure issues - Debris from the degrading belt can clog the oil strainer, leading to oil pressure warnings and catastrophic engine failure.",
           "engines": [
             {
-              "code": "EP6C",
+              "code": "EB2 Family",
+              "title": "1.2L Petrol (PureTech)",
+              "familyHeading": "EB2 Family - 1.2L Petrol (PureTech)",
               "fuel": "Petrol",
-              "size": "1.6L",
-              "power": "120 HP",
-              "compatibleModels": "207, 308, 3008, RCZ",
-              "avgRebuiltPrice": "£1,800 – £3,500",
-              "cta": "Get Quote for EP6C"
+              "size": "1.2 Litre",
+              "power": "82-131 hp",
+              "compatibleModels": "208, 2008, 308, 3008, 5008, Partner",
+              "avgRebuiltPrice": "£1,500 - £3,500 supply only",
+              "cta": "→ Get quotes for EB2 Peugeot engine replacement"
             },
             {
-              "code": "EP6DT (THP150)",
-              "fuel": "Turbo Petrol",
-              "size": "1.6L",
-              "power": "150 HP",
-              "compatibleModels": "207 GT, 308, 3008, RCZ",
-              "avgRebuiltPrice": "£2,200 – £4,000",
-              "cta": "Get Quote for EP6DT (THP150)"
-            },
-            {
-              "code": "EP6DTS (THP175)",
-              "fuel": "Turbo Petrol",
-              "size": "1.6L",
-              "power": "175 HP",
-              "compatibleModels": "207 GTi, RCZ",
-              "avgRebuiltPrice": "£2,500 – £4,500",
-              "cta": "Get Quote for EP6DTS (THP175)"
-            },
-            {
-              "code": "EP6CDT (THP200)",
-              "fuel": "Turbo Petrol",
-              "size": "1.6L",
-              "power": "200 HP",
-              "compatibleModels": "RCZ, 308 GTi",
-              "avgRebuiltPrice": "£2,800 – £5,000",
-              "cta": "Get Quote for EP6CDT (THP200)"
-            }
-          ]
-        },
-        {
-          "name": "HDi Diesel (DW10/DW12) — 1998–2019",
-          "era": "All years",
-          "failureNote": "for each row Common failure points: The HDi family is known for injector failure, DPF clogging, and turbocharger issues on higher-mileage units. Our rebuilt engines come with fully serviced injectors and new turbocharger where required.",
-          "engines": [
-            {
-              "code": "DW10ATED4",
-              "fuel": "Diesel",
-              "size": "2.0L",
-              "power": "90-110 HP",
-              "compatibleModels": "307, 407, 607, Expert, Boxer",
-              "avgRebuiltPrice": "£1,500 – £3,200",
-              "cta": "Get Quote for DW10ATED4"
-            },
-            {
-              "code": "DW10BTED4",
-              "fuel": "Diesel",
-              "size": "2.0L",
-              "power": "136-163 HP",
-              "compatibleModels": "308, 3008, 508, 5008, Expert, Partner",
-              "avgRebuiltPrice": "£1,800 – £3,800",
-              "cta": "Get Quote for DW10BTED4"
-            },
-            {
-              "code": "DW12BTED4",
-              "fuel": "Diesel",
-              "size": "2.2L",
-              "power": "156-204 HP",
-              "compatibleModels": "407, 607, 508, Boxer, Expert",
-              "avgRebuiltPrice": "£2,000 – £4,500",
-              "cta": "Get Quote for DW12BTED4"
-            }
-          ]
-        },
-        {
-          "name": "BlueHDi Diesel (DV5/DV6) — 2013–Present",
-          "era": "All years",
-          "failureNote": "for each row Common failure points: The BlueHDi family suffers from AdBlue system crystallisation, EGR valve blockage, and injector seal failures. Our rebuilt engines include revised AdBlue components and full DPF/EGR refurbishment.",
-          "engines": [
-            {
-              "code": "DV6C / DV6FD",
-              "fuel": "Diesel",
-              "size": "1.6L",
-              "power": "75-120 HP",
-              "compatibleModels": "208, 2008, 308, 3008, Partner, Expert",
-              "avgRebuiltPrice": "£1,800 – £3,800",
-              "cta": "Get Quote for DV6C / DV6FD"
-            },
-            {
-              "code": "DV6CTED (BlueHDi 120)",
-              "fuel": "Diesel",
-              "size": "1.6L",
-              "power": "120 HP",
-              "compatibleModels": "208, 308, 508, 3008, 5008, Partner",
-              "avgRebuiltPrice": "£2,200 – £4,200",
-              "cta": "Get Quote for DV6CTED (BlueHDi 120)"
-            },
-            {
-              "code": "DV5RC / DV5RCE (BlueHDi 130)",
-              "fuel": "Diesel",
-              "size": "1.5L",
-              "power": "130 HP",
-              "compatibleModels": "208, 2008, 308, 3008, 5008, Rifter, Partner",
-              "avgRebuiltPrice": "£2,200 – £4,500",
-              "cta": "Get Quote for DV5RC / DV5RCE (BlueHDi 130)"
-            },
-            {
-              "code": "DW10FC (BlueHDi 160/180)",
-              "fuel": "Diesel",
-              "size": "2.0L",
-              "power": "160-180 HP",
-              "compatibleModels": "308, 3008, 508, 5008, 3008 Hybrid4",
-              "avgRebuiltPrice": "£2,500 – £5,000",
-              "cta": "Get Quote for DW10FC (BlueHDi 160/180)"
-            }
-          ]
-        },
-        {
-          "name": "Commercial / Van Engines (Boxer, Expert, Partner) — 2006–Present",
-          "era": "All years",
-          "failureNote": "for each row Common failure points: Commercial van engines often fail due to injector wear, turbo failure, and DPF saturation from high mileage stop-start duty. Our rebuilt units include balanced injectors and uprated turbocharger components.",
-          "engines": [
-            {
-              "code": "4HU",
-              "fuel": "Diesel",
-              "size": "2.2L",
-              "power": "100-130 HP",
-              "compatibleModels": "Boxer (2006-2019)",
-              "avgRebuiltPrice": "£1,800 – £3,800",
-              "cta": "Get Quote for 4HU"
-            },
-            {
-              "code": "DW12UTED (2.2 HDi)",
-              "fuel": "Diesel",
-              "size": "2.2L",
-              "power": "120-150 HP",
-              "compatibleModels": "Boxer, Expert (pre-2016)",
-              "avgRebuiltPrice": "£1,800 – £3,500",
-              "cta": "Get Quote for DW12UTED (2.2 HDi)"
-            },
-            {
-              "code": "DW10FC (2.0 BlueHDi)",
-              "fuel": "Diesel",
-              "size": "2.0L",
-              "power": "120-160 HP",
-              "compatibleModels": "Boxer (2019+), Expert (2016+), Traveller",
-              "avgRebuiltPrice": "£2,000 – £4,200",
-              "cta": "Get Quote for DW10FC (2.0 BlueHDi)"
-            },
-            {
-              "code": "DV6C (1.6 HDi/BlueHDi)",
-              "fuel": "Diesel",
-              "size": "1.6L",
-              "power": "90-120 HP",
-              "compatibleModels": "Partner, Bipper (2008-2018)",
-              "avgRebuiltPrice": "£1,500 – £3,200",
-              "cta": "Get Quote for DV6C (1.6 HDi/BlueHDi)"
-            }
-          ]
-        },
-        {
-          "name": "Classic / Retro Engines (TU, XU, 1.9D) — 1983–2005",
-          "era": "All years",
-          "failureNote": "for each row Common failure points: Classic TU/XU engines are robust but suffer from head gasket failure and camshaft wear at higher mileage. Our rebuilt units are blueprinted with upgraded gaskets and fully balanced bottom ends.",
-          "engines": [
-            {
-              "code": "TU3JP / TU5JP4",
+              "code": "EP6 Family",
+              "title": "1.6L Petrol (VTi / THP / PureTech)",
+              "familyHeading": "EP6 Family - 1.6L Petrol (VTi / THP / PureTech)",
               "fuel": "Petrol",
-              "size": "1.4L / 1.6L",
-              "power": "75-110 HP",
-              "compatibleModels": "106, 205, 206, 306, 307",
-              "avgRebuiltPrice": "£900 – £2,200",
-              "cta": "Get Quote for TU3JP / TU5JP4"
+              "size": "1.6 Litre",
+              "power": "120-270 hp",
+              "compatibleModels": "207, 208, 308, 3008, 508, RCZ",
+              "avgRebuiltPrice": "£995 - £1,595 supply only",
+              "cta": "→ Get quotes for EP6 Peugeot engine replacement"
+            }
+          ]
+        },
+        {
+          "name": "Hybrid / Electrified Engines",
+          "era": "Extracted from Peugeot hybrid / electrified engines technical replacement data.",
+          "failureNote": "Hybrid system faults - Intermittent warnings and charging system failures can occur., Battery degradation - Battery capacity diminishes over time, reducing electric-only range.",
+          "engines": [
+            {
+              "code": "Peugeot 3008 / 508 PHEV",
+              "title": "1.6L Petrol (Hybrid)",
+              "familyHeading": "Peugeot 3008 / 508 PHEV - 1.6L Petrol (Hybrid)",
+              "fuel": "PHEV (Petrol + Electric)",
+              "size": "1.6 Litre",
+              "power": "225 hp (system total)",
+              "compatibleModels": "3008 Hybrid4, 508 Hybrid, 308 Hybrid",
+              "avgRebuiltPrice": "£3,000 - £5,000 (engine block, supply only)",
+              "cta": "Get quotes for Peugeot 3008 / 508 PHEV Peugeot engine replacement"
             },
             {
-              "code": "XU7JP4 / XU10J4RS",
-              "fuel": "Petrol",
-              "size": "1.8L / 2.0L",
-              "power": "110-167 HP",
-              "compatibleModels": "205 GTi, 306 GTi-6, 405, 406 Coupe",
-              "avgRebuiltPrice": "£1,200 – £3,000",
-              "cta": "Get Quote for XU7JP4 / XU10J4RS"
-            },
-            {
-              "code": "XUD9 / DW8",
-              "fuel": "Diesel",
-              "size": "1.9L",
-              "power": "70-90 HP",
-              "compatibleModels": "106, 205, 306, 405, Partner, Expert",
-              "avgRebuiltPrice": "£900 – £2,000",
-              "cta": "Get Quote for XUD9 / DW8"
-            },
-            {
-              "code": "2.0 HDi (DW10)",
-              "fuel": "Diesel",
-              "size": "2.0L",
-              "power": "90-110 HP",
-              "compatibleModels": "206, 306, 406, 607, Expert (2000-2006)",
-              "avgRebuiltPrice": "£1,200 – £2,500",
-              "cta": "Get Quote for 2.0 HDi (DW10)"
-            },
-            {
-              "code": "2.2 HDi (DW12)",
-              "fuel": "Diesel",
-              "size": "2.2L",
-              "power": "130-156 HP",
-              "compatibleModels": "406, 607, 807, Boxer (2000-2006)",
-              "avgRebuiltPrice": "£1,500 – £3,000",
-              "cta": "Get Quote for 2.2 HDi (DW12)"
-            },
-            {
-              "code": "EB2DTS (1.2 e-THP)",
-              "fuel": "Turbo Petrol",
-              "size": "1.2L",
-              "power": "130 HP",
-              "compatibleModels": "208 GTi, 308 GT",
-              "avgRebuiltPrice": "£2,500 – £4,500",
-              "cta": "Get Quote for EB2DTS (1.2 e-THP)"
-            },
-            {
-              "code": "1.4 HDi (DV4)",
-              "fuel": "Diesel",
-              "size": "1.4L",
-              "power": "68-90 HP",
-              "compatibleModels": "206, 207, 307, Partner, Bipper",
-              "avgRebuiltPrice": "£1,200 – £2,500",
-              "cta": "Get Quote for 1.4 HDi (DV4)"
-            },
-            {
-              "code": "T200 (1.0 Turbo)",
-              "fuel": "Turbo Petrol",
-              "size": "1.0L",
-              "power": "130 HP",
-              "compatibleModels": "208 (2026+)",
-              "avgRebuiltPrice": "£1,800 – £3,500",
-              "cta": "Get Quote for T200 (1.0 Turbo)"
+              "code": "Peugeot e-2008",
+              "title": "Electric Motor",
+              "familyHeading": "Peugeot e-2008 - Electric Motor",
+              "fuel": "Electric (BEV)",
+              "size": "N/A (Electric Motor)",
+              "power": "136 hp",
+              "compatibleModels": "e-2008",
+              "avgRebuiltPrice": "£2,500 - £5,000 (drive unit, supply only)",
+              "cta": "Get quotes for Peugeot e-2008 Peugeot engine replacement"
             }
           ]
         }

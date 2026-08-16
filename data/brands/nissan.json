@@ -2348,284 +2348,125 @@
       ]
     },
     "engineCodes": {
-      "tag": "Replacement Cost",
-      "h2": "Nissan Engine Codes & Average Rebuilt Prices (UK Supply)",
-      "h3": "Compare costs for every major Nissan engine — K9K 1.5 dCi Alliance, HR12DD 1.2 DIG-T, and YD25 2.5 dCi families. All prices are typical UK market ranges for professionally rebuilt engines with warranty. Click \"Get Quote\" on any engine to receive tailored prices from our network of UK Nissan specialists.",
+      "tag": "Engine Codes",
+      "h2": "Nissan Engine Codes - Most Replaced Engines & Full Directory",
+      "h3": "Every major Nissan engine code with technical specs, compatible UK models, known failures and average rebuilt prices. Use the quick-reference accordion below for all remaining codes.",
+      "closingLine": "Can't find your engine code? Enter your registration number above - we'll identify the exact Nissan engine fitted to your vehicle.",
       "filters": [
-        "All",
-        "Diesel",
-        "Petrol"
+        "Diesel Engines (Most Replaced in the UK)",
+        "Petrol Engines (Most Replaced in the UK)"
       ],
       "groups": [
         {
-          "name": "Alliance 1.5 dCi Family (K9K/F9Q/S9M/L9K) — 2008‑2024",
-          "era": "All years",
-          "failureNote": "*(per row — developer to implement as button pre‑filling engine code)* Common failure points: Alliance 1.5 dCi engines are known for high oil consumption from piston ring wear and DPF clogging from short‑trip driving. Our rebuilt units include upgraded piston rings, renewed injectors, and MOT‑compliant DPF systems.",
+          "name": "Diesel Engines (Most Replaced in the UK)",
+          "era": "Extracted from Nissan diesel engines (most replaced in the uk) technical replacement data.",
+          "failureNote": "EGR Valve Clogging - Susceptible to clogging, especially with short journeys or urban driving., Turbocharger Failure - The KKK/BorgWarner turbo can fail due to oil starvation.",
           "engines": [
             {
-              "code": "K9K 832",
+              "code": "K9K",
+              "title": "1.5L Diesel (dCi)",
+              "familyHeading": "K9K - 1.5L Diesel (dCi)",
               "fuel": "Diesel",
-              "size": "1.5 L",
-              "power": "86‑110 HP",
-              "compatibleModels": "Qashqai (J10, J11), Juke (F15), Note (E11)",
-              "avgRebuiltPrice": "£1,350 – £3,200",
-              "cta": "Get Quote for K9K 832"
+              "size": "1.5 Litre",
+              "power": "80-110 hp",
+              "compatibleModels": "Qashqai (J10/J11), Juke (F15), Micra (K12/K13), Note (E11/E12)",
+              "avgRebuiltPrice": "£1,200 - £2,200 supply only",
+              "cta": "→ Get quotes for K9K Nissan engine replacement"
             },
             {
-              "code": "K9K 792",
+              "code": "M9R",
+              "title": "2.0L Diesel (dCi)",
+              "familyHeading": "M9R - 2.0L Diesel (dCi)",
               "fuel": "Diesel",
-              "size": "1.5 L",
-              "power": "86‑106 HP",
-              "compatibleModels": "Micra (K13), Pulsar (C13), NV200",
-              "avgRebuiltPrice": "£1,300 – £3,100",
-              "cta": "Get Quote for K9K 792"
+              "size": "2.0 Litre",
+              "power": "150-173 hp",
+              "compatibleModels": "X-Trail (T31), Qashqai (J10), Primastar",
+              "avgRebuiltPrice": "£1,500 - £2,800 supply only",
+              "cta": "→ Get quotes for M9R Nissan engine replacement"
             },
             {
-              "code": "F9Q 772",
+              "code": "YD25DDTi",
+              "title": "2.5L Diesel",
+              "familyHeading": "YD25DDTi - 2.5L Diesel",
               "fuel": "Diesel",
-              "size": "1.5 L",
-              "power": "82‑102 HP",
-              "compatibleModels": "Almera (N16), Cube (Z12), Kubistar",
-              "avgRebuiltPrice": "£1,250 – £3,000",
-              "cta": "Get Quote for F9Q 772"
+              "size": "2.5 Litre",
+              "power": "126-190 hp",
+              "compatibleModels": "Navara (D40/D23), Pathfinder (R51), NP300",
+              "avgRebuiltPrice": "£1,800 - £3,500 supply only",
+              "cta": "→ Get quotes for YD25DDTi Nissan engine replacement"
             },
             {
-              "code": "S9M 836",
+              "code": "R9M",
+              "title": "1.6L Diesel (dCi)",
+              "familyHeading": "R9M - 1.6L Diesel (dCi)",
               "fuel": "Diesel",
-              "size": "1.5 L",
-              "power": "90‑110 HP",
-              "compatibleModels": "Juke (F15), Note (E12), Micra (K14)",
-              "avgRebuiltPrice": "£1,400 – £3,300",
-              "cta": "Get Quote for S9M 836"
-            },
-            {
-              "code": "L9K 730",
-              "fuel": "Diesel",
-              "size": "1.5 L",
-              "power": "85‑95 HP",
-              "compatibleModels": "Almera (N17), NV200 Evalia",
-              "avgRebuiltPrice": "£1,200 – £2,900",
-              "cta": "Get Quote for L9K 730"
+              "size": "1.6 Litre",
+              "power": "130-160 hp",
+              "compatibleModels": "X-Trail (T32), Qashqai (J11), Renault Kadjar",
+              "avgRebuiltPrice": "£1,600 - £2,900 supply only",
+              "cta": "→ Get quotes for R9M Nissan engine replacement"
             }
           ]
         },
         {
-          "name": "DIG‑T Turbo Petrol Family (HR12DD/H5Bt/Z9M) — 2010‑2024",
-          "era": "All years",
-          "failureNote": "DIG‑T 1.2 engines are known for timing chain stretch and oil dilution from direct injection. Our rebuilt units include reinforced timing chains, updated tensioners, and revised PCV systems to prevent recurrence.",
+          "name": "Petrol Engines (Most Replaced in the UK)",
+          "era": "Extracted from Nissan petrol engines (most replaced in the uk) technical replacement data.",
+          "failureNote": "Timing Chain Stretch - The engine's most well-documented weak point; chains stretch prematurely, causing a cold-start rattle and risk of jumped timing., Carbon Buildup on Intake Valves - Inherent to its direct-injection design, leading to rough running and power loss.",
           "engines": [
             {
-              "code": "HR12DD",
+              "code": "MR16DDT",
+              "title": "1.6L Petrol (DIG-T)",
+              "familyHeading": "MR16DDT - 1.6L Petrol (DIG-T)",
               "fuel": "Petrol",
-              "size": "1.2 L SC",
-              "power": "98‑115 HP",
-              "compatibleModels": "Note (E12), Juke (F15), Micra (K14)",
-              "avgRebuiltPrice": "£1,400 – £3,400",
-              "cta": "Get Quote for HR12DD"
+              "size": "1.6 Litre",
+              "power": "190-218 hp",
+              "compatibleModels": "Juke (F15), Qashqai (J10/J11), Pulsar",
+              "avgRebuiltPrice": "£1,800 - £3,200 supply only",
+              "cta": "→ Get quotes for MR16DDT Nissan engine replacement"
             },
             {
-              "code": "H5Bt 415",
+              "code": "MR20DE",
+              "title": "2.0L Petrol",
+              "familyHeading": "MR20DE - 2.0L Petrol",
               "fuel": "Petrol",
-              "size": "1.2 L Turbo",
-              "power": "115‑130 HP",
-              "compatibleModels": "Qashqai (J11), Juke (F15), Pulsar (C13)",
-              "avgRebuiltPrice": "£1,500 – £3,600",
-              "cta": "Get Quote for H5Bt 415"
-            },
-            {
-              "code": "Z9M 1.6",
-              "fuel": "Petrol",
-              "size": "1.6 L Turbo",
-              "power": "163‑190 HP",
-              "compatibleModels": "Pulsar (C13), Qashqai (J11), X‑Trail (T32)",
-              "avgRebuiltPrice": "£1,700 – £4,100",
-              "cta": "Get Quote for Z9M 1.6"
-            }
-          ]
-        },
-        {
-          "name": "Mid‑Size Petrol Family (MR20DD/M4R/QR25DE) — 2008‑2024",
-          "era": "All years",
-          "failureNote": "MR/QR petrol engines are known for carbon buildup on intake valves and occasional oil consumption at high mileage. Our rebuilt units include decarbonised ports, renewed valve seals, and updated gasket sets for long‑term reliability.",
-          "engines": [
-            {
-              "code": "MR20DD",
-              "fuel": "Petrol",
-              "size": "2.0 L",
-              "power": "144‑150 HP",
-              "compatibleModels": "Qashqai (J10, J11), X‑Trail (T31, T32), NV400",
-              "avgRebuiltPrice": "£1,600 – £4,000",
-              "cta": "Get Quote for MR20DD"
-            },
-            {
-              "code": "M4R 2.0",
-              "fuel": "Petrol",
-              "size": "2.0 L",
-              "power": "140‑147 HP",
-              "compatibleModels": "Qashqai (J10), X‑Trail (T31), Primera (P12)",
-              "avgRebuiltPrice": "£1,550 – £3,900",
-              "cta": "Get Quote for M4R 2.0"
+              "size": "2.0 Litre",
+              "power": "140-150 hp",
+              "compatibleModels": "Qashqai (J10/J11), X-Trail (T31/T32)",
+              "avgRebuiltPrice": "£1,200 - £2,200 supply only",
+              "cta": "→ Get quotes for MR20DE Nissan engine replacement"
             },
             {
               "code": "QR25DE",
+              "title": "2.5L Petrol",
+              "familyHeading": "QR25DE - 2.5L Petrol",
               "fuel": "Petrol",
-              "size": "2.5 L",
-              "power": "169‑171 HP",
-              "compatibleModels": "X‑Trail (T30, T31), Pathfinder (R51), Navara (D40)",
-              "avgRebuiltPrice": "£1,800 – £4,500",
-              "cta": "Get Quote for QR25DE"
-            }
-          ]
-        },
-        {
-          "name": "Commercial dCi Family (YD25DDTi/ZD30DDTi) — 2008‑2024",
-          "era": "All years",
-          "failureNote": "YD/ZD commercial diesels are known for turbo actuator sticking and injector wear under heavy loads. Our rebuilt units include refurbished turbo actuators, flow‑tested injectors, and reinforced oil rails for fleet‑grade durability.",
-          "engines": [
-            {
-              "code": "YD25DDTi",
-              "fuel": "Diesel",
-              "size": "2.5 L",
-              "power": "150‑190 HP",
-              "compatibleModels": "Navara (D40, D23), X‑Trail (T31), Pathfinder (R51)",
-              "avgRebuiltPrice": "£1,800 – £4,600",
-              "cta": "Get Quote for YD25DDTi"
+              "size": "2.5 Litre",
+              "power": "165-180 hp",
+              "compatibleModels": "X-Trail (T31), Navara (D40), Altima",
+              "avgRebuiltPrice": "£1,500 - £2,800 supply only",
+              "cta": "→ Get quotes for QR25DE Nissan engine replacement"
             },
             {
-              "code": "YD25ET",
-              "fuel": "Diesel",
-              "size": "2.5 L",
-              "power": "174‑190 HP",
-              "compatibleModels": "Navara Double Cab, Pathfinder, Interstar",
-              "avgRebuiltPrice": "£1,900 – £4,800",
-              "cta": "Get Quote for YD25ET"
-            },
-            {
-              "code": "ZD30DDTi",
-              "fuel": "Diesel",
-              "size": "3.0 L",
-              "power": "150‑160 HP",
-              "compatibleModels": "Cabstar (F24), Interstar, NT400",
-              "avgRebuiltPrice": "£2,000 – £5,200",
-              "cta": "Get Quote for ZD30DDTi"
-            }
-          ]
-        },
-        {
-          "name": "Modern 1.6‑2.0 dCi Family (R9M/M9R) — 2012‑2024",
-          "era": "All years",
-          "failureNote": "R9M/M9R engines are known for EGR cooler leaks and high‑pressure fuel pump wear. Our rebuilt units include renewed EGR coolers, calibrated HPFPs, and updated software maps for cleaner running.",
-          "engines": [
-            {
-              "code": "R9M 832",
-              "fuel": "Diesel",
-              "size": "1.6 L",
-              "power": "130‑160 HP",
-              "compatibleModels": "Qashqai (J11), Pulsar (C13), NV300",
-              "avgRebuiltPrice": "£1,600 – £4,000",
-              "cta": "Get Quote for R9M 832"
-            },
-            {
-              "code": "R9M 730",
-              "fuel": "Diesel",
-              "size": "1.6 L",
-              "power": "130‑160 HP",
-              "compatibleModels": "X‑Trail (T32), NV300, Renault Trafic III",
-              "avgRebuiltPrice": "£1,650 – £4,100",
-              "cta": "Get Quote for R9M 730"
-            },
-            {
-              "code": "M9R 730",
-              "fuel": "Diesel",
-              "size": "2.0 L",
-              "power": "150‑177 HP",
-              "compatibleModels": "Qashqai (J10, J11), X‑Trail (T31), NV400",
-              "avgRebuiltPrice": "£1,800 – £4,500",
-              "cta": "Get Quote for M9R 730"
-            }
-          ]
-        },
-        {
-          "name": "Performance & V6 Family (VQ35HR/KR20DET) — 2008‑2024",
-          "era": "All years",
-          "failureNote": "VQ V6 engines are known for timing chain guide wear and oil gallery sludge at high mileage. Our rebuilt units include upgraded chain guides, precision‑balanced assemblies, and thorough internal cleaning for performance‑grade reliability.",
-          "engines": [
-            {
-              "code": "VQ35HR",
+              "code": "HR12DE",
+              "title": "1.2L Petrol",
+              "familyHeading": "HR12DE - 1.2L Petrol",
               "fuel": "Petrol",
-              "size": "3.5 L V6",
-              "power": "306‑320 HP",
-              "compatibleModels": "Pathfinder (R51), 370Z, Murano (Z51)",
-              "avgRebuiltPrice": "£2,800 – £7,500",
-              "cta": "Get Quote for VQ35HR"
+              "size": "1.2 Litre",
+              "power": "79-98 hp",
+              "compatibleModels": "Micra (K13), Note (E12)",
+              "avgRebuiltPrice": "£900 - £1,600 supply only",
+              "cta": "→ Get quotes for HR12DE Nissan engine replacement"
             },
             {
-              "code": "VQ35DE",
+              "code": "VR38DETT",
+              "title": "3.8L Petrol (Twin-Turbo V6)",
+              "familyHeading": "VR38DETT - 3.8L Petrol (Twin-Turbo V6)",
               "fuel": "Petrol",
-              "size": "3.5 L V6",
-              "power": "245‑265 HP",
-              "compatibleModels": "Pathfinder (R50), Murano (Z50), Maxima (A33)",
-              "avgRebuiltPrice": "£2,500 – £6,800",
-              "cta": "Get Quote for VQ35DE"
-            },
-            {
-              "code": "KR20DET",
-              "fuel": "Petrol",
-              "size": "2.0 L Turbo",
-              "power": "248‑268 HP",
-              "compatibleModels": "Skyline (V37), QX50, Infiniti Q50",
-              "avgRebuiltPrice": "£3,200 – £9,500",
-              "cta": "Get Quote for KR20DET"
-            }
-          ]
-        },
-        {
-          "name": "e‑POWER & Hybrid Family (EM57) — 2017‑2024",
-          "era": "All years",
-          "failureNote": "EM57 e‑POWER units are known for generator bearing wear and inverter cooling issues. Our rebuilt units include renewed generator bearings, tested inverters, and updated thermal management for hybrid‑specific reliability.",
-          "engines": [
-            {
-              "code": "EM57",
-              "fuel": "Hybrid",
-              "size": "1.6 L + Electric",
-              "power": "109‑136 HP (combined)",
-              "compatibleModels": "Note (E12 e‑POWER), Serena (C27 e‑POWER)",
-              "avgRebuiltPrice": "£2,200 – £5,800",
-              "cta": "Get Quote for EM57"
-            }
-          ]
-        },
-        {
-          "name": "Legacy & Entry‑Level Family (TD27/NA16S/HR15DE) — 2008‑2018",
-          "era": "All years",
-          "failureNote": "Legacy TD/NA engines are known for injector seal leaks and coolant system corrosion. Our rebuilt units include renewed injector seals, pressure‑tested blocks, and updated cooling components for classic‑car reliability",
-          "engines": [
-            {
-              "code": "TD27",
-              "fuel": "Diesel",
-              "size": "2.7 L",
-              "power": "98‑105 HP",
-              "compatibleModels": "Terrano II (R20), Patrol (Y60), Vanette",
-              "avgRebuiltPrice": "£1,600 – £4,200",
-              "cta": "Get Quote for TD27"
-            },
-            {
-              "code": "NA16S",
-              "fuel": "Petrol",
-              "size": "1.6 L",
-              "power": "97‑102 HP",
-              "compatibleModels": "Sunny (N14, N15), Almera (N15), Micra (K11)",
-              "avgRebuiltPrice": "£1,200 – £3,100",
-              "cta": "Get Quote for NA16S"
-            },
-            {
-              "code": "HR15DE",
-              "fuel": "Petrol",
-              "size": "1.5 L",
-              "power": "105‑109 HP",
-              "compatibleModels": "Note (E11), Micra (K13), Tiida (C11)",
-              "avgRebuiltPrice": "£1,300 – £3,300",
-              "cta": "Get Quote for HR15DE"
+              "size": "3.8 Litre",
+              "power": "480-600+ hp",
+              "compatibleModels": "GT-R (R35)",
+              "avgRebuiltPrice": "£5,000 - £10,000+ supply only",
+              "cta": "→ Get quotes for VR38DETT Nissan engine replacement"
             }
           ]
         }
@@ -3171,106 +3012,95 @@
       "closing": "Not sure which engine size your Nissan needs? Enter your registration number and we'll match you to the exact engine code and displacement — instantly. All engines supplied with a minimum 12‑month warranty from UK Nissan specialists."
     },
     "fuelTypes": {
-      "tag": "Complete Nissan Engines List",
-      "h2": "Nissan Engines by Fuel Type",
-      "intro": "Choose your Nissan engine by fuel type to compare realistic replacement prices, known brand‑wide issues, and UK specialist supply – from the most popular diesel workhorses to the latest electrified powertrains.",
+      "tag": "Nissan Engines by Fuel Type",
+      "h2": "Nissan Diesel vs Petrol vs Hybrid vs Electric - Which Fuel Type Is Right For You?",
+      "intro": "Compare Nissan engine fuel types by replacement costs, running costs, reliability reputation, and model availability. Use this guide to understand your options - then enter your registration for an instant match and quotes from UK Nissan specialists.",
       "items": [
         {
-          "title": "Nissan Diesel Engines",
-          "description": "Nissan diesel engines cover many of the brand's highest-mileage UK models. Replacement demand is usually driven by timing system wear, injector and turbo faults, plus EGR or DPF-related damage once repeat short-journey use starts affecting reliability.",
-          "descriptor": "High-mileage motorway and SUV applications",
+          "title": "Diesel Engines",
+          "description": "Nissan's diesel engine range in the UK is dominated by the Renault-developed dCi family - 1.5-litre (K9K), 1.6-litre (R9M), and 2.0-litre (M9R) units - fitted to the Qashqai, Juke, X-Trail, and Navara. Replacement demand is driven by EGR/DPF clogging, timing chain stretch, and turbocharger failures.",
+          "descriptor": "Nissan's diesel engine range in the UK is dominated by the Renault-developed dCi family - 1.5-litre (K9K), 1.6-litre (R9M), and 2.0-litre (M9R) units - fitted to the Qashqai, Juke, X-Trail, and Navara. Replacement demand is driven by EGR/DPF clogging, timing chain stretch, and turbocharger failures.",
           "families": [
-            "Alliance 1.5 dCi Family (K9K/F9Q/S9M/L9K) — 2008‑2024",
-            "Commercial dCi Family (YD25DDTi/ZD30DDTi) — 2008‑2024",
-            "Modern 1.6‑2.0 dCi Family (R9M/M9R) — 2012‑2024",
-            "Legacy & Entry‑Level Family (TD27/NA16S/HR15DE) — 2008‑2018"
+            "£1,200 - £3,500 (supply only)",
+            "1.5 dCi (K9K): £1,200 - £2,200",
+            "1.6 dCi (R9M): £1,600 - £2,900",
+            "2.0 dCi (M9R): £1,500 - £2,800",
+            "2.5 YD25DDTi: £1,800 - £3,500"
           ],
-          "foundIn": [
-            "Nissan Almera Engines",
-            "Nissan Cube Engines",
-            "Nissan Juke Engines",
-            "Nissan Micra Engines"
-          ],
-          "knownFor": [
-            "High oil consumption from piston ring wear",
-            "copper injector seal leaks",
-            "DPF clogging on post-2015 Euro 6 variants",
-            "EGR cooler internal leaks"
-          ],
-          "typicalModels": [
-            "Nissan Almera Engines",
-            "Nissan Cube Engines",
-            "Nissan Juke Engines",
-            "Nissan Micra Engines"
-          ],
-          "importantNotes": [
-            "Short-journey use increases DPF, EGR, and oil-dilution risk on many diesel engines.",
-            "A documented service history matters more on diesel replacements because injector, turbo, and timing faults often build gradually."
-          ],
-          "cta": "Compare Nissan diesel engine prices"
-        },
-        {
-          "title": "Nissan Petrol Engines",
-          "description": "Nissan petrol engines span everything from core daily-driver models to higher-output performance variants. Most replacement enquiries start with timing chain noise, oil consumption, cooling-system failure, or internal wear that makes a warranted replacement more sensible than repeated repairs.",
-          "descriptor": "Core passenger-car and performance applications",
-          "families": [
-            "DIG‑T Turbo Petrol Family (HR12DD/H5Bt/Z9M) — 2010‑2024",
-            "Mid‑Size Petrol Family (MR20DD/M4R/QR25DE) — 2008‑2024",
-            "Performance & V6 Family (VQ35HR/KR20DET) — 2008‑2024",
-            "Legacy & Entry‑Level Family (TD27/NA16S/HR15DE) — 2008‑2018"
-          ],
-          "foundIn": [
-            "Nissan Almera Engines",
-            "Nissan Cube Engines",
-            "Nissan Juke Engines",
-            "Nissan Micra Engines"
-          ],
-          "knownFor": [
-            "Head gasket failure on overheated units",
-            "distributor drive gear wear causing timing drift",
-            "coolant leak at thermostat housing",
-            "Timing chain stretch on pre-2017 DIG-T units"
-          ],
-          "typicalModels": [
-            "Nissan Almera Engines",
-            "Nissan Cube Engines",
-            "Nissan Juke Engines",
-            "Nissan Micra Engines"
-          ],
-          "importantNotes": [
-            "Cold-start rattles, overheating history, and oil use are the biggest warning signs before a petrol engine replacement becomes necessary.",
-            "Direct-injection petrol engines often need specialist attention for carbon build-up alongside the main mechanical repair."
-          ],
-          "cta": "Compare Nissan petrol engine prices"
-        },
-        {
-          "title": "Nissan Hybrid Engines",
-          "description": "Nissan hybrid powertrains combine combustion engines with electric assistance across newer electrified models. Replacement demand is lower than traditional petrol or diesel units, but generator-engine faults, inverter issues, cooling-system failures, and calibration-sensitive repairs still require specialist support.",
-          "descriptor": "Electrified models with combustion backup",
-          "families": [
-            "e‑POWER & Hybrid Family (EM57) — 2017‑2024"
-          ],
-          "foundIn": [
-            "Nissan Almera Engines",
-            "Nissan Cube Engines",
-            "Nissan Juke Engines",
-            "Nissan Micra Engines"
-          ],
+          "foundIn": [],
           "knownFor": [],
-          "typicalModels": [
-            "Nissan Almera Engines",
-            "Nissan Cube Engines",
-            "Nissan Juke Engines",
-            "Nissan Micra Engines"
-          ],
+          "typicalModels": [],
           "importantNotes": [
-            "Hybrid faults often need both mechanical and high-voltage diagnosis, so replacement decisions should be made by specialists familiar with the full system.",
-            "Battery cooling, inverter health, and software calibration are just as important as the combustion-engine condition on hybrid models."
+            "High-mileage motorway drivers covering 15,000+ miles annually",
+            "Company car drivers benefiting from lower fuel costs",
+            "Fleet operators prioritising efficiency",
+            "Towing users who need low-end torque",
+            "Urban drivers with short daily trips who are better served by petrol (DPF and EGR issues are common)",
+            "Typical searches: Nissan Qashqai 1.5 dCi engine replacement, Nissan X-Trail 2.0 dCi engine cost, Nissan diesel engine specialist UK, Nissan K9K engine problems, Nissan Navara YD25DDTi engine replacement, Nissan diesel DPF problems, Nissan Juke 1.5 dCi engine price, Nissan Qashqai 1.6 dCi engine for sale → Get quotes for Nissan Diesel replacement engines → Not sure which diesel you have? Enter your registration number for an instant match"
           ],
-          "cta": "Compare Nissan hybrid engine prices"
+          "cta": "→ Get quotes for Nissan Diesel replacement engines"
+        },
+        {
+          "title": "Petrol Engines",
+          "description": "Nissan's petrol engine range in the UK spans from the 1.2-litre HR12DE in the Micra to the legendary VR38DETT in the GT-R - delivering everything from city car economy to supercar-slaying performance.",
+          "descriptor": "Nissan's petrol engine range in the UK spans from the 1.2-litre HR12DE in the Micra to the legendary VR38DETT in the GT-R - delivering everything from city car economy to supercar-slaying performance.",
+          "families": [
+            "£900 - £10,000+ (supply only)",
+            "1.2 HR12DE (Micra, Note): £900 - £1,600",
+            "1.6 MR16DDT (Juke, Qashqai): £1,800 - £3,200",
+            "2.0 MR20DE (Qashqai, X-Trail): £1,200 - £2,200",
+            "2.5 QR25DE (X-Trail, Navara): £1,500 - £2,800"
+          ],
+          "foundIn": [],
+          "knownFor": [],
+          "typicalModels": [],
+          "importantNotes": [
+            "Urban and suburban drivers with lower annual mileage (under 12,000 miles)",
+            "City car owners prioritising simplicity and low running costs (Micra)",
+            "Enthusiasts who value the performance character of the GT-R",
+            "High-mileage motorway drivers who would benefit from diesel's superior fuel economy",
+            "Drivers prioritising maximum fuel efficiency over performance",
+            "Typical searches: Nissan Juke 1.6 DIG-T engine replacement, Nissan Qashqai 2.0 petrol engine cost, Nissan petrol engine specialist UK, Nissan MR16DDT timing chain problems, Nissan Micra 1.2 engine replacement, Nissan GT-R engine rebuild, Nissan X-Trail 2.5 engine price, Nissan Note 1.2 engine problems → Compare Nissan Petrol engine prices → Not sure which petrol you have? Enter your registration number for an instant match"
+          ],
+          "cta": "→ Compare Nissan Petrol engine prices"
+        },
+        {
+          "title": "Hybrid & e-Power Engines",
+          "description": "Nissan's hybrid range is dominated by the innovative e-Power system, used in the Qashqai and X-Trail. It combines a 1.5-litre petrol engine (used as a generator) with an electric motor for a series-hybrid driving experience. Hybrid systems are still relatively rare in the replacement market, but enquiries are growing.",
+          "descriptor": "Nissan's hybrid range is dominated by the innovative e-Power system, used in the Qashqai and X-Trail. It combines a 1.5-litre petrol engine (used as a generator) with an electric motor for a series-hybrid driving experience. Hybrid systems are still relatively rare in the replacement market, but enquiries are growing.",
+          "families": [
+            "e-Power (Qashqai, X-Trail): Uses a 1.5-litre three-cylinder petrol engine as a generator to charge the battery and power the electric motor. The engine never directly drives the wheels - the car is always driven by the electric motor. This provides instant torque and a smooth, EV-like driving experience.",
+            "Battery location: The high-voltage battery is typically located under the rear seats or boot floor - careful handling is required for any work in these areas.",
+            "No Plug-in Option: e-Power is a self-charging hybrid system; it cannot be charged from an external plug."
+          ],
+          "foundIn": [],
+          "knownFor": [],
+          "typicalModels": [],
+          "importantNotes": [
+            "Urban commuters who benefit from instant torque and improved fuel economy in stop-start traffic",
+            "Company car drivers benefiting from lower Benefit-in-Kind (BIK) tax rates",
+            "Drivers who want to reduce fuel costs and emissions without going fully electric",
+            "Drivers who enjoy the smooth, EV-like driving experience",
+            "Drivers without access to a specialist hybrid garage - parts and expertise are limited",
+            "Typical searches: Nissan Qashqai e-Power engine replacement, Nissan X-Trail e-Power battery price, Nissan hybrid engine specialist UK, Nissan e-Power generator failure, Nissan hybrid battery degradation, Nissan hybrid motor replacement, Nissan Qashqai e-Power engine for sale, Nissan hybrid system fault repair → Enquire about Nissan Hybrid engine availability → Not sure which hybrid you have? Enter your registration number for an instant match"
+          ],
+          "cta": "Get quotes for Nissan Nissan Hybrid & e-Power Engines engines"
+        },
+        {
+          "title": "Electric Powertrains",
+          "description": "Nissan's electric range includes the Leaf, one of the world's best-selling electric vehicles, and the Ariya, a modern crossover SUV. Electric motors rarely fail, but we connect you with UK specialists for battery module repairs and drive unit replacements.",
+          "descriptor": "Nissan's electric range includes the Leaf, one of the world's best-selling electric vehicles, and the Ariya, a modern crossover SUV. Electric motors rarely fail, but we connect you with UK specialists for battery module repairs and drive unit replacements.",
+          "families": [],
+          "foundIn": [],
+          "knownFor": [],
+          "typicalModels": [],
+          "importantNotes": [
+            "Typical searches: Nissan Leaf motor replacement, Nissan Ariya battery repair, Nissan electric motor specialist UK, Nissan EV drive unit price, Nissan EV battery module replacement, Nissan electric range degradation, Nissan Leaf motor failure, Nissan electric powertrain repair → Enquire about Nissan Electric motor repair or replacement → Not sure which electric Nissan you have? Enter your registration number for an instant match"
+          ],
+          "cta": "Get quotes for Nissan Nissan Electric Powertrains engines"
         }
       ],
-      "closing": "Not sure which fuel type your Nissan has? Enter your registration number above to instantly identify your model, engine code, fuel system and compatible replacement options – all backed by a minimum 12‑month unlimited mileage warranty from UK Nissan specialists."
+      "closing": "Not sure which fuel type your Nissan has? Enter your registration number for an instant match."
     },
     "engineCodeDirectory": {
       "tag": "Engine Codes",

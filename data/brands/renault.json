@@ -1740,263 +1740,103 @@
       ]
     },
     "engineCodes": {
-      "tag": "Replacement Cost",
-      "h2": "Renault Engine Codes & Average Rebuilt Prices (UK Supply)",
-      "h3": "Compare costs for every major Renault engine — K9K diesel, H5F/HRA1 TCe petrol, and M9R commercial units. All prices are typical UK market ranges for professionally rebuilt engines with warranty. Click \"Get Quote\" on any engine to receive tailored prices from our network of UK Renault specialists.",
+      "tag": "Engine Codes",
+      "h2": "Renault Engine Codes - Most Replaced Engines & Full Directory",
+      "h3": "Every major Renault engine code with technical specs, compatible UK models, known failures and average rebuilt prices. Use the quick-reference accordion below for all remaining codes.",
+      "closingLine": "Can't find your engine code? Enter your registration number above - we'll identify the exact Renault engine fitted to your vehicle.",
       "filters": [
-        "All",
-        "Diesel",
-        "Petrol"
+        "Diesel Engines (Most Replaced in the UK)",
+        "Petrol Engines (Most Replaced in the UK)"
       ],
       "groups": [
         {
-          "name": "K-Series Diesel Engines (2005–2024) — 1.5 dCi / 1.9 dCi",
-          "era": "All years",
-          "failureNote": "Get Quote → (per row, developer to implement as button pre-filling engine code) Common failure points: K9K/F9Q engines are known for injector wear, EGR clogging, and crankshaft position sensor failure. Our rebuilt units include upgraded injectors, cleaned EGR systems, and new sensors to prevent repeat failures.",
+          "name": "Diesel Engines (Most Replaced in the UK)",
+          "era": "Extracted from Renault diesel engines (most replaced in the uk) technical replacement data.",
+          "failureNote": "EGR Valve and Cooler Failure - The K9K engine is susceptible to EGR valve clogging, particularly when used for short journeys or urban-only driving., Turbocharger Failure - The KKK/BorgWarner turbo can fail due to oil starvation.",
           "engines": [
             {
-              "code": "K9K 700-799",
+              "code": "K9K",
+              "title": "1.5L Diesel (dCi)",
+              "familyHeading": "K9K - 1.5L Diesel (dCi)",
               "fuel": "Diesel",
-              "size": "1.5L",
-              "power": "65–90 HP",
-              "compatibleModels": "Clio III (2005–2012), Megane II (2002–2008), Kangoo II",
-              "avgRebuiltPrice": "£1,400 – £2,900",
-              "cta": "Get Quote for K9K 700-799"
+              "size": "1.5 Litre",
+              "power": "80-110 hp",
+              "compatibleModels": "Clio II/III/IV, Captur, Megane II/III, Scenic II/III, Laguna II/III, Kangoo, Modus",
+              "avgRebuiltPrice": "£1,200 - £2,200 supply only",
+              "cta": "→ Get quotes for K9K Renault engine replacement"
             },
             {
-              "code": "K9K 800-899",
+              "code": "R9M",
+              "title": "1.6L Diesel (dCi)",
+              "familyHeading": "R9M - 1.6L Diesel (dCi)",
               "fuel": "Diesel",
-              "size": "1.5L",
-              "power": "90–110 HP",
-              "compatibleModels": "Captur I (2013–2019), Clio IV (2012–2019), Scenic III",
-              "avgRebuiltPrice": "£1,600 – £3,400",
-              "cta": "Get Quote for K9K 800-899"
+              "size": "1.6 Litre",
+              "power": "130-160 hp",
+              "compatibleModels": "Megane IV, Scenic IV, Espace V, Kadjar, Talisman, Trafic III",
+              "avgRebuiltPrice": "£1,800 - £2,800 supply only",
+              "cta": "→ Get quotes for R9M Renault engine replacement"
             },
             {
-              "code": "K9K 900-999",
+              "code": "F9Q",
+              "title": "1.9L Diesel (dCi)",
+              "familyHeading": "F9Q - 1.9L Diesel (dCi)",
               "fuel": "Diesel",
-              "size": "1.5L",
-              "power": "110 HP",
-              "compatibleModels": "Kadjar (2015–2022), Megane IV (2016–2022)",
-              "avgRebuiltPrice": "£1,800 – £3,800",
-              "cta": "Get Quote for K9K 900-999"
-            },
-            {
-              "code": "F9Q 700-799",
-              "fuel": "Diesel",
-              "size": "1.9L",
-              "power": "100–120 HP",
-              "compatibleModels": "Laguna II (2001–2007), Scenic II (2003–2009), Trafic II",
-              "avgRebuiltPrice": "£1,700 – £3,600",
-              "cta": "Get Quote for F9Q 700-799"
-            },
-            {
-              "code": "F9Q 800-899",
-              "fuel": "Diesel",
-              "size": "1.9L",
-              "power": "120–130 HP",
-              "compatibleModels": "Espace IV (2002–2012), Vel Satis (2002–2009)",
-              "avgRebuiltPrice": "£1,900 – £4,000",
-              "cta": "Get Quote for F9Q 800-899"
+              "size": "1.9 Litre",
+              "power": "100-130 hp",
+              "compatibleModels": "Megane II/III, Scenic II, Laguna II, Grand Scenic",
+              "avgRebuiltPrice": "£1,000 - £1,800 supply only",
+              "cta": "→ Get quotes for F9Q Renault engine replacement"
             }
           ]
         },
         {
-          "name": "H-Series TCe Petrol Engines (2012–2024) — 0.9–1.2 Turbo",
-          "era": "All years",
-          "failureNote": "Get Quote → (per row) Common failure points: H5F/HRA1 TCe engines are known for timing chain stretch and excessive oil consumption leading to seizure. Our rebuilt units include upgraded tensioners, revised oil pumps, and reinforced chains to address these critical weaknesses.",
+          "name": "Petrol Engines (Most Replaced in the UK)",
+          "era": "Extracted from Renault petrol engines (most replaced in the uk) technical replacement data.",
+          "failureNote": "Ignition Coil Failure - Coil packs can fail, causing misfires and rough running., Camshaft Position Sensor Issues - Can cause starting problems.",
           "engines": [
             {
-              "code": "H5Ft 400-499",
+              "code": "K4M",
+              "title": "1.6L Petrol",
+              "familyHeading": "K4M - 1.6L Petrol",
               "fuel": "Petrol",
-              "size": "1.2L Turbo",
-              "power": "115–130 HP",
-              "compatibleModels": "Clio IV (2012–2019), Captur I (2013–2019), Megane III",
-              "avgRebuiltPrice": "£1,800 – £3,600",
-              "cta": "Get Quote for H5Ft 400-499"
+              "size": "1.6 Litre",
+              "power": "110-115 hp",
+              "compatibleModels": "Clio II/III, Megane II, Scenic II, Laguna II, Modus",
+              "avgRebuiltPrice": "£800 - £1,500 supply only",
+              "cta": "→ Get quotes for K4M Renault engine replacement"
             },
             {
-              "code": "HRA1 400-499",
+              "code": "F4R",
+              "title": "2.0L Petrol",
+              "familyHeading": "F4R - 2.0L Petrol",
               "fuel": "Petrol",
-              "size": "1.2L Turbo",
-              "power": "115–130 HP",
-              "compatibleModels": "Kadjar (2015–2022), Scenic IV (2016–2022), Talisman",
-              "avgRebuiltPrice": "£2,000 – £4,000",
-              "cta": "Get Quote for HRA1 400-499"
+              "size": "2.0 Litre",
+              "power": "140-225 hp",
+              "compatibleModels": "Megane II/III, Scenic II, Laguna II, Clio RS, Megane RS",
+              "avgRebuiltPrice": "£1,500 - £3,000 supply only",
+              "cta": "→ Get quotes for F4R Renault engine replacement"
             },
             {
-              "code": "H4Jt 400-499",
+              "code": "H4Jt",
+              "title": "1.4L Petrol (TCe)",
+              "familyHeading": "H4Jt - 1.4L Petrol (TCe)",
               "fuel": "Petrol",
-              "size": "0.9L Turbo",
-              "power": "90 HP",
-              "compatibleModels": "Clio IV (2012–2019), Twingo III (2014–2022), Smart ForFour",
-              "avgRebuiltPrice": "£1,500 – £3,200",
-              "cta": "Get Quote for H4Jt 400-499"
+              "size": "1.4 Litre",
+              "power": "130 hp",
+              "compatibleModels": "Megane III, Scenic III",
+              "avgRebuiltPrice": "£1,500 - £2,500 supply only",
+              "cta": "→ Get quotes for H4Jt Renault engine replacement"
             },
             {
-              "code": "H5D 400-499",
+              "code": "M5R",
+              "title": "2.0L Petrol",
+              "familyHeading": "M5R - 2.0L Petrol",
               "fuel": "Petrol",
-              "size": "1.2L Turbo",
-              "power": "115 HP",
-              "compatibleModels": "Fluence (2010–2016), Megane III (2008–2016)",
-              "avgRebuiltPrice": "£1,700 – £3,400",
-              "cta": "Get Quote for H5D 400-499"
-            }
-          ]
-        },
-        {
-          "name": "M-Series Commercial Diesel Engines (2010–2024) — 1.6–2.3 dCi",
-          "era": "All years",
-          "failureNote": "Get Quote → (per row) Common failure points: M9R/R9M engines are known for injector failure and turbocharger wear under high mileage. Our rebuilt units include remanufactured injectors, balanced turbo assemblies, and updated ECU mappings for reliable commercial use.",
-          "engines": [
-            {
-              "code": "M5R 400-499",
-              "fuel": "Diesel",
-              "size": "1.6L",
-              "power": "90–130 HP",
-              "compatibleModels": "Kadjar (2015–2022), Megane IV (2016–2022), Scenic IV",
-              "avgRebuiltPrice": "£1,900 – £4,000",
-              "cta": "Get Quote for M5R 400-499"
-            },
-            {
-              "code": "R9M 400-499",
-              "fuel": "Diesel",
-              "size": "1.6L",
-              "power": "130–160 HP",
-              "compatibleModels": "Trafic III (2014–2024), Master III (2010–2024)",
-              "avgRebuiltPrice": "£2,200 – £4,800",
-              "cta": "Get Quote for R9M 400-499"
-            },
-            {
-              "code": "M9R 700-799",
-              "fuel": "Diesel",
-              "size": "2.0L",
-              "power": "150–175 HP",
-              "compatibleModels": "Laguna III (2007–2015), Espace V (2015–2022), Koleos II",
-              "avgRebuiltPrice": "£2,400 – £5,200",
-              "cta": "Get Quote for M9R 700-799"
-            },
-            {
-              "code": "M9T 400-499",
-              "fuel": "Diesel",
-              "size": "2.3L",
-              "power": "120–180 HP",
-              "compatibleModels": "Master III (2010–2024), Trafic III (2014–2024)",
-              "avgRebuiltPrice": "£2,600 – £5,500",
-              "cta": "Get Quote for M9T 400-499"
-            },
-            {
-              "code": "G9U 700-799",
-              "fuel": "Diesel",
-              "size": "2.5L",
-              "power": "100–145 HP",
-              "compatibleModels": "Master II (2003–2010), Trafic II (2001–2014)",
-              "avgRebuiltPrice": "£2,400 – £5,000",
-              "cta": "Get Quote for G9U 700-799"
-            }
-          ]
-        },
-        {
-          "name": "K/F-Series Legacy Petrol Engines (1998–2016) — 1.2–2.0 Naturally Aspirated",
-          "era": "All years",
-          "failureNote": "Get Quote → (per row) Common failure points: K4M/F4R engines are known for coil pack failure, timing belt neglect, and oil sludge buildup. Our rebuilt units include new ignition components, serviced timing systems, and thorough internal cleaning for dependable performance.",
-          "engines": [
-            {
-              "code": "K4M 700-799",
-              "fuel": "Petrol",
-              "size": "1.6L 16V",
-              "power": "100–110 HP",
-              "compatibleModels": "Clio II/III (1998–2012), Megane II (2002–2008), Scenic II",
-              "avgRebuiltPrice": "£1,300 – £2,800",
-              "cta": "Get Quote for K4M 700-799"
-            },
-            {
-              "code": "K4J 700-799",
-              "fuel": "Petrol",
-              "size": "1.4L 16V",
-              "power": "95–100 HP",
-              "compatibleModels": "Clio II/III (1998–2012), Twingo II (2007–2014), Modus",
-              "avgRebuiltPrice": "£1,200 – £2,600",
-              "cta": "Get Quote for K4J 700-799"
-            },
-            {
-              "code": "D4F 700-799",
-              "fuel": "Petrol",
-              "size": "1.2L 16V",
-              "power": "75 HP",
-              "compatibleModels": "Clio III (2005–2012), Twingo II (2007–2014)",
-              "avgRebuiltPrice": "£1,100 – £2,400",
-              "cta": "Get Quote for D4F 700-799"
-            },
-            {
-              "code": "F4R 700-799",
-              "fuel": "Petrol",
-              "size": "2.0L 16V",
-              "power": "135–160 HP",
-              "compatibleModels": "Megane II RS (2004–2009), Laguna II (2001–2007)",
-              "avgRebuiltPrice": "£1,800 – £3,800",
-              "cta": "Get Quote for F4R 700-799"
-            },
-            {
-              "code": "F4Rt 400-499",
-              "fuel": "Petrol",
-              "size": "2.0L Turbo",
-              "power": "200–275 HP",
-              "compatibleModels": "Megane III RS (2009–2016), Clio IV RS (2013–2019)",
-              "avgRebuiltPrice": "£2,800 – £5,500",
-              "cta": "Get Quote for F4Rt 400-499"
-            },
-            {
-              "code": "K7M 700-799",
-              "fuel": "Petrol",
-              "size": "1.4L 8V",
-              "power": "75 HP",
-              "compatibleModels": "Clio I/II (1990–2005), Kangoo I (1997–2008)",
-              "avgRebuiltPrice": "£1,000 – £2,200",
-              "cta": "Get Quote for K7M 700-799"
-            },
-            {
-              "code": "K7J 700-799",
-              "fuel": "Petrol",
-              "size": "1.4L 8V",
-              "power": "75 HP",
-              "compatibleModels": "Clio II (1998–2005), Symbol (1999–2008)",
-              "avgRebuiltPrice": "£1,000 – £2,200",
-              "cta": "Get Quote for K7J 700-799"
-            }
-          ]
-        },
-        {
-          "name": "Specialist & Electric Powertrains",
-          "era": "2010–2024",
-          "failureNote": "Get Quote → (per row) Common failure points: Electric powertrains require specialist diagnostic and rebuild expertise. Our network includes certified EV technicians who can supply refurbished motors with updated inverters and battery management compatibility",
-          "engines": [
-            {
-              "code": "Z.E. Electric Motor",
-              "fuel": "Electric",
-              "size": "N/A",
-              "power": "60–110 HP",
-              "compatibleModels": "Zoe (2012–2024), Kangoo Z.E. (2011–2022)",
-              "avgRebuiltPrice": "£2,500 – £6,000",
-              "cta": "Get Quote for Z.E. Electric Motor"
-            },
-            {
-              "code": "Twizy Power Unit",
-              "fuel": "Electric",
-              "size": "N/A",
-              "power": "17 HP",
-              "compatibleModels": "Twizy (2012–2024)",
-              "avgRebuiltPrice": "£1,800 – £4,000",
-              "cta": "Get Quote for Twizy Power Unit"
-            },
-            {
-              "code": "V9X 400-499",
-              "fuel": "Diesel",
-              "size": "3.0L V6",
-              "power": "235–240 HP",
-              "compatibleModels": "Laguna III (2007–2015), Espace IV (2006–2012)",
-              "avgRebuiltPrice": "£3,200 – £7,500",
-              "cta": "Get Quote for V9X 400-499"
+              "size": "2.0 Litre",
+              "power": "150-154 hp",
+              "compatibleModels": "Koleos",
+              "avgRebuiltPrice": "£1,800 - £2,800 supply only",
+              "cta": "→ Get quotes for M5R Renault engine replacement"
             }
           ]
         }
@@ -2562,103 +2402,94 @@
       "closing": "Not sure which engine size your Renault needs? Enter your registration number and we'll match you to the exact engine code and displacement — instantly. All engines supplied with a minimum 12‑month warranty from UK Renault specialists."
     },
     "fuelTypes": {
-      "tag": "Complete Renault Engines List",
-      "h2": "Renault Engines by Fuel Type",
-      "intro": "Choose your Renault engine by fuel type to compare realistic replacement prices, known brand‑wide issues, and UK specialist supply – from the most popular diesel workhorses to the latest electrified powertrains.",
+      "tag": "Renault Engines by Fuel Type",
+      "h2": "Renault Engine Codes - Most Replaced Engines & Full Directory",
+      "intro": "Every major Renault engine code with technical specs, compatible UK models, known failures and average rebuilt prices. Use the quick-reference accordion below for all remaining codes.",
       "items": [
         {
-          "title": "Renault Diesel Engines",
-          "description": "Renault diesel engines cover many of the brand's highest-mileage UK models. Replacement demand is usually driven by timing system wear, injector and turbo faults, plus EGR or DPF-related damage once repeat short-journey use starts affecting reliability.",
-          "descriptor": "High-mileage motorway and SUV applications",
+          "title": "Diesel Engines",
+          "description": "Renault's diesel engine range in the UK is dominated by the dCi family - 1.5-litre (K9K), 1.6-litre (R9M), and 1.9-litre (F9Q) units - fitted to the Clio, Captur, Megane, Scenic, and Trafic. Replacement demand is driven by EGR/D​PF clogging, turbocharger failures, and injector issues on these higher-mileage vehicles.",
+          "descriptor": "Renault's diesel engine range in the UK is dominated by the dCi family - 1.5-litre (K9K), 1.6-litre (R9M), and 1.9-litre (F9Q) units - fitted to the Clio, Captur, Megane, Scenic, and Trafic. Replacement demand is driven by EGR/D​PF clogging, turbocharger failures, and injector issues on these higher-mileage vehicles.",
           "families": [
-            "K-Series Diesel Engines (2005–2024) — 1.5 dCi / 1.9 dCi",
-            "M-Series Commercial Diesel Engines (2010–2024) — 1.6–2.3 dCi",
-            "Specialist & Electric Powertrains"
+            "£1,000 - £2,800 (supply only)",
+            "1.5 dCi (K9K): £1,200 - £2,200",
+            "1.6 dCi (R9M): £1,800 - £2,800",
+            "1.9 dCi (F9Q): £1,000 - £1,800"
           ],
-          "foundIn": [
-            "Renault Clio Engines",
-            "Renault Kwid Engines",
-            "Renault Modus Engines",
-            "Renault Pulse Engines"
-          ],
-          "knownFor": [
-            "Piezoelectric injector leakage",
-            "EGR valve carbon buildup",
-            "DPF clogging on short-trip use",
-            "EGR cooler leakage"
-          ],
-          "typicalModels": [
-            "Renault Clio Engines",
-            "Renault Kwid Engines",
-            "Renault Modus Engines",
-            "Renault Pulse Engines"
-          ],
-          "importantNotes": [
-            "Short-journey use increases DPF, EGR, and oil-dilution risk on many diesel engines.",
-            "A documented service history matters more on diesel replacements because injector, turbo, and timing faults often build gradually."
-          ],
-          "cta": "Compare Renault diesel engine prices"
-        },
-        {
-          "title": "Renault Petrol Engines",
-          "description": "Renault petrol engines span everything from core daily-driver models to higher-output performance variants. Most replacement enquiries start with timing chain noise, oil consumption, cooling-system failure, or internal wear that makes a warranted replacement more sensible than repeated repairs.",
-          "descriptor": "Core passenger-car and performance applications",
-          "families": [
-            "H-Series TCe Petrol Engines (2012–2024) — 0.9–1.2 Turbo",
-            "K/F-Series Legacy Petrol Engines (1998–2016) — 1.2–2.0 Naturally Aspirated"
-          ],
-          "foundIn": [
-            "Renault Clio Engines",
-            "Renault Kwid Engines",
-            "Renault Modus Engines",
-            "Renault Pulse Engines"
-          ],
-          "knownFor": [
-            "Turbo wastegate actuator sticking",
-            "timing chain tensioner wear (HRA1 variant)",
-            "carbon buildup on intake valves",
-            "H5F: timing chain stretch"
-          ],
-          "typicalModels": [
-            "Renault Clio Engines",
-            "Renault Kwid Engines",
-            "Renault Modus Engines",
-            "Renault Pulse Engines"
-          ],
-          "importantNotes": [
-            "Cold-start rattles, overheating history, and oil use are the biggest warning signs before a petrol engine replacement becomes necessary.",
-            "Direct-injection petrol engines often need specialist attention for carbon build-up alongside the main mechanical repair."
-          ],
-          "cta": "Compare Renault petrol engine prices"
-        },
-        {
-          "title": "Renault Electric Engines",
-          "description": "Renault electric powertrains use high-voltage drive motors and supporting control systems rather than conventional engine internals. Failures are less common, but inverter faults, bearing noise, resolver issues, or battery-related drivetrain problems still require specialist diagnosis and replacement support.",
-          "descriptor": "High-voltage drive units and EV systems",
-          "families": [
-            "Specialist & Electric Powertrains"
-          ],
-          "foundIn": [
-            "Renault Clio Engines",
-            "Renault Kwid Engines",
-            "Renault Modus Engines",
-            "Renault Pulse Engines"
-          ],
+          "foundIn": [],
           "knownFor": [],
-          "typicalModels": [
-            "Renault Clio Engines",
-            "Renault Kwid Engines",
-            "Renault Modus Engines",
-            "Renault Pulse Engines"
-          ],
+          "typicalModels": [],
           "importantNotes": [
-            "Electric drivetrain repairs should always include high-voltage safety checks and verification of the inverter and battery support systems.",
-            "Low mechanical wear does not eliminate replacement demand when control electronics or motor bearings begin to fail."
+            "High-mileage motorway drivers covering 15,000+ miles annually",
+            "Company car drivers benefiting from lower fuel costs",
+            "Fleet operators prioritising efficiency",
+            "Tradespeople and van owners needing torque for carrying cargo",
+            "Urban drivers with short daily trips who are better served by petrol (DPF and EGR issues are common)",
+            "Typical searches: Renault Clio 1.5 dCi engine replacement, Renault Megane 1.6 dCi engine cost, Renault diesel engine specialist UK, Renault K9K engine problems, Renault Scenic 1.5 dCi engine replacement, Renault diesel DPF problems, Renault Captur 1.5 dCi engine price, Renault Trafic 1.6 dCi engine for sale → Get quotes for Renault Diesel replacement engines → Not sure which diesel you have? Enter your registration number for an instant match"
           ],
-          "cta": "Compare Renault electric engine prices"
+          "cta": "→ Get quotes for Renault Diesel replacement engines"
+        },
+        {
+          "title": "Petrol Engines",
+          "description": "Renault's petrol engine range in the UK spans from the 1.2-litre TCe in the Clio and Captur to the 2.0-litre F4R in the Megane RS - delivering everything from city car economy to hot-hatch performance.",
+          "descriptor": "Renault's petrol engine range in the UK spans from the 1.2-litre TCe in the Clio and Captur to the 2.0-litre F4R in the Megane RS - delivering everything from city car economy to hot-hatch performance.",
+          "families": [
+            "£800 - £3,000 (supply only)",
+            "1.2 TCe (H5Ft): £1,200 - £2,000",
+            "1.4 TCe (H4Jt): £1,500 - £2,500",
+            "1.6 K4M: £800 - £1,500",
+            "2.0 F4R: £1,500 - £3,000"
+          ],
+          "foundIn": [],
+          "knownFor": [],
+          "typicalModels": [],
+          "importantNotes": [
+            "Urban and suburban drivers with lower annual mileage (under 12,000 miles)",
+            "City car owners (Clio, Captur) prioritising simplicity and low running costs",
+            "Enthusiasts wanting the performance character of the RS models",
+            "High-mileage motorway drivers who would benefit from diesel's superior fuel economy",
+            "Drivers prioritising maximum fuel efficiency over performance",
+            "Typical searches: Renault Clio 1.2 TCe engine replacement, Renault Megane RS engine cost, Renault petrol engine specialist UK, Renault 1.4 TCe timing chain problems, Renault 1.6 K4M engine problems, Renault Captur 1.3 TCe engine price, Renault Scenic 1.6 engine replacement, Renault Koleos 2.0 engine for sale → Compare Renault Petrol engine prices → Not sure which petrol you have? Enter your registration number for an instant match"
+          ],
+          "cta": "→ Compare Renault Petrol engine prices"
+        },
+        {
+          "title": "Hybrid & Plug-in Hybrid (PHEV) Engines",
+          "description": "Renault's hybrid range includes the Clio E-Tech Hybrid, Captur E-Tech PHEV, and Megane E-Tech PHEV, combining 1.6-litre petrol engines with electric motors. Hybrid systems are still relatively rare in the replacement market, but enquiries are increasing as these vehicles age.",
+          "descriptor": "Renault's hybrid range includes the Clio E-Tech Hybrid, Captur E-Tech PHEV, and Megane E-Tech PHEV, combining 1.6-litre petrol engines with electric motors. Hybrid systems are still relatively rare in the replacement market, but enquiries are increasing as these vehicles age.",
+          "families": [
+            "PHEV (Plug-in Hybrid - Captur, Megane): Combines a 1.6-litre petrol engine with an electric motor and a battery pack. The system provides up to 25-40 miles of pure electric range.",
+            "E-Tech Hybrid (Clio): Uses a 1.6-litre petrol engine with two electric motors and a clutchless dog-box gearbox for a smooth, efficient driving experience.",
+            "Battery location: The high-voltage battery is typically located under the rear seats or boot floor - careful handling is required for any work in these areas."
+          ],
+          "foundIn": [],
+          "knownFor": [],
+          "typicalModels": [],
+          "importantNotes": [
+            "Company car drivers benefiting from lower Benefit-in-Kind (BIK) tax rates",
+            "Urban commuters who can charge daily and drive within the electric range",
+            "Drivers who want to reduce fuel costs and emissions without going fully electric",
+            "Drivers who enjoy the smooth, EV-like driving experience of E-Tech",
+            "Drivers without off-street parking or reliable charging access",
+            "Typical searches: Renault Clio E-Tech Hybrid engine replacement, Renault Captur E-Tech PHEV battery price, Renault hybrid engine specialist UK, Renault Megane E-Tech hybrid engine cost, Renault hybrid battery degradation, Renault hybrid motor replacement, Renault Clio E-Tech engine for sale, Renault hybrid system fault repair → Enquire about Renault Hybrid engine availability → Not sure which hybrid you have? Enter your registration number for an instant match"
+          ],
+          "cta": "Get quotes for Renault Renault Hybrid & Plug-in Hybrid (PHEV) Engines engines"
+        },
+        {
+          "title": "Electric Powertrains",
+          "description": "Renault's electric range includes the Zoe, Megane E-Tech Electric, and Scenic E-Tech, using permanent-magnet synchronous motors (up to 220 hp). Electric motors rarely fail, but we connect you with UK specialists for battery module repairs and drive unit replacements.",
+          "descriptor": "Renault's electric range includes the Zoe, Megane E-Tech Electric, and Scenic E-Tech, using permanent-magnet synchronous motors (up to 220 hp). Electric motors rarely fail, but we connect you with UK specialists for battery module repairs and drive unit replacements.",
+          "families": [],
+          "foundIn": [],
+          "knownFor": [],
+          "typicalModels": [],
+          "importantNotes": [
+            "Typical searches: Renault Zoe motor replacement, Renault Megane E-Tech battery repair, Renault electric motor specialist UK, Renault EV drive unit price, Renault EV battery module replacement, Renault electric range degradation, Renault Scenic E-Tech motor failure, Renault electric powertrain repair → Enquire about Renault Electric motor repair or replacement → Not sure which electric Renault you have? Enter your registration number for an instant match"
+          ],
+          "cta": "Get quotes for Renault Renault Electric Powertrains engines"
         }
       ],
-      "closing": "Not sure which fuel type your Renault has? Enter your registration number above to instantly identify your model, engine code, fuel system and compatible replacement options – all backed by a minimum 12‑month unlimited mileage warranty from UK Renault specialists."
+      "closing": "Not sure which fuel type your Renault has? Enter your registration number for an instant match."
     },
     "engineCodeDirectory": {
       "tag": "Engine Codes",

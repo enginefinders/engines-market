@@ -61,6 +61,47 @@ function getMetaIcon(label: string, className = "h-5 w-5") {
   return <AssetIcon src="/icons/variant/dark-green/calendar.png" className={`${className} object-contain`} />;
 }
 
+function SpecDividerRow({
+  items,
+  dark = false,
+}: {
+  items: Array<{ label: string; value: string }>;
+  dark?: boolean;
+}) {
+  return (
+    <div
+      className={`grid gap-0 ${items.length > 3 ? "grid-cols-2 sm:grid-cols-4" : "grid-cols-3"} ${
+        dark ? "text-white" : "text-[#0b2347]"
+      }`}
+    >
+      {items.map((item, index) => (
+        <div
+          key={`${item.label}-${index}`}
+          className={`flex min-w-0 items-center gap-2 px-2 py-2 first:pl-0 last:pr-0 sm:gap-2.5 sm:px-4 lg:px-5 ${
+            index < items.length - 1 ? dark ? "border-r border-white/18" : "border-r border-[#d9e3ee]" : ""
+          }`}
+        >
+          <span
+            className={`flex h-8 w-8 flex-none items-center justify-center rounded-full ${
+              dark ? "bg-[#123765] text-[#8bd35d]" : "bg-[#eef8ef] text-[#16803d]"
+            } sm:h-9 sm:w-9`}
+          >
+            {getMetaIcon(item.label, "h-[17px] w-[17px] sm:h-5 sm:w-5")}
+          </span>
+          <span className="min-w-0 text-left">
+            <span className={`block text-[10px] font-semibold leading-tight ${dark ? "text-white/70" : "text-[#60728a]"}`}>
+              {normalizeCopy(item.label)}
+            </span>
+            <span className={`mt-0.5 block text-[11px] font-extrabold leading-tight sm:text-[12px] ${dark ? "text-white" : "text-[#071d45]"}`}>
+              {normalizeCopy(item.value)}
+            </span>
+          </span>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 function normalizeCopy(text: string) {
   return text
     .replaceAll("Â£", "£")
@@ -138,7 +179,7 @@ export default function VariantHistoryTimelineSection({ data, vehicleImage, mobi
   return (
     <Section className="-mt-[1px] bg-white !py-0">
       <Container className="max-w-[1400px] px-4 sm:px-5 lg:px-0">
-        <div className="relative overflow-hidden bg-[radial-gradient(circle_at_top,#edf4ff_0%,#ffffff_54%,#f7fbff_100%)] py-2 sm:py-3 lg:mx-0 lg:px-0 lg:py-5">
+        <div className="relative overflow-hidden bg-[radial-gradient(circle_at_top,#edf4ff_0%,#ffffff_54%,#f7fbff_100%)] py-2 sm:py-3 lg:mx-0 lg:bg-none lg:bg-white lg:px-0 lg:py-5">
           <div className="grid gap-7 lg:grid-cols-[minmax(0,0.82fr)_minmax(0,1.18fr)] lg:gap-9 xl:gap-10">
             <div className="relative z-10 min-w-0 lg:pr-4">
               <div className="lg:hidden">
@@ -151,28 +192,25 @@ export default function VariantHistoryTimelineSection({ data, vehicleImage, mobi
                   {renderMobileHistoryHeading(normalizedHeading)}
                 </h2>
 
-                <div className="mt-2.5 grid grid-cols-[minmax(0,1fr)_138px] items-start gap-1.5">
-                  <p className="min-w-0 pr-1 text-[12px] leading-[1.62] text-[#243b5a]">
-                    {normalizedIntro}
-                  </p>
+                <p className="mt-2.5 text-[12px] leading-[1.62] text-[#243b5a]">
+                  {normalizedIntro}
+                </p>
 
-                  {mobileVehicleImage ? (
-                    <div className="relative mt-2 overflow-hidden bg-transparent">
-                      <div className="pointer-events-none absolute inset-y-0 -left-[10%] w-[58%] bg-[linear-gradient(90deg,#f7fbff_0%,rgba(247,251,255,0.98)_22%,rgba(247,251,255,0.7)_52%,rgba(247,251,255,0.14)_78%,rgba(247,251,255,0)_100%)]" />
-                      <div className="pointer-events-none absolute inset-y-[8%] right-[-4%] w-[26%] bg-[linear-gradient(270deg,rgba(247,251,255,0.88)_0%,rgba(247,251,255,0.28)_56%,rgba(247,251,255,0)_100%)]" />
-                      <div className="pointer-events-none absolute inset-x-[10%] bottom-[4%] h-7 rounded-full bg-[radial-gradient(circle,rgba(97,116,143,0.18),rgba(97,116,143,0)_72%)] blur-[19px]" />
+                {mobileVehicleImage ? (
+                  <div className="-mx-4 mt-3 overflow-hidden bg-transparent">
+                    <div className="relative">
+                      <div className="pointer-events-none absolute inset-y-0 left-0 w-[38%] bg-[linear-gradient(90deg,#f7fbff_0%,rgba(247,251,255,0.82)_45%,rgba(247,251,255,0)_100%)]" />
                       <Image
                         src={mobileVehicleImage}
                         alt={normalizedHeading}
                         width={1280}
                         height={853}
-                        className="relative z-[1] h-auto w-full translate-x-[3px] translate-y-[10px] scale-[1.06] object-contain object-center"
-                        sizes="138px"
+                        className="relative z-[1] h-auto w-full object-cover object-center"
+                        sizes="100vw"
                       />
-                      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.03)_0%,rgba(255,255,255,0.12)_100%)]" />
                     </div>
-                  ) : null}
-                </div>
+                  </div>
+                ) : null}
               </div>
 
               <div className="hidden sm:gap-4 lg:block">
@@ -193,6 +231,14 @@ export default function VariantHistoryTimelineSection({ data, vehicleImage, mobi
                   </div>
                 </div>
               </div>
+
+              {(normalizedVehicleTitle || normalizedVehicleSubtitle || vehicleMeta.length > 0) ? (
+                <div className="mt-2 bg-transparent lg:hidden">
+                  {normalizedVehicleTitle ? <h3 className="text-[16px] font-extrabold text-[#0b2347]">{normalizedVehicleTitle}</h3> : null}
+                  {normalizedVehicleSubtitle ? <p className="mt-1 text-[12px] leading-[1.45] text-[#314865]">{normalizedVehicleSubtitle}</p> : null}
+                  {vehicleMeta.length ? <div className="mt-2"><SpecDividerRow items={vehicleMeta} /></div> : null}
+                </div>
+              ) : null}
 
               <div className="mt-4 sm:mt-5 lg:mt-6">
                 <div className="flex items-center gap-3 text-[#0f274d]">
@@ -251,29 +297,10 @@ export default function VariantHistoryTimelineSection({ data, vehicleImage, mobi
               </div>
 
               {(normalizedVehicleTitle || normalizedVehicleSubtitle || vehicleMeta.length > 0) ? (
-                <div className="mt-1 overflow-hidden bg-transparent sm:mt-4 lg:hidden">
-                  <div className="py-2 sm:py-3">
-                    {normalizedVehicleTitle ? <h3 className="text-[16px] font-extrabold text-[#0b2347] sm:text-[18px]">{normalizedVehicleTitle}</h3> : null}
-                    {normalizedVehicleSubtitle ? <p className="mt-1 text-[12px] leading-[1.45] text-[#314865] sm:text-[13px]">{normalizedVehicleSubtitle}</p> : null}
-                    {vehicleMeta.length ? (
-                      <div
-                        className="mt-2 grid gap-0 bg-transparent text-[#314865] sm:text-[11px]"
-                        style={{ gridTemplateColumns: `repeat(${vehicleMeta.length}, minmax(0, 1fr))` }}
-                      >
-                        {vehicleMeta.map((item, index) => (
-                          <div
-                            key={`${item.label}-${index}`}
-                            className={`flex min-w-0 items-start gap-1.5 px-2 py-1.5 text-left text-[8.5px] leading-[1.2] text-[#314865] first:pl-0 last:pr-0 sm:px-2.5 sm:text-[10px] ${index < vehicleMeta.length - 1 ? "border-r border-[#d8e1ec]" : ""}`}
-                          >
-                            <span className="flex h-5 w-5 flex-none items-center justify-center rounded-full bg-[#eef8ef] text-[#16803d] sm:h-6 sm:w-6">
-                              {getMetaIcon(item.label, "h-3 w-3 sm:h-3.5 sm:w-3.5")}
-                            </span>
-                            <span className="min-w-0 break-words">{item.value}</span>
-                          </div>
-                        ))}
-                      </div>
-                    ) : null}
-                  </div>
+                <div className="mt-3 hidden bg-white/85 lg:block">
+                  {normalizedVehicleTitle ? <h3 className="text-[20px] font-extrabold text-[#0b2347]">{normalizedVehicleTitle}</h3> : null}
+                  {normalizedVehicleSubtitle ? <p className="mt-1 text-[13px] leading-[1.45] text-[#314865]">{normalizedVehicleSubtitle}</p> : null}
+                  {vehicleMeta.length ? <div className="mt-3"><SpecDividerRow items={vehicleMeta} /></div> : null}
                 </div>
               ) : null}
 
@@ -286,23 +313,8 @@ export default function VariantHistoryTimelineSection({ data, vehicleImage, mobi
                   <span className="h-px flex-1 bg-[#dbe5f2]" />
                 </div>
 
-                <div className="mt-2.5 bg-transparent sm:mt-3">
-                  <div className="grid grid-cols-2 gap-x-3 gap-y-2 sm:grid-cols-4 sm:gap-x-4">
-                  {specs.map((spec, index) => (
-                    <div
-                      key={`${spec.label}-${index}`}
-                        className="flex min-w-0 items-center gap-2 border-r border-[#dfe8f2] pr-2 last:border-r-0 sm:gap-2.5 sm:pr-3"
-                    >
-                        <div className="flex h-8 w-8 flex-none items-center justify-center rounded-full bg-[#eef8ef] text-[#16803d] sm:h-9 sm:w-9 lg:h-10 lg:w-10">
-                          {getMetaIcon(spec.label, "h-[18px] w-[18px] sm:h-5 sm:w-5 lg:h-6 lg:w-6")}
-                        </div>
-                        <p className="min-w-0 text-left text-[9px] leading-[1.22] text-[#173153] sm:text-[9.5px] lg:text-[10px]">
-                          <span className="block font-bold">{normalizeCopy(spec.label)}</span>
-                          <span className="mt-0.5 block text-[#314865]">{normalizeCopy(spec.value)}</span>
-                        </p>
-                      </div>
-                  ))}
-                  </div>
+                <div className="mt-2.5 rounded-[10px] bg-[#071d45] p-3 shadow-[0_14px_28px_rgba(8,31,71,0.14)] sm:mt-3 sm:p-4">
+                  <SpecDividerRow items={specs} dark />
                 </div>
 
                 {normalizedClosingNote ? (

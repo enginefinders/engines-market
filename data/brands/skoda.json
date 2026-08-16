@@ -884,256 +884,136 @@
       ]
     },
     "engineCodes": {
-      "tag": "Replacement Cost",
-      "h2": "Skoda Engine Codes & Average Rebuilt Prices (UK Supply)",
-      "h3": "Compare costs for every major Skoda engine — EA211, EA288 and EA888 series. All prices are typical UK market ranges for professionally rebuilt engines with warranty. Click \"Get Quote\" on any engine code to receive tailored prices from our network of UK Skoda specialists.",
+      "tag": "Engine Codes",
+      "h2": "Skoda Engine Codes - Most Replaced Engines & Full Directory",
+      "h3": "Every major Skoda engine code with technical specs, compatible UK models, known failures and average rebuilt prices. Use the quick-reference accordion below for all remaining codes.",
+      "closingLine": "Can't find your engine code? Enter your registration number above - we'll identify the exact Skoda engine fitted to your vehicle.",
       "filters": [
-        "All",
-        "Diesel",
-        "Petrol"
+        "Diesel Engines (Most Replaced in the UK)",
+        "Petrol Engines (Most Replaced in the UK)"
       ],
       "groups": [
         {
-          "name": "EA211 Petrol Family",
-          "era": "2012–Present",
-          "failureNote": "EA211 1.0 TSI and 1.2 TSI engines are known for early timing chain stretch and tensioner failure — particularly on 2012–2016 units. Our rebuilt EA211 engines include revised timing chain kits and upgraded tensioners. Carbon buildup on intake valves is also common due to direct injection; rebuilt units are fully decarbonised before assembly.",
+          "name": "Diesel Engines (Most Replaced in the UK)",
+          "era": "Extracted from Skoda diesel engines (most replaced in the uk) technical replacement data.",
+          "failureNote": "EGR cooler failure - known for common issues with the EGR cooler system, DPF clogging - incomplete regeneration from frequent short trips can cause reduced power and limp mode",
           "engines": [
             {
-              "code": "CHZB",
-              "fuel": "Petrol",
-              "size": "1.0 TSI",
-              "power": "95-115 hp",
-              "compatibleModels": "Fabia (NJ), Octavia (5E), Kamiq",
-              "avgRebuiltPrice": "£1,500 – £2,800",
-              "cta": "Get Quote for CHZB"
-            },
-            {
-              "code": "DTSB",
-              "fuel": "Petrol",
-              "size": "1.0 TSI",
-              "power": "95-110 hp",
-              "compatibleModels": "Fabia (NJ), Scala, Kamiq",
-              "avgRebuiltPrice": "£1,500 – £2,700",
-              "cta": "Get Quote for DTSB"
-            },
-            {
-              "code": "CBZA",
-              "fuel": "Petrol",
-              "size": "1.2 TSI",
-              "power": "85-105 hp",
-              "compatibleModels": "Fabia (NJ), Rapid (NH), Yeti (5L), Octavia (5E)",
-              "avgRebuiltPrice": "£1,200 – £2,500",
-              "cta": "Get Quote for CBZA"
-            },
-            {
-              "code": "CHYB",
-              "fuel": "Petrol",
-              "size": "1.2 TSI",
-              "power": "90-110 hp",
-              "compatibleModels": "Fabia (NJ), Rapid (NH), Octavia (5E)",
-              "avgRebuiltPrice": "£1,300 – £2,600",
-              "cta": "Get Quote for CHYB"
-            },
-            {
-              "code": "DJSA",
-              "fuel": "Petrol",
-              "size": "1.2 TSI",
-              "power": "90-110 hp",
-              "compatibleModels": "Octavia (5E), Rapid (NH)",
-              "avgRebuiltPrice": "£1,300 – £2,600",
-              "cta": "Get Quote for DJSA"
-            },
-            {
-              "code": "CRMB",
-              "fuel": "Petrol",
-              "size": "1.6 MPI",
-              "power": "105 hp",
-              "compatibleModels": "Fabia (NJ), Rapid (NH), Octavia (5E)",
-              "avgRebuiltPrice": "£1,000 – £2,000",
-              "cta": "Get Quote for CRMB"
-            }
-          ]
-        },
-        {
-          "name": "EA288 Diesel Family",
-          "era": "2012–Present",
-          "failureNote": "EA288 1.6 and 2.0 TDI engines suffer from DPF regeneration failures (short trips), EGR cooler leaks, and clogged intake manifolds. Our rebuilt EA288 engines include professionally cleaned DPF/EGR systems or replacement units, tested injectors, and new timing belts.",
-          "engines": [
-            {
-              "code": "BNM",
+              "code": "CNHA",
+              "title": "2.0L Diesel (TDI)",
+              "familyHeading": "CNHA - 2.0L Diesel (TDI)",
               "fuel": "Diesel",
-              "size": "1.4 TDI",
-              "power": "75-90 hp",
-              "compatibleModels": "Fabia (NJ), Rapid (NH), Roomster (5J)",
-              "avgRebuiltPrice": "£1,500 – £2,800",
-              "cta": "Get Quote for BNM"
+              "size": "2.0 Litre",
+              "power": "150 hp (110 kW)",
+              "compatibleModels": "Octavia III (5E) 2.0 TDI, Superb III (3V) 2.0 TDI",
+              "avgRebuiltPrice": "£3,195 - £3,997 supply only",
+              "cta": "→ Get quotes for CNHA Skoda engine replacement"
             },
             {
-              "code": "CLCA",
+              "code": "CRBC",
+              "title": "2.0L Diesel (TDI)",
+              "familyHeading": "CRBC - 2.0L Diesel (TDI)",
               "fuel": "Diesel",
-              "size": "1.6 TDI",
-              "power": "90-105 hp",
-              "compatibleModels": "Octavia (5E), Fabia (NJ), Rapid (NH), Yeti (5L)",
-              "avgRebuiltPrice": "£1,800 – £3,500",
-              "cta": "Get Quote for CLCA"
+              "size": "2.0 Litre",
+              "power": "150 hp",
+              "compatibleModels": "Octavia III (5E) 2.0 TDI, Superb III (3V) 2.0 TDI",
+              "avgRebuiltPrice": "£3,195 - £3,997 supply only",
+              "cta": "→ Get quotes for CRBC Skoda engine replacement"
             },
             {
-              "code": "DBKA",
+              "code": "CRLB",
+              "title": "2.0L Diesel (TDI)",
+              "familyHeading": "CRLB - 2.0L Diesel (TDI)",
               "fuel": "Diesel",
-              "size": "1.6 TDI",
-              "power": "90-115 hp",
-              "compatibleModels": "Octavia (5E), Fabia (NJ), Karoq (NU), Kodiaq (NS)",
-              "avgRebuiltPrice": "£1,800 – £3,500",
-              "cta": "Get Quote for DBKA"
-            },
-            {
-              "code": "CRVA",
-              "fuel": "Diesel",
-              "size": "1.6 TDI",
-              "power": "115 hp",
-              "compatibleModels": "Karoq (NU), Kodiaq (NS)",
-              "avgRebuiltPrice": "£1,900 – £3,600",
-              "cta": "Get Quote for CRVA"
-            },
-            {
-              "code": "CFHA",
-              "fuel": "Diesel",
-              "size": "2.0 TDI",
-              "power": "170 hp",
-              "compatibleModels": "Octavia (5E), Superb (3T), Yeti (5L)",
-              "avgRebuiltPrice": "£2,200 – £4,200",
-              "cta": "Get Quote for CFHA"
+              "size": "2.0 Litre",
+              "power": "150 hp",
+              "compatibleModels": "Superb III (3V) 2.0 TDI, Octavia III (5E) 2.0 TDI",
+              "avgRebuiltPrice": "£2,000 supply only",
+              "cta": "→ Get quotes for CRLB Skoda engine replacement"
             },
             {
               "code": "CRVC",
+              "title": "2.0L Diesel (TDI)",
+              "familyHeading": "CRVC - 2.0L Diesel (TDI)",
               "fuel": "Diesel",
-              "size": "2.0 TDI",
+              "size": "2.0 Litre",
               "power": "150 hp",
-              "compatibleModels": "Octavia (5E), Superb (3V), Kodiaq (NS), Karoq (NU)",
-              "avgRebuiltPrice": "£2,200 – £4,500",
-              "cta": "Get Quote for CRVC"
-            },
-            {
-              "code": "CUNA",
-              "fuel": "Diesel",
-              "size": "2.0 TDI",
-              "power": "150 hp",
-              "compatibleModels": "Superb (3V), Kodiaq (NS)",
-              "avgRebuiltPrice": "£2,300 – £4,500",
-              "cta": "Get Quote for CUNA"
-            },
-            {
-              "code": "CWZA",
-              "fuel": "Diesel",
-              "size": "2.0 TDI",
-              "power": "190 hp",
-              "compatibleModels": "Kodiaq (NS), Superb (3V)",
-              "avgRebuiltPrice": "£2,500 – £5,000",
-              "cta": "Get Quote for CWZA"
+              "compatibleModels": "Octavia III (5E) 2.0 TDI, Superb III (3V) 2.0 TDI",
+              "avgRebuiltPrice": "£3,195 - £3,997 supply only",
+              "cta": "→ Get quotes for CRVC Skoda engine replacement"
             }
           ]
         },
         {
-          "name": "EA888 Petrol Family",
-          "era": "2008–Present",
-          "failureNote": "EA888 Gen1 and Gen2 engines (1.8/2.0 TFSI) are notorious for timing chain tensioner failure and oil pump drive degradation. Gen3 units (CRTD, CHHA) improved reliability but still suffer from carbon buildup and water pump leaks. Our rebuilt EA888 units include revised chain tensioners, upgraded oil pump drives (where applicable), and fully cleaned intake valves.",
+          "name": "Petrol Engines (Most Replaced in the UK)",
+          "era": "Extracted from Skoda petrol engines (most replaced in the uk) technical replacement data.",
+          "failureNote": "Timing chain stretch - timing chain stretch occurs, typically after 100,000-120,000 km, Oil pressure drop - caused by bearing shell wear, poor quality oil, or oil pump failure",
           "engines": [
             {
-              "code": "CCZA",
+              "code": "CHHB",
+              "title": "2.0L Petrol (TSI)",
+              "familyHeading": "CHHB - 2.0L Petrol (TSI)",
               "fuel": "Petrol",
-              "size": "1.8 TFSI",
-              "power": "160 hp",
-              "compatibleModels": "Octavia (1Z), Superb (3T), Yeti (5L)",
-              "avgRebuiltPrice": "£1,800 – £3,500",
-              "cta": "Get Quote for CCZA"
+              "size": "2.0 Litre",
+              "power": "220 hp (162 kW)",
+              "compatibleModels": "Octavia III (5E) RS, Octavia III (5E) RS 230/245",
+              "avgRebuiltPrice": "£2,800 - £4,000+ supply only",
+              "cta": "→ Get quotes for CHHB Skoda engine replacement"
             },
             {
-              "code": "CRGC",
+              "code": "CJEB",
+              "title": "1.8L Petrol (TSI)",
+              "familyHeading": "CJEB - 1.8L Petrol (TSI)",
               "fuel": "Petrol",
-              "size": "1.8 TSI",
-              "power": "180 hp",
-              "compatibleModels": "Octavia (5E), Superb (3V)",
-              "avgRebuiltPrice": "£1,900 – £3,600",
-              "cta": "Get Quote for CRGC"
+              "size": "1.8 Litre",
+              "power": "170 hp (125 kW)",
+              "compatibleModels": "Octavia III (5E) 1.8 TSI, Superb III (3V) 1.8 TSI",
+              "avgRebuiltPrice": "£2,410 - £2,800 supply only",
+              "cta": "→ Get quotes for CJEB Skoda engine replacement"
             },
             {
-              "code": "CHHA",
+              "code": "CWVA",
+              "title": "1.6L Petrol (MPI)",
+              "familyHeading": "CWVA - 1.6L Petrol (MPI)",
               "fuel": "Petrol",
-              "size": "2.0 TSI",
-              "power": "190 hp",
-              "compatibleModels": "Octavia (5E), Superb (3V), Kodiaq (NS), Karoq (NU)",
-              "avgRebuiltPrice": "£2,200 – £4,500",
-              "cta": "Get Quote for CHHA"
+              "size": "1.6 Litre",
+              "power": "110 hp (81 kW)",
+              "compatibleModels": "Octavia III (5E) 1.6 MPI, Yeti (5L) 1.6 MPI",
+              "avgRebuiltPrice": "£1,800 - £2,500 supply only",
+              "cta": "→ Get quotes for CWVA Skoda engine replacement"
             },
             {
-              "code": "CRTD",
+              "code": "CZDA",
+              "title": "1.4L Petrol (TSI ACT)",
+              "familyHeading": "CZDA - 1.4L Petrol (TSI ACT)",
               "fuel": "Petrol",
-              "size": "2.0 TFSI",
-              "power": "220-230 hp",
-              "compatibleModels": "Octavia vRS (5E), Superb (3V)",
-              "avgRebuiltPrice": "£2,500 – £5,000",
-              "cta": "Get Quote for CRTD"
+              "size": "1.4 Litre",
+              "power": "150 hp (110 kW)",
+              "compatibleModels": "Octavia III (5E) 1.4 TSI ACT, Superb III (3V) 1.4 TSI ACT",
+              "avgRebuiltPrice": "£2,500 - £3,500 supply only",
+              "cta": "→ Get quotes for CZDA Skoda engine replacement"
             },
             {
-              "code": "DNUB",
+              "code": "DADA",
+              "title": "1.5L Petrol (TSI Evo)",
+              "familyHeading": "DADA - 1.5L Petrol (TSI Evo)",
               "fuel": "Petrol",
-              "size": "2.0 TSI",
-              "power": "190 hp",
-              "compatibleModels": "Octavia (5E), Kodiaq (NS)",
-              "avgRebuiltPrice": "£2,300 – £4,600",
-              "cta": "Get Quote for DNUB"
-            }
-          ]
-        },
-        {
-          "name": "Legacy MPI & Older TDI",
-          "era": "1996–2012",
-          "failureNote": "1.9 TDI engines (PD unit injector) are robust but suffer from injector loom failure, camshaft wear (on BRM/BLS variants), and turbo actuator issues. MPI petrol engines are generally reliable but age-related wear (head gaskets, piston rings) drives replacements on high-mileage units",
-          "engines": [
+              "size": "1.5 Litre",
+              "power": "150 hp",
+              "compatibleModels": "Octavia III (5E) 1.5 TSI, Karoq (NU) 1.5 TSI, Kodiaq (NS) 1.5 TSI",
+              "avgRebuiltPrice": "£2,500 - £3,500 supply only",
+              "cta": "→ Get quotes for DADA Skoda engine replacement"
+            },
             {
-              "code": "AZQ",
+              "code": "DAZA",
+              "title": "2.5L Petrol (TFSI)",
+              "familyHeading": "DAZA - 2.5L Petrol (TFSI)",
               "fuel": "Petrol",
-              "size": "1.2 HTP",
-              "power": "54-69 hp",
-              "compatibleModels": "Fabia (5J), Roomster (5J)",
-              "avgRebuiltPrice": "£500 – £1,200",
-              "cta": "Get Quote for AZQ"
-            },
-            {
-              "code": "BME",
-              "fuel": "Petrol",
-              "size": "1.4 MPI",
-              "power": "75-86 hp",
-              "compatibleModels": "Fabia (5J), Roomster (5J)",
-              "avgRebuiltPrice": "£600 – £1,400",
-              "cta": "Get Quote for BME"
-            },
-            {
-              "code": "BUD",
-              "fuel": "Diesel",
-              "size": "1.9 TDI",
-              "power": "105 hp",
-              "compatibleModels": "Octavia (1Z), Fabia (5J), Roomster (5J)",
-              "avgRebuiltPrice": "£1,200 – £2,200",
-              "cta": "Get Quote for BUD"
-            },
-            {
-              "code": "ASZ",
-              "fuel": "Diesel",
-              "size": "1.9 TDI",
-              "power": "130 hp",
-              "compatibleModels": "Octavia vRS (1U), Fabia vRS (6Y)",
-              "avgRebuiltPrice": "£1,300 – £2,500",
-              "cta": "Get Quote for ASZ"
-            },
-            {
-              "code": "BLT",
-              "fuel": "Diesel",
-              "size": "1.9 TDI",
-              "power": "105 hp",
-              "compatibleModels": "Octavia (1Z), Fabia (5J)",
-              "avgRebuiltPrice": "£1,200 – £2,300",
-              "cta": "Get Quote for BLT"
+              "size": "2.5 Litre",
+              "power": "367-400 hp",
+              "compatibleModels": "Not directly fitted to Skoda models; included for reference as a VW Group performance engine",
+              "avgRebuiltPrice": "£4,000 - £7,000+ supply only",
+              "cta": "→ Get quotes for DAZA Skoda engine replacement"
             }
           ]
         }

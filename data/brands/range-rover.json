@@ -1108,187 +1108,141 @@
       ]
     },
     "engineCodes": {
-      "tag": "Replacement Cost",
-      "h2": "Range Rover Engine Codes & Average Rebuilt Prices (UK Supply)",
-      "h3": "Compare costs for every major Range Rover engine — Ingenium diesel, TDV6/SDV6, and V8 petrol. All prices are typical UK market ranges for professionally rebuilt engines with warranty. Click &quot;Get Quote&quot; on any engine to receive tailored prices from our network of UK Range Rover specialists.",
+      "tag": "Engine Codes",
+      "h2": "Range Rover Engine Codes - Most Replaced Engines & Full Directory",
+      "h3": "Every major Range Rover engine code with technical specs, compatible UK models, known failures and average rebuilt prices. Use the quick-reference accordion below for all remaining codes.",
+      "closingLine": "Can't find your engine code? Enter your registration number above - we'll identify the exact Range Rover engine fitted to your vehicle.",
       "filters": [
-        "All",
-        "Diesel",
-        "Petrol"
+        "Diesel Engines (Most Replaced in the UK)",
+        "Petrol Engines (Most Replaced in the UK)",
+        "Hybrid / Electrified Engines",
+        "Petrol Engines (Continued - V8 Family)"
       ],
       "groups": [
         {
-          "name": "Ingenium Four-Cylinder Diesel",
-          "era": "2015–Present",
-          "failureNote": "Get Quote: Common failure points: Ingenium 2.0 diesel engines are known for timing chain stretch/failure and oil dilution caused by incomplete DPF regenerations . Our rebuilt units include upgraded timing chain kits, revised oil pumps, and thoroughly cleaned DPF systems.",
+          "name": "Diesel Engines (Most Replaced in the UK)",
+          "era": "Extracted from Range Rover diesel engines (most replaced in the uk) technical replacement data.",
+          "failureNote": "Catastrophic crankshaft bearing failure - the crankshaft bearings can fail prematurely due to a design flaw where cylinders #4 and #5 suffer from inadequate oiling; symptoms include sudden severe knocking from the bottom end, metallic debris in oil, and engine seizure, Timing chain tensioner failure - leading to rattling on start-up and potential valve/piston contact",
           "engines": [
             {
-              "code": "204DTD",
+              "code": "306DT (TDV6)",
+              "title": "3.0L Diesel",
+              "familyHeading": "306DT (TDV6) - 3.0L Diesel",
               "fuel": "Diesel",
-              "size": "2.0L",
-              "power": "150–180 HP",
-              "compatibleModels": "Evoque, Velar, Discovery Sport",
-              "avgRebuiltPrice": "£5,200 – £8,500",
-              "cta": "Get Quote for 204DTD"
+              "size": "3.0 Litre",
+              "power": "211-256 hp",
+              "compatibleModels": "Range Rover (L405) TDV6, Range Rover Sport (L494) TDV6/SDV6",
+              "avgRebuiltPrice": "£3,400 - £5,500 supply only",
+              "cta": "→ Get quotes for 306DT Range Rover engine replacement"
             },
             {
-              "code": "204DTA",
+              "code": "306DT (SDV6)",
+              "title": "3.0L Diesel",
+              "familyHeading": "306DT (SDV6) - 3.0L Diesel",
               "fuel": "Diesel",
-              "size": "2.0L",
-              "power": "240 HP (SD4/D240)",
-              "compatibleModels": "Evoque (2017–2020), Velar (2017+), Sport (2016+)",
-              "avgRebuiltPrice": "£5,200 – £9,500",
-              "cta": "Get Quote for 204DTA"
+              "size": "3.0 Litre",
+              "power": "255-306 hp",
+              "compatibleModels": "Range Rover (L405) SDV6, Range Rover Sport (L494) SDV6",
+              "avgRebuiltPrice": "£4,000 - £6,500 supply only",
+              "cta": "→ Get quotes for 306DT SDV6 Range Rover engine replacement"
+            },
+            {
+              "code": "368DT (TDV8)",
+              "title": "3.6L Diesel",
+              "familyHeading": "368DT (TDV8) - 3.6L Diesel",
+              "fuel": "Diesel",
+              "size": "3.6 Litre",
+              "power": "272 hp",
+              "compatibleModels": "Range Rover (L322) TDV8, Range Rover Sport (L320) TDV8",
+              "avgRebuiltPrice": "£4,500 - £7,000 supply only",
+              "cta": "→ Get quotes for 368DT Range Rover engine replacement"
+            },
+            {
+              "code": "448DT (TDV8)",
+              "title": "4.4L Diesel",
+              "familyHeading": "448DT (TDV8) - 4.4L Diesel",
+              "fuel": "Diesel",
+              "size": "4.4 Litre",
+              "power": "313-339 hp",
+              "compatibleModels": "Range Rover (L322) TDV8",
+              "avgRebuiltPrice": "£5,000 - £8,000 supply only",
+              "cta": "→ Get quotes for 448DT Range Rover engine replacement"
+            },
+            {
+              "code": "204DTM (Ingenium 2.0)",
+              "title": "2.0L Diesel",
+              "familyHeading": "204DTM (Ingenium 2.0) - 2.0L Diesel",
+              "fuel": "Diesel",
+              "size": "2.0 Litre",
+              "power": "150-240 hp",
+              "compatibleModels": "Range Rover Evoque (L538/L551), Range Rover Velar (L560)",
+              "avgRebuiltPrice": "£4,000 - £6,500 supply only",
+              "cta": "→ Get quotes for 204DTM Range Rover engine replacement"
             }
           ]
         },
         {
-          "name": "TDV6 / SDV6 V6 Diesel",
-          "era": "2005–2018",
-          "failureNote": "Get Quote: Common failure points: TDV6/SDV6 engines are notorious for catastrophic crankshaft failure due to narrow bearing design . Our rebuilt units include uprated bearings, revised oil pumps, and tested turbo actuator assemblies.",
+          "name": "Petrol Engines (Most Replaced in the UK)",
+          "era": "Extracted from Range Rover petrol engines (most replaced in the uk) technical replacement data.",
+          "failureNote": "Cooling system pipe failure - plastic coolant pipes can become brittle and leak, leading to overheating, Timing chain tensioner wear - can cause rattling on start-up and potential valve/piston contact",
           "engines": [
-            {
-              "code": "276DT",
-              "fuel": "Diesel",
-              "size": "2.7L",
-              "power": "190 HP",
-              "compatibleModels": "Sport (L320, 2005–2009), Discovery 3",
-              "avgRebuiltPrice": "£2,500 – £4,000",
-              "cta": "Get Quote for 276DT"
-            },
-            {
-              "code": "306DT",
-              "fuel": "Diesel",
-              "size": "3.0L",
-              "power": "211–245 HP",
-              "compatibleModels": "Sport (L320, 2009–2013), L322 (2009–2012)",
-              "avgRebuiltPrice": "£2,800 – £4,500",
-              "cta": "Get Quote for 306DT"
-            },
-            {
-              "code": "306DTX",
-              "fuel": "Diesel",
-              "size": "3.0L",
-              "power": "275–306 HP",
-              "compatibleModels": "L405, L494, Discovery 4/5, Velar",
-              "avgRebuiltPrice": "£3,500 – £5,500",
-              "cta": "Get Quote for 306DTX"
-            }
-          ]
-        },
-        {
-          "name": "V6 Petrol",
-          "era": "2014–Present",
-          "failureNote": "Get Quote: Common failure points: The 3.0 V6 supercharged petrol engine suffers from timing chain tensioner wear and supercharger coupler degradation. Our rebuilt units include reinforced tensioners and revised supercharger components.",
-          "engines": [
-            {
-              "code": "306PS",
-              "fuel": "Petrol",
-              "size": "3.0L",
-              "power": "340–400 HP",
-              "compatibleModels": "L405, L494 (Supercharged/P400)",
-              "avgRebuiltPrice": "£4,500 – £6,500",
-              "cta": "Get Quote for 306PS"
-            }
-          ]
-        },
-        {
-          "name": "V8 Petrol",
-          "era": "2002–Present",
-          "failureNote": "Get Quote: Common failure points: 5.0 V8 supercharged engines suffer from timing chain tensioner failure and water pump leaks. Our rebuilt units include reinforced tensioners, revised oil pumps, and upgraded supercharger couplers.",
-          "engines": [
-            {
-              "code": "448PN",
-              "fuel": "Petrol",
-              "size": "4.4L",
-              "power": "282–305 HP",
-              "compatibleModels": "L322 (2002–2009)",
-              "avgRebuiltPrice": "£3,000 – £4,500",
-              "cta": "Get Quote for 448PN"
-            },
-            {
-              "code": "508PN",
-              "fuel": "Petrol",
-              "size": "5.0L",
-              "power": "375–525 HP",
-              "compatibleModels": "L322, L405, L494, Sport",
-              "avgRebuiltPrice": "£5,500 – £8,500",
-              "cta": "Get Quote for 508PN"
-            },
             {
               "code": "AJ133",
+              "title": "5.0L Petrol (Supercharged V8)",
+              "familyHeading": "AJ133 - 5.0L Petrol (Supercharged V8)",
               "fuel": "Petrol",
-              "size": "5.0L",
-              "power": "550–575 HP",
-              "compatibleModels": "Sport SVR, Autobiography",
-              "avgRebuiltPrice": "£7,000 – £12,000",
-              "cta": "Get Quote for AJ133"
-            }
-          ]
-        },
-        {
-          "name": "TDV8 / SDV8 V8 Diesel",
-          "era": "2006–Present",
-          "failureNote": "Get Quote: Common failure points: TDV8 and SDV8 engines are known for crankshaft fracture, timing chain tensioner wear, and turbo actuator faults. Our rebuilt units address all known weaknesses with upgraded bearings and revised turbo components.",
-          "engines": [
-            {
-              "code": "368DT",
-              "fuel": "Diesel",
-              "size": "3.6L",
-              "power": "272 HP",
-              "compatibleModels": "L322 (2006–2010)",
-              "avgRebuiltPrice": "£4,500 – £6,500",
-              "cta": "Get Quote for 368DT"
+              "size": "5.0 Litre",
+              "power": "510-550 hp",
+              "compatibleModels": "Range Rover (L405) 5.0 SC V8, Range Rover Sport (L494) 5.0 SC V8, Range Rover Sport SVR",
+              "avgRebuiltPrice": "£6,000 - £10,000 supply only",
+              "cta": "→ Get quotes for AJ133 Range Rover engine replacement"
             },
             {
-              "code": "448DT",
-              "fuel": "Diesel",
-              "size": "4.4L",
-              "power": "313–339 HP",
-              "compatibleModels": "L405, L494 (SDV8)",
-              "avgRebuiltPrice": "£5,500 – £8,000",
-              "cta": "Get Quote for 448DT"
-            }
-          ]
-        },
-        {
-          "name": "Hybrid / PHEV",
-          "era": "2018–Present",
-          "failureNote": "Get Quote: Common failure points: P400e hybrid systems combine 2.0 Ingenium petrol engine with electric motor. Failures include timing chain issues and hybrid system faults. Specialist hybrid diagnosis required — our network includes qualified hybrid technicians.",
-          "engines": [
-            {
-              "code": "P400e / PT204",
-              "fuel": "Hybrid",
-              "size": "2.0L + Electric",
-              "power": "398–404 HP",
-              "compatibleModels": "L405, L494, L460, Velar",
-              "avgRebuiltPrice": "£4,500 – £7,000",
-              "cta": "Get Quote for P400e / PT204"
-            }
-          ]
-        },
-        {
-          "name": "Classic / BMW-Sourced Engines",
-          "era": "1994–2006",
-          "failureNote": "Get Quote: Common failure points: P38-era Rover V8 engines suffer from cylinder liner slippage and cooling system issues. Our rebuilt units include liner fixes and upgraded gaskets",
-          "engines": [
-            {
-              "code": "4.6 Rover V8",
+              "code": "AJ126",
+              "title": "3.0L Petrol (Supercharged V6)",
+              "familyHeading": "AJ126 - 3.0L Petrol (Supercharged V6)",
               "fuel": "Petrol",
-              "size": "4.6L",
-              "power": "225 HP",
-              "compatibleModels": "P38 (1994–2002)",
-              "avgRebuiltPrice": "£3,000 – £5,000",
-              "cta": "Get Quote for 4.6 Rover V8"
-            },
+              "size": "3.0 Litre",
+              "power": "340-380 hp",
+              "compatibleModels": "Range Rover (L405) 3.0 SC V6, Range Rover Sport (L494) 3.0 SC V6",
+              "avgRebuiltPrice": "£4,500 - £7,500 supply only",
+              "cta": "→ Get quotes for AJ126 Range Rover engine replacement"
+            }
+          ]
+        },
+        {
+          "name": "Hybrid / Electrified Engines",
+          "era": "Extracted from Range Rover hybrid / electrified engines technical replacement data.",
+          "failureNote": "Hybrid system faults, Battery degradation",
+          "engines": [
             {
-              "code": "M51 D25 (306D1)",
-              "fuel": "Diesel",
-              "size": "2.5L",
-              "power": "136 HP",
-              "compatibleModels": "P38 (1996–2002)",
-              "avgRebuiltPrice": "£1,500 – £3,000",
-              "cta": "Get Quote for M51 D25 (306D1)"
+              "code": "P400e",
+              "title": "2.0L Petrol (PHEV)",
+              "familyHeading": "P400e - 2.0L Petrol (PHEV)",
+              "fuel": "PHEV (Petrol + Electric)",
+              "size": "2.0 Litre",
+              "power": "398 hp (combined)",
+              "compatibleModels": "Range Rover (L405) P400e, Range Rover Sport (L494) P400e",
+              "avgRebuiltPrice": "£4,000 - £6,500 (engine block, supply only)",
+              "cta": "→ Get quotes for P400e Range Rover engine replacement"
+            }
+          ]
+        },
+        {
+          "name": "Petrol Engines (Continued - V8 Family)",
+          "era": "Extracted from Range Rover petrol engines (continued - v8 family) technical replacement data.",
+          "failureNote": "Cooling system pipe failure, Timing chain tensioner wear",
+          "engines": [
+            {
+              "code": "M156",
+              "title": "5.0L Petrol (Supercharged V8)",
+              "familyHeading": "M156 - 5.0L Petrol (Supercharged V8)",
+              "fuel": "Petrol",
+              "size": "5.0 Litre",
+              "power": "510-550 hp",
+              "compatibleModels": "Range Rover Sport (L494) 5.0 SC V8, Range Rover Sport SVR",
+              "avgRebuiltPrice": "£6,000 - £10,000 supply only",
+              "cta": "→ Get quotes for M156 Range Rover engine replacement"
             }
           ]
         }
@@ -1826,105 +1780,81 @@
       "closing": "Not sure which engine size your Range Rover needs? Enter your registration number and we'll match you to the exact engine code and displacement — instantly. All engines supplied with a minimum 12‑month warranty from UK Range Rover specialists."
     },
     "fuelTypes": {
-      "tag": "Complete Range Rover Engines List",
-      "h2": "Range Rover Engines by Fuel Type",
-      "intro": "Choose your Range Rover engine by fuel type to compare realistic replacement prices, known brand‑wide issues, and UK specialist supply – from the most popular diesel workhorses to the latest electrified powertrains.",
+      "tag": "Range Rover Engines by Fuel Type",
+      "h2": "Range Rover Diesel vs Petrol vs Hybrid - Which Fuel Type Is Right For You?",
+      "intro": "Compare Range Rover engine fuel types by replacement costs, running costs, reliability reputation, and model availability. Use this guide to understand your options - then enter your registration for an instant match and quotes from UK Range Rover specialists.",
       "items": [
         {
-          "title": "Range Rover Diesel Engines",
-          "description": "Range Rover diesel engines cover many of the brand's highest-mileage UK models. Replacement demand is usually driven by timing system wear, injector and turbo faults, plus EGR or DPF-related damage once repeat short-journey use starts affecting reliability.",
-          "descriptor": "High-mileage motorway and SUV applications",
+          "title": "Diesel Engines",
+          "description": "Range Rover's diesel engine range in the UK is dominated by the 3.0-litre TDV6/SDV6 (306DT) and the 2.0-litre Ingenium (204DTM). Replacement demand is driven by catastrophic crankshaft bearing failure (TDV6/SDV6) and timing chain failure (Ingenium) on these premium SUVs.",
+          "descriptor": "Range Rover's diesel engine range in the UK is dominated by the 3.0-litre TDV6/SDV6 (306DT) and the 2.0-litre Ingenium (204DTM). Replacement demand is driven by catastrophic crankshaft bearing failure (TDV6/SDV6) and timing chain failure (Ingenium) on these premium SUVs.",
           "families": [
-            "Ingenium Four-Cylinder Diesel",
-            "TDV6 / SDV6 V6 Diesel",
-            "TDV8 / SDV8 V8 Diesel",
-            "Classic / BMW-Sourced Engines"
+            "£3,400 - £8,000+ (supply only)",
+            "2.0 Ingenium (204DTM): £4,000 - £6,500",
+            "3.0 TDV6/SDV6 (306DT): £3,400 - £5,500",
+            "3.6 TDV8 (368DT): £4,500 - £7,000",
+            "4.4 TDV8 (448DT): £5,000 - £8,000"
           ],
-          "foundIn": [
-            "Range Rover Evoque Engines",
-            "Range Rover Mainline Engines",
-            "Range Rover Sport Engines",
-            "Range Rover Velar Engines"
-          ],
-          "knownFor": [
-            "Timing chain stretch",
-            "oil dilution",
-            "DPF regeneration issues",
-            "high-pressure fuel pump failure"
-          ],
-          "typicalModels": [
-            "Range Rover Evoque Engines",
-            "Range Rover Mainline Engines",
-            "Range Rover Sport Engines",
-            "Range Rover Velar Engines"
-          ],
-          "importantNotes": [
-            "Short-journey use increases DPF, EGR, and oil-dilution risk on many diesel engines.",
-            "A documented service history matters more on diesel replacements because injector, turbo, and timing faults often build gradually."
-          ],
-          "cta": "Compare Range Rover diesel engine prices"
-        },
-        {
-          "title": "Range Rover Petrol Engines",
-          "description": "Range Rover petrol engines span everything from core daily-driver models to higher-output performance variants. Most replacement enquiries start with timing chain noise, oil consumption, cooling-system failure, or internal wear that makes a warranted replacement more sensible than repeated repairs.",
-          "descriptor": "Core passenger-car and performance applications",
-          "families": [
-            "V6 Petrol",
-            "V8 Petrol",
-            "Classic / BMW-Sourced Engines"
-          ],
-          "foundIn": [
-            "Range Rover Evoque Engines",
-            "Range Rover Mainline Engines",
-            "Range Rover Sport Engines",
-            "Range Rover Velar Engines"
-          ],
-          "knownFor": [
-            "High-pressure fuel pump failure",
-            "timing chain stretch",
-            "piston ring carbon buildup",
-            "Timing chain tensioner wear (supercharged V6)"
-          ],
-          "typicalModels": [
-            "Range Rover Evoque Engines",
-            "Range Rover Mainline Engines",
-            "Range Rover Sport Engines",
-            "Range Rover Velar Engines"
-          ],
-          "importantNotes": [
-            "Cold-start rattles, overheating history, and oil use are the biggest warning signs before a petrol engine replacement becomes necessary.",
-            "Direct-injection petrol engines often need specialist attention for carbon build-up alongside the main mechanical repair."
-          ],
-          "cta": "Compare Range Rover petrol engine prices"
-        },
-        {
-          "title": "Range Rover Hybrid Engines",
-          "description": "Range Rover hybrid powertrains combine combustion engines with electric assistance across newer electrified models. Replacement demand is lower than traditional petrol or diesel units, but generator-engine faults, inverter issues, cooling-system failures, and calibration-sensitive repairs still require specialist support.",
-          "descriptor": "Electrified models with combustion backup",
-          "families": [
-            "Hybrid / PHEV"
-          ],
-          "foundIn": [
-            "Range Rover Evoque Engines",
-            "Range Rover Mainline Engines",
-            "Range Rover Sport Engines",
-            "Range Rover Velar Engines"
-          ],
+          "foundIn": [],
           "knownFor": [],
-          "typicalModels": [
-            "Range Rover Evoque Engines",
-            "Range Rover Mainline Engines",
-            "Range Rover Sport Engines",
-            "Range Rover Velar Engines"
-          ],
+          "typicalModels": [],
           "importantNotes": [
-            "Hybrid faults often need both mechanical and high-voltage diagnosis, so replacement decisions should be made by specialists familiar with the full system.",
-            "Battery cooling, inverter health, and software calibration are just as important as the combustion-engine condition on hybrid models."
+            "High-mileage motorway drivers covering 15,000+ miles annually",
+            "Off-road enthusiasts needing torque for challenging terrain",
+            "Fleet operators prioritising efficiency",
+            "Towing users who need low-end torque",
+            "Urban drivers with short daily trips who are better served by petrol (DPF and EGR issues are common)",
+            "Typical searches: Range Rover TDV6 engine replacement, Range Rover Sport 3.0 diesel engine cost, Range Rover diesel engine specialist UK, Range Rover TDV6 crankshaft failure, Range Rover Ingenium timing chain failure, Range Rover Evoque engine replacement, Range Rover Velar 2.0 diesel engine price, Range Rover 3.0 TDV6 engine for sale → Get quotes for Range Rover Diesel replacement engines → Not sure which diesel you have? Enter your registration number for an instant match"
           ],
-          "cta": "Compare Range Rover hybrid engine prices"
+          "cta": "→ Get quotes for Range Rover Diesel replacement engines"
+        },
+        {
+          "title": "Petrol Engines",
+          "description": "Range Rover's petrol engine range in the UK spans from the supercharged V6 (AJ126) to the legendary supercharged V8 (AJ133, M156) - delivering the performance, sound, and character that define the brand.",
+          "descriptor": "Range Rover's petrol engine range in the UK spans from the supercharged V6 (AJ126) to the legendary supercharged V8 (AJ133, M156) - delivering the performance, sound, and character that define the brand.",
+          "families": [
+            "£4,500 - £10,000+ (supply only)",
+            "2.0 Ingenium Petrol (P200/P250/P300): £4,000 - £6,500",
+            "3.0 V6 SC (AJ126): £4,500 - £7,500",
+            "5.0 V8 SC (AJ133, M156): £6,000 - £10,000"
+          ],
+          "foundIn": [],
+          "knownFor": [],
+          "typicalModels": [],
+          "importantNotes": [
+            "Performance enthusiasts who value the Range Rover V8 character and soundtrack",
+            "Collectors and weekend drivers with lower annual mileage",
+            "Drivers who prioritise engagement, emotion and prestige over fuel economy",
+            "High-mileage daily drivers who would struggle with running costs",
+            "Drivers prioritising maximum fuel efficiency over performance",
+            "Typical searches: Range Rover 5.0 V8 engine replacement, Range Rover Sport SVR engine cost, Range Rover petrol engine specialist UK, Range Rover 5.0 supercharged engine problems, Range Rover 3.0 V6 engine replacement, Range Rover V8 engine rebuild, Range Rover 4.4 V8 engine price → Compare Range Rover Petrol engine prices → Not sure which petrol you have? Enter your registration number for an instant match"
+          ],
+          "cta": "→ Compare Range Rover Petrol engine prices"
+        },
+        {
+          "title": "Hybrid & Plug-in Hybrid (PHEV) Engines",
+          "description": "Range Rover's hybrid range includes the P400e (Range Rover and Range Rover Sport), combining 2.0-litre Ingenium petrol engines with electric motors. Hybrid systems are still relatively rare in the replacement market, but enquiries are growing as these vehicles age.",
+          "descriptor": "Range Rover's hybrid range includes the P400e (Range Rover and Range Rover Sport), combining 2.0-litre Ingenium petrol engines with electric motors. Hybrid systems are still relatively rare in the replacement market, but enquiries are growing as these vehicles age.",
+          "families": [
+            "PHEV (Plug-in Hybrid - P400e): Combines a 2.0-litre Ingenium petrol engine with an electric motor and a 13.1kWh battery pack. The system provides up to 25-35 miles of pure electric range.",
+            "Battery location: The high-voltage battery is typically located under the rear seats or boot floor - careful handling is required for any work in these areas.",
+            "MHEV (Mild Hybrid): Some newer models use a 48V integrated starter-generator for mild hybrid assistance."
+          ],
+          "foundIn": [],
+          "knownFor": [],
+          "typicalModels": [],
+          "importantNotes": [
+            "Company car drivers benefiting from lower Benefit-in-Kind (BIK) tax rates",
+            "Urban commuters who can charge daily and drive within the electric range",
+            "Drivers who want to reduce fuel costs and emissions without sacrificing performance",
+            "Drivers without off-street parking or reliable charging access",
+            "High-mileage users who would benefit more from diesel's efficiency on long runs",
+            "Typical searches: Range Rover P400e engine replacement, Range Rover Sport PHEV battery price, Range Rover hybrid engine specialist UK, Range Rover hybrid battery degradation, Range Rover hybrid motor replacement, Range Rover P440e engine cost → Enquire about Range Rover Hybrid engine availability → Not sure which hybrid you have? Enter your registration number for an instant match"
+          ],
+          "cta": "Get quotes for Range Rover Range Rover Hybrid & Plug-in Hybrid (PHEV) Engines engines"
         }
       ],
-      "closing": "Not sure which fuel type your Range Rover has? Enter your registration number above to instantly identify your model, engine code, fuel system and compatible replacement options – all backed by a minimum 12‑month unlimited mileage warranty from UK Range Rover specialists."
+      "closing": "Not sure which fuel type your Range Rover has? Enter your registration number for an instant match."
     },
     "engineCodeDirectory": {
       "tag": "Engine Codes",

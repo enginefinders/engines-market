@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useState, type ReactNode } from "react";
 import type { EngineCodesData } from "@/types/brand";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
@@ -10,450 +10,418 @@ type Props = {
   bgImage?: string;
 };
 
-type TabMeta = {
-  index: number;
-  title: string;
-  subtitle: string;
+type EngineItem = EngineCodesData["groups"][number]["engines"][number] & {
+  groupName: string;
+  era: string;
+  failureNote: string;
 };
 
-function MoneyTagIcon() {
+type FuelTab = {
+  key: "diesel" | "petrol" | "hybrid";
+  title: string;
+  subtitle: string;
+  items: EngineItem[];
+};
+
+const ENGINE_IMAGE_POOL = [
+  "/images/engines/fac66331-c94d-48e9-983a-7997fd84a619_removalai_preview.webp",
+];
+
+function clean(text?: string) {
+  return (text ?? "")
+    .replace(/Ã‚Â£|Ãƒâ€šÃ‚Â£|Â£/g, "£")
+    .replace(/Ã¢â‚¬â€œ|Ã¢â‚¬â€|Ã¢â‚¬â€˜|â€“|â€”/g, "-")
+    .replace(/Ã¢â‚¬â„¢/g, "'")
+    .replace(/Ã¢â‚¬Å“|Ã¢â‚¬Â/g, '"')
+    .replace(/Ã‚Â·|Ãƒâ€šÃ‚Â·/g, "·")
+    .replace(/Ã¢â€ â€™/g, "->")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function brandFromHeading(data: EngineCodesData) {
+  const source = clean(data.h2 || data.tag);
+  return source.split(/\s+/)[0] || "BMW";
+}
+
+function tabKeyForFuel(fuel: string): FuelTab["key"] {
+  if (/petrol/i.test(fuel)) return "petrol";
+  if (/hybrid|electric|phev|bev/i.test(fuel)) return "hybrid";
+  return "diesel";
+}
+
+function tabMeta(key: FuelTab["key"]) {
+  if (key === "petrol") return { title: "Petrol Engines", subtitle: "Most replaced in the UK" };
+  if (key === "hybrid") return { title: "Hybrid & Electrified Engines", subtitle: "Most replaced in the UK" };
+  return { title: "Diesel Engines", subtitle: "Most replaced in the UK" };
+}
+
+function imageIndexForCode(code: string) {
+  const hash = code.split("").reduce((sum, char) => sum + char.charCodeAt(0), 0);
+  return hash % ENGINE_IMAGE_POOL.length;
+}
+
+function engineImage(code: string, suppliedImage?: string) {
+  if (suppliedImage && !suppliedImage.includes("/brands/bmw/engines/") && suppliedImage.includes("/engines/")) {
+    return suppliedImage;
+  }
+
+  return ENGINE_IMAGE_POOL[imageIndexForCode(code)];
+}
+
+function heroImageForBrand(brand: string, bgImage?: string) {
+  if (/bmw/i.test(brand)) return ENGINE_IMAGE_POOL[0];
+  if (bgImage && bgImage.includes("/engines/")) return bgImage;
+  return ENGINE_IMAGE_POOL[0];
+}
+
+function SvgIcon({ children, className = "h-5 w-5" }: { children: ReactNode; className?: string }) {
   return (
-    <svg viewBox="0 0 24 24" className="h-3 w-3" fill="none" aria-hidden="true">
-      <line x1="12" y1="1" x2="12" y2="23" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-      <path
-        d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
+    <svg viewBox="0 0 24 24" className={className} fill="none" aria-hidden="true">
+      {children}
     </svg>
   );
 }
 
-function WarningIcon() {
+function EngineStrokeIcon({ className = "h-7 w-7" }: { className?: string }) {
   return (
-    <svg viewBox="0 0 24 24" className="h-[14px] w-[14px]" fill="none" aria-hidden="true">
-      <path
-        d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"
-        stroke="currentColor"
-        strokeWidth="2.2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <line x1="12" y1="9" x2="12" y2="13" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
-      <line x1="12" y1="17" x2="12.01" y2="17" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
-    </svg>
+    <SvgIcon className={className}>
+      <path d="M7 9V6h4v3h2.8l1.4 2H18v6h-2.8l-1.4 2H7.2L5.8 17H4v-6h1.8L7.2 9H7Z" stroke="currentColor" strokeWidth="1.9" strokeLinejoin="round" />
+      <path d="M9 6V4h4v2M18 13h2M4 13H2" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" />
+    </SvgIcon>
   );
 }
 
-function ShieldIcon() {
+function FuelPumpIcon({ className = "h-7 w-7" }: { className?: string }) {
   return (
-    <svg viewBox="0 0 24 24" className="h-[19px] w-[19px]" fill="none" aria-hidden="true">
-      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" strokeWidth="2" />
+    <SvgIcon className={className}>
+      <path d="M6 21V4.8A1.8 1.8 0 0 1 7.8 3h6.4A1.8 1.8 0 0 1 16 4.8V21M5 21h12" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M8 6h5v4H8zM16 8h1.6L20 10.4V18a2 2 0 1 1-4 0" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" />
+    </SvgIcon>
+  );
+}
+
+function BoltIcon({ className = "h-7 w-7" }: { className?: string }) {
+  return (
+    <SvgIcon className={className}>
+      <path d="m13 2-8 12h6l-1 8 9-13h-6V2Z" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" />
+    </SvgIcon>
+  );
+}
+
+function CubeIcon({ className = "h-5 w-5" }: { className?: string }) {
+  return (
+    <SvgIcon className={className}>
+      <path d="m12 3 7 4v10l-7 4-7-4V7l7-4Z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+      <path d="m5 7 7 4 7-4M12 11v10" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+    </SvgIcon>
+  );
+}
+
+function CalendarIcon({ className = "h-5 w-5" }: { className?: string }) {
+  return (
+    <SvgIcon className={className}>
+      <path d="M5 5h14v15H5zM8 3v4M16 3v4M5 9h14" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+    </SvgIcon>
+  );
+}
+
+function CodeIcon() {
+  return (
+    <SvgIcon className="h-4 w-4">
+      <path d="M7 8h10M7 16h10M4 5h16v14H4z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
       <path d="m9 12 2 2 4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
+    </SvgIcon>
   );
 }
 
-function ChevronDownIcon({ open }: { open: boolean }) {
+function ListIcon({ className = "h-7 w-7" }: { className?: string }) {
   return (
-    <svg
-      viewBox="0 0 24 24"
-      className={`h-[14px] w-[14px] flex-none transition-transform ${open ? "rotate-180" : ""}`}
-      fill="none"
-      aria-hidden="true"
-    >
-      <polyline
-        points="6 9 12 15 18 9"
-        stroke="currentColor"
-        strokeWidth="2.2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
+    <SvgIcon className={className}>
+      <path d="M8 6h11M8 12h11M8 18h11M4 6h.01M4 12h.01M4 18h.01" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
+    </SvgIcon>
   );
 }
 
-function QuoteArrow() {
+function Chevron({ open = false, className = "h-4 w-4" }: { open?: boolean; className?: string }) {
   return (
-    <svg viewBox="0 0 24 24" className="h-[11px] w-[11px]" fill="none" aria-hidden="true">
-      <polyline
-        points="9 18 15 12 9 6"
-        stroke="currentColor"
-        strokeWidth="2.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
+    <SvgIcon className={`${className} transition-transform ${open ? "rotate-180" : ""}`}>
+      <path d="m6 9 6 6 6-6" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
+    </SvgIcon>
   );
 }
 
-function CtaArrow() {
+function Arrow({ direction = "right", className = "h-4 w-4" }: { direction?: "left" | "right"; className?: string }) {
   return (
-    <svg viewBox="0 0 24 24" className="h-[13px] w-[13px]" fill="none" aria-hidden="true">
-      <line x1="5" y1="12" x2="19" y2="12" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
-      <polyline points="12 5 19 12 12 19" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
+    <SvgIcon className={`${className} ${direction === "left" ? "rotate-180" : ""}`}>
+      <path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
+    </SvgIcon>
   );
 }
 
-function fuelClass(fuel: string) {
-  return /petrol/i.test(fuel)
-    ? "border-[#fed7aa] bg-[#fff8f0] text-[#c2410c]"
-    : "border-[#0d1b2e] bg-[#f8fbff] text-[#0d1b2e]";
+function TabIcon({ type, className = "h-9 w-9" }: { type: FuelTab["key"]; className?: string }) {
+  if (type === "petrol") return <FuelPumpIcon className={className} />;
+  if (type === "hybrid") return <BoltIcon className={className} />;
+  return <EngineStrokeIcon className={className} />;
 }
 
-function normalizeLabel(text: string) {
-  return text.replace(/[–—]/g, "-");
+function SpecIcon({ type }: { type: "power" | "fuel" | "size" | "years" }) {
+  const className = "h-[18px] w-[18px] shrink-0 text-[#082c72]";
+  if (type === "power") return <BoltIcon className={className} />;
+  if (type === "fuel") return <FuelPumpIcon className={className} />;
+  if (type === "years") return <CalendarIcon className={className} />;
+  return <CubeIcon className={className} />;
 }
 
-function formatTabTitle(name: string) {
-  const normalized = normalizeLabel(name);
+function buildTabs(data: EngineCodesData): FuelTab[] {
+  const buckets = new Map<FuelTab["key"], EngineItem[]>();
 
-  if (/ingenium/i.test(normalized)) return "Modern Ingenium Diesel";
-  if (/tdv6|sdv6/i.test(normalized)) return "TDV6 / SDV6 Diesel";
-  if (/v8/i.test(normalized)) return "V8 Petrol";
-  if (/defender/i.test(normalized)) return "Defender Diesel";
-  if (/other|special/i.test(normalized)) return "Additional & Specialist Engines";
+  data.groups.forEach((group) => {
+    group.engines.forEach((engine) => {
+      const key = tabKeyForFuel(engine.fuel);
+      const next = buckets.get(key) ?? [];
+      next.push({
+        ...engine,
+        groupName: group.name,
+        era: group.era,
+        failureNote: group.failureNote,
+      });
+      buckets.set(key, next);
+    });
+  });
 
-  return normalized.replace(/\s+Family.*$/i, "").trim();
+  return (["diesel", "petrol", "hybrid"] as const)
+    .map((key) => ({
+      key,
+      ...tabMeta(key),
+      items: buckets.get(key) ?? [],
+    }))
+    .filter((tab) => tab.items.length > 0);
 }
 
-function formatTabSubtitle(name: string, era: string) {
-  if (/other|special/i.test(name)) return "Mixed";
-  return normalizeLabel(era);
-}
-
-function splitHeading(title: string) {
-  const accent = "Average Rebuilt Prices (UK Supply)";
-  const parts = title.split(accent);
-  return {
-    before: parts[0]?.trim() ?? title,
-    accent: parts.length > 1 ? accent : "",
-  };
-}
-
-export default function EngineCodesSection({ data, bgImage }: Props) {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [openFailures, setOpenFailures] = useState<Record<number, boolean>>({});
-  const [overflowOpen, setOverflowOpen] = useState(false);
-  const [mobileOverflowOpen, setMobileOverflowOpen] = useState(false);
-  const overflowRef = useRef<HTMLDivElement | null>(null);
-  const mobileOverflowRef = useRef<HTMLDivElement | null>(null);
-
-  const tabs = useMemo<TabMeta[]>(
-    () =>
-      data.groups.map((group, index) => ({
-        index,
-        title: formatTabTitle(group.name),
-        subtitle: formatTabSubtitle(group.name, group.era),
-      })),
-    [data.groups],
-  );
-
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (!overflowRef.current?.contains(event.target as Node)) {
-        setOverflowOpen(false);
-      }
-      if (!mobileOverflowRef.current?.contains(event.target as Node)) {
-        setMobileOverflowOpen(false);
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
-
-  const activeGroup = useMemo(() => data.groups[activeIndex] ?? data.groups[0], [activeIndex, data.groups]);
-  const isOpen = openFailures[activeIndex] ?? false;
-  const visibleTabs = tabs.slice(0, 3);
-  const overflowTabs = tabs.slice(3);
-  const heading = splitHeading(data.h2);
-  const footerText =
-    data.closingLine ??
-    "Enter your registration number above and we'll match it instantly to the correct replacement engine - all backed by a genuine 12-month warranty from vetted UK Land Rover specialists.";
-
+function EngineCodeCard({
+  engine,
+  expanded,
+  onToggle,
+}: {
+  engine: EngineItem;
+  expanded: boolean;
+  onToggle: () => void;
+}) {
   return (
-    <Section id="brand-engine-codes" className="relative overflow-hidden bg-[#f8f9fa]">
-      {bgImage ? (
-        <div className="pointer-events-none absolute inset-x-0 top-0 hidden h-[220px] lg:block">
-          <div
-            className="absolute right-0 top-0 h-full w-[360px] opacity-[0.16]"
-            style={{
-              backgroundImage: `linear-gradient(270deg, rgba(248,249,250,0.08), rgba(248,249,250,0.9) 45%, rgba(248,249,250,1) 100%), url(${bgImage})`,
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "cover",
-              backgroundPosition: "top right",
-            }}
-          />
+    <article className="flex min-h-full min-w-0 flex-col overflow-hidden rounded-[14px] bg-white p-4 shadow-[0_10px_24px_rgba(6,26,51,0.16)] ring-1 ring-white/70">
+      <div className="flex items-start justify-between gap-3">
+        <div className="flex min-w-0 flex-wrap items-center gap-2">
+          <span className="rounded-[7px] bg-[linear-gradient(135deg,#08784a,#064f36)] px-3 py-1.5 font-['Manrope'] text-[18px] font-black leading-none text-white">
+            {clean(engine.code)}
+          </span>
+          <span className="rounded-[7px] bg-[#123f91] px-3 py-1.5 text-[11px] font-extrabold uppercase tracking-[0.05em] text-white">
+            {clean(engine.size)} {clean(engine.fuel)}
+          </span>
+        </div>
+        <button type="button" onClick={onToggle} className="rounded-full p-1.5 text-[#061a33] hover:bg-slate-100" aria-label="Toggle engine details">
+          <Chevron open={expanded} />
+        </button>
+      </div>
+
+      <div className="mt-4 grid grid-cols-[118px_minmax(0,1fr)] gap-4">
+        <img src={engineImage(engine.code, engine.image)} alt="" className="h-[116px] w-full object-contain drop-shadow-[0_16px_18px_rgba(6,26,51,0.16)]" loading="lazy" />
+        <div className="grid content-center gap-2 text-[13px] text-[#061a33]">
+          <p className="flex items-center gap-2"><SpecIcon type="power" />{clean(engine.power)}</p>
+          <p className="flex items-center gap-2"><SpecIcon type="fuel" />{clean(engine.fuel)}</p>
+          <p className="flex items-center gap-2"><SpecIcon type="size" />{clean(engine.size)}</p>
+          <p className="flex items-center gap-2"><SpecIcon type="years" />{clean(engine.era)}</p>
+        </div>
+      </div>
+
+      <div className="mt-4 border-t border-slate-200 pt-3">
+        <p className="text-[12px] font-black uppercase tracking-[0.08em] text-[#061a33]">History</p>
+        <p className="mt-1 line-clamp-3 text-[13px] leading-[1.55] text-slate-700">{clean(engine.compatibleModels)}</p>
+      </div>
+
+      {expanded ? (
+        <div className="mt-3 rounded-[10px] border border-[#cfe0f2] bg-[#f8fbff] p-3 text-[12.5px] leading-[1.55] text-slate-700">
+          <p><strong className="text-[#061a33]">Known failure note: </strong>{clean(engine.failureNote)}</p>
+          <p className="mt-2"><strong className="text-[#061a33]">Compatible models: </strong>{clean(engine.compatibleModels)}</p>
         </div>
       ) : null}
 
-      <Container className="relative max-w-[1400px] px-0 sm:px-0 lg:px-0">
-        <div className="section-pill mb-[14px] md:rounded-full">
-          <MoneyTagIcon />
-          <span>{data.tag}</span>
+      <div className="mt-auto min-w-0 border-t border-slate-200 pt-3">
+        <div className="text-[10px] font-black uppercase tracking-[0.12em] text-[#061a33]">Avg. rebuilt price (supply only)</div>
+        <div className="mt-1 grid min-w-0 grid-cols-[minmax(0,1fr)_auto] items-center gap-2">
+          <p className="min-w-0 truncate whitespace-nowrap font-['Manrope'] text-[18px] font-black text-[#08784a] xl:text-[19px]">{clean(engine.avgRebuiltPrice)}</p>
+          <a href="#quote-form" data-quote-engine-code={engine.code} className="inline-flex shrink-0 items-center gap-1 whitespace-nowrap text-[11px] font-extrabold text-[#06265a] hover:text-[#08784a] xl:text-[12px]">
+            <span>View Details</span> <Arrow className="h-3.5 w-3.5 xl:h-4 xl:w-4" />
+          </a>
         </div>
+        <a href="#quote-form" data-quote-engine-code={engine.code} className="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-[8px] border border-[#08784a] px-3 py-2.5 text-[13px] font-extrabold text-[#065f46]">
+          <Arrow /> {clean(engine.cta || `Get quotes for ${engine.code}`)}
+        </a>
+      </div>
+    </article>
+  );
+}
 
-        <div className="mb-5 md:mb-7">
-          <h2 className="font-['Manrope'] text-[26px] font-extrabold leading-[1.2] tracking-[-0.4px] text-[#0d1b2e] md:text-[36px] md:leading-[1.15] md:tracking-[-0.7px]">
-            {heading.before}
-            {heading.accent ? <> <span className="text-[#15803d]">{heading.accent}</span></> : null}
-          </h2>
-          <p className="mt-[10px] max-w-[820px] text-[13px] leading-[1.6] text-[#6b7280] md:text-[13.5px] md:leading-[1.75]">
-            {data.h3}
-          </p>
-        </div>
+export default function EngineCodesSection({ data, bgImage }: Props) {
+  const brand = brandFromHeading(data);
+  const tabs = useMemo(() => buildTabs(data), [data]);
+  const [activeTab, setActiveTab] = useState(0);
+  const [activeSlide, setActiveSlide] = useState(0);
+  const [expandedCards, setExpandedCards] = useState<Record<string, boolean>>({});
+  const [directoryOpen, setDirectoryOpen] = useState(false);
+  const currentTab = tabs[activeTab] ?? tabs[0];
+  const allEngines = tabs.flatMap((tab) => tab.items);
+  const cardsPerSlide = 4;
+  const slideCount = Math.max(1, Math.ceil((currentTab?.items.length ?? 0) / cardsPerSlide));
+  const safeSlide = Math.min(activeSlide, slideCount - 1);
+  const visibleEngines = (currentTab?.items ?? []).slice(safeSlide * cardsPerSlide, safeSlide * cardsPerSlide + cardsPerSlide);
 
-        {activeGroup ? (
-          <>
-            <div className="mb-4 md:mb-5">
-              <div className="hidden w-full items-stretch gap-[6px] overflow-visible md:flex">
-                {visibleTabs.map((tab) => {
-                  const active = tab.index === activeIndex;
+  useEffect(() => {
+    setActiveSlide(0);
+  }, [activeTab]);
 
-                  return (
-                    <button
-                      key={tab.index}
-                      type="button"
-                      onClick={() => {
-                        setActiveIndex(tab.index);
-                        setOverflowOpen(false);
-                      }}
-                      className={`min-w-0 flex-1 rounded-[8px] px-4 py-3 text-center transition ${
-                        active ? "bg-[#15803d] text-white" : "bg-[#0d1b2e] text-white hover:bg-[#10294b]"
-                      }`}
-                    >
-                      <span className="block font-['Manrope'] text-[13px] font-bold leading-[1.2]">{tab.title}</span>
-                      <span className={`mt-1 block text-[10px] ${active ? "text-white/85" : "text-[#94a3b8]"}`}>
-                        {tab.subtitle}
-                      </span>
-                    </button>
-                  );
-                })}
+  useEffect(() => {
+    if (activeTab >= tabs.length) setActiveTab(0);
+  }, [activeTab, tabs.length]);
 
-                {overflowTabs.length ? (
-                  <div className="relative" ref={overflowRef}>
-                    <button
-                      type="button"
-                      onClick={() => setOverflowOpen((current) => !current)}
-                      className={`flex h-full min-w-[116px] items-center justify-center gap-2 rounded-[8px] px-4 py-3 text-center transition ${
-                        overflowTabs.some((tab) => tab.index === activeIndex)
-                          ? "bg-[#15803d] text-white"
-                          : "bg-[#0d1b2e] text-white hover:bg-[#10294b]"
-                      }`}
-                    >
-                      <span className="font-['Manrope'] text-[13px] font-bold leading-[1.2]">
-                        +{overflowTabs.length} More
-                      </span>
-                      <ChevronDownIcon open={overflowOpen} />
-                    </button>
+  const setAdjacentSlide = (direction: "prev" | "next") => {
+    setActiveSlide((current) => {
+      if (direction === "prev") return current === 0 ? slideCount - 1 : current - 1;
+      return current === slideCount - 1 ? 0 : current + 1;
+    });
+  };
 
-                    {overflowOpen ? (
-                      <div className="absolute right-0 top-[calc(100%+8px)] z-20 min-w-[230px] rounded-[12px] border border-slate-200 bg-white p-2 shadow-[0_14px_30px_rgba(13,27,46,0.16)]">
-                        {overflowTabs.map((tab) => (
-                          <button
-                            key={tab.index}
-                            type="button"
-                            onClick={() => {
-                              setActiveIndex(tab.index);
-                              setOverflowOpen(false);
-                            }}
-                            className="flex w-full flex-col items-start rounded-[10px] px-3 py-2 text-left transition hover:bg-slate-50"
-                          >
-                            <span className="font-['Manrope'] text-[12px] font-bold leading-[1.2] text-[#0d1b2e]">{tab.title}</span>
-                            <span className="mt-1 text-[10px] text-slate-500">{tab.subtitle}</span>
-                          </button>
-                        ))}
-                      </div>
-                    ) : null}
-                  </div>
-                ) : null}
+  if (!currentTab) return null;
+
+  return (
+    <Section id="brand-engine-codes" className="relative overflow-hidden bg-white !py-0">
+      <Container className="max-w-[1450px] px-4 py-7 sm:px-5 lg:px-6 lg:py-10">
+        <div className="relative overflow-hidden rounded-[18px] bg-[radial-gradient(circle_at_78%_18%,rgba(43,111,255,0.14),transparent_34%),linear-gradient(115deg,#ffffff_0%,#ffffff_58%,#eef5ff_100%)]">
+          <div className="pointer-events-none absolute -right-16 top-8 h-56 w-[58%] rounded-l-full bg-[linear-gradient(135deg,rgba(219,234,254,0.92),rgba(255,255,255,0)_72%)]" />
+          <div className="pointer-events-none absolute right-2 top-7 hidden text-[180px] font-black leading-none text-[#dce8f8]/45 lg:block">{brand[0]}</div>
+
+          <div className="relative grid gap-5 lg:grid-cols-[minmax(0,1fr)_470px] lg:items-center">
+            <div className="relative z-[1]">
+              <div className="inline-flex items-center gap-2 rounded-full bg-[#06265a] px-4 py-2 text-[12px] font-black uppercase tracking-[0.04em] text-white shadow-[0_10px_24px_rgba(6,38,90,0.18)]">
+                <CodeIcon />
+                Engine Codes
               </div>
+              <h2 className="mt-5 max-w-[860px] font-['Manrope'] text-[34px] font-black leading-[1.05] tracking-[-1px] text-[#061a33] sm:text-[42px] lg:text-[54px]">
+                {brand} Engine Codes - <span className="text-[#08784a]">Most Replaced Engines & Full Directory</span>
+              </h2>
+              <p className="mt-4 max-w-[760px] text-[16px] leading-[1.7] text-[#112844]">
+                Every major {brand} engine code with technical specs, compatible UK models, known failures and average rebuilt prices. Use the quick-reference accordion below for all remaining codes.
+              </p>
+            </div>
 
-              <div className="md:hidden" ref={mobileOverflowRef}>
-                <div className="flex items-stretch gap-2">
+            <div className="relative min-h-[220px] lg:min-h-[280px]">
+              <div className="absolute inset-0 rounded-full bg-[repeating-radial-gradient(circle_at_center,rgba(30,102,210,0.14)_0_1px,transparent_1px_28px)]" />
+              <img src={heroImageForBrand(brand, bgImage)} alt="" className="relative z-[1] h-[220px] w-full object-contain drop-shadow-[0_28px_30px_rgba(6,26,51,0.16)] lg:h-[300px]" loading="lazy" />
+            </div>
+          </div>
+
+          <div className="relative z-[1] mt-6 rounded-[15px] border border-[#d8e4f2] bg-white shadow-[0_12px_28px_rgba(6,26,51,0.08)]">
+            <div className="grid grid-cols-1 overflow-hidden rounded-t-[15px] divide-y divide-[#d8e4f2] sm:divide-x sm:divide-y-0" style={{ gridTemplateColumns: `repeat(${tabs.length}, minmax(0, 1fr))` }}>
+              {tabs.map((tab, index) => {
+                const active = index === activeTab;
+                return (
                   <button
+                    key={tab.key}
                     type="button"
-                    onClick={() => setMobileOverflowOpen((current) => !current)}
-                    className="min-w-0 flex-1 rounded-[8px] bg-[#15803d] px-4 py-3 text-center text-white"
+                    onClick={() => setActiveTab(index)}
+                    className={`flex min-h-[74px] items-center justify-between gap-4 px-6 py-4 text-left transition ${active ? "bg-[linear-gradient(135deg,#07316f,#061a33)] text-white" : "bg-white text-[#061a33] hover:bg-slate-50"}`}
                   >
-                    <span className="block font-['Manrope'] text-[12px] font-bold leading-[1.2]">{tabs[activeIndex]?.title}</span>
-                    <span className="mt-1 block text-[10px] text-white/85">{tabs[activeIndex]?.subtitle}</span>
-                  </button>
-
-                  <div className="relative">
-                    <button
-                      type="button"
-                      onClick={() => setMobileOverflowOpen((current) => !current)}
-                      className="flex h-full min-w-[96px] items-center justify-center gap-2 rounded-[8px] bg-[#0d1b2e] px-4 py-3 text-white"
-                    >
-                      <span className="font-['Manrope'] text-[12px] font-bold leading-[1.2]">
-                        {tabs.length - 1} more
+                    <span className="flex min-w-0 items-center gap-4">
+                      <TabIcon type={tab.key} className="h-9 w-9 shrink-0" />
+                      <span>
+                        <span className="block font-['Manrope'] text-[18px] font-black leading-tight">{tab.title}</span>
+                        <span className={`mt-0.5 block text-[12px] ${active ? "text-white/82" : "text-slate-500"}`}>{tab.subtitle}</span>
                       </span>
-                      <ChevronDownIcon open={mobileOverflowOpen} />
-                    </button>
-
-                    {mobileOverflowOpen ? (
-                      <div className="absolute right-0 top-[calc(100%+8px)] z-20 min-w-[220px] rounded-[12px] border border-slate-200 bg-white p-2 shadow-[0_14px_30px_rgba(13,27,46,0.16)]">
-                        {tabs
-                          .filter((tab) => tab.index !== activeIndex)
-                          .map((tab) => (
-                            <button
-                              key={tab.index}
-                              type="button"
-                              onClick={() => {
-                                setActiveIndex(tab.index);
-                                setMobileOverflowOpen(false);
-                              }}
-                              className="flex w-full flex-col items-start rounded-[10px] px-3 py-2 text-left transition hover:bg-slate-50"
-                            >
-                              <span className="font-['Manrope'] text-[12px] font-bold leading-[1.2] text-[#0d1b2e]">{tab.title}</span>
-                              <span className="mt-1 text-[10px] text-slate-500">{tab.subtitle}</span>
-                            </button>
-                          ))}
-                      </div>
-                    ) : null}
-                  </div>
-                </div>
-              </div>
+                    </span>
+                    <Chevron open={active} className="h-5 w-5 shrink-0" />
+                  </button>
+                );
+              })}
             </div>
 
-            <div className="overflow-hidden rounded-[10px] border border-[#e5e7eb] bg-white shadow-[0_2px_10px_rgba(13,27,46,0.06)]">
-              <div className="overflow-x-auto">
-                <table className="w-full border-collapse">
-                  <thead>
-                    <tr className="bg-[#0d1b2e]">
-                      <th className="px-[14px] py-[11px] text-left text-[10.5px] font-bold uppercase tracking-[0.6px] text-[#94a3b8]">Engine Code</th>
-                      <th className="px-[14px] py-[11px] text-left text-[10.5px] font-bold uppercase tracking-[0.6px] text-[#94a3b8]">Specs</th>
-                      <th className="px-[14px] py-[11px] text-left text-[10.5px] font-bold uppercase tracking-[0.6px] text-[#94a3b8]">Compatible Models</th>
-                      <th className="px-[14px] py-[11px] text-right text-[10.5px] font-bold uppercase tracking-[0.6px] text-[#94a3b8]">Avg. Rebuilt Price</th>
-                    </tr>
-                  </thead>
-                  <tbody className="hidden md:table-row-group">
-                    {activeGroup.engines.map((engine) => (
-                      <tr key={engine.code} className="border-b border-[#f1f5f9] transition hover:bg-[#fafafa] last:border-b-0">
-                        <td className="px-[14px] py-[14px] align-top text-[13px]">
-                          <div className="flex flex-col gap-0.5">
-                            <span className="font-['Manrope'] text-[15px] font-extrabold text-[#0d1b2e]">{engine.code}</span>
-                            <div className="mt-1 flex flex-wrap gap-[5px]">
-                              <span className={`rounded-[4px] border px-[7px] py-[2px] text-[10px] font-semibold ${fuelClass(engine.fuel)}`}>{engine.fuel}</span>
-                            </div>
-                          </div>
-                        </td>
-                        <td className="px-[14px] py-[14px] align-top text-[13px]">
-                          <div className="flex flex-wrap gap-[6px]">
-                            <span className="rounded-[4px] border border-[#e5e7eb] bg-[#f8f9fa] px-2 py-[2px] text-[11px] font-semibold text-[#374151]">
-                              {engine.size}
-                            </span>
-                            <span className="rounded-[4px] border border-[#e5e7eb] bg-[#f8f9fa] px-2 py-[2px] text-[11px] font-semibold text-[#374151]">
-                              {engine.power}
-                            </span>
-                          </div>
-                        </td>
-                        <td className="px-[14px] py-[14px] align-top">
-                          <div className="text-[12px] leading-[1.6] text-[#4b5563]">{engine.compatibleModels}</div>
-                        </td>
-                        <td className="px-[14px] py-[14px] align-top text-right">
-                          <div className="font-['Manrope'] text-[15px] font-extrabold text-[#15803d]">{engine.avgRebuiltPrice}</div>
-                          <a
-                            href="#quote-form"
-                            data-quote-engine-code={engine.code}
-                            data-quote-context={engine.compatibleModels}
-                            className="mt-[8px] inline-flex items-center gap-[5px] rounded-[7px] bg-[#0d1b2e] px-[13px] py-[7px] font-['Manrope'] text-[11.5px] font-bold text-white transition hover:bg-[#10294b]"
-                          >
-                            {engine.cta}
-                            <QuoteArrow />
-                          </a>
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-
-                <div className="md:hidden">
-                  {activeGroup.engines.map((engine) => (
-                    <div key={engine.code} className="border-b border-[#f1f5f9] px-4 py-[14px] last:border-b-0">
-                      <div className="mb-[6px] flex items-start justify-between gap-4">
-                        <div className="font-['Manrope'] text-[16px] font-extrabold tracking-[-0.3px] text-[#0d1b2e]">{engine.code}</div>
-                        <div className="text-right">
-                          <div className="text-[14px] font-bold tracking-[-0.2px] text-[#15803d]">{engine.avgRebuiltPrice}</div>
-                        </div>
-                      </div>
-
-                      <div className="mb-[7px] flex flex-wrap gap-[5px]">
-                        <span className={`rounded-[5px] border px-[7px] py-[2px] text-[10px] font-semibold ${fuelClass(engine.fuel)}`}>{engine.fuel}</span>
-                        <span className="rounded-[5px] bg-[#f1f5f9] px-[7px] py-[2px] text-[10px] font-semibold text-[#374151]">{engine.size}</span>
-                        <span className="rounded-[5px] border border-[#e5e7eb] bg-[#f8f9fa] px-[7px] py-[2px] text-[10px] font-semibold text-[#6b7280]">
-                          {engine.power}
-                        </span>
-                      </div>
-
-                      <div className="mb-[10px] text-[11.5px] leading-[1.45] text-[#6b7280]">{engine.compatibleModels}</div>
-
-                      <a
-                        href="#quote-form"
-                        data-quote-engine-code={engine.code}
-                        data-quote-context={engine.compatibleModels}
-                        className="inline-flex items-center justify-center rounded-[7px] bg-[#0d1b2e] px-[14px] py-[7px] font-['Manrope'] text-[11px] font-bold tracking-[0.3px] text-white transition hover:bg-[#10294b]"
-                      >
-                        {engine.cta}
-                      </a>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-3">
+            <div className="relative bg-[radial-gradient(circle_at_50%_100%,rgba(255,255,255,0.22),transparent_45%),linear-gradient(135deg,#06265a,#0d4aa2)] px-8 py-4 sm:px-9 sm:py-6 xl:px-12">
               <button
                 type="button"
-                onClick={() => setOpenFailures((current) => ({ ...current, [activeIndex]: !isOpen }))}
-                className="flex w-full items-center justify-between rounded-[8px] border border-[#fdba74] bg-[#fff7ed] px-[14px] py-[11px] text-left transition hover:border-[#fb923c]"
+                onClick={() => setAdjacentSlide("prev")}
+                className="absolute left-0 top-1/2 z-[80] hidden h-14 w-14 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border border-white/70 bg-[#06265a] text-white shadow-[0_16px_30px_rgba(6,26,51,0.34)] transition hover:scale-105 lg:grid"
+                aria-label="Previous engine cards"
               >
-                <div className="flex items-center gap-[7px] text-[12px] font-bold leading-[1.2] text-[#ea580c]">
-                  <WarningIcon />
-                  <span>Common Failure Points</span>
-                </div>
-                <div className="text-[#ea580c]">
-                  <ChevronDownIcon open={isOpen} />
-                </div>
+                <Arrow direction="left" className="h-6 w-6" />
               </button>
-              {isOpen ? (
-                <div className="rounded-b-[8px] border border-t-0 border-[#fdba74] bg-[#fffaf5] px-[14px] py-3 text-[12.5px] leading-[1.75] text-[#7c2d12]">
-                  {activeGroup.failureNote}
-                </div>
-              ) : null}
-            </div>
-
-            <div className="mt-3 hidden items-center justify-between gap-4 rounded-[12px] border border-[#e5e7eb] bg-white px-6 py-[18px] md:flex">
-              <div className="flex items-center gap-[14px]">
-                <div className="flex h-10 w-10 flex-none items-center justify-center rounded-[10px] bg-[#f0fdf4] text-[#15803d]">
-                  <ShieldIcon />
-                </div>
-                <p className="text-[13px] leading-[1.65] text-[#374151]">
-                  {data.closingLine ? (
-                    footerText
-                  ) : (
-                    <>
-                      <strong className="font-bold text-[#0d1b2e]">Can&apos;t find your engine code?</strong>{" "}
-                      {footerText}
-                    </>
-                  )}
-                </p>
-              </div>
-              <a
-                href="#quote-form"
-                className="flex flex-none items-center gap-2 rounded-[9px] bg-[#15803d] px-[22px] py-3 font-['Manrope'] text-[13.5px] font-bold text-white transition hover:bg-[#166534]"
+              <button
+                type="button"
+                onClick={() => setAdjacentSlide("next")}
+                className="absolute right-0 top-1/2 z-[80] hidden h-14 w-14 -translate-y-1/2 translate-x-1/2 place-items-center rounded-full border border-white/70 bg-[#06265a] text-white shadow-[0_16px_30px_rgba(6,26,51,0.34)] transition hover:scale-105 lg:grid"
+                aria-label="Next engine cards"
               >
-                <span>Get Free Engine Quotes</span>
-                <CtaArrow />
-              </a>
+                <Arrow className="h-6 w-6" />
+              </button>
+
+              {currentTab.items.length ? (
+                <>
+                  <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+                    {visibleEngines.map((engine) => (
+                      <EngineCodeCard
+                        key={`${currentTab.key}-${engine.code}`}
+                        engine={engine}
+                        expanded={Boolean(expandedCards[engine.code])}
+                        onToggle={() => setExpandedCards((current) => ({ ...current, [engine.code]: !current[engine.code] }))}
+                      />
+                    ))}
+                  </div>
+                  <div className="mt-5 flex justify-center gap-2">
+                    {Array.from({ length: slideCount }).map((_, index) => (
+                      <button
+                        key={`${currentTab.key}-slide-dot-${index}`}
+                        type="button"
+                        onClick={() => setActiveSlide(index)}
+                        className={`h-3 w-3 rounded-full transition ${index === safeSlide ? "bg-white shadow-[0_0_18px_rgba(255,255,255,0.7)]" : "bg-white/38 hover:bg-white/70"}`}
+                        aria-label={`Show engine slide ${index + 1}`}
+                      />
+                    ))}
+                  </div>
+                </>
+              ) : (
+                <div className="rounded-[14px] border border-white/20 bg-white/10 px-5 py-8 text-center text-white">
+                  <p className="font-['Manrope'] text-[22px] font-black">{tabMeta(currentTab.key).title}</p>
+                  <p className="mx-auto mt-2 max-w-[560px] text-[14px] text-white/80">
+                    Hybrid engine-code data is ready to display here once the new content is imported.
+                  </p>
+                </div>
+              )}
             </div>
-          </>
-        ) : null}
+          </div>
+
+          <div className="relative z-[1] mt-5 rounded-[15px] border border-[#e2e8f0] bg-white shadow-[0_8px_22px_rgba(6,26,51,0.06)]">
+            <button type="button" onClick={() => setDirectoryOpen((current) => !current)} className="flex w-full items-center justify-between gap-4 px-5 py-5 text-left">
+              <span className="flex items-center gap-4">
+                <span className="grid h-12 w-12 place-items-center rounded-[8px] bg-[#061a33] text-white">
+                  <ListIcon />
+                </span>
+                <span>
+                  <span className="block font-['Manrope'] text-[22px] font-black text-[#061a33]">View All {brand} Engine Codes</span>
+                  <span className="mt-1 block text-[14px] text-slate-600">{allEngines.length}+ codes grouped by fuel type, years and average rebuilt price.</span>
+                </span>
+              </span>
+              <Chevron open={directoryOpen} />
+            </button>
+            {directoryOpen ? (
+              <div className="grid gap-2 border-t border-[#e2e8f0] p-4 sm:grid-cols-2 lg:grid-cols-3">
+                {allEngines.map((engine) => (
+                  <div key={`all-${engine.code}`} className="rounded-[10px] border border-[#edf2f7] bg-[#fbfdff] px-3 py-2 text-[13px]">
+                    <span className="font-black text-[#061a33]">{clean(engine.code)}</span>
+                    <span className="ml-2 whitespace-nowrap text-[#08784a]">{clean(engine.avgRebuiltPrice)}</span>
+                  </div>
+                ))}
+              </div>
+            ) : null}
+          </div>
+        </div>
       </Container>
     </Section>
   );

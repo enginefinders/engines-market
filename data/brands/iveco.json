@@ -1028,322 +1028,73 @@
       ]
     },
     "engineCodes": {
-      "tag": "Replacement Cost",
-      "h2": "Iveco Engine Codes & Average Rebuilt Prices (UK Supply)",
-      "h3": "Compare costs for every major Iveco engine — F1A/F1C, Tector, and Cursor families. All prices are typical UK market ranges for professionally rebuilt engines with warranty. Click \"Get Quote\" on any engine to receive tailored prices from our network of UK Iveco specialists.",
+      "tag": "Engine Codes",
+      "h2": "Iveco Engine Codes - Most Replaced Engines & Full Directory",
+      "h3": "Every major Iveco engine code with technical specs, compatible UK models, known failures and average rebuilt prices. Use the quick-reference accordion below for all remaining codes.",
+      "closingLine": "Can't find your engine code? Enter your registration number above - we'll identify the exact Iveco engine fitted to your vehicle.",
       "filters": [
-        "All",
-        "Diesel",
-        "Petrol"
+        "Diesel Engines (Most Replaced in the UK)"
       ],
       "groups": [
         {
-          "name": "F1A Family – 2.3L Diesel",
-          "era": "Iveco Daily, 2006‑Present",
-          "failureNote": "F1A engines are known for timing chain tensioner wear and EGR valve clogging on high‑mileage vans. Our rebuilt units include upgraded tensioners, cleaned EGR pathways, and new injector seals to prevent repeat failures. *(per row – developer to implement as button pre‑filling engine code)*",
+          "name": "Diesel Engines (Most Replaced in the UK)",
+          "era": "Extracted from Iveco diesel engines (most replaced in the uk) technical replacement data.",
+          "failureNote": "Timing chain rattle on cold start - caused by tensioner wear; can lead to timing failure and engine damage costing over £10,000, Crankcase pressurisation - ventilation system failure causes oil leaks and dipstick blow-out",
           "engines": [
             {
-              "code": "F1A E301",
+              "code": "F1C",
+              "title": "3.0L Diesel",
+              "familyHeading": "F1C - 3.0L Diesel",
               "fuel": "Diesel",
-              "size": "2.3L",
-              "power": "100‑130 HP",
-              "compatibleModels": "Daily Mk3 (35S), Daily Mk4 (35C)",
-              "avgRebuiltPrice": "£2,200 – £3,800",
-              "cta": "Get Quote for F1A E301"
+              "size": "3.0 Litre",
+              "power": "160-210 hp",
+              "compatibleModels": "Daily (III, IV, V, VI), Daily Van Body/Estate, Daily Platform/Chassis, Daily Bus",
+              "avgRebuiltPrice": "£1,900 - £2,900 supply only",
+              "cta": "→ Get quotes for F1C Iveco engine replacement"
             },
             {
-              "code": "F1A E308",
+              "code": "F1A",
+              "title": "2.3L Diesel",
+              "familyHeading": "F1A - 2.3L Diesel",
               "fuel": "Diesel",
-              "size": "2.3L",
-              "power": "126 HP",
-              "compatibleModels": "Daily 35S Euro 5, Daily 40C",
-              "avgRebuiltPrice": "£2,400 – £4,000",
-              "cta": "Get Quote for F1A E308"
+              "size": "2.3 Litre",
+              "power": "95-156 hp",
+              "compatibleModels": "Daily (III, IV, V, VI), Daily Bus, Daily Platform/Chassis",
+              "avgRebuiltPrice": "£1,700 - £2,500 supply only",
+              "cta": "→ Get quotes for F1A Iveco engine replacement"
             },
             {
-              "code": "F1A E348",
+              "code": "SOFIM 8140",
+              "title": "2.8L Diesel",
+              "familyHeading": "SOFIM 8140 - 2.8L Diesel",
               "fuel": "Diesel",
-              "size": "2.3L",
-              "power": "136‑150 HP",
-              "compatibleModels": "Daily 35C/45C Euro 6, Daily 50C",
-              "avgRebuiltPrice": "£2,600 – £4,200",
-              "cta": "Get Quote for F1A E348"
+              "size": "2.8 Litre",
+              "power": "80-130 hp",
+              "compatibleModels": "Daily (II, III), Daily Van Body/Estate, Daily Platform/Chassis, Daily Bus",
+              "avgRebuiltPrice": "£1,500 - £2,400 supply only",
+              "cta": "→ Get quotes for SOFIM 8140 Iveco engine replacement"
             },
             {
-              "code": "F1A E401",
+              "code": "Tector",
+              "title": "4.5L / 5.9L / 6.7L Diesel",
+              "familyHeading": "Tector - 4.5L / 5.9L / 6.7L Diesel",
               "fuel": "Diesel",
-              "size": "2.3L",
-              "power": "146 HP",
-              "compatibleModels": "Daily 35S14 Euro 6d, Daily 40C15",
-              "avgRebuiltPrice": "£2,800 – £4,400",
-              "cta": "Get Quote for F1A E401"
+              "size": "4.5 - 6.7 Litre",
+              "power": "160-320 hp",
+              "compatibleModels": "Eurocargo (2004-present), Eurocargo Bus, Medium-duty trucks",
+              "avgRebuiltPrice": "£2,500 - £4,500 supply only",
+              "cta": "→ Get quotes for Tector Iveco engine replacement"
             },
             {
-              "code": "F1A E418",
+              "code": "Cursor",
+              "title": "8.7L / 10.3L / 12.9L Diesel",
+              "familyHeading": "Cursor - 8.7L / 10.3L / 12.9L Diesel",
               "fuel": "Diesel",
-              "size": "2.3L",
-              "power": "156 HP",
-              "compatibleModels": "Daily 50C18 Euro 6d‑Temp, Daily 70C",
-              "avgRebuiltPrice": "£3,000 – £4,600",
-              "cta": "Get Quote for F1A E418"
-            }
-          ]
-        },
-        {
-          "name": "F1C Family – 3.0L Diesel",
-          "era": "Iveco Daily / Eurocargo, 2006‑Present",
-          "failureNote": "F1C units commonly suffer turbo actuator failure and injector knock on commercial duty cycles. Rebuilt engines from our network include reconditioned turbo cores, calibrated injectors, and updated ECU maps for reliability.",
-          "engines": [
-            {
-              "code": "F1C E301",
-              "fuel": "Diesel",
-              "size": "3.0L",
-              "power": "146‑170 HP",
-              "compatibleModels": "Daily 50C/70C, Eurocargo ML75",
-              "avgRebuiltPrice": "£3,200 – £5,200",
-              "cta": "Get Quote for F1C E301"
-            },
-            {
-              "code": "F1C E348",
-              "fuel": "Diesel",
-              "size": "3.0L",
-              "power": "170‑200 HP",
-              "compatibleModels": "Daily 35‑70C Euro 6, Eurocargo ML90",
-              "avgRebuiltPrice": "£3,400 – £5,400",
-              "cta": "Get Quote for F1C E348"
-            },
-            {
-              "code": "F1C E401",
-              "fuel": "Diesel",
-              "size": "3.0L",
-              "power": "180 HP",
-              "compatibleModels": "Daily 50C18 Euro 6d, Eurocargo ML100",
-              "avgRebuiltPrice": "£3,600 – £5,600",
-              "cta": "Get Quote for F1C E401"
-            },
-            {
-              "code": "F1C E418",
-              "fuel": "Diesel",
-              "size": "3.0L",
-              "power": "200 HP",
-              "compatibleModels": "Daily 70C21, Eurocargo ML120 Euro 6d",
-              "avgRebuiltPrice": "£3,800 – £5,800",
-              "cta": "Get Quote for F1C E418"
-            },
-            {
-              "code": "F1C E448",
-              "fuel": "Diesel",
-              "size": "3.0L",
-              "power": "210 HP",
-              "compatibleModels": "Daily 70C21 High‑Power, Eurocargo ML140",
-              "avgRebuiltPrice": "£4,000 – £6,000",
-              "cta": "Get Quote for F1C E448"
-            }
-          ]
-        },
-        {
-          "name": "Sofim 8140 Family – 2.8L Diesel",
-          "era": "Legacy Daily / Early Eurocargo, 1999‑2011",
-          "failureNote": "Sofim 8140 engines are prone to head gasket failure and oil pump wear on high‑mileage commercial use. Our rebuilt units include new gaskets, upgraded oil pumps, and pressure‑tested blocks.",
-          "engines": [
-            {
-              "code": "Sofim 8140.43",
-              "fuel": "Diesel",
-              "size": "2.8L",
-              "power": "120 HP",
-              "compatibleModels": "Daily Mk2 (35S), Eurocargo 75E",
-              "avgRebuiltPrice": "£1,800 – £3,200",
-              "cta": "Get Quote for Sofim 8140.43"
-            },
-            {
-              "code": "Sofim 8140.63",
-              "fuel": "Diesel",
-              "size": "2.8L",
-              "power": "140 HP",
-              "compatibleModels": "Daily Mk3, Eurocargo 90E HPI",
-              "avgRebuiltPrice": "£2,000 – £3,400",
-              "cta": "Get Quote for Sofim 8140.63"
-            },
-            {
-              "code": "Sofim 8140.83",
-              "fuel": "Diesel",
-              "size": "2.8L",
-              "power": "146 HP",
-              "compatibleModels": "Daily 35S14, Eurocargo ML75 early",
-              "avgRebuiltPrice": "£2,200 – £3,600",
-              "cta": "Get Quote for Sofim 8140.83"
-            },
-            {
-              "code": "Sofim 8140.93",
-              "fuel": "Diesel",
-              "size": "2.8L",
-              "power": "150 HP",
-              "compatibleModels": "Daily 40C, Eurocargo ML90 pre‑2010",
-              "avgRebuiltPrice": "£2,400 – £3,800",
-              "cta": "Get Quote for Sofim 8140.93"
-            }
-          ]
-        },
-        {
-          "name": "Tector Family – 4.0‑6.7L Diesel",
-          "era": "Iveco Eurocargo, 2002‑Present",
-          "failureNote": "Tector engines frequently experience DPF clogging and EGR cooler leaks under stop‑start urban delivery cycles. Rebuilt units include cleaned/replaced DPF cores, new EGR coolers, and updated thermal management calibration.",
-          "engines": [
-            {
-              "code": "Tector 4 (F4AE0481)",
-              "fuel": "Diesel",
-              "size": "4.0L",
-              "power": "140‑160 HP",
-              "compatibleModels": "Eurocargo ML75, ML90",
-              "avgRebuiltPrice": "£2,800 – £4,800",
-              "cta": "Get Quote for Tector 4 (F4AE0481)"
-            },
-            {
-              "code": "Tector 5 (F4AE0681)",
-              "fuel": "Diesel",
-              "size": "4.5L",
-              "power": "160‑190 HP",
-              "compatibleModels": "Eurocargo ML100, ML120",
-              "avgRebuiltPrice": "£3,000 – £5,000",
-              "cta": "Get Quote for Tector 5 (F4AE0681)"
-            },
-            {
-              "code": "Tector 6 (F1CE0481)",
-              "fuel": "Diesel",
-              "size": "5.9L",
-              "power": "180‑240 HP",
-              "compatibleModels": "Eurocargo ML140, ML180",
-              "avgRebuiltPrice": "£3,400 – £5,600",
-              "cta": "Get Quote for Tector 6 (F1CE0481)"
-            },
-            {
-              "code": "Tector 7 (F1CE0681)",
-              "fuel": "Diesel",
-              "size": "6.7L",
-              "power": "220‑280 HP",
-              "compatibleModels": "Eurocargo ML180, ML260",
-              "avgRebuiltPrice": "£3,800 – £6,200",
-              "cta": "Get Quote for Tector 7 (F1CE0681)"
-            },
-            {
-              "code": "Tector Euro 6 (F5AE3681)",
-              "fuel": "Diesel",
-              "size": "6.7L",
-              "power": "250‑300 HP",
-              "compatibleModels": "Eurocargo ML220 Euro 6, ML260 Euro 6d",
-              "avgRebuiltPrice": "£4,200 – £6,800",
-              "cta": "Get Quote for Tector Euro 6 (F5AE3681)"
-            }
-          ]
-        },
-        {
-          "name": "Cursor 8 Family – 7.8L Diesel",
-          "era": "Stralis / Eurocargo Heavy, 2007‑Present",
-          "failureNote": "Cursor 8 units are known for injector seat erosion and turbo bearing wear on long‑haul routes. Our rebuilt engines include hardened injector seats, balanced turbo cartridges, and dyno‑tested performance validation.",
-          "engines": [
-            {
-              "code": "Cursor 8 F2BFE611",
-              "fuel": "Diesel",
-              "size": "7.8L",
-              "power": "310‑340 HP",
-              "compatibleModels": "Stralis AS440S31, Eurocargo ML260 heavy",
-              "avgRebuiltPrice": "£4,200 – £7,200",
-              "cta": "Get Quote for Cursor 8 F2BFE611"
-            },
-            {
-              "code": "Cursor 8 F2BFE612",
-              "fuel": "Diesel",
-              "size": "7.8L",
-              "power": "360‑400 HP",
-              "compatibleModels": "Stralis AS440S36/40, AT440S36",
-              "avgRebuiltPrice": "£4,600 – £7,600",
-              "cta": "Get Quote for Cursor 8 F2BFE612"
-            },
-            {
-              "code": "Cursor 8 Euro 6 (F2BFE681)",
-              "fuel": "Diesel",
-              "size": "7.8L",
-              "power": "340‑400 HP",
-              "compatibleModels": "Stralis AS/AT Euro 6, Eurocargo ML300",
-              "avgRebuiltPrice": "£5,000 – £8,000",
-              "cta": "Get Quote for Cursor 8 Euro 6 (F2BFE681)"
-            }
-          ]
-        },
-        {
-          "name": "Cursor 11 Family – 11.1L Diesel",
-          "era": "Stralis / S‑WAY / T‑WAY, 2012‑Present",
-          "failureNote": "Cursor 11 engines commonly face SCR system faults and high‑pressure fuel pump wear. Rebuilt units include refurbished SCR dosing modules, calibrated HPFPs, and updated AdBlue system calibration.",
-          "engines": [
-            {
-              "code": "Cursor 11 F3GFE611",
-              "fuel": "Diesel",
-              "size": "11.1L",
-              "power": "420‑460 HP",
-              "compatibleModels": "Stralis AS440S42, S‑WAY AS440S46",
-              "avgRebuiltPrice": "£5,200 – £8,800",
-              "cta": "Get Quote for Cursor 11 F3GFE611"
-            },
-            {
-              "code": "Cursor 11 F3GFE612",
-              "fuel": "Diesel",
-              "size": "11.1L",
-              "power": "480 HP",
-              "compatibleModels": "Stralis AT440S48, S‑WAY AT440S48",
-              "avgRebuiltPrice": "£5,600 – £9,200",
-              "cta": "Get Quote for Cursor 11 F3GFE612"
-            },
-            {
-              "code": "Cursor 11 Euro 6d (F3GFE681)",
-              "fuel": "Diesel",
-              "size": "11.1L",
-              "power": "460‑510 HP",
-              "compatibleModels": "S‑WAY AS/AT440S46‑51, T‑WAY AD440S48",
-              "avgRebuiltPrice": "£6,000 – £9,600",
-              "cta": "Get Quote for Cursor 11 Euro 6d (F3GFE681)"
-            }
-          ]
-        },
-        {
-          "name": "Cursor 13 Family – 12.9L Diesel",
-          "era": "Stralis / S‑WAY / T‑WAY / Trakker, 2007‑Present",
-          "failureNote": "Cursor 13 heavy‑duty units experience crankshaft bearing wear and exhaust manifold cracking under extreme load. Our rebuilt engines include upgraded bearing shells, reinforced manifolds, and full load‑bank testing before dispatch",
-          "engines": [
-            {
-              "code": "Cursor 13 F3C FE611",
-              "fuel": "Diesel",
-              "size": "12.9L",
-              "power": "480‑500 HP",
-              "compatibleModels": "Stralis AS440S48, Trakker AD380T48",
-              "avgRebuiltPrice": "£5,800 – £9,800",
-              "cta": "Get Quote for Cursor 13 F3C FE611"
-            },
-            {
-              "code": "Cursor 13 F3C FE612",
-              "fuel": "Diesel",
-              "size": "12.9L",
-              "power": "540‑560 HP",
-              "compatibleModels": "Stralis AT440S54, S‑WAY AT440S56",
-              "avgRebuiltPrice": "£6,400 – £10,400",
-              "cta": "Get Quote for Cursor 13 F3C FE612"
-            },
-            {
-              "code": "Cursor 13 Euro 6d (F3C FE681)",
-              "fuel": "Diesel",
-              "size": "12.9L",
-              "power": "500‑580 HP",
-              "compatibleModels": "S‑WAY AS/AT440S50‑58, T‑WAY AD440S54",
-              "avgRebuiltPrice": "£7,000 – £11,000",
-              "cta": "Get Quote for Cursor 13 Euro 6d (F3C FE681)"
-            },
-            {
-              "code": "Cursor 13 Racing Spec",
-              "fuel": "Diesel",
-              "size": "12.9L",
-              "power": "600+ HP",
-              "compatibleModels": "Trakker off‑road, special haulage",
-              "avgRebuiltPrice": "£7,500 – £12,000",
-              "cta": "Get Quote for Cursor 13 Racing Spec"
+              "size": "8.7 - 12.9 Litre",
+              "power": "310-570 hp",
+              "compatibleModels": "Stralis (2006-present), S-Way (2019-present), Trakker, Heavy-duty trucks",
+              "avgRebuiltPrice": "£5,000 - £9,000 supply only",
+              "cta": "→ Get quotes for Cursor Iveco engine replacement"
             }
           ]
         }
@@ -1790,68 +1541,36 @@
       "closing": "Not sure which engine size your Iveco needs? Enter your registration number and we'll match you to the exact engine code and displacement — instantly. All engines supplied with a minimum 12‑month warranty from UK Iveco specialists."
     },
     "fuelTypes": {
-      "tag": "Complete Iveco Engines List",
-      "h2": "Iveco Engines by Fuel Type",
-      "intro": "Choose your Iveco engine by fuel type to compare realistic replacement prices, known brand‑wide issues, and UK specialist supply – from the most popular diesel workhorses to the latest electrified powertrains.",
+      "tag": "Iveco Engines by Fuel Type",
+      "h2": "Iveco Diesel - Which Fuel Type Is Right For You?",
+      "intro": "Compare Iveco engine fuel types by replacement costs, running costs, reliability reputation, and model availability. Use this guide to understand your options - then enter your registration for an instant match and quotes from UK Iveco specialists.",
       "items": [
         {
-          "title": "Iveco Diesel Engines",
-          "description": "Iveco diesel engines cover many of the brand's highest-mileage UK models. Replacement demand is usually driven by timing system wear, injector and turbo faults, plus EGR or DPF-related damage once repeat short-journey use starts affecting reliability.",
-          "descriptor": "High-mileage motorway and SUV applications",
+          "title": "Diesel Engines",
+          "description": "Iveco's diesel engine range in the UK is dominated by the F1 series (F1A, F1C) for the Daily, the Tector series for Eurocargo, and the Cursor series for Stralis and S-Way heavy trucks. Replacement demand is driven by timing chain wear, DPF/EGR clogging, and injector failures on these high-mileage commercial vehicles.",
+          "descriptor": "Iveco's diesel engine range in the UK is dominated by the F1 series (F1A, F1C) for the Daily, the Tector series for Eurocargo, and the Cursor series for Stralis and S-Way heavy trucks. Replacement demand is driven by timing chain wear, DPF/EGR clogging, and injector failures on these high-mileage commercial vehicles.",
           "families": [
-            "F1A Family – 2.3L Diesel",
-            "F1C Family – 3.0L Diesel",
-            "Sofim 8140 Family – 2.8L Diesel",
-            "Tector Family – 4.0‑6.7L Diesel"
+            "£1,500 - £9,000 (supply only)",
+            "2.3 F1A (Daily): £1,700 - £2,500",
+            "2.8 SOFIM 8140 (Daily): £1,500 - £2,400",
+            "3.0 F1C (Daily): £1,900 - £2,900",
+            "4.5/5.9 Tector (Eurocargo): £2,500 - £4,500"
           ],
-          "foundIn": [
-            "Iveco Eurocargo Engines",
-            "Iveco S-WAY Engines",
-            "Iveco T-WAY Engines"
-          ],
-          "knownFor": [
-            "EGR valve sticking",
-            "injector copper seal leaks",
-            "turbo wastegate actuator fatigue",
-            "Injector seal leaks"
-          ],
-          "typicalModels": [
-            "Iveco Eurocargo Engines",
-            "Iveco S-WAY Engines",
-            "Iveco T-WAY Engines"
-          ],
-          "importantNotes": [
-            "Short-journey use increases DPF, EGR, and oil-dilution risk on many diesel engines.",
-            "A documented service history matters more on diesel replacements because injector, turbo, and timing faults often build gradually."
-          ],
-          "cta": "Compare Iveco diesel engine prices"
-        },
-        {
-          "title": "Iveco Petrol Engines",
-          "description": "Iveco petrol engines span everything from core daily-driver models to higher-output performance variants. Most replacement enquiries start with timing chain noise, oil consumption, cooling-system failure, or internal wear that makes a warranted replacement more sensible than repeated repairs.",
-          "descriptor": "Core passenger-car and performance applications",
-          "families": [
-            "[INSERT USER-PROVIDED ALPHABETICAL LIST HERE EXACTLY AS SUPPLIED — E.G., \"Iveco 508PN"
-          ],
-          "foundIn": [
-            "Iveco Eurocargo Engines",
-            "Iveco S-WAY Engines",
-            "Iveco T-WAY Engines"
-          ],
+          "foundIn": [],
           "knownFor": [],
-          "typicalModels": [
-            "Iveco Eurocargo Engines",
-            "Iveco S-WAY Engines",
-            "Iveco T-WAY Engines"
-          ],
+          "typicalModels": [],
           "importantNotes": [
-            "Cold-start rattles, overheating history, and oil use are the biggest warning signs before a petrol engine replacement becomes necessary.",
-            "Direct-injection petrol engines often need specialist attention for carbon build-up alongside the main mechanical repair."
+            "Tradespeople and fleet operators needing torque and durability",
+            "Hauliers and logistics companies prioritising uptime and reliability",
+            "High-mileage commercial drivers covering 20,000+ miles annually",
+            "Urban drivers with short daily trips who are better served by petrol (DPF and EGR issues are common)",
+            "Low-mileage users who don't drive enough to justify the diesel premium",
+            "Typical searches: Iveco Daily engine replacement, Iveco F1C engine cost, Iveco diesel engine specialist UK, Iveco Daily DPF problems, Iveco Eurocargo engine replacement, Iveco Stralis engine price, Iveco F1A engine for sale, Iveco Daily 3.0 engine replacement → Get quotes for Iveco Diesel replacement engines → Not sure which diesel you have? Enter your registration number for an instant match"
           ],
-          "cta": "Compare Iveco petrol engine prices"
+          "cta": "→ Get quotes for Iveco Diesel replacement engines"
         }
       ],
-      "closing": "Not sure which fuel type your Iveco has? Enter your registration number above to instantly identify your model, engine code, fuel system and compatible replacement options – all backed by a minimum 12‑month unlimited mileage warranty from UK Iveco specialists."
+      "closing": "Not sure which fuel type your Iveco has? Enter your registration number for an instant match."
     },
     "engineCodeDirectory": {
       "tag": "Engine Codes",

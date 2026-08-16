@@ -2004,315 +2004,166 @@
       ]
     },
     "engineCodes": {
-      "tag": "Replacement Cost",
-      "h2": "Volkswagen Engine Codes & Average Rebuilt Prices (UK Supply)",
-      "h3": "Compare costs for every major Volkswagen engine — EA189 TDI, EA288 TDI, EA888 TSI and EA211 TSI. All prices are typical UK market ranges for professionally rebuilt engines with warranty. Click \"Get Quote\" on any engine to receive tailored prices from our network of UK Volkswagen specialists.",
+      "tag": "Engine Codes",
+      "h2": "Volkswagen Engine Codes - Most Replaced Engines & Full Directory",
+      "h3": "Every major Volkswagen engine code with technical specs, compatible UK models, known failures and average rebuilt prices. Use the quick-reference accordion below for all remaining codes.",
+      "closingLine": "Can't find your engine code? Enter your registration number above - we'll identify the exact Volkswagen engine fitted to your vehicle.",
       "filters": [
-        "All",
-        "Diesel",
-        "Petrol"
+        "Diesel Engines (Most Replaced in the UK)",
+        "Petrol Engines (Most Replaced in the UK)",
+        "Hybrid / Electrified Engines"
       ],
       "groups": [
         {
-          "name": "EA189 2.0 TDI",
-          "era": "Euro 5 – Common Rail, 2008–2015",
-          "failureNote": "The Dieselgate-era engine family. Known for DPF/EGR clogging and oil pump drive failure. Rebuilt units include revised oil pump drive components. *— Get Quote →* after each row above. Common failure points: EA189 engines are known for oil pump drive hex key wear causing oil pressure loss, plus DPF and EGR valve clogging on higher-mileage units. Our rebuilt units include revised oil pump drive components and fully cleaned/refurbished DPF and EGR systems.",
+          "name": "Diesel Engines (Most Replaced in the UK)",
+          "era": "Extracted from Volkswagen diesel engines (most replaced in the uk) technical replacement data.",
+          "failureNote": "EGR valve and cooler blockage/failure, often leading to restricted performance and limp mode, DPF (diesel particulate filter) clogging, particularly on vehicles used for short journeys",
           "engines": [
             {
-              "code": "BKD",
+              "code": "EA189 2.0 TDI",
+              "title": "2.0L Diesel",
+              "familyHeading": "EA189 2.0 TDI - 2.0L Diesel",
               "fuel": "Diesel",
-              "size": "2.0",
-              "power": "140bhp",
-              "compatibleModels": "Golf Mk5, Passat B6 (2004-2008)",
-              "avgRebuiltPrice": "£1,500 – £2,800",
-              "cta": "Get Quote for BKD"
+              "size": "2.0 Litre",
+              "power": "110-170 hp",
+              "compatibleModels": "Golf Mk6, Golf Mk7, Passat B7, Passat B8, Tiguan, Touran, Sharan, Scirocco",
+              "avgRebuiltPrice": "£1,800 - £2,800 supply only",
+              "cta": "→ Get quotes for EA189 2.0 TDI Volkswagen engine replacement"
             },
             {
-              "code": "CFHC",
+              "code": "EA288 2.0 TDI",
+              "title": "2.0L Diesel",
+              "familyHeading": "EA288 2.0 TDI - 2.0L Diesel",
               "fuel": "Diesel",
-              "size": "2.0",
-              "power": "140bhp",
-              "compatibleModels": "Caddy, Touran (2010-2015)",
-              "avgRebuiltPrice": "£1,400 – £2,500",
-              "cta": "Get Quote for CFHC"
+              "size": "2.0 Litre",
+              "power": "115-190 hp",
+              "compatibleModels": "Golf Mk7, Golf Mk7.5, Passat B8, Tiguan Mk2, Touran, Sharan, T-Roc, Amarok",
+              "avgRebuiltPrice": "£1,900 - £3,000 supply only",
+              "cta": "→ Get quotes for EA288 2.0 TDI Volkswagen engine replacement"
             },
             {
-              "code": "CBAB",
+              "code": "BKD 2.0 TDI",
+              "title": "2.0L Diesel",
+              "familyHeading": "BKD 2.0 TDI - 2.0L Diesel",
               "fuel": "Diesel",
-              "size": "2.0",
-              "power": "140bhp",
-              "compatibleModels": "Golf Mk6, Passat B7 (2009-2014)",
-              "avgRebuiltPrice": "£1,600 – £2,900",
-              "cta": "Get Quote for CBAB"
+              "size": "2.0 Litre",
+              "power": "136-140 hp",
+              "compatibleModels": "Golf Mk5, Golf Mk5 GT, Passat B6, Passat B6 Estate, Jetta",
+              "avgRebuiltPrice": "£1,500 - £2,400 supply only",
+              "cta": "→ Get quotes for BKD Volkswagen engine replacement"
             },
             {
-              "code": "CFFB",
-              "fuel": "Diesel",
-              "size": "2.0",
-              "power": "140bhp",
-              "compatibleModels": "Tiguan, Passat CC (2008-2015)",
-              "avgRebuiltPrice": "£1,600 – £3,000",
-              "cta": "Get Quote for CFFB"
+              "code": "CFCA 2.0 BiTDI",
+              "title": "2.0L Diesel",
+              "familyHeading": "CFCA 2.0 BiTDI - 2.0L Diesel",
+              "fuel": "Diesel (Bi-Turbo)",
+              "size": "2.0 Litre",
+              "power": "180 hp",
+              "compatibleModels": "Transporter T5.1, Transporter T6, Caravelle, Multivan",
+              "avgRebuiltPrice": "£2,500 - £4,000 supply only",
+              "cta": "→ Get quotes for CFCA Volkswagen engine replacement"
             },
             {
-              "code": "CFGB",
+              "code": "CRLB 2.0 TDI",
+              "title": "2.0L Diesel",
+              "familyHeading": "CRLB 2.0 TDI - 2.0L Diesel",
               "fuel": "Diesel",
-              "size": "2.0",
-              "power": "170bhp",
-              "compatibleModels": "Golf Mk6 GTD, Passat B7 (2009-2014)",
-              "avgRebuiltPrice": "£1,800 – £3,300",
-              "cta": "Get Quote for CFGB"
+              "size": "2.0 Litre",
+              "power": "150 hp",
+              "compatibleModels": "Passat B8, Passat B8 Estate, Tiguan Mk2",
+              "avgRebuiltPrice": "£2,000 - £3,200 supply only",
+              "cta": "→ Get quotes for CRLB Volkswagen engine replacement"
             }
           ]
         },
         {
-          "name": "EA288 2.0 TDI",
-          "era": "Euro 6 – AdBlue, 2015–Present",
-          "failureNote": "The ULEZ-friendly diesel family. Common rail, AdBlue injected. Generally reliable; AdBlue system issues are the main failure driver. *— Get Quote →* after each row above. Common failure points: EA288 engines are known for AdBlue pump failures (£650+ repair) and NOx sensor malfunctions that trigger dashboard warnings. Our rebuilt units include refurbished or new AdBlue system components where required.",
+          "name": "Petrol Engines (Most Replaced in the UK)",
+          "era": "Extracted from Volkswagen petrol engines (most replaced in the uk) technical replacement data.",
+          "failureNote": "Timing chain tensioner failure leading to chain stretch, valve/piston contact, and complete engine failure - often occurring between 60,000-100,000 miles, Excessive oil consumption on earlier Gen 1 and Gen 2 engines",
           "engines": [
             {
-              "code": "CRLB",
-              "fuel": "Diesel",
-              "size": "2.0",
-              "power": "150bhp",
-              "compatibleModels": "Passat B8 (2015-2019), Tiguan II",
-              "avgRebuiltPrice": "£1,700 – £3,200",
-              "cta": "Get Quote for CRLB"
+              "code": "EA888 2.0 TSI",
+              "title": "2.0L Petrol",
+              "familyHeading": "EA888 2.0 TSI - 2.0L Petrol",
+              "fuel": "Petrol (Turbocharged)",
+              "size": "2.0 Litre",
+              "power": "180-310 hp",
+              "compatibleModels": "Golf GTI, Golf R, Tiguan, Passat, Scirocco R, T-Roc R",
+              "avgRebuiltPrice": "£2,200 - £3,800 supply only",
+              "cta": "→ Get quotes for EA888 Volkswagen engine replacement"
             },
             {
-              "code": "CUNA",
-              "fuel": "Diesel",
-              "size": "2.0",
-              "power": "150bhp",
-              "compatibleModels": "Golf Mk7, Passat B8 (2015-2020)",
-              "avgRebuiltPrice": "£1,700 – £3,200",
-              "cta": "Get Quote for CUNA"
+              "code": "EA211 1.4 TSI",
+              "title": "1.4L Petrol",
+              "familyHeading": "EA211 1.4 TSI - 1.4L Petrol",
+              "fuel": "Petrol (Turbocharged)",
+              "size": "1.4 Litre",
+              "power": "122-150 hp",
+              "compatibleModels": "Golf Mk7, Golf Mk7.5, Passat B8, Tiguan, Touran, Sharan, T-Roc",
+              "avgRebuiltPrice": "£1,800 - £2,800 supply only",
+              "cta": "→ Get quotes for EA211 1.4 TSI Volkswagen engine replacement"
             },
             {
-              "code": "CUPA",
-              "fuel": "Diesel",
-              "size": "2.0",
-              "power": "184bhp",
-              "compatibleModels": "Golf Mk7 GTD, Passat B8 (2015-2020)",
-              "avgRebuiltPrice": "£1,900 – £3,600",
-              "cta": "Get Quote for CUPA"
+              "code": "EA113 2.0 TFSI",
+              "title": "2.0L Petrol",
+              "familyHeading": "EA113 2.0 TFSI - 2.0L Petrol",
+              "fuel": "Petrol (Turbocharged)",
+              "size": "2.0 Litre",
+              "power": "200-270 hp",
+              "compatibleModels": "Golf Mk5 GTI, Golf Mk6 GTI, Scirocco, Passat, Tiguan",
+              "avgRebuiltPrice": "£2,000 - £3,200 supply only",
+              "cta": "→ Get quotes for EA113 Volkswagen engine replacement"
             },
             {
-              "code": "CXEC",
-              "fuel": "Diesel",
-              "size": "2.0",
-              "power": "150bhp",
-              "compatibleModels": "Transporter T6, Caravelle (2016-2019)",
-              "avgRebuiltPrice": "£1,800 – £3,500",
-              "cta": "Get Quote for CXEC"
+              "code": "EA111 1.2 TSI",
+              "title": "1.2L Petrol",
+              "familyHeading": "EA111 1.2 TSI - 1.2L Petrol",
+              "fuel": "Petrol (Turbocharged)",
+              "size": "1.2 Litre",
+              "power": "105 hp",
+              "compatibleModels": "Polo Mk5, Golf Mk6, Passat, Jetta",
+              "avgRebuiltPrice": "£1,500 - £2,500 supply only",
+              "cta": "→ Get quotes for EA111 1.2 TSI Volkswagen engine replacement"
             },
             {
-              "code": "DFFA",
-              "fuel": "Diesel",
-              "size": "2.0",
-              "power": "150bhp",
-              "compatibleModels": "Tiguan Allspace, Arteon (2017-2023)",
-              "avgRebuiltPrice": "£1,800 – £3,400",
-              "cta": "Get Quote for DFFA"
+              "code": "EA111 1.4 TSI",
+              "title": "1.4L Petrol",
+              "familyHeading": "EA111 1.4 TSI - 1.4L Petrol",
+              "fuel": "Petrol (Turbocharged)",
+              "size": "1.4 Litre",
+              "power": "160-180 hp",
+              "compatibleModels": "Golf Mk6, Scirocco, Tiguan",
+              "avgRebuiltPrice": "£1,800 - £2,800 supply only",
+              "cta": "→ Get quotes for EA111 1.4 TSI Volkswagen engine replacement"
             }
           ]
         },
         {
-          "name": "EA888 1.8/2.0 TSI",
-          "era": "Petrol – Direct Injection Only, 2008–Present",
-          "failureNote": "Volkswagen's primary petrol turbo family. Early Gen 1 & 2 suffer timing chain tensioner failure and carbon buildup; Gen 3 is improved but still needs periodic intake cleaning. *— Get Quote →* after each row above. Common failure points: EA888 engines are known for timing chain tensioner failure (Gen 1/2) and intake valve carbon buildup from direct injection. Our rebuilt units include upgraded timing chain tensioners and professionally cleaned cylinder heads.",
+          "name": "Hybrid / Electrified Engines",
+          "era": "Extracted from Volkswagen hybrid / electrified engines technical replacement data.",
+          "failureNote": "Battery degradation reducing range (battery pack replacement, not motor), Electric motor bearing wear causing noise",
           "engines": [
             {
-              "code": "CCZB",
-              "fuel": "Petrol",
-              "size": "2.0",
-              "power": "210bhp",
-              "compatibleModels": "Golf GTI Mk6, Scirocco (2009-2013)",
-              "avgRebuiltPrice": "£1,900 – £3,600",
-              "cta": "Get Quote for CCZB"
+              "code": "e-Golf Electric Drive Unit",
+              "title": "Electric Motor",
+              "familyHeading": "e-Golf Electric Drive Unit - Electric Motor",
+              "fuel": "Electric (BEV)",
+              "size": "N/A (Electric Motor)",
+              "power": "100-136 hp",
+              "compatibleModels": "e-Golf",
+              "avgRebuiltPrice": "£2,500 - £4,000 (drive unit only, supply only)",
+              "cta": "→ Get quotes for e-Golf Volkswagen electric motor replacement"
             },
             {
-              "code": "CDL",
-              "fuel": "Petrol",
-              "size": "2.0",
-              "power": "265bhp",
-              "compatibleModels": "Golf R Mk6 (2010-2013)",
-              "avgRebuiltPrice": "£2,500 – £4,500",
-              "cta": "Get Quote for CDL"
-            },
-            {
-              "code": "CJX",
-              "fuel": "Petrol",
-              "size": "1.8",
-              "power": "160bhp",
-              "compatibleModels": "Passat B7, Tiguan I (2011-2015)",
-              "avgRebuiltPrice": "£1,600 – £3,200",
-              "cta": "Get Quote for CJX"
-            },
-            {
-              "code": "CHHC",
-              "fuel": "Petrol",
-              "size": "2.0",
-              "power": "200bhp",
-              "compatibleModels": "Golf GTI Mk6 (2009-2012)",
-              "avgRebuiltPrice": "£1,800 – £3,500",
-              "cta": "Get Quote for CHHC"
-            },
-            {
-              "code": "DNUE",
-              "fuel": "Petrol",
-              "size": "2.0",
-              "power": "245bhp",
-              "compatibleModels": "Golf GTI Mk7.5, Tiguan (2017-2020)",
-              "avgRebuiltPrice": "£2,000 – £3,800",
-              "cta": "Get Quote for DNUE"
-            }
-          ]
-        },
-        {
-          "name": "EA188 / PD 2.0 TDI",
-          "era": "Pre-2008 – Unit Injector/Pumpe-Düse",
-          "failureNote": "The problematic early 2.0 TDI. Crankshaft, injector, and oil pump issues are common. Most owners choose replacement over repair. *— Get Quote →* after each row above. Common failure points: EA188 engines are known for crankshaft failure, injector seal leaks, and oil pump drive failure due to inferior balance shaft materials. Our rebuilt units incorporate upgraded oil pump drive assemblies where available.",
-          "engines": [
-            {
-              "code": "AZV",
-              "fuel": "Diesel",
-              "size": "2.0",
-              "power": "136bhp",
-              "compatibleModels": "Golf Mk5, Passat B6 (2004-2006)",
-              "avgRebuiltPrice": "£1,200 – £2,500",
-              "cta": "Get Quote for AZV"
-            },
-            {
-              "code": "BMM",
-              "fuel": "Diesel",
-              "size": "2.0",
-              "power": "136-140bhp",
-              "compatibleModels": "Touran, Caddy, Eos (2006-2010)",
-              "avgRebuiltPrice": "£1,300 – £2,600",
-              "cta": "Get Quote for BMM"
-            },
-            {
-              "code": "BMN",
-              "fuel": "Diesel",
-              "size": "2.0",
-              "power": "168bhp",
-              "compatibleModels": "Golf Mk5 GT, Passat B6 (2005-2008)",
-              "avgRebuiltPrice": "£1,500 – £2,900",
-              "cta": "Get Quote for BMN"
-            },
-            {
-              "code": "BKP",
-              "fuel": "Diesel",
-              "size": "2.0",
-              "power": "140bhp",
-              "compatibleModels": "Passat B6 (2005-2008)",
-              "avgRebuiltPrice": "£1,300 – £2,700",
-              "cta": "Get Quote for BKP"
-            }
-          ]
-        },
-        {
-          "name": "EA211 1.0/1.4/1.5 TSI",
-          "era": "Small Petrol Turbo – 2012–Present",
-          "failureNote": "Modern small-capacity turbo petrol family. Belt-driven camshaft (not chain). Generally reliable; issues are rare. *— Get Quote →* after each row above. Common failure points: EA211 engines are generally robust. Some owners report thermostat housing leaks and EVAP system issues. Our rebuilt units include new gaskets and thermostats as standard.",
-          "engines": [
-            {
-              "code": "DLAC",
-              "fuel": "Petrol",
-              "size": "1.0",
-              "power": "95bhp",
-              "compatibleModels": "Polo Mk6, T-Cross (2017-2023)",
-              "avgRebuiltPrice": "£1,100 – £2,200",
-              "cta": "Get Quote for DLAC"
-            },
-            {
-              "code": "CZCA",
-              "fuel": "Petrol",
-              "size": "1.4",
-              "power": "125bhp",
-              "compatibleModels": "Golf Mk7, Passat B8 (2013-2017)",
-              "avgRebuiltPrice": "£1,300 – £2,600",
-              "cta": "Get Quote for CZCA"
-            },
-            {
-              "code": "CXSB",
-              "fuel": "Petrol",
-              "size": "1.4",
-              "power": "150bhp",
-              "compatibleModels": "Golf Mk7, Tiguan (2016-2019)",
-              "avgRebuiltPrice": "£1,500 – £2,800",
-              "cta": "Get Quote for CXSB"
-            },
-            {
-              "code": "DADA",
-              "fuel": "Petrol",
-              "size": "1.5",
-              "power": "130bhp",
-              "compatibleModels": "Golf Mk7.5, T-Roc (2017-2023)",
-              "avgRebuiltPrice": "£1,400 – £2,800",
-              "cta": "Get Quote for DADA"
-            },
-            {
-              "code": "DPCA",
-              "fuel": "Petrol",
-              "size": "1.5",
-              "power": "150bhp",
-              "compatibleModels": "Golf Mk8, Octavia (2020-Present)",
-              "avgRebuiltPrice": "£1,600 – £3,000",
-              "cta": "Get Quote for DPCA"
-            }
-          ]
-        },
-        {
-          "name": "Air-Cooled / Classic Engines",
-          "era": "Type 1, Type 2, Type 25",
-          "failureNote": "Classic VW flat-four engines. Replacement demand remains strong for restoration projects. — Get Quote → for specialist classic engine rebuilders. *— Get Quote →* after each row above. Common failure points: Classic air-cooled engines are known for oil leaks, cylinder head warping, and crankcase wear in high-mileage units. Our network includes classic Volkswagen specialists offering fully rebuilt engines with upgraded seals and bearings",
-          "engines": [
-            {
-              "code": "AS",
-              "fuel": "Petrol",
-              "size": "1.6",
-              "power": "50bhp",
-              "compatibleModels": "Beetle (1303/1600), T2 Bay (1973-1980)",
-              "avgRebuiltPrice": "£1,200 – £2,500",
-              "cta": "Get Quote for AS"
-            },
-            {
-              "code": "AJ",
-              "fuel": "Petrol",
-              "size": "1.6",
-              "power": "50bhp",
-              "compatibleModels": "Beetle, Karmann Ghia (1974-1980)",
-              "avgRebuiltPrice": "£1,200 – £2,500",
-              "cta": "Get Quote for AJ"
-            },
-            {
-              "code": "CJ",
-              "fuel": "Petrol",
-              "size": "2.0",
-              "power": "70bhp",
-              "compatibleModels": "T2 Bay (1975-1979)",
-              "avgRebuiltPrice": "£1,800 – £3,500",
-              "cta": "Get Quote for CJ"
-            },
-            {
-              "code": "DG",
-              "fuel": "Petrol",
-              "size": "1.9",
-              "power": "77bhp",
-              "compatibleModels": "T25/T3 (1982-1992)",
-              "avgRebuiltPrice": "£1,600 – £3,200",
-              "cta": "Get Quote for DG"
-            },
-            {
-              "code": "DJ",
-              "fuel": "Petrol",
-              "size": "2.1",
-              "power": "112bhp",
-              "compatibleModels": "T25/T3 Caravelle (1985-1992)",
-              "avgRebuiltPrice": "£2,000 – £3,800",
-              "cta": "Get Quote for DJ"
+              "code": "Passat GTE PHEV Drive Unit",
+              "title": "PHEV (Petrol + Electric)",
+              "familyHeading": "Passat GTE PHEV Drive Unit - PHEV (Petrol + Electric)",
+              "fuel": "PHEV (Petrol + Electric)",
+              "size": "1.4 Litre (Petrol) + Electric Motor",
+              "power": "215 hp (combined)",
+              "compatibleModels": "Passat GTE, Passat GTE Estate",
+              "avgRebuiltPrice": "£2,500 - £4,500 supply only",
+              "cta": "→ Get quotes for Passat GTE Volkswagen hybrid engine replacement"
             }
           ]
         }
@@ -2979,126 +2830,95 @@
       "closing": "Not sure which engine size your Volkswagen needs? Enter your registration number and we'll match you to the exact engine code and displacement — instantly. All engines supplied with a minimum 12-month warranty from UK Volkswagen specialists."
     },
     "fuelTypes": {
-      "tag": "Complete Volkswagen Engines List",
-      "h2": "Volkswagen Engines by Fuel Type",
-      "intro": "Choose your Volkswagen engine by fuel type to compare realistic replacement prices, known brand‑wide issues, and UK specialist supply – from the most popular diesel workhorses to the latest electrified powertrains.",
+      "tag": "Volkswagen Engines by Fuel Type",
+      "h2": "Volkswagen Diesel vs Petrol vs Hybrid vs Electric - Which Fuel Type Is Right For You?",
+      "intro": "Compare Volkswagen engine fuel types by replacement costs, running costs, reliability reputation, and model availability. Use this guide to understand your options - then enter your registration for an instant match and quotes from UK Volkswagen specialists.",
       "items": [
         {
-          "title": "Volkswagen Diesel Engines",
-          "description": "** Diesel has been Volkswagen’s UK bread and butter for two decades, dominating Golf, Passat, Tiguan and Transporter sales – and the majority of engine replacement enquiries.",
+          "title": "Diesel Engines",
+          "description": "Volkswagen's diesel engines, particularly the 2.0 TDI EA189 and EA288 families, have powered millions of UK vehicles across the Golf, Passat, Tiguan, and Transporter ranges - making them the dominant force in Volkswagen replacement engine enquiries.",
+          "descriptor": "Volkswagen's diesel engines, particularly the 2.0 TDI EA189 and EA288 families, have powered millions of UK vehicles across the Golf, Passat, Tiguan, and Transporter ranges - making them the dominant force in Volkswagen replacement engine enquiries.",
           "families": [
-            "**EA189 (1.6/2.0 TDI)** – The high-volume 2008–2015 unit; oil pump hex key and DPF failures.",
-            "**EA288 (2.0 TDI)** – 2015–present common rail; AdBlue pump and NOx sensor issues.",
-            "**EA188 / PD (1.9/2.0 TDI)** – Pre-2008 unit injector engines; crankshaft bearing and injector seal failure.",
-            "**V6 TDI (3.0)** – Touareg; AdBlue & EGR cooler problems on Euro 6 versions.",
-            "**2.5 TDI (5-cylinder)** – Transporter T5; injector and camshaft wear."
+            "£1,500 - £4,000 (supply only)",
+            "1.6 TDI (EA189/EA288): £1,500 - £2,500",
+            "2.0 TDI (BKD, EA189): £1,800 - £2,800",
+            "2.0 TDI (EA288): £1,900 - £3,000",
+            "2.0 BiTDI (CFCA - Transporter): £2,500 - £4,000"
           ],
-          "foundIn": [
-            "**Golf Mk5/Mk6/Mk7** – 1.6 TDI (CAYC), 2.0 TDI (BKD, CBAB, CRLB, CUNA)",
-            "**Passat B6/B7/B8** – 2.0 TDI (BKP, CFFB, CRLB, CUPA)",
-            "**Tiguan I/II** – 2.0 TDI (CBAB, CFGB, DFFA)",
-            "**Transporter T5/T6** – 1.9 TDI (AXR), 2.0 TDI (CFCA BiTDI, CXEC)",
-            "**Touran / Caddy** – 1.6 TDI (CAYC), 2.0 TDI (BMM, CFHC)",
-            "**Amarok** – 2.0 BiTDI, 3.0 V6 TDI"
+          "foundIn": [],
+          "knownFor": [],
+          "typicalModels": [],
+          "importantNotes": [
+            "High-mileage motorway drivers covering 15,000+ miles annually",
+            "Towing and load-carrying needs requiring strong low-end torque",
+            "Long-distance commuters who benefit from the best fuel economy",
+            "Urban drivers with short daily trips who are better served by petrol (DPF and EGR issues are common)",
+            "Low-mileage users who don't drive enough to justify the diesel premium",
+            "Typical searches: Volkswagen 2.0 TDI engine replacement, Golf TDI engine for sale, Volkswagen EA189 2.0 TDI replacement cost, Passat 2.0 TDI engine price, Transporter CFCA replacement engine, Volkswagen TDI engine rebuild, Golf GTD engine replacement, Volkswagen diesel engine specialist UK → Get quotes for Volkswagen Diesel replacement engines → Not sure which diesel you have? Enter your registration number for an instant match"
           ],
-          "knownFor": [
-            "Excellent motorway economy and torque – especially the 2.0 TDI EA189/EA288 family.",
-            "**DPF clogging** on short‑journey cars across all 1.6/2.0 common rail units.",
-            "**EA189 oil pump hex key wear** – silent oil pressure loss, ruins crankshaft.",
-            "**EA288 AdBlue pump & NOx sensor failures** – triggers countdown to no‑start.",
-            "**PD (EA188) injector seal leaks** – diesel in oil, potential engine runaway.",
-            "Golf 2.0 TDI (BKD, CBAB, CRLB, CUNA)",
-            "Passat 2.0 TDI (CRLB, CUPA)",
-            "Tiguan 2.0 TDI (CFGB, DFFA)",
-            "Transporter T5/T6 2.0 BiTDI (CFCA, CXEC)",
-            "Touran 1.6 TDI (CAYC)"
-          ],
-          "importantNotes": [],
           "cta": "→ Get quotes for Volkswagen Diesel replacement engines"
         },
         {
-          "title": "Volkswagen Petrol Engines",
-          "description": "** From the turbocharged EA888 range powering GTIs to the small-capacity EA211 TSI units in Polos and Ups, Volkswagen petrol engines cover everything from city runabouts to performance hatchbacks.",
+          "title": "Petrol Engines",
+          "description": "Volkswagen's petrol engine range spans from the efficient 1.0 TSI three-cylinder to the iconic 2.0 TSI EA888 found in the Golf GTI and R - delivering everything from urban economy to hot-hatch performance.",
+          "descriptor": "Volkswagen's petrol engine range spans from the efficient 1.0 TSI three-cylinder to the iconic 2.0 TSI EA888 found in the Golf GTI and R - delivering everything from urban economy to hot-hatch performance.",
           "families": [
-            "**EA888 (1.8/2.0 TSI)** – Golf GTI, Scirocco, Tiguan; timing chain tensioner failure on Gen1/2; carbon buildup across all gens.",
-            "**EA211 (1.0/1.4/1.5 TSI)** – Polo, Golf, T-Cross; belt-driven, generally reliable, thermostat housing leaks.",
-            "**VR6 (3.2/3.6)** – Golf R32, Passat R36; timing chain wear, high oil consumption.",
-            "**1.8T 20v (non-EA888)** – Mk4 Golf GTI, early Passat; coil pack and oil sludge issues.",
-            "**1.4 TSI Twincharger (CAVE/CTHE)** – Polo GTI, Golf Mk6; supercharger clutch failure, timing chain stretch."
+            "£1,500 - £3,800 (supply only)",
+            "1.0 TSI (EA211): £1,500 - £2,200",
+            "1.2 TSI (EA111/EA211): £1,500 - £2,400",
+            "1.4 TSI (EA111/EA211): £1,800 - £2,800",
+            "1.5 TSI (EA211): £1,800 - £2,800"
           ],
-          "foundIn": [
-            "**Golf Mk5/Mk6/Mk7/Mk8** – 1.4 TSI (CAXA), 1.5 TSI (DADA), 2.0 TSI (CCZB, CHHA, DNUE)",
-            "**Polo Mk5/Mk6** – 1.0 TSI (CHYA, DLAC), 1.2 TSI (CBZB), 1.4/1.8 GTI (CAVE, DAJA)",
-            "**Passat B7/B8** – 1.4 TSI (CAXA), 1.5 TSI (DPCA), 2.0 TSI (CCZA)",
-            "**Tiguan I/II** – 1.4 TSI (CAVA), 2.0 TSI (CHHB, DNUE)",
-            "**Scirocco** – 1.4 TSI (CAVD), 2.0 TSI (CCZB)",
-            "**Up! / T-Cross** – 1.0 MPI (CHYA) / 1.0 TSI (DLAC)"
+          "foundIn": [],
+          "knownFor": [],
+          "typicalModels": [],
+          "importantNotes": [
+            "Urban and suburban drivers with lower annual mileage (under 12,000 miles)",
+            "Enthusiasts wanting the smoother, more refined driving experience of a petrol engine",
+            "Drivers who value lower upfront purchase costs and simpler emissions systems (no DPF/AdBlue)",
+            "High-mileage motorway drivers who would benefit from diesel's superior fuel economy",
+            "Towing or load-carrying users who need diesel's low-end torque",
+            "Typical searches: Volkswagen 2.0 TSI engine replacement, Golf GTI engine for sale, EA888 replacement engine price, Volkswagen 1.4 TSI engine cost, Polo 1.0 TSI replacement engine, Volkswagen petrol engine specialist, Golf R engine replacement cost, Tiguan 2.0 TSI engine price UK → Compare Volkswagen Petrol engine prices → Not sure which petrol you have? Enter your registration number for an instant match"
           ],
-          "knownFor": [
-            "Strong performance from the EA888 range – the tuner’s choice.",
-            "**EA888 Gen1/2 timing chain tensioner failure** – catastrophic valve/piston contact.",
-            "**Intake valve carbon buildup** across all direct‑injection TSI engines.",
-            "**1.4 TSI Twincharger supercharger clutch & chain problems** – expensive repair.",
-            "**Thermostat housing / water pump leaks** on EA211 and EA888 Gen3.",
-            "Golf GTI / Golf R (EA888)",
-            "Polo GTI (1.4/1.8 TSI)",
-            "Scirocco 2.0 TSI",
-            "Tiguan 1.5 TSI / 2.0 TSI",
-            "Up! 1.0"
-          ],
-          "importantNotes": [],
           "cta": "→ Compare Volkswagen Petrol engine prices"
         },
         {
-          "title": "Volkswagen Plug‑in Hybrid (PHEV) Engines",
-          "description": "** Volkswagen’s GTE and eHybrid models pair a turbocharged 1.4 TSI petrol engine with an electric motor, sharing the same engine block as non‑hybrid Golfs and Passats.",
+          "title": "Hybrid & Mild Hybrid (MHEV / PHEV) Engines",
+          "description": "Volkswagen's hybrid range is dominated by the Passat GTE PHEV, offering a blend of 1.4-litre TSI petrol power and electric motor torque. Mild hybrids (MHEV) with 48V systems are increasingly common across Golf and T-Roc models, though they are still rare in the replacement market.",
+          "descriptor": "Volkswagen's hybrid range is dominated by the Passat GTE PHEV, offering a blend of 1.4-litre TSI petrol power and electric motor torque. Mild hybrids (MHEV) with 48V systems are increasingly common across Golf and T-Roc models, though they are still rare in the replacement market.",
           "families": [
-            "**CUKB** – 1.4 TSI PHEV unit, Golf GTE Mk7, Passat GTE B8. Petrol engine identical to non‑hybrid EA211 but with integrated electric motor.",
-            "Electric‑only range of 30‑40 miles, then switches to hybrid or pure petrol.",
-            "Petrol engine block is standard EA211 – replacement process is similar to non‑hybrid.",
-            "Battery and motor are separate units; engine failure does not automatically require hybrid system replacement."
+            "PHEV (Plug-in Hybrid - Passat GTE): Combines a 1.4-litre TSI petrol engine (EA211) with an electric motor integrated into the DSG gearbox. The battery (typically 9.9kWh) can be charged via an external plug or via regenerative braking, providing 20-40 miles of pure electric range.",
+            "MHEV (Mild Hybrid - Golf Mk8, T-Roc): Uses a 48V belt-integrated starter-generator that assists the petrol engine during acceleration, provides torque fill, and enables coasting (engine off) at speed. The small 48V battery is recharged via regenerative braking.",
+            "Battery location: The high-voltage battery is typically located under the rear seats (Passat GTE) or under the boot floor (Golf GTE) - careful handling is required for any work in these areas."
           ],
-          "foundIn": [
-            "**Golf GTE Mk7 (2014‑2020)** – CUKB 1.4 TSI PHEV, 6‑speed DSG",
-            "**Golf GTE Mk8 (2020‑present)** – 1.4 TSI PHEV, updated battery and motor",
-            "**Passat GTE B8 (2015‑2022)** – CUKB 1.4 TSI, larger estate body",
-            "**Tiguan eHybrid (2021‑present)** – 1.4 TSI PHEV"
-          ],
+          "foundIn": [],
           "knownFor": [],
+          "typicalModels": [],
           "importantNotes": [
-            "The 1.4 TSI petrol block in PHEVs is **not uniquely hybrid‑specific** – it can be rebuilt by any EA211 specialist.",
-            "High‑voltage battery degradation is a more common replacement driver than engine failure.",
-            "Always request a hybrid system health check alongside any engine quote."
+            "Company car drivers benefiting from lower Benefit-in-Kind (BIK) tax rates",
+            "Urban commuters who can charge daily and drive within the electric range",
+            "Drivers who want to reduce fuel costs and emissions without going fully electric",
+            "Drivers without off-street parking or reliable charging access",
+            "High-mileage users who would benefit more from diesel's efficiency on long runs",
+            "Typical searches: Volkswagen Passat GTE engine replacement, Passat GTE hybrid battery price, Volkswagen hybrid engine specialist, Golf GTE engine replacement, Volkswagen hybrid motor replacement, Passat GTE 1.4 TSI engine for sale, Volkswagen hybrid battery degradation, Volkswagen PHEV engine price UK → Enquire about Volkswagen Hybrid engine availability → Not sure which hybrid you have? Enter your registration number for an instant match"
           ],
-          "cta": "→ Enquire about Volkswagen Plug‑in Hybrid engine availability"
+          "cta": "Get quotes for Volkswagen Volkswagen Hybrid & Mild Hybrid (MHEV / PHEV) Engines engines"
         },
         {
-          "title": "Volkswagen Electric Powertrains (BEV)",
-          "description": "** Volkswagen’s MEB‑platform ID range uses the APP series permanent‑magnet synchronous motor. Motor failure is extremely rare, but our network connects you with HV battery and motor repair specialists.",
-          "families": [
-            "**APP 310 (APP310)** – 150kW (204bhp) motor, ID.3, ID.4, ID.5, ID. Buzz",
-            "**APP 550** – 210kW (286bhp) motor, ID.7, later ID.4/ID.5",
-            "Single motor (rear‑wheel drive) or dual motor (4Motion all‑wheel drive).",
-            "Typical range 250‑340 miles WLTP depending on battery size.",
-            "Motor failure is rare; inverter (power electronics) faults are more common."
-          ],
-          "foundIn": [
-            "**ID.3 (2020‑present)** – APP 310, 45/58/77kWh batteries",
-            "**ID.4 (2021‑present)** – APP 310 (RWD), APP 550 (later models), dual motor GTX",
-            "**ID.5 (2022‑present)** – APP 310 / APP 550, coupe SUV",
-            "**ID. Buzz (2022‑present)** – APP 310 (RWD), 4Motion arriving 2024+",
-            "**ID.7 (2023‑present)** – APP 550, saloon/liftback"
-          ],
+          "title": "Electric Powertrains",
+          "description": "The Volkswagen e-Golf was the brand's first mass-market electric vehicle, using a permanent-magnet synchronous motor (100-136 hp). Electric motors rarely fail, but we connect you with UK specialists for battery module repairs and drive unit replacements.",
+          "descriptor": "The Volkswagen e-Golf was the brand's first mass-market electric vehicle, using a permanent-magnet synchronous motor (100-136 hp). Electric motors rarely fail, but we connect you with UK specialists for battery module repairs and drive unit replacements.",
+          "families": [],
+          "foundIn": [],
           "knownFor": [],
+          "typicalModels": [],
           "importantNotes": [
-            "No traditional “engine” to replace – we connect you with specialists for motor, inverter, and HV battery repair.",
-            "Labour rates and diagnostic equipment differ from combustion engine work.",
-            "Motor bearing whine and inverter failure are the primary reported issues."
+            "Typical searches: Volkswagen e-Golf motor replacement, e-Golf battery repair, Volkswagen electric motor specialist UK, e-Golf drive unit price, Volkswagen EV motor replacement cost, e-Golf battery module replacement → Enquire about Volkswagen Electric motor repair or replacement → Not sure which electric Volkswagen you have? Enter your registration number for an instant match"
           ],
-          "cta": "→ Enquire about Volkswagen Electric motor repair or replacement"
+          "cta": "Get quotes for Volkswagen Volkswagen Electric Powertrains engines"
         }
       ],
-      "closing": "Not sure which fuel type your Volkswagen has? Enter your registration number above to instantly identify your model, engine code, fuel system and compatible replacement options – all backed by a minimum 12‑month unlimited mileage warranty from UK Volkswagen specialists."
+      "closing": "Not sure which fuel type your Volkswagen has? Enter your registration number for an instant match."
     },
     "engineCodeDirectory": {
       "tag": "Engine Codes",

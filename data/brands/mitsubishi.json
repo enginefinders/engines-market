@@ -1852,243 +1852,125 @@
       ]
     },
     "engineCodes": {
-      "tag": "Replacement Cost",
-      "h2": "Mitsubishi Engine Codes & Average Rebuilt Prices (UK Supply)",
-      "h3": "Compare costs for every major Mitsubishi engine — 4-cylinder MIVEC, 4D5/4N1 DI-D diesel & 6G V6 petrol family. All prices are typical UK market ranges for professionally rebuilt engines with warranty. Click \"Get Quote\" on any engine to receive tailored prices from our network of UK Mitsubishi specialists.",
+      "tag": "Engine Codes",
+      "h2": "Mitsubishi Engine Codes - Most Replaced Engines & Full Directory",
+      "h3": "Every major Mitsubishi engine code with technical specs, compatible UK models, known failures and average rebuilt prices. Use the quick-reference accordion below for all remaining codes.",
+      "closingLine": "Can't find your engine code? Enter your registration number above - we'll identify the exact Mitsubishi engine fitted to your vehicle.",
       "filters": [
-        "All",
-        "Diesel",
-        "Petrol"
+        "Diesel Engines (Most Replaced in the UK)",
+        "Petrol Engines (Most Replaced in the UK)"
       ],
       "groups": [
         {
-          "name": "4-Cylinder MIVEC Petrol",
-          "era": "2003–2024",
-          "failureNote": "The MIVEC petrol family is known for timing chain stretch and tensioner failure, particularly on higher-mileage 4B1 engines, plus oil consumption issues on 2.0L/2.4L variants. Our rebuilt units include new timing chains, tensioners, guides, and upgraded piston rings where applicable.",
+          "name": "Diesel Engines (Most Replaced in the UK)",
+          "era": "Extracted from Mitsubishi diesel engines (most replaced in the uk) technical replacement data.",
+          "failureNote": "Balance shaft system failure - the balance shaft assembly can break down, causing catastrophic internal engine damage. A replacement can cost upwards of £2,500, with some owners quoted over £5,000. The issue is so widespread that aftermarket \"delete kits\" have been developed to remove the system entirely., Cracking exhaust manifolds - common on early 4N14 units; Mitsubishi eventually redesigned them.",
           "engines": [
             {
-              "code": "4A92",
-              "fuel": "Petrol",
-              "size": "1.6L",
-              "power": "~114-117 HP",
-              "compatibleModels": "ASX (2010-2024), Lancer",
-              "avgRebuiltPrice": "£1,200 – £1,800",
-              "cta": "Get Quote for 4A92"
+              "code": "4N14",
+              "title": "2.3L Diesel",
+              "familyHeading": "4N14 - 2.3L Diesel",
+              "fuel": "Diesel",
+              "size": "2.3 Litre",
+              "power": "147 hp",
+              "compatibleModels": "Outlander III, L200 (2015-2019), ASX",
+              "avgRebuiltPrice": "£3,300 - £5,400 supply only",
+              "cta": "→ Get quotes for 4N14 Mitsubishi engine replacement"
             },
-            {
-              "code": "4B10",
-              "fuel": "Petrol",
-              "size": "1.8L",
-              "power": "143 HP",
-              "compatibleModels": "Lancer (2008-2010), Lancer Sportback",
-              "avgRebuiltPrice": "£1,650 – £2,450",
-              "cta": "Get Quote for 4B10"
-            },
-            {
-              "code": "4B11",
-              "fuel": "Petrol",
-              "size": "2.0L",
-              "power": "147-240 HP",
-              "compatibleModels": "ASX (2010-2012), Outlander, Lancer, Delica (2007-2024)",
-              "avgRebuiltPrice": "£1,700 – £2,200",
-              "cta": "Get Quote for 4B11"
-            },
-            {
-              "code": "4B12",
-              "fuel": "Petrol",
-              "size": "2.4L",
-              "power": "~168 HP",
-              "compatibleModels": "Outlander, Lancer, Galant",
-              "avgRebuiltPrice": "£1,600 – £2,400",
-              "cta": "Get Quote for 4B12"
-            },
-            {
-              "code": "4J10",
-              "fuel": "Petrol",
-              "size": "1.8L",
-              "power": "~139 HP",
-              "compatibleModels": "ASX, Lancer",
-              "avgRebuiltPrice": "£1,500 – £2,200",
-              "cta": "Get Quote for 4J10"
-            },
-            {
-              "code": "4J11",
-              "fuel": "Petrol",
-              "size": "2.0L",
-              "power": "~150 HP",
-              "compatibleModels": "ASX (2010-2024), Outlander, Delica (2007-2024)",
-              "avgRebuiltPrice": "£1,600 – £2,200",
-              "cta": "Get Quote for 4J11"
-            },
-            {
-              "code": "4J12",
-              "fuel": "Petrol",
-              "size": "2.4L",
-              "power": "~166 HP",
-              "compatibleModels": "Outlander, ASX",
-              "avgRebuiltPrice": "£1,700 – £2,500",
-              "cta": "Get Quote for 4J12"
-            }
-          ]
-        },
-        {
-          "name": "4-Cylinder Turbo Petrol",
-          "era": "2017–2024",
-          "failureNote": "The 4B40 turbo petrol engine is relatively modern but can experience wastegate actuator issues and carbon buildup on intake valves due to direct injection. Our rebuilt units include valve cleaning and wastegate inspection.",
-          "engines": [
-            {
-              "code": "4B40",
-              "fuel": "Petrol",
-              "size": "1.5L",
-              "power": "163 HP",
-              "compatibleModels": "Eclipse Cross (2017-2024)",
-              "avgRebuiltPrice": "£1,900 – £2,800",
-              "cta": "Get Quote for 4B40"
-            }
-          ]
-        },
-        {
-          "name": "4D5 & 4N1 DI-D Diesel (1993–2024) – Highest Volume Commercial & 4x4",
-          "era": "All years",
-          "failureNote": "DI-D diesel engines suffer from EGR valve clogging, DPF blockage (Euro 5/6), injector failure, and turbocharger wear — especially on high-mileage L200 and Shogun 4x4s. Our rebuilt units include ultrasonic injector cleaning, new injector seals, EGR delete-ready intake cleaning, and upgraded turbo cartridges where specified.",
-          "engines": [
             {
               "code": "4D56",
+              "title": "2.5L Diesel",
+              "familyHeading": "4D56 - 2.5L Diesel",
               "fuel": "Diesel",
-              "size": "2.5L",
-              "power": "~85-134 HP",
-              "compatibleModels": "L200 (pre-2015), Shogun/Pajero, Delica",
-              "avgRebuiltPrice": "£1,800 – £3,200",
-              "cta": "Get Quote for 4D56"
+              "size": "2.5 Litre",
+              "power": "85-133 hp",
+              "compatibleModels": "L200 (1980-2015), Pajero, Delica",
+              "avgRebuiltPrice": "£940 - £3,500 supply only",
+              "cta": "→ Get quotes for 4D56 Mitsubishi engine replacement"
             },
             {
               "code": "4M40",
+              "title": "2.8L Diesel",
+              "familyHeading": "4M40 - 2.8L Diesel",
               "fuel": "Diesel",
-              "size": "2.8L",
-              "power": "~125 HP",
-              "compatibleModels": "Shogun/Pajero (1990s-2000s), Delica",
-              "avgRebuiltPrice": "£2,200 – £3,800",
-              "cta": "Get Quote for 4M40"
+              "size": "2.8 Litre",
+              "power": "125 hp",
+              "compatibleModels": "L200, Pajero",
+              "avgRebuiltPrice": "£825 - £3,535 supply only",
+              "cta": "→ Get quotes for 4M40 Mitsubishi engine replacement"
             },
             {
               "code": "4M41",
+              "title": "3.2L Diesel",
+              "familyHeading": "4M41 - 3.2L Diesel",
               "fuel": "Diesel",
-              "size": "3.2L",
-              "power": "~165-200 HP",
-              "compatibleModels": "Shogun/Pajero (2000-2015), L200",
-              "avgRebuiltPrice": "£2,500 – £4,500",
-              "cta": "Get Quote for 4M41"
-            },
-            {
-              "code": "4N14",
-              "fuel": "Diesel",
-              "size": "2.2L",
-              "power": "~147-177 HP",
-              "compatibleModels": "Outlander (2012-2020), Eclipse Cross",
-              "avgRebuiltPrice": "£2,000 – £3,500",
-              "cta": "Get Quote for 4N14"
-            },
-            {
-              "code": "4N15",
-              "fuel": "Diesel",
-              "size": "2.4L",
-              "power": "~154-178 HP",
-              "compatibleModels": "L200 (2015-2024)",
-              "avgRebuiltPrice": "£2,200 – £4,500",
-              "cta": "Get Quote for 4N15"
+              "size": "3.2 Litre",
+              "power": "160-170 hp",
+              "compatibleModels": "Pajero III/IV, L200",
+              "avgRebuiltPrice": "£822 - £2,295 supply only",
+              "cta": "→ Get quotes for 4M41 Mitsubishi engine replacement"
             }
           ]
         },
         {
-          "name": "6G7 Series V6 Petrol",
-          "era": "1990–2005",
-          "failureNote": "The 6G7 V6 family is known for timing belt failures (interference engine — belt replacement critical every 60k miles), lifter tick, and oil leaks from valve cover gaskets. Our rebuilt units include new timing belt kits (water pump, tensioner, idlers) and resealed top-end gaskets.",
+          "name": "Petrol Engines (Most Replaced in the UK)",
+          "era": "Extracted from Mitsubishi petrol engines (most replaced in the uk) technical replacement data.",
+          "failureNote": "Timing chain stretch - a weak point on 4B11 engines, even on the revised chain. Symptoms include rough idle and a triangle warning light., Con rod failure - on turbocharged 4B11T units, excessive cylinder pressure can bend con rods, leading to catastrophic engine failure.",
           "engines": [
             {
-              "code": "6G72",
+              "code": "4B11",
+              "title": "2.0L Petrol",
+              "familyHeading": "4B11 - 2.0L Petrol",
               "fuel": "Petrol",
-              "size": "3.0L",
-              "power": "~161-280 HP",
-              "compatibleModels": "3000GT (GTO), Shogun, Delica",
-              "avgRebuiltPrice": "£2,000 – £4,500",
-              "cta": "Get Quote for 6G72"
+              "size": "2.0 Litre",
+              "power": "147-295 hp (naturally aspirated to turbocharged)",
+              "compatibleModels": "Lancer (2007-2015), Outlander, ASX, Lancer Evolution X (4B11T)",
+              "avgRebuiltPrice": "£1,500 - £3,000 supply only",
+              "cta": "→ Get quotes for 4B11 Mitsubishi engine replacement"
+            },
+            {
+              "code": "4G63",
+              "title": "2.0L Petrol",
+              "familyHeading": "4G63 - 2.0L Petrol",
+              "fuel": "Petrol",
+              "size": "2.0 Litre",
+              "power": "130-280 hp",
+              "compatibleModels": "Lancer Evolution I-IX, Galant, Delica, Grandis",
+              "avgRebuiltPrice": "£1,000 - £1,750 supply only",
+              "cta": "→ Get quotes for 4G63 Mitsubishi engine replacement"
+            },
+            {
+              "code": "6G72",
+              "title": "3.0L V6 Petrol",
+              "familyHeading": "6G72 - 3.0L V6 Petrol",
+              "fuel": "Petrol",
+              "size": "3.0 Litre",
+              "power": "140-220 hp",
+              "compatibleModels": "Pajero, L200, Diamante, 3000GT",
+              "avgRebuiltPrice": "£2,500 - £3,900 supply only",
+              "cta": "→ Get quotes for 6G72 Mitsubishi engine replacement"
             },
             {
               "code": "6G74",
+              "title": "3.5L V6 Petrol",
+              "familyHeading": "6G74 - 3.5L V6 Petrol",
               "fuel": "Petrol",
-              "size": "3.5L",
-              "power": "~194-260 HP",
-              "compatibleModels": "Shogun, Delica (1993-2000), Magna/Verada",
-              "avgRebuiltPrice": "£2,200 – £5,000",
-              "cta": "Get Quote for 6G74"
-            }
-          ]
-        },
-        {
-          "name": "Legacy 4G Series Petrol",
-          "era": "1980s–2000s – Performance & Daily",
-          "failureNote": "The 4G63/4G64 family is robust but suffers from crankshaft walk (early Evo models), timing belt failure (interference engine), and oil starvation in high-performance applications. Our rebuilt performance engines include upgraded bearings, ARP fasteners, and revised oiling systems.",
-          "engines": [
-            {
-              "code": "4G63",
-              "fuel": "Petrol",
-              "size": "2.0L Turbo",
-              "power": "~200-280 HP",
-              "compatibleModels": "Lancer Evolution I-IX, Galant VR-4, Colt, Delica",
-              "avgRebuiltPrice": "£2,500 – £6,000",
-              "cta": "Get Quote for 4G63"
+              "size": "3.5 Litre",
+              "power": "194-280 hp",
+              "compatibleModels": "Pajero III/IV, L200",
+              "avgRebuiltPrice": "£2,500 - £3,900 supply only",
+              "cta": "→ Get quotes for 6G74 Mitsubishi engine replacement"
             },
             {
               "code": "4G64",
+              "title": "2.4L Petrol",
+              "familyHeading": "4G64 - 2.4L Petrol",
               "fuel": "Petrol",
-              "size": "2.4L",
-              "power": "~108-160 HP",
-              "compatibleModels": "Grandis, Delica, L200 (petrol variants), Space Gear",
-              "avgRebuiltPrice": "£1,400 – £2,800",
-              "cta": "Get Quote for 4G64"
-            },
-            {
-              "code": "4G69",
-              "fuel": "Petrol",
-              "size": "2.4L",
-              "power": "~160 HP",
-              "compatibleModels": "Grandis, Outlander (early), Lancer",
-              "avgRebuiltPrice": "£1,500 – £2,800",
-              "cta": "Get Quote for 4G69"
-            },
-            {
-              "code": "4G93",
-              "fuel": "Petrol",
-              "size": "1.8L",
-              "power": "~112-145 HP",
-              "compatibleModels": "Colt, Lancer, Carisma",
-              "avgRebuiltPrice": "£1,200 – £2,200",
-              "cta": "Get Quote for 4G93"
-            }
-          ]
-        },
-        {
-          "name": "Small Petrol",
-          "era": "1.0L–1.3L – City Cars & Kei-Class",
-          "failureNote": "Small displacement 3A9 engines are generally reliable but can suffer from ignition coil failure and throttle body deposits. Our rebuilt units include new coils and cleaned throttle bodies",
-          "engines": [
-            {
-              "code": "3A92",
-              "fuel": "Petrol",
-              "size": "1.2L",
-              "power": "~78-80 HP",
-              "compatibleModels": "Mirage, Space Star",
-              "avgRebuiltPrice": "£1,000 – £1,800",
-              "cta": "Get Quote for 3A92"
-            },
-            {
-              "code": "3B20",
-              "fuel": "Petrol",
-              "size": "1.0L",
-              "power": "~70 HP",
-              "compatibleModels": "Colt, Space Star",
-              "avgRebuiltPrice": "£900 – £1,500",
-              "cta": "Get Quote for 3B20"
+              "size": "2.4 Litre",
+              "power": "130-160 hp",
+              "compatibleModels": "L200, Pajero, Grandis",
+              "avgRebuiltPrice": "£1,000 - £3,000 supply only",
+              "cta": "→ Get quotes for 4G64 Mitsubishi engine replacement"
             }
           ]
         }
@@ -2757,77 +2639,60 @@
       "closing": "Not sure which engine size your Mitsubishi needs? Enter your registration number and we'll match you to the exact engine code and displacement — instantly. All engines supplied with a minimum 12‑month warranty from UK Mitsubishi specialists."
     },
     "fuelTypes": {
-      "tag": "Complete Mitsubishi Engines List",
-      "h2": "Mitsubishi Engines by Fuel Type",
-      "intro": "Choose your Mitsubishi engine by fuel type to compare realistic replacement prices, known brand-wide issues, and UK specialist supply – from the most popular diesel workhorses to the full-electric i-MiEV.",
+      "tag": "Mitsubishi Engines by Fuel Type",
+      "h2": "Mitsubishi Engine Codes - Most Replaced Engines & Full Directory",
+      "intro": "Every major Mitsubishi engine code with technical specs, compatible UK models, known failures and average rebuilt prices. Use the quick-reference accordion below for all remaining codes.",
       "items": [
         {
-          "title": "Mitsubishi Diesel Engines",
-          "description": "Mitsubishi diesel engines cover many of the brand's highest-mileage UK models. Replacement demand is usually driven by timing system wear, injector and turbo faults, plus EGR or DPF-related damage once repeat short-journey use starts affecting reliability.",
-          "descriptor": "High-mileage motorway and SUV applications",
+          "title": "Diesel Engines",
+          "description": "Mitsubishi's diesel engine range in the UK is dominated by the 4N14 (2.3-litre), 4D56 (2.5-litre), 4M40 (2.8-litre), and 4M41 (3.2-litre) - fitted to the L200, Pajero, Outlander, and Delica. Replacement demand is driven by balance shaft failure, cylinder head cracking, and DPF/EGR-related issues on these higher-mileage vehicles.",
+          "descriptor": "Mitsubishi's diesel engine range in the UK is dominated by the 4N14 (2.3-litre), 4D56 (2.5-litre), 4M40 (2.8-litre), and 4M41 (3.2-litre) - fitted to the L200, Pajero, Outlander, and Delica. Replacement demand is driven by balance shaft failure, cylinder head cracking, and DPF/EGR-related issues on these higher-mileage vehicles.",
           "families": [
-            "4D5 & 4N1 DI-D Diesel (1993–2024) – Highest Volume Commercial & 4x4"
+            "£825 - £5,400 (supply only)",
+            "1.8 4N13: £1,200 - £2,500",
+            "2.3 4N14: £3,300 - £5,400",
+            "2.5 4D56: £940 - £3,500",
+            "2.8 4M40: £825 - £3,535"
           ],
-          "foundIn": [
-            "Mitsubishi 3000GT Engines",
-            "Mitsubishi 380 Engines",
-            "Mitsubishi ASX Engines",
-            "Mitsubishi Carisma Engines"
-          ],
-          "knownFor": [
-            "Cylinder head cracking",
-            "injector pump seal failure",
-            "Injection pump seal leaks",
-            "head gasket failure"
-          ],
-          "typicalModels": [
-            "Mitsubishi 3000GT Engines",
-            "Mitsubishi 380 Engines",
-            "Mitsubishi ASX Engines",
-            "Mitsubishi Carisma Engines"
-          ],
+          "foundIn": [],
+          "knownFor": [],
+          "typicalModels": [],
           "importantNotes": [
-            "Short-journey use increases DPF, EGR, and oil-dilution risk on many diesel engines.",
-            "A documented service history matters more on diesel replacements because injector, turbo, and timing faults often build gradually."
+            "High-mileage motorway drivers covering 15,000+ miles annually",
+            "Off-road enthusiasts needing torque for challenging terrain",
+            "Fleet operators and tradespeople prioritising efficiency and durability",
+            "Towing users who need low-end torque",
+            "Urban drivers with short daily trips who are better served by petrol (DPF and EGR issues are common)",
+            "Typical searches: Mitsubishi L200 2.5 diesel engine replacement, Mitsubishi 4N14 balance shaft failure, Mitsubishi Pajero 3.2 diesel engine cost, Mitsubishi diesel engine specialist UK, Mitsubishi Outlander 2.3 diesel engine replacement, Mitsubishi 4D56 cylinder head problems, Mitsubishi L200 engine replacement cost, Mitsubishi Delica 2.8 diesel engine for sale → Get quotes for Mitsubishi Diesel replacement engines → Not sure which diesel you have? Enter your registration number for an instant match"
           ],
-          "cta": "Compare Mitsubishi diesel engine prices"
+          "cta": "→ Get quotes for Mitsubishi Diesel replacement engines"
         },
         {
-          "title": "Mitsubishi Petrol Engines",
-          "description": "Mitsubishi petrol engines span everything from core daily-driver models to higher-output performance variants. Most replacement enquiries start with timing chain noise, oil consumption, cooling-system failure, or internal wear that makes a warranted replacement more sensible than repeated repairs.",
-          "descriptor": "Core passenger-car and performance applications",
+          "title": "Petrol Engines",
+          "description": "Mitsubishi's petrol engine range in the UK spans from the 4G63 in the Lancer Evolution to the 6G72 and 6G74 V6s in the Pajero and L200 - delivering everything from city car economy to rally-bred performance.",
+          "descriptor": "Mitsubishi's petrol engine range in the UK spans from the 4G63 in the Lancer Evolution to the 6G72 and 6G74 V6s in the Pajero and L200 - delivering everything from city car economy to rally-bred performance.",
           "families": [
-            "4-Cylinder MIVEC Petrol",
-            "4-Cylinder Turbo Petrol",
-            "6G7 Series V6 Petrol",
-            "Legacy 4G Series Petrol"
+            "£1,000 - £3,900 (supply only)",
+            "1.5 4G15 / 1.6 4G18: £800 - £1,500",
+            "2.0 4B11: £1,500 - £3,000",
+            "2.4 4G64: £1,000 - £3,000",
+            "2.0 4G63: £1,000 - £1,750"
           ],
-          "foundIn": [
-            "Mitsubishi 3000GT Engines",
-            "Mitsubishi 380 Engines",
-            "Mitsubishi ASX Engines",
-            "Mitsubishi Carisma Engines"
-          ],
-          "knownFor": [
-            "Oil ring seizure (oil consumption)",
-            "MIVEC solenoid failure",
-            "timing chain stretch",
-            "Oil control ring seizure"
-          ],
-          "typicalModels": [
-            "Mitsubishi 3000GT Engines",
-            "Mitsubishi 380 Engines",
-            "Mitsubishi ASX Engines",
-            "Mitsubishi Carisma Engines"
-          ],
+          "foundIn": [],
+          "knownFor": [],
+          "typicalModels": [],
           "importantNotes": [
-            "Cold-start rattles, overheating history, and oil use are the biggest warning signs before a petrol engine replacement becomes necessary.",
-            "Direct-injection petrol engines often need specialist attention for carbon build-up alongside the main mechanical repair."
+            "Performance enthusiasts who value the Evolution driving character",
+            "Lower-mileage drivers who don't need diesel's fuel economy",
+            "Off-road users who prefer the simplicity of a petrol engine",
+            "High-mileage motorway drivers who would benefit from diesel's superior fuel economy",
+            "Drivers prioritising maximum fuel efficiency over performance",
+            "Typical searches: Mitsubishi Lancer Evolution engine replacement, Mitsubishi 4G63 engine rebuild, Mitsubishi Pajero 3.5 V6 engine cost, Mitsubishi petrol engine specialist UK, Mitsubishi 4B11 timing chain problems, Mitsubishi L200 3.0 V6 engine replacement, Mitsubishi 6G72 head gasket failure, Mitsubishi Outlander 2.0 engine price → Compare Mitsubishi Petrol engine prices → Not sure which petrol you have? Enter your registration number for an instant match"
           ],
-          "cta": "Compare Mitsubishi petrol engine prices"
+          "cta": "→ Compare Mitsubishi Petrol engine prices"
         }
       ],
-      "closing": "Not sure which fuel type your Mitsubishi has? Enter your registration number above to instantly identify your model, engine code, fuel system and compatible replacement options – all backed by a minimum 12‑month unlimited mileage warranty from UK Mitsubishi specialists."
+      "closing": "Not sure which fuel type your Mitsubishi has? Enter your registration number for an instant match."
     },
     "engineCodeDirectory": {
       "tag": "Engine Codes",

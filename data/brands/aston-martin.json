@@ -868,121 +868,106 @@
       ]
     },
     "engineCodes": {
-      "tag": "Replacement Cost",
-      "h2": "Aston Martin Engine Codes & Average Rebuilt Prices (UK Supply)",
-      "h3": "Compare costs for every major Aston Martin engine — VH-era V12 and V8, plus modern Mercedes-AMG units in DB11 and Vantage. All prices are typical UK market ranges for professionally rebuilt engines with warranty. Click \"Get Quote\" on any engine to receive tailored prices from our network of UK Aston Martin specialists.",
+      "tag": "Engine Codes",
+      "h2": "Aston Martin Engine Codes - Most Replaced Engines & Full Directory",
+      "h3": "Every major Aston Martin engine code with technical specs, compatible UK models, known failures and average rebuilt prices. Use the quick-reference accordion below for all remaining codes.",
+      "closingLine": "Can't find your engine code? Enter your registration number above - we'll identify the exact Aston Martin engine fitted to your vehicle.",
       "filters": [
-        "All",
-        "Diesel",
-        "Petrol"
+        "Petrol Engines (Most Replaced in the UK)"
       ],
       "groups": [
         {
-          "name": "Modern Mercedes-AMG Engines",
-          "era": "2016–Present",
-          "failureNote": "Get Quote → Common failure points: M177 engines are known for intake valve deposits and carbon buildup due to direct injection — our rebuilt units include catch can systems and decarbonised cylinder heads . AE31 V12 units require specialist timing chain and cooling system attention; all our V12 rebuilds include upgraded chain guides and water pump inspection.",
-          "engines": [
-            {
-              "code": "M177",
-              "fuel": "Petrol",
-              "size": "4.0L V8 Biturbo",
-              "power": "503–542 bhp",
-              "compatibleModels": "DB11 V8, Vantage (2018+), DBS Superleggera",
-              "avgRebuiltPrice": "£8,500 – £16,000",
-              "cta": "Get Quote for M177"
-            },
-            {
-              "code": "AE31",
-              "fuel": "Petrol",
-              "size": "6.2L V12",
-              "power": "630 bhp",
-              "compatibleModels": "DB11 AMR, DBS 770 Ultimate, Valkyrie (derived)",
-              "avgRebuiltPrice": "£12,000 – £22,000",
-              "cta": "Get Quote for AE31"
-            }
-          ]
-        },
-        {
-          "name": "VH-era V12 Engines",
-          "era": "2004–2018",
-          "failureNote": "Developer note: The AM04 and AM08 are Cosworth-derived units fitted to DB9, DBS, Vanquish, and Rapide. Get Quote → Common failure points: AM04/AM08 V12 engines suffer coolant leaks from ageing liner seals — our rebuilds include full liner seal replacement and upgraded 'O' rings . Ignition coil failures on early units are resolved with uprated coil packs.",
+          "name": "Petrol Engines (Most Replaced in the UK)",
+          "era": "Extracted from Aston Martin petrol engines (most replaced in the uk) technical replacement data.",
+          "failureNote": "Timing chain stretch - leading to rattling on start-up and potential valve/piston contact, Oil leaks - common from cam covers and sump gaskets on higher-mileage examples",
           "engines": [
             {
               "code": "AM04",
+              "title": "5.9L V12 Petrol",
+              "familyHeading": "AM04 - 5.9L V12 Petrol",
               "fuel": "Petrol",
-              "size": "5.9L V12",
-              "power": "450 bhp",
-              "compatibleModels": "DB9 (2004–2008), V12 Vantage (2009–2012)",
-              "avgRebuiltPrice": "£4,500 – £9,000",
-              "cta": "Get Quote for AM04"
+              "size": "5.9 Litre",
+              "power": "456-460 hp",
+              "compatibleModels": "DB9 (2004-2012), Vanquish (2001-2007), DBS (2007-2012), V12 Vantage (2009-2012)",
+              "avgRebuiltPrice": "£12,000 - £18,000 supply only",
+              "cta": "→ Get quotes for AM04 Aston Martin engine replacement"
             },
             {
               "code": "AM08",
+              "title": "5.9L V12 Petrol",
+              "familyHeading": "AM08 - 5.9L V12 Petrol",
               "fuel": "Petrol",
-              "size": "5.9L V12",
-              "power": "470–565 bhp",
-              "compatibleModels": "DB9 (2008–2016), DBS, Rapide, Vanquish",
-              "avgRebuiltPrice": "£5,500 – £11,000",
-              "cta": "Get Quote for AM08"
-            }
-          ]
-        },
-        {
-          "name": "VH-era V8 Engines",
-          "era": "2005–2018",
-          "failureNote": "Get Quote → Common failure points: AJ-V8 engines are known for camshaft wear and timing chain stretch — our rebuilt units include new timing components and revised oil jets. Routine inspection of valve seats prevents catastrophic valve failure on higher-mileage units.",
-          "engines": [
-            {
-              "code": "AJ-V8 Gen III",
-              "fuel": "Petrol",
-              "size": "4.3L V8",
-              "power": "380 bhp",
-              "compatibleModels": "V8 Vantage (2005–2008)",
-              "avgRebuiltPrice": "£3,500 – £7,500",
-              "cta": "Get Quote for AJ-V8 Gen III"
+              "size": "5.9 Litre",
+              "power": "470-517 hp",
+              "compatibleModels": "DB9 (2008-2016), DBS (2008-2012), V12 Vantage (2009-2018), Vanquish (2012-2018), Rapide (2010-2018)",
+              "avgRebuiltPrice": "£14,000 - £20,000 supply only",
+              "cta": "→ Get quotes for AM08 Aston Martin engine replacement"
             },
             {
-              "code": "AJ-V8 Gen IV",
+              "code": "AE31",
+              "title": "4.0L V8 Petrol (Naturally Aspirated)",
+              "familyHeading": "AE31 - 4.0L V8 Petrol (Naturally Aspirated)",
               "fuel": "Petrol",
-              "size": "4.7L V8",
-              "power": "420–430 bhp",
-              "compatibleModels": "V8 Vantage (2008–2018), V8 Vantage S",
-              "avgRebuiltPrice": "£4,000 – £8,500",
-              "cta": "Get Quote for AJ-V8 Gen IV"
-            }
-          ]
-        },
-        {
-          "name": "Heritage Straight-Six and V8 Engines",
-          "era": "Pre-2000",
-          "failureNote": "Get Quote → Common failure points: Heritage six‑cylinder engines suffer from cylinder liner seal failures leading to water ingress into oil — our rebuilds include correctly seated liners and upgraded gaskets . The 5.3L V8 requires liner seal replacement and corrosion treatment; all our units are pressure-tested before dispatch.",
-          "engines": [
-            {
-              "code": "DBA/DBD",
-              "fuel": "Petrol",
-              "size": "4.0L I6",
-              "power": "240 bhp",
-              "compatibleModels": "DB5, DB6, DBS (1967–1972)",
-              "avgRebuiltPrice": "£7,000 – £15,000",
-              "cta": "Get Quote for DBA/DBD"
+              "size": "4.0 Litre",
+              "power": "375-400 hp",
+              "compatibleModels": "V8 Vantage (2020-2025), DB11 V8 (2020-2023), DBX (2021-2025)",
+              "avgRebuiltPrice": "£8,000 - £12,000 supply only",
+              "cta": "→ Get quotes for AE31 Aston Martin engine replacement"
             },
             {
-              "code": "VB6J",
+              "code": "AJ133",
+              "title": "4.7L V8 Petrol",
+              "familyHeading": "AJ133 - 4.7L V8 Petrol",
               "fuel": "Petrol",
-              "size": "2.9L I6",
-              "power": "140 bhp",
-              "compatibleModels": "DB2, DB2/4 (1950–1957)",
-              "avgRebuiltPrice": "£8,000 – £18,000",
-              "cta": "Get Quote for VB6J"
+              "size": "4.7 Litre",
+              "power": "420-430 hp",
+              "compatibleModels": "V8 Vantage (2008-2018), V8 Vantage S (2011-2018)",
+              "avgRebuiltPrice": "£10,000 - £15,000 supply only",
+              "cta": "→ Get quotes for AJ133 Aston Martin engine replacement"
             },
             {
-              "code": "AEC",
+              "code": "AJ133S",
+              "title": "5.0L V8 Petrol (Supercharged)",
+              "familyHeading": "AJ133S - 5.0L V8 Petrol (Supercharged)",
               "fuel": "Petrol",
-              "size": "5.3L V8",
-              "power": "310–400 bhp",
-              "compatibleModels": "V8 Vantage (1977–1989), Virage",
-              "avgRebuiltPrice": "£6,000 – £14,000",
-              "cta": "Get Quote for AEC"
+              "size": "5.0 Litre",
+              "power": "510-565 hp",
+              "compatibleModels": "V8 Vantage S (2013-2018), DB11 V8 (2016-2020), Vantage (2018-2020)",
+              "avgRebuiltPrice": "£12,000 - £18,000 supply only",
+              "cta": "→ Get quotes for AJ133S Aston Martin engine replacement"
+            },
+            {
+              "code": "M177",
+              "title": "4.0L V8 Petrol (Twin-Turbo)",
+              "familyHeading": "M177 - 4.0L V8 Petrol (Twin-Turbo)",
+              "fuel": "Petrol",
+              "size": "4.0 Litre",
+              "power": "503-528 hp",
+              "compatibleModels": "DB11 V8 (2017-present), Vantage (2018-present), DBX (2020-present), V8 Vantage Roadster (2019-present)",
+              "avgRebuiltPrice": "£15,000 - £22,000 supply only",
+              "cta": "→ Get quotes for M177 Aston Martin engine replacement"
+            },
+            {
+              "code": "M178",
+              "title": "4.0L V8 Petrol (Twin-Turbo)",
+              "familyHeading": "M178 - 4.0L V8 Petrol (Twin-Turbo)",
+              "fuel": "Petrol",
+              "size": "4.0 Litre",
+              "power": "510-828 hp",
+              "compatibleModels": "Valhalla (2025-present), V12 Vantage (2022-present, some variants), DBX707 (2022-present)",
+              "avgRebuiltPrice": "£18,000 - £25,000 supply only",
+              "cta": "→ Get quotes for M178 Aston Martin engine replacement"
+            },
+            {
+              "code": "M177HYB",
+              "title": "4.0L V8 Petrol (Hybrid)",
+              "familyHeading": "M177HYB - 4.0L V8 Petrol (Hybrid)",
+              "fuel": "Hybrid (Petrol + Electric)",
+              "size": "4.0 Litre",
+              "power": "525-550 hp (system output)",
+              "compatibleModels": "DBX707 (2025-present), future hybrid models",
+              "avgRebuiltPrice": "£20,000 - £28,000 supply only",
+              "cta": "→ Get quotes for M177HYB Aston Martin engine replacement"
             }
           ]
         }
@@ -1315,46 +1300,58 @@
       "closing": "Not sure which engine size your Aston Martin needs? Enter your registration number and we'll match you to the exact engine code and displacement — instantly. All engines supplied with a minimum 12‑month warranty from UK Aston Martin specialists."
     },
     "fuelTypes": {
-      "tag": "Complete Aston Martin Engines List",
-      "h2": "Aston Martin Engines by Fuel Type",
-      "intro": "Choose your Aston Martin engine by fuel type to compare realistic replacement prices, known brand‑wide issues, and UK specialist supply – from the iconic V8 and V12 petrol engines to the latest twin‑turbo V8s and limited hybrid hypercars.",
+      "tag": "Aston Martin Engines by Fuel Type",
+      "h2": "Aston Martin Petrol vs Hybrid - Which Powertrain Is Right For You?",
+      "intro": "Compare Aston Martin engine fuel types by replacement costs, running costs, reliability reputation, and model availability. Use this guide to understand your options - then enter your registration for an instant match and quotes from UK Aston Martin specialists.",
       "items": [
         {
-          "title": "Aston Martin Petrol Engines",
-          "description": "Aston Martin petrol engines span everything from core daily-driver models to higher-output performance variants. Most replacement enquiries start with timing chain noise, oil consumption, cooling-system failure, or internal wear that makes a warranted replacement more sensible than repeated repairs.",
-          "descriptor": "Core passenger-car and performance applications",
+          "title": "Petrol Engines",
+          "description": "Aston Martin's petrol engine range spans from the Cosworth-developed V12s to the Mercedes-AMG-sourced twin-turbo V8s - delivering the performance, sound, and character that define the brand. Petrol is the dominant fuel type across all Aston Martin models.",
+          "descriptor": "Aston Martin's petrol engine range spans from the Cosworth-developed V12s to the Mercedes-AMG-sourced twin-turbo V8s - delivering the performance, sound, and character that define the brand. Petrol is the dominant fuel type across all Aston Martin models.",
           "families": [
-            "Modern Mercedes-AMG Engines",
-            "VH-era V12 Engines",
-            "VH-era V8 Engines",
-            "Heritage Straight-Six and V8 Engines"
+            "£8,000 - £25,000 (supply only)",
+            "AE31 (4.0L V8): £8,000 - £12,000",
+            "AJ133 (4.7L V8): £10,000 - £15,000",
+            "AJ133S (5.0L V8 Supercharged): £12,000 - £18,000",
+            "AM04 (5.9L V12): £12,000 - £18,000"
           ],
-          "foundIn": [
-            "Aston Martin DB11 Engines",
-            "Aston Martin DB2 Engines",
-            "Aston Martin DB4 Engines",
-            "Aston Martin DB5 Engines"
-          ],
-          "knownFor": [
-            "Water pump failure",
-            "coolant leaks from turbo lines",
-            "oil separator/map thermostat housing cracks",
-            "Steel core plug corrosion (coolant loss into oil)"
-          ],
-          "typicalModels": [
-            "Aston Martin DB11 Engines",
-            "Aston Martin DB2 Engines",
-            "Aston Martin DB4 Engines",
-            "Aston Martin DB5 Engines"
-          ],
+          "foundIn": [],
+          "knownFor": [],
+          "typicalModels": [],
           "importantNotes": [
-            "Cold-start rattles, overheating history, and oil use are the biggest warning signs before a petrol engine replacement becomes necessary.",
-            "Direct-injection petrol engines often need specialist attention for carbon build-up alongside the main mechanical repair."
+            "Performance enthusiasts who value the Aston Martin driving character and sound",
+            "Weekend drivers and collectors with lower annual mileage (under 8,000 miles)",
+            "Drivers who prioritise engagement and emotion over fuel economy",
+            "High-mileage daily drivers who would struggle with running costs of £5,000+ per year",
+            "Drivers prioritising maximum fuel efficiency over performance",
+            "Typical searches: Aston Martin engine replacement, Aston Martin V12 engine rebuild, Aston Martin DB9 engine for sale, Aston Martin V8 Vantage engine cost, Aston Martin M177 engine replacement, Aston Martin engine specialist UK, Aston Martin DB11 engine price, Aston Martin engine problems → Compare Aston Martin Petrol engine prices → Not sure which petrol you have? Enter your registration number for an instant match"
           ],
-          "cta": "Compare Aston Martin petrol engine prices"
+          "cta": "→ Compare Aston Martin Petrol engine prices"
+        },
+        {
+          "title": "Hybrid & Plug-in Hybrid (PHEV) Engines",
+          "description": "Aston Martin's hybrid range is in its early stages, led by the M177HYB in the DBX707 and future models. These combine the 4.0-litre V8 with an electric motor for enhanced performance and efficiency. Hybrid systems are still rare in the replacement market, but enquiries are growing.",
+          "descriptor": "Aston Martin's hybrid range is in its early stages, led by the M177HYB in the DBX707 and future models. These combine the 4.0-litre V8 with an electric motor for enhanced performance and efficiency. Hybrid systems are still rare in the replacement market, but enquiries are growing.",
+          "families": [
+            "PHEV (Plug-in Hybrid - M177HYB): Combines a 4.0-litre twin-turbo V8 with an electric motor integrated into the transmission. The battery (typically 15-20kWh) can be charged via an external plug or via regenerative braking, providing 15-25 miles of pure electric range.",
+            "Battery location: The high-voltage battery is typically located under the rear seats or boot floor - careful handling is required for any work in these areas.",
+            "No fully electric mode at high speed - the V8 is always engaged under heavy acceleration."
+          ],
+          "foundIn": [],
+          "knownFor": [],
+          "typicalModels": [],
+          "importantNotes": [
+            "Company car drivers benefiting from lower Benefit-in-Kind (BIK) tax rates",
+            "Urban commuters who can charge daily and drive within the electric range",
+            "Drivers who want to reduce fuel costs and emissions without sacrificing performance",
+            "Drivers without off-street parking or reliable charging access",
+            "High-mileage users who would benefit more from efficiency on long runs (though diesel is not available for Aston Martin)",
+            "Typical searches: Aston Martin DBX707 hybrid engine replacement, Aston Martin PHEV battery price, Aston Martin hybrid engine specialist UK, Aston Martin M177HYB engine cost, Aston Martin hybrid battery degradation, Aston Martin hybrid motor replacement → Enquire about Aston Martin Hybrid engine availability → Not sure which hybrid you have? Enter your registration number for an instant match"
+          ],
+          "cta": "Get quotes for Aston Martin Aston Martin Hybrid & Plug-in Hybrid (PHEV) Engines engines"
         }
       ],
-      "closing": "Not sure which fuel type your Aston Martin has? Enter your registration number above to instantly identify your model, engine code, fuel system and compatible replacement options – all backed by a minimum 12‑month unlimited mileage warranty from UK Aston Martin specialists."
+      "closing": "Not sure which fuel type your Aston Martin has? Enter your registration number for an instant match."
     },
     "engineCodeDirectory": {
       "tag": "Engine Codes",

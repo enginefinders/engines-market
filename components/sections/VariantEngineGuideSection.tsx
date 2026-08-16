@@ -1,3 +1,6 @@
+"use client";
+
+import { useMemo, useState } from "react";
 import Image from "next/image";
 import type { VariantEngineGuideData } from "@/types/variant";
 import Container from "@/components/ui/Container";
@@ -22,21 +25,29 @@ function AssetIcon({
   return <Image src={src} alt={alt} width={28} height={28} className={className} />;
 }
 
-function ArrowIcon() {
+function ArrowIcon({ className = "h-5 w-5" }: { className?: string }) {
   return (
-    <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" aria-hidden="true">
+    <svg viewBox="0 0 24 24" className={className} fill="none" aria-hidden="true">
       <path d="M4 12h16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
       <path d="m13 5 7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 }
 
-function normalizeCopy(text: string) {
+function ChevronIcon({ className = "h-4 w-4" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 20 20" className={className} fill="none" aria-hidden="true">
+      <path d="m5 7.5 5 5 5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function normalizeCopy(text = "") {
   return text
-    .replaceAll("Â£", "£")
-    .replaceAll("Â·", "·")
-    .replace(/[â€“â€”]/g, "-")
-    .replaceAll("Â", "")
+    .replace(/Ã‚Â£|Â£/g, "£")
+    .replace(/Ã‚Â·|Â·/g, "·")
+    .replace(/Ã¢â‚¬â€œ|Ã¢â‚¬â€|â€“|â€”/g, "-")
+    .replace(/Ã‚|Â/g, "")
     .trim();
 }
 
@@ -44,15 +55,26 @@ function stripArrow(text: string) {
   return normalizeCopy(text).replace(/^\s*->\s*/u, "").replace(/\s*->\s*$/u, "").trim();
 }
 
-function getCostTone(label: string) {
+function getSpecIcon(label: string, className = "h-5 w-5") {
   const normalized = label.toLowerCase();
-  if (normalized.includes("reconditioned")) {
-    return "text-[#15803d]";
+
+  if (normalized.includes("power") || normalized.includes("output") || normalized.includes("hp")) {
+    return <AssetIcon src="/icons/variant/dark-green/upgraded-components.png" className={`${className} object-contain`} />;
   }
-  if (normalized.includes("rebuilt")) {
-    return "text-[#ea7a12]";
+  if (normalized.includes("torque")) {
+    return <AssetIcon src="/icons/variant/dark-green/known-for.png" className={`${className} object-contain`} />;
   }
-  return "text-[#1d4ed8]";
+  if (normalized.includes("displacement") || normalized.includes("litre") || normalized.includes("engine")) {
+    return <AssetIcon src="/icons/variant/dark-green/engine.png" className={`${className} object-contain`} />;
+  }
+  if (normalized.includes("year") || normalized.includes("fitted")) {
+    return <AssetIcon src="/icons/variant/dark-green/calendar.png" className={`${className} object-contain`} />;
+  }
+  if (normalized.includes("trim") || normalized.includes("compatible")) {
+    return <AssetIcon src="/icons/variant/dark-green/car.png" className={`${className} object-contain`} />;
+  }
+
+  return <AssetIcon src="/icons/variant/dark-green/engine.png" className={`${className} object-contain`} />;
 }
 
 function getCostMeta(label: string) {
@@ -61,43 +83,27 @@ function getCostMeta(label: string) {
   if (normalized.includes("reconditioned")) {
     return {
       icon: "/icons/variant/white/warranty.png",
-      iconBg: "bg-[#15803d]",
-      rowBg: "bg-[#f4fbf6]",
-      rowBorder: "border-[#ccebd3]",
+      tone: "text-[#16803d]",
+      bg: "bg-[#16803d]",
       detail: "Addressed known issues, tested",
-      iconClassName: "h-[18px] w-[18px] object-contain",
     };
   }
 
   if (normalized.includes("rebuilt")) {
     return {
-      icon: "/icons/variant/dark-green/upgraded-components.png",
-      iconBg: "bg-[#ea7a12]",
-      rowBg: "bg-[#fff8f1]",
-      rowBorder: "border-[#f6d4b6]",
+      icon: "/icons/variant/white/rod-bearing.png",
+      tone: "text-[#c66a08]",
+      bg: "bg-[#ea7a12]",
       detail: "Full teardown, upgraded internals",
-      iconClassName: "h-[18px] w-[18px] object-contain brightness-0 invert",
     };
   }
 
   return {
     icon: "/icons/variant/white/em-pound.png",
-    iconBg: "bg-[#2f6fed]",
-    rowBg: "bg-[#f4f8ff]",
-    rowBorder: "border-[#cdddff]",
+    tone: "text-[#0b57d0]",
+    bg: "bg-[#0b57d0]",
     detail: "Tested, ready-to-fit engine",
-    iconClassName: "h-[18px] w-[18px] object-contain",
   };
-}
-
-function getSpecIcon(index: number) {
-  const icons = [
-    <AssetIcon key="power" src="/icons/variant/dark-green/upgraded-components.png" className="h-5 w-5 object-contain" />,
-    <AssetIcon key="calendar" src="/icons/variant/dark-green/calendar.png" className="h-5 w-5 object-contain" />,
-    <AssetIcon key="car" src="/icons/variant/dark-green/car.png" className="h-5 w-5 object-contain" />,
-  ];
-
-  return icons[index % icons.length];
 }
 
 function getVariantReplacementLabel(sectionTitle: string) {
@@ -129,215 +135,264 @@ function renderMobileGuideHeading(heading: string) {
 }
 
 export default function VariantEngineGuideSection({ data }: Props) {
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [moreOpen, setMoreOpen] = useState(false);
   const replacementLabel = getVariantReplacementLabel(data.h2);
   const normalizedTag = normalizeCopy(data.tag);
   const normalizedHeading = normalizeCopy(data.h2);
+  const visibleItems = data.items.slice(0, 3);
+  const moreItems = data.items.slice(3);
+  const selectedItem = data.items[selectedIndex] ?? data.items[0];
+  const selectedFromMore = selectedIndex >= 3;
+
+  const compatibleTrimLevels = useMemo(
+    () => selectedItem?.compatibleTrimLevels?.map((trim) => normalizeCopy(trim)).filter(Boolean) ?? [],
+    [selectedItem],
+  );
+
+  if (!selectedItem) {
+    return null;
+  }
+
+  const selectEngine = (index: number) => {
+    setSelectedIndex(index);
+    setMoreOpen(false);
+  };
 
   return (
     <Section className="bg-white !py-[2px]">
       <Container className="max-w-[1400px] px-4 sm:px-5 lg:px-0">
         <div className="bg-white py-[2px]">
-          <div className="mb-3 flex flex-wrap items-center gap-2 sm:mb-4">
+          <div className="mb-2 flex flex-wrap items-center gap-2">
             <span className="inline-flex rounded-full bg-[#0b2347] px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.03em] text-white sm:px-4 sm:py-2 sm:text-[12px]">
               {normalizedTag}
             </span>
           </div>
 
-          <h2 className="max-w-none font-['Manrope'] text-[22px] font-extrabold leading-[1.03] tracking-normal text-[#0b2347] sm:max-w-[760px] sm:text-[32px] lg:text-[46px]">
+          <h2 className="max-w-none font-['Manrope'] text-[22px] font-extrabold leading-[1.03] tracking-normal text-[#0b2347] sm:max-w-[760px] sm:text-[32px] lg:text-[44px]">
             <span className="sm:hidden">{renderMobileGuideHeading(normalizedHeading)}</span>
             <span className="hidden sm:inline">{normalizedHeading}</span>
           </h2>
 
-          <div className="mt-3 grid gap-3 sm:mt-4 sm:gap-5">
-            {data.items.map((item, index) => (
-              <article key={`${item.code}-${index}`} className="grid gap-3 sm:gap-4 xl:grid-cols-[minmax(0,0.95fr)_minmax(410px,0.85fr)] xl:items-start">
-                <div className="flex flex-col gap-3 sm:gap-4">
-                  <div className="rounded-[10px] border border-[#dbe5f2] bg-white p-2 shadow-[0_14px_26px_rgba(15,23,42,0.055)] sm:p-3 lg:p-4">
-                    <div className="grid grid-cols-[minmax(0,1fr)_102px] items-start gap-2 sm:grid-cols-[minmax(0,1fr)_178px] sm:gap-3 lg:grid-cols-[minmax(0,1fr)_238px] lg:gap-3 xl:grid-cols-[minmax(0,1fr)_270px]">
-                      <div>
-                        <div className="flex items-start gap-3 sm:gap-4">
-                          <div className="flex h-11 w-11 flex-none items-center justify-center rounded-[10px] bg-[#0b2347] text-white shadow-[0_12px_24px_rgba(11,35,71,0.16)] sm:h-12 sm:w-12 lg:h-14 lg:w-14 lg:rounded-[12px]">
-                            <AssetIcon src="/icons/variant/white/engine.png" className="h-5 w-5 object-contain sm:h-6 sm:w-6 lg:h-7 lg:w-7" />
+          <div className="relative z-20 mt-3 flex flex-wrap gap-2 sm:mt-4">
+            {visibleItems.map((item, index) => {
+              const isActive = selectedIndex === index;
+
+              return (
+                <button
+                  key={`${item.code}-${index}`}
+                  type="button"
+                  onClick={() => selectEngine(index)}
+                  className={`min-w-[140px] flex-1 rounded-[8px] border px-3 py-2 text-left transition sm:max-w-[260px] sm:px-4 ${
+                    isActive
+                      ? "border-[#16803d] bg-[#f0fbf3] shadow-[0_10px_20px_rgba(22,128,61,0.08)]"
+                      : "border-[#dbe5f2] bg-white hover:border-[#b9cadf]"
+                  }`}
+                  aria-pressed={isActive}
+                >
+                  <span className="flex items-center gap-2">
+                    <span className={`flex h-8 w-8 flex-none items-center justify-center rounded-[8px] ${isActive ? "bg-[#071d45]" : "bg-[#f3f7fb]"}`}>
+                      <AssetIcon src={isActive ? "/icons/variant/white/engine.png" : "/icons/variant/dark-green/engine.png"} className="h-4 w-4 object-contain" />
+                    </span>
+                    <span className="min-w-0">
+                      <span className="block truncate text-[14px] font-extrabold text-[#16803d] sm:text-[16px]">{normalizeCopy(item.code)}</span>
+                      <span className="mt-0.5 block truncate text-[10px] font-semibold text-[#314865] sm:text-[11px]">{normalizeCopy(item.title)}</span>
+                    </span>
+                  </span>
+                </button>
+              );
+            })}
+
+            {moreItems.length ? (
+              <div className="relative min-w-[150px] flex-1 sm:max-w-[240px]">
+                <button
+                  type="button"
+                  onClick={() => setMoreOpen((open) => !open)}
+                  className={`flex h-full w-full items-center justify-between rounded-[8px] border px-3 py-2 text-left transition sm:px-4 ${
+                    selectedFromMore ? "border-[#16803d] bg-[#f0fbf3]" : "border-[#dbe5f2] bg-white hover:border-[#b9cadf]"
+                  }`}
+                  aria-expanded={moreOpen}
+                >
+                  <span>
+                    <span className="block text-[13px] font-extrabold text-[#0b2347]">
+                      {selectedFromMore ? normalizeCopy(selectedItem.code) : `+${moreItems.length} More Engines`}
+                    </span>
+                    <span className="mt-0.5 block text-[10px] font-semibold text-[#60728a]">
+                      View all engines
+                    </span>
+                  </span>
+                  <ChevronIcon className={`h-4 w-4 text-[#0b2347] transition ${moreOpen ? "rotate-180" : ""}`} />
+                </button>
+
+                {moreOpen ? (
+                  <div className="absolute left-0 right-0 top-[calc(100%+6px)] z-30 overflow-hidden rounded-[8px] border border-[#dbe5f2] bg-white shadow-[0_18px_34px_rgba(15,23,42,0.14)]">
+                    {moreItems.map((item, offset) => {
+                      const index = offset + 3;
+                      const isActive = selectedIndex === index;
+
+                      return (
+                        <button
+                          key={`${item.code}-${index}`}
+                          type="button"
+                          onClick={() => selectEngine(index)}
+                          className={`flex w-full items-center justify-between gap-3 border-b border-[#e7edf5] px-3 py-2 text-left last:border-b-0 ${
+                            isActive ? "bg-[#f0fbf3]" : "hover:bg-[#f7fbff]"
+                          }`}
+                        >
+                          <span>
+                            <span className="block text-[13px] font-extrabold text-[#16803d]">{normalizeCopy(item.code)}</span>
+                            <span className="mt-0.5 block text-[10px] font-semibold text-[#60728a]">{normalizeCopy(item.title)}</span>
+                          </span>
+                          {isActive ? <span className="h-2 w-2 rounded-full bg-[#16803d]" /> : null}
+                        </button>
+                      );
+                    })}
+                  </div>
+                ) : null}
+              </div>
+            ) : null}
+          </div>
+
+          <div className="mt-3 grid gap-3 xl:grid-cols-[minmax(0,1fr)_minmax(380px,0.58fr)]">
+            <div className="rounded-[10px] border border-[#dbe5f2] bg-white p-3 shadow-[0_14px_26px_rgba(15,23,42,0.055)] sm:p-4">
+              <div className="grid gap-3 sm:grid-cols-[minmax(0,1fr)_220px] sm:items-start lg:grid-cols-[minmax(0,1fr)_280px]">
+                <div className="min-w-0">
+                  <div className="font-['Manrope'] text-[28px] font-extrabold leading-none tracking-normal text-[#16803d] sm:text-[36px]">
+                    {normalizeCopy(selectedItem.code)}
+                  </div>
+                  <p className="mt-1 text-[12px] font-semibold leading-[1.35] text-[#0b2347] sm:text-[15px]">
+                    {normalizeCopy(selectedItem.title)}
+                  </p>
+
+                  <div className="mt-3 divide-y divide-[#e6eef6] border-y border-[#e6eef6]">
+                    {selectedItem.specs.map((spec, specIndex) => (
+                      <div key={`${selectedItem.code}-${spec.label}-${specIndex}`} className="grid grid-cols-[28px_106px_minmax(0,1fr)] items-center gap-2 py-2 sm:grid-cols-[32px_150px_minmax(0,1fr)]">
+                        <span className="text-[#16803d]">{getSpecIcon(spec.label, "h-5 w-5")}</span>
+                        <span className="text-[11px] font-bold text-[#314865] sm:text-[12px]">{normalizeCopy(spec.label)}</span>
+                        <span className="min-w-0 text-[12px] font-semibold leading-[1.35] text-[#0b2347] sm:text-[13px]">{normalizeCopy(spec.value)}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  {compatibleTrimLevels.length ? (
+                    <div className="mt-3">
+                      <div className="flex items-center gap-2 text-[#0f274d]">
+                        <span className="text-[#16803d]">{getSpecIcon("Compatible Trim Levels", "h-5 w-5")}</span>
+                        <p className="text-[12px] font-extrabold sm:text-[13px]">Compatible Trim Levels</p>
+                      </div>
+                      <ul className="mt-2 flex flex-wrap gap-1.5">
+                        {compatibleTrimLevels.map((trim) => (
+                          <li key={trim} className="inline-flex items-center rounded-full border border-[#cfe4d4] bg-[#f5fbf6] px-2 py-1 text-[10px] font-bold text-[#16803d] sm:text-[11px]">
+                            {trim}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ) : null}
+                </div>
+
+                <div className="relative mx-auto h-[170px] w-full max-w-[240px] sm:h-[220px] lg:h-[270px] lg:max-w-[300px]">
+                  <Image
+                    src={engineImage}
+                    alt={`${normalizeCopy(selectedItem.code)} engine`}
+                    fill
+                    className="object-contain object-center drop-shadow-[0_18px_24px_rgba(15,23,42,0.13)]"
+                    sizes="300px"
+                  />
+                </div>
+              </div>
+
+              <div className="mt-3 rounded-[10px] bg-[#071d45] px-2.5 py-2 text-white shadow-[0_14px_28px_rgba(8,31,71,0.18)]">
+                <div className="grid grid-cols-[44px_minmax(0,1fr)_112px] items-center gap-2.5 sm:grid-cols-[56px_minmax(0,1fr)_168px]">
+                  <div className="relative h-11 w-11 overflow-hidden rounded-[8px] border border-white/10 bg-white/5 sm:h-14 sm:w-14">
+                    <Image src={engineImage} alt={`${normalizeCopy(selectedItem.code)} quote`} fill className="object-cover" sizes="56px" />
+                  </div>
+                  <div className="min-w-0">
+                    <div className="flex items-center gap-1.5 text-[11px] font-semibold leading-[1.2] text-white/88 sm:text-[13px]">
+                      <ArrowIcon className="h-4 w-4 flex-none" />
+                      <span className="truncate">{`Get quotes for ${normalizeCopy(selectedItem.code)}`}</span>
+                    </div>
+                    <p className="mt-0.5 text-[12px] font-semibold leading-[1.2] text-white sm:text-[15px]">
+                      {replacementLabel}
+                    </p>
+                  </div>
+
+                  <a
+                    href="#quote-form"
+                    data-quote-context={`${normalizeCopy(selectedItem.code)} engine guide`}
+                    data-quote-source="variant-engine-guide"
+                    className="inline-flex min-h-[40px] w-full items-center justify-center rounded-[7px] bg-[#1f9f43] px-2.5 text-center text-[11px] font-bold leading-[1.15] text-white transition hover:bg-[#18873a] sm:min-h-[44px] sm:text-[13px]"
+                  >
+                    Compare Prices
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-3">
+              <div className="overflow-hidden rounded-[10px] border border-[#dbe5f2] bg-white shadow-[0_14px_26px_rgba(15,23,42,0.055)]">
+                <div className="flex items-center gap-2.5 border-b border-[#e6eef6] px-3 py-2.5 sm:px-4">
+                  <div className="flex h-9 w-9 flex-none items-center justify-center rounded-full bg-[#0b2347] text-white">
+                    <AssetIcon src="/icons/variant/white/em-pound.png" className="h-4 w-4 object-contain" />
+                  </div>
+                  <div>
+                    <div className="text-[14px] font-extrabold uppercase tracking-[0.02em] text-[#0f274d] sm:text-[16px]">Cost Guide</div>
+                    {data.sectionSubtitle ? (
+                      <p className="mt-0.5 text-[10px] leading-[1.35] text-[#556b86] sm:text-[11px]">{normalizeCopy(data.sectionSubtitle)}</p>
+                    ) : null}
+                  </div>
+                </div>
+
+                <div className="divide-y divide-[#e6eef6]">
+                  {selectedItem.costs.map((cost, costIndex) => {
+                    const meta = getCostMeta(cost.label);
+
+                    return (
+                      <div key={`${selectedItem.code}-${cost.label}-${costIndex}`} className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-3 py-3 sm:px-4">
+                        <div className="flex min-w-0 items-start gap-2.5">
+                          <div className={`mt-0.5 flex h-8 w-8 flex-none items-center justify-center rounded-full ${meta.bg} text-white`}>
+                            <Image src={meta.icon} alt="" width={16} height={16} className="h-4 w-4 object-contain" />
                           </div>
                           <div className="min-w-0">
-                            <div className="font-['Manrope'] text-[22px] font-extrabold leading-none tracking-normal text-[#16803d] sm:text-[28px] lg:text-[40px] xl:text-[46px]">
-                              {normalizeCopy(item.code)}
-                            </div>
-                            <p className="mt-1 text-[11px] font-semibold leading-[1.35] text-[#0b2347] sm:mt-1.5 sm:text-[13px] lg:text-[16px] xl:text-[17px]">
-                              {normalizeCopy(item.title)}
+                            <p className={`text-[11px] font-extrabold uppercase tracking-[0.02em] sm:text-[12px] ${meta.tone}`}>
+                              {normalizeCopy(cost.label)}
+                            </p>
+                            <p className="mt-0.5 text-[10px] leading-[1.35] text-[#314865] sm:text-[11px]">
+                              {normalizeCopy(cost.description || meta.detail)}
                             </p>
                           </div>
                         </div>
-
-                        <div className="mt-2.5 grid gap-2 border-t border-[#e7edf5] pt-2.5 sm:mt-3 sm:gap-2.5 sm:pt-3">
-                          {item.specs.map((spec, specIndex) => (
-                            <div key={`${item.code}-${spec.label}-${specIndex}`} className="grid grid-cols-[22px_minmax(0,1fr)] gap-2 sm:grid-cols-[26px_minmax(0,1fr)] sm:gap-3">
-                              <div className="pt-0.5 text-[#16803d]">{getSpecIcon(specIndex)}</div>
-                              <div>
-                                <p className="text-[12px] font-bold leading-[1.3] text-[#0f274d] sm:text-[13px] lg:text-[15px]">{normalizeCopy(spec.label)}</p>
-                                <p className="mt-0.5 text-[12px] leading-[1.38] text-[#314865] sm:mt-1 sm:text-[13px] lg:text-[15px] lg:leading-[1.6]">{normalizeCopy(spec.value)}</p>
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-
-                        {item.compatibleTrimLevels?.length ? (
-                          <div className="mt-3 sm:mt-4">
-                            <div className="flex items-center gap-2 text-[#0f274d]">
-                              <span className="text-[#16803d]">{getSpecIcon(2)}</span>
-                              <p className="text-[13px] font-bold sm:text-[14px] lg:text-[16px]">Compatible Trim Levels</p>
-                            </div>
-                            <ul className="mt-2 grid gap-x-3 gap-y-1 text-[11px] leading-[1.4] text-[#314865] sm:mt-2.5 sm:grid-cols-2 sm:gap-y-1.5 sm:text-[12px] lg:block lg:space-y-1.5 lg:text-[14px] lg:leading-[1.6]">
-                              {item.compatibleTrimLevels.map((trim) => (
-                                <li key={trim} className="flex gap-2 sm:gap-3">
-                                  <span className="mt-[6px] h-1.5 w-1.5 flex-none rounded-full bg-[#15803d] sm:mt-[7px] sm:h-2 sm:w-2" />
-                                  <span>{normalizeCopy(trim)}</span>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        ) : null}
+                        <p className="whitespace-nowrap pl-2 text-right text-[12px] font-extrabold text-[#0b2347] sm:text-[15px]">{normalizeCopy(cost.value)}</p>
                       </div>
+                    );
+                  })}
+                </div>
+              </div>
 
-                      <div className="relative -ml-3 h-[102px] w-[calc(100%+12px)] max-w-[118px] self-start sm:-ml-5 sm:h-[170px] sm:max-w-[190px] lg:-ml-8 lg:h-[230px] lg:max-w-[262px] xl:h-[276px] xl:max-w-[310px]">
-                        <Image
-                          src={engineImage}
-                          alt={`${normalizeCopy(item.code)} engine`}
-                          fill
-                          className="object-contain object-top"
-                          sizes="300px"
-                        />
+              <div className="rounded-[10px] border border-[#f1d0cd] bg-[linear-gradient(135deg,#fff8f7,#fff5f3)] p-3 shadow-[0_14px_26px_rgba(185,28,28,0.045)] sm:p-4">
+                <div className="grid grid-cols-[minmax(0,1fr)_88px] items-center gap-3 sm:grid-cols-[minmax(0,1fr)_116px]">
+                  <div>
+                    <div className="flex items-center gap-2.5">
+                      <div className="flex h-9 w-9 flex-none items-center justify-center rounded-full bg-[#c62828] shadow-[0_10px_22px_rgba(198,40,40,0.16)]">
+                        <AssetIcon src="/icons/variant/white/rod-bearing.png" className="h-4 w-4 object-contain" />
                       </div>
+                      <h4 className="text-[14px] font-extrabold tracking-normal text-[#b91c1c] sm:text-[17px]">Common Failure</h4>
                     </div>
+                    <p className="mt-2 text-[11px] leading-[1.42] text-[#5d1c1c] sm:text-[13px]">
+                      {normalizeCopy(selectedItem.commonFailure)}
+                    </p>
                   </div>
 
-                  <div className="hidden gap-3 rounded-[14px] bg-[#071d45] px-4 py-3 text-white shadow-[0_14px_28px_rgba(8,31,71,0.18)] xl:grid xl:grid-cols-[72px_minmax(0,1fr)_190px] xl:items-center">
-                    <div className="relative h-14 w-14 overflow-hidden rounded-[10px] border border-white/10 bg-white/5">
-                      <Image src={engineImage} alt={`${normalizeCopy(item.code)} quote`} fill className="object-cover" sizes="56px" />
-                    </div>
-                    <div className="min-w-0">
-                      <div className="flex items-center gap-3 text-[14px] font-semibold leading-[1.35] text-white/90">
-                        <span className="text-white">
-                          <ArrowIcon />
-                        </span>
-                        <span>{`Get quotes for ${normalizeCopy(item.code)}`}</span>
-                      </div>
-                      <p className="mt-1 text-[16px] font-semibold leading-[1.35] text-white sm:text-[17px]">
-                        {replacementLabel}
-                      </p>
-                    </div>
-
-                    <a
-                      href="#quote-form"
-                      data-quote-context={`${normalizeCopy(item.code)} engine guide`}
-                      data-quote-source="variant-engine-guide"
-                      className="inline-flex min-h-[52px] w-full items-center justify-center rounded-[8px] bg-[#1f9f43] px-4 text-[14px] font-bold text-white transition hover:bg-[#18873a]"
-                    >
-                      Compare Prices
-                    </a>
+                  <div className="relative mx-auto h-[88px] w-[82px] overflow-hidden rounded-[8px] sm:h-[112px] sm:w-[106px]">
+                    <Image src={bearingImage} alt="Bearing damage" fill className="object-cover" sizes="116px" />
                   </div>
                 </div>
-
-                <div className="flex flex-col gap-3 sm:gap-4">
-                  <div className="rounded-[10px] border border-[#dbe5f2] bg-white p-2.5 shadow-[0_14px_26px_rgba(15,23,42,0.055)] sm:p-3 lg:p-4">
-                    <div className="flex items-center gap-2.5 sm:gap-3">
-                      <div className="flex h-10 w-10 flex-none items-center justify-center rounded-full bg-[#0b2347] text-white sm:h-11 sm:w-11 lg:h-12 lg:w-12">
-                        <AssetIcon src="/icons/variant/white/em-pound.png" className="h-4 w-4 object-contain sm:h-5 sm:w-5" />
-                      </div>
-                      <div>
-                        <div className="text-[15px] font-extrabold uppercase tracking-[0.02em] text-[#0f274d] sm:text-[16px] lg:text-[17px]">Cost Guide</div>
-                        {data.sectionSubtitle ? (
-                          <p className="mt-0.5 text-[10px] leading-[1.35] text-[#556b86] sm:mt-1 sm:text-[11px] lg:text-[12px] lg:leading-[1.5]">{normalizeCopy(data.sectionSubtitle)}</p>
-                        ) : null}
-                      </div>
-                    </div>
-
-                    <div className="mt-3 space-y-2 sm:mt-4 sm:space-y-2.5">
-                      {item.costs.map((cost, costIndex) => {
-                        const meta = getCostMeta(cost.label);
-                        const fallbackDescription = meta.detail;
-
-                        return (
-                          <div
-                            key={`${item.code}-${cost.label}-${costIndex}`}
-                            className={`grid grid-cols-[minmax(0,1fr)_auto] items-center gap-2 rounded-[8px] border px-2 py-1.5 sm:gap-2.5 sm:px-2.5 sm:py-2 ${meta.rowBg} ${meta.rowBorder}`}
-                          >
-                            <div className="flex min-w-0 items-start gap-2.5 sm:gap-3">
-                              <div className={`mt-0.5 flex h-8 w-8 flex-none items-center justify-center rounded-full ${meta.iconBg} text-white sm:h-9 sm:w-9 lg:h-10 lg:w-10`}>
-                                <Image src={meta.icon} alt="" width={18} height={18} className={meta.iconClassName} />
-                              </div>
-                              <div className="min-w-0">
-                                <p className={`text-[12px] font-extrabold uppercase tracking-[0.02em] sm:text-[13px] lg:text-[15px] ${getCostTone(cost.label)}`}>
-                                  {normalizeCopy(cost.label)}
-                                </p>
-                                <p className="mt-0.5 text-[9.5px] leading-[1.3] text-[#314865] sm:mt-1 sm:text-[11px] lg:text-[13px] lg:leading-[1.55]">
-                                  {normalizeCopy(cost.description || fallbackDescription)}
-                                </p>
-                              </div>
-                            </div>
-                            <p className="pl-2 text-right text-[14px] font-extrabold text-[#0b2347] sm:text-[17px] lg:text-[19px]">{normalizeCopy(cost.value)}</p>
-                          </div>
-                        );
-                      })}
-                    </div>
-                  </div>
-
-                  <div className="rounded-[10px] border border-[#f3d1cf] bg-[linear-gradient(135deg,#fff8f7,#fff5f3)] p-2 shadow-[0_14px_26px_rgba(185,28,28,0.045)] sm:p-3 lg:p-4">
-                    <div className="grid grid-cols-[minmax(0,1fr)_82px] items-center gap-2 sm:grid-cols-[minmax(0,1fr)_104px] sm:gap-2.5 lg:grid-cols-[minmax(0,1fr)_120px] lg:gap-3">
-                      <div>
-                          <div className="flex items-center gap-2.5 sm:gap-3">
-                            <div className="flex h-9 w-9 flex-none items-center justify-center rounded-full bg-[#c62828] shadow-[0_10px_22px_rgba(198,40,40,0.16)] sm:h-10 sm:w-10 lg:h-12 lg:w-12">
-                              <AssetIcon src="/icons/variant/white/rod-bearing.png" className="h-4 w-4 object-contain sm:h-5 sm:w-5 lg:h-6 lg:w-6" />
-                            </div>
-                            <h4 className="text-[14px] font-extrabold tracking-normal text-[#b91c1c] sm:text-[16px] lg:text-[19px]">Common Failure</h4>
-                        </div>
-                        <p className="mt-1.5 text-[11px] leading-[1.36] text-[#5d1c1c] sm:text-[12px] sm:leading-[1.44] lg:text-[15px] lg:leading-[1.56]">
-                          {normalizeCopy(item.commonFailure)}
-                        </p>
-                      </div>
-
-                      <div className="relative mx-auto h-[82px] w-[76px] overflow-hidden rounded-[8px] sm:h-[98px] sm:w-[90px] lg:h-[122px] lg:w-[112px]">
-                        <Image src={bearingImage} alt="Bearing damage" fill className="object-cover" sizes="122px" />
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="rounded-[10px] bg-[#071d45] px-2.5 py-2 text-white shadow-[0_14px_28px_rgba(8,31,71,0.18)] xl:hidden">
-                    <div className="grid grid-cols-[44px_minmax(0,1fr)_110px] items-center gap-2.5">
-                      <div className="relative h-11 w-11 overflow-hidden rounded-[10px] border border-white/10 bg-white/5">
-                        <Image src={engineImage} alt={`${normalizeCopy(item.code)} quote`} fill className="object-cover" sizes="48px" />
-                      </div>
-                      <div className="min-w-0">
-                        <div className="flex items-center gap-1.5 text-[11px] font-semibold leading-[1.2] text-white/88">
-                          <span className="text-white">
-                            <span className="block scale-[0.85]">
-                              <ArrowIcon />
-                            </span>
-                          </span>
-                          <span className="truncate">{`Get quotes for ${normalizeCopy(item.code)}`}</span>
-                        </div>
-                        <p className="mt-0.5 text-[12px] font-semibold leading-[1.2] text-white">
-                          {replacementLabel}
-                        </p>
-                      </div>
-
-                      <a
-                        href="#quote-form"
-                        data-quote-context={`${normalizeCopy(item.code)} engine guide`}
-                        data-quote-source="variant-engine-guide"
-                        className="inline-flex min-h-[40px] w-full items-center justify-center rounded-[8px] bg-[#1f9f43] px-2.5 text-center text-[11px] font-bold leading-[1.15] text-white transition hover:bg-[#18873a]"
-                      >
-                        Compare Prices
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </article>
-            ))}
+              </div>
+            </div>
           </div>
 
           {data.prompt ? (
-            <div className="mt-5 grid gap-4 rounded-[14px] border border-[#dbe5f2] bg-[#fbfdff] px-4 py-4 shadow-[0_14px_28px_rgba(15,23,42,0.05)] lg:grid-cols-[minmax(0,1fr)_auto_auto] lg:items-center">
+            <div className="mt-4 grid gap-4 rounded-[12px] border border-[#dbe5f2] bg-[#fbfdff] px-4 py-4 shadow-[0_14px_28px_rgba(15,23,42,0.05)] lg:grid-cols-[minmax(0,1fr)_auto_auto] lg:items-center">
               <div className="flex items-start gap-4">
                 <div className="flex h-12 w-12 flex-none items-center justify-center rounded-full bg-[#0b2347] text-white">
                   <AssetIcon src="/icons/variant/white/rod-bearing.png" className="h-6 w-6 object-contain" />
@@ -345,7 +400,7 @@ export default function VariantEngineGuideSection({ data }: Props) {
                 <p className="text-[16px] leading-[1.6] text-[#173153]">{normalizeCopy(data.prompt)}</p>
               </div>
 
-              <div className="overflow-hidden rounded-[12px] border border-[#d5a300] bg-[#f3c423] text-[#071735] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.3)]">
+              <div className="overflow-hidden rounded-[10px] border border-[#d5a300] bg-[#f3c423] text-[#071735] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.3)]">
                 <div className="grid grid-cols-[46px_140px]">
                   <div className="bg-[#123075] px-3 py-2 text-center text-[12px] font-bold text-white">
                     <div>UK</div>

@@ -1460,286 +1460,166 @@
       ]
     },
     "engineCodes": {
-      "tag": "Replacement Cost",
-      "h2": "Jaguar Engine Codes & Average Rebuilt Prices (UK Supply)",
-      "h3": "Compare costs for every major Jaguar engine — Ingenium diesel/petrol, AJ126 V6 supercharged, and AJ133 V8 supercharged families. All prices are typical UK market ranges for professionally rebuilt engines with warranty. Click \"Get Quote\" on any engine to receive tailored prices from our network of UK Jaguar specialists.",
+      "tag": "Engine Codes",
+      "h2": "Jaguar Engine Codes - Most Replaced Engines & Full Directory",
+      "h3": "Every major Jaguar engine code with technical specs, compatible UK models, known failures and average rebuilt prices. Use the quick-reference accordion below for all remaining codes.",
+      "closingLine": "Can't find your engine code? Enter your registration number above - we'll identify the exact Jaguar engine fitted to your vehicle.",
       "filters": [
-        "All",
-        "Diesel",
-        "Petrol"
+        "Diesel Engines (Most Replaced in the UK)",
+        "Petrol Engines (Most Replaced in the UK)",
+        "Hybrid / Electrified Engines"
       ],
       "groups": [
         {
-          "name": "Ingenium Diesel",
-          "era": "2015–Present",
-          "failureNote": "*(per row – developer to implement as button pre-filling engine code)* Common failure points: Ingenium diesel engines are known for timing chain stretch and oil dilution from frequent DPF regeneration. Our rebuilt units include upgraded timing chain kits, revised oil pumps, and updated ECU mapping to prevent recurrence.",
+          "name": "Diesel Engines (Most Replaced in the UK)",
+          "era": "Extracted from Jaguar diesel engines (most replaced in the uk) technical replacement data.",
+          "failureNote": "Timing chain failure - a well-documented issue on Ingenium diesel engines, leading to rattling on start-up, loss of power, and potentially seized engines, Turbocharger failure - common on higher-mileage examples",
           "engines": [
             {
-              "code": "AJ200D",
+              "code": "AJ200D / 204DTM",
+              "title": "2.0L Diesel (Ingenium)",
+              "familyHeading": "AJ200D / 204DTM - 2.0L Diesel (Ingenium)",
               "fuel": "Diesel",
-              "size": "2.0L",
-              "power": "150-180hp",
-              "compatibleModels": "XE (X760), XF (X260), F-Pace (X761)",
-              "avgRebuiltPrice": "£1,800 – £4,000",
-              "cta": "Get Quote for AJ200D"
-            },
-            {
-              "code": "204DTD",
-              "fuel": "Diesel",
-              "size": "2.0L",
-              "power": "150-163hp",
-              "compatibleModels": "E-Pace (X540), early XF/XE",
-              "avgRebuiltPrice": "£1,800 – £3,800",
-              "cta": "Get Quote for 204DTD"
+              "size": "2.0 Litre",
+              "power": "163-240 hp",
+              "compatibleModels": "XE (X760) 20d/25d, XF (X260) 20d/25d, F-Pace (X761) 20d/25d, E-Pace (X540) D150/D165/D180",
+              "avgRebuiltPrice": "£4,000 - £6,500 supply only",
+              "cta": "→ Get quotes for AJ200D Jaguar engine replacement"
             },
             {
               "code": "204DTA",
+              "title": "2.0L Diesel (Ingenium)",
+              "familyHeading": "204DTA - 2.0L Diesel (Ingenium)",
               "fuel": "Diesel",
-              "size": "2.0L",
-              "power": "180-240hp",
-              "compatibleModels": "XF (X260), F-Pace (X761)",
-              "avgRebuiltPrice": "£2,000 – £4,200",
-              "cta": "Get Quote for 204DTA"
+              "size": "2.0 Litre",
+              "power": "180 hp",
+              "compatibleModels": "XE (X760) 20d, XF (X260) 20d, F-Pace (X761) 20d, E-Pace (X540) D180",
+              "avgRebuiltPrice": "£4,000 - £6,500 supply only",
+              "cta": "→ Get quotes for 204DTA Jaguar engine replacement"
             },
             {
-              "code": "AJ20D6",
+              "code": "AJ200D / 204DTD",
+              "title": "2.0L Diesel (Ingenium)",
+              "familyHeading": "AJ200D / 204DTD - 2.0L Diesel (Ingenium)",
               "fuel": "Diesel",
-              "size": "3.0L",
-              "power": "240-300hp",
-              "compatibleModels": "XF (X260), F-Pace (X761), XJ (X351)",
-              "avgRebuiltPrice": "£2,500 – £5,500",
-              "cta": "Get Quote for AJ20D6"
+              "size": "2.0 Litre",
+              "power": "240 hp",
+              "compatibleModels": "XE (X760) 25d, XF (X260) 25d, F-Pace (X761) 25d",
+              "avgRebuiltPrice": "£4,500 - £7,000 supply only",
+              "cta": "→ Get quotes for 204DTD Jaguar engine replacement"
             },
             {
-              "code": "AJ200D Hybrid",
-              "fuel": "Diesel Hybrid",
-              "size": "2.0L",
-              "power": "200hp + e-motor",
-              "compatibleModels": "F-Pace P400e, E-Pace P300e",
-              "avgRebuiltPrice": "£3,500 – £6,500",
-              "cta": "Get Quote for AJ200D Hybrid"
-            },
-            {
-              "code": "AJ200D AdBlue",
+              "code": "AJD-V6 3.0",
+              "title": "3.0L Diesel (V6)",
+              "familyHeading": "AJD-V6 3.0 - 3.0L Diesel (V6)",
               "fuel": "Diesel",
-              "size": "2.0L",
-              "power": "150-180hp",
-              "compatibleModels": "XE, XF, F-Pace (post-2018)",
-              "avgRebuiltPrice": "£2,000 – £4,500",
-              "cta": "Get Quote for AJ200D AdBlue"
-            }
-          ]
-        },
-        {
-          "name": "Ingenium Petrol",
-          "era": "2015–Present",
-          "failureNote": "Ingenium petrol engines can suffer from high-pressure fuel pump wear and timing chain tensioner fatigue. Rebuilt units include upgraded HPFP components, reinforced tensioners, and revised piston rings for extended longevity.",
-          "engines": [
-            {
-              "code": "AJ200P",
-              "fuel": "Petrol",
-              "size": "2.0L",
-              "power": "200-250hp",
-              "compatibleModels": "XE (X760), XF (X260), E-Pace (X540)",
-              "avgRebuiltPrice": "£2,000 – £4,500",
-              "cta": "Get Quote for AJ200P"
+              "size": "3.0 Litre",
+              "power": "240-300 hp",
+              "compatibleModels": "XF (X250) 3.0D, XJ (X351) 3.0D, F-Pace (X761) 3.0D",
+              "avgRebuiltPrice": "£3,500 - £5,500 supply only",
+              "cta": "→ Get quotes for AJD-V6 3.0 Jaguar engine replacement"
             },
-            {
-              "code": "204PT",
-              "fuel": "Petrol",
-              "size": "2.0L",
-              "power": "200hp",
-              "compatibleModels": "XE (X760), XF (X250)",
-              "avgRebuiltPrice": "£2,000 – £4,200",
-              "cta": "Get Quote for 204PT"
-            },
-            {
-              "code": "AJ200P Hybrid",
-              "fuel": "Petrol Hybrid",
-              "size": "2.0L",
-              "power": "300hp + e-motor",
-              "compatibleModels": "F-Pace P400e, E-Pace P300e",
-              "avgRebuiltPrice": "£3,500 – £7,000",
-              "cta": "Get Quote for AJ200P Hybrid"
-            }
-          ]
-        },
-        {
-          "name": "Ford Duratorq & PSA V6 Diesel",
-          "era": "2008–2015",
-          "failureNote": "2.2 TD4 and 3.0 V6 diesel engines are prone to injector seal failure (causing oil dilution) and turbo/EGR issues. Rebuilt units include new injector seals, refurbished turbos, and cleaned EGR systems with updated gaskets.",
-          "engines": [
             {
               "code": "224DT",
+              "title": "2.2L Diesel",
+              "familyHeading": "224DT - 2.2L Diesel",
               "fuel": "Diesel",
-              "size": "2.2L",
-              "power": "190-200hp",
-              "compatibleModels": "XF (X250, 2011-2015)",
-              "avgRebuiltPrice": "£1,800 – £3,500",
-              "cta": "Get Quote for 224DT"
-            },
-            {
-              "code": "274DT",
-              "fuel": "Diesel",
-              "size": "2.7L",
-              "power": "204hp",
-              "compatibleModels": "XF (X250, 2008-2011), S-Type (X200)",
-              "avgRebuiltPrice": "£2,200 – £4,000",
-              "cta": "Get Quote for 274DT"
-            },
-            {
-              "code": "306DT",
-              "fuel": "Diesel",
-              "size": "3.0L",
-              "power": "211-240hp",
-              "compatibleModels": "XF (X250), XJ (X351)",
-              "avgRebuiltPrice": "£2,500 – £4,500",
-              "cta": "Get Quote for 306DT"
-            },
-            {
-              "code": "306DTA",
-              "fuel": "Diesel",
-              "size": "3.0L",
-              "power": "240-275hp",
-              "compatibleModels": "XF (X250), XJ (X351), F-Pace (early)",
-              "avgRebuiltPrice": "£2,800 – £5,000",
-              "cta": "Get Quote for 306DTA"
+              "size": "2.2 Litre",
+              "power": "163-200 hp",
+              "compatibleModels": "XF (X250) 2.2D, X-Type (X400) 2.2D",
+              "avgRebuiltPrice": "£1,800 - £2,800 supply only",
+              "cta": "→ Get quotes for 224DT Jaguar engine replacement"
             }
           ]
         },
         {
-          "name": "V6 Supercharged Petrol AJ126",
-          "era": "2013–Present",
-          "failureNote": "AJ126 V6 supercharged engines commonly experience timing chain tensioner wear leading to chain slap and potential jump. Rebuilt units include reinforced tensioners, new chains, revised oil pumps, and supercharger coupler inspection/replacement.",
+          "name": "Petrol Engines (Most Replaced in the UK)",
+          "era": "Extracted from Jaguar petrol engines (most replaced in the uk) technical replacement data.",
+          "failureNote": "Cooling system pipe failure - plastic coolant pipes can become brittle and leak, leading to overheating, Timing chain tensioner wear - can cause rattling on start-up and potential valve/piston contact",
           "engines": [
             {
               "code": "AJ126",
-              "fuel": "Petrol SC",
-              "size": "3.0L",
-              "power": "340-380hp",
-              "compatibleModels": "F-Type (X152), XF (X260), XJ (X351), F-Pace",
-              "avgRebuiltPrice": "£4,500 – £8,000",
-              "cta": "Get Quote for AJ126"
+              "title": "3.0L Petrol (Supercharged V6)",
+              "familyHeading": "AJ126 - 3.0L Petrol (Supercharged V6)",
+              "fuel": "Petrol",
+              "size": "3.0 Litre",
+              "power": "340-380 hp",
+              "compatibleModels": "XF (X250/X260) 3.0 SC, XJ (X351) 3.0 SC, F-Type (X152) V6 S, F-Pace (X761) 3.0 SC",
+              "avgRebuiltPrice": "£4,500 - £7,500 supply only",
+              "cta": "→ Get quotes for AJ126 Jaguar engine replacement"
             },
             {
-              "code": "AJ126 Low Compression",
-              "fuel": "Petrol SC",
-              "size": "3.0L",
-              "power": "340hp",
-              "compatibleModels": "F-Type, XF, XJ",
-              "avgRebuiltPrice": "£4,800 – £8,500",
-              "cta": "Get Quote for AJ126 Low Compression"
+              "code": "AJ133",
+              "title": "5.0L Petrol (Supercharged V8)",
+              "familyHeading": "AJ133 - 5.0L Petrol (Supercharged V8)",
+              "fuel": "Petrol",
+              "size": "5.0 Litre",
+              "power": "470-575 hp",
+              "compatibleModels": "F-Type (X152) R/SVR, XF (X250) XFR, XK (X150) XKR, XJ (X351) Supersport",
+              "avgRebuiltPrice": "£6,000 - £10,000 supply only",
+              "cta": "→ Get quotes for AJ133 Jaguar engine replacement"
+            },
+            {
+              "code": "AJ-V8 4.2",
+              "title": "4.2L Petrol (Supercharged V8)",
+              "familyHeading": "AJ-V8 4.2 - 4.2L Petrol (Supercharged V8)",
+              "fuel": "Petrol",
+              "size": "4.2 Litre",
+              "power": "400-420 hp",
+              "compatibleModels": "XK (X150) XKR, XF (X250) XFR, S-Type R",
+              "avgRebuiltPrice": "£4,000 - £6,500 supply only",
+              "cta": "→ Get quotes for AJ-V8 4.2 Jaguar engine replacement"
+            },
+            {
+              "code": "AJ-V8 4.2SC",
+              "title": "4.2L Petrol (Supercharged)",
+              "familyHeading": "AJ-V8 4.2SC - 4.2L Petrol (Supercharged)",
+              "fuel": "Petrol",
+              "size": "4.2 Litre",
+              "power": "420 hp",
+              "compatibleModels": "XK (X150) XKR, S-Type R",
+              "avgRebuiltPrice": "£4,500 - £7,000 supply only",
+              "cta": "→ Get quotes for AJ-V8 4.2SC Jaguar engine replacement"
+            },
+            {
+              "code": "AJ-V8 5.0 NA",
+              "title": "5.0L Petrol (Naturally Aspirated)",
+              "familyHeading": "AJ-V8 5.0 NA - 5.0L Petrol (Naturally Aspirated)",
+              "fuel": "Petrol",
+              "size": "5.0 Litre",
+              "power": "385-400 hp",
+              "compatibleModels": "XF (X250) 5.0 V8, XJ (X351) 5.0 V8, XK (X150) 5.0 V8",
+              "avgRebuiltPrice": "£5,000 - £8,000 supply only",
+              "cta": "→ Get quotes for AJ-V8 5.0 NA Jaguar engine replacement"
             }
           ]
         },
         {
-          "name": "V8 Supercharged Petrol AJ133",
-          "era": "2009–Present",
-          "failureNote": "AJ133 V8 supercharged engines suffer from timing chain guide disintegration and supercharger coupler wear. Rebuilt units include upgraded tensioners, new guides, reinforced couplers, and balanced rotating assemblies for performance reliability.",
+          "name": "Hybrid / Electrified Engines",
+          "era": "Extracted from Jaguar hybrid / electrified engines technical replacement data.",
+          "failureNote": "Hybrid system faults - intermittent warnings and charging failures, Battery degradation - capacity drops over time",
           "engines": [
             {
-              "code": "AJ133 NA",
-              "fuel": "Petrol",
-              "size": "5.0L",
-              "power": "385hp",
-              "compatibleModels": "XJ (X351), XF (X250), XK (X150)",
-              "avgRebuiltPrice": "£4,500 – £8,000",
-              "cta": "Get Quote for AJ133 NA"
+              "code": "AJ200D (PHEV)",
+              "title": "2.0L Petrol (Hybrid)",
+              "familyHeading": "AJ200D (PHEV) - 2.0L Petrol (Hybrid)",
+              "fuel": "PHEV (Petrol + Electric)",
+              "size": "1.5 Litre",
+              "power": "309 hp (combined)",
+              "compatibleModels": "E-Pace (X540) P300e",
+              "avgRebuiltPrice": "£3,500 - £5,500 supply only",
+              "cta": "→ Get quotes for AJ200D PHEV Jaguar engine replacement"
             },
             {
-              "code": "AJ133 SC",
-              "fuel": "Petrol SC",
-              "size": "5.0L",
-              "power": "470-510hp",
-              "compatibleModels": "F-Type R, XFR, XKR, F-Pace SVR",
-              "avgRebuiltPrice": "£5,500 – £10,000",
-              "cta": "Get Quote for AJ133 SC"
-            },
-            {
-              "code": "AJ133S",
-              "fuel": "Petrol SC",
-              "size": "5.0L",
-              "power": "575hp",
-              "compatibleModels": "F-Type SVR, XJR 575",
-              "avgRebuiltPrice": "£7,000 – £12,000",
-              "cta": "Get Quote for AJ133S"
-            },
-            {
-              "code": "AJ133 Hybrid",
-              "fuel": "Petrol SC Hybrid",
-              "size": "5.0L",
-              "power": "404hp + e-motor",
-              "compatibleModels": "XJ LWB Hybrid",
-              "avgRebuiltPrice": "£6,000 – £11,000",
-              "cta": "Get Quote for AJ133 Hybrid"
-            }
-          ]
-        },
-        {
-          "name": "Legacy V8 Petrol",
-          "era": "1997–2009",
-          "failureNote": "Early 4.0/4.2 V8 engines experienced Nikasil liner degradation and timing chain guide wear. Rebuilt units feature steel liner replacements, upgraded guides/tensioners, and refreshed cooling components for classic Jaguar reliability.",
-          "engines": [
-            {
-              "code": "AJ26",
-              "fuel": "Petrol",
-              "size": "4.0L",
-              "power": "290hp",
-              "compatibleModels": "XJ8 (X308), XK8 (X100)",
-              "avgRebuiltPrice": "£2,500 – £5,000",
-              "cta": "Get Quote for AJ26"
-            },
-            {
-              "code": "AJ27",
-              "fuel": "Petrol",
-              "size": "4.0L",
-              "power": "290hp",
-              "compatibleModels": "Late XJ8, XK8",
-              "avgRebuiltPrice": "£2,500 – £5,200",
-              "cta": "Get Quote for AJ27"
-            },
-            {
-              "code": "AJV8 4.2",
-              "fuel": "Petrol SC",
-              "size": "4.2L",
-              "power": "390-420hp",
-              "compatibleModels": "XKR (X100), XJR (X350)",
-              "avgRebuiltPrice": "£3,500 – £8,000",
-              "cta": "Get Quote for AJV8 4.2"
-            }
-          ]
-        },
-        {
-          "name": "Electric & Hybrid Drive Units",
-          "era": "2018–Present",
-          "failureNote": "I-Pace electric drive units can develop bearing whine or coolant ingress issues. Replacement units are specialist exchange modules with updated seals and software calibration – no rebuild, only JLR-approved exchange units",
-          "engines": [
-            {
-              "code": "EV300 Front",
-              "fuel": "Electric",
-              "size": "Drive Unit",
-              "power": "200kW",
-              "compatibleModels": "I-Pace (EV400)",
-              "avgRebuiltPrice": "£3,000 – £6,000",
-              "cta": "Get Quote for EV300 Front"
-            },
-            {
-              "code": "EV300 Rear",
-              "fuel": "Electric",
-              "size": "Drive Unit",
-              "power": "200kW",
-              "compatibleModels": "I-Pace (EV400)",
-              "avgRebuiltPrice": "£3,000 – £6,000",
-              "cta": "Get Quote for EV300 Rear"
-            },
-            {
-              "code": "PHEV Drive Module",
-              "fuel": "Hybrid",
-              "size": "2.0L + e-motor",
-              "power": "300hp combined",
-              "compatibleModels": "F-Pace P400e, E-Pace P300e",
-              "avgRebuiltPrice": "£4,000 – £7,500",
-              "cta": "Get Quote for PHEV Drive Module"
+              "code": "I-Pace EV400",
+              "title": "Electric Motor",
+              "familyHeading": "I-Pace EV400 - Electric Motor",
+              "fuel": "Electric (BEV)",
+              "size": "N/A (Electric Motor)",
+              "power": "400 hp (combined)",
+              "compatibleModels": "I-Pace (X590) EV400",
+              "avgRebuiltPrice": "£3,000 - £6,000 (drive unit, supply only)",
+              "cta": "→ Get quotes for I-Pace EV400 Jaguar motor replacement"
             }
           ]
         }
@@ -2167,133 +2047,94 @@
       "closing": "Not sure which engine size your Jaguar needs? Enter your registration number and we'll match you to the exact engine code and displacement — instantly. All engines supplied with a minimum 12‑month warranty from UK Jaguar specialists."
     },
     "fuelTypes": {
-      "tag": "Complete Jaguar Engines List",
-      "h2": "Jaguar Engines by Fuel Type",
-      "intro": "Choose your Jaguar engine by fuel type to compare realistic replacement prices, known brand‑wide issues, and UK specialist supply – from the most popular diesel workhorses to the latest electrified powertrains.",
+      "tag": "Jaguar Engines by Fuel Type",
+      "h2": "Jaguar Engine Codes - Most Replaced Engines & Full Directory",
+      "intro": "Every major Jaguar engine code with technical specs, compatible UK models, known failures and average rebuilt prices. Use the quick-reference accordion below for all remaining codes.",
       "items": [
         {
-          "title": "Jaguar Diesel Engines",
-          "description": "Jaguar diesel engines cover many of the brand's highest-mileage UK models. Replacement demand is usually driven by timing system wear, injector and turbo faults, plus EGR or DPF-related damage once repeat short-journey use starts affecting reliability.",
-          "descriptor": "High-mileage motorway and SUV applications",
+          "title": "Diesel Engines",
+          "description": "Jaguar's diesel engine range in the UK is dominated by the Ingenium 2.0-litre four-cylinder and the Ford Lion-derived 3.0-litre V6. Replacement demand is driven by timing chain failure (Ingenium), DPF clogging, and turbocharger failures on these premium vehicles.",
+          "descriptor": "Jaguar's diesel engine range in the UK is dominated by the Ingenium 2.0-litre four-cylinder and the Ford Lion-derived 3.0-litre V6. Replacement demand is driven by timing chain failure (Ingenium), DPF clogging, and turbocharger failures on these premium vehicles.",
           "families": [
-            "Ingenium Diesel",
-            "Ford Duratorq & PSA V6 Diesel"
+            "£1,800 - £7,000 (supply only)",
+            "2.0 Ingenium (204DTM/204DTA): £4,000 - £6,500",
+            "2.2D (224DT): £1,800 - £2,800",
+            "3.0 V6 Diesel (AJD-V6): £3,500 - £5,500"
           ],
-          "foundIn": [
-            "Jaguar E-Pace Engines",
-            "Jaguar F-Pace Engines",
-            "Jaguar F-Type Engines",
-            "Jaguar I-Pace Engines"
-          ],
-          "knownFor": [
-            "Timing chain stretch",
-            "oil dilution from DPF regeneration",
-            "turbo failure",
-            "Injector seal failure causing oil dilution"
-          ],
-          "typicalModels": [
-            "Jaguar E-Pace Engines",
-            "Jaguar F-Pace Engines",
-            "Jaguar F-Type Engines",
-            "Jaguar I-Pace Engines"
-          ],
-          "importantNotes": [
-            "Short-journey use increases DPF, EGR, and oil-dilution risk on many diesel engines.",
-            "A documented service history matters more on diesel replacements because injector, turbo, and timing faults often build gradually."
-          ],
-          "cta": "Compare Jaguar diesel engine prices"
-        },
-        {
-          "title": "Jaguar Petrol Engines",
-          "description": "Jaguar petrol engines span everything from core daily-driver models to higher-output performance variants. Most replacement enquiries start with timing chain noise, oil consumption, cooling-system failure, or internal wear that makes a warranted replacement more sensible than repeated repairs.",
-          "descriptor": "Core passenger-car and performance applications",
-          "families": [
-            "Ingenium Petrol",
-            "V6 Supercharged Petrol AJ126",
-            "V8 Supercharged Petrol AJ133",
-            "Legacy V8 Petrol"
-          ],
-          "foundIn": [
-            "Jaguar E-Pace Engines",
-            "Jaguar F-Pace Engines",
-            "Jaguar F-Type Engines",
-            "Jaguar I-Pace Engines"
-          ],
-          "knownFor": [
-            "High-pressure fuel pump failure",
-            "timing chain tensioner wear",
-            "carbon buildup on intake valves",
-            "Timing chain tensioner failure"
-          ],
-          "typicalModels": [
-            "Jaguar E-Pace Engines",
-            "Jaguar F-Pace Engines",
-            "Jaguar F-Type Engines",
-            "Jaguar I-Pace Engines"
-          ],
-          "importantNotes": [
-            "Cold-start rattles, overheating history, and oil use are the biggest warning signs before a petrol engine replacement becomes necessary.",
-            "Direct-injection petrol engines often need specialist attention for carbon build-up alongside the main mechanical repair."
-          ],
-          "cta": "Compare Jaguar petrol engine prices"
-        },
-        {
-          "title": "Jaguar Hybrid Engines",
-          "description": "Jaguar hybrid powertrains combine combustion engines with electric assistance across newer electrified models. Replacement demand is lower than traditional petrol or diesel units, but generator-engine faults, inverter issues, cooling-system failures, and calibration-sensitive repairs still require specialist support.",
-          "descriptor": "Electrified models with combustion backup",
-          "families": [
-            "Ingenium Diesel",
-            "Ingenium Petrol",
-            "V8 Supercharged Petrol AJ133",
-            "Electric & Hybrid Drive Units"
-          ],
-          "foundIn": [
-            "Jaguar E-Pace Engines",
-            "Jaguar F-Pace Engines",
-            "Jaguar F-Type Engines",
-            "Jaguar I-Pace Engines"
-          ],
+          "foundIn": [],
           "knownFor": [],
-          "typicalModels": [
-            "Jaguar E-Pace Engines",
-            "Jaguar F-Pace Engines",
-            "Jaguar F-Type Engines",
-            "Jaguar I-Pace Engines"
-          ],
+          "typicalModels": [],
           "importantNotes": [
-            "Hybrid faults often need both mechanical and high-voltage diagnosis, so replacement decisions should be made by specialists familiar with the full system.",
-            "Battery cooling, inverter health, and software calibration are just as important as the combustion-engine condition on hybrid models."
+            "High-mileage motorway drivers covering 15,000+ miles annually",
+            "Company car drivers benefiting from lower fuel costs",
+            "Drivers who value strong torque for relaxed cruising",
+            "Urban drivers with short daily trips who are better served by petrol (DPF and EGR issues are common)",
+            "Low-mileage users who don't drive enough to justify the diesel premium",
+            "Typical searches: Jaguar XE 2.0 diesel engine replacement, Jaguar Ingenium engine problems, Jaguar 2.0 timing chain failure, Jaguar F-Pace 3.0 diesel engine cost, Jaguar diesel engine specialist UK, Jaguar XF 2.2D engine replacement, Jaguar 2.0 Ingenium engine price, Jaguar diesel DPF problems → Get quotes for Jaguar Diesel replacement engines → Not sure which diesel you have? Enter your registration number for an instant match"
           ],
-          "cta": "Compare Jaguar hybrid engine prices"
+          "cta": "→ Get quotes for Jaguar Diesel replacement engines"
         },
         {
-          "title": "Jaguar Electric Engines",
-          "description": "Jaguar electric powertrains use high-voltage drive motors and supporting control systems rather than conventional engine internals. Failures are less common, but inverter faults, bearing noise, resolver issues, or battery-related drivetrain problems still require specialist diagnosis and replacement support.",
-          "descriptor": "High-voltage drive units and EV systems",
+          "title": "Petrol Engines",
+          "description": "Jaguar's petrol engine range in the UK spans from the supercharged V6 (AJ126) in the F-Type and XF to the legendary supercharged V8 (AJ133) in the F-Type R and XFR - delivering the performance, sound, and character that define the brand.",
+          "descriptor": "Jaguar's petrol engine range in the UK spans from the supercharged V6 (AJ126) in the F-Type and XF to the legendary supercharged V8 (AJ133) in the F-Type R and XFR - delivering the performance, sound, and character that define the brand.",
           "families": [
-            "Electric & Hybrid Drive Units"
+            "£4,000 - £10,000 (supply only)",
+            "2.0 Ingenium Petrol: £3,500 - £5,500",
+            "3.0 V6 SC (AJ126): £4,500 - £7,500",
+            "4.2 V8 SC (AJ-V8 4.2SC): £4,500 - £7,000",
+            "5.0 V8 NA (AJ-V8 5.0 NA): £5,000 - £8,000"
           ],
-          "foundIn": [
-            "Jaguar E-Pace Engines",
-            "Jaguar F-Pace Engines",
-            "Jaguar F-Type Engines",
-            "Jaguar I-Pace Engines"
-          ],
+          "foundIn": [],
           "knownFor": [],
-          "typicalModels": [
-            "Jaguar E-Pace Engines",
-            "Jaguar F-Pace Engines",
-            "Jaguar F-Type Engines",
-            "Jaguar I-Pace Engines"
-          ],
+          "typicalModels": [],
           "importantNotes": [
-            "Electric drivetrain repairs should always include high-voltage safety checks and verification of the inverter and battery support systems.",
-            "Low mechanical wear does not eliminate replacement demand when control electronics or motor bearings begin to fail."
+            "Performance enthusiasts who value the Jaguar supercharged V6/V8 character and soundtrack",
+            "Collectors and weekend drivers with lower annual mileage",
+            "Drivers who prioritise engagement, emotion and prestige over fuel economy",
+            "High-mileage daily drivers who would struggle with running costs",
+            "Drivers prioritising maximum fuel efficiency over performance",
+            "Typical searches: Jaguar F-Type engine replacement, Jaguar 5.0 V8 engine rebuild, Jaguar XFR engine cost, Jaguar F-Type V6 supercharged engine replacement, Jaguar petrol engine specialist UK, Jaguar AJ133 engine problems, Jaguar XK engine replacement, Jaguar supercharged V8 engine price → Compare Jaguar Petrol engine prices → Not sure which petrol you have? Enter your registration number for an instant match"
           ],
-          "cta": "Compare Jaguar electric engine prices"
+          "cta": "→ Compare Jaguar Petrol engine prices"
+        },
+        {
+          "title": "Hybrid & Plug-in Hybrid (PHEV) Engines",
+          "description": "Jaguar's hybrid range includes the E-Pace P300e and the F-Pace P400e, combining 1.5-litre or 2.0-litre Ingenium petrol engines with electric motors. Hybrid systems are still relatively rare in the replacement market, but enquiries are growing as these vehicles age.",
+          "descriptor": "Jaguar's hybrid range includes the E-Pace P300e and the F-Pace P400e, combining 1.5-litre or 2.0-litre Ingenium petrol engines with electric motors. Hybrid systems are still relatively rare in the replacement market, but enquiries are growing as these vehicles age.",
+          "families": [
+            "PHEV (Plug-in Hybrid - E-Pace P300e): Combines a 1.5-litre three-cylinder Ingenium petrol engine with an electric motor. The battery can be charged via an external plug or via regenerative braking, providing 25-35 miles of pure electric range.",
+            "PHEV (Plug-in Hybrid - F-Pace P400e): Combines a 2.0-litre four-cylinder Ingenium petrol engine with an electric motor. The battery can be charged via an external plug, providing 25-35 miles of pure electric range.",
+            "Battery location: The high-voltage battery is typically located under the rear seats or boot floor - careful handling is required for any work in these areas."
+          ],
+          "foundIn": [],
+          "knownFor": [],
+          "typicalModels": [],
+          "importantNotes": [
+            "Company car drivers benefiting from lower Benefit-in-Kind (BIK) tax rates",
+            "Urban commuters who can charge daily and drive within the electric range",
+            "Drivers who want to reduce fuel costs and emissions without sacrificing performance",
+            "Drivers without off-street parking or reliable charging access",
+            "High-mileage users who would benefit more from diesel's efficiency on long runs",
+            "Typical searches: Jaguar E-Pace P300e engine replacement, Jaguar F-Pace P400e battery price, Jaguar hybrid engine specialist UK, Jaguar PHEV engine cost, Jaguar hybrid battery degradation, Jaguar hybrid motor replacement → Enquire about Jaguar Hybrid engine availability → Not sure which hybrid you have? Enter your registration number for an instant match"
+          ],
+          "cta": "Get quotes for Jaguar Jaguar Hybrid & Plug-in Hybrid (PHEV) Engines engines"
+        },
+        {
+          "title": "Electric Powertrains",
+          "description": "Jaguar's electric range includes the I-Pace, using a 90kWh battery and two permanent-magnet synchronous electric motors (400 hp). Electric motors rarely fail, but we connect you with UK specialists for battery module repairs and drive unit replacements.",
+          "descriptor": "Jaguar's electric range includes the I-Pace, using a 90kWh battery and two permanent-magnet synchronous electric motors (400 hp). Electric motors rarely fail, but we connect you with UK specialists for battery module repairs and drive unit replacements.",
+          "families": [],
+          "foundIn": [],
+          "knownFor": [],
+          "typicalModels": [],
+          "importantNotes": [
+            "Typical searches: Jaguar I-Pace motor replacement, Jaguar EV battery repair, Jaguar electric motor specialist UK, Jaguar I-Pace drive unit price, Jaguar EV battery module replacement, Jaguar electric range degradation → Enquire about Jaguar Electric motor repair or replacement → Not sure which electric Jaguar you have? Enter your registration number for an instant match"
+          ],
+          "cta": "Get quotes for Jaguar Jaguar Electric Powertrains engines"
         }
       ],
-      "closing": "Not sure which fuel type your Jaguar has? Enter your registration number above to instantly identify your model, engine code, fuel system and compatible replacement options – all backed by a minimum 12‑month unlimited mileage warranty from UK Jaguar specialists."
+      "closing": "Not sure which fuel type your Jaguar has? Enter your registration number for an instant match."
     },
     "engineCodeDirectory": {
       "tag": "Engine Codes",

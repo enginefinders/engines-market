@@ -796,171 +796,73 @@
       ]
     },
     "engineCodes": {
-      "tag": "Replacement Cost",
-      "h2": "Isuzu Engine Codes & Average Rebuilt Prices (UK Supply)",
-      "h3": "Compare costs for every major Isuzu engine — 4JJ1, 4JK1, RZ4E, 4JH1 and 4JA1 families. All prices are typical UK market ranges for professionally rebuilt engines with warranty. Click \"Get Quote\" on any engine to receive tailored prices from our network of UK Isuzu specialists.",
+      "tag": "Engine Codes",
+      "h2": "Isuzu Engine Codes - Most Replaced Engines & Full Directory",
+      "h3": "Every major Isuzu engine code with technical specs, compatible UK models, known failures and average rebuilt prices. Use the quick-reference accordion below for all remaining codes.",
+      "closingLine": "Can't find your engine code? Enter your registration number above - we'll identify the exact Isuzu engine fitted to your vehicle.",
       "filters": [
-        "All",
-        "Diesel",
-        "Petrol"
+        "Diesel Engines (Most Replaced in the UK)"
       ],
       "groups": [
         {
-          "name": "4JJ1 Family – 3.0 Litre Turbo Diesel",
-          "era": "2006–Present",
-          "failureNote": "The 4JJ1 is Isuzu’s most widely used commercial diesel, found in D-Max, MU-X and N-Series light trucks. Known for durability but susceptible to injector and DPF issues in high-mileage fleet use. Each code row includes a developer-implemented \"Get Quote →\" button that captures the engine code. Common failure points: 4JJ1 engines are known for injector failure (costly replacement ~£800–1,200), DPF clogging on pre-2016 models, and occasional crank pulley separation. Our rebuilt units include new injector seals, cleaned DPF or delete-compatible components, and a fully inspected fuel system .",
+          "name": "Diesel Engines (Most Replaced in the UK)",
+          "era": "Extracted from Isuzu diesel engines (most replaced in the uk) technical replacement data.",
+          "failureNote": "DPF/DPD regeneration problems - a well-documented issue on later 4J1 engines, leading to clogging and limp mode, Cracked cylinder head - common on older 4J1 engines, often due to overheating",
           "engines": [
             {
-              "code": "4JJ1-TC",
+              "code": "4J1 Family",
+              "title": "2.5L / 3.0L Diesel",
+              "familyHeading": "4J1 Family - 2.5L / 3.0L Diesel",
               "fuel": "Diesel",
-              "size": "3.0L",
-              "power": "163 hp",
-              "compatibleModels": "D-Max (2006–2012), MU-X",
-              "avgRebuiltPrice": "£3,500 – £5,800",
-              "cta": "Get Quote for 4JJ1-TC"
+              "size": "2.5 - 3.0 Litre",
+              "power": "107-160 hp",
+              "compatibleModels": "D-Max (2002-2020), Rodeo (1998-2012), Trooper (1990-2004)",
+              "avgRebuiltPrice": "£2,000 - £2,500 supply only",
+              "cta": "→ Get quotes for 4J1 Isuzu engine replacement"
             },
             {
-              "code": "4JJ1-TCX",
+              "code": "4J1-TC / 4J1-TCX",
+              "title": "2.5L Diesel",
+              "familyHeading": "4J1-TC / 4J1-TCX - 2.5L Diesel",
               "fuel": "Diesel",
-              "size": "3.0L",
-              "power": "177 hp",
-              "compatibleModels": "D-Max (2012–2020), MU-X",
-              "avgRebuiltPrice": "£3,800 – £6,200",
-              "cta": "Get Quote for 4JJ1-TCX"
+              "size": "2.5 Litre",
+              "power": "107-135 hp",
+              "compatibleModels": "D-Max (2002-2012), Rodeo (1998-2012)",
+              "avgRebuiltPrice": "£1,500 - £2,000 supply only",
+              "cta": "→ Get quotes for 4J1-TC Isuzu engine replacement"
             },
             {
-              "code": "4JJ3-TCX",
+              "code": "4JJ1",
+              "title": "3.0L Diesel",
+              "familyHeading": "4JJ1 - 3.0L Diesel",
               "fuel": "Diesel",
-              "size": "3.0L",
-              "power": "190 hp",
-              "compatibleModels": "D-Max (2020–present)",
-              "avgRebuiltPrice": "£4,200 – £7,000",
-              "cta": "Get Quote for 4JJ3-TCX"
-            }
-          ]
-        },
-        {
-          "name": "4JK1 Family – 2.5 Litre Turbo Diesel",
-          "era": "2006–2020",
-          "failureNote": "The 4JK1 is the smaller-capacity workhorse of the D-Max and Rodeo ranges. Tradespeople search for these when injector pumps or turbo failures make replacement more economical than repair. Common failure points: 4JK1 engines are known for injection pump failure (common rail issues), turbocharger carbon build-up, and EGR clogging. Our rebuilt units include a reconditioned or new Denso injection pump, cleaned intake system, and upgraded gasket sets .",
-          "engines": [
-            {
-              "code": "4JK1-TC",
-              "fuel": "Diesel",
-              "size": "2.5L",
-              "power": "134 hp",
-              "compatibleModels": "D-Max (2006–2012), Rodeo",
-              "avgRebuiltPrice": "£2,800 – £4,800",
-              "cta": "Get Quote for 4JK1-TC"
+              "size": "3.0 Litre",
+              "power": "130-160 hp",
+              "compatibleModels": "D-Max (2012-2020)",
+              "avgRebuiltPrice": "£2,500 - £3,000 supply only",
+              "cta": "→ Get quotes for 4JJ1 Isuzu engine replacement"
             },
             {
-              "code": "4JK1-TCY",
+              "code": "4JH1",
+              "title": "3.0L Diesel",
+              "familyHeading": "4JH1 - 3.0L Diesel",
               "fuel": "Diesel",
-              "size": "2.5L",
-              "power": "161 hp",
-              "compatibleModels": "D-Max (2012–2020)",
-              "avgRebuiltPrice": "£3,200 – £5,200",
-              "cta": "Get Quote for 4JK1-TCY"
-            }
-          ]
-        },
-        {
-          "name": "RZ4E Family – 1.9 Litre Turbo Diesel",
-          "era": "2017–Present",
-          "failureNote": "The RZ4E is Isuzu’s modern “Blue Power” engine, designed for Euro 6 compliance. It has lower replacement volumes but owners searching specifically by this code are typically commercial operators with newer D-Max models. Common failure points: RZ4E engines have reported DPF regeneration problems and occasional AdBlue system failures in Euro 6d variants. Our rebuilt units are fully compatible with post-2018 emissions systems and include a warranty that covers DPF and injector components .",
-          "engines": [
+              "size": "3.0 Litre",
+              "power": "130-150 hp",
+              "compatibleModels": "Trooper (1998-2004), D-Max (2002-2012)",
+              "avgRebuiltPrice": "£2,000 - £2,500 supply only",
+              "cta": "→ Get quotes for 4JH1 Isuzu engine replacement"
+            },
             {
               "code": "RZ4E-TC",
+              "title": "1.9L Diesel",
+              "familyHeading": "RZ4E-TC - 1.9L Diesel",
               "fuel": "Diesel",
-              "size": "1.9L",
-              "power": "148 hp",
-              "compatibleModels": "D-Max (2017–present), MU-X",
-              "avgRebuiltPrice": "£3,800 – £6,500",
-              "cta": "Get Quote for RZ4E-TC"
-            }
-          ]
-        },
-        {
-          "name": "4JH1 / 4JA1 Families – Classic Commercial Diesels",
-          "era": "1998–2010",
-          "failureNote": "These older diesel engines power Trooper, Rodeo and earlier D-Max models. Replacement searches are driven by cracked heads, failed injection pumps, and high-mileage wear. Common failure points: 4JH1/4JA1 engines are known for cylinder head cracking, failed glow plugs, and worn injector pumps. Our rebuilt units include pressure-tested cylinder heads, new OEM-spec glow plugs, and a full bottom-end inspection .",
-          "engines": [
-            {
-              "code": "4JH1-TC",
-              "fuel": "Diesel",
-              "size": "3.0L",
-              "power": "157 hp",
-              "compatibleModels": "Rodeo (2003–2008), Trooper",
-              "avgRebuiltPrice": "£2,200 – £4,000",
-              "cta": "Get Quote for 4JH1-TC"
-            },
-            {
-              "code": "4JA1-L",
-              "fuel": "Diesel",
-              "size": "2.5L",
-              "power": "85 hp",
-              "compatibleModels": "Rodeo, TF Series",
-              "avgRebuiltPrice": "£1,800 – £3,500",
-              "cta": "Get Quote for 4JA1-L"
-            },
-            {
-              "code": "4JA1-T",
-              "fuel": "Diesel",
-              "size": "2.5L",
-              "power": "98 hp",
-              "compatibleModels": "Trooper (1998–2003)",
-              "avgRebuiltPrice": "£2,000 – £3,800",
-              "cta": "Get Quote for 4JA1-T"
-            }
-          ]
-        },
-        {
-          "name": "4HK1 / 4LE2 – N-Series & Industrial Engines",
-          "era": "2004–Present",
-          "failureNote": "Fleet and commercial operators search by these codes when replacing engines in NKR, NPR and NQR trucks. These are higher-cost replacements due to engine size and commercial-duty construction. Common failure points: 4HK1/4LE2 engines commonly suffer injector failure (Denso units) and turbocharger wear in high-mileage fleet use. Our rebuilt units include new or reconditioned injectors and a balanced turbo assembly .",
-          "engines": [
-            {
-              "code": "4HK1-TC",
-              "fuel": "Diesel",
-              "size": "5.2L",
-              "power": "147–187 hp",
-              "compatibleModels": "N-Series NQR, NPS (2005–on)",
-              "avgRebuiltPrice": "£5,500 – £9,000",
-              "cta": "Get Quote for 4HK1-TC"
-            },
-            {
-              "code": "4LE2",
-              "fuel": "Diesel",
-              "size": "2.2L",
-              "power": "110 hp",
-              "compatibleModels": "N-Series NKR, N-Series light trucks",
-              "avgRebuiltPrice": "£3,500 – £5,800",
-              "cta": "Get Quote for 4LE2"
-            }
-          ]
-        },
-        {
-          "name": "6VD1 / 6VE1 – Petrol V6",
-          "era": "Trooper, 1997–2006",
-          "failureNote": "While diesel dominates Isuzu searches, the petrol V6 engines in Troopers generate consistent replacement enquiries from classic and off-road enthusiasts. Common failure points: 6VD1/6VE1 engines are known for timing belt failure (interference engine – catastrophic if snapped) and leaking rocker cover gaskets. Our rebuilt units include a new timing belt kit and full gasket set",
-          "engines": [
-            {
-              "code": "6VD1",
-              "fuel": "Petrol",
-              "size": "3.2L",
-              "power": "202 hp",
-              "compatibleModels": "Trooper (1997–2002)",
-              "avgRebuiltPrice": "£1,800 – £3,200",
-              "cta": "Get Quote for 6VD1"
-            },
-            {
-              "code": "6VE1",
-              "fuel": "Petrol",
-              "size": "3.5L",
-              "power": "212 hp",
-              "compatibleModels": "Trooper (2002–2006)",
-              "avgRebuiltPrice": "£2,200 – £3,800",
-              "cta": "Get Quote for 6VE1"
+              "size": "1.9 Litre",
+              "power": "148-163 hp",
+              "compatibleModels": "D-Max (2020-present)",
+              "avgRebuiltPrice": "£2,500 - £3,000 supply only",
+              "cta": "→ Get quotes for RZ4E-TC Isuzu engine replacement"
             }
           ]
         }
@@ -1187,68 +1089,35 @@
       "closing": "Not sure which engine size your Isuzu needs? Enter your registration number and we'll match you to the exact engine code and displacement — instantly. All engines supplied with a minimum 12‑month warranty from UK Isuzu specialists."
     },
     "fuelTypes": {
-      "tag": "Complete Isuzu Engines List",
-      "h2": "Isuzu Engines by Fuel Type",
-      "intro": "Choose your Isuzu engine by fuel type to compare realistic replacement prices, known brand‑wide issues, and UK specialist supply – from the most popular diesel workhorses to heavy‑duty commercial powertrains.",
+      "tag": "Isuzu Engines by Fuel Type",
+      "h2": "Isuzu Engine Codes - Most Replaced Engines & Full Directory",
+      "intro": "Every major Isuzu engine code with technical specs, compatible UK models, known failures and average rebuilt prices. Use the quick-reference accordion below for all remaining codes.",
       "items": [
         {
-          "title": "Isuzu Diesel Engines",
-          "description": "Isuzu diesel engines cover many of the brand's highest-mileage UK models. Replacement demand is usually driven by timing system wear, injector and turbo faults, plus EGR or DPF-related damage once repeat short-journey use starts affecting reliability.",
-          "descriptor": "High-mileage motorway and SUV applications",
+          "title": "Diesel Engines",
+          "description": "Isuzu's diesel engine range in the UK is dominated by the 4J1 family (2.5-litre and 3.0-litre) and the newer RZ4E-TC (1.9-litre), fitted to the D-Max, Rodeo, and Trooper. Replacement demand is driven by DPF/DPD regeneration problems, cracked heads, and turbocharger failures on these higher-mileage work vehicles.",
+          "descriptor": "Isuzu's diesel engine range in the UK is dominated by the 4J1 family (2.5-litre and 3.0-litre) and the newer RZ4E-TC (1.9-litre), fitted to the D-Max, Rodeo, and Trooper. Replacement demand is driven by DPF/DPD regeneration problems, cracked heads, and turbocharger failures on these higher-mileage work vehicles.",
           "families": [
-            "4JJ1 Family – 3.0 Litre Turbo Diesel",
-            "4JK1 Family – 2.5 Litre Turbo Diesel",
-            "RZ4E Family – 1.9 Litre Turbo Diesel",
-            "4JH1 / 4JA1 Families – Classic Commercial Diesels"
+            "£1,500 - £3,000 (supply only)",
+            "2.5 4J1 (D-Max, Rodeo): £1,500 - £2,000",
+            "3.0 4JJ1/4JH1 (D-Max, Trooper): £2,000 - £2,500",
+            "1.9 RZ4E-TC (D-Max): £2,500 - £3,000"
           ],
-          "foundIn": [
-            "Isuzu C&E-Series Engines",
-            "Isuzu F-Series Engines",
-            "Isuzu N-Series Engines"
-          ],
-          "knownFor": [
-            "EGR valve carbon clogging",
-            "DPF blockage (short urban cycles)",
-            "Timing chain stretch",
-            "oil pump drive wear"
-          ],
-          "typicalModels": [
-            "Isuzu C&E-Series Engines",
-            "Isuzu F-Series Engines",
-            "Isuzu N-Series Engines"
-          ],
-          "importantNotes": [
-            "Short-journey use increases DPF, EGR, and oil-dilution risk on many diesel engines.",
-            "A documented service history matters more on diesel replacements because injector, turbo, and timing faults often build gradually."
-          ],
-          "cta": "Compare Isuzu diesel engine prices"
-        },
-        {
-          "title": "Isuzu Petrol Engines",
-          "description": "Isuzu petrol engines span everything from core daily-driver models to higher-output performance variants. Most replacement enquiries start with timing chain noise, oil consumption, cooling-system failure, or internal wear that makes a warranted replacement more sensible than repeated repairs.",
-          "descriptor": "Core passenger-car and performance applications",
-          "families": [
-            "6VD1 / 6VE1 – Petrol V6"
-          ],
-          "foundIn": [
-            "Isuzu C&E-Series Engines",
-            "Isuzu F-Series Engines",
-            "Isuzu N-Series Engines"
-          ],
+          "foundIn": [],
           "knownFor": [],
-          "typicalModels": [
-            "Isuzu C&E-Series Engines",
-            "Isuzu F-Series Engines",
-            "Isuzu N-Series Engines"
-          ],
+          "typicalModels": [],
           "importantNotes": [
-            "Cold-start rattles, overheating history, and oil use are the biggest warning signs before a petrol engine replacement becomes necessary.",
-            "Direct-injection petrol engines often need specialist attention for carbon build-up alongside the main mechanical repair."
+            "Tradespeople and fleet operators needing torque and durability",
+            "Off-road users and agricultural workers prioritising reliability",
+            "High-mileage motorway drivers covering 15,000+ miles annually",
+            "Urban drivers with short daily trips who are better served by petrol (DPF and EGR issues are common)",
+            "Low-mileage users who don't drive enough to justify the diesel premium",
+            "Typical searches: Isuzu D-Max engine replacement, Isuzu 4J1 engine cost, Isuzu diesel engine specialist UK, Isuzu D-Max DPF problems, Isuzu Rodeo engine replacement, Isuzu Trooper 3.0 engine price, Isuzu 4JJ1 engine for sale, Isuzu D-Max 1.9 engine replacement → Get quotes for Isuzu Diesel replacement engines → Not sure which diesel you have? Enter your registration number for an instant match"
           ],
-          "cta": "Compare Isuzu petrol engine prices"
+          "cta": "→ Get quotes for Isuzu Diesel replacement engines"
         }
       ],
-      "closing": "Not sure which fuel type your Isuzu has? Enter your registration number above to instantly identify your model, engine code, fuel system and compatible replacement options – all backed by a minimum 12‑month unlimited mileage warranty from UK Isuzu specialists."
+      "closing": "Not sure which fuel type your Isuzu has? Enter your registration number for an instant match."
     },
     "engineCodeDirectory": {
       "tag": "Engine Codes",

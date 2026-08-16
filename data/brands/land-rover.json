@@ -837,213 +837,174 @@
       ]
     },
     "engineCodes": {
-      "tag": "Replacement Cost",
-      "h2": "Land Rover Engine Codes & Average Rebuilt Prices (UK Supply)",
-      "h3": "Compare costs for every major Land Rover engine - TDV6, Ingenium, V8, Td5 and legacy units. All prices are typical UK market ranges for professionally rebuilt engines with warranty. Click Get Quote on any engine to receive tailored prices from our network of UK Land Rover specialists.",
+      "tag": "Engine Codes",
+      "h2": "Land Rover Engine Codes - Most Replaced Engines & Full Directory",
+      "h3": "Every major Land Rover engine code with technical specs, compatible UK models, known failures and average rebuilt prices. Use the quick-reference accordion below for all remaining codes.",
+      "closingLine": "Can't find your engine code? Enter your registration number above - we'll identify the exact Land Rover engine fitted to your vehicle.",
       "filters": [
-        "All",
-        "Diesel",
-        "Petrol",
-        "TDV6",
-        "Ingenium",
-        "V8",
-        "Defender"
+        "Diesel Engines (Most Replaced in the UK)",
+        "Petrol Engines (Most Replaced in the UK)",
+        "Hybrid / Electrified Engines",
+        "Petrol Engines (Continued - Classic V8 Family)"
       ],
       "groups": [
         {
-          "name": "Modern Ingenium Diesel",
-          "era": "2015-Present",
-          "failureNote": "AJ200D / 204DTD units are known for timing chain stretch, DPF-related oil dilution and turbocharger failure. AJ20D6 3.0 engines need uprated bearing shells and improved oil supply on early builds.",
+          "name": "Diesel Engines (Most Replaced in the UK)",
+          "era": "Extracted from Land Rover diesel engines (most replaced in the uk) technical replacement data.",
+          "failureNote": "Catastrophic crankshaft bearing failure - the crankshaft bearings can fail prematurely due to a design flaw; symptoms include sudden severe knocking from the bottom end and metallic debris in oil, Timing chain tensioner failure - leading to rattling on start-up and potential valve/piston contact",
           "engines": [
             {
-              "code": "AJ200D",
+              "code": "306DT (TDV6)",
+              "title": "3.0L Diesel",
+              "familyHeading": "306DT (TDV6) - 3.0L Diesel",
               "fuel": "Diesel",
-              "size": "2.0L",
-              "power": "150-180 HP",
-              "compatibleModels": "Discovery Sport (L550), Range Rover Evoque (L538), Discovery 5, Velar, Range Rover Sport",
-              "avgRebuiltPrice": "£2,500 - £5,000",
-              "cta": "Get Quote"
+              "size": "3.0 Litre",
+              "power": "211-245 hp",
+              "compatibleModels": "Discovery 4 (L319) TDV6, Range Rover Sport (L320) TDV6, Range Rover (L322) TDV6",
+              "avgRebuiltPrice": "£3,400 - £5,000 supply only",
+              "cta": "→ Get quotes for 306DT Land Rover engine replacement"
             },
             {
-              "code": "204DTD",
+              "code": "306DTX (SDV6)",
+              "title": "3.0L Diesel",
+              "familyHeading": "306DTX (SDV6) - 3.0L Diesel",
               "fuel": "Diesel",
-              "size": "2.0L",
-              "power": "150-180 HP",
-              "compatibleModels": "Discovery Sport, Range Rover Evoque (2015-2019), Jaguar XE/XF",
-              "avgRebuiltPrice": "£2,500 - £4,500",
-              "cta": "Get Quote"
+              "size": "3.0 Litre",
+              "power": "255-306 hp",
+              "compatibleModels": "Discovery 4 (L319) SDV6, Range Rover Sport (L494) SDV6",
+              "avgRebuiltPrice": "£4,000 - £5,500 supply only",
+              "cta": "→ Get quotes for 306DTX Land Rover engine replacement"
             },
-            {
-              "code": "204DTA",
-              "fuel": "Diesel",
-              "size": "2.0L",
-              "power": "180-240 HP",
-              "compatibleModels": "Range Rover Evoque, Discovery Sport, Velar",
-              "avgRebuiltPrice": "£2,500 - £4,000",
-              "cta": "Get Quote"
-            },
-            {
-              "code": "AJ20D6",
-              "fuel": "Diesel",
-              "size": "3.0L",
-              "power": "250-300 HP",
-              "compatibleModels": "Range Rover (L405), Range Rover Sport (L494), Discovery 5",
-              "avgRebuiltPrice": "£4,500 - £8,500",
-              "cta": "Get Quote"
-            }
-          ]
-        },
-        {
-          "name": "TDV6 Diesel",
-          "era": "2004-2018",
-          "failureNote": "The 276DT 2.7 and 306DT / 306DTX 3.0 TDV6 family are infamous for crankshaft bearing failure. Strong rebuilds include uprated bearings, revised oil pump assemblies and improved EGR / turbo support parts.",
-          "engines": [
             {
               "code": "276DT",
+              "title": "2.7L Diesel",
+              "familyHeading": "276DT - 2.7L Diesel",
               "fuel": "Diesel",
-              "size": "2.7L",
-              "power": "190 HP",
-              "compatibleModels": "Discovery 3 (L319), Range Rover Sport (L320, 2005-2009)",
-              "avgRebuiltPrice": "£2,800 - £4,500",
-              "cta": "Get Quote"
+              "size": "2.7 Litre",
+              "power": "190-200 hp",
+              "compatibleModels": "Discovery 3 (L319) TDV6, Range Rover Sport (L320) TDV6",
+              "avgRebuiltPrice": "£2,800 - £4,000 supply only",
+              "cta": "→ Get quotes for 276DT Land Rover engine replacement"
             },
             {
-              "code": "306DT",
+              "code": "204DTM (Ingenium 2.0)",
+              "title": "2.0L Diesel",
+              "familyHeading": "204DTM (Ingenium 2.0) - 2.0L Diesel",
               "fuel": "Diesel",
-              "size": "3.0L",
-              "power": "211-245 HP",
-              "compatibleModels": "Discovery 4 (L319), Range Rover Sport (L320, 2009-2013), Range Rover (L322)",
-              "avgRebuiltPrice": "£2,800 - £5,200",
-              "cta": "Get Quote"
+              "size": "2.0 Litre",
+              "power": "150-240 hp",
+              "compatibleModels": "Discovery Sport (L550), Range Rover Evoque (L538/L551)",
+              "avgRebuiltPrice": "£4,000 - £6,500 supply only",
+              "cta": "→ Get quotes for 204DTM Land Rover engine replacement"
             },
             {
-              "code": "306DTX",
+              "code": "224DT",
+              "title": "2.2L Diesel",
+              "familyHeading": "224DT - 2.2L Diesel",
               "fuel": "Diesel",
-              "size": "3.0L",
-              "power": "250-306 HP",
-              "compatibleModels": "Discovery 4, Range Rover Sport (2012-2018), Range Rover (L405)",
-              "avgRebuiltPrice": "£3,500 - £5,500",
-              "cta": "Get Quote"
+              "size": "2.2 Litre",
+              "power": "148-190 hp",
+              "compatibleModels": "Freelander 2 (L359) TD4/SD4, Range Rover Evoque (L538) SD4",
+              "avgRebuiltPrice": "£2,200 - £3,500 supply only",
+              "cta": "→ Get quotes for 224DT Land Rover engine replacement"
+            },
+            {
+              "code": "368DT",
+              "title": "3.6L Diesel",
+              "familyHeading": "368DT - 3.6L Diesel",
+              "fuel": "Diesel",
+              "size": "3.6 Litre",
+              "power": "272 hp",
+              "compatibleModels": "Range Rover (L322) TDV8",
+              "avgRebuiltPrice": "£4,500 - £7,000 supply only",
+              "cta": "→ Get quotes for 368DT Land Rover engine replacement"
             }
           ]
         },
         {
-          "name": "V8 Petrol",
-          "era": "2004-Present",
-          "failureNote": "The 508PN 5.0 Supercharged V8 is known for timing chain tensioner wear, water pump leakage and supercharger coupler issues. Older 448PN 4.4 units suffer chain guide rail and VANOS failures.",
+          "name": "Petrol Engines (Most Replaced in the UK)",
+          "era": "Extracted from Land Rover petrol engines (most replaced in the uk) technical replacement data.",
+          "failureNote": "Cooling system pipe failure - plastic coolant pipes can become brittle and leak, leading to overheating, Timing chain tensioner wear - can cause rattling on start-up and potential valve/piston contact",
           "engines": [
             {
-              "code": "448PN",
+              "code": "AJ133",
+              "title": "5.0L Petrol (Supercharged V8)",
+              "familyHeading": "AJ133 - 5.0L Petrol (Supercharged V8)",
               "fuel": "Petrol",
-              "size": "4.4L",
-              "power": "299 HP",
-              "compatibleModels": "Discovery 3 (L319, 2004-2009), Range Rover Sport (L320)",
-              "avgRebuiltPrice": "£2,800 - £4,500",
-              "cta": "Get Quote"
+              "size": "5.0 Litre",
+              "power": "510-550 hp",
+              "compatibleModels": "Range Rover (L405) 5.0 SC V8, Range Rover Sport (L494) 5.0 SC V8, Range Rover Sport SVR",
+              "avgRebuiltPrice": "£6,000 - £10,000 supply only",
+              "cta": "→ Get quotes for AJ133 Land Rover engine replacement"
             },
             {
               "code": "508PN",
+              "title": "5.0L Petrol (Supercharged V8)",
+              "familyHeading": "508PN - 5.0L Petrol (Supercharged V8)",
               "fuel": "Petrol",
-              "size": "5.0L",
-              "power": "375-510 HP",
-              "compatibleModels": "Range Rover, Range Rover Sport, Discovery 4, SVAutobiography",
-              "avgRebuiltPrice": "£5,500 - £8,500",
-              "cta": "Get Quote"
+              "size": "5.0 Litre",
+              "power": "510-550 hp",
+              "compatibleModels": "Range Rover (L405) 5.0 SC V8, Range Rover Sport (L494) 5.0 SC V8, Range Rover Sport SVR",
+              "avgRebuiltPrice": "£6,000 - £10,000 supply only",
+              "cta": "→ Get quotes for 508PN Land Rover engine replacement"
             },
             {
               "code": "306PS",
+              "title": "3.0L Petrol (Supercharged V6)",
+              "familyHeading": "306PS - 3.0L Petrol (Supercharged V6)",
               "fuel": "Petrol",
-              "size": "3.0L",
-              "power": "340-380 HP",
-              "compatibleModels": "Range Rover Sport (L494, 2014+), Range Rover (L405)",
-              "avgRebuiltPrice": "£4,500 - £7,500",
-              "cta": "Get Quote"
+              "size": "3.0 Litre",
+              "power": "340-380 hp",
+              "compatibleModels": "Range Rover (L405) 3.0 SC V6, Range Rover Sport (L494) 3.0 SC V6",
+              "avgRebuiltPrice": "£4,500 - £7,500 supply only",
+              "cta": "→ Get quotes for 306PS Land Rover engine replacement"
             }
           ]
         },
         {
-          "name": "Defender Diesel",
-          "era": "1990-2016",
-          "failureNote": "Defender diesels range from 200Tdi / 300Tdi to Td5 and Puma. The 200Tdi / 300Tdi tend toward head gasket and belt wear, while ZSD-424 / 244DT units are known for injector seal, EGR and VNT turbo issues.",
+          "name": "Hybrid / Electrified Engines",
+          "era": "Extracted from Land Rover hybrid / electrified engines technical replacement data.",
+          "failureNote": "Hybrid system faults, Battery degradation",
           "engines": [
             {
-              "code": "11L",
-              "fuel": "Diesel",
-              "size": "2.5L",
-              "power": "85-113 HP",
-              "compatibleModels": "Defender 90 / 110 / 130 (1990-1994), 200Tdi",
-              "avgRebuiltPrice": "£650 - £1,500",
-              "cta": "Get Quote"
+              "code": "P400e",
+              "title": "2.0L Petrol (PHEV)",
+              "familyHeading": "P400e - 2.0L Petrol (PHEV)",
+              "fuel": "PHEV (Petrol + Electric)",
+              "size": "2.0 Litre",
+              "power": "398 hp (combined)",
+              "compatibleModels": "Range Rover (L405) P400e, Range Rover Sport (L494) P400e",
+              "avgRebuiltPrice": "£4,000 - £6,500 (engine block, supply only)",
+              "cta": "→ Get quotes for P400e Land Rover engine replacement"
             },
             {
-              "code": "23L",
-              "fuel": "Diesel",
-              "size": "2.5L",
-              "power": "107-122 HP",
-              "compatibleModels": "Defender 90 / 110 / 130 (1994-1998), Discovery 1, Range Rover Classic",
-              "avgRebuiltPrice": "£1,200 - £2,200",
-              "cta": "Get Quote"
-            },
-            {
-              "code": "ZSD-424",
-              "fuel": "Diesel",
-              "size": "2.4L",
-              "power": "122 HP",
-              "compatibleModels": "Defender 90 / 110 / 130 (2007-2011), Puma TDCi",
-              "avgRebuiltPrice": "£2,200 - £3,500",
-              "cta": "Get Quote"
-            },
-            {
-              "code": "244DT",
-              "fuel": "Diesel",
-              "size": "2.4L",
-              "power": "122 HP",
-              "compatibleModels": "Defender Station Wagon, Pickup, Cabrio, Platform / Chassis",
-              "avgRebuiltPrice": "£2,800 - £3,800",
-              "cta": "Get Quote"
-            },
-            {
-              "code": "56D",
-              "fuel": "Diesel",
-              "size": "2.5L",
-              "power": "122 HP",
-              "compatibleModels": "Defender (Td5, 1998-2006), Discovery 2",
-              "avgRebuiltPrice": "£1,800 - £3,000",
-              "cta": "Get Quote"
+              "code": "AJ20P6 / P400",
+              "title": "3.0L Petrol (MHEV)",
+              "familyHeading": "AJ20P6 / P400 - 3.0L Petrol (MHEV)",
+              "fuel": "Petrol (MHEV)",
+              "size": "3.0 Litre",
+              "power": "400 hp",
+              "compatibleModels": "Range Rover (L460) P400, Defender (L663) P400",
+              "avgRebuiltPrice": "£5,000 - £8,000 supply only",
+              "cta": "→ Get quotes for AJ20P6 / P400 Land Rover engine replacement"
             }
           ]
         },
         {
-          "name": "Additional & Specialist Engines",
-          "era": "Mixed",
-          "failureNote": "224DT is more reliable than some Land Rover diesels but still sees EGR and turbo oil feed issues. Specialist petrols like M52B28 and Rover V8 derivatives bring their own cooling, VANOS and oiling concerns.",
+          "name": "Petrol Engines (Continued - Classic V8 Family)",
+          "era": "Extracted from Land Rover petrol engines (continued - classic v8 family) technical replacement data.",
+          "failureNote": "Slipped cylinder liners - a well-known issue on Rover V8 engines, leading to coolant loss and overheating, Oil pressure loss - common on higher-mileage examples",
           "engines": [
             {
-              "code": "224DT",
-              "fuel": "Diesel",
-              "size": "2.2L",
-              "power": "150-190 HP",
-              "compatibleModels": "Freelander 2 (L359), Range Rover Evoque (L538, 2011-2015)",
-              "avgRebuiltPrice": "£1,200 - £3,700",
-              "cta": "Get Quote"
-            },
-            {
-              "code": "DW12BTED4",
-              "fuel": "Diesel",
-              "size": "2.7L",
-              "power": "190 HP",
-              "compatibleModels": "Discovery 3, Range Rover Sport (early models)",
-              "avgRebuiltPrice": "£2,500 - £4,500",
-              "cta": "Get Quote"
-            },
-            {
-              "code": "M52B28",
+              "code": "Rover V8",
+              "title": "3.5L / 3.9L / 4.0L Petrol",
+              "familyHeading": "Rover V8 - 3.5L / 3.9L / 4.0L Petrol",
               "fuel": "Petrol",
-              "size": "2.8L",
-              "power": "193 HP",
-              "compatibleModels": "Defender conversions and limited UK fitment",
-              "avgRebuiltPrice": "£2,000 - £3,500",
-              "cta": "Get Quote"
+              "size": "3.5 - 4.0 Litre",
+              "power": "135-200 hp",
+              "compatibleModels": "Defender (pre-2000), Discovery 1 (L318), Range Rover Classic (LSE)",
+              "avgRebuiltPrice": "£2,500 - £4,500 supply only",
+              "cta": "→ Get quotes for Rover V8 Land Rover engine replacement"
             }
           ]
         }

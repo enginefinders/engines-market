@@ -1156,234 +1156,117 @@
       ]
     },
     "engineCodes": {
-      "tag": "Replacement Cost",
-      "h2": "Lexus Engine Codes & Average Rebuilt Prices (UK Supply)",
-      "h3": "Compare costs for every major Lexus engine — Dynamic Force, GR V6, and AD Diesel families. All prices are typical UK market ranges for professionally rebuilt engines with warranty. Click \"Get Quote\" on any engine to receive tailored prices from our network of UK Lexus specialists.",
+      "tag": "Engine Codes",
+      "h2": "Lexus Engine Codes - Most Replaced Engines & Full Directory",
+      "h3": "Every major Lexus engine code with technical specs, compatible UK models, known failures and average rebuilt prices. Use the quick-reference accordion below for all remaining codes.",
+      "closingLine": "Can't find your engine code? Enter your registration number above - we'll identify the exact Lexus engine fitted to your vehicle.",
       "filters": [
-        "All",
-        "Diesel",
-        "Petrol"
+        "Petrol Engines (Most Replaced in the UK)"
       ],
       "groups": [
         {
-          "name": "Dynamic Force & AR Family",
-          "era": "2015–Present",
-          "failureNote": "*(per row – developer to implement as button pre-filling engine code)* Common failure points: Dynamic Force and AR engines are known for carbon buildup on direct injection valves and hybrid inverter sync faults in A25A-FXS units. Our rebuilt units include upgraded valve cleaning, revised ECU mapping, and hybrid system calibration to prevent recurrence.",
+          "name": "Petrol Engines (Most Replaced in the UK)",
+          "era": "Extracted from Lexus petrol engines (most replaced in the uk) technical replacement data.",
+          "failureNote": "Head gasket failure - early 2010-2013 units are susceptible to gasket breach between cylinders 2 and 3, leading to coolant loss and rough cold starts. Typical onset: 80,000-150,000 miles., Oil consumption - piston ring wear on early units can cause consumption of 1 litre per 1,000 miles.",
           "engines": [
-            {
-              "code": "A25A-FKS",
-              "fuel": "Petrol",
-              "size": "2.5L",
-              "power": "203–206 HP",
-              "compatibleModels": "ES 250 (XZ10), NX 250 (AZ20)",
-              "avgRebuiltPrice": "£2,200 – £4,200",
-              "cta": "Get Quote for A25A-FKS"
-            },
-            {
-              "code": "A25A-FXS",
-              "fuel": "Hybrid",
-              "size": "2.5L",
-              "power": "218–243 HP (combined)",
-              "compatibleModels": "ES 300h, NX 300h, UX 250h",
-              "avgRebuiltPrice": "£2,800 – £5,500",
-              "cta": "Get Quote for A25A-FXS"
-            },
             {
               "code": "2AR-FSE",
-              "fuel": "Petrol",
-              "size": "2.5L",
-              "power": "204–211 HP",
-              "compatibleModels": "IS 250 (XE30), ES 250 (XV60)",
-              "avgRebuiltPrice": "£2,000 – £4,000",
-              "cta": "Get Quote for 2AR-FSE"
+              "title": "2.5L Petrol (Hybrid)",
+              "familyHeading": "2AR-FSE - 2.5L Petrol (Hybrid)",
+              "fuel": "Petrol (Hybrid)",
+              "size": "2.5 Litre",
+              "power": "178 hp (engine) / 220 hp (system total)",
+              "compatibleModels": "ES300h (XV60, XZ10), IS300h (XE30), GS300h (L10)",
+              "avgRebuiltPrice": "£2,200 - £3,800 supply only",
+              "cta": "→ Get quotes for 2AR-FSE Lexus engine replacement"
             },
             {
-              "code": "8AR-FTS",
-              "fuel": "Turbo Petrol",
-              "size": "2.0L",
-              "power": "231–238 HP",
-              "compatibleModels": "NX 200t (AZ10), RX 200t (AL20)",
-              "avgRebuiltPrice": "£2,500 – £5,200",
-              "cta": "Get Quote for 8AR-FTS"
-            }
-          ]
-        },
-        {
-          "name": "GR V6 Family",
-          "era": "2006–2024",
-          "failureNote": "GR V6 engines are known for water pump seal degradation and timing chain tensioner wear on higher-mileage units. Our rebuilt units include upgraded water pump assemblies and revised tensioner components for extended reliability.",
-          "engines": [
-            {
-              "code": "2GR-FKS",
+              "code": "2GR-FSE",
+              "title": "3.5L Petrol (V6)",
+              "familyHeading": "2GR-FSE - 3.5L Petrol (V6)",
               "fuel": "Petrol",
-              "size": "3.5L V6",
-              "power": "295–311 HP",
-              "compatibleModels": "RX 350 (AL20), IS 350 (XE30), GS 350",
-              "avgRebuiltPrice": "£2,800 – £5,800",
-              "cta": "Get Quote for 2GR-FKS"
+              "size": "3.5 Litre",
+              "power": "306-318 hp",
+              "compatibleModels": "IS350 (GSE20/GSE21), GS350 (GRS191/GRS196)",
+              "avgRebuiltPrice": "£2,000 - £3,800 supply only",
+              "cta": "→ Get quotes for 2GR-FSE Lexus engine replacement"
             },
             {
               "code": "2GR-FXS",
-              "fuel": "Hybrid",
-              "size": "3.5L V6",
-              "power": "308–313 HP (combined)",
-              "compatibleModels": "RX 450h, ES 300h (XV70)",
-              "avgRebuiltPrice": "£3,200 – £6,500",
-              "cta": "Get Quote for 2GR-FXS"
+              "title": "3.5L Petrol (Hybrid V6)",
+              "familyHeading": "2GR-FXS - 3.5L Petrol (Hybrid V6)",
+              "fuel": "Petrol (Hybrid)",
+              "size": "3.5 Litre",
+              "power": "256 hp (engine) / 308-338 hp (system total)",
+              "compatibleModels": "RX450h (AL10, AL20), GS450h (L10)",
+              "avgRebuiltPrice": "£3,500 - £5,500 supply only",
+              "cta": "→ Get quotes for 2GR-FXS Lexus engine replacement"
             },
             {
-              "code": "5GR-FSE",
+              "code": "2UR-GSE",
+              "title": "5.0L Petrol (V8)",
+              "familyHeading": "2UR-GSE - 5.0L Petrol (V8)",
               "fuel": "Petrol",
-              "size": "2.5L V6",
-              "power": "204–218 HP",
-              "compatibleModels": "IS 250 (XE20), GS 250 (S190)",
-              "avgRebuiltPrice": "£2,400 – £4,800",
-              "cta": "Get Quote for 5GR-FSE"
+              "size": "5.0 Litre",
+              "power": "416-477 hp",
+              "compatibleModels": "IS F (XE20), RC F (XC10), GS F (L10), LC 500 (URZ100), IS 500 (XE30)",
+              "avgRebuiltPrice": "£6,500 - £10,000 supply only",
+              "cta": "→ Get quotes for 2UR-GSE Lexus engine replacement"
             },
             {
-              "code": "3GR-FSE",
+              "code": "8AR-FTS",
+              "title": "2.0L Petrol (Turbo)",
+              "familyHeading": "8AR-FTS - 2.0L Petrol (Turbo)",
               "fuel": "Petrol",
-              "size": "3.0L V6",
-              "power": "245–256 HP",
-              "compatibleModels": "GS 300 (S190), IS 300 (XE20)",
-              "avgRebuiltPrice": "£2,600 – £5,200",
-              "cta": "Get Quote for 3GR-FSE"
-            },
-            {
-              "code": "2GR-FXE",
-              "fuel": "Hybrid",
-              "size": "3.5L V6",
-              "power": "292–299 HP (combined)",
-              "compatibleModels": "RX 450h (previous gen), ES 300h",
-              "avgRebuiltPrice": "£3,000 – £6,200",
-              "cta": "Get Quote for 2GR-FXE"
-            }
-          ]
-        },
-        {
-          "name": "AD Diesel Family",
-          "era": "2005–2020",
-          "failureNote": "AD diesel engines are known for EGR cooler leaks and DPF-related issues in urban driving. Our rebuilt units include revised EGR cooler assemblies and updated DPF regeneration strategies to improve long-term compliance.",
-          "engines": [
-            {
-              "code": "1AD-FTV",
-              "fuel": "Diesel",
-              "size": "2.0L D-4D",
-              "power": "124–150 HP",
-              "compatibleModels": "CT 200d, IS 220d (XE30), NX 200d",
-              "avgRebuiltPrice": "£2,000 – £4,200",
-              "cta": "Get Quote for 1AD-FTV"
-            },
-            {
-              "code": "2AD-FHV",
-              "fuel": "Diesel",
-              "size": "2.2L D-CAT",
-              "power": "150–177 HP",
-              "compatibleModels": "IS 220d, RX 270, NX 220d",
-              "avgRebuiltPrice": "£2,400 – £5,000",
-              "cta": "Get Quote for 2AD-FHV"
-            }
-          ]
-        },
-        {
-          "name": "NZ/ZR Hybrid Small Family",
-          "era": "2000–2020",
-          "failureNote": "NZ/ZR hybrid engines are known for water pump degradation and MG motor sync faults in early-generation inverters. Our rebuilt units include upgraded electric water pumps and recalibrated hybrid control modules.",
-          "engines": [
-            {
-              "code": "1NZ-FXE",
-              "fuel": "Hybrid",
-              "size": "1.5L",
-              "power": "99 HP (combined)",
-              "compatibleModels": "CT 200h, Yaris Hybrid (XP130)",
-              "avgRebuiltPrice": "£1,800 – £3,500",
-              "cta": "Get Quote for 1NZ-FXE"
+              "size": "2.0 Litre",
+              "power": "235-241 hp",
+              "compatibleModels": "IS200t (GSE30), NX200t (AZ10)",
+              "avgRebuiltPrice": "£2,200 - £3,800 supply only",
+              "cta": "→ Get quotes for 8AR-FTS Lexus engine replacement"
             },
             {
               "code": "2ZR-FXE",
-              "fuel": "Hybrid",
-              "size": "1.8L",
-              "power": "134–136 HP (combined)",
-              "compatibleModels": "CT 200h, Auris Hybrid, Prius",
-              "avgRebuiltPrice": "£2,000 – £4,000",
-              "cta": "Get Quote for 2ZR-FXE"
-            }
-          ]
-        },
-        {
-          "name": "UR V8 & Large Displacement Family",
-          "era": "2006–2021",
-          "failureNote": "UR V8 and large-displacement engines are known for oil consumption from piston ring wear and timing chain guide deterioration. Our rebuilt units include upgraded piston ring sets and revised timing chain guide materials.",
-          "engines": [
-            {
-              "code": "3UR-FE",
-              "fuel": "Petrol",
-              "size": "5.7L V8",
-              "power": "381 HP",
-              "compatibleModels": "LX 570 (J200), Land Cruiser (J200)",
-              "avgRebuiltPrice": "£4,500 – £9,500",
-              "cta": "Get Quote for 3UR-FE"
+              "title": "1.8L Petrol (Hybrid)",
+              "familyHeading": "2ZR-FXE - 1.8L Petrol (Hybrid)",
+              "fuel": "Petrol (Hybrid)",
+              "size": "1.8 Litre",
+              "power": "99 hp (engine) / 134 hp (system total)",
+              "compatibleModels": "CT200h (Z10), IS300h (XE30)",
+              "avgRebuiltPrice": "£1,200 - £2,200 supply only",
+              "cta": "→ Get quotes for 2ZR-FXE Lexus engine replacement"
             },
             {
-              "code": "1UR-FE",
-              "fuel": "Petrol",
-              "size": "4.6L V8",
-              "power": "309–347 HP",
-              "compatibleModels": "LS 460 (XF40), GS 460, LX 450d",
-              "avgRebuiltPrice": "£3,800 – £8,200",
-              "cta": "Get Quote for 1UR-FE"
+              "code": "A25A-FXS",
+              "title": "2.5L Petrol (Hybrid)",
+              "familyHeading": "A25A-FXS - 2.5L Petrol (Hybrid)",
+              "fuel": "Petrol (Hybrid)",
+              "size": "2.5 Litre",
+              "power": "178-306 hp (system total)",
+              "compatibleModels": "ES300h (XZ10), NX350h (AZ20)",
+              "avgRebuiltPrice": "£2,800 - £4,500 supply only",
+              "cta": "→ Get quotes for A25A-FXS Lexus engine replacement"
             },
             {
-              "code": "1GR-FE",
+              "code": "M20A-FKS",
+              "title": "2.0L Petrol",
+              "familyHeading": "M20A-FKS - 2.0L Petrol",
               "fuel": "Petrol",
-              "size": "4.0L V6",
-              "power": "271–282 HP",
-              "compatibleModels": "GX 400, Land Cruiser Prado (J150)",
-              "avgRebuiltPrice": "£3,200 – £6,800",
-              "cta": "Get Quote for 1GR-FE"
-            }
-          ]
-        },
-        {
-          "name": "NR/M Small Turbo & Hybrid Family",
-          "era": "2014–Present",
-          "failureNote": "NR/M small turbo and hybrid engines are known for turbocharger wastegate sticking and hybrid battery cooling system issues. Our rebuilt units include upgraded wastegate actuators and enhanced cooling system components",
-          "engines": [
-            {
-              "code": "8NR-FTS",
-              "fuel": "Turbo Petrol",
-              "size": "1.2L",
-              "power": "114–116 HP",
-              "compatibleModels": "UX 200, CT 200 (late)",
-              "avgRebuiltPrice": "£1,800 – £3,800",
-              "cta": "Get Quote for 8NR-FTS"
+              "size": "2.0 Litre",
+              "power": "169 hp",
+              "compatibleModels": "UX 200",
+              "avgRebuiltPrice": "£2,500 - £4,000 supply only",
+              "cta": "→ Get quotes for M20A-FKS Lexus engine replacement"
             },
             {
-              "code": "M15A-FKS",
+              "code": "V35A-FTS",
+              "title": "3.4L Petrol (Twin-Turbo V6)",
+              "familyHeading": "V35A-FTS - 3.4L Petrol (Twin-Turbo V6)",
               "fuel": "Petrol",
-              "size": "1.5L",
-              "power": "169–172 HP",
-              "compatibleModels": "UX 250, Yaris Cross (XP210)",
-              "avgRebuiltPrice": "£2,000 – £4,200",
-              "cta": "Get Quote for M15A-FKS"
-            },
-            {
-              "code": "M15A-FXS",
-              "fuel": "Hybrid",
-              "size": "1.5L",
-              "power": "196–218 HP (combined)",
-              "compatibleModels": "UX 250h, Yaris Cross Hybrid",
-              "avgRebuiltPrice": "£2,400 – £5,000",
-              "cta": "Get Quote for M15A-FXS"
-            },
-            {
-              "code": "4GR-FSE",
-              "fuel": "Petrol",
-              "size": "2.5L V6",
-              "power": "204–215 HP",
-              "compatibleModels": "IS 250 (XE20), GS 250 (early)",
-              "avgRebuiltPrice": "£2,300 – £4,600",
-              "cta": "Get Quote for 4GR-FSE"
+              "size": "3.4 Litre",
+              "power": "409-437 hp",
+              "compatibleModels": "LX 600 (J310)",
+              "avgRebuiltPrice": "£8,000 - £12,000+ supply only",
+              "cta": "→ Get quotes for V35A-FTS Lexus engine replacement"
             }
           ]
         }
@@ -1845,105 +1728,71 @@
       "closing": "Not sure which engine size your Lexus needs? Enter your registration number and we'll match you to the exact engine code and displacement — instantly. All engines supplied with a minimum 12‑month warranty from UK Lexus specialists."
     },
     "fuelTypes": {
-      "tag": "Complete Lexus Engines List",
-      "h2": "Lexus Engines by Fuel Type",
-      "intro": "Choose your Lexus engine by fuel type to compare realistic replacement prices, known brand‑wide issues, and UK specialist supply – from the most popular diesel workhorses to the latest electrified powertrains.",
+      "tag": "Lexus Engines by Fuel Type",
+      "h2": "Lexus Petrol vs Hybrid vs Electric - Which Fuel Type Is Right For You?",
+      "intro": "Compare Lexus engine fuel types by replacement costs, running costs, reliability reputation, and model availability. Use this guide to understand your options - then enter your registration for an instant match and quotes from UK Lexus specialists.",
       "items": [
         {
-          "title": "Lexus Diesel Engines",
-          "description": "Lexus diesel engines cover many of the brand's highest-mileage UK models. Replacement demand is usually driven by timing system wear, injector and turbo faults, plus EGR or DPF-related damage once repeat short-journey use starts affecting reliability.",
-          "descriptor": "High-mileage motorway and SUV applications",
+          "title": "Petrol Engines",
+          "description": "Lexus's petrol engine range spans from the 2.0-litre turbo (8AR-FTS) in the IS200t and NX200t to the legendary 5.0-litre V8 (2UR-GSE) in the F-performance models - delivering everything from urban efficiency to naturally aspirated V8 muscle. Lexus has not offered diesel engines in the UK market for many years, making petrol the primary non-hybrid choice.",
+          "descriptor": "Lexus's petrol engine range spans from the 2.0-litre turbo (8AR-FTS) in the IS200t and NX200t to the legendary 5.0-litre V8 (2UR-GSE) in the F-performance models - delivering everything from urban efficiency to naturally aspirated V8 muscle. Lexus has not offered diesel engines in the UK market for many years, making petrol the primary non-hybrid choice.",
           "families": [
-            "AD Diesel Family"
+            "£2,000 - £12,000+ (supply only)",
+            "8AR-FTS (2.0 Turbo): £2,200 - £3,800",
+            "2GR-FSE (3.5 V6): £2,000 - £3,800",
+            "2UR-GSE (5.0 V8): £6,500 - £10,000",
+            "V35A-FTS (3.4 Twin-Turbo V6): £8,000 - £12,000+"
           ],
-          "foundIn": [
-            "Lexus CT Engines",
-            "Lexus ES Engines",
-            "Lexus IS Engines",
-            "Lexus LC Engines"
-          ],
-          "knownFor": [
-            "EGR cooler internal cracking",
-            "DPF clogging from short trips",
-            "timing chain tensioner wear on high‑mileage units"
-          ],
-          "typicalModels": [
-            "Lexus CT Engines",
-            "Lexus ES Engines",
-            "Lexus IS Engines",
-            "Lexus LC Engines"
-          ],
-          "importantNotes": [
-            "Short-journey use increases DPF, EGR, and oil-dilution risk on many diesel engines.",
-            "A documented service history matters more on diesel replacements because injector, turbo, and timing faults often build gradually."
-          ],
-          "cta": "Compare Lexus diesel engine prices"
-        },
-        {
-          "title": "Lexus Petrol Engines",
-          "description": "Lexus petrol engines span everything from core daily-driver models to higher-output performance variants. Most replacement enquiries start with timing chain noise, oil consumption, cooling-system failure, or internal wear that makes a warranted replacement more sensible than repeated repairs.",
-          "descriptor": "Core passenger-car and performance applications",
-          "families": [
-            "Dynamic Force & AR Family",
-            "GR V6 Family",
-            "UR V8 & Large Displacement Family",
-            "NR/M Small Turbo & Hybrid Family"
-          ],
-          "foundIn": [
-            "Lexus CT Engines",
-            "Lexus ES Engines",
-            "Lexus IS Engines",
-            "Lexus LC Engines"
-          ],
-          "knownFor": [
-            "Carbon accumulation on intake valves (direct injection)",
-            "occasional VVT‑i actuator rattle on early production",
-            "1AZ – oil consumption from piston ring wear",
-            "hybrid variants – inverter coolant pump failure"
-          ],
-          "typicalModels": [
-            "Lexus CT Engines",
-            "Lexus ES Engines",
-            "Lexus IS Engines",
-            "Lexus LC Engines"
-          ],
-          "importantNotes": [
-            "Cold-start rattles, overheating history, and oil use are the biggest warning signs before a petrol engine replacement becomes necessary.",
-            "Direct-injection petrol engines often need specialist attention for carbon build-up alongside the main mechanical repair."
-          ],
-          "cta": "Compare Lexus petrol engine prices"
-        },
-        {
-          "title": "Lexus Hybrid Engines",
-          "description": "Lexus hybrid powertrains combine combustion engines with electric assistance across newer electrified models. Replacement demand is lower than traditional petrol or diesel units, but generator-engine faults, inverter issues, cooling-system failures, and calibration-sensitive repairs still require specialist support.",
-          "descriptor": "Electrified models with combustion backup",
-          "families": [
-            "Dynamic Force & AR Family",
-            "GR V6 Family",
-            "NZ/ZR Hybrid Small Family",
-            "NR/M Small Turbo & Hybrid Family"
-          ],
-          "foundIn": [
-            "Lexus CT Engines",
-            "Lexus ES Engines",
-            "Lexus IS Engines",
-            "Lexus LC Engines"
-          ],
+          "foundIn": [],
           "knownFor": [],
-          "typicalModels": [
-            "Lexus CT Engines",
-            "Lexus ES Engines",
-            "Lexus IS Engines",
-            "Lexus LC Engines"
-          ],
+          "typicalModels": [],
           "importantNotes": [
-            "Hybrid faults often need both mechanical and high-voltage diagnosis, so replacement decisions should be made by specialists familiar with the full system.",
-            "Battery cooling, inverter health, and software calibration are just as important as the combustion-engine condition on hybrid models."
+            "Performance enthusiasts who value the Lexus V8 character and driving experience",
+            "Collectors and weekend drivers with lower annual mileage",
+            "Drivers who prioritise engagement, emotion and prestige over fuel economy",
+            "High-mileage daily drivers who would benefit from hybrid's superior fuel economy",
+            "Drivers prioritising maximum fuel efficiency over performance",
+            "Typical searches: Lexus IS350 engine replacement, Lexus 2UR-GSE engine rebuild, Lexus RC F engine cost, Lexus IS F V8 engine replacement, Lexus petrol engine specialist UK, Lexus 2GR-FSE engine problems, Lexus LC 500 engine replacement, Lexus 8AR-FTS engine price UK → Compare Lexus Petrol engine prices → Not sure which petrol you have? Enter your registration number for an instant match"
           ],
-          "cta": "Compare Lexus hybrid engine prices"
+          "cta": "→ Compare Lexus Petrol engine prices"
+        },
+        {
+          "title": "Hybrid & Plug-in Hybrid (PHEV) Engines",
+          "description": "Lexus is a pioneer in hybrid technology, with its Hybrid Synergy Drive system powering models like the CT200h, IS300h, ES300h, GS300h, RX450h, and NX350h. Hybrid systems are generally reliable, but replacement enquiries are increasing as these vehicles age and high-mileage examples require attention.",
+          "descriptor": "Lexus is a pioneer in hybrid technology, with its Hybrid Synergy Drive system powering models like the CT200h, IS300h, ES300h, GS300h, RX450h, and NX350h. Hybrid systems are generally reliable, but replacement enquiries are increasing as these vehicles age and high-mileage examples require attention.",
+          "families": [
+            "HEV (Self-charging Hybrid - CT200h, IS300h, ES300h, GS300h, RX450h): Combines an Atkinson-cycle petrol engine (2ZR-FXE, 2AR-FSE, 2GR-FXS) with an electric motor and a nickel-metal hydride or lithium-ion battery. The system operates in EV, Hybrid, and Engine Drive modes for maximum efficiency.",
+            "PHEV (Plug-in Hybrid - some newer models): Combines a petrol engine with a larger battery pack that can be charged via an external plug, providing 25-40 miles of pure electric range.",
+            "Battery location: The high-voltage battery is typically located under the rear seats or boot floor - careful handling is required for any work in these areas."
+          ],
+          "foundIn": [],
+          "knownFor": [],
+          "typicalModels": [],
+          "importantNotes": [
+            "High-mileage drivers covering 15,000+ miles annually",
+            "Urban commuters who benefit from improved fuel economy in stop-start traffic",
+            "Company car drivers benefiting from lower Benefit-in-Kind (BIK) tax rates",
+            "Drivers who want to reduce fuel costs and emissions without going fully electric",
+            "Drivers without access to a specialist hybrid garage - parts and expertise are limited",
+            "Typical searches: Lexus CT200h engine replacement, Lexus IS300h hybrid engine cost, Lexus hybrid engine specialist UK, Lexus 2AR-FSE head gasket failure, Lexus RX450h engine replacement, Lexus hybrid battery degradation, Lexus ES300h engine price, Lexus hybrid system fault repair → Enquire about Lexus Hybrid engine availability → Not sure which hybrid you have? Enter your registration number for an instant match"
+          ],
+          "cta": "Get quotes for Lexus Lexus Hybrid & Plug-in Hybrid (PHEV) Engines engines"
+        },
+        {
+          "title": "Electric Powertrains",
+          "description": "Lexus's electric range includes the RZ and UX 300e, using permanent-magnet synchronous motors (up to 313 hp). Electric motors rarely fail, but we connect you with UK specialists for battery module repairs and drive unit replacements.",
+          "descriptor": "Lexus's electric range includes the RZ and UX 300e, using permanent-magnet synchronous motors (up to 313 hp). Electric motors rarely fail, but we connect you with UK specialists for battery module repairs and drive unit replacements.",
+          "families": [],
+          "foundIn": [],
+          "knownFor": [],
+          "typicalModels": [],
+          "importantNotes": [
+            "Typical searches: Lexus RZ motor replacement, Lexus UX 300e battery repair, Lexus electric motor specialist UK, Lexus EV drive unit price, Lexus EV battery module replacement, Lexus electric range degradation → Enquire about Lexus Electric motor repair or replacement → Not sure which electric Lexus you have? Enter your registration number for an instant match"
+          ],
+          "cta": "Get quotes for Lexus Lexus Electric Powertrains engines"
         }
       ],
-      "closing": "Not sure which fuel type your Lexus has? Enter your registration number above to instantly identify your model, engine code, fuel system and compatible replacement options – all backed by a minimum 12‑month unlimited mileage warranty from UK Lexus specialists."
+      "closing": "Not sure which fuel type your Lexus has? Enter your registration number for an instant match."
     },
     "engineCodeDirectory": {
       "tag": "Engine Codes",

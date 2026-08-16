@@ -1252,254 +1252,106 @@
       ]
     },
     "engineCodes": {
-      "tag": "Replacement Cost",
-      "h2": "Subaru Engine Codes & Average Rebuilt Prices (UK Supply)",
-      "h3": "Compare costs for every major Subaru engine — EJ Series Boxer, FA/FB modern petrol, and EE20 Boxer diesel. All prices are typical UK market ranges for professionally rebuilt engines with warranty. Click \"Get Quote\" on any engine to receive tailored prices from our network of UK Subaru specialists.",
+      "tag": "Engine Codes",
+      "h2": "Subaru Engine Codes - Most Replaced Engines & Full Directory",
+      "h3": "Every major Subaru engine code with technical specs, compatible UK models, known failures and average rebuilt prices. Use the quick-reference accordion below for all remaining codes.",
+      "closingLine": "Can't find your engine code? Enter your registration number above - we'll identify the exact Subaru engine fitted to your vehicle.",
       "filters": [
-        "All",
-        "Diesel",
-        "Petrol"
+        "Petrol Engines (Most Replaced in the UK)"
       ],
       "groups": [
         {
-          "name": "EJ Series – Classic Boxer Petrol",
-          "era": "1990s–2010s",
-          "failureNote": "*(per row – developer to implement as button pre-filling engine code)* Common failure points: EJ Series engines are known for head gasket failure (1999–2011 NA 2.5L) and piston ringland/rod bearing failure on turbo variants. Our rebuilt units include upgraded multi-layer steel gaskets, forged pistons, and balanced rotating assemblies to address these weaknesses.",
+          "name": "Petrol Engines (Most Replaced in the UK)",
+          "era": "Extracted from Subaru petrol engines (most replaced in the uk) technical replacement data.",
+          "failureNote": "Head gasket failure - a well-documented issue on EJ20 engines, typically occurring around 80,000-120,000 miles, Piston ringland failure - particularly on tuned or high-boost examples",
           "engines": [
             {
-              "code": "EJ16",
+              "code": "EJ20",
+              "title": "2.0L Petrol",
+              "familyHeading": "EJ20 - 2.0L Petrol",
               "fuel": "Petrol",
-              "size": "1.6L",
-              "power": "95 HP",
-              "compatibleModels": "Impreza (GC/GF, 1992–2000)",
-              "avgRebuiltPrice": "£1,200 – £2,800",
-              "cta": "Get Quote for EJ16"
-            },
-            {
-              "code": "EJ18",
-              "fuel": "Petrol",
-              "size": "1.8L",
-              "power": "115 HP",
-              "compatibleModels": "Legacy (BC/BF, 1993–1999)",
-              "avgRebuiltPrice": "£1,300 – £3,000",
-              "cta": "Get Quote for EJ18"
-            },
-            {
-              "code": "EJ20 (NA)",
-              "fuel": "Petrol",
-              "size": "2.0L",
-              "power": "125–160 HP",
-              "compatibleModels": "Forester (SF), Impreza (GC/GF), Legacy (BE/BH)",
-              "avgRebuiltPrice": "£1,500 – £4,000",
-              "cta": "Get Quote for EJ20 (NA)"
-            },
-            {
-              "code": "EJ205",
-              "fuel": "Petrol",
-              "size": "2.0L Turbo",
-              "power": "227 HP",
-              "compatibleModels": "Impreza WRX (GC/GF/GG, 2001–2005)",
-              "avgRebuiltPrice": "£2,500 – £6,000",
-              "cta": "Get Quote for EJ205"
-            },
-            {
-              "code": "EJ207",
-              "fuel": "Petrol",
-              "size": "2.0L Turbo (JDM)",
-              "power": "280 HP",
-              "compatibleModels": "Impreza STI (GDB, 2001–2007)",
-              "avgRebuiltPrice": "£3,000 – £7,500",
-              "cta": "Get Quote for EJ207"
-            },
-            {
-              "code": "EJ20R/EJ20Y",
-              "fuel": "Petrol",
-              "size": "2.0L Twin-Scroll Turbo",
-              "power": "276 HP",
-              "compatibleModels": "Legacy GT (BL/BP), Outback XT",
-              "avgRebuiltPrice": "£2,800 – £6,500",
-              "cta": "Get Quote for EJ20R/EJ20Y"
-            },
-            {
-              "code": "EJ25 (NA)",
-              "fuel": "Petrol",
-              "size": "2.5L",
-              "power": "165–175 HP",
-              "compatibleModels": "Forester (SG), Outback (BE/BH), Legacy",
-              "avgRebuiltPrice": "£1,800 – £4,500",
-              "cta": "Get Quote for EJ25 (NA)"
-            },
-            {
-              "code": "EJ251/EJ252/EJ253",
-              "fuel": "Petrol",
-              "size": "2.5L NA variants",
-              "power": "165–175 HP",
-              "compatibleModels": "Forester (SG/SH), Outback (BL/BP)",
-              "avgRebuiltPrice": "£1,800 – £4,500",
-              "cta": "Get Quote for EJ251/EJ252/EJ253"
+              "size": "2.0 Litre",
+              "power": "215-280 hp",
+              "compatibleModels": "Impreza (GC8/GF8) WRX, Impreza WRX STI",
+              "avgRebuiltPrice": "£1,500 - £2,500 supply only",
+              "cta": "→ Get quotes for EJ20 Subaru engine replacement"
             },
             {
               "code": "EJ255",
+              "title": "2.5L Petrol (Turbo)",
+              "familyHeading": "EJ255 - 2.5L Petrol (Turbo)",
               "fuel": "Petrol",
-              "size": "2.5L Turbo",
-              "power": "230–265 HP",
-              "compatibleModels": "Forester XT (SH), Legacy GT (BL/BP)",
-              "avgRebuiltPrice": "£3,000 – £7,000",
-              "cta": "Get Quote for EJ255"
+              "size": "2.5 Litre",
+              "power": "224-265 hp",
+              "compatibleModels": "Impreza WRX (2006-2014), Forester XT (2006-2013), Legacy GT (2006-2009), Outback XT (2006-2009)",
+              "avgRebuiltPrice": "£1,800 - £3,000 supply only",
+              "cta": "→ Get quotes for EJ255 Subaru engine replacement"
             },
             {
               "code": "EJ257",
+              "title": "2.5L Petrol (Turbo)",
+              "familyHeading": "EJ257 - 2.5L Petrol (Turbo)",
               "fuel": "Petrol",
-              "size": "2.5L Turbo",
-              "power": "300 HP",
-              "compatibleModels": "Impreza WRX STI (GD/GR, 2004–2014)",
-              "avgRebuiltPrice": "£3,500 – £9,000",
-              "cta": "Get Quote for EJ257"
-            }
-          ]
-        },
-        {
-          "name": "FA/FB Series – Modern Direct-Injection Boxer",
-          "era": "2010s–Present",
-          "failureNote": "*(per row)* Common failure points: FA/FB engines are known for timing chain tensioner wear (early FA20) and oil consumption (FB20). Our rebuilt units include updated tensioners, revised piston rings, and full gasket sets to ensure long-term reliability.",
-          "engines": [
-            {
-              "code": "FB16",
-              "fuel": "Petrol",
-              "size": "1.6L",
-              "power": "114 HP",
-              "compatibleModels": "XV (GP), Impreza (GJ)",
-              "avgRebuiltPrice": "£1,500 – £3,500",
-              "cta": "Get Quote for FB16"
-            },
-            {
-              "code": "FB20",
-              "fuel": "Petrol",
-              "size": "2.0L",
-              "power": "150 HP",
-              "compatibleModels": "Forester (SJ), XV (GP), Legacy (BM)",
-              "avgRebuiltPrice": "£1,800 – £4,200",
-              "cta": "Get Quote for FB20"
-            },
-            {
-              "code": "FB25",
-              "fuel": "Petrol",
-              "size": "2.5L",
-              "power": "175 HP",
-              "compatibleModels": "Outback (BS), Forester (SJ)",
-              "avgRebuiltPrice": "£2,000 – £5,000",
-              "cta": "Get Quote for FB25"
-            },
-            {
-              "code": "FA20 (NA)",
-              "fuel": "Petrol",
-              "size": "2.0L",
-              "power": "150–200 HP",
-              "compatibleModels": "BRZ (ZC6), Forester (SJ), WRX (VA)",
-              "avgRebuiltPrice": "£2,500 – £6,000",
-              "cta": "Get Quote for FA20 (NA)"
-            },
-            {
-              "code": "FA20F DIT",
-              "fuel": "Petrol",
-              "size": "2.0L Turbo",
-              "power": "268–300 HP",
-              "compatibleModels": "WRX (VA), Levorg (VM), Outback XT",
-              "avgRebuiltPrice": "£3,000 – £7,500",
-              "cta": "Get Quote for FA20F DIT"
-            },
-            {
-              "code": "FA24 DIT",
-              "fuel": "Petrol",
-              "size": "2.4L Turbo",
-              "power": "271 HP",
-              "compatibleModels": "WRX (VB), Outback XT (BT), Ascent",
-              "avgRebuiltPrice": "£3,500 – £8,500",
-              "cta": "Get Quote for FA24 DIT"
-            }
-          ]
-        },
-        {
-          "name": "EE20 – Boxer Diesel",
-          "era": "2008–2016",
-          "failureNote": "EE20 Boxer diesel engines are known for catastrophic crankshaft failure due to insufficient oiling at high mileage. Our rebuilt units include upgraded crankshafts, reinforced connecting rods, and revised oil pump assemblies to prevent recurrence.",
-          "engines": [
-            {
-              "code": "EE20",
-              "fuel": "Diesel",
-              "size": "2.0L Boxer",
-              "power": "147–150 HP",
-              "compatibleModels": "Forester (SH/SJ), Outback (BR), Legacy (BM), XV (GP)",
-              "avgRebuiltPrice": "£2,500 – £6,000",
-              "cta": "Get Quote for EE20"
-            }
-          ]
-        },
-        {
-          "name": "EZ Series – H6 Flat-Six",
-          "era": "2000s–2010s",
-          "failureNote": "*(per row)* Common failure points: EZ H6 engines are known for oil consumption and timing chain guide wear at high mileage. Our rebuilt units include updated guide materials, revised valve stem seals, and full gasket refreshes to restore factory performance.",
-          "engines": [
-            {
-              "code": "EZ30",
-              "fuel": "Petrol",
-              "size": "3.0L H6",
-              "power": "245 HP",
-              "compatibleModels": "Legacy (BL/BP), Outback (BL/BP)",
-              "avgRebuiltPrice": "£2,500 – £6,500",
-              "cta": "Get Quote for EZ30"
+              "size": "2.5 Litre",
+              "power": "300-341 hp",
+              "compatibleModels": "Impreza WRX STI (2004-2018), WRX STI (2015-2018)",
+              "avgRebuiltPrice": "£2,500 - £4,000 supply only",
+              "cta": "→ Get quotes for EJ257 Subaru engine replacement"
             },
             {
               "code": "EZ36",
+              "title": "3.6L Petrol",
+              "familyHeading": "EZ36 - 3.6L Petrol",
               "fuel": "Petrol",
-              "size": "3.6L H6",
-              "power": "256 HP",
-              "compatibleModels": "Outback (BR/BS), Legacy (BM/BN), Tribeca",
-              "avgRebuiltPrice": "£3,000 – £7,500",
-              "cta": "Get Quote for EZ36"
-            }
-          ]
-        },
-        {
-          "name": "Legacy & Specialist Codes",
-          "era": "All years",
-          "failureNote": "*(per row)* Common failure points: Legacy EJ codes are prone to head gasket and oil seal wear. Our rebuilt units include upgraded sealing components and balanced internals for classic Subaru reliability",
-          "engines": [
-            {
-              "code": "EJ22",
-              "fuel": "Petrol",
-              "size": "2.2L",
-              "power": "135 HP",
-              "compatibleModels": "Legacy (BC/BF, 1990–1998)",
-              "avgRebuiltPrice": "£1,500 – £3,500",
-              "cta": "Get Quote for EJ22"
+              "size": "3.6 Litre",
+              "power": "254-260 hp",
+              "compatibleModels": "Outback (2010-2019), Tribeca (2007-2014), Legacy (2010-2014)",
+              "avgRebuiltPrice": "£2,000 - £3,500 supply only",
+              "cta": "→ Get quotes for EZ36 Subaru engine replacement"
             },
             {
-              "code": "EJ15",
+              "code": "FA20",
+              "title": "2.0L Petrol",
+              "familyHeading": "FA20 - 2.0L Petrol",
               "fuel": "Petrol",
-              "size": "1.5L",
-              "power": "97 HP",
-              "compatibleModels": "Impreza (GC/GF, early)",
-              "avgRebuiltPrice": "£1,200 – £2,800",
-              "cta": "Get Quote for EJ15"
+              "size": "2.0 Litre",
+              "power": "197-200 hp",
+              "compatibleModels": "BRZ (2012-2020), GT86 (2012-2020)",
+              "avgRebuiltPrice": "£2,000 - £3,500 supply only",
+              "cta": "→ Get quotes for FA20 Subaru engine replacement"
             },
             {
-              "code": "EJ25D",
+              "code": "FA24",
+              "title": "2.4L Petrol",
+              "familyHeading": "FA24 - 2.4L Petrol",
               "fuel": "Petrol",
-              "size": "2.5L DOHC",
-              "power": "165 HP",
-              "compatibleModels": "Legacy (BD/BG), Outback (1996–1999)",
-              "avgRebuiltPrice": "£1,800 – £4,500",
-              "cta": "Get Quote for EJ25D"
+              "size": "2.4 Litre",
+              "power": "228-271 hp",
+              "compatibleModels": "BRZ (2022-present), WRX (2022-present)",
+              "avgRebuiltPrice": "£2,500 - £4,500 supply only",
+              "cta": "→ Get quotes for FA24 Subaru engine replacement"
             },
             {
-              "code": "EJ20G/EJ20K",
+              "code": "FB20",
+              "title": "2.0L Petrol",
+              "familyHeading": "FB20 - 2.0L Petrol",
               "fuel": "Petrol",
-              "size": "2.0L Turbo (Classic)",
-              "power": "218–280 HP",
-              "compatibleModels": "Impreza Turbo (GC8, 1994–2000)",
-              "avgRebuiltPrice": "£3,000 – £8,000",
-              "cta": "Get Quote for EJ20G/EJ20K"
+              "size": "2.0 Litre",
+              "power": "148-154 hp",
+              "compatibleModels": "Impreza (2012-present), XV (2012-present), Forester (2012-2018), Exiga (2015-present)",
+              "avgRebuiltPrice": "£1,500 - £2,500 supply only",
+              "cta": "→ Get quotes for FB20 Subaru engine replacement"
+            },
+            {
+              "code": "FB25",
+              "title": "2.5L Petrol",
+              "familyHeading": "FB25 - 2.5L Petrol",
+              "fuel": "Petrol",
+              "size": "2.5 Litre",
+              "power": "170-182 hp",
+              "compatibleModels": "Forester (2011-2018), Outback (2011-2019), Legacy (2011-2014), XV (2011-2017)",
+              "avgRebuiltPrice": "£2,000 - £3,500 supply only",
+              "cta": "→ Get quotes for FB25 Subaru engine replacement"
             }
           ]
         }
@@ -1953,104 +1805,92 @@
       "closing": "Not sure which engine size your Subaru needs? Enter your registration number and we'll match you to the exact engine code and displacement — instantly. All engines supplied with a minimum 12‑month warranty from UK Subaru specialists."
     },
     "fuelTypes": {
-      "tag": "Complete Subaru Engines List",
-      "h2": "Subaru Engines by Fuel Type",
-      "intro": "Choose your Subaru engine by fuel type to compare realistic replacement prices, known brand‑wide issues, and UK specialist supply – from the most popular diesel workhorses to the latest electrified powertrains.",
+      "tag": "Subaru Engines by Fuel Type",
+      "h2": "Subaru Diesel vs Petrol vs Hybrid vs Electric - Which Fuel Type Is Right For You?",
+      "intro": "Compare Subaru engine fuel types by replacement costs, running costs, reliability reputation, and model availability. Use this guide to understand your options - then enter your registration for an instant match and quotes from UK Subaru specialists.",
       "items": [
         {
-          "title": "Subaru Diesel Engines",
-          "description": "Subaru diesel engines cover many of the brand's highest-mileage UK models. Replacement demand is usually driven by timing system wear, injector and turbo faults, plus EGR or DPF-related damage once repeat short-journey use starts affecting reliability.",
-          "descriptor": "High-mileage motorway and SUV applications",
+          "title": "Diesel Engines",
+          "description": "Subaru's diesel engine range in the UK is limited to the EE20 2.0-litre boxer diesel, fitted to the Outback, Legacy, and Forester from 2008 to 2015\\. While offering good fuel economy and Subaru's trademark all-wheel drive, these engines have proven problematic with DPF, EGR, and turbocharger failures.",
+          "descriptor": "Subaru's diesel engine range in the UK is limited to the EE20 2.0-litre boxer diesel, fitted to the Outback, Legacy, and Forester from 2008 to 2015\\. While offering good fuel economy and Subaru's trademark all-wheel drive, these engines have proven problematic with DPF, EGR, and turbocharger failures.",
           "families": [
-            "EE20 – Boxer Diesel"
+            "£1,800 - £3,000 (supply only)",
+            "EE20 2.0D: £1,800 - £3,000"
           ],
-          "foundIn": [
-            "Subaru BRZ Engines",
-            "Subaru Impreza Engines",
-            "Subaru WRZ Engines",
-            "Subaru Baja Engines"
-          ],
-          "knownFor": [
-            "Crankshaft fracture due to oiling limitations under load",
-            "terminal failure requiring full replacement"
-          ],
-          "typicalModels": [
-            "Subaru BRZ Engines",
-            "Subaru Impreza Engines",
-            "Subaru WRZ Engines",
-            "Subaru Baja Engines"
-          ],
-          "importantNotes": [
-            "Short-journey use increases DPF, EGR, and oil-dilution risk on many diesel engines.",
-            "A documented service history matters more on diesel replacements because injector, turbo, and timing faults often build gradually."
-          ],
-          "cta": "Compare Subaru diesel engine prices"
-        },
-        {
-          "title": "Subaru Petrol Engines",
-          "description": "Subaru petrol engines span everything from core daily-driver models to higher-output performance variants. Most replacement enquiries start with timing chain noise, oil consumption, cooling-system failure, or internal wear that makes a warranted replacement more sensible than repeated repairs.",
-          "descriptor": "Core passenger-car and performance applications",
-          "families": [
-            "EJ Series – Classic Boxer Petrol",
-            "FA/FB Series – Modern Direct-Injection Boxer",
-            "EZ Series – H6 Flat-Six",
-            "Legacy & Specialist Codes"
-          ],
-          "foundIn": [
-            "Subaru BRZ Engines",
-            "Subaru Impreza Engines",
-            "Subaru WRZ Engines",
-            "Subaru Baja Engines"
-          ],
-          "knownFor": [
-            "Head gasket external leaks on high-mileage units",
-            "generally robust with routine maintenance",
-            "FB16 – piston ring wear leading to oil consumption",
-            "EJ16 – timing belt neglect"
-          ],
-          "typicalModels": [
-            "Subaru BRZ Engines",
-            "Subaru Impreza Engines",
-            "Subaru WRZ Engines",
-            "Subaru Baja Engines"
-          ],
-          "importantNotes": [
-            "Cold-start rattles, overheating history, and oil use are the biggest warning signs before a petrol engine replacement becomes necessary.",
-            "Direct-injection petrol engines often need specialist attention for carbon build-up alongside the main mechanical repair."
-          ],
-          "cta": "Compare Subaru petrol engine prices"
-        },
-        {
-          "title": "Subaru Hybrid Engines",
-          "description": "Subaru hybrid powertrains combine combustion engines with electric assistance across newer electrified models. Replacement demand is lower than traditional petrol or diesel units, but generator-engine faults, inverter issues, cooling-system failures, and calibration-sensitive repairs still require specialist support.",
-          "descriptor": "Electrified models with combustion backup",
-          "families": [
-            "EX30",
-            "EX31",
-            "EX32",
-            "FB42"
-          ],
-          "foundIn": [
-            "Subaru BRZ Engines",
-            "Subaru Impreza Engines",
-            "Subaru WRZ Engines",
-            "Subaru Baja Engines"
-          ],
+          "foundIn": [],
           "knownFor": [],
-          "typicalModels": [
-            "Subaru BRZ Engines",
-            "Subaru Impreza Engines",
-            "Subaru WRZ Engines",
-            "Subaru Baja Engines"
-          ],
+          "typicalModels": [],
           "importantNotes": [
-            "Hybrid faults often need both mechanical and high-voltage diagnosis, so replacement decisions should be made by specialists familiar with the full system.",
-            "Battery cooling, inverter health, and software calibration are just as important as the combustion-engine condition on hybrid models."
+            "High-mileage motorway drivers covering 15,000+ miles annually",
+            "Drivers who want Subaru's all-wheel drive with diesel economy",
+            "Company car drivers benefiting from lower fuel costs",
+            "Urban drivers with short daily trips who are better served by petrol (DPF and EGR issues are common)",
+            "Low-mileage users who don't drive enough to justify the diesel premium",
+            "Typical searches: Subaru Outback 2.0D engine replacement, Subaru Legacy diesel engine cost, Subaru diesel engine specialist UK, Subaru EE20 DPF problems, Subaru diesel EGR valve failure, Subaru Forester diesel engine replacement, Subaru 2.0 diesel engine for sale → Get quotes for Subaru Diesel replacement engines → Not sure which diesel you have? Enter your registration number for an instant match"
           ],
-          "cta": "Compare Subaru hybrid engine prices"
+          "cta": "→ Get quotes for Subaru Diesel replacement engines"
+        },
+        {
+          "title": "Petrol Engines",
+          "description": "Subaru's petrol engine range is defined by the iconic boxer layout - from the EJ20 and EJ25 turbos in the Impreza WRX and STI to the FA20 and FA24 in the BRZ and new WRX, and the FB20/FB25 in the Forester and Outback. The brand is built on its horizontally-opposed engine heritage, but known head gasket and ringland failures drive significant replacement demand.",
+          "descriptor": "Subaru's petrol engine range is defined by the iconic boxer layout - from the EJ20 and EJ25 turbos in the Impreza WRX and STI to the FA20 and FA24 in the BRZ and new WRX, and the FB20/FB25 in the Forester and Outback. The brand is built on its horizontally-opposed engine heritage, but known head gasket and ringland failures drive significant replacement demand.",
+          "families": [
+            "£1,500 - £4,500 (supply only)",
+            "EJ20 (Impreza WRX): £1,500 - £2,500",
+            "EJ255 (WRX): £1,800 - £3,000",
+            "EJ257 (WRX STI): £2,500 - £4,000",
+            "EZ36 (Outback/Legacy): £2,000 - £3,500"
+          ],
+          "foundIn": [],
+          "knownFor": [],
+          "typicalModels": [],
+          "importantNotes": [
+            "Performance enthusiasts who value the Subaru boxer character and driving experience",
+            "Off-road and adventure drivers who need all-wheel drive capability",
+            "Drivers who appreciate the low centre of gravity and smooth power delivery",
+            "High-mileage daily drivers who would struggle with running costs (especially turbo models)",
+            "Drivers prioritising maximum fuel efficiency over performance",
+            "Typical searches: Subaru Impreza WRX engine replacement, Subaru EJ257 engine rebuild, Subaru Forester 2.5 engine cost, Subaru petrol engine specialist UK, Subaru EJ20 head gasket failure, Subaru FA20 timing chain problems, Subaru Outback 3.6 engine replacement, Subaru BRZ engine price → Compare Subaru Petrol engine prices → Not sure which petrol you have? Enter your registration number for an instant match"
+          ],
+          "cta": "→ Compare Subaru Petrol engine prices"
+        },
+        {
+          "title": "Hybrid & Mild Hybrid (MHEV) Engines",
+          "description": "Subaru's hybrid range includes the XV e-BOXER and Forester e-BOXER, combining 2.0-litre FB20 petrol engines with a 12.3kW electric motor. Hybrid systems are still relatively rare in the replacement market, but enquiries are growing as these vehicles age.",
+          "descriptor": "Subaru's hybrid range includes the XV e-BOXER and Forester e-BOXER, combining 2.0-litre FB20 petrol engines with a 12.3kW electric motor. Hybrid systems are still relatively rare in the replacement market, but enquiries are growing as these vehicles age.",
+          "families": [
+            "MHEV (Mild Hybrid - e-BOXER): Combines a 2.0-litre naturally aspirated FB20 petrol engine with a 12.3kW electric motor (belt-integrated starter-generator) and a small lithium-ion battery. The system provides torque assistance during acceleration, regenerative braking, and start-stop functionality.",
+            "Battery location: The lithium-ion battery is typically located under the rear seats or boot floor - careful handling is required for any work in these areas.",
+            "No Plug-in Option: e-BOXER is a self-charging mild hybrid system; it cannot be charged from an external plug."
+          ],
+          "foundIn": [],
+          "knownFor": [],
+          "typicalModels": [],
+          "importantNotes": [
+            "Urban commuters who benefit from improved fuel economy in stop-start traffic",
+            "Company car drivers benefiting from lower Benefit-in-Kind (BIK) tax rates",
+            "Drivers who want to reduce fuel costs and emissions without sacrificing Subaru's all-wheel drive capability",
+            "Drivers without access to a specialist hybrid garage - parts and expertise are limited",
+            "High-mileage users who would benefit more from diesel's efficiency on long runs",
+            "Typical searches: Subaru XV e-BOXER engine replacement, Subaru Forester e-BOXER battery price, Subaru hybrid engine specialist UK, Subaru e-BOXER hybrid system fault, Subaru hybrid battery degradation, Subaru hybrid motor replacement, Subaru XV hybrid engine for sale → Enquire about Subaru Hybrid engine availability → Not sure which hybrid you have? Enter your registration number for an instant match"
+          ],
+          "cta": "Get quotes for Subaru Subaru Hybrid & Mild Hybrid (MHEV) Engines engines"
+        },
+        {
+          "title": "Electric Powertrains",
+          "description": "Subaru's electric range includes the Solterra, a fully electric SUV developed in partnership with Toyota. Electric motors rarely fail, but we connect you with UK specialists for battery module repairs and drive unit replacements.",
+          "descriptor": "Subaru's electric range includes the Solterra, a fully electric SUV developed in partnership with Toyota. Electric motors rarely fail, but we connect you with UK specialists for battery module repairs and drive unit replacements.",
+          "families": [],
+          "foundIn": [],
+          "knownFor": [],
+          "typicalModels": [],
+          "importantNotes": [
+            "Typical searches: Subaru Solterra motor replacement, Subaru EV battery repair, Subaru electric motor specialist UK, Subaru Solterra drive unit price, Subaru EV battery module replacement, Subaru electric range degradation → Enquire about Subaru Electric motor repair or replacement → Not sure which electric Subaru you have? Enter your registration number for an instant match"
+          ],
+          "cta": "Get quotes for Subaru Subaru Electric Powertrains engines"
         }
       ],
-      "closing": "Not sure which fuel type your Subaru has? Enter your registration number above to instantly identify your model, engine code, fuel system and compatible replacement options – all backed by a minimum 12‑month unlimited mileage warranty from UK Subaru specialists."
+      "closing": "Not sure which fuel type your Subaru has? Enter your registration number for an instant match."
     },
     "engineCodeDirectory": {
       "tag": "Engine Codes",

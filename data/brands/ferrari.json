@@ -796,209 +796,103 @@
       ]
     },
     "engineCodes": {
-      "tag": "Replacement Cost",
-      "h2": "Ferrari Engine Codes & Average Rebuilt Prices (UK Supply)",
-      "h3": "Compare costs for every major Ferrari engine — F136 V8, F154 twin-turbo V8, and F140 V12 families. All prices are typical UK market ranges for professionally rebuilt engines with warranty. Click \"Get Quote\" on any engine to receive tailored prices from our network of UK Ferrari specialists.",
+      "tag": "Engine Codes",
+      "h2": "Ferrari Engine Codes - Most Replaced Engines & Full Directory",
+      "h3": "Every major Ferrari engine code with technical specs, compatible UK models, known failures and average rebuilt prices. Use the quick-reference accordion below for all remaining codes.",
+      "closingLine": "Can't find your engine code? Enter your registration number above - we'll identify the exact Ferrari engine fitted to your vehicle.",
       "filters": [
-        "All",
-        "Diesel",
-        "Petrol"
+        "Petrol Engines (Most Replaced in the UK)",
+        "Hybrid / Electrified Engines"
       ],
       "groups": [
         {
-          "name": "F136 V8 Family",
-          "era": "2004-2015",
-          "failureNote": "The F136 family powered Ferrari's mid-engine V8 era. Known for timing chain tensioner wear and oil consumption from ring land degradation. button after each row. Common failure points: F136 engines are known for oil pump drive failure and timing chain tensioner wear, particularly in early F136F units. Our rebuilt units include upgraded oil pump drives and revised tensioners per Ferrari service bulletins, with full 12-month warranty and dyno validation.",
+          "name": "Petrol Engines (Most Replaced in the UK)",
+          "era": "Extracted from Ferrari petrol engines (most replaced in the uk) technical replacement data.",
+          "failureNote": "Cylinder liner wear (Nikasil coating degradation) - common on higher-mileage or poorly maintained examples, Cam variator failure - can freeze, causing valvetrain damage and piston-to-valve contact",
           "engines": [
             {
-              "code": "F136 F",
+              "code": "F131 Family",
+              "title": "3.6L V8 Petrol",
+              "familyHeading": "F131 Family - 3.6L V8 Petrol",
               "fuel": "Petrol",
-              "size": "4.3L",
-              "power": "483-503 hp",
-              "compatibleModels": "F430 (F131 chassis, 2004-2009)",
-              "avgRebuiltPrice": "£4,500 – £6,500",
-              "cta": "Get Quote for F136 F"
+              "size": "3.6 Litre",
+              "power": "400 hp",
+              "compatibleModels": "360 Modena (F360), 360 Spider (F360M), 360 Challenge Stradale, 360 Challenge",
+              "avgRebuiltPrice": "£8,000 - £15,000 supply only",
+              "cta": "→ Get quotes for F131 Ferrari engine replacement"
             },
             {
-              "code": "F136 I",
+              "code": "F136 Family",
+              "title": "4.3L / 4.5L V8 Petrol",
+              "familyHeading": "F136 Family - 4.3L / 4.5L V8 Petrol",
               "fuel": "Petrol",
-              "size": "4.5L",
-              "power": "562-570 hp",
-              "compatibleModels": "458 Italia/Spider (F142 chassis, 2009-2015)",
-              "avgRebuiltPrice": "£12,500 – £14,500",
-              "cta": "Get Quote for F136 I"
+              "size": "4.3 Litre (F430) / 4.5 Litre (458)",
+              "power": "483-570 hp",
+              "compatibleModels": "F430 (E85/E86), F430 Scuderia, 458 Italia, 458 Spider, California, 458 Speciale",
+              "avgRebuiltPrice": "£10,000 - £25,000 supply only",
+              "cta": "→ Get quotes for F136 Ferrari engine replacement"
             },
             {
-              "code": "F136 FA",
+              "code": "F140 Family",
+              "title": "6.0L",
+              "familyHeading": "F140 Family - 6.0L - 6.5L V12 Petrol",
               "fuel": "Petrol",
-              "size": "4.5L",
-              "power": "597 hp",
-              "compatibleModels": "458 Speciale (F142 chassis, 2013-2015)",
-              "avgRebuiltPrice": "£14,000 – £17,000",
-              "cta": "Get Quote for F136 FA"
+              "size": "6.0 - 6.5 Litre",
+              "power": "660-800 hp",
+              "compatibleModels": "Enzo (F140B), 599 GTB Fiorano (F140C), 599 GTO, F12 Berlinetta, F12tdf, FF, GTC4Lusso, 812 Superfast, 812 GTS, LaFerrari",
+              "avgRebuiltPrice": "£12,000 - £46,000 supply only",
+              "cta": "→ Get quotes for F140 Ferrari engine replacement"
+            },
+            {
+              "code": "F154 Family",
+              "title": "3.8L",
+              "familyHeading": "F154 Family - 3.8L - 4.0L V8 Petrol (Twin-Turbo)",
+              "fuel": "Petrol",
+              "size": "3.8 - 4.0 Litre",
+              "power": "552-720 hp",
+              "compatibleModels": "California T, 488 GTB, 488 Spider, 488 Pista, F8 Tributo, F8 Spider, Roma, Portofino, Portofino M, SF90 Stradale, SF90 Spider",
+              "avgRebuiltPrice": "£15,000 - £35,000 supply only",
+              "cta": "→ Get quotes for F154 Ferrari engine replacement"
+            },
+            {
+              "code": "F160 Family",
+              "title": "3.0L V6 Petrol (Hybrid)",
+              "familyHeading": "F160 Family - 3.0L V6 Petrol (Hybrid)",
+              "fuel": "Petrol (Hybrid)",
+              "size": "3.0 Litre",
+              "power": "663 hp (petrol) / 819 hp (combined)",
+              "compatibleModels": "296 GTB, 296 GTS",
+              "avgRebuiltPrice": "£20,000 - £40,000+ supply only",
+              "cta": "→ Get quotes for F160 Ferrari engine replacement"
             }
           ]
         },
         {
-          "name": "F154 Twin-Turbo V8 Family",
-          "era": "2015-Present",
-          "failureNote": "Ferrari's first mass-produced turbocharged V8. Vulnerable to turbo actuator rattle and high-pressure fuel pump (HPFP) failure. button after each row. Common failure points: F154 engines suffer from turbo wastegate arm wear and HPFP failure (OEM F154-TA992). Our rebuilt units include upgraded turbo wastegate components and recalibrated HPFP systems, dyno-validated to factory specifications.",
+          "name": "Hybrid / Electrified Engines",
+          "era": "Extracted from Ferrari hybrid / electrified engines technical replacement data.",
+          "failureNote": "As a new engine family, failure data is limited, Hybrid system complexity adds potential failure points",
           "engines": [
             {
-              "code": "F154 CB",
-              "fuel": "Petrol",
-              "size": "3.9L",
-              "power": "661-670 hp",
-              "compatibleModels": "488 GTB/Spider (2015-2019)",
-              "avgRebuiltPrice": "£18,500 – £21,500",
-              "cta": "Get Quote for F154 CB"
+              "code": "F163 Family",
+              "title": "6.5L V12 Petrol (Hybrid)",
+              "familyHeading": "F163 Family - 6.5L V12 Petrol (Hybrid)",
+              "fuel": "Petrol (Hybrid)",
+              "size": "6.5 Litre",
+              "power": "819 hp (combined)",
+              "compatibleModels": "12Cilindri, 12Cilindri Spider",
+              "avgRebuiltPrice": "£30,000 - £50,000+ supply only",
+              "cta": "→ Get quotes for F163 Ferrari engine replacement"
             },
             {
-              "code": "F154 CD",
-              "fuel": "Petrol",
-              "size": "3.9L",
-              "power": "720 hp",
-              "compatibleModels": "488 Pista, F8 Tributo (2018-2023)",
-              "avgRebuiltPrice": "£19,000 – £23,000",
-              "cta": "Get Quote for F154 CD"
-            },
-            {
-              "code": "F154 CD",
-              "fuel": "Petrol",
-              "size": "3.9L",
-              "power": "610-620 hp",
-              "compatibleModels": "GTC4Lusso T (F169 chassis, 2016-2020)",
-              "avgRebuiltPrice": "£7,500 – £9,200",
-              "cta": "Get Quote for F154 CD"
-            }
-          ]
-        },
-        {
-          "name": "F140 V12 Family",
-          "era": "2006-Present",
-          "failureNote": "Ferrari's flagship naturally aspirated V12. Prone to carbon buildup, oil pump chain stretch, and cylinder liner wear on earlier examples. button after each row. Common failure points: F140 V12 engines experience carbon buildup on intake valves and oil pump chain stretch beyond 6,500 RPM. Our rebuilt units include decarbonised intake systems and upgraded oil pump relief valves.",
-          "engines": [
-            {
-              "code": "F140 FC",
-              "fuel": "Petrol",
-              "size": "6.0L",
-              "power": "612-620 hp",
-              "compatibleModels": "599 GTB (2006-2012)",
-              "avgRebuiltPrice": "£6,500 – £9,000",
-              "cta": "Get Quote for F140 FC"
-            },
-            {
-              "code": "F140 GA",
-              "fuel": "Petrol",
-              "size": "6.5L",
-              "power": "789-830 hp",
-              "compatibleModels": "812 Superfast/GTS (2017-2023)",
-              "avgRebuiltPrice": "£7,000 – £12,000",
-              "cta": "Get Quote for F140 GA"
-            },
-            {
-              "code": "F140 CB",
-              "fuel": "Petrol",
-              "size": "6.3L",
-              "power": "651-660 hp",
-              "compatibleModels": "FF (F149 chassis, 2011-2016)",
-              "avgRebuiltPrice": "£7,500 – £9,200",
-              "cta": "Get Quote for F140 CB"
-            },
-            {
-              "code": "F140 CD",
-              "fuel": "Petrol",
-              "size": "6.3L",
-              "power": "680-690 hp",
-              "compatibleModels": "GTC4Lusso (F169 chassis, 2016-2020)",
-              "avgRebuiltPrice": "£11,000 – £13,500",
-              "cta": "Get Quote for F140 CD"
-            },
-            {
-              "code": "F140 EB",
-              "fuel": "Petrol",
-              "size": "5.7L",
-              "power": "650 hp",
-              "compatibleModels": "Enzo (2002-2004)",
-              "avgRebuiltPrice": "£18,000 – £19,000",
-              "cta": "Get Quote for F140 EB"
-            },
-            {
-              "code": "F140 FE",
-              "fuel": "Petrol",
-              "size": "6.3L",
-              "power": "963 hp (hybrid)",
-              "compatibleModels": "LaFerrari (2013-2016)",
-              "avgRebuiltPrice": "£15,000 – £30,000",
-              "cta": "Get Quote for F140 FE"
-            }
-          ]
-        },
-        {
-          "name": "F163 V6 Hybrid Family",
-          "era": "2020-Present",
-          "failureNote": "Ferrari's new-generation hybrid V6. Early reports indicate intercooler hose leaks and turbo bearing wear in high-mileage units. button after each row. Common failure points: F163 hybrid engines show intercooler hose leaks and turbo bearing wear. Our rebuilt units include hoses and inverter/MGU-K compatibility verification.",
-          "engines": [
-            {
-              "code": "F163 DE",
-              "fuel": "Petrol/ Hybrid",
-              "size": "3.0L",
-              "power": "819-830 hp",
-              "compatibleModels": "296 GTB/Assetto Fiorano (2021-present)",
-              "avgRebuiltPrice": "£5,000 – £7,200",
-              "cta": "Get Quote for F163 DE"
-            },
-            {
-              "code": "F163",
-              "fuel": "Petrol/ Hybrid",
-              "size": "3.0L",
-              "power": "830 hp",
-              "compatibleModels": "296 GTS (2022-present)",
-              "avgRebuiltPrice": "£5,500 – £7,800",
-              "cta": "Get Quote for F163"
-            }
-          ]
-        },
-        {
-          "name": "Classic/Historical V8 & V12 Engines",
-          "era": "1970s-1990s",
-          "failureNote": "Classic Ferrari engines sought after by collectors and restoration specialists. Prices reflect rarity, parts availability, and specialist rebuild complexity. button after each row. Common failure points: Classic Ferrari engines suffer from valve guide wear, carburettor degradation, and dry-sump pump failures. Our specialist network supplies rebuilt units with period-correct specifications and warranty coverage for restoration projects",
-          "engines": [
-            {
-              "code": "Tipo F106B",
-              "fuel": "Petrol",
-              "size": "3.0L",
-              "power": "240-270 hp",
-              "compatibleModels": "308 GTB/GTS (1975-1985)",
-              "avgRebuiltPrice": "£8,000 – £15,000",
-              "cta": "Get Quote for Tipo F106B"
-            },
-            {
-              "code": "Tipo F113",
-              "fuel": "Petrol",
-              "size": "3.4L",
-              "power": "300-320 hp",
-              "compatibleModels": "348 TB/TS (1989-1995)",
-              "avgRebuiltPrice": "£12,000 – £18,000",
-              "cta": "Get Quote for Tipo F113"
-            },
-            {
-              "code": "Tipo F119",
-              "fuel": "Petrol",
-              "size": "3.5L",
-              "power": "380 hp",
-              "compatibleModels": "F355 (1994-1999)",
-              "avgRebuiltPrice": "£10,000 – £16,000",
-              "cta": "Get Quote for Tipo F119"
-            },
-            {
-              "code": "Tipo 245",
-              "fuel": "Petrol",
-              "size": "4.4L",
-              "power": "320-340 hp",
-              "compatibleModels": "365 GT/GTC (1967-1971)",
-              "avgRebuiltPrice": "£70,000 – £80,000",
-              "cta": "Get Quote for Tipo 245"
+              "code": "F154 (Hybrid Variant)",
+              "title": "4.0L V8 Petrol (Hybrid)",
+              "familyHeading": "F154 (Hybrid Variant) - 4.0L V8 Petrol (Hybrid)",
+              "fuel": "Hybrid (Petrol + Electric)",
+              "size": "4.0 Litre",
+              "power": "769-986 hp (combined)",
+              "compatibleModels": "SF90 Stradale, SF90 Spider, SF90 XX Stradale, SF90 XX Spider",
+              "avgRebuiltPrice": "£25,000 - £45,000+ supply only",
+              "cta": "→ Get quotes for F154 Hybrid Ferrari engine replacement"
             }
           ]
         }
@@ -1490,72 +1384,58 @@
       "closing": "Not sure which engine size your Ferrari needs? Enter your registration number and we'll match you to the exact engine code and displacement — instantly. All engines supplied with a minimum 12‑month warranty from UK Ferrari specialists."
     },
     "fuelTypes": {
-      "tag": "Complete Ferrari Engines List",
-      "h2": "Ferrari Engines by Fuel Type",
-      "intro": "Choose your Ferrari engine by fuel type to compare realistic replacement prices, known brand‑wide issues, and UK specialist supply – from the most powerful V12 petrol engines to the latest plug‑in hybrid V6 and V8 powertrains.",
+      "tag": "Ferrari Engines by Fuel Type",
+      "h2": "Ferrari Petrol vs Hybrid - Which Powertrain Is Right For You?",
+      "intro": "Compare Ferrari engine fuel types by replacement costs, running costs, reliability reputation, and model availability. Use this guide to understand your options - then enter your registration for an instant match and quotes from UK Ferrari specialists.",
       "items": [
         {
-          "title": "Ferrari Petrol Engines",
-          "description": "Ferrari petrol engines span everything from core daily-driver models to higher-output performance variants. Most replacement enquiries start with timing chain noise, oil consumption, cooling-system failure, or internal wear that makes a warranted replacement more sensible than repeated repairs.",
-          "descriptor": "Core passenger-car and performance applications",
+          "title": "Petrol Engines",
+          "description": "Ferrari's petrol engine range is legendary - from the high-revving F131 V8 in the 360 to the F140 V12 in the Enzo, 599, F12, and 812, and the F154 twin-turbo V8 in the 488, F8, and Roma. Ferrari engines are the heart of the brand's DNA, offering breathtaking performance and a soundtrack like no other.",
+          "descriptor": "Ferrari's petrol engine range is legendary - from the high-revving F131 V8 in the 360 to the F140 V12 in the Enzo, 599, F12, and 812, and the F154 twin-turbo V8 in the 488, F8, and Roma. Ferrari engines are the heart of the brand's DNA, offering breathtaking performance and a soundtrack like no other.",
           "families": [
-            "F136 V8 Family",
-            "F154 Twin-Turbo V8 Family",
-            "F140 V12 Family",
-            "Classic/Historical V8 & V12 Engines"
+            "£8,000 - £46,000 (supply only)",
+            "F131 (3.6 V8 - 360): £8,000 - £15,000",
+            "F136 (4.3/4.5 V8 - F430/458): £10,000 - £25,000",
+            "F140 (6.0-6.5 V12 - Enzo/599/F12/812): £12,000 - £46,000",
+            "F154 (3.8/3.9 V8 Twin-Turbo - 488/F8/Roma): £15,000 - £35,000"
           ],
-          "foundIn": [
-            "Ferrari 360 Engines",
-            "Ferrari 458 Engines",
-            "Ferrari 488 Engines",
-            "Ferrari 550 / 575M Engines"
-          ],
-          "knownFor": [
-            "Exhaust valve guide wear",
-            "low‑mileage bearing corrosion from infrequent use",
-            "Crankshaft thrust bearing wear (“crank walk”)",
-            "F136E oil pump issues on early cars"
-          ],
-          "typicalModels": [
-            "Ferrari 360 Engines",
-            "Ferrari 458 Engines",
-            "Ferrari 488 Engines",
-            "Ferrari 550 / 575M Engines"
-          ],
+          "foundIn": [],
+          "knownFor": [],
+          "typicalModels": [],
           "importantNotes": [
-            "Cold-start rattles, overheating history, and oil use are the biggest warning signs before a petrol engine replacement becomes necessary.",
-            "Direct-injection petrol engines often need specialist attention for carbon build-up alongside the main mechanical repair."
+            "Performance enthusiasts who value Ferrari's naturally-aspirated character and exhaust note",
+            "Collectors and weekend drivers with lower annual mileage (under 5,000 miles)",
+            "Drivers who prioritise engagement, emotion and heritage over fuel economy",
+            "High-mileage daily drivers who would struggle with running costs of £10,000+ per year",
+            "Drivers prioritising maximum fuel efficiency over performance",
+            "Typical searches: Ferrari engine replacement, Ferrari 360 engine rebuild, Ferrari F430 engine for sale, Ferrari 458 engine cost, Ferrari 488 engine replacement, Ferrari V12 engine specialist UK, Ferrari 812 Superfast engine price, Ferrari engine problems, Ferrari 360 cylinder liner wear → Compare Ferrari Petrol engine prices → Not sure which petrol you have? Enter your registration number for an instant match"
           ],
-          "cta": "Compare Ferrari petrol engine prices"
+          "cta": "→ Compare Ferrari Petrol engine prices"
         },
         {
-          "title": "Ferrari Hybrid Engines",
-          "description": "Ferrari hybrid powertrains combine combustion engines with electric assistance across newer electrified models. Replacement demand is lower than traditional petrol or diesel units, but generator-engine faults, inverter issues, cooling-system failures, and calibration-sensitive repairs still require specialist support.",
-          "descriptor": "Electrified models with combustion backup",
+          "title": "Hybrid & Plug-in Hybrid (PHEV) Engines",
+          "description": "Ferrari's hybrid range includes the SF90 Stradale, 296 GTB, and 12Cilindri, combining V8 or V12 engines with electric motors. These represent the future of Ferrari powertrains, delivering exceptional performance with improved efficiency. Hybrid systems are still rare in the replacement market, but enquiries are growing.",
+          "descriptor": "Ferrari's hybrid range includes the SF90 Stradale, 296 GTB, and 12Cilindri, combining V8 or V12 engines with electric motors. These represent the future of Ferrari powertrains, delivering exceptional performance with improved efficiency. Hybrid systems are still rare in the replacement market, but enquiries are growing.",
           "families": [
-            "F163 V6 Hybrid Family"
+            "PHEV (Plug-in Hybrid - SF90 Stradale): Combines a 4.0-litre twin-turbo V8 (F154) with three electric motors - two at the front driving the front wheels and one between the engine and gearbox. The battery can be charged via an external plug or via regenerative braking, providing 15-25 miles of pure electric range.",
+            "PHEV (Plug-in Hybrid - 296 GTB): Combines a 3.0-litre twin-turbo V6 (F160) with an electric motor integrated between the engine and transmission. The battery can be charged via an external plug, providing 15-25 miles of pure electric range.",
+            "PHEV (Plug-in Hybrid - 12Cilindri): Combines a 6.5-litre naturally-aspirated V12 (F163) with an electric motor and 8-speed dual-clutch transmission, offering the first hybrid V12 in Ferrari's history."
           ],
-          "foundIn": [
-            "Ferrari 360 Engines",
-            "Ferrari 458 Engines",
-            "Ferrari 488 Engines",
-            "Ferrari 550 / 575M Engines"
-          ],
+          "foundIn": [],
           "knownFor": [],
-          "typicalModels": [
-            "Ferrari 360 Engines",
-            "Ferrari 458 Engines",
-            "Ferrari 488 Engines",
-            "Ferrari 550 / 575M Engines"
-          ],
+          "typicalModels": [],
           "importantNotes": [
-            "Hybrid faults often need both mechanical and high-voltage diagnosis, so replacement decisions should be made by specialists familiar with the full system.",
-            "Battery cooling, inverter health, and software calibration are just as important as the combustion-engine condition on hybrid models."
+            "Early adopters seeking cutting-edge Ferrari technology and performance",
+            "Drivers who want the thrill of a Ferrari V8 or V12 with improved efficiency",
+            "Drivers who value the ability to drive in electric-only mode for short trips",
+            "Drivers who prefer the naturally-aspirated character of older Ferrari V8s and V12s",
+            "Drivers without reliable charging access",
+            "Typical searches: Ferrari SF90 engine replacement, Ferrari 296 GTB hybrid engine cost, Ferrari hybrid battery price, Ferrari hybrid engine specialist UK, Ferrari SF90 V8 engine for sale, Ferrari 12Cilindri engine replacement, Ferrari hybrid battery degradation, Ferrari hybrid system fault repair → Enquire about Ferrari Hybrid engine availability → Not sure which hybrid you have? Enter your registration number for an instant match"
           ],
-          "cta": "Compare Ferrari hybrid engine prices"
+          "cta": "Get quotes for Ferrari Ferrari Hybrid & Plug-in Hybrid (PHEV) Engines engines"
         }
       ],
-      "closing": "Not sure which fuel type your Ferrari has? Enter your registration number above to instantly identify your model, engine code, fuel system and compatible replacement options – all backed by a minimum 12‑month unlimited mileage warranty from UK Ferrari specialists."
+      "closing": "Not sure which fuel type your Ferrari has? Enter your registration number for an instant match."
     },
     "engineCodeDirectory": {
       "tag": "Engine Codes",

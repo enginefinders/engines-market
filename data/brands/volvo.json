@@ -1100,200 +1100,144 @@
       ]
     },
     "engineCodes": {
-      "tag": "Replacement Cost",
-      "h2": "Volvo Engine Codes & Average Rebuilt Prices (UK Supply)",
-      "h3": "Compare costs for every major Volvo engine — from the 5-cylinder D5 family to the modern Drive-E petrol and diesel ranges. All prices are typical UK market ranges for professionally rebuilt engines with warranty. Click \"Get Quote\" on any engine to receive tailored prices from our network of UK Volvo specialists.",
+      "tag": "Engine Codes",
+      "h2": "Volvo Engine Codes - Most Replaced Engines & Full Directory",
+      "h3": "Every major Volvo engine code with technical specs, compatible UK models, known failures and average rebuilt prices. Use the quick-reference accordion below for all remaining codes.",
+      "closingLine": "Can't find your engine code? Enter your registration number above - we'll identify the exact Volvo engine fitted to your vehicle.",
       "filters": [
-        "All",
-        "Diesel",
-        "Petrol"
+        "Diesel Engines (Most Replaced in the UK)",
+        "Petrol Engines (Most Replaced in the UK)",
+        "Hybrid / Electrified Engines"
       ],
       "groups": [
         {
-          "name": "Volvo 5-Cylinder Diesel (D5) – D5244T Family",
-          "era": "2001–2016",
-          "failureNote": "Get Quote → for D5244T16/T17 Common failure points: The D5 5-cylinder engines are known for turbo actuator failure (leading to overboost/underboost limp mode) and injector wear. Our rebuilt units include professionally reconditioned actuators and tested injectors with warranties.",
-          "engines": [
-            {
-              "code": "D5244T4",
-              "fuel": "Diesel",
-              "size": "2.4L",
-              "power": "185hp",
-              "compatibleModels": "S60, V70, XC90 (2005–2009)",
-              "avgRebuiltPrice": "£2,400 – £3,800",
-              "cta": "Get Quote for D5244T4"
-            },
-            {
-              "code": "D5244T5",
-              "fuel": "Diesel",
-              "size": "2.4L",
-              "power": "185hp",
-              "compatibleModels": "XC90 (2006–2011), V70, S80",
-              "avgRebuiltPrice": "£2,400 – £3,800",
-              "cta": "Get Quote for D5244T5"
-            },
-            {
-              "code": "D5244T9",
-              "fuel": "Diesel",
-              "size": "2.4L",
-              "power": "163hp",
-              "compatibleModels": "S40, V50, C70 (2004–2009)",
-              "avgRebuiltPrice": "£2,200 – £3,500",
-              "cta": "Get Quote for D5244T9"
-            },
-            {
-              "code": "D5244T13",
-              "fuel": "Diesel",
-              "size": "2.4L",
-              "power": "177hp",
-              "compatibleModels": "S40, V50 (2006–2010)",
-              "avgRebuiltPrice": "£2,300 – £3,600",
-              "cta": "Get Quote for D5244T13"
-            },
-            {
-              "code": "D5244T16/T17",
-              "fuel": "Diesel",
-              "size": "2.4L",
-              "power": "215hp",
-              "compatibleModels": "XC70, XC60 (2008–2015)",
-              "avgRebuiltPrice": "£2,600 – £4,200",
-              "cta": "Get Quote for D5244T16/T17"
-            }
-          ]
-        },
-        {
-          "name": "Volvo 4-Cylinder Diesel – D3/D4 (D4204T Family & PSA)",
-          "era": "2010–2020",
-          "failureNote": "Get Quote → for D4204T14 Common failure points: The D4204T (Drive-E diesel) engines can suffer EGR clogging and timing chain stretch. Our rebuilt units include new timing components and cleaned/replaced EGR systems.",
+          "name": "Diesel Engines (Most Replaced in the UK)",
+          "era": "Extracted from Volvo diesel engines (most replaced in the uk) technical replacement data.",
+          "failureNote": "DPF regeneration issues - Failed regenerations cause oil dilution and warning lights, EGR valve carbon clogging - Intake tracts become blocked with carbon, causing rough running and power loss",
           "engines": [
             {
               "code": "D4204T",
+              "title": "2.0 D4 Diesel (PSA Base)",
+              "familyHeading": "D4204T - 2.0 D4 Diesel (PSA Base)",
               "fuel": "Diesel",
-              "size": "2.0L",
-              "power": "163hp",
-              "compatibleModels": "XC60, S60, V60, V70 (2010–2015)",
-              "avgRebuiltPrice": "£2,800 – £4,500",
-              "cta": "Get Quote for D4204T"
-            },
-            {
-              "code": "D4204T5",
-              "fuel": "Diesel",
-              "size": "2.0L",
-              "power": "120hp",
-              "compatibleModels": "V40, S60, V60 (2012–2016)",
-              "avgRebuiltPrice": "£2,600 – £4,200",
-              "cta": "Get Quote for D4204T5"
-            },
-            {
-              "code": "D4204T8",
-              "fuel": "Diesel",
-              "size": "2.0L",
-              "power": "181hp",
-              "compatibleModels": "XC60, S90, V90, XC90 (2015–2019)",
-              "avgRebuiltPrice": "£3,000 – £4,800",
-              "cta": "Get Quote for D4204T8"
+              "size": "2.0 Litre",
+              "power": "134-136 hp",
+              "compatibleModels": "V50, S40, C30",
+              "avgRebuiltPrice": "£1,200 - £2,200 supply only",
+              "cta": "→ Get quotes for D4204T Volvo engine replacement"
             },
             {
               "code": "D4204T14",
+              "title": "2.0 D4 Diesel (VEA)",
+              "familyHeading": "D4204T14 - 2.0 D4 Diesel (VEA)",
               "fuel": "Diesel",
-              "size": "2.0L",
-              "power": "150hp",
-              "compatibleModels": "XC60, S90, V90 (2016–2020)",
-              "avgRebuiltPrice": "£2,900 – £4,600",
-              "cta": "Get Quote for D4204T14"
+              "size": "2.0 Litre",
+              "power": "190 hp",
+              "compatibleModels": "V40 D4, V60 D4, XC60 D4, XC90 D4, S60 D4",
+              "avgRebuiltPrice": "£1,800 - £3,000 supply only",
+              "cta": "→ Get quotes for D4204T14 Volvo engine replacement"
+            },
+            {
+              "code": "D5204T",
+              "title": "2.0 D3/D4 Diesel (5-Cylinder)",
+              "familyHeading": "D5204T - 2.0 D3/D4 Diesel (5-Cylinder)",
+              "fuel": "Diesel",
+              "size": "2.0 Litre",
+              "power": "148-163 hp",
+              "compatibleModels": "V40 D3/D4, V60 D3/D4, S60 D3/D4, XC60 D3/D4",
+              "avgRebuiltPrice": "£1,500 - £2,800 supply only",
+              "cta": "→ Get quotes for D5204T Volvo engine replacement"
+            },
+            {
+              "code": "D5244T",
+              "title": "2.4 D5 Diesel (5-Cylinder)",
+              "familyHeading": "D5244T - 2.4 D5 Diesel (5-Cylinder)",
+              "fuel": "Diesel",
+              "size": "2.4 Litre",
+              "power": "163-215 hp (D5244T4 to D5244T20 variants)",
+              "compatibleModels": "S60 D5, V60 D5, V70 D5, XC60 D5, XC90 D5, S80 D5",
+              "avgRebuiltPrice": "£1,400 - £3,500 supply only",
+              "cta": "→ Get quotes for D5244T Volvo engine replacement"
+            },
+            {
+              "code": "D4164T / D4162T",
+              "title": "1.6 D2 Diesel",
+              "familyHeading": "D4164T / D4162T - 1.6 D2 Diesel",
+              "fuel": "Diesel",
+              "size": "1.6 Litre",
+              "power": "108-114 hp",
+              "compatibleModels": "V50 1.6D, S40 1.6D, C30 1.6D, V40 D2",
+              "avgRebuiltPrice": "£800 - £1,800 supply only",
+              "cta": "→ Get quotes for D4164T Volvo engine replacement"
             }
           ]
         },
         {
-          "name": "Volvo 4-Cylinder Petrol (Drive-E / VEA) – B4204T Family",
-          "era": "2013–Present",
-          "failureNote": "Get Quote → for B4204T27 Common failure points: Drive-E petrol engines have known timing chain/pulley wear and, on some variants, piston ring issues. Our rebuilt units include upgraded timing components.",
+          "name": "Petrol Engines (Most Replaced in the UK)",
+          "era": "Extracted from Volvo petrol engines (most replaced in the uk) technical replacement data.",
+          "failureNote": "Turbocharger oil feed line clogging - Internal clogging leads to turbo bearing failure and oil leaks; Volvo TSB TJ 26543 addresses this, Timing belt failure - The belt may not pass the scheduled 90,000 km interval; when it breaks, valves bend",
           "engines": [
             {
               "code": "B4204T",
+              "title": "2.0 Turbo Petrol",
+              "familyHeading": "B4204T - 2.0 Turbo Petrol",
               "fuel": "Petrol",
-              "size": "2.0L",
-              "power": "245hp",
-              "compatibleModels": "XC60, S/V60, S/V90 (2014–2019)",
-              "avgRebuiltPrice": "£3,200 – £5,500",
-              "cta": "Get Quote for B4204T"
+              "size": "2.0 Litre",
+              "power": "190-193 hp",
+              "compatibleModels": "850 T5, S70 T5, V70 T5",
+              "avgRebuiltPrice": "£1,000 - £2,000 supply only",
+              "cta": "→ Get quotes for B4204T Volvo engine replacement"
             },
             {
-              "code": "B4204T11",
+              "code": "B4154T",
+              "title": "1.5 T3 Petrol",
+              "familyHeading": "B4154T - 1.5 T3 Petrol",
               "fuel": "Petrol",
-              "size": "2.0L",
-              "power": "190hp",
-              "compatibleModels": "XC90, S90, V90 (2015–2019)",
-              "avgRebuiltPrice": "£3,000 – £5,200",
-              "cta": "Get Quote for B4204T11"
+              "size": "1.5 Litre",
+              "power": "150-152 hp",
+              "compatibleModels": "V40 T3, V40 Cross Country T3",
+              "avgRebuiltPrice": "£1,800 - £3,000 supply only",
+              "cta": "→ Get quotes for B4154T Volvo engine replacement"
             },
             {
-              "code": "B4204T23",
+              "code": "B4164T",
+              "title": "1.6 T4 Petrol",
+              "familyHeading": "B4164T - 1.6 T4 Petrol",
               "fuel": "Petrol",
-              "size": "2.0L",
-              "power": "250hp",
-              "compatibleModels": "XC60, S/V60 (2018–2022)",
-              "avgRebuiltPrice": "£3,500 – £5,800",
-              "cta": "Get Quote for B4204T23"
-            },
-            {
-              "code": "B4204T27",
-              "fuel": "Petrol",
-              "size": "2.0L",
-              "power": "310hp (T5)",
-              "compatibleModels": "XC60, XC90, S/V90 (2016–2021)",
-              "avgRebuiltPrice": "£3,800 – £6,500",
-              "cta": "Get Quote for B4204T27"
+              "size": "1.6 Litre",
+              "power": "180 hp",
+              "compatibleModels": "V40 T4, S40 T4, V50 T4, C30 T4",
+              "avgRebuiltPrice": "£1,200 - £2,200 supply only",
+              "cta": "→ Get quotes for B4164T Volvo engine replacement"
             }
           ]
         },
         {
-          "name": "Volvo 4-Cylinder Petrol (Early Turbo/Smaller) – B4164T & B5254T Families",
-          "era": "2005–2015",
-          "failureNote": "Get Quote → for B5254T12 Common failure points: Early 5-cylinder turbo petrols are robust but suffer from timing belt service neglect (belt, not chain). Our rebuilt units include new belts and tensioners as standard.",
+          "name": "Hybrid / Electrified Engines",
+          "era": "Extracted from Volvo hybrid / electrified engines technical replacement data.",
+          "failureNote": "High-voltage battery degradation - Capacity drops over time; individual modules can fail, Charging / electrical system faults - Intermittent charging and electrical gremlins",
           "engines": [
             {
-              "code": "B4164T2",
-              "fuel": "Petrol",
-              "size": "1.6L",
-              "power": "180hp",
-              "compatibleModels": "S60, V60, V70, S80, C30 (2010–2015)",
-              "avgRebuiltPrice": "£3,000 – £5,300",
-              "cta": "Get Quote for B4164T2"
+              "code": "B4204T37 / B4204T41",
+              "title": "T8 Twin Engine PHEV",
+              "familyHeading": "B4204T37 / B4204T41 - T8 Twin Engine PHEV",
+              "fuel": "PHEV (Petrol + Electric)",
+              "size": "2.0 Litre",
+              "power": "400 hp (combined system)",
+              "compatibleModels": "XC90 T8, XC60 T8, S60 T8, V60 T8",
+              "avgRebuiltPrice": "Quote required",
+              "cta": "Get quotes for B4204T37 / B4204T41 Volvo engine replacement"
             },
             {
-              "code": "B5254T7",
-              "fuel": "Petrol",
-              "size": "2.5L",
-              "power": "230hp",
-              "compatibleModels": "V50, C70, S40 (2005–2010)",
-              "avgRebuiltPrice": "£2,800 – £4,800",
-              "cta": "Get Quote for B5254T7"
-            },
-            {
-              "code": "B5254T12",
-              "fuel": "Petrol",
-              "size": "2.5L",
-              "power": "254hp",
-              "compatibleModels": "C30, S40, V50 (2007–2011)",
-              "avgRebuiltPrice": "£3,000 – £5,000",
-              "cta": "Get Quote for B5254T12"
-            }
-          ]
-        },
-        {
-          "name": "Volvo V8 Petrol – B8444S (Yamaha-designed)",
-          "era": "2005–2011",
-          "failureNote": "Get Quote → for B8444S Common failure points: The Yamaha V8 is reliable but has known valve train wear on early models and expensive timing components. Our rebuilt units include inspected/replaced valve gear",
-          "engines": [
-            {
-              "code": "B8444S",
-              "fuel": "Petrol",
-              "size": "4.4L",
-              "power": "315hp",
-              "compatibleModels": "XC90, S80 (2005–2011)",
-              "avgRebuiltPrice": "£4,500 – £7,500",
-              "cta": "Get Quote for B8444S"
+              "code": "XC40 Recharge Electric Drive Unit",
+              "title": "Electric (BEV)",
+              "familyHeading": "XC40 Recharge Electric Drive Unit",
+              "fuel": "Electric (BEV)",
+              "size": "",
+              "power": "408 hp (combined)",
+              "compatibleModels": "XC40 Recharge, C40 Recharge",
+              "avgRebuiltPrice": "Quote required",
+              "cta": "Get quotes for XC40 Recharge Electric Drive Unit Volvo engine replacement"
             }
           ]
         }
@@ -1810,77 +1754,95 @@
       "closing": "Not sure which engine size your Volvo needs? Enter your registration number and we’ll match you to the exact engine code and displacement — instantly. All engines supplied with a minimum 12‑month warranty from UK Volvo specialists."
     },
     "fuelTypes": {
-      "tag": "Complete Volvo Engines List",
-      "h2": "Volvo Engines by Fuel Type",
-      "intro": "Choose your Volvo engine by fuel type to compare realistic replacement prices, known brand‑wide issues, and UK specialist supply – from the most popular diesel workhorses to the latest electrified powertrains.",
+      "tag": "Volvo Engines by Fuel Type",
+      "h2": "Volvo Diesel vs Petrol vs Hybrid vs Electric - Which Fuel Type Is Right For You?",
+      "intro": "Compare Volvo engine fuel types by replacement costs, running costs, reliability reputation, and model availability. Use this guide to understand your options - then enter your registration for an instant match and quotes from UK Volvo specialists.",
       "items": [
         {
-          "title": "Volvo Diesel Engines",
-          "description": "Volvo diesel engines cover many of the brand's highest-mileage UK models. Replacement demand is usually driven by timing system wear, injector and turbo faults, plus EGR or DPF-related damage once repeat short-journey use starts affecting reliability.",
-          "descriptor": "High-mileage motorway and SUV applications",
+          "title": "Diesel Engines",
+          "description": "Volvo's diesel range spans 1.6 to 2.4-litre five-cylinder D5 units - from the beloved D5244T to the modern VEA D4204T - found across S60, V70, XC60, XC90 and many more. The D5 in particular has earned a strong reputation for combining solid torque with good long-distance economy.",
+          "descriptor": "Volvo's diesel range spans 1.6 to 2.4-litre five-cylinder D5 units - from the beloved D5244T to the modern VEA D4204T - found across S60, V70, XC60, XC90 and many more. The D5 in particular has earned a strong reputation for combining solid torque with good long-distance economy.",
           "families": [
-            "Volvo 5-Cylinder Diesel (D5) – D5244T Family",
-            "Volvo 4-Cylinder Diesel – D3/D4 (D4204T Family & PSA)"
+            "£1,200 - £3,500 (supply only)",
+            "V40 1.6 D2: £800 - £1,800",
+            "S40/V50 2.0D: £1,200 - £2,200",
+            "V60/S60 D4 (D4204T14): £1,800 - £3,000",
+            "XC60/XC90 D5 (D5244T): £1,400 - £3,500"
           ],
-          "foundIn": [
-            "Volvo V40 Engines",
-            "Volvo V50 Engines",
-            "Volvo V70 Engines",
-            "Volvo XC60 Engines"
-          ],
-          "knownFor": [
-            "DPF clogging",
-            "EGR valve sticking",
-            "turbocharger failure",
-            "Drive-E timing chain guide wear"
-          ],
-          "typicalModels": [
-            "Volvo V40 Engines",
-            "Volvo V50 Engines",
-            "Volvo V70 Engines",
-            "Volvo XC60 Engines"
-          ],
+          "foundIn": [],
+          "knownFor": [],
+          "typicalModels": [],
           "importantNotes": [
-            "Short-journey use increases DPF, EGR, and oil-dilution risk on many diesel engines.",
-            "A documented service history matters more on diesel replacements because injector, turbo, and timing faults often build gradually."
+            "High-mileage motorway drivers who can keep the DPF hot and regenerating",
+            "Owners who prioritise fuel economy and long-distance refinement",
+            "Those who appreciate the character of Volvo's five-cylinder D5 engine",
+            "Urban commuters doing short journeys - DPF and EGR issues are almost guaranteed",
+            "Anyone concerned about tightening ULEZ and clean air zone restrictions",
+            "Typical searches: Volvo diesel engine replacement, Volvo D5 engine problems cracked liner, Volvo D4204T14 EGR cooler failure, Volvo XC60 DPF problems, Volvo D5244T engine for sale, Volvo V60 D4 engine replacement cost, Volvo D5 aux belt tensioner failure → Get quotes for Volvo Diesel replacement engines → Not sure which diesel you have? \\[Enter your registration number\\] for an instant match"
           ],
-          "cta": "Compare Volvo diesel engine prices"
+          "cta": "→ Get quotes for Volvo Diesel replacement engines"
         },
         {
-          "title": "Volvo Petrol Engines",
-          "description": "Volvo petrol engines span everything from core daily-driver models to higher-output performance variants. Most replacement enquiries start with timing chain noise, oil consumption, cooling-system failure, or internal wear that makes a warranted replacement more sensible than repeated repairs.",
-          "descriptor": "Core passenger-car and performance applications",
+          "title": "Petrol Engines",
+          "description": "Volvo's petrol range spans 1.5 to 2.0-litre turbocharged units - from the efficient B4154T to the twin-charged T8 - offering a blend of performance and Scandinavian refinement across the V40, S60, V60, XC60 and XC90.",
+          "descriptor": "Volvo's petrol range spans 1.5 to 2.0-litre turbocharged units - from the efficient B4154T to the twin-charged T8 - offering a blend of performance and Scandinavian refinement across the V40, S60, V60, XC60 and XC90.",
           "families": [
-            "Volvo 4-Cylinder Petrol (Drive-E / VEA) – B4204T Family",
-            "Volvo 4-Cylinder Petrol (Early Turbo/Smaller) – B4164T & B5254T Families",
-            "Volvo V8 Petrol – B8444S (Yamaha-designed)"
+            "£1,000 - £3,000 (supply only)",
+            "V40 T3 (B4154T): £1,800 - £3,000",
+            "V40/S40 T4 (B4164T): £1,200 - £2,200",
+            "V60/S60 T4/T5: £1,500 - £2,800",
+            "XC60/XC90 T6: £2,000 - £3,500"
           ],
-          "foundIn": [
-            "Volvo V40 Engines",
-            "Volvo V50 Engines",
-            "Volvo V70 Engines",
-            "Volvo XC60 Engines"
-          ],
-          "knownFor": [
-            "Carbon buildup on intake valves",
-            "piston ring oil consumption",
-            "Drive-E timing chain guide wear",
-            "supercharger clutch (T6)"
-          ],
-          "typicalModels": [
-            "Volvo V40 Engines",
-            "Volvo V50 Engines",
-            "Volvo V70 Engines",
-            "Volvo XC60 Engines"
-          ],
+          "foundIn": [],
+          "knownFor": [],
+          "typicalModels": [],
           "importantNotes": [
-            "Cold-start rattles, overheating history, and oil use are the biggest warning signs before a petrol engine replacement becomes necessary.",
-            "Direct-injection petrol engines often need specialist attention for carbon build-up alongside the main mechanical repair."
+            "Drivers covering average mileage (8,000-12,000 miles/year)",
+            "Those who value responsive, refined engines over diesel torque",
+            "Urban drivers who want to avoid DPF-related issues",
+            "Enthusiasts seeking performance models like the T5 or T8",
+            "High-mileage drivers who would benefit from diesel economy",
+            "Typical searches: Volvo petrol engine replacement, Volvo B4154T oil consumption, Volvo VEA engine piston ring problems, Volvo T5 engine replacement cost, Volvo V40 T3 engine problems, Volvo 2.0T timing belt failure → Compare Volvo Petrol engine prices → Not sure which petrol you have? \\[Enter your registration number\\] for an instant match"
           ],
-          "cta": "Compare Volvo petrol engine prices"
+          "cta": "→ Compare Volvo Petrol engine prices"
+        },
+        {
+          "title": "Hybrid & Plug-in Hybrid (PHEV) Engines",
+          "description": "Volvo's T8 Twin Engine plug-in hybrid range spans the S60, V60, XC60 and XC90 - combining a 2.0-litre turbo/supercharged petrol engine with an electric motor for a total of 400hp - but the ERAD electric rear axle drive unit has a well-documented reputation for expensive failure.",
+          "descriptor": "Volvo's T8 Twin Engine plug-in hybrid range spans the S60, V60, XC60 and XC90 - combining a 2.0-litre turbo/supercharged petrol engine with an electric motor for a total of 400hp - but the ERAD electric rear axle drive unit has a well-documented reputation for expensive failure.",
+          "families": [
+            "PHEV (T8 Twin Engine): Uses a 2.0-litre four-cylinder petrol engine (turbocharged or twin-charged) driving the front wheels, paired with an electric motor driving the rear axle (ERAD - Electric Rear Axle Drive)",
+            "MHEV (B4/B5): 48V mild-hybrid system with an integrated starter-generator for torque assistance and coasting",
+            "Battery location: Under the floor or centre tunnel, depending on model"
+          ],
+          "foundIn": [],
+          "knownFor": [],
+          "typicalModels": [],
+          "importantNotes": [
+            "Company car drivers looking to reduce BIK tax liability",
+            "City commuters with access to home or workplace charging",
+            "Drivers wanting the lowest running costs for urban driving",
+            "Those wanting to avoid DPF issues associated with diesel",
+            "High-mileage motorway drivers who won't see the full benefit of plug-in hybrid assistance",
+            "Typical searches: Volvo T8 engine replacement, Volvo XC60 T8 ERAD failure, Volvo hybrid battery replacement cost, Volvo T8 Twin Engine problems, Volvo XC90 T8 electric motor failure, Volvo T8 12V battery drain → Enquire about Volvo Hybrid engine availability → Not sure which hybrid you have? \\[Enter your registration number\\] for an instant match"
+          ],
+          "cta": "Get quotes for Volvo Volvo Hybrid & Plug-in Hybrid (PHEV) Engines engines"
+        },
+        {
+          "title": "Electric Powertrains",
+          "description": "Volvo's electric range includes the XC40 Recharge and C40 Recharge with 78kWh batteries and twin motors producing 408hp - electric motors rarely fail, but battery degradation and 12V system issues are the primary concerns.",
+          "descriptor": "Volvo's electric range includes the XC40 Recharge and C40 Recharge with 78kWh batteries and twin motors producing 408hp - electric motors rarely fail, but battery degradation and 12V system issues are the primary concerns.",
+          "families": [],
+          "foundIn": [],
+          "knownFor": [],
+          "typicalModels": [],
+          "importantNotes": [
+            "Typical searches: Volvo XC40 Recharge battery replacement, Volvo C40 Recharge charging problems, Volvo electric motor repair, Volvo Recharge 12V battery drain, Volvo EV battery module replacement → Enquire about Volvo Electric motor repair or replacement → Not sure which electric Volvo you have? \\[Enter your registration number\\] for an instant match"
+          ],
+          "cta": "Get quotes for Volvo Volvo Electric Powertrains engines"
         }
       ],
-      "closing": "Not sure which fuel type your Volvo has? Enter your registration number above to instantly identify your model, engine code, fuel system and compatible replacement options – all backed by a minimum 12‑month unlimited mileage warranty from UK Volvo specialists."
+      "closing": "Not sure which fuel type your Volvo has? Enter your registration number for an instant match."
     },
     "engineCodeDirectory": {
       "tag": "Engine Codes",

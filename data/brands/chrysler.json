@@ -676,288 +676,92 @@
       ]
     },
     "engineCodes": {
-      "tag": "Replacement Cost",
-      "h2": "Chrysler Engine Codes & Average Rebuilt Prices (UK Supply)",
-      "h3": "Compare costs for every major Chrysler engine — VM Motori 2.8 CRD, Mercedes-derived 3.0 CRD, and World Gas petrol families. All prices are typical UK market ranges for professionally rebuilt engines with warranty. Click \"Get Quote\" on any engine to receive tailored prices from our network of UK Chrysler specialists.",
+      "tag": "Engine Codes",
+      "h2": "Chrysler Engine Codes - Most Replaced Engines & Full Directory",
+      "h3": "Every major Chrysler engine code with technical specs, compatible UK models, known failures and average rebuilt prices. Use the quick-reference accordion below for all remaining codes.",
+      "closingLine": "Can't find your engine code? Enter your registration number above - we'll identify the exact Chrysler engine fitted to your vehicle.",
       "filters": [
-        "All",
-        "Diesel",
-        "Petrol"
+        "Diesel Engines (Most Replaced in the UK)",
+        "Petrol Engines (Most Replaced in the UK)"
       ],
       "groups": [
         {
-          "name": "VM Motori 2.8L CRD Diesel Family",
-          "era": "2007-2016",
-          "failureNote": "VM Motori 2.8 CRD engines are known for EGR valve clogging, turbo actuator failure and injector seal leaks leading to oil dilution. Our rebuilt units include upgraded EGR components, refurbished turbo actuators and new injector seals to prevent repeat failures.",
+          "name": "Diesel Engines (Most Replaced in the UK)",
+          "era": "Extracted from Chrysler diesel engines (most replaced in the uk) technical replacement data.",
+          "failureNote": "Injector failure - common on high-mileage CRD engines, leading to misfires and poor starting, Turbocharger failure - often due to oil starvation or VNT mechanism sticking",
           "engines": [
             {
               "code": "ENR",
+              "title": "2.8L Diesel",
+              "familyHeading": "ENR - 2.8L Diesel",
               "fuel": "Diesel",
-              "size": "2.8L",
-              "power": "150-163 HP",
-              "compatibleModels": "Grand Voyager IV/V (RT, RS)",
-              "avgRebuiltPrice": "£1,800 – £4,500",
-              "cta": "Get Quote for ENR"
+              "size": "2.8 Litre",
+              "power": "150 hp",
+              "compatibleModels": "Voyager IV (RG, RS) 2.8 CRD",
+              "avgRebuiltPrice": "£960 - £1,061 supply only",
+              "cta": "→ Get quotes for ENR Chrysler engine replacement"
             },
-            {
-              "code": "ENQ",
-              "fuel": "Diesel",
-              "size": "2.8L",
-              "power": "150 HP",
-              "compatibleModels": "Voyager RG (2001-2007)",
-              "avgRebuiltPrice": "£1,700 – £4,200",
-              "cta": "Get Quote for ENQ"
-            },
-            {
-              "code": "ENS",
-              "fuel": "Diesel",
-              "size": "2.8L",
-              "power": "163 HP",
-              "compatibleModels": "Grand Voyager RT (2008-2011)",
-              "avgRebuiltPrice": "£1,900 – £4,600",
-              "cta": "Get Quote for ENS"
-            },
-            {
-              "code": "ENT",
-              "fuel": "Diesel",
-              "size": "2.8L",
-              "power": "150 HP",
-              "compatibleModels": "Voyager RS (2008-2016)",
-              "avgRebuiltPrice": "£1,750 – £4,300",
-              "cta": "Get Quote for ENT"
-            }
-          ]
-        },
-        {
-          "name": "Mercedes-derived 3.0L CRD Diesel Family",
-          "era": "2004-2015",
-          "failureNote": "Mercedes-derived 3.0 CRD (OM642) engines are known for swirl flap mechanism wear, oil cooler leaks and EGR-related carbon buildup. Our rebuilt units include revised swirl flap components, new oil cooler gaskets and cleaned EGR pathways for reliable long-term performance.",
-          "engines": [
             {
               "code": "EXL",
+              "title": "3.0L Diesel",
+              "familyHeading": "EXL - 3.0L Diesel",
               "fuel": "Diesel",
-              "size": "3.0L",
-              "power": "218-241 HP",
-              "compatibleModels": "300C LX/LX2 (2004-2010)",
-              "avgRebuiltPrice": "£2,200 – £5,500",
-              "cta": "Get Quote for EXL"
-            },
-            {
-              "code": "EVG",
-              "fuel": "Diesel",
-              "size": "3.0L",
-              "power": "218 HP",
-              "compatibleModels": "300C LE (2005-2010)",
-              "avgRebuiltPrice": "£2,100 – £5,200",
-              "cta": "Get Quote for EVG"
-            },
-            {
-              "code": "EXW",
-              "fuel": "Diesel",
-              "size": "3.0L",
-              "power": "241 HP",
-              "compatibleModels": "300C SRT Design (2006-2010)",
-              "avgRebuiltPrice": "£2,400 – £5,800",
-              "cta": "Get Quote for EXW"
-            },
-            {
-              "code": "EXY",
-              "fuel": "Diesel",
-              "size": "3.0L",
-              "power": "218 HP",
-              "compatibleModels": "300C Touring (2008-2015)",
-              "avgRebuiltPrice": "£2,150 – £5,300",
-              "cta": "Get Quote for EXY"
-            }
-          ]
-        },
-        {
-          "name": "World Gas Engine 2.0-2.4L Petrol Family",
-          "era": "2000-2010",
-          "failureNote": "World Gas 2.0-2.4L petrol engines are known for timing chain tensioner wear, excessive oil consumption and head gasket issues on higher-mileage units. Our rebuilt units include upgraded tensioners, revised piston rings and fresh gasket sets to address these common failure points.",
-          "engines": [
-            {
-              "code": "EDZ",
-              "fuel": "Petrol",
-              "size": "2.4L",
-              "power": "143-156 HP",
-              "compatibleModels": "PT Cruiser, Sebring, Voyager RG",
-              "avgRebuiltPrice": "£1,200 – £3,500",
-              "cta": "Get Quote for EDZ"
-            },
-            {
-              "code": "EDV",
-              "fuel": "Petrol",
-              "size": "2.4L",
-              "power": "143 HP",
-              "compatibleModels": "PT Cruiser GT (2003-2006)",
-              "avgRebuiltPrice": "£1,300 – £3,600",
-              "cta": "Get Quote for EDV"
-            },
-            {
-              "code": "EDT",
-              "fuel": "Petrol",
-              "size": "2.4L",
-              "power": "156 HP",
-              "compatibleModels": "Sebring Convertible (2001-2006)",
-              "avgRebuiltPrice": "£1,250 – £3,550",
-              "cta": "Get Quote for EDT"
-            },
-            {
-              "code": "EGR",
-              "fuel": "Petrol",
-              "size": "2.4L",
-              "power": "143 HP",
-              "compatibleModels": "Voyager RG (2001-2007)",
-              "avgRebuiltPrice": "£1,200 – £3,400",
-              "cta": "Get Quote for EGR"
-            },
-            {
-              "code": "EDE",
-              "fuel": "Petrol",
-              "size": "2.0L",
-              "power": "116 HP",
-              "compatibleModels": "Ypsilon, PT Cruiser (2003-2010)",
-              "avgRebuiltPrice": "£1,100 – £3,200",
-              "cta": "Get Quote for EDE"
-            },
-            {
-              "code": "ECC",
-              "fuel": "Petrol",
-              "size": "2.7L",
-              "power": "203 HP",
-              "compatibleModels": "300C, Sebring V6 (2004-2008)",
-              "avgRebuiltPrice": "£1,500 – £4,000",
-              "cta": "Get Quote for ECC"
-            }
-          ]
-        },
-        {
-          "name": "LA/Magnum V6 Petrol Family 3.3-3.8L",
-          "era": "1996-2008",
-          "failureNote": "LA/Magnum V6 engines are known for oil pump pickup screen clogging causing oil starvation, head gasket failures on overheated units and intake manifold gasket leaks. Our rebuilt units include cleaned oil pickup screens, new head gaskets and revised intake gaskets to prevent repeat issues.",
-          "engines": [
-            {
-              "code": "EGM",
-              "fuel": "Petrol",
-              "size": "3.3L",
-              "power": "177-180 HP",
-              "compatibleModels": "Voyager RG, Grand Voyager (2001-2007)",
-              "avgRebuiltPrice": "£1,500 – £4,000",
-              "cta": "Get Quote for EGM"
-            },
-            {
-              "code": "EGL",
-              "fuel": "Petrol",
-              "size": "3.3L",
-              "power": "177 HP",
-              "compatibleModels": "Grand Voyager RT (2001-2007)",
-              "avgRebuiltPrice": "£1,550 – £4,100",
-              "cta": "Get Quote for EGL"
-            },
-            {
-              "code": "EGA",
-              "fuel": "Petrol",
-              "size": "3.8L",
-              "power": "218 HP",
-              "compatibleModels": "Grand Voyager IV (1999-2004)",
-              "avgRebuiltPrice": "£1,600 – £4,200",
-              "cta": "Get Quote for EGA"
-            },
-            {
-              "code": "EGC",
-              "fuel": "Petrol",
-              "size": "3.8L",
-              "power": "218 HP",
-              "compatibleModels": "Grand Voyager V (2008-2011)",
-              "avgRebuiltPrice": "£1,650 – £4,300",
-              "cta": "Get Quote for EGC"
-            },
-            {
-              "code": "EGE",
-              "fuel": "Petrol",
-              "size": "3.8L",
-              "power": "197 HP",
-              "compatibleModels": "Voyager RS (2008-2016)",
-              "avgRebuiltPrice": "£1,550 – £4,100",
-              "cta": "Get Quote for EGE"
-            }
-          ]
-        },
-        {
-          "name": "HEMI V8 Petrol Family 5.7L",
-          "era": "2004-2023",
-          "failureNote": "5.7L HEMI engines are known for lifter collapse, camshaft lobe wear and oil consumption on high-mileage examples. Our rebuilt units include upgraded lifters, hardened camshafts and revised valve guides to deliver reliable performance with warranty coverage.",
-          "engines": [
-            {
-              "code": "EZB",
-              "fuel": "Petrol",
-              "size": "5.7L",
-              "power": "340 HP",
-              "compatibleModels": "300C V8, Commander (2005-2010)",
-              "avgRebuiltPrice": "£3,000 – £8,000",
-              "cta": "Get Quote for EZB"
-            },
-            {
-              "code": "EZH",
-              "fuel": "Petrol",
-              "size": "5.7L",
-              "power": "340 HP",
-              "compatibleModels": "300C SRT8 (2005-2010)",
-              "avgRebuiltPrice": "£3,200 – £8,500",
-              "cta": "Get Quote for EZH"
-            },
-            {
-              "code": "EZL",
-              "fuel": "Petrol",
-              "size": "5.7L",
-              "power": "340 HP",
-              "compatibleModels": "300C Touring V8 (2008-2015)",
-              "avgRebuiltPrice": "£3,100 – £8,200",
-              "cta": "Get Quote for EZL"
-            },
-            {
-              "code": "EZM",
-              "fuel": "Petrol",
-              "size": "5.7L",
-              "power": "340 HP",
-              "compatibleModels": "300C V8 AWD (2008-2015)",
-              "avgRebuiltPrice": "£3,150 – £8,300",
-              "cta": "Get Quote for EZM"
-            }
-          ]
-        },
-        {
-          "name": "Legacy Diesel & Petrol Engines 2.0-2.7L",
-          "era": "1998-2010",
-          "failureNote": "Legacy 2.2-2.5L diesel and 3.5L petrol engines are known for injector failures, turbo wear on diesel variants and timing belt service neglect on petrol units. Our rebuilt units include new injectors where required, refurbished turbos and fresh timing components to ensure dependable operation",
-          "engines": [
-            {
-              "code": "ED3",
-              "fuel": "Diesel",
-              "size": "2.2L",
-              "power": "121 HP",
-              "compatibleModels": "PT Cruiser, Sebring (2001-2006)",
-              "avgRebuiltPrice": "£1,400 – £3,800",
-              "cta": "Get Quote for ED3"
+              "size": "3.0 Litre",
+              "power": "218 hp",
+              "compatibleModels": "300C (LX, LE) 3.0 CRD, 300C Touring (LX, LE) 3.0 CRD",
+              "avgRebuiltPrice": "£2,121 - £3,035 supply only",
+              "cta": "→ Get quotes for EXL Chrysler engine replacement"
             },
             {
               "code": "EDJ",
+              "title": "2.2L Diesel",
+              "familyHeading": "EDJ - 2.2L Diesel",
               "fuel": "Diesel",
-              "size": "2.5L",
-              "power": "143 HP",
-              "compatibleModels": "Voyager RG (2001-2007)",
-              "avgRebuiltPrice": "£1,500 – £4,000",
-              "cta": "Get Quote for EDJ"
+              "size": "2.2 Litre",
+              "power": "119-148 hp",
+              "compatibleModels": "PT Cruiser (PT\\_) 2.2 CRD",
+              "avgRebuiltPrice": "£1,200 - £2,000 supply only",
+              "cta": "→ Get quotes for EDJ Chrysler engine replacement"
+            }
+          ]
+        },
+        {
+          "name": "Petrol Engines (Most Replaced in the UK)",
+          "era": "Extracted from Chrysler petrol engines (most replaced in the uk) technical replacement data.",
+          "failureNote": "Head gasket failure - leading to coolant loss and overheating, Ignition coil failure - causing misfires and rough running",
+          "engines": [
+            {
+              "code": "EGM",
+              "title": "3.3L Petrol",
+              "familyHeading": "EGM - 3.3L Petrol",
+              "fuel": "Petrol",
+              "size": "3.3 Litre",
+              "power": "174-180 hp",
+              "compatibleModels": "Voyager IV (RG, RS) 3.3, Voyager IV (RG, RS) 3.3 Flex-Fuel",
+              "avgRebuiltPrice": "£1,100 - £1,500 supply only",
+              "cta": "→ Get quotes for EGM Chrysler engine replacement"
             },
             {
-              "code": "EER",
+              "code": "EDZ",
+              "title": "2.4L Petrol",
+              "familyHeading": "EDZ - 2.4L Petrol",
               "fuel": "Petrol",
-              "size": "3.5L",
-              "power": "250 HP",
-              "compatibleModels": "300C, Voyager (2004-2008)",
-              "avgRebuiltPrice": "£1,800 – £4,800",
-              "cta": "Get Quote for EER"
+              "size": "2.4 Litre",
+              "power": "150-160 hp",
+              "compatibleModels": "PT Cruiser (PT\\_) 2.4, Voyager IV (RG, RS) 2.4, Sebring (JR) 2.4",
+              "avgRebuiltPrice": "£850 - £1,200 supply only",
+              "cta": "→ Get quotes for EDZ Chrysler engine replacement"
+            },
+            {
+              "code": "EBD",
+              "title": "1.8L Petrol",
+              "familyHeading": "EBD - 1.8L Petrol",
+              "fuel": "Petrol",
+              "size": "1.8 Litre",
+              "power": "99-115 hp",
+              "compatibleModels": "Neon (PL) 1.8 16V",
+              "avgRebuiltPrice": "£750 - £1,100 supply only",
+              "cta": "→ Get quotes for EBD Chrysler engine replacement"
             }
           ]
         }
@@ -1348,75 +1152,79 @@
       "closing": "Not sure which engine size your Chrysler needs? Enter your registration number and we'll match you to the exact engine code and displacement — instantly. All engines supplied with a minimum 12‑month warranty from UK Chrysler specialists."
     },
     "fuelTypes": {
-      "tag": "Complete Chrysler Engines List",
-      "h2": "Chrysler Engines by Fuel Type",
-      "intro": "Choose your Chrysler engine by fuel type to compare realistic replacement prices, known brand‑wide issues, and UK specialist supply – from the most popular diesel workhorses to the latest electrified powertrains.",
+      "tag": "Chrysler Engines by Fuel Type",
+      "h2": "Chrysler Diesel vs Petrol - Which Fuel Type Is Right For You?",
+      "intro": "Compare Chrysler engine fuel types by replacement costs, running costs, reliability reputation, and model availability. Use this guide to understand your options - then enter your registration for an instant match and quotes from UK Chrysler specialists.",
       "items": [
         {
-          "title": "Chrysler Diesel Engines",
-          "description": "Chrysler diesel engines cover many of the brand's highest-mileage UK models. Replacement demand is usually driven by timing system wear, injector and turbo faults, plus EGR or DPF-related damage once repeat short-journey use starts affecting reliability.",
-          "descriptor": "High-mileage motorway and SUV applications",
+          "title": "Diesel Engines",
+          "description": "Chrysler's diesel engine range in the UK is dominated by the 2.8 CRD (ENR) in the Voyager and the 3.0 CRD (EXL) in the 300C. Replacement demand is driven by injector, turbo, and DPF-related failures on these higher-mileage vehicles.",
+          "descriptor": "Chrysler's diesel engine range in the UK is dominated by the 2.8 CRD (ENR) in the Voyager and the 3.0 CRD (EXL) in the 300C. Replacement demand is driven by injector, turbo, and DPF-related failures on these higher-mileage vehicles.",
           "families": [
-            "VM Motori 2.8L CRD Diesel Family",
-            "Mercedes-derived 3.0L CRD Diesel Family",
-            "Legacy Diesel & Petrol Engines 2.0-2.7L"
+            "£960 - £3,035 (supply only)",
+            "2.2 CRD (EDJ - PT Cruiser): £1,200 - £2,000",
+            "2.8 CRD (ENR - Voyager): £960 - £1,061",
+            "3.0 CRD (EXL - 300C): £2,121 - £3,035"
           ],
-          "foundIn": [
-            "Chrysler 300 Engines",
-            "Chrysler Pacifica Engines",
-            "Chrysler Voyager Engines"
-          ],
-          "knownFor": [
-            "EGR valve carbon buildup",
-            "turbocharger bearing wear",
-            "injector seal leaks",
-            "Intake valve carbon buildup"
-          ],
-          "typicalModels": [
-            "Chrysler 300 Engines",
-            "Chrysler Pacifica Engines",
-            "Chrysler Voyager Engines"
-          ],
+          "foundIn": [],
+          "knownFor": [],
+          "typicalModels": [],
           "importantNotes": [
-            "Short-journey use increases DPF, EGR, and oil-dilution risk on many diesel engines.",
-            "A documented service history matters more on diesel replacements because injector, turbo, and timing faults often build gradually."
+            "High-mileage motorway drivers covering 15,000+ miles annually",
+            "MPV owners (Voyager) needing torque for carrying passengers and cargo",
+            "Fleet operators prioritising efficiency",
+            "Urban drivers with short daily trips who are better served by petrol (DPF and EGR issues are common)",
+            "Low-mileage users who don't drive enough to justify the diesel premium",
+            "Typical searches: Chrysler Voyager engine replacement, Chrysler 300C 3.0 CRD engine cost, Chrysler diesel engine specialist UK, Chrysler Grand Voyager 2.8 CRD engine price, Chrysler PT Cruiser diesel engine replacement, Chrysler CRD injector problems, Chrysler Voyager 2.8 engine for sale → Get quotes for Chrysler Diesel replacement engines → Not sure which diesel you have? Enter your registration number for an instant match"
           ],
-          "cta": "Compare Chrysler diesel engine prices"
+          "cta": "→ Get quotes for Chrysler Diesel replacement engines"
         },
         {
-          "title": "Chrysler Petrol Engines",
-          "description": "Chrysler petrol engines span everything from core daily-driver models to higher-output performance variants. Most replacement enquiries start with timing chain noise, oil consumption, cooling-system failure, or internal wear that makes a warranted replacement more sensible than repeated repairs.",
-          "descriptor": "Core passenger-car and performance applications",
+          "title": "Petrol Engines",
+          "description": "Chrysler's petrol engine range in the UK spans from the 1.8-litre EBD in the Neon to the 3.3-litre V6 EGM in the Voyager and the 2.4-litre EDZ in the PT Cruiser - delivering practical, affordable motoring with straightforward maintenance.",
+          "descriptor": "Chrysler's petrol engine range in the UK spans from the 1.8-litre EBD in the Neon to the 3.3-litre V6 EGM in the Voyager and the 2.4-litre EDZ in the PT Cruiser - delivering practical, affordable motoring with straightforward maintenance.",
           "families": [
-            "World Gas Engine 2.0-2.4L Petrol Family",
-            "LA/Magnum V6 Petrol Family 3.3-3.8L",
-            "HEMI V8 Petrol Family 5.7L",
-            "Legacy Diesel & Petrol Engines 2.0-2.7L"
+            "£750 - £1,500 (supply only)",
+            "1.8 EBD (Neon): £750 - £1,100",
+            "2.4 EDZ (PT Cruiser, Voyager): £850 - £1,200",
+            "3.3 EGM (Voyager): £1,100 - £1,500",
+            "3.5 V6 (300C): £1,200 - £1,800"
           ],
-          "foundIn": [
-            "Chrysler 300 Engines",
-            "Chrysler Pacifica Engines",
-            "Chrysler Voyager Engines"
-          ],
-          "knownFor": [
-            "Ignition coil failure",
-            "throttle body carbon buildup",
-            "ECU adaptation faults",
-            "Ignition coil/spark plug fouling"
-          ],
-          "typicalModels": [
-            "Chrysler 300 Engines",
-            "Chrysler Pacifica Engines",
-            "Chrysler Voyager Engines"
-          ],
+          "foundIn": [],
+          "knownFor": [],
+          "typicalModels": [],
           "importantNotes": [
-            "Cold-start rattles, overheating history, and oil use are the biggest warning signs before a petrol engine replacement becomes necessary.",
-            "Direct-injection petrol engines often need specialist attention for carbon build-up alongside the main mechanical repair."
+            "Urban and suburban drivers with lower annual mileage (under 12,000 miles)",
+            "MPV owners prioritising simplicity and lower maintenance costs",
+            "Budget-conscious buyers looking for affordable replacement options",
+            "High-mileage motorway drivers who would benefit from diesel's superior fuel economy",
+            "Drivers prioritising maximum fuel efficiency over performance",
+            "Typical searches: Chrysler PT Cruiser engine replacement, Chrysler Voyager 3.3 engine cost, Chrysler petrol engine specialist UK, Chrysler Neon engine replacement, Chrysler 300C V8 engine replacement, Chrysler 2.4 engine problems, Chrysler Voyager engine for sale, Chrysler PT Cruiser 2.4 engine price → Compare Chrysler Petrol engine prices → Not sure which petrol you have? Enter your registration number for an instant match"
           ],
-          "cta": "Compare Chrysler petrol engine prices"
+          "cta": "→ Compare Chrysler Petrol engine prices"
+        },
+        {
+          "title": "Hybrid & Plug-in Hybrid (PHEV) Engines",
+          "description": "Chrysler's hybrid presence in the UK is extremely limited, with no significant hybrid models sold through official UK channels. The Chrysler Pacifica Hybrid is available in North America but was not sold in the UK market.",
+          "descriptor": "Chrysler's hybrid presence in the UK is extremely limited, with no significant hybrid models sold through official UK channels. The Chrysler Pacifica Hybrid is available in North America but was not sold in the UK market.",
+          "families": [
+            "Pacifica Hybrid (2017-present): Combines a 3.6-litre V6 with two electric motors and a 16kWh battery pack, delivering up to 30 miles of electric range.",
+            "Battery location: The high-voltage battery is located under the rear seats.",
+            "No Chrysler-badged hybrids were sold in the UK market."
+          ],
+          "foundIn": [],
+          "knownFor": [],
+          "typicalModels": [],
+          "importantNotes": [
+            "Enthusiasts seeking a rare or collectible Chrysler variant",
+            "Buyers looking for maximum fuel economy from a Chrysler",
+            "Most buyers are better served by the standard petrol or diesel options",
+            "Typical searches: Chrysler Pacifica hybrid engine replacement, Chrysler hybrid battery price, Chrysler hybrid system repair UK, Chrysler Pacifica motor replacement, Chrysler hybrid specialist UK → Enquire about Chrysler Hybrid engine availability → Not sure which hybrid you have? Enter your registration number for an instant match"
+          ],
+          "cta": "Get quotes for Chrysler Chrysler Hybrid & Plug-in Hybrid (PHEV) Engines engines"
         }
       ],
-      "closing": "Not sure which fuel type your Chrysler has? Enter your registration number above to instantly identify your model, engine code, fuel system and compatible replacement options – all backed by a minimum 12‑month unlimited mileage warranty from UK Chrysler specialists."
+      "closing": "Not sure which fuel type your Chrysler has? Enter your registration number for an instant match."
     },
     "engineCodeDirectory": {
       "tag": "Engine Codes",

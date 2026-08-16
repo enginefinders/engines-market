@@ -1516,238 +1516,103 @@
       ]
     },
     "engineCodes": {
-      "tag": "Replacement Cost",
-      "h2": "Alfa Romeo Engine Codes & Average Rebuilt Prices (UK Supply)",
-      "h3": "Compare costs for every major Alfa Romeo engine — JTDM Diesel, MultiAir/TB Petrol & V6 Performance families. All prices are typical UK market ranges for professionally rebuilt engines with warranty. Click \"Get Quote\" on any engine to receive tailored prices from our network of UK Alfa Romeo specialists.",
+      "tag": "Engine Codes",
+      "h2": "Alfa Romeo Engine Codes - Most Replaced Engines & Full Directory",
+      "h3": "Every major Alfa Romeo engine code with technical specs, compatible UK models, known failures and average rebuilt prices. Use the quick-reference accordion below for all remaining codes.",
+      "closingLine": "Can't find your engine code? Enter your registration number above - we'll identify the exact Alfa Romeo engine fitted to your vehicle.",
       "filters": [
-        "All",
-        "Diesel",
-        "Petrol"
+        "Diesel Engines (Most Replaced in the UK)",
+        "Petrol Engines (Most Replaced in the UK)"
       ],
       "groups": [
         {
-          "name": "JTDM/JTD Diesel Family",
-          "era": "2008–2025",
-          "failureNote": "JTDM/JTD engines are known for turbocharger wear, injector coking and EGR valve failures. Our rebuilt units include upgraded turbo seals, reconditioned injectors and cleaned EGR systems to restore reliability.",
+          "name": "Diesel Engines (Most Replaced in the UK)",
+          "era": "Extracted from Alfa Romeo diesel engines (most replaced in the uk) technical replacement data.",
+          "failureNote": "Turbocharger failure - often caused by oil starvation or VNT mechanism sticking, leading to loss of power and potential engine damage, Injector failure - causing misfires, rough running, and potential hydro-lock",
           "engines": [
             {
-              "code": "939 A2.000",
+              "code": "937A4000",
+              "title": "2.0L Diesel (JTDm)",
+              "familyHeading": "937A4000 - 2.0L Diesel (JTDm)",
               "fuel": "Diesel",
-              "size": "1.6L",
-              "power": "105–120 HP",
-              "compatibleModels": "Mito (955), Giulietta (940)",
-              "avgRebuiltPrice": "£1,200 – £2,800",
-              "cta": "Get Quote for 939 A2.000"
+              "size": "2.0 Litre",
+              "power": "140-170 hp",
+              "compatibleModels": "Giulietta (940) 2.0 JTDm, Giulietta 2.0 JTDm Distinctive, Giulietta 2.0 JTDm Super, Giulietta 2.0 JTDm Sprint",
+              "avgRebuiltPrice": "£1,800 - £2,800 supply only",
+              "cta": "→ Get quotes for 937A4000 Alfa Romeo engine replacement"
             },
             {
-              "code": "939 A4.000",
+              "code": "939A2000",
+              "title": "2.4L Diesel (JTDm)",
+              "familyHeading": "939A2000 - 2.4L Diesel (JTDm)",
               "fuel": "Diesel",
-              "size": "2.0L",
-              "power": "140–170 HP",
-              "compatibleModels": "Giulietta (940), 159 (939), Brera (939), Stelvio (949)",
-              "avgRebuiltPrice": "£1,500 – £3,800",
-              "cta": "Get Quote for 939 A4.000"
+              "size": "2.4 Litre",
+              "power": "200 hp",
+              "compatibleModels": "159 (939) 2.4 JTDm, 159 Sportwagon 2.4 JTDm, Brera (939) 2.4 JTDm, Brera Spider 2.4 JTDm",
+              "avgRebuiltPrice": "£2,000 - £3,200 supply only",
+              "cta": "→ Get quotes for 939A2000 Alfa Romeo engine replacement"
             },
             {
-              "code": "939 A6.000",
+              "code": "955A8000",
+              "title": "2.2L Diesel (JTDm)",
+              "familyHeading": "955A8000 - 2.2L Diesel (JTDm)",
               "fuel": "Diesel",
-              "size": "2.0L",
-              "power": "170–190 HP",
-              "compatibleModels": "Giulia (952), Stelvio (949)",
-              "avgRebuiltPrice": "£1,800 – £4,200",
-              "cta": "Get Quote for 939 A6.000"
-            },
-            {
-              "code": "939 A3.000",
-              "fuel": "Diesel",
-              "size": "2.4L",
-              "power": "200 HP",
-              "compatibleModels": "159 (939), Brera (939), Spider (939)",
-              "avgRebuiltPrice": "£1,800 – £4,500",
-              "cta": "Get Quote for 939 A3.000"
-            },
-            {
-              "code": "939 A5.000",
-              "fuel": "Diesel",
-              "size": "2.4L",
-              "power": "210 HP",
-              "compatibleModels": "159 (939), Brera (939)",
-              "avgRebuiltPrice": "£1,900 – £4,800",
-              "cta": "Get Quote for 939 A5.000"
-            },
-            {
-              "code": "937 A8.000",
-              "fuel": "Diesel",
-              "size": "1.9L",
-              "power": "150 HP",
-              "compatibleModels": "147 (937), 156 (932), GT (937)",
-              "avgRebuiltPrice": "£1,200 – £3,200",
-              "cta": "Get Quote for 937 A8.000"
+              "size": "2.2 Litre",
+              "power": "150-180 hp",
+              "compatibleModels": "Giulia (952) 2.2 JTDm, Giulia 2.2 JTDm Super, Giulia 2.2 JTDm Speciale, Giulia 2.2 JTDm Veloce",
+              "avgRebuiltPrice": "£2,000 - £3,400 supply only",
+              "cta": "→ Get quotes for 955A8000 Alfa Romeo engine replacement"
             }
           ]
         },
         {
-          "name": "MultiAir/TB Petrol Family",
-          "era": "2010–2025",
-          "failureNote": "MultiAir/TB engines are known for timing chain tensioner wear and oil pump drive issues. Our rebuilt units include upgraded tensioners, revised oil pump components and full MultiAir unit calibration.",
+          "name": "Petrol Engines (Most Replaced in the UK)",
+          "era": "Extracted from Alfa Romeo petrol engines (most replaced in the uk) technical replacement data.",
+          "failureNote": "Timing chain stretch - a known issue on early production units, leading to rattling on start-up and potential engine failure, Turbocharger failure - often due to oil starvation or wastegate issues",
           "engines": [
             {
-              "code": "198 A4.000",
+              "code": "955A1000",
+              "title": "2.0L Petrol (Turbo)",
+              "familyHeading": "955A1000 - 2.0L Petrol (Turbo)",
               "fuel": "Petrol",
-              "size": "1.4L",
-              "power": "120 HP",
-              "compatibleModels": "Giulietta (940), Mito (955)",
-              "avgRebuiltPrice": "£1,400 – £3,200",
-              "cta": "Get Quote for 198 A4.000"
+              "size": "2.0 Litre",
+              "power": "200-280 hp",
+              "compatibleModels": "Giulia (952) 2.0 Turbo, Giulia 2.0 Turbo Super, Giulia 2.0 Turbo Veloce, Giulia 2.0 Turbo Q4",
+              "avgRebuiltPrice": "£2,200 - £3,800 supply only",
+              "cta": "→ Get quotes for 955A1000 Alfa Romeo engine replacement"
             },
             {
-              "code": "198 A2.000",
+              "code": "955A3000",
+              "title": "2.9L Petrol (V6 Twin-Turbo)",
+              "familyHeading": "955A3000 - 2.9L Petrol (V6 Twin-Turbo)",
               "fuel": "Petrol",
-              "size": "1.4L",
-              "power": "170 HP",
-              "compatibleModels": "Giulietta (940), Mito (955)",
-              "avgRebuiltPrice": "£1,500 – £3,500",
-              "cta": "Get Quote for 198 A2.000"
+              "size": "2.9 Litre",
+              "power": "510 hp",
+              "compatibleModels": "Giulia Quadrifoglio (952), Giulia GTA/GTAm (952)",
+              "avgRebuiltPrice": "£4,000 - £7,000 supply only",
+              "cta": "→ Get quotes for 955A3000 Alfa Romeo engine replacement"
             },
             {
-              "code": "940 A2.000",
+              "code": "939A2000",
+              "title": "3.2L Petrol (V6)",
+              "familyHeading": "939A2000 - 3.2L Petrol (V6)",
               "fuel": "Petrol",
-              "size": "1.4L",
-              "power": "120 HP",
-              "compatibleModels": "Giulietta (940), Mito (955)",
-              "avgRebuiltPrice": "£1,400 – £3,200",
-              "cta": "Get Quote for 940 A2.000"
+              "size": "3.2 Litre",
+              "power": "260 hp",
+              "compatibleModels": "159 (939) 3.2 JTS, 159 Sportwagon 3.2 JTS, Brera (939) 3.2 JTS, Brera Spider 3.2 JTS",
+              "avgRebuiltPrice": "£2,500 - £4,000 supply only",
+              "cta": "→ Get quotes for 939A2000 Alfa Romeo engine replacement"
             },
             {
-              "code": "940 B7.000",
+              "code": "955B1000",
+              "title": "1.4L Petrol (Turbo)",
+              "familyHeading": "955B1000 - 1.4L Petrol (Turbo)",
               "fuel": "Petrol",
-              "size": "1.75L",
-              "power": "235–240 HP",
-              "compatibleModels": "Giulietta (940), 4C (960)",
-              "avgRebuiltPrice": "£2,200 – £5,500",
-              "cta": "Get Quote for 940 B7.000"
-            },
-            {
-              "code": "552 73 835",
-              "fuel": "Petrol",
-              "size": "2.0L",
-              "power": "200–280 HP",
-              "compatibleModels": "Giulia (952), Stelvio (949)",
-              "avgRebuiltPrice": "£2,200 – £6,500",
-              "cta": "Get Quote for 552 73 835"
-            },
-            {
-              "code": "940 A1.000",
-              "fuel": "Petrol",
-              "size": "1.4L",
-              "power": "120 HP",
-              "compatibleModels": "Mito (955), Giulietta (940)",
-              "avgRebuiltPrice": "£1,300 – £3,000",
-              "cta": "Get Quote for 940 A1.000"
-            },
-            {
-              "code": "552 64 101",
-              "fuel": "Petrol",
-              "size": "2.0L",
-              "power": "200 HP",
-              "compatibleModels": "Giulia (952), Stelvio (949)",
-              "avgRebuiltPrice": "£2,000 – £5,800",
-              "cta": "Get Quote for 552 64 101"
-            }
-          ]
-        },
-        {
-          "name": "V6 Performance Family",
-          "era": "2005–2025",
-          "failureNote": "V6 performance engines are known for oil starvation under high load and timing chain guide wear. Our specialist rebuilds include reinforced guides, upgraded oil pumps and performance-spec bearings.",
-          "engines": [
-            {
-              "code": "670 05 0436",
-              "fuel": "Petrol",
-              "size": "2.9L",
-              "power": "510 HP",
-              "compatibleModels": "Giulia Quadrifoglio (952), Stelvio Quadrifoglio (949)",
-              "avgRebuiltPrice": "£5,000 – £12,000",
-              "cta": "Get Quote for 670 05 0436"
-            },
-            {
-              "code": "670 05 2721",
-              "fuel": "Petrol",
-              "size": "2.9L",
-              "power": "510 HP",
-              "compatibleModels": "Giulia Quadrifoglio (952), Stelvio Quadrifoglio (949)",
-              "avgRebuiltPrice": "£5,000 – £12,000",
-              "cta": "Get Quote for 670 05 2721"
-            },
-            {
-              "code": "936 A.000",
-              "fuel": "Petrol",
-              "size": "3.2L",
-              "power": "260 HP",
-              "compatibleModels": "159 (939), Brera (939), Spider (939), GT (937)",
-              "avgRebuiltPrice": "£2,500 – £6,500",
-              "cta": "Get Quote for 936 A.000"
-            },
-            {
-              "code": "936 A3.000",
-              "fuel": "Petrol",
-              "size": "3.2L",
-              "power": "250 HP",
-              "compatibleModels": "156 GTA (932), 159 (939), GT (937)",
-              "avgRebuiltPrice": "£2,500 – £6,200",
-              "cta": "Get Quote for 936 A3.000"
-            }
-          ]
-        },
-        {
-          "name": "Legacy TS/JTS Petrol Family",
-          "era": "2000–2010",
-          "failureNote": "Legacy TS/JTS engines are known for timing belt failure and oil consumption issues. Our rebuilt units include new timing kits, revised piston rings and upgraded valve stem seals",
-          "engines": [
-            {
-              "code": "937 A1.000",
-              "fuel": "Petrol",
-              "size": "1.8L",
-              "power": "140 HP",
-              "compatibleModels": "147 (937), 156 (932)",
-              "avgRebuiltPrice": "£1,200 – £3,000",
-              "cta": "Get Quote for 937 A1.000"
-            },
-            {
-              "code": "937 A2.000",
-              "fuel": "Petrol",
-              "size": "2.0L",
-              "power": "150–155 HP",
-              "compatibleModels": "147 (937), 156 (932), GT (937), GTV (916)",
-              "avgRebuiltPrice": "£1,300 – £3,500",
-              "cta": "Get Quote for 937 A2.000"
-            },
-            {
-              "code": "937 A5.000",
-              "fuel": "Petrol",
-              "size": "2.2L",
-              "power": "185 HP",
-              "compatibleModels": "159 (939), Brera (939), Spider (939)",
-              "avgRebuiltPrice": "£1,600 – £4,200",
-              "cta": "Get Quote for 937 A5.000"
-            },
-            {
-              "code": "932 A.000",
-              "fuel": "Petrol",
-              "size": "2.5L",
-              "power": "190 HP",
-              "compatibleModels": "156 (932), 166 (936)",
-              "avgRebuiltPrice": "£1,800 – £4,500",
-              "cta": "Get Quote for 932 A.000"
-            },
-            {
-              "code": "936 A1.000",
-              "fuel": "Petrol",
-              "size": "3.0L",
-              "power": "220 HP",
-              "compatibleModels": "156 GTA (932), 166 (936)",
-              "avgRebuiltPrice": "£2,200 – £5,500",
-              "cta": "Get Quote for 936 A1.000"
+              "size": "1.4 Litre",
+              "power": "120-170 hp",
+              "compatibleModels": "Giulietta (940) 1.4 TB, Giulietta 1.4 TB MultiAir, Giulietta 1.4 TB Super, MiTo (955) 1.4 TB, MiTo 1.4 TB MultiAir",
+              "avgRebuiltPrice": "£1,800 - £2,800 supply only",
+              "cta": "→ Get quotes for 955B1000 Alfa Romeo engine replacement"
             }
           ]
         }
@@ -2241,76 +2106,95 @@
       "closing": "| Alfa Romeo engine warranty | Closing line"
     },
     "fuelTypes": {
-      "tag": "Complete Alfa Romeo Engines List",
-      "h2": "Alfa Romeo Engines by Fuel Type",
-      "intro": "Choose your Alfa Romeo engine by fuel type to compare realistic replacement prices, known brand‑wide issues, and UK specialist supply – from the most popular diesel workhorses to the latest electrified powertrains.",
+      "tag": "Alfa Romeo Engines by Fuel Type",
+      "h2": "Alfa Romeo Diesel vs Petrol vs Hybrid vs Electric - Which Fuel Type Is Right For You?",
+      "intro": "Compare Alfa Romeo engine fuel types by replacement costs, running costs, reliability reputation, and model availability. Use this guide to understand your options - then enter your registration for an instant match and quotes from UK Alfa Romeo specialists.",
       "items": [
         {
-          "title": "Alfa Romeo Diesel Engines",
-          "description": "Alfa Romeo diesel engines cover many of the brand's highest-mileage UK models. Replacement demand is usually driven by timing system wear, injector and turbo faults, plus EGR or DPF-related damage once repeat short-journey use starts affecting reliability.",
-          "descriptor": "High-mileage motorway and SUV applications",
+          "title": "Diesel Engines",
+          "description": "Alfa Romeo's JTDm diesel engines have powered a significant portion of UK models across the Giulietta, 159, and Brera ranges. Replacement demand is driven by timing chain, turbo, and injector-related failures on these high-mileage workhorses.",
+          "descriptor": "Alfa Romeo's JTDm diesel engines have powered a significant portion of UK models across the Giulietta, 159, and Brera ranges. Replacement demand is driven by timing chain, turbo, and injector-related failures on these high-mileage workhorses.",
           "families": [
-            "JTDM/JTD Diesel Family"
+            "£1,800 - £3,400 (supply only)",
+            "1.6 JTDm (Giulietta/MiTo): £1,800 - £2,600",
+            "1.9 JTDm (159/Brera): £1,800 - £2,800",
+            "2.0 JTDm (937A4000 - Giulietta): £1,800 - £2,800",
+            "2.2 JTDm (955A8000 - Giulia): £2,000 - £3,400"
           ],
-          "foundIn": [
-            "Alfa Romeo 145 Engines",
-            "Alfa Romeo 146 Engines",
-            "Alfa Romeo 147 Engines",
-            "Alfa Romeo Giulietta Engines"
-          ],
-          "knownFor": [
-            "Dual-mass flywheel degradation",
-            "turbo vane actuator sticking",
-            "injector seal carbon buildup",
-            "DPF blockage & regeneration failure"
-          ],
-          "typicalModels": [
-            "Alfa Romeo 145 Engines",
-            "Alfa Romeo 146 Engines",
-            "Alfa Romeo 147 Engines",
-            "Alfa Romeo Giulietta Engines"
-          ],
+          "foundIn": [],
+          "knownFor": [],
+          "typicalModels": [],
           "importantNotes": [
-            "Short-journey use increases DPF, EGR, and oil-dilution risk on many diesel engines.",
-            "A documented service history matters more on diesel replacements because injector, turbo, and timing faults often build gradually."
+            "High-mileage motorway drivers covering 15,000+ miles annually",
+            "Long-distance commuters who benefit from the best fuel economy",
+            "Drivers who value strong low-end torque for relaxed cruising",
+            "Urban drivers with short daily trips who are better served by petrol (DPF and EGR issues are common)",
+            "Low-mileage users who don't drive enough to justify the diesel premium",
+            "Typical searches: Alfa Romeo JTDm engine replacement, Giulietta 2.0 diesel engine cost, Alfa Romeo diesel engine specialist UK, Giulia 2.2 JTDm replacement engine, Alfa Romeo 159 1.9 JTD engine for sale, Alfa Romeo diesel timing chain repair, Brera 2.4 JTDm engine price, Alfa Romeo DPF problems → Get quotes for Alfa Romeo Diesel replacement engines → Not sure which diesel you have? Enter your registration number for an instant match"
           ],
-          "cta": "Compare Alfa Romeo diesel engine prices"
+          "cta": "→ Get quotes for Alfa Romeo Diesel replacement engines"
         },
         {
-          "title": "Alfa Romeo Petrol Engines",
-          "description": "Alfa Romeo petrol engines span everything from core daily-driver models to higher-output performance variants. Most replacement enquiries start with timing chain noise, oil consumption, cooling-system failure, or internal wear that makes a warranted replacement more sensible than repeated repairs.",
-          "descriptor": "Core passenger-car and performance applications",
+          "title": "Petrol Engines",
+          "description": "Alfa Romeo's petrol engine range spans from the efficient 1.4 MultiAir turbo to the legendary 2.9-litre V6 twin-turbo found in the Giulia Quadrifoglio - delivering everything from urban economy to supercar-slaying performance.",
+          "descriptor": "Alfa Romeo's petrol engine range spans from the efficient 1.4 MultiAir turbo to the legendary 2.9-litre V6 twin-turbo found in the Giulia Quadrifoglio - delivering everything from urban economy to supercar-slaying performance.",
           "families": [
-            "MultiAir/TB Petrol Family",
-            "V6 Performance Family",
-            "Legacy TS/JTS Petrol Family"
+            "£1,800 - £7,000 (supply only)",
+            "1.4 TB/MultiAir (955B1000): £1,800 - £2,800",
+            "1.75 TB (Giulietta): £2,000 - £3,000",
+            "2.0 Turbo (955A1000 - Giulia): £2,200 - £3,800",
+            "3.2 JTS V6 (939A2000 - 159/Brera): £2,500 - £4,000"
           ],
-          "foundIn": [
-            "Alfa Romeo 145 Engines",
-            "Alfa Romeo 146 Engines",
-            "Alfa Romeo 147 Engines",
-            "Alfa Romeo Giulietta Engines"
-          ],
-          "knownFor": [
-            "Plastic timing guide disintegration",
-            "MultiAir solenoid oil leaks",
-            "turbo wastegate play",
-            "Twin spark coil pack failure"
-          ],
-          "typicalModels": [
-            "Alfa Romeo 145 Engines",
-            "Alfa Romeo 146 Engines",
-            "Alfa Romeo 147 Engines",
-            "Alfa Romeo Giulietta Engines"
-          ],
+          "foundIn": [],
+          "knownFor": [],
+          "typicalModels": [],
           "importantNotes": [
-            "Cold-start rattles, overheating history, and oil use are the biggest warning signs before a petrol engine replacement becomes necessary.",
-            "Direct-injection petrol engines often need specialist attention for carbon build-up alongside the main mechanical repair."
+            "Urban and suburban drivers with lower annual mileage (under 12,000 miles)",
+            "Enthusiasts wanting the passionate, refined driving experience that defines Alfa Romeo",
+            "Drivers who value the iconic Alfa Romeo character and performance heritage",
+            "High-mileage motorway drivers who would benefit from diesel's superior fuel economy",
+            "Drivers prioritising maximum fuel efficiency over performance",
+            "Typical searches: Alfa Romeo Giulia engine replacement, Alfa Romeo 2.9 V6 engine cost, Giulietta 1.4 MultiAir engine for sale, Alfa Romeo Quadrifoglio engine replacement, Alfa Romeo MiTo 1.4 TB engine price, Alfa Romeo timing chain repair cost, Alfa Romeo MultiAir engine problems, Alfa Romeo petrol engine specialist UK → Compare Alfa Romeo Petrol engine prices → Not sure which petrol you have? Enter your registration number for an instant match"
           ],
-          "cta": "Compare Alfa Romeo petrol engine prices"
+          "cta": "→ Compare Alfa Romeo Petrol engine prices"
+        },
+        {
+          "title": "Hybrid & Plug-in Hybrid (PHEV) Engines",
+          "description": "Alfa Romeo's hybrid range is growing, led by the Tonale PHEV and the new Milano. These combine 1.5-litre petrol engines with electric motors for improved efficiency. Hybrid systems are still relatively rare in the replacement market, but enquiries are increasing as these vehicles age.",
+          "descriptor": "Alfa Romeo's hybrid range is growing, led by the Tonale PHEV and the new Milano. These combine 1.5-litre petrol engines with electric motors for improved efficiency. Hybrid systems are still relatively rare in the replacement market, but enquiries are increasing as these vehicles age.",
+          "families": [
+            "PHEV (Plug-in Hybrid - Tonale, Milano): Combines a 1.5-litre turbocharged petrol engine with an electric motor. The battery (typically 15.5kWh) can be charged via an external plug or via regenerative braking, providing 20-35 miles of pure electric range.",
+            "MHEV (Mild Hybrid - Tonale): Uses a 48V belt-integrated starter-generator that assists the petrol engine during acceleration, provides torque fill, and enables coasting (engine off) at speed. The small 48V battery is recharged via regenerative braking.",
+            "Battery location: The high-voltage battery is typically located under the rear seats or boot floor - careful handling is required for any work in these areas."
+          ],
+          "foundIn": [],
+          "knownFor": [],
+          "typicalModels": [],
+          "importantNotes": [
+            "Company car drivers benefiting from lower Benefit-in-Kind (BIK) tax rates",
+            "Urban commuters who can charge daily and drive within the electric range",
+            "Drivers who want to reduce fuel costs and emissions without going fully electric",
+            "Drivers without off-street parking or reliable charging access",
+            "High-mileage users who would benefit more from diesel's efficiency on long runs",
+            "Typical searches: Alfa Romeo Tonale hybrid engine replacement, Alfa Romeo PHEV battery price, Alfa Romeo hybrid engine specialist UK, Tonale 1.5 hybrid engine cost, Alfa Romeo hybrid battery degradation, Milano hybrid motor replacement, Alfa Romeo hybrid system fault repair, Tonale PHEV engine for sale → Enquire about Alfa Romeo Hybrid engine availability → Not sure which hybrid you have? Enter your registration number for an instant match"
+          ],
+          "cta": "Get quotes for Alfa Romeo Alfa Romeo Hybrid & Plug-in Hybrid (PHEV) Engines engines"
+        },
+        {
+          "title": "Electric Powertrains",
+          "description": "The Alfa Romeo Milano Elettrica marks the brand's entry into the electric vehicle market, using a 115kW (156 hp) electric motor. Electric motors rarely fail, but we connect you with UK specialists for battery module repairs and drive unit replacements.",
+          "descriptor": "The Alfa Romeo Milano Elettrica marks the brand's entry into the electric vehicle market, using a 115kW (156 hp) electric motor. Electric motors rarely fail, but we connect you with UK specialists for battery module repairs and drive unit replacements.",
+          "families": [],
+          "foundIn": [],
+          "knownFor": [],
+          "typicalModels": [],
+          "importantNotes": [
+            "Typical searches: Alfa Romeo Milano electric motor replacement, Alfa Romeo EV battery repair, Alfa Romeo electric motor specialist UK, Alfa Romeo EV drive unit price, Alfa Romeo EV battery module replacement, Alfa Romeo electric range degradation → Enquire about Alfa Romeo Electric motor repair or replacement → Not sure which electric Alfa Romeo you have? Enter your registration number for an instant match"
+          ],
+          "cta": "Get quotes for Alfa Romeo Alfa Romeo Electric Powertrains engines"
         }
       ],
-      "closing": "Not sure which fuel type your Alfa Romeo has? Enter your registration number above to instantly identify your model, engine code, fuel system and compatible replacement options – all backed by a minimum 12‑month unlimited mileage warranty from UK Alfa Romeo specialists."
+      "closing": "Not sure which fuel type your Alfa Romeo has? Enter your registration number for an instant match."
     },
     "engineCodeDirectory": {
       "tag": "Engine Codes",

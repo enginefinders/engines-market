@@ -604,146 +604,84 @@
       ]
     },
     "engineCodes": {
-      "tag": "Replacement Cost",
-      "h2": "Rolls Royce Engine Codes & Average Rebuilt Prices (UK Supply)",
-      "h3": "Compare costs for every major Rolls Royce engine — N74 V12, N63 V8, L410 V8, and classic V8 families. All prices are typical UK market ranges for professionally rebuilt engines with 12-month unlimited mileage warranty. Click \"Get Quote\" on any engine to receive tailored prices from our network of UK Rolls Royce specialists.",
+      "tag": "Engine Codes",
+      "h2": "Rolls-Royce Engine Codes - Most Replaced Engines & Full Directory",
+      "h3": "Every major Rolls-Royce engine code with technical specs, compatible UK models, known failures and average rebuilt prices. Use the quick-reference accordion below for all remaining codes.",
+      "closingLine": "Can't find your engine code? Enter your registration number above - we'll identify the exact Rolls Royce engine fitted to your vehicle.",
       "filters": [
-        "All",
-        "Diesel",
-        "Petrol"
+        "Petrol Engines (Most Replaced in the UK)"
       ],
       "groups": [
         {
-          "name": "Modern N-Series V12 Engines",
-          "era": "2009-Present",
-          "failureNote": "*Get Quote →* for each row Common failure points: N74 V12 engines are known for high-pressure fuel pump (HPFP) failure and turbocharger coking due to the revolutionary \"Hot-V\" design. Our rebuilt units include upgraded HPFPs (OEM #13518547362) and turbo wastegate arms per TSB 2021-045 .",
+          "name": "Petrol Engines (Most Replaced in the UK)",
+          "era": "Extracted from Rolls Royce petrol engines (most replaced in the uk) technical replacement data.",
+          "failureNote": "High-pressure fuel pump failure - a primary reliability risk, especially in high-load driving or frequent short trips, Water pump and coolant pipe leaks - coolant pipe corrosion on N74 engines is a well-documented issue",
           "engines": [
             {
-              "code": "N74B66",
-              "fuel": "Petrol (Twin-Turbo)",
-              "size": "6.6L",
-              "power": "563-624 hp",
-              "compatibleModels": "Ghost (RR4, 2009-2020), Dawn, Wraith",
-              "avgRebuiltPrice": "£5,200 – £7,000",
-              "cta": "Get Quote for N74B66"
+              "code": "N74B60",
+              "title": "6.0L V12 Petrol (Twin-Turbo)",
+              "familyHeading": "N74B60 - 6.0L V12 Petrol (Twin-Turbo)",
+              "fuel": "Petrol",
+              "size": "6.0 Litre",
+              "power": "544-563 hp (535-572 PS)",
+              "compatibleModels": "",
+              "avgRebuiltPrice": "£12,000 - £20,000+ supply only",
+              "cta": "→ Get quotes for N74B60 Rolls-Royce engine replacement"
+            },
+            {
+              "code": "N74B66 / N74B66A",
+              "title": "6.6L V12 Petrol (Twin-Turbo)",
+              "familyHeading": "N74B66 / N74B66A - 6.6L V12 Petrol (Twin-Turbo)",
+              "fuel": "Petrol",
+              "size": "6.6 Litre",
+              "power": "563-632 hp (571-624 PS)",
+              "compatibleModels": "",
+              "avgRebuiltPrice": "£15,000 - £25,000+ supply only",
+              "cta": "→ Get quotes for N74B66 Rolls-Royce engine replacement"
+            },
+            {
+              "code": "N74B66B",
+              "title": "6.6L V12 Petrol (Twin-Turbo, High-Output)",
+              "familyHeading": "N74B66B - 6.6L V12 Petrol (Twin-Turbo, High-Output)",
+              "fuel": "Petrol",
+              "size": "6.6 Litre",
+              "power": "610 hp (448 kW)",
+              "compatibleModels": "",
+              "avgRebuiltPrice": "£18,000 - £28,000+ supply only",
+              "cta": "→ Get quotes for N74B66B Rolls-Royce engine replacement"
             },
             {
               "code": "N74B68",
-              "fuel": "Petrol (Twin-Turbo)",
-              "size": "6.75L",
-              "power": "563-571 hp",
-              "compatibleModels": "Phantom (RR1, RR12, RR21, 2009-2022), Cullinan",
-              "avgRebuiltPrice": "£6,000 – £8,500",
-              "cta": "Get Quote for N74B68"
+              "title": "6.75L V12 Petrol (Twin-Turbo)",
+              "familyHeading": "N74B68 - 6.75L V12 Petrol (Twin-Turbo)",
+              "fuel": "Petrol",
+              "size": "6.75 Litre",
+              "power": "563-591 hp (571-600 PS)",
+              "compatibleModels": "",
+              "avgRebuiltPrice": "£20,000 - £35,000+ supply only",
+              "cta": "→ Get quotes for N74B68 Rolls-Royce engine replacement"
             },
             {
-              "code": "N74B60",
-              "fuel": "Petrol (Twin-Turbo)",
-              "size": "6.0L",
-              "power": "453 hp",
-              "compatibleModels": "Early Phantom (RR1, 2009-2012)",
-              "avgRebuiltPrice": "£4,800 – £6,500",
-              "cta": "Get Quote for N74B60"
-            }
-          ]
-        },
-        {
-          "name": "Modern N-Series V8 Engines",
-          "era": "2010-Present",
-          "failureNote": "Get Quote → Common failure points: N63 V8 engines suffer from VANOS oil leaks, high-pressure fuel pump failures, and hot-V turbocharger heat soak. Our rebuilt units include upgraded timing chain tensioners and HPFP replacements.",
-          "engines": [
-            {
-              "code": "N63B44",
-              "fuel": "Petrol (Twin-Turbo)",
-              "size": "4.4L",
-              "power": "420-600 hp",
-              "compatibleModels": "Ghost (early), Wraith (2013-2019), Dawn",
-              "avgRebuiltPrice": "£4,000 – £5,800",
-              "cta": "Get Quote for N63B44"
-            }
-          ]
-        },
-        {
-          "name": "Classic L-Series V8 Engines",
-          "era": "1959-2003",
-          "failureNote": "*Get Quote →* for each row Common failure points: Classic L410 V8 engines are known for cylinder head gasket failures, timing chain wear, and oil leaks. Our rebuilt units include resurfaced heads, new timing components, and upgraded sealing throughout.",
-          "engines": [
-            {
-              "code": "L410 (6.2L)",
+              "code": "B58B30 / B58B30M",
+              "title": "3.0L Straight-Six Petrol (Twin-Turbo)",
+              "familyHeading": "B58B30 / B58B30M - 3.0L Straight-Six Petrol (Twin-Turbo)",
               "fuel": "Petrol",
-              "size": "6.2L",
-              "power": "170-220 hp",
-              "compatibleModels": "Silver Shadow (1965-1980), Silver Shadow I/II",
-              "avgRebuiltPrice": "£2,500 – £7,000",
-              "cta": "Get Quote for L410 (6.2L)"
+              "size": "3.0 Litre",
+              "power": "335-382 hp (250-285 kW)",
+              "compatibleModels": "",
+              "avgRebuiltPrice": "£8,000 - £12,000 supply only",
+              "cta": "→ Get quotes for B58B30 Rolls-Royce engine replacement"
             },
             {
-              "code": "L410I (6.75L)",
+              "code": "B48B20 / B48B20B",
+              "title": "2.0L Straight-Four Petrol (Twin-Turbo)",
+              "familyHeading": "B48B20 / B48B20B - 2.0L Straight-Four Petrol (Twin-Turbo)",
               "fuel": "Petrol",
-              "size": "6.75L",
-              "power": "200-300 hp",
-              "compatibleModels": "Silver Shadow (late), Silver Spirit I-IV, Silver Spur, Corniche, Park Ward",
-              "avgRebuiltPrice": "£2,800 – £7,500",
-              "cta": "Get Quote for L410I (6.75L)"
-            },
-            {
-              "code": "L410 (6.75L)",
-              "fuel": "Petrol",
-              "size": "6.75L",
-              "power": "200-245 hp",
-              "compatibleModels": "Silver Spirit, Corniche, Bentley Mulsanne (shared platform)",
-              "avgRebuiltPrice": "£2,800 – £8,000",
-              "cta": "Get Quote for L410 (6.75L)"
-            }
-          ]
-        },
-        {
-          "name": "BMW-Era V12 Engines",
-          "era": "1998-2010",
-          "failureNote": "*Get Quote →* for each row Common failure points: BMW-era V12 engines suffer from oil consumption, camshaft sensor failures (N73), and cooling system degradation. Our rebuilt units include OEM-spec sensors and upgraded water pump assemblies.",
-          "engines": [
-            {
-              "code": "M73TUB54 (shared)",
-              "fuel": "Petrol",
-              "size": "5.4L",
-              "power": "322 hp",
-              "compatibleModels": "Silver Seraph (1998-2002), Park Ward",
-              "avgRebuiltPrice": "£3,000 – £7,500",
-              "cta": "Get Quote for M73TUB54 (shared)"
-            },
-            {
-              "code": "N73B60",
-              "fuel": "Petrol (Naturally Aspirated)",
-              "size": "6.0L",
-              "power": "453 hp",
-              "compatibleModels": "Phantom (2003-2012, pre-facelift RR1)",
-              "avgRebuiltPrice": "£5,500 – £8,000",
-              "cta": "Get Quote for N73B60"
-            }
-          ]
-        },
-        {
-          "name": "Classic Pre-War & Heritage Engines",
-          "era": "Pre-1955",
-          "failureNote": "*Get Quote →* for each row Common failure points: Heritage engines require bespoke rebuilds with white metal bearings and discontinued parts. Our specialist network includes pre-war Rolls Royce experts with access to original factory specifications",
-          "engines": [
-            {
-              "code": "20/25 (3.3L)",
-              "fuel": "Petrol",
-              "size": "3.3L",
-              "power": "25 hp",
-              "compatibleModels": "20/25 (1929-1936)",
-              "avgRebuiltPrice": "£6,900+ (bespoke)",
-              "cta": "Get Quote for 20/25 (3.3L)"
-            },
-            {
-              "code": "Silver Ghost (7.4L)",
-              "fuel": "Petrol",
-              "size": "7.4L",
-              "power": "48-80 hp",
-              "compatibleModels": "Silver Ghost (1906-1926)",
-              "avgRebuiltPrice": "£8,000 – £15,000+",
-              "cta": "Get Quote for Silver Ghost (7.4L)"
+              "size": "2.0 Litre",
+              "power": "184-252 hp (135-185 kW)",
+              "compatibleModels": "",
+              "avgRebuiltPrice": "£6,000 - £9,000 supply only",
+              "cta": "→ Get quotes for B48B20 Rolls-Royce engine replacement"
             }
           ]
         }
@@ -1092,46 +1030,107 @@
       "closing": "Not sure which engine size your Rolls Royce needs? Enter your registration number and we’ll match you to the exact engine code and displacement — instantly. All engines supplied with a minimum 12‑month warranty from UK Rolls Royce specialists."
     },
     "fuelTypes": {
-      "tag": "Complete Rolls Royce Engines List",
-      "h2": "Rolls Royce Engines by Fuel Type",
-      "intro": "Choose your Rolls Royce engine by fuel type to compare realistic replacement prices, known brand‑wide issues, and UK specialist supply – from the legendary L410 V8 petrols to the modern BMW‑sourced N74 twin‑turbo V12 and the new electric Spectre.",
+      "tag": "Rolls Royce Engines by Fuel Type",
+      "h2": "Rolls-Royce Petrol vs Hybrid vs Electric - Which Powertrain Is Right For You?",
+      "intro": "Compare Rolls-Royce engine fuel types by replacement costs, running costs, reliability reputation, and model availability. Use this guide to understand your options - then enter your registration for an instant match and quotes from UK Rolls-Royce specialists.",
       "items": [
         {
-          "title": "Rolls Royce Petrol Engines",
-          "description": "Rolls Royce petrol engines span everything from core daily-driver models to higher-output performance variants. Most replacement enquiries start with timing chain noise, oil consumption, cooling-system failure, or internal wear that makes a warranted replacement more sensible than repeated repairs.",
-          "descriptor": "Core passenger-car and performance applications",
+          "title": "Rolls-Royce Petrol Engines",
+          "description": "Rolls-Royce's petrol engine range is defined by the BMW-derived N74 V12 family - 6.0-litre, 6.6-litre, and 6.75-litre twin-turbo units - that power the Ghost, Phantom, Wraith, Dawn, and Cullinan. The V12 is the heart of the Rolls-Royce experience, delivering effortless, silent power with a waft of torque that defines the brand. Rolls-Royce has never offered diesel engines, making petrol the traditional choice.",
+          "descriptor": "Rolls-Royce's petrol engine range is defined by the BMW-derived N74 V12 family - 6.0-litre, 6.6-litre, and 6.75-litre twin-turbo units - that power the Ghost, Phantom, Wraith, Dawn, and Cullinan. The V12 is the heart of the Rolls-Royce experience, delivering effortless, silent power with a waft of torque that defines the brand. Rolls-Royce has never offered diesel engines, making petrol the traditional choice.",
           "families": [
-            "Modern N-Series V12 Engines",
-            "Modern N-Series V8 Engines",
-            "Classic L-Series V8 Engines",
-            "BMW-Era V12 Engines"
+            "£6,000 - £35,000+ (supply only)",
+            "B48B20 (2.0L I4): £6,000 - £9,000",
+            "B58B30 (3.0L I6): £8,000 - £12,000",
+            "N74B60 (6.0L V12): £12,000 - £20,000+",
+            "N74B66 (6.6L V12): £15,000 - £25,000+"
           ],
           "foundIn": [
-            "Rolls Royce Corniche Engines",
-            "Rolls Royce Cullinan Engines",
-            "Rolls Royce Dawn Engines",
-            "Rolls Royce Ghost Engines"
+            "Phantom VII (2003-2017): 6.75 N73B68 (naturally aspirated V12), 6.0 N74B60 (twin-turbo V12, 2008-2017)",
+            "Phantom VIII (2017-present): 6.75 N74B68 (twin-turbo V12)",
+            "Ghost Series I (2009-2014): 6.6 N74B66A (twin-turbo V12)",
+            "Ghost Series II (2014-2020): 6.6 N74B66A (twin-turbo V12)",
+            "Ghost Series II (2020-present): 6.75 N74B68 (twin-turbo V12, some markets), B58B30 (3.0-litre straight-six, limited markets)",
+            "Wraith (2013-2023): 6.6 N74B66A / N74B66B (Black Badge)",
+            "Dawn (2015-2023): 6.6 N74B66A / N74B66B (Black Badge)",
+            "Cullinan (2018-present): 6.75 N74B68"
           ],
           "knownFor": [
-            "Camshaft wear",
-            "cracked cylinder heads",
-            "obsolete carburettor components",
-            "Cylinder liner ‘O’ ring seal failure"
+            "High-Pressure Fuel Pump Failure (N74) - A primary reliability risk on N74 V12 engines. HPFP failure can cause rough idling, reduced power, starting problems, and stalling. Often requires replacing both pumps as a set.",
+            "Turbocharger Oil Feed Line Coking (N74) - At idle, the engine produces less oil pressure, leading to carbon deposits in the turbo oil feed lines. Turbines can fail as early as 100,000 km.",
+            "Coolant Pipe Corrosion (N74) - Coolant pipes are susceptible to corrosion and leaking on N74 engines. A well-documented weak point.",
+            "Timing Chain Stretch (N74) - Chain stretch can occur, particularly on higher-mileage examples, leading to rattling on start-up and potential timing issues.",
+            "Valve Stem Seal Deterioration (N74) - Can cause increased oil consumption and smoking on start-up. Affects N74 V12s from 2003-2017.",
+            "Double VANOS System Wear (N74) - Variable valve timing system may require attention by 150,000 km."
           ],
           "typicalModels": [
-            "Rolls Royce Corniche Engines",
-            "Rolls Royce Cullinan Engines",
-            "Rolls Royce Dawn Engines",
-            "Rolls Royce Ghost Engines"
+            "Phantom VII (2003-2017): 6.75 N73B68 (naturally aspirated V12), 6.0 N74B60 (twin-turbo V12, 2008-2017)",
+            "Phantom VIII (2017-present): 6.75 N74B68 (twin-turbo V12)",
+            "Ghost Series I (2009-2014): 6.6 N74B66A (twin-turbo V12)",
+            "Ghost Series II (2014-2020): 6.6 N74B66A (twin-turbo V12)",
+            "Ghost Series II (2020-present): 6.75 N74B68 (twin-turbo V12, some markets), B58B30 (3.0-litre straight-six, limited markets)",
+            "Wraith (2013-2023): 6.6 N74B66A / N74B66B (Black Badge)",
+            "Dawn (2015-2023): 6.6 N74B66A / N74B66B (Black Badge)",
+            "Cullinan (2018-present): 6.75 N74B68"
           ],
           "importantNotes": [
-            "Cold-start rattles, overheating history, and oil use are the biggest warning signs before a petrol engine replacement becomes necessary.",
-            "Direct-injection petrol engines often need specialist attention for carbon build-up alongside the main mechanical repair."
+            "Traditionalists who value the V12 waft and effortless power delivery",
+            "Collectors and chauffeur-driven owners who prioritise silence and refinement",
+            "Drivers who want the definitive Rolls-Royce experience",
+            "High-mileage daily drivers who would struggle with running costs of £0.40+ per mile",
+            "Drivers prioritising maximum fuel efficiency over traditional luxury",
+            "Typical searches: Rolls-Royce Ghost engine replacement, Rolls-Royce V12 engine rebuild, Rolls-Royce Phantom engine cost, Rolls-Royce Cullinan engine replacement, Rolls-Royce N74 engine problems, Rolls-Royce engine specialist UK, Rolls-Royce Wraith engine price, Rolls-Royce Dawn engine for sale → Compare Rolls-Royce Petrol engine prices → Not sure which petrol you have? Enter your registration number for an instant match"
           ],
-          "cta": "Compare Rolls Royce petrol engine prices"
+          "cta": "→ Compare Rolls-Royce Petrol engine prices"
+        },
+        {
+          "title": "Rolls-Royce Hybrid & Plug-in Hybrid (PHEV) Engines",
+          "description": "Rolls-Royce's hybrid offering is limited, with the Ghost and Cullinan offering mild-hybrid (MHEV) versions in some markets. However, the brand's primary hybrid announcement was the Spectre, which is fully electric. The Ghost Series II (2020-present) offers a 6.75-litre V12 with 48V mild-hybrid assistance in some configurations.",
+          "descriptor": "Rolls-Royce's hybrid offering is limited, with the Ghost and Cullinan offering mild-hybrid (MHEV) versions in some markets. However, the brand's primary hybrid announcement was the Spectre, which is fully electric. The Ghost Series II (2020-present) offers a 6.75-litre V12 with 48V mild-hybrid assistance in some configurations.",
+          "families": [
+            "MHEV (Mild Hybrid - Ghost, Cullinan): Uses a 48V belt-integrated starter-generator to provide torque assistance during acceleration, improve stop-start smoothness, and enable coasting. The system improves fuel economy by 5-10%.",
+            "Battery location: The 48V battery is typically located under the rear seats or in the boot floor - careful handling is required for any work in these areas.",
+            "No PHEV models are currently sold in the UK market; the mild hybrid system is the only hybrid offering, with the Spectre representing the brand's full electric future."
+          ],
+          "foundIn": [
+            "Ghost Series II (2020-present): MHEV - 6.75L V12 (select markets)",
+            "Cullinan (2020-present): MHEV - 6.75L V12 (select markets)"
+          ],
+          "knownFor": [
+            "48V Battery Degradation - The lithium-ion battery loses capacity over time, reducing hybrid assist and fuel economy.",
+            "Hybrid System Faults - Intermittent hybrid system warnings and charging failures can occur.",
+            "12V Battery Issues - The small 12V battery can fail, preventing the hybrid system from operating correctly.",
+            "High-Voltage Cooling System Issues - Affecting battery and motor performance."
+          ],
+          "typicalModels": [
+            "Ghost Series II (2020-present): MHEV - 6.75L V12 (select markets)",
+            "Cullinan (2020-present): MHEV - 6.75L V12 (select markets)"
+          ],
+          "importantNotes": [
+            "Company car drivers benefiting from lower Benefit-in-Kind (BIK) tax rates",
+            "Urban drivers who want slightly improved fuel economy in stop-start traffic",
+            "Drivers who want the V12 experience with a small efficiency improvement",
+            "Drivers without access to a specialist hybrid garage - parts and expertise are limited",
+            "Purists who prefer the pure V12 experience without hybrid complexity",
+            "Typical searches: Rolls-Royce Ghost hybrid engine replacement, Rolls-Royce Cullinan MHEV battery price, Rolls-Royce hybrid engine specialist UK, Rolls-Royce mild hybrid system repair, Rolls-Royce 48V battery degradation, Rolls-Royce Ghost hybrid motor replacement → Enquire about Rolls-Royce Hybrid engine availability → Not sure which hybrid you have? Enter your registration number for an instant match"
+          ],
+          "cta": "Get quotes for Rolls Royce Rolls-Royce Hybrid & Plug-in Hybrid (PHEV) Engines engines"
+        },
+        {
+          "title": "Rolls-Royce Electric Powertrains",
+          "description": "Rolls-Royce's electric range is led by the Spectre (2023-present), the brand's first fully electric model. Using a 120kWh battery and two permanent-magnet synchronous electric motors producing 577 hp, the Spectre marks a new chapter for Rolls-Royce, delivering silent, effortless power with exceptional range. Electric motors rarely fail, but we connect you with UK specialists for battery module repairs and drive unit replacements.",
+          "descriptor": "Rolls-Royce's electric range is led by the Spectre (2023-present), the brand's first fully electric model. Using a 120kWh battery and two permanent-magnet synchronous electric motors producing 577 hp, the Spectre marks a new chapter for Rolls-Royce, delivering silent, effortless power with exceptional range. Electric motors rarely fail, but we connect you with UK specialists for battery module repairs and drive unit replacements.",
+          "families": [],
+          "foundIn": [],
+          "knownFor": [],
+          "typicalModels": [],
+          "importantNotes": [
+            "Typical searches: Rolls-Royce Spectre motor replacement, Rolls-Royce EV battery repair, Rolls-Royce electric motor specialist UK, Rolls-Royce Spectre drive unit price, Rolls-Royce EV battery module replacement, Rolls-Royce electric range degradation, Rolls-Royce Spectre motor failure, Rolls-Royce electric powertrain repair → Enquire about Rolls-Royce Electric motor repair or replacement → Not sure which electric Rolls-Royce you have? Enter your registration number for an instant match"
+          ],
+          "cta": "Get quotes for Rolls Royce Rolls-Royce Electric Powertrains engines"
         }
       ],
-      "closing": "Not sure which fuel type your Rolls Royce has? Enter your registration number above to instantly identify your model, engine code, fuel system and compatible replacement options – all backed by a minimum 12‑month unlimited mileage warranty from UK Rolls Royce specialists."
+      "closing": "Not sure which fuel type your Rolls Royce has? Enter your registration number for an instant match."
     },
     "engineCodeDirectory": {
       "tag": "Engine Codes",

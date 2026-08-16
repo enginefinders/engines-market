@@ -692,167 +692,84 @@
       ]
     },
     "engineCodes": {
-      "tag": "Replacement Cost",
-      "h2": "Bentley Engine Codes & Average Rebuilt Prices (UK Supply)",
-      "h3": "Compare costs for every major Bentley engine — W12 and 4.0 V8 families. All prices are typical UK market ranges for professionally rebuilt engines with warranty. Click \"Get Quote\" on any engine to receive tailored prices from our network of UK Bentley specialists.",
+      "tag": "Engine Codes",
+      "h2": "Bentley Engine Codes - Most Replaced Engines & Full Directory",
+      "h3": "Every major Bentley engine code with technical specs, compatible UK models, known failures and average rebuilt prices. Use the quick-reference accordion below for all remaining codes.",
+      "closingLine": "Can't find your engine code? Enter your registration number above - we'll identify the exact Bentley engine fitted to your vehicle.",
       "filters": [
-        "Implement a filter bar above the first table: `[All]",
-        "[W12]",
-        "[4.0 V8]",
-        "[6.75 L-Series]` based on the groups below."
+        "Petrol Engines (Most Replaced in the UK)"
       ],
       "groups": [
         {
-          "name": "W12 Engine Family",
-          "era": "6.0L Twin-Turbo",
-          "failureNote": "Covers Mk1-Mk3 Continental GT & Flying Spur (2003-2024) for DDBA Common failure points: The W12 engine is known for oil pump failure leading to low pressure, turbocharger seal leaks, and coil pack failures. Our rebuilt units include uprated oil pumps and new turbocharger cartridges to exceed OEM reliability.",
+          "name": "Petrol Engines (Most Replaced in the UK)",
+          "era": "Extracted from Bentley petrol engines (most replaced in the uk) technical replacement data.",
+          "failureNote": "Ignition coil failure - the W12 has 12 coils; failure of one often leads to replacing all 12 as a set; common from 60,000 miles, Coolant pipe corrosion - a known issue on W12 platforms leading to coolant loss and overheating",
           "engines": [
             {
-              "code": "BCY / BWR",
+              "code": "W12 Family",
+              "title": "6.0L Petrol",
+              "familyHeading": "W12 Family - 6.0L Petrol",
               "fuel": "Petrol",
-              "size": "6.0L",
-              "power": "552-560 HP",
-              "compatibleModels": "Continental GT / GT Speed (2003-2010)",
-              "avgRebuiltPrice": "£12,000 – £18,000",
-              "cta": "Get Quote for BCY / BWR"
-            },
-            {
-              "code": "BR60",
-              "fuel": "Petrol",
-              "size": "6.0L",
-              "power": "576-600 HP",
-              "compatibleModels": "Continental GT / Flying Spur (2011-2017)",
-              "avgRebuiltPrice": "£14,000 – £20,000",
-              "cta": "Get Quote for BR60"
-            },
-            {
-              "code": "DBDA",
-              "fuel": "Petrol",
-              "size": "6.0L",
-              "power": "626-635 HP",
-              "compatibleModels": "Continental GT / Flying Spur (2017-2020)",
-              "avgRebuiltPrice": "£16,000 – £22,000",
-              "cta": "Get Quote for DBDA"
-            },
-            {
-              "code": "DDBD",
-              "fuel": "Petrol",
-              "size": "6.0L",
-              "power": "650-659 HP",
-              "compatibleModels": "Continental GT Speed / Bentayga Speed (2020-2024)",
-              "avgRebuiltPrice": "£18,000 – £24,000",
-              "cta": "Get Quote for DDBD"
-            },
-            {
-              "code": "DDBA",
-              "fuel": "Petrol",
-              "size": "6.0L",
-              "power": "626 HP",
-              "compatibleModels": "Continental GT (2018-2024)",
-              "avgRebuiltPrice": "£16,000 – £22,000",
-              "cta": "Get Quote for DDBA"
-            }
-          ]
-        },
-        {
-          "name": "4.0 V8 Engine Family",
-          "era": "Twin-Turbo",
-          "failureNote": "Covers Continental, Flying Spur & Bentayga (2012-present) for DDBB Common failure points: The 4.0 V8 engines are known for turbo coolant line leaks and timing chain tensioner wear. Our rebuilt units feature updated coolant pipe designs and new OEM-spec tensioners.",
-          "engines": [
-            {
-              "code": "CVDA",
-              "fuel": "Petrol",
-              "size": "4.0L",
-              "power": "500-520 HP",
-              "compatibleModels": "Continental GT V8 / Flying Spur V8 (2012-2018)",
-              "avgRebuiltPrice": "£7,500 – £11,000",
-              "cta": "Get Quote for CVDA"
-            },
-            {
-              "code": "CMMC / CYCB",
-              "fuel": "Petrol",
-              "size": "4.0L",
-              "power": "542-550 HP",
-              "compatibleModels": "Continental GT V8 / Bentayga V8 (2018-2022)",
-              "avgRebuiltPrice": "£8,500 – £12,000",
-              "cta": "Get Quote for CMMC / CYCB"
-            },
-            {
-              "code": "DCBE",
-              "fuel": "Petrol",
-              "size": "4.0L",
-              "power": "550 HP",
-              "compatibleModels": "Continental GT V8 / GTC (2020-2024)",
-              "avgRebuiltPrice": "£9,000 – £13,000",
-              "cta": "Get Quote for DCBE"
-            },
-            {
-              "code": "DDBB",
-              "fuel": "Petrol",
-              "size": "4.0L",
-              "power": "542 HP",
-              "compatibleModels": "Bentayga V8 (2018-2024)",
-              "avgRebuiltPrice": "£8,500 – £12,500",
-              "cta": "Get Quote for DDBB"
-            }
-          ]
-        },
-        {
-          "name": "6.75 L-Series V8",
-          "era": "Classic",
-          "failureNote": "Covers Arnage, Azure, Brooklands & Mulsanne (1996-present) for L410 Twin-Turbo Common failure points: The L-Series V8 is famous for cylinder head gasket failures and cooling system corrosion. Our rebuilds include new composite head gaskets and complete cooling system overhauls.",
-          "engines": [
-            {
-              "code": "L410 (Naturally Aspirated)",
-              "fuel": "Petrol",
-              "size": "6.75L",
-              "power": "350-400 HP",
-              "compatibleModels": "Arnage Green Label / Turbo RT (1996-2000)",
-              "avgRebuiltPrice": "£4,000 – £6,500",
-              "cta": "Get Quote for L410 (Naturally Aspirated)"
-            },
-            {
-              "code": "L410 (Single Turbo)",
-              "fuel": "Petrol",
-              "size": "6.75L",
-              "power": "400-450 HP",
-              "compatibleModels": "Arnage Red Label / Azure (2000-2006)",
-              "avgRebuiltPrice": "£5,500 – £8,000",
-              "cta": "Get Quote for L410 (Single Turbo)"
-            },
-            {
-              "code": "L410 (Twin-Turbo)",
-              "fuel": "Petrol",
-              "size": "6.75L",
-              "power": "505-530 HP",
-              "compatibleModels": "Arnage T / Brooklands / Mulsanne (2007-2020)",
-              "avgRebuiltPrice": "£8,500 – £14,000",
-              "cta": "Get Quote for L410 (Twin-Turbo)"
-            }
-          ]
-        },
-        {
-          "name": "Additional & Performance Variants",
-          "era": "All years",
-          "failureNote": "for CKHB Note: These high-output variants feature unique calibration and cooling requirements. All supplied units are dyno-tested and flashed with correct ECU maps.",
-          "engines": [
-            {
-              "code": "CZAA",
-              "fuel": "Petrol",
-              "size": "6.0L",
-              "power": "600 HP",
-              "compatibleModels": "Bentayga Speed (2019-2024)",
-              "avgRebuiltPrice": "£18,000 – £22,000",
-              "cta": "Get Quote for CZAA"
+              "size": "6.0 Litre",
+              "power": "552-659 hp",
+              "compatibleModels": "Continental GT, Continental GTC, Flying Spur, Bentayga, Mulsanne",
+              "avgRebuiltPrice": "£15,000 - £30,000 supply only",
+              "cta": "→ Get quotes for W12 Bentley engine replacement"
             },
             {
               "code": "CKHB",
+              "title": "6.0L W12 Petrol",
+              "familyHeading": "CKHB - 6.0L W12 Petrol",
               "fuel": "Petrol",
-              "size": "6.0L",
-              "power": "650 HP",
-              "compatibleModels": "Continental GT Speed (2021-2024)",
-              "avgRebuiltPrice": "£19,000 – £25,000",
-              "cta": "Get Quote for CKHB"
+              "size": "6.0 Litre",
+              "power": "575 hp",
+              "compatibleModels": "Continental GT (3W\\_, 393), Continental GTC, Flying Spur",
+              "avgRebuiltPrice": "£16,000 - £28,000 supply only",
+              "cta": "→ Get quotes for CKHB Bentley engine replacement"
+            },
+            {
+              "code": "DBDA / DBDD",
+              "title": "6.0L W12 Petrol",
+              "familyHeading": "DBDA / DBDD - 6.0L W12 Petrol",
+              "fuel": "Petrol",
+              "size": "6.0 Litre",
+              "power": "590-659 hp",
+              "compatibleModels": "Flying Spur (2013-2024), Continental GT Speed, Continental GTC Speed, Bentayga Speed",
+              "avgRebuiltPrice": "£18,000 - £32,000 supply only",
+              "cta": "→ Get quotes for DBDA / DBDD Bentley engine replacement"
+            },
+            {
+              "code": "4.0 V8 Family",
+              "title": "4.0L Petrol (Twin-Turbo)",
+              "familyHeading": "4.0 V8 Family - 4.0L Petrol (Twin-Turbo)",
+              "fuel": "Petrol",
+              "size": "4.0 Litre",
+              "power": "500-542 hp",
+              "compatibleModels": "Continental GT V8, Continental GTC V8, Flying Spur V8, Bentayga V8, Bentayga S",
+              "avgRebuiltPrice": "£12,000 - £22,000 supply only",
+              "cta": "→ Get quotes for 4.0 V8 Bentley engine replacement"
+            },
+            {
+              "code": "CMMC / CYCB",
+              "title": "4.0 V8 Petrol",
+              "familyHeading": "CMMC / CYCB - 4.0 V8 Petrol",
+              "fuel": "Petrol",
+              "size": "4.0 Litre",
+              "power": "507 hp",
+              "compatibleModels": "Flying Spur V8 (4W\\_), Continental GT V8, Continental GTC V8",
+              "avgRebuiltPrice": "£13,000 - £22,000 supply only",
+              "cta": "→ Get quotes for CMMC / CYCB Bentley engine replacement"
+            },
+            {
+              "code": "M177 / M178",
+              "title": "4.0L V8 Petrol (Twin-Turbo)",
+              "familyHeading": "M177 / M178 - 4.0L V8 Petrol (Twin-Turbo)",
+              "fuel": "Petrol",
+              "size": "4.0 Litre",
+              "power": "476-585 hp",
+              "compatibleModels": "Continental GT V8, Continental GTC V8, Flying Spur V8, Bentayga V8",
+              "avgRebuiltPrice": "£15,000 - £25,000 supply only",
+              "cta": "→ Get quotes for M177 / M178 Bentley engine replacement"
             }
           ]
         }
@@ -1148,73 +1065,57 @@
       "closing": "Not sure which engine size your Bentley needs? Enter your registration number and we'll match you to the exact engine code and displacement — instantly. All engines supplied with a minimum 12‑month warranty from UK Bentley specialists."
     },
     "fuelTypes": {
-      "tag": "Complete Bentley Engines List",
-      "h2": "Bentley Engines by Fuel Type",
-      "intro": "Choose your Bentley engine by fuel type to compare realistic replacement prices, known brand‑wide issues, and UK specialist supply – from the legendary W12 and V8 petrols to the rare diesel Bentayga and the new hybrid generation.",
+      "tag": "Bentley Engines by Fuel Type",
+      "h2": "Bentley Petrol vs Hybrid - Which Powertrain Is Right For You?",
+      "intro": "Compare Bentley engine fuel types by replacement costs, running costs, reliability reputation, and model availability. Use this guide to understand your options - then enter your registration for an instant match and quotes from UK Bentley specialists.",
       "items": [
         {
-          "title": "Bentley Petrol Engines",
-          "description": "Bentley petrol engines span everything from core daily-driver models to higher-output performance variants. Most replacement enquiries start with timing chain noise, oil consumption, cooling-system failure, or internal wear that makes a warranted replacement more sensible than repeated repairs.",
-          "descriptor": "Core passenger-car and performance applications",
+          "title": "Petrol Engines",
+          "description": "Bentley's petrol engine range is defined by two legendary powertrains: the iconic 6.0-litre W12 - produced in over 100,000 units at Crewe before production ceased in April 2024 - and the 4.0-litre twin-turbo V8, which powers the Continental GT, Flying Spur and Bentayga.",
+          "descriptor": "Bentley's petrol engine range is defined by two legendary powertrains: the iconic 6.0-litre W12 - produced in over 100,000 units at Crewe before production ceased in April 2024 - and the 4.0-litre twin-turbo V8, which powers the Continental GT, Flying Spur and Bentayga.",
           "families": [
-            "W12 Engine Family",
-            "4.0 V8 Engine Family",
-            "6.75 L-Series V8",
-            "Additional & Performance Variants"
+            "£12,000 - £32,000 (supply only)",
+            "4.0 V8 (CMMC, CYCB, M177): £12,000 - £22,000",
+            "4.0 V8 (M178 high-output): £15,000 - £25,000",
+            "6.0 W12 (CKHB): £16,000 - £28,000",
+            "6.0 W12 (DBDA, DBDD): £18,000 - £32,000"
           ],
-          "foundIn": [
-            "Bentley Continental GT Engines",
-            "Bentley Continental GTC Engines",
-            "Bentley Flying Spur Engines",
-            "Bentley Flying Spur Hybrid Engines"
-          ],
-          "knownFor": [
-            "Hybrid system integration issues",
-            "electric motor bearing failure",
-            "rare internal V6 problems",
-            "Supercharger clutch/bearing wear"
-          ],
-          "typicalModels": [
-            "Bentley Continental GT Engines",
-            "Bentley Continental GTC Engines",
-            "Bentley Flying Spur Engines",
-            "Bentley Flying Spur Hybrid Engines"
-          ],
+          "foundIn": [],
+          "knownFor": [],
+          "typicalModels": [],
           "importantNotes": [
-            "Cold-start rattles, overheating history, and oil use are the biggest warning signs before a petrol engine replacement becomes necessary.",
-            "Direct-injection petrol engines often need specialist attention for carbon build-up alongside the main mechanical repair."
+            "Performance enthusiasts who value the Bentley driving character and W12/V8 soundtrack",
+            "Collectors and weekend drivers with lower annual mileage",
+            "Drivers who prioritise power, refinement and prestige over fuel economy",
+            "High-mileage daily drivers who would struggle with running costs of £5,000+ per year",
+            "Drivers prioritising maximum fuel efficiency over performance",
+            "Typical searches: Bentley engine replacement, Bentley W12 engine rebuild, Bentley Continental GT engine for sale, Bentley V8 engine cost, Bentley M177 engine replacement, Bentley engine specialist UK, Bentley Continental GT W12 engine price, Bentley engine problems, Bentley 6.75 V8 engine for sale → Compare Bentley Petrol engine prices → Not sure which petrol you have? Enter your registration number for an instant match"
           ],
-          "cta": "Compare Bentley petrol engine prices"
+          "cta": "→ Compare Bentley Petrol engine prices"
         },
         {
-          "title": "Bentley Hybrid Engines",
-          "description": "Bentley hybrid powertrains combine combustion engines with electric assistance across newer electrified models. Replacement demand is lower than traditional petrol or diesel units, but generator-engine faults, inverter issues, cooling-system failures, and calibration-sensitive repairs still require specialist support.",
-          "descriptor": "Electrified models with combustion backup",
+          "title": "Hybrid & Plug-in Hybrid (PHEV) Engines",
+          "description": "Bentley's hybrid range includes the Bentayga Hybrid, Flying Spur Hybrid, and Continental GT Hybrid, combining V6 or V8 petrol engines with electric motors. Hybrid systems are still rare in the replacement market, but enquiries are growing as these vehicles age.",
+          "descriptor": "Bentley's hybrid range includes the Bentayga Hybrid, Flying Spur Hybrid, and Continental GT Hybrid, combining V6 or V8 petrol engines with electric motors. Hybrid systems are still rare in the replacement market, but enquiries are growing as these vehicles age.",
           "families": [
-            "CVAB",
-            "CZAC"
+            "PHEV (Plug-in Hybrid - Bentayga, Flying Spur): Combines a petrol engine (3.0 V6 or 4.0 V8) with an electric motor integrated into the transmission. The battery can be charged via an external plug or via regenerative braking, providing 25-35 miles of pure electric range.",
+            "Battery location: The high-voltage battery is typically located under the rear seats or boot floor - careful handling is required for any work in these areas."
           ],
-          "foundIn": [
-            "Bentley Continental GT Engines",
-            "Bentley Continental GTC Engines",
-            "Bentley Flying Spur Engines",
-            "Bentley Flying Spur Hybrid Engines"
-          ],
+          "foundIn": [],
           "knownFor": [],
-          "typicalModels": [
-            "Bentley Continental GT Engines",
-            "Bentley Continental GTC Engines",
-            "Bentley Flying Spur Engines",
-            "Bentley Flying Spur Hybrid Engines"
-          ],
+          "typicalModels": [],
           "importantNotes": [
-            "Hybrid faults often need both mechanical and high-voltage diagnosis, so replacement decisions should be made by specialists familiar with the full system.",
-            "Battery cooling, inverter health, and software calibration are just as important as the combustion-engine condition on hybrid models."
+            "Company car drivers benefiting from lower Benefit-in-Kind (BIK) tax rates",
+            "Urban commuters who can charge daily and drive within the electric range",
+            "Drivers who want to reduce fuel costs and emissions without sacrificing luxury",
+            "Drivers without off-street parking or reliable charging access",
+            "High-mileage users who would benefit more from efficiency on long runs",
+            "Typical searches: Bentley Bentayga hybrid engine replacement, Bentley PHEV battery price, Bentley hybrid engine specialist UK, Bentley Flying Spur hybrid engine cost, Bentley hybrid battery degradation, Bentley hybrid motor replacement, Bentley Continental GT hybrid engine for sale, Bentley hybrid system fault repair → Enquire about Bentley Hybrid engine availability → Not sure which hybrid you have? Enter your registration number for an instant match"
           ],
-          "cta": "Compare Bentley hybrid engine prices"
+          "cta": "Get quotes for Bentley Bentley Hybrid & Plug-in Hybrid (PHEV) Engines engines"
         }
       ],
-      "closing": "Not sure which fuel type your Bentley has? Enter your registration number above to instantly identify your model, engine code, fuel system and compatible replacement options – all backed by a minimum 12‑month unlimited mileage warranty from UK Bentley specialists."
+      "closing": "Not sure which fuel type your Bentley has? Enter your registration number for an instant match."
     },
     "engineCodeDirectory": {
       "tag": "Engine Codes",

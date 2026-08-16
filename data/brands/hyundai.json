@@ -1972,286 +1972,177 @@
       ]
     },
     "engineCodes": {
-      "tag": "Replacement Cost",
-      "h2": "Hyundai Engine Codes & Average Rebuilt Prices (UK Supply)",
-      "h3": "Compare costs for every major Hyundai engine — Theta II, CRDi R-Line, and Gamma families. All prices are typical UK market ranges for professionally rebuilt engines with warranty. Click \"Get Quote\" on any engine to receive tailored prices from our network of UK Hyundai specialists.",
+      "tag": "Engine Codes",
+      "h2": "Hyundai Engine Codes - Most Replaced Engines & Full Directory",
+      "h3": "Every major Hyundai engine code with technical specs, compatible UK models, known failures and average rebuilt prices. Use the quick-reference accordion below for all remaining codes.",
+      "closingLine": "Can't find your engine code? Enter your registration number above - we'll identify the exact Hyundai engine fitted to your vehicle.",
       "filters": [
-        "All",
-        "Diesel",
-        "Petrol"
+        "Diesel Engines (Most Replaced in the UK)",
+        "Petrol Engines (Most Replaced in the UK)",
+        "Hybrid / Electrified Engines"
       ],
       "groups": [
         {
-          "name": "Theta II Petrol Family",
-          "era": "2004–2019",
-          "failureNote": "Get Quote → (per row, for developer implementation) Common failure points: Theta II engines are known for premature bearing wear, piston scuffing, and excessive oil consumption. Our rebuilt units include upgraded bearings, revised piston rings, and enhanced oil pump components to address these known issues.",
+          "name": "Diesel Engines (Most Replaced in the UK)",
+          "era": "Extracted from Hyundai diesel engines (most replaced in the uk) technical replacement data.",
+          "failureNote": "DPF clogging - common on vehicles used for short journeys, EGR valve failure - causing rough running and emissions warning lights",
           "engines": [
-            {
-              "code": "G4KA",
-              "fuel": "Petrol",
-              "size": "2.0L",
-              "power": "166 HP",
-              "compatibleModels": "Tucson (LM, 2004‑2010), Sonata (NF, 2004‑2010)",
-              "avgRebuiltPrice": "£1,400 – £3,200",
-              "cta": "Get Quote for G4KA"
-            },
-            {
-              "code": "G4KC",
-              "fuel": "Petrol",
-              "size": "2.4L",
-              "power": "175 HP",
-              "compatibleModels": "Santa Fe (CM, 2006‑2012), Sonata (NF/YF)",
-              "avgRebuiltPrice": "£1,600 – £3,600",
-              "cta": "Get Quote for G4KC"
-            },
-            {
-              "code": "G4KD",
-              "fuel": "Petrol",
-              "size": "2.0L",
-              "power": "150‑166 HP",
-              "compatibleModels": "i30 (FD/GD), Elantra (MD), ix35 (EL)",
-              "avgRebuiltPrice": "£1,500 – £3,400",
-              "cta": "Get Quote for G4KD"
-            },
-            {
-              "code": "G4KE",
-              "fuel": "Petrol",
-              "size": "2.4L",
-              "power": "177 HP",
-              "compatibleModels": "Santa Fe (DM), Grand Santa Fe (NC)",
-              "avgRebuiltPrice": "£1,800 – £4,000",
-              "cta": "Get Quote for G4KE"
-            },
-            {
-              "code": "G4KF",
-              "fuel": "Petrol",
-              "size": "2.0L",
-              "power": "143 HP",
-              "compatibleModels": "Tucson (LM), Sonata (NF)",
-              "avgRebuiltPrice": "£1,400 – £3,200",
-              "cta": "Get Quote for G4KF"
-            }
-          ]
-        },
-        {
-          "name": "CRDi R‑Line Diesel Family",
-          "era": "2009–Present",
-          "failureNote": "Get Quote → (per row, for developer implementation) Common failure points: CRDi R‑Line engines are known for EGR valve clogging, DPF regeneration failures, and injector wear. Our rebuilt units include refurbished injectors, cleaned EGR systems, and updated DPF components to ensure reliable operation.",
-          "engines": [
-            {
-              "code": "D4HA",
-              "fuel": "Diesel",
-              "size": "2.0L",
-              "power": "136‑184 HP",
-              "compatibleModels": "Tucson (LM/TL), ix35 (EL), i40 (VF)",
-              "avgRebuiltPrice": "£1,600 – £3,800",
-              "cta": "Get Quote for D4HA"
-            },
-            {
-              "code": "D4HB",
-              "fuel": "Diesel",
-              "size": "2.2L",
-              "power": "150‑200 HP",
-              "compatibleModels": "Santa Fe (CM/DM), Grand Santa Fe (NC)",
-              "avgRebuiltPrice": "£1,900 – £4,500",
-              "cta": "Get Quote for D4HB"
-            },
             {
               "code": "D4FB",
+              "title": "1.6L Diesel (CRDi)",
+              "familyHeading": "D4FB - 1.6L Diesel (CRDi)",
               "fuel": "Diesel",
-              "size": "1.6L",
-              "power": "110‑136 HP",
-              "compatibleModels": "i30 (FD/GD/PDe), Tucson (TL), Kona (OS)",
-              "avgRebuiltPrice": "£1,400 – £3,200",
-              "cta": "Get Quote for D4FB"
-            },
-            {
-              "code": "D4EB",
-              "fuel": "Diesel",
-              "size": "2.0L",
-              "power": "140 HP",
-              "compatibleModels": "Sonata (NF/YF), i40 (VF)",
-              "avgRebuiltPrice": "£1,700 – £3,900",
-              "cta": "Get Quote for D4EB"
-            }
-          ]
-        },
-        {
-          "name": "Gamma Petrol Family",
-          "era": "2006–2020",
-          "failureNote": "Get Quote → (per row, for developer implementation) Common failure points: Gamma engines are known for timing chain tensioner wear, carbon buildup on GDI intake valves, and oil consumption on high‑mileage units. Our rebuilt units include upgraded tensioners, cleaned intake systems, and revised piston rings.",
-          "engines": [
-            {
-              "code": "G4FA",
-              "fuel": "Petrol",
-              "size": "1.4L",
-              "power": "90‑100 HP",
-              "compatibleModels": "i20 (PB), i30 (FD), Accent (RB)",
-              "avgRebuiltPrice": "£1,100 – £2,400",
-              "cta": "Get Quote for G4FA"
-            },
-            {
-              "code": "G4FC",
-              "fuel": "Petrol",
-              "size": "1.6L",
-              "power": "120‑135 HP",
-              "compatibleModels": "i30 (FD/GD), Elantra (MD), ix35 (EL)",
-              "avgRebuiltPrice": "£1,300 – £2,900",
-              "cta": "Get Quote for G4FC"
-            },
-            {
-              "code": "G4FG",
-              "fuel": "Petrol",
-              "size": "1.6L",
-              "power": "123‑130 HP",
-              "compatibleModels": "i30 (PDe), Tucson (TL), Kona (OS)",
-              "avgRebuiltPrice": "£1,400 – £3,000",
-              "cta": "Get Quote for G4FG"
-            },
-            {
-              "code": "G4FJ",
-              "fuel": "Petrol",
-              "size": "1.6L Turbo",
-              "power": "177‑201 HP",
-              "compatibleModels": "Veloster (FS), i30 Turbo (GD), Kona (OS)",
-              "avgRebuiltPrice": "£1,800 – £3,500",
-              "cta": "Get Quote for G4FJ"
-            }
-          ]
-        },
-        {
-          "name": "Kappa Petrol Family",
-          "era": "2008–Present",
-          "failureNote": "Get Quote → (per row, for developer implementation) Common failure points: Kappa engines are known for timing chain stretch on early models, carbon buildup on GDI variants, and oil consumption. Our rebuilt units include upgraded chain tensioners, cleaned intake valves, and revised PCV systems.",
-          "engines": [
-            {
-              "code": "G3LA",
-              "fuel": "Petrol",
-              "size": "1.0L",
-              "power": "66‑69 HP",
-              "compatibleModels": "i10 (PA/BA), i10 (IA)",
-              "avgRebuiltPrice": "£900 – £2,100",
-              "cta": "Get Quote for G3LA"
-            },
-            {
-              "code": "G4LA",
-              "fuel": "Petrol",
-              "size": "1.2L",
-              "power": "78‑87 HP",
-              "compatibleModels": "i10 (BA/IA), i20 (PB/GB)",
-              "avgRebuiltPrice": "£1,000 – £2,300",
-              "cta": "Get Quote for G4LA"
-            },
-            {
-              "code": "G4LC",
-              "fuel": "Petrol",
-              "size": "1.0L Turbo",
-              "power": "100‑120 HP",
-              "compatibleModels": "i20 (GB), i30 (PDe), Kona (OS)",
-              "avgRebuiltPrice": "£1,200 – £2,600",
-              "cta": "Get Quote for G4LC"
-            },
-            {
-              "code": "G4LD",
-              "fuel": "Petrol",
-              "size": "1.0L Turbo",
-              "power": "100 HP",
-              "compatibleModels": "i10 (IA), i20 (GB)",
-              "avgRebuiltPrice": "£1,100 – £2,400",
-              "cta": "Get Quote for G4LD"
-            }
-          ]
-        },
-        {
-          "name": "Nu Petrol Family",
-          "era": "2010–Present",
-          "failureNote": "Get Quote → (per row, for developer implementation) Common failure points: Nu engines are known for piston ring wear leading to oil consumption, carbon buildup on GDI variants, and timing chain tensioner issues. Our rebuilt units include upgraded piston rings, cleaned intake systems, and revised tensioners.",
-          "engines": [
-            {
-              "code": "G4NA",
-              "fuel": "Petrol",
-              "size": "1.8L",
-              "power": "140‑150 HP",
-              "compatibleModels": "i30 (GD), Elantra (MD), ix35 (EL)",
-              "avgRebuiltPrice": "£1,400 – £3,100",
-              "cta": "Get Quote for G4NA"
-            },
-            {
-              "code": "G4NJ",
-              "fuel": "Petrol",
-              "size": "2.0L",
-              "power": "155‑165 HP",
-              "compatibleModels": "Tucson (TL), Sonata (LF), i40 (VF)",
-              "avgRebuiltPrice": "£1,600 – £3,600",
-              "cta": "Get Quote for G4NJ"
-            },
-            {
-              "code": "G4NH",
-              "fuel": "Petrol",
-              "size": "2.0L",
-              "power": "164 HP",
-              "compatibleModels": "Tucson (TL), Sonata (LF)",
-              "avgRebuiltPrice": "£1,700 – £3,700",
-              "cta": "Get Quote for G4NH"
-            }
-          ]
-        },
-        {
-          "name": "U‑Line CRDi Diesel Family",
-          "era": "2006–2019",
-          "failureNote": "Get Quote → (per row, for developer implementation) Common failure points: U‑Line CRDi engines are known for EGR valve clogging, turbocharger wear on higher‑mileage units, and injector failure. Our rebuilt units include refurbished turbos, cleaned or replaced EGR systems, and tested injectors.",
-          "engines": [
-            {
-              "code": "D4FC",
-              "fuel": "Diesel",
-              "size": "1.4L",
-              "power": "75‑90 HP",
-              "compatibleModels": "i20 (PB), i30 (FD)",
-              "avgRebuiltPrice": "£1,200 – £2,800",
-              "cta": "Get Quote for D4FC"
+              "size": "1.6 Litre",
+              "power": "85-128 hp",
+              "compatibleModels": "i20 (2008-2020), i30 (2007-2015), ix20 (2010-2019), Tucson (2010-2015), Creta (2015-present)",
+              "avgRebuiltPrice": "£900 - £1,200 supply only",
+              "cta": "→ Get quotes for D4FB Hyundai engine replacement"
             },
             {
               "code": "D4FD",
+              "title": "1.6L Diesel (CRDi)",
+              "familyHeading": "D4FD - 1.6L Diesel (CRDi)",
               "fuel": "Diesel",
-              "size": "1.6L",
-              "power": "110‑128 HP",
-              "compatibleModels": "i30 (FD/GD), Elantra (MD), ix35 (EL)",
-              "avgRebuiltPrice": "£1,400 – £3,200",
-              "cta": "Get Quote for D4FD"
+              "size": "1.6 Litre",
+              "power": "90-115 hp",
+              "compatibleModels": "i30 (2010-2018), Tucson (2015-2020), ix35 (2010-2015)",
+              "avgRebuiltPrice": "£900 - £1,200 supply only",
+              "cta": "→ Get quotes for D4FD Hyundai engine replacement"
+            },
+            {
+              "code": "D4HA",
+              "title": "2.0L Diesel (CRDi)",
+              "familyHeading": "D4HA - 2.0L Diesel (CRDi)",
+              "fuel": "Diesel",
+              "size": "2.0 Litre",
+              "power": "150-200 hp",
+              "compatibleModels": "Santa Fe (2010-present), Tucson (2015-present), i40 (2011-2019)",
+              "avgRebuiltPrice": "£1,800 - £2,500 supply only",
+              "cta": "→ Get quotes for D4HA Hyundai engine replacement"
             },
             {
               "code": "D4FE",
+              "title": "1.7L Diesel (CRDi)",
+              "familyHeading": "D4FE - 1.7L Diesel (CRDi)",
               "fuel": "Diesel",
-              "size": "1.7L",
-              "power": "115‑141 HP",
-              "compatibleModels": "i40 (VF), Tucson (TL), Kona (OS)",
-              "avgRebuiltPrice": "£1,500 – £3,400",
-              "cta": "Get Quote for D4FE"
+              "size": "1.7 Litre",
+              "power": "115-136 hp",
+              "compatibleModels": "i40 (2011-2019)",
+              "avgRebuiltPrice": "£1,200 - £1,800 supply only",
+              "cta": "→ Get quotes for D4FE Hyundai engine replacement"
             }
           ]
         },
         {
-          "name": "Smartstream Petrol Family",
-          "era": "2019–Present",
-          "failureNote": "Get Quote → (per row, for developer implementation) Common failure points: Smartstream engines are known for carbon buildup on GDI variants, high‑pressure fuel pump wear, and turbocharger issues on turbo models. Our rebuilt units include cleaned intake valves, tested fuel systems, and refurbished or replaced turbo components",
+          "name": "Petrol Engines (Most Replaced in the UK)",
+          "era": "Extracted from Hyundai petrol engines (most replaced in the uk) technical replacement data.",
+          "failureNote": "Ignition coil failure - causing misfires and rough running, Timing chain stretch - can cause rattling on start-up",
           "engines": [
             {
-              "code": "G4KN",
+              "code": "G4FA",
+              "title": "1.4L Petrol",
+              "familyHeading": "G4FA - 1.4L Petrol",
               "fuel": "Petrol",
-              "size": "1.6L Turbo",
-              "power": "177‑204 HP",
-              "compatibleModels": "i30 (PDe), Tucson (NX4), Kona (OS)",
-              "avgRebuiltPrice": "£1,800 – £3,800",
-              "cta": "Get Quote for G4KN"
+              "size": "1.4 Litre",
+              "power": "100 hp",
+              "compatibleModels": "i10 (2008-2015), i20 (2008-2015)",
+              "avgRebuiltPrice": "£600 - £1,000 supply only",
+              "cta": "→ Get quotes for G4FA Hyundai engine replacement"
             },
             {
-              "code": "G4NS",
+              "code": "G4FC",
+              "title": "1.6L Petrol",
+              "familyHeading": "G4FC - 1.6L Petrol",
               "fuel": "Petrol",
-              "size": "2.5L",
-              "power": "180‑190 HP",
-              "compatibleModels": "Tucson (NX4), Santa Fe (TM)",
-              "avgRebuiltPrice": "£2,000 – £4,200",
-              "cta": "Get Quote for G4NS"
+              "size": "1.6 Litre",
+              "power": "120-128 hp",
+              "compatibleModels": "i20 (2008-2018), i30 (2007-2015), Kia Ceed (2006-2018)",
+              "avgRebuiltPrice": "£800 - £1,200 supply only",
+              "cta": "→ Get quotes for G4FC Hyundai engine replacement"
+            },
+            {
+              "code": "G4FJ",
+              "title": "1.6L Petrol (Turbo)",
+              "familyHeading": "G4FJ - 1.6L Petrol (Turbo)",
+              "fuel": "Petrol",
+              "size": "1.6 Litre",
+              "power": "200-204 hp",
+              "compatibleModels": "i20 N (2021-present), Kona (2017-present)",
+              "avgRebuiltPrice": "£1,500 - £2,500 supply only",
+              "cta": "→ Get quotes for G4FJ Hyundai engine replacement"
+            },
+            {
+              "code": "G4FP",
+              "title": "1.6L Petrol",
+              "familyHeading": "G4FP - 1.6L Petrol",
+              "fuel": "Petrol",
+              "size": "1.6 Litre",
+              "power": "90 hp",
+              "compatibleModels": "i20 (2015-present), Kia Rio (2015-present)",
+              "avgRebuiltPrice": "£700 - £1,100 supply only",
+              "cta": "→ Get quotes for G4FP Hyundai engine replacement"
+            },
+            {
+              "code": "G4NA",
+              "title": "2.0L Petrol",
+              "familyHeading": "G4NA - 2.0L Petrol",
+              "fuel": "Petrol",
+              "size": "2.0 Litre",
+              "power": "150-170 hp",
+              "compatibleModels": "Tucson (2010-present), i30 (2010-present), Santa Fe (2010-2015), i40 (2011-2019)",
+              "avgRebuiltPrice": "£1,200 - £2,000 supply only",
+              "cta": "→ Get quotes for G4NA Hyundai engine replacement"
+            },
+            {
+              "code": "G3LC",
+              "title": "1.0L Petrol",
+              "familyHeading": "G3LC - 1.0L Petrol",
+              "fuel": "Petrol",
+              "size": "1.0 Litre",
+              "power": "100 hp",
+              "compatibleModels": "i10 (2015-present), i20 (2015-present)",
+              "avgRebuiltPrice": "£600 - £1,000 supply only",
+              "cta": "→ Get quotes for G3LC Hyundai engine replacement"
+            },
+            {
+              "code": "G4LC",
+              "title": "1.6L Petrol",
+              "familyHeading": "G4LC - 1.6L Petrol",
+              "fuel": "Petrol",
+              "size": "1.6 Litre",
+              "power": "120-130 hp",
+              "compatibleModels": "Kona (2017-present), i30 (2015-present)",
+              "avgRebuiltPrice": "£1,000 - £1,500 supply only",
+              "cta": "→ Get quotes for G4LC Hyundai engine replacement"
+            }
+          ]
+        },
+        {
+          "name": "Hybrid / Electrified Engines",
+          "era": "Extracted from Hyundai hybrid / electrified engines technical replacement data.",
+          "failureNote": "Battery degradation - capacity drops over time; individual modules can fail, Onboard charger failure",
+          "engines": [
+            {
+              "code": "Hyundai Kona Electric",
+              "title": "Electric Motor",
+              "familyHeading": "Hyundai Kona Electric - Electric Motor",
+              "fuel": "Electric (BEV)",
+              "size": "N/A (Electric Motor)",
+              "power": "136-204 hp",
+              "compatibleModels": "Kona Electric (2018-present)",
+              "avgRebuiltPrice": "£2,500 - £5,000 (drive unit, supply only)",
+              "cta": "→ Get quotes for Kona Electric Hyundai motor replacement"
+            },
+            {
+              "code": "Hyundai Santa Fe / Tucson",
+              "title": "PHEV Drive Unit",
+              "familyHeading": "Hyundai Santa Fe / Tucson - PHEV Drive Unit",
+              "fuel": "PHEV (Petrol + Electric)",
+              "size": "1.6 Litre",
+              "power": "265 hp (combined)",
+              "compatibleModels": "Santa Fe PHEV (2021-present), Tucson PHEV (2021-present)",
+              "avgRebuiltPrice": "£2,000 - £3,500 (engine block, supply only)",
+              "cta": "→ Get quotes for Santa Fe / Tucson PHEV Hyundai engine replacement"
             }
           ]
         }
@@ -2739,78 +2630,94 @@
       "closing": "Not sure which engine size your Hyundai needs? Enter your registration number and we'll match you to the exact engine code and displacement — instantly. All engines supplied with a minimum 12‑month warranty from UK Hyundai specialists."
     },
     "fuelTypes": {
-      "tag": "Complete Hyundai Engines List",
-      "h2": "Hyundai Engines by Fuel Type",
-      "intro": "Choose your Hyundai engine by fuel type to compare realistic replacement prices, known brand‑wide issues, and UK specialist supply – from the most popular diesel workhorses to the latest electrified powertrains.",
+      "tag": "Hyundai Engines by Fuel Type",
+      "h2": "Hyundai Diesel vs Petrol vs Hybrid vs Electric - Which Fuel Type Is Right For You?",
+      "intro": "Compare Hyundai engine fuel types by replacement costs, running costs, reliability reputation, and model availability. Use this guide to understand your options - then enter your registration for an instant match and quotes from UK Hyundai specialists.",
       "items": [
         {
-          "title": "Hyundai Diesel Engines",
-          "description": "Hyundai diesel engines cover many of the brand's highest-mileage UK models. Replacement demand is usually driven by timing system wear, injector and turbo faults, plus EGR or DPF-related damage once repeat short-journey use starts affecting reliability.",
-          "descriptor": "High-mileage motorway and SUV applications",
+          "title": "Diesel Engines",
+          "description": "Hyundai's diesel engine range in the UK is dominated by the CRDi family - 1.6, 1.7, and 2.0-litre units - fitted to the i20, i30, Tucson, Santa Fe, and i40. Replacement demand is driven by DPF, EGR, turbo, and injector-related failures on these higher-mileage vehicles.",
+          "descriptor": "Hyundai's diesel engine range in the UK is dominated by the CRDi family - 1.6, 1.7, and 2.0-litre units - fitted to the i20, i30, Tucson, Santa Fe, and i40. Replacement demand is driven by DPF, EGR, turbo, and injector-related failures on these higher-mileage vehicles.",
           "families": [
-            "CRDi R‑Line Diesel Family",
-            "U‑Line CRDi Diesel Family"
+            "£900 - £2,500 (supply only)",
+            "1.6 CRDi (D4FB/D4FD): £900 - £1,200",
+            "1.7 CRDi (D4FE): £1,200 - £1,800",
+            "2.0 CRDi (D4HA): £1,800 - £2,500"
           ],
-          "foundIn": [
-            "Hyundai Accent Engines",
-            "Hyundai Atos Engines",
-            "Hyundai Eon Engines",
-            "Hyundai Getz Engines"
-          ],
-          "knownFor": [
-            "EGR valve clogging",
-            "DPF regeneration failures leading to oil dilution",
-            "EGR cooler failure",
-            "DPF clogging causing oil dilution and accelerated bearing wear"
-          ],
-          "typicalModels": [
-            "Hyundai Accent Engines",
-            "Hyundai Atos Engines",
-            "Hyundai Eon Engines",
-            "Hyundai Getz Engines"
-          ],
+          "foundIn": [],
+          "knownFor": [],
+          "typicalModels": [],
           "importantNotes": [
-            "Short-journey use increases DPF, EGR, and oil-dilution risk on many diesel engines.",
-            "A documented service history matters more on diesel replacements because injector, turbo, and timing faults often build gradually."
+            "High-mileage motorway drivers covering 15,000+ miles annually",
+            "SUV owners (Tucson, Santa Fe) needing torque for carrying passengers and cargo",
+            "Fleet operators prioritising efficiency",
+            "Urban drivers with short daily trips who are better served by petrol (DPF and EGR issues are common)",
+            "Low-mileage users who don't drive enough to justify the diesel premium",
+            "Typical searches: Hyundai Tucson diesel engine replacement, Hyundai i30 1.6 CRDi engine cost, Hyundai diesel engine specialist UK, Hyundai D4FB engine problems, Hyundai Santa Fe 2.0 CRDi engine price, Hyundai diesel DPF problems, Hyundai i40 1.7 CRDi engine for sale, Hyundai Tucson 2.0 CRDi engine replacement → Get quotes for Hyundai Diesel replacement engines → Not sure which diesel you have? Enter your registration number for an instant match"
           ],
-          "cta": "Compare Hyundai diesel engine prices"
+          "cta": "→ Get quotes for Hyundai Diesel replacement engines"
         },
         {
-          "title": "Hyundai Petrol Engines",
-          "description": "Hyundai petrol engines span everything from core daily-driver models to higher-output performance variants. Most replacement enquiries start with timing chain noise, oil consumption, cooling-system failure, or internal wear that makes a warranted replacement more sensible than repeated repairs.",
-          "descriptor": "Core passenger-car and performance applications",
+          "title": "Petrol Engines",
+          "description": "Hyundai's petrol engine range in the UK spans from the 1.0-litre G3LC in the i10 to the 2.0-litre G4NA in the Tucson and Santa Fe - delivering everything from city car economy to family SUV performance.",
+          "descriptor": "Hyundai's petrol engine range in the UK spans from the 1.0-litre G3LC in the i10 to the 2.0-litre G4NA in the Tucson and Santa Fe - delivering everything from city car economy to family SUV performance.",
           "families": [
-            "Theta II Petrol Family",
-            "Gamma Petrol Family",
-            "Kappa Petrol Family",
-            "Nu Petrol Family"
+            "£600 - £2,500 (supply only)",
+            "1.0 G3LC (i10, i20): £600 - £1,000",
+            "1.4 G4FA (i10, i20, i30): £600 - £1,000",
+            "1.6 G4FC (i20, i30): £800 - £1,200",
+            "1.6 G4FJ (i20 N, Kona): £1,500 - £2,500"
           ],
-          "foundIn": [
-            "Hyundai Accent Engines",
-            "Hyundai Atos Engines",
-            "Hyundai Eon Engines",
-            "Hyundai Getz Engines"
-          ],
-          "knownFor": [
-            "Turbo oil‑coking (T‑GDi)",
-            "carbon buildup on intake valves (GDi)",
-            "Ignition coil failure",
-            "occasional sensor faults (generally reliable)"
-          ],
-          "typicalModels": [
-            "Hyundai Accent Engines",
-            "Hyundai Atos Engines",
-            "Hyundai Eon Engines",
-            "Hyundai Getz Engines"
-          ],
+          "foundIn": [],
+          "knownFor": [],
+          "typicalModels": [],
           "importantNotes": [
-            "Cold-start rattles, overheating history, and oil use are the biggest warning signs before a petrol engine replacement becomes necessary.",
-            "Direct-injection petrol engines often need specialist attention for carbon build-up alongside the main mechanical repair."
+            "Urban and suburban drivers with lower annual mileage (under 12,000 miles)",
+            "City car owners (i10, i20) prioritising simplicity and low running costs",
+            "Budget-conscious buyers looking for affordable replacement options",
+            "High-mileage motorway drivers who would benefit from diesel's superior fuel economy",
+            "Drivers prioritising maximum fuel efficiency over performance",
+            "Typical searches: Hyundai i10 engine replacement, Hyundai i30 1.6 engine cost, Hyundai petrol engine specialist UK, Hyundai 1.0 G3LC engine problems, Hyundai Tucson 2.0 engine replacement, Hyundai i20 N engine price, Hyundai Kona 1.6 engine for sale, Hyundai Theta II bearing failure → Compare Hyundai Petrol engine prices → Not sure which petrol you have? Enter your registration number for an instant match"
           ],
-          "cta": "Compare Hyundai petrol engine prices"
+          "cta": "→ Compare Hyundai Petrol engine prices"
+        },
+        {
+          "title": "Hybrid & Plug-in Hybrid (PHEV) Engines",
+          "description": "Hyundai's hybrid range includes the Santa Fe PHEV, Tucson PHEV, and Ioniq Hybrid, combining 1.6-litre turbocharged petrol engines with electric motors. Hybrid systems are still relatively rare in the replacement market, but enquiries are increasing.",
+          "descriptor": "Hyundai's hybrid range includes the Santa Fe PHEV, Tucson PHEV, and Ioniq Hybrid, combining 1.6-litre turbocharged petrol engines with electric motors. Hybrid systems are still relatively rare in the replacement market, but enquiries are increasing.",
+          "families": [
+            "PHEV (Plug-in Hybrid - Santa Fe, Tucson): Combines a 1.6-litre turbocharged petrol engine with a 66.9kW electric motor and a 13.8kWh battery pack. The system provides up to 35 miles of pure electric range.",
+            "Battery location: The high-voltage battery is typically located under the rear seats or in the floor pan - careful handling is required for any work in these areas.",
+            "HEV (Self-charging Hybrid - Ioniq): Uses a 1.6-litre petrol engine with a 32kW electric motor and a 1.56kWh battery pack for improved fuel economy."
+          ],
+          "foundIn": [],
+          "knownFor": [],
+          "typicalModels": [],
+          "importantNotes": [
+            "Urban commuters who benefit from improved fuel economy in stop-start traffic",
+            "Company car drivers benefiting from lower Benefit-in-Kind (BIK) tax rates",
+            "Drivers who want to reduce fuel costs and emissions without going fully electric",
+            "Drivers without access to a specialist hybrid garage - parts and expertise are limited",
+            "High-mileage users who would benefit more from diesel's efficiency on long runs",
+            "Typical searches: Hyundai Santa Fe hybrid engine replacement, Hyundai Tucson PHEV battery price, Hyundai hybrid engine specialist UK, Hyundai Ioniq hybrid engine cost, Hyundai hybrid battery degradation, Hyundai hybrid motor replacement, Hyundai Santa Fe PHEV engine for sale, Hyundai hybrid system fault repair → Enquire about Hyundai Hybrid engine availability → Not sure which hybrid you have? Enter your registration number for an instant match"
+          ],
+          "cta": "Get quotes for Hyundai Hyundai Hybrid & Plug-in Hybrid (PHEV) Engines engines"
+        },
+        {
+          "title": "Electric Powertrains",
+          "description": "Hyundai's electric range includes the Kona Electric and Ioniq Electric, using permanent-magnet synchronous motors (up to 204 hp). Electric motors rarely fail, but we connect you with UK specialists for battery module repairs and drive unit replacements.",
+          "descriptor": "Hyundai's electric range includes the Kona Electric and Ioniq Electric, using permanent-magnet synchronous motors (up to 204 hp). Electric motors rarely fail, but we connect you with UK specialists for battery module repairs and drive unit replacements.",
+          "families": [],
+          "foundIn": [],
+          "knownFor": [],
+          "typicalModels": [],
+          "importantNotes": [
+            "Typical searches: Hyundai Kona Electric motor replacement, Hyundai Ioniq battery repair, Hyundai electric motor specialist UK, Hyundai EV drive unit price, Hyundai EV battery module replacement, Hyundai electric range degradation, Hyundai Kona Electric motor failure, Hyundai electric powertrain repair → Enquire about Hyundai Electric motor repair or replacement → Not sure which electric Hyundai you have? Enter your registration number for an instant match"
+          ],
+          "cta": "Get quotes for Hyundai Hyundai Electric Powertrains engines"
         }
       ],
-      "closing": "Not sure which fuel type your Hyundai has? Enter your registration number above to instantly identify your model, engine code, fuel system and compatible replacement options – all backed by a minimum 12‑month unlimited mileage warranty from UK Hyundai specialists."
+      "closing": "Not sure which fuel type your Hyundai has? Enter your registration number for an instant match."
     },
     "engineCodeDirectory": {
       "tag": "Engine Codes",

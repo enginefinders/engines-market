@@ -1204,279 +1204,122 @@
       ]
     },
     "engineCodes": {
-      "tag": "Replacement Cost",
-      "h2": "Cadillac Engine Codes & Average Rebuilt Prices (UK Supply)",
-      "h3": "Compare costs for every major Cadillac engine — GM High Feature V6, EcoTec Turbo I4, and Northstar V8 families. All prices are typical UK market ranges for professionally rebuilt engines with warranty. Click \"Get Quote\" on any engine to receive tailored prices from our network of UK Cadillac specialists.",
+      "tag": "Engine Codes",
+      "h2": "Cadillac Engine Codes - Most Replaced Engines & Full Directory",
+      "h3": "Every major Cadillac engine code with technical specs, compatible UK models, known failures and average rebuilt prices. Use the quick-reference accordion below for all remaining codes.",
+      "closingLine": "Can't find your engine code? Enter your registration number above - we'll identify the exact Cadillac engine fitted to your vehicle.",
       "filters": [
-        "All",
-        "Diesel",
-        "Petrol"
+        "Petrol Engines (Most Replaced in the UK)",
+        "Diesel Engines (Most Replaced in the UK)",
+        "Petrol Engines (Continued - BLS Family)"
       ],
       "groups": [
         {
-          "name": "GM High Feature V6 Family (3.6L)",
-          "era": "2004–2019",
-          "failureNote": "The GM High Feature 3.6L V6 family (LY7/LLT/LFX) is known for timing chain tensioner failure and carbon buildup on intake valves. Our rebuilt units include upgraded tensioners, revised guide materials, and decarbonised ports to prevent repeat failures.",
+          "name": "Petrol Engines (Most Replaced in the UK)",
+          "era": "Extracted from Cadillac petrol engines (most replaced in the uk) technical replacement data.",
+          "failureNote": "Timing chain stretch and failure - a well-documented issue leading to rattling on start-up, cam/crank timing faults, and potential catastrophic engine damage, Cylinder head porosity - coolant can leak into the engine, requiring cylinder head replacement",
           "engines": [
             {
               "code": "LY7",
+              "title": "3.6L V6 Petrol",
+              "familyHeading": "LY7 - 3.6L V6 Petrol",
               "fuel": "Petrol",
-              "size": "3.6L V6",
-              "power": "257–302 HP",
-              "compatibleModels": "CTS (2004–2007), SRX (2004–2009), STS (2005–2007)",
-              "avgRebuiltPrice": "£2,000 – £5,200",
-              "cta": "Get Quote for LY7"
+              "size": "3.6 Litre",
+              "power": "263-304 hp",
+              "compatibleModels": "CTS (2004-2009), SRX (2004-2009), STS (2005-2009)",
+              "avgRebuiltPrice": "£2,500 - £4,500 supply only",
+              "cta": "→ Get quotes for LY7 Cadillac engine replacement"
             },
             {
               "code": "LLT",
+              "title": "3.6L V6 Petrol",
+              "familyHeading": "LLT - 3.6L V6 Petrol",
               "fuel": "Petrol",
-              "size": "3.6L V6 DI",
-              "power": "304 HP",
-              "compatibleModels": "CTS (2008–2013), SRX (2010–2015)",
-              "avgRebuiltPrice": "£2,200 – £5,500",
-              "cta": "Get Quote for LLT"
+              "size": "3.6 Litre",
+              "power": "304-311 hp",
+              "compatibleModels": "CTS (2008-2011), SRX (2010-2011)",
+              "avgRebuiltPrice": "£2,800 - £4,800 supply only",
+              "cta": "→ Get quotes for LLT Cadillac engine replacement"
             },
             {
               "code": "LFX",
+              "title": "3.6L V6 Petrol",
+              "familyHeading": "LFX - 3.6L V6 Petrol",
               "fuel": "Petrol",
-              "size": "3.6L V6 DI",
-              "power": "318–335 HP",
-              "compatibleModels": "CTS (2014–2019), SRX (2013–2016), XT5 (2017–2019), ATS (2013–2019)",
-              "avgRebuiltPrice": "£2,400 – £5,800",
-              "cta": "Get Quote for LFX"
-            }
-          ]
-        },
-        {
-          "name": "EcoTec Turbo I4 Family (2.0L/2.7L)",
-          "era": "2013–2025",
-          "failureNote": "EcoTec turbo I4 engines are known for turbocharger wastegate sticking and high-pressure fuel pump wear. Our rebuilt units include remanufactured turbo assemblies, updated fuel system components, and OEM-spec gaskets for long-term reliability.",
-          "engines": [
-            {
-              "code": "LTG",
-              "fuel": "Petrol",
-              "size": "2.0L Turbo I4",
-              "power": "268–272 HP",
-              "compatibleModels": "ATS (2013–2019), CTS (2014–2019), XT4 (2019–2023), XT5 (2017–2023)",
-              "avgRebuiltPrice": "£1,800 – £4,500",
-              "cta": "Get Quote for LTG"
+              "size": "3.6 Litre",
+              "power": "321-335 hp",
+              "compatibleModels": "CTS (2012-2019), SRX (2012-2016), XT5 (2016-present)",
+              "avgRebuiltPrice": "£3,000 - £5,000 supply only",
+              "cta": "→ Get quotes for LFX Cadillac engine replacement"
             },
             {
               "code": "LSY",
+              "title": "2.0L Petrol (Turbo)",
+              "familyHeading": "LSY - 2.0L Petrol (Turbo)",
               "fuel": "Petrol",
-              "size": "2.0L Turbo I4",
-              "power": "237 HP",
-              "compatibleModels": "CT4 (2020–2025), CT5 (2020–2025), XT4 (2021–2025), XT6 (2020–2025)",
-              "avgRebuiltPrice": "£2,000 – £4,800",
-              "cta": "Get Quote for LSY"
-            },
-            {
-              "code": "L3B",
-              "fuel": "Petrol",
-              "size": "2.7L Turbo I4",
-              "power": "310 HP",
-              "compatibleModels": "CT4 (2020–2025), CT5 (2020–2025)",
-              "avgRebuiltPrice": "£2,200 – £5,000",
-              "cta": "Get Quote for L3B"
-            }
-          ]
-        },
-        {
-          "name": "Twin-Turbo V6 & NA V6 Family (3.0L/3.6L)",
-          "era": "2014–2025",
-          "failureNote": "Twin-turbo V6 engines are known for turbo actuator failure and intercooler condensation issues. Our rebuilt units include refurbished turbo actuators, upgraded intercooler seals, and comprehensive dyno testing to ensure performance matches factory specifications.",
-          "engines": [
-            {
-              "code": "LGW",
-              "fuel": "Petrol",
-              "size": "3.0L Twin-Turbo V6",
-              "power": "335–400 HP",
-              "compatibleModels": "CTS (2014–2019), CT5 (2020–2025), XT5 (2017–2023), XT6 (2020–2025)",
-              "avgRebuiltPrice": "£2,500 – £6,000",
-              "cta": "Get Quote for LGW"
-            },
-            {
-              "code": "LGX",
-              "fuel": "Petrol",
-              "size": "3.6L V6 NA",
-              "power": "335 HP",
-              "compatibleModels": "CT6 (2016–2020), XT5 (2017–2023), XT6 (2020–2025)",
-              "avgRebuiltPrice": "£2,400 – £5,800",
-              "cta": "Get Quote for LGX"
-            },
-            {
-              "code": "LFW",
-              "fuel": "Petrol",
-              "size": "3.0L V6 NA",
-              "power": "265 HP",
-              "compatibleModels": "SRX (2010–2015), CTS (2010–2013)",
-              "avgRebuiltPrice": "£2,000 – £5,000",
-              "cta": "Get Quote for LFW"
-            },
-            {
-              "code": "LK1",
-              "fuel": "Petrol",
-              "size": "3.0L V6 NA",
-              "power": "270 HP",
-              "compatibleModels": "CTS (2008–2013), SRX (2008–2012)",
-              "avgRebuiltPrice": "£2,000 – £5,000",
-              "cta": "Get Quote for LK1"
-            }
-          ]
-        },
-        {
-          "name": "Northstar V8 Family (4.6L)",
-          "era": "1993–2011",
-          "failureNote": "Northstar V8 engines are infamous for head bolt thread failure in the aluminium block, leading to coolant leaks and overheating. Our rebuilt units include threaded head bolt inserts (Timesert®), updated gasket sets, and pressure-tested blocks to eliminate this classic failure mode.",
-          "engines": [
-            {
-              "code": "LH2",
-              "fuel": "Petrol",
-              "size": "4.6L V8",
-              "power": "275 HP",
-              "compatibleModels": "DTS (2006–2011), DeVille (2000–2005)",
-              "avgRebuiltPrice": "£1,800 – £5,500",
-              "cta": "Get Quote for LH2"
-            },
-            {
-              "code": "LD8",
-              "fuel": "Petrol",
-              "size": "4.6L V8",
-              "power": "275 HP",
-              "compatibleModels": "Seville (1998–2004), DeVille (1998–2005)",
-              "avgRebuiltPrice": "£1,500 – £5,200",
-              "cta": "Get Quote for LD8"
-            },
-            {
-              "code": "L37",
-              "fuel": "Petrol",
-              "size": "4.6L V8",
-              "power": "300 HP",
-              "compatibleModels": "Seville STS (1998–2004), Eldorado ETC (1998–2002)",
-              "avgRebuiltPrice": "£1,800 – £5,800",
-              "cta": "Get Quote for L37"
-            }
-          ]
-        },
-        {
-          "name": "Small Block V8 Family (5.3L/6.0L/6.2L)",
-          "era": "2002–2025",
-          "failureNote": "Small Block V8 engines with Active Fuel Management (AFM/DOD) are known for lifter collapse and camshaft wear. Our rebuilt units include deleted or upgraded lifters, revised camshafts, and optional AFM delete kits to prevent future failures while maintaining performance.",
-          "engines": [
-            {
-              "code": "LH6",
-              "fuel": "Petrol",
-              "size": "5.3L V8",
-              "power": "320 HP",
-              "compatibleModels": "Escalade (2002–2006)",
-              "avgRebuiltPrice": "£2,500 – £6,500",
-              "cta": "Get Quote for LH6"
-            },
-            {
-              "code": "LMG",
-              "fuel": "Petrol",
-              "size": "5.3L V8",
-              "power": "320 HP",
-              "compatibleModels": "Escalade (2007–2014)",
-              "avgRebuiltPrice": "£2,600 – £6,800",
-              "cta": "Get Quote for LMG"
-            },
-            {
-              "code": "LMF",
-              "fuel": "Petrol",
-              "size": "5.3L V8 FlexFuel",
-              "power": "320 HP",
-              "compatibleModels": "Escalade (2007–2014)",
-              "avgRebuiltPrice": "£2,600 – £6,800",
-              "cta": "Get Quote for LMF"
-            },
-            {
-              "code": "L76",
-              "fuel": "Petrol",
-              "size": "6.0L V8",
-              "power": "362 HP",
-              "compatibleModels": "Escalade (2007–2014)",
-              "avgRebuiltPrice": "£2,800 – £7,000",
-              "cta": "Get Quote for L76"
-            },
-            {
-              "code": "LQ4",
-              "fuel": "Petrol",
-              "size": "6.0L V8",
-              "power": "362 HP",
-              "compatibleModels": "Escalade (fleet/spec)",
-              "avgRebuiltPrice": "£2,800 – £7,000",
-              "cta": "Get Quote for LQ4"
-            },
-            {
-              "code": "L86",
-              "fuel": "Petrol",
-              "size": "6.2L V8",
-              "power": "420 HP",
-              "compatibleModels": "Escalade (2015–2020)",
-              "avgRebuiltPrice": "£3,000 – £7,500",
-              "cta": "Get Quote for L86"
-            },
-            {
-              "code": "L87",
-              "fuel": "Petrol",
-              "size": "6.2L V8",
-              "power": "420 HP",
-              "compatibleModels": "Escalade (2021–2025)",
-              "avgRebuiltPrice": "£3,200 – £8,000",
-              "cta": "Get Quote for L87"
-            },
-            {
-              "code": "LSA",
-              "fuel": "Petrol",
-              "size": "6.2L Supercharged V8",
-              "power": "556 HP",
-              "compatibleModels": "CTS-V (2009–2015)",
-              "avgRebuiltPrice": "£4,000 – £10,000",
-              "cta": "Get Quote for LSA"
+              "size": "2.0 Litre",
+              "power": "237 hp",
+              "compatibleModels": "CT5 (2020-present)",
+              "avgRebuiltPrice": "£3,500 - £5,500 supply only",
+              "cta": "→ Get quotes for LSY Cadillac engine replacement"
             },
             {
               "code": "LT4",
+              "title": "6.2L V8 Petrol (Supercharged)",
+              "familyHeading": "LT4 - 6.2L V8 Petrol (Supercharged)",
               "fuel": "Petrol",
-              "size": "6.2L Supercharged V8",
-              "power": "640 HP",
-              "compatibleModels": "CT5-V Blackwing (2022–2025), CT4-V Blackwing (2022–2025)",
-              "avgRebuiltPrice": "£4,500 – £11,000",
-              "cta": "Get Quote for LT4"
+              "size": "6.2 Litre",
+              "power": "640-649 hp",
+              "compatibleModels": "CTS-V (2015-2019), CT5-V Blackwing (2020-present)",
+              "avgRebuiltPrice": "£8,000 - £14,000 supply only",
+              "cta": "→ Get quotes for LT4 Cadillac engine replacement"
+            },
+            {
+              "code": "L94 / L86 / L87",
+              "title": "6.2L V8 Petrol",
+              "familyHeading": "L94 / L86 / L87 - 6.2L V8 Petrol",
+              "fuel": "Petrol",
+              "size": "6.2 Litre",
+              "power": "403-420 hp",
+              "compatibleModels": "Escalade (2010-present), Escalade ESV (2010-present)",
+              "avgRebuiltPrice": "£5,000 - £8,000 supply only",
+              "cta": "→ Get quotes for L94 / L86 / L87 Cadillac engine replacement"
             }
           ]
         },
         {
-          "name": "Early Turbo & Entry Engines (2.4L/2.8L)",
-          "era": "2006–2010",
-          "failureNote": "Early turbo V6 and entry-level I4 engines are known for turbocharger bearing wear and timing chain guide degradation. Our rebuilt units include remanufactured turbo cores, upgraded chain guides, and comprehensive balancing to restore original performance characteristics",
+          "name": "Diesel Engines (Most Replaced in the UK)",
+          "era": "Extracted from Cadillac diesel engines (most replaced in the uk) technical replacement data.",
+          "failureNote": "DPF clogging - common on vehicles used for short journeys, EGR valve failure - leading to rough running and emissions warning lights",
           "engines": [
             {
-              "code": "LP9",
-              "fuel": "Petrol",
-              "size": "2.8L Turbo V6",
-              "power": "263 HP",
-              "compatibleModels": "SRX (2006–2009)",
-              "avgRebuiltPrice": "£2,000 – £5,000",
-              "cta": "Get Quote for LP9"
-            },
+              "code": "Z19DTH",
+              "title": "1.9L Diesel",
+              "familyHeading": "Z19DTH - 1.9L Diesel",
+              "fuel": "Diesel",
+              "size": "1.9 Litre",
+              "power": "148 hp",
+              "compatibleModels": "BLS (2006-2010)",
+              "avgRebuiltPrice": "£1,800 - £2,800 supply only",
+              "cta": "→ Get quotes for Z19DTH Cadillac engine replacement"
+            }
+          ]
+        },
+        {
+          "name": "Petrol Engines (Continued - BLS Family)",
+          "era": "Extracted from Cadillac petrol engines (continued - bls family) technical replacement data.",
+          "failureNote": "Turbocharger failure - often due to oil starvation, High-pressure fuel pump failure",
+          "engines": [
             {
-              "code": "LE5",
+              "code": "B207R",
+              "title": "2.0L Petrol (Turbo)",
+              "familyHeading": "B207R - 2.0L Petrol (Turbo)",
               "fuel": "Petrol",
-              "size": "2.4L I4",
-              "power": "170 HP",
-              "compatibleModels": "BLS (2006–2009)",
-              "avgRebuiltPrice": "£1,500 – £4,000",
-              "cta": "Get Quote for LE5"
-            },
-            {
-              "code": "LK9",
-              "fuel": "Petrol",
-              "size": "2.0L Turbo I4",
-              "power": "175 HP",
-              "compatibleModels": "BLS (2006–2009)",
-              "avgRebuiltPrice": "£1,800 – £4,500",
-              "cta": "Get Quote for LK9"
+              "size": "2.0 Litre",
+              "power": "210 hp",
+              "compatibleModels": "BLS (2006-2010)",
+              "avgRebuiltPrice": "£1,800 - £2,800 supply only",
+              "cta": "→ Get quotes for B207R Cadillac engine replacement"
             }
           ]
         }
@@ -1836,76 +1679,78 @@
       "closing": "Not sure which engine size your Cadillac needs? Enter your registration number and we'll match you to the exact engine code and displacement — instantly. All engines supplied with a minimum 12‑month warranty from UK Cadillac specialists."
     },
     "fuelTypes": {
-      "tag": "Complete Cadillac Engines List",
-      "h2": "Cadillac Engines by Fuel Type",
-      "intro": "Choose your Cadillac engine by fuel type to compare realistic replacement prices, known brand‑wide issues, and UK specialist supply – from the most popular diesel workhorses to the latest electrified powertrains.",
+      "tag": "Cadillac Engines by Fuel Type",
+      "h2": "Cadillac Diesel vs Petrol - Which Fuel Type Is Right For You?",
+      "intro": "Compare Cadillac engine fuel types by replacement costs, running costs, reliability reputation, and model availability. Use this guide to understand your options - then enter your registration for an instant match and quotes from UK Cadillac specialists.",
       "items": [
         {
-          "title": "Cadillac Diesel Engines",
-          "description": "Cadillac diesel engines cover many of the brand's highest-mileage UK models. Replacement demand is usually driven by timing system wear, injector and turbo faults, plus EGR or DPF-related damage once repeat short-journey use starts affecting reliability.",
-          "descriptor": "High-mileage motorway and SUV applications",
+          "title": "Diesel Engines",
+          "description": "Cadillac's diesel engine offerings in the UK are limited to the BLS (2006-2010), which uses GM's Z19DTH 1.9-litre turbodiesel. Replacement demand is driven by DPF, EGR, and turbo-related failures on these higher-mileage vehicles.",
+          "descriptor": "Cadillac's diesel engine offerings in the UK are limited to the BLS (2006-2010), which uses GM's Z19DTH 1.9-litre turbodiesel. Replacement demand is driven by DPF, EGR, and turbo-related failures on these higher-mileage vehicles.",
           "families": [
-            "Z19DTH"
+            "£1,800 - £2,800 (supply only)",
+            "1.9 Z19DTH (BLS): £1,800 - £2,800"
           ],
-          "foundIn": [
-            "Cadillac CT4 Engines",
-            "Cadillac CT5 Engines",
-            "Cadillac CTS Engines",
-            "Cadillac CTS-V Engines"
-          ],
-          "knownFor": [
-            "EGR valve clogging",
-            "DPF regeneration failure",
-            "injector seal leaks"
-          ],
-          "typicalModels": [
-            "Cadillac CT4 Engines",
-            "Cadillac CT5 Engines",
-            "Cadillac CTS Engines",
-            "Cadillac CTS-V Engines"
-          ],
+          "foundIn": [],
+          "knownFor": [],
+          "typicalModels": [],
           "importantNotes": [
-            "Short-journey use increases DPF, EGR, and oil-dilution risk on many diesel engines.",
-            "A documented service history matters more on diesel replacements because injector, turbo, and timing faults often build gradually."
+            "High-mileage drivers covering 15,000+ miles annually",
+            "Company car drivers benefiting from lower fuel costs",
+            "Fleet operators prioritising efficiency",
+            "Urban drivers with short daily trips who are better served by petrol (DPF and EGR issues are common)",
+            "Low-mileage users who don't drive enough to justify the diesel premium",
+            "Typical searches: Cadillac BLS diesel engine replacement, Cadillac 1.9 diesel engine for sale, Cadillac Z19DTH engine price, Cadillac diesel DPF problems, Cadillac diesel engine specialist UK, Cadillac BLS engine replacement cost → Get quotes for Cadillac Diesel replacement engines → Not sure which diesel you have? Enter your registration number for an instant match"
           ],
-          "cta": "Compare Cadillac diesel engine prices"
+          "cta": "→ Get quotes for Cadillac Diesel replacement engines"
         },
         {
-          "title": "Cadillac Petrol Engines",
-          "description": "Cadillac petrol engines span everything from core daily-driver models to higher-output performance variants. Most replacement enquiries start with timing chain noise, oil consumption, cooling-system failure, or internal wear that makes a warranted replacement more sensible than repeated repairs.",
-          "descriptor": "Core passenger-car and performance applications",
+          "title": "Petrol Engines",
+          "description": "Cadillac's petrol engine range spans from the 2.0-litre turbo (BLS) to the 6.2-litre V8 (Escalade and CTS-V) and the iconic 3.6-litre V6 family (LY7, LLT, LFX) - delivering everything from urban efficiency to American V8 muscle.",
+          "descriptor": "Cadillac's petrol engine range spans from the 2.0-litre turbo (BLS) to the 6.2-litre V8 (Escalade and CTS-V) and the iconic 3.6-litre V6 family (LY7, LLT, LFX) - delivering everything from urban efficiency to American V8 muscle.",
           "families": [
-            "GM High Feature V6 Family (3.6L)",
-            "EcoTec Turbo I4 Family (2.0L/2.7L)",
-            "Twin-Turbo V6 & NA V6 Family (3.0L/3.6L)",
-            "Northstar V8 Family (4.6L)"
+            "£1,800 - £14,000 (supply only)",
+            "2.0 Turbo (LSY, B207R, LTG): £1,800 - £3,500",
+            "2.8 V6 (B284L/R): £2,000 - £3,200",
+            "3.6 V6 (LY7, LLT, LFX): £2,500 - £5,000",
+            "6.2 V8 (L94, L86, L87 - Escalade): £5,000 - £8,000"
           ],
-          "foundIn": [
-            "Cadillac CT4 Engines",
-            "Cadillac CT5 Engines",
-            "Cadillac CTS Engines",
-            "Cadillac CTS-V Engines"
-          ],
-          "knownFor": [
-            "Piston ring carbon clogging",
-            "turbo oil seal failure",
-            "PCV valve malfunction",
-            "Timing chain tensioner wear"
-          ],
-          "typicalModels": [
-            "Cadillac CT4 Engines",
-            "Cadillac CT5 Engines",
-            "Cadillac CTS Engines",
-            "Cadillac CTS-V Engines"
-          ],
+          "foundIn": [],
+          "knownFor": [],
+          "typicalModels": [],
           "importantNotes": [
-            "Cold-start rattles, overheating history, and oil use are the biggest warning signs before a petrol engine replacement becomes necessary.",
-            "Direct-injection petrol engines often need specialist attention for carbon build-up alongside the main mechanical repair."
+            "Enthusiasts who value the American V8 character and driving experience",
+            "Drivers with lower annual mileage who prioritise performance over economy",
+            "Owners of imported Escalade models seeking the full US experience",
+            "High-mileage motorway drivers who would benefit from diesel's superior fuel economy (though diesel availability is limited)",
+            "Drivers prioritising maximum fuel efficiency over performance",
+            "Typical searches: Cadillac 3.6 V6 engine replacement, Cadillac CTS engine for sale, Cadillac Escalade 6.2 engine cost, Cadillac SRX 3.6 engine replacement, Cadillac LFX engine price, Cadillac engine specialist UK, Cadillac V8 engine problems, Cadillac 3.6 timing chain failure, Cadillac CT5 engine replacement → Compare Cadillac Petrol engine prices → Not sure which petrol you have? Enter your registration number for an instant match"
           ],
-          "cta": "Compare Cadillac petrol engine prices"
+          "cta": "→ Compare Cadillac Petrol engine prices"
+        },
+        {
+          "title": "Hybrid & Plug-in Hybrid (PHEV) Engines",
+          "description": "Cadillac has experimented with hybrid models, including the Escalade Hybrid and CTS Hybrid, though they are extremely rare in the UK market. Hybrid systems are niche in the replacement market, with very limited specialist support available.",
+          "descriptor": "Cadillac has experimented with hybrid models, including the Escalade Hybrid and CTS Hybrid, though they are extremely rare in the UK market. Hybrid systems are niche in the replacement market, with very limited specialist support available.",
+          "families": [
+            "Escalade Hybrid (2010-2013): Combines a 6.2-litre V8 with a two-mode hybrid system, using a 300V nickel-metal hydride battery pack. The system enables electric-only driving at low speeds and assists the V8 during acceleration.",
+            "Battery location: The high-voltage battery is located under the rear seats or in the cargo area.",
+            "No PHEV models were sold in the UK market; the Escalade Hybrid was the only hybrid offering."
+          ],
+          "foundIn": [],
+          "knownFor": [],
+          "typicalModels": [],
+          "importantNotes": [
+            "Enthusiasts seeking a rare or collectible Cadillac variant",
+            "Buyers looking for slightly improved fuel economy from a V8",
+            "Drivers without access to a specialist hybrid garage - parts and expertise are extremely limited in the UK",
+            "Most buyers are better served by the standard petrol V8",
+            "Typical searches: Cadillac Escalade hybrid engine replacement, Cadillac hybrid battery price, Cadillac hybrid system repair UK, Escalade hybrid motor replacement, Cadillac hybrid specialist UK → Enquire about Cadillac Hybrid engine availability → Not sure which hybrid you have? Enter your registration number for an instant match"
+          ],
+          "cta": "Get quotes for Cadillac Cadillac Hybrid & Plug-in Hybrid (PHEV) Engines engines"
         }
       ],
-      "closing": "Not sure which fuel type your Cadillac has? Enter your registration number above to instantly identify your model, engine code, fuel system and compatible replacement options – all backed by a minimum 12‑month unlimited mileage warranty from UK Cadillac specialists."
+      "closing": "Not sure which fuel type your Cadillac has? Enter your registration number for an instant match."
     },
     "engineCodeDirectory": {
       "tag": "Engine Codes",

@@ -988,184 +988,122 @@
       ]
     },
     "engineCodes": {
-      "tag": "Replacement Cost",
-      "h2": "Chevrolet Engine Codes & Average Rebuilt Prices (UK Supply)",
-      "h3": "Compare costs for every major Chevrolet engine — VCDi diesel family (Z-series), B10/B12 small petrols, and LS V8 performance engines. All prices are typical UK market ranges for professionally rebuilt engines with warranty. Click \"Get Quote\" on any engine to receive tailored prices from our network of UK Chevrolet specialists.",
+      "tag": "Engine Codes",
+      "h2": "Chevrolet Engine Codes - Most Replaced Engines & Full Directory",
+      "h3": "Every major Chevrolet engine code with technical specs, compatible UK models, known failures and average rebuilt prices. Use the quick-reference accordion below for all remaining codes.",
+      "closingLine": "Can't find your engine code? Enter your registration number above - we'll identify the exact Chevrolet engine fitted to your vehicle.",
       "filters": [
-        "All",
-        "Diesel",
-        "Petrol"
+        "Diesel Engines (Most Replaced in the UK)",
+        "Petrol Engines (Most Replaced in the UK)",
+        "Petrol Engines (Continued - V8 & Performance)"
       ],
       "groups": [
         {
-          "name": "VCDi Diesel Family",
-          "era": "2006–2015",
-          "failureNote": "The VM Motori-derived VCDi turbo-diesel family powered the majority of Chevrolet's UK fleet across Captiva, Cruze, Orlando, and Malibu. Known for injector sensitivity and timing chain stretch on later variants . Get Quote → for any VCDi engine above. Common failure points: VCDi engines are known for fuel injector sensitivity to UK diesel quality and timing chain stretch on Z22D1/Z20D1 variants. Our rebuilt units include reconditioned injectors, genuine timing kits, and upgraded chain tensioners.",
+          "name": "Diesel Engines (Most Replaced in the UK)",
+          "era": "Extracted from Chevrolet diesel engines (most replaced in the uk) technical replacement data.",
+          "failureNote": "Timing chain stretch and tensioner failure - a well-documented issue leading to rattling on start-up, cam/crank timing faults, and potential catastrophic engine damage, ECU failure - can cause loss of power, rough running, and complete non-start",
           "engines": [
             {
-              "code": "Z20S (Z20DMH, LLW)",
+              "code": "Z20S",
+              "title": "2.0L Diesel",
+              "familyHeading": "Z20S - 2.0L Diesel",
               "fuel": "Diesel",
-              "size": "2.0L",
-              "power": "150 HP",
-              "compatibleModels": "Captiva (C100, 2006–2011); Cruze (J300, 2009–2015); Epica",
-              "avgRebuiltPrice": "£1,800 – £3,200",
-              "cta": "Get Quote for Z20S (Z20DMH, LLW)"
+              "size": "2.0 Litre",
+              "power": "121-150 hp",
+              "compatibleModels": "Captiva (2006-2011)",
+              "avgRebuiltPrice": "£1,200 - £1,900 supply only",
+              "cta": "→ Get quotes for Z20S Chevrolet engine replacement"
             },
             {
-              "code": "Z20S1 (Z20DM, LMN)",
+              "code": "Z20S1",
+              "title": "2.0L Diesel",
+              "familyHeading": "Z20S1 - 2.0L Diesel",
               "fuel": "Diesel",
-              "size": "2.0L",
-              "power": "121–127 HP",
-              "compatibleModels": "Captiva (C100); Lacetti (J200)",
-              "avgRebuiltPrice": "£1,500 – £2,800",
-              "cta": "Get Quote for Z20S1 (Z20DM, LMN)"
+              "size": "2.0 Litre",
+              "power": "125-150 hp",
+              "compatibleModels": "Cruze (2009-2011)",
+              "avgRebuiltPrice": "£1,500 - £4,400 supply only",
+              "cta": "→ Get quotes for Z20S1 Chevrolet engine replacement"
             },
             {
-              "code": "Z20D1 (LNP)",
+              "code": "Z20D1",
+              "title": "2.0L Diesel",
+              "familyHeading": "Z20D1 - 2.0L Diesel",
               "fuel": "Diesel",
-              "size": "2.0L",
-              "power": "163 HP",
-              "compatibleModels": "Cruze (J300, 2010–2015); Orlando (J309); Malibu (2012–2016)",
-              "avgRebuiltPrice": "£1,900 – £3,500",
-              "cta": "Get Quote for Z20D1 (LNP)"
+              "size": "2.0 Litre",
+              "power": "125-150 hp",
+              "compatibleModels": "Cruze (2009-2014), Orlando (2011-2014)",
+              "avgRebuiltPrice": "£1,500 - £3,000 supply only",
+              "cta": "→ Get quotes for Z20D1 Chevrolet engine replacement"
             },
             {
-              "code": "Z22D1 (LNQ)",
+              "code": "Z22D1",
+              "title": "2.2L Diesel",
+              "familyHeading": "Z22D1 - 2.2L Diesel",
               "fuel": "Diesel",
-              "size": "2.2L",
-              "power": "163–184 HP",
-              "compatibleModels": "Captiva (C140, 2010–2015)",
-              "avgRebuiltPrice": "£2,000 – £3,800",
-              "cta": "Get Quote for Z22D1 (LNQ)"
+              "size": "2.2 Litre",
+              "power": "163 hp",
+              "compatibleModels": "Captiva (2010-2016)",
+              "avgRebuiltPrice": "£2,000 - £3,500 supply only",
+              "cta": "→ Get quotes for Z22D1 Chevrolet engine replacement"
             }
           ]
         },
         {
-          "name": "Small Petrol Family",
-          "era": "B10D1, B12D1, A12XER/A13DTC – 2008–2015",
-          "failureNote": "These economical 1.0–1.3 litre petrol and diesel engines powered Chevrolet Spark, Aveo, and Kalos models. Simple, robust units with affordable rebuild costs . Get Quote → for any Small Petrol engine above. Common failure points: B-series engines are generally reliable but suffer coil pack failures and thermostat housing leaks. Our rebuilt units include new ignition components and upgraded cooling system seals.",
+          "name": "Petrol Engines (Most Replaced in the UK)",
+          "era": "Extracted from Chevrolet petrol engines (most replaced in the uk) technical replacement data.",
+          "failureNote": "Head gasket failure - leading to coolant loss and overheating, Ignition coil and spark plug failure - causing misfires and rough running",
           "engines": [
             {
               "code": "B10D1",
+              "title": "1.0L Petrol",
+              "familyHeading": "B10D1 - 1.0L Petrol",
               "fuel": "Petrol",
-              "size": "1.0L",
-              "power": "68 HP",
-              "compatibleModels": "Spark (M300, 2009–2015)",
-              "avgRebuiltPrice": "£1,100 – £2,200",
-              "cta": "Get Quote for B10D1"
+              "size": "1.0 Litre",
+              "power": "65-68 hp",
+              "compatibleModels": "Spark (2010-2014)",
+              "avgRebuiltPrice": "£980 - £1,550 supply only",
+              "cta": "→ Get quotes for B10D1 Chevrolet engine replacement"
             },
             {
               "code": "B12D1",
+              "title": "1.2L Petrol",
+              "familyHeading": "B12D1 - 1.2L Petrol",
               "fuel": "Petrol",
-              "size": "1.2L",
-              "power": "84 HP",
-              "compatibleModels": "Aveo (T300, 2011–2015); Spark (1.2 option)",
-              "avgRebuiltPrice": "£1,000 – £2,100",
-              "cta": "Get Quote for B12D1"
+              "size": "1.2 Litre",
+              "power": "80-85 hp",
+              "compatibleModels": "Spark (2010-2014)",
+              "avgRebuiltPrice": "£620 - £850 supply only",
+              "cta": "→ Get quotes for B12D1 Chevrolet engine replacement"
             },
             {
-              "code": "A12XER",
-              "fuel": "Petrol",
-              "size": "1.2L",
-              "power": "86 HP",
-              "compatibleModels": "Aveo (T250/T300); Kalos",
-              "avgRebuiltPrice": "£1,100 – £2,300",
-              "cta": "Get Quote for A12XER"
-            },
-            {
-              "code": "A13DTC",
+              "code": "A17DTE",
+              "title": "1.7L Diesel",
+              "familyHeading": "A17DTE - 1.7L Diesel",
               "fuel": "Diesel",
-              "size": "1.3L",
-              "power": "75 HP",
-              "compatibleModels": "Aveo (1.3 D LT+, 2012–2013)",
-              "avgRebuiltPrice": "£1,200 – £2,200",
-              "cta": "Get Quote for A13DTC"
+              "size": "1.7 Litre",
+              "power": "130 hp",
+              "compatibleModels": "Cruze (2011-2015), Orlando (2011-2015)",
+              "avgRebuiltPrice": "£500 - £700 supply only",
+              "cta": "→ Get quotes for A17DTE Chevrolet engine replacement"
             }
           ]
         },
         {
-          "name": "LS V8 Performance Family",
-          "era": "1997–present",
-          "failureNote": "The legendary GM LS V8 — found in imported Camaro, Corvette, and Silverado models in the UK. These engines are often retrofitted into other vehicles, reflected in the higher rebuild costs and specialist parts . Get Quote → for any LS V8 engine above. Common failure points: LS engines are renowned for reliability, but high-mileage units suffer lifter tick, oil pump wear, and cracked exhaust manifolds. Our rebuilt LS engines receive upgraded lifters, high-volume oil pumps, and performance gaskets.",
+          "name": "Petrol Engines (Continued - V8 & Performance)",
+          "era": "Extracted from Chevrolet petrol engines (continued - v8 & performance) technical replacement data.",
+          "failureNote": "AFM/DFM lifter failure - a well-documented issue leading to misfires and rough running, Oil consumption - common on higher-mileage examples",
           "engines": [
             {
-              "code": "LS3",
+              "code": "LS Family",
+              "title": "6.2L V8 Petrol",
+              "familyHeading": "LS Family - 6.2L V8 Petrol",
               "fuel": "Petrol",
-              "size": "6.2L",
-              "power": "426–436 HP",
-              "compatibleModels": "Camaro (SS, 2010–2015); Corvette (C6, 2008–2013)",
-              "avgRebuiltPrice": "£4,500 – £8,500",
-              "cta": "Get Quote for LS3"
-            },
-            {
-              "code": "LS1",
-              "fuel": "Petrol",
-              "size": "5.7L",
-              "power": "305–350 HP",
-              "compatibleModels": "Corvette (C5); Camaro (1998–2002 imports)",
-              "avgRebuiltPrice": "£3,500 – £6,000",
-              "cta": "Get Quote for LS1"
-            },
-            {
-              "code": "LS2",
-              "fuel": "Petrol",
-              "size": "6.0L",
-              "power": "390–395 HP",
-              "compatibleModels": "Corvette (C6); Pontiac GTO (import)",
-              "avgRebuiltPrice": "£4,000 – £7,000",
-              "cta": "Get Quote for LS2"
-            },
-            {
-              "code": "LQ4 / LQ9",
-              "fuel": "Petrol",
-              "size": "6.0L",
-              "power": "300–345 HP",
-              "compatibleModels": "Silverado; Suburban; Tahoe (imported)",
-              "avgRebuiltPrice": "£3,000 – £5,500",
-              "cta": "Get Quote for LQ4 / LQ9"
-            }
-          ]
-        },
-        {
-          "name": "Additional Petrol Engines",
-          "era": "Captiva/Cruze — 2006–2015",
-          "failureNote": "Petrol options for Chevrolet's SUV and saloon range, often overlooked but still searched for replacement. Get Quote → for any Additional Petrol engine above. Common failure points: GM petrol 2.4L engines suffer timing chain stretch and EGR issues. The 3.0/3.2L V6 units have known camshaft actuator problems. Our rebuilds include OEM timing chains and redesigned actuators",
-          "engines": [
-            {
-              "code": "LE5 / LE9 / LEA",
-              "fuel": "Petrol",
-              "size": "2.4L",
-              "power": "167 HP",
-              "compatibleModels": "Captiva (C100); Malibu",
-              "avgRebuiltPrice": "£1,800 – £3,200",
-              "cta": "Get Quote for LE5 / LE9 / LEA"
-            },
-            {
-              "code": "Z24SED",
-              "fuel": "Petrol",
-              "size": "2.4L",
-              "power": "133–136 HP",
-              "compatibleModels": "Captiva (early C100); Lacetti",
-              "avgRebuiltPrice": "£1,600 – £2,900",
-              "cta": "Get Quote for Z24SED"
-            },
-            {
-              "code": "10HM",
-              "fuel": "Petrol",
-              "size": "3.2L",
-              "power": "230 HP",
-              "compatibleModels": "Captiva (C100, petrol V6)",
-              "avgRebuiltPrice": "£2,200 – £4,000",
-              "cta": "Get Quote for 10HM"
-            },
-            {
-              "code": "A30XH / LF1",
-              "fuel": "Petrol",
-              "size": "3.0L",
-              "power": "249–258 HP",
-              "compatibleModels": "Captiva (C140, 2010–2015 petrol V6)",
-              "avgRebuiltPrice": "£2,000 – £3,800",
-              "cta": "Get Quote for A30XH / LF1"
+              "size": "6.2 Litre",
+              "power": "420-450 hp",
+              "compatibleModels": "Silverado (2014-present), Tahoe (2015-present)",
+              "avgRebuiltPrice": "£5,000 - £8,000 supply only",
+              "cta": "→ Get quotes for LS family Chevrolet engine replacement"
             }
           ]
         }
@@ -1486,67 +1424,80 @@
       "closing": "Not sure which engine size your Chevrolet needs? Enter your registration number and we'll match you to the exact engine code and displacement — instantly. All engines supplied with a minimum 12‑month warranty from UK Chevrolet specialists."
     },
     "fuelTypes": {
-      "tag": "Complete Chevrolet Engines List",
-      "h2": "Chevrolet Engines by Fuel Type",
-      "intro": "Choose your Chevrolet engine by fuel type to compare realistic replacement prices, known brand‑wide issues, and UK specialist supply — from the most popular diesel workhorses to the small-capacity petrol city car units.",
+      "tag": "Chevrolet Engines by Fuel Type",
+      "h2": "Chevrolet Diesel vs Petrol - Which Fuel Type Is Right For You?",
+      "intro": "Compare Chevrolet engine fuel types by replacement costs, running costs, reliability reputation, and model availability. Use this guide to understand your options - then enter your registration for an instant match and quotes from UK Chevrolet specialists.",
       "items": [
         {
-          "title": "Chevrolet Diesel Engines",
-          "description": "Chevrolet diesel engines cover many of the brand's highest-mileage UK models. Replacement demand is usually driven by timing system wear, injector and turbo faults, plus EGR or DPF-related damage once repeat short-journey use starts affecting reliability.",
-          "descriptor": "High-mileage motorway and SUV applications",
+          "title": "Diesel Engines",
+          "description": "Chevrolet's diesel engine range in the UK is dominated by the VCDi family - 1.7-litre and 2.0-litre common-rail turbodiesels fitted to the Captiva, Cruze, and Orlando. Replacement demand is driven by timing chain, DPF, and turbo-related failures on these higher-mileage vehicles.",
+          "descriptor": "Chevrolet's diesel engine range in the UK is dominated by the VCDi family - 1.7-litre and 2.0-litre common-rail turbodiesels fitted to the Captiva, Cruze, and Orlando. Replacement demand is driven by timing chain, DPF, and turbo-related failures on these higher-mileage vehicles.",
           "families": [
-            "VCDi Diesel Family",
-            "Small Petrol Family"
+            "£500 - £4,400 (supply only)",
+            "1.7 CDTi (A17DTE): £500 - £700",
+            "2.0 VCDi (Z20S): £1,200 - £1,900",
+            "2.0 VCDi (Z20S1): £1,500 - £4,400",
+            "2.2 VCDi (Z22D1): £2,000 - £3,500"
           ],
-          "foundIn": [
-            "Chevrolet Spark Engines",
-            "Chevrolet Aveo Engines",
-            "Chevrolet Orlando Engines",
-            "Chevrolet Cruze Engines"
-          ],
+          "foundIn": [],
           "knownFor": [],
-          "typicalModels": [
-            "Chevrolet Spark Engines",
-            "Chevrolet Aveo Engines",
-            "Chevrolet Orlando Engines",
-            "Chevrolet Cruze Engines"
-          ],
+          "typicalModels": [],
           "importantNotes": [
-            "Short-journey use increases DPF, EGR, and oil-dilution risk on many diesel engines.",
-            "A documented service history matters more on diesel replacements because injector, turbo, and timing faults often build gradually."
+            "High-mileage motorway drivers covering 15,000+ miles annually",
+            "Company car drivers benefiting from lower fuel costs",
+            "Fleet operators prioritising efficiency",
+            "Urban drivers with short daily trips who are better served by petrol (DPF and EGR issues are common)",
+            "Low-mileage users who don't drive enough to justify the diesel premium",
+            "Typical searches: Chevrolet Captiva engine replacement, Chevrolet Cruze 2.0 VCDi engine cost, Chevrolet diesel engine specialist UK, Chevrolet VCDi timing chain problems, Chevrolet Orlando engine replacement, Chevrolet diesel DPF problems, Chevrolet Captiva 2.2 engine price → Get quotes for Chevrolet Diesel replacement engines → Not sure which diesel you have? Enter your registration number for an instant match"
           ],
-          "cta": "Compare Chevrolet diesel engine prices"
+          "cta": "→ Get quotes for Chevrolet Diesel replacement engines"
         },
         {
-          "title": "Chevrolet Petrol Engines",
-          "description": "Chevrolet petrol engines span everything from core daily-driver models to higher-output performance variants. Most replacement enquiries start with timing chain noise, oil consumption, cooling-system failure, or internal wear that makes a warranted replacement more sensible than repeated repairs.",
-          "descriptor": "Core passenger-car and performance applications",
+          "title": "Petrol Engines",
+          "description": "Chevrolet's petrol engine range in the UK spans from the 1.0-litre B10D1 in the Spark to the 6.2-litre V8 in the Silverado - delivering everything from city car economy to American V8 muscle.",
+          "descriptor": "Chevrolet's petrol engine range in the UK spans from the 1.0-litre B10D1 in the Spark to the 6.2-litre V8 in the Silverado - delivering everything from city car economy to American V8 muscle.",
           "families": [
-            "Small Petrol Family",
-            "LS V8 Performance Family",
-            "Additional Petrol Engines"
+            "£620 - £8,000 (supply only)",
+            "1.0 B10D1 (Spark): £980 - £1,550",
+            "1.2 B12D1 (Spark): £620 - £850",
+            "1.4T (Cruze, Trax): £1,500 - £2,500",
+            "1.6/1.8 (Cruze, Orlando): £1,200 - £2,000"
           ],
-          "foundIn": [
-            "Chevrolet Spark Engines",
-            "Chevrolet Aveo Engines",
-            "Chevrolet Orlando Engines",
-            "Chevrolet Cruze Engines"
-          ],
+          "foundIn": [],
           "knownFor": [],
-          "typicalModels": [
-            "Chevrolet Spark Engines",
-            "Chevrolet Aveo Engines",
-            "Chevrolet Orlando Engines",
-            "Chevrolet Cruze Engines"
-          ],
+          "typicalModels": [],
           "importantNotes": [
-            "Cold-start rattles, overheating history, and oil use are the biggest warning signs before a petrol engine replacement becomes necessary.",
-            "Direct-injection petrol engines often need specialist attention for carbon build-up alongside the main mechanical repair."
+            "Urban and suburban drivers with lower annual mileage (under 12,000 miles)",
+            "City car owners prioritising simplicity and low running costs (Spark)",
+            "Enthusiasts who value the American V8 character and driving experience (Silverado, Tahoe)",
+            "High-mileage motorway drivers who would benefit from diesel's superior fuel economy",
+            "Drivers prioritising maximum fuel efficiency over performance",
+            "Typical searches: Chevrolet Spark engine replacement, Chevrolet Cruze 1.4T engine cost, Chevrolet Silverado V8 engine replacement, Chevrolet petrol engine specialist UK, Chevrolet Spark B10D1 engine price, Chevrolet Aveo engine replacement, Chevrolet V8 engine problems, Chevrolet Trax engine replacement → Compare Chevrolet Petrol engine prices → Not sure which petrol you have? Enter your registration number for an instant match"
           ],
-          "cta": "Compare Chevrolet petrol engine prices"
+          "cta": "→ Compare Chevrolet Petrol engine prices"
+        },
+        {
+          "title": "Hybrid & Plug-in Hybrid (PHEV) Engines",
+          "description": "Chevrolet's hybrid presence in the UK is extremely limited, with no significant hybrid or electric models sold through official UK channels. The Chevrolet Volt (Ampera) was sold as a Vauxhall in the UK, not a Chevrolet.",
+          "descriptor": "Chevrolet's hybrid presence in the UK is extremely limited, with no significant hybrid or electric models sold through official UK channels. The Chevrolet Volt (Ampera) was sold as a Vauxhall in the UK, not a Chevrolet.",
+          "families": [
+            "Chevrolet Volt (Ampera): A range-extender electric vehicle with a 1.4-litre petrol engine used as a generator. Not sold as a Chevrolet in the UK.",
+            "Battery location: The high-voltage battery is located under the rear seats.",
+            "No Chevrolet-badged hybrids were sold in the UK market."
+          ],
+          "foundIn": [],
+          "knownFor": [],
+          "typicalModels": [],
+          "importantNotes": [
+            "Enthusiasts seeking a rare or collectible Chevrolet variant",
+            "Buyers looking for maximum fuel economy from a Chevrolet",
+            "Most buyers are better served by the standard petrol or diesel options",
+            "Typical searches: Chevrolet Volt engine replacement, Chevrolet hybrid battery price, Chevrolet hybrid system repair UK, Chevrolet Volt motor replacement, Chevrolet hybrid specialist UK → Enquire about Chevrolet Hybrid engine availability → Not sure which hybrid you have? Enter your registration number for an instant match"
+          ],
+          "cta": "Get quotes for Chevrolet Chevrolet Hybrid & Plug-in Hybrid (PHEV) Engines engines"
         }
       ],
-      "closing": "Not sure which fuel type your Chevrolet has? Enter your registration number above to instantly identify your model, engine code, fuel system and compatible replacement options — all backed by a minimum 12‑month unlimited mileage warranty from UK Chevrolet specialists."
+      "closing": "Not sure which fuel type your Chevrolet has? Enter your registration number for an instant match."
     },
     "engineCodeDirectory": {
       "tag": "Engine Codes",

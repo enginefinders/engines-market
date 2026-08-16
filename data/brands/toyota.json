@@ -1772,254 +1772,177 @@
       ]
     },
     "engineCodes": {
-      "tag": "Replacement Cost",
-      "h2": "Toyota Engine Codes & Average Rebuilt Prices (UK Supply)",
-      "h3": "Compare costs for the most common Toyota engines — 1NR-FE, 2ZR-FXE, 1KD-FTV, 1AD-FTV & 2AD-FTV. All prices are typical UK market ranges for professionally rebuilt engines with warranty. Click \"Get Quote\" on any engine code to receive tailored prices from our network of UK Toyota specialists.",
+      "tag": "Engine Codes",
+      "h2": "Toyota Engine Codes - Most Replaced Engines & Full Directory",
+      "h3": "Every major Toyota engine code with technical specs, compatible UK models, known failures and average rebuilt prices. Use the quick-reference accordion below for all remaining codes.",
+      "closingLine": "Can't find your engine code? Enter your registration number above - we'll identify the exact Toyota engine fitted to your vehicle.",
       "filters": [
-        "All",
-        "Diesel",
-        "Petrol"
+        "Diesel Engines (Most Replaced in the UK)",
+        "Petrol Engines (Most Replaced in the UK)",
+        "Hybrid / Electrified Engines"
       ],
       "groups": [
         {
-          "name": "Small Petrol & Hybrid Engines",
-          "era": "2005–Present",
-          "failureNote": "1KR-FE engines occasionally suffer from valve clearance noise and oil consumption. 1NR-FE units are known for early timing chain stretch (often before 80k miles), causing rattle on cold start. Our rebuilt units include a full timing overhaul with upgraded chain tensioner and new VVT-i components.",
-          "engines": [
-            {
-              "code": "1KR-FE",
-              "fuel": "Petrol",
-              "size": "1.0L",
-              "power": "68-72 bhp",
-              "compatibleModels": "Aygo (2005+), Yaris (2005-2011), Peugeot 107/Citroën C1",
-              "avgRebuiltPrice": "£800 – £2,200",
-              "cta": "Get Quote for 1KR-FE"
-            },
-            {
-              "code": "1NR-FE",
-              "fuel": "Petrol",
-              "size": "1.33L",
-              "power": "98-101 bhp",
-              "compatibleModels": "Yaris (2006-2018), Auris (2007-2012), Urban Cruiser, Corolla (E140/E150)",
-              "avgRebuiltPrice": "£800 – £2,500",
-              "cta": "Get Quote for 1NR-FE"
-            },
-            {
-              "code": "1NZ-FE",
-              "fuel": "Petrol",
-              "size": "1.5L",
-              "power": "105-110 bhp",
-              "compatibleModels": "Yaris (2005-2011), Prius (2004-2009), Corolla (E120/E130), Vitz, Belta",
-              "avgRebuiltPrice": "£650 – £2,000",
-              "cta": "Get Quote for 1NZ-FE"
-            },
-            {
-              "code": "2NR-FKE",
-              "fuel": "Petrol",
-              "size": "1.5L",
-              "power": "109 bhp",
-              "compatibleModels": "Yaris (2011-2020), Prius C/Aqua",
-              "avgRebuiltPrice": "£900 – £2,500",
-              "cta": "Get Quote for 2NR-FKE"
-            },
-            {
-              "code": "1NZ-FXE",
-              "fuel": "Hybrid",
-              "size": "1.5L",
-              "power": "76 bhp (engine)",
-              "compatibleModels": "Prius (2004-2009), Yaris Hybrid (2012-2020)",
-              "avgRebuiltPrice": "£1,200 – £3,000",
-              "cta": "Get Quote for 1NZ-FXE"
-            }
-          ]
-        },
-        {
-          "name": "1.8L / 2.0L Petrol & Hybrid",
-          "era": "2000–Present",
-          "failureNote": "1ZZ-FE engines are notorious for high oil consumption due to piston ring clogging (oil return holes). Our rebuilt units include upgraded low-tension piston rings. 2ZR-FXE hybrid engines can suffer EGR cooler blockage and occasional head gasket failure — all our units undergo EGR system cleaning and pressure testing.",
-          "engines": [
-            {
-              "code": "1ZZ-FE",
-              "fuel": "Petrol",
-              "size": "1.8L",
-              "power": "130-136 bhp",
-              "compatibleModels": "Corolla (E120/E130), Avensis (T220/T250), Celica (1999-2005), MR2 (2000-2007)",
-              "avgRebuiltPrice": "£650 – £2,200",
-              "cta": "Get Quote for 1ZZ-FE"
-            },
-            {
-              "code": "2ZR-FE",
-              "fuel": "Petrol",
-              "size": "1.8L",
-              "power": "140-145 bhp",
-              "compatibleModels": "Auris (2006-2012), Corolla (E140/E150), Avensis (T270), Verso (2004-2009)",
-              "avgRebuiltPrice": "£900 – £2,800",
-              "cta": "Get Quote for 2ZR-FE"
-            },
-            {
-              "code": "2ZR-FAE",
-              "fuel": "Petrol",
-              "size": "1.8L",
-              "power": "143-147 bhp",
-              "compatibleModels": "Auris (2012-2018), Corolla (E180), Avensis (T270 facelift)",
-              "avgRebuiltPrice": "£1,000 – £3,000",
-              "cta": "Get Quote for 2ZR-FAE"
-            },
-            {
-              "code": "2ZR-FXE",
-              "fuel": "Hybrid",
-              "size": "1.8L",
-              "power": "98 bhp (engine)",
-              "compatibleModels": "Prius (2010-2015), Auris Hybrid (2010-2018), Corolla Hybrid (2019+), C-HR Hybrid, RAV4 Hybrid (2016-2018)",
-              "avgRebuiltPrice": "£1,500 – £4,000",
-              "cta": "Get Quote for 2ZR-FXE"
-            },
-            {
-              "code": "1AZ-FE",
-              "fuel": "Petrol",
-              "size": "2.0L",
-              "power": "145-150 bhp",
-              "compatibleModels": "RAV4 (2000-2005), Avensis (T220/T250), Camry (2002-2006), Previa (2000-2006)",
-              "avgRebuiltPrice": "£900 – £2,800",
-              "cta": "Get Quote for 1AZ-FE"
-            },
-            {
-              "code": "1AZ-FSE",
-              "fuel": "Petrol",
-              "size": "2.0L",
-              "power": "150-155 bhp",
-              "compatibleModels": "Avensis (T250), RAV4 (2006-2012), Wish",
-              "avgRebuiltPrice": "£1,000 – £3,200",
-              "cta": "Get Quote for 1AZ-FSE"
-            }
-          ]
-        },
-        {
-          "name": "2.0L – 2.5L Diesel",
-          "era": "D-4D, 2005–2015",
-          "failureNote": "The 1AD/2AD D-4D family is known for head gasket failure (often between cylinder 2-3) and oil burning leading to DPF/EGR degradation. Our rebuilt units include revised head gasket design, high-quality injector seals, and full DPF/EGR compatibility testing.",
-          "engines": [
-            {
-              "code": "1AD-FTV",
-              "fuel": "Diesel",
-              "size": "2.0L",
-              "power": "124-126 bhp",
-              "compatibleModels": "Avensis (T250/T270), Auris (2007-2012), Corolla Verso (2005-2009), RAV4 (2006-2012)",
-              "avgRebuiltPrice": "£1,600 – £3,800",
-              "cta": "Get Quote for 1AD-FTV"
-            },
-            {
-              "code": "2AD-FTV",
-              "fuel": "Diesel",
-              "size": "2.2L",
-              "power": "148-175 bhp",
-              "compatibleModels": "Avensis (T250/T270), RAV4 (2006-2012), Auris (2007-2013), Corolla Verso",
-              "avgRebuiltPrice": "£1,800 – £4,200",
-              "cta": "Get Quote for 2AD-FTV"
-            },
-            {
-              "code": "2AD-FHV",
-              "fuel": "Diesel",
-              "size": "2.2L",
-              "power": "175-177 bhp",
-              "compatibleModels": "Avensis (T270), RAV4 (2008-2013), Verso",
-              "avgRebuiltPrice": "£1,900 – £4,500",
-              "cta": "Get Quote for 2AD-FHV"
-            }
-          ]
-        },
-        {
-          "name": "2.0L – 3.0L Diesel",
-          "era": "D-4D, 2000–2015",
-          "failureNote": "1KD-FTV engines are known for injector sealing issues and piston cracking (especially at higher mileages). The 1GD-FTV suffers from occasional DPF regeneration problems and turbocharger failures. Our rebuilt units include upgraded injector seals, new DPF sensors, and tested turbocharger units.",
+          "name": "Diesel Engines (Most Replaced in the UK)",
+          "era": "Extracted from Toyota diesel engines (most replaced in the uk) technical replacement data.",
+          "failureNote": "Suction Control Valve (SCV) failure - Causes rough idle, erratic fuel pressure, stalling and black smoke; a very common 1KD-FTV issue, Injector failure - Can cause black smoke, power loss and hard starting; injector failure is well documented on high-mileage units",
           "engines": [
             {
               "code": "1KD-FTV",
+              "title": "3.0 D-4D Diesel",
+              "familyHeading": "1KD-FTV - 3.0 D-4D Diesel",
               "fuel": "Diesel",
-              "size": "3.0L",
-              "power": "161-170 bhp",
-              "compatibleModels": "Hilux (2005-2015), Land Cruiser (120/150 Series), HiAce (2005-2013)",
-              "avgRebuiltPrice": "£2,500 – £5,500",
-              "cta": "Get Quote for 1KD-FTV"
+              "size": "3.0 Litre",
+              "power": "163-170 hp",
+              "compatibleModels": "Hilux (2000-2015), Land Cruiser Prado 120/150, HiAce H200",
+              "avgRebuiltPrice": "£2,500 - £4,500 supply only",
+              "cta": "→ Get quotes for 1KD-FTV Toyota engine replacement"
             },
             {
-              "code": "2KD-FTV",
+              "code": "2AD-FTV",
+              "title": "2.2 D-4D Diesel",
+              "familyHeading": "2AD-FTV - 2.2 D-4D Diesel",
               "fuel": "Diesel",
-              "size": "2.5L",
-              "power": "88-120 bhp",
-              "compatibleModels": "Hilux (2005-2015), HiAce (2005-2013), Fortuner",
-              "avgRebuiltPrice": "£1,800 – £4,000",
-              "cta": "Get Quote for 2KD-FTV"
+              "size": "2.2 Litre",
+              "power": "136-148 hp",
+              "compatibleModels": "Avensis T25/T27, RAV4 XA30, Corolla E150, Verso",
+              "avgRebuiltPrice": "£2,000 - £3,500 supply only",
+              "cta": "→ Get quotes for 2AD-FTV Toyota engine replacement"
             },
             {
-              "code": "2GD-FTV",
+              "code": "2AD-FHV",
+              "title": "2.2 D-4D Diesel (High Output)",
+              "familyHeading": "2AD-FHV - 2.2 D-4D Diesel (High Output)",
               "fuel": "Diesel",
-              "size": "2.4L",
-              "power": "148-150 bhp",
-              "compatibleModels": "Hilux (2015-2020), HiAce (2013-2019), Fortuner",
-              "avgRebuiltPrice": "£2,200 – £5,000",
-              "cta": "Get Quote for 2GD-FTV"
+              "size": "2.2 Litre",
+              "power": "148-175 hp",
+              "compatibleModels": "Avensis T25/T27, RAV4 XA30",
+              "avgRebuiltPrice": "£2,200 - £3,800 supply only",
+              "cta": "→ Get quotes for 2AD-FHV Toyota engine replacement"
             },
             {
-              "code": "1GD-FTV",
+              "code": "1AD-FTV",
+              "title": "2.0 D-4D Diesel",
+              "familyHeading": "1AD-FTV - 2.0 D-4D Diesel",
               "fuel": "Diesel",
-              "size": "2.8L",
-              "power": "174-201 bhp",
-              "compatibleModels": "Hilux (2015+), Land Cruiser (150/200 Series), Fortuner, HiLux GR Sport",
-              "avgRebuiltPrice": "£2,800 – £6,500",
-              "cta": "Get Quote for 1GD-FTV"
+              "size": "2.0 Litre",
+              "power": "124-126 hp",
+              "compatibleModels": "Avensis T25/T27, Corolla E150, RAV4 XA30",
+              "avgRebuiltPrice": "£1,800 - £3,000 supply only",
+              "cta": "→ Get quotes for 1AD-FTV Toyota engine replacement"
+            },
+            {
+              "code": "1WW",
+              "title": "1.6 D-4D Diesel",
+              "familyHeading": "1WW - 1.6 D-4D Diesel",
+              "fuel": "Diesel",
+              "size": "1.6 Litre",
+              "power": "110-112 hp",
+              "compatibleModels": "Avensis T27 (facelift), Auris E180",
+              "avgRebuiltPrice": "£2,000 - £3,200 supply only",
+              "cta": "→ Get quotes for 1WW Toyota engine replacement"
+            },
+            {
+              "code": "1ND-TV",
+              "title": "1.4 D-4D Diesel",
+              "familyHeading": "1ND-TV - 1.4 D-4D Diesel",
+              "fuel": "Diesel",
+              "size": "1.4 Litre",
+              "power": "75-90 hp",
+              "compatibleModels": "Yaris XP90, Aygo (first generation)",
+              "avgRebuiltPrice": "£1,200 - £2,200 supply only",
+              "cta": "→ Get quotes for 1ND-TV Toyota engine replacement"
             }
           ]
         },
         {
-          "name": "Modern Dynamic Force Petrol & Performance",
-          "era": "2017–Present",
-          "failureNote": "These newer Dynamic Force engines are generally reliable, but carbon buildup on intake valves (direct injection) and coolant bypass valve failures have been reported. Our rebuilt units include walnut-blasted valve cleaning and upgraded coolant system components. The G16E-GTS three-cylinder in GR models can suffer excessive crankcase pressure — our performance builds include upgraded PCV systems",
+          "name": "Petrol Engines (Most Replaced in the UK)",
+          "era": "Extracted from Toyota petrol engines (most replaced in the uk) technical replacement data.",
+          "failureNote": "Excessive oil consumption (pre-2012 engines) - Original piston ring design allows oil to seep into the combustion chamber; a well-documented issue on early 1NR-FE units, VVT-i actuator rattle - Particularly on cold starts; can indicate wear in the timing system",
           "engines": [
             {
+              "code": "1NR-FE",
+              "title": "1.3 VVT-i Petrol",
+              "familyHeading": "1NR-FE - 1.3 VVT-i Petrol",
+              "fuel": "Petrol",
+              "size": "1.3 Litre",
+              "power": "99-100 hp",
+              "compatibleModels": "Yaris XP90/XP130, Aygo, Etios",
+              "avgRebuiltPrice": "£800 - £1,500 supply only",
+              "cta": "→ Get quotes for 1NR-FE Toyota engine replacement"
+            },
+            {
+              "code": "1ZR-FE",
+              "title": "1.8 VVT-i Petrol",
+              "familyHeading": "1ZR-FE - 1.8 VVT-i Petrol",
+              "fuel": "Petrol",
+              "size": "1.8 Litre",
+              "power": "170-190 hp",
+              "compatibleModels": "Auris E150/E180, Corolla E140/E150/E160, Avensis T270, Verso AR20",
+              "avgRebuiltPrice": "£1,000 - £2,000 supply only",
+              "cta": "→ Get quotes for 1ZR-FE Toyota engine replacement"
+            },
+            {
+              "code": "2ZR-FE",
+              "title": "1.8 VVT-i Petrol",
+              "familyHeading": "2ZR-FE - 1.8 VVT-i Petrol",
+              "fuel": "Petrol",
+              "size": "1.8 Litre",
+              "power": "130-140 hp",
+              "compatibleModels": "Corolla E140/E150, Auris E150",
+              "avgRebuiltPrice": "£1,000 - £1,800 supply only",
+              "cta": "→ Get quotes for 2ZR-FE Toyota engine replacement"
+            },
+            {
               "code": "M20A-FKS",
+              "title": "2.0 Dynamic Force Petrol",
+              "familyHeading": "M20A-FKS - 2.0 Dynamic Force Petrol",
               "fuel": "Petrol",
-              "size": "2.0L",
-              "power": "168-171 bhp",
-              "compatibleModels": "Corolla (E210), C-HR (2018+), RAV4 (2019+), Camry (2018+)",
-              "avgRebuiltPrice": "£1,800 – £4,500",
-              "cta": "Get Quote for M20A-FKS"
+              "size": "2.0 Litre",
+              "power": "150-171 hp",
+              "compatibleModels": "Corolla E210, Camry XV70, C-HR, Yaris Cross",
+              "avgRebuiltPrice": "£1,800 - £3,000 supply only",
+              "cta": "→ Get quotes for M20A-FKS Toyota engine replacement"
             },
             {
-              "code": "M20A-FXS",
-              "fuel": "Hybrid",
-              "size": "2.0L",
-              "power": "143-152 bhp (engine)",
-              "compatibleModels": "Corolla Hybrid (2019+), C-HR Hybrid (2019+), RAV4 Hybrid (2020+)",
-              "avgRebuiltPrice": "£2,200 – £5,000",
-              "cta": "Get Quote for M20A-FXS"
-            },
-            {
-              "code": "A25A-FKS",
+              "code": "8NR-FTS",
+              "title": "1.2 Turbo Petrol",
+              "familyHeading": "8NR-FTS - 1.2 Turbo Petrol",
               "fuel": "Petrol",
-              "size": "2.5L",
-              "power": "203-206 bhp",
-              "compatibleModels": "Camry (2018+), RAV4 (2019+), Avalon",
-              "avgRebuiltPrice": "£2,200 – £5,500",
-              "cta": "Get Quote for A25A-FKS"
-            },
+              "size": "1.2 Litre",
+              "power": "114-116 hp",
+              "compatibleModels": "C-HR (2016-2021), Auris E180",
+              "avgRebuiltPrice": "£1,500 - £2,500 supply only",
+              "cta": "→ Get quotes for 8NR-FTS Toyota engine replacement"
+            }
+          ]
+        },
+        {
+          "name": "Hybrid / Electrified Engines",
+          "era": "Extracted from Toyota hybrid / electrified engines technical replacement data.",
+          "failureNote": "Intake valve carbon buildup (pre-2021 builds) - Approximately 14% of pre-2021 engines required induction cleaning by 60,000 miles under city conditions, Coolant bypass valve failure - A known weak point on the A25A-FXS, typically around 60,000 miles",
+          "engines": [
             {
               "code": "A25A-FXS",
-              "fuel": "Hybrid",
-              "size": "2.5L",
-              "power": "176-188 bhp",
-              "compatibleModels": "RAV4 Hybrid (2019+), Camry Hybrid (2019+), Highlander, Sienna",
-              "avgRebuiltPrice": "£2,500 – £6,000",
-              "cta": "Get Quote for A25A-FXS"
+              "title": "2.5 Hybrid (HEV)",
+              "familyHeading": "A25A-FXS - 2.5 Hybrid (HEV)",
+              "fuel": "HEV (Petrol + Electric)",
+              "size": "2.5 Litre",
+              "power": "192-201 hp (engine only)",
+              "compatibleModels": "RAV4 XA50 Hybrid, Camry XV70 Hybrid, Highlander XU70 Hybrid",
+              "avgRebuiltPrice": "Quote required",
+              "cta": "→ Get quotes for A25A-FXS Toyota engine replacement"
             },
             {
-              "code": "G16E-GTS",
-              "fuel": "Performance",
-              "size": "1.6L",
-              "power": "261-300+ bhp",
-              "compatibleModels": "GR Yaris (2020+), GR Corolla (2023+)",
-              "avgRebuiltPrice": "£4,000 – £9,000",
-              "cta": "Get Quote for G16E-GTS"
+              "code": "2ZR-FXE",
+              "title": "1.8 Hybrid (HEV)",
+              "familyHeading": "2ZR-FXE - 1.8 Hybrid (HEV)",
+              "fuel": "HEV (Petrol + Electric)",
+              "size": "1.8 Litre",
+              "power": "97-98 hp (engine only)",
+              "compatibleModels": "Prius XW30/XW50, Auris E180 Hybrid, Corolla E210 Hybrid, C-HR Hybrid",
+              "avgRebuiltPrice": "Quote required",
+              "cta": "→ Get quotes for 2ZR-FXE Toyota engine replacement"
             }
           ]
         }
@@ -2674,105 +2597,95 @@
       "closing": "Not sure which engine size your Toyota needs? Enter your registration number and we'll match you to the exact engine code and displacement — instantly. All engines supplied with a minimum 12‑month warranty from UK Toyota specialists."
     },
     "fuelTypes": {
-      "tag": "Complete Toyota Engines List",
-      "h2": "Toyota Engines by Fuel Type",
-      "intro": "Choose your Toyota engine by fuel type to compare realistic replacement prices, known brand-wide issues, and UK specialist supply – from the most popular diesel workhorses to the latest electrified powertrains.",
+      "tag": "Toyota Engines by Fuel Type",
+      "h2": "Toyota Diesel vs Petrol vs Hybrid - Which Fuel Type Is Right For You?",
+      "intro": "Compare Toyota engine fuel types by replacement costs, running costs, reliability reputation, and model availability. Use this guide to understand your options - then enter your registration for an instant match and quotes from UK Toyota specialists.",
       "items": [
         {
-          "title": "Toyota Diesel Engines",
-          "description": "Toyota diesel engines cover many of the brand's highest-mileage UK models. Replacement demand is usually driven by timing system wear, injector and turbo faults, plus EGR or DPF-related damage once repeat short-journey use starts affecting reliability.",
-          "descriptor": "High-mileage motorway and SUV applications",
+          "title": "Diesel Engines",
+          "description": "Toyota's diesel range covers 1.4 to 3.0-litre D-4D units found in the Yaris, Auris, Avensis, RAV4, Hilux and Land Cruiser - a capable but increasingly phased-out choice as Toyota pivots to hybrid technology.",
+          "descriptor": "Toyota's diesel range covers 1.4 to 3.0-litre D-4D units found in the Yaris, Auris, Avensis, RAV4, Hilux and Land Cruiser - a capable but increasingly phased-out choice as Toyota pivots to hybrid technology.",
           "families": [
-            "2.0L – 2.5L Diesel",
-            "2.0L – 3.0L Diesel"
+            "£1,095 - £4,500 (supply only)",
+            "Yaris 1.4 D-4D: £1,200 - £2,200",
+            "Auris 2.0 D-4D: £1,095 - £2,500",
+            "Avensis 2.2 D-4D: £1,500 - £3,000",
+            "RAV4 2.2 D-4D: £1,800 - £3,500"
           ],
-          "foundIn": [
-            "Toyota Alphard Engines",
-            "Toyota Auris Engines",
-            "Toyota Avensis Engines",
-            "Toyota Aygo Engines"
-          ],
-          "knownFor": [
-            "Injector seal leakage (diesel in oil)",
-            "turbo sticking",
-            "EGR clogging",
-            "N47 – timing chain stretch (pre-2014)"
-          ],
-          "typicalModels": [
-            "Toyota Alphard Engines",
-            "Toyota Auris Engines",
-            "Toyota Avensis Engines",
-            "Toyota Aygo Engines"
-          ],
-          "importantNotes": [
-            "Short-journey use increases DPF, EGR, and oil-dilution risk on many diesel engines.",
-            "A documented service history matters more on diesel replacements because injector, turbo, and timing faults often build gradually."
-          ],
-          "cta": "Compare Toyota diesel engine prices"
-        },
-        {
-          "title": "Toyota Petrol Engines",
-          "description": "Toyota petrol engines span everything from core daily-driver models to higher-output performance variants. Most replacement enquiries start with timing chain noise, oil consumption, cooling-system failure, or internal wear that makes a warranted replacement more sensible than repeated repairs.",
-          "descriptor": "Core passenger-car and performance applications",
-          "families": [
-            "Small Petrol & Hybrid Engines",
-            "1.8L / 2.0L Petrol & Hybrid",
-            "Modern Dynamic Force Petrol & Performance"
-          ],
-          "foundIn": [
-            "Toyota Alphard Engines",
-            "Toyota Auris Engines",
-            "Toyota Avensis Engines",
-            "Toyota Aygo Engines"
-          ],
-          "knownFor": [
-            "Coil pack failure",
-            "water pump leak",
-            "timing chain stretch (high mileage)",
-            "1NR-FE timing chain stretch"
-          ],
-          "typicalModels": [
-            "Toyota Alphard Engines",
-            "Toyota Auris Engines",
-            "Toyota Avensis Engines",
-            "Toyota Aygo Engines"
-          ],
-          "importantNotes": [
-            "Cold-start rattles, overheating history, and oil use are the biggest warning signs before a petrol engine replacement becomes necessary.",
-            "Direct-injection petrol engines often need specialist attention for carbon build-up alongside the main mechanical repair."
-          ],
-          "cta": "Compare Toyota petrol engine prices"
-        },
-        {
-          "title": "Toyota Hybrid Engines",
-          "description": "Toyota hybrid powertrains combine combustion engines with electric assistance across newer electrified models. Replacement demand is lower than traditional petrol or diesel units, but generator-engine faults, inverter issues, cooling-system failures, and calibration-sensitive repairs still require specialist support.",
-          "descriptor": "Electrified models with combustion backup",
-          "families": [
-            "Small Petrol & Hybrid Engines",
-            "1.8L / 2.0L Petrol & Hybrid",
-            "Modern Dynamic Force Petrol & Performance"
-          ],
-          "foundIn": [
-            "Toyota Alphard Engines",
-            "Toyota Auris Engines",
-            "Toyota Avensis Engines",
-            "Toyota Aygo Engines"
-          ],
+          "foundIn": [],
           "knownFor": [],
-          "typicalModels": [
-            "Toyota Alphard Engines",
-            "Toyota Auris Engines",
-            "Toyota Avensis Engines",
-            "Toyota Aygo Engines"
-          ],
+          "typicalModels": [],
           "importantNotes": [
-            "Hybrid faults often need both mechanical and high-voltage diagnosis, so replacement decisions should be made by specialists familiar with the full system.",
-            "Battery cooling, inverter health, and software calibration are just as important as the combustion-engine condition on hybrid models."
+            "High-mileage motorway drivers who can keep the DPF hot and regenerating",
+            "Owners who prioritise fuel economy over refinement",
+            "Those needing towing capability or off-road performance (Hilux, Land Cruiser)",
+            "Urban commuters doing short journeys - DPF issues are almost guaranteed",
+            "Anyone concerned about tightening ULEZ and clean air zone restrictions",
+            "Typical searches: Toyota diesel engine replacement, Toyota D-4D engine problems, Toyota DPF regeneration issues, Toyota Hilux injector failure, Toyota Avensis 2.2 D-4D engine problems, Toyota RAV4 diesel engine replacement cost, Toyota 1KD-FTV engine for sale → Get quotes for Toyota Diesel replacement engines → Not sure which diesel you have? \\[Enter your registration number\\] for an instant match"
           ],
-          "cta": "Compare Toyota hybrid engine prices"
+          "cta": "→ Get quotes for Toyota Diesel replacement engines"
+        },
+        {
+          "title": "Petrol Engines",
+          "description": "Toyota's petrol range spans 1.0-litre VVT-i units to the high-performance G16E-GTS found in the GR Yaris and GR Corolla - offering a blend of reliability, efficiency and driving enjoyment.",
+          "descriptor": "Toyota's petrol range spans 1.0-litre VVT-i units to the high-performance G16E-GTS found in the GR Yaris and GR Corolla - offering a blend of reliability, efficiency and driving enjoyment.",
+          "families": [
+            "£695 - £3,000 (supply only)",
+            "Aygo 1.0 VVT-i: £695 - £1,200",
+            "Yaris 1.0/1.3 VVT-i: £800 - £1,500",
+            "Auris/Corolla 1.8 VVT-i: £1,000 - £2,000",
+            "Avensis 2.0 Valvematic: £1,200 - £2,200"
+          ],
+          "foundIn": [],
+          "knownFor": [],
+          "typicalModels": [],
+          "importantNotes": [
+            "Drivers covering average mileage (8,000-12,000 miles/year)",
+            "Those who value responsive, refined engines over diesel torque",
+            "Urban drivers who want to avoid DPF-related issues",
+            "Enthusiasts seeking performance models like the GR Yaris",
+            "High-mileage drivers who would benefit from diesel economy",
+            "Typical searches: Toyota petrol engine replacement, Toyota VVT-i engine problems, Toyota oil consumption issues, Toyota Yaris 1.3 engine replacement cost, Toyota Corolla 1.8 VVT-i engine problems, Toyota GR Yaris engine for sale, Toyota 2ZR-FE engine problems → Compare Toyota Petrol engine prices → Not sure which petrol you have? \\[Enter your registration number\\] for an instant match"
+          ],
+          "cta": "→ Compare Toyota Petrol engine prices"
+        },
+        {
+          "title": "Hybrid & Mild Hybrid (HEV) Engines",
+          "description": "Toyota's hybrid range spans 1.5 to 2.5-litre systems across the Yaris, Auris, Corolla, Prius, C-HR and RAV4 - featuring Toyota's legendary Hybrid Synergy Drive technology with proven durability.",
+          "descriptor": "Toyota's hybrid range spans 1.5 to 2.5-litre systems across the Yaris, Auris, Corolla, Prius, C-HR and RAV4 - featuring Toyota's legendary Hybrid Synergy Drive technology with proven durability.",
+          "families": [
+            "HEV (Full Hybrid): Uses a petrol engine paired with one or two electric motors and a nickel-metal hydride or lithium-ion battery - can run on electric power alone at low speeds",
+            "PHEV (Plug-in Hybrid): Larger battery that can be charged from an external source, offering extended electric-only range (C-HR PHEV, Prius Plug-in)",
+            "Battery location: Under the rear seats (most models) or under the floor (RAV4, bZ4X)"
+          ],
+          "foundIn": [],
+          "knownFor": [],
+          "typicalModels": [],
+          "importantNotes": [
+            "City commuters benefiting from electric-only driving and regenerative braking",
+            "Company car drivers looking to reduce BIK tax liability",
+            "Drivers wanting the lowest running costs for urban driving",
+            "Those wanting to avoid DPF issues associated with diesel",
+            "High-mileage motorway drivers who won't see the full benefit of hybrid assistance",
+            "Typical searches: Toyota hybrid engine replacement, Toyota hybrid battery replacement cost, Toyota C-HR hybrid problems, Toyota Prius hybrid battery replacement, Toyota Auris hybrid engine fault, Toyota RAV4 hybrid engine problems, Toyota Corolla hybrid reliability → Enquire about Toyota Hybrid engine availability → Not sure which hybrid you have? \\[Enter your registration number\\] for an instant match"
+          ],
+          "cta": "Get quotes for Toyota Toyota Hybrid & Mild Hybrid (HEV) Engines engines"
+        },
+        {
+          "title": "Electric Powertrains",
+          "description": "Toyota's expanding electric range includes the bZ4X, Urban Cruiser and C-HR+ - electric motors rarely fail, but we connect with UK specialists for battery/module repair.",
+          "descriptor": "Toyota's expanding electric range includes the bZ4X, Urban Cruiser and C-HR+ - electric motors rarely fail, but we connect with UK specialists for battery/module repair.",
+          "families": [],
+          "foundIn": [],
+          "knownFor": [],
+          "typicalModels": [],
+          "importantNotes": [
+            "Typical searches: Toyota bZ4X battery replacement, Toyota electric motor repair, Toyota Urban Cruiser battery issues, Toyota C-HR+ range, Toyota EV battery module replacement → Enquire about Toyota Electric motor repair or replacement → Not sure which electric Toyota you have? \\[Enter your registration number\\] for an instant match"
+          ],
+          "cta": "Get quotes for Toyota Toyota Electric Powertrains engines"
         }
       ],
-      "closing": "Not sure which fuel type your Toyota has? Enter your registration number above to instantly identify your model, engine code, fuel system and compatible replacement options – all backed by a minimum 12‑month unlimited mileage warranty from UK Toyota specialists."
+      "closing": "Not sure which fuel type your Toyota has? Enter your registration number for an instant match."
     },
     "engineCodeDirectory": {
       "tag": "Engine Codes",
