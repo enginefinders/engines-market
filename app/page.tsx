@@ -55,6 +55,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   const structuredData = buildHomeStructuredData(homeEngineTypeCards);
+  const initialTimestamp = new Date().toISOString();
 
   return (
     <>
@@ -66,7 +67,7 @@ export default function Home() {
       <div id="top" className="bg-white">
         <HomeHeroSection data={homeHeroData} />
         <HomeHowItWorksSection steps={homeHowItWorksSteps} />
-        <HomeLiveFeedSection rows={homeLiveFeedRows} />
+        <HomeLiveFeedSection rows={homeLiveFeedRows} initialTimestamp={initialTimestamp} />
         <HomeEngineTypesSection cards={homeEngineTypeCards} />
         <HomeBrandGridSection brands={homeBrandPriceDirectory} featuredSlugs={homeFeaturedBrandSlugs} />
         <HomeDecisionHubSection />

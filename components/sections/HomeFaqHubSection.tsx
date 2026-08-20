@@ -1,6 +1,6 @@
 "use client";
 
-import { useDeferredValue, useEffect, useMemo, useRef, useState, type KeyboardEvent, type ReactNode } from "react";
+import { useDeferredValue, useRef, useState, type KeyboardEvent, type ReactNode } from "react";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
 import {
@@ -81,21 +81,6 @@ const mobileClusterTitles: Record<string, string> = {
   chart: "Value",
   star: "General"
 };
-
-// 👇 Helper to calculate visible limit based on Tailwind breakpoints
-function getVisibleLimit() {
-    if (typeof window === 'undefined') return 3; // SSR fallback
-    const width = window.innerWidth;
-    if (width >= 1170) return 7; // lg and above
-    if (width >= 1050) return 6;
-    if (width >= 940) return 5;
-    if (width >= 820) return 4;
-    if (width >= 768) return 3;
-    if (width >= 767) return 6;
-    if (width >= 580) return 5;
-    if (width >= 500) return 4;  // sm
-    return 3;                    // default (phone)
-}
 
 function SearchIcon() {
     return (
@@ -349,29 +334,16 @@ export default function HomeFaqHubSection() {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const dropdownRef = useRef<HTMLDivElement>(null);
 
-    // 👇 Responsive visible limit state (3 for phone, 5 for sm, 6 for md, 7 for lg+)
-    const [visibleLimit, setVisibleLimit] = useState(getVisibleLimit);
-
-    useEffect(() => {
-        const updateLimit = () => setVisibleLimit(getVisibleLimit());
-        window.addEventListener('resize', updateLimit);
-        return () => window.removeEventListener('resize', updateLimit);
-    }, []);
-
-    // Slice arrays based on device limit
-    const visibleBrands = clusterBrands.slice(0, visibleLimit);
-    const hiddenBrands = clusterBrands.slice(visibleLimit);
+    // Keep the first render identical on server and client while preserving the approved desktop bar.
+    const visibleBrandCount = 7;
+    const visibleBrands = clusterBrands.slice(0, visibleBrandCount);
+    const hiddenBrands = clusterBrands.slice(visibleBrandCount);
 
     const currentBrand = clusterBrands.find((brand) => getBrandId(brand.brand) === activeBrand) ?? clusterBrands[0];
     const faqItems = currentBrand?.faqs ?? [];
-
-    const filteredFaqs = useMemo(() => {
-        if (!deferredQuery) {
-            return faqItems;
-        }
-
-        return faqItems.filter((faq) => buildQuestionSearchText(faq.question, faq.answer).includes(deferredQuery));
-    }, [faqItems, deferredQuery]);
+    const filteredFaqs = deferredQuery
+        ? faqItems.filter((faq) => buildQuestionSearchText(faq.question, faq.answer).includes(deferredQuery))
+        : faqItems;
 
     const visibleCount = filteredFaqs.length;
     

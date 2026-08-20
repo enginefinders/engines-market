@@ -93,11 +93,11 @@ export const knowledgeLinks: NavigationLink[] = [
 ];
 
 export const insightLinks: NavigationLink[] = [
-  { label: "UK Engine Price Index", href: "/insights/uk-engine-price-index" },
-  { label: "Engine Replacement Statistics", href: "/insights/uk-engine-replacement-statistics" },
-  { label: "Most Replaced Engines", href: "/insights/most-replaced-engines-uk" },
-  { label: "Most Reliable Engines", href: "/insights/most-reliable-diesel-engines" },
-  { label: "UK Market Report 2026", href: "/insights/uk-engine-market-report-2026" },
+  { label: "UK Engine Price Index", href: "/insights/uk-engine-price-index.html" },
+  { label: "Engine Replacement Statistics", href: "/insights/uk-engine-replacement-statistics.html" },
+  { label: "Most Replaced Engines", href: "/insights/most-replaced-engines-uk.html" },
+  { label: "Most Reliable Engines", href: "/insights/most-reliable-diesel-engines.html" },
+  { label: "UK Market Report 2026", href: "/insights/uk-engine-market-report-2026.html" },
 ];
 
 export const headerNavigation: NavigationGroup[] = [

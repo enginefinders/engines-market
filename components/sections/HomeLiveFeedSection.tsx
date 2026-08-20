@@ -8,6 +8,7 @@ import type { HomeLiveFeedRow } from "@/lib/homepageData";
 
 type Props = {
   rows: HomeLiveFeedRow[];
+  initialTimestamp?: string;
 };
 
 function ChevronDownIcon({ open }: { open: boolean }) {
@@ -19,14 +20,6 @@ function ChevronDownIcon({ open }: { open: boolean }) {
       aria-hidden="true"
     >
       <path d="m6 9 6 6 6-6" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
-
-function MessageIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" aria-hidden="true">
-      <path d="M5 5.5h14A1.5 1.5 0 0 1 20.5 7v9A1.5 1.5 0 0 1 19 17.5H9l-4.5 4V7A1.5 1.5 0 0 1 5 5.5Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
     </svg>
   );
 }
@@ -51,11 +44,11 @@ function formatUpdatedAt(clock: Date) {
   }).format(clock);
 }
 
-export default function HomeLiveFeedSection({ rows }: Props) {
+export default function HomeLiveFeedSection({ rows, initialTimestamp }: Props) {
   const [activeBrand, setActiveBrand] = useState("all");
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [infoOpen, setInfoOpen] = useState(false);
-  const [clock, setClock] = useState(() => new Date());
+  const [clock, setClock] = useState(() => new Date(initialTimestamp ?? "2026-08-20T12:00:00.000Z"));
   const sectionImageSrc = "/Home/livemarketdatabanner.webp";
 
   useEffect(() => {
