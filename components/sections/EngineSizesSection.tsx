@@ -195,14 +195,14 @@ function SizeAccordionCard({
   onToggle: () => void;
   ui: NonNullable<EngineSizesData["ui"]>;
 }) {
-  const isBrandDisplay = displayMode === "brand";
+  const isReferenceDisplay = displayMode === "brand" || displayMode === "document";
   const openShellClass =
-    isBrandDisplay && open
+    isReferenceDisplay && open
       ? "border-[#bfd5f8] shadow-[0_0_0_1px_rgba(59,130,246,0.16),0_0_24px_rgba(59,130,246,0.16),0_18px_36px_rgba(12,29,53,0.08)]"
       : "border-[#e5e7eb] shadow-[0_2px_8px_rgba(13,27,46,0.05)]";
-  const engineCodesLabel = displayMode === "brand" ? "ENGINE CODE(S)" : (ui.engineCodesLabel || "");
-  const compatibleModelsLabel = displayMode === "brand" ? "COMPATIBLE MODELS (UK)" : (ui.compatibleModelsLabel || "");
-  const productionYearsLabel = displayMode === "brand" ? "PRODUCTION YEARS" : (ui.productionYearsLabel || "");
+  const engineCodesLabel = isReferenceDisplay ? "ENGINE CODE(S)" : (ui.engineCodesLabel || "");
+  const compatibleModelsLabel = isReferenceDisplay ? "COMPATIBLE MODELS (UK)" : (ui.compatibleModelsLabel || "");
+  const productionYearsLabel = isReferenceDisplay ? "PRODUCTION YEARS" : (ui.productionYearsLabel || "");
 
   return (
     <div className={`overflow-hidden rounded-[12px] border bg-white transition-all duration-200 ${openShellClass}`}>
@@ -210,7 +210,7 @@ function SizeAccordionCard({
         type="button"
         onClick={onToggle}
         className={`flex w-full items-start gap-3 px-4 py-[13px] text-left transition hover:bg-[#fafafa] ${
-          isBrandDisplay && open ? "border-b border-[#dbe7f5] bg-[linear-gradient(180deg,#ffffff_0%,#fbfdff_100%)]" : ""
+          isReferenceDisplay && open ? "border-b border-[#dbe7f5] bg-[linear-gradient(180deg,#ffffff_0%,#fbfdff_100%)]" : ""
         }`}
       >
         <span className="mt-[2px] h-7 w-[4px] flex-none rounded-full bg-[#22c55e]" />
@@ -233,7 +233,7 @@ function SizeAccordionCard({
       </button>
 
       {open ? (
-        <div className={`${isBrandDisplay ? "" : "border-t border-[#eef2f7]"} px-4 py-[14px]`}>
+        <div className={`${isReferenceDisplay ? "" : "border-t border-[#eef2f7]"} px-4 py-[14px]`}>
           {displayMode === "brand" ? (
             <div className="font-['Manrope'] text-[14px] font-extrabold leading-[1.25] text-[#0d1b2e]">
               {dynamicBrandLabel

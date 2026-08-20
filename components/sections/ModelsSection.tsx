@@ -299,7 +299,7 @@ export default function ModelsSection({ data, brandSlug, documentMode = false }:
                       src={model.image || `/images/brands/${brandSlug}/models/${brandSlug}-${model.slug}-small.webp`}
                       alt={model.h3}
                       fill
-                      className="object-contain p-1.5"
+                      className="scale-[1.04] object-cover object-center"
                       sizes="(max-width: 767px) 50vw, 25vw"
                     />
                   </div>

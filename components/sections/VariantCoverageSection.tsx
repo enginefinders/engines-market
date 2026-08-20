@@ -590,25 +590,19 @@ export default function VariantCoverageSection({
                         type="button"
                         onClick={() => toggleCard(card.slug)}
                         aria-expanded={isOpen}
-                        className="flex h-[224px] w-full flex-col items-center px-3 pb-4 pt-3 text-center"
+                        className="flex h-[252px] w-full flex-col items-center px-0 pb-4 pt-0 text-center"
                       >
-                        <div className="flex min-h-[82px] w-full items-center justify-center py-[1px]">
-                          <div className="relative h-[84px] w-full max-w-[132px]">
+                        <div className="relative h-[118px] w-full overflow-hidden rounded-t-[12px] bg-[linear-gradient(180deg,#f8fbff_0%,#eef3f9_100%)]">
                             <Image
                               src={vehicleImage.src}
                               alt={shortName}
                               fill
-                              className={
-                                vehicleImage.zoomed
-                                  ? "scale-[1.24] object-cover object-center"
-                                  : "object-contain"
-                              }
-                              sizes="132px"
+                              className="scale-[1.12] object-cover object-top"
+                              sizes="(max-width: 767px) 50vw, 25vw"
                             />
-                          </div>
                         </div>
 
-                        <div className="mt-2.5 flex w-full flex-1 flex-col">
+                        <div className="mt-2 flex w-full flex-1 flex-col px-3">
                           <div className="min-h-[32px] font-['Manrope'] text-[13px] font-extrabold leading-[1.18] text-[#0d1b2e]">
                             {shortName}
                           </div>

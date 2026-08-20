@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState, type ReactNode } from "react";
+import { useEffect, useMemo, useState, type ReactNode } from "react";
 import type { EngineCodesData } from "@/types/brand";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
@@ -135,14 +135,6 @@ function CodeIcon() {
   );
 }
 
-function ListIcon({ className = "h-7 w-7" }: { className?: string }) {
-  return (
-    <SvgIcon className={className}>
-      <path d="M8 6h11M8 12h11M8 18h11M4 6h.01M4 12h.01M4 18h.01" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
-    </SvgIcon>
-  );
-}
-
 function Chevron({ open = false, className = "h-4 w-4" }: { open?: boolean; className?: string }) {
   return (
     <SvgIcon className={`${className} transition-transform ${open ? "rotate-180" : ""}`}>
@@ -266,22 +258,54 @@ export default function EngineCodesSection({ data, bgImage }: Props) {
   const brand = brandFromHeading(data);
   const tabs = useMemo(() => buildTabs(data), [data]);
   const [activeTab, setActiveTab] = useState(0);
-  const [activeSlide, setActiveSlide] = useState(0);
+  const [activeStartIndex, setActiveStartIndex] = useState(0);
   const [expandedCards, setExpandedCards] = useState<Record<string, boolean>>({});
-  const [directoryOpen, setDirectoryOpen] = useState(false);
+  const [cardsPerSlide, setCardsPerSlide] = useState(4);
+  const [selectedEngineCode, setSelectedEngineCode] = useState<string | null>(null);
+  const [openDropdownTab, setOpenDropdownTab] = useState<FuelTab["key"] | null>(null);
   const safeActiveTab = activeTab < tabs.length ? activeTab : 0;
   const currentTab = tabs[safeActiveTab] ?? tabs[0];
-  const allEngines = tabs.flatMap((tab) => tab.items);
-  const cardsPerSlide = 4;
-  const slideCount = Math.max(1, Math.ceil((currentTab?.items.length ?? 0) / cardsPerSlide));
-  const safeSlide = Math.min(activeSlide, slideCount - 1);
-  const visibleEngines = (currentTab?.items ?? []).slice(safeSlide * cardsPerSlide, safeSlide * cardsPerSlide + cardsPerSlide);
+  const currentItems = currentTab?.items ?? [];
+  const slideCount = Math.max(1, Math.ceil(currentItems.length / cardsPerSlide));
+  const maxStartIndex = Math.max(0, currentItems.length - 1);
+  const safeStartIndex = Math.min(activeStartIndex, maxStartIndex);
+  const activePage = Math.min(slideCount - 1, Math.floor(safeStartIndex / cardsPerSlide));
+  const visibleEngines =
+    currentItems.length <= cardsPerSlide
+      ? currentItems
+      : Array.from({ length: Math.min(cardsPerSlide, currentItems.length) }, (_, offset) => currentItems[(safeStartIndex + offset) % currentItems.length]);
+  const isTabDropdownOpen = openDropdownTab === currentTab.key;
+
+  useEffect(() => {
+    const syncCardsPerSlide = () => {
+      if (typeof window === "undefined") return;
+      setCardsPerSlide(window.innerWidth < 640 ? 1 : 4);
+    };
+
+    syncCardsPerSlide();
+    window.addEventListener("resize", syncCardsPerSlide);
+    return () => window.removeEventListener("resize", syncCardsPerSlide);
+  }, []);
 
   const setAdjacentSlide = (direction: "prev" | "next") => {
-    setActiveSlide((current) => {
-      if (direction === "prev") return current === 0 ? slideCount - 1 : current - 1;
-      return current === slideCount - 1 ? 0 : current + 1;
+    setActiveStartIndex((current) => {
+      if (!currentItems.length) return 0;
+      const step = Math.min(cardsPerSlide, currentItems.length);
+      if (direction === "prev") return (current - step + currentItems.length) % currentItems.length;
+      return (current + step) % currentItems.length;
     });
+    setSelectedEngineCode(null);
+  };
+
+  const selectEngineFromTabDropdown = (engine: EngineItem) => {
+    const tabIndex = tabs.findIndex((tab) => tab.key === tabKeyForFuel(engine.fuel));
+    if (tabIndex < 0) return;
+
+    const itemIndex = tabs[tabIndex].items.findIndex((item) => item.code === engine.code);
+    setActiveTab(tabIndex);
+    setActiveStartIndex(Math.max(0, itemIndex));
+    setSelectedEngineCode(engine.code);
+    setOpenDropdownTab(null);
   };
 
   if (!currentTab) return null;
@@ -322,10 +346,20 @@ export default function EngineCodesSection({ data, bgImage }: Props) {
                     key={tab.key}
                     type="button"
                     onClick={() => {
+                      if (active) {
+                        setOpenDropdownTab((current) => (current === tab.key ? null : tab.key));
+                        return;
+                      }
                       setActiveTab(index);
-                      setActiveSlide(0);
+                      setActiveStartIndex(0);
+                      setSelectedEngineCode(null);
+                      setOpenDropdownTab(null);
                     }}
-                    className={`flex min-h-[74px] items-center justify-between gap-4 px-6 py-4 text-left transition ${active ? "bg-[linear-gradient(135deg,#07316f,#061a33)] text-white" : "bg-white text-[#061a33] hover:bg-slate-50"}`}
+                    className={`relative flex min-h-[74px] items-center justify-between gap-4 px-6 py-4 text-left transition ${
+                      active
+                        ? "bg-[linear-gradient(135deg,rgba(13,58,120,0.96),rgba(6,26,51,0.98))] text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.22),inset_0_-1px_0_rgba(6,18,35,0.85),0_0_18px_rgba(45,107,255,0.28)]"
+                        : "bg-white text-[#061a33] hover:bg-slate-50"
+                    }`}
                   >
                     <span className="flex min-w-0 items-center gap-4">
                       <TabIcon type={tab.key} className="h-9 w-9 shrink-0" />
@@ -334,40 +368,96 @@ export default function EngineCodesSection({ data, bgImage }: Props) {
                         <span className={`mt-0.5 block text-[12px] ${active ? "text-white/82" : "text-slate-500"}`}>{tab.subtitle}</span>
                       </span>
                     </span>
-                    <Chevron open={active} className="h-5 w-5 shrink-0" />
+                    <Chevron open={active && openDropdownTab === tab.key} className="h-5 w-5 shrink-0" />
                   </button>
                 );
               })}
             </div>
 
-            <div className="relative bg-[radial-gradient(circle_at_50%_100%,rgba(255,255,255,0.22),transparent_45%),linear-gradient(135deg,#06265a,#0d4aa2)] px-8 py-4 sm:px-9 sm:py-6 xl:px-12">
+            {isTabDropdownOpen ? (
+            <div className="border-t border-[#d8e4f2] bg-[linear-gradient(180deg,#ffffff_0%,#f8fbff_100%)] px-4 py-3 sm:px-6">
+              <div className="mb-2 flex items-center justify-between gap-3">
+                <p className="font-['Manrope'] text-[12px] font-black uppercase tracking-[0.08em] text-[#06265a]">
+                  {currentTab.title} dropdown
+                </p>
+                <p className="text-[11px] font-semibold text-slate-500">
+                  Select an engine code to jump the slider
+                </p>
+              </div>
+              <div className="flex gap-2 overflow-x-auto pb-1 [scrollbar-width:thin]">
+                {currentTab.items.map((engine) => {
+                  const isSelected =
+                    selectedEngineCode === engine.code ||
+                    visibleEngines.some((item) => item.code === engine.code);
+
+                  return (
+                    <button
+                      key={`tab-dropdown-${currentTab.key}-${engine.code}`}
+                      type="button"
+                      data-engine-tab-dropdown-item="true"
+                      data-engine-code={engine.code}
+                      data-engine-fuel-tab={currentTab.key}
+                      onClick={() => selectEngineFromTabDropdown(engine)}
+                      className={`flex min-w-[138px] items-center justify-between gap-3 rounded-[10px] border px-3 py-2 text-left transition ${
+                        isSelected
+                          ? "border-[#08784a] bg-[#ecfdf5] shadow-[0_8px_18px_rgba(8,120,74,0.12)]"
+                          : "border-[#dbe7f5] bg-white hover:border-[#b7d8c5] hover:bg-[#f7fffb]"
+                      }`}
+                    >
+                      <span className="min-w-0">
+                        <span className="block font-['Manrope'] text-[13px] font-black leading-tight text-[#061a33]">
+                          {clean(engine.code)}
+                        </span>
+                        <span className="mt-0.5 block truncate text-[10px] font-bold uppercase tracking-[0.04em] text-[#64748b]">
+                          {clean(engine.size)} {clean(engine.fuel)}
+                        </span>
+                      </span>
+                      <span className="shrink-0 text-[#08784a]">
+                        <Arrow className="h-3.5 w-3.5" />
+                      </span>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+            ) : null}
+
+            <div className="relative bg-[radial-gradient(circle_at_50%_100%,rgba(255,255,255,0.22),transparent_45%),linear-gradient(135deg,#06265a,#0d4aa2)] px-12 py-4 sm:px-9 sm:py-6 xl:px-12">
               <button
                 type="button"
                 onClick={() => setAdjacentSlide("prev")}
-                className="absolute left-0 top-1/2 z-[80] hidden h-14 w-14 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border border-white/70 bg-[#06265a] text-white shadow-[0_16px_30px_rgba(6,26,51,0.34)] transition hover:scale-105 lg:grid"
+                className="absolute left-2 top-1/2 z-[80] grid h-10 w-10 -translate-y-1/2 place-items-center rounded-full border border-white/70 bg-[#06265a] text-white shadow-[0_16px_30px_rgba(6,26,51,0.34)] transition hover:scale-105 sm:left-0 sm:h-12 sm:w-12 sm:-translate-x-1/2 lg:h-14 lg:w-14"
                 aria-label="Previous engine cards"
               >
-                <Arrow direction="left" className="h-6 w-6" />
+                <Arrow direction="left" className="h-5 w-5 lg:h-6 lg:w-6" />
               </button>
               <button
                 type="button"
                 onClick={() => setAdjacentSlide("next")}
-                className="absolute right-0 top-1/2 z-[80] hidden h-14 w-14 -translate-y-1/2 translate-x-1/2 place-items-center rounded-full border border-white/70 bg-[#06265a] text-white shadow-[0_16px_30px_rgba(6,26,51,0.34)] transition hover:scale-105 lg:grid"
+                className="absolute right-2 top-1/2 z-[80] grid h-10 w-10 -translate-y-1/2 place-items-center rounded-full border border-white/70 bg-[#06265a] text-white shadow-[0_16px_30px_rgba(6,26,51,0.34)] transition hover:scale-105 sm:right-0 sm:h-12 sm:w-12 sm:translate-x-1/2 lg:h-14 lg:w-14"
                 aria-label="Next engine cards"
               >
-                <Arrow className="h-6 w-6" />
+                <Arrow className="h-5 w-5 lg:h-6 lg:w-6" />
               </button>
 
               {currentTab.items.length ? (
                 <>
                   <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
                     {visibleEngines.map((engine) => (
-                      <EngineCodeCard
+                      <div
                         key={`${currentTab.key}-${engine.code}`}
-                        engine={engine}
-                        expanded={Boolean(expandedCards[engine.code])}
-                        onToggle={() => setExpandedCards((current) => ({ ...current, [engine.code]: !current[engine.code] }))}
-                      />
+                        className={`rounded-[14px] transition ${
+                          selectedEngineCode === engine.code
+                            ? "ring-2 ring-white shadow-[0_0_0_4px_rgba(34,197,94,0.35)]"
+                            : ""
+                        }`}
+                      >
+                        <EngineCodeCard
+                          engine={engine}
+                          expanded={Boolean(expandedCards[engine.code])}
+                          onToggle={() => setExpandedCards((current) => ({ ...current, [engine.code]: !current[engine.code] }))}
+                        />
+                      </div>
                     ))}
                   </div>
                   <div className="mt-5 flex justify-center gap-2">
@@ -375,8 +465,11 @@ export default function EngineCodesSection({ data, bgImage }: Props) {
                       <button
                         key={`${currentTab.key}-slide-dot-${index}`}
                         type="button"
-                        onClick={() => setActiveSlide(index)}
-                        className={`h-3 w-3 rounded-full transition ${index === safeSlide ? "bg-white shadow-[0_0_18px_rgba(255,255,255,0.7)]" : "bg-white/38 hover:bg-white/70"}`}
+                        onClick={() => {
+                          setActiveStartIndex(index * cardsPerSlide);
+                          setSelectedEngineCode(null);
+                        }}
+                        className={`h-3 w-3 rounded-full transition ${index === activePage ? "bg-white shadow-[0_0_18px_rgba(255,255,255,0.7)]" : "bg-white/38 hover:bg-white/70"}`}
                         aria-label={`Show engine slide ${index + 1}`}
                       />
                     ))}
@@ -391,31 +484,6 @@ export default function EngineCodesSection({ data, bgImage }: Props) {
                 </div>
               )}
             </div>
-          </div>
-
-          <div className="relative z-[1] mt-5 rounded-[15px] border border-[#e2e8f0] bg-white shadow-[0_8px_22px_rgba(6,26,51,0.06)]">
-            <button type="button" onClick={() => setDirectoryOpen((current) => !current)} className="flex w-full items-center justify-between gap-4 px-5 py-5 text-left">
-              <span className="flex items-center gap-4">
-                <span className="grid h-12 w-12 place-items-center rounded-[8px] bg-[#061a33] text-white">
-                  <ListIcon />
-                </span>
-                <span>
-                  <span className="block font-['Manrope'] text-[22px] font-black text-[#061a33]">View All {brand} Engine Codes</span>
-                  <span className="mt-1 block text-[14px] text-slate-600">{allEngines.length}+ codes grouped by fuel type, years and average rebuilt price.</span>
-                </span>
-              </span>
-              <Chevron open={directoryOpen} />
-            </button>
-            {directoryOpen ? (
-              <div className="grid gap-2 border-t border-[#e2e8f0] p-4 sm:grid-cols-2 lg:grid-cols-3">
-                {allEngines.map((engine) => (
-                  <div key={`all-${engine.code}`} className="rounded-[10px] border border-[#edf2f7] bg-[#fbfdff] px-3 py-2 text-[13px]">
-                    <span className="font-black text-[#061a33]">{clean(engine.code)}</span>
-                    <span className="ml-2 whitespace-nowrap text-[#08784a]">{clean(engine.avgRebuiltPrice)}</span>
-                  </div>
-                ))}
-              </div>
-            ) : null}
           </div>
         </div>
       </Container>
