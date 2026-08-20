@@ -639,7 +639,7 @@ export default function VariantCoverageSection({
               })}
             </div>
 
-            <div className="hidden gap-4 md:grid md:grid-cols-2 xl:grid-cols-5 2xl:grid-cols-6">
+            <div className="hidden items-start gap-4 md:grid md:grid-cols-2 xl:grid-cols-5 2xl:grid-cols-6">
               {renderableCards.map((card, index) => {
                 const rowIndex = Math.floor(index / columns);
                 const isLastRow = rowIndex === totalRows - 1 && totalRows > 1;
@@ -661,7 +661,7 @@ export default function VariantCoverageSection({
                 return (
                <article key={card.slug} className="relative">
   <div
-    className={`flex min-h-[248px] flex-col overflow-hidden rounded-[12px] border bg-white transition duration-300 ${
+    className={`flex min-h-[214px] flex-col overflow-hidden rounded-[12px] border bg-white transition duration-300 ${
       isOpen
         ? `border-[#2969af] shadow-[0_0_0_1px_rgba(42,109,214,1),0_0_5px_rgba(42,109,214,0.4),0_0_12px_rgba(42,109,214,0.3),0_0_20px_rgba(42,109,214,0.2),0_3px_10px_rgba(42,109,214,0.25)] ${
             useStackedExpansion
@@ -676,7 +676,7 @@ export default function VariantCoverageSection({
     {/* CLICKABLE WALL-TO-WALL IMAGE */}
     {variantHref ? (
       <Link href={variantHref} className="block w-full">
-        <div className="relative h-[115px] w-full overflow-hidden">
+        <div className="relative h-[105px] w-full overflow-hidden">
           <Image
             src={vehicleImage.src}
             alt={shortName}
@@ -691,7 +691,7 @@ export default function VariantCoverageSection({
         </div>
       </Link>
     ) : (
-      <div className="relative h-[115px] w-full overflow-hidden">
+      <div className="relative h-[105px] w-full overflow-hidden">
         <Image
           src={vehicleImage.src}
           alt={shortName}
@@ -707,7 +707,7 @@ export default function VariantCoverageSection({
     )}
 
     {/* CONTENT */}
-    <div className="flex flex-1 flex-col px-2 pb-2 text-center">
+    <div className="flex flex-col px-2 pb-2 text-center">
 
       {/* CLICKABLE VARIANT TITLE */}
       {variantHref ? (
@@ -730,13 +730,13 @@ export default function VariantCoverageSection({
       {/* ENGINE CODE / TYPE */}
       <AutoTicker
         text={codeAndType}
-        className="mt-2 text-[9.5px] font-medium leading-[1.4] text-[#4b5563]"
+        className="mt-1.5 text-[9.5px] font-medium leading-[1.35] text-[#4b5563]"
       />
 
       {/* REBUILT PRICE */}
       <AutoTicker
         text={`Rebuilt Engines: ${card.priceRange}`}
-        className="mt-auto pt-3 font-['Manrope'] text-[12px] font-semibold leading-[1.4] text-[#374151]"
+        className="mt-2 font-['Manrope'] text-[12px] font-semibold leading-[1.35] text-[#374151]"
       />
 
       {/* EXPAND ARROW */}
@@ -749,7 +749,7 @@ export default function VariantCoverageSection({
             ? `Hide ${card.h3} details`
             : `Show ${card.h3} details`
         }
-        className="mx-auto mt-3 inline-flex text-[#15803d]"
+        className="mx-auto mt-2 inline-flex text-[#15803d]"
       >
         <ChevronIcon
           open={isOpen}

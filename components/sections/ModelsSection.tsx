@@ -314,14 +314,14 @@ export default function ModelsSection({ data, brandSlug, documentMode = false }:
   {model.h3.replace(/\s+Engines$/i, "")}
 </h3>
                   </Link>
-                  <p className="text-[10.5px] leading-[1.45] text-slate-500">{model.subtitle}</p>
+                  <p className="text-[10.5px] leading-[1.35] text-slate-500">{model.subtitle}</p>
 
                   <button
                     type="button"
                     onClick={() => setOpenCard((current) => (current === model.slug ? null : model.slug))}
                     aria-expanded={isOpen}
                     aria-label={isOpen ? `Hide ${model.h3} quote link` : `Show ${model.h3} quote link`}
-                    className="flex w-full items-center justify-between gap-2 border-t border-slate-100 pt-2 text-left"
+                    className="flex w-full items-center justify-between gap-2 border-t border-slate-100 pt-1.5 text-left"
                   >
                     <span>
                       <span className="block text-[9.5px] font-semibold uppercase tracking-[0.08em] text-slate-400">
@@ -351,7 +351,7 @@ export default function ModelsSection({ data, brandSlug, documentMode = false }:
           })}
         </div>
 
-        <div className="mt-7 hidden gap-3 md:grid md:grid-cols-2 xl:grid-cols-5">
+        <div className="mt-7 hidden items-start gap-3 md:grid md:grid-cols-2 xl:grid-cols-5">
           {visibleCards.map((model) => {
             const isOpen = openCard === model.slug;
             const modelHref = getModelHref(brandSlug, model);
@@ -359,11 +359,11 @@ export default function ModelsSection({ data, brandSlug, documentMode = false }:
             return (
          <article
   key={model.slug}
-  className="flex min-h-[248px] flex-col overflow-hidden rounded-[12px] border border-slate-200 bg-white shadow-[0_2px_8px_rgba(13,27,46,0.05)] transition hover:border-slate-300 hover:shadow-[0_8px_18px_rgba(13,27,46,0.08)]"
+  className="flex min-h-[214px] flex-col overflow-hidden rounded-[12px] border border-slate-200 bg-white shadow-[0_2px_8px_rgba(13,27,46,0.05)] transition hover:border-slate-300 hover:shadow-[0_8px_18px_rgba(13,27,46,0.08)]"
 >
   {/* CLICKABLE IMAGE */}
   <Link href={modelHref} className="block w-full">
-    <div className="relative h-[115px] w-full overflow-hidden">
+    <div className="relative h-[105px] w-full overflow-hidden">
       <Image
         src={
           model.image ||
@@ -378,7 +378,7 @@ export default function ModelsSection({ data, brandSlug, documentMode = false }:
   </Link>
 
   {/* CARD CONTENT */}
-  <div className="flex flex-1 flex-col px-2 pb-2 text-center">
+  <div className="flex flex-col px-2 pb-2 text-center">
 
     {/* CLICKABLE MODEL NAME */}
     <Link
@@ -394,13 +394,13 @@ export default function ModelsSection({ data, brandSlug, documentMode = false }:
     {/* DESCRIPTION */}
     <AutoTicker
       text={model.subtitle}
-      className="mt-2 text-[9.5px] font-medium leading-[1.4] text-[#4b5563]"
+      className="mt-1.5 text-[9.5px] font-medium leading-[1.35] text-[#4b5563]"
     />
 
     {/* PRICE — PUSHED LOWER */}
     <AutoTicker
       text={`Rebuilt Engines: ${normalizePriceRange(model.priceRange)}`}
-      className="mt-auto pt-2 font-['Manrope'] text-[12px] font-semibold leading-[1.4] text-[#374151]"
+      className="mt-2 font-['Manrope'] text-[12px] font-semibold leading-[1.35] text-[#374151]"
     />
 
     {/* DETAILS ARROW */}
@@ -417,7 +417,7 @@ export default function ModelsSection({ data, brandSlug, documentMode = false }:
           ? `Hide ${model.h3} details`
           : `Show ${model.h3} details`
       }
-      className="mx-auto mt-3 inline-flex text-[#15803d]"
+      className="mx-auto mt-2 inline-flex text-[#15803d]"
     >
       <ArrowIcon open={isOpen} />
     </button>

@@ -203,27 +203,6 @@ function buildFailures(detail: GuideEntry | null, fallback: string) {
   return [fallback];
 }
 
-function buildAccordionTableRows(engine: EngineRow, detail: GuideEntry | null, years: string) {
-  const compatibleModels = detail?.compatibleVariants?.length
-    ? detail.compatibleVariants.join(", ")
-    : engine.compatibleModels;
-
-  return [
-    {
-      label: "ENGINE CODE(S)",
-      value: repairEngineCodeValue(detail?.code || engine.code),
-    },
-    {
-      label: "COMPATIBLE MODELS (UK)",
-      value: sanitizeDashText(compatibleModels),
-    },
-    {
-      label: "PRODUCTION YEARS",
-      value: sanitizeDashText(years),
-    },
-  ];
-}
-
 function isRenderableEngineRow(engine: EngineRow) {
   const repairedCode = repairEngineCodeValue(engine.code);
   const normalizedCode = repairedCode.trim().toUpperCase();
@@ -321,6 +300,10 @@ function getFuelSectionIcon(fuelType: string, className?: string) {
     return <FuelAssetIcon src="/icons/engine-market/fuel-heading-hybrid.png" className={className} />;
   }
   return <FuelAssetIcon src="/icons/engine-market/fuel-heading-petrol.png" className={className} />;
+}
+
+function getAccordionEngineIcon(_fuelType: string, className?: string) {
+  return <FuelAssetIcon src="/icons/engine-market/fuel-row-petrol.png" className={className} fit="cover" />;
 }
 
 type Selection = {
@@ -488,169 +471,51 @@ export default function ModelEngineCodesSection({ data, guide, modelName, engine
                         detail?.size || engine.size,
                         detail?.fuel || engine.fuel,
                       );
-                      const historyText = buildHistory(
-                        engine,
-                        detail,
-                        modelName,
-                        strictData,
-                      );
-                      const tableRows = buildAccordionTableRows(engine, detail, years);
-                      const detailImage = detail?.image || engine.image;
-                      const quoteText = sanitizeDashText(detail?.cta || engine.cta || "").replace(/^->\s*/u, "").trim();
-                      const failures = buildFailures(detail, activeGroupEntry.group.failureNote);
 
                       return (
                         <article
                           key={engine.code}
                           className={`min-w-0 ${selected ? "col-span-full" : ""}`}
                         >
-                          <div
-                            className={
-                              selected
-                                ? "overflow-hidden rounded-[20px] border border-[#bfd5f8] bg-white shadow-[0_0_0_1px_rgba(59,130,246,0.12),0_0_24px_rgba(59,130,246,0.14),0_18px_36px_rgba(12,29,53,0.08)] max-[720px]:rounded-[18px]"
-                                : ""
-                            }
-                          >
-                            <button
-                              className={`w-full rounded-[20px] border border-[#dfe7ef] bg-white text-left text-inherit shadow-[0_12px_30px_rgba(12,29,53,0.06)] transition-all duration-200 hover:bg-[#fbfdff] max-[720px]:rounded-[18px] ${
-                                selected
-                                  ? "rounded-b-none border-0 border-b border-[#dbe7f5] px-[18px] py-[16px] shadow-none max-[720px]:rounded-b-none max-[720px]:px-[14px] max-[720px]:py-[14px]"
-                                  : "px-[18px] py-[16px] max-[720px]:px-[14px] max-[720px]:py-[14px]"
+                          <button
+                            className={`w-full border border-[#dfe7ef] rounded-[20px] bg-white shadow-[0_12px_30px_rgba(12,29,53,0.06)] grid items-center gap-[10px] text-left text-inherit cursor-pointer transition-all duration-200 hover:bg-[#fbfdff] ${selected
+                              ? "grid-cols-[16px_minmax(0,1fr)_16px] h-[60px] items-center py-0 px-[14px] rounded-t-[14px] rounded-b-none border-[#b8cadb] shadow-[0_10px_22px_rgba(16,39,68,0.08)] bg-[linear-gradient(180deg,#ffffff_0%,#fbfdff_100%)] max-[720px]:h-[56px] max-[720px]:py-0 max-[720px]:px-[16px] max-[720px]:rounded-t-[12px]"
+                              : "grid-cols-[54px_minmax(0,1fr)_minmax(122px,150px)_16px] min-h-[76px] py-[14px] px-[16px] max-[720px]:grid-cols-[44px_minmax(0,1fr)_minmax(104px,122px)_14px] max-[720px]:gap-[8px] max-[720px]:min-h-[72px] max-[720px]:rounded-[18px] max-[720px]:px-[12px] max-[720px]:py-[12px]"
                               }`}
-                              type="button"
-                              aria-expanded={selected}
-                              onClick={() => toggleSelection(safeActiveIndex, originalIndex)}
-                            >
-                              <span className="grid items-center gap-[14px] sm:grid-cols-[minmax(0,1fr)_auto]">
-                                <span className="flex min-w-0 items-start gap-[14px]">
-                                  <span aria-hidden="true" className="mt-[2px] block h-[44px] w-[4px] rounded-full bg-[#22c55e]" />
-                                  <span className="min-w-0">
-                                    <span className="flex flex-wrap items-center gap-[10px]">
-                                      <strong className="text-[26px] leading-[0.96] tracking-[-0.04em] text-[#10203a] max-[720px]:text-[18px]">
-                                        {accordionHeading}
-                                      </strong>
-                                      <span className="inline-flex min-h-[30px] items-center rounded-full border border-[#9ec1ff] bg-[#f4f8ff] px-[12px] text-[11px] font-extrabold uppercase tracking-[0.08em] text-[#2d6bff] max-[720px]:min-h-[28px] max-[720px]:text-[10px]">
-                                        {activeGroupEntry.group.name}
-                                      </span>
-                                    </span>
-                                    <small className="mt-[6px] block text-[13px] font-medium leading-[1.45] text-[#66778f] max-[720px]:text-[11px]">
-                                      {sanitizeDashText(detail?.compatibleVariants?.join(", ") || engine.compatibleModels)}
-                                    </small>
-                                  </span>
-                                </span>
-
-                                <span className="flex items-center justify-end gap-[12px] max-[720px]:mt-[10px]">
-                                  {!selected && engine.avgRebuiltPrice ? (
-                                    <span className="text-right">
-                                      {ui.summaryPriceLabel ? (
-                                        <small className="mb-[4px] block text-[9px] font-extrabold uppercase tracking-[0.12em] text-[#708197]">
-                                          {ui.summaryPriceLabel}
-                                        </small>
-                                      ) : null}
-                                      <strong className="block text-[20px] leading-none tracking-[-0.04em] text-[#13823d] max-[720px]:text-[16px]">
-                                        {toPriceText(engine.avgRebuiltPrice)}
-                                      </strong>
-                                    </span>
-                                  ) : null}
-                                  <span className={`grid h-[34px] w-[34px] place-items-center rounded-full border border-[#d7e5fb] bg-[#f5f9ff] text-[#13823d] transition-transform duration-200 ${selected ? "rotate-180" : ""}`}>
-                                    <ChevronIcon />
-                                  </span>
-                                </span>
+                            type="button"
+                            aria-expanded={selected}
+                            onClick={() => toggleSelection(safeActiveIndex, originalIndex)}
+                          >
+                            {!selected && (
+                              <span className="w-[52px] h-[52px] overflow-hidden rounded-[14px] border border-[#d7e2ec] bg-white text-[#334155] block max-[720px]:w-[44px] max-[720px]:h-[44px] max-[720px]:rounded-[12px]">
+                                {getAccordionEngineIcon(activeGroupEntry.group.name, "h-full w-full")}
                               </span>
-                            </button>
+                            )}
+                            {selected && <span aria-hidden="true" className="block h-4 w-4" />}
 
-                            {selected ? (
-                              <div className="grid gap-[18px] px-[18px] pb-[18px] pt-[18px] lg:grid-cols-[minmax(0,1.18fr)_220px] lg:items-start max-[720px]:gap-[16px] max-[720px]:px-[14px] max-[720px]:pb-[14px] max-[720px]:pt-[14px]">
-                                <div className="min-w-0">
-                                  <div className="text-[30px] font-extrabold leading-none tracking-[-0.05em] text-[#10203a] max-[720px]:text-[24px]">
-                                    {summaryCode}
-                                  </div>
-                                  <p className="mt-[6px] text-[15px] font-semibold leading-[1.45] text-[#30455f] max-[720px]:text-[13px]">
-                                    {summaryTitle || toSummary(engine)}
-                                  </p>
+                            <span className={`min-w-0 ${selected ? "flex h-full items-center justify-center self-stretch text-center" : ""}`}>
+                              {selected ? (
+                                <span className="flex h-full items-center justify-center text-center text-[#10203a] text-[18px] font-extrabold leading-[1.15] tracking-[-0.03em] max-[720px]:text-[16px]">{accordionHeading}</span>
+                              ) : (
+                                <span className="block">
+                                  <strong className="block font-[Consolas,'SFMono-Regular',monospace] text-[20px] leading-[1] tracking-[-0.05em] text-[#10203a] max-[720px]:text-[18px]">{summaryCode}</strong>
+                                  <small className="block text-[#2c3b50] text-[12px] font-medium leading-[1.3] max-[720px]:text-[11px]">{summaryTitle || toSummary(engine)}</small>
+                                </span>
+                              )}
+                              {!selected && <span className="block mt-[4px] text-[#64748b] text-[10px] font-bold tracking-[0.04em] uppercase">{engine.power}</span>}
+                            </span>
 
-                                  {historyText ? (
-                                    <p className="mt-[14px] text-[14px] leading-[1.7] text-[#42546d] max-[720px]:mt-[12px] max-[720px]:text-[12.5px]">
-                                      {historyText}
-                                    </p>
-                                  ) : null}
+                            {!selected && (
+                              <span className="text-right pl-[4px]">
+                                {ui.summaryPriceLabel && <small className="block text-[#64748b] text-[8px] font-extrabold tracking-[0.12em] uppercase mb-[4px]">{ui.summaryPriceLabel}</small>}
+                                <strong className="text-[#13823d] text-[18px] leading-[0.96] tracking-[-0.05em] max-[720px]:text-[16px]">{toPriceText(engine.avgRebuiltPrice)}</strong>
+                              </span>
+                            )}
 
-                                  <div className="mt-[16px] overflow-hidden rounded-[18px] border border-[#dbe7f5] bg-[#fcfdff]">
-                                    {tableRows.map((row, rowIndex) => (
-                                      <div
-                                        key={`${row.label}-${rowIndex}`}
-                                        className={`grid grid-cols-[minmax(148px,0.42fr)_minmax(0,1fr)] max-[720px]:grid-cols-[minmax(126px,0.56fr)_minmax(0,1fr)] ${
-                                          rowIndex < tableRows.length - 1 ? "border-b border-[#e7eef8]" : ""
-                                        }`}
-                                      >
-                                        <div className="border-r border-[#e7eef8] px-[16px] py-[15px] text-[11px] font-extrabold uppercase tracking-[0.08em] text-[#51657f] max-[720px]:px-[12px] max-[720px]:py-[13px] max-[720px]:text-[10px]">
-                                          {row.label}
-                                        </div>
-                                        <div className="px-[18px] py-[15px] text-[15px] font-medium leading-[1.6] text-[#132640] max-[720px]:px-[12px] max-[720px]:py-[13px] max-[720px]:text-[12.5px]">
-                                          {row.value}
-                                        </div>
-                                      </div>
-                                    ))}
-                                  </div>
-
-                                  <div className="mt-[16px] border-l-[3px] border-[#f97316] pl-[14px]">
-                                    <p className="text-[12px] font-extrabold uppercase tracking-[0.1em] text-[#dc2626] max-[720px]:text-[11px]">
-                                      Common Failure Points
-                                    </p>
-                                    <ul className="mt-[8px] grid gap-[8px]">
-                                      {failures.map((failure) => (
-                                        <li key={failure} className="text-[14px] leading-[1.65] text-[#3e516a] max-[720px]:text-[12.5px]">
-                                          {failure}
-                                        </li>
-                                      ))}
-                                    </ul>
-                                  </div>
-                                </div>
-
-                                <div className="flex h-full flex-col gap-[14px]">
-                                  <div className="flex min-h-[200px] items-center justify-center rounded-[18px] border border-[#e3ebf4] bg-[radial-gradient(circle_at_top,#ffffff_0%,#f5f9fe_100%)] p-[18px] max-[720px]:min-h-[164px]">
-                                    <div className="engine-image relative aspect-square w-full max-w-[180px]">
-                                      {detailImage ? (
-                                        <Image
-                                          src={detailImage}
-                                          alt={`${repairEngineCodeValue(detail?.code || engine.code)} engine`}
-                                          fill
-                                          className="object-contain"
-                                          sizes="220px"
-                                        />
-                                      ) : null}
-                                    </div>
-                                  </div>
-
-                                  <div className="rounded-[18px] border border-[#e3ebf4] bg-[#f8fbff] px-[16px] py-[14px]">
-                                    {ui.summaryPriceLabel ? (
-                                      <small className="block text-[10px] font-extrabold uppercase tracking-[0.12em] text-[#708197]">
-                                        {ui.summaryPriceLabel}
-                                      </small>
-                                    ) : null}
-                                    <strong className="mt-[4px] block text-[30px] leading-none tracking-[-0.05em] text-[#13823d] max-[720px]:text-[24px]">
-                                      {toPriceText(engine.avgRebuiltPrice)}
-                                    </strong>
-                                    <p className="mt-[6px] text-[12px] leading-[1.55] text-[#4f6179]">
-                                      {sanitizeDashText(years)}
-                                    </p>
-                                  </div>
-                                </div>
-
-                                {quoteText ? (
-                                  <a
-                                    className="group inline-flex min-h-[58px] items-center justify-between gap-[14px] rounded-[14px] bg-[#071d45] px-[18px] text-[15px] font-extrabold text-white shadow-[0_14px_28px_rgba(7,29,69,0.18)] transition hover:bg-[#0a285f] lg:col-span-2 max-[720px]:min-h-[54px] max-[720px]:px-[14px] max-[720px]:text-[13px]"
-                                    href="#quote-form"
-                                    data-quote-engine-code={repairEngineCodeValue(detail?.code || engine.code)}
-                                    data-quote-context={engine.compatibleModels}
-                                  >
-                                    <span>{quoteText}</span>
-                                    <ArrowIcon className="h-[14px] w-[14px] text-[#1f9f43] transition-transform duration-200 group-hover:translate-x-[2px]" />
-                                  </a>
-                                ) : null}
-                              </div>
-                            ) : null}
-                          </div>
+                            <span className={`text-[#13823d] grid place-items-center transition-transform duration-200 ${selected ? "rotate-180" : ""}`}>
+                              <ChevronIcon />
+                            </span>
+                          </button>
                         </article>
                       );
                     };
@@ -659,7 +524,7 @@ export default function ModelEngineCodesSection({ data, guide, modelName, engine
                       <div key={`${activeGroupEntry.group.name}-${rowIndex}`} className="contents">
                         {visibleRow.map(renderEngineCard)}
 
-                        <div className="hidden">
+                        <div className={`col-span-full ${activeEngine ? "block" : "hidden"} -mt-[14px]`}>
                           {activeEngine ? (
                             (() => {
                               const detail = getGuideDetail(activeEngine.code, guideLookup);

@@ -9,6 +9,7 @@ export type HomeBrandPriceEntry = {
 };
 
 export const homeFeaturedBrandSlugs = [
+  "bmw",
   "mercedes-benz",
   "land-rover",
   "jaguar",
@@ -18,7 +19,6 @@ export const homeFeaturedBrandSlugs = [
   "ford",
   "mini",
   "toyota",
-  "vauxhall",
 ];
 
 export const homeBrandPriceDirectory: HomeBrandPriceEntry[] = [

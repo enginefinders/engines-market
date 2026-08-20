@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { type ReactNode, useState } from "react";
 import { getEngineLinkForCode, type EngineLinkMap } from "@/lib/engineLinks";
 import type { EngineSizesData } from "@/types/brand";
 import { AdviceCard } from "@/components/ui/CalloutCards";
@@ -82,6 +82,50 @@ function ArrowIcon() {
   );
 }
 
+function TableEngineIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-[17px] w-[17px]" fill="none" aria-hidden="true">
+      <path d="M8 8h7.5l2 2.5H20v6h-2.2l-1.4 2H8.2l-1.4-2H4v-6h2.3L8 8Z" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M9 5v3M13 5v3M4 13H2.8M21.2 13H20M9.5 12h3.5" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function TableCarIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-[17px] w-[17px]" fill="none" aria-hidden="true">
+      <path d="M6.5 17.5h11M7.6 9.5h8.8l1.8 4.2H5.8l1.8-4.2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <circle cx="7.5" cy="17.5" r="1.8" stroke="currentColor" strokeWidth="2" />
+      <circle cx="16.5" cy="17.5" r="1.8" stroke="currentColor" strokeWidth="2" />
+    </svg>
+  );
+}
+
+function TableCalendarIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-[17px] w-[17px]" fill="none" aria-hidden="true">
+      <path d="M7 4v3M17 4v3M5 9h14M6 6h12a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function TableHeading({
+  children,
+  icon,
+}: {
+  children: string;
+  icon: ReactNode;
+}) {
+  return (
+    <span className="flex items-center gap-2 font-extrabold">
+      <span className="flex h-8 w-8 flex-none items-center justify-center rounded-[8px] bg-[#eff6ff] text-[#2d6bff]">
+        {icon}
+      </span>
+      <span>{children}</span>
+    </span>
+  );
+}
+
 function RowChevron({ open }: { open: boolean }) {
   return (
     <svg
@@ -151,12 +195,23 @@ function SizeAccordionCard({
   onToggle: () => void;
   ui: NonNullable<EngineSizesData["ui"]>;
 }) {
+  const isBrandDisplay = displayMode === "brand";
+  const openShellClass =
+    isBrandDisplay && open
+      ? "border-[#bfd5f8] shadow-[0_0_0_1px_rgba(59,130,246,0.16),0_0_24px_rgba(59,130,246,0.16),0_18px_36px_rgba(12,29,53,0.08)]"
+      : "border-[#e5e7eb] shadow-[0_2px_8px_rgba(13,27,46,0.05)]";
+  const engineCodesLabel = displayMode === "brand" ? "ENGINE CODE(S)" : (ui.engineCodesLabel || "");
+  const compatibleModelsLabel = displayMode === "brand" ? "COMPATIBLE MODELS (UK)" : (ui.compatibleModelsLabel || "");
+  const productionYearsLabel = displayMode === "brand" ? "PRODUCTION YEARS" : (ui.productionYearsLabel || "");
+
   return (
-    <div className="overflow-hidden rounded-[12px] border border-[#e5e7eb] bg-white shadow-[0_2px_8px_rgba(13,27,46,0.05)]">
+    <div className={`overflow-hidden rounded-[12px] border bg-white transition-all duration-200 ${openShellClass}`}>
       <button
         type="button"
         onClick={onToggle}
-        className="flex w-full items-start gap-3 px-4 py-[13px] text-left transition hover:bg-[#fafafa]"
+        className={`flex w-full items-start gap-3 px-4 py-[13px] text-left transition hover:bg-[#fafafa] ${
+          isBrandDisplay && open ? "border-b border-[#dbe7f5] bg-[linear-gradient(180deg,#ffffff_0%,#fbfdff_100%)]" : ""
+        }`}
       >
         <span className="mt-[2px] h-7 w-[4px] flex-none rounded-full bg-[#22c55e]" />
         <div className="min-w-0 flex-1">
@@ -178,7 +233,7 @@ function SizeAccordionCard({
       </button>
 
       {open ? (
-        <div className="border-t border-[#eef2f7] px-4 py-[14px]">
+        <div className={`${isBrandDisplay ? "" : "border-t border-[#eef2f7]"} px-4 py-[14px]`}>
           {displayMode === "brand" ? (
             <div className="font-['Manrope'] text-[14px] font-extrabold leading-[1.25] text-[#0d1b2e]">
               {dynamicBrandLabel
@@ -190,24 +245,30 @@ function SizeAccordionCard({
             {normalizeText(item.description)}
           </p>
 
-          <div className="mt-4 overflow-hidden rounded-[10px] border border-[#d8ebdd] bg-white">
+          <div className="mt-4 overflow-hidden rounded-[10px] border border-[#dbe7f5] bg-white">
             <table className="w-full border-collapse">
               <tbody>
                 {item.engineCodes?.length ? (
-                  <tr className="border-b border-[#e5f2e8]">
-                    <td className="w-[42%] px-3 py-[10px] text-[9px] font-bold uppercase tracking-[0.5px] text-[#64748b]">{displayMode === "document" ? (ui.engineCodesLabel || "") : (ui.engineCodesLabel ?? "Engine Code(s)")}</td>
+                  <tr className="border-b border-[#e7eef8]">
+                    <td className="w-[42%] border-r border-[#e7eef8] px-3 py-[10px] text-[9px] uppercase tracking-[0.5px] text-[#51657f]">
+                      <TableHeading icon={<TableEngineIcon />}>{engineCodesLabel}</TableHeading>
+                    </td>
                     <td className="px-3 py-[10px] text-[11px] leading-[1.5] text-[#334155]">{renderEngineCodeList(item.engineCodes, engineLinks)}</td>
                   </tr>
                 ) : null}
                 {item.compatibleModels?.length ? (
-                  <tr className="border-b border-[#e5f2e8]">
-                    <td className="w-[42%] px-3 py-[10px] text-[9px] font-bold uppercase tracking-[0.5px] text-[#64748b]">{displayMode === "document" ? (ui.compatibleModelsLabel || "") : (ui.compatibleModelsLabel ?? "Compatible Models (UK)")}</td>
+                  <tr className="border-b border-[#e7eef8]">
+                    <td className="w-[42%] border-r border-[#e7eef8] px-3 py-[10px] text-[9px] uppercase tracking-[0.5px] text-[#51657f]">
+                      <TableHeading icon={<TableCarIcon />}>{compatibleModelsLabel}</TableHeading>
+                    </td>
                     <td className="px-3 py-[10px] text-[11px] leading-[1.5] text-[#334155]">{item.compatibleModels.join(", ")}</td>
                   </tr>
                 ) : null}
                 {item.productionYears ? (
                   <tr>
-                    <td className="w-[42%] px-3 py-[10px] text-[9px] font-bold uppercase tracking-[0.5px] text-[#64748b]">{displayMode === "document" ? (ui.productionYearsLabel || "") : (ui.productionYearsLabel ?? "Production Years")}</td>
+                    <td className="w-[42%] border-r border-[#e7eef8] px-3 py-[10px] text-[9px] uppercase tracking-[0.5px] text-[#51657f]">
+                      <TableHeading icon={<TableCalendarIcon />}>{productionYearsLabel}</TableHeading>
+                    </td>
                     <td className="px-3 py-[10px] text-[11px] leading-[1.5] text-[#334155]">{item.productionYears}</td>
                   </tr>
                 ) : null}
@@ -295,7 +356,9 @@ export default function EngineSizesSection({
   return (
     <Section
       className={
-        documentMode || displayMode === "document"
+        displayMode === "brand"
+          ? "relative overflow-hidden bg-white max-[720px]:pt-4"
+          : documentMode || displayMode === "document"
           ? "relative overflow-hidden bg-[#f8f9fa] !py-[20px] md:!py-[24px] lg:!py-[28px] max-[720px]:pt-3"
           : "relative overflow-hidden bg-[#f8f9fa] max-[720px]:pt-4"
       }
@@ -305,7 +368,7 @@ export default function EngineSizesSection({
           <div
             className="absolute right-0 top-0 hidden h-[270px] w-[390px] opacity-[0.08] lg:block"
             style={{
-              backgroundImage: `linear-gradient(180deg, rgba(248,249,250,0.08), rgba(248,249,250,0.84)), url(${bgImage})`,
+              backgroundImage: `linear-gradient(180deg, ${displayMode === "brand" ? "rgba(255,255,255,0.08), rgba(255,255,255,0.84)" : "rgba(248,249,250,0.08), rgba(248,249,250,0.84)"}), url(${bgImage})`,
               backgroundSize: "contain",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "top right",
