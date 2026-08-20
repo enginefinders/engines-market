@@ -491,7 +491,6 @@ export default function FuelTypesSection({ data, bgImage }: Props) {
   const brand = brandFromHeading(data);
   const items = useMemo(() => orderedItems(data.items ?? []), [data.items]);
   const [activeIndex, setActiveIndex] = useState<number | null>(0);
-  const activeItem = activeIndex === null ? null : items[activeIndex];
 
   if (!items.length) return null;
 
@@ -575,13 +574,21 @@ export default function FuelTypesSection({ data, bgImage }: Props) {
           ))}
         </div>
 
-        <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
-          {items.map((item, index) => (
-            <FuelCard key={`${item.title}-${index}`} item={item} active={activeIndex === index} onClick={() => setActiveIndex((current) => (current === index ? null : index))} />
-          ))}
+        <div className="mt-4 grid items-start gap-3 md:grid-cols-2 xl:grid-cols-4">
+          {items.map((item, index) => {
+            const active = activeIndex === index;
+            return (
+              <div key={`${item.title}-${index}`} className={`min-w-0 ${active ? "md:col-span-2 xl:col-span-2" : ""}`}>
+                <FuelCard item={item} active={active} onClick={() => setActiveIndex((current) => (current === index ? null : index))} />
+                {active ? (
+                  <div className="mt-3">
+                    <DetailPanel brand={brand} item={item} bgImage={bgImage} />
+                  </div>
+                ) : null}
+              </div>
+            );
+          })}
         </div>
-
-        {activeItem ? <div className="mt-4"><DetailPanel brand={brand} item={activeItem} bgImage={bgImage} /></div> : null}
       </Container>
 
       <div className="mt-7 bg-[linear-gradient(135deg,#061a33,#07316f)] py-5 text-white shadow-[0_14px_30px_rgba(6,26,51,0.16)]">

@@ -220,16 +220,21 @@ export default function HowItWorksSection({
           </h2>
         </div>
 
-        <div className={`mt-5 grid gap-4 md:grid-cols-2 xl:grid-cols-3 ${variantLayout ? "xl:gap-5" : ""}`}>
+        <div className={`mt-5 grid gap-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-4 ${variantLayout ? "xl:gap-5" : ""}`}>
           {cards.map((card) => {
             const flipped = activeStep === card.number;
             const isRegistrationCard = card.number === 1;
             const isComparisonCard = card.number === 2;
+            const stepNumber = `0${card.number}`;
 
             return (
               <div
                 key={card.number}
-                className={`perspective-1000 ${variantLayout ? "min-h-[278px] sm:min-h-[276px] lg:min-h-[282px] xl:min-h-[292px]" : "min-h-[272px] sm:min-h-[276px] lg:min-h-[292px] xl:min-h-[302px]"}`}
+                className={`perspective-1000 ${
+                  variantLayout
+                    ? "min-h-[252px] sm:min-h-[256px] lg:min-h-[248px] xl:min-h-[272px]"
+                    : "min-h-[244px] sm:min-h-[252px] lg:min-h-[244px] xl:min-h-[274px]"
+                } ${card.number === 1 ? "md:col-span-2 md:mx-auto md:w-full md:max-w-[420px] lg:col-span-1 lg:max-w-none" : ""}`}
               >
                 <button
                   type="button"
@@ -239,20 +244,30 @@ export default function HowItWorksSection({
                   aria-label={`${flipped ? "Hide details for" : "Show details for"} step ${card.number}`}
                 >
                   <div
-                    className={`relative h-full ${variantLayout ? "min-h-[278px] sm:min-h-[276px] lg:min-h-[282px] xl:min-h-[292px]" : "min-h-[272px] sm:min-h-[276px] lg:min-h-[292px] xl:min-h-[302px]"} rounded-[18px] transition duration-500 [transform-style:preserve-3d] ${flipped ? "[transform:rotateY(180deg)]" : ""}`}
+                    className={`relative h-full ${
+                      variantLayout
+                        ? "min-h-[252px] sm:min-h-[256px] lg:min-h-[248px] xl:min-h-[272px]"
+                        : "min-h-[244px] sm:min-h-[252px] lg:min-h-[244px] xl:min-h-[274px]"
+                    } rounded-[18px] transition duration-500 [transform-style:preserve-3d] ${flipped ? "[transform:rotateY(180deg)]" : ""}`}
                   >
-                    <div className="absolute inset-0 flex h-full flex-col overflow-hidden rounded-[18px] border border-[#dbe4ef] bg-white px-3 pb-1 pt-3 text-center shadow-[0_18px_40px_rgba(13,27,46,0.08)] [backface-visibility:hidden] sm:px-4 sm:pb-1 sm:pt-4 lg:px-5 lg:pb-1 lg:pt-5">
-                      <span className="ml-auto hidden font-['Manrope'] text-[18px] font-extrabold uppercase leading-none tracking-[0.14em] text-gray-400 sm:text-[22px]">
-                        0{card.number}
+                    <div className="absolute inset-0 flex h-full flex-col overflow-hidden rounded-[18px] border border-[#dbe4ef] bg-[linear-gradient(180deg,#ffffff_0%,#fbfdff_100%)] px-3 pb-2.5 pt-3 text-center shadow-[0_18px_40px_rgba(13,27,46,0.08)] [backface-visibility:hidden] sm:px-4 sm:pb-3 sm:pt-4 lg:px-4 lg:pb-3 lg:pt-4">
+                      <span className={`ml-auto font-['Manrope'] font-extrabold uppercase leading-none tracking-[0.14em] text-[#b3bcc9] ${variantLayout ? "text-[18px] sm:text-[22px] lg:text-[21px]" : "text-[20px] sm:text-[24px] lg:text-[22px]"}`}>
+                        {stepNumber}
                       </span>
 
                       <div
-                        className={`mx-auto flex items-center justify-center rounded-[14px] lg:min-h-[76px] ${
+                        className={`mx-auto flex items-center justify-center rounded-[14px] ${
                           isRegistrationCard
-                            ? "h-[74px] w-[224px] sm:h-[86px] sm:w-[242px] md:h-[88px] md:w-[246px]"
+                            ? variantLayout
+                              ? "h-[74px] w-[224px] sm:h-[86px] sm:w-[242px] lg:h-[76px] lg:w-[214px]"
+                              : "h-[82px] w-[238px] sm:h-[94px] sm:w-[256px] lg:h-[82px] lg:w-[230px]"
                             : isComparisonCard
-                              ? "h-[76px] w-[76px] sm:h-[88px] sm:w-[88px] md:h-[90px] md:w-[90px]"
-                              : "h-[72px] w-[72px] sm:h-[84px] sm:w-[84px] md:h-[86px] md:w-[86px]"
+                              ? variantLayout
+                                ? "h-[76px] w-[76px] sm:h-[88px] sm:w-[88px] lg:h-[82px] lg:w-[82px]"
+                                : "h-[84px] w-[84px] sm:h-[94px] sm:w-[94px] lg:h-[86px] lg:w-[86px]"
+                              : variantLayout
+                                ? "h-[72px] w-[72px] sm:h-[84px] sm:w-[84px] lg:h-[78px] lg:w-[78px]"
+                                : "h-[80px] w-[80px] sm:h-[90px] sm:w-[90px] lg:h-[82px] lg:w-[82px]"
                         }`}
                       >
                         <img
@@ -260,54 +275,68 @@ export default function HowItWorksSection({
                           alt={`Step ${card.number} icon`}
                           className={
                             isRegistrationCard
-                              ? "h-[58px] w-[198px] object-contain sm:h-[66px] sm:w-[220px] md:h-[68px] md:w-[224px]"
+                              ? variantLayout
+                                ? "h-[58px] w-[198px] object-contain sm:h-[66px] sm:w-[220px] lg:h-[60px] lg:w-[194px]"
+                                : "h-[64px] w-[210px] object-contain sm:h-[72px] sm:w-[232px] lg:h-[66px] lg:w-[206px]"
                               : isComparisonCard
-                                ? "h-[68px] w-[68px] object-contain sm:h-[80px] sm:w-[80px] md:h-[82px] md:w-[82px]"
-                                : "h-[64px] w-[64px] object-contain sm:h-[76px] sm:w-[76px] md:h-[78px] md:w-[78px]"
+                                ? variantLayout
+                                  ? "h-[68px] w-[68px] object-contain sm:h-[80px] sm:w-[80px] lg:h-[74px] lg:w-[74px]"
+                                  : "h-[76px] w-[76px] object-contain sm:h-[84px] sm:w-[84px] lg:h-[78px] lg:w-[78px]"
+                                : variantLayout
+                                  ? "h-[64px] w-[64px] object-contain sm:h-[76px] sm:w-[76px] lg:h-[70px] lg:w-[70px]"
+                                  : "h-[72px] w-[72px] object-contain sm:h-[80px] sm:w-[80px] lg:h-[74px] lg:w-[74px]"
                           }
                         />
                       </div>
 
-                      <div className={`mt-2 flex items-start justify-center ${variantLayout ? "min-h-[34px] lg:min-h-[44px]" : "min-h-[32px] lg:min-h-[42px]"}`}>
+                      <div className="mt-2.5 flex items-start justify-center lg:mt-2.5">
                         <h3
                           className={`font-['Manrope'] font-bold leading-[1.14] text-[#0d1b2e] ${
-                            variantLayout ? "text-[17px] md:text-[17px] xl:text-[18px]" : "text-[20px] md:text-[20px] xl:text-[22px]"
+                            variantLayout ? "text-[17px] lg:text-[16px] xl:text-[18px]" : "text-[18px] lg:text-[17px] xl:text-[20px]"
                           }`}
                         >
                           {card.front.h3}
                         </h3>
                       </div>
 
-                      <div className={`mt-1 flex items-start justify-center ${variantLayout ? "min-h-[42px] lg:min-h-[48px]" : "min-h-[36px] lg:min-h-[44px]"}`}>
+                      <div className="mt-1.5 flex items-start justify-center lg:mt-1.5">
                         <p
                           className={`mx-auto w-full max-w-[340px] text-[#5a6478] ${
-                            variantLayout ? "text-[14px] leading-[1.5] md:text-[13px]" : "text-[16px] leading-[1.45] md:text-[16px] md:leading-[1.55]"
+                            variantLayout ? "text-[13px] leading-[1.45] lg:max-w-[300px] lg:text-[12px] lg:leading-[1.45]" : "text-[13px] leading-[1.5] lg:max-w-[300px] lg:text-[13px] lg:leading-[1.5]"
                           }`}
                         >
                           {card.front.text}
                         </p>
                       </div>
 
-                      <span className="ml-auto mt-4 inline-flex min-h-[22px] shrink-0 items-center gap-2 px-1 pb-0 pt-0 text-[12px] font-bold leading-none text-[#15803d] sm:mt-5 sm:min-h-[22px] sm:text-[13px]">
-                        <span>See how it works</span>
-                        <ArrowIcon />
-                      </span>
+                      <div className="mt-auto flex items-center justify-end border-t border-[#e8eef5] pt-2.5 lg:pt-2.5">
+                        <span className="inline-flex min-h-[22px] shrink-0 items-center gap-2 px-1 pb-0 pt-0 text-[12px] font-bold leading-none text-[#15803d] sm:min-h-[22px] sm:text-[13px] lg:text-[12px]">
+                          <span>See more</span>
+                          <ArrowIcon />
+                        </span>
+                      </div>
                     </div>
 
-                    <div className="absolute inset-0 flex h-full flex-col overflow-hidden rounded-[18px] border-[0.5px] border-[#2969af] bg-[#0d1b2e] p-4 text-white shadow-[0_0_0_1px_rgba(42,109,214,1),0_0_5px_rgba(42,109,214,0.4),0_0_12px_rgba(42,109,214,0.3),0_0_20px_rgba(42,109,214,0.2),0_3px_10px_rgba(42,109,214,0.25)] [backface-visibility:hidden] [transform:rotateY(180deg)] sm:p-5">
-                      <h3 className="mt-2 text-center font-['Manrope'] text-[18px] font-bold leading-[1.15] text-white sm:text-[22px]">
+                    <div className="absolute inset-0 flex h-full flex-col overflow-hidden rounded-[18px] border-[0.5px] border-[#2969af] bg-[#0d1b2e] p-3.5 text-white shadow-[0_0_0_1px_rgba(42,109,214,1),0_0_5px_rgba(42,109,214,0.4),0_0_12px_rgba(42,109,214,0.3),0_0_20px_rgba(42,109,214,0.2),0_3px_10px_rgba(42,109,214,0.25)] [backface-visibility:hidden] [transform:rotateY(180deg)] sm:p-4 lg:p-4">
+                      <div className="flex items-center justify-start gap-3">
+                        <span className="font-['Manrope'] text-[12px] font-extrabold uppercase tracking-[0.14em] text-[#86efac]">
+                          Step {card.number}
+                        </span>
+                      </div>
+
+                      <h3 className="mt-3 text-center font-['Manrope'] text-[18px] font-bold leading-[1.15] text-white sm:text-[21px] lg:text-[18px]">
                         {card.back.heading}
                       </h3>
 
-                      <div className="mt-4 min-h-0 flex-1 overflow-y-auto pr-2 [scrollbar-color:#86efac_transparent] [scrollbar-width:thin]">
-                        <p className="text-[13px] leading-[1.65] text-[#c3d1e2] sm:text-[14px]">
+                      <div className="mt-3 min-h-0 flex-1 overflow-y-auto pr-2 [scrollbar-color:#86efac_transparent] [scrollbar-width:thin]">
+                        <p className="text-[12.5px] leading-[1.6] text-[#c3d1e2] sm:text-[13px] lg:text-[12.5px] lg:leading-[1.6]">
                           {card.back.text}
                         </p>
 
-                        <ul className="mt-5 space-y-3">
+                        <ul className="mt-4 space-y-2.5 lg:mt-4 lg:space-y-2.5">
                           {card.back.bullets.map((bullet) => (
-                            <li key={bullet} className="flex items-start gap-3 text-[13px] leading-[1.55] text-[#e7eef8] sm:text-[14px]">
-                              <span className="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-[#15803d] text-white">
+                            <li key={bullet} className="flex items-start gap-3 text-[12.5px] leading-[1.5] text-[#e7eef8] sm:text-[13px] lg:gap-3 lg:text-[12.5px] lg:leading-[1.5]">
+                              <span className="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-[#15803d] text-white lg:h-5 lg:w-5">
                                 <TickIcon />
                               </span>
                               <span>{bullet}</span>
@@ -352,6 +381,12 @@ export default function HowItWorksSection({
             </div>
           ))}
         </div>
+
+        {ui.footerNote ? (
+          <p className={`mt-3 text-center text-[12px] leading-[1.6] text-[#64748b] ${variantLayout ? "sm:text-left" : "sm:text-center"}`}>
+            {normalizeCopy(ui.footerNote)}
+          </p>
+        ) : null}
       </Container>
     </Section>
   );

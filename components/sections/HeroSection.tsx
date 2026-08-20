@@ -573,35 +573,24 @@ export default function HeroSection({
                             </span>
                           ) : null}
                         </div>
-                        {commonCodesLine ? (
-                          <p className="text-[11px] leading-[1.45] text-[#64748b] md:hidden">
-                            {commonCodesParts ? (
-                              <>
-                                {commonCodesParts.prefix}
-                                <span className="text-[#2563eb]">{commonCodesParts.codes}</span>
-                              </>
-                            ) : (
-                              commonCodesLine
-                            )}
-                          </p>
-                        ) : null}
-                        {rebuiltUnitsLine ? (
-                          <p className="text-[11px] leading-[1.45] text-[#64748b] md:hidden">
-                            {rebuiltUnitsLine}
-                          </p>
-                        ) : null}
-                        {desktopDetailLine ? (
-                          <p className="hidden text-[12px] leading-[1.45] text-[#64748b] md:mt-1 md:block">
-                            {desktopDetailCommonCodesParts ? (
-                              <>
-                                {desktopDetailCommonCodesParts.prefix}
-                                <span className="text-[#2563eb]">{desktopDetailCommonCodesParts.codes}</span>
-                              </>
-                            ) : (
-                              desktopDetailLine
-                            )}
-                          </p>
-                        ) : null}
+                       {rebuiltUnitsLine ? (
+  <p className="text-[11px] leading-[1.45] text-[#64748b] md:mt-1 md:text-[12px]">
+    {rebuiltUnitsLine}
+  </p>
+) : null}
+
+{commonCodesLine ? (
+  <p className="text-[11px] leading-[1.45] text-[#64748b] md:text-[12px]">
+    {commonCodesParts ? (
+      <>
+        {commonCodesParts.prefix}
+        <span className="text-[#2563eb]">{commonCodesParts.codes}</span>
+      </>
+    ) : (
+      commonCodesLine
+    )}
+  </p>
+) : null}
                       </div>
                     </div>
                   </div>

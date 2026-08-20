@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { getModelHref } from "@/lib/modelRoutes";
 import type { ModelsSectionData } from "@/types/brand";
 import Container from "@/components/ui/Container";
@@ -53,6 +53,166 @@ function ArrowIcon({ open = false }: { open?: boolean }) {
         strokeLinejoin="round"
       />
     </svg>
+  );
+}
+
+function AutoTicker({
+  text,
+  className = "",
+}: {
+  text: string;
+  className?: string;
+}) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const measureRef = useRef<HTMLSpanElement>(null);
+  const trackRef = useRef<HTMLDivElement>(null);
+  const animationRef = useRef<Animation | null>(null);
+
+  const [isOverflowing, setIsOverflowing] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+
+  const GAP = 28;
+  const PIXELS_PER_SECOND = 18;
+
+  // Detect whether the text is wider than its container
+  useEffect(() => {
+    const measure = () => {
+      const container = containerRef.current;
+      const measureElement = measureRef.current;
+
+      if (!container || !measureElement) return;
+
+      const textWidth = measureElement.scrollWidth;
+      const containerWidth = container.clientWidth;
+
+      setIsOverflowing(textWidth > containerWidth + 2);
+    };
+
+    const timer = window.setTimeout(measure, 50);
+
+    const observer = new ResizeObserver(measure);
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => {
+      window.clearTimeout(timer);
+      observer.disconnect();
+    };
+  }, [text]);
+
+  // Start / stop seamless marquee
+  useEffect(() => {
+    animationRef.current?.cancel();
+    animationRef.current = null;
+
+    const track = trackRef.current;
+    const measureElement = measureRef.current;
+
+    if (!track || !measureElement || !isOverflowing || isHovered) {
+      return;
+    }
+
+    const textWidth = measureElement.scrollWidth;
+    const distance = textWidth + GAP;
+
+    const duration =
+      (distance / PIXELS_PER_SECOND) * 1000;
+
+    animationRef.current = track.animate(
+      [
+        {
+          transform: "translateX(0)",
+        },
+        {
+          transform: `translateX(-${distance}px)`,
+        },
+      ],
+      {
+        duration,
+        iterations: Infinity,
+        easing: "linear",
+      }
+    );
+
+    return () => {
+      animationRef.current?.cancel();
+    };
+  }, [text, isOverflowing, isHovered]);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
+  return (
+    <div
+      ref={containerRef}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      className={`relative w-full text-center ${className}`}
+      title={text}
+    >
+      {/* Invisible copy used ONLY for measuring text width */}
+      <span
+        ref={measureRef}
+        aria-hidden="true"
+        className="pointer-events-none absolute invisible whitespace-nowrap"
+      >
+        {text}
+      </span>
+
+      {isHovered && isOverflowing ? (
+        /* HOVER: show complete text and expand */
+        <div className="w-full whitespace-normal break-words text-center">
+          {text}
+        </div>
+      ) : isOverflowing ? (
+        /* NORMAL: seamless automatic marquee */
+        <div className="w-full overflow-hidden whitespace-nowrap">
+          <div
+            ref={trackRef}
+            className="flex w-max items-center whitespace-nowrap"
+          >
+            {/* COPY 1 */}
+            <span className="shrink-0 whitespace-nowrap">
+              {text}
+            </span>
+
+            {/* GAP */}
+            <span
+              aria-hidden="true"
+              className="shrink-0"
+              style={{ width: `${GAP}px` }}
+            />
+
+            {/* COPY 2 */}
+            <span
+              aria-hidden="true"
+              className="shrink-0 whitespace-nowrap"
+            >
+              {text}
+            </span>
+
+            {/* GAP FOR SEAMLESS LOOP */}
+            <span
+              aria-hidden="true"
+              className="shrink-0"
+              style={{ width: `${GAP}px` }}
+            />
+          </div>
+        </div>
+      ) : (
+        /* SHORT TEXT: stay centered */
+        <div className="w-full whitespace-nowrap text-center">
+          {text}
+        </div>
+      )}
+    </div>
   );
 }
 
@@ -150,9 +310,9 @@ export default function ModelsSection({ data, brandSlug, documentMode = false }:
                     href={modelHref}
                     className="block font-['Manrope'] text-[14px] font-extrabold leading-[1.15] text-[#0d1b2e] transition hover:text-[#15803d]"
                   >
-                    <h3>
-                      {model.h3}
-                    </h3>
+                  <h3>
+  {model.h3.replace(/\s+Engines$/i, "")}
+</h3>
                   </Link>
                   <p className="text-[10.5px] leading-[1.45] text-slate-500">{model.subtitle}</p>
 
@@ -197,66 +357,92 @@ export default function ModelsSection({ data, brandSlug, documentMode = false }:
             const modelHref = getModelHref(brandSlug, model);
 
             return (
-              <article
-                key={model.slug}
-                className="overflow-hidden rounded-[12px] border border-slate-200 bg-white shadow-[0_2px_8px_rgba(13,27,46,0.05)] transition hover:border-slate-300 hover:shadow-[0_8px_18px_rgba(13,27,46,0.08)]"
-              >
-                <button
-                  type="button"
-                  onClick={() => setOpenCard((current) => (current === model.slug ? null : model.slug))}
-                  aria-expanded={isOpen}
-                  aria-label={isOpen ? `Hide ${model.h3} details` : `Show ${model.h3} details`}
-                  className="flex min-h-[248px] w-full flex-col items-center px-2 pb-2 pt-1.5 text-center sm:px-4 sm:py-4"
-                >
-                  <div className="flex min-h-[82px] w-full items-center justify-center">
-                    <div className="relative h-[80px] w-full max-w-[170px]">
-                      <Image
-                        src={model.image || `/images/brands/${brandSlug}/models/${brandSlug}-${model.slug}-small.webp`}
-                        alt={model.h3}
-                        fill
-                        className="object-contain"
-                        sizes="170px"
-                      />
-                    </div>
-                  </div>
+         <article
+  key={model.slug}
+  className="flex min-h-[248px] flex-col overflow-hidden rounded-[12px] border border-slate-200 bg-white shadow-[0_2px_8px_rgba(13,27,46,0.05)] transition hover:border-slate-300 hover:shadow-[0_8px_18px_rgba(13,27,46,0.08)]"
+>
+  {/* CLICKABLE IMAGE */}
+  <Link href={modelHref} className="block w-full">
+    <div className="relative h-[115px] w-full overflow-hidden">
+      <Image
+        src={
+          model.image ||
+          `/images/brands/${brandSlug}/models/${brandSlug}-${model.slug}-small.webp`
+        }
+        alt={model.h3}
+        fill
+        className="object-contain scale-[1.25]"
+        sizes="20vw"
+      />
+    </div>
+  </Link>
 
-                  <div className="mt-3 w-full max-w-[250px]">
-                    <div
-                      role="heading"
-                      aria-level={3}
-                      className="font-['Manrope'] text-[15px] font-extrabold leading-[1.18] text-[#0d1b2e]"
-                    >
-                      {model.h3}
-                    </div>
-                    <p className="mt-2 text-[11.5px] font-semibold leading-[1.4] text-[#4b5563]">
-                      {model.subtitle}
-                    </p>
-                    <p className="mt-3 font-['Manrope'] text-[15px] font-semibold leading-none text-[#374151]">
-                      Rebuilt: {normalizePriceRange(model.priceRange)}
-                    </p>
-                  </div>
+  {/* CARD CONTENT */}
+  <div className="flex flex-1 flex-col px-2 pb-2 text-center">
 
-                  <span className="mt-auto inline-flex pt-4 text-[#15803d]">
-                    <ArrowIcon open={isOpen} />
-                  </span>
-                </button>
+    {/* CLICKABLE MODEL NAME */}
+    <Link
+      href={modelHref}
+      className="mt-2 block w-full transition hover:text-[#15803d]"
+    >
+      <AutoTicker
+        text={model.h3.replace(/\s+Engines$/i, "")}
+        className="font-['Manrope'] text-[13px] font-semibold leading-[1.25] text-[#0d1b2e]"
+      />
+    </Link>
 
-                {isOpen ? (
-                  <div className="border-t border-slate-100 px-4 pb-4 pt-3">
-                    <p className="mt-3 text-[11px] leading-[1.55] text-slate-500">{model.subtitle}</p>
+    {/* DESCRIPTION */}
+    <AutoTicker
+      text={model.subtitle}
+      className="mt-2 text-[9.5px] font-medium leading-[1.4] text-[#4b5563]"
+    />
 
-                    <Link
-                      href={modelHref}
-                      className="mt-3 inline-flex items-center gap-1.5 text-[11px] font-bold text-[#0d1b2e] transition hover:gap-2"
-                    >
-                      <span>{model.cta.replace(/\s*-+>\s*$/, "")}</span>
-                      <span className="text-[#15803d]">
-                        <ArrowIcon />
-                      </span>
-                    </Link>
-                  </div>
-                ) : null}
-              </article>
+    {/* PRICE — PUSHED LOWER */}
+    <AutoTicker
+      text={`Rebuilt Engines: ${normalizePriceRange(model.priceRange)}`}
+      className="mt-auto pt-2 font-['Manrope'] text-[12px] font-semibold leading-[1.4] text-[#374151]"
+    />
+
+    {/* DETAILS ARROW */}
+    <button
+      type="button"
+      onClick={() =>
+        setOpenCard((current) =>
+          current === model.slug ? null : model.slug
+        )
+      }
+      aria-expanded={isOpen}
+      aria-label={
+        isOpen
+          ? `Hide ${model.h3} details`
+          : `Show ${model.h3} details`
+      }
+      className="mx-auto mt-3 inline-flex text-[#15803d]"
+    >
+      <ArrowIcon open={isOpen} />
+    </button>
+  </div>
+
+  {/* EXPANDED DETAILS */}
+  {isOpen ? (
+    <div className="border-t border-slate-100 px-4 pb-4 pt-3">
+      <p className="mt-3 text-[10px] leading-[1.55] text-slate-500">
+        {model.subtitle}
+      </p>
+
+      <Link
+        href={modelHref}
+        className="mt-3 inline-flex items-center gap-1.5 text-[11px] font-bold text-[#0d1b2e] transition hover:gap-2"
+      >
+        <span>{model.cta.replace(/\s*-+>\s*$/, "")}</span>
+
+        <span className="text-[#15803d]">
+          <ArrowIcon />
+        </span>
+      </Link>
+    </div>
+  ) : null}
+</article>
             );
           })}
         </div>

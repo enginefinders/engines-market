@@ -98,10 +98,10 @@ function BrandLogo({ logo, label }: { logo: string; label: string }) {
       <Image
         src={src}
         alt={`${label} logo`}
-        width={120}
-        height={60}
-        sizes="120px"
-        className="h-auto max-h-[60px] w-auto max-w-[120px] object-contain"
+        width={180}
+        height={90}
+        sizes="180px"
+        className="h-auto max-h-[98px] w-auto max-w-[186px] object-contain"
       />
     );
   }
@@ -110,41 +110,46 @@ function BrandLogo({ logo, label }: { logo: string; label: string }) {
 }
 
 export default function HomeBrandGridSection({ brands, featuredSlugs }: Props) {
-  const [openBrand, setOpenBrand] = useState<string | null>("bmw");
-  const [hasSeen, setHasSeen] = useState<string[]>(["bmw"]);
-
+  const [openBrand, setOpenBrand] = useState<string | null>(null);
+  const [hasSeen, setHasSeen] = useState<string[]>([]);
   const [expanded, setExpanded] = useState(false);
-  const [columns, setColumns] = useState<number>(2);
+  const [columns, setColumns] = useState(2);
+  const [isMobileViewport, setIsMobileViewport] = useState(false);
 
   useEffect(() => {
-    const getColumns = () => {
-      if (typeof window === 'undefined') return 2;
-      const width = window.innerWidth;
-      if (width >= 1280) return 6; // xl
-      if (width >= 768) return 3;  // md
-      return 2; // default / sm
+    const getLayoutState = () => {
+      if (typeof window === "undefined") return 2;
+      if (window.innerWidth >= 1280) return 5;
+      if (window.innerWidth >= 768) return 3;
+      return 2;
     };
-    const handleResize = () => setColumns(getColumns());
+
+    const handleResize = () => {
+      setColumns(getLayoutState());
+      setIsMobileViewport(window.innerWidth < 768);
+    };
+
     handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const initialRows = columns <= 2 ? 3 : 2;
-  const initialVisibleCount = columns === 6 ? 12 : columns * initialRows;
-
-  const sortedBrands = useMemo(() => {
-    const featured = brands.filter(b => featuredSlugs.includes(b.slug));
-    const others = brands.filter(b => !featuredSlugs.includes(b.slug));
-    return [...featured, ...others];
+  const featuredBrands = useMemo(() => {
+    const featuredLookup = new Map(brands.map((brand) => [brand.slug, brand]));
+    return featuredSlugs
+      .map((slug) => featuredLookup.get(slug))
+      .filter((brand): brand is HomeBrandPriceEntry => Boolean(brand));
   }, [brands, featuredSlugs]);
 
-  const visibleBrands = expanded
-    ? sortedBrands
-    : sortedBrands.slice(0, Math.min(sortedBrands.length, initialVisibleCount));
+  const alphabeticalBrands = useMemo(
+    () => [...brands].sort((a, b) => a.displayName.localeCompare(b.displayName)),
+    [brands],
+  );
 
-  // Calculate total rows to determine which cards are in the last row
-  const totalRows = Math.ceil(visibleBrands.length / columns);
+  const collapsedBrands = isMobileViewport ? featuredBrands.slice(0, 6) : featuredBrands;
+  const visibleBrands = expanded ? alphabeticalBrands : collapsedBrands;
+  const cardHeightClass = "min-h-[164px] sm:min-h-[172px]";
+  const overlayHeightClass = "min-h-[220px] sm:min-h-[228px]";
 
   function toggleBrand(slug: string) {
     setOpenBrand((current) => (current === slug ? null : slug));
@@ -153,7 +158,51 @@ export default function HomeBrandGridSection({ brands, featuredSlugs }: Props) {
 
   return (
     <Section id="brands" className="bg-[#f7f8fb] py-7 sm:py-8 lg:py-10">
-      {/* FIX: Added missing closing quote on className */}
+      <style>{`
+        @keyframes brandCardReveal {
+          0% {
+            opacity: 0;
+            transform: translateX(-150px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+
+        @keyframes brandCardRevealRight {
+          0% {
+            opacity: 0;
+            transform: translateX(150px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+
+        .brand-reveal {
+          will-change: transform, opacity;
+        }
+
+        .brand-reveal-left {
+          animation: brandCardReveal 0.9s ease-out forwards;
+        }
+
+        .brand-reveal-right {
+          animation: brandCardRevealRight 0.9s ease-out forwards;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .brand-reveal,
+          .brand-reveal-left,
+          .brand-reveal-right {
+            animation: none !important;
+            transform: none !important;
+            opacity: 1 !important;
+          }
+        }
+      `}</style>
       <Container className="max-w-[1200px]">
         <div className="mx-auto max-w-[760px] text-center">
           <div className="section-pill mx-auto">
@@ -170,62 +219,78 @@ export default function HomeBrandGridSection({ brands, featuredSlugs }: Props) {
           </p>
         </div>
 
-        <div className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-6">
+        <div className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-5">
           {visibleBrands.map((brand, index) => {
-            // Determine which row this card is in
-            const rowIndex = Math.floor(index / columns);
-            // Last row check (only apply upward dropdown if there's more than 1 row)
-            const isLastRow = rowIndex === totalRows - 1 && totalRows > 1;
             const isOpen = openBrand === brand.slug;
             const shouldAnimate = !hasSeen.includes(brand.slug);
+            const rowIndex = Math.floor(index / columns);
+            const isLastMobileRow = isMobileViewport && !expanded && index >= visibleBrands.length - 2;
+            const opensUpward = isMobileViewport ? isLastMobileRow : rowIndex > 0;
+            const shouldReveal = expanded;
+            const revealDirectionClass = index % 2 === 0 ? "brand-reveal-left" : "brand-reveal-right";
 
             return (
-              <article key={brand.slug} className="relative">
-                {/* Card Container */}
+              <article
+                key={brand.slug}
+                className={`group relative ${isOpen ? "z-30" : "z-10"} ${shouldReveal ? `brand-reveal ${revealDirectionClass}` : ""}`}
+              >
                 <div
-                  className={`relative border border-[#e5e7eb] bg-white shadow-[0_2px_8px_rgba(13,27,46,0.06)] ${
+                  className={`relative border border-[#e5e7eb] bg-white shadow-[0_2px_8px_rgba(13,27,46,0.06)] transition-all duration-300 ${
                     isOpen
-                      ? isLastRow
-                        ? "rounded-b-[10px] rounded-t-none border-t-0"
-                        : "rounded-t-[10px] rounded-b-none border-b-0"
-                      : "rounded-[10px]"
+                      ? opensUpward
+                        ? "rounded-b-[10px] rounded-t-none border-t-0 shadow-[0_18px_34px_rgba(21,128,61,0.16)]"
+                        : "rounded-t-[10px] rounded-b-none border-b-0 shadow-[0_18px_34px_rgba(21,128,61,0.16)]"
+                      : "rounded-[10px] group-hover:-translate-y-1 group-hover:border-[#b8dcc7] group-hover:shadow-[0_18px_34px_rgba(21,128,61,0.14)]"
                   }`}
                 >
-                  <button
-                    type="button"
-                    onClick={() => toggleBrand(brand.slug)}
-                    aria-expanded={isOpen}
-                    aria-label={isOpen ? `Collapse ${brand.displayName}` : `Expand ${brand.displayName}`}
-                    className="flex min-h-[120px] w-full flex-col items-center px-4 py-5 text-center"
-                  >
-                    <div className="flex h-[60px] items-center justify-center">
-                      <BrandLogo logo={brand.logo} label={brand.displayName} />
-                    </div>
-                    <p className="mt-2 text-[12px] text-[#6b7280]">from {brand.fromPrice}</p>
-                    <div className="mt-auto pt-3">
-                      <ChevronIcon open={isOpen} animate={shouldAnimate && !isOpen} />
-                    </div>
-                  </button>
+                  <div className={`flex flex-col px-3 py-3 text-center sm:px-3 sm:py-3 ${cardHeightClass}`}>
+                    <Link
+                      href={`/${brand.slug}`}
+                      className="flex flex-1 flex-col items-center"
+                      aria-label={`Open ${brand.displayName} brand page`}
+                    >
+                      <div className="flex min-h-[92px] items-end justify-center sm:min-h-[96px]">
+                        <div className="transition-transform duration-300 group-hover:scale-[1.04]">
+                          <BrandLogo logo={brand.logo} label={brand.displayName} />
+                        </div>
+                      </div>
+                      <p className="mt-2.5 text-[15px] font-bold leading-tight text-[#0d1b2e]">
+                        {brand.displayName}
+                      </p>
+                      <p className="mt-2 text-[12px] font-medium leading-[1.45] text-[#6b7280]">
+                        from <span className="font-semibold text-[#15803d]">{brand.fromPrice}</span>
+                      </p>
+                    </Link>
 
-                  {/* Dropdown */}
+                    <button
+                      type="button"
+                      onClick={() => toggleBrand(brand.slug)}
+                      aria-expanded={isOpen}
+                      aria-label={isOpen ? `Collapse ${brand.displayName}` : `Expand ${brand.displayName}`}
+                      className="mt-auto flex items-center justify-center pt-2"
+                    >
+                      <ChevronIcon open={isOpen} animate={shouldAnimate && !isOpen} />
+                    </button>
+                  </div>
+
                   {isOpen ? (
                     <div
-                      className={`absolute left-[-1px] right-[-1px] z-20 border border-[#e5e7eb] bg-[#0d1b2e] p-2 py-4 ${
-                        isLastRow
-                          ? "bottom-full rounded-t-[10px] border-b-0"
-                          : "top-full rounded-b-[10px] border-t-0"
+                      className={`absolute left-[-1px] right-[-1px] z-20 border border-[#e5e7eb] bg-[#0d1b2e] p-4 py-5 shadow-[0_20px_38px_rgba(13,27,46,0.24)] ${
+                        opensUpward
+                          ? `bottom-[calc(100%-1px)] rounded-t-[10px] border-b-0 ${overlayHeightClass}`
+                          : `top-[calc(100%-1px)] rounded-b-[10px] border-t-0 ${overlayHeightClass}`
                       }`}
                     >
-                      <div className="space-y-2 text-left">
-                        <div className="flex items-baseline gap-2 text-[11px]">
-                          <span className="text-white/60">From price:</span>
+                      <div className="space-y-3.5 text-left">
+                        <div className="flex items-baseline gap-2.5 text-[11px] leading-[1.6]">
+                          <span className="text-white/60">Engine prices from:</span>
                           <span className="font-semibold text-white">{brand.fromPrice} <span className="text-[11px] font-normal text-white/70">(supply only)</span></span>
                         </div>
-                        <div className="flex items-baseline gap-2 text-[11px]">
+                        <div className="flex items-baseline gap-2.5 text-[11px] leading-[1.6]">
                           <span className="text-white/60">Avg rebuilt:</span>
                           <span className="font-semibold text-white">{brand.avgRebuilt}</span>
                         </div>
-                        <div className="flex items-baseline gap-2 text-[11px]">
+                        <div className="flex items-baseline gap-2.5 text-[11px] leading-[1.6]">
                           <span className="text-white/60">Supply & fit:</span>
                           <span className="font-semibold text-white">Available UK-wide</span>
                         </div>
@@ -233,7 +298,7 @@ export default function HomeBrandGridSection({ brands, featuredSlugs }: Props) {
 
                       <Link
                         href={`/${brand.slug}`}
-                        className="mt-4 flex min-h-[48px] w-full items-center justify-center gap-2 rounded-[8px] bg-[#15803d] p-2 text-center text-[13px] font-semibold leading-[1.3] text-white transition hover:bg-[#116533]"
+                        className="mt-5 flex min-h-[48px] w-full items-center justify-center gap-2 rounded-[8px] bg-[#15803d] p-2 text-center text-[13px] font-semibold leading-[1.3] text-white transition hover:bg-[#116533]"
                       >
                         <span className="whitespace-normal">{brand.ctaText}</span>
                       </Link>
@@ -245,10 +310,13 @@ export default function HomeBrandGridSection({ brands, featuredSlugs }: Props) {
           })}
         </div>
 
-        {sortedBrands.length > initialVisibleCount && (
+        {alphabeticalBrands.length > featuredBrands.length && (
           <button
             type="button"
-            onClick={() => setExpanded((current) => !current)}
+            onClick={() => {
+              setExpanded((current) => !current);
+              setOpenBrand(null);
+            }}
             className="mt-5 flex h-12 w-auto mx-auto items-center justify-center gap-2 rounded-[8px] bg-[#15803d] px-4 text-[14px] font-semibold text-white transition hover:bg-[#116533] duration-300"
             aria-expanded={expanded}
           >

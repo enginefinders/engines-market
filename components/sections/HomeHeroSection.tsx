@@ -453,22 +453,18 @@ function HeroRow({ row }: { row: HeroBrandRow }) {
           {row.stat}
         </div>
         
-        {/* Line 2: price range */}
-        <div className="mb-[2px] text-[13px] text-[#0d1b2e]">
-          Avg. <span className="font-semibold">Rebuilt</span> Quote:{" "}
-          <span className="font-semibold">{row.price}</span>{" "}
-          <span className="text-[11px] text-[#6b7280]">· supply only, </span>
-          <span className="truncate text-[11px] text-[#6b7280]">
-          Most requested:{" "}
-          <span className="font-medium text-[#374151]">{row.codes}</span>
-        </span>
-        </div>
-        
-        {/* Line 3: most requested codes */}
-        {/* <div className="truncate text-[11px] text-[#6b7280]">
-          Most requested:{" "}
-          <span className="font-medium text-[#374151]">{row.codes}</span>
-        </div> */}
+{/* Line 2: price range */}
+<div className="mb-[2px] text-[13px] text-[#0d1b2e]">
+  Avg. <span className="font-semibold">Rebuilt</span> Quote:{" "}
+  <span className="font-semibold">{row.price}</span>{" "}
+  <span className="text-[11px] text-[#6b7280]">· supply only</span>
+</div>
+
+{/* Line 3: most requested codes */}
+<div className="truncate text-[11px] text-[#6b7280]">
+  Most requested:{" "}
+  <span className="font-medium text-[#2563eb]">{row.codes}</span>
+</div>
       </div>
 
       {/* RIGHT: chevron arrow */}

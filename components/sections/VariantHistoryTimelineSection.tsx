@@ -68,17 +68,29 @@ function SpecDividerRow({
   items: Array<{ label: string; value: string }>;
   dark?: boolean;
 }) {
+  const usesFourUpLayout = items.length > 3;
+  const dividerClass = dark ? "border-white/18" : "border-[#d9e3ee]";
+
   return (
     <div
-      className={`grid gap-0 ${items.length > 3 ? "grid-cols-2 sm:grid-cols-4" : "grid-cols-3"} ${
+      className={`grid gap-0 ${usesFourUpLayout ? "grid-cols-2 sm:grid-cols-4" : "grid-cols-1 sm:grid-cols-3"} ${
         dark ? "text-white" : "text-[#0b2347]"
       }`}
     >
       {items.map((item, index) => (
         <div
           key={`${item.label}-${index}`}
-          className={`flex min-w-0 items-center gap-2 px-2 py-2 first:pl-0 last:pr-0 sm:gap-2.5 sm:px-4 lg:px-5 ${
-            index < items.length - 1 ? dark ? "border-r border-white/18" : "border-r border-[#d9e3ee]" : ""
+          className={`flex min-w-0 items-center gap-2 px-3 py-3 sm:gap-2.5 sm:px-4 lg:px-5 ${
+            usesFourUpLayout
+              ? [
+                  index < 2 ? `border-b sm:border-b-0 ${dividerClass}` : "",
+                  index % 2 === 0 ? `border-r sm:border-r-0 ${dividerClass}` : "",
+                  index < items.length - 1 ? `sm:border-r ${dividerClass}` : "",
+                ].filter(Boolean).join(" ")
+              : [
+                  index < items.length - 1 ? `border-b sm:border-b-0 ${dividerClass}` : "",
+                  index < items.length - 1 ? `sm:border-r ${dividerClass}` : "",
+                ].filter(Boolean).join(" ")
           }`}
         >
           <span
@@ -89,10 +101,10 @@ function SpecDividerRow({
             {getMetaIcon(item.label, "h-[17px] w-[17px] sm:h-5 sm:w-5")}
           </span>
           <span className="min-w-0 text-left">
-            <span className={`block text-[10px] font-semibold leading-tight ${dark ? "text-white/70" : "text-[#60728a]"}`}>
+            <span className={`block text-[10px] font-semibold uppercase leading-tight tracking-[0.03em] ${dark ? "text-white/70" : "text-[#60728a]"}`}>
               {normalizeCopy(item.label)}
             </span>
-            <span className={`mt-0.5 block text-[11px] font-extrabold leading-tight sm:text-[12px] ${dark ? "text-white" : "text-[#071d45]"}`}>
+            <span className={`mt-0.5 block text-[12px] font-extrabold leading-tight sm:text-[13px] ${dark ? "text-white" : "text-[#071d45]"}`}>
               {normalizeCopy(item.value)}
             </span>
           </span>
@@ -197,17 +209,16 @@ export default function VariantHistoryTimelineSection({ data, vehicleImage, mobi
                 </p>
 
                 {mobileVehicleImage ? (
-                  <div className="-mx-4 mt-3 overflow-hidden bg-transparent">
-                    <div className="relative">
-                      <div className="pointer-events-none absolute inset-y-0 left-0 w-[38%] bg-[linear-gradient(90deg,#f7fbff_0%,rgba(247,251,255,0.82)_45%,rgba(247,251,255,0)_100%)]" />
+                  <div className="relative left-1/2 right-1/2 mt-3 w-screen max-w-none -translate-x-1/2 overflow-hidden bg-transparent">
+                    <div className="relative h-[260px] w-full sm:h-[320px]">
                       <Image
                         src={mobileVehicleImage}
                         alt={normalizedHeading}
-                        width={1280}
-                        height={853}
-                        className="relative z-[1] h-auto w-full object-cover object-center"
+                        fill
+                        className="object-cover object-[center_58%]"
                         sizes="100vw"
                       />
+                      <div className="pointer-events-none absolute inset-x-0 top-0 h-20 bg-[linear-gradient(180deg,#f7fbff_0%,rgba(247,251,255,0.78)_54%,rgba(247,251,255,0)_100%)]" />
                     </div>
                   </div>
                 ) : null}

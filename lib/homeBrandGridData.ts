@@ -9,18 +9,16 @@ export type HomeBrandPriceEntry = {
 };
 
 export const homeFeaturedBrandSlugs = [
-  "bmw",
   "mercedes-benz",
   "land-rover",
   "jaguar",
   "range-rover",
-  "volkswagen",
   "audi",
+  "volkswagen",
   "ford",
-  "toyota",
-  "hyundai",
-  "vauxhall",
   "mini",
+  "toyota",
+  "vauxhall",
 ];
 
 export const homeBrandPriceDirectory: HomeBrandPriceEntry[] = [

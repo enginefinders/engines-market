@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import type { ModelVariantCoverageSectionData } from "@/types/model";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
@@ -231,6 +231,140 @@ function buildVariantHref(cardSlug: string, brandSlug?: string, modelSlug?: stri
   return `/${brandSlug.trim().replace(/^\/+|\/+$/g, "")}/${modelSlug
     .trim()
     .replace(/^\/+|\/+$/g, "")}/${normalizedCardSlug}`;
+}
+
+
+function AutoTicker({
+  text,
+  className = "",
+}: {
+  text: string;
+  className?: string;
+}) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const measureRef = useRef<HTMLSpanElement>(null);
+  const trackRef = useRef<HTMLDivElement>(null);
+  const animationRef = useRef<Animation | null>(null);
+
+  const [isOverflowing, setIsOverflowing] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+
+  const GAP = 28;
+  const PIXELS_PER_SECOND = 18;
+
+  useEffect(() => {
+    const measure = () => {
+      const container = containerRef.current;
+      const measureElement = measureRef.current;
+
+      if (!container || !measureElement) return;
+
+      setIsOverflowing(
+        measureElement.scrollWidth > container.clientWidth + 2
+      );
+    };
+
+    const timer = window.setTimeout(measure, 50);
+    const observer = new ResizeObserver(measure);
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => {
+      window.clearTimeout(timer);
+      observer.disconnect();
+    };
+  }, [text]);
+
+  useEffect(() => {
+    animationRef.current?.cancel();
+    animationRef.current = null;
+
+    const track = trackRef.current;
+    const measureElement = measureRef.current;
+
+    if (!track || !measureElement || !isOverflowing || isHovered) {
+      return;
+    }
+
+    const distance = measureElement.scrollWidth + GAP;
+    const duration = (distance / PIXELS_PER_SECOND) * 1000;
+
+    animationRef.current = track.animate(
+      [
+        { transform: "translateX(0)" },
+        { transform: `translateX(-${distance}px)` },
+      ],
+      {
+        duration,
+        iterations: Infinity,
+        easing: "linear",
+      }
+    );
+
+    return () => {
+      animationRef.current?.cancel();
+    };
+  }, [text, isOverflowing, isHovered]);
+
+  return (
+    <div
+      ref={containerRef}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      className={`relative w-full text-center ${className}`}
+      title={text}
+    >
+      <span
+        ref={measureRef}
+        aria-hidden="true"
+        className="pointer-events-none absolute invisible whitespace-nowrap"
+      >
+        {text}
+      </span>
+
+      {isHovered && isOverflowing ? (
+        <div className="w-full whitespace-normal break-words text-center">
+          {text}
+        </div>
+      ) : isOverflowing ? (
+        <div className="w-full overflow-hidden whitespace-nowrap">
+          <div
+            ref={trackRef}
+            className="flex w-max items-center whitespace-nowrap"
+          >
+            <span className="shrink-0 whitespace-nowrap">
+              {text}
+            </span>
+
+            <span
+              aria-hidden="true"
+              className="shrink-0"
+              style={{ width: `${GAP}px` }}
+            />
+
+            <span
+              aria-hidden="true"
+              className="shrink-0 whitespace-nowrap"
+            >
+              {text}
+            </span>
+
+            <span
+              aria-hidden="true"
+              className="shrink-0"
+              style={{ width: `${GAP}px` }}
+            />
+          </div>
+        </div>
+      ) : (
+        <div className="w-full whitespace-nowrap text-center">
+          {text}
+        </div>
+      )}
+    </div>
+  );
 }
 
 export default function VariantCoverageSection({
@@ -520,74 +654,125 @@ export default function VariantCoverageSection({
                   modelSlug,
                   modelName,
                 });
+                const variantHref =
+  variantRouteMap?.[card.slug] ??
+  buildVariantHref(card.slug, brandSlug, modelSlug);
 
                 return (
-                  <article key={card.slug} className="relative">
-                    <div
-                      className={`overflow-hidden rounded-[12px] border bg-white transition duration-300 ${isOpen
-                          ? `border-[#2969af] shadow-[0_0_0_1px_rgba(42,109,214,1),0_0_5px_rgba(42,109,214,0.4),0_0_12px_rgba(42,109,214,0.3),0_0_20px_rgba(42,109,214,0.2),0_3px_10px_rgba(42,109,214,0.25)] ${useStackedExpansion
-                            ? "rounded-b-none border-b-0"
-                            : isLastRow
-                            ? "rounded-b-[12px] rounded-t-none border-t-0"
-                            : "rounded-t-[12px] rounded-b-none border-b-0"
-                          }`
-                          : "border-slate-200 shadow-[0_2px_8px_rgba(13,27,46,0.05)] hover:border-slate-300 hover:shadow-[0_8px_18px_rgba(13,27,46,0.08)]"
-                        }`}
-                    >
-                      <button
-                        type="button"
-                        onClick={() => toggleCard(card.slug)}
-                        aria-expanded={isOpen}
-                        className="flex min-h-[230px] w-full flex-col items-center px-2 pb-2 pt-1.5 sm:px-4 sm:py-4 text-center md:min-h-[248px]"
-                      >
-                        <div className="flex min-h-[82px] w-full items-center justify-center">
-                          <div className="relative h-[80px] w-full max-w-[170px]">
-                            <Image
-                              src={vehicleImage.src}
-                              alt={shortName}
-                              fill
-                              className={
-                                vehicleImage.zoomed
-                                  ? "scale-[1.2] object-cover object-center"
-                                  : "object-contain"
-                              }
-                              sizes="170px"
-                            />
-                          </div>
-                        </div>
+               <article key={card.slug} className="relative">
+  <div
+    className={`flex min-h-[248px] flex-col overflow-hidden rounded-[12px] border bg-white transition duration-300 ${
+      isOpen
+        ? `border-[#2969af] shadow-[0_0_0_1px_rgba(42,109,214,1),0_0_5px_rgba(42,109,214,0.4),0_0_12px_rgba(42,109,214,0.3),0_0_20px_rgba(42,109,214,0.2),0_3px_10px_rgba(42,109,214,0.25)] ${
+            useStackedExpansion
+              ? "rounded-b-none border-b-0"
+              : isLastRow
+                ? "rounded-b-[12px] rounded-t-none border-t-0"
+                : "rounded-t-[12px] rounded-b-none border-b-0"
+          }`
+        : "border-slate-200 shadow-[0_2px_8px_rgba(13,27,46,0.05)] hover:border-slate-300 hover:shadow-[0_8px_18px_rgba(13,27,46,0.08)]"
+    }`}
+  >
+    {/* CLICKABLE WALL-TO-WALL IMAGE */}
+    {variantHref ? (
+      <Link href={variantHref} className="block w-full">
+        <div className="relative h-[115px] w-full overflow-hidden">
+          <Image
+            src={vehicleImage.src}
+            alt={shortName}
+            fill
+            className={
+              vehicleImage.zoomed
+                ? "scale-[1.12] object-cover object-center"
+                : "scale-[1.15] object-contain"
+            }
+            sizes="20vw"
+          />
+        </div>
+      </Link>
+    ) : (
+      <div className="relative h-[115px] w-full overflow-hidden">
+        <Image
+          src={vehicleImage.src}
+          alt={shortName}
+          fill
+          className={
+            vehicleImage.zoomed
+              ? "scale-[1.12] object-cover object-center"
+              : "scale-[1.15] object-contain"
+          }
+          sizes="20vw"
+        />
+      </div>
+    )}
 
-                        <div className="mt-3 w-full max-w-[250px]">
-                          <div className="font-['Manrope'] text-[16px] font-extrabold leading-[1.18] text-[#0d1b2e] md:text-[15px]">
-                            {shortName}
-                          </div>
-                          <p className="mt-2 text-[11.5px] font-semibold leading-[1.4] text-[#4b5563]">
-                            {codeAndType}
-                          </p>
-                          <p className="mt-3 font-['Manrope'] text-[15px] font-semibold leading-none text-[#374151]">
-                            Rebuilt: {card.priceRange}
-                          </p>
-                        </div>
+    {/* CONTENT */}
+    <div className="flex flex-1 flex-col px-2 pb-2 text-center">
 
-                        <span className="mt-auto inline-flex pt-2 text-[#15803d] md:pt-4">
-                          <ChevronIcon open={isOpen} animated={animateChevron} />
-                        </span>
-                      </button>
-                    </div>
+      {/* CLICKABLE VARIANT TITLE */}
+      {variantHref ? (
+        <Link
+          href={variantHref}
+          className="mt-2 block w-full transition hover:text-[#15803d]"
+        >
+          <AutoTicker
+            text={shortName}
+            className="font-['Manrope'] text-[13px] font-semibold leading-[1.25] text-[#0d1b2e]"
+          />
+        </Link>
+      ) : (
+        <AutoTicker
+          text={shortName}
+          className="mt-2 font-['Manrope'] text-[13px] font-semibold leading-[1.25] text-[#0d1b2e]"
+        />
+      )}
 
-                    {isOpen
-                      ? renderExpandedPanel(
-                          card,
-                          `${useStackedExpansion
-                            ? "rounded-b-[12px] border-t-0"
-                            : `absolute left-[-1px] right-[-1px] z-50 ${
-                                isLastRow
-                                  ? "bottom-full rounded-t-[12px] border-b-0"
-                                  : "top-full rounded-b-[12px] border-t-0"
-                              }`
-                          } min-h-[248px] sm:min-h-[267px]`,
-                        )
-                      : null}
-                  </article>
+      {/* ENGINE CODE / TYPE */}
+      <AutoTicker
+        text={codeAndType}
+        className="mt-2 text-[9.5px] font-medium leading-[1.4] text-[#4b5563]"
+      />
+
+      {/* REBUILT PRICE */}
+      <AutoTicker
+        text={`Rebuilt Engines: ${card.priceRange}`}
+        className="mt-auto pt-3 font-['Manrope'] text-[12px] font-semibold leading-[1.4] text-[#374151]"
+      />
+
+      {/* EXPAND ARROW */}
+      <button
+        type="button"
+        onClick={() => toggleCard(card.slug)}
+        aria-expanded={isOpen}
+        aria-label={
+          isOpen
+            ? `Hide ${card.h3} details`
+            : `Show ${card.h3} details`
+        }
+        className="mx-auto mt-3 inline-flex text-[#15803d]"
+      >
+        <ChevronIcon
+          open={isOpen}
+          animated={animateChevron}
+        />
+      </button>
+    </div>
+  </div>
+
+  {isOpen
+    ? renderExpandedPanel(
+        card,
+        `${useStackedExpansion
+          ? "rounded-b-[12px] border-t-0"
+          : `absolute left-[-1px] right-[-1px] z-50 ${
+              isLastRow
+                ? "bottom-full rounded-t-[12px] border-b-0"
+                : "top-full rounded-b-[12px] border-t-0"
+            }`
+        } min-h-[248px] sm:min-h-[267px]`
+      )
+    : null}
+</article>
                 );
               })}
             </div>

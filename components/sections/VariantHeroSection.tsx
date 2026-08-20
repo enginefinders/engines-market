@@ -183,7 +183,7 @@ export default function VariantHeroSection({ data, backgroundArtwork, vehicleIma
     <Section className="overflow-hidden !px-0 !py-[2px]">
       <div className="relative overflow-hidden bg-[#eef3f8]">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_16%_18%,rgba(255,255,255,0.98),rgba(255,255,255,0.92)_22%,rgba(239,244,250,0.82)_50%,rgba(229,237,247,0.8)_100%)]" />
-        <div className="absolute inset-0 bg-[linear-gradient(115deg,rgba(255,255,255,0)_0%,rgba(255,255,255,0)_44%,rgba(210,221,236,0.42)_44%,rgba(210,221,236,0.42)_49%,rgba(255,255,255,0)_49%,rgba(255,255,255,0)_58%,rgba(215,226,240,0.22)_58%,rgba(215,226,240,0.22)_64%,rgba(255,255,255,0)_64%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(115deg,rgba(255,255,255,0)_0%,rgba(255,255,255,0)_44%,rgba(210,221,236,0.42)_44%,rgba(210,221,236,0.42)_49%,rgba(255,255,255,0)_49%,rgba(255,255,255,0)_58%,rgba(215,226,240,0.22)_58%,rgba(215,226,240,0.22)_64%,rgba(255,255,255,0)_64%)] lg:hidden" />
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.76)_0%,rgba(255,255,255,0.32)_36%,rgba(239,244,250,0.08)_58%,rgba(232,239,248,0.55)_100%)]" />
         {backgroundArtwork ? (
           <div

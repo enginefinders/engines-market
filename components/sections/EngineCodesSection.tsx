@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useMemo, useState, type ReactNode } from "react";
+import Image from "next/image";
+import { useMemo, useState, type ReactNode } from "react";
 import type { EngineCodesData } from "@/types/brand";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
@@ -29,12 +30,12 @@ const ENGINE_IMAGE_POOL = [
 
 function clean(text?: string) {
   return (text ?? "")
-    .replace(/Ã‚Â£|Ãƒâ€šÃ‚Â£|Â£/g, "£")
-    .replace(/Ã¢â‚¬â€œ|Ã¢â‚¬â€|Ã¢â‚¬â€˜|â€“|â€”/g, "-")
-    .replace(/Ã¢â‚¬â„¢/g, "'")
-    .replace(/Ã¢â‚¬Å“|Ã¢â‚¬Â/g, '"')
-    .replace(/Ã‚Â·|Ãƒâ€šÃ‚Â·/g, "·")
-    .replace(/Ã¢â€ â€™/g, "->")
+    .replace(/Ãƒâ€šÃ‚Â£|ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â£|Ã‚Â£/g, "Â£")
+    .replace(/ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“|ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â|ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Ëœ|Ã¢â‚¬â€œ|Ã¢â‚¬â€/g, "-")
+    .replace(/ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢/g, "'")
+    .replace(/ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œ|ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â/g, '"')
+    .replace(/Ãƒâ€šÃ‚Â·|ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â·/g, "Â·")
+    .replace(/ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢/g, "->")
     .replace(/\s+/g, " ")
     .trim();
 }
@@ -73,6 +74,87 @@ function heroImageForBrand(brand: string, bgImage?: string) {
   if (/bmw/i.test(brand)) return ENGINE_IMAGE_POOL[0];
   if (bgImage && bgImage.includes("/engines/")) return bgImage;
   return ENGINE_IMAGE_POOL[0];
+}
+
+function yearsFromModels(text: string) {
+  const match = clean(text).match(/\(([^)]+)\)/);
+  return match?.[1]?.trim() ?? "Check by registration";
+}
+
+function summaryTitle(engine: EngineItem) {
+  const title = clean(engine.title);
+  if (title && /[a-z]/i.test(title) && !/^\d+(?:\.\d+)?$/i.test(title)) {
+    return title;
+  }
+
+  return [clean(engine.size), clean(engine.fuel)].filter(Boolean).join(" ");
+}
+
+function engineSeries(code: string) {
+  const primaryCode = clean(code).split("/")[0]?.trim().toUpperCase() || clean(code).toUpperCase();
+  const match = primaryCode.match(/^[A-Z]\d+/);
+  return match?.[0] ?? primaryCode;
+}
+
+function accordionHeading(engine: EngineItem) {
+  const years = yearsFromModels(engine.compatibleModels);
+  return `${engineSeries(engine.code)} Series (${years})`;
+}
+
+function engineDescription(engine: EngineItem) {
+  const title = summaryTitle(engine);
+  const compatible = clean(engine.compatibleModels);
+  const power = clean(engine.power);
+  const fuel = clean(engine.fuel).toLowerCase();
+
+  return `${clean(engine.code)} is a ${title}${power ? ` producing ${power}` : ""}. This ${fuel} setup appears across ${compatible} and remains one of the most commonly requested ${clean(engine.groupName).toLowerCase()} replacements.`;
+}
+
+function tableRows(engine: EngineItem) {
+  return [
+    {
+      label: "ENGINE CODE(S)",
+      value: clean(engine.code),
+    },
+    {
+      label: "COMPATIBLE MODELS (UK)",
+      value: clean(engine.compatibleModels),
+    },
+    {
+      label: "PRODUCTION YEARS",
+      value: yearsFromModels(engine.compatibleModels),
+    },
+  ];
+}
+
+function priceText(value: string) {
+  return clean(value).replace(/^from\s+/i, "");
+}
+
+function buildTabs(data: EngineCodesData): FuelTab[] {
+  const buckets = new Map<FuelTab["key"], EngineItem[]>();
+
+  data.groups.forEach((group) => {
+    group.engines.forEach((engine) => {
+      const key = tabKeyForFuel(engine.fuel);
+      const next = buckets.get(key) ?? [];
+      next.push({
+        ...engine,
+        groupName: group.name,
+        era: group.era,
+        failureNote: group.failureNote,
+      });
+      buckets.set(key, next);
+    });
+  });
+
+  return (["diesel", "petrol", "hybrid"] as const)
+    .map((key) => ({
+      key,
+      ...tabMeta(key),
+      items: buckets.get(key) ?? [],
+    }))
+    .filter((tab) => tab.items.length > 0);
 }
 
 function SvgIcon({ children, className = "h-5 w-5" }: { children: ReactNode; className?: string }) {
@@ -145,7 +227,7 @@ function ListIcon({ className = "h-7 w-7" }: { className?: string }) {
 
 function Chevron({ open = false, className = "h-4 w-4" }: { open?: boolean; className?: string }) {
   return (
-    <SvgIcon className={`${className} transition-transform ${open ? "rotate-180" : ""}`}>
+    <SvgIcon className={`${className} transition-transform duration-200 ${open ? "rotate-180" : ""}`}>
       <path d="m6 9 6 6 6-6" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
     </SvgIcon>
   );
@@ -173,123 +255,21 @@ function SpecIcon({ type }: { type: "power" | "fuel" | "size" | "years" }) {
   return <CubeIcon className={className} />;
 }
 
-function buildTabs(data: EngineCodesData): FuelTab[] {
-  const buckets = new Map<FuelTab["key"], EngineItem[]>();
-
-  data.groups.forEach((group) => {
-    group.engines.forEach((engine) => {
-      const key = tabKeyForFuel(engine.fuel);
-      const next = buckets.get(key) ?? [];
-      next.push({
-        ...engine,
-        groupName: group.name,
-        era: group.era,
-        failureNote: group.failureNote,
-      });
-      buckets.set(key, next);
-    });
-  });
-
-  return (["diesel", "petrol", "hybrid"] as const)
-    .map((key) => ({
-      key,
-      ...tabMeta(key),
-      items: buckets.get(key) ?? [],
-    }))
-    .filter((tab) => tab.items.length > 0);
-}
-
-function EngineCodeCard({
-  engine,
-  expanded,
-  onToggle,
-}: {
-  engine: EngineItem;
-  expanded: boolean;
-  onToggle: () => void;
-}) {
-  return (
-    <article className="flex min-h-full min-w-0 flex-col overflow-hidden rounded-[14px] bg-white p-4 shadow-[0_10px_24px_rgba(6,26,51,0.16)] ring-1 ring-white/70">
-      <div className="flex items-start justify-between gap-3">
-        <div className="flex min-w-0 flex-wrap items-center gap-2">
-          <span className="rounded-[7px] bg-[linear-gradient(135deg,#08784a,#064f36)] px-3 py-1.5 font-['Manrope'] text-[18px] font-black leading-none text-white">
-            {clean(engine.code)}
-          </span>
-          <span className="rounded-[7px] bg-[#123f91] px-3 py-1.5 text-[11px] font-extrabold uppercase tracking-[0.05em] text-white">
-            {clean(engine.size)} {clean(engine.fuel)}
-          </span>
-        </div>
-        <button type="button" onClick={onToggle} className="rounded-full p-1.5 text-[#061a33] hover:bg-slate-100" aria-label="Toggle engine details">
-          <Chevron open={expanded} />
-        </button>
-      </div>
-
-      <div className="mt-4 grid grid-cols-[118px_minmax(0,1fr)] gap-4">
-        <img src={engineImage(engine.code, engine.image)} alt="" className="h-[116px] w-full object-contain drop-shadow-[0_16px_18px_rgba(6,26,51,0.16)]" loading="lazy" />
-        <div className="grid content-center gap-2 text-[13px] text-[#061a33]">
-          <p className="flex items-center gap-2"><SpecIcon type="power" />{clean(engine.power)}</p>
-          <p className="flex items-center gap-2"><SpecIcon type="fuel" />{clean(engine.fuel)}</p>
-          <p className="flex items-center gap-2"><SpecIcon type="size" />{clean(engine.size)}</p>
-          <p className="flex items-center gap-2"><SpecIcon type="years" />{clean(engine.era)}</p>
-        </div>
-      </div>
-
-      <div className="mt-4 border-t border-slate-200 pt-3">
-        <p className="text-[12px] font-black uppercase tracking-[0.08em] text-[#061a33]">History</p>
-        <p className="mt-1 line-clamp-3 text-[13px] leading-[1.55] text-slate-700">{clean(engine.compatibleModels)}</p>
-      </div>
-
-      {expanded ? (
-        <div className="mt-3 rounded-[10px] border border-[#cfe0f2] bg-[#f8fbff] p-3 text-[12.5px] leading-[1.55] text-slate-700">
-          <p><strong className="text-[#061a33]">Known failure note: </strong>{clean(engine.failureNote)}</p>
-          <p className="mt-2"><strong className="text-[#061a33]">Compatible models: </strong>{clean(engine.compatibleModels)}</p>
-        </div>
-      ) : null}
-
-      <div className="mt-auto min-w-0 border-t border-slate-200 pt-3">
-        <div className="text-[10px] font-black uppercase tracking-[0.12em] text-[#061a33]">Avg. rebuilt price (supply only)</div>
-        <div className="mt-1 grid min-w-0 grid-cols-[minmax(0,1fr)_auto] items-center gap-2">
-          <p className="min-w-0 truncate whitespace-nowrap font-['Manrope'] text-[18px] font-black text-[#08784a] xl:text-[19px]">{clean(engine.avgRebuiltPrice)}</p>
-          <a href="#quote-form" data-quote-engine-code={engine.code} className="inline-flex shrink-0 items-center gap-1 whitespace-nowrap text-[11px] font-extrabold text-[#06265a] hover:text-[#08784a] xl:text-[12px]">
-            <span>View Details</span> <Arrow className="h-3.5 w-3.5 xl:h-4 xl:w-4" />
-          </a>
-        </div>
-        <a href="#quote-form" data-quote-engine-code={engine.code} className="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-[8px] border border-[#08784a] px-3 py-2.5 text-[13px] font-extrabold text-[#065f46]">
-          <Arrow /> {clean(engine.cta || `Get quotes for ${engine.code}`)}
-        </a>
-      </div>
-    </article>
-  );
-}
-
 export default function EngineCodesSection({ data, bgImage }: Props) {
   const brand = brandFromHeading(data);
   const tabs = useMemo(() => buildTabs(data), [data]);
   const [activeTab, setActiveTab] = useState(0);
-  const [activeSlide, setActiveSlide] = useState(0);
-  const [expandedCards, setExpandedCards] = useState<Record<string, boolean>>({});
+  const [selectedEngineCodes, setSelectedEngineCodes] = useState<Record<string, string>>({});
   const [directoryOpen, setDirectoryOpen] = useState(false);
-  const currentTab = tabs[activeTab] ?? tabs[0];
+  const safeActiveTab = activeTab < tabs.length ? activeTab : 0;
+  const currentTab = tabs[safeActiveTab] ?? tabs[0];
   const allEngines = tabs.flatMap((tab) => tab.items);
-  const cardsPerSlide = 4;
-  const slideCount = Math.max(1, Math.ceil((currentTab?.items.length ?? 0) / cardsPerSlide));
-  const safeSlide = Math.min(activeSlide, slideCount - 1);
-  const visibleEngines = (currentTab?.items ?? []).slice(safeSlide * cardsPerSlide, safeSlide * cardsPerSlide + cardsPerSlide);
-
-  useEffect(() => {
-    setActiveSlide(0);
-  }, [activeTab]);
-
-  useEffect(() => {
-    if (activeTab >= tabs.length) setActiveTab(0);
-  }, [activeTab, tabs.length]);
-
-  const setAdjacentSlide = (direction: "prev" | "next") => {
-    setActiveSlide((current) => {
-      if (direction === "prev") return current === 0 ? slideCount - 1 : current - 1;
-      return current === slideCount - 1 ? 0 : current + 1;
-    });
-  };
+  const activeEngines = currentTab?.items ?? [];
+  const selectedEngineCode =
+    (currentTab ? selectedEngineCodes[currentTab.key] : "") &&
+    activeEngines.some((engine) => engine.code === selectedEngineCodes[currentTab.key])
+      ? selectedEngineCodes[currentTab.key]
+      : activeEngines[0]?.code ?? "";
 
   if (!currentTab) return null;
 
@@ -310,13 +290,21 @@ export default function EngineCodesSection({ data, bgImage }: Props) {
                 {brand} Engine Codes - <span className="text-[#08784a]">Most Replaced Engines & Full Directory</span>
               </h2>
               <p className="mt-4 max-w-[760px] text-[16px] leading-[1.7] text-[#112844]">
-                Every major {brand} engine code with technical specs, compatible UK models, known failures and average rebuilt prices. Use the quick-reference accordion below for all remaining codes.
+                Every major {brand} engine code with technical specs, compatible UK models, known failures and average rebuilt prices. Open any accordion below to compare fitment details in one connected view.
               </p>
             </div>
 
             <div className="relative min-h-[220px] lg:min-h-[280px]">
               <div className="absolute inset-0 rounded-full bg-[repeating-radial-gradient(circle_at_center,rgba(30,102,210,0.14)_0_1px,transparent_1px_28px)]" />
-              <img src={heroImageForBrand(brand, bgImage)} alt="" className="relative z-[1] h-[220px] w-full object-contain drop-shadow-[0_28px_30px_rgba(6,26,51,0.16)] lg:h-[300px]" loading="lazy" />
+              <div className="relative z-[1] h-[220px] lg:h-[300px]">
+                <Image
+                  src={heroImageForBrand(brand, bgImage)}
+                  alt=""
+                  fill
+                  className="object-contain drop-shadow-[0_28px_30px_rgba(6,26,51,0.16)]"
+                  sizes="(max-width: 1024px) 100vw, 470px"
+                />
+              </div>
             </div>
           </div>
 
@@ -344,52 +332,172 @@ export default function EngineCodesSection({ data, bgImage }: Props) {
               })}
             </div>
 
-            <div className="relative bg-[radial-gradient(circle_at_50%_100%,rgba(255,255,255,0.22),transparent_45%),linear-gradient(135deg,#06265a,#0d4aa2)] px-8 py-4 sm:px-9 sm:py-6 xl:px-12">
-              <button
-                type="button"
-                onClick={() => setAdjacentSlide("prev")}
-                className="absolute left-0 top-1/2 z-[80] hidden h-14 w-14 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border border-white/70 bg-[#06265a] text-white shadow-[0_16px_30px_rgba(6,26,51,0.34)] transition hover:scale-105 lg:grid"
-                aria-label="Previous engine cards"
-              >
-                <Arrow direction="left" className="h-6 w-6" />
-              </button>
-              <button
-                type="button"
-                onClick={() => setAdjacentSlide("next")}
-                className="absolute right-0 top-1/2 z-[80] hidden h-14 w-14 -translate-y-1/2 translate-x-1/2 place-items-center rounded-full border border-white/70 bg-[#06265a] text-white shadow-[0_16px_30px_rgba(6,26,51,0.34)] transition hover:scale-105 lg:grid"
-                aria-label="Next engine cards"
-              >
-                <Arrow className="h-6 w-6" />
-              </button>
-
-              {currentTab.items.length ? (
+            <div className="px-4 py-4 sm:px-6 sm:py-6 lg:px-8">
+              {activeEngines.length ? (
                 <>
-                  <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-                    {visibleEngines.map((engine) => (
-                      <EngineCodeCard
-                        key={`${currentTab.key}-${engine.code}`}
-                        engine={engine}
-                        expanded={Boolean(expandedCards[engine.code])}
-                        onToggle={() => setExpandedCards((current) => ({ ...current, [engine.code]: !current[engine.code] }))}
-                      />
-                    ))}
+                  <div className="mb-4 rounded-[14px] border border-[#dbe5f1] bg-[linear-gradient(180deg,#f8fbff_0%,#ffffff_100%)] px-4 py-3 text-[#16304f]">
+                    <p className="font-['Manrope'] text-[15px] font-black">Select exact {brand} engine code</p>
+                    <p className="mt-1 text-[13px] leading-[1.6] text-slate-600">
+                      The open accordion keeps the description, specification table, failure points and quote CTA in one connected block so the active engine is immediately clear.
+                    </p>
                   </div>
-                  <div className="mt-5 flex justify-center gap-2">
-                    {Array.from({ length: slideCount }).map((_, index) => (
-                      <button
-                        key={`${currentTab.key}-slide-dot-${index}`}
-                        type="button"
-                        onClick={() => setActiveSlide(index)}
-                        className={`h-3 w-3 rounded-full transition ${index === safeSlide ? "bg-white shadow-[0_0_18px_rgba(255,255,255,0.7)]" : "bg-white/38 hover:bg-white/70"}`}
-                        aria-label={`Show engine slide ${index + 1}`}
-                      />
-                    ))}
+
+                  <div className="grid gap-4 lg:grid-cols-2">
+                    {activeEngines.map((engine) => {
+                      const selected = engine.code === selectedEngineCode;
+                      const rows = tableRows(engine);
+
+                      return (
+                        <article key={`${currentTab.key}-${engine.code}`} className={selected ? "lg:col-span-2" : ""}>
+                          <div
+                            className={`overflow-hidden rounded-[20px] bg-white transition-all duration-200 ${
+                              selected
+                                ? "border border-[#bfd5f8] shadow-[0_0_0_1px_rgba(59,130,246,0.12),0_0_24px_rgba(59,130,246,0.14),0_18px_36px_rgba(12,29,53,0.08)]"
+                                : "border border-[#dfe7ef] shadow-[0_12px_30px_rgba(12,29,53,0.06)]"
+                            }`}
+                          >
+                            <button
+                              type="button"
+                              aria-expanded={selected}
+                              onClick={() =>
+                                setSelectedEngineCodes((current) => ({
+                                  ...current,
+                                  [currentTab.key]: current[currentTab.key] === engine.code ? "" : engine.code,
+                                }))
+                              }
+                              className={`w-full text-left transition-all duration-200 hover:bg-[#fbfdff] ${
+                                selected
+                                  ? "border-b border-[#dbe7f5] px-4 py-4 sm:px-5"
+                                  : "px-4 py-4 sm:px-5"
+                              }`}
+                            >
+                              <span className="grid items-center gap-4 sm:grid-cols-[minmax(0,1fr)_auto]">
+                                <span className="flex min-w-0 items-start gap-4">
+                                  <span aria-hidden="true" className="mt-[2px] block h-[44px] w-[4px] rounded-full bg-[#22c55e]" />
+                                  <span className="min-w-0">
+                                    <span className="flex flex-wrap items-center gap-3">
+                                      <strong className="text-[24px] leading-[0.96] tracking-[-0.04em] text-[#10203a] max-[720px]:text-[18px]">
+                                        {accordionHeading(engine)}
+                                      </strong>
+                                      <span className="inline-flex min-h-[30px] items-center rounded-full border border-[#9ec1ff] bg-[#f4f8ff] px-3 text-[11px] font-extrabold uppercase tracking-[0.08em] text-[#2d6bff]">
+                                        {clean(engine.groupName)}
+                                      </span>
+                                    </span>
+                                    <small className="mt-2 block text-[13px] font-medium leading-[1.45] text-[#66778f] max-[720px]:text-[11px]">
+                                      {clean(engine.compatibleModels)}
+                                    </small>
+                                  </span>
+                                </span>
+
+                                <span className="flex items-center justify-end gap-3 max-[720px]:mt-[10px]">
+                                  {!selected && engine.avgRebuiltPrice ? (
+                                    <span className="text-right">
+                                      <small className="mb-1 block text-[9px] font-extrabold uppercase tracking-[0.12em] text-[#708197]">
+                                        Avg. rebuilt price
+                                      </small>
+                                      <strong className="block text-[20px] leading-none tracking-[-0.04em] text-[#13823d] max-[720px]:text-[16px]">
+                                        {priceText(engine.avgRebuiltPrice)}
+                                      </strong>
+                                    </span>
+                                  ) : null}
+                                  <span className={`grid h-[34px] w-[34px] place-items-center rounded-full border border-[#d7e5fb] bg-[#f5f9ff] text-[#13823d] transition-transform duration-200 ${selected ? "rotate-180" : ""}`}>
+                                    <Chevron />
+                                  </span>
+                                </span>
+                              </span>
+                            </button>
+
+                            {selected ? (
+                              <div className="grid gap-5 px-4 pb-4 pt-4 sm:px-5 sm:pb-5 lg:grid-cols-[minmax(0,1.18fr)_240px] lg:items-start">
+                                <div className="min-w-0">
+                                  <div className="text-[30px] font-extrabold leading-none tracking-[-0.05em] text-[#10203a] max-[720px]:text-[24px]">
+                                    {clean(engine.code)}
+                                  </div>
+                                  <p className="mt-2 text-[15px] font-semibold leading-[1.45] text-[#30455f] max-[720px]:text-[13px]">
+                                    {summaryTitle(engine)}
+                                  </p>
+
+                                  <p className="mt-4 text-[14px] leading-[1.7] text-[#42546d] max-[720px]:mt-[12px] max-[720px]:text-[12.5px]">
+                                    {engineDescription(engine)}
+                                  </p>
+
+                                  <div className="mt-4 overflow-hidden rounded-[18px] border border-[#dbe7f5] bg-[#fcfdff]">
+                                    {rows.map((row, rowIndex) => (
+                                      <div
+                                        key={`${engine.code}-${row.label}`}
+                                        className={`grid grid-cols-[minmax(148px,0.42fr)_minmax(0,1fr)] max-[720px]:grid-cols-[minmax(126px,0.56fr)_minmax(0,1fr)] ${
+                                          rowIndex < rows.length - 1 ? "border-b border-[#e7eef8]" : ""
+                                        }`}
+                                      >
+                                        <div className="border-r border-[#e7eef8] px-4 py-[15px] text-[11px] font-extrabold uppercase tracking-[0.08em] text-[#51657f] max-[720px]:px-3 max-[720px]:py-[13px] max-[720px]:text-[10px]">
+                                          {row.label}
+                                        </div>
+                                        <div className="px-[18px] py-[15px] text-[15px] font-medium leading-[1.6] text-[#132640] max-[720px]:px-3 max-[720px]:py-[13px] max-[720px]:text-[12.5px]">
+                                          {row.value}
+                                        </div>
+                                      </div>
+                                    ))}
+                                  </div>
+
+                                  <div className="mt-4 border-l-[3px] border-[#f97316] pl-[14px]">
+                                    <p className="text-[12px] font-extrabold uppercase tracking-[0.1em] text-[#dc2626] max-[720px]:text-[11px]">
+                                      Common Failure Points
+                                    </p>
+                                    <p className="mt-2 text-[14px] leading-[1.65] text-[#3e516a] max-[720px]:text-[12.5px]">
+                                      {clean(engine.failureNote)}
+                                    </p>
+                                  </div>
+                                </div>
+
+                                <div className="flex h-full flex-col gap-4">
+                                  <div className="flex min-h-[220px] items-center justify-center rounded-[18px] border border-[#e3ebf4] bg-[radial-gradient(circle_at_top,#ffffff_0%,#f5f9fe_100%)] p-5 max-[720px]:min-h-[180px]">
+                                    <div className="relative aspect-square w-full max-w-[190px]">
+                                      <Image
+                                        src={engineImage(engine.code, engine.image)}
+                                        alt={`${clean(engine.code)} engine`}
+                                        fill
+                                        className="object-contain"
+                                        sizes="190px"
+                                      />
+                                    </div>
+                                  </div>
+
+                                  <div className="rounded-[18px] border border-[#e3ebf4] bg-[#f8fbff] px-4 py-4">
+                                    <small className="block text-[10px] font-extrabold uppercase tracking-[0.12em] text-[#708197]">
+                                      Avg. rebuilt price
+                                    </small>
+                                    <strong className="mt-1 block text-[30px] leading-none tracking-[-0.05em] text-[#13823d] max-[720px]:text-[24px]">
+                                      {priceText(engine.avgRebuiltPrice)}
+                                    </strong>
+                                    <div className="mt-4 grid gap-3 text-[13px] text-[#061a33]">
+                                      <p className="flex items-center gap-2"><SpecIcon type="power" />{clean(engine.power)}</p>
+                                      <p className="flex items-center gap-2"><SpecIcon type="fuel" />{clean(engine.fuel)}</p>
+                                      <p className="flex items-center gap-2"><SpecIcon type="size" />{clean(engine.size)}</p>
+                                      <p className="flex items-center gap-2"><SpecIcon type="years" />{yearsFromModels(engine.compatibleModels)}</p>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <a
+                                  href="#quote-form"
+                                  data-quote-engine-code={engine.code}
+                                  className="group inline-flex min-h-[58px] items-center justify-between gap-[14px] rounded-[14px] bg-[#071d45] px-[18px] text-[15px] font-extrabold text-white shadow-[0_14px_28px_rgba(7,29,69,0.18)] transition hover:bg-[#0a285f] lg:col-span-2 max-[720px]:min-h-[54px] max-[720px]:px-[14px] max-[720px]:text-[13px]"
+                                >
+                                  <span>{clean(engine.cta || `Get quotes for ${engine.code}`)}</span>
+                                  <Arrow className="h-[14px] w-[14px] text-[#1f9f43] transition-transform duration-200 group-hover:translate-x-[2px]" />
+                                </a>
+                              </div>
+                            ) : null}
+                          </div>
+                        </article>
+                      );
+                    })}
                   </div>
                 </>
               ) : (
-                <div className="rounded-[14px] border border-white/20 bg-white/10 px-5 py-8 text-center text-white">
+                <div className="rounded-[14px] border border-[#dbe5f1] bg-[#f8fbff] px-5 py-8 text-center text-[#16304f]">
                   <p className="font-['Manrope'] text-[22px] font-black">{tabMeta(currentTab.key).title}</p>
-                  <p className="mx-auto mt-2 max-w-[560px] text-[14px] text-white/80">
+                  <p className="mx-auto mt-2 max-w-[560px] text-[14px] leading-[1.6] text-slate-600">
                     Hybrid engine-code data is ready to display here once the new content is imported.
                   </p>
                 </div>
@@ -415,7 +523,7 @@ export default function EngineCodesSection({ data, bgImage }: Props) {
                 {allEngines.map((engine) => (
                   <div key={`all-${engine.code}`} className="rounded-[10px] border border-[#edf2f7] bg-[#fbfdff] px-3 py-2 text-[13px]">
                     <span className="font-black text-[#061a33]">{clean(engine.code)}</span>
-                    <span className="ml-2 whitespace-nowrap text-[#08784a]">{clean(engine.avgRebuiltPrice)}</span>
+                    <span className="ml-2 whitespace-nowrap text-[#08784a]">{priceText(engine.avgRebuiltPrice)}</span>
                   </div>
                 ))}
               </div>
