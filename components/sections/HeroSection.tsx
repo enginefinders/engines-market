@@ -333,6 +333,23 @@ function normalizeDisplayText(text: string) {
     .replace(/[–—]/g, "-");
 }
 
+function splitInlineDisclaimerText(text: string, trailingWords = 3) {
+  const normalized = normalizeDisplayText(text).replace(/\s+/g, " ").trim();
+  const words = normalized.split(" ").filter(Boolean);
+
+  if (words.length <= trailingWords) {
+    return {
+      leading: "",
+      trailing: normalized,
+    };
+  }
+
+  return {
+    leading: words.slice(0, -trailingWords).join(" "),
+    trailing: words.slice(-trailingWords).join(" "),
+  };
+}
+
 function resolveHeadingLines(data: HeroSectionData) {
   if (data.headingLines?.length) {
     return data.headingLines.filter((line) => line.trim()).map((line) => normalizeDisplayText(line));
@@ -408,6 +425,7 @@ export default function HeroSection({
   const disclaimer = data.disclaimer;
   const hasDisclaimer = Boolean(disclaimer?.note?.trim());
   const disclaimerLines = disclaimer?.note?.trim() ? buildDisclaimerLines(disclaimer.note) : [];
+  const subheadingParts = splitInlineDisclaimerText(data.subheading);
 
   const bottomTickerLoop = useMemo(() => [...bottomBarItems, ...bottomBarItems], []);
 
@@ -449,41 +467,38 @@ export default function HeroSection({
             })}
           </h1>
 
-          <p className="mt-[9px] max-w-none min-w-0 text-[14px] leading-[1.6] text-[#64748b] md:mt-[14px] md:max-w-[58ch] md:text-[clamp(14px,1.1vw,17px)]">
-            {normalizeDisplayText(data.subheading)}
-          </p>
+          <div className="mt-[9px] w-full md:mt-[14px] md:max-w-[58ch]">
+              <p className="min-w-0 text-[14px] leading-[1.6] text-[#64748b] md:text-[clamp(14px,1.1vw,17px)]">
+                {subheadingParts.leading ? `${subheadingParts.leading} ` : ""}
+                <span className="whitespace-nowrap">
+                  {subheadingParts.trailing}
+                  {hasDisclaimer && disclaimerMode === "icon" ? (
+                    <>
+                      {" "}
+                      <button
+                        type="button"
+                        onClick={() => setIsDisclaimerOpen((current) => !current)}
+                        aria-expanded={isDisclaimerOpen}
+                        aria-label="Toggle disclaimer"
+                        className="inline-flex h-5 w-5 translate-y-[-1px] items-center justify-center rounded-full border border-black align-middle text-[11px] font-bold leading-none text-black transition focus:outline-none focus:ring-2 focus:ring-[#2d7a3a] focus:ring-offset-2"
+                      >
+                        !
+                      </button>
+                    </>
+                  ) : null}
+                </span>
+              </p>
 
-          {hasDisclaimer && disclaimerMode === "icon" && disclaimerLines.length ? (
-            <p className="mt-2 text-[11px] leading-[1.45] text-[#64748b] lg:hidden">
-              {normalizeDisplayText(disclaimerLines[0])}
-            </p>
-          ) : null}
-
-          {hasDisclaimer && disclaimerMode === "icon" ? (
-            <div className="mt-2 lg:hidden">
-              <div className="flex justify-end">
-                <button
-                  type="button"
-                  onClick={() => setIsDisclaimerOpen((current) => !current)}
-                  aria-expanded={isDisclaimerOpen}
-                  aria-label="Toggle disclaimer"
-                  className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-black text-[11px] font-bold leading-none text-black transition focus:outline-none focus:ring-2 focus:ring-[#2d7a3a] focus:ring-offset-2"
-                >
-                  !
-                </button>
-              </div>
-
-              {isDisclaimerOpen ? (
-                <div className="mt-2 rounded-[12px] border border-[#dbe4ef] bg-white/85 px-3 py-2.5 text-[11.5px] leading-[1.55] text-[#64748b] shadow-[0_10px_26px_rgba(13,27,46,0.06)] backdrop-blur-sm">
-                  <div className="space-y-1.5">
-                    {disclaimerLines.map((line, index) => (
-                      <p key={`${line}-${index}`}>{normalizeDisplayText(line)}</p>
-                    ))}
-                  </div>
+            {hasDisclaimer && disclaimerMode === "icon" && isDisclaimerOpen ? (
+              <div className="mt-2 rounded-[12px] border border-[#dbe4ef] bg-white/85 px-3 py-2.5 text-[11.5px] leading-[1.55] text-[#64748b] shadow-[0_10px_26px_rgba(13,27,46,0.06)] backdrop-blur-sm md:px-4 md:py-3 md:text-[12.5px]">
+                <div className="space-y-1.5">
+                  {disclaimerLines.map((line, index) => (
+                    <p key={`${line}-${index}`}>{normalizeDisplayText(line)}</p>
+                  ))}
                 </div>
-              ) : null}
-            </div>
-          ) : null}
+              </div>
+            ) : null}
+          </div>
 
           <div
             className={`mt-[12px] grid min-w-0 gap-1.5 md:mt-6 md:flex md:flex-wrap lg:flex-nowrap lg:overflow-x-auto lg:pb-1 [&::-webkit-scrollbar]:hidden ${
@@ -717,38 +732,11 @@ export default function HeroSection({
             </button>
           </form>
 
-          {/* SECURE NOTE MOVED HERE */}
           {secureNote(data, brandName, strictData) ? (
             <p className="flex w-full max-w-full items-center justify-center gap-1.5 px-3 text-center text-[12px] leading-[1.5] text-[#64748b] md:text-[12.5px]">
               <LockIcon />
               <span>{secureNote(data, brandName, strictData)}</span>
             </p>
-          ) : null}
-
-          {hasDisclaimer && disclaimerMode === "icon" ? (
-            <div className="hidden w-full max-w-md lg:block">
-              <div className="flex justify-end">
-                <button
-                  type="button"
-                  onClick={() => setIsDisclaimerOpen((current) => !current)}
-                  aria-expanded={isDisclaimerOpen}
-                  aria-label="Toggle disclaimer"
-                  className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-black text-[11px] font-bold leading-none text-black transition focus:outline-none focus:ring-2 focus:ring-[#2d7a3a] focus:ring-offset-2"
-                >
-                  !
-                </button>
-              </div>
-
-              {isDisclaimerOpen ? (
-                <div className="mt-2 rounded-[16px] border border-[#dbe4ef] bg-white/85 px-4 py-3 text-[11.5px] leading-[1.6] text-[#64748b] shadow-[0_12px_32px_rgba(13,27,46,0.07)] backdrop-blur-sm md:px-5 md:text-[12.5px]">
-                  <div className="space-y-1.5">
-                    {disclaimerLines.map((line, index) => (
-                      <p key={`${line}-${index}`}>{line}</p>
-                    ))}
-                  </div>
-                </div>
-              ) : null}
-            </div>
           ) : null}
         </div>
       </div>

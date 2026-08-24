@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import AutoInternalLinks from "@/components/internal-links/AutoInternalLinks";
 import DocumentVariantPage from "@/components/pages/DocumentVariantPage";
-import { getInternalLinkTargets } from "@/lib/internalLinkIndex";
+import { getInternalLinkPlan } from "@/lib/internalLinkIndex";
 import { getVariantPageData, getVariantPageStaticParams } from "@/lib/variantPageData";
 import { SITE_URL } from "@/lib/site";
 import { notFound, permanentRedirect } from "next/navigation";
@@ -52,15 +52,21 @@ export default async function VariantPage({ params }: VariantPageProps) {
     permanentRedirect(`/${pageData.brand.slug}/${pageData.model.slug}/${pageData.variant.slug}`);
   }
 
-  const internalLinkTargets = await getInternalLinkTargets({
+  const internalLinkPlan = await getInternalLinkPlan({
     brandSlug: pageData.brand.slug,
     modelSlug: pageData.model.slug,
     currentPath: pageData.seo.canonical,
+    pageType: "variant",
   });
 
   return (
     <>
-      <AutoInternalLinks targets={internalLinkTargets} />
+      <AutoInternalLinks
+        targets={internalLinkPlan.targets}
+        maxLinksByType={internalLinkPlan.maxLinksByType}
+        maxLinksPerPage={internalLinkPlan.maxLinksPerPage}
+        maxLinksPerTarget={internalLinkPlan.defaultMaxLinksPerTarget}
+      />
       <DocumentVariantPage data={pageData} />
     </>
   );

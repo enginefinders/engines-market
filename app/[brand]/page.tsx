@@ -18,7 +18,7 @@ import QuoteCheckoutModal from "@/components/checkout/QuoteCheckoutModal";
 import AutoInternalLinks from "@/components/internal-links/AutoInternalLinks";
 import { getBrandPageData, getBrandSlugs } from "@/lib/brandData";
 import { resolveBrandPageVisuals } from "@/lib/engineImageSelection";
-import { getInternalLinkTargets } from "@/lib/internalLinkIndex";
+import { getInternalLinkPlan } from "@/lib/internalLinkIndex";
 import { resolveModelImagePaths } from "@/lib/modelImageAssets";
 import { getBrandModelCards } from "@/lib/modelPageData";
 import { SITE_URL } from "@/lib/site";
@@ -91,14 +91,20 @@ export default async function BrandPage({ params }: BrandPageProps) {
       ? "/images/brands/land-rover/cta-image.webp"
       : pageData.sections.models.cards[0]?.image ?? pageData.assets.heroBg;
   const initialTimestamp = new Date().toISOString();
-  const internalLinkTargets = await getInternalLinkTargets({
+  const internalLinkPlan = await getInternalLinkPlan({
     brandSlug: pageData.brand.slug,
     currentPath: pageData.seo.canonical,
+    pageType: "brand",
   });
 
   return (
     <>
-      <AutoInternalLinks targets={internalLinkTargets} />
+      <AutoInternalLinks
+        targets={internalLinkPlan.targets}
+        maxLinksByType={internalLinkPlan.maxLinksByType}
+        maxLinksPerPage={internalLinkPlan.maxLinksPerPage}
+        maxLinksPerTarget={internalLinkPlan.defaultMaxLinksPerTarget}
+      />
 
       <script
         type="application/ld+json"

@@ -8,13 +8,22 @@ type Props = {
   rootSelector?: string;
   maxLinksPerPage?: number;
   maxLinksPerTarget?: number;
+  maxLinksByType?: Partial<Record<InternalLinkTarget["type"], number>>;
 };
 
 type PreparedTarget = {
   href: string;
   label: string;
   type: InternalLinkTarget["type"];
+  priority: number;
+  maxOccurrences?: number;
   terms: string[];
+};
+
+type PreparedTermEntry = {
+  term: string;
+  pattern: RegExp;
+  targets: PreparedTarget[];
 };
 
 const SKIP_SELECTOR = [
@@ -46,12 +55,11 @@ function normalizeTerm(value: string) {
   return value.replace(/\s+/g, " ").trim();
 }
 
-function prepareTargets(targets: InternalLinkTarget[]): PreparedTarget[] {
-  const termOwner = new Set<string>();
-
-  return targets
+function prepareTargets(targets: InternalLinkTarget[]): PreparedTermEntry[] {
+  const preparedTargets = targets
     .map((target) => ({
       ...target,
+      priority: target.priority ?? 0,
       terms: target.terms
         .map(normalizeTerm)
         .filter((term) => term.length >= 2)
@@ -63,47 +71,127 @@ function prepareTargets(targets: InternalLinkTarget[]): PreparedTarget[] {
       const longestRight = right.terms[0]?.length ?? 0;
       return longestRight - longestLeft;
     })
-    .map((target) => {
-      const terms = target.terms.filter((term) => {
-        const key = term.toLowerCase();
-        if (termOwner.has(key)) {
-          return false;
-        }
-        termOwner.add(key);
-        return true;
-      });
-
-      return { ...target, terms };
-    })
     .filter((target) => target.terms.length > 0);
+
+  const termMap = new Map<string, PreparedTarget[]>();
+
+  for (const target of preparedTargets) {
+    for (const term of target.terms) {
+      const key = term.toLowerCase();
+      const existing = termMap.get(key) ?? [];
+      existing.push(target);
+      termMap.set(key, existing);
+    }
+  }
+
+  return [...termMap.entries()]
+    .sort((left, right) => right[0].length - left[0].length)
+    .map(([term, candidates]) => ({
+      term,
+      pattern: new RegExp(`(^|[^A-Za-z0-9])(${escapeRegex(term)})(?=$|[^A-Za-z0-9])`, "i"),
+      targets: [...candidates].sort((left, right) => {
+        const priorityDelta = right.priority - left.priority;
+        if (priorityDelta !== 0) {
+          return priorityDelta;
+        }
+
+        return left.label.localeCompare(right.label);
+      }),
+    }));
 }
 
-function findMatch(text: string, targets: PreparedTarget[], usedTargets: Map<string, number>, maxLinksPerTarget: number) {
+function getTargetLimit(target: PreparedTarget, defaultMaxLinksPerTarget: number) {
+  return Math.max(target.maxOccurrences ?? defaultMaxLinksPerTarget, 1);
+}
+
+function chooseTarget(
+  entry: PreparedTermEntry,
+  usedTargets: Map<string, number>,
+  defaultMaxLinksPerTarget: number,
+  termRotation: Map<string, number>,
+  usedTypes: Map<PreparedTarget["type"], number>,
+  maxLinksByType?: Partial<Record<PreparedTarget["type"], number>>,
+) {
+  const eligibleTargets = entry.targets.filter(
+    (target) =>
+      (usedTargets.get(target.href) ?? 0) < getTargetLimit(target, defaultMaxLinksPerTarget) &&
+      (maxLinksByType?.[target.type] == null || (usedTypes.get(target.type) ?? 0) < maxLinksByType[target.type]!),
+  );
+
+  if (!eligibleTargets.length) {
+    return null;
+  }
+
+  const topPriority = eligibleTargets[0]?.priority ?? 0;
+  const highestPriorityTargets = eligibleTargets.filter((target) => target.priority === topPriority);
+  const minimumUsage = Math.min(...highestPriorityTargets.map((target) => usedTargets.get(target.href) ?? 0));
+  const usagePool = highestPriorityTargets.filter(
+    (target) => (usedTargets.get(target.href) ?? 0) === minimumUsage,
+  );
+  const currentRotation = termRotation.get(entry.term) ?? 0;
+
+  return {
+    target: usagePool[currentRotation % usagePool.length],
+    nextRotation: currentRotation + 1,
+  };
+}
+
+function findMatch(
+  text: string,
+  entries: PreparedTermEntry[],
+  usedTargets: Map<string, number>,
+  maxLinksPerTarget: number,
+  termRotation: Map<string, number>,
+  usedTypes: Map<PreparedTarget["type"], number>,
+  maxLinksByType?: Partial<Record<PreparedTarget["type"], number>>,
+) {
   let best:
     | {
+        entry: PreparedTermEntry;
         target: PreparedTarget;
         term: string;
         index: number;
+        nextRotation: number;
       }
     | null = null;
 
-  for (const target of targets) {
-    if ((usedTargets.get(target.href) ?? 0) >= maxLinksPerTarget) {
+  for (const entry of entries) {
+    const match = entry.pattern.exec(text);
+    if (!match) {
       continue;
     }
 
-    for (const term of target.terms) {
-      const pattern = new RegExp(`(^|[^A-Za-z0-9])(${escapeRegex(term)})(?=$|[^A-Za-z0-9])`, "i");
-      const match = pattern.exec(text);
-      if (!match) {
-        continue;
-      }
+    const targetChoice = chooseTarget(
+      entry,
+      usedTargets,
+      maxLinksPerTarget,
+      termRotation,
+      usedTypes,
+      maxLinksByType,
+    );
+    if (!targetChoice) {
+      continue;
+    }
 
-      const prefixLength = match[1]?.length ?? 0;
-      const index = match.index + prefixLength;
-      if (!best || index < best.index || (index === best.index && term.length > best.term.length)) {
-        best = { target, term: match[2] ?? term, index };
-      }
+    const prefixLength = match[1]?.length ?? 0;
+    const index = match.index + prefixLength;
+    const matchedTerm = match[2] ?? entry.term;
+
+    if (
+      !best ||
+      index < best.index ||
+      (index === best.index && matchedTerm.length > best.term.length) ||
+      (index === best.index &&
+        matchedTerm.length === best.term.length &&
+        targetChoice.target.priority > best.target.priority)
+    ) {
+      best = {
+        entry,
+        target: targetChoice.target,
+        term: matchedTerm,
+        index,
+        nextRotation: targetChoice.nextRotation,
+      };
     }
   }
 
@@ -135,6 +223,7 @@ export default function AutoInternalLinks({
   rootSelector = "main",
   maxLinksPerPage = 24,
   maxLinksPerTarget = 1,
+  maxLinksByType,
 }: Props) {
   useEffect(() => {
     const root = document.querySelector(rootSelector);
@@ -142,8 +231,8 @@ export default function AutoInternalLinks({
       return;
     }
 
-    const preparedTargets = prepareTargets(targets);
-    if (!preparedTargets.length) {
+    const preparedEntries = prepareTargets(targets);
+    if (!preparedEntries.length) {
       return;
     }
 
@@ -159,6 +248,8 @@ export default function AutoInternalLinks({
     }
 
     const usedTargets = new Map<string, number>();
+    const termRotation = new Map<string, number>();
+    const usedTypes = new Map<PreparedTarget["type"], number>();
     let insertedLinks = 0;
 
     for (const textNode of textNodes) {
@@ -167,7 +258,15 @@ export default function AutoInternalLinks({
       }
 
       const text = textNode.nodeValue ?? "";
-      const match = findMatch(text, preparedTargets, usedTargets, maxLinksPerTarget);
+      const match = findMatch(
+        text,
+        preparedEntries,
+        usedTargets,
+        maxLinksPerTarget,
+        termRotation,
+        usedTypes,
+        maxLinksByType,
+      );
       if (!match) {
         continue;
       }
@@ -186,10 +285,12 @@ export default function AutoInternalLinks({
       }
 
       textNode.parentNode?.replaceChild(fragment, textNode);
+      termRotation.set(match.entry.term, match.nextRotation);
       usedTargets.set(match.target.href, (usedTargets.get(match.target.href) ?? 0) + 1);
+      usedTypes.set(match.target.type, (usedTypes.get(match.target.type) ?? 0) + 1);
       insertedLinks += 1;
     }
-  }, [maxLinksPerPage, maxLinksPerTarget, rootSelector, targets]);
+  }, [maxLinksByType, maxLinksPerPage, maxLinksPerTarget, rootSelector, targets]);
 
   return null;
 }

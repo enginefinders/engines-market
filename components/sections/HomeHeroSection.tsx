@@ -133,11 +133,11 @@ const engineCarouselItems: EngineCarouselItem[] = [
 ];
 
 const bottomBarItems = [
-  { icon: "lightning", text: "Instant engine replacement quote — 100% free, no obligation" },
-  { icon: "location", text: "Engine replacement near me — UK-wide specialist network" },
+  { icon: "lightning", text: "Instant engine replacement quote - 100% free, no obligation" },
+  { icon: "location", text: "Engine replacement near me - UK-wide specialist network" },
   { icon: "pound", text: "Compare reconditioned, rebuilt & used engine prices" },
-  { icon: "wrench", text: "Supply & fit available — parts and labour from vetted specialists" },
-  { icon: "shield", text: "12–24 month warranty on all replacement engines" },
+  { icon: "wrench", text: "Supply & fit available - parts and labour from vetted specialists" },
+  { icon: "shield", text: "12-24 month warranty on all replacement engines" },
 ];
 
 // Map brand names to their logo image filenames
@@ -194,6 +194,23 @@ function LockIcon() {
       <path d="M7 11V7a5 5 0 0 1 10 0v4" stroke="currentColor" strokeWidth="2" />
     </svg>
   );
+}
+
+function splitInlineDisclaimerText(text: string, trailingWords = 3) {
+  const normalized = text.replace(/\s+/g, " ").trim();
+  const words = normalized.split(" ").filter(Boolean);
+
+  if (words.length <= trailingWords) {
+    return {
+      leading: "",
+      trailing: normalized,
+    };
+  }
+
+  return {
+    leading: words.slice(0, -trailingWords).join(" "),
+    trailing: words.slice(-trailingWords).join(" "),
+  };
 }
 
 function EngineTickerIcon() {
@@ -431,7 +448,7 @@ function LogoBadge({ brand }: { brand: string }) {
   );
 }
 
-/* Brand Row — matches screenshot layout exactly */
+/* Brand Row - matches screenshot layout exactly */
 function HeroRow({ row }: { row: HeroBrandRow }) {
   return (
     // Changed px-4 to px-2 sm:px-4 to reduce overall left/right space on mobile
@@ -474,7 +491,7 @@ function HeroRow({ row }: { row: HeroBrandRow }) {
     </div>
   );
 }
-/* CTA Panel — reused on both mobile and desktop */
+/* CTA Panel - reused on both mobile and desktop */
 function CTAPanel({
   registration,
   onRegistrationChange,
@@ -618,7 +635,7 @@ function CTAPanel({
                 type="text"
                 value={registration}
                 onChange={(e) => onRegistrationChange(e.currentTarget.value.toUpperCase())}
-                placeholder="Enter your reg — e.g. AB12 CDE"
+                placeholder="Enter your reg - e.g. AB12 CDE"
                 maxLength={8}
                 autoCapitalize="characters"
                 autoComplete="off"
@@ -801,7 +818,7 @@ export default function HomeHeroSection({ data }: Props) {
   const [carouselOffset, setCarouselOffset] = useState(0);
   const [desktopCarouselOffset, setDesktopCarouselOffset] = useState(0);
 
-  // How many carousel items are visible depends on viewport — use 3 for mobile logic
+  // How many carousel items are visible depends on viewport - use 3 for mobile logic
   const MOBILE_VISIBLE = 3;
   const DESKTOP_VISIBLE = 6;
   const maxOffset = Math.max(0, engineCarouselItems.length - MOBILE_VISIBLE);
@@ -883,6 +900,9 @@ export default function HomeHeroSection({ data }: Props) {
   }
 
   const activeGroup = rowGroups[groupIndex] ?? rowGroups[0];
+  const homeSubheadingParts = splitInlineDisclaimerText(data.subheading);
+  const homeDisclaimerText =
+    "Prices are indicative rebuilt/reconditioned supply-only averages. Actual quotes vary by variant, year and supplier.";
 
   return (
     <>
@@ -941,7 +961,7 @@ export default function HomeHeroSection({ data }: Props) {
                 </span>
               </h1>
 
-              {/* Green underline — desktop only */}
+              {/* Green underline - desktop only */}
               <span className="mb-5 hidden h-[3px] w-10 rounded-full bg-[#15803d] lg:block" />
 
               {/* Subheading */}
@@ -949,10 +969,31 @@ export default function HomeHeroSection({ data }: Props) {
                 className="mb-6 text-center text-[16px] leading-[1.6] text-[#6b7280] lg:max-w-[62ch] lg:text-left"
                 style={{ fontFamily: "Inter, sans-serif" }}
               >
-                {data.subheading.replace(" - ", " — ")}
+                {homeSubheadingParts.leading ? `${homeSubheadingParts.leading} ` : ""}
+                <span className="whitespace-nowrap">
+                  {homeSubheadingParts.trailing}{" "}
+                  <button
+                    type="button"
+                    onClick={() => setIsDisclaimerOpen((current) => !current)}
+                    aria-expanded={isDisclaimerOpen}
+                    aria-label="Toggle disclaimer"
+                    className="inline-flex h-5 w-5 translate-y-[-1px] items-center justify-center rounded-full border border-black align-middle text-[11px] font-bold leading-none text-black transition focus:outline-none focus:ring-2 focus:ring-[#2d7a3a] focus:ring-offset-2"
+                  >
+                    !
+                  </button>
+                </span>
               </p>
 
               {/* ── MOBILE: CTA Card (appears ABOVE brand rows) ── */}
+              {isDisclaimerOpen ? (
+                <div
+                  className="-mt-4 mb-6 rounded-[16px] border border-[#dbe4ef] bg-white/85 px-4 py-3 text-[11.5px] leading-[1.6] text-[#64748b] shadow-[0_12px_32px_rgba(13,27,46,0.07)] backdrop-blur-sm md:px-5 md:text-[12.5px] lg:max-w-[62ch]"
+                  style={{ fontFamily: "Inter, sans-serif" }}
+                >
+                  <p>{homeDisclaimerText}</p>
+                </div>
+              ) : null}
+
               <div className="mb-5 rounded-[12px] border border-[rgba(13,27,46,0.08)] bg-white p-0 shadow-[0_8px_30px_rgba(13,27,46,0.2)] lg:hidden">
                 <CTAPanel
                   registration={registration}
@@ -980,39 +1021,13 @@ export default function HomeHeroSection({ data }: Props) {
                 ))}
               </div>
 
-              {/* Disclaimer */}
-              <div className="px-1 pb-2 pt-[6px]">
-                <div className="flex justify-end">
-                  <button
-                    type="button"
-                    onClick={() => setIsDisclaimerOpen((current) => !current)}
-                    aria-expanded={isDisclaimerOpen}
-                    aria-label="Toggle disclaimer"
-                    className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-black text-[11px] font-bold leading-none text-black transition focus:outline-none focus:ring-2 focus:ring-[#2d7a3a] focus:ring-offset-2"
-                  >
-                    !
-                  </button>
-                </div>
-
-                {isDisclaimerOpen ? (
-                  <div
-                    className="mt-2 rounded-[16px] border border-[#dbe4ef] bg-white/85 px-4 py-3 text-[11.5px] leading-[1.6] text-[#64748b] shadow-[0_12px_32px_rgba(13,27,46,0.07)] backdrop-blur-sm md:px-5 md:text-[12.5px]"
-                    style={{ fontFamily: "Inter, sans-serif" }}
-                  >
-                    <p>
-                      Prices are indicative rebuilt/reconditioned supply-only averages. Actual quotes vary by variant, year and supplier.
-                    </p>
-                  </div>
-                ) : null}
-              </div>
-
               {/* Desktop coverage stats */}
               <p
-                className="mb-5 hidden text-center text-[13px] leading-[1.5] text-[#6b7280] lg:block lg:text-left"
+                className="mb-5 hidden pt-5 text-center text-[13px] leading-[1.5] text-[#6b7280] lg:block lg:text-left"
                 style={{ fontFamily: "Inter, sans-serif" }}
               >
                 Covering <strong className="font-bold text-[#0d1b2e]">8,000+</strong> engine codes across{" "}
-                <strong className="font-bold text-[#0d1b2e]">40+</strong> makes — from{" "}
+                <strong className="font-bold text-[#0d1b2e]">40+</strong> makes - from{" "}
                 <strong className="font-bold text-[#0d1b2e]">BMW</strong> and{" "}
                 <strong className="font-bold text-[#0d1b2e]">Land Rover</strong> to{" "}
                 <strong className="font-bold text-[#0d1b2e]">Ford</strong> and{" "}
@@ -1020,7 +1035,7 @@ export default function HomeHeroSection({ data }: Props) {
               </p>
             </div>
 
-            {/* ── RIGHT COLUMN — Desktop CTA ── */}
+            {/* ── RIGHT COLUMN - Desktop CTA ── */}
             <div className="relative hidden lg:flex lg:flex-col lg:col-span-4 mt-2">
               <div className="rounded-[12px] border border-[rgba(13,27,46,0.08)] bg-white shadow-[0_8px_32px_rgba(13,27,46,0.08)]">
                 <CTAPanel

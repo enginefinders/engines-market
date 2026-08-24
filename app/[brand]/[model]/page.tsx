@@ -3,7 +3,7 @@ import AutoInternalLinks from "@/components/internal-links/AutoInternalLinks";
 import DocumentEnginePage from "@/components/pages/DocumentEnginePage";
 import DocumentModelPage from "@/components/pages/DocumentModelPage";
 import { getEnginePageData, getEnginePageStaticParams } from "@/lib/enginePageData";
-import { getInternalLinkTargets } from "@/lib/internalLinkIndex";
+import { getInternalLinkPlan } from "@/lib/internalLinkIndex";
 import { getModelPageData, getModelPageStaticParams } from "@/lib/modelPageData";
 import { SITE_URL } from "@/lib/site";
 import { notFound, permanentRedirect } from "next/navigation";
@@ -66,14 +66,21 @@ export default async function ModelPage({ params }: ModelPageProps) {
       permanentRedirect(`/${enginePageData.brand.slug}/${enginePageData.engine.slug}`);
     }
 
-    const internalLinkTargets = await getInternalLinkTargets({
+    const internalLinkPlan = await getInternalLinkPlan({
       brandSlug: enginePageData.brand.slug,
       currentPath: enginePageData.seo.canonical,
+      engineSlug: enginePageData.engine.slug,
+      pageType: "engine",
     });
 
     return (
       <>
-        <AutoInternalLinks targets={internalLinkTargets} />
+        <AutoInternalLinks
+          targets={internalLinkPlan.targets}
+          maxLinksByType={internalLinkPlan.maxLinksByType}
+          maxLinksPerPage={internalLinkPlan.maxLinksPerPage}
+          maxLinksPerTarget={internalLinkPlan.defaultMaxLinksPerTarget}
+        />
         <DocumentEnginePage data={enginePageData} />
       </>
     );
@@ -89,15 +96,21 @@ export default async function ModelPage({ params }: ModelPageProps) {
     permanentRedirect(`/${pageData.brand.slug}/${pageData.model.slug}`);
   }
 
-  const internalLinkTargets = await getInternalLinkTargets({
+  const internalLinkPlan = await getInternalLinkPlan({
     brandSlug: pageData.brand.slug,
     modelSlug: pageData.model.slug,
     currentPath: pageData.seo.canonical,
+    pageType: "model",
   });
 
   return (
     <>
-      <AutoInternalLinks targets={internalLinkTargets} />
+      <AutoInternalLinks
+        targets={internalLinkPlan.targets}
+        maxLinksByType={internalLinkPlan.maxLinksByType}
+        maxLinksPerPage={internalLinkPlan.maxLinksPerPage}
+        maxLinksPerTarget={internalLinkPlan.defaultMaxLinksPerTarget}
+      />
       <DocumentModelPage data={pageData} />
     </>
   );

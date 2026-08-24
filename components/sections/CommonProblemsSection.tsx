@@ -218,24 +218,16 @@ function tierVariant(tier: string) {
   return "minor";
 }
 
-function ProblemIcon({ index, active = false }: { index: number; active?: boolean }) {
-  const icons = active
-    ? [
-        "/icons/engine-market/active-blue-timing-chain.png",
-        "/icons/engine-market/active-blue-rod-bearing.png",
-        "/icons/engine-market/active-blue-hpfp-icon.png",
-        "/icons/engine-market/active-blue-cooling-system.png",
-        "/icons/engine-market/active-blue-egr-icon.png",
-      ]
-    : [
-    "/icons/engine-market/dark-green-timing-chain.png",
-    "/icons/engine-market/dark-green-rod-bearing.png",
-    "/icons/engine-market/dark-green-hpfp-icon.png",
-    "/icons/engine-market/dark-green-cooling-system.png",
-    "/icons/engine-market/dark-green-egr-icon.png",
-      ];
+function ProblemIcon({ index }: { index: number }) {
+  const icons = [
+    "/icons/engine-market/active-blue-timing-chain.png",
+    "/icons/engine-market/active-blue-rod-bearing.png",
+    "/icons/engine-market/active-blue-hpfp-icon.png",
+    "/icons/engine-market/active-blue-cooling-system.png",
+    "/icons/engine-market/active-blue-egr-icon.png",
+  ];
 
-  return <Image src={icons[index % icons.length]} alt="" width={34} height={34} className="h-[30px] w-[30px] object-contain" />;
+  return <Image src={icons[index % icons.length]} alt="" width={42} height={42} className="h-[38px] w-[38px] object-contain" />;
 }
 
 function MetaIcon({ type, className }: { type: "models" | "mileage" | "root"; className?: string }) {
@@ -462,8 +454,8 @@ function MobileProblemCard({
         onClick={onToggle}
         className="flex w-full items-center gap-3 px-[12px] py-[12px] text-left transition hover:bg-[#fafafa]"
       >
-        <div className="flex h-10 w-10 flex-none items-center justify-center text-[#0d1b2e]">
-          <ProblemIcon index={index} active={open} />
+        <div className="flex h-12 w-12 flex-none items-center justify-center text-[#0d1b2e]">
+          <ProblemIcon index={index} />
         </div>
         <div className="min-w-0 flex-1">
           <div className="font-['Manrope'] text-[15.5px] font-bold leading-[1.2] text-[#0d1b2e]">{detail.title}</div>
@@ -674,8 +666,8 @@ export default function CommonProblemsSection({ data, bgImage, documentMode = fa
                       : "border-[#e5e7eb] bg-white hover:border-[#cbd5e1] hover:bg-slate-50"
                       }`}
                   >
-                    <div className={`flex h-11 w-11 flex-none items-center justify-center rounded-[10px] ${activeProblem ? "bg-[#15803d] text-white" : "bg-[#0d1b2e] text-white"}`}>
-                      <ProblemIcon index={index} active={activeProblem} />
+                    <div className="flex h-12 w-12 flex-none items-center justify-center text-[#0d1b2e]">
+                      <ProblemIcon index={index} />
                     </div>
                     <div className="min-w-0 flex-1">
                       <div className="font-['Manrope'] text-[13px] font-bold leading-[1.25] text-[#0d1b2e]">
@@ -701,8 +693,8 @@ export default function CommonProblemsSection({ data, bgImage, documentMode = fa
           {current ? (
             <div className="min-w-0 rounded-[14px] border border-[#e5e7eb] bg-white p-5 shadow-[0_2px_12px_rgba(13,27,46,0.06)]">
               <div className="flex items-start gap-4 border-b border-[#f1f5f9] pb-4">
-                <div className="flex h-[52px] w-[52px] flex-none items-center justify-center rounded-[12px] bg-[#15803d] text-white">
-                  <ProblemIcon index={active} active />
+                <div className="flex h-[56px] w-[56px] flex-none items-center justify-center text-[#0d1b2e]">
+                  <ProblemIcon index={active} />
                 </div>
                 <div className="min-w-0">
                   <div className="font-['Manrope'] text-[16px] font-extrabold leading-[1.25] text-[#0d1b2e]">

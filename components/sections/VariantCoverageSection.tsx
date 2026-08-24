@@ -213,27 +213,6 @@ function splitDirectoryHeading(heading: string) {
   return parts.length ? parts : [heading];
 }
 
-function buildVariantHref(cardSlug: string, brandSlug?: string, modelSlug?: string) {
-  const normalizedCardSlug = cardSlug.trim().replace(/^\/+|\/+$/g, "");
-
-  if (!normalizedCardSlug) {
-    return null;
-  }
-
-  if (normalizedCardSlug.includes("/")) {
-    return `/${normalizedCardSlug}`;
-  }
-
-  if (!brandSlug || !modelSlug) {
-    return null;
-  }
-
-  return `/${brandSlug.trim().replace(/^\/+|\/+$/g, "")}/${modelSlug
-    .trim()
-    .replace(/^\/+|\/+$/g, "")}/${normalizedCardSlug}`;
-}
-
-
 function AutoTicker({
   text,
   className = "",
@@ -443,9 +422,7 @@ export default function VariantCoverageSection({
 
   function renderExpandedPanel(card: VariantCard, extraClassName = "") {
     const isAbsolutePanel = extraClassName.includes("absolute");
-    const variantHref =
-      variantRouteMap?.[card.slug] ??
-      buildVariantHref(card.slug, brandSlug, modelSlug);
+    const variantHref = variantRouteMap?.[card.slug];
 
     return (
       <div
@@ -648,9 +625,7 @@ export default function VariantCoverageSection({
                   modelSlug,
                   modelName,
                 });
-                const variantHref =
-  variantRouteMap?.[card.slug] ??
-  buildVariantHref(card.slug, brandSlug, modelSlug);
+                const variantHref = variantRouteMap?.[card.slug];
 
                 return (
                <article key={card.slug} className="relative">
