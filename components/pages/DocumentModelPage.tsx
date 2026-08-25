@@ -97,6 +97,7 @@ export default async function DocumentModelPage({
         data={visualData.sections.howItWorks}
         bgImage={visualData.assets.howItWorksBg}
         sectionId="how-it-works"
+        compactSpacing
       />
 
       {showEngineIntelligence && visualData.sections.engineIntelligence ? (

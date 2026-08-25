@@ -99,7 +99,7 @@ export default function HomeHowItWorksSection({ steps }: Props) {
                       </span>
                     </div>
 
-                    <div className="absolute inset-0 flex h-full flex-col overflow-hidden rounded-[18px] border border-[#0d1b2e] bg-[#0d1b2e] p-2 sm:p-4 lg:p-4 text-white shadow-[0_24px_48px_rgba(7,25,54,0.2)] [backface-visibility:hidden] [transform:rotateY(180deg)]">
+                    <div className="absolute inset-0 flex h-full flex-col overflow-hidden rounded-[18px] border-[1.5px] border-[#3b82f6] bg-[#0d1b2e] p-2 text-white shadow-[0_0_0_1px_rgba(59,130,246,1),0_0_8px_rgba(59,130,246,0.5),0_0_16px_rgba(59,130,246,0.38),0_0_26px_rgba(59,130,246,0.24),0_4px_12px_rgba(42,109,214,0.28)] [backface-visibility:hidden] [transform:rotateY(180deg)] sm:p-4 lg:p-4">
                       <div className="flex flex-col items-center gap-4">
                         {/* <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-[14px] bg-white/10 text-white">
                           {getIcon(step.icon)}

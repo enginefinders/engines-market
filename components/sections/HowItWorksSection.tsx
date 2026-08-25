@@ -11,6 +11,7 @@ type Props = {
   sectionId?: string;
   flush?: boolean;
   variantLayout?: boolean;
+  compactSpacing?: boolean;
 };
 
 function ArrowIcon() {
@@ -146,6 +147,7 @@ export default function HowItWorksSection({
   sectionId,
   flush = false,
   variantLayout = false,
+  compactSpacing = false,
 }: Props) {
   const [activeStep, setActiveStep] = useState<number | null>(null);
   const headingLines = data.headingLines?.length ? data.headingLines : splitHeading(data.h2);
@@ -178,7 +180,13 @@ export default function HowItWorksSection({
   return (
     <Section
       id={sectionId}
-      className={`relative overflow-hidden bg-[#f7f8fb] ${flush ? "!px-0 !py-[2px]" : "px-2 pb-7 pt-4 sm:py-8 lg:py-10"}`}
+      className={`relative overflow-hidden bg-[#f7f8fb] ${
+        flush
+          ? "!px-0 !py-[2px]"
+          : compactSpacing
+            ? "px-2 pb-5 pt-3 sm:pb-6 sm:pt-5 lg:pb-7 lg:pt-6"
+            : "px-2 pb-7 pt-4 sm:py-8 lg:py-10"
+      }`}
     >
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div
@@ -220,7 +228,7 @@ export default function HowItWorksSection({
           </h2>
         </div>
 
-        <div className={`mt-5 grid gap-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-4 ${variantLayout ? "xl:gap-5" : ""}`}>
+        <div className={`${compactSpacing ? "mt-4" : "mt-5"} grid gap-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-4 ${variantLayout ? "xl:gap-5" : ""}`}>
           {cards.map((card) => {
             const flipped = activeStep === card.number;
             const isRegistrationCard = card.number === 1;
@@ -309,7 +317,7 @@ export default function HowItWorksSection({
                         </p>
                       </div>
 
-                      <div className="mt-auto flex items-center justify-end border-t border-[#e8eef5] pt-2.5 lg:pt-2.5">
+                      <div className="mt-auto flex items-center justify-end pt-2.5 lg:pt-2.5">
                         <span className="inline-flex min-h-[22px] shrink-0 items-center gap-2 px-1 pb-0 pt-0 text-[12px] font-bold leading-none text-[#15803d] sm:min-h-[22px] sm:text-[13px] lg:text-[12px]">
                           <span>See more</span>
                           <ArrowIcon />
@@ -353,8 +361,10 @@ export default function HowItWorksSection({
         </div>
 
         <div
-          className={`mx-auto mt-2 flex flex-nowrap items-stretch justify-center gap-2 rounded-[12px] px-4 py-4 sm:mx-0 sm:mt-6 sm:flex-wrap sm:items-center sm:gap-3 lg:gap-4 ${
-            variantLayout ? "border-t border-[#e3ebf5] lg:mt-5 lg:px-0" : "lg:mt-[24px]"
+          className={`mx-auto mt-2 flex flex-nowrap items-stretch justify-center gap-2 rounded-[12px] px-4 sm:mx-0 sm:flex-wrap sm:items-center sm:gap-3 lg:gap-4 ${
+            compactSpacing ? "py-2 sm:mt-4 sm:py-3" : "py-4 sm:mt-6"
+          } ${
+            variantLayout ? `border-t border-[#e3ebf5] ${compactSpacing ? "lg:mt-3" : "lg:mt-5"} lg:px-0` : compactSpacing ? "lg:mt-4" : "lg:mt-[24px]"
           }`}
         >
           {footerTrustItems.map((item, index) => (

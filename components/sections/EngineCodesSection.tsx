@@ -279,7 +279,11 @@ export default function EngineCodesSection({ data, bgImage }: Props) {
   useEffect(() => {
     const syncCardsPerSlide = () => {
       if (typeof window === "undefined") return;
-      setCardsPerSlide(window.innerWidth < 640 ? 1 : 4);
+      if (window.innerWidth < 640) {
+        setCardsPerSlide(1);
+        return;
+      }
+      setCardsPerSlide(window.innerWidth < 1280 ? 2 : 4);
     };
 
     syncCardsPerSlide();
@@ -338,7 +342,7 @@ export default function EngineCodesSection({ data, bgImage }: Props) {
           </div>
 
           <div className="relative z-[1] mt-6 rounded-[15px] border border-[#d8e4f2] bg-white shadow-[0_12px_28px_rgba(6,26,51,0.08)]">
-            <div className="grid grid-cols-1 overflow-hidden rounded-t-[15px] divide-y divide-[#d8e4f2] sm:divide-x sm:divide-y-0" style={{ gridTemplateColumns: `repeat(${tabs.length}, minmax(0, 1fr))` }}>
+            <div className="grid overflow-hidden rounded-t-[15px] divide-x divide-[#d8e4f2]" style={{ gridTemplateColumns: `repeat(${tabs.length}, minmax(0, 1fr))` }}>
               {tabs.map((tab, index) => {
                 const active = index === safeActiveTab;
                 return (
@@ -355,20 +359,20 @@ export default function EngineCodesSection({ data, bgImage }: Props) {
                       setSelectedEngineCode(null);
                       setOpenDropdownTab(null);
                     }}
-                    className={`relative flex min-h-[74px] items-center justify-between gap-4 px-6 py-4 text-left transition ${
+                    className={`relative flex min-h-[50px] items-center justify-between gap-2 px-3 py-2 text-left transition sm:min-h-[56px] sm:px-4 lg:min-h-[64px] lg:px-5 lg:py-3 ${
                       active
                         ? "bg-[linear-gradient(135deg,rgba(13,58,120,0.96),rgba(6,26,51,0.98))] text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.22),inset_0_-1px_0_rgba(6,18,35,0.85),0_0_18px_rgba(45,107,255,0.28)]"
                         : "bg-white text-[#061a33] hover:bg-slate-50"
                     }`}
                   >
-                    <span className="flex min-w-0 items-center gap-4">
-                      <TabIcon type={tab.key} className="h-9 w-9 shrink-0" />
-                      <span>
-                        <span className="block font-['Manrope'] text-[18px] font-black leading-tight">{tab.title}</span>
-                        <span className={`mt-0.5 block text-[12px] ${active ? "text-white/82" : "text-slate-500"}`}>{tab.subtitle}</span>
+                    <span className="flex min-w-0 flex-1 items-center gap-2 sm:gap-3">
+                      <TabIcon type={tab.key} className="h-6 w-6 shrink-0 sm:h-7 sm:w-7 lg:h-8 lg:w-8" />
+                      <span className="min-w-0">
+                        <span className="block font-['Manrope'] text-[12px] font-black leading-[1.05] sm:text-[14px] lg:text-[16px]">{tab.title}</span>
+                        <span className={`mt-0.5 block max-w-[86px] text-[9.5px] font-bold leading-[1.12] sm:max-w-none sm:text-[10.5px] lg:text-[11.5px] ${active ? "text-white/82" : "text-slate-500"}`}>{tab.subtitle}</span>
                       </span>
                     </span>
-                    <Chevron open={active && openDropdownTab === tab.key} className="h-5 w-5 shrink-0" />
+                    <Chevron open={active && openDropdownTab === tab.key} className="h-4 w-4 shrink-0 sm:h-5 sm:w-5" />
                   </button>
                 );
               })}

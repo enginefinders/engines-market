@@ -129,12 +129,18 @@ export default function HomeLiveFeedSection({ rows, initialTimestamp }: Props) {
           </div>
 
           {/* Right Table Container: Fixed height on desktop, flex column layout */}
-          <div className="rounded-2xl border border-white/10 bg-gradient-to-br from-[#0b1a2e] via-[#0f2035] to-[#0a1628] shadow-[0_10px_28px_rgba(0,0,0,0.4)] w-full overflow-hidden flex flex-col h-[600px] lg:h-[700px]">
+          <div className="w-full overflow-hidden rounded-[14px] border border-[#102845] bg-[linear-gradient(180deg,#10243e_0%,#0c1c31_46%,#091523_100%)] shadow-[0_18px_42px_rgba(9,21,35,0.34)] flex flex-col h-[600px] lg:h-[700px]">
             
             {/* Header/Nav: Prevents shrinking */}
-            <nav className="relative z-10 mb-4 flex-shrink-0" aria-label="Filter live engine data by brand">
-              <div className="rounded-t-xl bg-[#0d1f3c] shadow-[0_10px_24px_rgba(13,31,60,0.15)]">
-                <div className="flex items-center gap-1 px-2 py-2">
+            <nav className="relative z-10 flex-shrink-0" aria-label="Filter live engine data by brand">
+              <div className="rounded-t-[14px] border border-[#2e5c99] border-b-0 bg-[linear-gradient(180deg,#14325a_0%,#10243e_100%)] px-3 py-2 shadow-[0_0_0_1px_rgba(82,169,255,0.18),0_12px_28px_rgba(13,27,46,0.24)]">
+                <div className="flex items-center gap-2">
+                  <div className="hidden shrink-0 items-center gap-2 text-[10px] font-bold uppercase tracking-[0.16em] text-white sm:flex">
+                    <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#112948] text-[#69d4ff] shadow-[0_0_14px_rgba(105,212,255,0.26)]">
+                      <RefreshIcon />
+                    </span>
+                    <span>Average Market Prices</span>
+                  </div>
                   <div className="flex min-w-0 flex-1 items-center gap-1 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:hidden">
                     <button
                       type="button"
@@ -145,7 +151,7 @@ export default function HomeLiveFeedSection({ rows, initialTimestamp }: Props) {
                       className={`flex-none rounded-full border px-3 py-2 text-[11.5px] font-medium transition ${
                         activeBrand === "all"
                           ? "border-[#15803d] bg-[#15803d] text-white"
-                          : "border-white/15 bg-transparent text-white/75 hover:bg-white/12 hover:text-white"
+                          : "border-white/15 bg-white/[0.04] text-white/80 hover:bg-white/10 hover:text-white"
                       }`}
                     >
                       All
@@ -162,7 +168,7 @@ export default function HomeLiveFeedSection({ rows, initialTimestamp }: Props) {
                         className={`flex-none rounded-full border px-3 py-2 text-[11.5px] font-medium transition ${
                           activeBrand === brand
                             ? "border-[#15803d] bg-[#15803d] text-white"
-                            : "border-white/15 bg-transparent text-white/75 hover:bg-white/12 hover:text-white"
+                            : "border-white/15 bg-white/[0.04] text-white/80 hover:bg-white/10 hover:text-white"
                         }`}
                       >
                         {brand}
@@ -180,7 +186,7 @@ export default function HomeLiveFeedSection({ rows, initialTimestamp }: Props) {
                       className={`flex-none rounded-full border px-3 py-2 text-[11.5px] font-medium transition ${
                         activeBrand === "all"
                           ? "border-[#15803d] bg-[#15803d] text-white"
-                          : "border-white/15 bg-transparent text-white/75 hover:bg-white/12 hover:text-white"
+                          : "border-white/15 bg-white/[0.04] text-white/80 hover:bg-white/10 hover:text-white"
                       }`}
                     >
                       All
@@ -197,7 +203,7 @@ export default function HomeLiveFeedSection({ rows, initialTimestamp }: Props) {
                         className={`flex-none rounded-full border px-3 py-2 text-[11.5px] font-medium transition ${
                           activeBrand === brand
                             ? "border-[#15803d] bg-[#15803d] text-white"
-                            : "border-white/15 bg-transparent text-white hover:bg-white/12 hover:text-white"
+                            : "border-white/15 bg-white/[0.04] text-white/80 hover:bg-white/10 hover:text-white"
                         }`}
                       >
                         {brand}
@@ -210,7 +216,7 @@ export default function HomeLiveFeedSection({ rows, initialTimestamp }: Props) {
                       <button
                         type="button"
                         onClick={() => setDrawerOpen((current) => !current)}
-                        className="flex h-8 w-8 items-center justify-center rounded-full border border-white/15 bg-white/10 text-white/75 transition hover:bg-white/20 hover:text-white"
+                        className="flex h-8 w-8 items-center justify-center rounded-full border border-white/15 bg-white/[0.08] text-white/80 transition hover:bg-white/[0.14] hover:text-white"
                         aria-expanded={drawerOpen}
                         aria-label="Show more brands"
                       >
@@ -218,7 +224,7 @@ export default function HomeLiveFeedSection({ rows, initialTimestamp }: Props) {
                       </button>
 
                       {drawerOpen ? (
-                        <div className="absolute right-0 top-[calc(100%+8px)] z-20 flex min-w-49 flex-col gap-1 rounded-xl border border-white/15 bg-[#0f2035] p-2 shadow-[0_16px_36px_rgba(0,0,0,0.5)]">
+                        <div className="absolute right-0 top-[calc(100%+8px)] z-20 flex min-w-49 flex-col gap-1 rounded-xl border border-[#2e5c99] bg-[#0f2035] p-2 shadow-[0_16px_36px_rgba(0,0,0,0.5)]">
                           {mobileOverflowBrands.map((brand) => (
                             <button
                               key={brand}
@@ -242,7 +248,7 @@ export default function HomeLiveFeedSection({ rows, initialTimestamp }: Props) {
                       <button
                         type="button"
                         onClick={() => setDrawerOpen((current) => !current)}
-                        className="flex h-8 w-8 items-center justify-center rounded-full border border-white/15 bg-white/10 text-white/75 transition hover:bg-white/20 hover:text-white"
+                        className="flex h-8 w-8 items-center justify-center rounded-full border border-white/15 bg-white/[0.08] text-white/80 transition hover:bg-white/[0.14] hover:text-white"
                         aria-expanded={drawerOpen}
                         aria-label="Show more brands"
                       >
@@ -250,7 +256,7 @@ export default function HomeLiveFeedSection({ rows, initialTimestamp }: Props) {
                       </button>
 
                       {drawerOpen ? (
-                        <div className="absolute right-0 top-[calc(100%+8px)] z-20 flex min-w-49 flex-col gap-1 rounded-xl border border-white/15 bg-[#0f2035] p-2 shadow-[0_16px_36px_rgba(0,0,0,0.5)]">
+                        <div className="absolute right-0 top-[calc(100%+8px)] z-20 flex min-w-49 flex-col gap-1 rounded-xl border border-[#2e5c99] bg-[#0f2035] p-2 shadow-[0_16px_36px_rgba(0,0,0,0.5)]">
                           {desktopOverflowBrands.map((brand) => (
                             <button
                               key={brand}
@@ -275,34 +281,34 @@ export default function HomeLiveFeedSection({ rows, initialTimestamp }: Props) {
             {/* Scrollable Area Wrapper: Takes up remaining space */}
             <div className="flex-1 flex flex-col overflow-hidden overflow-x-hidden w-full">
               {visibleRows.length ? (
-                <div className="flex-1 overflow-y-auto pr-4 [scrollbar-width:thin] [scrollbar-color:#ffffff_transparent] [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-white [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:hover:bg-white/80">
+                <div className="flex-1 overflow-y-auto pr-4 [scrollbar-width:thin] [scrollbar-color:rgba(103,199,255,0.4)_transparent] [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-[#67c7ff]/50 [&::-webkit-scrollbar-thumb]:hover:bg-[#67c7ff]/75">
                   <ul className="list-none">
                     {visibleRows.map((row, index) => (
                       <li
                         key={`${row.brand}-${row.model}-${index}`}
-                        className="border-b border-white/10 px-4 py-3 transition hover:bg-white/5 last:border-b-0"
+                        className="border-b border-white/10 px-4 py-3 transition hover:bg-[rgba(105,212,255,0.05)] last:border-b-0"
                       >
                         <div className="mb-1.5 flex items-baseline justify-between gap-2">
                           <span className="min-w-0 flex-1 truncate text-[14px] font-semibold text-white">
                             {row.model}
                           </span>
-                          <span className="hidden whitespace-nowrap text-[11px] text-white sm:inline">
+                          <span className="hidden whitespace-nowrap text-[11px] text-white/78 sm:inline">
                             {row.years}
                           </span>
-                          <span className="whitespace-nowrap text-[15px] font-bold text-[#4ade80]">
+                          <span className="whitespace-nowrap text-[15px] font-extrabold text-[#35df77] [text-shadow:0_0_12px_rgba(53,223,119,0.22)]">
                             {row.price}
                           </span>
                         </div>
 
                         <div className="flex items-center justify-between gap-2">
-                          <span className="min-w-0 flex-1 truncate text-[11.5px] text-white">
+                          <span className="min-w-0 flex-1 truncate text-[11.5px] text-white/78">
                             {row.issue}
                           </span>
                           <div className="flex flex-none gap-1">
-                            <span className="rounded-full bg-white/5 border border-white/10 px-2 py-0.75 text-[10px] font-medium text-white/80">
+                            <span className="rounded-full border border-white/12 bg-white/[0.06] px-2 py-0.75 text-[10px] font-semibold text-white/78">
                               {row.engineCode}
                             </span>
-                            <span className="rounded-full bg-white/5 border border-white/10 px-2 py-0.75 text-[10px] font-medium text-white/80">
+                            <span className="rounded-full border border-white/12 bg-white/[0.06] px-2 py-0.75 text-[10px] font-semibold text-white/78">
                               {row.fuel}
                             </span>
                           </div>
@@ -321,7 +327,7 @@ export default function HomeLiveFeedSection({ rows, initialTimestamp }: Props) {
               )}
 
               {/* Footer Stats: Prevents shrinking, stays pinned to bottom */}
-              <div className="flex-shrink-0 flex flex-wrap gap-x-5 gap-y-2 px-4 py-3">
+              <div className="flex-shrink-0 flex flex-wrap gap-x-5 gap-y-2 border-t border-white/10 px-4 py-3">
                 <div className="flex items-center gap-2">
                   <span className="h-1.5 w-1.5 rounded-full bg-[#4ade80]" />
                   <span className="text-[11px] text-white/90">Enquiries 2025:</span>

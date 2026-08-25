@@ -199,7 +199,7 @@ export default function HomeEngineTypesSection({ cards }: Props) {
                         </span>
                       </div>
 
-                      <div className="absolute inset-0 flex h-full flex-col overflow-hidden rounded-[18px] border border-[#0d1b2e] bg-[#0d1b2e] p-5 text-white shadow-[0_24px_48px_rgba(7,25,54,0.18)] [backface-visibility:hidden] [transform:rotateY(180deg)] sm:p-4">
+                      <div className="absolute inset-0 flex h-full flex-col overflow-hidden rounded-[18px] border-[1.5px] border-[#3b82f6] bg-[#0d1b2e] p-5 text-white shadow-[0_0_0_1px_rgba(59,130,246,1),0_0_8px_rgba(59,130,246,0.5),0_0_16px_rgba(59,130,246,0.38),0_0_26px_rgba(59,130,246,0.24),0_4px_12px_rgba(42,109,214,0.28)] [backface-visibility:hidden] [transform:rotateY(180deg)] sm:p-4">
                         <h3
                           className="font-['Manrope'] text-[20px] font-bold leading-[1.2] text-white"
                         >
@@ -358,7 +358,13 @@ function MobileStack({ cards }: { cards: HomeEngineTypeCard[] }) {
           bottom: 0; 
           transform: rotateY(180deg);
           background: linear-gradient(155deg, #0d1b2e 0%, #0f2642 40%, #0d1b2e 100%);
-          box-shadow: 0 12px 40px rgba(0,0,50,0.3);
+          border: 1.5px solid #3b82f6;
+          box-shadow:
+            0 0 0 1px rgba(59,130,246,1),
+            0 0 8px rgba(59,130,246,0.5),
+            0 0 16px rgba(59,130,246,0.38),
+            0 0 26px rgba(59,130,246,0.24),
+            0 4px 12px rgba(42,109,214,0.28);
           display: flex;
           flex-direction: column;
         }
@@ -434,6 +440,8 @@ function MobileStack({ cards }: { cards: HomeEngineTypeCard[] }) {
         }
         
         .expand-inner {
+          display: flex;
+          flex-direction: column;
           padding: 0 20px 22px;
           border-top: 1px solid #f3f4f6;
         }
@@ -503,6 +511,15 @@ function MobileStack({ cards }: { cards: HomeEngineTypeCard[] }) {
         
         .flip-hint-arrow {
           font-size: 13px;
+          color: #15803d;
+        }
+
+        .exp-price-line {
+          margin-top: 2px;
+          margin-bottom: 14px;
+          font-family: 'Urbanist', sans-serif;
+          font-size: 13px;
+          font-weight: 700;
           color: #15803d;
         }
         
@@ -650,7 +667,6 @@ function MobileStack({ cards }: { cards: HomeEngineTypeCard[] }) {
                     className="expand-inner"
                     ref={(el) => { expandInnerRefs.current[i] = el; }}
                   >
-                    <div className="peek-price">{c.price}</div>
                     <div className="exp-desc">{c.summary}</div>
                     <div className="exp-items">
                       {c.details?.slice(0, 3).map((d) => (
@@ -666,6 +682,7 @@ function MobileStack({ cards }: { cards: HomeEngineTypeCard[] }) {
                         </div>
                       ))}
                     </div>
+                    <div className="exp-price-line">{c.price}</div>
                     <div style={{ marginTop: 12 }}>
                       <button 
   type="button" 

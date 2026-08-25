@@ -938,6 +938,7 @@ function BrandFuelTypesContent({ data, bgImage }: Props) {
   const items = useMemo(() => orderedItems(data.items ?? []), [data.items]);
   const [activeIndex, setActiveIndex] = useState<number | null>(0);
   const activeItem = activeIndex === null ? null : items[activeIndex];
+  const fuelRows = [items.slice(0, 2), items.slice(2, 4)].filter((row) => row.length);
 
   if (!items.length) return null;
 
@@ -1021,32 +1022,52 @@ function BrandFuelTypesContent({ data, bgImage }: Props) {
           ))}
         </div>
 
-        <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
-          {items.map((item, index) => {
-            const active = activeIndex === index;
-            const activeStyle = fuelStyles[kindFromTitle(item.title)];
+        <div className="mt-4 space-y-3 xl:grid xl:grid-cols-4 xl:gap-3 xl:space-y-0">
+          {fuelRows.map((row, rowIndex) => {
+            const rowStartIndex = rowIndex * 2;
+            const activeInRow = activeIndex !== null && activeIndex >= rowStartIndex && activeIndex < rowStartIndex + row.length;
+            const rowActiveItem = activeInRow ? items[activeIndex] : null;
+            const rowActiveStyle = rowActiveItem ? fuelStyles[kindFromTitle(rowActiveItem.title)] : null;
 
             return (
-              <div key={`${item.title}-${index}`} className="relative min-w-0">
-                <FuelCard item={item} active={active} onClick={() => setActiveIndex((current) => (current === index ? null : index))} />
-                {active ? (
-                  <>
-                    <span
-                      aria-hidden="true"
-                      className="pointer-events-none absolute bottom-[-18px] left-1/2 z-10 hidden h-5 w-5 -translate-x-1/2 rotate-45 border-b border-r md:block"
-                      style={{ backgroundColor: "#fbfffc", borderColor: `${activeStyle.color}80` }}
-                    />
-                    <div className="mt-3 md:hidden">
-                      <DetailPanel brand={brand} item={item} bgImage={bgImage} />
-                    </div>
-                  </>
+              <div key={`fuel-row-${rowIndex}`} className="contents xl:contents">
+                <div className="grid gap-3 md:grid-cols-2 xl:contents">
+                  {row.map((item, rowItemIndex) => {
+                    const index = rowStartIndex + rowItemIndex;
+                    const active = activeIndex === index;
+                    const activeStyle = fuelStyles[kindFromTitle(item.title)];
+
+                    return (
+                      <div key={`${item.title}-${index}`} className="relative min-w-0">
+                        <FuelCard item={item} active={active} onClick={() => setActiveIndex((current) => (current === index ? null : index))} />
+                        {active ? (
+                          <>
+                            <span
+                              aria-hidden="true"
+                              className="pointer-events-none absolute bottom-[-18px] left-1/2 z-10 hidden h-5 w-5 -translate-x-1/2 rotate-45 border-b border-r md:block xl:hidden"
+                              style={{ backgroundColor: "#fbfffc", borderColor: `${activeStyle.color}80` }}
+                            />
+                            <div className="mt-3 md:hidden">
+                              <DetailPanel brand={brand} item={item} bgImage={bgImage} />
+                            </div>
+                          </>
+                        ) : null}
+                      </div>
+                    );
+                  })}
+                </div>
+
+                {rowActiveItem && rowActiveStyle ? (
+                  <div className="relative mt-3 hidden md:block xl:hidden">
+                    <DetailPanel brand={brand} item={rowActiveItem} bgImage={bgImage} />
+                  </div>
                 ) : null}
               </div>
             );
           })}
         </div>
 
-        {activeItem ? <div className="mt-5 hidden md:block"><DetailPanel brand={brand} item={activeItem} bgImage={bgImage} /></div> : null}
+        {activeItem ? <div className="mt-5 hidden xl:block"><DetailPanel brand={brand} item={activeItem} bgImage={bgImage} /></div> : null}
       </Container>
 
       <div className="mt-7 bg-[linear-gradient(135deg,#061a33,#07316f)] py-5 text-white shadow-[0_14px_30px_rgba(6,26,51,0.16)]">

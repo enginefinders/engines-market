@@ -10,7 +10,6 @@ import CommonProblemsSection from "@/components/sections/CommonProblemsSection";
 import EngineTypesSection from "@/components/sections/EngineTypesSection";
 import EngineSizesSection from "@/components/sections/EngineSizesSection";
 import FuelTypesSection from "@/components/sections/FuelTypesSection";
-import EngineCodeDirectorySection from "@/components/sections/EngineCodeDirectorySection";
 import EngineYearsSection from "@/components/sections/EngineYearsSection";
 import FaqSection from "@/components/sections/FaqSection";
 import TrustCtaSection from "@/components/sections/TrustCtaSection";
@@ -123,6 +122,7 @@ export default async function BrandPage({ params }: BrandPageProps) {
         data={pageData.sections.howItWorks}
         bgImage={pageData.assets.howItWorksBg}
         sectionId="how-it-works"
+        compactSpacing
       />
 
       <LiveMarketPricesSection
@@ -163,8 +163,6 @@ export default async function BrandPage({ params }: BrandPageProps) {
       />
 
       <FuelTypesSection data={pageData.sections.fuelTypes} bgImage={pageData.assets.fuelTypesBg} documentMode />
-
-      <EngineCodeDirectorySection data={pageData.sections.engineCodeDirectory} bgImage={pageData.assets.engineCodeDirectoryBg} documentMode />
 
       <EngineYearsSection brandName={pageData.brand.name} data={pageData.sections.engineYears} />
 
