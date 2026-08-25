@@ -70,8 +70,10 @@ function engineImage(code: string, suppliedImage?: string) {
 }
 
 function heroImageForBrand(brand: string, bgImage?: string) {
+  if (bgImage && (bgImage.includes("/engines/") || bgImage.includes("/images/brands/"))) {
+    return bgImage;
+  }
   if (/bmw/i.test(brand)) return ENGINE_IMAGE_POOL[0];
-  if (bgImage && bgImage.includes("/engines/")) return bgImage;
   return ENGINE_IMAGE_POOL[0];
 }
 

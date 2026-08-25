@@ -88,7 +88,7 @@ export default async function BrandPage({ params }: BrandPageProps) {
   const trustCtaImage =
     pageData.brand.slug === "land-rover"
       ? "/images/brands/land-rover/cta-image.webp"
-      : pageData.sections.models.cards[0]?.image ?? pageData.assets.heroBg;
+      : brandVisuals.hero ?? modelCardsWithResolvedImages[0]?.image;
   const initialTimestamp = new Date().toISOString();
   const internalLinkPlan = await getInternalLinkPlan({
     brandSlug: pageData.brand.slug,
@@ -144,7 +144,7 @@ export default async function BrandPage({ params }: BrandPageProps) {
         documentMode
       />
 
-      <EngineCodesSection data={pageData.sections.engineCodes} bgImage={pageData.assets.engineCodesBg} />
+      <EngineCodesSection data={pageData.sections.engineCodes} bgImage={brandVisuals.hero} />
 
       <CommonProblemsSection data={pageData.sections.commonProblems} bgImage={pageData.assets.commonProblemsBg} documentMode />
 

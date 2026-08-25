@@ -7,6 +7,7 @@ import VariantEngineGuideSection from "@/components/sections/VariantEngineGuideS
 import VariantHeroSection from "@/components/sections/VariantHeroSection";
 import VariantHistoryTimelineSection from "@/components/sections/VariantHistoryTimelineSection";
 import VariantTrustCtaSection from "@/components/sections/VariantTrustCtaSection";
+import imageManifest from "@/lib/image-manifest.json";
 import { resolveModelImagePaths } from "@/lib/modelImageAssets";
 import { resolveVariantArtwork } from "@/lib/variantImageAssets";
 import type { VariantPageData } from "@/types/variant";
@@ -14,6 +15,16 @@ import type { VariantPageData } from "@/types/variant";
 type DocumentVariantPageProps = {
   data: VariantPageData;
 };
+
+const manifest = imageManifest as Record<string, number>;
+
+function assetExists(assetPath?: string | null) {
+  if (!assetPath) {
+    return false;
+  }
+
+  return Boolean(manifest[assetPath]);
+}
 
 export default function DocumentVariantPage({ data }: DocumentVariantPageProps) {
   const resolvedImages = resolveModelImagePaths({
@@ -26,8 +37,15 @@ export default function DocumentVariantPage({ data }: DocumentVariantPageProps) 
     configuredCtaImage: data.assets.ctaImage,
   });
   const mainImage = resolvedImages.resolvedMainImage;
-  const heroImage = data.assets.heroBg || mainImage;
-  const ctaImage = data.assets.ctaImage || mainImage || heroImage;
+  const heroImage =
+    [mainImage, resolvedImages.resolvedSmallImage, data.assets.heroBg, data.assets.mainImage].find(assetExists)
+    ?? data.assets.heroBg
+    ?? data.assets.mainImage
+    ?? mainImage;
+  const ctaImage =
+    [mainImage, resolvedImages.resolvedSmallImage, data.assets.ctaImage, heroImage].find(assetExists)
+    ?? data.assets.ctaImage
+    ?? heroImage;
   const variantHistoryImage =
     resolveVariantArtwork({
       brandSlug: data.brand.slug,

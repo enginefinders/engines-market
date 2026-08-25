@@ -1,5 +1,6 @@
 import path from "node:path";
 import imageManifest from "./image-manifest.json";
+import { resolveModelImagePaths } from "@/lib/modelImageAssets";
 import type { BrandPageData } from "@/types/brand";
 
 const manifest = imageManifest as Record<string, number>;
@@ -67,13 +68,29 @@ function isLiveMarketInfographic(assetPath?: string | null) {
 
 function collectBrandCarCandidates(pageData: BrandPageData) {
   const brandSlug = pageData.brand.slug;
+  const resolvedModelImages = pageData.sections.models.cards.flatMap((card) => {
+    const resolvedImages = resolveModelImagePaths({
+      brandSlug,
+      modelSlug: card.slug,
+      modelName: card.h3,
+      configuredMainImage: card.image,
+      configuredSmallImage: card.image,
+      configuredHeroImage: card.image,
+    });
+
+    return [
+      resolvedImages.resolvedMainImage,
+      resolvedImages.resolvedSmallImage,
+      card.image,
+    ];
+  });
 
   return uniquePaths([
-    resolveBrandAsset(brandSlug, `${brandSlug}-hero-bg`),
-    ...pageData.sections.models.cards.map((card) => card.image),
-    pageData.assets.heroBg,
+    ...resolvedModelImages,
     resolveBrandAsset(brandSlug, `live-feed-${brandSlug}`),
     resolveBrandAsset(brandSlug, `${brandSlug}-live-market-bg`),
+    resolveBrandAsset(brandSlug, `${brandSlug}-hero-bg`),
+    pageData.assets.heroBg,
   ]).filter((assetPath) => assetExists(assetPath) && !isLiveMarketInfographic(assetPath));
 }
 
