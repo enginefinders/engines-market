@@ -224,7 +224,7 @@ export default function TrustCtaSection({
                     secondaryAction={
                       showSecondaryAction && secondaryActionText ? (
                         <a
-                          href={secondaryAction.href ?? "tel:03330000044"}
+                          href={secondaryAction.href ?? "tel:+442034884649"}
                           className="inline-flex min-h-[46px] items-center justify-center gap-2 rounded-[10px] border border-white/14 bg-white/[0.08] px-4 text-[11px] font-bold text-white transition hover:bg-white/[0.12]"
                         >
                           <PhoneIcon />
@@ -250,7 +250,7 @@ export default function TrustCtaSection({
                     secondaryAction={
                       showSecondaryAction && secondaryActionText ? (
                         <a
-                          href={secondaryAction.href ?? "tel:03330000044"}
+                          href={secondaryAction.href ?? "tel:+442034884649"}
                           className="inline-flex min-h-[46px] items-center justify-center gap-2 rounded-[10px] border border-white/14 bg-white/[0.08] px-4 text-[11px] font-bold text-white transition hover:bg-white/[0.12]"
                         >
                           <PhoneIcon />

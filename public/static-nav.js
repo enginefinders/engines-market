@@ -159,7 +159,8 @@
 
     const actions = document.createElement("div");
     actions.className = "em-static-actions";
-    actions.appendChild(link("0333 000 0044", "tel:03330000044"));
+    actions.appendChild(link("020 3488 4649", "tel:+442034884649"));
+    actions.appendChild(link("WhatsApp", "https://wa.me/447311343662"));
     actions.appendChild(link("Get Quote", "/get-a-quote", "em-static-quote"));
     inner.appendChild(actions);
 
@@ -194,7 +195,8 @@
     brand.appendChild(copy);
     const contact = document.createElement("div");
     contact.className = "em-static-footer__contact";
-    contact.appendChild(link("0333 000 0044", "tel:03330000044"));
+    contact.appendChild(link("Call 020 3488 4649", "tel:+442034884649"));
+    contact.appendChild(link("WhatsApp 07311 343662", "https://wa.me/447311343662"));
     contact.appendChild(link("Get a quote", "/get-a-quote"));
     brand.appendChild(contact);
     inner.appendChild(brand);

@@ -19,6 +19,7 @@ import {
   homeHowItWorksSteps,
   homeLiveFeedRows,
 } from "@/lib/homepageData";
+import { getAllEngineLinkMap } from "@/lib/enginePageData";
 import { buildHomeStructuredData } from "@/lib/structuredData";
 
 const HOME_TITLE = "Engine Replacement Cost UK - Compare 100+ Vetted Suppliers";
@@ -53,9 +54,10 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Home() {
+export default async function Home() {
   const structuredData = buildHomeStructuredData(homeEngineTypeCards);
   const initialTimestamp = new Date().toISOString();
+  const engineLinks = await getAllEngineLinkMap();
 
   return (
     <>
@@ -65,7 +67,7 @@ export default function Home() {
       />
 
       <div id="top" className="bg-white">
-        <HomeHeroSection data={homeHeroData} />
+        <HomeHeroSection data={homeHeroData} engineLinks={engineLinks} />
         <HomeHowItWorksSection steps={homeHowItWorksSteps} />
         <HomeLiveFeedSection rows={homeLiveFeedRows} initialTimestamp={initialTimestamp} />
         <HomeEngineTypesSection cards={homeEngineTypeCards} />

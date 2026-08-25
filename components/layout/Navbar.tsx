@@ -7,6 +7,10 @@ import { FaWhatsapp } from "react-icons/fa";
 import { FiChevronDown } from "react-icons/fi";
 import { headerNavigation } from "@/lib/navigation";
 
+const CALL_NUMBER_DISPLAY = "020 3488 4649";
+const CALL_NUMBER_TEL = "tel:+442034884649";
+const WHATSAPP_URL = "https://wa.me/447311343662";
+
 function PhoneIcon() {
   return (
     <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" aria-hidden="true">
@@ -70,21 +74,31 @@ export default function Navbar() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <a href="tel:03330000044" className="text-sm font-bold">
-            0333 000 0044
+          <a href={CALL_NUMBER_TEL} className="text-sm font-bold">
+            {CALL_NUMBER_DISPLAY}
+          </a>
+          <a
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-[#25D366] px-3 py-2 text-xs font-bold text-white"
+            aria-label="Chat on WhatsApp"
+          >
+            <FaWhatsapp className="h-[15px] w-[15px]" aria-hidden="true" />
+            WhatsApp
           </a>
         </div>
 
         <div className="flex items-center gap-1.5 self-center lg:hidden">
           <a
-            href="tel:03330000044"
+            href={CALL_NUMBER_TEL}
             className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white sm:h-11 sm:w-11"
             aria-label="Call Engines Market"
           >
             <PhoneIcon />
           </a>
           <a
-            href="https://wa.me/443330000044"
+            href={WHATSAPP_URL}
             target="_blank"
             rel="noreferrer"
             className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-[#25D366] text-white sm:h-11 sm:w-11"

@@ -3,6 +3,11 @@ import Link from "next/link";
 import { FiChevronDown } from "react-icons/fi";
 import { footerNavigation } from "@/lib/navigation";
 
+const CALL_NUMBER_DISPLAY = "020 3488 4649";
+const CALL_NUMBER_TEL = "tel:+442034884649";
+const WHATSAPP_NUMBER_DISPLAY = "07311 343662";
+const WHATSAPP_URL = "https://wa.me/447311343662";
+
 export default function Footer() {
   return (
     <footer className="site-footer bg-[#061a33] text-white">
@@ -22,7 +27,8 @@ export default function Footer() {
               Compare replacement, used and reconditioned engine options from trusted UK specialists.
             </p>
             <div className="mt-6 flex flex-col gap-2 text-sm font-semibold text-slate-200">
-              <a href="tel:03330000044" className="hover:text-green-300">0333 000 0044</a>
+              <a href={CALL_NUMBER_TEL} className="hover:text-green-300">Call {CALL_NUMBER_DISPLAY}</a>
+              <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="hover:text-green-300">WhatsApp {WHATSAPP_NUMBER_DISPLAY}</a>
               <Link href="/get-a-quote" className="hover:text-green-300">Get a quote</Link>
             </div>
           </div>

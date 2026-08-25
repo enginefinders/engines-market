@@ -275,30 +275,32 @@ export default function HomeBrandGridSection({ brands, featuredSlugs }: Props) {
 
                   {isOpen ? (
                     <div
-                      className={`absolute left-[-1px] right-[-1px] z-20 border border-[#e5e7eb] bg-[#0d1b2e] p-4 py-5 shadow-[0_20px_38px_rgba(13,27,46,0.24)] ${
+                      className={`absolute left-[-1px] right-[-1px] z-20 border border-[#e5e7eb] bg-[#0d1b2e] px-3 py-4 shadow-[0_20px_38px_rgba(13,27,46,0.24)] sm:p-4 sm:py-5 ${
                         opensUpward
                           ? `bottom-[calc(100%-1px)] rounded-t-[10px] border-b-0 ${overlayHeightClass}`
                           : `top-[calc(100%-1px)] rounded-b-[10px] border-t-0 ${overlayHeightClass}`
                       }`}
                     >
-                      <div className="space-y-3.5 text-left">
-                        <div className="flex items-baseline gap-2.5 text-[11px] leading-[1.6]">
-                          <span className="text-white/60">Engine prices from:</span>
-                          <span className="font-semibold text-white">{brand.fromPrice} <span className="text-[11px] font-normal text-white/70">(supply only)</span></span>
+                      <div className="space-y-2.5 text-left sm:space-y-3.5">
+                        <div className="grid grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] items-start gap-2 text-[10px] leading-[1.45] min-[430px]:text-[10.5px] sm:grid-cols-[minmax(0,118px)_minmax(0,1fr)] sm:gap-2.5 sm:text-[11px] sm:leading-[1.6]">
+                          <span className="min-w-0 break-words text-white/60">Engine prices from:</span>
+                          <span className="min-w-0 break-words text-right font-semibold leading-[1.45] text-white [overflow-wrap:anywhere] sm:text-left sm:leading-[1.6]">
+                            {brand.fromPrice} <span className="font-normal text-white/70">(supply only)</span>
+                          </span>
                         </div>
-                        <div className="flex items-baseline gap-2.5 text-[11px] leading-[1.6]">
-                          <span className="text-white/60">Avg rebuilt:</span>
-                          <span className="font-semibold text-white">{brand.avgRebuilt}</span>
+                        <div className="grid grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] items-start gap-2 text-[10px] leading-[1.45] min-[430px]:text-[10.5px] sm:grid-cols-[minmax(0,118px)_minmax(0,1fr)] sm:gap-2.5 sm:text-[11px] sm:leading-[1.6]">
+                          <span className="min-w-0 break-words text-white/60">Avg rebuilt:</span>
+                          <span className="min-w-0 break-words text-right font-semibold leading-[1.45] text-white [overflow-wrap:anywhere] sm:text-left sm:leading-[1.6]">{brand.avgRebuilt}</span>
                         </div>
-                        <div className="flex items-baseline gap-2.5 text-[11px] leading-[1.6]">
-                          <span className="text-white/60">Supply & fit:</span>
-                          <span className="font-semibold text-white">Available UK-wide</span>
+                        <div className="grid grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] items-start gap-2 text-[10px] leading-[1.45] min-[430px]:text-[10.5px] sm:grid-cols-[minmax(0,118px)_minmax(0,1fr)] sm:gap-2.5 sm:text-[11px] sm:leading-[1.6]">
+                          <span className="min-w-0 break-words text-white/60">Supply & fit:</span>
+                          <span className="min-w-0 break-words text-right font-semibold leading-[1.45] text-white [overflow-wrap:anywhere] sm:text-left sm:leading-[1.6]">Available UK-wide</span>
                         </div>
                       </div>
 
                       <Link
                         href={`/${brand.slug}`}
-                        className="mt-5 flex min-h-[48px] w-full items-center justify-center gap-2 rounded-[8px] bg-[#15803d] p-2 text-center text-[13px] font-semibold leading-[1.3] text-white transition hover:bg-[#116533]"
+                        className="mt-4 flex min-h-[50px] w-full items-center justify-center gap-2 rounded-[8px] bg-[#15803d] px-2 py-2 text-center text-[11px] font-semibold leading-[1.25] text-white transition hover:bg-[#116533] min-[430px]:text-[12px] sm:mt-5 sm:min-h-[48px] sm:text-[13px]"
                       >
                         <span className="whitespace-normal">{brand.ctaText}</span>
                       </Link>

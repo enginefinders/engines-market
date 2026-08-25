@@ -135,3 +135,19 @@ export async function getEngineLinkMapForBrand(brand: string) {
 
   return engineLinks;
 }
+
+export async function getAllEngineLinkMap() {
+  const pages = await getAllEnginePageData();
+  const engineLinks: EngineLinkMap = {};
+
+  for (const page of pages) {
+    const href = `/${page.brand.slug}/${page.engine.slug}`;
+    for (const key of getEngineCodeLookupKeys(page.engine.code)) {
+      if (!engineLinks[key]) {
+        engineLinks[key] = href;
+      }
+    }
+  }
+
+  return engineLinks;
+}

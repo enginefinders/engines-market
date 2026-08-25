@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useMemo, type CSSProperties, type FormEvent } from "react";
 import Container from "@/components/ui/Container";
+import { getEngineLinkForCode, type EngineLinkMap } from "@/lib/engineLinks";
 import { getModelHref } from "@/lib/modelRoutes";
 import type { HeroSectionData, ModelsSectionData } from "@/types/brand";
 
@@ -22,6 +23,7 @@ type HeroSectionProps = {
   strictData?: boolean;
   tagOverride?: string;
   disclaimerMode?: "accordion" | "icon";
+  engineLinks?: EngineLinkMap;
 };
 
 function UkFlagIcon() {
@@ -319,6 +321,26 @@ function splitCommonCodesText(text: string) {
   };
 }
 
+function renderLinkedEngineCodes(codes: string, engineLinks?: EngineLinkMap) {
+  return codes.split(/(,\s*|\s*\/\s*|\s*·\s*)/).map((part, index) => {
+    if (!part.trim() || /^[,\s/·]+$/.test(part)) {
+      return <span key={`${part}-${index}`}>{part}</span>;
+    }
+
+    const href = getEngineLinkForCode(part, engineLinks);
+
+    if (!href) {
+      return <span key={`${part}-${index}`}>{part}</span>;
+    }
+
+    return (
+      <Link key={`${part}-${index}`} href={href} className="underline-offset-2 transition hover:text-[#15803d] hover:underline">
+        {part}
+      </Link>
+    );
+  });
+}
+
 function buildDisclaimerLines(note: string) {
   const normalized = note.replace(/\s+/g, " ").trim();
   const sentences = normalized.match(/[^.!?]+[.!?]?/g)?.map((sentence) => sentence.trim()).filter(Boolean) ?? [];
@@ -414,6 +436,7 @@ export default function HeroSection({
   strictData = false,
   tagOverride,
   disclaimerMode = "accordion",
+  engineLinks,
 }: HeroSectionProps) {
   const [registration, setRegistration] = useState("");
   const [showHeroImage, setShowHeroImage] = useState(Boolean(bgImage));
@@ -599,7 +622,7 @@ export default function HeroSection({
     {commonCodesParts ? (
       <>
         {commonCodesParts.prefix}
-        <span className="text-[#2563eb]">{commonCodesParts.codes}</span>
+        <span className="font-medium text-[#2563eb]">{renderLinkedEngineCodes(commonCodesParts.codes, engineLinks)}</span>
       </>
     ) : (
       commonCodesLine

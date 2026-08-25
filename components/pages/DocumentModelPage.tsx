@@ -91,6 +91,7 @@ export default async function DocumentModelPage({
         strictData
         tagOverride={marketplaceLabel}
         disclaimerMode="icon"
+        engineLinks={engineLinks}
       />
 
       <HowItWorksSection

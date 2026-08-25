@@ -6,6 +6,7 @@ import { useEffect, useMemo, useState, type FormEvent } from "react";
 import { useRouter } from "next/navigation";
 import Container from "@/components/ui/Container";
 import type { HomeHeroData } from "@/lib/homepageData";
+import { getEngineLinkForCode, type EngineLinkMap } from "@/lib/engineLinks";
 import { carModelsBySeries, carSeries } from "@/data/brands_Models";
 import { PiEngine } from "react-icons/pi";
 import { GoShield } from "react-icons/go";
@@ -13,6 +14,7 @@ import { GoVerified } from "react-icons/go";
 
 type Props = {
   data: HomeHeroData;
+  engineLinks?: EngineLinkMap;
 };
 
 type HeroBrandRow = {
@@ -448,8 +450,28 @@ function LogoBadge({ brand }: { brand: string }) {
   );
 }
 
+function renderLinkedEngineCodes(codes: string, engineLinks?: EngineLinkMap) {
+  return codes.split(/(,\s*|\s*\/\s*|\s*·\s*)/).map((part, index) => {
+    if (!part.trim() || /^[,\s/·]+$/.test(part)) {
+      return <span key={`${part}-${index}`}>{part}</span>;
+    }
+
+    const href = getEngineLinkForCode(part, engineLinks);
+
+    if (!href) {
+      return <span key={`${part}-${index}`}>{part}</span>;
+    }
+
+    return (
+      <Link key={`${part}-${index}`} href={href} className="underline-offset-2 transition hover:text-[#15803d] hover:underline">
+        {part}
+      </Link>
+    );
+  });
+}
+
 /* Brand Row - matches screenshot layout exactly */
-function HeroRow({ row }: { row: HeroBrandRow }) {
+function HeroRow({ row, engineLinks }: { row: HeroBrandRow; engineLinks?: EngineLinkMap }) {
   return (
     // Changed px-4 to px-2 sm:px-4 to reduce overall left/right space on mobile
     <div className="flex h-[80px] cursor-pointer items-center sm:gap-15 border-b border-[rgba(13,27,46,0.1)] px-2 sm:px-4 last:border-b-0 transition-colors hover:bg-[#f9fafb]">
@@ -480,7 +502,7 @@ function HeroRow({ row }: { row: HeroBrandRow }) {
 {/* Line 3: most requested codes */}
 <div className="truncate text-[11px] text-[#6b7280]">
   Most requested:{" "}
-  <span className="font-medium text-[#2563eb]">{row.codes}</span>
+  <span className="font-medium text-[#2563eb]">{renderLinkedEngineCodes(row.codes, engineLinks)}</span>
 </div>
       </div>
 
@@ -808,7 +830,7 @@ function CTAPanel({
 }
 
 /* ─── Main Component ─── */
-export default function HomeHeroSection({ data }: Props) {
+export default function HomeHeroSection({ data, engineLinks }: Props) {
   const router = useRouter();
   const [registration, setRegistration] = useState("");
   const [isRegistrationLookupLoading, setIsRegistrationLookupLoading] = useState(false);
@@ -1017,7 +1039,7 @@ export default function HomeHeroSection({ data }: Props) {
                 Compare quotes from vetted specialists
               </h3>
                 {activeGroup.map((row) => (
-                  <HeroRow key={`${groupIndex}-${row.brand}`} row={row} />
+                  <HeroRow key={`${groupIndex}-${row.brand}`} row={row} engineLinks={engineLinks} />
                 ))}
               </div>
 
@@ -1096,7 +1118,9 @@ export default function HomeHeroSection({ data }: Props) {
                     <div className="text-[10px] font-bold leading-tight text-[#0d1b2e]">
                       {item.brand}
                     </div>
-                    <div className="text-[9px] text-[#6b7280]">{item.code}</div>
+                    <div className="text-[9px] text-[#6b7280]">
+                      {renderLinkedEngineCodes(item.code, engineLinks)}
+                    </div>
                     <div className="text-[10px] font-bold text-[#15803d]">{item.price}</div>
                   </div>
                 </div>
@@ -1124,7 +1148,7 @@ export default function HomeHeroSection({ data }: Props) {
                     </div>
                     <div className="min-w-0 flex-1 text-left">
                       <div className="whitespace-nowrap text-[13px] font-bold leading-tight text-[#0d1b2e]">
-                        {item.brand} {item.code}
+                        {item.brand} <span className="text-[#2563eb]">{renderLinkedEngineCodes(item.code, engineLinks)}</span>
                       </div>
                       <div className="whitespace-nowrap text-[11px] text-[#6b7280]">{item.spec}</div>
                       <div className="text-[10px] font-bold text-[#15803d]">{item.price}</div>

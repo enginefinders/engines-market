@@ -16,6 +16,7 @@ import TrustCtaSection from "@/components/sections/TrustCtaSection";
 import QuoteCheckoutModal from "@/components/checkout/QuoteCheckoutModal";
 import AutoInternalLinks from "@/components/internal-links/AutoInternalLinks";
 import { getBrandPageData, getBrandSlugs } from "@/lib/brandData";
+import { getEngineLinkMapForBrand } from "@/lib/enginePageData";
 import { resolveBrandPageVisuals } from "@/lib/engineImageSelection";
 import { getInternalLinkPlan } from "@/lib/internalLinkIndex";
 import { resolveModelImagePaths } from "@/lib/modelImageAssets";
@@ -90,6 +91,7 @@ export default async function BrandPage({ params }: BrandPageProps) {
       ? "/images/brands/land-rover/cta-image.webp"
       : brandVisuals.hero ?? modelCardsWithResolvedImages[0]?.image;
   const initialTimestamp = new Date().toISOString();
+  const engineLinks = await getEngineLinkMapForBrand(pageData.brand.slug);
   const internalLinkPlan = await getInternalLinkPlan({
     brandSlug: pageData.brand.slug,
     currentPath: pageData.seo.canonical,
@@ -116,6 +118,7 @@ export default async function BrandPage({ params }: BrandPageProps) {
         modelCards={heroModelCards}
         brandSlug={pageData.brand.slug}
         disclaimerMode="icon"
+        engineLinks={engineLinks}
       />
 
       <HowItWorksSection
