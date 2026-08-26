@@ -149,7 +149,7 @@ export default function HomeBrandGridSection({ brands, featuredSlugs }: Props) {
   const collapsedBrands = isMobileViewport ? featuredBrands.slice(0, 6) : featuredBrands;
   const visibleBrands = expanded ? alphabeticalBrands : collapsedBrands;
   const cardHeightClass = "min-h-[164px] sm:min-h-[172px]";
-  const overlayHeightClass = "min-h-[220px] sm:min-h-[228px]";
+  const overlayHeightClass = "h-[226px]";
 
   function toggleBrand(slug: string) {
     setOpenBrand((current) => (current === slug ? null : slug));
@@ -275,32 +275,32 @@ export default function HomeBrandGridSection({ brands, featuredSlugs }: Props) {
 
                   {isOpen ? (
                     <div
-                      className={`absolute left-[-1px] right-[-1px] z-20 border border-[#e5e7eb] bg-[#0d1b2e] px-3 py-4 shadow-[0_20px_38px_rgba(13,27,46,0.24)] sm:p-4 sm:py-5 ${
+                      className={`absolute left-[-1px] right-[-1px] z-20 flex flex-col justify-between border border-[#e5e7eb] bg-[#0d1b2e] px-2.5 py-3.5 shadow-[0_20px_38px_rgba(13,27,46,0.24)] sm:px-3 sm:py-4 ${
                         opensUpward
                           ? `bottom-[calc(100%-1px)] rounded-t-[10px] border-b-0 ${overlayHeightClass}`
                           : `top-[calc(100%-1px)] rounded-b-[10px] border-t-0 ${overlayHeightClass}`
                       }`}
                     >
-                      <div className="space-y-2.5 text-left sm:space-y-3.5">
-                        <div className="grid grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] items-start gap-2 text-[10px] leading-[1.45] min-[430px]:text-[10.5px] sm:grid-cols-[minmax(0,118px)_minmax(0,1fr)] sm:gap-2.5 sm:text-[11px] sm:leading-[1.6]">
-                          <span className="min-w-0 break-words text-white/60">Engine prices from:</span>
-                          <span className="min-w-0 break-words text-right font-semibold leading-[1.45] text-white [overflow-wrap:anywhere] sm:text-left sm:leading-[1.6]">
+                      <div className="space-y-4 text-left sm:space-y-[18px]">
+                        <div className="grid grid-cols-[minmax(0,72px)_minmax(0,1fr)] items-start gap-1.5 text-[10px] leading-[1.3] min-[430px]:grid-cols-[minmax(0,84px)_minmax(0,1fr)] min-[430px]:text-[10.5px] sm:grid-cols-[minmax(0,108px)_minmax(0,1fr)] sm:gap-2 sm:text-[11px]">
+                          <span className="min-w-0 text-white/60">Engine prices from:</span>
+                          <span className="min-w-0 text-left font-semibold text-white [overflow-wrap:anywhere]">
                             {brand.fromPrice} <span className="font-normal text-white/70">(supply only)</span>
                           </span>
                         </div>
-                        <div className="grid grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] items-start gap-2 text-[10px] leading-[1.45] min-[430px]:text-[10.5px] sm:grid-cols-[minmax(0,118px)_minmax(0,1fr)] sm:gap-2.5 sm:text-[11px] sm:leading-[1.6]">
-                          <span className="min-w-0 break-words text-white/60">Avg rebuilt:</span>
-                          <span className="min-w-0 break-words text-right font-semibold leading-[1.45] text-white [overflow-wrap:anywhere] sm:text-left sm:leading-[1.6]">{brand.avgRebuilt}</span>
+                        <div className="grid grid-cols-[minmax(0,72px)_minmax(0,1fr)] items-start gap-1.5 text-[10px] leading-[1.3] min-[430px]:grid-cols-[minmax(0,84px)_minmax(0,1fr)] min-[430px]:text-[10.5px] sm:grid-cols-[minmax(0,108px)_minmax(0,1fr)] sm:gap-2 sm:text-[11px]">
+                          <span className="min-w-0 text-white/60">Avg rebuilt:</span>
+                          <span className="min-w-0 text-left font-semibold text-white [overflow-wrap:anywhere]">{brand.avgRebuilt}</span>
                         </div>
-                        <div className="grid grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] items-start gap-2 text-[10px] leading-[1.45] min-[430px]:text-[10.5px] sm:grid-cols-[minmax(0,118px)_minmax(0,1fr)] sm:gap-2.5 sm:text-[11px] sm:leading-[1.6]">
-                          <span className="min-w-0 break-words text-white/60">Supply & fit:</span>
-                          <span className="min-w-0 break-words text-right font-semibold leading-[1.45] text-white [overflow-wrap:anywhere] sm:text-left sm:leading-[1.6]">Available UK-wide</span>
+                        <div className="grid grid-cols-[minmax(0,72px)_minmax(0,1fr)] items-start gap-1.5 text-[10px] leading-[1.3] min-[430px]:grid-cols-[minmax(0,84px)_minmax(0,1fr)] min-[430px]:text-[10.5px] sm:grid-cols-[minmax(0,108px)_minmax(0,1fr)] sm:gap-2 sm:text-[11px]">
+                          <span className="min-w-0 text-white/60">Supply & fit:</span>
+                          <span className="min-w-0 text-left font-semibold text-white [overflow-wrap:anywhere]">Available UK-wide</span>
                         </div>
                       </div>
 
                       <Link
                         href={`/${brand.slug}`}
-                        className="mt-4 flex min-h-[50px] w-full items-center justify-center gap-2 rounded-[8px] bg-[#15803d] px-2 py-2 text-center text-[11px] font-semibold leading-[1.25] text-white transition hover:bg-[#116533] min-[430px]:text-[12px] sm:mt-5 sm:min-h-[48px] sm:text-[13px]"
+                        className="flex min-h-[48px] w-full items-center justify-center gap-2 rounded-[8px] bg-[#15803d] px-2 py-2 text-center text-[11px] font-semibold leading-[1.2] text-white transition hover:bg-[#116533] min-[430px]:text-[11.5px] sm:min-h-[50px] sm:text-[12.5px]"
                       >
                         <span className="whitespace-normal">{brand.ctaText}</span>
                       </Link>
