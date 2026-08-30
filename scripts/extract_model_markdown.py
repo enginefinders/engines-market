@@ -3719,7 +3719,11 @@ def parse_engine_years(lines: Sequence[str]) -> Dict[str, Any]:
     closing = extract_closing_value(lines, "Closing line", "Closing") or ""
     years: List[Dict[str, Any]] = []
     idx = 0
-    year_heading_re = re.compile(r"^\d{4}\s*[-â€“â€”]\s*(?:\d{4}|present|Present)")
+    # Accept both ranges ("2022 - Present") and single-year launch headings
+    # ("2022 - Launch Year") used by newer model-content documents.
+    year_heading_re = re.compile(
+        r"^\d{4}(?:\s*[-â€“â€”]\s*(?:\d{4}|present|Present))?\s*[-â€“â€”]\s*.+$"
+    )
 
     def split_year_heading(text: str) -> Tuple[str, str, List[Dict[str, str]]]:
         cleaned = normalize_line(text)
@@ -3985,10 +3989,6 @@ def parse_trust_cta_flexible(lines: Sequence[str]) -> Dict[str, Any]:
         if not clean or looks_like_label(raw):
             continue
 
-        stripped = raw.strip()
-        if not stripped.startswith(("**", "__", "- ", "* ", "+ ", "•")):
-            continue
-
         split = re.split(r"\s*[-â€“â€”]\s*", clean, maxsplit=1)
         if len(split) != 2:
             continue
@@ -3997,6 +3997,11 @@ def parse_trust_cta_flexible(lines: Sequence[str]) -> Dict[str, Any]:
         left = left.strip()
         right = right.strip()
         if not left or not right:
+            continue
+
+        # Some supplied model documents use plain trust-point lines instead of
+        # bullets; require a descriptive title to avoid promoting short prose.
+        if not (raw.strip().startswith(("**", "__", "- ", "* ", "+ ", "•")) or len(left.split()) >= 3):
             continue
 
         points.append({"title": left, "description": right})
