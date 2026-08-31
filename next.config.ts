@@ -61,10 +61,6 @@ const nextConfig: NextConfig = {
           destination: "/get-a-quote.html",
         },
         {
-          source: "/failures/:slug",
-          destination: "/failures/:slug.html",
-        },
-        {
           source: "/case-studies/nissan-navara-engine-failure",
           destination: "/case-studies/nissan-navara-d40-case-study.html",
         },
