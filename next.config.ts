@@ -25,10 +25,6 @@ const nextConfig: NextConfig = {
           destination: "/about/about-us.html",
         },
         {
-          source: "/compare/:slug",
-          destination: "/compare/:slug.html",
-        },
-        {
           source: "/insights/:slug",
           destination: "/insights/:slug.html",
         },

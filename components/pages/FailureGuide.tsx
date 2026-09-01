@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import type { FailureGuide } from "@/data/failureGuides";
 import FailureSourceDetails from "./FailureSourceDetails";
 import styles from "./FailureGuide.module.css";
@@ -26,6 +26,7 @@ function TrustRow() {
 
 export default function FailureGuide({ guide }: { guide: FailureGuide }) {
   const [activeStage, setActiveStage] = useState(0);
+  const [mobileOpenStage, setMobileOpenStage] = useState<number | null>(0);
   const stage = guide.stages[activeStage];
   const activeCause = guide.causes[Math.min(activeStage, guide.causes.length - 1)];
   const faqs = guide.sourceDetails?.faqs ?? [];
@@ -70,6 +71,20 @@ export default function FailureGuide({ guide }: { guide: FailureGuide }) {
           <article className={`${styles.heroCost} ${styles.dangerCost}`}><span className={styles.iconShell}><GuideIcon src={replacementIcon} /></span><div><b>{guide.hero.severeLabel}</b><strong>{guide.hero.severeCost}</strong><p>{guide.hero.severeNote}</p></div></article>
         </div>
       </div>
+      <div className={`${styles.container} ${styles.mobileHeroCosts}`} aria-label={`${guide.name} indicative mobile prices`}>
+        <article className={styles.mobileHeroCost}>
+          <span className={styles.iconShell}><GuideIcon src={cleanIcon} /></span>
+          <div className={styles.mobileHeroCostLabel}><b>{guide.hero.primaryLabel}</b></div>
+          <div className={styles.mobileHeroCostValue}><strong>{guide.hero.primaryCost}</strong><p>{guide.hero.primaryNote}</p></div>
+          <span className={styles.mobileHeroChevron} aria-hidden="true">›</span>
+        </article>
+        <article className={styles.mobileHeroCost}>
+          <span className={styles.iconShell}><GuideIcon src={replacementIcon} /></span>
+          <div className={styles.mobileHeroCostLabel}><b>{guide.hero.severeLabel}</b></div>
+          <div className={styles.mobileHeroCostValue}><strong>{guide.hero.severeCost}</strong><p>{guide.hero.severeNote}</p></div>
+          <span className={styles.mobileHeroChevron} aria-hidden="true">›</span>
+        </article>
+      </div>
       <div className={`${styles.container} ${styles.quoteBar}`} id="quote">
         <div className={styles.quoteLabel}><span className={styles.iconShell}><GuideIcon src={quoteIcon} /></span><div><strong>{quoteTitle}</strong><span>Check symptoms first</span></div></div>
         <div className={styles.regForm}><label className={styles.numberPlate}><span className={styles.plateBand}><span>GB</span><small>UK</small></span><input aria-label="Vehicle registration" maxLength={8} placeholder="REG HERE" /></label><Link href="/get-a-quote" className={styles.quoteButton}>Get Quote <span>→</span></Link></div>
@@ -80,7 +95,26 @@ export default function FailureGuide({ guide }: { guide: FailureGuide }) {
       <div className={`${styles.container} ${styles.severityLayout}`}>
         <div className={styles.sectionHeading}><span className={styles.lightPill}>SYMPTOM TO COST - ESCALATION</span><h2 id="severity-title">Understanding The Severity<br />Of Your <span>{guide.name}</span></h2><p>Understanding the severity of this issue is critical to avoiding unnecessary replacement costs.</p></div>
         <div className={styles.stageGrid} role="tablist" aria-label={`${guide.name} severity stages`}>
-          {guide.stages.map((item, index) => <button key={item.label} type="button" role="tab" aria-selected={activeStage === index} className={`${styles.stageCard} ${activeStage === index ? styles.stageActive : ""}`} onClick={() => setActiveStage(index)}><span>{item.label}</span><GuideIcon src={isEgrGuide && index === 0 ? cleanIcon : isEgrGuide && index === 2 ? "/failures/egr-icons/EM_Icons/Engine/DGreen_engine-01.png" : `${greenIcon}${index === 1 ? "crankshaft.png" : index === 2 ? "Engine%20Icon.png" : "Warranty%20Minimum%20Standard.png"}`} /><strong>{item.cost}</strong><p>{item.summary}</p><hr /><p><b>{item.detail}</b></p><em>{item.actionCost ?? item.cost}</em></button>)}
+          {guide.stages.map((item, index) => (
+            <Fragment key={item.label}>
+              <button
+                type="button"
+                role="tab"
+                aria-selected={activeStage === index}
+                aria-expanded={mobileOpenStage === index}
+                className={`${styles.stageCard} ${activeStage === index ? styles.stageActive : ""}`}
+                onClick={() => {
+                  setActiveStage(index);
+                  setMobileOpenStage((current) => current === index ? null : index);
+                }}
+              ><span>{item.label}</span><GuideIcon src={isEgrGuide && index === 0 ? cleanIcon : isEgrGuide && index === 2 ? "/failures/egr-icons/EM_Icons/Engine/DGreen_engine-01.png" : `${greenIcon}${index === 1 ? "crankshaft.png" : index === 2 ? "Engine%20Icon.png" : "Warranty%20Minimum%20Standard.png"}`} /><strong>{item.cost}</strong><p>{item.summary}</p><hr /><p><b>{item.detail}</b></p><em>{item.actionCost ?? item.cost}</em></button>
+              {mobileOpenStage === index ? <div className={styles.mobileStageDetail}>
+                <article><span className={styles.iconShell}><GuideIcon src={`${lightBlueIcon}Not%20Sure%20Icon.png`} /></span><div><h3>LIKELY CAUSE</h3><p>{item.cause ?? guide.causes[Math.min(index, guide.causes.length - 1)]?.text ?? ""}</p></div></article>
+                <article><span className={styles.iconShell}><GuideIcon src={`${lightBlueIcon}Key%20Change%20Icon.png`} /></span><div><h3>WHAT TO DO</h3><p>{item.action ?? item.detail}</p></div></article>
+                <article><span className={styles.iconShell}><GuideIcon src={`${lightBlueIcon}Pound%20Icon.png`} /></span><div><h3>REPAIR COST</h3><p>{item.repairCost ?? <><b>{item.cost}</b> is the typical cost band at this severity. Confirm the fault before authorising work.</>}</p></div></article>
+              </div> : null}
+            </Fragment>
+          ))}
         </div>
       </div>
       <div className={`${styles.container} ${styles.stageDetail}`}>

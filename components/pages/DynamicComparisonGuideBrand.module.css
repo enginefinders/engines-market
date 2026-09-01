@@ -1,0 +1,283 @@
+.em {
+  font-family: "Urbanist", ui-sans-serif, system-ui, sans-serif;
+}
+
+.em.em h1,
+.em.em h2,
+.em.em h3,
+.em.em .optionGrid strong,
+.em.em .quoteForm button,
+.em.em .finalCta h2 {
+  font-family: "Bebas Neue", "Urbanist", sans-serif;
+  letter-spacing: .015em;
+}
+
+.hero h1 {
+  max-width: 720px;
+  color: #fff;
+  font-weight: 400;
+  letter-spacing: .01em;
+}
+
+.trust img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.optionGrid article {
+  display: grid;
+  align-content: start;
+  justify-items: start;
+  gap: 14px;
+}
+
+.optionGrid article:nth-child(2) {
+  justify-items: center;
+  text-align: center;
+}
+
+.optionGrid article > div {
+  width: 100%;
+}
+
+.optionGrid article:nth-child(2) > div {
+  width: auto;
+}
+
+.section {
+  position: relative;
+  overflow: hidden;
+  padding: 26px 28px;
+}
+
+.section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(#1478e8, #078d4a);
+}
+
+.section header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.section header > img {
+  width: 33px;
+  height: 33px;
+  margin-top: 1px;
+  padding: 7px;
+  border: 1px solid #dce3ed;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(7, 25, 49, .08);
+  object-fit: contain;
+}
+
+.section header h2 {
+  font-size: 34px;
+  font-weight: 400;
+}
+
+.copy {
+  max-width: 1000px;
+  margin-left: 45px;
+}
+
+.tableWrap {
+  margin-top: 15px;
+  box-shadow: 0 5px 15px rgba(7, 25, 49, .05);
+}
+
+.tableWrap th {
+  height: 40px;
+  background: linear-gradient(105deg, #0a203b, #102f55);
+  font-family: "Bebas Neue", "Urbanist", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: .045em;
+}
+
+.tableWrap td {
+  padding: 12px 14px;
+  font-size: 11px;
+}
+
+.tableWrap tr:nth-child(even) td {
+  background: #f7faff;
+}
+
+.tableWrap td:first-child {
+  color: #0a1730;
+  font-weight: 800;
+}
+
+.more {
+  margin-left: 45px;
+  font-family: "Urbanist", ui-sans-serif, system-ui, sans-serif;
+}
+
+.finalCta {
+  border: 1px solid rgba(20, 120, 232, .45);
+  background: radial-gradient(circle at 84% 25%, rgba(20, 120, 232, .24), transparent 22%), linear-gradient(110deg, #041326, #061a33 70%, #092341);
+}
+
+/* Reference guide visual system: compact paper surfaces around dark data boards. */
+.em {
+  background: #e9edf2;
+}
+
+.hero {
+  background:
+    radial-gradient(circle at 76% 20%, rgba(22, 70, 124, .24), transparent 28%),
+    linear-gradient(180deg, #020d1a, #041426 78%, #031321);
+}
+
+.hero h1 {
+  font-size: clamp(42px, 5.1vw, 60px);
+  line-height: 1.03;
+}
+
+.trust {
+  gap: 18px;
+  padding-top: 4px;
+}
+
+.trust span {
+  font-size: 10px;
+}
+
+.trust img {
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+}
+
+.optionGrid {
+  margin-top: 0;
+  border-color: #203754;
+  border-radius: 10px 10px 0 0;
+  background: transparent;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1), 0 16px 30px rgba(0, 0, 0, .16);
+  backdrop-filter: blur(2px);
+}
+
+.optionGrid article {
+  min-height: 148px;
+  gap: 2px;
+  padding: 16px 27px 14px;
+}
+
+.optionGrid strong {
+  font-size: 31px;
+}
+
+.section {
+  padding: 24px 26px;
+  border-radius: 10px;
+  box-shadow: 0 3px 14px rgba(12, 37, 72, .10);
+}
+
+.section::before {
+  top: 17px;
+  left: 0;
+  width: 4px;
+  height: 38px;
+  border-radius: 0 4px 4px 0;
+  background: #1478e8;
+}
+
+.section header {
+  gap: 10px;
+}
+
+.section header h2 {
+  font-size: 32px;
+  line-height: 1.04;
+}
+
+.section header > img {
+  width: 34px;
+  height: 34px;
+  border-color: #cfd8e4;
+  box-shadow: none;
+}
+
+.tableWrap {
+  border-color: #cfd8e4;
+  border-radius: 9px;
+}
+
+.tableWrap th {
+  height: 38px;
+  padding: 9px 11px;
+  background: linear-gradient(180deg, #071d3f, #041832);
+}
+
+.tableWrap td {
+  padding: 9px 11px;
+}
+
+.finalCta {
+  min-height: 166px;
+  border-color: #173250;
+  border-radius: 10px;
+  background:
+    radial-gradient(circle at 94% 16%, rgba(26, 86, 150, .22), transparent 30%),
+    linear-gradient(145deg, #04182f, #031326);
+}
+
+/* Keep the guide compact and align its hierarchy to the left edge. */
+.hero > div,
+.em > div,
+.em > section:last-child {
+  width: min(1210px, calc(100% - 24px));
+}
+
+.section,
+.finalCta {
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+.hero h1,
+.section header,
+.section header h2,
+.section header p,
+.finalCta h2,
+.finalCta p,
+.finalCta small {
+  text-align: left;
+}
+
+/* Keep shared dynamic guide copy comfortably readable at the reference scale. */
+.em {
+  font-size: 1.06em;
+}
+
+.finalCta h2,
+.finalCta h2 span {
+  color: #fff;
+}
+
+.finalCta .quoteForm button {
+  background: linear-gradient(180deg, #1aad62, #057b40);
+  box-shadow: 0 8px 17px rgba(5, 142, 73, .34);
+}
+
+.finalCta > img {
+  filter: contrast(1.14) saturate(1.18) drop-shadow(0 0 10px rgba(52, 157, 255, .74)) drop-shadow(0 14px 19px rgba(27, 124, 222, .55));
+}
+
+@media (max-width: 620px) {
+  .section { padding: 20px 16px; }
+  .section header h2 { font-size: 29px; }
+  .copy,.more { margin-left: 0; }
+}
