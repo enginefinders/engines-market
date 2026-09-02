@@ -3,12 +3,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { FaBalanceScale, FaBolt, FaBuilding, FaCar, FaChartBar, FaChartLine, FaCheck, FaChevronRight, FaClock, FaCogs, FaCoins, FaDatabase, FaExclamationTriangle, FaExchangeAlt, FaExternalLinkAlt, FaEye, FaGem, FaHistory, FaInfoCircle, FaLink, FaLock, FaMicrochip, FaMoneyBillWave, FaPlus, FaPoundSign, FaSearch, FaShieldAlt, FaSlidersH, FaStar, FaTag, FaTachometerAlt, FaTimes, FaTools, FaUserShield, FaUsers, FaWrench } from "react-icons/fa";
+import { FaBalanceScale, FaBolt, FaBuilding, FaCar, FaChartBar, FaChartLine, FaCheck, FaChevronRight, FaClock, FaCogs, FaCoins, FaDatabase, FaExclamationTriangle, FaExchangeAlt, FaExternalLinkAlt, FaEye, FaGem, FaInfoCircle, FaLink, FaLock, FaMicrochip, FaMoneyBillWave, FaPlus, FaPoundSign, FaSearch, FaShieldAlt, FaSlidersH, FaStar, FaTag, FaTachometerAlt, FaTimes, FaTools, FaUserShield, FaUsers, FaWrench } from "react-icons/fa";
 import type { ComparisonGuide as ComparisonGuideData } from "@/data/comparisonGuides";
 import styles from "./ComparisonGuide.module.css";
 import additions from "./ComparisonGuideAdditions.module.css";
 import dynamic from "./DynamicComparisonGuide.module.css";
 import dynamicBrand from "./DynamicComparisonGuideBrand.module.css";
+import RiskAnalysis from "./RiskAnalysis";
 
 const engineImage = "/images/shared/hero-engines/temporary-performance-engine-cutout.png";
 const ukMapImage = "/images/compare/uk-map-dots-alpha-v2.png";
@@ -22,7 +23,7 @@ const emIcons = {
 const usedRules = ["Vehicle value is under £4,000 - replacement cost may exceed vehicle value [EM-OBSERVED]", "You plan to sell within 12 months - no need to invest in long-term reliability", "You need the absolute cheapest option - used engines are the lowest upfront cost", "Vehicle is being repaired purely to keep mobile", "You cannot tolerate 1-3 weeks downtime - used engines can be fitted in 3-5 days"];
 const rebuiltRules = ["Vehicle value is £15,000+ - rebuild protects a significant asset", "You plan to keep the car 3+ years - long-term ownership justifies the investment", "Original engine has sentimental or matching-numbers value - only a rebuild preserves the original block", "You want full warranty protection (12-24 months)", "Vehicle is a classic or future classic - matching-numbers preservation is critical for value", "You can manage 1-3 weeks downtime - rebuilds require significant workshop time"];
 const rebuildStages = ["Strip down & inspection", "Cleaning & machining", "OEM component replacement", "Reassembly & calibration", "Dynamic testing & verification"];
-const rebuildParts = [["Block", "Cleaned, inspected, machined (cylinder boring/honing)"], ["Crank", "Inspected, reground if required"], ["Bearings", "Replaced with new OEM-spec"], ["Pistons + rings", "Replaced with new components"], ["Gaskets + seals", "Fully replaced"], ["Timing chain + tensioner", "Replaced"], ["Oil pump", "Inspected, replaced if worn"], ["Injectors", "Tested, cleaned or replaced"], ["Turbo", "Inspected, rebuilt or replaced if worn"], ["Cylinder head", "Inspected, pressure tested, skimmed if required"], ["Valves + guides", "Inspected, replaced if worn"], ["Testing", "Compression, oil pressure, hot + cold dynamic testing"]];
+const rebuildParts = [["Block", "Cleaned, inspected, machined if required"], ["Crank", "Inspected, reground if required"], ["Bearings", "Replaced with new OEM-spec"], ["Pistons + rings", "Replaced with new components"], ["Gaskets + seals", "Fully replaced"], ["Timing chain + tensioner", "Replaced"], ["Oil pump", "Inspected, replaced if worn"], ["Injectors", "Tested, cleaned or replaced"], ["Turbo", "Inspected, rebuilt or replaced if worn"], ["Cylinder head", "Inspected, pressure tested, skimmed if required"], ["Valves + guides", "Inspected, replaced if worn"], ["Testing", "Compression, oil pressure, hot + cold dynamic testing"]];
 const related = ["Used engine cost guide", "Rebuilt engine cost guide", "Engine replacement cost guide", "Used vs reconditioned comparison", "Reconditioned vs rebuilt comparison", "Repair vs replacement comparison", "Timing chain failure guide", "Engine seizure guide", "UK Engine Price Index - 2025 data"];
 
 function SectionHeading({ eyebrow, children, copy }: { eyebrow: string; children: React.ReactNode; copy?: string }) {
@@ -66,38 +67,30 @@ function TechnicalPartIcon({ part }: { part: string }) {
 
 
 function RebuildStageIcon({ index }: { index: number }) {
-  if (index === 0) return <FaSearch />;
-  if (index === 1) return <FaTools />;
-  if (index === 2) return <FaMicrochip />;
-  if (index === 3) return <FaSlidersH />;
-  return <FaTachometerAlt />;
+  const icons = [
+    "/icons/engine-market/white-blue-technical-spec.png",
+    "/icons/engine-market/dark-blue-not-sure.png",
+    "/icons/engine-market/dark-blue-diesel-engine.png",
+    "/icons/engine-market/dark-blue-supply-fit.png",
+    "/icons/engine-market/dark-blue-warranty.png",
+  ];
+  return <Image className={additions.rebuildStageAsset} src={icons[index]} alt="" width={24} height={24} aria-hidden="true" />;
 }
 
 function RebuildPartIcon({ part }: { part: string }) {
-  if (/^block$/i.test(part)) return <FaCogs />;
-  if (/^crank$/i.test(part)) return <FaWrench />;
-  if (/bearings/i.test(part)) return <FaCoins />;
-  if (/pistons/i.test(part)) return <FaTools />;
-  if (/gaskets/i.test(part)) return <FaShieldAlt />;
-  if (/timing/i.test(part)) return <FaClock />;
-  if (/oil pump/i.test(part)) return <FaMoneyBillWave />;
-  if (/injectors/i.test(part)) return <FaBolt />;
-  if (/turbo/i.test(part)) return <FaTachometerAlt />;
-  if (/cylinder head/i.test(part)) return <FaCar />;
-  if (/valves/i.test(part)) return <FaSlidersH />;
-  return <FaChartLine />;
-}
-
-function RiskIcon({ title }: { title: string }) {
-  if (/timing/i.test(title)) return <FaClock />;
-  if (/service history/i.test(title)) return <FaHistory />;
-  if (/turbo/i.test(title)) return <FaTachometerAlt />;
-  if (/injector/i.test(title)) return <FaBolt />;
-  if (/downtime/i.test(title)) return <FaClock />;
-  if (/specialist/i.test(title)) return <FaUserShield />;
-  if (/parts availability/i.test(title)) return <FaCogs />;
-  if (/cost escalation/i.test(title)) return <FaChartLine />;
-  return <FaExclamationTriangle />;
+  let icon = "/icons/engine-market/dark-blue-vetted-specialists.png";
+  if (/^block$/i.test(part)) icon = "/icons/engine-market/dark-blue-diesel-engine.png";
+  if (/^crank$/i.test(part)) icon = "/icons/engine-market/dark-blue-rod-bearing.png";
+  if (/bearings/i.test(part)) icon = "/icons/engine-market/dark-blue-cooling-system.png";
+  if (/pistons/i.test(part)) icon = "/icons/engine-market/dark-blue-petrol-engine.png";
+  if (/gaskets/i.test(part)) icon = "/icons/engine-market/dark-blue-warranty.png";
+  if (/timing/i.test(part)) icon = "/icons/engine-market/dark-blue-not-sure.png";
+  if (/oil pump/i.test(part)) icon = "/icons/engine-market/dark-blue-hpfp-icon.png";
+  if (/injectors/i.test(part)) icon = "/icons/engine-market/dark-blue-instant-quote.png";
+  if (/turbo/i.test(part)) icon = "/icons/engine-market/dark-blue-hybrid-engine.png";
+  if (/cylinder head/i.test(part)) icon = "/icons/engine-market/dark-blue-egr-icon.png";
+  if (/valves/i.test(part)) icon = "/icons/engine-market/dark-blue-supply-fit.png";
+  return <Image className={additions.rebuildPartAsset} src={icon} alt="" width={22} height={22} aria-hidden="true" />;
 }
 
 function ConfidenceIcon({ label }: { label: string }) {
@@ -155,9 +148,9 @@ export default function ComparisonGuide({ guide }: { guide: ComparisonGuideData 
           </div>
         </div>
         <div className={`${dynamic.optionGrid} ${dynamicBrand.optionGrid}`}>
-        <article><span className={dynamic.optionIcon}><FaTag /></span><div><b>Used engine (budget)</b><strong>£500-£1,500</strong><small>Supply only · 1-6 months warranty</small></div></article>
+          <article><span className={dynamic.optionIcon}><FaTag /></span><div><b>Used engine (budget)</b><strong>£500-£1,500</strong><small>Supply only · 1-6 months warranty</small></div></article>
           <article><span className={dynamic.optionIcon}><FaTools /></span><div><b>Rebuilt (restoration)</b><strong>£1,500-£5,600+</strong><small>Supply only · 12-24 months warranty</small></div></article>
-        <article><span className={dynamic.optionIcon}><FaShieldAlt /></span><div><b>Matching-numbers</b><strong>Preserved</strong><small>Original engine retained</small></div></article>
+          <article><span className={dynamic.optionIcon}><FaShieldAlt /></span><div><b>Matching-numbers</b><strong>Preserved</strong><small>Original engine retained</small></div></article>
         </div>
         <QuoteForm />
       </div>
@@ -230,15 +223,15 @@ export default function ComparisonGuide({ guide }: { guide: ComparisonGuideData 
               <Image src={engineImage} alt="Rebuilt engine" width={420} height={260} />
             </div>
           </div>
-          <div className={styles.stageBar} role="list">{rebuildStages.map((stage, index) => <div className={additions.stageItem} role="listitem" key={stage}><RebuildStageIcon index={index} /><b>{index + 1}</b><span>{stage}</span>{index < rebuildStages.length - 1 ? <FaChevronRight className={additions.stageArrow} aria-hidden="true" /> : null}</div>)}</div>
-          <div className={styles.rebuildTables}>{[rebuildParts.slice(0, 6), rebuildParts.slice(6)].map((items, index) => <table key={index}><thead><tr><th>Component</th><th>Action during rebuild</th></tr></thead><tbody>{items.map(([part, action]) => <tr key={part}><td><span className={additions.rebuildPartLabel}><RebuildPartIcon part={part} />{part}</span></td><td>{action}</td></tr>)}</tbody></table>)}</div>
+          <div className={styles.stageBar} role="list">{rebuildStages.map((stage, index) => <div className={additions.stageItem} role="listitem" key={stage}><span className={additions.stageIcon}><RebuildStageIcon index={index} /></span><b>{index + 1}</b><span>{stage}</span></div>)}</div>
+          <div className={styles.rebuildTables}>{[rebuildParts.slice(0, 6), rebuildParts.slice(6)].map((items, index) => <table key={index}><thead><tr><th>Component</th><th>Action during rebuild</th></tr></thead><tbody>{items.map(([part, action]) => <tr key={part}><td><RebuildPartIcon part={part} />{part}</td><td>{action}</td></tr>)}</tbody></table>)}</div>
         </div>
         <aside className={additions.oemPanel}>
           <b>OEM PART REFERENCES (EXAMPLES)</b>
           <i />
-          <div className={additions.oemBrand}><Image className={additions.brandLogo} src="/BrandsLogos/bmw-logo-small.webp.webp" alt="BMW" width={36} height={36} /><div><strong>BMW</strong><p>BMW N47 piston ring set - 11257799870<br />BMW N47 con rod bearing set - 11248619827<br />BMW N47 main bearing set - 11217798851<br />BMW B47 head gasket - 11128511884</p></div></div>
-          <div className={additions.oemBrand}><Image className={additions.brandLogo} src="/BrandsLogos/mercedes-logo-small.webp.webp" alt="Mercedes" width={36} height={36} /><div><strong>MERCEDES</strong><p>Mercedes OM651 timing chain kit - A6510500100</p></div></div>
-          <div className={additions.oemBrand}><Image className={additions.brandLogo} src="/BrandsLogos/land-rover-logo-small.webp.webp" alt="Land Rover" width={36} height={36} /><div><strong>LAND ROVER</strong><p>Land Rover TDV6 piston ring set - LR017193<br />Land Rover TDV6 con rod bearing set - LR008759<br />Land Rover TDV6 head gasket set - LR017329</p></div></div>
+          <div className={additions.oemBrand}><Image className={additions.brandLogo} src="/BrandsLogos/bmw-logo-small.webp.webp" alt="BMW" width={36} height={36} /><div><strong>BMW</strong><p>BMW N47 piston ring set<br />BMW N47 con rod bearing set</p></div></div>
+          <div className={additions.oemBrand}><Image className={additions.brandLogo} src="/BrandsLogos/mercedes-logo-small.webp.webp" alt="Mercedes" width={36} height={36} /><div><strong>MERCEDES</strong><p>Mercedes OM651 timing chain kit</p></div></div>
+          <div className={additions.oemBrand}><Image className={additions.brandLogo} src="/BrandsLogos/land-rover-logo-small.webp.webp" alt="Land Rover" width={36} height={36} /><div><strong>LAND ROVER</strong><p>Land Rover TDV6 head gasket</p></div></div>
           <small>[OEM] Part numbers for reference only. Always verify with your supplier.</small>
         </aside>
       </div>
@@ -255,15 +248,7 @@ export default function ComparisonGuide({ guide }: { guide: ComparisonGuideData 
       <div className={additions.ownerInsight}><FaEye /><div><b>OWNER BEHAVIOUR INSIGHT</b><p>Used engines account for approximately 29.55% of UK replacement demand [EM-VERIFIED], but rebuilt engines dominate the premium and enthusiast segments due to matching-numbers preservation and long-term reliability.</p></div></div>
     </section>
 
-    <section className={`${styles.container} ${styles.section} ${styles.risks} ${additions.risks}`}>
-      <SectionHeading eyebrow="RISK ANALYSIS - WHAT USERS DON'T SEE ELSEWHERE">Hidden risks of <span>used</span> engines <em>vs</em> risks of <strong>rebuilt</strong> engines</SectionHeading>
-      <div>
-        <article><h3><FaExclamationTriangle /> Hidden Risks of Used Engines</h3>{[["Timing chain wear", "Not visible externally - may fail shortly after installation.", "£650-£2,500"], ["Unknown service history", "Previous owner may have neglected oil changes - bearing wear hidden.", "£1,500-£5,000+"], ["Turbo degradation", "Common failure point post-80k miles - often not tested.", "£800-£2,500"], ["Injector wear", "Not diagnosed on basic inspection - leads to poor running.", "£300-£1,500"], ["Matching-numbers lost", "Irreversible - affects vehicle value and authenticity.", "Varies by vehicle"]].map(([title, text, cost]) => <span key={title}><span className={additions.riskIcon}><RiskIcon title={title} /></span><span className={additions.riskCopy}><b>{title}</b><small>{text}</small></span><em><small>Additional cost:</small>{cost}</em></span>)}</article>
-        <b className={`${styles.vs} ${additions.riskVs}`}>VS</b>
-        <article><h3><FaExclamationTriangle /> Risks of Rebuilt Engines</h3>{[["Extended downtime", "Vehicle off-road 1-3 weeks - may require alternative transport.", "Plan ahead; hire vehicle if needed"], ["Specialist quality", "Rebuild quality varies by workshop.", "Use vetted specialists only"], ["Parts availability", "Some components may be on backorder.", "Confirm availability before committing"], ["Cost escalation", "Additional issues may be discovered during strip-down.", "Budget 10-20% contingency"]].map(([title, text, note]) => <span key={title}><span className={additions.riskIcon}><RiskIcon title={title} /></span><span className={additions.riskCopy}><b>{title}</b><small>{text}</small></span><em><small>Mitigation:</small>{note}</em></span>)}</article>
-      </div>
-      <p>[EM-OBSERVED] based on post-installation survey data from 100+ customers 3-6 months after replacement.</p>
-    </section>
+    <RiskAnalysis />
 
     <section className={`${styles.container} ${additions.riskCta}`}>
       <div className={additions.riskCtaCopy}><h2>Know the <span>true cost</span> before<br />replacing your engine.</h2><p>Compare live UK engine supply &amp; fitting prices from vetted specialists. Fast, free and 100% independent.</p></div>

@@ -2354,3 +2354,756 @@
   .finalCtaRefined.finalCtaRefined { grid-template-columns: 1fr; }
   .ctaEngine { grid-column: auto; }
 }
+
+@media (max-width:620px) {
+  .comparisonExperience { margin-top:14px; }
+  .comparisonHero { min-height:0; padding:20px 0 8px; }
+  .comparisonCopy h2 { font-size:38px; }
+  .comparisonCopy h3 { font-size:25px; }
+  .comparisonArtwork { height:176px; }
+  .comparisonTable { margin-inline:0; border-radius:13px; overflow-x:auto; }
+  .comparisonTable table { min-width:610px; }
+  .comparisonNote { margin:11px 0; text-align:left; }
+  .ruleOfThumb { margin:0; border-radius:13px; }
+  .marketInsight { grid-template-columns:1fr; gap:14px; padding:20px; border-radius:14px; }
+  .marketRing { width:92px; height:92px; border-width:7px; }
+  .marketCopy h2 { font-size:31px; }
+  .marketInsight > :nth-child(3),.marketEngine { display:none; }
+  .marketRebuilt { grid-column:auto; }
+  .rebuildLayout { grid-template-columns:1fr; }
+  .oemPanel { min-height:0; }
+  .rebuild .stageBar { grid-template-columns:1fr; }
+  .stageArrow { display:none; }
+  .marketMetrics.marketMetrics { grid-template-columns:1fr; }
+  .riskCta { grid-template-columns:1fr; padding:20px; }
+  .riskCtaTrust { grid-template-columns:1fr 1fr; }
+  .methodRefined > div:nth-of-type(2),.faqColumns { grid-template-columns:1fr !important; }
+  .faqColumns::before { display:none; }
+  .guidesRefined > div:nth-of-type(2) { grid-template-columns:1fr; }
+  .finalCtaRefined.finalCtaRefined { grid-template-columns:1fr; }
+  .ctaEngine { grid-column:auto; min-height:135px; }
+}
+
+.technicalMobileAccordion,.coreEngine,.riskCtaEngine { display:none; }
+
+/* Phone layout: keep dense comparison modules side-by-side where the reference calls for it. */
+@media (max-width:620px) {
+  .methodology.methodology { display:grid; grid-template-columns:minmax(0,1fr) 88px; gap:12px; padding:16px; }
+  .methodology > div:first-child { grid-column:1; grid-row:1; }
+  .methodology > div:nth-of-type(3) { display:grid !important; grid-column:2; grid-row:1; place-items:start center; top:0; border:0; }
+  .methodology .ukMap { display:block; width:82px; height:auto; max-height:130px; object-fit:contain; }
+  .methodology > div:nth-of-type(2) { grid-column:1 / -1; grid-template-columns:1fr 1fr !important; gap:10px 8px; }
+  .methodology > div:nth-of-type(2) span { min-width:0; font-size:9px; }
+  .methodology > div:nth-of-type(2) span:nth-child(5) { grid-column:1 / -1; }
+  .methodology footer { grid-column:1 / -1; margin:3px 0 0; padding:10px 11px; border:1px solid #d7e0ea; border-radius:8px; background:#f7faff; line-height:1.55; }
+
+  .comparisonHero { display:grid; grid-template-columns:minmax(0,1fr) 128px; align-items:center; gap:4px; padding:13px 0 10px; }
+  .comparisonCopy { min-width:0; }
+  .comparisonCopy h2 { font-size:29px; }
+  .comparisonCopy h3 { font-size:20px; }
+  .comparisonArtwork { height:132px; }
+  .comparisonArtwork .engineLeft,.comparisonArtwork .engineRight { width:122px; }
+  .marketInsight.marketInsight { grid-template-columns:82px minmax(0,1fr); min-height:126px; gap:11px; padding:15px; border-radius:13px; }
+  .marketInsight.marketInsight .marketRing { width:78px; height:78px; border-width:6px; }
+  .marketInsight.marketInsight .marketCopy h2 { font-size:24px; }
+  .marketInsight.marketInsight .marketRebuilt { grid-column:1 / -1; display:grid; grid-template-columns:28px 1fr; align-items:center; gap:8px; padding:8px 10px; }
+  .marketInsight.marketInsight .marketRebuilt b { font-size:16px; }
+  .marketInsight.marketInsight .marketEngine { display:none; }
+
+  .technical > div:nth-of-type(2) { display:none; }
+  .technicalMobileAccordion { display:grid; gap:7px; }
+  .technicalMobileAccordion article { overflow:hidden; border:1px solid #cbd9e8; border-radius:9px; background:#fff; }
+  .technicalMobileAccordion button { display:flex; align-items:center; justify-content:space-between; width:100%; padding:11px 12px; border:0; background:linear-gradient(120deg,#061a33,#0d4f94,#126fdb); color:#fff; font:700 12px Inter,Arial,sans-serif; text-align:left; }
+  .technicalMobileAccordion button svg { transition:transform .18s ease; }
+  .technicalMobileAccordion article > div { display:none; }
+  .technicalMobileAccordion .technicalOpen > div { display:grid; }
+  .technicalMobileAccordion .technicalOpen button svg { transform:rotate(180deg); }
+  .technicalMobileAccordion article > div span { display:grid; grid-template-columns:20px 1fr; gap:8px; align-items:center; padding:9px 11px; border-top:1px solid #e2e9f1; color:#172d49; font-size:10px; line-height:1.35; }
+  .technicalMobileAccordion article > div svg { color:#1178e7; font-size:14px; }
+
+  .regional.regional { grid-template-columns:1fr; gap:10px; padding:15px; }
+  .regional > div:first-child { display:block; position:absolute; top:16px; right:14px; width:58px; height:90px; opacity:.5; }
+  .regional > div:first-child img { width:100%; height:100%; object-fit:contain; }
+  .regional > div:nth-child(2) > div:first-child { padding-right:64px; }
+  .regional > div:nth-child(2) > div:last-child { overflow:visible; }
+  .regional table { min-width:0; width:100%; table-layout:fixed; }
+  .regional th,.regional td { padding:7px 4px; font-size:7px; line-height:1.25; overflow-wrap:anywhere; }
+
+  .decision.decision { grid-template-columns:minmax(0,1fr) 28px minmax(0,1fr) !important; gap:7px; }
+  .decision > div:first-child { display:grid; grid-template-columns:minmax(0,1fr) 118px; column-gap:8px; grid-column:1 / -1 !important; }
+  .decision > div:first-child > :not(:last-child) { grid-column:1; }
+  .decisionEngines { grid-column:2; grid-row:1 / 4; align-self:center; margin:0; }
+  .decisionEngines img { width:58px; height:auto; }
+  .decisionEngines b { width:25px; height:25px; font-size:8px; }
+  .decision > article { min-width:0; padding:11px; }
+  .decision > article:first-of-type { grid-column:1 !important; }
+  .decision > article:nth-of-type(2) { grid-column:3 !important; }
+  .decision > article h3 { font-size:11px; line-height:1.2; }
+  .decision > article h3 svg { width:24px; height:24px; margin-right:4px; padding:5px; }
+  .decision > article li { gap:5px; margin:7px 0; font-size:8px; line-height:1.3; }
+  .decision > article > b { font-size:9px; }
+  .decision > div:last-child { grid-column:1 / -1 !important; display:grid; grid-template-columns:repeat(4,minmax(0,1fr)) !important; padding:12px 0 0; }
+  .decision > div:last-child h3 { grid-column:1 / -1; padding:0 10px; font-size:13px; }
+  .decision > div:last-child > span { min-height:128px; padding:7px 4px; border-right:1px solid rgba(20,120,232,.2); border-bottom:0; }
+  .decision > div:last-child > span:last-child { border-right:0; }
+  .decision > div:last-child > span svg { margin-bottom:4px; font-size:17px; }
+  .decision > div:last-child b { font-size:9px; }
+  .decision > div:last-child small { min-height:62px; font-size:7px; line-height:1.25; }
+  .decision > div:last-child em { padding:3px 6px; font-size:6px; }
+
+  .core.core { position:relative; grid-template-columns:minmax(0,1fr) 28px minmax(0,1fr) !important; gap:7px; padding:16px 12px; }
+  .core > div:first-child { grid-column:1 / -1; padding-right:82px; }
+  .core > div:first-child h2 { font-size:22px; }
+  .coreEngine { display:block; position:absolute; top:11px; right:7px; width:84px; height:auto; opacity:.65; }
+  .core > article { min-width:0; }
+  .core > article:first-of-type { grid-column:1 !important; grid-row:2; }
+  .core > b { grid-column:2 !important; grid-row:2; }
+  .core > article:last-child { grid-column:3 !important; grid-row:2; }
+  .core > article h3 { font-size:10px; }
+  .core > article p,.core > article ul { font-size:8px; line-height:1.45; }
+  .core > b { display:grid; width:28px; height:28px; margin:auto; font-size:8px; }
+
+  .rebuildLayout { grid-template-columns:1fr; }
+  .rebuildHeroRow { grid-template-columns:minmax(0,1fr) 126px; align-items:start; }
+  .rebuildHeroRow > :first-child h2 { font-size:28px; }
+  .rebuildEngineVisual { min-height:122px; }
+  .rebuildEngineVisual img { width:142px; height:auto; }
+  .rebuildMain > div:nth-child(2) { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:0; overflow:visible; border:0; border-radius:0; background:transparent; }
+  .rebuild .stageItem { min-width:0; padding:4px 2px; }
+  .rebuild .stageItem svg:first-child { width:15px; height:15px; }
+  .rebuild .stageItem b { font-size:10px; }
+  .rebuild .stageItem span { font-size:7px; line-height:1.2; }
+  .rebuild .stageArrow { display:none; }
+  .rebuildMain > div:nth-child(3) { display:grid; grid-template-columns:1fr 1fr; }
+  .rebuildMain > div:nth-child(3) table + table { border-top:0; border-left:1px solid rgba(137,159,182,.4); }
+  .rebuildMain > div:nth-child(3) th,.rebuildMain > div:nth-child(3) td { padding:7px 5px; font-size:7px; line-height:1.25; }
+  .rebuildPartLabel { gap:4px; }
+  .rebuildPartLabel svg { width:12px; height:12px; }
+
+  .marketMetrics.marketMetrics { grid-template-columns:1fr 1fr !important; }
+  .marketMetrics > .metricItem { min-width:0; border-right:1px solid rgba(132,156,181,.24); }
+  .marketMetrics > .metricItem:nth-child(2n) { border-right:0; }
+  .marketMetrics > .metricItem:nth-child(-n+2) { border-bottom:1px solid rgba(132,156,181,.24); }
+  .marketMetrics > .metricItem:nth-child(n+3) { border-bottom:0; }
+
+  .risks > div { grid-template-columns:minmax(0,1fr) 28px minmax(0,1fr) !important; gap:7px; }
+  .risks > div::before { display:none; }
+  .riskVs { position:static !important; display:grid !important; width:28px; height:28px; margin:auto; font-size:8px; }
+  .risks > div > article:first-child { grid-column:1 !important; }
+  .risks > div > .riskVs { grid-column:2 !important; }
+  .risks > div > article:last-child { grid-column:3 !important; }
+  .risks article { min-width:0; }
+  .risks article h3 { font-size:10px; }
+  .risks article > span { grid-template-columns:22px 1fr; gap:5px; margin:7px 0; }
+  .risks article > span > svg,.riskIcon { width:20px; height:20px; padding:4px; }
+  .risks article b,.risks article small,.risks article em { font-size:8px; line-height:1.3; }
+  .risks article em { display:none; }
+
+  .riskCta { position:relative; grid-template-columns:1fr; gap:10px; padding:17px 15px; overflow:hidden; }
+  .riskCtaCopy { max-width:225px; }
+  .riskCtaCopy h2 { font-size:24px; }
+  .riskCtaEngine { display:block; position:absolute; top:8px; right:-20px; width:150px; height:auto; opacity:.42; pointer-events:none; }
+  .riskCtaForm { position:relative; z-index:1; }
+  .riskCtaTrust { grid-template-columns:repeat(4,minmax(0,1fr)); gap:4px; position:relative; z-index:1; }
+  .riskCtaTrust span { min-width:0; font-size:7px; }
+  .riskCtaTrust svg { width:19px; height:19px; }
+  .riskCtaTrust b,.riskCtaTrust small { font-size:7px; }
+
+  .marketInsight.marketInsight .marketRebuilt { display:flex !important; align-items:center; gap:9px; min-width:0; }
+  .marketInsight.marketInsight .marketRebuilt > svg { flex:none; width:22px; height:22px; margin:0; }
+  .marketInsight.marketInsight .marketRebuilt > div { min-width:0; }
+  .marketInsight.marketInsight .marketRebuilt b { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-size:14px; }
+
+  .guidesRefined > div:nth-of-type(2) { grid-template-columns:1fr 1fr; }
+  .finalCtaRefined.finalCtaRefined { grid-template-columns:1fr; }
+  .finalCtaRefined .ctaEngine { order:-1; grid-column:auto; min-height:112px; }
+  .finalCtaRefined .ctaEngine img { width:175px; height:auto; }
+}
+
+
+/* ========================================================================== */
+/* MOBILE REFERENCE CORRECTION — 390–414px                                    */
+/* Final cascade layer: fixes narrow grid columns / table overflow while       */
+/* preserving all existing guide data and desktop layouts.                     */
+/* ========================================================================== */
+@media (max-width: 620px) {
+  .emTypography {
+    overflow-x: hidden;
+    background: #f4f6f9;
+  }
+
+  .emTypography > section:not(:first-child) {
+    box-sizing: border-box;
+    border-radius: 12px;
+  }
+
+  /* Instant comparison: the reference shows all three columns at once. */
+  .comparisonExperience {
+    margin-top: 12px;
+  }
+
+  .comparisonHero {
+    grid-template-columns: minmax(0, 1fr) 126px;
+    gap: 7px;
+    min-height: 0;
+    padding: 17px 6px 9px;
+  }
+
+  .comparisonCopy h2 { font-size: 29px; line-height: .96; }
+  .comparisonCopy h3 { font-size: 20px; line-height: 1.02; }
+  .comparisonCopy > strong { font-size: 11px; }
+  .comparisonCopy > span { margin-top: 6px; font-size: 9px; line-height: 1.45; }
+  .comparisonCopy > i { width: 42px; height: 2px; margin: 12px 0 10px; }
+
+  .comparisonArtwork { height: 128px; }
+  .comparisonArtwork .engineLeft,
+  .comparisonArtwork .engineRight { width: 116px; }
+  .comparisonArtwork > b { height: 3px; }
+  .comparisonArtwork > i { right: 2%; bottom: 15px; width: 94%; height: 28px; }
+
+  .comparisonTable {
+    overflow: hidden !important;
+    border-radius: 12px;
+  }
+
+  .comparisonTable table {
+    width: 100% !important;
+    min-width: 0 !important;
+    table-layout: fixed;
+    font-size: 8.5px;
+  }
+
+  .comparisonTable th,
+  .comparisonTable td {
+    padding: 8px 5px !important;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  .comparisonTable th {
+    font-size: 9px !important;
+    line-height: 1.2;
+  }
+
+  .comparisonTable th:first-child,
+  .comparisonTable td:first-child { width: 44%; text-align: left; }
+  .comparisonTable th:nth-child(2),
+  .comparisonTable td:nth-child(2),
+  .comparisonTable th:nth-child(3),
+  .comparisonTable td:nth-child(3) { width: 28%; text-align: center; }
+
+  .comparisonNote {
+    gap: 6px;
+    margin: 10px 2px 12px;
+    font-size: 8px;
+    line-height: 1.45;
+    text-align: left;
+  }
+
+  .ruleOfThumb {
+    grid-template-columns: 38px 1fr;
+    gap: 10px;
+    margin: 0;
+    padding: 13px 12px;
+    border-radius: 12px;
+    font-size: 9px;
+    line-height: 1.5;
+  }
+
+  .ruleOfThumb b { font-size: 10px; }
+  .ruleOfThumb > svg { width: 22px; height: 22px; padding-right: 9px; }
+
+  /* Market strip — compact two-level composition like the reference. */
+  .marketInsight.marketInsight {
+    grid-template-columns: 78px minmax(0, 1fr);
+    gap: 10px;
+    min-height: 132px;
+    padding: 14px;
+    border-radius: 12px;
+  }
+
+  .marketInsight.marketInsight .marketRing {
+    width: 72px;
+    height: 72px;
+    border-width: 6px;
+  }
+
+  .marketInsight.marketInsight .marketRing b { font-size: 21px; }
+  .marketInsight.marketInsight .marketCopy h2 { font-size: 24px; line-height: .95; }
+  .marketInsight.marketInsight .marketCopy p { font-size: 8px; }
+  .marketInsight.marketInsight .marketDemand { font-size: 8px; }
+  .marketInsight.marketInsight .marketDatasetCopy { display: none; }
+
+  .marketInsight.marketInsight .marketRebuilt {
+    grid-column: 1 / -1;
+    display: grid !important;
+    grid-template-columns: 26px 1fr;
+    gap: 8px;
+    min-width: 0;
+    padding: 8px 10px;
+    border-top: 1px solid rgba(127, 181, 231, .18);
+  }
+
+  .marketInsight.marketInsight .marketRebuilt > svg { width: 21px; height: 21px; }
+  .marketInsight.marketInsight .marketRebuilt b {
+    overflow: visible;
+    white-space: normal;
+    font-size: 15px;
+    line-height: 1;
+  }
+  .marketInsight.marketInsight .marketRebuilt small { font-size: 8px; }
+
+  /* Price board: visually match the reference's supply-only 3-column board.
+     Fitted data remains in the DOM and the fitted-cost note remains visible. */
+  .price > div:nth-of-type(2) {
+    overflow: hidden !important;
+    border-radius: 12px;
+  }
+
+  .price > div:nth-of-type(2) table {
+    width: 100% !important;
+    min-width: 0 !important;
+    table-layout: fixed;
+  }
+
+  .price > div:nth-of-type(2) th:nth-child(3),
+  .price > div:nth-of-type(2) td:nth-child(3),
+  .price > div:nth-of-type(2) th:nth-child(5),
+  .price > div:nth-of-type(2) td:nth-child(5) {
+    display: none;
+  }
+
+  .price > div:nth-of-type(2) th,
+  .price > div:nth-of-type(2) td {
+    padding: 9px 6px !important;
+    font-size: 8.5px !important;
+    line-height: 1.25;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  .price > div:nth-of-type(2) th:first-child,
+  .price > div:nth-of-type(2) td:first-child { width: 44%; text-align: left; }
+  .price > div:nth-of-type(2) th:nth-child(2),
+  .price > div:nth-of-type(2) td:nth-child(2),
+  .price > div:nth-of-type(2) th:nth-child(4),
+  .price > div:nth-of-type(2) td:nth-child(4) { width: 28%; text-align: center; }
+
+  .engineType { gap: 5px; line-height: 1.25; }
+  .engineType svg { width: 13px; height: 13px; flex: 0 0 auto; }
+  .price > p:last-child { margin-top: 8px; font-size: 8px; line-height: 1.45; }
+
+  /* Regional table stays fully visible instead of becoming a sideways canvas. */
+  .regional.regional {
+    grid-template-columns: 1fr !important;
+    gap: 8px;
+    min-height: 0;
+    padding: 14px 12px;
+    border-radius: 12px;
+  }
+
+  .regional > div:first-child {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    width: 62px;
+    min-height: 84px;
+    height: 84px;
+    opacity: .48;
+  }
+
+  .regional > div:first-child::before,
+  .regional > div:first-child::after { display: none; }
+  .regional > div:first-child img { width: 100%; height: 100%; object-fit: contain; }
+  .regional > div:nth-child(2) > div:first-child { padding-right: 67px; }
+  .regional > div:nth-child(2) > div:last-child { overflow: hidden !important; border-radius: 10px; }
+  .regional > div:nth-child(2) table { width: 100% !important; min-width: 0 !important; table-layout: fixed; }
+  .regional > div:nth-child(2) th,
+  .regional > div:nth-child(2) td { padding: 7px 4px !important; font-size: 7.2px !important; line-height: 1.25; overflow-wrap: break-word; word-break: normal; }
+  .regional > div:nth-child(2) th:first-child,
+  .regional > div:nth-child(2) td:first-child { width: 31%; }
+  .regional > div:nth-child(2) th:not(:first-child),
+  .regional > div:nth-child(2) td:not(:first-child) { width: 23%; }
+
+  /* Decision framework: the reference uses two full-width stacked decision cards. */
+  .decision.decision {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 7px !important;
+    width: calc(100% - 24px);
+    padding: 3px 0 0;
+  }
+
+  .decision > div:first-child {
+    position: relative;
+    display: block !important;
+    grid-column: 1 !important;
+    min-height: 172px;
+    padding: 13px 145px 9px 4px !important;
+  }
+
+  .decision > div:first-child h2 {
+    max-width: 205px;
+    margin-bottom: 8px;
+    font-size: 29px !important;
+    line-height: .96 !important;
+  }
+
+  .decision > div:first-child > p:last-of-type {
+    max-width: 205px;
+    margin: 0;
+    font-size: 10px !important;
+    line-height: 1.45;
+  }
+
+  .decisionEngines {
+    position: absolute;
+    top: 44px;
+    right: 0;
+    display: grid;
+    grid-template-columns: 57px 27px 57px;
+    width: 141px;
+    min-height: 83px;
+    margin: 0;
+  }
+
+  .decisionEngines::before { top: 3px; bottom: 4px; }
+  .decisionEngines img { width: 57px; }
+  .decisionEngines b { width: 27px; height: 27px; margin-bottom: 14px; font-size: 7px; }
+
+  .decision > article:nth-of-type(1),
+  .decision > article:nth-of-type(2) {
+    grid-column: 1 !important;
+    width: 100%;
+    min-width: 0;
+    min-height: 0 !important;
+    padding: 16px 15px !important;
+    border-radius: 12px !important;
+  }
+
+  .decision > article h3 {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin: 0 0 11px;
+    font-size: 15px !important;
+    line-height: 1.12 !important;
+  }
+
+  .decision > article h3 > svg {
+    box-sizing: content-box;
+    width: 17px !important;
+    height: 17px !important;
+    margin: 0 !important;
+    padding: 7px !important;
+    flex: 0 0 auto;
+  }
+
+  .decision > article ul { margin: 0 0 10px; }
+  .decision > article li {
+    gap: 8px !important;
+    margin: 9px 0 !important;
+    font-size: 10px !important;
+    line-height: 1.42 !important;
+  }
+  .decision > article li svg { width: 8px !important; height: 8px !important; padding: 3px !important; flex: 0 0 auto; }
+  .decision > article > b { padding-top: 10px; font-size: 11px !important; }
+
+  .decision > div:last-child {
+    grid-column: 1 !important;
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 0;
+    padding: 14px 6px 10px !important;
+    border-radius: 12px !important;
+  }
+
+  .decision > div:last-child h3 {
+    grid-column: 1 / -1;
+    margin-bottom: 10px;
+    padding: 0 5px !important;
+    font-size: 14px !important;
+  }
+
+  .decision > div:last-child > span {
+    min-width: 0;
+    min-height: 145px !important;
+    padding: 6px 4px !important;
+    border-right: 1px solid rgba(20,120,232,.18);
+    border-bottom: 0 !important;
+  }
+
+  .decision > div:last-child > span:last-child { border-right: 0; }
+  .decision > div:last-child > span svg { width: 19px !important; height: 19px !important; margin: 0 auto 6px !important; padding: 5px !important; }
+  .decision > div:last-child b { font-size: 9px !important; line-height: 1.25; }
+  .decision > div:last-child small { min-height: 72px !important; margin-top: 5px; font-size: 7.2px !important; line-height: 1.32 !important; }
+  .decision > div:last-child em { padding: 3px 6px !important; font-size: 6.5px !important; }
+
+  /* Critical distinction: explicit grid areas prevent the 1-word-wide columns
+     seen in the current screenshot. */
+  .core.core {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) 32px minmax(0, 1fr) !important;
+    grid-template-rows: auto auto;
+    gap: 10px 7px !important;
+    min-height: 0;
+    padding: 15px 11px 13px !important;
+    overflow: hidden;
+    border-radius: 12px;
+  }
+
+  .core.core::after {
+    display: block;
+    top: 12px;
+    right: -8px;
+    bottom: auto;
+    width: 102px;
+    height: 78px;
+    opacity: .2;
+  }
+
+  .core > div:first-child {
+    grid-column: 1 / -1 !important;
+    grid-row: 1 !important;
+    min-width: 0;
+    padding: 0 88px 2px 0 !important;
+  }
+
+  .core > div:first-child h2 {
+    max-width: 235px;
+    margin: 6px 0 8px;
+    font-size: 22px !important;
+    line-height: .97;
+  }
+
+  .core > div:first-child > p:last-child {
+    max-width: 235px;
+    margin: 0;
+    font-size: 8.5px !important;
+    line-height: 1.45;
+  }
+
+  .core > article:nth-of-type(1) {
+    grid-column: 1 !important;
+    grid-row: 2 !important;
+  }
+
+  .core > b {
+    grid-column: 2 !important;
+    grid-row: 2 !important;
+    align-self: center;
+    width: 30px !important;
+    height: 30px !important;
+    margin: 0 auto !important;
+    font-size: 7px !important;
+  }
+
+  .core > article:nth-of-type(2) {
+    grid-column: 3 !important;
+    grid-row: 2 !important;
+  }
+
+  .core > article {
+    align-self: stretch;
+    min-width: 0;
+    padding: 11px 9px !important;
+    overflow: hidden;
+    border: 1px solid rgba(67, 132, 192, .23);
+    border-radius: 10px;
+    background: rgba(8, 31, 51, .45);
+  }
+
+  .core > article:nth-of-type(2) { border-color: rgba(50, 177, 100, .24); }
+
+  .core article h3 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px;
+    margin: 0 0 8px;
+    font-size: 10px !important;
+    line-height: 1.2;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  .core article h3 svg {
+    box-sizing: content-box;
+    width: 14px !important;
+    height: 14px !important;
+    margin: 0 !important;
+    padding: 5px !important;
+    flex: 0 0 auto;
+  }
+
+  .core article h3 small { font-size: 8px; }
+  .core article p {
+    min-height: 58px;
+    margin: 0;
+    font-size: 8.2px !important;
+    line-height: 1.42 !important;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  .core article ul {
+    margin: 8px 0 0 !important;
+    font-size: 8px !important;
+    line-height: 1.45 !important;
+  }
+
+  .core article li {
+    gap: 5px !important;
+    margin: 5px 0;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  .core article li::before { width: 12px; height: 12px; margin-top: 0; font-size: 7px; }
+
+  /* Risk comparison remains side-by-side, but with usable text columns. */
+  .risks.risks { padding: 7px 0 4px; }
+  .risks > :first-child { margin: 0 4px 12px; }
+  .risks > :first-child h2 { font-size: 25px !important; line-height: .96; }
+  .risks > :first-child h2 em { margin: 0 4px; }
+
+  .risks > div {
+    grid-template-columns: minmax(0, 1fr) 30px minmax(0, 1fr) !important;
+    gap: 6px !important;
+    align-items: start;
+  }
+
+  .risks > div::before { display: none; }
+  .risks > div > article:first-child { grid-column: 1 !important; }
+  .risks > div > .riskVs { grid-column: 2 !important; }
+  .risks > div > article:last-child { grid-column: 3 !important; }
+
+  .riskVs {
+    position: static !important;
+    display: grid !important;
+    align-self: center;
+    width: 30px !important;
+    height: 30px !important;
+    margin: 0 !important;
+    font-size: 7px !important;
+  }
+
+  .risks article { min-width: 0; }
+  .risks article h3 {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    min-height: 35px;
+    margin: 0 0 8px;
+    font-size: 8.5px !important;
+    line-height: 1.25;
+  }
+
+  .risks article h3 > svg { width: 16px; height: 16px; flex: 0 0 auto; }
+
+  .risks article > span {
+    display: grid;
+    grid-template-columns: 21px minmax(0, 1fr) !important;
+    gap: 4px !important;
+    margin: 8px 0 !important;
+    align-items: start;
+  }
+
+  .risks article > span > svg,
+  .riskIcon {
+    box-sizing: border-box;
+    width: 20px !important;
+    height: 20px !important;
+    padding: 4px !important;
+  }
+
+  .riskCopy { min-width: 0; }
+  .riskCopy b { display: block; font-size: 7.8px !important; line-height: 1.25; }
+  .riskCopy small { display: block; margin-top: 2px; font-size: 7px !important; line-height: 1.3; overflow-wrap: break-word; }
+
+  .risks article > span > em {
+    display: block !important;
+    grid-column: 2;
+    margin-top: -1px;
+    font-size: 6.6px !important;
+    line-height: 1.25;
+    text-align: left !important;
+  }
+  .risks article:first-child > span > em { color: #153e68; }
+  .risks article:last-child > span > em { color: #078d4a; }
+  .risks article > span > em small { display: inline; margin-right: 2px; font-size: inherit; }
+  .risks > p { margin: 10px 12px 0; font-size: 7.5px; line-height: 1.45; }
+
+  /* Mid-page CTA: preserve the image but keep the form clear of it. */
+  .riskCta {
+    grid-template-columns: 1fr !important;
+    gap: 10px;
+    min-height: 0;
+    padding: 17px 14px 14px !important;
+    border-radius: 12px;
+  }
+
+  .riskCtaCopy { position: relative; z-index: 2; max-width: 235px; }
+  .riskCtaCopy h2 { font-size: 24px; line-height: .98; }
+  .riskCtaCopy p { font-size: 8.5px; line-height: 1.45; }
+  .riskCtaEngine { top: 8px; right: -22px; width: 150px; opacity: .38; }
+  .riskCtaForm { position: relative; z-index: 2; }
+  .riskCtaForm label input { height: 48px; font-size: 9px; }
+  .riskCtaForm button { min-height: 43px; font-size: 10px; }
+  .riskCtaTrust { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; gap: 3px; }
+  .riskCtaTrust span { min-width: 0; padding: 7px 2px; }
+  .riskCtaTrust svg { width: 18px; height: 18px; }
+  .riskCtaTrust b { font-size: 7.5px; }
+  .riskCtaTrust small { font-size: 6.5px; line-height: 1.25; }
+
+  /* OEM rebuild reference: five stages and two component tables stay side by side. */
+  .rebuildHeroRow { grid-template-columns: minmax(0, 1fr) 126px !important; }
+  .rebuildHeroRow > :first-child h2 { font-size: 27px !important; line-height: .98; }
+  .rebuildEngineVisual { min-height: 118px; }
+  .rebuildEngineVisual img { width: 138px; }
+  .rebuildMain > div:nth-child(2) { grid-template-columns: repeat(5, minmax(0, 1fr)) !important; }
+  .rebuild .stageItem { padding: 5px 2px !important; }
+  .rebuild .stageItem span:last-child { font-size: 6.7px !important; line-height: 1.2; }
+  .rebuildMain > div:nth-child(3) { grid-template-columns: 1fr 1fr !important; }
+  .rebuildMain > div:nth-child(3) th,
+  .rebuildMain > div:nth-child(3) td { padding: 6px 4px !important; font-size: 6.8px !important; line-height: 1.25; }
+
+  /* Related guides: reference uses a dense two-column tile grid. */
+  .guidesRefined > div:nth-of-type(2) {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 6px;
+  }
+
+  .guidesRefined a { min-width: 0; min-height: 58px; padding: 8px; font-size: 8.5px; }
+
+  /* Final CTA: keep the reference's engine in the upper-right instead of
+     turning it into a separate full-width block. */
+  .finalCtaRefined.finalCtaRefined {
+    position: relative;
+    grid-template-columns: 1fr !important;
+    gap: 10px;
+    min-height: 0;
+    padding: 17px 14px !important;
+    overflow: hidden;
+    border-radius: 12px;
+  }
+
+  .finalCtaCopy { position: relative; z-index: 2; max-width: 225px; padding-right: 15px; }
+  .finalCtaCopy h2 { font-size: 24px !important; }
+  .finalCtaCopy p { font-size: 8.5px; line-height: 1.45; }
+  .finalCtaFormWrap { position: relative; z-index: 2; }
+  .finalCtaRefined .ctaEngine {
+    position: absolute;
+    z-index: 1;
+    top: 7px;
+    right: -22px;
+    display: block;
+    width: 148px;
+    min-height: 100px;
+    opacity: .42;
+    pointer-events: none;
+  }
+  .finalCtaRefined .ctaEngine img { width: 148px; height: auto; }
+  .finalTrust { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 3px; }
+  .finalTrust span { min-width: 0; font-size: 6.8px; }
+}

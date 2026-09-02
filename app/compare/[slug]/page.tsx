@@ -1,6 +1,5 @@
 import { notFound } from "next/navigation";
 import ComparisonGuide from "@/components/pages/ComparisonGuide";
-import DynamicComparisonGuide from "@/components/pages/DynamicComparisonGuide";
 import { usedVsRebuiltEngine } from "@/data/comparisonGuides";
 import { getStaticComparisonGuide } from "@/data/staticComparisonGuides";
 
@@ -16,5 +15,5 @@ export default async function ComparisonGuidePage({ params }: { params: Promise<
   if (slug === usedVsRebuiltEngine.slug) return <ComparisonGuide guide={usedVsRebuiltEngine} />;
   const guide = getStaticComparisonGuide(slug);
   if (!guide) notFound();
-  return <DynamicComparisonGuide guide={guide} />;
+  return <ComparisonGuide guide={usedVsRebuiltEngine} sourceGuide={guide} />;
 }

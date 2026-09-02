@@ -1,0 +1,360 @@
+.riskSection {
+  width: min(1210px, calc(100% - 24px));
+  margin: 18px auto 0;
+  color: #0a1730;
+}
+
+.sectionHeading {
+  margin: 0 0 13px;
+  padding: 0 5px;
+}
+
+.sectionHeading > p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 7px;
+  color: #0f65c8;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .035em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.sectionHeading > p::before {
+  content: "";
+  width: 6px;
+  height: 12px;
+  border-radius: 2px;
+  background: #1688f4;
+  box-shadow: 0 0 8px rgba(22, 136, 244, .25);
+  flex: 0 0 auto;
+}
+
+.riskSection .sectionHeading h2 {
+  max-width: 900px;
+  margin: 0;
+  color: #07182d;
+  font-family: "Bebas Neue", "Barlow Condensed", "Urbanist", sans-serif;
+  font-size: 31px;
+  font-weight: 400;
+  letter-spacing: .005em;
+  line-height: .98;
+}
+
+.riskSection .sectionHeading h2 span { color: #078d4a; }
+.riskSection .sectionHeading h2 em { margin: 0 7px; color: #1478e8; font-style: normal; }
+.riskSection .sectionHeading h2 strong { color: #078d4a; font-weight: 400; }
+
+.riskBoard {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 1px minmax(0, 1fr);
+  gap: 26px;
+  align-items: stretch;
+  padding: 19px 22px 21px;
+  border: 1px solid rgba(151, 171, 191, .42);
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 7px 18px rgba(7, 25, 49, .06);
+}
+
+.riskColumn { min-width: 0; }
+
+.riskSection .columnHeading {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 32px;
+  margin: 0 0 13px;
+  color: #102846;
+  font-family: "Urbanist", ui-sans-serif, system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.riskSection .columnHeading > svg {
+  box-sizing: content-box;
+  width: 23px;
+  height: 23px;
+  padding: 2px;
+  color: #176fd0;
+  flex: 0 0 auto;
+}
+
+.riskRows {
+  display: flex;
+  min-height: 330px;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.riskRow {
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr);
+  gap: 10px;
+  align-items: start;
+  min-width: 0;
+}
+
+.iconCircle {
+  display: grid;
+  place-items: center;
+  box-sizing: border-box;
+  width: 34px;
+  height: 34px;
+  border: 1.35px solid #2585e6;
+  border-radius: 50%;
+  background: #fff;
+  color: #176fd0;
+  box-shadow: 0 2px 8px rgba(20, 120, 232, .08);
+}
+
+.iconCircle svg {
+  width: 17px;
+  height: 17px;
+}
+
+.riskBody {
+  min-width: 0;
+  padding-top: 1px;
+}
+
+.riskBody > b {
+  display: block;
+  margin: 0;
+  color: #0a1730;
+  font-family: "Urbanist", ui-sans-serif, system-ui, sans-serif;
+  font-size: 10px;
+  font-weight: 850;
+  line-height: 1.2;
+}
+
+.riskBody > p {
+  margin: 3px 0 0;
+  color: #53657a;
+  font-size: 9px;
+  line-height: 1.35;
+}
+
+.riskMeta {
+  display: flex;
+  gap: 5px;
+  align-items: baseline;
+  margin-top: 5px;
+  color: #173d65;
+  font-size: 8.5px;
+  line-height: 1.3;
+}
+
+.riskMeta strong {
+  flex: 0 0 auto;
+  color: #173d65;
+  font-weight: 900;
+  text-transform: none;
+}
+
+.rebuilt .riskMeta,
+.rebuilt .riskMeta strong {
+  color: #078d4a;
+}
+
+.divider {
+  position: relative;
+  align-self: stretch;
+  width: 1px;
+  min-height: 100%;
+  background: linear-gradient(transparent 0, #66aef2 9%, #258bf0 48%, #66aef2 91%, transparent 100%);
+  box-shadow: 0 0 9px rgba(37, 139, 240, .24);
+}
+
+.divider > span {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  transform: translate(-50%, -50%);
+  border: 2px solid #6cb3f5;
+  border-radius: 50%;
+  background: #06213f;
+  box-shadow: 0 0 0 4px #fff, 0 0 15px rgba(32, 136, 239, .42);
+  color: #fff;
+  font-family: "Urbanist", ui-sans-serif, system-ui, sans-serif;
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.observedNote {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 8px;
+  padding: 13px 18px;
+  border-radius: 10px;
+  background: #f4f8fc;
+  color: #29445f;
+  font-size: 10px;
+  line-height: 1.45;
+}
+
+.observedNote > svg {
+  width: 23px;
+  height: 23px;
+  color: #1478e8;
+  flex: 0 0 auto;
+}
+
+.observedNote p { margin: 0; }
+.observedNote b { color: #078d4a; }
+
+@media (max-width: 620px) {
+  .riskSection {
+    width: calc(100% - 24px);
+    margin-top: 14px;
+  }
+
+  .sectionHeading {
+    margin-bottom: 10px;
+    padding-inline: 3px;
+  }
+
+  .sectionHeading > p {
+    margin-bottom: 0;
+    font-size: 9.5px;
+    letter-spacing: .02em;
+  }
+
+  /* The supplied mobile reference uses the eyebrow only here. The detailed
+     used-vs-rebuilt labels belong inside the comparison board. */
+  .riskSection .sectionHeading h2 {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .riskBoard {
+    grid-template-columns: minmax(0, 1fr) 1px minmax(0, 1fr);
+    gap: 13px;
+    padding: 17px 11px 18px;
+    border-radius: 11px;
+  }
+
+  .riskSection .columnHeading {
+    gap: 5px;
+    min-height: 29px;
+    margin-bottom: 12px;
+    font-size: 9.3px;
+    line-height: 1.18;
+  }
+
+  .riskSection .columnHeading > svg {
+    width: 19px;
+    height: 19px;
+    padding: 0;
+  }
+
+  .riskRows {
+    min-height: 338px;
+    gap: 10px;
+  }
+
+  .riskRow {
+    grid-template-columns: 30px minmax(0, 1fr);
+    gap: 7px;
+  }
+
+  .iconCircle {
+    width: 29px;
+    height: 29px;
+    border-width: 1px;
+  }
+
+  .iconCircle svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .riskBody > b {
+    font-size: 9.2px;
+    line-height: 1.18;
+  }
+
+  .riskBody > p {
+    margin-top: 2px;
+    font-size: 8.15px;
+    line-height: 1.28;
+  }
+
+  .riskMeta {
+    display: block;
+    margin-top: 4px;
+    font-size: 8.1px;
+    line-height: 1.25;
+  }
+
+  .riskMeta strong {
+    display: inline;
+    margin-right: 4px;
+    font-size: 8.1px;
+    text-transform: uppercase;
+  }
+
+  .riskMeta span {
+    display: inline;
+  }
+
+  .divider > span {
+    width: 35px;
+    height: 35px;
+    border-width: 1.5px;
+    box-shadow: 0 0 0 3px #fff, 0 0 12px rgba(32, 136, 239, .4);
+    font-size: 8px;
+  }
+
+  .observedNote {
+    gap: 9px;
+    margin-top: 7px;
+    padding: 11px 12px;
+    border-radius: 9px;
+    font-size: 8.7px;
+    line-height: 1.4;
+  }
+
+  .observedNote > svg {
+    width: 19px;
+    height: 19px;
+  }
+}
+
+@media (max-width: 360px) {
+  .riskBoard {
+    gap: 10px;
+    padding-inline: 9px;
+  }
+
+  .riskRow {
+    grid-template-columns: 27px minmax(0, 1fr);
+    gap: 6px;
+  }
+
+  .iconCircle {
+    width: 27px;
+    height: 27px;
+  }
+
+  .riskBody > b { font-size: 8.7px; }
+  .riskBody > p { font-size: 7.7px; }
+  .riskMeta, .riskMeta strong { font-size: 7.7px; }
+}
