@@ -97,7 +97,7 @@ export default function DocumentVariantPage({ data }: DocumentVariantPageProps) 
       />
 
       <Suspense fallback={null}>
-        <QuoteCheckoutModal brandName={data.variant.name} />
+        <QuoteCheckoutModal brandName={data.brand.name} modelName={data.model.name} />
       </Suspense>
     </>
   );

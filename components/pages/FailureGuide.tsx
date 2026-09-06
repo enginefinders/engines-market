@@ -87,7 +87,7 @@ export default function FailureGuide({ guide }: { guide: FailureGuide }) {
       </div>
       <div className={`${styles.container} ${styles.quoteBar}`} id="quote">
         <div className={styles.quoteLabel}><span className={styles.iconShell}><GuideIcon src={quoteIcon} /></span><div><strong>{quoteTitle}</strong><span>Check symptoms first</span></div></div>
-        <div className={styles.regForm}><label className={styles.numberPlate}><span className={styles.plateBand}><span>GB</span><small>UK</small></span><input aria-label="Vehicle registration" maxLength={8} placeholder="REG HERE" /></label><Link href="/get-a-quote" className={styles.quoteButton}>Get Quote <span>→</span></Link></div>
+        <form className={styles.regForm} action="/get-a-quote" method="get"><label className={styles.numberPlate}><span className={styles.plateBand}><span>GB</span><small>UK</small></span><input name="reg" aria-label="Vehicle registration" maxLength={8} placeholder="REG HERE" required /></label><button type="submit" className={styles.quoteButton}>Get Quote <span>→</span></button></form>
       </div>
     </section>
 

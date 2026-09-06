@@ -1,7 +1,7 @@
 import { NextResponse, type NextRequest } from "next/server";
 
 const API_KEY =
-  process.env.CHECKCARDETAILS_API_KEY ?? process.env.API_KEY ?? "b627ac2f1dfb771559815c03e3161e91";
+  process.env.CHECKCARDETAILS_API_KEY ?? process.env.API_KEY ?? "";
 const BASE_URL =
   process.env.CHECKCARDETAILS_BASE_URL ??
   process.env.BASE_URL ??
@@ -74,18 +74,35 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ error: "Registration number is required." }, { status: 400 });
   }
 
+  if (!API_KEY) {
+    return NextResponse.json(
+      { error: "Vehicle registration lookup is not configured." },
+      { status: 503 },
+    );
+  }
+
   const lookupUrl = new URL(BASE_URL);
   lookupUrl.searchParams.set("apikey", API_KEY);
   lookupUrl.searchParams.set("registrationNumber", registrationNumber);
   lookupUrl.searchParams.set("vrm", registrationNumber);
 
-  const response = await fetch(lookupUrl, {
-    headers: {
-      Accept: "application/json",
-      "x-api-key": API_KEY,
-    },
-    cache: "no-store",
-  });
+  let response: Response;
+  try {
+    response = await fetch(lookupUrl, {
+      headers: {
+        Accept: "application/json",
+        "x-api-key": API_KEY,
+      },
+      cache: "no-store",
+      signal: AbortSignal.timeout(12_000),
+    });
+  } catch (error) {
+    console.error("Vehicle registration lookup failed", error);
+    return NextResponse.json(
+      { error: "The vehicle lookup service is temporarily unavailable. Please try again." },
+      { status: 502 },
+    );
+  }
 
   const text = await response.text();
   let payload: unknown = null;
@@ -99,10 +116,11 @@ export async function GET(request: NextRequest) {
   }
 
   if (!response.ok) {
+    const providerMessage = isRecord(payload) ? stringifyField(findField(payload, ["message", "error"])) : "";
     return NextResponse.json(
       {
-        error: "Vehicle lookup failed.",
-        details: typeof payload === "string" ? payload : undefined,
+        error: providerMessage || "Vehicle lookup failed.",
+        details: process.env.NODE_ENV === "development" && typeof payload === "string" ? payload : undefined,
       },
       { status: response.status },
     );

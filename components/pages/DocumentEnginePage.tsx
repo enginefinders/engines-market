@@ -1729,7 +1729,7 @@ export default function DocumentEnginePage({ data }: DocumentEnginePageProps) {
       </Section>
 
       <Suspense fallback={null}>
-        <QuoteCheckoutModal brandName={data.engine.code} />
+        <QuoteCheckoutModal brandName={data.brand.name} engineCode={data.engine.code} />
       </Suspense>
     </>
   );

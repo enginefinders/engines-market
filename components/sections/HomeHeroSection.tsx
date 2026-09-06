@@ -895,6 +895,9 @@ export default function HomeHeroSection({ data, engineLinks }: Props) {
       if (payload.model) queryParams.append("model", payload.model);
       if (payload.year) queryParams.append("year", payload.year);
       if (payload.engineCode) queryParams.append("engineCode", payload.engineCode);
+      queryParams.set("sourceLabel", "home-manual-search");
+      queryParams.set("sourcePage", window.location.href);
+      queryParams.set("searchMode", "manual");
 
       router.push(`/form?${queryParams.toString()}`);
       return;
@@ -913,6 +916,9 @@ export default function HomeHeroSection({ data, engineLinks }: Props) {
       const vehicle = await fetchVehicleRegistration(regNumber);
       const queryParams = new URLSearchParams();
       appendVehicleParams(queryParams, vehicle);
+      queryParams.set("sourceLabel", "home-registration-search");
+      queryParams.set("sourcePage", window.location.href);
+      queryParams.set("searchMode", "registration");
       router.push(`/form?${queryParams.toString()}`);
     } catch (error) {
       setRegistrationLookupError(error instanceof Error ? error.message : "Vehicle lookup failed.");

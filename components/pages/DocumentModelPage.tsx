@@ -183,7 +183,7 @@ export default async function DocumentModelPage({
       />
 
       <Suspense fallback={null}>
-        <QuoteCheckoutModal brandName={visualData.model.name} />
+        <QuoteCheckoutModal brandName={visualData.brand.name} modelName={visualData.model.name} />
       </Suspense>
     </>
   );
