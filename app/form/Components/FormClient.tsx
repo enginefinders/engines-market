@@ -24,7 +24,7 @@ export default function FormPage() {
 
   return (
     <div className="min-h-screen bg-[#f3f3f3] px-3 py-7 sm:px-6 sm:py-10">
-      <div className="mx-auto w-full max-w-[520px]">
+      <div className="mx-auto w-full max-w-[860px]">
         <QuoteForm initialData={initialData} />
       </div>
     </div>

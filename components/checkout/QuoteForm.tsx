@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useRef, useState, type FormEvent } from "react";
+import { useEffect, useRef, useState, type FormEvent, type ReactNode } from "react";
+import { FaCar, FaGasPump, FaPalette, FaUser } from "react-icons/fa";
 
 export type QuoteFormSeed = {
   registrationNumber?: string;
@@ -37,7 +38,7 @@ type VehicleRegistrationData = {
 };
 
 const fieldClass =
-  "h-11 w-full rounded-[5px] border border-slate-300 bg-white px-3 text-[13px] text-slate-800 outline-none transition placeholder:text-slate-400 focus:border-[#268b3b] focus:ring-1 focus:ring-[#268b3b]";
+  "h-14 w-full rounded-[7px] border border-slate-300 bg-white px-5 text-[16px] text-slate-800 outline-none transition placeholder:text-slate-400 focus:border-[#168b4c] focus:ring-1 focus:ring-[#168b4c]";
 
 function initialState(seed: QuoteFormSeed = {}) {
   return {
@@ -206,12 +207,11 @@ export default function QuoteForm({ initialData = {}, onClose, title = "Confirm 
   }
 
   const vehicleTitle = [formData.make, formData.model, formData.year].filter(Boolean).join(" - ");
+  const hasSelectedVehicle = Boolean(vehicleTitle || formData.registrationNumber);
   const vehicleDetails = [
-    { label: "Registration Number", value: formData.registrationNumber },
-    { label: "Fuel Type", value: formData.fuelType },
-    { label: "Engine Size", value: formatCapacity(formData.engineCapacity) },
-    { label: "Colour", value: formData.color },
-    { label: "Wheelplan", value: formData.wheelplan, wide: true },
+    { label: "Fuel Type", value: formData.fuelType, icon: <FaGasPump /> },
+    { label: "Colour", value: formData.color, icon: <FaPalette /> },
+    { label: "Engine Size", value: formatCapacity(formData.engineCapacity), icon: <FaCar /> },
   ];
 
   return (
@@ -230,97 +230,79 @@ export default function QuoteForm({ initialData = {}, onClose, title = "Confirm 
         </button>
       ) : null}
 
-      {isVehicleLocked && vehicleTitle ? (
-        <div className="flex min-h-28 items-center gap-4 border-b border-slate-200 bg-white px-6 py-4">
+      {hasSelectedVehicle ? (
+        <header className="grid items-center gap-5 border-b border-slate-200 px-5 py-6 sm:grid-cols-[minmax(210px,280px)_1fr] sm:px-7 sm:py-8">
           {vehicleImage ? (
             <Image
               src={vehicleImage}
-              alt={vehicleTitle}
-              width={190}
-              height={112}
-              className="h-[78px] w-[132px] shrink-0 object-contain sm:h-[92px] sm:w-[160px]"
+              alt={vehicleTitle || "Selected vehicle"}
+              width={320}
+              height={190}
+              className="mx-auto h-[130px] w-[210px] object-contain sm:h-[170px] sm:w-[280px]"
             />
           ) : (
-            <div className="flex h-[78px] w-[132px] shrink-0 items-center justify-center rounded bg-slate-100 text-xs text-slate-400 sm:h-[92px] sm:w-[160px]">Vehicle</div>
+            <div className="mx-auto flex h-[130px] w-[210px] items-center justify-center rounded-xl bg-slate-50 text-sm text-slate-400 sm:h-[170px] sm:w-[280px]">Selected vehicle</div>
           )}
-          <p className="min-w-0 text-[16px] font-medium leading-6 text-slate-800 sm:text-[18px]">{vehicleTitle}</p>
-        </div>
+          <div className="min-w-0 text-center sm:text-left">
+            {vehicleTitle ? <h1 className="!text-[22px] font-extrabold !leading-tight text-[#08295a] sm:!text-[30px]">{vehicleTitle}</h1> : null}
+            {formData.registrationNumber ? (
+              <div className="mt-4 inline-flex overflow-hidden rounded-md border border-[#c38a00] shadow-sm">
+                <span className="flex w-9 flex-col items-center justify-center bg-[#0b3f88] py-1 text-[9px] font-bold leading-3 text-white"><span>GB</span><span>UK</span></span>
+                <span className="bg-[#ffcb18] px-4 py-1.5 text-[22px] font-black tracking-[0.08em] text-slate-950 sm:text-[28px]">{formData.registrationNumber}</span>
+              </div>
+            ) : null}
+          </div>
+        </header>
       ) : null}
 
-      <div className="relative border-b border-slate-200 px-6 py-5 text-center">
-        <h1 className="!text-[18px] font-extrabold !leading-tight text-slate-900">{title}</h1>
-      </div>
+      {!hasSelectedVehicle ? <div className="border-b border-slate-200 px-6 py-5 text-center"><h1 className="!text-[22px] font-extrabold !leading-tight text-[#08295a]">{title}</h1></div> : null}
 
       <section>
-        <h2 className="border-b border-slate-200 px-6 py-4 !text-[14px] !leading-tight font-bold text-slate-800">Car Details</h2>
-        <div className="grid grid-cols-2 gap-x-6 gap-y-3 px-6 py-4">
-          {vehicleLookupError ? <p className="col-span-2 text-[12px] font-medium text-red-600">{vehicleLookupError}</p> : null}
-          {vehicleDetails.map((detail) => (
-            <VehicleDetail key={detail.label} {...detail} />
-          ))}
+        <div className="border-b border-slate-200 px-5 py-5 sm:px-7 sm:py-6">
+          <h2 className="flex items-center gap-3 !text-[20px] font-extrabold !leading-tight text-[#08295a]"><FaCar className="text-[25px]" aria-hidden="true" />Vehicle Details</h2>
+          {vehicleLookupError ? <p className="mt-3 text-sm font-medium text-red-600">{vehicleLookupError}</p> : null}
+          <div className="mt-5 grid gap-3 sm:grid-cols-3">
+            {vehicleDetails.map((detail) => (
+              <VehicleDetailTile key={detail.label} {...detail} />
+            ))}
+          </div>
+          {formData.wheelplan ? <p className="mt-3 text-sm text-slate-600"><span className="font-bold text-[#08295a]">Wheelplan:</span> {formData.wheelplan}</p> : null}
         </div>
       </section>
 
-      <section className="border-t border-slate-200">
-        <h2 className="border-b border-slate-200 px-6 py-4 !text-[14px] !leading-tight font-bold text-slate-800">Customer Details</h2>
-        <div className="space-y-4 px-6 py-5">
-          <EditableField label="Full Name" name="fullName" value={formData.fullName} placeholder="Enter Your Name" required onChange={updateField} />
-          <EditableField label="Phone" name="phone" value={formData.phone} placeholder="Phone/Mobile Number" type="tel" required onChange={updateField} />
-          <EditableField label="Email" name="email" value={formData.email} placeholder="Your email address" type="email" required onChange={updateField} />
-          <EditableField label="Postcode" name="postcode" value={formData.postcode} placeholder="Enter Postcode" required onChange={updateField} />
-
-          <div className="grid gap-4 sm:grid-cols-2">
-            <label>
-              <span className="mb-1.5 block text-[12px] font-semibold text-slate-800">Engine option</span>
-              <select className={fieldClass} value={formData.engineType} onChange={(event) => updateField("engineType", event.currentTarget.value)}>
-                <option>Reconditioned</option>
-                <option>Rebuilt</option>
-                <option>Used</option>
-                <option>Remanufactured</option>
-                <option>New</option>
-              </select>
-            </label>
-            <label>
-              <span className="mb-1.5 block text-[12px] font-semibold text-slate-800">Fitting option</span>
-              <select className={fieldClass} value={formData.fitting} onChange={(event) => updateField("fitting", event.currentTarget.value)}>
-                <option>Supply &amp; fit</option>
-                <option>Supply only</option>
-                <option>Open to both</option>
-              </select>
-            </label>
-          </div>
-
-          <label>
-            <span className="mb-1.5 block text-[12px] font-semibold text-slate-800">Any remarks</span>
-            <textarea
-              rows={4}
-              value={formData.remarks}
-              onChange={(event) => updateField("remarks", event.currentTarget.value)}
-              placeholder="Enter any additional information..."
-              className={`${fieldClass} h-24 resize-y py-3`}
-            />
-          </label>
+      <section>
+        <div className="px-5 py-6 sm:px-7 sm:py-7">
+          <h2 className="flex items-center gap-3 !text-[20px] font-extrabold !leading-tight text-[#08295a]"><FaUser className="text-[24px]" aria-hidden="true" />Required Details</h2>
+          <div className="mt-6 space-y-4">
+          <EditableField label="Full Name" name="fullName" value={formData.fullName} placeholder="Enter your full name" required onChange={updateField} />
+          <EditableField label="Phone Number" name="phone" value={formData.phone} placeholder="Enter your phone number" type="tel" required onChange={updateField} />
+          <EditableField label="Email Address" name="email" value={formData.email} placeholder="Enter your email address" type="email" required onChange={updateField} />
+          <EditableField label="Postcode (Optional)" name="postcode" value={formData.postcode} placeholder="Enter your postcode" onChange={updateField} />
 
           {submitError ? <p className="rounded border border-red-200 bg-red-50 px-3 py-2 text-[12px] text-red-700">{submitError}</p> : null}
 
           <button
             type="submit"
             disabled={isSubmitting || (!isVehicleLocked && !formData.engineCode)}
-            className="h-[54px] w-full rounded-[6px] bg-[#268b3b] text-[15px] font-extrabold uppercase text-white shadow-sm transition hover:bg-[#1f7431] disabled:cursor-not-allowed disabled:opacity-60"
+            className="mt-2 flex h-[64px] w-full items-center justify-center gap-4 rounded-xl bg-[#04964d] text-[20px] font-extrabold text-white shadow-[0_10px_22px_rgba(4,150,77,0.24)] transition hover:bg-[#057f43] disabled:cursor-not-allowed disabled:opacity-60"
           >
-            {isSubmitting ? "SENDING..." : "SEND ME PRICE QUOTE"}
+            {isSubmitting ? "Sending..." : <>Get Free Qoute <span className="text-[32px] leading-none">→</span></>}
           </button>
+          </div>
         </div>
       </section>
     </form>
   );
 }
 
-function VehicleDetail({ label, value, wide = false }: { label: string; value: string; wide?: boolean }) {
+function VehicleDetailTile({ label, value, icon }: { label: string; value: string; icon: ReactNode }) {
   return (
-    <div className={`min-w-0 border-b border-slate-100 pb-2 ${wide ? "col-span-2" : ""}`}>
-      <p className="text-[10px] font-bold uppercase tracking-[0.06em] text-slate-500">{label}</p>
-      <p className="mt-0.5 truncate text-[13px] font-semibold text-slate-800">{value || "—"}</p>
+    <div className="rounded-lg border border-slate-200 bg-[#f7fbff] px-4 py-4">
+      <p className="text-[15px] font-medium text-[#08295a]">{label}</p>
+      <div className="mt-3 flex min-w-0 items-center gap-3 text-[#08295a]">
+        <span className="shrink-0 text-[27px]" aria-hidden="true">{icon}</span>
+        <p className="truncate text-[18px] font-semibold">{value || "—"}</p>
+      </div>
     </div>
   );
 }
@@ -344,7 +326,7 @@ function EditableField({
 }) {
   return (
     <label>
-      <span className="mb-1.5 block text-[12px] font-semibold text-slate-800">
+      <span className="mb-2 block text-[16px] font-semibold text-[#08295a]">
         {label} {required ? <span className="text-red-500">*</span> : null}
       </span>
       <input

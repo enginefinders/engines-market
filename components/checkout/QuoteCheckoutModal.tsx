@@ -124,7 +124,7 @@ export default function QuoteCheckoutModal({ brandName, modelName, engineCode }:
   return (
     <div className="fixed inset-0 z-[200] overflow-y-auto bg-[#071936]/70 px-3 py-5 backdrop-blur-sm sm:px-6">
       <button type="button" aria-label="Close quote form" className="fixed inset-0 cursor-default" onClick={closeModal} />
-      <div className="relative mx-auto w-full max-w-[520px]">
+      <div className="relative mx-auto w-full max-w-[860px]">
         <QuoteForm key={JSON.stringify(seed)} initialData={seed} onClose={closeModal} />
       </div>
     </div>

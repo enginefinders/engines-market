@@ -294,9 +294,9 @@ export async function handleQuoteRequest(request: Request) {
   try {
     const lead = normalizeQuote(await readPayload(request));
 
-    if (!lead.name || !lead.email || !lead.number || !lead.postcode) {
+    if (!lead.name || !lead.email || !lead.number) {
       return Response.json(
-        { success: false, message: "Name, email, phone, and postcode are required." },
+        { success: false, message: "Name, email, and phone are required." },
         { status: 400 },
       );
     }
