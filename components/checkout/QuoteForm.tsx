@@ -19,6 +19,12 @@ export type QuoteFormSeed = {
   searchMode?: "registration" | "manual";
 };
 
+type Props = {
+  initialData?: QuoteFormSeed;
+  onClose?: () => void;
+  title?: string;
+};
+
 type VehicleRegistrationData = {
   registrationNumber: string;
   year: string;
@@ -30,16 +36,8 @@ type VehicleRegistrationData = {
   wheelplan: string;
 };
 
-type Props = {
-  initialData?: QuoteFormSeed;
-  onClose?: () => void;
-  title?: string;
-};
-
 const fieldClass =
   "h-11 w-full rounded-[5px] border border-slate-300 bg-white px-3 text-[13px] text-slate-800 outline-none transition placeholder:text-slate-400 focus:border-[#268b3b] focus:ring-1 focus:ring-[#268b3b]";
-const lockedFieldClass =
-  "h-11 w-full cursor-not-allowed rounded-[5px] border border-[#b7ddbe] bg-[#fafafa] px-3 text-[13px] font-medium text-slate-700 outline-none";
 
 function initialState(seed: QuoteFormSeed = {}) {
   return {
@@ -63,20 +61,32 @@ function initialState(seed: QuoteFormSeed = {}) {
 }
 
 function formatCapacity(value: string) {
-  if (!value) return "";
-  return /cc|litre|liter|l$/i.test(value.trim()) ? value : `${value} cc`;
+  const rawValue = value.trim();
+  if (!rawValue) return "";
+
+  const numericValue = Number(rawValue.replace(/,/g, "").match(/\d+(?:\.\d+)?/)?.[0]);
+  if (!Number.isFinite(numericValue)) return rawValue;
+
+  if (/(?:litre|liter|\bl\b|l$)/i.test(rawValue)) {
+    return `${numericValue.toFixed(1)}L`;
+  }
+
+  if (numericValue >= 500) {
+    return `${(Math.round(numericValue / 100) / 10).toFixed(1)}L`;
+  }
+
+  return rawValue;
 }
 
 export default function QuoteForm({ initialData = {}, onClose, title = "Confirm Details To Show Price" }: Props) {
   const [formData, setFormData] = useState(() => initialState(initialData));
   const [isVehicleLocked, setIsVehicleLocked] = useState(Boolean(initialData.make && initialData.model));
-  const [isRegistrationLookupLoading, setIsRegistrationLookupLoading] = useState(false);
-  const [registrationLookupError, setRegistrationLookupError] = useState("");
+  const [vehicleLookupError, setVehicleLookupError] = useState("");
   const [vehicleImage, setVehicleImage] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const autoLookupStarted = useRef(false);
+  const initialLookupStarted = useRef(false);
 
   useEffect(() => {
     if (!formData.make || !formData.model) return;
@@ -93,57 +103,51 @@ export default function QuoteForm({ initialData = {}, onClose, title = "Confirm 
     return () => controller.abort();
   }, [formData.make, formData.model, formData.year]);
 
-  async function handleRegistrationSearch() {
-    const registrationNumber = formData.registrationNumber.trim();
-    if (!registrationNumber) {
-      setRegistrationLookupError("Please enter your registration number.");
+  useEffect(() => {
+    if (
+      initialLookupStarted.current ||
+      !formData.registrationNumber.trim() ||
+      formData.make.trim() ||
+      formData.model.trim()
+    ) {
       return;
     }
 
-    setIsRegistrationLookupLoading(true);
-    setRegistrationLookupError("");
+    initialLookupStarted.current = true;
+    const controller = new AbortController();
 
-    try {
-      const response = await fetch(
-        `/api/vehicle-registration?registrationNumber=${encodeURIComponent(registrationNumber)}`,
-      );
-      const payload = (await response.json()) as { vehicle?: VehicleRegistrationData; error?: string };
-      if (!response.ok || !payload.vehicle) {
-        throw new Error(payload.error || "We could not find vehicle details for that registration.");
-      }
+    fetch(`/api/vehicle-registration?registrationNumber=${encodeURIComponent(formData.registrationNumber)}`, {
+      signal: controller.signal,
+    })
+      .then(async (response) => {
+        const payload = (await response.json()) as { vehicle?: VehicleRegistrationData; error?: string };
+        if (!response.ok || !payload.vehicle) {
+          throw new Error(payload.error || "We could not load the selected vehicle.");
+        }
+        return payload.vehicle;
+      })
+      .then((vehicle) => {
+        setFormData((current) => ({
+          ...current,
+          registrationNumber: vehicle.registrationNumber || current.registrationNumber,
+          make: vehicle.make,
+          model: vehicle.model,
+          year: vehicle.year,
+          fuelType: vehicle.fuelType,
+          engineCapacity: vehicle.engineCapacity,
+          color: vehicle.color,
+          wheelplan: vehicle.wheelplan,
+        }));
+        setIsVehicleLocked(true);
+      })
+      .catch((error: unknown) => {
+        if (!(error instanceof DOMException && error.name === "AbortError")) {
+          setVehicleLookupError(error instanceof Error ? error.message : "Vehicle lookup failed.");
+        }
+      });
 
-      const vehicle = payload.vehicle;
-      setFormData((current) => ({
-        ...current,
-        registrationNumber: vehicle.registrationNumber || current.registrationNumber,
-        make: vehicle.make,
-        model: vehicle.model,
-        year: vehicle.year,
-        fuelType: vehicle.fuelType,
-        engineCapacity: vehicle.engineCapacity,
-        color: vehicle.color,
-        wheelplan: vehicle.wheelplan,
-      }));
-      setIsVehicleLocked(true);
-    } catch (error) {
-      setIsVehicleLocked(false);
-      setRegistrationLookupError(error instanceof Error ? error.message : "Vehicle lookup failed.");
-    } finally {
-      setIsRegistrationLookupLoading(false);
-    }
-  }
-
-  useEffect(() => {
-    if (
-      !autoLookupStarted.current &&
-      formData.registrationNumber.trim() &&
-      !formData.make.trim() &&
-      !formData.model.trim()
-    ) {
-      autoLookupStarted.current = true;
-      void handleRegistrationSearch();
-    }
-  });
+    return () => controller.abort();
+  }, [formData.make, formData.model, formData.registrationNumber]);
 
   function updateField(name: string, value: string) {
     setSubmitError("");
@@ -202,6 +206,13 @@ export default function QuoteForm({ initialData = {}, onClose, title = "Confirm 
   }
 
   const vehicleTitle = [formData.make, formData.model, formData.year].filter(Boolean).join(" - ");
+  const vehicleDetails = [
+    { label: "Registration Number", value: formData.registrationNumber },
+    { label: "Fuel Type", value: formData.fuelType },
+    { label: "Engine Size", value: formatCapacity(formData.engineCapacity) },
+    { label: "Colour", value: formData.color },
+    { label: "Wheelplan", value: formData.wheelplan, wide: true },
+  ];
 
   return (
     <form
@@ -242,53 +253,11 @@ export default function QuoteForm({ initialData = {}, onClose, title = "Confirm 
 
       <section>
         <h2 className="border-b border-slate-200 px-6 py-4 !text-[14px] !leading-tight font-bold text-slate-800">Car Details</h2>
-        <div className="space-y-4 px-6 py-4">
-          {isVehicleLocked ? <p className="text-[12px] font-medium text-[#268b3b]">✓ Vehicle found from your search</p> : null}
-
-          <div>
-            <label htmlFor="quote-registration" className="mb-1.5 block text-[12px] font-semibold text-slate-800">
-              Registration Number <span className="text-red-500">*</span>
-            </label>
-            <div className="grid grid-cols-[minmax(0,1fr)_auto] gap-2">
-              <input
-                id="quote-registration"
-                value={formData.registrationNumber}
-                onChange={(event) => {
-                  setIsVehicleLocked(false);
-                  setVehicleImage("");
-                  setRegistrationLookupError("");
-                  updateField("registrationNumber", event.currentTarget.value.toUpperCase());
-                }}
-                placeholder="E.g., AB12CDE"
-                maxLength={8}
-                className={fieldClass}
-                required={!formData.model && !formData.engineCode}
-                readOnly={isVehicleLocked}
-              />
-              <button
-                type="button"
-                onClick={handleRegistrationSearch}
-                disabled={isRegistrationLookupLoading || isVehicleLocked}
-                className="h-11 rounded-[5px] bg-[#268b3b] px-4 text-[12px] font-extrabold text-white transition hover:bg-[#1f7431] disabled:cursor-default disabled:opacity-100"
-              >
-                {isRegistrationLookupLoading ? "SEARCHING..." : "SEARCH VEHICLE"}
-              </button>
-            </div>
-            {registrationLookupError ? <p className="mt-2 text-[12px] font-medium text-red-600">{registrationLookupError}</p> : null}
-          </div>
-
-          <LockedField label="Make" value={formData.make} required />
-          <LockedField label="Model" value={formData.model} required />
-          <div className="grid gap-4 sm:grid-cols-2">
-            <LockedField label="Year" value={formData.year} required />
-            <LockedField label="Fuel Type" value={formData.fuelType} />
-          </div>
-          <div className="grid gap-4 sm:grid-cols-2">
-            <LockedField label="Engine Capacity" value={formatCapacity(formData.engineCapacity)} />
-            <LockedField label="Color" value={formData.color} />
-          </div>
-          <LockedField label="Wheelplan" value={formData.wheelplan} />
-          {formData.engineCode ? <LockedField label="Engine Title" value={formData.engineCode} /> : null}
+        <div className="grid grid-cols-2 gap-x-6 gap-y-3 px-6 py-4">
+          {vehicleLookupError ? <p className="col-span-2 text-[12px] font-medium text-red-600">{vehicleLookupError}</p> : null}
+          {vehicleDetails.map((detail) => (
+            <VehicleDetail key={detail.label} {...detail} />
+          ))}
         </div>
       </section>
 
@@ -347,14 +316,12 @@ export default function QuoteForm({ initialData = {}, onClose, title = "Confirm 
   );
 }
 
-function LockedField({ label, value, required = false }: { label: string; value: string; required?: boolean }) {
+function VehicleDetail({ label, value, wide = false }: { label: string; value: string; wide?: boolean }) {
   return (
-    <label>
-      <span className="mb-1.5 block text-[12px] font-semibold text-slate-800">
-        {label} {required ? <span className="text-red-500">*</span> : null}
-      </span>
-      <input value={value} readOnly aria-readonly="true" className={lockedFieldClass} placeholder={`e.g. ${label.toUpperCase()}`} />
-    </label>
+    <div className={`min-w-0 border-b border-slate-100 pb-2 ${wide ? "col-span-2" : ""}`}>
+      <p className="text-[10px] font-bold uppercase tracking-[0.06em] text-slate-500">{label}</p>
+      <p className="mt-0.5 truncate text-[13px] font-semibold text-slate-800">{value || "—"}</p>
+    </div>
   );
 }
 
