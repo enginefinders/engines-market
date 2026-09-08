@@ -1,7 +1,5 @@
-import { Suspense } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import QuoteCheckoutModal from "@/components/checkout/QuoteCheckoutModal";
 import DocumentFailureDesktopPanel from "@/components/pages/DocumentFailureDesktopPanel";
 import EngineCodeHeroSection from "@/components/sections/EngineCodeHeroSection";
 import FaqSection from "@/components/sections/FaqSection";
@@ -1727,10 +1725,6 @@ export default function DocumentEnginePage({ data }: DocumentEnginePageProps) {
           </div>
         </Container>
       </Section>
-
-      <Suspense fallback={null}>
-        <QuoteCheckoutModal brandName={data.brand.name} engineCode={data.engine.code} />
-      </Suspense>
     </>
   );
 }

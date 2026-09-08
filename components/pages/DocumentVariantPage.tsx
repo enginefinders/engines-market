@@ -1,5 +1,3 @@
-import { Suspense } from "react";
-import QuoteCheckoutModal from "@/components/checkout/QuoteCheckoutModal";
 import FaqSection from "@/components/sections/FaqSection";
 import HowItWorksSection from "@/components/sections/HowItWorksSection";
 import VariantCommonProblemsSection from "@/components/sections/VariantCommonProblemsSection";
@@ -95,10 +93,6 @@ export default function DocumentVariantPage({ data }: DocumentVariantPageProps) 
         brandName={data.variant.name}
         imageSrc={ctaImage}
       />
-
-      <Suspense fallback={null}>
-        <QuoteCheckoutModal brandName={data.brand.name} modelName={data.model.name} />
-      </Suspense>
     </>
   );
 }

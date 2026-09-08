@@ -1,5 +1,3 @@
-import { Suspense } from "react";
-import QuoteCheckoutModal from "@/components/checkout/QuoteCheckoutModal";
 import CommonProblemsSection from "@/components/sections/CommonProblemsSection";
 import EngineSizesSection from "@/components/sections/EngineSizesSection";
 import EngineIntelligenceSection from "@/components/sections/EngineIntelligenceSection";
@@ -181,10 +179,6 @@ export default async function DocumentModelPage({
         imageSrc={visualData.assets.ctaImage ?? resolvedModelImage}
         displayMode="document"
       />
-
-      <Suspense fallback={null}>
-        <QuoteCheckoutModal brandName={visualData.brand.name} modelName={visualData.model.name} />
-      </Suspense>
     </>
   );
 }

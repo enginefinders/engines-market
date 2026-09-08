@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Suspense } from "react";
 import HeroSection from "@/components/sections/HeroSection";
 import HowItWorksSection from "@/components/sections/HowItWorksSection";
 import LiveMarketPricesSection from "@/components/sections/LiveMarketPricesSection";
@@ -13,7 +12,6 @@ import FuelTypesSection from "@/components/sections/FuelTypesSection";
 import EngineYearsSection from "@/components/sections/EngineYearsSection";
 import FaqSection from "@/components/sections/FaqSection";
 import TrustCtaSection from "@/components/sections/TrustCtaSection";
-import QuoteCheckoutModal from "@/components/checkout/QuoteCheckoutModal";
 import AutoInternalLinks from "@/components/internal-links/AutoInternalLinks";
 import { getBrandPageData, getBrandSlugs } from "@/lib/brandData";
 import { getEngineLinkMapForBrand } from "@/lib/enginePageData";
@@ -176,10 +174,6 @@ export default async function BrandPage({ params }: BrandPageProps) {
         brandName={pageData.brand.name}
         imageSrc={trustCtaImage}
       />
-
-      <Suspense fallback={null}>
-        <QuoteCheckoutModal brandName={pageData.brand.name} />
-      </Suspense>
     </>
   );
 }

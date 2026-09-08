@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import "./globals.css";
 
+import QuoteCheckoutModal from "@/components/checkout/QuoteCheckoutModal";
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
 import { SITE_URL } from "@/lib/site";
@@ -30,6 +32,9 @@ export default function RootLayout({
 
           <main className="flex-1">{children}</main>
           <Footer />
+          <Suspense fallback={null}>
+            <QuoteCheckoutModal brandName="replacement" />
+          </Suspense>
         </div>
       </body>
     </html>

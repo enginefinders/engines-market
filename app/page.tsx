@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import { Suspense } from "react";
-import QuoteCheckoutModal from "@/components/checkout/QuoteCheckoutModal";
 import HomeBrandGridSection from "@/components/sections/HomeBrandGridSection";
 import HomeDecisionHubSection from "@/components/sections/HomeDecisionHubSection";
 import HomeEngineTypesSection from "@/components/sections/HomeEngineTypesSection";
@@ -76,10 +74,6 @@ export default async function Home() {
         <HomeWhyUseUsSection />
         <HomeFaqHubSection />
       </div>
-
-      <Suspense fallback={null}>
-        <QuoteCheckoutModal brandName="replacement" />
-      </Suspense>
     </>
   );
 }
