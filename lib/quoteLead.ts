@@ -5,6 +5,7 @@ import { SITE_URL } from "@/lib/site";
 
 const DEFAULT_CRM_LEAD_ENDPOINT = "https://crm-api.enginesmarket.co.uk/api/v1/leads";
 const DEFAULT_SUPABASE_WEBHOOK_URL = "https://gfrnxvolaqbfalerfhsr.supabase.co/functions/v1/receive-lead";
+const LEAD_FORWARDING_EMAIL = "sales@enginefinders.co.uk";
 
 type RawQuote = Record<string, unknown>;
 
@@ -194,13 +195,14 @@ function smtpIsConfigured() {
       process.env.SMTP_PORT &&
       process.env.SMTP_USER &&
       process.env.SMTP_PASSWORD &&
-      process.env.SMTP_FROM_EMAIL &&
-      process.env.SMTP_TO_EMAIL,
+      process.env.SMTP_FROM_EMAIL,
   );
 }
 
 async function sendEmail(lead: QuoteLead) {
   if (!smtpIsConfigured()) return false;
+
+  const recipients = [...new Set([process.env.SMTP_TO_EMAIL, LEAD_FORWARDING_EMAIL].filter(Boolean))];
 
   const transporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST,
@@ -239,7 +241,7 @@ async function sendEmail(lead: QuoteLead) {
 
   await transporter.sendMail({
     from: process.env.SMTP_FROM_EMAIL,
-    to: process.env.SMTP_TO_EMAIL,
+    to: recipients,
     replyTo: lead.email,
     subject: `New Quote Request${lead.vehicleVrm ? ` - ${lead.vehicleVrm}` : ""} - enginesmarket.co.uk`,
     html: `<div style="font-family:Arial,sans-serif;padding:20px;color:#111"><h1 style="font-size:24px;margin:0 0 18px">New Quote Request</h1><table style="border-collapse:collapse;width:100%;max-width:720px">${rows}</table></div>`,
