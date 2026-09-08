@@ -202,7 +202,13 @@ function smtpIsConfigured() {
 async function sendEmail(lead: QuoteLead) {
   if (!smtpIsConfigured()) return false;
 
-  const recipients = [...new Set([process.env.SMTP_TO_EMAIL, LEAD_FORWARDING_EMAIL].filter(Boolean))];
+  const recipients = [
+    ...new Set(
+      [process.env.SMTP_TO_EMAIL, LEAD_FORWARDING_EMAIL].filter(
+        (recipient): recipient is string => Boolean(recipient),
+      ),
+    ),
+  ];
 
   const transporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST,
