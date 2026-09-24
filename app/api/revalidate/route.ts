@@ -33,6 +33,7 @@ export async function POST(req: NextRequest) {
     for (const route of affectedRoutes) {
       try {
         revalidatePath(route);
+        revalidatePath(route, "page");
         revalidatedRoutes.push(route);
       } catch (err) {
         console.warn(`Failed to revalidate path: ${route}`, err);
