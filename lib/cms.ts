@@ -1,6 +1,7 @@
 // lib/cms.ts
 
-const CMS_API_URL = process.env.CMS_API_URL || "https://headless-cms-blogs.vercel.app";
+const RAW_CMS_URL = process.env.CMS_API_URL || "https://cms.enginefinders.co.uk";
+const CMS_API_URL = RAW_CMS_URL.replace(/\/api\/v1\/?$/, "");
 const CMS_SITE_SLUG = process.env.CMS_SITE_SLUG || "enginesmarket";
 
 export interface BlogPost {
@@ -36,7 +37,7 @@ export async function getBlogPosts(page = 1, limit = 12): Promise<{ items: BlogP
     const res = await fetch(
       `${CMS_API_URL}/api/v1/sites/${CMS_SITE_SLUG}/posts?page=${page}&limit=${limit}`,
       {
-        next: { tags: ["cms-posts"], revalidate: 3600 },
+        cache: "no-store",
       }
     );
 
@@ -61,7 +62,7 @@ export async function getBlogPostBySlug(slug: string): Promise<BlogPost | null> 
     const res = await fetch(
       `${CMS_API_URL}/api/v1/sites/${CMS_SITE_SLUG}/posts/${slug}`,
       {
-        next: { tags: [`post-${slug}`, "cms-posts"], revalidate: 3600 },
+        cache: "no-store",
       }
     );
 
