@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import AutoInternalLinks from "@/components/internal-links/AutoInternalLinks";
-import DocumentEnginePage from "@/components/pages/DocumentEnginePage";
 import DocumentModelPage from "@/components/pages/DocumentModelPage";
+import NewDocEnginePage from "@/components/pages/NewDocEnginePage";
 import { getEnginePageData, getEnginePageStaticParams } from "@/lib/enginePageData";
 import { getInternalLinkPlan } from "@/lib/internalLinkIndex";
 import { getModelPageData, getModelPageStaticParams } from "@/lib/modelPageData";
@@ -89,7 +89,15 @@ export default async function ModelPage({ params }: ModelPageProps) {
           maxLinksPerPage={internalLinkPlan.maxLinksPerPage}
           maxLinksPerTarget={internalLinkPlan.defaultMaxLinksPerTarget}
         />
-        <DocumentEnginePage data={enginePageData} />
+        {enginePageData.structuredData ? (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(enginePageData.structuredData),
+            }}
+          />
+        ) : null}
+        <NewDocEnginePage data={enginePageData} />
       </>
     );
   }
