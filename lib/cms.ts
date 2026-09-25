@@ -19,6 +19,12 @@ export interface BlogPost {
     metaDescription?: string;
     canonicalUrl?: string;
     ogImage?: string;
+    noIndex?: boolean;
+    schemaType?: string;
+    featuredImage?: {
+      url: string;
+      altText?: string;
+    };
   };
   jsonLd?: Record<string, any>;
   author?: {
