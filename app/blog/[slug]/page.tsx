@@ -26,10 +26,9 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
     alternates: {
       canonical: post.seoMetadata?.canonicalUrl || `https://enginesmarket.co.uk/blog/${slug}`,
     },
-    robots: {
-      index: true,
-      follow: true,
-    },
+    robots: post.seoMetadata?.noIndex
+      ? { index: false, follow: false }
+      : { index: true, follow: true },
   };
 }
 
@@ -82,6 +81,18 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
               </span>
             </div>
           </header>
+
+          {/* Featured Image (shown below post meta, above article body) */}
+          {post.seoMetadata?.featuredImage?.url && (
+            <div className="mb-8 overflow-hidden rounded-2xl border border-slate-200 bg-slate-100">
+              <img
+                src={post.seoMetadata.featuredImage.url}
+                alt={post.seoMetadata.featuredImage.altText || post.title}
+                className="w-full h-auto object-cover max-h-[480px]"
+                loading="eager"
+              />
+            </div>
+          )}
 
           {/* Rendered Semantic Content with Custom Typography & Table */}
           <div
