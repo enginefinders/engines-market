@@ -21,6 +21,7 @@ export interface BlogPost {
     ogImage?: string;
     noIndex?: boolean;
     schemaType?: string;
+    customSchemaJson?: string | Record<string, any>;
     featuredImage?: {
       url: string;
       altText?: string;
