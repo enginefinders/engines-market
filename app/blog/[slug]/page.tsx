@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
     title: post.seoMetadata?.metaTitle || `${post.title} | Blog`,
     description: post.seoMetadata?.metaDescription || post.excerpt,
     alternates: {
-      canonical: post.seoMetadata?.canonicalUrl || `https://enginesmarket.co.uk/blog/${slug}`,
+      canonical: post.canonicalUrl || post.seoMetadata?.canonicalUrl || `https://enginesmarket.co.uk/blog/${slug}`,
     },
     robots: post.seoMetadata?.noIndex
       ? { index: false, follow: false }
@@ -39,16 +39,23 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
   if (!post) notFound();
 
   const articleHtml = post.html || "<p>Article content is being generated...</p>";
+  const featuredImageUrl = post.featuredImage?.url || post.seoMetadata?.featuredImage?.url;
+  const featuredImageAlt = post.featuredImage?.alt || post.seoMetadata?.featuredImage?.altText || post.title;
 
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 sm:py-12 font-['Montserrat',sans-serif]">
       {/* JSON-LD Schema */}
-      {post.jsonLd && (
+      {post.jsonLdScript ? (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: post.jsonLdScript }}
+        />
+      ) : post.jsonLd ? (
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(post.jsonLd) }}
         />
-      )}
+      ) : null}
 
       {/* Breadcrumb Navigation */}
       <nav className="mb-6 text-xs text-slate-500">
@@ -83,11 +90,11 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           </header>
 
           {/* Featured Image (shown below post meta, above article body) */}
-          {post.seoMetadata?.featuredImage?.url && (
+          {featuredImageUrl && (
             <div className="mb-8 overflow-hidden rounded-2xl border border-slate-200 bg-slate-100">
               <img
-                src={post.seoMetadata.featuredImage.url}
-                alt={post.seoMetadata.featuredImage.altText || post.title}
+                src={featuredImageUrl}
+                alt={featuredImageAlt}
                 className="w-full h-auto object-cover max-h-[480px]"
                 loading="eager"
               />
