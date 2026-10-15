@@ -8,6 +8,7 @@ export type QuoteFormSeed = {
   registrationNumber?: string;
   make?: string;
   model?: string;
+  variant?: string;
   year?: string;
   fuelType?: string;
   engineCapacity?: string;
@@ -45,6 +46,7 @@ function initialState(seed: QuoteFormSeed = {}) {
     registrationNumber: seed.registrationNumber || "",
     make: seed.make || "",
     model: seed.model || "",
+    variant: seed.variant || "",
     year: seed.year || "",
     fuelType: seed.fuelType || "",
     engineCapacity: seed.engineCapacity || "",
@@ -206,7 +208,7 @@ export default function QuoteForm({ initialData = {}, onClose, title = "Confirm 
     );
   }
 
-  const vehicleTitle = [formData.make, formData.model, formData.year].filter(Boolean).join(" - ");
+  const vehicleTitle = [formData.make, formData.model, formData.variant, formData.year].filter(Boolean).join(" - ");
   const hasSelectedVehicle = Boolean(vehicleTitle || formData.registrationNumber);
   const vehicleDetails = [
     { label: "Fuel Type", value: formData.fuelType, icon: <FaGasPump /> },

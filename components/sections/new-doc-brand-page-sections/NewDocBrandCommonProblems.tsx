@@ -60,25 +60,36 @@ type Problem = CommonProblemsData["problems"][number];
 function ProblemIcon({
   index,
   className = "h-[38px] w-[38px]",
+  variant = "white",
 }: {
   index: number;
   className?: string;
+  variant?: "white" | "dark-blue";
 }) {
-  const icons = [
-    "/icons/engine-market/dark-green-timing-chain.png",
-    "/icons/engine-market/dark-green-rod-bearing.png",
-    "/icons/engine-market/dark-green-hpfp-icon.png",
-    "/icons/engine-market/dark-green-cooling-system.png",
-    "/icons/engine-market/dark-green-egr-icon.png",
+  const whiteIcons = [
+    "/icons/White/Timing Chain.png",
+    "/icons/White/Rod Bearing.png",
+    "/icons/White/HPFP Icon.png",
+    "/icons/White/Cooling System.png",
+    "/icons/White/EGR Icon.png",
   ];
+  const darkBlueIcons = [
+    "/icons/engine-market/active-blue-timing-chain.png",
+    "/icons/engine-market/dark-blue-rod-bearing.png",
+    "/icons/engine-market/dark-blue-hpfp-icon.png",
+    "/icons/engine-market/dark-blue-cooling-system.png",
+    "/icons/engine-market/dark-blue-egr-icon.png",
+  ];
+  const iconIndex = index % whiteIcons.length;
+  const icons = variant === "dark-blue" ? darkBlueIcons : whiteIcons;
 
   return (
     <Image
-      src={icons[index % icons.length]}
+      src={icons[iconIndex]}
       alt=""
       width={42}
       height={42}
-      className={`${className} object-contain`}
+      className={`${className} object-contain ${variant === "dark-blue" && iconIndex === 0 ? "brightness-50" : ""}`}
     />
   );
 }
@@ -98,7 +109,10 @@ function ProblemDetails({
     >
       <div className="flex items-center gap-3 border-b border-white/15 pb-4">
         <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl border border-[#64cfff]/50 bg-[#061a33] sm:h-12 sm:w-12">
-          <ProblemIcon index={activeIndex} className="h-7 w-7 sm:h-9 sm:w-9" />
+          <ProblemIcon
+            index={activeIndex}
+            className="h-7 w-7 sm:h-9 sm:w-9"
+          />
         </span>
         <div>
           <h3 className="line-clamp-2 text-[16px] text-white font-extrabold leading-[1.2] hover:line-clamp-none sm:line-clamp-none sm:text-[21px] lg:text-[22px]">
@@ -310,7 +324,11 @@ export default function NewDocBrandCommonProblems({ data, bgImage }: Props) {
                       className={`flex lg:mb-2 w-full items-center gap-3 rounded-xl border px-3 py-3 text-left transition ${selected ? "border-[#2da8ff] bg-[#061a33] text-white shadow-[0_0_18px_rgba(25,160,255,0.55)]" : "border-[#cde2f2] bg-white/75 text-[#09264e] shadow-[0_5px_15px_rgba(23,84,131,0.06)] hover:border-[#4bb7fb]"}`}
                     >
                       <span className="flex h-9 w-9 shrink-0 items-center justify-center">
-                        <ProblemIcon index={index} className="h-9 w-9" />
+                        <ProblemIcon
+                          index={index}
+                          variant={selected ? "white" : "dark-blue"}
+                          className="h-9 w-9"
+                        />
                       </span>
                       <span className="min-w-0 flex-1 text-[13px] font-bold leading-[1.25]">
                         {normalize(problem.group)}

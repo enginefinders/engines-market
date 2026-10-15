@@ -37,7 +37,7 @@ const nextConfig: NextConfig = {
         },
         {
           source: "/about",
-          destination: "/about/about-us.html",
+          destination: "/about/about-us",
         },
         {
           source: "/insights/:slug",

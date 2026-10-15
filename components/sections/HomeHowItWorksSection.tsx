@@ -51,7 +51,7 @@ export default function HomeHowItWorksSection({ steps }: Props) {
             return (
               <div
                 key={step.number}
-                className={`perspective-1000 min-h-[260px] sm:min-h-[280px] lg:min-h-[252px] xl:min-h-[290px] ${
+                className={`perspective-1000 min-h-[220px] sm:min-h-[230px] lg:min-h-[220px] xl:min-h-[240px] ${
                   step.number === 1 ? "md:col-span-2 md:mx-auto md:w-full md:max-w-[380px] lg:col-span-1 lg:max-w-none" : ""
                 }`}
               >
@@ -63,15 +63,10 @@ export default function HomeHowItWorksSection({ steps }: Props) {
                   aria-label={`${flipped ? "Hide details for" : "Show details for"} step ${step.number}`}
                 >
                   <div
-                    className={`relative h-full min-h-[260px] rounded-[18px] transition duration-500 [transform-style:preserve-3d] sm:min-h-[280px] lg:min-h-[252px] xl:min-h-[290px] ${flipped ? "[transform:rotateY(180deg)]" : ""
+                    className={`relative h-full min-h-[220px] rounded-[18px] transition duration-500 [transform-style:preserve-3d] sm:min-h-[230px] lg:min-h-[220px] xl:min-h-[240px] ${flipped ? "[transform:rotateY(180deg)]" : ""
                       }`}
                   >
                     <div className="absolute inset-0 flex h-full flex-col overflow-hidden rounded-[18px] border border-[#dbe4ef] bg-white p-2 sm:p-4 lg:p-4 shadow-[0_18px_40px_rgba(13,27,46,0.08)] [backface-visibility:hidden] text-center">
-
-
-                      <span className="mt-0 text-right font-['Manrope'] text-2xl font-extrabold uppercase tracking-[0.18em] text-gray-400 lg:text-[22px]">
-                        0{step.number}
-                      </span>
 
                       <div
                         className={`mx-auto flex items-center justify-center rounded-[14px] p-2 ${
@@ -89,7 +84,7 @@ export default function HomeHowItWorksSection({ steps }: Props) {
                         {step.frontTitle}
                       </h3>
 
-                      <p className="mx-auto mt-4 text-[12px] leading-[1.65] text-[#5a6478] sm:text-[14px] lg:mt-3 lg:max-w-[300px] lg:text-[13px] lg:leading-[1.6]">
+                      <p className="mx-auto mt-2 text-[12px] leading-[1.65] text-[#5a6478] sm:text-[14px] lg:mt-2 lg:max-w-[300px] lg:text-[13px] lg:leading-[1.6]">
                         {step.frontBody}
                       </p>
 
@@ -100,14 +95,6 @@ export default function HomeHowItWorksSection({ steps }: Props) {
                     </div>
 
                     <div className="absolute inset-0 flex h-full flex-col overflow-hidden rounded-[18px] border-[1.5px] border-[#3b82f6] bg-[#0d1b2e] p-2 text-white shadow-[0_0_0_1px_rgba(59,130,246,1),0_0_8px_rgba(59,130,246,0.5),0_0_16px_rgba(59,130,246,0.38),0_0_26px_rgba(59,130,246,0.24),0_4px_12px_rgba(42,109,214,0.28)] [backface-visibility:hidden] [transform:rotateY(180deg)] sm:p-4 lg:p-4">
-                      <div className="flex flex-col items-center gap-4">
-                        {/* <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-[14px] bg-white/10 text-white">
-                          {getIcon(step.icon)}
-                        </div> */}
-                        {/* <span className="pt-1 text-[11px] font-extrabold uppercase tracking-[0.18em] text-[#86efac]">
-                          STEP {step.number} OF 3
-                        </span> */}
-                      </div>
 
                       <h3 className="mt-5 text-center font-['Manrope'] text-[24px] font-bold leading-[1] text-white lg:mt-5 lg:text-[22px]">
                         {step.backTitle}

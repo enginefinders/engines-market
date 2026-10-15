@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import type { BrandPageData } from "@/types/brand";
 import { FaChevronRight } from "react-icons/fa6";
+import { FiChevronDown } from "react-icons/fi";
 import { TbArrowRight, TbEngine, TbRefresh } from "react-icons/tb";
 import ModelMobileAccordion from "../new-doc-model-page-sections/ModelMobileAccordion";
 import { splitBrandHeading } from "./brandHeading";
@@ -147,7 +148,9 @@ function MobileEngineTypeStack({
           const priceRange = splitPriceRange(type.priceRange);
           const previousIsActive =
             stackIndex > 0 && stackIndex - 1 === activeIndex;
-          const offsetX = Math.min(stackIndex * 14, 52);
+          // Keep the collapsed cards narrower and progressively offset, like a
+          // physical stack, while allowing the selected card to open fully.
+          const offsetX = active ? 0 : Math.min(stackIndex * 16, 80);
           const badge = typeBadge(type.title);
           const variant = typeVariant(type.title);
           const badgeClass =
@@ -164,11 +167,11 @@ function MobileEngineTypeStack({
           return (
             <article
               key={type.title}
-              className={`relative transition-all duration-300 ${active ? "z-30" : "z-10"}`}
+              className={`relative ${active ? "z-30" : "z-10"}`}
               style={{
                 marginTop: stackIndex === 0 ? 0 : previousIsActive ? 8 : -54,
                 transform: `translateX(${offsetX}px) rotate(0deg)`,
-                width: "calc(100% - 42px)",
+                width: active ? "100%" : "calc(100% - 80px)",
                 perspective: active ? "1200px" : undefined,
                 WebkitPerspective: active ? "1200px" : undefined,
               }}
@@ -199,27 +202,32 @@ function MobileEngineTypeStack({
                           onFlip(stackIndex);
                         }
                       }}
-                      className="flex min-h-[188px] w-full cursor-pointer flex-col rounded-[10px] border border-[#d8e6f5] bg-white shadow-[0_8px_18px_rgba(13,27,46,0.07)]"
+                      className="relative flex min-h-[188px] w-full cursor-pointer flex-col overflow-hidden rounded-[16px] border border-[#dce7f0] bg-[linear-gradient(135deg,#ffffff_0%,#fbfdff_100%)] shadow-[0_14px_30px_rgba(13,27,46,0.11)] before:pointer-events-none before:absolute before:inset-x-0 before:top-0 before:h-[2px] before:rounded-t-[16px] before:bg-[linear-gradient(90deg,#061a33_0%,#0c4f8a_32%,#36c293_52%,#061a33_100%)] before:content-['']"
                       aria-expanded={!flipped}
                     >
-                      <div className="flex items-center gap-3 px-3 py-2.5">
-                        <span className="flex h-10 w-10 flex-none items-center justify-center rounded-full bg-[#e8f4fd] text-[#0d1b2e]">
-                          <EngineTypeIcon title={type.title} />
+                      <div className="flex items-start gap-1 px-3.5 py-3">
+                        <span className="mt-0.5 flex h-8 w-8 flex-none items-center justify-center rounded-full text-[#0d1b2e]">
+                          <EngineTypeIcon title={type.title} className="h-8 w-8" />
                         </span>
-                        <span className="min-w-0 flex-1">
-                          <span className="block text-[13px] font-extrabold uppercase leading-[1.12] text-[#0d1b2e]">
-                            {type.title}
-                          </span>
-                          <span className="mt-1 block text-[11px] leading-[1.45] text-[#64748b]">
+                        <div className="min-w-0 flex-1">
+                          <div className="flex items-center gap-2">
+                            <span className="min-w-0 flex-1 text-[13.5px] font-extrabold uppercase leading-[1.12] text-[#0d1b2e]">
+                              {type.title}
+                            </span>
+                            <span className="mt-[-2px] flex h-8 w-8 flex-none items-center justify-center rounded-full border border-[#dce5ed] bg-white text-[#0d1b2e] shadow-[0_2px_6px_rgba(13,27,46,0.06)]">
+                              <FiChevronDown className="h-4 w-4 rotate-180" aria-hidden="true" />
+                            </span>
+                          </div>
+                          <span className="mt-1.5 block text-[12px] leading-[1.42] text-[#64748b]">
                             {normalize(
                               type.frontDescription || type.description,
                             )}
                           </span>
-                        </span>
+                        </div>
                       </div>
                       <div className="mx-3 h-px bg-[#d8e6f5]" />
                       <div className="px-3 pb-2.5 pt-2.5">
-                        <div className="grid grid-cols-[minmax(145px,1fr)_1px_minmax(0,1fr)] items-center gap-3">
+                        <div className="grid grid-cols-[minmax(0,1fr)_1px_minmax(0,1.2fr)] items-center gap-3">
                           <div className="min-w-0">
                             <div className="mt-1 whitespace-nowrap text-[16px] font-extrabold leading-[1.1] text-[#0d1b2e]">
                               {priceRange.price}
@@ -231,16 +239,16 @@ function MobileEngineTypeStack({
                             ) : null}
                           </div>
                           <div className="h-10 w-px bg-[#d7dde5]" />
-                          <div className="flex min-w-0 flex-col items-start gap-2 pl-1">
+                          <div className="flex min-w-0 flex-col items-stretch gap-2 pl-1">
                             <a
                               href="#quote-form"
                               data-quote-context={type.title}
                               data-quote-source="engine-types-mobile-stack"
-                              className="inline-flex min-w-0 items-center justify-between gap-2 text-[10px] font-semibold uppercase leading-[1.28] text-[#059669]"
+                              className="inline-flex min-h-[42px] min-w-0 items-center justify-between gap-2 rounded-[10px] bg-[#12a968] px-3 py-2 text-[9px] font-extrabold uppercase leading-[1.15] text-white shadow-[0_7px_14px_rgba(0,128,75,0.22)] transition hover:brightness-105"
                               onClick={(event) => event.stopPropagation()}
                             >
-                              <span className="min-w-0">{type.cta}</span>
-                              <TbArrowRight className="h-3.5 w-3.5 flex-none" />
+                              <span className="line-clamp-2 min-w-0">{type.cta}</span>
+                              <TbArrowRight className="h-4 w-4 flex-none" />
                             </a>
                             <button
                               type="button"
@@ -266,7 +274,7 @@ function MobileEngineTypeStack({
                       WebkitBackfaceVisibility: "hidden",
                     }}
                   >
-                    <div className="h-full overflow-y-auto rounded-[10px] border-[1.5px] border-[#3b82f6] bg-[#061a33] px-3 py-2.5 text-white shadow-[0_0_16px_rgba(59,130,246,0.38)]">
+                    <div className="relative h-full overflow-y-auto rounded-[16px] border-[1.5px] border-[#3b82f6] bg-[#061a33] px-3 py-2.5 text-white shadow-[0_0_20px_rgba(59,130,246,0.32)] before:pointer-events-none before:absolute before:inset-x-0 before:top-0 before:h-[2px] before:rounded-t-[16px] before:bg-[linear-gradient(90deg,#061a33_0%,#0c4f8a_32%,#36c293_52%,#061a33_100%)] before:content-['']">
                       <div className="mb-2 flex items-center justify-between gap-3">
                         <span
                           className={`inline-flex rounded-full border px-[8px] py-[1px] text-[8.5px] font-bold uppercase tracking-[0.7px] ${badgeClass}`}
@@ -285,11 +293,11 @@ function MobileEngineTypeStack({
                           Flip back
                         </button>
                       </div>
-                      <p className="text-[12px] leading-[1.48] text-[#e2e8f0]">
+                      <p className="text-[13px] leading-[1.48] text-[#e2e8f0]">
                         {normalize(type.backDescription || type.description)}
                       </p>
                       {type.backBullets?.length ? (
-                        <ul className="mt-2 space-y-1 text-[10.5px] leading-[1.42] text-[#cbd5e1]">
+                        <ul className="mt-2 space-y-1 text-[11.5px] leading-[1.42] text-[#cbd5e1]">
                           {type.backBullets.map((bullet) => (
                             <li key={bullet} className="flex gap-2">
                               <span className="mt-[4px] h-[5px] w-[5px] flex-none rounded-full bg-[#22c55e]" />
@@ -312,12 +320,18 @@ function MobileEngineTypeStack({
                       onSelect(stackIndex);
                     }
                   }}
-                  className="min-h-[112px] w-full cursor-pointer rounded-[8px] border border-[#d8e6f5] bg-white text-left shadow-[0_8px_18px_rgba(13,27,46,0.07)]"
+                  style={{
+                    clipPath:
+                      "polygon(0 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 15px 100%, 0 calc(100% - 15px))",
+                    WebkitClipPath:
+                      "polygon(0 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 15px 100%, 0 calc(100% - 15px))",
+                  }}
+                  className="relative min-h-[112px] w-full cursor-pointer overflow-hidden rounded-t-[14px] border border-[#dce7f0] bg-[linear-gradient(135deg,#ffffff_0%,#fbfdff_100%)] text-left shadow-[0_10px_22px_rgba(13,27,46,0.1)] before:pointer-events-none before:absolute before:inset-x-0 before:top-0 before:h-[2px] before:rounded-t-[14px] before:bg-[linear-gradient(90deg,#061a33_0%,#0c4f8a_32%,#36c293_52%,#061a33_100%)] before:content-['']"
                   aria-expanded={false}
                 >
-                  <div className="flex items-center gap-3 px-3 py-3">
-                    <span className="flex h-10 w-10 flex-none items-center justify-center rounded-full bg-[#e8f4fd] text-[#0d1b2e]">
-                      <EngineTypeIcon title={type.title} />
+                  <div className="flex items-center gap-1 px-3.5 py-3">
+                    <span className="flex h-8 w-8 flex-none items-center justify-center rounded-full text-[#0d1b2e]">
+                      <EngineTypeIcon title={type.title} className="h-8 w-8" />
                     </span>
                     <span className="min-w-0 flex-1">
                       <span className="line-clamp-2 block text-[13px] font-extrabold uppercase leading-[1.12] text-[#0d1b2e]">
@@ -325,7 +339,7 @@ function MobileEngineTypeStack({
                       </span>
                     </span>
                     <span className="ml-auto flex-none text-right">
-                      <span className="block whitespace-nowrap text-[12px] font-extrabold leading-none text-[#15803d]">
+                      <span className="block whitespace-nowrap text-[13px] font-extrabold leading-none text-[#15803d]">
                         {priceRange.price}
                       </span>
                     </span>
@@ -379,7 +393,7 @@ function MobileSupplyFitCard({
               {type.title}
             </h3>
             <p
-              className={`mt-1 text-[11px] leading-[1.38] ${flipped ? "text-[#475569]" : "line-clamp-2 text-white/78"}`}
+              className={`mt-1 text-[12px] leading-[1.38] ${flipped ? "text-[#475569]" : "line-clamp-2 text-white/78"}`}
             >
               {normalize(
                 flipped
@@ -396,7 +410,7 @@ function MobileSupplyFitCard({
           </span>
         </div>
         {flipped && type.backBullets?.length ? (
-          <ul className="mx-3 mb-2 space-y-1 rounded-[8px] bg-[#f8fbff] px-3 py-2 text-[10.5px] leading-[1.38] text-[#475569]">
+          <ul className="mx-3 mb-2 space-y-1 rounded-[8px] bg-[#f8fbff] px-3 py-2 text-[11.5px] leading-[1.38] text-[#475569]">
             {type.backBullets.map((bullet) => (
               <li key={bullet} className="flex gap-2">
                 <span className="mt-[5px] h-[4px] w-[4px] flex-none rounded-full bg-[#15803d]" />
@@ -417,7 +431,7 @@ function MobileSupplyFitCard({
             </div>
             {priceRange.suffix ? (
               <div
-                className={`mt-0.5 whitespace-nowrap text-[9px] font-semibold ${flipped ? "text-[#64748b]" : "text-white/65"}`}
+                className={`mt-0.5 whitespace-nowrap text-[10px] font-semibold ${flipped ? "text-[#64748b]" : "text-white/65"}`}
               >
                 ({priceRange.suffix})
               </div>
@@ -430,7 +444,7 @@ function MobileSupplyFitCard({
             href="#quote-form"
             data-quote-context={type.title}
             data-quote-source="engine-types-supply-fit-mobile"
-            className={`inline-flex min-w-0 items-center justify-between gap-2 text-[10px] font-semibold uppercase ${flipped ? "text-[#059669]" : "text-[#4ade80]"}`}
+            className={`inline-flex min-w-0 items-center justify-between gap-2 text-[11px] font-semibold uppercase ${flipped ? "text-[#059669]" : "text-[#4ade80]"}`}
             onClick={(event) => event.stopPropagation()}
           >
             <span className="min-w-0">{type.cta}</span>
@@ -595,6 +609,9 @@ function EngineCard({
                 </li>
               ))}
             </ul>
+            <div className="mt-auto flex justify-center pt-6">
+              <EngineTypeIcon title={type.title} className="h-36 w-36" />
+            </div>
           </div>
         </div>
       </div>

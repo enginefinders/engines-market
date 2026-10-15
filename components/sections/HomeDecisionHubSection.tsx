@@ -451,7 +451,7 @@ export default function HomeDecisionHubSection() {
 
   return (
     <Section className="bg-[#0d1b2e] py-8 sm:py-9 lg:py-11">
-      <Container className="max-w-[1040px]">
+      <Container className="max-w-[1400px]">
         <div className="mx-auto max-w-[960px] text-center">
           <div className="section-pill mx-auto border border-white/10 bg-white/10">
             <span className="text-white">Engine Failure Cost Calculator</span>

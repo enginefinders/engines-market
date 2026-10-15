@@ -12,7 +12,13 @@ type Props = {
   featuredSlugs: string[];
 };
 
-function ChevronIcon({ open = false, animate = false }: { open?: boolean; animate?: boolean }) {
+function ChevronIcon({
+  open = false,
+  animate = false,
+}: {
+  open?: boolean;
+  animate?: boolean;
+}) {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -20,7 +26,13 @@ function ChevronIcon({ open = false, animate = false }: { open?: boolean; animat
       fill="none"
       aria-hidden="true"
     >
-      <path d="m6 9 6 6 6-6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+      <path
+        d="m6 9 6 6 6-6"
+        stroke="currentColor"
+        strokeWidth="2.2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 }
@@ -82,8 +94,21 @@ const brandLogoSources: Record<string, string> = {
 
 function GenericLogo({ label }: { label: string }) {
   return (
-    <svg viewBox="0 0 180 60" className="h-[36px] w-[120px]" fill="none" aria-hidden="true">
-      <text x="90" y="36" textAnchor="middle" fontSize="22" fontWeight="700" letterSpacing="2" fill="#4b5563">
+    <svg
+      viewBox="0 0 180 60"
+      className="h-[36px] w-[120px]"
+      fill="none"
+      aria-hidden="true"
+    >
+      <text
+        x="90"
+        y="36"
+        textAnchor="middle"
+        fontSize="22"
+        fontWeight="700"
+        letterSpacing="2"
+        fill="#4b5563"
+      >
         {label.toUpperCase()}
       </text>
     </svg>
@@ -142,18 +167,23 @@ export default function HomeBrandGridSection({ brands, featuredSlugs }: Props) {
   }, [brands, featuredSlugs]);
 
   const alphabeticalBrands = useMemo(
-    () => [...brands].sort((a, b) => a.displayName.localeCompare(b.displayName)),
+    () =>
+      [...brands].sort((a, b) => a.displayName.localeCompare(b.displayName)),
     [brands],
   );
 
-  const collapsedBrands = isMobileViewport ? featuredBrands.slice(0, 6) : featuredBrands;
+  const collapsedBrands = isMobileViewport
+    ? featuredBrands.slice(0, 6)
+    : featuredBrands;
   const visibleBrands = expanded ? alphabeticalBrands : collapsedBrands;
   const cardHeightClass = "min-h-[164px] sm:min-h-[172px]";
   const overlayHeightClass = "h-[226px]";
 
   function toggleBrand(slug: string) {
     setOpenBrand((current) => (current === slug ? null : slug));
-    setHasSeen((current) => (current.includes(slug) ? current : [...current, slug]));
+    setHasSeen((current) =>
+      current.includes(slug) ? current : [...current, slug],
+    );
   }
 
   return (
@@ -203,7 +233,7 @@ export default function HomeBrandGridSection({ brands, featuredSlugs }: Props) {
           }
         }
       `}</style>
-      <Container className="max-w-[1200px]">
+      <Container className="max-w-[1400px]">
         <div className="mx-auto max-w-[760px] text-center">
           <div className="section-pill mx-auto">
             <span>Engine Replacement By Make</span>
@@ -215,7 +245,9 @@ export default function HomeBrandGridSection({ brands, featuredSlugs }: Props) {
           </h2>
 
           <p className="mt-4 text-[16px] leading-[1.7] text-[#6b7280]">
-            Select your make below to see typical price ranges - from used take-out units to fully rebuilt engines, with supply & fit available UK-wide.
+            Select your make below to see typical price ranges - from used
+            take-out units to fully rebuilt engines, with supply & fit available
+            UK-wide.
           </p>
         </div>
 
@@ -224,10 +256,16 @@ export default function HomeBrandGridSection({ brands, featuredSlugs }: Props) {
             const isOpen = openBrand === brand.slug;
             const shouldAnimate = !hasSeen.includes(brand.slug);
             const rowIndex = Math.floor(index / columns);
-            const isLastMobileRow = isMobileViewport && !expanded && index >= visibleBrands.length - 2;
-            const opensUpward = isMobileViewport ? isLastMobileRow : rowIndex > 0;
+            const isLastMobileRow =
+              isMobileViewport &&
+              !expanded &&
+              index >= visibleBrands.length - 2;
+            const opensUpward = isMobileViewport
+              ? isLastMobileRow
+              : rowIndex > 0;
             const shouldReveal = expanded;
-            const revealDirectionClass = index % 2 === 0 ? "brand-reveal-left" : "brand-reveal-right";
+            const revealDirectionClass =
+              index % 2 === 0 ? "brand-reveal-left" : "brand-reveal-right";
 
             return (
               <article
@@ -243,7 +281,9 @@ export default function HomeBrandGridSection({ brands, featuredSlugs }: Props) {
                       : "rounded-[10px] group-hover:-translate-y-1 group-hover:border-[#b8dcc7] group-hover:shadow-[0_18px_34px_rgba(21,128,61,0.14)]"
                   }`}
                 >
-                  <div className={`flex flex-col px-3 py-3 text-center sm:px-3 sm:py-3 ${cardHeightClass}`}>
+                  <div
+                    className={`flex flex-col px-3 py-3 text-center sm:px-3 sm:py-3 ${cardHeightClass}`}
+                  >
                     <Link
                       href={`/${brand.slug}`}
                       className="flex flex-1 flex-col items-center"
@@ -251,14 +291,20 @@ export default function HomeBrandGridSection({ brands, featuredSlugs }: Props) {
                     >
                       <div className="flex min-h-[92px] items-end justify-center sm:min-h-[96px]">
                         <div className="transition-transform duration-300 group-hover:scale-[1.04]">
-                          <BrandLogo logo={brand.logo} label={brand.displayName} />
+                          <BrandLogo
+                            logo={brand.logo}
+                            label={brand.displayName}
+                          />
                         </div>
                       </div>
                       <p className="mt-2.5 text-[15px] font-bold leading-tight text-[#0d1b2e]">
                         {brand.displayName}
                       </p>
                       <p className="mt-2 text-[12px] font-medium leading-[1.45] text-[#6b7280]">
-                        from <span className="font-semibold text-[#15803d]">{brand.fromPrice}</span>
+                        from{" "}
+                        <span className="font-semibold text-[#15803d]">
+                          {brand.fromPrice}
+                        </span>
                       </p>
                     </Link>
 
@@ -266,10 +312,17 @@ export default function HomeBrandGridSection({ brands, featuredSlugs }: Props) {
                       type="button"
                       onClick={() => toggleBrand(brand.slug)}
                       aria-expanded={isOpen}
-                      aria-label={isOpen ? `Collapse ${brand.displayName}` : `Expand ${brand.displayName}`}
+                      aria-label={
+                        isOpen
+                          ? `Collapse ${brand.displayName}`
+                          : `Expand ${brand.displayName}`
+                      }
                       className="mt-auto flex items-center justify-center pt-2"
                     >
-                      <ChevronIcon open={isOpen} animate={shouldAnimate && !isOpen} />
+                      <ChevronIcon
+                        open={isOpen}
+                        animate={shouldAnimate && !isOpen}
+                      />
                     </button>
                   </div>
 
@@ -283,18 +336,31 @@ export default function HomeBrandGridSection({ brands, featuredSlugs }: Props) {
                     >
                       <div className="space-y-4 text-left sm:space-y-[18px]">
                         <div className="grid grid-cols-[minmax(0,72px)_minmax(0,1fr)] items-start gap-1.5 text-[10px] leading-[1.3] min-[430px]:grid-cols-[minmax(0,84px)_minmax(0,1fr)] min-[430px]:text-[10.5px] sm:grid-cols-[minmax(0,108px)_minmax(0,1fr)] sm:gap-2 sm:text-[11px]">
-                          <span className="min-w-0 text-white/60">Engine prices from:</span>
+                          <span className="min-w-0 text-white/60">
+                            Engine prices from:
+                          </span>
                           <span className="min-w-0 text-left font-semibold text-white [overflow-wrap:anywhere]">
-                            {brand.fromPrice} <span className="font-normal text-white/70">(supply only)</span>
+                            {brand.fromPrice}{" "}
+                            <span className="font-normal text-white/70">
+                              (supply only)
+                            </span>
                           </span>
                         </div>
                         <div className="grid grid-cols-[minmax(0,72px)_minmax(0,1fr)] items-start gap-1.5 text-[10px] leading-[1.3] min-[430px]:grid-cols-[minmax(0,84px)_minmax(0,1fr)] min-[430px]:text-[10.5px] sm:grid-cols-[minmax(0,108px)_minmax(0,1fr)] sm:gap-2 sm:text-[11px]">
-                          <span className="min-w-0 text-white/60">Avg rebuilt:</span>
-                          <span className="min-w-0 text-left font-semibold text-white [overflow-wrap:anywhere]">{brand.avgRebuilt}</span>
+                          <span className="min-w-0 text-white/60">
+                            Avg rebuilt:
+                          </span>
+                          <span className="min-w-0 text-left font-semibold text-white [overflow-wrap:anywhere]">
+                            {brand.avgRebuilt}
+                          </span>
                         </div>
                         <div className="grid grid-cols-[minmax(0,72px)_minmax(0,1fr)] items-start gap-1.5 text-[10px] leading-[1.3] min-[430px]:grid-cols-[minmax(0,84px)_minmax(0,1fr)] min-[430px]:text-[10.5px] sm:grid-cols-[minmax(0,108px)_minmax(0,1fr)] sm:gap-2 sm:text-[11px]">
-                          <span className="min-w-0 text-white/60">Supply & fit:</span>
-                          <span className="min-w-0 text-left font-semibold text-white [overflow-wrap:anywhere]">Available UK-wide</span>
+                          <span className="min-w-0 text-white/60">
+                            Supply & fit:
+                          </span>
+                          <span className="min-w-0 text-left font-semibold text-white [overflow-wrap:anywhere]">
+                            Available UK-wide
+                          </span>
                         </div>
                       </div>
 
@@ -302,7 +368,9 @@ export default function HomeBrandGridSection({ brands, featuredSlugs }: Props) {
                         href={`/${brand.slug}`}
                         className="flex min-h-[48px] w-full items-center justify-center gap-2 rounded-[8px] bg-[#15803d] px-2 py-2 text-center text-[11px] font-semibold leading-[1.2] text-white transition hover:bg-[#116533] min-[430px]:text-[11.5px] sm:min-h-[50px] sm:text-[12.5px]"
                       >
-                        <span className="whitespace-normal">{brand.ctaText}</span>
+                        <span className="whitespace-normal">
+                          {brand.ctaText}
+                        </span>
                       </Link>
                     </div>
                   ) : null}
@@ -322,20 +390,25 @@ export default function HomeBrandGridSection({ brands, featuredSlugs }: Props) {
             className="mt-5 flex h-12 w-auto mx-auto items-center justify-center gap-2 rounded-[8px] bg-[#15803d] px-4 text-[14px] font-semibold text-white transition hover:bg-[#116533] duration-300"
             aria-expanded={expanded}
           >
-            <span>{expanded ? 'See Less' : `See More Brands`}</span>
+            <span>{expanded ? "See Less" : `See More Brands`}</span>
           </button>
         )}
-<div className="border-t border-[#eef2f7]  px-4 py-5 sm:px-6 sm:py-6">
-                            <div className="rounded-[16px] border border-[#dfe6ef] bg-[#f8fbff] p-4 sm:p-5">
-                                <div className="flex flex-col gap-4 border-l-4 border-[#0d1b2e] pl-4 sm:flex-row sm:items-center sm:justify-between">
-                                    <div className="max-w-6xl">
-                                        <p className="text-[11px] font-bold uppercase tracking-[0.12em] text-[#64748b]">Still Need A Real Price?</p>
-                                        <p className="mt-2 text-[14px] leading-[1.7] text-[#475569] sm:text-[15px]">
-                                            Prices shown are typical UK market ranges based on historical enquiry data. Actual quotes depend on engine code, variant, mileage and supplier. Enter your registration above for a tailored quote within hours.
-                                        </p>
-                                    </div>
+        <div className="border-t border-[#eef2f7]   py-5  sm:py-6">
+          <div className="rounded-[16px] border border-[#dfe6ef] bg-[#f8fbff] p-3 sm:py-5 sm:px-3">
+            <div className="flex flex-col gap-4   sm:flex-row sm:items-center sm:justify-between">
+              <div className="max-w-6xl">
+                <p className="text-[11px] font-bold uppercase tracking-[0.12em] text-[#64748b]">
+                  Still Need A Real Price?
+                </p>
+                <p className="mt-2 text-[14px] leading-[1.7] text-[#475569] sm:text-[15px]">
+                  Prices shown are typical UK market ranges based on historical
+                  enquiry data. Actual quotes depend on engine code, variant,
+                  mileage and supplier. Enter your registration above for a
+                  tailored quote within hours.
+                </p>
+              </div>
 
-                                    {/* <a
+              {/* <a
                                         href="#home-hero-reg-form"
                                         data-quote-context="FAQ footer CTA"
                                         data-quote-source="home-faq-footer-cta"
@@ -344,9 +417,9 @@ export default function HomeBrandGridSection({ brands, featuredSlugs }: Props) {
                                         <span>Get Free Engine Quotes</span>
                                         <ArrowIcon />
                                     </a> */}
-                                </div>
-                            </div>
-                        </div>
+            </div>
+          </div>
+        </div>
         {/* <p className="mx-auto mt-4 max-w-[60ch] text-center text-[12px] leading-[1.7] text-[#6b7280]">
           Prices shown are typical UK market ranges based on historical enquiry data. Actual quotes depend on engine code, variant, mileage and supplier. Enter your registration above for a tailored quote within hours.
         </p> */}

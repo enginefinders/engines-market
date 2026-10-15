@@ -23,12 +23,17 @@
     <meta name="twitter:title" content="Cookie Policy | Engines Market" />
     <meta name="twitter:description" content="Learn how Engines Market uses cookies, your privacy rights, and how you can manage your cookie preferences." />
 
-    <!-- Robots -->
+    <!-- Robots & Regional -->
     <meta name="robots" content="index, follow" />
     <meta name="googlebot" content="index, follow" />
     <meta name="language" content="English" />
     <meta name="geo.region" content="GB" />
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#0a2952" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
 
     <!-- ============================================ -->
     <!-- JSON-LD Structured Data                      -->
@@ -62,7 +67,7 @@
             "@context": "https://schema.org",
             "@graph": [{
                 "@type": "BreadcrumbList",
-                "@id": "https://enginesmarket.co.uk/cookie-policy#breadcrumb",
+                "@id": "https://enginesmarket.co.uk/legal/cookie-policy#breadcrumb",
                 "itemListElement": [{
                     "@type": "ListItem",
                     "position": 1,
@@ -71,13 +76,18 @@
                 }, {
                     "@type": "ListItem",
                     "position": 2,
+                    "name": "Legal",
+                    "item": "https://enginesmarket.co.uk/legal/"
+                }, {
+                    "@type": "ListItem",
+                    "position": 3,
                     "name": "Cookie Policy",
                     "item": "https://enginesmarket.co.uk/legal/cookie-policy"
                 }]
             }, {
                 "@type": "WebPage",
                 "@id": "https://enginesmarket.co.uk/legal/cookie-policy#webpage",
-                "url": "https://enginesmarket.co.uk/legal/",
+                "url": "https://enginesmarket.co.uk/legal/cookie-policy",
                 "name": "Cookie Policy | Engines Market",
                 "description": "Learn how Engines Market uses cookies, your privacy rights, and how you can manage your cookie preferences.",
                 "isPartOf": {
@@ -248,7 +258,7 @@
 
     <style>
         /* =============================================== */
-        /* RESET & BASE                                    */
+        /* RESET & BASE DESIGN SYSTEM                      */
         /* =============================================== */
         *,
         *::before,
@@ -259,376 +269,569 @@
         }
 
         :root {
-            --navy: #0B1628;
-            --navy-2: #0F2545;
-            --green: #1A6B3C;
-            --green-2: #22A05A;
-            --green-3: #2ecc76;
-            --green-pale: #e8f5ee;
-            --off-white: #f4f6fb;
+  /* ─── STANDARDIZED SPACING TOKENS (RULE 1: MULTIPLES OF 4) ─── */
+  --sp-2: 4px;
+  --sp-4: 4px;
+  --sp-6: 8px;
+  --sp-8: 8px;
+  --sp-10: 12px;
+  --sp-12: 12px;
+  --sp-14: 16px;
+  --sp-16: 16px;
+  --sp-18: 20px;
+  --sp-20: 20px;
+  --sp-24: 24px;
+  --sp-28: 28px;
+  --sp-32: 32px;
+  --sp-36: 36px;
+  --sp-40: 40px;
+  --sp-48: 48px;
+  --sp-56: 56px;
+  --sp-64: 64px;
+  --sp-72: 72px;
+  --sp-80: 80px;
+  --sp-96: 96px;
+
+  /* Space Aliases */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-14: 16px;
+  --space-16: 64px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-28: 28px;
+  --space-32: 32px;
+  --space-36: 36px;
+  --space-40: 40px;
+  --space-48: 48px;
+
+  /* Brand Fallbacks */
+  --primary-green: #078d4a;
+  --green-dark: #05703d;
+  --green-gradient: linear-gradient(180deg, #169b58 0%, #05703d 100%);
+  --status-danger: #dc2626;
+  --text-secondary: #526274;
+  --navy: #0a2952;
+  --r8: 8px;
+
+            /* 4px Spacing Scale */
+            --sp-4: 4px;
+            --sp-8: 8px;
+            --sp-12: 12px;
+            --sp-16: 16px;
+            --sp-20: 20px;
+            --sp-24: 24px;
+            --sp-32: 32px;
+            --sp-40: 40px;
+            --sp-48: 48px;
+            --sp-56: 56px;
+            --sp-64: 64px;
+            --sp-80: 80px;
+
+            /* Color Tokens */
+            --primary-green: #078d4a;
+            --dark-green: #05703d;
+            --accent-green: #10b981;
+            --light-green: #eef8f2;
+            --mid-green: #d1fae5;
+            
+            --navy: #0a2952;
+            --dark-navy: #071a32;
+            --navy-card: #0e2a47;
+            --navy-light: #1e3a6e;
+            
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+            --text-light: #94a3b8;
+            --border-color: #e2e8f0;
+            --border-subtle: #edf2f7;
+            --bg-page: linear-gradient(180deg, #eef4f9 0%, #f5f9fc 45%, #edf4f9 100%);
             --white: #ffffff;
-            --red: #c0392b;
-            --red-bg: #fdecea;
+
             --amber: #d97706;
             --amber-bg: #fef3c7;
-            --text-1: #0b1628;
-            --text-2: #2c3e5a;
-            --text-3: #5a6a85;
-            --text-4: #8a99b4;
-            --radius: 16px;
-            --shadow: 0 4px 20px rgba(11, 22, 40, 0.08);
-            --transition: 0.25s ease;
+            --amber-border: #fde68a;
+            --red: #dc2626;
+            --red-bg: #fee2e2;
+            --red-border: #fecaca;
+            --blue-bg: #e0f2fe;
+            --blue-text: #0369a1;
+
+            --container-max: 1400px;
+            --gutter: 32px;
+
+            --font-display: 'Space Grotesk', sans-serif;
+            --font-body: 'Plus Jakarta Sans', sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.07), 0 2px 4px -1px rgba(0,0,0,0.04);
+            --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.08), 0 4px 6px -2px rgba(0,0,0,0.03);
+            --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.08), 0 10px 10px -5px rgba(0,0,0,0.02);
+
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+            --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        @media (max-width: 1023px) {
+            :root { --gutter: 24px; }
+        }
+        @media (max-width: 767px) {
+            :root { --gutter: 16px; }
+        }
+        @media (max-width: 479px) {
+            :root { --gutter: 12px; }
         }
 
         html {
+            font-size: 16px;
             scroll-behavior: smooth;
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background: var(--off-white);
-            color: var(--text-1);
+            font-family: var(--font-body);
+            background: var(--bg-page);
+            color: var(--text-dark);
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
         }
 
-        /* fallback fonts if Inter/Barlow don't load */
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        .heading-font {
-            font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif;
-            font-weight: 700;
-            letter-spacing: -0.01em;
-            line-height: 1.2;
+        /* ─── CONTAINER CENTERING ─── */
+        .section-inner {
+            width: min(100% - (var(--gutter) * 2), var(--container-max));
+            margin-inline: auto;
         }
 
-        .mono {
-            font-family: 'IBM Plex Mono', 'Courier New', monospace;
-            font-weight: 500;
+        .content-container {
+            max-width: 1040px;
+            margin-inline: auto;
         }
 
         a {
-            color: var(--green-2);
+            color: var(--primary-green);
             text-decoration: none;
-            transition: color var(--transition);
+            transition: var(--transition);
         }
         a:hover {
-            color: var(--green);
+            color: var(--dark-green);
+            text-decoration: underline;
         }
 
-        img,
-        svg {
-            display: block;
-            max-width: 100%;
-        }
-
-        /* =============================================== */
-        /* CONTAINER & UTILITY                            */
-        /* =============================================== */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        .section-label {
-            display: inline-block;
-            font-size: 0.75rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            color: var(--green-2);
-            background: var(--green-pale);
-            padding: 4px 14px;
-            border-radius: 100px;
-            margin-bottom: 12px;
-        }
-
-        .section-title {
-            font-size: 2.2rem;
-            margin-bottom: 8px;
+        code, .mono-text {
+            font-family: var(--font-mono);
+            background: #f1f5f9;
             color: var(--navy);
-        }
-
-        .section-sub {
-            font-size: 1.1rem;
-            color: var(--text-3);
-            max-width: 720px;
+            padding: 2px 6px;
+            border-radius: var(--sp-4);
+            font-size: 0.88em;
         }
 
         /* =============================================== */
-        /* NAV                                            */
+        /* NAVIGATION BAR                                  */
         /* =============================================== */
-        .nav {
+        .site-nav {
             position: sticky;
             top: 0;
-            z-index: 100;
-            background: var(--navy);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-            padding: 12px 0;
+            z-index: 1000;
+            background: rgba(10, 41, 82, 0.96);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-block: var(--sp-12);
         }
 
-        .nav-inner {
+        .nav-wrapper {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 12px 20px;
+            gap: var(--sp-20);
         }
 
-        .nav-logo {
+        .nav-brand {
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: var(--sp-12);
             color: var(--white);
-            font-family: 'Barlow Condensed', sans-serif;
-            font-size: 1.6rem;
+            font-family: var(--font-display);
+            font-size: 1.4rem;
             font-weight: 700;
-            letter-spacing: 0.02em;
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+        .nav-brand:hover {
+            text-decoration: none;
+            color: var(--white);
         }
 
-        .nav-logo svg {
-            width: 36px;
-            height: 36px;
-            fill: var(--green-3);
-        }
-
-        .nav-links {
+        .brand-icon {
+            width: 34px;
+            height: 34px;
+            background: var(--primary-green);
+            border-radius: var(--radius-sm);
             display: flex;
             align-items: center;
-            gap: 8px 20px;
-            flex-wrap: wrap;
+            justify-content: center;
+            color: var(--white);
+            box-shadow: 0 2px 8px rgba(7, 141, 74, 0.4);
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: var(--sp-24);
             list-style: none;
         }
 
-        .nav-links a {
-            color: rgba(255, 255, 255, 0.75);
-            font-size: 0.9rem;
+        .nav-menu a {
+            color: rgba(255, 255, 255, 0.82);
+            font-size: 0.9375rem;
             font-weight: 500;
-            padding: 6px 0;
-            border-bottom: 2px solid transparent;
-            transition: color var(--transition), border-color var(--transition);
-        }
-
-        .nav-links a:hover,
-        .nav-links a.active {
-            color: var(--white);
-            border-bottom-color: var(--green-3);
-        }
-
-        .nav-cta {
-            background: var(--green-2);
-            color: var(--white) !important;
-            padding: 8px 18px !important;
-            border-radius: 100px;
-            border-bottom: none !important;
-            font-weight: 600;
-            transition: background var(--transition);
-        }
-
-        .nav-cta:hover {
-            background: var(--green);
-            color: var(--white) !important;
-        }
-
-        /* =============================================== */
-        /* HERO                                           */
-        /* =============================================== */
-        .hero {
-            background: var(--navy);
-            padding: 60px 0 50px;
-            border-bottom: 4px solid var(--green-2);
+            text-decoration: none;
+            padding-block: var(--sp-4);
             position: relative;
-            overflow: hidden;
         }
 
-        .hero::after {
+        .nav-menu a:hover,
+        .nav-menu a.active {
+            color: var(--white);
+            text-decoration: none;
+        }
+        .nav-menu a.active::after {
             content: '';
             position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--accent-green);
+            border-radius: 2px;
+        }
+
+        .nav-btn {
+            background: var(--primary-green);
+            color: var(--white) !important;
+            padding: var(--sp-8) var(--sp-20) !important;
+            border-radius: 100px;
+            font-weight: 600;
+            font-size: 0.9375rem;
+            box-shadow: 0 2px 10px rgba(7, 141, 74, 0.3);
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: var(--sp-8);
+        }
+        .nav-btn:hover {
+            background: var(--dark-green);
+            transform: translateY(-1px);
+            text-decoration: none !important;
+        }
+
+        @media (max-width: 991px) {
+            .nav-menu { display: none; }
+        }
+
+        /* =============================================== */
+        /* HERO SECTION                                    */
+        /* =============================================== */
+        .legal-hero {
+            background: linear-gradient(135deg, var(--dark-navy) 0%, var(--navy) 100%);
+            padding-block: var(--sp-64) var(--sp-56);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+            border-bottom: 4px solid var(--primary-green);
+        }
+
+        .hero-pattern {
+            position: absolute;
             inset: 0;
-            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            background-image: 
+                radial-gradient(circle at 15% 50%, rgba(7, 141, 74, 0.12) 0%, transparent 45%),
+                radial-gradient(circle at 85% 30%, rgba(16, 185, 129, 0.1) 0%, transparent 50%),
+                linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+            background-size: 100% 100%, 100% 100%, 32px 32px, 32px 32px;
             pointer-events: none;
         }
 
-        .hero-inner {
+        .hero-layout {
             position: relative;
-            z-index: 1;
+            z-index: 2;
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
+            grid-template-columns: 1fr auto;
+            gap: var(--sp-48);
             align-items: center;
         }
 
-        .hero-content h1 {
-            font-size: 3.2rem;
-            color: var(--white);
-            line-height: 1.1;
-            margin-bottom: 12px;
+        .hero-content {
+            max-width: 720px;
         }
 
-        .hero-content h1 em {
-            color: var(--green-3);
+        .badge-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--sp-8);
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: var(--sp-4) var(--sp-16);
+            border-radius: 100px;
+            font-size: 0.8125rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--mid-green);
+            margin-bottom: var(--sp-16);
+        }
+
+        .legal-hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2.25rem, 4vw, 3.25rem);
+            font-weight: 700;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            margin-bottom: var(--sp-16);
+            color: var(--white);
+        }
+
+        .legal-hero h1 em {
             font-style: normal;
+            color: var(--accent-green);
+            background: linear-gradient(120deg, #34d399, #10b981);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        .hero-content .tagline {
-            font-size: 1.15rem;
-            color: rgba(255, 255, 255, 0.75);
-            max-width: 540px;
-            margin-bottom: 20px;
+        .hero-tagline {
+            font-size: 1.125rem;
+            line-height: 1.6;
+            color: #cbd5e1;
+            margin-bottom: var(--sp-32);
         }
 
-        .hero-meta {
+        .hero-meta-strip {
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            gap: var(--sp-32);
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            padding-top: var(--sp-24);
+        }
+
+        .meta-stat {
             display: flex;
-            gap: 32px;
-            flex-wrap: wrap;
+            flex-direction: column;
+            gap: var(--sp-4);
         }
 
-        .hero-meta-item {
-            color: rgba(255, 255, 255, 0.65);
-            font-size: 0.9rem;
-        }
-
-        .hero-meta-item strong {
-            color: var(--white);
+        .meta-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #94a3b8;
             font-weight: 600;
-            display: block;
-            font-size: 1.2rem;
         }
 
-        .hero-visual {
+        .meta-value {
+            font-size: 1.0625rem;
+            font-weight: 700;
+            color: var(--white);
+            font-family: var(--font-display);
+        }
+
+        .hero-art-card {
+            width: 280px;
+            height: 280px;
+            background: rgba(14, 42, 71, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: var(--radius-xl);
             display: flex;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
+            padding: var(--sp-24);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            position: relative;
         }
 
-        .hero-visual svg {
+        .hero-art-card::before {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            border-radius: var(--radius-xl);
+            padding: 1px;
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.4), transparent);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+
+        .cookie-svg {
             width: 100%;
-            max-width: 380px;
-            height: auto;
+            height: 100%;
+            filter: drop-shadow(0 8px 16px rgba(7, 141, 74, 0.25));
         }
 
         @media (max-width: 900px) {
-            .hero-inner {
+            .hero-layout {
                 grid-template-columns: 1fr;
-                text-align: center;
             }
-            .hero-content .tagline {
-                margin-left: auto;
-                margin-right: auto;
-            }
-            .hero-meta {
-                justify-content: center;
-            }
-            .hero-content h1 {
-                font-size: 2.6rem;
-            }
-            .hero-visual svg {
-                max-width: 240px;
+            .hero-art-card {
+                display: none;
             }
         }
 
         @media (max-width: 600px) {
-            .hero {
-                padding: 40px 0 32px;
-            }
-            .hero-content h1 {
-                font-size: 2rem;
-            }
-            .hero-meta {
-                gap: 16px;
-                flex-direction: column;
-                align-items: center;
-            }
-            .hero-meta-item strong {
-                font-size: 1rem;
+            .hero-meta-strip {
+                grid-template-columns: 1fr;
+                gap: var(--sp-16);
             }
         }
 
         /* =============================================== */
-        /* MAIN CARDS                                     */
+        /* MAIN BODY & CONTENT CARDS                       */
         /* =============================================== */
-        main {
-            padding: 40px 0 60px;
+        .content-section {
+            padding-block: var(--sp-40);
         }
 
-        .card {
+        .glass-card,
+        .section-card {
             background: var(--white);
-            border-radius: var(--radius);
-            border: 1px solid rgba(11, 22, 40, 0.06);
-            box-shadow: var(--shadow);
-            padding: 40px 44px;
-            margin-bottom: 32px;
-            transition: box-shadow var(--transition);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
+            padding: var(--sp-40);
+            margin-bottom: var(--sp-32);
+            transition: var(--transition);
         }
 
-        .card:hover {
-            box-shadow: 0 8px 30px rgba(11, 22, 40, 0.10);
+        .glass-card:hover,
+        .section-card:hover {
+            box-shadow: var(--shadow-md);
+            border-color: #cbd5e1;
         }
 
-        .card .section-title {
-            font-size: 1.8rem;
-            margin-top: 4px;
+        .card-header-group {
+            margin-bottom: var(--sp-24);
         }
 
-        .card p,
-        .card li {
-            color: var(--text-2);
+        .category-pill {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--primary-green);
+            background: var(--light-green);
+            padding: var(--sp-4) var(--sp-12);
+            border-radius: 100px;
+            margin-bottom: var(--sp-8);
         }
 
-        .card ul,
-        .card ol {
-            padding-left: 24px;
-            margin: 12px 0 16px;
-        }
-
-        .card li {
-            margin-bottom: 6px;
-        }
-
-        .card strong {
+        .card-title {
+            font-family: var(--font-display);
+            font-size: 1.75rem;
+            font-weight: 700;
             color: var(--navy);
+            letter-spacing: -0.01em;
+            line-height: 1.25;
+            margin-bottom: var(--sp-8);
         }
 
-        /* sub-headings inside cards */
-        .card h3 {
-            font-family: 'Barlow Condensed', sans-serif;
-            font-size: 1.5rem;
+        .card-subtitle {
+            font-size: 1.0625rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .section-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin-top: var(--sp-32);
+            margin-bottom: var(--sp-8);
+            display: flex;
+            align-items: center;
+            gap: var(--sp-8);
+        }
+
+        .section-card h3:first-of-type {
+            margin-top: var(--sp-16);
+        }
+
+        .section-card p {
+            color: var(--text-dark);
+            margin-bottom: var(--sp-16);
+            line-height: 1.65;
+        }
+
+        .section-card ul,
+        .section-card ol {
+            padding-left: var(--sp-24);
+            margin-bottom: var(--sp-20);
+            color: var(--text-dark);
+        }
+
+        .section-card li {
+            margin-bottom: var(--sp-8);
+            line-height: 1.6;
+        }
+
+        .section-card strong {
+            color: var(--navy);
             font-weight: 600;
-            color: var(--navy);
-            margin: 28px 0 12px;
         }
 
-        .card h3:first-of-type {
-            margin-top: 8px;
+        .text-small {
+            font-size: 0.875rem;
         }
 
-        .card h4 {
-            font-family: 'Inter', sans-serif;
-            font-weight: 600;
-            font-size: 1.05rem;
-            color: var(--navy);
-            margin: 20px 0 8px;
+        .text-muted {
+            color: var(--text-muted);
+        }
+
+        .info-callout {
+            background: #f8fafc;
+            border-left: 4px solid var(--primary-green);
+            padding: var(--sp-16) var(--sp-20);
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            margin-block: var(--sp-16);
+            color: var(--text-dark);
+            font-size: 0.9375rem;
+        }
+
+        .info-callout p:last-child {
+            margin-bottom: 0;
         }
 
         /* =============================================== */
-        /* TABLES                                         */
+        /* MODERN TABLES                                   */
         /* =============================================== */
         .table-wrap {
             overflow-x: auto;
-            margin: 16px 0 8px;
-            border-radius: 12px;
-            border: 1px solid #eef2f7;
+            margin-block: var(--sp-16) var(--sp-20);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-color);
+            background: var(--white);
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 0.92rem;
-            min-width: 560px;
+            font-size: 0.9375rem;
+            text-align: left;
+            min-width: 580px;
         }
 
         thead {
@@ -637,240 +840,317 @@
         }
 
         thead th {
-            padding: 14px 16px;
-            text-align: left;
+            padding: var(--sp-12) var(--sp-16);
+            font-family: var(--font-display);
             font-weight: 600;
-            font-size: 0.8rem;
+            font-size: 0.8125rem;
             text-transform: uppercase;
-            letter-spacing: 0.04em;
+            letter-spacing: 0.05em;
+            color: #f1f5f9;
         }
 
         tbody tr {
-            border-bottom: 1px solid #edf0f5;
-            transition: background var(--transition);
+            border-bottom: 1px solid var(--border-subtle);
+            transition: background 0.15s ease;
+        }
+
+        tbody tr:last-child {
+            border-bottom: none;
         }
 
         tbody tr:hover {
-            background: #f8faff;
+            background: #f8fafc;
         }
 
         tbody td {
-            padding: 14px 16px;
-            vertical-align: top;
-            color: var(--text-2);
+            padding: var(--sp-12) var(--sp-16);
+            vertical-align: middle;
+            color: var(--text-dark);
         }
 
-        tbody td:first-child {
+        .cookie-cell {
+            font-family: var(--font-mono);
             font-weight: 600;
+            font-size: 0.875rem;
             color: var(--navy);
-            font-family: 'IBM Plex Mono', monospace;
-            font-size: 0.85rem;
         }
 
-        .badge {
+        .cookie-pill {
             display: inline-block;
-            font-size: 0.7rem;
+            background: #eff6ff;
+            color: #1e40af;
+            border: 1px solid #dbeafe;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-family: var(--font-mono);
+            font-size: 0.8125rem;
             font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.04em;
-            padding: 2px 12px;
-            border-radius: 100px;
-            background: var(--green-pale);
-            color: var(--green);
         }
 
-        .badge-necessary {
-            background: #eef2f7;
-            color: var(--text-3);
+        .badge-pill-table {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 2px 10px;
+            border-radius: 100px;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
         }
-        .badge-performance {
-            background: #e3f0ff;
-            color: #1a5a9c;
+
+        .badge-nec {
+            background: #f1f5f9;
+            color: #475569;
+            border: 1px solid #e2e8f0;
         }
-        .badge-functional {
-            background: #fef3c7;
-            color: #92400e;
+
+        .badge-perf {
+            background: var(--blue-bg);
+            color: var(--blue-text);
+            border: 1px solid #bae6fd;
+        }
+
+        .badge-func {
+            background: var(--amber-bg);
+            color: var(--amber);
+            border: 1px solid var(--amber-border);
         }
 
         /* =============================================== */
-        /* QUICK REFERENCE SUMMARY                        */
+        /* QUICK REFERENCE MATRIX                          */
         /* =============================================== */
         .summary-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 12px 32px;
-            margin: 16px 0 8px;
+            gap: var(--sp-16) var(--sp-32);
+            margin-block: var(--sp-20);
         }
 
         .summary-item {
             display: flex;
-            align-items: baseline;
-            gap: 8px;
-            padding: 8px 0;
-            border-bottom: 1px solid #f0f2f6;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: var(--sp-12) 0;
+            border-bottom: 1px solid var(--border-subtle);
+            gap: var(--sp-16);
         }
 
         .summary-item .q {
             font-weight: 600;
             color: var(--navy);
-            min-width: 140px;
-            font-size: 0.92rem;
+            font-size: 0.9375rem;
         }
 
         .summary-item .a {
-            color: var(--text-2);
-            font-size: 0.92rem;
+            color: var(--text-dark);
+            font-size: 0.9375rem;
+            text-align: right;
         }
 
-        .summary-item .a .yes {
-            color: var(--green);
-            font-weight: 600;
-        }
-        .summary-item .a .no {
-            color: var(--red);
-            font-weight: 600;
-        }
-
-        @media (max-width: 600px) {
-            .summary-grid {
-                grid-template-columns: 1fr;
-                gap: 4px;
-            }
-            .summary-item .q {
-                min-width: auto;
-            }
-        }
-
-        /* =============================================== */
-        /* FINAL CTA                                      */
-        /* =============================================== */
-        .final-cta {
-            background: var(--navy);
-            border-radius: var(--radius);
-            padding: 48px 44px;
-            text-align: center;
-            margin-top: 12px;
-        }
-
-        .final-cta .eyebrow {
-            color: var(--green-3);
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            font-weight: 600;
-        }
-
-        .final-cta h2 {
-            font-size: 2.2rem;
-            color: var(--white);
-            margin: 8px 0 12px;
-        }
-
-        .final-cta p {
-            color: rgba(255, 255, 255, 0.7);
-            max-width: 560px;
-            margin: 0 auto 24px;
-        }
-
-        .btn-primary {
+        .status-pill {
             display: inline-flex;
             align-items: center;
-            gap: 10px;
-            background: var(--green-2);
-            color: var(--white);
-            font-weight: 600;
-            font-size: 1rem;
-            padding: 14px 34px;
-            border-radius: 100px;
-            border: none;
-            cursor: pointer;
-            transition: background var(--transition), transform 0.15s;
+            gap: 4px;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-size: 0.8125rem;
+            margin-right: 4px;
         }
 
-        .btn-primary:hover {
-            background: var(--green);
+        .status-pill.yes {
+            background: var(--mid-green);
+            color: var(--dark-green);
+        }
+
+        .status-pill.no {
+            background: var(--red-bg);
+            color: var(--red);
+        }
+
+        @media (max-width: 680px) {
+            .summary-grid {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+            .summary-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: var(--sp-4);
+            }
+            .summary-item .a {
+                text-align: left;
+            }
+        }
+
+        /* =============================================== */
+        /* FINAL CONVERSION CTA                            */
+        /* =============================================== */
+        .final-cta-card {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--dark-navy) 100%);
+            border-radius: var(--radius-lg);
+            padding: var(--sp-48) var(--sp-40);
+            text-align: center;
+            color: var(--white);
+            margin-top: var(--sp-16);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .final-cta-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(circle at 50% 0%, rgba(7, 141, 74, 0.25) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .final-cta-card .eyebrow {
+            color: var(--accent-green);
+            font-size: 0.8125rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 700;
+            display: block;
+            margin-bottom: var(--sp-8);
+        }
+
+        .final-cta-card h2 {
+            font-family: var(--font-display);
+            font-size: clamp(1.75rem, 3vw, 2.25rem);
+            color: var(--white);
+            font-weight: 700;
+            margin-bottom: var(--sp-12);
+        }
+
+        .final-cta-card p {
+            color: #cbd5e1;
+            max-width: 580px;
+            margin-inline: auto;
+            margin-bottom: var(--sp-24);
+            font-size: 1.0625rem;
+        }
+
+        .cta-btn-large {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--sp-12);
+            background: var(--primary-green);
+            color: var(--white);
+            font-weight: 700;
+            font-size: 1.0625rem;
+            padding: var(--sp-16) var(--sp-32);
+            border-radius: 100px;
+            text-decoration: none;
+            box-shadow: 0 4px 14px rgba(7, 141, 74, 0.4);
+            transition: var(--transition);
+        }
+
+        .cta-btn-large:hover {
+            background: var(--dark-green);
             color: var(--white);
             transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(7, 141, 74, 0.5);
+            text-decoration: none;
         }
 
-        .btn-primary svg {
+        .cta-btn-large svg {
             width: 20px;
             height: 20px;
-            fill: currentColor;
-            flex-shrink: 0;
+            transition: transform 0.2s;
+        }
+
+        .cta-btn-large:hover svg {
+            transform: translateX(3px);
         }
 
         /* =============================================== */
-        /* FOOTER                                         */
+        /* FOOTER                                          */
         /* =============================================== */
-        footer {
-            background: var(--navy-2);
-            color: rgba(255, 255, 255, 0.65);
-            padding: 40px 0 28px;
-            border-top: 2px solid rgba(255, 255, 255, 0.05);
-            margin-top: 20px;
+        .site-footer {
+            background: var(--dark-navy);
+            color: #94a3b8;
+            padding-block: var(--sp-56) var(--sp-32);
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            margin-top: var(--sp-40);
         }
 
         .footer-grid {
             display: grid;
             grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 32px;
-            padding-bottom: 28px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-            margin-bottom: 24px;
+            gap: var(--sp-40);
+            padding-bottom: var(--sp-40);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            margin-bottom: var(--sp-24);
         }
 
-        .footer-brand .nav-logo {
-            font-size: 1.4rem;
-            margin-bottom: 8px;
+        .footer-brand .nav-brand {
+            font-size: 1.35rem;
+            margin-bottom: var(--sp-12);
         }
 
         .footer-brand p {
-            font-size: 0.9rem;
-            max-width: 300px;
-            color: rgba(255, 255, 255, 0.55);
+            font-size: 0.9375rem;
+            line-height: 1.6;
+            color: #94a3b8;
+            max-width: 320px;
         }
 
         .footer-col h4 {
             color: var(--white);
-            font-family: 'Inter', sans-serif;
-            font-weight: 600;
-            font-size: 0.95rem;
-            margin-bottom: 12px;
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: var(--sp-16);
+            letter-spacing: -0.01em;
         }
 
         .footer-col ul {
             list-style: none;
             padding: 0;
+            margin: 0;
         }
 
-        .footer-col ul li {
-            margin-bottom: 6px;
+        .footer-col li {
+            margin-bottom: var(--sp-8);
         }
 
-        .footer-col ul a {
-            color: rgba(255, 255, 255, 0.6);
-            font-size: 0.9rem;
-            transition: color var(--transition);
+        .footer-col a {
+            color: #94a3b8;
+            font-size: 0.9375rem;
+            transition: var(--transition);
         }
 
-        .footer-col ul a:hover {
+        .footer-col a:hover,
+        .footer-col a.active {
             color: var(--white);
+            text-decoration: none;
         }
 
         .footer-bottom {
             display: flex;
+            align-items: center;
             justify-content: space-between;
             flex-wrap: wrap;
-            gap: 12px;
-            font-size: 0.85rem;
-            color: rgba(255, 255, 255, 0.4);
+            gap: var(--sp-16);
+            font-size: 0.875rem;
+            color: #64748b;
         }
 
-        .footer-bottom a {
-            color: rgba(255, 255, 255, 0.5);
+        .footer-bottom-links {
+            display: flex;
+            align-items: center;
+            gap: var(--sp-16);
         }
-        .footer-bottom a:hover {
+
+        .footer-bottom-links a {
+            color: #94a3b8;
+        }
+        .footer-bottom-links a:hover {
             color: var(--white);
         }
 
@@ -883,303 +1163,435 @@
         @media (max-width: 600px) {
             .footer-grid {
                 grid-template-columns: 1fr;
-                gap: 24px;
-            }
-            .footer-brand p {
-                max-width: 100%;
+                gap: var(--sp-32);
             }
             .footer-bottom {
                 flex-direction: column;
-                align-items: center;
                 text-align: center;
             }
-            .card {
-                padding: 24px 18px;
-            }
-            .final-cta {
-                padding: 32px 20px;
-            }
-            .final-cta h2 {
-                font-size: 1.6rem;
-            }
         }
 
         /* =============================================== */
-        /* MISC HELPERS                                   */
+        /* MOBILE CARD UNWRAP RULE                         */
         /* =============================================== */
-        .mt-8 {
-            margin-top: 8px;
-        }
-        .mt-16 {
-            margin-top: 16px;
-        }
-        .mb-8 {
-            margin-bottom: 8px;
-        }
-        .text-muted {
-            color: var(--text-3);
-            font-size: 0.92rem;
-        }
-        .text-small {
-            font-size: 0.85rem;
-        }
-        .flex {
-            display: flex;
-        }
-        .flex-center {
-            align-items: center;
-            gap: 6px;
-        }
-        .gap-8 {
-            gap: 8px;
-        }
+        @media (max-width: 767px) {
+            .content-section {
+                padding-block: var(--sp-4);
+            }
 
-        .inline-svg {
-            display: inline-block;
-            vertical-align: middle;
-            flex-shrink: 0;
+            .glass-card,
+            .section-card {
+                background: transparent !important;
+                border: none !important;
+                border-radius: 0 !important;
+                box-shadow: none !important;
+                padding: 16px 0 !important;
+                margin-bottom: var(--sp-16);
+            }
+
+            .card-title {
+                font-size: 1.5rem;
+            }
+
+            .final-cta-card {
+                padding: var(--sp-32) var(--sp-20);
+                border-radius: var(--radius-md);
+            }
         }
-    </style>
-    <link rel="stylesheet" href="/static-nav.css?v=2" data-em-static-nav />
+    
+@media (max-width: 1199px) { :root { --gutter: 24px; } }
+@media (max-width: 767px)  { :root { --gutter: 16px; } }
+@media (max-width: 479px)  { :root { --gutter: 12px; } }
+
+/* ─── UNIVERSAL SECTION CENTERING (matches hero container system) ─── */
+.section-inner,
+.container,
+.section-container,
+.hero-inner,
+.content-container,
+main.container,
+main.section-inner,
+main.page-container {
+  width: min(100% - (var(--gutter) * 2), var(--container-max)) !important;
+  max-width: var(--container-max) !important;
+  margin-inline: auto !important;
+}
+
+.page-content-wrap,
+.page-content-wrapper,
+.content-wrap,
+.content-area,
+.content-main {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* ─── STANDARDIZED SVG SYSTEM ─── */
+button svg,
+.btn svg,
+a[class*="btn"] svg,
+.btn-primary svg,
+.btn-final-large svg,
+.btn-warning-action svg,
+.header-cta svg,
+.nav-cta-btn svg,
+.submit-btn svg,
+.fc-action-side svg,
+.final-cta svg {
+  width: 16px !important;
+  height: 16px !important;
+  max-width: 16px !important;
+  max-height: 16px !important;
+  flex-shrink: 0 !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+}
+
+.svg-icon-xs { width: 14px !important; height: 14px !important; flex-shrink: 0 !important; }
+.svg-icon-sm { width: 16px !important; height: 16px !important; flex-shrink: 0 !important; }
+.svg-icon-md { width: 20px !important; height: 20px !important; flex-shrink: 0 !important; }
+.svg-icon-lg { width: 24px !important; height: 24px !important; flex-shrink: 0 !important; }
+.svg-icon-xl { width: 32px !important; height: 32px !important; flex-shrink: 0 !important; }
+
+</style>
 </head>
 
 <body>
-    <!-- ============================================= -->
-    <!-- NAV                                          -->
-    <!-- ============================================= -->
-    <nav class="nav">
-        <div class="container nav-inner">
-            <a href="/" class="nav-logo">
-                <!-- simple engine block SVG -->
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="4" y="6" width="16" height="12" rx="2" />
-                    <path d="M8 6V4h8v2" />
-                    <path d="M10 10h4" />
-                    <path d="M10 14h4" />
-                    <circle cx="12" cy="10" r="1" fill="currentColor" />
-                    <circle cx="12" cy="14" r="1" fill="currentColor" />
-                </svg>
-                Engines Market
-            </a>
-            <ul class="nav-links">
-                <li><a href="/about">About</a></li>
-                <li><a href="/how-it-works">How it works</a></li>
-                <li><a href="/supplier-standards">Supplier standards</a></li>
-                <li><a href="/prices/engine-replacement-cost">Prices</a></li>
-                <li><a href="/contact">Contact</a></li>
-                <li><a href="/get-a-quote" class="nav-cta">Get a quote</a></li>
-            </ul>
-        </div>
-    </nav>
 
     <!-- ============================================= -->
-    <!-- HERO                                         -->
+    <!-- SITE NAVIGATION                               -->
     <!-- ============================================= -->
-    <section class="hero">
-        <div class="container hero-inner">
+    <header>
+        <nav class="site-nav" aria-label="Main Navigation">
+            <div class="section-inner nav-wrapper">
+                <a href="/" class="nav-brand" aria-label="Engines Market Homepage">
+                    <span class="brand-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="4" y="6" width="16" height="12" rx="2" />
+                            <path d="M8 6V4h8v2" />
+                            <path d="M10 10h4" />
+                            <path d="M10 14h4" />
+                            <circle cx="12" cy="10" r="1" fill="currentColor" />
+                            <circle cx="12" cy="14" r="1" fill="currentColor" />
+                        </svg>
+                    </span>
+                    Engines Market
+                </a>
+
+                <ul class="nav-menu">
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/how-it-works">How it works</a></li>
+                    <li><a href="/supplier-standards">Supplier standards</a></li>
+                    <li><a href="/prices/engine-replacement-cost">Prices</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/get-a-quote" class="nav-btn">Get a quote</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ============================================= -->
+    <!-- HERO SECTION                                  -->
+    <!-- ============================================= -->
+    <section class="legal-hero" aria-labelledby="hero-title">
+        <div class="hero-pattern"></div>
+        <div class="section-inner hero-layout">
             <div class="hero-content">
-                <span class="section-label" style="background:rgba(255,255,255,0.08);color:var(--green-3);">Legal</span>
-                <h1>Cookie <em>Policy</em></h1>
-                <p class="tagline">
+                <span class="badge-pill">
+                    <svg class="svg-icon-sm" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                    Legal
+                </span>
+                <h1 id="hero-title">Cookie <em>Policy</em></h1>
+                <p class="hero-tagline">
                     We use cookies to make our Platform work, to understand how you use it, and to remember your preferences.
                     Learn what we collect and how you stay in control.
                 </p>
-                <div class="hero-meta">
-                    <div class="hero-meta-item">
-                        <strong>Effective</strong>
-                        1 June 2026
+
+                <div class="hero-meta-strip">
+                    <div class="meta-stat">
+                        <span class="meta-label">Effective</span>
+                        <span class="meta-value">1 June 2026</span>
                     </div>
-                    <div class="hero-meta-item">
-                        <strong>Last updated</strong>
-                        13 June 2026
+                    <div class="meta-stat">
+                        <span class="meta-label">Last updated</span>
+                        <span class="meta-value">13 June 2026</span>
                     </div>
-                    <div class="hero-meta-item">
-                        <strong>Compliance</strong>
-                        UK GDPR &amp; PECR
+                    <div class="meta-stat">
+                        <span class="meta-label">Compliance</span>
+                        <span class="meta-value">UK GDPR &amp; PECR</span>
                     </div>
                 </div>
             </div>
-            <div class="hero-visual">
-                <!-- cookie / shield illustration (pure SVG) -->
-                <svg viewBox="0 0 200 160" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="40" y="30" width="120" height="100" rx="16" fill="#1A6B3C" fill-opacity="0.15" stroke="#22A05A" stroke-width="2" />
-                    <circle cx="100" cy="80" r="44" fill="#fff" fill-opacity="0.08" stroke="#22A05A" stroke-width="2" stroke-dasharray="4 4" />
-                    <circle cx="100" cy="80" r="28" fill="#22A05A" fill-opacity="0.12" stroke="#22A05A" stroke-width="1.5" />
-                    <path d="M100 52v56M72 80h56" stroke="#22A05A" stroke-width="2" stroke-linecap="round" />
-                    <circle cx="82" cy="68" r="5" fill="#2ecc76" fill-opacity="0.5" />
-                    <circle cx="118" cy="68" r="5" fill="#2ecc76" fill-opacity="0.5" />
-                    <circle cx="82" cy="92" r="5" fill="#2ecc76" fill-opacity="0.5" />
-                    <circle cx="118" cy="92" r="5" fill="#2ecc76" fill-opacity="0.5" />
-                    <circle cx="100" cy="80" r="4" fill="#2ecc76" fill-opacity="0.7" />
-                    <path d="M60 130L80 150L140 110" stroke="#2ecc76" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-                    <rect x="150" y="40" width="12" height="12" rx="2" fill="#e8f5ee" stroke="#22A05A" stroke-width="1.5" />
-                    <rect x="160" y="60" width="10" height="10" rx="2" fill="#e8f5ee" stroke="#22A05A" stroke-width="1.5" />
-                    <rect x="148" y="80" width="14" height="14" rx="2" fill="#e8f5ee" stroke="#22A05A" stroke-width="1.5" />
+
+            <div class="hero-art-card" aria-hidden="true">
+                <svg class="cookie-svg" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Shield outline -->
+                    <path d="M100 20L160 50V110C160 150 100 180 100 180C100 180 40 150 40 110V50L100 20Z" fill="#0e2a47" stroke="#10b981" stroke-width="2" stroke-linejoin="round"/>
+                    
+                    <!-- Cookie Body -->
+                    <circle cx="100" cy="105" r="42" fill="#078d4a" fill-opacity="0.2" stroke="#10b981" stroke-width="2" stroke-dasharray="4 4" />
+                    <circle cx="100" cy="105" r="32" fill="#078d4a" fill-opacity="0.3" stroke="#34d399" stroke-width="1.5" />
+                    
+                    <!-- Chocolate chips / cookie nodes -->
+                    <circle cx="86" cy="95" r="5" fill="#34d399" />
+                    <circle cx="114" cy="95" r="5" fill="#34d399" />
+                    <circle cx="88" cy="118" r="4" fill="#34d399" />
+                    <circle cx="114" cy="118" r="4" fill="#34d399" />
+                    <circle cx="100" cy="105" r="3.5" fill="#34d399" />
+                    
+                    <!-- Verification Badge Check -->
+                    <circle cx="150" cy="50" r="16" fill="#078d4a" stroke="#fff" stroke-width="2" />
+                    <path d="M143 50L148 55L158 45" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
             </div>
         </div>
     </section>
 
     <!-- ============================================= -->
-    <!-- MAIN CONTENT                                 -->
+    <!-- MAIN CONTENT SECTION                          -->
     <!-- ============================================= -->
-    <main>
-        <div class="container">
+    <main class="content-section">
+        <div class="section-inner content-container">
 
-            <!-- 1. What are cookies- -->
-            <section class="card">
-                <span class="section-label">Introduction</span>
-                <h2 class="section-title">What are cookies-</h2>
-                <p class="section-sub">
-                    Cookies are small text files placed on your device when you visit a website. They help us make the Platform work,
-                    remember your choices, and understand how visitors interact with our pages.
-                </p>
-                <p style="margin-top:12px;">
+            <!-- 1. Introduction -->
+            <section class="section-card glass-card" aria-labelledby="section-1-title">
+                <div class="card-header-group">
+                    <span class="category-pill">Introduction</span>
+                    <h2 class="card-title" id="section-1-title">What are cookies?</h2>
+                    <p class="card-subtitle">
+                        Cookies are small text files placed on your device when you visit a website. They help us make the Platform work,
+                        remember your choices, and understand how visitors interact with our pages.
+                    </p>
+                </div>
+
+                <p>
                     Cookies are <strong>not</strong> viruses or spyware. They cannot access your hard drive or personal information
                     that you haven't already provided. Most cookies are <em>session cookies</em> (deleted when you close your browser)
                     or <em>persistent cookies</em> (remain for a set period).
                 </p>
-                <p class="text-muted text-small" style="margin-top:8px;">
-                    We also use similar technologies such as local storage and pixel tags - but for simplicity,
-                    we refer to all of them as “cookies” in this policy.
-                </p>
+                <div class="info-callout">
+                    <p class="text-small text-muted">
+                        We also use similar technologies such as local storage and pixel tags &mdash; but for simplicity,
+                        we refer to all of them as &ldquo;cookies&rdquo; in this policy.
+                    </p>
+                </div>
             </section>
 
-            <!-- 2. Types of cookies (tables) -->
-            <section class="card">
-                <span class="section-label">Cookie categories</span>
-                <h2 class="section-title">Types of cookies we use</h2>
-                <p class="section-sub">
-                    We classify cookies into the following categories. The tables below list the specific cookies
-                    currently used on the Engines Market Platform.
-                </p>
+            <!-- 2. Types of cookies we use -->
+            <section class="section-card glass-card" aria-labelledby="section-2-title">
+                <div class="card-header-group">
+                    <span class="category-pill">Cookie Categories</span>
+                    <h2 class="card-title" id="section-2-title">Types of cookies we use</h2>
+                    <p class="card-subtitle">
+                        We classify cookies into the following categories. The tables below list the specific cookies
+                        currently used on the Engines Market Platform.
+                    </p>
+                </div>
 
-                <!-- Strictly Necessary -->
+                <!-- 2.1 Strictly Necessary -->
                 <h3>2.1 Strictly Necessary</h3>
                 <p class="text-muted text-small">Essential for the Platform to function. You cannot opt out of these.</p>
                 <div class="table-wrap">
                     <table>
                         <thead>
-                            <tr><th>Cookie name</th><th>Purpose</th><th>Duration</th><th>Provider</th></tr>
+                            <tr>
+                                <th>Cookie name</th>
+                                <th>Purpose</th>
+                                <th>Duration</th>
+                                <th>Provider</th>
+                            </tr>
                         </thead>
                         <tbody>
-                            <tr><td>session_id</td><td>Maintains your session while you navigate the Platform.</td><td>Session</td><td>Engines Market</td></tr>
-                            <tr><td>csrf_token</td><td>Protects against cross-site request forgery attacks.</td><td>Session</td><td>Engines Market</td></tr>
-                            <tr><td>cookie_consent</td><td>Remembers your cookie preference choices.</td><td>12 months</td><td>Engines Market</td></tr>
-                            <tr><td>load_balancer_route</td><td>Routes requests to the correct server.</td><td>Session</td><td>Engines Market / hosting provider</td></tr>
+                            <tr>
+                                <td><span class="cookie-cell">session_id</span></td>
+                                <td>Maintains your session while you navigate the Platform.</td>
+                                <td><span class="badge-pill-table badge-nec">Session</span></td>
+                                <td>Engines Market</td>
+                            </tr>
+                            <tr>
+                                <td><span class="cookie-cell">csrf_token</span></td>
+                                <td>Protects against cross-site request forgery attacks.</td>
+                                <td><span class="badge-pill-table badge-nec">Session</span></td>
+                                <td>Engines Market</td>
+                            </tr>
+                            <tr>
+                                <td><span class="cookie-cell">cookie_consent</span></td>
+                                <td>Remembers your cookie preference choices.</td>
+                                <td><span class="badge-pill-table badge-nec">12 months</span></td>
+                                <td>Engines Market</td>
+                            </tr>
+                            <tr>
+                                <td><span class="cookie-cell">load_balancer_route</span></td>
+                                <td>Routes requests to the correct server.</td>
+                                <td><span class="badge-pill-table badge-nec">Session</span></td>
+                                <td>Engines Market / hosting provider</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
 
-                <!-- Performance / Analytics -->
+                <!-- 2.2 Performance / Analytics -->
                 <h3>2.2 Performance / Analytics</h3>
                 <p class="text-muted text-small">Collect aggregated, anonymised data to help us improve the Platform. You can opt out.</p>
                 <div class="table-wrap">
                     <table>
                         <thead>
-                            <tr><th>Cookie name</th><th>Purpose</th><th>Duration</th><th>Provider</th></tr>
+                            <tr>
+                                <th>Cookie name</th>
+                                <th>Purpose</th>
+                                <th>Duration</th>
+                                <th>Provider</th>
+                            </tr>
                         </thead>
                         <tbody>
-                            <tr><td>_ga</td><td>Google Analytics - distinguishes unique users.</td><td>2 years</td><td>Google Analytics</td></tr>
-                            <tr><td>_ga_&lt;container-id&gt;</td><td>Persists session state.</td><td>2 years</td><td>Google Analytics</td></tr>
-                            <tr><td>_gid</td><td>Distinguishes users (24 hour expiry).</td><td>24 hours</td><td>Google Analytics</td></tr>
-                            <tr><td>_gat</td><td>Throttles request rate.</td><td>1 minute</td><td>Google Analytics</td></tr>
+                            <tr>
+                                <td><span class="cookie-cell">_ga</span></td>
+                                <td>Google Analytics - distinguishes unique users.</td>
+                                <td><span class="badge-pill-table badge-perf">2 years</span></td>
+                                <td>Google Analytics</td>
+                            </tr>
+                            <tr>
+                                <td><span class="cookie-cell">_ga_&lt;container-id&gt;</span></td>
+                                <td>Persists session state.</td>
+                                <td><span class="badge-pill-table badge-perf">2 years</span></td>
+                                <td>Google Analytics</td>
+                            </tr>
+                            <tr>
+                                <td><span class="cookie-cell">_gid</span></td>
+                                <td>Distinguishes users (24 hour expiry).</td>
+                                <td><span class="badge-pill-table badge-perf">24 hours</span></td>
+                                <td>Google Analytics</td>
+                            </tr>
+                            <tr>
+                                <td><span class="cookie-cell">_gat</span></td>
+                                <td>Throttles request rate.</td>
+                                <td><span class="badge-pill-table badge-perf">1 minute</span></td>
+                                <td>Google Analytics</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
-                <p class="text-small text-muted" style="margin-top:6px;">
-                    IP addresses are anonymised (truncated) before storage. We do not allow Google to use our analytics data
-                    for any purpose other than providing reports to us.
-                </p>
+                <div class="info-callout">
+                    <p class="text-small text-muted">
+                        IP addresses are anonymised (truncated) before storage. We do not allow Google to use our analytics data
+                        for any purpose other than providing reports to us.
+                    </p>
+                </div>
 
-                <!-- Functional -->
+                <!-- 2.3 Functional -->
                 <h3>2.3 Functional</h3>
-                <p class="text-muted text-small">Enable enhanced features - you can decline these via our cookie banner.</p>
+                <p class="text-muted text-small">Enable enhanced features &mdash; you can decline these via our cookie banner.</p>
                 <div class="table-wrap">
                     <table>
                         <thead>
-                            <tr><th>Cookie name</th><th>Purpose</th><th>Duration</th><th>Provider</th></tr>
+                            <tr>
+                                <th>Cookie name</th>
+                                <th>Purpose</th>
+                                <th>Duration</th>
+                                <th>Provider</th>
+                            </tr>
                         </thead>
                         <tbody>
-                            <tr><td>recent_vehicle_reg</td><td>Remembers your previously entered registration number to pre-fill forms.</td><td>30 days</td><td>Engines Market</td></tr>
-                            <tr><td>preferred_location</td><td>Remembers your postcode or city for local Supplier searches.</td><td>30 days</td><td>Engines Market</td></tr>
+                            <tr>
+                                <td><span class="cookie-cell">recent_vehicle_reg</span></td>
+                                <td>Remembers your previously entered registration number to pre-fill forms.</td>
+                                <td><span class="badge-pill-table badge-func">30 days</span></td>
+                                <td>Engines Market</td>
+                            </tr>
+                            <tr>
+                                <td><span class="cookie-cell">preferred_location</span></td>
+                                <td>Remembers your postcode or city for local Supplier searches.</td>
+                                <td><span class="badge-pill-table badge-func">30 days</span></td>
+                                <td>Engines Market</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
 
-                <!-- Targeting / Advertising -->
+                <!-- 2.4 Targeting / Advertising -->
                 <h3>2.4 Targeting / Advertising</h3>
-                <p style="color:var(--text-2);">
+                <p>
                     We <strong>do not currently use</strong> any targeting or advertising cookies. We do not serve personalised ads
                     based on your browsing behaviour across other websites. We do not use Facebook Pixel, Google Ads Remarketing,
                     or similar technologies at this time.
                 </p>
-                <p class="text-small text-muted" style="margin-top:6px;">
+                <p class="text-small text-muted">
                     If we ever introduce advertising cookies in the future, we will update this policy, notify you via our cookie banner,
                     and require explicit consent before placing any such cookies.
                 </p>
             </section>
 
             <!-- 3. Third-party cookies -->
-            <section class="card">
-                <h2 class="section-title">Third-party cookies</h2>
-                <p class="section-sub">
-                    Some cookies are placed by third-party services we use. These third parties have their own privacy and cookie policies.
-                </p>
-                <div class="table-wrap" style="margin-top:12px;">
+            <section class="section-card glass-card" aria-labelledby="section-3-title">
+                <div class="card-header-group">
+                    <span class="category-pill">Third Parties</span>
+                    <h2 class="card-title" id="section-3-title">Third-party cookies</h2>
+                    <p class="card-subtitle">
+                        Some cookies are placed by third-party services we use. These third parties have their own privacy and cookie policies.
+                    </p>
+                </div>
+
+                <div class="table-wrap">
                     <table>
                         <thead>
-                            <tr><th>Third party</th><th>Purpose</th><th>How to opt out</th></tr>
+                            <tr>
+                                <th>Third party</th>
+                                <th>Purpose</th>
+                                <th>How to opt out</th>
+                            </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Google Analytics</td>
+                                <td><strong>Google Analytics</strong></td>
                                 <td>Website analytics (performance cookies)</td>
                                 <td>Use our cookie banner to reject analytics cookies, or install the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics Opt-out Browser Add-on</a>.</td>
                             </tr>
                             <tr>
-                                <td>DVLA vehicle lookup API</td>
+                                <td><strong>DVLA vehicle lookup API</strong></td>
                                 <td>No cookies - API call only</td>
                                 <td>Not applicable</td>
                             </tr>
                             <tr>
-                                <td>Trustpilot (widget)</td>
+                                <td><strong>Trustpilot (widget)</strong></td>
                                 <td>Displays our Trustpilot rating and reviews (may set cookies if you interact with the widget)</td>
                                 <td>Manage via our cookie banner or your browser settings</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-                <p class="text-small text-muted" style="margin-top:6px;">
-                    Trustpilot may set its own functional or performance cookies when the widget loads. We do not control these,
-                    but you can block them by declining third-party cookies in your browser settings.
-                </p>
+                <div class="info-callout">
+                    <p class="text-small text-muted">
+                        Trustpilot may set its own functional or performance cookies when the widget loads. We do not control these,
+                        but you can block them by declining third-party cookies in your browser settings.
+                    </p>
+                </div>
             </section>
 
-            <!-- 4. Consent and management -->
-            <section class="card">
-                <h2 class="section-title">Consent and how to manage cookies</h2>
+            <!-- 4. Consent and how to manage cookies -->
+            <section class="section-card glass-card" aria-labelledby="section-4-title">
+                <div class="card-header-group">
+                    <span class="category-pill">User Controls</span>
+                    <h2 class="card-title" id="section-4-title">Consent and how to manage cookies</h2>
+                </div>
 
                 <h3>4.1 Our cookie consent banner</h3>
-                <p>
-                    When you first visit our Platform, a cookie banner will appear. The banner allows you to:
-                </p>
+                <p>When you first visit our Platform, a cookie banner will appear. The banner allows you to:</p>
                 <ul>
-                    <li><strong>Accept all</strong> cookies (strictly necessary + performance + functional - we do not have targeting cookies).</li>
+                    <li><strong>Accept all</strong> cookies (strictly necessary + performance + functional &mdash; we do not have targeting cookies).</li>
                     <li><strong>Reject non-essential</strong> cookies (accept only strictly necessary).</li>
                     <li><strong>Customise</strong> your preferences (choose which categories to accept).</li>
                 </ul>
                 <p>
                     Your preference is stored in the <code>cookie_consent</code> cookie. You can change your preference at any time
-                    by clicking the “Cookie Preferences” link in the footer.
+                    by clicking the &ldquo;Cookie Preferences&rdquo; link in the footer.
                 </p>
 
                 <h3>4.2 Withdrawing consent</h3>
-                <p>
-                    You may withdraw your consent to non-essential cookies at any time by:
-                </p>
+                <p>You may withdraw your consent to non-essential cookies at any time by:</p>
                 <ul>
-                    <li>Clicking “Cookie Preferences” in the footer and adjusting your settings.</li>
+                    <li>Clicking &ldquo;Cookie Preferences&rdquo; in the footer and adjusting your settings.</li>
                     <li>Clearing your browser cookies (this will reset your preference).</li>
                     <li>Changing your browser settings to block cookies (see section 4.3 below).</li>
                 </ul>
@@ -1188,44 +1600,66 @@
                 </p>
 
                 <h3>4.3 Managing cookies via your browser</h3>
-                <p>
-                    Most web browsers allow you to control cookies through their settings. You can:
-                </p>
+                <p>Most web browsers allow you to control cookies through their settings. You can:</p>
                 <ul>
-                    <li>Block all cookies (including strictly necessary ones) - but note that our Platform may not function properly.</li>
+                    <li>Block all cookies (including strictly necessary ones) &mdash; but note that our Platform may not function properly.</li>
                     <li>Block third-party cookies only.</li>
                     <li>Delete existing cookies.</li>
                     <li>Set your browser to alert you when a cookie is placed.</li>
                 </ul>
-                <div class="table-wrap" style="margin-top:8px;">
+
+                <div class="table-wrap">
                     <table>
-                        <thead><tr><th>Browser</th><th>How to manage cookies</th></tr></thead>
+                        <thead>
+                            <tr>
+                                <th>Browser</th>
+                                <th>How to manage cookies</th>
+                            </tr>
+                        </thead>
                         <tbody>
-                            <tr><td>Google Chrome</td><td>Settings → Privacy and security → Cookies and other site data</td></tr>
-                            <tr><td>Mozilla Firefox</td><td>Options → Privacy &amp; Security → Cookies and Site Data</td></tr>
-                            <tr><td>Apple Safari</td><td>Preferences → Privacy → Cookies and website data</td></tr>
-                            <tr><td>Microsoft Edge</td><td>Settings → Site permissions → Cookies and site data</td></tr>
-                            <tr><td>Opera</td><td>Settings → Privacy &amp; security → Cookies</td></tr>
+                            <tr>
+                                <td><strong>Google Chrome</strong></td>
+                                <td>Settings &rarr; Privacy and security &rarr; Cookies and other site data</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Mozilla Firefox</strong></td>
+                                <td>Options &rarr; Privacy &amp; Security &rarr; Cookies and Site Data</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Apple Safari</strong></td>
+                                <td>Preferences &rarr; Privacy &rarr; Cookies and website data</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Microsoft Edge</strong></td>
+                                <td>Settings &rarr; Site permissions &rarr; Cookies and site data</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Opera</strong></td>
+                                <td>Settings &rarr; Privacy &amp; security &rarr; Cookies</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
-                <p class="text-small text-muted" style="margin-top:6px;">
-                    You can also use the <a href="https://www.youronlinechoices.com/uk/" target="_blank" rel="noopener">Your Online Choices</a>
-                    tool to opt out of interest-based advertising from participating companies.
-                </p>
+                <div class="info-callout">
+                    <p class="text-small text-muted">
+                        You can also use the <a href="https://www.youronlinechoices.com/uk/" target="_blank" rel="noopener">Your Online Choices</a>
+                        tool to opt out of interest-based advertising from participating companies.
+                    </p>
+                </div>
             </section>
 
-            <!-- 5. Duration, Changes, Further info -->
-            <section class="card">
-                <h2 class="section-title">Duration, changes &amp; further information</h2>
+            <!-- 5. Duration, changes & further information -->
+            <section class="section-card glass-card" aria-labelledby="section-5-title">
+                <div class="card-header-group">
+                    <span class="category-pill">Governance &amp; Retention</span>
+                    <h2 class="card-title" id="section-5-title">Duration, changes &amp; further information</h2>
+                </div>
 
-                <h3>How long do cookies stay on my device-</h3>
-                <p>
-                    The duration varies by cookie (see the “Duration” column in the tables above):
-                </p>
+                <h3>How long do cookies stay on my device?</h3>
+                <p>The duration varies by cookie (see the &ldquo;Duration&rdquo; column in the tables above):</p>
                 <ul>
-                    <li><strong>Session cookies</strong> - deleted when you close your browser.</li>
-                    <li><strong>Persistent cookies</strong> - remain for a set period (e.g., 30 days, 12 months, 2 years) unless you delete them manually.</li>
+                    <li><strong>Session cookies</strong> &mdash; deleted when you close your browser.</li>
+                    <li><strong>Persistent cookies</strong> &mdash; remain for a set period (e.g., 30 days, 12 months, 2 years) unless you delete them manually.</li>
                 </ul>
                 <p>You can delete all cookies stored on your device at any time via your browser settings.</p>
 
@@ -1235,11 +1669,11 @@
                     or our business practices.
                 </p>
                 <ul>
-                    <li><strong>Minor changes</strong> (e.g., adding a new strictly necessary cookie) will be posted on this page with a new “Last updated” date.</li>
+                    <li><strong>Minor changes</strong> (e.g., adding a new strictly necessary cookie) will be posted on this page with a new &ldquo;Last updated&rdquo; date.</li>
                     <li><strong>Material changes</strong> (e.g., introducing targeting/advertising cookies) will be notified via a prominent notice on our Platform and, where appropriate, by email. We will also refresh the cookie consent banner to obtain fresh consent where required by law.</li>
                 </ul>
                 <p class="text-small text-muted">
-                    The “Last updated” date at the top of this page indicates when the policy was last revised.
+                    The &ldquo;Last updated&rdquo; date at the top of this page indicates when the policy was last revised.
                     You are encouraged to review this policy periodically.
                 </p>
 
@@ -1248,42 +1682,64 @@
                     If you have any questions about our use of cookies, please contact our Data Protection Officer at
                     <strong><a href="mailto:dpo@enginesmarket.co.uk">dpo@enginesmarket.co.uk</a></strong>.
                 </p>
-                <p>
-                    For more general information about cookies and how to manage them, visit:
-                </p>
+                <p>For more general information about cookies and how to manage them, visit:</p>
                 <ul>
                     <li><a href="https://ico.org.uk/for-the-public/online/cookies/" target="_blank" rel="noopener">ICO guidance on cookies</a></li>
                     <li><a href="https://www.allaboutcookies.org/" target="_blank" rel="noopener">All About Cookies</a></li>
                 </ul>
             </section>
 
-            <!-- 6. Summary quick reference -->
-            <section class="card">
-                <span class="section-label">At a glance</span>
-                <h2 class="section-title">Summary - quick reference</h2>
-                <div class="summary-grid">
-                    <div class="summary-item"><span class="q">Strictly necessary cookies-</span><span class="a"><span class="yes">Yes</span> - cannot opt out</span></div>
-                    <div class="summary-item"><span class="q">Performance / analytics-</span><span class="a"><span class="yes">Yes</span> - opt out via banner</span></div>
-                    <div class="summary-item"><span class="q">Functional cookies-</span><span class="a"><span class="yes">Yes</span> - opt out via banner</span></div>
-                    <div class="summary-item"><span class="q">Targeting / advertising-</span><span class="a"><span class="no">No</span> - currently not used</span></div>
-                    <div class="summary-item"><span class="q">How to change preferences-</span><span class="a">Click “Cookie Preferences” in footer</span></div>
-                    <div class="summary-item"><span class="q">Will my preference be remembered-</span><span class="a">Yes - for 12 months (unless you clear cookies)</span></div>
+            <!-- 6. Summary - quick reference -->
+            <section class="section-card glass-card" aria-labelledby="section-6-title">
+                <div class="card-header-group">
+                    <span class="category-pill">At a Glance</span>
+                    <h2 class="card-title" id="section-6-title">Summary &mdash; quick reference</h2>
                 </div>
-                <p class="text-small text-muted" style="margin-top:12px;">
-                    This Cookie Policy was last reviewed and approved by the Data Protection Officer of Engine Finders UK Ltd on 13 June 2026.
-                </p>
+
+                <div class="summary-grid">
+                    <div class="summary-item">
+                        <span class="q">Strictly necessary cookies?</span>
+                        <span class="a"><span class="status-pill yes">Yes</span> &mdash; cannot opt out</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="q">Performance / analytics?</span>
+                        <span class="a"><span class="status-pill yes">Yes</span> &mdash; opt out via banner</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="q">Functional cookies?</span>
+                        <span class="a"><span class="status-pill yes">Yes</span> &mdash; opt out via banner</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="q">Targeting / advertising?</span>
+                        <span class="a"><span class="status-pill no">No</span> &mdash; currently not used</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="q">How to change preferences?</span>
+                        <span class="a">Click &ldquo;Cookie Preferences&rdquo; in footer</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="q">Will my preference be remembered?</span>
+                        <span class="a">Yes &mdash; for 12 months (unless cleared)</span>
+                    </div>
+                </div>
+
+                <div class="info-callout" style="margin-top: var(--sp-20);">
+                    <p class="text-small text-muted">
+                        This Cookie Policy was last reviewed and approved by the Data Protection Officer of Engine Finders UK Ltd on 13 June 2026.
+                    </p>
+                </div>
             </section>
 
             <!-- ============================================= -->
-            <!-- FINAL CTA                                    -->
+            <!-- FINAL CTA CARD                                -->
             <!-- ============================================= -->
-            <div class="final-cta">
-                <span class="eyebrow">Ready to find your engine-</span>
+            <div class="final-cta-card">
+                <span class="eyebrow">Ready to find your engine?</span>
                 <h2>Get a free, no-pressure quote today</h2>
                 <p>Compare prices from 100+ vetted UK suppliers and save on your engine replacement.</p>
-                <a href="/get-a-quote" class="btn-primary">
+                <a href="/get-a-quote" class="cta-btn-large">
                     Get your quote
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <svg class="svg-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M5 12h14M12 5l7 7-7 7" />
                     </svg>
                 </a>
@@ -1293,25 +1749,28 @@
     </main>
 
     <!-- ============================================= -->
-    <!-- FOOTER                                       -->
+    <!-- FOOTER                                        -->
     <!-- ============================================= -->
-    <footer>
-        <div class="container">
+    <footer class="site-footer">
+        <div class="section-inner">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a href="/" class="nav-logo" style="font-size:1.4rem;">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="32" height="32">
-                            <rect x="4" y="6" width="16" height="12" rx="2" />
-                            <path d="M8 6V4h8v2" />
-                            <path d="M10 10h4" />
-                            <path d="M10 14h4" />
-                            <circle cx="12" cy="10" r="1" fill="currentColor" />
-                            <circle cx="12" cy="14" r="1" fill="currentColor" />
-                        </svg>
+                    <a href="/" class="nav-brand">
+                        <span class="brand-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="4" y="6" width="16" height="12" rx="2" />
+                                <path d="M8 6V4h8v2" />
+                                <path d="M10 10h4" />
+                                <path d="M10 14h4" />
+                                <circle cx="12" cy="10" r="1" fill="currentColor" />
+                                <circle cx="12" cy="14" r="1" fill="currentColor" />
+                            </svg>
+                        </span>
                         Engines Market
                     </a>
                     <p>A simple, free, no-pressure way to compare engine replacement quotes from 100+ vetted UK specialists.</p>
                 </div>
+
                 <div class="footer-col">
                     <h4>Platform</h4>
                     <ul>
@@ -1321,6 +1780,7 @@
                         <li><a href="/prices/engine-replacement-cost">Price guide</a></li>
                     </ul>
                 </div>
+
                 <div class="footer-col">
                     <h4>Support</h4>
                     <ul>
@@ -1329,27 +1789,30 @@
                         <li><a href="/faq">FAQ</a></li>
                     </ul>
                 </div>
+
                 <div class="footer-col">
                     <h4>Legal</h4>
                     <ul>
-                        <li><a href="/cookie-policy" class="active">Cookie policy</a></li>
-                        <li><a href="/privacy-policy">Privacy policy</a></li>
-                        <li><a href="/terms-and-conditions">Terms &amp; conditions</a></li>
-                        <li><a href="/complaints-procedure">Complaints</a></li>
+                        <li><a href="/legal/cookie-policy" class="active">Cookie policy</a></li>
+                        <li><a href="/legal/privacy-policy">Privacy policy</a></li>
+                        <li><a href="/legal/terms-and-conditions">Terms &amp; conditions</a></li>
+                        <li><a href="/legal/complaints-procedure">Complaints</a></li>
                     </ul>
                 </div>
             </div>
+
             <div class="footer-bottom">
                 <span>&copy; 2026 Engine Finders UK Ltd. All rights reserved.</span>
-                <span>
-                    <a href="/privacy-policy">Privacy</a> &middot;
-                    <a href="/cookie-policy">Cookies</a> &middot;
-                    <a href="/terms-and-conditions">Terms</a>
-                </span>
+                <div class="footer-bottom-links">
+                    <a href="/legal/privacy-policy">Privacy</a>
+                    <span>&middot;</span>
+                    <a href="/legal/cookie-policy">Cookies</a>
+                    <span>&middot;</span>
+                    <a href="/legal/terms-and-conditions">Terms</a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <script src="/static-nav.js?v=2" defer data-em-static-nav></script>
 </body>
 </html>

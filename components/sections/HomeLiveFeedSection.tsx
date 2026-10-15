@@ -19,18 +19,53 @@ function ChevronDownIcon({ open }: { open: boolean }) {
       fill="none"
       aria-hidden="true"
     >
-      <path d="m6 9 6 6 6-6" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
+      <path
+        d="m6 9 6 6 6-6"
+        stroke="currentColor"
+        strokeWidth="2.4"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 }
 
 function RefreshIcon() {
   return (
-    <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" aria-hidden="true">
-      <path d="M4 4v6h6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M20 20v-6h-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M20 10a8 8 0 0 0-13.7-4.7L4 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M4 14a8 8 0 0 0 13.7 4.7L20 17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    <svg
+      viewBox="0 0 24 24"
+      className="h-3.5 w-3.5"
+      fill="none"
+      aria-hidden="true"
+    >
+      <path
+        d="M4 4v6h6"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M20 20v-6h-6"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M20 10a8 8 0 0 0-13.7-4.7L4 7"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M4 14a8 8 0 0 0 13.7 4.7L20 17"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 }
@@ -48,7 +83,9 @@ export default function HomeLiveFeedSection({ rows, initialTimestamp }: Props) {
   const [activeBrand, setActiveBrand] = useState("all");
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [infoOpen, setInfoOpen] = useState(false);
-  const [clock, setClock] = useState(() => new Date(initialTimestamp ?? "2026-08-20T12:00:00.000Z"));
+  const [clock, setClock] = useState(
+    () => new Date(initialTimestamp ?? "2026-08-20T12:00:00.000Z"),
+  );
   const sectionImageSrc = "/Home/livemarketdatabanner.webp";
 
   useEffect(() => {
@@ -63,8 +100,10 @@ export default function HomeLiveFeedSection({ rows, initialTimestamp }: Props) {
 
   const mobileBrandsCount = 4;
   const desktopBrandsCount = 10;
-  const mobileOverflowBrands = brands.length > mobileBrandsCount ? brands.slice(mobileBrandsCount) : [];
-  const desktopOverflowBrands = brands.length > desktopBrandsCount ? brands.slice(desktopBrandsCount) : [];
+  const mobileOverflowBrands =
+    brands.length > mobileBrandsCount ? brands.slice(mobileBrandsCount) : [];
+  const desktopOverflowBrands =
+    brands.length > desktopBrandsCount ? brands.slice(desktopBrandsCount) : [];
 
   const visibleRows = useMemo(() => {
     if (activeBrand === "all") return rows;
@@ -72,7 +111,7 @@ export default function HomeLiveFeedSection({ rows, initialTimestamp }: Props) {
   }, [activeBrand, rows]);
 
   return (
-    <Section className="bg-[#f5f5f5] sm:px-2 py-7 sm:py-8 lg:py-10">
+    <Section className="bg-[#f5f5f5] py-7 sm:py-8 lg:py-10">
       {/* Mobile Image: Full width, appears before the Container on phone screens */}
       <div className="relative mb-6 h-150 w-full overflow-hidden lg:hidden">
         <Image
@@ -85,7 +124,7 @@ export default function HomeLiveFeedSection({ rows, initialTimestamp }: Props) {
         />
       </div>
 
-      <Container className="max-w-[1400px]">
+      <Container className="max-w-[1510px]">
         <div className="mx-auto max-w-190 text-center">
           <div className="section-pill mx-auto">
             <span className="h-2 w-2 rounded-full bg-[#22c55e]" />
@@ -106,11 +145,13 @@ export default function HomeLiveFeedSection({ rows, initialTimestamp }: Props) {
                 !
               </button>
             </h2>
-            
+
             {/* Normal flow text: takes up space and pushes the table downwards when open */}
             {infoOpen && (
               <p className="mt-3 max-w-[280px] md:max-w-md text-center text-[13px] leading-[1.6] text-[#5a6478]">
-                Typical UK market price ranges across the most requested makes and models. Prices shown are primarily for reconditioned and rebuilt engines unless stated.
+                Typical UK market price ranges across the most requested makes
+                and models. Prices shown are primarily for reconditioned and
+                rebuilt engines unless stated.
               </p>
             )}
           </div>
@@ -130,9 +171,11 @@ export default function HomeLiveFeedSection({ rows, initialTimestamp }: Props) {
 
           {/* Right Table Container: Fixed height on desktop, flex column layout */}
           <div className="w-full overflow-hidden rounded-[14px] border border-[#102845] bg-[linear-gradient(180deg,#10243e_0%,#0c1c31_46%,#091523_100%)] shadow-[0_18px_42px_rgba(9,21,35,0.34)] flex flex-col h-[600px] lg:h-[700px]">
-            
             {/* Header/Nav: Prevents shrinking */}
-            <nav className="relative z-10 flex-shrink-0" aria-label="Filter live engine data by brand">
+            <nav
+              className="relative z-10 flex-shrink-0"
+              aria-label="Filter live engine data by brand"
+            >
               <div className="rounded-t-[14px] border border-[#2e5c99] border-b-0 bg-[linear-gradient(180deg,#14325a_0%,#10243e_100%)] px-3 py-2 shadow-[0_0_0_1px_rgba(82,169,255,0.18),0_12px_28px_rgba(13,27,46,0.24)]">
                 <div className="flex items-center gap-2">
                   <div className="hidden shrink-0 items-center gap-2 text-[10px] font-bold uppercase tracking-[0.16em] text-white sm:flex">
@@ -320,7 +363,9 @@ export default function HomeLiveFeedSection({ rows, initialTimestamp }: Props) {
               ) : (
                 <div className="flex-1 flex items-center justify-center px-4 py-10 text-center text-[13px] text-white/45">
                   <div>
-                    <strong className="block text-white">No entries for this brand.</strong>
+                    <strong className="block text-white">
+                      No entries for this brand.
+                    </strong>
                     <span>Try selecting a different filter above.</span>
                   </div>
                 </div>
@@ -330,18 +375,30 @@ export default function HomeLiveFeedSection({ rows, initialTimestamp }: Props) {
               <div className="flex-shrink-0 flex flex-wrap gap-x-5 gap-y-2 border-t border-white/10 px-4 py-3">
                 <div className="flex items-center gap-2">
                   <span className="h-1.5 w-1.5 rounded-full bg-[#4ade80]" />
-                  <span className="text-[11px] text-white/90">Enquiries 2025:</span>
-                  <span className="text-[11px] font-semibold text-white">11,856+</span>
+                  <span className="text-[11px] text-white/90">
+                    Enquiries 2025:
+                  </span>
+                  <span className="text-[11px] font-semibold text-white">
+                    11,856+
+                  </span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="h-1.5 w-1.5 rounded-full bg-[#4ade80]" />
-                  <span className="text-[11px] text-white/90">Saving vs dealer:</span>
-                  <span className="text-[11px] font-semibold text-white">Up to 40%</span>
+                  <span className="text-[11px] text-white/90">
+                    Saving vs dealer:
+                  </span>
+                  <span className="text-[11px] font-semibold text-white">
+                    Up to 40%
+                  </span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="h-1.5 w-1.5 rounded-full bg-[#4ade80]" />
-                  <span className="text-[11px] text-white/90">Vetted suppliers:</span>
-                  <span className="text-[11px] font-semibold text-white">450+</span>
+                  <span className="text-[11px] text-white/90">
+                    Vetted suppliers:
+                  </span>
+                  <span className="text-[11px] font-semibold text-white">
+                    450+
+                  </span>
                 </div>
                 <div className="ml-auto flex items-center gap-2 text-[11px] text-white/90">
                   <RefreshIcon />

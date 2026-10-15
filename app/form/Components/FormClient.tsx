@@ -6,10 +6,12 @@ import QuoteForm, { type QuoteFormSeed } from "@/components/checkout/QuoteForm";
 export default function FormPage() {
   const searchParams = useSearchParams();
   const engineCode = searchParams.get("engineCode") || "";
+  const variant = searchParams.get("variant") || "";
   const initialData: QuoteFormSeed = {
     registrationNumber: searchParams.get("registrationNumber") || searchParams.get("registration") || searchParams.get("reg") || "",
     make: searchParams.get("make") || "",
     model: searchParams.get("model") || "",
+    variant,
     year: searchParams.get("year") || "",
     fuelType: searchParams.get("fuelType") || "",
     engineCapacity: searchParams.get("engineCapacity") || "",

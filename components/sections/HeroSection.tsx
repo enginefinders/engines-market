@@ -7,6 +7,7 @@ import Container from "@/components/ui/Container";
 import { getEngineLinkForCode, type EngineLinkMap } from "@/lib/engineLinks";
 import { getModelHref } from "@/lib/modelRoutes";
 import type { HeroSectionData, ModelsSectionData } from "@/types/brand";
+import { FaLock } from "react-icons/fa";
 
 type HeroModelCard = ModelsSectionData["cards"][number] & {
   engineCodes?: string[];

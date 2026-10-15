@@ -1,9 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import type { BrandPageData } from "@/types/brand";
-import { FiCalendar } from "react-icons/fi";
+import { FiCalendar, FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import ModelMobileAccordion from "../new-doc-model-page-sections/ModelMobileAccordion";
 import { splitBrandHeading } from "./brandHeading";
 
@@ -41,9 +41,53 @@ export default function NewDocBrandEngineYears({ data, heroImage }: Props) {
     : [section.h2];
   const headingParts = splitBrandHeading(headingLines[0] ?? section.h2);
   const [activeIndex, setActiveIndex] = useState(0);
+  const yearsScrollRef = useRef<HTMLDivElement>(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(false);
   const active = section.years[activeIndex] ?? section.years[0];
   const sectionImage = heroImage || data.assets.heroBg;
   const yearImage = sectionImage;
+
+  const updateYearScrollControls = useCallback(() => {
+    const scrollContainer = yearsScrollRef.current;
+    if (!scrollContainer) return;
+
+    setCanScrollLeft(scrollContainer.scrollLeft > 1);
+    setCanScrollRight(
+      scrollContainer.scrollLeft + scrollContainer.clientWidth <
+        scrollContainer.scrollWidth - 1,
+    );
+  }, []);
+
+  useEffect(() => {
+    const scrollContainer = yearsScrollRef.current;
+    if (!scrollContainer) return;
+
+    updateYearScrollControls();
+    scrollContainer.addEventListener("scroll", updateYearScrollControls, {
+      passive: true,
+    });
+    window.addEventListener("resize", updateYearScrollControls);
+
+    return () => {
+      scrollContainer.removeEventListener("scroll", updateYearScrollControls);
+      window.removeEventListener("resize", updateYearScrollControls);
+    };
+  }, [updateYearScrollControls, section.years.length]);
+
+  const scrollYears = (direction: "left" | "right") => {
+    const scrollContainer = yearsScrollRef.current;
+    if (!scrollContainer) return;
+
+    scrollContainer.scrollBy({
+      left:
+        direction === "left"
+          ? -Math.max(180, scrollContainer.clientWidth * 0.7)
+          : Math.max(180, scrollContainer.clientWidth * 0.7),
+      behavior: "smooth",
+    });
+  };
+
   if (!active) return null;
 
   return (
@@ -116,29 +160,50 @@ export default function NewDocBrandEngineYears({ data, heroImage }: Props) {
           <p className="mt-4 max-w-[760px] text-[14px] leading-[1.6] text-[#526a87] lg:text-[15px]">
             {normalize(section.intro)}
           </p>
-          <div
-            className={`mt-8 flex gap-1 overflow-x-auto rounded-xl border border-[#b8d9f2] bg-white/75 p-1  [scrollbar-width:none] [&::-webkit-scrollbar]:hidden ${section.years.length <= 5 ? "lg:overflow-x-visible" : ""}`}
-          >
-            {section.years.map((year, index) => {
-              const selected = activeIndex === index;
-              return (
-                <button
-                  key={year.year}
-                  type="button"
-                  onClick={() => setActiveIndex(index)}
-                  className={`relative flex min-h-[54px] min-w-[31%] flex-1 flex-col justify-center rounded-lg px-2 py-1.5 text-left transition sm:min-w-[154px] sm:px-4 sm:py-2 lg:min-w-[154px] ${section.years.length <= 5 ? "lg:min-w-0" : "lg:flex-none"} ${selected ? "border border-[#15803d] bg-[#061a33] text-white shadow-[0_0_16px_rgba(7,132,95,0.35)] after:absolute after:-bottom-[8px] after:left-1/2 after:h-0 after:w-0 after:-translate-x-1/2 after:border-x-[8px] after:border-t-[8px] after:border-x-transparent after:border-t-[#061a33] after:content-['']" : "border border-transparent text-[#17375f] hover:border-[#b9d8eb] hover:bg-[#eff9ff]"}`}
-                >
-                  <span className="text-[12px] font-extrabold sm:text-[15px]">
-                    {normalize(year.year)}
-                  </span>
-                  <span
-                    className={`truncate text-[10px] sm:text-[12px] ${selected ? "text-white/75" : "text-[#617b9c]"}`}
+          <div className="relative mt-8">
+            <button
+              type="button"
+              aria-label="Scroll engine years left"
+              disabled={!canScrollLeft}
+              onClick={() => scrollYears("left")}
+              className={`absolute left-1.5 top-1/2 z-20 flex h-7 w-7 -translate-y-1/2 items-center justify-center rounded-full border border-[#b8d9f2] bg-white/95 text-[#17375f] shadow-sm transition ${canScrollLeft ? "hover:bg-[#eff9ff]" : "cursor-not-allowed opacity-35"}`}
+            >
+              <FiChevronLeft className="h-4 w-4" aria-hidden="true" />
+            </button>
+            <div
+              ref={yearsScrollRef}
+              className={`flex gap-1 overflow-x-auto rounded-xl border border-[#b8d9f2] bg-white/75 p-1  [scrollbar-width:none] [&::-webkit-scrollbar]:hidden ${section.years.length <= 5 ? "lg:overflow-x-visible" : ""}`}
+            >
+              {section.years.map((year, index) => {
+                const selected = activeIndex === index;
+                return (
+                  <button
+                    key={year.year}
+                    type="button"
+                    onClick={() => setActiveIndex(index)}
+                    className={`relative flex min-h-[54px] min-w-[31%] flex-1 flex-col justify-center rounded-lg px-2 py-1.5 text-left transition sm:min-w-[154px] sm:px-4 sm:py-2 lg:min-w-[154px] ${section.years.length <= 5 ? "lg:min-w-0" : "lg:flex-none"} ${selected ? "border border-[#15803d] bg-[#061a33] text-white shadow-[0_0_16px_rgba(7,132,95,0.35)] after:absolute after:-bottom-[8px] after:left-1/2 after:h-0 after:w-0 after:-translate-x-1/2 after:border-x-[8px] after:border-t-[8px] after:border-x-transparent after:border-t-[#061a33] after:content-['']" : "border border-transparent text-[#17375f] hover:border-[#b9d8eb] hover:bg-[#eff9ff]"}`}
                   >
-                    {normalize(year.preview)}
-                  </span>
-                </button>
-              );
-            })}
+                    <span className="text-[12px] font-extrabold sm:text-[15px]">
+                      {normalize(year.year)}
+                    </span>
+                    <span
+                      className={`truncate text-[10px] sm:text-[12px] ${selected ? "text-white/75" : "text-[#617b9c]"}`}
+                    >
+                      {normalize(year.preview)}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+            <button
+              type="button"
+              aria-label="Scroll engine years right"
+              disabled={!canScrollRight}
+              onClick={() => scrollYears("right")}
+              className={`absolute right-1.5 top-1/2 z-20 flex h-7 w-7 -translate-y-1/2 items-center justify-center rounded-full border border-[#b8d9f2] bg-white/95 text-[#17375f] shadow-sm transition ${canScrollRight ? "hover:bg-[#eff9ff]" : "cursor-not-allowed opacity-35"}`}
+            >
+              <FiChevronRight className="h-4 w-4" aria-hidden="true" />
+            </button>
           </div>
           <article
             data-no-auto-link="true"
