@@ -124,3 +124,197 @@
 .cms-table tr:hover td {
   background-color: #F1F5F9 !important;
 }
+
+/* =========================================================
+   Lists & Typography Details
+   ========================================================= */
+.cms-content ul {
+  list-style-type: disc !important;
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+  padding-left: 1.75rem !important;
+}
+
+.cms-content ol {
+  list-style-type: decimal !important;
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+  padding-left: 1.75rem !important;
+}
+
+.cms-content li {
+  margin-top: 0.35rem !important;
+  margin-bottom: 0.35rem !important;
+  line-height: 1.7 !important;
+}
+
+.cms-content blockquote {
+  border-left: 4px solid #1E3A8A !important;
+  padding-left: 1rem !important;
+  margin: 1.5rem 0 !important;
+  font-style: italic !important;
+  color: #475569 !important;
+}
+
+/* =========================================================
+   Callouts (Info, Warning, Tip, Destructive)
+   ========================================================= */
+.cms-callout {
+  margin: 1.75rem 0 !important;
+  padding: 1.25rem 1.5rem !important;
+  border-radius: 0.75rem !important;
+  border: 1px solid #E2E8F0 !important;
+  background-color: #F8FAFC !important;
+}
+
+.cms-callout-title {
+  display: block !important;
+  font-weight: 700 !important;
+  font-size: 1rem !important;
+  margin-bottom: 0.5rem !important;
+  letter-spacing: -0.01em;
+}
+
+.cms-callout-note {
+  background-color: #EFF6FF !important;
+  border-color: #BFDBFE !important;
+  color: #1E40AF !important;
+}
+.cms-callout-note .cms-callout-title { color: #1E3A8A !important; }
+.cms-callout-note p { color: #1E40AF !important; margin: 0.25rem 0 0 !important; }
+
+.cms-callout-warning {
+  background-color: #FFFBEB !important;
+  border-color: #FDE68A !important;
+  color: #92400E !important;
+}
+.cms-callout-warning .cms-callout-title { color: #78350F !important; }
+.cms-callout-warning p { color: #92400E !important; margin: 0.25rem 0 0 !important; }
+
+.cms-callout-tip {
+  background-color: #F0FDF4 !important;
+  border-color: #BBF7D0 !important;
+  color: #166534 !important;
+}
+.cms-callout-tip .cms-callout-title { color: #14532D !important; }
+.cms-callout-tip p { color: #166534 !important; margin: 0.25rem 0 0 !important; }
+
+.cms-callout-destructive {
+  background-color: #FEF2F2 !important;
+  border-color: #FECACA !important;
+  color: #991B1B !important;
+}
+.cms-callout-destructive .cms-callout-title { color: #7F1D1D !important; }
+.cms-callout-destructive p { color: #991B1B !important; margin: 0.25rem 0 0 !important; }
+
+/* =========================================================
+   Call to Action (CTA) & Buttons
+   ========================================================= */
+.cms-cta-block {
+  margin: 2.25rem 0 !important;
+  border-radius: 1rem !important;
+  border: 1px solid #1E3A8A !important;
+  background: linear-gradient(135deg, #0F172A 0%, #1E3A8A 100%) !important;
+  padding: 2rem !important;
+  text-align: center !important;
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.2) !important;
+}
+
+.cms-cta-content h3 {
+  color: #FFFFFF !important;
+  font-size: 1.5rem !important;
+  font-weight: 800 !important;
+  margin: 0 0 0.5rem 0 !important;
+  border-left: none !important;
+  padding-left: 0 !important;
+}
+
+.cms-cta-content p {
+  color: #E2E8F0 !important;
+  font-size: 0.95rem !important;
+  max-width: 600px;
+  margin: 0 auto 1.25rem auto !important;
+}
+
+.cms-cta-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0.75rem 1.75rem !important;
+  border-radius: 0.5rem !important;
+  background-color: #2563EB !important;
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
+  font-size: 0.9rem !important;
+  text-decoration: none !important;
+  transition: all 0.2s ease-in-out !important;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35) !important;
+}
+
+.cms-cta-btn:hover {
+  background-color: #1D4ED8 !important;
+  color: #FFFFFF !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.45) !important;
+}
+
+/* =========================================================
+   Responsive 16:9 Video Embed
+   ========================================================= */
+.cms-video {
+  position: relative !important;
+  width: 100% !important;
+  aspect-ratio: 16 / 9 !important;
+  margin: 2rem 0 !important;
+  border-radius: 1rem !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+  border: 1px solid #E2E8F0 !important;
+  background-color: #0F172A !important;
+}
+
+.cms-video iframe {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  border: none !important;
+}
+
+/* =========================================================
+   Images & Captions
+   ========================================================= */
+.cms-image-wrapper {
+  margin: 2rem 0 !important;
+  width: 100% !important;
+}
+
+.cms-article-img {
+  width: 100% !important;
+  height: auto !important;
+  border-radius: 0.75rem !important;
+  border: 1px solid #E2E8F0 !important;
+}
+
+.cms-image-caption {
+  font-size: 0.8rem !important;
+  color: #64748B !important;
+  text-align: center !important;
+  margin-top: 0.5rem !important;
+  font-style: italic !important;
+}
+
+/* =========================================================
+   Website Component Slots (siteBlock)
+   ========================================================= */
+.cms-site-block {
+  margin: 2rem 0 !important;
+  padding: 1.5rem !important;
+  border-radius: 0.75rem !important;
+  border: 2px dashed #93C5FD !important;
+  background-color: #EFF6FF !important;
+  color: #1E40AF !important;
+  font-weight: 600 !important;
+  text-align: center !important;
+}
