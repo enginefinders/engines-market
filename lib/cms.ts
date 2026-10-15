@@ -8,12 +8,22 @@ export interface BlogPost {
   id: string;
   title: string;
   slug: string;
+  routePrefix?: string;
+  path?: string;
+  canonicalUrl?: string;
   excerpt: string;
   html?: string;
   contentJson?: any;
   readingTimeMinutes: number;
   publishedAt: string;
   updatedAt?: string;
+  featuredImage?: {
+    url: string;
+    alt?: string;
+    width?: number | null;
+    height?: number | null;
+    variants?: Array<{ width: number; height: number; format: string; url: string }>;
+  } | null;
   seoMetadata?: {
     metaTitle?: string;
     metaDescription?: string;
@@ -28,6 +38,7 @@ export interface BlogPost {
     };
   };
   jsonLd?: Record<string, any>;
+  jsonLdScript?: string;
   author?: {
     name: string;
     avatarUrl?: string;
