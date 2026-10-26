@@ -1,0 +1,166 @@
+/* A calm, document-led presentation over the original preserved HTML. */
+:root {
+  --limp-navy: #071936;
+  --limp-nav: #061a33;
+  --limp-blue: #123d84;
+  --limp-green: #14803d;
+  --limp-green-deep: #0e6831;
+  --limp-green-wash: #e9f5ed;
+  --limp-ink: #122033;
+  --limp-copy: #4c6078;
+  --limp-muted: #718096;
+  --limp-page: #f4f7f9;
+  --limp-surface: #ffffff;
+  --limp-line: #e6ecf1;
+  --limp-shadow: 0 16px 40px rgba(7, 25, 54, 0.08);
+}
+
+html { scroll-behavior: smooth; }
+body { background: var(--limp-page) !important; color: var(--limp-ink) !important; font-family: "Urbanist", Inter, ui-sans-serif, system-ui, sans-serif !important; }
+body > style { display: none; }
+
+/* A focused, contrast-led hero, replacing the former pale two-column presentation. */
+.hero { overflow: hidden !important; padding: 52px 0 28px !important; background: var(--limp-navy) !important; color: #fff !important; }
+.hero::before, .hero::after, .hero .hero::before, .hero .hero::after { display: none !important; }
+.hero .container, .hero-inner, main.content-wrap { width: min(1120px, calc(100% - 40px)) !important; max-width: none !important; margin: 0 auto !important; }
+.hero-inner { display: grid !important; grid-template-columns: minmax(0, 1.15fr) minmax(360px, .85fr) !important; gap: clamp(34px, 4vw, 54px) !important; align-items: start !important; }
+.hero-content, .hero-widget-col { min-width: 0 !important; padding: 0 !important; }
+.hero-widget-col { display: flex !important; width: 100% !important; align-items: stretch !important; }
+.hero .cta-wrapper { display: block !important; width: 100% !important; max-width: none !important; }
+.hero .cta-card { width: 100% !important; max-width: none !important; }
+.hero-breadcrumbs { margin-bottom: 20px !important; color: #a6d8b9 !important; font-size: 11px !important; font-weight: 800 !important; letter-spacing: .12em !important; text-transform: uppercase !important; }
+.hero-breadcrumbs a { color: #fff !important; text-decoration: none !important; }
+.hero-h1 { max-width: 690px !important; margin: 0 !important; color: #fff !important; font-family: "Urbanist", Inter, sans-serif !important; font-size: clamp(2.8rem, 5vw, 4.8rem) !important; font-weight: 900 !important; line-height: .96 !important; letter-spacing: -.06em !important; }
+.hero-h1 em { display: block !important; margin-top: 16px !important; color: #b5dbff !important; font-size: .4em !important; font-style: normal !important; font-weight: 800 !important; letter-spacing: -.03em !important; line-height: 1.05 !important; }
+.hero-tagline { max-width: 640px !important; margin: 26px 0 0 !important; color: #d6e0eb !important; font-size: 16px !important; line-height: 1.7 !important; }
+.hero-tagline strong { color: #fff !important; }
+.hero-actions { display: flex !important; flex-wrap: wrap !important; gap: 12px !important; margin-top: 28px !important; }
+
+.hero .btn-primary, .hero .submit-btn, .hero .submit-btn-responsive, main .btn-primary { display: inline-flex !important; min-height: 48px !important; align-items: center !important; justify-content: center !important; gap: 8px !important; padding: 0 19px !important; border: 0 !important; border-radius: 8px !important; background: var(--limp-green) !important; color: #fff !important; font-weight: 800 !important; text-decoration: none !important; box-shadow: none !important; }
+.hero .btn-primary:hover, .hero .submit-btn:hover, .hero .submit-btn-responsive:hover, main .btn-primary:hover { background: var(--limp-green-deep) !important; }
+.hero .btn-link { display: inline-flex !important; min-height: 48px !important; align-items: center !important; padding: 0 8px !important; color: #fff !important; font-weight: 800 !important; text-decoration: none !important; }
+
+.hero .cta-card, .hero .cta-card-responsive { overflow: hidden !important; border: 0 !important; border-radius: 16px !important; background: #fff !important; box-shadow: 0 22px 50px rgba(0, 0, 0, .2) !important; }
+.hero .card-body, .hero .card-body-responsive { padding: 25px !important; }
+.hero .card-title, .hero .card-title-responsive { color: var(--limp-navy) !important; font-size: 20px !important; font-weight: 900 !important; }
+.hero .card-subtitle, .hero .card-subtitle-responsive, .hero .secure-note, .hero .secure-note-responsive { color: var(--limp-muted) !important; font-size: 12px !important; line-height: 1.5 !important; }
+.hero .tab-group, .hero .tab-group-responsive { border: 0 !important; background: #eef3f7 !important; }
+.hero .tab-active, .hero .tab-active-responsive { background: var(--limp-blue) !important; color: #fff !important; box-shadow: none !important; }
+.hero .tab-inactive, .hero .tab-inactive-responsive { color: #5c6e84 !important; }
+.hero input, .hero select { border: 0 !important; border-radius: 8px !important; background: #f7f9fb !important; box-shadow: inset 0 0 0 1px #d9e2ea !important; color: var(--limp-ink) !important; }
+.hero .reg-form, .hero .reg-form-responsive, .hero .manual-grid, .hero .manual-grid-responsive { gap: 10px !important; }
+
+/* Cost summaries use hierarchy and tone instead of a row of outlined cards. */
+.hero .hero-costs { display: grid !important; grid-template-columns: repeat(3, minmax(0, 1fr)) !important; gap: 12px !important; margin-top: 40px !important; background: transparent !important; }
+.hero .hcost { display: grid !important; grid-template-columns: auto 1fr !important; gap: 12px !important; min-width: 0 !important; padding: 18px 15px !important; border: 0 !important; border-radius: 12px !important; background: rgba(255,255,255,.09) !important; box-shadow: inset 0 0 0 1px rgba(255,255,255,.1) !important; }
+.hero .hcost-icon-box { display: grid !important; width: 34px !important; height: 34px !important; place-items: center !important; border-radius: 50% !important; background: rgba(20,128,61,.32) !important; color: #fff !important; }
+.hero .hcost-label, .hero .hcost-sub { color: #c7d4e1 !important; }
+.hero .hcost-amount { margin-top: 3px !important; color: #fff !important; font-size: 20px !important; font-weight: 900 !important; }
+
+/* Main content becomes an editorial column, rather than a stack of panels. */
+main.content-wrap { padding: 58px 0 76px !important; }
+main .section-card, main .warning-card, main .cta-panel, main .split-grid > .section-card { border: 0 !important; box-shadow: none !important; }
+main.content-wrap > *,
+.hero-inner > *,
+main .grid-5 > *,
+main .myth-grid > *,
+main .split-grid > *,
+main .link-grid > * { min-width: 0 !important; }
+main .section-card { box-sizing: border-box !important; max-width: 100% !important; margin: 0 0 36px !important; padding: clamp(24px, 4vw, 42px) !important; border-radius: 18px !important; background: #fff !important; box-shadow: var(--limp-shadow) !important; }
+main.content-wrap > .section-card:nth-of-type(even),
+main .split-grid > .section-card:nth-child(even) { background: #f8fafc !important; }
+main .section-card:first-child,
+main .section-card.highlight-card { padding: clamp(24px, 4vw, 42px) !important; border-radius: 18px !important; box-shadow: var(--limp-shadow) !important; }
+main .section-label { margin-bottom: 12px !important; color: var(--limp-green) !important; font-size: 11px !important; font-weight: 900 !important; letter-spacing: .12em !important; text-transform: uppercase !important; }
+main .section-title { max-width: 760px !important; margin: 0 0 18px !important; color: var(--limp-navy) !important; font-family: "Urbanist", Inter, sans-serif !important; font-size: clamp(1.65rem, 2.7vw, 2.2rem) !important; font-weight: 900 !important; line-height: 1.08 !important; letter-spacing: -.04em !important; }
+main .section-title .title-green,
+main .cta-panel h2 .title-green { color: var(--limp-green) !important; }
+main .section-lead, main .section-card p, main .warning-card p, main .cta-panel p { color: var(--limp-copy) !important; font-size: 15px !important; line-height: 1.72 !important; }
+main .section-card em { color: var(--limp-blue) !important; }
+
+main .grid-5 { display: grid !important; grid-template-columns: repeat(5, minmax(0, 1fr)) !important; gap: 12px !important; }
+main .glance-card { display: flex !important; min-height: 170px !important; flex-direction: column !important; justify-content: space-between !important; gap: 18px !important; padding: 17px !important; border: 0 !important; border-radius: 12px !important; background: var(--limp-green-wash) !important; box-shadow: none !important; }
+main .glance-card b, main .glance-card span { display: block !important; }
+main .glance-card b { color: var(--limp-navy) !important; font-size: 13px !important; line-height: 1.35 !important; }
+main .glance-card span:not(.badge) { margin-top: 8px !important; color: var(--limp-copy) !important; font-size: 12px !important; line-height: 1.45 !important; }
+main .badge { display: inline-flex !important; padding: 5px 8px !important; border: 0 !important; border-radius: 999px !important; background: rgba(20,128,61,.14) !important; color: var(--limp-green-deep) !important; font-size: 10px !important; font-weight: 900 !important; letter-spacing: .04em !important; text-transform: uppercase !important; }
+main .glance-card .cost, main .cost { margin-top: 7px !important; color: var(--limp-navy) !important; font-size: 18px !important; font-weight: 900 !important; }
+
+main .causes-list, main .specialist-list, main .checklist { display: grid !important; gap: 11px !important; margin: 24px 0 !important; padding: 0 !important; list-style: none !important; }
+main .causes-list li, main .specialist-list li, main .checklist li { padding: 0 !important; color: var(--limp-copy) !important; font-size: 14px !important; line-height: 1.65 !important; }
+main .causes-list strong, main .specialist-list strong, main .checklist strong { color: var(--limp-navy) !important; }
+main .note-box { margin-top: 22px !important; padding: 18px 20px !important; border: 0 !important; border-radius: 10px !important; background: #e8eff7 !important; color: var(--limp-copy) !important; font-size: 14px !important; line-height: 1.65 !important; }
+main .note-box strong { color: var(--limp-navy) !important; }
+
+main .myth-grid { display: grid !important; grid-template-columns: repeat(2, minmax(0,1fr)) !important; gap: 12px !important; }
+main .myth-card { padding: 20px !important; border: 0 !important; border-radius: 12px !important; background: #fff !important; box-shadow: 0 8px 20px rgba(7,25,54,.05) !important; }
+main .myth-card .think { margin-bottom: 12px !important; color: var(--limp-navy) !important; font-weight: 800 !important; line-height: 1.45 !important; }
+main .myth-card .reality { color: var(--limp-copy) !important; font-size: 14px !important; line-height: 1.6 !important; }
+main .flowchart-box { overflow-x: auto !important; padding: clamp(18px,3vw,30px) !important; border: 0 !important; border-radius: 14px !important; background: var(--limp-navy) !important; color: #dbe8f5 !important; font-family: "IBM Plex Mono", ui-monospace, monospace !important; font-size: 12px !important; line-height: 1.62 !important; white-space: pre !important; }
+
+/* Tables are the only structured surface: simple, highly scannable, and not boxed in by page borders. */
+main .tbl-scroll { overflow-x: auto !important; border: 0 !important; border-radius: 12px !important; background: #fff !important; box-shadow: var(--limp-shadow) !important; }
+main table { width: 100% !important; min-width: 640px !important; border-collapse: collapse !important; background: #fff !important; font-size: 13px !important; }
+main th { padding: 14px 16px !important; background: var(--limp-navy) !important; color: #fff !important; font-size: 10px !important; font-weight: 900 !important; letter-spacing: .07em !important; text-align: left !important; text-transform: uppercase !important; }
+main td { padding: 14px 16px !important; border-bottom: 1px solid var(--limp-line) !important; color: var(--limp-copy) !important; line-height: 1.45 !important; vertical-align: top !important; }
+main tr:nth-child(even) td { background: #f8fafc !important; }
+main tr:last-child td { border-bottom: 0 !important; }
+main .td-strong { color: var(--limp-navy) !important; font-weight: 800 !important; }
+main .td-green, main .td-amber, main .td-cost { color: var(--limp-green-deep) !important; font-weight: 800 !important; }
+
+/* Advice and next steps use the site palette only: no warning-treatment colours. */
+main .warning-card { box-sizing: border-box !important; max-width: 100% !important; margin: 0 0 36px !important; padding: clamp(26px,5vw,46px) !important; border-radius: 18px !important; background: var(--limp-navy) !important; color: #fff !important; }
+main .warning-card h2, main .warning-card p, main .warning-card li, main .warning-card strong { color: #fff !important; }
+main .warning-card h2 { margin: 0 0 14px !important; font-size: clamp(1.7rem,3vw,2.4rem) !important; line-height: 1.1 !important; }
+main .warning-card ul { display: grid !important; grid-template-columns: repeat(2,minmax(0,1fr)) !important; gap: 10px 26px !important; margin: 22px 0 0 !important; padding: 0 !important; list-style: none !important; }
+main .warning-card li { font-size: 14px !important; line-height: 1.55 !important; }
+main .warning-card .note-box { background: rgba(255,255,255,.1) !important; color: #d9e5f1 !important; }
+main .warning-card .note-box strong { color: #fff !important; }
+
+main .split-grid { display: grid !important; grid-template-columns: repeat(2,minmax(0,1fr)) !important; gap: 26px !important; margin-bottom: 36px !important; }
+main .split-grid > .section-card { margin: 0 !important; padding: 30px !important; border-radius: 16px !important; background: #fff !important; box-shadow: var(--limp-shadow) !important; }
+main .cta-panel { box-sizing: border-box !important; width: calc(100% + 64px) !important; max-width: calc(100vw - 32px) !important; margin: 0 0 36px -32px !important; padding: clamp(30px,5vw,50px) !important; border-radius: 18px !important; background: var(--limp-nav) !important; color: #fff !important; }
+main .cta-panel h2 { margin: 0 0 12px !important; color: #fff !important; font-size: clamp(1.7rem,3vw,2.25rem) !important; line-height: 1.08 !important; letter-spacing: -.04em !important; }
+main .cta-panel p { max-width: 760px !important; color: #dce7f1 !important; }
+main .cta-buttons { display: flex !important; flex-wrap: wrap !important; gap: 10px !important; margin-top: 25px !important; }
+main .cta-panel .btn-primary { background: #fff !important; color: var(--limp-green-deep) !important; }
+main .cta-panel .btn-secondary { display: inline-flex !important; min-height: 44px !important; align-items: center !important; padding: 0 14px !important; border: 0 !important; border-radius: 8px !important; background: rgba(255,255,255,.14) !important; color: #fff !important; font-size: 13px !important; font-weight: 800 !important; text-decoration: none !important; }
+main .link-grid { display: grid !important; grid-template-columns: repeat(3,minmax(0,1fr)) !important; gap: 10px !important; margin-top: 26px !important; }
+main .link-card { display: block !important; padding: 14px !important; border: 0 !important; border-radius: 9px !important; background: rgba(255,255,255,.14) !important; color: #fff !important; font-size: 13px !important; font-weight: 800 !important; text-decoration: none !important; }
+
+main .faq-list { display: grid !important; gap: 10px !important; }
+main .faq-list details { overflow: hidden !important; border: 0 !important; border-radius: 10px !important; background: #fff !important; box-shadow: 0 8px 20px rgba(7,25,54,.05) !important; }
+main .faq-list summary { padding: 17px 19px !important; color: var(--limp-navy) !important; font-size: 14px !important; font-weight: 800 !important; cursor: pointer !important; }
+main .faq-list p { margin: 0 !important; padding: 0 19px 18px !important; color: var(--limp-copy) !important; font-size: 14px !important; }
+main .disclaimer { margin-top: 16px !important; color: var(--limp-muted) !important; font-size: 12px !important; }
+
+@media (max-width: 920px) {
+  .hero-inner, main .split-grid { grid-template-columns: 1fr !important; }
+  .hero-widget-col { max-width: 620px !important; }
+  main .grid-5 { grid-template-columns: repeat(2,minmax(0,1fr)) !important; }
+  main .glance-card { min-height: 0 !important; }
+  main .cta-panel { width: calc(100% + 32px) !important; max-width: calc(100vw - 24px) !important; margin-left: -16px !important; }
+}
+
+@media (max-width: 640px) {
+  .hero { padding: 34px 0 22px !important; }
+  .hero .container, .hero-inner, main.content-wrap { width: min(100% - 28px,1120px) !important; }
+  .hero-h1 { font-size: clamp(2.45rem,13.5vw,3.5rem) !important; }
+  .hero-tagline { font-size: 14px !important; }
+  .hero-actions { display: grid !important; grid-template-columns: 1fr !important; }
+  .hero .btn-primary, .hero .btn-link { width: 100% !important; justify-content: center !important; }
+  .hero .hero-costs { grid-template-columns: 1fr !important; gap: 10px !important; margin-top: 30px !important; }
+  .hero .hcost { padding: 16px !important; }
+  main.content-wrap { padding: 38px 0 56px !important; }
+  main .section-card { margin-bottom: 28px !important; }
+  main .section-card:first-child, main .section-card.highlight-card, main .split-grid > .section-card, main .warning-card, main .cta-panel { padding: 22px !important; border-radius: 14px !important; }
+  main .section-title { font-size: 1.55rem !important; }
+  main .grid-5, main .myth-grid, main .warning-card ul, main .link-grid { grid-template-columns: 1fr !important; }
+  main .split-grid { gap: 16px !important; margin-bottom: 40px !important; }
+  main .warning-card, main .cta-panel { margin-bottom: 28px !important; }
+  main .cta-panel { width: 100% !important; max-width: 100% !important; margin-left: 0 !important; }
+  main .cta-buttons { display: grid !important; grid-template-columns: 1fr !important; }
+  main .cta-buttons a { justify-content: center !important; }
+  main .flowchart-box { max-width: 100% !important; font-size: 10px !important; }
+  main .tbl-scroll { max-width: 100% !important; }
+}

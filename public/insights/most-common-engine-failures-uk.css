@@ -1,0 +1,212 @@
+/* Most common engine failures report refinement: preserve the report's content and interactions. */
+:root {
+  --fail-navy: #071936;
+  --fail-nav: #061a33;
+  --fail-blue: #123d84;
+  --fail-green: #14803d;
+  --fail-green-deep: #0e6831;
+  --fail-green-wash: #e9f5ed;
+  --fail-blue-wash: #eef3f8;
+  --fail-ink: #122033;
+  --fail-copy: #4c6078;
+  --fail-muted: #718096;
+  --fail-page: #f4f7f9;
+  --fail-line: #e6ecf1;
+  --fail-shadow: 0 16px 40px rgba(7, 25, 54, .08);
+}
+
+html, body { max-width: 100%; overflow-x: clip !important; }
+body { padding-top: 0 !important; background: var(--fail-page) !important; color: var(--fail-ink) !important; font-family: "Urbanist", Inter, ui-sans-serif, system-ui, sans-serif !important; }
+main { width: 100% !important; background: var(--fail-page) !important; }
+
+/* Match the reference page: keep the hero clear of the duplicate breadcrumb row. */
+.nav-crumb,
+.header-nav .nav-breadcrumb-trail { display: none !important; }
+
+/* Section cards use quiet surfaces without accent borders or warning colours. */
+main * { border-left: 0 !important; }
+main div[class*="amber"],
+main div[class*="caution"],
+main div[class*="decision"],
+main div[class*="exc-box"],
+main div[class*="conf-tier"],
+main div[class*="score-card"],
+main div[class*="danger"],
+main div[class*="red"],
+main div[class*="warn"],
+main div[class*="warning"],
+main [style*="--amber-bg"],
+main [style*="--red-bg"],
+main [style*="--amber-light"],
+main [style*="--red-light"],
+main [style*="--yellow-bg"] {
+  background: #f8fafc !important;
+}
+
+/* Keep every report section on the same horizontal grid as the site navbar. */
+main > .content-section,
+main > .final-cta-section { width: 100% !important; padding: 0 !important; }
+main > .content-section > .section-inner,
+main > .final-cta-section > .section-inner { width: min(1200px, calc(100% - 64px)) !important; max-width: none !important; margin: 0 auto !important; }
+main > .content-section:nth-child(odd) { background: #fff !important; }
+main > .content-section:nth-child(even) { background: #f8fafc !important; }
+main > .content-section > .section-inner { padding: 28px 0 !important; }
+main > .content-section:first-child > .section-inner { padding-top: 42px !important; }
+main > .content-section:last-of-type > .section-inner { padding-bottom: 42px !important; }
+
+/* Compatibility grid for older insights documents that wrap all sections in main.content-section. */
+main.content-section {
+  width: 100% !important;
+  padding: 0 !important;
+}
+main.content-section > .section-inner {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 28px !important;
+  width: min(1200px, calc(100% - 64px)) !important;
+  max-width: none !important;
+  margin: 0 auto !important;
+  padding: 42px 0 !important;
+}
+main.content-section > .section-inner > .glass-card,
+main.content-section > .section-inner > .section-card {
+  width: 100% !important;
+  box-sizing: border-box !important;
+  padding: clamp(24px, 4vw, 42px) !important;
+  border: 0 !important;
+  border-radius: 18px !important;
+  background: #fff !important;
+  box-shadow: var(--fail-shadow) !important;
+}
+main.content-section > .section-inner > :nth-child(even) {
+  background: #f8fafc !important;
+}
+main .sec-title,
+main > .content-section .sec-title {
+  max-width: 880px !important;
+  margin: 0 0 14px !important;
+  color: var(--fail-navy) !important;
+  font-family: "Urbanist", Inter, sans-serif !important;
+  font-size: clamp(1.65rem, 2.7vw, 2.2rem) !important;
+  font-weight: 900 !important;
+  line-height: 1.08 !important;
+  letter-spacing: -.04em !important;
+}
+main .sec-title .title-green,
+main > .content-section .sec-title .title-green {
+  color: var(--fail-green) !important;
+}
+
+/* Report cards are quiet surfaces with no accent-edge treatment. */
+.glass-card,
+.brand-section-block,
+.method-badge-card,
+.metric-card,
+.related-link,
+.takeaway-item,
+.faq-list details { border: 0 !important; }
+.glass-card { width: 100% !important; padding: clamp(24px, 4vw, 42px) !important; border-radius: 18px !important; background: #fff !important; box-shadow: var(--fail-shadow) !important; backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
+main > .content-section:nth-child(even) .glass-card { background: #f8fafc !important; }
+.sec-label { margin-bottom: 10px !important; color: var(--fail-green) !important; font-family: "IBM Plex Mono", ui-monospace, monospace !important; font-size: 11px !important; font-weight: 900 !important; letter-spacing: .12em !important; }
+.sec-h2 { max-width: 880px !important; margin: 0 0 14px !important; color: var(--fail-navy) !important; font-family: "Urbanist", Inter, sans-serif !important; font-size: clamp(1.65rem, 2.7vw, 2.2rem) !important; font-weight: 900 !important; line-height: 1.08 !important; letter-spacing: -.04em !important; }
+.sec-h2 .title-green, .fc-headline .title-green { color: var(--fail-green) !important; }
+.sec-sub { max-width: 850px !important; margin-bottom: 24px !important; color: var(--fail-copy) !important; font-size: 15px !important; line-height: 1.7 !important; }
+.glass-card > ul { color: var(--fail-copy) !important; }
+.doc-meta, .tbl-note { color: var(--fail-muted) !important; font-size: 12px !important; line-height: 1.6 !important; }
+
+/* Methodology and metric cards. */
+.methodology-grid { display: grid !important; grid-template-columns: repeat(4, minmax(0, 1fr)) !important; gap: 12px !important; margin: 18px 0 !important; }
+.method-badge-card { min-width: 0 !important; padding: 16px !important; border-radius: 12px !important; background: var(--fail-green-wash) !important; box-shadow: none !important; }
+.method-badge-card.quote, .method-badge-card.thirdparty { background: var(--fail-blue-wash) !important; }
+.method-badge-title { color: var(--fail-green-deep) !important; font-family: "IBM Plex Mono", ui-monospace, monospace !important; font-size: 11px !important; }
+.method-badge-card.quote .method-badge-title, .method-badge-card.thirdparty .method-badge-title { color: var(--fail-blue) !important; }
+.method-badge-desc { color: var(--fail-copy) !important; font-size: 12px !important; line-height: 1.45 !important; }
+.metrics-grid { display: grid !important; grid-template-columns: repeat(5, minmax(0, 1fr)) !important; gap: 12px !important; margin: 22px 0 16px !important; }
+.metric-card { min-width: 0 !important; padding: 18px 14px !important; border-radius: 12px !important; background: #fff !important; box-shadow: 0 8px 22px rgba(7,25,54,.05) !important; }
+.metric-number, .metric-number.green, .metric-number.red, .metric-number.amber, .metric-number[style] { color: var(--fail-green) !important; font-size: 1.85rem !important; font-weight: 900 !important; }
+.metric-label { color: var(--fail-copy) !important; font-size: 12px !important; line-height: 1.4 !important; }
+.metric-confidence { color: var(--fail-muted) !important; font-size: 10px !important; }
+
+/* Tables never force the document wider than the viewport. */
+.tbl-scroll { width: 100% !important; max-width: 100% !important; margin: 20px 0 !important; overflow-x: auto !important; border: 0 !important; border-radius: 12px !important; background: #fff !important; box-shadow: var(--fail-shadow) !important; }
+.tbl-scroll table { width: 100% !important; min-width: 720px !important; border-collapse: collapse !important; font-size: 13px !important; }
+.tbl-scroll thead { background: var(--fail-navy) !important; }
+.tbl-scroll th { padding: 14px 16px !important; color: #fff !important; font-family: "Urbanist", Inter, sans-serif !important; font-size: 11px !important; font-weight: 900 !important; letter-spacing: .05em !important; text-transform: uppercase !important; white-space: nowrap !important; }
+.tbl-scroll td { padding: 14px 16px !important; border-bottom: 1px solid var(--fail-line) !important; color: var(--fail-copy) !important; line-height: 1.5 !important; vertical-align: top !important; }
+.tbl-scroll tr:nth-child(even) td { background: #f8fafc !important; }
+.tbl-scroll tr:last-child td { border-bottom: 0 !important; }
+.td-engine, .brand-block-title { color: var(--fail-navy) !important; font-weight: 900 !important; }
+.td-cost-pill, .td-cost-pill.ok, .td-cost-pill.warn, .td-cost-pill.high { display: inline-block !important; border: 0 !important; border-radius: 999px !important; background: var(--fail-green-wash) !important; color: var(--fail-green-deep) !important; font-family: "IBM Plex Mono", ui-monospace, monospace !important; font-size: 11px !important; font-weight: 800 !important; white-space: nowrap !important; }
+.brand-section-block { margin: 18px 0 0 !important; padding: 22px !important; border-radius: 14px !important; background: #f8fafc !important; box-shadow: none !important; }
+.brand-block-title { margin-bottom: 12px !important; font-size: 16px !important; }
+.brand-risk-note { margin-top: 12px !important; padding: 11px 14px !important; border: 0 !important; border-radius: 10px !important; background: var(--fail-blue-wash) !important; color: var(--fail-copy) !important; line-height: 1.55 !important; }
+.specialist-callout { display: flex !important; align-items: flex-start !important; gap: 12px !important; margin-top: 18px !important; padding: 18px 20px !important; border: 0 !important; border-radius: 12px !important; background: var(--fail-navy) !important; color: #fff !important; line-height: 1.6 !important; }
+.specialist-callout svg { flex: 0 0 auto !important; fill: #a6d8b9 !important; }
+.specialist-callout span { color: #d9e5f1 !important; }
+
+/* The takeaways panel is the only dark content surface. */
+.takeaways-panel { padding: clamp(24px, 4vw, 42px) !important; border: 0 !important; border-radius: 18px !important; background: var(--fail-nav) !important; box-shadow: var(--fail-shadow) !important; }
+.takeaways-panel .sec-label { color: #a6d8b9 !important; }
+.takeaways-panel .sec-h2 { color: #fff !important; }
+.takeaway-grid { display: grid !important; grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 12px !important; margin-top: 22px !important; }
+.takeaway-item, .takeaway-item.danger, .takeaway-item.warn, .takeaway-item.blue { min-width: 0 !important; padding: 18px !important; border-radius: 12px !important; background: rgba(255,255,255,.07) !important; box-shadow: none !important; }
+.takeaway-item .ta-title { color: #fff !important; font-size: 15px !important; font-weight: 900 !important; }
+.takeaway-item .ta-desc { color: #c4d2df !important; font-size: 13px !important; line-height: 1.55 !important; }
+
+/* FAQ and related reading. */
+.faq-list { display: grid !important; gap: 10px !important; }
+.faq-list details { overflow: hidden !important; border-radius: 12px !important; background: #fff !important; box-shadow: 0 8px 22px rgba(7,25,54,.05) !important; }
+.faq-list details[open] { background: #fff !important; box-shadow: 0 10px 26px rgba(7,25,54,.08) !important; }
+.faq-list summary { padding: 17px 19px !important; color: var(--fail-navy) !important; font-size: 14px !important; font-weight: 800 !important; }
+.faq-ico { color: var(--fail-green) !important; background: var(--fail-green-wash) !important; }
+.faq-body { padding: 0 19px 18px !important; color: var(--fail-copy) !important; font-size: 14px !important; line-height: 1.65 !important; }
+.faq-body strong { color: var(--fail-navy) !important; }
+.related-grid { display: grid !important; grid-template-columns: repeat(4, minmax(0, 1fr)) !important; gap: 12px !important; }
+.related-link { min-width: 0 !important; padding: 16px !important; border-radius: 12px !important; background: var(--fail-green-wash) !important; box-shadow: none !important; }
+.related-link:hover { background: #dff0e5 !important; transform: translateY(-1px) !important; }
+.related-link-text { color: var(--fail-navy) !important; font-size: 13px !important; font-weight: 800 !important; }
+.related-link-arrow { color: var(--fail-green) !important; }
+
+/* Final CTA keeps the site's navbar background and green action language. */
+.final-cta-section > .section-inner { padding: 0 0 56px !important; }
+.final-cta { display: grid !important; grid-template-columns: minmax(0, 1fr) minmax(240px, .34fr) !important; gap: 28px !important; align-items: center !important; padding: clamp(28px, 5vw, 50px) !important; border: 0 !important; border-radius: 18px !important; background: var(--fail-nav) !important; box-shadow: var(--fail-shadow) !important; }
+.fc-eyebrow { margin-bottom: 12px !important; color: #a6d8b9 !important; font-family: "IBM Plex Mono", ui-monospace, monospace !important; font-size: 11px !important; font-weight: 900 !important; letter-spacing: .12em !important; text-transform: uppercase !important; }
+.fc-headline { max-width: 700px !important; margin: 0 0 12px !important; color: #fff !important; font-family: "Urbanist", Inter, sans-serif !important; font-size: clamp(1.7rem, 3vw, 2.3rem) !important; font-weight: 900 !important; line-height: 1.08 !important; letter-spacing: -.04em !important; }
+.fc-sub { color: #d9e5f1 !important; line-height: 1.65 !important; }
+.fc-trust, .fc-note { color: #aebfd0 !important; font-size: 12px !important; }
+.fc-actions { min-width: 0 !important; }
+.btn-cta { display: inline-flex !important; width: 100% !important; min-height: 50px !important; align-items: center !important; justify-content: center !important; gap: 8px !important; padding: 0 18px !important; border: 0 !important; border-radius: 8px !important; background: var(--fail-green) !important; color: #fff !important; font-weight: 900 !important; text-decoration: none !important; }
+.btn-cta:hover { background: var(--fail-green-deep) !important; }
+
+@media (max-width: 1100px) {
+  .metrics-grid { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+  .related-grid { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+  .methodology-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+}
+@media (max-width: 920px) {
+  .hero .hero-widget-col { display: none !important; }
+  .hero .cta-wrapper-responsive { display: block !important; }
+  .metrics-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  .related-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  .final-cta { grid-template-columns: 1fr !important; }
+  .fc-actions { width: min(100%, 440px) !important; }
+}
+@media (max-width: 640px) {
+  main > .content-section > .section-inner,
+  main > .final-cta-section > .section-inner { width: min(100% - 32px, 1200px) !important; }
+  main > .content-section > .section-inner { padding: 18px 0 !important; }
+  main > .content-section:first-child > .section-inner { padding-top: 28px !important; }
+  main.content-section > .section-inner { width: min(100% - 32px, 1200px) !important; padding: 28px 0 !important; gap: 18px !important; }
+  main.content-section > .section-inner > .glass-card,
+  main.content-section > .section-inner > .section-card { padding: 22px !important; border-radius: 14px !important; }
+  .glass-card, .takeaways-panel { padding: 22px !important; border-radius: 14px !important; }
+  .sec-h2, .sec-title { font-size: 1.55rem !important; }
+  .sec-sub { font-size: 14px !important; }
+  .methodology-grid, .metrics-grid, .takeaway-grid, .related-grid { grid-template-columns: 1fr !important; }
+  .brand-section-block { padding: 16px !important; }
+  .brand-block-title { align-items: flex-start !important; flex-direction: column !important; }
+  .tbl-scroll table { min-width: 680px !important; }
+  .final-cta-section > .section-inner { padding-bottom: 32px !important; }
+  .final-cta { padding: 24px !important; border-radius: 14px !important; }
+  .fc-headline { font-size: 1.6rem !important; }
+}

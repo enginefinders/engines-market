@@ -1,0 +1,609 @@
+/* Engines Market legal detail pages
+   Presentation-only shared layer. Content, links, forms and page scripts remain unchanged. */
+
+:root {
+    --legal-primary: #061a33;
+    --legal-primary-2: #0d1b2e;
+    --legal-accent: #1a4d3e;
+    --legal-accent-hover: #1f6b56;
+    --legal-accent-soft: #eef7f4;
+    --legal-text: #122033;
+    --legal-muted: #475569;
+    --legal-subtle: #64748b;
+    --legal-border: #dbe3ee;
+    --legal-page: #f4f8fb;
+    --legal-white: #ffffff;
+    --legal-shadow: 0 8px 24px rgba(6, 26, 51, 0.07);
+    --legal-shadow-soft: 0 3px 12px rgba(6, 26, 51, 0.045);
+}
+
+html {
+    background: var(--legal-page);
+}
+
+body {
+    background: var(--legal-page);
+    color: var(--legal-text);
+    font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+}
+
+/* The existing navbar and footer are intentionally not restyled here. */
+
+.legal-hero,
+body > .hero {
+    position: relative;
+    overflow: hidden;
+    padding: 64px 0 54px;
+    color: var(--legal-text);
+    background: var(--legal-white);
+    border-bottom: 1px solid var(--legal-border);
+}
+
+.legal-hero::before,
+body > .hero::before {
+    content: '';
+    position: absolute;
+    top: -45%;
+    right: -12%;
+    width: 560px;
+    height: 560px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(134, 239, 172, 0.16) 0%, transparent 68%);
+    pointer-events: none;
+}
+
+.legal-hero::after,
+body > .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -42%;
+    left: -12%;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(6, 26, 51, 0.06) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.legal-hero .section-inner,
+body > .hero .section-inner,
+body > .hero .hero-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 1240px;
+}
+
+.hero-layout,
+.hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.12fr) minmax(300px, 0.88fr);
+    gap: 56px;
+    align-items: center;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.legal-hero h1,
+.hero-h1 {
+    max-width: 760px;
+    color: var(--legal-primary);
+    font-family: 'Space Grotesk', 'Plus Jakarta Sans', Arial, sans-serif;
+    font-size: clamp(2.35rem, 4.6vw, 4.2rem);
+    font-weight: 700;
+    line-height: 1.06;
+    letter-spacing: -0.045em;
+}
+
+.legal-hero h1 em,
+.hero-h1 em {
+    color: var(--legal-accent-hover);
+    font-style: normal;
+}
+
+.hero-eyebrow,
+.badge-pill,
+.eyebrow,
+.final-cta-eyebrow {
+    color: var(--legal-accent-hover);
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.hero-tagline {
+    max-width: 680px;
+    margin-top: 18px;
+    color: var(--legal-muted);
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+.hero-meta-strip {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 26px;
+}
+
+.meta-stat {
+    min-height: 88px;
+    padding: 14px 16px;
+    background: #f8fbfd;
+    border: 1px solid var(--legal-border);
+    border-radius: 12px;
+    box-shadow: var(--legal-shadow-soft);
+}
+
+.meta-label {
+    display: block;
+    color: var(--legal-subtle);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.meta-value {
+    display: block;
+    margin-top: 6px;
+    color: var(--legal-primary);
+    font-family: 'Space Grotesk', 'Plus Jakarta Sans', Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.hero-art-card,
+.hero-visual-card {
+    position: relative;
+    display: grid;
+    place-items: center;
+    min-height: 300px;
+    padding: 34px;
+    overflow: hidden;
+    background: linear-gradient(145deg, #f9fcfe, #eef7f4);
+    border: 1px solid var(--legal-border);
+    border-radius: 16px;
+    box-shadow: 0 14px 32px rgba(6, 26, 51, 0.08);
+}
+
+.hero-art-card::after,
+.hero-visual-card::after {
+    content: '';
+    position: absolute;
+    inset: 14px;
+    border: 1px solid rgba(26, 77, 62, 0.12);
+    border-radius: 12px;
+    pointer-events: none;
+}
+
+.hero-art-card svg,
+.hero-art-svg,
+.hero-visual-card svg {
+    position: relative;
+    z-index: 1;
+    max-width: 180px;
+    max-height: 180px;
+    color: var(--legal-accent-hover);
+}
+
+.content-section {
+    padding: 44px 0 72px;
+    background: var(--legal-page);
+}
+
+.content-container {
+    max-width: 1040px;
+}
+
+.section-card,
+.glass-card {
+    margin-bottom: 18px;
+    padding: 28px;
+    overflow: hidden;
+    background: var(--legal-white);
+    border: 1px solid var(--legal-border) !important;
+    border-radius: 14px !important;
+    box-shadow: var(--legal-shadow-soft) !important;
+}
+
+.section-card:hover,
+.glass-card:hover {
+    border-color: rgba(26, 77, 62, 0.32);
+    box-shadow: var(--legal-shadow);
+}
+
+.card-header-group {
+    margin-bottom: 20px;
+}
+
+.category-pill,
+.badge-pill,
+.hero-version-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    width: fit-content;
+    padding: 6px 10px;
+    color: var(--legal-accent-hover);
+    background: var(--legal-accent-soft);
+    border: 1px solid rgba(26, 77, 62, 0.16);
+    border-radius: 999px;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.card-title,
+.section-card h2 {
+    margin-top: 10px;
+    color: var(--legal-primary);
+    font-family: 'Space Grotesk', 'Plus Jakarta Sans', Arial, sans-serif;
+    font-size: clamp(1.35rem, 2.2vw, 1.85rem);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    line-height: 1.2;
+}
+
+.card-subtitle,
+.section-card p,
+.section-card li,
+.text-muted,
+.text-small {
+    color: var(--legal-muted);
+}
+
+.card-subtitle {
+    margin-top: 8px;
+    line-height: 1.65;
+}
+
+.section-card h3,
+.section-card h4 {
+    margin-top: 22px;
+    color: var(--legal-primary);
+    font-family: 'Space Grotesk', 'Plus Jakarta Sans', Arial, sans-serif;
+    line-height: 1.3;
+}
+
+.section-card p,
+.section-card li {
+    line-height: 1.72;
+}
+
+.section-card a {
+    color: var(--legal-accent-hover);
+    font-weight: 700;
+}
+
+.section-card a:hover {
+    color: var(--legal-primary);
+}
+
+.table-wrap {
+    overflow-x: auto;
+    margin-top: 18px;
+    border: 1px solid var(--legal-border);
+    border-radius: 10px;
+    background: #fbfdfe;
+}
+
+.section-card table {
+    width: 100%;
+    min-width: 620px;
+    border-collapse: collapse;
+}
+
+.section-card th {
+    color: var(--legal-primary);
+    background: #edf4f8;
+    font-size: 0.72rem;
+    letter-spacing: 0.07em;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.section-card th,
+.section-card td {
+    padding: 13px 15px;
+    border-bottom: 1px solid var(--legal-border);
+    vertical-align: top;
+}
+
+.section-card tr:last-child td {
+    border-bottom: 0;
+}
+
+.section-card td {
+    color: var(--legal-muted);
+    font-size: 0.86rem;
+}
+
+.legal-notice,
+.info-callout,
+.notice-card,
+.card-intro-highlight,
+.flow-highlight {
+    margin: 20px 0;
+    padding: 16px 18px;
+    color: var(--legal-muted);
+    background: #f7fbfa;
+    border: 1px solid rgba(26, 77, 62, 0.16);
+    border-left: 4px solid var(--legal-accent-hover);
+    border-radius: 10px;
+}
+
+.legal-notice-amber {
+    background: #fffbeb;
+    border-color: #fcd34d;
+    border-left-color: #d97706;
+}
+
+.legal-notice-red {
+    background: #fff7f7;
+    border-color: #fecaca;
+    border-left-color: #dc2626;
+}
+
+.summary-grid,
+.company-details-grid,
+.contact-grid {
+    gap: 12px;
+}
+
+.summary-item,
+.contact-card,
+.inline-dpo-card,
+.inline-support-card {
+    background: #f8fbfd;
+    border: 1px solid var(--legal-border);
+    border-radius: 11px;
+}
+
+.faq-accordion-list,
+.faq-wrap {
+    display: grid;
+    gap: 10px;
+}
+
+.faq-item,
+.faq-accordion-list > * {
+    background: #fbfdfe;
+    border: 1px solid var(--legal-border);
+    border-radius: 10px;
+}
+
+.final-cta-card {
+    position: relative;
+    margin-top: 24px;
+    overflow: hidden;
+    padding: 30px 34px;
+    color: #ffffff;
+    background: linear-gradient(135deg, var(--legal-accent), #0d392d);
+    border: 0;
+    border-radius: 14px;
+    box-shadow: 0 12px 28px rgba(26, 77, 62, 0.16);
+}
+
+.final-cta-card h2,
+.final-cta-title {
+    color: #ffffff;
+    font-family: 'Space Grotesk', 'Plus Jakarta Sans', Arial, sans-serif;
+}
+
+.final-cta-card p,
+.final-cta-sub {
+    color: rgba(255, 255, 255, 0.82);
+}
+
+.cta-btn-large,
+.btn-support,
+.btn-submit-complaint {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 44px;
+    padding: 11px 20px;
+    color: var(--legal-primary) !important;
+    background: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.72);
+    border-radius: 9px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+.cta-btn-large:hover,
+.btn-support:hover,
+.btn-submit-complaint:hover {
+    color: var(--legal-primary) !important;
+    background: #f0fdf4;
+    box-shadow: 0 8px 20px rgba(6, 26, 51, 0.18);
+    transform: translateY(-2px);
+}
+
+/* Complaints page uses its own hero/timeline naming, but the same visual system. */
+.hero-eyebrow {
+    position: relative;
+    z-index: 1;
+}
+
+.timeline-step-card,
+.step-body-info,
+.scope-exclude-box,
+.email-address-box,
+.form-group,
+.step-timing-pill {
+    border-color: var(--legal-border);
+}
+
+.timeline-step-card,
+.scope-exclude-box,
+.email-address-box,
+.form-group {
+    background: var(--legal-white);
+    border-radius: 12px;
+    box-shadow: var(--legal-shadow-soft);
+}
+
+@media (max-width: 992px) {
+    .hero-layout,
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 34px;
+    }
+
+    .hero-art-card,
+    .hero-visual-card {
+        min-height: 240px;
+    }
+}
+
+@media (max-width: 640px) {
+    .legal-hero,
+    body > .hero {
+        padding: 42px 0 34px;
+    }
+
+    .legal-hero h1,
+    .hero-h1 {
+        font-size: clamp(2rem, 10vw, 2.8rem);
+    }
+
+    .hero-meta-strip {
+        grid-template-columns: 1fr;
+    }
+
+    .meta-stat {
+        min-height: 76px;
+    }
+
+    .hero-art-card,
+    .hero-visual-card {
+        min-height: 220px;
+        padding: 24px;
+    }
+
+    .content-section {
+        padding: 32px 0 52px;
+    }
+
+    .section-card,
+    .glass-card {
+        padding: 22px 20px;
+    }
+
+    .final-cta-card {
+        padding: 26px 22px;
+    }
+
+    .cta-btn-large,
+    .btn-support,
+    .btn-submit-complaint {
+        width: 100%;
+    }
+}
+
+/*
+   Legal detail-page alignment
+   Keep the page rhythm intentionally quiet: white hero, alternating
+   #f4f8fb/white content sections, and no decorative overlays. The legacy
+   page-specific styles stay in the HTML files, so these scoped overrides
+   are deliberately last and use !important where inline styles would win.
+*/
+
+:root {
+    --legal-section-soft: #f4f8fb;
+    --legal-section-white: #ffffff;
+}
+
+html,
+body {
+    background: var(--legal-section-white) !important;
+}
+
+.legal-hero,
+body > .hero {
+    background: var(--legal-section-white) !important;
+}
+
+.legal-hero::before,
+.legal-hero::after,
+body > .hero::before,
+body > .hero::after,
+.hero-pattern,
+.hero-art-card::after,
+.hero-visual-card::after {
+    display: none !important;
+}
+
+.hero-art-card,
+.hero-visual-card,
+body > .hero .hero-image-placeholder {
+    background: var(--legal-section-soft) !important;
+    box-shadow: none !important;
+}
+
+.content-section {
+    padding: 44px 0 72px !important;
+    background: var(--legal-section-soft) !important;
+}
+
+.content-container {
+    max-width: 1240px !important;
+    padding-right: 28px !important;
+    padding-left: 28px !important;
+}
+
+.content-section > .section-inner {
+    max-width: 1240px !important;
+    padding-right: 28px !important;
+    padding-left: 28px !important;
+}
+
+.content-container > section.section-card,
+.content-container > section.glass-card,
+.content-section > .section-inner > section.section-card,
+.content-section > .section-inner > section.glass-card {
+    margin: 0 0 18px;
+    padding: 28px;
+    border: 1px solid var(--legal-border);
+    border-radius: 14px;
+    box-shadow: var(--legal-shadow-soft);
+    background: var(--legal-section-soft) !important;
+}
+
+.content-container > section.section-card:nth-of-type(even),
+.content-container > section.glass-card:nth-of-type(even),
+.content-section > .section-inner > section.section-card:nth-of-type(even),
+.content-section > .section-inner > section.glass-card:nth-of-type(even) {
+    background: var(--legal-section-white) !important;
+}
+
+/* The version-history panel is a section-like closing block on two pages. */
+.content-container > .section-card:not(section) {
+    margin: 0 0 18px;
+    border: 1px solid var(--legal-border) !important;
+    border-radius: 14px !important;
+    box-shadow: var(--legal-shadow-soft) !important;
+    background: var(--legal-section-soft) !important;
+}
+
+.final-cta-card::before {
+    display: none !important;
+}
+
+@media (max-width: 640px) {
+    .content-container > section.section-card,
+    .content-container > section.glass-card,
+    .content-section > .section-inner > section.section-card,
+    .content-section > .section-inner > section.glass-card {
+        padding: 22px 20px !important;
+    }
+}
+
+

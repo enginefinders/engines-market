@@ -40,15 +40,15 @@ const nextConfig: NextConfig = {
           destination: "/about/about-us",
         },
         {
-          source: "/insights/:slug",
+          source: "/insights/:slug([a-zA-Z0-9-]+)",
           destination: "/insights/:slug.html",
         },
         {
-          source: "/services/:slug",
+          source: "/services/:slug([a-zA-Z0-9-]+)",
           destination: "/services/:slug.html",
         },
         {
-          source: "/prices/:slug",
+          source: "/prices/:slug([a-zA-Z0-9-]+)",
           destination: "/prices/:slug.html",
         },
         {
@@ -80,7 +80,7 @@ const nextConfig: NextConfig = {
           destination: "/case-studies/:slug.html",
         },
         {
-          source: "/symptoms/:slug",
+          source: "/symptoms/:slug([a-zA-Z0-9-]+)",
           destination: "/symptoms/:slug.html",
         },
       ],
