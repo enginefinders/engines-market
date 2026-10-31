@@ -3,6 +3,11 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   // Large brand/model/engine SSG set — default 60s page timeout kills late pages (e.g. /seat/*).
   staticPageGenerationTimeout: 180,
+  // Preview source files are consumed while prerendering. Public assets are deployed by
+  // Vercel's static layer and must not be duplicated inside preview server functions.
+  outputFileTracingExcludes: {
+    "/preview/**": ["./public/**/*"],
+  },
   experimental: {
     // Fewer concurrent pages per worker reduces thrashing on large JSON-heavy routes.
     staticGenerationMaxConcurrency: 2,
@@ -58,6 +63,10 @@ const nextConfig: NextConfig = {
         {
           source: "/about/:slug",
           destination: "/about/:slug.html",
+        },
+        {
+          source: "/legal/data-handling-policy",
+          destination: "/legal/data-handlng-policy.html",
         },
         {
           source: "/legal/:slug",

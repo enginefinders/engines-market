@@ -1,0 +1,1551 @@
+{
+  "id": "public/insights/engine-warranty-statistics-uk",
+  "contentType": "insights",
+  "slug": "insights/engine-warranty-statistics-uk",
+  "route": "/insights/engine-warranty-statistics-uk",
+  "source": {
+    "originalFile": "public/insights/engine-warranty-statistics-uk.html",
+    "sourceRoot": "public",
+    "sourceHash": "sha256:a8b0d8eedd83c6b9a56ad61b0cecc0844bd9cbfbaac58602992d5473bd6b9fa0",
+    "sourceBytes": 233012,
+    "migrationStatus": "clean-exported",
+    "sourceImmutable": true
+  },
+  "seo": {
+    "title": "Engine Warranty Statistics UK 2026 - Claim Rates & Costs | Engines Market",
+    "description": "Engine warranty statistics UK 2026: Lexus 5.79% claim rate, Toyota 8.78%, Suzuki 10.80%. Average engine claim £2,755. F-Pace £23,000, BMW £26,233, Audi £22,954 claims.",
+    "canonical": "https://enginesmarket.co.uk/insights/engine-warranty-statistics-uk",
+    "robots": "",
+    "openGraph": {
+      "title": "",
+      "description": "",
+      "url": "",
+      "image": "",
+      "type": ""
+    }
+  },
+  "sections": {
+    "hero": {
+      "eyebrow": "INDUSTRY INSIGHTS / ENGINE WARRANTY STATISTICS",
+      "title": "Engine Warranty Statistics UK Claim Rates, Costs & High-Value Claims",
+      "description": "Lexus: 5.79% claim rate · Toyota: 8.78% · Suzuki: 10.80% Average engine claim: £2,755 · Highest claim: £26,233 (BMW) Data sourced from 24,650 UK engine replacement quote requests & external warranty providers.",
+      "options": [
+        {
+          "label": "Typical Diagnostic Cost i",
+          "amount": "£150 - £600",
+          "detail": "Cost varies by vehicle and diagnostic method."
+        },
+        {
+          "label": "Typical Repair Cost i",
+          "amount": "£600 - £2,500",
+          "detail": "Depends on the cause and extent of damage."
+        },
+        {
+          "label": "Replacement Engine i",
+          "amount": "£2,500+",
+          "detail": "For severe cases, a reconditioned or used engine may be required."
+        }
+      ],
+      "trust": [],
+      "image": {
+        "src": "/Home/enginelogo.webp",
+        "alt": "Engine Codes",
+        "width": "",
+        "height": ""
+      },
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "INDUSTRY INSIGHTS / ENGINE WARRANTY STATISTICS"
+        },
+        {
+          "type": "paragraph",
+          "text": "Get Free Quotes"
+        },
+        {
+          "type": "paragraph",
+          "text": "Explore Claim Rates"
+        },
+        {
+          "type": "paragraph",
+          "text": "Search by Registration"
+        },
+        {
+          "type": "paragraph",
+          "text": "Search Manually"
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "id": "",
+          "text": "Get Your Free Engine Quotes"
+        },
+        {
+          "type": "paragraph",
+          "text": "Instant comparison from UK-vetted engine specialists"
+        },
+        {
+          "type": "form",
+          "action": "",
+          "method": "get",
+          "fields": [
+            {
+              "element": "input",
+              "name": "",
+              "type": "text",
+              "placeholder": "Enter your reg - e.g. AB12 CDE",
+              "required": false
+            },
+            {
+              "element": "button",
+              "name": "",
+              "type": "submit",
+              "placeholder": "",
+              "required": false
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Your details are secure. No spam - genuine quotes from vetted UK engine specialists only."
+        },
+        {
+          "type": "paragraph",
+          "text": "8,000+"
+        },
+        {
+          "type": "paragraph",
+          "text": "Engine Codes"
+        },
+        {
+          "type": "image",
+          "src": "/Home/carlogo.webp",
+          "alt": "Car Brands",
+          "width": "",
+          "height": ""
+        },
+        {
+          "type": "paragraph",
+          "text": "40+"
+        },
+        {
+          "type": "paragraph",
+          "text": "Car Brands"
+        },
+        {
+          "type": "image",
+          "src": "/Home/verifiedlogo.webp",
+          "alt": "Free No Obligation",
+          "width": "",
+          "height": ""
+        },
+        {
+          "type": "paragraph",
+          "text": "100%"
+        },
+        {
+          "type": "paragraph",
+          "text": "Free · No Obligation"
+        },
+        {
+          "type": "form",
+          "action": "",
+          "method": "get",
+          "fields": [
+            {
+              "element": "select",
+              "name": "",
+              "type": "",
+              "placeholder": "",
+              "required": false
+            },
+            {
+              "element": "select",
+              "name": "",
+              "type": "",
+              "placeholder": "",
+              "required": false
+            },
+            {
+              "element": "select",
+              "name": "",
+              "type": "",
+              "placeholder": "",
+              "required": false
+            },
+            {
+              "element": "select",
+              "name": "",
+              "type": "",
+              "placeholder": "",
+              "required": false
+            },
+            {
+              "element": "input",
+              "name": "",
+              "type": "text",
+              "placeholder": "Enter engine code",
+              "required": false
+            },
+            {
+              "element": "button",
+              "name": "",
+              "type": "submit",
+              "placeholder": "",
+              "required": false
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "🔍"
+        },
+        {
+          "type": "paragraph",
+          "text": "Typical Diagnostic Cost i"
+        },
+        {
+          "type": "paragraph",
+          "text": "£150 - £600"
+        },
+        {
+          "type": "paragraph",
+          "text": "Cost varies by vehicle and diagnostic method."
+        },
+        {
+          "type": "paragraph",
+          "text": "🔧"
+        },
+        {
+          "type": "paragraph",
+          "text": "Typical Repair Cost i"
+        },
+        {
+          "type": "paragraph",
+          "text": "£600 - £2,500"
+        },
+        {
+          "type": "paragraph",
+          "text": "Depends on the cause and extent of damage."
+        },
+        {
+          "type": "paragraph",
+          "text": "⚙️"
+        },
+        {
+          "type": "paragraph",
+          "text": "Replacement Engine i"
+        },
+        {
+          "type": "paragraph",
+          "text": "£2,500+"
+        },
+        {
+          "type": "paragraph",
+          "text": "For severe cases, a reconditioned or used engine may be required."
+        },
+        {
+          "type": "paragraph",
+          "text": "Search by Registration"
+        },
+        {
+          "type": "paragraph",
+          "text": "Search Manually"
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "id": "",
+          "text": "Get Your Free Engine Quotes"
+        },
+        {
+          "type": "paragraph",
+          "text": "Instant comparison from UK-vetted engine specialists"
+        },
+        {
+          "type": "form",
+          "action": "",
+          "method": "get",
+          "fields": [
+            {
+              "element": "input",
+              "name": "",
+              "type": "text",
+              "placeholder": "Enter your reg - e.g. AB12 CDE",
+              "required": false
+            },
+            {
+              "element": "button",
+              "name": "",
+              "type": "submit",
+              "placeholder": "",
+              "required": false
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Your details are secure. No spam - genuine quotes from vetted UK engine specialists only."
+        },
+        {
+          "type": "cards",
+          "cards": [
+            {
+              "title": "Engine Codes",
+              "text": "8,000+ Engine Codes",
+              "highlight": "",
+              "meta": "",
+              "icon": "",
+              "items": [],
+              "fullText": "8,000+ Engine Codes"
+            },
+            {
+              "title": "Car Brands",
+              "text": "40+ Car Brands",
+              "highlight": "",
+              "meta": "",
+              "icon": "",
+              "items": [],
+              "fullText": "40+ Car Brands"
+            },
+            {
+              "title": "Free · No Obligation",
+              "text": "100% Free · No Obligation",
+              "highlight": "",
+              "meta": "",
+              "icon": "",
+              "items": [],
+              "fullText": "100% Free · No Obligation"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "action": "",
+          "method": "get",
+          "fields": [
+            {
+              "element": "select",
+              "name": "",
+              "type": "",
+              "placeholder": "",
+              "required": false
+            },
+            {
+              "element": "select",
+              "name": "",
+              "type": "",
+              "placeholder": "",
+              "required": false
+            },
+            {
+              "element": "select",
+              "name": "",
+              "type": "",
+              "placeholder": "",
+              "required": false
+            },
+            {
+              "element": "select",
+              "name": "",
+              "type": "",
+              "placeholder": "",
+              "required": false
+            },
+            {
+              "element": "input",
+              "name": "",
+              "type": "text",
+              "placeholder": "Enter engine code",
+              "required": false
+            },
+            {
+              "element": "button",
+              "name": "",
+              "type": "submit",
+              "placeholder": "",
+              "required": false
+            }
+          ]
+        },
+        {
+          "type": "label",
+          "text": "About this data · our methodology"
+        }
+      ],
+      "links": [
+        {
+          "href": "/insights",
+          "text": "INSIGHTS"
+        },
+        {
+          "href": "/get-a-quote",
+          "text": "Get Free Quotes"
+        },
+        {
+          "href": "#claim-rates",
+          "text": "Explore Claim Rates"
+        },
+        {
+          "href": "/get-a-quote",
+          "text": "Get your personalised price"
+        }
+      ]
+    },
+    "ordered": [
+      {
+        "id": "verified-uk-warranty-reliability-data",
+        "title": "Verified UK Warranty & Reliability Data",
+        "description": "This warranty index is based on 24,650 real engine replacement quote requests submitted through Engines Market between January and December 2025, combined with external warranty data from Warranty Solutions Group (WSG), RAC Warranty, Warranty Direct, and The Motor Ombudsman. All figures are anonymised and aggregated.",
+        "blocks": [
+          {
+            "type": "cards",
+            "cards": [
+              {
+                "title": "[EM-VERIFIED]",
+                "text": "Exact count or percentage from our CRM",
+                "highlight": "",
+                "meta": "[EM-VERIFIED]",
+                "icon": "",
+                "items": [],
+                "fullText": "[EM-VERIFIED] Exact count or percentage from our CRM"
+              },
+              {
+                "title": "[EM-OBSERVED]",
+                "text": "Observed patterns from our data",
+                "highlight": "",
+                "meta": "[EM-OBSERVED]",
+                "icon": "",
+                "items": [],
+                "fullText": "[EM-OBSERVED] Observed patterns from our data"
+              },
+              {
+                "title": "[THIRD-PARTY]",
+                "text": "External data from named industry sources",
+                "highlight": "",
+                "meta": "[THIRD-PARTY]",
+                "icon": "",
+                "items": [],
+                "fullText": "[THIRD-PARTY] External data from named industry sources"
+              },
+              {
+                "title": "[EM-SURVEY]",
+                "text": "Post-sale customer satisfaction survey",
+                "highlight": "",
+                "meta": "[EM-SURVEY]",
+                "icon": "",
+                "items": [],
+                "fullText": "[EM-SURVEY] Post-sale customer satisfaction survey"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Review cycle: annually · next full review: January 2027 · data updated quarterly."
+          },
+          {
+            "type": "label",
+            "text": "Key warranty statistics"
+          }
+        ],
+        "links": [],
+        "source": {
+          "sectionId": "verified-uk-warranty-reliability-data",
+          "order": 0
+        }
+      },
+      {
+        "id": "at-a-glance-uk-engine-warranty-landscape",
+        "title": "At a glance: UK engine warranty landscape",
+        "description": "Critical numbers that define the UK engine warranty market in 2026.",
+        "blocks": [
+          {
+            "type": "cards",
+            "cards": [
+              {
+                "title": "Lowest claim rate",
+                "text": "Lexus - [THIRD-PARTY: Warranty Group, 2025]",
+                "highlight": "Lowest claim rate",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "Lowest claim rate 5.79% Lexus - [THIRD-PARTY: Warranty Group, 2025]"
+              },
+              {
+                "title": "Toyota claim rate",
+                "text": "[THIRD-PARTY: Warranty Group, 2025]",
+                "highlight": "Toyota claim rate",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "Toyota claim rate 8.78% [THIRD-PARTY: Warranty Group, 2025]"
+              },
+              {
+                "title": "Average engine dispute",
+                "text": "Motor Ombudsman - [THIRD-PARTY]",
+                "highlight": "Average engine dispute",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "Average engine dispute £2,755 Motor Ombudsman - [THIRD-PARTY]"
+              },
+              {
+                "title": "Highest individual claim",
+                "text": "BMW (2016) - RAC Warranty [THIRD-PARTY]",
+                "highlight": "Highest individual claim",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "Highest individual claim £26,233 BMW (2016) - RAC Warranty [THIRD-PARTY]"
+              },
+              {
+                "title": "Hybrid claim growth",
+                "text": "2024 → 2025 (1.5% → 3.1%) [THIRD-PARTY]",
+                "highlight": "Hybrid claim growth",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "Hybrid claim growth +107% 2024 → 2025 (1.5% → 3.1%) [THIRD-PARTY]"
+              },
+              {
+                "title": "Recon satisfaction",
+                "text": "Post-sale survey [EM-SURVEY]",
+                "highlight": "Recon satisfaction",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "Recon satisfaction 92% Post-sale survey [EM-SURVEY]"
+              }
+            ]
+          },
+          {
+            "type": "label",
+            "text": "UK reliability leaders - claim rate by brand"
+          }
+        ],
+        "links": [],
+        "source": {
+          "sectionId": "at-a-glance-uk-engine-warranty-landscape",
+          "order": 1
+        }
+      },
+      {
+        "id": "which-brands-make-the-fewest-warranty-claims",
+        "title": "Which brands make the fewest warranty claims?",
+        "description": "Claim rates from Warranty Group (2025) show Japanese brands dominating reliability rankings. [THIRD-PARTY]",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Rank",
+              "Brand",
+              "Claim Rate",
+              "Average Repair Cost",
+              "Source"
+            ],
+            "rows": [
+              [
+                "1",
+                "Lexus",
+                "5.79%",
+                "£639",
+                "[THIRD-PARTY: Warranty Group, 2025]"
+              ],
+              [
+                "2",
+                "Toyota",
+                "8.78%",
+                "-",
+                "[THIRD-PARTY: Warranty Group, 2025]"
+              ],
+              [
+                "3",
+                "Suzuki",
+                "10.80%",
+                "-",
+                "[THIRD-PARTY: Warranty Group, 2025]"
+              ],
+              [
+                "-",
+                "Toyota",
+                "7.02%",
+                "£479",
+                "[THIRD-PARTY: Warranty Direct, 2025]"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Key observation:"
+          },
+          {
+            "type": "paragraph",
+            "text": "Lexus owners make the fewest warranty claims (5.79%), with average repair cost £639 [THIRD-PARTY]. Toyota follows at 8.78%, with Suzuki at 10.80%. This reflects the broader reputation of Japanese brands for reliability."
+          },
+          {
+            "type": "label",
+            "text": "Warranty claim costs"
+          }
+        ],
+        "links": [],
+        "source": {
+          "sectionId": "which-brands-make-the-fewest-warranty-claims",
+          "order": 2
+        }
+      },
+      {
+        "id": "what-do-engine-warranty-claims-actually-cost",
+        "title": "What do engine warranty claims actually cost?",
+        "description": "Engine-related disputes are among the most expensive warranty claims. [THIRD-PARTY]",
+        "blocks": [
+          {
+            "type": "cards",
+            "cards": [
+              {
+                "title": "Engine-related dispute",
+                "text": "Motor Ombudsman average [THIRD-PARTY]",
+                "highlight": "Engine-related dispute",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "Engine-related dispute £2,755 Motor Ombudsman average [THIRD-PARTY]"
+              },
+              {
+                "title": "Drivetrain-related dispute",
+                "text": "Motor Ombudsman average [THIRD-PARTY]",
+                "highlight": "Drivetrain-related dispute",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "Drivetrain-related dispute £2,953 Motor Ombudsman average [THIRD-PARTY]"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "level": "h3",
+            "id": "",
+            "text": "Most common claim items (RAC Warranty) [THIRD-PARTY]"
+          },
+          {
+            "type": "cards",
+            "cards": [
+              {
+                "title": "Electrical systems",
+                "text": "Most common claim item",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "#1 Electrical systems Most common claim item"
+              },
+              {
+                "title": "Engine",
+                "text": "Costliest and most common cause",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "#2 Engine Costliest and most common cause"
+              },
+              {
+                "title": "Front suspension",
+                "text": "Common wear item",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "#3 Front suspension Common wear item"
+              },
+              {
+                "title": "Cooling system",
+                "text": "Frequent failure point",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "#4 Cooling system Frequent failure point"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Key observation:"
+          },
+          {
+            "type": "paragraph",
+            "text": "Engine-related problems are the costliest and most common cause of warranty claims. [THIRD-PARTY]"
+          },
+          {
+            "type": "label",
+            "text": "Highest warranty claims - the £20,000+ club"
+          }
+        ],
+        "links": [],
+        "source": {
+          "sectionId": "what-do-engine-warranty-claims-actually-cost",
+          "order": 3
+        }
+      },
+      {
+        "id": "when-engine-warranties-save-you-20-000",
+        "title": "When engine warranties save you £20,000+",
+        "description": "These are the largest individual warranty claims recorded in the UK. Without coverage, these owners would have faced devastating bills. [THIRD-PARTY]",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Rank",
+              "Vehicle",
+              "Engine",
+              "Claim Amount",
+              "Source",
+              "Notes"
+            ],
+            "rows": [
+              [
+                "1",
+                "Jaguar F-Pace SVR",
+                "5.0L supercharged V8",
+                "£23,000",
+                "[THIRD-PARTY: WSG, 2025]",
+                "27,020 miles, full service history"
+              ],
+              [
+                "2",
+                "BMW (2016)",
+                "Various",
+                "£26,233",
+                "[THIRD-PARTY: RAC Warranty, 2024]",
+                "Top RAC claim of 2024"
+              ],
+              [
+                "3",
+                "Audi (2020)",
+                "Various",
+                "£22,954",
+                "[THIRD-PARTY: RAC Warranty, 2025]",
+                "Replacement engine + gearbox"
+              ],
+              [
+                "4",
+                "Range Rover Sport",
+                "SDV6 3.0L",
+                "£17,214",
+                "[THIRD-PARTY: WSG, 2025]",
+                "Crankshaft bearing failure"
+              ],
+              [
+                "5",
+                "Mercedes X-Class",
+                "Various",
+                "~£12,000",
+                "[THIRD-PARTY: WSG, 2025]",
+                "Engine replacement"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Key observation:"
+          },
+          {
+            "type": "paragraph",
+            "text": "Without extended warranty, an F-Pace owner would have faced a £23,000 bill [THIRD-PARTY]. This demonstrates the critical value of warranty coverage on premium vehicles."
+          },
+          {
+            "type": "label",
+            "text": "Highest LCV warranty claim"
+          }
+        ],
+        "links": [],
+        "source": {
+          "sectionId": "when-engine-warranties-save-you-20-000",
+          "order": 4
+        }
+      },
+      {
+        "id": "light-commercial-vehicle-lcv-warranty-costs",
+        "title": "Light commercial vehicle (LCV) warranty costs",
+        "description": "Warranty claims aren't just for cars - commercial vehicles can also see significant repair bills. [THIRD-PARTY]",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Mercedes Sprinter 316 CDI"
+          },
+          {
+            "type": "paragraph",
+            "text": "£6,000+"
+          },
+          {
+            "type": "paragraph",
+            "text": "Engine-related claim [THIRD-PARTY: WSG, 2025]"
+          },
+          {
+            "type": "paragraph",
+            "text": "Observation:"
+          },
+          {
+            "type": "paragraph",
+            "text": "Light commercial vehicle (LCV) warranty claims can also be significant. The Mercedes Sprinter 316 CDI with engine-related claim was valued at over £6,000. [THIRD-PARTY]"
+          },
+          {
+            "type": "label",
+            "text": "Hybrid & EV claim trends"
+          }
+        ],
+        "links": [],
+        "source": {
+          "sectionId": "light-commercial-vehicle-lcv-warranty-costs",
+          "order": 5
+        }
+      },
+      {
+        "id": "hybrid-warranty-claims-are-skyrocketing",
+        "title": "Hybrid warranty claims are skyrocketing",
+        "description": "As the hybrid vehicle parc grows, so do warranty claims. The increase is sharp and reflects the complexity of hybrid powertrains. [THIRD-PARTY]",
+        "blocks": [
+          {
+            "type": "cards",
+            "cards": [
+              {
+                "title": "2024 Hybrid claim share",
+                "text": "[THIRD-PARTY: Warranty Group, 2025]",
+                "highlight": "2024 Hybrid claim share",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "2024 Hybrid claim share 1.5% [THIRD-PARTY: Warranty Group, 2025]"
+              },
+              {
+                "title": "2025 Hybrid claim share",
+                "text": "[THIRD-PARTY: Warranty Group, 2025]",
+                "highlight": "2025 Hybrid claim share",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "2025 Hybrid claim share 3.1% [THIRD-PARTY: Warranty Group, 2025]"
+              },
+              {
+                "title": "Year-on-year growth",
+                "text": "Increased from 1.5% to 3.1% in one year [THIRD-PARTY]",
+                "highlight": "Year-on-year growth",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "Year-on-year growth +107% Increased from 1.5% to 3.1% in one year [THIRD-PARTY]"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Key observation:"
+          },
+          {
+            "type": "paragraph",
+            "text": "Hybrid claims increased from 1.5% to 3.1% of all claims in one year - a 107% increase. This reflects the growing hybrid vehicle parc and the unique complexity of hybrid powertrains (engine + electric motor + battery). [THIRD-PARTY]"
+          },
+          {
+            "type": "label",
+            "text": "Supplier warranty data"
+          }
+        ],
+        "links": [],
+        "source": {
+          "sectionId": "hybrid-warranty-claims-are-skyrocketing",
+          "order": 6
+        }
+      },
+      {
+        "id": "reconditioned-vs-used-vs-rebuilt-warranty-comparison",
+        "title": "Reconditioned vs used vs rebuilt - warranty comparison",
+        "description": "Warranty coverage varies significantly by engine condition type. Here's what you can expect. [EM-OBSERVED]",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Condition",
+              "Typical Warranty",
+              "Coverage Scope",
+              "Confidence"
+            ],
+            "rows": [
+              [
+                "Used engine",
+                "1-3 months (often 30 days)",
+                "Supply only; defects only",
+                "[EM-OBSERVED]"
+              ],
+              [
+                "Reconditioned engine",
+                "12-24 months",
+                "Parts and labour (varies)",
+                "[EM-OBSERVED]"
+              ],
+              [
+                "Rebuilt engine",
+                "12-24 months",
+                "Comprehensive; parts + labour",
+                "[EM-OBSERVED]"
+              ],
+              [
+                "Remanufactured engine",
+                "24-36 months",
+                "Comprehensive; parts + labour",
+                "[EM-OBSERVED]"
+              ]
+            ]
+          },
+          {
+            "type": "heading",
+            "level": "h3",
+            "id": "",
+            "text": "Why reconditioned warranty matters"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Aspect",
+              "Used Engine",
+              "Reconditioned Engine"
+            ],
+            "rows": [
+              [
+                "Warranty period",
+                "1-3 months",
+                "12-24 months"
+              ],
+              [
+                "Coverage scope",
+                "Supply only",
+                "Usually parts + labour"
+              ],
+              [
+                "Quality assurance",
+                "Minimal",
+                "Documented rebuild"
+              ],
+              [
+                "Claim support",
+                "Seller-dependent",
+                "Supplier-backed"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Key observation:"
+          },
+          {
+            "type": "paragraph",
+            "text": "The warranty premium for reconditioned engines (typically £600-£1,000 more than used) provides significant protection. 70.45% of quote requests are for reconditioned engines [EM-VERIFIED], reflecting consumer preference for documented quality and warranty coverage."
+          },
+          {
+            "type": "paragraph",
+            "text": "Reconditioned Engine Warranty Claim Rate"
+          },
+          {
+            "type": "paragraph",
+            "text": "Customer satisfaction"
+          },
+          {
+            "type": "paragraph",
+            "text": "92%"
+          },
+          {
+            "type": "paragraph",
+            "text": "[EM-SURVEY]"
+          },
+          {
+            "type": "paragraph",
+            "text": "Sample size"
+          },
+          {
+            "type": "paragraph",
+            "text": "100+"
+          },
+          {
+            "type": "paragraph",
+            "text": "surveys [EM-SURVEY]"
+          },
+          {
+            "type": "paragraph",
+            "text": "Timing"
+          },
+          {
+            "type": "paragraph",
+            "text": "3-6 months after installation"
+          },
+          {
+            "type": "paragraph",
+            "text": "[EM-SURVEY]"
+          },
+          {
+            "type": "paragraph",
+            "text": "Note: The 92% satisfaction rate includes warranty-related outcomes. Most warranty claims on reconditioned engines are resolved without dispute."
+          },
+          {
+            "type": "label",
+            "text": "Warranty value demonstration"
+          }
+        ],
+        "links": [],
+        "source": {
+          "sectionId": "reconditioned-vs-used-vs-rebuilt-warranty-comparison",
+          "order": 7
+        }
+      },
+      {
+        "id": "case-study-the-23-000-f-pace-svr",
+        "title": "Case Study: The £23,000 F-Pace SVR",
+        "description": "A real-world example of how an extended warranty saved a Jaguar F-Pace owner from a catastrophic financial loss. [THIRD-PARTY: WSG, 2025]",
+        "blocks": [
+          {
+            "type": "cards",
+            "cards": [
+              {
+                "title": "Vehicle",
+                "text": "Vehicle Jaguar F-Pace SVR",
+                "highlight": "Jaguar F-Pace SVR",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "Vehicle Jaguar F-Pace SVR"
+              },
+              {
+                "title": "Engine",
+                "text": "Engine 5.0L supercharged V8",
+                "highlight": "5.0L supercharged V8",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "Engine 5.0L supercharged V8"
+              },
+              {
+                "title": "Mileage at failure",
+                "text": "Mileage at failure 27,020 miles",
+                "highlight": "27,020 miles",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "Mileage at failure 27,020 miles"
+              },
+              {
+                "title": "Service history",
+                "text": "Service history Full (FSH)",
+                "highlight": "Full (FSH)",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "Service history Full (FSH)"
+              },
+              {
+                "title": "Repair cost",
+                "text": "Repair cost £23,000",
+                "highlight": "£23,000",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "Repair cost £23,000"
+              },
+              {
+                "title": "Outcome",
+                "text": "Outcome Covered by warranty",
+                "highlight": "Covered by warranty",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "Outcome Covered by warranty"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Key insight: Without extended warranty, an F-Pace owner would have faced a £23,000 bill for engine replacement on a vehicle with only 27,020 miles and full service history. [THIRD-PARTY]"
+          },
+          {
+            "type": "label",
+            "text": "Motor Ombudsman dispute data"
+          }
+        ],
+        "links": [],
+        "source": {
+          "sectionId": "case-study-the-23-000-f-pace-svr",
+          "order": 8
+        }
+      },
+      {
+        "id": "what-happens-when-warranty-claims-go-wrong",
+        "title": "What happens when warranty claims go wrong?",
+        "description": "Disputes that reach The Motor Ombudsman represent the most serious warranty disagreements. The average claim values are significantly higher than typical warranty claims. [THIRD-PARTY]",
+        "blocks": [
+          {
+            "type": "cards",
+            "cards": [
+              {
+                "title": "Average engine-related dispute",
+                "text": "[THIRD-PARTY: The Motor Ombudsman, 2025]",
+                "highlight": "Average engine-related dispute",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "Average engine-related dispute £2,755 [THIRD-PARTY: The Motor Ombudsman, 2025]"
+              },
+              {
+                "title": "Average drivetrain-related dispute",
+                "text": "[THIRD-PARTY: The Motor Ombudsman, 2025]",
+                "highlight": "Average drivetrain-related dispute",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "Average drivetrain-related dispute £2,953 [THIRD-PARTY: The Motor Ombudsman, 2025]"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Key observation:"
+          },
+          {
+            "type": "paragraph",
+            "text": "The Motor Ombudsman average engine-related dispute claim is £2,755. This is significantly higher than the average warranty claim value (£632-£679 average repair bill) and reflects the severity of disputes that reach the ombudsman stage. [THIRD-PARTY]"
+          },
+          {
+            "type": "label",
+            "text": "Key takeaways"
+          }
+        ],
+        "links": [],
+        "source": {
+          "sectionId": "what-happens-when-warranty-claims-go-wrong",
+          "order": 9
+        }
+      },
+      {
+        "id": "what-you-need-to-remember",
+        "title": "What you need to remember",
+        "description": null,
+        "blocks": [
+          {
+            "type": "cards",
+            "cards": [
+              {
+                "title": "",
+                "text": "Lexus owners make the fewest claims (5.79%) Japanese brands dominate reliability rankings",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "Lexus owners make the fewest claims (5.79%) Japanese brands dominate reliability rankings"
+              },
+              {
+                "title": "",
+                "text": "Engine problems are the costliest and most common warranty claims Engine warranties are the most important coverage",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "Engine problems are the costliest and most common warranty claims Engine warranties are the most important coverage"
+              },
+              {
+                "title": "",
+                "text": "Average engine claim: £2,755 (Motor Ombudsman) Serious disputes are costly",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "Average engine claim: £2,755 (Motor Ombudsman) Serious disputes are costly"
+              },
+              {
+                "title": "",
+                "text": "Hybrid claims grew 107% in one year (1.5% → 3.1%) Hybrid powertrains present new warranty risks",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "Hybrid claims grew 107% in one year (1.5% → 3.1%) Hybrid powertrains present new warranty risks"
+              },
+              {
+                "title": "",
+                "text": "F-Pace SVR £23,000 claim - all top 5 claims exceeded £19,000 Premium vehicles without warranty carry enormous financial risk",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "F-Pace SVR £23,000 claim - all top 5 claims exceeded £19,000 Premium vehicles without warranty carry enormous financial risk"
+              },
+              {
+                "title": "",
+                "text": "Reconditioned engines offer 12-24 month warranties £600-£1,000 premium provides significant protection",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "Reconditioned engines offer 12-24 month warranties £600-£1,000 premium provides significant protection"
+              },
+              {
+                "title": "",
+                "text": "92% satisfaction with reconditioned engines Warranties are effectively managed",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "92% satisfaction with reconditioned engines Warranties are effectively managed"
+              },
+              {
+                "title": "",
+                "text": "Toyota 7.02% claim rate, average repair £479 Japanese reliability is data-confirmed",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "Toyota 7.02% claim rate, average repair £479 Japanese reliability is data-confirmed"
+              }
+            ]
+          },
+          {
+            "type": "label",
+            "text": "Dataset limitations"
+          },
+          {
+            "type": "cards",
+            "cards": [
+              {
+                "title": "External warranty data:",
+                "text": "External warranty data: Claim rates and values from WSG, RAC, and Warranty Direct are third-party and not independently verified.",
+                "highlight": "1.",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "1. External warranty data: Claim rates and values from WSG, RAC, and Warranty Direct are third-party and not independently verified."
+              },
+              {
+                "title": "The Motor Ombudsman data:",
+                "text": "The Motor Ombudsman data: Represents disputes that reached ombudsman stage, not all warranty claims.",
+                "highlight": "2.",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "2. The Motor Ombudsman data: Represents disputes that reached ombudsman stage, not all warranty claims."
+              },
+              {
+                "title": "Sample bias:",
+                "text": "Sample bias: External data sources may not represent the full UK vehicle parc.",
+                "highlight": "3.",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "3. Sample bias: External data sources may not represent the full UK vehicle parc."
+              },
+              {
+                "title": "Supplier warranty data:",
+                "text": "Supplier warranty data: Based on [EM-OBSERVED] patterns, not formal claim tracking.",
+                "highlight": "4.",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "4. Supplier warranty data: Based on [EM-OBSERVED] patterns, not formal claim tracking."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Document ID: EM-WS-2026-01 · Version: 1.0 · Last updated: 18 June 2026"
+          },
+          {
+            "type": "label",
+            "text": "Frequently asked questions"
+          }
+        ],
+        "links": [],
+        "source": {
+          "sectionId": "what-you-need-to-remember",
+          "order": 10
+        }
+      },
+      {
+        "id": "common-questions-about-engine-warranties",
+        "title": "Common questions about engine warranties",
+        "description": null,
+        "blocks": [
+          {
+            "type": "faq",
+            "question": "What is the average engine warranty claim cost in the UK? +",
+            "answer": "The average engine-related dispute claim brought to The Motor Ombudsman is £2,755 [THIRD-PARTY]. For drivetrain-related disputes, the average rises to £2,953 [THIRD-PARTY]. However, individual claims can be much higher - the highest recorded engine warranty claim in the UK was £26,233 for a 2016 BMW [THIRD-PARTY]."
+          },
+          {
+            "type": "faq",
+            "question": "Which car brand has the lowest warranty claim rate? +",
+            "answer": "Lexus has the lowest claim rate at 5.79% [THIRD-PARTY: Warranty Group, 2025]. Toyota follows at 8.78%, and Suzuki at 10.80%. This reflects the broader reputation of Japanese brands for reliability."
+          },
+          {
+            "type": "faq",
+            "question": "What is the most common engine warranty claim? +",
+            "answer": "According to RAC Warranty data, the most common claim items are electrical systems (most frequent), followed by engine (costliest and most common cause), front suspension , and cooling system [THIRD-PARTY]."
+          },
+          {
+            "type": "faq",
+            "question": "How much does a reconditioned engine warranty cover? +",
+            "answer": "Reconditioned engines typically come with a 12-24 month warranty covering parts and labour [EM-OBSERVED]. This is significantly better than used engines, which usually offer only 1-3 months of supply-only coverage. The warranty premium for reconditioned engines (typically £600-£1,000 more than used) provides significant protection."
+          },
+          {
+            "type": "faq",
+            "question": "Are hybrid engines covered by warranty? +",
+            "answer": "Yes, hybrid engines are covered by warranty, but claims are rising sharply. Hybrid claims increased from 1.5% to 3.1% of all claims in one year - a 107% increase [THIRD-PARTY]. This reflects the growing hybrid vehicle parc and the unique complexity of hybrid powertrains."
+          },
+          {
+            "type": "faq",
+            "question": "What was the largest engine warranty claim in the UK? +",
+            "answer": "The largest recorded engine warranty claim in the UK was £26,233 for a 2016 BMW (RAC Warranty, 2024) [THIRD-PARTY]. Other high-value claims include a Jaguar F-Pace SVR at £23,000 (WSG, 2025) and an Audi (2020) at £22,954 (RAC Warranty, 2025)."
+          },
+          {
+            "type": "faq",
+            "question": "Is an extended warranty worth it for a premium car? +",
+            "answer": "Yes. The top 5 highest warranty claims in the UK all exceeded £19,000 , with the highest at £26,233 [THIRD-PARTY]. Without extended warranty, owners of premium vehicles like the Jaguar F-Pace SVR, BMW, Audi, and Range Rover Sport would have faced catastrophic financial losses. The data strongly supports purchasing extended warranty for premium vehicles."
+          },
+          {
+            "type": "faq",
+            "question": "What is the satisfaction rate for reconditioned engine warranties? +",
+            "answer": "Post-sale surveys conducted by Engines Market show a 92% satisfaction rate among reconditioned engine customers [EM-SURVEY]. This includes warranty-related outcomes, with most claims being resolved without dispute. The survey was conducted 3-6 months after installation with a sample size of 100+ customers."
+          },
+          {
+            "type": "label",
+            "text": "Related insights"
+          }
+        ],
+        "links": [],
+        "source": {
+          "sectionId": "common-questions-about-engine-warranties",
+          "order": 11
+        }
+      },
+      {
+        "id": "explore-more-engine-data-and-guides",
+        "title": "Explore more engine data and guides",
+        "description": null,
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Worried about warranty coverage?"
+          }
+        ],
+        "links": [
+          {
+            "href": "/insights/uk-engine-price-index",
+            "text": "UK Engine Price Index 2026 ↗"
+          },
+          {
+            "href": "/insights/engine-replacement-statistics",
+            "text": "UK Engine Replacement Statistics 2026 ↗"
+          },
+          {
+            "href": "/insights/most-common-engine-failures",
+            "text": "Most Common Engine Failures UK ↗"
+          },
+          {
+            "href": "/insights/most-replaced-engines",
+            "text": "Most Replaced Engines UK ↗"
+          },
+          {
+            "href": "/insights/most-reliable-diesel-engines",
+            "text": "Most Reliable Diesel Engines ↗"
+          },
+          {
+            "href": "/insights/most-reliable-petrol-engines",
+            "text": "Most Reliable Petrol Engines ↗"
+          },
+          {
+            "href": "/insights/most-expensive-engine-repairs",
+            "text": "Most Expensive Engine Repairs UK ↗"
+          },
+          {
+            "href": "/methodology",
+            "text": "Full Methodology ↗"
+          }
+        ],
+        "source": {
+          "sectionId": "explore-more-engine-data-and-guides",
+          "order": 12
+        }
+      },
+      {
+        "id": "get-a-personalised-price-based-on-your-vehicle",
+        "title": "Get a personalised price based on your vehicle",
+        "description": "Enter your registration and get fixed-price quotes for engine replacement, repair, or reconditioning from 100+ UK suppliers. No obligation - compare side by side.",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Based on 24,650 real UK quotes in 2025 · Engines Market is a comparison platform - we connect you with suppliers, we do not supply or fit engines."
+          },
+          {
+            "type": "paragraph",
+            "text": "Get your personalised price"
+          },
+          {
+            "type": "paragraph",
+            "text": "Free · No obligation · 100+ UK specialists"
+          }
+        ],
+        "links": [],
+        "source": {
+          "sectionId": "get-a-personalised-price-based-on-your-vehicle",
+          "order": 13
+        }
+      }
+    ],
+    "supplemental": {
+      "media": [],
+      "tables": [],
+      "faqs": [],
+      "forms": [],
+      "links": []
+    }
+  },
+  "structuredData": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://enginesmarket.co.uk/#organization",
+      "name": "Engines Market",
+      "url": "https://enginesmarket.co.uk/",
+      "telephone": "020 3488 4649",
+      "email": "info@enginesmarket.co.uk",
+      "logo": "https://enginesmarket.co.uk/images/logo.png",
+      "sameAs": [
+        "https://www.facebook.com/enginesmarket",
+        "https://x.com/EnginesMarket",
+        "https://www.instagram.com/enginesmarketuk/",
+        "https://www.tiktok.com/@enginesmarket"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://enginesmarket.co.uk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Insights",
+          "item": "https://enginesmarket.co.uk/insights/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Engine Warranty Statistics UK 2026",
+          "item": "https://enginesmarket.co.uk/insights/engine-warranty-statistics-uk"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Dataset",
+      "name": "Engine Warranty Statistics UK 2026",
+      "description": "Comprehensive data on engine warranties in the UK including claim rates by brand, average costs, premium vs non-premium differences, and highest warranty claims.",
+      "identifier": "EM-WS-2026-01",
+      "creator": {
+        "@type": "Organization",
+        "name": "Engines Market",
+        "url": "https://enginesmarket.co.uk"
+      },
+      "datePublished": "2026-06-18",
+      "dateModified": "2026-06-18",
+      "keywords": "engine warranty statistics, warranty claim rates, Lexus claim rate, Toyota reliability, engine warranty costs, UK warranty data",
+      "temporalCoverage": "2025-01-01/2025-12-31",
+      "spatialCoverage": {
+        "@type": "Country",
+        "name": "United Kingdom"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "Engines Market Proprietary Data",
+        "url": "https://enginesmarket.co.uk/methodology"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the average engine warranty claim cost in the UK?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The average engine-related dispute claim brought to The Motor Ombudsman is £2,755. For drivetrain-related disputes, the average rises to £2,953. However, individual claims can be much higher - the highest recorded engine warranty claim in the UK was £26,233 for a 2016 BMW."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which car brand has the lowest warranty claim rate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lexus has the lowest claim rate at 5.79%. Toyota follows at 8.78%, and Suzuki at 10.80%. This reflects the broader reputation of Japanese brands for reliability."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the most common engine warranty claim?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "According to RAC Warranty data, the most common claim items are electrical systems (most frequent), followed by engine (costliest and most common cause), front suspension, and cooling system."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does a reconditioned engine warranty cover?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Reconditioned engines typically come with a 12-24 month warranty covering parts and labour. This is significantly better than used engines, which usually offer only 1-3 months of supply-only coverage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are hybrid engines covered by warranty?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, hybrid engines are covered by warranty, but claims are rising sharply. Hybrid claims increased from 1.5% to 3.1% of all claims in one year - a 107% increase."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What was the largest engine warranty claim in the UK?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The largest recorded engine warranty claim in the UK was £26,233 for a 2016 BMW. Other high-value claims include a Jaguar F-Pace SVR at £23,000 and an Audi (2020) at £22,954."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is an extended warranty worth it for a premium car?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The top 5 highest warranty claims in the UK all exceeded £19,000. Without extended warranty, owners of premium vehicles would have faced catastrophic financial losses."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the satisfaction rate for reconditioned engine warranties?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Post-sale surveys show a 92% satisfaction rate among reconditioned engine customers, with most claims being resolved without dispute."
+          }
+        }
+      ]
+    }
+  ],
+  "stats": {
+    "wordCount": 1958,
+    "headingCount": 19,
+    "tableCount": 4,
+    "faqCount": 8,
+    "formCount": 4,
+    "linkCount": 12,
+    "imageCount": 3
+  },
+  "schemaVersion": 3
+}

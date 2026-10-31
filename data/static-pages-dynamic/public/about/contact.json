@@ -1,0 +1,560 @@
+{
+  "id": "public/about/contact",
+  "contentType": "about",
+  "slug": "about/contact",
+  "route": "/about/contact",
+  "source": {
+    "originalFile": "public/about/contact.html",
+    "sourceRoot": "public",
+    "sourceHash": "sha256:6ea0367550b550bf9740e9a2717fefbb9f1ebe81518c969432a623cbabd5dc33",
+    "sourceBytes": 50941,
+    "migrationStatus": "clean-exported",
+    "sourceImmutable": true
+  },
+  "seo": {
+    "title": "Contact Engines Market | UK Engine Replacement Support",
+    "description": "Contact Engines Market by phone, WhatsApp, or email. Get support for quotes, supplier onboarding, or press. Response within 4 working hours.",
+    "canonical": "https://enginesmarket.co.uk/about/contact",
+    "robots": "index, follow",
+    "openGraph": {
+      "title": "",
+      "description": "",
+      "url": "",
+      "image": "",
+      "type": ""
+    }
+  },
+  "sections": {
+    "hero": {
+      "eyebrow": "",
+      "title": "Contact Engines Market",
+      "description": "We are here to help - by phone, WhatsApp, email, or the form below.",
+      "options": [],
+      "trust": [],
+      "image": null,
+      "content": [
+        {
+          "type": "label",
+          "text": "Get in touch"
+        },
+        {
+          "type": "paragraph",
+          "text": "Call us"
+        },
+        {
+          "type": "paragraph",
+          "text": "Email us"
+        },
+        {
+          "type": "paragraph",
+          "text": "WhatsApp"
+        },
+        {
+          "type": "paragraph",
+          "text": "CONTACT"
+        },
+        {
+          "type": "paragraph",
+          "text": "Engines Market is an online marketplace. We do not have a physical reception or workshop you can visit. But we are easy to reach by phone, message, or email during business hours."
+        },
+        {
+          "type": "paragraph",
+          "text": "Choose the contact method that works for you."
+        },
+        {
+          "type": "label",
+          "text": "Reach us directly"
+        }
+      ],
+      "links": [
+        {
+          "href": "mailto:support@enginesmarket.co.uk",
+          "text": "support@enginesmarket.co.uk"
+        },
+        {
+          "href": "mailto:suppliers@enginesmarket.co.uk",
+          "text": "suppliers@enginesmarket.co.uk"
+        },
+        {
+          "href": "mailto:press@enginesmarket.co.uk",
+          "text": "press@enginesmarket.co.uk"
+        },
+        {
+          "href": "tel:+442034884649",
+          "text": "020 3488 4649"
+        },
+        {
+          "href": "https://wa.me/442034884649",
+          "text": "020 3488 4649"
+        },
+        {
+          "href": "#",
+          "text": "Facebook"
+        },
+        {
+          "href": "#",
+          "text": "X (Twitter)"
+        },
+        {
+          "href": "#",
+          "text": "Instagram"
+        },
+        {
+          "href": "#",
+          "text": "TikTok"
+        },
+        {
+          "href": "#",
+          "text": "How Engines Market works"
+        },
+        {
+          "href": "#",
+          "text": "Supplier standards"
+        },
+        {
+          "href": "#",
+          "text": "Complaints procedure"
+        }
+      ]
+    },
+    "ordered": [
+      {
+        "id": "quick-contact-options",
+        "title": "Quick contact options",
+        "description": null,
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Contact type",
+              "Details"
+            ],
+            "rows": [
+              [
+                "Customer support (quote questions)",
+                "support@enginesmarket.co.uk"
+              ],
+              [
+                "Supplier enquiries (join our network)",
+                "suppliers@enginesmarket.co.uk"
+              ],
+              [
+                "Press & media",
+                "press@enginesmarket.co.uk"
+              ],
+              [
+                "Phone",
+                "020 3488 4649"
+              ],
+              [
+                "WhatsApp",
+                "020 3488 4649 - text only, no calls"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Business hours: Monday to Friday, 9:00 - 17:30 (excluding bank holidays)"
+          },
+          {
+            "type": "paragraph",
+            "text": "Typical response time: Within 4 working hours (often sooner)"
+          },
+          {
+            "type": "label",
+            "text": "Send a message"
+          }
+        ],
+        "links": [],
+        "source": {
+          "sectionId": "quick-contact-options",
+          "order": 0
+        }
+      },
+      {
+        "id": "general-enquiry-form",
+        "title": "General enquiry form",
+        "description": "Use this form for general questions, pre-sales support, partnership requests, or anything else not covered above.",
+        "blocks": [
+          {
+            "type": "form",
+            "action": "#",
+            "method": "post",
+            "fields": [
+              {
+                "element": "input",
+                "name": "name",
+                "type": "text",
+                "placeholder": "e.g. John Smith",
+                "required": true
+              },
+              {
+                "element": "input",
+                "name": "email",
+                "type": "email",
+                "placeholder": "john@example.com",
+                "required": true
+              },
+              {
+                "element": "input",
+                "name": "phone",
+                "type": "tel",
+                "placeholder": "e.g. 07700 900000",
+                "required": false
+              },
+              {
+                "element": "input",
+                "name": "subject",
+                "type": "text",
+                "placeholder": "Brief summary of your enquiry",
+                "required": true
+              },
+              {
+                "element": "textarea",
+                "name": "message",
+                "type": "",
+                "placeholder": "Please provide as much detail as possible…",
+                "required": true
+              },
+              {
+                "element": "button",
+                "name": "",
+                "type": "submit",
+                "placeholder": "",
+                "required": false
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "All enquiries sent via the form will receive an automated acknowledgment and a human reply within one working day."
+          },
+          {
+            "type": "label",
+            "text": "What to expect"
+          }
+        ],
+        "links": [],
+        "source": {
+          "sectionId": "general-enquiry-form",
+          "order": 1
+        }
+      },
+      {
+        "id": "response-times-by-channel",
+        "title": "Response times by channel",
+        "description": null,
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Channel",
+              "Typical response time"
+            ],
+            "rows": [
+              [
+                "Phone (during business hours)",
+                "Immediate (or voicemail - we will call back within 2 hours)"
+              ],
+              [
+                "WhatsApp (text only)",
+                "1-3 hours during business hours"
+              ],
+              [
+                "Email (support / suppliers / press)",
+                "Within 4 working hours"
+              ],
+              [
+                "Contact form",
+                "Within one working day"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Outside business hours: Messages will be responded to on the next working day."
+          },
+          {
+            "type": "label",
+            "text": "Legal & SEO"
+          }
+        ],
+        "links": [],
+        "source": {
+          "sectionId": "response-times-by-channel",
+          "order": 2
+        }
+      },
+      {
+        "id": "our-registered-address",
+        "title": "Our registered address",
+        "description": "For legal correspondence only - please do not visit.",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Engines Market 123 Business Name, Street, City, Postcode"
+          },
+          {
+            "type": "paragraph",
+            "text": "Important: This address is for legal correspondence only. Please do not visit - we cannot accept visitors or customer vehicles at this address. If you need to send a letter (e.g., formal complaint or legal document), please use the email addresses above first. Postal correspondence will be handled but may take longer to receive and respond to."
+          },
+          {
+            "type": "label",
+            "text": "Follow us"
+          }
+        ],
+        "links": [],
+        "source": {
+          "sectionId": "our-registered-address",
+          "order": 3
+        }
+      },
+      {
+        "id": "social-media",
+        "title": "Social media",
+        "description": "Follow us for updates, market insights, and customer stories:",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Facebook"
+          },
+          {
+            "type": "paragraph",
+            "text": "X (Twitter)"
+          },
+          {
+            "type": "paragraph",
+            "text": "Instagram"
+          },
+          {
+            "type": "paragraph",
+            "text": "TikTok"
+          },
+          {
+            "type": "paragraph",
+            "text": "We monitor social media DMs but they are not our primary support channel. For quote-related or time-sensitive questions, please use email or WhatsApp."
+          },
+          {
+            "type": "label",
+            "text": "Common questions"
+          }
+        ],
+        "links": [],
+        "source": {
+          "sectionId": "social-media",
+          "order": 4
+        }
+      },
+      {
+        "id": "frequently-asked-questions",
+        "title": "Frequently asked questions",
+        "description": null,
+        "blocks": [
+          {
+            "type": "faq",
+            "question": "Can I visit your office or workshop-",
+            "answer": "No. Engines Market is an online marketplace. We do not have a public-facing reception, and we do not carry out any mechanical work. All engine supply and fitting is handled directly by the suppliers in our network."
+          },
+          {
+            "type": "faq",
+            "question": "How do I get a quote for my engine replacement-",
+            "answer": "Please use our quote form. Our support team cannot provide pricing over the phone - we need your vehicle registration and failure details to match you with relevant suppliers."
+          },
+          {
+            "type": "faq",
+            "question": "I am a supplier - how do I join your network-",
+            "answer": "Email suppliers@enginesmarket.co.uk with your company name, registered address, and a link to your public reviews. We will send you our onboarding criteria."
+          },
+          {
+            "type": "faq",
+            "question": "I have a complaint about a supplier I found through Engines Market.",
+            "answer": "We are sorry to hear that. Please first contact the supplier directly to give them the opportunity to resolve the issue. If you are still unhappy, email support@enginesmarket.co.uk with your order reference and details. We do not mediate disputes, but we track complaints as part of our supplier monitoring and removal process."
+          },
+          {
+            "type": "paragraph",
+            "text": "Related pages:"
+          },
+          {
+            "type": "paragraph",
+            "text": "How Engines Market works"
+          },
+          {
+            "type": "paragraph",
+            "text": "Supplier standards"
+          },
+          {
+            "type": "paragraph",
+            "text": "Complaints procedure"
+          },
+          {
+            "type": "label",
+            "text": "Ready to compare-"
+          }
+        ],
+        "links": [],
+        "source": {
+          "sectionId": "frequently-asked-questions",
+          "order": 5
+        }
+      },
+      {
+        "id": "get-a-free-engine-replacement-quote",
+        "title": "Get a free engine replacement quote",
+        "description": "Submit your vehicle details and get matched with vetted UK specialists.",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Get a free quote"
+          }
+        ],
+        "links": [
+          {
+            "href": "#",
+            "text": "Get a free quote"
+          }
+        ],
+        "source": {
+          "sectionId": "get-a-free-engine-replacement-quote",
+          "order": 6
+        }
+      }
+    ],
+    "supplemental": {
+      "media": [],
+      "tables": [],
+      "faqs": [],
+      "forms": [],
+      "links": []
+    }
+  },
+  "structuredData": [
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Contact Engines Market",
+      "description": "Contact Engines Market by phone, WhatsApp, or email. Get support for quotes, supplier onboarding, or press. Response within 4 working hours.",
+      "url": "https://enginesmarket.co.uk/about/contact",
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "Engines Market",
+        "url": "https://enginesmarket.co.uk",
+        "logo": "https://enginesmarket.co.uk/logo.png",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "123 Business Name, Street",
+          "addressLocality": "City",
+          "postalCode": "Postcode",
+          "addressCountry": "UK"
+        },
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "contactType": "customer support",
+            "email": "support@enginesmarket.co.uk",
+            "availableLanguage": "English",
+            "areaServed": "GB"
+          },
+          {
+            "@type": "ContactPoint",
+            "contactType": "supplier onboarding",
+            "email": "suppliers@enginesmarket.co.uk",
+            "availableLanguage": "English",
+            "areaServed": "GB"
+          },
+          {
+            "@type": "ContactPoint",
+            "contactType": "press and media",
+            "email": "press@enginesmarket.co.uk",
+            "availableLanguage": "English",
+            "areaServed": "GB"
+          },
+          {
+            "@type": "ContactPoint",
+            "contactType": "sales and general enquiries",
+            "telephone": "+44 20 3488 4649",
+            "availableLanguage": "English",
+            "areaServed": "GB",
+            "contactOption": "HearingImpairedSupported"
+          },
+          {
+            "@type": "ContactPoint",
+            "contactType": "WhatsApp support (text only)",
+            "telephone": "+44 20 3488 4649",
+            "availableLanguage": "English",
+            "areaServed": "GB"
+          }
+        ],
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "09:00",
+            "closes": "17:30"
+          }
+        ],
+        "potentialAction": {
+          "@type": "CommunicateAction",
+          "description": "Contact Engines Market support team for help with engine replacement quotes.",
+          "about": {
+            "@type": "Thing",
+            "name": "Engine Replacement Quote Support"
+          }
+        }
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I visit your office or workshop-",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Engines Market is an online marketplace. We do not have a public-facing reception, and we do not carry out any mechanical work. All engine supply and fitting is handled directly by the suppliers in our network."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I get a quote for my engine replacement-",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Please use our quote form. Our support team cannot provide pricing over the phone - we need your vehicle registration and failure details to match you with relevant suppliers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "I am a supplier - how do I join your network-",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Email suppliers@enginesmarket.co.uk with your company name, registered address, and a link to your public reviews. We will send you our onboarding criteria."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "I have a complaint about a supplier I found through Engines Market.",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Please first contact the supplier directly to give them the opportunity to resolve the issue. If you are still unhappy, email support@enginesmarket.co.uk with your order reference and details. We do not mediate disputes, but we track complaints as part of our supplier monitoring and removal process."
+          }
+        }
+      ]
+    }
+  ],
+  "stats": {
+    "wordCount": 582,
+    "headingCount": 8,
+    "tableCount": 2,
+    "faqCount": 4,
+    "formCount": 1,
+    "linkCount": 13,
+    "imageCount": 0
+  },
+  "schemaVersion": 3
+}

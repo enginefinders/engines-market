@@ -1,0 +1,363 @@
+{
+  "id": "public/about/about-us",
+  "contentType": "about",
+  "slug": "about/about-us",
+  "route": "/about",
+  "source": {
+    "originalFile": "public/about/about-us.html",
+    "sourceRoot": "public",
+    "sourceHash": "sha256:f65e16f54429e5bfca516463b7fab7f2e93b3a6b6d46e04f1935a61f0497ccea",
+    "sourceBytes": 55772,
+    "migrationStatus": "clean-exported",
+    "sourceImmutable": true
+  },
+  "seo": {
+    "title": "About Engines Market - Compare Engine Replacement Quotes UK | Free & Transparent",
+    "description": "Compare real quotes from 100+ vetted UK engine specialists. Save money on engine replacement with transparent pricing, no hidden fees & no obligation. Get a free quote.",
+    "canonical": "https://enginesmarket.co.uk/about",
+    "robots": "index, follow",
+    "openGraph": {
+      "title": "",
+      "description": "",
+      "url": "",
+      "image": "",
+      "type": ""
+    }
+  },
+  "sections": {
+    "hero": {
+      "eyebrow": "About Engines Market",
+      "title": "Save money and stress on engine replacement",
+      "description": "Engine failure is stressful enough. What makes it worse is not knowing how much a replacement should cost, who to trust, or whether you are getting a fair deal.",
+      "supportingDescription": "Engines Market exists to change that. We give you a clear, free, and no-obligation way to compare real quotes from 100+ vetted UK engine specialists - all in one place.",
+      "stats": [
+        {
+          "value": "100+",
+          "label": "Vetted UK suppliers"
+        },
+        {
+          "value": "24,650+",
+          "label": "Quote requests in 2025"
+        },
+        {
+          "value": "5.2",
+          "label": "Days avg. from quote to fit"
+        }
+      ],
+      "brand": {
+        "label": "COMPARE",
+        "name": "Engines Market",
+        "tagline": "Compare · Transparent · Free"
+      },
+      "image": null,
+      "nextSectionLabel": "Our mission",
+      "breadcrumbs": [
+        {
+          "label": "Home",
+          "href": "/"
+        }
+      ]
+    },
+    "mission": {
+      "title": "To make engine replacement pricing transparent across the UK.",
+      "description": "No hidden fees. No pressure. Just real data, real suppliers, and a clear path to a fair price.",
+      "values": [
+        "Transparent",
+        "No pressure",
+        "Real data"
+      ],
+      "nextSectionLabel": "What we do (and what we do not do)"
+    },
+    "platform": {
+      "title": "A comparison platform - nothing more, nothing less",
+      "description": "Engines Market is a price comparison platform . We connect you with independent UK engine suppliers. That is all.",
+      "includedLabel": "We do",
+      "included": [
+        "Help you compare quotes from vetted specialists",
+        "Provide transparent pricing guidance",
+        "Share marketplace data (e.g., 24,650+ quote requests)",
+        "Introduce you to relevant suppliers"
+      ],
+      "excludedLabel": "We do NOT",
+      "excluded": [
+        "Sell engines ourselves",
+        "Fit engines",
+        "Provide warranties",
+        "Handle payments",
+        "Mediate disputes between customers and suppliers"
+      ],
+      "closing": "All contracts, warranties, and payments are directly between you and the supplier you choose. Our role is to give you the information and options you need to make a confident decision.",
+      "nextSectionLabel": "The problem we solve"
+    },
+    "problem": {
+      "title": "Why engine replacement is harder than it should be",
+      "items": [
+        {
+          "title": "Lack of price transparency",
+          "description": "Engine replacement costs vary wildly. Most drivers have no benchmark for a fair price."
+        },
+        {
+          "title": "Stress of a major breakdown",
+          "description": "An engine failure is a big financial hit. Not knowing where to turn makes it worse."
+        },
+        {
+          "title": "Fragmented marketplace",
+          "description": "Hundreds of specialists exist, but comparing them is difficult. You end up calling around, repeating your story, and still wondering if you got the best deal."
+        }
+      ],
+      "nextSectionLabel": "How we solve it"
+    },
+    "process": {
+      "title": "Four simple steps to a fair price",
+      "description": "Based on 24,650 quote requests processed in 2025 [EM-VERIFIED], most owners receive a competitive offer within 5.2 days from start to finish.",
+      "steps": [
+        {
+          "step": "1",
+          "title": "Submit your enquiry",
+          "description": "Enter your registration, mileage, and a short description. Takes a few minutes - completely free."
+        },
+        {
+          "step": "2",
+          "title": "We match you",
+          "description": "Your anonymised enquiry is shared with relevant specialists from our network of 100+ UK suppliers."
+        },
+        {
+          "step": "3",
+          "title": "Receive & compare",
+          "description": "You'll typically get 3-5 quotes within a few hours, direct from suppliers."
+        },
+        {
+          "step": "4",
+          "title": "You choose",
+          "description": "No obligation. You decide which supplier to contact, ask questions, and proceed if you're happy."
+        }
+      ],
+      "cta": {
+        "text": "Start your free quote today →",
+        "label": "Get quotes",
+        "href": "/get-a-quote"
+      },
+      "nextSectionLabel": "Why UK drivers trust us"
+    },
+    "trust": {
+      "title": "Honesty is the foundation of trust",
+      "description": "We are transparent about our marketplace model, our data, and our limitations. We do not claim to be a garage or a warranty provider. We are a comparison platform - and we believe that honesty is the foundation of trust.",
+      "principles": [
+        {
+          "title": "Transparency",
+          "description": "Open about how we work, what we charge (nothing to you), and where we add value."
+        },
+        {
+          "title": "Fairness",
+          "description": "We present all condition types with their real pros and cons. No steering unless the data supports it."
+        },
+        {
+          "title": "Expertise",
+          "description": "Our guidance is based on real marketplace data, not guesswork."
+        },
+        {
+          "title": "Simplicity",
+          "description": "One enquiry, multiple quotes, clear next steps."
+        }
+      ],
+      "nextSectionLabel": "What our customers say"
+    },
+    "testimonials": {
+      "title": "Real stories from real UK drivers",
+      "items": [
+        {
+          "quote": "I was quoted £4,500 by a local garage. Through Engines Market I got three quotes - the best was £2,800 for a reconditioned engine with a 12-month warranty. Saved me nearly £2,000.",
+          "attribution": "James, Manchester - BMW 320d, N47 timing chain failure"
+        },
+        {
+          "quote": "Simple, fast, no pressure. I had quotes within 4 hours and chose a supplier the same day. The whole process was exactly as described.",
+          "attribution": "Sarah, Bristol - Ford Focus 1.6 TDCi"
+        },
+        {
+          "quote": "The warranty guide on their site helped me understand what to ask suppliers. I ended up choosing a reconditioned engine with labour cover - peace of mind for my daily driver.",
+          "attribution": "Mike, Birmingham - VW Passat 2.0 TDI"
+        }
+      ],
+      "note": "We display a live Trustpilot widget on our homepage. Read hundreds more verified reviews here.",
+      "link": {
+        "href": "#",
+        "text": "Read hundreds more verified reviews here."
+      },
+      "nextSectionLabel": "Explore more about Engines Market"
+    },
+    "resources": {
+      "title": "Detailed guides and resources",
+      "description": "Here is where you can find detailed information about how we work, our supplier standards, and how to get in touch.",
+      "items": [
+        {
+          "icon": "↗",
+          "title": "How Engines Market works",
+          "description": "A step-by-step walkthrough of the process from enquiry to quote, including our legal disclaimer.",
+          "href": "#"
+        },
+        {
+          "icon": "↗",
+          "title": "Supplier standards",
+          "description": "How we vet the 100+ specialists in our network, and what we expect from them.",
+          "href": "#"
+        },
+        {
+          "icon": "↗",
+          "title": "Engine warranty guide",
+          "description": "Understand the different types of warranty, common exclusions, and questions to ask your supplier.",
+          "href": "#"
+        },
+        {
+          "icon": "↗",
+          "title": "Warranty claims guide",
+          "description": "What to do if you need to make a claim, and how we can help (without acting as a mediator).",
+          "href": "#"
+        },
+        {
+          "icon": "↗",
+          "title": "Contact us",
+          "description": "Reach our team for support, partnership enquiries, or just to ask a question.",
+          "href": "#"
+        }
+      ],
+      "nextSectionLabel": "Frequently asked questions"
+    },
+    "faq": {
+      "title": "Quick answers about Engines Market",
+      "items": [
+        {
+          "question": "What does Engines Market do- +",
+          "answer": "Engines Market is a price comparison platform that connects you with independent UK engine suppliers. We help you compare quotes from vetted specialists to find a fair price for engine replacement."
+        },
+        {
+          "question": "How does the engine replacement quote process work- +",
+          "answer": "You submit your enquiry online. We match you with relevant specialists from our network of 100+ UK suppliers. You will typically receive 3-5 quotes within a few hours, then you choose the supplier that best fits your needs."
+        },
+        {
+          "question": "Is Engines Market a garage or engine seller- +",
+          "answer": "No. Engines Market is a comparison platform. We do not sell engines, fit engines, provide warranties, or handle payments. All contracts are directly between you and the supplier you choose."
+        },
+        {
+          "question": "How much does it cost to use Engines Market- +",
+          "answer": "It is completely free for drivers. We do not charge you anything to submit an enquiry or receive quotes. Our revenue comes from suppliers who pay a small fee to be part of our network."
+        },
+        {
+          "question": "How do you vet your suppliers- +",
+          "answer": "We vet suppliers based on their UK business registration, trading history, customer reviews, and adherence to our supplier standards. We regularly review supplier performance to maintain quality."
+        }
+      ],
+      "cta": {
+        "eyebrow": "Ready to get your quote-",
+        "title": "Stop guessing. Start comparing.",
+        "description": "Enter your registration and see real prices from UK specialists who are ready to help.",
+        "highlights": [
+          "Free",
+          "No obligation",
+          "100+ UK specialists",
+          "24,650+ quotes in 2025"
+        ],
+        "buttonText": "Get your free quote now",
+        "note": "No obligation · Compare side by side",
+        "href": "/get-a-quote"
+      }
+    }
+  },
+  "structuredData": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://enginesmarket.co.uk/#organization",
+      "name": "Engines Market",
+      "url": "https://enginesmarket.co.uk/",
+      "telephone": "020 3488 4649",
+      "email": "info@enginesmarket.co.uk",
+      "logo": "https://enginesmarket.co.uk/images/logo.png",
+      "sameAs": [
+        "https://www.facebook.com/enginesmarket",
+        "https://x.com/EnginesMarket",
+        "https://www.instagram.com/enginesmarketuk/",
+        "https://www.tiktok.com/@enginesmarket"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "About Engines Market - Engine Replacement Comparison",
+      "description": "Compare real quotes from 100+ vetted UK engine specialists. Save money on engine replacement with transparent pricing, no hidden fees, and no obligation.",
+      "url": "https://enginesmarket.co.uk/about",
+      "about": {
+        "@type": "Thing",
+        "name": "Engine Replacement Price Comparison"
+      },
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "Engines Market",
+        "description": "A price comparison platform connecting UK drivers with vetted independent engine suppliers.",
+        "url": "https://enginesmarket.co.uk",
+        "logo": "https://enginesmarket.co.uk/logo.png",
+        "foundingDate": "2025",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "UK"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "url": "https://enginesmarket.co.uk/contact"
+        },
+        "makesOffer": {
+          "@type": "Service",
+          "name": "Engine Replacement Quote Comparison",
+          "description": "Submit your vehicle details to receive multiple quotes from UK engine specialists.",
+          "provider": {
+            "@type": "Organization",
+            "name": "Engines Market"
+          }
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://enginesmarket.co.uk/about"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does Engines Market do-",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Engines Market is a price comparison platform that connects you with independent UK engine suppliers. We help you compare quotes from vetted specialists to find a fair price for engine replacement."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the engine replacement quote process work-",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You submit your enquiry online. We match you with relevant specialists from our network of 100+ UK suppliers. You will typically receive 3-5 quotes within a few hours, then you choose the supplier that best fits your needs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Engines Market a garage or engine seller-",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Engines Market is a comparison platform. We do not sell engines, fit engines, provide warranties, or handle payments. All contracts are directly between you and the supplier you choose."
+          }
+        }
+      ]
+    }
+  ],
+  "stats": {
+    "wordCount": 1055,
+    "headingCount": 9,
+    "tableCount": 0,
+    "faqCount": 5,
+    "formCount": 0,
+    "linkCount": 8,
+    "imageCount": 0
+  }
+}

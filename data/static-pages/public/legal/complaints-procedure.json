@@ -1,0 +1,623 @@
+{
+  "id": "public/legal/complaints-procedure",
+  "contentType": "legal",
+  "slug": "legal/complaints-procedure",
+  "route": "/complaints-procedure",
+  "source": {
+    "originalFile": "public/legal/complaints-procedure.html",
+    "sourceRoot": "public",
+    "sourceHash": "sha256:9296b2da447abcb543723d9d18fd4cae3b36f6c42c749c3d894f3dfdc9ecc1b8",
+    "sourceBytes": 71593,
+    "migrationStatus": "clean-exported",
+    "sourceImmutable": true
+  },
+  "seo": {
+    "title": "Complaints Procedure - Engines Market | Submit a Complaint",
+    "description": "Learn how to submit a complaint about Engines Market. We acknowledge within 48 hours and respond within 14 working days. Your feedback helps us improve.",
+    "canonical": "https://enginesmarket.co.uk/complaints-procedure",
+    "robots": "",
+    "openGraph": {
+      "title": "",
+      "description": "",
+      "url": "",
+      "image": "",
+      "type": ""
+    }
+  },
+  "sections": {
+    "hero": {
+      "eyebrow": "Complaints Procedure",
+      "title": "How to Make a Complaint about Engines Market",
+      "description": "We aim to provide a transparent, fair, and efficient service. If something has gone wrong with our platform, we want to know about it.",
+      "options": [],
+      "trust": [],
+      "image": null,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Complaints Procedure"
+        },
+        {
+          "type": "paragraph",
+          "text": "Important: Engines Market is a price comparison platform. We do not sell, fit, or warranty engines. If your complaint is about a supplier (e.g., an engine you bought, a fitting issue, a warranty dispute), please contact the supplier directly. We do not mediate supplier disputes, but we do track complaints as part of our supplier monitoring process. See our Warranty claims guide for more information."
+        },
+        {
+          "type": "paragraph",
+          "text": "Scope"
+        }
+      ],
+      "links": [
+        {
+          "href": "/warranty-claims-guide",
+          "text": "Warranty claims guide"
+        },
+        {
+          "href": "/legal/privacy-policy",
+          "text": "Privacy policy"
+        },
+        {
+          "href": "/legal/data-handling-policy",
+          "text": "Data handling policy"
+        },
+        {
+          "href": "/about/supplier-standards",
+          "text": "Supplier standards"
+        },
+        {
+          "href": "/legal/terms-and-conditions",
+          "text": "Terms and conditions"
+        }
+      ]
+    },
+    "scope": {
+      "items": [
+        {
+          "id": "what-you-can-complain-to-us-about",
+          "title": "What You Can Complain to Us About",
+          "description": "You can use this formal procedure to complain about:",
+          "blocks": [
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "Our platform: quoting errors, technical faults, or problems using the website",
+                "Our data handling: how we collect, store, or share your personal information",
+                "Our customer support: poor communication, delays, or unhelpful responses from our team",
+                "Supplier conduct: where you believe a supplier should be removed from our network due to repeated poor behaviour (we do not mediate individual disputes, but we use complaints to monitor supplier performance)"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "What we cannot help with:"
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "Enforcing a supplier’s warranty",
+                "Demanding a refund or replacement from a supplier",
+                "Mediating a contract dispute between you and a supplier"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "Option 1"
+            }
+          ],
+          "links": [],
+          "source": {
+            "sectionId": "what-you-can-complain-to-us-about",
+            "order": 0
+          }
+        }
+      ]
+    },
+    "procedure": {
+      "items": []
+    },
+    "dataUse": {
+      "items": []
+    },
+    "security": {
+      "items": []
+    },
+    "retention": {
+      "items": []
+    },
+    "rights": {
+      "items": []
+    },
+    "complaints": {
+      "items": [
+        {
+          "id": "submit-a-complaint-using-our-online-form",
+          "title": "Submit a Complaint Using Our Online Form",
+          "description": "Please complete the form below. All fields marked * are required.",
+          "blocks": [
+            {
+              "type": "form",
+              "action": "",
+              "method": "get",
+              "fields": [
+                {
+                  "element": "input",
+                  "name": "fullname",
+                  "type": "text",
+                  "placeholder": "e.g. Jane Smith",
+                  "required": true
+                },
+                {
+                  "element": "input",
+                  "name": "email",
+                  "type": "email",
+                  "placeholder": "jane@example.com",
+                  "required": true
+                },
+                {
+                  "element": "input",
+                  "name": "order-ref",
+                  "type": "text",
+                  "placeholder": "e.g. EM-12345",
+                  "required": false
+                },
+                {
+                  "element": "select",
+                  "name": "category",
+                  "type": "",
+                  "placeholder": "",
+                  "required": true
+                },
+                {
+                  "element": "textarea",
+                  "name": "details",
+                  "type": "",
+                  "placeholder": "Please describe your complaint in as much detail as possible. Include relevant dates, the supplier name (if applicable), and any previous attempts to resolve the issue.",
+                  "required": true
+                },
+                {
+                  "element": "input",
+                  "name": "file-upload",
+                  "type": "file",
+                  "placeholder": "",
+                  "required": false
+                },
+                {
+                  "element": "button",
+                  "name": "",
+                  "type": "submit",
+                  "placeholder": "",
+                  "required": false
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "Option 2"
+            }
+          ],
+          "links": [],
+          "source": {
+            "sectionId": "submit-a-complaint-using-our-online-form",
+            "order": 1
+          }
+        },
+        {
+          "id": "what-happens-after-you-submit-a-complaint",
+          "title": "What Happens After You Submit a Complaint?",
+          "description": "We follow a clear, documented 4-step process to ensure your complaint is handled impartially and efficiently.",
+          "blocks": [
+            {
+              "type": "cards",
+              "cards": [
+                {
+                  "title": "We acknowledge receipt of your complaint by email",
+                  "text": "We acknowledge receipt of your complaint by email We confirm we have received your complaint and assign a reference code.",
+                  "highlight": "1",
+                  "meta": "1",
+                  "icon": "",
+                  "items": [],
+                  "fullText": "1 We acknowledge receipt of your complaint by email We confirm we have received your complaint and assign a reference code. Within 48 hours"
+                },
+                {
+                  "title": "We review your complaint, gather relevant information, and investigate",
+                  "text": "We review your complaint, gather relevant information, and investigate Our team looks into the platform logs, communication records, and details thoroughly.",
+                  "highlight": "2",
+                  "meta": "2",
+                  "icon": "",
+                  "items": [],
+                  "fullText": "2 We review your complaint, gather relevant information, and investigate Our team looks into the platform logs, communication records, and details thoroughly. Within 7 working days"
+                },
+                {
+                  "title": "We respond with our findings and any actions we will take",
+                  "text": "We respond with our findings and any actions we will take You will receive a formal written response outlining our conclusions and remediation.",
+                  "highlight": "3",
+                  "meta": "3",
+                  "icon": "",
+                  "items": [],
+                  "fullText": "3 We respond with our findings and any actions we will take You will receive a formal written response outlining our conclusions and remediation. Within 14 working days"
+                },
+                {
+                  "title": "If you are not satisfied with our response, you may escalate",
+                  "text": "If you are not satisfied with our response, you may escalate You can take your complaint to an independent regulator or dispute body.",
+                  "highlight": "4",
+                  "meta": "4",
+                  "icon": "",
+                  "items": [],
+                  "fullText": "4 If you are not satisfied with our response, you may escalate You can take your complaint to an independent regulator or dispute body. After final response"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "If your complaint is complex and requires more time, we will notify you of the delay and provide an estimated resolution date. All complaints are logged and reviewed periodically to help us improve our platform and monitor supplier performance."
+            },
+            {
+              "type": "paragraph",
+              "text": "Escalation"
+            }
+          ],
+          "links": [],
+          "source": {
+            "sectionId": "what-happens-after-you-submit-a-complaint",
+            "order": 3
+          }
+        },
+        {
+          "id": "if-you-are-not-satisfied-with-our-response-adr-ico",
+          "title": "If You Are Not Satisfied with Our Response — ADR & ICO",
+          "description": "If you have received our final response and remain unhappy, you may be able to take your complaint to an independent Alternative Dispute Resolution (ADR) provider. ADR is a voluntary, impartial, and low-cost way to resolve disputes without going to court.",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Engines Market does not currently subscribe to a specific ADR scheme. However, we will cooperate with any recognised ADR entity you choose to involve. We also remind you of your right to:"
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "Report a consumer problem to the Competition and Markets Authority (CMA) — if you believe an issue affects more than just you",
+                "Take your complaint to the relevant Ombudsman — depending on the nature of the complaint (e.g., data protection — see below)"
+              ]
+            },
+            {
+              "type": "heading",
+              "level": "h3",
+              "id": "",
+              "text": "Data protection complaints — your right to escalate to the ICO"
+            },
+            {
+              "type": "paragraph",
+              "text": "If your complaint relates to how we have handled your personal information (under UK data protection law), and you are not satisfied with our response, you have the right to escalate the matter to the Information Commissioner’s Office (ICO) . The ICO is the UK’s independent regulator for data protection."
+            },
+            {
+              "type": "paragraph",
+              "text": "Before contacting the ICO, you must have already submitted a complaint to us and received our final response (or we have exceeded the 30-day acknowledgement deadline). Under the Data (Use and Access) Act 2025, all organisations are required to have a formal data protection complaints process in place. Our procedure above complies with this requirement."
+            },
+            {
+              "type": "cards",
+              "cards": [
+                {
+                  "title": "",
+                  "text": "Website ico.org.uk",
+                  "highlight": "ico.org.uk",
+                  "meta": "",
+                  "icon": "",
+                  "items": [],
+                  "fullText": "Website ico.org.uk"
+                },
+                {
+                  "title": "",
+                  "text": "Phone 0303 123 1113",
+                  "highlight": "0303 123 1113",
+                  "meta": "",
+                  "icon": "",
+                  "items": [],
+                  "fullText": "Phone 0303 123 1113"
+                },
+                {
+                  "title": "",
+                  "text": "Postal Address Information Commissioner’s Office, Wycliffe House, Water Lane, Wilmslow, Cheshire SK9 5AF",
+                  "highlight": "Information Commissioner’s Office, Wycliffe House, Water Lane, Wilmslow, Cheshire SK9 5AF",
+                  "meta": "",
+                  "icon": "",
+                  "items": [],
+                  "fullText": "Postal Address Information Commissioner’s Office, Wycliffe House, Water Lane, Wilmslow, Cheshire SK9 5AF"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "Questions?"
+            }
+          ],
+          "links": [
+            {
+              "href": "https://ico.org.uk",
+              "text": "ico.org.uk"
+            }
+          ],
+          "source": {
+            "sectionId": "if-you-are-not-satisfied-with-our-response-adr-ico",
+            "order": 4
+          }
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "id": "frequently-asked-questions",
+          "title": "Frequently Asked Questions",
+          "description": null,
+          "blocks": [
+            {
+              "type": "faq",
+              "question": "Can I complain about a supplier through Engines Market? +",
+              "answer": "Yes and no. You can use the complaint form or complaints@enginesmarket.co.uk to report poor supplier behaviour. We do not mediate disputes, but we log all complaints. If a supplier receives multiple substantiated complaints or their public rating falls below 3.5 stars, we may remove them from our network."
+            },
+            {
+              "type": "faq",
+              "question": "How long do I have to wait for a response? +",
+              "answer": "We acknowledge complaints within 48 hours and aim to provide a full response within 14 working days. If your complaint is complex, we will tell you and provide an updated timeline."
+            },
+            {
+              "type": "faq",
+              "question": "What if I am not happy with your final response? +",
+              "answer": "You can escalate to an independent ADR provider or, for data protection complaints, to the ICO. We will provide the necessary information to support your escalation."
+            },
+            {
+              "type": "faq",
+              "question": "Is there a cost to complain? +",
+              "answer": "No. Submitting a complaint to Engines Market is completely free."
+            },
+            {
+              "type": "paragraph",
+              "text": "Related Information"
+            },
+            {
+              "type": "paragraph",
+              "text": "Privacy, Warranty & Supplier Standards"
+            },
+            {
+              "type": "paragraph",
+              "text": "Find out how we handle your data, what to do if you have an issue with a supplier, and how we vet our nationwide network."
+            },
+            {
+              "type": "paragraph",
+              "text": "Privacy policy"
+            },
+            {
+              "type": "paragraph",
+              "text": "Data handling policy"
+            },
+            {
+              "type": "paragraph",
+              "text": "Warranty claims guide"
+            },
+            {
+              "type": "paragraph",
+              "text": "Supplier standards"
+            },
+            {
+              "type": "paragraph",
+              "text": "Terms and conditions"
+            },
+            {
+              "type": "paragraph",
+              "text": "Version: 1.0 • Last updated: June 2026 • Next review: December 2026"
+            }
+          ],
+          "links": [],
+          "source": {
+            "sectionId": "frequently-asked-questions",
+            "order": 5
+          }
+        }
+      ]
+    },
+    "contact": {
+      "items": [
+        {
+          "id": "submit-a-complaint-by-email",
+          "title": "Submit a Complaint by Email",
+          "description": "If you prefer not to use the online form, you can email our dedicated complaints department directly.",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Email Address:"
+            },
+            {
+              "type": "paragraph",
+              "text": "complaints@enginesmarket.co.uk"
+            },
+            {
+              "type": "paragraph",
+              "text": "When emailing, please include:"
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "Your full name",
+                "A clear description of the complaint",
+                "Any supporting documents (e.g., screenshots, email chains)",
+                "Your preferred contact details"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "We will acknowledge receipt within 48 hours (usually sooner)."
+            },
+            {
+              "type": "paragraph",
+              "text": "Our Process"
+            }
+          ],
+          "links": [],
+          "source": {
+            "sectionId": "submit-a-complaint-by-email",
+            "order": 2
+          }
+        }
+      ]
+    },
+    "additional": {
+      "items": []
+    },
+    "supplemental": {
+      "media": [],
+      "tables": [],
+      "faqs": [],
+      "forms": [],
+      "links": []
+    }
+  },
+  "structuredData": [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Complaints Procedure - Engines Market",
+      "description": "Learn how to submit a complaint about Engines Market. We acknowledge within 48 hours and respond within 14 working days. Your feedback helps us improve.",
+      "url": "https://enginesmarket.co.uk/complaints-procedure",
+      "dateModified": "2026-06-17",
+      "about": {
+        "@type": "Thing",
+        "name": "Complaints Procedure",
+        "description": "The formal complaints procedure for Engines Market, including how to submit a complaint, our response times, and escalation to the ICO."
+      },
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "Engine Finders UK Ltd",
+        "tradingAs": "Engines Market",
+        "url": "https://enginesmarket.co.uk",
+        "logo": "https://enginesmarket.co.uk/logo.png",
+        "legalName": "Engine Finders UK Ltd",
+        "taxID": "13157944",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "113 Park Road",
+          "addressLocality": "Ilford",
+          "postalCode": "IG1 1SQ",
+          "addressCountry": "GB"
+        },
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "contactType": "customer support",
+            "email": "support@enginesmarket.co.uk"
+          },
+          {
+            "@type": "ContactPoint",
+            "contactType": "complaints",
+            "email": "complaints@enginesmarket.co.uk"
+          },
+          {
+            "@type": "ContactPoint",
+            "contactType": "Data Protection Officer",
+            "email": "dpo@enginesmarket.co.uk"
+          }
+        ]
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to submit and track a complaint with Engines Market",
+      "description": "A clear, documented process to ensure your complaint is handled fairly.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Submit your complaint",
+          "description": "Use our online complaint form or email complaints@enginesmarket.co.uk with your full name, a clear description of the issue, and any supporting documents.",
+          "estimatedCost": {
+            "@type": "MonetaryAmount",
+            "currency": "GBP",
+            "value": "0"
+          }
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "We acknowledge receipt",
+          "description": "We confirm we have received your complaint by email within 48 hours (usually sooner).",
+          "estimatedCost": {
+            "@type": "MonetaryAmount",
+            "currency": "GBP",
+            "value": "0"
+          }
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "We investigate your complaint",
+          "description": "We review your complaint, gather relevant information, and investigate. This typically takes within 7 working days.",
+          "estimatedCost": {
+            "@type": "MonetaryAmount",
+            "currency": "GBP",
+            "value": "0"
+          }
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "We respond with our findings",
+          "description": "We provide our full response, including any actions we will take, within 14 working days of receipt. If your complaint is complex, we will notify you of any delay.",
+          "estimatedCost": {
+            "@type": "MonetaryAmount",
+            "currency": "GBP",
+            "value": "0"
+          }
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I complain about a supplier through Engines Market?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes and no. You can use the complaint form or complaints@enginesmarket.co.uk to report poor supplier behaviour. We do not mediate disputes, but we log all complaints. If a supplier receives multiple substantiated complaints or their public rating falls below 3.5 stars, we may remove them from our network."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long do I have to wait for a response?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We acknowledge complaints within 48 hours and aim to provide a full response within 14 working days. If your complaint is complex, we will tell you and provide an updated timeline."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if I am not happy with your final response?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can escalate to an independent ADR provider or, for data protection complaints, to the ICO. We will provide the necessary information to support your escalation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there a cost to complain?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Submitting a complaint to Engines Market is completely free."
+          }
+        }
+      ]
+    }
+  ],
+  "stats": {
+    "wordCount": 988,
+    "headingCount": 12,
+    "tableCount": 0,
+    "faqCount": 4,
+    "formCount": 1,
+    "linkCount": 6,
+    "imageCount": 0
+  },
+  "schemaVersion": 2
+}

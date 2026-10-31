@@ -1,0 +1,803 @@
+{
+  "id": "public/about/engine-warranty-guide",
+  "contentType": "about",
+  "slug": "about/engine-warranty-guide",
+  "route": "/about/engine-warranty-guide",
+  "source": {
+    "originalFile": "public/about/engine-warranty-guide.html",
+    "sourceRoot": "public",
+    "sourceHash": "sha256:6c250610d7f644d964c049eeb259ff9b635e1f73f4011e433ac6233b6258aacf",
+    "sourceBytes": 86457,
+    "migrationStatus": "clean-exported",
+    "sourceImmutable": true
+  },
+  "seo": {
+    "title": "Engine Warranty Guide UK | Parts, Labour & Exclusions",
+    "description": "Read our engine warranty guide to understand parts-only vs parts & labour, common exclusions, and key questions to ask your UK engine supplier.",
+    "canonical": "https://enginesmarket.co.uk/about/engine-warranty-guide",
+    "robots": "index, follow",
+    "openGraph": {
+      "title": "",
+      "description": "",
+      "url": "",
+      "image": "",
+      "type": ""
+    }
+  },
+  "sections": {
+    "hero": {
+      "eyebrow": "",
+      "title": "Engine Warranty Guide what you need to know before you buy",
+      "description": "Warranties vary by supplier. Understanding the differences saves you stress later.",
+      "options": [],
+      "trust": [],
+      "image": null,
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "100+"
+        },
+        {
+          "type": "paragraph",
+          "text": "Vetted suppliers"
+        },
+        {
+          "type": "paragraph",
+          "text": "24,650+"
+        },
+        {
+          "type": "paragraph",
+          "text": "Quotes in 2025"
+        },
+        {
+          "type": "paragraph",
+          "text": "5.2"
+        },
+        {
+          "type": "paragraph",
+          "text": "Avg. days to fit"
+        },
+        {
+          "type": "label",
+          "text": "Introduction"
+        }
+      ],
+      "links": [
+        {
+          "href": "/warranty-claims-guide",
+          "text": "Warranty claims guide →"
+        },
+        {
+          "href": "/supplier-standards",
+          "text": "Supplier standards →"
+        },
+        {
+          "href": "/contact",
+          "text": "Contact us →"
+        }
+      ]
+    },
+    "ordered": [
+      {
+        "id": "what-this-guide-covers",
+        "title": "What this guide covers",
+        "description": "When you buy a replacement engine through Engines Market, the warranty comes from the supplier - not from us. We do not provide, administer, or enforce warranties. But we can help you understand what to look for, what questions to ask, and how to avoid common pitfalls.",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "This guide explains:"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "The different types of warranty",
+              "What is typically covered (and what is not)",
+              "How long warranties usually last",
+              "Questions you should ask every supplier",
+              "What to do if something goes wrong"
+            ]
+          },
+          {
+            "type": "label",
+            "text": "Warranty Types"
+          }
+        ],
+        "links": [],
+        "source": {
+          "sectionId": "what-this-guide-covers",
+          "order": 0
+        }
+      },
+      {
+        "id": "parts-only-vs-parts-and-labour",
+        "title": "Parts-only vs Parts and Labour",
+        "description": "Most engine suppliers offer two main types of warranty. The difference is significant.",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Warranty type",
+              "What it covers",
+              "What it does NOT cover",
+              "Typical duration"
+            ],
+            "rows": [
+              [
+                "Parts-only",
+                "The replacement engine itself (if it fails due to manufacturing defect)",
+                "Labour to remove and refit the engine; diagnosis; fluids; gaskets; consequential damage",
+                "1-6 months"
+              ],
+              [
+                "Parts and labour",
+                "The replacement engine plus the labour cost to remove the faulty unit and refit the replacement",
+                "Consequential damage (e.g., damage to other components caused by engine failure); towing; rental car",
+                "6-24 months"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Key question to ask: “If the engine fails within the warranty period, who pays for the labour to swap it out again-”"
+          },
+          {
+            "type": "paragraph",
+            "text": "If the answer is anything other than “the supplier covers labour as well”, you have a parts-only warranty."
+          },
+          {
+            "type": "label",
+            "text": "Coverage"
+          }
+        ],
+        "links": [],
+        "source": {
+          "sectionId": "parts-only-vs-parts-and-labour",
+          "order": 1
+        }
+      },
+      {
+        "id": "common-warranty-inclusions",
+        "title": "Common warranty inclusions",
+        "description": "What is typically covered",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Most engine warranties (especially on reconditioned and rebuilt units) cover:"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Internal lubricated parts - crankshaft, connecting rods, pistons, piston rings, camshafts, valves, valve springs, rocker arms, lifters, oil pump",
+              "Timing components - timing chain, belt, tensioners, guides (if they fail due to manufacturing defect)",
+              "Gaskets and seals - but only if they fail as a direct result of another covered component failing (not as standalone items)"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Important: Coverage always depends on the supplier’s exact warranty terms. Always read the written document - not just what you are told over the phone."
+          },
+          {
+            "type": "label",
+            "text": "Exclusions"
+          }
+        ],
+        "links": [],
+        "source": {
+          "sectionId": "common-warranty-inclusions",
+          "order": 2
+        }
+      },
+      {
+        "id": "common-warranty-exclusions",
+        "title": "Common warranty exclusions",
+        "description": "What is typically NOT covered",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Almost no engine warranty covers everything. These exclusions are standard across the industry:"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Exclusion",
+              "Why it is usually excluded"
+            ],
+            "rows": [
+              [
+                "Gaskets and seals",
+                "Considered wear items. Head gaskets, valve cover gaskets, sump gaskets, crank seals, cam seals - these are almost never covered as standalone failures."
+              ],
+              [
+                "Labour to refit",
+                "Parts-only warranties specifically exclude labour. Even some parts-and-labour warranties may limit the labour rate (e.g., £60 per hour, not the garage’s actual rate)."
+              ],
+              [
+                "Consequential damage",
+                "If the engine fails and damages the turbo, DPF, catalytic converter, or radiator - those parts are not covered. Only the engine itself."
+              ],
+              [
+                "Incorrect installation",
+                "If the engine was fitted incorrectly (wrong oil, wrong torque settings, damaged sensors), the warranty is void."
+              ],
+              [
+                "Neglect or abuse",
+                "Running without oil, ignoring warning lights, overheating, racing, towing beyond capacity - all void warranties."
+              ],
+              [
+                "Modifications",
+                "Remapping, tuning, performance upgrades - most suppliers exclude these immediately."
+              ],
+              [
+                "Consumables",
+                "Oil, coolant, filters, drive belts - not covered even if the engine is replaced under warranty."
+              ],
+              [
+                "Collection or delivery",
+                "Transport costs to return a failed engine or to receive a replacement are rarely covered."
+              ],
+              [
+                "Diagnosis time",
+                "The cost to diagnose the failure is usually not covered - only the repair or replacement itself."
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Ask before you buy: “Can you send me a written copy of your full warranty exclusions-”"
+          },
+          {
+            "type": "paragraph",
+            "text": "If a supplier hesitates or says “it’s standard”, that is a red flag."
+          },
+          {
+            "type": "label",
+            "text": "Duration"
+          }
+        ],
+        "links": [],
+        "source": {
+          "sectionId": "common-warranty-exclusions",
+          "order": 3
+        }
+      },
+      {
+        "id": "warranty-duration-what-to-expect-by-engine-condition",
+        "title": "Warranty duration - what to expect by engine condition",
+        "description": "Longer warranties generally mean the supplier has more confidence in their product. But duration alone is not everything - you also need to check what is covered.",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Engine condition",
+              "Typical warranty length",
+              "Typical coverage type"
+            ],
+            "rows": [
+              [
+                "Used engine (tested, warranted)",
+                "1-6 months",
+                "Parts-only (rarely includes labour)"
+              ],
+              [
+                "Reconditioned engine",
+                "6-12 months (sometimes 24 months on premium units)",
+                "Parts and labour (check the labour cap)"
+              ],
+              [
+                "Rebuilt engine (your own engine sent away)",
+                "12-24 months",
+                "Parts and labour (higher confidence from the rebuilder)"
+              ],
+              [
+                "Remanufactured engine (BS AU257 standard)",
+                "12 months unlimited mileage",
+                "Parts and labour (industry standard)"
+              ],
+              [
+                "New OEM engine",
+                "12-36 months",
+                "Parts and labour (dealer warranty)"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Note: These are typical ranges based on the UK market. Your supplier’s actual terms may differ. Always confirm in writing."
+          },
+          {
+            "type": "label",
+            "text": "Checklist"
+          }
+        ],
+        "links": [],
+        "source": {
+          "sectionId": "warranty-duration-what-to-expect-by-engine-condition",
+          "order": 4
+        }
+      },
+      {
+        "id": "questions-you-must-ask-every-supplier",
+        "title": "Questions you must ask every supplier",
+        "description": "Copy these questions and ask every supplier before you agree to anything.",
+        "blocks": [
+          {
+            "type": "heading",
+            "level": "h4",
+            "id": "",
+            "text": "Before you buy:"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "“What exactly does your warranty cover - parts only, or parts and labour-”",
+              "“How long does the warranty last - from the date of invoice-”",
+              "“Is there a mileage limit (e.g., 12,000 miles per year)-”",
+              "“What is excluded from your warranty- Please send me a written list.”",
+              "“If the engine fails, who pays for the labour to remove and refit it-”",
+              "“Is there a cap on the labour rate you will cover (e.g., £60 per hour)-”",
+              "“What happens if the engine fails and damages other components - are those covered-”",
+              "“Do I have to use your preferred garage for the refit, or can I choose my own-”",
+              "“What records do I need to keep (service history, oil change receipts)-”",
+              "“Who do I contact if I need to make a claim - and what is their response time-”"
+            ]
+          },
+          {
+            "type": "heading",
+            "level": "h4",
+            "id": "",
+            "text": "After the work is done:"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Keep the invoice and warranty document somewhere safe.",
+              "Note the date the warranty starts and ends.",
+              "Follow the supplier’s maintenance recommendations (e.g., oil change intervals, oil grade).",
+              "Keep receipts for any servicing or repairs done during the warranty period."
+            ]
+          },
+          {
+            "type": "label",
+            "text": "Claim Process"
+          }
+        ],
+        "links": [],
+        "source": {
+          "sectionId": "questions-you-must-ask-every-supplier",
+          "order": 5
+        }
+      },
+      {
+        "id": "the-warranty-claim-process-what-to-expect",
+        "title": "The warranty claim process - what to expect",
+        "description": "If your replacement engine develops a problem within the warranty period, here is the typical journey.",
+        "blocks": [
+          {
+            "type": "cards",
+            "cards": [
+              {
+                "title": "Stop driving immediately",
+                "text": "If you hear knocking, rattling, loss of power, or see warning lights - stop driving to prevent further damage. Driving a failing engine usually voids the warranty.",
+                "highlight": "1",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "1 Stop driving immediately If you hear knocking, rattling, loss of power, or see warning lights - stop driving to prevent further damage. Driving a failing engine usually voids the warranty."
+              },
+              {
+                "title": "Contact the supplier first",
+                "text": "Call or email the supplier who sold you the engine. Explain the symptoms. Do not take the car to another garage without telling the supplier first - they may need to inspect the engine themselves.",
+                "highlight": "2",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "2 Contact the supplier first Call or email the supplier who sold you the engine. Explain the symptoms. Do not take the car to another garage without telling the supplier first - they may need to inspect the engine themselves."
+              },
+              {
+                "title": "Provide documentation",
+                "text": "The supplier will ask for: the original invoice, warranty document, photos or videos of the issue (if visible), fault codes (if available), and service records (oil changes, etc.).",
+                "highlight": "3",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "3 Provide documentation The supplier will ask for: the original invoice, warranty document, photos or videos of the issue (if visible), fault codes (if available), and service records (oil changes, etc.)."
+              },
+              {
+                "title": "Supplier diagnoses the fault",
+                "text": "They may ask you to bring the vehicle to them, or to an approved garage, for inspection. They will determine if the failure is covered by the warranty.",
+                "highlight": "4",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "4 Supplier diagnoses the fault They may ask you to bring the vehicle to them, or to an approved garage, for inspection. They will determine if the failure is covered by the warranty."
+              },
+              {
+                "title": "Claim approved or declined",
+                "text": "Approved: The supplier will arrange a replacement engine and (if parts-and-labour) cover the refit labour. You may need to pay for consumables (oil, coolant, gaskets). Declined: The supplier will explain why (e.g., installation error, neglect, excluded part). You can appeal if you disagree.",
+                "highlight": "5",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "5 Claim approved or declined Approved: The supplier will arrange a replacement engine and (if parts-and-labour) cover the refit labour. You may need to pay for consumables (oil, coolant, gaskets). Declined: The supplier will explain why (e.g., installation error, neglect, excluded part). You can appeal if you disagree."
+              },
+              {
+                "title": "Escalate if necessary",
+                "text": "If the supplier refuses a valid claim or becomes unresponsive, you may have legal rights under the Consumer Rights Act 2015. For disputes about the supplier’s warranty, Engines Market does not mediate - but we do track complaints as part of our supplier monitoring. For a more detailed walkthrough, see our Warranty claims guide .",
+                "highlight": "6",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "6 Escalate if necessary If the supplier refuses a valid claim or becomes unresponsive, you may have legal rights under the Consumer Rights Act 2015. For disputes about the supplier’s warranty, Engines Market does not mediate - but we do track complaints as part of our supplier monitoring. For a more detailed walkthrough, see our Warranty claims guide ."
+              }
+            ]
+          },
+          {
+            "type": "label",
+            "text": "Summary"
+          }
+        ],
+        "links": [
+          {
+            "href": "/warranty-claims-guide",
+            "text": "Warranty claims guide"
+          }
+        ],
+        "source": {
+          "sectionId": "the-warranty-claim-process-what-to-expect",
+          "order": 6
+        }
+      },
+      {
+        "id": "what-you-need-to-remember",
+        "title": "What you need to remember",
+        "description": null,
+        "blocks": [
+          {
+            "type": "heading",
+            "level": "h4",
+            "id": "",
+            "text": "Do"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Get the warranty terms in writing before you pay",
+              "Ask about exclusions - especially gaskets and consequential damage",
+              "Keep all invoices and service receipts",
+              "Follow the supplier’s maintenance schedule",
+              "Contact the supplier first if something goes wrong"
+            ]
+          },
+          {
+            "type": "heading",
+            "level": "h4",
+            "id": "",
+            "text": "Don't"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Assume a “12-month warranty” includes labour - ask",
+              "Ignore warning lights or unusual noises - that may void your cover",
+              "Use the wrong oil grade - it will void almost any warranty",
+              "Modify or remap the engine - that will also void cover",
+              "Drive a failing engine - you will make it worse and lose your claim"
+            ]
+          },
+          {
+            "type": "label",
+            "text": "How we help"
+          }
+        ],
+        "links": [],
+        "source": {
+          "sectionId": "what-you-need-to-remember",
+          "order": 7
+        }
+      },
+      {
+        "id": "how-engines-market-helps-even-though-we-do-not-provide-warranties",
+        "title": "How Engines Market helps - even though we do not provide warranties",
+        "description": "We are a comparison platform, not a warranty provider. But we help you in three ways:",
+        "blocks": [
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Education - This guide and our warranty claims guide help you understand what to expect.",
+              "Vetted suppliers - Every supplier in our network has passed our 4-point check , including a sustained 4.0+ star average review. Poor warranty handling would affect their reviews and their place in our network.",
+              "Monitoring - We track complaints. If a supplier consistently fails to honour warranties, they are removed."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "You still need to do your own due diligence. But we have removed the highest-risk suppliers from the equation."
+          },
+          {
+            "type": "label",
+            "text": "FAQ"
+          }
+        ],
+        "links": [
+          {
+            "href": "/warranty-claims-guide",
+            "text": "warranty claims guide"
+          },
+          {
+            "href": "/supplier-standards",
+            "text": "4-point check"
+          }
+        ],
+        "source": {
+          "sectionId": "how-engines-market-helps-even-though-we-do-not-provide-warranties",
+          "order": 8
+        }
+      },
+      {
+        "id": "frequently-asked-questions",
+        "title": "Frequently asked questions",
+        "description": null,
+        "blocks": [
+          {
+            "type": "cards",
+            "cards": [
+              {
+                "title": "",
+                "text": "Does Engines Market provide warranties on engines- No. Never. The warranty comes from the supplier you choose. We do not sell, fit, or warranty engines.",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "Does Engines Market provide warranties on engines- No. Never. The warranty comes from the supplier you choose. We do not sell, fit, or warranty engines."
+              },
+              {
+                "title": "",
+                "text": "What is the most common reason a warranty claim is rejected- Installation error (wrong oil, incorrect torque, damaged sensors) and neglect (ignoring warning lights, overheating) are the top two reasons. Consequential damage (e.g., the failed engine damaging the turbo) is also frequently excluded.",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "What is the most common reason a warranty claim is rejected- Installation error (wrong oil, incorrect torque, damaged sensors) and neglect (ignoring warning lights, overheating) are the top two reasons. Consequential damage (e.g., the failed engine damaging the turbo) is also frequently excluded."
+              },
+              {
+                "title": "",
+                "text": "Can I transfer the warranty if I sell the car- Some suppliers allow transfer, most do not. Ask before you buy.",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "Can I transfer the warranty if I sell the car- Some suppliers allow transfer, most do not. Ask before you buy."
+              },
+              {
+                "title": "",
+                "text": "What if the supplier goes out of business during my warranty period- Unfortunately, a warranty is only as good as the company behind it. If the supplier ceases trading, you may have no recourse. This is one reason we monitor supplier status and only accept established businesses (1+ year trading minimum).",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "What if the supplier goes out of business during my warranty period- Unfortunately, a warranty is only as good as the company behind it. If the supplier ceases trading, you may have no recourse. This is one reason we monitor supplier status and only accept established businesses (1+ year trading minimum)."
+              },
+              {
+                "title": "",
+                "text": "Where can I go if I have a dispute with a supplier- First, try to resolve it directly with the supplier. If that fails, you may have rights under the Consumer Rights Act 2015. Engines Market does not mediate warranty disputes, but we do track complaints to inform our supplier monitoring and removal decisions.",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "Where can I go if I have a dispute with a supplier- First, try to resolve it directly with the supplier. If that fails, you may have rights under the Consumer Rights Act 2015. Engines Market does not mediate warranty disputes, but we do track complaints to inform our supplier monitoring and removal decisions."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Need more help-"
+          },
+          {
+            "type": "paragraph",
+            "text": "Warranty claims guide →"
+          },
+          {
+            "type": "paragraph",
+            "text": "Supplier standards →"
+          },
+          {
+            "type": "paragraph",
+            "text": "Contact us →"
+          }
+        ],
+        "links": [],
+        "source": {
+          "sectionId": "frequently-asked-questions",
+          "order": 9
+        }
+      },
+      {
+        "id": "ready-to-compare-quotes-from-vetted-suppliers",
+        "title": "Ready to compare quotes from vetted suppliers-",
+        "description": "Get free, no-pressure quotes from 100+ UK engine specialists - all backed by our supplier standards.",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Get a free quote →"
+          }
+        ],
+        "links": [
+          {
+            "href": "/get-a-quote",
+            "text": "Get a free quote →"
+          }
+        ],
+        "source": {
+          "sectionId": "ready-to-compare-quotes-from-vetted-suppliers",
+          "order": 10
+        }
+      }
+    ],
+    "supplemental": {
+      "faqs": [
+        {
+          "question": "Does Engines Market provide warranties on engines-",
+          "answer": "No. Never. The warranty comes from the supplier you choose. We do not sell, fit, or warranty engines."
+        },
+        {
+          "question": "What is the most common reason a warranty claim is rejected-",
+          "answer": "Installation error (wrong oil, incorrect torque, damaged sensors) and neglect (ignoring warning lights, overheating) are the top two reasons. Consequential damage (e.g., the failed engine damaging the turbo) is also frequently excluded."
+        },
+        {
+          "question": "Can I transfer the warranty if I sell the car-",
+          "answer": "Some suppliers allow transfer, most do not. Ask before you buy."
+        },
+        {
+          "question": "What if the supplier goes out of business during my warranty period-",
+          "answer": "Unfortunately, a warranty is only as good as the company behind it. If the supplier ceases trading, you may have no recourse. This is one reason we monitor supplier status and only accept established businesses (1+ year trading minimum)."
+        },
+        {
+          "question": "Where can I go if I have a dispute with a supplier-",
+          "answer": "First, try to resolve it directly with the supplier. If that fails, you may have rights under the Consumer Rights Act 2015. Engines Market does not mediate warranty disputes, but we do track complaints to inform our supplier monitoring and removal decisions."
+        }
+      ]
+    }
+  },
+  "structuredData": [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Engine Warranty Guide - Engines Market",
+      "description": "Read our engine warranty guide to understand parts-only vs parts & labour, common exclusions, and key questions to ask your UK engine supplier.",
+      "url": "https://enginesmarket.co.uk/about/engine-warranty-guide",
+      "dateModified": "2026-06-17",
+      "about": {
+        "@type": "Thing",
+        "name": "Engine Warranty Guide",
+        "description": "Comprehensive guide to understanding engine warranties, including parts-only vs parts & labour, common exclusions, duration by condition, and the claims process."
+      },
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "Engine Finders UK Ltd",
+        "tradingAs": "Engines Market",
+        "url": "https://enginesmarket.co.uk",
+        "logo": "https://enginesmarket.co.uk/logo.png",
+        "legalName": "Engine Finders UK Ltd",
+        "taxID": "13157944",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "113 Park Road",
+          "addressLocality": "Ilford",
+          "postalCode": "IG1 1SQ",
+          "addressCountry": "GB"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "support",
+          "email": "support@enginesmarket.co.uk"
+        }
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to make an engine warranty claim",
+      "description": "A step-by-step guide on what to do if your replacement engine develops a problem within the warranty period.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Stop driving immediately",
+          "description": "If you hear knocking, rattling, loss of power, or see warning lights - stop driving to prevent further damage. Driving a failing engine usually voids the warranty."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Contact the supplier first",
+          "description": "Call or email the supplier who sold you the engine. Explain the symptoms. Do not take the car to another garage without telling the supplier first."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Provide documentation",
+          "description": "The supplier will ask for the original invoice, warranty document, photos or videos of the issue (if visible), fault codes (if available), and service records."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Supplier diagnoses the fault",
+          "description": "They may ask you to bring the vehicle to them, or to an approved garage, for inspection. They will determine if the failure is covered by the warranty."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Claim approved or declined",
+          "description": "Approved: The supplier will arrange a replacement engine and cover the refit labour. Declined: The supplier will explain why. You can appeal if you disagree."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Escalate if necessary",
+          "description": "If the supplier refuses a valid claim, you may have legal rights under the Consumer Rights Act 2015. Engines Market does not mediate, but tracks complaints for supplier monitoring."
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does Engines Market provide warranties on engines-",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Never. The warranty comes from the supplier you choose. We do not sell, fit, or warranty engines."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the most common reason a warranty claim is rejected-",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Installation error (wrong oil, incorrect torque, damaged sensors) and neglect (ignoring warning lights, overheating) are the top two reasons. Consequential damage (e.g., the failed engine damaging the turbo) is also frequently excluded."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I transfer the engine warranty if I sell the car-",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Some suppliers allow transfer, most do not. You must ask the supplier before you buy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if the supplier goes out of business during my warranty period-",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Unfortunately, a warranty is only as good as the company behind it. If the supplier ceases trading, you may have no recourse. This is why we monitor supplier status and only accept established businesses with a minimum of 1+ year trading history."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where can I go if I have a dispute with a supplier-",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "First, try to resolve it directly with the supplier. If that fails, you may have rights under the Consumer Rights Act 2015. Engines Market does not mediate warranty disputes, but we do track complaints to inform our supplier monitoring and removal decisions."
+          }
+        }
+      ]
+    }
+  ],
+  "stats": {
+    "wordCount": 1648,
+    "headingCount": 22,
+    "tableCount": 3,
+    "faqCount": 5,
+    "formCount": 0,
+    "linkCount": 7,
+    "imageCount": 0
+  },
+  "schemaVersion": 3
+}

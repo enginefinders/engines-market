@@ -1,0 +1,1708 @@
+{
+  "id": "public/services/engine-inspection-service",
+  "contentType": "services",
+  "slug": "services/engine-inspection-service",
+  "route": "/services/engine-inspection-service",
+  "source": {
+    "originalFile": "public/services/engine-inspection-service.html",
+    "sourceRoot": "public",
+    "sourceHash": "sha256:8ee4f1d42aec180b4b0145635055d264f204c2c0c847f333a631231c2117c5f5",
+    "sourceBytes": 223509,
+    "migrationStatus": "clean-exported",
+    "sourceImmutable": true
+  },
+  "seo": {
+    "title": "Standalone Engine Inspection Service UK | Used Engine Health Check | Engines Market",
+    "description": "Standalone engine inspection service in the UK. Professional health check for used, reconditioned, or replacement engines on a stand before buying or fitting. Compare quotes from £100-£350.",
+    "canonical": "https://enginesmarket.co.uk/services/engine-inspection-service",
+    "robots": "index, follow",
+    "openGraph": {
+      "title": "",
+      "description": "",
+      "url": "",
+      "image": "",
+      "type": ""
+    }
+  },
+  "sections": {
+    "hero": {
+      "eyebrow": "UK SERVICES / STANDALONE ENGINE INSPECTION SERVICE",
+      "title": "Standalone Engine Inspection Service UK Used Engine Health Check Before You Buy or Fit",
+      "description": "Standalone engine inspection from £100-£500. Before you buy a used engine online - or before you pay for fitting - get an independent inspection to know exactly what you're dealing with.",
+      "options": [
+        {
+          "label": "Typical Diagnostic Cost i",
+          "amount": "£150 - £600",
+          "detail": "Cost varies by vehicle and diagnostic method."
+        },
+        {
+          "label": "Typical Repair Cost i",
+          "amount": "£600 - £2,500",
+          "detail": "Depends on the cause and extent of damage."
+        },
+        {
+          "label": "Replacement Engine i",
+          "amount": "£2,500+",
+          "detail": "For severe cases, a reconditioned or used engine may be required."
+        }
+      ],
+      "trust": [],
+      "image": {
+        "src": "/Home/enginelogo.webp",
+        "alt": "Engine Codes",
+        "width": "",
+        "height": ""
+      },
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "UK SERVICES / STANDALONE ENGINE INSPECTION SERVICE"
+        },
+        {
+          "type": "paragraph",
+          "text": "Get a Quote"
+        },
+        {
+          "type": "paragraph",
+          "text": "Learn More"
+        },
+        {
+          "type": "paragraph",
+          "text": "Search by Registration"
+        },
+        {
+          "type": "paragraph",
+          "text": "Search Manually"
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "id": "",
+          "text": "Get Your Free Engine Quotes"
+        },
+        {
+          "type": "paragraph",
+          "text": "Instant comparison from UK-vetted engine specialists"
+        },
+        {
+          "type": "form",
+          "action": "",
+          "method": "get",
+          "fields": [
+            {
+              "element": "input",
+              "name": "",
+              "type": "text",
+              "placeholder": "Enter your reg - e.g. AB12 CDE",
+              "required": false
+            },
+            {
+              "element": "button",
+              "name": "",
+              "type": "submit",
+              "placeholder": "",
+              "required": false
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Your details are secure. No spam - genuine quotes from vetted UK engine specialists only."
+        },
+        {
+          "type": "paragraph",
+          "text": "8,000+"
+        },
+        {
+          "type": "paragraph",
+          "text": "Engine Codes"
+        },
+        {
+          "type": "image",
+          "src": "/Home/carlogo.webp",
+          "alt": "Car Brands",
+          "width": "",
+          "height": ""
+        },
+        {
+          "type": "paragraph",
+          "text": "40+"
+        },
+        {
+          "type": "paragraph",
+          "text": "Car Brands"
+        },
+        {
+          "type": "image",
+          "src": "/Home/verifiedlogo.webp",
+          "alt": "Free No Obligation",
+          "width": "",
+          "height": ""
+        },
+        {
+          "type": "paragraph",
+          "text": "100%"
+        },
+        {
+          "type": "paragraph",
+          "text": "Free · No Obligation"
+        },
+        {
+          "type": "form",
+          "action": "",
+          "method": "get",
+          "fields": [
+            {
+              "element": "select",
+              "name": "",
+              "type": "",
+              "placeholder": "",
+              "required": false
+            },
+            {
+              "element": "select",
+              "name": "",
+              "type": "",
+              "placeholder": "",
+              "required": false
+            },
+            {
+              "element": "select",
+              "name": "",
+              "type": "",
+              "placeholder": "",
+              "required": false
+            },
+            {
+              "element": "select",
+              "name": "",
+              "type": "",
+              "placeholder": "",
+              "required": false
+            },
+            {
+              "element": "input",
+              "name": "",
+              "type": "text",
+              "placeholder": "Enter engine code",
+              "required": false
+            },
+            {
+              "element": "button",
+              "name": "",
+              "type": "submit",
+              "placeholder": "",
+              "required": false
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "🔍"
+        },
+        {
+          "type": "paragraph",
+          "text": "Typical Diagnostic Cost i"
+        },
+        {
+          "type": "paragraph",
+          "text": "£150 - £600"
+        },
+        {
+          "type": "paragraph",
+          "text": "Cost varies by vehicle and diagnostic method."
+        },
+        {
+          "type": "paragraph",
+          "text": "🔧"
+        },
+        {
+          "type": "paragraph",
+          "text": "Typical Repair Cost i"
+        },
+        {
+          "type": "paragraph",
+          "text": "£600 - £2,500"
+        },
+        {
+          "type": "paragraph",
+          "text": "Depends on the cause and extent of damage."
+        },
+        {
+          "type": "paragraph",
+          "text": "⚙️"
+        },
+        {
+          "type": "paragraph",
+          "text": "Replacement Engine i"
+        },
+        {
+          "type": "paragraph",
+          "text": "£2,500+"
+        },
+        {
+          "type": "paragraph",
+          "text": "For severe cases, a reconditioned or used engine may be required."
+        },
+        {
+          "type": "paragraph",
+          "text": "Search by Registration"
+        },
+        {
+          "type": "paragraph",
+          "text": "Search Manually"
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "id": "",
+          "text": "Get Your Free Engine Quotes"
+        },
+        {
+          "type": "paragraph",
+          "text": "Instant comparison from UK-vetted engine specialists"
+        },
+        {
+          "type": "form",
+          "action": "",
+          "method": "get",
+          "fields": [
+            {
+              "element": "input",
+              "name": "",
+              "type": "text",
+              "placeholder": "Enter your reg - e.g. AB12 CDE",
+              "required": false
+            },
+            {
+              "element": "button",
+              "name": "",
+              "type": "submit",
+              "placeholder": "",
+              "required": false
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Your details are secure. No spam - genuine quotes from vetted UK engine specialists only."
+        },
+        {
+          "type": "cards",
+          "cards": [
+            {
+              "title": "Engine Codes",
+              "text": "8,000+ Engine Codes",
+              "highlight": "",
+              "meta": "",
+              "icon": "",
+              "items": [],
+              "fullText": "8,000+ Engine Codes"
+            },
+            {
+              "title": "Car Brands",
+              "text": "40+ Car Brands",
+              "highlight": "",
+              "meta": "",
+              "icon": "",
+              "items": [],
+              "fullText": "40+ Car Brands"
+            },
+            {
+              "title": "Free · No Obligation",
+              "text": "100% Free · No Obligation",
+              "highlight": "",
+              "meta": "",
+              "icon": "",
+              "items": [],
+              "fullText": "100% Free · No Obligation"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "action": "",
+          "method": "get",
+          "fields": [
+            {
+              "element": "select",
+              "name": "",
+              "type": "",
+              "placeholder": "",
+              "required": false
+            },
+            {
+              "element": "select",
+              "name": "",
+              "type": "",
+              "placeholder": "",
+              "required": false
+            },
+            {
+              "element": "select",
+              "name": "",
+              "type": "",
+              "placeholder": "",
+              "required": false
+            },
+            {
+              "element": "select",
+              "name": "",
+              "type": "",
+              "placeholder": "",
+              "required": false
+            },
+            {
+              "element": "input",
+              "name": "",
+              "type": "text",
+              "placeholder": "Enter engine code",
+              "required": false
+            },
+            {
+              "element": "button",
+              "name": "",
+              "type": "submit",
+              "placeholder": "",
+              "required": false
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "About this data · Our methodology"
+        },
+        {
+          "type": "paragraph",
+          "text": "This guide is based on real supplier quotes and interviews conducted through Engines Market between 2024 and 2025. All figures are [EM-QUOTE] derived from actual supplier pricing, and insights are [EM-INTERVIEW] from conversations with UK engine specialists."
+        },
+        {
+          "type": "cards",
+          "cards": [
+            {
+              "title": "",
+              "text": "Pricing ranges derived from supplier quotes & interviews",
+              "highlight": "",
+              "meta": "[EM-QUOTE]",
+              "icon": "",
+              "items": [],
+              "fullText": "[EM-QUOTE] Pricing ranges derived from supplier quotes & interviews"
+            },
+            {
+              "title": "",
+              "text": "Direct statements from mechanics or workshop owners",
+              "highlight": "",
+              "meta": "[EM-INTERVIEW]",
+              "icon": "",
+              "items": [],
+              "fullText": "[EM-INTERVIEW] Direct statements from mechanics or workshop owners"
+            },
+            {
+              "title": "",
+              "text": "External data from named industry sources",
+              "highlight": "",
+              "meta": "[THIRD-PARTY]",
+              "icon": "",
+              "items": [],
+              "fullText": "[THIRD-PARTY] External data from named industry sources"
+            },
+            {
+              "title": "",
+              "text": "Informed estimate where no proprietary data exists",
+              "highlight": "",
+              "meta": "[INDUSTRY ESTIMATE]",
+              "icon": "",
+              "items": [],
+              "fullText": "[INDUSTRY ESTIMATE] Informed estimate where no proprietary data exists"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Review cycle: annually · next full review: January 2027 · prices are reviewed quarterly."
+        },
+        {
+          "type": "paragraph",
+          "text": "Two use cases"
+        }
+      ],
+      "links": [
+        {
+          "href": "/services",
+          "text": "SERVICES"
+        },
+        {
+          "href": "/get-a-quote",
+          "text": "Get a Quote"
+        },
+        {
+          "href": "#overview",
+          "text": "Learn More"
+        },
+        {
+          "href": "/get-a-quote",
+          "text": "Get inspection quotes now"
+        }
+      ]
+    },
+    "ordered": [
+      {
+        "id": "when-you-need-standalone-engine-inspection",
+        "title": "When you need standalone engine inspection",
+        "description": "Engines Market connects you with vetted UK engine inspectors who offer standalone inspection services - so you can verify the condition of a used engine before you commit to purchase or installation.",
+        "blocks": [
+          {
+            "type": "cards",
+            "cards": [
+              {
+                "title": "Use Case 1: Before You Buy a Used Engine",
+                "text": "You've found a used engine online - eBay, Facebook Marketplace, a breaker's yard. The price looks good. But you don't know the engine's actual condition. Inspection reveals cylinder health, hidden damage, and whether the mileage is believable.",
+                "highlight": "",
+                "meta": "",
+                "icon": "🔍 Use Case 1: Before You Buy a Used Engine",
+                "items": [],
+                "fullText": "🔍 Use Case 1: Before You Buy a Used Engine You've found a used engine online - eBay, Facebook Marketplace, a breaker's yard. The price looks good. But you don't know the engine's actual condition. Inspection reveals cylinder health, hidden damage, and whether the mileage is believable. Best for: Used engine buyers, importers, breakers, DIY enthusiasts, collectors"
+              },
+              {
+                "title": "Use Case 2: Before You Fit a Used Engine",
+                "text": "You've already purchased a used engine. You're about to pay £800-£2,000 for fitting. You want to know if the engine is sound before you spend money on installation. Inspection confirms if the engine is serviceable and reveals any hidden issues.",
+                "highlight": "",
+                "meta": "",
+                "icon": "⚙️ Use Case 2: Before You Fit a Used Engine",
+                "items": [],
+                "fullText": "⚙️ Use Case 2: Before You Fit a Used Engine You've already purchased a used engine. You're about to pay £800-£2,000 for fitting. You want to know if the engine is sound before you spend money on installation. Inspection confirms if the engine is serviceable and reveals any hidden issues. Best for: Used engine buyers, DIY installers, owners who sourced their own engine"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "\"The most expensive mistake in used engine buying is trusting the seller's word - or relying on photos alone. A £200 inspection can save you £4,500 on an engine with a cracked block or scored cylinders. The inspection is the best insurance you can buy before you pay for fitting.\""
+          },
+          {
+            "type": "paragraph",
+            "text": "- UK Engine Specialist Interview #37 [EM-INTERVIEW] · (names withheld at specialist's request)"
+          },
+          {
+            "type": "paragraph",
+            "text": "Not sure which service you need? Get matched →"
+          },
+          {
+            "type": "paragraph",
+            "text": "Get matched"
+          },
+          {
+            "type": "paragraph",
+            "text": "Inspection service"
+          }
+        ],
+        "links": [
+          {
+            "href": "/get-a-quote",
+            "text": "Get matched"
+          }
+        ],
+        "source": {
+          "sectionId": "when-you-need-standalone-engine-inspection",
+          "order": 0
+        }
+      },
+      {
+        "id": "what-s-included-in-a-standalone-engine-inspection",
+        "title": "What's included in a standalone engine inspection",
+        "description": "A professional inspection covers the critical mechanical condition of your engine. Here's what a typical inspection includes:",
+        "blocks": [
+          {
+            "type": "cards",
+            "cards": [
+              {
+                "title": "🔍 External Visual Inspection",
+                "text": "External condition, casing cracks, corrosion, ancillaries condition, sealing surfaces - identifies visible damage.",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "🔍 External Visual Inspection External condition, casing cracks, corrosion, ancillaries condition, sealing surfaces - identifies visible damage."
+              },
+              {
+                "title": "📊 Compression Test",
+                "text": "Cylinder pressure measured for all cylinders (engine rotated on stand) - reveals worn piston rings, damaged valves, head gasket issues.",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "📊 Compression Test Cylinder pressure measured for all cylinders (engine rotated on stand) - reveals worn piston rings, damaged valves, head gasket issues."
+              },
+              {
+                "title": "💨 Leak-Down Test",
+                "text": "How well each cylinder holds pressure - pinpoints exact cause of compression loss (valves, rings, head gasket).",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "💨 Leak-Down Test How well each cylinder holds pressure - pinpoints exact cause of compression loss (valves, rings, head gasket)."
+              },
+              {
+                "title": "🔬 Borescope Inspection",
+                "text": "Internal view of cylinders, piston crowns, cylinder walls - reveals scoring, damage, carbon buildup, overheating marks.",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "🔬 Borescope Inspection Internal view of cylinders, piston crowns, cylinder walls - reveals scoring, damage, carbon buildup, overheating marks."
+              },
+              {
+                "title": "🛢️ Oil Condition Check (Basic)",
+                "text": "Colour, smell, presence of metal particles - indicates internal wear, contamination, or neglect.",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "🛢️ Oil Condition Check (Basic) Colour, smell, presence of metal particles - indicates internal wear, contamination, or neglect."
+              },
+              {
+                "title": "🧪 Oil Analysis (Optional - extra cost)",
+                "text": "Metal content, contamination, viscosity - detects internal wear, coolant contamination, fuel dilution.",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "🧪 Oil Analysis (Optional - extra cost) Metal content, contamination, viscosity - detects internal wear, coolant contamination, fuel dilution."
+              },
+              {
+                "title": "⏱️ Timing Component Check",
+                "text": "Condition of timing belt/chain, tensioners, guides (if accessible) - prevents catastrophic timing failure.",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "⏱️ Timing Component Check Condition of timing belt/chain, tensioners, guides (if accessible) - prevents catastrophic timing failure."
+              },
+              {
+                "title": "🔧 Ancillary Assessment",
+                "text": "Inspection of ancillaries (turbo, injectors, alternator, starter) if still attached - identifies which may need replacement.",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "🔧 Ancillary Assessment Inspection of ancillaries (turbo, injectors, alternator, starter) if still attached - identifies which may need replacement."
+              },
+              {
+                "title": "📋 Written Report",
+                "text": "Written findings, pass/fail status, recommendations, estimated repair costs - a clear, actionable summary.",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "📋 Written Report Written findings, pass/fail status, recommendations, estimated repair costs - a clear, actionable summary."
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "level": "h3",
+            "id": "",
+            "text": "⚠️ What's NOT Included"
+          },
+          {
+            "type": "cards",
+            "cards": [
+              {
+                "title": "OBD2 code reading",
+                "text": "Not applicable - engine is out of the vehicle.",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "OBD2 code reading Not applicable - engine is out of the vehicle."
+              },
+              {
+                "title": "Running test",
+                "text": "Engine is not installed - cannot be run.",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "Running test Engine is not installed - cannot be run."
+              },
+              {
+                "title": "Vehicle-based assessment",
+                "text": "This is a standalone engine inspection - not vehicle-based.",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "Vehicle-based assessment This is a standalone engine inspection - not vehicle-based."
+              },
+              {
+                "title": "Guarantee of future performance",
+                "text": "Inspection is a snapshot - not a guarantee.",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "Guarantee of future performance Inspection is a snapshot - not a guarantee."
+              },
+              {
+                "title": "Parts replacement",
+                "text": "Inspection identifies issues - replacement parts and remedial labour are separate.",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "Parts replacement Inspection identifies issues - replacement parts and remedial labour are separate."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Critical difference"
+          }
+        ],
+        "links": [],
+        "source": {
+          "sectionId": "what-s-included-in-a-standalone-engine-inspection",
+          "order": 1
+        }
+      },
+      {
+        "id": "inspection-vs-vehicle-based-engine-inspection",
+        "title": "Inspection vs Vehicle-Based Engine Inspection",
+        "description": "Understand which service you need. Both are available through Engines Market.",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Aspect",
+              "Vehicle-Based Inspection (/engine-inspection)",
+              "Standalone Inspection (/engine-inspection-service)"
+            ],
+            "rows": [
+              [
+                "Engine location",
+                "Engine fitted in vehicle",
+                "Engine removed - on stand or pallet"
+              ],
+              [
+                "Primary use case",
+                "Pre-purchase car inspection, failure diagnosis",
+                "Used engine purchase, pre-fit verification"
+              ],
+              [
+                "What it checks",
+                "Engine in vehicle - drivability, codes, symptoms",
+                "Engine only - mechanical condition on stand"
+              ],
+              [
+                "Running test",
+                "Possible - engine can be started",
+                "Not possible - engine is out of vehicle"
+              ],
+              [
+                "Diagnostic codes",
+                "Relevant - ECU codes can be read",
+                "Not applicable"
+              ],
+              [
+                "Compression test",
+                "Possible (but harder - access limited)",
+                "Easier - engine on stand"
+              ],
+              [
+                "Borescope",
+                "Possible (but harder - access limited)",
+                "Easier - cylinders accessible"
+              ],
+              [
+                "Oil analysis",
+                "Possible (but harder - extraction)",
+                "Easier - oil can be drained"
+              ],
+              [
+                "Best for",
+                "Buying a used car, diagnosing failure in vehicle",
+                "Buying a used engine online, pre-fit verification"
+              ]
+            ]
+          },
+          {
+            "type": "cards",
+            "cards": [
+              {
+                "title": "Buying a used car",
+                "text": "→ Vehicle-based inspection",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "Buying a used car → Vehicle-based inspection"
+              },
+              {
+                "title": "Buying a used engine online",
+                "text": "→ Standalone inspection",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "Buying a used engine online → Standalone inspection"
+              },
+              {
+                "title": "Engine failed - need diagnosis",
+                "text": "→ Vehicle-based inspection",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "Engine failed - need diagnosis → Vehicle-based inspection"
+              },
+              {
+                "title": "Already have an engine - need to know if it's good",
+                "text": "→ Standalone inspection",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "Already have an engine - need to know if it's good → Standalone inspection"
+              },
+              {
+                "title": "About to fit a used engine",
+                "text": "→ Standalone inspection",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "About to fit a used engine → Standalone inspection"
+              },
+              {
+                "title": "Checking a classic car purchase",
+                "text": "→ Either - depending on whether engine is installed",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "Checking a classic car purchase → Either - depending on whether engine is installed"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Proprietary data"
+          }
+        ],
+        "links": [],
+        "source": {
+          "sectionId": "inspection-vs-vehicle-based-engine-inspection",
+          "order": 2
+        }
+      },
+      {
+        "id": "inspection-cost-data",
+        "title": "Inspection cost data",
+        "description": "Real pricing from UK inspection specialists. [EM-QUOTE]",
+        "blocks": [
+          {
+            "type": "cards",
+            "cards": [
+              {
+                "title": "",
+                "text": "External condition only",
+                "highlight": "£100-£150",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "Basic Visual £100-£150 External condition only"
+              },
+              {
+                "title": "",
+                "text": "Visual + compression",
+                "highlight": "£150-£250",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "Standard Inspection £150-£250 Visual + compression"
+              },
+              {
+                "title": "",
+                "text": "+ leak-down + borescope",
+                "highlight": "£200-£350",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "Full Inspection £200-£350 + leak-down + borescope"
+              },
+              {
+                "title": "",
+                "text": "+ oil analysis",
+                "highlight": "£300-£500",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "Comprehensive £300-£500 + oil analysis"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "level": "h3",
+            "id": "",
+            "text": "Inspection cost by depth"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Service Level",
+              "Cost [EM-QUOTE]",
+              "What's Included",
+              "Best For"
+            ],
+            "rows": [
+              [
+                "Basic Visual",
+                "£100-£150",
+                "External visual inspection, condition assessment, written report",
+                "Visual checks only - quick assessment"
+              ],
+              [
+                "Standard Inspection",
+                "£150-£250",
+                "Visual inspection, compression test, condition assessment, written report",
+                "Most used engine purchases"
+              ],
+              [
+                "Full Inspection",
+                "£200-£350",
+                "Visual inspection, compression test, leak-down test, borescope, written report",
+                "Higher-value engines, peace of mind"
+              ],
+              [
+                "Comprehensive Inspection",
+                "£300-£500",
+                "Full inspection + oil analysis, written report",
+                "Very high-value engines, performance engines, imports"
+              ]
+            ]
+          },
+          {
+            "type": "heading",
+            "level": "h3",
+            "id": "",
+            "text": "Inspection cost by engine type [EM-QUOTE]"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Engine Type",
+              "Basic Visual",
+              "Standard",
+              "Full",
+              "Comprehensive"
+            ],
+            "rows": [
+              [
+                "4-cylinder (common)",
+                "£100-£140",
+                "£150-£220",
+                "£200-£300",
+                "£300-£450"
+              ],
+              [
+                "4-cylinder (performance)",
+                "£110-£150",
+                "£160-£240",
+                "£220-£320",
+                "£330-£480"
+              ],
+              [
+                "6-cylinder",
+                "£120-£160",
+                "£180-£260",
+                "£250-£350",
+                "£350-£500"
+              ],
+              [
+                "V8 / Performance",
+                "£140-£180",
+                "£200-£300",
+                "£280-£400",
+                "£400-£550"
+              ]
+            ]
+          },
+          {
+            "type": "heading",
+            "level": "h3",
+            "id": "",
+            "text": "Regional price variation [EM-QUOTE]"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Region",
+              "Standard Inspection",
+              "Full Inspection"
+            ],
+            "rows": [
+              [
+                "Scotland, Northern Ireland, rural",
+                "£140-£220",
+                "£190-£300"
+              ],
+              [
+                "North England, Midlands, Wales",
+                "£150-£240",
+                "£200-£320"
+              ],
+              [
+                "South England (excl. London/SE)",
+                "£160-£260",
+                "£220-£340"
+              ],
+              [
+                "London & South East",
+                "£180-£280",
+                "£260-£380"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "[EM-QUOTE] derived from supplier quotes. Prices vary by engine type and region. Always get real quotes before making a decision."
+          },
+          {
+            "type": "paragraph",
+            "text": "What you get"
+          }
+        ],
+        "links": [],
+        "source": {
+          "sectionId": "inspection-cost-data",
+          "order": 3
+        }
+      },
+      {
+        "id": "your-inspection-report",
+        "title": "Your inspection report",
+        "description": "A clear, actionable written report with photos and recommendations.",
+        "blocks": [
+          {
+            "type": "cards",
+            "cards": [
+              {
+                "title": "Engine Details",
+                "text": "Engine code, serial number, stated mileage (if known)",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "Engine Details Engine code, serial number, stated mileage (if known)"
+              },
+              {
+                "title": "Visual Inspection",
+                "text": "Photos and notes on external condition, casing cracks, corrosion, ancillaries",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "Visual Inspection Photos and notes on external condition, casing cracks, corrosion, ancillaries"
+              },
+              {
+                "title": "Compression Test Results",
+                "text": "Figures per cylinder (psi/bar) with pass/fail status",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "Compression Test Results Figures per cylinder (psi/bar) with pass/fail status"
+              },
+              {
+                "title": "Leak-Down Test Results",
+                "text": "Percentage leak per cylinder, identified leakage path",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "Leak-Down Test Results Percentage leak per cylinder, identified leakage path"
+              },
+              {
+                "title": "Borescope Images",
+                "text": "Images of cylinder walls, piston crowns, valves",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "Borescope Images Images of cylinder walls, piston crowns, valves"
+              },
+              {
+                "title": "Oil Condition",
+                "text": "Colour, smell, presence of metal particles",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "Oil Condition Colour, smell, presence of metal particles"
+              },
+              {
+                "title": "Oil Analysis (if selected)",
+                "text": "Metal content, contamination, viscosity results",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "Oil Analysis (if selected) Metal content, contamination, viscosity results"
+              },
+              {
+                "title": "Overall Condition Assessment",
+                "text": "Pass, advisory, or fail status",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "Overall Condition Assessment Pass, advisory, or fail status"
+              },
+              {
+                "title": "Estimated Repair Cost",
+                "text": "If issues are found, estimated cost to address them",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "Estimated Repair Cost If issues are found, estimated cost to address them"
+              },
+              {
+                "title": "Recommendation",
+                "text": "Buy, walk away, or fit (with caveats)",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "Recommendation Buy, walk away, or fit (with caveats)"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "level": "h3",
+            "id": "",
+            "text": "What \"Pass,\" \"Advisory,\" and \"Fail\" Mean"
+          },
+          {
+            "type": "cards",
+            "cards": [
+              {
+                "title": "",
+                "text": "Engine is in good condition - compression strong, no visible damage.",
+                "highlight": "",
+                "meta": "✅ Pass",
+                "icon": "",
+                "items": [],
+                "fullText": "✅ Pass Engine is in good condition - compression strong, no visible damage. → Proceed with purchase or fitting"
+              },
+              {
+                "title": "",
+                "text": "Minor issues found - some wear, minor corrosion, perished seals.",
+                "highlight": "",
+                "meta": "⚠️ Advisory",
+                "icon": "",
+                "items": [],
+                "fullText": "⚠️ Advisory Minor issues found - some wear, minor corrosion, perished seals. → Proceed with caution - budget for minor work before fitting"
+              },
+              {
+                "title": "",
+                "text": "Significant issues found - scored cylinders, low compression, cracks.",
+                "highlight": "",
+                "meta": "❌ Fail",
+                "icon": "",
+                "items": [],
+                "fullText": "❌ Fail Significant issues found - scored cylinders, low compression, cracks. → Walk away (pre-purchase) or do not fit (pre-fit)"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Example Report Extract"
+          },
+          {
+            "type": "paragraph",
+            "text": "Engine Details: Engine Code: BMW N47D20C · Stated Mileage: 72,000 miles · Source: Private seller, eBay"
+          },
+          {
+            "type": "paragraph",
+            "text": "Compression Test Results:"
+          },
+          {
+            "type": "paragraph",
+            "text": "Cylinder 1"
+          },
+          {
+            "type": "paragraph",
+            "text": "178 psi"
+          },
+          {
+            "type": "paragraph",
+            "text": "✅ Pass - within specification"
+          },
+          {
+            "type": "paragraph",
+            "text": "Cylinder 2"
+          },
+          {
+            "type": "paragraph",
+            "text": "175 psi"
+          },
+          {
+            "type": "paragraph",
+            "text": "✅ Pass - within specification"
+          },
+          {
+            "type": "paragraph",
+            "text": "Cylinder 3"
+          },
+          {
+            "type": "paragraph",
+            "text": "172 psi"
+          },
+          {
+            "type": "paragraph",
+            "text": "✅ Pass - within specification"
+          },
+          {
+            "type": "paragraph",
+            "text": "Cylinder 4"
+          },
+          {
+            "type": "paragraph",
+            "text": "80 psi"
+          },
+          {
+            "type": "paragraph",
+            "text": "❌ Fail - significantly below specification"
+          },
+          {
+            "type": "paragraph",
+            "text": "Borescope Findings: Cylinder 4 shows scoring on the cylinder wall - likely caused by piston ring failure or foreign debris."
+          },
+          {
+            "type": "paragraph",
+            "text": "Recommendation: ❌ Fail - Do Not Fit. The engine requires a full rebuild or is not economically repairable. Replacement engine should be sourced."
+          },
+          {
+            "type": "paragraph",
+            "text": "When to walk away"
+          }
+        ],
+        "links": [],
+        "source": {
+          "sectionId": "your-inspection-report",
+          "order": 4
+        }
+      },
+      {
+        "id": "the-fail-scenarios",
+        "title": "The \"Fail\" scenarios",
+        "description": "Some inspection findings mean you should walk away - every time.",
+        "blocks": [
+          {
+            "type": "cards",
+            "cards": [
+              {
+                "title": "",
+                "text": "Indicates worn rings, damaged valves, or head gasket failure.",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "❌ Low compression on one or more cylinders Indicates worn rings, damaged valves, or head gasket failure. → Walk away - rebuild cost may exceed engine value"
+              },
+              {
+                "title": "",
+                "text": "Internal damage - requires rebore or replacement.",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "❌ Scoring on cylinder walls (borescope) Internal damage - requires rebore or replacement. → Walk away - not economically repairable"
+              },
+              {
+                "title": "",
+                "text": "Structural damage - cannot be repaired.",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "❌ Crack in engine block or cylinder head Structural damage - cannot be repaired. → Walk away - engine is scrap"
+              },
+              {
+                "title": "",
+                "text": "Internal wear - bearings, rings, or other components failing.",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "❌ Metal particles in oil (oil analysis) Internal wear - bearings, rings, or other components failing. → Walk away - full rebuild likely needed"
+              },
+              {
+                "title": "",
+                "text": "Engine has been overheated - risk of warping and future failure.",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "❌ Signs of overheating (discoloured components) Engine has been overheated - risk of warping and future failure. → Walk away - may appear fine but fail shortly after fitting"
+              },
+              {
+                "title": "",
+                "text": "Cooling system neglect - risk of overheating and failure.",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "❌ Corrosion in coolant passages Cooling system neglect - risk of overheating and failure. → Walk away - may have hidden damage"
+              },
+              {
+                "title": "",
+                "text": "Chain/belt worn - risk of catastrophic failure.",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "⚠️ Timing component damage (visible) Chain/belt worn - risk of catastrophic failure. → Walk away - unless the price reflects the risk"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "\"We see engines that look perfect on the outside - clean, shiny, low mileage advertised - but they're scrap inside. Scored cylinders, cracked blocks, metal in the oil. The inspection reveals what the seller is hiding. A £200 inspection can save you £2,000-£4,500.\""
+          },
+          {
+            "type": "paragraph",
+            "text": "- UK Engine Specialist Interview #38 [EM-INTERVIEW] · (names withheld at specialist's request)"
+          },
+          {
+            "type": "paragraph",
+            "text": "Real-world validation"
+          }
+        ],
+        "links": [],
+        "source": {
+          "sectionId": "the-fail-scenarios",
+          "order": 5
+        }
+      },
+      {
+        "id": "what-specialists-say",
+        "title": "What specialists say",
+        "description": "Insights drawn from interviews with UK engine specialists who regularly inspect standalone engines. [EM-INTERVIEW]",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "\"A customer bought a used engine online for £1,200. The seller said it was 'tested and running.' The customer spent £800 getting it fitted - then the engine seized 200 miles later. If they'd spent £200 on a pre-fit inspection, the scored cylinder would have been visible on the borescope - and they'd have saved £2,000 in fitting and replacement costs.\""
+          },
+          {
+            "type": "paragraph",
+            "text": "- UK Engine Specialist Interview #39 [EM-INTERVIEW] · (names withheld)"
+          },
+          {
+            "type": "paragraph",
+            "text": "\"Photos of a used engine on eBay show the outside. They don't show the cylinder walls. They don't show the compression figures. They don't show the metal in the oil. A borescope inspection reveals what the seller isn't telling you - and what they might not even know themselves.\""
+          },
+          {
+            "type": "paragraph",
+            "text": "- UK Engine Specialist Interview #40 [EM-INTERVIEW] · (names withheld)"
+          },
+          {
+            "type": "paragraph",
+            "text": "\"Engine importers bring in containers of used engines from Japan and Europe. They can't trust the paperwork alone. They inspect every engine on the stand before it goes into stock - compression, borescope, oil analysis. The inspection is their quality control.\""
+          },
+          {
+            "type": "paragraph",
+            "text": "- UK Engine Specialist Interview #41 [EM-INTERVIEW] · (names withheld)"
+          },
+          {
+            "type": "paragraph",
+            "text": "How it works"
+          }
+        ],
+        "links": [],
+        "source": {
+          "sectionId": "what-specialists-say",
+          "order": 6
+        }
+      },
+      {
+        "id": "how-engines-market-connects-you-with-inspectors",
+        "title": "How Engines Market connects you with inspectors",
+        "description": null,
+        "blocks": [
+          {
+            "type": "cards",
+            "cards": [
+              {
+                "title": "Submit Your Enquiry",
+                "text": "Enter your engine details. Tell us whether you need a pre-purchase inspection or a pre-fit inspection.",
+                "highlight": "1",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "1 Submit Your Enquiry Enter your engine details. Tell us whether you need a pre-purchase inspection or a pre-fit inspection."
+              },
+              {
+                "title": "Receive Quotes",
+                "text": "Within 30-60 minutes, you'll receive 3-5 quotes from vetted inspection specialists offering standalone engine inspection services.",
+                "highlight": "2",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "2 Receive Quotes Within 30-60 minutes, you'll receive 3-5 quotes from vetted inspection specialists offering standalone engine inspection services."
+              },
+              {
+                "title": "Book Your Inspection",
+                "text": "Choose a specialist based on price, location, and reviews. Arrange delivery or collection of your engine to the workshop.",
+                "highlight": "3",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "3 Book Your Inspection Choose a specialist based on price, location, and reviews. Arrange delivery or collection of your engine to the workshop."
+              },
+              {
+                "title": "Get Your Report",
+                "text": "The specialist inspects your engine and provides a written report with findings, photos, and recommendations.",
+                "highlight": "4",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "4 Get Your Report The specialist inspects your engine and provides a written report with findings, photos, and recommendations."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Ready to get your engine inspected? →"
+          },
+          {
+            "type": "paragraph",
+            "text": "Get inspection quotes"
+          },
+          {
+            "type": "paragraph",
+            "text": "Methodology"
+          }
+        ],
+        "links": [
+          {
+            "href": "/get-a-quote",
+            "text": "Get inspection quotes"
+          }
+        ],
+        "source": {
+          "sectionId": "how-engines-market-connects-you-with-inspectors",
+          "order": 7
+        }
+      },
+      {
+        "id": "how-we-know-this",
+        "title": "How we know this",
+        "description": "Our data sources and how we collect them.",
+        "blocks": [
+          {
+            "type": "cards",
+            "cards": [
+              {
+                "title": "",
+                "text": "Pricing ranges derived from actual supplier quotes and interviews.",
+                "highlight": "",
+                "meta": "[EM-QUOTE]",
+                "icon": "",
+                "items": [],
+                "fullText": "[EM-QUOTE] Pricing ranges derived from actual supplier quotes and interviews."
+              },
+              {
+                "title": "",
+                "text": "Direct statements from mechanics or workshop owners - hundreds of conversations 2024-2025.",
+                "highlight": "",
+                "meta": "[EM-INTERVIEW]",
+                "icon": "",
+                "items": [],
+                "fullText": "[EM-INTERVIEW] Direct statements from mechanics or workshop owners - hundreds of conversations 2024-2025."
+              },
+              {
+                "title": "",
+                "text": "External data from named industry sources.",
+                "highlight": "",
+                "meta": "[THIRD-PARTY]",
+                "icon": "",
+                "items": [],
+                "fullText": "[THIRD-PARTY] External data from named industry sources."
+              },
+              {
+                "title": "",
+                "text": "Informed estimate where no proprietary data exists.",
+                "highlight": "",
+                "meta": "[INDUSTRY ESTIMATE]",
+                "icon": "",
+                "items": [],
+                "fullText": "[INDUSTRY ESTIMATE] Informed estimate where no proprietary data exists."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Inspection Service-Specific Data Points: Basic visual £100-£150 · Standard £150-£250 · Full £200-£350 · Comprehensive £300-£500. All [EM-QUOTE]."
+          },
+          {
+            "type": "paragraph",
+            "text": "Full methodology →"
+          },
+          {
+            "type": "paragraph",
+            "text": "Frequently asked questions"
+          }
+        ],
+        "links": [
+          {
+            "href": "/methodology",
+            "text": "Full methodology →"
+          }
+        ],
+        "source": {
+          "sectionId": "how-we-know-this",
+          "order": 8
+        }
+      },
+      {
+        "id": "common-questions-about-standalone-engine-inspection",
+        "title": "Common questions about standalone engine inspection",
+        "description": null,
+        "blocks": [
+          {
+            "type": "faq",
+            "question": "How much does a standalone engine inspection cost? −",
+            "answer": "Basic visual £100-£150, standard £150-£250, full £200-£350, comprehensive £300-£500. Prices vary by engine type and region. [EM-QUOTE]"
+          },
+          {
+            "type": "faq",
+            "question": "What's the difference between this service and the vehicle-based inspection? +",
+            "answer": "Vehicle-based inspection is for engines fitted in a vehicle. This service is for standalone engines on a stand or pallet - for used engine buyers, importers, and pre-fit verification."
+          },
+          {
+            "type": "faq",
+            "question": "When should I get a standalone engine inspection? +",
+            "answer": "Before buying a used engine online, before paying for fitting, or if you've already bought an engine and want to verify its condition before installation."
+          },
+          {
+            "type": "faq",
+            "question": "What does the inspection include? +",
+            "answer": "External visual inspection, compression test, leak-down test, borescope inspection, oil condition check, timing component check (if accessible), and a written report with pass/fail status."
+          },
+          {
+            "type": "faq",
+            "question": "What if the engine fails the inspection? +",
+            "answer": "If pre-purchase - walk away. If pre-fit - do not fit. The inspection report gives you the evidence to negotiate a refund or avoid wasting labour costs."
+          },
+          {
+            "type": "faq",
+            "question": "Can I get the inspection done before I buy the engine? +",
+            "answer": "Yes - if the seller is willing to allow the inspection. Some sellers may not allow it - that's a red flag in itself."
+          },
+          {
+            "type": "faq",
+            "question": "Do I need to send my engine to the workshop? +",
+            "answer": "Yes - the engine needs to be physically at the workshop for inspection. You can deliver it or arrange transport."
+          },
+          {
+            "type": "faq",
+            "question": "What if the engine is still installed in a vehicle? +",
+            "answer": "Use the vehicle-based engine inspection service instead - it's designed for engines fitted in cars."
+          },
+          {
+            "type": "paragraph",
+            "text": "Related services"
+          }
+        ],
+        "links": [],
+        "source": {
+          "sectionId": "common-questions-about-standalone-engine-inspection",
+          "order": 9
+        }
+      },
+      {
+        "id": "explore-more-engine-services",
+        "title": "Explore more engine services",
+        "description": null,
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Get your engine inspected"
+          },
+          {
+            "type": "paragraph",
+            "text": "Don't fit a used engine without knowing its condition"
+          },
+          {
+            "type": "paragraph",
+            "text": "Get a professional inspection before you buy or before you pay for installation. Free, no obligation, quotes in 30-60 minutes."
+          },
+          {
+            "type": "paragraph",
+            "text": "Based on real UK inspection specialist quotes · Engines Market is a comparison platform - we connect you with vetted inspectors, we do not provide inspection services."
+          },
+          {
+            "type": "paragraph",
+            "text": "Get inspection quotes now"
+          },
+          {
+            "type": "paragraph",
+            "text": "Free · No obligation · 100+ vetted specialists"
+          }
+        ],
+        "links": [
+          {
+            "href": "/services/engine-inspection",
+            "text": "Vehicle-based engine inspection ↗"
+          },
+          {
+            "href": "/prices/engine-replacement-cost",
+            "text": "Engine replacement cost guide ↗"
+          },
+          {
+            "href": "/prices/used-engine-cost",
+            "text": "Used engine cost guide ↗"
+          },
+          {
+            "href": "/prices/engine-fitting-cost",
+            "text": "Engine fitting cost guide ↗"
+          },
+          {
+            "href": "/compare/used-vs-reconditioned-engine",
+            "text": "Used vs reconditioned comparison ↗"
+          },
+          {
+            "href": "/insights/uk-engine-price-index",
+            "text": "UK Engine Price Index ↗"
+          }
+        ],
+        "source": {
+          "sectionId": "explore-more-engine-services",
+          "order": 10
+        }
+      }
+    ],
+    "supplemental": {
+      "media": [],
+      "tables": [],
+      "faqs": [],
+      "forms": [],
+      "links": []
+    }
+  },
+  "structuredData": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Standalone Engine Inspection Service",
+      "description": "Professional health check and mechanical inspection for standalone engines (out of vehicle, on stand or pallet). Includes compression test, borescope, leak-down test, and oil analysis.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Engines Market",
+        "url": "https://enginesmarket.co.uk"
+      },
+      "serviceType": "Engine Inspection",
+      "areaServed": {
+        "@type": "Country",
+        "name": "United Kingdom"
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "GBP",
+        "lowPrice": "100",
+        "highPrice": "500",
+        "offerCount": "100+"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Engines Market",
+      "url": "https://enginesmarket.co.uk",
+      "logo": "https://enginesmarket.co.uk/images/logo.png"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://enginesmarket.co.uk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://enginesmarket.co.uk/services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Engine Inspection Service",
+          "item": "https://enginesmarket.co.uk/services/engine-inspection-service"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does a standalone engine inspection cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Basic visual £100-£150, standard £150-£250, full £200-£350, comprehensive £300-£500. Prices vary by engine type and region."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the difference between this service and the vehicle-based inspection?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vehicle-based inspection is for engines fitted in a vehicle. This service is for standalone engines on a stand or pallet - for used engine buyers, importers, and pre-fit verification."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When should I get a standalone engine inspection?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Before buying a used engine online, before paying for fitting, or if you've already bought an engine and want to verify its condition before installation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does the inspection include?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "External visual inspection, compression test, leak-down test, borescope inspection, oil condition check, timing component check (if accessible), and a written report with pass/fail status."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if the engine fails the inspection?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If pre-purchase - walk away. If pre-fit - do not fit. The inspection report gives you the evidence to negotiate a refund or avoid wasting labour costs."
+          }
+        }
+      ]
+    }
+  ],
+  "stats": {
+    "wordCount": 2494,
+    "headingCount": 19,
+    "tableCount": 4,
+    "faqCount": 8,
+    "formCount": 4,
+    "linkCount": 13,
+    "imageCount": 3
+  },
+  "schemaVersion": 3
+}

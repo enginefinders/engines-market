@@ -1,0 +1,825 @@
+{
+  "id": "public/reviews",
+  "contentType": "root",
+  "slug": "reviews",
+  "route": "/reviews",
+  "source": {
+    "originalFile": "public/reviews.html",
+    "sourceRoot": "public",
+    "sourceHash": "sha256:54abb479b54554847a0d7a6369641e6a9bbbfb8447f87cd954bd98d46d079f87",
+    "sourceBytes": 66272,
+    "migrationStatus": "clean-exported",
+    "sourceImmutable": true
+  },
+  "seo": {
+    "title": "Engines Market Reviews | Trustpilot 4.8/5 & Customer Stories",
+    "description": "Read verified reviews from UK drivers who saved money on engine replacement. See our 4.8/5 Trustpilot rating. Compare quotes from vetted specialists today.",
+    "canonical": "https://enginesmarket.co.uk/reviews",
+    "robots": "index, follow",
+    "openGraph": {
+      "title": "",
+      "description": "",
+      "url": "",
+      "image": "",
+      "type": ""
+    }
+  },
+  "sections": {
+    "hero": {
+      "eyebrow": "",
+      "title": "Engines Market reviews",
+      "description": "Rated “Excellent” on Trustpilot",
+      "options": [],
+      "trust": [],
+      "image": null,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "4.8 / 5.0"
+        },
+        {
+          "type": "paragraph",
+          "text": "Average rating"
+        },
+        {
+          "type": "paragraph",
+          "text": "94%"
+        },
+        {
+          "type": "paragraph",
+          "text": "Would recommend"
+        },
+        {
+          "type": "paragraph",
+          "text": "87%"
+        },
+        {
+          "type": "paragraph",
+          "text": "Saved money vs first quote"
+        },
+        {
+          "type": "paragraph",
+          "text": "4.8 ★"
+        },
+        {
+          "type": "paragraph",
+          "text": "[Insert Trustpilot widget here] Live score, star rating, and review count"
+        },
+        {
+          "type": "label",
+          "text": "Snapshot"
+        }
+      ],
+      "links": []
+    },
+    "ordered": [
+      {
+        "id": "our-customer-satisfaction-snapshot",
+        "title": "Our customer satisfaction snapshot",
+        "description": null,
+        "blocks": [
+          {
+            "type": "cards",
+            "cards": [
+              {
+                "title": "Average rating (across all platforms)",
+                "text": "4.8 / 5.0 Average rating (across all platforms)",
+                "highlight": "4.8 / 5.0",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "4.8 / 5.0 Average rating (across all platforms)"
+              },
+              {
+                "title": "“Would recommend Engines Market to a friend”",
+                "text": "94% “Would recommend Engines Market to a friend”",
+                "highlight": "94%",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "94% “Would recommend Engines Market to a friend”"
+              },
+              {
+                "title": "Customers who saved money vs first quote",
+                "text": "87% Customers who saved money vs first quote",
+                "highlight": "87%",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "87% Customers who saved money vs first quote"
+              },
+              {
+                "title": "Total verified customer reviews collected",
+                "text": "[Total Reviews] Total verified customer reviews collected",
+                "highlight": "[Total Reviews]",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "[Total Reviews] Total verified customer reviews collected"
+              }
+            ]
+          },
+          {
+            "type": "label",
+            "text": "Filter"
+          }
+        ],
+        "links": [],
+        "source": {
+          "sectionId": "our-customer-satisfaction-snapshot",
+          "order": 0
+        }
+      },
+      {
+        "id": "customer-reviews-real-stories-from-uk-drivers",
+        "title": "Customer reviews - real stories from UK drivers",
+        "description": "We collect feedback from multiple platforms including Google, Trustpilot, Facebook, and Reviews.io. The reviews shown here are a mix of the most helpful, most recent, and most representative.",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Most recent"
+          },
+          {
+            "type": "paragraph",
+            "text": "Most helpful"
+          },
+          {
+            "type": "paragraph",
+            "text": "Highest rating"
+          },
+          {
+            "type": "paragraph",
+            "text": "Lowest rating"
+          },
+          {
+            "type": "paragraph",
+            "text": "Show 5-star only"
+          },
+          {
+            "type": "paragraph",
+            "text": "Show 4-star only"
+          },
+          {
+            "type": "paragraph",
+            "text": "(Filter UI is static - dynamic filtering requires CMS integration)"
+          },
+          {
+            "type": "label",
+            "text": "Testimonials"
+          }
+        ],
+        "links": [],
+        "source": {
+          "sectionId": "customer-reviews-real-stories-from-uk-drivers",
+          "order": 1
+        }
+      },
+      {
+        "id": "featured-customer-reviews",
+        "title": "Featured customer reviews",
+        "description": "Real reviews from UK drivers who used Engines Market.",
+        "blocks": [
+          {
+            "type": "cards",
+            "cards": [
+              {
+                "title": "",
+                "text": "Saved me a fortune on my BMW. Quick quotes, no hassle. 5 stars.",
+                "highlight": "",
+                "meta": "Tom, Leeds Trustpilot",
+                "icon": "",
+                "items": [],
+                "fullText": "Saved me a fortune on my BMW. Quick quotes, no hassle. 5 stars. Tom, Leeds Trustpilot"
+              },
+              {
+                "title": "",
+                "text": "My car sounded like a bag of spanners. Thought it was game over. Engines Market got me three quotes and I saved nearly a grand. Back on the road in a week. Can't fault it.",
+                "highlight": "",
+                "meta": "Sarah, Bristol Google",
+                "icon": "",
+                "items": [],
+                "fullText": "My car sounded like a bag of spanners. Thought it was game over. Engines Market got me three quotes and I saved nearly a grand. Back on the road in a week. Can't fault it. Sarah, Bristol Google"
+              },
+              {
+                "title": "",
+                "text": "Local garage wanted £2,800 for a replacement engine. Used this site, got a quote for £1,950 with a better warranty. Same job, less than an hour away. Why would you not use this-",
+                "highlight": "",
+                "meta": "James, Manchester Trustpilot",
+                "icon": "",
+                "items": [],
+                "fullText": "Local garage wanted £2,800 for a replacement engine. Used this site, got a quote for £1,950 with a better warranty. Same job, less than an hour away. Why would you not use this- James, Manchester Trustpilot"
+              },
+              {
+                "title": "",
+                "text": "Honestly thought I'd have to scrap my Land Rover. The knocking was getting worse. Engines Market found me a specialist who actually knew these engines. £1,700 later and it drives like new. Absolute life saver.",
+                "highlight": "",
+                "meta": "Emma, Reading Facebook",
+                "icon": "",
+                "items": [],
+                "fullText": "Honestly thought I'd have to scrap my Land Rover. The knocking was getting worse. Engines Market found me a specialist who actually knew these engines. £1,700 later and it drives like new. Absolute life saver. Emma, Reading Facebook"
+              },
+              {
+                "title": "",
+                "text": "Took about a day to get all my quotes which felt a bit slow. But the saving was worth it - paid £550 less than the first garage I called. Would use again.",
+                "highlight": "",
+                "meta": "Dave, Birmingham Google",
+                "icon": "",
+                "items": [],
+                "fullText": "Took about a day to get all my quotes which felt a bit slow. But the saving was worth it - paid £550 less than the first garage I called. Would use again. Dave, Birmingham Google"
+              },
+              {
+                "title": "",
+                "text": "Never knew a site like this existed. My mate told me about it after my Audi broke down. Genuinely saved me hours of ringing around. Saved £800. Top marks.",
+                "highlight": "",
+                "meta": "Alex, Glasgow Trustpilot",
+                "icon": "",
+                "items": [],
+                "fullText": "Never knew a site like this existed. My mate told me about it after my Audi broke down. Genuinely saved me hours of ringing around. Saved £800. Top marks. Alex, Glasgow Trustpilot"
+              },
+              {
+                "title": "",
+                "text": "Excellent service. Saved me a packet. Cheers.",
+                "highlight": "",
+                "meta": "Mike, Liverpool Reviews.io",
+                "icon": "",
+                "items": [],
+                "fullText": "Excellent service. Saved me a packet. Cheers. Mike, Liverpool Reviews.io"
+              },
+              {
+                "title": "",
+                "text": "My old Mercedes was going through coolant like mad. Garage said head gasket. Engines Market found me a specialist who did a proper diagnosis - turned out to be a cracked pipe. £160 later. Honest advice saved me thousands.",
+                "highlight": "",
+                "meta": "Paul, Nottingham Google",
+                "icon": "",
+                "items": [],
+                "fullText": "My old Mercedes was going through coolant like mad. Garage said head gasket. Engines Market found me a specialist who did a proper diagnosis - turned out to be a cracked pipe. £160 later. Honest advice saved me thousands. Paul, Nottingham Google"
+              },
+              {
+                "title": "",
+                "text": "My van broke down two weeks before Christmas. I was proper stressed. Engines Market got me quotes within a day - picked a specialist who had me back on the road in four days. Saved over a grand. Absolute heroes.",
+                "highlight": "",
+                "meta": "Gary, Sheffield Trustpilot",
+                "icon": "",
+                "items": [],
+                "fullText": "My van broke down two weeks before Christmas. I was proper stressed. Engines Market got me quotes within a day - picked a specialist who had me back on the road in four days. Saved over a grand. Absolute heroes. Gary, Sheffield Trustpilot"
+              },
+              {
+                "title": "",
+                "text": "Wasn't sure if this would work but gave it a go. Got four quotes, picked the one with the best warranty. Would 100% recommend to anyone facing a big engine bill.",
+                "highlight": "",
+                "meta": "Rachel, Bristol Facebook",
+                "icon": "",
+                "items": [],
+                "fullText": "Wasn't sure if this would work but gave it a go. Got four quotes, picked the one with the best warranty. Would 100% recommend to anyone facing a big engine bill. Rachel, Bristol Facebook"
+              },
+              {
+                "title": "",
+                "text": "My X5 started making a horrible noise. BMW specialist wanted £2,500 for a new timing chain. EM got me a quote for £1,600. Car's perfect now.",
+                "highlight": "",
+                "meta": "Steve, Preston Trustpilot",
+                "icon": "",
+                "items": [],
+                "fullText": "My X5 started making a horrible noise. BMW specialist wanted £2,500 for a new timing chain. EM got me a quote for £1,600. Car's perfect now. Steve, Preston Trustpilot"
+              },
+              {
+                "title": "",
+                "text": "Honestly can't fault it. Got three quotes, saved £700. Tell everyone about this site.",
+                "highlight": "",
+                "meta": "Laura, Oxford Google",
+                "icon": "",
+                "items": [],
+                "fullText": "Honestly can't fault it. Got three quotes, saved £700. Tell everyone about this site. Laura, Oxford Google"
+              },
+              {
+                "title": "",
+                "text": "My A6 was chugging and losing power. Audi dealer quoted £2k for new injectors. EM got me a specialist who did a diagnostic - turned out to be a £300 sensor. Saved a fortune.",
+                "highlight": "",
+                "meta": "Chris, Cardiff Reviews.io",
+                "icon": "",
+                "items": [],
+                "fullText": "My A6 was chugging and losing power. Audi dealer quoted £2k for new injectors. EM got me a specialist who did a diagnostic - turned out to be a £300 sensor. Saved a fortune. Chris, Cardiff Reviews.io"
+              },
+              {
+                "title": "",
+                "text": "One of the suppliers was slow to reply but EM chased them for me. Ended up saving £650 so can't really complain.",
+                "highlight": "",
+                "meta": "Natalie, Leeds Trustpilot",
+                "icon": "",
+                "items": [],
+                "fullText": "One of the suppliers was slow to reply but EM chased them for me. Ended up saving £650 so can't really complain. Natalie, Leeds Trustpilot"
+              },
+              {
+                "title": "",
+                "text": "I was sceptical but it's genuinely good. Got three quotes, saved £750 on a recon engine. Will use again.",
+                "highlight": "",
+                "meta": "Mark, Edinburgh Google",
+                "icon": "",
+                "items": [],
+                "fullText": "I was sceptical but it's genuinely good. Got three quotes, saved £750 on a recon engine. Will use again. Mark, Edinburgh Google"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Note: Replace placeholder reviews above with real reviews from Trustpilot, Google, Facebook, and Reviews.io."
+          },
+          {
+            "type": "label",
+            "text": "Supplier Testimonials"
+          }
+        ],
+        "links": [],
+        "source": {
+          "sectionId": "featured-customer-reviews",
+          "order": 2
+        }
+      },
+      {
+        "id": "what-our-suppliers-say-about-working-with-engines-market",
+        "title": "What our suppliers say about working with Engines Market",
+        "description": "We don't only collect feedback from customers. Our suppliers are partners, and their experience matters too.",
+        "blocks": [
+          {
+            "type": "cards",
+            "cards": [
+              {
+                "title": "",
+                "text": "“We have received consistent, high-quality leads from Engines Market. The platform connects us with genuine customers who understand the process. It has become a valuable channel for our business.”",
+                "highlight": "",
+                "meta": "- Midlands Engine Centre, Birmingham (Internal survey)",
+                "icon": "",
+                "items": [],
+                "fullText": "“We have received consistent, high-quality leads from Engines Market. The platform connects us with genuine customers who understand the process. It has become a valuable channel for our business.” - Midlands Engine Centre, Birmingham (Internal survey)"
+              },
+              {
+                "title": "",
+                "text": "“The platform is straightforward and the leads are relevant. We have picked up several long-term customers through Engines Market. Happy to recommend it to other specialists.”",
+                "highlight": "",
+                "meta": "- North West Reconditioned Engines, Manchester (Email)",
+                "icon": "",
+                "items": [],
+                "fullText": "“The platform is straightforward and the leads are relevant. We have picked up several long-term customers through Engines Market. Happy to recommend it to other specialists.” - North West Reconditioned Engines, Manchester (Email)"
+              },
+              {
+                "title": "",
+                "text": "“We appreciate that Engines Market vets suppliers properly. It means we are not competing with unregistered traders. The quality of the leads justifies the partnership.”",
+                "highlight": "",
+                "meta": "- London Japanese Imports, London (Internal survey)",
+                "icon": "",
+                "items": [],
+                "fullText": "“We appreciate that Engines Market vets suppliers properly. It means we are not competing with unregistered traders. The quality of the leads justifies the partnership.” - London Japanese Imports, London (Internal survey)"
+              },
+              {
+                "title": "",
+                "text": "“A professional operation. Clear processes, fair lead distribution, and responsive support when we have questions.”",
+                "highlight": "",
+                "meta": "- Yorkshire VAG Specialists, Leeds (Trustpilot - supplier account)",
+                "icon": "",
+                "items": [],
+                "fullText": "“A professional operation. Clear processes, fair lead distribution, and responsive support when we have questions.” - Yorkshire VAG Specialists, Leeds (Trustpilot - supplier account)"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Note: Replace placeholder supplier reviews with real feedback from your network."
+          },
+          {
+            "type": "label",
+            "text": "Share your experience"
+          }
+        ],
+        "links": [],
+        "source": {
+          "sectionId": "what-our-suppliers-say-about-working-with-engines-market",
+          "order": 3
+        }
+      },
+      {
+        "id": "leave-a-review-share-your-experience",
+        "title": "Leave a review - share your experience",
+        "description": "Have you used Engines Market to find an engine replacement or compare quotes- We would love to hear from you. Your feedback helps other UK drivers make confident decisions - and it helps us keep improving.",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "You can leave a review on:"
+          },
+          {
+            "type": "paragraph",
+            "text": "Trustpilot"
+          },
+          {
+            "type": "paragraph",
+            "text": "Google"
+          },
+          {
+            "type": "paragraph",
+            "text": "Facebook"
+          },
+          {
+            "type": "paragraph",
+            "text": "Reviews.io"
+          },
+          {
+            "type": "paragraph",
+            "text": "(Insert your specific review collection URLs above)"
+          },
+          {
+            "type": "paragraph",
+            "text": "Alternatively, you can submit a review directly via this site:"
+          },
+          {
+            "type": "paragraph",
+            "text": "We will manually verify and publish it."
+          },
+          {
+            "type": "paragraph",
+            "text": "Submit your review →"
+          },
+          {
+            "type": "label",
+            "text": "Guidelines"
+          }
+        ],
+        "links": [
+          {
+            "href": "#",
+            "text": "Trustpilot"
+          },
+          {
+            "href": "#",
+            "text": "Google"
+          },
+          {
+            "href": "#",
+            "text": "Facebook"
+          },
+          {
+            "href": "#",
+            "text": "Reviews.io"
+          },
+          {
+            "href": "#",
+            "text": "Submit your review →"
+          }
+        ],
+        "source": {
+          "sectionId": "leave-a-review-share-your-experience",
+          "order": 4
+        }
+      },
+      {
+        "id": "review-guidelines",
+        "title": "Review guidelines",
+        "description": "We publish all genuine reviews - positive or negative - as long as they:",
+        "blocks": [
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Come from a verified customer who used our platform",
+              "Do not contain offensive language or personal attacks",
+              "Are relevant to the service we provide"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "We do not delete negative reviews."
+          },
+          {
+            "type": "paragraph",
+            "text": "We believe honest feedback - including criticism - makes our platform more trustworthy."
+          },
+          {
+            "type": "paragraph",
+            "text": "When a negative review appears, we:"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Read it carefully",
+              "Investigate the issue (if the customer provides enough detail)",
+              "Reply professionally, acknowledging any legitimate concerns"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Example response to a negative review: “Thank you for your feedback. We are sorry to hear about your experience. A member of our team will be in touch to understand what went wrong and how we can improve.”"
+          },
+          {
+            "type": "label",
+            "text": "FAQ"
+          }
+        ],
+        "links": [],
+        "source": {
+          "sectionId": "review-guidelines",
+          "order": 5
+        }
+      },
+      {
+        "id": "frequently-asked-questions-about-reviews",
+        "title": "Frequently asked questions about reviews",
+        "description": null,
+        "blocks": [
+          {
+            "type": "cards",
+            "cards": [
+              {
+                "title": "",
+                "text": "Are these reviews real and verified- Yes. All customer reviews shown on this page come from real people who have used Engines Market. Supplier reviews come from businesses in our network. We do not invent or pay for fake reviews.",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "Are these reviews real and verified- Yes. All customer reviews shown on this page come from real people who have used Engines Market. Supplier reviews come from businesses in our network. We do not invent or pay for fake reviews."
+              },
+              {
+                "title": "",
+                "text": "Why are there no negative reviews showing- If you do not see negative reviews, it may be because the filter is set to “Highest rating” - try changing to “Lowest rating” or “Most recent”. We genuinely have far more positive reviews than negative ones (but we do receive occasional criticism, and we publish it).",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "Why are there no negative reviews showing- If you do not see negative reviews, it may be because the filter is set to “Highest rating” - try changing to “Lowest rating” or “Most recent”. We genuinely have far more positive reviews than negative ones (but we do receive occasional criticism, and we publish it)."
+              },
+              {
+                "title": "",
+                "text": "Can I see reviews from a specific platform only- Yes. Use the filter options above to show reviews from Trustpilot, Google, Facebook, or Reviews.io individually.",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "Can I see reviews from a specific platform only- Yes. Use the filter options above to show reviews from Trustpilot, Google, Facebook, or Reviews.io individually."
+              },
+              {
+                "title": "",
+                "text": "How do I leave a review if I am a supplier- Please use the same public platforms (Google, Trustpilot, etc.) as customers. We monitor all of them. Alternatively, email your feedback to support@enginesmarket.co.uk and we may feature it (with your permission) in the supplier section.",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "How do I leave a review if I am a supplier- Please use the same public platforms (Google, Trustpilot, etc.) as customers. We monitor all of them. Alternatively, email your feedback to support@enginesmarket.co.uk and we may feature it (with your permission) in the supplier section."
+              }
+            ]
+          },
+          {
+            "type": "label",
+            "text": "More information"
+          }
+        ],
+        "links": [],
+        "source": {
+          "sectionId": "frequently-asked-questions-about-reviews",
+          "order": 6
+        }
+      },
+      {
+        "id": "related-pages",
+        "title": "Related pages",
+        "description": null,
+        "blocks": [],
+        "links": [
+          {
+            "href": "/how-it-works",
+            "text": "How Engines Market works →"
+          },
+          {
+            "href": "/supplier-standards",
+            "text": "Supplier standards →"
+          },
+          {
+            "href": "/about",
+            "text": "About us →"
+          },
+          {
+            "href": "/contact",
+            "text": "Contact us →"
+          }
+        ],
+        "source": {
+          "sectionId": "related-pages",
+          "order": 7
+        }
+      },
+      {
+        "id": "ready-to-see-what-engines-market-can-do-for-you",
+        "title": "Ready to see what Engines Market can do for you-",
+        "description": "Thousands of UK drivers have already saved time, stress, and money by comparing quotes through our platform.",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Get your free engine replacement quote now →"
+          }
+        ],
+        "links": [
+          {
+            "href": "/get-a-quote",
+            "text": "Get your free engine replacement quote now →"
+          }
+        ],
+        "source": {
+          "sectionId": "ready-to-see-what-engines-market-can-do-for-you",
+          "order": 8
+        }
+      }
+    ],
+    "supplemental": {
+      "media": [],
+      "tables": [],
+      "faqs": [
+        {
+          "question": "Are these reviews real and verified-",
+          "answer": "Yes. All customer reviews shown on this page come from real people who have used Engines Market. Supplier reviews come from businesses in our network. We do not invent or pay for fake reviews."
+        },
+        {
+          "question": "Why are there no negative reviews showing-",
+          "answer": "If you do not see negative reviews, it may be because the filter is set to “Highest rating” - try changing to “Lowest rating” or “Most recent”. We genuinely have far more positive reviews than negative ones (but we do receive occasional criticism, and we publish it)."
+        },
+        {
+          "question": "Can I see reviews from a specific platform only-",
+          "answer": "Yes. Use the filter options above to show reviews from Trustpilot, Google, Facebook, or Reviews.io individually."
+        },
+        {
+          "question": "How do I leave a review if I am a supplier-",
+          "answer": "Please use the same public platforms (Google, Trustpilot, etc.) as customers. We monitor all of them. Alternatively, email your feedback to support@enginesmarket.co.uk and we may feature it (with your permission) in the supplier section."
+        }
+      ],
+      "forms": [],
+      "links": []
+    }
+  },
+  "structuredData": [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Engines Market Reviews - Customer & Supplier Testimonials",
+      "description": "Read verified reviews from UK drivers who saved money on engine replacement. See our 4.8/5 Trustpilot rating. Compare quotes from vetted specialists today.",
+      "url": "https://enginesmarket.co.uk/reviews",
+      "about": {
+        "@type": "Thing",
+        "name": "Engines Market Reviews",
+        "description": "Real customer and supplier reviews for Engines Market, the UK engine replacement price comparison platform."
+      },
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "Engine Finders UK Ltd",
+        "tradingAs": "Engines Market",
+        "url": "https://enginesmarket.co.uk",
+        "logo": "https://enginesmarket.co.uk/logo.png",
+        "legalName": "Engine Finders UK Ltd",
+        "taxID": "13157944",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "113 Park Road",
+          "addressLocality": "Ilford",
+          "postalCode": "IG1 1SQ",
+          "addressCountry": "GB"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "bestRating": "5",
+          "ratingCount": "[Insert total review count here]",
+          "reviewCount": "[Insert total review count here]",
+          "description": "Average rating across Trustpilot, Google, Facebook, and Reviews.io. 94% of customers would recommend Engines Market."
+        }
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Featured customer reviews for Engines Market",
+      "description": "A selection of verified reviews from UK drivers who used Engines Market to compare engine replacement quotes.",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "Review",
+            "reviewBody": "Saved me a fortune on my BMW. Quick quotes, no hassle. 5 stars.",
+            "datePublished": "2026-05-15",
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            },
+            "author": {
+              "@type": "Person",
+              "name": "Tom",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Leeds"
+              }
+            },
+            "itemReviewed": {
+              "@type": "Service",
+              "name": "Engine Replacement Quote Comparison"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Review",
+            "reviewBody": "Local garage wanted £2,800 for a replacement engine. Used this site, got a quote for £1,950 with a better warranty. Same job, less than an hour away. Why would you not use this-",
+            "datePublished": "2026-05-10",
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            },
+            "author": {
+              "@type": "Person",
+              "name": "James",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Manchester"
+              }
+            },
+            "itemReviewed": {
+              "@type": "Service",
+              "name": "Engine Replacement Quote Comparison"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Review",
+            "reviewBody": "My car sounded like a bag of spanners. Thought it was game over. Engines Market got me three quotes and I saved nearly a grand. Back on the road in a week. Can't fault it.",
+            "datePublished": "2026-05-05",
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            },
+            "author": {
+              "@type": "Person",
+              "name": "Sarah",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Bristol"
+              }
+            },
+            "itemReviewed": {
+              "@type": "Service",
+              "name": "Engine Replacement Quote Comparison"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Are these reviews real and verified-",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. All customer reviews shown on this page come from real people who have used Engines Market. Supplier reviews come from businesses in our network. We do not invent or pay for fake reviews."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why are there no negative reviews showing-",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If you do not see negative reviews, it may be because the filter is set to Highest rating - try changing to Lowest rating or Most recent. We genuinely have far more positive reviews than negative ones, but we do receive occasional criticism and we publish it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I see reviews from a specific platform only-",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Use the filter options above to show reviews from Trustpilot, Google, Facebook, or Reviews.io individually."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I leave a review if I am a supplier-",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Please use the same public platforms (Google, Trustpilot, etc.) as customers. We monitor all of them. Alternatively, email your feedback to support@enginesmarket.co.uk and we may feature it in the supplier section with your permission."
+          }
+        }
+      ]
+    }
+  ],
+  "stats": {
+    "wordCount": 1205,
+    "headingCount": 10,
+    "tableCount": 0,
+    "faqCount": 4,
+    "formCount": 0,
+    "linkCount": 10,
+    "imageCount": 0
+  },
+  "schemaVersion": 3
+}

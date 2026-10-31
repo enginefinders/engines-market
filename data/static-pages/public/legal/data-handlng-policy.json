@@ -1,0 +1,1331 @@
+{
+  "id": "public/legal/data-handlng-policy",
+  "contentType": "legal",
+  "slug": "legal/data-handlng-policy",
+  "route": "/legal/data-handling-policy",
+  "source": {
+    "originalFile": "public/legal/data-handlng-policy.html",
+    "sourceRoot": "public",
+    "sourceHash": "sha256:6086bc8d59f14fea289e628fba3d24df096da461ce5444d891b47e3312d03057",
+    "sourceBytes": 101380,
+    "migrationStatus": "clean-exported",
+    "sourceImmutable": true
+  },
+  "seo": {
+    "title": "Data Handling Policy - Engines Market | UK GDPR",
+    "description": "Read our Data Handling Policy to understand how Engines Market collects, stores, shares, and deletes your personal data. UK GDPR compliant. Maximum 10 suppliers.",
+    "canonical": "https://enginesmarket.co.uk/legal/data-handling-policy",
+    "robots": "index, follow",
+    "openGraph": {
+      "title": "Data Handling Policy - Engines Market | UK GDPR",
+      "description": "Read our Data Handling Policy to understand how Engines Market collects, stores, shares, and deletes your personal data. UK GDPR compliant.",
+      "url": "https://enginesmarket.co.uk/legal/data-handling-policy",
+      "image": "https://enginesmarket.co.uk/images/og-image.jpg",
+      "type": "website"
+    }
+  },
+  "sections": {
+    "hero": {
+      "eyebrow": "",
+      "title": "How we handle your personal data",
+      "description": "This policy describes how Engines Market processes, stores, secures, and deletes personal data that passes through our Platform.",
+      "options": [],
+      "trust": [],
+      "image": null,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Data Handling Policy"
+        },
+        {
+          "type": "paragraph",
+          "text": "Effective: June 2026"
+        },
+        {
+          "type": "paragraph",
+          "text": "•"
+        },
+        {
+          "type": "paragraph",
+          "text": "Version 1.0"
+        },
+        {
+          "type": "paragraph",
+          "text": "This Data Handling Policy should be read alongside our Privacy Policy , which explains your rights and our lawful bases for processing, and our Cookie Policy ."
+        },
+        {
+          "type": "paragraph",
+          "text": "Section 1"
+        }
+      ],
+      "links": [
+        {
+          "href": "/legal/privacy-policy",
+          "text": "Privacy Policy"
+        },
+        {
+          "href": "/legal/cookie-policy",
+          "text": "Cookie Policy"
+        },
+        {
+          "href": "mailto:dpo@enginesmarket.co.uk",
+          "text": "dpo@enginesmarket.co.uk"
+        },
+        {
+          "href": "mailto:support@enginesmarket.co.uk",
+          "text": "support@enginesmarket.co.uk"
+        },
+        {
+          "href": "mailto:complaints@enginesmarket.co.uk",
+          "text": "complaints@enginesmarket.co.uk"
+        }
+      ]
+    },
+    "scope": {
+      "items": [
+        {
+          "id": "scope-and-purpose",
+          "title": "Scope and purpose",
+          "description": "This policy applies to all personal data that we collect, process, or store in connection with our price comparison and lead generation service. It covers:",
+          "blocks": [
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "Data submitted by users via our quote request form",
+                "Data generated automatically (e.g., IP addresses, analytics)",
+                "Data shared with our Supplier network",
+                "Data stored in our CRM and other systems",
+                "Data retained for legitimate business purposes (e.g., supplier monitoring, legal compliance)"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "We are committed to processing personal data in accordance with the UK General Data Protection Regulation (UK GDPR) , the Data Protection Act 2018 , and the Privacy and Electronic Communications Regulations (PECR) ."
+            },
+            {
+              "type": "paragraph",
+              "text": "Section 2"
+            }
+          ],
+          "links": [],
+          "source": {
+            "sectionId": "scope-and-purpose",
+            "order": 0
+          }
+        }
+      ]
+    },
+    "procedure": {
+      "items": []
+    },
+    "dataUse": {
+      "items": [
+        {
+          "id": "data-handling-lifecycle-overview",
+          "title": "Data handling lifecycle — overview",
+          "description": "The diagram below illustrates how personal data moves through our systems from submission to deletion.",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "[User submits quote request via website form]"
+            },
+            {
+              "type": "paragraph",
+              "text": "│"
+            },
+            {
+              "type": "paragraph",
+              "text": "[Data encrypted in transit (TLS 1.3)]"
+            },
+            {
+              "type": "paragraph",
+              "text": "│"
+            },
+            {
+              "type": "paragraph",
+              "text": "[Data stored temporarily in web server logs (deleted after 7 days) ]"
+            },
+            {
+              "type": "paragraph",
+              "text": "│"
+            },
+            {
+              "type": "paragraph",
+              "text": "[Data entered into our CRM system ]"
+            },
+            {
+              "type": "paragraph",
+              "text": "│"
+            },
+            {
+              "type": "paragraph",
+              "text": "[Lead is made available to Suppliers (max 10 suppliers) ]"
+            },
+            {
+              "type": "paragraph",
+              "text": "│"
+            },
+            {
+              "type": "paragraph",
+              "text": "[Suppliers view lead and may submit quotes]"
+            },
+            {
+              "type": "paragraph",
+              "text": "│"
+            },
+            {
+              "type": "paragraph",
+              "text": "[Lead remains active for 6 months from last interaction]"
+            },
+            {
+              "type": "paragraph",
+              "text": "│"
+            },
+            {
+              "type": "paragraph",
+              "text": "[Automatic deletion from CRM and active systems]"
+            },
+            {
+              "type": "paragraph",
+              "text": "│"
+            },
+            {
+              "type": "paragraph",
+              "text": "[Data retained in encrypted backups for up to 30 additional days , then permanently deleted]"
+            },
+            {
+              "type": "paragraph",
+              "text": "Section 3"
+            }
+          ],
+          "links": [],
+          "source": {
+            "sectionId": "data-handling-lifecycle-overview",
+            "order": 1
+          }
+        },
+        {
+          "id": "data-collection-from-website-to-crm",
+          "title": "Data collection — from website to CRM",
+          "description": null,
+          "blocks": [
+            {
+              "type": "heading",
+              "level": "h3",
+              "id": "",
+              "text": "3.1 Quote request form"
+            },
+            {
+              "type": "paragraph",
+              "text": "When you submit a quote request, the following data is collected:"
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "Name, email address, phone number, postcode",
+                "Vehicle registration (looked up via DVLA API to retrieve make, model, engine code, fuel type, year)",
+                "Mileage",
+                "Description of the engine problem"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "All data is transmitted from your browser to our servers using TLS 1.3 encryption (the current industry standard). Our website uses HTTPS across all pages."
+            },
+            {
+              "type": "heading",
+              "level": "h3",
+              "id": "",
+              "text": "3.2 Web server logs"
+            },
+            {
+              "type": "paragraph",
+              "text": "For security and debugging purposes, our web servers temporarily log:"
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "IP address",
+                "Browser type and version",
+                "Timestamp of request",
+                "Pages requested"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "These logs are retained for 7 days and then automatically deleted. They are not used for any purpose other than detecting and preventing malicious activity (e.g., DDoS attacks, brute force attempts)."
+            },
+            {
+              "type": "heading",
+              "level": "h3",
+              "id": "",
+              "text": "3.3 CRM processing"
+            },
+            {
+              "type": "paragraph",
+              "text": "Once your quote request is validated, the data is entered into our Customer Relationship Management (CRM) system."
+            },
+            {
+              "type": "table",
+              "headers": [
+                "Field",
+                "Details"
+              ],
+              "rows": [
+                [
+                  "CRM platform",
+                  "[CRM NAME - e.g., HubSpot / Salesforce / custom platform] - insert your actual CRM here"
+                ],
+                [
+                  "Location of CRM servers",
+                  "United Kingdom (primary)"
+                ],
+                [
+                  "Data encryption at rest",
+                  "AES-256"
+                ],
+                [
+                  "Access controls",
+                  "Role-based access; only designated staff can access personal data"
+                ],
+                [
+                  "Audit logging",
+                  "All access to personal data is logged"
+                ]
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "Our CRM is configured to:"
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "Automatically record the date and time of each lead",
+                "Track which Suppliers have viewed the lead (and when)",
+                "Enforce the supplier cap (maximum 10 Suppliers per lead)",
+                "Automatically close leads after 6 months of inactivity"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "Section 4"
+            }
+          ],
+          "links": [],
+          "source": {
+            "sectionId": "data-collection-from-website-to-crm",
+            "order": 2
+          }
+        },
+        {
+          "id": "supplier-data-handling-our-oversight",
+          "title": "Supplier data handling — our oversight",
+          "description": "While Suppliers are independent data controllers, we take steps to ensure they handle data appropriately while it is within our platform’s control.",
+          "blocks": [
+            {
+              "type": "heading",
+              "level": "h3",
+              "id": "",
+              "text": "8.1 Before onboarding"
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "Suppliers sign a Data Sharing Agreement (as described in section 4.3)",
+                "We verify the identity of the individual who will access our Supplier portal (passport or driving licence check)"
+              ]
+            },
+            {
+              "type": "heading",
+              "level": "h3",
+              "id": "",
+              "text": "8.2 Ongoing monitoring"
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "We log every time a Supplier views or unlocks a lead",
+                "We review Supplier behaviour (e.g., unlocking leads but never quoting, excessive unlocking without follow-up)",
+                "We investigate any complaints received about a Supplier’s handling of personal data",
+                "Suppliers whose average public review rating falls below 3.5 stars (sustained) or who accumulate multiple substantiated complaints are removed from our network"
+              ]
+            },
+            {
+              "type": "heading",
+              "level": "h3",
+              "id": "",
+              "text": "8.3 Offboarding"
+            },
+            {
+              "type": "paragraph",
+              "text": "When a Supplier leaves our network (voluntarily or by removal):"
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "Their access to the Supplier portal is revoked immediately",
+                "Any leads they have already unlocked remain with them (as they are independent controllers)",
+                "No new leads are sent to them"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "Section 9"
+            }
+          ],
+          "links": [],
+          "source": {
+            "sectionId": "supplier-data-handling-our-oversight",
+            "order": 7
+          }
+        },
+        {
+          "id": "data-breach-procedure",
+          "title": "Data breach procedure",
+          "description": "Despite our security measures, a data breach may occur. We have a documented incident response plan to ensure we respond quickly and in compliance with UK GDPR.",
+          "blocks": [
+            {
+              "type": "heading",
+              "level": "h3",
+              "id": "",
+              "text": "9.1 Definition of a data breach"
+            },
+            {
+              "type": "paragraph",
+              "text": "A personal data breach is a breach of security leading to the accidental or unlawful destruction, loss, alteration, unauthorised disclosure of, or access to, personal data."
+            },
+            {
+              "type": "heading",
+              "level": "h3",
+              "id": "",
+              "text": "9.2 Internal reporting"
+            },
+            {
+              "type": "paragraph",
+              "text": "All employees and contractors are required to report any suspected data breach immediately to:"
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "Data Protection Officer ( dpo@enginesmarket.co.uk )",
+                "IT Security Lead (internal)"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "Reports can be made by phone, email, or via our internal whistleblowing channel."
+            },
+            {
+              "type": "heading",
+              "level": "h3",
+              "id": "",
+              "text": "9.3 Investigation and containment"
+            },
+            {
+              "type": "paragraph",
+              "text": "Upon receiving a report, our incident response team will:"
+            },
+            {
+              "type": "table",
+              "headers": [
+                "Step",
+                "Action",
+                "Timeframe"
+              ],
+              "rows": [
+                [
+                  "1",
+                  "Contain the breach (e.g., revoke access, isolate affected systems, change passwords).",
+                  "Immediate"
+                ],
+                [
+                  "2",
+                  "Preserve evidence (logs, screenshots, affected data).",
+                  "Within 1 hour"
+                ],
+                [
+                  "3",
+                  "Assess the scope: what data, how many individuals, who is affected.",
+                  "Within 4 hours"
+                ],
+                [
+                  "4",
+                  "Determine the likelihood and severity of risk to individuals.",
+                  "Within 24 hours"
+                ]
+              ]
+            },
+            {
+              "type": "heading",
+              "level": "h3",
+              "id": "",
+              "text": "9.4 Notification to the ICO"
+            },
+            {
+              "type": "paragraph",
+              "text": "If the breach is likely to result in a risk to the rights and freedoms of individuals, we will notify the Information Commissioner’s Office (ICO) within 72 hours of becoming aware of the breach."
+            },
+            {
+              "type": "paragraph",
+              "text": "The notification will include:"
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "Description of the breach (categories of data, approximate number of individuals and records)",
+                "Name and contact details of our Data Protection Officer",
+                "Likely consequences of the breach",
+                "Measures taken or proposed to address the breach"
+              ]
+            },
+            {
+              "type": "heading",
+              "level": "h3",
+              "id": "",
+              "text": "9.5 Notification to affected individuals"
+            },
+            {
+              "type": "paragraph",
+              "text": "If the breach is likely to result in a high risk to individuals (e.g., financial loss, identity theft, significant distress), we will notify affected individuals without undue delay. The notification will describe the breach and provide advice on steps they can take to protect themselves."
+            },
+            {
+              "type": "heading",
+              "level": "h3",
+              "id": "",
+              "text": "9.6 Documentation"
+            },
+            {
+              "type": "paragraph",
+              "text": "We will document all breaches (including those not reportable to the ICO) in an internal breach register. The register includes:"
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "Facts about the breach",
+                "Effects",
+                "Remedial action taken"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "This register is reviewed by our Data Protection Officer quarterly to identify patterns and improve security."
+            },
+            {
+              "type": "paragraph",
+              "text": "Section 10"
+            }
+          ],
+          "links": [],
+          "source": {
+            "sectionId": "data-breach-procedure",
+            "order": 8
+          }
+        },
+        {
+          "id": "international-data-transfers",
+          "title": "International data transfers",
+          "description": "We primarily store and process personal data within the United Kingdom. Our CRM and hosting providers are UK-based.",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Some service providers (e.g., analytics) may store data outside the UK. In such cases, we ensure an adequate level of protection by using:"
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "The UK International Data Transfer Addendum (IDTA)",
+                "Transfers to countries with UK adequacy decisions (e.g., the EEA, Japan, South Korea)"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "We do not transfer personal data to countries without adequate protections unless required by law or with your explicit consent."
+            },
+            {
+              "type": "paragraph",
+              "text": "Section 11"
+            }
+          ],
+          "links": [],
+          "source": {
+            "sectionId": "international-data-transfers",
+            "order": 9
+          }
+        }
+      ]
+    },
+    "security": {
+      "items": [
+        {
+          "id": "data-sharing-with-suppliers-mechanism-and-safeguards",
+          "title": "Data sharing with Suppliers — mechanism and safeguards",
+          "description": "Sharing your data with Suppliers is the core function of our service. We have implemented specific technical and contractual safeguards to protect your data while enabling Suppliers to provide accurate quotes.",
+          "blocks": [
+            {
+              "type": "heading",
+              "level": "h3",
+              "id": "",
+              "text": "4.1 How a lead is shared"
+            },
+            {
+              "type": "table",
+              "headers": [
+                "Step",
+                "Description"
+              ],
+              "rows": [
+                [
+                  "1",
+                  "Your completed quote request enters our CRM."
+                ],
+                [
+                  "2",
+                  "The CRM identifies relevant Suppliers based on vehicle type, engine code, and your postcode location."
+                ],
+                [
+                  "3",
+                  "An anonymised version of your lead (showing vehicle details, failure description, and postcode — but not your name, email, or phone number) is presented to Suppliers in their dashboard."
+                ],
+                [
+                  "4",
+                  "Suppliers who are interested and have the required engine in stock may choose to “unlock” your lead."
+                ],
+                [
+                  "5",
+                  "Upon unlocking, the Supplier receives your full contact details (name, email, phone number)."
+                ],
+                [
+                  "6",
+                  "The Supplier can then contact you directly to provide a quote (by phone, email, or SMS)."
+                ],
+                [
+                  "7",
+                  "Cap applied: Once a total of 10 Suppliers have unlocked your lead, the lead is automatically closed and no further Suppliers can access your contact details."
+                ]
+              ]
+            },
+            {
+              "type": "heading",
+              "level": "h3",
+              "id": "",
+              "text": "4.2 Why we use this model"
+            },
+            {
+              "type": "paragraph",
+              "text": "This “unlock” model balances:"
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "Your privacy — Suppliers cannot see your contact details unless they are genuinely interested and have the engine in stock. This reduces unwanted contact.",
+                "Competitive quotes — Limiting to 10 Suppliers ensures you receive enough quotes for meaningful comparison without being overwhelmed by excessive calls.",
+                "Supplier accountability — The unlock action is logged, and we monitor Supplier behaviour. Suppliers who unlock leads but never quote, or who misuse contact details, are removed from our network."
+              ]
+            },
+            {
+              "type": "heading",
+              "level": "h3",
+              "id": "",
+              "text": "4.3 Supplier contractual safeguards"
+            },
+            {
+              "type": "paragraph",
+              "text": "Every Supplier signs a binding Data Sharing Agreement (DSA) before joining our network. The DSA requires Suppliers to:"
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "Act as an independent data controller for any personal data they receive",
+                "Use your data only for the purpose of providing a quote for the specific engine you requested",
+                "Not add your data to any marketing database or mailing list",
+                "Not share your data with any third party (including subcontractors) without your explicit consent",
+                "Retain your data only as long as necessary to fulfil the quote and any resulting contract",
+                "Indemnify Engines Market against any fines, claims, or losses arising from their breach of data protection law or the DSA"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "Suppliers who breach these terms are removed from our network immediately."
+            },
+            {
+              "type": "paragraph",
+              "text": "Section 5"
+            }
+          ],
+          "links": [],
+          "source": {
+            "sectionId": "data-sharing-with-suppliers-mechanism-and-safeguards",
+            "order": 3
+          }
+        },
+        {
+          "id": "security-measures-technical-and-organisational",
+          "title": "Security measures — technical and organisational",
+          "description": "We have implemented a range of security measures to protect personal data from accidental loss, unauthorised access, alteration, or disclosure.",
+          "blocks": [
+            {
+              "type": "heading",
+              "level": "h3",
+              "id": "",
+              "text": "5.1 Technical measures"
+            },
+            {
+              "type": "table",
+              "headers": [
+                "Measure",
+                "Implementation"
+              ],
+              "rows": [
+                [
+                  "Encryption in transit",
+                  "TLS 1.3 across all website traffic. HSTS (HTTP Strict Transport Security) enabled."
+                ],
+                [
+                  "Encryption at rest",
+                  "AES-256 encryption for all databases and backups."
+                ],
+                [
+                  "Access controls",
+                  "Role-based access control (RBAC) for staff and Suppliers. Multi-factor authentication (MFA) required for all staff accounts with access to personal data."
+                ],
+                [
+                  "Network security",
+                  "Web application firewall (WAF), DDoS protection, regular vulnerability scanning."
+                ],
+                [
+                  "API security",
+                  "All APIs (including DVLA lookup) use API keys with rate limiting and IP whitelisting where appropriate."
+                ],
+                [
+                  "Backup security",
+                  "Encrypted backups stored separately from production systems. Retention period: 30 days for daily backups."
+                ],
+                [
+                  "Supplier portal security",
+                  "Suppliers access our platform via unique, password-protected accounts with MFA encouraged. Session timeouts after 30 minutes of inactivity."
+                ]
+              ]
+            },
+            {
+              "type": "heading",
+              "level": "h3",
+              "id": "",
+              "text": "5.2 Organisational measures"
+            },
+            {
+              "type": "table",
+              "headers": [
+                "Measure",
+                "Implementation"
+              ],
+              "rows": [
+                [
+                  "Data protection policies",
+                  "This policy, together with our Privacy Policy and internal staff handbook, sets out clear rules for handling personal data."
+                ],
+                [
+                  "Staff training",
+                  "All employees receive mandatory data protection training upon hiring and annually thereafter (see Section 7)."
+                ],
+                [
+                  "Access reviews",
+                  "Quarterly audits of staff access rights. Access is revoked immediately when no longer required."
+                ],
+                [
+                  "Incident response plan",
+                  "A written plan for responding to data breaches (see Section 9)."
+                ],
+                [
+                  "Third-party risk management",
+                  "All data processors (e.g., hosting provider, CRM provider, analytics provider) are vetted and sign data processing agreements that comply with UK GDPR."
+                ]
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "Section 6"
+            }
+          ],
+          "links": [],
+          "source": {
+            "sectionId": "security-measures-technical-and-organisational",
+            "order": 4
+          }
+        },
+        {
+          "id": "staff-training-on-data-protection",
+          "title": "Staff training on data protection",
+          "description": "All Engines Market employees receive comprehensive data protection training. Our training programme includes:",
+          "blocks": [
+            {
+              "type": "table",
+              "headers": [
+                "Training component",
+                "Frequency",
+                "Content"
+              ],
+              "rows": [
+                [
+                  "Induction training",
+                  "Upon hiring",
+                  "UK GDPR basics, data protection principles, handling personal data securely, reporting breaches."
+                ],
+                [
+                  "Annual refresher",
+                  "Every 12 months",
+                  "Updates to law, new threats (e.g., phishing), case studies of real breaches, refresher on our policies."
+                ],
+                [
+                  "Role-specific training",
+                  "As needed",
+                  "For staff with access to CRM or Supplier management: additional modules on access control, data sharing agreements, and handling subject access requests."
+                ],
+                [
+                  "Phishing simulations",
+                  "Quarterly",
+                  "Simulated phishing emails sent to all staff to test awareness."
+                ],
+                [
+                  "Breach response drills",
+                  "Annually",
+                  "Tabletop exercises simulating a data breach to test our incident response plan."
+                ]
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "Training records are maintained by our Data Protection Officer. Staff who fail mandatory training are not permitted to access personal data until training is completed."
+            },
+            {
+              "type": "paragraph",
+              "text": "Section 8"
+            }
+          ],
+          "links": [],
+          "source": {
+            "sectionId": "staff-training-on-data-protection",
+            "order": 6
+          }
+        }
+      ]
+    },
+    "retention": {
+      "items": [
+        {
+          "id": "data-retention-and-deletion-specific-processes",
+          "title": "Data retention and deletion — specific processes",
+          "description": "We retain personal data only as long as necessary for the purposes set out in our Privacy Policy. The table below explains the retention periods and deletion mechanisms.",
+          "blocks": [
+            {
+              "type": "table",
+              "headers": [
+                "Data category",
+                "Retention period",
+                "Deletion mechanism"
+              ],
+              "rows": [
+                [
+                  "Active lead data (quote requests with recent interaction)",
+                  "6 months from the user’s last interaction (e.g., receiving a quote, clicking a link in a follow-up email, or contacting support).",
+                  "Automated deletion script runs daily. After 6 months, data is permanently removed from the CRM and active databases."
+                ],
+                [
+                  "Abandoned lead data (quote requests with no interaction within 30 days)",
+                  "30 days from submission, then marked as abandoned. Deleted at the 6-month point from submission (same as active leads).",
+                  "Same automated deletion."
+                ],
+                [
+                  "Supplier-viewed lead data (anonymised statistics only)",
+                  "Anonymised after 12 months (e.g., “lead ID 12345” becomes an anonymous row with no personal identifiers).",
+                  "Manual anonymisation script run quarterly."
+                ],
+                [
+                  "Web server logs",
+                  "7 days",
+                  "Automated deletion."
+                ],
+                [
+                  "Backups",
+                  "30 days (daily backups rotated). Deleted after 30 days.",
+                  "Automated rotation."
+                ],
+                [
+                  "Customer support emails and call recordings",
+                  "6 months from the date of the communication",
+                  "Manual deletion after 6 months, except where required for legal proceedings."
+                ],
+                [
+                  "Complaint records (relating to Suppliers)",
+                  "6 years (to defend against potential legal claims)",
+                  "Manual review and deletion after 6 years, unless a specific retention notice applies."
+                ]
+              ]
+            },
+            {
+              "type": "heading",
+              "level": "h3",
+              "id": "",
+              "text": "6.1 User-requested early deletion"
+            },
+            {
+              "type": "paragraph",
+              "text": "You have the right to request erasure of your personal data before the retention period expires. There is no fee for this request."
+            },
+            {
+              "type": "paragraph",
+              "text": "To request early deletion, email dpo@enginesmarket.co.uk with the subject line “Erasure request”. We will:"
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Verify your identity",
+                "Delete your personal data from our active systems within 30 days",
+                "Confirm deletion to you in writing"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "Important: Data already shared with Suppliers cannot be retrieved from their systems. You must contact them directly to request deletion from their records."
+            },
+            {
+              "type": "heading",
+              "level": "h3",
+              "id": "",
+              "text": "6.2 Deletion verification"
+            },
+            {
+              "type": "paragraph",
+              "text": "We maintain logs of deletion activities for audit purposes. These logs do not contain personal data — only record identifiers (e.g., “Lead ID 12345 deleted on [date] by automated script”). Our Data Protection Officer reviews deletion logs quarterly."
+            },
+            {
+              "type": "paragraph",
+              "text": "Section 7"
+            }
+          ],
+          "links": [],
+          "source": {
+            "sectionId": "data-retention-and-deletion-specific-processes",
+            "order": 5
+          }
+        }
+      ]
+    },
+    "rights": {
+      "items": [
+        {
+          "id": "policy-review-and-updates",
+          "title": "Policy review and updates",
+          "description": "This Data Handling Policy is reviewed:",
+          "blocks": [
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "Annually (or more frequently if required by law or significant change in our processing activities)",
+                "After any data breach (to identify lessons learned and update procedures)",
+                "When we introduce new systems or Suppliers that affect data handling"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "The “Last updated” date at the top of this page indicates when the policy was last revised. We will notify users of material changes via email (if we have your email address) and via a notice on our Platform."
+            },
+            {
+              "type": "paragraph",
+              "text": "Section 12"
+            }
+          ],
+          "links": [],
+          "source": {
+            "sectionId": "policy-review-and-updates",
+            "order": 10
+          }
+        },
+        {
+          "id": "key-points-for-users",
+          "title": "Key points for users",
+          "description": null,
+          "blocks": [
+            {
+              "type": "cards",
+              "cards": [
+                {
+                  "title": "",
+                  "text": "How many Suppliers see my contact details? Maximum 10. You will not be contacted by more than 10 Suppliers.",
+                  "highlight": "",
+                  "meta": "",
+                  "icon": "",
+                  "items": [],
+                  "fullText": "How many Suppliers see my contact details? Maximum 10. You will not be contacted by more than 10 Suppliers."
+                },
+                {
+                  "title": "",
+                  "text": "How do Suppliers get my details? They must “unlock” your lead (express interest) first. Uninterested Suppliers never see your name, email, or phone number.",
+                  "highlight": "",
+                  "meta": "",
+                  "icon": "",
+                  "items": [],
+                  "fullText": "How do Suppliers get my details? They must “unlock” your lead (express interest) first. Uninterested Suppliers never see your name, email, or phone number."
+                },
+                {
+                  "title": "",
+                  "text": "How long do you keep my data? 6 months from your last interaction, then automatically deleted.",
+                  "highlight": "",
+                  "meta": "",
+                  "icon": "",
+                  "items": [],
+                  "fullText": "How long do you keep my data? 6 months from your last interaction, then automatically deleted."
+                },
+                {
+                  "title": "",
+                  "text": "Can I delete my data earlier? Yes, free of charge. Email dpo@enginesmarket.co.uk .",
+                  "highlight": "",
+                  "meta": "",
+                  "icon": "",
+                  "items": [],
+                  "fullText": "Can I delete my data earlier? Yes, free of charge. Email dpo@enginesmarket.co.uk ."
+                },
+                {
+                  "title": "",
+                  "text": "What happens to my data after deletion? It is permanently removed from our active systems and, after 30 days, from backups.",
+                  "highlight": "",
+                  "meta": "",
+                  "icon": "",
+                  "items": [],
+                  "fullText": "What happens to my data after deletion? It is permanently removed from our active systems and, after 30 days, from backups."
+                },
+                {
+                  "title": "",
+                  "text": "Do you train your staff on data protection? Yes — annually, plus specific training for roles that access personal data.",
+                  "highlight": "",
+                  "meta": "",
+                  "icon": "",
+                  "items": [],
+                  "fullText": "Do you train your staff on data protection? Yes — annually, plus specific training for roles that access personal data."
+                },
+                {
+                  "title": "",
+                  "text": "What if you have a data breach? We have a formal response plan and will notify the ICO within 72 hours if required.",
+                  "highlight": "",
+                  "meta": "",
+                  "icon": "",
+                  "items": [],
+                  "fullText": "What if you have a data breach? We have a formal response plan and will notify the ICO within 72 hours if required."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "This Data Handling Policy was last reviewed and approved by the Data Protection Officer of Engine Finders UK Ltd on 13 June 2026."
+            },
+            {
+              "type": "paragraph",
+              "text": "Related Documents"
+            }
+          ],
+          "links": [],
+          "source": {
+            "sectionId": "key-points-for-users",
+            "order": 12
+          }
+        },
+        {
+          "id": "privacy-cookies-your-rights",
+          "title": "Privacy, cookies & your rights",
+          "description": "Read our Privacy Policy to understand your rights and our lawful bases for processing, or our Cookie Policy for information about how we use cookies.",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Privacy Policy"
+            },
+            {
+              "type": "paragraph",
+              "text": "Cookie Policy"
+            },
+            {
+              "type": "paragraph",
+              "text": "Complaints Procedure"
+            },
+            {
+              "type": "paragraph",
+              "text": "Terms & Conditions"
+            },
+            {
+              "type": "paragraph",
+              "text": "Supplier Standards"
+            }
+          ],
+          "links": [
+            {
+              "href": "/legal/complaints-procedure",
+              "text": "Complaints Procedure"
+            },
+            {
+              "href": "/legal/terms-and-conditions",
+              "text": "Terms & Conditions"
+            },
+            {
+              "href": "/supplier-standards",
+              "text": "Supplier Standards"
+            }
+          ],
+          "source": {
+            "sectionId": "privacy-cookies-your-rights",
+            "order": 13
+          }
+        }
+      ]
+    },
+    "complaints": {
+      "items": []
+    },
+    "faq": {
+      "items": []
+    },
+    "contact": {
+      "items": [
+        {
+          "id": "contact-us",
+          "title": "Contact us",
+          "description": "If you have any questions about this Data Handling Policy, or if you wish to report a concern about how your data is being handled, please contact:",
+          "blocks": [
+            {
+              "type": "cards",
+              "cards": [
+                {
+                  "title": "Data Protection Officer",
+                  "text": "Data Protection Officer dpo@enginesmarket.co.uk",
+                  "highlight": "dpo@enginesmarket.co.uk",
+                  "meta": "",
+                  "icon": "",
+                  "items": [],
+                  "fullText": "Data Protection Officer dpo@enginesmarket.co.uk"
+                },
+                {
+                  "title": "General Data Enquiries",
+                  "text": "General Data Enquiries support@enginesmarket.co.uk",
+                  "highlight": "support@enginesmarket.co.uk",
+                  "meta": "",
+                  "icon": "",
+                  "items": [],
+                  "fullText": "General Data Enquiries support@enginesmarket.co.uk"
+                },
+                {
+                  "title": "Complaints about Data Handling",
+                  "text": "Complaints about Data Handling complaints@enginesmarket.co.uk",
+                  "highlight": "complaints@enginesmarket.co.uk",
+                  "meta": "",
+                  "icon": "",
+                  "items": [],
+                  "fullText": "Complaints about Data Handling complaints@enginesmarket.co.uk"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "Postal address (for formal correspondence): Data Protection Officer Engine Finders UK Ltd 113 Park Road Ilford, IG1 1SQ United Kingdom"
+            },
+            {
+              "type": "paragraph",
+              "text": "Summary"
+            }
+          ],
+          "links": [],
+          "source": {
+            "sectionId": "contact-us",
+            "order": 11
+          }
+        }
+      ]
+    },
+    "additional": {
+      "items": []
+    },
+    "supplemental": {
+      "media": [],
+      "tables": [],
+      "faqs": [],
+      "forms": [],
+      "links": []
+    }
+  },
+  "structuredData": [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Data Handling Policy - Engines Market",
+      "description": "Read our Data Handling Policy to understand how Engines Market collects, stores, shares, and deletes your personal data. UK GDPR compliant. Maximum 10 suppliers.",
+      "url": "https://enginesmarket.co.uk/legal/data-handling-policy",
+      "dateModified": "2026-06-17",
+      "about": {
+        "@type": "Thing",
+        "name": "Data Handling Policy",
+        "description": "A public-facing summary of Engines Market's internal operational procedures for processing, storing, securing, and deleting personal data."
+      },
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "Engine Finders UK Ltd",
+        "tradingAs": "Engines Market",
+        "url": "https://enginesmarket.co.uk",
+        "logo": "https://enginesmarket.co.uk/images/logo.png",
+        "legalName": "Engine Finders UK Ltd",
+        "taxID": "13157944",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "113 Park Road",
+          "addressLocality": "Ilford",
+          "postalCode": "IG1 1SQ",
+          "addressCountry": "GB"
+        },
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "contactType": "Data Protection Officer",
+            "email": "dpo@enginesmarket.co.uk"
+          },
+          {
+            "@type": "ContactPoint",
+            "contactType": "customer support",
+            "email": "support@enginesmarket.co.uk"
+          },
+          {
+            "@type": "ContactPoint",
+            "contactType": "complaints",
+            "email": "complaints@enginesmarket.co.uk"
+          }
+        ]
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How Engines Market handles your personal data",
+      "description": "A step-by-step overview of how your personal data moves through our systems from submission to deletion.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "User submits quote request",
+          "description": "You complete our quote request form with your name, email, phone number, vehicle registration, mileage, and problem description. Data is encrypted in transit using TLS 1.3."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Data enters our CRM",
+          "description": "Your data is stored in our CRM system (UK-based servers) with AES-256 encryption at rest. Role-based access controls and audit logging protect your information."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Lead shared with Suppliers (max 10)",
+          "description": "Your anonymised lead (vehicle details and postcode only) is presented to relevant Suppliers. Suppliers must 'unlock' your lead to see your contact details. A maximum of 10 Suppliers can access your data."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Suppliers provide quotes",
+          "description": "Suppliers who unlock your lead may contact you directly via phone, email, or SMS to provide a quote. All Suppliers sign a Data Sharing Agreement governing their use of your data."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Data retained for 6 months",
+          "description": "Your data remains active for 6 months from your last interaction. After this period, it is automatically and permanently deleted from our active systems."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Permanent deletion",
+          "description": "Data is removed from our CRM and active databases. It may remain in encrypted backups for up to 30 additional days before being permanently deleted."
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How many Suppliers see my contact details?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Maximum 10. You will not be contacted by more than 10 Suppliers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do Suppliers get my details?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "They must 'unlock' your lead (express interest) first. Uninterested Suppliers never see your name, email, or phone number."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long do you keep my data?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "6 months from your last interaction, then automatically deleted from our active systems."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I delete my data earlier?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, free of charge. Email dpo@enginesmarket.co.uk and we will delete your data within 30 days of your verified request."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens to my data after deletion?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It is permanently removed from our active systems and, after 30 days, from encrypted backups."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you train your staff on data protection?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. All employees receive mandatory data protection training upon hiring and annually thereafter, including role-specific training for staff who access personal data."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if you have a data breach?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We have a formal incident response plan and will notify the ICO within 72 hours if the breach is likely to result in a risk to individuals."
+          }
+        }
+      ]
+    }
+  ],
+  "stats": {
+    "wordCount": 2595,
+    "headingCount": 34,
+    "tableCount": 7,
+    "faqCount": 0,
+    "formCount": 0,
+    "linkCount": 8,
+    "imageCount": 0
+  },
+  "schemaVersion": 2
+}

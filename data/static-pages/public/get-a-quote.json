@@ -1,0 +1,593 @@
+{
+  "id": "public/get-a-quote",
+  "contentType": "root",
+  "slug": "get-a-quote",
+  "route": "/get-a-quote",
+  "source": {
+    "originalFile": "public/get-a-quote.html",
+    "sourceRoot": "public",
+    "sourceHash": "sha256:efbaa855ec531099d35d9183f8ea6b4b844e23f4d375f37724f25b8e9e90b6fe",
+    "sourceBytes": 46007,
+    "migrationStatus": "clean-exported",
+    "sourceImmutable": true
+  },
+  "seo": {
+    "title": "Free Engine Replacement Quotes - Compare 100+ UK Specialists",
+    "description": "Compare free engine replacement quotes from 100+ vetted UK specialists. Get 3-5 prices in hours. No obligation. Start your free quote today.",
+    "canonical": "",
+    "robots": "index, follow",
+    "openGraph": {
+      "title": "",
+      "description": "",
+      "url": "",
+      "image": "",
+      "type": ""
+    }
+  },
+  "sections": {
+    "hero": {
+      "eyebrow": "",
+      "title": "Get your free engine replacement quote",
+      "description": "Enter your registration - compare prices from 100+ UK specialists",
+      "options": [],
+      "trust": [],
+      "image": null,
+      "blocks": [
+        {
+          "type": "form",
+          "action": "#",
+          "method": "post",
+          "fields": [
+            {
+              "element": "input",
+              "name": "registration",
+              "type": "text",
+              "placeholder": "e.g. AB12 CDE",
+              "required": true
+            },
+            {
+              "element": "textarea",
+              "name": "problem",
+              "type": "",
+              "placeholder": "e.g. timing chain rattle, smoke, loss of power, no start",
+              "required": false
+            },
+            {
+              "element": "button",
+              "name": "",
+              "type": "submit",
+              "placeholder": "",
+              "required": false
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "24,650+ quote requests (2025)"
+        },
+        {
+          "type": "paragraph",
+          "text": "5.2 days average to fit"
+        },
+        {
+          "type": "paragraph",
+          "text": "100+ vetted suppliers"
+        },
+        {
+          "type": "paragraph",
+          "text": "Rated Excellent on Trustpilot - 4.8 / 5.0"
+        },
+        {
+          "type": "paragraph",
+          "text": "4.7 / 5.0 based on 850+ Google reviews"
+        },
+        {
+          "type": "paragraph",
+          "text": "4.9 / 5.0 from 320 Facebook ratings"
+        },
+        {
+          "type": "paragraph",
+          "text": "SSL secure - your data is encrypted"
+        },
+        {
+          "type": "label",
+          "text": "Simple process"
+        }
+      ],
+      "links": [
+        {
+          "href": "/legal/terms-and-conditions",
+          "text": "Terms & Conditions"
+        }
+      ]
+    },
+    "overview": {
+      "items": [
+        {
+          "id": "what-happens-next-clear-fast-no-pressure",
+          "title": "What happens next - clear, fast, no pressure",
+          "description": null,
+          "blocks": [
+            {
+              "type": "cards",
+              "cards": [
+                {
+                  "title": "You submit your reg and details",
+                  "text": "We identify your vehicle (make, model, engine) using DVLA data.",
+                  "highlight": "1",
+                  "meta": "",
+                  "icon": "",
+                  "items": [],
+                  "fullText": "1 You submit your reg and details We identify your vehicle (make, model, engine) using DVLA data."
+                },
+                {
+                  "title": "We match you with relevant suppliers",
+                  "text": "Your anonymised enquiry is sent to specialists who can help.",
+                  "highlight": "2",
+                  "meta": "",
+                  "icon": "",
+                  "items": [],
+                  "fullText": "2 We match you with relevant suppliers Your anonymised enquiry is sent to specialists who can help."
+                },
+                {
+                  "title": "You receive 3-5 quotes",
+                  "text": "Typically within a few hours, directly to your email or phone.",
+                  "highlight": "3",
+                  "meta": "",
+                  "icon": "",
+                  "items": [],
+                  "fullText": "3 You receive 3-5 quotes Typically within a few hours, directly to your email or phone."
+                },
+                {
+                  "title": "You choose a supplier - or walk away",
+                  "text": "No obligation. No pressure. You are always in control.",
+                  "highlight": "4",
+                  "meta": "",
+                  "icon": "",
+                  "items": [],
+                  "fullText": "4 You choose a supplier - or walk away No obligation. No pressure. You are always in control."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "It is completely free. You do not pay Engines Market anything."
+            },
+            {
+              "type": "label",
+              "text": "Why us"
+            }
+          ],
+          "links": [],
+          "source": {
+            "sectionId": "what-happens-next-clear-fast-no-pressure",
+            "order": 0
+          }
+        }
+      ]
+    },
+    "content": {
+      "items": [
+        {
+          "id": "why-use-engines-market",
+          "title": "Why use Engines Market-",
+          "description": "100+ vetted UK suppliers",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Every specialist has passed our 4-point check (UK registered, trading 1+ year, physical address, 4.0+ star average review)."
+            },
+            {
+              "type": "paragraph",
+              "text": "Real price comparison"
+            },
+            {
+              "type": "paragraph",
+              "text": "Stop calling around. See multiple quotes side by side."
+            },
+            {
+              "type": "paragraph",
+              "text": "No obligation"
+            },
+            {
+              "type": "paragraph",
+              "text": "You are free to ignore every quote."
+            },
+            {
+              "type": "paragraph",
+              "text": "Average saving"
+            },
+            {
+              "type": "paragraph",
+              "text": "Based on 24,650 quote requests, most customers save hundreds compared to their first local quote."
+            },
+            {
+              "type": "paragraph",
+              "text": "4.8 / 5.0 Trustpilot"
+            },
+            {
+              "type": "paragraph",
+              "text": "4.7 / 5.0 Google"
+            },
+            {
+              "type": "paragraph",
+              "text": "4.9 / 5.0 Facebook"
+            },
+            {
+              "type": "paragraph",
+              "text": "SSL encrypted"
+            },
+            {
+              "type": "heading",
+              "level": "h3",
+              "id": "",
+              "text": "No obligation disclaimer"
+            },
+            {
+              "type": "paragraph",
+              "text": "Using Engines Market is free and does not commit you to anything. You are not required to accept any quote, contact any supplier, or proceed with any work. Your enquiry is shared only with relevant specialists. You can withdraw your request at any time by contacting us. Full terms are available in our Terms & Conditions ."
+            },
+            {
+              "type": "label",
+              "text": "Comparison"
+            }
+          ],
+          "links": [],
+          "source": {
+            "sectionId": "why-use-engines-market",
+            "order": 1
+          }
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "id": "still-not-sure-here-is-how-we-are-different",
+          "title": "Still not sure- Here is how we are different",
+          "description": null,
+          "blocks": [
+            {
+              "type": "table",
+              "headers": [
+                "Typical garage search",
+                "Engines Market"
+              ],
+              "rows": [
+                [
+                  "Call around, repeat your story",
+                  "✓ One form, one submission"
+                ],
+                [
+                  "No way to compare like for like",
+                  "✓ Side-by-side quotes"
+                ],
+                [
+                  "Unknown if the garage is reputable",
+                  "✓ Vetted suppliers only"
+                ],
+                [
+                  "Pressure to commit",
+                  "✓ No obligation, ever"
+                ]
+              ]
+            },
+            {
+              "type": "label",
+              "text": "FAQ"
+            }
+          ],
+          "links": [],
+          "source": {
+            "sectionId": "still-not-sure-here-is-how-we-are-different",
+            "order": 2
+          }
+        },
+        {
+          "id": "frequently-asked-questions",
+          "title": "Frequently asked questions",
+          "description": null,
+          "blocks": [
+            {
+              "type": "cards",
+              "cards": [
+                {
+                  "title": "",
+                  "text": "Do I have to pay for a quote- No. The quote service is completely free for vehicle owners.",
+                  "highlight": "",
+                  "meta": "",
+                  "icon": "",
+                  "items": [],
+                  "fullText": "Do I have to pay for a quote- No. The quote service is completely free for vehicle owners."
+                },
+                {
+                  "title": "",
+                  "text": "How long does it take to receive quotes- Most users receive 3-5 quotes within a few hours. The average from enquiry to completed engine replacement is 5.2 days (based on our 2025 data).",
+                  "highlight": "",
+                  "meta": "",
+                  "icon": "",
+                  "items": [],
+                  "fullText": "How long does it take to receive quotes- Most users receive 3-5 quotes within a few hours. The average from enquiry to completed engine replacement is 5.2 days (based on our 2025 data)."
+                },
+                {
+                  "title": "",
+                  "text": "What information do I need- Your vehicle registration number (the API will pull make, model, and engine details) plus a brief description of the problem - e.g., “rattling noise on cold start”, “blue smoke”, “engine won’t start”.",
+                  "highlight": "",
+                  "meta": "",
+                  "icon": "",
+                  "items": [],
+                  "fullText": "What information do I need- Your vehicle registration number (the API will pull make, model, and engine details) plus a brief description of the problem - e.g., “rattling noise on cold start”, “blue smoke”, “engine won’t start”."
+                },
+                {
+                  "title": "",
+                  "text": "Will you share my personal details- Only with relevant suppliers - and only to enable them to quote. We do not sell your data. See our Privacy Policy for full details.",
+                  "highlight": "",
+                  "meta": "",
+                  "icon": "",
+                  "items": [],
+                  "fullText": "Will you share my personal details- Only with relevant suppliers - and only to enable them to quote. We do not sell your data. See our Privacy Policy for full details."
+                },
+                {
+                  "title": "",
+                  "text": "What if my car is very old or rare- Our network covers a wide range of vehicles. Even for older or less common models, we will share your enquiry with specialists who are most likely to help.",
+                  "highlight": "",
+                  "meta": "",
+                  "icon": "",
+                  "items": [],
+                  "fullText": "What if my car is very old or rare- Our network covers a wide range of vehicles. Even for older or less common models, we will share your enquiry with specialists who are most likely to help."
+                }
+              ]
+            }
+          ],
+          "links": [
+            {
+              "href": "/legal/privacy-policy",
+              "text": "Privacy Policy"
+            }
+          ],
+          "source": {
+            "sectionId": "frequently-asked-questions",
+            "order": 3
+          }
+        },
+        {
+          "id": "ready-to-get-your-quotes",
+          "title": "Ready to get your quotes-",
+          "description": "Enter your registration now - it takes less than two minutes. No cost. No obligation. Just real prices from real UK specialists.",
+          "blocks": [
+            {
+              "type": "form",
+              "action": "#",
+              "method": "post",
+              "fields": [
+                {
+                  "element": "input",
+                  "name": "registration",
+                  "type": "text",
+                  "placeholder": "Vehicle registration",
+                  "required": true
+                },
+                {
+                  "element": "textarea",
+                  "name": "problem",
+                  "type": "",
+                  "placeholder": "Optional: describe the problem",
+                  "required": false
+                },
+                {
+                  "element": "button",
+                  "name": "",
+                  "type": "submit",
+                  "placeholder": "",
+                  "required": false
+                }
+              ]
+            },
+            {
+              "type": "label",
+              "text": "Explore more"
+            }
+          ],
+          "links": [],
+          "source": {
+            "sectionId": "ready-to-get-your-quotes",
+            "order": 4
+          }
+        },
+        {
+          "id": "about-engines-market",
+          "title": "About Engines Market",
+          "description": "How Engines Market works",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Supplier standards"
+            },
+            {
+              "type": "paragraph",
+              "text": "Reviews"
+            },
+            {
+              "type": "paragraph",
+              "text": "Contact us"
+            }
+          ],
+          "links": [
+            {
+              "href": "/how-it-works",
+              "text": "How Engines Market works"
+            },
+            {
+              "href": "/supplier-standards",
+              "text": "Supplier standards"
+            },
+            {
+              "href": "/reviews",
+              "text": "Reviews"
+            },
+            {
+              "href": "/contact",
+              "text": "Contact us"
+            }
+          ],
+          "source": {
+            "sectionId": "about-engines-market",
+            "order": 5
+          }
+        }
+      ]
+    },
+    "cta": {
+      "items": []
+    },
+    "additional": {
+      "items": []
+    },
+    "supplemental": {
+      "media": [],
+      "tables": [],
+      "faqs": [
+        {
+          "question": "Do I have to pay for a quote-",
+          "answer": "No. The quote service is completely free for vehicle owners."
+        },
+        {
+          "question": "How long does it take to receive quotes-",
+          "answer": "Most users receive 3-5 quotes within a few hours. The average from enquiry to completed engine replacement is 5.2 days (based on our 2025 data)."
+        },
+        {
+          "question": "What information do I need-",
+          "answer": "Your vehicle registration number (the API will pull make, model, and engine details) plus a brief description of the problem - e.g., “rattling noise on cold start”, “blue smoke”, “engine won’t start”."
+        },
+        {
+          "question": "Will you share my personal details-",
+          "answer": "Only with relevant suppliers - and only to enable them to quote. We do not sell your data. See our Privacy Policy for full details."
+        },
+        {
+          "question": "What if my car is very old or rare-",
+          "answer": "Our network covers a wide range of vehicles. Even for older or less common models, we will share your enquiry with specialists who are most likely to help."
+        }
+      ],
+      "forms": [],
+      "links": []
+    }
+  },
+  "structuredData": [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Free Engine Replacement Quotes - Engines Market",
+      "description": "Compare free engine replacement quotes from 100+ vetted UK specialists. Get 3-5 prices in hours. No obligation. Start your free quote today.",
+      "url": "https://enginesmarket.co.uk/",
+      "about": {
+        "@type": "Service",
+        "name": "Engine Replacement Quote Comparison",
+        "description": "We connect UK drivers with 100+ vetted engine suppliers to provide free, no-obligation price comparisons.",
+        "provider": {
+          "@type": "Organization",
+          "name": "Engines Market"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "bestRating": "5",
+          "ratingCount": "1500",
+          "reviewCount": "1500"
+        }
+      },
+      "mainEntity": {
+        "@type": "HowTo",
+        "name": "How to get a free engine replacement quote",
+        "description": "Get a free engine replacement quote in 4 simple steps. No hidden fees, no obligation.",
+        "estimatedCost": {
+          "@type": "MonetaryAmount",
+          "currency": "GBP",
+          "value": "0"
+        },
+        "totalTime": "PT2M",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "position": 1,
+            "name": "Submit your registration and details",
+            "description": "Enter your vehicle registration number. Our system automatically identifies your make, model, and engine using DVLA data. Add a brief description of the problem (e.g., timing chain rattle, smoke)."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 2,
+            "name": "We match you with relevant suppliers",
+            "description": "Your anonymised enquiry is shared only with specialists from our network of 100+ vetted UK suppliers who can genuinely help with your engine type and location."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 3,
+            "name": "Receive 3-5 quotes",
+            "description": "Suppliers send you quotes directly via email or phone-typically within a few hours. Compare prices, warranty terms, and services side by side."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 4,
+            "name": "Choose a supplier - or walk away",
+            "description": "There is absolutely no obligation. You decide whether to contact a supplier, accept a quote, or walk away for free."
+          }
+        ]
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do I have to pay for a quote-",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The quote service is completely free for vehicle owners."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to receive quotes-",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most users receive 3-5 quotes within a few hours. The average from enquiry to completed engine replacement is 5.2 days, based on our 2025 data."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What information do I need to get a quote-",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You need your vehicle registration number (our API pulls the make, model, and engine details) plus a brief description of the problem-e.g., rattling noise on cold start, blue smoke, or engine won't start."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will you share my personal details-",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Only with relevant suppliers to enable them to quote. We do not sell your data. See our Privacy Policy for full details."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if my car is very old or rare-",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our network covers a wide range of vehicles. Even for older or less common models, we share your enquiry with specialists who are most likely to help."
+          }
+        }
+      ]
+    }
+  ],
+  "stats": {
+    "wordCount": 555,
+    "headingCount": 12,
+    "tableCount": 1,
+    "faqCount": 5,
+    "formCount": 2,
+    "linkCount": 6,
+    "imageCount": 0
+  },
+  "schemaVersion": 2
+}
