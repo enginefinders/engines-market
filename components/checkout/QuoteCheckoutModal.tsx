@@ -37,7 +37,8 @@ function querySeed(
     engineCode: searchParams.get("engineCode") || engineCode || "",
     remarks: searchParams.get("context") ? `Context: ${searchParams.get("context")}` : "",
     sourceLabel: "query-string",
-    searchMode: searchParams.get("reg") ? "registration" : "manual",
+    sourcePage: searchParams.get("sourcePage") || "",
+    searchMode: searchParams.get("reg") || searchParams.get("registrationNumber") ? "registration" : "manual",
   };
 }
 
@@ -67,21 +68,35 @@ export default function QuoteCheckoutModal({ brandName, modelName, engineCode }:
       openQuote((event as CustomEvent<QuoteTriggerDetail>).detail || {});
     }
 
+    function findRegistrationInput(trigger: HTMLElement) {
+      const selector =
+        'input[aria-label*="registration" i], input[name="reg"], input[name="registration"], input[placeholder*="registration" i], input[placeholder*="reg" i]';
+
+      const localScopes = [trigger.closest<HTMLElement>("form"), trigger.parentElement, trigger.parentElement?.parentElement]
+        .filter((scope): scope is HTMLElement => Boolean(scope));
+
+      let nearbyInput: HTMLInputElement | null = null;
+      for (const scope of localScopes) {
+        const input = scope.querySelector<HTMLInputElement>(selector);
+        if (input?.value.trim()) return input;
+        nearbyInput ||= input;
+      }
+
+      // A CTA without a registration field must not inherit the hero field (or any
+      // other field elsewhere on the page).  Only forward a value from the CTA's
+      // own local form/container.
+      return nearbyInput;
+    }
+
     function onDocumentClick(event: MouseEvent) {
       const target = event.target as HTMLElement | null;
-      const trigger = target?.closest('a[href="#quote-form"], [data-quote-trigger="true"]') as HTMLElement | null;
+      const trigger = target?.closest(
+        'a[href="#quote-form"], a[href="#home-hero-reg-form"], [data-quote-trigger="true"]',
+      ) as HTMLElement | null;
       if (!trigger) return;
 
       event.preventDefault();
-      let scope: HTMLElement | null = trigger.parentElement;
-      let registrationInput: HTMLInputElement | null = null;
-      for (let depth = 0; scope && depth < 8; depth += 1) {
-        registrationInput = scope.querySelector(
-          'input[aria-label*="registration" i], input[name="reg"], input[name="registration"], input[placeholder*="registration" i], input[placeholder*="reg" i]',
-        );
-        if (registrationInput) break;
-        scope = scope.parentElement;
-      }
+      const registrationInput = findRegistrationInput(trigger);
 
       openQuote({
         regNumber: trigger.dataset.quoteReg || registrationInput?.value.trim(),
@@ -118,6 +133,7 @@ export default function QuoteCheckoutModal({ brandName, modelName, engineCode }:
     if (window.location.search.includes("quote=open")) {
       window.history.replaceState({}, "", window.location.pathname);
     }
+    window.dispatchEvent(new Event("engine-market:clear-registration"));
     setSeed(null);
   }
 
