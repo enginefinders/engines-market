@@ -1,0 +1,980 @@
+{
+  "id": "public/legal/cookie-policy",
+  "contentType": "legal",
+  "slug": "legal/cookie-policy",
+  "route": "/legal/cookie-policy",
+  "source": {
+    "originalFile": "public/legal/cookie-policy.html",
+    "sourceRoot": "public",
+    "sourceHash": "sha256:86942d735c8c8c240013ea402f52f47ad435d6e6fd01d6112514a1bd7fa5fb71",
+    "sourceBytes": 86164,
+    "migrationStatus": "clean-exported",
+    "sourceImmutable": true
+  },
+  "seo": {
+    "title": "Cookie Policy | Engines Market",
+    "description": "Learn how Engines Market uses cookies, your privacy rights, and how you can manage your cookie preferences. Compliant with UK GDPR and PECR.",
+    "canonical": "https://enginesmarket.co.uk/legal/cookie-policy",
+    "robots": "index, follow",
+    "openGraph": {
+      "title": "Cookie Policy | Engines Market",
+      "description": "Learn how Engines Market uses cookies, your privacy rights, and how you can manage your cookie preferences.",
+      "url": "https://enginesmarket.co.uk/legal/cookie-policy",
+      "image": "https://enginesmarket.co.uk/images/og-image.jpg",
+      "type": "website"
+    }
+  },
+  "sections": {
+    "hero": {
+      "eyebrow": "",
+      "title": "Cookie Policy",
+      "description": "We use cookies to make our Platform work, to understand how you use it, and to remember your preferences. Learn what we collect and how you stay in control.",
+      "options": [],
+      "trust": [],
+      "image": null,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Legal"
+        },
+        {
+          "type": "paragraph",
+          "text": "Effective"
+        },
+        {
+          "type": "paragraph",
+          "text": "1 June 2026"
+        },
+        {
+          "type": "paragraph",
+          "text": "Last updated"
+        },
+        {
+          "type": "paragraph",
+          "text": "13 June 2026"
+        },
+        {
+          "type": "paragraph",
+          "text": "Compliance"
+        },
+        {
+          "type": "paragraph",
+          "text": "UK GDPR & PECR"
+        },
+        {
+          "type": "paragraph",
+          "text": "Introduction"
+        }
+      ],
+      "links": [
+        {
+          "href": "https://tools.google.com/dlpage/gaoptout",
+          "text": "Google Analytics Opt-out Browser Add-on"
+        },
+        {
+          "href": "https://www.youronlinechoices.com/uk/",
+          "text": "Your Online Choices"
+        },
+        {
+          "href": "mailto:dpo@enginesmarket.co.uk",
+          "text": "dpo@enginesmarket.co.uk"
+        },
+        {
+          "href": "https://ico.org.uk/for-the-public/online/cookies/",
+          "text": "ICO guidance on cookies"
+        },
+        {
+          "href": "https://www.allaboutcookies.org/",
+          "text": "All About Cookies"
+        }
+      ]
+    },
+    "ordered": [
+      {
+        "id": "what-are-cookies",
+        "title": "What are cookies?",
+        "description": "Cookies are small text files placed on your device when you visit a website. They help us make the Platform work, remember your choices, and understand how visitors interact with our pages.",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Cookies are not viruses or spyware. They cannot access your hard drive or personal information that you haven't already provided. Most cookies are session cookies (deleted when you close your browser) or persistent cookies (remain for a set period)."
+          },
+          {
+            "type": "paragraph",
+            "text": "We also use similar technologies such as local storage and pixel tags — but for simplicity, we refer to all of them as “cookies” in this policy."
+          },
+          {
+            "type": "paragraph",
+            "text": "Cookie Categories"
+          }
+        ],
+        "links": [],
+        "source": {
+          "sectionId": "what-are-cookies",
+          "order": 0
+        }
+      },
+      {
+        "id": "types-of-cookies-we-use",
+        "title": "Types of cookies we use",
+        "description": "We classify cookies into the following categories. The tables below list the specific cookies currently used on the Engines Market Platform.",
+        "blocks": [
+          {
+            "type": "heading",
+            "level": "h3",
+            "id": "",
+            "text": "2.1 Strictly Necessary"
+          },
+          {
+            "type": "paragraph",
+            "text": "Essential for the Platform to function. You cannot opt out of these."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Cookie name",
+              "Purpose",
+              "Duration",
+              "Provider"
+            ],
+            "rows": [
+              [
+                "session_id",
+                "Maintains your session while you navigate the Platform.",
+                "Session",
+                "Engines Market"
+              ],
+              [
+                "csrf_token",
+                "Protects against cross-site request forgery attacks.",
+                "Session",
+                "Engines Market"
+              ],
+              [
+                "cookie_consent",
+                "Remembers your cookie preference choices.",
+                "12 months",
+                "Engines Market"
+              ],
+              [
+                "load_balancer_route",
+                "Routes requests to the correct server.",
+                "Session",
+                "Engines Market / hosting provider"
+              ]
+            ]
+          },
+          {
+            "type": "heading",
+            "level": "h3",
+            "id": "",
+            "text": "2.2 Performance / Analytics"
+          },
+          {
+            "type": "paragraph",
+            "text": "Collect aggregated, anonymised data to help us improve the Platform. You can opt out."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Cookie name",
+              "Purpose",
+              "Duration",
+              "Provider"
+            ],
+            "rows": [
+              [
+                "_ga",
+                "Google Analytics - distinguishes unique users.",
+                "2 years",
+                "Google Analytics"
+              ],
+              [
+                "_ga_<container-id>",
+                "Persists session state.",
+                "2 years",
+                "Google Analytics"
+              ],
+              [
+                "_gid",
+                "Distinguishes users (24 hour expiry).",
+                "24 hours",
+                "Google Analytics"
+              ],
+              [
+                "_gat",
+                "Throttles request rate.",
+                "1 minute",
+                "Google Analytics"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "IP addresses are anonymised (truncated) before storage. We do not allow Google to use our analytics data for any purpose other than providing reports to us."
+          },
+          {
+            "type": "heading",
+            "level": "h3",
+            "id": "",
+            "text": "2.3 Functional"
+          },
+          {
+            "type": "paragraph",
+            "text": "Enable enhanced features — you can decline these via our cookie banner."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Cookie name",
+              "Purpose",
+              "Duration",
+              "Provider"
+            ],
+            "rows": [
+              [
+                "recent_vehicle_reg",
+                "Remembers your previously entered registration number to pre-fill forms.",
+                "30 days",
+                "Engines Market"
+              ],
+              [
+                "preferred_location",
+                "Remembers your postcode or city for local Supplier searches.",
+                "30 days",
+                "Engines Market"
+              ]
+            ]
+          },
+          {
+            "type": "heading",
+            "level": "h3",
+            "id": "",
+            "text": "2.4 Targeting / Advertising"
+          },
+          {
+            "type": "paragraph",
+            "text": "We do not currently use any targeting or advertising cookies. We do not serve personalised ads based on your browsing behaviour across other websites. We do not use Facebook Pixel, Google Ads Remarketing, or similar technologies at this time."
+          },
+          {
+            "type": "paragraph",
+            "text": "If we ever introduce advertising cookies in the future, we will update this policy, notify you via our cookie banner, and require explicit consent before placing any such cookies."
+          },
+          {
+            "type": "paragraph",
+            "text": "Third Parties"
+          }
+        ],
+        "links": [],
+        "source": {
+          "sectionId": "types-of-cookies-we-use",
+          "order": 1
+        }
+      },
+      {
+        "id": "third-party-cookies",
+        "title": "Third-party cookies",
+        "description": "Some cookies are placed by third-party services we use. These third parties have their own privacy and cookie policies.",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Third party",
+              "Purpose",
+              "How to opt out"
+            ],
+            "rows": [
+              [
+                "Google Analytics",
+                "Website analytics (performance cookies)",
+                "Use our cookie banner to reject analytics cookies, or install the Google Analytics Opt-out Browser Add-on ."
+              ],
+              [
+                "DVLA vehicle lookup API",
+                "No cookies - API call only",
+                "Not applicable"
+              ],
+              [
+                "Trustpilot (widget)",
+                "Displays our Trustpilot rating and reviews (may set cookies if you interact with the widget)",
+                "Manage via our cookie banner or your browser settings"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Trustpilot may set its own functional or performance cookies when the widget loads. We do not control these, but you can block them by declining third-party cookies in your browser settings."
+          },
+          {
+            "type": "paragraph",
+            "text": "User Controls"
+          }
+        ],
+        "links": [],
+        "source": {
+          "sectionId": "third-party-cookies",
+          "order": 2
+        }
+      },
+      {
+        "id": "consent-and-how-to-manage-cookies",
+        "title": "Consent and how to manage cookies",
+        "description": null,
+        "blocks": [
+          {
+            "type": "heading",
+            "level": "h3",
+            "id": "",
+            "text": "4.1 Our cookie consent banner"
+          },
+          {
+            "type": "paragraph",
+            "text": "When you first visit our Platform, a cookie banner will appear. The banner allows you to:"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Accept all cookies (strictly necessary + performance + functional — we do not have targeting cookies).",
+              "Reject non-essential cookies (accept only strictly necessary).",
+              "Customise your preferences (choose which categories to accept)."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Your preference is stored in the cookie_consent cookie. You can change your preference at any time by clicking the “Cookie Preferences” link in the footer."
+          },
+          {
+            "type": "heading",
+            "level": "h3",
+            "id": "",
+            "text": "4.2 Withdrawing consent"
+          },
+          {
+            "type": "paragraph",
+            "text": "You may withdraw your consent to non-essential cookies at any time by:"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Clicking “Cookie Preferences” in the footer and adjusting your settings.",
+              "Clearing your browser cookies (this will reset your preference).",
+              "Changing your browser settings to block cookies (see section 4.3 below)."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Withdrawing consent does not affect the lawfulness of processing based on consent before its withdrawal."
+          },
+          {
+            "type": "heading",
+            "level": "h3",
+            "id": "",
+            "text": "4.3 Managing cookies via your browser"
+          },
+          {
+            "type": "paragraph",
+            "text": "Most web browsers allow you to control cookies through their settings. You can:"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Block all cookies (including strictly necessary ones) — but note that our Platform may not function properly.",
+              "Block third-party cookies only.",
+              "Delete existing cookies.",
+              "Set your browser to alert you when a cookie is placed."
+            ]
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Browser",
+              "How to manage cookies"
+            ],
+            "rows": [
+              [
+                "Google Chrome",
+                "Settings → Privacy and security → Cookies and other site data"
+              ],
+              [
+                "Mozilla Firefox",
+                "Options → Privacy & Security → Cookies and Site Data"
+              ],
+              [
+                "Apple Safari",
+                "Preferences → Privacy → Cookies and website data"
+              ],
+              [
+                "Microsoft Edge",
+                "Settings → Site permissions → Cookies and site data"
+              ],
+              [
+                "Opera",
+                "Settings → Privacy & security → Cookies"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "You can also use the Your Online Choices tool to opt out of interest-based advertising from participating companies."
+          },
+          {
+            "type": "paragraph",
+            "text": "Governance & Retention"
+          }
+        ],
+        "links": [],
+        "source": {
+          "sectionId": "consent-and-how-to-manage-cookies",
+          "order": 3
+        }
+      },
+      {
+        "id": "duration-changes-further-information",
+        "title": "Duration, changes & further information",
+        "description": null,
+        "blocks": [
+          {
+            "type": "heading",
+            "level": "h3",
+            "id": "",
+            "text": "How long do cookies stay on my device?"
+          },
+          {
+            "type": "paragraph",
+            "text": "The duration varies by cookie (see the “Duration” column in the tables above):"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Session cookies — deleted when you close your browser.",
+              "Persistent cookies — remain for a set period (e.g., 30 days, 12 months, 2 years) unless you delete them manually."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "You can delete all cookies stored on your device at any time via your browser settings."
+          },
+          {
+            "type": "heading",
+            "level": "h3",
+            "id": "",
+            "text": "Changes to this Cookie Policy"
+          },
+          {
+            "type": "paragraph",
+            "text": "We may update this Cookie Policy from time to time to reflect changes in the cookies we use, legal requirements, or our business practices."
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Minor changes (e.g., adding a new strictly necessary cookie) will be posted on this page with a new “Last updated” date.",
+              "Material changes (e.g., introducing targeting/advertising cookies) will be notified via a prominent notice on our Platform and, where appropriate, by email. We will also refresh the cookie consent banner to obtain fresh consent where required by law."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "The “Last updated” date at the top of this page indicates when the policy was last revised. You are encouraged to review this policy periodically."
+          },
+          {
+            "type": "heading",
+            "level": "h3",
+            "id": "",
+            "text": "Further information"
+          },
+          {
+            "type": "paragraph",
+            "text": "If you have any questions about our use of cookies, please contact our Data Protection Officer at dpo@enginesmarket.co.uk ."
+          },
+          {
+            "type": "paragraph",
+            "text": "For more general information about cookies and how to manage them, visit:"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "ICO guidance on cookies",
+              "All About Cookies"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "At a Glance"
+          }
+        ],
+        "links": [],
+        "source": {
+          "sectionId": "duration-changes-further-information",
+          "order": 4
+        }
+      },
+      {
+        "id": "summary-quick-reference",
+        "title": "Summary — quick reference",
+        "description": null,
+        "blocks": [
+          {
+            "type": "cards",
+            "cards": [
+              {
+                "title": "",
+                "text": "Strictly necessary cookies? Yes — cannot opt out",
+                "highlight": "Yes",
+                "meta": "Yes",
+                "icon": "",
+                "items": [],
+                "fullText": "Strictly necessary cookies? Yes — cannot opt out"
+              },
+              {
+                "title": "",
+                "text": "Performance / analytics? Yes — opt out via banner",
+                "highlight": "Yes",
+                "meta": "Yes",
+                "icon": "",
+                "items": [],
+                "fullText": "Performance / analytics? Yes — opt out via banner"
+              },
+              {
+                "title": "",
+                "text": "Functional cookies? Yes — opt out via banner",
+                "highlight": "Yes",
+                "meta": "Yes",
+                "icon": "",
+                "items": [],
+                "fullText": "Functional cookies? Yes — opt out via banner"
+              },
+              {
+                "title": "",
+                "text": "Targeting / advertising? No — currently not used",
+                "highlight": "No",
+                "meta": "No",
+                "icon": "",
+                "items": [],
+                "fullText": "Targeting / advertising? No — currently not used"
+              },
+              {
+                "title": "",
+                "text": "How to change preferences? Click “Cookie Preferences” in footer",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "How to change preferences? Click “Cookie Preferences” in footer"
+              },
+              {
+                "title": "",
+                "text": "Will my preference be remembered? Yes — for 12 months (unless cleared)",
+                "highlight": "",
+                "meta": "",
+                "icon": "",
+                "items": [],
+                "fullText": "Will my preference be remembered? Yes — for 12 months (unless cleared)"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "This Cookie Policy was last reviewed and approved by the Data Protection Officer of Engine Finders UK Ltd on 13 June 2026."
+          },
+          {
+            "type": "paragraph",
+            "text": "Ready to find your engine?"
+          }
+        ],
+        "links": [],
+        "source": {
+          "sectionId": "summary-quick-reference",
+          "order": 5
+        }
+      },
+      {
+        "id": "get-a-free-no-pressure-quote-today",
+        "title": "Get a free, no-pressure quote today",
+        "description": "Compare prices from 100+ vetted UK suppliers and save on your engine replacement.",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Get your quote"
+          }
+        ],
+        "links": [
+          {
+            "href": "/get-a-quote",
+            "text": "Get your quote"
+          }
+        ],
+        "source": {
+          "sectionId": "get-a-free-no-pressure-quote-today",
+          "order": 6
+        }
+      }
+    ],
+    "supplemental": {
+      "media": [],
+      "tables": [],
+      "faqs": [],
+      "forms": [],
+      "links": []
+    }
+  },
+  "structuredData": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://enginesmarket.co.uk/#organization",
+      "name": "Engine Finders UK Ltd",
+      "url": "https://enginesmarket.co.uk",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://enginesmarket.co.uk/images/logo.png"
+      },
+      "legalName": "Engine Finders UK Ltd",
+      "description": "Engines Market is a free, no-pressure platform to compare engine replacement quotes from 100+ vetted UK specialists.",
+      "sameAs": [
+        "https://www.facebook.com/enginesmarket",
+        "https://x.com/enginesmarket",
+        "https://www.instagram.com/enginesmarket"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://enginesmarket.co.uk/legal/cookie-policy#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://enginesmarket.co.uk/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Legal",
+              "item": "https://enginesmarket.co.uk/legal/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Cookie Policy",
+              "item": "https://enginesmarket.co.uk/legal/cookie-policy"
+            }
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://enginesmarket.co.uk/legal/cookie-policy#webpage",
+          "url": "https://enginesmarket.co.uk/legal/cookie-policy",
+          "name": "Cookie Policy | Engines Market",
+          "description": "Learn how Engines Market uses cookies, your privacy rights, and how you can manage your cookie preferences.",
+          "isPartOf": {
+            "@id": "https://enginesmarket.co.uk/#website"
+          },
+          "breadcrumb": {
+            "@id": "https://enginesmarket.co.uk/legal/cookie-policy#breadcrumb"
+          },
+          "datePublished": "2026-06-01T00:00:00+00:00",
+          "dateModified": "2026-06-13T00:00:00+00:00",
+          "inLanguage": "en-GB",
+          "about": {
+            "@type": "Thing",
+            "name": "Cookie Usage and Data Privacy"
+          },
+          "author": {
+            "@id": "https://enginesmarket.co.uk/#organization"
+          },
+          "mainEntity": {
+            "@type": "WebPageElement",
+            "name": "Cookie Policy",
+            "description": "Engines Market Cookie Policy detailing the use of Strictly Necessary, Performance, and Functional cookies, how to manage preferences, and compliance with UK data protection laws."
+          }
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "DataFeed",
+      "name": "Cookies used on Engines Market",
+      "description": "A complete list of cookies categorised by type, purpose, duration, and provider, as described in the Cookie Policy.",
+      "dataFeedElement": [
+        {
+          "@type": "DataFeedItem",
+          "position": 1,
+          "item": {
+            "@type": "Thing",
+            "name": "session_id",
+            "description": "Maintains your session while you navigate the Platform.",
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Duration",
+                "value": "Session"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Provider",
+                "value": "Engines Market"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Category",
+                "value": "Strictly Necessary"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "DataFeedItem",
+          "position": 2,
+          "item": {
+            "@type": "Thing",
+            "name": "csrf_token",
+            "description": "Security cookie that protects against cross-site request forgery attacks.",
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Duration",
+                "value": "Session"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Provider",
+                "value": "Engines Market"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Category",
+                "value": "Strictly Necessary"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "DataFeedItem",
+          "position": 3,
+          "item": {
+            "@type": "Thing",
+            "name": "cookie_consent",
+            "description": "Remembers your cookie preference choices.",
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Duration",
+                "value": "12 months"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Provider",
+                "value": "Engines Market"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Category",
+                "value": "Strictly Necessary"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "DataFeedItem",
+          "position": 4,
+          "item": {
+            "@type": "Thing",
+            "name": "load_balancer_route",
+            "description": "Ensures your requests are routed to the correct server.",
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Duration",
+                "value": "Session"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Provider",
+                "value": "Engines Market / hosting provider"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Category",
+                "value": "Strictly Necessary"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "DataFeedItem",
+          "position": 5,
+          "item": {
+            "@type": "Thing",
+            "name": "_ga",
+            "description": "Google Analytics - distinguishes unique users.",
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Duration",
+                "value": "2 years"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Provider",
+                "value": "Google Analytics"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Category",
+                "value": "Performance / Analytics"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "DataFeedItem",
+          "position": 6,
+          "item": {
+            "@type": "Thing",
+            "name": "_ga_<container-id>",
+            "description": "Google Analytics - used to persist session state.",
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Duration",
+                "value": "2 years"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Provider",
+                "value": "Google Analytics"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Category",
+                "value": "Performance / Analytics"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "DataFeedItem",
+          "position": 7,
+          "item": {
+            "@type": "Thing",
+            "name": "_gid",
+            "description": "Google Analytics - distinguishes users (24 hour expiry).",
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Duration",
+                "value": "24 hours"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Provider",
+                "value": "Google Analytics"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Category",
+                "value": "Performance / Analytics"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "DataFeedItem",
+          "position": 8,
+          "item": {
+            "@type": "Thing",
+            "name": "_gat",
+            "description": "Google Analytics - throttles request rate.",
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Duration",
+                "value": "1 minute"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Provider",
+                "value": "Google Analytics"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Category",
+                "value": "Performance / Analytics"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "DataFeedItem",
+          "position": 9,
+          "item": {
+            "@type": "Thing",
+            "name": "recent_vehicle_reg",
+            "description": "Remembers your previously entered registration number.",
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Duration",
+                "value": "30 days"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Provider",
+                "value": "Engines Market"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Category",
+                "value": "Functional"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "DataFeedItem",
+          "position": 10,
+          "item": {
+            "@type": "Thing",
+            "name": "preferred_location",
+            "description": "Remembers your postcode or city for local Supplier searches.",
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Duration",
+                "value": "30 days"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Provider",
+                "value": "Engines Market"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Category",
+                "value": "Functional"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "stats": {
+    "wordCount": 1180,
+    "headingCount": 18,
+    "tableCount": 5,
+    "faqCount": 0,
+    "formCount": 0,
+    "linkCount": 6,
+    "imageCount": 0
+  },
+  "schemaVersion": 3
+}

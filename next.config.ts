@@ -40,24 +40,12 @@ const nextConfig: NextConfig = {
           destination: "/about/about-us",
         },
         {
-          source: "/insights/:slug([a-zA-Z0-9-]+)",
-          destination: "/insights/:slug.html",
-        },
-        {
-          source: "/services/:slug([a-zA-Z0-9-]+)",
-          destination: "/services/:slug.html",
-        },
-        {
-          source: "/prices/:slug([a-zA-Z0-9-]+)",
-          destination: "/prices/:slug.html",
-        },
-        {
-          source: "/services/gearbox-replacement/:slug",
-          destination: "/services/gearbox-replacement/:slug.html",
-        },
-        {
           source: "/about/:slug",
           destination: "/about/:slug.html",
+        },
+        {
+          source: "/legal/data-handling-policy",
+          destination: "/legal/data-handlng-policy.html",
         },
         {
           source: "/legal/:slug",
@@ -78,10 +66,6 @@ const nextConfig: NextConfig = {
         {
           source: "/case-studies/:slug",
           destination: "/case-studies/:slug.html",
-        },
-        {
-          source: "/symptoms/:slug([a-zA-Z0-9-]+)",
-          destination: "/symptoms/:slug.html",
         },
       ],
     };

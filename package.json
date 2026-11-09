@@ -9,6 +9,8 @@
     "start": "next start",
     "lint": "eslint",
     "qa:model-pages": "node scripts/model_page_qa.mjs",
+    "export:static-pages": "python scripts/export_static_page_data.py",
+    "audit:static-preview": "node scripts/audit_static_preview_parity.mjs",
     "generate:image-manifest": "node scripts/generate-image-manifest.mjs",
     "generate:sitemap": "node scripts/generate_sitemap.mjs"
   },
@@ -26,6 +28,7 @@
   "devDependencies": {
     "@playwright/test": "^1.60.0",
     "@tailwindcss/postcss": "^4",
+    "postcss": "^8.5.28",
     "@types/node": "^20",
     "@types/nodemailer": "^8.0.2",
     "@types/react": "^19",

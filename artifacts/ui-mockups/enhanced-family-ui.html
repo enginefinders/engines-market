@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Engines Market — Enhanced Family UI Mockups</title>
+  <style>
+    :root {
+      --navy: #082952;
+      --navy-2: #0d396d;
+      --green: #078d4a;
+      --green-dark: #056c3a;
+      --mint: #effaf4;
+      --mint-2: #dff5e8;
+      --ink: #173b61;
+      --muted: #68819a;
+      --line: #dce9f2;
+      --canvas: #f3f8fb;
+      --white: #ffffff;
+      --shadow: 0 18px 44px rgba(8, 41, 82, .10);
+      --radius-xl: 28px;
+      --radius-lg: 18px;
+      --radius-md: 12px;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--canvas);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    .site-header {
+      height: 82px;
+      padding: 0 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: white;
+      background: var(--navy);
+    }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 900; letter-spacing: .02em; }
+    .brand-mark { width: 40px; height: 40px; border: 2px solid #8ce2b0; border-radius: 12px; display: grid; place-items: center; color: #8ce2b0; font-size: 20px; }
+    .brand small { display: block; margin-top: 3px; color: #8ba5bf; font-size: 9px; font-weight: 700; letter-spacing: .18em; }
+    nav { display: flex; gap: 28px; color: #d6e4ef; font-size: 13px; font-weight: 700; }
+    nav span:last-child { color: #7fe0aa; }
+    .header-contact { display: flex; align-items: center; gap: 14px; font-size: 12px; font-weight: 800; }
+    .whatsapp { border-radius: 999px; padding: 10px 16px; color: white; background: #19bf64; }
+
+    .page { width: 1120px; margin: 0 auto; padding: 34px 0 70px; }
+    .crumbs { color: var(--muted); font-size: 12px; font-weight: 700; margin-bottom: 18px; }
+    .crumbs strong { color: var(--navy); }
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 38px 42px;
+      color: white;
+      border-radius: var(--radius-xl);
+      background: linear-gradient(135deg, var(--navy) 0%, #0e3867 68%, #075b51 100%);
+      box-shadow: var(--shadow);
+    }
+    .hero::after { content: ""; position: absolute; width: 260px; height: 260px; right: -70px; top: -90px; border-radius: 50%; background: rgba(48, 208, 126, .14); }
+    .eyebrow { position: relative; z-index: 1; display: inline-flex; padding: 7px 11px; border: 1px solid rgba(127, 224, 170, .5); border-radius: 999px; color: #8ce2b0; font-size: 10px; font-weight: 900; letter-spacing: .15em; text-transform: uppercase; }
+    h1 { position: relative; z-index: 1; max-width: 720px; margin: 18px 0 10px; font-size: 46px; line-height: 1.02; letter-spacing: -.04em; }
+    .hero p { position: relative; z-index: 1; max-width: 690px; margin: 0; color: #dceaf5; font-size: 16px; line-height: 1.65; }
+    .hero-aside { position: absolute; z-index: 1; right: 34px; bottom: 32px; width: 220px; padding: 16px; border: 1px solid rgba(255,255,255,.18); border-radius: 16px; background: rgba(255,255,255,.08); }
+    .hero-aside b { color: #9be7ba; font-size: 10px; letter-spacing: .12em; text-transform: uppercase; }
+    .hero-aside p { margin-top: 8px; font-size: 12px; line-height: 1.45; }
+
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 18px 0 28px; }
+    .stat { padding: 17px; border: 1px solid var(--line); border-radius: var(--radius-md); background: white; box-shadow: 0 8px 24px rgba(8, 41, 82, .04); }
+    .stat strong { display: block; color: var(--navy); font-size: 22px; }
+    .stat span { color: var(--muted); font-size: 11px; font-weight: 700; }
+
+    .section { margin-top: 16px; padding: 29px 32px; border: 1px solid var(--line); border-radius: var(--radius-lg); background: var(--white); box-shadow: 0 9px 26px rgba(8, 41, 82, .05); }
+    .section-head { display: flex; align-items: flex-start; gap: 16px; padding-bottom: 18px; border-bottom: 1px solid #edf3f7; }
+    .section-number { flex: 0 0 auto; width: 38px; height: 38px; display: grid; place-items: center; color: white; border-radius: 12px; background: var(--green); font-size: 13px; font-weight: 900; }
+    h2 { margin: 0; color: var(--navy); font-size: 28px; line-height: 1.12; letter-spacing: -.03em; }
+    .section-intro { margin: 16px 0 20px; color: var(--muted); font-size: 14px; line-height: 1.65; }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .card { padding: 17px; border: 1px solid #cfe8da; border-radius: var(--radius-md); background: linear-gradient(180deg, #fff 0%, #f5fcf8 100%); }
+    .card-icon { width: 30px; height: 30px; display: grid; place-items: center; border-radius: 9px; color: var(--green-dark); background: var(--mint-2); font-weight: 900; }
+    .card h3 { margin: 13px 0 7px; color: var(--navy); font-size: 15px; }
+    .card p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.55; }
+    .split { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .check-list { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+    .check-list li { position: relative; padding-left: 26px; color: var(--ink); font-size: 13px; line-height: 1.45; }
+    .check-list li::before { content: "✓"; position: absolute; left: 0; top: 0; color: var(--green); font-weight: 900; }
+    .table-wrap { overflow: hidden; border: 1px solid var(--line); border-radius: 12px; }
+    table { width: 100%; border-collapse: collapse; font-size: 12px; }
+    th { padding: 12px 14px; color: white; background: var(--navy); text-align: left; font-size: 10px; letter-spacing: .08em; text-transform: uppercase; }
+    td { padding: 12px 14px; color: var(--ink); border-top: 1px solid #e8f0f5; vertical-align: top; line-height: 1.45; }
+    tr:nth-child(even) td { background: #f8fbfd; }
+    .footer { margin-top: 30px; padding: 25px 30px; display: flex; justify-content: space-between; color: #cfdeea; border-radius: 18px; background: var(--navy); }
+    .footer b { color: white; }
+    .footer span { margin-left: 24px; font-size: 11px; }
+
+    .legal .hero { background: linear-gradient(135deg, #071f40 0%, #0d3867 70%, #075b51 100%); }
+    .legal .section-number { background: var(--navy-2); }
+    .legal .section { border-color: #d7e4ef; }
+    .legal .card { background: #f7fbfe; border-color: #dbe8f1; }
+    .legal .card-icon { color: var(--navy); background: #e7f0f8; }
+    .label { display: inline-block; margin-bottom: 10px; color: var(--green-dark); font-size: 10px; font-weight: 900; letter-spacing: .14em; text-transform: uppercase; }
+
+    @media (max-width: 900px) {
+      .page { width: auto; margin: 0 20px; }
+      .site-header { padding: 0 20px; }
+      nav { display: none; }
+      .hero-aside { position: static; width: auto; margin-top: 22px; }
+      .stats, .cards, .split { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 560px) {
+      .site-header { height: 70px; }
+      .header-contact { display: none; }
+      .page { margin: 0 12px; padding-top: 20px; }
+      .hero { padding: 26px 22px; }
+      h1 { font-size: 34px; }
+      .stats, .cards, .split { grid-template-columns: 1fr; }
+      .section { padding: 22px 18px; }
+      h2 { font-size: 23px; }
+      .footer { display: block; }
+      .footer span { display: inline-block; margin: 14px 18px 0 0; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand"><div class="brand-mark">EM</div><div>ENGINES MARKET<small>COMPARE. CHOOSE. DRIVE.</small></div></div>
+    <nav><span>Brands⌄</span><span>Engines⌄</span><span>Services⌄</span><span>Others⌄</span></nav>
+    <div class="header-contact"><span>020 3488 4649</span><span class="whatsapp">WhatsApp</span></div>
+  </header>
+
+  <main class="page about">
+    <div class="crumbs">Home&nbsp; / &nbsp;<strong>About Engines Market</strong></div>
+    <section class="hero">
+      <span class="eyebrow">About Engines Market</span>
+      <h1>Save money and stress on engine replacement</h1>
+      <p>Engine failure is stressful enough. We make it easier to understand your options, compare real quotes, and choose with confidence.</p>
+      <div class="hero-aside"><b>Our promise</b><p>Clear information, trusted suppliers, and no-pressure comparisons.</p></div>
+    </section>
+    <div class="stats"><div class="stat"><strong>100+</strong><span>Vetted UK suppliers</span></div><div class="stat"><strong>24,650+</strong><span>Quote requests in 2025</span></div><div class="stat"><strong>5.2</strong><span>Days average to fit</span></div><div class="stat"><strong>Free</strong><span>Transparent comparison</span></div></div>
+    <section class="section"><div class="section-head"><div class="section-number">01</div><div><span class="label">Our mission</span><h2>To make engine replacement pricing transparent across the UK.</h2></div></div><p class="section-intro">No hidden fees. No pressure. Just real data, real suppliers, and a clear path to a fair price.</p><div class="cards"><article class="card"><div class="card-icon">£</div><h3>Transparent pricing</h3><p>See realistic market pricing before you commit.</p></article><article class="card"><div class="card-icon">✓</div><h3>Vetted specialists</h3><p>Compare quotes from trusted UK engine suppliers.</p></article><article class="card"><div class="card-icon">↗</div><h3>Clear next steps</h3><p>Understand your options without the pressure.</p></article></div></section>
+    <section class="section"><div class="section-head"><div class="section-number">02</div><div><span class="label">What we do</span><h2>A comparison platform — nothing more, nothing less</h2></div></div><p class="section-intro">We connect you with independent UK engine suppliers. The supplier you choose handles the commercial relationship directly.</p><div class="split"><ul class="check-list"><li>Help you compare quotes from vetted specialists</li><li>Provide transparent pricing guidance</li><li>Share marketplace data and useful context</li></ul><ul class="check-list"><li>We do not sell engines ourselves</li><li>We do not fit engines or provide warranties</li><li>We do not handle supplier payments</li></ul></div></section>
+    <section class="section"><div class="section-head"><div class="section-number">03</div><div><span class="label">The problem we solve</span><h2>Why engine replacement is harder than it should be</h2></div></div><p class="section-intro">Drivers often face unclear pricing, fragmented suppliers, and stressful decisions. Our platform organizes the information in one place.</p><div class="cards"><article class="card"><div class="card-icon">01</div><h3>Lack of price transparency</h3><p>Most drivers have no benchmark for a fair replacement price.</p></article><article class="card"><div class="card-icon">02</div><h3>Stress of a major breakdown</h3><p>A sudden failure creates financial and practical pressure.</p></article><article class="card"><div class="card-icon">03</div><h3>Fragmented marketplace</h3><p>Comparing specialists is difficult without clear guidance.</p></article></div></section>
+    <footer class="footer"><b>ENGINES MARKET</b><div><span>About</span><span>Services</span><span>Legal</span><span>Contact</span></div></footer>
+  </main>
+
+  <main class="page legal">
+    <div class="crumbs">Home&nbsp; / &nbsp;Legal&nbsp; / &nbsp;<strong>Privacy Policy</strong></div>
+    <section class="hero"><span class="eyebrow">Legal documents</span><h1>Privacy Policy</h1><p>This Privacy Policy explains how Engines Market collects, uses, stores, protects, and shares your personal data when you use our platform.</p><div class="hero-aside"><b>Need help?</b><p>Our team can help with questions about the Engines Market platform.</p></div></section>
+    <div class="stats"><div class="stat"><strong>Version 2.0</strong><span>Current policy</span></div><div class="stat"><strong>June 2026</strong><span>Effective date</span></div><div class="stat"><strong>UK GDPR</strong><span>Privacy framework</span></div><div class="stat"><strong>Secure</strong><span>Data-first platform</span></div></div>
+    <section class="section"><div class="section-head"><div class="section-number">01</div><div><span class="label">Privacy &amp; security</span><h2>Who we are (Data Controller)</h2></div></div><p class="section-intro">Engines Market is a trading name of Engine Finders UK Ltd, a private limited company registered in England and Wales.</p><div class="cards"><article class="card"><h3>Company</h3><p>Engine Finders UK Ltd<br />Company number 13157944</p></article><article class="card"><h3>Registered address</h3><p>113 Park Road, Ilford, IG1 3SQ, United Kingdom</p></article><article class="card"><h3>Data protection contact</h3><p>General Manager<br />dpo@enginesmarket.co.uk</p></article></div></section>
+    <section class="section"><div class="section-head"><div class="section-number">02</div><div><span class="label">Data collection</span><h2>The personal data we collect</h2></div></div><p class="section-intro">We collect different categories of personal data depending on how you interact with our platform.</p><div class="table-wrap"><table><thead><tr><th>Data type</th><th>Examples</th><th>Purpose</th></tr></thead><tbody><tr><td>Identity data</td><td>Full name, title</td><td>To address you correctly and match quotes</td></tr><tr><td>Contact data</td><td>Email address, phone number, postcode</td><td>To send quotes and allow suppliers to contact you</td></tr><tr><td>Vehicle data</td><td>Registration, make, model, engine code</td><td>To identify the correct engine and provide accurate quotes</td></tr></tbody></table></div></section>
+    <section class="section"><div class="section-head"><div class="section-number">03</div><div><span class="label">Collection methods</span><h2>How we collect your personal data</h2></div></div><p class="section-intro">We collect information through direct interactions, automated technologies, and selected third-party services.</p><div class="table-wrap"><table><thead><tr><th>Collection method</th><th>Description</th></tr></thead><tbody><tr><td>Direct interactions</td><td>Quote forms, email, phone, WhatsApp, and contact forms.</td></tr><tr><td>Automated technologies</td><td>Cookies, server logs, browser headers, and analytics data.</td></tr><tr><td>Third parties</td><td>Vehicle information received through registration lookup services.</td></tr></tbody></table></div></section>
+    <footer class="footer"><b>ENGINES MARKET</b><div><span>Privacy</span><span>Cookies</span><span>Terms</span><span>Contact</span></div></footer>
+  </main>
+</body>
+</html>
