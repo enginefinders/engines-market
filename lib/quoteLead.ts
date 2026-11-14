@@ -6,9 +6,16 @@ import { normalizeSourcePage, renderUniversalLeadEmail } from "@/lib/universalLe
 
 const DEFAULT_CRM_LEAD_ENDPOINT = "https://crm-api.enginesmarket.co.uk/api/v1/leads";
 const DEFAULT_SUPABASE_WEBHOOK_URL = "https://invfhqaqjyvcttppnygs.supabase.co/functions/v1/receive-lead";
+const DEFAULT_SUPABASE_ANON_KEY =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImludmZocWFxanl2Y3R0cHBueWdzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI4NTQ1NzAsImV4cCI6MjEwODQzMDU3MH0.GhZh0SG555phXYSdaP7bXPoxWN_QBhMusNJyQyDA-Rs";
+const DEFAULT_NEW_SUPABASE_WEBHOOK_URL = "https://ommfysqqlewadjqtbigk.supabase.co/functions/v1/receive-lead";
+const DEFAULT_NEW_SUPABASE_PUBLISHABLE_KEY = "sb_publishable_iSReiPMDrICyL2GXD_sQ3g_ITSi3hLF";
 
-const RESEND_API_KEY =
-  process.env.RESEND_API_KEY || "RESEND_API_KEY";
+const RESEND_API_KEY = process.env.RESEND_API_KEY;
+
+if (!RESEND_API_KEY) {
+  throw new Error("RESEND_API_KEY environment variable is missing");
+}
 const RESEND_FROM_EMAIL =
   process.env.RESEND_FROM_EMAIL || "Engines Market <sales@enginesmarket.co.uk>";
 const LEAD_RECIPIENT_EMAIL =
@@ -239,25 +246,42 @@ async function deliverLead(lead: QuoteLead): Promise<DeliveryResult> {
   const payload = buildBackendPayload(lead);
   const crmEndpoint = process.env.CRM_LEAD_ENDPOINT || DEFAULT_CRM_LEAD_ENDPOINT;
   const supabaseEndpoint = process.env.SUPABASE_WEBHOOK_URL || DEFAULT_SUPABASE_WEBHOOK_URL;
-  const supabaseKey = process.env.SUPABASE_ANON_KEY || "";
+  const supabaseKey = process.env.SUPABASE_ANON_KEY || DEFAULT_SUPABASE_ANON_KEY;
+
+  const newSupabaseEndpoint = process.env.SUPABASE_NEW_WEBHOOK_URL || DEFAULT_NEW_SUPABASE_WEBHOOK_URL;
+  const newSupabaseKey = process.env.SUPABASE_NEW_PUBLISHABLE_KEY || DEFAULT_NEW_SUPABASE_PUBLISHABLE_KEY;
 
   const crmPromise = postJson(crmEndpoint, payload, { "x-frontend-url": `${SITE_URL}/` });
-  const webhookPromise = supabaseKey
-    ? postJson(supabaseEndpoint, payload, { Authorization: `Bearer ${supabaseKey}` })
+  const existingWebhookPromise = supabaseKey
+    ? postJson(supabaseEndpoint, payload, {
+        Authorization: `Bearer ${supabaseKey}`,
+        apikey: supabaseKey,
+      })
     : Promise.resolve();
 
-  const [crmResult, webhookResult, emailResult] = await Promise.allSettled([
+  const newWebhookPromise = newSupabaseKey
+    ? postJson(newSupabaseEndpoint, payload, {
+        Authorization: `Bearer ${newSupabaseKey}`,
+        apikey: newSupabaseKey,
+      })
+    : Promise.resolve();
+
+  const [crmResult, existingWebhookResult, newWebhookResult, emailResult] = await Promise.allSettled([
     crmPromise,
-    webhookPromise,
+    existingWebhookPromise,
+    newWebhookPromise,
     sendEmail(lead),
   ]);
 
   const crmSent = crmResult.status === "fulfilled";
-  const webhookSent = Boolean(supabaseKey) && webhookResult.status === "fulfilled";
+  const existingWebhookSent = Boolean(supabaseKey) && existingWebhookResult.status === "fulfilled";
+  const newWebhookSent = Boolean(newSupabaseKey) && newWebhookResult.status === "fulfilled";
+  const webhookSent = existingWebhookSent || newWebhookSent;
   const emailSent = emailResult.status === "fulfilled" && emailResult.value;
 
   if (crmResult.status === "rejected") console.error("CRM lead delivery failed", crmResult.reason);
-  if (webhookResult.status === "rejected") console.error("Supabase lead delivery failed", webhookResult.reason);
+  if (existingWebhookResult.status === "rejected") console.error("Existing Supabase lead delivery failed", existingWebhookResult.reason);
+  if (newWebhookResult.status === "rejected") console.error("New Supabase lead delivery failed", newWebhookResult.reason);
   if (emailResult.status === "rejected") console.error("Quote email delivery failed", emailResult.reason);
 
   return { delivered: crmSent || webhookSent || emailSent, emailSent, crmSent, webhookSent };
